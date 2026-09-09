@@ -1,4 +1,17 @@
 {
   "documents": {},
-  "backfill": { "done": false }
+  "backfill": {
+    "done": false,
+    "stoppedAt": null,
+    "lastRun": "2026-09-09T22:21:59.418Z"
+  },
+  "meta": {
+    "lastRun": "2026-09-09T22:21:59.451Z",
+    "lastMode": "backfill",
+    "lastStats": {
+      "downloaded": 0,
+      "failed": 0,
+      "fetchFailed": true
+    }
+  }
 }
