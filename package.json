@@ -1,0 +1,14 @@
+{
+  "name": "cma-reports-monitor",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "Monitors cmainfo.cma.gov.il for public fund reports, archives them by quarter, and maintains a manifest for Power Query.",
+  "scripts": {
+    "check": "node scripts/run.mjs",
+    "backfill": "MODE=backfill node scripts/run.mjs"
+  },
+  "dependencies": {
+    "playwright": "^1.48.0"
+  }
+}
