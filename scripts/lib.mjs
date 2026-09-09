@@ -46,9 +46,19 @@ export function quarterRange(fromYear, fromQuarter, toYear, toQuarter) {
 }
 
 // שולף מהעמוד עצמו (page.evaluate) כדי לשתף cookies/headers אמיתיים.
+// במקרה של כישלון מחזיר גם snippet מגוף התשובה + כותרות רלוונטיות, כדי
+// שאפשר יהיה לאבחן אם זו חסימת WAF/IP גנרית, אתגר בוט, או משהו אחר.
 export async function fetchQuarterReports(page, year, quarter) {
   return page.evaluate(
     async ({ year, quarter, reportType }) => {
+      const interestingHeaders = [
+        "server",
+        "x-iinfo", // Incapsula
+        "cf-ray", // Cloudflare
+        "x-akamai-transformed", // Akamai
+        "x-datadome", // DataDome
+        "content-type",
+      ];
       try {
         const res = await fetch("/api/PublicReporting/GetPublicReports", {
           method: "POST",
@@ -68,17 +78,40 @@ export async function fetchQuarterReports(page, year, quarter) {
             statusReport: 1,
           }),
         });
-        if (!res.ok) return { ok: false, status: res.status, items: [] };
+        const headers = {};
+        for (const h of interestingHeaders) {
+          const v = res.headers.get(h);
+          if (v) headers[h] = v;
+        }
+        if (!res.ok) {
+          const bodySnippet = (await res.text().catch(() => "")).slice(0, 500);
+          return { ok: false, status: res.status, items: [], headers, bodySnippet };
+        }
         const contentType = res.headers.get("content-type") || "";
-        if (!contentType.includes("application/json")) return { ok: false, status: res.status, items: [] };
+        if (!contentType.includes("application/json")) {
+          const bodySnippet = (await res.text().catch(() => "")).slice(0, 500);
+          return { ok: false, status: res.status, items: [], headers, bodySnippet };
+        }
         const data = await res.json();
-        return { ok: true, status: res.status, items: Array.isArray(data) ? data : [] };
+        return { ok: true, status: res.status, items: Array.isArray(data) ? data : [], headers };
       } catch (err) {
         return { ok: false, status: 0, items: [], error: String(err) };
       }
     },
     { year, quarter, reportType: REPORT_TYPE }
   );
+}
+
+// בודק אם טעינת הדף הראשית עצמה חזרה כדף חסימה (WAF) במקום הדף האמיתי.
+export async function detectBlockedPage(page) {
+  const title = await page.title().catch(() => "");
+  const bodyText = await page
+    .evaluate(() => document.body?.innerText?.slice(0, 1000) || "")
+    .catch(() => "");
+  const blockMarkers = ["access denied", "request unsuccessful", "incapsula", "blocked", "forbidden", "attention required"];
+  const haystack = `${title} ${bodyText}`.toLowerCase();
+  const looksBlocked = blockMarkers.some((m) => haystack.includes(m));
+  return { title, bodySnippet: bodyText.slice(0, 300), looksBlocked };
 }
 
 // מוריד קובץ בתוך הדף (fetch + blob->base64) ומחזיר מחרוזת base64,

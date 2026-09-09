@@ -3,10 +3,11 @@ name: Backfill CMA Reports History
 on:
   workflow_dispatch:
     inputs:
-      force:
-        description: "רענון מחדש גם אם backfill כבר סומן כהושלם (1 = כן)"
+      force_rescan:
+        description: "סמן ✓ רק אם רוצים להריץ שוב את כל ה-backfill מההתחלה, גם אם הוא כבר סומן כהושלם בעבר. בהרצה ראשונה תשאיר לא מסומן."
         required: false
-        default: "0"
+        type: boolean
+        default: false
 
 permissions:
   contents: write
@@ -28,7 +29,7 @@ jobs:
       - name: Run backfill
         env:
           MODE: backfill
-          FORCE_BACKFILL: ${{ github.event.inputs.force }}
+          FORCE_BACKFILL: ${{ github.event.inputs.force_rescan }}
         run: node scripts/run.mjs
 
       - name: Commit and push if changed

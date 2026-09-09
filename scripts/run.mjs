@@ -10,6 +10,7 @@ import {
   downloadDocumentBase64,
   buildBaseFilename,
   latestPerCompanyInQuarter,
+  detectBlockedPage,
 } from "./lib.mjs";
 
 const ROOT = path.resolve(new URL(".", import.meta.url).pathname, "..");
@@ -18,7 +19,7 @@ const CSV_PATH = path.join(ROOT, "manifest.csv");
 const REPORTS_DIR = path.join(ROOT, "reports");
 
 const MODE = (process.env.MODE || "incremental").toLowerCase();
-const FORCE_BACKFILL = process.env.FORCE_BACKFILL === "1";
+const FORCE_BACKFILL = process.env.FORCE_BACKFILL === "1" || process.env.FORCE_BACKFILL === "true";
 const INCREMENTAL_QUARTERS_BACK = 3; // כמה רבעונים אחורה לבדוק כל ריצה רגילה (תופס הגשות מאוחרות)
 const MAX_LOOKBACK_QUARTERS = 80; // תקרת בטיחות ל-backfill (20 שנה)
 const EMPTY_STREAK_STOP = 6; // עוצרים אחרי כך וכך רבעונים ריקים ברצף
@@ -90,6 +91,15 @@ async function processQuarters(page, manifest, quarters, stats) {
     const result = await fetchQuarterReports(page, year, quarter);
     if (!result.ok) {
       console.log(`[${year}Q${quarter}] fetch failed (status=${result.status}) - stopping this run.`);
+      if (result.headers && Object.keys(result.headers).length) {
+        console.log(`  headers: ${JSON.stringify(result.headers)}`);
+      }
+      if (result.bodySnippet) {
+        console.log(`  body snippet: ${result.bodySnippet.replace(/\s+/g, " ").trim()}`);
+      }
+      if (result.error) {
+        console.log(`  error: ${result.error}`);
+      }
       stats.fetchFailed = true;
       break;
     }
@@ -151,9 +161,22 @@ async function main() {
   const manifest = loadManifest();
   const stats = { downloaded: 0, failed: 0 };
 
-  const browser = await chromium.launch();
-  const page = await browser.newPage();
-  await page.goto(PUBLIC_REPORTS_URL, { waitUntil: "networkidle" });
+  const browser = await chromium.launch({ args: ["--disable-blink-features=AutomationControlled"] });
+  const context = await browser.newContext({
+    locale: "he-IL",
+    userAgent:
+      "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/128.0.0.0 Safari/537.36",
+    extraHTTPHeaders: { "Accept-Language": "he-IL,he;q=0.9,en-US;q=0.8,en;q=0.7" },
+  });
+  const page = await context.newPage();
+  const gotoResponse = await page.goto(PUBLIC_REPORTS_URL, { waitUntil: "networkidle" });
+  console.log(`Initial page load: HTTP ${gotoResponse?.status()}`);
+
+  const blockCheck = await detectBlockedPage(page);
+  console.log(`Page title: "${blockCheck.title}"`);
+  if (blockCheck.looksBlocked) {
+    console.log(`Page body looks like a block/challenge page: "${blockCheck.bodySnippet.replace(/\s+/g, " ").trim()}"`);
+  }
 
   if (MODE === "backfill") {
     if (manifest.backfill?.done && !FORCE_BACKFILL) {
