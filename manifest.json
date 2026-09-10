@@ -1,5 +1,236 @@
 {
   "documents": {
+    "2775659": {
+      "DocumentId": "2775659",
+      "LegalId": "520028812",
+      "ParentCorpName": "החברה המנהלת של קרן הגמלאות של חברי \"דן\" בע\"מ",
+      "SystemName": "פנסיה",
+      "ReportPeriodDesc": "2024 רבעון 3",
+      "StatusDate": "2024-10-07T14:39:15+03:00",
+      "year": 2024,
+      "quarter": 3,
+      "path": "reports/2024Q3/520028812_pn_0324.xlsx"
+    },
+    "2789335": {
+      "DocumentId": "2789335",
+      "LegalId": "510694821",
+      "ParentCorpName": "לאומי קמ\"פ בע\"מ",
+      "SystemName": "גמל",
+      "ReportPeriodDesc": "2024 רבעון 3",
+      "StatusDate": "2024-11-03T14:01:14+02:00",
+      "year": 2024,
+      "quarter": 3,
+      "path": "reports/2024Q3/510694821_gm_0324.xlsx"
+    },
+    "2789349": {
+      "DocumentId": "2789349",
+      "LegalId": "520027954",
+      "ParentCorpName": "החברה לניהול קרן השתלמות לאקדמאים במדעי החברה והרוח בע\"מ",
+      "SystemName": "גמל",
+      "ReportPeriodDesc": "2024 רבעון 3",
+      "StatusDate": "2024-11-03T14:16:22+02:00",
+      "year": 2024,
+      "quarter": 3,
+      "path": "reports/2024Q3/520027954_gm_0324.xlsx"
+    },
+    "2790227": {
+      "DocumentId": "2790227",
+      "LegalId": "510960586",
+      "ParentCorpName": "חברת הגמל לעובדי האוניברסיטה העברית בע\"מ",
+      "SystemName": "גמל",
+      "ReportPeriodDesc": "2024 רבעון 3",
+      "StatusDate": "2024-11-04T12:57:27+02:00",
+      "year": 2024,
+      "quarter": 3,
+      "path": "reports/2024Q3/510960586_gm_0324.xlsx"
+    },
+    "2790980": {
+      "DocumentId": "2790980",
+      "LegalId": "520032269",
+      "ParentCorpName": "החברה לניהול קרן ההשתלמות לעובדי המדינה בע\"מ",
+      "SystemName": "גמל",
+      "ReportPeriodDesc": "2024 רבעון 3",
+      "StatusDate": "2024-11-05T14:26:53+02:00",
+      "year": 2024,
+      "quarter": 3,
+      "path": "reports/2024Q3/520032269_gm_0324.xlsx"
+    },
+    "2791672": {
+      "DocumentId": "2791672",
+      "LegalId": "520042177",
+      "ParentCorpName": "הכשרה חברה לביטוח בע\"מ",
+      "SystemName": "ביטוח",
+      "ReportPeriodDesc": "2024 רבעון 3",
+      "StatusDate": "2024-11-06T10:54:25+02:00",
+      "year": 2024,
+      "quarter": 3,
+      "path": "reports/2024Q3/520042177_in_0324.xlsx"
+    },
+    "2792384": {
+      "DocumentId": "2792384",
+      "LegalId": "520042540",
+      "ParentCorpName": "מנורה מבטחים ביטוח בע\"מ",
+      "SystemName": "ביטוח",
+      "ReportPeriodDesc": "2024 רבעון 3",
+      "StatusDate": "2024-11-07T07:06:10+02:00",
+      "year": 2024,
+      "quarter": 3,
+      "path": "reports/2024Q3/520042540_in_0324.xlsx"
+    },
+    "2799387": {
+      "DocumentId": "2799387",
+      "LegalId": "570009449",
+      "ParentCorpName": "עוצ\"מ - אגודה שיתופית לניהול קופות גמל בע\"מ",
+      "SystemName": "גמל",
+      "ReportPeriodDesc": "2024 רבעון 3",
+      "StatusDate": "2024-11-19T07:08:06+02:00",
+      "year": 2024,
+      "quarter": 3,
+      "path": "reports/2024Q3/570009449_gm_0324.xlsx"
+    },
+    "2799392": {
+      "DocumentId": "2799392",
+      "LegalId": "520031659",
+      "ParentCorpName": "עוצ\"מ חברה לניהול קופות גמל והשתלמות בע\"מ",
+      "SystemName": "גמל",
+      "ReportPeriodDesc": "2024 רבעון 3",
+      "StatusDate": "2024-11-19T07:06:13+02:00",
+      "year": 2024,
+      "quarter": 3,
+      "path": "reports/2024Q3/520031659_gm_0324.xlsx"
+    },
+    "2801364": {
+      "DocumentId": "2801364",
+      "LegalId": "520023185",
+      "ParentCorpName": "הפניקס חברה לביטוח בע\"מ",
+      "SystemName": "ביטוח",
+      "ReportPeriodDesc": "2024 רבעון 3",
+      "StatusDate": "2024-11-24T07:06:04+02:00",
+      "year": 2024,
+      "quarter": 3,
+      "path": "reports/2024Q3/520023185_in_0324.xlsx"
+    },
+    "2801641": {
+      "DocumentId": "2801641",
+      "LegalId": "520028390",
+      "ParentCorpName": "קרנות השתלמות למורים תיכוניים, מורי סמינרים ומפקחים - חברה מנהלת בע\"מ",
+      "SystemName": "גמל",
+      "ReportPeriodDesc": "2024 רבעון 3",
+      "StatusDate": "2024-11-24T08:54:16+02:00",
+      "year": 2024,
+      "quarter": 3,
+      "path": "reports/2024Q3/520028390_gm_0324.xlsx"
+    },
+    "2801643": {
+      "DocumentId": "2801643",
+      "LegalId": "520027251",
+      "ParentCorpName": "קרנות השתלמות למורים ולגננות - חברה מנהלת בע\"מ",
+      "SystemName": "גמל",
+      "ReportPeriodDesc": "2024 רבעון 3",
+      "StatusDate": "2024-11-24T08:54:11+02:00",
+      "year": 2024,
+      "quarter": 3,
+      "path": "reports/2024Q3/520027251_gm_0324.xlsx"
+    },
+    "2801817": {
+      "DocumentId": "2801817",
+      "LegalId": "512362914",
+      "ParentCorpName": "מחוג - מינהל גמל לעובדי חברת חשמל לישראל בע\"מ",
+      "SystemName": "גמל",
+      "ReportPeriodDesc": "2024 רבעון 3",
+      "StatusDate": "2024-11-24T11:22:11+02:00",
+      "year": 2024,
+      "quarter": 3,
+      "path": "reports/2024Q3/512362914_gm_0324.xlsx"
+    },
+    "2804069": {
+      "DocumentId": "2804069",
+      "LegalId": "570014928",
+      "ParentCorpName": "קופת תגמולים של עובדי התעשיה האוירית לישראל בע\"מ",
+      "SystemName": "גמל",
+      "ReportPeriodDesc": "2024 רבעון 3",
+      "StatusDate": "2024-11-27T10:34:36+02:00",
+      "year": 2024,
+      "quarter": 3,
+      "path": "reports/2024Q3/570014928_gm_0324.xlsx"
+    },
+    "2804281": {
+      "DocumentId": "2804281",
+      "LegalId": "520029620",
+      "ParentCorpName": "החברה לניהול קרן השתלמות לביוכימאים  ומקרוביולוגים בע\"מ",
+      "SystemName": "גמל",
+      "ReportPeriodDesc": "2024 רבעון 3",
+      "StatusDate": "2024-11-27T12:13:15+02:00",
+      "year": 2024,
+      "quarter": 3,
+      "path": "reports/2024Q3/520029620_gm_0324.xlsx"
+    },
+    "2804578": {
+      "DocumentId": "2804578",
+      "LegalId": "570002618",
+      "ParentCorpName": "תגמולים של עובדים בעירית ת\"א-יפו א.ש. בע\"מ",
+      "SystemName": "גמל",
+      "ReportPeriodDesc": "2024 רבעון 3",
+      "StatusDate": "2024-11-27T16:00:16+02:00",
+      "year": 2024,
+      "quarter": 3,
+      "path": "reports/2024Q3/570002618_gm_0324.xlsx"
+    },
+    "2804581": {
+      "DocumentId": "2804581",
+      "LegalId": "513452003",
+      "ParentCorpName": "חברה לניהול קופות גמל של העובדים בעיריית תל - אביב יפו בע\"מ",
+      "SystemName": "גמל",
+      "ReportPeriodDesc": "2024 רבעון 3",
+      "StatusDate": "2024-11-27T16:00:24+02:00",
+      "year": 2024,
+      "quarter": 3,
+      "path": "reports/2024Q3/513452003_gm_0324.xlsx"
+    },
+    "2804592": {
+      "DocumentId": "2804592",
+      "LegalId": "510142789",
+      "ParentCorpName": "חברת ב'ת למ'ד דל'ת בע\"מ",
+      "SystemName": "גמל",
+      "ReportPeriodDesc": "2024 רבעון 3",
+      "StatusDate": "2024-11-27T17:35:09+02:00",
+      "year": 2024,
+      "quarter": 3,
+      "path": "reports/2024Q3/510142789_gm_0324.xlsx"
+    },
+    "2804949": {
+      "DocumentId": "2804949",
+      "LegalId": "514956465",
+      "ParentCorpName": "מור גמל ופנסיה בע\"מ",
+      "SystemName": "גמל",
+      "ReportPeriodDesc": "2024 רבעון 3",
+      "StatusDate": "2024-11-28T09:36:50+02:00",
+      "year": 2024,
+      "quarter": 3,
+      "path": "reports/2024Q3/514956465_gm_0324.xlsx"
+    },
+    "2805054": {
+      "DocumentId": "2805054",
+      "LegalId": "520022518",
+      "ParentCorpName": "החברה לניהול קופת התגמולים והפנסיה של עובדי הסוכנות היהודית לארץ ישראל בע\"מ",
+      "SystemName": "פנסיה",
+      "ReportPeriodDesc": "2024 רבעון 3",
+      "StatusDate": "2024-11-28T10:34:10+02:00",
+      "year": 2024,
+      "quarter": 3,
+      "path": "reports/2024Q3/520022518_pn_0324.xlsx"
+    },
+    "2805109": {
+      "DocumentId": "2805109",
+      "LegalId": "520034968",
+      "ParentCorpName": "החברה המנהלת של קרן השתלמות של עובדי חברת החשמל לישראל בע\"מ",
+      "SystemName": "גמל",
+      "ReportPeriodDesc": "2024 רבעון 3",
+      "StatusDate": "2024-11-28T11:25:14+02:00",
+      "year": 2024,
+      "quarter": 3,
+      "path": "reports/2024Q3/520034968_gm_0324.xlsx"
+    },
     "2827075": {
       "DocumentId": "2827075",
       "LegalId": "520028812",
@@ -5687,6 +5918,17 @@
       "quarter": 2,
       "path": "reports/2026Q2/520042540_in_0226.xlsx"
     },
+    "3192640": {
+      "DocumentId": "3192640",
+      "LegalId": "570011767",
+      "ParentCorpName": "קופת תגמולים של עובדי אל על נתיבי אוויר לישראל בע\"מ אגודה שיתופית",
+      "SystemName": "גמל",
+      "ReportPeriodDesc": "2024 רבעון 4",
+      "StatusDate": "2026-08-16T15:32:05+03:00",
+      "year": 2024,
+      "quarter": 4,
+      "path": "reports/2024Q4/570011767_gm_0424.xlsx"
+    },
     "3192648": {
       "DocumentId": "3192648",
       "LegalId": "570011767",
@@ -5763,6 +6005,17 @@
       "year": 2025,
       "quarter": 4,
       "path": "reports/2025Q4/570005959_gm_0425.xlsx"
+    },
+    "3192668": {
+      "DocumentId": "3192668",
+      "LegalId": "570005959",
+      "ParentCorpName": "קופת\"ג של עובדי עירית חיפה",
+      "SystemName": "גמל",
+      "ReportPeriodDesc": "2024 רבעון 4",
+      "StatusDate": "2026-08-16T15:46:48+03:00",
+      "year": 2024,
+      "quarter": 4,
+      "path": "reports/2024Q4/570005959_gm_0424.xlsx"
     },
     "3193135": {
       "DocumentId": "3193135",
@@ -6325,6 +6578,17 @@
       "quarter": 2,
       "path": "reports/2026Q2/510927536_gm_0226.xlsx"
     },
+    "3202706": {
+      "DocumentId": "3202706",
+      "LegalId": "513621110",
+      "ParentCorpName": "אינפיניטי השתלמות, גמל ופנסיה בע\"מ",
+      "SystemName": "פנסיה",
+      "ReportPeriodDesc": "2024 רבעון 4",
+      "StatusDate": "2026-09-01T16:01:20+03:00",
+      "year": 2024,
+      "quarter": 4,
+      "path": "reports/2024Q4/513621110_pn_0424.xlsx"
+    },
     "3202951": {
       "DocumentId": "3202951",
       "LegalId": "512237744",
@@ -6346,6 +6610,17 @@
       "year": 2026,
       "quarter": 2,
       "path": "reports/2026Q2/520042573_gm_0226.xlsx"
+    },
+    "3203542": {
+      "DocumentId": "3203542",
+      "LegalId": "513621110",
+      "ParentCorpName": "אינפיניטי השתלמות, גמל ופנסיה בע\"מ",
+      "SystemName": "גמל",
+      "ReportPeriodDesc": "2024 רבעון 4",
+      "StatusDate": "2026-09-02T17:16:40+03:00",
+      "year": 2024,
+      "quarter": 4,
+      "path": "reports/2024Q4/513621110_gm_0424.xlsx"
     },
     "3203545": {
       "DocumentId": "3203545",
