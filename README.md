@@ -1,96 +1,93 @@
-# מעקב דוחות - רשות שוק ההון
+# מעקב דוחות רבעוניים - רשות שוק ההון
 
-מריץ אוטומטית, בענן (GitHub Actions, בלי תלות במחשב אישי), בדיקה של דוחות
-ציבוריים חדשים באתר [cmainfo.cma.gov.il](https://cmainfo.cma.gov.il/publicreports),
-מוריד קבצים חדשים לתיקייה לפי רבעון, ושומר `manifest.csv`/`manifest.json`
-כאינדקס מלא של כל הקבצים - כדי שאפשר יהיה להתחבר אליו מ-Power Query.
+ארכיון אוטומטי של **קבצי הדוחות הרבעוניים הגולמיים** מאתר רשות שוק ההון
+(cmainfo.cma.gov.il), מסודרים לפי רבעון, עם manifest ל-Power Query.
 
-## מבנה
+## למה הארכיטקטורה הזאת
+
+האתר של רשות שוק ההון חוסם (403 / AWS WAF) כל גישה שאינה מ-IP ישראלי ביתי -
+כולל כל שרת ענן (GitHub Actions, AWS, וכו'). לכן **המשיכה חייבת לקרות
+מהדפדפן שלך, על החיבור הביתי שלך** (בדיוק כמו שה-bookmarklet עבד).
+
+הפתרון (היברידי):
+1. **תוסף Chrome** (`extension/`) רץ בדפדפן שלך, מושך מהאתר אחת ליום את
+   הדוחות החדשים, ו**דוחף אותם אוטומטית ל-GitHub** דרך ה-API.
+2. **GitHub** מחזיק את הארכיון (הקבצים + `manifest.csv`) - זמין 24/7 בלי
+   קשר אם המחשב שלך דלוק.
+3. **Power Query** קורא מ-GitHub. Refresh מושך את המצב העדכני.
+
+הנקודה: ה"תמיד-זמין" נחוץ רק לקריאה (Power Query) וזה תמיד קיים ב-GitHub.
+האיסוף צריך לקרות רק מדי פעם, וכשמדובר בדוחות רבעוניים - כל פעם שהדפדפן
+שלך פתוח (התוסף בודק אחת ליום ברקע) תופס כל דוח חדש.
+
+## מבנה הארכיון
 
 ```
-reports/
-  2024Q1/
-    <LegalId>_<in|gm|pn>.xlsx
-  2024Q2/
-  ...
-manifest.json   - יומן מלא (מקור האמת: אילו DocumentId כבר ירדו)
-manifest.csv    - אותו מידע כ-CSV, כולל raw_url לכל קובץ - זה מה שמתחברים אליו מ-Power Query
-scripts/
-  lib.mjs       - הלוגיקה המשותפת (שליפה/הורדה מהאתר)
-  run.mjs       - הסקריפט הראשי (מצב incremental או backfill)
-.github/workflows/
-  check-reports.yml  - רץ כל שעה, בודק את 4 הרבעונים האחרונים (תופס הגשות מאוחרות)
-  backfill.yml       - רץ ידנית (Actions -> Run workflow), מושך היסטוריה אחורה
-                       עד שנתקל ב-6 רבעונים ריקים ברצף
+reports/<year>Q<quarter>/<LegalId>_<in|gm|pn>.xlsx
+manifest.json   מקור האמת: אילו DocumentId כבר נמשכו
+manifest.csv    אותו מידע כטבלה + content_api_url לכל קובץ (זה מה שמתחברים אליו)
+extension/      קוד התוסף
 ```
 
-## איך זה עובד מאחורי הקלעים
+## התקנת התוסף
 
-הבדיקה רצה בתוך דפדפן headless אמיתי (Playwright/Chromium) שטוען את דף
-"publicreports" בפועל ואז קורא לאותם API endpoints שהאתר עצמו קורא להם -
-בדיוק כמו bookmarklet שרץ בדפדפן. זה חשוב כי לאתר יש הגנת בוט/WAF שחוסמת
-בקשות HTTP גולמיות (משרת/פונקציה בענן) שלא הגיעו מטעינה אמיתית של הדף.
+1. הורד/שכפל את התיקייה `extension/`.
+2. פתח `chrome://extensions` → הפעל "מצב מפתחים" → "טען פריט שלא נארז" →
+   בחר את תיקיית `extension`.
+3. פתח את הגדרות התוסף (כפתור "הגדרות" בפופאפ) והזן:
+   - owner: `Revach123`, repo: `MASLULIM`, branch: `main`
+   - GitHub Token (Fine-grained PAT, ראה למטה)
+4. לחץ "שמור ובדוק חיבור" - צריך להופיע ✓.
 
-כל קובץ מזוהה לפי `DocumentId` הייחודי שלו - קובץ שכבר ירד לא יורד שוב.
+### הפקת טוקן GitHub
 
-## הפעלה ראשונה
+GitHub → Settings → Developer settings → Fine-grained personal access tokens
+→ Generate new token → Repository access: only this repo → Permissions →
+Repository permissions → **Contents: Read and write** → Generate → העתק
+(`github_pat_...`).
 
-1. **Backfill (חד פעמי)**: בטאב Actions ברפו - תבחר workflow
-   "Backfill CMA Reports History" - Run workflow. זה ימשוך את כל ההיסטוריה
-   הזמינה (אחורה עד שיתקל ב-6 רבעונים ריקים ברצף, עד תקרה של 20 שנה) ויכניס
-   הכל לתיקיות `reports/<year>Q<quarter>/`. יכול לקחת זמן (תלוי בכמות
-   הדוחות) - יש timeout של 5 שעות.
-2. **מעקב שוטף**: workflow "Check CMA Reports" רץ אוטומטית כל שעה (UTC),
-   בודק את 4 הרבעונים האחרונים (לתפוס הגשות מאוחרות/תיקונים) ומוריד רק מה
-   שעדיין לא היה ביומן.
-3. אפשר גם להריץ את שניהם ידנית בכל רגע דרך "Run workflow".
+## שימוש
 
-## חיבור מ-Power Query (הרפו פרטי)
+- **פעם ראשונה**: לחץ "משיכת כל ההיסטוריה" בפופאפ (רץ פעם אחת, יכול לקחת
+  כמה דקות - אל תסגור את הדפדפן באמצע).
+- **שוטף**: התוסף בודק אוטומטית אחת ליום (כשהדפדפן פתוח), ומושך רק חדשים.
+  אפשר גם ללחוץ "בדוק ומשוך עכשיו" ידנית.
+- כשיש חדשים - התראה + תג על האייקון, והקבצים נדחפים ל-GitHub כ-commit אחד.
 
-צריך Personal Access Token של GitHub עם הרשאת `repo` (read בלבד מספיק) כדי
-לקרוא מרפו פרטי:
+## חיבור מ-Power Query (repo פרטי)
 
-1. GitHub -> Settings -> Developer settings -> Personal access tokens ->
-   Fine-grained tokens -> Generate new token. הרשאה: Repository access רק
-   לרפו הזה, Contents: Read-only.
-2. ב-Power Query (Excel/Power BI) -> Get Data -> Blank Query -> Advanced
-   Editor, ותדביק:
+לקריאת טבלת האינדקס `manifest.csv` מרפו פרטי, דרך ה-API עם הטוקן:
 
 ```powerquery
 let
     Token = "PASTE_YOUR_TOKEN_HERE",
-    Url = "https://raw.githubusercontent.com/Revach123/maslulim/main/manifest.csv",
+    Url = "https://api.github.com/repos/Revach123/MASLULIM/contents/manifest.csv?ref=main",
     Source = Csv.Document(
-        Web.Contents(Url, [Headers=[Authorization="token " & Token]]),
-        [Delimiter=",", Columns=10, Encoding=65001, QuoteStyle=QuoteStyle.Csv]
+        Web.Contents(Url, [Headers=[
+            Authorization = "Bearer " & Token,
+            Accept = "application/vnd.github.raw"
+        ]]),
+        [Delimiter=",", Encoding=65001, QuoteStyle=QuoteStyle.Csv]
     ),
-    PromotedHeaders = Table.PromoteHeaders(Source, [PromoteAllScalars=true])
+    Promoted = Table.PromoteHeaders(Source, [PromoteAllScalars=true])
 in
-    PromotedHeaders
+    Promoted
 ```
 
-זה נותן טבלה עם שורה לכל קובץ, כולל עמודת `raw_url` שאפשר להשתמש בה כדי
-למשוך קובץ ספציפי (אותה טכניקה - `Web.Contents` עם אותו header של
-Authorization).
-
-כדי למשוך קובץ xlsx ספציפי בעצמו (למשל בתוך שאילתה נוספת שמבוססת על
-`raw_url` מהטבלה למעלה):
+בטבלה יש עמודת `content_api_url` לכל קובץ דוח. כדי למשוך קובץ xlsx ספציפי
+(למשל בשאילתה שמבוססת על אותה עמודה):
 
 ```powerquery
 let
     Token = "PASTE_YOUR_TOKEN_HERE",
-    Bytes = Web.Contents(SomeRawUrl, [Headers=[Authorization="token " & Token]]),
-    Workbook = Excel.Workbook(Bytes)
+    Bytes = Web.Contents(ThatContentApiUrl, [Headers=[
+        Authorization = "Bearer " & Token,
+        Accept = "application/vnd.github.raw"
+    ]]),
+    Book = Excel.Workbook(Bytes)
 in
-    Workbook
+    Book
 ```
 
-## הערות
-
-- הזמן בעמודת `StatusDate`/שם הריפו ב-`raw_url` מניחים שהברנץ' הראשי נקרא
-  `main` ובעלי הרפו זה `Revach123/maslulim` - אם זה משתנה, `raw_url`
-  ב-CSV יתעדכן אוטומטית בריצה הבאה (מחושב מ-`GITHUB_REPOSITORY`/`GITHUB_REF_NAME`
-  בזמן ריצת ה-workflow).
-- אם בעתיד ירצו publish בלי טוקן (רפו ציבורי), אפשר פשוט לשנות את
-  הרפו ל-Public ב-Settings, ואז לוותר על ה-header של Authorization
-  ב-Power Query.
+> אם תהפוך את הרפו ל-Public בעתיד, אפשר לוותר על ה-Token וה-Headers ולקרוא
+> ישירות מ-`https://raw.githubusercontent.com/Revach123/MASLULIM/main/manifest.csv`.
