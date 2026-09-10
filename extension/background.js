@@ -39,7 +39,12 @@ async function saveLocal(base64, filename) {
 
 async function getConfig() {
   const { config } = await chrome.storage.local.get("config");
-  return config || {};
+  const c = config || {};
+  // ניקוי רווחים/שורות נסתרים שנדבקו יחד עם הטוקן (גורם ל-401 Bad credentials)
+  if (c.token) c.token = c.token.replace(/\s+/g, "");
+  if (c.owner) c.owner = c.owner.trim();
+  if (c.repo) c.repo = c.repo.trim();
+  return c;
 }
 async function setStatus(patch) {
   const { status } = await chrome.storage.local.get("status");
@@ -204,8 +209,26 @@ async function collectAndCommit(mode) {
   }
   const branch = cfg.branch || "main";
   stopRequested = false;
-  await setStatus({ running: true, needsSetup: false, blocked: false, tokenInvalid: false, lastError: null, mode, progress: "פותח את אתר רשות שוק ההון..." });
+  await setStatus({ running: true, needsSetup: false, blocked: false, tokenInvalid: false, lastError: null, mode, progress: "בודק חיבור ל-GitHub..." });
 
+  // בדיקת טוקן מראש (fail-fast) - כדי לא לבזבז הורדות אם הטוקן לא תקף/בלי כתיבה
+  try {
+    const repoInfo = await verifyRepo(cfg.token, cfg.owner, cfg.repo);
+    if (repoInfo && repoInfo.permissions && repoInfo.permissions.push === false) {
+      await setStatus({ running: false, tokenInvalid: true, progress: "", lastRun: Date.now(),
+        lastError: "לטוקן אין הרשאת כתיבה. צור טוקן עם Contents: Read and write ועדכן בהגדרות." });
+      notify("אין הרשאת כתיבה", "הטוקן קורא אך לא כותב. צור טוקן עם Contents: Read and write.");
+      return;
+    }
+  } catch (e) {
+    const msg = String(e.message || e);
+    await setStatus({ running: false, tokenInvalid: true, progress: "", lastRun: Date.now(),
+      lastError: `בדיקת החיבור ל-GitHub נכשלה (${msg.match(/HTTP \d+/)?.[0] || "שגיאה"}). ודא שהטוקן תקף ושייך לחשבון ${cfg.owner}.` });
+    notify("חיבור GitHub נכשל", "הטוקן לא תקף או לא שייך לחשבון/repo הנכון. עדכן בהגדרות.");
+    return;
+  }
+
+  await setStatus({ progress: "פותח את אתר רשות שוק ההון..." });
   startKeepAlive();
   const { createdByUs } = await ensureCmaTab();
   try {

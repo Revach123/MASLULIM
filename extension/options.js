@@ -13,7 +13,7 @@ document.getElementById("save").addEventListener("click", async () => {
     owner: document.getElementById("owner").value.trim(),
     repo: document.getElementById("repo").value.trim(),
     branch: document.getElementById("branch").value.trim() || "main",
-    token: document.getElementById("token").value.trim(),
+    token: document.getElementById("token").value.replace(/\s+/g, ""),
   };
   if (!config.owner || !config.repo || !config.token) {
     msg.textContent = "יש למלא owner, repo וטוקן.";
