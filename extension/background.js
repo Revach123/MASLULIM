@@ -9,7 +9,7 @@ import {
   buildBaseFilename,
   utf8ToBase64,
 } from "./lib.js";
-import { readManifest, commitFiles, verifyRepo } from "./github.js";
+import { readManifest, commitFiles, verifyRepo, getFileBase64 } from "./github.js";
 
 const ALARM = "cma-daily";
 const INCREMENTAL_QUARTERS = 4;
@@ -17,8 +17,25 @@ const BACKFILL_EMPTY_STREAK_STOP = 6;
 const BACKFILL_MAX_QUARTERS = 80;
 const COMMIT_BATCH = 25;
 const DOWNLOAD_DELAY_MS = 300;
+// תיקייה מקומית אחת (שטוחה) בתיקיית ההורדות - כל הקבצים יחד, כמו ה-bookmarklet.
+// ב-git הם נשמרים מחולקים לרבעונים; מקומית הכל במקום אחד.
+const LOCAL_FOLDER = "דוחות רבעוניים - רשות שוק ההון";
 
 const sleep = (ms) => new Promise((r) => setTimeout(r, ms));
+
+// שומר עותק מקומי בתיקיית ההורדות (תיקייה אחת שטוחה).
+async function saveLocal(base64, filename) {
+  try {
+    await chrome.downloads.download({
+      url: "data:application/octet-stream;base64," + base64,
+      filename: `${LOCAL_FOLDER}/${filename}`,
+      conflictAction: "overwrite",
+      saveAs: false,
+    });
+  } catch (e) {
+    console.warn("local save failed", filename, e);
+  }
+}
 
 async function getConfig() {
   const { config } = await chrome.storage.local.get("config");
@@ -252,6 +269,7 @@ async function collectAndCommit(mode) {
           failed++;
         } else {
           batch.push({ path, base64: dl.base64 });
+          await saveLocal(dl.base64, path.split("/").pop()); // עותק מקומי שטוח
           manifest.documents[key] = {
             DocumentId: key, LegalId: item.LegalId || "", ParentCorpName: item.ParentCorpName || "",
             SystemName: item.SystemName || "", ReportPeriodDesc: item.ReportPeriodDesc || "",
@@ -288,6 +306,44 @@ async function collectAndCommit(mode) {
       try { await chrome.tabs.remove(session.tabId); } catch { /* ignore */ }
       session = null;
     }
+  }
+}
+
+// שומר מקומית (תיקייה אחת שטוחה) את כל הקבצים שכבר בארכיון ה-git.
+// שימושי כדי למלא את התיקייה המקומית בלי למשוך שוב מהאתר, וגם במחשב חדש.
+async function syncLocalFromArchive() {
+  const cfg = await getConfig();
+  if (!cfg.token || !cfg.owner || !cfg.repo) {
+    await setStatus({ running: false, needsSetup: true, lastError: "חסרות הגדרות GitHub" });
+    return;
+  }
+  const branch = cfg.branch || "main";
+  await setStatus({ running: true, needsSetup: false, lastError: null, progress: "קורא רשימה מ-GitHub..." });
+  startKeepAlive();
+  try {
+    const manifest = await readManifest(cfg.token, cfg.owner, cfg.repo, branch);
+    const docs = Object.values(manifest.documents || {});
+    let saved = 0, failed = 0, i = 0;
+    for (const d of docs) {
+      i++;
+      await setStatus({ progress: `שומר מקומית ${i}/${docs.length}: ${d.ParentCorpName || d.DocumentId}` });
+      try {
+        const b64 = await getFileBase64(cfg.token, cfg.owner, cfg.repo, branch, d.path);
+        await saveLocal(b64, d.path.split("/").pop());
+        saved++;
+      } catch (e) {
+        failed++;
+        console.warn("sync-local failed", d.path, e);
+      }
+      await sleep(120);
+    }
+    await setStatus({ running: false, progress: "", lastError: null, lastRun: Date.now(), lastNewCount: saved, lastFailCount: failed, totalDocs: docs.length });
+    notify("סנכרון מקומי הושלם", `${saved} קבצים נשמרו לתיקייה המקומית` + (failed ? ` (${failed} נכשלו)` : ""));
+  } catch (e) {
+    await setStatus({ running: false, progress: "", lastError: String(e.message || e) });
+    notify("שגיאה בסנכרון מקומי", String(e.message || e).slice(0, 120));
+  } finally {
+    stopKeepAlive();
   }
 }
 
@@ -331,6 +387,7 @@ chrome.notifications.onClicked.addListener(() => chrome.action.setBadgeText({ te
 chrome.runtime.onMessage.addListener((msg, _sender, sendResponse) => {
   if (msg?.type === "run-incremental") { runSafe("incremental").then(() => sendResponse({ ok: true })); return true; }
   if (msg?.type === "run-backfill") { runSafe("backfill").then(() => sendResponse({ ok: true })); return true; }
+  if (msg?.type === "sync-local") { syncLocalFromArchive().then(() => sendResponse({ ok: true })); return true; }
   if (msg?.type === "verify") {
     (async () => {
       try { await verifyRepo(msg.config.token, msg.config.owner, msg.config.repo); sendResponse({ ok: true }); }

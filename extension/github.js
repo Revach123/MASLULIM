@@ -31,6 +31,18 @@ export async function verifyRepo(token, owner, repo) {
   return gh(token, "GET", `/repos/${owner}/${repo}`);
 }
 
+// מחזיר את תוכן הקובץ מהרפו כ-base64 (לשחזור עותק מקומי מהארכיון).
+export async function getFileBase64(token, owner, repo, branch, path) {
+  const encPath = path.split("/").map(encodeURIComponent).join("/");
+  const data = await gh(token, "GET", `/repos/${owner}/${repo}/contents/${encPath}?ref=${encodeURIComponent(branch)}`);
+  if (data.content) return data.content.replace(/\n/g, "");
+  if (data.sha) {
+    const blob = await gh(token, "GET", `/repos/${owner}/${repo}/git/blobs/${data.sha}`);
+    return (blob.content || "").replace(/\n/g, "");
+  }
+  throw new Error(`no content for ${path}`);
+}
+
 // קורא את manifest.json מהרפו; אם לא קיים - מחזיר ריק.
 export async function readManifest(token, owner, repo, branch) {
   const res = await fetch(`${API}/repos/${owner}/${repo}/contents/manifest.json?ref=${encodeURIComponent(branch)}`, {

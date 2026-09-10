@@ -1,9 +1,9 @@
 {
   "manifest_version": 3,
   "name": "מעקב דוחות רבעוניים - רשות שוק ההון",
-  "version": "2.3.0",
+  "version": "2.4.0",
   "description": "מושך אחת ליום מהאתר של רשות שוק ההון את קבצי הדוחות הרבעוניים החדשים (מתוך דף האתר עצמו, מהחיבור הביתי שלך) ודוחף אותם אוטומטית ל-GitHub, מסודרים לפי רבעון, עם manifest ל-Power Query.",
-  "permissions": ["storage", "alarms", "notifications", "scripting", "tabs"],
+  "permissions": ["storage", "alarms", "notifications", "scripting", "tabs", "downloads"],
   "host_permissions": ["https://cmainfo.cma.gov.il/*", "https://api.github.com/*"],
   "background": {
     "service_worker": "background.js",

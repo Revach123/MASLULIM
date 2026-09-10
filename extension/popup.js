@@ -18,6 +18,7 @@ async function render() {
   // חיווי התקדמות חי + נעילת כפתורים בזמן ריצה
   document.getElementById("run").disabled = !!s.running;
   document.getElementById("backfill").disabled = !!s.running;
+  document.getElementById("sync-local").disabled = !!s.running;
   if (s.running && s.progress) document.getElementById("msg").textContent = s.progress;
 }
 
@@ -29,6 +30,7 @@ chrome.storage.onChanged.addListener((changes, area) => {
 function busy(on, text) {
   document.getElementById("run").disabled = on;
   document.getElementById("backfill").disabled = on;
+  document.getElementById("sync-local").disabled = on;
   document.getElementById("msg").textContent = text || "";
 }
 
@@ -46,6 +48,15 @@ document.getElementById("backfill").addEventListener("click", () => {
   busy(true, "מושך היסטוריה... (יכול לקחת כמה דקות)");
   chrome.runtime.sendMessage({ type: "run-backfill" }, async () => {
     busy(false, "ה-backfill הסתיים");
+    await render();
+    setTimeout(() => (document.getElementById("msg").textContent = ""), 3000);
+  });
+});
+
+document.getElementById("sync-local").addEventListener("click", () => {
+  busy(true, "שומר עותק מקומי מ-git...");
+  chrome.runtime.sendMessage({ type: "sync-local" }, async () => {
+    busy(false, "הסנכרון המקומי הסתיים");
     await render();
     setTimeout(() => (document.getElementById("msg").textContent = ""), 3000);
   });
