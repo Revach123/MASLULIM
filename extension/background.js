@@ -1,21 +1,21 @@
 import {
-  recentQuarters,
+  REPORT_TYPE,
+  CMA_ORIGIN,
+  CMA_PAGE,
   currentQuarter,
   prevQuarter,
-  fetchQuarterReports,
-  downloadDocument,
+  recentQuarters,
   latestPerCompanyInQuarter,
   buildBaseFilename,
-  bytesToBase64,
   utf8ToBase64,
 } from "./lib.js";
 import { readManifest, commitFiles, verifyRepo } from "./github.js";
 
 const ALARM = "cma-daily";
-const INCREMENTAL_QUARTERS = 4; // כמה רבעונים אחורה לבדוק בריצה יומית (תופס הגשות מאוחרות)
+const INCREMENTAL_QUARTERS = 4;
 const BACKFILL_EMPTY_STREAK_STOP = 6;
 const BACKFILL_MAX_QUARTERS = 80;
-const COMMIT_BATCH = 25; // כמה קבצים בכל commit (חוסך זיכרון בעת backfill גדול)
+const COMMIT_BATCH = 25;
 const DOWNLOAD_DELAY_MS = 300;
 
 const sleep = (ms) => new Promise((r) => setTimeout(r, ms));
@@ -29,19 +29,81 @@ async function setStatus(patch) {
   await chrome.storage.local.set({ status: { ...(status || {}), ...patch } });
 }
 
+// ----- הרצה בתוך דף ה-CMA (same-origin, בדיוק כמו ה-bookmarklet) -----
+
+async function waitForTabComplete(tabId, timeoutMs = 45000) {
+  const start = Date.now();
+  while (Date.now() - start < timeoutMs) {
+    const tab = await chrome.tabs.get(tabId);
+    if (tab.status === "complete") return;
+    await sleep(500);
+  }
+}
+
+// מחזיר { tabId, createdByUs }
+async function ensureCmaTab() {
+  const tabs = await chrome.tabs.query({ url: "https://cmainfo.cma.gov.il/*" });
+  if (tabs.length > 0) return { tabId: tabs[0].id, createdByUs: false };
+  const tab = await chrome.tabs.create({ url: CMA_PAGE, active: false });
+  await waitForTabComplete(tab.id);
+  await sleep(2500); // זמן קצר ל-SPA/עוגיות להתייצב
+  return { tabId: tab.id, createdByUs: true };
+}
+
+async function execInTab(tabId, func, args) {
+  const [res] = await chrome.scripting.executeScript({ target: { tabId }, func, args, world: "MAIN" });
+  return res?.result;
+}
+
+// הפונקציות הבאות מוזרקות ורצות בתוך הדף עצמו:
+function pageFetchQuarter(year, quarter, reportType) {
+  return fetch("/api/PublicReporting/GetPublicReports", {
+    method: "POST",
+    headers: { "Content-Type": "application/json", Accept: "application/json" },
+    credentials: "include",
+    body: JSON.stringify({
+      corporation: null,
+      fromYear: year,
+      fromQuarter: quarter,
+      toYear: year,
+      toQuarter: quarter,
+      reportFromDate: null,
+      reportToDate: null,
+      investmentName: null,
+      reportType,
+      systemField: "",
+      statusReport: 1,
+    }),
+  })
+    .then(async (r) => {
+      const ct = r.headers.get("content-type") || "";
+      if (!r.ok) return { __error: true, status: r.status };
+      if (!ct.includes("application/json")) return { __error: true, status: r.status, nonJson: true };
+      const data = await r.json();
+      return { items: Array.isArray(data) ? data : [] };
+    })
+    .catch((e) => ({ __error: true, message: String(e) }));
+}
+
+function pageDownloadDoc(documentId, ext) {
+  return fetch(`/api/PublicReporting/downloadFiles?IdDoc=${documentId}&extention=${ext}`, {
+    credentials: "include",
+  })
+    .then(async (r) => {
+      if (!r.ok) return { __error: true, status: r.status };
+      const buf = await r.arrayBuffer();
+      const bytes = new Uint8Array(buf);
+      let binary = "";
+      const chunk = 0x8000;
+      for (let i = 0; i < bytes.length; i += chunk) binary += String.fromCharCode.apply(null, bytes.subarray(i, i + chunk));
+      return { base64: btoa(binary) };
+    })
+    .catch((e) => ({ __error: true, message: String(e) }));
+}
+
+// ----- CSV ל-Power Query -----
 function manifestCsv(manifest, owner, repo, branch) {
-  const cols = [
-    "DocumentId",
-    "LegalId",
-    "ParentCorpName",
-    "SystemName",
-    "ReportPeriodDesc",
-    "StatusDate",
-    "year",
-    "quarter",
-    "path",
-    "content_api_url",
-  ];
+  const cols = ["DocumentId", "LegalId", "ParentCorpName", "SystemName", "ReportPeriodDesc", "StatusDate", "year", "quarter", "path", "content_api_url"];
   const esc = (v) => {
     const s = v === null || v === undefined ? "" : String(v);
     return /[",\n]/.test(s) ? `"${s.replace(/"/g, '""')}"` : s;
@@ -67,112 +129,97 @@ async function collectAndCommit(mode) {
     return;
   }
   const branch = cfg.branch || "main";
-  await setStatus({ running: true, needsSetup: false, lastError: null, mode });
+  await setStatus({ running: true, needsSetup: false, blocked: false, lastError: null, mode });
 
-  const manifest = await readManifest(cfg.token, cfg.owner, cfg.repo, branch);
-  if (!manifest.documents) manifest.documents = {};
+  const { tabId, createdByUs } = await ensureCmaTab();
+  try {
+    const manifest = await readManifest(cfg.token, cfg.owner, cfg.repo, branch);
+    if (!manifest.documents) manifest.documents = {};
 
-  const quarters =
-    mode === "backfill"
-      ? buildBackfillQuarters()
-      : recentQuarters(INCREMENTAL_QUARTERS);
+    const quarters = mode === "backfill" ? buildBackfillQuarters() : recentQuarters(INCREMENTAL_QUARTERS);
 
-  let downloaded = 0;
-  let failed = 0;
-  let emptyStreak = 0;
-  let batch = [];
-  const newNames = [];
+    let downloaded = 0, failed = 0, emptyStreak = 0, batch = [];
+    const newNames = [];
 
-  const flush = async () => {
-    if (batch.length === 0) return;
-    const files = [
-      ...batch,
-      { path: "manifest.json", base64: utf8ToBase64(JSON.stringify(manifest, null, 2) + "\n") },
-      { path: "manifest.csv", base64: utf8ToBase64(manifestCsv(manifest, cfg.owner, cfg.repo, branch)) },
-    ];
-    await commitFiles(cfg.token, cfg.owner, cfg.repo, branch, files, `Add ${batch.length} report file(s) [${mode}]`);
-    batch = [];
-  };
+    const flush = async () => {
+      if (batch.length === 0) return;
+      const files = [
+        ...batch,
+        { path: "manifest.json", base64: utf8ToBase64(JSON.stringify(manifest, null, 2) + "\n") },
+        { path: "manifest.csv", base64: utf8ToBase64(manifestCsv(manifest, cfg.owner, cfg.repo, branch)) },
+      ];
+      await commitFiles(cfg.token, cfg.owner, cfg.repo, branch, files, `Add ${batch.length} report file(s) [${mode}]`);
+      batch = [];
+    };
 
-  for (const { year, quarter } of quarters) {
-    let items;
-    try {
-      items = latestPerCompanyInQuarter(await fetchQuarterReports(year, quarter));
-    } catch (e) {
-      if (e.blocked || e.status === 403) {
-        await setStatus({ running: false, blocked: true, lastError: "האתר חסם את הבקשה (403). ודא שאתה גולש מישראל ומחובר לאתר." });
-        notify("נחסם ע\"י האתר", "פתח את אתר רשות שוק ההון בטאב, ודא שנטען, ונסה שוב.");
-        return;
-      }
-      throw e;
-    }
-
-    if (items.length === 0) {
-      emptyStreak++;
-      if (mode === "backfill" && emptyStreak >= BACKFILL_EMPTY_STREAK_STOP) break;
-      continue;
-    }
-    emptyStreak = 0;
-
-    for (const item of items) {
-      if (!item.DocumentId) continue;
-      const key = String(item.DocumentId);
-      if (manifest.documents[key]) continue;
-
-      const ext = item.fileExt || "xlsx";
-      const base = buildBaseFilename(item);
-      let path = `reports/${year}Q${quarter}/${base}.${ext}`;
-      // התנגשות שם (תיקון עם DocumentId שונה) -> להוסיף מזהה
-      if (Object.values(manifest.documents).some((d) => d.path === path)) {
-        path = `reports/${year}Q${quarter}/${base}_${key}.${ext}`;
+    for (const { year, quarter } of quarters) {
+      const resp = await execInTab(tabId, pageFetchQuarter, [year, quarter, REPORT_TYPE]);
+      if (!resp || resp.__error) {
+        const status = resp?.status;
+        if (status === 403 || resp?.nonJson) {
+          await setStatus({ running: false, blocked: true, lastError: `נחסם (status=${status || "?"}) גם מתוך הדף. ודא שהדף publicreports נטען ומציג נתונים.` });
+          notify("נחסם ע\"י האתר", "פתח את publicreports בטאב, ודא שהוא מציג דוחות, ונסה שוב.");
+          return;
+        }
+        // שגיאה אחרת - נדלג על הרבעון ונמשיך
+        continue;
       }
 
-      try {
-        const bytes = await downloadDocument(item.DocumentId, ext);
-        batch.push({ path, base64: bytesToBase64(bytes) });
-        manifest.documents[key] = {
-          DocumentId: key,
-          LegalId: item.LegalId || "",
-          ParentCorpName: item.ParentCorpName || "",
-          SystemName: item.SystemName || "",
-          ReportPeriodDesc: item.ReportPeriodDesc || "",
-          StatusDate: item.StatusDate || "",
-          year,
-          quarter,
-          path,
-        };
-        downloaded++;
-        newNames.push(item.ParentCorpName || key);
-        if (batch.length >= COMMIT_BATCH) await flush();
-      } catch (e) {
-        failed++;
-        console.error("download failed", item, e);
+      const items = latestPerCompanyInQuarter(resp.items || []);
+      if (items.length === 0) {
+        emptyStreak++;
+        if (mode === "backfill" && emptyStreak >= BACKFILL_EMPTY_STREAK_STOP) break;
+        continue;
       }
-      await sleep(DOWNLOAD_DELAY_MS);
+      emptyStreak = 0;
+
+      for (const item of items) {
+        if (!item.DocumentId) continue;
+        const key = String(item.DocumentId);
+        if (manifest.documents[key]) continue;
+
+        const ext = item.fileExt || "xlsx";
+        const base = buildBaseFilename(item);
+        let path = `reports/${year}Q${quarter}/${base}.${ext}`;
+        if (Object.values(manifest.documents).some((d) => d.path === path)) {
+          path = `reports/${year}Q${quarter}/${base}_${key}.${ext}`;
+        }
+
+        const dl = await execInTab(tabId, pageDownloadDoc, [item.DocumentId, ext]);
+        if (!dl || dl.__error || !dl.base64) {
+          failed++;
+        } else {
+          batch.push({ path, base64: dl.base64 });
+          manifest.documents[key] = {
+            DocumentId: key, LegalId: item.LegalId || "", ParentCorpName: item.ParentCorpName || "",
+            SystemName: item.SystemName || "", ReportPeriodDesc: item.ReportPeriodDesc || "",
+            StatusDate: item.StatusDate || "", year, quarter, path,
+          };
+          downloaded++;
+          newNames.push(item.ParentCorpName || key);
+          if (batch.length >= COMMIT_BATCH) await flush();
+        }
+        await sleep(DOWNLOAD_DELAY_MS);
+      }
     }
-  }
 
-  await flush();
+    await flush();
 
-  await chrome.storage.local.set({ manifest_meta: { total: Object.keys(manifest.documents).length } });
-  await setStatus({
-    running: false,
-    blocked: false,
-    lastRun: Date.now(),
-    lastMode: mode,
-    lastNewCount: downloaded,
-    lastFailCount: failed,
-    totalDocs: Object.keys(manifest.documents).length,
-    lastError: null,
-  });
+    await setStatus({
+      running: false, blocked: false, lastRun: Date.now(), lastMode: mode,
+      lastNewCount: downloaded, lastFailCount: failed,
+      totalDocs: Object.keys(manifest.documents).length, lastError: null,
+    });
 
-  if (downloaded > 0) {
-    chrome.action.setBadgeBackgroundColor({ color: "#2e7d32" });
-    chrome.action.setBadgeText({ text: String(downloaded) });
-    notify(
-      "דוחות חדשים נדחפו ל-GitHub",
-      `${downloaded} קבצים חדשים` + (failed ? ` (${failed} נכשלו)` : "") + " — " + newNames.slice(0, 4).join(", ")
-    );
+    if (downloaded > 0) {
+      chrome.action.setBadgeBackgroundColor({ color: "#2e7d32" });
+      chrome.action.setBadgeText({ text: String(downloaded) });
+      notify("דוחות חדשים נדחפו ל-GitHub", `${downloaded} קבצים` + (failed ? ` (${failed} נכשלו)` : "") + " — " + newNames.slice(0, 4).join(", "));
+    }
+  } finally {
+    if (createdByUs) {
+      try { await chrome.tabs.remove(tabId); } catch { /* ignore */ }
+    }
   }
 }
 
@@ -187,12 +234,7 @@ function buildBackfillQuarters() {
 }
 
 function notify(title, message) {
-  chrome.notifications.create(`cma-${Date.now()}`, {
-    type: "basic",
-    iconUrl: "icons/icon128.png",
-    title,
-    message,
-  });
+  chrome.notifications.create(`cma-${Date.now()}`, { type: "basic", iconUrl: "icons/icon128.png", title, message });
 }
 
 async function runSafe(mode) {
@@ -207,40 +249,24 @@ async function runSafe(mode) {
 
 async function maybeCatchUp() {
   const { status } = await chrome.storage.local.get("status");
-  const last = status?.lastRun || 0;
-  if (Date.now() - last > 20 * 60 * 60 * 1000) runSafe("incremental");
+  if (Date.now() - (status?.lastRun || 0) > 20 * 60 * 60 * 1000) runSafe("incremental");
 }
 
-chrome.runtime.onInstalled.addListener(() => {
-  chrome.alarms.create(ALARM, { periodInMinutes: 24 * 60, delayInMinutes: 2 });
-});
+chrome.runtime.onInstalled.addListener(() => chrome.alarms.create(ALARM, { periodInMinutes: 24 * 60, delayInMinutes: 2 }));
 chrome.runtime.onStartup.addListener(() => {
   chrome.alarms.create(ALARM, { periodInMinutes: 24 * 60, delayInMinutes: 2 });
   maybeCatchUp();
 });
-chrome.alarms.onAlarm.addListener((a) => {
-  if (a.name === ALARM) runSafe("incremental");
-});
+chrome.alarms.onAlarm.addListener((a) => { if (a.name === ALARM) runSafe("incremental"); });
 chrome.notifications.onClicked.addListener(() => chrome.action.setBadgeText({ text: "" }));
 
 chrome.runtime.onMessage.addListener((msg, _sender, sendResponse) => {
-  if (msg?.type === "run-incremental") {
-    runSafe("incremental").then(() => sendResponse({ ok: true }));
-    return true;
-  }
-  if (msg?.type === "run-backfill") {
-    runSafe("backfill").then(() => sendResponse({ ok: true }));
-    return true;
-  }
+  if (msg?.type === "run-incremental") { runSafe("incremental").then(() => sendResponse({ ok: true })); return true; }
+  if (msg?.type === "run-backfill") { runSafe("backfill").then(() => sendResponse({ ok: true })); return true; }
   if (msg?.type === "verify") {
     (async () => {
-      try {
-        const c = msg.config;
-        await verifyRepo(c.token, c.owner, c.repo);
-        sendResponse({ ok: true });
-      } catch (e) {
-        sendResponse({ ok: false, error: String(e.message || e) });
-      }
+      try { await verifyRepo(msg.config.token, msg.config.owner, msg.config.repo); sendResponse({ ok: true }); }
+      catch (e) { sendResponse({ ok: false, error: String(e.message || e) }); }
     })();
     return true;
   }

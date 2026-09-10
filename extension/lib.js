@@ -1,9 +1,11 @@
-// לוגיקה משותפת: שליפת דוחות ציבוריים מ-cmainfo.cma.gov.il (מהדפדפן, כלומר
-// מה-IP הביתי שעובר את חסימת ה-WAF) וחישובי רבעונים/שמות קבצים.
+// עזרי לוגיקה טהורים (חישובי רבעונים, שמות קבצים). המשיכה עצמה מהאתר קורית
+// בתוך דף ה-CMA (ראה background.js) כדי לשלוח בקשות same-origin בדיוק כמו
+// ה-bookmarklet - זה מה שעובר את חסימת ה-WAF.
 
 export const SYSTEM_CODE = { "ביטוח": "in", "גמל": "gm", "פנסיה": "pn" };
 export const REPORT_TYPE = "71100184,71100185,71100190";
 export const CMA_ORIGIN = "https://cmainfo.cma.gov.il";
+export const CMA_PAGE = "https://cmainfo.cma.gov.il/publicreports";
 
 export function currentQuarter() {
   const now = new Date();
@@ -14,7 +16,6 @@ export function prevQuarter(year, quarter) {
   return quarter === 1 ? { year: year - 1, quarter: 4 } : { year, quarter: quarter - 1 };
 }
 
-// רשימת רבעונים מהחדש לישן, החל מהרבעון הנוכחי אחורה count רבעונים.
 export function recentQuarters(count) {
   const list = [];
   let { year, quarter } = currentQuarter();
@@ -25,52 +26,6 @@ export function recentQuarters(count) {
   return list;
 }
 
-export async function fetchQuarterReports(year, quarter) {
-  const res = await fetch(`${CMA_ORIGIN}/api/PublicReporting/GetPublicReports`, {
-    method: "POST",
-    headers: { "Content-Type": "application/json", Accept: "application/json" },
-    credentials: "include",
-    body: JSON.stringify({
-      corporation: null,
-      fromYear: year,
-      fromQuarter: quarter,
-      toYear: year,
-      toQuarter: quarter,
-      reportFromDate: null,
-      reportToDate: null,
-      investmentName: null,
-      reportType: REPORT_TYPE,
-      systemField: "",
-      statusReport: 1,
-    }),
-  });
-  if (!res.ok) {
-    const err = new Error(`GetPublicReports HTTP ${res.status}`);
-    err.status = res.status;
-    throw err;
-  }
-  const ct = res.headers.get("content-type") || "";
-  if (!ct.includes("application/json")) {
-    const err = new Error("GetPublicReports returned non-JSON (likely blocked / not logged in)");
-    err.blocked = true;
-    throw err;
-  }
-  const data = await res.json();
-  return Array.isArray(data) ? data : [];
-}
-
-// מוריד קובץ דוח ומחזיר Uint8Array.
-export async function downloadDocument(documentId, ext) {
-  const res = await fetch(
-    `${CMA_ORIGIN}/api/PublicReporting/downloadFiles?IdDoc=${documentId}&extention=${ext}`,
-    { credentials: "include" }
-  );
-  if (!res.ok) throw new Error(`downloadFiles HTTP ${res.status}`);
-  const buf = await res.arrayBuffer();
-  return new Uint8Array(buf);
-}
-
-// בכל רבעון, שומרים את ההגשה העדכנית ביותר לכל חברה+מערכת (לפי StatusDate).
 export function latestPerCompanyInQuarter(items) {
   const byKey = {};
   for (const item of items) {
@@ -88,15 +43,12 @@ export function buildBaseFilename(item) {
   return `${item.LegalId || item.DocumentId}_${sys}`;
 }
 
-export function bytesToBase64(bytes) {
+export function utf8ToBase64(str) {
+  const bytes = new TextEncoder().encode(str);
   let binary = "";
   const chunk = 0x8000;
   for (let i = 0; i < bytes.length; i += chunk) {
     binary += String.fromCharCode.apply(null, bytes.subarray(i, i + chunk));
   }
   return btoa(binary);
-}
-
-export function utf8ToBase64(str) {
-  return bytesToBase64(new TextEncoder().encode(str));
 }
