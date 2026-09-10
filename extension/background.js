@@ -40,19 +40,75 @@ async function waitForTabComplete(tabId, timeoutMs = 45000) {
   }
 }
 
-// מחזיר { tabId, createdByUs }
+// session משותף לטאב ה-CMA, כדי שנוכל לשחזר אותו אם כרום מסלק/סוגר אותו
+// כשעוברים לחלון אחר.
+let session = null;
+
 async function ensureCmaTab() {
+  if (session) {
+    try {
+      await chrome.tabs.get(session.tabId);
+      return session;
+    } catch {
+      session = null; // הטאב נסגר/סולק
+    }
+  }
   const tabs = await chrome.tabs.query({ url: "https://cmainfo.cma.gov.il/*" });
-  if (tabs.length > 0) return { tabId: tabs[0].id, createdByUs: false };
-  const tab = await chrome.tabs.create({ url: CMA_PAGE, active: false });
-  await waitForTabComplete(tab.id);
-  await sleep(2500); // זמן קצר ל-SPA/עוגיות להתייצב
-  return { tabId: tab.id, createdByUs: true };
+  if (tabs.length > 0) {
+    session = { tabId: tabs[0].id, createdByUs: false };
+  } else {
+    const tab = await chrome.tabs.create({ url: CMA_PAGE, active: false });
+    // מונע מכרום לסלק (discard) את הטאב כשעוברים לחלון אחר
+    try { await chrome.tabs.update(tab.id, { autoDiscardable: false }); } catch { /* ignore */ }
+    await waitForTabComplete(tab.id);
+    await sleep(2500); // זמן קצר ל-SPA/עוגיות להתייצב
+    session = { tabId: tab.id, createdByUs: true };
+  }
+  // ודא שגם טאב קיים לא יסולק במהלך הריצה
+  try { await chrome.tabs.update(session.tabId, { autoDiscardable: false }); } catch { /* ignore */ }
+  return session;
 }
 
-async function execInTab(tabId, func, args) {
-  const [res] = await chrome.scripting.executeScript({ target: { tabId }, func, args, world: "MAIN" });
-  return res?.result;
+// מריץ בתוך הדף, ואם הטאב סולק/נסגר (למשל בזמן מעבר חלון) - משחזר ומנסה שוב.
+async function execInTab(func, args) {
+  let lastErr;
+  for (let attempt = 1; attempt <= 3; attempt++) {
+    const s = await ensureCmaTab();
+    try {
+      const [res] = await chrome.scripting.executeScript({ target: { tabId: s.tabId }, func, args, world: "MAIN" });
+      return res?.result;
+    } catch (e) {
+      lastErr = e;
+      session = null; // כנראה הטאב סולק - נשחזר בניסיון הבא
+      await sleep(1500 * attempt);
+    }
+  }
+  throw lastErr;
+}
+
+// שומר את ה-service worker חי לאורך הריצה (מונע השהיה כשעוברים חלון).
+let keepAliveTimer = null;
+function startKeepAlive() {
+  if (keepAliveTimer) return;
+  keepAliveTimer = setInterval(() => chrome.runtime.getPlatformInfo(() => {}), 20000);
+}
+function stopKeepAlive() {
+  if (keepAliveTimer) clearInterval(keepAliveTimer);
+  keepAliveTimer = null;
+}
+
+// מושך רבעון עם ניסיונות חוזרים, כדי שגם אם הטאב עוד "מתחמם" - לחיצה אחת
+// תספיק. 403 אמיתי לא מנסים שוב.
+async function fetchQuarterResilient(year, quarter) {
+  let last;
+  for (let attempt = 1; attempt <= 5; attempt++) {
+    const resp = await execInTab(pageFetchQuarter, [year, quarter, REPORT_TYPE]);
+    if (resp && !resp.__error) return resp;
+    last = resp;
+    if (resp && resp.status === 403) return resp; // חסימת WAF אמיתית - אין טעם לנסות שוב
+    await sleep(1500 * attempt); // 1.5s, 3s, 4.5s, 6s
+  }
+  return last;
 }
 
 // הפונקציות הבאות מוזרקות ורצות בתוך הדף עצמו:
@@ -129,9 +185,10 @@ async function collectAndCommit(mode) {
     return;
   }
   const branch = cfg.branch || "main";
-  await setStatus({ running: true, needsSetup: false, blocked: false, lastError: null, mode });
+  await setStatus({ running: true, needsSetup: false, blocked: false, lastError: null, mode, progress: "פותח את אתר רשות שוק ההון..." });
 
-  const { tabId, createdByUs } = await ensureCmaTab();
+  startKeepAlive();
+  const { createdByUs } = await ensureCmaTab();
   try {
     const manifest = await readManifest(cfg.token, cfg.owner, cfg.repo, branch);
     if (!manifest.documents) manifest.documents = {};
@@ -152,18 +209,22 @@ async function collectAndCommit(mode) {
       batch = [];
     };
 
+    let firstQuarter = true;
     for (const { year, quarter } of quarters) {
-      const resp = await execInTab(tabId, pageFetchQuarter, [year, quarter, REPORT_TYPE]);
+      await setStatus({ progress: `בודק ${year}Q${quarter}...` });
+      const resp = await fetchQuarterResilient(year, quarter);
       if (!resp || resp.__error) {
         const status = resp?.status;
-        if (status === 403 || resp?.nonJson) {
-          await setStatus({ running: false, blocked: true, lastError: `נחסם (status=${status || "?"}) גם מתוך הדף. ודא שהדף publicreports נטען ומציג נתונים.` });
+        // רק 403 אמיתי, או כישלון מתמשך כבר על הרבעון הראשון, נחשב כחסימה
+        if (status === 403 || (firstQuarter && resp?.nonJson)) {
+          await setStatus({ running: false, blocked: true, progress: "", lastError: `נחסם (status=${status || "?"}). ודא שהדף publicreports נטען ומציג נתונים, ונסה שוב.` });
           notify("נחסם ע\"י האתר", "פתח את publicreports בטאב, ודא שהוא מציג דוחות, ונסה שוב.");
           return;
         }
-        // שגיאה אחרת - נדלג על הרבעון ונמשיך
-        continue;
+        firstQuarter = false;
+        continue; // שגיאה חולפת - נדלג על הרבעון ונמשיך
       }
+      firstQuarter = false;
 
       const items = latestPerCompanyInQuarter(resp.items || []);
       if (items.length === 0) {
@@ -185,7 +246,8 @@ async function collectAndCommit(mode) {
           path = `reports/${year}Q${quarter}/${base}_${key}.${ext}`;
         }
 
-        const dl = await execInTab(tabId, pageDownloadDoc, [item.DocumentId, ext]);
+        await setStatus({ progress: `מוריד ${year}Q${quarter}: ${item.ParentCorpName || key}` });
+        const dl = await execInTab(pageDownloadDoc, [item.DocumentId, ext]);
         if (!dl || dl.__error || !dl.base64) {
           failed++;
         } else {
@@ -197,18 +259,22 @@ async function collectAndCommit(mode) {
           };
           downloaded++;
           newNames.push(item.ParentCorpName || key);
-          if (batch.length >= COMMIT_BATCH) await flush();
+          if (batch.length >= COMMIT_BATCH) {
+            await setStatus({ progress: `דוחף ${batch.length} קבצים ל-GitHub...` });
+            await flush();
+          }
         }
         await sleep(DOWNLOAD_DELAY_MS);
       }
     }
 
+    if (batch.length > 0) await setStatus({ progress: `דוחף ${batch.length} קבצים ל-GitHub...` });
     await flush();
 
     await setStatus({
       running: false, blocked: false, lastRun: Date.now(), lastMode: mode,
       lastNewCount: downloaded, lastFailCount: failed,
-      totalDocs: Object.keys(manifest.documents).length, lastError: null,
+      totalDocs: Object.keys(manifest.documents).length, lastError: null, progress: "",
     });
 
     if (downloaded > 0) {
@@ -217,8 +283,10 @@ async function collectAndCommit(mode) {
       notify("דוחות חדשים נדחפו ל-GitHub", `${downloaded} קבצים` + (failed ? ` (${failed} נכשלו)` : "") + " — " + newNames.slice(0, 4).join(", "));
     }
   } finally {
-    if (createdByUs) {
-      try { await chrome.tabs.remove(tabId); } catch { /* ignore */ }
+    stopKeepAlive();
+    if (createdByUs && session) {
+      try { await chrome.tabs.remove(session.tabId); } catch { /* ignore */ }
+      session = null;
     }
   }
 }

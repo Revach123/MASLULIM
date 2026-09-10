@@ -15,7 +15,16 @@ async function render() {
     s.lastNewCount === undefined ? "—" : String(s.lastNewCount) + (s.lastFailCount ? ` (${s.lastFailCount} נכשלו)` : "");
   document.getElementById("total").textContent = s.totalDocs ?? "—";
   document.getElementById("err").textContent = s.lastError && !s.blocked && !s.needsSetup ? "שגיאה: " + s.lastError : "";
+  // חיווי התקדמות חי + נעילת כפתורים בזמן ריצה
+  document.getElementById("run").disabled = !!s.running;
+  document.getElementById("backfill").disabled = !!s.running;
+  if (s.running && s.progress) document.getElementById("msg").textContent = s.progress;
 }
+
+// עדכון חי של הפופאפ כל עוד הוא פתוח (הריצה עצמה ממשיכה ברקע בכל מקרה)
+chrome.storage.onChanged.addListener((changes, area) => {
+  if (area === "local" && changes.status) render();
+});
 
 function busy(on, text) {
   document.getElementById("run").disabled = on;
