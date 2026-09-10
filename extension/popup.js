@@ -75,11 +75,13 @@ async function render() {
     s.lastNewCount === undefined ? "—" : String(s.lastNewCount) + (s.lastFailCount ? ` (${s.lastFailCount} נכשלו)` : "");
   document.getElementById("total").textContent = s.totalDocs ?? "—";
   document.getElementById("err").textContent = s.lastError && !s.blocked && !s.needsSetup ? "שגיאה: " + s.lastError : "";
-  // חיווי התקדמות חי + נעילת כפתורים בזמן ריצה
+  // חיווי התקדמות חי + נעילת כפתורים בזמן ריצה; כפתור עצור מוצג רק בזמן ריצה
   document.getElementById("run").disabled = !!s.running;
   document.getElementById("backfill").disabled = !!s.running;
   document.getElementById("sync-local").disabled = !!s.running;
+  document.getElementById("stop").hidden = !s.running;
   if (s.running && s.progress) document.getElementById("msg").textContent = s.progress;
+  if (!s.running && s.stopped) document.getElementById("msg").textContent = s.progress || "נעצר";
 }
 
 // עדכון חי של הפופאפ כל עוד הוא פתוח (הריצה עצמה ממשיכה ברקע בכל מקרה)
@@ -91,6 +93,9 @@ function busy(on, text) {
   document.getElementById("run").disabled = on;
   document.getElementById("backfill").disabled = on;
   document.getElementById("sync-local").disabled = on;
+  const stop = document.getElementById("stop");
+  stop.hidden = !on;
+  stop.disabled = false;
   document.getElementById("msg").textContent = text || "";
 }
 
@@ -120,6 +125,12 @@ document.getElementById("sync-local").addEventListener("click", () => {
     await render();
     setTimeout(() => (document.getElementById("msg").textContent = ""), 3000);
   });
+});
+
+document.getElementById("stop").addEventListener("click", () => {
+  document.getElementById("stop").disabled = true;
+  document.getElementById("msg").textContent = "עוצר...";
+  chrome.runtime.sendMessage({ type: "stop" });
 });
 
 document.getElementById("setup").addEventListener("click", () => chrome.runtime.openOptionsPage());

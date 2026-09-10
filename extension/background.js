@@ -60,6 +60,8 @@ async function waitForTabComplete(tabId, timeoutMs = 45000) {
 // session משותף לטאב ה-CMA, כדי שנוכל לשחזר אותו אם כרום מסלק/סוגר אותו
 // כשעוברים לחלון אחר.
 let session = null;
+// דגל עצירה - נדלק כשהמשתמש לוחץ "עצור".
+let stopRequested = false;
 
 // תמיד מייצרים טאב רקע ייעודי משלנו (לא משתמשים בטאב שהמשתמש פתח), כדי
 // שניווט/רענון מצד המשתמש לא יפיל את הריצה. הטאב נסגר בסוף הריצה.
@@ -201,6 +203,7 @@ async function collectAndCommit(mode) {
     return;
   }
   const branch = cfg.branch || "main";
+  stopRequested = false;
   await setStatus({ running: true, needsSetup: false, blocked: false, lastError: null, mode, progress: "פותח את אתר רשות שוק ההון..." });
 
   startKeepAlive();
@@ -245,10 +248,13 @@ async function collectAndCommit(mode) {
       }
       firstQuarter = false;
 
+      if (stopRequested) break;
+
       const items = latestPerCompanyInQuarter(resp.items || []);
       const qKey = `${year}Q${quarter}`;
       submittedByQ[qKey] = new Set(items.map((it) => `${it.LegalId}_${it.SystemName}`));
       orderedQ.push(qKey);
+      await updateDashboard(manifest, submittedByQ, orderedQ); // הצג את הרבעון מיד
       if (items.length === 0) {
         emptyStreak++;
         if (mode === "backfill" && emptyStreak >= BACKFILL_EMPTY_STREAK_STOP) break;
@@ -257,6 +263,7 @@ async function collectAndCommit(mode) {
       emptyStreak = 0;
 
       for (const item of items) {
+        if (stopRequested) break;
         if (!item.DocumentId) continue;
         const key = String(item.DocumentId);
         if (manifest.documents[key]) continue;
@@ -285,10 +292,13 @@ async function collectAndCommit(mode) {
           if (batch.length >= COMMIT_BATCH) {
             await setStatus({ progress: `דוחף ${batch.length} קבצים ל-GitHub...` });
             await flush();
+            await updateDashboard(manifest, submittedByQ, orderedQ);
           }
         }
         await sleep(DOWNLOAD_DELAY_MS);
       }
+      await updateDashboard(manifest, submittedByQ, orderedQ); // עדכון בסוף הרבעון
+      if (stopRequested) break;
     }
 
     if (batch.length > 0) await setStatus({ progress: `דוחף ${batch.length} קבצים ל-GitHub...` });
@@ -298,8 +308,9 @@ async function collectAndCommit(mode) {
 
     await setStatus({
       running: false, blocked: false, lastRun: Date.now(), lastMode: mode,
-      lastNewCount: downloaded, lastFailCount: failed,
-      totalDocs: Object.keys(manifest.documents).length, lastError: null, progress: "",
+      lastNewCount: downloaded, lastFailCount: failed, stopped: stopRequested,
+      totalDocs: Object.keys(manifest.documents).length, lastError: null,
+      progress: stopRequested ? `נעצר - ${downloaded} קבצים נמשכו עד העצירה` : "",
     });
 
     if (downloaded > 0) {
@@ -367,6 +378,7 @@ async function syncLocalFromArchive() {
     return;
   }
   const branch = cfg.branch || "main";
+  stopRequested = false;
   await setStatus({ running: true, needsSetup: false, lastError: null, progress: "קורא רשימה מ-GitHub..." });
   startKeepAlive();
   try {
@@ -374,6 +386,7 @@ async function syncLocalFromArchive() {
     const docs = Object.values(manifest.documents || {});
     let saved = 0, failed = 0, i = 0;
     for (const d of docs) {
+      if (stopRequested) break;
       i++;
       await setStatus({ progress: `שומר מקומית ${i}/${docs.length}: ${d.ParentCorpName || d.DocumentId}` });
       try {
@@ -437,6 +450,7 @@ chrome.runtime.onMessage.addListener((msg, _sender, sendResponse) => {
   if (msg?.type === "run-incremental") { runSafe("incremental").then(() => sendResponse({ ok: true })); return true; }
   if (msg?.type === "run-backfill") { runSafe("backfill").then(() => sendResponse({ ok: true })); return true; }
   if (msg?.type === "sync-local") { syncLocalFromArchive().then(() => sendResponse({ ok: true })); return true; }
+  if (msg?.type === "stop") { stopRequested = true; setStatus({ progress: "עוצר..." }).then(() => sendResponse({ ok: true })); return true; }
   if (msg?.type === "verify") {
     (async () => {
       try { await verifyRepo(msg.config.token, msg.config.owner, msg.config.repo); sendResponse({ ok: true }); }
