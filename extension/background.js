@@ -238,36 +238,45 @@ async function collectAndCommit(mode) {
         .catch((e) => { commitError = e; });
     };
 
+    // ===== שלב 1: סריקת הרשימה המלאה ובניית הדשבורד לפני שמתחילים להוריד =====
+    const quarterItems = {}; // qKey -> items[]
     let firstQuarter = true;
     for (const { year, quarter } of quarters) {
-      await setStatus({ progress: `בודק ${year}Q${quarter}...` });
+      if (stopRequested) break;
+      await setStatus({ progress: `סורק את הרשימה: ${year}Q${quarter}...` });
       const resp = await fetchQuarterResilient(year, quarter);
       if (!resp || resp.__error) {
         const status = resp?.status;
-        // רק 403 אמיתי, או כישלון מתמשך כבר על הרבעון הראשון, נחשב כחסימה
         if (status === 403 || (firstQuarter && resp?.nonJson)) {
           await setStatus({ running: false, blocked: true, progress: "", lastError: `נחסם (status=${status || "?"}). ודא שהדף publicreports נטען ומציג נתונים, ונסה שוב.` });
           notify("נחסם ע\"י האתר", "פתח את publicreports בטאב, ודא שהוא מציג דוחות, ונסה שוב.");
           return;
         }
         firstQuarter = false;
-        continue; // שגיאה חולפת - נדלג על הרבעון ונמשיך
+        continue;
       }
       firstQuarter = false;
-
-      if (stopRequested) break;
 
       const items = latestPerCompanyInQuarter(resp.items || []);
       const qKey = `${year}Q${quarter}`;
       submittedByQ[qKey] = new Set(items.map((it) => `${it.LegalId}_${it.SystemName}`));
       orderedQ.push(qKey);
-      await updateDashboard(manifest, submittedByQ, orderedQ); // הצג את הרבעון מיד
+      quarterItems[qKey] = items;
+      await updateDashboard(manifest, submittedByQ, orderedQ); // בונה את הדשבורד תוך כדי הסריקה
       if (items.length === 0) {
         emptyStreak++;
         if (mode === "backfill" && emptyStreak >= BACKFILL_EMPTY_STREAK_STOP) break;
-        continue;
+      } else {
+        emptyStreak = 0;
       }
-      emptyStreak = 0;
+    }
+
+    // ===== שלב 2: הורדה ודחיפה, לפי הרשימה שנסרקה =====
+    for (const qKey of orderedQ) {
+      if (stopRequested || commitError) break;
+      const items = quarterItems[qKey] || [];
+      const year = parseInt(qKey);
+      const quarter = parseInt(qKey.split("Q")[1]);
 
       for (const item of items) {
         if (stopRequested) break;
@@ -305,7 +314,6 @@ async function collectAndCommit(mode) {
         await sleep(DOWNLOAD_DELAY_MS);
       }
       await updateDashboard(manifest, submittedByQ, orderedQ); // עדכון בסוף הרבעון
-      if (stopRequested || commitError) break;
     }
 
     enqueueFlush();
