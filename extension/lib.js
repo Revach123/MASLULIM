@@ -38,9 +38,22 @@ export function latestPerCompanyInQuarter(items) {
   return Object.values(byKey);
 }
 
+// זהה בדיוק ל-bookmarklet: קוד רבעון (2 ספרות) וקוד שנה (2 ספרות) מתוך
+// ReportPeriodDesc, למשל "2026 רבעון 2" -> "0226".
+export function quarterCode(periodDesc) {
+  const m = (periodDesc || "").match(/רבעון\s*(\d)/);
+  return m ? String(m[1]).padStart(2, "0") : "00";
+}
+export function yearCode(periodDesc) {
+  const m = (periodDesc || "").match(/(\d{4})/);
+  return m ? m[1].slice(2) : "00";
+}
+
+// שם קובץ זהה בדיוק ל-bookmarklet הישן: {LegalId}_{sys}_{QQ}{YY}
 export function buildBaseFilename(item) {
   const sys = SYSTEM_CODE[item.SystemName] || item.SystemName || "xx";
-  return `${item.LegalId || item.DocumentId}_${sys}`;
+  const period = item.ReportPeriodDesc || "";
+  return `${item.LegalId || item.DocumentId}_${sys}_${quarterCode(period)}${yearCode(period)}`;
 }
 
 export function utf8ToBase64(str) {
