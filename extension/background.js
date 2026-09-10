@@ -204,7 +204,7 @@ async function collectAndCommit(mode) {
   }
   const branch = cfg.branch || "main";
   stopRequested = false;
-  await setStatus({ running: true, needsSetup: false, blocked: false, lastError: null, mode, progress: "פותח את אתר רשות שוק ההון..." });
+  await setStatus({ running: true, needsSetup: false, blocked: false, tokenInvalid: false, lastError: null, mode, progress: "פותח את אתר רשות שוק ההון..." });
 
   startKeepAlive();
   const { createdByUs } = await ensureCmaTab();
@@ -396,7 +396,7 @@ async function syncLocalFromArchive() {
   }
   const branch = cfg.branch || "main";
   stopRequested = false;
-  await setStatus({ running: true, needsSetup: false, lastError: null, progress: "קורא רשימה מ-GitHub..." });
+  await setStatus({ running: true, needsSetup: false, tokenInvalid: false, lastError: null, progress: "קורא רשימה מ-GitHub..." });
   startKeepAlive();
   try {
     const manifest = await readManifest(cfg.token, cfg.owner, cfg.repo, branch);
@@ -440,13 +440,24 @@ function notify(title, message) {
   chrome.notifications.create(`cma-${Date.now()}`, { type: "basic", iconUrl: "icons/icon128.png", title, message });
 }
 
+function isBadToken(msg) {
+  return /HTTP 401/.test(msg) || /bad credentials/i.test(msg);
+}
+
 async function runSafe(mode) {
   try {
     await collectAndCommit(mode);
   } catch (e) {
     console.error("run failed", e);
-    await setStatus({ running: false, lastError: String(e.message || e), lastRun: Date.now() });
-    notify("שגיאה בריצה", String(e.message || e).slice(0, 120));
+    const msg = String(e.message || e);
+    if (isBadToken(msg)) {
+      await setStatus({ running: false, progress: "", tokenInvalid: true, lastRun: Date.now(),
+        lastError: "הטוקן ל-GitHub לא תקף או פג תוקף. צור טוקן חדש (Contents: Read and write) ועדכן בהגדרות." });
+      notify("טוקן GitHub לא תקף", "צור טוקן חדש (Contents: Read and write) ועדכן בהגדרות התוסף.");
+    } else {
+      await setStatus({ running: false, tokenInvalid: false, lastError: msg, lastRun: Date.now() });
+      notify("שגיאה בריצה", msg.slice(0, 120));
+    }
   }
 }
 

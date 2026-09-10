@@ -70,11 +70,12 @@ async function render() {
   renderDashboard();
   document.getElementById("setup-warn").hidden = !!(config && config.token && config.owner && config.repo);
   document.getElementById("block-warn").hidden = !s.blocked;
+  document.getElementById("token-warn").hidden = !s.tokenInvalid;
   document.getElementById("last-run").textContent = s.running ? "רץ כעת..." : fmt(s.lastRun);
   document.getElementById("last-new").textContent =
     s.lastNewCount === undefined ? "—" : String(s.lastNewCount) + (s.lastFailCount ? ` (${s.lastFailCount} נכשלו)` : "");
   document.getElementById("total").textContent = s.totalDocs ?? "—";
-  document.getElementById("err").textContent = s.lastError && !s.blocked && !s.needsSetup ? "שגיאה: " + s.lastError : "";
+  document.getElementById("err").textContent = s.lastError && !s.blocked && !s.needsSetup && !s.tokenInvalid ? "שגיאה: " + s.lastError : "";
   // חיווי התקדמות חי + נעילת כפתורים בזמן ריצה; כפתור עצור מוצג רק בזמן ריצה
   document.getElementById("run").disabled = !!s.running;
   document.getElementById("backfill").disabled = !!s.running;
