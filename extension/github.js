@@ -12,19 +12,38 @@ function authHeaders(token) {
   };
 }
 
+const _sleep = (ms) => new Promise((r) => setTimeout(r, ms));
+
 async function gh(token, method, path, body) {
-  const res = await fetch(`${API}${path}`, {
-    method,
-    headers: { ...authHeaders(token), ...(body ? { "Content-Type": "application/json" } : {}) },
-    body: body ? JSON.stringify(body) : undefined,
-  });
-  if (!res.ok) {
+  for (let attempt = 1; ; attempt++) {
+    const res = await fetch(`${API}${path}`, {
+      method,
+      headers: { ...authHeaders(token), ...(body ? { "Content-Type": "application/json" } : {}) },
+      body: body ? JSON.stringify(body) : undefined,
+    });
+    if (res.ok) return res.json();
+
     const text = await res.text().catch(() => "");
-    const err = new Error(`GitHub ${method} ${path} -> HTTP ${res.status}: ${text.slice(0, 200)}`);
-    err.status = res.status;
+    const status = res.status;
+    // זמני: הגבלת קצב (משנית/ראשית), 429, שגיאות שרת, ולפעמים 401 קצר אחרי
+    // רצף בקשות מהיר. במקרים כאלה ממתינים וממשיכים במקום להיכשל.
+    const rateLimited = status === 429 || (status === 403 && /rate limit|secondary|abuse/i.test(text));
+    const transient = rateLimited || status >= 500 || (status === 401 && attempt <= 3);
+    if (transient && attempt <= 6) {
+      const ra = parseInt(res.headers.get("retry-after") || "", 10);
+      const reset = parseInt(res.headers.get("x-ratelimit-reset") || "", 10);
+      let wait = ra > 0 ? ra * 1000 : Math.min(60000, 1500 * Math.pow(2, attempt - 1));
+      if (rateLimited && reset > 0) {
+        const untilReset = reset * 1000 - Date.now();
+        if (untilReset > 0 && untilReset < 120000) wait = Math.max(wait, untilReset + 1000);
+      }
+      await _sleep(wait);
+      continue;
+    }
+    const err = new Error(`GitHub ${method} ${path} -> HTTP ${status}: ${text.slice(0, 200)}`);
+    err.status = status;
     throw err;
   }
-  return res.json();
 }
 
 export async function verifyRepo(token, owner, repo) {

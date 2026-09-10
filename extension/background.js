@@ -15,7 +15,8 @@ const ALARM = "cma-daily";
 const INCREMENTAL_QUARTERS = 4;
 const BACKFILL_EMPTY_STREAK_STOP = 6;
 const BACKFILL_MAX_QUARTERS = 80;
-const COMMIT_BATCH = 25;
+const COMMIT_BATCH = 50;
+const COMMIT_GAP_MS = 1200; // המתנה בין commits כדי לא לעורר secondary rate limit
 const DOWNLOAD_DELAY_MS = 300;
 // תיקייה מקומית אחת (שטוחה) בתיקיית ההורדות - כל הקבצים יחד, כמו ה-bookmarklet.
 // ב-git הם נשמרים מחולקים לרבעונים; מקומית הכל במקום אחד.
@@ -257,7 +258,10 @@ async function collectAndCommit(mode) {
       ];
       batch = [];
       commitChain = commitChain
-        .then(() => commitFiles(cfg.token, cfg.owner, cfg.repo, branch, files, `Add ${n} report file(s) [${mode}]`))
+        .then(async () => {
+          await commitFiles(cfg.token, cfg.owner, cfg.repo, branch, files, `Add ${n} report file(s) [${mode}]`);
+          await sleep(COMMIT_GAP_MS);
+        })
         .catch((e) => { commitError = e; });
     };
 
