@@ -213,6 +213,9 @@ async function collectAndCommit(mode) {
 
     let downloaded = 0, failed = 0, emptyStreak = 0, batch = [];
     const newNames = [];
+    // איסוף רשימת החברות שהגישו בכל רבעון, לחישוב הדשבורד
+    const submittedByQ = {}; // "YYYYQn" -> Set(LegalId_System)
+    const orderedQ = [];     // סדר הרבעונים שנבדקו (מהחדש לישן)
 
     const flush = async () => {
       if (batch.length === 0) return;
@@ -243,6 +246,9 @@ async function collectAndCommit(mode) {
       firstQuarter = false;
 
       const items = latestPerCompanyInQuarter(resp.items || []);
+      const qKey = `${year}Q${quarter}`;
+      submittedByQ[qKey] = new Set(items.map((it) => `${it.LegalId}_${it.SystemName}`));
+      orderedQ.push(qKey);
       if (items.length === 0) {
         emptyStreak++;
         if (mode === "backfill" && emptyStreak >= BACKFILL_EMPTY_STREAK_STOP) break;
@@ -288,6 +294,8 @@ async function collectAndCommit(mode) {
     if (batch.length > 0) await setStatus({ progress: `דוחף ${batch.length} קבצים ל-GitHub...` });
     await flush();
 
+    await updateDashboard(manifest, submittedByQ, orderedQ);
+
     await setStatus({
       running: false, blocked: false, lastRun: Date.now(), lastMode: mode,
       lastNewCount: downloaded, lastFailCount: failed,
@@ -306,6 +314,48 @@ async function collectAndCommit(mode) {
       session = null;
     }
   }
+}
+
+// מחשב ומאחסן סטטיסטיקת דשבורד לכל רבעון:
+//  downloaded            = כמה דוחות של הרבעון כבר בארכיון
+//  readyNotDownloaded    = הגישו לרשות אך עדיין לא נמשכו אלינו
+//  pending               = טרם הגישו (מי שהגיש ברבעון הקודם ולא ברבעון זה)
+async function updateDashboard(manifest, submittedByQ, orderedQ) {
+  // ספירת מה שהורד בפועל, לכל רבעון
+  const downloadedByQ = {};
+  for (const d of Object.values(manifest.documents)) {
+    const k = `${d.year}Q${d.quarter}`;
+    downloadedByQ[k] = (downloadedByQ[k] || 0) + 1;
+  }
+
+  const { dashboard } = await chrome.storage.local.get("dashboard");
+  const byQuarter = (dashboard && dashboard.byQuarter) || {};
+
+  for (let i = 0; i < orderedQ.length; i++) {
+    const k = orderedQ[i];
+    const cur = submittedByQ[k];
+    if (!cur) continue;
+    const submitted = cur.size;
+    const downloaded = downloadedByQ[k] || 0;
+    const readyNotDownloaded = Math.max(0, submitted - downloaded);
+
+    // רבעון קודם (הישן יותר) = הבא ברשימה שמסודרת מהחדש לישן
+    let pending = null;
+    const prevKey = orderedQ[i + 1];
+    if (prevKey && submittedByQ[prevKey]) {
+      const prev = submittedByQ[prevKey];
+      let miss = 0;
+      for (const c of prev) if (!cur.has(c)) miss++;
+      pending = miss;
+    }
+
+    byQuarter[k] = {
+      year: parseInt(k), quarter: parseInt(k.split("Q")[1]),
+      submitted, downloaded, readyNotDownloaded, pending,
+    };
+  }
+
+  await chrome.storage.local.set({ dashboard: { byQuarter, updatedAt: Date.now() } });
 }
 
 // שומר מקומית (תיקייה אחת שטוחה) את כל הקבצים שכבר בארכיון ה-git.
