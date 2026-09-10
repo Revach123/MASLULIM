@@ -136,3 +136,6 @@ document.getElementById("stop").addEventListener("click", () => {
 document.getElementById("setup").addEventListener("click", () => chrome.runtime.openOptionsPage());
 
 render();
+// רענון יזום כל שנייה כל עוד הפופאפ פתוח - מבטיח שהפאי מתעדכן חי גם אם אירוע
+// storage.onChanged מתעכב בזמן שה-service worker עסוק.
+setInterval(render, 1000);

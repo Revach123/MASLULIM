@@ -220,15 +220,22 @@ async function collectAndCommit(mode) {
     const submittedByQ = {}; // "YYYYQn" -> Set(LegalId_System)
     const orderedQ = [];     // סדר הרבעונים שנבדקו (מהחדש לישן)
 
-    const flush = async () => {
-      if (batch.length === 0) return;
+    // דחיפה מקבילה: כל אצווה נדחפת ל-git ברקע בזמן שהמשיכה ממשיכה. ה-commits
+    // עצמם מסודרים בשרשרת (אחד בכל פעם) כדי למנוע התנגשות בתוך אותה ריצה.
+    let commitChain = Promise.resolve();
+    let commitError = null;
+    const enqueueFlush = () => {
+      if (batch.length === 0 || commitError) return;
+      const n = batch.length;
       const files = [
         ...batch,
         { path: "manifest.json", base64: utf8ToBase64(JSON.stringify(manifest, null, 2) + "\n") },
         { path: "manifest.csv", base64: utf8ToBase64(manifestCsv(manifest, cfg.owner, cfg.repo, branch)) },
       ];
-      await commitFiles(cfg.token, cfg.owner, cfg.repo, branch, files, `Add ${batch.length} report file(s) [${mode}]`);
       batch = [];
+      commitChain = commitChain
+        .then(() => commitFiles(cfg.token, cfg.owner, cfg.repo, branch, files, `Add ${n} report file(s) [${mode}]`))
+        .catch((e) => { commitError = e; });
     };
 
     let firstQuarter = true;
@@ -290,19 +297,21 @@ async function collectAndCommit(mode) {
           downloaded++;
           newNames.push(item.ParentCorpName || key);
           if (batch.length >= COMMIT_BATCH) {
-            await setStatus({ progress: `דוחף ${batch.length} קבצים ל-GitHub...` });
-            await flush();
+            enqueueFlush(); // דוחף ברקע, לא חוסם את המשך המשיכה
             await updateDashboard(manifest, submittedByQ, orderedQ);
           }
         }
+        if (commitError) throw commitError;
         await sleep(DOWNLOAD_DELAY_MS);
       }
       await updateDashboard(manifest, submittedByQ, orderedQ); // עדכון בסוף הרבעון
-      if (stopRequested) break;
+      if (stopRequested || commitError) break;
     }
 
-    if (batch.length > 0) await setStatus({ progress: `דוחף ${batch.length} קבצים ל-GitHub...` });
-    await flush();
+    enqueueFlush();
+    await setStatus({ progress: "משלים דחיפה ל-GitHub..." });
+    await commitChain; // ממתין לסיום כל הדחיפות שברקע
+    if (commitError) throw commitError;
 
     await updateDashboard(manifest, submittedByQ, orderedQ);
 

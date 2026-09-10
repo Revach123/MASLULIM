@@ -61,58 +61,60 @@ export async function readManifest(token, owner, repo, branch) {
   }
 }
 
-// files: [{ path, base64 }]  (base64 של תוכן בינארי או טקסט מקודד base64)
-// יוצר commit אחד עם כל הקבצים על הענף branch.
+const sleep = (ms) => new Promise((r) => setTimeout(r, ms));
+
+// files: [{ path, base64 }]. יוצר commit אחד עם כל הקבצים.
+// אם ה-ref זז בינתיים (422 "not a fast forward" - commit מקביל) - קורא את
+// ה-ref מחדש, בונה tree/commit על הבסיס החדש, ומנסה שוב. ה-blobs נוצרים פעם
+// אחת (הם לפי תוכן), אז רק ה-tree/commit נבנים מחדש.
 export async function commitFiles(token, owner, repo, branch, files, message) {
   if (files.length === 0) return { committed: 0 };
+  const refPath = `/repos/${owner}/${repo}/git/refs/heads/${encodeURIComponent(branch)}`;
 
-  // 1) ref נוכחי של הענף (אם קיים)
-  let baseCommitSha = null;
-  let baseTreeSha = null;
-  const refRes = await fetch(`${API}/repos/${owner}/${repo}/git/ref/heads/${encodeURIComponent(branch)}`, {
-    headers: authHeaders(token),
-  });
-  if (refRes.ok) {
-    const ref = await refRes.json();
-    baseCommitSha = ref.object.sha;
-    const commit = await gh(token, "GET", `/repos/${owner}/${repo}/git/commits/${baseCommitSha}`);
-    baseTreeSha = commit.tree.sha;
-  } else if (refRes.status !== 404 && refRes.status !== 409) {
-    throw new Error(`get ref HTTP ${refRes.status}`);
-  }
-
-  // 2) blob לכל קובץ
+  // blobs (פעם אחת)
   const treeEntries = [];
   for (const f of files) {
-    const blob = await gh(token, "POST", `/repos/${owner}/${repo}/git/blobs`, {
-      content: f.base64,
-      encoding: "base64",
-    });
+    const blob = await gh(token, "POST", `/repos/${owner}/${repo}/git/blobs`, { content: f.base64, encoding: "base64" });
     treeEntries.push({ path: f.path, mode: "100644", type: "blob", sha: blob.sha });
   }
 
-  // 3) tree חדש
-  const treeBody = { tree: treeEntries };
-  if (baseTreeSha) treeBody.base_tree = baseTreeSha;
-  const tree = await gh(token, "POST", `/repos/${owner}/${repo}/git/trees`, treeBody);
+  for (let attempt = 1; attempt <= 7; attempt++) {
+    // ref/tree בסיס עדכניים
+    let baseCommitSha = null, baseTreeSha = null;
+    const refRes = await fetch(`${API}/repos/${owner}/${repo}/git/ref/heads/${encodeURIComponent(branch)}`, { headers: authHeaders(token) });
+    if (refRes.ok) {
+      const ref = await refRes.json();
+      baseCommitSha = ref.object.sha;
+      const commit = await gh(token, "GET", `/repos/${owner}/${repo}/git/commits/${baseCommitSha}`);
+      baseTreeSha = commit.tree.sha;
+    } else if (refRes.status !== 404 && refRes.status !== 409) {
+      throw new Error(`get ref HTTP ${refRes.status}`);
+    }
 
-  // 4) commit
-  const commitBody = { message, tree: tree.sha };
-  if (baseCommitSha) commitBody.parents = [baseCommitSha];
-  const newCommit = await gh(token, "POST", `/repos/${owner}/${repo}/git/commits`, commitBody);
+    const treeBody = { tree: treeEntries };
+    if (baseTreeSha) treeBody.base_tree = baseTreeSha;
+    const tree = await gh(token, "POST", `/repos/${owner}/${repo}/git/trees`, treeBody);
 
-  // 5) הזזת/יצירת ה-ref
-  if (baseCommitSha) {
-    await gh(token, "PATCH", `/repos/${owner}/${repo}/git/refs/heads/${encodeURIComponent(branch)}`, {
-      sha: newCommit.sha,
-      force: false,
-    });
-  } else {
-    await gh(token, "POST", `/repos/${owner}/${repo}/git/refs`, {
-      ref: `refs/heads/${branch}`,
-      sha: newCommit.sha,
-    });
+    const commitBody = { message, tree: tree.sha };
+    if (baseCommitSha) commitBody.parents = [baseCommitSha];
+    const newCommit = await gh(token, "POST", `/repos/${owner}/${repo}/git/commits`, commitBody);
+
+    try {
+      if (baseCommitSha) {
+        await gh(token, "PATCH", refPath, { sha: newCommit.sha, force: false });
+      } else {
+        await gh(token, "POST", `/repos/${owner}/${repo}/git/refs`, { ref: `refs/heads/${branch}`, sha: newCommit.sha });
+      }
+      return { committed: files.length, commitSha: newCommit.sha };
+    } catch (e) {
+      const msg = String(e && e.message || e);
+      // ה-ref זז (commit מקביל) או שכבר קיים - ננסה שוב על בסיס טרי
+      if (/HTTP 422/.test(msg) || /fast forward/i.test(msg) || /HTTP 409/.test(msg)) {
+        await sleep(600 * attempt);
+        continue;
+      }
+      throw e;
+    }
   }
-
-  return { committed: files.length, commitSha: newCommit.sha };
+  throw new Error("commitFiles failed after retries (ref kept moving)");
 }
