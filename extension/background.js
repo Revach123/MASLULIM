@@ -61,42 +61,41 @@ async function waitForTabComplete(tabId, timeoutMs = 45000) {
 // כשעוברים לחלון אחר.
 let session = null;
 
+// תמיד מייצרים טאב רקע ייעודי משלנו (לא משתמשים בטאב שהמשתמש פתח), כדי
+// שניווט/רענון מצד המשתמש לא יפיל את הריצה. הטאב נסגר בסוף הריצה.
 async function ensureCmaTab() {
   if (session) {
     try {
-      await chrome.tabs.get(session.tabId);
+      const t = await chrome.tabs.get(session.tabId);
+      if (t && t.status === "complete") return session;
+      await waitForTabComplete(session.tabId, 20000);
       return session;
     } catch {
-      session = null; // הטאב נסגר/סולק
+      session = null; // הטאב נסגר/סולק - ניצור חדש
     }
   }
-  const tabs = await chrome.tabs.query({ url: "https://cmainfo.cma.gov.il/*" });
-  if (tabs.length > 0) {
-    session = { tabId: tabs[0].id, createdByUs: false };
-  } else {
-    const tab = await chrome.tabs.create({ url: CMA_PAGE, active: false });
-    // מונע מכרום לסלק (discard) את הטאב כשעוברים לחלון אחר
-    try { await chrome.tabs.update(tab.id, { autoDiscardable: false }); } catch { /* ignore */ }
-    await waitForTabComplete(tab.id);
-    await sleep(2500); // זמן קצר ל-SPA/עוגיות להתייצב
-    session = { tabId: tab.id, createdByUs: true };
-  }
-  // ודא שגם טאב קיים לא יסולק במהלך הריצה
-  try { await chrome.tabs.update(session.tabId, { autoDiscardable: false }); } catch { /* ignore */ }
+  const tab = await chrome.tabs.create({ url: CMA_PAGE, active: false });
+  try { await chrome.tabs.update(tab.id, { autoDiscardable: false }); } catch { /* ignore */ }
+  await waitForTabComplete(tab.id);
+  await sleep(3000); // זמן ל-SPA לסיים redirect/טעינה לפני הזרקה
+  session = { tabId: tab.id, createdByUs: true };
   return session;
 }
 
-// מריץ בתוך הדף, ואם הטאב סולק/נסגר (למשל בזמן מעבר חלון) - משחזר ומנסה שוב.
+// מריץ בתוך הדף. אם המסגרת נעלמה (ניווט/רענון/סגירה) - יוצר טאב טרי ומנסה שוב.
 async function execInTab(func, args) {
   let lastErr;
-  for (let attempt = 1; attempt <= 3; attempt++) {
+  for (let attempt = 1; attempt <= 4; attempt++) {
     const s = await ensureCmaTab();
     try {
-      const [res] = await chrome.scripting.executeScript({ target: { tabId: s.tabId }, func, args, world: "MAIN" });
+      await waitForTabComplete(s.tabId, 20000); // לא להזריק באמצע טעינה/ניווט
+      const [res] = await chrome.scripting.executeScript({ target: { tabId: s.tabId, frameIds: [0] }, func, args, world: "MAIN" });
       return res?.result;
     } catch (e) {
       lastErr = e;
-      session = null; // כנראה הטאב סולק - נשחזר בניסיון הבא
+      // "Frame with ID 0 was removed" / טאב נסגר - נשמיד ונשחזר טאב חדש
+      try { if (session) await chrome.tabs.remove(session.tabId); } catch { /* ignore */ }
+      session = null;
       await sleep(1500 * attempt);
     }
   }
