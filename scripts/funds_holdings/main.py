@@ -12,7 +12,7 @@ from . import heter_iska as heter_iska_module
 from .file_list import get_file_list
 from .funds import build_funds
 from .funds_detail import build_funds_detail
-from .funds_il import build_funds_il
+from .funds_il import build_funds_il, build_funds_il_kashrut
 from .funds_reference import build_funds_reference
 from .interest import build_interest
 from .isin_swap import build_isin_swap
@@ -36,6 +36,7 @@ def build_master_table(reports_dir: Path, tracks: list[dict]) -> tuple[list[dict
     interest = build_interest(source, heter_by_chp=heter_by_chp)
     il_sums = build_funds_il(funds, funds_ref)
     kashrut_by_num = build_kashrut_by_num(funds_ref)
+    il_kashrut = build_funds_il_kashrut(funds, funds_ref, kashrut_by_num)
     track_kashrut = build_track_kashrut(funds, kashrut_by_num)
     funds_detail = build_funds_detail(funds, funds_ref)
 
@@ -55,6 +56,13 @@ def build_master_table(reports_dir: Path, tracks: list[dict]) -> tuple[list[dict
 
     for key, siveg_sums in il_sums.items():
         row_for(key).update(siveg_sums)
+
+    # כשרות לכל עמודת אחוז-סיווג בנפרד (מוצג בפרונט מתחת לאחוז) - מפתח
+    # מסומן בסיומת " |כשרות" כדי לא להתנגש עם מפתח האחוז (siveg) עצמו.
+    for key, siveg_kashrut in il_kashrut.items():
+        row = row_for(key)
+        for siveg, level in siveg_kashrut.items():
+            row[f"{siveg} |כשרות"] = level
 
     for key, level in track_kashrut.items():
         row_for(key)["כשרות"] = level
