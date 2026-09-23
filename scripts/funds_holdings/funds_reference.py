@@ -1,0 +1,64 @@
+"""נתוני קרנות: נשלף מ-data_for_site.json ב-revach (private repo), דרך ה-GitHub
+Contents API עם PAT לקריאה בלבד - בדיוק כמו התבנית המתועדת ב-README של
+MASLULIM ל-manifest.csv.
+
+דרוש: משתנה סביבה PAT - fine-grained personal access token עם הרשאת
+Contents: Read בלבד על revach123/revach, מוגדר כ-secret בשם PAT ב-Settings
+של MASLULIM.
+
+מקור: revach/scripts/funds_info/build_funds.py - הרשומה המלאה כוללת את
+כל 43 השדות (COLUMNS שם), בפורמט {"v": ערך, "c": ""} לכל שדה. כאן שולפים
+רק את מה שצריך ל"קרנות"/"קרנות IL": מספר קרן, ISIN, סוג, קרן מחקה,
+גלאט הון, עדה חרדית, תשואה כהלכה, הרב דביר, סיווג ראשי.
+"""
+import base64
+import os
+
+import requests
+
+CONTENTS_URL = "https://api.github.com/repos/Revach123/revach/contents/data_for_site.json"
+TOKEN_ENV = "PAT"
+
+FIELDS = [
+    "מספר קרן", "ISIN", "סוג", "קרן מחקה",
+    "גלאט הון", "עדה חרדית", "תשואה כהלכה", "הרב דביר",
+    "סיווג ראשי",
+]
+
+
+def _cell(rec: dict, key: str):
+    """{"v": "...", "c": ""} -> "..." (או None אם ריק, כמו Excel)."""
+    c = rec.get(key)
+    if not isinstance(c, dict):
+        return None
+    v = c.get("v")
+    return v if v not in (None, "") else None
+
+
+def fetch_raw(session: requests.Session | None = None) -> list[dict]:
+    token = os.environ.get(TOKEN_ENV)
+    if not token:
+        raise SystemExit(f"[funds_reference] משתנה הסביבה {TOKEN_ENV} לא מוגדר")
+    s = session or requests.Session()
+    r = s.get(CONTENTS_URL, headers={
+        "Authorization": f"Bearer {token}",
+        "Accept": "application/vnd.github.raw",
+    }, timeout=60)
+    r.raise_for_status()
+    return r.json()
+
+
+def build_funds_reference(session: requests.Session | None = None) -> list[dict]:
+    """רשימת רשומות, רק השדות הרלוונטיים, {v} בלבד (בלי {v,c})."""
+    raw = fetch_raw(session)
+    out = []
+    for rec in raw:
+        out.append({f: _cell(rec, f) for f in FIELDS})
+    return out
+
+
+if __name__ == "__main__":
+    data = build_funds_reference()
+    print(f"[funds_reference] {len(data)} קרנות")
+    if data:
+        print("דוגמה:", data[0])
