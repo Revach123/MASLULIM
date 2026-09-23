@@ -36,7 +36,7 @@ def _cell(rec: dict, key: str):
 
 
 def fetch_raw(session: requests.Session | None = None) -> list[dict]:
-    token = os.environ.get(TOKEN_ENV)
+    token = (os.environ.get(TOKEN_ENV) or "").strip()
     if not token:
         raise SystemExit(f"[funds_reference] משתנה הסביבה {TOKEN_ENV} לא מוגדר")
     s = session or requests.Session()
