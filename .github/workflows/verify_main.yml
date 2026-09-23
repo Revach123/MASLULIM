@@ -1,0 +1,35 @@
+name: Verify main pipeline
+
+on:
+  workflow_dispatch:
+
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Install deps
+        run: pip install requests python-calamine
+      - name: Run main pipeline
+        env:
+          REVACH_MATCH_KEY: ${{ secrets.REVACH_MATCH_KEY }}
+          PAT: ${{ secrets.PAT }}
+        run: python -m scripts.funds_holdings.main --reports-dir reports --out-dir out
+      - name: Summarize output
+        run: |
+          python3 -c "
+          import json
+          master = json.load(open('out/master.json', encoding='utf-8'))
+          detail = json.load(open('out/funds_detail.json', encoding='utf-8'))
+          print('master rows:', len(master))
+          print('detail tracks:', len(detail))
+          print('sample master row:', master[0] if master else None)
+          "
+      - uses: actions/upload-artifact@v4
+        with:
+          name: master-output
+          path: out/
