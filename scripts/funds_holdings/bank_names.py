@@ -106,3 +106,28 @@ def resolve_bank(name: str | None, bank_ref: dict[str, dict]) -> str | None:
     if not entry:
         return None
     return entry["ח.פ"]
+
+
+# בדיקת בנק לרמת שורה בודדת (לשימוש ב-interest.py): מזהה גם "זר" וגם
+# "לא ידוע" בנפרד מ"יש ח.פ אבל אין היתר" - 4 מצבים שונים, לא רק שניים.
+BANK_UNKNOWN = "unknown"
+BANK_FOREIGN = "foreign"
+BANK_NO_HETER = "no_heter"
+BANK_HETER = "heter"
+
+
+def classify_bank_row(name: str | None, bank_ref: dict[str, dict], heter_by_chp: dict[str, str]) -> str:
+    from .heter_iska import STATUS_NONE  # יבוא מקומי - נמנע מעגל יבוא בזמן טעינה
+
+    if not name:
+        return BANK_UNKNOWN
+    canon = ALIASES.get(name)
+    if canon is None:
+        return BANK_UNKNOWN  # שם לא מזוהה כלל (לא ב-ALIASES)
+    if canon == FOREIGN_MARKER:
+        return BANK_FOREIGN
+    entry = bank_ref.get(canon)
+    chp = entry["ח.פ"] if entry else None
+    if not chp:
+        return BANK_UNKNOWN  # בנק ישראלי מזוהה בשם, אבל אין לו ח.פ מאושר (TBD)
+    return BANK_HETER if heter_by_chp.get(chp, STATUS_NONE) != STATUS_NONE else BANK_NO_HETER
