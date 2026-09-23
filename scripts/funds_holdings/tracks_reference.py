@@ -36,7 +36,7 @@ def _text_from(v) -> str | None:
 
 
 def fetch_tracks(session: requests.Session | None = None) -> list[dict]:
-    key = os.environ.get(MATCH_KEY_ENV)
+    key = (os.environ.get(MATCH_KEY_ENV) or "").strip()
     if not key:
         raise SystemExit(f"[tracks_reference] משתנה הסביבה {MATCH_KEY_ENV} לא מוגדר")
     s = session or requests.Session()
