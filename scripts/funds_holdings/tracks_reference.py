@@ -66,7 +66,16 @@ def build_tracks_by_key(session: requests.Session | None = None) -> dict[str, di
 
 
 if __name__ == "__main__":
+    import json
+
     data = fetch_tracks()
     print(f"[tracks_reference] {len(data)} מסלולים")
     if data:
-        print("שדות לדוגמה (רשומה ראשונה):", sorted(data[0].keys()))
+        print("שדות (רשומה ראשונה):", sorted(data[0].keys()))
+        print("--- 2 רשומות לדוגמה ---")
+        for rec in data[:2]:
+            print(json.dumps(rec, ensure_ascii=False, indent=2))
+        sample_key = track_key(data[0])
+        print(f"--- מפתח לדוגמה: {sample_key} ---")
+        with_key = sum(1 for r in data if track_key(r) is not None)
+        print(f"רשומות עם מפתח תקין: {with_key}/{len(data)}")
