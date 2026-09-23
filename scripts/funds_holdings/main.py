@@ -1,21 +1,43 @@
-"""בניית הטבלה הראשית: שורה למסלול (מפתח), נתוני tracks + טורים שנוספים גליון-גליון.
+"""בניית הטבלה הראשית: שורה למסלול (מפתח), נתוני tracks + כל הטורים שנוספו
+גליון-גליון. גם שומר בנפרד את הרשימה המפורטת לכל מסלול (לפתיחה בלחיצה
+על הטבלה הראשית בעתיד - לא נכנס לטבלה הראשית עצמה).
 
-הרצה: python -m funds_holdings.main [--reports-dir reports] [--out out/master.json]
+הרצה: python -m funds_holdings.main [--reports-dir reports] [--out-dir out]
 """
 import argparse
 import json
 from pathlib import Path
 
+from . import heter_iska as heter_iska_module
 from .file_list import get_file_list
+from .funds import build_funds
+from .funds_detail import build_funds_detail
+from .funds_il import build_funds_il
+from .funds_reference import build_funds_reference
 from .interest import build_interest
+from .isin_swap import build_isin_swap
+from .kashrut_rank import build_kashrut_by_num, build_track_kashrut
 from .sheet_source import build_source
 from .tracks_reference import fetch_tracks, track_key
 
 
-def build_master_table(reports_dir: Path, tracks: list[dict]) -> list[dict]:
+def build_master_table(reports_dir: Path, tracks: list[dict]) -> tuple[list[dict], dict[str, list[dict]]]:
     files = get_file_list(reports_dir)
     source = build_source(files)
-    interest = build_interest(source)
+
+    funds_ref = build_funds_reference()
+    print(f"[main] {len(funds_ref)} קרנות מ-נתוני קרנות (revach)")
+    isin_swap = build_isin_swap(funds_ref)
+
+    funds = build_funds(source, isin_swap)
+    print(f"[main] {len(funds)} שורות קרנות (מקור_גליונות)")
+
+    heter_by_chp = heter_iska_module.build()
+    interest = build_interest(source, heter_by_chp=heter_by_chp)
+    il_sums = build_funds_il(funds, funds_ref)
+    kashrut_by_num = build_kashrut_by_num(funds_ref)
+    track_kashrut = build_track_kashrut(funds, kashrut_by_num)
+    funds_detail = build_funds_detail(funds, funds_ref)
 
     rows: dict[str, dict] = {}
     for t in tracks:
@@ -25,29 +47,40 @@ def build_master_table(reports_dir: Path, tracks: list[dict]) -> list[dict]:
         rows[key] = dict(t)
         rows[key]["מפתח"] = key
 
-    for key, has_interest in interest.items():
-        row = rows.setdefault(key, {"מפתח": key})
-        row["ריבית"] = "ריבית" if has_interest else None
+    def row_for(key: str) -> dict:
+        return rows.setdefault(key, {"מפתח": key})
 
-    return list(rows.values())
+    for key, cols in interest.items():
+        row_for(key).update(cols)
+
+    for key, siveg_sums in il_sums.items():
+        row_for(key).update(siveg_sums)
+
+    for key, level in track_kashrut.items():
+        row_for(key)["כשרות"] = level
+
+    return list(rows.values()), funds_detail
 
 
 def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--reports-dir", type=Path, default=Path("reports"))
-    ap.add_argument("--out", type=Path, default=Path("out/master.json"))
+    ap.add_argument("--out-dir", type=Path, default=Path("out"))
     args = ap.parse_args()
 
     tracks = fetch_tracks()
     print(f"[main] {len(tracks)} מסלולים מ-tracks")
 
-    master = build_master_table(args.reports_dir, tracks)
+    master, funds_detail = build_master_table(args.reports_dir, tracks)
     print(f"[main] {len(master)} שורות בטבלה הראשית")
+    print(f"[main] {len(funds_detail)} מסלולים עם רשימת קרנות מפורטת")
 
-    args.out.parent.mkdir(parents=True, exist_ok=True)
-    with open(args.out, "w", encoding="utf-8") as f:
+    args.out_dir.mkdir(parents=True, exist_ok=True)
+    with open(args.out_dir / "master.json", "w", encoding="utf-8") as f:
         json.dump(master, f, ensure_ascii=False, indent=2)
-    print(f"[main] נשמר -> {args.out}")
+    with open(args.out_dir / "funds_detail.json", "w", encoding="utf-8") as f:
+        json.dump(funds_detail, f, ensure_ascii=False, indent=2)
+    print(f"[main] נשמר -> {args.out_dir}/master.json, {args.out_dir}/funds_detail.json")
 
 
 if __name__ == "__main__":
