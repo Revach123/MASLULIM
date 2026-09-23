@@ -16,7 +16,7 @@ from .funds_il import build_funds_il
 from .funds_reference import build_funds_reference
 from .interest import build_interest
 from .isin_swap import build_isin_swap
-from .kashrut_rank import build_kashrut_by_num, build_track_kashrut
+from .kashrut_rank import NO_KASHRUT, build_kashrut_by_num, build_track_kashrut
 from .sheet_source import build_source
 from .tracks_reference import fetch_tracks, track_key
 
@@ -58,6 +58,11 @@ def build_master_table(reports_dir: Path, tracks: list[dict]) -> tuple[list[dict
 
     for key, level in track_kashrut.items():
         row_for(key)["כשרות"] = level
+
+    # מסלול בלי שום נתוני החזקות בדוחות (לא ב-funds בכלל) = "בלי כשרות",
+    # לא "לא ידוע" - אותו עיקרון כמו קרן שלא זוהתה (kashrut_rank.py).
+    for row in rows.values():
+        row.setdefault("כשרות", NO_KASHRUT)
 
     return list(rows.values()), funds_detail
 
