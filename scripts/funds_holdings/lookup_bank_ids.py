@@ -17,7 +17,11 @@ CSV_PATH = os.path.join(os.path.dirname(__file__), "bank_reference.csv")
 
 # בירור ממוקד: פירוט מלא לפי ח.פ (למיזוגים), וחיפושים חלופיים למיטב + בנקים
 # חדשים שהתגלו מתוך הנתונים האמיתיים (לא מ-Table H, שהתברר לא אמין).
-DETAIL_IDS = ["520016106", "520004490"]  # אוצר החייל, יובנק - "מחוסלת עקב מיזוג"
+DETAIL_IDS = [
+    "520016106", "520004490",  # אוצר החייל, יובנק - "מחוסלת עקב מיזוג"
+    "513495796",  # אקסלנס נשואה שירותים בע"מ - האם "purpose" מזכיר שירותי בורסה?
+    "512401449", "512401761", "517131009",  # שאר מועמדי "נשואה" הפעילים
+]
 EXTRA_QUERIES = [
     "מיטב דש", "מיטב טרייד", "מיטב דש טרייד השקעות",
     "בנק ירושלים",
@@ -40,10 +44,9 @@ def detail(session, key, cid):
 
 def print_candidates(name, data):
     results = data.get("results", [])
-    companies = [r for r in results if r.get("kind") == "company"][:8]
-    print(f"      | {name:<40} | {len(companies)} מועמדים (מתוך {data.get('total', 0)} סה\"כ)")
-    for c in companies:
-        print(f"      -> id={c.get('id'):<12} name={c.get('name')!r:<50} status={c.get('status')!r}")
+    print(f"      | {name:<40} | {len(results)} תוצאות מוצגות (מתוך {data.get('total', 0)} סה\"כ), counts={data.get('counts')}")
+    for c in results[:15]:
+        print(f"      -> kind={c.get('kind'):<12} id={c.get('id'):<12} name={c.get('name')!r:<50} status={c.get('status')!r}")
 
 
 def main():
