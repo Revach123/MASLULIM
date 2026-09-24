@@ -9,6 +9,9 @@ import json
 from pathlib import Path
 
 from . import heter_iska as heter_iska_module
+from .bonds_detail import build_bonds_detail
+from .bonds_heter_reference import build_bonds_heter_by_isin
+from .bonds_rank import build_bonds_rank
 from .category_pct import build_category_pct
 from .file_list import get_file_list
 from .funds import build_funds
@@ -22,7 +25,9 @@ from .sheet_source import build_source
 from .tracks_reference import fetch_tracks, track_key
 
 
-def build_master_table(reports_dir: Path, tracks: list[dict]) -> tuple[list[dict], dict[str, list[dict]]]:
+def build_master_table(
+    reports_dir: Path, tracks: list[dict]
+) -> tuple[list[dict], dict[str, list[dict]], dict[str, list[dict]]]:
     files = get_file_list(reports_dir)
     source = build_source(files)
 
@@ -42,6 +47,11 @@ def build_master_table(reports_dir: Path, tracks: list[dict]) -> tuple[list[dict
     track_kashrut = build_track_kashrut(funds, kashrut_by_num)
     funds_detail = build_funds_detail(funds, funds_ref)
 
+    bonds_heter_by_isin = build_bonds_heter_by_isin()
+    print(f"[main] {len(bonds_heter_by_isin)} ניירות מ-bonds_heter (revach)")
+    bonds_rank = build_bonds_rank(source, bonds_heter_by_isin)
+    bonds_detail = build_bonds_detail(source, bonds_heter_by_isin)
+
     rows: dict[str, dict] = {}
     for t in tracks:
         key = track_key(t)
@@ -54,6 +64,9 @@ def build_master_table(reports_dir: Path, tracks: list[dict]) -> tuple[list[dict
         return rows.setdefault(key, {"מפתח": key})
 
     for key, cols in interest.items():
+        row_for(key).update(cols)
+
+    for key, cols in bonds_rank.items():
         row_for(key).update(cols)
 
     for key, cat_sums in category_pct.items():
@@ -77,7 +90,7 @@ def build_master_table(reports_dir: Path, tracks: list[dict]) -> tuple[list[dict
     for row in rows.values():
         row.setdefault("כשרות", NO_KASHRUT)
 
-    return list(rows.values()), funds_detail
+    return list(rows.values()), funds_detail, bonds_detail
 
 
 def main():
@@ -89,16 +102,20 @@ def main():
     tracks = fetch_tracks()
     print(f"[main] {len(tracks)} מסלולים מ-tracks")
 
-    master, funds_detail = build_master_table(args.reports_dir, tracks)
+    master, funds_detail, bonds_detail = build_master_table(args.reports_dir, tracks)
     print(f"[main] {len(master)} שורות בטבלה הראשית")
     print(f"[main] {len(funds_detail)} מסלולים עם רשימת קרנות מפורטת")
+    print(f"[main] {len(bonds_detail)} מסלולים עם רשימת אג\"ח מפורטת")
 
     args.out_dir.mkdir(parents=True, exist_ok=True)
     with open(args.out_dir / "master.json", "w", encoding="utf-8") as f:
         json.dump(master, f, ensure_ascii=False, indent=2)
     with open(args.out_dir / "funds_detail.json", "w", encoding="utf-8") as f:
         json.dump(funds_detail, f, ensure_ascii=False, indent=2)
-    print(f"[main] נשמר -> {args.out_dir}/master.json, {args.out_dir}/funds_detail.json")
+    with open(args.out_dir / "bonds_detail.json", "w", encoding="utf-8") as f:
+        json.dump(bonds_detail, f, ensure_ascii=False, indent=2)
+    print(f"[main] נשמר -> {args.out_dir}/master.json, {args.out_dir}/funds_detail.json, "
+          f"{args.out_dir}/bonds_detail.json")
 
 
 if __name__ == "__main__":

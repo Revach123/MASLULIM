@@ -1,11 +1,12 @@
-"""ממיר out/master.json ו-out/funds_detail.json ל-master.sql/funds_detail.sql
-עבור wrangler d1 execute. מקביל ל-build_d1.py/build_d1_tracks.py ב-revach.
+"""ממיר out/master.json, out/funds_detail.json ו-out/bonds_detail.json
+ל-master.sql/funds_detail.sql/bonds_detail.sql עבור wrangler d1 execute.
+מקביל ל-build_d1.py/build_d1_tracks.py ב-revach.
 
 DB: maslulim_autopilot (binding AUTOPILOT ב-Pages).
 טבלת master: עמודת מפתח (PRIMARY KEY) + כמה עמודות לאינדוקס/סינון + data
   (JSON מלא של השורה - כל שאר השדות, כולל אלה שמשתנים בין ריצות כמו עמודות
-  "קרן מחקה - X"). טבלת funds_detail: מפתח (PRIMARY KEY) + data (JSON
-  array של רשימת הקרנות המלאה לאותו מסלול).
+  "קרן מחקה - X"). טבלאות funds_detail/bonds_detail: מפתח (PRIMARY KEY) +
+  data (JSON array של רשימת הקרנות/האג"ח המלאה לאותו מסלול).
 
 הרצה: python -m funds_holdings.build_d1 --out-dir out
 """
@@ -29,12 +30,13 @@ MASTER_SCHEMA = (
     "CREATE INDEX IF NOT EXISTS idx_master_domain ON master(תחום);\n"
 )
 
-DETAIL_SCHEMA = (
-    "CREATE TABLE IF NOT EXISTS funds_detail (\n"
-    "  מפתח TEXT PRIMARY KEY,\n"
-    "  data TEXT\n"
-    ");\n"
-)
+def detail_schema(table: str) -> str:
+    return (
+        f"CREATE TABLE IF NOT EXISTS {table} (\n"
+        "  מפתח TEXT PRIMARY KEY,\n"
+        "  data TEXT\n"
+        ");\n"
+    )
 
 
 def sql_str(s):
@@ -95,13 +97,13 @@ def build_master_sql(master: list[dict], out_path: Path) -> int:
     return write_batched(out_path, "master", MASTER_SCHEMA, col_names, rows)
 
 
-def build_detail_sql(detail: dict[str, list], out_path: Path) -> int:
+def build_detail_sql(detail: dict[str, list], out_path: Path, table: str) -> int:
     col_names = ["מפתח", "data"]
     rows = []
-    for key, funds in detail.items():
-        data_json = json.dumps(funds, ensure_ascii=False, separators=(",", ":"))
+    for key, items in detail.items():
+        data_json = json.dumps(items, ensure_ascii=False, separators=(",", ":"))
         rows.append((sql_str(key), sql_str(data_json)))
-    return write_batched(out_path, "funds_detail", DETAIL_SCHEMA, col_names, rows)
+    return write_batched(out_path, table, detail_schema(table), col_names, rows)
 
 
 def main():
@@ -112,12 +114,16 @@ def main():
     with open(args.out_dir / "master.json", encoding="utf-8") as f:
         master = json.load(f)
     with open(args.out_dir / "funds_detail.json", encoding="utf-8") as f:
-        detail = json.load(f)
+        funds_detail = json.load(f)
+    with open(args.out_dir / "bonds_detail.json", encoding="utf-8") as f:
+        bonds_detail = json.load(f)
 
     n1 = build_master_sql(master, args.out_dir / "master.sql")
-    n2 = build_detail_sql(detail, args.out_dir / "funds_detail.sql")
+    n2 = build_detail_sql(funds_detail, args.out_dir / "funds_detail.sql", "funds_detail")
+    n3 = build_detail_sql(bonds_detail, args.out_dir / "bonds_detail.sql", "bonds_detail")
     print(f"[build_d1] master: {n1} שורות -> {args.out_dir}/master.sql")
     print(f"[build_d1] funds_detail: {n2} שורות -> {args.out_dir}/funds_detail.sql")
+    print(f"[build_d1] bonds_detail: {n3} שורות -> {args.out_dir}/bonds_detail.sql")
 
 
 if __name__ == "__main__":
