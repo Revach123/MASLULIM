@@ -5,8 +5,14 @@
 DB: maslulim_autopilot (binding AUTOPILOT ב-Pages).
 טבלת master: עמודת מפתח (PRIMARY KEY) + כמה עמודות לאינדוקס/סינון + data
   (JSON מלא של השורה - כל שאר השדות, כולל אלה שמשתנים בין ריצות כמו עמודות
-  "קרן מחקה - X"). טבלאות funds_detail/bonds_detail: מפתח (PRIMARY KEY) +
-  data (JSON array של רשימת הקרנות/האג"ח המלאה לאותו מסלול).
+  "קרן מחקה - X"). טבלאות funds_detail/bonds_detail: מפתח (לא ייחודי - ר'
+  ROW_ITEM_LIMIT) + data (JSON array של חלק מרשימת הקרנות/האג"ח למסלול).
+
+  שינוי מכוון: מסלול מוסדי גדול יכול להחזיק מאות אג"ח שונות בפועל (נבדק
+  מול נתונים אמיתיים - עד ~800 ניירות למסלול) - JSON כזה חורג מתקרת
+  אורך-סטייטמנט של D1 (~100KB, SQLITE_TOOBIG). לכן: מסלול שרשימתו גדולה
+  מדי מפוצל למספר שורות פיזיות (אותו מפתח חוזר, כל שורה = חלק מהרשימה) -
+  ה-API ב-revach מאחד אותן חזרה. מפתח כבר לא PRIMARY KEY (לא ייחודי).
 
 הרצה: python -m funds_holdings.build_d1 --out-dir out
 """
@@ -15,6 +21,7 @@ import json
 from pathlib import Path
 
 MAX_BYTES = 80000  # תקרת D1 לסטייטמנט (~100KB), עם מרווח ביטחון
+ROW_ITEM_LIMIT = 60000  # תקרת JSON לערך data בודד (שורה אחת), עם מרווח ביטחון גדול יותר
 
 MASTER_SCHEMA = (
     "CREATE TABLE IF NOT EXISTS master (\n"
@@ -33,9 +40,10 @@ MASTER_SCHEMA = (
 def detail_schema(table: str) -> str:
     return (
         f"CREATE TABLE IF NOT EXISTS {table} (\n"
-        "  מפתח TEXT PRIMARY KEY,\n"
+        "  מפתח TEXT,\n"
         "  data TEXT\n"
         ");\n"
+        f"CREATE INDEX IF NOT EXISTS idx_{table}_key ON {table}(מפתח);\n"
     )
 
 
@@ -97,12 +105,32 @@ def build_master_sql(master: list[dict], out_path: Path) -> int:
     return write_batched(out_path, "master", MASTER_SCHEMA, col_names, rows)
 
 
+def _chunk_items(items: list, limit: int) -> list[list]:
+    """מפצל רשימת פריטים לצ'אנקים, כל אחד עם JSON מתחת ל-limit בייטים
+    (הערכה - לא כולל תקורת מפריד הפסיקים המדויקת, יש מרווח ביטחון)."""
+    chunks: list[list] = []
+    current: list = []
+    current_bytes = 2  # "[" + "]"
+    for item in items:
+        item_bytes = len(json.dumps(item, ensure_ascii=False, separators=(",", ":")).encode("utf-8")) + 1
+        if current and current_bytes + item_bytes > limit:
+            chunks.append(current)
+            current = []
+            current_bytes = 2
+        current.append(item)
+        current_bytes += item_bytes
+    if current:
+        chunks.append(current)
+    return chunks or [[]]
+
+
 def build_detail_sql(detail: dict[str, list], out_path: Path, table: str) -> int:
     col_names = ["מפתח", "data"]
     rows = []
     for key, items in detail.items():
-        data_json = json.dumps(items, ensure_ascii=False, separators=(",", ":"))
-        rows.append((sql_str(key), sql_str(data_json)))
+        for chunk in _chunk_items(items, ROW_ITEM_LIMIT):
+            data_json = json.dumps(chunk, ensure_ascii=False, separators=(",", ":"))
+            rows.append((sql_str(key), sql_str(data_json)))
     return write_batched(out_path, table, detail_schema(table), col_names, rows)
 
 
