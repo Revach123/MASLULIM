@@ -9,6 +9,7 @@ import json
 from pathlib import Path
 
 from . import heter_iska as heter_iska_module
+from .category_pct import build_category_pct
 from .file_list import get_file_list
 from .funds import build_funds
 from .funds_detail import build_funds_detail
@@ -34,6 +35,7 @@ def build_master_table(reports_dir: Path, tracks: list[dict]) -> tuple[list[dict
 
     heter_by_chp = heter_iska_module.build()
     interest = build_interest(source, heter_by_chp=heter_by_chp)
+    category_pct = build_category_pct(source)
     il_sums = build_funds_il(funds, funds_ref)
     kashrut_by_num = build_kashrut_by_num(funds_ref)
     il_kashrut = build_funds_il_kashrut(funds, funds_ref, kashrut_by_num)
@@ -53,6 +55,9 @@ def build_master_table(reports_dir: Path, tracks: list[dict]) -> tuple[list[dict
 
     for key, cols in interest.items():
         row_for(key).update(cols)
+
+    for key, cat_sums in category_pct.items():
+        row_for(key).update(cat_sums)
 
     for key, siveg_sums in il_sums.items():
         row_for(key).update(siveg_sums)
