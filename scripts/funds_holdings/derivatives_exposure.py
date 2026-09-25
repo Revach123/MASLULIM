@@ -86,6 +86,7 @@ SWAP_LEGS = (
     {"units": "ערך נקוב (רגל 1)", "fx": "שער חליפין (רגל 1)", "currency": "מטבע פעילות (רגל 1)"},
     {"units": "ערך נקוב (רגל 2)", "fx": "שער חליפין (רגל 2)", "currency": "מטבע פעילות (רגל 2)"},
 )
+SWAP_UNDERLYING_PRICE_COL = "שער נכס הבסיס במועד ההתקשרות בעסקה"
 
 # JPY: נמצא בבדיקה שחלק מהמגישים רושמים את שער החליפין לפי מוסכמת "יחס ל-100
 # יין" (כמו שער בנק ישראל ליין) במקום שער ליחידה - אותו קובץ/מגיש לא עקבי:
@@ -182,22 +183,31 @@ def _futures_exposure(source: list[dict], total_assets: dict[str, float]) -> dic
 
 
 def _swap_exposure(source: list[dict], total_assets: dict[str, float]) -> dict[str, float]:
-    """הערה על מגבלה ידועה: "ערך נקוב" (רגל 1) ו"ערך נקוב" (רגל 2) אינם
-    תמיד באותו סדר גודל - נבדק בפועל שעבור שורות עם "מאפיין עיקרי" =
-    "Unfunded Forward" שתי הרגליים אכן קרובות (כצפוי, אותה עסקה בשתי
-    מטבעות), אבל עבור "Unfunded Swap" (למשל סוואפ תשואה כוללת על מניות)
-    רגל 2 (בד"כ הרגל הזרה) יכולה להיות גדולה פי אלפים מרגל 1 באופן עקבי
-    על פני כל השורות/מסלולים שנבדקו - סימן שהעמודות לא מייצגות את אותו
-    נוציונל בשתי יחידות מידה כפי שהונח, אלא שני גדלים שונים מהותית (לא
-    מתועד מה בדיוק - לא נמצא מסמך ספק רשמי שמפרש את שתי העמודות האלה
-    ספציפית לתת-הסוג "Unfunded Swap"). התיקון למטה לא מנסה לפענח את
-    הסמנטיקה הנכונה (ניחוש עלול להחמיר, לא לשפר) - הוא רק מרחיב את עקרון
-    ה-SANITY_CAP הקיים (שורה בודדת) לרמת המסלול: כשסכום החשיפה המצטבר
-    לאותו מסלול (על פני כל שורות ה-swap שלו) חורג מ-SANITY_CAP, נופלים
-    חזרה לסכום לפי שווי הוגן נטו לאותו מסלול - כמו שכל שורה בודדת כבר
-    עושה כשהיא חורגת לבדה."""
+    """נמצא בבדיקה בפועל (לא ניחוש): "ערך נקוב" (רגל 1) ו"ערך נקוב" (רגל 2)
+    אינם תמיד באותה יחידת מידה. עבור "Unfunded Forward" (למשל פורוורד מט"ח)
+    שתי הרגליים כבר סכום נקוב במטבע - קרובות זו לזו כצפוי. אבל עבור
+    "Unfunded Swap" על מניות/מדדים (סוואפ תשואה-כוללת), רגל 1 היא כמות
+    *יחידות גולמית* של נכס הבסיס (לא סכום נקוב), ורגל 2 היא כבר הסכום
+    הנקוב הנכון. אומת ישירות מול reports/2026Q2/512065202_gm_0226.xlsx:
+    על 542/542 שורות סוואפ-מניות, רגל1 × "שער נכס הבסיס במועד ההתקשרות
+    בעסקה" (× שער חליפין רגל 1) שווה בדיוק לרגל 2 (עד כדי עיגול). לכן רגל 1
+    צריכה הכפלה בשער נכס הבסיס כדי להיות ברת-השוואה לרגל 2 - לא נוסחת
+    ה-units×fx הרגילה שמשמשת לכל שאר הקטגוריות. אין דגל מפורש בדוח שמבחין
+    בין "Unfunded Swap" ל"Unfunded Forward", ולכן הבחירה אדפטיבית לכל שורה:
+    בין הפרשנות הגולמית לפרשנות המוכפלת-במחיר לרגל 1, נבחרת זו שקרובה יותר
+    לרגל 2 (שנמצא בפועל שהיא תמיד כבר תקינה).
+
+    גם אחרי התיקון הזה, נמצא בפועל שחלק מהמגישים רושמים את "שער נכס הבסיס"
+    בקנה מידה שגוי (למשל פי ~100, אותה תבנית תקלה כמו JPY/ערך-נקוב-100
+    בחוזים עתידיים) - לא עקבי אפילו בתוך אותה קרן/טיקר. מטופל באותו עקרון
+    LEVERAGE_CAP שכבר קיים לחוזים עתידיים: משווים את החשיפה הנוציונלית
+    שהתקבלה לשווי ההוגן נטו שאותה שורה בדיוק מדווחת - יחס גבוה מדי מסמן קנה
+    מידה לא אמין, ונופלים לערך המדווח (PCT_COL) לשורה הזו בלבד. תקרת
+    ה-SANITY_CAP הקיימת (ברמת שורה) ותקרת מסלול נוספת (סכום מצטבר על פני כל
+    שורות ה-swap במסלול) נשארות כרשת ביטחון אחרונה."""
     notional_sums: dict[str, float] = {}
     fv_sums: dict[str, float] = {}
+    leg1_col, leg2_col = SWAP_LEGS
     for rec in source:
         if rec["Category"] != SWAP_CATEGORY or rec["מידע"] != "מידע":
             continue
@@ -206,26 +216,43 @@ def _swap_exposure(source: list[dict], total_assets: dict[str, float]) -> dict[s
             total = total_assets.get(key) if key is not None else None
             if not total:
                 continue
-            # ה-fallback משתמש בעמודת האחוז כפי שהדוח עצמו מדווח (לא נגזר
-            # מ-total_assets_by_key, שהאומדן שלה לשווי הכולל לא תמיד מדויק
-            # מספיק ביחס לאומדן הדוח עצמו לכל שורה בנפרד - נבדק בפועל: הפרש
-            # של פי ~4 בין השניים על 512065202_13245).
-            fv_ratio = to_ratio(row.get(PCT_COL)) or 0.0
-            fv_sums[key] = fv_sums.get(key, 0.0) + fv_ratio
+            # ה-fallback (כשקנה המידה לא אמין) משתמש בעמודת האחוז כפי שהדוח
+            # עצמו מדווח - נמצא בפועל מדויק יותר מ-fv/total_assets_by_key
+            # (שהאומדן שלה לשווי הכולל לא תמיד מתאים בדיוק לאומדן הדוח עצמו
+            # לכל שורה בנפרד).
+            row_pct = to_ratio(row.get(PCT_COL)) or 0.0
+            fv_sums[key] = fv_sums.get(key, 0.0) + row_pct
 
-            leg_values = []
-            for leg in SWAP_LEGS:
-                units = _num(row.get(leg["units"]))
-                fx = _normalize_fx(row.get(leg["currency"]), _num(row.get(leg["fx"])))
-                if units is None or fx is None:
-                    continue
-                leg_values.append(abs(units * fx) / 1000)  # לאלפי ש"ח
+            units1 = _num(row.get(leg1_col["units"]))
+            fx1 = _normalize_fx(row.get(leg1_col["currency"]), _num(row.get(leg1_col["fx"])))
+            units2 = _num(row.get(leg2_col["units"]))
+            fx2 = _normalize_fx(row.get(leg2_col["currency"]), _num(row.get(leg2_col["fx"])))
+            price = _num(row.get(SWAP_UNDERLYING_PRICE_COL))
+
+            leg2_val = abs(units2 * fx2) / 1000 if units2 is not None and fx2 is not None else None
+            leg1_raw = abs(units1 * fx1) / 1000 if units1 is not None and fx1 is not None else None
+            leg1_priced = (abs(units1 * fx1 * price) / 1000
+                            if units1 is not None and fx1 is not None and price is not None else None)
+
+            leg1_val = leg1_raw
+            if leg1_priced is not None and (
+                leg1_raw is None or leg2_val is None
+                or abs(leg1_priced - leg2_val) < abs(leg1_raw - leg2_val)
+            ):
+                leg1_val = leg1_priced
+
+            candidates = [v for v in (leg1_val, leg2_val) if v is not None]
             line_ratio = None
-            if leg_values:
-                notional_thousands = sum(leg_values) / len(leg_values)
+            if candidates:
+                notional_thousands = sum(candidates) / len(candidates)
                 line_ratio = notional_thousands / total
+
+                fv = _num(row.get(SWAP_NET_FAIR_VALUE_COL))
+                fv_ratio = (fv / total) if fv is not None else None
+                if fv_ratio is not None and abs(line_ratio) > LEVERAGE_CAP * abs(fv_ratio):
+                    line_ratio = None  # קנה מידה לא סביר ביחס לשווי ההוגן של השורה עצמה
             if line_ratio is None or abs(line_ratio) > SANITY_CAP:
-                line_ratio = fv_ratio
+                line_ratio = row_pct
             notional_sums[key] = notional_sums.get(key, 0.0) + line_ratio
 
     return {
