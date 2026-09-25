@@ -139,6 +139,23 @@ KNOWN_JAPAN_EQUITY_ETFS = {
     "JP3048120004": "iShares Core TOPIX ETF",
 }
 
+# עוגנים ידניים נוספים לקרנות ספציפיות שנמצאו בראש רשימת missing_foreign_funds.py
+# (משקל מצטבר גבוה) אך לא זוהו בשום מאגר/שכבה אחרת - השם המדווח בדוח קצוץ/
+# מקוצר (למשל "NB GLB FLEX CRE" חתוך מ-"...Flexible Credit Fund") ולכן גם
+# _classify_by_report_name לא תופס אותן, אבל זהות הקרן ודאית מהשם החלקי +
+# ידע ציבורי (משפחת הקרן, לא ניחוש) - אותו עיקרון כמו KNOWN_MAJOR_EQUITY_ETFS.
+KNOWN_EQUITY_FUNDS_OTHER = {
+    "US5007673065": "KraneShares CSI China Internet ETF (KWEB)",
+    "LU2126068639": "Kotak Funds - India Midcap Fund",
+    "LU0675383409": "Kotak Funds - India Midcap Fund (סדרת יחידות נוספת)",
+}
+KNOWN_BOND_FUNDS_OTHER = {
+    "LU0569863243": "UBAM - Global High Yield Solution",
+    "IE00BMD7Z621": "Neuberger Berman Global Flexible Credit Fund",
+    "IE0034085260": "PIMCO GIS Global Investment Grade Credit Fund",
+    "IE00B8HR7G48": "Neuberger Berman Global Senior Floating Rate Income Fund",
+}
+
 
 def build_isin_fractions(etf_universe: list[dict], sec_exposure: list[dict]) -> dict[str, dict[str, float]]:
     """ISIN (מנורמל) -> {"equity": שבר 0..1, "bond": שבר 0..1}. SEC (שיעורים
@@ -147,8 +164,10 @@ def build_isin_fractions(etf_universe: list[dict], sec_exposure: list[dict]) -> 
     לא ניתן להסיק מהם שבר מניות/אג"ח בינארי אמין)."""
     out: dict[str, dict[str, float]] = {
         isin: {"equity": 1.0, "bond": 0.0}
-        for isin in (*KNOWN_MAJOR_EQUITY_ETFS, *KNOWN_JAPAN_EQUITY_ETFS)
+        for isin in (*KNOWN_MAJOR_EQUITY_ETFS, *KNOWN_JAPAN_EQUITY_ETFS, *KNOWN_EQUITY_FUNDS_OTHER)
     }
+    for isin in KNOWN_BOND_FUNDS_OTHER:
+        out[isin] = {"equity": 0.0, "bond": 1.0}
     for rec in etf_universe:
         isin = _isin_key(rec.get("isin"))
         if isin is None:
@@ -184,7 +203,7 @@ def build_isin_fractions(etf_universe: list[dict], sec_exposure: list[dict]) -> 
 # שם מקוצר/לא רשמי נותן פחות ודאות, ולכן נדרש מונח מובהק (אג"ח או מניות)
 # ולא רק העדר מונח-אג"ח. מדולג (לא מסווג) כשאין מונח מובהק משני הצדדים.
 _REPORT_NAME_BOND_TERMS = (
-    "bond", "treasury", "gilt", "sovereign", "high yield", "senior loan", "corp debt",
+    "bond", "treasury", "gilt", "sovereign", "high yiel", "senior loan", "corp debt",
     "floating rate", "credit", "govt", "municipal", "debenture",
 )
 _REPORT_NAME_EQUITY_TERMS = (
