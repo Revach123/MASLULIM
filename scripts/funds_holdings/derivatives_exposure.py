@@ -182,7 +182,22 @@ def _futures_exposure(source: list[dict], total_assets: dict[str, float]) -> dic
 
 
 def _swap_exposure(source: list[dict], total_assets: dict[str, float]) -> dict[str, float]:
-    sums: dict[str, float] = {}
+    """הערה על מגבלה ידועה: "ערך נקוב" (רגל 1) ו"ערך נקוב" (רגל 2) אינם
+    תמיד באותו סדר גודל - נבדק בפועל שעבור שורות עם "מאפיין עיקרי" =
+    "Unfunded Forward" שתי הרגליים אכן קרובות (כצפוי, אותה עסקה בשתי
+    מטבעות), אבל עבור "Unfunded Swap" (למשל סוואפ תשואה כוללת על מניות)
+    רגל 2 (בד"כ הרגל הזרה) יכולה להיות גדולה פי אלפים מרגל 1 באופן עקבי
+    על פני כל השורות/מסלולים שנבדקו - סימן שהעמודות לא מייצגות את אותו
+    נוציונל בשתי יחידות מידה כפי שהונח, אלא שני גדלים שונים מהותית (לא
+    מתועד מה בדיוק - לא נמצא מסמך ספק רשמי שמפרש את שתי העמודות האלה
+    ספציפית לתת-הסוג "Unfunded Swap"). התיקון למטה לא מנסה לפענח את
+    הסמנטיקה הנכונה (ניחוש עלול להחמיר, לא לשפר) - הוא רק מרחיב את עקרון
+    ה-SANITY_CAP הקיים (שורה בודדת) לרמת המסלול: כשסכום החשיפה המצטבר
+    לאותו מסלול (על פני כל שורות ה-swap שלו) חורג מ-SANITY_CAP, נופלים
+    חזרה לסכום לפי שווי הוגן נטו לאותו מסלול - כמו שכל שורה בודדת כבר
+    עושה כשהיא חורגת לבדה."""
+    notional_sums: dict[str, float] = {}
+    fv_sums: dict[str, float] = {}
     for rec in source:
         if rec["Category"] != SWAP_CATEGORY or rec["מידע"] != "מידע":
             continue
@@ -191,6 +206,13 @@ def _swap_exposure(source: list[dict], total_assets: dict[str, float]) -> dict[s
             total = total_assets.get(key) if key is not None else None
             if not total:
                 continue
+            # ה-fallback משתמש בעמודת האחוז כפי שהדוח עצמו מדווח (לא נגזר
+            # מ-total_assets_by_key, שהאומדן שלה לשווי הכולל לא תמיד מדויק
+            # מספיק ביחס לאומדן הדוח עצמו לכל שורה בנפרד - נבדק בפועל: הפרש
+            # של פי ~4 בין השניים על 512065202_13245).
+            fv_ratio = to_ratio(row.get(PCT_COL)) or 0.0
+            fv_sums[key] = fv_sums.get(key, 0.0) + fv_ratio
+
             leg_values = []
             for leg in SWAP_LEGS:
                 units = _num(row.get(leg["units"]))
@@ -203,10 +225,13 @@ def _swap_exposure(source: list[dict], total_assets: dict[str, float]) -> dict[s
                 notional_thousands = sum(leg_values) / len(leg_values)
                 line_ratio = notional_thousands / total
             if line_ratio is None or abs(line_ratio) > SANITY_CAP:
-                fv = _num(row.get(SWAP_NET_FAIR_VALUE_COL))
-                line_ratio = (fv / total) if fv is not None else 0.0
-            sums[key] = sums.get(key, 0.0) + line_ratio
-    return sums
+                line_ratio = fv_ratio
+            notional_sums[key] = notional_sums.get(key, 0.0) + line_ratio
+
+    return {
+        key: val if abs(val) <= SANITY_CAP else fv_sums.get(key, 0.0)
+        for key, val in notional_sums.items()
+    }
 
 
 def build_derivatives_exposure(source: list[dict]) -> dict[str, dict[str, float]]:
