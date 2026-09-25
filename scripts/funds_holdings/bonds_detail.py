@@ -27,7 +27,7 @@ def build_bonds_detail(source: list[dict], bonds_heter_by_isin: dict[str, dict])
             is_isin = (type_val is None or type_val == "ISIN") and isinstance(isin, str) and isin.startswith("IL")
 
             entry = bonds_heter_by_isin.get(isin) if is_isin else None
-            level = _bond_level(entry) if is_isin else None
+            level = _bond_level(entry, row.get(SECNAME_COL), isin) if is_isin else None
 
             out.setdefault(key, []).append({
                 "ISIN": isin if is_isin else None,
