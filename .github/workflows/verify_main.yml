@@ -59,6 +59,11 @@ jobs:
           REVACH_MATCH_KEY: ${{ secrets.REVACH_MATCH_KEY }}
           PAT: ${{ secrets.PAT }}
         run: python -m scripts.funds_holdings.validate_equity_exposure --reports-dir reports
+      - name: Report unmatched foreign funds
+        env:
+          REVACH_MATCH_KEY: ${{ secrets.REVACH_MATCH_KEY }}
+          PAT: ${{ secrets.PAT }}
+        run: python -m scripts.funds_holdings.missing_foreign_funds --reports-dir reports
       - uses: actions/upload-artifact@v4
         with:
           name: master-output

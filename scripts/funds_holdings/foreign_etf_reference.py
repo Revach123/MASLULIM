@@ -37,6 +37,38 @@ PLACEHOLDER_PCT = {"", "ריק במקור", "סוף מידע"}
 
 BOND_ASSET_CLASSES = {"fixed income", "bond"}
 
+# חלק מקוראי האוניברסיטה האירופית (Invesco, JustETF - כ-1,888/3,604 קרנות,
+# יותר ממחצית!) אף פעם לא ממלאים asset_class (מגבלת המקור עצמו - לא שדה
+# חסר במקרה). לפני שנותרים בלי סיווג, מנסים להסיק מניות/אג"ח משם הקרן +
+# המדד - נבדק בפועל על כל ה-1,888: משתחזר סיווג בטוח ל-1,511 (80%), כשמה
+# שנשאר לא-מסווג הוא כמעט אך ורק סחורות/מטבעות דיגיטליים/מזומן (לא ניתן,
+# ולא כדאי, להכריע כמניות/אג"ח) - לא נבדק לקרנות אג"ח נסתרות שהוחמצו.
+_EXCLUDE_NAME_TERMS = (
+    "bitcoin", "ethereum", "crypto", "cardano", "solana", "physical gold", "physical silver",
+    "digital asset", "commodity", "commodities", "agriculture", " etp", "etp ", "autocallable",
+    "option", "overnight rate", "money market", "buffer", "carry", "livestock",
+    "multi-strategy", "multi asset", "multi-asset", "infrastructure mlp",
+)
+_BOND_NAME_TERMS = (
+    "bond", "treasury", "gilt", "sovereign", "credit", "coco", "contingent convertible",
+    "floating rate note", "municipal", "govt", "government bond", "aggregate",
+)
+
+
+def _classify_by_name(name, benchmark_index) -> str | None:
+    """'equity'/'bond'/None לפי מילות מפתח בשם הקרן/המדד - רק כשיש סימן
+    סביר (לא ניחוש בברירת מחדל לגמרי חופשי): לא סחורה/קריפטו/מזומן/מובנה,
+    ואז אג"ח לפי מילת-מפתח מפורשת, אחרת מניות (רוב ETF שאינו סחורה/אג"ח/
+    קריפטו הוא מניות - סקטוריאלי/תמטי/פקטורי/אזורי)."""
+    text = f"{name or ''} {benchmark_index or ''}".lower()
+    if any(t in text for t in _EXCLUDE_NAME_TERMS):
+        return None
+    if any(t in text for t in _BOND_NAME_TERMS):
+        return "bond"
+    if "ucits etf" in text or "etf " in text or text.strip().endswith("etf"):
+        return "equity"
+    return None
+
 
 def fetch_etf_universe(session: requests.Session | None = None) -> list[dict]:
     key = (os.environ.get(MATCH_KEY_ENV) or "").strip()
@@ -83,6 +115,12 @@ def build_isin_fractions(etf_universe: list[dict], sec_exposure: list[dict]) -> 
             out[isin] = {"equity": 1.0, "bond": 0.0}
         elif ac in BOND_ASSET_CLASSES:
             out[isin] = {"equity": 0.0, "bond": 1.0}
+        else:
+            by_name = _classify_by_name(rec.get("name"), rec.get("benchmark_index"))
+            if by_name == "equity":
+                out[isin] = {"equity": 1.0, "bond": 0.0}
+            elif by_name == "bond":
+                out[isin] = {"equity": 0.0, "bond": 1.0}
 
     for rec in sec_exposure:
         isin = _isin_key(rec.get("isin"))
