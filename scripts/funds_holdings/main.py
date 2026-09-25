@@ -15,6 +15,9 @@ from .bonds_rank import build_bonds_rank
 from .category_pct import build_category_pct
 from .derivatives_exposure import DERIVATIVE_CATEGORIES, build_derivatives_exposure
 from .file_list import get_file_list
+from .foreign_etf_reference import (
+    build_foreign_equity, build_isin_fractions, fetch_etf_universe, fetch_sec_etf_exposure,
+)
 from .funds import build_funds
 from .funds_detail import build_funds_detail
 from .funds_il import build_funds_il, build_funds_il_kashrut
@@ -55,6 +58,19 @@ def build_master_table(
                 d[cat] = cols[cat]
 
     il_sums = build_funds_il(funds, funds_ref)
+
+    # קרנות "חוץ" (לא ישראליות, לא נסחרות ב-TASE - funds_ref לא מזהה אותן
+    # בכלל) - מזוהות/מסווגות למניות/אג"ח דרך שני מאגרי ETF זרים ב-revach
+    # (אוניברסיטת ETF אירופית + חשיפת ETF אמריקאיות לפי SEC) שלא ממופים
+    # כרגע דרך funds_reference.py. מצטרף לאותן עמודות "קרן מחקה - ..." -
+    # אין חפיפה עם il_sums (כל שורת קרן מסווגת בדיוק ל-IL/נסחרת/חוץ אחת).
+    isin_fractions = build_isin_fractions(fetch_etf_universe(), fetch_sec_etf_exposure())
+    print(f"[main] {len(isin_fractions)} ISIN מסווגים (ETF זרות: אירופה+SEC)")
+    for key, cols in build_foreign_equity(funds, isin_fractions).items():
+        d = il_sums.setdefault(key, {})
+        for siveg, pct in cols.items():
+            d[siveg] = d.get(siveg, 0.0) + pct
+
     kashrut_by_num = build_kashrut_by_num(funds_ref)
     il_kashrut = build_funds_il_kashrut(funds, funds_ref, kashrut_by_num)
     track_kashrut = build_track_kashrut(funds, kashrut_by_num)

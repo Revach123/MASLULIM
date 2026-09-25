@@ -17,6 +17,9 @@ from .derivatives_exposure import (
 )
 from .excel_io import to_ratio
 from .file_list import get_file_list
+from .foreign_etf_reference import (
+    build_foreign_equity, build_isin_fractions, fetch_etf_universe, fetch_sec_etf_exposure,
+)
 from .funds import build_funds
 from .funds_reference import build_funds_reference
 from .funds_il import build_funds_il
@@ -75,6 +78,10 @@ def compute_equity_totals(reports_dir: Path, tracks: list[dict]):
     funds = build_funds(source, isin_swap)
     il_sums = build_funds_il(funds, funds_ref)
 
+    isin_fractions = build_isin_fractions(fetch_etf_universe(), fetch_sec_etf_exposure())
+    print(f"[validate] {len(isin_fractions)} ISIN מסווגים (ETF זרות: אירופה+SEC)")
+    foreign_equity = build_foreign_equity(funds, isin_fractions)
+
     category_pct = build_category_pct(source)
 
     fut_old = _equity_derivative_pct(source, FUTURES_CATEGORY, FUT_BASE_COL, use_fixed=False)
@@ -103,11 +110,14 @@ def compute_equity_totals(reports_dir: Path, tracks: list[dict]):
         options = sum(cats.get(c, 0.0) for c in OPTIONS_CATEGORIES)
         siveg = il_sums.get(key, {})
         funds_eq = sum(v for k, v in siveg.items() if any(s in k for s in EQUITY_FUND_SIVEGS))
+        foreign_eq = sum(v for k, v in foreign_equity.get(key, {}).items()
+                          if any(s in k for s in EQUITY_FUND_SIVEGS))
 
         base = direct + options + funds_eq
         old_total = base + fut_old.get(key, 0.0) + swap_old.get(key, 0.0)
-        new_total = base + fut_new.get(key, 0.0) + swap_new.get(key, 0.0)
-        rows.append((key, official[key], old_total, new_total))
+        deriv_only = base + fut_new.get(key, 0.0) + swap_new.get(key, 0.0)
+        full = deriv_only + foreign_eq
+        rows.append((key, official[key], old_total, deriv_only, full))
 
     return rows
 
@@ -125,30 +135,37 @@ def main():
     if not rows:
         return
 
-    old_errs = [abs(old - off) for _, off, old, _ in rows]
-    new_errs = [abs(new - off) for _, off, _, new in rows]
-    old_mae = sum(old_errs) / len(old_errs)
-    new_mae = sum(new_errs) / len(new_errs)
-    improved = sum(1 for o, n in zip(old_errs, new_errs) if n < o)
-    worsened = sum(1 for o, n in zip(old_errs, new_errs) if n > o)
-    same = len(rows) - improved - worsened
+    def mae(idx):
+        errs = [abs(r[idx] - r[1]) for r in rows]
+        return sum(errs) / len(errs)
 
-    print(f"\nMAE (שגיאה ממוצעת מוחלטת מול הרשמי):")
-    print(f"  שיטה ישנה (שווי הוגן): {old_mae*100:.3f} נק' אחוז")
-    print(f"  שיטה חדשה (נוציונלי):  {new_mae*100:.3f} נק' אחוז")
-    print(f"  שופר: {improved} | הורע: {worsened} | ללא שינוי: {same} (מתוך {len(rows)})")
+    def compare(idx_a, idx_b):
+        a_errs = [abs(r[idx_a] - r[1]) for r in rows]
+        b_errs = [abs(r[idx_b] - r[1]) for r in rows]
+        improved = sum(1 for a, b in zip(a_errs, b_errs) if b < a)
+        worsened = sum(1 for a, b in zip(a_errs, b_errs) if b > a)
+        return improved, worsened, len(rows) - improved - worsened
 
-    rows_sorted = sorted(rows, key=lambda r: -abs(r[3] - r[1]))
-    print("\n15 הפערים הגדולים ביותר (שיטה חדשה מול רשמי):")
-    print(f"{'מפתח':<20}{'רשמי':>10}{'ישן':>10}{'חדש':>10}{'|חדש-רשמי|':>14}")
-    for key, off, old, new in rows_sorted[:15]:
-        print(f"{key:<20}{off*100:>9.2f}%{old*100:>9.2f}%{new*100:>9.2f}%{abs(new-off)*100:>13.2f}%")
+    print(f"\nMAE (שגיאה ממוצעת מוחלטת מול הרשמי), {len(rows)} מסלולים:")
+    print(f"  שיטה ישנה (שווי הוגן, בלי ETF זרות):      {mae(2)*100:.3f} נק' אחוז")
+    print(f"  + תיקון נגזרים (נוציונלי):                {mae(3)*100:.3f} נק' אחוז")
+    print(f"  + תיקון נגזרים + קרנות ETF זרות:          {mae(4)*100:.3f} נק' אחוז")
+    i1, w1, s1 = compare(2, 3)
+    print(f"  תיקון נגזרים בלבד מול ישן: שופר {i1} | הורע {w1} | ללא שינוי {s1}")
+    i2, w2, s2 = compare(3, 4)
+    print(f"  + ETF זרות מול תיקון נגזרים בלבד: שופר {i2} | הורע {w2} | ללא שינוי {s2}")
 
-    print("\n15 השיפורים הגדולים ביותר (שיטה חדשה קרובה בהרבה יותר לרשמי):")
-    by_improvement = sorted(rows, key=lambda r: (abs(r[2]-r[1]) - abs(r[3]-r[1])), reverse=True)
-    for key, off, old, new in by_improvement[:15]:
-        print(f"{key:<20}{off*100:>9.2f}%{old*100:>9.2f}%{new*100:>9.2f}%"
-              f"  (ישן-רשמי={abs(old-off)*100:.2f}%, חדש-רשמי={abs(new-off)*100:.2f}%)")
+    rows_sorted = sorted(rows, key=lambda r: -abs(r[4] - r[1]))
+    print("\n15 הפערים הגדולים ביותר (שיטה מלאה מול רשמי):")
+    print(f"{'מפתח':<20}{'רשמי':>10}{'ישן':>10}{'נגזרים':>10}{'מלא':>10}{'|מלא-רשמי|':>14}")
+    for key, off, old, deriv, full in rows_sorted[:15]:
+        print(f"{key:<20}{off*100:>9.2f}%{old*100:>9.2f}%{deriv*100:>9.2f}%{full*100:>9.2f}%{abs(full-off)*100:>13.2f}%")
+
+    print("\n15 השיפורים הגדולים ביותר (שיטה מלאה קרובה בהרבה יותר לרשמי מהישנה):")
+    by_improvement = sorted(rows, key=lambda r: (abs(r[2]-r[1]) - abs(r[4]-r[1])), reverse=True)
+    for key, off, old, deriv, full in by_improvement[:15]:
+        print(f"{key:<20}{off*100:>9.2f}%{old*100:>9.2f}%{deriv*100:>9.2f}%{full*100:>9.2f}%"
+              f"  (ישן-רשמי={abs(old-off)*100:.2f}%, מלא-רשמי={abs(full-off)*100:.2f}%)")
 
 
 if __name__ == "__main__":
