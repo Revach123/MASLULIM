@@ -2,6 +2,11 @@ name: Verify main pipeline
 
 on:
   workflow_dispatch:
+  schedule:
+    # כל יום ראשון ב-02:00 UTC (שעה לפני Publish AUTOPILOT to D1) - כדי
+    # שתמיד יהיה מדד MAE עדכני מול הרשמי לפני שה-publish הופך את הנתונים
+    # לחיים באתר, וכדי לעקוב אחר סחף (drift) בין ריצה לריצה.
+    - cron: "0 2 * * 0"
 
 jobs:
   verify:

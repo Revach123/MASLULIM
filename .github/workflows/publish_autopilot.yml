@@ -2,6 +2,11 @@ name: Publish AUTOPILOT to D1
 
 on:
   workflow_dispatch:
+  schedule:
+    # כל יום ראשון ב-03:00 UTC - הפייפליין (סיווג קרנות/ETF, SEC N-PORT
+    # חי, נתוני revach וכו') צריך לרוץ מחדש באופן קבוע ולא רק ב-triggering
+    # ידני, כדי שהאתר החי יישאר מעודכן עם מקורות הנתונים הדינמיים.
+    - cron: "0 3 * * 0"
 
 jobs:
   publish:
