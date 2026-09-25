@@ -54,6 +54,11 @@ jobs:
                   print('example row with siveg pct:', {k: v for k, v in r.items() if k in extra or k == 'מפתח'})
                   break
           "
+      - name: Validate equity exposure vs official (חשיפה למניות)
+        env:
+          REVACH_MATCH_KEY: ${{ secrets.REVACH_MATCH_KEY }}
+          PAT: ${{ secrets.PAT }}
+        run: python -m scripts.funds_holdings.validate_equity_exposure --reports-dir reports
       - uses: actions/upload-artifact@v4
         with:
           name: master-output

@@ -26,6 +26,18 @@
    "ערך נקוב" הוא מספר החוזים הגולמי בלי הכפלה במכפיל, החשיפה בפועל
    תת-מוערכת. אין בדוח, ואין במקור אחר בריפו, דרך לאמת מכפיל per-instrument.
 
+   שתי תקלות עקביות נוספות שנמצאו בבדיקה בפועל על כל הארכיון (לא הודעה
+   תיאורטית - כל אחת אומתה בנתונים אמיתיים):
+   - JPY: חלק מהמגישים רושמים "שער חליפין" ליין לפי מוסכמת "יחס ל-100"
+     (כמו שער בנק ישראל) במקום שער ליחידה - לא עקבי אפילו בתוך אותו מגיש
+     (רוב השורות ~0.018, חלקן ~1.83 - פי 100 בדיוק). מזוהה ומתוקן לפי סף
+     (שער אמיתי ליין תמיד נמוך בהרבה מ-1).
+   - "התחייבות"-Index (רגל מימון סינתטית, למשל "09/2026 JPM ESU6 Index
+     התחייבות"): "שער נייר הערך" קבוע בדיוק על 100 - מוסכמת ערך-נקוב-100
+     (כמו אג"ח), לא רמת מדד גולמית. יחידות בסדר גודל של מיליונים עם המוסכמה
+     הרגילה (יחידות × 100 × שער) מייצרות חשיפה מנופחת פי 100 - מזוהות לפי
+     שער == 100.0 בדיוק ומטופלות כמו אג"ח (יחידות/100 × שער, לא יחידות×שער).
+
 3. עסקאות החלף/פורוורד ("לא סחיר נגזרים אחרים"): כל עסקה מדווחת בשתי
    רגליים, כל אחת עם "ערך נקוב" ו"שער חליפין" משלה. החשיפה = ממוצע הערך
    המוחלט (בש"ח) של שתי הרגליים - בד"כ קרובות זו לזו (אותה עסקה, שתי
@@ -51,6 +63,16 @@ SWAP_NET_FAIR_VALUE_COL = 'שווי הוגן (נטו באלפי ש"ח)'
 # לפני התיקון - עדיף על תוצאה מנופחת שאי אפשר לסמוך עליה.
 SANITY_CAP = 3.0
 
+# תקרת מנוף לשורה בודדת (חוזים עתידיים): נמצא בבדיקה שלמגישים שונים יש
+# מוסכמות שונות/לא-עקביות ל"שער נייר הערך" (לא רק מוסכמת ערך-נקוב-100 -
+# גם מגישים ששמים את המחיר בקנה מידה שרירותי אחר, למשל פי 100 מהנדרש, מבלי
+# שזה בולט ביחס לשווי המסלול הכולל אם המסלול גדול מספיק). בדיקה יחסית
+# עמידה-למגיש: חשיפה נוציונלית אמיתית של חוזה ממונף היא בד"כ כפולה סבירה
+# (לא יותר מפי ~75) מהשווי ההוגן (המרווח) שאותה שורה בדיוק מדווחת - שיעורי
+# מרג'ין סטנדרטיים לחוזי מדד/ריבית נעים בד"כ 1%-15% מהנוציונל. חריגה מכך
+# היא סימן חזק שקנה המידה של יחידות/מחיר בשורה הזו שונה ממה שהנוסחה מניחה.
+LEVERAGE_CAP = 75.0
+
 FUTURES_CATEGORY = "חוזים עתידיים"
 SWAP_CATEGORY = "לא סחיר נגזרים אחרים"
 DERIVATIVE_CATEGORIES = (FUTURES_CATEGORY, SWAP_CATEGORY)
@@ -58,11 +80,42 @@ DERIVATIVE_CATEGORIES = (FUTURES_CATEGORY, SWAP_CATEGORY)
 FUT_UNITS_COL = "ערך נקוב (יחידות)"
 FUT_FX_COL = "שער חליפין"
 FUT_PRICE_COL = "שער נייר הערך"
+FUT_CURRENCY_COL = "מטבע פעילות"
 
 SWAP_LEGS = (
-    {"units": "ערך נקוב (רגל 1)", "fx": "שער חליפין (רגל 1)"},
-    {"units": "ערך נקוב (רגל 2)", "fx": "שער חליפין (רגל 2)"},
+    {"units": "ערך נקוב (רגל 1)", "fx": "שער חליפין (רגל 1)", "currency": "מטבע פעילות (רגל 1)"},
+    {"units": "ערך נקוב (רגל 2)", "fx": "שער חליפין (רגל 2)", "currency": "מטבע פעילות (רגל 2)"},
 )
+
+# JPY: נמצא בבדיקה שחלק מהמגישים רושמים את שער החליפין לפי מוסכמת "יחס ל-100
+# יין" (כמו שער בנק ישראל ליין) במקום שער ליחידה - אותו קובץ/מגיש לא עקבי:
+# ברוב השורות 0.018-ish (נכון), בחלקן 1.83-ish (פי 100, שגוי). השער האמיתי
+# ליין תמיד נמוך בהרבה מ-1 - כל ערך מעל הסף הוא ודאי המוסכמה השגויה.
+JPY_100_THRESHOLD = 0.5
+
+# כל מטבע זר (לא ILS) עם שער חליפין קרוב ל-1.0 הוא בהכרח פלייסהולדר שגוי -
+# אין מטבע שנסחר קרוב ל-1:1 מול ש"ח (נמצא בפועל: USD/EUR ברגל 1 של חלק
+# מהמגישים, כשהשער האמיתי מדווח בעמודה אחרת - "שער הנגזר במועד ההתקשרות
+# בעסקה" - שלא תמיד קיימת/עקבית מספיק כדי לסמוך עליה). מטפלים בזה לא
+# בתיקון (אין ערך אמין להציב), אלא בפסילת הרגל - ממוצעים רק את הרגליים
+# התקינות, ובלי אף רגל תקינה נופלים לשווי ההוגן הנטו כמו כל מקרה גבולי.
+FOREIGN_FX_PLACEHOLDER_TOL = 0.01
+
+# רגל-מימון סינתטית ("...Index התחייבות"): "שער נייר הערך" קבוע בדיוק על 100 -
+# מוסכמת ערך-נקוב-100 כמו אג"ח (ראו bonds_rank/מניות: value = units*price/100),
+# לא רמת מדד גולמית. יחידות בסדר גודל מיליונים + הנוסחה הרגילה (בלי /100)
+# מייצרות חשיפה מנופחת פי 100 בדיוק - מזוהה לפי שער == 100.0 בדיוק.
+PAR_QUOTED_PRICE = 100.0
+
+
+def _normalize_fx(currency, fx: float | None) -> float | None:
+    if fx is None:
+        return None
+    if currency == "JPY" and fx > JPY_100_THRESHOLD:
+        return fx / 100
+    if currency and currency != "ILS" and abs(fx - 1.0) < FOREIGN_FX_PLACEHOLDER_TOL:
+        return None
+    return fx
 
 
 def _num(v) -> float | None:
@@ -110,14 +163,20 @@ def _futures_exposure(source: list[dict], total_assets: dict[str, float]) -> dic
                 continue
             units = _num(row.get(FUT_UNITS_COL))
             price = _num(row.get(FUT_PRICE_COL))
-            fx = _num(row.get(FUT_FX_COL))
+            fx = _normalize_fx(row.get(FUT_CURRENCY_COL), _num(row.get(FUT_FX_COL)))
+            if price is not None and abs(price - PAR_QUOTED_PRICE) < 1e-6:
+                price = price / 100  # רגל-מימון סינתטית במוסכמת ערך-נקוב-100, לא רמת מדד
+            fv = _num(row.get(FAIR_VALUE_COL))
+            fv_ratio = (fv / total) if fv is not None else None
+
             line_ratio = None
             if units is not None and price is not None and fx is not None:
                 notional_thousands = units * price * fx / 1000  # לאלפי ש"ח, כמו שווי הוגן
                 line_ratio = notional_thousands / total
+                if fv_ratio is not None and abs(line_ratio) > LEVERAGE_CAP * abs(fv_ratio):
+                    line_ratio = None  # קנה מידה לא סביר ביחס לשווי ההוגן של השורה עצמה
             if line_ratio is None or abs(line_ratio) > SANITY_CAP:
-                fv = _num(row.get(FAIR_VALUE_COL))
-                line_ratio = (fv / total) if fv is not None else 0.0
+                line_ratio = fv_ratio if fv_ratio is not None else 0.0
             sums[key] = sums.get(key, 0.0) + line_ratio
     return sums
 
@@ -135,7 +194,7 @@ def _swap_exposure(source: list[dict], total_assets: dict[str, float]) -> dict[s
             leg_values = []
             for leg in SWAP_LEGS:
                 units = _num(row.get(leg["units"]))
-                fx = _num(row.get(leg["fx"]))
+                fx = _normalize_fx(row.get(leg["currency"]), _num(row.get(leg["fx"])))
                 if units is None or fx is None:
                     continue
                 leg_values.append(abs(units * fx) / 1000)  # לאלפי ש"ח
