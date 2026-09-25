@@ -13,6 +13,7 @@ from .bonds_detail import build_bonds_detail
 from .bonds_heter_reference import build_bonds_heter_by_isin
 from .bonds_rank import build_bonds_rank
 from .category_pct import build_category_pct
+from .derivatives_exposure import DERIVATIVE_CATEGORIES, build_derivatives_exposure
 from .file_list import get_file_list
 from .funds import build_funds
 from .funds_detail import build_funds_detail
@@ -41,6 +42,18 @@ def build_master_table(
     heter_by_chp = heter_iska_module.build()
     interest = build_interest(source, heter_by_chp=heter_by_chp)
     category_pct = build_category_pct(source)
+
+    # "שיעור מסך נכסי ההשקעה" בדוחות עבור חוזים עתידיים ועסקאות החלף הוא
+    # שיעור השווי ההוגן (מרווח/רווח-הפסד שוטף), לא שיעור החשיפה הכלכלית
+    # שהמכשירים האלה יוצרים (leverage). מחליפים את שתי הקטגוריות האלה
+    # בחשיפה אמיתית (notional) - שאר הקטגוריות נשארות כשווי-שוק, נכון כבר.
+    derivatives_exposure = build_derivatives_exposure(source)
+    for key, cols in derivatives_exposure.items():
+        d = category_pct.setdefault(key, {})
+        for cat in DERIVATIVE_CATEGORIES:
+            if cat in cols:
+                d[cat] = cols[cat]
+
     il_sums = build_funds_il(funds, funds_ref)
     kashrut_by_num = build_kashrut_by_num(funds_ref)
     il_kashrut = build_funds_il_kashrut(funds, funds_ref, kashrut_by_num)
