@@ -227,6 +227,20 @@ def classify_from_report_names(source: list[dict]) -> dict[str, dict[str, float]
     return out
 
 
+def collect_unclassified_foreign_isins(funds: list[dict], isin_fractions: dict[str, dict[str, float]]) -> list[str]:
+    """ISIN-ים ייחודיים של קרנות "חוץ" שעדיין לא מסווגים באף שכבה קיימת -
+    מיועד להזנה לשכבה האחרונה, היקרה (sec_nport_reference.py: OpenFIGI +
+    N-PORT חי), כדי להריץ אותה רק על מה שבאמת חסר, לא על כל קרנות החוץ."""
+    out: set[str] = set()
+    for row in funds:
+        if row["סוג"] != FOREIGN_TYPE:
+            continue
+        isin = _isin_key(row.get("מספר קרן"))
+        if isin and isin not in isin_fractions:
+            out.add(isin)
+    return list(out)
+
+
 def build_foreign_equity(funds: list[dict], isin_fractions: dict[str, dict[str, float]]) -> dict[str, dict[str, float]]:
     """מפתח -> {"קרן מחקה - מניות בחו\"ל": ..., "קרן מחקה - אג\"ח בחו\"ל": ...},
     לשורות "חוץ" בלבד (לא ישראליות, לא נסחרות ב-TASE - 'מספר קרן' הוא ה-ISIN

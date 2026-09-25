@@ -17,7 +17,7 @@ from .derivatives_exposure import DERIVATIVE_CATEGORIES, build_derivatives_expos
 from .file_list import get_file_list
 from .foreign_etf_reference import (
     build_foreign_equity, build_isin_fractions, classify_from_report_names,
-    fetch_etf_universe, fetch_sec_etf_exposure,
+    collect_unclassified_foreign_isins, fetch_etf_universe, fetch_sec_etf_exposure,
 )
 from .funds import build_funds
 from .funds_detail import build_funds_detail
@@ -71,6 +71,19 @@ def build_master_table(
     for isin, frac in classify_from_report_names(source).items():
         isin_fractions.setdefault(isin, frac)
     print(f"[main] {len(isin_fractions)} ISIN מסווגים (ETF זרות: אירופה+SEC+שם-קרן)")
+
+    # שכבה אחרונה, יקרה (קריאות רשת חיות ל-SEC) - רק על מה שעדיין חסר
+    # (ר' תיעוד ב-sec_nport_reference.py). כשלון רשת כולל (OpenFIGI/SEC לא
+    # זמינים בסביבת הריצה) לא מפיל את הפייפליין - מדלג בשקט (רשימה ריקה).
+    still_missing = collect_unclassified_foreign_isins(funds, isin_fractions)
+    try:
+        from .sec_nport_reference import build_isin_fractions_via_nport
+        for isin, frac in build_isin_fractions_via_nport(still_missing).items():
+            isin_fractions.setdefault(isin, frac)
+    except Exception as e:
+        print(f"[main] שכבת SEC N-PORT חי נכשלה (מדלג): {e}")
+    print(f"[main] {len(isin_fractions)} ISIN מסווגים סה\"כ (+N-PORT חי)")
+
     for key, cols in build_foreign_equity(funds, isin_fractions).items():
         d = il_sums.setdefault(key, {})
         for siveg, pct in cols.items():

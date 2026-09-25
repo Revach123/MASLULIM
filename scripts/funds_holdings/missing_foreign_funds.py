@@ -11,8 +11,8 @@ from pathlib import Path
 from .excel_io import to_ratio
 from .file_list import get_file_list
 from .foreign_etf_reference import (
-    build_isin_fractions, classify_from_report_names, _isin_key,
-    fetch_etf_universe, fetch_sec_etf_exposure,
+    build_isin_fractions, classify_from_report_names, collect_unclassified_foreign_isins,
+    _isin_key, fetch_etf_universe, fetch_sec_etf_exposure,
 )
 from .funds import build_funds
 from .funds_reference import build_funds_reference
@@ -22,10 +22,7 @@ from .sheet_source import build_source
 PLACEHOLDER_PCT = {"", "ריק במקור", "סוף מידע"}
 
 
-def find_missing(source: list[dict], funds_ref, fractions) -> dict[str, dict]:
-    isin_swap = build_isin_swap(funds_ref)
-    funds = build_funds(source, isin_swap)
-
+def find_missing(source: list[dict], funds: list[dict], fractions) -> dict[str, dict]:
     names: dict[str, str] = {}
     for rec in source:
         if rec["Category"] not in ("קרנות סל", "קרנות נאמנות"):
@@ -65,12 +62,24 @@ def main():
     source = build_source(files)
 
     funds_ref = build_funds_reference()
+    isin_swap = build_isin_swap(funds_ref)
+    funds = build_funds(source, isin_swap)
+
     fractions = build_isin_fractions(fetch_etf_universe(), fetch_sec_etf_exposure())
     for isin, frac in classify_from_report_names(source).items():
         fractions.setdefault(isin, frac)
     print(f"[missing] {len(fractions)} ISIN מסווגים (אירופה+SEC+שם-קרן)")
 
-    missing = find_missing(source, funds_ref, fractions)
+    still_missing = collect_unclassified_foreign_isins(funds, fractions)
+    try:
+        from .sec_nport_reference import build_isin_fractions_via_nport
+        for isin, frac in build_isin_fractions_via_nport(still_missing).items():
+            fractions.setdefault(isin, frac)
+    except Exception as e:
+        print(f"[missing] שכבת SEC N-PORT חי נכשלה (מדלג): {e}")
+    print(f"[missing] {len(fractions)} ISIN מסווגים סה\"כ (+N-PORT חי)")
+
+    missing = find_missing(source, funds, fractions)
     ranked = sorted(missing.items(), key=lambda kv: -kv[1]["total_pct"])
     print(f"[missing] {len(missing)} ISIN חוץ לא מזוהים")
     print()
