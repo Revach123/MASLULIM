@@ -16,7 +16,8 @@ from .category_pct import build_category_pct
 from .derivatives_exposure import DERIVATIVE_CATEGORIES, build_derivatives_exposure
 from .file_list import get_file_list
 from .foreign_etf_reference import (
-    build_foreign_equity, build_isin_fractions, fetch_etf_universe, fetch_sec_etf_exposure,
+    build_foreign_equity, build_isin_fractions, classify_from_report_names,
+    fetch_etf_universe, fetch_sec_etf_exposure,
 )
 from .funds import build_funds
 from .funds_detail import build_funds_detail
@@ -65,7 +66,11 @@ def build_master_table(
     # כרגע דרך funds_reference.py. מצטרף לאותן עמודות "קרן מחקה - ..." -
     # אין חפיפה עם il_sums (כל שורת קרן מסווגת בדיוק ל-IL/נסחרת/חוץ אחת).
     isin_fractions = build_isin_fractions(fetch_etf_universe(), fetch_sec_etf_exposure())
-    print(f"[main] {len(isin_fractions)} ISIN מסווגים (ETF זרות: אירופה+SEC)")
+    # שכבת מוצא-אחרון: קרנות לא-מזוהות באף מאגר - לפי שם הקרן כפי שמדווח
+    # בדוח עצמו (ר' תיעוד ב-classify_from_report_names). לא דורס נתון קיים.
+    for isin, frac in classify_from_report_names(source).items():
+        isin_fractions.setdefault(isin, frac)
+    print(f"[main] {len(isin_fractions)} ISIN מסווגים (ETF זרות: אירופה+SEC+שם-קרן)")
     for key, cols in build_foreign_equity(funds, isin_fractions).items():
         d = il_sums.setdefault(key, {})
         for siveg, pct in cols.items():

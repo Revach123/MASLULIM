@@ -10,7 +10,10 @@ from pathlib import Path
 
 from .excel_io import to_ratio
 from .file_list import get_file_list
-from .foreign_etf_reference import build_isin_fractions, _isin_key, fetch_etf_universe, fetch_sec_etf_exposure
+from .foreign_etf_reference import (
+    build_isin_fractions, classify_from_report_names, _isin_key,
+    fetch_etf_universe, fetch_sec_etf_exposure,
+)
 from .funds import build_funds
 from .funds_reference import build_funds_reference
 from .isin_swap import build_isin_swap
@@ -19,9 +22,7 @@ from .sheet_source import build_source
 PLACEHOLDER_PCT = {"", "ריק במקור", "סוף מידע"}
 
 
-def find_missing(reports_dir: Path, funds_ref, fractions) -> dict[str, dict]:
-    files = get_file_list(reports_dir)
-    source = build_source(files)
+def find_missing(source: list[dict], funds_ref, fractions) -> dict[str, dict]:
     isin_swap = build_isin_swap(funds_ref)
     funds = build_funds(source, isin_swap)
 
@@ -60,11 +61,16 @@ def main():
     ap.add_argument("--top", type=int, default=60)
     args = ap.parse_args()
 
+    files = get_file_list(args.reports_dir)
+    source = build_source(files)
+
     funds_ref = build_funds_reference()
     fractions = build_isin_fractions(fetch_etf_universe(), fetch_sec_etf_exposure())
-    print(f"[missing] {len(fractions)} ISIN מסווגים (אירופה+SEC, כולל שכבת מילות-מפתח)")
+    for isin, frac in classify_from_report_names(source).items():
+        fractions.setdefault(isin, frac)
+    print(f"[missing] {len(fractions)} ISIN מסווגים (אירופה+SEC+שם-קרן)")
 
-    missing = find_missing(args.reports_dir, funds_ref, fractions)
+    missing = find_missing(source, funds_ref, fractions)
     ranked = sorted(missing.items(), key=lambda kv: -kv[1]["total_pct"])
     print(f"[missing] {len(missing)} ISIN חוץ לא מזוהים")
     print()

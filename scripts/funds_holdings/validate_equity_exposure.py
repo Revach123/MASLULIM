@@ -18,7 +18,8 @@ from .derivatives_exposure import (
 from .excel_io import to_ratio
 from .file_list import get_file_list
 from .foreign_etf_reference import (
-    build_foreign_equity, build_isin_fractions, fetch_etf_universe, fetch_sec_etf_exposure,
+    build_foreign_equity, build_isin_fractions, classify_from_report_names,
+    fetch_etf_universe, fetch_sec_etf_exposure,
 )
 from .funds import build_funds
 from .funds_reference import build_funds_reference
@@ -79,7 +80,9 @@ def compute_equity_totals(reports_dir: Path, tracks: list[dict]):
     il_sums = build_funds_il(funds, funds_ref)
 
     isin_fractions = build_isin_fractions(fetch_etf_universe(), fetch_sec_etf_exposure())
-    print(f"[validate] {len(isin_fractions)} ISIN מסווגים (ETF זרות: אירופה+SEC)")
+    for isin, frac in classify_from_report_names(source).items():
+        isin_fractions.setdefault(isin, frac)
+    print(f"[validate] {len(isin_fractions)} ISIN מסווגים (ETF זרות: אירופה+SEC+שם-קרן)")
     foreign_equity = build_foreign_equity(funds, isin_fractions)
 
     category_pct = build_category_pct(source)

@@ -125,13 +125,30 @@ KNOWN_MAJOR_EQUITY_ETFS = {
     "US78468R7888": "SPYD - SPDR S&P 500 High Dividend ETF",
 }
 
+# שוק יפני: אין לו כיסוי בשום מאגר קיים (לא אירופה, לא SEC - קרנות יפניות
+# לא רשומות ב-SEC בכלל). כל 6 הקרנות שנמצאו חסרות (ר' missing_foreign_funds.py)
+# הן קרנות מדד רחבות מוכרות היטב על ניקיי225/TOPIX/TOPIX-בנקים/Mid&Small -
+# כולן חשיפת מניות יפניות טהורה בהגדרה (עוקבות מדד מניות) - זיהוי ודאי
+# מהשם, לא ניחוש, בדיוק כמו הרשימה האמריקאית למעלה.
+KNOWN_JAPAN_EQUITY_ETFS = {
+    "JP3027710007": "iShares Core Nikkei 225 ETF",
+    "JP3027630007": "Nomura ETF (Nikkei/TOPIX)",
+    "JP3027620008": "Daiwa ETF TOPIX",
+    "JP3040170007": "Nomura ETF Banks (TOPIX-17 Banks sector)",
+    "JP3049420007": "Global X Japan Mid & Small Cap ETF (2837)",
+    "JP3048120004": "iShares Core TOPIX ETF",
+}
+
 
 def build_isin_fractions(etf_universe: list[dict], sec_exposure: list[dict]) -> dict[str, dict[str, float]]:
     """ISIN (מנורמל) -> {"equity": שבר 0..1, "bond": שבר 0..1}. SEC (שיעורים
     מדויקים) דורס את האוניברסיטה האירופית (סיווג קטגורי בלבד: Equity->1.0,
     Fixed Income/Bond->0.0, שאר הסיווגים [Multi Asset/Commodity/...] מדולגים -
     לא ניתן להסיק מהם שבר מניות/אג"ח בינארי אמין)."""
-    out: dict[str, dict[str, float]] = {isin: {"equity": 1.0, "bond": 0.0} for isin in KNOWN_MAJOR_EQUITY_ETFS}
+    out: dict[str, dict[str, float]] = {
+        isin: {"equity": 1.0, "bond": 0.0}
+        for isin in (*KNOWN_MAJOR_EQUITY_ETFS, *KNOWN_JAPAN_EQUITY_ETFS)
+    }
     for rec in etf_universe:
         isin = _isin_key(rec.get("isin"))
         if isin is None:
@@ -156,6 +173,57 @@ def build_isin_fractions(etf_universe: list[dict], sec_exposure: list[dict]) -> 
         if eq is None and bd is None:
             continue
         out[isin] = {"equity": (eq or 0.0) / 100, "bond": (bd or 0.0) / 100}
+    return out
+
+
+# שכבת מוצא-אחרון: קרנות "חוץ" שלא נמצאו בשום מאגר חיצוני (לא אירופה, לא SEC,
+# לא עוגן ידני) - מנסים להסיק מניות/אג"ח מהשם עצמו כפי שהוא מדווח בדוח
+# הפנסיוני (row["שם נייר ערך"], לא שם רשמי מלא - לרוב מקוצר/מקוצר-אוטומטית
+# ע"י מערכת המשמורת, למשל "PIMCO HIGH YIELD BO"/"NEU BER GL SE FL RT").
+# שמרני בהרבה מ-_classify_by_name: *לא* ברירת-מחדל-למניות סתם על כל "ETF" -
+# שם מקוצר/לא רשמי נותן פחות ודאות, ולכן נדרש מונח מובהק (אג"ח או מניות)
+# ולא רק העדר מונח-אג"ח. מדולג (לא מסווג) כשאין מונח מובהק משני הצדדים.
+_REPORT_NAME_BOND_TERMS = (
+    "bond", "treasury", "gilt", "sovereign", "high yield", "senior loan", "corp debt",
+    "floating rate", "credit", "govt", "municipal", "debenture",
+)
+_REPORT_NAME_EQUITY_TERMS = (
+    "equity", "eqy", "growth", "value", "dividend", "dvd", "biotech", "technology",
+    "thematic", "rotation", "water", "agtech", "food innovat", "momentum", "quality",
+    "factor", "equal weight", "msci", "s&p", "russell", "nasdaq", "topix", "nikkei",
+    "stoxx", "ftse", "mid cap", "small cap", "life scie", "discretionary", "discret",
+    "meme", "uranium", "index fund", "index equity",
+)
+
+
+def _classify_by_report_name(name: str | None) -> str | None:
+    if not name:
+        return None
+    text = name.lower()
+    if any(t in text for t in _REPORT_NAME_BOND_TERMS):
+        return "bond"
+    if any(t in text for t in _REPORT_NAME_EQUITY_TERMS):
+        return "equity"
+    return None
+
+
+def classify_from_report_names(source: list[dict]) -> dict[str, dict[str, float]]:
+    """ISIN -> {"equity":.., "bond":..} לפי "שם נייר ערך" כפי שמדווח בגיליונות
+    'קרנות סל'/'קרנות נאמנות' עצמם - מיועד כשכבת מוצא-אחרון (ר' תיעוד למעלה),
+    לא כתחליף למאגרים החיצוניים."""
+    out: dict[str, dict[str, float]] = {}
+    for rec in source:
+        if rec["Category"] not in ("קרנות סל", "קרנות נאמנות") or rec["מידע"] != "מידע":
+            continue
+        for row in rec["Clean"]:
+            isin = _isin_key(row.get("מספר נייר ערך"))
+            if isin is None or isin in out:
+                continue
+            cls = _classify_by_report_name(row.get("שם נייר ערך"))
+            if cls == "equity":
+                out[isin] = {"equity": 1.0, "bond": 0.0}
+            elif cls == "bond":
+                out[isin] = {"equity": 0.0, "bond": 1.0}
     return out
 
 
