@@ -100,12 +100,38 @@ def _isin_key(v) -> str | None:
     return s or None
 
 
+# מנפיקות ETF אמריקאיות ידועות/גדולות מאוד שנמצאו חסרות מ-data/ETF/SEC/
+# etf_exposure.json (נבדק בפועל, ר' missing_foreign_funds.py) - חלקן (SPY/
+# QQQ/DIA/MDY) הן Unit Investment Trust ולא קרן '40 Act רגילה, ולכן כנראה
+# לא מגישות N-PORT בכלל (המקור הסביר ביותר לאותו קובץ) - זו לא "תקלת
+# איסוף" שאפשר לתקן באותו מקור, אלא מגבלה מבנית של סוג המכשיר. שאר הרשימה
+# (SPLG/RSP/IYC/EEM/SCHD/VFVA/SPYD) כן אמורות להגיש N-PORT - למה הן חסרות
+# מהקובץ הקיים לא ידוע (אין סקריפט מקור לבדוק) - כאן כפתרון-ביניים ודאי,
+# לא כתחליף לכיסוי SEC מלא ועדכני (ר' תכנית העבודה בהודעת הסיכום).
+# כל אחת מזוהה ודאית כמניות-100% מהשם/הטיקר הציבורי הידוע שלה (לא ניחוש) -
+# S&P 500 / Nasdaq-100 / Dow / MidCap 400 / Equal-Weight / סקטור/פקטור/
+# דיבידנד - כולן חשיפת מניות טהורה, בלי מרכיב אג"ח.
+KNOWN_MAJOR_EQUITY_ETFS = {
+    "US78462F1030": "SPY - SPDR S&P 500 ETF Trust",
+    "US46090E1038": "QQQ - Invesco QQQ Trust (Nasdaq-100)",
+    "US78467X1090": "DIA - SPDR Dow Jones Industrial Average ETF Trust",
+    "US78467Y1073": "MDY - SPDR S&P MidCap 400 ETF Trust",
+    "US78464A8541": "SPLG - SPDR Portfolio S&P 500 ETF",
+    "US46137V3814": "RSP - Invesco S&P 500 Equal Weight ETF",
+    "US4642875805": "IYC - iShares US Consumer Discretionary ETF",
+    "US4642872349": "EEM - iShares MSCI Emerging Markets ETF",
+    "US8085247976": "SCHD - Schwab US Dividend Equity ETF",
+    "US9219358051": "VFVA - Vanguard US Value Factor ETF",
+    "US78468R7888": "SPYD - SPDR S&P 500 High Dividend ETF",
+}
+
+
 def build_isin_fractions(etf_universe: list[dict], sec_exposure: list[dict]) -> dict[str, dict[str, float]]:
     """ISIN (מנורמל) -> {"equity": שבר 0..1, "bond": שבר 0..1}. SEC (שיעורים
     מדויקים) דורס את האוניברסיטה האירופית (סיווג קטגורי בלבד: Equity->1.0,
     Fixed Income/Bond->0.0, שאר הסיווגים [Multi Asset/Commodity/...] מדולגים -
     לא ניתן להסיק מהם שבר מניות/אג"ח בינארי אמין)."""
-    out: dict[str, dict[str, float]] = {}
+    out: dict[str, dict[str, float]] = {isin: {"equity": 1.0, "bond": 0.0} for isin in KNOWN_MAJOR_EQUITY_ETFS}
     for rec in etf_universe:
         isin = _isin_key(rec.get("isin"))
         if isin is None:
