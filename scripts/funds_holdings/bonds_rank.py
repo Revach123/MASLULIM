@@ -6,14 +6,18 @@
 
 התאמה: מספר נייר ערך (ISIN, "סוג מספר נייר ערך"=="ISIN" כשהעמודה קיימת;
 "איגרות חוב ממשלתיות" חסרה עמודת-סוג אך הערכים בפורמט ISIN גם שם) מול
-bonds_heter_reference.py (isin -> heter_bucket/ada_status). קטגוריית
-"לא סחיר איגרות חוב מיועדות" מוחרגת - מזהה מספרי פנימי (לא ISIN), אג"ח
-מיועדות/ערד שמונפקות ע"י המדינה (כמו אג"ח ממשלתי - "לא רלוונטי").
+bonds_heter_reference.py (isin -> heter_bucket/ada_status/asset_class).
+קטגוריית "לא סחיר איגרות חוב מיועדות" מוחרגת - מזהה מספרי פנימי (לא
+ISIN), אג"ח מיועדות/ערד שמונפקות ע"י המדינה (כמו אג"ח ממשלתי).
 
-לכל נייר תואם עם heter_bucket == "לא רלוונטי" (אג"ח ממשלתי/מק"מ, אין
-ח.פ מנפיק) - לא נכלל בכלל בדירוג (כמו בבונדס-הת"ע של revach עצמו).
-לכל נייר אחר: הרמה היא הטובה מבין heter_bucket ו-ada_status (אם עדה
-אומרת "עדה"/"עדה?" זה טוב מספיק גם אם heter_bucket גרוע יותר).
+שינוי מכוון (לפי הנחיית המשתמש): היתר עסקה רלוונטי רק לאג"ח קונצרני/
+ני"ע מסחריים - לא לאג"ח ממשלתי/מק"מ. נייר תואם עם heter_bucket ==
+"לא רלוונטי" כבר מסומן ככה ע"י revach; בנוסף, מזהים ממשלתי/מק"מ גם
+"ביד" (שם/ISIN, ר' _is_gov_or_makam) כי כ-9% מה-ISIN-ים בדוחות לא
+נמצאים ב-bonds_heter.json בכלל (טרם נסרקו ב-revach) - בלעדי הבדיקה
+הזו, אג"ח ממשלתי לא-ממופה היה מסומן "לא מזוהה" בטעות, במקום להיות
+מוחרג לגמרי כמו כל אג"ח ממשלתי אחר. נייר "לא רלוונטי" - לא נכלל בכלל
+בדירוג. לכל נייר אחר: הרמה היא הטובה מבין heter_bucket ו-ada_status.
 """
 from .excel_io import text_from
 
@@ -31,19 +35,35 @@ NOT_RELEVANT = "לא רלוונטי"
 LEVELS = [UNIDENTIFIED, "אין", "בעלות גוי", "כללי", "פרטי", "עדה?", "עדה"]
 _RANK = {level: i for i, level in enumerate(LEVELS)}
 
+# אותם דפוסים כמו coarse_type() ב-revach/scripts/classify.py, מותאמים
+# ל"שם נייר ערך" (יש לנו רק את השם, לא את security_type הרשמי מ-TASE).
+GOV_ASSET_CLASSES = {'אג"ח ממשלתי', "מק\"מ"}
+GOV_NAME_MARKERS = ("ממשלת", "מלוה קצר", "מלווה קצר", 'מק"מ')
+MAKAM_ISIN_PREFIX = "IL008"
 
-def _bond_level(entry: dict | None) -> str | None:
-    """None אם לא רלוונטי (אג"ח ממשלתי/מק"מ בלי ח.פ) - לא נכלל בדירוג בכלל."""
-    if entry is None:
-        return UNIDENTIFIED
-    bucket = entry.get("heter_bucket")
-    if bucket == NOT_RELEVANT:
+
+def _is_gov_or_makam(name: str | None, isin: str | None, asset_class: str | None = None) -> bool:
+    if asset_class in GOV_ASSET_CLASSES:
+        return True
+    if isin and isin.startswith(MAKAM_ISIN_PREFIX):
+        return True
+    n = name or ""
+    return any(marker in n for marker in GOV_NAME_MARKERS)
+
+
+def _bond_level(entry: dict | None, name: str | None = None, isin: str | None = None) -> str | None:
+    """None אם לא רלוונטי (אג"ח ממשלתי/מק"מ) - לא נכלל בכלל בדירוג."""
+    if entry is not None:
+        if entry.get("heter_bucket") == NOT_RELEVANT or _is_gov_or_makam(name, isin, entry.get("asset_class")):
+            return None
+        ada = entry.get("ada_status")
+        rank = _RANK.get(entry.get("heter_bucket"), _RANK["אין"])
+        if ada and _RANK.get(ada, -1) > rank:
+            rank = _RANK[ada]
+        return LEVELS[rank]
+    if _is_gov_or_makam(name, isin):
         return None
-    ada = entry.get("ada_status")
-    rank = _RANK.get(bucket, _RANK["אין"])
-    if ada and _RANK.get(ada, -1) > rank:
-        rank = _RANK[ada]
-    return LEVELS[rank]
+    return UNIDENTIFIED
 
 
 def build_bonds_rank(source: list[dict], bonds_heter_by_isin: dict[str, dict]) -> dict[str, dict]:
@@ -64,7 +84,7 @@ def build_bonds_rank(source: list[dict], bonds_heter_by_isin: dict[str, dict]) -
                 continue
 
             entry = bonds_heter_by_isin.get(isin)
-            level = _bond_level(entry)
+            level = _bond_level(entry, row.get(SECNAME_COL), isin)
             if level is None:
                 continue  # לא רלוונטי (ממשלתי/מק"מ)
 
