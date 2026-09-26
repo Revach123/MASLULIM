@@ -11,8 +11,8 @@ from pathlib import Path
 from .excel_io import to_ratio
 from .file_list import get_file_list
 from .foreign_etf_reference import (
-    build_isin_fractions, classify_from_report_names, collect_unclassified_foreign_isins,
-    _isin_key, fetch_etf_universe, fetch_sec_etf_exposure,
+    build_isin_fractions, classify_from_report_names, classify_via_openfigi_names,
+    collect_unclassified_foreign_isins, _isin_key, fetch_etf_universe, fetch_sec_etf_exposure,
 )
 from .funds import build_funds
 from .funds_reference import build_funds_reference
@@ -78,6 +78,14 @@ def main():
     except Exception as e:
         print(f"[missing] שכבת SEC N-PORT חי נכשלה (מדלג): {e}")
     print(f"[missing] {len(fractions)} ISIN מסווגים סה\"כ (+N-PORT חי)")
+
+    still_missing_2 = collect_unclassified_foreign_isins(funds, fractions)
+    try:
+        for isin, frac in classify_via_openfigi_names(still_missing_2).items():
+            fractions.setdefault(isin, frac)
+    except Exception as e:
+        print(f"[missing] שכבת שמות-מלאים OpenFIGI נכשלה (מדלג): {e}")
+    print(f"[missing] {len(fractions)} ISIN מסווגים סה\"כ (+שמות מלאים)")
 
     missing = find_missing(source, funds, fractions)
     ranked = sorted(missing.items(), key=lambda kv: -kv[1]["total_pct"])

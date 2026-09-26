@@ -19,7 +19,8 @@ from .excel_io import to_ratio
 from .file_list import get_file_list
 from .foreign_etf_reference import (
     build_foreign_equity, build_isin_fractions, classify_from_report_names,
-    collect_unclassified_foreign_isins, fetch_etf_universe, fetch_sec_etf_exposure,
+    classify_via_openfigi_names, collect_unclassified_foreign_isins,
+    fetch_etf_universe, fetch_sec_etf_exposure,
 )
 from .funds import build_funds
 from .funds_reference import build_funds_reference
@@ -92,6 +93,14 @@ def compute_equity_totals(reports_dir: Path, tracks: list[dict]):
     except Exception as e:
         print(f"[validate] שכבת SEC N-PORT חי נכשלה (מדלג): {e}")
     print(f"[validate] {len(isin_fractions)} ISIN מסווגים סה\"כ (+N-PORT חי)")
+
+    still_missing_2 = collect_unclassified_foreign_isins(funds, isin_fractions)
+    try:
+        for isin, frac in classify_via_openfigi_names(still_missing_2).items():
+            isin_fractions.setdefault(isin, frac)
+    except Exception as e:
+        print(f"[validate] שכבת שמות-מלאים OpenFIGI נכשלה (מדלג): {e}")
+    print(f"[validate] {len(isin_fractions)} ISIN מסווגים סה\"כ (+שמות מלאים)")
 
     foreign_equity = build_foreign_equity(funds, isin_fractions)
 

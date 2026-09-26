@@ -80,14 +80,15 @@ def _sec_get(url: str, as_json: bool = False):
     return None
 
 
-def resolve_isin_to_ticker(isins: list[str], session: requests.Session | None = None) -> dict[str, str]:
-    """ISIN (US בלבד) -> טיקר, דרך OpenFIGI. מדלג בשקט על ISIN-ים שלא
-    נמצא להם טיקר (לא כל ISIN ציבורי ממופה שם)."""
+def _openfigi_lookup(isins: list[str], session: requests.Session | None = None) -> dict[str, dict]:
+    """ISIN -> רשומת הנתונים הראשונה שהחזיר OpenFIGI (dict גולמי). משותף לכל
+    הפונקציות שמבוססות על OpenFIGI (טיקר, שם מלא) כדי לא לכפול את לוגיקת
+    ה-batching/retry. מדלג בשקט על ISIN-ים שלא נמצאו (לא כל ISIN ציבורי
+    ממופה שם)."""
     s = session or requests.Session()
-    out: dict[str, str] = {}
-    us_isins = [i for i in isins if i and i.startswith("US")]
-    for i in range(0, len(us_isins), OPENFIGI_BATCH):
-        batch = us_isins[i : i + OPENFIGI_BATCH]
+    out: dict[str, dict] = {}
+    for i in range(0, len(isins), OPENFIGI_BATCH):
+        batch = isins[i : i + OPENFIGI_BATCH]
         jobs = [{"idType": "ID_ISIN", "idValue": isin} for isin in batch]
         try:
             r = s.post(OPENFIGI_URL, json=jobs, timeout=30,
@@ -101,11 +102,28 @@ def resolve_isin_to_ticker(isins: list[str], session: requests.Session | None = 
         for isin, res in zip(batch, results):
             data = res.get("data") if isinstance(res, dict) else None
             if data:
-                ticker = data[0].get("ticker")
-                if ticker:
-                    out[isin] = ticker.strip().upper()
+                out[isin] = data[0]
         time.sleep(OPENFIGI_DELAY)
     return out
+
+
+def resolve_isin_to_ticker(isins: list[str], session: requests.Session | None = None) -> dict[str, str]:
+    """ISIN (US בלבד) -> טיקר, דרך OpenFIGI."""
+    us_isins = [i for i in isins if i and i.startswith("US")]
+    figi = _openfigi_lookup(us_isins, session)
+    return {isin: d["ticker"].strip().upper() for isin, d in figi.items() if d.get("ticker")}
+
+
+def resolve_isin_to_name(isins: list[str], session: requests.Session | None = None) -> dict[str, str]:
+    """ISIN (כל מדינה) -> שם מלא לא-קצוץ, דרך OpenFIGI - מיועד לפתור את
+    בעיית הקיצוץ בשם הנייר כפי שהוא מדווח בדוח הפנסיוני עצמו (ר'
+    classify_from_report_names/classify_via_full_names ב-
+    foreign_etf_reference.py): קרן זרה רבות ניתנות לזיהוי ודאי מהשם המלא/
+    הרשמי אבל לא מהשם המקוצר-אוטומטית שמופיע בדוח (למשל "POLAR CAPITAL-GLB
+    TECH" בלי "-nology"). לא מוגבל ל-US - OpenFIGI מכסה גם קרנות/ETF
+    אירופיות/אסייתיות רבות (לא בהכרח כל קרן מנוהלת לא-נסחרת)."""
+    figi = _openfigi_lookup([i for i in isins if i], session)
+    return {isin: d["name"].strip() for isin, d in figi.items() if d.get("name")}
 
 
 def fetch_mf_ticker_map() -> dict[str, tuple[int, str]]:

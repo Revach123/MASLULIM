@@ -148,12 +148,29 @@ KNOWN_EQUITY_FUNDS_OTHER = {
     "US5007673065": "KraneShares CSI China Internet ETF (KWEB)",
     "LU2126068639": "Kotak Funds - India Midcap Fund",
     "LU0675383409": "Kotak Funds - India Midcap Fund (סדרת יחידות נוספת)",
+    "AU00000A2000": "BetaShares Australia 200 ETF (ASX:A200)",
+    # אותה קרן ממש כמו QQQ (US46090E1038, כבר ב-KNOWN_MAJOR_EQUITY_ETFS) -
+    # CUSIP/ISIN היסטורי מלפני שינוי השם מ-"PowerShares" ל-"Invesco QQQ".
+    "US73935A1043": "Invesco QQQ Trust (Nasdaq-100) - CUSIP היסטורי (PowerShares)",
+    # קרנות השקעה סגורות (closed-end) בניהול Bill Ackman - תיק מרוכז
+    # במניות long, לא רשומות ב-N-PORT (הגרנזית לא רשומה ב-SEC כלל; האמריקאית
+    # PSUS חדשה מדי/מבנה שלא נמצא ב-company_tickers_mf).
+    "GG00BPFJTF46": "Pershing Square Holdings Ltd (Guernsey, LSE:PSH)",
+    "US71531T1051": "Pershing Square USA Ltd (NYSE:PSUS)",
 }
 KNOWN_BOND_FUNDS_OTHER = {
     "LU0569863243": "UBAM - Global High Yield Solution",
     "IE00BMD7Z621": "Neuberger Berman Global Flexible Credit Fund",
     "IE0034085260": "PIMCO GIS Global Investment Grade Credit Fund",
     "IE00B8HR7G48": "Neuberger Berman Global Senior Floating Rate Income Fund",
+    # PIMCO Global Investors Series plc (PIMCO GIS) - טווח קרנות אג"ח בלבד
+    # (עובדה על משפחת הקרן, לא ניחוש לקרן ספציפית).
+    "IE00BGLNSH26": "PIMCO GIS Emerging Markets Bond Fund",
+    "IE0030759645": "PIMCO GIS Emerging Markets Bond Fund (סדרת יחידות נוספת)",
+    "IE00B87KCF77": "PIMCO GIS Income Fund",
+    "IE00B6VH4D24": "PIMCO GIS Capital Securities Fund",
+    "IE000NHT8H77": "Neuberger Berman CLO Income Fund",
+    "IE0006NCFSW9": "HSBC ICAV Global Government Bond ETF",
 }
 
 
@@ -203,15 +220,19 @@ def build_isin_fractions(etf_universe: list[dict], sec_exposure: list[dict]) -> 
 # שם מקוצר/לא רשמי נותן פחות ודאות, ולכן נדרש מונח מובהק (אג"ח או מניות)
 # ולא רק העדר מונח-אג"ח. מדולג (לא מסווג) כשאין מונח מובהק משני הצדדים.
 _REPORT_NAME_BOND_TERMS = (
-    "bond", "treasury", "gilt", "sovereign", "high yiel", "senior loan", "corp debt",
-    "floating rate", "credit", "govt", "municipal", "debenture",
+    "bond", "treasury", "gilt", "sovereign", "high yiel", "senior loan", "sen.sec",
+    "corp debt", "floating rate", "credit", "govt", "municipal", "debenture",
+    # מנפיקים/מנהלים שכל טווח הקרנות שלהם הוא הכנסה קבועה בלבד (עובדה על
+    # המנהל, לא ניחוש על קרן ספציפית) - "bluebay" (RBC BlueBay Asset
+    # Management, אך ורק אג"ח/קרדיט) הוא הראשון מסוג זה שנמצא בפועל.
+    "bluebay",
 )
 _REPORT_NAME_EQUITY_TERMS = (
     "equity", "eqy", "growth", "value", "dividend", "dvd", "biotech", "technology",
-    "thematic", "rotation", "water", "agtech", "food innovat", "momentum", "quality",
-    "factor", "equal weight", "msci", "s&p", "russell", "nasdaq", "topix", "nikkei",
-    "stoxx", "ftse", "mid cap", "small cap", "life scie", "discretionary", "discret",
-    "meme", "uranium", "index fund", "index equity",
+    "tech", "thematic", "rotation", "water", "agtech", "food innovat", "momentum",
+    "quality", "factor", "equal weight", "msci", "s&p", "russell", "nasdaq", "topix",
+    "nikkei", "stoxx", "ftse", "mid cap", "small cap", "life scie", "discretionary",
+    "discret", "meme", "uranium", "index fund", "index equity", "energy solutions",
 )
 
 
@@ -243,6 +264,34 @@ def classify_from_report_names(source: list[dict]) -> dict[str, dict[str, float]
                 out[isin] = {"equity": 1.0, "bond": 0.0}
             elif cls == "bond":
                 out[isin] = {"equity": 0.0, "bond": 1.0}
+    return out
+
+
+def classify_via_openfigi_names(missing_isins: list[str]) -> dict[str, dict[str, float]]:
+    """שכבה אחרונה, יקרה (קריאות רשת חיות ל-OpenFIGI): לכל ISIN "חוץ" שעדיין
+    לא מסווג בשום שכבה אחרת (כולל classify_from_report_names), מנסה לפתור
+    את השם המלא/הרשמי הלא-קצוץ (ר' sec_nport_reference.resolve_isin_to_name)
+    ולסווג אותו לפי אותה שיטת מילות-מפתח בדיוק - מגלה קרנות שה-classify_
+    from_report_names לא תפס כי השם *כפי שמדווח בדוח הפנסיוני* קצוץ יותר
+    מדי (למשל "POLAR CAPITAL-GLB TECH" בלי "-nology", "NB GLB FLEX CRE" בלי
+    "-dit"), אבל השם הרשמי המלא מ-OpenFIGI כן מכיל מונח מזהה ברור. לא מוגבל
+    ל-ISIN אמריקאי - OpenFIGI מכסה גם קרנות אירופיות/אסייתיות רבות. כשלון
+    רשת מדולג בשקט (רשימה ריקה) - לא כתובה ל-sec_nport_reference עצמו כדי
+    לא ליצור תלות מעגלית בין שני המודולים."""
+    if not missing_isins:
+        return {}
+    from .sec_nport_reference import resolve_isin_to_name
+
+    names = resolve_isin_to_name(missing_isins)
+    print(f"[openfigi_names] {len(names)}/{len(missing_isins)} ISIN נפתרו לשם מלא דרך OpenFIGI")
+    out: dict[str, dict[str, float]] = {}
+    for isin, full_name in names.items():
+        cls = _classify_by_report_name(full_name)
+        if cls == "equity":
+            out[isin] = {"equity": 1.0, "bond": 0.0}
+        elif cls == "bond":
+            out[isin] = {"equity": 0.0, "bond": 1.0}
+    print(f"[openfigi_names] {len(out)}/{len(missing_isins)} ISIN סווגו בהצלחה")
     return out
 
 

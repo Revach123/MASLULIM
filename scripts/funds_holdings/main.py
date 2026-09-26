@@ -17,7 +17,8 @@ from .derivatives_exposure import DERIVATIVE_CATEGORIES, build_derivatives_expos
 from .file_list import get_file_list
 from .foreign_etf_reference import (
     build_foreign_equity, build_isin_fractions, classify_from_report_names,
-    collect_unclassified_foreign_isins, fetch_etf_universe, fetch_sec_etf_exposure,
+    classify_via_openfigi_names, collect_unclassified_foreign_isins,
+    fetch_etf_universe, fetch_sec_etf_exposure,
 )
 from .funds import build_funds
 from .funds_detail import build_funds_detail
@@ -83,6 +84,17 @@ def build_master_table(
     except Exception as e:
         print(f"[main] שכבת SEC N-PORT חי נכשלה (מדלג): {e}")
     print(f"[main] {len(isin_fractions)} ISIN מסווגים סה\"כ (+N-PORT חי)")
+
+    # עוד שכבה אחרונה, יקרה: שם מלא לא-קצוץ דרך OpenFIGI (לא רק US) - תופסת
+    # קרנות שהשם המקוצר בדוח לא הכיל מונח מזהה, ר' תיעוד ב-
+    # classify_via_openfigi_names. רצה אחרי SEC N-PORT ורק על מה שעדיין חסר.
+    still_missing_2 = collect_unclassified_foreign_isins(funds, isin_fractions)
+    try:
+        for isin, frac in classify_via_openfigi_names(still_missing_2).items():
+            isin_fractions.setdefault(isin, frac)
+    except Exception as e:
+        print(f"[main] שכבת שמות-מלאים OpenFIGI נכשלה (מדלג): {e}")
+    print(f"[main] {len(isin_fractions)} ISIN מסווגים סה\"כ (+שמות מלאים)")
 
     for key, cols in build_foreign_equity(funds, isin_fractions).items():
         d = il_sums.setdefault(key, {})
