@@ -2,11 +2,16 @@ name: Verify main pipeline
 
 on:
   workflow_dispatch:
+  schedule:
+    # כל יום ראשון ב-02:00 UTC (שעה לפני Publish AUTOPILOT to D1) - כדי
+    # שתמיד יהיה מדד MAE עדכני מול הרשמי לפני שה-publish הופך את הנתונים
+    # לחיים באתר, וכדי לעקוב אחר סחף (drift) בין ריצה לריצה.
+    - cron: "0 2 * * 0"
 
 jobs:
   verify:
     runs-on: ubuntu-latest
-    timeout-minutes: 15
+    timeout-minutes: 30
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-python@v5
@@ -54,6 +59,16 @@ jobs:
                   print('example row with siveg pct:', {k: v for k, v in r.items() if k in extra or k == 'מפתח'})
                   break
           "
+      - name: Validate equity exposure vs official (חשיפה למניות)
+        env:
+          REVACH_MATCH_KEY: ${{ secrets.REVACH_MATCH_KEY }}
+          PAT: ${{ secrets.PAT }}
+        run: python -m scripts.funds_holdings.validate_equity_exposure --reports-dir reports
+      - name: Report unmatched foreign funds
+        env:
+          REVACH_MATCH_KEY: ${{ secrets.REVACH_MATCH_KEY }}
+          PAT: ${{ secrets.PAT }}
+        run: python -m scripts.funds_holdings.missing_foreign_funds --reports-dir reports
       - uses: actions/upload-artifact@v4
         with:
           name: master-output
