@@ -100,77 +100,34 @@ def _isin_key(v) -> str | None:
     return s or None
 
 
-# מנפיקות ETF אמריקאיות ידועות/גדולות מאוד שנמצאו חסרות מ-data/ETF/SEC/
-# etf_exposure.json (נבדק בפועל, ר' missing_foreign_funds.py) - חלקן (SPY/
-# QQQ/DIA/MDY) הן Unit Investment Trust ולא קרן '40 Act רגילה, ולכן כנראה
-# לא מגישות N-PORT בכלל (המקור הסביר ביותר לאותו קובץ) - זו לא "תקלת
-# איסוף" שאפשר לתקן באותו מקור, אלא מגבלה מבנית של סוג המכשיר. שאר הרשימה
-# (SPLG/RSP/IYC/EEM/SCHD/VFVA/SPYD) כן אמורות להגיש N-PORT - למה הן חסרות
-# מהקובץ הקיים לא ידוע (אין סקריפט מקור לבדוק) - כאן כפתרון-ביניים ודאי,
-# לא כתחליף לכיסוי SEC מלא ועדכני (ר' תכנית העבודה בהודעת הסיכום).
-# כל אחת מזוהה ודאית כמניות-100% מהשם/הטיקר הציבורי הידוע שלה (לא ניחוש) -
-# S&P 500 / Nasdaq-100 / Dow / MidCap 400 / Equal-Weight / סקטור/פקטור/
-# דיבידנד - כולן חשיפת מניות טהורה, בלי מרכיב אג"ח.
+# עוגנים ידניים: מותר רק כשאין שום דרך לבנות פייפליין דינמי שיעבוד (מגבלה
+# מבנית קבועה, לא "תקלת איסוף" זמנית) *וגם* כשאין שום אי-ודאות בסיווג -
+# חייב להישאר נכון לשנים קדימה בלי תחזוקה. לא כולל קרן שרק נכשלה להיתפס
+# ע"י classify_from_report_names/classify_via_openfigi_names/SEC N-PORT
+# בגלל קיצוץ בשם או מגבלת כיסוי נקודתית - אלה שייכים בתיקון השכבה
+# הדינמית עצמה (מילת-מפתח רחבה יותר וכו'), לא כאן.
+#
+# SPY/QQQ/DIA/MDY: Unit Investment Trust (לא קרן '40 Act רגילה) - מבנה
+# משפטי שאינו מגיש N-PORT בכלל, לפי חוק (מגבלה קבועה, לא ניתנת לפתרון
+# בשום פייפליין דינמי מבוסס-N-PORT). מדדי מניות רחבים ומתועדים בפומבי
+# (S&P 500/Nasdaq-100/Dow/MidCap 400) - אין אי-ודאות בסיווג.
 KNOWN_MAJOR_EQUITY_ETFS = {
-    "US78462F1030": "SPY - SPDR S&P 500 ETF Trust",
-    "US46090E1038": "QQQ - Invesco QQQ Trust (Nasdaq-100)",
-    "US78467X1090": "DIA - SPDR Dow Jones Industrial Average ETF Trust",
-    "US78467Y1073": "MDY - SPDR S&P MidCap 400 ETF Trust",
-    "US78464A8541": "SPLG - SPDR Portfolio S&P 500 ETF",
-    "US46137V3814": "RSP - Invesco S&P 500 Equal Weight ETF",
-    "US4642875805": "IYC - iShares US Consumer Discretionary ETF",
-    "US4642872349": "EEM - iShares MSCI Emerging Markets ETF",
-    "US8085247976": "SCHD - Schwab US Dividend Equity ETF",
-    "US9219358051": "VFVA - Vanguard US Value Factor ETF",
-    "US78468R7888": "SPYD - SPDR S&P 500 High Dividend ETF",
+    "US78462F1030": "SPY - SPDR S&P 500 ETF Trust (UIT)",
+    "US46090E1038": "QQQ - Invesco QQQ Trust, Nasdaq-100 (UIT)",
+    "US78467X1090": "DIA - SPDR Dow Jones Industrial Average ETF Trust (UIT)",
+    "US78467Y1073": "MDY - SPDR S&P MidCap 400 ETF Trust (UIT)",
+    # ISIN היסטורי של אותה קרן QQQ בדיוק, מלפני שינוי השם מ-"PowerShares"
+    # ל-"Invesco QQQ" - עובדת-זהות (alias), לא סיווג: אין שום פייפליין
+    # (כולל SEC N-PORT) שיכול לגלות שני ISIN שונים = אותו נייר בלי מאגר
+    # CUSIP-history בתשלום, וזו עובדה קבועה שלא משתנה למפרע.
+    "US73935A1043": "Invesco QQQ Trust - CUSIP היסטורי (PowerShares)",
 }
 
-# שוק יפני: אין לו כיסוי בשום מאגר קיים (לא אירופה, לא SEC - קרנות יפניות
-# לא רשומות ב-SEC בכלל). כל 6 הקרנות שנמצאו חסרות (ר' missing_foreign_funds.py)
-# הן קרנות מדד רחבות מוכרות היטב על ניקיי225/TOPIX/TOPIX-בנקים/Mid&Small -
-# כולן חשיפת מניות יפניות טהורה בהגדרה (עוקבות מדד מניות) - זיהוי ודאי
-# מהשם, לא ניחוש, בדיוק כמו הרשימה האמריקאית למעלה.
-KNOWN_JAPAN_EQUITY_ETFS = {
-    "JP3027710007": "iShares Core Nikkei 225 ETF",
-    "JP3027630007": "Nomura ETF (Nikkei/TOPIX)",
-    "JP3027620008": "Daiwa ETF TOPIX",
-    "JP3040170007": "Nomura ETF Banks (TOPIX-17 Banks sector)",
-    "JP3049420007": "Global X Japan Mid & Small Cap ETF (2837)",
-    "JP3048120004": "iShares Core TOPIX ETF",
-}
-
-# עוגנים ידניים נוספים לקרנות ספציפיות שנמצאו בראש רשימת missing_foreign_funds.py
-# (משקל מצטבר גבוה) אך לא זוהו בשום מאגר/שכבה אחרת - השם המדווח בדוח קצוץ/
-# מקוצר (למשל "NB GLB FLEX CRE" חתוך מ-"...Flexible Credit Fund") ולכן גם
-# _classify_by_report_name לא תופס אותן, אבל זהות הקרן ודאית מהשם החלקי +
-# ידע ציבורי (משפחת הקרן, לא ניחוש) - אותו עיקרון כמו KNOWN_MAJOR_EQUITY_ETFS.
+# קרנות השקעה סגורות (closed-end) הגרנזיות בניהול Bill Ackman - Guernsey
+# אינה בתחום השיפוט של SEC, לכן לא תוגש N-PORT בשום נסיבות (מגבלה מבנית
+# קבועה). מנדט מוצהר: תיק מרוכז ב-long equity - אין אי-ודאות בסיווג.
 KNOWN_EQUITY_FUNDS_OTHER = {
-    "US5007673065": "KraneShares CSI China Internet ETF (KWEB)",
-    "LU2126068639": "Kotak Funds - India Midcap Fund",
-    "LU0675383409": "Kotak Funds - India Midcap Fund (סדרת יחידות נוספת)",
-    "AU00000A2000": "BetaShares Australia 200 ETF (ASX:A200)",
-    # אותה קרן ממש כמו QQQ (US46090E1038, כבר ב-KNOWN_MAJOR_EQUITY_ETFS) -
-    # CUSIP/ISIN היסטורי מלפני שינוי השם מ-"PowerShares" ל-"Invesco QQQ".
-    "US73935A1043": "Invesco QQQ Trust (Nasdaq-100) - CUSIP היסטורי (PowerShares)",
-    # קרנות השקעה סגורות (closed-end) בניהול Bill Ackman - תיק מרוכז
-    # במניות long, לא רשומות ב-N-PORT (הגרנזית לא רשומה ב-SEC כלל; האמריקאית
-    # PSUS חדשה מדי/מבנה שלא נמצא ב-company_tickers_mf).
     "GG00BPFJTF46": "Pershing Square Holdings Ltd (Guernsey, LSE:PSH)",
-    "US71531T1051": "Pershing Square USA Ltd (NYSE:PSUS)",
-}
-KNOWN_BOND_FUNDS_OTHER = {
-    "LU0569863243": "UBAM - Global High Yield Solution",
-    "IE00BMD7Z621": "Neuberger Berman Global Flexible Credit Fund",
-    "IE0034085260": "PIMCO GIS Global Investment Grade Credit Fund",
-    "IE00B8HR7G48": "Neuberger Berman Global Senior Floating Rate Income Fund",
-    # PIMCO Global Investors Series plc (PIMCO GIS) - טווח קרנות אג"ח בלבד
-    # (עובדה על משפחת הקרן, לא ניחוש לקרן ספציפית).
-    "IE00BGLNSH26": "PIMCO GIS Emerging Markets Bond Fund",
-    "IE0030759645": "PIMCO GIS Emerging Markets Bond Fund (סדרת יחידות נוספת)",
-    "IE00B87KCF77": "PIMCO GIS Income Fund",
-    "IE00B6VH4D24": "PIMCO GIS Capital Securities Fund",
-    "IE000NHT8H77": "Neuberger Berman CLO Income Fund",
-    "IE0006NCFSW9": "HSBC ICAV Global Government Bond ETF",
 }
 
 
@@ -181,10 +138,8 @@ def build_isin_fractions(etf_universe: list[dict], sec_exposure: list[dict]) -> 
     לא ניתן להסיק מהם שבר מניות/אג"ח בינארי אמין)."""
     out: dict[str, dict[str, float]] = {
         isin: {"equity": 1.0, "bond": 0.0}
-        for isin in (*KNOWN_MAJOR_EQUITY_ETFS, *KNOWN_JAPAN_EQUITY_ETFS, *KNOWN_EQUITY_FUNDS_OTHER)
+        for isin in (*KNOWN_MAJOR_EQUITY_ETFS, *KNOWN_EQUITY_FUNDS_OTHER)
     }
-    for isin in KNOWN_BOND_FUNDS_OTHER:
-        out[isin] = {"equity": 0.0, "bond": 1.0}
     for rec in etf_universe:
         isin = _isin_key(rec.get("isin"))
         if isin is None:
@@ -221,11 +176,14 @@ def build_isin_fractions(etf_universe: list[dict], sec_exposure: list[dict]) -> 
 # ולא רק העדר מונח-אג"ח. מדולג (לא מסווג) כשאין מונח מובהק משני הצדדים.
 _REPORT_NAME_BOND_TERMS = (
     "bond", "treasury", "gilt", "sovereign", "high yiel", "senior loan", "sen.sec",
-    "corp debt", "floating rate", "credit", "govt", "municipal", "debenture",
-    # מנפיקים/מנהלים שכל טווח הקרנות שלהם הוא הכנסה קבועה בלבד (עובדה על
-    # המנהל, לא ניחוש על קרן ספציפית) - "bluebay" (RBC BlueBay Asset
-    # Management, אך ורק אג"ח/קרדיט) הוא הראשון מסוג זה שנמצא בפועל.
-    "bluebay",
+    "corp debt", "floating rate", "credit", "govt", "gov bnd", "municipal", "debenture",
+    "clo income",
+    # מנפיקים/טווחי-מוצר שכל הקרנות בהם הן הכנסה קבועה בלבד תמיד - עובדה
+    # יציבה על המותג/הטווח (לא ניחוש על קרן ספציפית, ולא ISIN-ים בודדים):
+    # "bluebay" (RBC BlueBay Asset Management - אך ורק אג"ח/קרדיט); "pimco
+    # gis" (PIMCO Global Investors Series - טווח ה-UCITS של PIMCO שהוא אך
+    # ורק אג"ח, בשונה מקרנות PIMCO אחרות).
+    "bluebay", "pimco gis",
 )
 _REPORT_NAME_EQUITY_TERMS = (
     "equity", "eqy", "growth", "value", "dividend", "dvd", "biotech", "technology",
