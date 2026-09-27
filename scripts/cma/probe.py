@@ -126,36 +126,9 @@ def test_browser(headless, tag):
     return out
 
 
-DOC_URLS = [
-    "https://www.gov.il/BlobFolder/dynamiccollectorresultitem/notice-2023-066/he/gate_5_part_4_chapter_3_V12.pdf",
-]
-
-
-def fetch_docs():
-    """שולף PDF-ים גולמיים (בלי ניתוח בצד ה-runner - נקרא מקומית אחר כך) לתוך
-    probe_out/docs/, כי gov.il חסום מה-sandbox המקומי אבל פתוח מ-Actions."""
-    s = requests.Session()
-    s.headers.update({"User-Agent": UA})
-    dest = OUT / "docs"
-    dest.mkdir(exist_ok=True)
-    out = {}
-    for url in DOC_URLS:
-        name = url.rsplit("/", 1)[-1]
-        try:
-            r = s.get(url, timeout=30)
-            r.raise_for_status()
-            (dest / name).write_bytes(r.content)
-            out[name] = {"status": r.status_code, "bytes": len(r.content)}
-        except Exception as e:
-            out[name] = {"error": repr(e)}
-    return out
-
-
 def main():
     mode = sys.argv[1] if len(sys.argv) > 1 else "all"
     report = {"runner_ip": test_ip()}
-    if mode in ("all", "requests"):
-        report["0_docs"] = fetch_docs()
     if mode in ("all", "requests"):
         report["1_requests"] = test_requests()
     if mode in ("all", "headless"):
