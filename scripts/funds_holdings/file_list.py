@@ -4,6 +4,7 @@
 במקור: Folder.Files על תיקייה שטוחה במחשב המשתמש. אצלנו: reports/<year>Q<quarter>/
 ב-repo MASLULIM (README.md), אז סורקים רקורסיבית על כל תת-התיקיות.
 """
+from calendar import monthrange
 from dataclasses import dataclass
 from datetime import date
 from pathlib import Path
@@ -17,7 +18,9 @@ class ReportFile:
     sort_key: int         # YY*10 + QQ, מהחלק האחרון של השם - להשוואת "העדכני ביותר"
                           # בלבד (יש בו התנגשויות אמיתיות, למשל 2602 ו-1225 שניהם
                           # 262 - לא לשימוש כתאריך אמיתי, ר' report_month)
-    report_month: date | None  # 1 לחודש הדיווח (YYYY-MM-01), מפורק בנפרד מ-sort_key
+    report_month: date | None  # היום האחרון של חודש הדיווח (לא ה-1) - דוח חודשי
+                          # הוא "נכון ל..." סוף החודש, לא תחילתו; שימוש ביום 1
+                          # למחיר-מדד-חי מתמחר כמעט חודש מוקדם מדי
 
 
 def _stem_parts(filename: str) -> list[str]:
@@ -33,13 +36,14 @@ def _sort_key(last_part: str) -> int:
 
 
 def _report_month(last_part: str) -> date | None:
-    """MMYY (למשל '0226' = פברואר 2026) -> תאריך היום ה-1 של חודש הדיווח.
+    """MMYY (למשל '0226' = פברואר 2026) -> תאריך היום האחרון של חודש הדיווח.
     נפרד מ-_sort_key בכוונה - sort_key מתנגש בין תאריכים שונים (ר' הערת
     ReportFile), לא מתאים לשימוש כתאריך אמיתי."""
     try:
         mm = int(last_part[:2])
         yy = int(last_part[-2:])
-        return date(2000 + yy, mm, 1)
+        last_day = monthrange(2000 + yy, mm)[1]
+        return date(2000 + yy, mm, last_day)
     except (ValueError, IndexError):
         return None
 
