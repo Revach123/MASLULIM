@@ -1,87 +1,42 @@
-"""Probe: what does OpenFIGI actually return per ISIN beyond 'name'? Testing
-whether marketSector/securityType/securityType2 are a reliable *structured*
-equity-vs-bond signal, as an alternative to keyword-matching the (often
-truncated) report name. Also tries ESMA FIRDS (CFI code) for a couple of
-EU ISINs, if reachable from this runner, as a second candidate structured
-source.
+"""Probe round 2: OpenFIGI's marketSector/securityType are already disproven
+(round 1 showed every fund sample - equity AND bond - comes back
+marketSector="Equity", securityType2="Mutual Fund": this is the FUND SHARE's
+own instrument category, not its underlying asset allocation. Useless as a
+classification signal, confirming it's not a shortcut around content-based
+classification).
 
-Sample: real ISINs from the current MASLULIM missing_foreign_funds.py
-output, chosen for known ground truth (publicly known fund category).
+This round tests the `yfinance` library (handles Yahoo's cookie/crumb dance
+internally, unlike a bare requests.get to quoteSummary which round 1 also
+showed gets a 401 "Invalid Crumb") for its Morningstar-sourced `category`
+field - a real structured fund classification (e.g. "High Yield Bond",
+"India Equity"), not a binary equity/bond guess.
 """
 import json
-import time
 
-import requests
+import yfinance as yf
 
 SAMPLE = [
-    ("LU0569863243", "bond", "UBAM Global High Yield Solution"),
-    ("IE00BMD7Z621", "bond", "Neuberger Berman Global Flexible Credit"),
-    ("IE0034085260", "bond", "PIMCO GIS Global (bond range)"),
-    ("AU00000A2000", "equity", "BetaShares Australia 200 ETF"),
-    ("US71531T1051", "equity", "Pershing Square USA Ltd"),
-    ("LU2126068639", "equity", "Kotak Funds India Midcap"),
-    ("IE00BD0NCR01", "?", "BlackRock Idx Sel"),
-    ("X9X9USD58946", "cash", "BlackRock ICS US Dollar (money market - placeholder ISIN?)"),
+    ("0P0000SO5G", "bond", "UBAM Global High Yield Solution"),
+    ("0P0001K29O", "bond", "Neuberger Berman Global Flexible Credit"),
+    ("IE0034085260-USD.LU", "bond", "PIMCO GIS Global Investment Grade Credit"),
+    ("A200.AX", "equity", "BetaShares Australia 200 ETF"),
+    ("PSUS", "equity", "Pershing Square USA Ltd"),
+    ("0P0001AG9S.F", "?", "iShares Europe ex-UK Idx"),
 ]
 
-print("=== OpenFIGI raw mapping ===")
-jobs = [{"idType": "ID_ISIN", "idValue": isin} for isin, _, _ in SAMPLE]
-r = requests.post("https://api.openfigi.com/v3/mapping", json=jobs,
-                   headers={"Content-Type": "application/json"}, timeout=30)
-print("status:", r.status_code)
-results = r.json()
-for (isin, truth, label), res in zip(SAMPLE, results):
-    print(f"\n--- {isin} ({label}) [expected: {truth}] ---")
-    print(json.dumps(res, indent=2, ensure_ascii=False))
-time.sleep(3)
-
-print("\n=== ESMA FIRDS (CFI code) probe ===")
-# ESMA FIRDS FITRS/FIRDS full reference data search API (public, no key)
-for isin, truth, label in SAMPLE[:4]:
+for symbol, truth, label in SAMPLE:
+    print(f"\n--- {symbol} ({label}) [expected: {truth}] ---")
     try:
-        resp = requests.get(
-            "https://registers.esma.europa.eu/solr/esma_registers_firds_files/select",
-            params={"q": f"ISIN:{isin}", "wt": "json", "rows": 1},
-            timeout=20,
-        )
-        print(f"\n--- FIRDS search {isin} ({label}) ---")
-        print("status:", resp.status_code)
-        print(resp.text[:1500])
+        t = yf.Ticker(symbol)
+        info = t.info
+        keys_of_interest = {
+            k: info.get(k) for k in (
+                "category", "fundFamily", "legalType", "quoteType", "longName",
+                "shortName", "totalAssets",
+            ) if k in info
+        }
+        print(json.dumps(keys_of_interest, indent=2, ensure_ascii=False))
+        if not keys_of_interest:
+            print("(no info returned)")
     except Exception as e:
-        print(f"FIRDS lookup failed for {isin}: {e}")
-    time.sleep(1)
-
-print("\n=== Yahoo Finance (Morningstar-sourced fund category) probe ===")
-# Yahoo's free (no-key) search + quoteSummary endpoints expose a Morningstar-
-# style "categoryName" (e.g. "High Yield Bond", "India Equity") via the
-# fundProfile module - a genuinely structured, non-keyword classification,
-# if Yahoo's ISIN search resolves a symbol for the fund at all (coverage is
-# not universal, esp. for small/local share classes - hence testing here
-# rather than assuming).
-YAHOO_HEADERS = {"User-Agent": "Mozilla/5.0 (compatible; MASLULIM-probe/1.0)"}
-for isin, truth, label in SAMPLE:
-    try:
-        search = requests.get(
-            "https://query2.finance.yahoo.com/v1/finance/search",
-            params={"q": isin, "quotesCount": 5, "newsCount": 0},
-            headers=YAHOO_HEADERS, timeout=20,
-        )
-        print(f"\n--- Yahoo search {isin} ({label}) [expected: {truth}] ---")
-        print("search status:", search.status_code)
-        quotes = (search.json() or {}).get("quotes", []) if search.status_code == 200 else []
-        print(json.dumps(quotes, indent=2, ensure_ascii=False))
-        if not quotes:
-            continue
-        symbol = quotes[0].get("symbol")
-        if not symbol:
-            continue
-        qs = requests.get(
-            f"https://query2.finance.yahoo.com/v10/finance/quoteSummary/{symbol}",
-            params={"modules": "fundProfile,summaryProfile,quoteType"},
-            headers=YAHOO_HEADERS, timeout=20,
-        )
-        print(f"quoteSummary({symbol}) status:", qs.status_code)
-        print(json.dumps(qs.json(), indent=2, ensure_ascii=False)[:3000])
-    except Exception as e:
-        print(f"Yahoo lookup failed for {isin}: {e}")
-    time.sleep(1)
+        print(f"failed: {type(e).__name__}: {e}")
