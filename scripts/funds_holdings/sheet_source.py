@@ -133,5 +133,6 @@ def build_source(files: list[ReportFile]) -> list[dict]:
                                           "סיבה": f"שגיאה: {e!r}"}]
             combined.append({
                 "Category": canon(name), "LegalId": legal_id, "מידע": status, "Clean": rows,
+                "ReportMonth": f.report_month,
             })
     return combined

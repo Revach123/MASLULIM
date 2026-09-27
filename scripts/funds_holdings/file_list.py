@@ -5,6 +5,7 @@
 ב-repo MASLULIM (README.md), אז סורקים רקורסיבית על כל תת-התיקיות.
 """
 from dataclasses import dataclass
+from datetime import date
 from pathlib import Path
 
 
@@ -13,7 +14,10 @@ class ReportFile:
     name: str            # שם הקובץ בלי הנתיב, למשל "511789190_pn_0226.xlsx"
     path: Path           # נתיב מלא
     company_type: str    # "570009852_gm" (Parts[0] & "_" & Parts[1])
-    sort_key: int         # YY*10 + QQ, מהחלק האחרון של השם
+    sort_key: int         # YY*10 + QQ, מהחלק האחרון של השם - להשוואת "העדכני ביותר"
+                          # בלבד (יש בו התנגשויות אמיתיות, למשל 2602 ו-1225 שניהם
+                          # 262 - לא לשימוש כתאריך אמיתי, ר' report_month)
+    report_month: date | None  # 1 לחודש הדיווח (YYYY-MM-01), מפורק בנפרד מ-sort_key
 
 
 def _stem_parts(filename: str) -> list[str]:
@@ -26,6 +30,18 @@ def _sort_key(last_part: str) -> int:
     yy = int(last_part[-2:])
     qq = int(last_part[:2])
     return yy * 10 + qq
+
+
+def _report_month(last_part: str) -> date | None:
+    """MMYY (למשל '0226' = פברואר 2026) -> תאריך היום ה-1 של חודש הדיווח.
+    נפרד מ-_sort_key בכוונה - sort_key מתנגש בין תאריכים שונים (ר' הערת
+    ReportFile), לא מתאים לשימוש כתאריך אמיתי."""
+    try:
+        mm = int(last_part[:2])
+        yy = int(last_part[-2:])
+        return date(2000 + yy, mm, 1)
+    except (ValueError, IndexError):
+        return None
 
 
 def list_files(reports_dir: Path) -> list[ReportFile]:
@@ -41,7 +57,8 @@ def list_files(reports_dir: Path) -> list[ReportFile]:
             sort_key = _sort_key(last)
         except (ValueError, IndexError):
             continue  # לא ניתן לחשב SortKey - מדולג (ראה TODO בהערת המודול)
-        out.append(ReportFile(name=p.name, path=p, company_type=company_type, sort_key=sort_key))
+        out.append(ReportFile(name=p.name, path=p, company_type=company_type, sort_key=sort_key,
+                               report_month=_report_month(last)))
     return out
 
 

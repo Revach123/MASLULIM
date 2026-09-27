@@ -62,6 +62,7 @@
 """
 from .excel_io import to_ratio
 from .sheet_source import PCT_COL
+from .swap_index_pricing import resolve_current_price
 
 FAIR_VALUE_COL = 'שווי הוגן (באלפי ש"ח)'
 SWAP_NET_FAIR_VALUE_COL = 'שווי הוגן (נטו באלפי ש"ח)'
@@ -99,6 +100,9 @@ SWAP_LEGS = (
     {"units": "ערך נקוב (רגל 2)", "fx": "שער חליפין (רגל 2)", "currency": "מטבע פעילות (רגל 2)"},
 )
 SWAP_UNDERLYING_PRICE_COL = "שער נכס הבסיס במועד ההתקשרות בעסקה"
+SWAP_TICKER_COL = "טיקר"
+SWAP_ASSET_TYPE_COL = "סוג הנכס"
+SWAP_EQUITY_ASSET_TYPE = "מניות לרבות מדדי מניות"
 # שם העמודה עצמו (לפי החוזר: שער החליפין/נכס הבסיס לנגזרים לא סחירים מוצג
 # "נכון למועד ההתקשרות בעסקה") מאשר שזהו מחיר נכס הבסיס *בפתיחת העסקה*, לא
 # מחיר שוק עדכני - זה בדיוק ההסבר לכך שרגל1×מחיר זה שווה לרגל2 (שתי הרגליים
@@ -223,13 +227,23 @@ def _swap_exposure(source: list[dict], total_assets: dict[str, float]) -> dict[s
     שהתקבלה לשווי ההוגן נטו שאותה שורה בדיוק מדווחת - יחס גבוה מדי מסמן קנה
     מידה לא אמין, ונופלים לערך המדווח (PCT_COL) לשורה הזו בלבד. תקרת
     ה-SANITY_CAP הקיימת (ברמת שורה) ותקרת מסלול נוספת (סכום מצטבר על פני כל
-    שורות ה-swap במסלול) נשארות כרשת ביטחון אחרונה."""
+    שורות ה-swap במסלול) נשארות כרשת ביטחון אחרונה.
+
+    שיפור: "שער נכס הבסיס במועד ההתקשרות בעסקה" הוא מחיר *בפתיחת* העסקה
+    (ר' הערת המודול), לא מחיר עדכני - לחשיפה נכונה ליום הדוח משתמשים במקום
+    זאת, כשאפשר, במחיר המדד החי נכון לתאריך הדוח (swap_index_pricing, דרך
+    עמודת "טיקר" ומיפוי revach123/INDICES). כשהטיקר לא ממופה (בעיקר סלים
+    קנייניים בנקאיים - ר' swap_ticker_map.csv שם) נופלים בחזרה לשיטת המחיר-
+    בפתיחת-העסקה הקיימת. במקרה הזה leg2 (שקבוע לפי בנייה למחיר הפתיחה) כבר
+    לא רלוונטי כעוגן לרגל 1 המתומחרת-חי - שתיהן מודדות דברים שונים בכוונה
+    (נוציונל היסטורי מול חשיפה נוכחית) - לכן לא ממוצעים ביניהן."""
     notional_sums: dict[str, float] = {}
     fv_sums: dict[str, float] = {}
     leg1_col, leg2_col = SWAP_LEGS
     for rec in source:
         if rec["Category"] != SWAP_CATEGORY or rec["מידע"] != "מידע":
             continue
+        report_date = rec.get("ReportMonth")
         for row in rec["Clean"]:
             key = row.get("מפתח")
             total = total_assets.get(key) if key is not None else None
@@ -260,7 +274,15 @@ def _swap_exposure(source: list[dict], total_assets: dict[str, float]) -> dict[s
             ):
                 leg1_val = leg1_priced
 
-            candidates = [v for v in (leg1_val, leg2_val) if v is not None]
+            current_price, _index_id = resolve_current_price(row.get(SWAP_TICKER_COL), report_date)
+            leg1_live = (abs(units1 * fx1 * current_price) / 1000
+                         if units1 is not None and fx1 is not None and current_price is not None else None)
+
+            if leg1_live is not None:
+                candidates = [leg1_live]  # לא ממוצעים עם leg2 - ר' הערת הפונקציה
+            else:
+                candidates = [v for v in (leg1_val, leg2_val) if v is not None]
+
             line_ratio = None
             if candidates:
                 notional_thousands = sum(candidates) / len(candidates)
@@ -278,6 +300,35 @@ def _swap_exposure(source: list[dict], total_assets: dict[str, float]) -> dict[s
         key: val if abs(val) <= SANITY_CAP else fv_sums.get(key, 0.0)
         for key, val in notional_sums.items()
     }
+
+
+def collect_unresolved_swap_tickers(source: list[dict]) -> dict[str, set[str]]:
+    """מפתח -> סט טיקרים של סוואפ-מדד (סוג הנכס == מניות לרבות מדדי מניות)
+    שלא נמצא להם מיפוי ב-swap_ticker_map.csv (revach123/INDICES) - בין אם
+    כי אין להם מקור נתונים ציבורי (סלים קנייניים בנקאיים, ר' swap_ticker_map.csv
+    לסיבה המדויקת לכל טיקר) ובין אם כי טיקר חדש שלא נראה עדיין בסריקה שבנתה
+    את המיפוי. מיועד לדגל "לטיפול" בדשבורד - לא משפיע על חישוב החשיפה עצמו."""
+    from .swap_index_pricing import _load_ticker_map, normalize_ticker
+
+    try:
+        ticker_map = _load_ticker_map()
+    except Exception:
+        return {}
+
+    out: dict[str, set[str]] = {}
+    for rec in source:
+        if rec["Category"] != SWAP_CATEGORY or rec["מידע"] != "מידע":
+            continue
+        for row in rec["Clean"]:
+            if row.get(SWAP_ASSET_TYPE_COL) != SWAP_EQUITY_ASSET_TYPE:
+                continue
+            key = row.get("מפתח")
+            raw_ticker = row.get(SWAP_TICKER_COL)
+            norm = normalize_ticker(raw_ticker)
+            if key is None or not norm or norm in ticker_map:
+                continue
+            out.setdefault(key, set()).add(str(raw_ticker).strip())
+    return out
 
 
 def build_derivatives_exposure(source: list[dict]) -> dict[str, dict[str, float]]:
