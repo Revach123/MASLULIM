@@ -50,3 +50,38 @@ for isin, truth, label in SAMPLE[:4]:
     except Exception as e:
         print(f"FIRDS lookup failed for {isin}: {e}")
     time.sleep(1)
+
+print("\n=== Yahoo Finance (Morningstar-sourced fund category) probe ===")
+# Yahoo's free (no-key) search + quoteSummary endpoints expose a Morningstar-
+# style "categoryName" (e.g. "High Yield Bond", "India Equity") via the
+# fundProfile module - a genuinely structured, non-keyword classification,
+# if Yahoo's ISIN search resolves a symbol for the fund at all (coverage is
+# not universal, esp. for small/local share classes - hence testing here
+# rather than assuming).
+YAHOO_HEADERS = {"User-Agent": "Mozilla/5.0 (compatible; MASLULIM-probe/1.0)"}
+for isin, truth, label in SAMPLE:
+    try:
+        search = requests.get(
+            "https://query2.finance.yahoo.com/v1/finance/search",
+            params={"q": isin, "quotesCount": 5, "newsCount": 0},
+            headers=YAHOO_HEADERS, timeout=20,
+        )
+        print(f"\n--- Yahoo search {isin} ({label}) [expected: {truth}] ---")
+        print("search status:", search.status_code)
+        quotes = (search.json() or {}).get("quotes", []) if search.status_code == 200 else []
+        print(json.dumps(quotes, indent=2, ensure_ascii=False))
+        if not quotes:
+            continue
+        symbol = quotes[0].get("symbol")
+        if not symbol:
+            continue
+        qs = requests.get(
+            f"https://query2.finance.yahoo.com/v10/finance/quoteSummary/{symbol}",
+            params={"modules": "fundProfile,summaryProfile,quoteType"},
+            headers=YAHOO_HEADERS, timeout=20,
+        )
+        print(f"quoteSummary({symbol}) status:", qs.status_code)
+        print(json.dumps(qs.json(), indent=2, ensure_ascii=False)[:3000])
+    except Exception as e:
+        print(f"Yahoo lookup failed for {isin}: {e}")
+    time.sleep(1)
