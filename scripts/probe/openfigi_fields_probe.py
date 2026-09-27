@@ -1,15 +1,11 @@
-"""Probe round 2: OpenFIGI's marketSector/securityType are already disproven
-(round 1 showed every fund sample - equity AND bond - comes back
-marketSector="Equity", securityType2="Mutual Fund": this is the FUND SHARE's
-own instrument category, not its underlying asset allocation. Useless as a
-classification signal, confirming it's not a shortcut around content-based
-classification).
-
-This round tests the `yfinance` library (handles Yahoo's cookie/crumb dance
-internally, unlike a bare requests.get to quoteSummary which round 1 also
-showed gets a 401 "Invalid Crumb") for its Morningstar-sourced `category`
-field - a real structured fund classification (e.g. "High Yield Bond",
-"India Equity"), not a binary equity/bond guess.
+"""Probe round 3: `.info` alone (round 2) returned no `category` for any
+mutual-fund sample - either yfinance's basic info call doesn't request the
+fundProfile module for these, or Yahoo just doesn't attach it to these
+OTC/foreign share classes. yfinance 1.x has a dedicated `funds_data` API
+(separate from `.info`) that explicitly requests fund-specific modules,
+including `asset_classes` (a real % breakdown by stocks/bonds/cash/other -
+exactly the structured signal we want, if populated). Testing that
+specifically before giving up on Yahoo/Morningstar data for this sample.
 """
 import json
 
@@ -19,8 +15,6 @@ SAMPLE = [
     ("0P0000SO5G", "bond", "UBAM Global High Yield Solution"),
     ("0P0001K29O", "bond", "Neuberger Berman Global Flexible Credit"),
     ("IE0034085260-USD.LU", "bond", "PIMCO GIS Global Investment Grade Credit"),
-    ("A200.AX", "equity", "BetaShares Australia 200 ETF"),
-    ("PSUS", "equity", "Pershing Square USA Ltd"),
     ("0P0001AG9S.F", "?", "iShares Europe ex-UK Idx"),
 ]
 
@@ -28,15 +22,11 @@ for symbol, truth, label in SAMPLE:
     print(f"\n--- {symbol} ({label}) [expected: {truth}] ---")
     try:
         t = yf.Ticker(symbol)
-        info = t.info
-        keys_of_interest = {
-            k: info.get(k) for k in (
-                "category", "fundFamily", "legalType", "quoteType", "longName",
-                "shortName", "totalAssets",
-            ) if k in info
-        }
-        print(json.dumps(keys_of_interest, indent=2, ensure_ascii=False))
-        if not keys_of_interest:
-            print("(no info returned)")
+        fd = t.funds_data
+        print("description:", fd.description)
+        print("fund_overview:", json.dumps(fd.fund_overview, indent=2, ensure_ascii=False, default=str))
+        print("fund_operations:", json.dumps(fd.fund_operations.to_dict() if hasattr(fd.fund_operations, "to_dict") else fd.fund_operations, indent=2, ensure_ascii=False, default=str))
+        print("asset_classes:", json.dumps(fd.asset_classes, indent=2, ensure_ascii=False, default=str))
+        print("top_holdings:", fd.top_holdings.to_dict() if hasattr(fd.top_holdings, "to_dict") else fd.top_holdings)
     except Exception as e:
         print(f"failed: {type(e).__name__}: {e}")
