@@ -85,6 +85,19 @@ def build_master_table(
         print(f"[main] שכבת SEC N-PORT חי נכשלה (מדלג): {e}")
     print(f"[main] {len(isin_fractions)} ISIN מסווגים סה\"כ (+N-PORT חי)")
 
+    # שכבה נוספת, יקרה: פילוח Morningstar אמיתי (stock/bond בפועל בתיק
+    # הקרן, לא ניחוש משם) דרך Yahoo Finance - ר' תיעוד ב-
+    # yahoo_fund_reference.py. בעיקר סוגרת קרנות UCITS אירופיות שלא
+    # אמריקאיות (SEC N-PORT לא מכסה) ולא נתפסות במאגרי ETF הקבועים.
+    still_missing_yahoo = collect_unclassified_foreign_isins(funds, isin_fractions)
+    try:
+        from .yahoo_fund_reference import build_isin_fractions_via_yahoo
+        for isin, frac in build_isin_fractions_via_yahoo(still_missing_yahoo).items():
+            isin_fractions.setdefault(isin, frac)
+    except Exception as e:
+        print(f"[main] שכבת Yahoo/Morningstar נכשלה (מדלג): {e}")
+    print(f"[main] {len(isin_fractions)} ISIN מסווגים סה\"כ (+Yahoo/Morningstar)")
+
     # עוד שכבה אחרונה, יקרה: שם מלא לא-קצוץ דרך OpenFIGI (לא רק US) - תופסת
     # קרנות שהשם המקוצר בדוח לא הכיל מונח מזהה, ר' תיעוד ב-
     # classify_via_openfigi_names. רצה אחרי SEC N-PORT ורק על מה שעדיין חסר.
