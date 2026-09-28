@@ -6,6 +6,14 @@ cash/preferred/convertible בפועל בתיק הקרן (funds_data.asset_classe
 שלא נתפסות בשום שכבה אחרת - לא במאגרי ETF ב-revach (foreign_etf_reference),
 לא ב-SEC N-PORT (sec_nport_reference, מוגבל ל-ISIN אמריקאי).
 
+שכבה שנייה, זולה יותר: quoteType של Yahoo עצמו (מתוך אותה תוצאת חיפוש -
+בלי קריאת רשת נוספת) - "EQUITY" הוא סיווג Yahoo למניה/חברת השקעה סגורה
+הנסחרת כמניה רגילה (למשל Pershing Square USA - נבדק בפועל, ר' probe:
+quoteType="EQUITY", בשונה מ"MUTUALFUND" לקרנות פתוחות). זה שונה מהותית
+מ-marketSector של OpenFIGI (שגם קרנות אג"ח מקבלות "Equity" שם, ר' תיעוד
+ב-main.py/sec_nport_reference.py) - quoteType מבחין נכון בין סוגי המכשיר
+בפועל, לא סתם "הנייר עצמו נסחר כמו מניה".
+
 אומת אמפירית (ר' scripts/probe/openfigi_fields_probe.py, סבב 4) מול 4
 קרנות עם סיווג ידוע: 4/4 כיוון נכון, כולל קרנות עם חשיפה ממונפת/נגזרים
 שבהן הסכום חורג מ-100%/שלילי (UBAM Global High Yield: bond=221%, cash=
@@ -35,7 +43,7 @@ YAHOO_HEADERS = {"User-Agent": "Mozilla/5.0 (compatible; MASLULIM-pension-mappin
 YAHOO_DELAY = 0.4
 
 
-def _search_symbol(isin: str, session: requests.Session) -> str | None:
+def _search_quote(isin: str, session: requests.Session) -> dict | None:
     try:
         r = session.get(
             YAHOO_SEARCH_URL,
@@ -47,9 +55,8 @@ def _search_symbol(isin: str, session: requests.Session) -> str | None:
     except (requests.RequestException, ValueError):
         return None
     for q in quotes:
-        symbol = q.get("symbol")
-        if symbol:
-            return symbol
+        if q.get("symbol"):
+            return q
     return None
 
 
@@ -69,12 +76,24 @@ def build_isin_fractions_via_yahoo(missing_isins: list[str]) -> dict[str, dict[s
     session = requests.Session()
     n_symbol = 0
     n_classified = 0
+    n_via_quote_type = 0
     for isin in missing_isins:
-        symbol = _search_symbol(isin, session)
+        quote = _search_quote(isin, session)
         time.sleep(YAHOO_DELAY)
-        if not symbol:
+        if not quote:
             continue
         n_symbol += 1
+        symbol = quote["symbol"]
+
+        # quoteType="EQUITY" (מניה/חברת השקעה סגורה הנסחרת כמניה) - סיווג
+        # ודאי בלי קריאת רשת נוספת, ר' תיעוד למעלה. "ETF"/"MUTUALFUND"
+        # ממשיכים לשכבת asset_classes (לא ודאי-מניות סתם מ-quoteType).
+        if quote.get("quoteType") == "EQUITY":
+            out[isin] = {"equity": 1.0, "bond": 0.0}
+            n_classified += 1
+            n_via_quote_type += 1
+            continue
+
         try:
             asset_classes = yf.Ticker(symbol).funds_data.asset_classes
         except Exception:
@@ -90,7 +109,8 @@ def build_isin_fractions_via_yahoo(missing_isins: list[str]) -> dict[str, dict[s
         out[isin] = {"equity": stock / total, "bond": bond / total}
         n_classified += 1
     print(f"[yahoo_fund] {n_symbol}/{len(missing_isins)} ISIN נפתרו לסימול Yahoo, "
-          f"{n_classified}/{len(missing_isins)} סווגו בהצלחה (asset_classes)")
+          f"{n_classified}/{len(missing_isins)} סווגו בהצלחה "
+          f"({n_via_quote_type} מהן ישירות מ-quoteType=EQUITY, השאר מ-asset_classes)")
     return out
 
 

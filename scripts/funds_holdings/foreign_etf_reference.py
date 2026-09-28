@@ -176,8 +176,8 @@ def build_isin_fractions(etf_universe: list[dict], sec_exposure: list[dict]) -> 
 # ולא רק העדר מונח-אג"ח. מדולג (לא מסווג) כשאין מונח מובהק משני הצדדים.
 _REPORT_NAME_BOND_TERMS = (
     "bond", "treasury", "gilt", "sovereign", "high yiel", "senior loan", "sen.sec",
-    "corp debt", "floating rate", "credit", "govt", "gov bnd", "municipal", "debenture",
-    "clo income",
+    "sen sec", "senior secured", "corp debt", "floating rate", "credit", "govt",
+    "gov bnd", "municipal", "debenture", "clo income",
     # מנפיקים/טווחי-מוצר שכל הקרנות בהם הן הכנסה קבועה בלבד תמיד - עובדה
     # יציבה על המותג/הטווח (לא ניחוש על קרן ספציפית, ולא ISIN-ים בודדים):
     # "bluebay" (RBC BlueBay Asset Management - אך ורק אג"ח/קרדיט); "pimco
@@ -188,16 +188,27 @@ _REPORT_NAME_BOND_TERMS = (
 _REPORT_NAME_EQUITY_TERMS = (
     "equity", "eqy", "growth", "value", "dividend", "dvd", "biotech", "technology",
     "tech", "thematic", "rotation", "water", "agtech", "food innovat", "momentum",
-    "quality", "factor", "equal weight", "msci", "s&p", "russell", "nasdaq", "topix",
-    "nikkei", "stoxx", "ftse", "mid cap", "small cap", "life scie", "discretionary",
-    "discret", "meme", "uranium", "index fund", "index equity", "energy solutions",
+    "quality", "factor", "equal weight", "msci", "s&p", "sp 500", "russell", "nasdaq",
+    "topix", "nikkei", "stoxx", "ftse", "mid cap", "midcap", "small cap", "life scie",
+    "discretionary", "discret", "meme", "uranium", "index fund", "index equity",
+    "energy solutions", "resource",
 )
+
+# קרנות כספיות/מזומן (money-market) - לא מניות ולא אג"ח, תורמות 0 לשני
+# הסיווגים (לא "לא ידוע"). "LVNAV" (Low Volatility NAV) הוא מונח רגולטורי
+# מפורש למבנה קרן כספית לפי חוק ה-MMF האירופי - אין אי-ודאות. חלק
+# מהשורות האלה מגיעות עם "ISIN" שאינו ISIN אמיתי בכלל (קוד פנימי בתחילית
+# X9X9 - נבדק בפועל מול OpenFIGI: "Invalid idValue format") ולכן לא יזוהו
+# בשום שכבה אחרת.
+_REPORT_NAME_CASH_TERMS = ("liquidity", "lvnav", "money market", "money mkt")
 
 
 def _classify_by_report_name(name: str | None) -> str | None:
     if not name:
         return None
     text = name.lower()
+    if any(t in text for t in _REPORT_NAME_CASH_TERMS):
+        return "cash"
     if any(t in text for t in _REPORT_NAME_BOND_TERMS):
         return "bond"
     if any(t in text for t in _REPORT_NAME_EQUITY_TERMS):
@@ -208,7 +219,9 @@ def _classify_by_report_name(name: str | None) -> str | None:
 def classify_from_report_names(source: list[dict]) -> dict[str, dict[str, float]]:
     """ISIN -> {"equity":.., "bond":..} לפי "שם נייר ערך" כפי שמדווח בגיליונות
     'קרנות סל'/'קרנות נאמנות' עצמם - מיועד כשכבת מוצא-אחרון (ר' תיעוד למעלה),
-    לא כתחליף למאגרים החיצוניים."""
+    לא כתחליף למאגרים החיצוניים. קרן כספית (ר' _REPORT_NAME_CASH_TERMS) או
+    קוד פנימי שאינו ISIN אמיתי (תחילית X9X9) מסווגים כ-0/0 (לא תורמים לאף
+    סיווג) - "מזוהה כמזומן", לא "לא ידוע"."""
     out: dict[str, dict[str, float]] = {}
     for rec in source:
         if rec["Category"] not in ("קרנות סל", "קרנות נאמנות") or rec["מידע"] != "מידע":
@@ -217,11 +230,16 @@ def classify_from_report_names(source: list[dict]) -> dict[str, dict[str, float]
             isin = _isin_key(row.get("מספר נייר ערך"))
             if isin is None or isin in out:
                 continue
+            if isin.startswith("X9X9"):
+                out[isin] = {"equity": 0.0, "bond": 0.0}
+                continue
             cls = _classify_by_report_name(row.get("שם נייר ערך"))
             if cls == "equity":
                 out[isin] = {"equity": 1.0, "bond": 0.0}
             elif cls == "bond":
                 out[isin] = {"equity": 0.0, "bond": 1.0}
+            elif cls == "cash":
+                out[isin] = {"equity": 0.0, "bond": 0.0}
     return out
 
 
