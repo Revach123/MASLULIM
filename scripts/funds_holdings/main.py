@@ -30,6 +30,7 @@ from .interest import build_interest
 from .isin_swap import build_isin_swap
 from .kashrut_rank import NO_KASHRUT, build_kashrut_by_num, build_track_kashrut
 from .sheet_source import build_source
+from .track_pct_normalize import normalize_track_pct
 from .tracks_reference import fetch_tracks, track_key
 
 
@@ -38,6 +39,11 @@ def build_master_table(
 ) -> tuple[list[dict], dict[str, list[dict]], dict[str, list[dict]]]:
     files = get_file_list(reports_dir)
     source = build_source(files)
+
+    # חלק מהחברות מדווחות "שיעור מסך נכסי ההשקעה" כ-% מכל נכסי הקובץ (כל
+    # המסלולים יחד), לא % מהמסלול עצמו - ר' תיעוד ב-track_pct_normalize.py.
+    rescaled = normalize_track_pct(source)
+    print(f"[main] {len(rescaled)} מסלולים נורמלו (שיעור מסך נכסי ההשקעה לא הסתכם ל-100%)")
 
     funds_ref = build_funds_reference()
     print(f"[main] {len(funds_ref)} קרנות מ-נתוני קרנות (revach)")
@@ -167,6 +173,11 @@ def build_master_table(
 
     for key, tickers in unresolved_swap_tickers.items():
         row_for(key)["סוואפ_מדד_לטיפול"] = sorted(tickers)
+
+    # שקיפות: "שיעור מסך נכסי ההשקעה" של המסלול הזה לא הסתכם ל-100% בדוח
+    # המקורי, ותוקן במכפיל - ר' track_pct_normalize.py.
+    for key, scale in rescaled.items():
+        row_for(key)["מכפיל_נורמליזציה"] = round(scale, 2)
 
     # מסלול בלי שום נתוני החזקות בדוחות (לא ב-funds בכלל) = "בלי כשרות",
     # לא "לא ידוע" - אותו עיקרון כמו קרן שלא זוהתה (kashrut_rank.py).
