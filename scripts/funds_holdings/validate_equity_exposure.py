@@ -13,7 +13,8 @@ from pathlib import Path
 
 from .category_pct import build_category_pct
 from .derivatives_exposure import (
-    FUTURES_CATEGORY, SWAP_CATEGORY, build_derivatives_exposure, total_assets_by_key,
+    FUTURES_CATEGORY, OPTIONS_LISTED_CATEGORY, OPTIONS_OTC_CATEGORY, SWAP_CATEGORY,
+    build_derivatives_exposure, total_assets_by_key,
 )
 from .excel_io import to_ratio
 from .file_list import get_file_list
@@ -32,9 +33,10 @@ from .tracks_reference import fetch_tracks, track_key
 EQUITY_UNDERLYING = 'מניות לרבות מדדי מניות'
 FUT_BASE_COL = "נכס בסיס"
 SWAP_TYPE_COL = "סוג הנכס"
+OPT_BASE_COL = "נכס בסיס"
 
 DIRECT_EQUITY_CATEGORIES = ("מניות מבכ ויהש", "לא סחיר מניות מבכ ויהש")
-OPTIONS_CATEGORIES = ("אופציות", "לא סחיר אופציות")
+OPTIONS_CATEGORIES = (OPTIONS_LISTED_CATEGORY, OPTIONS_OTC_CATEGORY)
 EQUITY_FUND_SIVEGS = ("מחקה - מניות בארץ", "מחקה - מניות בחו\"ל")
 
 
@@ -119,6 +121,16 @@ def compute_equity_totals(reports_dir: Path, tracks: list[dict]):
     fut_new = _equity_derivative_pct(source, FUTURES_CATEGORY, FUT_BASE_COL, use_fixed=True)
     swap_old = _equity_derivative_pct(source, SWAP_CATEGORY, SWAP_TYPE_COL, use_fixed=False)
     swap_new = _equity_derivative_pct(source, SWAP_CATEGORY, SWAP_TYPE_COL, use_fixed=True)
+    opt_listed_old = _equity_derivative_pct(source, OPTIONS_LISTED_CATEGORY, OPT_BASE_COL, use_fixed=False)
+    opt_listed_new = _equity_derivative_pct(source, OPTIONS_LISTED_CATEGORY, OPT_BASE_COL, use_fixed=True)
+    opt_otc_old = _equity_derivative_pct(source, OPTIONS_OTC_CATEGORY, OPT_BASE_COL, use_fixed=False)
+    opt_otc_new = _equity_derivative_pct(source, OPTIONS_OTC_CATEGORY, OPT_BASE_COL, use_fixed=True)
+
+    def _opt_old(key):
+        return opt_listed_old.get(key, 0.0) + opt_otc_old.get(key, 0.0)
+
+    def _opt_new(key):
+        return opt_listed_new.get(key, 0.0) + opt_otc_new.get(key, 0.0)
 
     official = {}
     for t in tracks:
@@ -138,15 +150,14 @@ def compute_equity_totals(reports_dir: Path, tracks: list[dict]):
     for key in keys:
         cats = category_pct.get(key, {})
         direct = sum(cats.get(c, 0.0) for c in DIRECT_EQUITY_CATEGORIES)
-        options = sum(cats.get(c, 0.0) for c in OPTIONS_CATEGORIES)
         siveg = il_sums.get(key, {})
         funds_eq = sum(v for k, v in siveg.items() if any(s in k for s in EQUITY_FUND_SIVEGS))
         foreign_eq = sum(v for k, v in foreign_equity.get(key, {}).items()
                           if any(s in k for s in EQUITY_FUND_SIVEGS))
 
-        base = direct + options + funds_eq
-        old_total = base + fut_old.get(key, 0.0) + swap_old.get(key, 0.0)
-        deriv_only = base + fut_new.get(key, 0.0) + swap_new.get(key, 0.0)
+        base = direct + funds_eq
+        old_total = base + fut_old.get(key, 0.0) + swap_old.get(key, 0.0) + _opt_old(key)
+        deriv_only = base + fut_new.get(key, 0.0) + swap_new.get(key, 0.0) + _opt_new(key)
         full = deriv_only + foreign_eq
         rows.append((key, official[key], old_total, deriv_only, full))
 
@@ -179,7 +190,7 @@ def main():
 
     print(f"\nMAE (שגיאה ממוצעת מוחלטת מול הרשמי), {len(rows)} מסלולים:")
     print(f"  שיטה ישנה (שווי הוגן, בלי ETF זרות):      {mae(2)*100:.3f} נק' אחוז")
-    print(f"  + תיקון נגזרים (נוציונלי):                {mae(3)*100:.3f} נק' אחוז")
+    print(f"  + תיקון נגזרים (נוציונלי+דלתא לאופציות):  {mae(3)*100:.3f} נק' אחוז")
     print(f"  + תיקון נגזרים + קרנות ETF זרות:          {mae(4)*100:.3f} נק' אחוז")
     i1, w1, s1 = compare(2, 3)
     print(f"  תיקון נגזרים בלבד מול ישן: שופר {i1} | הורע {w1} | ללא שינוי {s1}")

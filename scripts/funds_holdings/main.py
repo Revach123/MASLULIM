@@ -13,7 +13,9 @@ from .bonds_detail import build_bonds_detail
 from .bonds_heter_reference import build_bonds_heter_by_isin
 from .bonds_rank import build_bonds_rank
 from .category_pct import build_category_pct
-from .derivatives_exposure import DERIVATIVE_CATEGORIES, build_derivatives_exposure
+from .derivatives_exposure import (
+    DERIVATIVE_CATEGORIES, build_derivatives_exposure, collect_unresolved_swap_tickers,
+)
 from .file_list import get_file_list
 from .foreign_etf_reference import (
     build_foreign_equity, build_isin_fractions, classify_from_report_names,
@@ -58,6 +60,12 @@ def build_master_table(
         for cat in DERIVATIVE_CATEGORIES:
             if cat in cols:
                 d[cat] = cols[cat]
+
+    # טיקרים של סוואפ-מדד שלא נמצא להם מקור מחיר עדכני (revach123/INDICES) -
+    # לא נכנס לחישוב עצמו (שם נופלים בחזרה למחיר-בפתיחת-העסקה), אלא לדגל
+    # "לטיפול" בדשבורד - כדי שאפשר יהיה לעקוב מתי מתווסף מקור לטיקר חדש.
+    unresolved_swap_tickers = collect_unresolved_swap_tickers(source)
+    print(f"[main] {len(unresolved_swap_tickers)} מסלולים עם טיקר סוואפ-מדד לא ממופה")
 
     il_sums = build_funds_il(funds, funds_ref)
 
@@ -156,6 +164,9 @@ def build_master_table(
 
     for key, level in track_kashrut.items():
         row_for(key)["כשרות"] = level
+
+    for key, tickers in unresolved_swap_tickers.items():
+        row_for(key)["סוואפ_מדד_לטיפול"] = sorted(tickers)
 
     # מסלול בלי שום נתוני החזקות בדוחות (לא ב-funds בכלל) = "בלי כשרות",
     # לא "לא ידוע" - אותו עיקרון כמו קרן שלא זוהתה (kashrut_rank.py).
