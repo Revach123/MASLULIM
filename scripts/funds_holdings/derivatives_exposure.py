@@ -62,6 +62,9 @@
 """
 from .excel_io import to_ratio
 from .sheet_source import PCT_COL
+from .option_delta_pricing import resolve_option_delta
+from .option_ticker_parse import is_call_option, parse_underlying
+from .swap_index_pricing import resolve_current_price
 
 FAIR_VALUE_COL = 'שווי הוגן (באלפי ש"ח)'
 SWAP_NET_FAIR_VALUE_COL = 'שווי הוגן (נטו באלפי ש"ח)'
@@ -87,7 +90,10 @@ LEVERAGE_CAP = 75.0
 
 FUTURES_CATEGORY = "חוזים עתידיים"
 SWAP_CATEGORY = "לא סחיר נגזרים אחרים"
-DERIVATIVE_CATEGORIES = (FUTURES_CATEGORY, SWAP_CATEGORY)
+OPTIONS_LISTED_CATEGORY = "אופציות"
+OPTIONS_OTC_CATEGORY = "לא סחיר אופציות"
+OPTIONS_CATEGORIES = (OPTIONS_LISTED_CATEGORY, OPTIONS_OTC_CATEGORY)
+DERIVATIVE_CATEGORIES = (FUTURES_CATEGORY, SWAP_CATEGORY, *OPTIONS_CATEGORIES)
 
 FUT_UNITS_COL = "ערך נקוב (יחידות)"
 FUT_FX_COL = "שער חליפין"
@@ -99,6 +105,9 @@ SWAP_LEGS = (
     {"units": "ערך נקוב (רגל 2)", "fx": "שער חליפין (רגל 2)", "currency": "מטבע פעילות (רגל 2)"},
 )
 SWAP_UNDERLYING_PRICE_COL = "שער נכס הבסיס במועד ההתקשרות בעסקה"
+SWAP_TICKER_COL = "טיקר"
+SWAP_ASSET_TYPE_COL = "סוג הנכס"
+SWAP_EQUITY_ASSET_TYPE = "מניות לרבות מדדי מניות"
 # שם העמודה עצמו (לפי החוזר: שער החליפין/נכס הבסיס לנגזרים לא סחירים מוצג
 # "נכון למועד ההתקשרות בעסקה") מאשר שזהו מחיר נכס הבסיס *בפתיחת העסקה*, לא
 # מחיר שוק עדכני - זה בדיוק ההסבר לכך שרגל1×מחיר זה שווה לרגל2 (שתי הרגליים
@@ -126,6 +135,23 @@ FOREIGN_FX_PLACEHOLDER_TOL = 0.01
 # לא רמת מדד גולמית. יחידות בסדר גודל מיליונים + הנוסחה הרגילה (בלי /100)
 # מייצרות חשיפה מנופחת פי 100 בדיוק - מזוהה לפי שער == 100.0 בדיוק.
 PAR_QUOTED_PRICE = 100.0
+
+# אופציות ("אופציות"/"לא סחיר אופציות"): לפי הרגולטור (אושר בבדיקה, לא
+# הנחה - ר' חיפוש רשת 9.28.2026), החשיפה מחושבת לפי מודל בלק-שולס עם דלתא -
+# לא לפי units×מחיר פשוט כמו חוזים עתידיים (ל"שער נייר הערך" באופציה יש
+# משמעות אחרת: זו פרמיית האופציה עצמה, לא מחיר נכס הבסיס - אומת בפועל:
+# units×שער/100×fx ≈ שווי הוגן בדיוק, מוסכמת אגורות כמו PAR_QUOTED_PRICE).
+# דלתא מחושבת ב-option_delta_pricing.py (תנודתיות ריאליזד כקירוב ל-IV,
+# ר' אזהרה שם). טיקר נכס-הבסיס מזוהה מ-"שם נייר ערך" (option_ticker_parse,
+# אין עמודת טיקר נפרדת כמו בסוואפים) - כשלא מזוהה, נופלים לשווי-הוגן.
+OPT_NAME_COL = "שם נייר ערך"
+OPT_UNDERLYING_COL = "נכס בסיס"
+OPT_EQUITY_UNDERLYING = "מניות לרבות מדדי מניות"
+OPT_STRIKE_COL = "שער מימוש"
+OPT_EXPIRY_COL = "תאריך פקיעה"
+OPT_UNITS_COL = "ערך נקוב (יחידות)"
+OPT_FX_COL = "שער חליפין"
+OPT_CURRENCY_COL = "מטבע פעילות"
 
 
 def _normalize_fx(currency, fx: float | None) -> float | None:
@@ -223,13 +249,23 @@ def _swap_exposure(source: list[dict], total_assets: dict[str, float]) -> dict[s
     שהתקבלה לשווי ההוגן נטו שאותה שורה בדיוק מדווחת - יחס גבוה מדי מסמן קנה
     מידה לא אמין, ונופלים לערך המדווח (PCT_COL) לשורה הזו בלבד. תקרת
     ה-SANITY_CAP הקיימת (ברמת שורה) ותקרת מסלול נוספת (סכום מצטבר על פני כל
-    שורות ה-swap במסלול) נשארות כרשת ביטחון אחרונה."""
+    שורות ה-swap במסלול) נשארות כרשת ביטחון אחרונה.
+
+    שיפור: "שער נכס הבסיס במועד ההתקשרות בעסקה" הוא מחיר *בפתיחת* העסקה
+    (ר' הערת המודול), לא מחיר עדכני - לחשיפה נכונה ליום הדוח משתמשים במקום
+    זאת, כשאפשר, במחיר המדד החי נכון לתאריך הדוח (swap_index_pricing, דרך
+    עמודת "טיקר" ומיפוי revach123/INDICES). כשהטיקר לא ממופה (בעיקר סלים
+    קנייניים בנקאיים - ר' swap_ticker_map.csv שם) נופלים בחזרה לשיטת המחיר-
+    בפתיחת-העסקה הקיימת. במקרה הזה leg2 (שקבוע לפי בנייה למחיר הפתיחה) כבר
+    לא רלוונטי כעוגן לרגל 1 המתומחרת-חי - שתיהן מודדות דברים שונים בכוונה
+    (נוציונל היסטורי מול חשיפה נוכחית) - לכן לא ממוצעים ביניהן."""
     notional_sums: dict[str, float] = {}
     fv_sums: dict[str, float] = {}
     leg1_col, leg2_col = SWAP_LEGS
     for rec in source:
         if rec["Category"] != SWAP_CATEGORY or rec["מידע"] != "מידע":
             continue
+        report_date = rec.get("ReportMonth")
         for row in rec["Clean"]:
             key = row.get("מפתח")
             total = total_assets.get(key) if key is not None else None
@@ -260,7 +296,15 @@ def _swap_exposure(source: list[dict], total_assets: dict[str, float]) -> dict[s
             ):
                 leg1_val = leg1_priced
 
-            candidates = [v for v in (leg1_val, leg2_val) if v is not None]
+            current_price, _index_id = resolve_current_price(row.get(SWAP_TICKER_COL), report_date)
+            leg1_live = (abs(units1 * fx1 * current_price) / 1000
+                         if units1 is not None and fx1 is not None and current_price is not None else None)
+
+            if leg1_live is not None:
+                candidates = [leg1_live]  # לא ממוצעים עם leg2 - ר' הערת הפונקציה
+            else:
+                candidates = [v for v in (leg1_val, leg2_val) if v is not None]
+
             line_ratio = None
             if candidates:
                 notional_thousands = sum(candidates) / len(candidates)
@@ -280,18 +324,99 @@ def _swap_exposure(source: list[dict], total_assets: dict[str, float]) -> dict[s
     }
 
 
+def collect_unresolved_swap_tickers(source: list[dict]) -> dict[str, set[str]]:
+    """מפתח -> סט טיקרים של סוואפ-מדד (סוג הנכס == מניות לרבות מדדי מניות)
+    שלא נמצא להם מיפוי ב-swap_ticker_map.csv (revach123/INDICES) - בין אם
+    כי אין להם מקור נתונים ציבורי (סלים קנייניים בנקאיים, ר' swap_ticker_map.csv
+    לסיבה המדויקת לכל טיקר) ובין אם כי טיקר חדש שלא נראה עדיין בסריקה שבנתה
+    את המיפוי. מיועד לדגל "לטיפול" בדשבורד - לא משפיע על חישוב החשיפה עצמו."""
+    from .swap_index_pricing import _load_ticker_map, normalize_ticker
+
+    try:
+        ticker_map = _load_ticker_map()
+    except Exception:
+        return {}
+
+    out: dict[str, set[str]] = {}
+    for rec in source:
+        if rec["Category"] != SWAP_CATEGORY or rec["מידע"] != "מידע":
+            continue
+        for row in rec["Clean"]:
+            if row.get(SWAP_ASSET_TYPE_COL) != SWAP_EQUITY_ASSET_TYPE:
+                continue
+            key = row.get("מפתח")
+            raw_ticker = row.get(SWAP_TICKER_COL)
+            norm = normalize_ticker(raw_ticker)
+            if key is None or not norm or norm in ticker_map:
+                continue
+            out.setdefault(key, set()).add(str(raw_ticker).strip())
+    return out
+
+
+def _options_exposure(source: list[dict], total_assets: dict[str, float], category: str) -> dict[str, float]:
+    """דלתא×נוציונל לקטגוריית אופציה אחת (listed/OTC בנפרד - שם השדה
+    ה"מפתח" תמיד "Category" של הגיליון, לא משנה איזה). רק שורות נכס-בסיס
+    מניות (OPT_EQUITY_UNDERLYING) - מט"ח/ריבית/אחר נשארים בשיטה הישנה,
+    מחוץ להיקף (לא אופציות על מניות, לא חלק מהתיקון הזה)."""
+    sums: dict[str, float] = {}
+    for rec in source:
+        if rec["Category"] != category or rec["מידע"] != "מידע":
+            continue
+        report_date = rec.get("ReportMonth")
+        for row in rec["Clean"]:
+            key = row.get("מפתח")
+            total = total_assets.get(key) if key is not None else None
+            if not total:
+                continue
+            row_pct = to_ratio(row.get(PCT_COL)) or 0.0
+
+            if row.get(OPT_UNDERLYING_COL) != OPT_EQUITY_UNDERLYING:
+                sums[key] = sums.get(key, 0.0) + row_pct
+                continue
+
+            name = row.get(OPT_NAME_COL)
+            ticker, _pattern = parse_underlying(str(name)) if name else (None, None)
+            is_call = is_call_option(str(name)) if name else None
+            strike = _num(row.get(OPT_STRIKE_COL))
+            expiry_raw = row.get(OPT_EXPIRY_COL)
+            expiry = expiry_raw.date() if hasattr(expiry_raw, "date") else None
+            units = _num(row.get(OPT_UNITS_COL))
+            fx = _normalize_fx(row.get(OPT_CURRENCY_COL), _num(row.get(OPT_FX_COL)))
+
+            line_ratio = None
+            if ticker is not None and is_call is not None and units is not None and fx is not None:
+                delta, spot = resolve_option_delta(ticker, strike, expiry, report_date, is_call)
+                if delta is not None and spot is not None:
+                    notional_thousands = units * delta * spot * fx / 1000
+                    line_ratio = notional_thousands / total
+                    fv = _num(row.get(FAIR_VALUE_COL))
+                    fv_ratio = (fv / total) if fv is not None else None
+                    if fv_ratio is not None and abs(line_ratio) > LEVERAGE_CAP * abs(fv_ratio):
+                        line_ratio = None
+            if line_ratio is None or abs(line_ratio) > SANITY_CAP:
+                line_ratio = row_pct
+            sums[key] = sums.get(key, 0.0) + line_ratio
+    return sums
+
+
 def build_derivatives_exposure(source: list[dict]) -> dict[str, dict[str, float]]:
-    """מפתח -> {קטגוריה: שיעור חשיפה אמיתי}, לשתי הקטגוריות בלבד (חוזים
-    עתידיים, לא סחיר נגזרים אחרים). מיועד להחליף את הערכים המבוססי-שווי-הוגן
-    שמחשב category_pct.build_category_pct לאותן שתי קטגוריות בדיוק - ולא
-    לגעת בשאר הקטגוריות."""
+    """מפתח -> {קטגוריה: שיעור חשיפה אמיתי}, לארבע הקטגוריות (חוזים עתידיים,
+    לא סחיר נגזרים אחרים, אופציות, לא סחיר אופציות). מיועד להחליף את הערכים
+    המבוססי-שווי-הוגן שמחשב category_pct.build_category_pct לאותן קטגוריות
+    בדיוק - ולא לגעת בשאר הקטגוריות."""
     total_assets = total_assets_by_key(source)
     futures = _futures_exposure(source, total_assets)
     swaps = _swap_exposure(source, total_assets)
+    options_listed = _options_exposure(source, total_assets, OPTIONS_LISTED_CATEGORY)
+    options_otc = _options_exposure(source, total_assets, OPTIONS_OTC_CATEGORY)
 
     out: dict[str, dict[str, float]] = {}
     for key, val in futures.items():
         out.setdefault(key, {})[FUTURES_CATEGORY] = val
     for key, val in swaps.items():
         out.setdefault(key, {})[SWAP_CATEGORY] = val
+    for key, val in options_listed.items():
+        out.setdefault(key, {})[OPTIONS_LISTED_CATEGORY] = val
+    for key, val in options_otc.items():
+        out.setdefault(key, {})[OPTIONS_OTC_CATEGORY] = val
     return out

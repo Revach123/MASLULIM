@@ -1,0 +1,129 @@
+"""חשיפה כלכלית אמיתית לאופציות: לפי נוסחת בלק-שולס עם דלתא, כפי שהרגולטור
+דורש (אומת ב-9.28.2026 דרך תיעוד פומבי של רשות שוק ההון - "בעבור אופציות,
+היתרה מחושבת על-פי מודל בלק אנד שולס"), לא לפי "שיעור מסך נכסי ההשקעה"
+המדווח (שהוא שווי הוגן/פרמיה, לא חשיפה כלכלית - אותו סוג בעיה שתוקן קודם
+לחוזים עתידיים/סוואפים ב-derivatives_exposure.py).
+
+אזהרת קירוב חשובה: בלק-שולס דורש תנודתיות גלומה (implied volatility) של
+האופציה הספציפית - לא זמינה בשום מקור חינמי לרוחב ~70 השמות שמופיעים
+כנכס-בסיס באופציות ב-MASLULIM. במקום זאת, מוערכת **תנודתיות ריאליזד**
+היסטורית (60 ימי מסחר, מ-revach123/INDICES/data/prices/singles) - קירוב
+סביר אך *לא* implied vol אמיתי (אין פרמיית-סיכון-תנודתיות, פחות רגיש
+לציפיות שוק עתידיות). התוצאה קירוב לדלתא האמיתית, לא דלתא מדויקת.
+
+ריבית חסרת סיכון: קבוע קבוע (לא נמשך חי) - השפעתה על דלתא קטנה בהרבה
+מהשפעת ה-moneyness/תנודתיות, ולא הצדיק תלות-נתונים נוספת בשלב הזה.
+"""
+import csv
+import io
+import math
+from datetime import date, datetime
+from functools import lru_cache
+
+import requests
+
+RAW_BASE = "https://raw.githubusercontent.com/Revach123/INDICES/main"
+SINGLE_PRICE_URL_TMPL = f"{RAW_BASE}/data/prices/singles/{{symbol}}.csv"
+TIMEOUT = 20
+
+REALIZED_VOL_WINDOW_DAYS = 60
+RISK_FREE_RATE = 0.04  # קירוב קבוע - ר' אזהרה בראש הקובץ
+TRADING_DAYS_PER_YEAR = 252
+
+# מקלף "SPXW"/"NDXP" (root של אופציות שבועיות) לנכס-הבסיס האמיתי שלהן
+# ("^GSPC"/"^NDX") - הרוט עצמו אינו טיקר נסחר. ר' option_ticker_parse.py.
+UNDERLYING_ALIAS = {
+    "SPXW": "^GSPC",
+    "NDXP": "^NDX",
+}
+
+
+def _safe_filename(symbol: str) -> str:
+    import re
+    return re.sub(r"[^A-Za-z0-9._-]", "_", symbol)
+
+
+@lru_cache(maxsize=128)
+def _load_price_history(symbol: str) -> tuple[tuple[date, float], ...]:
+    symbol = UNDERLYING_ALIAS.get(symbol, symbol)
+    url = SINGLE_PRICE_URL_TMPL.format(symbol=_safe_filename(symbol))
+    r = requests.get(url, timeout=TIMEOUT)
+    r.raise_for_status()
+    out = []
+    for row in csv.DictReader(io.StringIO(r.text)):
+        try:
+            d = datetime.strptime(row["date"], "%Y-%m-%d").date()
+            c = float(row["close"])
+        except (ValueError, KeyError, TypeError):
+            continue
+        out.append((d, c))
+    out.sort()
+    return tuple(out)
+
+
+def price_as_of(symbol: str, as_of: date) -> float | None:
+    try:
+        bars = _load_price_history(symbol)
+    except Exception:
+        return None
+    best = None
+    for d, close in bars:
+        if d > as_of:
+            break
+        best = close
+    return best
+
+
+def realized_vol_as_of(symbol: str, as_of: date, window: int = REALIZED_VOL_WINDOW_DAYS) -> float | None:
+    """תנודתיות שנתית מ-log returns של window ימי המסחר האחרונים *לפני* as_of
+    (לא כולל as_of עצמו ואחריו - נמנע look-ahead bias)."""
+    try:
+        bars = _load_price_history(symbol)
+    except Exception:
+        return None
+    closes = [c for d, c in bars if d < as_of]
+    if len(closes) < window + 1:
+        return None
+    closes = closes[-(window + 1):]
+    log_returns = [math.log(closes[i] / closes[i - 1]) for i in range(1, len(closes)) if closes[i - 1] > 0]
+    if len(log_returns) < window // 2:
+        return None
+    mean = sum(log_returns) / len(log_returns)
+    variance = sum((r - mean) ** 2 for r in log_returns) / (len(log_returns) - 1)
+    return math.sqrt(variance * TRADING_DAYS_PER_YEAR)
+
+
+def _norm_cdf(x: float) -> float:
+    return 0.5 * (1 + math.erf(x / math.sqrt(2)))
+
+
+def black_scholes_delta(spot: float, strike: float, years_to_expiry: float,
+                         vol: float, is_call: bool, r: float = RISK_FREE_RATE) -> float | None:
+    """דלתא (0..1 ל-call, -1..0 ל-put). None אם הקלטים לא תקינים (פקיעה
+    עברה, תנודתיות/מחיר לא חיוביים)."""
+    if spot is None or strike is None or vol is None:
+        return None
+    if spot <= 0 or strike <= 0 or vol <= 0 or years_to_expiry <= 0:
+        return None
+    d1 = (math.log(spot / strike) + (r + 0.5 * vol * vol) * years_to_expiry) / (vol * math.sqrt(years_to_expiry))
+    n_d1 = _norm_cdf(d1)
+    return n_d1 if is_call else n_d1 - 1.0
+
+
+def resolve_option_delta(ticker: str | None, strike: float | None, expiry: date | None,
+                          report_date: date | None, is_call: bool) -> tuple[float | None, float | None]:
+    """(delta, current_spot_price) - None,None אם חסר טיקר/נתון או שהחישוב
+    לא אמין. קורא ל-caller ליפול חזרה לשיטת שווי-הוגן הקיימת."""
+    if not ticker or strike is None or expiry is None or report_date is None:
+        return None, None
+    years = (expiry - report_date).days / 365.25
+    if years <= 0:
+        return None, None
+    spot = price_as_of(ticker, report_date)
+    if spot is None:
+        return None, None
+    vol = realized_vol_as_of(ticker, report_date)
+    if vol is None:
+        return None, None
+    delta = black_scholes_delta(spot, strike, years, vol, is_call)
+    return delta, spot
