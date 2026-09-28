@@ -94,6 +94,15 @@ def compute_equity_totals(reports_dir: Path, tracks: list[dict]):
         print(f"[validate] שכבת SEC N-PORT חי נכשלה (מדלג): {e}")
     print(f"[validate] {len(isin_fractions)} ISIN מסווגים סה\"כ (+N-PORT חי)")
 
+    still_missing_yahoo = collect_unclassified_foreign_isins(funds, isin_fractions)
+    try:
+        from .yahoo_fund_reference import build_isin_fractions_via_yahoo
+        for isin, frac in build_isin_fractions_via_yahoo(still_missing_yahoo).items():
+            isin_fractions.setdefault(isin, frac)
+    except Exception as e:
+        print(f"[validate] שכבת Yahoo/Morningstar נכשלה (מדלג): {e}")
+    print(f"[validate] {len(isin_fractions)} ISIN מסווגים סה\"כ (+Yahoo/Morningstar)")
+
     still_missing_2 = collect_unclassified_foreign_isins(funds, isin_fractions)
     try:
         for isin, frac in classify_via_openfigi_names(still_missing_2).items():
