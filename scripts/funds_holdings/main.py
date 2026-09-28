@@ -30,7 +30,6 @@ from .interest import build_interest
 from .isin_swap import build_isin_swap
 from .kashrut_rank import NO_KASHRUT, build_kashrut_by_num, build_track_kashrut
 from .sheet_source import build_source
-from .track_backfill import backfill_missing_active_tracks
 from .tracks_reference import fetch_tracks, track_key
 
 
@@ -39,12 +38,6 @@ def build_master_table(
 ) -> tuple[list[dict], dict[str, list[dict]], dict[str, list[dict]]]:
     files = get_file_list(reports_dir)
     source = build_source(files)
-
-    # מסלול "פעיל" ברפרנס הרשמי שריק לגמרי בדוח העדכני ביותר (0 שורות בכל
-    # גיליון) - נעלם מהדיווח המפורט, לא בהכרח נסגר. ר' תיעוד ב-track_backfill.py.
-    extra_records, backfilled_from = backfill_missing_active_tracks(reports_dir, files, source, tracks)
-    source.extend(extra_records)
-    print(f"[main] {len(backfilled_from)} מסלולים מולאו מרבעון ישן יותר (נעדרו מהדוח העדכני)")
 
     funds_ref = build_funds_reference()
     print(f"[main] {len(funds_ref)} קרנות מ-נתוני קרנות (revach)")
@@ -161,12 +154,6 @@ def build_master_table(
 
     for key, tickers in unresolved_swap_tickers.items():
         row_for(key)["סוואפ_מדד_לטיפול"] = sorted(tickers)
-
-    # שקיפות: החישוב למסלול הזה מבוסס על רבעון ישן יותר (נעדר לגמרי מהדוח
-    # העדכני) - ר' track_backfill.py. שם הקובץ (לא רק התאריך) כדי שאפשר יהיה
-    # לעקוב בדיוק מאיפה הנתון הגיע.
-    for key, filename in backfilled_from.items():
-        row_for(key)["נתונים_מרבעון_קודם"] = filename
 
     # מסלול בלי שום נתוני החזקות בדוחות (לא ב-funds בכלל) = "בלי כשרות",
     # לא "לא ידוע" - אותו עיקרון כמו קרן שלא זוהתה (kashrut_rank.py).

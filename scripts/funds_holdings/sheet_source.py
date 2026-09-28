@@ -105,42 +105,34 @@ def _norm_sheet(data: list[list], legal_id: str) -> tuple[str, list[dict]]:
     return "מידע", out_rows  # גם 0 שורות = "מידע" (גיליון ריק לגיטימי)
 
 
-def build_source_for_file(f: ReportFile) -> list[dict]:
-    """Open + Combine לקובץ בודד - מפורק החוצה מ-build_source כדי ש-
-    track_backfill.py יוכל להריץ אותו על קבצים ישנים יותר (לא רק העדכני
-    ביותר לכל חברה) בלי לשכפל את הלוגיקה."""
-    legal_id = f.name.split("_", 1)[0]
-    out: list[dict] = []
-    try:
-        sheets = read_workbook_sheets(f.path)
-    except Exception as e:  # קובץ פגום - לוג, לא מפיל את כל הריצה
-        logger.error("כשל בפתיחת %s: %r", f.path, e)
-        return [{
-            "Category": "_קובץ", "LegalId": legal_id, "מידע": "שגיאה",
-            "Clean": [{"מפתח": f"{legal_id}_שגיאה", "סטטוס": "שגיאה",
-                       "סיבה": f"כשל בפתיחת הקובץ: {e!r}"}],
-        }]
-
-    for name, data in sheets.items():
-        if canon(name) not in TARGET_SHEETS:
-            continue
-        try:
-            status, rows = _norm_sheet(data, legal_id)
-        except Exception as e:
-            logger.error("כשל בנרמול %s / %s: %r", f.path, name, e)
-            status, rows = "שגיאה", [{"מפתח": f"{legal_id}_שגיאה", "סטטוס": "שגיאה",
-                                      "סיבה": f"שגיאה: {e!r}"}]
-        out.append({
-            "Category": canon(name), "LegalId": legal_id, "מידע": status, "Clean": rows,
-            "ReportMonth": f.report_month,
-        })
-    return out
-
-
 def build_source(files: list[ReportFile]) -> list[dict]:
     """Open + Combine: לכל קובץ, לכל גיליון ברשימה הלבנה - רשומה אחת.
     Combined[i] = {"Category", "LegalId", "מידע", "Clean": [rows...]}."""
     combined: list[dict] = []
     for f in files:
-        combined.extend(build_source_for_file(f))
+        legal_id = f.name.split("_", 1)[0]
+        try:
+            sheets = read_workbook_sheets(f.path)
+        except Exception as e:  # קובץ פגום - לוג, לא מפיל את כל הריצה
+            logger.error("כשל בפתיחת %s: %r", f.path, e)
+            combined.append({
+                "Category": "_קובץ", "LegalId": legal_id, "מידע": "שגיאה",
+                "Clean": [{"מפתח": f"{legal_id}_שגיאה", "סטטוס": "שגיאה",
+                           "סיבה": f"כשל בפתיחת הקובץ: {e!r}"}],
+            })
+            continue
+
+        for name, data in sheets.items():
+            if canon(name) not in TARGET_SHEETS:
+                continue
+            try:
+                status, rows = _norm_sheet(data, legal_id)
+            except Exception as e:
+                logger.error("כשל בנרמול %s / %s: %r", f.path, name, e)
+                status, rows = "שגיאה", [{"מפתח": f"{legal_id}_שגיאה", "סטטוס": "שגיאה",
+                                          "סיבה": f"שגיאה: {e!r}"}]
+            combined.append({
+                "Category": canon(name), "LegalId": legal_id, "מידע": status, "Clean": rows,
+                "ReportMonth": f.report_month,
+            })
     return combined
