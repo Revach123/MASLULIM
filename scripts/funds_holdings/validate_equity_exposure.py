@@ -28,6 +28,7 @@ from .funds_reference import build_funds_reference
 from .funds_il import build_funds_il
 from .isin_swap import build_isin_swap
 from .sheet_source import PCT_COL, build_source
+from .track_pct_normalize import normalize_track_pct
 from .tracks_reference import fetch_tracks, track_key
 
 EQUITY_UNDERLYING = 'מניות לרבות מדדי מניות'
@@ -76,6 +77,8 @@ def _equity_derivative_pct(source, category, base_col, use_fixed):
 def compute_equity_totals(reports_dir: Path, tracks: list[dict]):
     files = get_file_list(reports_dir)
     source = build_source(files)
+    rescaled = normalize_track_pct(source)
+    print(f"[validate] {len(rescaled)} מסלולים נורמלו (שיעור מסך נכסי ההשקעה לא הסתכם ל-100%)")
 
     funds_ref = build_funds_reference()
     isin_swap = build_isin_swap(funds_ref)
