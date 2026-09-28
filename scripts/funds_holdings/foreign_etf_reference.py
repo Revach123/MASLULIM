@@ -176,8 +176,9 @@ def build_isin_fractions(etf_universe: list[dict], sec_exposure: list[dict]) -> 
 # ולא רק העדר מונח-אג"ח. מדולג (לא מסווג) כשאין מונח מובהק משני הצדדים.
 _REPORT_NAME_BOND_TERMS = (
     "bond", "treasury", "gilt", "sovereign", "high yiel", "senior loan", "sen.sec",
-    "sen sec", "senior secured", "corp debt", "floating rate", "credit", "govt",
-    "gov bnd", "municipal", "debenture", "clo income",
+    "sen sec", "senior sec", "corp debt", "floating rate", "credit", "govt",
+    "gov bnd", "agg bnd", "municipal", "debenture", "clo income", "debt",
+    "fallen angel", "short dur",
     # מנפיקים/טווחי-מוצר שכל הקרנות בהם הן הכנסה קבועה בלבד תמיד - עובדה
     # יציבה על המותג/הטווח (לא ניחוש על קרן ספציפית, ולא ISIN-ים בודדים):
     # "bluebay" (RBC BlueBay Asset Management - אך ורק אג"ח/קרדיט); "pimco
@@ -191,7 +192,13 @@ _REPORT_NAME_EQUITY_TERMS = (
     "quality", "factor", "equal weight", "msci", "s&p", "sp 500", "russell", "nasdaq",
     "topix", "nikkei", "stoxx", "ftse", "mid cap", "midcap", "small cap", "life scie",
     "discretionary", "discret", "meme", "uranium", "index fund", "index equity",
-    "energy solutions", "resource",
+    "energy solutions", "resource", "defense",
+    # "HOLDRs Trust" - מבנה grantor-trust ישן (כמו UIT) שמחזיק סל מניות סקטור
+    # יחיד בלבד (Merrill Lynch, שהופסקו ב-2011 אך עדיין נסחרים/מדווחים) -
+    # עובדה מבנית קבועה, לא ניחוש. "Select Sector SPDR" - 11 קרנות הסקטור
+    # הקבועות של SPDR (S&P 500 לפי סקטור) - כולן מניות, עובדה קבועה על
+    # טווח המוצר (לא ניחוש על קרן ספציפית).
+    "holdrs", "sector spdr",
 )
 
 # קרנות כספיות/מזומן (money-market) - לא מניות ולא אג"ח, תורמות 0 לשני
