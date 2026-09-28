@@ -28,6 +28,7 @@ from .funds_reference import build_funds_reference
 from .funds_il import build_funds_il
 from .isin_swap import build_isin_swap
 from .sheet_source import PCT_COL, build_source
+from .track_backfill import backfill_missing_active_tracks
 from .tracks_reference import fetch_tracks, track_key
 
 EQUITY_UNDERLYING = 'מניות לרבות מדדי מניות'
@@ -76,6 +77,9 @@ def _equity_derivative_pct(source, category, base_col, use_fixed):
 def compute_equity_totals(reports_dir: Path, tracks: list[dict]):
     files = get_file_list(reports_dir)
     source = build_source(files)
+    extra_records, backfilled_from = backfill_missing_active_tracks(reports_dir, files, source, tracks)
+    source.extend(extra_records)
+    print(f"[validate] {len(backfilled_from)} מסלולים מולאו מרבעון ישן יותר (נעדרו מהדוח העדכני)")
 
     funds_ref = build_funds_reference()
     isin_swap = build_isin_swap(funds_ref)
