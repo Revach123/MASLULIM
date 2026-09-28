@@ -19,6 +19,10 @@ jobs:
           python-version: "3.12"
       - name: Install deps
         run: pip install requests python-calamine
+      - name: TEMP - Debug track status
+        env:
+          REVACH_MATCH_KEY: ${{ secrets.REVACH_MATCH_KEY }}
+        run: python -m scripts.funds_holdings.debug_track_status
       - name: Run main pipeline
         env:
           REVACH_MATCH_KEY: ${{ secrets.REVACH_MATCH_KEY }}
