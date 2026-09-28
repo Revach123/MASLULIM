@@ -60,9 +60,11 @@
    category_pct.build_category_pct - שאר הקטגוריות (מזומן, אג"ח, מניות,
    קרנות...) כבר משקפות שווי שוק אמיתי, אין בהן את הבאג.
 """
+import re
+
 from .excel_io import to_ratio
 from .sheet_source import PCT_COL
-from .option_delta_pricing import resolve_option_delta
+from .option_delta_pricing import price_as_of, resolve_option_delta
 from .option_ticker_parse import is_call_option, parse_underlying
 from .swap_index_pricing import resolve_current_price
 
@@ -99,6 +101,35 @@ FUT_UNITS_COL = "ערך נקוב (יחידות)"
 FUT_FX_COL = "שער חליפין"
 FUT_PRICE_COL = "שער נייר הערך"
 FUT_CURRENCY_COL = "מטבע פעילות"
+FUT_TICKER_COL = "מספר נייר ערך"
+FUT_BASE_COL = "נכס בסיס"
+FUT_EQUITY_UNDERLYING = "מניות לרבות מדדי מניות"
+
+# ניסוי (לא מאומת חיצונית מעבר למה שתועד למטה - לא למזג בלי בדיקת MAE אמיתית):
+# "שער נייר הערך" שלילי בשורת חוזה עתידי הוא בלתי אפשרי מתמטית (רמת מדד לא
+# יכולה להיות שלילית) - נמצא בפועל בדיוק אותו ערך שבור (-129205.21) בכל 5
+# מסלולי ה"קיימות" של מיטב (512065202), בכל רבעון בארכיון, ללא יוצא מהכלל -
+# לא ניתן לכייל "ערך תקין" ממקרה אחר באותו נייר בארכיון (הוא תמיד שבור).
+# מספר נייר הערך במקרה הזה (SLB + אות-חודש + ספרת-שנה, כמו SLBU6/SLBZ6)
+# מזוהה חיצונית (עמוד אחזקות של SPDR S&P 500 ESG ETF, שמחזיק SLBZ6 תחת השם
+# "EMINI S+P500 ESG DEC26") כחוזה E-mini S&P 500 ESG של ה-CME - נופלים
+# למחיר S&P 500 חי (revach123/INDICES, אותו מקור המשמש כבר לתמחור אופציות)
+# עם המכפיל הסטנדרטי של E-mini ($50/נקודה), במקום המחיר המדווח השבור.
+# בדיקת סבירות (~443.749 חוזים, S&P~6879 ב-2026-02-27, פי 50, שער דולר
+# 2.978) נתנה ~455M ש"ח נוציונל מול ~501M ש"ח נכסי המסלול - קרוב מאוד
+# ל"חשיפה למניות" הרשמית (~99%) ותומך בהשערה, אבל המכפיל עצמו (50$) הוא
+# הנחה סבירה (מוסכמת E-mini סטנדרטית) שלא ניתנת לאימות ישיר מהדוח עצמו -
+# ר' תקרת-SANITY_CAP למטה כרשת ביטחון אם ההנחה הזו שגויה.
+_SLB_EMINI_TICKER = re.compile(r"^SLB[A-Z]\d$")
+EMINI_MULTIPLIER_USD = 50.0
+
+
+def _resolve_corrupted_futures_price(ticker, report_date) -> float | None:
+    if not ticker or not _SLB_EMINI_TICKER.match(str(ticker)):
+        return None
+    if report_date is None:
+        return None
+    return price_as_of("^GSPC", report_date)
 
 SWAP_LEGS = (
     {"units": "ערך נקוב (רגל 1)", "fx": "שער חליפין (רגל 1)", "currency": "מטבע פעילות (רגל 1)"},
@@ -202,6 +233,7 @@ def _futures_exposure(source: list[dict], total_assets: dict[str, float]) -> dic
     for rec in source:
         if rec["Category"] != FUTURES_CATEGORY or rec["מידע"] != "מידע":
             continue
+        report_date = rec.get("ReportMonth")
         for row in rec["Clean"]:
             key = row.get("מפתח")
             total = total_assets.get(key) if key is not None else None
@@ -212,6 +244,15 @@ def _futures_exposure(source: list[dict], total_assets: dict[str, float]) -> dic
             fx = _normalize_fx(row.get(FUT_CURRENCY_COL), _num(row.get(FUT_FX_COL)))
             if price is not None and abs(price - PAR_QUOTED_PRICE) < 1e-6:
                 price = price / 100  # רגל-מימון סינתטית במוסכמת ערך-נקוב-100, לא רמת מדד
+
+            price_is_corrupted = False
+            if (price is not None and price < 0
+                    and row.get(FUT_BASE_COL) == FUT_EQUITY_UNDERLYING):
+                live_price = _resolve_corrupted_futures_price(row.get(FUT_TICKER_COL), report_date)
+                if live_price is not None:
+                    price = live_price * EMINI_MULTIPLIER_USD
+                    price_is_corrupted = True
+
             fv = _num(row.get(FAIR_VALUE_COL))
             fv_ratio = (fv / total) if fv is not None else None
 
@@ -219,7 +260,10 @@ def _futures_exposure(source: list[dict], total_assets: dict[str, float]) -> dic
             if units is not None and price is not None and fx is not None:
                 notional_thousands = units * price * fx / 1000  # לאלפי ש"ח, כמו שווי הוגן
                 line_ratio = notional_thousands / total
-                if fv_ratio is not None and abs(line_ratio) > LEVERAGE_CAP * abs(fv_ratio):
+                # כשהמחיר המדווח שבור (price_is_corrupted), ה-fv המדווח לאותה
+                # שורה נגזר מאותו מחיר שבור - לא עוגן אמין להשוואה כאן, בניגוד
+                # לכל שורה רגילה אחרת. נשארת רק תקרת-SANITY_CAP המוחלטת למטה.
+                if not price_is_corrupted and fv_ratio is not None and abs(line_ratio) > LEVERAGE_CAP * abs(fv_ratio):
                     line_ratio = None  # קנה מידה לא סביר ביחס לשווי ההוגן של השורה עצמה
             if line_ratio is None or abs(line_ratio) > SANITY_CAP:
                 line_ratio = fv_ratio if fv_ratio is not None else 0.0
