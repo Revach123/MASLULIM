@@ -19,6 +19,27 @@ jobs:
           python-version: "3.12"
       - name: Install deps
         run: pip install requests python-calamine yfinance
+      - name: TEMP - Diagnose Invesco ISIN IE00B3YCGJ38 classification
+        env:
+          REVACH_MATCH_KEY: ${{ secrets.REVACH_MATCH_KEY }}
+          PAT: ${{ secrets.PAT }}
+        run: |
+          python3 -c "
+          from scripts.funds_holdings.foreign_etf_reference import (
+              fetch_etf_universe, fetch_sec_etf_exposure, build_isin_fractions, _isin_key,
+          )
+          target = 'IE00B3YCGJ38'
+          universe = fetch_etf_universe()
+          print('universe size:', len(universe))
+          hit = [r for r in universe if _isin_key(r.get('isin')) == target]
+          print('in etf universe:', hit)
+          sec = fetch_sec_etf_exposure()
+          print('sec size:', len(sec))
+          hit_sec = [r for r in sec if _isin_key(r.get('isin')) == target]
+          print('in sec exposure:', hit_sec)
+          fractions = build_isin_fractions(universe, sec)
+          print('build_isin_fractions result for target:', fractions.get(target, 'NOT SET'))
+          "
       - name: Run main pipeline
         env:
           REVACH_MATCH_KEY: ${{ secrets.REVACH_MATCH_KEY }}
