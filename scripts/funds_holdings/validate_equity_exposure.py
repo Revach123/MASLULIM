@@ -162,7 +162,11 @@ def compute_equity_totals(reports_dir: Path, tracks: list[dict]):
         old_total = base + fut_old.get(key, 0.0) + swap_old.get(key, 0.0) + _opt_old(key)
         deriv_only = base + fut_new.get(key, 0.0) + swap_new.get(key, 0.0) + _opt_new(key)
         full = deriv_only + foreign_eq
-        rows.append((key, official[key], old_total, deriv_only, full))
+        # has_data: האם קיימת ולו שורת דוח אחת (בכל גיליון/קטגוריה) למסלול
+        # הזה בארכיון המקומי - לא "0% חשיפה למניות בפועל" (מסלול אג"ח טהור
+        # לגיטימי, שגם הוא יכול לצאת old=deriv=full=0.0 בלי שום בעיה), אלא
+        # אין בכלל קובצי דוח/שורות לטיקר הזה (ר' 517085874 שנבדק בעבר).
+        rows.append((key, official[key], old_total, deriv_only, full, key in category_pct))
 
     return rows
 
@@ -180,16 +184,14 @@ def main():
     if not rows:
         return
 
-    # מסלולים שהחישוב שלהם הוא בדיוק 0.0 בכל שלוש השיטות (ישן/נגזרים/מלא) -
-    # לא "0% חשיפה למניות אמיתי", אלא היעדר נתוני דוח לחלוטין למסלול הזה
-    # (למשל חברה בלי אף קובץ דוח בארכיון - ר' 517085874 שנבדק בעבר). כלילתם
-    # ב-MAE מנפחת אותו באופן שאינו קשור לאיכות החישוב על מסלולים שיש להם
-    # בכלל נתונים - מדווחים בנפרד.
-    def has_no_data(r):
-        _key, _off, old, deriv, full = r
-        return old == 0.0 and deriv == 0.0 and full == 0.0
-
-    rows_with_data = [r for r in rows if not has_no_data(r)]
+    # has_data (r[5]): האם קיימת ולו שורת דוח אחת (בכל גיליון) למסלול הזה
+    # בארכיון המקומי - נגזר מ-category_pct בתוך compute_equity_totals, לא
+    # מ-"old=deriv=full=0.0" (זה היה שגוי: מסלול אג"ח טהור לגיטימי, עם דוח
+    # מלא אבל בלי אחזקות מניות/נגזרים כלל, גם הוא יוצא 0.0 בכל השיטות ואינו
+    # "בלי נתונים" באמת - ר' 517085874 לדוגמה אמיתית ל"בלי נתונים"). כלילת
+    # מסלולים "בלי נתונים" ב-MAE מנפחת אותו באופן שאינו קשור לאיכות החישוב
+    # על מסלולים שיש להם בכלל נתונים - מדווחים בנפרד.
+    rows_with_data = [r for r in rows if r[5]]
     no_data_count = len(rows) - len(rows_with_data)
 
     def mae(idx, rows_subset):
@@ -227,12 +229,12 @@ def main():
     rows_sorted = sorted(rows, key=lambda r: -abs(r[4] - r[1]))
     print("\n15 הפערים הגדולים ביותר (שיטה מלאה מול רשמי):")
     print(f"{'מפתח':<20}{'רשמי':>10}{'ישן':>10}{'נגזרים':>10}{'מלא':>10}{'|מלא-רשמי|':>14}")
-    for key, off, old, deriv, full in rows_sorted[:15]:
+    for key, off, old, deriv, full, _has_data in rows_sorted[:15]:
         print(f"{key:<20}{off*100:>9.2f}%{old*100:>9.2f}%{deriv*100:>9.2f}%{full*100:>9.2f}%{abs(full-off)*100:>13.2f}%")
 
     print("\n15 השיפורים הגדולים ביותר (שיטה מלאה קרובה בהרבה יותר לרשמי מהישנה):")
     by_improvement = sorted(rows, key=lambda r: (abs(r[2]-r[1]) - abs(r[4]-r[1])), reverse=True)
-    for key, off, old, deriv, full in by_improvement[:15]:
+    for key, off, old, deriv, full, _has_data in by_improvement[:15]:
         print(f"{key:<20}{off*100:>9.2f}%{old*100:>9.2f}%{deriv*100:>9.2f}%{full*100:>9.2f}%"
               f"  (ישן-רשמי={abs(old-off)*100:.2f}%, מלא-רשמי={abs(full-off)*100:.2f}%)")
 
