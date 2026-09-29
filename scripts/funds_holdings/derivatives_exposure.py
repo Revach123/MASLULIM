@@ -171,7 +171,47 @@ SWAP_UNDERLYING_PRICE_COL = "שער נכס הבסיס במועד ההתקשרו�
 SWAP_TICKER_COL = "טיקר"
 SWAP_ASSET_TYPE_COL = "סוג הנכס"
 SWAP_EQUITY_ASSET_TYPE = "מניות לרבות מדדי מניות"
-SWAP_LABEL_COL = "מאפיין עיקרי"  # "Unfunded Swap"/"Unfunded Forward"/... - נבדק בפועל
+SWAP_MAIN_TYPE_COL = "מאפיין עיקרי"  # "Unfunded Swap"/"Funded Total Return/Equity Swap"/... - נבדק בפועל
+SWAP_LABEL_COL = SWAP_MAIN_TYPE_COL
+FUNDED_SWAP_CATEGORY = "החלף עם מימון (Funded)"
+UNFUNDED_SWAP_CATEGORY = "החלף בלי מימון (Unfunded)"
+
+# "Funded" מול "Unfunded" (מאפיין עיקרי) הם שני מבנים כלכליים שונים לגמרי -
+# לא רק ניואנס מינוח. נמצא בבדיקה בפועל על הארכיון כולו (לא הנחה): ב-
+# "Unfunded Swap"/"Unfunded Total Return/Equity Swap" (512065202 - הפריט
+# שאומת ב-46114a8), רגל 1 היא כמות *יחידות גולמית* של נכס הבסיס (צריכה
+# הכפלה בשער כדי להיות ברת-השוואה לרגל 2). אבל ב-"Funded Total Return/
+# Equity Swap" (513611509 - Yelin Lapidot S&P 500 tracker), רגל 1 היא כבר
+# נוציונל במטבע (בדיוק כמו רגל 2, לפני סימן) - בלי צורך בהכפלה כלל. אימות:
+# 8 שורות סוואפ-מניות ב-513611509_15419, רגל1 גולמי == רגל2 בדיוק בכולן.
+#
+# שני באגים נובעים מההנחה השגויה שכל הסוואפים הם Unfunded, כשהם מיושמים על
+# שורת Funded:
+# 1. leg1_live (תמחור-חי): מכפיל רגל 1 *שוב* במחיר המדד החי, בהנחה שרגל 1
+#    היא יחידות גולמיות - אבל ברגל 1 שכבר נוציונל, זו הכפלה כפולה שמייצרת
+#    מספר דמיוני (טריליוני ש"ח), שנופל אוטומטית ב-SANITY_CAP חזרה ל-row_pct
+#    הזעיר. נבדק בפועל: 513611509_15419, שורת swap עם leg1_raw==leg2==23.7M
+#    ש"ח (16.8% מהמסלול) - עם leg1_live הופך ל-~360 מיליארד (נדחה כמובן).
+# 2. LEVERAGE_CAP (יחס נוציונל/שווי-הוגן-נטו): נבנה במיוחד כדי לתפוס שורות
+#    Unfunded עם "שער נכס הבסיס" בקנה מידה שגוי (השוואה לשווי ההוגן הנטו
+#    כעוגן-אמינות). אבל בשורת Funded עם Reset תקופתי (רבעוני בדוגמה שנבדקה),
+#    שווי הוגן נטו קטן ביחס לנוציונל הוא *ההתנהגות הצפויה* (רק רווח/הפסד
+#    מאז ה-reset האחרון, לא אחוז מהנוציונל) - לא סימן לקנה-מידה שגוי. נבדק
+#    בפועל: 6/8 שורות ה-swap הנ"ל נדחות ע"י LEVERAGE_CAP=75 בטעות (יחס
+#    נוציונל/fv בין ~90 ל-~1750, כולן legitimate - reset רבעוני), למרות
+#    שרגל1==רגל2 בדיוק (כבר עברו את בדיקת-הסבירות ה*אמיתית* לסוואפ - השוואה
+#    הדדית בין שתי הרגליים, לא לשווי ההוגן). סה"כ 513611509_15419: נוציונל
+#    אמיתי 57.46% מהמסלול, מחושב בפועל (לפני התיקון) רק 1.10%.
+#
+# התיקון: לשורות Funded, מדלגים גם על leg1_live וגם על LEVERAGE_CAP - נשארת
+# רק בדיקת-הסבירות ה"אמיתית" (רגל1-גולמי מול רגל2, כבר קיימת למעלה) ותקרת
+# ה-SANITY_CAP המוחלטת (ברמת שורה ורמת מסלול) כרשת ביטחון אחרונה. לשורות
+# Unfunded, ההתנהגות נשארת בדיוק כפי שהייתה (מאומתת, לא נוגעים).
+_FUNDED_SWAP_PREFIX = "funded"
+
+
+def _is_funded_swap(main_type) -> bool:
+    return str(main_type or "").strip().lower().startswith(_FUNDED_SWAP_PREFIX)
 # שם העמודה עצמו (לפי החוזר: שער החליפין/נכס הבסיס לנגזרים לא סחירים מוצג
 # "נכון למועד ההתקשרות בעסקה") מאשר שזהו מחיר נכס הבסיס *בפתיחת העסקה*, לא
 # מחיר שוק עדכני - זה בדיוק ההסבר לכך שרגל1×מחיר זה שווה לרגל2 (שתי הרגליים
@@ -315,7 +355,7 @@ def _futures_exposure(
 
 def _swap_exposure(
     source: list[dict], total_assets: dict[str, float]
-) -> tuple[dict[str, float], dict[str, dict[str, float]]]:
+) -> tuple[dict[str, float], dict[str, float], dict[str, float], dict[str, dict[str, float]]]:
     """נמצא בבדיקה בפועל (לא ניחוש): "ערך נקוב" (רגל 1) ו"ערך נקוב" (רגל 2)
     אינם תמיד באותה יחידת מידה. עבור "Unfunded Forward" (למשל פורוורד מט"ח)
     שתי הרגליים כבר סכום נקוב במטבע - קרובות זו לזו כצפוי. אבל עבור
@@ -346,11 +386,24 @@ def _swap_exposure(
     קנייניים בנקאיים - ר' swap_ticker_map.csv שם) נופלים בחזרה לשיטת המחיר-
     בפתיחת-העסקה הקיימת. במקרה הזה leg2 (שקבוע לפי בנייה למחיר הפתיחה) כבר
     לא רלוונטי כעוגן לרגל 1 המתומחרת-חי - שתיהן מודדות דברים שונים בכוונה
-    (נוציונל היסטורי מול חשיפה נוכחית) - לכן לא ממוצעים ביניהן."""
+    (נוציונל היסטורי מול חשיפה נוכחית) - לכן לא ממוצעים ביניהן.
+
+    חשוב: כל הפסקה הקודמת (leg1_live + LEVERAGE_CAP) חלה *רק* על שורות
+    Unfunded - ר' _is_funded_swap והערה ליד FUNDED_SWAP_CATEGORY למעלה
+    לתקלה שנמצאה כשהן הופעלו בטעות גם על שורות Funded.
+
+    מחזיר (notional_sums, funded_sums, unfunded_sums, equity_swaps) - הראשון
+    הוא הסכום הכולל (המשמש להחלפת SWAP_CATEGORY, כמו קודם), השניים הבאים הם
+    פילוח שקוף Funded/Unfunded (דיאגנוסטי בלבד, ר' build_derivatives_exposure),
+    והאחרון הוא תת-קבוצה של notional_sums - רק שורות עם סוג הנכס=מניות,
+    מפוצלות-שוב לפי הערך המדויק ב-"מאפיין עיקרי" (Funded/Unfunded X, כפי
+    שמופיע בדוח בפועל), לאזור החשיפה למניות בדשבורד (ר' main.py)."""
     notional_sums: dict[str, float] = {}
     fv_sums: dict[str, float] = {}
+    funded_sums: dict[str, float] = {}
+    unfunded_sums: dict[str, float] = {}
     # equity_by_label: מפתח -> {"Unfunded Swap": שיעור, ...} - רק שורות עם
-    # סוג הנכס = מניות, מפוצלות לפי הערך המדויק ב-"מאפיין עיקרי" (Funded/
+    # סוג הנכס = מניות, מפוצלות לפי הערך המדויק ב-SWAP_MAIN_TYPE_COL (Funded/
     # Unfunded X, כפי שמופיע בדוח בפועל - לא הנחה על אילו ערכים קיימים),
     # לאזור החשיפה למניות בדשבורד. שיעור-הוגן מקביל לכל bucket, לאותו
     # fallback-אם-קנה-המידה-לא-סביר כמו notional_sums הכולל.
@@ -377,6 +430,7 @@ def _swap_exposure(
             if is_equity and label:
                 d = equity_fv_by_label.setdefault(key, {})
                 d[label] = d.get(label, 0.0) + row_pct
+            is_funded = _is_funded_swap(row.get(SWAP_MAIN_TYPE_COL))
 
             units1 = _num(row.get(leg1_col["units"]))
             fx1 = _normalize_fx(row.get(leg1_col["currency"]), _num(row.get(leg1_col["fx"])))
@@ -396,9 +450,14 @@ def _swap_exposure(
             ):
                 leg1_val = leg1_priced
 
-            current_price, _index_id = resolve_current_price(row.get(SWAP_TICKER_COL), report_date)
-            leg1_live = (abs(units1 * fx1 * current_price) / 1000
-                         if units1 is not None and fx1 is not None and current_price is not None else None)
+            # leg1_live מניח שרגל 1 היא יחידות גולמיות שצריך לתמחר - נכון רק
+            # ל-Unfunded (ר' הערת המודול). ל-Funded רגל 1 כבר נוציונל, ותמחור
+            # חוזר יוצר מספר דמיוני - מדלגים כליל.
+            leg1_live = None
+            if not is_funded:
+                current_price, _index_id = resolve_current_price(row.get(SWAP_TICKER_COL), report_date)
+                leg1_live = (abs(units1 * fx1 * current_price) / 1000
+                             if units1 is not None and fx1 is not None and current_price is not None else None)
 
             if leg1_live is not None:
                 candidates = [leg1_live]  # לא ממוצעים עם leg2 - ר' הערת הפונקציה
@@ -410,18 +469,28 @@ def _swap_exposure(
                 notional_thousands = sum(candidates) / len(candidates)
                 line_ratio = notional_thousands / total
 
-                fv = _num(row.get(SWAP_NET_FAIR_VALUE_COL))
-                fv_ratio = (fv / total) if fv is not None else None
-                if fv_ratio is not None and abs(line_ratio) > LEVERAGE_CAP * abs(fv_ratio):
-                    line_ratio = None  # קנה מידה לא סביר ביחס לשווי ההוגן של השורה עצמה
+                # LEVERAGE_CAP (יחס נוציונל/שווי-הוגן-נטו) רלוונטי רק ל-
+                # Unfunded: ל-Funded, שווי הוגן קטן ביחס לנוציונל בין תאריכי
+                # Reset הוא צפוי ולא סימן לקנה-מידה שגוי (ר' הערת המודול) -
+                # בדיקת-הסבירות ה"אמיתית" לשורת Funded היא כבר ההשוואה בין
+                # שתי הרגליים למעלה (leg1_raw מול leg2_val), לא ה-fv.
+                if not is_funded:
+                    fv = _num(row.get(SWAP_NET_FAIR_VALUE_COL))
+                    fv_ratio = (fv / total) if fv is not None else None
+                    if fv_ratio is not None and abs(line_ratio) > LEVERAGE_CAP * abs(fv_ratio):
+                        line_ratio = None  # קנה מידה לא סביר ביחס לשווי ההוגן של השורה עצמה
             if line_ratio is None or abs(line_ratio) > SANITY_CAP:
                 line_ratio = row_pct
             notional_sums[key] = notional_sums.get(key, 0.0) + line_ratio
+            if is_funded:
+                funded_sums[key] = funded_sums.get(key, 0.0) + line_ratio
+            else:
+                unfunded_sums[key] = unfunded_sums.get(key, 0.0) + line_ratio
             if is_equity and label:
                 d = equity_by_label.setdefault(key, {})
                 d[label] = d.get(label, 0.0) + line_ratio
 
-    swaps = {
+    capped = {
         key: val if abs(val) <= SANITY_CAP else fv_sums.get(key, 0.0)
         for key, val in notional_sums.items()
     }
@@ -432,7 +501,7 @@ def _swap_exposure(
         }
         for key, by_label in equity_by_label.items()
     }
-    return swaps, equity_swaps
+    return capped, funded_sums, unfunded_sums, equity_swaps
 
 
 def collect_unresolved_swap_tickers(source: list[dict]) -> dict[str, set[str]]:
@@ -520,14 +589,18 @@ def build_derivatives_exposure(source: list[dict]) -> dict[str, dict[str, float]
     """מפתח -> {קטגוריה: שיעור חשיפה אמיתי}, לארבע הקטגוריות (חוזים עתידיים,
     לא סחיר נגזרים אחרים, אופציות, לא סחיר אופציות) - מיועד להחליף את
     הערכים המבוססי-שווי-הוגן שמחשב category_pct.build_category_pct לאותן
-    קטגוריות בדיוק - ולא לגעת בשאר הקטגוריות. בנוסף (לא מחליף כלום, רק
-    מצטרף): עמודות "אזור חשיפה למניות" - נכס-בסיס=מניות בלבד לחוזים/
-    אופציות (FUTURES_EQUITY_COLUMN/OPTIONS_EQUITY_COLUMN), ופיצול
-    Funded/Unfunded לסוואפים-על-מניות (לפי "מאפיין עיקרי" בפועל בדוח, ר'
-    _swap_exposure) - עמודות "לא סחיר נגזרים אחרים - מניות (<תווית>)"."""
+    קטגוריות בדיוק - ולא לגעת בשאר הקטגוריות.
+
+    בנוסף (לא מחליף כלום, רק מצטרף): שתי קטגוריות דיאגנוסטיות (FUNDED_
+    SWAP_CATEGORY/UNFUNDED_SWAP_CATEGORY) - פילוח שקוף של SWAP_CATEGORY בין
+    שני מבני הסוואפ (ר' הערת _swap_exposure); ועמודות "אזור חשיפה למניות" -
+    נכס-בסיס=מניות בלבד לחוזים/אופציות (FUTURES_EQUITY_COLUMN/
+    OPTIONS_EQUITY_COLUMN), ופיצול Funded/Unfunded לסוואפים-על-מניות (לפי
+    SWAP_MAIN_TYPE_COL בפועל בדוח) - עמודות "לא סחיר נגזרים אחרים - מניות
+    (<תווית>)"."""
     total_assets = total_assets_by_key(source)
     futures, futures_equity = _futures_exposure(source, total_assets)
-    swaps, swaps_equity_by_label = _swap_exposure(source, total_assets)
+    swaps, funded_swaps, unfunded_swaps, swaps_equity_by_label = _swap_exposure(source, total_assets)
     options_listed, options_listed_equity = _options_exposure(source, total_assets, OPTIONS_LISTED_CATEGORY)
     options_otc, options_otc_equity = _options_exposure(source, total_assets, OPTIONS_OTC_CATEGORY)
 
@@ -536,6 +609,10 @@ def build_derivatives_exposure(source: list[dict]) -> dict[str, dict[str, float]
         out.setdefault(key, {})[FUTURES_CATEGORY] = val
     for key, val in swaps.items():
         out.setdefault(key, {})[SWAP_CATEGORY] = val
+    for key, val in funded_swaps.items():
+        out.setdefault(key, {})[FUNDED_SWAP_CATEGORY] = val
+    for key, val in unfunded_swaps.items():
+        out.setdefault(key, {})[UNFUNDED_SWAP_CATEGORY] = val
     for key, val in options_listed.items():
         out.setdefault(key, {})[OPTIONS_LISTED_CATEGORY] = val
     for key, val in options_otc.items():

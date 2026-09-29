@@ -14,11 +14,12 @@ from .bonds_heter_reference import build_bonds_heter_by_isin
 from .bonds_rank import build_bonds_rank
 from .category_pct import build_category_pct
 from .derivatives_exposure import (
-    DERIVATIVE_CATEGORIES, build_derivatives_exposure, collect_unresolved_swap_tickers,
+    DERIVATIVE_CATEGORIES, FUNDED_SWAP_CATEGORY, UNFUNDED_SWAP_CATEGORY,
+    build_derivatives_exposure, collect_unresolved_swap_tickers,
 )
 from .file_list import get_file_list
 from .foreign_etf_reference import (
-    build_foreign_equity, build_isin_fractions, build_traded_equity,
+    build_foreign_equity, build_isin_fractions,
     classify_from_report_names, classify_via_openfigi_names,
     collect_unclassified_foreign_isins, fetch_etf_universe, fetch_sec_etf_exposure,
 )
@@ -75,6 +76,17 @@ def build_master_table(
         direct = cols.get("מניות מבכ ויהש", 0.0) + cols.get("לא סחיר מניות מבכ ויהש", 0.0)
         if direct:
             cols["מניות (ישיר)"] = direct
+
+    # שקיפות: פילוח SWAP_CATEGORY בין Funded/Unfunded (ר' הערת _swap_exposure
+    # ב-derivatives_exposure.py) - דיאגנוסטי בלבד, לא נכנס ל-category_pct
+    # (לא ישתתף בחישובי שווי-כולל אחרים שסוכמים את כל category_pct).
+    swap_breakdown_cols = {}
+    for key, cols in derivatives_exposure.items():
+        if FUNDED_SWAP_CATEGORY in cols or UNFUNDED_SWAP_CATEGORY in cols:
+            swap_breakdown_cols[key] = {
+                FUNDED_SWAP_CATEGORY: cols.get(FUNDED_SWAP_CATEGORY, 0.0),
+                UNFUNDED_SWAP_CATEGORY: cols.get(UNFUNDED_SWAP_CATEGORY, 0.0),
+            }
 
     # טיקרים של סוואפ-מדד שלא נמצא להם מקור מחיר עדכני (revach123/INDICES) -
     # לא נכנס לחישוב עצמו (שם נופלים בחזרה למחיר-בפתיחת-העסקה), אלא לדגל
@@ -137,13 +149,6 @@ def build_master_table(
         for siveg, pct in cols.items():
             d[siveg] = d.get(siveg, 0.0) + pct
 
-    # קרנות "נסחרת" (קרנות חוץ הנסחרות בארץ במאיה) - אותה שכבת סיווג
-    # ISIN בדיוק כמו "חוץ", רק סוג-קרן שונה (ר' foreign_etf_reference.py).
-    for key, cols in build_traded_equity(funds, isin_fractions).items():
-        d = il_sums.setdefault(key, {})
-        for siveg, pct in cols.items():
-            d[siveg] = d.get(siveg, 0.0) + pct
-
     kashrut_by_num = build_kashrut_by_num(funds_ref)
     il_kashrut = build_funds_il_kashrut(funds, funds_ref, kashrut_by_num)
     track_kashrut = build_track_kashrut(funds, kashrut_by_num)
@@ -189,6 +194,9 @@ def build_master_table(
 
     for key, tickers in unresolved_swap_tickers.items():
         row_for(key)["סוואפ_מדד_לטיפול"] = sorted(tickers)
+
+    for key, cols in swap_breakdown_cols.items():
+        row_for(key).update(cols)
 
     # שקיפות: "שיעור מסך נכסי ההשקעה" של המסלול הזה לא הסתכם ל-100% בדוח
     # המקורי, ותוקן במכפיל - ר' track_pct_normalize.py.

@@ -31,7 +31,6 @@ SEC_CONTENTS_URL = "https://api.github.com/repos/Revach123/revach/contents/data/
 TOKEN_ENV = "PAT"
 
 FOREIGN_TYPE = "חוץ"
-TRADED_TYPE = "נסחרת"
 EQUITY_SIVEG = 'קרן מחקה - מניות בחו"ל'
 BOND_SIVEG = 'קרן מחקה - אג"ח בחו"ל'
 PLACEHOLDER_PCT = {"", "ריק במקור", "סוף מידע"}
@@ -310,15 +309,14 @@ def classify_via_openfigi_names(missing_isins: list[str]) -> dict[str, dict[str,
 
 
 def collect_unclassified_foreign_isins(funds: list[dict], isin_fractions: dict[str, dict[str, float]]) -> list[str]:
-    """ISIN-ים ייחודיים של קרנות "חוץ" או "נסחרת" (שתי הסוגים היחידים
-    שמפתח שלהם הוא ISIN, ר' funds.py._classify) שעדיין לא מסווגים באף
-    שכבה קיימת - מיועד להזנה לשכבה האחרונה, היקרה (sec_nport_reference.py:
-    OpenFIGI + N-PORT חי; yahoo_fund_reference.py), כדי להריץ אותה רק על
-    מה שבאמת חסר. קרן "נסחרת" (חוץ הנסחרת במאיה) זקוקה לאותו סיווג בדיוק
-    כמו "חוץ" - ר' build_traded_equity."""
+    """ISIN-ים ייחודיים של קרנות "חוץ" (מפתח שלהן הוא ISIN, ר' funds.py._classify)
+    שעדיין לא מסווגים באף שכבה קיימת - מיועד להזנה לשכבה האחרונה, היקרה
+    (sec_nport_reference.py: OpenFIGI + N-PORT חי; yahoo_fund_reference.py),
+    כדי להריץ אותה רק על מה שבאמת חסר. קרנות "נסחרת" מסווגות ישירות דרך
+    funds_il.py (סיווג MAYA מדויק לפי ISIN), לא דרך השכבה הזו."""
     out: set[str] = set()
     for row in funds:
-        if row["סוג"] not in (FOREIGN_TYPE, TRADED_TYPE):
+        if row["סוג"] != FOREIGN_TYPE:
             continue
         isin = _isin_key(row.get("מספר קרן"))
         if isin and isin not in isin_fractions:
@@ -356,21 +354,7 @@ def build_foreign_equity(funds: list[dict], isin_fractions: dict[str, dict[str, 
     """מפתח -> {"קרן מחקה - מניות בחו\"ל": ..., "קרן מחקה - אג\"ח בחו\"ל": ...},
     לשורות "חוץ" בלבד (לא ישראליות, לא נסחרות ב-TASE - 'מספר קרן' הוא ה-ISIN
     הגולמי, ר' funds.py._classify) שמזוהות באחד משני המאגרים. לא נוגע בקרנות
-    IL/נסחרת - אלה כבר מטופלות (או לא) ע"י funds_il.py/build_traded_equity
-    בנפרד, בלי חפיפה אפשרית (כל שורה מסווגת לדיוק אחד מ-IL/נסחרת/חוץ)."""
+    IL/נסחרת - אלה כבר מטופלות ע"י funds_il.py (סיווג MAYA מדויק, לא הסקה
+    מ-isin_fractions), בלי חפיפה אפשרית (כל שורה מסווגת לדיוק אחד מ-IL/
+    נסחרת/חוץ)."""
     return _build_equity_by_type(funds, isin_fractions, FOREIGN_TYPE, EQUITY_SIVEG, BOND_SIVEG)
-
-
-TRADED_EQUITY_SIVEG = "קרנות נסחרות - מניות"
-TRADED_BOND_SIVEG = "קרנות נסחרות - אג\"ח"
-
-
-def build_traded_equity(funds: list[dict], isin_fractions: dict[str, dict[str, float]]) -> dict[str, dict[str, float]]:
-    """מפתח -> {"קרנות נסחרות - מניות": ..., "קרנות נסחרות - אג\"ח": ...},
-    לשורות "נסחרת" בלבד (קרנות חוץ הנסחרות בישראל/מאיה - 'מספר קרן' הוא
-    ה-ISIN הגולמי, בדיוק כמו "חוץ", ר' funds.py._classify) - לא מטופלות
-    בשום מקום אחר בפייפליין היום (רק IL עובר דרך funds_il.py, רק חוץ דרך
-    build_foreign_equity). אותה תשתית סיווג בדיוק (isin_fractions, ר'
-    main.py) - קרן שנסחרת גם בישראל וגם מזוהה כבר ע"י אחת השכבות (אירופה/
-    SEC/Yahoo/OpenFIGI) מקבלת אותו סיווג מניות/אג"ח."""
-    return _build_equity_by_type(funds, isin_fractions, TRADED_TYPE, TRADED_EQUITY_SIVEG, TRADED_BOND_SIVEG)
