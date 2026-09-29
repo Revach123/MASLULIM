@@ -64,6 +64,26 @@ jobs:
           REVACH_MATCH_KEY: ${{ secrets.REVACH_MATCH_KEY }}
           PAT: ${{ secrets.PAT }}
         run: python -m scripts.funds_holdings.validate_equity_exposure --reports-dir reports
+      - name: Temporary debug step diagnose Mor Gemel gm gap tracks
+        env:
+          REVACH_MATCH_KEY: ${{ secrets.REVACH_MATCH_KEY }}
+        run: |
+          python3 -c "
+          from scripts.funds_holdings.tracks_reference import fetch_tracks, track_key
+          tracks = fetch_tracks()
+          by_key = {track_key(t): t for t in tracks if track_key(t)}
+          targets = ['514956465_15249','514956465_15241','514956465_15259',
+                     '514956465_13915','514956465_15266','514956465_15263']
+          fields = ['שם מסלול ההשקעה','שם מסלול ארוך','שם מסלול קצר','סוג מסלול',
+                     'סוג מסלול השקעה (רישום)','התמחות ראשית','התמחות משנית',
+                     'חשיפה למניות','נכון לחודש','נכסים (מליונים)']
+          for k in targets:
+              rec = by_key.get(k)
+              if rec is None:
+                  print(k, '-> NOT FOUND in tracks_reference')
+                  continue
+              print(k, '->', {f: rec.get(f) for f in fields})
+          "
       - name: Report unmatched foreign funds
         env:
           REVACH_MATCH_KEY: ${{ secrets.REVACH_MATCH_KEY }}
