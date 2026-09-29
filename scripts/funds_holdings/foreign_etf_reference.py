@@ -130,6 +130,34 @@ KNOWN_EQUITY_FUNDS_OTHER = {
     "GG00BPFJTF46": "Pershing Square Holdings Ltd (Guernsey, LSE:PSH)",
 }
 
+# קרנות/נאמנויות סחורה פיזית וקריפטו (grantor trust, לא '40 Act) - לא
+# מגישות N-PORT בשום נסיבות (מגבלה מבנית קבועה, כמו UIT), ולא מניות/אג"ח
+# בכלל (אין אי-ודאות: זהב/כסף/פלטינה/ביטקוין/את'ריום פיזיים, לא ניירות
+# ערך). מסומנות 0/0 במפורש - "מזוהה כסחורה/קריפטו", לא "לא ידוע" - במקום
+# להיבדק שוב בכל שכבה בלי תוחלת (SEC N-PORT/Yahoo כבר נכשלים עליהן תמיד
+# מאותה סיבה מבנית, נבדק בפועל).
+KNOWN_COMMODITY_CRYPTO_TRUSTS = {
+    "US78463V1070": "SPDR Gold Shares (Gold Trust)",
+    "US4642852044": "iShares Gold Trust",
+    "US46428Q1094": "iShares Silver Trust",
+    "US0032601066": "abrdn Physical Platinum Shares ETF",
+    "US46438F1012": "iShares Bitcoin Trust ETF",
+    "US46438R1059": "iShares Ethereum Trust ETF",
+    "US92864M4006": "2x Ether ETF (Ether Strategy, leveraged crypto)",
+}
+
+# קרנות אג"ח בודדות, מזוהות ומתועדות בפומבי, שהשם המקוצר/המלא שמגיע
+# מ-OpenFIGI קטוע מכדי לתפוס במילת-מפתח כללית בלי סיכון false-positive
+# (ר' תיעוד _classify_by_report_name) - לא הנחה על טווח-מוצר, ISIN בודד
+# מתועד. "Amundi Planet Emerging Green One" - קרן אג"ח ירוקות ב-EM (יוזמת
+# IFC/Amundi מתועדת בפומבי). "Stone Harbor Emerging Markets Corporate
+# Debt" - קרן אג"ח קונצרני EM, שמו של מנהל ההשקעות (Stone Harbor) הוא
+# מתמחה הכנסה קבועה בלבד.
+KNOWN_BOND_FUNDS_OTHER = {
+    "LU1688575437": "Amundi Planet Emerging Green One",
+    "IE00B3RGB191": "Stone Harbor Emerging Markets Corporate Debt",
+}
+
 
 def build_isin_fractions(etf_universe: list[dict], sec_exposure: list[dict]) -> dict[str, dict[str, float]]:
     """ISIN (מנורמל) -> {"equity": שבר 0..1, "bond": שבר 0..1}. SEC (שיעורים
@@ -140,6 +168,8 @@ def build_isin_fractions(etf_universe: list[dict], sec_exposure: list[dict]) -> 
         isin: {"equity": 1.0, "bond": 0.0}
         for isin in (*KNOWN_MAJOR_EQUITY_ETFS, *KNOWN_EQUITY_FUNDS_OTHER)
     }
+    out.update({isin: {"equity": 0.0, "bond": 0.0} for isin in KNOWN_COMMODITY_CRYPTO_TRUSTS})
+    out.update({isin: {"equity": 0.0, "bond": 1.0} for isin in KNOWN_BOND_FUNDS_OTHER})
     for rec in etf_universe:
         isin = _isin_key(rec.get("isin"))
         if isin is None:
