@@ -321,6 +321,18 @@ def _futures_exposure(source: list[dict], total_assets: dict[str, float]) -> dic
                 if resolved_price is not None:
                     price = resolved_price
                     price_is_corrupted = True
+                else:
+                    # מחיר שלילי לא-כלכלי (אין מחיר שלילי לחוזה עתידי/מדד) בלי
+                    # תחליף-מחיר-חי מאומת - לא אמין לחישוב נוציונלי בשום קנה
+                    # מידה, ואסור לו לעבור ישירות לנוסחה רק כי הוא נתפס
+                    # (במקרה) ע"י תקרת-LEVERAGE_CAP. נמצא בפועל (512065202_15345,
+                    # מיתב, טיקר ZWPU6/MSCI World): מחיר מדווח -181,177.9,
+                    # שווי הוגן -1,688 אלפי ש"ח - יחס נוציונל/שווי-הוגן יוצא בדיוק
+                    # פי 100, שנתפס בטעות ע"י LEVERAGE_CAP=75 (מקרי, לא בכוונה)
+                    # אבל עובר בלי בעיה תחת LEVERAGE_CAP=120 - מייצר חשיפה שלילית
+                    # דמיונית של כ-39% למסלול. מטופל כמו מחיר חסר לגמרי: נופל
+                    # ל-fv_ratio/row_pct, לא לתקרת-מינוף שרירותית.
+                    price = None
 
             fv = _num(row.get(FAIR_VALUE_COL))
             fv_ratio = (fv / total) if fv is not None else None
