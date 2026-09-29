@@ -159,8 +159,8 @@ SWAP_TICKER_COL = "טיקר"
 SWAP_ASSET_TYPE_COL = "סוג הנכס"
 SWAP_EQUITY_ASSET_TYPE = "מניות לרבות מדדי מניות"
 SWAP_MAIN_TYPE_COL = "מאפיין עיקרי"
-FUNDED_SWAP_CATEGORY = "סוואפ Funded (שיעור חשיפה)"
-UNFUNDED_SWAP_CATEGORY = "סוואפ Unfunded (שיעור חשיפה)"
+FUNDED_SWAP_CATEGORY = "החלף עם מימון (Funded)"
+UNFUNDED_SWAP_CATEGORY = "החלף בלי מימון (Unfunded)"
 
 # "Funded" מול "Unfunded" (מאפיין עיקרי) הם שני מבנים כלכליים שונים לגמרי -
 # לא רק ניואנס מינוח. נמצא בבדיקה בפועל על הארכיון כולו (לא הנחה): ב-
