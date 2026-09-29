@@ -102,34 +102,53 @@ FUT_FX_COL = "שער חליפין"
 FUT_PRICE_COL = "שער נייר הערך"
 FUT_CURRENCY_COL = "מטבע פעילות"
 FUT_TICKER_COL = "מספר נייר ערך"
-FUT_BASE_COL = "נכס בסיס"
-FUT_EQUITY_UNDERLYING = "מניות לרבות מדדי מניות"
 
 # ניסוי (לא מאומת חיצונית מעבר למה שתועד למטה - לא למזג בלי בדיקת MAE אמיתית):
-# "שער נייר הערך" שלילי בשורת חוזה עתידי הוא בלתי אפשרי מתמטית (רמת מדד לא
-# יכולה להיות שלילית) - נמצא בפועל בדיוק אותו ערך שבור (-129205.21) בכל 5
-# מסלולי ה"קיימות" של מיטב (512065202), בכל רבעון בארכיון, ללא יוצא מהכלל -
-# לא ניתן לכייל "ערך תקין" ממקרה אחר באותו נייר בארכיון (הוא תמיד שבור).
-# מספר נייר הערך במקרה הזה (SLB + אות-חודש + ספרת-שנה, כמו SLBU6/SLBZ6)
-# מזוהה חיצונית (עמוד אחזקות של SPDR S&P 500 ESG ETF, שמחזיק SLBZ6 תחת השם
-# "EMINI S+P500 ESG DEC26") כחוזה E-mini S&P 500 ESG של ה-CME - נופלים
-# למחיר S&P 500 חי (revach123/INDICES, אותו מקור המשמש כבר לתמחור אופציות)
-# עם המכפיל הסטנדרטי של E-mini ($50/נקודה), במקום המחיר המדווח השבור.
-# בדיקת סבירות (~443.749 חוזים, S&P~6879 ב-2026-02-27, פי 50, שער דולר
-# 2.978) נתנה ~455M ש"ח נוציונל מול ~501M ש"ח נכסי המסלול - קרוב מאוד
-# ל"חשיפה למניות" הרשמית (~99%) ותומך בהשערה, אבל המכפיל עצמו (50$) הוא
-# הנחה סבירה (מוסכמת E-mini סטנדרטית) שלא ניתנת לאימות ישיר מהדוח עצמו -
-# ר' תקרת-SANITY_CAP למטה כרשת ביטחון אם ההנחה הזו שגויה.
-_SLB_EMINI_TICKER = re.compile(r"^SLB[A-Z]\d$")
-EMINI_MULTIPLIER_USD = 50.0
+# "שער נייר הערך" שלילי בשורת חוזה עתידי הוא בלתי אפשרי מתמטית (רמת מדד/מחיר
+# לא יכולה להיות שלילית) - נמצא בפועל בדיוק אותו תבנית-תקלה (מחיר שבור קבוע
+# לאותו נייר בכל הארכיון, לא ניתן לכייל מרבעון אחר) עבור 23 מספרי-נייר שונים
+# ברחבי הארכיון, לא רק ב-512065202/"קיימות". מטופל ע"י טבלת (רגקס-טיקר,
+# סימול-מחיר-חי, מכפיל$) - הראשון שמתאים לניר הערך הספציפי.
+#
+# SLB (E-mini S&P 500 ESG): מזוהה חיצונית (עמוד אחזקות SPDR S&P 500 ESG ETF,
+# מחזיק SLBZ6 תחת "EMINI S+P500 ESG DEC26") + מכפיל E-mini סטנדרטי ($50/נק')
+# מאושר חיצונית (עמוד CME הרשמי: E-mini S&P 500 "one fifth the size of
+# standard S&P futures", שהוא $250/נק'). בדיקת סבירות (~443.749 חוזים,
+# S&P~6879 ב-2026-02-27, פי 50, שער דולר 2.978) -> ~455M ש"ח מול ~501M ש"ח
+# נכסי המסלול, קרוב ל"חשיפה למניות" הרשמית (~99%) - CI-אומת (MAE שופר).
+#
+# ES/NQ: אותה תבנית מספר-נייר (רוט CME + אות-חודש + ספרת-שנה), רוטים
+# סטנדרטיים ומתועדים פומבית ללא צורך באימות נוסף - ES=E-mini S&P 500 ($50/נק',
+# CME), NQ=E-mini Nasdaq-100 ($20/נק', CME - שונה מ-SLB/ES בכוונה, לא טעות).
+#
+# CL (WTI Crude Oil, NYMEX/CME): מכפיל חוזה סטנדרטי ומתועד פומבית = 1{,}000
+# חביות (כלומר $1{,}000 לכל $1/חבית בשער) - לא "נקודות מדד" כמו שאר הרשימה,
+# אבל אותה נוסחה (units * price_usd_per_contract * fx) עובדת זהה.
+#
+# כל המכפילים האלה הנחות-מבוססות-ידע-ציבורי (לא ניתנות לאימות ישיר מתוך הדוח
+# עצמו) - ר' תקרת-SANITY_CAP למטה כרשת ביטחון אם הנחה כלשהי שגויה למסלול
+# ספציפי. טווח ה-MSCI World/EM/ACWI/TSX/Treasury (עוד ~14 מספרי-נייר שנמצאו
+# בסריקת הארכיון) נשאר מחוץ לטבלה במכוון - מכפיל/זהות מדד לא מאומתים חיצונית
+# עדיין לאותם רוטים (בניגוד ל-ES/NQ/CL/SLB שהם רוטי CME מוכרים וחד-משמעיים).
+_CORRUPTED_FUTURES_TICKERS: list[tuple[re.Pattern, str, float]] = [
+    (re.compile(r"^SLB[A-Z]\d$"), "^GSPC", 50.0),    # E-mini S&P 500 ESG
+    (re.compile(r"^ES[A-Z]\d$"), "^GSPC", 50.0),     # E-mini S&P 500
+    (re.compile(r"^NQ[A-Z]\d$"), "^NDX", 20.0),      # E-mini Nasdaq-100
+    (re.compile(r"^CL[A-Z]\d$"), "CL=F", 1000.0),    # WTI Crude Oil (NYMEX)
+]
 
 
 def _resolve_corrupted_futures_price(ticker, report_date) -> float | None:
-    if not ticker or not _SLB_EMINI_TICKER.match(str(ticker)):
+    if not ticker or report_date is None:
         return None
-    if report_date is None:
-        return None
-    return price_as_of("^GSPC", report_date)
+    ticker = str(ticker)
+    for pattern, price_symbol, multiplier in _CORRUPTED_FUTURES_TICKERS:
+        if pattern.match(ticker):
+            live_price = price_as_of(price_symbol, report_date)
+            if live_price is not None:
+                return live_price * multiplier
+            return None
+    return None
 
 SWAP_LEGS = (
     {"units": "ערך נקוב (רגל 1)", "fx": "שער חליפין (רגל 1)", "currency": "מטבע פעילות (רגל 1)"},
@@ -246,11 +265,10 @@ def _futures_exposure(source: list[dict], total_assets: dict[str, float]) -> dic
                 price = price / 100  # רגל-מימון סינתטית במוסכמת ערך-נקוב-100, לא רמת מדד
 
             price_is_corrupted = False
-            if (price is not None and price < 0
-                    and row.get(FUT_BASE_COL) == FUT_EQUITY_UNDERLYING):
-                live_price = _resolve_corrupted_futures_price(row.get(FUT_TICKER_COL), report_date)
-                if live_price is not None:
-                    price = live_price * EMINI_MULTIPLIER_USD
+            if price is not None and price < 0:
+                resolved_price = _resolve_corrupted_futures_price(row.get(FUT_TICKER_COL), report_date)
+                if resolved_price is not None:
+                    price = resolved_price
                     price_is_corrupted = True
 
             fv = _num(row.get(FAIR_VALUE_COL))
