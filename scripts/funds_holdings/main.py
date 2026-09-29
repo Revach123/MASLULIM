@@ -14,7 +14,8 @@ from .bonds_heter_reference import build_bonds_heter_by_isin
 from .bonds_rank import build_bonds_rank
 from .category_pct import build_category_pct
 from .derivatives_exposure import (
-    DERIVATIVE_CATEGORIES, build_derivatives_exposure, collect_unresolved_swap_tickers,
+    DERIVATIVE_CATEGORIES, FUNDED_SWAP_CATEGORY, UNFUNDED_SWAP_CATEGORY,
+    build_derivatives_exposure, collect_unresolved_swap_tickers,
 )
 from .file_list import get_file_list
 from .foreign_etf_reference import (
@@ -66,6 +67,17 @@ def build_master_table(
         for cat in DERIVATIVE_CATEGORIES:
             if cat in cols:
                 d[cat] = cols[cat]
+
+    # שקיפות: פילוח SWAP_CATEGORY בין Funded/Unfunded (ר' הערת _swap_exposure
+    # ב-derivatives_exposure.py) - דיאגנוסטי בלבד, לא נכנס ל-category_pct
+    # (לא ישתתף בחישובי שווי-כולל אחרים שסוכמים את כל category_pct).
+    swap_breakdown_cols = {}
+    for key, cols in derivatives_exposure.items():
+        if FUNDED_SWAP_CATEGORY in cols or UNFUNDED_SWAP_CATEGORY in cols:
+            swap_breakdown_cols[key] = {
+                FUNDED_SWAP_CATEGORY: cols.get(FUNDED_SWAP_CATEGORY, 0.0),
+                UNFUNDED_SWAP_CATEGORY: cols.get(UNFUNDED_SWAP_CATEGORY, 0.0),
+            }
 
     # טיקרים של סוואפ-מדד שלא נמצא להם מקור מחיר עדכני (revach123/INDICES) -
     # לא נכנס לחישוב עצמו (שם נופלים בחזרה למחיר-בפתיחת-העסקה), אלא לדגל
@@ -173,6 +185,9 @@ def build_master_table(
 
     for key, tickers in unresolved_swap_tickers.items():
         row_for(key)["סוואפ_מדד_לטיפול"] = sorted(tickers)
+
+    for key, cols in swap_breakdown_cols.items():
+        row_for(key).update(cols)
 
     # שקיפות: "שיעור מסך נכסי ההשקעה" של המסלול הזה לא הסתכם ל-100% בדוח
     # המקורי, ותוקן במכפיל - ר' track_pct_normalize.py.
