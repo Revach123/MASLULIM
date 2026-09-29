@@ -19,6 +19,24 @@ jobs:
           python-version: "3.12"
       - name: Install deps
         run: pip install requests python-calamine yfinance
+      - name: TEMP - Check free-source reachability (stooq/FRED/Yahoo) and MSCI-proxy data
+        run: |
+          python3 -c "
+          import requests
+          for name, url in [
+              ('stooq ZT (2yr treasury futures continuous)', 'https://stooq.com/q/d/l/?s=zt.f&i=d'),
+              ('FRED DGS2 (2yr treasury yield)', 'https://fred.stlouisfed.org/graph/fredgraph.csv?id=DGS2'),
+              ('yahoo chart URTH (MSCI World ETF)', 'https://query1.finance.yahoo.com/v8/finance/chart/URTH'),
+              ('yahoo chart ACWI (MSCI ACWI ETF)', 'https://query1.finance.yahoo.com/v8/finance/chart/ACWI'),
+              ('yahoo chart EEM (MSCI EM ETF)', 'https://query1.finance.yahoo.com/v8/finance/chart/EEM'),
+              ('yahoo chart ^GSPTSE (TSX Composite)', 'https://query1.finance.yahoo.com/v8/finance/chart/%5EGSPTSE'),
+          ]:
+              try:
+                  r = requests.get(url, timeout=15, headers={'User-Agent': 'Mozilla/5.0'})
+                  print(name, '-> status:', r.status_code, 'len:', len(r.text), 'sample:', r.text[:150].replace(chr(10),' '))
+              except Exception as e:
+                  print(name, '-> ERROR:', repr(e))
+          "
       - name: Run main pipeline
         env:
           REVACH_MATCH_KEY: ${{ secrets.REVACH_MATCH_KEY }}
