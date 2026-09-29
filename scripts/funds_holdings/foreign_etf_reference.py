@@ -178,7 +178,7 @@ _REPORT_NAME_BOND_TERMS = (
     "bond", "treasury", "gilt", "sovereign", "high yiel", "senior loan", "sen.sec",
     "sen sec", "senior sec", "corp debt", "floating rate", "credit", "govt",
     "gov bnd", "agg bnd", "municipal", "debenture", "clo income", "debt",
-    "fallen angel", "short dur",
+    "fallen angel", "short dur", "senior lo", "liq. corp", "hi yld", "inv gr cred",
     # מנפיקים/טווחי-מוצר שכל הקרנות בהם הן הכנסה קבועה בלבד תמיד - עובדה
     # יציבה על המותג/הטווח (לא ניחוש על קרן ספציפית, ולא ISIN-ים בודדים):
     # "bluebay" (RBC BlueBay Asset Management - אך ורק אג"ח/קרדיט); "pimco
@@ -198,7 +198,7 @@ _REPORT_NAME_EQUITY_TERMS = (
     # עובדה מבנית קבועה, לא ניחוש. "Select Sector SPDR" - 11 קרנות הסקטור
     # הקבועות של SPDR (S&P 500 לפי סקטור) - כולן מניות, עובדה קבועה על
     # טווח המוצר (לא ניחוש על קרן ספציפית).
-    "holdrs", "sector spdr",
+    "holdrs", "sector spdr", "healthcare op", "mkt eq", "sml cap",
 )
 
 # קרנות כספיות/מזומן (money-market) - לא מניות ולא אג"ח, תורמות 0 לשני
@@ -207,7 +207,7 @@ _REPORT_NAME_EQUITY_TERMS = (
 # מהשורות האלה מגיעות עם "ISIN" שאינו ISIN אמיתי בכלל (קוד פנימי בתחילית
 # X9X9 - נבדק בפועל מול OpenFIGI: "Invalid idValue format") ולכן לא יזוהו
 # בשום שכבה אחרת.
-_REPORT_NAME_CASH_TERMS = ("liquidity", "lvnav", "money market", "money mkt")
+_REPORT_NAME_CASH_TERMS = ("liquidity", "lvnav", "money market", "money mkt", "cp liq")
 
 
 def _classify_by_report_name(name: str | None) -> str | None:
