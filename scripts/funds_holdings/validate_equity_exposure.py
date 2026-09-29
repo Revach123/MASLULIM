@@ -180,25 +180,49 @@ def main():
     if not rows:
         return
 
-    def mae(idx):
-        errs = [abs(r[idx] - r[1]) for r in rows]
-        return sum(errs) / len(errs)
+    # מסלולים שהחישוב שלהם הוא בדיוק 0.0 בכל שלוש השיטות (ישן/נגזרים/מלא) -
+    # לא "0% חשיפה למניות אמיתי", אלא היעדר נתוני דוח לחלוטין למסלול הזה
+    # (למשל חברה בלי אף קובץ דוח בארכיון - ר' 517085874 שנבדק בעבר). כלילתם
+    # ב-MAE מנפחת אותו באופן שאינו קשור לאיכות החישוב על מסלולים שיש להם
+    # בכלל נתונים - מדווחים בנפרד.
+    def has_no_data(r):
+        _key, _off, old, deriv, full = r
+        return old == 0.0 and deriv == 0.0 and full == 0.0
 
-    def compare(idx_a, idx_b):
-        a_errs = [abs(r[idx_a] - r[1]) for r in rows]
-        b_errs = [abs(r[idx_b] - r[1]) for r in rows]
+    rows_with_data = [r for r in rows if not has_no_data(r)]
+    no_data_count = len(rows) - len(rows_with_data)
+
+    def mae(idx, rows_subset):
+        errs = [abs(r[idx] - r[1]) for r in rows_subset]
+        return sum(errs) / len(errs) if errs else 0.0
+
+    def compare(idx_a, idx_b, rows_subset):
+        a_errs = [abs(r[idx_a] - r[1]) for r in rows_subset]
+        b_errs = [abs(r[idx_b] - r[1]) for r in rows_subset]
         improved = sum(1 for a, b in zip(a_errs, b_errs) if b < a)
         worsened = sum(1 for a, b in zip(a_errs, b_errs) if b > a)
-        return improved, worsened, len(rows) - improved - worsened
+        return improved, worsened, len(rows_subset) - improved - worsened
 
-    print(f"\nMAE (שגיאה ממוצעת מוחלטת מול הרשמי), {len(rows)} מסלולים:")
-    print(f"  שיטה ישנה (שווי הוגן, בלי ETF זרות):      {mae(2)*100:.3f} נק' אחוז")
-    print(f"  + תיקון נגזרים (נוציונלי+דלתא לאופציות):  {mae(3)*100:.3f} נק' אחוז")
-    print(f"  + תיקון נגזרים + קרנות ETF זרות:          {mae(4)*100:.3f} נק' אחוז")
-    i1, w1, s1 = compare(2, 3)
+    print(f"\nMAE (שגיאה ממוצעת מוחלטת מול הרשמי), {len(rows)} מסלולים "
+          f"({no_data_count} מהם בלי נתוני דוח כלל - מוצגים בנפרד למטה):")
+    print(f"  שיטה ישנה (שווי הוגן, בלי ETF זרות):      {mae(2, rows)*100:.3f} נק' אחוז")
+    print(f"  + תיקון נגזרים (נוציונלי+דלתא לאופציות):  {mae(3, rows)*100:.3f} נק' אחוז")
+    print(f"  + תיקון נגזרים + קרנות ETF זרות:          {mae(4, rows)*100:.3f} נק' אחוז")
+    i1, w1, s1 = compare(2, 3, rows)
     print(f"  תיקון נגזרים בלבד מול ישן: שופר {i1} | הורע {w1} | ללא שינוי {s1}")
-    i2, w2, s2 = compare(3, 4)
+    i2, w2, s2 = compare(3, 4, rows)
     print(f"  + ETF זרות מול תיקון נגזרים בלבד: שופר {i2} | הורע {w2} | ללא שינוי {s2}")
+
+    print(f"\nMAE ללא מסלולים בלי נתוני דוח כלל, {len(rows_with_data)} מסלולים:")
+    print(f"  שיטה ישנה (שווי הוגן, בלי ETF זרות):      {mae(2, rows_with_data)*100:.3f} נק' אחוז")
+    print(f"  + תיקון נגזרים (נוציונלי+דלתא לאופציות):  {mae(3, rows_with_data)*100:.3f} נק' אחוז")
+    print(f"  + תיקון נגזרים + קרנות ETF זרות:          {mae(4, rows_with_data)*100:.3f} נק' אחוז")
+    i1d, w1d, s1d = compare(2, 3, rows_with_data)
+    print(f"  תיקון נגזרים בלבד מול ישן: שופר {i1d} | הורע {w1d} | ללא שינוי {s1d}")
+    i2d, w2d, s2d = compare(3, 4, rows_with_data)
+    print(f"  + ETF זרות מול תיקון נגזרים בלבד: שופר {i2d} | הורע {w2d} | ללא שינוי {s2d}")
+
+    rows = rows_with_data
 
     rows_sorted = sorted(rows, key=lambda r: -abs(r[4] - r[1]))
     print("\n15 הפערים הגדולים ביותר (שיטה מלאה מול רשמי):")
