@@ -19,8 +19,8 @@ from .derivatives_exposure import (
 from .excel_io import to_ratio
 from .file_list import get_file_list
 from .foreign_etf_reference import (
-    build_foreign_equity, build_isin_fractions, classify_from_report_names,
-    classify_via_openfigi_names, collect_unclassified_foreign_isins,
+    TRADED_EQUITY_SIVEG, build_foreign_equity, build_isin_fractions, build_traded_equity,
+    classify_from_report_names, classify_via_openfigi_names, collect_unclassified_foreign_isins,
     fetch_etf_universe, fetch_sec_etf_exposure,
 )
 from .funds import build_funds
@@ -117,6 +117,7 @@ def compute_equity_totals(reports_dir: Path, tracks: list[dict]):
     print(f"[validate] {len(isin_fractions)} ISIN מסווגים סה\"כ (+שמות מלאים)")
 
     foreign_equity = build_foreign_equity(funds, isin_fractions)
+    traded_equity = build_traded_equity(funds, isin_fractions)
 
     category_pct = build_category_pct(source)
 
@@ -157,11 +158,12 @@ def compute_equity_totals(reports_dir: Path, tracks: list[dict]):
         funds_eq = sum(v for k, v in siveg.items() if any(s in k for s in EQUITY_FUND_SIVEGS))
         foreign_eq = sum(v for k, v in foreign_equity.get(key, {}).items()
                           if any(s in k for s in EQUITY_FUND_SIVEGS))
+        traded_eq = traded_equity.get(key, {}).get(TRADED_EQUITY_SIVEG, 0.0)
 
         base = direct + funds_eq
         old_total = base + fut_old.get(key, 0.0) + swap_old.get(key, 0.0) + _opt_old(key)
         deriv_only = base + fut_new.get(key, 0.0) + swap_new.get(key, 0.0) + _opt_new(key)
-        full = deriv_only + foreign_eq
+        full = deriv_only + foreign_eq + traded_eq
         rows.append((key, official[key], old_total, deriv_only, full))
 
     return rows

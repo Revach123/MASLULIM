@@ -18,9 +18,9 @@ from .derivatives_exposure import (
 )
 from .file_list import get_file_list
 from .foreign_etf_reference import (
-    build_foreign_equity, build_isin_fractions, classify_from_report_names,
-    classify_via_openfigi_names, collect_unclassified_foreign_isins,
-    fetch_etf_universe, fetch_sec_etf_exposure,
+    build_foreign_equity, build_isin_fractions, build_traded_equity,
+    classify_from_report_names, classify_via_openfigi_names,
+    collect_unclassified_foreign_isins, fetch_etf_universe, fetch_sec_etf_exposure,
 )
 from .funds import build_funds
 from .funds_detail import build_funds_detail
@@ -60,12 +60,21 @@ def build_master_table(
     # שיעור השווי ההוגן (מרווח/רווח-הפסד שוטף), לא שיעור החשיפה הכלכלית
     # שהמכשירים האלה יוצרים (leverage). מחליפים את שתי הקטגוריות האלה
     # בחשיפה אמיתית (notional) - שאר הקטגוריות נשארות כשווי-שוק, נכון כבר.
+    # מלבד ארבע הקטגוריות עצמן (שמוחלפות), derivatives_exposure מחזיר גם
+    # עמודות "אזור חשיפה למניות" חדשות (חוזים/אופציות - נכס-בסיס מניות
+    # בלבד, סוואפים על מניות מפוצל Funded/Unfunded) - אלה תמיד מצטרפות
+    # (אין להן ערך קודם ב-category_pct), לכן d.update ולא לולאת-סינון.
     derivatives_exposure = build_derivatives_exposure(source)
     for key, cols in derivatives_exposure.items():
-        d = category_pct.setdefault(key, {})
-        for cat in DERIVATIVE_CATEGORIES:
-            if cat in cols:
-                d[cat] = cols[cat]
+        category_pct.setdefault(key, {}).update(cols)
+
+    # "מניות (ישיר)" - סכום מניות מבכ"ל + לא סחיר (קטגוריות מקור נפרדות,
+    # ר' category_pct.py), לאזור החשיפה למניות בדשבורד - חשיפה ישירה
+    # למניות בודדות/פרטיות, לא דרך קרן/נגזר.
+    for key, cols in category_pct.items():
+        direct = cols.get("מניות מבכ ויהש", 0.0) + cols.get("לא סחיר מניות מבכ ויהש", 0.0)
+        if direct:
+            cols["מניות (ישיר)"] = direct
 
     # טיקרים של סוואפ-מדד שלא נמצא להם מקור מחיר עדכני (revach123/INDICES) -
     # לא נכנס לחישוב עצמו (שם נופלים בחזרה למחיר-בפתיחת-העסקה), אלא לדגל
@@ -124,6 +133,13 @@ def build_master_table(
     print(f"[main] {len(isin_fractions)} ISIN מסווגים סה\"כ (+שמות מלאים)")
 
     for key, cols in build_foreign_equity(funds, isin_fractions).items():
+        d = il_sums.setdefault(key, {})
+        for siveg, pct in cols.items():
+            d[siveg] = d.get(siveg, 0.0) + pct
+
+    # קרנות "נסחרת" (קרנות חוץ הנסחרות בארץ במאיה) - אותה שכבת סיווג
+    # ISIN בדיוק כמו "חוץ", רק סוג-קרן שונה (ר' foreign_etf_reference.py).
+    for key, cols in build_traded_equity(funds, isin_fractions).items():
         d = il_sums.setdefault(key, {})
         for siveg, pct in cols.items():
             d[siveg] = d.get(siveg, 0.0) + pct
