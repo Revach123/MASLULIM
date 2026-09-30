@@ -98,6 +98,11 @@ CONTRACT_SPECS: dict[str, tuple[float, str | None]] = {
 # חוזים שאינם על מניות. הסיווג לפי החוזה עצמו גובר על "נכס בסיס" שבדוח - נמצאו
 # שני הכיוונים: UXY/TY מסווגים "מניות" (512065202, 514956465, 520030677,
 # 520027251, 520028390) ו-NQ/VG/NO/SXO/MES מסווגים "אחר" (511880460, 510960586).
+# חוזים בבורסות שונות על אותו מדד (קוד המדד מתוך חוברת MSCI) - חולקים רמה.
+# למשל ZTL (Eurex) מוחזק רק אצל גופים שמדווחים רווח/הפסד במקום רמה, והרמה
+# נלקחת מ-WMW (ICE) שמדווח ברמה אצל גופים אחרים.
+SAME_INDEX = {"ZTL": "M1WD", "WMW": "M1WD", "MES": "MXEF", "RBE": "MXEF"}
+
 NON_EQUITY_ROOTS = frozenset({"G", "TU", "FV", "TY", "UXY", "US", "WN", "CL"})
 
 MONTH_CODES = "FGHJKMNQUVXZ"
@@ -249,6 +254,11 @@ class FuturesResolver:
         self.root_ccy = {k: c.most_common(1)[0][0] for k, c in cc.items()}
         self.root_count = Counter(r.root for r in self.rows if r.root in CONTRACT_SPECS)
 
+    @staticmethod
+    def _index_of(root: str) -> str:
+        """מזהה נכס הבסיס לקונצנזוס הרמה: סדרת INDICES, קוד מדד MSCI, או השורש עצמו."""
+        return CONTRACT_SPECS[root][1] or SAME_INDEX.get(root) or root
+
     def _ref(self, root: str, d: date | None) -> float | None:
         idx = CONTRACT_SPECS.get(root, (None, None))[1]
         if not idx or d is None:
@@ -278,23 +288,27 @@ class FuturesResolver:
 
     def _build_levels(self):
         cands: dict[tuple, list[float]] = defaultdict(list)
+        roots_of: dict[str, str] = {}
         for r in self.rows:
             s = self.filer_scale.get(r.legal_id)
             if r.root not in CONTRACT_SPECS or not s or not r.price or r.price <= 0 or r.liability:
                 continue
             lvl = r.price / s
-            cands[(r.root, r.month, r.report_date)].append(lvl)
-            cands[(r.root, None, r.report_date)].append(lvl)
+            idx = self._index_of(r.root)
+            cands[(idx, r.month, r.report_date)].append(lvl)
+            cands[(idx, None, r.report_date)].append(lvl)
+            roots_of[idx] = r.root
         self.levels: dict[tuple, float] = {}
         for key, vals in cands.items():
-            ref = self._ref(key[0], key[2])
+            ref = self._ref(roots_of[key[0]], key[2])
             anchor = ref if ref else statistics.median(vals)
             good = [v for v in vals if abs(v / anchor - 1) < LEVEL_TOL]
             if good:
                 self.levels[key] = statistics.median(good)
 
     def level(self, root: str, month: str | None, d: date | None) -> float | None:
-        return (self.levels.get((root, month, d)) or self.levels.get((root, None, d))
+        idx = self._index_of(root)
+        return (self.levels.get((idx, month, d)) or self.levels.get((idx, None, d))
                 or self._ref(root, d))
 
     def _identify_remaining(self):
