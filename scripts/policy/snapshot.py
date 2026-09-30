@@ -92,7 +92,11 @@ def fetch_browser(pw, url):
                 pass
 
         pg.on("response", on_response)
-        resp = pg.goto(url, wait_until="networkidle", timeout=60000)
+        try:
+            resp = pg.goto(url, wait_until="networkidle", timeout=60000)
+        except Exception:  # אתרים עם חיבורים פתוחים/בדיקת בוט: טעינה קלה יותר
+            resp = pg.goto(url, wait_until="domcontentloaded", timeout=60000)
+            pg.wait_for_timeout(5000)
         status = resp.status if resp else 200
         seen, anchors = set(), []
 
@@ -189,7 +193,7 @@ def fetch_browser(pw, url):
         text = pg.inner_text("body")
         return anchors, (200 if status < 400 else status), text
     except Exception as e:
-        return None, f"browser:{type(e).__name__}", ""
+        return None, f"browser:{type(e).__name__}:{str(e).splitlines()[0][:120]}", ""
     finally:
         b.close()
 
