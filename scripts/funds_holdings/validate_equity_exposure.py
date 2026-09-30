@@ -141,11 +141,27 @@ def compute_equity_totals(reports_dir: Path, tracks: list[dict]):
     def _opt_new(key):
         return opt_listed_new.get(key, 0.0) + opt_otc_new.get(key, 0.0)
 
+    # חודש הדוח האחרון לכל מסלול (YYYYMM) - להשוואה מול "נכון לחודש" של הנתון הרשמי
+    report_month: dict[str, str] = {}
+    for rec in source:
+        d = rec.get("ReportMonth")
+        if d is None:
+            continue
+        ym = f"{d.year}{d.month:02d}"
+        for r in rec["Clean"]:
+            k = r.get("מפתח")
+            if k is not None and ym > report_month.get(k, ""):
+                report_month[k] = ym
+
     official = {}
+    official_month: dict[str, str] = {}
+    domain_track: dict[str, tuple[str, str]] = {}
     for t in tracks:
         key = track_key(t)
         if key is None:
             continue
+        official_month[key] = str(t.get("נכון לחודש") or "").strip()
+        domain_track[key] = (str(t.get("תחום") or "").strip(), key.split("_", 1)[1])
         raw = t.get("חשיפה למניות") or t.get("STOCK_MARKET_EXPOSURE")
         v = to_ratio(raw) if isinstance(raw, str) and raw.strip() else raw
         if v is not None:
@@ -153,6 +169,20 @@ def compute_equity_totals(reports_dir: Path, tracks: list[dict]):
                 official[key] = float(v) / (100 if abs(float(v)) > 1.5 else 1)
             except (TypeError, ValueError):
                 pass
+
+    # הנתון הרשמי לחודש הדוח עצמו (לא לחודש האחרון), מ-data.gov.il
+    official_at_report: dict[str, float] = {}
+    try:
+        from .official_history import fetch_stock_exposure
+        hist = fetch_stock_exposure({m for m in report_month.values() if m})
+        for key, (dom, track) in domain_track.items():
+            v = hist.get((dom, track, report_month.get(key, "")))
+            if v is not None:
+                official_at_report[key] = v
+        print(f"[validate] {len(hist)} ערכים רשמיים מ-data.gov.il לחודשי הדוחות, "
+              f"{len(official_at_report)} מסלולים הותאמו")
+    except Exception as e:
+        print(f"[validate] data.gov.il לא זמין (מדלג על השוואה לחודש הדוח): {e}")
 
     keys = set(official)
     rows = []
@@ -171,12 +201,15 @@ def compute_equity_totals(reports_dir: Path, tracks: list[dict]):
         if os.environ.get("DUMP_EQUITY_COMPONENTS"):
             print("COMP|" + "|".join(str(x) for x in (
                 key, official[key], direct, funds_eq, foreign_eq,
-                fut_new.get(key, 0.0), swap_new.get(key, 0.0), _opt_new(key), key in category_pct)))
+                fut_new.get(key, 0.0), swap_new.get(key, 0.0), _opt_new(key), key in category_pct,
+                official_month.get(key, ""), report_month.get(key, ""),
+                official_at_report.get(key, ""))))
         # has_data: האם קיימת ולו שורת דוח אחת (בכל גיליון/קטגוריה) למסלול
         # הזה בארכיון המקומי - לא "0% חשיפה למניות בפועל" (מסלול אג"ח טהור
         # לגיטימי, שגם הוא יכול לצאת old=deriv=full=0.0 בלי שום בעיה), אלא
         # אין בכלל קובצי דוח/שורות לטיקר הזה (ר' 517085874 שנבדק בעבר).
-        rows.append((key, official[key], old_total, deriv_only, full, key in category_pct))
+        rows.append((key, official[key], old_total, deriv_only, full, key in category_pct,
+                     official_month.get(key, ""), report_month.get(key, ""), official_at_report.get(key)))
 
     return rows
 
@@ -236,15 +269,47 @@ def main():
 
     rows = rows_with_data
 
+    # המדד הראשי: מול הנתון הרשמי *לחודש הדוח* (data.gov.il, STOCK_MARKET_EXPOSURE /
+    # TOTAL_ASSETS לאותו REPORT_PERIOD) - לא הנתון באתר, שהוא מהחודש האחרון או
+    # הזנה ידנית (מסלולים חדשים). מסלול בלי נתון לחודש הדוח לא נכלל כאן.
+    dated = [(r[0], r[8], r[2], r[3], r[4], r[5]) for r in rows if r[8] is not None]
+    if dated:
+        print(f"\nMAE מול הנתון הרשמי לתאריך הדוח (data.gov.il), {len(dated)} מסלולים "
+              f"({len(rows) - len(dated)} בלי נתון רשמי לחודש הדוח - לא נכללים):")
+        print(f"  שיטה ישנה (שווי הוגן, בלי ETF זרות):      {mae(2, dated)*100:.3f} נק' אחוז")
+        print(f"  + תיקון נגזרים (נוציונלי+דלתא לאופציות):  {mae(3, dated)*100:.3f} נק' אחוז")
+        print(f"  + תיקון נגזרים + קרנות ETF זרות:          {mae(4, dated)*100:.3f} נק' אחוז")
+        print("  15 הפערים הגדולים (מלא מול רשמי לתאריך הדוח):")
+        for key, off, old, deriv, full, _ in sorted(dated, key=lambda r: -abs(r[4] - r[1]))[:15]:
+            print(f"    {key:<20}{off*100:>9.2f}%{full*100:>9.2f}%{abs(full-off)*100:>9.2f}%")
+
+    # הנתון הרשמי ("נכון לחודש") לא תמיד מאותו חודש כמו הדוח - במסלולים חדשים
+    # הוא מוזן ידנית ומתאריך אחר. MAE לפי חודש הנתון הרשמי, ובנפרד רק מסלולים
+    # שבהם הוא זהה לחודש הדוח האחרון של המסלול.
+    by_month: dict[str, list] = {}
+    for r in rows:
+        by_month.setdefault(r[6] or "?", []).append(r)
+    print("\nMAE (שיטה מלאה) לפי חודש הנתון הרשמי ('נכון לחודש'):")
+    for m in sorted(by_month, key=lambda m: -len(by_month[m])):
+        print(f"  {m:>8}: {len(by_month[m]):5d} מסלולים, MAE {mae(4, by_month[m])*100:.3f} נק' אחוז")
+    same = [r for r in rows if r[6] and r[6] == r[7]]
+    print(f"MAE (שיטה מלאה) רק כשחודש הנתון הרשמי = חודש הדוח: {len(same)} מסלולים, "
+          f"{mae(4, same)*100:.3f} נק' אחוז")
+    at = [r for r in rows if r[8] is not None]
+    if at:
+        mae_at = sum(abs(r[4] - r[8]) for r in at) / len(at)
+        print(f"MAE (שיטה מלאה) מול הנתון הרשמי לחודש הדוח (data.gov.il): {len(at)} מסלולים, "
+              f"{mae_at*100:.3f} נק' אחוז (מול החודש האחרון, אותם מסלולים: {mae(4, at)*100:.3f})")
+
     rows_sorted = sorted(rows, key=lambda r: -abs(r[4] - r[1]))
     print("\n15 הפערים הגדולים ביותר (שיטה מלאה מול רשמי):")
     print(f"{'מפתח':<20}{'רשמי':>10}{'ישן':>10}{'נגזרים':>10}{'מלא':>10}{'|מלא-רשמי|':>14}")
-    for key, off, old, deriv, full, _has_data in rows_sorted[:15]:
+    for key, off, old, deriv, full, *_ in rows_sorted[:15]:
         print(f"{key:<20}{off*100:>9.2f}%{old*100:>9.2f}%{deriv*100:>9.2f}%{full*100:>9.2f}%{abs(full-off)*100:>13.2f}%")
 
     print("\n15 השיפורים הגדולים ביותר (שיטה מלאה קרובה בהרבה יותר לרשמי מהישנה):")
     by_improvement = sorted(rows, key=lambda r: (abs(r[2]-r[1]) - abs(r[4]-r[1])), reverse=True)
-    for key, off, old, deriv, full, _has_data in by_improvement[:15]:
+    for key, off, old, deriv, full, *_ in by_improvement[:15]:
         print(f"{key:<20}{off*100:>9.2f}%{old*100:>9.2f}%{deriv*100:>9.2f}%{full*100:>9.2f}%"
               f"  (ישן-רשמי={abs(old-off)*100:.2f}%, מלא-רשמי={abs(full-off)*100:.2f}%)")
 

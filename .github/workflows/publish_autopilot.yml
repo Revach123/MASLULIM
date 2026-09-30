@@ -49,6 +49,12 @@ jobs:
           apiToken:  ${{ secrets.CF_D1_TOKEN }}
           accountId: ${{ secrets.CF_ACCOUNT_ID }}
           command:   d1 execute maslulim_autopilot --remote --file=out/bonds_detail.sql -y
+      - name: Load index_exposure into D1
+        uses: cloudflare/wrangler-action@v3
+        with:
+          apiToken:  ${{ secrets.CF_D1_TOKEN }}
+          accountId: ${{ secrets.CF_ACCOUNT_ID }}
+          command:   d1 execute maslulim_autopilot --remote --file=out/index_exposure.sql -y
       - uses: actions/upload-artifact@v4
         if: always()
         with:

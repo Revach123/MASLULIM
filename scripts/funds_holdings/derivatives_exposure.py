@@ -250,7 +250,7 @@ def total_assets_by_key(source: list[dict]) -> dict[str, float]:
 
 
 def _futures_exposure(
-    source: list[dict], total_assets: dict[str, float]
+    source: list[dict], total_assets: dict[str, float], detail: list | None = None
 ) -> tuple[dict[str, float], dict[str, float]]:
     """מחזיר (sums, equity_sums) - equity_sums הוא תת-קבוצה של sums, רק שורות
     עם נכס בסיס = מניות/מדדי-מניות (FUT_UNDERLYING_COL), לאזור החשיפה למניות.
@@ -292,6 +292,9 @@ def _futures_exposure(
         sums[key] = sums.get(key, 0.0) + line_ratio
         if is_equity:
             equity_sums[key] = equity_sums.get(key, 0.0) + line_ratio
+        if detail is not None:
+            detail.append({"key": key, "root": fr.root, "row": row, "ratio": line_ratio,
+                           "row_pct": row_pct, "equity": is_equity})
     capped = {
         key: val if abs(val) <= SANITY_CAP else row_pct_sums.get(key, 0.0)
         for key, val in sums.items()
@@ -336,7 +339,7 @@ def _leg_market_values(row: dict, report_date, fx_now: dict[tuple, float]) -> li
 
 
 def _swap_exposure(
-    source: list[dict], total_assets: dict[str, float]
+    source: list[dict], total_assets: dict[str, float], detail: list | None = None
 ) -> tuple[dict[str, float], dict[str, float], dict[str, float], dict[str, dict[str, float]]]:
     """חשיפת שורה = ממוצע שווי השוק של שתי הרגליים ("שווי הוגן במטבע הנסחר
     (רגל X)" × שער נוכחי), כשהגוף מדווח אותו - כל הגופים חוץ מ-512065202
@@ -508,6 +511,9 @@ def _swap_exposure(
             if line_ratio is None or abs(line_ratio) > SANITY_CAP:
                 line_ratio = row_pct
             notional_sums[key] = notional_sums.get(key, 0.0) + line_ratio
+            if detail is not None:
+                detail.append({"key": key, "row": row, "ratio": line_ratio,
+                               "row_pct": row_pct, "equity": is_equity})
             if is_funded:
                 funded_sums[key] = funded_sums.get(key, 0.0) + line_ratio
             else:
