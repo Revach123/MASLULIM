@@ -1,12 +1,29 @@
 {
  "legal_id": "520031824",
  "name": "החברה המנהלת של רום קרן ההשתלמות לעובדי הרשויות המקומיות בע\"מ",
- "home": "",
- "pages": [],
+ "home": "https://www.krm.co.il",
+ "pages": [
+  {
+   "product": "גמל",
+   "url": "https://www.krm.co.il/?CategoryID=217"
+  },
+  {
+   "product": "גמל",
+   "url": "https://www.krm.co.il/?CategoryID=230"
+  },
+  {
+   "product": "גמל",
+   "url": "https://www.krm.co.il/"
+  }
+ ],
  "browser": "headless",
  "products": [
   "גמל"
  ],
- "search": true,
- "rev": 5
+ "search": false,
+ "rev": 7,
+ "home_source": "web_search",
+ "max_pages": 20,
+ "via": "extension",
+ "note": "403 לשרתי ענן -> תוסף. רום: קבצים ב-/_Uploads/dbsAttachedFiles/investment-forecast-<מסלול>-YYYY.pdf"
 }

@@ -49,7 +49,11 @@ async function pageCollectLinks(clicks) {
   clickAll('[aria-expanded="false"]:not(a)');
   clickAll("details:not([open]) > summary");
   // כותרות אקורדיון לפי שנה ("שנת 2026")
-  [...document.querySelectorAll("button, h2, h3, h4, div, span")].filter((el) => /^\s*שנת\s+20\d\d\s*$/.test(el.innerText || "") && visible(el))
+  // ("שנת 2026", "הצהרה מראש של גוף מוסדי לשנת 2026") - רק אלמנטים קצרים, לא מיכלים שלמים
+  [...document.querySelectorAll("button, h2, h3, h4, div, span, a")].filter((el) => {
+    const t = (el.innerText || "").trim();
+    return t.length < 120 && /(^|\s|ל)שנת\s+20\d\d$/.test(t) && visible(el) && !el.querySelector("a[href$='.xlsx'], a[href$='.pdf']");
+  })
     .forEach((el) => { try { el.click(); } catch (e) {} });
   await wait(1500);
   const out = [];
@@ -153,10 +157,14 @@ export async function runPolicy(cfg, setStatus) {
         links.push(...cap.urls.map((u) => ({ ...u, ctx: "(download)" })));
         const docs = links.filter((l) => (DOC_RX.test(l.href) || l.ctx === "(download)" || DOC_RX.test(l.text)) && !NOISE_RX.test(l.text + " " + l.href)
           && (POLICY_RX.test(decodeURIComponent(l.href) + " " + l.text + " " + l.ctx)
-              // בעמוד שהוגדר ידנית: גם גיליונות בלי מילות מדיניות בשם (מור: 7_17_0_2026_9.xlsx) - אבל לא PDF כלליים
-              || ((site.pages || []).some((p) => p.url === pageUrl) && /\.(xlsx|xls)(\?|#|$)/i.test(l.href))));
+              // any_sheet (מור: 7_17_0_2026_9.xlsx): בעמוד שהוגדר ידנית גם גיליונות בלי מילות מדיניות בשם - לא PDF כלליים
+              || (site.any_sheet && (site.pages || []).some((p) => p.url === pageUrl) && /\.(xlsx|xls)(\?|#|$)/i.test(l.href))));
         const uniq = [...new Map(docs.map((d) => [d.href, d])).values()];
         diag.push(`${site.name.slice(0, 18)}: links=${links.length} files=${links.filter((l) => DOC_RX.test(l.href)).length} clicked=${cap.clicked} captured=${cap.urls.length} selected=${uniq.length}`);
+        if (!uniq.length) {  // אבחון: אילו קבצים נמצאו ולמה לא נבחרו
+          links.filter((l) => DOC_RX.test(l.href)).slice(0, 6).forEach((l) =>
+            diag.push(`   ? ${decodeURIComponent(l.href.split("/").pop()).slice(0, 60)} | ${(l.text || "").slice(0, 40)} | ${(l.ctx || "").replace(/\s+/g, " ").slice(0, 60)}`));
+        }
         for (const d of uniq) {
           const [r2] = await chrome.scripting.executeScript({ target: { tabId: tab.id }, func: pageFetchBase64, args: [d.href] });
           const got = r2 && r2.result;

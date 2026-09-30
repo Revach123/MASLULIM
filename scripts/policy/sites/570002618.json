@@ -1,13 +1,14 @@
 {
  "legal_id": "570002618",
  "name": "תגמולים של עובדים בעירית ת\"א-יפו א.ש. בע\"מ",
- "home": "https://www.ovdim-tlv.org.il",
+ "home": "https://tagmulimta.co.il",
  "pages": [],
  "browser": "headless",
  "products": [
   "גמל"
  ],
- "search": true,
- "rev": 6,
- "home_source": "report_email:ovdim-tlv.org.il,bidacpa.com"
+ "search": false,
+ "rev": 7,
+ "home_source": "web_search",
+ "max_pages": 20
 }

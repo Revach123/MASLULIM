@@ -1,13 +1,19 @@
 {
  "legal_id": "520030198",
  "name": "ק.ה.ר - קרן השתלמות לרוקחים בע\"מ",
- "home": "https://www.ag-cpa.co.il",
- "pages": [],
+ "home": "https://infinity.co.il",
+ "pages": [
+  {
+   "product": "גמל",
+   "url": "https://infinity.co.il/kahar/"
+  }
+ ],
  "browser": "headless",
  "products": [
   "גמל"
  ],
- "search": true,
- "rev": 6,
- "home_source": "report_email:ag-cpa.co.il"
+ "search": false,
+ "rev": 7,
+ "home_source": "web_search",
+ "max_pages": 20
 }

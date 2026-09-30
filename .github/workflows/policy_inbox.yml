@@ -4,6 +4,7 @@ name: Policy inbox (extension uploads)
 # כאן: קליטה לתיקיית החברה -> פרסור -> טבלאות מאוחדות.
 on:
   push:
+    branches: [main]  # התוסף דוחף ל-main; בענפים אחרים (מיזוגים) אין לקלוט שוב - יוצר התנגשויות
     paths: ["policy/inbox/**"]
 
 permissions:

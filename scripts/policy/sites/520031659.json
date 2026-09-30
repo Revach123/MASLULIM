@@ -1,13 +1,14 @@
 {
  "legal_id": "520031659",
  "name": "עוצ\"מ חברה לניהול קופות גמל והשתלמות בע\"מ",
- "home": "https://www.otzem.co.il",
+ "home": "https://keren.otzem-gemel.co.il",
  "pages": [],
  "browser": "headless",
  "products": [
   "גמל"
  ],
- "search": true,
- "rev": 6,
- "home_source": "report_email:otzem.co.il"
+ "search": false,
+ "rev": 7,
+ "home_source": "web_search",
+ "max_pages": 20
 }

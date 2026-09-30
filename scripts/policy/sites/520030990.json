@@ -1,12 +1,25 @@
 {
  "legal_id": "520030990",
  "name": "החברה המנהלת של מינהל קרן ההשתלמות לפקידים עובדי המנהל והשירותים בע\"מ",
- "home": "",
- "pages": [],
+ "home": "https://www.minhal.org",
+ "pages": [
+  {
+   "product": "גמל",
+   "url": "https://www.minhal.org/?CategoryID=164"
+  },
+  {
+   "product": "גמל",
+   "url": "https://minhal.org/"
+  }
+ ],
  "browser": "headless",
  "products": [
   "גמל"
  ],
- "search": true,
- "rev": 5
+ "search": false,
+ "rev": 7,
+ "home_source": "web_search",
+ "max_pages": 20,
+ "via": "extension",
+ "note": "403 לשרתי ענן -> תוסף"
 }

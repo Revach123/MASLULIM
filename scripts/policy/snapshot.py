@@ -164,6 +164,31 @@ def fetch_browser(pw, url):
                     expand()
             except Exception:
                 pass
+        # מסננים/לשוניות שהם DIV/SPAN עם cursor:pointer (הכשרה: "מדיניות השקעה משתתפות"; מנורה: שנים 2026..2017)
+        pointer_js = """els => els.filter(e => {
+            const t = (e.innerText || '').trim();
+            if (t.length < 2 || t.length > 45 || e.closest('a[href]')) return false;
+            if (!(e.offsetWidth || e.offsetHeight)) return false;
+            if ([...e.children].some(c => (c.innerText || '').trim() === t)) return false;  // הפנימי ביותר
+            return getComputedStyle(e).cursor === 'pointer' || e.hasAttribute('onclick') || e.getAttribute('tabindex') === '0';
+        }).map(e => (e.innerText || '').trim())"""
+        try:
+            ptexts = pg.eval_on_selector_all("div, span, li, p, h3, h4, label", pointer_js)
+        except Exception:
+            ptexts = []
+        want = [t for t in dict.fromkeys(ptexts)
+                if t not in clicked and re.search(r"מדיניות|הצהר|השקע|policy|^(שנת\s*)?20[12]\d$", t) and not re.search(r"פרטיות|תגמול|נגישות|הצבע", t)]
+        for t in want[:25]:
+            try:
+                pg.get_by_text(t, exact=True).first.click(timeout=1500); pg.wait_for_timeout(1200)
+                if pg.url.split("#")[0] != url.split("#")[0]:
+                    collect(); pg.go_back(wait_until="networkidle", timeout=30000); continue
+                expand()
+                for a in pg.eval_on_selector_all("a[href]", "els=>els.map(e=>({href:e.href,text:e.innerText||e.textContent||''}))"):
+                    if (a["href"], a["text"].strip()) not in seen and re.search(r"\.(xlsx|xls|pdf|docx)(\?|$)", a["href"], re.I):
+                        seen.add((a["href"], a["text"].strip())); anchors.append({"href": a["href"], "text": f"{t} {a['text']}".strip()})
+            except Exception:
+                pass
         pg.wait_for_timeout(1000)
         collect()
         # כפתורי "הורדה" שלא מצביעים לקובץ (postback של ASP.NET / JS): לוחצים ולוכדים את ההורדה עצמה

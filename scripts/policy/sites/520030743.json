@@ -1,12 +1,14 @@
 {
  "legal_id": "520030743",
  "name": "החברה לניהול קרן השתלמות לשופטים בע\"מ",
- "home": "",
+ "home": "https://www.keren-shoftim.org.il",
  "pages": [],
  "browser": "headless",
  "products": [
   "גמל"
  ],
- "search": true,
- "rev": 5
+ "search": false,
+ "rev": 6,
+ "home_source": "web_search",
+ "max_pages": 20
 }
