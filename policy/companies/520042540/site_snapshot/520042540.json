@@ -1,18 +1,20 @@
 {
  "legal_id": "520042540",
  "company": "מנורה מבטחים ביטוח בע\"מ",
- "taken": "2026-09-30T20:48:28+00:00",
+ "taken": "2026-09-30T21:21:26+00:00",
  "pages": {
   "https://www.menoramivt.co.il": {
    "product": "פנסיה+גמל+ביטוח",
    "status": 200,
    "method": "requests",
    "text_hash": "39ef72657755495a8891ed9ef5b325073cdf63c6",
+   "text_head": "מנורה מבטחים: חברת ביטוח, פנסיה, פיננסים, קופות גמל וקרנות השתלמות דלג לתוכן הדף דלג לתוכן הדף ביטוחים חיסכון פנסיוני מנורה השקעות תביעות שירותים פעולות דברו איתנו | פורטלים ביטוחים ביטוח רכב ביטוח רכב לפי קילומטר ביטוח נהג חדש כיסוי לכל נהג ביטוח צד ג' לאופנוע ביטוח משאית ביטוח רכב אספנות ביטוח נסיעות לחו\"ל - Top Travel אפליקציית ביטוח נסיעות לחו\"ל - Menora ON ביטוח בריאות פרטי ביטוח בריאות קבוצתי ביטוח מחלות קשות ביטוח לעובדים זרים ותיירים ביטוח תאונות אישיות מנורה HUG - מרכז סיוע לקראת ניתוח ביטוח חיים פרטי ביטוח אובדן כושר עבודה ביטוח מטריה קבוצתית ביטוח לעסק ביטוח סייבר ביטוח הנדסי ביטוח ",
    "items": [
     {
      "text": "פורטל סוכנים",
      "href": "https://menoranet.menora.co.il/my.policy",
      "year": null,
+     "iframe": false,
      "doc": false,
      "internal": false
     },
@@ -20,6 +22,7 @@
      "text": "עדכון מוטבים",
      "href": "https://meforms.menora.co.il/api/launch/templatelink/request-policy-changes",
      "year": null,
+     "iframe": false,
      "doc": false,
      "internal": false
     },
@@ -27,6 +30,7 @@
      "text": "מערכת מ.מ.ש",
      "href": "https://dent.menora.co.il/my.policy",
      "year": null,
+     "iframe": false,
      "doc": false,
      "internal": false
     },
@@ -34,6 +38,7 @@
      "text": "מסלולי השקעות בפרישה",
      "href": "https://www.menoramivt.co.il/list/pension-member-info/retirement-investment-tracks",
      "year": null,
+     "iframe": false,
      "doc": false,
      "internal": true
     },
@@ -41,6 +46,7 @@
      "text": "מסלולי השקעה בקרן ההשתלמות",
      "href": "https://www.menoramivt.co.il/links/pension-and-gemel/gemel-hishtalmut-list/menroa-keren-hishtalmut",
      "year": null,
+     "iframe": false,
      "doc": false,
      "internal": true
     },
@@ -48,6 +54,7 @@
      "text": "מנורה השקעות",
      "href": "https://www.menoramivt.co.il",
      "year": null,
+     "iframe": false,
      "doc": false,
      "internal": true
     },
@@ -55,6 +62,7 @@
      "text": "מדיניות פרטיות",
      "href": "https://www.menoramivt.co.il/general/privacy-policy",
      "year": null,
+     "iframe": false,
      "doc": false,
      "internal": true
     },
@@ -62,6 +70,7 @@
      "text": "ביטול פוליסה קיימת",
      "href": "https://www.menoramivt.co.il/customer-login/?target=customer-cancel-policy&originSource=marketingSite",
      "year": null,
+     "iframe": false,
      "doc": false,
      "internal": true
     },
@@ -69,6 +78,7 @@
      "text": "ביטול פוליסה קיימת",
      "href": "https://www.menoramivt.co.il/general/cancellation-of-policy",
      "year": null,
+     "iframe": false,
      "doc": false,
      "internal": true
     },
@@ -76,6 +86,7 @@
      "text": "ביטול פוליסה",
      "href": "https://www.menoramivt.co.il/customer-login/?target=customer-iframe-launcher-cancel-policy",
      "year": null,
+     "iframe": false,
      "doc": false,
      "internal": true
     },
@@ -83,6 +94,7 @@
      "text": "ארכיון פוליסות",
      "href": "https://www.menoramivt.co.il/policy/",
      "year": null,
+     "iframe": false,
      "doc": false,
      "internal": true
     },
@@ -90,6 +102,7 @@
      "text": "אישור מס והצהרת הון",
      "href": "https://www.menoramivt.co.il/personal/reports/?originSource=marketingSite",
      "year": null,
+     "iframe": false,
      "doc": false,
      "internal": true
     },
@@ -97,21 +110,24 @@
      "text": "Investor Relations (EN)",
      "href": "https://www.menoramivt.co.il/investor-relations",
      "year": null,
+     "iframe": false,
      "doc": false,
      "internal": true
     }
    ]
   },
   "https://www.menoramivt.co.il/rep-list/about-insurance/participating-portfolio-info/investment-policy": {
-   "product": "ביטוח",
+   "product": "פנסיה+ביטוח",
    "status": 200,
    "method": "browser",
-   "text_hash": "363a030d4b635a9c46d492edf35bd71cae37297f",
+   "text_hash": "8fa33dba851f3f233b63984823d03cf37917db2b",
+   "text_head": "דלג לתוכן הדף ביטוחיםחיסכון פנסיונימנורה השקעותתביעותשירותיםפעולותדברו איתנו|פורטלים פורטל סוכנים פורטל מעסיקים מערכת מ.מ.ש קשרי משקיעים Investor Relations מוסכי הסדר ✕ כניסה לאזור האישי אתר זה משתמש בעוגיות (Cookies) לשיפור חווית הגלישה והתאמת תכנים. למידע נוסף ראה מדיניות הפרטיות הבנתי היי👋 רק רצינו לעדכן שמהיום ניתן לקבל שירות גם ב-WhatsApp במספר 054-7108187 להתחלת שיחה מעדיפים להמשיך לדבר איתנו כאן? בשמחה! עם מי יש לנו הכבוד? 😊 (אנא הקלידו שם מלא) מעדיפים להמשיך לדבר איתנו כאן? בשמחה!$br עם מי יש לנו הכבוד? 😊 (אנא הקלידו שם מלא) הצהרת מדיניות השקעה לצפייה בקבצים דרושה תוכנת Acrobat Reader.",
    "items": [
     {
      "text": "פורטל סוכנים",
      "href": "https://menoranet.menora.co.il/my.policy",
      "year": null,
+     "iframe": false,
      "doc": false,
      "internal": false
     },
@@ -119,6 +135,7 @@
      "text": "עדכון מוטבים",
      "href": "https://meforms.menora.co.il/api/launch/templatelink/request-policy-changes",
      "year": null,
+     "iframe": false,
      "doc": false,
      "internal": false
     },
@@ -126,6 +143,7 @@
      "text": "מערכת מ.מ.ש",
      "href": "https://dent.menora.co.il/my.policy",
      "year": null,
+     "iframe": false,
      "doc": false,
      "internal": false
     },
@@ -133,6 +151,7 @@
      "text": "מסלולי השקעות בפרישה",
      "href": "https://www.menoramivt.co.il/list/pension-member-info/retirement-investment-tracks",
      "year": null,
+     "iframe": false,
      "doc": false,
      "internal": true
     },
@@ -140,6 +159,15 @@
      "text": "מסלולי השקעה בקרן ההשתלמות",
      "href": "https://www.menoramivt.co.il/links/pension-and-gemel/gemel-hishtalmut-list/menroa-keren-hishtalmut",
      "year": null,
+     "iframe": false,
+     "doc": false,
+     "internal": true
+    },
+    {
+     "text": "מדיניות פרטיות",
+     "href": "https://www.menoramivt.co.il/general/privacy-policy",
+     "year": null,
+     "iframe": false,
      "doc": false,
      "internal": true
     },
@@ -147,6 +175,7 @@
      "text": "ביטול פוליסה קיימת",
      "href": "https://www.menoramivt.co.il/customer-login/?target=customer-cancel-policy&originSource=marketingSite",
      "year": null,
+     "iframe": false,
      "doc": false,
      "internal": true
     },
@@ -154,6 +183,7 @@
      "text": "ביטול פוליסה קיימת",
      "href": "https://www.menoramivt.co.il/general/cancellation-of-policy",
      "year": null,
+     "iframe": false,
      "doc": false,
      "internal": true
     },
@@ -161,13 +191,7 @@
      "text": "ביטול פוליסה",
      "href": "https://www.menoramivt.co.il/customer-login/?target=customer-iframe-launcher-cancel-policy",
      "year": null,
-     "doc": false,
-     "internal": true
-    },
-    {
-     "text": "אתר זה משתמש בעוגיות (Cookies) לשיפור חווית הגלישה והתאמת תכנים. למידע נוסף ראה מדיניות הפרטיות",
-     "href": "https://www.menoramivt.co.il/general/privacy-policy",
-     "year": null,
+     "iframe": false,
      "doc": false,
      "internal": true
     },
@@ -175,6 +199,7 @@
      "text": "ארכיון פוליסות",
      "href": "https://www.menoramivt.co.il/policy/",
      "year": null,
+     "iframe": false,
      "doc": false,
      "internal": true
     },
@@ -182,6 +207,7 @@
      "text": "אישור מס והצהרת הון",
      "href": "https://www.menoramivt.co.il/personal/reports/?originSource=marketingSite",
      "year": null,
+     "iframe": false,
      "doc": false,
      "internal": true
     },
@@ -189,6 +215,7 @@
      "text": "Investor Relations (EN)",
      "href": "https://www.menoramivt.co.il/investor-relations",
      "year": null,
+     "iframe": false,
      "doc": false,
      "internal": true
     },
@@ -196,6 +223,7 @@
      "text": "",
      "href": "https://www.menoramivt.co.il/rep-list/about-insurance/participating-portfolio-info/investment-policy",
      "year": null,
+     "iframe": false,
      "doc": false,
      "internal": true
     }
@@ -205,26 +233,30 @@
    "product": "פנסיה",
    "status": 200,
    "method": "requests",
-   "text_hash": "39960de993592d50684afebedac86c8321d7337a",
+   "text_hash": "4d79efdcbdbfee9da1d2866f2edcf00c9bc5b5bb",
+   "text_head": "Radware Captcha Page We apologize for the inconvenience... ...but your activity and behavior on this site made us think that you are a bot. Note: A number of things could be going on here. If you are attempting to access this site using an anonymous Private/Proxy network, please disable that and try accessing site again. Due to previously detected malicious behavior which originated from the network you're using, please request unblock to site. Incident ID: 3884c1aa-dcyu-435d-b906-03cf4a34918f Please solve this CAPTCHA to request unblock to the website You reached this page when trying to acce",
    "items": []
   },
   "https://www.menoramivt.co.il/links/pension-and-gemel/gemel-hishtalmut-list/menroa-keren-hishtalmut": {
    "product": "פנסיה+גמל",
    "status": 200,
    "method": "requests",
-   "text_hash": "81da6aac615dee16c241c4800eed69c2a27a4405",
+   "text_hash": "dff1e84c350efb66b3b20d902120c4b455d818b9",
+   "text_head": "Radware Captcha Page We apologize for the inconvenience... ...but your activity and behavior on this site made us think that you are a bot. Note: A number of things could be going on here. If you are attempting to access this site using an anonymous Private/Proxy network, please disable that and try accessing site again. Due to previously detected malicious behavior which originated from the network you're using, please request unblock to site. Incident ID: 1ba88fb1-dcyu-462a-8a0f-8d013c17da5e Please solve this CAPTCHA to request unblock to the website You reached this page when trying to acce",
    "items": []
   },
   "https://www.menoramivt.co.il/policy/": {
    "product": "פנסיה+ביטוח",
    "status": 200,
    "method": "browser",
-   "text_hash": "4d018057be41f065cba14fb696b5a63071aed3e5",
+   "text_hash": "40af5d66d851dd2a4013ea593476687cced5ffc7",
+   "text_head": "דלג לתוכן הדף ביטוחיםחיסכון פנסיונימנורה השקעותתביעותשירותיםפעולותדברו איתנו|פורטלים פורטל סוכנים פורטל מעסיקים מערכת מ.מ.ש קשרי משקיעים Investor Relations מוסכי הסדר ✕ כניסה לאזור האישי אתר זה משתמש בעוגיות (Cookies) לשיפור חווית הגלישה והתאמת תכנים. למידע נוסף ראה מדיניות הפרטיות הבנתי דף הבית> ארכיון פוליסות היי👋 רק רצינו לעדכן שמהיום ניתן לקבל שירות גם ב-WhatsApp במספר 054-7108187 להתחלת שיחה מעדיפים להמשיך לדבר איתנו כאן? בשמחה! עם מי יש לנו הכבוד? 😊 (אנא הקלידו שם מלא) מעדיפים להמשיך לדבר איתנו כאן? בשמחה!$br עם מי יש לנו הכבוד? 😊 (אנא הקלידו שם מלא) ארכיון פוליסות כל המסמכים במקום אחד מ",
    "items": [
     {
      "text": "לחצו כאן",
      "href": "https://cdn.menoramivt.co.il/public/docs/20260817/%D7%A4%D7%99%D7%A8%D7%95%D7%98-%D7%AA%D7%92%D7%9E%D7%95%D7%9C%D7%99-%D7%91%D7%99%D7%98%D7%95%D7%97-%D7%A0%D7%99%D7%AA%D7%95%D7%97%D7%99%D7%99%D7%9D-%D7%A4%D7%9C%D7%95%D7%A1-17.08.2026.pdf",
      "year": "2026",
+     "iframe": false,
      "doc": true,
      "internal": true
     },
@@ -232,6 +264,7 @@
      "text": "לחצו כאן",
      "href": "https://cdn.menoramivt.co.il/public/docs/20230327/%D7%A8%D7%A9%D7%99%D7%9E%D7%AA-%D7%AA%D7%97%D7%91%D7%99%D7%91%D7%99%D7%9D-%D7%94%D7%9E%D7%95%D7%92%D7%93%D7%A8%D7%99%D7%9D-%D7%9B%D7%A1%D7%A4%D7%95%D7%A8%D7%98-%D7%90%D7%AA%D7%92%D7%A8%D7%99-%D7%90%D7%95-%D7%A4%D7%A2%D7%99%D7%9C%D7%95%D7%AA-%D7%90%D7%AA%D7%92%D7%A8%D7%99%D7%AA-3.2023.pdf",
      "year": "2023",
+     "iframe": false,
      "doc": true,
      "internal": true
     },
@@ -239,6 +272,7 @@
      "text": "לחצו כאן",
      "href": "https://cdn.menoramivt.co.il/public/docs/20210413/%D7%A1%D7%A4%D7%A8+%D7%A0%D7%99%D7%AA%D7%95%D7%97%D7%99%D7%9D+%D7%91%D7%A8%D7%99%D7%90+%D7%95%D7%A9%D7%9C%D7%9D+.pdf",
      "year": "2021",
+     "iframe": false,
      "doc": true,
      "internal": true
     },
@@ -246,6 +280,7 @@
      "text": "לחצו כאן",
      "href": "https://cdn.menoramivt.co.il/public/docs/20210413/%D7%9B%D7%9C%D7%9C%D7%99%D7%9D+%D7%95%D7%9E%D7%91%D7%97%D7%A0%D7%99%D7%9D+%D7%9C%D7%A7%D7%91%D7%9C%D7%AA+%D7%92%D7%9E%D7%9C%D7%AA+%D7%A1%D7%99%D7%A2%D7%95%D7%93+.pdf",
      "year": "2021",
+     "iframe": false,
      "doc": true,
      "internal": true
     },
@@ -253,6 +288,7 @@
      "text": "פורטל סוכנים",
      "href": "https://menoranet.menora.co.il/my.policy",
      "year": null,
+     "iframe": false,
      "doc": false,
      "internal": false
     },
@@ -260,6 +296,7 @@
      "text": "עדכון מוטבים",
      "href": "https://meforms.menora.co.il/api/launch/templatelink/request-policy-changes",
      "year": null,
+     "iframe": false,
      "doc": false,
      "internal": false
     },
@@ -267,6 +304,7 @@
      "text": "מערכת מ.מ.ש",
      "href": "https://dent.menora.co.il/my.policy",
      "year": null,
+     "iframe": false,
      "doc": false,
      "internal": false
     },
@@ -274,6 +312,7 @@
      "text": "מסלולי השקעות בפרישה",
      "href": "https://www.menoramivt.co.il/list/pension-member-info/retirement-investment-tracks",
      "year": null,
+     "iframe": false,
      "doc": false,
      "internal": true
     },
@@ -281,6 +320,15 @@
      "text": "מסלולי השקעה בקרן ההשתלמות",
      "href": "https://www.menoramivt.co.il/links/pension-and-gemel/gemel-hishtalmut-list/menroa-keren-hishtalmut",
      "year": null,
+     "iframe": false,
+     "doc": false,
+     "internal": true
+    },
+    {
+     "text": "מדיניות פרטיות",
+     "href": "https://www.menoramivt.co.il/general/privacy-policy",
+     "year": null,
+     "iframe": false,
      "doc": false,
      "internal": true
     },
@@ -288,6 +336,7 @@
      "text": "ביטול פוליסה קיימת",
      "href": "https://www.menoramivt.co.il/customer-login/?target=customer-cancel-policy&originSource=marketingSite",
      "year": null,
+     "iframe": false,
      "doc": false,
      "internal": true
     },
@@ -295,6 +344,7 @@
      "text": "ביטול פוליסה קיימת",
      "href": "https://www.menoramivt.co.il/general/cancellation-of-policy",
      "year": null,
+     "iframe": false,
      "doc": false,
      "internal": true
     },
@@ -302,13 +352,7 @@
      "text": "ביטול פוליסה",
      "href": "https://www.menoramivt.co.il/customer-login/?target=customer-iframe-launcher-cancel-policy",
      "year": null,
-     "doc": false,
-     "internal": true
-    },
-    {
-     "text": "אתר זה משתמש בעוגיות (Cookies) לשיפור חווית הגלישה והתאמת תכנים. למידע נוסף ראה מדיניות הפרטיות",
-     "href": "https://www.menoramivt.co.il/general/privacy-policy",
-     "year": null,
+     "iframe": false,
      "doc": false,
      "internal": true
     },
@@ -316,6 +360,7 @@
      "text": "ארכיון פוליסות",
      "href": "https://www.menoramivt.co.il/policy/",
      "year": null,
+     "iframe": false,
      "doc": false,
      "internal": true
     },
@@ -323,6 +368,7 @@
      "text": "אישור מס והצהרת הון",
      "href": "https://www.menoramivt.co.il/personal/reports/?originSource=marketingSite",
      "year": null,
+     "iframe": false,
      "doc": false,
      "internal": true
     },
@@ -330,6 +376,7 @@
      "text": "Investor Relations (EN)",
      "href": "https://www.menoramivt.co.il/investor-relations",
      "year": null,
+     "iframe": false,
      "doc": false,
      "internal": true
     }
@@ -339,26 +386,30 @@
    "product": null,
    "status": 200,
    "method": "browser",
-   "text_hash": "222e5f8b2396341a46168eae4bb30d4e7577c146",
+   "text_hash": null,
+   "text_head": "",
    "items": []
   },
   "https://www.menoramivt.co.il/customer-login/?target=customer-cancel-policy&originSource=marketingSite": {
    "product": null,
    "status": 200,
    "method": "browser",
-   "text_hash": "222e5f8b2396341a46168eae4bb30d4e7577c146",
+   "text_hash": "ae519de33855facc22baa6b050bb67636db59118",
+   "text_head": "כניסה לאזור האישי מספר זהות יש להזין תעודת זהות מלאה כולל ספרת ביקורת טלפון / דוא\"ל יש להקליד כתובת דוא\"ל או טלפון נייד שלחו לי קוד בהודעה רוצה לקבל קוד בשיחה טלפונית יש בעיה או שאלה? במוקד התמיכה הטכנית שלנו ישמחו לעזור 03-7108900 | המוקד פעיל בימים א'-ה' בין השעות 8:00-17:00 | שליחת פניה למוקד התמיכה הטכנית | לכל נושא אחר יש לפנות למוקדי שירות הלקוחות בטלפון 2000*",
    "items": []
   },
   "https://www.menoramivt.co.il/general/cancellation-of-policy": {
    "product": "פנסיה+ביטוח",
    "status": 200,
    "method": "browser",
-   "text_hash": "4f4f1b658a52ef4b621b2bd3fc7071cafffd246c",
+   "text_hash": "fa9e569467542795c57a9e289b4a36ee258b4241",
+   "text_head": "דלג לתוכן הדף ביטוחיםחיסכון פנסיונימנורה השקעותתביעותשירותיםפעולותדברו איתנו|פורטלים פורטל סוכנים פורטל מעסיקים מערכת מ.מ.ש קשרי משקיעים Investor Relations מוסכי הסדר ✕ כניסה לאזור האישי אתר זה משתמש בעוגיות (Cookies) לשיפור חווית הגלישה והתאמת תכנים. למידע נוסף ראה מדיניות הפרטיות הבנתי דף הבית> ביטול פוליסה קיימת היי👋 רק רצינו לעדכן שמהיום ניתן לקבל שירות גם ב-WhatsApp במספר 054-7108187 להתחלת שיחה מעדיפים להמשיך לדבר איתנו כאן? בשמחה! עם מי יש לנו הכבוד? 😊 (אנא הקלידו שם מלא) מעדיפים להמשיך לדבר איתנו כאן? בשמחה!$br עם מי יש לנו הכבוד? 😊 (אנא הקלידו שם מלא) ביטול פוליסה קיימת פוליסת הביטוח ",
    "items": [
     {
      "text": "לחצו כאן",
      "href": "https://cdn.menoramivt.co.il/public/docs/20250410/%D7%98%D7%95%D7%A4%D7%A1-%D7%91%D7%99%D7%98%D7%95%D7%9C-%D7%A4%D7%95%D7%9C%D7%99%D7%A1%D7%94-%D7%90%D7%95-%D7%9B%D7%99%D7%A1%D7%95%D7%99-%D7%9C%D7%95%D7%92%D7%95-%D7%97%D7%93%D7%A9-%D7%9E%D7%95%D7%A0%D7%92%D7%A9.pdf",
      "year": "2025",
+     "iframe": false,
      "doc": true,
      "internal": true
     },
@@ -366,6 +417,7 @@
      "text": "פורטל סוכנים",
      "href": "https://menoranet.menora.co.il/my.policy",
      "year": null,
+     "iframe": false,
      "doc": false,
      "internal": false
     },
@@ -373,6 +425,7 @@
      "text": "עדכון מוטבים",
      "href": "https://meforms.menora.co.il/api/launch/templatelink/request-policy-changes",
      "year": null,
+     "iframe": false,
      "doc": false,
      "internal": false
     },
@@ -380,6 +433,7 @@
      "text": "מערכת מ.מ.ש",
      "href": "https://dent.menora.co.il/my.policy",
      "year": null,
+     "iframe": false,
      "doc": false,
      "internal": false
     },
@@ -387,6 +441,7 @@
      "text": "מסלולי השקעות בפרישה",
      "href": "https://www.menoramivt.co.il/list/pension-member-info/retirement-investment-tracks",
      "year": null,
+     "iframe": false,
      "doc": false,
      "internal": true
     },
@@ -394,6 +449,15 @@
      "text": "מסלולי השקעה בקרן ההשתלמות",
      "href": "https://www.menoramivt.co.il/links/pension-and-gemel/gemel-hishtalmut-list/menroa-keren-hishtalmut",
      "year": null,
+     "iframe": false,
+     "doc": false,
+     "internal": true
+    },
+    {
+     "text": "מדיניות פרטיות",
+     "href": "https://www.menoramivt.co.il/general/privacy-policy",
+     "year": null,
+     "iframe": false,
      "doc": false,
      "internal": true
     },
@@ -401,6 +465,7 @@
      "text": "לחצו כאן.",
      "href": "https://cdn.menoramivt.co.il/public/docs/%D7%91%D7%A7%D7%A9%D7%94-%D7%9C%D7%91%D7%99%D7%98%D7%95%D7%9C-%D7%A4%D7%95%D7%9C%D7%99%D7%A1%D7%94.pdf",
      "year": null,
+     "iframe": false,
      "doc": true,
      "internal": true
     },
@@ -408,6 +473,7 @@
      "text": "לחצו כאן לכניסה",
      "href": "https://www.menoramivt.co.il/customer-login/?target=customer-cancel-policy",
      "year": null,
+     "iframe": false,
      "doc": false,
      "internal": true
     },
@@ -415,6 +481,7 @@
      "text": "ביטול פוליסה קיימת",
      "href": "https://www.menoramivt.co.il/customer-login/?target=customer-cancel-policy&originSource=marketingSite",
      "year": null,
+     "iframe": false,
      "doc": false,
      "internal": true
     },
@@ -422,13 +489,7 @@
      "text": "ביטול פוליסה",
      "href": "https://www.menoramivt.co.il/customer-login/?target=customer-iframe-launcher-cancel-policy",
      "year": null,
-     "doc": false,
-     "internal": true
-    },
-    {
-     "text": "אתר זה משתמש בעוגיות (Cookies) לשיפור חווית הגלישה והתאמת תכנים. למידע נוסף ראה מדיניות הפרטיות",
-     "href": "https://www.menoramivt.co.il/general/privacy-policy",
-     "year": null,
+     "iframe": false,
      "doc": false,
      "internal": true
     },
@@ -436,6 +497,7 @@
      "text": "ארכיון פוליסות",
      "href": "https://www.menoramivt.co.il/policy/",
      "year": null,
+     "iframe": false,
      "doc": false,
      "internal": true
     },
@@ -443,6 +505,7 @@
      "text": "אישור מס והצהרת הון",
      "href": "https://www.menoramivt.co.il/personal/reports/?originSource=marketingSite",
      "year": null,
+     "iframe": false,
      "doc": false,
      "internal": true
     },
@@ -450,6 +513,7 @@
      "text": "Investor Relations (EN)",
      "href": "https://www.menoramivt.co.il/investor-relations",
      "year": null,
+     "iframe": false,
      "doc": false,
      "internal": true
     },
@@ -457,6 +521,7 @@
      "text": "",
      "href": "https://www.menoramivt.co.il/general/cancellation-of-policy",
      "year": null,
+     "iframe": false,
      "doc": false,
      "internal": true
     }
@@ -466,19 +531,22 @@
    "product": null,
    "status": 200,
    "method": "requests",
-   "text_hash": "2a7a694a1d75a867c986e4d8f62643d91c3dc48e",
+   "text_hash": "3a53e9cdca9383c770594db7aa26eb03abe9c0d6",
+   "text_head": "Radware Captcha Page We apologize for the inconvenience... ...but your activity and behavior on this site made us think that you are a bot. Note: A number of things could be going on here. If you are attempting to access this site using an anonymous Private/Proxy network, please disable that and try accessing site again. Due to previously detected malicious behavior which originated from the network you're using, please request unblock to site. Incident ID: b8e0d7ce-dcyu-4687-9754-6734a4f5862b Please solve this CAPTCHA to request unblock to the website You reached this page when trying to acce",
    "items": []
   },
   "https://www.menoramivt.co.il/general/privacy-policy": {
    "product": "פנסיה+ביטוח",
    "status": 200,
    "method": "browser",
-   "text_hash": "95c3f0ef1ea73db23998d9591395c36f6a9d9756",
+   "text_hash": "fcc994374404b163b0b59109c3c9536469bca362",
+   "text_head": "דלג לתוכן הדף ביטוחיםחיסכון פנסיונימנורה השקעותתביעותשירותיםפעולותדברו איתנו|פורטלים פורטל סוכנים פורטל מעסיקים מערכת מ.מ.ש קשרי משקיעים Investor Relations מוסכי הסדר ✕ כניסה לאזור האישי דף הבית> מדיניות פרטיות ואבטחת מידע היי👋 רק רצינו לעדכן שמהיום ניתן לקבל שירות גם ב-WhatsApp במספר 054-7108187 להתחלת שיחה מעדיפים להמשיך לדבר איתנו כאן? בשמחה! עם מי יש לנו הכבוד? 😊 (אנא הקלידו שם מלא) מעדיפים להמשיך לדבר איתנו כאן? בשמחה!$br עם מי יש לנו הכבוד? 😊 (אנא הקלידו שם מלא) מדיניות פרטיות ואבטחת מידע מדיניות פרטיות זו הינה מדיניות הפרטיות של מנורה מבטחים ביטוח בע\"מ, מנורה מבטחים פנסיה וגמל בע\"מ ומנו",
    "items": [
     {
      "text": "פורטל סוכנים",
      "href": "https://menoranet.menora.co.il/my.policy",
      "year": null,
+     "iframe": false,
      "doc": false,
      "internal": false
     },
@@ -486,6 +554,7 @@
      "text": "עדכון מוטבים",
      "href": "https://meforms.menora.co.il/api/launch/templatelink/request-policy-changes",
      "year": null,
+     "iframe": false,
      "doc": false,
      "internal": false
     },
@@ -493,6 +562,7 @@
      "text": "מערכת מ.מ.ש",
      "href": "https://dent.menora.co.il/my.policy",
      "year": null,
+     "iframe": false,
      "doc": false,
      "internal": false
     },
@@ -500,6 +570,7 @@
      "text": "מסלולי השקעות בפרישה",
      "href": "https://www.menoramivt.co.il/list/pension-member-info/retirement-investment-tracks",
      "year": null,
+     "iframe": false,
      "doc": false,
      "internal": true
     },
@@ -507,6 +578,7 @@
      "text": "מסלולי השקעה בקרן ההשתלמות",
      "href": "https://www.menoramivt.co.il/links/pension-and-gemel/gemel-hishtalmut-list/menroa-keren-hishtalmut",
      "year": null,
+     "iframe": false,
      "doc": false,
      "internal": true
     },
@@ -514,6 +586,7 @@
      "text": "מדיניות קובצי Cookie של Meta (facebook.com)",
      "href": "https://he-il.facebook.com/privacy/policies/cookies/?entry_point=cookie_policy_redirect&entry=0",
      "year": null,
+     "iframe": false,
      "doc": false,
      "internal": false
     },
@@ -521,6 +594,7 @@
      "text": "מדיניות פרטיות",
      "href": "https://www.menoramivt.co.il/general/privacy-policy",
      "year": null,
+     "iframe": false,
      "doc": false,
      "internal": true
     },
@@ -528,6 +602,7 @@
      "text": "ביטול פוליסה קיימת",
      "href": "https://www.menoramivt.co.il/customer-login/?target=customer-cancel-policy&originSource=marketingSite",
      "year": null,
+     "iframe": false,
      "doc": false,
      "internal": true
     },
@@ -535,6 +610,7 @@
      "text": "ביטול פוליסה קיימת",
      "href": "https://www.menoramivt.co.il/general/cancellation-of-policy",
      "year": null,
+     "iframe": false,
      "doc": false,
      "internal": true
     },
@@ -542,6 +618,7 @@
      "text": "ביטול פוליסה",
      "href": "https://www.menoramivt.co.il/customer-login/?target=customer-iframe-launcher-cancel-policy",
      "year": null,
+     "iframe": false,
      "doc": false,
      "internal": true
     },
@@ -549,6 +626,7 @@
      "text": "ארכיון פוליסות",
      "href": "https://www.menoramivt.co.il/policy/",
      "year": null,
+     "iframe": false,
      "doc": false,
      "internal": true
     },
@@ -556,6 +634,7 @@
      "text": "אישור מס והצהרת הון",
      "href": "https://www.menoramivt.co.il/personal/reports/?originSource=marketingSite",
      "year": null,
+     "iframe": false,
      "doc": false,
      "internal": true
     },
@@ -563,6 +642,7 @@
      "text": "https://www.taboola.com/policies/cookie-policy",
      "href": "https://www.taboola.com/policies/cookie-policy",
      "year": null,
+     "iframe": false,
      "doc": false,
      "internal": false
     },
@@ -570,6 +650,7 @@
      "text": "Investor Relations (EN)",
      "href": "https://www.menoramivt.co.il/investor-relations",
      "year": null,
+     "iframe": false,
      "doc": false,
      "internal": true
     }
@@ -579,14 +660,16 @@
    "product": null,
    "status": 200,
    "method": "browser",
-   "text_hash": "222e5f8b2396341a46168eae4bb30d4e7577c146",
+   "text_hash": "ae519de33855facc22baa6b050bb67636db59118",
+   "text_head": "כניסה לאזור האישי מספר זהות יש להזין תעודת זהות מלאה כולל ספרת ביקורת טלפון / דוא\"ל יש להקליד כתובת דוא\"ל או טלפון נייד שלחו לי קוד בהודעה רוצה לקבל קוד בשיחה טלפונית יש בעיה או שאלה? במוקד התמיכה הטכנית שלנו ישמחו לעזור 03-7108900 | המוקד פעיל בימים א'-ה' בין השעות 8:00-17:00 | שליחת פניה למוקד התמיכה הטכנית | לכל נושא אחר יש לפנות למוקדי שירות הלקוחות בטלפון 2000*",
    "items": []
   },
   "https://www.menoramivt.co.il/customer-login/?target=customer-cancel-policy": {
    "product": null,
    "status": 200,
    "method": "browser",
-   "text_hash": "222e5f8b2396341a46168eae4bb30d4e7577c146",
+   "text_hash": "ae519de33855facc22baa6b050bb67636db59118",
+   "text_head": "כניסה לאזור האישי מספר זהות יש להזין תעודת זהות מלאה כולל ספרת ביקורת טלפון / דוא\"ל יש להקליד כתובת דוא\"ל או טלפון נייד שלחו לי קוד בהודעה רוצה לקבל קוד בשיחה טלפונית יש בעיה או שאלה? במוקד התמיכה הטכנית שלנו ישמחו לעזור 03-7108900 | המוקד פעיל בימים א'-ה' בין השעות 8:00-17:00 | שליחת פניה למוקד התמיכה הטכנית | לכל נושא אחר יש לפנות למוקדי שירות הלקוחות בטלפון 2000*",
    "items": []
   }
  }
