@@ -265,10 +265,21 @@ def main():
         if not seed:
             report.append([legal_id, c["name"], "", "no_config", 0, 0, ""]); continue
         extra = expand_templates(seed["extra"])
+        products = {u: seed["products"].get(t) for t in seed["extra"] for u in expand_templates([t])}
+        # חיפוש נפרד לכל מוצר (גמל/פנסיה/ביטוח); כשאין אתר ידוע - האתר נקבע מהתוצאות
+        searched = {}
+        if seed["search"] and seed["product_list"]:
+            searched, home = search_product_pages(s, c["name"], seed["product_list"], seed["home"] or None)
+            seed["home"] = seed["home"] or home or ""
+            print(f"[{legal_id}] search ({','.join(seed['product_list'])}): {len(searched)}", *list(searched)[:10], sep="\n  ", flush=True)
+            for u, prod in searched.items():
+                if u not in extra:
+                    extra.append(u); products[u] = prod
+        if not seed["home"]:
+            report.append([legal_id, c["name"], "", "no_site_found", 0, 0, ""]); continue
         discovered = sitemap_policy_pages(s, seed["home"])
         print(f"[{legal_id}] sitemap policy pages: {len(discovered)}", *discovered[:10], sep="\n  ", flush=True)
         extra += [u for u in discovered if u not in extra]
-        products = {u: seed["products"].get(t) for t in seed["extra"] for u in expand_templates([t])}
         pages = snapshot_company(s, pw, seed["home"], extra, products, max_pages=40)
         # תמונת מצב + שינויים מול הריצה הקודמת (פריט חדש/הוסר/טקסט השתנה) - זה מנגנון זיהוי העדכונים היומי
         snap_path = OUT / "site_snapshot" / f"{legal_id}.json"
