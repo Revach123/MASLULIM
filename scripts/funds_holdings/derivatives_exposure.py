@@ -445,11 +445,17 @@ def _swap_exposure(
                 units2 = _num(row.get(leg2_col["units"]))
                 fx2 = _normalize_fx(row.get(leg2_col["currency"]), _num(row.get(leg2_col["fx"])))
                 price = _num(row.get(SWAP_UNDERLYING_PRICE_COL))
+                # מחיר נכס הבסיס נקוב במטבע נכס הבסיס - הרגל שאינה בשקלים (512065202:
+                # רגל 1 = יחידות בשקלים, רגל 2 = יחידות × מחיר בדולר), לא במטבע רגל 1.
+                ccy1, ccy2 = row.get(leg1_col["currency"]), row.get(leg2_col["currency"])
+                price_ccy = ccy2 if ccy1 == "ILS" and ccy2 else ccy1
+                price_fx = (1.0 if price_ccy == "ILS" else fx_now.get((price_ccy, report_date))
+                            or (fx2 if price_ccy == ccy2 else fx1))
 
                 leg2_val = abs(units2 * fx2) / 1000 if units2 is not None and fx2 is not None else None
                 leg1_raw = abs(units1 * fx1) / 1000 if units1 is not None and fx1 is not None else None
-                leg1_priced = (abs(units1 * fx1 * price) / 1000
-                                if units1 is not None and fx1 is not None and price is not None else None)
+                leg1_priced = (abs(units1 * price_fx * price) / 1000
+                                if units1 is not None and price_fx is not None and price is not None else None)
 
                 # used_priced: ההשוואה בפועל בין הפרשנויות (רגל1 גולמי מול רגל1
                 # מוכפל-במחיר) ביחס לרגל2 - זו בדיקת-הסבירות ה*אמיתית* של קנה
@@ -471,8 +477,8 @@ def _swap_exposure(
                 leg1_live = None
                 if used_priced:
                     current_price, _index_id = resolve_current_price(row.get(SWAP_TICKER_COL), report_date)
-                    leg1_live = (abs(units1 * fx1 * current_price) / 1000
-                                 if units1 is not None and fx1 is not None and current_price is not None else None)
+                    leg1_live = (abs(units1 * price_fx * current_price) / 1000
+                                 if units1 is not None and price_fx is not None and current_price is not None else None)
 
                 if leg1_live is not None:
                     candidates = [leg1_live]  # לא ממוצעים עם leg2 - ר' הערת הפונקציה
