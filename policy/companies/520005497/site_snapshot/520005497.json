@@ -1,7 +1,7 @@
 {
  "legal_id": "520005497",
  "company": "החברה לניהול קופות התגמולים והפיצויים של עובדי בנק לאומי בע\"מ",
- "taken": "2026-09-30T22:13:18+00:00",
+ "taken": "2026-09-30T22:23:30+00:00",
  "pages": {
   "https://www.bankleumi.co.il": {
    "product": null,
@@ -27,6 +27,14 @@
      "internal": true
     },
     {
+     "text": "קופת התגמולים והפיצויים של עובדי לאומי",
+     "href": "https://www.bankleumi.co.il/he/pension-and-provident-funds",
+     "year": null,
+     "iframe": false,
+     "doc": false,
+     "internal": true
+    },
+    {
      "text": "עיקרי מדיניות-במטבעות וירטואליים",
      "href": "https://www.bankleumi.co.il/he/about-leumi/about_compliance_at_Leumi/virtual_currencies",
      "year": null,
@@ -37,6 +45,14 @@
     {
      "text": "מדיניות הפרטיות בלאומי",
      "href": "https://www.bankleumi.co.il/he/Articles/privacy_policy",
+     "year": null,
+     "iframe": false,
+     "doc": false,
+     "internal": true
+    },
+    {
+     "text": "ייעוץ פנסיוני",
+     "href": "https://www.bankleumi.co.il/he/pension-advising",
      "year": null,
      "iframe": false,
      "doc": false,
@@ -60,6 +76,14 @@
     }
    ]
   },
+  "https://www.bankleumi.co.il/he/pension-advising": {
+   "product": "פנסיה",
+   "status": 404,
+   "method": "requests",
+   "text_hash": null,
+   "text_head": "",
+   "items": []
+  },
   "https://www.bankleumi.co.il/he/Investor-Relations": {
    "product": null,
    "status": 404,
@@ -74,6 +98,14 @@
    "method": "browser",
    "text_hash": "bc089ae1b4751e74d54823d9eff5e814d4f3b662",
    "text_head": "Server Error 404 - File or directory not found. The resource you are looking for might have been removed, had its name changed, or is temporarily unavailable.",
+   "items": []
+  },
+  "https://www.bankleumi.co.il/he/pension-and-provident-funds": {
+   "product": "פנסיה",
+   "status": 404,
+   "method": "requests",
+   "text_hash": null,
+   "text_head": "",
    "items": []
   },
   "https://www.bankleumi.co.il/he/about-leumi/about_compliance_at_Leumi/virtual_currencies": {
