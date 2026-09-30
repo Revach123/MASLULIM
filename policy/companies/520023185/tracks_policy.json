@@ -758,6 +758,42 @@
   "doc_file": "policy/companies/520023185/raw/520023185/64931917964a_pension2023.xls"
  },
  {
+  "track_name": "1בעיקר מזומנים",
+  "snippet": "1בעיקר מזומנים |  |  |  |  | ",
+  "confidence": "table",
+  "bonds_min": 1.0,
+  "bonds_max": 1.0,
+  "fx_min": 1.0,
+  "fx_max": 1.0,
+  "legal_id": "520023185",
+  "url": "http://www.fnx.co.il/sites/docs/genery/mediniut_ashkaa_tzfuia/pensia2014bb.xls",
+  "doc_file": "policy/companies/520023185/raw/520023185/fc30c87195d6_pensia2014bb.xls.xlsx"
+ },
+ {
+  "track_name": "1בעיקר מזומנים",
+  "snippet": "1בעיקר מזומנים |  |  |  |  | ",
+  "confidence": "table",
+  "bonds_min": 1.0,
+  "bonds_max": 1.0,
+  "fx_min": 1.0,
+  "fx_max": 1.0,
+  "legal_id": "520023185",
+  "url": "http://www.fnx.co.il/sites/docs/genery/mediniut_ashkaa_tzfuia/pensia2014b.xls",
+  "doc_file": "policy/companies/520023185/raw/520023185/7431582811cd_pensia2014b.xls.xlsx"
+ },
+ {
+  "track_name": "1בעיקר מזומנים",
+  "snippet": "1בעיקר מזומנים |  |  |  |  |  |  |  |  |  | ",
+  "confidence": "table",
+  "bonds_min": 1.0,
+  "bonds_max": 1.0,
+  "fx_min": 1.0,
+  "fx_max": 1.0,
+  "legal_id": "520023185",
+  "url": "http://www.fnx.co.il/sites/docs/genery/mediniut_ashkaa_tzfuia/gemel2014.xls",
+  "doc_file": "policy/companies/520023185/raw/520023185/219502525cd6_gemel2014.xls.xlsx"
+ },
+ {
   "track_name": "1החל מ 23 10 2013 מציגה החברה את החשיפה לאגח ממשלתי בנטרול תוספת החשיפה הנובעת בהשקעה בנגזרים",
   "snippet": "1החל מ-23.10.2013 מציגה החברה את החשיפה לאגח ממשלתי בנטרול תוספת החשיפה הנובעת בהשקעה בנגזרים |  |  |  |  |  |  | ",
   "confidence": "table",
@@ -1192,6 +1228,20 @@
   "legal_id": "520023185",
   "url": "http://www.fnx.co.il/sites/docs/genery/mediniut_ashkaa_tzfuia/bituach2023_update1123.xls",
   "doc_file": "policy/companies/520023185/raw/520023185/7642da207166_bituach2023_update1123.xls"
+ },
+ {
+  "track_name": "MSCI WORLD AC",
+  "snippet": " | אקסלנס אינווסט חו\"ל - לפחות 75% מהנכסים שיצטברו במסלול יושקעו במניות ו/או תעודות סל עוקבות מניות הנסחרות בחו\"ל. שיעור הנכסים המושקעים במזומנים ושווי מזומנים במטבע חוץ, לרבות פיקדונות בבנקים, לא יעלה על 25% משווי הנכסים במסלול. | MSCI WORLD AC |  |  |  | ",
+  "confidence": "table",
+  "equity_min": null,
+  "equity_max": 25.0,
+  "bonds_min": null,
+  "bonds_max": 25.0,
+  "foreign_min": null,
+  "foreign_max": 25.0,
+  "legal_id": "520023185",
+  "url": "http://www.fnx.co.il/sites/docs/genery/mediniut_ashkaa_tzfuia/bituach_2014.xls",
+  "doc_file": "policy/companies/520023185/raw/520023185/45196ddd2d44_bituach_2014.xls"
  },
  {
   "track_name": "NASDAQ100",
@@ -1986,6 +2036,42 @@
   "legal_id": "520023185",
   "url": "http://www.fnx.co.il/sites/docs/genery/mediniut_ashkaa_tzfuia/pension2023.xls",
   "doc_file": "policy/companies/520023185/raw/520023185/64931917964a_pension2023.xls"
+ },
+ {
+  "track_name": "אחר1",
+  "snippet": "אחר1 |  | 0.03 | +/- 5% | 0%-8% | ",
+  "confidence": "table",
+  "bonds_min": 1.0,
+  "bonds_max": 1.0,
+  "fx_min": 1.0,
+  "fx_max": 1.0,
+  "legal_id": "520023185",
+  "url": "http://www.fnx.co.il/sites/docs/genery/mediniut_ashkaa_tzfuia/pensia2014bb.xls",
+  "doc_file": "policy/companies/520023185/raw/520023185/fc30c87195d6_pensia2014bb.xls.xlsx"
+ },
+ {
+  "track_name": "אחר1",
+  "snippet": "אחר1 | 0.01 | 0.03 | +/- 5% | 0%-8% | ",
+  "confidence": "table",
+  "bonds_min": 1.0,
+  "bonds_max": 1.0,
+  "fx_min": 1.0,
+  "fx_max": 1.0,
+  "legal_id": "520023185",
+  "url": "http://www.fnx.co.il/sites/docs/genery/mediniut_ashkaa_tzfuia/pensia2014b.xls",
+  "doc_file": "policy/companies/520023185/raw/520023185/7431582811cd_pensia2014b.xls.xlsx"
+ },
+ {
+  "track_name": "אחר1",
+  "snippet": "אחר1 | 0.02 | 0.067 | +/- 5% | 2% - 12% |  |  |  |  |  | ",
+  "confidence": "table",
+  "bonds_min": 1.0,
+  "bonds_max": 1.0,
+  "fx_min": 1.0,
+  "fx_max": 1.0,
+  "legal_id": "520023185",
+  "url": "http://www.fnx.co.il/sites/docs/genery/mediniut_ashkaa_tzfuia/gemel2014.xls",
+  "doc_file": "policy/companies/520023185/raw/520023185/219502525cd6_gemel2014.xls.xlsx"
  },
  {
   "track_name": "בביטוח תלוי גיל לגילאי 0 50 החל מה 1 11 2023 בוצע שינוי במרכז הטווח במדיניות המט ח",
@@ -4383,7 +4469,7 @@
  },
  {
   "track_name": "מגבלת עמלת ניהול חיצוני לשנת 2023",
-  "snippet": "מגבלת עמלת ניהול חיצוני לשנת 2023 | 0.0 |  |  |  |  |  | ",
+  "snippet": " | מגבלת עמלת ניהול חיצוני לשנת 2023 | 0.0024 |  |  |  |  |  | ",
   "confidence": "table",
   "bonds_min": 202.0,
   "bonds_max": 202.0,
@@ -4473,7 +4559,7 @@
  },
  {
   "track_name": "מגבלת עמלת ניהול חיצוני לשנת 2023",
-  "snippet": "מגבלת עמלת ניהול חיצוני לשנת 2023 | 0.0 |  |  |  |  |  | ",
+  "snippet": " | מגבלת עמלת ניהול חיצוני לשנת 2023 | 0.0024 |  |  |  |  |  | ",
   "confidence": "table",
   "bonds_min": 202.0,
   "bonds_max": 202.0,
@@ -4497,7 +4583,7 @@
  },
  {
   "track_name": "מגבלת עמלת ניהול חיצוני לשנת 2024",
-  "snippet": "מגבלת עמלת ניהול חיצוני לשנת 2024 | 0.002 |  |  |  |  |  | ",
+  "snippet": " | מגבלת עמלת ניהול חיצוני לשנת 2024 |  |  |  |  |  |  | ",
   "confidence": "table",
   "bonds_min": 202.0,
   "bonds_max": 202.0,
@@ -4509,7 +4595,7 @@
  },
  {
   "track_name": "מגבלת עמלת ניהול חיצוני לשנת 2024",
-  "snippet": "מגבלת עמלת ניהול חיצוני לשנת 2024 | 0.002 |  |  |  |  |  | ",
+  "snippet": " | מגבלת עמלת ניהול חיצוני לשנת 2024 |  |  |  |  |  |  | ",
   "confidence": "table",
   "bonds_min": 202.0,
   "bonds_max": 202.0,
@@ -4581,7 +4667,7 @@
  },
  {
   "track_name": "מגבלת עמלת ניהול חיצוני לשנת 2024",
-  "snippet": "מגבלת עמלת ניהול חיצוני לשנת 2024 | 0.002 |  |  |  |  |  | ",
+  "snippet": " | מגבלת עמלת ניהול חיצוני לשנת 2024 |  |  |  |  |  |  | ",
   "confidence": "table",
   "bonds_min": 202.0,
   "bonds_max": 202.0,
@@ -4653,7 +4739,7 @@
  },
  {
   "track_name": "מגבלת עמלת ניהול חיצוני לשנת 2024",
-  "snippet": "מגבלת עמלת ניהול חיצוני לשנת 2024 | 0.0005 |  |  |  |  | ",
+  "snippet": " | מגבלת עמלת ניהול חיצוני לשנת 2024 |  |  |  |  |  | ",
   "confidence": "table",
   "bonds_min": 202.0,
   "bonds_max": 202.0,
@@ -4713,7 +4799,7 @@
  },
  {
   "track_name": "מגבלת עמלת ניהול חיצוני לשנת 2024",
-  "snippet": "מגבלת עמלת ניהול חיצוני לשנת 2024 | 0.0005 |  |  |  |  |  | ",
+  "snippet": " |  | מגבלת עמלת ניהול חיצוני לשנת 2024 | 0.0005 |  |  |  |  | ",
   "confidence": "table",
   "bonds_min": 202.0,
   "bonds_max": 202.0,
@@ -4749,7 +4835,7 @@
  },
  {
   "track_name": "מגבלת עמלת ניהול חיצוני לשנת 2024",
-  "snippet": "מגבלת עמלת ניהול חיצוני לשנת 2024 | 0.0005 |  |  |  |  |  |  | ",
+  "snippet": " |  | מגבלת עמלת ניהול חיצוני לשנת 2024 | 0.0011 |  |  |  |  |  | ",
   "confidence": "table",
   "bonds_min": 202.0,
   "bonds_max": 202.0,
@@ -4773,7 +4859,7 @@
  },
  {
   "track_name": "מגבלת עמלת ניהול חיצוני לשנת 2024",
-  "snippet": "מגבלת עמלת ניהול חיצוני לשנת 2024 | 0.0005 |  |  |  |  |  | ",
+  "snippet": " |  | מגבלת עמלת ניהול חיצוני לשנת 2024 | 0.0005 |  |  |  |  | ",
   "confidence": "table",
   "bonds_min": 202.0,
   "bonds_max": 202.0,
@@ -4785,7 +4871,7 @@
  },
  {
   "track_name": "מגבלת עמלת ניהול חיצוני לשנת 2025",
-  "snippet": "מגבלת עמלת ניהול חיצוני לשנת 2025 | 0.001 |  |  |  |  | ",
+  "snippet": " | מגבלת עמלת ניהול חיצוני לשנת 2025 | 0.001 |  |  |  |  | ",
   "confidence": "table",
   "bonds_min": 202.0,
   "bonds_max": 202.0,
@@ -4833,7 +4919,7 @@
  },
  {
   "track_name": "מגבלת עמלת ניהול חיצוני לשנת 2025",
-  "snippet": "מגבלת עמלת ניהול חיצוני לשנת 2025 | 0 |  |  |  |  |  |  | ",
+  "snippet": " | מגבלת עמלת ניהול חיצוני לשנת 2025 | 0.02 |  |  |  |  | ",
   "confidence": "table",
   "bonds_min": 202.0,
   "bonds_max": 202.0,
@@ -4845,7 +4931,7 @@
  },
  {
   "track_name": "מגבלת עמלת ניהול חיצוני לשנת 2026",
-  "snippet": "מגבלת עמלת ניהול חיצוני לשנת 2026 | 0 |  |  |  |  |  |  |  | ",
+  "snippet": " | מגבלת עמלת ניהול חיצוני לשנת 2026 | 0 |  |  |  |  |  | ",
   "confidence": "table",
   "bonds_min": 202.0,
   "bonds_max": 202.0,
@@ -4857,7 +4943,7 @@
  },
  {
   "track_name": "מגבלת עמלת ניהול חיצוני לשנת 2026",
-  "snippet": "מגבלת עמלת ניהול חיצוני לשנת 2026 | 0 |  |  |  |  |  |  |  | ",
+  "snippet": " | מגבלת עמלת ניהול חיצוני לשנת 2026 | 0.002 |  |  |  |  |  | ",
   "confidence": "table",
   "bonds_min": 202.0,
   "bonds_max": 202.0,
@@ -4929,7 +5015,7 @@
  },
  {
   "track_name": "מגבלת עמלת ניהול חיצוני לשנת 2026",
-  "snippet": "מגבלת עמלת ניהול חיצוני לשנת 2026 | 0 |  |  |  |  |  |  |  | ",
+  "snippet": " | מגבלת עמלת ניהול חיצוני לשנת 2026 | 0.002 |  |  |  |  |  | ",
   "confidence": "table",
   "bonds_min": 202.0,
   "bonds_max": 202.0,
@@ -5030,6 +5116,20 @@
   "legal_id": "520023185",
   "url": "http://www.fnx.co.il/sites/docs/genery/mediniut_ashkaa_tzfuia/bituach2023.xls",
   "doc_file": "policy/companies/520023185/raw/520023185/b75a8b3908dc_bituach2023.xls"
+ },
+ {
+  "track_name": "מסלול אג ח צמוד לפחות 50% אג ח צמוד מדד ללא מניות צמוד מדד ריבית קבועה",
+  "snippet": "                             עד 20% חשיפה למט\"ח. מסלול אג\"ח  1 - לפחות 60% אג\"ח לסוגיו,  עד 15% מניות.  80%: צמוד מדד ריבית קבועה, 10%:מדד מניות ת\"א 100,                         עד 35% לא סחיר.  10%: מדד תל בונד 60 מסלול אג\"ח  2 - לפחות 50% אג\"ח לסוגיו,  25%-50% מניות.  50%: צמוד מדד ריבית קבועה, 40%: מדד מניות ת\"א 100,                         עד 25% לא סחיר. 10%: מדד תל בונד 60 מסלול מנייתי  1 - ",
+  "confidence": "text",
+  "equity_min": 80.0,
+  "equity_max": 80.0,
+  "bonds_min": null,
+  "bonds_max": 15.0,
+  "illiquid_min": 10.0,
+  "illiquid_max": 10.0,
+  "legal_id": "520023185",
+  "url": "http://www.fnx.co.il/sites/docs/genery/mediniut_ashkaa_tzfuia/bituach_2014.xls",
+  "doc_file": "policy/companies/520023185/raw/520023185/45196ddd2d44_bituach_2014.xls"
  },
  {
   "track_name": "מסלול ביטוח פאסיבי כללי 268 7 מש ח",
@@ -5309,6 +5409,18 @@
   "doc_file": "policy/companies/520023185/raw/520023185/b75a8b3908dc_bituach2023.xls"
  },
  {
+  "track_name": "מסלול גמלה ללא מניות מח מ הנכסים עד 4 שנים",
+  "snippet": " | מסלול גמלה – ללא מניות. מח\"מ הנכסים עד 4 שנים. | מדד ממשלתי צמוד 2- 0",
+  "confidence": "table",
+  "equity_min": null,
+  "equity_max": 4.0,
+  "bonds_min": null,
+  "bonds_max": 4.0,
+  "legal_id": "520023185",
+  "url": "http://www.fnx.co.il/sites/docs/genery/mediniut_ashkaa_tzfuia/bituach_2014.xls",
+  "doc_file": "policy/companies/520023185/raw/520023185/45196ddd2d44_bituach_2014.xls"
+ },
+ {
   "track_name": "מסלול הלכה ביטוח 221 מש ח",
   "snippet": "אפיק השקעה שיעור חשיפה שאושר לשנת 2022 שיעור חשיפה לתאריך 06.10.22 שיעור חשיפה צפוי לשנת 2023 טווח סטייה %-/+ גבולות שיעור החשיפה הצפויה מדד הייחוס (**) מניות 0.46 0.478 0.46 0.06 0.4 0.52 40%- מדד ת\"א 125,  60%- MSCI WORLD AC אג\"ח ממשלתי (צמוד,שקלי ומט\"ח), ממשלות זרות בנטרול חשיפות בנגזרים (*) 0.2 0.208 0.19 0.05 0.14 0.24 מדד אג\"ח ממשלתי כללי אג\"ח קונצרני (קרנות נאמנות, תעודות סל) 0.32 0.295 0.3",
   "confidence": "text",
@@ -5451,6 +5563,23 @@
   "legal_id": "520023185",
   "url": "http://www.fnx.co.il/sites/docs/genery/mediniut_ashkaa_tzfuia/bituach2024-update0724.xlsx",
   "doc_file": "policy/companies/520023185/raw/520023185/da71ee615486_bituach2024-update0724.xlsx"
+ },
+ {
+  "track_name": "מסלול כללי",
+  "snippet": " אפיק השקעה שיעור חשיפה קודם  שיעור חשיפה צפוי לשנת 2014 טווח סטייה גבולות החשיפה שאושרו מדד הייחוס אג\"ח ממשלתי(צמוד,שקלי ומט\"ח), ממשלות זרות בנטרול חשיפות בנגזרים. 0.3 0.32 +/- 5% 37% - 27%  מדד אג\"ח ממשלתי כללי חוב חברות (סחיר, לא סחיר)** 0.29 0.26 +/- 6% 32% - 20%  מדד תל בונד 60 מניות 0.36 0.35 +/- 6% 41% - 29%  50%- מדד ת\"א 100,    50%- MSCI WORLD AC קרנות השקעה (PE, VC  0.02 0.01 +/- 5% 6% -",
+  "confidence": "text",
+  "equity_min": 29.0,
+  "equity_max": 41.0,
+  "bonds_min": 27.0,
+  "bonds_max": 37.0,
+  "fx_min": 27.0,
+  "fx_max": 37.0,
+  "illiquid_min": 20.0,
+  "illiquid_max": 32.0,
+  "benchmark": "אפיק השקעה שיעור חשיפה קודם  שיעור חשיפה צפוי לשנת 2014 טווח סטייה גבולות החשיפה שאושרו מדד הייחוס",
+  "legal_id": "520023185",
+  "url": "http://www.fnx.co.il/sites/docs/genery/mediniut_ashkaa_tzfuia/bituach_2014.xls",
+  "doc_file": "policy/companies/520023185/raw/520023185/45196ddd2d44_bituach_2014.xls"
  },
  {
   "track_name": "מסלול כללי 1 19 426 9 מש ח סוף מידע טבלה צד שמאל",
@@ -5659,6 +5788,20 @@
   "legal_id": "520023185",
   "url": "http://www.fnx.co.il/sites/docs/genery/mediniut_ashkaa_tzfuia/bituach2023_update1123.xls",
   "doc_file": "policy/companies/520023185/raw/520023185/7642da207166_bituach2023_update1123.xls"
+ },
+ {
+  "track_name": "מסלול מנוהל כללי 1",
+  "snippet": " | מסלול מנוהל כללי 1 |  |  |  |  | ",
+  "confidence": "table",
+  "equity_min": 1.0,
+  "equity_max": 1.0,
+  "bonds_min": 1.0,
+  "bonds_max": 1.0,
+  "foreign_min": 1.0,
+  "foreign_max": 1.0,
+  "legal_id": "520023185",
+  "url": "http://www.fnx.co.il/sites/docs/genery/mediniut_ashkaa_tzfuia/bituach_2014.xls",
+  "doc_file": "policy/companies/520023185/raw/520023185/45196ddd2d44_bituach_2014.xls"
  },
  {
   "track_name": "מסלול מתמחה אג ח",
@@ -6350,6 +6493,23 @@
   "legal_id": "520023185",
   "url": "http://www.fnx.co.il/sites/docs/genery/mediniut_ashkaa_tzfuia/bituach2023_update1123.xls",
   "doc_file": "policy/companies/520023185/raw/520023185/7642da207166_bituach2023_update1123.xls"
+ },
+ {
+  "track_name": "מסלולי אקסלנס אינווסט",
+  "snippet": "***כל מסלולי אקסלנס אינווסט, מלבד מסלול מנוהל כללי 1, הינם מסלולים מתמחים וישקעו ע\"פ מדיניות ההשקעה שהוגדרה בפוליסה מדיניות ההשקעה מדד  הייחוס אג\"ח 1 - שיעור הנכסים המושקעים באג\"ח חברות או באג\"ח ממשלתיות בישראל לא יפחת מ- 80%  85% מדד אג\"ח כללי,  15% מדד מק\"מ אג\"ח 2 - שיעור הנכסים המושקעים באג\"ח בארץ ובחו\"ל לא יפחת מ- 85%, שיעור הנכסים המושקעים במניות סחירות ו/או תעודות סל בארץ ובחו\"ל לא יעלה על 1",
+  "confidence": "text",
+  "equity_min": null,
+  "equity_max": 15.0,
+  "bonds_min": 1.0,
+  "bonds_max": 1.0,
+  "foreign_min": null,
+  "foreign_max": 15.0,
+  "fx_min": null,
+  "fx_max": 25.0,
+  "benchmark": "מדיניות ההשקעה מדד  הייחוס",
+  "legal_id": "520023185",
+  "url": "http://www.fnx.co.il/sites/docs/genery/mediniut_ashkaa_tzfuia/bituach_2014.xls",
+  "doc_file": "policy/companies/520023185/raw/520023185/45196ddd2d44_bituach_2014.xls"
  },
  {
   "track_name": "מסלולי האג ח משולבי מניות השונים מתמזגים למסלול האג ח משולב הכי גדול",
