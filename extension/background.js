@@ -519,7 +519,8 @@ async function runPolicySafe() {
     cfg.branch = cfg.branch || "main";
     await setStatus({ policyProgress: "מתחיל..." });
     const res = await runPolicy(cfg, setStatus);
-    await setStatus({ policyLastRun: Date.now(), policyLastDocs: res.docs, policyErrors: res.errors.slice(0, 5), policyProgress: "" });
+    await setStatus({ policyLastRun: Date.now(), policyLastDocs: res.docs, policyErrors: res.errors.slice(0, 5),
+                      policyDiag: res.diag || [], policyProgress: "" });
   } catch (e) {
     await setStatus({ policyLastRun: Date.now(), policyErrors: [String(e && e.message || e)], policyProgress: "" });
   } finally {

@@ -40,6 +40,22 @@ function pageCollectLinks() {
   return new Promise((resolve) => setTimeout(() => { grab(document, location.href); resolve(out); }, 2500));
 }
 
+// רץ בתוך הדף: לוחץ על כפתורים/קישורים של הורדה שלא מצביעים ישירות לקובץ (JS / postback).
+// ההורדות עצמן נתפסות ברקע ע"י chrome.downloads.onCreated (ר' captureDownloads).
+function pageClickDownloads() {
+  const rx = /הורד|להורדה|download|אקסל|excel|xls/i;
+  const els = [...document.querySelectorAll("a, button, [role=button], input[type=button], input[type=submit]")];
+  let n = 0;
+  for (const el of els) {
+    const t = (el.innerText || el.value || el.getAttribute("aria-label") || el.title || "") + " " + (el.getAttribute("href") || "");
+    const href = el.getAttribute("href") || "";
+    if (!rx.test(t) || /\.(xlsx|xls|pdf)(\?|$)/i.test(href)) continue;
+    try { el.click(); n++; } catch (e) {}
+    if (n >= 40) break;
+  }
+  return n;
+}
+
 // רץ בתוך הדף: מוריד קובץ (same-origin/עוגיות) ומחזיר base64.
 function pageFetchBase64(url) {
   return fetch(url, { credentials: "include" }).then(async (r) => {
@@ -49,6 +65,26 @@ function pageFetchBase64(url) {
     for (let i = 0; i < bytes.length; i += 0x8000) bin += String.fromCharCode.apply(null, bytes.subarray(i, i + 0x8000));
     return { base64: btoa(bin), type: r.headers.get("content-type") || "" };
   }).catch((e) => ({ __error: true, message: String(e) }));
+}
+
+// תופס הורדות שהדף מפעיל (לחיצה על כפתור) ומבטל אותן - מחזיר את כתובות הקבצים. מוריד אותם אח"כ בעצמנו.
+async function captureDownloads(tabId, ms = 8000) {
+  const urls = [];
+  const onCreated = (item) => {
+    urls.push({ href: item.finalUrl || item.url, text: item.filename || "" });
+    chrome.downloads.cancel(item.id).catch(() => {});
+    chrome.downloads.erase({ id: item.id }).catch(() => {});
+  };
+  chrome.downloads.onCreated.addListener(onCreated);
+  let clicked = 0;
+  try {
+    const [r] = await chrome.scripting.executeScript({ target: { tabId }, func: pageClickDownloads });
+    clicked = (r && r.result) || 0;
+    if (clicked) await sleep(ms);
+  } finally {
+    chrome.downloads.onCreated.removeListener(onCreated);
+  }
+  return { clicked, urls };
 }
 
 async function sha256Hex(base64) {
@@ -76,7 +112,7 @@ export async function runPolicy(cfg, setStatus) {
   const sites = await readSites(cfg);
   const { policySeen } = await chrome.storage.local.get("policySeen");
   const seen = policySeen || {};
-  const files = [], errors = [];
+  const files = [], errors = [], diag = [];
   for (const site of sites) {
     const pages = [...new Set([...(site.pages || []).map((p) => p.url), site.home].filter(Boolean))];
     for (const pageUrl of pages) {
@@ -88,9 +124,12 @@ export async function runPolicy(cfg, setStatus) {
         await sleep(3000);
         const [res] = await chrome.scripting.executeScript({ target: { tabId: tab.id }, func: pageCollectLinks });
         const links = (res && res.result) || [];
-        const docs = links.filter((l) => DOC_RX.test(l.href) && !NOISE_RX.test(l.text + " " + l.href)
+        const cap = await captureDownloads(tab.id);
+        links.push(...cap.urls.map((u) => ({ ...u, ctx: "(download)" })));
+        const docs = links.filter((l) => (DOC_RX.test(l.href) || l.ctx === "(download)" || DOC_RX.test(l.text)) && !NOISE_RX.test(l.text + " " + l.href)
           && (POLICY_RX.test(decodeURIComponent(l.href) + " " + l.text + " " + l.ctx) || (site.pages || []).some((p) => p.url === pageUrl)));
         const uniq = [...new Map(docs.map((d) => [d.href, d])).values()];
+        diag.push(`${site.name.slice(0, 18)}: links=${links.length} files=${links.filter((l) => DOC_RX.test(l.href)).length} clicked=${cap.clicked} captured=${cap.urls.length} selected=${uniq.length}`);
         for (const d of uniq) {
           const [r2] = await chrome.scripting.executeScript({ target: { tabId: tab.id }, func: pageFetchBase64, args: [d.href] });
           const got = r2 && r2.result;
@@ -117,5 +156,5 @@ export async function runPolicy(cfg, setStatus) {
       `policy inbox (extension): ${files.length / 2} documents from blocked sites`);
   }
   await chrome.storage.local.set({ policySeen: seen });
-  return { docs: files.length / 2, errors };
+  return { docs: files.length / 2, errors, diag };
 }

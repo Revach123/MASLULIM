@@ -82,6 +82,7 @@ async function render() {
   document.getElementById("policy-docs").textContent = s.policyLastDocs ?? "—";
   document.getElementById("policy-progress").textContent = s.policyProgress || "";
   document.getElementById("policy-err").textContent = (s.policyErrors || []).join(" | ");
+  document.getElementById("policy-progress").textContent = s.policyProgress || (s.policyDiag || []).join("\n");
   document.getElementById("backfill").disabled = !!s.running;
   document.getElementById("sync-local").disabled = !!s.running;
   document.getElementById("stop").hidden = !s.running;
