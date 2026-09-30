@@ -546,7 +546,12 @@ def _swap_exposure(
                     # להגיע ליחס נוציונל/fv עצום (עד פי ~1900) כש-fv נמצא במקרה
                     # קרוב לאפס (סוואפ Unfunded בלי Reset תקופתי - fv יכול לנוע
                     # דרך אפס בלי קשר לקנה-מידה) - לא סימן לתקלה שם.
-                    if used_priced:
+                    # קנה המידה מאומת כשרגל 1 × מחיר בעסקה = רגל 2 (עד 5%) - אז שווי הוגן
+                    # קרוב לאפס הוא עסקה חדשה (512065202_7867: IXCTR מ-23.6, נוציונל 41.8
+                    # מיליון דולר, שווי 178- אלף), לא תקלת קנה מידה - לא מפעילים LEVERAGE_CAP
+                    scale_confirmed = (leg1_priced is not None and leg2_val
+                                       and abs(leg1_priced / leg2_val - 1) <= 0.05)
+                    if used_priced and not scale_confirmed:
                         fv = _num(row.get(SWAP_NET_FAIR_VALUE_COL))
                         fv_ratio = (fv / total) if fv is not None else None
                         if fv_ratio is not None and abs(line_ratio) > LEVERAGE_CAP * abs(fv_ratio):
