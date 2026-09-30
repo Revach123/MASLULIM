@@ -1,4 +1,4 @@
-name: Policy probe (blocked sites)
+name: Policy probe (search engines + wayback)
 
 on:
   push:
@@ -6,14 +6,45 @@ on:
     paths: [".github/workflows/policy_probe.yml"]
 
 jobs:
+  engines:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - run: |
+          pip install -q requests beautifulsoup4
+          python3 - <<'PY'
+          import requests, re
+          from bs4 import BeautifulSoup
+          from urllib.parse import quote
+          UA = "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124 Safari/537.36"
+          q = "רעות חברה לניהול קופות גמל מדיניות השקעה"
+          s = requests.Session(); s.headers.update({"User-Agent": UA, "Accept-Language": "he,en;q=0.8"})
+          tests = {
+            "ddg_html": lambda: s.post("https://html.duckduckgo.com/html/", data={"q": q}),
+            "ddg_lite": lambda: s.post("https://lite.duckduckgo.com/lite/", data={"q": q}),
+            "bing": lambda: s.get("https://www.bing.com/search", params={"q": q, "setlang": "he", "cc": "IL"}),
+            "brave": lambda: s.get("https://search.brave.com/search", params={"q": q, "source": "web"}),
+            "mojeek": lambda: s.get("https://www.mojeek.com/search", params={"q": q}),
+            "startpage": lambda: s.get("https://www.startpage.com/do/search", params={"q": q}),
+            "yahoo": lambda: s.get("https://search.yahoo.com/search", params={"p": q}),
+          }
+          for name, f in tests.items():
+              try:
+                  r = f()
+                  links = [a.get("href","") for a in BeautifulSoup(r.text, "html.parser").find_all("a", href=True)]
+                  ext = [l for l in links if re.search(r"\.co\.il|\.org\.il", l)]
+                  print(f"{name}: status={r.status_code} len={len(r.text)} links={len(links)} il_links={len(ext)}", ext[:5])
+              except Exception as e:
+                  print(name, "ERR", repr(e)[:150])
+          PY
   wayback:
     runs-on: ubuntu-latest
     timeout-minutes: 10
     steps:
       - run: |
-          for d in moreinvest.co.il ayalon-ins.co.il; do
-            echo "=== $d: archived pages mentioning policy"
-            curl -s -m 60 "https://web.archive.org/cdx/search/cdx?url=$d/*&output=txt&collapse=urlkey&limit=5000" \
-              | grep -iE "xls|policy|%D7%9E%D7%93%D7%99%D7%A0%D7%99%D7%95%D7%AA|מדיניות|%D7%94%D7%A6%D7%94%D7%A8" | head -40
-          echo "=== $d: total archived urls"; curl -s -m 60 "https://web.archive.org/cdx/search/cdx?url=$d/*&output=txt&collapse=urlkey&limit=5000" | wc -l
+          for d in moreinvest.co.il ayalon-ins.co.il hcsra.co.il; do
+            echo "=== $d"
+            curl -s -m 60 "https://web.archive.org/cdx/search/cdx?url=$d/*&output=txt&collapse=urlkey&limit=20000" > /tmp/c.txt
+            echo "total: $(wc -l < /tmp/c.txt)"
+            grep -iE "xlsx|xls|policy|%D7%9E%D7%93%D7%99%D7%A0%D7%99%D7%95%D7%AA|%D7%94%D7%A6%D7%94%D7%A8" /tmp/c.txt | head -30
           done
