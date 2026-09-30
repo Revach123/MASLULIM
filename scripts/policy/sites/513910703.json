@@ -2,11 +2,16 @@
  "legal_id": "513910703",
  "name": "איי. די. איי. חברה לביטוח בע\"מ",
  "home": "https://www.555.co.il",
- "pages": [],
+ "pages": [
+  {
+   "product": "ביטוח",
+   "url": "https://www.555.co.il/about/hashkaot.html"
+  }
+ ],
  "browser": "headless",
  "products": [
   "ביטוח"
  ],
  "search": true,
- "rev": 2
+ "rev": 3
 }

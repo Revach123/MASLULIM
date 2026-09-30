@@ -5,6 +5,10 @@
  "pages": [
   {
    "product": "ביטוח",
+   "url": "https://www.clalbit.co.il/aboutclalinsurance/generalreports/"
+  },
+  {
+   "product": "ביטוח",
    "url": "https://www.clalbit.co.il/aboutclalinsurance/generalreports/?txtTabId=1&txtReportsYearId={year}&txtCompanyId=3&txtReportTypeId=20"
   }
  ],
@@ -13,5 +17,5 @@
   "ביטוח"
  ],
  "search": true,
- "rev": 2
+ "rev": 3
 }

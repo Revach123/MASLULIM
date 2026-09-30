@@ -2,11 +2,16 @@
  "legal_id": "520042177",
  "name": "הכשרה חברה לביטוח בע\"מ",
  "home": "https://www.hcsra.co.il",
- "pages": [],
+ "pages": [
+  {
+   "product": "ביטוח",
+   "url": "https://www.hcsra.co.il/insurances/investments-credit-realestate/investments/"
+  }
+ ],
  "browser": "headless",
  "products": [
   "ביטוח"
  ],
  "search": true,
- "rev": 2
+ "rev": 3
 }

@@ -2,11 +2,16 @@
  "legal_id": "520042540",
  "name": "מנורה מבטחים ביטוח בע\"מ",
  "home": "https://www.menoramivt.co.il",
- "pages": [],
+ "pages": [
+  {
+   "product": "ביטוח",
+   "url": "https://www.menoramivt.co.il/rep-list/about-insurance/participating-portfolio-info/investment-policy"
+  }
+ ],
  "browser": "headless",
  "products": [
   "ביטוח"
  ],
  "search": true,
- "rev": 2
+ "rev": 3
 }

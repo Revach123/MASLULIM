@@ -13,7 +13,7 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parents[2]
 OUT = ROOT / (__import__("os").environ.get("POLICY_OUT") or "policy")  # ריצה לחברה: policy/companies/<LegalId>
 
-PARSER_VERSION = 3  # הגדלה = פרסור מחדש של כל המסמכים בריצה הבאה (שינוי בפרסרים)
+PARSER_VERSION = 4  # הגדלה = פרסור מחדש של כל המסמכים בריצה הבאה (שינוי בפרסרים)
 
 NUM = r"(\d{1,3}(?:\.\d+)?)"
 PCT = NUM + r"\s*%?"
@@ -309,6 +309,56 @@ def parse_columns_blocks(rows, sheet=""):
     return out
 
 
+def parse_titled_tables(rows, sheet=""):
+    """מבנה 'כותרת-שם + טבלה' (הפניקס): שם מסלול בשורה מעל, כותרת 'אפיק השקעה' עם 'גבולות', בלי קוד מסלול.
+    הגבולות: טקסט '41%-53%' בתא אחד, או שני תאים מספריים (מינ', מקס') כיחס. זיהוי המסלול לפי שם."""
+    grid = [[_clean(c) for c in r] for r in rows]
+    out = []
+    year = next((m.group(1) for r in grid[:3] for c in r for m in [re.search(r"(20\d\d)", c)] if m), None)
+    for ri, row in enumerate(grid):
+        if not row or not row[0].startswith("אפיק השקעה") or not any("גבולות" in c for c in row):
+            continue
+        cols = {}
+        for c, t in enumerate(row):
+            for key, pat in (("current", r"ליום|לתאריך|עדכני"), ("expected", r"צפוי"), ("tol", r"סטי"),
+                             ("bounds", r"גבולות"), ("bench", r"ייחוס")):
+                if key not in cols and re.search(pat, t):
+                    cols[key] = c
+        title = ""
+        for r2 in range(ri - 1, max(ri - 5, -1), -1):
+            cands = [c for c in grid[r2] if c and not c.startswith(("תחילת", "סוף", "מדיניות השקעה צפויה"))
+                     and not re.fullmatch(r"[\d.\-%]+", c)]
+            if cands:
+                title = max(cands, key=len); break
+        if not title:
+            continue
+        name = norm_name(title)
+        for r in grid[ri + 1:]:
+            lab = r[0] if r else ""
+            if lab.startswith("סוף") or lab.startswith("אפיק השקעה"):
+                break
+            if not lab or lab.startswith("סה"):
+                continue
+            g = lambda k, off=0: r[cols[k] + off] if k in cols and cols[k] + off < len(r) else ""
+            m = BOUNDS.search(g("bounds"))
+            lo = hi = None
+            if m:
+                lo, hi = float(m.group(1)), float(m.group(2))
+            elif _num(g("bounds")) is not None and _num(g("bounds", 1)) is not None:
+                lo, hi = _num(g("bounds")), _num(g("bounds", 1))
+                if max(abs(lo), abs(hi)) <= 1.5:
+                    lo, hi = round(lo * 100, 2), round(hi * 100, 2)
+            cur, exp = _num(g("current")), _num(g("expected"))
+            if cur is None and exp is None and lo is None:
+                continue
+            pct = lambda x: None if x is None else round(x * 100, 2) if abs(x) <= 1.5 else x
+            out.append({"fund_id": None, "track_no": None, "track_code": f"{sheet.strip()}|{name}", "track_name": name,
+                        "group": sheet.strip(), "year": year, "asset": lab, "asset_key": asset_key(lab),
+                        "current_pct": pct(cur), "expected_pct": pct(exp), "tolerance": g("tol") or None,
+                        "min_pct": lo, "max_pct": hi, "benchmark": (g("bench").replace("\n", " ") or None), "sheet": sheet})
+    return out
+
+
 def parse_text_tracks(rows, sheet=""):
     """גיליון מסלולים מתמחים מילולי: [שם מסלול (קוד) | מדיניות השקעות (טקסט) | מדד ייחוס]. בלי טווחים מספריים."""
     grid = [[_clean(c) for c in r] for r in rows]
@@ -387,11 +437,13 @@ def main():
         names = names or [""] * len(tables)
         n_long, leftovers = 0, []
         for nm, t in zip(names, tables):
-            found = parse_statement_blocks(t, nm) or parse_mh_blocks(t, nm) or parse_columns_blocks(t, nm) or parse_text_tracks(t, nm)
+            found = parse_statement_blocks(t, nm) or parse_mh_blocks(t, nm) or parse_columns_blocks(t, nm) or parse_titled_tables(t, nm) or parse_text_tracks(t, nm)
             if found:
                 for r in found:
                     r.setdefault("legal_id", ent["legal_id"])
-                    r.setdefault("track_code", f"{ent['legal_id']}-{r['fund_id']}")
+                    r["track_code"] = r.get("track_code") if r.get("track_code") and r.get("fund_id") is None and "|" in r["track_code"] and r["track_code"].startswith(ent["legal_id"]) else (
+                        r.get("track_code") if r.get("fund_id") is not None and r.get("track_code") else
+                        f"{ent['legal_id']}|{r['track_code']}" if r.get("track_code") else f"{ent['legal_id']}-{r['fund_id']}")
                     r.update(url=url, doc_file=ent["file"], doc_first_seen=ent.get("first_seen"))
                 long_rows += found; n_long += len(found); continue
             chg = parse_change_log(t, nm)
@@ -404,9 +456,9 @@ def main():
         doc_rows = long_rows[len(long_rows) - n_long:] if n_long else []
         years = [r["year"] for r in doc_rows if r.get("year")]
         fy = re.search(r"(20[12]\d)", Path(ent["file"]).name)
-        doc_year = max(set(years), key=years.count) if years else (fy.group(1) if fy else None)
-        for r in doc_rows:
-            r["year"] = r.get("year") or doc_year
+        doc_year = fy.group(1) if fy else (max(set(years), key=years.count) if years else None)
+        for r in doc_rows:  # שנה בשם הקובץ גוברת (בגוף הגיליון מופיעות לפעמים שנים של נתוני עבר)
+            r["year"] = doc_year or r.get("year")
         recs = [] if n_long else extract_tracks_from_text(text)
         for nm, t in leftovers:
             recs += extract_tracks_from_table(t)
