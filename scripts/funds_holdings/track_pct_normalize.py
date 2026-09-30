@@ -46,6 +46,12 @@ from .sheet_source import PCT_COL
 # כדי לא לגעת ב-99.96%-127% התקינים שנמצאו בפועל (רעש טבעי סביב 100%).
 RESCALE_BELOW = 0.9
 
+# מעל הסף הזה - הדוח סופר חלק מהנכסים פעמיים (מגדל פנסיה/ביטוח: "אפיק השקעה מובטח
+# תשואה" לצד "לא סחיר איגרות חוב מיועדות", סכום 110%-121%), והנתון הרשמי מחושב
+# ממכנה של 100%. נמדד על כל המסלולים (CI, dump לכל מסלול): 22 מסלולים מעל 105%,
+# MAE מול הרשמי שלהם 7.85 -> 3.35 נק' אחוז אחרי נרמול ל-100%.
+RESCALE_ABOVE = 1.05
+
 # מתחת לסף הזה אין מספיק אות *עצמי* כדי לסמוך על מכפיל (עד פי 1/MIN =
 # 1000) - לא חל על מסלול שבקובץ שלו יש אישוש ברמת-הקובץ (ר' למטה).
 MIN_RELIABLE_TOTAL = 0.001
@@ -85,6 +91,14 @@ def normalize_track_pct(source: list[dict]) -> dict[str, float]:
 
     scale_by_key: dict[str, float] = {}
     for key, total in totals.items():
+        if total > RESCALE_ABOVE:
+            scale = 1.0 / total
+            scale_by_key[key] = scale
+            for row in rows_by_key[key]:
+                raw = to_ratio(row.get(PCT_COL))
+                if raw is not None:
+                    row[PCT_COL] = raw * scale
+            continue
         if total <= 0 or total >= RESCALE_BELOW:
             continue
         file_confirmed = company_type_by_key.get(key) in confirmed_pct_of_file_types
