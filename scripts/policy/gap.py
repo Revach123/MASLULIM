@@ -31,17 +31,18 @@ def main():
     lp = OUT / "tracks_policy_long.json"
     long_rows = json.loads(lp.read_text("utf-8")) if lp.exists() else []
     # כמה גרסאות/מסמכים יכולים לתאר אותו מסלול: נשארים עם המסמך העדכני (שנה, ואז מועד ראיית המסמך)
+    tk = lambda r: r.get("track_code") or f"{r['legal_id']}-{r['fund_id']}"  # מיטב: כמה מסלולים חולקים fund_id
     best: dict[tuple, tuple] = {}
     for r in long_rows:
-        k = (r["fund_id"], r.get("year") or "")
+        k = (tk(r), r.get("year") or "")
         best[k] = max(best.get(k, ("", "", "")), (r.get("year") or "", r.get("doc_first_seen") or "", r["url"]))
     for r in long_rows:
         if not r.get("asset_key") or r.get("min_pct") is None:
             continue
-        if (r.get("year") or "", r.get("doc_first_seen") or "", r["url"]) != best[(r["fund_id"], r.get("year") or "")]:
+        if (r.get("year") or "", r.get("doc_first_seen") or "", r["url"]) != best[(tk(r), r.get("year") or "")]:
             continue
-        w = wide.setdefault(f"{r['fund_id']}|{r.get('year')}", {"legal_id": r["legal_id"], "track_name": r["track_name"],
-                                                             "fund_id": r["fund_id"], "url": r["url"]})
+        w = wide.setdefault(f"{tk(r)}|{r.get('year')}", {"legal_id": r["legal_id"], "track_name": r["track_name"],
+                                                       "ids": [x for x in (r.get("track_no"), r["fund_id"]) if x], "url": r["url"]})
         w[f"{r['asset_key']}_min"], w[f"{r['asset_key']}_max"] = r["min_pct"], r["max_pct"]
     policy = list(wide.values()) + policy
     by_co: dict[str, list] = {}
@@ -56,7 +57,7 @@ def main():
 
     rows = []
     for p in policy:
-        exact = [by_fund[p["fund_id"]]] if p.get("fund_id") in by_fund else []
+        exact = [by_fund[i] for i in p.get("ids", []) if i in by_fund][:1]  # מספר מסלול קודם, אחר כך קוד קופה
         cands = [(1.0, exact[0])] if exact else [(SequenceMatcher(None, p["track_name"], tname(m)).ratio(), m) for m in by_co.get(p["legal_id"], [])]
         if not cands:
             rows.append({"legal_id": p["legal_id"], "track_name": p["track_name"], "status": "חברה ללא מסלולים בדוחות"}); continue
