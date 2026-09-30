@@ -12,7 +12,7 @@ const sleep = (ms) => new Promise((r) => setTimeout(r, ms));
 
 const DOC_RX = /\.(xlsx|xls|pdf|docx)(\?|#|$)/i;
 const POLICY_RX = /מדיניות|הצהר|policy|mediniut|hatzarat|expected|investment/i;
-const NOISE_RX = /esg|אחראי|תגמול|פרטיות|privacy|תקנון|מבצע|גילוי[-_ ]נאות|מצגת|presentation/i;
+const NOISE_RX = /esg|אחראי|תגמול|פרטיות|privacy|תקנון|מבצע|גילוי[-_ ]נאות|מצגת|presentation|נוהל|העברת זכויות|הצבעות|דוח[ -]כספי|רבעון/i;
 
 // Chrome דוחה זמנית עריכת טאבים ("Tabs cannot be edited right now (user may be dragging a tab)") - מנסים שוב.
 async function tabsRetry(fn, tries = 20) {
@@ -138,7 +138,9 @@ export async function runPolicy(cfg, setStatus) {
         const cap = await captureDownloads(tab.id);
         links.push(...cap.urls.map((u) => ({ ...u, ctx: "(download)" })));
         const docs = links.filter((l) => (DOC_RX.test(l.href) || l.ctx === "(download)" || DOC_RX.test(l.text)) && !NOISE_RX.test(l.text + " " + l.href)
-          && (POLICY_RX.test(decodeURIComponent(l.href) + " " + l.text + " " + l.ctx) || (site.pages || []).some((p) => p.url === pageUrl)));
+          && (POLICY_RX.test(decodeURIComponent(l.href) + " " + l.text + " " + l.ctx)
+              // בעמוד שהוגדר ידנית: גם גיליונות בלי מילות מדיניות בשם (מור: 7_17_0_2026_9.xlsx) - אבל לא PDF כלליים
+              || ((site.pages || []).some((p) => p.url === pageUrl) && /\.(xlsx|xls)(\?|#|$)/i.test(l.href))));
         const uniq = [...new Map(docs.map((d) => [d.href, d])).values()];
         diag.push(`${site.name.slice(0, 18)}: links=${links.length} files=${links.filter((l) => DOC_RX.test(l.href)).length} clicked=${cap.clicked} captured=${cap.urls.length} selected=${uniq.length}`);
         for (const d of uniq) {
