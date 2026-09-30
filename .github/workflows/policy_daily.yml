@@ -1,5 +1,5 @@
 name: Policy docs (daily)
-# run 3: per-layout parsers
+# run 4: Mor/Harel parsers, product pages
 
 on:
   push:
@@ -19,6 +19,10 @@ on:
 
 permissions:
   contents: write
+
+concurrency:
+  group: policy-data
+  cancel-in-progress: false
 
 jobs:
   policy:
@@ -47,4 +51,5 @@ jobs:
           git config user.name "github-actions"
           git config user.email "actions@users.noreply.github.com"
           git add policy
-          git diff --cached --quiet || git commit -m "policy: daily crawl/extract" && git push
+          git diff --cached --quiet || git commit -m "policy: daily crawl/extract"
+          git pull --rebase origin "${GITHUB_REF_NAME}" && git push

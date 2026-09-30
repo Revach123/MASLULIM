@@ -133,7 +133,15 @@ def read_doc(path: Path):
 
 # ---------- פרסרים לפי מבנה (מזוהים לפי תוכן הגיליון, לא לפי חברה) ----------
 BOUNDS = re.compile(r"(-?\d+(?:\.\d+)?)\s*%?\s*-\s*(-?\d+(?:\.\d+)?)\s*%")
-ASSET_MAP = {"מניות": "equity", "מטח": "fx", "מט\"ח": "fx"}  # יתר האפיקים נשמרים בשמם המקורי
+
+def asset_key(name: str):
+    """אפיק סטנדרטי (equity/fx) לפי שם האפיק בחברה; יתר האפיקים נשמרים בשמם המקורי בלבד."""
+    n = re.sub(r"[\"'״׳\s]+", "", name)
+    if n.startswith("מניות"):
+        return "equity"
+    if n in ("מטח", "חשיפהלמטח", "חשיפהלמטבעחוץ"):
+        return "fx"
+    return None
 
 
 def _num(v):
@@ -169,12 +177,113 @@ def parse_statement_blocks(rows, sheet=""):
             cur_pct, exp = _num(r[1]), _num(r[2])
             if m is None and exp is None and cur_pct is None:
                 continue
-            out.append({**cur, "asset": k.rstrip("*").strip(), "asset_key": ASSET_MAP.get(k.rstrip("*").strip()),
+            out.append({**cur, "asset": k.rstrip("*").strip(), "asset_key": asset_key(k.rstrip("*").strip()),
                         "current_pct": None if cur_pct is None else round(cur_pct * 100, 2),
                         "expected_pct": None if exp is None else round(exp * 100, 2),
                         "tolerance": r[3], "min_pct": float(m.group(1)) if m else None,
                         "max_pct": float(m.group(2)) if m else None,
                         "benchmark": (str(r[5]).replace("\n", " ") if r[5] else None), "sheet": sheet})
+    return out
+
+
+MH = re.compile(r"מ[\"״]ה:\s*(\d+)\s*-?\s*(.*)")
+
+
+def parse_mh_blocks(rows, sheet=""):
+    """מבנה 'מ"ה: <קוד קופה> - <שם>': שורות מסלולים (כמה מסלולים יכולים לחלוק טבלה אחת) מעל כותרת 'אפיק השקעה';
+    עמודות לפי טקסט הכותרת. בלוקים יכולים לשבת זה לצד זה (פנסיה מקיפה | כללית). legal_id מושלם מהאינדקס."""
+    grid = [list(r) for r in rows]
+    if not any(isinstance(c, str) and MH.search(c) for r in grid for c in r):
+        return []
+    year = next((m.group(1) for r in grid[:4] for c in r if c and (m := re.search(r"לשנת\s*(20\d\d)", str(c)))), None)
+    out = []
+    for ri, row in enumerate(grid):
+        anchors = [ci for ci, c in enumerate(row) if isinstance(c, str) and c.strip() == "אפיק השקעה"]
+        for n, c in enumerate(anchors):
+            end = anchors[n + 1] - 1 if n + 1 < len(anchors) else len(row)  # הבלוק הבא מתחיל בעמודת התווית שלו
+            cols = {}
+            for ci in range(c, end):
+                t = str(row[ci] or "")
+                for key, pat in (("current", r"ליום|שיעור החשיפה$"), ("expected", r"צפוי"), ("tol", r"טווח\s*סטי"),
+                                 ("bounds", r"גבולות"), ("bench", r"ייחוס")):
+                    if key not in cols and re.search(pat, t.strip()):
+                        cols[key] = ci
+            tracks, r2 = [], ri - 1
+            while r2 >= 0 and c < len(grid[r2]) and isinstance(grid[r2][c], str) and (m := MH.search(grid[r2][c])):
+                tracks.append((m.group(1), norm_name(m.group(2)))); r2 -= 1
+            if not tracks or "expected" not in cols:
+                continue
+            group = str(grid[r2 + 1][c - 1] or "").replace("\n", " ").strip() if c > 0 else ""
+            g = lambda rr, key: grid[rr][cols[key]] if key in cols and cols[key] < len(grid[rr]) else None
+            rr = ri + 1
+            while rr < len(grid) and c < len(grid[rr]) and grid[rr][c] not in (None, "") and not MH.search(str(grid[rr][c])):
+                name = str(grid[rr][c]).strip()
+                rr += 1
+                if name.startswith("סה"):
+                    continue
+                cur, exp = _num(g(rr - 1, "current")), _num(g(rr - 1, "expected"))
+                m = BOUNDS.search(str(g(rr - 1, "bounds") or ""))
+                if cur is None and exp is None and m is None:
+                    continue
+                for fund_id, tname in tracks:
+                    out.append({"fund_id": fund_id, "track_no": fund_id, "track_name": tname, "group": group,
+                                "year": year, "asset": name, "asset_key": asset_key(name),
+                                "current_pct": None if cur is None else round(cur * 100, 2),
+                                "expected_pct": None if exp is None else round(exp * 100, 2),
+                                "tolerance": g(rr - 1, "tol") if _num(g(rr - 1, "tol")) is None and g(rr - 1, "tol") != "ריק במקור" else None,
+                                "min_pct": float(m.group(1)) if m else None, "max_pct": float(m.group(2)) if m else None,
+                                "benchmark": (str(g(rr - 1, "bench")).strip().replace("\n", " ") if g(rr - 1, "bench") not in (None, "ריק במקור") else None),
+                                "sheet": sheet})
+                if name.startswith("חשיפה למט"):
+                    pass
+    return out
+
+
+PLACEHOLDERS = ("תא ללא תוכן", "הגעת לשדה האחרון", "שורה זו ריקה", "שורה זו אחרונה", "ריק במקור")
+
+
+def _clean(v):
+    s = "" if v is None else str(v).strip()
+    return "" if any(s.startswith(p) or s == "תא\xa0ריק\xa0במקור" for p in PLACEHOLDERS) else s
+
+
+def parse_columns_blocks(rows, sheet=""):
+    """מבנה 'בלוק-עמודות לכל מסלול': שורת כותרות עם 'אפיק השקעה' ואז, לכל מסלול, עמודות
+    [BM | חשיפה ליום | צפוי | מינימום | מקסימום]; שם המסלול + (קוד קופה) בשורה מעל. טווחים כיחס (0.52) ו-'-' = 0."""
+    grid = [[_clean(c) for c in r] for r in rows]
+    out = []
+    for ri, row in enumerate(grid):
+        if not row or row[0] != "אפיק השקעה" or not any(c == "מינימום" for c in row):
+            continue
+        title_row = grid[ri - 1] if ri > 0 else []
+        tol_col = next((j for j, c in enumerate(row) if c.startswith("טווח")), None)
+        year = next((m.group(1) for c in (grid[0] if grid else []) for m in [re.fullmatch(r"(20\d\d)", c)] if m), None)
+        for j, c in enumerate(row):
+            if not c.startswith("חשיפה ליום") or j + 3 >= len(row) or row[j + 1][:4] != "שיעו" or row[j + 2] != "מינימום":
+                continue
+            title = next((title_row[k] for k in range(j - 1, max(j - 3, -1), -1) if k < len(title_row) and title_row[k]), "")
+            m = re.search(r"\((\d+)\)\s*$", title)
+            if not m:
+                continue
+            fund_id, name = m.group(1), norm_name(title[:m.start()])
+            for rr in range(ri + 1, len(grid)):
+                r = grid[rr]
+                lab = r[0] if r else ""
+                if lab.startswith(("שורה זו", "הערה")):
+                    break
+                if not lab or lab.startswith("סה"):
+                    continue
+                at = lambda k: _num(r[k]) if k < len(r) and r[k] not in ("", "-") else (0.0 if k < len(r) and r[k] == "-" else None)
+                cur, exp, lo, hi = at(j), at(j + 1), at(j + 2), at(j + 3)
+                if cur is None and exp is None and lo is None and hi is None:
+                    continue
+                pct = lambda x: None if x is None else round(x * 100, 2)
+                out.append({"fund_id": fund_id, "track_no": fund_id, "track_name": name, "group": sheet.strip(),
+                            "year": year, "asset": lab, "asset_key": asset_key(lab), "current_pct": pct(cur),
+                            "expected_pct": pct(exp), "tolerance": r[tol_col] if tol_col is not None and tol_col < len(r) else None,
+                            "min_pct": pct(lo), "max_pct": pct(hi),
+                            "benchmark": (r[j - 1].replace("\n", " ").strip() or None) if j >= 1 and j - 1 < len(r) else None,
+                            "sheet": sheet})
     return out
 
 
@@ -187,7 +296,7 @@ def parse_change_log(rows, sheet=""):
 
 
 LONG_FIELDS = ["legal_id", "fund_id", "track_no", "track_code", "track_name", "year", "asset", "asset_key",
-               "current_pct", "expected_pct", "tolerance", "min_pct", "max_pct", "benchmark", "url", "doc_file", "sheet"]
+               "current_pct", "expected_pct", "tolerance", "min_pct", "max_pct", "benchmark", "group", "doc_first_seen", "url", "doc_file", "sheet"]
 CHANGE_FIELDS = ["legal_id", "track_code", "track_name", "change", "updated", "url"]
 
 
@@ -230,10 +339,12 @@ def main():
         names = names or [""] * len(tables)
         n_long, leftovers = 0, []
         for nm, t in zip(names, tables):
-            found = parse_statement_blocks(t, nm)
+            found = parse_statement_blocks(t, nm) or parse_mh_blocks(t, nm) or parse_columns_blocks(t, nm)
             if found:
                 for r in found:
-                    r.update(url=url, doc_file=ent["file"])
+                    r.setdefault("legal_id", ent["legal_id"])
+                    r.setdefault("track_code", f"{ent['legal_id']}-{r['fund_id']}")
+                    r.update(url=url, doc_file=ent["file"], doc_first_seen=ent.get("first_seen"))
                 long_rows += found; n_long += len(found); continue
             chg = parse_change_log(t, nm)
             if chg:

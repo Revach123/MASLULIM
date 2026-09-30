@@ -55,8 +55,16 @@ def load_seeds() -> dict[str, dict]:
     if p.exists():
         with open(p, encoding="utf-8") as f:
             for r in csv.DictReader(f):
-                out[r["legal_id"]] = {"home": r["homepage"].strip(),
-                                      "extra": [u for u in (r.get("extra_urls") or "").split("|") if u]}
+                extra, products = [], {}
+                for u in (r.get("extra_urls") or "").split("|"):
+                    u = u.strip()
+                    if not u:
+                        continue
+                    prod, sep, rest = u.partition("=")
+                    if sep and prod in ("גמל", "פנסיה", "ביטוח") and rest.startswith("http"):
+                        u = rest; products[u] = prod
+                    extra.append(u)
+                out[r["legal_id"]] = {"home": r["homepage"].strip(), "extra": extra, "products": products}
     return out
 
 
@@ -107,7 +115,7 @@ def crawl_company(s, legal_id, home, extra, max_pages, depth_max=3):
         if r is None or r.status_code != 200 or "html" not in r.headers.get("content-type", "html"):
             errors.append(f"{url} -> {getattr(r, 'status_code', 'ERR')}")
             continue
-        soup = BeautifulSoup(r.text, "html.parser")
+        soup = BeautifulSoup(r.content, "html.parser")
         page_ctx = score(soup.title.get_text(" ") if soup.title else "") + score(url)
         for a in soup.find_all("a", href=True):
             link = urldefrag(urljoin(url, a["href"]))[0]
@@ -160,6 +168,7 @@ def main():
     s = requests.Session()
     now = datetime.now(timezone.utc).isoformat(timespec="seconds")
     report, new_docs = [], []
+    done_urls: set[str] = set()  # מסמך שכבר עובד בריצה זו (חברות באותו אתר) - לא מעובד פעמיים; שיוך סופי לפי קוד קופה
 
     for legal_id, c in sorted(cos.items()):
         if a.only and legal_id not in a.only:
@@ -173,6 +182,9 @@ def main():
         docs, pages, errs = crawl_company(s, legal_id, seed["home"], seed["extra"], a.max_pages)
         got = 0
         for url, d in docs.items():
+            if url in done_urls:
+                continue
+            done_urls.add(url)
             r, code = download(s, url)
             if r is None:
                 errs.append(f"{url} -> {code}"); continue
@@ -190,6 +202,9 @@ def main():
                 new_docs.append({"legal_id": legal_id, "url": url, "kind": kind, "file": str(p.relative_to(ROOT))})
                 ent = {"legal_id": legal_id, "first_seen": now if ent is None else ent["first_seen"],
                        "file": str(p.relative_to(ROOT)), "parsed_sha": None}
+            ent.setdefault("history", [])
+            if ent.get("sha256") and ent["sha256"] != sha:
+                ent["history"].append({"sha256": ent["sha256"], "file": ent.get("file"), "last_seen": ent.get("last_seen")})
             ent.update({"sha256": sha, "size": len(r.content), "last_seen": now,
                         "last_modified": r.headers.get("last-modified"), "link_text": d["text"],
                         "source_page": d["page"]})

@@ -29,24 +29,34 @@ def main():
     # פורמט מובנה (long): רשומה לכל מסלול עם טווחי מניות/מט"ח; מפתח מדויק לפי מספר מסלול
     wide: dict[str, dict] = {}
     lp = OUT / "tracks_policy_long.json"
-    for r in (json.loads(lp.read_text("utf-8")) if lp.exists() else []):
+    long_rows = json.loads(lp.read_text("utf-8")) if lp.exists() else []
+    # כמה גרסאות/מסמכים יכולים לתאר אותו מסלול: נשארים עם המסמך העדכני (שנה, ואז מועד ראיית המסמך)
+    best: dict[tuple, tuple] = {}
+    for r in long_rows:
+        k = (r["fund_id"], r.get("year") or "")
+        best[k] = max(best.get(k, ("", "", "")), (r.get("year") or "", r.get("doc_first_seen") or "", r["url"]))
+    for r in long_rows:
         if not r.get("asset_key") or r.get("min_pct") is None:
             continue
-        w = wide.setdefault(r["track_code"], {"legal_id": r["legal_id"], "track_name": r["track_name"],
-                                              "keys": {f"{r['legal_id']}_{r['fund_id']}", f"{r['legal_id']}_{r['track_no']}"},
-                                              "url": r["url"]})
+        if (r.get("year") or "", r.get("doc_first_seen") or "", r["url"]) != best[(r["fund_id"], r.get("year") or "")]:
+            continue
+        w = wide.setdefault(f"{r['fund_id']}|{r.get('year')}", {"legal_id": r["legal_id"], "track_name": r["track_name"],
+                                                             "fund_id": r["fund_id"], "url": r["url"]})
         w[f"{r['asset_key']}_min"], w[f"{r['asset_key']}_max"] = r["min_pct"], r["max_pct"]
     policy = list(wide.values()) + policy
     by_co: dict[str, list] = {}
+    by_fund: dict[str, dict] = {}  # קוד קופה ייחודי ברישום - מתאים גם כשה-legal_id במסמך שונה (אתר משותף לכמה חברות)
     for m in master:
-        by_co.setdefault(str(m["מפתח"]).split("_")[0], []).append(m)
+        co, _, fid = str(m["מפתח"]).partition("_")
+        by_co.setdefault(co, []).append(m)
+        by_fund[fid] = m
 
     def tname(m):
         return next((str(m[k]) for k in NAME_KEYS if m.get(k)), "")
 
     rows = []
     for p in policy:
-        exact = [m for m in by_co.get(p["legal_id"], []) if m["מפתח"] in p.get("keys", ())]
+        exact = [by_fund[p["fund_id"]]] if p.get("fund_id") in by_fund else []
         cands = [(1.0, exact[0])] if exact else [(SequenceMatcher(None, p["track_name"], tname(m)).ratio(), m) for m in by_co.get(p["legal_id"], [])]
         if not cands:
             rows.append({"legal_id": p["legal_id"], "track_name": p["track_name"], "status": "חברה ללא מסלולים בדוחות"}); continue

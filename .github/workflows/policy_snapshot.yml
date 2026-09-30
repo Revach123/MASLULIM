@@ -1,0 +1,50 @@
+name: Policy site snapshot (daily)
+
+on:
+  push:
+    branches: [claude/tender-wozniak-of4b7i]
+    paths: [".github/workflows/policy_snapshot.yml"]
+  schedule:
+    - cron: "30 4 * * *"
+  workflow_dispatch:
+    inputs:
+      only:
+        description: "LegalId מופרדים ברווח (ריק = הכל)"
+        required: false
+
+permissions:
+  contents: write
+
+concurrency:
+  group: policy-data
+  cancel-in-progress: false
+
+jobs:
+  snapshot:
+    runs-on: ubuntu-latest
+    timeout-minutes: 60
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: |
+          pip install requests beautifulsoup4 playwright
+          python -m playwright install --with-deps chromium
+      - name: Snapshot policy pages and diff
+        run: python -m scripts.policy.snapshot ${{ inputs.only && format('--only {0}', inputs.only) || '' }}
+      - name: Summary
+        run: |
+          echo "### שינויים באתרים" >> "$GITHUB_STEP_SUMMARY"
+          python - <<'PY' >> "$GITHUB_STEP_SUMMARY"
+          import json
+          for c in json.load(open("policy/site_changes.json", encoding="utf-8")):
+              print(f"- {c['kind']}: {c['company']} - {c['text']}")
+          PY
+      - name: Commit
+        run: |
+          git config user.name "github-actions"
+          git config user.email "actions@users.noreply.github.com"
+          git add policy
+          git diff --cached --quiet || git commit -m "policy: site snapshot"
+          git pull --rebase origin "${GITHUB_REF_NAME}" && git push
