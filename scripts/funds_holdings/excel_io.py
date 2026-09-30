@@ -29,7 +29,9 @@ def to_ratio(v) -> float | None:
 
 
 def text_from(v) -> str | None:
-    """Text.From-מקביל: מספרים שלמים בלי .0, שאר הערכים כטקסט. None נשאר None."""
+    """Text.From-מקביל: מספרים שלמים בלי .0, שאר הערכים כטקסט (חתוכים מרווחים
+    מובילים/סוגרים - נמצא בפועל תא עם "7222 " שמנע התאמה למפתח הרשמי הזהה
+    בלעדיו, ר' bare_key_rows probe). None נשאר None."""
     if v is None:
         return None
     if isinstance(v, bool):
@@ -38,4 +40,4 @@ def text_from(v) -> str | None:
         if v.is_integer():
             return str(int(v))
         return repr(v)
-    return str(v)
+    return str(v).strip()
