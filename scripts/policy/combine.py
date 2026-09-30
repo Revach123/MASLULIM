@@ -3,7 +3,7 @@
 הרצה: python -m scripts.policy.combine
 כל ריצת חברה כותבת רק לתיקייה שלה; הקבצים כאן נבנים מחדש כולם בכל פעם (לכן אין התנגשות בין ריצות).
 """
-import csv, json
+import csv, json, re
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[2]
@@ -33,6 +33,22 @@ def _write_csv(name, fields, rows):
         w.writeheader(); w.writerows(rows)
 
 
+def _natural(s: str):
+    return [int(t) if t.isdigit() else t for t in re.split(r"(\d+)", s or "")]
+
+
+def latest_only(rows):
+    """לכל (חברה, מסלול, שנה) - רק המסמך העדכני (מור מפרסמת עשרות גרסאות בשנה). ההיסטוריה המלאה נשארת
+    ב-policy/companies/<LegalId>/tracks_policy_long.json. עדכני = נראה אחרון, ואז שם קובץ בסדר טבעי (_2026_17 > _2026_8)."""
+    best = {}
+    for r in rows:
+        k = (r.get("legal_id"), r.get("track_code"), r.get("year"))
+        cand = (r.get("doc_first_seen") or "", _natural(r.get("url") or ""))
+        if k not in best or cand > best[k][0]:
+            best[k] = (cand, r.get("url"))
+    return [r for r in rows if best[(r.get("legal_id"), r.get("track_code"), r.get("year"))][1] == r.get("url")]
+
+
 def main():
     long_rows, changes, unparsed, crawl, site_log, docs = [], [], [], [], [], []
     for d in sorted(p for p in COMP.iterdir() if p.is_dir()) if COMP.exists() else []:
@@ -44,7 +60,13 @@ def main():
         for url, e in _json(d / "docs_index.json", {}).items():
             docs.append({"legal_id": e["legal_id"], "url": url, "product": e.get("product"), "link_text": e.get("link_text"),
                          "first_seen": e.get("first_seen"), "last_seen": e.get("last_seen"), "file": e.get("file")})
-    (POL / "tracks_policy_long.json").write_text(json.dumps(long_rows, ensure_ascii=False, indent=1), "utf-8")
+    n_all = len(long_rows)
+    long_rows = latest_only(long_rows)
+    for r in long_rows:
+        r.pop("doc_file", None)  # נגזר מ-url דרך documents.csv
+    # רשומה לשורה, בלי רווחים: JSON תקין, diff קריא, ~פי 2.5 קטן (GitHub חוסם קבצים מעל 100MB)
+    (POL / "tracks_policy_long.json").write_text(
+        "[\n" + ",\n".join(json.dumps(r, ensure_ascii=False, separators=(",", ":")) for r in long_rows) + "\n]\n", "utf-8")
     (POL / "unparsed_layouts.json").write_text(json.dumps(unparsed, ensure_ascii=False, indent=1), "utf-8")
     _write_csv("tracks_policy_long.csv", LONG_FIELDS, long_rows)
     _write_csv("policy_changes.csv", CHANGE_FIELDS, changes)
@@ -58,7 +80,7 @@ def main():
         if cfg.get("via") == "extension":
             ext.append({k: cfg.get(k) for k in ("legal_id", "name", "home", "pages", "products", "click", "clicks", "any_sheet")})
     (POL / "extension_sites.json").write_text(json.dumps(ext, ensure_ascii=False, indent=1), "utf-8")
-    print(f"[combine] companies={len(crawl)} docs={len(docs)} long={len(long_rows)} unparsed={len(unparsed)}")
+    print(f"[combine] companies={len(crawl)} docs={len(docs)} long={len(long_rows)} (history={n_all}) unparsed={len(unparsed)}")
 
 
 if __name__ == "__main__":
