@@ -86,7 +86,8 @@ jobs:
           python3 - <<'PY' >> "$GITHUB_STEP_SUMMARY"
           import csv, json, os
           d = os.environ["POLICY_OUT"]
-          for r in csv.DictReader(open(f"{d}/crawl_report.csv", encoding="utf-8-sig")):
+          rp = f"{d}/crawl_report.csv"
+          for r in (csv.DictReader(open(rp, encoding="utf-8-sig")) if os.path.exists(rp) else []):
               print(f"**{r['company']}** pages={r['pages']} docs={r['docs']}\n\n{r['errors']}\n")
           for n in ("site_changes.json", "tracks_policy_long.json", "unparsed_layouts.json"):
               p = f"{d}/{n}"

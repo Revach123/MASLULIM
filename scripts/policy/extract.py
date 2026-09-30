@@ -13,6 +13,8 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parents[2]
 OUT = ROOT / (__import__("os").environ.get("POLICY_OUT") or "policy")  # ריצה לחברה: policy/companies/<LegalId>
 
+PARSER_VERSION = 3  # הגדלה = פרסור מחדש של כל המסמכים בריצה הבאה (שינוי בפרסרים)
+
 NUM = r"(\d{1,3}(?:\.\d+)?)"
 PCT = NUM + r"\s*%?"
 # אפיק -> ביטוי זיהוי בטקסט
@@ -371,7 +373,7 @@ def main():
     _load = lambda p: json.loads(p.read_text("utf-8")) if keep and p.exists() else []
     long_rows, changes, unparsed = _load(long_path), _load(chg_path), _load(unp_path)
     for url, ent in index.items():
-        if not a.all and ent.get("parsed_sha") == ent["sha256"]:
+        if not a.all and ent.get("parsed_sha") == ent["sha256"] and ent.get("parser_version") == PARSER_VERSION:
             continue
         # החלפת תוצאות קודמות של אותו url (מסמך שהתעדכן)
         long_rows = [r for r in long_rows if r["url"] != url]
@@ -414,6 +416,7 @@ def main():
         if not n_long and not recs:
             unparsed.append(dump_layout(names, tables, ent, url))
         ent["parsed_sha"] = ent["sha256"]
+        ent["parser_version"] = PARSER_VERSION
         print(f"[extract] {p.name}: long={n_long} heuristic={len(recs)}", flush=True)
     idx_path.write_text(json.dumps(index, ensure_ascii=False, indent=1), "utf-8")
     out = sorted(rows.values(), key=lambda r: (r["legal_id"], r["track_name"]))
