@@ -28,11 +28,14 @@ TRACK_NUMBER_FIELD = "מס' מסלול"
 
 
 def _text_from(v) -> str | None:
+    """כמו text_from ב-excel_io.py (לא משותף - המקור כאן API חי, לא Excel) -
+    כולל אותו strip() על מרווחים מובילים/סוגרים, כדי שמפתח מ-tracks_reference
+    יתאים בוודאות למפתח המקביל שנבנה מקובצי הדוחות (ר' excel_io.text_from)."""
     if v is None:
         return None
     if isinstance(v, float) and v.is_integer():
         return str(int(v))
-    return str(v)
+    return str(v).strip()
 
 
 def fetch_tracks(session: requests.Session | None = None) -> list[dict]:
