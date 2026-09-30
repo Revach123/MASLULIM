@@ -1,12 +1,23 @@
 {
  "legal_id": "511423048",
  "name": "לעתיד חברה לניהול קרנות פנסיה בע\"מ",
- "home": "",
- "pages": [],
+ "home": "https://www.harel-group.co.il",
+ "pages": [
+  {
+   "product": "פנסיה",
+   "url": "https://www.harel-group.co.il/long-term-savings/pension/funds/atidit"
+  },
+  {
+   "product": "פנסיה",
+   "url": "https://www.harel-group.co.il/about/harel-group/harel-pensia-gemel/atidit"
+  }
+ ],
  "browser": "headless",
  "products": [
   "פנסיה"
  ],
- "search": true,
- "rev": 5
+ "search": false,
+ "rev": 6,
+ "home_source": "web_search",
+ "max_pages": 20
 }

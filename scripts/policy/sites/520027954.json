@@ -1,12 +1,14 @@
 {
  "legal_id": "520027954",
  "name": "החברה לניהול קרן השתלמות לאקדמאים במדעי החברה והרוח בע\"מ",
- "home": "",
+ "home": "https://www.academaim-krn.co.il",
  "pages": [],
  "browser": "headless",
  "products": [
   "גמל"
  ],
- "search": true,
- "rev": 5
+ "search": false,
+ "rev": 6,
+ "home_source": "web_search",
+ "max_pages": 20
 }

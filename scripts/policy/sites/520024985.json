@@ -1,13 +1,19 @@
 {
  "legal_id": "520024985",
  "name": "עגור חברה לניהול קופות גמל וקרנות השתלמות בע\"מ",
- "home": "https://www.fibi.co.il",
- "pages": [],
+ "home": "https://kereni.co.il",
+ "pages": [
+  {
+   "product": "גמל",
+   "url": "https://kereni.co.il/%D7%9E%D7%93%D7%99%D7%A0%D7%99%D7%95%D7%AA-%D7%94%D7%A9%D7%A7%D7%A2%D7%94-%D7%95%D7%A0%D7%94%D7%9C%D7%99%D7%9D/"
+  }
+ ],
  "browser": "headless",
  "products": [
   "גמל"
  ],
- "search": true,
- "rev": 6,
- "home_source": "report_email:fibi.co.il"
+ "search": false,
+ "rev": 7,
+ "home_source": "web_search",
+ "max_pages": 20
 }

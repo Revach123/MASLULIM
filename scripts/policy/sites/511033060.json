@@ -1,12 +1,19 @@
 {
  "legal_id": "511033060",
  "name": "קרן החסכון לצבא הקבע - חברה לניהול קופות גמל בע\"מ",
- "home": "",
- "pages": [],
+ "home": "https://www.harel-group.co.il",
+ "pages": [
+  {
+   "product": "גמל",
+   "url": "https://www.harel-group.co.il/long-term-savings/study-funds/plans/regular-army/Pages/regular-army.aspx"
+  }
+ ],
  "browser": "headless",
  "products": [
   "גמל"
  ],
- "search": true,
- "rev": 5
+ "search": false,
+ "rev": 6,
+ "home_source": "web_search",
+ "max_pages": 20
 }

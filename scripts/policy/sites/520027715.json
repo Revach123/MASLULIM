@@ -1,12 +1,23 @@
 {
  "legal_id": "520027715",
  "name": "מנורה מבטחים והסתדרות המהנדסים ניהול קופות גמל בע\"מ",
- "home": "",
- "pages": [],
+ "home": "https://www.menoramivt.co.il",
+ "pages": [
+  {
+   "product": "גמל",
+   "url": "https://www.menoramivt.co.il/links/engineers"
+  },
+  {
+   "product": "גמל",
+   "url": "https://www.menoramivt.co.il/links/about-menora/engineers/procedures-e"
+  }
+ ],
  "browser": "headless",
  "products": [
   "גמל"
  ],
- "search": true,
- "rev": 5
+ "search": false,
+ "rev": 6,
+ "home_source": "web_search",
+ "max_pages": 20
 }
