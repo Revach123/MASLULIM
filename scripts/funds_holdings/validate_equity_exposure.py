@@ -9,6 +9,7 @@
 הרצה: python -m scripts.funds_holdings.validate_equity_exposure [--reports-dir reports]
 """
 import argparse
+import os
 from pathlib import Path
 
 from .category_pct import build_category_pct
@@ -162,6 +163,10 @@ def compute_equity_totals(reports_dir: Path, tracks: list[dict]):
         old_total = base + fut_old.get(key, 0.0) + swap_old.get(key, 0.0) + _opt_old(key)
         deriv_only = base + fut_new.get(key, 0.0) + swap_new.get(key, 0.0) + _opt_new(key)
         full = deriv_only + foreign_eq
+        if os.environ.get("DUMP_EQUITY_COMPONENTS"):
+            print("COMP|" + "|".join(str(x) for x in (
+                key, official[key], direct, funds_eq, foreign_eq,
+                fut_new.get(key, 0.0), swap_new.get(key, 0.0), _opt_new(key), key in category_pct)))
         # has_data: האם קיימת ולו שורת דוח אחת (בכל גיליון/קטגוריה) למסלול
         # הזה בארכיון המקומי - לא "0% חשיפה למניות בפועל" (מסלול אג"ח טהור
         # לגיטימי, שגם הוא יכול לצאת old=deriv=full=0.0 בלי שום בעיה), אלא
