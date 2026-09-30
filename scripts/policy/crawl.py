@@ -114,6 +114,33 @@ POLICY = re.compile(r"מדיניות[-_ ]*(ה)?השקעה|מדיניות[-_ ]*(�
                     r"הצהרה[-_ ]*על[-_ ]*מדיניות|investment[-_ ]*polic|expected[-_ ]*investment|statement[-_ ]*investment", re.I)
 
 
+def sitemap_policy_pages(s, home: str, limit: int = 25) -> list[str]:
+    """גילוי עמודי מדיניות ממפת האתר (robots.txt -> Sitemap:, או /sitemap.xml), כולל sitemap index מקונן.
+    מחזיר עמודים (לא קבצים) שהכתובת שלהם מתאימה ל-POLICY - כך לא תלויים בכתובת ידנית שעלולה להיות שגויה."""
+    base = home.rstrip("/")
+    maps, seen, found = [], set(), []
+    r = get(s, base + "/robots.txt")
+    if r is not None and r.status_code == 200:
+        maps += re.findall(r"(?im)^\s*sitemap:\s*(\S+)", r.text)
+    maps = maps or [base + "/sitemap.xml", base + "/sitemap_index.xml"]
+    while maps and len(seen) < 60:
+        m = maps.pop(0)
+        if m in seen:
+            continue
+        seen.add(m)
+        r = get(s, m)
+        if r is None or r.status_code != 200:
+            continue
+        locs = re.findall(r"<loc>\s*([^<\s]+)\s*</loc>", r.text)
+        for u in locs:
+            u = u.replace("&amp;", "&")
+            if re.search(r"\.xml(\.gz)?$", u, re.I):
+                maps.append(u)
+            elif POLICY.search(unquote(u)) and not NOISE.search(unquote(u)) and not u.lower().split("?")[0].endswith(DOC_EXT):
+                found.append(u)
+    return list(dict.fromkeys(found))[:limit]
+
+
 def expand_templates(urls, first_year=2019):
     """כתובות עם {year} מורחבות לכל שנה (אתרים שמחזיקים דף/מסנן לכל שנה, למשל כלל/הפניקס)."""
     out = []
@@ -187,6 +214,9 @@ def main():
         if not seed:
             report.append([legal_id, c["name"], "", "no_seed", 0, 0, ""]); continue
         extra = expand_templates(seed["extra"])
+        discovered = sitemap_policy_pages(s, seed["home"])
+        print(f"[{legal_id}] sitemap policy pages: {len(discovered)}", *discovered[:10], sep="\n  ", flush=True)
+        extra += [u for u in discovered if u not in extra]
         products = {u: seed["products"].get(t) for t in seed["extra"] for u in expand_templates([t])}
         pages = snapshot_company(s, pw, seed["home"], extra, products, max_pages=40)
         # תמונת מצב + שינויים מול הריצה הקודמת (פריט חדש/הוסר/טקסט השתנה) - זה מנגנון זיהוי העדכונים היומי
