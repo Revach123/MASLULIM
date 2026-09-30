@@ -136,6 +136,30 @@ def fetch_browser(pw, url):
                 expand()
             except Exception:
                 pass
+        # רשימות נפתחות ("מה תרצו למצוא?", בחירת שנה/מוצר): כל אפשרות -> בחירה, פתיחה, איסוף
+        for sel_el in pg.query_selector_all("select")[:6]:
+            try:
+                opts = sel_el.eval_on_selector_all("option", "os => os.map(o => o.value)")
+            except Exception:
+                continue
+            for v in opts[:40]:
+                try:
+                    sel_el.select_option(v); pg.wait_for_timeout(700)
+                    if pg.url.split("#")[0] != url.split("#")[0]:
+                        collect(); pg.go_back(wait_until="networkidle", timeout=30000); continue
+                    expand()
+                except Exception:
+                    pass
+        for el in pg.query_selector_all('[role="option"], [role="menuitem"], [class*=dropdown] li, [class*=select] li')[:60]:
+            try:
+                t = (el.inner_text() or "").strip()
+                if 2 <= len(t) <= 60 and el.is_visible():
+                    el.click(timeout=800); pg.wait_for_timeout(500)
+                    if pg.url.split("#")[0] != url.split("#")[0]:
+                        collect(); pg.go_back(wait_until="networkidle", timeout=30000); continue
+                    expand()
+            except Exception:
+                pass
         pg.wait_for_timeout(1000)
         collect()
         # כפתורי "הורדה" שלא מצביעים לקובץ (postback של ASP.NET / JS): לוחצים ולוכדים את ההורדה עצמה
