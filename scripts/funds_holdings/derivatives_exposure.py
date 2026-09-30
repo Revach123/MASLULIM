@@ -343,6 +343,33 @@ def _leg_market_values(row: dict, report_date, fx_now: dict[tuple, float]) -> li
     return out
 
 
+# סוואפ מניות עם שווי רגליים: אם ממוצע הרגליים קטן מ-20% מיחידות × מחיר המדד העדכני,
+# הרגליים הן שינוי שווי (MTM) ולא הנוציונל. יחידות × מחיר מתקבל רק עד 1.5 מנכסי המסלול
+# (514956465_15249: יחידות 291,700 = פי 130 מהרגליים - שם הרגליים הן הנוציונל).
+MTM_LEG_SHARE = 0.2
+LIVE_SWAP_MAX_RATIO = 1.5
+
+
+def _live_swap_ratio(row: dict, report_date, fx_now: dict, total: float) -> float | None:
+    """|יחידות| × מחיר המדד ליום הדוח (swap_index_pricing, רק טיקר ממופה) × שער
+    מטבע המדד / נכסי המסלול. None אם אין מחיר / יחידות, או שהתוצאה לא סבירה לשורה."""
+    leg1_col, leg2_col = SWAP_LEGS
+    price, _ = resolve_current_price(row.get(SWAP_TICKER_COL), report_date)
+    if price is None:
+        return None
+    ccy1, ccy2 = row.get(leg1_col["currency"]), row.get(leg2_col["currency"])
+    units = _num(row.get(leg1_col["units"])) if ccy1 != "ILS" or not ccy2 else _num(row.get(leg2_col["units"]))
+    ccy = ccy1 if ccy1 != "ILS" or not ccy2 else ccy2
+    if not units:
+        return None
+    fx = 1.0 if ccy == "ILS" else (fx_now.get((ccy, report_date)) or _normalize_fx(ccy, _num(row.get(
+        (leg1_col if ccy == ccy1 else leg2_col)["fx"]))))
+    if fx is None:
+        return None
+    ratio = abs(units) * price * fx / 1000 / total
+    return ratio if ratio <= LIVE_SWAP_MAX_RATIO else None
+
+
 def _swap_exposure(
     source: list[dict], total_assets: dict[str, float], detail: list | None = None
 ) -> tuple[dict[str, float], dict[str, float], dict[str, float], dict[str, dict[str, float]]]:
@@ -444,7 +471,12 @@ def _swap_exposure(
             is_funded = _is_funded_swap(row.get(SWAP_MAIN_TYPE_COL))
 
             leg_values = _leg_market_values(row, report_date, fx_now)
-            if leg_values:
+            live_ratio = _live_swap_ratio(row, report_date, fx_now, total) if is_equity and leg_values else None
+            if leg_values and live_ratio is not None and sum(leg_values) / len(leg_values) / total < MTM_LEG_SHARE * live_ratio:
+                # הרגליים הן רק שינוי השווי מאז הפתיחה / ה-Reset (514956465_9452: ±9,253.6
+                # יחידות SPTR, רגליים 354 / 1,930 אלף דולר = 0.3%) - החשיפה היא יחידות × מחיר המדד
+                line_ratio = live_ratio
+            elif leg_values:
                 # שווי השוק של הרגליים הוא גודל החשיפה הנוכחי - בלי מוסכמות יחידות/מחיר
                 line_ratio = sum(leg_values) / len(leg_values) / total
             else:
