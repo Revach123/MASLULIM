@@ -100,17 +100,39 @@ def fetch_browser(pw, url):
                 if (f, "iframe") not in seen:
                     seen.add((f, "iframe")); anchors.append({"href": f, "text": "(iframe)"})
 
+        pg.wait_for_timeout(2500)  # SPA/בדיקת בוט: תוכן שנטען אחרי networkidle
         collect()
-        for sel in ('[aria-expanded="false"]:not(a)', "details:not([open]) > summary", '[role="tab"]',
-                    "button:has-text('הצג עוד')", "button:has-text('עוד')", "[class*=accordion] [class*=header]",
-                    "[class*=year]:not(a)"):
-            for el in pg.query_selector_all(sel)[:120]:
-                try:
-                    el.click(timeout=800); pg.wait_for_timeout(150)
-                except Exception:
-                    pass
+
+        def expand():
+            for sel in ('[aria-expanded="false"]:not(a)', "details:not([open]) > summary",
+                        "button:has-text('הצג עוד')", "button:has-text('עוד')", "[class*=accordion] [class*=header]"):
+                for el in pg.query_selector_all(sel)[:80]:
+                    try:
+                        el.click(timeout=600); pg.wait_for_timeout(120)
+                    except Exception:
+                        pass
             collect()
-        pg.wait_for_timeout(1500)
+
+        expand()
+        # לשוניות/כפתורי מוצר (הראל: גמל/השתלמות/פנסיה...): לוחצים על כל אחד, פותחים אקורדיונים, אוספים
+        tabs = pg.query_selector_all('[role="tab"], button, [role="button"], li[tabindex], [class*=tab]:not(a)')
+        clicked = set()
+        for el in tabs[:150]:
+            try:
+                t = (el.inner_text() or "").strip()
+                if not (2 <= len(t) <= 40) or t in clicked or not el.is_visible():
+                    continue
+                if re.search(r"חיפוש|אזור אישי|כניסה|צ'?אט|WhatsApp|סגור|✕|תפריט|נגישות|שפה|English|עוגיות|הבנתי|דלג", t):
+                    continue
+                clicked.add(t)
+                el.click(timeout=800); pg.wait_for_timeout(400)
+                if pg.url.split("#")[0] != url.split("#")[0]:  # כפתור שניווט החוצה - חוזרים
+                    collect(); pg.go_back(wait_until="networkidle", timeout=30000)
+                    continue
+                expand()
+            except Exception:
+                pass
+        pg.wait_for_timeout(1000)
         collect()
         anchors += [x for x in net if (x["href"], x["text"]) not in seen]
         text = pg.inner_text("body")
