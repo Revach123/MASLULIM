@@ -1,0 +1,1602 @@
+{
+ "legal_id": "520042177",
+ "company": "הכשרה חברה לביטוח בע\"מ",
+ "taken": "2026-09-30T20:49:06+00:00",
+ "pages": {
+  "https://www.hcsra.co.il": {
+   "product": "ביטוח",
+   "status": 200,
+   "method": "requests",
+   "text_hash": "6a2d5213f090d25bcafe46f2985ff9646f81e8ab",
+   "items": [
+    {
+     "text": "תנו לי הצעה",
+     "href": "https://bestcar.hcsra.co.il/best-policy-proposal/starter?utm_source=web&utm_medium=organic",
+     "year": null,
+     "doc": false,
+     "internal": true
+    },
+    {
+     "text": "רשימת מנתחים בהסדר",
+     "href": "https://umbraco-api.hcsra.co.il/media/nupjdd0e/רשימת-מנתחים-לאתר-חברה-אוגוסט-26.xlsx",
+     "year": null,
+     "doc": true,
+     "internal": true
+    },
+    {
+     "text": "רשימת מנתחים בהסדר",
+     "href": "https://umbraco-api.hcsra.co.il/media/d4idpw5u/רשימת-מנתחים-לאתר-חברה-אוגוסט-26.xlsx",
+     "year": null,
+     "doc": true,
+     "internal": true
+    },
+    {
+     "text": "קשרי משקיעים",
+     "href": "https://www.hcsra.co.il/investor-relations/",
+     "year": null,
+     "doc": false,
+     "internal": true
+    },
+    {
+     "text": "פורטל הסוכנים",
+     "href": "https://agents-login.hcsra.co.il/my.policy",
+     "year": null,
+     "doc": false,
+     "internal": true
+    },
+    {
+     "text": "מערך השקעות אשראי ונדל\"ן",
+     "href": "https://www.hcsra.co.il/insurances/investments-credit-realestate/",
+     "year": null,
+     "doc": false,
+     "internal": true
+    },
+    {
+     "text": "מדיניות התגמול של החברה",
+     "href": "https://umbraco-api.hcsra.co.il/media/xouj2m4i/מדיניות-התגמול-של-החברה-מונגש.pdf",
+     "year": null,
+     "doc": true,
+     "internal": true
+    },
+    {
+     "text": "מדיניות הגנת הפרטיות (כולל עוגיות וטכנולוגיות דומות)",
+     "href": "https://www.hcsra.co.il/general/privacy-policy/",
+     "year": null,
+     "doc": false,
+     "internal": true
+    },
+    {
+     "text": "השקעות והצבעות",
+     "href": "https://www.hcsra.co.il/insurances/investments-credit-realestate/investments/",
+     "year": null,
+     "doc": false,
+     "internal": true
+    },
+    {
+     "text": "העתק פוליסה",
+     "href": "https://www.hcsra.co.il/copy-of-policy/",
+     "year": null,
+     "doc": false,
+     "internal": true
+    },
+    {
+     "text": "היתר עסקה וכשרות למסלולי השקעה",
+     "href": "https://www.hcsra.co.il/general/heter-iska-kosher/",
+     "year": null,
+     "doc": false,
+     "internal": true
+    },
+    {
+     "text": "דוחות ומצגות",
+     "href": "https://www.hcsra.co.il/investor-relations-reports/",
+     "year": null,
+     "doc": false,
+     "internal": true
+    },
+    {
+     "text": "ביטול פוליסה",
+     "href": "https://www.hcsra.co.il/general/cancel-policy/",
+     "year": null,
+     "doc": false,
+     "internal": true
+    },
+    {
+     "text": "אודות",
+     "href": "https://www.hcsra.co.il/investor-relations/about-us/",
+     "year": null,
+     "doc": false,
+     "internal": true
+    },
+    {
+     "text": "BEST INVEST מסלול אשראי ואגח – יציבות וצמיחה בתיק ההשקעות שלך",
+     "href": "https://www.hcsra.co.il/best-invest/credit-and-bond-track-stability-and-growth-in-your-investment-portfolio/",
+     "year": null,
+     "doc": false,
+     "internal": true
+    }
+   ]
+  },
+  "https://www.hcsra.co.il/insurances/investments-credit-realestate/investments/": {
+   "product": "ביטוח",
+   "status": 200,
+   "method": "browser",
+   "text_hash": "44e443b0da06bcda14825f20609fb5cd2e953d9d",
+   "items": [
+    {
+     "text": "רשימת מנתחים בהסדר",
+     "href": "https://umbraco-api.hcsra.co.il/media/nupjdd0e/רשימת-מנתחים-לאתר-חברה-אוגוסט-26.xlsx",
+     "year": null,
+     "doc": true,
+     "internal": true
+    },
+    {
+     "text": "רשימת מנתחים בהסדר",
+     "href": "https://umbraco-api.hcsra.co.il/media/d4idpw5u/רשימת-מנתחים-לאתר-חברה-אוגוסט-26.xlsx",
+     "year": null,
+     "doc": true,
+     "internal": true
+    },
+    {
+     "text": "רשימת מנתחים בהסדר",
+     "href": "https://umbraco-api.hcsra.co.il/media/nupjdd0e/%D7%A8%D7%A9%D7%99%D7%9E%D7%AA-%D7%9E%D7%A0%D7%AA%D7%97%D7%99%D7%9D-%D7%9C%D7%90%D7%AA%D7%A8-%D7%97%D7%91%D7%A8%D7%94-%D7%90%D7%95%D7%92%D7%95%D7%A1%D7%98-26.xlsx",
+     "year": null,
+     "doc": true,
+     "internal": true
+    },
+    {
+     "text": "רשימת מנתחים בהסדר",
+     "href": "https://umbraco-api.hcsra.co.il/media/d4idpw5u/%D7%A8%D7%A9%D7%99%D7%9E%D7%AA-%D7%9E%D7%A0%D7%AA%D7%97%D7%99%D7%9D-%D7%9C%D7%90%D7%AA%D7%A8-%D7%97%D7%91%D7%A8%D7%94-%D7%90%D7%95%D7%92%D7%95%D7%A1%D7%98-26.xlsx",
+     "year": null,
+     "doc": true,
+     "internal": true
+    },
+    {
+     "text": "קשרי משקיעים",
+     "href": "https://www.hcsra.co.il/investor-relations/",
+     "year": null,
+     "doc": false,
+     "internal": true
+    },
+    {
+     "text": "פורטל הסוכנים",
+     "href": "https://agents-login.hcsra.co.il/my.policy",
+     "year": null,
+     "doc": false,
+     "internal": true
+    },
+    {
+     "text": "מערך השקעות אשראי ונדל\"ן",
+     "href": "https://www.hcsra.co.il/insurances/investments-credit-realestate/",
+     "year": null,
+     "doc": false,
+     "internal": true
+    },
+    {
+     "text": "מיטב דש השקעות בע\"מ",
+     "href": "https://www.meitav.co.il/provident_pension/holding_diagram_and_binding_sides",
+     "year": null,
+     "doc": false,
+     "internal": false
+    },
+    {
+     "text": "מור בית השקעות",
+     "href": "https://www.moreinvest.co.il/מוצרים/גמל-ופנסיה/מידע-כללי-ורגולציה/",
+     "year": null,
+     "doc": false,
+     "internal": false
+    },
+    {
+     "text": "מור בית השקעות",
+     "href": "https://www.moreinvest.co.il/%D7%9E%D7%95%D7%A6%D7%A8%D7%99%D7%9D/%D7%92%D7%9E%D7%9C-%D7%95%D7%A4%D7%A0%D7%A1%D7%99%D7%94/%D7%9E%D7%99%D7%93%D7%A2-%D7%9B%D7%9C%D7%9C%D7%99-%D7%95%D7%A8%D7%92%D7%95%D7%9C%D7%A6%D7%99%D7%94/",
+     "year": null,
+     "doc": false,
+     "internal": false
+    },
+    {
+     "text": "מדיניות התגמול של החברה",
+     "href": "https://umbraco-api.hcsra.co.il/media/xouj2m4i/מדיניות-התגמול-של-החברה-מונגש.pdf",
+     "year": null,
+     "doc": true,
+     "internal": true
+    },
+    {
+     "text": "מדיניות התגמול של החברה",
+     "href": "https://umbraco-api.hcsra.co.il/media/xouj2m4i/%D7%9E%D7%93%D7%99%D7%A0%D7%99%D7%95%D7%AA-%D7%94%D7%AA%D7%92%D7%9E%D7%95%D7%9C-%D7%A9%D7%9C-%D7%94%D7%97%D7%91%D7%A8%D7%94-%D7%9E%D7%95%D7%A0%D7%92%D7%A9.pdf",
+     "year": null,
+     "doc": true,
+     "internal": true
+    },
+    {
+     "text": "מדיניות הגנת הפרטיות (כולל עוגיות וטכנולוגיות דומות)",
+     "href": "https://www.hcsra.co.il/general/privacy-policy/",
+     "year": null,
+     "doc": false,
+     "internal": true
+    },
+    {
+     "text": "ילין לפידות בית השקעות - מבנה אחזקות",
+     "href": "https://www.yl-invest.co.il/תרשים-מבנה-החזקות-של-הקבוצה/",
+     "year": null,
+     "doc": false,
+     "internal": false
+    },
+    {
+     "text": "ילין לפידות בית השקעות - מבנה אחזקות",
+     "href": "https://www.yl-invest.co.il/%D7%AA%D7%A8%D7%A9%D7%99%D7%9D-%D7%9E%D7%91%D7%A0%D7%94-%D7%94%D7%97%D7%96%D7%A7%D7%95%D7%AA-%D7%A9%D7%9C-%D7%94%D7%A7%D7%91%D7%95%D7%A6%D7%94/",
+     "year": null,
+     "doc": false,
+     "internal": false
+    },
+    {
+     "text": "ילין לפידות בית השקעות - גילוי נאות הצדדים הקשורים",
+     "href": "https://www.yl-invest.co.il/disclaimer/",
+     "year": null,
+     "doc": false,
+     "internal": false
+    },
+    {
+     "text": "השקעות והצבעות",
+     "href": "https://www.hcsra.co.il/insurances/investments-credit-realestate/investments/",
+     "year": null,
+     "doc": false,
+     "internal": true
+    },
+    {
+     "text": "העתק פוליסה",
+     "href": "https://www.hcsra.co.il/copy-of-policy/",
+     "year": null,
+     "doc": false,
+     "internal": true
+    },
+    {
+     "text": "היתר עסקה וכשרות למסלולי השקעה",
+     "href": "https://www.hcsra.co.il/general/heter-iska-kosher/",
+     "year": null,
+     "doc": false,
+     "internal": true
+    },
+    {
+     "text": "דוחות ומצגות",
+     "href": "https://www.hcsra.co.il/investor-relations-reports/",
+     "year": null,
+     "doc": false,
+     "internal": true
+    },
+    {
+     "text": "ביטול פוליסה",
+     "href": "https://www.hcsra.co.il/general/cancel-policy/",
+     "year": null,
+     "doc": false,
+     "internal": true
+    },
+    {
+     "text": "אנליסט בית השקעות",
+     "href": "https://www.analyst.co.il/related-parties/",
+     "year": null,
+     "doc": false,
+     "internal": false
+    },
+    {
+     "text": "אלטשולר שחם בית השקעות",
+     "href": "https://www.as-invest.co.il/interstedin/gemel/מידע-כללי/",
+     "year": null,
+     "doc": false,
+     "internal": false
+    },
+    {
+     "text": "אלטשולר שחם בית השקעות",
+     "href": "https://www.as-invest.co.il/interstedin/gemel/%D7%9E%D7%99%D7%93%D7%A2-%D7%9B%D7%9C%D7%9C%D7%99/",
+     "year": null,
+     "doc": false,
+     "internal": false
+    },
+    {
+     "text": "אודות",
+     "href": "https://www.hcsra.co.il/investor-relations/about-us/",
+     "year": null,
+     "doc": false,
+     "internal": true
+    },
+    {
+     "text": "",
+     "href": "https://umbraco-api.hcsra.co.il/media/xjpnuvds/הצבעות-הכשרה-חברה-לביטוח-בעמ-באסיפות-כלליות-תיק-נוסטרו-מתאריך-270924-עד-270926.pdf",
+     "year": null,
+     "doc": true,
+     "internal": true
+    },
+    {
+     "text": "",
+     "href": "https://umbraco-api.hcsra.co.il/media/t53hveny/הצבעות-הכשרה-חברה-לביטוח-בעמ-באסיפות-כלליות-תיק-משתתף-מתאריך-270924-עד-270926.pdf",
+     "year": null,
+     "doc": true,
+     "internal": true
+    },
+    {
+     "text": "",
+     "href": "https://umbraco-api.hcsra.co.il/media/pq0gorm2/%D7%AA%D7%A9%D7%95%D7%90%D7%95%D7%AA-%D7%9E%D7%A9%D7%AA%D7%AA%D7%A3-%D7%95%D7%9E%D7%A1%D7%9C%D7%95%D7%9C%D7%99%D7%9D-24926.pdf",
+     "year": null,
+     "doc": true,
+     "internal": true
+    }
+   ]
+  },
+  "https://bestcar.hcsra.co.il/best-policy-proposal/starter?utm_source=web&utm_medium=organic": {
+   "product": null,
+   "status": 200,
+   "method": "requests",
+   "text_hash": "950e870c61b190f78d80dcc068b533356ae3000a",
+   "items": []
+  },
+  "https://www.hcsra.co.il/best-invest/credit-and-bond-track-stability-and-growth-in-your-investment-portfolio/": {
+   "product": "ביטוח",
+   "status": 200,
+   "method": "requests",
+   "text_hash": "2c2062a29d51f204cbe6044bbed11c136cd244e3",
+   "items": [
+    {
+     "text": "רשימת מנתחים בהסדר",
+     "href": "https://umbraco-api.hcsra.co.il/media/nupjdd0e/רשימת-מנתחים-לאתר-חברה-אוגוסט-26.xlsx",
+     "year": null,
+     "doc": true,
+     "internal": true
+    },
+    {
+     "text": "רשימת מנתחים בהסדר",
+     "href": "https://umbraco-api.hcsra.co.il/media/d4idpw5u/רשימת-מנתחים-לאתר-חברה-אוגוסט-26.xlsx",
+     "year": null,
+     "doc": true,
+     "internal": true
+    },
+    {
+     "text": "קשרי משקיעים",
+     "href": "https://www.hcsra.co.il/investor-relations/",
+     "year": null,
+     "doc": false,
+     "internal": true
+    },
+    {
+     "text": "פורטל הסוכנים",
+     "href": "https://agents-login.hcsra.co.il/my.policy",
+     "year": null,
+     "doc": false,
+     "internal": true
+    },
+    {
+     "text": "מערך השקעות אשראי ונדל\"ן",
+     "href": "https://www.hcsra.co.il/insurances/investments-credit-realestate/",
+     "year": null,
+     "doc": false,
+     "internal": true
+    },
+    {
+     "text": "מדיניות התגמול של החברה",
+     "href": "https://umbraco-api.hcsra.co.il/media/xouj2m4i/מדיניות-התגמול-של-החברה-מונגש.pdf",
+     "year": null,
+     "doc": true,
+     "internal": true
+    },
+    {
+     "text": "מדיניות הגנת הפרטיות (כולל עוגיות וטכנולוגיות דומות)",
+     "href": "https://www.hcsra.co.il/general/privacy-policy/",
+     "year": null,
+     "doc": false,
+     "internal": true
+    },
+    {
+     "text": "השקעות והצבעות",
+     "href": "https://www.hcsra.co.il/insurances/investments-credit-realestate/investments/",
+     "year": null,
+     "doc": false,
+     "internal": true
+    },
+    {
+     "text": "העתק פוליסה",
+     "href": "https://www.hcsra.co.il/copy-of-policy/",
+     "year": null,
+     "doc": false,
+     "internal": true
+    },
+    {
+     "text": "היתר עסקה וכשרות למסלולי השקעה",
+     "href": "https://www.hcsra.co.il/general/heter-iska-kosher/",
+     "year": null,
+     "doc": false,
+     "internal": true
+    },
+    {
+     "text": "דוחות ומצגות",
+     "href": "https://www.hcsra.co.il/investor-relations-reports/",
+     "year": null,
+     "doc": false,
+     "internal": true
+    },
+    {
+     "text": "ביטול פוליסה",
+     "href": "https://www.hcsra.co.il/general/cancel-policy/",
+     "year": null,
+     "doc": false,
+     "internal": true
+    },
+    {
+     "text": "אודות",
+     "href": "https://www.hcsra.co.il/investor-relations/about-us/",
+     "year": null,
+     "doc": false,
+     "internal": true
+    },
+    {
+     "text": "BEST INVEST פוליסת חיסכון - איך לחסוך ולהשקיע חכם מול אפיקי השקעה אחרים",
+     "href": "https://www.hcsra.co.il/best-invest/saving-policy-save-and-invest/",
+     "year": null,
+     "doc": false,
+     "internal": true
+    }
+   ]
+  },
+  "https://www.hcsra.co.il/general/privacy-policy/": {
+   "product": "ביטוח",
+   "status": 200,
+   "method": "requests",
+   "text_hash": "8c71f407f31311aa624f3febc02864d7a601d8e0",
+   "items": [
+    {
+     "text": "להורדת המסמך המלא בקובץ PDF לחצו כאן >>",
+     "href": "https://umbraco-api.hcsra.co.il/media/xquaxdo1/מדיניות-הגנת-הפרטיות-מעודכן-אוגוסט-2025-נגיש.pdf",
+     "year": "2025",
+     "doc": true,
+     "internal": true
+    },
+    {
+     "text": "רשימת מנתחים בהסדר",
+     "href": "https://umbraco-api.hcsra.co.il/media/nupjdd0e/רשימת-מנתחים-לאתר-חברה-אוגוסט-26.xlsx",
+     "year": null,
+     "doc": true,
+     "internal": true
+    },
+    {
+     "text": "רשימת מנתחים בהסדר",
+     "href": "https://umbraco-api.hcsra.co.il/media/d4idpw5u/רשימת-מנתחים-לאתר-חברה-אוגוסט-26.xlsx",
+     "year": null,
+     "doc": true,
+     "internal": true
+    },
+    {
+     "text": "קשרי משקיעים",
+     "href": "https://www.hcsra.co.il/investor-relations/",
+     "year": null,
+     "doc": false,
+     "internal": true
+    },
+    {
+     "text": "פורטל הסוכנים",
+     "href": "https://agents-login.hcsra.co.il/my.policy",
+     "year": null,
+     "doc": false,
+     "internal": true
+    },
+    {
+     "text": "נספח למדיניות הפרטיות של הכשרה-עוגיות (וטכנולוגיות דומות).",
+     "href": "https://umbraco-api.hcsra.co.il/media/e2hjvmsf/מונגש-נספח-למדיניות-פרטיות-עוגיות.pdf",
+     "year": null,
+     "doc": true,
+     "internal": true
+    },
+    {
+     "text": "מערך השקעות אשראי ונדל\"ן",
+     "href": "https://www.hcsra.co.il/insurances/investments-credit-realestate/",
+     "year": null,
+     "doc": false,
+     "internal": true
+    },
+    {
+     "text": "מדיניות התגמול של החברה",
+     "href": "https://umbraco-api.hcsra.co.il/media/xouj2m4i/מדיניות-התגמול-של-החברה-מונגש.pdf",
+     "year": null,
+     "doc": true,
+     "internal": true
+    },
+    {
+     "text": "מדיניות הגנת הפרטיות (כולל עוגיות וטכנולוגיות דומות)",
+     "href": "https://www.hcsra.co.il/general/privacy-policy/",
+     "year": null,
+     "doc": false,
+     "internal": true
+    },
+    {
+     "text": "השקעות והצבעות",
+     "href": "https://www.hcsra.co.il/insurances/investments-credit-realestate/investments/",
+     "year": null,
+     "doc": false,
+     "internal": true
+    },
+    {
+     "text": "העתק פוליסה",
+     "href": "https://www.hcsra.co.il/copy-of-policy/",
+     "year": null,
+     "doc": false,
+     "internal": true
+    },
+    {
+     "text": "היתר עסקה וכשרות למסלולי השקעה",
+     "href": "https://www.hcsra.co.il/general/heter-iska-kosher/",
+     "year": null,
+     "doc": false,
+     "internal": true
+    },
+    {
+     "text": "דוחות ומצגות",
+     "href": "https://www.hcsra.co.il/investor-relations-reports/",
+     "year": null,
+     "doc": false,
+     "internal": true
+    },
+    {
+     "text": "ביטול פוליסה",
+     "href": "https://www.hcsra.co.il/general/cancel-policy/",
+     "year": null,
+     "doc": false,
+     "internal": true
+    },
+    {
+     "text": "אודות",
+     "href": "https://www.hcsra.co.il/investor-relations/about-us/",
+     "year": null,
+     "doc": false,
+     "internal": true
+    }
+   ]
+  },
+  "https://www.hcsra.co.il/insurances/investments-credit-realestate/": {
+   "product": "ביטוח",
+   "status": 200,
+   "method": "requests",
+   "text_hash": "a3ec58327564ba2097c8474ca30784a23026db72",
+   "items": [
+    {
+     "text": "רשימת מנתחים בהסדר",
+     "href": "https://umbraco-api.hcsra.co.il/media/nupjdd0e/רשימת-מנתחים-לאתר-חברה-אוגוסט-26.xlsx",
+     "year": null,
+     "doc": true,
+     "internal": true
+    },
+    {
+     "text": "רשימת מנתחים בהסדר",
+     "href": "https://umbraco-api.hcsra.co.il/media/d4idpw5u/רשימת-מנתחים-לאתר-חברה-אוגוסט-26.xlsx",
+     "year": null,
+     "doc": true,
+     "internal": true
+    },
+    {
+     "text": "קשרי משקיעים",
+     "href": "https://www.hcsra.co.il/investor-relations/",
+     "year": null,
+     "doc": false,
+     "internal": true
+    },
+    {
+     "text": "פורטל הסוכנים",
+     "href": "https://agents-login.hcsra.co.il/my.policy",
+     "year": null,
+     "doc": false,
+     "internal": true
+    },
+    {
+     "text": "מערך השקעות אשראי ונדל\"ן",
+     "href": "https://www.hcsra.co.il/insurances/investments-credit-realestate/",
+     "year": null,
+     "doc": false,
+     "internal": true
+    },
+    {
+     "text": "מדיניות התגמול של החברה",
+     "href": "https://umbraco-api.hcsra.co.il/media/xouj2m4i/מדיניות-התגמול-של-החברה-מונגש.pdf",
+     "year": null,
+     "doc": true,
+     "internal": true
+    },
+    {
+     "text": "מדיניות הגנת הפרטיות (כולל עוגיות וטכנולוגיות דומות)",
+     "href": "https://www.hcsra.co.il/general/privacy-policy/",
+     "year": null,
+     "doc": false,
+     "internal": true
+    },
+    {
+     "text": "השקעות והצבעות",
+     "href": "https://www.hcsra.co.il/insurances/investments-credit-realestate/investments/",
+     "year": null,
+     "doc": false,
+     "internal": true
+    },
+    {
+     "text": "העתק פוליסה",
+     "href": "https://www.hcsra.co.il/copy-of-policy/",
+     "year": null,
+     "doc": false,
+     "internal": true
+    },
+    {
+     "text": "היתר עסקה וכשרות למסלולי השקעה",
+     "href": "https://www.hcsra.co.il/general/heter-iska-kosher/",
+     "year": null,
+     "doc": false,
+     "internal": true
+    },
+    {
+     "text": "דוחות ומצגות",
+     "href": "https://www.hcsra.co.il/investor-relations-reports/",
+     "year": null,
+     "doc": false,
+     "internal": true
+    },
+    {
+     "text": "ביטול פוליסה",
+     "href": "https://www.hcsra.co.il/general/cancel-policy/",
+     "year": null,
+     "doc": false,
+     "internal": true
+    },
+    {
+     "text": "אודות",
+     "href": "https://www.hcsra.co.il/investor-relations/about-us/",
+     "year": null,
+     "doc": false,
+     "internal": true
+    }
+   ]
+  },
+  "https://www.hcsra.co.il/copy-of-policy/": {
+   "product": "ביטוח",
+   "status": 200,
+   "method": "requests",
+   "text_hash": "f6a9ef2eed7bfa02cd203e55b319ea3455fc4608",
+   "items": [
+    {
+     "text": "רשימת מנתחים בהסדר",
+     "href": "https://umbraco-api.hcsra.co.il/media/nupjdd0e/רשימת-מנתחים-לאתר-חברה-אוגוסט-26.xlsx",
+     "year": null,
+     "doc": true,
+     "internal": true
+    },
+    {
+     "text": "רשימת מנתחים בהסדר",
+     "href": "https://umbraco-api.hcsra.co.il/media/d4idpw5u/רשימת-מנתחים-לאתר-חברה-אוגוסט-26.xlsx",
+     "year": null,
+     "doc": true,
+     "internal": true
+    },
+    {
+     "text": "קשרי משקיעים",
+     "href": "https://www.hcsra.co.il/investor-relations/",
+     "year": null,
+     "doc": false,
+     "internal": true
+    },
+    {
+     "text": "פורטל הסוכנים",
+     "href": "https://agents-login.hcsra.co.il/my.policy",
+     "year": null,
+     "doc": false,
+     "internal": true
+    },
+    {
+     "text": "מערך השקעות אשראי ונדל\"ן",
+     "href": "https://www.hcsra.co.il/insurances/investments-credit-realestate/",
+     "year": null,
+     "doc": false,
+     "internal": true
+    },
+    {
+     "text": "מדיניות התגמול של החברה",
+     "href": "https://umbraco-api.hcsra.co.il/media/xouj2m4i/מדיניות-התגמול-של-החברה-מונגש.pdf",
+     "year": null,
+     "doc": true,
+     "internal": true
+    },
+    {
+     "text": "מדיניות הגנת הפרטיות (כולל עוגיות וטכנולוגיות דומות)",
+     "href": "https://www.hcsra.co.il/general/privacy-policy/",
+     "year": null,
+     "doc": false,
+     "internal": true
+    },
+    {
+     "text": "השקעות והצבעות",
+     "href": "https://www.hcsra.co.il/insurances/investments-credit-realestate/investments/",
+     "year": null,
+     "doc": false,
+     "internal": true
+    },
+    {
+     "text": "העתק פוליסה",
+     "href": "https://www.hcsra.co.il/copy-of-policy/",
+     "year": null,
+     "doc": false,
+     "internal": true
+    },
+    {
+     "text": "היתר עסקה וכשרות למסלולי השקעה",
+     "href": "https://www.hcsra.co.il/general/heter-iska-kosher/",
+     "year": null,
+     "doc": false,
+     "internal": true
+    },
+    {
+     "text": "דוחות ומצגות",
+     "href": "https://www.hcsra.co.il/investor-relations-reports/",
+     "year": null,
+     "doc": false,
+     "internal": true
+    },
+    {
+     "text": "ביטול פוליסה",
+     "href": "https://www.hcsra.co.il/general/cancel-policy/",
+     "year": null,
+     "doc": false,
+     "internal": true
+    },
+    {
+     "text": "אודות",
+     "href": "https://www.hcsra.co.il/investor-relations/about-us/",
+     "year": null,
+     "doc": false,
+     "internal": true
+    }
+   ]
+  },
+  "https://agents-login.hcsra.co.il/my.policy": {
+   "product": null,
+   "status": "browser:TimeoutError",
+   "method": "requests",
+   "text_hash": null,
+   "items": []
+  },
+  "https://www.hcsra.co.il/general/cancel-policy/": {
+   "product": "ביטוח",
+   "status": 200,
+   "method": "requests",
+   "text_hash": "43e6dbc0bbe743e64f57d5844d01e4ce19ea57f9",
+   "items": [
+    {
+     "text": "מצ\"ב קישור לטופס",
+     "href": "https://umbraco-api.hcsra.co.il/media/m4efmgxn/בקשה-ל-השבתה-הקפאה-ביטול-החלפת-רכב-52025.pdf",
+     "year": "2025",
+     "doc": true,
+     "internal": true
+    },
+    {
+     "text": "בקישור הבא",
+     "href": "https://umbraco-api.hcsra.co.il/media/ryrbicgv/3026-בקשה-לפדיון-פרט-best-invest-032025.pdf",
+     "year": "2025",
+     "doc": true,
+     "internal": true
+    },
+    {
+     "text": "בטופס הבא",
+     "href": "https://umbraco-api.hcsra.co.il/media/n02aqny5/3072-בקשה-לפדיון-מנהלים-הכשרה-012025.pdf",
+     "year": "2025",
+     "doc": true,
+     "internal": true
+    },
+    {
+     "text": "לחץ כאן",
+     "href": "https://umbraco-api.hcsra.co.il/media/tdebkeib/מונגש-2055-בקשה-לביטול-פוליסה-122024.pdf",
+     "year": "2024",
+     "doc": true,
+     "internal": true
+    },
+    {
+     "text": "רשימת מנתחים בהסדר",
+     "href": "https://umbraco-api.hcsra.co.il/media/nupjdd0e/רשימת-מנתחים-לאתר-חברה-אוגוסט-26.xlsx",
+     "year": null,
+     "doc": true,
+     "internal": true
+    },
+    {
+     "text": "רשימת מנתחים בהסדר",
+     "href": "https://umbraco-api.hcsra.co.il/media/d4idpw5u/רשימת-מנתחים-לאתר-חברה-אוגוסט-26.xlsx",
+     "year": null,
+     "doc": true,
+     "internal": true
+    },
+    {
+     "text": "קשרי משקיעים",
+     "href": "https://www.hcsra.co.il/investor-relations/",
+     "year": null,
+     "doc": false,
+     "internal": true
+    },
+    {
+     "text": "פורטל הסוכנים",
+     "href": "https://agents-login.hcsra.co.il/my.policy",
+     "year": null,
+     "doc": false,
+     "internal": true
+    },
+    {
+     "text": "מערך השקעות אשראי ונדל\"ן",
+     "href": "https://www.hcsra.co.il/insurances/investments-credit-realestate/",
+     "year": null,
+     "doc": false,
+     "internal": true
+    },
+    {
+     "text": "מדיניות התגמול של החברה",
+     "href": "https://umbraco-api.hcsra.co.il/media/xouj2m4i/מדיניות-התגמול-של-החברה-מונגש.pdf",
+     "year": null,
+     "doc": true,
+     "internal": true
+    },
+    {
+     "text": "מדיניות הגנת הפרטיות (כולל עוגיות וטכנולוגיות דומות)",
+     "href": "https://www.hcsra.co.il/general/privacy-policy/",
+     "year": null,
+     "doc": false,
+     "internal": true
+    },
+    {
+     "text": "לחצו כאן",
+     "href": "https://umbraco-api.hcsra.co.il/media/ndmnzqx2/טופס-ייפוי-כח-3252-או-2622.pdf",
+     "year": null,
+     "doc": true,
+     "internal": true
+    },
+    {
+     "text": "לחצו כאן",
+     "href": "https://umbraco-api.hcsra.co.il/media/2orjuxfl/הודעת-ביטול-נספח-ג.pdf",
+     "year": null,
+     "doc": true,
+     "internal": true
+    },
+    {
+     "text": "השקעות והצבעות",
+     "href": "https://www.hcsra.co.il/insurances/investments-credit-realestate/investments/",
+     "year": null,
+     "doc": false,
+     "internal": true
+    },
+    {
+     "text": "העתק פוליסה",
+     "href": "https://www.hcsra.co.il/copy-of-policy/",
+     "year": null,
+     "doc": false,
+     "internal": true
+    },
+    {
+     "text": "היתר עסקה וכשרות למסלולי השקעה",
+     "href": "https://www.hcsra.co.il/general/heter-iska-kosher/",
+     "year": null,
+     "doc": false,
+     "internal": true
+    },
+    {
+     "text": "דוחות ומצגות",
+     "href": "https://www.hcsra.co.il/investor-relations-reports/",
+     "year": null,
+     "doc": false,
+     "internal": true
+    },
+    {
+     "text": "ביטול פוליסה",
+     "href": "https://www.hcsra.co.il/general/cancel-policy/",
+     "year": null,
+     "doc": false,
+     "internal": true
+    },
+    {
+     "text": "אודות",
+     "href": "https://www.hcsra.co.il/investor-relations/about-us/",
+     "year": null,
+     "doc": false,
+     "internal": true
+    }
+   ]
+  },
+  "https://www.hcsra.co.il/investor-relations-reports/": {
+   "product": "ביטוח",
+   "status": 200,
+   "method": "requests",
+   "text_hash": "3cf07234cbea18313a6660d66824dbae34a8d240",
+   "items": [
+    {
+     "text": "",
+     "href": "https://umbraco-api.hcsra.co.il/media/hpedpwbt/דוח-רבעון-2-לשנת-2026.pdf",
+     "year": "2026",
+     "doc": true,
+     "internal": true
+    },
+    {
+     "text": "",
+     "href": "https://umbraco-api.hcsra.co.il/media/zwojbm3z/הכשרה-חברה-לביטוח-בעמ-מצגת-משקיעים-3062026.pdf",
+     "year": "2026",
+     "doc": true,
+     "internal": true
+    },
+    {
+     "text": "",
+     "href": "https://umbraco-api.hcsra.co.il/media/xppf21yz/תוצאות-אסכל-3072026.pdf",
+     "year": "2026",
+     "doc": true,
+     "internal": true
+    },
+    {
+     "text": "",
+     "href": "https://umbraco-api.hcsra.co.il/media/j11lpl5c/מצגת-משקיעים-הכשרה-חברה-לביטוח-2024.pdf",
+     "year": "2024",
+     "doc": true,
+     "internal": true
+    },
+    {
+     "text": "רשימת מנתחים בהסדר",
+     "href": "https://umbraco-api.hcsra.co.il/media/nupjdd0e/רשימת-מנתחים-לאתר-חברה-אוגוסט-26.xlsx",
+     "year": null,
+     "doc": true,
+     "internal": true
+    },
+    {
+     "text": "רשימת מנתחים בהסדר",
+     "href": "https://umbraco-api.hcsra.co.il/media/d4idpw5u/רשימת-מנתחים-לאתר-חברה-אוגוסט-26.xlsx",
+     "year": null,
+     "doc": true,
+     "internal": true
+    },
+    {
+     "text": "קשרי משקיעים",
+     "href": "https://www.hcsra.co.il/investor-relations/",
+     "year": null,
+     "doc": false,
+     "internal": true
+    },
+    {
+     "text": "פורטל הסוכנים",
+     "href": "https://agents-login.hcsra.co.il/my.policy",
+     "year": null,
+     "doc": false,
+     "internal": true
+    },
+    {
+     "text": "מערך השקעות אשראי ונדל\"ן",
+     "href": "https://www.hcsra.co.il/insurances/investments-credit-realestate/",
+     "year": null,
+     "doc": false,
+     "internal": true
+    },
+    {
+     "text": "מדיניות התגמול של החברה",
+     "href": "https://umbraco-api.hcsra.co.il/media/xouj2m4i/מדיניות-התגמול-של-החברה-מונגש.pdf",
+     "year": null,
+     "doc": true,
+     "internal": true
+    },
+    {
+     "text": "מדיניות הגנת הפרטיות (כולל עוגיות וטכנולוגיות דומות)",
+     "href": "https://www.hcsra.co.il/general/privacy-policy/",
+     "year": null,
+     "doc": false,
+     "internal": true
+    },
+    {
+     "text": "השקעות והצבעות",
+     "href": "https://www.hcsra.co.il/insurances/investments-credit-realestate/investments/",
+     "year": null,
+     "doc": false,
+     "internal": true
+    },
+    {
+     "text": "העתק פוליסה",
+     "href": "https://www.hcsra.co.il/copy-of-policy/",
+     "year": null,
+     "doc": false,
+     "internal": true
+    },
+    {
+     "text": "היתר עסקה וכשרות למסלולי השקעה",
+     "href": "https://www.hcsra.co.il/general/heter-iska-kosher/",
+     "year": null,
+     "doc": false,
+     "internal": true
+    },
+    {
+     "text": "דוחות ומצגות",
+     "href": "https://www.hcsra.co.il/investor-relations-reports/",
+     "year": null,
+     "doc": false,
+     "internal": true
+    },
+    {
+     "text": "ביטול פוליסה",
+     "href": "https://www.hcsra.co.il/general/cancel-policy/",
+     "year": null,
+     "doc": false,
+     "internal": true
+    },
+    {
+     "text": "אודות",
+     "href": "https://www.hcsra.co.il/investor-relations/about-us/",
+     "year": null,
+     "doc": false,
+     "internal": true
+    }
+   ]
+  },
+  "https://www.hcsra.co.il/general/heter-iska-kosher/": {
+   "product": "ביטוח",
+   "status": 200,
+   "method": "requests",
+   "text_hash": "6eb7536142c4d8f169cc021a5dd023a087c82348",
+   "items": [
+    {
+     "text": "תעודות הכשר למסלולי ההשקעה BEST INVEST כספי (שקלי) ו-BEST INVEST עוקב מדד S&P500",
+     "href": "https://umbraco-api.hcsra.co.il/media/zrblb4fn/תעודת-כשרות-מסלול-כספי-שקלי-ומסלול-עוקב-מדד-sp500-בסט-אינווסט.pdf",
+     "year": null,
+     "doc": true,
+     "internal": true
+    },
+    {
+     "text": "שטר רישום חברה להיתר עסק פרטי",
+     "href": "https://umbraco-api.hcsra.co.il/media/vhgj2pnz/שטר-רישום-חברה-להיתר-עסקא-פרטי.pdf",
+     "year": null,
+     "doc": true,
+     "internal": true
+    },
+    {
+     "text": "שטר היתר עסקא",
+     "href": "https://umbraco-api.hcsra.co.il/media/xeyp2rhm/שטר-היתר-עסקא.pdf",
+     "year": null,
+     "doc": true,
+     "internal": true
+    },
+    {
+     "text": "רשימת מנתחים בהסדר",
+     "href": "https://umbraco-api.hcsra.co.il/media/nupjdd0e/רשימת-מנתחים-לאתר-חברה-אוגוסט-26.xlsx",
+     "year": null,
+     "doc": true,
+     "internal": true
+    },
+    {
+     "text": "רשימת מנתחים בהסדר",
+     "href": "https://umbraco-api.hcsra.co.il/media/d4idpw5u/רשימת-מנתחים-לאתר-חברה-אוגוסט-26.xlsx",
+     "year": null,
+     "doc": true,
+     "internal": true
+    },
+    {
+     "text": "קשרי משקיעים",
+     "href": "https://www.hcsra.co.il/investor-relations/",
+     "year": null,
+     "doc": false,
+     "internal": true
+    },
+    {
+     "text": "פורטל הסוכנים",
+     "href": "https://agents-login.hcsra.co.il/my.policy",
+     "year": null,
+     "doc": false,
+     "internal": true
+    },
+    {
+     "text": "מערך השקעות אשראי ונדל\"ן",
+     "href": "https://www.hcsra.co.il/insurances/investments-credit-realestate/",
+     "year": null,
+     "doc": false,
+     "internal": true
+    },
+    {
+     "text": "מדיניות התגמול של החברה",
+     "href": "https://umbraco-api.hcsra.co.il/media/xouj2m4i/מדיניות-התגמול-של-החברה-מונגש.pdf",
+     "year": null,
+     "doc": true,
+     "internal": true
+    },
+    {
+     "text": "מדיניות הגנת הפרטיות (כולל עוגיות וטכנולוגיות דומות)",
+     "href": "https://www.hcsra.co.il/general/privacy-policy/",
+     "year": null,
+     "doc": false,
+     "internal": true
+    },
+    {
+     "text": "השקעות והצבעות",
+     "href": "https://www.hcsra.co.il/insurances/investments-credit-realestate/investments/",
+     "year": null,
+     "doc": false,
+     "internal": true
+    },
+    {
+     "text": "העתק פוליסה",
+     "href": "https://www.hcsra.co.il/copy-of-policy/",
+     "year": null,
+     "doc": false,
+     "internal": true
+    },
+    {
+     "text": "היתר עסקה וכשרות למסלולי השקעה",
+     "href": "https://www.hcsra.co.il/general/heter-iska-kosher/",
+     "year": null,
+     "doc": false,
+     "internal": true
+    },
+    {
+     "text": "דוחות ומצגות",
+     "href": "https://www.hcsra.co.il/investor-relations-reports/",
+     "year": null,
+     "doc": false,
+     "internal": true
+    },
+    {
+     "text": "ביטול פוליסה",
+     "href": "https://www.hcsra.co.il/general/cancel-policy/",
+     "year": null,
+     "doc": false,
+     "internal": true
+    },
+    {
+     "text": "אודות",
+     "href": "https://www.hcsra.co.il/investor-relations/about-us/",
+     "year": null,
+     "doc": false,
+     "internal": true
+    }
+   ]
+  },
+  "https://www.hcsra.co.il/investor-relations/": {
+   "product": "ביטוח",
+   "status": 200,
+   "method": "requests",
+   "text_hash": "52e00af8a5bab02efe9729c29f09e19a1220833f",
+   "items": [
+    {
+     "text": "רשימת מנתחים בהסדר",
+     "href": "https://umbraco-api.hcsra.co.il/media/nupjdd0e/רשימת-מנתחים-לאתר-חברה-אוגוסט-26.xlsx",
+     "year": null,
+     "doc": true,
+     "internal": true
+    },
+    {
+     "text": "רשימת מנתחים בהסדר",
+     "href": "https://umbraco-api.hcsra.co.il/media/d4idpw5u/רשימת-מנתחים-לאתר-חברה-אוגוסט-26.xlsx",
+     "year": null,
+     "doc": true,
+     "internal": true
+    },
+    {
+     "text": "קשרי משקיעים",
+     "href": "https://www.hcsra.co.il/investor-relations/",
+     "year": null,
+     "doc": false,
+     "internal": true
+    },
+    {
+     "text": "פורטל הסוכנים",
+     "href": "https://agents-login.hcsra.co.il/my.policy",
+     "year": null,
+     "doc": false,
+     "internal": true
+    },
+    {
+     "text": "מערך השקעות אשראי ונדל\"ן",
+     "href": "https://www.hcsra.co.il/insurances/investments-credit-realestate/",
+     "year": null,
+     "doc": false,
+     "internal": true
+    },
+    {
+     "text": "מדיניות התגמול של החברה",
+     "href": "https://umbraco-api.hcsra.co.il/media/xouj2m4i/מדיניות-התגמול-של-החברה-מונגש.pdf",
+     "year": null,
+     "doc": true,
+     "internal": true
+    },
+    {
+     "text": "מדיניות הגנת הפרטיות (כולל עוגיות וטכנולוגיות דומות)",
+     "href": "https://www.hcsra.co.il/general/privacy-policy/",
+     "year": null,
+     "doc": false,
+     "internal": true
+    },
+    {
+     "text": "השקעות והצבעות",
+     "href": "https://www.hcsra.co.il/insurances/investments-credit-realestate/investments/",
+     "year": null,
+     "doc": false,
+     "internal": true
+    },
+    {
+     "text": "העתק פוליסה",
+     "href": "https://www.hcsra.co.il/copy-of-policy/",
+     "year": null,
+     "doc": false,
+     "internal": true
+    },
+    {
+     "text": "היתר עסקה וכשרות למסלולי השקעה",
+     "href": "https://www.hcsra.co.il/general/heter-iska-kosher/",
+     "year": null,
+     "doc": false,
+     "internal": true
+    },
+    {
+     "text": "האנשים מאחורי הכשרה",
+     "href": "https://www.hcsra.co.il/investor-relations-the-people-behind/board-members/",
+     "year": null,
+     "doc": false,
+     "internal": true
+    },
+    {
+     "text": "דוחות ומצגות",
+     "href": "https://www.hcsra.co.il/investor-relations-reports/",
+     "year": null,
+     "doc": false,
+     "internal": true
+    },
+    {
+     "text": "ביטול פוליסה",
+     "href": "https://www.hcsra.co.il/general/cancel-policy/",
+     "year": null,
+     "doc": false,
+     "internal": true
+    },
+    {
+     "text": "אודות",
+     "href": "https://www.hcsra.co.il/investor-relations/about-us/",
+     "year": null,
+     "doc": false,
+     "internal": true
+    },
+    {
+     "text": "",
+     "href": "https://www.hcsra.co.il/investor-relations/: https:/www.linkedin.com/in/avi-shlomo-61235b314?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app",
+     "year": null,
+     "doc": false,
+     "internal": true
+    }
+   ]
+  },
+  "https://www.hcsra.co.il/investor-relations/about-us/": {
+   "product": "ביטוח",
+   "status": 200,
+   "method": "requests",
+   "text_hash": "be503fddf1ea7ea06648ae05f08524a8d536ffe7",
+   "items": [
+    {
+     "text": "רשימת מנתחים בהסדר",
+     "href": "https://umbraco-api.hcsra.co.il/media/nupjdd0e/רשימת-מנתחים-לאתר-חברה-אוגוסט-26.xlsx",
+     "year": null,
+     "doc": true,
+     "internal": true
+    },
+    {
+     "text": "רשימת מנתחים בהסדר",
+     "href": "https://umbraco-api.hcsra.co.il/media/d4idpw5u/רשימת-מנתחים-לאתר-חברה-אוגוסט-26.xlsx",
+     "year": null,
+     "doc": true,
+     "internal": true
+    },
+    {
+     "text": "קשרי משקיעים",
+     "href": "https://www.hcsra.co.il/investor-relations/",
+     "year": null,
+     "doc": false,
+     "internal": true
+    },
+    {
+     "text": "פורטל הסוכנים",
+     "href": "https://agents-login.hcsra.co.il/my.policy",
+     "year": null,
+     "doc": false,
+     "internal": true
+    },
+    {
+     "text": "מערך השקעות אשראי ונדל\"ן",
+     "href": "https://www.hcsra.co.il/insurances/investments-credit-realestate/",
+     "year": null,
+     "doc": false,
+     "internal": true
+    },
+    {
+     "text": "מדיניות התגמול של החברה",
+     "href": "https://umbraco-api.hcsra.co.il/media/xouj2m4i/מדיניות-התגמול-של-החברה-מונגש.pdf",
+     "year": null,
+     "doc": true,
+     "internal": true
+    },
+    {
+     "text": "מדיניות הגנת הפרטיות (כולל עוגיות וטכנולוגיות דומות)",
+     "href": "https://www.hcsra.co.il/general/privacy-policy/",
+     "year": null,
+     "doc": false,
+     "internal": true
+    },
+    {
+     "text": "לקריאת אמנת השירות המלאה",
+     "href": "https://umbraco-api.hcsra.co.il/media/0bdjiko5/אמנת-שירות-לקוחות.pdf",
+     "year": null,
+     "doc": true,
+     "internal": true
+    },
+    {
+     "text": "לקרוא עוד",
+     "href": "https://umbraco-api.hcsra.co.il/media/ipkioqv5/מדיניות-השקעה-esg-הכשרה-ביטוח.pdf",
+     "year": null,
+     "doc": true,
+     "internal": true
+    },
+    {
+     "text": "השקעות והצבעות",
+     "href": "https://www.hcsra.co.il/insurances/investments-credit-realestate/investments/",
+     "year": null,
+     "doc": false,
+     "internal": true
+    },
+    {
+     "text": "השקעות אשראי ונדל\"ן",
+     "href": "https://www.hcsra.co.il/insurances/investments-credit-realestate/real-estate/",
+     "year": null,
+     "doc": false,
+     "internal": true
+    },
+    {
+     "text": "העתק פוליסה",
+     "href": "https://www.hcsra.co.il/copy-of-policy/",
+     "year": null,
+     "doc": false,
+     "internal": true
+    },
+    {
+     "text": "היתר עסקה וכשרות למסלולי השקעה",
+     "href": "https://www.hcsra.co.il/general/heter-iska-kosher/",
+     "year": null,
+     "doc": false,
+     "internal": true
+    },
+    {
+     "text": "דוחות ומצגות",
+     "href": "https://www.hcsra.co.il/investor-relations-reports/",
+     "year": null,
+     "doc": false,
+     "internal": true
+    },
+    {
+     "text": "ביטול פוליסה",
+     "href": "https://www.hcsra.co.il/general/cancel-policy/",
+     "year": null,
+     "doc": false,
+     "internal": true
+    },
+    {
+     "text": "אודות",
+     "href": "https://www.hcsra.co.il/investor-relations/about-us/",
+     "year": null,
+     "doc": false,
+     "internal": true
+    }
+   ]
+  },
+  "https://www.hcsra.co.il/best-invest/saving-policy-save-and-invest/": {
+   "product": "גמל+ביטוח",
+   "status": 200,
+   "method": "requests",
+   "text_hash": "37a6824864b7010367f57a2c7d4e13f2493841a3",
+   "items": [
+    {
+     "text": "תראו לי איך",
+     "href": "https://www.hcsra.co.il/best-invest/saving-policy-save-and-invest/",
+     "year": null,
+     "doc": false,
+     "internal": true
+    },
+    {
+     "text": "רשימת מנתחים בהסדר",
+     "href": "https://umbraco-api.hcsra.co.il/media/nupjdd0e/רשימת-מנתחים-לאתר-חברה-אוגוסט-26.xlsx",
+     "year": null,
+     "doc": true,
+     "internal": true
+    },
+    {
+     "text": "רשימת מנתחים בהסדר",
+     "href": "https://umbraco-api.hcsra.co.il/media/d4idpw5u/רשימת-מנתחים-לאתר-חברה-אוגוסט-26.xlsx",
+     "year": null,
+     "doc": true,
+     "internal": true
+    },
+    {
+     "text": "קשרי משקיעים",
+     "href": "https://www.hcsra.co.il/investor-relations/",
+     "year": null,
+     "doc": false,
+     "internal": true
+    },
+    {
+     "text": "פורטל הסוכנים",
+     "href": "https://agents-login.hcsra.co.il/my.policy",
+     "year": null,
+     "doc": false,
+     "internal": true
+    },
+    {
+     "text": "מערך השקעות אשראי ונדל\"ן",
+     "href": "https://www.hcsra.co.il/insurances/investments-credit-realestate/",
+     "year": null,
+     "doc": false,
+     "internal": true
+    },
+    {
+     "text": "מדיניות התגמול של החברה",
+     "href": "https://umbraco-api.hcsra.co.il/media/xouj2m4i/מדיניות-התגמול-של-החברה-מונגש.pdf",
+     "year": null,
+     "doc": true,
+     "internal": true
+    },
+    {
+     "text": "מדיניות הגנת הפרטיות (כולל עוגיות וטכנולוגיות דומות)",
+     "href": "https://www.hcsra.co.il/general/privacy-policy/",
+     "year": null,
+     "doc": false,
+     "internal": true
+    },
+    {
+     "text": "השקעות ייחודיות כדוגמת נדל\"ן",
+     "href": "https://www.hcsra.co.il/Insurances/investments-credit-realestate/real-estate/",
+     "year": null,
+     "doc": false,
+     "internal": true
+    },
+    {
+     "text": "השקעות והצבעות",
+     "href": "https://www.hcsra.co.il/insurances/investments-credit-realestate/investments/",
+     "year": null,
+     "doc": false,
+     "internal": true
+    },
+    {
+     "text": "העתק פוליסה",
+     "href": "https://www.hcsra.co.il/copy-of-policy/",
+     "year": null,
+     "doc": false,
+     "internal": true
+    },
+    {
+     "text": "היתר עסקה וכשרות למסלולי השקעה",
+     "href": "https://www.hcsra.co.il/general/heter-iska-kosher/",
+     "year": null,
+     "doc": false,
+     "internal": true
+    },
+    {
+     "text": "דוחות ומצגות",
+     "href": "https://www.hcsra.co.il/investor-relations-reports/",
+     "year": null,
+     "doc": false,
+     "internal": true
+    },
+    {
+     "text": "ביטול פוליסה",
+     "href": "https://www.hcsra.co.il/general/cancel-policy/",
+     "year": null,
+     "doc": false,
+     "internal": true
+    },
+    {
+     "text": "אודות",
+     "href": "https://www.hcsra.co.il/investor-relations/about-us/",
+     "year": null,
+     "doc": false,
+     "internal": true
+    },
+    {
+     "text": "BEST INVEST מסלול אשראי ואגח – יציבות וצמיחה בתיק ההשקעות שלך",
+     "href": "https://www.hcsra.co.il/best-invest/credit-and-bond-track-stability-and-growth-in-your-investment-portfolio/",
+     "year": null,
+     "doc": false,
+     "internal": true
+    }
+   ]
+  },
+  "https://www.hcsra.co.il/investor-relations/: https:/www.linkedin.com/in/avi-shlomo-61235b314?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app": {
+   "product": null,
+   "status": 200,
+   "method": "browser",
+   "text_hash": "e93162fd381dc22e137976c80a891cd56e46782d",
+   "items": [
+    {
+     "text": "רשימת מנתחים בהסדר",
+     "href": "https://umbraco-api.hcsra.co.il/media/nupjdd0e/%D7%A8%D7%A9%D7%99%D7%9E%D7%AA-%D7%9E%D7%A0%D7%AA%D7%97%D7%99%D7%9D-%D7%9C%D7%90%D7%AA%D7%A8-%D7%97%D7%91%D7%A8%D7%94-%D7%90%D7%95%D7%92%D7%95%D7%A1%D7%98-26.xlsx",
+     "year": null,
+     "doc": true,
+     "internal": true
+    },
+    {
+     "text": "רשימת מנתחים בהסדר",
+     "href": "https://umbraco-api.hcsra.co.il/media/d4idpw5u/%D7%A8%D7%A9%D7%99%D7%9E%D7%AA-%D7%9E%D7%A0%D7%AA%D7%97%D7%99%D7%9D-%D7%9C%D7%90%D7%AA%D7%A8-%D7%97%D7%91%D7%A8%D7%94-%D7%90%D7%95%D7%92%D7%95%D7%A1%D7%98-26.xlsx",
+     "year": null,
+     "doc": true,
+     "internal": true
+    },
+    {
+     "text": "קשרי משקיעים",
+     "href": "https://www.hcsra.co.il/investor-relations/",
+     "year": null,
+     "doc": false,
+     "internal": true
+    },
+    {
+     "text": "פורטל הסוכנים",
+     "href": "https://agents-login.hcsra.co.il/my.policy",
+     "year": null,
+     "doc": false,
+     "internal": true
+    },
+    {
+     "text": "מערך השקעות אשראי ונדל\"ן",
+     "href": "https://www.hcsra.co.il/insurances/investments-credit-realestate/",
+     "year": null,
+     "doc": false,
+     "internal": true
+    },
+    {
+     "text": "מדיניות התגמול של החברה",
+     "href": "https://umbraco-api.hcsra.co.il/media/xouj2m4i/%D7%9E%D7%93%D7%99%D7%A0%D7%99%D7%95%D7%AA-%D7%94%D7%AA%D7%92%D7%9E%D7%95%D7%9C-%D7%A9%D7%9C-%D7%94%D7%97%D7%91%D7%A8%D7%94-%D7%9E%D7%95%D7%A0%D7%92%D7%A9.pdf",
+     "year": null,
+     "doc": true,
+     "internal": true
+    },
+    {
+     "text": "מדיניות הגנת הפרטיות (כולל עוגיות וטכנולוגיות דומות)",
+     "href": "https://www.hcsra.co.il/general/privacy-policy/",
+     "year": null,
+     "doc": false,
+     "internal": true
+    },
+    {
+     "text": "השקעות והצבעות",
+     "href": "https://www.hcsra.co.il/insurances/investments-credit-realestate/investments/",
+     "year": null,
+     "doc": false,
+     "internal": true
+    },
+    {
+     "text": "העתק פוליסה",
+     "href": "https://www.hcsra.co.il/copy-of-policy/",
+     "year": null,
+     "doc": false,
+     "internal": true
+    },
+    {
+     "text": "היתר עסקה וכשרות למסלולי השקעה",
+     "href": "https://www.hcsra.co.il/general/heter-iska-kosher/",
+     "year": null,
+     "doc": false,
+     "internal": true
+    },
+    {
+     "text": "דלג לתוכן הראשי",
+     "href": "https://www.hcsra.co.il/investor-relations/:%20https:/www.linkedin.com/in/avi-shlomo-61235b314/?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app",
+     "year": null,
+     "doc": false,
+     "internal": true
+    },
+    {
+     "text": "דוחות ומצגות",
+     "href": "https://www.hcsra.co.il/investor-relations-reports/",
+     "year": null,
+     "doc": false,
+     "internal": true
+    },
+    {
+     "text": "ביטול פוליסה",
+     "href": "https://www.hcsra.co.il/general/cancel-policy/",
+     "year": null,
+     "doc": false,
+     "internal": true
+    },
+    {
+     "text": "אודות",
+     "href": "https://www.hcsra.co.il/investor-relations/about-us/",
+     "year": null,
+     "doc": false,
+     "internal": true
+    }
+   ]
+  }
+ }
+}
