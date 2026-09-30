@@ -1,5 +1,5 @@
-"""ממיר out/master.json, out/funds_detail.json ו-out/bonds_detail.json
-ל-master.sql/funds_detail.sql/bonds_detail.sql עבור wrangler d1 execute.
+"""ממיר out/master.json, out/funds_detail.json, out/bonds_detail.json ו-out/index_exposure.json
+ל-master.sql/funds_detail.sql/bonds_detail.sql/index_exposure.sql עבור wrangler d1 execute.
 מקביל ל-build_d1.py/build_d1_tracks.py ב-revach.
 
 DB: maslulim_autopilot (binding AUTOPILOT ב-Pages).
@@ -36,6 +36,15 @@ MASTER_SCHEMA = (
     "CREATE INDEX IF NOT EXISTS idx_master_chp ON master(ח_פ_חברה);\n"
     "CREATE INDEX IF NOT EXISTS idx_master_domain ON master(תחום);\n"
 )
+
+INDEX_SCHEMA = (
+    "CREATE TABLE IF NOT EXISTS index_exposure (\n"
+    "  מפתח TEXT PRIMARY KEY,\n"
+    "  שם_חברה TEXT,\n"
+    "  data TEXT\n"
+    ");\n"
+)
+
 
 def detail_schema(table: str) -> str:
     return (
@@ -134,6 +143,14 @@ def build_detail_sql(detail: dict[str, list], out_path: Path, table: str) -> int
     return write_batched(out_path, table, detail_schema(table), col_names, rows)
 
 
+def build_index_sql(index_table: list[dict], out_path: Path) -> int:
+    """פירוק החשיפה למניות לפי מדד (index_exposure.py) - שורה למסלול, עד ~9KB."""
+    rows = [(sql_str(r["key"]), sql_str(r.get("company")),
+             sql_str(json.dumps(r, ensure_ascii=False, separators=(",", ":"))))
+            for r in index_table]
+    return write_batched(out_path, "index_exposure", INDEX_SCHEMA, ["מפתח", "שם_חברה", "data"], rows)
+
+
 def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--out-dir", type=Path, default=Path("out"))
@@ -146,12 +163,17 @@ def main():
     with open(args.out_dir / "bonds_detail.json", encoding="utf-8") as f:
         bonds_detail = json.load(f)
 
+    with open(args.out_dir / "index_exposure.json", encoding="utf-8") as f:
+        index_table = json.load(f)
+
     n1 = build_master_sql(master, args.out_dir / "master.sql")
     n2 = build_detail_sql(funds_detail, args.out_dir / "funds_detail.sql", "funds_detail")
     n3 = build_detail_sql(bonds_detail, args.out_dir / "bonds_detail.sql", "bonds_detail")
     print(f"[build_d1] master: {n1} שורות -> {args.out_dir}/master.sql")
     print(f"[build_d1] funds_detail: {n2} שורות -> {args.out_dir}/funds_detail.sql")
     print(f"[build_d1] bonds_detail: {n3} שורות -> {args.out_dir}/bonds_detail.sql")
+    n4 = build_index_sql(index_table, args.out_dir / "index_exposure.sql")
+    print(f"[build_d1] index_exposure: {n4} שורות -> {args.out_dir}/index_exposure.sql")
 
 
 if __name__ == "__main__":

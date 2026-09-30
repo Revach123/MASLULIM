@@ -155,11 +155,13 @@ def compute_equity_totals(reports_dir: Path, tracks: list[dict]):
 
     official = {}
     official_month: dict[str, str] = {}
+    domain_track: dict[str, tuple[str, str]] = {}
     for t in tracks:
         key = track_key(t)
         if key is None:
             continue
         official_month[key] = str(t.get("נכון לחודש") or "").strip()
+        domain_track[key] = (str(t.get("תחום") or "").strip(), key.split("_", 1)[1])
         raw = t.get("חשיפה למניות") or t.get("STOCK_MARKET_EXPOSURE")
         v = to_ratio(raw) if isinstance(raw, str) and raw.strip() else raw
         if v is not None:
@@ -167,6 +169,20 @@ def compute_equity_totals(reports_dir: Path, tracks: list[dict]):
                 official[key] = float(v) / (100 if abs(float(v)) > 1.5 else 1)
             except (TypeError, ValueError):
                 pass
+
+    # הנתון הרשמי לחודש הדוח עצמו (לא לחודש האחרון), מ-data.gov.il
+    official_at_report: dict[str, float] = {}
+    try:
+        from .official_history import fetch_stock_exposure
+        hist = fetch_stock_exposure({m for m in report_month.values() if m})
+        for key, (dom, track) in domain_track.items():
+            v = hist.get((dom, track, report_month.get(key, "")))
+            if v is not None:
+                official_at_report[key] = v
+        print(f"[validate] {len(hist)} ערכים רשמיים מ-data.gov.il לחודשי הדוחות, "
+              f"{len(official_at_report)} מסלולים הותאמו")
+    except Exception as e:
+        print(f"[validate] data.gov.il לא זמין (מדלג על השוואה לחודש הדוח): {e}")
 
     keys = set(official)
     rows = []
@@ -186,13 +202,14 @@ def compute_equity_totals(reports_dir: Path, tracks: list[dict]):
             print("COMP|" + "|".join(str(x) for x in (
                 key, official[key], direct, funds_eq, foreign_eq,
                 fut_new.get(key, 0.0), swap_new.get(key, 0.0), _opt_new(key), key in category_pct,
-                official_month.get(key, ""), report_month.get(key, ""))))
+                official_month.get(key, ""), report_month.get(key, ""),
+                official_at_report.get(key, ""))))
         # has_data: האם קיימת ולו שורת דוח אחת (בכל גיליון/קטגוריה) למסלול
         # הזה בארכיון המקומי - לא "0% חשיפה למניות בפועל" (מסלול אג"ח טהור
         # לגיטימי, שגם הוא יכול לצאת old=deriv=full=0.0 בלי שום בעיה), אלא
         # אין בכלל קובצי דוח/שורות לטיקר הזה (ר' 517085874 שנבדק בעבר).
         rows.append((key, official[key], old_total, deriv_only, full, key in category_pct,
-                     official_month.get(key, ""), report_month.get(key, "")))
+                     official_month.get(key, ""), report_month.get(key, ""), official_at_report.get(key)))
 
     return rows
 
@@ -264,6 +281,11 @@ def main():
     same = [r for r in rows if r[6] and r[6] == r[7]]
     print(f"MAE (שיטה מלאה) רק כשחודש הנתון הרשמי = חודש הדוח: {len(same)} מסלולים, "
           f"{mae(4, same)*100:.3f} נק' אחוז")
+    at = [r for r in rows if r[8] is not None]
+    if at:
+        mae_at = sum(abs(r[4] - r[8]) for r in at) / len(at)
+        print(f"MAE (שיטה מלאה) מול הנתון הרשמי לחודש הדוח (data.gov.il): {len(at)} מסלולים, "
+              f"{mae_at*100:.3f} נק' אחוז (מול החודש האחרון, אותם מסלולים: {mae(4, at)*100:.3f})")
 
     rows_sorted = sorted(rows, key=lambda r: -abs(r[4] - r[1]))
     print("\n15 הפערים הגדולים ביותר (שיטה מלאה מול רשמי):")

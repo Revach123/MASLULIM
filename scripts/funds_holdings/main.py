@@ -27,6 +27,9 @@ from .funds import build_funds
 from .funds_detail import build_funds_detail
 from .funds_il import build_funds_il, build_funds_il_kashrut
 from .funds_reference import build_funds_reference
+from .index_exposure import (
+    build_index_exposure, build_index_table, report_month_by_key, summarize as summarize_index,
+)
 from .interest import build_interest
 from .isin_swap import build_isin_swap
 from .kashrut_rank import NO_KASHRUT, build_kashrut_by_num, build_track_kashrut
@@ -37,7 +40,7 @@ from .tracks_reference import fetch_tracks, track_key
 
 def build_master_table(
     reports_dir: Path, tracks: list[dict]
-) -> tuple[list[dict], dict[str, list[dict]], dict[str, list[dict]]]:
+) -> tuple[list[dict], dict[str, list[dict]], dict[str, list[dict]], list[dict]]:
     files = get_file_list(reports_dir)
     source = build_source(files)
 
@@ -149,6 +152,14 @@ def build_master_table(
         for siveg, pct in cols.items():
             d[siveg] = d.get(siveg, 0.0) + pct
 
+    # פירוק החשיפה למניות לפי מדד (ר' index_exposure.py) - אותם רכיבים בדיוק
+    # כמו validate_equity_exposure, כל רכיב לפי המדד שמאחוריו.
+    index_exp = build_index_exposure(source, funds, funds_ref, isin_fractions)
+    tracks_by_key = {k: t for t in tracks if (k := track_key(t))}
+    index_table = build_index_table(index_exp, tracks_by_key, report_month_by_key(source))
+    print(f"[main] {len(index_table)} מסלולים עם פירוק חשיפה לפי מדד")
+    print(summarize_index(index_table))
+
     kashrut_by_num = build_kashrut_by_num(funds_ref)
     il_kashrut = build_funds_il_kashrut(funds, funds_ref, kashrut_by_num)
     track_kashrut = build_track_kashrut(funds, kashrut_by_num)
@@ -208,7 +219,7 @@ def build_master_table(
     for row in rows.values():
         row.setdefault("כשרות", NO_KASHRUT)
 
-    return list(rows.values()), funds_detail, bonds_detail
+    return list(rows.values()), funds_detail, bonds_detail, index_table
 
 
 def main():
@@ -220,7 +231,7 @@ def main():
     tracks = fetch_tracks()
     print(f"[main] {len(tracks)} מסלולים מ-tracks")
 
-    master, funds_detail, bonds_detail = build_master_table(args.reports_dir, tracks)
+    master, funds_detail, bonds_detail, index_table = build_master_table(args.reports_dir, tracks)
     print(f"[main] {len(master)} שורות בטבלה הראשית")
     print(f"[main] {len(funds_detail)} מסלולים עם רשימת קרנות מפורטת")
     print(f"[main] {len(bonds_detail)} מסלולים עם רשימת אג\"ח מפורטת")
@@ -232,8 +243,10 @@ def main():
         json.dump(funds_detail, f, ensure_ascii=False, indent=2)
     with open(args.out_dir / "bonds_detail.json", "w", encoding="utf-8") as f:
         json.dump(bonds_detail, f, ensure_ascii=False, indent=2)
+    with open(args.out_dir / "index_exposure.json", "w", encoding="utf-8") as f:
+        json.dump(index_table, f, ensure_ascii=False, separators=(",", ":"))
     print(f"[main] נשמר -> {args.out_dir}/master.json, {args.out_dir}/funds_detail.json, "
-          f"{args.out_dir}/bonds_detail.json")
+          f"{args.out_dir}/bonds_detail.json, {args.out_dir}/index_exposure.json")
 
 
 if __name__ == "__main__":
