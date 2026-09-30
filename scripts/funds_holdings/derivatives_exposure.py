@@ -61,6 +61,8 @@
    קרנות...) כבר משקפות שווי שוק אמיתי, אין בהן את הבאג.
 """
 
+import statistics
+
 from .excel_io import to_ratio
 from .sheet_source import PCT_COL
 from .option_delta_pricing import resolve_option_delta
@@ -114,8 +116,10 @@ FUTURES_EQUITY_COLUMN = "חוזים עתידיים - מניות"
 OPTIONS_EQUITY_COLUMN = "אופציות - מניות"
 
 SWAP_LEGS = (
-    {"units": "ערך נקוב (רגל 1)", "fx": "שער חליפין (רגל 1)", "currency": "מטבע פעילות (רגל 1)"},
-    {"units": "ערך נקוב (רגל 2)", "fx": "שער חליפין (רגל 2)", "currency": "מטבע פעילות (רגל 2)"},
+    {"units": "ערך נקוב (רגל 1)", "fx": "שער חליפין (רגל 1)", "currency": "מטבע פעילות (רגל 1)",
+     "fair_value": "שווי הוגן במטבע הנסחר (רגל 1)"},
+    {"units": "ערך נקוב (רגל 2)", "fx": "שער חליפין (רגל 2)", "currency": "מטבע פעילות (רגל 2)",
+     "fair_value": "שווי הוגן במטבע הנסחר (רגל 2)"},
 )
 SWAP_UNDERLYING_PRICE_COL = "שער נכס הבסיס במועד ההתקשרות בעסקה"
 SWAP_TICKER_COL = "טיקר"
@@ -299,10 +303,50 @@ def _futures_exposure(
     return capped, equity_capped
 
 
+def _current_fx_rates(source: list[dict]) -> dict[tuple, float]:
+    """(מטבע, תאריך דוח) -> שער חליפין נוכחי, חציון על שורות החוזים העתידיים
+    (שם "שער חליפין" הוא השער ליום הדוח). בסוואפ השער שברגל הוא לעתים שער
+    יום ההתקשרות (למשל 3.749 לדולר בעסקה מ-11.2024 ב-514956465)."""
+    rates: dict[tuple, list[float]] = {}
+    for rec in source:
+        if rec["Category"] != FUTURES_CATEGORY or rec["מידע"] != "מידע":
+            continue
+        for row in rec["Clean"]:
+            ccy = row.get(FUT_CURRENCY_COL)
+            fx = _normalize_fx(ccy, _num(row.get(FUT_FX_COL)))
+            if ccy and ccy != "ILS" and fx:
+                rates.setdefault((ccy, rec.get("ReportMonth")), []).append(fx)
+    return {k: statistics.median(v) for k, v in rates.items()}
+
+
+def _leg_market_values(row: dict, report_date, fx_now: dict[tuple, float]) -> list[float]:
+    """שווי השוק של כל רגל (באלפי ש"ח, בערך מוחלט) מתוך "שווי הוגן במטבע הנסחר
+    (רגל X)" - באלפי יחידות מטבע (אומת: שווי הוגן נטו = רגל1 + רגל2, כפול שער
+    נוכחי). ריק אם הגוף לא מדווח שווי לרגליים (512065202 מדווח 0 בשתיהן)."""
+    out = []
+    for leg in SWAP_LEGS:
+        value = _num(row.get(leg["fair_value"]))
+        ccy = row.get(leg["currency"])
+        if not value:
+            continue
+        fx = 1.0 if ccy == "ILS" else fx_now.get((ccy, report_date)) or _normalize_fx(ccy, _num(row.get(leg["fx"])))
+        if fx:
+            out.append(abs(value) * fx)
+    return out
+
+
 def _swap_exposure(
     source: list[dict], total_assets: dict[str, float]
 ) -> tuple[dict[str, float], dict[str, float], dict[str, float], dict[str, dict[str, float]]]:
-    """נמצא בבדיקה בפועל (לא ניחוש): "ערך נקוב" (רגל 1) ו"ערך נקוב" (רגל 2)
+    """חשיפת שורה = ממוצע שווי השוק של שתי הרגליים ("שווי הוגן במטבע הנסחר
+    (רגל X)" × שער נוכחי), כשהגוף מדווח אותו - כל הגופים חוץ מ-512065202
+    (אומת: שווי הוגן נטו = רגל1 + רגל2 בדיוק). זה גודל החשיפה ליום הדוח,
+    בלי תלות במוסכמת היחידות/המחיר של "ערך נקוב". למשל ב-514956465_15249
+    סוואפ ממומן על SPTR: ערך נקוב 291,700 בשתי הרגליים (0.3% מהמסלול בחישוב
+    הקודם), שווי רגל התשואה 37.6 מיליון דולר (42%). שורה בלי שווי רגליים
+    נופלת לחישוב שלמטה (ערך נקוב × מחיר).
+
+    נמצא בבדיקה בפועל (לא ניחוש): "ערך נקוב" (רגל 1) ו"ערך נקוב" (רגל 2)
     אינם תמיד באותה יחידת מידה. עבור "Unfunded Forward" (למשל פורוורד מט"ח)
     שתי הרגליים כבר סכום נקוב במטבע - קרובות זו לזו כצפוי. אבל עבור
     "Unfunded Swap" על מניות/מדדים (סוואפ תשואה-כוללת), רגל 1 היא כמות
@@ -361,6 +405,7 @@ def _swap_exposure(
     equity_by_label: dict[str, dict[str, float]] = {}
     equity_fv_by_label: dict[str, dict[str, float]] = {}
     leg1_col, leg2_col = SWAP_LEGS
+    fx_now = _current_fx_rates(source)
     for rec in source:
         if rec["Category"] != SWAP_CATEGORY or rec["מידע"] != "מידע":
             continue
@@ -390,65 +435,70 @@ def _swap_exposure(
             # ספציפי (לא עקבי בין מגישים תחת אותה תווית בדיוק).
             is_funded = _is_funded_swap(row.get(SWAP_MAIN_TYPE_COL))
 
-            units1 = _num(row.get(leg1_col["units"]))
-            fx1 = _normalize_fx(row.get(leg1_col["currency"]), _num(row.get(leg1_col["fx"])))
-            units2 = _num(row.get(leg2_col["units"]))
-            fx2 = _normalize_fx(row.get(leg2_col["currency"]), _num(row.get(leg2_col["fx"])))
-            price = _num(row.get(SWAP_UNDERLYING_PRICE_COL))
-
-            leg2_val = abs(units2 * fx2) / 1000 if units2 is not None and fx2 is not None else None
-            leg1_raw = abs(units1 * fx1) / 1000 if units1 is not None and fx1 is not None else None
-            leg1_priced = (abs(units1 * fx1 * price) / 1000
-                            if units1 is not None and fx1 is not None and price is not None else None)
-
-            # used_priced: ההשוואה בפועל בין הפרשנויות (רגל1 גולמי מול רגל1
-            # מוכפל-במחיר) ביחס לרגל2 - זו בדיקת-הסבירות ה*אמיתית* של קנה
-            # המידה, ברמת השורה הבודדת, לא תלוית-תווית. True = רגל 1 הוא
-            # באמת יחידות גולמיות (כמו 512065202 - התבנית שאומתה במקור).
-            # False = רגל 1 כבר נוציונל (כמו Funded, וגם כמו חלק ניכר
-            # מהשורות "Unfunded ..." בפועל - ר' הערה למעלה).
-            used_priced = leg1_priced is not None and (
-                leg1_raw is None or leg2_val is None
-                or abs(leg1_priced - leg2_val) < abs(leg1_raw - leg2_val)
-            )
-            leg1_val = leg1_priced if used_priced else leg1_raw
-
-            # leg1_live (תמחור-חי) מניח שרגל 1 היא יחידות גולמיות שצריך
-            # לתמחר מחדש - תקף *רק* כשused_priced (לא is_funded - ר' הערה
-            # למעלה): כשרגל 1 כבר נוציונל, תמחור חוזר יוצר מספר דמיוני
-            # (נבדק בפועל: ~1.5 מיליארד ש"ח על שורה עם נוציונל אמיתי
-            # ~100 מיליון - פי ~15,000).
-            leg1_live = None
-            if used_priced:
-                current_price, _index_id = resolve_current_price(row.get(SWAP_TICKER_COL), report_date)
-                leg1_live = (abs(units1 * fx1 * current_price) / 1000
-                             if units1 is not None and fx1 is not None and current_price is not None else None)
-
-            if leg1_live is not None:
-                candidates = [leg1_live]  # לא ממוצעים עם leg2 - ר' הערת הפונקציה
+            leg_values = _leg_market_values(row, report_date, fx_now)
+            if leg_values:
+                # שווי השוק של הרגליים הוא גודל החשיפה הנוכחי - בלי מוסכמות יחידות/מחיר
+                line_ratio = sum(leg_values) / len(leg_values) / total
             else:
-                candidates = [v for v in (leg1_val, leg2_val) if v is not None]
+                units1 = _num(row.get(leg1_col["units"]))
+                fx1 = _normalize_fx(row.get(leg1_col["currency"]), _num(row.get(leg1_col["fx"])))
+                units2 = _num(row.get(leg2_col["units"]))
+                fx2 = _normalize_fx(row.get(leg2_col["currency"]), _num(row.get(leg2_col["fx"])))
+                price = _num(row.get(SWAP_UNDERLYING_PRICE_COL))
 
-            line_ratio = None
-            if candidates:
-                notional_thousands = sum(candidates) / len(candidates)
-                line_ratio = notional_thousands / total
+                leg2_val = abs(units2 * fx2) / 1000 if units2 is not None and fx2 is not None else None
+                leg1_raw = abs(units1 * fx1) / 1000 if units1 is not None and fx1 is not None else None
+                leg1_priced = (abs(units1 * fx1 * price) / 1000
+                                if units1 is not None and fx1 is not None and price is not None else None)
 
-                # LEVERAGE_CAP (יחס נוציונל/שווי-הוגן-נטו) רלוונטי *רק*
-                # כש-used_priced: זו הדרך היחידה שבה "שער נכס הבסיס" (מחיר
-                # מדד גולמי, קנה-מידה שרירותי לגמרי ביחס ל-fv) נכנס בכלל
-                # לחישוב הנוציונל, ולכן היחידה שבה טעות-קנה-מידה בשדה הזה
-                # עלולה להתגלגל לתוצאה. כש-used_priced=False, הנוציונל כבר
-                # אומת ישירות מול רגל 2 (ההשוואה למעלה) - וגם נמצא בפועל
-                # (513173393) ששורות used_priced=False יכולות לגיטימית
-                # להגיע ליחס נוציונל/fv עצום (עד פי ~1900) כש-fv נמצא במקרה
-                # קרוב לאפס (סוואפ Unfunded בלי Reset תקופתי - fv יכול לנוע
-                # דרך אפס בלי קשר לקנה-מידה) - לא סימן לתקלה שם.
+                # used_priced: ההשוואה בפועל בין הפרשנויות (רגל1 גולמי מול רגל1
+                # מוכפל-במחיר) ביחס לרגל2 - זו בדיקת-הסבירות ה*אמיתית* של קנה
+                # המידה, ברמת השורה הבודדת, לא תלוית-תווית. True = רגל 1 הוא
+                # באמת יחידות גולמיות (כמו 512065202 - התבנית שאומתה במקור).
+                # False = רגל 1 כבר נוציונל (כמו Funded, וגם כמו חלק ניכר
+                # מהשורות "Unfunded ..." בפועל - ר' הערה למעלה).
+                used_priced = leg1_priced is not None and (
+                    leg1_raw is None or leg2_val is None
+                    or abs(leg1_priced - leg2_val) < abs(leg1_raw - leg2_val)
+                )
+                leg1_val = leg1_priced if used_priced else leg1_raw
+
+                # leg1_live (תמחור-חי) מניח שרגל 1 היא יחידות גולמיות שצריך
+                # לתמחר מחדש - תקף *רק* כשused_priced (לא is_funded - ר' הערה
+                # למעלה): כשרגל 1 כבר נוציונל, תמחור חוזר יוצר מספר דמיוני
+                # (נבדק בפועל: ~1.5 מיליארד ש"ח על שורה עם נוציונל אמיתי
+                # ~100 מיליון - פי ~15,000).
+                leg1_live = None
                 if used_priced:
-                    fv = _num(row.get(SWAP_NET_FAIR_VALUE_COL))
-                    fv_ratio = (fv / total) if fv is not None else None
-                    if fv_ratio is not None and abs(line_ratio) > LEVERAGE_CAP * abs(fv_ratio):
-                        line_ratio = None  # קנה מידה לא סביר ביחס לשווי ההוגן של השורה עצמה
+                    current_price, _index_id = resolve_current_price(row.get(SWAP_TICKER_COL), report_date)
+                    leg1_live = (abs(units1 * fx1 * current_price) / 1000
+                                 if units1 is not None and fx1 is not None and current_price is not None else None)
+
+                if leg1_live is not None:
+                    candidates = [leg1_live]  # לא ממוצעים עם leg2 - ר' הערת הפונקציה
+                else:
+                    candidates = [v for v in (leg1_val, leg2_val) if v is not None]
+
+                line_ratio = None
+                if candidates:
+                    notional_thousands = sum(candidates) / len(candidates)
+                    line_ratio = notional_thousands / total
+
+                    # LEVERAGE_CAP (יחס נוציונל/שווי-הוגן-נטו) רלוונטי *רק*
+                    # כש-used_priced: זו הדרך היחידה שבה "שער נכס הבסיס" (מחיר
+                    # מדד גולמי, קנה-מידה שרירותי לגמרי ביחס ל-fv) נכנס בכלל
+                    # לחישוב הנוציונל, ולכן היחידה שבה טעות-קנה-מידה בשדה הזה
+                    # עלולה להתגלגל לתוצאה. כש-used_priced=False, הנוציונל כבר
+                    # אומת ישירות מול רגל 2 (ההשוואה למעלה) - וגם נמצא בפועל
+                    # (513173393) ששורות used_priced=False יכולות לגיטימית
+                    # להגיע ליחס נוציונל/fv עצום (עד פי ~1900) כש-fv נמצא במקרה
+                    # קרוב לאפס (סוואפ Unfunded בלי Reset תקופתי - fv יכול לנוע
+                    # דרך אפס בלי קשר לקנה-מידה) - לא סימן לתקלה שם.
+                    if used_priced:
+                        fv = _num(row.get(SWAP_NET_FAIR_VALUE_COL))
+                        fv_ratio = (fv / total) if fv is not None else None
+                        if fv_ratio is not None and abs(line_ratio) > LEVERAGE_CAP * abs(fv_ratio):
+                            line_ratio = None  # קנה מידה לא סביר ביחס לשווי ההוגן של השורה עצמה
             if line_ratio is None or abs(line_ratio) > SANITY_CAP:
                 line_ratio = row_pct
             notional_sums[key] = notional_sums.get(key, 0.0) + line_ratio
