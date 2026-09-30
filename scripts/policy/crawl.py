@@ -243,7 +243,7 @@ def select_docs(pages: dict, extra: list[str]):
 def download_browser(pw, url):
     """הורדה דרך הדפדפן (קוקיז/Headers אמיתיים) כשבקשת requests נחסמת."""
     b = pw.chromium.launch(executable_path=os.environ.get("PW_CHROMIUM") or None, headless=os.environ.get("POLICY_HEADED") != "1",
-                           args=["--disable-blink-features=AutomationControlled"])
+                           args=["--disable-blink-features=AutomationControlled", "--disable-http2"])
     try:
         ctx = b.new_context(user_agent=UA, locale="he-IL")
         r = ctx.request.get(url, timeout=60000)

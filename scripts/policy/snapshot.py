@@ -71,7 +71,7 @@ def fetch_browser(pw, url):
     """רינדור: רשת שקטה, פתיחת אקורדיונים/לשוניות, ולכידת בקשות רשת (JSON עם נתיבי קבצים, קבצים ישירים, iframes).
     -> (anchors, status, body_text)"""
     b = pw.chromium.launch(executable_path=os.environ.get("PW_CHROMIUM") or None, headless=os.environ.get("POLICY_HEADED") != "1",
-                           args=["--disable-blink-features=AutomationControlled"])
+                           args=["--disable-blink-features=AutomationControlled", "--disable-http2"])
     try:
         ctx = b.new_context(locale="he-IL", user_agent=UA, viewport={"width": 1400, "height": 1000})
         pg = ctx.new_page()
