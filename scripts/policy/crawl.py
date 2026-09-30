@@ -242,7 +242,7 @@ def main():
         report.append([legal_id, c["name"], seed["home"], "seed", len(pages), got, " | ".join(errs)[:400]])
         print(f"[{legal_id}] {c['name']}: pages={len(pages)} docs={got} errs={len(errs)}", flush=True)
     if pw_cm:
-        pw_cm.stop()
+        pw.stop()
 
     idx_path.write_text(json.dumps(index, ensure_ascii=False, indent=1), "utf-8")
     (OUT / "site_changes.json").write_text(json.dumps(all_changes, ensure_ascii=False, indent=1), "utf-8")

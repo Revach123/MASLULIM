@@ -222,7 +222,7 @@ def main():
                        "first" if old is None else len(ch), "; ".join(f"{p.get('product') or '?'}|{u}:{p['status']}" for u, p in pages.items() if p["status"] != 200)[:200]])
         print(f"[snapshot] {legal_id} {c['name']}: pages={len(pages)} items={n_items} changes={'first' if old is None else len(ch)}", flush=True)
     if pw_cm:
-        pw_cm.stop()
+        pw.stop()
     (OUT / "site_changes.json").write_text(json.dumps(changes, ensure_ascii=False, indent=1), "utf-8")
     log = OUT / "site_changes_log.csv"
     new_file = not log.exists()
