@@ -451,6 +451,9 @@ TRACK_FIELDS = {
     "company": "שם החברה", "product": "סוג קרן", "track_number": "מס' מסלול",
     "track_name": "שם מסלול קצר", "track_name_long": "שם מסלול ההשקעה", "track_type": "סוג מסלול",
     "official_equity": "חשיפה למניות", "official_month": "נכון לחודש",
+    # כשרות - מ-tracks (כמו /sharetracks), לכל המסלולים כולל לא כשרים
+    "kosher": "הכשר", "glatt_hon": "גלאט הון", "eda": "עד''ח", "tshua_kahalacha": "תשואה כהלכה",
+    "rav_dvir": "ר א דביר",
 }
 
 
