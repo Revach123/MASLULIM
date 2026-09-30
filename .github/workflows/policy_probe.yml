@@ -1,0 +1,27 @@
+name: Policy probe (blocked sites)
+
+on:
+  push:
+    branches: [claude/tender-wozniak-of4b7i]
+    paths: [".github/workflows/policy_probe.yml"]
+
+jobs:
+  wayback:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - run: |
+          for d in moreinvest.co.il ayalon-ins.co.il; do
+            echo "=== $d: archived pages mentioning policy"
+            curl -s -m 60 "https://web.archive.org/cdx/search/cdx?url=$d/*&output=txt&collapse=urlkey&limit=5000" \
+              | grep -iE "xls|policy|%D7%9E%D7%93%D7%99%D7%A0%D7%99%D7%95%D7%AA|מדיניות|%D7%94%D7%A6%D7%94%D7%A8" | head -40
+          done
+  israel:
+    runs-on: [self-hosted, il-central-1]
+    timeout-minutes: 10
+    steps:
+      - run: |
+          curl -s -m 20 https://ifconfig.co/country || true
+          for u in https://www.moreinvest.co.il/ https://www.ayalon-ins.co.il/investments; do
+            echo "$u -> $(curl -s -o /dev/null -m 30 -w '%{http_code}' -A 'Mozilla/5.0 (X11; Linux x86_64) Chrome/124' "$u")"
+          done
