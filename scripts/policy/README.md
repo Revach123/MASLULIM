@@ -19,3 +19,11 @@
 מבנה לא מזוהה נשמר ב-`unparsed_layouts.json` (תחילת כל גיליון) להוספת פרסר.
 
 `gap.py --master out/master.json` - טווחי מדיניות מול חשיפה בפועל, התאמה לפי קוד קופה.
+
+## אתרים שחוסמים שרתי ענן (403 ל-GitHub): תוסף ה-Chrome
+חברות עם `"via": "extension"` ב-`sites/<LegalId>.json` (כרגע מור, איילון, עתודות) לא נסרקות מהענן.
+`combine.py` כותב את רשימתן ל-`policy/extension_sites.json`; התוסף (`extension/policy.js`) קורא אותה, פעם ביום
+(או בכפתור "משוך מדיניות השקעה" בחלונית) פותח כל עמוד בטאב רקע על החיבור הביתי, אוסף קישורי קבצים
+(כולל אקורדיונים ו-iframes מאותו origin), מוריד מתוך הדף, מדלג על מה שכבר נשלח (sha256), ודוחף commit אחד
+ל-`policy/inbox/<LegalId>/`. ה-workflow `policy_inbox.yml` קולט (`ingest_inbox.py`) לתיקיית החברה, מפרסר ומאחד.
+התקנה/עדכון: טעינה מחדש של תיקיית `extension/` ב-`chrome://extensions` (גרסה 2.13.0 מוסיפה הרשאות לאתרי ‎.co.il/.org.il/.com).

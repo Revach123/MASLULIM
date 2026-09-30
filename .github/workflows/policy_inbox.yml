@@ -1,0 +1,43 @@
+name: Policy inbox (extension uploads)
+
+# תוסף ה-Chrome דוחף קבצי מדיניות מאתרים שחוסמים שרתי ענן ל-policy/inbox/<LegalId>/.
+# כאן: קליטה לתיקיית החברה -> פרסור -> טבלאות מאוחדות.
+on:
+  push:
+    paths: ["policy/inbox/**"]
+
+permissions:
+  contents: write
+
+concurrency:
+  group: policy-inbox
+  cancel-in-progress: false
+
+jobs:
+  ingest:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: pip install pdfplumber openpyxl python-docx xlrd
+      - name: Ingest, parse, combine, commit (retry on concurrent pushes)
+        run: |
+          git config user.name "github-actions"
+          git config user.email "actions@users.noreply.github.com"
+          B="${GITHUB_REF_NAME}"
+          for i in 1 2 3 4 5 6; do
+            git fetch -q origin "$B" && git reset -q --hard "origin/$B"
+            IDS=$(python -m scripts.policy.ingest_inbox)
+            echo "ingested: $IDS"
+            [ -z "$IDS" ] && break
+            for id in $IDS; do POLICY_OUT=policy/companies/$id python -m scripts.policy.extract; done
+            python -m scripts.policy.combine
+            git add -A policy
+            git diff --cached --quiet && break
+            git commit -q -m "policy: ingest extension uploads ($IDS)"
+            git push -q origin "HEAD:$B" && break
+            sleep $((RANDOM % 10 + 5))
+          done

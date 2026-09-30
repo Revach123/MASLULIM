@@ -78,6 +78,10 @@ async function render() {
   document.getElementById("err").textContent = s.lastError && !s.blocked && !s.needsSetup && !s.tokenInvalid ? "שגיאה: " + s.lastError : "";
   // חיווי התקדמות חי + נעילת כפתורים בזמן ריצה; כפתור עצור מוצג רק בזמן ריצה
   document.getElementById("run").disabled = !!s.running;
+  document.getElementById("policy-last").textContent = fmt(s.policyLastRun);
+  document.getElementById("policy-docs").textContent = s.policyLastDocs ?? "—";
+  document.getElementById("policy-progress").textContent = s.policyProgress || "";
+  document.getElementById("policy-err").textContent = (s.policyErrors || []).join(" | ");
   document.getElementById("backfill").disabled = !!s.running;
   document.getElementById("sync-local").disabled = !!s.running;
   document.getElementById("stop").hidden = !s.running;
@@ -140,3 +144,11 @@ render();
 // רענון יזום כל שנייה כל עוד הפופאפ פתוח - מבטיח שהפאי מתעדכן חי גם אם אירוע
 // storage.onChanged מתעכב בזמן שה-service worker עסוק.
 setInterval(render, 1000);
+
+document.getElementById("run-policy").addEventListener("click", () => {
+  document.getElementById("msg").textContent = "מושך מסמכי מדיניות מהאתרים החסומים...";
+  chrome.runtime.sendMessage({ type: "run-policy" }, () => {
+    document.getElementById("msg").textContent = "הסתיים - ראה סיכום למעלה";
+    render();
+  });
+});

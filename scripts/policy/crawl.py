@@ -57,7 +57,8 @@ def load_seeds() -> dict[str, dict]:
         pages = cfg.get("pages", [])
         out[cfg["legal_id"]] = {"home": cfg.get("home") or "", "extra": [x["url"] for x in pages],
                                 "products": {x["url"]: x.get("product") for x in pages}, "browser": cfg.get("browser", "headless"),
-                                "product_list": cfg.get("products", []), "search": cfg.get("search", True)}
+                                "product_list": cfg.get("products", []), "search": cfg.get("search", True),
+                                "via": cfg.get("via", "cloud")}
     return out
 
 
@@ -296,6 +297,8 @@ def main():
         seed = seeds.get(legal_id)
         if not seed:
             report.append([legal_id, c["name"], "", "no_config", 0, 0, ""]); continue
+        if seed["via"] == "extension":  # חוסם שרתי ענן - נמשך ע"י תוסף ה-Chrome (policy/inbox -> ingest_inbox.py)
+            report.append([legal_id, c["name"], seed["home"], "via_extension", 0, 0, ""]); continue
         extra = expand_templates(seed["extra"])
         products = {u: seed["products"].get(t) for t in seed["extra"] for u in expand_templates([t])}
         # חיפוש נפרד לכל מוצר (גמל/פנסיה/ביטוח); כשאין אתר ידוע - האתר נקבע מהתוצאות

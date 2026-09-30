@@ -10,6 +10,7 @@ import {
   utf8ToBase64,
 } from "./lib.js";
 import { readManifest, commitFiles, verifyRepo, getFileBase64 } from "./github.js";
+import { runPolicy, POLICY_ALARM } from "./policy.js";
 
 const ALARM = "cma-daily";
 const INCREMENTAL_QUARTERS = 4;
@@ -493,18 +494,46 @@ async function maybeCatchUp() {
   if (Date.now() - (status?.lastRun || 0) > 20 * 60 * 60 * 1000) runSafe("incremental");
 }
 
-chrome.runtime.onInstalled.addListener(() => chrome.alarms.create(ALARM, { periodInMinutes: 24 * 60, delayInMinutes: 2 }));
+chrome.runtime.onInstalled.addListener(() => {
+  chrome.alarms.create(ALARM, { periodInMinutes: 24 * 60, delayInMinutes: 2 });
+  chrome.alarms.create(POLICY_ALARM, { periodInMinutes: 24 * 60, delayInMinutes: 5 });
+});
 chrome.runtime.onStartup.addListener(() => {
   chrome.alarms.create(ALARM, { periodInMinutes: 24 * 60, delayInMinutes: 2 });
   maybeCatchUp();
 });
-chrome.alarms.onAlarm.addListener((a) => { if (a.name === ALARM) runSafe("incremental"); });
+chrome.alarms.onAlarm.addListener((a) => {
+  if (a.name === ALARM) runSafe("incremental");
+  if (a.name === POLICY_ALARM) runPolicySafe();
+});
+
+// ----- מדיניות השקעה: אתרים שחוסמים שרתי ענן (ר' policy.js) -----
+let policyRunning = false;
+async function runPolicySafe() {
+  if (policyRunning) return;
+  policyRunning = true;
+  startKeepAlive();
+  try {
+    const cfg = await getConfig();
+    if (!cfg.token || !cfg.owner || !cfg.repo) return;
+    cfg.branch = cfg.branch || "main";
+    await setStatus({ policyProgress: "מתחיל..." });
+    const res = await runPolicy(cfg, setStatus);
+    await setStatus({ policyLastRun: Date.now(), policyLastDocs: res.docs, policyErrors: res.errors.slice(0, 5), policyProgress: "" });
+  } catch (e) {
+    await setStatus({ policyLastRun: Date.now(), policyErrors: [String(e && e.message || e)], policyProgress: "" });
+  } finally {
+    policyRunning = false;
+    stopKeepAlive();
+  }
+}
 chrome.notifications.onClicked.addListener(() => chrome.action.setBadgeText({ text: "" }));
 
 chrome.runtime.onMessage.addListener((msg, _sender, sendResponse) => {
   if (msg?.type === "run-incremental") { runSafe("incremental").then(() => sendResponse({ ok: true })); return true; }
   if (msg?.type === "run-backfill") { runSafe("backfill").then(() => sendResponse({ ok: true })); return true; }
   if (msg?.type === "sync-local") { syncLocalFromArchive().then(() => sendResponse({ ok: true })); return true; }
+  if (msg?.type === "run-policy") { runPolicySafe().then(() => sendResponse({ ok: true })); return true; }
   if (msg?.type === "stop") { stopRequested = true; setStatus({ progress: "עוצר..." }).then(() => sendResponse({ ok: true })); return true; }
   if (msg?.type === "verify") {
     (async () => {

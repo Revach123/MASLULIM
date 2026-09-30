@@ -51,6 +51,13 @@ def main():
     _write_csv("crawl_report.csv", CRAWL_FIELDS, crawl)
     _write_csv("site_changes_log.csv", SITE_CHG_FIELDS, sorted(site_log, key=lambda r: r["detected"]))
     _write_csv("documents.csv", ["legal_id", "product", "link_text", "url", "first_seen", "last_seen", "file"], docs)
+    # רשימת האתרים שהתוסף מושך (חוסמים שרתי ענן) - התוסף קורא את הקובץ הזה מהרפו
+    ext = []
+    for p in sorted((ROOT / "scripts" / "policy" / "sites").glob("*.json")):
+        cfg = json.loads(p.read_text("utf-8"))
+        if cfg.get("via") == "extension":
+            ext.append({k: cfg.get(k) for k in ("legal_id", "name", "home", "pages", "products")})
+    (POL / "extension_sites.json").write_text(json.dumps(ext, ensure_ascii=False, indent=1), "utf-8")
     print(f"[combine] companies={len(crawl)} docs={len(docs)} long={len(long_rows)} unparsed={len(unparsed)}")
 
 
