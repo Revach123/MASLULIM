@@ -362,6 +362,12 @@ def _live_swap_ratio(row: dict, report_date, fx_now: dict, total: float) -> floa
     ccy = ccy1 if ccy1 != "ILS" or not ccy2 else ccy2
     if not units:
         return None
+    # "ערך נקוב" שהוא כבר סכום במטבע (513611509_1038: 67,191.68 דולר, רגליים 66.8 / 67.2
+    # אלף) - שווי רגל ≈ יחידות / 1000 - אינו יחידות מדד; לא מתמחרים אותו
+    for n in (1, 2):
+        leg_fv = _num(row.get(f"שווי הוגן במטבע הנסחר (רגל {n})"))
+        if leg_fv and 0.5 <= abs(leg_fv) / (abs(units) / 1000) <= 2.0:
+            return None
     fx = 1.0 if ccy == "ILS" else (fx_now.get((ccy, report_date)) or _normalize_fx(ccy, _num(row.get(
         (leg1_col if ccy == ccy1 else leg2_col)["fx"]))))
     if fx is None:
