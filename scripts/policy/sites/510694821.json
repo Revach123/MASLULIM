@@ -1,13 +1,19 @@
 {
  "legal_id": "510694821",
  "name": "לאומי קמ\"פ בע\"מ",
- "home": "https://www.bankleumi.co.il",
- "pages": [],
+ "home": "https://www.leumi.co.il",
+ "pages": [
+  {
+   "product": "גמל",
+   "url": "https://www.leumi.co.il/he/Articles/40446"
+  }
+ ],
  "browser": "headless",
  "products": [
   "גמל"
  ],
- "search": true,
- "rev": 6,
- "home_source": "report_email:bankleumi.co.il"
+ "search": false,
+ "rev": 7,
+ "home_source": "web_search",
+ "max_pages": 20
 }
