@@ -1,0 +1,32 @@
+{
+ "legal_id": "520024985",
+ "company": "עגור חברה לניהול קופות גמל וקרנות השתלמות בע\"מ",
+ "taken": "2026-09-30T22:35:03+00:00",
+ "pages": {
+  "https://www.fibi.co.il": {
+   "product": null,
+   "status": 200,
+   "method": "browser",
+   "text_hash": "cf601bd5d4f2e1472c4c4f7ac09cca85f7dd830e",
+   "text_head": " אנו מתנצלים על אי הנוחות... הפעילות בדף זה נראית לנו כפעילות אוטומטית, ועל כן עלינו לבצע אימות אבטחה קצר. מזהה אירוע: 9964b8e4-dsgu-4fb9-9ee5-1fbacb53334a ",
+   "items": [
+    {
+     "text": "(iframe)",
+     "href": "https://newassets.hcaptcha.com/captcha/v1/b9ca2a6602c2bf69741b771db488f3001ea35b08/static/hcaptcha.html",
+     "year": null,
+     "iframe": true,
+     "doc": false,
+     "internal": false
+    }
+   ]
+  },
+  "https://newassets.hcaptcha.com/captcha/v1/b9ca2a6602c2bf69741b771db488f3001ea35b08/static/hcaptcha.html": {
+   "product": null,
+   "status": 200,
+   "method": "browser",
+   "text_hash": null,
+   "text_head": "",
+   "items": []
+  }
+ }
+}
