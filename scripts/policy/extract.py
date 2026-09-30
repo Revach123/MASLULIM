@@ -13,7 +13,7 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parents[2]
 OUT = ROOT / (__import__("os").environ.get("POLICY_OUT") or "policy")  # ריצה לחברה: policy/companies/<LegalId>
 
-PARSER_VERSION = 5  # הגדלה = פרסור מחדש של כל המסמכים בריצה הבאה (שינוי בפרסרים)
+PARSER_VERSION = 8  # הגדלה = פרסור מחדש של כל המסמכים בריצה הבאה (שינוי בפרסרים)
 
 NUM = r"(\d{1,3}(?:\.\d+)?)"
 PCT = NUM + r"\s*%?"
@@ -139,7 +139,7 @@ BOUNDS = re.compile(r"(-?\d+(?:\.\d+)?)\s*%?\s*-\s*(-?\d+(?:\.\d+)?)\s*%")
 def asset_key(name: str):
     """אפיק סטנדרטי (equity/fx) לפי שם האפיק בחברה; יתר האפיקים נשמרים בשמם המקורי בלבד."""
     n = re.sub(r"[\"'״׳\s]+", "", name)
-    if n.startswith("מניות"):
+    if n.startswith(("מניות", "חשיפהלמניות", "סהכמניות")):
         return "equity"
     if n in ("מטח", "חשיפהלמטח", "חשיפהלמטבעחוץ"):
         return "fx"
@@ -325,17 +325,21 @@ def parse_titled_tables(rows, sheet=""):
         if "גבולות" not in joined and not ("מינימום" in joined and "מקסימום" in joined):
             continue
         cols = {}
+        pol_years = sorted(int(m.group(1)) for t in row for m in [re.search(r"^מדיניות\s*(20\d\d)", t)] if m)
         for c, t in enumerate(row):
             if c <= lc or not t:
                 continue
-            if "צפוי" in t and "מינימום" not in t and "מקסימום" not in t and "expected" not in cols:
-                cols["expected"] = c
+            py = re.search(r"^מדיניות\s*(20\d\d)", t)
+            if "גבולות" in t and "bounds" not in cols:
+                cols["bounds"] = c
             elif "מינימום" in t and "min" not in cols:
                 cols["min"] = c
             elif "מקסימום" in t and "max" not in cols:
                 cols["max"] = c
-            elif "גבולות" in t and "bounds" not in cols:
-                cols["bounds"] = c
+            elif py and len(pol_years) > 1:  # "מדיניות 2025" | "מדיניות 2026" (הפניקס 2026)
+                cols["expected" if int(py.group(1)) == pol_years[-1] else "current"] = c
+            elif ("צפוי" in t or py) and "expected" not in cols:
+                cols["expected"] = c
             elif re.search(r"סטי", t) and "tol" not in cols:
                 cols["tol"] = c
             elif re.search(r"ייחוס|יחוס", t) and "bench" not in cols:
@@ -344,12 +348,29 @@ def parse_titled_tables(rows, sheet=""):
                 cols["current"] = c
         if "expected" not in cols and "bounds" not in cols and "min" not in cols:
             continue
-        title = ""
+        title, code = "", None
+        for r2 in range(ri - 1, max(ri - 6, -1), -1):  # שורות תווית מפורשות: "שם מסלול (מ.ה.)" / "קידוד"
+            cells = [c for c in grid[r2] if c]
+            if len(cells) >= 2 and re.match(r"^(שם\s+(ה)?מסלול|מסלול\b)", cells[0]):
+                title = title or cells[1]
+            elif len(cells) >= 2 and cells[0].startswith("קידוד"):
+                code = code or cells[1]
+            for c2, t2 in enumerate(grid[r2]):  # "קוד קופה" והערך בשורה שמתחת (מגדל)
+                if re.match(r"^(קוד|מספר)\s+(קופה|מסלול)", t2) and r2 + 1 < len(grid) and c2 < len(grid[r2 + 1]) \
+                        and re.fullmatch(r"\d{2,6}", grid[r2 + 1][c2]):
+                    code = code or grid[r2 + 1][c2]
         for r2 in range(ri - 1, max(ri - 5, -1), -1):
-            cands = [c for c in grid[r2] if c and not c.startswith(("תחילת", "סוף")) and not re.fullmatch(r"[\d./\-%]+", c)
+            if title:
+                break
+            cands = [c for c in grid[r2] if c and not c.startswith(("תחילת", "סוף", "קידוד")) and not re.fullmatch(r"[\d./\-%]+", c)
                      and not re.search(r"ייחוס|יחוס", c)]
             if cands:
                 title = max(cands, key=len); break
+        num_title = re.match(r"^מספר\s+מסלול.*?(\d{3,6})", title or "")
+        if num_title:  # "מספר מסלול באוצר 9974": השם בשורה שמעל, המספר = קוד
+            above = [c for r2 in range(ri - 1, max(ri - 6, -1), -1) for c in grid[r2]
+                     if c and not c.startswith(("תחילת", "סוף", "מספר מסלול")) and not re.search(r"מדיניות.*צפוי", c)]
+            title = f"{above[0]} {num_title.group(1)}" if above else title
         if not title or re.search(r"מדיניות.*(צפוי|שנת|לשנת)|הצהרה", title):
             title = sheet.strip() or title
         name = norm_name(title)
@@ -358,8 +379,10 @@ def parse_titled_tables(rows, sheet=""):
             lab = r[lc] if lc < len(r) else ""
             if lab.startswith("סוף") or hdr_rx.match(lab):
                 break
-            if not lab or lab.startswith(("סה", "*", "(")) or re.fullmatch(r"[\d./\-%]+", lab):
+            lab = lab.lstrip("*").strip()
+            if not lab or lab.startswith("(") or re.fullmatch(r"[\d./\-%]+", lab) or re.fullmatch(r"סה[\"״]?כ(\s+תיק)?", lab):
                 continue
+            lab = re.sub(r"^סה[\"״]?כ\s+", "", lab)  # "סה"כ מניות" -> "מניות" (מנורה)
             lo = hi = None
             if "min" in cols and "max" in cols:
                 lo, hi = _num(g(r, "min")), _num(g(r, "max"))
@@ -379,7 +402,15 @@ def parse_titled_tables(rows, sheet=""):
             pct = lambda x: None if x is None else round(x * 100, 2) if abs(x) <= 1.5 else x
             fm = re.search(r"(?:^|\s|\()(\d{3,6})\)?\s*$", name)  # קוד קופה בסוף השם ("כלל פנסיה מניות 9647")
             fid = fm.group(1) if fm and not re.fullmatch(r"(19|20)\d\d", fm.group(1)) else None
-            out.append({"fund_id": fid, "track_no": fid, "track_code": f"{sheet.strip()}|{name}", "track_name": name,
+            if code and code.isdigit():
+                fid = code
+            elif code:  # "קידוד": <ח.פ.>-<קופה>-<מסלול>-<...> (אינפיניטי)
+                cp = code.split("-")
+                if len(cp) > 2 and cp[2].isdigit():
+                    fid = cp[2]
+                elif len(cp) > 1 and cp[1].isdigit():
+                    fid = str(int(cp[1]))
+            out.append({"fund_id": fid, "track_no": fid, "track_code": code or f"{sheet.strip()}|{name}", "track_name": name,
                         "group": sheet.strip(), "year": year, "asset": lab, "asset_key": asset_key(lab),
                         "current_pct": pct(cur), "expected_pct": pct(exp), "tolerance": g(r, "tol") or None,
                         "min_pct": lo, "max_pct": hi, "benchmark": (g(r, "bench").replace("\n", " ") or None), "sheet": sheet})
@@ -486,6 +517,10 @@ def main():
         doc_year = fy.group(1) if fy else (max(set(years), key=years.count) if years else None)
         for r in doc_rows:  # שנה בשם הקובץ גוברת (בגוף הגיליון מופיעות לפעמים שנים של נתוני עבר)
             r["year"] = doc_year or r.get("year")
+        fn_code = re.search(r"-(\d{3,6})\.(xlsx?|pdf)$", Path(ent["file"]).name)  # מנורה: קובץ למסלול, הקוד בשם
+        if fn_code and doc_rows and len({r.get("track_code") for r in doc_rows}) == 1 and not any(r.get("fund_id") for r in doc_rows):
+            for r in doc_rows:
+                r["fund_id"] = r["track_no"] = fn_code.group(1)
         recs = [] if n_long else extract_tracks_from_text(text)
         for nm, t in leftovers:
             recs += extract_tracks_from_table(t)
