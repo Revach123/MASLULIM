@@ -14,6 +14,17 @@ const DOC_RX = /\.(xlsx|xls|pdf|docx)(\?|#|$)/i;
 const POLICY_RX = /מדיניות|הצהר|policy|mediniut|hatzarat|expected|investment/i;
 const NOISE_RX = /esg|אחראי|תגמול|פרטיות|privacy|תקנון|מבצע|גילוי[-_ ]נאות|מצגת|presentation/i;
 
+// Chrome דוחה זמנית עריכת טאבים ("Tabs cannot be edited right now (user may be dragging a tab)") - מנסים שוב.
+async function tabsRetry(fn, tries = 20) {
+  for (let i = 1; ; i++) {
+    try { return await fn(); } catch (e) {
+      const msg = String(e && e.message || e);
+      if (i >= tries || !/cannot be edited|dragging|Tabs cannot/i.test(msg)) throw e;
+      await sleep(500 + 250 * i);
+    }
+  }
+}
+
 async function waitComplete(tabId, timeoutMs = 45000) {
   const start = Date.now();
   while (Date.now() - start < timeoutMs) {
@@ -119,7 +130,7 @@ export async function runPolicy(cfg, setStatus) {
       await setStatus({ policyProgress: `${site.name}: ${pageUrl}` });
       let tab;
       try {
-        tab = await chrome.tabs.create({ url: pageUrl, active: false });
+        tab = await tabsRetry(() => chrome.tabs.create({ url: pageUrl, active: false }));
         await waitComplete(tab.id);
         await sleep(3000);
         const [res] = await chrome.scripting.executeScript({ target: { tabId: tab.id }, func: pageCollectLinks });
@@ -147,7 +158,7 @@ export async function runPolicy(cfg, setStatus) {
       } catch (e) {
         errors.push(`${pageUrl}: ${e && e.message || e}`);
       } finally {
-        if (tab) { try { await chrome.tabs.remove(tab.id); } catch (e) {} }
+        if (tab) { try { await tabsRetry(() => chrome.tabs.remove(tab.id)); } catch (e) {} }
       }
     }
   }
