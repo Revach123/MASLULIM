@@ -55,8 +55,9 @@ def load_seeds() -> dict[str, dict]:
     for p in sorted(Path(__file__).with_name("sites").glob("*.json")):
         cfg = json.loads(p.read_text("utf-8"))
         pages = cfg.get("pages", [])
-        out[cfg["legal_id"]] = {"home": cfg["home"], "extra": [x["url"] for x in pages],
-                                "products": {x["url"]: x.get("product") for x in pages}, "browser": cfg.get("browser", "headless")}
+        out[cfg["legal_id"]] = {"home": cfg.get("home") or "", "extra": [x["url"] for x in pages],
+                                "products": {x["url"]: x.get("product") for x in pages}, "browser": cfg.get("browser", "headless"),
+                                "product_list": cfg.get("products", []), "search": cfg.get("search", True)}
     return out
 
 
@@ -112,6 +113,56 @@ NOISE = re.compile(r"esg|אחראי|תגמול|פרטיות|privacy|תקנון|�
                    r"investor|equal|שכר[-_ ]שווה|פוליסה|annuity|premi|מנתחים|אמות[-_ ]מידה|ממשל", re.I)
 POLICY = re.compile(r"מדיניות[-_ ]*(ה)?השקעה|מדיניות[-_ ]*(ה)?השקעות|מדיניות[-_ ]*מוצהרת|הצהרת[-_ ]*(מדיניות|השקעות)|"
                     r"הצהרה[-_ ]*על[-_ ]*מדיניות|investment[-_ ]*polic|expected[-_ ]*investment|statement[-_ ]*investment", re.I)
+
+
+SEARCH_EXCLUDE = re.compile(r"bizportal|themarker|globes|calcalist|ynet|walla|maariv|funder|mygemel|gemelnet|mypension|"
+                            r"facebook|linkedin|youtube|wikipedia|gov\.il|maya\.tase|ice\.co\.il|google\.|bing\.|duckduckgo|"
+                            r"yahoo|instagram|twitter|x\.com|tiktok|mouse\.co\.il|kolzchut|b144|d\.co\.il", re.I)
+PRODUCT_QUERY = {"גמל": "קופת גמל", "פנסיה": "קרן פנסיה", "ביטוח": "ביטוח"}
+
+
+def _short_name(name: str) -> str:
+    n = re.sub(r"בע[\"״']?מ|חברה לניהול|קופות גמל|קרנות פנסיה|וקופות|ניהול|אגודה שיתופית", " ", name)
+    return re.sub(r"[\"״'()]", " ", re.sub(r"\s+", " ", n)).strip()
+
+
+def web_search(s, query: str, n: int = 8) -> list[str]:
+    """חיפוש אינטרנט (DuckDuckGo HTML, ואם נכשל Bing). מחזיר כתובות תוצאה, בלי אתרי חדשות/השוואה."""
+    urls = []
+    try:
+        r = s.post("https://html.duckduckgo.com/html/", data={"q": query, "kl": "il-he"},
+                   headers={"User-Agent": UA}, timeout=25)
+        for a in BeautifulSoup(r.text, "html.parser").select("a.result__a"):
+            h = a.get("href", "")
+            m = re.search(r"uddg=([^&]+)", h)
+            urls.append(unquote(m.group(1)) if m else h)
+    except Exception:
+        pass
+    if not urls:
+        try:
+            r = s.get("https://www.bing.com/search", params={"q": query, "setlang": "he", "cc": "IL"},
+                      headers={"User-Agent": UA, "Accept-Language": "he"}, timeout=25)
+            urls = [a.get("href", "") for a in BeautifulSoup(r.text, "html.parser").select("li.b_algo h2 a")]
+        except Exception:
+            pass
+    return [u for u in dict.fromkeys(urls) if u.startswith("http") and not SEARCH_EXCLUDE.search(u)][:n]
+
+
+def search_product_pages(s, name: str, products: list[str], home: str | None):
+    """חיפוש נפרד לכל מוצר: '<שם> מדיניות השקעה מוצהרת <מוצר>'. -> ({url: product}, home משוער)."""
+    found, domains = {}, []
+    for prod in products:
+        q = f"{_short_name(name)} מדיניות השקעה מוצהרת {PRODUCT_QUERY.get(prod, prod)}"
+        for u in web_search(s, q):
+            if home and base_domain(u) != base_domain(home):
+                continue  # כשהאתר ידוע - רק תוצאות מתוכו
+            found.setdefault(u, prod)
+            domains.append(base_domain(u))
+        time.sleep(2)
+    if not home and domains:
+        top = max(set(domains), key=domains.count)
+        home = f"https://www.{top}" if not top.startswith("www.") else f"https://{top}"
+    return found, home
 
 
 def sitemap_policy_pages(s, home: str, limit: int = 25) -> list[str]:
@@ -212,7 +263,7 @@ def main():
             continue
         seed = seeds.get(legal_id)
         if not seed:
-            report.append([legal_id, c["name"], "", "no_seed", 0, 0, ""]); continue
+            report.append([legal_id, c["name"], "", "no_config", 0, 0, ""]); continue
         extra = expand_templates(seed["extra"])
         discovered = sitemap_policy_pages(s, seed["home"])
         print(f"[{legal_id}] sitemap policy pages: {len(discovered)}", *discovered[:10], sep="\n  ", flush=True)
@@ -269,7 +320,8 @@ def main():
                         "source_page": d["page"], "product": pages[d["page"]].get("product")})
             index[ukey] = ent
             got += 1
-        report.append([legal_id, c["name"], seed["home"], "seed", len(pages), got, " | ".join(errs)[:400]])
+        report.append([legal_id, c["name"], seed["home"], f"search:{len(searched)} sitemap:{len(discovered)}", len(pages), got,
+                       " | ".join([*[f"{p}:{u}" for u, p in list(searched.items())[:6]], *discovered[:5], *errs])[:800]])
         print(f"[{legal_id}] {c['name']}: pages={len(pages)} docs={got} errs={len(errs)}", flush=True)
     if pw_cm:
         pw.stop()

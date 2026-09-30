@@ -9,5 +9,9 @@
   }
  ],
  "browser": "headless",
- "discover": "sitemap"
+ "products": [
+  "ביטוח"
+ ],
+ "search": true,
+ "rev": 1
 }

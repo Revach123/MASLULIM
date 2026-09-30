@@ -9,5 +9,10 @@
   }
  ],
  "browser": "headless",
- "discover": "sitemap"
+ "products": [
+  "גמל",
+  "פנסיה"
+ ],
+ "search": true,
+ "rev": 1
 }

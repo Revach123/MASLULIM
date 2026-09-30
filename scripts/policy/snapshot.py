@@ -152,13 +152,27 @@ def product_of(url: str, text: str, hint: str | None):
     return "+".join(hits) or None
 
 
+SKIP_PATH = re.compile(r"/(magazine|articles?|blog|news|search|tag|press|careers?|jobs|privacy|cookies?)(/|$)|[?&]tag=", re.I)
+PRODUCT_RX = re.compile(r"גמל|פנסי|השתלמות|gemel|pension|provident|kupot|השקע|invest", re.I)
+
+
+def _prio(text: str, href: str) -> int:
+    """עדיפות בתור הסריקה (נמוך = קודם): מדיניות > מוצר > שאר."""
+    from .crawl import POLICY
+    blob = text + " " + unquote(href)
+    return 0 if POLICY.search(blob) else 1 if PRODUCT_RX.search(blob) else 2
+
+
 def snapshot_company(s, pw, home, extra, products=None, max_pages=15, depth_max=2):
+    import heapq, itertools
     products = products or {}
     dom = base_domain(home)
     pages, seen = {}, set()
-    q = deque([(u, 0) for u in [home] + extra])
+    tick = itertools.count()
+    q = [(0, next(tick), u, 0) for u in extra] + [(1, next(tick), home, 0)]
+    heapq.heapify(q)
     while q and len(pages) < max_pages:
-        url, d = q.popleft()
+        _, _, url, d = heapq.heappop(q)
         url = urldefrag(url)[0]
         if url in seen:
             continue
@@ -179,8 +193,11 @@ def snapshot_company(s, pw, home, extra, products=None, max_pages=15, depth_max=
             for i in items.values():
                 if i["href"] in seen or i["doc"]:
                     continue
-                if i.get("iframe") or (i["internal"] and score(i["text"] + unquote(i["href"])) > 0):
-                    q.append((i["href"], d + 1))
+                if SKIP_PATH.search(unquote(i["href"])):
+                    continue
+                if i.get("iframe") or (i["internal"] and (score(i["text"] + unquote(i["href"])) > 0
+                                                          or PRODUCT_RX.search(i["text"] + unquote(i["href"])))):
+                    heapq.heappush(q, (_prio(i["text"], i["href"]), next(tick), i["href"], d + 1))
     return pages
 
 
