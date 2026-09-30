@@ -64,7 +64,10 @@ _CODES = {
     "NDWUIT": "MSCI WORLD INFORMATION TECHNOLOGY", "M1WOMOM": "MSCI WORLD MOMENTUM",
     "SXXGR": "STOXX EUROPE 600", "SXXP": "STOXX EUROPE 600", "SX7GR": "EURO STOXX BANKS", "SX7E": "EURO STOXX BANKS",
     "SX5E": "EURO STOXX 50", "TPXDDVD": "TOPIX", "NDEUCHF": "MSCI CHINA", "M1CN": "MSCI CHINA",
-    "MVSMHTR": "SEMICONDUCTOR", "SPXESUP": "S&P 500 ESG",
+    "MVSMHTR": "SEMICONDUCTOR", "SPXESUP": "S&P 500 ESG", "ICESEMIT": "ICE SEMICONDUCTOR", "MVPPHTR": "PHARMACEUTICAL",
+    "GDDUWI": "MSCI WORLD", "NDDUNA": "MSCI NORTH AMERICA", "M1IN": "MSCI INDIA", "NDEUSIA": "MSCI INDIA",
+    "M1CNA": "MSCI CHINA A", "SXXR": "STOXX EUROPE 600", "RU20INTR": "RUSSELL 2000", "AS51T": "ASX 200",
+    "FTSEMIBN": "FTSE MIB ITALY", "HSI": "HANG SENG", "HSI1": "HANG SENG", "HXTCN": "S&P/TSX 60 CANADA",
     # שורשי חוזים עתידיים (futures_notional.CONTRACT_SPECS)
     "ES": "S&P 500", "ME": "S&P 500", "HWA": "S&P 500", "SLB": "S&P 500 ESG", "NQ": "NASDAQ 100", "HWB": "NASDAQ 100",
     "DM": "DOW JONES INDUSTRIAL", "RTS": "RUSSELL 2000", "FAW": "S&P MIDCAP 400", "XAS": "COMMUNICATION SERVICES SELECT SECTOR",
@@ -80,85 +83,101 @@ _CODES = {
 # ── 2. נושא (ענף / סגנון / מגמה) - (מזהה, תווית, אזור ברירת מחדל) ────────────
 # לפי הסדר: ספציפי לפני כללי. אזור ברירת המחדל "us" לענפי GICS (Select Sector וכו').
 _THEMES = [
-    (r"SEMICONDUCTOR|SEMICON|\bSOX\b|PHLX|\bSMH\b|שבבים", "semis", "שבבים", "us"),
+    (r"URANIUM|NUCLEAR|אורניום|גרעינ", "nuclear", "אורניום ואנרגיה גרעינית", ""),
+    (r"AEROSPACE|DEFEN[CS]E|ביטחוני", "defense", "ביטחוניות", "us"),
+    (r"HEALTH|BIOTECH|PHARMA|LIFE\W?SCI|\bXLV\b|בריאות|ביוטק", "health", "בריאות", "us"),
+    (r"SEMICONDUCTOR|SEMICON|\bMEMORY\b|\bSOX\b|PHLX|\bSMH\b|שבבים", "semis", "שבבים", "us"),
     (r"SOFTWARE|\bIGV\b|תוכנה", "software", "תוכנה ושירותים", "us"),
     (r"HARDWARE|חומרה", "hardware", "חומרה וציוד טכנולוגיים", "us"),
     (r"CLEAN\W?ENERGY|RENEWABLE|SOLAR|אנרגיה מתחדשת|אנרגיה נקייה", "clean_energy", "אנרגיה נקייה", ""),
     (r"\bWATER\b|מים", "water", "מים", ""),
     (r"CYBER|סייבר", "cyber", "סייבר", ""),
     (r"ROBOTIC|ARTIFICIAL|\bAI\b|AUTOMATION|רובוטיקה|בינה מלאכותית", "ai_robotics", "רובוטיקה ובינה מלאכותית", ""),
-    (r"INFRASTRUCTURE|\bNFRA\b|תשתיות", "infrastructure", "תשתיות", ""),
+    (r"INFRASTRUCTURE|\bNFRA\b|SMART\W?GRID|תשתיות", "infrastructure", "תשתיות", ""),
     (r"ENVIRONMENT", "environment", "סביבה", ""),
     (r"INSURANCE|ביטוח", "insurance", "ביטוח", ""),
     (r"\bBANK|בנקים|\bKBW\b", "banks", "בנקים", ""),
     (r"REAL\W?ESTATE|\bREIT|נדל\"?ן", "real_estate", "נדל\"ן", ""),
     (r"CONSTRUCTION|HOMEBUILD|בנייה", "construction", "בנייה", ""),
-    (r"TECHNOLOG|INFO\w*\W?TECH|INFORMATION\W?TECH|TECH\W?SEL|\bXLK\b|טכנולוגי|\bTECH\b|\bINF\b$", "tech",
+    (r"TECHNOLO|DISRUPTIVE|ביג טק|טק-|INFO\w*\W?TECH|INFORMATION\W?TECH|TECH\W?SEL|\bXLK\b|טכנולוגי|\bTECH\b|\bINF\b$", "tech",
      "טכנולוגיה", "us"),
     (r"COMMUNICATION|COMM\W?SERV|TELECOM|\bMEDIA\b|\bXLC\b|תקשורת", "comm", "תקשורת", "us"),
-    (r"CONSUMER\W?D[EI]SC|D[EI]SCRETION|CONS\W?DISC|CYCLICAL|RETAIL|\bXLY\b|שיקול דעת צרכני|צריכה מחזורית", "consdisc",
+    (r"CONSUMER\W?D[EI]SC|D[EI]SCRETION|CONS\W?DISC|CYCLICAL|RETAIL|TRAVEL|LEISURE|\bXLY\b|שיקול דעת צרכני|צריכה מחזורית", "consdisc",
      "שיקול דעת צרכני", "us"),
     (r"STAPLES|\bXLP\b|צריכה בסיסית|מוצרי צריכה", "staples", "מוצרי צריכה בסיסיים", "us"),
-    (r"HEALTH|BIOTECH|PHARMA|\bXLV\b|בריאות|ביוטק", "health", "בריאות", "us"),
-    (r"FINANCIAL|\bXLF\b|פיננס", "financials", "פיננסים", "us"),
-    (r"INDUSTRIAL|AEROSPACE|DEFEN[CS]E|\bXLI\b|תעשי|ביטחוני", "industrials", "תעשייה", "us"),
+    (r"FINANCIAL|FINTECH|\bFINX\b|CAPITAL\W?MARKETS|\bXLF\b|פיננס", "financials", "פיננסים", "us"),
+    (r"INDUSTRIAL|INDUSTR\b|INDUS\b|TRANSPOR|MOBILITY|\bXLI\b|תעשי", "industrials", "תעשייה", "us"),
     (r"UTILIT", "utilities", "תשתיות ושירותים ציבוריים", "us"),
     (r"ENERGY|\bOIL\b|\bXLE\b|אנרגיה|נפט", "energy", "אנרגיה", "us"),
-    (r"MATERIALS|METALS|MINING|MINERS|URANIUM|\bRESOURCES?\b|\bXLB\b|חומרי גלם|כרייה", "materials", "חומרי גלם", ""),
+    (r"MATERIALS|METALS|MINING|MINERS|\bRESOURCES?\b|\bXLB\b|חומרי גלם|כרייה", "materials", "חומרי גלם", ""),
     # סגנון
     (r"EQUAL\W?WEIGHT|משקל שווה|שווה משקל", "equal_weight", "שווה משקל", ""),
-    (r"\bESG\b|SUSTAIN|\bSUST\b|\bSRI\b|\bSDG\b|CLIMATE|PARIS|קיימות", "esg", "ESG", ""),
-    (r"DIVIDEND|דיבידנד", "dividend", "דיבידנד", ""),
+    (r"\bESG\b|SUSTAIN|\bSUST\b|\bSRI\b|\bSDG\b|CLIMATE|PARIS|קיימות|^מעלה$", "esg", "ESG", ""),
+    (r"DIVIDEN|\bDVD\b|\bDIV\b|דיבידנד|\bדיב\b", "dividend", "דיבידנד", ""),
     (r"MIN\W?VOL|LOW\W?VOL|תנודתיות נמוכה", "min_vol", "תנודתיות נמוכה", ""),
     (r"MOMENTUM|מומנטום", "momentum", "מומנטום", ""),
-    (r"QUALITY|איכות|רווחיות", "quality", "איכות", ""),
+    (r"QUALITY|\bQLT\b|\bMOAT\b|איכות|רווחיות", "quality", "איכות", ""),
     (r"GROWTH|צמיחה", "growth", "צמיחה", ""),
     (r"\bVALUE\b|ערך", "value", "ערך", ""),
-    (r"SMALL\W?CAP|SMALLCAP|\bSME\w*|קטנות", "small_cap", "חברות קטנות", ""),
+    (r"SMALL\W?CAP|SMALLCAP|\bS\.CAP|\bSME\w*|קטנות", "small_cap", "חברות קטנות", ""),
     (r"MID\W?CAP|בינוניות", "mid_cap", "חברות בינוניות", ""),
 ]
 THEMES = [(re.compile(p, re.IGNORECASE), i, lbl, reg) for p, i, lbl, reg in _THEMES]
 
 # ── 3. אזור ──────────────────────────────────────────────────────────────────
 _REGIONS = [
-    (r"ת\"?א|TEL\W?AVIV|ISRAEL|ישראל|^TA\d", "il", "ישראל"),
-    (r"EMERG|\bEM\b|EMG\W?MKT|מתעוררים", "em", "שווקים מתעוררים"),
-    (r"EUROPE|EURPOE|\bEURO\b|\bEMU\b|STOXX|EURSTX|אירופה", "europe", "אירופה"),
-    (r"JAPAN|יפן|NIKKEI|TOPIX", "japan", "יפן"),
-    (r"CHINA|CHAINA|סין", "china", "סין"),
-    (r"BRAZIL|LATIN|ברזיל|אמריקה הלטינית", "latam", "אמריקה הלטינית"),
-    (r"INDIA|הודו", "india", "הודו"),
+    (r"ת\"?א|^תל\b|TEL\W?AVIV|ISRAEL|ישראל|^TA\d|^מעלה$", "il", "ישראל"),
+    (r"INTERNATIONAL|\bEAFE\b|\bEX\W?U\W?S\b|WORLD\W?EX\W?U|לא כולל ארה", "intl", "בינלאומי (לא כולל ארה\"ב)"),
+    (r"EMERG|\bEMER\b|\bEM\b|EMG\W?MKT|E\W?MKT|מתעוררים", "em", "שווקים מתעוררים"),
+    (r"\bUK\b|UNITED\W?KINGDOM|BRITAIN|CHELVERTON|בריטניה", "uk", "בריטניה"),
+    (r"ITALY|\bMIB\b|איטליה", "italy", "איטליה"),
+    (r"GERMANY|\bMDAX\b|גרמניה", "germany", "גרמניה"),
+    (r"POLAND|\bWIG\d*|פולין", "poland", "פולין"),
+    (r"EUROPE|EURPOE|ERUOPE|EROPE|\bEURP\b|\bERP\b|\bEURO\b|\bEMU\b|STOXX|EURSTX|אירופה", "europe", "אירופה"),
+    (r"EX\W*JAPAN|PACIFIC|FAR\W?EAST|ALL\W?COUNTRY\W?ASIA", "asia", "אסיה"),
+    (r"JAPAN|\bJAP\b|יפן|NIKKEI|TOPIX", "japan", "יפן"),
+    (r"CHINA|CHAINA|HANG\W?SENG|סין", "china", "סין"),
+    (r"BRAZIL|BOVESPA|ברזיל", "brazil", "ברזיל"),
+    (r"MEXICO|מקסיקו", "mexico", "מקסיקו"),
+    (r"LATIN|אמריקה הלטינית", "latam", "אמריקה הלטינית"),
+    (r"INDIA|\bMSCI\W?IND\b|ASHOKA|הודו", "india", "הודו"),
     (r"ASIA|אסיה", "asia", "אסיה"),
-    (r"\bU\.?S\.?A?\b|UNITED STATES|AMERICA|S\W?[&@]\W?P\b|S\W?[&@]\W?P\W?\d|RUSSELL|NASDA?Q|NASD\b|\bDOW\b|\bKBW\b|"
+    (r"\bU\.?S\.?A?\b|UNITED STATES|AMERICA|S\W?[&@]\W?P\b|S\W?[&@]\W?P\W?\d|RUSSELL|NASDA?Q|NASD\b|\bDOW\b|\bDJ\b|\bKBW\b|"
      r"SELECT\W?SECTOR|ארה\"?ב", "us", "ארה\"ב"),
-    (r"WORLD|WLRD|GLOBAL|\bGLB\b|\bGLOB\b|ACWI|ALL\W?COUNTRY|INTERNATIONAL|עולמי|גלובלי", "world", "עולמי"),
+    (r"WORLD|WLRD|\bDW\b|GLOBAL|\bGLB\b|\bGBL\b|\bGLOB?\b|ACWI|ALL\W?COUNTRY|INTERNATIONAL|עולמי|גלובלי", "world", "עולמי"),
 ]
 REGIONS = [(re.compile(p, re.IGNORECASE), i, lbl) for p, i, lbl in _REGIONS]
 REGION_LABEL = {i: lbl for _, i, lbl in _REGIONS}
 _REGION_BROAD = {"world": ("msci_world", "מדד עולמי"), "europe": ("europe", "אירופה"), "em": ("msci_em", "שווקים מתעוררים"),
+                 "uk": ("ftse100", "FTSE 100"), "intl": ("acwi_ex_us", "מדד עולמי (לא כולל ארה\"ב)"),
+                 "asia": ("asia", "אסיה"), "italy": ("italy", "איטליה"),
                  "china": ("china", "סין"), "japan": ("japan", "יפן"), "india": ("india", "הודו")}
 
 # ── 4. מדדים רחבים (בלי נושא) ─────────────────────────────────────────────────
 _P = [
+    (r"DOW\W?JONES\W?INDUSTRIAL|\bDJIA\b|\bINDU\b|דאו ג'ונס", "dow30", "דאו ג'ונס"),
+    (r"S\W?P\W?500\W?EX\W?FINANC", "sp500", "S&P 500"),
     (r"S\W?P\W?500.{0,12}EX\W?TECH|EX\W?TECHNOLOG|לא כולל טכנולוגיה", "sp500_ex_tech", "S&P (לא כולל טכנולוגיה)"),
     (r"S\W?P\W?500.{0,25}EQUAL|S\W?P\W?500\W?שווה משקל|S\W?P\W?500\W?משקל שווה", "sp500_ew", "S&P 500 שווה משקל"),
     (r"S\W?P\W?500.{0,20}(ESG|SCORED|SRI|SUSTAIN|PARIS|CLIMATE)", "sp500_esg", "S&P 500 (ESG)"),
-    (r"S\s?[&@+]\s?P\W?500|S&P\W?500|\bSPY\b|\bVOO\b|\bIVV\b|\bCSPX\b|\bSP\W?500", "sp500", "S&P 500"),
+    (r"S\s?[&@+]\s?P\W?500|EMINI\W+S\W?P\b|S&P\W?500|\bSPY\b|\bVOO\b|\bIVV\b|\bCSPX\b|\bSP\W?500", "sp500", "S&P 500"),
     (r"NASDAQ\W?COMP", "nasdaq_comp", "נסדק קומפוזיט"),
-    (r"NASDA?Q\W?100|NAS\W?100|\bQQQ\b|\bNAS1\b|נאסד\"?ק|נסד\"?ק", "nasdaq100", "נסדק"),
-    (r"DOW\W?JONES\W?INDUSTRIAL|\bDJIA\b|\bINDU\b|דאו ג'ונס", "dow30", "דאו ג'ונס"),
-    (r"RUSSELL\W?2000|\bIWM\b|ראסל 2000", "russell2000", "ראסל 2000"),
+    (r"NASDA?Q\W?100|NAS\W?100|\bNSDQ\b|\bQQQ\b|\bNAS1\b|נאסד\"?ק|נסד\"?ק", "nasdaq100", "נסדק"),
+    (r"MSCI\W?USA?\b|MSCI\W?NORTH\W?AMERICA", "msci_usa", "MSCI USA"),
+    (r"RUSSELL?\W?2000|\bIWM\b|ראסל 2000", "russell2000", "ראסל 2000"),
     (r"MIDCAP\W?400|MID\W?CAP\W?400|S\W?P\W?400", "sp400", "S&P 400"),
+    (r"EX\W*JAPAN|PACIFIC|FAR\W?EAST|ALL\W?COUNTRY\W?ASIA", "asia", "אסיה"),
     (r"ACWI\W?EX|ALL\W?COUNTRY.{0,15}EX|WORLD\W?EX\W?U\W?S|EX\W?U\W?S\b|לא כולל ארה", "acwi_ex_us",
      "מדד עולמי (לא כולל ארה\"ב)"),
-    (r"ACWI|AC\W?WORLD|ALL\W?COUNTRY|עולמי.{0,20}כולל.{0,15}מתעוררים", "acwi", "מדד עולמי (כולל שווקים מתעוררים)"),
-    (r"EMERG|MSCI\W?EM\b|\bEM\b|EMG\W?MKT|EM\W?MKT|מתעוררים", "msci_em", "שווקים מתעוררים"),
+    (r"ACWI|AC\W?WORLD|ALL\W?COUNTRY(?!\W?ASIA)|ALL\W?WORLD|MSCI\W?ALL\b|עולמי.{0,20}כולל.{0,15}מתעוררים", "acwi", "מדד עולמי (כולל שווקים מתעוררים)"),
+    (r"EMERG|\bEMER\b|MSCI\W?EM\b|\bEM\b|EMG\W?MKT|E\W?MKT|מתעוררים", "msci_em", "שווקים מתעוררים"),
     (r"MSCI\W?WORLD|\bWORLD\W?INDEX|DEVELOPED|\bURTH\b|^מדד עולמי$|^עולמי$", "msci_world", "מדד עולמי"),
-    (r"STOXX\W?(EUROPE\W?)?600|STX\W?(EUROPE\W?)?600|EURSTX\W?600|EUROPE\W?600|אירופה 600", "stoxx600", "אירופה 600"),
-    (r"EURO\W?STOXX\W?50|STOXX\W?50|EURSTX\W?50|יורוסטוקס", "stoxx50", "יורוסטוקס 50"),
+    (r"STOXX\W?(\w+\W?)?600|STX\W?(EUROPE\W?)?600|EURSTX\W?600|EUROPE\W?600|אירופה 600", "stoxx600", "אירופה 600"),
+    (r"EURO\W?STOXX\W?50|STOXX\W?50|\bFESX\b|EURSTX\W?50|יורוסטוקס", "stoxx50", "יורוסטוקס 50"),
     (r"\bDAX\b", "dax", "DAX"),
     (r"FTSE\W?100", "ftse100", "FTSE 100"),
     (r"\bSMI\b", "smi", "SMI שווייץ"),
+    (r"JPX\W?NIKKEI\W?400", "jpx400", "JPX-ניקיי 400"),
     (r"NIKKEI|ניקיי", "nikkei225", "ניקיי 225"),
     (r"TOPIX|טופיקס", "topix", "טופיקס"),
     (r"HANG\W?SENG|הנג סנג", "hangseng", "הנג סנג"),
@@ -175,22 +194,31 @@ _P = [
     (r"EUROPE|EURO\W?ZONE|אירופה", "europe", "אירופה"),
 ]
 INDEX_PATTERNS = [(re.compile(p, re.IGNORECASE), i, lbl) for p, i, lbl in _P]
+_N_BEFORE_THEMES = 5  # דאו ג'ונס וגרסאות S&P 500 - לפני הנושאים ("Dow Jones Industrial" אינו ענף התעשייה)
 _KNOWN_IDS = {i for _, i, _ in _P}
 
 _BOND = re.compile(r"BOND|אג\"?ח|ALL-?BOND|תל\W?בונד|תל\W?גוב|מק\"?מ|TREASUR|IBOXX|CORP|\bGOV|\bAGG|"
                    r"אינדקס מדינה|מרווח|\bAA|צמוד|שקלי|\bTIPS\b|HIGH\W?YIELD|\bHY\b|FIXED|CREDIT|"
                    r"פיקדון|כספית|ריבית", re.IGNORECASE)
+_HEBREW = re.compile(r"[\u0590-\u05FF]")
+# קידומת טיקר בלומברג בשם הקרן ("ICLN US iShares Global Clean Energy", "IWM US - Ishares...") -
+# הבורסה אינה אזור החשיפה
+_TICKER_PREFIX = re.compile(r"^[A-Z0-9]{2,8}\s+(US|LN|FP|GY|GR|NA|ID|JP|LX|IM|SW|CN|HK|PW|SM|AU)\b\s*-?\s*(?=\S)(?!(EQUITY|INDEX)\s*$)")
 _SUFFIX = re.compile(r"\s*-\s*(NTR|GTR|TR|PR|NET|GROSS)\s*$|\bINDEX\b|\bINDX\b", re.IGNORECASE)
 _COMPOSITE = re.compile(r"([^,;]+?)\s*(\d+(?:\.\d+)?)\s*%")
 
 # חוזה עתידי -> שורש כפי שהוא (^ES$ וכו' בטבלה), מלבד שורשים שמתנגשים במילים
-_SINGLE_STOCK = re.compile(r"\b(EQUITY|UW|UN|US|UQ|LN|TT|JT|GY|FP|HK|CN|IT|SM|NA|SW)\s*$", re.IGNORECASE)
+_SINGLE_STOCK = re.compile(r"\b(EQUITY|UW|UN|US|UQ|LN|TT|JT|GY|FP|HK|CN|IT|SM|NA|SW|IL|KP|KS|JP)\s*$", re.IGNORECASE)
+# "מדינה לפי חשיפה כלכלית" - איות שונה בין הגופים
+_COUNTRY_ALIASES = {"טאיון": "טייוואן", "דרום קוראה": "דרום קוריאה", "(הממלכה המאוחדת (בריטניה": "בריטניה",
+                    "הממלכה המאוחדת": "בריטניה", "צכיה": "צ'כיה", "צילה": "צ'ילה",
+                    "Emerging Markets - Asia": "אסיה", "Developed Markets - Europe": "אירופה"}
 
 
 def normalize_name(text) -> str:
     s = re.sub(r"\s+", " ", str(text or "")).strip()
     s = _SUFFIX.sub("", s).strip(" -")
-    return s
+    return _TICKER_PREFIX.sub("", s) or s
 
 
 def _region(s: str) -> str | None:
@@ -208,18 +236,19 @@ def classify_index(text, full_name: str | None = None) -> tuple[str, str]:
     s = normalize_name(full_name) if full_name else _CODES.get(code, raw)
     if not s:
         return "לא מזוהה", "לא מזוהה"
-    for rx, idx, label in INDEX_PATTERNS[:3]:  # גרסאות S&P 500 - לפני הנושאים
+    for rx, idx, label in INDEX_PATTERNS[:_N_BEFORE_THEMES]:
         if rx.search(s):
             return idx, label
     region = _region(s)
     for rx, theme, label, default_region in THEMES:
         if rx.search(s):
-            reg = region or default_region
+            # קרן זרה בלי אזור בשם (VANGUARD VALUE ETF, FIRST TRUST WATER ETF) - תעודת סל אמריקאית
+            reg = region or default_region or ("" if _HEBREW.search(s) else "us")
             return (f"{theme}:{reg}" if reg else theme), (f"{label} {REGION_LABEL[reg]}" if reg else label)
-    for rx, idx, label in INDEX_PATTERNS[3:]:
+    for rx, idx, label in INDEX_PATTERNS[_N_BEFORE_THEMES:]:
         if rx.search(s):
             return idx, label
-    if region and not re.fullmatch(r"[A-Z0-9]{3,10}", s):
+    if region:
         # קרן שהמזהה היחיד שלה הוא אזור = המדד הרחב של האזור
         return _REGION_BROAD.get(region) or (f"region:{region}", f"מניות {REGION_LABEL[region]}")
     return s, s
@@ -258,8 +287,14 @@ class _Acc:
 
 
 def _country_label(country) -> tuple[str, str]:
-    c = str(country or "").strip() or "לא ידוע"
+    c = re.sub(r"\s+", " ", str(country or "")).strip() or "לא ידוע"
+    c = _COUNTRY_ALIASES.get(c, c)
     return f"stocks:{c}", f"מניות {c} (ישירות)"
+
+
+def is_local(idx: str) -> bool:
+    """חשיפה למניות בארץ: מדדי ת"א, נושא/אזור ישראל, מניות וסלים בישראל."""
+    return idx in ("ta35", "ta125", "ta90") or idx.endswith((":il", ":ישראל"))
 
 
 def _is_recognized(idx: str) -> bool:
@@ -312,7 +347,7 @@ def build_index_exposure(source: list[dict], funds: list[dict], funds_ref: list[
                     names_by_isin[isin] = name
     full_names: dict[str, str] = {}  # ISIN / טיקר מדד -> שם מלא (OpenFIGI)
     if resolve_online:
-        full_names = _resolve_full_names(source, funds, names_by_isin)
+        full_names = _resolve_full_names(source, funds, names_by_isin, isin_fractions)
     for f in funds:
         pct = to_ratio(f.get("שיעור מסך נכסי ההשקעה"))
         key = f.get("מפתח")
@@ -367,13 +402,15 @@ def build_index_exposure(source: list[dict], funds: list[dict], funds_ref: list[
     return out
 
 
-def _resolve_full_names(source: list[dict], funds: list[dict], names_by_isin: dict[str, str]) -> dict[str, str]:
+def _resolve_full_names(source: list[dict], funds: list[dict], names_by_isin: dict[str, str],
+                        isin_fractions: dict[str, dict[str, float]]) -> dict[str, str]:
     """שמות מלאים מ-OpenFIGI, רק למה שלא זוהה מהשם בדוח / מהקוד: קרנות חו"ל
     (שם קצוץ, "FIDELITY INF") ו-טיקרי מדד בסוואפים (S5SFTW, CINBB501). כשל רשת
     - מדלג (בלי שמות מלאים)."""
     isins = sorted({str(f.get("מספר קרן") or "").strip().upper() for f in funds if f.get("סוג") == "חוץ"}
                    - {""})
-    isins = [i for i in isins if not _is_recognized(classify_index(names_by_isin.get(i, i))[0])]
+    isins = [i for i in isins if (isin_fractions.get(i) or {}).get("equity")
+             and not _is_recognized(classify_index(names_by_isin.get(i, i))[0])]
     tickers = set()
     for rec in source:
         if rec["Category"] != SWAP_CATEGORY_NAME:
@@ -444,7 +481,7 @@ def build_index_table(index_exp: dict[str, dict], tracks_by_key: dict[str, dict]
         rec = {"key": key, **{f: t.get(src) for f, src in TRACK_FIELDS.items()},
                "report_month": report_month.get(key), "equity_total": round(exp["total"], 6)}
         rec["indices"] = [
-            {"id": i, "label": e["label"], "pct": round(e["pct"], 6),
+            {"id": i, "label": e["label"], "pct": round(e["pct"], 6), "il": is_local(i),
              "sources": {s: round(v, 6) for s, v in e["sources"].items()}}
             for i, e in sorted(exp["indices"].items(), key=lambda x: -x[1]["pct"])
         ]
