@@ -13,7 +13,7 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parents[2]
 OUT = ROOT / (__import__("os").environ.get("POLICY_OUT") or "policy")  # ריצה לחברה: policy/companies/<LegalId>
 
-PARSER_VERSION = 10  # (v10: Ayalon, dated current column) # הגדלה = פרסור מחדש של כל המסמכים בריצה הבאה (שינוי בפרסרים)
+PARSER_VERSION = 11  # (v10: Ayalon, dated current column) # הגדלה = פרסור מחדש של כל המסמכים בריצה הבאה (שינוי בפרסרים)
 
 NUM = r"(\d{1,3}(?:\.\d+)?)"
 PCT = NUM + r"\s*%?"
@@ -350,8 +350,14 @@ def parse_titled_tables(rows, sheet=""):
     hdr_rx = re.compile(r"^אפיק\s+(ה)?השקעה")
     for ri, row in enumerate(grid):
         lc = next((c for c, t in enumerate(row) if hdr_rx.match(t)), None)
-        if lc is None:
-            continue
+        if lc is None:  # בלי תא "אפיק השקעה": עמודת האפיק = העמודה הריקה משמאל לכותרות (סלייס)
+            filled = [c for c, t in enumerate(row) if t]
+            nxt = grid[ri + 1] if ri + 1 < len(grid) else []
+            if (filled and filled[0] > 0 and any("צפוי" in t for t in row) and any(re.search(r"גבולות|סטי", t) for t in row)
+                    and filled[0] - 1 < len(nxt) and re.search(r"[א-ת]", nxt[filled[0] - 1])):
+                lc = filled[0] - 1
+            else:
+                continue
         joined = " ".join(row)
         if "גבולות" not in joined and not ("מינימום" in joined and "מקסימום" in joined):
             continue
@@ -385,7 +391,7 @@ def parse_titled_tables(rows, sheet=""):
         title, code = "", None
         for r2 in range(ri - 1, max(ri - 6, -1), -1):  # שורות תווית מפורשות: "שם מסלול (מ.ה.)" / "קידוד"
             cells = [c for c in grid[r2] if c]
-            if len(cells) >= 2 and re.match(r"^(שם\s+(ה)?מסלול|מסלול\b)", cells[0]):
+            if len(cells) >= 2 and re.match(r"^(שם\s+(ה)?(מסלול|קופה)|מסלול\b)", cells[0]):
                 title = title or cells[1]
             elif len(cells) >= 2 and cells[0].startswith("קידוד"):
                 code = code or cells[1]
@@ -415,8 +421,9 @@ def parse_titled_tables(rows, sheet=""):
         g = lambda r, k, off=0: r[cols[k] + off] if k in cols and cols[k] + off < len(r) else ""
         for r in grid[ri + 1:]:
             lab = r[lc] if lc < len(r) else ""
-            if lab.startswith("סוף") or hdr_rx.match(lab):
-                break
+            if lab.startswith("סוף") or hdr_rx.match(lab) or re.match(r"^(קידוד|שם\s+(ה)?(קופה|מסלול)|מסלולים\s)", lab) \
+                    or (any("צפוי" in t for t in r) and any(re.search(r"גבולות|סטי", t) for t in r)):
+                break  # תחילת הטבלה הבאה
             lab = lab.lstrip("*").strip()
             if not lab or lab.startswith("(") or re.fullmatch(r"[\d./\-%]+", lab) or re.fullmatch(r"סה[\"״]?כ(\s+תיק)?", lab):
                 continue
@@ -440,7 +447,9 @@ def parse_titled_tables(rows, sheet=""):
             pct = lambda x: None if x is None else round(x * 100, 2) if abs(x) <= 1.5 else x
             fm = re.search(r"(?:^|\s|\()(\d{3,6})\)?\s*$", name)  # קוד קופה בסוף השם ("כלל פנסיה מניות 9647")
             fid = fm.group(1) if fm and not re.fullmatch(r"(19|20)\d\d", fm.group(1)) else None
-            if code and code.isdigit():
+            if code and code.isdigit() and len(code) >= 20:  # <ח.פ.><אפסים><קופה><מסלול 5 ספרות> (סלייס)
+                fid = str(int(code[-5:]))
+            elif code and code.isdigit():
                 fid = code
             elif code:  # "קידוד": <ח.פ.>-<קופה>-<מסלול>-<...> (אינפיניטי)
                 cp = code.split("-")
