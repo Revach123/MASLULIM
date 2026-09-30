@@ -44,6 +44,13 @@ INDEX_SERIES = {"TA35": "ta35", "TA125": "ta125", "TA90": "ta90"}
 INDEX_PRICE_URL_TMPL = f"{RAW_BASE}/data/prices/{{series}}.csv"
 
 
+def quote_scale(symbol: str | None) -> float:
+    """מכפיל ממחיר הסדרה למטבע הפעילות: ניירות ת"א ב-Yahoo (".TA") מצוטטים
+    באגורות (LUMI.TA = 6652 = ₪66.52; אומת: יחידות × מחיר / 100 = השווי ההוגן
+    בדוח). מחיר המימוש בדוחות באותן אגורות, כך שהדלתא לא מושפעת - רק הנוציונל."""
+    return 0.01 if symbol and str(symbol).upper().endswith(".TA") else 1.0
+
+
 def _safe_filename(symbol: str) -> str:
     import re
     return re.sub(r"[^A-Za-z0-9._-]", "_", symbol)

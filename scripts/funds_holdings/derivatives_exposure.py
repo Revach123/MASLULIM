@@ -66,7 +66,7 @@ from datetime import date
 
 from .excel_io import to_ratio
 from .sheet_source import PCT_COL
-from .option_delta_pricing import resolve_option_delta
+from .option_delta_pricing import quote_scale, resolve_option_delta
 from .option_ticker_parse import CONTRACT_MULTIPLIER, is_call_option, parse_underlying
 from .futures_notional import FuturesResolver, build_rows as build_futures_rows
 from .swap_index_pricing import price_as_of as index_price_as_of, resolve_current_price
@@ -609,7 +609,7 @@ def _options_exposure(
                 delta, spot = resolve_option_delta(ticker, strike, expiry, report_date, is_call)
                 if delta is not None and spot is not None:
                     mult = CONTRACT_MULTIPLIER.get(ticker, 1.0)
-                    notional_thousands = units * mult * delta * spot * fx / 1000
+                    notional_thousands = units * mult * delta * spot * quote_scale(ticker) * fx / 1000
                     line_ratio = notional_thousands / total
                     fv = _num(row.get(FAIR_VALUE_COL))
                     fv_ratio = (fv / total) if fv is not None else None
