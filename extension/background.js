@@ -44,6 +44,9 @@ async function getConfig() {
   const c = config || {};
   // ניקוי רווחים/שורות נסתרים שנדבקו יחד עם הטוקן (גורם ל-401 Bad credentials)
   if (c.token) c.token = c.token.replace(/\s+/g, "");
+  c.owner = c.owner || "Revach123";  // ברירות מחדל - הרפו של הפרויקט; נשאר רק להזין טוקן
+  c.repo = c.repo || "MASLULIM";
+  c.branch = c.branch || "main";
   if (c.owner) c.owner = c.owner.trim();
   if (c.repo) c.repo = c.repo.trim();
   return c;
