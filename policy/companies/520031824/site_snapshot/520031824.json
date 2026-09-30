@@ -1,0 +1,31 @@
+{
+ "legal_id": "520031824",
+ "company": "החברה המנהלת של רום קרן ההשתלמות לעובדי הרשויות המקומיות בע\"מ",
+ "taken": "2026-09-30T23:40:04+00:00",
+ "pages": {
+  "https://www.krm.co.il/?CategoryID=217": {
+   "product": "גמל",
+   "status": 403,
+   "method": "browser",
+   "text_hash": "9e1c850011df7fe15bba160c3fcfb88ad3ba8dad",
+   "text_head": "Sorry, you have been blocked You are unable to access krm.co.il Why have I been blocked? This website is using a security service to protect itself from online attacks. The action you just performed triggered the security solution. There are several actions that could trigger this block including submitting a certain word or phrase, a SQL command or malformed data. What can I do to resolve this? You can email the site owner to let them know you were blocked. Please include what you were doing when this page came up and the Cloudflare Ray ID found at the bottom of this page. Cloudflare Ray ID: ",
+   "items": []
+  },
+  "https://www.krm.co.il/?CategoryID=230": {
+   "product": "גמל",
+   "status": 403,
+   "method": "browser",
+   "text_hash": "77e09d976fd26634d4b29295ae87120c32ecd8f8",
+   "text_head": "Sorry, you have been blocked You are unable to access krm.co.il Why have I been blocked? This website is using a security service to protect itself from online attacks. The action you just performed triggered the security solution. There are several actions that could trigger this block including submitting a certain word or phrase, a SQL command or malformed data. What can I do to resolve this? You can email the site owner to let them know you were blocked. Please include what you were doing when this page came up and the Cloudflare Ray ID found at the bottom of this page. Cloudflare Ray ID: ",
+   "items": []
+  },
+  "https://www.krm.co.il": {
+   "product": null,
+   "status": 403,
+   "method": "browser",
+   "text_hash": null,
+   "text_head": "",
+   "items": []
+  }
+ }
+}
