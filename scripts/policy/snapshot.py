@@ -60,10 +60,28 @@ def fetch_static(s, url):
     if r is None or r.status_code != 200 or "html" not in r.headers.get("content-type", "html"):
         return None, getattr(r, "status_code", "ERR"), ""
     soup = BeautifulSoup(r.content, "html.parser")  # bytes: הקידוד נקבע מה-meta/כותרות, לא ניחוש requests
-    anchors = [{"href": a["href"], "text": a.get_text(" ", strip=True)} for a in soup.find_all("a", href=True)]
+    anchors = []
+    for a in soup.find_all("a", href=True):
+        t = a.get_text(" ", strip=True)
+        if len(t) < 4 or re.match(r"(הורד|להורדה|הורדת|לצפייה|צפייה|download|pdf|xlsx?|קובץ)", t, re.I):
+            row = a.find_parent(["tr", "li"]) or a.parent
+            ctx = re.sub(r"\s+", " ", row.get_text(" ", strip=True))[:200] if row else ""
+            if ctx and ctx != t:
+                t = f"{ctx} {t}".strip()
+        anchors.append({"href": a["href"], "text": t})
     return anchors, 200, soup.get_text(" ", strip=True)
 
 
+# טקסט קישור; כשהוא כללי ("הורדת טופס", "להורדה", אייקון) - מוסיפים את טקסט השורה/הכרטיס (ילין: uploads/n/<מספר>.pdf)
+A_JS = """els => els.map(e => {
+    let t = (e.innerText || e.textContent || e.getAttribute('aria-label') || e.title || '').trim();
+    if (t.length < 4 || /^(הורד|להורדה|הורדת|לצפייה|צפייה|download|pdf|xlsx?|קובץ)/i.test(t)) {
+        const row = e.closest('tr,li,[class*=item],[class*=row],[class*=card],[class*=file],[class*=doc]') || e.parentElement;
+        const ctx = row ? (row.innerText || '').replace(/\\s+/g, ' ').trim().slice(0, 200) : '';
+        if (ctx && ctx !== t) t = (ctx + ' ' + t).trim();
+    }
+    return {href: e.href, text: t};
+})"""
 FILE_RX = re.compile(r"""["'(=\s]((?:https?:)?[\w\-./%:?=&~א-ת]+?\.(?:xlsx|xls|pdf|docx))(?=["')\s&<,]|$)""", re.I)
 
 
@@ -101,7 +119,7 @@ def fetch_browser(pw, url):
         seen, anchors = set(), []
 
         def collect():
-            for a in pg.eval_on_selector_all("a[href]", "els=>els.map(e=>({href:e.href,text:e.innerText||e.textContent||''}))"):
+            for a in pg.eval_on_selector_all("a[href]", A_JS):
                 if (a["href"], a["text"].strip()) not in seen:
                     seen.add((a["href"], a["text"].strip())); anchors.append(a)
             for f in pg.eval_on_selector_all("iframe[src]", "els=>els.map(e=>e.src)"):

@@ -2,11 +2,17 @@
  "legal_id": "513611509",
  "name": "ילין לפידות ניהול קופות גמל בע\"מ",
  "home": "https://www.yl-invest.co.il",
- "pages": [],
+ "pages": [
+  {
+   "product": "גמל",
+   "url": "https://www.yl-invest.co.il/17/"
+  }
+ ],
  "browser": "headless",
  "products": [
   "גמל"
  ],
- "search": true,
- "rev": 4
+ "search": false,
+ "rev": 5,
+ "note": "/17/ = ניהול קופות גמל והשתלמות: כל המסמכים ב-uploads/n/<מספר>.pdf עם 'הורדת טופס' - הכותרת בשורה"
 }
