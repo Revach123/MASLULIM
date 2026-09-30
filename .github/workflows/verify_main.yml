@@ -2,6 +2,11 @@ name: Verify main pipeline
 
 on:
   workflow_dispatch:
+    inputs:
+      dump_components:
+        description: "Print per-track equity components (COMP|...) for offline analysis"
+        required: false
+        default: ""
   schedule:
     # כל יום ראשון ב-02:00 UTC (שעה לפני Publish AUTOPILOT to D1) - כדי
     # שתמיד יהיה מדד MAE עדכני מול הרשמי לפני שה-publish הופך את הנתונים
@@ -63,6 +68,7 @@ jobs:
         env:
           REVACH_MATCH_KEY: ${{ secrets.REVACH_MATCH_KEY }}
           PAT: ${{ secrets.PAT }}
+          DUMP_EQUITY_COMPONENTS: ${{ inputs.dump_components }}
         run: python -m scripts.funds_holdings.validate_equity_exposure --reports-dir reports
       - name: Report unmatched foreign funds
         env:

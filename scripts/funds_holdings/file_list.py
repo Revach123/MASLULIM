@@ -16,11 +16,7 @@ class ReportFile:
     path: Path           # נתיב מלא
     company_type: str    # "570009852_gm" (Parts[0] & "_" & Parts[1])
     sort_key: int         # YY*10 + QQ, מהחלק האחרון של השם - להשוואת "העדכני ביותר"
-                          # בלבד (יש בו התנגשויות אמיתיות, למשל 2602 ו-1225 שניהם
-                          # 262 - לא לשימוש כתאריך אמיתי, ר' report_month)
-    report_month: date | None  # היום האחרון של חודש הדיווח (לא ה-1) - דוח חודשי
-                          # הוא "נכון ל..." סוף החודש, לא תחילתו; שימוש ביום 1
-                          # למחיר-מדד-חי מתמחר כמעט חודש מוקדם מדי
+    report_month: date | None  # היום האחרון של רבעון הדיווח (ר' _report_month)
 
 
 def _stem_parts(filename: str) -> list[str]:
@@ -36,14 +32,19 @@ def _sort_key(last_part: str) -> int:
 
 
 def _report_month(last_part: str) -> date | None:
-    """MMYY (למשל '0226' = פברואר 2026) -> תאריך היום האחרון של חודש הדיווח.
-    נפרד מ-_sort_key בכוונה - sort_key מתנגש בין תאריכים שונים (ר' הערת
-    ReportFile), לא מתאים לשימוש כתאריך אמיתי."""
+    """QQYY (למשל '0226' = רבעון 2 2026) -> היום האחרון של הרבעון (30.6.2026).
+
+    הסיומת היא רבעון, לא חודש: קיימות רק 01-04, תיקיות reports/2026Q2 וכו',
+    וחוזי המדד בקבצים תואמים (0124->ESM4, 0224->ESU4, 0324->ESZ4, 0424->ESH5),
+    וכך גם המחיר: ESU6 ב-0226 = 7,548.25 מול S&P 500 = 7,499 ב-30.6.2026
+    (6,879 ב-27.2.2026)."""
     try:
-        mm = int(last_part[:2])
+        qq = int(last_part[:2])
         yy = int(last_part[-2:])
-        last_day = monthrange(2000 + yy, mm)[1]
-        return date(2000 + yy, mm, last_day)
+        if not 1 <= qq <= 4:
+            return None
+        mm = qq * 3
+        return date(2000 + yy, mm, monthrange(2000 + yy, mm)[1])
     except (ValueError, IndexError):
         return None
 
