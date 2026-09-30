@@ -1,12 +1,12 @@
 {
  "legal_id": "510930654",
  "company": "יחד רופאים - חברה לניהול קופות גמל בע\"מ",
- "taken": "2026-09-30T21:28:17+00:00",
+ "taken": "2026-09-30T21:53:46+00:00",
  "pages": {
-  "": {
+  "https://www.ag-cpa.co.il": {
    "product": null,
-   "status": "browser:Error",
-   "method": "requests",
+   "status": 200,
+   "method": "browser",
    "text_hash": null,
    "text_head": "",
    "items": []
