@@ -1,12 +1,13 @@
 {
  "legal_id": "520022518",
  "name": "החברה לניהול קופת התגמולים והפנסיה של עובדי הסוכנות היהודית לארץ ישראל בע\"מ",
- "home": "",
+ "home": "https://www.jafi.org",
  "pages": [],
  "browser": "headless",
  "products": [
   "פנסיה"
  ],
  "search": true,
- "rev": 3
+ "rev": 4,
+ "home_source": "report_email:jafi.org"
 }
