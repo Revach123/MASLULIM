@@ -60,6 +60,13 @@ def probe(pw, url):
         print("  ERROR", type(e).__name__, str(e)[:300])
     finally:
         b.close()
+    # מה ה-crawler עצמו מוצא בעמוד (אחרי לחיצות/אקורדיונים/לכידות)
+    from .snapshot import fetch_browser
+    anchors, status, _ = fetch_browser(pw, url)
+    docs = [a for a in (anchors or []) if re.search(r"\.(xlsx|xls|pdf|docx)(\?|$)", a["href"], re.I) or a.get("local")]
+    print(f"  CRAWLER status={status} anchors={len(anchors or [])} docs={len(docs)}")
+    for a in docs[:80]:
+        print("   DOC", re.sub(r"\s+", " ", a["text"])[:80], "->", a["href"][:200])
 
 
 if __name__ == "__main__":
