@@ -1,0 +1,109 @@
+name: Policy per-site (parallel)
+
+on:
+  push:
+    branches: [claude/tender-wozniak-of4b7i]
+    paths: [".github/workflows/policy_sites.yml"]
+  workflow_dispatch:
+    inputs:
+      only:
+        description: "LegalId מופרדים ברווח (ריק = כל חברה עם seed)"
+        required: false
+
+permissions:
+  contents: write
+
+concurrency:
+  group: policy-sites
+  cancel-in-progress: false
+
+jobs:
+  matrix:
+    runs-on: ubuntu-latest
+    outputs:
+      ids: ${{ steps.m.outputs.ids }}
+    steps:
+      - uses: actions/checkout@v4
+      - id: m
+        run: |
+          python3 - <<'PY' >> "$GITHUB_OUTPUT"
+          import csv, json, os
+          only = "${{ inputs.only }}".split()
+          ids = [r["legal_id"] for r in csv.DictReader(open("scripts/policy/seeds.csv", encoding="utf-8"))]
+          ids = sorted(set(i for i in ids if not only or i in only))
+          print("ids=" + json.dumps(ids))
+          PY
+
+  site:
+    needs: matrix
+    runs-on: ubuntu-latest
+    timeout-minutes: 45
+    strategy:
+      fail-fast: false
+      matrix:
+        id: ${{ fromJson(needs.matrix.outputs.ids) }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: |
+          pip install requests beautifulsoup4 pdfplumber openpyxl python-docx xlrd playwright
+          python -m playwright install --with-deps chromium
+      - name: Snapshot site structure
+        continue-on-error: true
+        run: python -m scripts.policy.snapshot --only ${{ matrix.id }}
+      - name: Crawl and download documents
+        continue-on-error: true
+        run: python -m scripts.policy.crawl --only ${{ matrix.id }}
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: site-${{ matrix.id }}
+          path: |
+            policy/docs_index.json
+            policy/raw/
+            policy/site_snapshot/
+            policy/crawl_report.csv
+            policy/site_report.csv
+            policy/site_changes.json
+            policy/new_docs.json
+          if-no-files-found: warn
+
+  aggregate:
+    needs: site
+    if: always()
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: pip install requests beautifulsoup4 pdfplumber openpyxl python-docx xlrd
+      - uses: actions/download-artifact@v4
+        with:
+          path: artifacts
+          pattern: site-*
+      - name: Merge and parse
+        run: |
+          python -m scripts.policy.merge artifacts
+          python -m scripts.policy.extract --all
+      - name: Summary
+        run: |
+          echo "### דוח סריקה" >> "$GITHUB_STEP_SUMMARY"
+          python - <<'PY' >> "$GITHUB_STEP_SUMMARY"
+          import csv, json
+          print("| חברה | עמודים | מסמכים | שגיאות |\n|---|---|---|---|")
+          for r in csv.DictReader(open("policy/crawl_report.csv", encoding="utf-8-sig")):
+              print(f"| {r['company']} | {r['pages']} | {r['docs']} | {r['errors'][:80]} |")
+          print("\nפרסור:", len(json.load(open("policy/tracks_policy_long.json", encoding="utf-8"))), "שורות long;",
+                len(json.load(open("policy/unparsed_layouts.json", encoding="utf-8"))), "מסמכים לא מזוהים")
+          PY
+      - name: Commit
+        run: |
+          git config user.name "github-actions"
+          git config user.email "actions@users.noreply.github.com"
+          git add policy
+          git diff --cached --quiet || git commit -m "policy: per-site run"
+          git pull --rebase origin "${GITHUB_REF_NAME}" && git push
