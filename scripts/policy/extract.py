@@ -13,7 +13,7 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parents[2]
 OUT = ROOT / (__import__("os").environ.get("POLICY_OUT") or "policy")  # ריצה לחברה: policy/companies/<LegalId>
 
-PARSER_VERSION = 4  # הגדלה = פרסור מחדש של כל המסמכים בריצה הבאה (שינוי בפרסרים)
+PARSER_VERSION = 5  # הגדלה = פרסור מחדש של כל המסמכים בריצה הבאה (שינוי בפרסרים)
 
 NUM = r"(\d{1,3}(?:\.\d+)?)"
 PCT = NUM + r"\s*%?"
@@ -310,52 +310,79 @@ def parse_columns_blocks(rows, sheet=""):
 
 
 def parse_titled_tables(rows, sheet=""):
-    """מבנה 'כותרת-שם + טבלה' (הפניקס): שם מסלול בשורה מעל, כותרת 'אפיק השקעה' עם 'גבולות', בלי קוד מסלול.
-    הגבולות: טקסט '41%-53%' בתא אחד, או שני תאים מספריים (מינ', מקס') כיחס. זיהוי המסלול לפי שם."""
+    """מבנה כללי 'שורת כותרת + שורה לאפיק' (הפניקס/רעות/האוניברסיטה/כלל/ארם...): תא 'אפיק (ה)השקעה' בכל עמודה,
+    עמודות לפי טקסט הכותרת. גבולות: טקסט '38%-50%', או שני מספרים אחרי 'גבולות' (בכל סדר), או עמודות מינימום/מקסימום.
+    שם המסלול: שורה מעל הכותרת; אם גנרי ('מדיניות ... צפויה/שנת') - שם הגיליון. בלי קוד מסלול -> התאמה לפי שם."""
     grid = [[_clean(c) for c in r] for r in rows]
     out = []
-    year = next((m.group(1) for r in grid[:3] for c in r for m in [re.search(r"(20\d\d)", c)] if m), None)
+    year = next((m.group(1) for r in grid[:6] for c in r for m in [re.search(r"(20\d\d)", c)] if m), None)
+    hdr_rx = re.compile(r"^אפיק\s+(ה)?השקעה")
     for ri, row in enumerate(grid):
-        if not row or not row[0].startswith("אפיק השקעה") or not any("גבולות" in c for c in row):
+        lc = next((c for c, t in enumerate(row) if hdr_rx.match(t)), None)
+        if lc is None:
+            continue
+        joined = " ".join(row)
+        if "גבולות" not in joined and not ("מינימום" in joined and "מקסימום" in joined):
             continue
         cols = {}
         for c, t in enumerate(row):
-            for key, pat in (("current", r"ליום|לתאריך|עדכני"), ("expected", r"צפוי"), ("tol", r"סטי"),
-                             ("bounds", r"גבולות"), ("bench", r"ייחוס")):
-                if key not in cols and re.search(pat, t):
-                    cols[key] = c
+            if c <= lc or not t:
+                continue
+            if "צפוי" in t and "מינימום" not in t and "מקסימום" not in t and "expected" not in cols:
+                cols["expected"] = c
+            elif "מינימום" in t and "min" not in cols:
+                cols["min"] = c
+            elif "מקסימום" in t and "max" not in cols:
+                cols["max"] = c
+            elif "גבולות" in t and "bounds" not in cols:
+                cols["bounds"] = c
+            elif re.search(r"סטי", t) and "tol" not in cols:
+                cols["tol"] = c
+            elif re.search(r"ייחוס|יחוס", t) and "bench" not in cols:
+                cols["bench"] = c
+            elif re.search(r"שיעור\s+(ה)?חשיפה|ליום|לתאריך|עדכני|נכון ל", t) and "current" not in cols:
+                cols["current"] = c
+        if "expected" not in cols and "bounds" not in cols and "min" not in cols:
+            continue
         title = ""
         for r2 in range(ri - 1, max(ri - 5, -1), -1):
-            cands = [c for c in grid[r2] if c and not c.startswith(("תחילת", "סוף", "מדיניות השקעה צפויה"))
-                     and not re.fullmatch(r"[\d.\-%]+", c)]
+            cands = [c for c in grid[r2] if c and not c.startswith(("תחילת", "סוף")) and not re.fullmatch(r"[\d./\-%]+", c)
+                     and not re.search(r"ייחוס|יחוס", c)]
             if cands:
                 title = max(cands, key=len); break
-        if not title:
-            continue
+        if not title or re.search(r"מדיניות.*(צפוי|שנת|לשנת)|הצהרה", title):
+            title = sheet.strip() or title
         name = norm_name(title)
+        g = lambda r, k, off=0: r[cols[k] + off] if k in cols and cols[k] + off < len(r) else ""
         for r in grid[ri + 1:]:
-            lab = r[0] if r else ""
-            if lab.startswith("סוף") or lab.startswith("אפיק השקעה"):
+            lab = r[lc] if lc < len(r) else ""
+            if lab.startswith("סוף") or hdr_rx.match(lab):
                 break
-            if not lab or lab.startswith("סה"):
+            if not lab or lab.startswith(("סה", "*", "(")) or re.fullmatch(r"[\d./\-%]+", lab):
                 continue
-            g = lambda k, off=0: r[cols[k] + off] if k in cols and cols[k] + off < len(r) else ""
-            m = BOUNDS.search(g("bounds"))
             lo = hi = None
-            if m:
-                lo, hi = float(m.group(1)), float(m.group(2))
-            elif _num(g("bounds")) is not None and _num(g("bounds", 1)) is not None:
-                lo, hi = _num(g("bounds")), _num(g("bounds", 1))
-                if max(abs(lo), abs(hi)) <= 1.5:
-                    lo, hi = round(lo * 100, 2), round(hi * 100, 2)
-            cur, exp = _num(g("current")), _num(g("expected"))
+            if "min" in cols and "max" in cols:
+                lo, hi = _num(g(r, "min")), _num(g(r, "max"))
+            else:
+                m = BOUNDS.search(g(r, "bounds"))
+                if m:
+                    lo, hi = float(m.group(1)), float(m.group(2))
+                else:
+                    nums = [x for x in (_num(g(r, "bounds", k)) for k in range(0, 4)) if x is not None][:2]
+                    if len(nums) == 2:
+                        lo, hi = min(nums), max(nums)
+            if lo is not None and hi is not None and max(abs(lo), abs(hi)) <= 1.5:
+                lo, hi = round(lo * 100, 2), round(hi * 100, 2)
+            cur, exp = _num(g(r, "current")), _num(g(r, "expected"))
             if cur is None and exp is None and lo is None:
                 continue
             pct = lambda x: None if x is None else round(x * 100, 2) if abs(x) <= 1.5 else x
-            out.append({"fund_id": None, "track_no": None, "track_code": f"{sheet.strip()}|{name}", "track_name": name,
+            fm = re.search(r"(?:^|\s|\()(\d{3,6})\)?\s*$", name)  # קוד קופה בסוף השם ("כלל פנסיה מניות 9647")
+            fid = fm.group(1) if fm and not re.fullmatch(r"(19|20)\d\d", fm.group(1)) else None
+            out.append({"fund_id": fid, "track_no": fid, "track_code": f"{sheet.strip()}|{name}", "track_name": name,
                         "group": sheet.strip(), "year": year, "asset": lab, "asset_key": asset_key(lab),
-                        "current_pct": pct(cur), "expected_pct": pct(exp), "tolerance": g("tol") or None,
-                        "min_pct": lo, "max_pct": hi, "benchmark": (g("bench").replace("\n", " ") or None), "sheet": sheet})
+                        "current_pct": pct(cur), "expected_pct": pct(exp), "tolerance": g(r, "tol") or None,
+                        "min_pct": lo, "max_pct": hi, "benchmark": (g(r, "bench").replace("\n", " ") or None), "sheet": sheet})
     return out
 
 
