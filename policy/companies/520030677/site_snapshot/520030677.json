@@ -1,20 +1,13 @@
 {
  "legal_id": "520030677",
  "company": "איילון חברה לביטוח בע\"מ",
- "taken": "2026-09-30T21:18:16+00:00",
+ "taken": "2026-09-30T21:21:23+00:00",
  "pages": {
   "https://www.ayalon-ins.co.il": {
    "product": null,
    "status": 403,
    "method": "browser",
    "text_hash": "28f14a6bdf3e55d5072ae77ce6325f5b27693d5a",
-   "items": []
-  },
-  "https://www.ayalon-ins.co.il/investments": {
-   "product": "ביטוח",
-   "status": 403,
-   "method": "browser",
-   "text_hash": "4328a4f8476199aa8fd23e03b185127a3155c200",
    "items": []
   }
  }
