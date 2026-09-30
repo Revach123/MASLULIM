@@ -47,6 +47,7 @@ CONTRACT_SPECS: dict[str, tuple[float, str | None]] = {
     "FAW": (100, None),         # E-mini S&P MidCap 400
     "IXT": (100, None),         # E-mini Technology Select Sector (XAK)
     "XAS": (100, None),         # E-mini Communication Services Select Sector (XAZ)
+    "XAY": (100, None),         # E-mini Consumer Discretionary Select Sector
     "SWO": (25, None),          # E-mini PHLX Semiconductor Sector (SOX)
     # OSE / SGX
     "NK": (1000, "nikkei225"),  # Nikkei 225 (OSE, large)
@@ -165,6 +166,10 @@ def parse_code(raw_ticker, name, report_date: date | None) -> tuple[str | None, 
     for m in _IN_NAME.finditer(str(name or "").upper()):
         if m.group(1) in CONTRACT_SPECS and _year_ok(m.group(3), report_date):
             return m.group(1), m.group(2) + m.group(3)
+    # קוד החוזה כמילה הראשונה בשם, בלי קוד חודש ("XAY Cons Discret  Sep26")
+    first = str(name or "").upper().split(maxsplit=1)
+    if first and len(first[0]) >= 3 and first[0] in CONTRACT_SPECS:
+        return first[0], None
     return None, None
 
 
