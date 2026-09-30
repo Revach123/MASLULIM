@@ -24,6 +24,7 @@ jobs:
     runs-on: ubuntu-latest
     outputs:
       ids: ${{ steps.m.outputs.ids }}
+      mode: ${{ steps.m.outputs.mode }}
     steps:
       - uses: actions/checkout@v4
         with:
@@ -38,6 +39,7 @@ jobs:
           from pathlib import Path
           all_ids = sorted(p.stem for p in Path("scripts/policy/sites").glob("*.json"))
           ids = all_ids
+          mode = "full"
           if os.environ.get("ONLY"):
               ids = [i for i in all_ids if i in os.environ["ONLY"].split()]
           elif os.environ.get("GITHUB_EVENT_NAME") == "push" and os.environ.get("BEFORE", "").strip("0"):
@@ -48,7 +50,13 @@ jobs:
                        and not re.fullmatch(r"scripts/policy/sites/\d+\.json", f)]
               canary = ["512065202", "512267592"]  # מיטב, הראל גמל - עובדות; בדיקת רגרסיה לשינויי קוד
               ids = sorted((set(site_ids) | (set(canary) if other else set())) & set(all_ids))
+              if other and not site_ids and all(f == "scripts/policy/extract.py" for f in other):
+                  # רק הפרסר השתנה: פרסור מחדש לכל חברה שיש לה מסמכים, בלי לסרוק אתרים
+                  ids = sorted(p.parent.name for p in Path("policy/companies").glob("*/docs_index.json")
+                               if json.loads(p.read_text("utf-8")))
+                  mode = "parse"
           print("ids=" + json.dumps(ids))
+          print("mode=" + mode)
           PY
 
   company:
@@ -70,8 +78,9 @@ jobs:
           python-version: "3.12"
       - run: |
           pip install requests beautifulsoup4 pdfplumber openpyxl python-docx xlrd playwright
-          python -m playwright install --with-deps chromium
+          if [ "${{ needs.matrix.outputs.mode }}" != "parse" ]; then python -m playwright install --with-deps chromium; fi
       - name: Crawl (snapshot + diff + download)
+        if: needs.matrix.outputs.mode != 'parse'
         continue-on-error: true
         run: |
           if [ "$(jq -r '.browser // "headless"' scripts/policy/sites/$ID.json)" = "headed" ]; then
