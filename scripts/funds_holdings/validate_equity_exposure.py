@@ -14,7 +14,7 @@ from pathlib import Path
 
 from .category_pct import build_category_pct
 from .derivatives_exposure import (
-    FUTURES_CATEGORY, OPTIONS_LISTED_CATEGORY, OPTIONS_OTC_CATEGORY, SWAP_CATEGORY,
+    FUTURES_CATEGORY, FUTURES_EQUITY_COLUMN, OPTIONS_LISTED_CATEGORY, OPTIONS_OTC_CATEGORY, SWAP_CATEGORY,
     build_derivatives_exposure, total_assets_by_key,
 )
 from .excel_io import to_ratio
@@ -46,6 +46,11 @@ def _equity_derivative_pct(source, category, base_col, use_fixed):
     """מפתח -> שיעור חשיפה (ישן=שווי הוגן / חדש=נוציונלי מתוקן), רק לשורות
     עם נכס בסיס/סוג נכס == מניות. use_fixed=False משחזר את החישוב הישן
     (כמו category_pct המקורי, לפני התיקון) לצורך השוואה בלבד."""
+    if use_fixed and category == FUTURES_CATEGORY:
+        # חוזים: המקור המלא - זיהוי החוזה לומד משמות/רמות של כל השורות, והסיווג
+        # למניות נעשה לפי החוזה שזוהה (ר' futures_notional.NON_EQUITY_ROOTS).
+        deriv = build_derivatives_exposure(source)
+        return {k: v[FUTURES_EQUITY_COLUMN] for k, v in deriv.items() if FUTURES_EQUITY_COLUMN in v}
     if use_fixed:
         # דרך build_derivatives_exposure, אבל מסוננת לשורות מניות בלבד -
         # קוראים לפונקציות הפנימיות ישירות דרך source מסונן.

@@ -60,13 +60,13 @@
    category_pct.build_category_pct - שאר הקטגוריות (מזומן, אג"ח, מניות,
    קרנות...) כבר משקפות שווי שוק אמיתי, אין בהן את הבאג.
 """
-import re
 
 from .excel_io import to_ratio
 from .sheet_source import PCT_COL
-from .option_delta_pricing import price_as_of, resolve_option_delta
+from .option_delta_pricing import resolve_option_delta
 from .option_ticker_parse import is_call_option, parse_underlying
-from .swap_index_pricing import resolve_current_price
+from .futures_notional import FuturesResolver, build_rows as build_futures_rows
+from .swap_index_pricing import price_as_of as index_price_as_of, resolve_current_price
 
 FAIR_VALUE_COL = 'שווי הוגן (באלפי ש"ח)'
 SWAP_NET_FAIR_VALUE_COL = 'שווי הוגן (נטו באלפי ש"ח)'
@@ -80,27 +80,9 @@ SWAP_NET_FAIR_VALUE_COL = 'שווי הוגן (נטו באלפי ש"ח)'
 # לפני התיקון - עדיף על תוצאה מנופחת שאי אפשר לסמוך עליה.
 SANITY_CAP = 3.0
 
-# תקרת מנוף לשורה בודדת (חוזים עתידיים): נמצא בבדיקה שלמגישים שונים יש
-# מוסכמות שונות/לא-עקביות ל"שער נייר הערך" (לא רק מוסכמת ערך-נקוב-100 -
-# גם מגישים ששמים את המחיר בקנה מידה שרירותי אחר, למשל פי 100 מהנדרש, מבלי
-# שזה בולט ביחס לשווי המסלול הכולל אם המסלול גדול מספיק). בדיקה יחסית
-# עמידה-למגיש: חשיפה נוציונלית אמיתית של חוזה ממונף היא בד"כ כפולה סבירה
-# מהשווי ההוגן (המרווח) שאותה שורה בדיוק מדווחת - שיעורי מרג'ין סטנדרטיים
-# לחוזי מדד/ריבית נעים בד"כ 1%-15% מהנוציונל, כלומר יחס נוציונל/שווי-הוגן
-# עד בערך פי 100. חריגה מכך היא סימן חזק שקנה המידה של יחידות/מחיר בשורה
-# הזו שונה ממה שהנוסחה מניחה.
-#
-# עודכן מ-75 ל-120 לפי ניתוח בפועל על כל שורות "חוזים עתידיים" בארכיון עם
-# שווי הוגן חיובי (n=4,314): חציון יחס נוציונל/שווי-הוגן הוא בדיוק 100.0.
-# ניסיון ראשון (75->120 בלבד) הוחמר בפועל ב-CI (10.246->11.904 נק' אחוז),
-# משתי סיבות נפרדות שתוקנו כל אחת בנפרד - לא ע"י שינוי הסף עצמו:
-# 1. מחיר שלילי לא-פתור (ר' ה-else למטה) שנתפס במקרה ע"י תקרה נמוכה, לא
-#    בכוונה - מטופל עכשיו במפורש, בלי תלות ב-LEVERAGE_CAP בכלל.
-# 2. תקרת-SANITY_CAP הייתה קיימת ל-swap *ברמת המסלול כולו* (capped, למטה)
-#    אבל לא לחוזים עתידיים (רק ברמת-שורה) - נמצא בפועל (520028390_485/
-#    520027251_484 ודומיהם) שורות זוגיות שכל אחת בנפרד עוברת LEVERAGE_CAP
-#    בקלות, אבל סכומן המצטבר ברמת המסלול מגיע ל-700%+. עכשיו קיימת אותה
-#    תקרת-מסלול גם לחוזים עתידיים (ר' capped ב-_futures_exposure).
+# תקרת מנוף לשורת swap: יחס נוציונל/שווי-הוגן-נטו מעל זה מסמן קנה מידה שגוי
+# של "שער נכס הבסיס" (ר' _swap_exposure). חוזים עתידיים כבר לא משתמשים בה -
+# הנוציונל שלהם לא נשען על המחיר המדווח (ר' futures_notional).
 LEVERAGE_CAP = 120.0
 
 FUTURES_CATEGORY = "חוזים עתידיים"
@@ -116,6 +98,8 @@ FUT_PRICE_COL = "שער נייר הערך"
 FUT_CURRENCY_COL = "מטבע פעילות"
 FUT_TICKER_COL = "מספר נייר ערך"
 FUT_UNDERLYING_COL = "נכס בסיס"
+_FUT_COLS = {"units": FUT_UNITS_COL, "price": FUT_PRICE_COL,
+             "ticker": FUT_TICKER_COL, "currency": FUT_CURRENCY_COL}
 
 # "נכס בסיס"/"סוג הנכס" (חוזים/סוואפים/אופציות בהתאמה) - אותו ערך מדויק
 # בשלושת הגיליונות, נבדק בפועל מול דוח אמיתי (512065202_gm_0226.xlsx).
@@ -128,53 +112,6 @@ EQUITY_UNDERLYING = "מניות לרבות מדדי מניות"
 # לפי נכס-בסיס=מניות בלבד, לצורך תצוגה בדשבורד.
 FUTURES_EQUITY_COLUMN = "חוזים עתידיים - מניות"
 OPTIONS_EQUITY_COLUMN = "אופציות - מניות"
-
-# ניסוי (לא מאומת חיצונית מעבר למה שתועד למטה - לא למזג בלי בדיקת MAE אמיתית):
-# "שער נייר הערך" שלילי בשורת חוזה עתידי הוא בלתי אפשרי מתמטית (רמת מדד/מחיר
-# לא יכולה להיות שלילית) - נמצא בפועל בדיוק אותו תבנית-תקלה (מחיר שבור קבוע
-# לאותו נייר בכל הארכיון, לא ניתן לכייל מרבעון אחר) עבור 23 מספרי-נייר שונים
-# ברחבי הארכיון, לא רק ב-512065202/"קיימות". מטופל ע"י טבלת (רגקס-טיקר,
-# סימול-מחיר-חי, מכפיל$) - הראשון שמתאים לניר הערך הספציפי.
-#
-# SLB (E-mini S&P 500 ESG): מזוהה חיצונית (עמוד אחזקות SPDR S&P 500 ESG ETF,
-# מחזיק SLBZ6 תחת "EMINI S+P500 ESG DEC26") + מכפיל E-mini סטנדרטי ($50/נק')
-# מאושר חיצונית (עמוד CME הרשמי: E-mini S&P 500 "one fifth the size of
-# standard S&P futures", שהוא $250/נק'). בדיקת סבירות (~443.749 חוזים,
-# S&P~6879 ב-2026-02-27, פי 50, שער דולר 2.978) -> ~455M ש"ח מול ~501M ש"ח
-# נכסי המסלול, קרוב ל"חשיפה למניות" הרשמית (~99%) - CI-אומת (MAE שופר).
-#
-# ES/NQ: אותה תבנית מספר-נייר (רוט CME + אות-חודש + ספרת-שנה), רוטים
-# סטנדרטיים ומתועדים פומבית ללא צורך באימות נוסף - ES=E-mini S&P 500 ($50/נק',
-# CME), NQ=E-mini Nasdaq-100 ($20/נק', CME - שונה מ-SLB/ES בכוונה, לא טעות).
-#
-# CL (WTI Crude Oil, NYMEX/CME): מכפיל חוזה סטנדרטי ומתועד פומבית = 1{,}000
-# חביות (כלומר $1{,}000 לכל $1/חבית בשער) - לא "נקודות מדד" כמו שאר הרשימה,
-# אבל אותה נוסחה (units * price_usd_per_contract * fx) עובדת זהה.
-#
-# כל המכפילים האלה הנחות-מבוססות-ידע-ציבורי (לא ניתנות לאימות ישיר מתוך הדוח
-# עצמו) - ר' תקרת-SANITY_CAP למטה כרשת ביטחון אם הנחה כלשהי שגויה למסלול
-# ספציפי. טווח ה-MSCI World/EM/ACWI/TSX/Treasury (עוד ~14 מספרי-נייר שנמצאו
-# בסריקת הארכיון) נשאר מחוץ לטבלה במכוון - מכפיל/זהות מדד לא מאומתים חיצונית
-# עדיין לאותם רוטים (בניגוד ל-ES/NQ/CL/SLB שהם רוטי CME מוכרים וחד-משמעיים).
-_CORRUPTED_FUTURES_TICKERS: list[tuple[re.Pattern, str, float]] = [
-    (re.compile(r"^SLB[A-Z]\d$"), "^GSPC", 50.0),    # E-mini S&P 500 ESG
-    (re.compile(r"^ES[A-Z]\d$"), "^GSPC", 50.0),     # E-mini S&P 500
-    (re.compile(r"^NQ[A-Z]\d$"), "^NDX", 20.0),      # E-mini Nasdaq-100
-    (re.compile(r"^CL[A-Z]\d$"), "CL=F", 1000.0),    # WTI Crude Oil (NYMEX)
-]
-
-
-def _resolve_corrupted_futures_price(ticker, report_date) -> float | None:
-    if not ticker or report_date is None:
-        return None
-    ticker = str(ticker)
-    for pattern, price_symbol, multiplier in _CORRUPTED_FUTURES_TICKERS:
-        if pattern.match(ticker):
-            live_price = price_as_of(price_symbol, report_date)
-            if live_price is not None:
-                return live_price * multiplier
-            return None
-    return None
 
 SWAP_LEGS = (
     {"units": "ערך נקוב (רגל 1)", "fx": "שער חליפין (רגל 1)", "currency": "מטבע פעילות (רגל 1)"},
@@ -247,17 +184,11 @@ JPY_100_THRESHOLD = 0.5
 # התקינות, ובלי אף רגל תקינה נופלים לשווי ההוגן הנטו כמו כל מקרה גבולי.
 FOREIGN_FX_PLACEHOLDER_TOL = 0.01
 
-# רגל-מימון סינתטית ("...Index התחייבות"): "שער נייר הערך" קבוע בדיוק על 100 -
-# מוסכמת ערך-נקוב-100 כמו אג"ח (ראו bonds_rank/מניות: value = units*price/100),
-# לא רמת מדד גולמית. יחידות בסדר גודל מיליונים + הנוסחה הרגילה (בלי /100)
-# מייצרות חשיפה מנופחת פי 100 בדיוק - מזוהה לפי שער == 100.0 בדיוק.
-PAR_QUOTED_PRICE = 100.0
-
 # אופציות ("אופציות"/"לא סחיר אופציות"): לפי הרגולטור (אושר בבדיקה, לא
 # הנחה - ר' חיפוש רשת 9.28.2026), החשיפה מחושבת לפי מודל בלק-שולס עם דלתא -
 # לא לפי units×מחיר פשוט כמו חוזים עתידיים (ל"שער נייר הערך" באופציה יש
 # משמעות אחרת: זו פרמיית האופציה עצמה, לא מחיר נכס הבסיס - אומת בפועל:
-# units×שער/100×fx ≈ שווי הוגן בדיוק, מוסכמת אגורות כמו PAR_QUOTED_PRICE).
+# units×שער/100×fx ≈ שווי הוגן בדיוק, מוסכמת אגורות).
 # דלתא מחושבת ב-option_delta_pricing.py (תנודתיות ריאליזד כקירוב ל-IV,
 # ר' אזהרה שם). טיקר נכס-הבסיס מזוהה מ-"שם נייר ערך" (option_ticker_parse,
 # אין עמודת טיקר נפרדת כמו בסוואפים) - כשלא מזוהה, נופלים לשווי-הוגן.
@@ -318,80 +249,45 @@ def _futures_exposure(
     source: list[dict], total_assets: dict[str, float]
 ) -> tuple[dict[str, float], dict[str, float]]:
     """מחזיר (sums, equity_sums) - equity_sums הוא תת-קבוצה של sums, רק שורות
-    עם נכס בסיס = מניות/מדדי-מניות (FUT_UNDERLYING_COL), לאזור החשיפה
-    למניות בדשבורד (ר' main.py) - לא משנה את sums עצמו (הקטגוריה הקיימת,
-    מאומתת מול MAE).
+    עם נכס בסיס = מניות/מדדי-מניות (FUT_UNDERLYING_COL), לאזור החשיפה למניות.
 
-    תקרת-מסלול (row_pct_sums/SANITY_CAP): נמצא בפועל (520028390_485 ודומיו) -
-    שש שורות "חוזים עתידיים" (שלוש במוסכמת ערך-נקוב-100 עם ערך-נקוב שלילי-
-    ענק, שלוש עם מחיר גולמי ענק) מדווחות בנפרד ב-PCT_COL בערכים קטנים
-    ומתקזזים כמעט לגמרי (סכום ~0.08%) - עדות ישירה שה"מיקום הכלכלי" האמיתי
-    לפי הדוח עצמו קטן וזניח. כל שורה בנפרד עברה את בדיקת ה-LEVERAGE_CAP
-    (יחס נוציונל/שווי-הוגן סביר לכל שורה), אבל הסכום המצטבר של כל שש השורות
-    יחד הגיע ל-700%+ - טעות-קנה-מידה שרק נראית תמימה ברמת שורה בודדת. בדיוק
-    כמו שכבר קיים ל-swap (capped, למטה) - תקרת SANITY_CAP *ברמת המסלול כולו*
-    (לא רק לכל שורה בנפרד), עם נפילה לסכום ה-PCT_COL המדווח (row_pct_sums) -
-    שמייצג את מה שהדוח עצמו טוען, בלי שום הנחת-קנה-מידה מהמרת שלנו."""
+    נוציונל = חוזים × רמת-המדד × מכפיל-החוזה × שער חליפין (ר' futures_notional:
+    שדה "שער נייר הערך" מדווח בכמה מוסכמות שונות לפי גוף, ולכן אינו משמש
+    כמחיר). שורה שלא זוהתה (שורש/מכפיל/רמה לא ידועים) נספרת לפי השווי ההוגן
+    המדווח שלה - הערכת חסר מכוונת, במקום ניחוש קנה מידה של המחיר.
+
+    הסיווג למניות לפי החוזה שזוהה (למשל UXY תמיד אג"ח, גם כשמסווג "מניות"
+    בדוח); רק שורה שלא זוהתה נשענת על "נכס בסיס" שבדוח.
+
+    תקרת-מסלול: סכום השורות למסלול מעל SANITY_CAP -> נפילה לסכום ה-PCT_COL
+    המדווח (כמו ב-swap)."""
+    pairs = build_futures_rows(source, FUTURES_CATEGORY, _FUT_COLS)
+    resolver = FuturesResolver([fr for _, fr in pairs], index_price_as_of)
     sums: dict[str, float] = {}
     equity_sums: dict[str, float] = {}
     row_pct_sums: dict[str, float] = {}
     equity_row_pct_sums: dict[str, float] = {}
-    for rec in source:
-        if rec["Category"] != FUTURES_CATEGORY or rec["מידע"] != "מידע":
+    for row, fr in pairs:
+        key = row.get("מפתח")
+        total = total_assets.get(key)
+        if not total:
             continue
-        report_date = rec.get("ReportMonth")
-        for row in rec["Clean"]:
-            key = row.get("מפתח")
-            total = total_assets.get(key) if key is not None else None
-            if not total:
-                continue
+        is_equity = resolver.is_equity(fr)
+        if is_equity is None:
             is_equity = row.get(FUT_UNDERLYING_COL) == EQUITY_UNDERLYING
-            row_pct = to_ratio(row.get(PCT_COL)) or 0.0
-            row_pct_sums[key] = row_pct_sums.get(key, 0.0) + row_pct
-            if is_equity:
-                equity_row_pct_sums[key] = equity_row_pct_sums.get(key, 0.0) + row_pct
-            units = _num(row.get(FUT_UNITS_COL))
-            price = _num(row.get(FUT_PRICE_COL))
-            fx = _normalize_fx(row.get(FUT_CURRENCY_COL), _num(row.get(FUT_FX_COL)))
-            if price is not None and abs(price - PAR_QUOTED_PRICE) < 1e-6:
-                price = price / 100  # רגל-מימון סינתטית במוסכמת ערך-נקוב-100, לא רמת מדד
-
-            price_is_corrupted = False
-            if price is not None and price < 0:
-                resolved_price = _resolve_corrupted_futures_price(row.get(FUT_TICKER_COL), report_date)
-                if resolved_price is not None:
-                    price = resolved_price
-                    price_is_corrupted = True
-                else:
-                    # מחיר שלילי לא-כלכלי (אין מחיר שלילי לחוזה עתידי/מדד) בלי
-                    # תחליף-מחיר-חי מאומת - לא אמין לחישוב נוציונלי בשום קנה
-                    # מידה, ואסור לו לעבור ישירות לנוסחה רק כי הוא נתפס
-                    # (במקרה) ע"י תקרת-LEVERAGE_CAP. נמצא בפועל (512065202_15345,
-                    # מיתב, טיקר ZWPU6/MSCI World): מחיר מדווח -181,177.9,
-                    # שווי הוגן -1,688 אלפי ש"ח - יחס נוציונל/שווי-הוגן יוצא בדיוק
-                    # פי 100, שנתפס בטעות ע"י LEVERAGE_CAP=75 (מקרי, לא בכוונה)
-                    # אבל עובר בלי בעיה תחת LEVERAGE_CAP=120 - מייצר חשיפה שלילית
-                    # דמיונית של כ-39% למסלול. מטופל כמו מחיר חסר לגמרי: נופל
-                    # ל-fv_ratio/row_pct, לא לתקרת-מינוף שרירותית.
-                    price = None
-
-            fv = _num(row.get(FAIR_VALUE_COL))
-            fv_ratio = (fv / total) if fv is not None else None
-
-            line_ratio = None
-            if units is not None and price is not None and fx is not None:
-                notional_thousands = units * price * fx / 1000  # לאלפי ש"ח, כמו שווי הוגן
-                line_ratio = notional_thousands / total
-                # כשהמחיר המדווח שבור (price_is_corrupted), ה-fv המדווח לאותה
-                # שורה נגזר מאותו מחיר שבור - לא עוגן אמין להשוואה כאן, בניגוד
-                # לכל שורה רגילה אחרת. נשארת רק תקרת-SANITY_CAP המוחלטת למטה.
-                if not price_is_corrupted and fv_ratio is not None and abs(line_ratio) > LEVERAGE_CAP * abs(fv_ratio):
-                    line_ratio = None  # קנה מידה לא סביר ביחס לשווי ההוגן של השורה עצמה
-            if line_ratio is None or abs(line_ratio) > SANITY_CAP:
-                line_ratio = fv_ratio if fv_ratio is not None else 0.0
-            sums[key] = sums.get(key, 0.0) + line_ratio
-            if is_equity:
-                equity_sums[key] = equity_sums.get(key, 0.0) + line_ratio
+        row_pct = to_ratio(row.get(PCT_COL)) or 0.0
+        row_pct_sums[key] = row_pct_sums.get(key, 0.0) + row_pct
+        if is_equity:
+            equity_row_pct_sums[key] = equity_row_pct_sums.get(key, 0.0) + row_pct
+        notional = resolver.notional(fr)
+        fx = 1.0 if fr.ccy == "ILS" else _normalize_fx(fr.ccy, _num(row.get(FUT_FX_COL)))
+        if notional is not None and fx is not None:
+            line_ratio = notional * fx / 1000 / total
+        else:
+            line_ratio = row_pct
+        sums[key] = sums.get(key, 0.0) + line_ratio
+        if is_equity:
+            equity_sums[key] = equity_sums.get(key, 0.0) + line_ratio
     capped = {
         key: val if abs(val) <= SANITY_CAP else row_pct_sums.get(key, 0.0)
         for key, val in sums.items()
