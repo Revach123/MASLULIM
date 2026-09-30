@@ -1,0 +1,23 @@
+{
+ "legal_id": "520030990",
+ "company": "החברה המנהלת של מינהל קרן ההשתלמות לפקידים עובדי המנהל והשירותים בע\"מ",
+ "taken": "2026-09-30T23:38:24+00:00",
+ "pages": {
+  "https://www.minhal.org/?CategoryID=164": {
+   "product": "גמל",
+   "status": 403,
+   "method": "browser",
+   "text_hash": "d05f6aef4391c532942938b5f20a19aaa9881e2d",
+   "text_head": "Sorry, you have been blocked You are unable to access minhal.org Why have I been blocked? This website is using a security service to protect itself from online attacks. The action you just performed triggered the security solution. There are several actions that could trigger this block including submitting a certain word or phrase, a SQL command or malformed data. What can I do to resolve this? You can email the site owner to let them know you were blocked. Please include what you were doing when this page came up and the Cloudflare Ray ID found at the bottom of this page. Cloudflare Ray ID:",
+   "items": []
+  },
+  "https://www.minhal.org": {
+   "product": null,
+   "status": 403,
+   "method": "browser",
+   "text_hash": null,
+   "text_head": "",
+   "items": []
+  }
+ }
+}
