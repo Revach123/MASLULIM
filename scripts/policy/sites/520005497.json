@@ -1,13 +1,18 @@
 {
  "legal_id": "520005497",
  "name": "החברה לניהול קופות התגמולים והפיצויים של עובדי בנק לאומי בע\"מ",
- "home": "https://www.bankleumi.co.il",
- "pages": [],
+ "home": "https://www.leumi.co.il",
+ "pages": [
+  {
+   "product": "גמל",
+   "url": "https://www.leumi.co.il/he/Articles/40446"
+  }
+ ],
  "browser": "headless",
  "products": [
   "גמל"
  ],
- "search": true,
- "rev": 6,
- "home_source": "report_email:bankleumi.co.il,bankleumi.co.i"
+ "search": false,
+ "rev": 7,
+ "home_source": "web_search"
 }
