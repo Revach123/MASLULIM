@@ -1,14 +1,21 @@
-# מדיניות השקעות לפי מסלול
+# מדיניות השקעות מוצהרת לפי מסלול
 
-צינור: `crawl` (סריקת אתרי החברות, הורדת מסמכים, זיהוי חדשים/שעודכנו לפי sha256) ->
-`extract` (טווחי חשיפה לכל מסלול) -> `gap` (השוואה ל-`master.json` של funds_holdings).
-ריצה יומית ב-`.github/workflows/policy_daily.yml`; פלט ב-`policy/`:
-`docs_index.json`, `crawl_report.csv`, `new_docs.json`, `tracks_policy.csv|json`, `policy_gap.csv`.
+## מבנה
+- `sites/<LegalId>.json` - מקור קבוע לכל חברה: `home`, `pages` (עמוד לכל מוצר: גמל/פנסיה/ביטוח; `{year}` מורחב לכל שנה), `browser` (`headless`/`headed`).
+- `policy/companies/<LegalId>/` - כל המצב של חברה: `site_snapshot/`, `docs_index.json`, `raw/`, פלטי פרסור, `site_changes_log.csv`.
+- `policy/*.csv|json` - טבלאות מאוחדות (`combine.py`), נבנות מחדש בכל ריצה: `tracks_policy_long.csv` (שורה לכל מסלול×אפיק),
+  `policy_changes.csv`, `documents.csv`, `crawl_report.csv`, `site_changes_log.csv`, `unparsed_layouts.json`.
 
-## חשוב - מה לא אומת
-- נכתב בסשן חסום לרשת: **שום אתר לא נסרק בפועל**. הריצה הראשונה (`workflow_dispatch`) היא המבחן.
-- `seeds.csv` - כתובות אתר מהזיכרון, לא מאומתות. חברות בלי seed מקבלות ניחוש (`guessed` ב-`crawl_report.csv`).
-  אחרי ריצה ראשונה: לתקן seeds לפי הדוח, ולהוסיף `extra_urls` לדפי מדיניות שהסורק לא מצא.
-- החילוץ הוא יוריסטיקה על עברית חופשית; נבדק רק על טקסט סינתטי. לעבור ידנית על `snippet` בכל חברה.
-- `.doc`/`.xls` ישנים ומסמכים סרוקים (ללא טקסט) לא נתמכים. אתרים שדורשים JS לא נתמכים עדיין.
-- `gap` מכסה מניות ואג"ח בלבד; התאמת שם עמודת שם-המסלול ב-master לא אומתה.
+## ריצה (`.github/workflows/policy_sites.yml`)
+ג'וב נפרד לכל חברה, במקביל. יומי 04:00 לכולן; push שמשנה רק `sites/X.json` מריץ רק את X.
+לכל חברה: `crawl.py` (רינדור בדפדפן, פתיחת אקורדיונים/לשוניות/iframes, לכידת JSON ברשת -> תמונת מצב + השוואה לקודמת ->
+בחירת מסמכי מדיניות -> הורדה, כולל דרך הדפדפן אם requests נחסם) ואז `extract.py`.
+
+## פרסרים (`extract.py`) - לפי מבנה הגיליון, לא לפי חברה
+- `parse_statement_blocks` - "קידוד מסלול"/"שם המסלול" (מיטב).
+- `parse_mh_blocks` - `מ"ה: <קוד> - <שם>`, כמה מסלולים לטבלה, בלוקים זה לצד זה (מור).
+- `parse_columns_blocks` - בלוק 5 עמודות לכל מסלול, קוד בסוגריים בכותרת (הראל).
+- `parse_change_log` - גיליון "מהות שינויים".
+מבנה לא מזוהה נשמר ב-`unparsed_layouts.json` (תחילת כל גיליון) להוספת פרסר.
+
+`gap.py --master out/master.json` - טווחי מדיניות מול חשיפה בפועל, התאמה לפי קוד קופה.

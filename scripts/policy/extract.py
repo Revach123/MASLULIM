@@ -11,7 +11,7 @@ import argparse, csv, json, re, sys
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[2]
-OUT = ROOT / "policy"
+OUT = ROOT / (__import__("os").environ.get("POLICY_OUT") or "policy")  # ריצה לחברה: policy/companies/<LegalId>
 
 NUM = r"(\d{1,3}(?:\.\d+)?)"
 PCT = NUM + r"\s*%?"

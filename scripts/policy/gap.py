@@ -10,7 +10,7 @@ from difflib import SequenceMatcher
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[2]
-OUT = ROOT / "policy"
+OUT = ROOT / (__import__("os").environ.get("POLICY_OUT") or "policy")  # ריצה לחברה: policy/companies/<LegalId>
 ACTUAL = {
     "equity": ["מניות מבכ ויהש", "לא סחיר מניות מבכ ויהש"],
     "bonds": ["איגרות חוב", "איגרות חוב ממשלתיות", "לא סחיר איגרות חוב",

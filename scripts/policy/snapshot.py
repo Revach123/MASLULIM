@@ -21,7 +21,7 @@ from .crawl import DOC_EXT, UA, base_domain, get, load_companies, load_seeds, sc
 import requests
 
 ROOT = Path(__file__).resolve().parents[2]
-OUT = ROOT / "policy"
+OUT = ROOT / (__import__("os").environ.get("POLICY_OUT") or "policy")  # ריצה לחברה: policy/companies/<LegalId>
 DL_HINT = re.compile(r"download|הורד|אקסל|excel|xls|getfile|attachment")
 MIN_LINKS_STATIC = 3  # פחות מזה קישורי מדיניות ב-HTML הגולמי -> מנסים דפדפן
 
@@ -42,9 +42,10 @@ def items_from_anchors(anchors, page_url, dom):
     for a in anchors:
         href = urldefrag(urljoin(page_url, a["href"]))[0]
         text = re.sub(r"\s+", " ", a["text"]).strip()
-        if not href.startswith("http") or not keep_item(text, href):
+        is_iframe = text == "(iframe)"
+        if not href.startswith("http") or not (is_iframe or keep_item(text, href)):
             continue
-        out[href] = {"text": text, "href": href, "year": year_of(text + " " + unquote(href)),
+        out[href] = {"text": text, "href": href, "year": year_of(text + " " + unquote(href)), "iframe": is_iframe,
                      "doc": href.lower().split("?")[0].endswith(DOC_EXT) or bool(DL_HINT.search(text.lower())),
                      "internal": base_domain(href) == dom}
     return out
@@ -59,29 +60,61 @@ def fetch_static(s, url):
     return anchors, 200, soup.get_text(" ", strip=True)
 
 
+FILE_RX = re.compile(r"""["'(=\s]((?:https?:)?[\w\-./%:?=&~א-ת]+?\.(?:xlsx|xls|pdf|docx))(?=["')\s&<,]|$)""", re.I)
+
+
 def fetch_browser(pw, url):
-    """רינדור: ממתין לרשת שקטה, פותח אקורדיונים ולשוניות, ואוסף קישורים אחרי כל פתיחה."""
-    b = pw.chromium.launch(executable_path=os.environ.get("PW_CHROMIUM") or None)
+    """רינדור: רשת שקטה, פתיחת אקורדיונים/לשוניות, ולכידת בקשות רשת (JSON עם נתיבי קבצים, קבצים ישירים, iframes).
+    -> (anchors, status, body_text)"""
+    b = pw.chromium.launch(executable_path=os.environ.get("PW_CHROMIUM") or None, headless=os.environ.get("POLICY_HEADED") != "1",
+                           args=["--disable-blink-features=AutomationControlled"])
     try:
-        pg = b.new_page(locale="he-IL", user_agent=UA)
-        pg.goto(url, wait_until="networkidle", timeout=60000)
+        ctx = b.new_context(locale="he-IL", user_agent=UA, viewport={"width": 1400, "height": 1000})
+        pg = ctx.new_page()
+        net = []
+
+        def on_response(r):
+            try:
+                ct = r.headers.get("content-type", "")
+                u = r.url
+                if re.search(r"\.(xlsx|xls|pdf|docx)(\?|$)", u, re.I) or re.search(r"spreadsheet|pdf|msword|excel", ct):
+                    net.append({"href": u, "text": "(network file)"})
+                elif "json" in ct or "javascript" not in ct and "text/html" not in ct and "xml" in ct:
+                    body = r.text()
+                    if len(body) < 3_000_000:
+                        for m in FILE_RX.findall(body):
+                            net.append({"href": urljoin(u, m.replace("\\/", "/")), "text": "(xhr)"})
+            except Exception:
+                pass
+
+        pg.on("response", on_response)
+        resp = pg.goto(url, wait_until="networkidle", timeout=60000)
+        status = resp.status if resp else 200
         seen, anchors = set(), []
 
         def collect():
             for a in pg.eval_on_selector_all("a[href]", "els=>els.map(e=>({href:e.href,text:e.innerText||e.textContent||''}))"):
                 if (a["href"], a["text"].strip()) not in seen:
                     seen.add((a["href"], a["text"].strip())); anchors.append(a)
+            for f in pg.eval_on_selector_all("iframe[src]", "els=>els.map(e=>e.src)"):
+                if (f, "iframe") not in seen:
+                    seen.add((f, "iframe")); anchors.append({"href": f, "text": "(iframe)"})
 
         collect()
         for sel in ('[aria-expanded="false"]:not(a)', "details:not([open]) > summary", '[role="tab"]',
-                    "button:has-text('הצג עוד')", "button:has-text('עוד')"):
+                    "button:has-text('הצג עוד')", "button:has-text('עוד')", "[class*=accordion] [class*=header]",
+                    "[class*=year]:not(a)"):
             for el in pg.query_selector_all(sel)[:120]:
                 try:
                     el.click(timeout=800); pg.wait_for_timeout(150)
                 except Exception:
                     pass
             collect()
-        return anchors, 200, pg.inner_text("body")
+        pg.wait_for_timeout(1500)
+        collect()
+        anchors += [x for x in net if (x["href"], x["text"]) not in seen]
+        text = pg.inner_text("body")
+        return anchors, (200 if status < 400 else status), text
     except Exception as e:
         return None, f"browser:{type(e).__name__}", ""
     finally:
@@ -115,14 +148,16 @@ def snapshot_company(s, pw, home, extra, products=None, max_pages=15, depth_max=
         if pw and (anchors is None or (d == 0 and url in extra) or policy_like < MIN_LINKS_STATIC) and (url in extra or score(url) > 0 or d == 0):
             b_anchors, b_status, b_text = fetch_browser(pw, url)
             if b_anchors is not None:
-                items.update(items_from_anchors(b_anchors, url, dom)); text, method, status = b_text, "browser", 200
+                items.update(items_from_anchors(b_anchors, url, dom)); text, method, status = b_text, "browser", b_status
             elif anchors is None:
                 status = b_status
-        pages[url] = {"product": product_of(url, text, products.get(url)), "status": status, "method": method, "text_hash": hashlib.sha1(text.encode()).hexdigest() if text else None,
+        pages[url] = {"product": product_of(url, text, products.get(url)), "status": status, "method": method, "text_hash": hashlib.sha1(text.encode()).hexdigest() if text else None, "text_head": re.sub(r"\s+", " ", text)[:600],
                       "items": sorted(items.values(), key=lambda i: (i["year"] or "", i["text"]), reverse=True)}
         if d < depth_max:
             for i in items.values():
-                if i["internal"] and not i["doc"] and i["href"] not in seen and score(i["text"] + unquote(i["href"])) > 0:
+                if i["href"] in seen or i["doc"]:
+                    continue
+                if i.get("iframe") or (i["internal"] and score(i["text"] + unquote(i["href"])) > 0):
                     q.append((i["href"], d + 1))
     return pages
 

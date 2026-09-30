@@ -1,21 +1,22 @@
-name: Policy per-site (parallel)
+name: Policy per-company
 
+# כל חברה = ג'וב נפרד שכותב רק ל-policy/companies/<LegalId>/.
+# push: רק חברות שקובץ ההגדרות שלהן (scripts/policy/sites/<LegalId>.json) השתנה; שינוי בקוד/ב-workflow -> כולן.
+# schedule: כל החברות, כל יום (זיהוי מסמכים חדשים/עדכונים).
 on:
   push:
     branches: [claude/tender-wozniak-of4b7i]
-    paths: [".github/workflows/policy_sites.yml"]
+    paths: ["scripts/policy/**", ".github/workflows/policy_sites.yml"]
+  schedule:
+    - cron: "0 4 * * *"
   workflow_dispatch:
     inputs:
       only:
-        description: "LegalId מופרדים ברווח (ריק = כל חברה עם seed)"
+        description: "LegalId מופרדים ברווח (ריק = כולן)"
         required: false
 
 permissions:
   contents: write
-
-concurrency:
-  group: policy-sites
-  cancel-in-progress: false
 
 jobs:
   matrix:
@@ -24,24 +25,42 @@ jobs:
       ids: ${{ steps.m.outputs.ids }}
     steps:
       - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
       - id: m
+        env:
+          BEFORE: ${{ github.event.before }}
+          ONLY: ${{ inputs.only }}
         run: |
           python3 - <<'PY' >> "$GITHUB_OUTPUT"
-          import csv, json, os
-          only = "${{ inputs.only }}".split()
-          ids = [r["legal_id"] for r in csv.DictReader(open("scripts/policy/seeds.csv", encoding="utf-8"))]
-          ids = sorted(set(i for i in ids if not only or i in only))
+          import json, os, re, subprocess
+          from pathlib import Path
+          all_ids = sorted(p.stem for p in Path("scripts/policy/sites").glob("*.json"))
+          ids = all_ids
+          if os.environ.get("ONLY"):
+              ids = [i for i in all_ids if i in os.environ["ONLY"].split()]
+          elif os.environ.get("GITHUB_EVENT_NAME") == "push" and os.environ.get("BEFORE", "").strip("0"):
+              changed = subprocess.run(["git", "diff", "--name-only", os.environ["BEFORE"], os.environ["GITHUB_SHA"]],
+                                       capture_output=True, text=True).stdout.split()
+              site_ids = [m.group(1) for f in changed if (m := re.fullmatch(r"scripts/policy/sites/(\d+)\.json", f))]
+              other = [f for f in changed if (f.startswith("scripts/policy/") or f.endswith("policy_sites.yml"))
+                       and not re.fullmatch(r"scripts/policy/sites/\d+\.json", f)]
+              ids = all_ids if other else sorted(set(site_ids) & set(all_ids))
           print("ids=" + json.dumps(ids))
           PY
 
-  site:
+  company:
     needs: matrix
+    if: needs.matrix.outputs.ids != '[]'
     runs-on: ubuntu-latest
-    timeout-minutes: 45
+    timeout-minutes: 40
     strategy:
       fail-fast: false
       matrix:
         id: ${{ fromJson(needs.matrix.outputs.ids) }}
+    env:
+      ID: ${{ matrix.id }}
+      POLICY_OUT: policy/companies/${{ matrix.id }}
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-python@v5
@@ -50,60 +69,43 @@ jobs:
       - run: |
           pip install requests beautifulsoup4 pdfplumber openpyxl python-docx xlrd playwright
           python -m playwright install --with-deps chromium
-      - name: Snapshot site structure
+      - name: Crawl (snapshot + diff + download)
         continue-on-error: true
-        run: python -m scripts.policy.snapshot --only ${{ matrix.id }}
-      - name: Crawl and download documents
-        continue-on-error: true
-        run: python -m scripts.policy.crawl --only ${{ matrix.id }}
-      - uses: actions/upload-artifact@v4
-        if: always()
-        with:
-          name: site-${{ matrix.id }}
-          path: |
-            policy/docs_index.json
-            policy/raw/
-            policy/site_snapshot/
-            policy/crawl_report.csv
-            policy/site_report.csv
-            policy/site_changes.json
-            policy/new_docs.json
-          if-no-files-found: warn
-
-  aggregate:
-    needs: site
-    if: always()
-    runs-on: ubuntu-latest
-    timeout-minutes: 30
-    steps:
-      - uses: actions/checkout@v4
-      - uses: actions/setup-python@v5
-        with:
-          python-version: "3.12"
-      - run: pip install requests beautifulsoup4 pdfplumber openpyxl python-docx xlrd
-      - uses: actions/download-artifact@v4
-        with:
-          path: artifacts
-          pattern: site-*
-      - name: Merge and parse
         run: |
-          python -m scripts.policy.merge artifacts
-          python -m scripts.policy.extract --all
+          if [ "$(jq -r '.browser // "headless"' scripts/policy/sites/$ID.json)" = "headed" ]; then
+            POLICY_HEADED=1 xvfb-run -a python -m scripts.policy.crawl --only "$ID"
+          else
+            python -m scripts.policy.crawl --only "$ID"
+          fi
+      - name: Parse
+        continue-on-error: true
+        run: python -m scripts.policy.extract
       - name: Summary
+        if: always()
         run: |
-          echo "### דוח סריקה" >> "$GITHUB_STEP_SUMMARY"
-          python - <<'PY' >> "$GITHUB_STEP_SUMMARY"
-          import csv, json
-          print("| חברה | עמודים | מסמכים | שגיאות |\n|---|---|---|---|")
-          for r in csv.DictReader(open("policy/crawl_report.csv", encoding="utf-8-sig")):
-              print(f"| {r['company']} | {r['pages']} | {r['docs']} | {r['errors'][:80]} |")
-          print("\nפרסור:", len(json.load(open("policy/tracks_policy_long.json", encoding="utf-8"))), "שורות long;",
-                len(json.load(open("policy/unparsed_layouts.json", encoding="utf-8"))), "מסמכים לא מזוהים")
+          python3 - <<'PY' >> "$GITHUB_STEP_SUMMARY"
+          import csv, json, os
+          d = os.environ["POLICY_OUT"]
+          for r in csv.DictReader(open(f"{d}/crawl_report.csv", encoding="utf-8-sig")):
+              print(f"**{r['company']}** pages={r['pages']} docs={r['docs']}\n\n{r['errors']}\n")
+          for n in ("site_changes.json", "tracks_policy_long.json", "unparsed_layouts.json"):
+              p = f"{d}/{n}"
+              print(f"- {n}: {len(json.load(open(p, encoding='utf-8'))) if os.path.exists(p) else '-'}")
           PY
-      - name: Commit
+      - name: Commit (retry, rebuild combined tables on latest head)
+        if: always()
         run: |
           git config user.name "github-actions"
           git config user.email "actions@users.noreply.github.com"
-          git add policy
-          git diff --cached --quiet || git commit -m "policy: per-site run"
-          git pull --rebase origin "${GITHUB_REF_NAME}" && git push
+          B="${GITHUB_REF_NAME}"
+          mkdir -p /tmp/out && cp -r "$POLICY_OUT" /tmp/out/$ID
+          for i in 1 2 3 4 5 6 7 8; do
+            git fetch -q origin "$B" && git reset -q --hard "origin/$B"
+            rm -rf "$POLICY_OUT" && mkdir -p policy/companies && cp -r /tmp/out/$ID "$POLICY_OUT"
+            POLICY_OUT= python -m scripts.policy.combine
+            git add policy
+            if git diff --cached --quiet; then echo "nothing to commit"; break; fi
+            git commit -q -m "policy: $ID"
+            if git push -q origin "HEAD:$B"; then echo "pushed"; break; fi
+            sleep $((RANDOM % 15 + 5))
+          done

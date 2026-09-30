@@ -1,18 +1,1 @@
 ﻿legal_id,company,homepage,site_source,pages,docs,errors
-512065202,"מיטב גמל ופנסיה בע""מ",https://www.meitav.co.il,seed,42,45,
-512237744,"מגדל מקפת קרנות פנסיה וקופות גמל בע""מ",https://www.migdal.co.il,seed,15,1,
-512244146,"כלל פנסיה וגמל בע""מ",https://www.clalbit.co.il,seed,7,0,
-512245812,"מנורה מבטחים פנסיה וגמל בע""מ",https://www.menoramivt.co.il,seed,10,0,
-512267592,"הראל פנסיה וגמל בע""מ",https://www.harel-group.co.il,seed,24,35,https://www.harel-group.co.il/investor-relations/investor-relations/Pages/default.aspx -> 410 | https://www.harel-group.co.il/finance/alternative-investments/information/Pages/magen_usa_alternative.aspx -> not_a_document
-513026484,"הפניקס פנסיה וגמל בע""מ",https://www.fnx.co.il,seed,47,6,https://agent.fnx.co.il/my.policy -> ERR | https://b.fnx.co.il/my.policy -> ERR | https://my.fnx.co.il/direct/action/CancelPolicyHealth -> 404 | https://my.fnx.co.il/direct/action/CancelPolicyLife -> 404 | https://my.fnx.co.il/direct/action/CancelPolicyVehicle -> 404
-513173393,"אלטשולר שחם גמל ופנסיה בע""מ",https://www.as-invest.co.il,seed,60,11,https://www.as-invest.co.il/magazine/השקעות-בארץ/מס-החברות-כמנוע-צמיחה-למשק-הישראלי/ -> not_a_document | https://www.as-invest.co.il/magazine/השקעות-בארץ/אינפלציה-לא-בעתיד-הקרוב/ -> not_a_document | https://www.as-invest.co.il/magazine/השקעות-בארץ/אילו-חברות-ירוויחו-מתנופת-הבניה-הצפויה-בארץ/ -> not_a_document
-513611509,"ילין לפידות ניהול קופות גמל בע""מ",https://www.yl-invest.co.il,seed,60,0,
-513910703,"איי. די. איי. חברה לביטוח בע""מ",https://www.ids.co.il,seed,1,0,https://www.ids.co.il -> ERR
-514956465,"מור גמל ופנסיה בע""מ",https://www.moreinvest.co.il,seed,2,0,https://www.moreinvest.co.il -> 403 | https://www.moreinvest.co.il/מוצרים/גמל-ופנסיה/מידע-כללי-ורגולציה/הצהרה-על-מדיניות-השקעה/ -> 403
-520004078,"הראל חברה לביטוח בע""מ",https://www.harel-group.co.il,seed,24,0,https://www.harel-group.co.il/investor-relations/investor-relations/Pages/default.aspx -> 410 | https://www.harel-group.co.il/finance/alternative-investments/information/Pages/magen_usa_alternative.aspx -> not_a_document
-520004896,"מגדל חברה לביטוח בע""מ",https://www.migdal.co.il,seed,17,3,
-520023185,"הפניקס חברה לביטוח בע""מ",https://www.fnx.co.il,seed,55,11,https://www.fnx.co.il/fnx-insurance-ltd/investment-information-reports/the-expected-investment-policy/the-expected-investment-policy-2024/ -> 502 | https://agent.fnx.co.il/my.policy -> ERR | https://b.fnx.co.il/my.policy -> ERR | https://my.fnx.co.il/direct/action/CancelPolicyHealth -> 404 | https://my.fnx.co.il/direct/action/CancelPolicyLife -> 404
-520024647,"כלל חברה לביטוח בע""מ",https://www.clalbit.co.il,seed,9,0,
-520030677,"איילון חברה לביטוח בע""מ",https://www.ayalon-ins.co.il,seed,2,0,https://www.ayalon-ins.co.il -> 403 | https://www.ayalon-ins.co.il/investments -> 403
-520042177,"הכשרה חברה לביטוח בע""מ",https://www.hcsra.co.il,seed,22,4,https://agents-login.hcsra.co.il/my.policy -> ERR | https://www.hcsra.co.il/investor-relations/: https:/www.linkedin.com/in/avi-shlomo-61235b314?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app -> 404
-520042540,"מנורה מבטחים ביטוח בע""מ",https://www.menoramivt.co.il,seed,11,0,

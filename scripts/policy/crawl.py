@@ -7,7 +7,7 @@ raw/<LegalId>/..., crawl_report.csv (מה נמצא/נכשל לכל חברה), ne
 חייב לרוץ מחוץ ל-sandbox של הסשן (חסום) - ר' .github/workflows/policy_daily.yml.
 חברות בלי seed ב-seeds.csv: ניחוש אתר בחיפוש (מסומן guessed בדוח - לאמת ידנית).
 """
-import argparse, csv, hashlib, json, re, sys, time
+import argparse, csv, hashlib, json, os, re, sys, time
 from collections import deque
 from datetime import datetime, timezone
 from pathlib import Path
@@ -17,7 +17,7 @@ import requests
 from bs4 import BeautifulSoup
 
 ROOT = Path(__file__).resolve().parents[2]
-OUT = ROOT / "policy"
+OUT = ROOT / (__import__("os").environ.get("POLICY_OUT") or "policy")  # ריצה לחברה: policy/companies/<LegalId>
 UA = "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124 Safari/537.36"
 DOC_EXT = (".pdf", ".xlsx", ".xls", ".docx", ".doc")
 # משקל מילות מפתח: מסמך מדיניות (גבוה) מול דפי ניווט סבירים (נמוך)
@@ -50,21 +50,13 @@ def load_companies() -> dict[str, dict]:
 
 
 def load_seeds() -> dict[str, dict]:
-    p = Path(__file__).with_name("seeds.csv")
+    """scripts/policy/sites/<LegalId>.json: {home, pages:[{product,url}], browser}. url יכול להכיל {year}."""
     out = {}
-    if p.exists():
-        with open(p, encoding="utf-8") as f:
-            for r in csv.DictReader(f):
-                extra, products = [], {}
-                for u in (r.get("extra_urls") or "").split("|"):
-                    u = u.strip()
-                    if not u:
-                        continue
-                    prod, sep, rest = u.partition("=")
-                    if sep and prod in ("גמל", "פנסיה", "ביטוח") and rest.startswith("http"):
-                        u = rest; products[u] = prod
-                    extra.append(u)
-                out[r["legal_id"]] = {"home": r["homepage"].strip(), "extra": extra, "products": products}
+    for p in sorted(Path(__file__).with_name("sites").glob("*.json")):
+        cfg = json.loads(p.read_text("utf-8"))
+        pages = cfg.get("pages", [])
+        out[cfg["legal_id"]] = {"home": cfg["home"], "extra": [x["url"] for x in pages],
+                                "products": {x["url"]: x.get("product") for x in pages}, "browser": cfg.get("browser", "headless")}
     return out
 
 
@@ -96,45 +88,6 @@ def get(s: requests.Session, url: str, **kw):
     return None
 
 
-def crawl_company(s, legal_id, home, extra, max_pages, depth_max=3):
-    """מחזיר (docs, pages_visited, errors). docs = [{url, text, page}]"""
-    dom = base_domain(home)
-    seen, docs, errors = set(), {}, []
-    q = deque([(home, 0)] + [(u, 1) for u in extra])
-    visited = 0
-    while q and visited < max_pages:
-        url, d = q.popleft()
-        url = urldefrag(url)[0]
-        if url in seen:
-            continue
-        seen.add(url)
-        if url.lower().split("?")[0].endswith(DOC_EXT):
-            continue
-        r = get(s, url)
-        visited += 1
-        if r is None or r.status_code != 200 or "html" not in r.headers.get("content-type", "html"):
-            errors.append(f"{url} -> {getattr(r, 'status_code', 'ERR')}")
-            continue
-        soup = BeautifulSoup(r.content, "html.parser")
-        page_ctx = score(soup.title.get_text(" ") if soup.title else "") + score(url)
-        for a in soup.find_all("a", href=True):
-            link = urldefrag(urljoin(url, a["href"]))[0]
-            if not link.startswith("http"):
-                continue
-            text = a.get_text(" ", strip=True)
-            sc = score(text) + score(unquote(link))
-            path = link.lower().split("?")[0]
-            dl_hint = re.search(r"download|הורד|אקסל|excel|xls|getfile|attachment", (text + " " + link).lower())
-            if path.endswith(DOC_EXT) or (dl_hint and (sc > 0 or page_ctx >= 10)):
-                # מסמך נחשב מדיניות אם הקישור/הטקסט מרמזים, או שהדף עצמו עוסק במדיניות
-                if sc > 0 or page_ctx >= 10:
-                    docs.setdefault(link, {"url": link, "text": text, "page": url})
-            elif base_domain(link) == dom and d < depth_max and link not in seen and sc > 0:
-                (q.appendleft if sc >= 10 else q.append)((link, d + 1))
-        time.sleep(0.5)
-    return docs, visited, errors
-
-
 def sniff_ext(content: bytes) -> str | None:
     """סוג הקובץ לפי תוכן (קישורי הורדה לרוב בלי סיומת). None = לא מסמך."""
     if content[:4] == b"PK\x03\x04":
@@ -155,10 +108,60 @@ def download(s, url):
     return r, 200
 
 
+NOISE = re.compile(r"esg|אחראי|תגמול|פרטיות|privacy|תקנון|מבצע|גילוי[-_ ]נאות|דוח(ות)?[-_ ]כספי|מצגת|presentation|"
+                   r"investor|equal|שכר[-_ ]שווה|פוליסה|annuity|premi|מנתחים|אמות[-_ ]מידה|ממשל", re.I)
+POLICY = re.compile(r"מדיניות[-_ ]*(ה)?השקעה|מדיניות[-_ ]*(ה)?השקעות|מדיניות[-_ ]*מוצהרת|הצהרת[-_ ]*(מדיניות|השקעות)|"
+                    r"הצהרה[-_ ]*על[-_ ]*מדיניות|investment[-_ ]*polic|expected[-_ ]*investment|statement[-_ ]*investment", re.I)
+
+
+def expand_templates(urls, first_year=2019):
+    """כתובות עם {year} מורחבות לכל שנה (אתרים שמחזיקים דף/מסנן לכל שנה, למשל כלל/הפניקס)."""
+    out = []
+    for u in urls:
+        if "{year}" in u:
+            out += [u.replace("{year}", str(y)) for y in range(datetime.now().year, first_year - 1, -1)]
+        else:
+            out.append(u)
+    return out
+
+
+def select_docs(pages: dict, extra: list[str]):
+    """בוחר מסמכי מדיניות מתוך תמונת המצב: מילות מדיניות בטקסט/שם קובץ (בלי רעש), או גיליון אקסל בעמוד
+    מדיניות/seed. -> {decoded_url: item}. כפילויות URL מקודד/לא מקודד מתמזגות."""
+    ctx_pages = {u for u in pages if u in extra or POLICY.search(unquote(u))}
+    out = {}
+    for page_url, p in pages.items():
+        for i in p["items"]:
+            if not i["doc"] and "network" not in i["text"] and "xhr" not in i["text"]:
+                continue
+            href, blob = i["href"], unquote(i["href"]) + " " + i["text"]
+            ext = href.lower().split("?")[0].rsplit(".", 1)[-1]
+            ok = bool(POLICY.search(blob)) and not NOISE.search(blob)
+            ok = ok or (page_url in ctx_pages and ext in ("xlsx", "xls") and not NOISE.search(blob))
+            if ok:
+                out.setdefault(unquote(href), {**i, "page": page_url})
+    return out
+
+
+def download_browser(pw, url):
+    """הורדה דרך הדפדפן (קוקיז/Headers אמיתיים) כשבקשת requests נחסמת."""
+    b = pw.chromium.launch(executable_path=os.environ.get("PW_CHROMIUM") or None, headless=os.environ.get("POLICY_HEADED") != "1",
+                           args=["--disable-blink-features=AutomationControlled"])
+    try:
+        ctx = b.new_context(user_agent=UA, locale="he-IL")
+        r = ctx.request.get(url, timeout=60000)
+        return r.body() if r.status == 200 else None
+    except Exception:
+        return None
+    finally:
+        b.close()
+
+
 def main():
+    from .snapshot import snapshot_company, diff as snap_diff  # lazy: snapshot מייבא מכאן
     ap = argparse.ArgumentParser()
     ap.add_argument("--only", nargs="*")
-    ap.add_argument("--max-pages", type=int, default=60)
+    ap.add_argument("--no-browser", action="store_true")
     a = ap.parse_args()
 
     OUT.mkdir(exist_ok=True)
@@ -167,53 +170,90 @@ def main():
     cos, seeds = load_companies(), load_seeds()
     s = requests.Session()
     now = datetime.now(timezone.utc).isoformat(timespec="seconds")
-    report, new_docs = [], []
-    done_urls: set[str] = set()  # מסמך שכבר עובד בריצה זו (חברות באותו אתר) - לא מעובד פעמיים; שיוך סופי לפי קוד קופה
+    report, new_docs, all_changes = [], [], []
+    done: set[str] = set()  # מסמך שכבר עובד בריצה זו (חברות באותו אתר)
+    pw_cm = pw = None
+    if not a.no_browser:
+        try:
+            from playwright.sync_api import sync_playwright
+            pw_cm = sync_playwright(); pw = pw_cm.start()
+        except Exception as e:
+            print(f"[crawl] playwright לא זמין: {e!r}")
 
     for legal_id, c in sorted(cos.items()):
         if a.only and legal_id not in a.only:
             continue
-        seed, status = seeds.get(legal_id), "seed"
+        seed = seeds.get(legal_id)
         if not seed:
-            g = guess_homepage(c["name"], s)
-            seed, status = ({"home": g, "extra": []} if g else None), "guessed"
-        if not seed:
-            report.append([legal_id, c["name"], "", "no_site", 0, 0, ""]); continue
-        docs, pages, errs = crawl_company(s, legal_id, seed["home"], seed["extra"], a.max_pages)
+            report.append([legal_id, c["name"], "", "no_seed", 0, 0, ""]); continue
+        extra = expand_templates(seed["extra"])
+        products = {u: seed["products"].get(t) for t in seed["extra"] for u in expand_templates([t])}
+        pages = snapshot_company(s, pw, seed["home"], extra, products, max_pages=40)
+        # תמונת מצב + שינויים מול הריצה הקודמת (פריט חדש/הוסר/טקסט השתנה) - זה מנגנון זיהוי העדכונים היומי
+        snap_path = OUT / "site_snapshot" / f"{legal_id}.json"
+        snap_path.parent.mkdir(parents=True, exist_ok=True)
+        old = json.loads(snap_path.read_text("utf-8")) if snap_path.exists() else None
+        changes = snap_diff(old["pages"], pages) if old else []
+        for x in changes:
+            x.update(legal_id=legal_id, company=c["name"], detected=now)
+        # עמוד שנכשל בריצה זו שומר את התמונה הקודמת שלו - אחרת בריצה הבאה כל הפריטים ייראו "חדשים"
+        keep = {u: {**old["pages"][u], "status": p["status"]} for u, p in pages.items()
+                if p["status"] != 200 and old and u in old["pages"]}
+        snap_path.write_text(json.dumps({"legal_id": legal_id, "company": c["name"], "taken": now, "pages": {**pages, **keep}},
+                                        ensure_ascii=False, indent=1), "utf-8")
+        all_changes += changes
+        docs = select_docs(pages, set(extra))
+        errs = [f"{u}: {p['status']}" for u, p in pages.items() if p["status"] != 200][:5]
         got = 0
-        for url, d in docs.items():
-            if url in done_urls:
+        for key, d in docs.items():
+            if key in done:
                 continue
-            done_urls.add(url)
+            done.add(key)
+            url = d["href"]
             r, code = download(s, url)
-            if r is None:
-                errs.append(f"{url} -> {code}"); continue
-            sha = hashlib.sha256(r.content).hexdigest()
-            ent = index.get(url)
+            content = r.content if r is not None else None
+            if content is None and pw and code in (403, "ERR"):
+                content = download_browser(pw, url)
+                code = 200 if content else code
+            if content is None or sniff_ext(content) is None:
+                errs.append(f"{url[-80:]} -> {code}"); continue
+            sha = hashlib.sha256(content).hexdigest()
+            ukey = unquote(url)
+            ent = index.get(ukey)
             kind = "new" if ent is None else ("changed" if ent["sha256"] != sha else "unchanged")
             if kind != "unchanged":
                 name = re.sub(r"[^\w.\-]", "_", unquote(urlparse(url).path.rsplit("/", 1)[-1]))[:80]
-                ext = sniff_ext(r.content)
+                ext = sniff_ext(content)
                 if not name.lower().endswith(ext):
                     name += ext
                 p = OUT / "raw" / legal_id / f"{sha[:12]}_{name}"
                 p.parent.mkdir(parents=True, exist_ok=True)
-                p.write_bytes(r.content)
-                new_docs.append({"legal_id": legal_id, "url": url, "kind": kind, "file": str(p.relative_to(ROOT))})
-                ent = {"legal_id": legal_id, "first_seen": now if ent is None else ent["first_seen"],
-                       "file": str(p.relative_to(ROOT)), "parsed_sha": None}
-            ent.setdefault("history", [])
-            if ent.get("sha256") and ent["sha256"] != sha:
-                ent["history"].append({"sha256": ent["sha256"], "file": ent.get("file"), "last_seen": ent.get("last_seen")})
-            ent.update({"sha256": sha, "size": len(r.content), "last_seen": now,
-                        "last_modified": r.headers.get("last-modified"), "link_text": d["text"],
-                        "source_page": d["page"]})
-            index[url] = ent
+                p.write_bytes(content)
+                new_docs.append({"legal_id": legal_id, "url": ukey, "kind": kind, "file": str(p.relative_to(ROOT))})
+                prev = ent or {}
+                ent = {"legal_id": legal_id, "first_seen": prev.get("first_seen", now), "file": str(p.relative_to(ROOT)),
+                       "parsed_sha": None, "history": prev.get("history", [])}
+                if prev.get("sha256"):
+                    ent["history"].append({"sha256": prev["sha256"], "file": prev.get("file"), "last_seen": prev.get("last_seen")})
+            ent.update({"sha256": sha, "size": len(content), "last_seen": now, "link_text": d["text"],
+                        "source_page": d["page"], "product": pages[d["page"]].get("product")})
+            index[ukey] = ent
             got += 1
-        report.append([legal_id, c["name"], seed["home"], status, pages, got, " | ".join(errs[:5])])
-        print(f"[{legal_id}] {c['name']}: pages={pages} docs={got} errs={len(errs)}", flush=True)
+        report.append([legal_id, c["name"], seed["home"], "seed", len(pages), got, " | ".join(errs)[:400]])
+        print(f"[{legal_id}] {c['name']}: pages={len(pages)} docs={got} errs={len(errs)}", flush=True)
+    if pw_cm:
+        pw_cm.stop()
 
     idx_path.write_text(json.dumps(index, ensure_ascii=False, indent=1), "utf-8")
+    (OUT / "site_changes.json").write_text(json.dumps(all_changes, ensure_ascii=False, indent=1), "utf-8")
+    if all_changes:
+        log = OUT / "site_changes_log.csv"
+        new_file = not log.exists()
+        with open(log, "a", encoding="utf-8-sig", newline="") as f:
+            w = csv.DictWriter(f, ["detected", "legal_id", "company", "kind", "page", "text", "href"], extrasaction="ignore")
+            if new_file:
+                w.writeheader()
+            w.writerows(all_changes)
     (OUT / "new_docs.json").write_text(json.dumps(new_docs, ensure_ascii=False, indent=1), "utf-8")
     with open(OUT / "crawl_report.csv", "w", encoding="utf-8-sig", newline="") as f:
         w = csv.writer(f)
