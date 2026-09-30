@@ -71,7 +71,10 @@ def auto_shares(tracks: list[dict]) -> tuple[dict[str, tuple[str, float]], float
 
 def compare(share_rows: list[dict], index_table: list[dict]) -> list[dict]:
     groups: dict[tuple, list[dict]] = defaultdict(list)
+    by_num: dict[str, list[dict]] = defaultdict(list)  # ביטוח: לפי מספר מסלול, כמו insuranceCompByNum בדף
     for t in index_table:
+        if t.get("product") in ("ביטוח", "ביטוח (ישן)"):
+            by_num[str(t.get("track_number") or t["key"].split("_")[1]).strip()].append(t)
         sub = SUBTYPE_MAP.get(str(t.get("track_type") or "").strip().lower())
         if sub:
             groups[(t.get("product"), t.get("company"), sub)].append(t)
@@ -81,7 +84,10 @@ def compare(share_rows: list[dict], index_table: list[dict]) -> list[dict]:
         if not isinstance(indices, list) or not indices:
             continue
         key = (row.get("product"), row.get("company"), row.get("subtype"))
-        tracks = groups.get(key, [])
+        if row.get("product") == "פוליסות חסכון":
+            tracks = by_num.get(str((row.get("data") or {}).get("track_number") or "").strip(), [])
+        else:
+            tracks = groups.get(key, [])
         man = manual_shares(indices)
         auto, eq = auto_shares(tracks)
         ids = set(man) | set(auto)

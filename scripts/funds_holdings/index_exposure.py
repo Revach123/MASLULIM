@@ -52,10 +52,12 @@ _P = [
     (r"MID\W?CAP\W?400|S\W?P\W?400|^FAW$", "sp400", "S&P 400"),
     # ענפים (בעיקר ארה"ב - Select Sector / MSCI US)
     (r"SEMICONDUCTOR|SEMICON|\bSOX\b|PHLX|\bSMH\b|שבבים|^SWO$|MVSMH", "semis", "שבבים"),
+    (r"SOFTWARE|^S5SFTW|\bIGV\b|תוכנה", "us_software", "תוכנה ושירותים"),
+    (r"HARDWARE|חומרה", "us_hardware", "חומרה וציוד טכנולוגיים"),
     (r"(WORLD|GLOBAL)\W.{0,25}(TECH|INFORMATION)|טכנולוגיה עולמי|עולמי.{0,5}טכנולוגיה|^NDWUIT$|^M1WO0IT", "world_tech", "טכנולוגיה עולמי"),
     (r"TECHNOLOGY|INFO\w*\W?TECH|TECH\W?SEL|^S5TECH|^S5INFT|\bXLK\b|טכנולוגיה|^IXT(TR)?$", "us_tech", "טכנולוגיה ארה\"ב"),
     (r"COMMUNICATION|COMM\W?SERV|\bXLC\b|תקשורת|^XAS$|^IXC(TR)?$", "us_comm", "תקשורת"),
-    (r"CONSUMER\W?DISC|DISCRETION|\bXLY\b|שיקול דעת צרכני|צריכה מחזורית|^XAY$|^IXY(TR)?$", "us_consdisc",
+    (r"CONSUMER\W?DISC|DISCRETION|\bXLY\b|שיקול דעת צרכני|צריכה מחזורית|^XAY$|^IXY(TR)?$|^RIYCCTR|^RIY\w*CD", "us_consdisc",
      "שיקול דעת צרכני"),
     (r"STAPLES|\bXLP\b|מוצרי צריכה בסיסיים|^IXR(TR)?$", "us_staples", "מוצרי צריכה בסיסיים ארה\"ב"),
     (r"HEALTH\W?CARE|\bXLV\b|בריאות|^IXV(TR)?$", "us_health", "בריאות ארה\"ב"),
@@ -70,6 +72,7 @@ _P = [
     (r"ACWI|AC\W?WORLD|ALL\W?COUNTRY|עולמי.{0,20}כולל.{0,15}מתעוררים|^ZTL$|^WMW$|M1WD|NDUEACWF", "acwi", "מדד עולמי (כולל שווקים מתעוררים)"),
     (r"EMERG|MSCI\W?EM|\bEM\b|EMG\W?MKT|EM\W?MKT|MXEF|NDUEEGF|M1EF|מתעוררים|^MES$|^RBE$", "msci_em",
      "שווקים מתעוררים"),
+    (r"(WORLD|M1WO)\W?.{0,12}MOM|עולמי\W?מומנטום|מומנטום עולמי", "world_momentum", "עולמי מומנטום"),
     (r"MSCI\W?WORLD|\bWORLD\W?INDEX|DEVELOPED|M1WO|MXWO|\bURTH\b|^ZWP$|^RVP$|^HRL$|מדד עולמי$",
      "msci_world", "מדד עולמי"),
     # אירופה
