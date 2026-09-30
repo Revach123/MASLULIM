@@ -1,7 +1,7 @@
 {
  "legal_id": "520042177",
  "company": "הכשרה חברה לביטוח בע\"מ",
- "taken": "2026-09-30T21:53:52+00:00",
+ "taken": "2026-09-30T22:38:37+00:00",
  "pages": {
   "https://www.hcsra.co.il/insurances/investments-credit-realestate/investments/": {
    "product": "ביטוח",
@@ -173,6 +173,14 @@
     {
      "text": "ביטול פוליסה",
      "href": "https://www.hcsra.co.il/general/cancel-policy/",
+     "year": null,
+     "iframe": false,
+     "doc": false,
+     "internal": true
+    },
+    {
+     "text": "ביטוח פנסיוני",
+     "href": "https://www.hcsra.co.il/insurances/pension-incurrance/",
      "year": null,
      "iframe": false,
      "doc": false,
@@ -372,6 +380,14 @@
      "internal": true
     },
     {
+     "text": "ביטוח פנסיוני",
+     "href": "https://www.hcsra.co.il/insurances/pension-incurrance/",
+     "year": null,
+     "iframe": false,
+     "doc": false,
+     "internal": true
+    },
+    {
      "text": "אודות",
      "href": "https://www.hcsra.co.il/investor-relations/about-us/",
      "year": null,
@@ -493,8 +509,193 @@
      "internal": true
     },
     {
+     "text": "ביטוח פנסיוני",
+     "href": "https://www.hcsra.co.il/insurances/pension-incurrance/",
+     "year": null,
+     "iframe": false,
+     "doc": false,
+     "internal": true
+    },
+    {
      "text": "אודות",
      "href": "https://www.hcsra.co.il/investor-relations/about-us/",
+     "year": null,
+     "iframe": false,
+     "doc": false,
+     "internal": true
+    }
+   ]
+  },
+  "https://www.hcsra.co.il/insurances/pension-incurrance/": {
+   "product": "פנסיה+ביטוח",
+   "status": 200,
+   "method": "requests",
+   "text_hash": "9403ef5df8b1bfb978c5d4a9ce832a7ba6abacfe",
+   "text_head": "pension incurrance דלג לתוכן הראשי ביטוח רכב ביטוחים נוספים BEST INVEST פעולות תביעות מרכז ידע קשרי משקיעים קריירה יצירת קשר 3453* סוכנים/מעסיקים אזור אישי 3453* אזור אישי ראשי ראשי תגמולים לעצמאים ומנהלים תוכנית ביטוח תגמולים לעצמאים ומנהלים מציעה פתרונות ביטוח עם חיסכון בעלי יתרונות ייחודיים לשכירים ועצמאים הביטוחים שלנו: ביטוח מנהלים ביטוח למנהלים ועובדים שכירים הביטוח הינו תכנית חיסכון המשלמת קצבה לתנאי הפוליסה המלאים לכל הפעולות ביטוח לעצמאיים הביטוח הינו תכנית חיסכון המשלמת קצבה לתנאי הפוליסה המלאים לכל הפעולות ביטוח 60 פלוס למנהלים ועובדים שכירים הביטוח הינו תכנית חיסכון המשלמת קצבה לתנ",
+   "items": [
+    {
+     "text": "לתנאי הפוליסה המלאים",
+     "href": "https://umbraco-backoffice.hcsra.co.il/media/hbza525t/%D7%A4%D7%95%D7%9C%D7%99%D7%A1%D7%AA-%D7%A2%D7%AA%D7%99%D7%93-%D7%9E%D7%A0%D7%94%D7%9C%D7%99%D7%9D-022023-%D7%9E%D7%A2%D7%95%D7%93%D7%9B%D7%9F.pdf",
+     "year": "2023",
+     "iframe": false,
+     "doc": true,
+     "internal": true
+    },
+    {
+     "text": "לתנאי הפוליסה המלאים",
+     "href": "https://umbraco-backoffice.hcsra.co.il/media/4wjn0mf2/%D7%A2%D7%AA%D7%99%D7%93-60-%D7%A4%D7%9C%D7%95%D7%A1-%D7%9C%D7%9E%D7%A0%D7%94%D7%9C%D7%99%D7%9D-%D7%95%D7%A2%D7%95%D7%91%D7%93%D7%99%D7%9D-%D7%A9%D7%9B%D7%99%D7%A8%D7%99%D7%9D-52023-%D7%9E%D7%A2%D7%95%D7%93%D7%9B%D7%9F.pdf",
+     "year": "2023",
+     "iframe": false,
+     "doc": true,
+     "internal": true
+    },
+    {
+     "text": "לתנאי הפוליסה המלאים",
+     "href": "https://umbraco-backoffice.hcsra.co.il/media/w3dg55mo/%D7%A2%D7%AA%D7%99%D7%93-%D7%9C%D7%A2%D7%A6%D7%9E%D7%90%D7%99%D7%99%D7%9D-%D7%AA%D7%A0%D7%90%D7%99%D7%9D-%D7%9B%D7%9C%D7%9C%D7%99%D7%99%D7%9D-112016-%D7%9E%D7%A2%D7%95%D7%93%D7%9B%D7%9F.pdf",
+     "year": "2016",
+     "iframe": false,
+     "doc": true,
+     "internal": true
+    },
+    {
+     "text": "לתנאי הפוליסה המלאים",
+     "href": "https://umbraco-backoffice.hcsra.co.il/media/moknvkqf/%D7%A2%D7%AA%D7%99%D7%93-60-%D7%A4%D7%9C%D7%95%D7%A1-%D7%9C%D7%A2%D7%A6%D7%9E%D7%90%D7%99%D7%9D-%D7%AA%D7%A0%D7%90%D7%99%D7%9D-%D7%9B%D7%9C%D7%9C%D7%99%D7%99%D7%9D-072013-%D7%9E%D7%A2%D7%95%D7%93%D7%9B%D7%9F.pdf",
+     "year": "2013",
+     "iframe": false,
+     "doc": true,
+     "internal": true
+    },
+    {
+     "text": "רשימת מנתחים בהסדר",
+     "href": "https://umbraco-api.hcsra.co.il/media/nupjdd0e/רשימת-מנתחים-לאתר-חברה-אוגוסט-26.xlsx",
+     "year": null,
+     "iframe": false,
+     "doc": true,
+     "internal": true
+    },
+    {
+     "text": "רשימת מנתחים בהסדר",
+     "href": "https://umbraco-api.hcsra.co.il/media/d4idpw5u/רשימת-מנתחים-לאתר-חברה-אוגוסט-26.xlsx",
+     "year": null,
+     "iframe": false,
+     "doc": true,
+     "internal": true
+    },
+    {
+     "text": "קשרי משקיעים",
+     "href": "https://www.hcsra.co.il/investor-relations/",
+     "year": null,
+     "iframe": false,
+     "doc": false,
+     "internal": true
+    },
+    {
+     "text": "פורטל הסוכנים",
+     "href": "https://agents-login.hcsra.co.il/my.policy",
+     "year": null,
+     "iframe": false,
+     "doc": false,
+     "internal": true
+    },
+    {
+     "text": "פוליסת חיסכון BEST INVEST ביטוח לכספך: מעל 20 מסלולי השקעה ב6 גופי השקעות",
+     "href": "https://www.hcsra.co.il/best-invest/",
+     "year": null,
+     "iframe": false,
+     "doc": false,
+     "internal": true
+    },
+    {
+     "text": "מערך השקעות אשראי ונדל\"ן",
+     "href": "https://www.hcsra.co.il/insurances/investments-credit-realestate/",
+     "year": null,
+     "iframe": false,
+     "doc": false,
+     "internal": true
+    },
+    {
+     "text": "מדיניות התגמול של החברה",
+     "href": "https://umbraco-api.hcsra.co.il/media/xouj2m4i/מדיניות-התגמול-של-החברה-מונגש.pdf",
+     "year": null,
+     "iframe": false,
+     "doc": true,
+     "internal": true
+    },
+    {
+     "text": "מדיניות הגנת הפרטיות (כולל עוגיות וטכנולוגיות דומות)",
+     "href": "https://www.hcsra.co.il/general/privacy-policy/",
+     "year": null,
+     "iframe": false,
+     "doc": false,
+     "internal": true
+    },
+    {
+     "text": "לכל הטפסים הרלוונטיים לחצו כאן",
+     "href": "https://www.hcsra.co.il/file-finder/pension-savings/",
+     "year": null,
+     "iframe": false,
+     "doc": false,
+     "internal": true
+    },
+    {
+     "text": "השקעות והצבעות",
+     "href": "https://www.hcsra.co.il/insurances/investments-credit-realestate/investments/",
+     "year": null,
+     "iframe": false,
+     "doc": false,
+     "internal": true
+    },
+    {
+     "text": "העתק פוליסה",
+     "href": "https://www.hcsra.co.il/copy-of-policy/",
+     "year": null,
+     "iframe": false,
+     "doc": false,
+     "internal": true
+    },
+    {
+     "text": "היתר עסקה וכשרות למסלולי השקעה",
+     "href": "https://www.hcsra.co.il/general/heter-iska-kosher/",
+     "year": null,
+     "iframe": false,
+     "doc": false,
+     "internal": true
+    },
+    {
+     "text": "דוחות ומצגות",
+     "href": "https://www.hcsra.co.il/investor-relations-reports/",
+     "year": null,
+     "iframe": false,
+     "doc": false,
+     "internal": true
+    },
+    {
+     "text": "ביטול פוליסה",
+     "href": "https://www.hcsra.co.il/general/cancel-policy/",
+     "year": null,
+     "iframe": false,
+     "doc": false,
+     "internal": true
+    },
+    {
+     "text": "ביטוח פנסיוני",
+     "href": "https://www.hcsra.co.il/insurances/pension-incurrance/",
+     "year": null,
+     "iframe": false,
+     "doc": false,
+     "internal": true
+    },
+    {
+     "text": "אודות",
+     "href": "https://www.hcsra.co.il/investor-relations/about-us/",
+     "year": null,
+     "iframe": false,
+     "doc": false,
+     "internal": true
+    },
+    {
+     "text": "BEST INVEST פוליסת חיסכון - איך לחסוך ולהשקיע חכם מול אפיקי השקעה אחרים",
+     "href": "https://www.hcsra.co.il/best-invest/saving-policy-save-and-invest/",
      "year": null,
      "iframe": false,
      "doc": false,
@@ -638,6 +839,14 @@
      "internal": true
     },
     {
+     "text": "ביטוח פנסיוני",
+     "href": "https://www.hcsra.co.il/insurances/pension-incurrance/",
+     "year": null,
+     "iframe": false,
+     "doc": false,
+     "internal": true
+    },
+    {
      "text": "אודות",
      "href": "https://www.hcsra.co.il/investor-relations/about-us/",
      "year": null,
@@ -775,6 +984,14 @@
      "internal": true
     },
     {
+     "text": "ביטוח פנסיוני",
+     "href": "https://www.hcsra.co.il/insurances/pension-incurrance/",
+     "year": null,
+     "iframe": false,
+     "doc": false,
+     "internal": true
+    },
+    {
      "text": "אודות",
      "href": "https://www.hcsra.co.il/investor-relations/about-us/",
      "year": null,
@@ -890,6 +1107,14 @@
     {
      "text": "ביטול פוליסה",
      "href": "https://www.hcsra.co.il/general/cancel-policy/",
+     "year": null,
+     "iframe": false,
+     "doc": false,
+     "internal": true
+    },
+    {
+     "text": "ביטוח פנסיוני",
+     "href": "https://www.hcsra.co.il/insurances/pension-incurrance/",
      "year": null,
      "iframe": false,
      "doc": false,
@@ -1041,6 +1266,14 @@
      "internal": true
     },
     {
+     "text": "ביטוח פנסיוני",
+     "href": "https://www.hcsra.co.il/insurances/pension-incurrance/",
+     "year": null,
+     "iframe": false,
+     "doc": false,
+     "internal": true
+    },
+    {
      "text": "אודות",
      "href": "https://www.hcsra.co.il/investor-relations/about-us/",
      "year": null,
@@ -1154,6 +1387,14 @@
      "internal": true
     },
     {
+     "text": "ביטוח פנסיוני",
+     "href": "https://www.hcsra.co.il/insurances/pension-incurrance/",
+     "year": null,
+     "iframe": false,
+     "doc": false,
+     "internal": true
+    },
+    {
      "text": "אודות",
      "href": "https://www.hcsra.co.il/investor-relations/about-us/",
      "year": null,
@@ -1164,6 +1405,1425 @@
     {
      "text": "BEST INVEST פוליסת חיסכון - איך לחסוך ולהשקיע חכם מול אפיקי השקעה אחרים",
      "href": "https://www.hcsra.co.il/best-invest/saving-policy-save-and-invest/",
+     "year": null,
+     "iframe": false,
+     "doc": false,
+     "internal": true
+    }
+   ]
+  },
+  "https://www.hcsra.co.il/file-finder/pension-savings/": {
+   "product": "פנסיה+ביטוח",
+   "status": 200,
+   "method": "requests",
+   "text_hash": "f94e4c3bba4c95c8fa702bca83c9d4c0e678d84c",
+   "text_head": "טפסי ביטוח עובדים זרים מפורטים וזמינים עבורך | הכשרה ביטוח ופיננסים דלג לתוכן הראשי ביטוח רכב ביטוחים נוספים BEST INVEST פעולות תביעות מרכז ידע קשרי משקיעים קריירה יצירת קשר 3453* סוכנים/מעסיקים אזור אישי 3453* אזור אישי ראשי איתור טפסים בביטוח עובדים זרים ראשי איתור טפסים בביטוח עובדים זרים איתור טפסים ופוליסות חסכנו לך זמן חיפוש. הכול כאן! יש לבחור את המוצר המבוקש בסרגל מטה בו הנך רוצה למצוא טפסים, פוליסות או סתם לשוטט בארכיון. לבחירת ביטוח חיסכון פנסיוני BEST INVEST ביטוח בריאות ביטוח משכנתא ביטוח חיים ביטוח רכב ביטוח לעסקים ביטוח דירה ביטוח הנדסי ביטוח לעובדים זרים טפסים שימושיים בחיסכון פ",
+   "items": [
+    {
+     "text": "",
+     "href": "https://umbraco-api.hcsra.co.il/media/pp5jtr35/062026-טופס-ייפוי-כח-נגיש-3252-או-2622.pdf",
+     "year": "2026",
+     "iframe": false,
+     "doc": true,
+     "internal": true
+    },
+    {
+     "text": "",
+     "href": "https://umbraco-api.hcsra.co.il/media/flmmj3sx/3435-עדכון-מוטבים-הכשרה-מונגש-052026.pdf",
+     "year": "2026",
+     "iframe": false,
+     "doc": true,
+     "internal": true
+    },
+    {
+     "text": "",
+     "href": "https://umbraco-api.hcsra.co.il/media/gqvbxk4j/1769707008_הצהרת_בריאות_3020_012026.pdf",
+     "year": "2026",
+     "iframe": false,
+     "doc": true,
+     "internal": true
+    },
+    {
+     "text": "",
+     "href": "https://umbraco-api.hcsra.co.il/media/q1idfdau/בקשה-לרישום-באמצעות-צבירת-כספים-מונגש-032026.pdf",
+     "year": "2026",
+     "iframe": false,
+     "doc": true,
+     "internal": true
+    },
+    {
+     "text": "",
+     "href": "https://umbraco-api.hcsra.co.il/media/2e0gj4ht/1763892972_3153_פרטים_אישיים_הכשרה_032025-מונגש.pdf",
+     "year": "2025",
+     "iframe": false,
+     "doc": true,
+     "internal": true
+    },
+    {
+     "text": "",
+     "href": "https://umbraco-api.hcsra.co.il/media/hf3dhbvb/1764526797_3253_בקשת_סילוק_לפוליסת_פרט_או_עצמאי_042025-מונגש.pdf",
+     "year": "2025",
+     "iframe": false,
+     "doc": true,
+     "internal": true
+    },
+    {
+     "text": "",
+     "href": "https://umbraco-api.hcsra.co.il/media/bgwl0dbz/1765559478_3016_הצעה_לתוכנית_best_invest_בסט_אינווסט_לשכירים_092025.pdf",
+     "year": "2025",
+     "iframe": false,
+     "doc": true,
+     "internal": true
+    },
+    {
+     "text": "",
+     "href": "https://umbraco-api.hcsra.co.il/media/g0qd2b3f/1765559464_3016_הצעה_לתוכנית_best_invest_בסט_אינווסט_עצמאים_92025.pdf",
+     "year": "2025",
+     "iframe": false,
+     "doc": true,
+     "internal": true
+    },
+    {
+     "text": "",
+     "href": "https://umbraco-api.hcsra.co.il/media/nhelukuq/1765727569_בקשה_להעברת_3001_בעלות_בפוליסת_מנהלים_בסט_אינווסט_032025.pdf",
+     "year": "2025",
+     "iframe": false,
+     "doc": true,
+     "internal": true
+    },
+    {
+     "text": "",
+     "href": "https://umbraco-api.hcsra.co.il/media/z22p5nun/1765559528_3275_שאלון_1_איש_ציבור_זר_הכשרה_032025.pdf",
+     "year": "2025",
+     "iframe": false,
+     "doc": true,
+     "internal": true
+    },
+    {
+     "text": "",
+     "href": "https://umbraco-api.hcsra.co.il/media/ohren25c/1765559543_3277_שאלון_2_איש_ציבור_מקומי_הכשרה_032025.pdf",
+     "year": "2025",
+     "iframe": false,
+     "doc": true,
+     "internal": true
+    },
+    {
+     "text": "",
+     "href": "https://umbraco-api.hcsra.co.il/media/ejlbx1il/1763892950_3103_הצהרת_משלם_הכשרה_052025_מונגש.pdf",
+     "year": "2025",
+     "iframe": false,
+     "doc": true,
+     "internal": true
+    },
+    {
+     "text": "",
+     "href": "https://umbraco-api.hcsra.co.il/media/xjnlrkg3/1765727585_3011_טוספ_הצהרת_איסור_הלבנת_הון_הכשרה_052025.pdf",
+     "year": "2025",
+     "iframe": false,
+     "doc": true,
+     "internal": true
+    },
+    {
+     "text": "",
+     "href": "https://umbraco-api.hcsra.co.il/media/2g0pcklr/1765648742_3312_נספח_לבקשת_ניוד_לאיחוד_קופות_בסט_042025.pdf",
+     "year": "2025",
+     "iframe": false,
+     "doc": true,
+     "internal": true
+    },
+    {
+     "text": "",
+     "href": "https://umbraco-api.hcsra.co.il/media/zenptp0n/1765727598_3558_הודעת_עמית_על_ביטול_בקשת_העברה_022025.pdf",
+     "year": "2025",
+     "iframe": false,
+     "doc": true,
+     "internal": true
+    },
+    {
+     "text": "",
+     "href": "https://umbraco-api.hcsra.co.il/media/ybvjryn3/1765648759_3731_בקשת_העברה_לקופת_ביטוח_המאושרת_כקופת_גמל_022025.pdf",
+     "year": "2025",
+     "iframe": false,
+     "doc": true,
+     "internal": true
+    },
+    {
+     "text": "",
+     "href": "https://umbraco-api.hcsra.co.il/media/ttmozp5t/1765648773_3158_בקשה_לשינוי_סכום_הפקדה_חודשי_בפוליסת_תגמולים_לעצמאיים_bi_022025.pdf",
+     "year": "2025",
+     "iframe": false,
+     "doc": true,
+     "internal": true
+    },
+    {
+     "text": "",
+     "href": "https://umbraco-api.hcsra.co.il/media/u5dhndw4/1765648790_בקשת_משיכה_של_כספי_תגמולים_לעצמאיים_042025.pdf",
+     "year": "2025",
+     "iframe": false,
+     "doc": true,
+     "internal": true
+    },
+    {
+     "text": "",
+     "href": "https://umbraco-api.hcsra.co.il/media/qc1d1djb/1765727611_3072_בקשה_לפדיון_מנהלים_הכשרה_012025.pdf",
+     "year": "2025",
+     "iframe": false,
+     "doc": true,
+     "internal": true
+    },
+    {
+     "text": "",
+     "href": "https://umbraco-api.hcsra.co.il/media/vokno4nq/1765727626_3735_בקשה_לפדיון_עצמאיים_הכשרה_012025.pdf",
+     "year": "2025",
+     "iframe": false,
+     "doc": true,
+     "internal": true
+    },
+    {
+     "text": "",
+     "href": "https://umbraco-api.hcsra.co.il/media/0eskenxz/1765648847_3079_בקשה_להסדר_ריסק_זמני_ושמירת_זכויות_בפוליסות_פנסיוניות_042025.pdf",
+     "year": "2025",
+     "iframe": false,
+     "doc": true,
+     "internal": true
+    },
+    {
+     "text": "",
+     "href": "https://umbraco-api.hcsra.co.il/media/0jugpe2d/1765727641_3156_בקשה_להארכת_פוליסת_ביטוח_חיים_042025.pdf",
+     "year": "2025",
+     "iframe": false,
+     "doc": true,
+     "internal": true
+    },
+    {
+     "text": "",
+     "href": "https://umbraco-api.hcsra.co.il/media/uqoh4wjb/1765727834_3010_הצעה_לביטוח_פנסיוני_לשכירים_ובעלי_שליטה_092025.pdf",
+     "year": "2025",
+     "iframe": false,
+     "doc": true,
+     "internal": true
+    },
+    {
+     "text": "",
+     "href": "https://umbraco-api.hcsra.co.il/media/xlcdkkac/1765565080_הצעה_לביטוח_לעצמאים_092025.pdf",
+     "year": "2025",
+     "iframe": false,
+     "doc": true,
+     "internal": true
+    },
+    {
+     "text": "",
+     "href": "https://umbraco-api.hcsra.co.il/media/1jmlsvdk/1763880787_3252_-מונגש-הרשאה_מתמשכת_לבעל_רישיון_לקבלת_מידע_והעברת_בקשות_לביצוע_פעולות_052025.pdf",
+     "year": "2025",
+     "iframe": false,
+     "doc": true,
+     "internal": true
+    },
+    {
+     "text": "",
+     "href": "https://umbraco-api.hcsra.co.il/media/tsmnvhzc/1765648868_3731_בקשת_העברה_לקופת_ביטוח_המאושרת_כקופת_גמל_הכשרה_042025.pdf",
+     "year": "2025",
+     "iframe": false,
+     "doc": true,
+     "internal": true
+    },
+    {
+     "text": "",
+     "href": "https://umbraco-api.hcsra.co.il/media/lbohxekx/1765727652_3096_בקשה_לשינוי_מסלולי_השקעה_בפוליסה_מסוג_חיסכון_פרט_032025.pdf",
+     "year": "2025",
+     "iframe": false,
+     "doc": true,
+     "internal": true
+    },
+    {
+     "text": "",
+     "href": "https://umbraco-api.hcsra.co.il/media/23kfoqa3/1765727663_3711_נספח_א_042025.pdf",
+     "year": "2025",
+     "iframe": false,
+     "doc": true,
+     "internal": true
+    },
+    {
+     "text": "",
+     "href": "https://umbraco-api.hcsra.co.il/media/pvbb0fao/1765727676_3711_נספח_ב_042025.pdf",
+     "year": "2025",
+     "iframe": false,
+     "doc": true,
+     "internal": true
+    },
+    {
+     "text": "",
+     "href": "https://umbraco-api.hcsra.co.il/media/pvwjl0g3/1765727693_3711_נספח_ג_042025.pdf",
+     "year": "2025",
+     "iframe": false,
+     "doc": true,
+     "internal": true
+    },
+    {
+     "text": "",
+     "href": "https://umbraco-api.hcsra.co.il/media/rmlb4ynk/1765727720_3079_הודעה_על_עזיבת_עבודה_042025.pdf",
+     "year": "2025",
+     "iframe": false,
+     "doc": true,
+     "internal": true
+    },
+    {
+     "text": "",
+     "href": "https://umbraco-api.hcsra.co.il/media/i0vfljam/1765727732_3068_בקשת_קצבה_042025.pdf",
+     "year": "2025",
+     "iframe": false,
+     "doc": true,
+     "internal": true
+    },
+    {
+     "text": "",
+     "href": "https://umbraco-api.hcsra.co.il/media/vwfo10lz/1765559556_3103_הצהרת_משלם_הכשרה_052025.pdf",
+     "year": "2025",
+     "iframe": false,
+     "doc": true,
+     "internal": true
+    },
+    {
+     "text": "",
+     "href": "https://umbraco-api.hcsra.co.il/media/tujkvizf/1765727706_3139_טופס_הכר_את_הלקוח_הכשרה_112025.pdf",
+     "year": "2025",
+     "iframe": false,
+     "doc": true,
+     "internal": true
+    },
+    {
+     "text": "",
+     "href": "https://umbraco-api.hcsra.co.il/media/wh1hyvpn/1765727745_3406_שינוי_סיווג_כספי_פיצויים_052025.pdf",
+     "year": "2025",
+     "iframe": false,
+     "doc": true,
+     "internal": true
+    },
+    {
+     "text": "",
+     "href": "https://umbraco-api.hcsra.co.il/media/gnkbepda/1765727759_3001_בקשה_לשינויים_והעברת_בעלות_בפוליסת_מנהלים_הכשרה_062025_1_.pdf",
+     "year": "2025",
+     "iframe": false,
+     "doc": true,
+     "internal": true
+    },
+    {
+     "text": "",
+     "href": "https://umbraco-api.hcsra.co.il/media/m3tf5txu/1765727801_3386_הנחיות_למעסיק_042025.pdf",
+     "year": "2025",
+     "iframe": false,
+     "doc": true,
+     "internal": true
+    },
+    {
+     "text": "",
+     "href": "https://umbraco-api.hcsra.co.il/media/b1eig2oy/1766408488_3158_בקשה_לשינוי_סכום_הפקדה_חודשי_בפוליסת_תגמולים_לעצמאיים_hachshara_062025.pdf",
+     "year": "2025",
+     "iframe": false,
+     "doc": true,
+     "internal": true
+    },
+    {
+     "text": "",
+     "href": "https://umbraco-api.hcsra.co.il/media/npipa4a5/1763637629_3252_הרשאה_מתמשכת_לבעל_רישיון_לקבלת_מידע_והעברת_בקשות_לביצוע_פעולות_042025-מונגש.pdf",
+     "year": "2025",
+     "iframe": false,
+     "doc": true,
+     "internal": true
+    },
+    {
+     "text": "",
+     "href": "https://umbraco-api.hcsra.co.il/media/mypauky1/1765727816_בקשה_לפדיון_עצמאיים_הכשרה_032025.pdf",
+     "year": "2025",
+     "iframe": false,
+     "doc": true,
+     "internal": true
+    },
+    {
+     "text": "",
+     "href": "https://umbraco-api.hcsra.co.il/media/njcfvmum/1763976591_6024_הנחיות_הגשת_טופס_תביעה_למקרה_פטירה_הכשרה_052025-מונגש.pdf",
+     "year": "2025",
+     "iframe": false,
+     "doc": true,
+     "internal": true
+    },
+    {
+     "text": "",
+     "href": "https://umbraco-api.hcsra.co.il/media/tk0j1ik1/1765727847_בקשה_לפדיון_מנהלים_בסט_אנווסט_062025.pdf",
+     "year": "2025",
+     "iframe": false,
+     "doc": true,
+     "internal": true
+    },
+    {
+     "text": "",
+     "href": "https://umbraco-api.hcsra.co.il/media/5tbaqcfv/1765727772_3251_הפקדה_חד_פעמית_בפוליסות_הכשרה_עצמאי_122024_1_.pdf",
+     "year": "2024",
+     "iframe": false,
+     "doc": true,
+     "internal": true
+    },
+    {
+     "text": "",
+     "href": "https://umbraco-api.hcsra.co.il/media/rydn4kdo/1765692607_3192_נספח_מסלולי_השקעות_מעודכן_72024.pdf",
+     "year": "2024",
+     "iframe": false,
+     "doc": true,
+     "internal": true
+    },
+    {
+     "text": "",
+     "href": "https://umbraco-api.hcsra.co.il/media/hs5ftmb2/1765692650_3192_נספח_מסלולי_השקעות_הכשרה_מעודכן_72024.pdf",
+     "year": "2024",
+     "iframe": false,
+     "doc": true,
+     "internal": true
+    },
+    {
+     "text": "",
+     "href": "https://umbraco-api.hcsra.co.il/media/mu3c5lag/1765692681_3096_נספח_מסלולי_השקעה_פוליסת_חיסכון_אישי_הכשרה_מעודכן_72024.pdf",
+     "year": "2024",
+     "iframe": false,
+     "doc": true,
+     "internal": true
+    },
+    {
+     "text": "",
+     "href": "https://umbraco-api.hcsra.co.il/media/alvheh4l/1765753183_עתיד_60_פלוס_למנהלים_ועובדים_שכירים_52023_מעודכן.pdf",
+     "year": "2023",
+     "iframe": false,
+     "doc": true,
+     "internal": true
+    },
+    {
+     "text": "",
+     "href": "https://umbraco-api.hcsra.co.il/media/snan1xft/1765686892_פוליסת_עתיד_מנהלים_022023_מעודכן.pdf",
+     "year": "2023",
+     "iframe": false,
+     "doc": true,
+     "internal": true
+    },
+    {
+     "text": "",
+     "href": "https://umbraco-api.hcsra.co.il/media/s4sf5i2o/112022-דף-הנחיות-למילוי-בקשה-למתן-הלוואה-פוליסת-מנהלים-מונגש-082026.pdf",
+     "year": "2022",
+     "iframe": false,
+     "doc": true,
+     "internal": true
+    },
+    {
+     "text": "",
+     "href": "https://umbraco-api.hcsra.co.il/media/y3mpggvu/1765692629_תנאי_פוליסה_ריסק_מגן_1_מתוך_התגמולים_נספח_661_מעודכן_62022.pdf",
+     "year": "2022",
+     "iframe": false,
+     "doc": true,
+     "internal": true
+    },
+    {
+     "text": "",
+     "href": "https://umbraco-api.hcsra.co.il/media/zqifotjr/בסט-אינווסט-best-invest-למנהלים-ועובדים-שכירים-0620216.pdf",
+     "year": "2021",
+     "iframe": false,
+     "doc": true,
+     "internal": true
+    },
+    {
+     "text": "",
+     "href": "https://umbraco-api.hcsra.co.il/media/w3dg55mo/עתיד-לעצמאיים-תנאים-כלליים-112016-מעודכן.pdf",
+     "year": "2016",
+     "iframe": false,
+     "doc": true,
+     "internal": true
+    },
+    {
+     "text": "",
+     "href": "https://umbraco-api.hcsra.co.il/media/22fjvfu5/bestinvest60menalim032016.pdf",
+     "year": "2016",
+     "iframe": false,
+     "doc": true,
+     "internal": true
+    },
+    {
+     "text": "",
+     "href": "https://umbraco-api.hcsra.co.il/media/tpxpoyw1/independbi012016.pdf",
+     "year": "2016",
+     "iframe": false,
+     "doc": true,
+     "internal": true
+    },
+    {
+     "text": "",
+     "href": "https://umbraco-api.hcsra.co.il/media/o10dpuey/personalbestinvest032016.pdf",
+     "year": "2016",
+     "iframe": false,
+     "doc": true,
+     "internal": true
+    },
+    {
+     "text": "",
+     "href": "https://umbraco-api.hcsra.co.il/media/ij1pszg0/בסט-אינווסט-best-invest-לעצמאים-032016.pdf",
+     "year": "2016",
+     "iframe": false,
+     "doc": true,
+     "internal": true
+    },
+    {
+     "text": "",
+     "href": "https://umbraco-api.hcsra.co.il/media/xhcdtku0/bestinvestmenalim062016.pdf",
+     "year": "2016",
+     "iframe": false,
+     "doc": true,
+     "internal": true
+    },
+    {
+     "text": "",
+     "href": "https://umbraco-api.hcsra.co.il/media/moknvkqf/עתיד-60-פלוס-לעצמאים-תנאים-כלליים-072013-מעודכן.pdf",
+     "year": "2013",
+     "iframe": false,
+     "doc": true,
+     "internal": true
+    },
+    {
+     "text": "",
+     "href": "https://umbraco-api.hcsra.co.il/media/eyubjlem/בסט-אינווסט-למנהלים-ועובדים-שכירים-גרסה-012013-הדפסה-012013.pdf",
+     "year": "2013",
+     "iframe": false,
+     "doc": true,
+     "internal": true
+    },
+    {
+     "text": "",
+     "href": "https://umbraco-api.hcsra.co.il/media/tobbmdqw/בסט-אינווסט-למנהלים-ועובדים-שכירים-גרסת-מעבר-2013.pdf",
+     "year": "2013",
+     "iframe": false,
+     "doc": true,
+     "internal": true
+    },
+    {
+     "text": "",
+     "href": "https://umbraco-api.hcsra.co.il/media/nwaizlkk/בסט-אינווסט-60-פלוס-למנהלים-ועובדים-שכירים-גרסה-072013-הדפסה-072013.pdf",
+     "year": "2013",
+     "iframe": false,
+     "doc": true,
+     "internal": true
+    },
+    {
+     "text": "",
+     "href": "https://umbraco-api.hcsra.co.il/media/cugazhcc/בסט-אינווסט-60-פלוס-לעצמאים-גרסה-072013-הדפסה-072013.pdf",
+     "year": "2013",
+     "iframe": false,
+     "doc": true,
+     "internal": true
+    },
+    {
+     "text": "",
+     "href": "https://umbraco-api.hcsra.co.il/media/2g3poxjp/בסט-אינווסט-לעצמאים-גרסה-012013-הדפסה-012013.pdf",
+     "year": "2013",
+     "iframe": false,
+     "doc": true,
+     "internal": true
+    },
+    {
+     "text": "",
+     "href": "https://umbraco-api.hcsra.co.il/media/x4if4b21/בסט-אינווסט-לעצמאים-גרסת-מעבר-012013-הדפסה-012013.pdf",
+     "year": "2013",
+     "iframe": false,
+     "doc": true,
+     "internal": true
+    },
+    {
+     "text": "",
+     "href": "https://umbraco-api.hcsra.co.il/media/hs0azjxo/עתיד-60-פלוס-למנהלים-ועובדים-שכירים-גרסה-072013-הדפסה-072013.pdf",
+     "year": "2013",
+     "iframe": false,
+     "doc": true,
+     "internal": true
+    },
+    {
+     "text": "",
+     "href": "https://umbraco-api.hcsra.co.il/media/5xkdwzjb/עתיד-למנהלים-ועובדים-שכירים-גרסה-012013-הדפסה-012013.pdf",
+     "year": "2013",
+     "iframe": false,
+     "doc": true,
+     "internal": true
+    },
+    {
+     "text": "",
+     "href": "https://umbraco-api.hcsra.co.il/media/0hzce425/עתיד-לעצמאים-גרסה-012013-הדפסה-012013.pdf",
+     "year": "2013",
+     "iframe": false,
+     "doc": true,
+     "internal": true
+    },
+    {
+     "text": "",
+     "href": "https://umbraco-api.hcsra.co.il/media/cklp5hcq/שי-למנהלים-ועובדים-שכירים-גרסת-מעבר-2013.pdf",
+     "year": "2013",
+     "iframe": false,
+     "doc": true,
+     "internal": true
+    },
+    {
+     "text": "",
+     "href": "https://umbraco-api.hcsra.co.il/media/hq1hrbdy/שי-לעצמאים-גרסת-מעבר-2013.pdf",
+     "year": "2013",
+     "iframe": false,
+     "doc": true,
+     "internal": true
+    },
+    {
+     "text": "",
+     "href": "https://umbraco-api.hcsra.co.il/media/ejcbjxc2/בסט-אינווסט-למנהלים-ועובדים-שכירים-גרסה-072009-הדפסה-112011.pdf",
+     "year": "2011",
+     "iframe": false,
+     "doc": true,
+     "internal": true
+    },
+    {
+     "text": "",
+     "href": "https://umbraco-api.hcsra.co.il/media/knxjems0/בסט-אינווסט-לעצמאים-גרסת-072009-גרסת-הדפסה-102011.pdf",
+     "year": "2011",
+     "iframe": false,
+     "doc": true,
+     "internal": true
+    },
+    {
+     "text": "",
+     "href": "https://umbraco-api.hcsra.co.il/media/dm2c4ufx/שי-אישי-גרסת-052007-גרסת-הדפסה-112011.pdf",
+     "year": "2011",
+     "iframe": false,
+     "doc": true,
+     "internal": true
+    },
+    {
+     "text": "רשימת מנתחים בהסדר",
+     "href": "https://umbraco-api.hcsra.co.il/media/nupjdd0e/רשימת-מנתחים-לאתר-חברה-אוגוסט-26.xlsx",
+     "year": null,
+     "iframe": false,
+     "doc": true,
+     "internal": true
+    },
+    {
+     "text": "רשימת מנתחים בהסדר",
+     "href": "https://umbraco-api.hcsra.co.il/media/d4idpw5u/רשימת-מנתחים-לאתר-חברה-אוגוסט-26.xlsx",
+     "year": null,
+     "iframe": false,
+     "doc": true,
+     "internal": true
+    },
+    {
+     "text": "קשרי משקיעים",
+     "href": "https://www.hcsra.co.il/investor-relations/",
+     "year": null,
+     "iframe": false,
+     "doc": false,
+     "internal": true
+    },
+    {
+     "text": "פורטל הסוכנים",
+     "href": "https://agents-login.hcsra.co.il/my.policy",
+     "year": null,
+     "iframe": false,
+     "doc": false,
+     "internal": true
+    },
+    {
+     "text": "מערך השקעות אשראי ונדל\"ן",
+     "href": "https://www.hcsra.co.il/insurances/investments-credit-realestate/",
+     "year": null,
+     "iframe": false,
+     "doc": false,
+     "internal": true
+    },
+    {
+     "text": "מדיניות התגמול של החברה",
+     "href": "https://umbraco-api.hcsra.co.il/media/xouj2m4i/מדיניות-התגמול-של-החברה-מונגש.pdf",
+     "year": null,
+     "iframe": false,
+     "doc": true,
+     "internal": true
+    },
+    {
+     "text": "מדיניות הגנת הפרטיות (כולל עוגיות וטכנולוגיות דומות)",
+     "href": "https://www.hcsra.co.il/general/privacy-policy/",
+     "year": null,
+     "iframe": false,
+     "doc": false,
+     "internal": true
+    },
+    {
+     "text": "חיסכון פנסיוני",
+     "href": "https://www.hcsra.co.il/file-finder/pension-savings/",
+     "year": null,
+     "iframe": false,
+     "doc": false,
+     "internal": true
+    },
+    {
+     "text": "השקעות והצבעות",
+     "href": "https://www.hcsra.co.il/insurances/investments-credit-realestate/investments/",
+     "year": null,
+     "iframe": false,
+     "doc": false,
+     "internal": true
+    },
+    {
+     "text": "העתק פוליסה",
+     "href": "https://www.hcsra.co.il/copy-of-policy/",
+     "year": null,
+     "iframe": false,
+     "doc": false,
+     "internal": true
+    },
+    {
+     "text": "היתר עסקה וכשרות למסלולי השקעה",
+     "href": "https://www.hcsra.co.il/general/heter-iska-kosher/",
+     "year": null,
+     "iframe": false,
+     "doc": false,
+     "internal": true
+    },
+    {
+     "text": "דוחות ומצגות",
+     "href": "https://www.hcsra.co.il/investor-relations-reports/",
+     "year": null,
+     "iframe": false,
+     "doc": false,
+     "internal": true
+    },
+    {
+     "text": "ביטול פוליסה",
+     "href": "https://www.hcsra.co.il/general/cancel-policy/",
+     "year": null,
+     "iframe": false,
+     "doc": false,
+     "internal": true
+    },
+    {
+     "text": "ביטוח פנסיוני",
+     "href": "https://www.hcsra.co.il/insurances/pension-incurrance/",
+     "year": null,
+     "iframe": false,
+     "doc": false,
+     "internal": true
+    },
+    {
+     "text": "אודות",
+     "href": "https://www.hcsra.co.il/investor-relations/about-us/",
+     "year": null,
+     "iframe": false,
+     "doc": false,
+     "internal": true
+    },
+    {
+     "text": "",
+     "href": "https://umbraco-api.hcsra.co.il/media/fh2nrdv4/1765559493_שינוי_מסלול_השקעה_עצמאיים_ושכירים_הכשרה_3192.pdf",
+     "year": null,
+     "iframe": false,
+     "doc": true,
+     "internal": true
+    },
+    {
+     "text": "",
+     "href": "https://umbraco-api.hcsra.co.il/media/wfknlwmh/1765648831_בקשה_לשינוי_מסלולי_השקעה_בפוליסה_מסוג_עצמאים_ו_או_שכירים_3192.pdf",
+     "year": null,
+     "iframe": false,
+     "doc": true,
+     "internal": true
+    },
+    {
+     "text": "",
+     "href": "https://umbraco-api.hcsra.co.il/media/kv5n2myy/1765727786_אישור_שחרור_כספי_פיצויים_לטובת_תשלום_קצבה.pdf",
+     "year": null,
+     "iframe": false,
+     "doc": true,
+     "internal": true
+    },
+    {
+     "text": "",
+     "href": "https://umbraco-api.hcsra.co.il/media/zhie5ojz/בסט-אינווסט-60-פלוס-למנהלים-ועובדים-שכירים.pdf",
+     "year": null,
+     "iframe": false,
+     "doc": true,
+     "internal": true
+    },
+    {
+     "text": "",
+     "href": "https://umbraco-api.hcsra.co.il/media/wdhnfwci/1765692666_נספח_מסלולי_השקעות_חיסכון_אישי_מעודכן.pdf",
+     "year": null,
+     "iframe": false,
+     "doc": true,
+     "internal": true
+    },
+    {
+     "text": "",
+     "href": "https://umbraco-api.hcsra.co.il/media/loaohd0h/עדיף-מנהלים-רב-רווח-מהדורת-1991.pdf",
+     "year": null,
+     "iframe": false,
+     "doc": true,
+     "internal": true
+    },
+    {
+     "text": "",
+     "href": "https://umbraco-api.hcsra.co.il/media/leangsup/עדיף-ביטוח-למנהלים-ולעובדים-שכירים-מ-071990.pdf",
+     "year": null,
+     "iframe": false,
+     "doc": true,
+     "internal": true
+    },
+    {
+     "text": "",
+     "href": "https://umbraco-api.hcsra.co.il/media/n4lasrt1/1765692734_נספח_מסלולי_השקעות_לפוליסת_בסט_אינווסט_מנהלים_תגמולים_לעצמאים.pdf",
+     "year": null,
+     "iframe": false,
+     "doc": true,
+     "internal": true
+    },
+    {
+     "text": "",
+     "href": "https://umbraco-api.hcsra.co.il/media/4kupz3lo/1766408447_נספח_מסלולי_השקעות_מנהלים_ועצמאים_החל_מ_2004.pdf",
+     "year": null,
+     "iframe": false,
+     "doc": true,
+     "internal": true
+    },
+    {
+     "text": "",
+     "href": "https://umbraco-api.hcsra.co.il/media/vixbx3py/1765692720_נספח_מסלולי_השקעות_בסט_אינוסט_לעצמאים_ולמנהלים_ועובדים_שכירים.pdf",
+     "year": null,
+     "iframe": false,
+     "doc": true,
+     "internal": true
+    },
+    {
+     "text": "",
+     "href": "https://umbraco-api.hcsra.co.il/media/fygnetmq/1766590936_atid60menahalim.pdf",
+     "year": null,
+     "iframe": false,
+     "doc": true,
+     "internal": true
+    },
+    {
+     "text": "",
+     "href": "https://umbraco-api.hcsra.co.il/media/egcnz52k/1765736466_עתיד_למנהלים_ועובדים_שכירים.pdf",
+     "year": null,
+     "iframe": false,
+     "doc": true,
+     "internal": true
+    },
+    {
+     "text": "",
+     "href": "https://umbraco-api.hcsra.co.il/media/j2zda2o4/שי-מנהלים-ועובדים-שכירים.pdf",
+     "year": null,
+     "iframe": false,
+     "doc": true,
+     "internal": true
+    },
+    {
+     "text": "",
+     "href": "https://umbraco-api.hcsra.co.il/media/mp5gakvn/1765692753_3096_נספח_מסלולי_השקעה_פוליסת_חיסכון_אישי_הכשרה.pdf",
+     "year": null,
+     "iframe": false,
+     "doc": true,
+     "internal": true
+    },
+    {
+     "text": "",
+     "href": "https://umbraco-api.hcsra.co.il/media/iphj5aiy/1765692770_נספח_מסלולי_השקעות_חיסכון_שי_אישי.pdf",
+     "year": null,
+     "iframe": false,
+     "doc": true,
+     "internal": true
+    },
+    {
+     "text": "",
+     "href": "https://umbraco-api.hcsra.co.il/media/n3djgkfm/ביטוח-גימלה-בידרמן-חברה-לביטוח-מ-011983.pdf",
+     "year": null,
+     "iframe": false,
+     "doc": true,
+     "internal": true
+    },
+    {
+     "text": "",
+     "href": "https://umbraco-api.hcsra.co.il/media/ewobj01t/ביטוח-מנהלים-בידרמן-חברה-לביטוח-מ-011983.pdf",
+     "year": null,
+     "iframe": false,
+     "doc": true,
+     "internal": true
+    },
+    {
+     "text": "",
+     "href": "https://umbraco-api.hcsra.co.il/media/khsawqei/בסט-אינווסט-למנהלים-ועובדים-שכירים-לתאריך-0709.pdf",
+     "year": null,
+     "iframe": false,
+     "doc": true,
+     "internal": true
+    },
+    {
+     "text": "",
+     "href": "https://umbraco-api.hcsra.co.il/media/zisnukql/בסט-אינווסט-לעצמאים-לתאריך-042008.pdf",
+     "year": null,
+     "iframe": false,
+     "doc": true,
+     "internal": true
+    },
+    {
+     "text": "",
+     "href": "https://umbraco-api.hcsra.co.il/media/zvhf2q2q/בסט-אינווסט-לעצמאים-לתאריך-0709.pdf",
+     "year": null,
+     "iframe": false,
+     "doc": true,
+     "internal": true
+    },
+    {
+     "text": "",
+     "href": "https://umbraco-api.hcsra.co.il/media/zlyhv5ec/בסט-אינווסט-לעצמאים-לתאריך-102007.pdf",
+     "year": null,
+     "iframe": false,
+     "doc": true,
+     "internal": true
+    },
+    {
+     "text": "",
+     "href": "https://umbraco-api.hcsra.co.il/media/ihzmq12q/הכי-הוני-לעצמאי.pdf",
+     "year": null,
+     "iframe": false,
+     "doc": true,
+     "internal": true
+    },
+    {
+     "text": "",
+     "href": "https://umbraco-api.hcsra.co.il/media/xfjhewt5/הכי-הוני-פרט.pdf",
+     "year": null,
+     "iframe": false,
+     "doc": true,
+     "internal": true
+    },
+    {
+     "text": "",
+     "href": "https://umbraco-api.hcsra.co.il/media/edsjppd3/הכי-הוני-עדיף-למנהלים-ועובדים-שכירים.pdf",
+     "year": null,
+     "iframe": false,
+     "doc": true,
+     "internal": true
+    },
+    {
+     "text": "",
+     "href": "https://umbraco-api.hcsra.co.il/media/efnjr4op/מסלולית-למנהלים-ועובדים-שכירים.pdf",
+     "year": null,
+     "iframe": false,
+     "doc": true,
+     "internal": true
+    },
+    {
+     "text": "",
+     "href": "https://umbraco-api.hcsra.co.il/media/oohp0g0r/מסלולית-אישית.pdf",
+     "year": null,
+     "iframe": false,
+     "doc": true,
+     "internal": true
+    },
+    {
+     "text": "",
+     "href": "https://umbraco-api.hcsra.co.il/media/eykb53nw/מסלולית-ירדן-למנהלים-ועובדים-שכירים.pdf",
+     "year": null,
+     "iframe": false,
+     "doc": true,
+     "internal": true
+    },
+    {
+     "text": "",
+     "href": "https://umbraco-api.hcsra.co.il/media/osmpsv4q/מסלולית-ירדן-אישית.pdf",
+     "year": null,
+     "iframe": false,
+     "doc": true,
+     "internal": true
+    },
+    {
+     "text": "",
+     "href": "https://umbraco-api.hcsra.co.il/media/lteher0y/מסלולית-לעצמאים.pdf",
+     "year": null,
+     "iframe": false,
+     "doc": true,
+     "internal": true
+    },
+    {
+     "text": "",
+     "href": "https://umbraco-api.hcsra.co.il/media/0b3dozqm/מסלולית-פיצויים-למנהלים-ועובדים-שכירים.pdf",
+     "year": null,
+     "iframe": false,
+     "doc": true,
+     "internal": true
+    },
+    {
+     "text": "",
+     "href": "https://umbraco-api.hcsra.co.il/media/ah1necpu/עדיף-פנסיה-לעצמאים-ביטוח-חיים-אישי-מ-041988.pdf",
+     "year": null,
+     "iframe": false,
+     "doc": true,
+     "internal": true
+    },
+    {
+     "text": "",
+     "href": "https://umbraco-api.hcsra.co.il/media/tbmobb3y/עדיף-ביטוח-למנהלים-ולעובדים-שכירים-מ-061983.pdf",
+     "year": null,
+     "iframe": false,
+     "doc": true,
+     "internal": true
+    },
+    {
+     "text": "",
+     "href": "https://umbraco-api.hcsra.co.il/media/g03dikbj/עדיף-ביטוח-למנהלים-ולעובדים-שכרים-בידרמן-חברה-לביטוח.pdf",
+     "year": null,
+     "iframe": false,
+     "doc": true,
+     "internal": true
+    },
+    {
+     "text": "",
+     "href": "https://umbraco-api.hcsra.co.il/media/dhamyxrm/עדיף-הוני-פלוס-לעצמאי-מ-072001.pdf",
+     "year": null,
+     "iframe": false,
+     "doc": true,
+     "internal": true
+    },
+    {
+     "text": "",
+     "href": "https://umbraco-api.hcsra.co.il/media/cwtc3g0v/עדיף-הוני-פלוס-פרט.pdf",
+     "year": null,
+     "iframe": false,
+     "doc": true,
+     "internal": true
+    },
+    {
+     "text": "",
+     "href": "https://umbraco-api.hcsra.co.il/media/xe3fqhky/עדיף-קיצבה-פלוס-לעצמאי.pdf",
+     "year": null,
+     "iframe": false,
+     "doc": true,
+     "internal": true
+    },
+    {
+     "text": "",
+     "href": "https://umbraco-api.hcsra.co.il/media/jzbnnbtk/עדיף-קיצבה-פלוס-פרט.pdf",
+     "year": null,
+     "iframe": false,
+     "doc": true,
+     "internal": true
+    },
+    {
+     "text": "",
+     "href": "https://umbraco-api.hcsra.co.il/media/uykfdiyi/עדיף-קיצבה-פלוס-למנהלים-ועובדים-שכירים.pdf",
+     "year": null,
+     "iframe": false,
+     "doc": true,
+     "internal": true
+    },
+    {
+     "text": "",
+     "href": "https://umbraco-api.hcsra.co.il/media/ci2df3gk/עדיף-רב-רווח.pdf",
+     "year": null,
+     "iframe": false,
+     "doc": true,
+     "internal": true
+    },
+    {
+     "text": "",
+     "href": "https://umbraco-api.hcsra.co.il/media/tzsizioo/עדיף-רב-רווח-ביטוח-מנהלים-ועובדים-שכירים.pdf",
+     "year": null,
+     "iframe": false,
+     "doc": true,
+     "internal": true
+    },
+    {
+     "text": "",
+     "href": "https://umbraco-api.hcsra.co.il/media/rl1j3oaq/רב-רווח-ביטוח-מנהלים-ועובדים-שכירים.pdf",
+     "year": null,
+     "iframe": false,
+     "doc": true,
+     "internal": true
+    },
+    {
+     "text": "",
+     "href": "https://umbraco-api.hcsra.co.il/media/jmymsktu/רב-רווח-פרט-120.pdf",
+     "year": null,
+     "iframe": false,
+     "doc": true,
+     "internal": true
+    },
+    {
+     "text": "",
+     "href": "https://umbraco-api.hcsra.co.il/media/4zodr2ir/שי-אישי.pdf",
+     "year": null,
+     "iframe": false,
+     "doc": true,
+     "internal": true
+    },
+    {
+     "text": "",
+     "href": "https://umbraco-api.hcsra.co.il/media/qxtdueti/שי-למנהלים-052007.pdf",
+     "year": null,
+     "iframe": false,
+     "doc": true,
+     "internal": true
+    },
+    {
+     "text": "",
+     "href": "https://umbraco-api.hcsra.co.il/media/a3llm0fo/שי-למנהלים-ועובדים-שכירים-072009.pdf",
+     "year": null,
+     "iframe": false,
+     "doc": true,
+     "internal": true
+    },
+    {
+     "text": "",
+     "href": "https://umbraco-api.hcsra.co.il/media/sq1gg30y/שי-לעצמאים-072009.pdf",
+     "year": null,
+     "iframe": false,
+     "doc": true,
+     "internal": true
+    },
+    {
+     "text": "",
+     "href": "https://umbraco-api.hcsra.co.il/media/atslmyi1/שי-לעצמאים-052007.pdf",
+     "year": null,
+     "iframe": false,
+     "doc": true,
+     "internal": true
+    },
+    {
+     "text": "",
+     "href": "https://umbraco-api.hcsra.co.il/media/j45n5ohk/תנאי-בסט-אינווסט-מנהלים-לתאריך-042008.pdf",
+     "year": null,
+     "iframe": false,
+     "doc": true,
+     "internal": true
+    },
+    {
+     "text": "",
+     "href": "https://umbraco-api.hcsra.co.il/media/t5ud0dlm/תנאי-בסט-אינווסט-מנהלים-לתאריך-112007.pdf",
+     "year": null,
+     "iframe": false,
+     "doc": true,
+     "internal": true
+    }
+   ]
+  },
+  "https://www.hcsra.co.il/best-invest/saving-policy-save-and-invest/": {
+   "product": "גמל+ביטוח",
+   "status": 200,
+   "method": "requests",
+   "text_hash": "37a6824864b7010367f57a2c7d4e13f2493841a3",
+   "text_head": "פוליסת חיסכון או קופת גמל להשקעה? המדריך המלא דלג לתוכן הראשי ביטוח רכב ביטוחים נוספים BEST INVEST פעולות תביעות מרכז ידע קשרי משקיעים קריירה יצירת קשר 3453* סוכנים/מעסיקים אזור אישי 3453* אזור אישי ראשי פוליסת חיסכון פוליסת חיסכון והשקעה פוליסת חיסכון - איך לחסוך ולהשקיע חכם מול אפיקי השקעה אחרים \"אז איך בעצם מתחילים לחסוך?\" הינה שאלה אשר כמעט כל אחד שואל עצמו בשלב זה או אחר לאורך חייו. בין אם מדובר בחיסכון לטובת עתידם של הילדים, לצורך רכישת דירה, להבטחת פנסיה מכובדת או לצורך שקט נפשי – הצורך בפתרון לחיסכון והשקעה הופך למשמעותי יותר עם התקדמות חיינו. עם זאת, לאור ריבוי אפשרויות ההשקעה בשוק, ה",
+   "items": [
+    {
+     "text": "תראו לי איך",
+     "href": "https://www.hcsra.co.il/best-invest/saving-policy-save-and-invest/",
+     "year": null,
+     "iframe": false,
+     "doc": false,
+     "internal": true
+    },
+    {
+     "text": "רשימת מנתחים בהסדר",
+     "href": "https://umbraco-api.hcsra.co.il/media/nupjdd0e/רשימת-מנתחים-לאתר-חברה-אוגוסט-26.xlsx",
+     "year": null,
+     "iframe": false,
+     "doc": true,
+     "internal": true
+    },
+    {
+     "text": "רשימת מנתחים בהסדר",
+     "href": "https://umbraco-api.hcsra.co.il/media/d4idpw5u/רשימת-מנתחים-לאתר-חברה-אוגוסט-26.xlsx",
+     "year": null,
+     "iframe": false,
+     "doc": true,
+     "internal": true
+    },
+    {
+     "text": "קשרי משקיעים",
+     "href": "https://www.hcsra.co.il/investor-relations/",
+     "year": null,
+     "iframe": false,
+     "doc": false,
+     "internal": true
+    },
+    {
+     "text": "פורטל הסוכנים",
+     "href": "https://agents-login.hcsra.co.il/my.policy",
+     "year": null,
+     "iframe": false,
+     "doc": false,
+     "internal": true
+    },
+    {
+     "text": "מערך השקעות אשראי ונדל\"ן",
+     "href": "https://www.hcsra.co.il/insurances/investments-credit-realestate/",
+     "year": null,
+     "iframe": false,
+     "doc": false,
+     "internal": true
+    },
+    {
+     "text": "מדיניות התגמול של החברה",
+     "href": "https://umbraco-api.hcsra.co.il/media/xouj2m4i/מדיניות-התגמול-של-החברה-מונגש.pdf",
+     "year": null,
+     "iframe": false,
+     "doc": true,
+     "internal": true
+    },
+    {
+     "text": "מדיניות הגנת הפרטיות (כולל עוגיות וטכנולוגיות דומות)",
+     "href": "https://www.hcsra.co.il/general/privacy-policy/",
+     "year": null,
+     "iframe": false,
+     "doc": false,
+     "internal": true
+    },
+    {
+     "text": "השקעות ייחודיות כדוגמת נדל\"ן",
+     "href": "https://www.hcsra.co.il/Insurances/investments-credit-realestate/real-estate/",
+     "year": null,
+     "iframe": false,
+     "doc": false,
+     "internal": true
+    },
+    {
+     "text": "השקעות והצבעות",
+     "href": "https://www.hcsra.co.il/insurances/investments-credit-realestate/investments/",
+     "year": null,
+     "iframe": false,
+     "doc": false,
+     "internal": true
+    },
+    {
+     "text": "העתק פוליסה",
+     "href": "https://www.hcsra.co.il/copy-of-policy/",
+     "year": null,
+     "iframe": false,
+     "doc": false,
+     "internal": true
+    },
+    {
+     "text": "היתר עסקה וכשרות למסלולי השקעה",
+     "href": "https://www.hcsra.co.il/general/heter-iska-kosher/",
+     "year": null,
+     "iframe": false,
+     "doc": false,
+     "internal": true
+    },
+    {
+     "text": "דוחות ומצגות",
+     "href": "https://www.hcsra.co.il/investor-relations-reports/",
+     "year": null,
+     "iframe": false,
+     "doc": false,
+     "internal": true
+    },
+    {
+     "text": "ביטול פוליסה",
+     "href": "https://www.hcsra.co.il/general/cancel-policy/",
+     "year": null,
+     "iframe": false,
+     "doc": false,
+     "internal": true
+    },
+    {
+     "text": "ביטוח פנסיוני",
+     "href": "https://www.hcsra.co.il/insurances/pension-incurrance/",
+     "year": null,
+     "iframe": false,
+     "doc": false,
+     "internal": true
+    },
+    {
+     "text": "אודות",
+     "href": "https://www.hcsra.co.il/investor-relations/about-us/",
+     "year": null,
+     "iframe": false,
+     "doc": false,
+     "internal": true
+    },
+    {
+     "text": "BEST INVEST מסלול אשראי ואגח – יציבות וצמיחה בתיק ההשקעות שלך",
+     "href": "https://www.hcsra.co.il/best-invest/credit-and-bond-track-stability-and-growth-in-your-investment-portfolio/",
+     "year": null,
+     "iframe": false,
+     "doc": false,
+     "internal": true
+    },
+    {
+     "text": "BEST INVEST חיסכון פנסיוני השקעה במדד S&P 500 - מדד ששווה השקעה?",
+     "href": "https://www.hcsra.co.il/best-invest/investing-in-sp-500/",
+     "year": null,
+     "iframe": false,
+     "doc": false,
+     "internal": true
+    }
+   ]
+  },
+  "https://www.hcsra.co.il/best-invest/": {
+   "product": "ביטוח",
+   "status": 200,
+   "method": "requests",
+   "text_hash": "ea2c43a0d570c7d4164ed4e00e552e10daeafcb7",
+   "text_head": "פוליסת חיסכון BEST INVEST - כל הסיבות לעבור מפיקדון לחיסכון! דלג לתוכן הראשי ביטוח רכב ביטוחים נוספים BEST INVEST פעולות תביעות מרכז ידע קשרי משקיעים קריירה יצירת קשר 3453* סוכנים/מעסיקים אזור אישי 3453* אזור אישי מסלולי השקעה מחשבון תשואות והשוואת מסלולים מוצרים פיננסים אפליקציית BEST INVEST פעולות שאלות ותשובות חוות דעת האנשים שמאחורי הכשרה BEST INVEST מאמרים מונחים פיננסיים מגמות שוק ועדכונים כלכליים ביטוחים נוספים ראשי פוליסת חיסכון עצירת תנועה סליידר 1 מתוך 1 ראשי פוליסת חיסכון תשואות בלי תירוצים. פוליסת חיסכון BEST INVEST לעבור מפיקדון לפוליסת חיסכון עם תשואה מצטיינת שתפתיע אותך. לקבלת ה",
+   "items": [
+    {
+     "text": "תנאי פוליסה בסט אינבסט אישי",
+     "href": "https://umbraco-api.hcsra.co.il/media/3t1kibcb/תנאי-פוליסה-bi-אישי-022022.pdf",
+     "year": "2022",
+     "iframe": false,
+     "doc": true,
+     "internal": true
+    },
+    {
+     "text": "רשימת מנתחים בהסדר",
+     "href": "https://umbraco-api.hcsra.co.il/media/nupjdd0e/רשימת-מנתחים-לאתר-חברה-אוגוסט-26.xlsx",
+     "year": null,
+     "iframe": false,
+     "doc": true,
+     "internal": true
+    },
+    {
+     "text": "רשימת מנתחים בהסדר",
+     "href": "https://umbraco-api.hcsra.co.il/media/d4idpw5u/רשימת-מנתחים-לאתר-חברה-אוגוסט-26.xlsx",
+     "year": null,
+     "iframe": false,
+     "doc": true,
+     "internal": true
+    },
+    {
+     "text": "קשרי משקיעים",
+     "href": "https://www.hcsra.co.il/investor-relations/",
+     "year": null,
+     "iframe": false,
+     "doc": false,
+     "internal": true
+    },
+    {
+     "text": "פורטל הסוכנים",
+     "href": "https://agents-login.hcsra.co.il/my.policy",
+     "year": null,
+     "iframe": false,
+     "doc": false,
+     "internal": true
+    },
+    {
+     "text": "מערך השקעות אשראי ונדל\"ן",
+     "href": "https://www.hcsra.co.il/insurances/investments-credit-realestate/",
+     "year": null,
+     "iframe": false,
+     "doc": false,
+     "internal": true
+    },
+    {
+     "text": "מסלולי השקעה",
+     "href": "https://www.hcsra.co.il/best-invest/",
+     "year": null,
+     "iframe": false,
+     "doc": false,
+     "internal": true
+    },
+    {
+     "text": "מדיניות התגמול של החברה",
+     "href": "https://umbraco-api.hcsra.co.il/media/xouj2m4i/מדיניות-התגמול-של-החברה-מונגש.pdf",
+     "year": null,
+     "iframe": false,
+     "doc": true,
+     "internal": true
+    },
+    {
+     "text": "מדיניות הגנת הפרטיות (כולל עוגיות וטכנולוגיות דומות)",
+     "href": "https://www.hcsra.co.il/general/privacy-policy/",
+     "year": null,
+     "iframe": false,
+     "doc": false,
+     "internal": true
+    },
+    {
+     "text": "השקעות והצבעות",
+     "href": "https://www.hcsra.co.il/insurances/investments-credit-realestate/investments/",
+     "year": null,
+     "iframe": false,
+     "doc": false,
+     "internal": true
+    },
+    {
+     "text": "העתק פוליסה",
+     "href": "https://www.hcsra.co.il/copy-of-policy/",
+     "year": null,
+     "iframe": false,
+     "doc": false,
+     "internal": true
+    },
+    {
+     "text": "היתר עסקה וכשרות למסלולי השקעה",
+     "href": "https://www.hcsra.co.il/general/heter-iska-kosher/",
+     "year": null,
+     "iframe": false,
+     "doc": false,
+     "internal": true
+    },
+    {
+     "text": "דוחות ומצגות",
+     "href": "https://www.hcsra.co.il/investor-relations-reports/",
+     "year": null,
+     "iframe": false,
+     "doc": false,
+     "internal": true
+    },
+    {
+     "text": "ביטול פוליסה",
+     "href": "https://www.hcsra.co.il/general/cancel-policy/",
+     "year": null,
+     "iframe": false,
+     "doc": false,
+     "internal": true
+    },
+    {
+     "text": "ביטוח פנסיוני",
+     "href": "https://www.hcsra.co.il/insurances/pension-incurrance/",
+     "year": null,
+     "iframe": false,
+     "doc": false,
+     "internal": true
+    },
+    {
+     "text": "אודות",
+     "href": "https://www.hcsra.co.il/investor-relations/about-us/",
+     "year": null,
+     "iframe": false,
+     "doc": false,
+     "internal": true
+    },
+    {
+     "text": "BEST INVEST פוליסת חיסכון - מה זה, למי זה מתאים ואיך בוחרים נכון?",
+     "href": "https://www.hcsra.co.il/best-invest/financial-savings-policy/",
+     "year": null,
+     "iframe": false,
+     "doc": false,
+     "internal": true
+    },
+    {
+     "text": "BEST INVEST פוליסת חיסכון - איך לחסוך ולהשקיע חכם מול אפיקי השקעה אחרים",
+     "href": "https://www.hcsra.co.il/best-invest/saving-policy-save-and-invest/",
+     "year": null,
+     "iframe": false,
+     "doc": false,
+     "internal": true
+    },
+    {
+     "text": "BEST INVEST למה להשאיר כסף “ישן” בעו״ש זו טעות שקטה ומה עושים היום כדי לגרום לו לעבוד",
+     "href": "https://www.hcsra.co.il/best-invest/saving-policy-vs-current-account/",
+     "year": null,
+     "iframe": false,
+     "doc": false,
+     "internal": true
+    },
+    {
+     "text": "BEST INVEST חיסכון פנסיוני השקעה במדד S&P 500 - מדד ששווה השקעה?",
+     "href": "https://www.hcsra.co.il/best-invest/investing-in-sp-500/",
      "year": null,
      "iframe": false,
      "doc": false,
@@ -1444,6 +3104,14 @@
      "internal": true
     },
     {
+     "text": "ביטוח פנסיוני",
+     "href": "https://www.hcsra.co.il/insurances/pension-incurrance/",
+     "year": null,
+     "iframe": false,
+     "doc": false,
+     "internal": true
+    },
+    {
      "text": "אודות",
      "href": "https://www.hcsra.co.il/investor-relations/about-us/",
      "year": null,
@@ -1557,129 +3225,8 @@
      "internal": true
     },
     {
-     "text": "אודות",
-     "href": "https://www.hcsra.co.il/investor-relations/about-us/",
-     "year": null,
-     "iframe": false,
-     "doc": false,
-     "internal": true
-    }
-   ]
-  },
-  "https://www.hcsra.co.il/best-invest/saving-policy-save-and-invest/": {
-   "product": "גמל+ביטוח",
-   "status": 200,
-   "method": "requests",
-   "text_hash": "37a6824864b7010367f57a2c7d4e13f2493841a3",
-   "text_head": "פוליסת חיסכון או קופת גמל להשקעה? המדריך המלא דלג לתוכן הראשי ביטוח רכב ביטוחים נוספים BEST INVEST פעולות תביעות מרכז ידע קשרי משקיעים קריירה יצירת קשר 3453* סוכנים/מעסיקים אזור אישי 3453* אזור אישי ראשי פוליסת חיסכון פוליסת חיסכון והשקעה פוליסת חיסכון - איך לחסוך ולהשקיע חכם מול אפיקי השקעה אחרים \"אז איך בעצם מתחילים לחסוך?\" הינה שאלה אשר כמעט כל אחד שואל עצמו בשלב זה או אחר לאורך חייו. בין אם מדובר בחיסכון לטובת עתידם של הילדים, לצורך רכישת דירה, להבטחת פנסיה מכובדת או לצורך שקט נפשי – הצורך בפתרון לחיסכון והשקעה הופך למשמעותי יותר עם התקדמות חיינו. עם זאת, לאור ריבוי אפשרויות ההשקעה בשוק, ה",
-   "items": [
-    {
-     "text": "תראו לי איך",
-     "href": "https://www.hcsra.co.il/best-invest/saving-policy-save-and-invest/",
-     "year": null,
-     "iframe": false,
-     "doc": false,
-     "internal": true
-    },
-    {
-     "text": "רשימת מנתחים בהסדר",
-     "href": "https://umbraco-api.hcsra.co.il/media/nupjdd0e/רשימת-מנתחים-לאתר-חברה-אוגוסט-26.xlsx",
-     "year": null,
-     "iframe": false,
-     "doc": true,
-     "internal": true
-    },
-    {
-     "text": "רשימת מנתחים בהסדר",
-     "href": "https://umbraco-api.hcsra.co.il/media/d4idpw5u/רשימת-מנתחים-לאתר-חברה-אוגוסט-26.xlsx",
-     "year": null,
-     "iframe": false,
-     "doc": true,
-     "internal": true
-    },
-    {
-     "text": "קשרי משקיעים",
-     "href": "https://www.hcsra.co.il/investor-relations/",
-     "year": null,
-     "iframe": false,
-     "doc": false,
-     "internal": true
-    },
-    {
-     "text": "פורטל הסוכנים",
-     "href": "https://agents-login.hcsra.co.il/my.policy",
-     "year": null,
-     "iframe": false,
-     "doc": false,
-     "internal": true
-    },
-    {
-     "text": "מערך השקעות אשראי ונדל\"ן",
-     "href": "https://www.hcsra.co.il/insurances/investments-credit-realestate/",
-     "year": null,
-     "iframe": false,
-     "doc": false,
-     "internal": true
-    },
-    {
-     "text": "מדיניות התגמול של החברה",
-     "href": "https://umbraco-api.hcsra.co.il/media/xouj2m4i/מדיניות-התגמול-של-החברה-מונגש.pdf",
-     "year": null,
-     "iframe": false,
-     "doc": true,
-     "internal": true
-    },
-    {
-     "text": "מדיניות הגנת הפרטיות (כולל עוגיות וטכנולוגיות דומות)",
-     "href": "https://www.hcsra.co.il/general/privacy-policy/",
-     "year": null,
-     "iframe": false,
-     "doc": false,
-     "internal": true
-    },
-    {
-     "text": "השקעות ייחודיות כדוגמת נדל\"ן",
-     "href": "https://www.hcsra.co.il/Insurances/investments-credit-realestate/real-estate/",
-     "year": null,
-     "iframe": false,
-     "doc": false,
-     "internal": true
-    },
-    {
-     "text": "השקעות והצבעות",
-     "href": "https://www.hcsra.co.il/insurances/investments-credit-realestate/investments/",
-     "year": null,
-     "iframe": false,
-     "doc": false,
-     "internal": true
-    },
-    {
-     "text": "העתק פוליסה",
-     "href": "https://www.hcsra.co.il/copy-of-policy/",
-     "year": null,
-     "iframe": false,
-     "doc": false,
-     "internal": true
-    },
-    {
-     "text": "היתר עסקה וכשרות למסלולי השקעה",
-     "href": "https://www.hcsra.co.il/general/heter-iska-kosher/",
-     "year": null,
-     "iframe": false,
-     "doc": false,
-     "internal": true
-    },
-    {
-     "text": "דוחות ומצגות",
-     "href": "https://www.hcsra.co.il/investor-relations-reports/",
-     "year": null,
-     "iframe": false,
-     "doc": false,
-     "internal": true
-    },
-    {
-     "text": "ביטול פוליסה",
-     "href": "https://www.hcsra.co.il/general/cancel-policy/",
+     "text": "ביטוח פנסיוני",
+     "href": "https://www.hcsra.co.il/insurances/pension-incurrance/",
      "year": null,
      "iframe": false,
      "doc": false,
@@ -1688,14 +3235,6 @@
     {
      "text": "אודות",
      "href": "https://www.hcsra.co.il/investor-relations/about-us/",
-     "year": null,
-     "iframe": false,
-     "doc": false,
-     "internal": true
-    },
-    {
-     "text": "BEST INVEST מסלול אשראי ואגח – יציבות וצמיחה בתיק ההשקעות שלך",
-     "href": "https://www.hcsra.co.il/best-invest/credit-and-bond-track-stability-and-growth-in-your-investment-portfolio/",
      "year": null,
      "iframe": false,
      "doc": false,
@@ -1807,6 +3346,14 @@
      "internal": true
     },
     {
+     "text": "ביטוח פנסיוני",
+     "href": "https://www.hcsra.co.il/insurances/pension-incurrance/",
+     "year": null,
+     "iframe": false,
+     "doc": false,
+     "internal": true
+    },
+    {
      "text": "אודות",
      "href": "https://www.hcsra.co.il/investor-relations/about-us/",
      "year": null,
@@ -1818,7 +3365,7 @@
   },
   "https://agents-login.hcsra.co.il/my.policy": {
    "product": null,
-   "status": "browser:TimeoutError",
+   "status": "browser:TimeoutError:Page.goto: Timeout 60000ms exceeded.",
    "method": "requests",
    "text_hash": null,
    "text_head": "",
@@ -1976,6 +3523,14 @@
      "internal": true
     },
     {
+     "text": "ביטוח פנסיוני",
+     "href": "https://www.hcsra.co.il/insurances/pension-incurrance/",
+     "year": null,
+     "iframe": false,
+     "doc": false,
+     "internal": true
+    },
+    {
      "text": "אודות",
      "href": "https://www.hcsra.co.il/investor-relations/about-us/",
      "year": null,
@@ -2105,6 +3660,14 @@
      "internal": true
     },
     {
+     "text": "ביטוח פנסיוני",
+     "href": "https://www.hcsra.co.il/insurances/pension-incurrance/",
+     "year": null,
+     "iframe": false,
+     "doc": false,
+     "internal": true
+    },
+    {
      "text": "אודות",
      "href": "https://www.hcsra.co.il/investor-relations/about-us/",
      "year": null,
@@ -2117,9 +3680,26 @@
   "https://bestcar.hcsra.co.il/best-policy-proposal/starter?utm_source=web&utm_medium=organic": {
    "product": null,
    "status": 200,
-   "method": "requests",
-   "text_hash": "258f01d8f83a2dd2e4baf10ea8537f7e6ba17072",
-   "text_head": "Radware Page Verifying your browser before proceeding... Incident ID: 93cbc976-e42q-4659-bffe-b5f521a9d885",
+   "method": "browser",
+   "text_hash": "47a81fe906fe2f663c2c766a33f647fbb961c14c",
+   "text_head": "We apologize for the inconvenience... ...but your activity and behavior on this site made us think that you are a bot. Note: A number of things could be going on here. If you are attempting to access this site using an anonymous Private/Proxy network, please disable that and try accessing site again. Due to previously detected malicious behavior which originated from the network you're using, please request unblock to site. Incident ID: 7cfbb812-e42q-4639-8aee-f1bf99b1723a Please solve this CAPTCHA to request unblock to the website You reached this page when trying to access https://bestcar.hc",
+   "items": [
+    {
+     "text": "(iframe)",
+     "href": "https://newassets.hcaptcha.com/captcha/v1/b9ca2a6602c2bf69741b771db488f3001ea35b08/static/hcaptcha.html",
+     "year": null,
+     "iframe": true,
+     "doc": false,
+     "internal": false
+    }
+   ]
+  },
+  "https://newassets.hcaptcha.com/captcha/v1/b9ca2a6602c2bf69741b771db488f3001ea35b08/static/hcaptcha.html": {
+   "product": null,
+   "status": 200,
+   "method": "browser",
+   "text_hash": null,
+   "text_head": "",
    "items": []
   }
  }
