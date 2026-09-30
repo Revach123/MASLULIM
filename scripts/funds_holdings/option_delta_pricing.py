@@ -143,6 +143,9 @@ def resolve_option_delta(ticker: str | None, strike: float | None, expiry: date 
     spot = price_as_of(ticker, report_date)
     if spot is None:
         return None, None
+    # אופציית מדד: מימוש רחוק מהמדד = זיהוי שגוי של נכס הבסיס (ר' PATTERN_G) - לא מחשבים
+    if ticker in INDEX_SERIES and not (0.5 <= strike / spot <= 2.0):
+        return None, None
     vol = realized_vol_as_of(ticker, report_date)
     if vol is None:
         return None, None

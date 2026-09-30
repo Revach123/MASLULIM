@@ -62,12 +62,13 @@
 """
 
 import statistics
-from datetime import date
+from datetime import date, datetime
 
 from .excel_io import to_ratio
 from .sheet_source import PCT_COL
 from .option_delta_pricing import quote_scale, resolve_option_delta
-from .option_ticker_parse import CONTRACT_MULTIPLIER, is_call_option, parse_underlying
+from .option_ticker_parse import (CONTRACT_MULTIPLIER, is_call_option, parse_maof_expiry_month, parse_strike,
+                                  parse_underlying)
 from .futures_notional import FuturesResolver, build_rows as build_futures_rows
 from .swap_index_pricing import price_as_of as index_price_as_of, resolve_current_price
 
@@ -200,6 +201,9 @@ FOREIGN_FX_PLACEHOLDER_TOL = 0.01
 OPT_NAME_COL = "שם נייר ערך"
 OPT_UNDERLYING_COL = "נכס בסיס"
 OPT_EQUITY_UNDERLYING = "מניות לרבות מדדי מניות"
+# ערכי "נכס בסיס" שאינם מניות במפורש. ערך אחר / ריק / חופשי ("TEL AVIV STOCK EXCHANGE
+# 35 IND", "ריק במקור") - מניות רק אם נכס הבסיס זוהה משם האופציה (ר' is_equity_option)
+OPT_NON_EQUITY_UNDERLYINGS = {'ריבית ואג"ח', 'מט"ח', "סחורות", "מדדי סחורות"}
 OPT_STRIKE_COL = "שער מימוש"
 OPT_EXPIRY_COL = "תאריך פקיעה"
 OPT_UNITS_COL = "ערך נקוב (יחידות)"
@@ -566,6 +570,46 @@ def collect_unresolved_swap_tickers(source: list[dict]) -> dict[str, set[str]]:
     return out
 
 
+def _as_date(v) -> date | None:
+    """תאריך פקיעה כפי שמופיע בדוחות: datetime / date (openpyxl) או מחרוזת
+    ("26/04/2026", "24/07/2026", "2026-07-24")."""
+    if hasattr(v, "date"):
+        return v.date()
+    if isinstance(v, date):
+        return v
+    s = str(v or "").strip()
+    for fmt in ("%d/%m/%Y", "%Y-%m-%d", "%d.%m.%Y", "%d/%m/%y"):
+        try:
+            return datetime.strptime(s, fmt).date()
+        except ValueError:
+            continue
+    return None
+
+
+def is_equity_option(row: dict) -> bool:
+    """אופציה על מניות: "נכס בסיס" = מניות, או ערך לא סטנדרטי / ריק כשנכס הבסיס
+    זוהה משם האופציה כמדד מניות / מניה (C004160M607-35ת -> ת"א 35). אופציות
+    פרויקט ("קיקר", "PowerGen Option") לא מזוהות ונשארות מחוץ לחשיפה למניות."""
+    v = row.get(OPT_UNDERLYING_COL)
+    if v == OPT_EQUITY_UNDERLYING:
+        return True
+    if v in OPT_NON_EQUITY_UNDERLYINGS:
+        return False
+    name = row.get(OPT_NAME_COL)
+    return bool(name) and parse_underlying(str(name))[0] is not None
+
+
+def _option_expiry(row: dict, name, report_date) -> date | None:
+    """תאריך הפקיעה; כשהשם הוא קוד מעו"ף (M607 = 07/2026) והעמודה ריקה או
+    סותרת אותו (נצפה 2046-03-31 כערך ברירת מחדל) - החודש מהקוד (ה-24 בחודש;
+    הדלתא כמעט לא רגישה ליום)."""
+    expiry = _as_date(row.get(OPT_EXPIRY_COL))
+    ym = parse_maof_expiry_month(str(name), report_date.year) if name and report_date else None
+    if ym and (expiry is None or (expiry.year, expiry.month) != ym):
+        return date(ym[0], ym[1], 24)
+    return expiry
+
+
 def _options_exposure(
     source: list[dict], total_assets: dict[str, float], category: str, detail: list | None = None
 ) -> tuple[dict[str, float], dict[str, float]]:
@@ -589,7 +633,7 @@ def _options_exposure(
                 continue
             row_pct = to_ratio(row.get(PCT_COL)) or 0.0
 
-            if row.get(OPT_UNDERLYING_COL) != OPT_EQUITY_UNDERLYING:
+            if not is_equity_option(row):
                 sums[key] = sums.get(key, 0.0) + row_pct
                 continue
 
@@ -597,10 +641,9 @@ def _options_exposure(
             ticker, _pattern = parse_underlying(str(name)) if name else (None, None)
             is_call = is_call_option(str(name)) if name else None
             strike = _num(row.get(OPT_STRIKE_COL))
-            expiry_raw = row.get(OPT_EXPIRY_COL)
-            # datetime (openpyxl) או date - שניהם קיימים בדוחות
-            expiry = (expiry_raw.date() if hasattr(expiry_raw, "date")
-                      else expiry_raw if isinstance(expiry_raw, date) else None)
+            if not strike or strike <= 0:  # עמודה ריקה / 0 - מהשם ("C004160M607-35ת")
+                strike = parse_strike(str(name)) if name else None
+            expiry = _option_expiry(row, name, report_date)
             units = _num(row.get(OPT_UNITS_COL))
             fx = _normalize_fx(row.get(OPT_CURRENCY_COL), _num(row.get(OPT_FX_COL)))
 
