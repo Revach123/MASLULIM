@@ -16,7 +16,7 @@ permissions:
   contents: write
 
 concurrency:
-  group: policy-data
+  group: policy-snapshot
   cancel-in-progress: false
 
 jobs:
