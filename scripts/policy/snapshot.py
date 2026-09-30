@@ -83,7 +83,7 @@ def fetch_browser(pw, url):
                 u = r.url
                 if re.search(r"\.(xlsx|xls|pdf|docx)(\?|$)", u, re.I) or re.search(r"spreadsheet|pdf|msword|excel", ct):
                     net.append({"href": u, "text": "(network file)"})
-                elif "json" in ct or "javascript" not in ct and "text/html" not in ct and "xml" in ct:
+                elif "json" in ct or "x-component" in ct or "javascript" not in ct and "text/html" not in ct and "xml" in ct:  # x-component: Next.js RSC
                     body = r.text()
                     if len(body) < 3_000_000:
                         for m in FILE_RX.findall(body):
