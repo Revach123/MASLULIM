@@ -13,6 +13,11 @@
   "ביטוח"
  ],
  "search": true,
- "rev": 6,
- "via": "extension"
+ "rev": 7,
+ "via": "extension",
+ "click": [
+  "נושא",
+  "הצהרת מדיניות השקעות"
+ ],
+ "note": "עמוד /investments: רשימה 'נושא' -> 'הצהרת מדיניות השקעות' -> אקורדיון שנים -> 'הצהרה מראש של גוף מוסדי לשנת YYYY' (להורדה, /media/.../guf_mosdi_YYYY-*.xlsx)"
 }

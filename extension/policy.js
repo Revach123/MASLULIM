@@ -35,10 +35,23 @@ async function waitComplete(tabId, timeoutMs = 45000) {
 }
 
 // רץ בתוך הדף: פותח אקורדיונים/לשוניות, ומחזיר את כל הקישורים (כולל בתוך iframes מאותו origin).
-function pageCollectLinks() {
+async function pageCollectLinks(clicks) {
+  const wait = (ms) => new Promise((r) => setTimeout(r, ms));
   const clickAll = (sel) => document.querySelectorAll(sel).forEach((el) => { try { el.click(); } catch (e) {} });
+  // רצף לחיצות לפי טקסט (מההגדרות של האתר), למשל איילון: "נושא" -> "הצהרת מדיניות השקעות"
+  const visible = (el) => !!(el.offsetWidth || el.offsetHeight || el.getClientRects().length);
+  for (const label of clicks || []) {
+    const cands = [...document.querySelectorAll("button, a, li, span, div, label, [role=option], [role=combobox], [role=button]")]
+      .filter((el) => visible(el) && (el.innerText || "").trim() === label);
+    const el = cands.sort((a, b) => a.querySelectorAll("*").length - b.querySelectorAll("*").length)[0];
+    if (el) { try { el.click(); } catch (e) {} await wait(1200); }
+  }
   clickAll('[aria-expanded="false"]:not(a)');
   clickAll("details:not([open]) > summary");
+  // כותרות אקורדיון לפי שנה ("שנת 2026")
+  [...document.querySelectorAll("button, h2, h3, h4, div, span")].filter((el) => /^\s*שנת\s+20\d\d\s*$/.test(el.innerText || "") && visible(el))
+    .forEach((el) => { try { el.click(); } catch (e) {} });
+  await wait(1500);
   const out = [];
   const grab = (doc, base) => {
     doc.querySelectorAll("a[href]").forEach((a) => {
@@ -133,7 +146,8 @@ export async function runPolicy(cfg, setStatus) {
         tab = await tabsRetry(() => chrome.tabs.create({ url: pageUrl, active: false }));
         await waitComplete(tab.id);
         await sleep(3000);
-        const [res] = await chrome.scripting.executeScript({ target: { tabId: tab.id }, func: pageCollectLinks });
+        const [res] = await chrome.scripting.executeScript({ target: { tabId: tab.id }, func: pageCollectLinks,
+                                                            args: [(site.clicks || {})[pageUrl] || site.click || []] });
         const links = (res && res.result) || [];
         const cap = await captureDownloads(tab.id);
         links.push(...cap.urls.map((u) => ({ ...u, ctx: "(download)" })));

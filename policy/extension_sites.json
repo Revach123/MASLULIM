@@ -6,7 +6,9 @@
   "pages": [],
   "products": [
    "פנסיה"
-  ]
+  ],
+  "click": null,
+  "clicks": null
  },
  {
   "legal_id": "514956465",
@@ -21,7 +23,9 @@
   "products": [
    "גמל",
    "פנסיה"
-  ]
+  ],
+  "click": null,
+  "clicks": null
  },
  {
   "legal_id": "520030677",
@@ -35,6 +39,11 @@
   ],
   "products": [
    "ביטוח"
-  ]
+  ],
+  "click": [
+   "נושא",
+   "הצהרת מדיניות השקעות"
+  ],
+  "clicks": null
  }
 ]
