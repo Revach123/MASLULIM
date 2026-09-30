@@ -1,7 +1,7 @@
 {
  "legal_id": "512245812",
  "company": "מנורה מבטחים פנסיה וגמל בע\"מ",
- "taken": "2026-09-30T21:13:40+00:00",
+ "taken": "2026-09-30T21:21:19+00:00",
  "pages": {
   "https://www.menoramivt.co.il": {
    "product": "פנסיה+גמל+ביטוח",
@@ -116,28 +116,141 @@
     }
    ]
   },
+  "https://www.menoramivt.co.il/rep-list/about-insurance/participating-portfolio-info/investment-policy": {
+   "product": "פנסיה+ביטוח",
+   "status": 200,
+   "method": "browser",
+   "text_hash": "8fa33dba851f3f233b63984823d03cf37917db2b",
+   "text_head": "דלג לתוכן הדף ביטוחיםחיסכון פנסיונימנורה השקעותתביעותשירותיםפעולותדברו איתנו|פורטלים פורטל סוכנים פורטל מעסיקים מערכת מ.מ.ש קשרי משקיעים Investor Relations מוסכי הסדר ✕ כניסה לאזור האישי אתר זה משתמש בעוגיות (Cookies) לשיפור חווית הגלישה והתאמת תכנים. למידע נוסף ראה מדיניות הפרטיות הבנתי היי👋 רק רצינו לעדכן שמהיום ניתן לקבל שירות גם ב-WhatsApp במספר 054-7108187 להתחלת שיחה מעדיפים להמשיך לדבר איתנו כאן? בשמחה! עם מי יש לנו הכבוד? 😊 (אנא הקלידו שם מלא) מעדיפים להמשיך לדבר איתנו כאן? בשמחה!$br עם מי יש לנו הכבוד? 😊 (אנא הקלידו שם מלא) הצהרת מדיניות השקעה לצפייה בקבצים דרושה תוכנת Acrobat Reader.",
+   "items": [
+    {
+     "text": "פורטל סוכנים",
+     "href": "https://menoranet.menora.co.il/my.policy",
+     "year": null,
+     "iframe": false,
+     "doc": false,
+     "internal": false
+    },
+    {
+     "text": "עדכון מוטבים",
+     "href": "https://meforms.menora.co.il/api/launch/templatelink/request-policy-changes",
+     "year": null,
+     "iframe": false,
+     "doc": false,
+     "internal": false
+    },
+    {
+     "text": "מערכת מ.מ.ש",
+     "href": "https://dent.menora.co.il/my.policy",
+     "year": null,
+     "iframe": false,
+     "doc": false,
+     "internal": false
+    },
+    {
+     "text": "מסלולי השקעות בפרישה",
+     "href": "https://www.menoramivt.co.il/list/pension-member-info/retirement-investment-tracks",
+     "year": null,
+     "iframe": false,
+     "doc": false,
+     "internal": true
+    },
+    {
+     "text": "מסלולי השקעה בקרן ההשתלמות",
+     "href": "https://www.menoramivt.co.il/links/pension-and-gemel/gemel-hishtalmut-list/menroa-keren-hishtalmut",
+     "year": null,
+     "iframe": false,
+     "doc": false,
+     "internal": true
+    },
+    {
+     "text": "מדיניות פרטיות",
+     "href": "https://www.menoramivt.co.il/general/privacy-policy",
+     "year": null,
+     "iframe": false,
+     "doc": false,
+     "internal": true
+    },
+    {
+     "text": "ביטול פוליסה קיימת",
+     "href": "https://www.menoramivt.co.il/customer-login/?target=customer-cancel-policy&originSource=marketingSite",
+     "year": null,
+     "iframe": false,
+     "doc": false,
+     "internal": true
+    },
+    {
+     "text": "ביטול פוליסה קיימת",
+     "href": "https://www.menoramivt.co.il/general/cancellation-of-policy",
+     "year": null,
+     "iframe": false,
+     "doc": false,
+     "internal": true
+    },
+    {
+     "text": "ביטול פוליסה",
+     "href": "https://www.menoramivt.co.il/customer-login/?target=customer-iframe-launcher-cancel-policy",
+     "year": null,
+     "iframe": false,
+     "doc": false,
+     "internal": true
+    },
+    {
+     "text": "ארכיון פוליסות",
+     "href": "https://www.menoramivt.co.il/policy/",
+     "year": null,
+     "iframe": false,
+     "doc": false,
+     "internal": true
+    },
+    {
+     "text": "אישור מס והצהרת הון",
+     "href": "https://www.menoramivt.co.il/personal/reports/?originSource=marketingSite",
+     "year": null,
+     "iframe": false,
+     "doc": false,
+     "internal": true
+    },
+    {
+     "text": "Investor Relations (EN)",
+     "href": "https://www.menoramivt.co.il/investor-relations",
+     "year": null,
+     "iframe": false,
+     "doc": false,
+     "internal": true
+    },
+    {
+     "text": "",
+     "href": "https://www.menoramivt.co.il/rep-list/about-insurance/participating-portfolio-info/investment-policy",
+     "year": null,
+     "iframe": false,
+     "doc": false,
+     "internal": true
+    }
+   ]
+  },
   "https://www.menoramivt.co.il/list/pension-member-info/retirement-investment-tracks": {
    "product": "פנסיה",
    "status": 200,
    "method": "requests",
-   "text_hash": "59d1f8722981c834f5eb13a364470849ffee242a",
-   "text_head": "Radware Captcha Page We apologize for the inconvenience... ...but your activity and behavior on this site made us think that you are a bot. Note: A number of things could be going on here. If you are attempting to access this site using an anonymous Private/Proxy network, please disable that and try accessing site again. Due to previously detected malicious behavior which originated from the network you're using, please request unblock to site. Incident ID: f425c1fc-dcyu-4ae2-8189-197e3532312a Please solve this CAPTCHA to request unblock to the website You reached this page when trying to acce",
+   "text_hash": "196d1c6631a507155473f9f7e3b17ca2ea718099",
+   "text_head": "Radware Captcha Page We apologize for the inconvenience... ...but your activity and behavior on this site made us think that you are a bot. Note: A number of things could be going on here. If you are attempting to access this site using an anonymous Private/Proxy network, please disable that and try accessing site again. Due to previously detected malicious behavior which originated from the network you're using, please request unblock to site. Incident ID: 5d7dcaea-dcyu-45e5-bb3d-848dc3d1e234 Please solve this CAPTCHA to request unblock to the website You reached this page when trying to acce",
    "items": []
   },
   "https://www.menoramivt.co.il/links/pension-and-gemel/gemel-hishtalmut-list/menroa-keren-hishtalmut": {
    "product": "פנסיה+גמל",
    "status": 200,
    "method": "requests",
-   "text_hash": "6b7555dea5ff39375792314ddb2cc11a01c02eea",
-   "text_head": "Radware Captcha Page We apologize for the inconvenience... ...but your activity and behavior on this site made us think that you are a bot. Note: A number of things could be going on here. If you are attempting to access this site using an anonymous Private/Proxy network, please disable that and try accessing site again. Due to previously detected malicious behavior which originated from the network you're using, please request unblock to site. Incident ID: d395dcbc-dcyu-4abc-a26a-4698afa12cdb Please solve this CAPTCHA to request unblock to the website You reached this page when trying to acce",
+   "text_hash": "e3071e143b3a6d871d74c77af2bc9bb30b956f34",
+   "text_head": "Radware Captcha Page We apologize for the inconvenience... ...but your activity and behavior on this site made us think that you are a bot. Note: A number of things could be going on here. If you are attempting to access this site using an anonymous Private/Proxy network, please disable that and try accessing site again. Due to previously detected malicious behavior which originated from the network you're using, please request unblock to site. Incident ID: 141be587-dcyu-4a92-aa5c-bb75bb7f5c84 Please solve this CAPTCHA to request unblock to the website You reached this page when trying to acce",
    "items": []
   },
   "https://www.menoramivt.co.il/policy/": {
    "product": "פנסיה+ביטוח",
    "status": 200,
    "method": "browser",
-   "text_hash": "d1d038527f36848e7aa2d64126be0fbe761a4f51",
-   "text_head": "דלג לתוכן הדף ביטוחיםחיסכון פנסיונימנורה השקעותתביעותשירותיםפעולותדברו איתנו|פורטלים ✕ כניסה לאזור האישי אתר זה משתמש בעוגיות (Cookies) לשיפור חווית הגלישה והתאמת תכנים. למידע נוסף ראה מדיניות הפרטיות הבנתי דף הבית> ארכיון פוליסות היי👋 רק רצינו לעדכן שמהיום ניתן לקבל שירות גם ב-WhatsApp במספר 054-7108187 להתחלת שיחה מעדיפים להמשיך לדבר איתנו כאן? בשמחה! עם מי יש לנו הכבוד? 😊 (אנא הקלידו שם מלא) מעדיפים להמשיך לדבר איתנו כאן? בשמחה!$br עם מי יש לנו הכבוד? 😊 (אנא הקלידו שם מלא) ארכיון פוליסות כל המסמכים במקום אחד מה אתם מחפשים? חיפוש תחום ​ תקופת מכירה mm/yyyy חפש כאן תוכלו לאתר בקלות את תנאי הפ",
+   "text_hash": "40af5d66d851dd2a4013ea593476687cced5ffc7",
+   "text_head": "דלג לתוכן הדף ביטוחיםחיסכון פנסיונימנורה השקעותתביעותשירותיםפעולותדברו איתנו|פורטלים פורטל סוכנים פורטל מעסיקים מערכת מ.מ.ש קשרי משקיעים Investor Relations מוסכי הסדר ✕ כניסה לאזור האישי אתר זה משתמש בעוגיות (Cookies) לשיפור חווית הגלישה והתאמת תכנים. למידע נוסף ראה מדיניות הפרטיות הבנתי דף הבית> ארכיון פוליסות היי👋 רק רצינו לעדכן שמהיום ניתן לקבל שירות גם ב-WhatsApp במספר 054-7108187 להתחלת שיחה מעדיפים להמשיך לדבר איתנו כאן? בשמחה! עם מי יש לנו הכבוד? 😊 (אנא הקלידו שם מלא) מעדיפים להמשיך לדבר איתנו כאן? בשמחה!$br עם מי יש לנו הכבוד? 😊 (אנא הקלידו שם מלא) ארכיון פוליסות כל המסמכים במקום אחד מ",
    "items": [
     {
      "text": "לחצו כאן",
@@ -212,6 +325,14 @@
      "internal": true
     },
     {
+     "text": "מדיניות פרטיות",
+     "href": "https://www.menoramivt.co.il/general/privacy-policy",
+     "year": null,
+     "iframe": false,
+     "doc": false,
+     "internal": true
+    },
+    {
      "text": "ביטול פוליסה קיימת",
      "href": "https://www.menoramivt.co.il/customer-login/?target=customer-cancel-policy&originSource=marketingSite",
      "year": null,
@@ -230,14 +351,6 @@
     {
      "text": "ביטול פוליסה",
      "href": "https://www.menoramivt.co.il/customer-login/?target=customer-iframe-launcher-cancel-policy",
-     "year": null,
-     "iframe": false,
-     "doc": false,
-     "internal": true
-    },
-    {
-     "text": "אתר זה משתמש בעוגיות (Cookies) לשיפור חווית הגלישה והתאמת תכנים. למידע נוסף ראה מדיניות הפרטיות",
-     "href": "https://www.menoramivt.co.il/general/privacy-policy",
      "year": null,
      "iframe": false,
      "doc": false,
@@ -273,24 +386,24 @@
    "product": null,
    "status": 200,
    "method": "browser",
-   "text_hash": "222e5f8b2396341a46168eae4bb30d4e7577c146",
-   "text_head": "כניסה לאזור האישי מספר זהות כניסה עם מספר דרכון טלפון / דוא\"ל שלחו לי קוד בהודעה רוצה לקבל קוד בשיחה טלפונית יש בעיה או שאלה? במוקד התמיכה הטכנית שלנו ישמחו לעזור 03-7108900 | המוקד פעיל בימים א'-ה' בין השעות 8:00-17:00 | שליחת פניה למוקד התמיכה הטכנית | לכל נושא אחר יש לפנות למוקדי שירות הלקוחות בטלפון 2000*",
+   "text_hash": null,
+   "text_head": "",
    "items": []
   },
   "https://www.menoramivt.co.il/customer-login/?target=customer-cancel-policy&originSource=marketingSite": {
    "product": null,
    "status": 200,
    "method": "browser",
-   "text_hash": "222e5f8b2396341a46168eae4bb30d4e7577c146",
-   "text_head": "כניסה לאזור האישי מספר זהות כניסה עם מספר דרכון טלפון / דוא\"ל שלחו לי קוד בהודעה רוצה לקבל קוד בשיחה טלפונית יש בעיה או שאלה? במוקד התמיכה הטכנית שלנו ישמחו לעזור 03-7108900 | המוקד פעיל בימים א'-ה' בין השעות 8:00-17:00 | שליחת פניה למוקד התמיכה הטכנית | לכל נושא אחר יש לפנות למוקדי שירות הלקוחות בטלפון 2000*",
+   "text_hash": "ae519de33855facc22baa6b050bb67636db59118",
+   "text_head": "כניסה לאזור האישי מספר זהות יש להזין תעודת זהות מלאה כולל ספרת ביקורת טלפון / דוא\"ל יש להקליד כתובת דוא\"ל או טלפון נייד שלחו לי קוד בהודעה רוצה לקבל קוד בשיחה טלפונית יש בעיה או שאלה? במוקד התמיכה הטכנית שלנו ישמחו לעזור 03-7108900 | המוקד פעיל בימים א'-ה' בין השעות 8:00-17:00 | שליחת פניה למוקד התמיכה הטכנית | לכל נושא אחר יש לפנות למוקדי שירות הלקוחות בטלפון 2000*",
    "items": []
   },
   "https://www.menoramivt.co.il/general/cancellation-of-policy": {
    "product": "פנסיה+ביטוח",
    "status": 200,
    "method": "browser",
-   "text_hash": "4f4f1b658a52ef4b621b2bd3fc7071cafffd246c",
-   "text_head": "דלג לתוכן הדף ביטוחיםחיסכון פנסיונימנורה השקעותתביעותשירותיםפעולותדברו איתנו|פורטלים ✕ כניסה לאזור האישי אתר זה משתמש בעוגיות (Cookies) לשיפור חווית הגלישה והתאמת תכנים. למידע נוסף ראה מדיניות הפרטיות הבנתי דף הבית> ביטול פוליסה קיימת היי👋 רק רצינו לעדכן שמהיום ניתן לקבל שירות גם ב-WhatsApp במספר 054-7108187 להתחלת שיחה מעדיפים להמשיך לדבר איתנו כאן? בשמחה! עם מי יש לנו הכבוד? 😊 (אנא הקלידו שם מלא) מעדיפים להמשיך לדבר איתנו כאן? בשמחה!$br עם מי יש לנו הכבוד? 😊 (אנא הקלידו שם מלא) ביטול פוליסה קיימת פוליסת הביטוח שברשותכם הינה נכס כלכלי - אנו ממליצים לשמור עליה. הפוליסה מבטיחה לכם רשת ביטחון כל",
+   "text_hash": "fa9e569467542795c57a9e289b4a36ee258b4241",
+   "text_head": "דלג לתוכן הדף ביטוחיםחיסכון פנסיונימנורה השקעותתביעותשירותיםפעולותדברו איתנו|פורטלים פורטל סוכנים פורטל מעסיקים מערכת מ.מ.ש קשרי משקיעים Investor Relations מוסכי הסדר ✕ כניסה לאזור האישי אתר זה משתמש בעוגיות (Cookies) לשיפור חווית הגלישה והתאמת תכנים. למידע נוסף ראה מדיניות הפרטיות הבנתי דף הבית> ביטול פוליסה קיימת היי👋 רק רצינו לעדכן שמהיום ניתן לקבל שירות גם ב-WhatsApp במספר 054-7108187 להתחלת שיחה מעדיפים להמשיך לדבר איתנו כאן? בשמחה! עם מי יש לנו הכבוד? 😊 (אנא הקלידו שם מלא) מעדיפים להמשיך לדבר איתנו כאן? בשמחה!$br עם מי יש לנו הכבוד? 😊 (אנא הקלידו שם מלא) ביטול פוליסה קיימת פוליסת הביטוח ",
    "items": [
     {
      "text": "לחצו כאן",
@@ -341,6 +454,14 @@
      "internal": true
     },
     {
+     "text": "מדיניות פרטיות",
+     "href": "https://www.menoramivt.co.il/general/privacy-policy",
+     "year": null,
+     "iframe": false,
+     "doc": false,
+     "internal": true
+    },
+    {
      "text": "לחצו כאן.",
      "href": "https://cdn.menoramivt.co.il/public/docs/%D7%91%D7%A7%D7%A9%D7%94-%D7%9C%D7%91%D7%99%D7%98%D7%95%D7%9C-%D7%A4%D7%95%D7%9C%D7%99%D7%A1%D7%94.pdf",
      "year": null,
@@ -367,14 +488,6 @@
     {
      "text": "ביטול פוליסה",
      "href": "https://www.menoramivt.co.il/customer-login/?target=customer-iframe-launcher-cancel-policy",
-     "year": null,
-     "iframe": false,
-     "doc": false,
-     "internal": true
-    },
-    {
-     "text": "אתר זה משתמש בעוגיות (Cookies) לשיפור חווית הגלישה והתאמת תכנים. למידע נוסף ראה מדיניות הפרטיות",
-     "href": "https://www.menoramivt.co.il/general/privacy-policy",
      "year": null,
      "iframe": false,
      "doc": false,
@@ -418,16 +531,16 @@
    "product": null,
    "status": 200,
    "method": "requests",
-   "text_hash": "e577da8aa8825997dd60497bfeb89367dab94e7c",
-   "text_head": "Radware Captcha Page We apologize for the inconvenience... ...but your activity and behavior on this site made us think that you are a bot. Note: A number of things could be going on here. If you are attempting to access this site using an anonymous Private/Proxy network, please disable that and try accessing site again. Due to previously detected malicious behavior which originated from the network you're using, please request unblock to site. Incident ID: 08f21bf2-dcyu-4b50-811f-8e2270c7ab4b Please solve this CAPTCHA to request unblock to the website You reached this page when trying to acce",
+   "text_hash": "3a656c178a74b571acf01d05aba305923add326a",
+   "text_head": "Radware Captcha Page We apologize for the inconvenience... ...but your activity and behavior on this site made us think that you are a bot. Note: A number of things could be going on here. If you are attempting to access this site using an anonymous Private/Proxy network, please disable that and try accessing site again. Due to previously detected malicious behavior which originated from the network you're using, please request unblock to site. Incident ID: 576b6357-dcyu-472a-8e4e-b9fe7e310f5f Please solve this CAPTCHA to request unblock to the website You reached this page when trying to acce",
    "items": []
   },
   "https://www.menoramivt.co.il/general/privacy-policy": {
    "product": "פנסיה+ביטוח",
    "status": 200,
    "method": "browser",
-   "text_hash": "95c3f0ef1ea73db23998d9591395c36f6a9d9756",
-   "text_head": "דלג לתוכן הדף ביטוחיםחיסכון פנסיונימנורה השקעותתביעותשירותיםפעולותדברו איתנו|פורטלים ✕ כניסה לאזור האישי דף הבית> מדיניות פרטיות ואבטחת מידע היי👋 רק רצינו לעדכן שמהיום ניתן לקבל שירות גם ב-WhatsApp במספר 054-7108187 להתחלת שיחה מעדיפים להמשיך לדבר איתנו כאן? בשמחה! עם מי יש לנו הכבוד? 😊 (אנא הקלידו שם מלא) מעדיפים להמשיך לדבר איתנו כאן? בשמחה!$br עם מי יש לנו הכבוד? 😊 (אנא הקלידו שם מלא) מדיניות פרטיות ואבטחת מידע מדיניות פרטיות זו הינה מדיניות הפרטיות של מנורה מבטחים ביטוח בע\"מ, מנורה מבטחים פנסיה וגמל בע\"מ ומנורה מבטחים והסתדרות המהנדסים ניהול קופות גמל בע\"מ (\"מנורה\"), שהן בעלות השליטה במידע",
+   "text_hash": "fcc994374404b163b0b59109c3c9536469bca362",
+   "text_head": "דלג לתוכן הדף ביטוחיםחיסכון פנסיונימנורה השקעותתביעותשירותיםפעולותדברו איתנו|פורטלים פורטל סוכנים פורטל מעסיקים מערכת מ.מ.ש קשרי משקיעים Investor Relations מוסכי הסדר ✕ כניסה לאזור האישי דף הבית> מדיניות פרטיות ואבטחת מידע היי👋 רק רצינו לעדכן שמהיום ניתן לקבל שירות גם ב-WhatsApp במספר 054-7108187 להתחלת שיחה מעדיפים להמשיך לדבר איתנו כאן? בשמחה! עם מי יש לנו הכבוד? 😊 (אנא הקלידו שם מלא) מעדיפים להמשיך לדבר איתנו כאן? בשמחה!$br עם מי יש לנו הכבוד? 😊 (אנא הקלידו שם מלא) מדיניות פרטיות ואבטחת מידע מדיניות פרטיות זו הינה מדיניות הפרטיות של מנורה מבטחים ביטוח בע\"מ, מנורה מבטחים פנסיה וגמל בע\"מ ומנו",
    "items": [
     {
      "text": "פורטל סוכנים",
@@ -547,16 +660,16 @@
    "product": null,
    "status": 200,
    "method": "browser",
-   "text_hash": "222e5f8b2396341a46168eae4bb30d4e7577c146",
-   "text_head": "כניסה לאזור האישי מספר זהות כניסה עם מספר דרכון טלפון / דוא\"ל שלחו לי קוד בהודעה רוצה לקבל קוד בשיחה טלפונית יש בעיה או שאלה? במוקד התמיכה הטכנית שלנו ישמחו לעזור 03-7108900 | המוקד פעיל בימים א'-ה' בין השעות 8:00-17:00 | שליחת פניה למוקד התמיכה הטכנית | לכל נושא אחר יש לפנות למוקדי שירות הלקוחות בטלפון 2000*",
+   "text_hash": "ae519de33855facc22baa6b050bb67636db59118",
+   "text_head": "כניסה לאזור האישי מספר זהות יש להזין תעודת זהות מלאה כולל ספרת ביקורת טלפון / דוא\"ל יש להקליד כתובת דוא\"ל או טלפון נייד שלחו לי קוד בהודעה רוצה לקבל קוד בשיחה טלפונית יש בעיה או שאלה? במוקד התמיכה הטכנית שלנו ישמחו לעזור 03-7108900 | המוקד פעיל בימים א'-ה' בין השעות 8:00-17:00 | שליחת פניה למוקד התמיכה הטכנית | לכל נושא אחר יש לפנות למוקדי שירות הלקוחות בטלפון 2000*",
    "items": []
   },
   "https://www.menoramivt.co.il/customer-login/?target=customer-cancel-policy": {
    "product": null,
    "status": 200,
    "method": "browser",
-   "text_hash": "222e5f8b2396341a46168eae4bb30d4e7577c146",
-   "text_head": "כניסה לאזור האישי מספר זהות כניסה עם מספר דרכון טלפון / דוא\"ל שלחו לי קוד בהודעה רוצה לקבל קוד בשיחה טלפונית יש בעיה או שאלה? במוקד התמיכה הטכנית שלנו ישמחו לעזור 03-7108900 | המוקד פעיל בימים א'-ה' בין השעות 8:00-17:00 | שליחת פניה למוקד התמיכה הטכנית | לכל נושא אחר יש לפנות למוקדי שירות הלקוחות בטלפון 2000*",
+   "text_hash": "ae519de33855facc22baa6b050bb67636db59118",
+   "text_head": "כניסה לאזור האישי מספר זהות יש להזין תעודת זהות מלאה כולל ספרת ביקורת טלפון / דוא\"ל יש להקליד כתובת דוא\"ל או טלפון נייד שלחו לי קוד בהודעה רוצה לקבל קוד בשיחה טלפונית יש בעיה או שאלה? במוקד התמיכה הטכנית שלנו ישמחו לעזור 03-7108900 | המוקד פעיל בימים א'-ה' בין השעות 8:00-17:00 | שליחת פניה למוקד התמיכה הטכנית | לכל נושא אחר יש לפנות למוקדי שירות הלקוחות בטלפון 2000*",
    "items": []
   }
  }
