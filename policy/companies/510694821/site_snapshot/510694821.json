@@ -1,11 +1,84 @@
 {
  "legal_id": "510694821",
  "company": "לאומי קמ\"פ בע\"מ",
- "taken": "2026-09-30T21:28:01+00:00",
+ "taken": "2026-09-30T21:59:02+00:00",
  "pages": {
-  "": {
+  "https://www.bankleumi.co.il": {
    "product": null,
-   "status": "browser:Error",
+   "status": 200,
+   "method": "requests",
+   "text_hash": "6b7c7e7fba4cb122fcd38cfa839d368267f7d67b",
+   "text_head": "בנק לאומי - הבנק הכי נוח בשירות דילוג לתוכן העיקרי דילוג לתפריט הראשי דילוג לתפריט התחתון באתר זה נעשה שימוש בטכנולוגיות איסוף מידע כגון Cookies, לרבות על ידי צדדים שלישיים, כדי לספק לך חווית גלישה טובה יותר וכן למטרות סטטיסטיקה, איפיון ושיווק. המשך הגלישה באתר מהווה הסכמתך לכך. למידע נוסף בנושא ואפשרות לנהל את השימוש באמצעים הללו, ראו את מדיניות הפרטיות המעודכנת של הבנק × סגירה פרטיים פרטיים עסקים מוצרים ושירותים בחירת שפה דברו איתנו נגישות מוצרים ושירותים פתיחת חשבון הלוואות כרטיסי אשראי מטבע חוץ משכנתאות שוק ההון פיקדונות מוצרי שוק הכסף לאומי בונוס פעולות בדיגיטל ייעוץ פנסיוני חשבון נאמנות ",
+   "items": [
+    {
+     "text": "ראו את מדיניות הפרטיות המעודכנת של הבנק",
+     "href": "https://www.leumi.co.il/he/privacy_policy",
+     "year": null,
+     "iframe": false,
+     "doc": false,
+     "internal": false
+    },
+    {
+     "text": "קשרי משקיעים",
+     "href": "https://www.bankleumi.co.il/he/Investor-Relations",
+     "year": null,
+     "iframe": false,
+     "doc": false,
+     "internal": true
+    },
+    {
+     "text": "עיקרי מדיניות-במטבעות וירטואליים",
+     "href": "https://www.bankleumi.co.il/he/about-leumi/about_compliance_at_Leumi/virtual_currencies",
+     "year": null,
+     "iframe": false,
+     "doc": false,
+     "internal": true
+    },
+    {
+     "text": "מדיניות הפרטיות בלאומי",
+     "href": "https://www.bankleumi.co.il/he/Articles/privacy_policy",
+     "year": null,
+     "iframe": false,
+     "doc": false,
+     "internal": true
+    },
+    {
+     "text": "טפסים להורדה",
+     "href": "https://www.bankleumi.co.il",
+     "year": null,
+     "iframe": false,
+     "doc": true,
+     "internal": true
+    },
+    {
+     "text": "הודעות לעיתונות",
+     "href": "https://www.bankleumi.co.il/he/about-leumi/Investor-Relations/Press-Releases",
+     "year": null,
+     "iframe": false,
+     "doc": false,
+     "internal": true
+    }
+   ]
+  },
+  "https://www.bankleumi.co.il/he/Investor-Relations": {
+   "product": null,
+   "status": 404,
+   "method": "browser",
+   "text_hash": "bc089ae1b4751e74d54823d9eff5e814d4f3b662",
+   "text_head": "Server Error 404 - File or directory not found. The resource you are looking for might have been removed, had its name changed, or is temporarily unavailable.",
+   "items": []
+  },
+  "https://www.bankleumi.co.il/he/about-leumi/Investor-Relations/Press-Releases": {
+   "product": null,
+   "status": 404,
+   "method": "browser",
+   "text_hash": "bc089ae1b4751e74d54823d9eff5e814d4f3b662",
+   "text_head": "Server Error 404 - File or directory not found. The resource you are looking for might have been removed, had its name changed, or is temporarily unavailable.",
+   "items": []
+  },
+  "https://www.bankleumi.co.il/he/about-leumi/about_compliance_at_Leumi/virtual_currencies": {
+   "product": null,
+   "status": 404,
    "method": "requests",
    "text_hash": null,
    "text_head": "",
