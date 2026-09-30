@@ -20,7 +20,14 @@ HEADER_MARKER = "מספר מסלול"
 LAST_COL_MARKER = "שיעור מסך נכסי ההשקעה"
 KEY_COL = "מספר מסלול"
 PCT_COL = "שיעור מסך נכסי ההשקעה"
-EMPTY_PCT_MARKERS = {"", "ריק במקור"}
+# אותה קבוצת עוגני-placeholder בדיוק כמו PLACEHOLDER_PCT ב-funds.py/funds_il.py/
+# foreign_etf_reference.py/missing_foreign_funds.py - "סוף מידע" היה חסר כאן
+# בלבד, מה שאפשר לשורת-שוליים (footer) לדלוף כרשומת-מידע אמיתית עם "מפתח"
+# מזויף (למשל "513173393_סוף מידע" - נמצא בפועל, ר' bare_key_rows probe):
+# הבדיקה על pct_val לא תפסה אותה כי "מספר מסלול" (KEY_COL) עצמו הוא הערך
+# שהיה סוף-מידע, לא PCT_COL - ולכן גם KEY_COL נבדק מול אותה קבוצה עכשיו.
+PLACEHOLDER_MARKERS = {"", "ריק במקור", "סוף מידע"}
+EMPTY_PCT_MARKERS = PLACEHOLDER_MARKERS
 
 
 def _promote_headers(rows: list[list]) -> tuple[list[str], list[list]]:
@@ -92,7 +99,7 @@ def _norm_sheet(data: list[list], legal_id: str) -> tuple[str, list[dict]]:
         rec = {clean_names[j]: row[keep_idx[j]] if keep_idx[j] < len(row) else None
                for j in range(len(keep_idx))}
         key_val = rec.get(KEY_COL)
-        if key_val is None or key_val == "":
+        if key_val is None or key_val in PLACEHOLDER_MARKERS:
             continue
         if has_pct:
             pct_val = rec.get(PCT_COL)
