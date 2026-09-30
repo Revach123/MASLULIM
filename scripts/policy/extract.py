@@ -111,6 +111,12 @@ def read_doc(path: Path):
                 texts.append(pg.extract_text() or "")
                 tables += pg.extract_tables()
         return "\n".join(texts), tables
+    if ext == ".xls":
+        import xlrd
+        wb = xlrd.open_workbook(path)
+        tables = [[[str(c) if c != "" else "" for c in sh.row_values(i)] for i in range(sh.nrows)]
+                  for sh in wb.sheets()]
+        return "\n".join(" ".join(c for c in r if c) for t in tables for r in t), tables
     if ext in (".xlsx", ".xlsm"):
         import openpyxl
         wb = openpyxl.load_workbook(path, data_only=True, read_only=True)

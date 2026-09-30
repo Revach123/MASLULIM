@@ -28,7 +28,7 @@ jobs:
       - uses: actions/setup-python@v5
         with:
           python-version: "3.12"
-      - run: pip install requests beautifulsoup4 pdfplumber openpyxl python-docx
+      - run: pip install requests beautifulsoup4 pdfplumber openpyxl python-docx xlrd
       - name: Crawl company sites
         run: python -m scripts.policy.crawl ${{ inputs.only && format('--only {0}', inputs.only) || '' }}
       - name: Extract per-track policy

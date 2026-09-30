@@ -116,7 +116,8 @@ def crawl_company(s, legal_id, home, extra, max_pages, depth_max=3):
             text = a.get_text(" ", strip=True)
             sc = score(text) + score(unquote(link))
             path = link.lower().split("?")[0]
-            if path.endswith(DOC_EXT):
+            dl_hint = re.search(r"download|הורד|אקסל|excel|xls|getfile|attachment", (text + " " + link).lower())
+            if path.endswith(DOC_EXT) or (dl_hint and (sc > 0 or page_ctx >= 10)):
                 # מסמך נחשב מדיניות אם הקישור/הטקסט מרמזים, או שהדף עצמו עוסק במדיניות
                 if sc > 0 or page_ctx >= 10:
                     docs.setdefault(link, {"url": link, "text": text, "page": url})
@@ -126,10 +127,23 @@ def crawl_company(s, legal_id, home, extra, max_pages, depth_max=3):
     return docs, visited, errors
 
 
+def sniff_ext(content: bytes) -> str | None:
+    """סוג הקובץ לפי תוכן (קישורי הורדה לרוב בלי סיומת). None = לא מסמך."""
+    if content[:4] == b"PK\x03\x04":
+        return ".docx" if b"word/" in content[:4000] else ".xlsx"
+    if content[:4] == b"\xd0\xcf\x11\xe0":
+        return ".xls"
+    if content[:5] == b"%PDF-":
+        return ".pdf"
+    return None
+
+
 def download(s, url):
     r = get(s, url, stream=False)
     if r is None or r.status_code != 200:
         return None, getattr(r, "status_code", "ERR")
+    if sniff_ext(r.content) is None:
+        return None, "not_a_document"
     return r, 200
 
 
@@ -167,6 +181,9 @@ def main():
             kind = "new" if ent is None else ("changed" if ent["sha256"] != sha else "unchanged")
             if kind != "unchanged":
                 name = re.sub(r"[^\w.\-]", "_", unquote(urlparse(url).path.rsplit("/", 1)[-1]))[:80]
+                ext = sniff_ext(r.content)
+                if not name.lower().endswith(ext):
+                    name += ext
                 p = OUT / "raw" / legal_id / f"{sha[:12]}_{name}"
                 p.parent.mkdir(parents=True, exist_ok=True)
                 p.write_bytes(r.content)
