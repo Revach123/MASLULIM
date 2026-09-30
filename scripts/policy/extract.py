@@ -101,7 +101,7 @@ def extract_tracks_from_table(rows: list[list[str]]) -> list[dict]:
 
 
 def read_doc(path: Path):
-    """-> (text, tables[list[rows]])"""
+    """-> (text, tables[list[rows]], names[list[str]]) - names = שמות גיליונות (ריק ל-PDF/DOCX)"""
     ext = path.suffix.lower()
     if ext == ".pdf":
         import pdfplumber
@@ -110,25 +110,92 @@ def read_doc(path: Path):
             for pg in pdf.pages:
                 texts.append(pg.extract_text() or "")
                 tables += pg.extract_tables()
-        return "\n".join(texts), tables
+        return "\n".join(texts), tables, []
     if ext == ".xls":
         import xlrd
         wb = xlrd.open_workbook(path)
         tables = [[[str(c) if c != "" else "" for c in sh.row_values(i)] for i in range(sh.nrows)]
                   for sh in wb.sheets()]
-        return "\n".join(" ".join(c for c in r if c) for t in tables for r in t), tables
+        return "\n".join(" ".join(c for c in r if c) for t in tables for r in t), tables, [sh.name for sh in wb.sheets()]
     if ext in (".xlsx", ".xlsm"):
         import openpyxl
         wb = openpyxl.load_workbook(path, data_only=True, read_only=True)
         tables = [[[str(c) if c is not None else "" for c in row] for row in ws.iter_rows(values_only=True)]
                   for ws in wb.worksheets]
-        return "\n".join(" ".join(c for c in r if c) for t in tables for r in t), tables
+        return "\n".join(" ".join(c for c in r if c) for t in tables for r in t), tables, [ws.title for ws in wb.worksheets]
     if ext == ".docx":
         import docx
         d = docx.Document(path)
         tables = [[[c.text for c in row.cells] for row in t.rows] for t in d.tables]
-        return "\n".join(p.text for p in d.paragraphs), tables
-    return "", []  # .doc/.xls ישנים: לא נתמך - מדווח כ-unsupported
+        return "\n".join(p.text for p in d.paragraphs), tables, []
+    return "", [], []  # .doc/.xls ישנים: לא נתמך - מדווח כ-unsupported
+
+
+# ---------- פרסרים לפי מבנה (מזוהים לפי תוכן הגיליון, לא לפי חברה) ----------
+BOUNDS = re.compile(r"(-?\d+(?:\.\d+)?)\s*%?\s*-\s*(-?\d+(?:\.\d+)?)\s*%")
+ASSET_MAP = {"מניות": "equity", "מטח": "fx", "מט\"ח": "fx"}  # יתר האפיקים נשמרים בשמם המקורי
+
+
+def _num(v):
+    try:
+        return float(str(v).replace("%", "").strip())
+    except (TypeError, ValueError):
+        return None
+
+
+def parse_statement_blocks(rows, sheet=""):
+    """מבנה "הצהרת השקעות": בלוקים של [קידוד מסלול | שם המסלול | כותרת | שורה לאפיק | סוף טבלה].
+    -> רשימת רשומות long (שורה לכל מסלול x אפיק). [] אם המבנה לא מתאים."""
+    if not any(str(r[0]).strip() == "קידוד מסלול" for r in rows if r and r[0] is not None):
+        return []
+    year = next((m.group(1) for r in rows[:3] for c in r if c and (m := re.search(r"(20\d\d)", str(c)))), None)
+    out, cur, hdr = [], None, None
+    for r in rows:
+        r = list(r) + [None] * 7
+        k = str(r[0]).strip() if r[0] is not None else ""
+        if k == "קידוד מסלול":
+            code = str(r[1]).strip()
+            parts = code.split("-")
+            cur = {"track_code": code, "legal_id": parts[0],
+                   "fund_id": str(int(parts[1])) if len(parts) > 1 and parts[1].isdigit() else None,
+                   "track_no": parts[2] if len(parts) > 2 else None, "track_name": None, "year": year}
+            hdr = None
+        elif cur and k == "שם המסלול":
+            cur["track_name"] = norm_name(str(r[1] or ""))
+        elif cur and k == "אפיק":
+            hdr = True
+        elif cur and hdr and k and k not in ("סוף טבלה", "סה\"כ") and not k.startswith("*"):
+            m = BOUNDS.search(str(r[4] or ""))
+            cur_pct, exp = _num(r[1]), _num(r[2])
+            if m is None and exp is None and cur_pct is None:
+                continue
+            out.append({**cur, "asset": k.rstrip("*").strip(), "asset_key": ASSET_MAP.get(k.rstrip("*").strip()),
+                        "current_pct": None if cur_pct is None else round(cur_pct * 100, 2),
+                        "expected_pct": None if exp is None else round(exp * 100, 2),
+                        "tolerance": r[3], "min_pct": float(m.group(1)) if m else None,
+                        "max_pct": float(m.group(2)) if m else None,
+                        "benchmark": (str(r[5]).replace("\n", " ") if r[5] else None), "sheet": sheet})
+    return out
+
+
+def parse_change_log(rows, sheet=""):
+    """גיליון "מהות שינויים": מספר מסלול | שם מסלול | מהות השינוי | תאריך עדכון."""
+    if not rows or [str(c).strip() for c in rows[0][:4]] != ["מספר מסלול", "שם מסלול", "מהות השינוי", "תאריך עדכון"]:
+        return []
+    return [{"track_code": str(r[0]), "track_name": r[1], "change": str(r[2] or "").replace("\n", " "),
+             "updated": str(r[3])[:10]} for r in rows[1:] if r and r[0]]
+
+
+LONG_FIELDS = ["legal_id", "fund_id", "track_no", "track_code", "track_name", "year", "asset", "asset_key",
+               "current_pct", "expected_pct", "tolerance", "min_pct", "max_pct", "benchmark", "url", "doc_file", "sheet"]
+CHANGE_FIELDS = ["legal_id", "track_code", "track_name", "change", "updated", "url"]
+
+
+def dump_layout(names, tables, ent, url):
+    """מבנה שאף פרסר לא זיהה: שומרים תחילת כל גיליון כדי שנוסיף פרסר אחרי שנראה אותו."""
+    return {"url": url, "legal_id": ent["legal_id"], "file": ent["file"],
+            "sheets": [{"name": n, "head": [[str(c)[:60] for c in r if c not in (None, "")] for r in t[:15]]}
+                       for n, t in zip(names or [""] * len(tables), tables)]}
 
 
 FIELDS = ["legal_id", "url", "doc_file", "track_name", "confidence",
@@ -142,30 +209,59 @@ def main():
     idx_path = OUT / "docs_index.json"
     index = json.loads(idx_path.read_text("utf-8"))
     rows_path = OUT / "tracks_policy.json"
-    rows = {} if a.all or not rows_path.exists() else {r["url"] + "|" + r["track_name"]: r
-                                                        for r in json.loads(rows_path.read_text("utf-8"))}
+    keep = not a.all and rows_path.exists()
+    rows = {r["url"] + "|" + r["track_name"]: r for r in json.loads(rows_path.read_text("utf-8"))} if keep else {}
+    long_path, chg_path, unp_path = (OUT / "tracks_policy_long.json", OUT / "policy_changes.json",
+                                     OUT / "unparsed_layouts.json")
+    _load = lambda p: json.loads(p.read_text("utf-8")) if keep and p.exists() else []
+    long_rows, changes, unparsed = _load(long_path), _load(chg_path), _load(unp_path)
     for url, ent in index.items():
         if not a.all and ent.get("parsed_sha") == ent["sha256"]:
             continue
+        # החלפת תוצאות קודמות של אותו url (מסמך שהתעדכן)
+        long_rows = [r for r in long_rows if r["url"] != url]
+        changes = [r for r in changes if r["url"] != url]
+        unparsed = [r for r in unparsed if r["url"] != url]
         p = ROOT / ent["file"]
         try:
-            text, tables = read_doc(p)
-        except Exception as e:
-            print(f"[extract] {p.name}: {e!r}", file=sys.stderr); continue
-        recs = extract_tracks_from_text(text)
-        for t in tables:
+            text, tables, names = read_doc(p)
+        except Exception as ex:
+            print(f"[extract] {p.name}: {ex!r}", file=sys.stderr); continue
+        names = names or [""] * len(tables)
+        n_long, leftovers = 0, []
+        for nm, t in zip(names, tables):
+            found = parse_statement_blocks(t, nm)
+            if found:
+                for r in found:
+                    r.update(url=url, doc_file=ent["file"])
+                long_rows += found; n_long += len(found); continue
+            chg = parse_change_log(t, nm)
+            if chg:
+                for r in chg:
+                    r.update(legal_id=ent["legal_id"], url=url)
+                changes += chg; continue
+            leftovers.append((nm, t))
+        recs = [] if n_long else extract_tracks_from_text(text)
+        for nm, t in leftovers:
             recs += extract_tracks_from_table(t)
         for r in recs:
             r.update(legal_id=ent["legal_id"], url=url, doc_file=ent["file"])
             rows[url + "|" + r["track_name"]] = r
+        if not n_long and not recs:
+            unparsed.append(dump_layout(names, tables, ent, url))
         ent["parsed_sha"] = ent["sha256"]
-        print(f"[extract] {p.name}: {len(recs)} tracks", flush=True)
+        print(f"[extract] {p.name}: long={n_long} heuristic={len(recs)}", flush=True)
     idx_path.write_text(json.dumps(index, ensure_ascii=False, indent=1), "utf-8")
     out = sorted(rows.values(), key=lambda r: (r["legal_id"], r["track_name"]))
     rows_path.write_text(json.dumps(out, ensure_ascii=False, indent=1), "utf-8")
-    with open(OUT / "tracks_policy.csv", "w", encoding="utf-8-sig", newline="") as f:
-        w = csv.DictWriter(f, FIELDS, extrasaction="ignore")
-        w.writeheader(); w.writerows(out)
+    for path, data in ((long_path, long_rows), (chg_path, changes), (unp_path, unparsed)):
+        path.write_text(json.dumps(data, ensure_ascii=False, indent=1), "utf-8")
+    for name, data, fields in (("tracks_policy", out, FIELDS), ("tracks_policy_long", long_rows, LONG_FIELDS),
+                               ("policy_changes", changes, CHANGE_FIELDS)):
+        with open(OUT / f"{name}.csv", "w", encoding="utf-8-sig", newline="") as f:
+            w = csv.DictWriter(f, fields, extrasaction="ignore")
+            w.writeheader(); w.writerows(data)
+    print(f"[extract] long={len(long_rows)} changes={len(changes)} unparsed_docs={len(unparsed)}")
 
 
 if __name__ == "__main__":
