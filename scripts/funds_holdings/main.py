@@ -154,7 +154,7 @@ def build_master_table(
 
     # פירוק החשיפה למניות לפי מדד (ר' index_exposure.py) - אותם רכיבים בדיוק
     # כמו validate_equity_exposure, כל רכיב לפי המדד שמאחוריו.
-    index_exp = build_index_exposure(source, funds, funds_ref, isin_fractions)
+    index_exp = build_index_exposure(source, funds, funds_ref, isin_fractions, resolve_online=True)
     tracks_by_key = {k: t for t in tracks if (k := track_key(t))}
     index_table = build_index_table(index_exp, tracks_by_key, report_month_by_key(source))
     print(f"[main] {len(index_table)} מסלולים עם פירוק חשיפה לפי מדד")

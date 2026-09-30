@@ -107,6 +107,32 @@ def _openfigi_lookup(isins: list[str], session: requests.Session | None = None) 
     return out
 
 
+def resolve_index_tickers(tickers: list[str], session: requests.Session | None = None) -> dict[str, str]:
+    """טיקר מדד בלומברג (למשל S5SFTW, RIYCCTR) -> שם המדד המלא, דרך OpenFIGI
+    (marketSecDes=Index). משמש את index_exposure לזיהוי המדד שמאחורי סוואפ.
+    טיקר שלא נמצא (סל מותאם של בנק) - לא מוחזר."""
+    s = session or requests.Session()
+    out: dict[str, str] = {}
+    tickers = [t for t in dict.fromkeys(tickers) if t]
+    for i in range(0, len(tickers), OPENFIGI_BATCH):
+        batch = tickers[i : i + OPENFIGI_BATCH]
+        jobs = [{"idType": "TICKER", "idValue": t, "marketSecDes": "Index"} for t in batch]
+        try:
+            r = s.post(OPENFIGI_URL, json=jobs, timeout=30, headers={"Content-Type": "application/json"})
+            r.raise_for_status()
+            results = r.json()
+        except (requests.RequestException, ValueError) as e:
+            print(f"[sec_nport] OpenFIGI (מדדים) נכשל על אצווה ({len(batch)}): {e}")
+            time.sleep(OPENFIGI_DELAY)
+            continue
+        for t, res in zip(batch, results):
+            data = res.get("data") if isinstance(res, dict) else None
+            if data and data[0].get("name"):
+                out[t] = data[0]["name"].strip()
+        time.sleep(OPENFIGI_DELAY)
+    return out
+
+
 def resolve_isin_to_ticker(isins: list[str], session: requests.Session | None = None) -> dict[str, str]:
     """ISIN (US בלבד) -> טיקר, דרך OpenFIGI."""
     us_isins = [i for i in isins if i and i.startswith("US")]
