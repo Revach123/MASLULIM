@@ -283,9 +283,16 @@ def main():
         print(f"  שיטה ישנה (שווי הוגן, בלי ETF זרות):      {mae(2, dated)*100:.3f} נק' אחוז")
         print(f"  + תיקון נגזרים (נוציונלי+דלתא לאופציות):  {mae(3, dated)*100:.3f} נק' אחוז")
         print(f"  + תיקון נגזרים + קרנות ETF זרות:          {mae(4, dated)*100:.3f} נק' אחוז")
-        print("  15 הפערים הגדולים (מלא מול רשמי לתאריך הדוח):")
-        for key, off, old, deriv, full, _ in sorted(dated, key=lambda r: -abs(r[4] - r[1]))[:15]:
+        print("  40 הפערים הגדולים (מלא מול רשמי לתאריך הדוח):")
+        for key, off, old, deriv, full, _ in sorted(dated, key=lambda r: -abs(r[4] - r[1]))[:40]:
             print(f"    {key:<20}{off*100:>9.2f}%{full*100:>9.2f}%{abs(full-off)*100:>9.2f}%")
+        # לפי חברה: כמה מהשגיאה המצטברת מגיעה מכל גוף - לאתר את סוג התקלה הבא
+        by_co: dict[str, list] = {}
+        for key, off, _o, _d, full, _ in dated:
+            by_co.setdefault(key.split("_")[0], []).append(abs(full - off))
+        print("  שגיאה לפי חברה (סכום |פער| / מסלולים / פער ממוצע):")
+        for co, errs in sorted(by_co.items(), key=lambda x: -sum(x[1]))[:15]:
+            print(f"    {co:<12}{sum(errs)*100:>9.1f}{len(errs):>6}{sum(errs)/len(errs)*100:>9.2f}")
 
     # הנתון הרשמי ("נכון לחודש") לא תמיד מאותו חודש כמו הדוח - במסלולים חדשים
     # הוא מוזן ידנית ומתאריך אחר. MAE לפי חודש הנתון הרשמי, ובנפרד רק מסלולים
