@@ -10,6 +10,10 @@
   {
    "product": "ביטוח",
    "url": "https://www.fnx.co.il/fnx-insurance-ltd/investment-information-reports/the-expected-investment-policy/the-expected-investment-policy-{year}/"
+  },
+  {
+   "product": null,
+   "url": "https://www.fnx.co.il/fnx-insurance-ltd/investment-information-reports/the-expected-investment-policy/"
   }
  ],
  "browser": "headless",
@@ -17,5 +21,5 @@
   "ביטוח"
  ],
  "search": true,
- "rev": 3
+ "rev": 4
 }

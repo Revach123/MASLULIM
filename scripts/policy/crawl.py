@@ -115,53 +115,67 @@ POLICY = re.compile(r"מדיניות[-_ ]*(ה)?השקעה|מדיניות[-_ ]*(�
                     r"הצהרה[-_ ]*על[-_ ]*מדיניות|investment[-_ ]*polic|expected[-_ ]*investment|statement[-_ ]*investment", re.I)
 
 
-SEARCH_EXCLUDE = re.compile(r"bizportal|themarker|globes|calcalist|ynet|walla|maariv|funder|mygemel|gemelnet|mypension|"
+SEARCH_EXCLUDE = re.compile(r"bizportal|themarker|globes|calcalist|ynet|walla|maariv|funder|mygemel|gemelnet|gemel-net|mypension|"
+                            r"berki|moneytime|companyinfo|checkid|bdi|duns|dun-bradstreet|zap\.co|easy\.co|"
                             r"facebook|linkedin|youtube|wikipedia|gov\.il|maya\.tase|ice\.co\.il|google\.|bing\.|duckduckgo|"
-                            r"yahoo|instagram|twitter|x\.com|tiktok|mouse\.co\.il|kolzchut|b144|d\.co\.il", re.I)
+                            r"yahoo|instagram|twitter|x\.com|tiktok|mouse\.co\.il|kolzchut|b144|d\.co\.il|lawdata|nevo|takdin", re.I)
 PRODUCT_QUERY = {"גמל": "קופת גמל", "פנסיה": "קרן פנסיה", "ביטוח": "ביטוח"}
+SEARCH_LOG: list[str] = []  # תוצאות גולמיות (לפני סינון) - נכתבות לדוח לצורך בדיקה
 
 
 def _short_name(name: str) -> str:
-    n = re.sub(r"בע[\"״']?מ|חברה לניהול|קופות גמל|קרנות פנסיה|וקופות|ניהול|אגודה שיתופית", " ", name)
+    n = re.sub(r"בע[\"״']?מ|אגודה שיתופית", " ", name)
     return re.sub(r"[\"״'()]", " ", re.sub(r"\s+", " ", n)).strip()
 
 
+def _ddg(s, url: str, query: str) -> list[str]:
+    r = s.post(url, data={"q": query, "kl": "il-he"}, headers={"User-Agent": UA, "Accept-Language": "he,en;q=0.8"}, timeout=25)
+    out = []
+    for a in BeautifulSoup(r.text, "html.parser").find_all("a", href=True):
+        h = a["href"]
+        m = re.search(r"uddg=([^&]+)", h)
+        h = unquote(m.group(1)) if m else h
+        if h.startswith("http") and "duckduckgo.com" not in h:
+            out.append(h)
+    return out
+
+
 def web_search(s, query: str, n: int = 8) -> list[str]:
-    """חיפוש אינטרנט (DuckDuckGo HTML, ואם נכשל Bing). מחזיר כתובות תוצאה, בלי אתרי חדשות/השוואה."""
+    """DuckDuckGo (html, ואם ריק - lite). זה המנוע היחיד שנבדק ועונה משרתי GitHub (Bing/Brave/Yahoo/Mojeek - לא)."""
     urls = []
-    try:
-        r = s.post("https://html.duckduckgo.com/html/", data={"q": query, "kl": "il-he"},
-                   headers={"User-Agent": UA}, timeout=25)
-        for a in BeautifulSoup(r.text, "html.parser").select("a.result__a"):
-            h = a.get("href", "")
-            m = re.search(r"uddg=([^&]+)", h)
-            urls.append(unquote(m.group(1)) if m else h)
-    except Exception:
-        pass
-    if not urls:
+    for i, ep in enumerate(("https://html.duckduckgo.com/html/", "https://lite.duckduckgo.com/lite/",
+                            "https://html.duckduckgo.com/html/")):
         try:
-            r = s.get("https://www.bing.com/search", params={"q": query, "setlang": "he", "cc": "IL"},
-                      headers={"User-Agent": UA, "Accept-Language": "he"}, timeout=25)
-            urls = [a.get("href", "") for a in BeautifulSoup(r.text, "html.parser").select("li.b_algo h2 a")]
+            urls = _ddg(s, ep, query)
         except Exception:
-            pass
-    return [u for u in dict.fromkeys(urls) if u.startswith("http") and not SEARCH_EXCLUDE.search(u)][:n]
+            urls = []
+        if urls:
+            break
+        time.sleep(3 + 4 * i)  # ייתכן rate-limit
+    urls = list(dict.fromkeys(urls))
+    SEARCH_LOG.append(f"Q[{query}] -> " + ", ".join(base_domain(u) for u in urls[:8]))
+    return [u for u in urls if not SEARCH_EXCLUDE.search(u)][:n]
 
 
 def search_product_pages(s, name: str, products: list[str], home: str | None):
-    """חיפוש נפרד לכל מוצר: '<שם> מדיניות השקעה מוצהרת <מוצר>'. -> ({url: product}, home משוער)."""
+    """לכל מוצר: חיפוש עמוד מדיניות ('<שם> מדיניות השקעה <מוצר>'); ובלי אתר ידוע - גם חיפוש שם החברה לאיתור האתר.
+    -> ({url: product}, home)"""
     found, domains = {}, []
+    short = _short_name(name)
+    if not home:
+        for u in web_search(s, short):
+            domains += [base_domain(u)] * 2  # תוצאות חיפוש השם שוקלות כפול באיתור האתר
+        time.sleep(2)
     for prod in products:
-        q = f"{_short_name(name)} מדיניות השקעה מוצהרת {PRODUCT_QUERY.get(prod, prod)}"
-        for u in web_search(s, q):
-            if home and base_domain(u) != base_domain(home):
-                continue  # כשהאתר ידוע - רק תוצאות מתוכו
-            found.setdefault(u, prod)
+        for u in web_search(s, f"{short} מדיניות השקעה {PRODUCT_QUERY.get(prod, prod)}"):
             domains.append(base_domain(u))
+            found.setdefault(u, prod)
         time.sleep(2)
     if not home and domains:
         top = max(set(domains), key=domains.count)
-        home = f"https://www.{top}" if not top.startswith("www.") else f"https://{top}"
+        home = f"https://www.{top}"
+    if home:  # רק עמודים מתוך אתר החברה
+        found = {u: p for u, p in found.items() if base_domain(u) == base_domain(home)}
     return found, home
 
 
@@ -276,7 +290,7 @@ def main():
                 if u not in extra:
                     extra.append(u); products[u] = prod
         if not seed["home"]:
-            report.append([legal_id, c["name"], "", "no_site_found", 0, 0, ""]); continue
+            report.append([legal_id, c["name"], "", "no_site_found", 0, 0, " | ".join(SEARCH_LOG[-4:])[:1200]]); continue
         discovered = sitemap_policy_pages(s, seed["home"])
         print(f"[{legal_id}] sitemap policy pages: {len(discovered)}", *discovered[:10], sep="\n  ", flush=True)
         extra += [u for u in discovered if u not in extra]
@@ -332,7 +346,7 @@ def main():
             index[ukey] = ent
             got += 1
         report.append([legal_id, c["name"], seed["home"], f"search:{len(searched)} sitemap:{len(discovered)}", len(pages), got,
-                       " | ".join([*[f"{p}:{u}" for u, p in list(searched.items())[:6]], *discovered[:5], *errs])[:800]])
+                       " | ".join([*[f"{p}:{u}" for u, p in list(searched.items())[:6]], *discovered[:5], *errs, *SEARCH_LOG[-4:]])[:1200]])
         print(f"[{legal_id}] {c['name']}: pages={len(pages)} docs={got} errs={len(errs)}", flush=True)
     if pw_cm:
         pw.stop()
