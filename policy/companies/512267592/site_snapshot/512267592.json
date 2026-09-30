@@ -1,57 +1,8 @@
 {
  "legal_id": "512267592",
  "company": "הראל פנסיה וגמל בע\"מ",
- "taken": "2026-09-30T21:25:38+00:00",
+ "taken": "2026-09-30T21:33:34+00:00",
  "pages": {
-  "https://www.harel-group.co.il": {
-   "product": "פנסיה+גמל+ביטוח",
-   "status": 200,
-   "method": "requests",
-   "text_hash": "fb952d5f727f40877a52c1c3b1ada898e5d8fb90",
-   "text_head": "ביטוח, פנסיה, גמל, חיסכון ושירותים פיננסיים | הראל ביטוח | הראל ביטוח ופיננסים דלג לתוכן ראשי דלג לתפריט תחתון פעולות נפוצות ביטוח חיסכון ופנסיה הראל פיננסים משכנתא והלוואה חיפוש אזור אישי הצטרפו לביטוח הדירה בהראל ותהנו מעד 40% הנחה בביטוח מבנה ותכולה לפרטים והצטרפות ללכת על בטוח עם הראל ביטוח חיים כיסוי שמעניק שקט נפשי וביטחון כלכלי למשפחה במקרה של מוות לקבלת הצעה ביטוח בריאות ביטוחי הבריאות הפרטיים בהראל מתאימים לצרכים הייחודיים שלכם ושל משפחתכם לפרטים והצטרפות ביטוח מחלות קשות פיצוי כספי שמאפשר לקבל מענה רפואי מתאים ולהתרכז בהחלמה לקבלת הצעה ביטוח רכב לא זזים בלי ביטוחי הרכב של הראל, עם מס",
-   "items": [
-    {
-     "text": "תנאי שימוש ומדיניות הפרטיות",
-     "href": "https://www.harel-group.co.il/terms-of-use/Pages/terms-of-use-and-policy.aspx",
-     "year": null,
-     "iframe": false,
-     "doc": false,
-     "internal": true
-    },
-    {
-     "text": "ניהול תיקי השקעות",
-     "href": "https://www.harel-group.co.il/finance/portfolio-management/Pages/default.aspx",
-     "year": null,
-     "iframe": false,
-     "doc": false,
-     "internal": true
-    },
-    {
-     "text": "לרכישת ביטוח",
-     "href": "https://digital.harel-group.co.il/travel-policy?utm_source=website&utm_medium=home_page&utm_campaign=kidom_travel&utm_content=public_area",
-     "year": null,
-     "iframe": false,
-     "doc": false,
-     "internal": true
-    },
-    {
-     "text": "השקעות אלטרנטיביות",
-     "href": "https://www.harel-group.co.il/finance/alternative-investments/Pages/default.aspx",
-     "year": null,
-     "iframe": false,
-     "doc": false,
-     "internal": true
-    },
-    {
-     "text": "Investor Relations",
-     "href": "https://pr.harel-group.co.il",
-     "year": null,
-     "iframe": false,
-     "doc": false,
-     "internal": true
-    }
-   ]
-  },
   "https://www.harel-group.co.il/about/harel-group/harel-pensia-gemel/gemel-pensia/investment-policy": {
    "product": "גמל",
    "status": 200,
@@ -669,45 +620,12 @@
     }
    ]
   },
-  "https://digital.harel-group.co.il/travel-policy?utm_source=website&utm_medium=home_page&utm_campaign=kidom_travel&utm_content=public_area": {
-   "product": "ביטוח",
-   "status": 200,
-   "method": "browser",
-   "text_hash": "f87e61459e1359ee52ff6aa8cf2e48cbe05722e5",
-   "text_head": "ביטוח נסיעות לחו\"ל הגעת להראל המקום הכי בריא לרכישת ביטוח נסיעות לחו\"ל. לרכישה בפעם הראשונה לרכישה פעם נוספת מה מקבלים כשרוכשים את ביטוח הנסיעות לחו\"ל שלנו? ייעוץ רפואי בחו\"ל עלינו* ארנק התשלומים הדיגיטלי של LAYA בשיתוף הראל להחזר הוצאות רפואיות בחו\"ל** ברכישת כיסוי כבודה, תשלום עבור מזוודה שמאחרת בחו\"ל בלעדי להראל. המשך טיפול רפואי בארץ אפליקציה שמלווה אותך בחו\"ל לכל מקרה שלא יקרה וכמובן שעוד הרבה כיסויים חשובים שתוכלו למצוא כאן בחוברת הפוליסה *הראל בשיתוף עם Air Doctor מאפשרות לך לאתר רופא בסביבתך בחו\"ל ולקבל ייעוץ רפואי מכוח הפוליסה, ללא תשלום מצדך וללא צורך בהגשת תביעה. **השם מאסטרקארד ועי",
-   "items": [
-    {
-     "text": "לרכישה פעם נוספת",
-     "href": "https://digital.harel-group.co.il/travel-policy/return-customer",
-     "year": null,
-     "iframe": false,
-     "doc": false,
-     "internal": true
-    },
-    {
-     "text": "בחוברת הפוליסה",
-     "href": "https://www.harel-group.co.il/P/15048.pdf",
-     "year": null,
-     "iframe": false,
-     "doc": true,
-     "internal": true
-    },
-    {
-     "text": "(iframe)",
-     "href": "https://www.googletagmanager.com/ns.html?id=GTM-T4X8D62",
-     "year": null,
-     "iframe": true,
-     "doc": false,
-     "internal": false
-    }
-   ]
-  },
-  "https://www.harel-group.co.il/terms-of-use/Pages/terms-of-use-and-policy.aspx": {
-   "product": "פנסיה+ביטוח",
+  "https://www.harel-group.co.il": {
+   "product": "פנסיה+גמל+ביטוח",
    "status": 200,
    "method": "requests",
-   "text_hash": "02bdac4c4cd0ec5978686a7956c1439c88567550",
-   "text_head": "תנאי שימוש ומדיניות הפרטיות | הראל ביטוח ופיננסים הינך משתמש בדפדפן שמוגדר לחסום Javascript. ללא Javascript לא תוכל להשתמש ולנווט באתר בצורה תקינה. אנא בטל את החסימה בהגדרות הדפדפן. היי, דפדפן ה- Explorer כבר לא עובד פה. יצא לפנסיה. האתר שלנו נראה יותר מרענן ב - Chrome. נסו ותהנו דף הבית עבור לתוכן העמוד עבור לסרגל ניווט תחתון עבור להצהרת נגישות > פורטל לקוחות תנאי שימוש תנאי שימוש ומדיניות הפרטיות תנאי שימוש מעודכן לתאריך השימוש באתר האינטרנט של הראל השקעות בביטוח ושירותים פיננסים בע\"מ ו/או של כל אחת מחברות הבנות והחברות הקשורות שלה, על כל תכניו, אפשרויות השימוש והשירותים הניתנים בו מוצע לך כ",
+   "text_hash": "fb952d5f727f40877a52c1c3b1ada898e5d8fb90",
+   "text_head": "ביטוח, פנסיה, גמל, חיסכון ושירותים פיננסיים | הראל ביטוח | הראל ביטוח ופיננסים דלג לתוכן ראשי דלג לתפריט תחתון פעולות נפוצות ביטוח חיסכון ופנסיה הראל פיננסים משכנתא והלוואה חיפוש אזור אישי הצטרפו לביטוח הדירה בהראל ותהנו מעד 40% הנחה בביטוח מבנה ותכולה לפרטים והצטרפות ללכת על בטוח עם הראל ביטוח חיים כיסוי שמעניק שקט נפשי וביטחון כלכלי למשפחה במקרה של מוות לקבלת הצעה ביטוח בריאות ביטוחי הבריאות הפרטיים בהראל מתאימים לצרכים הייחודיים שלכם ושל משפחתכם לפרטים והצטרפות ביטוח מחלות קשות פיצוי כספי שמאפשר לקבל מענה רפואי מתאים ולהתרכז בהחלמה לקבלת הצעה ביטוח רכב לא זזים בלי ביטוחי הרכב של הראל, עם מס",
    "items": [
     {
      "text": "תנאי שימוש ומדיניות הפרטיות",
@@ -726,6 +644,14 @@
      "internal": true
     },
     {
+     "text": "לרכישת ביטוח",
+     "href": "https://digital.harel-group.co.il/travel-policy?utm_source=website&utm_medium=home_page&utm_campaign=kidom_travel&utm_content=public_area",
+     "year": null,
+     "iframe": false,
+     "doc": false,
+     "internal": true
+    },
+    {
      "text": "השקעות אלטרנטיביות",
      "href": "https://www.harel-group.co.il/finance/alternative-investments/Pages/default.aspx",
      "year": null,
@@ -734,24 +660,8 @@
      "internal": true
     },
     {
-     "text": "investor-relations",
-     "href": "https://www.harel-group.co.il/investor-relations/investor-relations/Pages/default.aspx",
-     "year": null,
-     "iframe": false,
-     "doc": false,
-     "internal": true
-    },
-    {
-     "text": "\"הודעה על רכישת שירביט\"",
-     "href": "https://www.harel-group.co.il/Insurance/car/policies/DocLib/עדכון%20על%20רכישת%20הפעילות%20הביטוחית%20של%20חברת%20שירביט%20על%20ידי%20הראל.pdf",
-     "year": null,
-     "iframe": false,
-     "doc": true,
-     "internal": true
-    },
-    {
-     "text": "",
-     "href": "https://www.harel-group.co.il/terms-of-use/Pages/privacy-policy.aspx",
+     "text": "Investor Relations",
+     "href": "https://pr.harel-group.co.il",
      "year": null,
      "iframe": false,
      "doc": false,
@@ -995,340 +905,6 @@
     }
    ]
   },
-  "https://digital.harel-group.co.il/travel-policy/return-customer": {
-   "product": "ביטוח",
-   "status": 200,
-   "method": "browser",
-   "text_hash": "f87e61459e1359ee52ff6aa8cf2e48cbe05722e5",
-   "text_head": "ביטוח נסיעות לחו\"ל הגעת להראל המקום הכי בריא לרכישת ביטוח נסיעות לחו\"ל. לרכישה בפעם הראשונה לרכישה פעם נוספת מה מקבלים כשרוכשים את ביטוח הנסיעות לחו\"ל שלנו? ייעוץ רפואי בחו\"ל עלינו* ארנק התשלומים הדיגיטלי של LAYA בשיתוף הראל להחזר הוצאות רפואיות בחו\"ל** ברכישת כיסוי כבודה, תשלום עבור מזוודה שמאחרת בחו\"ל בלעדי להראל. המשך טיפול רפואי בארץ אפליקציה שמלווה אותך בחו\"ל לכל מקרה שלא יקרה וכמובן שעוד הרבה כיסויים חשובים שתוכלו למצוא כאן בחוברת הפוליסה *הראל בשיתוף עם Air Doctor מאפשרות לך לאתר רופא בסביבתך בחו\"ל ולקבל ייעוץ רפואי מכוח הפוליסה, ללא תשלום מצדך וללא צורך בהגשת תביעה. **השם מאסטרקארד ועי",
-   "items": [
-    {
-     "text": "לרכישה פעם נוספת",
-     "href": "https://digital.harel-group.co.il/travel-policy/return-customer",
-     "year": null,
-     "iframe": false,
-     "doc": false,
-     "internal": true
-    },
-    {
-     "text": "בחוברת הפוליסה",
-     "href": "https://www.harel-group.co.il/P/15048.pdf",
-     "year": null,
-     "iframe": false,
-     "doc": true,
-     "internal": true
-    },
-    {
-     "text": "(iframe)",
-     "href": "https://www.googletagmanager.com/ns.html?id=GTM-T4X8D62",
-     "year": null,
-     "iframe": true,
-     "doc": false,
-     "internal": false
-    }
-   ]
-  },
-  "https://www.googletagmanager.com/ns.html?id=GTM-T4X8D62": {
-   "product": null,
-   "status": 200,
-   "method": "requests",
-   "text_hash": "7320d5b79df006d13821a301995704836157f8ca",
-   "text_head": "ns",
-   "items": []
-  },
-  "https://www.harel-group.co.il/terms-of-use/Pages/privacy-policy.aspx": {
-   "product": "פנסיה+ביטוח",
-   "status": 200,
-   "method": "requests",
-   "text_hash": "34089841b333fe9ff940d0949cda41b5afe0fa48",
-   "text_head": "מדיניות הפרטיות של קבוצת הראל, כללי | הראל ביטוח ופיננסים הינך משתמש בדפדפן שמוגדר לחסום Javascript. ללא Javascript לא תוכל להשתמש ולנווט באתר בצורה תקינה. אנא בטל את החסימה בהגדרות הדפדפן. היי, דפדפן ה- Explorer כבר לא עובד פה. יצא לפנסיה. האתר שלנו נראה יותר מרענן ב - Chrome. נסו ותהנו דף הבית עבור לתוכן העמוד עבור לסרגל ניווט תחתון עבור להצהרת נגישות > פורטל לקוחות תנאי שימוש מדיניות הפרטיות של קבוצת הראל מדיניות הפרטיות של קבוצת הראל מדיניות זו הינה מדיניות הפרטיות של הגופים המוסדיים [1] וחברות [2] בקבוצת הראל ביטוח ופיננסים (\"קבוצת הראל\").​ מדיניות פרטיות זו מספקת בקווים כלליים מידע על הש",
-   "items": [
-    {
-     "text": "תנאי שימוש ומדיניות הפרטיות",
-     "href": "https://www.harel-group.co.il/terms-of-use/Pages/terms-of-use-and-policy.aspx",
-     "year": null,
-     "iframe": false,
-     "doc": false,
-     "internal": true
-    },
-    {
-     "text": "עבור לסרגל ניווט תחתון",
-     "href": "https://www.harel-group.co.il/terms-of-use/Pages/privacy-policy.aspx",
-     "year": null,
-     "iframe": false,
-     "doc": false,
-     "internal": true
-    },
-    {
-     "text": "ניהול תיקי השקעות",
-     "href": "https://www.harel-group.co.il/finance/portfolio-management/Pages/default.aspx",
-     "year": null,
-     "iframe": false,
-     "doc": false,
-     "internal": true
-    },
-    {
-     "text": "השקעות אלטרנטיביות",
-     "href": "https://www.harel-group.co.il/finance/alternative-investments/Pages/default.aspx",
-     "year": null,
-     "iframe": false,
-     "doc": false,
-     "internal": true
-    },
-    {
-     "text": "investor-relations",
-     "href": "https://www.harel-group.co.il/investor-relations/investor-relations/Pages/default.aspx",
-     "year": null,
-     "iframe": false,
-     "doc": false,
-     "internal": true
-    },
-    {
-     "text": "https://www.facebook.com/policy.php",
-     "href": "https://www.facebook.com/policy.php",
-     "year": null,
-     "iframe": false,
-     "doc": false,
-     "internal": false
-    },
-    {
-     "text": "\"הודעה על רכישת שירביט\"",
-     "href": "https://www.harel-group.co.il/Insurance/car/policies/DocLib/עדכון%20על%20רכישת%20הפעילות%20הביטוחית%20של%20חברת%20שירביט%20על%20ידי%20הראל.pdf",
-     "year": null,
-     "iframe": false,
-     "doc": true,
-     "internal": true
-    }
-   ]
-  },
-  "https://www.harel-group.co.il/investor-relations/investor-relations/Pages/default.aspx": {
-   "product": "פנסיה+ביטוח",
-   "status": 410,
-   "method": "browser",
-   "text_hash": "279079f7368709999246ec1891980c55c9103023",
-   "items": [
-    {
-     "text": "תנאי שימוש ומדיניות הפרטיות",
-     "href": "https://www.harel-group.co.il/terms-of-use/Pages/terms-of-use-and-policy.aspx",
-     "year": null,
-     "doc": false,
-     "internal": true
-    },
-    {
-     "text": "ניהול תיקי השקעות",
-     "href": "https://www.harel-group.co.il/finance/portfolio-management/Pages/default.aspx",
-     "year": null,
-     "doc": false,
-     "internal": true
-    },
-    {
-     "text": "השקעות אלטרנטיביות",
-     "href": "https://www.harel-group.co.il/finance/alternative-investments/Pages/default.aspx",
-     "year": null,
-     "doc": false,
-     "internal": true
-    },
-    {
-     "text": "דלג לתפריט תחתון",
-     "href": "https://www.harel-group.co.il/investor-relations/investor-relations/pages/default.aspx",
-     "year": null,
-     "doc": false,
-     "internal": true
-    },
-    {
-     "text": "Investor Relations",
-     "href": "https://pr.harel-group.co.il/",
-     "year": null,
-     "doc": false,
-     "internal": true
-    }
-   ]
-  },
-  "https://pr.harel-group.co.il/publications?cat=financial-reports": {
-   "product": "פנסיה+ביטוח",
-   "status": 200,
-   "method": "requests",
-   "text_hash": "ffdd54ba22ca43e28af770e5beac48dc07293167",
-   "text_head": "Reports and Publications - Harel Investor Relations Reports and Publications Stock Data Our Story Social Responsability Reports And Publications Homeowners insurance, liabilities (indemnity) insurance, mortgage insurance and credit insurance), life assurance, pension funds, provident funds. select Financial reports Press releases Presentations Others Conference Calls All 2026 2025 2024 2023 2022 2021 2020 2019 All Q1 Q2 Q3 Q4 2026 Q1 2026 Financial Reports Harel Insurance and Finance Group reports comprehensive income of NIS 562 million and ROE 18.5% 27.05.2026 Read more > Q2 2025 Financial Re",
-   "items": [
-    {
-     "text": "Read more >",
-     "href": "https://pr.harel-group.co.il/ExternalMedia/cbiavd3i/harel-q1-2026-en.pdf",
-     "year": "2026",
-     "iframe": false,
-     "doc": true,
-     "internal": true
-    },
-    {
-     "text": "Read more >",
-     "href": "https://pr.harel-group.co.il/ExternalMedia/3b5n1zbm/harel-q2-2026-en.pdf",
-     "year": "2026",
-     "iframe": false,
-     "doc": true,
-     "internal": true
-    },
-    {
-     "text": "Read more >",
-     "href": "https://pr.harel-group.co.il/ExternalMedia/3vchgesd/harel-q3-2025-final-en.pdf",
-     "year": "2025",
-     "iframe": false,
-     "doc": true,
-     "internal": true
-    },
-    {
-     "text": "Read more >",
-     "href": "https://pr.harel-group.co.il/ExternalMedia/zmnjwuzl/harel-q4-2025-final.pdf",
-     "year": "2025",
-     "iframe": false,
-     "doc": true,
-     "internal": true
-    },
-    {
-     "text": "Read more >",
-     "href": "https://pr.harel-group.co.il/ExternalMedia/x2ules3n/harel-fs-q1-2024.pdf",
-     "year": "2024",
-     "iframe": false,
-     "doc": true,
-     "internal": true
-    },
-    {
-     "text": "Read more >",
-     "href": "https://pr.harel-group.co.il/ExternalMedia/lggf25lw/harel-2024-en-final.pdf",
-     "year": "2024",
-     "iframe": false,
-     "doc": true,
-     "internal": true
-    },
-    {
-     "text": "Read more >",
-     "href": "https://pr.harel-group.co.il/ExternalMedia/up4hmu4u/harel-investments-financial-statements-q12023.pdf",
-     "year": "2023",
-     "iframe": false,
-     "doc": true,
-     "internal": true
-    },
-    {
-     "text": "Read more >",
-     "href": "https://pr.harel-group.co.il/ExternalMedia/b5ulj0ew/harel-investments-financial-statements-q22023.pdf",
-     "year": "2023",
-     "iframe": false,
-     "doc": true,
-     "internal": true
-    },
-    {
-     "text": "Read more >",
-     "href": "https://pr.harel-group.co.il/ExternalMedia/ynta3efq/harel-investments-financal-statments-q3-2023.pdf",
-     "year": "2023",
-     "iframe": false,
-     "doc": true,
-     "internal": true
-    },
-    {
-     "text": "Read more >",
-     "href": "https://pr.harel-group.co.il/ExternalMedia/ffcj1u5c/harel-investments-financial-statements-q42023.pdf",
-     "year": "2023",
-     "iframe": false,
-     "doc": true,
-     "internal": true
-    },
-    {
-     "text": "Read more >",
-     "href": "https://pr.harel-group.co.il/ExternalMedia/migd0auf/harel-investments-financial-statements-q12022.pdf",
-     "year": "2022",
-     "iframe": false,
-     "doc": true,
-     "internal": true
-    },
-    {
-     "text": "Read more >",
-     "href": "https://pr.harel-group.co.il/ExternalMedia/dg3p4v1l/harel-investments-financial-statements-q22022.pdf",
-     "year": "2022",
-     "iframe": false,
-     "doc": true,
-     "internal": true
-    },
-    {
-     "text": "Read more >",
-     "href": "https://pr.harel-group.co.il/ExternalMedia/dk2acyaa/harel-investments-financial-statements-q32022.pdf",
-     "year": "2022",
-     "iframe": false,
-     "doc": true,
-     "internal": true
-    },
-    {
-     "text": "Read more >",
-     "href": "https://pr.harel-group.co.il/ExternalMedia/tmally03/harel-investments-annual-report-2022.pdf",
-     "year": "2022",
-     "iframe": false,
-     "doc": true,
-     "internal": true
-    },
-    {
-     "text": "Read more >",
-     "href": "https://pr.harel-group.co.il/ExternalMedia/ivkpdnip/harel-investments-annual-report-2021.pdf",
-     "year": "2021",
-     "iframe": false,
-     "doc": true,
-     "internal": true
-    },
-    {
-     "text": "Read more >",
-     "href": "https://pr.harel-group.co.il/ExternalMedia/benppyc5/harel-investments-annual-report-2020.pdf",
-     "year": "2020",
-     "iframe": false,
-     "doc": true,
-     "internal": true
-    },
-    {
-     "text": "Read more >",
-     "href": "https://pr.harel-group.co.il/ExternalMedia/uwujmtkb/harel-investments-annual-report-2019.pdf",
-     "year": "2019",
-     "iframe": false,
-     "doc": true,
-     "internal": true
-    },
-    {
-     "text": "Reports and Publications",
-     "href": "https://pr.harel-group.co.il/publications?cat=financial-reports",
-     "year": null,
-     "iframe": false,
-     "doc": false,
-     "internal": true
-    },
-    {
-     "text": "Read more >",
-     "href": "https://pr.harel-group.co.il/ExternalMedia/wo5l353e/newharel_q1_en_final.pdf",
-     "year": null,
-     "iframe": false,
-     "doc": true,
-     "internal": true
-    },
-    {
-     "text": "Read more >",
-     "href": "https://pr.harel-group.co.il/ExternalMedia/xzpk34av/harel-q2-final-report-en-10925-מונגש.pdf",
-     "year": null,
-     "iframe": false,
-     "doc": true,
-     "internal": true
-    },
-    {
-     "text": "Read more >",
-     "href": "https://pr.harel-group.co.il/ExternalMedia/yq2izl0u/harel-investments-financial-statements-q224.pdf",
-     "year": null,
-     "iframe": false,
-     "doc": true,
-     "internal": true
-    },
-    {
-     "text": "Read more >",
-     "href": "https://pr.harel-group.co.il/ExternalMedia/lwnjfwve/harel-investments-financial-statments-q3.pdf",
-     "year": null,
-     "iframe": false,
-     "doc": true,
-     "internal": true
-    }
-   ]
-  },
   "https://www.harel-group.co.il/finance/Pages/default.aspx": {
    "product": "פנסיה",
    "status": 200,
@@ -1536,6 +1112,49 @@
      "year": null,
      "iframe": false,
      "doc": true,
+     "internal": true
+    }
+   ]
+  },
+  "https://www.harel-group.co.il/investor-relations/investor-relations/Pages/default.aspx": {
+   "product": "פנסיה+ביטוח",
+   "status": 410,
+   "method": "browser",
+   "text_hash": "279079f7368709999246ec1891980c55c9103023",
+   "items": [
+    {
+     "text": "תנאי שימוש ומדיניות הפרטיות",
+     "href": "https://www.harel-group.co.il/terms-of-use/Pages/terms-of-use-and-policy.aspx",
+     "year": null,
+     "doc": false,
+     "internal": true
+    },
+    {
+     "text": "ניהול תיקי השקעות",
+     "href": "https://www.harel-group.co.il/finance/portfolio-management/Pages/default.aspx",
+     "year": null,
+     "doc": false,
+     "internal": true
+    },
+    {
+     "text": "השקעות אלטרנטיביות",
+     "href": "https://www.harel-group.co.il/finance/alternative-investments/Pages/default.aspx",
+     "year": null,
+     "doc": false,
+     "internal": true
+    },
+    {
+     "text": "דלג לתפריט תחתון",
+     "href": "https://www.harel-group.co.il/investor-relations/investor-relations/pages/default.aspx",
+     "year": null,
+     "doc": false,
+     "internal": true
+    },
+    {
+     "text": "Investor Relations",
+     "href": "https://pr.harel-group.co.il/",
+     "year": null,
+     "doc": false,
      "internal": true
     }
    ]
@@ -1824,6 +1443,281 @@
     }
    ]
   },
+  "https://www.harel-group.co.il/terms-of-use/Pages/terms-of-use-and-policy.aspx": {
+   "product": "פנסיה+ביטוח",
+   "status": 200,
+   "method": "requests",
+   "text_hash": "02bdac4c4cd0ec5978686a7956c1439c88567550",
+   "text_head": "תנאי שימוש ומדיניות הפרטיות | הראל ביטוח ופיננסים הינך משתמש בדפדפן שמוגדר לחסום Javascript. ללא Javascript לא תוכל להשתמש ולנווט באתר בצורה תקינה. אנא בטל את החסימה בהגדרות הדפדפן. היי, דפדפן ה- Explorer כבר לא עובד פה. יצא לפנסיה. האתר שלנו נראה יותר מרענן ב - Chrome. נסו ותהנו דף הבית עבור לתוכן העמוד עבור לסרגל ניווט תחתון עבור להצהרת נגישות > פורטל לקוחות תנאי שימוש תנאי שימוש ומדיניות הפרטיות תנאי שימוש מעודכן לתאריך השימוש באתר האינטרנט של הראל השקעות בביטוח ושירותים פיננסים בע\"מ ו/או של כל אחת מחברות הבנות והחברות הקשורות שלה, על כל תכניו, אפשרויות השימוש והשירותים הניתנים בו מוצע לך כ",
+   "items": [
+    {
+     "text": "תנאי שימוש ומדיניות הפרטיות",
+     "href": "https://www.harel-group.co.il/terms-of-use/Pages/terms-of-use-and-policy.aspx",
+     "year": null,
+     "iframe": false,
+     "doc": false,
+     "internal": true
+    },
+    {
+     "text": "ניהול תיקי השקעות",
+     "href": "https://www.harel-group.co.il/finance/portfolio-management/Pages/default.aspx",
+     "year": null,
+     "iframe": false,
+     "doc": false,
+     "internal": true
+    },
+    {
+     "text": "השקעות אלטרנטיביות",
+     "href": "https://www.harel-group.co.il/finance/alternative-investments/Pages/default.aspx",
+     "year": null,
+     "iframe": false,
+     "doc": false,
+     "internal": true
+    },
+    {
+     "text": "investor-relations",
+     "href": "https://www.harel-group.co.il/investor-relations/investor-relations/Pages/default.aspx",
+     "year": null,
+     "iframe": false,
+     "doc": false,
+     "internal": true
+    },
+    {
+     "text": "\"הודעה על רכישת שירביט\"",
+     "href": "https://www.harel-group.co.il/Insurance/car/policies/DocLib/עדכון%20על%20רכישת%20הפעילות%20הביטוחית%20של%20חברת%20שירביט%20על%20ידי%20הראל.pdf",
+     "year": null,
+     "iframe": false,
+     "doc": true,
+     "internal": true
+    },
+    {
+     "text": "",
+     "href": "https://www.harel-group.co.il/terms-of-use/Pages/privacy-policy.aspx",
+     "year": null,
+     "iframe": false,
+     "doc": false,
+     "internal": true
+    }
+   ]
+  },
+  "https://digital.harel-group.co.il/travel-policy?utm_source=website&utm_medium=home_page&utm_campaign=kidom_travel&utm_content=public_area": {
+   "product": "ביטוח",
+   "status": 200,
+   "method": "browser",
+   "text_hash": "f87e61459e1359ee52ff6aa8cf2e48cbe05722e5",
+   "text_head": "ביטוח נסיעות לחו\"ל הגעת להראל המקום הכי בריא לרכישת ביטוח נסיעות לחו\"ל. לרכישה בפעם הראשונה לרכישה פעם נוספת מה מקבלים כשרוכשים את ביטוח הנסיעות לחו\"ל שלנו? ייעוץ רפואי בחו\"ל עלינו* ארנק התשלומים הדיגיטלי של LAYA בשיתוף הראל להחזר הוצאות רפואיות בחו\"ל** ברכישת כיסוי כבודה, תשלום עבור מזוודה שמאחרת בחו\"ל בלעדי להראל. המשך טיפול רפואי בארץ אפליקציה שמלווה אותך בחו\"ל לכל מקרה שלא יקרה וכמובן שעוד הרבה כיסויים חשובים שתוכלו למצוא כאן בחוברת הפוליסה *הראל בשיתוף עם Air Doctor מאפשרות לך לאתר רופא בסביבתך בחו\"ל ולקבל ייעוץ רפואי מכוח הפוליסה, ללא תשלום מצדך וללא צורך בהגשת תביעה. **השם מאסטרקארד ועי",
+   "items": [
+    {
+     "text": "לרכישה פעם נוספת",
+     "href": "https://digital.harel-group.co.il/travel-policy/return-customer",
+     "year": null,
+     "iframe": false,
+     "doc": false,
+     "internal": true
+    },
+    {
+     "text": "בחוברת הפוליסה",
+     "href": "https://www.harel-group.co.il/P/15048.pdf",
+     "year": null,
+     "iframe": false,
+     "doc": true,
+     "internal": true
+    },
+    {
+     "text": "(iframe)",
+     "href": "https://www.googletagmanager.com/ns.html?id=GTM-T4X8D62",
+     "year": null,
+     "iframe": true,
+     "doc": false,
+     "internal": false
+    }
+   ]
+  },
+  "https://pr.harel-group.co.il/publications?cat=financial-reports": {
+   "product": "פנסיה+ביטוח",
+   "status": 200,
+   "method": "requests",
+   "text_hash": "ffdd54ba22ca43e28af770e5beac48dc07293167",
+   "text_head": "Reports and Publications - Harel Investor Relations Reports and Publications Stock Data Our Story Social Responsability Reports And Publications Homeowners insurance, liabilities (indemnity) insurance, mortgage insurance and credit insurance), life assurance, pension funds, provident funds. select Financial reports Press releases Presentations Others Conference Calls All 2026 2025 2024 2023 2022 2021 2020 2019 All Q1 Q2 Q3 Q4 2026 Q1 2026 Financial Reports Harel Insurance and Finance Group reports comprehensive income of NIS 562 million and ROE 18.5% 27.05.2026 Read more > Q2 2025 Financial Re",
+   "items": [
+    {
+     "text": "Read more >",
+     "href": "https://pr.harel-group.co.il/ExternalMedia/cbiavd3i/harel-q1-2026-en.pdf",
+     "year": "2026",
+     "iframe": false,
+     "doc": true,
+     "internal": true
+    },
+    {
+     "text": "Read more >",
+     "href": "https://pr.harel-group.co.il/ExternalMedia/3b5n1zbm/harel-q2-2026-en.pdf",
+     "year": "2026",
+     "iframe": false,
+     "doc": true,
+     "internal": true
+    },
+    {
+     "text": "Read more >",
+     "href": "https://pr.harel-group.co.il/ExternalMedia/3vchgesd/harel-q3-2025-final-en.pdf",
+     "year": "2025",
+     "iframe": false,
+     "doc": true,
+     "internal": true
+    },
+    {
+     "text": "Read more >",
+     "href": "https://pr.harel-group.co.il/ExternalMedia/zmnjwuzl/harel-q4-2025-final.pdf",
+     "year": "2025",
+     "iframe": false,
+     "doc": true,
+     "internal": true
+    },
+    {
+     "text": "Read more >",
+     "href": "https://pr.harel-group.co.il/ExternalMedia/x2ules3n/harel-fs-q1-2024.pdf",
+     "year": "2024",
+     "iframe": false,
+     "doc": true,
+     "internal": true
+    },
+    {
+     "text": "Read more >",
+     "href": "https://pr.harel-group.co.il/ExternalMedia/lggf25lw/harel-2024-en-final.pdf",
+     "year": "2024",
+     "iframe": false,
+     "doc": true,
+     "internal": true
+    },
+    {
+     "text": "Read more >",
+     "href": "https://pr.harel-group.co.il/ExternalMedia/up4hmu4u/harel-investments-financial-statements-q12023.pdf",
+     "year": "2023",
+     "iframe": false,
+     "doc": true,
+     "internal": true
+    },
+    {
+     "text": "Read more >",
+     "href": "https://pr.harel-group.co.il/ExternalMedia/b5ulj0ew/harel-investments-financial-statements-q22023.pdf",
+     "year": "2023",
+     "iframe": false,
+     "doc": true,
+     "internal": true
+    },
+    {
+     "text": "Read more >",
+     "href": "https://pr.harel-group.co.il/ExternalMedia/ynta3efq/harel-investments-financal-statments-q3-2023.pdf",
+     "year": "2023",
+     "iframe": false,
+     "doc": true,
+     "internal": true
+    },
+    {
+     "text": "Read more >",
+     "href": "https://pr.harel-group.co.il/ExternalMedia/ffcj1u5c/harel-investments-financial-statements-q42023.pdf",
+     "year": "2023",
+     "iframe": false,
+     "doc": true,
+     "internal": true
+    },
+    {
+     "text": "Read more >",
+     "href": "https://pr.harel-group.co.il/ExternalMedia/migd0auf/harel-investments-financial-statements-q12022.pdf",
+     "year": "2022",
+     "iframe": false,
+     "doc": true,
+     "internal": true
+    },
+    {
+     "text": "Read more >",
+     "href": "https://pr.harel-group.co.il/ExternalMedia/dg3p4v1l/harel-investments-financial-statements-q22022.pdf",
+     "year": "2022",
+     "iframe": false,
+     "doc": true,
+     "internal": true
+    },
+    {
+     "text": "Read more >",
+     "href": "https://pr.harel-group.co.il/ExternalMedia/dk2acyaa/harel-investments-financial-statements-q32022.pdf",
+     "year": "2022",
+     "iframe": false,
+     "doc": true,
+     "internal": true
+    },
+    {
+     "text": "Read more >",
+     "href": "https://pr.harel-group.co.il/ExternalMedia/tmally03/harel-investments-annual-report-2022.pdf",
+     "year": "2022",
+     "iframe": false,
+     "doc": true,
+     "internal": true
+    },
+    {
+     "text": "Read more >",
+     "href": "https://pr.harel-group.co.il/ExternalMedia/ivkpdnip/harel-investments-annual-report-2021.pdf",
+     "year": "2021",
+     "iframe": false,
+     "doc": true,
+     "internal": true
+    },
+    {
+     "text": "Read more >",
+     "href": "https://pr.harel-group.co.il/ExternalMedia/benppyc5/harel-investments-annual-report-2020.pdf",
+     "year": "2020",
+     "iframe": false,
+     "doc": true,
+     "internal": true
+    },
+    {
+     "text": "Read more >",
+     "href": "https://pr.harel-group.co.il/ExternalMedia/uwujmtkb/harel-investments-annual-report-2019.pdf",
+     "year": "2019",
+     "iframe": false,
+     "doc": true,
+     "internal": true
+    },
+    {
+     "text": "Reports and Publications",
+     "href": "https://pr.harel-group.co.il/publications?cat=financial-reports",
+     "year": null,
+     "iframe": false,
+     "doc": false,
+     "internal": true
+    },
+    {
+     "text": "Read more >",
+     "href": "https://pr.harel-group.co.il/ExternalMedia/wo5l353e/newharel_q1_en_final.pdf",
+     "year": null,
+     "iframe": false,
+     "doc": true,
+     "internal": true
+    },
+    {
+     "text": "Read more >",
+     "href": "https://pr.harel-group.co.il/ExternalMedia/xzpk34av/harel-q2-final-report-en-10925-מונגש.pdf",
+     "year": null,
+     "iframe": false,
+     "doc": true,
+     "internal": true
+    },
+    {
+     "text": "Read more >",
+     "href": "https://pr.harel-group.co.il/ExternalMedia/yq2izl0u/harel-investments-financial-statements-q224.pdf",
+     "year": null,
+     "iframe": false,
+     "doc": true,
+     "internal": true
+    },
+    {
+     "text": "Read more >",
+     "href": "https://pr.harel-group.co.il/ExternalMedia/lwnjfwve/harel-investments-financial-statments-q3.pdf",
+     "year": null,
+     "iframe": false,
+     "doc": true,
+     "internal": true
+    }
+   ]
+  },
   "https://www.harel-group.co.il/finance/Pages/privacy-finance.aspx": {
    "product": "פנסיה+ביטוח",
    "status": 200,
@@ -1880,6 +1774,112 @@
      "internal": true
     }
    ]
+  },
+  "https://www.harel-group.co.il/terms-of-use/Pages/privacy-policy.aspx": {
+   "product": "פנסיה+ביטוח",
+   "status": 200,
+   "method": "requests",
+   "text_hash": "34089841b333fe9ff940d0949cda41b5afe0fa48",
+   "text_head": "מדיניות הפרטיות של קבוצת הראל, כללי | הראל ביטוח ופיננסים הינך משתמש בדפדפן שמוגדר לחסום Javascript. ללא Javascript לא תוכל להשתמש ולנווט באתר בצורה תקינה. אנא בטל את החסימה בהגדרות הדפדפן. היי, דפדפן ה- Explorer כבר לא עובד פה. יצא לפנסיה. האתר שלנו נראה יותר מרענן ב - Chrome. נסו ותהנו דף הבית עבור לתוכן העמוד עבור לסרגל ניווט תחתון עבור להצהרת נגישות > פורטל לקוחות תנאי שימוש מדיניות הפרטיות של קבוצת הראל מדיניות הפרטיות של קבוצת הראל מדיניות זו הינה מדיניות הפרטיות של הגופים המוסדיים [1] וחברות [2] בקבוצת הראל ביטוח ופיננסים (\"קבוצת הראל\").​ מדיניות פרטיות זו מספקת בקווים כלליים מידע על הש",
+   "items": [
+    {
+     "text": "תנאי שימוש ומדיניות הפרטיות",
+     "href": "https://www.harel-group.co.il/terms-of-use/Pages/terms-of-use-and-policy.aspx",
+     "year": null,
+     "iframe": false,
+     "doc": false,
+     "internal": true
+    },
+    {
+     "text": "עבור לסרגל ניווט תחתון",
+     "href": "https://www.harel-group.co.il/terms-of-use/Pages/privacy-policy.aspx",
+     "year": null,
+     "iframe": false,
+     "doc": false,
+     "internal": true
+    },
+    {
+     "text": "ניהול תיקי השקעות",
+     "href": "https://www.harel-group.co.il/finance/portfolio-management/Pages/default.aspx",
+     "year": null,
+     "iframe": false,
+     "doc": false,
+     "internal": true
+    },
+    {
+     "text": "השקעות אלטרנטיביות",
+     "href": "https://www.harel-group.co.il/finance/alternative-investments/Pages/default.aspx",
+     "year": null,
+     "iframe": false,
+     "doc": false,
+     "internal": true
+    },
+    {
+     "text": "investor-relations",
+     "href": "https://www.harel-group.co.il/investor-relations/investor-relations/Pages/default.aspx",
+     "year": null,
+     "iframe": false,
+     "doc": false,
+     "internal": true
+    },
+    {
+     "text": "https://www.facebook.com/policy.php",
+     "href": "https://www.facebook.com/policy.php",
+     "year": null,
+     "iframe": false,
+     "doc": false,
+     "internal": false
+    },
+    {
+     "text": "\"הודעה על רכישת שירביט\"",
+     "href": "https://www.harel-group.co.il/Insurance/car/policies/DocLib/עדכון%20על%20רכישת%20הפעילות%20הביטוחית%20של%20חברת%20שירביט%20על%20ידי%20הראל.pdf",
+     "year": null,
+     "iframe": false,
+     "doc": true,
+     "internal": true
+    }
+   ]
+  },
+  "https://digital.harel-group.co.il/travel-policy/return-customer": {
+   "product": "ביטוח",
+   "status": 200,
+   "method": "browser",
+   "text_hash": "f87e61459e1359ee52ff6aa8cf2e48cbe05722e5",
+   "text_head": "ביטוח נסיעות לחו\"ל הגעת להראל המקום הכי בריא לרכישת ביטוח נסיעות לחו\"ל. לרכישה בפעם הראשונה לרכישה פעם נוספת מה מקבלים כשרוכשים את ביטוח הנסיעות לחו\"ל שלנו? ייעוץ רפואי בחו\"ל עלינו* ארנק התשלומים הדיגיטלי של LAYA בשיתוף הראל להחזר הוצאות רפואיות בחו\"ל** ברכישת כיסוי כבודה, תשלום עבור מזוודה שמאחרת בחו\"ל בלעדי להראל. המשך טיפול רפואי בארץ אפליקציה שמלווה אותך בחו\"ל לכל מקרה שלא יקרה וכמובן שעוד הרבה כיסויים חשובים שתוכלו למצוא כאן בחוברת הפוליסה *הראל בשיתוף עם Air Doctor מאפשרות לך לאתר רופא בסביבתך בחו\"ל ולקבל ייעוץ רפואי מכוח הפוליסה, ללא תשלום מצדך וללא צורך בהגשת תביעה. **השם מאסטרקארד ועי",
+   "items": [
+    {
+     "text": "לרכישה פעם נוספת",
+     "href": "https://digital.harel-group.co.il/travel-policy/return-customer",
+     "year": null,
+     "iframe": false,
+     "doc": false,
+     "internal": true
+    },
+    {
+     "text": "בחוברת הפוליסה",
+     "href": "https://www.harel-group.co.il/P/15048.pdf",
+     "year": null,
+     "iframe": false,
+     "doc": true,
+     "internal": true
+    },
+    {
+     "text": "(iframe)",
+     "href": "https://www.googletagmanager.com/ns.html?id=GTM-T4X8D62",
+     "year": null,
+     "iframe": true,
+     "doc": false,
+     "internal": false
+    }
+   ]
+  },
+  "https://www.googletagmanager.com/ns.html?id=GTM-T4X8D62": {
+   "product": null,
+   "status": 200,
+   "method": "requests",
+   "text_hash": "7320d5b79df006d13821a301995704836157f8ca",
+   "text_head": "ns",
+   "items": []
   }
  }
 }
