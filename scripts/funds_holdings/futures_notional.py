@@ -46,7 +46,7 @@ CONTRACT_SPECS: dict[str, tuple[float, str | None]] = {
     "DM": (5, "dow30"),         # E-mini Dow
     "FAW": (100, None),         # E-mini S&P MidCap 400
     "IXT": (100, None),         # E-mini Technology Select Sector (XAK)
-    "XAS": (100, None),         # E-mini Communication Services Select Sector (XAZ)
+    "XAS": (250, None),         # E-mini Communication Services Select Sector (XAZ) - $250 x index (מפרט CME, SER-8207R)
     "XAY": (100, None),         # E-mini Consumer Discretionary Select Sector
     "SWO": (25, None),          # E-mini PHLX Semiconductor Sector (SOX)
     # OSE / SGX
