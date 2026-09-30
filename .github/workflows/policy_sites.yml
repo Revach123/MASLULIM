@@ -1,7 +1,8 @@
 name: Policy per-company
 
 # כל חברה = ג'וב נפרד שכותב רק ל-policy/companies/<LegalId>/.
-# push: רק חברות שקובץ ההגדרות שלהן (scripts/policy/sites/<LegalId>.json) השתנה; שינוי בקוד/ב-workflow -> כולן.
+# push: רק חברות שקובץ ההגדרות שלהן (scripts/policy/sites/<LegalId>.json) השתנה; שינוי בקוד/ב-workflow ->
+#       רק חברות הבדיקה (CANARY) - לא כולן, כדי לא להיחסם ב-WAF של האתרים מריבוי ריצות.
 # schedule: כל החברות, כל יום (זיהוי מסמכים חדשים/עדכונים).
 on:
   push:
@@ -45,7 +46,8 @@ jobs:
               site_ids = [m.group(1) for f in changed if (m := re.fullmatch(r"scripts/policy/sites/(\d+)\.json", f))]
               other = [f for f in changed if (f.startswith("scripts/policy/") or f.endswith("policy_sites.yml"))
                        and not re.fullmatch(r"scripts/policy/sites/\d+\.json", f)]
-              ids = all_ids if other else sorted(set(site_ids) & set(all_ids))
+              canary = ["512065202", "512267592"]  # מיטב, הראל גמל - עובדות; בדיקת רגרסיה לשינויי קוד
+              ids = sorted((set(site_ids) | (set(canary) if other else set())) & set(all_ids))
           print("ids=" + json.dumps(ids))
           PY
 
@@ -94,7 +96,7 @@ jobs:
               print(f"- {n}: {len(json.load(open(p, encoding='utf-8'))) if os.path.exists(p) else '-'}")
           PY
       - name: Commit (retry, rebuild combined tables on latest head)
-        if: always()
+        if: ${{ !cancelled() }}
         run: |
           git config user.name "github-actions"
           git config user.email "actions@users.noreply.github.com"
