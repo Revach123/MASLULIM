@@ -62,11 +62,12 @@
 """
 
 import statistics
+from datetime import date
 
 from .excel_io import to_ratio
 from .sheet_source import PCT_COL
-from .option_delta_pricing import resolve_option_delta
-from .option_ticker_parse import is_call_option, parse_underlying
+from .option_delta_pricing import quote_scale, resolve_option_delta
+from .option_ticker_parse import CONTRACT_MULTIPLIER, is_call_option, parse_underlying
 from .futures_notional import FuturesResolver, build_rows as build_futures_rows
 from .swap_index_pricing import price_as_of as index_price_as_of, resolve_current_price
 
@@ -566,14 +567,15 @@ def collect_unresolved_swap_tickers(source: list[dict]) -> dict[str, set[str]]:
 
 
 def _options_exposure(
-    source: list[dict], total_assets: dict[str, float], category: str
+    source: list[dict], total_assets: dict[str, float], category: str, detail: list | None = None
 ) -> tuple[dict[str, float], dict[str, float]]:
     """דלתא×נוציונל לקטגוריית אופציה אחת (listed/OTC בנפרד - שם השדה
     ה"מפתח" תמיד "Category" של הגיליון, לא משנה איזה). רק שורות נכס-בסיס
     מניות (OPT_EQUITY_UNDERLYING) - מט"ח/ריבית/אחר נשארים בשיטה הישנה,
     מחוץ להיקף (לא אופציות על מניות, לא חלק מהתיקון הזה). מחזיר גם
     equity_sums - תת-קבוצה של sums, רק שורות מניות - לאזור החשיפה למניות
-    בדשבורד (ר' main.py)."""
+    בדשבורד (ר' main.py). detail (אופציונלי): שורת מניות אחת לכל שורה, עם
+    אותה חשיפה ונכס הבסיס שזוהה (לפירוק לפי מדד, index_exposure)."""
     sums: dict[str, float] = {}
     equity_sums: dict[str, float] = {}
     for rec in source:
@@ -596,7 +598,9 @@ def _options_exposure(
             is_call = is_call_option(str(name)) if name else None
             strike = _num(row.get(OPT_STRIKE_COL))
             expiry_raw = row.get(OPT_EXPIRY_COL)
-            expiry = expiry_raw.date() if hasattr(expiry_raw, "date") else None
+            # datetime (openpyxl) או date - שניהם קיימים בדוחות
+            expiry = (expiry_raw.date() if hasattr(expiry_raw, "date")
+                      else expiry_raw if isinstance(expiry_raw, date) else None)
             units = _num(row.get(OPT_UNITS_COL))
             fx = _normalize_fx(row.get(OPT_CURRENCY_COL), _num(row.get(OPT_FX_COL)))
 
@@ -604,7 +608,8 @@ def _options_exposure(
             if ticker is not None and is_call is not None and units is not None and fx is not None:
                 delta, spot = resolve_option_delta(ticker, strike, expiry, report_date, is_call)
                 if delta is not None and spot is not None:
-                    notional_thousands = units * delta * spot * fx / 1000
+                    mult = CONTRACT_MULTIPLIER.get(ticker, 1.0)
+                    notional_thousands = units * mult * delta * spot * quote_scale(ticker) * fx / 1000
                     line_ratio = notional_thousands / total
                     fv = _num(row.get(FAIR_VALUE_COL))
                     fv_ratio = (fv / total) if fv is not None else None
@@ -614,6 +619,8 @@ def _options_exposure(
                 line_ratio = row_pct
             sums[key] = sums.get(key, 0.0) + line_ratio
             equity_sums[key] = equity_sums.get(key, 0.0) + line_ratio
+            if detail is not None:
+                detail.append({"key": key, "row": row, "ratio": line_ratio, "ticker": ticker})
     return sums, equity_sums
 
 
