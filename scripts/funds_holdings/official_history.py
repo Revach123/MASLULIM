@@ -56,12 +56,11 @@ def _resources(s: requests.Session, title: str) -> list[str]:
             and "שינויים" not in r.get("name", "")]
 
 
-def _ratio(v) -> float | None:
+def _num(v) -> float | None:
     try:
-        x = float(str(v).replace("%", "").replace(",", "").strip())
+        return float(str(v).replace("%", "").replace(",", "").strip())
     except (TypeError, ValueError):
         return None
-    return x / 100
 
 
 def fetch_stock_exposure(periods: set[str]) -> dict[tuple[str, str, str], float]:
@@ -81,9 +80,10 @@ def fetch_stock_exposure(periods: set[str]) -> dict[tuple[str, str, str], float]
                                    filters=json.dumps({"REPORT_PERIOD": str(period)}))
                     recs = res["records"]
                     for r in recs:
-                        v = _ratio(r.get("STOCK_MARKET_EXPOSURE"))
-                        if r.get("FUND_ID") is not None and v is not None:
-                            out[(domain, str(int(float(r["FUND_ID"]))), period)] = v
+                        # STOCK_MARKET_EXPOSURE הוא סכום, לא אחוז - כמו exposure_pct ב-revach
+                        e, assets = _num(r.get("STOCK_MARKET_EXPOSURE")), _num(r.get("TOTAL_ASSETS"))
+                        if r.get("FUND_ID") is not None and e is not None and assets:
+                            out[(domain, str(int(float(r["FUND_ID"]))), period)] = e / assets
                     offset += len(recs)
                     if len(recs) < PAGE or offset >= res.get("total", 0):
                         break
