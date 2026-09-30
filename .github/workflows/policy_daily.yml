@@ -1,6 +1,9 @@
 name: Policy docs (daily)
 
 on:
+  push:
+    branches: [claude/tender-wozniak-of4b7i]
+    paths: [".github/workflows/policy_daily.yml"]
   schedule:
     - cron: "0 5 * * *"
   workflow_dispatch:
