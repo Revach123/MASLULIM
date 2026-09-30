@@ -36,6 +36,15 @@ PATTERN_B = re.compile(r"\bon\s+([A-Z][A-Z0-9.]{0,6})(?:\s+US)?\s*$", re.IGNOREC
 # (optional stray Hebrew "ת" prefix seen on some filers' truncated rows)
 PATTERN_C = re.compile(r"^ת?[CP][\d.]+M\d+-(.+)$")
 
+# Pattern G: אופציית מדד מעו"ף חודשית בשם מקוצר "C 4300 APR" / "P 4300 APR" (עגור) -
+# מתחיל ישר ב-C/P ומחיר מימוש ברמת ת"א 35 (קודי מניות מעו"ף מתחילים בקוד: "BZ C 250 AUG").
+# הזיהוי מאומת בחישוב עצמו: מימוש/מחיר המדד חייב להיות סביר (option_delta_pricing).
+PATTERN_G = re.compile(r"^ת?([CP])\s?(\d{3,5}(?:\.\d+)?)\s+(JAN|FEB|MAR|APR|MAY|JUN|JUL|AUG|SEP|OCT|NOV|DEC)\b", re.IGNORECASE)
+# מחיר מימוש מתוך קוד מעו"ף "C004160M607-35ת" (כשעמודת שער המימוש ריקה / 0)
+_MAOF_STRIKE = re.compile(r"^ת?[CP]0*(\d+(?:\.\d+)?)M\d")
+# חודש פקיעה מתוך קוד מעו"ף: M<ספרת שנה><חודש> - "M607" = 07/2026
+_MAOF_EXPIRY = re.compile(r"^ת?[CP][\d.]+M(\d)(\d{2})")
+
 # Pattern D: "SPXW PUT 6700" / "TEVA CALL 30" / "CALL AMAT 710" / "PUT TSEM 220" /
 #            "C EWY 260" / "put EWY 180" -> ticker adjacent to CALL/PUT/C/P keyword.
 # Source rows are truncated by the filer (cut off mid-string) - only look at
@@ -88,11 +97,22 @@ MAOF_ABBREV_TICKER = {
     "בזן": "ORL.TA",
     "ברס": "TASE.TA",
     "פנק": "PHOE.TA",
+    # אופציות מדד מעו"ף: "C004170M607-35ת" = call ת"א 35, מימוש 4170, פקיעה 07/2026.
+    # אומת מול הנתונים: מחיר האופציה בדוח (באגורות) = פרמיית בלק-שולס על ת"א 35 × ₪50
+    # לנקודה (48.8-49.1 בפועל), מנפיק "מסלקת מעו"ף", מדינת חשיפה ישראל. הגרסה
+    # "תC004100M607-35" (ת' מובילה, בלי ת' בסוף) היא אותו נייר אצל מגישים אחרים.
+    "35ת": "TA35", "35": "TA35",
+    "125ת": "TA125", "125": "TA125",
+    "90ת": "TA90", "90": "TA90",
 }
+
+# מכפיל חוזה (₪ לנקודת מדד) - "ערך נקוב (יחידות)" באופציות מעו"ף הוא מספר חוזים,
+# לא יחידות נכס בסיס (שווי הוגן = יחידות × מחיר חוזה). לשאר הנכסים: 1.
+CONTRACT_MULTIPLIER = {"TA35": 50.0, "TA125": 50.0, "TA90": 50.0}
 
 _CALL_WORD = re.compile(r"\bCALL", re.IGNORECASE)
 _PUT_WORD = re.compile(r"\bPUT", re.IGNORECASE)
-_CP_LETTER = re.compile(r"(?:^|\s)([CP])\s?\d|\d\s?([CP])(?:\s|$)")
+_CP_LETTER = re.compile(r"(?:^ת?|\s)([CP])\s?\d|\d\s?([CP])(?:\s|$)")
 
 
 def parse_hebrew_company_name(name: str) -> str | None:
@@ -115,6 +135,31 @@ def is_call_option(name: str) -> bool | None:
     return None
 
 
+def parse_strike(name: str) -> float | None:
+    """מחיר מימוש מהשם, לאופציות מעו"ף ("C004160M607-35ת" -> 4160, "C 4300 APR" -> 4300)."""
+    name = str(name or "").strip()
+    m = _MAOF_STRIKE.match(name) or PATTERN_G.match(name)
+    if not m:
+        return None
+    try:
+        return float(m.group(1) if m.re is _MAOF_STRIKE else m.group(2))
+    except ValueError:
+        return None
+
+
+def parse_maof_expiry_month(name: str, near_year: int) -> tuple[int, int] | None:
+    """(שנה, חודש) מקוד מעו"ף ("C004160M607-35ת" -> (2026, 7)); ספרת השנה מתורגמת
+    לשנה הקרובה ביותר ל-near_year (שנת הדוח)."""
+    m = _MAOF_EXPIRY.match(str(name or "").strip())
+    if not m:
+        return None
+    digit, month = int(m.group(1)), int(m.group(2))
+    if not 1 <= month <= 12:
+        return None
+    year = min((y for y in range(near_year - 5, near_year + 6) if y % 10 == digit), key=lambda y: abs(y - near_year))
+    return year, month
+
+
 def parse_underlying(name: str) -> tuple[str | None, str | None]:
     """(טיקר, שם-הדפוס) או (None, None) אם לא זוהה. רק דפוסי-טיקר לטיניים
     נבדקים ישירות - מחרוזת עם תוכן עברי עוברת לשכבת שמות-חברה/מעו"ף
@@ -125,6 +170,8 @@ def parse_underlying(name: str) -> tuple[str | None, str | None]:
         if ticker:
             return ticker, "H_hebrew_company_name"
         return None, None  # שם עברי לא-מאומת - נשאר לא-ממופה, לא ניחוש
+    if PATTERN_G.match(name):
+        return "TA35", "G_maof_index_month"
     for pattern, label, group_upper in (
         (PATTERN_A3, "A3_ticker_dash_us_date", False),
         (PATTERN_A, "A_us_slash_date", False),

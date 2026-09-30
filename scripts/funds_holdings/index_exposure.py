@@ -10,7 +10,8 @@
 - קרנות חוץ - שם הקרן בדוח × שיעור המניות של ה-ISIN (isin_fractions).
 - חוזים עתידיים ועסקאות החלף - לפי החוזה/הטיקר, עם אותה חשיפה לשורה בדיוק
   כמו ב-derivatives_exposure (detail).
-- אופציות - סכום אחד ("אופציות").
+- אופציות - דלתא × נוציונל לשורה (כמו derivatives_exposure), לפי נכס הבסיס
+  (אופציות מדד מעו"ף -> ת"א 35; מניה בודדת -> "מניות <מדינה>").
 
 זיהוי המדד: טבלת מילות מפתח אחת (INDEX_PATTERNS) לכל המקורות - שם קרן,
 "נכס בסיס", טיקר סוואפ ושם חוזה. הטבלה רק מאחדת שמות נרדפים של מדדים
@@ -23,9 +24,9 @@ import re
 from collections import defaultdict
 
 from .derivatives_exposure import (
-    EQUITY_UNDERLYING, FUT_UNDERLYING_COL, OPTIONS_CATEGORIES, SWAP_ASSET_TYPE_COL,
+    OPTIONS_CATEGORIES, SWAP_ASSET_TYPE_COL,
     SWAP_CATEGORY as SWAP_CATEGORY_NAME,
-    SWAP_EQUITY_ASSET_TYPE, SWAP_TICKER_COL, _futures_exposure, _swap_exposure,
+    SWAP_EQUITY_ASSET_TYPE, SWAP_TICKER_COL, _futures_exposure, _options_exposure, _swap_exposure,
     total_assets_by_key,
 )
 from .excel_io import to_ratio
@@ -303,6 +304,17 @@ def _is_recognized(idx: str) -> bool:
     return idx in _KNOWN_IDS or ":" in idx or idx in {t for _, t, _, _ in _THEMES} or idx == "options"
 
 
+def _option_index(ticker: str | None, row: dict) -> tuple[str, str]:
+    """נכס בסיס של אופציה: מדד מוכר (TA35, SPX, NDX...) -> המדד; מניה בודדת
+    (AMAT, CLIS.TA) -> "מניות <מדינה>"; לא זוהה -> "אופציות"."""
+    if not ticker:
+        return "options", "אופציות"
+    idx, label = classify_index(ticker)
+    if _is_recognized(idx) and idx != "options":
+        return idx, label
+    return _country_label(row.get(COUNTRY_COL))
+
+
 def _swap_index(row, full_names: dict[str, str] | None = None) -> tuple[str, str]:
     """טיקר סוואפ: שם מלא (OpenFIGI) / קוד מוכר -> מדד; מניה בודדת -> "מניות <מדינה>";
     כל טיקר אחר שלא זוהה הוא סל מותאם (בנקאי/קנייני) -> "סל מניות - <מדינה>"."""
@@ -385,16 +397,14 @@ def build_index_exposure(source: list[dict], funds: list[dict], funds_ref: list[
         swap_eq[d["key"]] += d["ratio"]
     _add_derivative(acc, swap_detail, swap_eq, "swaps", lambda d: _swap_index(d["row"], full_names))
 
-    # 5. אופציות - סכום אחד (0.2% מהחשיפה בכלל המסלולים)
-    for rec in source:
-        if rec["Category"] not in OPTIONS_CATEGORIES or rec["מידע"] != "מידע":
-            continue
-        for row in rec["Clean"]:
-            if row.get(FUT_UNDERLYING_COL) != EQUITY_UNDERLYING:
-                continue
-            key, pct = row.get("מפתח"), to_ratio(row.get(PCT_COL))
-            if key and pct:
-                acc.add(key, "options", "אופציות", pct, "options")
+    # 5. אופציות - אותה חשיפה לשורה כמו ב-derivatives_exposure (דלתא × נוציונל, או
+    # השווי המדווח כשאין דלתא), לפי נכס הבסיס שזוהה משם האופציה
+    for cat in OPTIONS_CATEGORIES:
+        opt_detail: list[dict] = []
+        _options_exposure(source, totals, cat, opt_detail)
+        for d in opt_detail:
+            idx, label = _option_index(d["ticker"], d["row"])
+            acc.add(d["key"], idx, label, d["ratio"], "options")
 
     out = {}
     for key, by_idx in acc.pct.items():

@@ -38,6 +38,19 @@ UNDERLYING_ALIAS = {
 }
 
 
+# נכסי בסיס שהם מדד עם סדרה משלו ב-INDICES (data/prices/<id>.csv, אותו פורמט כמו
+# singles) - אופציות מדד מעו"ף (ר' option_ticker_parse.MAOF_ABBREV_TICKER)
+INDEX_SERIES = {"TA35": "ta35", "TA125": "ta125", "TA90": "ta90"}
+INDEX_PRICE_URL_TMPL = f"{RAW_BASE}/data/prices/{{series}}.csv"
+
+
+def quote_scale(symbol: str | None) -> float:
+    """מכפיל ממחיר הסדרה למטבע הפעילות: ניירות ת"א ב-Yahoo (".TA") מצוטטים
+    באגורות (LUMI.TA = 6652 = ₪66.52; אומת: יחידות × מחיר / 100 = השווי ההוגן
+    בדוח). מחיר המימוש בדוחות באותן אגורות, כך שהדלתא לא מושפעת - רק הנוציונל."""
+    return 0.01 if symbol and str(symbol).upper().endswith(".TA") else 1.0
+
+
 def _safe_filename(symbol: str) -> str:
     import re
     return re.sub(r"[^A-Za-z0-9._-]", "_", symbol)
@@ -46,9 +59,17 @@ def _safe_filename(symbol: str) -> str:
 @lru_cache(maxsize=128)
 def _load_price_history(symbol: str) -> tuple[tuple[date, float], ...]:
     symbol = UNDERLYING_ALIAS.get(symbol, symbol)
-    url = SINGLE_PRICE_URL_TMPL.format(symbol=_safe_filename(symbol))
-    r = requests.get(url, timeout=TIMEOUT)
-    r.raise_for_status()
+    if symbol in INDEX_SERIES:
+        url = INDEX_PRICE_URL_TMPL.format(series=INDEX_SERIES[symbol])
+    else:
+        url = SINGLE_PRICE_URL_TMPL.format(symbol=_safe_filename(symbol))
+    # כישלון (אין סדרה לסימול / רשת) נשמר במטמון כסדרה ריקה - אחרת כל שורת
+    # אופציה על אותו סימול מנסה שוב (lru_cache לא שומר חריגות)
+    try:
+        r = requests.get(url, timeout=TIMEOUT)
+        r.raise_for_status()
+    except requests.RequestException:
+        return ()
     out = []
     for row in csv.DictReader(io.StringIO(r.text)):
         try:
@@ -121,6 +142,9 @@ def resolve_option_delta(ticker: str | None, strike: float | None, expiry: date 
         return None, None
     spot = price_as_of(ticker, report_date)
     if spot is None:
+        return None, None
+    # אופציית מדד: מימוש רחוק מהמדד = זיהוי שגוי של נכס הבסיס (ר' PATTERN_G) - לא מחשבים
+    if ticker in INDEX_SERIES and not (0.5 <= strike / spot <= 2.0):
         return None, None
     vol = realized_vol_as_of(ticker, report_date)
     if vol is None:

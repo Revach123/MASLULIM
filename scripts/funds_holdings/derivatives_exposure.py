@@ -62,11 +62,13 @@
 """
 
 import statistics
+from datetime import date, datetime
 
 from .excel_io import to_ratio
 from .sheet_source import PCT_COL
-from .option_delta_pricing import resolve_option_delta
-from .option_ticker_parse import is_call_option, parse_underlying
+from .option_delta_pricing import quote_scale, resolve_option_delta
+from .option_ticker_parse import (CONTRACT_MULTIPLIER, is_call_option, parse_maof_expiry_month, parse_strike,
+                                  parse_underlying)
 from .futures_notional import FuturesResolver, build_rows as build_futures_rows
 from .swap_index_pricing import price_as_of as index_price_as_of, resolve_current_price
 
@@ -199,6 +201,9 @@ FOREIGN_FX_PLACEHOLDER_TOL = 0.01
 OPT_NAME_COL = "שם נייר ערך"
 OPT_UNDERLYING_COL = "נכס בסיס"
 OPT_EQUITY_UNDERLYING = "מניות לרבות מדדי מניות"
+# ערכי "נכס בסיס" שאינם מניות במפורש. ערך אחר / ריק / חופשי ("TEL AVIV STOCK EXCHANGE
+# 35 IND", "ריק במקור") - מניות רק אם נכס הבסיס זוהה משם האופציה (ר' is_equity_option)
+OPT_NON_EQUITY_UNDERLYINGS = {'ריבית ואג"ח', 'מט"ח', "סחורות", "מדדי סחורות"}
 OPT_STRIKE_COL = "שער מימוש"
 OPT_EXPIRY_COL = "תאריך פקיעה"
 OPT_UNITS_COL = "ערך נקוב (יחידות)"
@@ -338,6 +343,39 @@ def _leg_market_values(row: dict, report_date, fx_now: dict[tuple, float]) -> li
     return out
 
 
+# סוואפ מניות עם שווי רגליים: אם ממוצע הרגליים קטן מ-20% מיחידות × מחיר המדד העדכני,
+# הרגליים הן שינוי שווי (MTM) ולא הנוציונל. יחידות × מחיר מתקבל רק עד 1.5 מנכסי המסלול
+# (514956465_15249: יחידות 291,700 = פי 130 מהרגליים - שם הרגליים הן הנוציונל).
+MTM_LEG_SHARE = 0.2
+LIVE_SWAP_MAX_RATIO = 1.5
+
+
+def _live_swap_ratio(row: dict, report_date, fx_now: dict, total: float) -> float | None:
+    """|יחידות| × מחיר המדד ליום הדוח (swap_index_pricing, רק טיקר ממופה) × שער
+    מטבע המדד / נכסי המסלול. None אם אין מחיר / יחידות, או שהתוצאה לא סבירה לשורה."""
+    leg1_col, leg2_col = SWAP_LEGS
+    price, _ = resolve_current_price(row.get(SWAP_TICKER_COL), report_date)
+    if price is None:
+        return None
+    ccy1, ccy2 = row.get(leg1_col["currency"]), row.get(leg2_col["currency"])
+    units = _num(row.get(leg1_col["units"])) if ccy1 != "ILS" or not ccy2 else _num(row.get(leg2_col["units"]))
+    ccy = ccy1 if ccy1 != "ILS" or not ccy2 else ccy2
+    if not units:
+        return None
+    # "ערך נקוב" שהוא כבר סכום במטבע (513611509_1038: 67,191.68 דולר, רגליים 66.8 / 67.2
+    # אלף) - שווי רגל ≈ יחידות / 1000 - אינו יחידות מדד; לא מתמחרים אותו
+    for n in (1, 2):
+        leg_fv = _num(row.get(f"שווי הוגן במטבע הנסחר (רגל {n})"))
+        if leg_fv and 0.5 <= abs(leg_fv) / (abs(units) / 1000) <= 2.0:
+            return None
+    fx = 1.0 if ccy == "ILS" else (fx_now.get((ccy, report_date)) or _normalize_fx(ccy, _num(row.get(
+        (leg1_col if ccy == ccy1 else leg2_col)["fx"]))))
+    if fx is None:
+        return None
+    ratio = abs(units) * price * fx / 1000 / total
+    return ratio if ratio <= LIVE_SWAP_MAX_RATIO else None
+
+
 def _swap_exposure(
     source: list[dict], total_assets: dict[str, float], detail: list | None = None
 ) -> tuple[dict[str, float], dict[str, float], dict[str, float], dict[str, dict[str, float]]]:
@@ -439,7 +477,12 @@ def _swap_exposure(
             is_funded = _is_funded_swap(row.get(SWAP_MAIN_TYPE_COL))
 
             leg_values = _leg_market_values(row, report_date, fx_now)
-            if leg_values:
+            live_ratio = _live_swap_ratio(row, report_date, fx_now, total) if is_equity and leg_values else None
+            if leg_values and live_ratio is not None and sum(leg_values) / len(leg_values) / total < MTM_LEG_SHARE * live_ratio:
+                # הרגליים הן רק שינוי השווי מאז הפתיחה / ה-Reset (514956465_9452: ±9,253.6
+                # יחידות SPTR, רגליים 354 / 1,930 אלף דולר = 0.3%) - החשיפה היא יחידות × מחיר המדד
+                line_ratio = live_ratio
+            elif leg_values:
                 # שווי השוק של הרגליים הוא גודל החשיפה הנוכחי - בלי מוסכמות יחידות/מחיר
                 line_ratio = sum(leg_values) / len(leg_values) / total
             else:
@@ -565,15 +608,56 @@ def collect_unresolved_swap_tickers(source: list[dict]) -> dict[str, set[str]]:
     return out
 
 
+def _as_date(v) -> date | None:
+    """תאריך פקיעה כפי שמופיע בדוחות: datetime / date (openpyxl) או מחרוזת
+    ("26/04/2026", "24/07/2026", "2026-07-24")."""
+    if hasattr(v, "date"):
+        return v.date()
+    if isinstance(v, date):
+        return v
+    s = str(v or "").strip()
+    for fmt in ("%d/%m/%Y", "%Y-%m-%d", "%d.%m.%Y", "%d/%m/%y"):
+        try:
+            return datetime.strptime(s, fmt).date()
+        except ValueError:
+            continue
+    return None
+
+
+def is_equity_option(row: dict) -> bool:
+    """אופציה על מניות: "נכס בסיס" = מניות, או ערך לא סטנדרטי / ריק כשנכס הבסיס
+    זוהה משם האופציה כמדד מניות / מניה (C004160M607-35ת -> ת"א 35). אופציות
+    פרויקט ("קיקר", "PowerGen Option") לא מזוהות ונשארות מחוץ לחשיפה למניות."""
+    v = row.get(OPT_UNDERLYING_COL)
+    if v == OPT_EQUITY_UNDERLYING:
+        return True
+    if v in OPT_NON_EQUITY_UNDERLYINGS:
+        return False
+    name = row.get(OPT_NAME_COL)
+    return bool(name) and parse_underlying(str(name))[0] is not None
+
+
+def _option_expiry(row: dict, name, report_date) -> date | None:
+    """תאריך הפקיעה; כשהשם הוא קוד מעו"ף (M607 = 07/2026) והעמודה ריקה או
+    סותרת אותו (נצפה 2046-03-31 כערך ברירת מחדל) - החודש מהקוד (ה-24 בחודש;
+    הדלתא כמעט לא רגישה ליום)."""
+    expiry = _as_date(row.get(OPT_EXPIRY_COL))
+    ym = parse_maof_expiry_month(str(name), report_date.year) if name and report_date else None
+    if ym and (expiry is None or (expiry.year, expiry.month) != ym):
+        return date(ym[0], ym[1], 24)
+    return expiry
+
+
 def _options_exposure(
-    source: list[dict], total_assets: dict[str, float], category: str
+    source: list[dict], total_assets: dict[str, float], category: str, detail: list | None = None
 ) -> tuple[dict[str, float], dict[str, float]]:
     """דלתא×נוציונל לקטגוריית אופציה אחת (listed/OTC בנפרד - שם השדה
     ה"מפתח" תמיד "Category" של הגיליון, לא משנה איזה). רק שורות נכס-בסיס
     מניות (OPT_EQUITY_UNDERLYING) - מט"ח/ריבית/אחר נשארים בשיטה הישנה,
     מחוץ להיקף (לא אופציות על מניות, לא חלק מהתיקון הזה). מחזיר גם
     equity_sums - תת-קבוצה של sums, רק שורות מניות - לאזור החשיפה למניות
-    בדשבורד (ר' main.py)."""
+    בדשבורד (ר' main.py). detail (אופציונלי): שורת מניות אחת לכל שורה, עם
+    אותה חשיפה ונכס הבסיס שזוהה (לפירוק לפי מדד, index_exposure)."""
     sums: dict[str, float] = {}
     equity_sums: dict[str, float] = {}
     for rec in source:
@@ -587,7 +671,7 @@ def _options_exposure(
                 continue
             row_pct = to_ratio(row.get(PCT_COL)) or 0.0
 
-            if row.get(OPT_UNDERLYING_COL) != OPT_EQUITY_UNDERLYING:
+            if not is_equity_option(row):
                 sums[key] = sums.get(key, 0.0) + row_pct
                 continue
 
@@ -595,8 +679,9 @@ def _options_exposure(
             ticker, _pattern = parse_underlying(str(name)) if name else (None, None)
             is_call = is_call_option(str(name)) if name else None
             strike = _num(row.get(OPT_STRIKE_COL))
-            expiry_raw = row.get(OPT_EXPIRY_COL)
-            expiry = expiry_raw.date() if hasattr(expiry_raw, "date") else None
+            if not strike or strike <= 0:  # עמודה ריקה / 0 - מהשם ("C004160M607-35ת")
+                strike = parse_strike(str(name)) if name else None
+            expiry = _option_expiry(row, name, report_date)
             units = _num(row.get(OPT_UNITS_COL))
             fx = _normalize_fx(row.get(OPT_CURRENCY_COL), _num(row.get(OPT_FX_COL)))
 
@@ -604,7 +689,8 @@ def _options_exposure(
             if ticker is not None and is_call is not None and units is not None and fx is not None:
                 delta, spot = resolve_option_delta(ticker, strike, expiry, report_date, is_call)
                 if delta is not None and spot is not None:
-                    notional_thousands = units * delta * spot * fx / 1000
+                    mult = CONTRACT_MULTIPLIER.get(ticker, 1.0)
+                    notional_thousands = units * mult * delta * spot * quote_scale(ticker) * fx / 1000
                     line_ratio = notional_thousands / total
                     fv = _num(row.get(FAIR_VALUE_COL))
                     fv_ratio = (fv / total) if fv is not None else None
@@ -614,6 +700,8 @@ def _options_exposure(
                 line_ratio = row_pct
             sums[key] = sums.get(key, 0.0) + line_ratio
             equity_sums[key] = equity_sums.get(key, 0.0) + line_ratio
+            if detail is not None:
+                detail.append({"key": key, "row": row, "ratio": line_ratio, "ticker": ticker})
     return sums, equity_sums
 
 
