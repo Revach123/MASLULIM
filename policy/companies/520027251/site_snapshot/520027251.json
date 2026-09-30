@@ -1,32 +1,41 @@
 {
  "legal_id": "520027251",
  "company": "קרנות השתלמות למורים ולגננות - חברה מנהלת בע\"מ",
- "taken": "2026-09-30T22:38:04+00:00",
+ "taken": "2026-09-30T23:38:52+00:00",
  "pages": {
-  "https://www.fibi.co.il": {
-   "product": null,
-   "status": 200,
+  "https://www.kranoth.org.il/%D7%90%D7%95%D7%93%D7%95%D7%AA/%D7%9E%D7%A1%D7%9C%D7%95%D7%9C%D7%99-%D7%94%D7%A9%D7%A7%D7%A2%D7%94-%D7%97%D7%93%D7%A9%D7%99%D7%9D/": {
+   "product": "גמל",
+   "status": 403,
    "method": "browser",
-   "text_hash": "d110bf75fda5b0238fe7f2a4006a8c3867edaba7",
-   "text_head": " אנו מתנצלים על אי הנוחות... הפעילות בדף זה נראית לנו כפעילות אוטומטית, ועל כן עלינו לבצע אימות אבטחה קצר. מזהה אירוע: 1f62e026-dsgu-4676-af43-d3ccc60e5919 ",
+   "text_hash": "7d9f78042d61c6dd9b14b763d750cb0633b92cb6",
+   "text_head": "www.kranoth.org.il ביצוע אימות אבטחה אתר זה משתמש בשירות אבטחה להגנה מפני בוטים זדוניים. דף זה מופיע בזמן שהאתר מוודא שאינך בוט. Ray ID: a43711cb8a5e2158 ביצועים ואבטחה מבית Cloudflare פרטיות",
    "items": [
     {
-     "text": "(iframe)",
-     "href": "https://newassets.hcaptcha.com/captcha/v1/b9ca2a6602c2bf69741b771db488f3001ea35b08/static/hcaptcha.html",
+     "text": "פרטיות",
+     "href": "https://www.cloudflare.com/privacypolicy/",
      "year": null,
-     "iframe": true,
+     "iframe": false,
      "doc": false,
      "internal": false
     }
    ]
   },
-  "https://newassets.hcaptcha.com/captcha/v1/b9ca2a6602c2bf69741b771db488f3001ea35b08/static/hcaptcha.html": {
+  "https://www.kranoth.org.il": {
    "product": null,
-   "status": 200,
+   "status": 403,
    "method": "browser",
-   "text_hash": null,
-   "text_head": "",
-   "items": []
+   "text_hash": "baf120d77b0875301ff234d0b8d3d94adbe73fcf",
+   "text_head": "www.kranoth.org.il ביצוע אימות אבטחה אתר זה משתמש בשירות אבטחה להגנה מפני בוטים זדוניים. דף זה מופיע בזמן שהאתר מוודא שאינך בוט. Ray ID: a4371379bf0adb63 ביצועים ואבטחה מבית Cloudflare פרטיות",
+   "items": [
+    {
+     "text": "פרטיות",
+     "href": "https://www.cloudflare.com/privacypolicy/",
+     "year": null,
+     "iframe": false,
+     "doc": false,
+     "internal": false
+    }
+   ]
   }
  }
 }
