@@ -29,6 +29,11 @@ jobs:
           REVACH_MATCH_KEY: ${{ secrets.REVACH_MATCH_KEY }}
           PAT: ${{ secrets.PAT }}
         run: python -m scripts.funds_holdings.main --reports-dir reports --out-dir out
+      - name: Compare with /sharetracks (manual composition vs automatic by index)
+        continue-on-error: true
+        env:
+          REVACH_MATCH_KEY: ${{ secrets.REVACH_MATCH_KEY }}
+        run: python -m scripts.funds_holdings.compare_sharetracks --out-dir out
       - name: Summarize output
         run: |
           python3 -c "
