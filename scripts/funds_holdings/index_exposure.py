@@ -40,18 +40,18 @@ SEC_NUM_COL = "מספר נייר ערך"
 # (תבנית, מזהה, שם לתצוגה) - לפי הסדר, ספציפי לפני כללי.
 _P = [
     # ארה"ב - גרסאות של S&P 500 לפני S&P 500 עצמו
-    (r"S\W?P\W?500.{0,12}EX\W?TECH|EX\W?TECHNOLOG", "sp500_ex_tech", "S&P 500 ללא טכנולוגיה"),
+    (r"S\W?P\W?500.{0,12}EX\W?TECH|EX\W?TECHNOLOG|לא כולל טכנולוגיה", "sp500_ex_tech", "S&P 500 ללא טכנולוגיה"),
     (r"S\W?P\W?500.{0,25}EQUAL|EQUAL\W?WEIGHT", "sp500_ew", "S&P 500 משקל שווה"),
     (r"S\W?P\W?500.{0,20}(ESG|SCORED|SRI|SUSTAIN|PARIS|CLIMATE)|^SLB$|SPXESUP", "sp500_esg", "S&P 500 ESG"),
     (r"S\s?[&@+]\s?P\W?500|S&P\W?500|\bSPX\w*|\bSPTR\b|\bSP\W?500|\bSPY\b|\bVOO\b|\bIVV\b|\bCSPX\b"
      r"|^ES$|^ME$|^HWA$", "sp500", "S&P 500"),
-    (r"NASDAQ\W?100|NAS\W?100|\bQQQ\b|\bX?NDX\b|\bNAS1\b|נאסד\"?ק|^NQ$|^HWB$", "nasdaq100", "נאסד\"ק 100"),
+    (r"NASDAQ\W?100|NAS\W?100|\bQQQ\b|\bX?NDX\b|\bNAS1\b|נאסד\"?ק|נסד\"?ק|^NQ$|^HWB$", "nasdaq100", "נאסד\"ק 100"),
     (r"DOW\W?JONES\W?INDUSTRIAL|\bDJIA\b|\bINDU\b|^DM$", "dow30", "דאו ג'ונס"),
     (r"RUSSELL\W?2000|\bRTY\b|\bIWM\b|^RTS$", "russell2000", "ראסל 2000"),
     (r"MID\W?CAP\W?400|S\W?P\W?400|^FAW$", "sp400", "S&P 400"),
     # ענפים (בעיקר ארה"ב - Select Sector / MSCI US)
     (r"SEMICONDUCTOR|SEMICON|\bSOX\b|PHLX|\bSMH\b|שבבים|^SWO$|MVSMH", "semis", "שבבים"),
-    (r"(WORLD|GLOBAL)\W.{0,25}(TECH|INFORMATION)|^NDWUIT$|^M1WO0IT", "world_tech", "טכנולוגיה עולמי"),
+    (r"(WORLD|GLOBAL)\W.{0,25}(TECH|INFORMATION)|טכנולוגיה עולמי|עולמי.{0,5}טכנולוגיה|^NDWUIT$|^M1WO0IT", "world_tech", "טכנולוגיה עולמי"),
     (r"TECHNOLOGY|INFO\w*\W?TECH|TECH\W?SEL|^S5TECH|^S5INFT|\bXLK\b|טכנולוגיה|^IXT(TR)?$", "us_tech", "טכנולוגיה ארה\"ב"),
     (r"COMMUNICATION|COMM\W?SERV|\bXLC\b|תקשורת|^XAS$|^IXC(TR)?$", "us_comm", "תקשורת ארה\"ב"),
     (r"CONSUMER\W?DISC|DISCRETION|\bXLY\b|שיקול דעת צרכני|צריכה מחזורית|^XAY$|^IXY(TR)?$", "us_consdisc",
@@ -66,7 +66,7 @@ _P = [
     # עולמי
     (r"ACWI\W?EX|ALL\W?COUNTRY.{0,15}EX|WORLD\W?EX\W?U\W?S|EX\W?U\W?S\b|לא כולל ארה", "acwi_ex_us",
      "עולמי ללא ארה\"ב"),
-    (r"ACWI|AC\W?WORLD|ALL\W?COUNTRY|^ZTL$|^WMW$|M1WD|NDUEACWF", "acwi", "MSCI ACWI (עולמי כולל מתעוררים)"),
+    (r"ACWI|AC\W?WORLD|ALL\W?COUNTRY|עולמי.{0,20}כולל.{0,15}מתעוררים|^ZTL$|^WMW$|M1WD|NDUEACWF", "acwi", "MSCI ACWI (עולמי כולל מתעוררים)"),
     (r"EMERG|MSCI\W?EM|\bEM\b|EMG\W?MKT|EM\W?MKT|MXEF|NDUEEGF|M1EF|מתעוררים|^MES$|^RBE$", "msci_em",
      "MSCI שווקים מתעוררים"),
     (r"MSCI\W?WORLD|\bWORLD\W?INDEX|DEVELOPED|M1WO|MXWO|\bURTH\b|^ZWP$|^RVP$|^HRL$|מדד עולמי$",
