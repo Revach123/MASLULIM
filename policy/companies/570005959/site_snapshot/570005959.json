@@ -1,15 +1,860 @@
 {
  "legal_id": "570005959",
  "company": "קופת\"ג של עובדי עירית חיפה",
- "taken": "2026-09-30T22:47:06+00:00",
+ "taken": "2026-09-30T23:42:36+00:00",
  "pages": {
-  "https://www.bidacpa.com": {
+  "https://ktagmulimhaifa.co.il": {
    "product": null,
-   "status": "browser:Error:Page.goto: net::ERR_NAME_NOT_RESOLVED at https://www.bidacpa.com/",
+   "status": 200,
+   "method": "browser",
+   "text_hash": "a32a92799a87e9b284df44eecb174ffa6685ab15",
+   "text_head": "דלג לתוכן קופת תגמולים עירית חיפה דף הבית מידע נוסף מידע אישי צור קשר Search קופת תגמולים של עובדי עיריית חיפה אמנת שירות קופת תגמולים של עובדי עיריית חיפה תקנון קופת תגמולים של עובדי עיריית חיפה אודות הקופה אודות קופת תגמולים קופת תגמולים של עובדי עיריית חיפה אגודה שיתופית בע”מ קופת התגמולים של עובדי עיריית חיפה הינה קופת גמל מאושרת ... המשיכו לקרוא טפסים משיכת כספים הסבר מילוי הטפסים בקשה והצהרת העמית למשיכת כספים משיכת כספי נפטרים הסבר לבדיקת זכאות לכספי ניפטר בקשה ... המשיכו לקרוא מידע אישי העברה למערכת מידע לעמיתים, מלם גמל ופנסיה המשיכו לקרוא עמיתים יקרים עם תחילתו של מבצע “שאגת הארי” חש",
+   "items": [
+    {
+     "text": "תקנון",
+     "href": "https://ktagmulimhaifa.co.il/takanon/",
+     "year": null,
+     "iframe": false,
+     "doc": false,
+     "internal": true
+    }
+   ]
+  },
+  "https://ktagmulimhaifa.co.il/takanon/": {
+   "product": null,
+   "status": 200,
    "method": "requests",
-   "text_hash": null,
-   "text_head": "",
-   "items": []
+   "text_hash": "88d336381e12e0fee8637b12457b5efcedd7cb3c",
+   "text_head": "תקנון – קופת תגמולים עירית חיפה דלג לתוכן קופת תגמולים עירית חיפה דף הבית מידע נוסף אודות קופת תגמולים טפסים תקנון אמנת שרות לקוחות מידע אישי צור קשר Search חיפוש חיפוש … Search חיפוש חיפוש … חיפוש חיפוש … תפריט דף הבית מידע נוסף אודות קופת תגמולים טפסים תקנון אמנת שרות לקוחות מידע אישי צור קשר דף הבית » תקנון תקנון תקנון הקופה אישור שינוי תקנון מידע נוסף תשואות הקופה מרכיבי תשואה מידע סטטיסטי מידע לעמיתים הרכב נכסים דוחות חודשיים לאוצר אסיפות כלליות דוחות כספיים הוצאות ישירות מדיניות ונהלים צדדים קשורים חברי דירקטוריון וועדותיו נושאי משרה עלות שנתית צפויה לעמית ניווט בפוסטים הפוסט הקודם טפסים",
+   "items": [
+    {
+     "text": "תקנון הקופה",
+     "href": "https://ktagmulimhaifa.co.il/wp-content/uploads/2023/05/%D7%AA%D7%A7%D7%A0%D7%95%D7%9F-%D7%97%D7%99%D7%A4%D7%94-%D7%A1%D7%95%D7%A4%D7%99-%D7%9C%D7%90%D7%97%D7%A8-%D7%AA%D7%99%D7%A7%D7%95%D7%A0%D7%99%D7%9D-%D7%A9%D7%A0%D7%AA%D7%91%D7%A7%D7%A9%D7%95.doc",
+     "year": "2023",
+     "iframe": false,
+     "doc": true,
+     "internal": true
+    },
+    {
+     "text": "אישור שינוי תקנון",
+     "href": "https://ktagmulimhaifa.co.il/wp-content/uploads/2018/05/%D7%90%D7%99%D7%A9%D7%95%D7%A8-%D7%A9%D7%99%D7%A0%D7%95%D7%99-%D7%91%D7%AA%D7%A7%D7%A0%D7%95%D7%9F.doc",
+     "year": "2018",
+     "iframe": false,
+     "doc": true,
+     "internal": true
+    },
+    {
+     "text": "תקנון",
+     "href": "https://ktagmulimhaifa.co.il/takanon/",
+     "year": null,
+     "iframe": false,
+     "doc": false,
+     "internal": true
+    },
+    {
+     "text": "מידע לעמיתים",
+     "href": "https://ktagmulimhaifa.co.il/amitim/",
+     "year": null,
+     "iframe": false,
+     "doc": false,
+     "internal": true
+    },
+    {
+     "text": "מדיניות ונהלים",
+     "href": "https://ktagmulimhaifa.co.il/policy/",
+     "year": null,
+     "iframe": false,
+     "doc": false,
+     "internal": true
+    },
+    {
+     "text": "דוחות כספיים",
+     "href": "https://ktagmulimhaifa.co.il/reportsfinance/",
+     "year": null,
+     "iframe": false,
+     "doc": false,
+     "internal": true
+    }
+   ]
+  },
+  "https://ktagmulimhaifa.co.il/amitim/": {
+   "product": null,
+   "status": 200,
+   "method": "requests",
+   "text_hash": "b19c2f865e53a15e67aa988759b319fdfdc91046",
+   "text_head": "מידע לעמיתים – קופת תגמולים עירית חיפה דלג לתוכן קופת תגמולים עירית חיפה דף הבית מידע נוסף אודות קופת תגמולים טפסים תקנון אמנת שרות לקוחות מידע אישי צור קשר Search חיפוש חיפוש … Search חיפוש חיפוש … חיפוש חיפוש … תפריט דף הבית מידע נוסף אודות קופת תגמולים טפסים תקנון אמנת שרות לקוחות מידע אישי צור קשר דף הבית » מידע לעמיתים מידע לעמיתים דוח ממונה אזרחים ותיקים לשנת 2025 דוח ממונה אזרחים ותיקים לשנת 2024 הודעה לעמיתים – נגיף קורונה הודעה לעמיתים מסלולי השקעה תלויי גיל הסרה ממשק האינטרנטי מידע נוסף תשואות הקופה מרכיבי תשואה מידע סטטיסטי מידע לעמיתים הרכב נכסים דוחות חודשיים לאוצר אסיפות כלליות ד",
+   "items": [
+    {
+     "text": "דוח ממונה אזרחים ותיקים לשנת 2025",
+     "href": "https://ktagmulimhaifa.co.il/wp-content/uploads/2026/04/%D7%93%D7%95%D7%97-%D7%90%D7%96%D7%A8%D7%97%D7%99%D7%9D-%D7%95%D7%AA%D7%99%D7%A7%D7%99%D7%9D-%D7%9C%D7%A9%D7%A0%D7%AA-2025.docx",
+     "year": "2025",
+     "iframe": false,
+     "doc": true,
+     "internal": true
+    },
+    {
+     "text": "דוח ממונה אזרחים ותיקים לשנת 2024",
+     "href": "https://ktagmulimhaifa.co.il/wp-content/uploads/2024/12/%D7%93%D7%95%D7%97-%D7%9E%D7%9E%D7%95%D7%A0%D7%94-%D7%90%D7%96%D7%A8%D7%97%D7%99%D7%9D-%D7%95%D7%AA%D7%99%D7%A7%D7%99%D7%9D-1-2.docx",
+     "year": "2024",
+     "iframe": false,
+     "doc": true,
+     "internal": true
+    },
+    {
+     "text": "הודעה לעמיתים – נגיף קורונה",
+     "href": "https://ktagmulimhaifa.co.il/wp-content/uploads/2020/03/%D7%94%D7%95%D7%93%D7%A2%D7%94-%D7%A0%D7%92%D7%99%D7%A3-%D7%A7%D7%95%D7%A8%D7%95%D7%A0%D7%94.doc",
+     "year": "2020",
+     "iframe": false,
+     "doc": true,
+     "internal": true
+    },
+    {
+     "text": "הסרה ממשק האינטרנטי",
+     "href": "https://ktagmulimhaifa.co.il/wp-content/uploads/2018/05/%D7%94%D7%A1%D7%A8%D7%94-%D7%9E%D7%9E%D7%A9%D7%A7-%D7%94%D7%90%D7%99%D7%A0%D7%98%D7%A8%D7%A0%D7%98%D7%99.pdf",
+     "year": "2018",
+     "iframe": false,
+     "doc": true,
+     "internal": true
+    },
+    {
+     "text": "הודעה לעמיתים מסלולי השקעה תלויי גיל",
+     "href": "https://ktagmulimhaifa.co.il/wp-content/uploads/2018/05/%D7%94%D7%95%D7%93%D7%A2%D7%94-%D7%9C%D7%A2%D7%9E%D7%99%D7%AA%D7%99%D7%9D-%D7%9E%D7%A1%D7%9C%D7%95%D7%9C%D7%99-%D7%94%D7%A9%D7%A7%D7%A2%D7%94-%D7%AA%D7%9C%D7%95%D7%99%D7%99-%D7%92%D7%99%D7%9C.doc",
+     "year": "2018",
+     "iframe": false,
+     "doc": true,
+     "internal": true
+    },
+    {
+     "text": "תקנון",
+     "href": "https://ktagmulimhaifa.co.il/takanon/",
+     "year": null,
+     "iframe": false,
+     "doc": false,
+     "internal": true
+    },
+    {
+     "text": "מידע לעמיתים",
+     "href": "https://ktagmulimhaifa.co.il/amitim/",
+     "year": null,
+     "iframe": false,
+     "doc": false,
+     "internal": true
+    },
+    {
+     "text": "מדיניות ונהלים",
+     "href": "https://ktagmulimhaifa.co.il/policy/",
+     "year": null,
+     "iframe": false,
+     "doc": false,
+     "internal": true
+    },
+    {
+     "text": "דוחות כספיים",
+     "href": "https://ktagmulimhaifa.co.il/reportsfinance/",
+     "year": null,
+     "iframe": false,
+     "doc": false,
+     "internal": true
+    }
+   ]
+  },
+  "https://ktagmulimhaifa.co.il/reportsfinance/": {
+   "product": null,
+   "status": 200,
+   "method": "requests",
+   "text_hash": "f20e2513cfae5149428f7a80db2ec3f39c699139",
+   "text_head": "דוחות כספיים – קופת תגמולים עירית חיפה דלג לתוכן קופת תגמולים עירית חיפה דף הבית מידע נוסף אודות קופת תגמולים טפסים תקנון אמנת שרות לקוחות מידע אישי צור קשר Search חיפוש חיפוש … Search חיפוש חיפוש … חיפוש חיפוש … תפריט דף הבית מידע נוסף אודות קופת תגמולים טפסים תקנון אמנת שרות לקוחות מידע אישי צור קשר דף הבית » דוחות כספיים דוחות כספיים דוחות כספיים 2026 דוח כספי ודירקטוריון יוני 2026 דוח כספי ודירקטוריון מרץ 2026 דוחות כספיים 2025 דוחות כספיים לשנת 2025 דוח כספי ודירקטוריון ספטמבר 2025 דוח כספי ודירקטוריון יוני 2025 דוח כספי ודירקטוריון מרץ 2025 דוחות כספיים 2024 דוחות כספיים לשנת 2024 דוח כס",
+   "items": [
+    {
+     "text": "דוח כספי ודירקטוריון מרץ 2026",
+     "href": "https://ktagmulimhaifa.co.il/wp-content/uploads/2026/05/570005959A_126.pdf",
+     "year": "2026",
+     "iframe": false,
+     "doc": true,
+     "internal": true
+    },
+    {
+     "text": "דוח כספי ודירקטוריון יוני 2026",
+     "href": "https://ktagmulimhaifa.co.il/wp-content/uploads/2026/08/570005959A_226.pdf",
+     "year": "2026",
+     "iframe": false,
+     "doc": true,
+     "internal": true
+    },
+    {
+     "text": "דוחות כספיים לשנת 2025",
+     "href": "https://ktagmulimhaifa.co.il/wp-content/uploads/2026/03/570005959A_425.pdf",
+     "year": "2025",
+     "iframe": false,
+     "doc": true,
+     "internal": true
+    },
+    {
+     "text": "דוח כספי ודירקטוריון ספטמבר 2025",
+     "href": "https://ktagmulimhaifa.co.il/wp-content/uploads/2025/11/570005959A_325.pdf",
+     "year": "2025",
+     "iframe": false,
+     "doc": true,
+     "internal": true
+    },
+    {
+     "text": "דוח כספי ודירקטוריון מרץ 2025",
+     "href": "https://ktagmulimhaifa.co.il/wp-content/uploads/2025/05/570005959A_125.pdf",
+     "year": "2025",
+     "iframe": false,
+     "doc": true,
+     "internal": true
+    },
+    {
+     "text": "דוח כספי ודירקטוריון יוני 2025",
+     "href": "https://ktagmulimhaifa.co.il/wp-content/uploads/2025/08/%D7%93%D7%95%D7%97-%D7%9B%D7%A1%D7%A4%D7%99-%D7%95%D7%93%D7%99%D7%A8%D7%A7%D7%98%D7%95%D7%A8%D7%99%D7%95%D7%9F-%D7%99%D7%95%D7%A0%D7%99-2025.pdf",
+     "year": "2025",
+     "iframe": false,
+     "doc": true,
+     "internal": true
+    },
+    {
+     "text": "דוחות כספיים לשנת 2024",
+     "href": "https://ktagmulimhaifa.co.il/wp-content/uploads/2025/03/570005959A_424.pdf",
+     "year": "2024",
+     "iframe": false,
+     "doc": true,
+     "internal": true
+    },
+    {
+     "text": "דוח כספי ודירקטוריון 31.03.2024",
+     "href": "https://ktagmulimhaifa.co.il/wp-content/uploads/2024/05/570005959A_124.pdf",
+     "year": "2024",
+     "iframe": false,
+     "doc": true,
+     "internal": true
+    },
+    {
+     "text": "דוח כספי ודירקטוריון 30.09.2024",
+     "href": "https://ktagmulimhaifa.co.il/wp-content/uploads/2024/11/570005959A_324.pdf",
+     "year": "2024",
+     "iframe": false,
+     "doc": true,
+     "internal": true
+    },
+    {
+     "text": "דוח כספי ודירקטוריון 30.06.2024",
+     "href": "https://ktagmulimhaifa.co.il/wp-content/uploads/2024/08/570005959A_224.pdf",
+     "year": "2024",
+     "iframe": false,
+     "doc": true,
+     "internal": true
+    },
+    {
+     "text": "דוחות כספיים לשנת 2023",
+     "href": "https://ktagmulimhaifa.co.il/wp-content/uploads/2024/03/570005959A_423.pdf",
+     "year": "2023",
+     "iframe": false,
+     "doc": true,
+     "internal": true
+    },
+    {
+     "text": "דוח כספי ודירקטוריון 31.03.2023",
+     "href": "https://ktagmulimhaifa.co.il/wp-content/uploads/2023/05/570005959A_123.pdf",
+     "year": "2023",
+     "iframe": false,
+     "doc": true,
+     "internal": true
+    },
+    {
+     "text": "דוח כספי ודירקטוריון 30.09.23.",
+     "href": "https://ktagmulimhaifa.co.il/wp-content/uploads/2023/11/570005959A_323.pdf",
+     "year": "2023",
+     "iframe": false,
+     "doc": true,
+     "internal": true
+    },
+    {
+     "text": "דוח כספי ודירקטוריון 30.06.2023",
+     "href": "https://ktagmulimhaifa.co.il/wp-content/uploads/2023/08/570005959A_223.pdf",
+     "year": "2023",
+     "iframe": false,
+     "doc": true,
+     "internal": true
+    },
+    {
+     "text": "דוחות כספיים לשנת 2022",
+     "href": "https://ktagmulimhaifa.co.il/wp-content/uploads/2023/03/570005959A_422.pdf",
+     "year": "2022",
+     "iframe": false,
+     "doc": true,
+     "internal": true
+    },
+    {
+     "text": "דוחות כספיים ודירקטוריון ל- 30.09.2022",
+     "href": "https://ktagmulimhaifa.co.il/wp-content/uploads/2022/11/570005959A_322.pdf",
+     "year": "2022",
+     "iframe": false,
+     "doc": true,
+     "internal": true
+    },
+    {
+     "text": "דוחות כספיים ודירקטוריון 30.06.2022",
+     "href": "https://ktagmulimhaifa.co.il/wp-content/uploads/2022/08/%D7%93%D7%95%D7%97%D7%95%D7%AA-%D7%9B%D7%A1%D7%A4%D7%99%D7%99%D7%9D-%D7%A8%D7%91%D7%A2%D7%95%D7%9F-%D7%A9%D7%A0%D7%99-2022.pdf",
+     "year": "2022",
+     "iframe": false,
+     "doc": true,
+     "internal": true
+    },
+    {
+     "text": "דוח כספי ודירקטוריון ל- 31.03.2022",
+     "href": "https://ktagmulimhaifa.co.il/wp-content/uploads/2022/05/%D7%93%D7%95%D7%97%D7%95%D7%AA-%D7%9B%D7%A1%D7%A4%D7%99%D7%99%D7%9D-31.03.2022.pdf",
+     "year": "2022",
+     "iframe": false,
+     "doc": true,
+     "internal": true
+    },
+    {
+     "text": "דוחות כספיים שנת 2021",
+     "href": "https://ktagmulimhaifa.co.il/wp-content/uploads/2022/03/%D7%93%D7%95%D7%97%D7%95%D7%AA-%D7%9B%D7%A1%D7%A4%D7%99%D7%99%D7%9D-2021.pdf",
+     "year": "2021",
+     "iframe": false,
+     "doc": true,
+     "internal": true
+    },
+    {
+     "text": "דוח כספי ודירקטוריון ל- 30.09.2021",
+     "href": "https://ktagmulimhaifa.co.il/wp-content/uploads/2021/12/%D7%93%D7%95%D7%97%D7%95%D7%AA-%D7%9B%D7%A1%D7%A4%D7%99%D7%99%D7%9D-30.09.2021.pdf",
+     "year": "2021",
+     "iframe": false,
+     "doc": true,
+     "internal": true
+    },
+    {
+     "text": "דוח כספי ודירקטוריון ל- 30.06.2021",
+     "href": "https://ktagmulimhaifa.co.il/wp-content/uploads/2021/08/%D7%93%D7%95%D7%97%D7%95%D7%AA-%D7%9B%D7%A1%D7%A4%D7%99%D7%99%D7%9D-30.06.2021.pdf",
+     "year": "2021",
+     "iframe": false,
+     "doc": true,
+     "internal": true
+    },
+    {
+     "text": "דוח כספי ודירקטוריון ל- .03.2021 31",
+     "href": "https://ktagmulimhaifa.co.il/wp-content/uploads/2021/05/%D7%93%D7%95%D7%97-%D7%9B%D7%A1%D7%A4%D7%99-%D7%9C-31-%D7%91%D7%9E%D7%A8%D7%A5-2021.pdf",
+     "year": "2021",
+     "iframe": false,
+     "doc": true,
+     "internal": true
+    },
+    {
+     "text": "דוחות כספיים שנת 2020",
+     "href": "https://ktagmulimhaifa.co.il/wp-content/uploads/2021/03/%D7%93%D7%95%D7%97%D7%95%D7%AA-%D7%9B%D7%A1%D7%A4%D7%99%D7%99%D7%9D-%D7%A9%D7%A0%D7%AA-2020.pdf",
+     "year": "2020",
+     "iframe": false,
+     "doc": true,
+     "internal": true
+    },
+    {
+     "text": "דוחות כספיים 30.06.2020",
+     "href": "https://ktagmulimhaifa.co.il/wp-content/uploads/2021/06/%D7%93%D7%95%D7%97%D7%95%D7%AA-%D7%9B%D7%A1%D7%A4%D7%99%D7%99%D7%9D-30.06.2021.pdf",
+     "year": "2020",
+     "iframe": false,
+     "doc": true,
+     "internal": true
+    },
+    {
+     "text": "דוח כספי מרץ 2020",
+     "href": "https://ktagmulimhaifa.co.il/wp-content/uploads/2020/06/%D7%93%D7%95%D7%97-%D7%9B%D7%A1%D7%A4%D7%99-%D7%9E%D7%A8%D7%A5-2020.pdf",
+     "year": "2020",
+     "iframe": false,
+     "doc": true,
+     "internal": true
+    },
+    {
+     "text": "דוח כספי ודירקטוריון רבעון 3 2020",
+     "href": "https://ktagmulimhaifa.co.il/wp-content/uploads/2020/11/%D7%93%D7%95%D7%97-%D7%9B%D7%A1%D7%A4%D7%99-%D7%95%D7%93%D7%99%D7%A8%D7%A7%D7%98%D7%95%D7%A8%D7%99%D7%95%D7%9F-%D7%A8%D7%91%D7%A2%D7%95%D7%9F-3-2020.pdf",
+     "year": "2020",
+     "iframe": false,
+     "doc": true,
+     "internal": true
+    },
+    {
+     "text": "דוח דירקטוריון מרץ 2020",
+     "href": "https://ktagmulimhaifa.co.il/wp-content/uploads/2020/06/%D7%93%D7%95%D7%97-%D7%93%D7%99%D7%A8%D7%A7%D7%98%D7%95%D7%A8%D7%99%D7%95%D7%9F-%D7%9E%D7%A8%D7%A5-2020.pdf",
+     "year": "2020",
+     "iframe": false,
+     "doc": true,
+     "internal": true
+    },
+    {
+     "text": "חוות דעת רוח דוח כספי 31.3.19",
+     "href": "https://ktagmulimhaifa.co.il/wp-content/uploads/2019/05/%D7%97%D7%95%D7%95%D7%AA-%D7%93%D7%A2%D7%AA-%D7%A8%D7%95%D7%97-%D7%93%D7%95%D7%97-%D7%9B%D7%A1%D7%A4%D7%99-31.3.19.pdf",
+     "year": "2019",
+     "iframe": false,
+     "doc": true,
+     "internal": true
+    },
+    {
+     "text": "דוחות כספיים 31.12.2019",
+     "href": "https://ktagmulimhaifa.co.il/wp-content/uploads/2021/06/%D7%93%D7%95%D7%97%D7%95%D7%AA-%D7%9B%D7%A1%D7%A4%D7%99%D7%99%D7%9D-31.12.2019.pdf",
+     "year": "2019",
+     "iframe": false,
+     "doc": true,
+     "internal": true
+    },
+    {
+     "text": "דוח כספי 31.3.19",
+     "href": "https://ktagmulimhaifa.co.il/wp-content/uploads/2019/05/%D7%93%D7%95%D7%97-%D7%9B%D7%A1%D7%A4%D7%99-31.3.19-%D7%97%D7%AA%D7%95%D7%9D.pdf",
+     "year": "2019",
+     "iframe": false,
+     "doc": true,
+     "internal": true
+    },
+    {
+     "text": "דוח כספי 30.06.2019",
+     "href": "https://ktagmulimhaifa.co.il/wp-content/uploads/2019/08/%D7%93%D7%95%D7%97-%D7%9B%D7%A1%D7%A4%D7%99-30.06.2019.pdf",
+     "year": "2019",
+     "iframe": false,
+     "doc": true,
+     "internal": true
+    },
+    {
+     "text": "דוח כספי 09.2019",
+     "href": "https://box2051.temp.domains/~ktagmuli/wp-content/uploads/2019/12/%D7%93%D7%95%D7%97-%D7%9B%D7%A1%D7%A4%D7%99-09.2019.pdf",
+     "year": "2019",
+     "iframe": false,
+     "doc": true,
+     "internal": false
+    },
+    {
+     "text": "דוח דירקטוריון 31.3.19",
+     "href": "https://ktagmulimhaifa.co.il/wp-content/uploads/2019/05/%D7%93%D7%95%D7%97-%D7%93%D7%99%D7%A8%D7%A7%D7%98%D7%95%D7%A8%D7%99%D7%95%D7%9F-31.3.19-%D7%97%D7%AA%D7%95%D7%9D.pdf",
+     "year": "2019",
+     "iframe": false,
+     "doc": true,
+     "internal": true
+    },
+    {
+     "text": "דוח דירקטוריון 30.06.2019",
+     "href": "https://ktagmulimhaifa.co.il/wp-content/uploads/2019/08/%D7%93%D7%95%D7%97-%D7%93%D7%99%D7%A8%D7%A7%D7%98%D7%95%D7%A8%D7%99%D7%95%D7%9F-30.06.2019.pdf",
+     "year": "2019",
+     "iframe": false,
+     "doc": true,
+     "internal": true
+    },
+    {
+     "text": "דוח דירקטוריון 09.2019",
+     "href": "https://box2051.temp.domains/~ktagmuli/wp-content/uploads/2019/12/%D7%93%D7%95%D7%97-%D7%93%D7%99%D7%A8%D7%A7%D7%98%D7%95%D7%A8%D7%99%D7%95%D7%9F-09.2019.pdf",
+     "year": "2019",
+     "iframe": false,
+     "doc": true,
+     "internal": false
+    },
+    {
+     "text": "תקנון",
+     "href": "https://ktagmulimhaifa.co.il/takanon/",
+     "year": null,
+     "iframe": false,
+     "doc": false,
+     "internal": true
+    },
+    {
+     "text": "מידע לעמיתים",
+     "href": "https://ktagmulimhaifa.co.il/amitim/",
+     "year": null,
+     "iframe": false,
+     "doc": false,
+     "internal": true
+    },
+    {
+     "text": "מדיניות ונהלים",
+     "href": "https://ktagmulimhaifa.co.il/policy/",
+     "year": null,
+     "iframe": false,
+     "doc": false,
+     "internal": true
+    },
+    {
+     "text": "דוחות כספיים",
+     "href": "https://ktagmulimhaifa.co.il/reportsfinance/",
+     "year": null,
+     "iframe": false,
+     "doc": false,
+     "internal": true
+    }
+   ]
+  },
+  "https://ktagmulimhaifa.co.il/policy/": {
+   "product": null,
+   "status": 200,
+   "method": "requests",
+   "text_hash": "b35c44732e2e573d95640be559d30443a538ec95",
+   "text_head": "מדיניות ונהלים – קופת תגמולים עירית חיפה דלג לתוכן קופת תגמולים עירית חיפה דף הבית מידע נוסף אודות קופת תגמולים טפסים תקנון אמנת שרות לקוחות מידע אישי צור קשר Search חיפוש חיפוש … Search חיפוש חיפוש … חיפוש חיפוש … תפריט דף הבית מידע נוסף אודות קופת תגמולים טפסים תקנון אמנת שרות לקוחות מידע אישי צור קשר דף הבית » מדיניות ונהלים מדיניות ונהלים אמות מידה ביחס לאיכות הממשל התאגידי – + תוספת למדיניות השקעה מוצהרת העברת זכויות עמיתים שלא במזומן מדיניות הגנת הפרטיות _09.2025 מדיניות הצבעה באסיפות כלליות מדיניות הצבעה באסיפות – 12.2025 מדיניות הצבעה באסיפות – 12.2024 מדיניות הצבעה – חברת עמדה – 2023-",
+   "items": [
+    {
+     "text": "מדיניות תגמול נושאי משרה לשנת 2026",
+     "href": "https://ktagmulimhaifa.co.il/wp-content/uploads/2026/04/71%D7%9E%D7%93%D7%99%D7%A0%D7%99%D7%95%D7%AA-%D7%AA%D7%92%D7%9E%D7%95%D7%9C-%D7%97%D7%99%D7%A4%D7%94.doc",
+     "year": "2026",
+     "iframe": false,
+     "doc": true,
+     "internal": true
+    },
+    {
+     "text": "מדיניות השקעה חיפה 2026",
+     "href": "https://ktagmulimhaifa.co.il/wp-content/uploads/2026/01/%D7%9E%D7%93%D7%99%D7%A0%D7%99%D7%95%D7%AA-%D7%94%D7%A9%D7%A7%D7%A2%D7%94-%D7%97%D7%99%D7%A4%D7%94-2026.pdf",
+     "year": "2026",
+     "iframe": false,
+     "doc": true,
+     "internal": true
+    },
+    {
+     "text": "מדיניות תגמול נושאי משרה לשנת 2025",
+     "href": "https://ktagmulimhaifa.co.il/wp-content/uploads/2025/03/%D7%9E%D7%93%D7%99%D7%A0%D7%99%D7%95%D7%AA-%D7%AA%D7%92%D7%9E%D7%95%D7%9C-%D7%A0%D7%95%D7%A9%D7%90%D7%99-%D7%9E%D7%A9%D7%A8%D7%94-2025-.pdf",
+     "year": "2025",
+     "iframe": false,
+     "doc": true,
+     "internal": true
+    },
+    {
+     "text": "מדיניות השקעה חיפה 2025",
+     "href": "https://ktagmulimhaifa.co.il/wp-content/uploads/2025/01/%D7%9E%D7%93%D7%99%D7%A0%D7%99%D7%95%D7%AA-%D7%94%D7%A9%D7%A7%D7%A2%D7%94-%D7%97%D7%99%D7%A4%D7%94-2025.pdf",
+     "year": "2025",
+     "iframe": false,
+     "doc": true,
+     "internal": true
+    },
+    {
+     "text": "מדיניות הצבעה באסיפות – 12.2025",
+     "href": "https://ktagmulimhaifa.co.il/wp-content/uploads/2026/01/%D7%9E%D7%93%D7%99%D7%A0%D7%99%D7%95%D7%AA-%D7%94%D7%A6%D7%91%D7%A2%D7%94-%D7%91%D7%90%D7%A1%D7%99%D7%A4%D7%95%D7%AA.pdf",
+     "year": "2025",
+     "iframe": false,
+     "doc": true,
+     "internal": true
+    },
+    {
+     "text": "מדיניות הגנת הפרטיות _09.2025",
+     "href": "https://ktagmulimhaifa.co.il/wp-content/uploads/2026/05/%D7%AA%D7%92%D7%9E%D7%95%D7%9C%D7%99%D7%9D-%D7%97%D7%99%D7%A4%D7%94_%D7%9E%D7%93%D7%99%D7%A0%D7%99%D7%95%D7%AA-%D7%A4%D7%A8%D7%98%D7%99%D7%95%D7%AA-%D7%9C%D7%90%D7%AA%D7%A8-%D7%90%D7%99%D7%A0%D7%98%D7%A8%D7%A0%D7%98_02.09.2025.docx",
+     "year": "2025",
+     "iframe": false,
+     "doc": true,
+     "internal": true
+    },
+    {
+     "text": "אמות מידה ביחס לאיכות הממשל התאגידי – + תוספת למדיניות השקעה מוצהרת",
+     "href": "https://ktagmulimhaifa.co.il/wp-content/uploads/2025/01/%D7%9C%D7%9E%D7%A4%D7%A2%D7%9C%D7%99%D7%95%D7%AA-%D7%90%D7%9E%D7%95%D7%AA-%D7%9E%D7%99%D7%93%D7%94-%D7%91%D7%99%D7%97%D7%A1-%D7%9C%D7%90%D7%99%D7%9B%D7%95%D7%AA-%D7%94%D7%9E%D7%9E%D7%A9%D7%9C-%D7%94%D7%AA%D7%90%D7%92%D7%99%D7%93%D7%99-%D7%AA%D7%95%D7%A1%D7%A4%D7%AA-%D7%9C%D7%9E%D7%93%D7%99%D7%A0%D7%99%D7%95%D7%AA-%D7%94%D7%A9%D7%A7%D7%A2%D7%94-%D7%9E%D7%95%D7%A6%D7%94%D7%A8%D7%AA-%D7%A0%D7%A7%D7%99.pdf",
+     "year": "2025",
+     "iframe": false,
+     "doc": true,
+     "internal": true
+    },
+    {
+     "text": "מדיניות תגמול נושאי משרה לשנת 2024",
+     "href": "https://ktagmulimhaifa.co.il/wp-content/uploads/2024/03/%D7%9E%D7%93%D7%99%D7%A0%D7%99%D7%95%D7%AA-%D7%AA%D7%92%D7%9E%D7%95%D7%9C-%D7%A0%D7%95%D7%A9%D7%90%D7%99-%D7%9E%D7%A9%D7%A8%D7%94.pdf",
+     "year": "2024",
+     "iframe": false,
+     "doc": true,
+     "internal": true
+    },
+    {
+     "text": "מדיניות השקעה מוצהרת לשנת 2024",
+     "href": "https://ktagmulimhaifa.co.il/wp-content/uploads/2023/12/%D7%9E%D7%93%D7%99%D7%A0%D7%99%D7%95%D7%AA-%D7%9E%D7%95%D7%A6%D7%94%D7%A8%D7%AA-%D7%A2%D7%99%D7%A8%D7%99%D7%99%D7%AA-%D7%97%D7%99%D7%A4%D7%94-%D7%9C%D7%A9%D7%A0%D7%AA-2024.pdf",
+     "year": "2024",
+     "iframe": false,
+     "doc": true,
+     "internal": true
+    },
+    {
+     "text": "מדיניות הצבעה באסיפות – 12.2024",
+     "href": "https://ktagmulimhaifa.co.il/wp-content/uploads/2024/12/%D7%9E%D7%93%D7%99%D7%A0%D7%99%D7%95%D7%AA-%D7%94%D7%A6%D7%91%D7%A2%D7%94-%D7%91%D7%90%D7%A1%D7%99%D7%A4%D7%95%D7%AA-12.2024-%D7%97%D7%99%D7%A4%D7%94.pdf",
+     "year": "2024",
+     "iframe": false,
+     "doc": true,
+     "internal": true
+    },
+    {
+     "text": "העברת זכויות עמיתים שלא במזומן",
+     "href": "https://ktagmulimhaifa.co.il/wp-content/uploads/2024/03/%D7%94%D7%A2%D7%91%D7%A8%D7%AA-%D7%96%D7%9B%D7%95%D7%99%D7%95%D7%AA-%D7%A2%D7%9E%D7%99%D7%AA%D7%99%D7%9D-%D7%A9%D7%9C%D7%90-%D7%91%D7%9E%D7%96%D7%95%D7%9E%D7%9F.pdf",
+     "year": "2024",
+     "iframe": false,
+     "doc": true,
+     "internal": true
+    },
+    {
+     "text": "מדיניות תגמול נושא משרה לשנת 2023",
+     "href": "https://ktagmulimhaifa.co.il/wp-content/uploads/2023/01/71%D7%9E%D7%93%D7%99%D7%A0%D7%99%D7%95%D7%AA-%D7%AA%D7%92%D7%9E%D7%95%D7%9C-%D7%97%D7%99%D7%A4%D7%94.doc",
+     "year": "2023",
+     "iframe": false,
+     "doc": true,
+     "internal": true
+    },
+    {
+     "text": "מדיניות השקעה מסלול 50-60 שנת 2023",
+     "href": "https://ktagmulimhaifa.co.il/wp-content/uploads/2023/04/%D7%9E%D7%93%D7%99%D7%A0%D7%99%D7%95%D7%AA-%D7%94%D7%A9%D7%A7%D7%A2%D7%94-%D7%97%D7%99%D7%A4%D7%94-2023pptx.pdf",
+     "year": "2023",
+     "iframe": false,
+     "doc": true,
+     "internal": true
+    },
+    {
+     "text": "מדיניות השקעה מוצהרת לשנת 2023",
+     "href": "https://ktagmulimhaifa.co.il/wp-content/uploads/2023/01/%D7%9E%D7%93%D7%99%D7%A0%D7%99%D7%95%D7%AA-%D7%94%D7%A9%D7%A7%D7%A2%D7%94-%D7%97%D7%99%D7%A4%D7%94-2023.pdf",
+     "year": "2023",
+     "iframe": false,
+     "doc": true,
+     "internal": true
+    },
+    {
+     "text": "מדיניות הצבעה – חברת עמדה – 2023-2022 – V6",
+     "href": "https://ktagmulimhaifa.co.il/wp-content/uploads/2023/01/16.-%D7%9E%D7%93%D7%99%D7%A0%D7%99%D7%95%D7%AA-%D7%94%D7%A6%D7%91%D7%A2%D7%94-%D7%97%D7%91%D7%A8%D7%AA-%D7%A2%D7%9E%D7%93%D7%94-2023-2022-V6.pdf",
+     "year": "2023",
+     "iframe": false,
+     "doc": true,
+     "internal": true
+    },
+    {
+     "text": "מדיניות תגמול נושא משרה לשנת 2022",
+     "href": "https://ktagmulimhaifa.co.il/wp-content/uploads/2022/07/%D7%9E%D7%93%D7%99%D7%A0%D7%99%D7%95%D7%AA-%D7%AA%D7%92%D7%9E%D7%95%D7%9C-%D7%A0%D7%95%D7%A9%D7%90-%D7%9E%D7%A9%D7%A8%D7%94-%D7%9C%D7%A9%D7%A0%D7%AA-2022.doc",
+     "year": "2022",
+     "iframe": false,
+     "doc": true,
+     "internal": true
+    },
+    {
+     "text": "מדיניות השקעה מסלול 60 ומעלה 2022",
+     "href": "https://ktagmulimhaifa.co.il/wp-content/uploads/2022/01/%D7%9E%D7%93%D7%99%D7%A0%D7%99%D7%95%D7%AA-%D7%94%D7%A9%D7%A7%D7%A2%D7%94-%D7%9E%D7%A1%D7%9C%D7%95%D7%9C-60-%D7%95%D7%9E%D7%A2%D7%9C%D7%94-2022.pptx",
+     "year": "2022",
+     "iframe": false,
+     "doc": false,
+     "internal": true
+    },
+    {
+     "text": "מדיניות השקעה מסלול 50-60 לשנת 2022",
+     "href": "https://ktagmulimhaifa.co.il/wp-content/uploads/2022/01/%D7%9E%D7%93%D7%99%D7%A0%D7%99%D7%95%D7%AA-%D7%94%D7%A9%D7%A7%D7%A2%D7%94-%D7%9E%D7%A1%D7%9C%D7%95%D7%9C-50-60-2022.pptx",
+     "year": "2022",
+     "iframe": false,
+     "doc": false,
+     "internal": true
+    },
+    {
+     "text": "מדיניות השקעה מסלול 50 ומטה 2022",
+     "href": "https://ktagmulimhaifa.co.il/wp-content/uploads/2022/01/%D7%9E%D7%93%D7%99%D7%A0%D7%99%D7%95%D7%AA-%D7%94%D7%A9%D7%A7%D7%A2%D7%94-%D7%9E%D7%A1%D7%9C%D7%95%D7%9C-50-%D7%95%D7%9E%D7%98%D7%94-2022.pptx",
+     "year": "2022",
+     "iframe": false,
+     "doc": false,
+     "internal": true
+    },
+    {
+     "text": "מדיניות תגמול נושא משרה לשנת 2021",
+     "href": "https://ktagmulimhaifa.co.il/wp-content/uploads/2021/06/%D7%9E%D7%93%D7%99%D7%A0%D7%99%D7%95%D7%AA-%D7%AA%D7%92%D7%9E%D7%95%D7%9C-%D7%A0%D7%95%D7%A9%D7%90-%D7%9E%D7%A9%D7%A8%D7%94-2021.pdf",
+     "year": "2021",
+     "iframe": false,
+     "doc": true,
+     "internal": true
+    },
+    {
+     "text": "מדיניות השקעות לשנת 2021 מסלול 50-60",
+     "href": "https://ktagmulimhaifa.co.il/wp-content/uploads/2021/01/%D7%9E%D7%93%D7%99%D7%A0%D7%99%D7%95%D7%AA-50-60%D7%94%D7%A9%D7%A7%D7%A2%D7%94-2021.pdf",
+     "year": "2021",
+     "iframe": false,
+     "doc": true,
+     "internal": true
+    },
+    {
+     "text": "מדיניות השקעה מסלול 50 ומטה 2021",
+     "href": "https://ktagmulimhaifa.co.il/wp-content/uploads/2021/05/%D7%9E%D7%93%D7%99%D7%A0%D7%99%D7%95%D7%AA-%D7%94%D7%A9%D7%A7%D7%A2%D7%94-%D7%9E%D7%A1%D7%9C%D7%95%D7%9C-50-%D7%95%D7%9E%D7%98%D7%94.pdf",
+     "year": "2021",
+     "iframe": false,
+     "doc": true,
+     "internal": true
+    },
+    {
+     "text": "מדיניות השקעה לשנת 2021 מסלול 60 פלוס",
+     "href": "https://ktagmulimhaifa.co.il/wp-content/uploads/2021/01/%D7%9E%D7%93%D7%99%D7%A0%D7%99%D7%95%D7%AA-%D7%94%D7%A9%D7%A7%D7%A2%D7%94-60-%D7%A4%D7%9C%D7%95%D7%A1.pdf",
+     "year": "2021",
+     "iframe": false,
+     "doc": true,
+     "internal": true
+    },
+    {
+     "text": "מדיניות השקעה לשנת 2021 מסלול 50 ומטה",
+     "href": "https://ktagmulimhaifa.co.il/wp-content/uploads/2021/01/%D7%9E%D7%93%D7%99%D7%A0%D7%99%D7%95%D7%AA-%D7%94%D7%A9%D7%A7%D7%A2%D7%94-%D7%9E%D7%A1%D7%9C%D7%95%D7%9C-50-%D7%95%D7%9E%D7%98%D7%94.pdf",
+     "year": "2021",
+     "iframe": false,
+     "doc": true,
+     "internal": true
+    },
+    {
+     "text": "מדיניות השקעה 60 פלוס 2021",
+     "href": "https://ktagmulimhaifa.co.il/wp-content/uploads/2021/05/%D7%9E%D7%93%D7%99%D7%A0%D7%99%D7%95%D7%AA-%D7%94%D7%A9%D7%A7%D7%A2%D7%94-60-%D7%A4%D7%9C%D7%95%D7%A1.pdf",
+     "year": "2021",
+     "iframe": false,
+     "doc": true,
+     "internal": true
+    },
+    {
+     "text": "מדיניות השקעה 50-60 2021",
+     "href": "https://ktagmulimhaifa.co.il/wp-content/uploads/2021/09/%D7%9E%D7%93%D7%99%D7%A0%D7%99%D7%95%D7%AA-50-60%D7%94%D7%A9%D7%A7%D7%A2%D7%94-2021.pdf",
+     "year": "2021",
+     "iframe": false,
+     "doc": true,
+     "internal": true
+    },
+    {
+     "text": "מדיניות השקעה 50-60 2021",
+     "href": "https://ktagmulimhaifa.co.il/wp-content/uploads/2021/05/%D7%9E%D7%93%D7%99%D7%A0%D7%99%D7%95%D7%AA-50-60%D7%94%D7%A9%D7%A7%D7%A2%D7%94-2021.pdf",
+     "year": "2021",
+     "iframe": false,
+     "doc": true,
+     "internal": true
+    },
+    {
+     "text": "מדיניות תגמול נושא משרה לשנת 2020",
+     "href": "https://box2051.temp.domains/~ktagmuli/wp-content/uploads/2020/01/%D7%9E%D7%93%D7%99%D7%A0%D7%99%D7%95%D7%AA-%D7%AA%D7%92%D7%9E%D7%95%D7%9C-%D7%A9%D7%A0%D7%AA-2020.doc",
+     "year": "2020",
+     "iframe": false,
+     "doc": true,
+     "internal": false
+    },
+    {
+     "text": "מדיניות השקעות לשנת 2020 מסלול עד 50",
+     "href": "https://box2051.temp.domains/~ktagmuli/wp-content/uploads/2020/01/%D7%9E%D7%93%D7%99%D7%A0%D7%99%D7%95%D7%AA-%D7%94%D7%A9%D7%A7%D7%A2%D7%95%D7%AA-%D7%9C%D7%A9%D7%A0%D7%AA-2020-%D7%9E%D7%A1%D7%9C%D7%95%D7%9C-%D7%A2%D7%93-50.pdf",
+     "year": "2020",
+     "iframe": false,
+     "doc": true,
+     "internal": false
+    },
+    {
+     "text": "מדיניות השקעות לשנת 2020 מסלול 60 ומעלה",
+     "href": "http://box2051.temp.domains/~ktagmuli/wp-content/uploads/2020/01/%D7%9E%D7%93%D7%99%D7%A0%D7%99%D7%95%D7%AA-%D7%94%D7%A9%D7%A7%D7%A2%D7%95%D7%AA-%D7%9C%D7%A9%D7%A0%D7%AA-2020-%D7%9E%D7%A1%D7%9C%D7%95%D7%9C-60-%D7%95%D7%9E%D7%A2%D7%9C%D7%94.pdf",
+     "year": "2020",
+     "iframe": false,
+     "doc": true,
+     "internal": false
+    },
+    {
+     "text": "מדיניות השקעות לשנת 2020 מסלול 50-60",
+     "href": "https://ktagmulimhaifa.co.il/wp-content/uploads/2020/01/%D7%9E%D7%93%D7%99%D7%A0%D7%99%D7%95%D7%AA-%D7%94%D7%A9%D7%A7%D7%A2%D7%95%D7%AA-%D7%9C%D7%A9%D7%A0%D7%AA-2020-%D7%9E%D7%A1%D7%9C%D7%95%D7%9C-50-60-1.pdf",
+     "year": "2020",
+     "iframe": false,
+     "doc": true,
+     "internal": true
+    },
+    {
+     "text": "מדיניות השקעות מסלול עד 50 שנת 2019",
+     "href": "https://ktagmulimhaifa.co.il/wp-content/uploads/2019/01/%D7%9E%D7%93%D7%99%D7%A0%D7%99%D7%95%D7%AA-%D7%94%D7%A9%D7%A7%D7%A2%D7%95%D7%AA-%D7%9E%D7%A1%D7%9C%D7%95%D7%9C-%D7%A2%D7%93-50-%D7%A9%D7%A0%D7%AA-2019.pdf",
+     "year": "2019",
+     "iframe": false,
+     "doc": true,
+     "internal": true
+    },
+    {
+     "text": "מדיניות השקעות מסלול מעל 60 שנת 2019",
+     "href": "https://ktagmulimhaifa.co.il/wp-content/uploads/2019/01/%D7%9E%D7%93%D7%99%D7%A0%D7%99%D7%95%D7%AA-%D7%94%D7%A9%D7%A7%D7%A2%D7%95%D7%AA-%D7%9E%D7%A1%D7%9C%D7%95%D7%9C-%D7%9E%D7%A2%D7%9C-60-%D7%A9%D7%A0%D7%AA-2019.pdf",
+     "year": "2019",
+     "iframe": false,
+     "doc": true,
+     "internal": true
+    },
+    {
+     "text": "מדיניות השקעה מסלול 50-60 שנת 2019",
+     "href": "https://box2051.temp.domains/~ktagmuli/wp-content/uploads/2019/12/%D7%9E%D7%93%D7%99%D7%A0%D7%99%D7%95%D7%AA-%D7%94%D7%A9%D7%A7%D7%A2%D7%94-%D7%A9%D7%A0%D7%AA-2019.pdf",
+     "year": "2019",
+     "iframe": false,
+     "doc": true,
+     "internal": false
+    },
+    {
+     "text": "מדיניות טיפול בחובות בעיתיים",
+     "href": "https://ktagmulimhaifa.co.il/wp-content/uploads/2018/05/%D7%9E%D7%93%D7%99%D7%A0%D7%99%D7%95%D7%AA-%D7%98%D7%99%D7%A4%D7%95%D7%9C-%D7%91%D7%97%D7%95%D7%91%D7%95%D7%AA-%D7%91%D7%A2%D7%99%D7%AA%D7%99%D7%99%D7%9D.doc",
+     "year": "2018",
+     "iframe": false,
+     "doc": true,
+     "internal": true
+    },
+    {
+     "text": "מדיניות השקעה לשנת 2018 מסלול_60 ומעלה",
+     "href": "http://box2051.temp.domains/~ktagmuli/wp-content/uploads/2018/05/2018-%D7%9E%D7%93%D7%99%D7%A0%D7%99%D7%95%D7%AA-%D7%97%D7%99%D7%A4%D7%94_%D7%9E%D7%A2%D7%9C-60.pdf",
+     "year": "2018",
+     "iframe": false,
+     "doc": true,
+     "internal": false
+    },
+    {
+     "text": "מדיניות השקעה לשנת 2018 מסלול עד 50",
+     "href": "https://box2051.temp.domains/~ktagmuli/wp-content/uploads/2018/05/2018-%D7%9E%D7%93%D7%99%D7%A0%D7%99%D7%95%D7%AA-%D7%94%D7%A9%D7%A7%D7%A2%D7%94-%D7%9E%D7%AA%D7%97%D7%AA-%D7%9C-50.pdf",
+     "year": "2018",
+     "iframe": false,
+     "doc": true,
+     "internal": false
+    },
+    {
+     "text": "מדיניות השקעה לשנת 2018 מסלול 50-60",
+     "href": "http://box2051.temp.domains/~ktagmuli/wp-content/uploads/2018/05/%D7%9E%D7%93%D7%99%D7%A0%D7%99%D7%95%D7%AA-%D7%94%D7%A9%D7%A7%D7%A2%D7%94-%D7%92%D7%99%D7%9C-50-60-2018.pdf",
+     "year": "2018",
+     "iframe": false,
+     "doc": true,
+     "internal": false
+    },
+    {
+     "text": "הערכות לזיהוי טיפול בחובות בעיתיים",
+     "href": "https://ktagmulimhaifa.co.il/wp-content/uploads/2018/05/%D7%94%D7%A2%D7%A8%D7%9B%D7%95%D7%AA-%D7%9C%D7%96%D7%99%D7%94%D7%95%D7%99-%D7%98%D7%99%D7%A4%D7%95%D7%9C-%D7%91%D7%97%D7%95%D7%91%D7%95%D7%AA-%D7%91%D7%A2%D7%99%D7%AA%D7%99%D7%99%D7%9D.doc",
+     "year": "2018",
+     "iframe": false,
+     "doc": true,
+     "internal": true
+    },
+    {
+     "text": "מדיניות תגמול נושאי משרה 2015-2018",
+     "href": "https://box2051.temp.domains/~ktagmuli/wp-content/uploads/2018/05/%D7%9E%D7%93%D7%99%D7%A0%D7%99%D7%95%D7%AA-%D7%AA%D7%92%D7%9E%D7%95%D7%9C-%D7%9E%D7%A9%D7%A8%D7%94-2015-2018.doc",
+     "year": "2015",
+     "iframe": false,
+     "doc": true,
+     "internal": false
+    },
+    {
+     "text": "מדיניות תגמול נושא משרה לשנת 2014",
+     "href": "https://box2051.temp.domains/~ktagmuli/wp-content/uploads/2018/05/2014-%D7%9E%D7%93%D7%99%D7%A0%D7%99%D7%95%D7%AA-%D7%AA%D7%92%D7%9E%D7%95%D7%9C-%D7%A0%D7%95%D7%A9%D7%90%D7%99-%D7%9E%D7%A9%D7%A8%D7%94.doc",
+     "year": "2014",
+     "iframe": false,
+     "doc": true,
+     "internal": false
+    },
+    {
+     "text": "מדיניות תגמול נושאי משרה לשנת 2013",
+     "href": "https://box2051.temp.domains/~ktagmuli/wp-content/uploads/2018/05/%D7%9E%D7%93%D7%99%D7%A0%D7%99%D7%95%D7%AA-%D7%AA%D7%92%D7%9E%D7%95%D7%9C-%D7%A0%D7%95%D7%A9%D7%90%D7%99-%D7%9E%D7%A9%D7%A8%D7%94-2013.doc",
+     "year": "2013",
+     "iframe": false,
+     "doc": true,
+     "internal": false
+    },
+    {
+     "text": "תקנון",
+     "href": "https://ktagmulimhaifa.co.il/takanon/",
+     "year": null,
+     "iframe": false,
+     "doc": false,
+     "internal": true
+    },
+    {
+     "text": "מידע לעמיתים",
+     "href": "https://ktagmulimhaifa.co.il/amitim/",
+     "year": null,
+     "iframe": false,
+     "doc": false,
+     "internal": true
+    },
+    {
+     "text": "מדיניות ונהלים",
+     "href": "https://ktagmulimhaifa.co.il/policy/",
+     "year": null,
+     "iframe": false,
+     "doc": false,
+     "internal": true
+    },
+    {
+     "text": "דוחות כספיים",
+     "href": "https://ktagmulimhaifa.co.il/reportsfinance/",
+     "year": null,
+     "iframe": false,
+     "doc": false,
+     "internal": true
+    }
+   ]
   }
  }
 }
