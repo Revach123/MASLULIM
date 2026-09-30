@@ -10,6 +10,10 @@
   {
    "product": "גמל",
    "url": "https://www.krm.co.il/?CategoryID=230"
+  },
+  {
+   "product": "גמל",
+   "url": "https://www.krm.co.il/"
   }
  ],
  "browser": "headless",
@@ -17,7 +21,9 @@
   "גמל"
  ],
  "search": false,
- "rev": 6,
+ "rev": 7,
  "home_source": "web_search",
- "max_pages": 20
+ "max_pages": 20,
+ "via": "extension",
+ "note": "403 לשרתי ענן -> תוסף. רום: קבצים ב-/_Uploads/dbsAttachedFiles/investment-forecast-<מסלול>-YYYY.pdf"
 }
