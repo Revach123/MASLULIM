@@ -2,12 +2,39 @@
  "legal_id": "512244146",
  "name": "כלל פנסיה וגמל בע\"מ",
  "home": "https://www.clalbit.co.il",
- "pages": [],
+ "pages": [
+  {
+   "product": null,
+   "url": "https://www.clalbit.co.il/aboutclalinsurance/generalreports/?txtTabId=1&txtReportsYearId={year}&txtCompanyId=1&txtReportTypeId=20"
+  },
+  {
+   "product": null,
+   "url": "https://www.clalbit.co.il/aboutclalinsurance/generalreports/?txtTabId=1&txtReportsYearId={year}&txtCompanyId=2&txtReportTypeId=20"
+  },
+  {
+   "product": null,
+   "url": "https://www.clalbit.co.il/aboutclalinsurance/generalreports/?txtTabId=1&txtReportsYearId={year}&txtCompanyId=3&txtReportTypeId=20"
+  },
+  {
+   "product": null,
+   "url": "https://www.clalbit.co.il/aboutclalinsurance/generalreports/?txtTabId=1&txtReportsYearId={year}&txtCompanyId=4&txtReportTypeId=20"
+  },
+  {
+   "product": null,
+   "url": "https://www.clalbit.co.il/aboutclalinsurance/generalreports/?txtTabId=1&txtReportsYearId={year}&txtCompanyId=5&txtReportTypeId=20"
+  },
+  {
+   "product": null,
+   "url": "https://www.clalbit.co.il/aboutclalinsurance/generalreports/?txtTabId=1&txtReportsYearId={year}&txtCompanyId=6&txtReportTypeId=20"
+  }
+ ],
  "browser": "headless",
  "products": [
   "גמל",
   "פנסיה"
  ],
  "search": true,
- "rev": 4
+ "rev": 5,
+ "max_pages": 70,
+ "note": "כלל: עמוד אחד לביטוח/פנסיה/גמל - סוג 'הצהרה מראש של גוף מוסדי' (txtReportTypeId=20) x שנה x חברה (txtCompanyId, מספרים לא מאומתים - סורקים 1..6)"
 }

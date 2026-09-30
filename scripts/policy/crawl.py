@@ -58,7 +58,7 @@ def load_seeds() -> dict[str, dict]:
         out[cfg["legal_id"]] = {"home": cfg.get("home") or "", "extra": [x["url"] for x in pages],
                                 "products": {x["url"]: x.get("product") for x in pages}, "browser": cfg.get("browser", "headless"),
                                 "product_list": cfg.get("products", []), "search": cfg.get("search", True),
-                                "via": cfg.get("via", "cloud")}
+                                "via": cfg.get("via", "cloud"), "max_pages": cfg.get("max_pages", 40)}
     return out
 
 
@@ -327,7 +327,7 @@ def main():
         discovered = sitemap_policy_pages(s, seed["home"])
         print(f"[{legal_id}] sitemap policy pages: {len(discovered)}", *discovered[:10], sep="\n  ", flush=True)
         extra += [u for u in discovered if u not in extra]
-        pages = snapshot_company(s, pw, seed["home"], extra, products, max_pages=40)
+        pages = snapshot_company(s, pw, seed["home"], extra, products, max_pages=max(seed["max_pages"], len(extra) + 10))
         # תמונת מצב + שינויים מול הריצה הקודמת (פריט חדש/הוסר/טקסט השתנה) - זה מנגנון זיהוי העדכונים היומי
         snap_path = OUT / "site_snapshot" / f"{legal_id}.json"
         snap_path.parent.mkdir(parents=True, exist_ok=True)
