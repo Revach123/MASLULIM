@@ -107,7 +107,7 @@ def _norm_sheet(data: list[list], legal_id: str) -> tuple[str, list[dict]]:
 
 def build_source(files: list[ReportFile]) -> list[dict]:
     """Open + Combine: לכל קובץ, לכל גיליון ברשימה הלבנה - רשומה אחת.
-    Combined[i] = {"Category", "LegalId", "מידע", "Clean": [rows...]}."""
+    Combined[i] = {"Category", "LegalId", "CompanyType", "מידע", "Clean": [rows...]}."""
     combined: list[dict] = []
     for f in files:
         legal_id = f.name.split("_", 1)[0]
@@ -133,6 +133,6 @@ def build_source(files: list[ReportFile]) -> list[dict]:
                                           "סיבה": f"שגיאה: {e!r}"}]
             combined.append({
                 "Category": canon(name), "LegalId": legal_id, "מידע": status, "Clean": rows,
-                "ReportMonth": f.report_month,
+                "ReportMonth": f.report_month, "CompanyType": f.company_type,
             })
     return combined
