@@ -309,9 +309,11 @@ def classify_via_openfigi_names(missing_isins: list[str]) -> dict[str, dict[str,
 
 
 def collect_unclassified_foreign_isins(funds: list[dict], isin_fractions: dict[str, dict[str, float]]) -> list[str]:
-    """ISIN-ים ייחודיים של קרנות "חוץ" שעדיין לא מסווגים באף שכבה קיימת -
-    מיועד להזנה לשכבה האחרונה, היקרה (sec_nport_reference.py: OpenFIGI +
-    N-PORT חי), כדי להריץ אותה רק על מה שבאמת חסר, לא על כל קרנות החוץ."""
+    """ISIN-ים ייחודיים של קרנות "חוץ" (מפתח שלהן הוא ISIN, ר' funds.py._classify)
+    שעדיין לא מסווגים באף שכבה קיימת - מיועד להזנה לשכבה האחרונה, היקרה
+    (sec_nport_reference.py: OpenFIGI + N-PORT חי; yahoo_fund_reference.py),
+    כדי להריץ אותה רק על מה שבאמת חסר. קרנות "נסחרת" מסווגות ישירות דרך
+    funds_il.py (סיווג MAYA מדויק לפי ISIN), לא דרך השכבה הזו."""
     out: set[str] = set()
     for row in funds:
         if row["סוג"] != FOREIGN_TYPE:
@@ -322,15 +324,13 @@ def collect_unclassified_foreign_isins(funds: list[dict], isin_fractions: dict[s
     return list(out)
 
 
-def build_foreign_equity(funds: list[dict], isin_fractions: dict[str, dict[str, float]]) -> dict[str, dict[str, float]]:
-    """מפתח -> {"קרן מחקה - מניות בחו\"ל": ..., "קרן מחקה - אג\"ח בחו\"ל": ...},
-    לשורות "חוץ" בלבד (לא ישראליות, לא נסחרות ב-TASE - 'מספר קרן' הוא ה-ISIN
-    הגולמי, ר' funds.py._classify) שמזוהות באחד משני המאגרים. לא נוגע בקרנות
-    IL/נסחרת - אלה כבר מטופלות (או לא) ע"י funds_il.py בנפרד, בלי חפיפה
-    אפשרית (כל שורה מסווגת לדיוק אחד מ-IL/נסחרת/חוץ)."""
+def _build_equity_by_type(
+    funds: list[dict], isin_fractions: dict[str, dict[str, float]],
+    fund_type: str, equity_label: str, bond_label: str,
+) -> dict[str, dict[str, float]]:
     sums: dict[str, dict[str, float]] = {}
     for row in funds:
-        if row["סוג"] != FOREIGN_TYPE:
+        if row["סוג"] != fund_type:
             continue
         raw_pct = row.get("שיעור מסך נכסי ההשקעה")
         if isinstance(raw_pct, str) and raw_pct in PLACEHOLDER_PCT:
@@ -344,7 +344,17 @@ def build_foreign_equity(funds: list[dict], isin_fractions: dict[str, dict[str, 
         key = row["מפתח"]
         d = sums.setdefault(key, {})
         if frac["equity"]:
-            d[EQUITY_SIVEG] = d.get(EQUITY_SIVEG, 0.0) + pct * frac["equity"]
+            d[equity_label] = d.get(equity_label, 0.0) + pct * frac["equity"]
         if frac["bond"]:
-            d[BOND_SIVEG] = d.get(BOND_SIVEG, 0.0) + pct * frac["bond"]
+            d[bond_label] = d.get(bond_label, 0.0) + pct * frac["bond"]
     return sums
+
+
+def build_foreign_equity(funds: list[dict], isin_fractions: dict[str, dict[str, float]]) -> dict[str, dict[str, float]]:
+    """מפתח -> {"קרן מחקה - מניות בחו\"ל": ..., "קרן מחקה - אג\"ח בחו\"ל": ...},
+    לשורות "חוץ" בלבד (לא ישראליות, לא נסחרות ב-TASE - 'מספר קרן' הוא ה-ISIN
+    הגולמי, ר' funds.py._classify) שמזוהות באחד משני המאגרים. לא נוגע בקרנות
+    IL/נסחרת - אלה כבר מטופלות ע"י funds_il.py (סיווג MAYA מדויק, לא הסקה
+    מ-isin_fractions), בלי חפיפה אפשרית (כל שורה מסווגת לדיוק אחד מ-IL/
+    נסחרת/חוץ)."""
+    return _build_equity_by_type(funds, isin_fractions, FOREIGN_TYPE, EQUITY_SIVEG, BOND_SIVEG)

@@ -114,6 +114,19 @@ FUT_FX_COL = "שער חליפין"
 FUT_PRICE_COL = "שער נייר הערך"
 FUT_CURRENCY_COL = "מטבע פעילות"
 FUT_TICKER_COL = "מספר נייר ערך"
+FUT_UNDERLYING_COL = "נכס בסיס"
+
+# "נכס בסיס"/"סוג הנכס" (חוזים/סוואפים/אופציות בהתאמה) - אותו ערך מדויק
+# בשלושת הגיליונות, נבדק בפועל מול דוח אמיתי (512065202_gm_0226.xlsx).
+# משמש לבניית "אזור חשיפה למניות" בדשבורד (ר' main.py) - לבודד את החלק
+# שמקורו בנכס-בסיס מניות/מדדי-מניות בלבד מתוך כל קטגוריית נגזר.
+EQUITY_UNDERLYING = "מניות לרבות מדדי מניות"
+
+# עמודות הפלט הנוספות ("אזור חשיפה למניות") - לא מחליפות את הקטגוריות
+# הקיימות (FUTURES_CATEGORY/SWAP_CATEGORY/OPTIONS_*), רק מוסיפות פילוח
+# לפי נכס-בסיס=מניות בלבד, לצורך תצוגה בדשבורד.
+FUTURES_EQUITY_COLUMN = "חוזים עתידיים - מניות"
+OPTIONS_EQUITY_COLUMN = "אופציות - מניות"
 
 # ניסוי (לא מאומת חיצונית מעבר למה שתועד למטה - לא למזג בלי בדיקת MAE אמיתית):
 # "שער נייר הערך" שלילי בשורת חוזה עתידי הוא בלתי אפשרי מתמטית (רמת מדד/מחיר
@@ -170,7 +183,8 @@ SWAP_UNDERLYING_PRICE_COL = "שער נכס הבסיס במועד ההתקשרו�
 SWAP_TICKER_COL = "טיקר"
 SWAP_ASSET_TYPE_COL = "סוג הנכס"
 SWAP_EQUITY_ASSET_TYPE = "מניות לרבות מדדי מניות"
-SWAP_MAIN_TYPE_COL = "מאפיין עיקרי"
+SWAP_MAIN_TYPE_COL = "מאפיין עיקרי"  # "Unfunded Swap"/"Funded Total Return/Equity Swap"/... - נבדק בפועל
+SWAP_LABEL_COL = SWAP_MAIN_TYPE_COL
 FUNDED_SWAP_CATEGORY = "החלף עם מימון (Funded)"
 UNFUNDED_SWAP_CATEGORY = "החלף בלי מימון (Unfunded)"
 
@@ -299,8 +313,15 @@ def total_assets_by_key(source: list[dict]) -> dict[str, float]:
     return {k: v[1] for k, v in best.items()}
 
 
-def _futures_exposure(source: list[dict], total_assets: dict[str, float]) -> dict[str, float]:
+def _futures_exposure(
+    source: list[dict], total_assets: dict[str, float]
+) -> tuple[dict[str, float], dict[str, float]]:
+    """מחזיר (sums, equity_sums) - equity_sums הוא תת-קבוצה של sums, רק שורות
+    עם נכס בסיס = מניות/מדדי-מניות (FUT_UNDERLYING_COL), לאזור החשיפה
+    למניות בדשבורד (ר' main.py) - לא משנה את sums עצמו (הקטגוריה הקיימת,
+    מאומתת מול MAE)."""
     sums: dict[str, float] = {}
+    equity_sums: dict[str, float] = {}
     for rec in source:
         if rec["Category"] != FUTURES_CATEGORY or rec["מידע"] != "מידע":
             continue
@@ -310,6 +331,7 @@ def _futures_exposure(source: list[dict], total_assets: dict[str, float]) -> dic
             total = total_assets.get(key) if key is not None else None
             if not total:
                 continue
+            is_equity = row.get(FUT_UNDERLYING_COL) == EQUITY_UNDERLYING
             units = _num(row.get(FUT_UNITS_COL))
             price = _num(row.get(FUT_PRICE_COL))
             fx = _normalize_fx(row.get(FUT_CURRENCY_COL), _num(row.get(FUT_FX_COL)))
@@ -350,12 +372,14 @@ def _futures_exposure(source: list[dict], total_assets: dict[str, float]) -> dic
             if line_ratio is None or abs(line_ratio) > SANITY_CAP:
                 line_ratio = fv_ratio if fv_ratio is not None else 0.0
             sums[key] = sums.get(key, 0.0) + line_ratio
-    return sums
+            if is_equity:
+                equity_sums[key] = equity_sums.get(key, 0.0) + line_ratio
+    return sums, equity_sums
 
 
 def _swap_exposure(
     source: list[dict], total_assets: dict[str, float]
-) -> tuple[dict[str, float], dict[str, float], dict[str, float]]:
+) -> tuple[dict[str, float], dict[str, float], dict[str, float], dict[str, dict[str, float]]]:
     """נמצא בבדיקה בפועל (לא ניחוש): "ערך נקוב" (רגל 1) ו"ערך נקוב" (רגל 2)
     אינם תמיד באותה יחידת מידה. עבור "Unfunded Forward" (למשל פורוורד מט"ח)
     שתי הרגליים כבר סכום נקוב במטבע - קרובות זו לזו כצפוי. אבל עבור
@@ -397,14 +421,23 @@ def _swap_exposure(
     מגישים אחרים תחת אותה תווית בדיוק רגל 1 באמת יחידות גולמיות (כמו
     512065202 שאומת במקור) - ר' used_priced/is_funded למטה.
 
-    מחזיר (notional_sums, funded_sums, unfunded_sums) - הראשון הוא הסכום
-    הכולל (המשמש להחלפת SWAP_CATEGORY, כמו קודם), השניים הבאים הם פילוח
-    שקוף Funded/Unfunded (ללא תקרת-SANITY_CAP ברמת מסלול - דיאגנוסטי בלבד,
-    ר' build_derivatives_exposure)."""
+    מחזיר (notional_sums, funded_sums, unfunded_sums, equity_swaps) - הראשון
+    הוא הסכום הכולל (המשמש להחלפת SWAP_CATEGORY, כמו קודם), השניים הבאים הם
+    פילוח שקוף Funded/Unfunded (דיאגנוסטי בלבד, ר' build_derivatives_exposure),
+    והאחרון הוא תת-קבוצה של notional_sums - רק שורות עם סוג הנכס=מניות,
+    מפוצלות-שוב לפי הערך המדויק ב-"מאפיין עיקרי" (Funded/Unfunded X, כפי
+    שמופיע בדוח בפועל), לאזור החשיפה למניות בדשבורד (ר' main.py)."""
     notional_sums: dict[str, float] = {}
     fv_sums: dict[str, float] = {}
     funded_sums: dict[str, float] = {}
     unfunded_sums: dict[str, float] = {}
+    # equity_by_label: מפתח -> {"Unfunded Swap": שיעור, ...} - רק שורות עם
+    # סוג הנכס = מניות, מפוצלות לפי הערך המדויק ב-SWAP_MAIN_TYPE_COL (Funded/
+    # Unfunded X, כפי שמופיע בדוח בפועל - לא הנחה על אילו ערכים קיימים),
+    # לאזור החשיפה למניות בדשבורד. שיעור-הוגן מקביל לכל bucket, לאותו
+    # fallback-אם-קנה-המידה-לא-סביר כמו notional_sums הכולל.
+    equity_by_label: dict[str, dict[str, float]] = {}
+    equity_fv_by_label: dict[str, dict[str, float]] = {}
     leg1_col, leg2_col = SWAP_LEGS
     for rec in source:
         if rec["Category"] != SWAP_CATEGORY or rec["מידע"] != "מידע":
@@ -415,12 +448,17 @@ def _swap_exposure(
             total = total_assets.get(key) if key is not None else None
             if not total:
                 continue
+            is_equity = row.get(SWAP_ASSET_TYPE_COL) == SWAP_EQUITY_ASSET_TYPE
+            label = row.get(SWAP_LABEL_COL)
             # ה-fallback (כשקנה המידה לא אמין) משתמש בעמודת האחוז כפי שהדוח
             # עצמו מדווח - נמצא בפועל מדויק יותר מ-fv/total_assets_by_key
             # (שהאומדן שלה לשווי הכולל לא תמיד מתאים בדיוק לאומדן הדוח עצמו
             # לכל שורה בנפרד).
             row_pct = to_ratio(row.get(PCT_COL)) or 0.0
             fv_sums[key] = fv_sums.get(key, 0.0) + row_pct
+            if is_equity and label:
+                d = equity_fv_by_label.setdefault(key, {})
+                d[label] = d.get(label, 0.0) + row_pct
             # is_funded: תווית "מאפיין עיקרי" בלבד - שימושי לפילוח דיאגנוסטי
             # (funded_sums/unfunded_sums), אבל *לא* אמין להחלטת קנה-המידה
             # עצמה (ר' used_priced למטה) - נמצא בפועל (513173393/אלטשולר
@@ -496,12 +534,22 @@ def _swap_exposure(
                 funded_sums[key] = funded_sums.get(key, 0.0) + line_ratio
             else:
                 unfunded_sums[key] = unfunded_sums.get(key, 0.0) + line_ratio
+            if is_equity and label:
+                d = equity_by_label.setdefault(key, {})
+                d[label] = d.get(label, 0.0) + line_ratio
 
     capped = {
         key: val if abs(val) <= SANITY_CAP else fv_sums.get(key, 0.0)
         for key, val in notional_sums.items()
     }
-    return capped, funded_sums, unfunded_sums
+    equity_swaps = {
+        key: {
+            label: val if abs(val) <= SANITY_CAP else equity_fv_by_label.get(key, {}).get(label, 0.0)
+            for label, val in by_label.items()
+        }
+        for key, by_label in equity_by_label.items()
+    }
+    return capped, funded_sums, unfunded_sums, equity_swaps
 
 
 def collect_unresolved_swap_tickers(source: list[dict]) -> dict[str, set[str]]:
@@ -533,12 +581,17 @@ def collect_unresolved_swap_tickers(source: list[dict]) -> dict[str, set[str]]:
     return out
 
 
-def _options_exposure(source: list[dict], total_assets: dict[str, float], category: str) -> dict[str, float]:
+def _options_exposure(
+    source: list[dict], total_assets: dict[str, float], category: str
+) -> tuple[dict[str, float], dict[str, float]]:
     """דלתא×נוציונל לקטגוריית אופציה אחת (listed/OTC בנפרד - שם השדה
     ה"מפתח" תמיד "Category" של הגיליון, לא משנה איזה). רק שורות נכס-בסיס
     מניות (OPT_EQUITY_UNDERLYING) - מט"ח/ריבית/אחר נשארים בשיטה הישנה,
-    מחוץ להיקף (לא אופציות על מניות, לא חלק מהתיקון הזה)."""
+    מחוץ להיקף (לא אופציות על מניות, לא חלק מהתיקון הזה). מחזיר גם
+    equity_sums - תת-קבוצה של sums, רק שורות מניות - לאזור החשיפה למניות
+    בדשבורד (ר' main.py)."""
     sums: dict[str, float] = {}
+    equity_sums: dict[str, float] = {}
     for rec in source:
         if rec["Category"] != category or rec["מידע"] != "מידע":
             continue
@@ -576,24 +629,28 @@ def _options_exposure(source: list[dict], total_assets: dict[str, float], catego
             if line_ratio is None or abs(line_ratio) > SANITY_CAP:
                 line_ratio = row_pct
             sums[key] = sums.get(key, 0.0) + line_ratio
-    return sums
+            equity_sums[key] = equity_sums.get(key, 0.0) + line_ratio
+    return sums, equity_sums
 
 
 def build_derivatives_exposure(source: list[dict]) -> dict[str, dict[str, float]]:
     """מפתח -> {קטגוריה: שיעור חשיפה אמיתי}, לארבע הקטגוריות (חוזים עתידיים,
-    לא סחיר נגזרים אחרים, אופציות, לא סחיר אופציות). מיועד להחליף את הערכים
-    המבוססי-שווי-הוגן שמחשב category_pct.build_category_pct לאותן קטגוריות
-    בדיוק - ולא לגעת בשאר הקטגוריות.
+    לא סחיר נגזרים אחרים, אופציות, לא סחיר אופציות) - מיועד להחליף את
+    הערכים המבוססי-שווי-הוגן שמחשב category_pct.build_category_pct לאותן
+    קטגוריות בדיוק - ולא לגעת בשאר הקטגוריות.
 
-    שתי קטגוריות נוספות, דיאגנוסטיות בלבד (FUNDED_SWAP_CATEGORY/
-    UNFUNDED_SWAP_CATEGORY) - פילוח שקוף של SWAP_CATEGORY בין שני מבני
-    הסוואפ (ר' הערת _swap_exposure) - לא מיועדות להחליף כלום ב-category_pct,
-    רק לתצוגה/דשבורד."""
+    בנוסף (לא מחליף כלום, רק מצטרף): שתי קטגוריות דיאגנוסטיות (FUNDED_
+    SWAP_CATEGORY/UNFUNDED_SWAP_CATEGORY) - פילוח שקוף של SWAP_CATEGORY בין
+    שני מבני הסוואפ (ר' הערת _swap_exposure); ועמודות "אזור חשיפה למניות" -
+    נכס-בסיס=מניות בלבד לחוזים/אופציות (FUTURES_EQUITY_COLUMN/
+    OPTIONS_EQUITY_COLUMN), ופיצול Funded/Unfunded לסוואפים-על-מניות (לפי
+    SWAP_MAIN_TYPE_COL בפועל בדוח) - עמודות "לא סחיר נגזרים אחרים - מניות
+    (<תווית>)"."""
     total_assets = total_assets_by_key(source)
-    futures = _futures_exposure(source, total_assets)
-    swaps, funded_swaps, unfunded_swaps = _swap_exposure(source, total_assets)
-    options_listed = _options_exposure(source, total_assets, OPTIONS_LISTED_CATEGORY)
-    options_otc = _options_exposure(source, total_assets, OPTIONS_OTC_CATEGORY)
+    futures, futures_equity = _futures_exposure(source, total_assets)
+    swaps, funded_swaps, unfunded_swaps, swaps_equity_by_label = _swap_exposure(source, total_assets)
+    options_listed, options_listed_equity = _options_exposure(source, total_assets, OPTIONS_LISTED_CATEGORY)
+    options_otc, options_otc_equity = _options_exposure(source, total_assets, OPTIONS_OTC_CATEGORY)
 
     out: dict[str, dict[str, float]] = {}
     for key, val in futures.items():
@@ -608,4 +665,15 @@ def build_derivatives_exposure(source: list[dict]) -> dict[str, dict[str, float]
         out.setdefault(key, {})[OPTIONS_LISTED_CATEGORY] = val
     for key, val in options_otc.items():
         out.setdefault(key, {})[OPTIONS_OTC_CATEGORY] = val
+
+    for key, val in futures_equity.items():
+        out.setdefault(key, {})[FUTURES_EQUITY_COLUMN] = val
+    for key, by_label in swaps_equity_by_label.items():
+        d = out.setdefault(key, {})
+        for label, val in by_label.items():
+            d[f"{SWAP_CATEGORY} - מניות ({label})"] = val
+    for key, val in options_listed_equity.items():
+        out.setdefault(key, {})[OPTIONS_EQUITY_COLUMN] = out.setdefault(key, {}).get(OPTIONS_EQUITY_COLUMN, 0.0) + val
+    for key, val in options_otc_equity.items():
+        out.setdefault(key, {})[OPTIONS_EQUITY_COLUMN] = out.setdefault(key, {}).get(OPTIONS_EQUITY_COLUMN, 0.0) + val
     return out
