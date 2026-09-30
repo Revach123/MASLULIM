@@ -34,7 +34,7 @@ def year_of(text: str):
 def keep_item(text: str, href: str) -> bool:
     low = (text + " " + unquote(href)).lower()
     return (score(text) + score(unquote(href)) > 0 or href.lower().split("?")[0].endswith(DOC_EXT)
-            or bool(DL_HINT.search(low)))
+            or bool(DL_HINT.search(low)) or bool(re.search(r"גמל|פנסי|השתלמות|gemel|pension|provident|hishtalmut", low)))
 
 
 def items_from_anchors(anchors, page_url, dom):
