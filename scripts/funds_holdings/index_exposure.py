@@ -84,7 +84,7 @@ _CODES = {
 # לפי הסדר: ספציפי לפני כללי. אזור ברירת המחדל "us" לענפי GICS (Select Sector וכו').
 _THEMES = [
     (r"URANIUM|NUCLEAR|אורניום|גרעינ", "nuclear", "אורניום ואנרגיה גרעינית", ""),
-    (r"AEROSPACE|DEFEN[CS]E|ביטחוני", "defense", "ביטחוניות", "us"),
+    (r"AEROSPACE|\bAERO\b|DEFEN[CS]E|\bDEF\b|ביטחוני", "defense", "ביטחוניות", "us"),
     (r"HEALTH|BIOTECH|PHARMA|LIFE\W?SCI|\bXLV\b|בריאות|ביוטק", "health", "בריאות", "us"),
     (r"SEMICONDUCTOR|SEMICON|\bMEMORY\b|\bSOX\b|PHLX|\bSMH\b|שבבים", "semis", "שבבים", "us"),
     (r"SOFTWARE|\bIGV\b|תוכנה", "software", "תוכנה ושירותים", "us"),
@@ -93,13 +93,13 @@ _THEMES = [
     (r"\bWATER\b|מים", "water", "מים", ""),
     (r"CYBER|סייבר", "cyber", "סייבר", ""),
     (r"ROBOTIC|ARTIFICIAL|\bAI\b|AUTOMATION|רובוטיקה|בינה מלאכותית", "ai_robotics", "רובוטיקה ובינה מלאכותית", ""),
-    (r"INFRASTRUCTURE|\bNFRA\b|SMART\W?GRID|תשתיות", "infrastructure", "תשתיות", ""),
+    (r"INFRASTRUCTURE|\bNFRA\b|\bINFR\b|SMART\W?GRID|תשתיות", "infrastructure", "תשתיות", ""),
     (r"ENVIRONMENT", "environment", "סביבה", ""),
     (r"INSURANCE|ביטוח", "insurance", "ביטוח", ""),
     (r"\bBANK|בנקים|\bKBW\b", "banks", "בנקים", ""),
     (r"REAL\W?ESTATE|\bREIT|נדל\"?ן", "real_estate", "נדל\"ן", ""),
     (r"CONSTRUCTION|HOMEBUILD|בנייה", "construction", "בנייה", ""),
-    (r"TECHNOLO|DISRUPTIVE|ביג טק|טק-|INFO\w*\W?TECH|INFORMATION\W?TECH|TECH\W?SEL|\bXLK\b|טכנולוגי|\bTECH\b|\bINF\b$", "tech",
+    (r"TECHNOLO|DISRUPTIVE|QUANTUM|MAGNIFICENT|ביג טק|טק-|INFO\w*\W?TECH|INFORMATION\W?TECH|TECH\W?SEL|\bXLK\b|טכנולוגי|\bTECH\b|\bINF\b$", "tech",
      "טכנולוגיה", "us"),
     (r"COMMUNICATION|COMM\W?SERV|TELECOM|\bMEDIA\b|\bXLC\b|תקשורת", "comm", "תקשורת", "us"),
     (r"CONSUMER\W?D[EI]SC|D[EI]SCRETION|CONS\W?DISC|CYCLICAL|RETAIL|TRAVEL|LEISURE|\bXLY\b|שיקול דעת צרכני|צריכה מחזורית", "consdisc",
@@ -112,12 +112,12 @@ _THEMES = [
     (r"MATERIALS|METALS|MINING|MINERS|\bRESOURCES?\b|\bXLB\b|חומרי גלם|כרייה", "materials", "חומרי גלם", ""),
     # סגנון
     (r"EQUAL\W?WEIGHT|משקל שווה|שווה משקל", "equal_weight", "שווה משקל", ""),
-    (r"\bESG\b|SUSTAIN|\bSUST\b|\bSRI\b|\bSDG\b|CLIMATE|PARIS|קיימות|^מעלה$", "esg", "ESG", ""),
+    (r"\bESG\b|SUSTAIN|\bSUST\b|\bSRI\b|\bSDG\b|CLIMATE|PARIS|CIRCULAR|קיימות|^מעלה$", "esg", "ESG", ""),
     (r"DIVIDEN|\bDVD\b|\bDIV\b|דיבידנד|\bדיב\b", "dividend", "דיבידנד", ""),
     (r"MIN\W?VOL|LOW\W?VOL|תנודתיות נמוכה", "min_vol", "תנודתיות נמוכה", ""),
     (r"MOMENTUM|מומנטום", "momentum", "מומנטום", ""),
     (r"QUALITY|\bQLT\b|\bMOAT\b|איכות|רווחיות", "quality", "איכות", ""),
-    (r"GROWTH|צמיחה", "growth", "צמיחה", ""),
+    (r"GROWTH|\bGWTH\b|צמיחה", "growth", "צמיחה", ""),
     (r"\bVALUE\b|ערך", "value", "ערך", ""),
     (r"SMALL\W?CAP|SMALLCAP|\bS\.CAP|\bSME\w*|קטנות", "small_cap", "חברות קטנות", ""),
     (r"MID\W?CAP|בינוניות", "mid_cap", "חברות בינוניות", ""),
@@ -127,22 +127,24 @@ THEMES = [(re.compile(p, re.IGNORECASE), i, lbl, reg) for p, i, lbl, reg in _THE
 # ── 3. אזור ──────────────────────────────────────────────────────────────────
 _REGIONS = [
     (r"ת\"?א|^תל\b|TEL\W?AVIV|ISRAEL|ישראל|^TA\d|^מעלה$", "il", "ישראל"),
-    (r"INTERNATIONAL|\bEAFE\b|\bEX\W?U\W?S\b|WORLD\W?EX\W?U|לא כולל ארה", "intl", "בינלאומי (לא כולל ארה\"ב)"),
-    (r"EMERG|\bEMER\b|\bEM\b|EMG\W?MKT|E\W?MKT|מתעוררים", "em", "שווקים מתעוררים"),
+    (r"INTERNATIONAL|\bINTERN\b|\bEAFE\b|\bEX\W?U\W?S\b|WORLD\W?EX\W?U|לא כולל ארה", "intl", "בינלאומי (לא כולל ארה\"ב)"),
+    (r"EMERG|\bEMER\b|\bEMRG\b|\bEM\b|EMG\W?MKT|E\W?MKT|מתעוררים", "em", "שווקים מתעוררים"),
     (r"\bUK\b|UNITED\W?KINGDOM|BRITAIN|CHELVERTON|בריטניה", "uk", "בריטניה"),
     (r"ITALY|\bMIB\b|איטליה", "italy", "איטליה"),
     (r"GERMANY|\bMDAX\b|גרמניה", "germany", "גרמניה"),
     (r"POLAND|\bWIG\d*|פולין", "poland", "פולין"),
-    (r"EUROPE|EURPOE|ERUOPE|EROPE|\bEURP\b|\bERP\b|\bEURO\b|\bEMU\b|STOXX|EURSTX|אירופה", "europe", "אירופה"),
+    (r"EUROPE|EURPOE|NORDIC|ERUOPE|EROPE|\bEURP\b|\bERP\b|\bEURO\b|\bEMU\b|STOXX|EURSTX|אירופה", "europe", "אירופה"),
     (r"EX\W*JAPAN|PACIFIC|FAR\W?EAST|ALL\W?COUNTRY\W?ASIA", "asia", "אסיה"),
-    (r"JAPAN|\bJAP\b|יפן|NIKKEI|TOPIX", "japan", "יפן"),
+    (r"JAPAN|\bJAPA?N?\b|\bJPN\b|\bJP\b(?!\W?MORGAN)|\bTPX|SAKUR|יפן|NIKKEI|TOPIX", "japan", "יפן"),
+    (r"NETHERLANDS|\bAEX\b|הולנד", "netherlands", "הולנד"),
+    (r"AUSTRALIA|\bAUST\b|אוסטרליה", "australia", "אוסטרליה"),
     (r"CHINA|CHAINA|HANG\W?SENG|סין", "china", "סין"),
     (r"BRAZIL|BOVESPA|ברזיל", "brazil", "ברזיל"),
     (r"MEXICO|מקסיקו", "mexico", "מקסיקו"),
     (r"LATIN|אמריקה הלטינית", "latam", "אמריקה הלטינית"),
     (r"INDIA|\bMSCI\W?IND\b|ASHOKA|הודו", "india", "הודו"),
     (r"ASIA|אסיה", "asia", "אסיה"),
-    (r"\bU\.?S\.?A?\b|UNITED STATES|AMERICA|S\W?[&@]\W?P\b|S\W?[&@]\W?P\W?\d|RUSSELL|NASDA?Q|NASD\b|\bDOW\b|\bDJ\b|\bKBW\b|"
+    (r"\bU\.?S\.?A?\b|UNITED STATES|AMERICA|S\W?[&@]\W?P\b|S\W?[&@]\W?P\W?\d|RUSSELL|NASDA?Q|NASD\b|\bDOW\b|\bDJ\b|\bKBW\b|L/C|LRG\W?CAP|LARGE\W?CAP|"
      r"SELECT\W?SECTOR|ארה\"?ב", "us", "ארה\"ב"),
     (r"WORLD|WLRD|\bDW\b|GLOBAL|\bGLB\b|\bGBL\b|\bGLOB?\b|ACWI|ALL\W?COUNTRY|INTERNATIONAL|עולמי|גלובלי", "world", "עולמי"),
 ]
@@ -150,7 +152,7 @@ REGIONS = [(re.compile(p, re.IGNORECASE), i, lbl) for p, i, lbl in _REGIONS]
 REGION_LABEL = {i: lbl for _, i, lbl in _REGIONS}
 _REGION_BROAD = {"world": ("msci_world", "מדד עולמי"), "europe": ("europe", "אירופה"), "em": ("msci_em", "שווקים מתעוררים"),
                  "uk": ("ftse100", "FTSE 100"), "intl": ("acwi_ex_us", "מדד עולמי (לא כולל ארה\"ב)"),
-                 "asia": ("asia", "אסיה"), "italy": ("italy", "איטליה"),
+                 "asia": ("asia", "אסיה"), "italy": ("italy", "איטליה"), "australia": ("australia", "אוסטרליה"),
                  "china": ("china", "סין"), "japan": ("japan", "יפן"), "india": ("india", "הודו")}
 
 # ── 4. מדדים רחבים (בלי נושא) ─────────────────────────────────────────────────
@@ -170,7 +172,7 @@ _P = [
     (r"ACWI\W?EX|ALL\W?COUNTRY.{0,15}EX|WORLD\W?EX\W?U\W?S|EX\W?U\W?S\b|לא כולל ארה", "acwi_ex_us",
      "מדד עולמי (לא כולל ארה\"ב)"),
     (r"ACWI|AC\W?WORLD|ALL\W?COUNTRY(?!\W?ASIA)|ALL\W?WORLD|MSCI\W?ALL\b|עולמי.{0,20}כולל.{0,15}מתעוררים", "acwi", "מדד עולמי (כולל שווקים מתעוררים)"),
-    (r"EMERG|\bEMER\b|MSCI\W?EM\b|\bEM\b|EMG\W?MKT|E\W?MKT|מתעוררים", "msci_em", "שווקים מתעוררים"),
+    (r"EMERG|\bEMER\b|\bEMRG\b|MSCI\W?EM\b|\bEM\b|EMG\W?MKT|E\W?MKT|מתעוררים", "msci_em", "שווקים מתעוררים"),
     (r"MSCI\W?WORLD|\bWORLD\W?INDEX|DEVELOPED|\bURTH\b|^מדד עולמי$|^עולמי$", "msci_world", "מדד עולמי"),
     (r"STOXX\W?(\w+\W?)?600|STX\W?(EUROPE\W?)?600|EURSTX\W?600|EUROPE\W?600|אירופה 600", "stoxx600", "אירופה 600"),
     (r"EURO\W?STOXX\W?50|STOXX\W?50|\bFESX\b|EURSTX\W?50|יורוסטוקס", "stoxx50", "יורוסטוקס 50"),
