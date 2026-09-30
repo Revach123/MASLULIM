@@ -206,6 +206,19 @@ def sitemap_policy_pages(s, home: str, limit: int = 25) -> list[str]:
     return list(dict.fromkeys(found))[:limit]
 
 
+def resolve_home(s, home: str) -> str:
+    """הדומיין מהמייל לא תמיד עונה כ-www/https: מנסים וריאנטים ובוחרים את הראשון שעונה (<400)."""
+    if not home:
+        return home
+    host = urlparse(home).netloc.split(":")[0]
+    bare = host[4:] if host.startswith("www.") else host
+    for u in (home, f"https://{bare}", f"https://www.{bare}", f"http://www.{bare}", f"http://{bare}"):
+        r = get(s, u)
+        if r is not None and r.status_code < 400:
+            return r.url.rstrip("/") or u
+    return home
+
+
 def expand_templates(urls, first_year=2019):
     """כתובות עם {year} מורחבות לכל שנה (אתרים שמחזיקים דף/מסנן לכל שנה, למשל כלל/הפניקס)."""
     out = []
@@ -287,6 +300,13 @@ def main():
         products = {u: seed["products"].get(t) for t in seed["extra"] for u in expand_templates([t])}
         # חיפוש נפרד לכל מוצר (גמל/פנסיה/ביטוח); כשאין אתר ידוע - האתר נקבע מהתוצאות
         searched = {}
+        disc_path = OUT / "discovered.json"  # אתר/עמודים שנמצאו בחיפוש בריצה קודמת - נשמרים (החיפוש לא תמיד זמין)
+        disc = json.loads(disc_path.read_text("utf-8")) if disc_path.exists() else {}
+        if not seed["home"] and disc.get("home"):
+            seed["home"] = disc["home"]
+        for u, prod in disc.get("pages", {}).items():
+            if u not in extra:
+                extra.append(u); products[u] = prod
         if seed["search"] and seed["product_list"]:
             searched, home = search_product_pages(s, c["name"], seed["product_list"], seed["home"] or None)
             seed["home"] = seed["home"] or home or ""
@@ -296,6 +316,11 @@ def main():
                     extra.append(u); products[u] = prod
         if not seed["home"]:
             report.append([legal_id, c["name"], "", "no_site_found", 0, 0, " | ".join(SEARCH_LOG[-4:])[:1200]]); continue
+        seed["home"] = resolve_home(s, seed["home"])
+        if searched or not disc.get("home"):
+            OUT.mkdir(parents=True, exist_ok=True)
+            disc_path.write_text(json.dumps({"home": seed["home"], "pages": {**disc.get("pages", {}), **searched}},
+                                            ensure_ascii=False, indent=1), "utf-8")
         discovered = sitemap_policy_pages(s, seed["home"])
         print(f"[{legal_id}] sitemap policy pages: {len(discovered)}", *discovered[:10], sep="\n  ", flush=True)
         extra += [u for u in discovered if u not in extra]
