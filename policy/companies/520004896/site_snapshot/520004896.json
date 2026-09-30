@@ -1,7 +1,7 @@
 {
  "legal_id": "520004896",
  "company": "מגדל חברה לביטוח בע\"מ",
- "taken": "2026-09-30T21:13:42+00:00",
+ "taken": "2026-09-30T21:22:24+00:00",
  "pages": {
   "https://www.migdal.co.il": {
    "product": "פנסיה+גמל+ביטוח",
@@ -69,15 +69,23 @@
    ]
   },
   "https://www.migdal.co.il/regulations/migdal-investment-policy": {
-   "product": "ביטוח",
+   "product": null,
    "status": 200,
-   "method": "requests",
-   "text_hash": "4a3fccf392529b34461637d464f451292b2ade5f",
-   "text_head": "מגדל - מדיניות השקעה צפויה - מגדל top of page Close פתח תפריט ניווט כניסה למגדל שלי - Close חסכון אישי והשקע\u0000ות חסכון פנסיוני ביטוחים תביעות שירותים פעולות אני רוצה לקבל הצעה אונליין ביטוח רכב חסכון פנסיוני ביטח דירה ביטוח נסיעות לחו\"ל התנתקות עברית Close עברית ערבית Pусский English Close Menu Close חיסכון אישי והשקעות ​ ​ חיסכון פנסיוני ​ ​ ביטוחים ​ ​ תביעות ​ ​ שירותים ​ ​ פעולות ​ ​ Menu Close כניסה לפורטלים מעסיקים ועסקים מפתחים- בנקאות פתוחה סוכנים מגדל CONNECT קשרי משקיעים מעסיקים ועסקים מפתחים- בנ\u0000קאות פתוחה סוכנים מגדל CONNECT קשרי משקיעים Menu Close עברית ערבית Pусский English עברית ",
+   "method": "browser",
+   "text_hash": "d8a2ad8702ba0c95101c2b8772061623624ebde7",
+   "text_head": "אתר זה עושה שימוש בטכנולוגיות איסוף מידע כגון עוגיות (Cookies), לרבות על ידי צדדים שלישיים, כדי לספק לך חווית גלישה טובה יותר, וכן לניתוח השימוש ולצרכי פרסום מותאם. המשך הגלישה מהווה את הסכמתך לשימוש זה. למידע נוסף, יש לעיין במדיניות הפרטיות המעודכנת Skip to Main Content חיסכון אישי והשקעות חיסכון פנסיוני ביטוחים תביעות שירותים פעולות כניסה לפורטלים עברית ערבית Pусский English עברית מגדל שלי דף הבית מגדל - הצהרה מראש על מדיניות השקעה צפויה הצהרה מראש על מדיניות השקעה צפויה ​ ​ הצהרה מראש על מדיניות השקעה צפויה הצהרה מראש על מדיניות השקעה צפויה - לשנת 2026 (יולי 2026) להורדה הצהרה מראש על מדיני",
    "items": [
     {
      "text": "קשרי משקיעים",
      "href": "https://my.migdal.co.il/investors-relations",
+     "year": null,
+     "iframe": false,
+     "doc": false,
+     "internal": true
+    },
+    {
+     "text": "מחשבון תשואת מסלולי השקעה",
+     "href": "https://www.migdal.co.il/macro/investment-tracks-yields",
      "year": null,
      "iframe": false,
      "doc": false,
@@ -92,8 +100,32 @@
      "internal": true
     },
     {
+     "text": "להורדת אפליקציית מגדל",
+     "href": "https://migdalcustomers.onelink.me/M9ye/3afbdb8",
+     "year": null,
+     "iframe": false,
+     "doc": true,
+     "internal": false
+    },
+    {
+     "text": "חטיבת ההשקעות שלנו",
+     "href": "https://www.migdal.co.il/investment-lobby",
+     "year": null,
+     "iframe": false,
+     "doc": false,
+     "internal": true
+    },
+    {
      "text": "בית השקעות מגדל שוקי הון",
      "href": "https://www.msh.co.il",
+     "year": null,
+     "iframe": false,
+     "doc": false,
+     "internal": false
+    },
+    {
+     "text": "בית השקעות מגדל שוקי הון",
+     "href": "https://www.msh.co.il/",
      "year": null,
      "iframe": false,
      "doc": false,
@@ -114,6 +146,216 @@
      "iframe": false,
      "doc": false,
      "internal": true
+    },
+    {
+     "text": "איתור תנאי פוליסה",
+     "href": "https://my.migdal.co.il/support/policy-terms-arhcive",
+     "year": null,
+     "iframe": false,
+     "doc": false,
+     "internal": true
+    },
+    {
+     "text": "(network file)",
+     "href": "https://download-files.wixmp.com/ugd/ebf348_0d35df52dd8d480dbe50ccc4558449db.xlsx?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJvYmoiOltbeyJwYXRoIjoiL3VnZC9lYmYzNDhfMGQzNWRmNTJkZDhkNDgwZGJlNTBjY2M0NTU4NDQ5ZGIueGxzeCJ9XV0sImRpcyI6eyJmaWxlbmFtZSI6IkhhdHphcmF0IE1pZ2RhbCBCaXR1YWNoIEpVTCAyMDI2X1AgLSBBQ0MueGxzeCIsInR5cGUiOiJhdHRhY2htZW50In0sImF1ZCI6WyJ1cm46c2VydmljZTpmaWxlLmRvd25sb2FkIl0sImV4cCI6MTc5MDgzOTM4MCwianRpIjoiYzYzNmQ4ZWMtMWU4ZC00ZGVhLTk4MTctMzM3MDExOGNhNTRhIiwiaWF0IjoxNzkwODAzMzgwLCJpc3MiOiJ1cm46YXBwOmU2NjYzMGU3MTRmMDQ5MGFhZWExZjE0OWIzYjY5ZTMyIiwic3ViIjoidXJuOmFwcDplNjY2MzBlNzE0ZjA0OTBhYWVhMWYxNDliM2I2OWUzMiJ9.0BpkKMO3uBPn5AZRDfjW38VDZk_hA40dLdnSI0fM_Z4",
+     "year": null,
+     "iframe": false,
+     "doc": true,
+     "internal": false
+    },
+    {
+     "text": "(iframe)",
+     "href": "https://undefined/",
+     "year": null,
+     "iframe": true,
+     "doc": false,
+     "internal": false
+    }
+   ]
+  },
+  "https://www.migdal.co.il/regulations/makefet-investment-policy": {
+   "product": null,
+   "status": 200,
+   "method": "browser",
+   "text_hash": "73c51206669b3bbc37cc4070dca17fc5bec19673",
+   "text_head": "אתר זה עושה שימוש בטכנולוגיות איסוף מידע כגון עוגיות (Cookies), לרבות על ידי צדדים שלישיים, כדי לספק לך חווית גלישה טובה יותר, וכן לניתוח השימוש ולצרכי פרסום מותאם. המשך הגלישה מהווה את הסכמתך לשימוש זה. למידע נוסף, יש לעיין במדיניות הפרטיות המעודכנת Skip to Main Content חיסכון אישי והשקעות חיסכון פנסיוני ביטוחים תביעות שירותים פעולות כניסה לפורטלים עברית ערבית Pусский English עברית מגדל שלי דף הבית הצהרה מראש על מדיניות השקעה צפויה הצהרה מראש על מדיניות השקעה צפויה-מקפת ​ ​ קופות גמל והשתלמות הצהרה מראש על מדיניות השקעה צפויה - מגדל השתלמות - לשנת 2026 (אוגוסט 2026) להורדה הצהרה מראש על מדיני",
+   "items": [
+    {
+     "text": "קשרי משקיעים",
+     "href": "https://my.migdal.co.il/investors-relations",
+     "year": null,
+     "iframe": false,
+     "doc": false,
+     "internal": true
+    },
+    {
+     "text": "מחשבון תשואת מסלולי השקעה",
+     "href": "https://www.migdal.co.il/macro/investment-tracks-yields",
+     "year": null,
+     "iframe": false,
+     "doc": false,
+     "internal": true
+    },
+    {
+     "text": "להורדת אפליקציית מגדל",
+     "href": "https://migdalcustomers.onelink.me/M9ye/3afbdb8",
+     "year": null,
+     "iframe": false,
+     "doc": true,
+     "internal": false
+    },
+    {
+     "text": "חטיבת ההשקעות שלנו",
+     "href": "https://www.migdal.co.il/investment-lobby",
+     "year": null,
+     "iframe": false,
+     "doc": false,
+     "internal": true
+    },
+    {
+     "text": "בית השקעות מגדל שוקי הון",
+     "href": "https://www.msh.co.il/",
+     "year": null,
+     "iframe": false,
+     "doc": false,
+     "internal": false
+    },
+    {
+     "text": "ביטול פוליסה קיימת",
+     "href": "https://my.migdal.co.il/support/existing-policy-cancellation",
+     "year": null,
+     "iframe": false,
+     "doc": false,
+     "internal": true
+    },
+    {
+     "text": "בדיקת קיומה פוליסה - צד ג'",
+     "href": "https://my.migdal.co.il/car-insurance/support/third-party-policy-examination?_gl=1*19qvjhg*_gcl_au*MTE4OTg5ODA4MS4xNzcyMDk1NzYwLjExNDYzMDg4NTguMTc3MzIzMTA4NC4xNzczMjMxMDgz*_ga*MTg0MjEyNDE3MS4xNzcyMDMzNzQz*_ga_PK7X7KDXKV*czE3NzMyMzk5NDckbzM2JGcxJHQxNzczMjQwMDgwJGo4JGwwJGgw",
+     "year": null,
+     "iframe": false,
+     "doc": false,
+     "internal": true
+    },
+    {
+     "text": "איתור תנאי פוליסה",
+     "href": "https://my.migdal.co.il/support/policy-terms-arhcive",
+     "year": null,
+     "iframe": false,
+     "doc": false,
+     "internal": true
+    },
+    {
+     "text": "(network file)",
+     "href": "https://download-files.wixmp.com/ugd/571a7f_6ca1556039ab484c9d5d1bdd464f7412.xlsx?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJvYmoiOltbeyJwYXRoIjoiL3VnZC81NzFhN2ZfNmNhMTU1NjAzOWFiNDg0YzlkNWQxYmRkNDY0Zjc0MTIueGxzeCJ9XV0sImRpcyI6eyJmaWxlbmFtZSI6IkhhdHphcmF0IE1pZ2RhbCBIaXNodGFsbXV0IEFVRyAyMDI2X1AgLSBBQ0MueGxzeCIsInR5cGUiOiJhdHRhY2htZW50In0sImF1ZCI6WyJ1cm46c2VydmljZTpmaWxlLmRvd25sb2FkIl0sImV4cCI6MTc5MDgzOTQ2MSwianRpIjoiNDIwZmVjMzAtMzM0MS00ZTYwLTk3OWYtNzk0ZWI1ZjhmMzQ2IiwiaWF0IjoxNzkwODAzNDYxLCJpc3MiOiJ1cm46YXBwOmU2NjYzMGU3MTRmMDQ5MGFhZWExZjE0OWIzYjY5ZTMyIiwic3ViIjoidXJuOmFwcDplNjY2MzBlNzE0ZjA0OTBhYWVhMWYxNDliM2I2OWUzMiJ9.IYkX6PpAPg1ntzUe-SVwOWZQtj-MrrhPdkVjc_3ZSpE",
+     "year": null,
+     "iframe": false,
+     "doc": true,
+     "internal": false
+    },
+    {
+     "text": "(iframe)",
+     "href": "https://undefined/",
+     "year": null,
+     "iframe": true,
+     "doc": false,
+     "internal": false
+    }
+   ]
+  },
+  "https://www.migdal.co.il/regulations/yozma-expected-investment-policy": {
+   "product": null,
+   "status": 200,
+   "method": "browser",
+   "text_hash": "ed8131347255ebd34277cd77482781babc00324e",
+   "text_head": "אתר זה עושה שימוש בטכנולוגיות איסוף מידע כגון עוגיות (Cookies), לרבות על ידי צדדים שלישיים, כדי לספק לך חווית גלישה טובה יותר, וכן לניתוח השימוש ולצרכי פרסום מותאם. המשך הגלישה מהווה את הסכמתך לשימוש זה. למידע נוסף, יש לעיין במדיניות הפרטיות המעודכנת Skip to Main Content חיסכון אישי והשקעות חיסכון פנסיוני ביטוחים תביעות שירותים פעולות כניסה לפורטלים עברית ערבית Pусский English עברית מגדל שלי דף הבית קרן הפנסיה יוזמה – מדיניות השקעה צפויה קרן הפנסיה יוזמה – מדיניות השקעה צפויה ​ ​ הצהרה מראש על מדיניות השקעה צפויה מדיניות השקעות אחראיות (ינואר 24) להורדה הצהרה מראש על מדיניות השקעה צפויה לשנת 2",
+   "items": [
+    {
+     "text": "קשרי משקיעים",
+     "href": "https://my.migdal.co.il/investors-relations",
+     "year": null,
+     "iframe": false,
+     "doc": false,
+     "internal": true
+    },
+    {
+     "text": "מחשבון תשואת מסלולי השקעה",
+     "href": "https://www.migdal.co.il/macro/investment-tracks-yields",
+     "year": null,
+     "iframe": false,
+     "doc": false,
+     "internal": true
+    },
+    {
+     "text": "להורדת אפליקציית מגדל",
+     "href": "https://migdalcustomers.onelink.me/M9ye/3afbdb8",
+     "year": null,
+     "iframe": false,
+     "doc": true,
+     "internal": false
+    },
+    {
+     "text": "חטיבת ההשקעות שלנו",
+     "href": "https://www.migdal.co.il/investment-lobby",
+     "year": null,
+     "iframe": false,
+     "doc": false,
+     "internal": true
+    },
+    {
+     "text": "בית השקעות מגדל שוקי הון",
+     "href": "https://www.msh.co.il",
+     "year": null,
+     "iframe": false,
+     "doc": false,
+     "internal": false
+    },
+    {
+     "text": "בית השקעות מגדל שוקי הון",
+     "href": "https://www.msh.co.il/",
+     "year": null,
+     "iframe": false,
+     "doc": false,
+     "internal": false
+    },
+    {
+     "text": "ביטול פוליסה קיימת",
+     "href": "https://my.migdal.co.il/support/existing-policy-cancellation",
+     "year": null,
+     "iframe": false,
+     "doc": false,
+     "internal": true
+    },
+    {
+     "text": "בדיקת קיומה פוליסה - צד ג'",
+     "href": "https://my.migdal.co.il/car-insurance/support/third-party-policy-examination?_gl=1*19qvjhg*_gcl_au*MTE4OTg5ODA4MS4xNzcyMDk1NzYwLjExNDYzMDg4NTguMTc3MzIzMTA4NC4xNzczMjMxMDgz*_ga*MTg0MjEyNDE3MS4xNzcyMDMzNzQz*_ga_PK7X7KDXKV*czE3NzMyMzk5NDckbzM2JGcxJHQxNzczMjQwMDgwJGo4JGwwJGgw",
+     "year": null,
+     "iframe": false,
+     "doc": false,
+     "internal": true
+    },
+    {
+     "text": "איתור תנאי פוליסה",
+     "href": "https://my.migdal.co.il/support/policy-terms-arhcive",
+     "year": null,
+     "iframe": false,
+     "doc": false,
+     "internal": true
+    },
+    {
+     "text": "(network file)",
+     "href": "https://download-files.wixmp.com/ugd/5adfdb_5529a1241e764807bfeb2209b662f2ac.pdf?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJvYmoiOltbeyJwYXRoIjoiL3VnZC81YWRmZGJfNTUyOWExMjQxZTc2NDgwN2JmZWIyMjA5YjY2MmYyYWMucGRmIn1dXSwiZGlzIjp7ImZpbGVuYW1lIjoibWlnZGFsLW1lZGluaXV0LWhhc2hrYW90LWFjaHJhaW90LTIwMjQtbXVuZ2FzaC5wZGYiLCJ0eXBlIjoiYXR0YWNobWVudCJ9LCJhdWQiOlsidXJuOnNlcnZpY2U6ZmlsZS5kb3dubG9hZCJdLCJleHAiOjE3OTA4Mzk1NDAsImp0aSI6IjNjNWQ0ODZkLWU2NTgtNDYxMy05MTZhLThkZDQxMDhlMTYxMiIsImlhdCI6MTc5MDgwMzU0MCwiaXNzIjoidXJuOmFwcDplNjY2MzBlNzE0ZjA0OTBhYWVhMWYxNDliM2I2OWUzMiIsInN1YiI6InVybjphcHA6ZTY2NjMwZTcxNGYwNDkwYWFlYTFmMTQ5YjNiNjllMzIifQ.sFd-Xp92NcFZlK0yM90KlEZteNGWEhW69usktHsdIgY",
+     "year": null,
+     "iframe": false,
+     "doc": true,
+     "internal": false
+    },
+    {
+     "text": "(iframe)",
+     "href": "https://undefined/",
+     "year": null,
+     "iframe": true,
+     "doc": false,
+     "internal": false
     }
    ]
   },
@@ -355,7 +597,7 @@
    "product": "גמל+ביטוח",
    "status": 200,
    "method": "browser",
-   "text_hash": "e72ddae7d0745ac02da7f10947c669bf7ca47979",
+   "text_hash": "a198636f51aad35854ac4004397357af5ad1f577",
    "text_head": "דלג לתוכן חסכון אישי והשקעות תוכניות חיסכון והשקעה קופת גמל להשקעה מגדל קשת לפרט חיסכון לכל ילד קרן השתלמות השקעות חטיבת ההשקעות שלנו פעולות מהירות צפייה בדוחות שלי שינוי מסלול השקעה כל הדרכים להפקיד כספים משיכת כספים הפקדה נוספת - קופת גמל להשקעה הפקדה נוספת / שינוי גובה הפקדה - קשת הפקדה נוספת - קרן השתלמות עצמאיים בקשת הלוואה חסכון פנסיוני קרנות פנסיה פנסיה אישית פנסיה משלימה פנסיה לעצמאים פרישה לפנסיה מגדל סניוריטי קופות גמל קופת גמל לשכירים קופת גמל לעצמאים קופת גמל להשקעה ביטוח מנהלים מנהלים לשכירים מנהלים לעצמאים פעולות מהירות צפייה בדוחות שלי שינוי מסלול השקעה כל הדרכים להפקיד כספים מש",
    "items": [
     {
@@ -424,6 +666,14 @@
     },
     {
      "text": "(iframe)",
+     "href": "https://www.google.com/recaptcha/api2/anchor?ar=1&k=6LdyfxknAAAAAGHQ3VoF2snRqFp-IcFxcbvkOi4y&co=aHR0cHM6Ly9teS5taWdkYWwuY28uaWw6NDQz&hl=iw&v=kemdRjWFxNjgsGdhRslyEPwU&size=invisible&anchor-ms=20000&execute-ms=30000&cb=9a5z4g8b59pg",
+     "year": null,
+     "iframe": true,
+     "doc": false,
+     "internal": false
+    },
+    {
+     "text": "(iframe)",
      "href": "https://cdn.appdynamics.com/adrum-xd.306ca58e36f81225954b7b84627d2c85.html",
      "year": null,
      "iframe": true,
@@ -436,7 +686,7 @@
    "product": null,
    "status": 200,
    "method": "browser",
-   "text_hash": "08f2a45268b774973b9d19c3da503a5aaba65a05",
+   "text_hash": "f83b98430cf4baa7d328cec6ac2a325277adedfc",
    "text_head": "אתר זה עושה שימוש בטכנולוגיות איסוף מידע כגון עוגיות (Cookies), לרבות על ידי צדדים שלישיים, כדי לספק לך חווית גלישה טובה יותר, וכן לניתוח השימוש ולצרכי פרסום מותאם. המשך הגלישה מהווה את הסכמתך לשימוש זה. למידע נוסף, יש לעיין במדיניות הפרטיות המעודכנת Skip to Main Content חיסכון אישי והשקעות חיסכון פנסיוני ביטוחים תביעות שירותים פעולות כניסה לפורטלים עברית מגדל שלי דף הבית ביטול פוליסה קיימת ביטול פוליסה קיימת ​ לקוח/ה יקר/ה, באפשרותך לשלוח בקשה לביטול פוליסה בחברתינו. ביטול פוליסת ביטוח תשפיע על הכיסוי הביטוחי ועל הרצף הביטוחי שלך, אנו ממליצים לך להתייעץ עם סוכן הביטוח שלך טרם ביצוע הפעולה. רו",
    "items": [
     {
@@ -594,411 +844,6 @@
     }
    ]
   },
-  "https://my.migdal.co.il/investors-relations/stock-info": {
-   "product": "גמל",
-   "status": 200,
-   "method": "browser",
-   "text_hash": "5373648e5c02c8718b15bde549dfd6523670e8a6",
-   "text_head": "דלג לתוכן חסכון אישי והשקעות תוכניות חיסכון והשקעה קופת גמל להשקעה מגדל קשת לפרט חיסכון לכל ילד קרן השתלמות השקעות חטיבת ההשקעות שלנו פעולות מהירות צפייה בדוחות שלי שינוי מסלול השקעה כל הדרכים להפקיד כספים משיכת כספים הפקדה נוספת - קופת גמל להשקעה הפקדה נוספת / שינוי גובה הפקדה - קשת הפקדה נוספת - קרן השתלמות עצמאיים בקשת הלוואה חסכון פנסיוני קרנות פנסיה פנסיה אישית פנסיה משלימה פנסיה לעצמאים פרישה לפנסיה מגדל סניוריטי קופות גמל קופת גמל לשכירים קופת גמל לעצמאים קופת גמל להשקעה ביטוח מנהלים מנהלים לשכירים מנהלים לעצמאים פעולות מהירות צפייה בדוחות שלי שינוי מסלול השקעה כל הדרכים להפקיד כספים מש",
-   "items": [
-    {
-     "text": "יחס כושר פירעון",
-     "href": "https://storageblobwebprod.blob.core.windows.net/mediaprod/14920/solvenci2021.pdf",
-     "year": "2021",
-     "iframe": false,
-     "doc": true,
-     "internal": false
-    },
-    {
-     "text": "קשרי משקיעים",
-     "href": "https://my.migdal.co.il/investors-relations",
-     "year": null,
-     "iframe": false,
-     "doc": false,
-     "internal": true
-    },
-    {
-     "text": "פעולות נוספות",
-     "href": "https://my.migdal.co.il/investors-relations/stock-info",
-     "year": null,
-     "iframe": false,
-     "doc": false,
-     "internal": true
-    },
-    {
-     "text": "מחשבון תשואת מסלולי השקעה",
-     "href": "https://www.migdal.co.il/macro/investment-tracks-yields",
-     "year": null,
-     "iframe": false,
-     "doc": false,
-     "internal": true
-    },
-    {
-     "text": "להורדת אפליקציית מגדל",
-     "href": "https://migdalcustomers.onelink.me/M9ye/3afbdb8",
-     "year": null,
-     "iframe": false,
-     "doc": true,
-     "internal": false
-    },
-    {
-     "text": "חטיבת ההשקעות שלנו",
-     "href": "https://www.migdal.co.il/investment-lobby",
-     "year": null,
-     "iframe": false,
-     "doc": false,
-     "internal": true
-    },
-    {
-     "text": "דוחות כספיים",
-     "href": "https://my.migdal.co.il/about/financial-reports",
-     "year": null,
-     "iframe": false,
-     "doc": false,
-     "internal": true
-    },
-    {
-     "text": "בית השקעות מגדל שוקי הון",
-     "href": "https://www.msh.co.il/",
-     "year": null,
-     "iframe": false,
-     "doc": false,
-     "internal": false
-    },
-    {
-     "text": "ביטול פוליסה קיימת",
-     "href": "https://my.migdal.co.il/support/existing-policy-cancellation",
-     "year": null,
-     "iframe": false,
-     "doc": false,
-     "internal": true
-    },
-    {
-     "text": "בדיקת קיומה פוליסה - צד ג'",
-     "href": "https://my.migdal.co.il/car-insurance/support/third-party-policy-examination?_gl=1*19qvjhg*_gcl_au*MTE4OTg5ODA4MS4xNzcyMDk1NzYwLjExNDYzMDg4NTguMTc3MzIzMTA4NC4xNzczMjMxMDgz*_ga*MTg0MjEyNDE3MS4xNzcyMDMzNzQz*_ga_PK7X7KDXKV*czE3NzMyMzk5NDckbzM2JGcxJHQxNzczMjQwMDgwJGo4JGwwJGgw",
-     "year": null,
-     "iframe": false,
-     "doc": false,
-     "internal": true
-    },
-    {
-     "text": "איתור תנאי פוליסה",
-     "href": "https://my.migdal.co.il/support/policy-terms-arhcive",
-     "year": null,
-     "iframe": false,
-     "doc": false,
-     "internal": true
-    },
-    {
-     "text": "אחריות תאגידית",
-     "href": "https://my.migdal.co.il/investors-relations/corporate-responsibility",
-     "year": null,
-     "iframe": false,
-     "doc": false,
-     "internal": true
-    },
-    {
-     "text": "(iframe)",
-     "href": "https://cdn.appdynamics.com/adrum-xd.306ca58e36f81225954b7b84627d2c85.html",
-     "year": null,
-     "iframe": true,
-     "doc": false,
-     "internal": false
-    }
-   ]
-  },
-  "https://my.migdal.co.il/investors-relations/press-releases": {
-   "product": null,
-   "status": 200,
-   "method": "requests",
-   "text_hash": "fedbd73d756acc0d99aad36c7e34c09acc53c15d",
-   "text_head": "קשרי משקיעים - הודעות לעיתונות - מגדל דלג לתוכן פעולות מהירות פעולות מהירות פעולות מהירות פעולות מהירות פעולות מהירות פעולות מהירות פעולות מהירות כניסה לפורטלים מעסיקים ועסקים מפתחים - בנקאות פתוחה סוכנים מגדל CONNECT קשרי משקיעים עברית עברית English عربي Русский מגדל שלי מגדל שלי כניסה למגדל שלי ביקורך האחרון היה ב - תפריט ראשי אני רוצה לקבל הצעה אונליין התנתקות עברית עברית English عربي Русский דף הבית השקעות - הודעות לעיתונות קשרי משקיעים הודעות לעיתונות מידע בנושא ההשקעות שלנו ונושאים כלליים מגדל ביטוח השקיעה כ- 300 מיליון שקל ב- BayWa Renewable Energy מגדל ביטוח משקיעה בחברות, סטארטאפים וק",
-   "items": [
-    {
-     "text": "רוצה לדעת על עולם ההשקעות שלנו? למידע נוסף",
-     "href": "https://my.migdal.co.il/investments",
-     "year": null,
-     "iframe": false,
-     "doc": false,
-     "internal": true
-    },
-    {
-     "text": "קשרי משקיעים",
-     "href": "https://my.migdal.co.il/investors-relations",
-     "year": null,
-     "iframe": false,
-     "doc": false,
-     "internal": true
-    },
-    {
-     "text": "מגדל מתחייבת להשקעות חברתיות",
-     "href": "https://my.migdal.co.il/investors-relations/social-invesments",
-     "year": null,
-     "iframe": false,
-     "doc": false,
-     "internal": true
-    },
-    {
-     "text": "מגדל ממשיכה להגדיל השקעותיה בתחום האנרגיה המתחדשת",
-     "href": "https://my.migdal.co.il/investors-relations/press-releases",
-     "year": null,
-     "iframe": false,
-     "doc": false,
-     "internal": true
-    },
-    {
-     "text": "מגדל ביטוח משקיעה 800 מיליון ש\"ח בחברת סונדיקס",
-     "href": "https://my.migdal.co.il/investors-relations/sondex",
-     "year": null,
-     "iframe": false,
-     "doc": false,
-     "internal": true
-    },
-    {
-     "text": "אפקון, מגדל ביטוח ומנורה מקימות שותפות ייעודית בתחומי האנרגיות המתחדשות",
-     "href": "https://my.migdal.co.il/investors-relations/renewable-energies",
-     "year": null,
-     "iframe": false,
-     "doc": false,
-     "internal": true
-    }
-   ]
-  },
-  "https://my.migdal.co.il/investors-relations/corporate-responsibility": {
-   "product": null,
-   "status": 200,
-   "method": "requests",
-   "text_hash": "1aa4c6e01b22de63d984e32f5b45b01bc3220983",
-   "text_head": "היבטי אחריות תאגידית במגדל - מגדל דלג לתוכן פעולות מהירות פעולות מהירות פעולות מהירות פעולות מהירות פעולות מהירות פעולות מהירות פעולות מהירות כניסה לפורטלים מעסיקים ועסקים מפתחים - בנקאות פתוחה סוכנים מגדל CONNECT קשרי משקיעים עברית עברית English عربي Русский מגדל שלי מגדל שלי כניסה למגדל שלי ביקורך האחרון היה ב - תפריט ראשי אני רוצה לקבל הצעה אונליין התנתקות עברית עברית English عربي Русский דף הבית היבטי אחריות תאגידית במגדל קשרי משקיעים היבטי אחריות תאגידית במגדל מגדל ביטוח הינה קבוצת הביטוח, פנסיה ופיננסים המובילה בישראל אשר רואה את עצמה כבעלת תפקיד מרכזי בסיוע למיסוד חברה אנושית בריאה ויצי",
-   "items": [
-    {
-     "text": "למעבר לדוח המלא בעברית - אחריות תאגידית במגדל לשנת 2023-2024 >",
-     "href": "https://my.migdal.co.il/media/29035/migdal_esg_mungash.pdf",
-     "year": "2023",
-     "iframe": false,
-     "doc": true,
-     "internal": true
-    },
-    {
-     "text": "< To view the full report in English — Corporate Responsibility at Migdal for 2023–2024",
-     "href": "https://my.migdal.co.il/media/29176/migdal-esg-english-173_mungash.pdf",
-     "year": "2023",
-     "iframe": false,
-     "doc": true,
-     "internal": true
-    },
-    {
-     "text": "למעבר לדוח המלא בעברית - אחריות תאגידית במגדל לשנת 2022 >",
-     "href": "https://my.migdal.co.il/media/23645/151123-corpresp_report-final-pdf.pdf",
-     "year": "2022",
-     "iframe": false,
-     "doc": true,
-     "internal": true
-    },
-    {
-     "text": "יחס כושר פירעון",
-     "href": "https://storageblobwebprod.blob.core.windows.net/mediaprod/14920/solvenci2021.pdf",
-     "year": "2021",
-     "iframe": false,
-     "doc": true,
-     "internal": false
-    },
-    {
-     "text": "קשרי משקיעים",
-     "href": "https://my.migdal.co.il/investors-relations",
-     "year": null,
-     "iframe": false,
-     "doc": false,
-     "internal": true
-    },
-    {
-     "text": "נושאי משרה",
-     "href": "https://my.migdal.co.il/investors-relations/corporate-responsibility",
-     "year": null,
-     "iframe": false,
-     "doc": false,
-     "internal": true
-    },
-    {
-     "text": "מניית מגדל",
-     "href": "https://my.migdal.co.il/investors-relations/stock-info",
-     "year": null,
-     "iframe": false,
-     "doc": false,
-     "internal": true
-    },
-    {
-     "text": "למעבר למדניות סביבתית – היבטים תפעוליים>",
-     "href": "https://storageblobwebprod.blob.core.windows.net/mediaprod/29256/environmental-policy-operational-aspects.pdf",
-     "year": null,
-     "iframe": false,
-     "doc": true,
-     "internal": false
-    },
-    {
-     "text": "דוחות כספיים",
-     "href": "https://my.migdal.co.il/about/financial-reports",
-     "year": null,
-     "iframe": false,
-     "doc": false,
-     "internal": true
-    }
-   ]
-  },
-  "https://my.migdal.co.il/investments": {
-   "product": "פנסיה+ביטוח",
-   "status": 200,
-   "method": "requests",
-   "text_hash": "059e7c02e0ff4a6490c939a08b8569458802781f",
-   "text_head": "לובי השקעות | Migdal top of page Close פתח תפריט ניווט כניסה למגדל שלי - Close חסכון אישי והשקע\u0000ות חסכון פנסיוני ביטוחים תביעות שירותים פעולות אני רוצה לקבל הצעה אונליין ביטוח רכב חסכון פנסיוני ביטח דירה ביטוח נסיעות לחו\"ל התנתקות עברית Close עברית ערבית Pусский English Close Menu Close חיסכון אישי והשקעות ​ ​ חיסכון פנסיוני ​ ​ ביטוחים ​ ​ תביעות ​ ​ שירותים ​ ​ פעולות ​ ​ Menu Close כניסה לפורטלים מעסיקים ועסקים מפתחים- בנקאות פתוחה סוכנים מגדל CONNECT קשרי משקיעים מעסיקים ועסקים מפתחים- בנ\u0000קאות פתוחה סוכנים מגדל CONNECT קשרי משקיעים Menu Close עברית ערבית Pусский English עברית ערבית Pусский",
-   "items": [
-    {
-     "text": "קשרי משקיעים",
-     "href": "https://my.migdal.co.il/investors-relations",
-     "year": null,
-     "iframe": false,
-     "doc": false,
-     "internal": true
-    },
-    {
-     "text": "מהפכת הבינה המלאכותית - איך תשפיע מהפכת הבינה המלאכותית על שוק ההשקעות?",
-     "href": "https://www.migdal.co.il/articles/generative-ai",
-     "year": null,
-     "iframe": false,
-     "doc": false,
-     "internal": true
-    },
-    {
-     "text": "למדיניות הפרטיות",
-     "href": "https://my.migdal.co.il/support/privacy-and-data-security",
-     "year": null,
-     "iframe": false,
-     "doc": false,
-     "internal": true
-    },
-    {
-     "text": "בית השקעות מגדל שוקי הון",
-     "href": "https://www.msh.co.il",
-     "year": null,
-     "iframe": false,
-     "doc": false,
-     "internal": false
-    },
-    {
-     "text": "ביטול פוליסה קיימת",
-     "href": "https://my.migdal.co.il/support/existing-policy-cancellation",
-     "year": null,
-     "iframe": false,
-     "doc": false,
-     "internal": true
-    },
-    {
-     "text": "בדיקת קיומה פוליסה - צד ג'",
-     "href": "https://my.migdal.co.il/car-insurance/support/third-party-policy-examination?_gl=1*19qvjhg*_gcl_au*MTE4OTg5ODA4MS4xNzcyMDk1NzYwLjExNDYzMDg4NTguMTc3MzIzMTA4NC4xNzczMjMxMDgz*_ga*MTg0MjEyNDE3MS4xNzcyMDMzNzQz*_ga_PK7X7KDXKV*czE3NzMyMzk5NDckbzM2JGcxJHQxNzczMjQwMDgwJGo4JGwwJGgw",
-     "year": null,
-     "iframe": false,
-     "doc": false,
-     "internal": true
-    }
-   ]
-  },
-  "https://my.migdal.co.il/about/financial-reports": {
-   "product": null,
-   "status": 200,
-   "method": "requests",
-   "text_hash": null,
-   "text_head": "",
-   "items": []
-  },
-  "https://www.migdal.co.il/regulations/migdal-economic-solvency-reports": {
-   "product": null,
-   "status": 200,
-   "method": "browser",
-   "text_hash": "2550552d01067e8b943b5545ada950ea2b7f5cb1",
-   "text_head": "אתר זה עושה שימוש בטכנולוגיות איסוף מידע כגון עוגיות (Cookies), לרבות על ידי צדדים שלישיים, כדי לספק לך חווית גלישה טובה יותר, וכן לניתוח השימוש ולצרכי פרסום מותאם. המשך הגלישה מהווה את הסכמתך לשימוש זה. למידע נוסף, יש לעיין במדיניות הפרטיות המעודכנת Skip to Main Content חיסכון אישי והשקעות חיסכון פנסיוני ביטוחים תביעות שירותים פעולות כניסה לפורטלים עברית ערבית Pусский English עברית מגדל שלי דף הבית דוח יחס כושר פירעון כלכלי דוחות יחס כושר פירעון כלכלי ​ ​ 2017 2018 2019 2020 2021 2022 2023 2024 2025 דוחות יחס כושר פירעון כלכלי מגדל לשירותך דף הבית אודות מגדל מגדל 360 דרושים תנאי שימוש פרטיות ",
-   "items": [
-    {
-     "text": "קשרי משקיעים",
-     "href": "https://my.migdal.co.il/investors-relations",
-     "year": null,
-     "iframe": false,
-     "doc": false,
-     "internal": true
-    },
-    {
-     "text": "מחשבון תשואת מסלולי השקעה",
-     "href": "https://www.migdal.co.il/macro/investment-tracks-yields",
-     "year": null,
-     "iframe": false,
-     "doc": false,
-     "internal": true
-    },
-    {
-     "text": "להורדת אפליקציית מגדל",
-     "href": "https://migdalcustomers.onelink.me/M9ye/3afbdb8",
-     "year": null,
-     "iframe": false,
-     "doc": true,
-     "internal": false
-    },
-    {
-     "text": "חטיבת ההשקעות שלנו",
-     "href": "https://www.migdal.co.il/investment-lobby",
-     "year": null,
-     "iframe": false,
-     "doc": false,
-     "internal": true
-    },
-    {
-     "text": "בית השקעות מגדל שוקי הון",
-     "href": "https://www.msh.co.il",
-     "year": null,
-     "iframe": false,
-     "doc": false,
-     "internal": false
-    },
-    {
-     "text": "בית השקעות מגדל שוקי הון",
-     "href": "https://www.msh.co.il/",
-     "year": null,
-     "iframe": false,
-     "doc": false,
-     "internal": false
-    },
-    {
-     "text": "ביטול פוליסה קיימת",
-     "href": "https://my.migdal.co.il/support/existing-policy-cancellation",
-     "year": null,
-     "iframe": false,
-     "doc": false,
-     "internal": true
-    },
-    {
-     "text": "בדיקת קיומה פוליסה - צד ג'",
-     "href": "https://my.migdal.co.il/car-insurance/support/third-party-policy-examination?_gl=1*19qvjhg*_gcl_au*MTE4OTg5ODA4MS4xNzcyMDk1NzYwLjExNDYzMDg4NTguMTc3MzIzMTA4NC4xNzczMjMxMDgz*_ga*MTg0MjEyNDE3MS4xNzcyMDMzNzQz*_ga_PK7X7KDXKV*czE3NzMyMzk5NDckbzM2JGcxJHQxNzczMjQwMDgwJGo4JGwwJGgw",
-     "year": null,
-     "iframe": false,
-     "doc": false,
-     "internal": true
-    },
-    {
-     "text": "איתור תנאי פוליסה",
-     "href": "https://my.migdal.co.il/support/policy-terms-arhcive",
-     "year": null,
-     "iframe": false,
-     "doc": false,
-     "internal": true
-    },
-    {
-     "text": "(iframe)",
-     "href": "https://undefined/",
-     "year": null,
-     "iframe": true,
-     "doc": false,
-     "internal": false
-    }
-   ]
-  },
   "https://www.migdal.co.il/investment-lobby": {
    "product": "פנסיה+ביטוח",
    "status": 200,
@@ -1133,7 +978,7 @@
    "product": "גמל",
    "status": 200,
    "method": "browser",
-   "text_hash": "a019bbb5395650c2066ffdde24b95e5592ef6e7c",
+   "text_hash": "d243b69ed7e8e84b6ba84d4128e3d910aedd4e28",
    "text_head": "דלג לתוכן חסכון אישי והשקעות תוכניות חיסכון והשקעה קופת גמל להשקעה מגדל קשת לפרט חיסכון לכל ילד קרן השתלמות השקעות חטיבת ההשקעות שלנו פעולות מהירות צפייה בדוחות שלי שינוי מסלול השקעה כל הדרכים להפקיד כספים משיכת כספים הפקדה נוספת - קופת גמל להשקעה הפקדה נוספת / שינוי גובה הפקדה - קשת הפקדה נוספת - קרן השתלמות עצמאיים בקשת הלוואה חסכון פנסיוני קרנות פנסיה פנסיה אישית פנסיה משלימה פנסיה לעצמאים פרישה לפנסיה מגדל סניוריטי קופות גמל קופת גמל לשכירים קופת גמל לעצמאים קופת גמל להשקעה ביטוח מנהלים מנהלים לשכירים מנהלים לעצמאים פעולות מהירות צפייה בדוחות שלי שינוי מסלול השקעה כל הדרכים להפקיד כספים מש",
    "items": [
     {
@@ -1251,6 +1096,14 @@
     {
      "text": "לצפייה",
      "href": "https://storageblobwebprod.blob.core.windows.net/mediaprod/27115/group-life-insurance-policy-for-state-employees-2025.pdf",
+     "year": "2025",
+     "iframe": false,
+     "doc": true,
+     "internal": false
+    },
+    {
+     "text": "לצפייה",
+     "href": "https://storageblobwebprod.blob.core.windows.net/mediaprod/26029/polisa_lebituah_rehev_ovdey_medina_2025_mungash.pdf",
      "year": "2025",
      "iframe": false,
      "doc": true,
@@ -4003,6 +3856,70 @@
     {
      "text": "לצפייה",
      "href": "https://storageblobwebprod.blob.core.windows.net/mediaprod/29080/mashkanta_mekatseret_haim_hangasha.pdf",
+     "year": null,
+     "iframe": false,
+     "doc": true,
+     "internal": false
+    },
+    {
+     "text": "לצפייה",
+     "href": "https://storageblobwebprod.blob.core.windows.net/mediaprod/7990/510540183.pdf",
+     "year": null,
+     "iframe": false,
+     "doc": true,
+     "internal": false
+    },
+    {
+     "text": "לצפייה",
+     "href": "https://storageblobwebprod.blob.core.windows.net/mediaprod/7993/510900183.pdf",
+     "year": null,
+     "iframe": false,
+     "doc": true,
+     "internal": false
+    },
+    {
+     "text": "לצפייה",
+     "href": "https://storageblobwebprod.blob.core.windows.net/mediaprod/7996/510910183.pdf",
+     "year": null,
+     "iframe": false,
+     "doc": true,
+     "internal": false
+    },
+    {
+     "text": "לצפייה",
+     "href": "https://storageblobwebprod.blob.core.windows.net/mediaprod/7999/510930183.pdf",
+     "year": null,
+     "iframe": false,
+     "doc": true,
+     "internal": false
+    },
+    {
+     "text": "לצפייה",
+     "href": "https://storageblobwebprod.blob.core.windows.net/mediaprod/8067/512850183.pdf",
+     "year": null,
+     "iframe": false,
+     "doc": true,
+     "internal": false
+    },
+    {
+     "text": "לצפייה",
+     "href": "https://storageblobwebprod.blob.core.windows.net/mediaprod/8151/301_304_91.pdf",
+     "year": null,
+     "iframe": false,
+     "doc": true,
+     "internal": false
+    },
+    {
+     "text": "לצפייה",
+     "href": "https://storageblobwebprod.blob.core.windows.net/mediaprod/8161/307_24_4.pdf",
+     "year": null,
+     "iframe": false,
+     "doc": true,
+     "internal": false
+    },
+    {
+     "text": "לצפייה",
+     "href": "https://storageblobwebprod.blob.core.windows.net/mediaprod/8197/mitanim_yami.pdf",
      "year": null,
      "iframe": false,
      "doc": true,
@@ -12706,6 +12623,500 @@
     }
    ]
   },
+  "https://undefined/": {
+   "product": null,
+   "status": "ERR",
+   "method": "requests",
+   "text_hash": null,
+   "text_head": "",
+   "items": []
+  },
+  "https://my.migdal.co.il/investors-relations/stock-info": {
+   "product": "גמל",
+   "status": 200,
+   "method": "browser",
+   "text_hash": "5373648e5c02c8718b15bde549dfd6523670e8a6",
+   "text_head": "דלג לתוכן חסכון אישי והשקעות תוכניות חיסכון והשקעה קופת גמל להשקעה מגדל קשת לפרט חיסכון לכל ילד קרן השתלמות השקעות חטיבת ההשקעות שלנו פעולות מהירות צפייה בדוחות שלי שינוי מסלול השקעה כל הדרכים להפקיד כספים משיכת כספים הפקדה נוספת - קופת גמל להשקעה הפקדה נוספת / שינוי גובה הפקדה - קשת הפקדה נוספת - קרן השתלמות עצמאיים בקשת הלוואה חסכון פנסיוני קרנות פנסיה פנסיה אישית פנסיה משלימה פנסיה לעצמאים פרישה לפנסיה מגדל סניוריטי קופות גמל קופת גמל לשכירים קופת גמל לעצמאים קופת גמל להשקעה ביטוח מנהלים מנהלים לשכירים מנהלים לעצמאים פעולות מהירות צפייה בדוחות שלי שינוי מסלול השקעה כל הדרכים להפקיד כספים מש",
+   "items": [
+    {
+     "text": "יחס כושר פירעון",
+     "href": "https://storageblobwebprod.blob.core.windows.net/mediaprod/14920/solvenci2021.pdf",
+     "year": "2021",
+     "iframe": false,
+     "doc": true,
+     "internal": false
+    },
+    {
+     "text": "קשרי משקיעים",
+     "href": "https://my.migdal.co.il/investors-relations",
+     "year": null,
+     "iframe": false,
+     "doc": false,
+     "internal": true
+    },
+    {
+     "text": "פעולות נוספות",
+     "href": "https://my.migdal.co.il/investors-relations/stock-info",
+     "year": null,
+     "iframe": false,
+     "doc": false,
+     "internal": true
+    },
+    {
+     "text": "מחשבון תשואת מסלולי השקעה",
+     "href": "https://www.migdal.co.il/macro/investment-tracks-yields",
+     "year": null,
+     "iframe": false,
+     "doc": false,
+     "internal": true
+    },
+    {
+     "text": "להורדת אפליקציית מגדל",
+     "href": "https://migdalcustomers.onelink.me/M9ye/3afbdb8",
+     "year": null,
+     "iframe": false,
+     "doc": true,
+     "internal": false
+    },
+    {
+     "text": "חטיבת ההשקעות שלנו",
+     "href": "https://www.migdal.co.il/investment-lobby",
+     "year": null,
+     "iframe": false,
+     "doc": false,
+     "internal": true
+    },
+    {
+     "text": "דוחות כספיים",
+     "href": "https://my.migdal.co.il/about/financial-reports",
+     "year": null,
+     "iframe": false,
+     "doc": false,
+     "internal": true
+    },
+    {
+     "text": "בית השקעות מגדל שוקי הון",
+     "href": "https://www.msh.co.il/",
+     "year": null,
+     "iframe": false,
+     "doc": false,
+     "internal": false
+    },
+    {
+     "text": "ביטול פוליסה קיימת",
+     "href": "https://my.migdal.co.il/support/existing-policy-cancellation",
+     "year": null,
+     "iframe": false,
+     "doc": false,
+     "internal": true
+    },
+    {
+     "text": "בדיקת קיומה פוליסה - צד ג'",
+     "href": "https://my.migdal.co.il/car-insurance/support/third-party-policy-examination?_gl=1*19qvjhg*_gcl_au*MTE4OTg5ODA4MS4xNzcyMDk1NzYwLjExNDYzMDg4NTguMTc3MzIzMTA4NC4xNzczMjMxMDgz*_ga*MTg0MjEyNDE3MS4xNzcyMDMzNzQz*_ga_PK7X7KDXKV*czE3NzMyMzk5NDckbzM2JGcxJHQxNzczMjQwMDgwJGo4JGwwJGgw",
+     "year": null,
+     "iframe": false,
+     "doc": false,
+     "internal": true
+    },
+    {
+     "text": "איתור תנאי פוליסה",
+     "href": "https://my.migdal.co.il/support/policy-terms-arhcive",
+     "year": null,
+     "iframe": false,
+     "doc": false,
+     "internal": true
+    },
+    {
+     "text": "אחריות תאגידית",
+     "href": "https://my.migdal.co.il/investors-relations/corporate-responsibility",
+     "year": null,
+     "iframe": false,
+     "doc": false,
+     "internal": true
+    },
+    {
+     "text": "(iframe)",
+     "href": "https://cdn.appdynamics.com/adrum-xd.306ca58e36f81225954b7b84627d2c85.html",
+     "year": null,
+     "iframe": true,
+     "doc": false,
+     "internal": false
+    }
+   ]
+  },
+  "https://my.migdal.co.il/investors-relations/press-releases": {
+   "product": null,
+   "status": 200,
+   "method": "requests",
+   "text_hash": "fedbd73d756acc0d99aad36c7e34c09acc53c15d",
+   "text_head": "קשרי משקיעים - הודעות לעיתונות - מגדל דלג לתוכן פעולות מהירות פעולות מהירות פעולות מהירות פעולות מהירות פעולות מהירות פעולות מהירות פעולות מהירות כניסה לפורטלים מעסיקים ועסקים מפתחים - בנקאות פתוחה סוכנים מגדל CONNECT קשרי משקיעים עברית עברית English عربي Русский מגדל שלי מגדל שלי כניסה למגדל שלי ביקורך האחרון היה ב - תפריט ראשי אני רוצה לקבל הצעה אונליין התנתקות עברית עברית English عربي Русский דף הבית השקעות - הודעות לעיתונות קשרי משקיעים הודעות לעיתונות מידע בנושא ההשקעות שלנו ונושאים כלליים מגדל ביטוח השקיעה כ- 300 מיליון שקל ב- BayWa Renewable Energy מגדל ביטוח משקיעה בחברות, סטארטאפים וק",
+   "items": [
+    {
+     "text": "רוצה לדעת על עולם ההשקעות שלנו? למידע נוסף",
+     "href": "https://my.migdal.co.il/investments",
+     "year": null,
+     "iframe": false,
+     "doc": false,
+     "internal": true
+    },
+    {
+     "text": "קשרי משקיעים",
+     "href": "https://my.migdal.co.il/investors-relations",
+     "year": null,
+     "iframe": false,
+     "doc": false,
+     "internal": true
+    },
+    {
+     "text": "מגדל מתחייבת להשקעות חברתיות",
+     "href": "https://my.migdal.co.il/investors-relations/social-invesments",
+     "year": null,
+     "iframe": false,
+     "doc": false,
+     "internal": true
+    },
+    {
+     "text": "מגדל ממשיכה להגדיל השקעותיה בתחום האנרגיה המתחדשת",
+     "href": "https://my.migdal.co.il/investors-relations/press-releases",
+     "year": null,
+     "iframe": false,
+     "doc": false,
+     "internal": true
+    },
+    {
+     "text": "מגדל ביטוח משקיעה 800 מיליון ש\"ח בחברת סונדיקס",
+     "href": "https://my.migdal.co.il/investors-relations/sondex",
+     "year": null,
+     "iframe": false,
+     "doc": false,
+     "internal": true
+    },
+    {
+     "text": "אפקון, מגדל ביטוח ומנורה מקימות שותפות ייעודית בתחומי האנרגיות המתחדשות",
+     "href": "https://my.migdal.co.il/investors-relations/renewable-energies",
+     "year": null,
+     "iframe": false,
+     "doc": false,
+     "internal": true
+    }
+   ]
+  },
+  "https://my.migdal.co.il/investors-relations/corporate-responsibility": {
+   "product": null,
+   "status": 200,
+   "method": "requests",
+   "text_hash": "1aa4c6e01b22de63d984e32f5b45b01bc3220983",
+   "text_head": "היבטי אחריות תאגידית במגדל - מגדל דלג לתוכן פעולות מהירות פעולות מהירות פעולות מהירות פעולות מהירות פעולות מהירות פעולות מהירות פעולות מהירות כניסה לפורטלים מעסיקים ועסקים מפתחים - בנקאות פתוחה סוכנים מגדל CONNECT קשרי משקיעים עברית עברית English عربي Русский מגדל שלי מגדל שלי כניסה למגדל שלי ביקורך האחרון היה ב - תפריט ראשי אני רוצה לקבל הצעה אונליין התנתקות עברית עברית English عربي Русский דף הבית היבטי אחריות תאגידית במגדל קשרי משקיעים היבטי אחריות תאגידית במגדל מגדל ביטוח הינה קבוצת הביטוח, פנסיה ופיננסים המובילה בישראל אשר רואה את עצמה כבעלת תפקיד מרכזי בסיוע למיסוד חברה אנושית בריאה ויצי",
+   "items": [
+    {
+     "text": "למעבר לדוח המלא בעברית - אחריות תאגידית במגדל לשנת 2023-2024 >",
+     "href": "https://my.migdal.co.il/media/29035/migdal_esg_mungash.pdf",
+     "year": "2023",
+     "iframe": false,
+     "doc": true,
+     "internal": true
+    },
+    {
+     "text": "< To view the full report in English — Corporate Responsibility at Migdal for 2023–2024",
+     "href": "https://my.migdal.co.il/media/29176/migdal-esg-english-173_mungash.pdf",
+     "year": "2023",
+     "iframe": false,
+     "doc": true,
+     "internal": true
+    },
+    {
+     "text": "למעבר לדוח המלא בעברית - אחריות תאגידית במגדל לשנת 2022 >",
+     "href": "https://my.migdal.co.il/media/23645/151123-corpresp_report-final-pdf.pdf",
+     "year": "2022",
+     "iframe": false,
+     "doc": true,
+     "internal": true
+    },
+    {
+     "text": "יחס כושר פירעון",
+     "href": "https://storageblobwebprod.blob.core.windows.net/mediaprod/14920/solvenci2021.pdf",
+     "year": "2021",
+     "iframe": false,
+     "doc": true,
+     "internal": false
+    },
+    {
+     "text": "קשרי משקיעים",
+     "href": "https://my.migdal.co.il/investors-relations",
+     "year": null,
+     "iframe": false,
+     "doc": false,
+     "internal": true
+    },
+    {
+     "text": "נושאי משרה",
+     "href": "https://my.migdal.co.il/investors-relations/corporate-responsibility",
+     "year": null,
+     "iframe": false,
+     "doc": false,
+     "internal": true
+    },
+    {
+     "text": "מניית מגדל",
+     "href": "https://my.migdal.co.il/investors-relations/stock-info",
+     "year": null,
+     "iframe": false,
+     "doc": false,
+     "internal": true
+    },
+    {
+     "text": "למעבר למדניות סביבתית – היבטים תפעוליים>",
+     "href": "https://storageblobwebprod.blob.core.windows.net/mediaprod/29256/environmental-policy-operational-aspects.pdf",
+     "year": null,
+     "iframe": false,
+     "doc": true,
+     "internal": false
+    },
+    {
+     "text": "דוחות כספיים",
+     "href": "https://my.migdal.co.il/about/financial-reports",
+     "year": null,
+     "iframe": false,
+     "doc": false,
+     "internal": true
+    }
+   ]
+  },
+  "https://my.migdal.co.il/investments": {
+   "product": "פנסיה+ביטוח",
+   "status": 200,
+   "method": "requests",
+   "text_hash": "059e7c02e0ff4a6490c939a08b8569458802781f",
+   "text_head": "לובי השקעות | Migdal top of page Close פתח תפריט ניווט כניסה למגדל שלי - Close חסכון אישי והשקע\u0000ות חסכון פנסיוני ביטוחים תביעות שירותים פעולות אני רוצה לקבל הצעה אונליין ביטוח רכב חסכון פנסיוני ביטח דירה ביטוח נסיעות לחו\"ל התנתקות עברית Close עברית ערבית Pусский English Close Menu Close חיסכון אישי והשקעות ​ ​ חיסכון פנסיוני ​ ​ ביטוחים ​ ​ תביעות ​ ​ שירותים ​ ​ פעולות ​ ​ Menu Close כניסה לפורטלים מעסיקים ועסקים מפתחים- בנקאות פתוחה סוכנים מגדל CONNECT קשרי משקיעים מעסיקים ועסקים מפתחים- בנ\u0000קאות פתוחה סוכנים מגדל CONNECT קשרי משקיעים Menu Close עברית ערבית Pусский English עברית ערבית Pусский",
+   "items": [
+    {
+     "text": "קשרי משקיעים",
+     "href": "https://my.migdal.co.il/investors-relations",
+     "year": null,
+     "iframe": false,
+     "doc": false,
+     "internal": true
+    },
+    {
+     "text": "מהפכת הבינה המלאכותית - איך תשפיע מהפכת הבינה המלאכותית על שוק ההשקעות?",
+     "href": "https://www.migdal.co.il/articles/generative-ai",
+     "year": null,
+     "iframe": false,
+     "doc": false,
+     "internal": true
+    },
+    {
+     "text": "למדיניות הפרטיות",
+     "href": "https://my.migdal.co.il/support/privacy-and-data-security",
+     "year": null,
+     "iframe": false,
+     "doc": false,
+     "internal": true
+    },
+    {
+     "text": "בית השקעות מגדל שוקי הון",
+     "href": "https://www.msh.co.il",
+     "year": null,
+     "iframe": false,
+     "doc": false,
+     "internal": false
+    },
+    {
+     "text": "ביטול פוליסה קיימת",
+     "href": "https://my.migdal.co.il/support/existing-policy-cancellation",
+     "year": null,
+     "iframe": false,
+     "doc": false,
+     "internal": true
+    },
+    {
+     "text": "בדיקת קיומה פוליסה - צד ג'",
+     "href": "https://my.migdal.co.il/car-insurance/support/third-party-policy-examination?_gl=1*19qvjhg*_gcl_au*MTE4OTg5ODA4MS4xNzcyMDk1NzYwLjExNDYzMDg4NTguMTc3MzIzMTA4NC4xNzczMjMxMDgz*_ga*MTg0MjEyNDE3MS4xNzcyMDMzNzQz*_ga_PK7X7KDXKV*czE3NzMyMzk5NDckbzM2JGcxJHQxNzczMjQwMDgwJGo4JGwwJGgw",
+     "year": null,
+     "iframe": false,
+     "doc": false,
+     "internal": true
+    }
+   ]
+  },
+  "https://my.migdal.co.il/about/financial-reports": {
+   "product": null,
+   "status": 200,
+   "method": "browser",
+   "text_hash": null,
+   "text_head": "",
+   "items": [
+    {
+     "text": "קשרי משקיעים",
+     "href": "https://my.migdal.co.il/investors-relations",
+     "year": null,
+     "iframe": false,
+     "doc": false,
+     "internal": true
+    },
+    {
+     "text": "מחשבון תשואת מסלולי השקעה",
+     "href": "https://www.migdal.co.il/macro/investment-tracks-yields",
+     "year": null,
+     "iframe": false,
+     "doc": false,
+     "internal": true
+    },
+    {
+     "text": "להורדת אפליקציית מגדל",
+     "href": "https://migdalcustomers.onelink.me/M9ye/3afbdb8",
+     "year": null,
+     "iframe": false,
+     "doc": true,
+     "internal": false
+    },
+    {
+     "text": "חטיבת ההשקעות שלנו",
+     "href": "https://www.migdal.co.il/investment-lobby",
+     "year": null,
+     "iframe": false,
+     "doc": false,
+     "internal": true
+    },
+    {
+     "text": "בית השקעות מגדל שוקי הון",
+     "href": "https://www.msh.co.il/",
+     "year": null,
+     "iframe": false,
+     "doc": false,
+     "internal": false
+    },
+    {
+     "text": "ביטול פוליסה קיימת",
+     "href": "https://my.migdal.co.il/support/existing-policy-cancellation",
+     "year": null,
+     "iframe": false,
+     "doc": false,
+     "internal": true
+    },
+    {
+     "text": "בדיקת קיומה פוליסה - צד ג'",
+     "href": "https://my.migdal.co.il/car-insurance/support/third-party-policy-examination?_gl=1*19qvjhg*_gcl_au*MTE4OTg5ODA4MS4xNzcyMDk1NzYwLjExNDYzMDg4NTguMTc3MzIzMTA4NC4xNzczMjMxMDgz*_ga*MTg0MjEyNDE3MS4xNzcyMDMzNzQz*_ga_PK7X7KDXKV*czE3NzMyMzk5NDckbzM2JGcxJHQxNzczMjQwMDgwJGo4JGwwJGgw",
+     "year": null,
+     "iframe": false,
+     "doc": false,
+     "internal": true
+    },
+    {
+     "text": "איתור תנאי פוליסה",
+     "href": "https://my.migdal.co.il/support/policy-terms-arhcive",
+     "year": null,
+     "iframe": false,
+     "doc": false,
+     "internal": true
+    },
+    {
+     "text": "(network file)",
+     "href": "https://download-files.wixmp.com/ugd/571a7f_c3592225bba74e7085c16b43ed8217cf.pdf?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJvYmoiOltbeyJwYXRoIjoiL3VnZC81NzFhN2ZfYzM1OTIyMjViYmE3NGU3MDg1YzE2YjQzZWQ4MjE3Y2YucGRmIn1dXSwiZGlzIjp7ImZpbGVuYW1lIjoibWlnZGFsLWluc3VyYW5jZV8wNi0yMDI2X2lzYS5wZGYiLCJ0eXBlIjoiYXR0YWNobWVudCJ9LCJhdWQiOlsidXJuOnNlcnZpY2U6ZmlsZS5kb3dubG9hZCJdLCJleHAiOjE3OTA4Mzk4MzIsImp0aSI6IjZkNzJmMTdlLTBkNmYtNDc1Yi1hOGZiLTE0YTU3NGE0ZmNkNiIsImlhdCI6MTc5MDgwMzgzMiwiaXNzIjoidXJuOmFwcDplNjY2MzBlNzE0ZjA0OTBhYWVhMWYxNDliM2I2OWUzMiIsInN1YiI6InVybjphcHA6ZTY2NjMwZTcxNGYwNDkwYWFlYTFmMTQ5YjNiNjllMzIifQ.Zdj689dKz5bV_WY7ZkwgZc-D3-7e3yZt1CXiGaExTcs",
+     "year": null,
+     "iframe": false,
+     "doc": true,
+     "internal": false
+    },
+    {
+     "text": "(iframe)",
+     "href": "https://undefined/",
+     "year": null,
+     "iframe": true,
+     "doc": false,
+     "internal": false
+    }
+   ]
+  },
+  "https://www.migdal.co.il/regulations/migdal-economic-solvency-reports": {
+   "product": null,
+   "status": 200,
+   "method": "browser",
+   "text_hash": "bd49d4cef0755bb820b5a97a9a08447ed25f2ea2",
+   "text_head": "אתר זה עושה שימוש בטכנולוגיות איסוף מידע כגון עוגיות (Cookies), לרבות על ידי צדדים שלישיים, כדי לספק לך חווית גלישה טובה יותר, וכן לניתוח השימוש ולצרכי פרסום מותאם. המשך הגלישה מהווה את הסכמתך לשימוש זה. למידע נוסף, יש לעיין במדיניות הפרטיות המעודכנת Skip to Main Content חיסכון אישי והשקעות חיסכון פנסיוני ביטוחים תביעות שירותים פעולות כניסה לפורטלים עברית ערבית Pусский English עברית מגדל שלי דף הבית דוח יחס כושר פירעון כלכלי דוחות יחס כושר פירעון כלכלי ​ ​ 2017 2018 2019 2020 2021 2022 2023 2024 2025 דוחות יחס כושר פירעון כלכלי מגדל לשירותך דף הבית אודות מגדל מגדל 360 דרושים תנאי שימוש פרטיות ",
+   "items": [
+    {
+     "text": "קשרי משקיעים",
+     "href": "https://my.migdal.co.il/investors-relations",
+     "year": null,
+     "iframe": false,
+     "doc": false,
+     "internal": true
+    },
+    {
+     "text": "מחשבון תשואת מסלולי השקעה",
+     "href": "https://www.migdal.co.il/macro/investment-tracks-yields",
+     "year": null,
+     "iframe": false,
+     "doc": false,
+     "internal": true
+    },
+    {
+     "text": "להורדת אפליקציית מגדל",
+     "href": "https://migdalcustomers.onelink.me/M9ye/3afbdb8",
+     "year": null,
+     "iframe": false,
+     "doc": true,
+     "internal": false
+    },
+    {
+     "text": "חטיבת ההשקעות שלנו",
+     "href": "https://www.migdal.co.il/investment-lobby",
+     "year": null,
+     "iframe": false,
+     "doc": false,
+     "internal": true
+    },
+    {
+     "text": "בית השקעות מגדל שוקי הון",
+     "href": "https://www.msh.co.il",
+     "year": null,
+     "iframe": false,
+     "doc": false,
+     "internal": false
+    },
+    {
+     "text": "בית השקעות מגדל שוקי הון",
+     "href": "https://www.msh.co.il/",
+     "year": null,
+     "iframe": false,
+     "doc": false,
+     "internal": false
+    },
+    {
+     "text": "ביטול פוליסה קיימת",
+     "href": "https://my.migdal.co.il/support/existing-policy-cancellation",
+     "year": null,
+     "iframe": false,
+     "doc": false,
+     "internal": true
+    },
+    {
+     "text": "בדיקת קיומה פוליסה - צד ג'",
+     "href": "https://my.migdal.co.il/car-insurance/support/third-party-policy-examination?_gl=1*19qvjhg*_gcl_au*MTE4OTg5ODA4MS4xNzcyMDk1NzYwLjExNDYzMDg4NTguMTc3MzIzMTA4NC4xNzczMjMxMDgz*_ga*MTg0MjEyNDE3MS4xNzcyMDMzNzQz*_ga_PK7X7KDXKV*czE3NzMyMzk5NDckbzM2JGcxJHQxNzczMjQwMDgwJGo4JGwwJGgw",
+     "year": null,
+     "iframe": false,
+     "doc": false,
+     "internal": true
+    },
+    {
+     "text": "איתור תנאי פוליסה",
+     "href": "https://my.migdal.co.il/support/policy-terms-arhcive",
+     "year": null,
+     "iframe": false,
+     "doc": false,
+     "internal": true
+    },
+    {
+     "text": "(iframe)",
+     "href": "https://undefined/",
+     "year": null,
+     "iframe": true,
+     "doc": false,
+     "internal": false
+    }
+   ]
+  },
   "https://cdn.appdynamics.com/adrum-xd.306ca58e36f81225954b7b84627d2c85.html": {
    "product": null,
    "status": 200,
@@ -12714,13 +13125,159 @@
    "text_head": "Ready",
    "items": []
   },
-  "https://undefined/": {
+  "https://www.google.com/recaptcha/api2/anchor?ar=1&k=6LdyfxknAAAAAGHQ3VoF2snRqFp-IcFxcbvkOi4y&co=aHR0cHM6Ly9teS5taWdkYWwuY28uaWw6NDQz&hl=iw&v=kemdRjWFxNjgsGdhRslyEPwU&size=invisible&anchor-ms=20000&execute-ms=30000&cb=9a5z4g8b59pg": {
    "product": null,
-   "status": "ERR",
+   "status": 200,
    "method": "requests",
-   "text_hash": null,
-   "text_head": "",
+   "text_hash": "82a8ff9055261692ff737c456930c3cec0718494",
+   "text_head": "reCAPTCHA",
    "items": []
+  },
+  "https://www.migdal.co.il/articles/generative-ai": {
+   "product": "פנסיה+ביטוח",
+   "status": 200,
+   "method": "requests",
+   "text_hash": "c9a5cb53fe9dc9e470256027d0c369e054349f0f",
+   "text_head": "איך תשפיע מהפכת הבינה המלאכותית על שוק ההשקעות? top of page Close פתח תפריט ניווט כניסה למגדל שלי - Close חסכון אישי והשקע\u0000ות חסכון פנסיוני ביטוחים תביעות שירותים פעולות אני רוצה לקבל הצעה אונליין ביטוח רכב חסכון פנסיוני ביטח דירה ביטוח נסיעות לחו\"ל התנתקות עברית Close עברית ערבית Pусский English Close Menu Close חיסכון אישי והשקעות ​ ​ חיסכון פנסיוני ​ ​ ביטוחים ​ ​ תביעות ​ ​ שירותים ​ ​ פעולות ​ ​ Menu Close כניסה לפורטלים מעסיקים ועסקים מפתחים- בנקאות פתוחה סוכנים מגדל CONNECT קשרי משקיעים מעסיקים ועסקים מפתחים- בנ\u0000קאות פתוחה סוכנים מגדל CONNECT קשרי משקיעים Menu Close עברית ערבית Pусский ",
+   "items": [
+    {
+     "text": "קשרי משקיעים",
+     "href": "https://my.migdal.co.il/investors-relations",
+     "year": null,
+     "iframe": false,
+     "doc": false,
+     "internal": true
+    },
+    {
+     "text": "למדיניות הפרטיות",
+     "href": "https://my.migdal.co.il/support/privacy-and-data-security",
+     "year": null,
+     "iframe": false,
+     "doc": false,
+     "internal": true
+    },
+    {
+     "text": "היחס לדלקים פוסיליים במסגרת מדיניות השקעות ESG של מגדל",
+     "href": "https://www.migdal.co.il/articles/fossil-gas",
+     "year": null,
+     "iframe": false,
+     "doc": false,
+     "internal": true
+    },
+    {
+     "text": "בשוק ההשקעות",
+     "href": "https://my.migdal.co.il/investments_experts?_gl=1*ucfo7h*_gcl_au*Njg0NDYxOTY4LjE3NTkwNjQ2NzM.*_ga*MTQzMDI3OTI0OS4xNzU5MDY0Njc0*_ga_PK7X7KDXKV*czE3NTkwNjQ2NzckbzEkZzEkdDE3NTkwNjU5OTQkajQxJGwwJGgw",
+     "year": null,
+     "iframe": false,
+     "doc": false,
+     "internal": true
+    },
+    {
+     "text": "בית השקעות מגדל שוקי הון",
+     "href": "https://www.msh.co.il",
+     "year": null,
+     "iframe": false,
+     "doc": false,
+     "internal": false
+    },
+    {
+     "text": "ביטול פוליסה קיימת",
+     "href": "https://my.migdal.co.il/support/existing-policy-cancellation",
+     "year": null,
+     "iframe": false,
+     "doc": false,
+     "internal": true
+    },
+    {
+     "text": "בדיקת קיומה פוליסה - צד ג'",
+     "href": "https://my.migdal.co.il/car-insurance/support/third-party-policy-examination?_gl=1*19qvjhg*_gcl_au*MTE4OTg5ODA4MS4xNzcyMDk1NzYwLjExNDYzMDg4NTguMTc3MzIzMTA4NC4xNzczMjMxMDgz*_ga*MTg0MjEyNDE3MS4xNzcyMDMzNzQz*_ga_PK7X7KDXKV*czE3NzMyMzk5NDckbzM2JGcxJHQxNzczMjQwMDgwJGo4JGwwJGgw",
+     "year": null,
+     "iframe": false,
+     "doc": false,
+     "internal": true
+    }
+   ]
+  },
+  "https://www.migdal.co.il/regulations/life-insurance-investments-tracks": {
+   "product": "פנסיה+ביטוח",
+   "status": 200,
+   "method": "requests",
+   "text_hash": "5638378b412b2975f4f19274f91e1eac1fdfdd3e",
+   "text_head": "מסלולי השקעה - ביטוח חיים עם חיסכון - מגדל top of page Close פתח תפריט ניווט כניסה למגדל שלי - Close חסכון אישי והשקע\u0000ות חסכון פנסיוני ביטוחים תביעות שירותים פעולות אני רוצה לקבל הצעה אונליין ביטוח רכב חסכון פנסיוני ביטח דירה ביטוח נסיעות לחו\"ל התנתקות עברית Close עברית ערבית Pусский English Close Menu Close חיסכון אישי והשקעות ​ ​ חיסכון פנסיוני ​ ​ ביטוחים ​ ​ תביעות ​ ​ שירותים ​ ​ פעולות ​ ​ Menu Close כניסה לפורטלים מעסיקים ועסקים מפתחים- בנקאות פתוחה סוכנים מגדל CONNECT קשרי משקיעים מעסיקים ועסקים מפתחים- בנ\u0000קאות פתוחה סוכנים מגדל CONNECT קשרי משקיעים Menu Close עברית ערבית Pусский Engli",
+   "items": [
+    {
+     "text": "לתעודת הכשר בד\"ץ העדה החרדית >",
+     "href": "https://my.migdal.co.il/media/29012/bedetz-haada-hachardit-2026.pdf",
+     "year": "2026",
+     "iframe": false,
+     "doc": true,
+     "internal": true
+    },
+    {
+     "text": "",
+     "href": "https://my.migdal.co.il/media/25489/badatz_2024.pdf",
+     "year": "2024",
+     "iframe": false,
+     "doc": true,
+     "internal": true
+    },
+    {
+     "text": "קשרי משקיעים",
+     "href": "https://my.migdal.co.il/investors-relations",
+     "year": null,
+     "iframe": false,
+     "doc": false,
+     "internal": true
+    },
+    {
+     "text": "לתעודת הכשר של \"תשואה כהלכה\" למסלול עוקב מדדי מניות >",
+     "href": "https://my.migdal.co.il/media/25309/kosher-migdal-halacha-n185-mungash.pdf",
+     "year": null,
+     "iframe": false,
+     "doc": true,
+     "internal": true
+    },
+    {
+     "text": "לתעודת הכשר של \"תשואה כהלכה\" למסלול עוקב מדד S&P500 >",
+     "href": "https://my.migdal.co.il/media/25433/tehudat-achsher-tesuha-kehalacha-mungash.pdf",
+     "year": null,
+     "iframe": false,
+     "doc": true,
+     "internal": true
+    },
+    {
+     "text": "לתעודת הכשר בד\"ץ בית יוסף >",
+     "href": "https://my.migdal.co.il/media/29009/kosher_beit_yosef.pdf",
+     "year": null,
+     "iframe": false,
+     "doc": true,
+     "internal": true
+    },
+    {
+     "text": "בית השקעות מגדל שוקי הון",
+     "href": "https://www.msh.co.il",
+     "year": null,
+     "iframe": false,
+     "doc": false,
+     "internal": false
+    },
+    {
+     "text": "ביטול פוליסה קיימת",
+     "href": "https://my.migdal.co.il/support/existing-policy-cancellation",
+     "year": null,
+     "iframe": false,
+     "doc": false,
+     "internal": true
+    },
+    {
+     "text": "בדיקת קיומה פוליסה - צד ג'",
+     "href": "https://my.migdal.co.il/car-insurance/support/third-party-policy-examination?_gl=1*19qvjhg*_gcl_au*MTE4OTg5ODA4MS4xNzcyMDk1NzYwLjExNDYzMDg4NTguMTc3MzIzMTA4NC4xNzczMjMxMDgz*_ga*MTg0MjEyNDE3MS4xNzcyMDMzNzQz*_ga_PK7X7KDXKV*czE3NzMyMzk5NDckbzM2JGcxJHQxNzczMjQwMDgwJGo4JGwwJGgw",
+     "year": null,
+     "iframe": false,
+     "doc": false,
+     "internal": true
+    }
+   ]
   }
  }
 }
