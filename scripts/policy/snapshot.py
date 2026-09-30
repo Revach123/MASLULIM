@@ -43,6 +43,10 @@ def items_from_anchors(anchors, page_url, dom):
         href = urldefrag(urljoin(page_url, a["href"]))[0]
         text = re.sub(r"\s+", " ", a["text"]).strip()
         is_iframe = text == "(iframe)"
+        if a.get("local"):
+            out[href] = {"text": text, "href": href, "year": year_of(text + " " + unquote(href)), "iframe": False,
+                         "doc": True, "internal": True, "local": a["local"]}
+            continue
         if not href.startswith("http") or not (is_iframe or keep_item(text, href)):
             continue
         out[href] = {"text": text, "href": href, "year": year_of(text + " " + unquote(href)), "iframe": is_iframe,
@@ -134,6 +138,29 @@ def fetch_browser(pw, url):
                 pass
         pg.wait_for_timeout(1000)
         collect()
+        # כפתורי "הורדה" שלא מצביעים לקובץ (postback של ASP.NET / JS): לוחצים ולוכדים את ההורדה עצמה
+        dl_dir = Path(os.environ.get("RUNNER_TEMP") or "/tmp") / "policy_dl"
+        dl_dir.mkdir(parents=True, exist_ok=True)
+        for el in pg.query_selector_all("a, button, [role=button], input[type=submit], input[type=button]")[:300]:
+            try:
+                t = (el.inner_text() or el.get_attribute("value") or "").strip()
+                href = el.get_attribute("href") or ""
+                if not re.search(r"הורד|להורדה|download|אקסל|excel|xls", t + " " + href, re.I):
+                    continue
+                if re.search(r"\.(xlsx|xls|pdf|docx)(\?|$)", href, re.I):
+                    continue  # קישור ישיר - כבר נאסף
+                ctx_text = el.evaluate("e => (e.closest('tr,li,.row,[class*=item],[class*=card]') || e.parentElement || e).innerText || ''")
+                with pg.expect_download(timeout=15000) as info:
+                    el.click(timeout=3000)
+                dl = info.value
+                local = dl_dir / f"{abs(hash((url, dl.suggested_filename, ctx_text))) % 10**10}_{dl.suggested_filename}"
+                dl.save_as(str(local))
+                anchors.append({"href": f"{url}#download={dl.suggested_filename}",
+                                "text": re.sub(r"\s+", " ", f"{ctx_text} {dl.suggested_filename}")[:300], "local": str(local)})
+                if pg.url.split("#")[0] != url.split("#")[0]:
+                    pg.goto(url, wait_until="networkidle", timeout=60000)
+            except Exception:
+                pass
         anchors += [x for x in net if (x["href"], x["text"]) not in seen]
         text = pg.inner_text("body")
         return anchors, (200 if status < 400 else status), text
@@ -160,6 +187,8 @@ def _prio(text: str, href: str) -> int:
     """עדיפות בתור הסריקה (נמוך = קודם): מדיניות > מוצר > שאר."""
     from .crawl import POLICY
     blob = text + " " + unquote(href)
+    if text == "(iframe)":
+        return 0
     return 0 if POLICY.search(blob) else 1 if PRODUCT_RX.search(blob) else 2
 
 
@@ -167,7 +196,7 @@ def snapshot_company(s, pw, home, extra, products=None, max_pages=15, depth_max=
     import heapq, itertools
     products = products or {}
     dom = base_domain(home)
-    pages, seen = {}, set()
+    pages, seen, iframes = {}, set(), set()
     tick = itertools.count()
     q = [(0, next(tick), u, 0) for u in extra] + [(1, next(tick), home, 0)]
     heapq.heapify(q)
@@ -181,7 +210,8 @@ def snapshot_company(s, pw, home, extra, products=None, max_pages=15, depth_max=
         items = items_from_anchors(anchors or [], url, dom)
         method = "requests"
         policy_like = sum(score(i["text"]) >= 1 or i["doc"] for i in items.values())
-        if pw and (anchors is None or (d == 0 and url in extra) or policy_like < MIN_LINKS_STATIC) and (url in extra or score(url) > 0 or d == 0):
+        if pw and (anchors is None or url in iframes or (d == 0 and url in extra) or policy_like < MIN_LINKS_STATIC) and (
+                url in extra or url in iframes or score(url) > 0 or d == 0):
             b_anchors, b_status, b_text = fetch_browser(pw, url)
             if b_anchors is not None:
                 items.update(items_from_anchors(b_anchors, url, dom)); text, method, status = b_text, "browser", b_status
@@ -195,6 +225,8 @@ def snapshot_company(s, pw, home, extra, products=None, max_pages=15, depth_max=
                     continue
                 if SKIP_PATH.search(unquote(i["href"])):
                     continue
+                if i.get("iframe"):
+                    iframes.add(i["href"])
                 if i.get("iframe") or (i["internal"] and (score(i["text"] + unquote(i["href"])) > 0
                                                           or PRODUCT_RX.search(i["text"] + unquote(i["href"])))):
                     heapq.heappush(q, (_prio(i["text"], i["href"]), next(tick), i["href"], d + 1))

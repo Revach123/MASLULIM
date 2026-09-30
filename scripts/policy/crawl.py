@@ -226,6 +226,11 @@ def select_docs(pages: dict, extra: list[str]):
         for i in p["items"]:
             if not i["doc"] and "network" not in i["text"] and "xhr" not in i["text"]:
                 continue
+            if i.get("local"):
+                if not NOISE.search(i["text"]) and (POLICY.search(i["text"]) or page_url in ctx_pages or "/SPF/" in page_url
+                                                    or re.search(r"\.(xlsx|xls)$", i["text"], re.I)):
+                    out.setdefault(i["href"], {**i, "page": page_url})
+                continue
             href, blob = i["href"], unquote(i["href"]) + " " + i["text"]
             ext = href.lower().split("?")[0].rsplit(".", 1)[-1]
             ok = bool(POLICY.search(blob)) and not NOISE.search(blob)
@@ -316,9 +321,12 @@ def main():
                 continue
             done.add(key)
             url = d["href"]
-            r, code = download(s, url)
-            content = r.content if r is not None else None
-            if content is None and pw and code in (403, "ERR"):
+            if d.get("local"):  # הורדה שנלכדה בלחיצה בדפדפן
+                content, code = Path(d["local"]).read_bytes(), 200
+            else:
+                r, code = download(s, url)
+                content = r.content if r is not None else None
+            if content is None and pw and code in (403, "ERR") and not d.get("local"):
                 content = download_browser(pw, url)
                 code = 200 if content else code
             if content is None or sniff_ext(content) is None:
@@ -328,7 +336,8 @@ def main():
             ent = index.get(ukey)
             kind = "new" if ent is None else ("changed" if ent["sha256"] != sha else "unchanged")
             if kind != "unchanged":
-                name = re.sub(r"[^\w.\-]", "_", unquote(urlparse(url).path.rsplit("/", 1)[-1]))[:80]
+                name = re.sub(r"[^\w.\-]", "_", unquote(url.split("#download=")[-1] if "#download=" in url
+                                                          else urlparse(url).path.rsplit("/", 1)[-1]))[:80]
                 ext = sniff_ext(content)
                 if not name.lower().endswith(ext):
                     name += ext
