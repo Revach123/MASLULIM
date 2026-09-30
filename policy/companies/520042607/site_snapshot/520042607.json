@@ -1,11 +1,11 @@
 {
  "legal_id": "520042607",
  "company": "הנדסאים וטכנאים - חברה לניהול קופות גמל בע\"מ",
- "taken": "2026-09-30T22:11:11+00:00",
+ "taken": "2026-09-30T22:47:18+00:00",
  "pages": {
   "https://www.malam-gemel.com": {
    "product": "גמל",
-   "status": "browser:Error",
+   "status": "browser:Error:Page.goto: net::ERR_CONNECTION_RESET at https://www.malam-gemel.com/",
    "method": "requests",
    "text_hash": null,
    "text_head": "",

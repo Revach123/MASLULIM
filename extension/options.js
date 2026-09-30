@@ -1,17 +1,19 @@
+const DEFAULTS = { owner: "Revach123", repo: "MASLULIM", branch: "main" };
+
 async function load() {
-  const { config } = await chrome.storage.local.get("config");
-  if (!config) return;
-  document.getElementById("owner").value = config.owner || "";
-  document.getElementById("repo").value = config.repo || "";
-  document.getElementById("branch").value = config.branch || "main";
+  const { config: saved } = await chrome.storage.local.get("config");
+  const config = saved || {};
+  document.getElementById("owner").value = config.owner || DEFAULTS.owner;
+  document.getElementById("repo").value = config.repo || DEFAULTS.repo;
+  document.getElementById("branch").value = config.branch || DEFAULTS.branch;
   document.getElementById("token").value = config.token || "";
 }
 
 document.getElementById("save").addEventListener("click", async () => {
   const msg = document.getElementById("msg");
   const config = {
-    owner: document.getElementById("owner").value.trim(),
-    repo: document.getElementById("repo").value.trim(),
+    owner: document.getElementById("owner").value.trim() || DEFAULTS.owner,
+    repo: document.getElementById("repo").value.trim() || DEFAULTS.repo,
     branch: document.getElementById("branch").value.trim() || "main",
     token: document.getElementById("token").value.replace(/\s+/g, ""),
   };

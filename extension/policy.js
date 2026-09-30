@@ -12,7 +12,18 @@ const sleep = (ms) => new Promise((r) => setTimeout(r, ms));
 
 const DOC_RX = /\.(xlsx|xls|pdf|docx)(\?|#|$)/i;
 const POLICY_RX = /מדיניות|הצהר|policy|mediniut|hatzarat|expected|investment/i;
-const NOISE_RX = /esg|אחראי|תגמול|פרטיות|privacy|תקנון|מבצע|גילוי[-_ ]נאות|מצגת|presentation/i;
+const NOISE_RX = /esg|אחראי|תגמול|פרטיות|privacy|תקנון|מבצע|גילוי[-_ ]נאות|מצגת|presentation|נוהל|העברת זכויות|הצבעות|דוח[ -]כספי|רבעון/i;
+
+// Chrome דוחה זמנית עריכת טאבים ("Tabs cannot be edited right now (user may be dragging a tab)") - מנסים שוב.
+async function tabsRetry(fn, tries = 20) {
+  for (let i = 1; ; i++) {
+    try { return await fn(); } catch (e) {
+      const msg = String(e && e.message || e);
+      if (i >= tries || !/cannot be edited|dragging|Tabs cannot/i.test(msg)) throw e;
+      await sleep(500 + 250 * i);
+    }
+  }
+}
 
 async function waitComplete(tabId, timeoutMs = 45000) {
   const start = Date.now();
@@ -24,10 +35,23 @@ async function waitComplete(tabId, timeoutMs = 45000) {
 }
 
 // רץ בתוך הדף: פותח אקורדיונים/לשוניות, ומחזיר את כל הקישורים (כולל בתוך iframes מאותו origin).
-function pageCollectLinks() {
+async function pageCollectLinks(clicks) {
+  const wait = (ms) => new Promise((r) => setTimeout(r, ms));
   const clickAll = (sel) => document.querySelectorAll(sel).forEach((el) => { try { el.click(); } catch (e) {} });
+  // רצף לחיצות לפי טקסט (מההגדרות של האתר), למשל איילון: "נושא" -> "הצהרת מדיניות השקעות"
+  const visible = (el) => !!(el.offsetWidth || el.offsetHeight || el.getClientRects().length);
+  for (const label of clicks || []) {
+    const cands = [...document.querySelectorAll("button, a, li, span, div, label, [role=option], [role=combobox], [role=button]")]
+      .filter((el) => visible(el) && (el.innerText || "").trim() === label);
+    const el = cands.sort((a, b) => a.querySelectorAll("*").length - b.querySelectorAll("*").length)[0];
+    if (el) { try { el.click(); } catch (e) {} await wait(1200); }
+  }
   clickAll('[aria-expanded="false"]:not(a)');
   clickAll("details:not([open]) > summary");
+  // כותרות אקורדיון לפי שנה ("שנת 2026")
+  [...document.querySelectorAll("button, h2, h3, h4, div, span")].filter((el) => /^\s*שנת\s+20\d\d\s*$/.test(el.innerText || "") && visible(el))
+    .forEach((el) => { try { el.click(); } catch (e) {} });
+  await wait(1500);
   const out = [];
   const grab = (doc, base) => {
     doc.querySelectorAll("a[href]").forEach((a) => {
@@ -40,6 +64,22 @@ function pageCollectLinks() {
   return new Promise((resolve) => setTimeout(() => { grab(document, location.href); resolve(out); }, 2500));
 }
 
+// רץ בתוך הדף: לוחץ על כפתורים/קישורים של הורדה שלא מצביעים ישירות לקובץ (JS / postback).
+// ההורדות עצמן נתפסות ברקע ע"י chrome.downloads.onCreated (ר' captureDownloads).
+function pageClickDownloads() {
+  const rx = /הורד|להורדה|download|אקסל|excel|xls/i;
+  const els = [...document.querySelectorAll("a, button, [role=button], input[type=button], input[type=submit]")];
+  let n = 0;
+  for (const el of els) {
+    const t = (el.innerText || el.value || el.getAttribute("aria-label") || el.title || "") + " " + (el.getAttribute("href") || "");
+    const href = el.getAttribute("href") || "";
+    if (!rx.test(t) || /\.(xlsx|xls|pdf)(\?|$)/i.test(href)) continue;
+    try { el.click(); n++; } catch (e) {}
+    if (n >= 40) break;
+  }
+  return n;
+}
+
 // רץ בתוך הדף: מוריד קובץ (same-origin/עוגיות) ומחזיר base64.
 function pageFetchBase64(url) {
   return fetch(url, { credentials: "include" }).then(async (r) => {
@@ -49,6 +89,26 @@ function pageFetchBase64(url) {
     for (let i = 0; i < bytes.length; i += 0x8000) bin += String.fromCharCode.apply(null, bytes.subarray(i, i + 0x8000));
     return { base64: btoa(bin), type: r.headers.get("content-type") || "" };
   }).catch((e) => ({ __error: true, message: String(e) }));
+}
+
+// תופס הורדות שהדף מפעיל (לחיצה על כפתור) ומבטל אותן - מחזיר את כתובות הקבצים. מוריד אותם אח"כ בעצמנו.
+async function captureDownloads(tabId, ms = 8000) {
+  const urls = [];
+  const onCreated = (item) => {
+    urls.push({ href: item.finalUrl || item.url, text: item.filename || "" });
+    chrome.downloads.cancel(item.id).catch(() => {});
+    chrome.downloads.erase({ id: item.id }).catch(() => {});
+  };
+  chrome.downloads.onCreated.addListener(onCreated);
+  let clicked = 0;
+  try {
+    const [r] = await chrome.scripting.executeScript({ target: { tabId }, func: pageClickDownloads });
+    clicked = (r && r.result) || 0;
+    if (clicked) await sleep(ms);
+  } finally {
+    chrome.downloads.onCreated.removeListener(onCreated);
+  }
+  return { clicked, urls };
 }
 
 async function sha256Hex(base64) {
@@ -76,21 +136,27 @@ export async function runPolicy(cfg, setStatus) {
   const sites = await readSites(cfg);
   const { policySeen } = await chrome.storage.local.get("policySeen");
   const seen = policySeen || {};
-  const files = [], errors = [];
+  const files = [], errors = [], diag = [];
   for (const site of sites) {
     const pages = [...new Set([...(site.pages || []).map((p) => p.url), site.home].filter(Boolean))];
     for (const pageUrl of pages) {
       await setStatus({ policyProgress: `${site.name}: ${pageUrl}` });
       let tab;
       try {
-        tab = await chrome.tabs.create({ url: pageUrl, active: false });
+        tab = await tabsRetry(() => chrome.tabs.create({ url: pageUrl, active: false }));
         await waitComplete(tab.id);
         await sleep(3000);
-        const [res] = await chrome.scripting.executeScript({ target: { tabId: tab.id }, func: pageCollectLinks });
+        const [res] = await chrome.scripting.executeScript({ target: { tabId: tab.id }, func: pageCollectLinks,
+                                                            args: [(site.clicks || {})[pageUrl] || site.click || []] });
         const links = (res && res.result) || [];
-        const docs = links.filter((l) => DOC_RX.test(l.href) && !NOISE_RX.test(l.text + " " + l.href)
-          && (POLICY_RX.test(decodeURIComponent(l.href) + " " + l.text + " " + l.ctx) || (site.pages || []).some((p) => p.url === pageUrl)));
+        const cap = await captureDownloads(tab.id);
+        links.push(...cap.urls.map((u) => ({ ...u, ctx: "(download)" })));
+        const docs = links.filter((l) => (DOC_RX.test(l.href) || l.ctx === "(download)" || DOC_RX.test(l.text)) && !NOISE_RX.test(l.text + " " + l.href)
+          && (POLICY_RX.test(decodeURIComponent(l.href) + " " + l.text + " " + l.ctx)
+              // בעמוד שהוגדר ידנית: גם גיליונות בלי מילות מדיניות בשם (מור: 7_17_0_2026_9.xlsx) - אבל לא PDF כלליים
+              || ((site.pages || []).some((p) => p.url === pageUrl) && /\.(xlsx|xls)(\?|#|$)/i.test(l.href))));
         const uniq = [...new Map(docs.map((d) => [d.href, d])).values()];
+        diag.push(`${site.name.slice(0, 18)}: links=${links.length} files=${links.filter((l) => DOC_RX.test(l.href)).length} clicked=${cap.clicked} captured=${cap.urls.length} selected=${uniq.length}`);
         for (const d of uniq) {
           const [r2] = await chrome.scripting.executeScript({ target: { tabId: tab.id }, func: pageFetchBase64, args: [d.href] });
           const got = r2 && r2.result;
@@ -108,7 +174,7 @@ export async function runPolicy(cfg, setStatus) {
       } catch (e) {
         errors.push(`${pageUrl}: ${e && e.message || e}`);
       } finally {
-        if (tab) { try { await chrome.tabs.remove(tab.id); } catch (e) {} }
+        if (tab) { try { await tabsRetry(() => chrome.tabs.remove(tab.id)); } catch (e) {} }
       }
     }
   }
@@ -117,5 +183,5 @@ export async function runPolicy(cfg, setStatus) {
       `policy inbox (extension): ${files.length / 2} documents from blocked sites`);
   }
   await chrome.storage.local.set({ policySeen: seen });
-  return { docs: files.length / 2, errors };
+  return { docs: files.length / 2, errors, diag };
 }

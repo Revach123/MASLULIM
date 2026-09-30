@@ -13,7 +13,7 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parents[2]
 OUT = ROOT / (__import__("os").environ.get("POLICY_OUT") or "policy")  # ריצה לחברה: policy/companies/<LegalId>
 
-PARSER_VERSION = 8  # (v8: 2026 statements corpus) # הגדלה = פרסור מחדש של כל המסמכים בריצה הבאה (שינוי בפרסרים)
+PARSER_VERSION = 10  # (v10: Ayalon, dated current column) # הגדלה = פרסור מחדש של כל המסמכים בריצה הבאה (שינוי בפרסרים)
 
 NUM = r"(\d{1,3}(?:\.\d+)?)"
 PCT = NUM + r"\s*%?"
@@ -102,17 +102,48 @@ def extract_tracks_from_table(rows: list[list[str]]) -> list[dict]:
     return out
 
 
+_HEB = re.compile(r"[\u0590-\u05FF]")
+
+
+def _is_visual_rtl(text: str) -> bool:
+    """PDF בעברית חזותית: אותיות סופיות (ךםןףץ) בתחילת מילים במקום בסופן."""
+    words = re.findall(r"[\u0590-\u05FF]{2,}", text)
+    if len(words) < 10:
+        return False
+    start = sum(w[0] in "ךםןףץ" for w in words)
+    end = sum(w[-1] in "ךםןףץ" for w in words)
+    return start > end
+
+
+def _fix_rtl(s: str) -> str:
+    """היפוך סדר המילים בשורה והיפוך תווים רק במילים עבריות (מספרים/אחוזים/לטינית נשארים)."""
+    swap = str.maketrans("()[]{}", ")(][}{")
+    out = []
+    for line in s.split("\n"):
+        toks = line.split(" ")
+        out.append(" ".join(t[::-1].translate(swap) if _HEB.search(t) else t for t in reversed(toks)))
+    return "\n".join(out)
+
+
 def read_doc(path: Path):
     """-> (text, tables[list[rows]], names[list[str]]) - names = שמות גיליונות (ריק ל-PDF/DOCX)"""
     ext = path.suffix.lower()
     if ext == ".pdf":
         import pdfplumber
-        texts, tables = [], []
+        texts, tables, names = [], [], []
         with pdfplumber.open(path) as pdf:
-            for pg in pdf.pages:
-                texts.append(pg.extract_text() or "")
-                tables += pg.extract_tables()
-        return "\n".join(texts), tables, []
+            for pn, pg in enumerate(pdf.pages, 1):
+                t = pg.extract_text() or ""
+                rtl = _is_visual_rtl(t)
+                t = _fix_rtl(t) if rtl else t
+                texts.append(t)
+                title = next((l.strip() for l in t.splitlines() if re.search(r"מסלול|מדיניות", l)), "")
+                for tb in pg.extract_tables():
+                    if rtl:  # עברית חזותית: מילים הפוכות וסדר עמודות הפוך
+                        tb = [[_fix_rtl(c) if isinstance(c, str) else c for c in reversed(r)] for r in tb]
+                    tables.append([[title]] + tb if title else tb)
+                    names.append(f"page{pn}")
+        return "\n".join(texts), tables, names
     if ext == ".xls":
         import xlrd
         wb = xlrd.open_workbook(path)
@@ -344,6 +375,9 @@ def parse_titled_tables(rows, sheet=""):
                 cols["tol"] = c
             elif re.search(r"ייחוס|יחוס", t) and "bench" not in cols:
                 cols["bench"] = c
+            elif re.search(r"שיעור\s+(ה)?חשיפה", t) and re.search(r"(?<![\d.])(20\d\d)\s*$", t) \
+                    and not re.search(r"\d{1,2}[./-]\d{1,2}[./-](20)?\d\d|ליום|לתאריך|נכון ל", t) and "expected" not in cols:
+                cols["expected"] = c  # "שיעור חשיפה 2021" (שנה בלבד, בלי תאריך) = הצפוי
             elif re.search(r"שיעור\s+(ה)?חשיפה|ליום|לתאריך|עדכני|נכון ל", t) and "current" not in cols:
                 cols["current"] = c
         if "expected" not in cols and "bounds" not in cols and "min" not in cols:
@@ -366,6 +400,10 @@ def parse_titled_tables(rows, sheet=""):
                      and not re.search(r"ייחוס|יחוס", c)]
             if cands:
                 title = max(cands, key=len); break
+        mt = re.search(r"(מסלול[^(\-–]+)", title or "") if re.search(r"מדיניות.*(צפוי|שנת|לשנת)", title or "") else None
+        if mt:  # "מדיניות השקעה צפויה - מסלול כללי (מ"ס מ.ה 382) - לשנת 2021" (PDF עובדי המדינה)
+            mf = re.search(r"מ\.?ה\D{0,4}(\d{2,6})|\((\d{2,6})\)", title)
+            title = mt.group(1).strip() + (f" {mf.group(1) or mf.group(2)}" if mf else "")
         num_title = re.match(r"^מספר\s+מסלול.*?(\d{3,6})", title or "")
         if num_title:  # "מספר מסלול באוצר 9974": השם בשורה שמעל, המספר = קוד
             above = [c for r2 in range(ri - 1, max(ri - 6, -1), -1) for c in grid[r2]

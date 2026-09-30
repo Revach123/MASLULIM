@@ -44,6 +44,9 @@ async function getConfig() {
   const c = config || {};
   // ניקוי רווחים/שורות נסתרים שנדבקו יחד עם הטוקן (גורם ל-401 Bad credentials)
   if (c.token) c.token = c.token.replace(/\s+/g, "");
+  c.owner = c.owner || "Revach123";  // ברירות מחדל - הרפו של הפרויקט; נשאר רק להזין טוקן
+  c.repo = c.repo || "MASLULIM";
+  c.branch = c.branch || "main";
   if (c.owner) c.owner = c.owner.trim();
   if (c.repo) c.repo = c.repo.trim();
   return c;
@@ -519,7 +522,8 @@ async function runPolicySafe() {
     cfg.branch = cfg.branch || "main";
     await setStatus({ policyProgress: "מתחיל..." });
     const res = await runPolicy(cfg, setStatus);
-    await setStatus({ policyLastRun: Date.now(), policyLastDocs: res.docs, policyErrors: res.errors.slice(0, 5), policyProgress: "" });
+    await setStatus({ policyLastRun: Date.now(), policyLastDocs: res.docs, policyErrors: res.errors.slice(0, 5),
+                      policyDiag: res.diag || [], policyProgress: "" });
   } catch (e) {
     await setStatus({ policyLastRun: Date.now(), policyErrors: [String(e && e.message || e)], policyProgress: "" });
   } finally {
