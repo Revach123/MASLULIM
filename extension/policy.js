@@ -180,7 +180,7 @@ async function execInTab(tabId, func, args = [], tries = 3) {
       return await withTimeout(chrome.scripting.executeScript({ target: { tabId }, func, args }), 90000, func.name);
     } catch (e) {
       const msg = String(e && e.message || e);
-      if (i >= tries || !/frame|removed|navigat|Cannot access|No tab/i.test(msg) || /No tab with id/i.test(msg)) throw e;
+      if (stopRequested || i >= tries || !/frame|removed|navigat|Cannot access|No tab/i.test(msg) || /No tab with id/i.test(msg)) throw e;
       await sleep(1500); await waitComplete(tabId, 20000); await sleep(1500);
     }
   }
@@ -419,9 +419,24 @@ export async function runPolicy(cfg, setStatus) {
 
   // הטאבים נפתחים בחלון ממוזער נפרד (לא מופיעים בחלון העבודה; נסגר בסוף). Chrome לא מאפשר טאב מוסתר לגמרי.
   // אם יצירת החלון נכשלת - כמו קודם, טאבי רקע בחלון הנוכחי.
+  // חלון שנשאר מריצה קודמת שנקטעה (רענון/עדכון התוסף באמצע) - נסגר
+  try {
+    const { policyWindowId } = await chrome.storage.local.get("policyWindowId");
+    if (policyWindowId) await chrome.windows.remove(policyWindowId).catch(() => {});
+  } catch (e) {}
   let workWin = null;
   try { workWin = await chrome.windows.create({ state: "minimized", focused: false, url: "about:blank" }); } catch (e) { workWin = null; }
   const windowId = workWin && workWin.id;
+  if (windowId) await chrome.storage.local.set({ policyWindowId: windowId });
+  // סגירת חלון העבודה וכל הטאבים שלנו - מיד בעצירה (לא מחכים שהאתרים הפעילים יסיימו את הצעד הנוכחי), ובסוף הריצה
+  let closed = false;
+  const closeWork = async () => {
+    if (closed) return;
+    closed = true;
+    for (const id of [...ourTabs]) { try { await chrome.tabs.remove(id); } catch (e) {} }
+    if (windowId) { try { await chrome.windows.remove(windowId); } catch (e) {} }
+    try { await chrome.storage.local.remove("policyWindowId"); } catch (e) {}
+  };
 
   // popup/טאב שאתר פתח מתוך אחד הטאבים שלנו: שומרים את הכתובת וסוגרים. אם הכתובת עוד לא ידועה - מחכים לניווט הראשון
   const pendingPopups = new Map();  // tabId -> openerTabId
@@ -446,7 +461,7 @@ export async function runPolicy(cfg, setStatus) {
   if (windowId && chrome.windows.onBoundsChanged) chrome.windows.onBoundsChanged.addListener(onBounds);
   if (windowId) chrome.windows.onFocusChanged.addListener(onFocus);
 
-  onStop = () => flushStatus();
+  onStop = () => { flushStatus(); closeWork(); };
   rulesFromGithub = !!gotRules;
   // לוג ריצה ב-GitHub (policy/extension_log/): התקדמות כל 3 דק' + לוג מלא בסוף - כדי שאפשר יהיה לעקוב ולאבחן מרחוק
   const buildLog = (final) => ({
@@ -520,7 +535,7 @@ export async function runPolicy(cfg, setStatus) {
     chrome.tabs.onUpdated.removeListener(onTabUpdated);
     if (chrome.windows.onBoundsChanged) chrome.windows.onBoundsChanged.removeListener(onBounds);
     chrome.windows.onFocusChanged.removeListener(onFocus);
-    if (windowId) { try { await chrome.windows.remove(windowId); } catch (e) {} }
+    await closeWork();
   }
 
   clearInterval(logTimer);
