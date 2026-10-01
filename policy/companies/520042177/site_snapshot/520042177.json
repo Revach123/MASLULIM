@@ -1,7 +1,7 @@
 {
  "legal_id": "520042177",
  "company": "הכשרה חברה לביטוח בע\"מ",
- "taken": "2026-10-01T10:00:08+00:00",
+ "taken": "2026-10-01T10:33:42+00:00",
  "pages": {
   "https://www.hcsra.co.il/insurances/investments-credit-realestate/investments/": {
    "product": "ביטוח",
@@ -890,7 +890,7 @@
   },
   "https://www.hcsra.co.il/general/heter-iska-kosher/": {
    "product": "ביטוח",
-   "status": 200,
+   "status": 502,
    "method": "requests",
    "text_hash": "6eb7536142c4d8f169cc021a5dd023a087c82348",
    "text_head": "היתר עסקה ותעודות כשרות | הכשרה ביטוח ופיננסים דלג לתוכן הראשי ביטוח רכב ביטוחים נוספים BEST INVEST פעולות תביעות מרכז ידע קשרי משקיעים קריירה יצירת קשר 3453* סוכנים/מעסיקים אזור אישי 3453* אזור אישי ראשי תעודת כשרות הכשרה עצירת תנועה סליידר 1 מתוך 1 ראשי תעודת כשרות הכשרה בס\"ד היתר עסקה להכשרה כל ההיתרים ההלכתיים והכשר הבד\"צ מרוכזים כאן רשימת היתרי הכשרות של הכשרה היתר עסקה הוא הכלי המאפשר מתן הלוואה בריבית במסגרת ההלכה. על פי קביעת ההלכה, איסור לקיחת ריבית קיים גם כאשר הלווה מעוניין לשלם ריבית, הלכה שמעטים מאוד הדומים לה בשאר דיני ממונות (למשל, בדיני נזקי שכנים לחלק מהדעות). היתר העסקה אינו ",
@@ -3713,8 +3713,8 @@
    "product": null,
    "status": 200,
    "method": "browser",
-   "text_hash": "d80fe643e284736ff4c5bf7b1a65a3f0185aadd9",
-   "text_head": "We apologize for the inconvenience... ...but your activity and behavior on this site made us think that you are a bot. Note: A number of things could be going on here. If you are attempting to access this site using an anonymous Private/Proxy network, please disable that and try accessing site again. Due to previously detected malicious behavior which originated from the network you're using, please request unblock to site. Incident ID: 5b69a4d7-e42q-40bd-b222-3c0573517d5e Please solve this CAPTCHA to request unblock to the website You reached this page when trying to access https://bestcar.hc",
+   "text_hash": "519cea68f5ddb26747d885f3e516825e6c0cd218",
+   "text_head": "We apologize for the inconvenience... ...but your activity and behavior on this site made us think that you are a bot. Note: A number of things could be going on here. If you are attempting to access this site using an anonymous Private/Proxy network, please disable that and try accessing site again. Due to previously detected malicious behavior which originated from the network you're using, please request unblock to site. Incident ID: cb7cbfe8-e42q-4489-9c8b-3415cdc13652 Please solve this CAPTCHA to request unblock to the website You reached this page when trying to access https://bestcar.hc",
    "items": [
     {
      "text": "(iframe)",

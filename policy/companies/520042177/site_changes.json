@@ -1,129 +1,12 @@
 [
  {
-  "kind": "page_changed",
-  "page": "https://www.hcsra.co.il",
-  "text": "טקסט העמוד השתנה (אותם קישורים)",
-  "href": "https://www.hcsra.co.il",
+  "kind": "fetch_failed",
+  "page": "https://www.hcsra.co.il/general/heter-iska-kosher/",
+  "text": "502",
+  "href": "https://www.hcsra.co.il/general/heter-iska-kosher/",
   "legal_id": "520042177",
   "company": "הכשרה חברה לביטוח בע\"מ",
-  "detected": "2026-10-01T10:00:08+00:00"
- },
- {
-  "kind": "text_changed",
-  "page": "https://www.hcsra.co.il/investor-relations-the-people-behind/board-members/",
-  "text": "(html) -> רשימת מנתחים בהסדר",
-  "href": "https://umbraco-api.hcsra.co.il/media/nupjdd0e/רשימת-מנתחים-לאתר-חברה-אוגוסט-26.xlsx",
-  "legal_id": "520042177",
-  "company": "הכשרה חברה לביטוח בע\"מ",
-  "detected": "2026-10-01T10:00:08+00:00"
- },
- {
-  "kind": "text_changed",
-  "page": "https://www.hcsra.co.il/investor-relations-the-people-behind/board-members/",
-  "text": "(html) -> רשימת מנתחים בהסדר",
-  "href": "https://umbraco-api.hcsra.co.il/media/d4idpw5u/רשימת-מנתחים-לאתר-חברה-אוגוסט-26.xlsx",
-  "legal_id": "520042177",
-  "company": "הכשרה חברה לביטוח בע\"מ",
-  "detected": "2026-10-01T10:00:08+00:00"
- },
- {
-  "kind": "text_changed",
-  "page": "https://www.hcsra.co.il/investor-relations-the-people-behind/board-members/",
-  "text": "(html) -> מדיניות התגמול של החברה",
-  "href": "https://umbraco-api.hcsra.co.il/media/xouj2m4i/מדיניות-התגמול-של-החברה-מונגש.pdf",
-  "legal_id": "520042177",
-  "company": "הכשרה חברה לביטוח בע\"מ",
-  "detected": "2026-10-01T10:00:08+00:00"
- },
- {
-  "kind": "removed_item",
-  "page": "https://www.hcsra.co.il/investor-relations-the-people-behind/board-members/",
-  "text": "(xhr)",
-  "href": "https://umbraco-backoffice.hcsra.co.il/media/hbza525t/%D7%A4%D7%95%D7%9C%D7%99%D7%A1%D7%AA-%D7%A2%D7%AA%D7%99%D7%93-%D7%9E%D7%A0%D7%94%D7%9C%D7%99%D7%9D-022023-%D7%9E%D7%A2%D7%95%D7%93%D7%9B%D7%9F.pdf",
-  "legal_id": "520042177",
-  "company": "הכשרה חברה לביטוח בע\"מ",
-  "detected": "2026-10-01T10:00:08+00:00"
- },
- {
-  "kind": "removed_item",
-  "page": "https://www.hcsra.co.il/investor-relations-the-people-behind/board-members/",
-  "text": "(xhr)",
-  "href": "https://umbraco-backoffice.hcsra.co.il/media/4wjn0mf2/%D7%A2%D7%AA%D7%99%D7%93-60-%D7%A4%D7%9C%D7%95%D7%A1-%D7%9C%D7%9E%D7%A0%D7%94%D7%9C%D7%99%D7%9D-%D7%95%D7%A2%D7%95%D7%91%D7%93%D7%99%D7%9D-%D7%A9%D7%9B%D7%99%D7%A8%D7%99%D7%9D-52023-%D7%9E%D7%A2%D7%95%D7%93%D7%9B%D7%9F.pdf",
-  "legal_id": "520042177",
-  "company": "הכשרה חברה לביטוח בע\"מ",
-  "detected": "2026-10-01T10:00:08+00:00"
- },
- {
-  "kind": "removed_item",
-  "page": "https://www.hcsra.co.il/investor-relations-the-people-behind/board-members/",
-  "text": "(xhr)",
-  "href": "https://umbraco-backoffice.hcsra.co.il/media/w3dg55mo/%D7%A2%D7%AA%D7%99%D7%93-%D7%9C%D7%A2%D7%A6%D7%9E%D7%90%D7%99%D7%99%D7%9D-%D7%AA%D7%A0%D7%90%D7%99%D7%9D-%D7%9B%D7%9C%D7%9C%D7%99%D7%99%D7%9D-112016-%D7%9E%D7%A2%D7%95%D7%93%D7%9B%D7%9F.pdf",
-  "legal_id": "520042177",
-  "company": "הכשרה חברה לביטוח בע\"מ",
-  "detected": "2026-10-01T10:00:08+00:00"
- },
- {
-  "kind": "removed_item",
-  "page": "https://www.hcsra.co.il/investor-relations-the-people-behind/board-members/",
-  "text": "(xhr)",
-  "href": "https://umbraco-backoffice.hcsra.co.il/media/moknvkqf/%D7%A2%D7%AA%D7%99%D7%93-60-%D7%A4%D7%9C%D7%95%D7%A1-%D7%9C%D7%A2%D7%A6%D7%9E%D7%90%D7%99%D7%9D-%D7%AA%D7%A0%D7%90%D7%99%D7%9D-%D7%9B%D7%9C%D7%9C%D7%99%D7%99%D7%9D-072013-%D7%9E%D7%A2%D7%95%D7%93%D7%9B%D7%9F.pdf",
-  "legal_id": "520042177",
-  "company": "הכשרה חברה לביטוח בע\"מ",
-  "detected": "2026-10-01T10:00:08+00:00"
- },
- {
-  "kind": "removed_item",
-  "page": "https://www.hcsra.co.il/investor-relations-the-people-behind/board-members/",
-  "text": "רשימת מנתחים בהסדר",
-  "href": "https://umbraco-api.hcsra.co.il/media/nupjdd0e/%D7%A8%D7%A9%D7%99%D7%9E%D7%AA-%D7%9E%D7%A0%D7%AA%D7%97%D7%99%D7%9D-%D7%9C%D7%90%D7%AA%D7%A8-%D7%97%D7%91%D7%A8%D7%94-%D7%90%D7%95%D7%92%D7%95%D7%A1%D7%98-26.xlsx",
-  "legal_id": "520042177",
-  "company": "הכשרה חברה לביטוח בע\"מ",
-  "detected": "2026-10-01T10:00:08+00:00"
- },
- {
-  "kind": "removed_item",
-  "page": "https://www.hcsra.co.il/investor-relations-the-people-behind/board-members/",
-  "text": "רשימת מנתחים בהסדר",
-  "href": "https://umbraco-api.hcsra.co.il/media/d4idpw5u/%D7%A8%D7%A9%D7%99%D7%9E%D7%AA-%D7%9E%D7%A0%D7%AA%D7%97%D7%99%D7%9D-%D7%9C%D7%90%D7%AA%D7%A8-%D7%97%D7%91%D7%A8%D7%94-%D7%90%D7%95%D7%92%D7%95%D7%A1%D7%98-26.xlsx",
-  "legal_id": "520042177",
-  "company": "הכשרה חברה לביטוח בע\"מ",
-  "detected": "2026-10-01T10:00:08+00:00"
- },
- {
-  "kind": "removed_item",
-  "page": "https://www.hcsra.co.il/investor-relations-the-people-behind/board-members/",
-  "text": "מדיניות התגמול של החברה",
-  "href": "https://umbraco-api.hcsra.co.il/media/xouj2m4i/%D7%9E%D7%93%D7%99%D7%A0%D7%99%D7%95%D7%AA-%D7%94%D7%AA%D7%92%D7%9E%D7%95%D7%9C-%D7%A9%D7%9C-%D7%94%D7%97%D7%91%D7%A8%D7%94-%D7%9E%D7%95%D7%A0%D7%92%D7%A9.pdf",
-  "legal_id": "520042177",
-  "company": "הכשרה חברה לביטוח בע\"מ",
-  "detected": "2026-10-01T10:00:08+00:00"
- },
- {
-  "kind": "removed_item",
-  "page": "https://www.hcsra.co.il/investor-relations-the-people-behind/board-members/",
-  "text": "(xhr)",
-  "href": "https://umbraco-api.hcsra.co.il/media/10xhgcsf/nostroyield_b_520042177_125.xlsx",
-  "legal_id": "520042177",
-  "company": "הכשרה חברה לביטוח בע\"מ",
-  "detected": "2026-10-01T10:00:08+00:00"
- },
- {
-  "kind": "removed_item",
-  "page": "https://www.hcsra.co.il/investor-relations-the-people-behind/board-members/",
-  "text": "(xhr)",
-  "href": "https://www.hcsra.co.il/insurances/investments-credit-realestate/investments/28.10.21.xlsx",
-  "legal_id": "520042177",
-  "company": "הכשרה חברה לביטוח בע\"מ",
-  "detected": "2026-10-01T10:00:08+00:00"
- },
- {
-  "kind": "removed_item",
-  "page": "https://www.hcsra.co.il/investor-relations-the-people-behind/board-members/",
-  "text": "(iframe)",
-  "href": "https://appdynamics.go-ins.co.il/wwwroot/adrum-xd.bb4998b9fa08203795298c5909e8245d.html",
-  "legal_id": "520042177",
-  "company": "הכשרה חברה לביטוח בע\"מ",
-  "detected": "2026-10-01T10:00:08+00:00"
+  "detected": "2026-10-01T10:33:42+00:00"
  },
  {
   "kind": "page_changed",
@@ -132,6 +15,6 @@
   "href": "https://bestcar.hcsra.co.il/best-policy-proposal/starter?utm_source=web&utm_medium=organic",
   "legal_id": "520042177",
   "company": "הכשרה חברה לביטוח בע\"מ",
-  "detected": "2026-10-01T10:00:08+00:00"
+  "detected": "2026-10-01T10:33:42+00:00"
  }
 ]
