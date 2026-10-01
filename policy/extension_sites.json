@@ -325,6 +325,33 @@
   "follow_rx": "גננות"
  },
  {
+  "legal_id": "520027715",
+  "name": "מנורה מבטחים והסתדרות המהנדסים ניהול קופות גמל בע\"מ",
+  "home": "https://www.menoramivt.co.il",
+  "pages": [
+   {
+    "product": "גמל",
+    "url": "https://www.menoramivt.co.il/links/keren-hishtalmut/omega-fund"
+   },
+   {
+    "product": "גמל",
+    "url": "https://www.menoramivt.co.il/funds/about-menora/engineers/omega-fund/omega-9802"
+   }
+  ],
+  "products": [
+   "גמל"
+  ],
+  "click": null,
+  "clicks": null,
+  "any_sheet": null,
+  "exclude": "about-insurance|participating-portfolio|מנורה-ביטוח|משתתף",
+  "settle_ms": null,
+  "capture_ms": null,
+  "download_rx": null,
+  "follow_max": 15,
+  "follow_rx": "omega"
+ },
+ {
   "legal_id": "520028390",
   "name": "קרנות השתלמות למורים תיכוניים, מורי סמינרים ומפקחים - חברה מנהלת בע\"מ",
   "home": "https://www.kranoth.org.il",

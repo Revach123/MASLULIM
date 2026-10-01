@@ -29,13 +29,25 @@ def _norm(s):
     return re.sub(r"\s+", " ", s).strip().lower()
 
 
+def _ages(s):
+    """גילאים לצורה אחת: "עד 50"/"50 ומטה"/"עד גיל 50" -> גיל50מטה; "50-60"/"50 עד 60" -> גיל5060; "60+"/"60 ומעלה"/"מעל 60" -> גיל60מעלה"""
+    s = str(s or "")
+    s = re.sub(r"50\s*(?:-|–|עד|ל|\s)\s*60(?!\d)", " גיל5060 ", s)
+    s = re.sub(r"(?:עד|מתחת ל)\s*(?:גיל\s*)?50(?!\d)|50\s*ומטה", " גיל50מטה ", s)
+    s = re.sub(r"60\s*(?:\+|ומעלה|פלוס)|מעל\s*(?:גיל\s*)?60(?!\d)", " גיל60מעלה ", s)
+    return s
+
+
 def _toks(s):
-    s = re.sub(r"(?i)s\s*&\s*p\s*(\d)", r"sp\1", str(s or ""))
+    s = _ages(s)
+    s = re.sub(r"(?i)s\s*&\s*p\s*(\d)", r"sp\1", s)
     s = re.sub(r"(?i)(\d+)\s*s\s*&\s*p\b", r"sp\1", s)  # "500 S&P" (הכשרה)
     s = re.sub(r"(?<!\d)(19|20)\d\d(?!\d)", " ", s)  # שנה בשם ("מסלול כללי מור 2026")
     s = re.sub(r"[\"'״׳()\[\]\-–_,.:;/%]+", " ", s.lower())
-    stop = {"מסלול", "קופת", "קופה", "קרן", "לשנת", "בע", "מ", "בעמ", "מסל", "לבני", "בני", "גילאי", "לגילאי", "עד", "ו"}
-    return frozenset(w for w in s.split() if w not in stop)
+    stop = {"מסלול", "קופת", "קופה", "קרן", "לשנת", "בע", "מ", "בעמ", "מסל", "לבני", "בני", "גילאי", "לגילאי", "עד", "ו",
+            "המותאם", "לגילאים", "גילאים", "למסלול", "מדיניות", "צפויה", "השקעה"}
+    syn = {"מנייתי": "מניות", "המנייתי": "מניות", "הלכתי": "הלכה", "כהלכה": "הלכה"}
+    return frozenset(syn.get(w, w) for w in s.split() if w not in stop)
 
 
 def numbers_in(text):
@@ -111,12 +123,16 @@ class Registry:
         # השוואת קבוצות מילים, בלי המילים שמשותפות לכל שמות החברה ברישום ("ילין לפידות", "אלטשולר שחם").
         # גמל/להשקעה/השתלמות/פנסיה נשמרות (מבדילות בין קופות). קודם התאמה מלאה יחידה, אחר כך שם המסמך מוכל
         # בשם הרישום והמועמד עם הכי מעט מילים עודפות יחיד
-        digs = lambda x: sorted(re.findall(r"(?<!\d)\d{1,3}(?!\d)", re.sub(r"(?i)s\s*&\s*p\s*(\d)|(\d+)\s*s\s*&\s*p\b", r"sp\1\2", str(x or ""))))
+        digs = lambda x: sorted(re.findall(r"(?<!\d)\d{1,3}(?!\d)", re.sub(r"(?i)s\s*&\s*p\s*(\d)|(\d+)\s*s\s*&\s*p\b", r"sp\1\2", _ages(x))))
         sets = {tn: _toks(nm) for tn, nm in cand.items() if digs(nm) == digs(name)}  # גילאים/אחוזים/מדד זהים
         alls = [_toks(nm) for nm in cand.values()]
         common = frozenset.intersection(*alls) if len(alls) > 1 else frozenset()
         common |= {"חברה", "לביטוח", "בע", "מ", "בעמ"}  # "הכשרה חברה לביטוח בע"מ - כללי" = "הכשרה כללי"
         mine = _toks(name) - common
+        # ראשי תיבות של שם החברה ברישום ("ק.ל.ע", "עו\"ס") כמילה אחת במסמך ("מסלול קלע כללי") - לא מכריעים
+        acr = {re.sub(r"[\"״'׳.]", "", m) for nm in cand.values() for m in re.findall(r"[א-ת]{1,3}(?:[\"״'׳.][א-ת]{1,3})+", str(nm))}
+        if mine - acr:
+            mine = mine - acr
         if mine:
             same = [tn for tn, t in sets.items() if t - common == mine]
             if len(same) == 1:
@@ -298,9 +314,9 @@ def assign(tracks):
             if not t["track_no"]:
                 for pen, nm in ((0, t.get("track_name")), (0.1, t.get("sheet"))):  # שם גיליון - עדיפות נמוכה
                     n, sc = reg.match_name(t["legal_id"], nm)
-                    if n:
-                        fb.append((pen - sc, i, n)); break
-        for _, i, n in sorted(fb):
+                    if n:  # מסלול פעיל קודם למסלול ישן עם אותו שם
+                        fb.append((0 if t.get("active") else 1, pen - sc, i, n)); break
+        for _, _, i, n in sorted(fb):
             t = tracks[i]
             if (t["legal_id"], n) not in owned:
                 owned.add((t["legal_id"], n))
