@@ -16,5 +16,11 @@
  "rev": 8,
  "home_source": "web_search",
  "max_pages": 20,
- "exclude": "^(?!.*קהר)"
+ "exclude": "^(?!.*קהר)",
+ "track_no_map": [
+  [
+   "קהר",
+   "295"
+  ]
+ ]
 }
