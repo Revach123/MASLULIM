@@ -1,9 +1,9 @@
 {
  "extension_version": "2.27.0",
- "started": "2026-10-01T18:54:00.178Z",
- "updated": "2026-10-01T18:54:29.352Z",
- "final": true,
- "stopped": true,
+ "started": "2026-10-01T19:01:45.259Z",
+ "updated": "2026-10-01T19:04:45.391Z",
+ "final": false,
+ "stopped": false,
  "rules_from_github": true,
  "rules": {
   "doc_rx": "\\.(xlsx|xls|pdf|docx)(\\?|#|$)",
@@ -19,7 +19,36 @@
  "total_sites": 10,
  "done_sites": 4,
  "new_docs": 0,
- "active": [],
+ "active": [
+  {
+   "name": "איילון קופות גמל בע\"מ",
+   "page": "https://www.ayalon-ins.co.il/savings/study-fund",
+   "page_no": 7,
+   "pages": 27,
+   "step": "פותח אקורדיונים ואוסף קישורים"
+  },
+  {
+   "name": "החברה לניהול קופת התגמולים והפנסיה של עובדי הסוכנות היהודית לארץ ישראל בע\"מ",
+   "page": "https://www.jafi.org/",
+   "page_no": 2,
+   "pages": 3,
+   "step": "טוען עמוד"
+  },
+  {
+   "name": "קרנות השתלמות למורים ולגננות - חברה מנהלת בע\"מ",
+   "page": "https://www.kranoth.org.il/%d7%9e%d7%93%d7%99%d7%a0%d7%99%d7%95%d7%aa-%d7%95%d7%a0%d7%94%d7%9c%d7%99%d7%9d-%d7%9e%d7%95%d7%a8%d7%99%d7%9d-%d7%95%d7%92%d7%92%d7%a0%d7%95%d7%aa/%d7%9e%d7%93%d7%99%d7%a0%d7%99%d7%95%d7%aa-%d7%94%d7%a9%d7%a7%d7%a2%d7%95%d7%aa-%d7%9e%d7%95%d7%a8%d7%99%d7%9d-%d7%95%d7%92%d7%a0%d7%a0%d7%95%d7%aa-%d7%9e%d7%a7%d7%95%d7%a8/",
+   "page_no": 11,
+   "pages": 15,
+   "step": "מוריד קובץ 6/26"
+  },
+  {
+   "name": "איילון חברה לביטוח בע\"מ",
+   "page": "https://www.ayalon-ins.co.il",
+   "page_no": 3,
+   "pages": 9,
+   "step": "פותח אקורדיונים ואוסף קישורים"
+  }
+ ],
  "sites": [
   {
    "legal_id": "513910703",
@@ -70,6 +99,16 @@
        "ctx": "2026 2025 2024 2023 2022 2021 2020 אמות מידה 2026 הצהרה מראש של גוף מוסדי על מדיניות ההשקעה שלו לצפי"
       }
      ]
+    },
+    {
+     "url": "https://www.555.co.il",
+     "links": 186,
+     "followed": [],
+     "files": 0,
+     "clicked": 6,
+     "captured": 0,
+     "selected": [],
+     "unselected_files": []
     }
    ],
    "new_docs": 0,
@@ -80,7 +119,8 @@
     "Corporate governance standards 2026.pdf -> TypeError: Failed to fetch"
    ],
    "diag": [
-    "איי. די. איי. חברה: links=174 files=14 clicked=4 captured=0 selected=9"
+    "איי. די. איי. חברה: links=174 files=14 clicked=4 captured=0 selected=9",
+    "איי. די. איי. חברה: links=186 files=0 clicked=6 captured=0 selected=0"
    ],
    "new_files": []
   },
@@ -90,13 +130,147 @@
    "pages": [
     {
      "url": "https://atudotvatika.co.il/%d7%a0%d7%aa%d7%95%d7%a0%d7%99-%d7%94%d7%a7%d7%a8%d7%9f/",
-     "links": 0,
+     "links": 83,
      "followed": [],
-     "files": 0,
+     "files": 44,
      "clicked": 0,
      "captured": 0,
-     "selected": [],
-     "unselected_files": []
+     "selected": [
+      "https://atudotvatika.co.il/wp-content/uploads/2026/01/הצהרת-מדיניות-2026-עתודות-הותיקה-1.xlsx",
+      "https://atudotvatika.co.il/wp-content/uploads/2025/03/הצהרת-מדיניות-2025-עתודות-הותיקה.xlsx",
+      "https://atudotvatika.co.il/wp-content/uploads/2024/01/עותק-של-הצהרת-מדיניות-2024-עתודות-הותיקה-מונגש-11.01.2024-002.pdf",
+      "https://atudotvatika.co.il/wp-content/uploads/2023/10/עותק-של-עדכון-מגבלות-מטח-הצהרת-מדיניות-2023-עתודות-הותיקה.pdf",
+      "https://atudotvatika.co.il/wp-content/uploads/2022/01/הצהרה-מראש-מדיניות-השקעה-עתודות-הוותיקה-2022.pdf",
+      "https://atudotvatika.co.il/wp-content/uploads/2021/01/הצהרת-מדיניות-2021.pdf",
+      "https://atudotvatika.co.il/wp-content/uploads/2026/04/עדכונים-מדיניות-הצבעה-אפריל-2026.pdf"
+     ],
+     "unselected_files": [
+      {
+       "file": "https://atudotvatika.co.il/wp-content/uploads/2026/07/511789190_p300_Yield226.xlsx",
+       "text": "מרכיבי תשואה 2026",
+       "ctx": "מרכיבי תשואה 2026"
+      },
+      {
+       "file": "https://atudotvatika.co.il/wp-content/uploads/2026/01/511789190_p300_Yield425.xlsx",
+       "text": "מרכיבי תשואה 2025 מצטבר",
+       "ctx": "מרכיבי תשואה 2025 מצטבר"
+      },
+      {
+       "file": "https://atudotvatika.co.il/wp-content/uploads/2025/01/511789190_p300_Yield424.xlsx",
+       "text": "מרכיבי תשואה  2024 מצטבר",
+       "ctx": "מרכיבי תשואה 2024 מצטבר"
+      },
+      {
+       "file": "https://atudotvatika.co.il/wp-content/uploads/2024/08/511789190_p300_Yield423-6.xlsx",
+       "text": "מרכיבי תשואה  2023 מצטבר",
+       "ctx": "מרכיבי תשואה 2023 מצטבר"
+      },
+      {
+       "file": "https://atudotvatika.co.il/wp-content/uploads/2023/01/511789190_p300_Yield422.xlsx",
+       "text": "מרכיבי תשואה 2022 מצטבר",
+       "ctx": "מרכיבי תשואה 2022 מצטבר"
+      },
+      {
+       "file": "https://atudotvatika.co.il/wp-content/uploads/2022/02/511789190_p300_Yield421.xlsx",
+       "text": "מרכיבי תשואה 2021 מצטבר",
+       "ctx": "מרכיבי תשואה 2021 מצטבר"
+      },
+      {
+       "file": "https://atudotvatika.co.il/wp-content/uploads/2026/09/שיעורי-תשואה-08.2026.xls",
+       "text": "שיעורי תשואה 2026",
+       "ctx": "שיעורי תשואה 2026"
+      },
+      {
+       "file": "https://atudotvatika.co.il/wp-content/uploads/2026/01/שיעורי-תשואה-12.2025-1.xls",
+       "text": "שיעורי תשואה 2025",
+       "ctx": "שיעורי תשואה 2025"
+      },
+      {
+       "file": "https://atudotvatika.co.il/wp-content/uploads/2025/01/שיעורי-תשואה-12.2024.xls",
+       "text": "שיעורי תשואה 2024",
+       "ctx": "שיעורי תשואה 2024"
+      },
+      {
+       "file": "https://atudotvatika.co.il/wp-content/uploads/2024/01/שיעורי-תשואה-12.2023.xls",
+       "text": "שיעורי תשואה 2023",
+       "ctx": "שיעורי תשואה 2023"
+      },
+      {
+       "file": "https://atudotvatika.co.il/wp-content/uploads/2023/01/שיעורי-תשואה-12.2022.xls",
+       "text": "שיעורי תשואה 2022",
+       "ctx": "שיעורי תשואה 2022"
+      },
+      {
+       "file": "https://atudotvatika.co.il/wp-content/uploads/2022/02/שיעורי-תשואה-12.2021.xls",
+       "text": "שיעורי תשואה 2021",
+       "ctx": "שיעורי תשואה 2021"
+      },
+      {
+       "file": "https://atudotvatika.co.il/wp-content/uploads/2016/04/הרכב-הנכסים-לפי-דוח-הכספי-2015.xlsx",
+       "text": "הרכב נכסים לשנת 2015\n\t\t\t\t\t\t\t\t\t\t\t קישור נפתח בחלון חדש.",
+       "ctx": "הרכב נכסים לשנת 2015 קישור נפתח בחלון חדש."
+      },
+      {
+       "file": "https://atudotvatika.co.il/wp-content/uploads/2015/05/עותק-של-הרכב-נכסים-לשנת-2014.xls",
+       "text": "הרכב נכסים לשנת 2014\n\t\t\t\t\t\t\t\t\t\t\t קישור נפתח בחלון חדש.",
+       "ctx": "הרכב נכסים לשנת 2014 קישור נפתח בחלון חדש."
+      },
+      {
+       "file": "https://atudotvatika.co.il/wp-content/uploads/2015/02/הרכב-נכסים-לשנת-2013.xls",
+       "text": "הרכב נכסים לשנת 2013\n\t\t\t\t\t\t\t\t\t\t\t קישור נפתח בחלון חדש.",
+       "ctx": "הרכב נכסים לשנת 2013 קישור נפתח בחלון חדש."
+      },
+      {
+       "file": "https://atudotvatika.co.il/wp-content/uploads/2026/05/שיעור-דמי-ניהול-ועמלות-2025-1.pdf",
+       "text": "דמי ניהול ועמלות 2025\n\t\t\t\t\t\t\t\t\t\t\t פתח קישור PDF",
+       "ctx": "דמי ניהול ועמלות 2025 פתח קישור PDF"
+      },
+      {
+       "file": "https://atudotvatika.co.il/wp-content/uploads/2026/04/דמי-ניהול-ועמלות-2024-1.pdf",
+       "text": "דמי ניהול ועמלות 2024\n\t\t\t\t\t\t\t\t\t\t\t פתח קישור PDF",
+       "ctx": "דמי ניהול ועמלות 2024 פתח קישור PDF"
+      },
+      {
+       "file": "https://atudotvatika.co.il/wp-content/uploads/2024/08/דמי-ניהול-ועמלות-2023.pdf",
+       "text": "דמי ניהול ועמלות 2023\n\t\t\t\t\t\t\t\t\t\t\t פתח קישור PDF",
+       "ctx": "דמי ניהול ועמלות 2023 פתח קישור PDF"
+      },
+      {
+       "file": "https://atudotvatika.co.il/wp-content/uploads/2023/06/דמי-ניהול-ועמלות-2022.pdf",
+       "text": "דמי ניהול ועמלות 2022\n\t\t\t\t\t\t\t\t\t\t\t פתח קישור PDF",
+       "ctx": "דמי ניהול ועמלות 2022 פתח קישור PDF"
+      },
+      {
+       "file": "https://atudotvatika.co.il/wp-content/uploads/2022/06/דמי-ניהול-ועמלות-2021.pdf",
+       "text": "דמי ניהול ועמלות 2021\n\t\t\t\t\t\t\t\t\t\t\t פתח קישור PDF",
+       "ctx": "דמי ניהול ועמלות 2021 פתח קישור PDF"
+      },
+      {
+       "file": "https://atudotvatika.co.il/wp-content/uploads/2025/10/מדיניות-ESG-של-קבוצת-כלל-ביטוח-1.pdf",
+       "text": "מדיניות ESG \n\t\t\t\t\t\t\t\t\t\t\t פתח קישור PDF",
+       "ctx": "מדיניות ESG פתח קישור PDF"
+      },
+      {
+       "file": "https://atudotvatika.co.il/wp-content/uploads/2021/02/מסמך-אמות-מידה-אחריות-תאגידית-ינואר-2021-322021.pdf",
+       "text": "אמות מידה לבחינת איכות אחריות תאגידית 2021\n\t\t\t\t\t\t\t\t\t\t\t פתח קישור PDF",
+       "ctx": "אמות מידה לבחינת איכות אחריות תאגידית 2021 פתח קישור PDF"
+      },
+      {
+       "file": "https://atudotvatika.co.il/wp-content/uploads/2025/06/מדיניות-תגמול.pdf",
+       "text": "מדיניות תגמול – מרץ 2025\n\t\t\t\t\t\t\t\t\t\t\t פתח קישור PDF",
+       "ctx": "מדיניות תגמול – מרץ 2025 פתח קישור PDF"
+      },
+      {
+       "file": "https://atudotvatika.co.il/wp-content/uploads/2025/06/מדיניות-תגמול.pdf",
+       "text": "מדיניות תגמול – מרץ 2024\n\t\t\t\t\t\t\t\t\t\t\t פתח קישור PDF",
+       "ctx": "מדיניות תגמול – מרץ 2024 פתח קישור PDF"
+      },
+      {
+       "file": "https://atudotvatika.co.il/wp-content/uploads/2023/06/מדיניות-תגמול.pdf",
+       "text": "מדיניות תגמול – מאי 2023\n\t\t\t\t\t\t\t\t\t\t\t פתח קישור PDF",
+       "ctx": "מדיניות תגמול – מאי 2023 פתח קישור PDF"
+      }
+     ]
     },
     {
      "url": "https://atudotvatika.co.il",
@@ -131,12 +305,14 @@
     }
    ],
    "new_docs": 0,
-   "found": 4,
-   "selected": 0,
-   "had": 0,
-   "errors": [],
+   "found": 48,
+   "selected": 7,
+   "had": 6,
+   "errors": [
+    "עדכונים-מדיניות-הצבעה-אפריל-2026.pdf -> 418"
+   ],
    "diag": [
-    "\"עתודות\" - קרן פנס: links=0 files=0 clicked=0 captured=0 selected=0",
+    "\"עתודות\" - קרן פנס: links=83 files=44 clicked=0 captured=0 selected=7",
     "\"עתודות\" - קרן פנס: links=57 files=4 clicked=0 captured=0 selected=0",
     "   ? מדריך-לגלישה-בטוחה.docx | לכניסה למדריך לגלישה בטוחה – לחץ כאן\nקיש | דוחות כספיים נכסי הקופה נתוני הקרן תקנונים סימולטור פנסיה לכ",
     "   ? 1751262524_אמנת_שירות_מעודכנת_1_23.6.22_-1.pdf | אמנת שירות\nפתח קישור PDF | דוחות כספיים נכסי הקופה נתוני הקרן תקנונים סימולטור פנסיה לכ",
@@ -146,62 +322,81 @@
    "new_files": []
   },
   {
-   "legal_id": "517085874",
-   "name": "איילון קופות גמל בע\"מ",
-   "pages": [
-    {
-     "url": "https://www.ayalon-ins.co.il/",
-     "links": 425,
-     "followed": [
-      "https://www.ayalon-ins.co.il/gemel/site-hp",
-      "https://www.ayalon-ins.co.il/insurances/car/having-policy",
-      "https://www.ayalon-ins.co.il/savings",
-      "https://www.ayalon-ins.co.il/providents",
-      "https://www.ayalon-ins.co.il/savings/study-fund",
-      "https://www.ayalon-ins.co.il/savings/provident-fund-invest",
-      "https://www.ayalon-ins.co.il/savings/provident-fund",
-      "https://www.ayalon-ins.co.il/savings/private",
-      "https://www.ayalon-ins.co.il/savings/pensionary",
-      "https://www.ayalon-ins.co.il/savings/reverse-mortgage",
-      "https://www.ayalon-ins.co.il/savings/business-loans",
-      "https://www.ayalon-ins.co.il/savings/investment-routes",
-      "https://www.ayalon-ins.co.il/providents/provident-fund",
-      "https://www.ayalon-ins.co.il/providents/study-fund",
-      "https://www.ayalon-ins.co.il/providents/provident-fund-invest",
-      "https://www.ayalon-ins.co.il/savings/app",
-      "https://www.ayalon-ins.co.il/investments-provident"
-     ],
-     "files": 0,
-     "clicked": 2,
-     "captured": 0,
-     "selected": [],
-     "unselected_files": []
-    }
-   ],
-   "new_docs": 0,
-   "found": 0,
-   "selected": 0,
-   "had": 0,
-   "errors": [],
-   "diag": [
-    "איילון קופות גמל ב: links=425 files=0 clicked=2 captured=0 selected=0"
-   ],
-   "new_files": []
-  },
-  {
    "legal_id": "514956465",
    "name": "מור גמל ופנסיה בע\"מ",
    "pages": [
     {
      "url": "https://www.moreinvest.co.il/מוצרים/גמל-ופנסיה/מידע-כללי-ורגולציה/הצהרה-על-מדיניות-השקעה/",
-     "links": 144,
+     "links": 206,
      "followed": [],
-     "files": 3,
+     "files": 65,
      "clicked": 0,
      "captured": 0,
      "selected": [
+      "https://www.moreinvest.co.il/media/l1th0dl1/7_17_0_2026_17.xlsx",
       "https://www.moreinvest.co.il/media/crvlwpod/7_17_0_2026_9.xlsx",
-      "https://www.moreinvest.co.il/media/jm4fv05g/7_18_0_2026_9.xlsx"
+      "https://www.moreinvest.co.il/media/jwgpu2r0/7_17_0_2026_8.xlsx",
+      "https://www.moreinvest.co.il/media/wjcjuj3r/7_17_0_2026_7.xlsx",
+      "https://www.moreinvest.co.il/media/3wkdgup0/7_17_0_2026_6.xlsx",
+      "https://www.moreinvest.co.il/media/rljmh5o1/7_17_0_2026_5.xlsx",
+      "https://www.moreinvest.co.il/media/zqspbph2/7_17_0_2026_3.xlsx",
+      "https://www.moreinvest.co.il/media/b45a0eji/7_17_0_2026_2.xlsx",
+      "https://www.moreinvest.co.il/media/glnpmnvi/7_17_0_2026_1.xlsx",
+      "https://www.moreinvest.co.il/media/1yojvny4/7_17_0_2025_7.xlsx",
+      "https://www.moreinvest.co.il/media/wqzn5mk4/7_17_0_2025_6.xlsx",
+      "https://www.moreinvest.co.il/media/zlyd4snr/7_17_0_2025_5.xlsx",
+      "https://www.moreinvest.co.il/media/tw1ighpk/7_17_0_2025_4.xlsx",
+      "https://www.moreinvest.co.il/media/4xdg5nuf/7_17_0_2025_3.xlsx",
+      "https://www.moreinvest.co.il/media/qwdfgqiy/7_17_0_2025_2.xlsx",
+      "https://www.moreinvest.co.il/media/hjjbahea/7_17_0_2025_1.xlsx",
+      "https://www.moreinvest.co.il/media/gwmnaf4s/7_17_0_2024_18.xlsx",
+      "https://www.moreinvest.co.il/media/0t0jlqbb/7_17_0_2024_17.xlsx",
+      "https://www.moreinvest.co.il/media/phaignve/7_17_0_2024_15.xlsx",
+      "https://www.moreinvest.co.il/media/d2xeshfs/7_17_0_2024_12.xlsx",
+      "https://www.moreinvest.co.il/media/imdeebkp/7_17_0_2024_7.xlsx",
+      "https://www.moreinvest.co.il/media/uvebxth0/7_17_0_2024_4.xlsx",
+      "https://www.moreinvest.co.il/media/p2oo1pxj/7_17_0_2024_3.xlsx",
+      "https://www.moreinvest.co.il/media/qdbjyg2a/7_17_0_2024_2.xlsx",
+      "https://www.moreinvest.co.il/media/mrgh2wvs/7_17_0_2024_1.xlsx",
+      "https://www.moreinvest.co.il/media/ilepzxwv/7_17_0_2023_17.xlsx",
+      "https://www.moreinvest.co.il/media/kbvfzu3g/7_17_0_2023_16.xlsx",
+      "https://www.moreinvest.co.il/media/vomljbho/7_17_0_2023_12.xlsx",
+      "https://www.moreinvest.co.il/media/0vbbajmi/7_17_0_2023_11.xlsx",
+      "https://www.moreinvest.co.il/media/tdopjyvp/7_17_0_2023_10.xlsx",
+      "https://www.moreinvest.co.il/media/spupr0tm/7_17_0_2023_8.xlsx",
+      "https://www.moreinvest.co.il/media/tb4nyg2s/7_17_0_2023_7.xlsx",
+      "https://www.moreinvest.co.il/media/cacduzpn/7_17_0_2023_3.xlsx",
+      "https://www.moreinvest.co.il/media/x01p4gjm/7_17_0_2023_2.xlsx",
+      "https://www.moreinvest.co.il/media/kccnh4lz/7_17_0_2023_1.xlsx",
+      "https://www.moreinvest.co.il/media/ikqdjsng/7_18_0_2026_17.xlsx",
+      "https://www.moreinvest.co.il/media/jm4fv05g/7_18_0_2026_9.xlsx",
+      "https://www.moreinvest.co.il/media/nmfhqisn/7_18_0_2026_8.xlsx",
+      "https://www.moreinvest.co.il/media/y31nvjak/7_18_0_2026_7.xlsx",
+      "https://www.moreinvest.co.il/media/x4dfm4rj/7_18_0_2026_6.xlsx",
+      "https://www.moreinvest.co.il/media/h4ggfxuj/7_18_0_2026_5.xlsx",
+      "https://www.moreinvest.co.il/media/p4lbc04n/7_18_0_2026_3.xlsx",
+      "https://www.moreinvest.co.il/media/a5xhlwym/7_18_0_2026_2.xlsx",
+      "https://www.moreinvest.co.il/media/fqpbaka0/7_18_0_2026_1.xlsx",
+      "https://www.moreinvest.co.il/media/c2hbdvmq/7_18_0_2025_9.xlsx",
+      "https://www.moreinvest.co.il/media/1dzb1lbe/7_18_0_2025_7.xlsx",
+      "https://www.moreinvest.co.il/media/rokf2lpt/7_18_0_2025_6.xlsx",
+      "https://www.moreinvest.co.il/media/oq3e4vtt/7_18_0_2025_5.xlsx",
+      "https://www.moreinvest.co.il/media/0sqdjfpy/7_18_0_2025_4.xlsx",
+      "https://www.moreinvest.co.il/media/g1fhfbo3/7_18_0_2025_3.xlsx",
+      "https://www.moreinvest.co.il/media/vwaffzyq/7_18_0_2025_2.xlsx",
+      "https://www.moreinvest.co.il/media/fvonuovu/7_18_0_2025_1.xlsx",
+      "https://www.moreinvest.co.il/media/qknldjvr/7_18_0_2024_12.xlsx",
+      "https://www.moreinvest.co.il/media/to1mf2av/7_18_0_2024_7.xls",
+      "https://www.moreinvest.co.il/media/uqxjac4y/7_18_0_2024_1.xlsx",
+      "https://www.moreinvest.co.il/media/22tjxxea/7_18_0_2023_17.xls",
+      "https://www.moreinvest.co.il/media/njyh0h20/7_18_0_2023_12.xls",
+      "https://www.moreinvest.co.il/media/bkykwbzy/7_18_0_2023_7.xls",
+      "https://www.moreinvest.co.il/media/seulfcst/7_18_0_2023_3.xls",
+      "https://www.moreinvest.co.il/media/sokpsg1b/7_18_0_2023_1.xls",
+      "https://www.moreinvest.co.il/media/xifbcs2l/7_21_0_2026_14.xlsx",
+      "https://www.moreinvest.co.il/media/qjsb4gri/7_21_0_2025_14.xlsx",
+      "https://www.moreinvest.co.il/media/uywn0chp/7_21_0_2024_14.xlsx",
+      "https://www.moreinvest.co.il/media/iohlp1t5/7_21_0_2023_14.xlsx"
      ],
      "unselected_files": [
       {
@@ -223,13 +418,159 @@
     }
    ],
    "new_docs": 0,
-   "found": 3,
-   "selected": 2,
-   "had": 2,
+   "found": 65,
+   "selected": 64,
+   "had": 64,
    "errors": [],
    "diag": [
-    "מור גמל ופנסיה בע\": links=144 files=3 clicked=0 captured=0 selected=2",
+    "מור גמל ופנסיה בע\": links=206 files=65 clicked=0 captured=0 selected=64",
     "מור גמל ופנסיה בע\": links=167 files=0 clicked=0 captured=0 selected=0"
+   ],
+   "new_files": []
+  },
+  {
+   "legal_id": "520028390",
+   "name": "קרנות השתלמות למורים תיכוניים, מורי סמינרים ומפקחים - חברה מנהלת בע\"מ",
+   "pages": [
+    {
+     "url": "https://www.kranoth.org.il/%D7%9E%D7%93%D7%99%D7%A0%D7%99%D7%95%D7%AA-%D7%95%D7%A0%D7%94%D7%9C%D7%99%D7%9D/%D7%9E%D7%93%D7%99%D7%A0%D7%99%D7%95%D7%AA-%D7%95%D7%A0%D7%94%D7%9C%D7%99%D7%9D-%D7%9E%D7%95%D7%A8%D7%99%D7%9D-%D7%AA%D7%99%D7%9B%D7%95%D7%A0%D7%99%D7%99%D7%9D/%D7%9E%D7%93%D7%99%D7%A0%D7%99%D7%95%D7%AA-%D7%94%D7%A9%D7%A7%D7%A2%D7%95%D7%AA-%D7%9E%D7%95%D7%A8%D7%99%D7%9D-%D7%AA%D7%99%D7%9B%D7%95%D7%A0%D7%99%D7%99%D7%9D-%D7%A8%D7%92%D7%99%D7%9C/",
+     "links": 101,
+     "followed": [],
+     "files": 54,
+     "clicked": 0,
+     "captured": 0,
+     "selected": [
+      "https://kranoth.org.il/wp-content/uploads/2026/09/מדיניות_השקעות_צפויה_תשפז-מורים_תיכוניים_מסלול_כללי.xlsx",
+      "https://www.kranoth.org.il/wp-content/uploads/2026/06/מות_רגילה-מדיניות_השקעות_מרץ_2026.xlsx",
+      "https://www.kranoth.org.il/wp-content/uploads/2026/01/מדיניות_השקעה_צפויה_מורים_תיכונים_תשפו_מונגש_עדכון_דצמבר__2025.xlsx",
+      "https://www.kranoth.org.il/wp-content/uploads/2025/11/מדיניות_השקעות_צפויה_תשפו-מות_אשראי_ואגח.xlsx",
+      "https://www.kranoth.org.il/wp-content/uploads/2024/12/מות_רגילה-מסלול_כללי-מדיניות_תשפה_דצמבר_2024.xlsx",
+      "https://www.kranoth.org.il/wp-content/uploads/2024/11/מות_רגילה_מסלול_כללי_מדיניות_השקעות_צפויה_תשפה-1.xlsx",
+      "https://www.kranoth.org.il/wp-content/uploads/2024/01/מורים_תיכוניים_רגילה_כללי-מדיניות_השקעות_צפויה_25.12.23.xlsx",
+      "https://www.kranoth.org.il/wp-content/uploads/2023/08/מדיניות_השקעה_צפויה_תשפד-מות_רגילה-מסלול_כללי.xlsx",
+      "https://www.kranoth.org.il/wp-content/uploads/2023/01/מדיניות_השקעות_צפויה_מות_רגילה_תשפג-מסלול_כללי-_עדכון_דצמבר_2022.xlsx",
+      "https://www.kranoth.org.il/wp-content/uploads/2022/10/מדיניות_השקעות_צפויה_תשפג_מות_רגילה_מסלול_כללי.xlsx",
+      "https://kranoth.org.il/wp-content/uploads/2026/09/מדיניות_השקעות_צפויה_תשפז-מורים_תיכוניים_מסלול_הלכה.xlsx",
+      "https://www.kranoth.org.il/wp-content/uploads/2026/06/מות_רגילה_הלכה-מדיניות_השקעות_מרץ_2026.xlsx",
+      "https://www.kranoth.org.il/wp-content/uploads/2025/10/מדיניות_השקעות_צפויה_תשפו-מות_הלכתי.xlsx",
+      "https://www.kranoth.org.il/wp-content/uploads/2024/12/מות_רגילה-מסלול_הלכה-מדיניות_תשפה_דצמבר_2024.xlsx",
+      "https://www.kranoth.org.il/wp-content/uploads/2024/11/מות_רגילה_מסלול_הלכה_מדיניות_השקעות_צפויה_תשפה-1.xlsx",
+      "https://www.kranoth.org.il/wp-content/uploads/2024/01/מורים_תיכוניים_רגילה_הלכתי-מדיניות_השקעות_צפויה_25.12.23.xlsx",
+      "https://www.kranoth.org.il/wp-content/uploads/2023/08/מדיניות_השקעות_צפויה_תשפד-מות_רגילה-מסלול_הלכה.xlsx",
+      "https://www.kranoth.org.il/wp-content/uploads/2023/01/מדיניות_השקעות_צפויה_מות_רגילה_תשפג-מסלול_הלכה-עדכון_דצמבר_2022.xlsx",
+      "https://www.kranoth.org.il/wp-content/uploads/2022/10/מדיניות_השקעות_צפויה_תשפג_מות_רגילה_מסלול_הלכה.xlsx",
+      "https://kranoth.org.il/wp-content/uploads/2026/09/מדיניות_השקעות_צפויה_תשפז-מורים_תיכוניים-_מסלול_אשראי_ואגח.xlsx",
+      "https://www.kranoth.org.il/wp-content/uploads/2026/07/מדיניות_השקעות_צפויה_תשפו-מות_אשראי_ואגח.xlsx",
+      "https://www.kranoth.org.il/wp-content/uploads/2024/12/מות_רגילה-מסלול_אשראי_ואגח-מדיניות_תשפה_דצמבר_2024.xlsx",
+      "https://www.kranoth.org.il/wp-content/uploads/2024/11/מות_רגילה_מסלול_אשראי_ואגח_מדיניות_השקעות_צפויה_תשפה-1.xlsx",
+      "https://www.kranoth.org.il/wp-content/uploads/2024/01/מורים_תיכוניים_רגילה_אגח-מדיניות_השקעות_צפויה_25.12.23.xlsx",
+      "https://www.kranoth.org.il/wp-content/uploads/2023/08/מדיניות_השקעות_צפויה_תשפד-מות_רגילה-מסלול_אגח.xlsx",
+      "https://www.kranoth.org.il/wp-content/uploads/2023/01/מדיניות_השקעות_צפויה_מות_רגילה_תשפג-מסלול_אגח-עדכון_דצמבר_2022-1.xlsx",
+      "https://www.kranoth.org.il/wp-content/uploads/2022/10/מדיניות_השקעות_צפויה_תשפג_מות_רגילה_מסלול_אגח.xlsx"
+     ],
+     "unselected_files": []
+    },
+    {
+     "url": "https://www.kranoth.org.il/%D7%9E%D7%93%D7%99%D7%A0%D7%99%D7%95%D7%AA-%D7%95%D7%A0%D7%94%D7%9C%D7%99%D7%9D/%D7%9E%D7%93%D7%99%D7%A0%D7%99%D7%95%D7%AA-%D7%95%D7%A0%D7%94%D7%9C%D7%99%D7%9D-%D7%9E%D7%95%D7%A8%D7%99%D7%9D-%D7%AA%D7%99%D7%9B%D7%95%D7%A0%D7%99%D7%99%D7%9D/%D7%9E%D7%93%D7%99%D7%A0%D7%99%D7%95%D7%AA-%D7%94%D7%A9%D7%A7%D7%A2%D7%95%D7%AA-%D7%9E%D7%95%D7%A8%D7%99%D7%9D-%D7%AA%D7%99%D7%9B%D7%95%D7%A0%D7%99%D7%99%D7%9D-%D7%9E%D7%A7%D7%95%D7%A8/",
+     "links": 101,
+     "followed": [],
+     "files": 54,
+     "clicked": 0,
+     "captured": 0,
+     "selected": [
+      "https://kranoth.org.il/wp-content/uploads/2026/09/מדיניות_השקעות_צפויה_תשפז-מורים_תיכוניים_מקור-מסלול_כללי.xlsx",
+      "https://www.kranoth.org.il/wp-content/uploads/2026/06/מות_מקור-מדיניות_השקעות_מרץ_2026.xlsx",
+      "https://www.kranoth.org.il/wp-content/uploads/2025/11/מדיניות_השקעות_צפויה_תשפו-מות_מקור_אשראי_ואגח-1.xlsx",
+      "https://www.kranoth.org.il/wp-content/uploads/2024/12/מות_מקור-מסלול_כללי-מדיניות_תשפה_דצמבר_2024.xlsx",
+      "https://www.kranoth.org.il/wp-content/uploads/2024/11/מות_מקור_מסלול_כללי_מדיניות_השקעה_צפויה_תשפה-1.xlsx",
+      "https://www.kranoth.org.il/wp-content/uploads/2024/01/מורים_תיכונייים_מקור_כללי-מדיניות_השקעות_צפויה_25.12.23.xlsx",
+      "https://www.kranoth.org.il/wp-content/uploads/2023/08/מדיניות_השקעה_צפויה_תשפד-מות_מקור-מסלול_כללי.xlsx",
+      "https://www.kranoth.org.il/wp-content/uploads/2023/01/מדיניות_השקעות_צפויה_מות_מקור_תשפג-מסלול_כללי-עדכון_דצמבר_2022.xlsx",
+      "https://www.kranoth.org.il/wp-content/uploads/2022/10/מדיניות_השקעות_צפויה_תשפג_מות_מקור_מסלול_כללי.xlsx",
+      "https://kranoth.org.il/wp-content/uploads/2026/09/מדיניות_השקעות_צפויה_תשפז-מורים_תיכוניים_מקור-מסלול_הלכה.xlsx",
+      "https://www.kranoth.org.il/wp-content/uploads/2026/06/מות_מקור_הלכה-מדיניות_השקעות_מרץ_2026.xlsx",
+      "https://www.kranoth.org.il/wp-content/uploads/2025/10/מדיניות_השקעות_צפויה_תשפו-מות_מקור_הלכתי.xlsx",
+      "https://www.kranoth.org.il/wp-content/uploads/2024/12/מות_מקור-מסלול_הלכה-מדיניות_תשפה_דצמבר_2024.xlsx",
+      "https://www.kranoth.org.il/wp-content/uploads/2024/11/מות_מקור_מסלול_הלכה_מדיניות_השקעות_צפויה_תשפה-1.xlsx",
+      "https://www.kranoth.org.il/wp-content/uploads/2024/01/מורים_תיכונייים_מקור_הלכה-מדיניות_השקעות_צפויה_25.12.23.xlsx",
+      "https://www.kranoth.org.il/wp-content/uploads/2023/08/מדיניות_השקעות_צפויה_תשפד-מות_מקור-מסלול_הלכה.xlsx",
+      "https://www.kranoth.org.il/wp-content/uploads/2023/01/מדיניות_השקעות_צפויה_מות_מקור_תשפג-מסלול_הלכה-עדכון_דצמבר_2022.xlsx",
+      "https://www.kranoth.org.il/wp-content/uploads/2022/10/מדיניות_השקעות_צפויה_תשפג_מות_מקור_מסלול_הלכה.xlsx",
+      "https://kranoth.org.il/wp-content/uploads/2026/09/מדיניות_השקעות_צפויה_תשפז-מורים_תיכוניים_מקור-מסלול_אשראי_ואגח.xlsx",
+      "https://www.kranoth.org.il/wp-content/uploads/2026/07/מדיניות_השקעות_צפויה_תשפו-מות_מקור_אשראי_ואגח.xlsx",
+      "https://www.kranoth.org.il/wp-content/uploads/2024/12/מות_מקור-מסלול_אשראי_ואגח-מדיניות_תשפה_דצמבר_2024.xlsx",
+      "https://www.kranoth.org.il/wp-content/uploads/2024/11/מות_מקור_מסלול_אשראי_ואגח_מדיניות_השקעה_צפויה_תשפה-1.xlsx",
+      "https://www.kranoth.org.il/wp-content/uploads/2024/01/מורים_תיכוניים_מקור_אגח-מדיניות_השקעות_צפויה_25.12.23.xlsx",
+      "https://www.kranoth.org.il/wp-content/uploads/2023/08/מדיניות_השקעות_צפויה_תשפד-מות_מקור-מסלול_אגח.xlsx",
+      "https://www.kranoth.org.il/wp-content/uploads/2023/01/מדיניות_השקעות_צפויה_מות_מקור_תשפג-מסלול_אגח-עדכון_דצמבר_2022.xlsx",
+      "https://www.kranoth.org.il/wp-content/uploads/2022/10/מדיניות_השקעות_צפויה_תשפג_מות_מקור_מסלול_אגח.xlsx"
+     ],
+     "unselected_files": []
+    },
+    {
+     "url": "https://www.kranoth.org.il/%D7%9E%D7%93%D7%99%D7%A0%D7%99%D7%95%D7%AA-%D7%95%D7%A0%D7%94%D7%9C%D7%99%D7%9D/%D7%9E%D7%93%D7%99%D7%A0%D7%99%D7%95%D7%AA-%D7%95%D7%A0%D7%94%D7%9C%D7%99%D7%9D-%D7%9E%D7%95%D7%A8%D7%99%D7%9D-%D7%AA%D7%99%D7%9B%D7%95%D7%A0%D7%99%D7%99%D7%9D/%D7%9E%D7%93%D7%99%D7%A0%D7%99%D7%95%D7%AA-%D7%94%D7%A9%D7%A7%D7%A2%D7%95%D7%AA-%D7%9E%D7%95%D7%A8%D7%99%D7%9D-%D7%AA%D7%99%D7%9B%D7%95%D7%A0%D7%99%D7%99%D7%9D-%D7%90%D7%92%D7%97/",
+     "links": 47,
+     "followed": [],
+     "files": 0,
+     "clicked": 0,
+     "captured": 0,
+     "selected": [],
+     "unselected_files": []
+    },
+    {
+     "url": "https://www.kranoth.org.il/%D7%9E%D7%93%D7%99%D7%A0%D7%99%D7%95%D7%AA-%D7%95%D7%A0%D7%94%D7%9C%D7%99%D7%9D/%D7%9E%D7%93%D7%99%D7%A0%D7%99%D7%95%D7%AA-%D7%95%D7%A0%D7%94%D7%9C%D7%99%D7%9D-%D7%9E%D7%95%D7%A8%D7%99%D7%9D-%D7%AA%D7%99%D7%9B%D7%95%D7%A0%D7%99%D7%99%D7%9D/%D7%9E%D7%93%D7%99%D7%A0%D7%99%D7%95%D7%AA-%D7%94%D7%A9%D7%A7%D7%A2%D7%95%D7%AA-%D7%9E%D7%95%D7%A8%D7%99%D7%9D-%D7%AA%D7%99%D7%9B%D7%95%D7%A0%D7%99%D7%99%D7%9D-%D7%90%D7%92-%D7%97/",
+     "links": 47,
+     "followed": [],
+     "files": 0,
+     "clicked": 0,
+     "captured": 0,
+     "selected": [],
+     "unselected_files": []
+    },
+    {
+     "url": "https://www.kranoth.org.il/%D7%9E%D7%93%D7%99%D7%A0%D7%99%D7%95%D7%AA-%D7%95%D7%A0%D7%94%D7%9C%D7%99%D7%9D/%D7%9E%D7%93%D7%99%D7%A0%D7%99%D7%95%D7%AA-%D7%95%D7%A0%D7%94%D7%9C%D7%99%D7%9D-%D7%9E%D7%95%D7%A8%D7%99%D7%9D-%D7%AA%D7%99%D7%9B%D7%95%D7%A0%D7%99%D7%99%D7%9D/%D7%9E%D7%93%D7%99%D7%A0%D7%99%D7%95%D7%AA-%D7%94%D7%A9%D7%A7%D7%A2%D7%95%D7%AA-%D7%9E%D7%95%D7%A8%D7%99%D7%9D-%D7%AA%D7%99%D7%9B%D7%95%D7%A0%D7%99%D7%99%D7%9D-%D7%9C%D7%9C%D7%90-%D7%9E%D7%A0%D7%99%D7%95%D7%AA/",
+     "links": 47,
+     "followed": [],
+     "files": 0,
+     "clicked": 0,
+     "captured": 0,
+     "selected": [],
+     "unselected_files": []
+    },
+    {
+     "url": "https://www.kranoth.org.il/%D7%9E%D7%93%D7%99%D7%A0%D7%99%D7%95%D7%AA-%D7%95%D7%A0%D7%94%D7%9C%D7%99%D7%9D/%D7%9E%D7%93%D7%99%D7%A0%D7%99%D7%95%D7%AA-%D7%95%D7%A0%D7%94%D7%9C%D7%99%D7%9D-%D7%9E%D7%95%D7%A8%D7%99%D7%9D-%D7%AA%D7%99%D7%9B%D7%95%D7%A0%D7%99%D7%99%D7%9D/",
+     "links": 49,
+     "followed": [],
+     "files": 0,
+     "clicked": 0,
+     "captured": 0,
+     "selected": [],
+     "unselected_files": []
+    },
+    {
+     "url": "https://www.kranoth.org.il",
+     "links": 93,
+     "followed": [],
+     "files": 0,
+     "clicked": 0,
+     "captured": 0,
+     "selected": [],
+     "unselected_files": []
+    }
+   ],
+   "new_docs": 0,
+   "found": 108,
+   "selected": 53,
+   "had": 53,
+   "errors": [],
+   "diag": [
+    "קרנות השתלמות למור: links=101 files=54 clicked=0 captured=0 selected=27",
+    "קרנות השתלמות למור: links=101 files=54 clicked=0 captured=0 selected=26",
+    "קרנות השתלמות למור: links=47 files=0 clicked=0 captured=0 selected=0",
+    "קרנות השתלמות למור: links=47 files=0 clicked=0 captured=0 selected=0",
+    "קרנות השתלמות למור: links=47 files=0 clicked=0 captured=0 selected=0",
+    "קרנות השתלמות למור: links=49 files=0 clicked=0 captured=0 selected=0",
+    "קרנות השתלמות למור: links=93 files=0 clicked=0 captured=0 selected=0"
    ],
    "new_files": []
   }
