@@ -15,5 +15,11 @@
  "search": false,
  "rev": 9,
  "home_source": "web_search",
- "max_pages": 30
+ "max_pages": 30,
+ "track_no_map": [
+  [
+   "^מסלול לבני 50$",
+   "9963"
+  ]
+ ]
 }
