@@ -12,7 +12,7 @@ const sleep = (ms) => new Promise((r) => setTimeout(r, ms));
 
 const DOC_RX = /\.(xlsx|xls|pdf|docx)(\?|#|$)/i;
 const POLICY_RX = /מדיניות|הצהר|policy|mediniut|hatzarat|expected|investment/i;
-const NOISE_RX = /esg|אחראי|תגמול|פרטיות|privacy|תקנון|מבצע|גילוי[-_ ]נאות|מצגת|presentation|נוהל|העברת זכויות|הצבעות|דוח[ -]כספי|רבעון/i;
+const NOISE_RX = /esg|אחראי|תגמול(?!ים)|tagmul(?!im)|פרטיות|privacy|תקנון|מבצע|גילוי[-_ ]נאות|מצגת|presentation|נוהל|העברת זכויות|הצבעות|דוח[ -]כספי|רבעון/i;
 
 // Chrome דוחה זמנית עריכת טאבים ("Tabs cannot be edited right now (user may be dragging a tab)") - מנסים שוב.
 async function tabsRetry(fn, tries = 20) {
