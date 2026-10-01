@@ -1,1 +1,38 @@
-[]
+[
+ {
+  "kind": "fetch_failed",
+  "page": "https://www.menoramivt.co.il/general/about-menora/pension-and-gemel/about-pension-and-gemel",
+  "text": "403",
+  "href": "https://www.menoramivt.co.il/general/about-menora/pension-and-gemel/about-pension-and-gemel",
+  "legal_id": "512245812",
+  "company": "מנורה מבטחים פנסיה וגמל בע\"מ",
+  "detected": "2026-10-01T08:16:26+00:00"
+ },
+ {
+  "kind": "fetch_failed",
+  "page": "https://www.menoramivt.co.il/funds/pension-and-gemel/pension-plans/stock-track",
+  "text": "403",
+  "href": "https://www.menoramivt.co.il/funds/pension-and-gemel/pension-plans/stock-track",
+  "legal_id": "512245812",
+  "company": "מנורה מבטחים פנסיה וגמל בע\"מ",
+  "detected": "2026-10-01T08:16:26+00:00"
+ },
+ {
+  "kind": "fetch_failed",
+  "page": "https://www.menoramivt.co.il/funds/pension-and-gemel/gemel-hishtalmut-list/menroa-keren-hishtalmut/1409",
+  "text": "403",
+  "href": "https://www.menoramivt.co.il/funds/pension-and-gemel/gemel-hishtalmut-list/menroa-keren-hishtalmut/1409",
+  "legal_id": "512245812",
+  "company": "מנורה מבטחים פנסיה וגמל בע\"מ",
+  "detected": "2026-10-01T08:16:26+00:00"
+ },
+ {
+  "kind": "fetch_failed",
+  "page": "https://www.menoramivt.co.il",
+  "text": "403",
+  "href": "https://www.menoramivt.co.il",
+  "legal_id": "512245812",
+  "company": "מנורה מבטחים פנסיה וגמל בע\"מ",
+  "detected": "2026-10-01T08:16:26+00:00"
+ }
+]
