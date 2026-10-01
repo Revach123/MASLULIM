@@ -104,5 +104,6 @@ def build_funds(source: list[dict], isin_swap: list[dict]) -> list[dict]:
                 "שיעור מסך נכסי ההשקעה": row.get("שיעור מסך נכסי ההשקעה"),
                 "מספר קרן": fund_number,
                 "סוג": sug,
+                "_row": row,  # שורת המקור - לשיוך ההחזקה למדד (index_exposure -> holdings_detail)
             })
     return out

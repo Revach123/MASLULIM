@@ -16,12 +16,13 @@ from .derivatives_exposure import (
 from .excel_io import text_from, to_ratio
 from .funds import FUND_CATEGORIES, PLACEHOLDERS, _build_fund_map, _build_isin_set, _classify
 from .funds_classification import fund_siveg
-from .index_exposure import DIRECT_EQUITY_CATEGORIES, EQUITY_FUND_SIVEGS, report_month_by_key
+from .index_exposure import DIRECT_EQUITY_CATEGORIES, EQUITY_FUND_SIVEGS, is_local, report_month_by_key
 from .sheet_source import PCT_COL
 
 # עמודות השורה: גיליון (אינדקס ל-cats), שם, מספר נייר, מנפיק, % מהנכסים, שווי (אלפי ש"ח),
-# מטבע, מדינה, פרט (דירוג+פדיון לאג"ח / נכס בסיס לנגזר / סוג), חשיפה למניות, רכיב חשיפה
-HOLDING_COLS = ["cat", "name", "id", "issuer", "pct", "value", "ccy", "country", "info", "equity", "component"]
+# מטבע, מדינה, פרט (דירוג+פדיון לאג"ח / נכס בסיס לנגזר / סוג), חשיפה למניות, רכיב חשיפה,
+# והשיוך למדד: [[מזהה מדד, חשיפה], ...] - מאותו חישוב בדיוק כמו פירוק החשיפה לפי מדד
+HOLDING_COLS = ["cat", "name", "id", "issuer", "pct", "value", "ccy", "country", "info", "equity", "component", "idx"]
 
 NAME_COLS = ("שם נייר ערך", "שם הלוואה", "שם הבנק", "טיקר", "שם מנפיק", "מאפיין עיקרי")
 ID_COLS = ("מספר נייר ערך", "מספר הלוואה", "מספר מזהה בנק", "מספר עסקה (רגל 1)")
@@ -97,8 +98,12 @@ def _derivative_exposure(source: list[dict]) -> dict[int, tuple[float, bool, str
 
 
 def build_holdings_detail(source: list[dict], isin_swap: list[dict], funds_ref: list[dict],
-                          isin_fractions: dict[str, dict]) -> dict[str, dict]:
+                          isin_fractions: dict[str, dict], index_trace: dict | None = None) -> dict[str, dict]:
+    """index_trace: מ-build_index_exposure(trace=...) - שיוך כל שורה למדד/ים שלה."""
     fund_map, isin_set = _build_fund_map(isin_swap), _build_isin_set(isin_swap)
+    trace_rows = (index_trace or {}).get("rows", {})
+    trace_labels = (index_trace or {}).get("labels", {})
+    used_idx: dict[str, set[str]] = defaultdict(set)
     ref_by_num = {str(r["מספר קרן"]): r for r in funds_ref if r.get("מספר קרן")}
     ref_by_isin = {str(r["ISIN"]).upper(): r for r in funds_ref if r.get("ISIN")}
     deriv = _derivative_exposure(source)
@@ -136,6 +141,16 @@ def build_holdings_detail(source: list[dict], isin_swap: list[dict], funds_ref: 
                 if not is_eq:
                     comp = comp + ":other"  # חשיפה (נוציונל) לא-מנייתית - מוצגת, לא נספרת
 
+            idx_list = None
+            parts = trace_rows.get(id(row))
+            if parts:
+                agg: dict[str, float] = defaultdict(float)
+                for i, v in parts:
+                    agg[i] += v
+                idx_list = [[i, round(v, 6)] for i, v in sorted(agg.items(), key=lambda x: -abs(x[1]))]
+                used_idx[key].update(agg)
+                eq = sum(agg.values())  # אותה חשיפה כמו בפירוק לפי מדד
+
             cats = cats_by_key[key]
             if cat not in cats:
                 cats.append(cat)
@@ -152,6 +167,7 @@ def build_holdings_detail(source: list[dict], isin_swap: list[dict], funds_ref: 
                 _info(row),
                 _round(eq, 6) if eq else (_round(deriv[id(row)][0], 6) if comp.endswith(":other") else None),
                 comp or None,
+                idx_list,
             ])
             if pct:
                 by_cat[key][cat] += pct
@@ -165,6 +181,7 @@ def build_holdings_detail(source: list[dict], isin_swap: list[dict], funds_ref: 
             "cats": cats_by_key[key],
             "cols": HOLDING_COLS,
             "rows": rows,
+            "indices": {i: {"label": trace_labels.get(i, i), "il": is_local(i)} for i in sorted(used_idx[key])},
             "summary": {
                 "by_cat": {c: round(v, 6) for c, v in by_cat[key].items()},
                 "equity": {c: round(v, 6) for c, v in equity[key].items()},
