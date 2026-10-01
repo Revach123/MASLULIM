@@ -1,7 +1,7 @@
 {
  "extension_version": "2.27.0",
  "started": "2026-10-01T19:01:45.259Z",
- "updated": "2026-10-01T19:04:45.391Z",
+ "updated": "2026-10-01T19:05:47.685Z",
  "final": false,
  "stopped": false,
  "rules_from_github": true,
@@ -17,35 +17,28 @@
   "_note": "כללי משיכת המדיניות של התוסף - נקראים מ-GitHub בתחילת כל ריצה (שינוי כאן = תקף בריצה הבאה, בלי לעדכן את התוסף). ביטויים רגולריים (בלי /) ומספרים בלבד."
  },
  "total_sites": 10,
- "done_sites": 4,
- "new_docs": 0,
+ "done_sites": 6,
+ "new_docs": 53,
  "active": [
   {
    "name": "איילון קופות גמל בע\"מ",
-   "page": "https://www.ayalon-ins.co.il/savings/study-fund",
-   "page_no": 7,
+   "page": "https://www.ayalon-ins.co.il/savings/provident-fund",
+   "page_no": 9,
    "pages": 27,
-   "step": "פותח אקורדיונים ואוסף קישורים"
-  },
-  {
-   "name": "החברה לניהול קופת התגמולים והפנסיה של עובדי הסוכנות היהודית לארץ ישראל בע\"מ",
-   "page": "https://www.jafi.org/",
-   "page_no": 2,
-   "pages": 3,
    "step": "טוען עמוד"
   },
   {
-   "name": "קרנות השתלמות למורים ולגננות - חברה מנהלת בע\"מ",
-   "page": "https://www.kranoth.org.il/%d7%9e%d7%93%d7%99%d7%a0%d7%99%d7%95%d7%aa-%d7%95%d7%a0%d7%94%d7%9c%d7%99%d7%9d-%d7%9e%d7%95%d7%a8%d7%99%d7%9d-%d7%95%d7%92%d7%92%d7%a0%d7%95%d7%aa/%d7%9e%d7%93%d7%99%d7%a0%d7%99%d7%95%d7%aa-%d7%94%d7%a9%d7%a7%d7%a2%d7%95%d7%aa-%d7%9e%d7%95%d7%a8%d7%99%d7%9d-%d7%95%d7%92%d7%a0%d7%a0%d7%95%d7%aa-%d7%9e%d7%a7%d7%95%d7%a8/",
-   "page_no": 11,
-   "pages": 15,
-   "step": "מוריד קובץ 6/26"
+   "name": "איילון חברה לביטוח בע\"מ",
+   "page": "https://www.ayalon-ins.co.il/about-us/about-ayalon/investments/",
+   "page_no": 6,
+   "pages": 10,
+   "step": "טוען עמוד"
   },
   {
-   "name": "איילון חברה לביטוח בע\"מ",
-   "page": "https://www.ayalon-ins.co.il",
-   "page_no": 3,
-   "pages": 9,
+   "name": "החברה המנהלת של מינהל קרן ההשתלמות לפקידים עובדי המנהל והשירותים בע\"מ",
+   "page": "https://www.minhal.org/?CategoryID=164",
+   "page_no": 1,
+   "pages": 4,
    "step": "פותח אקורדיונים ואוסף קישורים"
   }
  ],
@@ -573,6 +566,692 @@
     "קרנות השתלמות למור: links=93 files=0 clicked=0 captured=0 selected=0"
    ],
    "new_files": []
+  },
+  {
+   "legal_id": "520022518",
+   "name": "החברה לניהול קופת התגמולים והפנסיה של עובדי הסוכנות היהודית לארץ ישראל בע\"מ",
+   "pages": [
+    {
+     "url": "https://www.jewishagency.org/he/",
+     "links": 63,
+     "followed": [],
+     "files": 1,
+     "clicked": 0,
+     "captured": 0,
+     "selected": [],
+     "unselected_files": [
+      {
+       "file": "https://www.jewishagency.org/il/wp-content/uploads/sites/10/2024/09/The-Jewish-Agency-Gender-Equality-Reprot-2023.pdf",
+       "text": "דוח שוויון מגדרי",
+       "ctx": ""
+      }
+     ]
+    },
+    {
+     "url": "https://www.jewishagency.org",
+     "links": 107,
+     "followed": [],
+     "files": 0,
+     "clicked": 0,
+     "captured": 0,
+     "selected": [],
+     "unselected_files": []
+    }
+   ],
+   "new_docs": 0,
+   "found": 1,
+   "selected": 0,
+   "had": 0,
+   "errors": [
+    "https://www.jewishagency.org/he/: timeout 90s: pageCollectLinks -> light collect",
+    "https://www.jafi.org/: Frame with ID 0 is showing error page -> light collect",
+    "https://www.jafi.org/: Frame with ID 0 is showing error page"
+   ],
+   "diag": [
+    "החברה לניהול קופת : links=63 files=1 clicked=0 captured=0 selected=0",
+    "   ? The-Jewish-Agency-Gender-Equality-Reprot-2023.pdf | דוח שוויון מגדרי | ",
+    "החברה לניהול קופת : links=107 files=0 clicked=0 captured=0 selected=0"
+   ],
+   "new_files": []
+  },
+  {
+   "legal_id": "520027251",
+   "name": "קרנות השתלמות למורים ולגננות - חברה מנהלת בע\"מ",
+   "pages": [
+    {
+     "url": "https://www.kranoth.org.il/מדיניות-ונהלים/",
+     "links": 51,
+     "followed": [
+      "https://www.kranoth.org.il/%D7%9E%D7%93%D7%99%D7%A0%D7%99%D7%95%D7%AA-%D7%95%D7%A0%D7%94%D7%9C%D7%99%D7%9D/",
+      "https://www.kranoth.org.il/%d7%9e%d7%93%d7%99%d7%a0%d7%99%d7%95%d7%aa-%d7%95%d7%a0%d7%94%d7%9c%d7%99%d7%9d/%d7%9e%d7%93%d7%99%d7%a0%d7%99%d7%95%d7%aa-%d7%95%d7%a0%d7%94%d7%9c%d7%99%d7%9d-%d7%9e%d7%95%d7%a8%d7%99%d7%9d-%d7%95%d7%92%d7%92%d7%a0%d7%95%d7%aa/",
+      "https://www.kranoth.org.il/%d7%9e%d7%93%d7%99%d7%a0%d7%99%d7%95%d7%aa-%d7%95%d7%a0%d7%94%d7%9c%d7%99%d7%9d/%d7%9e%d7%93%d7%99%d7%a0%d7%99%d7%95%d7%aa-%d7%95%d7%a0%d7%94%d7%9c%d7%99%d7%9d-%d7%9e%d7%95%d7%a8%d7%99%d7%9d-%d7%aa%d7%99%d7%9b%d7%95%d7%a0%d7%99%d7%99%d7%9d/",
+      "https://www.kranoth.org.il/%d7%9e%d7%93%d7%99%d7%a0%d7%99%d7%95%d7%aa-%d7%95%d7%a0%d7%94%d7%9c%d7%99%d7%9d/%d7%90%d7%9e%d7%95%d7%aa-%d7%9e%d7%99%d7%93%d7%94-%d7%91%d7%99%d7%97%d7%a1-%d7%9c%d7%90%d7%99%d7%9b%d7%95%d7%aa-%d7%94%d7%9e%d7%9e%d7%a9%d7%9c-%d7%94%d7%aa%d7%90%d7%92%d7%99%d7%93%d7%99/",
+      "https://www.kranoth.org.il/%d7%9e%d7%93%d7%99%d7%a0%d7%99%d7%95%d7%aa-%d7%95%d7%a0%d7%94%d7%9c%d7%99%d7%9d/%d7%90%d7%9e%d7%a0%d7%aa-%d7%a9%d7%99%d7%a8%d7%95%d7%aa/"
+     ],
+     "files": 0,
+     "clicked": 0,
+     "captured": 0,
+     "selected": [],
+     "unselected_files": []
+    },
+    {
+     "url": "https://www.kranoth.org.il/",
+     "links": 93,
+     "followed": [],
+     "files": 0,
+     "clicked": 0,
+     "captured": 0,
+     "selected": [],
+     "unselected_files": []
+    },
+    {
+     "url": "https://www.kranoth.org.il",
+     "links": 93,
+     "followed": [],
+     "files": 0,
+     "clicked": 0,
+     "captured": 0,
+     "selected": [],
+     "unselected_files": []
+    },
+    {
+     "url": "https://www.kranoth.org.il/%D7%9E%D7%93%D7%99%D7%A0%D7%99%D7%95%D7%AA-%D7%95%D7%A0%D7%94%D7%9C%D7%99%D7%9D/",
+     "links": 51,
+     "followed": [],
+     "files": 0,
+     "clicked": 0,
+     "captured": 0,
+     "selected": [],
+     "unselected_files": []
+    },
+    {
+     "url": "https://www.kranoth.org.il/%d7%9e%d7%93%d7%99%d7%a0%d7%99%d7%95%d7%aa-%d7%95%d7%a0%d7%94%d7%9c%d7%99%d7%9d/%d7%9e%d7%93%d7%99%d7%a0%d7%99%d7%95%d7%aa-%d7%95%d7%a0%d7%94%d7%9c%d7%99%d7%9d-%d7%9e%d7%95%d7%a8%d7%99%d7%9d-%d7%95%d7%92%d7%92%d7%a0%d7%95%d7%aa/",
+     "links": 49,
+     "followed": [
+      "https://www.kranoth.org.il/%d7%9e%d7%93%d7%99%d7%a0%d7%99%d7%95%d7%aa-%d7%95%d7%a0%d7%94%d7%9c%d7%99%d7%9d/",
+      "https://www.kranoth.org.il/%d7%9e%d7%93%d7%99%d7%a0%d7%99%d7%95%d7%aa-%d7%95%d7%a0%d7%94%d7%9c%d7%99%d7%9d-%d7%9e%d7%95%d7%a8%d7%99%d7%9d-%d7%95%d7%92%d7%92%d7%a0%d7%95%d7%aa/%d7%9e%d7%93%d7%99%d7%a0%d7%99%d7%95%d7%aa-%d7%94%d7%a9%d7%a7%d7%a2%d7%95%d7%aa-%d7%9e%d7%95%d7%a8%d7%99%d7%9d-%d7%95%d7%92%d7%a0%d7%a0%d7%95%d7%aa-%d7%a8%d7%92%d7%99%d7%9c/",
+      "https://www.kranoth.org.il/%d7%9e%d7%93%d7%99%d7%a0%d7%99%d7%95%d7%aa-%d7%95%d7%a0%d7%94%d7%9c%d7%99%d7%9d-%d7%9e%d7%95%d7%a8%d7%99%d7%9d-%d7%95%d7%92%d7%92%d7%a0%d7%95%d7%aa/%d7%9e%d7%93%d7%99%d7%a0%d7%99%d7%95%d7%aa-%d7%94%d7%a9%d7%a7%d7%a2%d7%95%d7%aa-%d7%9e%d7%95%d7%a8%d7%99%d7%9d-%d7%95%d7%92%d7%a0%d7%a0%d7%95%d7%aa-%d7%9e%d7%a7%d7%95%d7%a8/"
+     ],
+     "files": 0,
+     "clicked": 0,
+     "captured": 0,
+     "selected": [],
+     "unselected_files": []
+    },
+    {
+     "url": "https://www.kranoth.org.il/%d7%9e%d7%93%d7%99%d7%a0%d7%99%d7%95%d7%aa-%d7%95%d7%a0%d7%94%d7%9c%d7%99%d7%9d/%d7%9e%d7%93%d7%99%d7%a0%d7%99%d7%95%d7%aa-%d7%95%d7%a0%d7%94%d7%9c%d7%99%d7%9d-%d7%9e%d7%95%d7%a8%d7%99%d7%9d-%d7%aa%d7%99%d7%9b%d7%95%d7%a0%d7%99%d7%99%d7%9d/",
+     "links": 49,
+     "followed": [
+      "https://www.kranoth.org.il/%d7%9e%d7%93%d7%99%d7%a0%d7%99%d7%95%d7%aa-%d7%95%d7%a0%d7%94%d7%9c%d7%99%d7%9d-%d7%9e%d7%95%d7%a8%d7%99%d7%9d-%d7%aa%d7%99%d7%9b%d7%95%d7%a0%d7%99%d7%99%d7%9d/%d7%9e%d7%93%d7%99%d7%a0%d7%99%d7%95%d7%aa-%d7%94%d7%a9%d7%a7%d7%a2%d7%95%d7%aa-%d7%9e%d7%95%d7%a8%d7%99%d7%9d-%d7%aa%d7%99%d7%9b%d7%95%d7%a0%d7%99%d7%99%d7%9d-%d7%a8%d7%92%d7%99%d7%9c/",
+      "https://www.kranoth.org.il/%d7%9e%d7%93%d7%99%d7%a0%d7%99%d7%95%d7%aa-%d7%95%d7%a0%d7%94%d7%9c%d7%99%d7%9d-%d7%9e%d7%95%d7%a8%d7%99%d7%9d-%d7%aa%d7%99%d7%9b%d7%95%d7%a0%d7%99%d7%99%d7%9d/%d7%9e%d7%93%d7%99%d7%a0%d7%99%d7%95%d7%aa-%d7%94%d7%a9%d7%a7%d7%a2%d7%95%d7%aa-%d7%9e%d7%95%d7%a8%d7%99%d7%9d-%d7%aa%d7%99%d7%9b%d7%95%d7%a0%d7%99%d7%99%d7%9d-%d7%9e%d7%a7%d7%95%d7%a8/"
+     ],
+     "files": 0,
+     "clicked": 0,
+     "captured": 0,
+     "selected": [],
+     "unselected_files": []
+    },
+    {
+     "url": "https://www.kranoth.org.il/%d7%9e%d7%93%d7%99%d7%a0%d7%99%d7%95%d7%aa-%d7%95%d7%a0%d7%94%d7%9c%d7%99%d7%9d/%d7%90%d7%9e%d7%95%d7%aa-%d7%9e%d7%99%d7%93%d7%94-%d7%91%d7%99%d7%97%d7%a1-%d7%9c%d7%90%d7%99%d7%9b%d7%95%d7%aa-%d7%94%d7%9e%d7%9e%d7%a9%d7%9c-%d7%94%d7%aa%d7%90%d7%92%d7%99%d7%93%d7%99/",
+     "links": 48,
+     "followed": [],
+     "files": 0,
+     "clicked": 0,
+     "captured": 0,
+     "selected": [],
+     "unselected_files": []
+    },
+    {
+     "url": "https://www.kranoth.org.il/%d7%9e%d7%93%d7%99%d7%a0%d7%99%d7%95%d7%aa-%d7%95%d7%a0%d7%94%d7%9c%d7%99%d7%9d/%d7%90%d7%9e%d7%a0%d7%aa-%d7%a9%d7%99%d7%a8%d7%95%d7%aa/",
+     "links": 49,
+     "followed": [],
+     "files": 2,
+     "clicked": 0,
+     "captured": 0,
+     "selected": [],
+     "unselected_files": [
+      {
+       "file": "https://www.kranoth.org.il/wp-content/uploads/2023/11/אמנת_שירות_לקוחות2022.pdf",
+       "text": "אמנת שירות",
+       "ctx": ""
+      },
+      {
+       "file": "https://www.kranoth.org.il/wp-content/uploads/2023/11/אמנת_שירות_לקוחות2022.pdf",
+       "text": "Download",
+       "ctx": ""
+      }
+     ]
+    },
+    {
+     "url": "https://www.kranoth.org.il/%d7%9e%d7%93%d7%99%d7%a0%d7%99%d7%95%d7%aa-%d7%95%d7%a0%d7%94%d7%9c%d7%99%d7%9d/",
+     "links": 51,
+     "followed": [],
+     "files": 0,
+     "clicked": 0,
+     "captured": 0,
+     "selected": [],
+     "unselected_files": []
+    },
+    {
+     "url": "https://www.kranoth.org.il/%d7%9e%d7%93%d7%99%d7%a0%d7%99%d7%95%d7%aa-%d7%95%d7%a0%d7%94%d7%9c%d7%99%d7%9d-%d7%9e%d7%95%d7%a8%d7%99%d7%9d-%d7%95%d7%92%d7%92%d7%a0%d7%95%d7%aa/%d7%9e%d7%93%d7%99%d7%a0%d7%99%d7%95%d7%aa-%d7%94%d7%a9%d7%a7%d7%a2%d7%95%d7%aa-%d7%9e%d7%95%d7%a8%d7%99%d7%9d-%d7%95%d7%92%d7%a0%d7%a0%d7%95%d7%aa-%d7%a8%d7%92%d7%99%d7%9c/",
+     "links": 101,
+     "followed": [
+      "https://www.kranoth.org.il/%d7%9e%d7%93%d7%99%d7%a0%d7%99%d7%95%d7%aa-%d7%95%d7%aa%d7%a7%d7%a0%d7%95%d7%a0%d7%99%d7%9d/%d7%9e%d7%93%d7%99%d7%a0%d7%99%d7%95%d7%aa-%d7%94%d7%a9%d7%a7%d7%a2%d7%95%d7%aa-%d7%9e%d7%95%d7%a8%d7%99%d7%9d-%d7%95%d7%92%d7%a0%d7%a0%d7%95%d7%aa-%d7%a8%d7%92%d7%99%d7%9c/"
+     ],
+     "files": 54,
+     "clicked": 0,
+     "captured": 0,
+     "selected": [
+      "https://kranoth.org.il/wp-content/uploads/2026/09/מדיניות_השקעות_צפויה_תשפז-מורים_וגננות_מסלול_כללי.xlsx",
+      "https://www.kranoth.org.il/wp-content/uploads/2026/06/מוג_רגילה-מדיניות_השקעות_מרץ_2026.xlsx",
+      "https://www.kranoth.org.il/wp-content/uploads/2026/01/מדיניות_השקעות_צפויה_מורים_וגננות_תשפו_מונגש_עדכון_דצמבר_2025.xlsx",
+      "https://www.kranoth.org.il/wp-content/uploads/2025/11/מדיניות_השקעות_צפויה_תשפו-מוג_אשראי_ואגח.xlsx",
+      "https://www.kranoth.org.il/wp-content/uploads/2024/12/מורים_וגננות-מסלול_כללי-מדיניות_השקעות_תשפה_דצמבר_2024.xlsx",
+      "https://www.kranoth.org.il/wp-content/uploads/2024/11/מורים_וגננות_רגילה_מסלול_כללי_מדיניות_השקעות_תשפה-1.xlsx",
+      "https://www.kranoth.org.il/wp-content/uploads/2024/01/מוג_רגילה_כללי-מדיניות_השעות_צפויה_25.12.23.xlsx",
+      "https://www.kranoth.org.il/wp-content/uploads/2023/08/מדיניות_השקעות_צפויה_תשפד-מוג_רגילה-מסלול_כללי.xlsx",
+      "https://www.kranoth.org.il/wp-content/uploads/2023/01/מדיניות_השקעות_צפויה_מוג_רגילה_תשפג-מסלול_כללי-עדכון_דצמבר_2022.xlsx",
+      "https://www.kranoth.org.il/wp-content/uploads/2022/10/מדיניות_השקעות_צפויה_תשפג_מוג_רגילה_מסלול_כללי.xlsx",
+      "https://kranoth.org.il/wp-content/uploads/2026/09/מדיניות_השקעות_צפויה_תשפז-מורים_וגננות_מסלול_הלכה.xlsx",
+      "https://www.kranoth.org.il/wp-content/uploads/2026/06/מוג_רגילה_הלכה-מדיניות_הקשעות_מרץ_2026.xlsx",
+      "https://www.kranoth.org.il/wp-content/uploads/2025/10/מדיניות_השקעות_צפויה_תשפו-מוג_הלכתי.xlsx",
+      "https://www.kranoth.org.il/wp-content/uploads/2024/12/מוג_רגילה-מסלול_הלכה-מדיניות_תשפה_דצמבר_2024.xlsx",
+      "https://www.kranoth.org.il/wp-content/uploads/2024/11/מורים_וגננות_רגילה_מסלול_הלכה_מדיניות_השקעות_תשפה-1.xlsx",
+      "https://www.kranoth.org.il/wp-content/uploads/2024/01/מוג_רגילה_הלכה-מדיניות_השקעות_צפויה_25.12.23.xlsx",
+      "https://www.kranoth.org.il/wp-content/uploads/2023/08/מדיניות_השקעות_צפויה_תשפד-מוג_רגילה-מסלול_הלכה.xlsx",
+      "https://www.kranoth.org.il/wp-content/uploads/2023/01/מדיניות_השקעות_צפויה_מוג_רגילה_תשפג-מסלול_הלכה-עדכון_דצמבר_2022.xlsx",
+      "https://www.kranoth.org.il/wp-content/uploads/2022/10/מדיניות_השקעות_צפויה_תשפג_מוג_רגילה_מסלול_הלכה.xlsx",
+      "https://kranoth.org.il/wp-content/uploads/2026/09/מדיניות_השקעות_צפויה_תשפז-מורים_וגננות_מסלול_אשראי_ואגח.xlsx",
+      "https://www.kranoth.org.il/wp-content/uploads/2026/07/מדיניות_השקעות_צפויה_תשפו-מוג_אשראי_ואגח.xlsx",
+      "https://www.kranoth.org.il/wp-content/uploads/2024/12/מוג_רגילה-מסלול_אשראי_ואגח-מדיניות_תשפה_דצמבר_2024.xlsx",
+      "https://www.kranoth.org.il/wp-content/uploads/2024/11/מורים_וגננות_רגילה_מסלול_אשראי_ואגח_מדיניות_תשפה-1.xlsx",
+      "https://www.kranoth.org.il/wp-content/uploads/2024/01/מוג_רגילה_אגח-מדיניות_השקעות_צפויה_25.12.23.xlsx",
+      "https://www.kranoth.org.il/wp-content/uploads/2023/08/מדיניות_השקעות_צפויה_תשפד-מוג_רגילה-מסלול_אגח.xlsx",
+      "https://www.kranoth.org.il/wp-content/uploads/2023/01/מדיניות_השקעות_צפויה_מוג__רגילה_תשפג-מסלול_אגח-עדכון_דצמבר_2022.xlsx",
+      "https://www.kranoth.org.il/wp-content/uploads/2022/10/מדיניות_השקעות_צפויה_תשפג_מוג_רגילה_מסלול_אגח.xlsx"
+     ],
+     "unselected_files": []
+    },
+    {
+     "url": "https://www.kranoth.org.il/%d7%9e%d7%93%d7%99%d7%a0%d7%99%d7%95%d7%aa-%d7%95%d7%a0%d7%94%d7%9c%d7%99%d7%9d-%d7%9e%d7%95%d7%a8%d7%99%d7%9d-%d7%95%d7%92%d7%92%d7%a0%d7%95%d7%aa/%d7%9e%d7%93%d7%99%d7%a0%d7%99%d7%95%d7%aa-%d7%94%d7%a9%d7%a7%d7%a2%d7%95%d7%aa-%d7%9e%d7%95%d7%a8%d7%99%d7%9d-%d7%95%d7%92%d7%a0%d7%a0%d7%95%d7%aa-%d7%9e%d7%a7%d7%95%d7%a8/",
+     "links": 99,
+     "followed": [
+      "https://www.kranoth.org.il/%d7%9e%d7%93%d7%99%d7%a0%d7%99%d7%95%d7%aa-%d7%95%d7%aa%d7%a7%d7%a0%d7%95%d7%a0%d7%99%d7%9d/%d7%9e%d7%93%d7%99%d7%a0%d7%99%d7%95%d7%aa-%d7%94%d7%a9%d7%a7%d7%a2%d7%95%d7%aa-%d7%9e%d7%95%d7%a8%d7%99%d7%9d-%d7%95%d7%92%d7%a0%d7%a0%d7%95%d7%aa-%d7%9e%d7%a7%d7%95%d7%a8/"
+     ],
+     "files": 52,
+     "clicked": 0,
+     "captured": 0,
+     "selected": [
+      "https://kranoth.org.il/wp-content/uploads/2026/09/מדיניות_השקעות_צפויה_תשפז-מורים_וגננות_מקור-מסלול_כללי.xlsx",
+      "https://www.kranoth.org.il/wp-content/uploads/2026/06/מוג_מקור-מדיניות_השקעות_מרץ_2026.xlsx",
+      "https://www.kranoth.org.il/wp-content/uploads/2025/11/מדיניות_השקעות_צפויה_תשפו-מוג_מקור_אשראי_ואגח.xlsx",
+      "https://www.kranoth.org.il/wp-content/uploads/2024/12/מוג_מקור-מסלול_כללי-מדיניות_השקעות_תשפה_דצמבר_2024.xlsx",
+      "https://www.kranoth.org.il/wp-content/uploads/2024/11/מורים_וגננות_מקור_מסלול_כללי_מדיניות_השקעות_תשפה-1.xlsx",
+      "https://www.kranoth.org.il/wp-content/uploads/2024/01/מוג_מקור_כללי-מדיניות_השקעות_צפויה_25.12.23.xlsx",
+      "https://www.kranoth.org.il/wp-content/uploads/2024/01/מדיניות_השקעות_צפויה_תשפד-מוג_מקור-מסלול_כללי.xlsx",
+      "https://www.kranoth.org.il/wp-content/uploads/2023/01/מדיניות_השקעות_צפויה_מוג_מקור_תשפג-מסלול_כללי-עדכון_דצמבר_2022.xlsx",
+      "https://www.kranoth.org.il/wp-content/uploads/2022/10/מ_דיניות_השקעות_צפויה_תשפג_מוג_מקור_מסלול_כללי.xlsx",
+      "https://kranoth.org.il/wp-content/uploads/2026/09/מדיניות_השקעות_צפויה_תשפז-מורים_וגננות_מקור-מסלול_הלכה.xlsx",
+      "https://www.kranoth.org.il/wp-content/uploads/2026/06/מוג_מקור_הלכה-מדיניות_השקעות_מרץ_2026.xlsx",
+      "https://www.kranoth.org.il/wp-content/uploads/2025/10/מדיניות_השקעות_צפויה_תשפו-מוג_מקור_הלכתי.xlsx",
+      "https://www.kranoth.org.il/wp-content/uploads/2024/12/מוג_מקור-מסלול_הלכה-מדיניות_תשפה_דצמבר_2024.xlsx",
+      "https://www.kranoth.org.il/wp-content/uploads/2024/11/מורים_וגננות_מקור_מסלול_הלכה_מדיניות_השקעה_תשפה-1.xlsx",
+      "https://www.kranoth.org.il/wp-content/uploads/2024/01/מוג_מקור_הלכתי-מדיניות_השקעות_צפויה_25.12.23.xlsx",
+      "https://www.kranoth.org.il/wp-content/uploads/2023/08/מדיניות_השקעות_צפויה_תשפד-מוג_מקור-מסלול_הלכה.xlsx",
+      "https://www.kranoth.org.il/wp-content/uploads/2023/01/מדיניות_השקעות_צפויה_מוג_מקור_תשפג-מסלול_הלכה-עדכון_דצמבר_2022.xlsx",
+      "https://www.kranoth.org.il/wp-content/uploads/2022/10/מדיניות_השקעות_צפויה_תשפג_מוג_מקור_מסלול_הלכה.xlsx",
+      "https://kranoth.org.il/wp-content/uploads/2026/09/מדיניות_השקעות_צפויה_תשפז-מורים_וגננות_מקור-מסלול_אשראי_ואגח.xlsx",
+      "https://www.kranoth.org.il/wp-content/uploads/2026/07/מדיניות_השקעות_צפויה_תשפו-מוג_מקור_אשראי_ואגח.xlsx",
+      "https://www.kranoth.org.il/wp-content/uploads/2024/12/מוג_מקור-מסלול_אשראי_ואגח-מדיניות_תשפה_דצמבר_2024.xlsx",
+      "https://www.kranoth.org.il/wp-content/uploads/2024/11/מורים_וגננות_מקור_מסלול_אשראי_ואגח_מדיניות_השקעה_תשפה-1.xlsx",
+      "https://www.kranoth.org.il/wp-content/uploads/2024/01/מוג_מקור_אגח-מדיניות_השקעות_25.12.23.xlsx",
+      "https://www.kranoth.org.il/wp-content/uploads/2023/08/מדיניות_השקעות_צפויה_תשפד-מוג_מקוצר-מסלול_אגח.xlsx",
+      "https://www.kranoth.org.il/wp-content/uploads/2023/01/מדיניות_השקעות_צפויה_מוג_מקור_תשפג-מסלול_אגח-עדכון_דצמבר_2022.xlsx",
+      "https://www.kranoth.org.il/wp-content/uploads/2022/10/מדיניות_השקעות_צפויה_תשפג_מוג_מקור_מסלול_אגח.xlsx"
+     ],
+     "unselected_files": []
+    },
+    {
+     "url": "https://www.kranoth.org.il/%d7%9e%d7%93%d7%99%d7%a0%d7%99%d7%95%d7%aa-%d7%95%d7%a0%d7%94%d7%9c%d7%99%d7%9d-%d7%9e%d7%95%d7%a8%d7%99%d7%9d-%d7%aa%d7%99%d7%9b%d7%95%d7%a0%d7%99%d7%99%d7%9d/%d7%9e%d7%93%d7%99%d7%a0%d7%99%d7%95%d7%aa-%d7%94%d7%a9%d7%a7%d7%a2%d7%95%d7%aa-%d7%9e%d7%95%d7%a8%d7%99%d7%9d-%d7%aa%d7%99%d7%9b%d7%95%d7%a0%d7%99%d7%99%d7%9d-%d7%a8%d7%92%d7%99%d7%9c/",
+     "links": 101,
+     "followed": [],
+     "files": 54,
+     "clicked": 0,
+     "captured": 0,
+     "selected": [
+      "https://www.kranoth.org.il/wp-content/uploads/2025/11/מדיניות_השקעות_צפויה_תשפו-מות_אשראי_ואגח.xlsx",
+      "https://www.kranoth.org.il/wp-content/uploads/2023/08/מדיניות_השקעה_צפויה_תשפד-מות_רגילה-מסלול_כללי.xlsx",
+      "https://www.kranoth.org.il/wp-content/uploads/2025/10/מדיניות_השקעות_צפויה_תשפו-מות_הלכתי.xlsx",
+      "https://www.kranoth.org.il/wp-content/uploads/2023/08/מדיניות_השקעות_צפויה_תשפד-מות_רגילה-מסלול_הלכה.xlsx",
+      "https://www.kranoth.org.il/wp-content/uploads/2026/07/מדיניות_השקעות_צפויה_תשפו-מות_אשראי_ואגח.xlsx",
+      "https://www.kranoth.org.il/wp-content/uploads/2023/08/מדיניות_השקעות_צפויה_תשפד-מות_רגילה-מסלול_אגח.xlsx"
+     ],
+     "unselected_files": [
+      {
+       "file": "https://kranoth.org.il/wp-content/uploads/2026/09/מדיניות_השקעות_צפויה_תשפז-מורים_תיכוניים_מסלול_כללי.xlsx",
+       "text": "קרן השתלמות למורים תיכוניים – מדיניות צפויה תשפ\"ז",
+       "ctx": ""
+      },
+      {
+       "file": "https://kranoth.org.il/wp-content/uploads/2026/09/מדיניות_השקעות_צפויה_תשפז-מורים_תיכוניים_מסלול_כללי.xlsx",
+       "text": "הורד",
+       "ctx": ""
+      },
+      {
+       "file": "https://www.kranoth.org.il/wp-content/uploads/2026/06/מות_רגילה-מדיניות_השקעות_מרץ_2026.xlsx",
+       "text": "קרן השתלמות למורים תיכוניים – מדיניות צפויה תשפ\"ו – מרץ 2026",
+       "ctx": ""
+      },
+      {
+       "file": "https://www.kranoth.org.il/wp-content/uploads/2026/06/מות_רגילה-מדיניות_השקעות_מרץ_2026.xlsx",
+       "text": "הורד",
+       "ctx": ""
+      },
+      {
+       "file": "https://www.kranoth.org.il/wp-content/uploads/2026/01/מדיניות_השקעה_צפויה_מורים_תיכונים_תשפו_מונגש_עדכון_דצמבר__2025.xlsx",
+       "text": "קרן השתלמות למורים תיכוניים – מדיניות צפויה תשפ\"ו – דצמבר 2025",
+       "ctx": ""
+      },
+      {
+       "file": "https://www.kranoth.org.il/wp-content/uploads/2026/01/מדיניות_השקעה_צפויה_מורים_תיכונים_תשפו_מונגש_עדכון_דצמבר__2025.xlsx",
+       "text": "הורד",
+       "ctx": ""
+      },
+      {
+       "file": "https://www.kranoth.org.il/wp-content/uploads/2024/12/מות_רגילה-מסלול_כללי-מדיניות_תשפה_דצמבר_2024.xlsx",
+       "text": "קרן השתלמות למורים תיכוניים – מדיניות צפויה תשפ\"ה – דצמבר 2024",
+       "ctx": ""
+      },
+      {
+       "file": "https://www.kranoth.org.il/wp-content/uploads/2024/12/מות_רגילה-מסלול_כללי-מדיניות_תשפה_דצמבר_2024.xlsx",
+       "text": "הורד",
+       "ctx": ""
+      },
+      {
+       "file": "https://www.kranoth.org.il/wp-content/uploads/2024/11/מות_רגילה_מסלול_כללי_מדיניות_השקעות_צפויה_תשפה-1.xlsx",
+       "text": "קרן השתלמות למורים תיכוניים – מדיניות צפויה תשפ\"ה",
+       "ctx": ""
+      },
+      {
+       "file": "https://www.kranoth.org.il/wp-content/uploads/2024/11/מות_רגילה_מסלול_כללי_מדיניות_השקעות_צפויה_תשפה-1.xlsx",
+       "text": "הורד",
+       "ctx": ""
+      },
+      {
+       "file": "https://www.kranoth.org.il/wp-content/uploads/2024/01/מורים_תיכוניים_רגילה_כללי-מדיניות_השקעות_צפויה_25.12.23.xlsx",
+       "text": "קרן השתלמות למורים תיכוניים – מדיניות צפויה תשפ\"ד – עידכון ביום 25.12.23",
+       "ctx": ""
+      },
+      {
+       "file": "https://www.kranoth.org.il/wp-content/uploads/2024/01/מורים_תיכוניים_רגילה_כללי-מדיניות_השקעות_צפויה_25.12.23.xlsx",
+       "text": "הורד",
+       "ctx": ""
+      },
+      {
+       "file": "https://www.kranoth.org.il/wp-content/uploads/2023/01/מדיניות_השקעות_צפויה_מות_רגילה_תשפג-מסלול_כללי-_עדכון_דצמבר_2022.xlsx",
+       "text": "קרן השתלמות למורים תיכוניים – עידכון מדיניות צפויה תשפ\"ג דצמבר 2022",
+       "ctx": ""
+      },
+      {
+       "file": "https://www.kranoth.org.il/wp-content/uploads/2023/01/מדיניות_השקעות_צפויה_מות_רגילה_תשפג-מסלול_כללי-_עדכון_דצמבר_2022.xlsx",
+       "text": "הורד",
+       "ctx": ""
+      },
+      {
+       "file": "https://www.kranoth.org.il/wp-content/uploads/2022/10/מדיניות_השקעות_צפויה_תשפג_מות_רגילה_מסלול_כללי.xlsx",
+       "text": "קרן השתלמות למורים תיכוניים – מדיניות צפויה תשפ\"ג",
+       "ctx": ""
+      },
+      {
+       "file": "https://www.kranoth.org.il/wp-content/uploads/2022/10/מדיניות_השקעות_צפויה_תשפג_מות_רגילה_מסלול_כללי.xlsx",
+       "text": "הורד",
+       "ctx": ""
+      },
+      {
+       "file": "https://kranoth.org.il/wp-content/uploads/2026/09/מדיניות_השקעות_צפויה_תשפז-מורים_תיכוניים_מסלול_הלכה.xlsx",
+       "text": "קרן השתלמות למורים תיכוניים הלכתי – מדיניות צפויה תשפ\"ז",
+       "ctx": ""
+      },
+      {
+       "file": "https://kranoth.org.il/wp-content/uploads/2026/09/מדיניות_השקעות_צפויה_תשפז-מורים_תיכוניים_מסלול_הלכה.xlsx",
+       "text": "הורד",
+       "ctx": ""
+      },
+      {
+       "file": "https://www.kranoth.org.il/wp-content/uploads/2026/06/מות_רגילה_הלכה-מדיניות_השקעות_מרץ_2026.xlsx",
+       "text": "קרן השתלמות למורים תיכוניים הלכתי – מדיניות צפויה תשפ\"ו – מרץ 2026",
+       "ctx": ""
+      },
+      {
+       "file": "https://www.kranoth.org.il/wp-content/uploads/2026/06/מות_רגילה_הלכה-מדיניות_השקעות_מרץ_2026.xlsx",
+       "text": "הורד",
+       "ctx": ""
+      },
+      {
+       "file": "https://www.kranoth.org.il/wp-content/uploads/2024/12/מות_רגילה-מסלול_הלכה-מדיניות_תשפה_דצמבר_2024.xlsx",
+       "text": "קרן השתלמות למורים תיכוניים הלכתי – מדיניות צפויה תשפ\"ה – דצמבר 2024",
+       "ctx": ""
+      },
+      {
+       "file": "https://www.kranoth.org.il/wp-content/uploads/2024/12/מות_רגילה-מסלול_הלכה-מדיניות_תשפה_דצמבר_2024.xlsx",
+       "text": "הורד",
+       "ctx": ""
+      },
+      {
+       "file": "https://www.kranoth.org.il/wp-content/uploads/2024/11/מות_רגילה_מסלול_הלכה_מדיניות_השקעות_צפויה_תשפה-1.xlsx",
+       "text": "קרן השתלמות למורים תיכוניים הלכתי – מדיניות צפויה תשפ\"ה",
+       "ctx": ""
+      },
+      {
+       "file": "https://www.kranoth.org.il/wp-content/uploads/2024/11/מות_רגילה_מסלול_הלכה_מדיניות_השקעות_צפויה_תשפה-1.xlsx",
+       "text": "הורד",
+       "ctx": ""
+      },
+      {
+       "file": "https://www.kranoth.org.il/wp-content/uploads/2024/01/מורים_תיכוניים_רגילה_הלכתי-מדיניות_השקעות_צפויה_25.12.23.xlsx",
+       "text": "קרן השתלמות למורים תיכוניים הלכתי – מדיניות צפויה תשפ\"ד – עידכון ביום 25.12.23",
+       "ctx": ""
+      }
+     ]
+    },
+    {
+     "url": "https://www.kranoth.org.il/%d7%9e%d7%93%d7%99%d7%a0%d7%99%d7%95%d7%aa-%d7%95%d7%a0%d7%94%d7%9c%d7%99%d7%9d-%d7%9e%d7%95%d7%a8%d7%99%d7%9d-%d7%aa%d7%99%d7%9b%d7%95%d7%a0%d7%99%d7%99%d7%9d/%d7%9e%d7%93%d7%99%d7%a0%d7%99%d7%95%d7%aa-%d7%94%d7%a9%d7%a7%d7%a2%d7%95%d7%aa-%d7%9e%d7%95%d7%a8%d7%99%d7%9d-%d7%aa%d7%99%d7%9b%d7%95%d7%a0%d7%99%d7%99%d7%9d-%d7%9e%d7%a7%d7%95%d7%a8/",
+     "links": 101,
+     "followed": [],
+     "files": 54,
+     "clicked": 0,
+     "captured": 0,
+     "selected": [
+      "https://www.kranoth.org.il/wp-content/uploads/2025/11/מדיניות_השקעות_צפויה_תשפו-מות_מקור_אשראי_ואגח-1.xlsx",
+      "https://www.kranoth.org.il/wp-content/uploads/2023/08/מדיניות_השקעה_צפויה_תשפד-מות_מקור-מסלול_כללי.xlsx",
+      "https://www.kranoth.org.il/wp-content/uploads/2025/10/מדיניות_השקעות_צפויה_תשפו-מות_מקור_הלכתי.xlsx",
+      "https://www.kranoth.org.il/wp-content/uploads/2023/08/מדיניות_השקעות_צפויה_תשפד-מות_מקור-מסלול_הלכה.xlsx",
+      "https://www.kranoth.org.il/wp-content/uploads/2026/07/מדיניות_השקעות_צפויה_תשפו-מות_מקור_אשראי_ואגח.xlsx",
+      "https://www.kranoth.org.il/wp-content/uploads/2023/08/מדיניות_השקעות_צפויה_תשפד-מות_מקור-מסלול_אגח.xlsx"
+     ],
+     "unselected_files": [
+      {
+       "file": "https://kranoth.org.il/wp-content/uploads/2026/09/מדיניות_השקעות_צפויה_תשפז-מורים_תיכוניים_מקור-מסלול_כללי.xlsx",
+       "text": "קרן השתלמות למורים תיכוניים מקור – מדיניות צפויה תשפ\"ז",
+       "ctx": ""
+      },
+      {
+       "file": "https://kranoth.org.il/wp-content/uploads/2026/09/מדיניות_השקעות_צפויה_תשפז-מורים_תיכוניים_מקור-מסלול_כללי.xlsx",
+       "text": "הורד",
+       "ctx": ""
+      },
+      {
+       "file": "https://www.kranoth.org.il/wp-content/uploads/2026/06/מות_מקור-מדיניות_השקעות_מרץ_2026.xlsx",
+       "text": "קרן השתלמות למורים תיכוניים מקור – מדיניות צפויה תשפ\"ו – מרץ 2026",
+       "ctx": ""
+      },
+      {
+       "file": "https://www.kranoth.org.il/wp-content/uploads/2026/06/מות_מקור-מדיניות_השקעות_מרץ_2026.xlsx",
+       "text": "הורד",
+       "ctx": ""
+      },
+      {
+       "file": "https://www.kranoth.org.il/wp-content/uploads/2024/12/מות_מקור-מסלול_כללי-מדיניות_תשפה_דצמבר_2024.xlsx",
+       "text": "קרן השתלמות למורים תיכוניים מקור – מדיניות צפויה תשפ\"ה – דצמבר 2024",
+       "ctx": ""
+      },
+      {
+       "file": "https://www.kranoth.org.il/wp-content/uploads/2024/12/מות_מקור-מסלול_כללי-מדיניות_תשפה_דצמבר_2024.xlsx",
+       "text": "הורד",
+       "ctx": ""
+      },
+      {
+       "file": "https://www.kranoth.org.il/wp-content/uploads/2024/11/מות_מקור_מסלול_כללי_מדיניות_השקעה_צפויה_תשפה-1.xlsx",
+       "text": "קרן השתלמות למורים תיכוניים מקור – מדיניות צפויה תשפ\"ה",
+       "ctx": ""
+      },
+      {
+       "file": "https://www.kranoth.org.il/wp-content/uploads/2024/11/מות_מקור_מסלול_כללי_מדיניות_השקעה_צפויה_תשפה-1.xlsx",
+       "text": "הורד",
+       "ctx": ""
+      },
+      {
+       "file": "https://www.kranoth.org.il/wp-content/uploads/2024/01/מורים_תיכונייים_מקור_כללי-מדיניות_השקעות_צפויה_25.12.23.xlsx",
+       "text": "קרן השתלמות למורים תיכוניים מקור – מדיניות צפויה תשפ\"ד – עידכון ביום 25.12.23",
+       "ctx": ""
+      },
+      {
+       "file": "https://www.kranoth.org.il/wp-content/uploads/2024/01/מורים_תיכונייים_מקור_כללי-מדיניות_השקעות_צפויה_25.12.23.xlsx",
+       "text": "הורד",
+       "ctx": ""
+      },
+      {
+       "file": "https://www.kranoth.org.il/wp-content/uploads/2023/01/מדיניות_השקעות_צפויה_מות_מקור_תשפג-מסלול_כללי-עדכון_דצמבר_2022.xlsx",
+       "text": "קרן השתלמות למורים תיכוניים – עידכון מדיניות צפויה תשפ”ג דצמבר 2022",
+       "ctx": ""
+      },
+      {
+       "file": "https://www.kranoth.org.il/wp-content/uploads/2023/01/מדיניות_השקעות_צפויה_מות_מקור_תשפג-מסלול_כללי-עדכון_דצמבר_2022.xlsx",
+       "text": "הורד",
+       "ctx": ""
+      },
+      {
+       "file": "https://www.kranoth.org.il/wp-content/uploads/2022/10/מדיניות_השקעות_צפויה_תשפג_מות_מקור_מסלול_כללי.xlsx",
+       "text": "קרן השתלמות למורים תיכוניים מקור – מדיניות צפויה תשפ\"ג",
+       "ctx": ""
+      },
+      {
+       "file": "https://www.kranoth.org.il/wp-content/uploads/2022/10/מדיניות_השקעות_צפויה_תשפג_מות_מקור_מסלול_כללי.xlsx",
+       "text": "הורד",
+       "ctx": ""
+      },
+      {
+       "file": "https://kranoth.org.il/wp-content/uploads/2026/09/מדיניות_השקעות_צפויה_תשפז-מורים_תיכוניים_מקור-מסלול_הלכה.xlsx",
+       "text": "קרן השתלמות למורים תיכוניים מקור הלכתי – מדיניות צפויה תשפ\"ז",
+       "ctx": ""
+      },
+      {
+       "file": "https://kranoth.org.il/wp-content/uploads/2026/09/מדיניות_השקעות_צפויה_תשפז-מורים_תיכוניים_מקור-מסלול_הלכה.xlsx",
+       "text": "הורד",
+       "ctx": ""
+      },
+      {
+       "file": "https://www.kranoth.org.il/wp-content/uploads/2026/06/מות_מקור_הלכה-מדיניות_השקעות_מרץ_2026.xlsx",
+       "text": "קרן השתלמות למורים תיכוניים מקור הלכתי – מדיניות צפויה תשפ\"ו – מרץ 2026",
+       "ctx": ""
+      },
+      {
+       "file": "https://www.kranoth.org.il/wp-content/uploads/2026/06/מות_מקור_הלכה-מדיניות_השקעות_מרץ_2026.xlsx",
+       "text": "הורד",
+       "ctx": ""
+      },
+      {
+       "file": "https://www.kranoth.org.il/wp-content/uploads/2024/12/מות_מקור-מסלול_הלכה-מדיניות_תשפה_דצמבר_2024.xlsx",
+       "text": "קרן השתלמות למורים תיכוניים מקור הלכתי – מדיניות צפויה תשפ\"ה – דצמבר 2024",
+       "ctx": ""
+      },
+      {
+       "file": "https://www.kranoth.org.il/wp-content/uploads/2024/12/מות_מקור-מסלול_הלכה-מדיניות_תשפה_דצמבר_2024.xlsx",
+       "text": "הורד",
+       "ctx": ""
+      },
+      {
+       "file": "https://www.kranoth.org.il/wp-content/uploads/2024/11/מות_מקור_מסלול_הלכה_מדיניות_השקעות_צפויה_תשפה-1.xlsx",
+       "text": "קרן השתלמות למורים תיכוניים מקור הלכתי – מדיניות צפויה תשפ\"ה",
+       "ctx": ""
+      },
+      {
+       "file": "https://www.kranoth.org.il/wp-content/uploads/2024/11/מות_מקור_מסלול_הלכה_מדיניות_השקעות_צפויה_תשפה-1.xlsx",
+       "text": "הורד",
+       "ctx": ""
+      },
+      {
+       "file": "https://www.kranoth.org.il/wp-content/uploads/2024/01/מורים_תיכונייים_מקור_הלכה-מדיניות_השקעות_צפויה_25.12.23.xlsx",
+       "text": "קרן השתלמות למורים תיכוניים מקור הלכתי – מדיניות צפויה תשפ\"ד- עידכון ביום 25.12.",
+       "ctx": ""
+      },
+      {
+       "file": "https://www.kranoth.org.il/wp-content/uploads/2024/01/מורים_תיכונייים_מקור_הלכה-מדיניות_השקעות_צפויה_25.12.23.xlsx",
+       "text": "הורד",
+       "ctx": ""
+      },
+      {
+       "file": "https://www.kranoth.org.il/wp-content/uploads/2023/01/מדיניות_השקעות_צפויה_מות_מקור_תשפג-מסלול_הלכה-עדכון_דצמבר_2022.xlsx",
+       "text": "קרן השתלמות למורים תיכוניים – עידכון מדיניות צפויה תשפ”ג דצמבר 2022",
+       "ctx": ""
+      }
+     ]
+    },
+    {
+     "url": "https://www.kranoth.org.il/%d7%9e%d7%93%d7%99%d7%a0%d7%99%d7%95%d7%aa-%d7%95%d7%aa%d7%a7%d7%a0%d7%95%d7%a0%d7%99%d7%9d/%d7%9e%d7%93%d7%99%d7%a0%d7%99%d7%95%d7%aa-%d7%94%d7%a9%d7%a7%d7%a2%d7%95%d7%aa-%d7%9e%d7%95%d7%a8%d7%99%d7%9d-%d7%95%d7%92%d7%a0%d7%a0%d7%95%d7%aa-%d7%a8%d7%92%d7%99%d7%9c/",
+     "links": 101,
+     "followed": [],
+     "files": 54,
+     "clicked": 0,
+     "captured": 0,
+     "selected": [
+      "https://kranoth.org.il/wp-content/uploads/2026/09/מדיניות_השקעות_צפויה_תשפז-מורים_וגננות_מסלול_כללי.xlsx",
+      "https://www.kranoth.org.il/wp-content/uploads/2026/06/מוג_רגילה-מדיניות_השקעות_מרץ_2026.xlsx",
+      "https://www.kranoth.org.il/wp-content/uploads/2026/01/מדיניות_השקעות_צפויה_מורים_וגננות_תשפו_מונגש_עדכון_דצמבר_2025.xlsx",
+      "https://www.kranoth.org.il/wp-content/uploads/2025/11/מדיניות_השקעות_צפויה_תשפו-מוג_אשראי_ואגח.xlsx",
+      "https://www.kranoth.org.il/wp-content/uploads/2024/12/מורים_וגננות-מסלול_כללי-מדיניות_השקעות_תשפה_דצמבר_2024.xlsx",
+      "https://www.kranoth.org.il/wp-content/uploads/2024/11/מורים_וגננות_רגילה_מסלול_כללי_מדיניות_השקעות_תשפה-1.xlsx",
+      "https://www.kranoth.org.il/wp-content/uploads/2024/01/מוג_רגילה_כללי-מדיניות_השעות_צפויה_25.12.23.xlsx",
+      "https://www.kranoth.org.il/wp-content/uploads/2023/08/מדיניות_השקעות_צפויה_תשפד-מוג_רגילה-מסלול_כללי.xlsx",
+      "https://www.kranoth.org.il/wp-content/uploads/2023/01/מדיניות_השקעות_צפויה_מוג_רגילה_תשפג-מסלול_כללי-עדכון_דצמבר_2022.xlsx",
+      "https://www.kranoth.org.il/wp-content/uploads/2022/10/מדיניות_השקעות_צפויה_תשפג_מוג_רגילה_מסלול_כללי.xlsx",
+      "https://kranoth.org.il/wp-content/uploads/2026/09/מדיניות_השקעות_צפויה_תשפז-מורים_וגננות_מסלול_הלכה.xlsx",
+      "https://www.kranoth.org.il/wp-content/uploads/2026/06/מוג_רגילה_הלכה-מדיניות_הקשעות_מרץ_2026.xlsx",
+      "https://www.kranoth.org.il/wp-content/uploads/2025/10/מדיניות_השקעות_צפויה_תשפו-מוג_הלכתי.xlsx",
+      "https://www.kranoth.org.il/wp-content/uploads/2024/12/מוג_רגילה-מסלול_הלכה-מדיניות_תשפה_דצמבר_2024.xlsx",
+      "https://www.kranoth.org.il/wp-content/uploads/2024/11/מורים_וגננות_רגילה_מסלול_הלכה_מדיניות_השקעות_תשפה-1.xlsx",
+      "https://www.kranoth.org.il/wp-content/uploads/2024/01/מוג_רגילה_הלכה-מדיניות_השקעות_צפויה_25.12.23.xlsx",
+      "https://www.kranoth.org.il/wp-content/uploads/2023/08/מדיניות_השקעות_צפויה_תשפד-מוג_רגילה-מסלול_הלכה.xlsx",
+      "https://www.kranoth.org.il/wp-content/uploads/2023/01/מדיניות_השקעות_צפויה_מוג_רגילה_תשפג-מסלול_הלכה-עדכון_דצמבר_2022.xlsx",
+      "https://www.kranoth.org.il/wp-content/uploads/2022/10/מדיניות_השקעות_צפויה_תשפג_מוג_רגילה_מסלול_הלכה.xlsx",
+      "https://kranoth.org.il/wp-content/uploads/2026/09/מדיניות_השקעות_צפויה_תשפז-מורים_וגננות_מסלול_אשראי_ואגח.xlsx",
+      "https://www.kranoth.org.il/wp-content/uploads/2026/07/מדיניות_השקעות_צפויה_תשפו-מוג_אשראי_ואגח.xlsx",
+      "https://www.kranoth.org.il/wp-content/uploads/2024/12/מוג_רגילה-מסלול_אשראי_ואגח-מדיניות_תשפה_דצמבר_2024.xlsx",
+      "https://www.kranoth.org.il/wp-content/uploads/2024/11/מורים_וגננות_רגילה_מסלול_אשראי_ואגח_מדיניות_תשפה-1.xlsx",
+      "https://www.kranoth.org.il/wp-content/uploads/2024/01/מוג_רגילה_אגח-מדיניות_השקעות_צפויה_25.12.23.xlsx",
+      "https://www.kranoth.org.il/wp-content/uploads/2023/08/מדיניות_השקעות_צפויה_תשפד-מוג_רגילה-מסלול_אגח.xlsx",
+      "https://www.kranoth.org.il/wp-content/uploads/2023/01/מדיניות_השקעות_צפויה_מוג__רגילה_תשפג-מסלול_אגח-עדכון_דצמבר_2022.xlsx",
+      "https://www.kranoth.org.il/wp-content/uploads/2022/10/מדיניות_השקעות_צפויה_תשפג_מוג_רגילה_מסלול_אגח.xlsx"
+     ],
+     "unselected_files": []
+    },
+    {
+     "url": "https://www.kranoth.org.il/%d7%9e%d7%93%d7%99%d7%a0%d7%99%d7%95%d7%aa-%d7%95%d7%aa%d7%a7%d7%a0%d7%95%d7%a0%d7%99%d7%9d/%d7%9e%d7%93%d7%99%d7%a0%d7%99%d7%95%d7%aa-%d7%94%d7%a9%d7%a7%d7%a2%d7%95%d7%aa-%d7%9e%d7%95%d7%a8%d7%99%d7%9d-%d7%95%d7%92%d7%a0%d7%a0%d7%95%d7%aa-%d7%9e%d7%a7%d7%95%d7%a8/",
+     "links": 99,
+     "followed": [],
+     "files": 52,
+     "clicked": 0,
+     "captured": 0,
+     "selected": [
+      "https://kranoth.org.il/wp-content/uploads/2026/09/מדיניות_השקעות_צפויה_תשפז-מורים_וגננות_מקור-מסלול_כללי.xlsx",
+      "https://www.kranoth.org.il/wp-content/uploads/2026/06/מוג_מקור-מדיניות_השקעות_מרץ_2026.xlsx",
+      "https://www.kranoth.org.il/wp-content/uploads/2025/11/מדיניות_השקעות_צפויה_תשפו-מוג_מקור_אשראי_ואגח.xlsx",
+      "https://www.kranoth.org.il/wp-content/uploads/2024/12/מוג_מקור-מסלול_כללי-מדיניות_השקעות_תשפה_דצמבר_2024.xlsx",
+      "https://www.kranoth.org.il/wp-content/uploads/2024/11/מורים_וגננות_מקור_מסלול_כללי_מדיניות_השקעות_תשפה-1.xlsx",
+      "https://www.kranoth.org.il/wp-content/uploads/2024/01/מוג_מקור_כללי-מדיניות_השקעות_צפויה_25.12.23.xlsx",
+      "https://www.kranoth.org.il/wp-content/uploads/2024/01/מדיניות_השקעות_צפויה_תשפד-מוג_מקור-מסלול_כללי.xlsx",
+      "https://www.kranoth.org.il/wp-content/uploads/2023/01/מדיניות_השקעות_צפויה_מוג_מקור_תשפג-מסלול_כללי-עדכון_דצמבר_2022.xlsx",
+      "https://www.kranoth.org.il/wp-content/uploads/2022/10/מ_דיניות_השקעות_צפויה_תשפג_מוג_מקור_מסלול_כללי.xlsx",
+      "https://kranoth.org.il/wp-content/uploads/2026/09/מדיניות_השקעות_צפויה_תשפז-מורים_וגננות_מקור-מסלול_הלכה.xlsx",
+      "https://www.kranoth.org.il/wp-content/uploads/2026/06/מוג_מקור_הלכה-מדיניות_השקעות_מרץ_2026.xlsx",
+      "https://www.kranoth.org.il/wp-content/uploads/2025/10/מדיניות_השקעות_צפויה_תשפו-מוג_מקור_הלכתי.xlsx",
+      "https://www.kranoth.org.il/wp-content/uploads/2024/12/מוג_מקור-מסלול_הלכה-מדיניות_תשפה_דצמבר_2024.xlsx",
+      "https://www.kranoth.org.il/wp-content/uploads/2024/11/מורים_וגננות_מקור_מסלול_הלכה_מדיניות_השקעה_תשפה-1.xlsx",
+      "https://www.kranoth.org.il/wp-content/uploads/2024/01/מוג_מקור_הלכתי-מדיניות_השקעות_צפויה_25.12.23.xlsx",
+      "https://www.kranoth.org.il/wp-content/uploads/2023/08/מדיניות_השקעות_צפויה_תשפד-מוג_מקור-מסלול_הלכה.xlsx",
+      "https://www.kranoth.org.il/wp-content/uploads/2023/01/מדיניות_השקעות_צפויה_מוג_מקור_תשפג-מסלול_הלכה-עדכון_דצמבר_2022.xlsx",
+      "https://www.kranoth.org.il/wp-content/uploads/2022/10/מדיניות_השקעות_צפויה_תשפג_מוג_מקור_מסלול_הלכה.xlsx",
+      "https://kranoth.org.il/wp-content/uploads/2026/09/מדיניות_השקעות_צפויה_תשפז-מורים_וגננות_מקור-מסלול_אשראי_ואגח.xlsx",
+      "https://www.kranoth.org.il/wp-content/uploads/2026/07/מדיניות_השקעות_צפויה_תשפו-מוג_מקור_אשראי_ואגח.xlsx",
+      "https://www.kranoth.org.il/wp-content/uploads/2024/12/מוג_מקור-מסלול_אשראי_ואגח-מדיניות_תשפה_דצמבר_2024.xlsx",
+      "https://www.kranoth.org.il/wp-content/uploads/2024/11/מורים_וגננות_מקור_מסלול_אשראי_ואגח_מדיניות_השקעה_תשפה-1.xlsx",
+      "https://www.kranoth.org.il/wp-content/uploads/2024/01/מוג_מקור_אגח-מדיניות_השקעות_25.12.23.xlsx",
+      "https://www.kranoth.org.il/wp-content/uploads/2023/08/מדיניות_השקעות_צפויה_תשפד-מוג_מקוצר-מסלול_אגח.xlsx",
+      "https://www.kranoth.org.il/wp-content/uploads/2023/01/מדיניות_השקעות_צפויה_מוג_מקור_תשפג-מסלול_אגח-עדכון_דצמבר_2022.xlsx",
+      "https://www.kranoth.org.il/wp-content/uploads/2022/10/מדיניות_השקעות_צפויה_תשפג_מוג_מקור_מסלול_אגח.xlsx"
+     ],
+     "unselected_files": []
+    }
+   ],
+   "new_docs": 53,
+   "found": 322,
+   "selected": 118,
+   "had": 65,
+   "errors": [],
+   "diag": [
+    "קרנות השתלמות למור: links=51 files=0 clicked=0 captured=0 selected=0",
+    "קרנות השתלמות למור: links=93 files=0 clicked=0 captured=0 selected=0",
+    "קרנות השתלמות למור: links=93 files=0 clicked=0 captured=0 selected=0",
+    "קרנות השתלמות למור: links=51 files=0 clicked=0 captured=0 selected=0",
+    "קרנות השתלמות למור: links=49 files=0 clicked=0 captured=0 selected=0",
+    "קרנות השתלמות למור: links=49 files=0 clicked=0 captured=0 selected=0",
+    "קרנות השתלמות למור: links=48 files=0 clicked=0 captured=0 selected=0",
+    "קרנות השתלמות למור: links=49 files=2 clicked=0 captured=0 selected=0",
+    "   ? אמנת_שירות_לקוחות2022.pdf | אמנת שירות | ",
+    "   ? אמנת_שירות_לקוחות2022.pdf | Download | ",
+    "קרנות השתלמות למור: links=51 files=0 clicked=0 captured=0 selected=0",
+    "קרנות השתלמות למור: links=101 files=54 clicked=0 captured=0 selected=27",
+    "קרנות השתלמות למור: links=99 files=52 clicked=0 captured=0 selected=26",
+    "קרנות השתלמות למור: links=101 files=54 clicked=0 captured=0 selected=6",
+    "קרנות השתלמות למור: links=101 files=54 clicked=0 captured=0 selected=6",
+    "קרנות השתלמות למור: links=101 files=54 clicked=0 captured=0 selected=27",
+    "קרנות השתלמות למור: links=99 files=52 clicked=0 captured=0 selected=26"
+   ],
+   "new_files": [
+    "86bb8c230c6e_מדיניות_השקעות_צפויה_תשפז-מורים_וגננות_מסלול_כללי.xlsx",
+    "1c7889d354ea_מוג_רגילה-מדיניות_השקעות_מרץ_2026.xlsx",
+    "31be1de0d12a_מדיניות_השקעות_צפויה_מורים_וגננות_תשפו_מונגש_עדכון_דצמבר_2025.xlsx",
+    "0bf765a357c7_מדיניות_השקעות_צפויה_תשפו-מוג_אשראי_ואגח.xlsx",
+    "0e798f303f9d_מורים_וגננות-מסלול_כללי-מדיניות_השקעות_תשפה_דצמבר_2024.xlsx",
+    "ed04f83692ac_מורים_וגננות_רגילה_מסלול_כללי_מדיניות_השקעות_תשפה-1.xlsx",
+    "a493e0b4627b_מוג_רגילה_כללי-מדיניות_השעות_צפויה_25.12.23.xlsx",
+    "9f3767cb79dc_מדיניות_השקעות_צפויה_תשפד-מוג_רגילה-מסלול_כללי.xlsx",
+    "fdc575cf786b_מדיניות_השקעות_צפויה_מוג_רגילה_תשפג-מסלול_כללי-עדכון_דצמבר_2022.xlsx",
+    "ec481ac10f1d_מדיניות_השקעות_צפויה_תשפג_מוג_רגילה_מסלול_כללי.xlsx",
+    "62b26b5c30da_מדיניות_השקעות_צפויה_תשפז-מורים_וגננות_מסלול_הלכה.xlsx",
+    "bfb0fd74a6aa_מוג_רגילה_הלכה-מדיניות_הקשעות_מרץ_2026.xlsx",
+    "04917f58aa7c_מדיניות_השקעות_צפויה_תשפו-מוג_הלכתי.xlsx",
+    "e24bcdd9632f_מוג_רגילה-מסלול_הלכה-מדיניות_תשפה_דצמבר_2024.xlsx",
+    "5c5ed4b10ae4_מורים_וגננות_רגילה_מסלול_הלכה_מדיניות_השקעות_תשפה-1.xlsx",
+    "a5445e68df99_מוג_רגילה_הלכה-מדיניות_השקעות_צפויה_25.12.23.xlsx",
+    "2fdf027b2e84_מדיניות_השקעות_צפויה_תשפד-מוג_רגילה-מסלול_הלכה.xlsx",
+    "2322ef12b3b1_מדיניות_השקעות_צפויה_מוג_רגילה_תשפג-מסלול_הלכה-עדכון_דצמבר_2022.xlsx",
+    "6cfd9c82321d_מדיניות_השקעות_צפויה_תשפג_מוג_רגילה_מסלול_הלכה.xlsx",
+    "69a63da2ee3e_מדיניות_השקעות_צפויה_תשפז-מורים_וגננות_מסלול_אשראי_ואגח.xlsx",
+    "0bf765a357c7_מדיניות_השקעות_צפויה_תשפו-מוג_אשראי_ואגח.xlsx",
+    "a0eb893d4fee_מוג_רגילה-מסלול_אשראי_ואגח-מדיניות_תשפה_דצמבר_2024.xlsx",
+    "f484e9ec6472_מורים_וגננות_רגילה_מסלול_אשראי_ואגח_מדיניות_תשפה-1.xlsx",
+    "db25745976a0_מוג_רגילה_אגח-מדיניות_השקעות_צפויה_25.12.23.xlsx",
+    "c20b8501e09e_מדיניות_השקעות_צפויה_תשפד-מוג_רגילה-מסלול_אגח.xlsx",
+    "ff39f2e4f8a7_מדיניות_השקעות_צפויה_מוג__רגילה_תשפג-מסלול_אגח-עדכון_דצמבר_2022.xlsx",
+    "2788c86186f8_מדיניות_השקעות_צפויה_תשפג_מוג_רגילה_מסלול_אגח.xlsx",
+    "4238d0e71ea7_מדיניות_השקעות_צפויה_תשפז-מורים_וגננות_מקור-מסלול_כללי.xlsx",
+    "0da9ec3ce0cb_מוג_מקור-מדיניות_השקעות_מרץ_2026.xlsx",
+    "c075d23b8e5f_מדיניות_השקעות_צפויה_תשפו-מוג_מקור_אשראי_ואגח.xlsx",
+    "e1e7908223ad_מוג_מקור-מסלול_כללי-מדיניות_השקעות_תשפה_דצמבר_2024.xlsx",
+    "0690fece1b44_מורים_וגננות_מקור_מסלול_כללי_מדיניות_השקעות_תשפה-1.xlsx",
+    "1cbeb8d27d5c_מוג_מקור_כללי-מדיניות_השקעות_צפויה_25.12.23.xlsx",
+    "66070d84fc8e_מדיניות_השקעות_צפויה_תשפד-מוג_מקור-מסלול_כללי.xlsx",
+    "abe86ef81313_מדיניות_השקעות_צפויה_מוג_מקור_תשפג-מסלול_כללי-עדכון_דצמבר_2022.xlsx",
+    "f76ef598ba07_מ_דיניות_השקעות_צפויה_תשפג_מוג_מקור_מסלול_כללי.xlsx",
+    "cc107f76bce3_מדיניות_השקעות_צפויה_תשפז-מורים_וגננות_מקור-מסלול_הלכה.xlsx",
+    "5924778a20d2_מוג_מקור_הלכה-מדיניות_השקעות_מרץ_2026.xlsx",
+    "b203bf7f416c_מדיניות_השקעות_צפויה_תשפו-מוג_מקור_הלכתי.xlsx",
+    "274f6d24e528_מוג_מקור-מסלול_הלכה-מדיניות_תשפה_דצמבר_2024.xlsx",
+    "a4b66fc71d50_מורים_וגננות_מקור_מסלול_הלכה_מדיניות_השקעה_תשפה-1.xlsx",
+    "90456ec3b930_מוג_מקור_הלכתי-מדיניות_השקעות_צפויה_25.12.23.xlsx",
+    "6e47250e938f_מדיניות_השקעות_צפויה_תשפד-מוג_מקור-מסלול_הלכה.xlsx",
+    "c27da50e55c9_מדיניות_השקעות_צפויה_מוג_מקור_תשפג-מסלול_הלכה-עדכון_דצמבר_2022.xlsx",
+    "9e5b15d0536a_מדיניות_השקעות_צפויה_תשפג_מוג_מקור_מסלול_הלכה.xlsx",
+    "42540a9e130d_מדיניות_השקעות_צפויה_תשפז-מורים_וגננות_מקור-מסלול_אשראי_ואגח.xlsx",
+    "c075d23b8e5f_מדיניות_השקעות_צפויה_תשפו-מוג_מקור_אשראי_ואגח.xlsx",
+    "4068bc5e3698_מוג_מקור-מסלול_אשראי_ואגח-מדיניות_תשפה_דצמבר_2024.xlsx",
+    "d64e5dd0deaf_מורים_וגננות_מקור_מסלול_אשראי_ואגח_מדיניות_השקעה_תשפה-1.xlsx",
+    "8eefd1c44712_מוג_מקור_אגח-מדיניות_השקעות_25.12.23.xlsx",
+    "6b68ec7fd9d4_מדיניות_השקעות_צפויה_תשפד-מוג_מקוצר-מסלול_אגח.xlsx",
+    "550f620e9fe9_מדיניות_השקעות_צפויה_מוג_מקור_תשפג-מסלול_אגח-עדכון_דצמבר_2022.xlsx",
+    "1343db84994c_מדיניות_השקעות_צפויה_תשפג_מוג_מקור_מסלול_אגח.xlsx"
+   ]
   }
  ]
 }
