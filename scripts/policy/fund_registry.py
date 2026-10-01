@@ -86,11 +86,16 @@ def fund_names():
         rids = [r["id"] for r in pkg["resources"] if r.get("datastore_active") and r.get("format", "").upper() == "CSV"
                 and "שינויים" not in r.get("name", "")]
         for rid in rids[-2:]:  # השנה האחרונה + הקודמת
+            want = ["FUND_ID", "FUND_NAME", "REPORT_PERIOD", "MANAGING_CORPORATION", "PARENT_COMPANY_NAME",
+                    "FUND_CLASSIFICATION", "STOCK_MARKET_EXPOSURE"]
             try:
-                recs = fetch_all(rid, ["FUND_ID", "FUND_NAME", "REPORT_PERIOD", "MANAGING_CORPORATION", "PARENT_COMPANY_NAME",
-                                       "FUND_CLASSIFICATION", "STOCK_MARKET_EXPOSURE"])
-            except Exception as e:
-                print("skip", dom, rid, e, flush=True); continue
+                recs = fetch_all(rid, want)
+            except Exception as e:  # עמודה שלא קיימת בדומיין (ביטוח-נט/גמל-נט) -> שגיאה לא-JSON; בלי fields וסינון מקומי
+                print("fields failed", dom, rid, e, "- retry without fields", flush=True)
+                try:
+                    recs = [{k: r.get(k) for k in want} for r in fetch_all(rid)]
+                except Exception as e2:
+                    print("skip", dom, rid, e2, flush=True); continue
             for r in recs:
                 k = (dom, digits(r.get("FUND_ID")))
                 if k not in out or str(r.get("REPORT_PERIOD")) > str(out[k].get("REPORT_PERIOD")):

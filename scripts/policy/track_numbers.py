@@ -37,9 +37,12 @@ def _toks(s):
 
 
 def numbers_in(text):
-    """מספרי מסלול אפשריים בטקסט: 3-6 ספרות, לא שנה, לא אחוז, לא שם מדד (ת"א 125)."""
+    """מספרי מסלול אפשריים בטקסט: 3-6 ספרות, לא שנה, לא אחוז, לא שם מדד (ת"א 125).
+    אחרי תווית מפורשת ("מספר מסלול באוצר 47", "מ.ה. 50") גם 1-2 ספרות (הפניקס: מסלולים 47, 50)."""
     out = []
     t = unquote(str(text or ""))
+    for m in re.finditer(r"(?:מספר|מס['׳]?)\s*מסלול(?:\s*באוצר)?\s*[:\-]?\s*(\d{1,2})(?!\d)|מ\.\s?ה\.?\s*(\d{1,2})(?!\d)", t):
+        out.append(str(int(m.group(1) or m.group(2))))
     for m in NUM.finditer(t):
         n = m.group(1)
         if re.fullmatch(r"(19|20)\d\d", n):
@@ -256,6 +259,8 @@ def assign(tracks):
             if len({_norm(x.get("track_name")) for x in ts}) < 2:
                 continue
             keep = [x for x in ts if n in name_numbers(x.get("track_name")) or x["track_no_source"] == "doc_code"]
+            if len(keep) > 1 and all(x["track_no_source"] != "doc_code" for x in keep):
+                keep = keep[:1]  # אותו מסלול מופיע פעמיים בקובץ (הפניקס: גיליון פרט וגיליון ביטוח, אותו מספר באוצר)
             for x in ts:
                 if x not in keep or len(keep) > 1 and x["track_no_source"] != "doc_code":
                     x["_banned"].add(n); changed = True
