@@ -610,6 +610,20 @@ def main():
         ent["parser_version"] = PARSER_VERSION
         print(f"[extract] {p.name}: long={n_long} heuristic={len(recs)}", flush=True)
     idx_path.write_text(json.dumps(index, ensure_ascii=False, indent=1), "utf-8")
+    # track_filter (הגדרות החברה): קובץ אחד מכיל כמה קרנות (הוותיקות: Makefet + Mivtachim באותו גיליון) - נשמרות
+    # רק השורות של המסלולים של החברה הזו
+    tf = {}
+    for lid in {e.get("legal_id") for e in index.values()}:
+        cf = ROOT / "scripts" / "policy" / "sites" / f"{lid}.json"
+        if lid and cf.exists():
+            rx = json.loads(cf.read_text("utf-8")).get("track_filter")
+            if rx:
+                tf[lid] = re.compile(rx)
+    if tf:
+        keep_row = lambda r: r.get("legal_id") not in tf or bool(tf[r["legal_id"]].search(r.get("track_name") or ""))
+        long_rows = [r for r in long_rows if keep_row(r)]
+        changes = [r for r in changes if keep_row(r)]
+        rows = {k: r for k, r in rows.items() if keep_row(r)}
     out = sorted(rows.values(), key=lambda r: (r["legal_id"], r["track_name"]))
     rows_path.write_text(json.dumps(out, ensure_ascii=False, indent=1), "utf-8")
     for path, data in ((long_path, long_rows), (chg_path, changes), (unp_path, unparsed)):

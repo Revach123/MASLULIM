@@ -13,7 +13,8 @@
   "גמל"
  ],
  "search": false,
- "rev": 6,
+ "rev": 7,
  "home_source": "web_search",
- "max_pages": 20
+ "max_pages": 20,
+ "track_filter": "^(קרן חיסכון לצבא הקבע|קופת גמל (ל)?משרתי)"
 }
