@@ -264,18 +264,40 @@ def select_docs(pages: dict, extra: list[str]):
     return out
 
 
-def download_browser(pw, url):
-    """הורדה דרך הדפדפן (קוקיז/Headers אמיתיים) כשבקשת requests נחסמת."""
-    b = pw.chromium.launch(executable_path=os.environ.get("PW_CHROMIUM") or None, headless=os.environ.get("POLICY_HEADED") != "1",
-                           args=["--disable-blink-features=AutomationControlled", "--disable-http2"])
+_BROWSER = {}  # דפדפן אחד לכל ריצה (לא לכל קובץ) + עמודי מקור שכבר נפתחו בו
+
+
+def download_browser(pw, url, referer=None):
+    """הורדה דרך הדפדפן כשבקשת requests נחסמת (403 / 202 בדיקת בוט / 429...). קודם נפתח עמוד המקור באותו context -
+    עובר את בדיקת הבוט ומקבל עוגיות (לאומי: 202 לכל קובץ) - ואז הקובץ מורד עם אותן עוגיות."""
     try:
-        ctx = b.new_context(user_agent=UA, locale="he-IL")
-        r = ctx.request.get(url, timeout=60000)
+        if "ctx" not in _BROWSER:
+            b = pw.chromium.launch(executable_path=os.environ.get("PW_CHROMIUM") or None, headless=os.environ.get("POLICY_HEADED") != "1",
+                                   args=["--disable-blink-features=AutomationControlled", "--disable-http2"])
+            _BROWSER.update(b=b, ctx=b.new_context(user_agent=UA, locale="he-IL"), visited=set())
+        ctx = _BROWSER["ctx"]
+        if referer and referer not in _BROWSER["visited"]:
+            _BROWSER["visited"].add(referer)
+            pg = ctx.new_page()
+            try:
+                pg.goto(referer, wait_until="networkidle", timeout=60000)
+            except Exception:
+                pass
+            pg.wait_for_timeout(3000)
+            pg.close()
+        r = ctx.request.get(url, timeout=60000, headers={"Referer": referer} if referer else None)
         return r.body() if r.status == 200 else None
     except Exception:
         return None
-    finally:
-        b.close()
+
+
+def close_browser():
+    if "b" in _BROWSER:
+        try:
+            _BROWSER["b"].close()
+        except Exception:
+            pass
+        _BROWSER.clear()
 
 
 def main():
@@ -373,8 +395,8 @@ def main():
             else:
                 r, code = download(s, url)
                 content = r.content if r is not None else None
-            if content is None and pw and code in (403, "ERR") and not d.get("local"):
-                content = download_browser(pw, url)
+            if content is None and pw and code not in (404, 410, "not_a_document") and not d.get("local"):
+                content = download_browser(pw, url, d.get("page"))
                 code = 200 if content else code
             if content is None or sniff_ext(content, url) is None:
                 errs.append(f"{url[-80:]} -> {code}"); continue
@@ -405,6 +427,7 @@ def main():
                        " | ".join([*[f"{p}:{u}" for u, p in list(searched.items())[:6]], *discovered[:5], *errs, *SEARCH_LOG[-4:]])[:1200]])
         print(f"[{legal_id}] {c['name']}: pages={len(pages)} docs={got} errs={len(errs)}", flush=True)
     if pw_cm:
+        close_browser()
         pw.stop()
 
     idx_path.write_text(json.dumps(index, ensure_ascii=False, indent=1), "utf-8")

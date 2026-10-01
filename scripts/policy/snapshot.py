@@ -166,7 +166,12 @@ def fetch_browser(pw, url):
                 if re.search(r"חיפוש|אזור אישי|כניסה|צ'?אט|WhatsApp|סגור|✕|תפריט|נגישות|שפה|English|עוגיות|הבנתי|דלג", t):
                     continue
                 clicked.add(t)
-                el.click(timeout=800); pg.wait_for_timeout(400)
+                el.click(timeout=800)
+                # לשונית/צ'יפ של מדיניות: התוכן נטען אחרי הלחיצה (הכשרה: כרטיסים מ-API) - מחכים ואוספים לפני שהלשונית הבאה מחליפה אותו
+                if re.search(r"מדיניות|הצהר", t):
+                    pg.wait_for_timeout(2500); collect(); pg.wait_for_timeout(1500)
+                else:
+                    pg.wait_for_timeout(400)
                 if pg.url.split("#")[0] != url.split("#")[0]:  # כפתור שניווט החוצה - חוזרים
                     collect(); pg.go_back(wait_until="networkidle", timeout=30000)
                     continue

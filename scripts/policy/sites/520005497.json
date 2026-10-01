@@ -13,6 +13,8 @@
   "גמל"
  ],
  "search": false,
- "rev": 10,
- "home_source": "web_search"
+ "rev": 11,
+ "home_source": "web_search",
+ "exclude": "(?i)^(?!.*inv_policy)",
+ "note": "לאומי: עמוד המאמר מכיל את כל דוחות הקופה; מדיניות = inv_policy_YYYY_acc.pdf בלבד. השרת מחזיר 202 (בדיקת בוט) לבקשות ישירות -> הורדה דרך דפדפן אחרי פתיחת העמוד"
 }
