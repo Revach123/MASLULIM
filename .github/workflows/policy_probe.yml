@@ -21,7 +21,7 @@ jobs:
         env:
           URLS: ${{ inputs.urls }}
         run: |
-          [ -z "$URLS" ] && URLS="https://www.menoramivt.co.il/rep-list/about-insurance/participating-portfolio-info/investment-policy"
+          [ -z "$URLS" ] && URLS="https://www.clalbit.co.il/aboutclalinsurance/generalreports/?txtTabId=1&txtReportsYearId=2026&txtCompanyId=1&txtReportTypeId=20"
           echo "urls=$(python3 -c 'import json,sys;print(json.dumps(sys.argv[1:]))' $URLS)" >> "$GITHUB_OUTPUT"
 
   probe:
