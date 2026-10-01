@@ -1,7 +1,7 @@
 {
  "extension_version": "2.29.0",
  "started": "2026-10-01T19:18:31.207Z",
- "updated": "2026-10-01T19:21:31.289Z",
+ "updated": "2026-10-01T19:24:31.278Z",
  "final": false,
  "stopped": false,
  "rules_from_github": true,
@@ -19,8 +19,8 @@
   "_note_skip": "חברה עם מדיניות השנה לכל המסלולים (policy/extension_complete.json) מדולגת N שעות מאז הריצה המוצלחת האחרונה שלה. 0 = לא מדלגים."
  },
  "total_sites": 8,
- "done_sites": 3,
- "new_docs": 0,
+ "done_sites": 5,
+ "new_docs": 10,
  "skipped_complete": [
   {
    "legal_id": "511789190",
@@ -38,30 +38,23 @@
  "active": [
   {
    "name": "איילון קופות גמל בע\"מ",
-   "page": "https://www.ayalon-ins.co.il/savings/provident-fund-invest",
-   "page_no": 8,
+   "page": "https://www.ayalon-ins.co.il/providents/provident-fund",
+   "page_no": 15,
    "pages": 27,
    "step": "טוען עמוד"
   },
   {
-   "name": "החברה לניהול קופת התגמולים והפנסיה של עובדי הסוכנות היהודית לארץ ישראל בע\"מ",
-   "page": "https://www.jewishagency-kupa.org.il/wp-content/uploads/2022/08/%D7%93%D7%95%D7%97-%D7%93%D7%99%D7%A8%D7%A7%D7%98%D7%95%D7%A8%D7%99%D7%95%D7%9F-%D7%97%D7%91%D7%A8%D7%94-%D7%9E%D7%A0%D7%94%D7%9C%D7%AA-%D7%A4%D7%A0%D7%A1%D7%99%D7%94-%D7%95%D7%AA%D7%92%D7%9E%D7%95%D7%9C%D7%99%D7%9D-2021.doc",
-   "page_no": 14,
-   "pages": 14,
-   "step": "טוען עמוד"
-  },
-  {
    "name": "איילון חברה לביטוח בע\"מ",
-   "page": "https://www.ayalon-ins.co.il/investments",
-   "page_no": 4,
-   "pages": 6,
-   "step": "טוען עמוד"
+   "page": "https://www.ayalon-ins.co.il/investments-directorate",
+   "page_no": 10,
+   "pages": 13,
+   "step": "לוחץ על כפתורי הורדה"
   },
   {
    "name": "החברה המנהלת של מינהל קרן ההשתלמות לפקידים עובדי המנהל והשירותים בע\"מ",
-   "page": "https://www.minhal.org/?CategoryID=164",
-   "page_no": 1,
-   "pages": 5,
+   "page": "https://www.minhal.org/?CategoryID=0",
+   "page_no": 3,
+   "pages": 9,
    "step": "פותח אקורדיונים ואוסף קישורים"
   }
  ],
@@ -597,6 +590,1935 @@
     "קרנות השתלמות למור: links=47 files=0 clicked=0 captured=0 selected=0",
     "קרנות השתלמות למור: links=101 files=54 clicked=0 captured=0 selected=27",
     "קרנות השתלמות למור: links=99 files=52 clicked=0 captured=0 selected=26"
+   ],
+   "new_files": []
+  },
+  {
+   "legal_id": "520022518",
+   "name": "החברה לניהול קופת התגמולים והפנסיה של עובדי הסוכנות היהודית לארץ ישראל בע\"מ",
+   "pages": [
+    {
+     "url": "https://www.jewishagency-kupa.org.il/sitemap/",
+     "links": 121,
+     "followed": [
+      "https://www.jewishagency-kupa.org.il/%d7%97%d7%91%d7%a8%d7%99-%d7%95%d7%a2%d7%93%d7%aa-%d7%94%d7%a9%d7%a7%d7%a2%d7%95%d7%aa/",
+      "https://www.jewishagency-kupa.org.il/%d7%93%d7%95%d7%97%d7%95%d7%aa-%d7%a8%d7%91%d7%a2%d7%95%d7%a0%d7%99%d7%99%d7%9d/",
+      "https://www.jewishagency-kupa.org.il/%d7%93%d7%95%d7%97%d7%95%d7%aa-%d7%a9%d7%a0%d7%aa%d7%99%d7%99%d7%9d/",
+      "https://www.jewishagency-kupa.org.il/%d7%93%d7%95%d7%97-%d7%97%d7%95%d7%93%d7%a9%d7%99/",
+      "https://www.jewishagency-kupa.org.il/%d7%93%d7%95%d7%97%d7%95%d7%aa/",
+      "https://www.jewishagency-kupa.org.il/%d7%93%d7%95%d7%97%d7%95%d7%aa-%d7%9b%d7%a1%d7%a4%d7%99%d7%99%d7%9d/",
+      "https://www.jewishagency-kupa.org.il/%d7%9e%d7%93%d7%99%d7%a0%d7%99%d7%95%d7%aa-%d7%95%d7%a0%d7%94%d7%9c%d7%99%d7%9d/"
+     ],
+     "files": 26,
+     "clicked": 0,
+     "captured": 0,
+     "selected": [
+      "https://www.jewishagency-kupa.org.il/wp-content/uploads/2026/07/מדיניות-הצבעה-באסיפות-כלליות-סוכנות-יהודית-2026-מעודכן-יולי-סופי-2026.docx.pdf",
+      "https://www.jewishagency-kupa.org.il/wp-content/uploads/2025/12/מדיניות-הצבעה-חברת-עמדה-2025-2026.pdf",
+      "https://www.jewishagency-kupa.org.il/wp-content/uploads/2026/02/מדיניות-ואמנת-שירות-לקוחות-1.pdf"
+     ],
+     "unselected_files": [
+      {
+       "file": "https://www.jewishagency-kupa.org.il/wp-content/uploads/2021/10/10_zdadim_sohnut.pdf",
+       "text": "מבנה אחזקות וצדדים קשורים",
+       "ctx": "מבנה אחזקות וצדדים קשורים"
+      },
+      {
+       "file": "https://www.jewishagency-kupa.org.il/wp-content/uploads/2021/10/10_הודעה_על_העברת_ניהול.pdf",
+       "text": "הודעה על שינוי מבני",
+       "ctx": "הודעה על שינוי מבני"
+      },
+      {
+       "file": "https://www.jewishagency-kupa.org.il/wp-content/uploads/2025/08/נוהל-מספר-18-מדיניות-התגמול-2024-2027-002.pdf",
+       "text": "מדיניות תגמול נושאי משרה 2024-2027",
+       "ctx": "מדיניות תגמול נושאי משרה 2024-2027"
+      },
+      {
+       "file": "https://www.jewishagency-kupa.org.il/wp-content/uploads/2022/12/מדיניות-תגמול-נושאי-משרה-2020-2023.pdf",
+       "text": "מדיניות תגמול נושאי משרה 2020-2023",
+       "ctx": "מדיניות תגמול נושאי משרה 2020-2023"
+      },
+      {
+       "file": "https://www.jewishagency-kupa.org.il/wp-content/uploads/2021/10/10_מדיניות_תגמול_לשנים_2018_2020_סופי-2.pdf",
+       "text": "מדיניות תגמול נושאי משרה 2018-2020",
+       "ctx": "מדיניות תגמול נושאי משרה 2018-2020"
+      },
+      {
+       "file": "https://www.jewishagency-kupa.org.il/wp-content/uploads/2021/10/10_מדיניות_תגמול_לשנים_2015_2017-3.pdf",
+       "text": "מדיניות תגמול נושאי משרה 2015-2017",
+       "ctx": "מדיניות תגמול נושאי משרה 2015-2017"
+      },
+      {
+       "file": "https://www.jewishagency-kupa.org.il/wp-content/uploads/2021/10/10_מדיניותתגמול2014-2.pdf",
+       "text": "מדיניות תגמול נושאי משרה 2014",
+       "ctx": "מדיניות תגמול נושאי משרה 2014"
+      },
+      {
+       "file": "https://www.jewishagency-kupa.org.il/wp-content/uploads/2021/10/10_10_מדיניותתגמולנושאימשרהלשנת-2013-2.pdf",
+       "text": "מדיניות תגמול נושאי משרה 2013",
+       "ctx": "מדיניות תגמול נושאי משרה 2013"
+      },
+      {
+       "file": "https://www.jewishagency-kupa.org.il/wp-content/uploads/2021/10/10_10_מדיניותהשקעות2012.pdf",
+       "text": "מדיניות תגמול נושאי משרה 2012",
+       "ctx": "מדיניות תגמול נושאי משרה 2012"
+      },
+      {
+       "file": "https://www.jewishagency-kupa.org.il/wp-content/uploads/2025/12/דוח-שירות-אזרחים-ותיקים-בגין-שנת-2025.pdf",
+       "text": "דוח שירות אזרחים ותיקים",
+       "ctx": "דוח שירות אזרחים ותיקים"
+      },
+      {
+       "file": "https://www.jewishagency-kupa.org.il/wp-content/uploads/2021/10/10_zdadim_sohnut.pdf",
+       "text": "מבנה אחזקות וצדדים קשורים",
+       "ctx": "מבנה אחזקות וצדדים קשורים"
+      },
+      {
+       "file": "https://www.jewishagency-kupa.org.il/wp-content/uploads/2021/10/10_הודעה_על_העברת_ניהול.pdf",
+       "text": "הודעה על שינוי מבני",
+       "ctx": "הודעה על שינוי מבני"
+      },
+      {
+       "file": "https://www.jewishagency-kupa.org.il/wp-content/uploads/2025/08/נוהל-מספר-18-מדיניות-התגמול-2024-2027-002.pdf",
+       "text": "מדיניות תגמול נושאי משרה 2024-2027",
+       "ctx": "מדיניות תגמול נושאי משרה 2024-2027"
+      },
+      {
+       "file": "https://www.jewishagency-kupa.org.il/wp-content/uploads/2022/12/מדיניות-תגמול-נושאי-משרה-2020-2023.pdf",
+       "text": "מדיניות תגמול נושאי משרה 2020-2023",
+       "ctx": "מדיניות תגמול נושאי משרה 2020-2023"
+      },
+      {
+       "file": "https://www.jewishagency-kupa.org.il/wp-content/uploads/2021/10/10_מדיניות_תגמול_לשנים_2018_2020_סופי-2.pdf",
+       "text": "מדיניות תגמול נושאי משרה 2018-2020",
+       "ctx": "מדיניות תגמול נושאי משרה 2018-2020"
+      },
+      {
+       "file": "https://www.jewishagency-kupa.org.il/wp-content/uploads/2021/10/10_מדיניות_תגמול_לשנים_2015_2017-3.pdf",
+       "text": "מדיניות תגמול נושאי משרה 2015-2017",
+       "ctx": "מדיניות תגמול נושאי משרה 2015-2017"
+      },
+      {
+       "file": "https://www.jewishagency-kupa.org.il/wp-content/uploads/2021/10/10_מדיניותתגמול2014-2.pdf",
+       "text": "מדיניות תגמול נושאי משרה 2014",
+       "ctx": "מדיניות תגמול נושאי משרה 2014"
+      },
+      {
+       "file": "https://www.jewishagency-kupa.org.il/wp-content/uploads/2021/10/10_10_מדיניותתגמולנושאימשרהלשנת-2013-2.pdf",
+       "text": "מדיניות תגמול נושאי משרה 2013",
+       "ctx": "מדיניות תגמול נושאי משרה 2013"
+      },
+      {
+       "file": "https://www.jewishagency-kupa.org.il/wp-content/uploads/2021/10/10_10_מדיניותהשקעות2012.pdf",
+       "text": "מדיניות תגמול נושאי משרה 2012",
+       "ctx": "מדיניות תגמול נושאי משרה 2012"
+      },
+      {
+       "file": "https://www.jewishagency-kupa.org.il/wp-content/uploads/2025/12/דוח-שירות-אזרחים-ותיקים-בגין-שנת-2025.pdf",
+       "text": "דוח שירות אזרחים ותיקים",
+       "ctx": "דוח שירות אזרחים ותיקים"
+      }
+     ]
+    },
+    {
+     "url": "https://www.jewishagency-kupa.org.il/",
+     "links": 105,
+     "followed": [],
+     "files": 26,
+     "clicked": 0,
+     "captured": 0,
+     "selected": [
+      "https://www.jewishagency-kupa.org.il/wp-content/uploads/2026/07/מדיניות-הצבעה-באסיפות-כלליות-סוכנות-יהודית-2026-מעודכן-יולי-סופי-2026.docx.pdf",
+      "https://www.jewishagency-kupa.org.il/wp-content/uploads/2025/12/מדיניות-הצבעה-חברת-עמדה-2025-2026.pdf",
+      "https://www.jewishagency-kupa.org.il/wp-content/uploads/2026/02/מדיניות-ואמנת-שירות-לקוחות-1.pdf"
+     ],
+     "unselected_files": [
+      {
+       "file": "https://www.jewishagency-kupa.org.il/wp-content/uploads/2021/10/10_zdadim_sohnut.pdf",
+       "text": "מבנה אחזקות וצדדים קשורים",
+       "ctx": "מבנה אחזקות וצדדים קשורים"
+      },
+      {
+       "file": "https://www.jewishagency-kupa.org.il/wp-content/uploads/2021/10/10_הודעה_על_העברת_ניהול.pdf",
+       "text": "הודעה על שינוי מבני",
+       "ctx": "הודעה על שינוי מבני"
+      },
+      {
+       "file": "https://www.jewishagency-kupa.org.il/wp-content/uploads/2025/08/נוהל-מספר-18-מדיניות-התגמול-2024-2027-002.pdf",
+       "text": "מדיניות תגמול נושאי משרה 2024-2027",
+       "ctx": "מדיניות תגמול נושאי משרה 2024-2027"
+      },
+      {
+       "file": "https://www.jewishagency-kupa.org.il/wp-content/uploads/2022/12/מדיניות-תגמול-נושאי-משרה-2020-2023.pdf",
+       "text": "מדיניות תגמול נושאי משרה 2020-2023",
+       "ctx": "מדיניות תגמול נושאי משרה 2020-2023"
+      },
+      {
+       "file": "https://www.jewishagency-kupa.org.il/wp-content/uploads/2021/10/10_מדיניות_תגמול_לשנים_2018_2020_סופי-2.pdf",
+       "text": "מדיניות תגמול נושאי משרה 2018-2020",
+       "ctx": "מדיניות תגמול נושאי משרה 2018-2020"
+      },
+      {
+       "file": "https://www.jewishagency-kupa.org.il/wp-content/uploads/2021/10/10_מדיניות_תגמול_לשנים_2015_2017-3.pdf",
+       "text": "מדיניות תגמול נושאי משרה 2015-2017",
+       "ctx": "מדיניות תגמול נושאי משרה 2015-2017"
+      },
+      {
+       "file": "https://www.jewishagency-kupa.org.il/wp-content/uploads/2021/10/10_מדיניותתגמול2014-2.pdf",
+       "text": "מדיניות תגמול נושאי משרה 2014",
+       "ctx": "מדיניות תגמול נושאי משרה 2014"
+      },
+      {
+       "file": "https://www.jewishagency-kupa.org.il/wp-content/uploads/2021/10/10_10_מדיניותתגמולנושאימשרהלשנת-2013-2.pdf",
+       "text": "מדיניות תגמול נושאי משרה 2013",
+       "ctx": "מדיניות תגמול נושאי משרה 2013"
+      },
+      {
+       "file": "https://www.jewishagency-kupa.org.il/wp-content/uploads/2021/10/10_10_מדיניותהשקעות2012.pdf",
+       "text": "מדיניות תגמול נושאי משרה 2012",
+       "ctx": "מדיניות תגמול נושאי משרה 2012"
+      },
+      {
+       "file": "https://www.jewishagency-kupa.org.il/wp-content/uploads/2025/12/דוח-שירות-אזרחים-ותיקים-בגין-שנת-2025.pdf",
+       "text": "דוח שירות אזרחים ותיקים",
+       "ctx": "דוח שירות אזרחים ותיקים"
+      },
+      {
+       "file": "https://www.jewishagency-kupa.org.il/wp-content/uploads/2021/10/10_zdadim_sohnut.pdf",
+       "text": "מבנה אחזקות וצדדים קשורים",
+       "ctx": "מבנה אחזקות וצדדים קשורים"
+      },
+      {
+       "file": "https://www.jewishagency-kupa.org.il/wp-content/uploads/2021/10/10_הודעה_על_העברת_ניהול.pdf",
+       "text": "הודעה על שינוי מבני",
+       "ctx": "הודעה על שינוי מבני"
+      },
+      {
+       "file": "https://www.jewishagency-kupa.org.il/wp-content/uploads/2025/08/נוהל-מספר-18-מדיניות-התגמול-2024-2027-002.pdf",
+       "text": "מדיניות תגמול נושאי משרה 2024-2027",
+       "ctx": "מדיניות תגמול נושאי משרה 2024-2027"
+      },
+      {
+       "file": "https://www.jewishagency-kupa.org.il/wp-content/uploads/2022/12/מדיניות-תגמול-נושאי-משרה-2020-2023.pdf",
+       "text": "מדיניות תגמול נושאי משרה 2020-2023",
+       "ctx": "מדיניות תגמול נושאי משרה 2020-2023"
+      },
+      {
+       "file": "https://www.jewishagency-kupa.org.il/wp-content/uploads/2021/10/10_מדיניות_תגמול_לשנים_2018_2020_סופי-2.pdf",
+       "text": "מדיניות תגמול נושאי משרה 2018-2020",
+       "ctx": "מדיניות תגמול נושאי משרה 2018-2020"
+      },
+      {
+       "file": "https://www.jewishagency-kupa.org.il/wp-content/uploads/2021/10/10_מדיניות_תגמול_לשנים_2015_2017-3.pdf",
+       "text": "מדיניות תגמול נושאי משרה 2015-2017",
+       "ctx": "מדיניות תגמול נושאי משרה 2015-2017"
+      },
+      {
+       "file": "https://www.jewishagency-kupa.org.il/wp-content/uploads/2021/10/10_מדיניותתגמול2014-2.pdf",
+       "text": "מדיניות תגמול נושאי משרה 2014",
+       "ctx": "מדיניות תגמול נושאי משרה 2014"
+      },
+      {
+       "file": "https://www.jewishagency-kupa.org.il/wp-content/uploads/2021/10/10_10_מדיניותתגמולנושאימשרהלשנת-2013-2.pdf",
+       "text": "מדיניות תגמול נושאי משרה 2013",
+       "ctx": "מדיניות תגמול נושאי משרה 2013"
+      },
+      {
+       "file": "https://www.jewishagency-kupa.org.il/wp-content/uploads/2021/10/10_10_מדיניותהשקעות2012.pdf",
+       "text": "מדיניות תגמול נושאי משרה 2012",
+       "ctx": "מדיניות תגמול נושאי משרה 2012"
+      },
+      {
+       "file": "https://www.jewishagency-kupa.org.il/wp-content/uploads/2025/12/דוח-שירות-אזרחים-ותיקים-בגין-שנת-2025.pdf",
+       "text": "דוח שירות אזרחים ותיקים",
+       "ctx": "דוח שירות אזרחים ותיקים"
+      }
+     ]
+    },
+    {
+     "url": "https://www.jewishagency-kupa.org.il",
+     "links": 105,
+     "followed": [],
+     "files": 26,
+     "clicked": 0,
+     "captured": 0,
+     "selected": [
+      "https://www.jewishagency-kupa.org.il/wp-content/uploads/2026/07/מדיניות-הצבעה-באסיפות-כלליות-סוכנות-יהודית-2026-מעודכן-יולי-סופי-2026.docx.pdf",
+      "https://www.jewishagency-kupa.org.il/wp-content/uploads/2025/12/מדיניות-הצבעה-חברת-עמדה-2025-2026.pdf",
+      "https://www.jewishagency-kupa.org.il/wp-content/uploads/2026/02/מדיניות-ואמנת-שירות-לקוחות-1.pdf"
+     ],
+     "unselected_files": [
+      {
+       "file": "https://www.jewishagency-kupa.org.il/wp-content/uploads/2021/10/10_zdadim_sohnut.pdf",
+       "text": "מבנה אחזקות וצדדים קשורים",
+       "ctx": "מבנה אחזקות וצדדים קשורים"
+      },
+      {
+       "file": "https://www.jewishagency-kupa.org.il/wp-content/uploads/2021/10/10_הודעה_על_העברת_ניהול.pdf",
+       "text": "הודעה על שינוי מבני",
+       "ctx": "הודעה על שינוי מבני"
+      },
+      {
+       "file": "https://www.jewishagency-kupa.org.il/wp-content/uploads/2025/08/נוהל-מספר-18-מדיניות-התגמול-2024-2027-002.pdf",
+       "text": "מדיניות תגמול נושאי משרה 2024-2027",
+       "ctx": "מדיניות תגמול נושאי משרה 2024-2027"
+      },
+      {
+       "file": "https://www.jewishagency-kupa.org.il/wp-content/uploads/2022/12/מדיניות-תגמול-נושאי-משרה-2020-2023.pdf",
+       "text": "מדיניות תגמול נושאי משרה 2020-2023",
+       "ctx": "מדיניות תגמול נושאי משרה 2020-2023"
+      },
+      {
+       "file": "https://www.jewishagency-kupa.org.il/wp-content/uploads/2021/10/10_מדיניות_תגמול_לשנים_2018_2020_סופי-2.pdf",
+       "text": "מדיניות תגמול נושאי משרה 2018-2020",
+       "ctx": "מדיניות תגמול נושאי משרה 2018-2020"
+      },
+      {
+       "file": "https://www.jewishagency-kupa.org.il/wp-content/uploads/2021/10/10_מדיניות_תגמול_לשנים_2015_2017-3.pdf",
+       "text": "מדיניות תגמול נושאי משרה 2015-2017",
+       "ctx": "מדיניות תגמול נושאי משרה 2015-2017"
+      },
+      {
+       "file": "https://www.jewishagency-kupa.org.il/wp-content/uploads/2021/10/10_מדיניותתגמול2014-2.pdf",
+       "text": "מדיניות תגמול נושאי משרה 2014",
+       "ctx": "מדיניות תגמול נושאי משרה 2014"
+      },
+      {
+       "file": "https://www.jewishagency-kupa.org.il/wp-content/uploads/2021/10/10_10_מדיניותתגמולנושאימשרהלשנת-2013-2.pdf",
+       "text": "מדיניות תגמול נושאי משרה 2013",
+       "ctx": "מדיניות תגמול נושאי משרה 2013"
+      },
+      {
+       "file": "https://www.jewishagency-kupa.org.il/wp-content/uploads/2021/10/10_10_מדיניותהשקעות2012.pdf",
+       "text": "מדיניות תגמול נושאי משרה 2012",
+       "ctx": "מדיניות תגמול נושאי משרה 2012"
+      },
+      {
+       "file": "https://www.jewishagency-kupa.org.il/wp-content/uploads/2025/12/דוח-שירות-אזרחים-ותיקים-בגין-שנת-2025.pdf",
+       "text": "דוח שירות אזרחים ותיקים",
+       "ctx": "דוח שירות אזרחים ותיקים"
+      },
+      {
+       "file": "https://www.jewishagency-kupa.org.il/wp-content/uploads/2021/10/10_zdadim_sohnut.pdf",
+       "text": "מבנה אחזקות וצדדים קשורים",
+       "ctx": "מבנה אחזקות וצדדים קשורים"
+      },
+      {
+       "file": "https://www.jewishagency-kupa.org.il/wp-content/uploads/2021/10/10_הודעה_על_העברת_ניהול.pdf",
+       "text": "הודעה על שינוי מבני",
+       "ctx": "הודעה על שינוי מבני"
+      },
+      {
+       "file": "https://www.jewishagency-kupa.org.il/wp-content/uploads/2025/08/נוהל-מספר-18-מדיניות-התגמול-2024-2027-002.pdf",
+       "text": "מדיניות תגמול נושאי משרה 2024-2027",
+       "ctx": "מדיניות תגמול נושאי משרה 2024-2027"
+      },
+      {
+       "file": "https://www.jewishagency-kupa.org.il/wp-content/uploads/2022/12/מדיניות-תגמול-נושאי-משרה-2020-2023.pdf",
+       "text": "מדיניות תגמול נושאי משרה 2020-2023",
+       "ctx": "מדיניות תגמול נושאי משרה 2020-2023"
+      },
+      {
+       "file": "https://www.jewishagency-kupa.org.il/wp-content/uploads/2021/10/10_מדיניות_תגמול_לשנים_2018_2020_סופי-2.pdf",
+       "text": "מדיניות תגמול נושאי משרה 2018-2020",
+       "ctx": "מדיניות תגמול נושאי משרה 2018-2020"
+      },
+      {
+       "file": "https://www.jewishagency-kupa.org.il/wp-content/uploads/2021/10/10_מדיניות_תגמול_לשנים_2015_2017-3.pdf",
+       "text": "מדיניות תגמול נושאי משרה 2015-2017",
+       "ctx": "מדיניות תגמול נושאי משרה 2015-2017"
+      },
+      {
+       "file": "https://www.jewishagency-kupa.org.il/wp-content/uploads/2021/10/10_מדיניותתגמול2014-2.pdf",
+       "text": "מדיניות תגמול נושאי משרה 2014",
+       "ctx": "מדיניות תגמול נושאי משרה 2014"
+      },
+      {
+       "file": "https://www.jewishagency-kupa.org.il/wp-content/uploads/2021/10/10_10_מדיניותתגמולנושאימשרהלשנת-2013-2.pdf",
+       "text": "מדיניות תגמול נושאי משרה 2013",
+       "ctx": "מדיניות תגמול נושאי משרה 2013"
+      },
+      {
+       "file": "https://www.jewishagency-kupa.org.il/wp-content/uploads/2021/10/10_10_מדיניותהשקעות2012.pdf",
+       "text": "מדיניות תגמול נושאי משרה 2012",
+       "ctx": "מדיניות תגמול נושאי משרה 2012"
+      },
+      {
+       "file": "https://www.jewishagency-kupa.org.il/wp-content/uploads/2025/12/דוח-שירות-אזרחים-ותיקים-בגין-שנת-2025.pdf",
+       "text": "דוח שירות אזרחים ותיקים",
+       "ctx": "דוח שירות אזרחים ותיקים"
+      }
+     ]
+    },
+    {
+     "url": "https://www.jewishagency-kupa.org.il/%d7%97%d7%91%d7%a8%d7%99-%d7%95%d7%a2%d7%93%d7%aa-%d7%94%d7%a9%d7%a7%d7%a2%d7%95%d7%aa/",
+     "links": 93,
+     "followed": [],
+     "files": 26,
+     "clicked": 0,
+     "captured": 0,
+     "selected": [
+      "https://www.jewishagency-kupa.org.il/wp-content/uploads/2026/07/מדיניות-הצבעה-באסיפות-כלליות-סוכנות-יהודית-2026-מעודכן-יולי-סופי-2026.docx.pdf",
+      "https://www.jewishagency-kupa.org.il/wp-content/uploads/2025/12/מדיניות-הצבעה-חברת-עמדה-2025-2026.pdf",
+      "https://www.jewishagency-kupa.org.il/wp-content/uploads/2026/02/מדיניות-ואמנת-שירות-לקוחות-1.pdf"
+     ],
+     "unselected_files": [
+      {
+       "file": "https://www.jewishagency-kupa.org.il/wp-content/uploads/2021/10/10_zdadim_sohnut.pdf",
+       "text": "מבנה אחזקות וצדדים קשורים",
+       "ctx": "מבנה אחזקות וצדדים קשורים"
+      },
+      {
+       "file": "https://www.jewishagency-kupa.org.il/wp-content/uploads/2021/10/10_הודעה_על_העברת_ניהול.pdf",
+       "text": "הודעה על שינוי מבני",
+       "ctx": "הודעה על שינוי מבני"
+      },
+      {
+       "file": "https://www.jewishagency-kupa.org.il/wp-content/uploads/2025/08/נוהל-מספר-18-מדיניות-התגמול-2024-2027-002.pdf",
+       "text": "מדיניות תגמול נושאי משרה 2024-2027",
+       "ctx": "מדיניות תגמול נושאי משרה 2024-2027"
+      },
+      {
+       "file": "https://www.jewishagency-kupa.org.il/wp-content/uploads/2022/12/מדיניות-תגמול-נושאי-משרה-2020-2023.pdf",
+       "text": "מדיניות תגמול נושאי משרה 2020-2023",
+       "ctx": "מדיניות תגמול נושאי משרה 2020-2023"
+      },
+      {
+       "file": "https://www.jewishagency-kupa.org.il/wp-content/uploads/2021/10/10_מדיניות_תגמול_לשנים_2018_2020_סופי-2.pdf",
+       "text": "מדיניות תגמול נושאי משרה 2018-2020",
+       "ctx": "מדיניות תגמול נושאי משרה 2018-2020"
+      },
+      {
+       "file": "https://www.jewishagency-kupa.org.il/wp-content/uploads/2021/10/10_מדיניות_תגמול_לשנים_2015_2017-3.pdf",
+       "text": "מדיניות תגמול נושאי משרה 2015-2017",
+       "ctx": "מדיניות תגמול נושאי משרה 2015-2017"
+      },
+      {
+       "file": "https://www.jewishagency-kupa.org.il/wp-content/uploads/2021/10/10_מדיניותתגמול2014-2.pdf",
+       "text": "מדיניות תגמול נושאי משרה 2014",
+       "ctx": "מדיניות תגמול נושאי משרה 2014"
+      },
+      {
+       "file": "https://www.jewishagency-kupa.org.il/wp-content/uploads/2021/10/10_10_מדיניותתגמולנושאימשרהלשנת-2013-2.pdf",
+       "text": "מדיניות תגמול נושאי משרה 2013",
+       "ctx": "מדיניות תגמול נושאי משרה 2013"
+      },
+      {
+       "file": "https://www.jewishagency-kupa.org.il/wp-content/uploads/2021/10/10_10_מדיניותהשקעות2012.pdf",
+       "text": "מדיניות תגמול נושאי משרה 2012",
+       "ctx": "מדיניות תגמול נושאי משרה 2012"
+      },
+      {
+       "file": "https://www.jewishagency-kupa.org.il/wp-content/uploads/2025/12/דוח-שירות-אזרחים-ותיקים-בגין-שנת-2025.pdf",
+       "text": "דוח שירות אזרחים ותיקים",
+       "ctx": "דוח שירות אזרחים ותיקים"
+      },
+      {
+       "file": "https://www.jewishagency-kupa.org.il/wp-content/uploads/2021/10/10_zdadim_sohnut.pdf",
+       "text": "מבנה אחזקות וצדדים קשורים",
+       "ctx": "מבנה אחזקות וצדדים קשורים"
+      },
+      {
+       "file": "https://www.jewishagency-kupa.org.il/wp-content/uploads/2021/10/10_הודעה_על_העברת_ניהול.pdf",
+       "text": "הודעה על שינוי מבני",
+       "ctx": "הודעה על שינוי מבני"
+      },
+      {
+       "file": "https://www.jewishagency-kupa.org.il/wp-content/uploads/2025/08/נוהל-מספר-18-מדיניות-התגמול-2024-2027-002.pdf",
+       "text": "מדיניות תגמול נושאי משרה 2024-2027",
+       "ctx": "מדיניות תגמול נושאי משרה 2024-2027"
+      },
+      {
+       "file": "https://www.jewishagency-kupa.org.il/wp-content/uploads/2022/12/מדיניות-תגמול-נושאי-משרה-2020-2023.pdf",
+       "text": "מדיניות תגמול נושאי משרה 2020-2023",
+       "ctx": "מדיניות תגמול נושאי משרה 2020-2023"
+      },
+      {
+       "file": "https://www.jewishagency-kupa.org.il/wp-content/uploads/2021/10/10_מדיניות_תגמול_לשנים_2018_2020_סופי-2.pdf",
+       "text": "מדיניות תגמול נושאי משרה 2018-2020",
+       "ctx": "מדיניות תגמול נושאי משרה 2018-2020"
+      },
+      {
+       "file": "https://www.jewishagency-kupa.org.il/wp-content/uploads/2021/10/10_מדיניות_תגמול_לשנים_2015_2017-3.pdf",
+       "text": "מדיניות תגמול נושאי משרה 2015-2017",
+       "ctx": "מדיניות תגמול נושאי משרה 2015-2017"
+      },
+      {
+       "file": "https://www.jewishagency-kupa.org.il/wp-content/uploads/2021/10/10_מדיניותתגמול2014-2.pdf",
+       "text": "מדיניות תגמול נושאי משרה 2014",
+       "ctx": "מדיניות תגמול נושאי משרה 2014"
+      },
+      {
+       "file": "https://www.jewishagency-kupa.org.il/wp-content/uploads/2021/10/10_10_מדיניותתגמולנושאימשרהלשנת-2013-2.pdf",
+       "text": "מדיניות תגמול נושאי משרה 2013",
+       "ctx": "מדיניות תגמול נושאי משרה 2013"
+      },
+      {
+       "file": "https://www.jewishagency-kupa.org.il/wp-content/uploads/2021/10/10_10_מדיניותהשקעות2012.pdf",
+       "text": "מדיניות תגמול נושאי משרה 2012",
+       "ctx": "מדיניות תגמול נושאי משרה 2012"
+      },
+      {
+       "file": "https://www.jewishagency-kupa.org.il/wp-content/uploads/2025/12/דוח-שירות-אזרחים-ותיקים-בגין-שנת-2025.pdf",
+       "text": "דוח שירות אזרחים ותיקים",
+       "ctx": "דוח שירות אזרחים ותיקים"
+      }
+     ]
+    },
+    {
+     "url": "https://www.jewishagency-kupa.org.il/%d7%93%d7%95%d7%97%d7%95%d7%aa-%d7%a8%d7%91%d7%a2%d7%95%d7%a0%d7%99%d7%99%d7%9d/",
+     "links": 205,
+     "followed": [],
+     "files": 138,
+     "clicked": 0,
+     "captured": 0,
+     "selected": [
+      "https://www.jewishagency-kupa.org.il/wp-content/uploads/2026/07/מדיניות-הצבעה-באסיפות-כלליות-סוכנות-יהודית-2026-מעודכן-יולי-סופי-2026.docx.pdf",
+      "https://www.jewishagency-kupa.org.il/wp-content/uploads/2025/12/מדיניות-הצבעה-חברת-עמדה-2025-2026.pdf",
+      "https://www.jewishagency-kupa.org.il/wp-content/uploads/2026/02/מדיניות-ואמנת-שירות-לקוחות-1.pdf"
+     ],
+     "unselected_files": [
+      {
+       "file": "https://www.jewishagency-kupa.org.il/wp-content/uploads/2021/10/10_zdadim_sohnut.pdf",
+       "text": "מבנה אחזקות וצדדים קשורים",
+       "ctx": "מבנה אחזקות וצדדים קשורים"
+      },
+      {
+       "file": "https://www.jewishagency-kupa.org.il/wp-content/uploads/2021/10/10_הודעה_על_העברת_ניהול.pdf",
+       "text": "הודעה על שינוי מבני",
+       "ctx": "הודעה על שינוי מבני"
+      },
+      {
+       "file": "https://www.jewishagency-kupa.org.il/wp-content/uploads/2025/08/נוהל-מספר-18-מדיניות-התגמול-2024-2027-002.pdf",
+       "text": "מדיניות תגמול נושאי משרה 2024-2027",
+       "ctx": "מדיניות תגמול נושאי משרה 2024-2027"
+      },
+      {
+       "file": "https://www.jewishagency-kupa.org.il/wp-content/uploads/2022/12/מדיניות-תגמול-נושאי-משרה-2020-2023.pdf",
+       "text": "מדיניות תגמול נושאי משרה 2020-2023",
+       "ctx": "מדיניות תגמול נושאי משרה 2020-2023"
+      },
+      {
+       "file": "https://www.jewishagency-kupa.org.il/wp-content/uploads/2021/10/10_מדיניות_תגמול_לשנים_2018_2020_סופי-2.pdf",
+       "text": "מדיניות תגמול נושאי משרה 2018-2020",
+       "ctx": "מדיניות תגמול נושאי משרה 2018-2020"
+      },
+      {
+       "file": "https://www.jewishagency-kupa.org.il/wp-content/uploads/2021/10/10_מדיניות_תגמול_לשנים_2015_2017-3.pdf",
+       "text": "מדיניות תגמול נושאי משרה 2015-2017",
+       "ctx": "מדיניות תגמול נושאי משרה 2015-2017"
+      },
+      {
+       "file": "https://www.jewishagency-kupa.org.il/wp-content/uploads/2021/10/10_מדיניותתגמול2014-2.pdf",
+       "text": "מדיניות תגמול נושאי משרה 2014",
+       "ctx": "מדיניות תגמול נושאי משרה 2014"
+      },
+      {
+       "file": "https://www.jewishagency-kupa.org.il/wp-content/uploads/2021/10/10_10_מדיניותתגמולנושאימשרהלשנת-2013-2.pdf",
+       "text": "מדיניות תגמול נושאי משרה 2013",
+       "ctx": "מדיניות תגמול נושאי משרה 2013"
+      },
+      {
+       "file": "https://www.jewishagency-kupa.org.il/wp-content/uploads/2021/10/10_10_מדיניותהשקעות2012.pdf",
+       "text": "מדיניות תגמול נושאי משרה 2012",
+       "ctx": "מדיניות תגמול נושאי משרה 2012"
+      },
+      {
+       "file": "https://www.jewishagency-kupa.org.il/wp-content/uploads/2025/12/דוח-שירות-אזרחים-ותיקים-בגין-שנת-2025.pdf",
+       "text": "דוח שירות אזרחים ותיקים",
+       "ctx": "דוח שירות אזרחים ותיקים"
+      },
+      {
+       "file": "https://www.jewishagency-kupa.org.il/wp-content/uploads/2021/10/10_zdadim_sohnut.pdf",
+       "text": "מבנה אחזקות וצדדים קשורים",
+       "ctx": "מבנה אחזקות וצדדים קשורים"
+      },
+      {
+       "file": "https://www.jewishagency-kupa.org.il/wp-content/uploads/2021/10/10_הודעה_על_העברת_ניהול.pdf",
+       "text": "הודעה על שינוי מבני",
+       "ctx": "הודעה על שינוי מבני"
+      },
+      {
+       "file": "https://www.jewishagency-kupa.org.il/wp-content/uploads/2025/08/נוהל-מספר-18-מדיניות-התגמול-2024-2027-002.pdf",
+       "text": "מדיניות תגמול נושאי משרה 2024-2027",
+       "ctx": "מדיניות תגמול נושאי משרה 2024-2027"
+      },
+      {
+       "file": "https://www.jewishagency-kupa.org.il/wp-content/uploads/2022/12/מדיניות-תגמול-נושאי-משרה-2020-2023.pdf",
+       "text": "מדיניות תגמול נושאי משרה 2020-2023",
+       "ctx": "מדיניות תגמול נושאי משרה 2020-2023"
+      },
+      {
+       "file": "https://www.jewishagency-kupa.org.il/wp-content/uploads/2021/10/10_מדיניות_תגמול_לשנים_2018_2020_סופי-2.pdf",
+       "text": "מדיניות תגמול נושאי משרה 2018-2020",
+       "ctx": "מדיניות תגמול נושאי משרה 2018-2020"
+      },
+      {
+       "file": "https://www.jewishagency-kupa.org.il/wp-content/uploads/2021/10/10_מדיניות_תגמול_לשנים_2015_2017-3.pdf",
+       "text": "מדיניות תגמול נושאי משרה 2015-2017",
+       "ctx": "מדיניות תגמול נושאי משרה 2015-2017"
+      },
+      {
+       "file": "https://www.jewishagency-kupa.org.il/wp-content/uploads/2021/10/10_מדיניותתגמול2014-2.pdf",
+       "text": "מדיניות תגמול נושאי משרה 2014",
+       "ctx": "מדיניות תגמול נושאי משרה 2014"
+      },
+      {
+       "file": "https://www.jewishagency-kupa.org.il/wp-content/uploads/2021/10/10_10_מדיניותתגמולנושאימשרהלשנת-2013-2.pdf",
+       "text": "מדיניות תגמול נושאי משרה 2013",
+       "ctx": "מדיניות תגמול נושאי משרה 2013"
+      },
+      {
+       "file": "https://www.jewishagency-kupa.org.il/wp-content/uploads/2021/10/10_10_מדיניותהשקעות2012.pdf",
+       "text": "מדיניות תגמול נושאי משרה 2012",
+       "ctx": "מדיניות תגמול נושאי משרה 2012"
+      },
+      {
+       "file": "https://www.jewishagency-kupa.org.il/wp-content/uploads/2025/12/דוח-שירות-אזרחים-ותיקים-בגין-שנת-2025.pdf",
+       "text": "דוח שירות אזרחים ותיקים",
+       "ctx": "דוח שירות אזרחים ותיקים"
+      },
+      {
+       "file": "https://www.jewishagency-kupa.org.il/wp-content/uploads/2026/09/דוח-כספי-חברה-מנהלת.pdf",
+       "text": "דוחות כספיים חברה מנהלת פנסיה ותגמולים 06.2026",
+       "ctx": "2026"
+      },
+      {
+       "file": "https://www.jewishagency-kupa.org.il/wp-content/uploads/2026/06/520022518a_126-1.pdf",
+       "text": "דוחות כספיים חברה מנהלת פנסיה ותגמולים 03.2026",
+       "ctx": "2026"
+      },
+      {
+       "file": "https://www.jewishagency-kupa.org.il/wp-content/uploads/2026/06/דוח-כספי-חברה-מנהלת-מרץ-2025.pdf",
+       "text": "דוחות כספיים חברה מנהלת פנסיה ותגמולים 03.2025",
+       "ctx": "2025"
+      },
+      {
+       "file": "https://www.jewishagency-kupa.org.il/wp-content/uploads/2026/06/דוח-כספי-חברה-מנהלת-יוני-2025.pdf",
+       "text": "דוחות כספיים חברה מנהלת פנסיה ותגמולים 06.2025",
+       "ctx": "2025"
+      },
+      {
+       "file": "https://www.jewishagency-kupa.org.il/wp-content/uploads/2026/06/דוח-כספי-חברה-מנהלת-ספטמבר-2025.pdf",
+       "text": "דוחות כספיים חברה מנהלת פנסיה ותגמולים 09.2025",
+       "ctx": "2025"
+      }
+     ]
+    },
+    {
+     "url": "https://www.jewishagency-kupa.org.il/%d7%93%d7%95%d7%97%d7%95%d7%aa-%d7%a9%d7%a0%d7%aa%d7%99%d7%99%d7%9d/",
+     "links": 169,
+     "followed": [
+      "https://www.jewishagency-kupa.org.il/wp-content/uploads/2023/05/%D7%93%D7%95%D7%97-%D7%A2%D7%A1%D7%A7%D7%99-%D7%AA%D7%90%D7%92%D7%99%D7%93.doc",
+      "https://www.jewishagency-kupa.org.il/wp-content/uploads/2023/05/%D7%93%D7%95%D7%97-%D7%93%D7%99%D7%A8%D7%A7%D7%98%D7%95%D7%A8%D7%99%D7%95%D7%9F-.doc",
+      "https://www.jewishagency-kupa.org.il/wp-content/uploads/2022/08/%D7%93%D7%95%D7%97-%D7%A2%D7%99%D7%A1%D7%A7%D7%99-%D7%AA%D7%90%D7%92%D7%99%D7%93-%D7%97%D7%91%D7%A8%D7%94-%D7%9C%D7%A0%D7%99%D7%94%D7%95%D7%9C-%D7%A4%D7%A0%D7%A1%D7%99%D7%94-%D7%95%D7%AA%D7%92%D7%9E%D7%95%D7%9C%D7%99%D7%9D-2021.doc",
+      "https://www.jewishagency-kupa.org.il/wp-content/uploads/2022/08/%D7%93%D7%95%D7%97-%D7%93%D7%99%D7%A8%D7%A7%D7%98%D7%95%D7%A8%D7%99%D7%95%D7%9F-%D7%97%D7%91%D7%A8%D7%94-%D7%9E%D7%A0%D7%94%D7%9C%D7%AA-%D7%A4%D7%A0%D7%A1%D7%99%D7%94-%D7%95%D7%AA%D7%92%D7%9E%D7%95%D7%9C%D7%99%D7%9D-2021.doc"
+     ],
+     "files": 96,
+     "clicked": 0,
+     "captured": 0,
+     "selected": [
+      "https://www.jewishagency-kupa.org.il/wp-content/uploads/2026/07/מדיניות-הצבעה-באסיפות-כלליות-סוכנות-יהודית-2026-מעודכן-יולי-סופי-2026.docx.pdf",
+      "https://www.jewishagency-kupa.org.il/wp-content/uploads/2025/12/מדיניות-הצבעה-חברת-עמדה-2025-2026.pdf",
+      "https://www.jewishagency-kupa.org.il/wp-content/uploads/2026/02/מדיניות-ואמנת-שירות-לקוחות-1.pdf"
+     ],
+     "unselected_files": [
+      {
+       "file": "https://www.jewishagency-kupa.org.il/wp-content/uploads/2021/10/10_zdadim_sohnut.pdf",
+       "text": "מבנה אחזקות וצדדים קשורים",
+       "ctx": "מבנה אחזקות וצדדים קשורים"
+      },
+      {
+       "file": "https://www.jewishagency-kupa.org.il/wp-content/uploads/2021/10/10_הודעה_על_העברת_ניהול.pdf",
+       "text": "הודעה על שינוי מבני",
+       "ctx": "הודעה על שינוי מבני"
+      },
+      {
+       "file": "https://www.jewishagency-kupa.org.il/wp-content/uploads/2025/08/נוהל-מספר-18-מדיניות-התגמול-2024-2027-002.pdf",
+       "text": "מדיניות תגמול נושאי משרה 2024-2027",
+       "ctx": "מדיניות תגמול נושאי משרה 2024-2027"
+      },
+      {
+       "file": "https://www.jewishagency-kupa.org.il/wp-content/uploads/2022/12/מדיניות-תגמול-נושאי-משרה-2020-2023.pdf",
+       "text": "מדיניות תגמול נושאי משרה 2020-2023",
+       "ctx": "מדיניות תגמול נושאי משרה 2020-2023"
+      },
+      {
+       "file": "https://www.jewishagency-kupa.org.il/wp-content/uploads/2021/10/10_מדיניות_תגמול_לשנים_2018_2020_סופי-2.pdf",
+       "text": "מדיניות תגמול נושאי משרה 2018-2020",
+       "ctx": "מדיניות תגמול נושאי משרה 2018-2020"
+      },
+      {
+       "file": "https://www.jewishagency-kupa.org.il/wp-content/uploads/2021/10/10_מדיניות_תגמול_לשנים_2015_2017-3.pdf",
+       "text": "מדיניות תגמול נושאי משרה 2015-2017",
+       "ctx": "מדיניות תגמול נושאי משרה 2015-2017"
+      },
+      {
+       "file": "https://www.jewishagency-kupa.org.il/wp-content/uploads/2021/10/10_מדיניותתגמול2014-2.pdf",
+       "text": "מדיניות תגמול נושאי משרה 2014",
+       "ctx": "מדיניות תגמול נושאי משרה 2014"
+      },
+      {
+       "file": "https://www.jewishagency-kupa.org.il/wp-content/uploads/2021/10/10_10_מדיניותתגמולנושאימשרהלשנת-2013-2.pdf",
+       "text": "מדיניות תגמול נושאי משרה 2013",
+       "ctx": "מדיניות תגמול נושאי משרה 2013"
+      },
+      {
+       "file": "https://www.jewishagency-kupa.org.il/wp-content/uploads/2021/10/10_10_מדיניותהשקעות2012.pdf",
+       "text": "מדיניות תגמול נושאי משרה 2012",
+       "ctx": "מדיניות תגמול נושאי משרה 2012"
+      },
+      {
+       "file": "https://www.jewishagency-kupa.org.il/wp-content/uploads/2025/12/דוח-שירות-אזרחים-ותיקים-בגין-שנת-2025.pdf",
+       "text": "דוח שירות אזרחים ותיקים",
+       "ctx": "דוח שירות אזרחים ותיקים"
+      },
+      {
+       "file": "https://www.jewishagency-kupa.org.il/wp-content/uploads/2021/10/10_zdadim_sohnut.pdf",
+       "text": "מבנה אחזקות וצדדים קשורים",
+       "ctx": "מבנה אחזקות וצדדים קשורים"
+      },
+      {
+       "file": "https://www.jewishagency-kupa.org.il/wp-content/uploads/2021/10/10_הודעה_על_העברת_ניהול.pdf",
+       "text": "הודעה על שינוי מבני",
+       "ctx": "הודעה על שינוי מבני"
+      },
+      {
+       "file": "https://www.jewishagency-kupa.org.il/wp-content/uploads/2025/08/נוהל-מספר-18-מדיניות-התגמול-2024-2027-002.pdf",
+       "text": "מדיניות תגמול נושאי משרה 2024-2027",
+       "ctx": "מדיניות תגמול נושאי משרה 2024-2027"
+      },
+      {
+       "file": "https://www.jewishagency-kupa.org.il/wp-content/uploads/2022/12/מדיניות-תגמול-נושאי-משרה-2020-2023.pdf",
+       "text": "מדיניות תגמול נושאי משרה 2020-2023",
+       "ctx": "מדיניות תגמול נושאי משרה 2020-2023"
+      },
+      {
+       "file": "https://www.jewishagency-kupa.org.il/wp-content/uploads/2021/10/10_מדיניות_תגמול_לשנים_2018_2020_סופי-2.pdf",
+       "text": "מדיניות תגמול נושאי משרה 2018-2020",
+       "ctx": "מדיניות תגמול נושאי משרה 2018-2020"
+      },
+      {
+       "file": "https://www.jewishagency-kupa.org.il/wp-content/uploads/2021/10/10_מדיניות_תגמול_לשנים_2015_2017-3.pdf",
+       "text": "מדיניות תגמול נושאי משרה 2015-2017",
+       "ctx": "מדיניות תגמול נושאי משרה 2015-2017"
+      },
+      {
+       "file": "https://www.jewishagency-kupa.org.il/wp-content/uploads/2021/10/10_מדיניותתגמול2014-2.pdf",
+       "text": "מדיניות תגמול נושאי משרה 2014",
+       "ctx": "מדיניות תגמול נושאי משרה 2014"
+      },
+      {
+       "file": "https://www.jewishagency-kupa.org.il/wp-content/uploads/2021/10/10_10_מדיניותתגמולנושאימשרהלשנת-2013-2.pdf",
+       "text": "מדיניות תגמול נושאי משרה 2013",
+       "ctx": "מדיניות תגמול נושאי משרה 2013"
+      },
+      {
+       "file": "https://www.jewishagency-kupa.org.il/wp-content/uploads/2021/10/10_10_מדיניותהשקעות2012.pdf",
+       "text": "מדיניות תגמול נושאי משרה 2012",
+       "ctx": "מדיניות תגמול נושאי משרה 2012"
+      },
+      {
+       "file": "https://www.jewishagency-kupa.org.il/wp-content/uploads/2025/12/דוח-שירות-אזרחים-ותיקים-בגין-שנת-2025.pdf",
+       "text": "דוח שירות אזרחים ותיקים",
+       "ctx": "דוח שירות אזרחים ותיקים"
+      },
+      {
+       "file": "https://www.jewishagency-kupa.org.il/wp-content/uploads/2026/06/דוחות-כספיים-חברה-מנהלת-שנת-2025.pdf",
+       "text": "דוח כספי חברה מנהלת",
+       "ctx": "2025"
+      },
+      {
+       "file": "https://www.jewishagency-kupa.org.il/wp-content/uploads/2026/06/2025-דוח-דירקטוריון.pdf",
+       "text": "דוח דירקטוריון",
+       "ctx": "2025"
+      },
+      {
+       "file": "https://www.jewishagency-kupa.org.il/wp-content/uploads/2026/06/דוח-עסקי-תאגיד-31.12.24.pdf",
+       "text": "דוח עיסקי תאגיד",
+       "ctx": "2024"
+      },
+      {
+       "file": "https://www.jewishagency-kupa.org.il/wp-content/uploads/2026/06/דוחות-כספיים-חברה-מנהלת-תגמולים-ופנסיה-דצמבר-2024-1.pdf",
+       "text": "דוח כספי חברה מנהלת",
+       "ctx": "2024"
+      },
+      {
+       "file": "https://www.jewishagency-kupa.org.il/wp-content/uploads/2026/06/דוח-דירקטוריון-חברה-מנהלת-פנסיה-דצמבר-2024.pdf",
+       "text": "דוח דירקטוריון",
+       "ctx": "2024"
+      }
+     ]
+    },
+    {
+     "url": "https://www.jewishagency-kupa.org.il/%d7%93%d7%95%d7%97-%d7%97%d7%95%d7%93%d7%a9%d7%99/",
+     "links": 277,
+     "followed": [],
+     "files": 210,
+     "clicked": 0,
+     "captured": 0,
+     "selected": [
+      "https://www.jewishagency-kupa.org.il/wp-content/uploads/2026/07/מדיניות-הצבעה-באסיפות-כלליות-סוכנות-יהודית-2026-מעודכן-יולי-סופי-2026.docx.pdf",
+      "https://www.jewishagency-kupa.org.il/wp-content/uploads/2025/12/מדיניות-הצבעה-חברת-עמדה-2025-2026.pdf",
+      "https://www.jewishagency-kupa.org.il/wp-content/uploads/2026/02/מדיניות-ואמנת-שירות-לקוחות-1.pdf"
+     ],
+     "unselected_files": [
+      {
+       "file": "https://www.jewishagency-kupa.org.il/wp-content/uploads/2021/10/10_zdadim_sohnut.pdf",
+       "text": "מבנה אחזקות וצדדים קשורים",
+       "ctx": "מבנה אחזקות וצדדים קשורים"
+      },
+      {
+       "file": "https://www.jewishagency-kupa.org.il/wp-content/uploads/2021/10/10_הודעה_על_העברת_ניהול.pdf",
+       "text": "הודעה על שינוי מבני",
+       "ctx": "הודעה על שינוי מבני"
+      },
+      {
+       "file": "https://www.jewishagency-kupa.org.il/wp-content/uploads/2025/08/נוהל-מספר-18-מדיניות-התגמול-2024-2027-002.pdf",
+       "text": "מדיניות תגמול נושאי משרה 2024-2027",
+       "ctx": "מדיניות תגמול נושאי משרה 2024-2027"
+      },
+      {
+       "file": "https://www.jewishagency-kupa.org.il/wp-content/uploads/2022/12/מדיניות-תגמול-נושאי-משרה-2020-2023.pdf",
+       "text": "מדיניות תגמול נושאי משרה 2020-2023",
+       "ctx": "מדיניות תגמול נושאי משרה 2020-2023"
+      },
+      {
+       "file": "https://www.jewishagency-kupa.org.il/wp-content/uploads/2021/10/10_מדיניות_תגמול_לשנים_2018_2020_סופי-2.pdf",
+       "text": "מדיניות תגמול נושאי משרה 2018-2020",
+       "ctx": "מדיניות תגמול נושאי משרה 2018-2020"
+      },
+      {
+       "file": "https://www.jewishagency-kupa.org.il/wp-content/uploads/2021/10/10_מדיניות_תגמול_לשנים_2015_2017-3.pdf",
+       "text": "מדיניות תגמול נושאי משרה 2015-2017",
+       "ctx": "מדיניות תגמול נושאי משרה 2015-2017"
+      },
+      {
+       "file": "https://www.jewishagency-kupa.org.il/wp-content/uploads/2021/10/10_מדיניותתגמול2014-2.pdf",
+       "text": "מדיניות תגמול נושאי משרה 2014",
+       "ctx": "מדיניות תגמול נושאי משרה 2014"
+      },
+      {
+       "file": "https://www.jewishagency-kupa.org.il/wp-content/uploads/2021/10/10_10_מדיניותתגמולנושאימשרהלשנת-2013-2.pdf",
+       "text": "מדיניות תגמול נושאי משרה 2013",
+       "ctx": "מדיניות תגמול נושאי משרה 2013"
+      },
+      {
+       "file": "https://www.jewishagency-kupa.org.il/wp-content/uploads/2021/10/10_10_מדיניותהשקעות2012.pdf",
+       "text": "מדיניות תגמול נושאי משרה 2012",
+       "ctx": "מדיניות תגמול נושאי משרה 2012"
+      },
+      {
+       "file": "https://www.jewishagency-kupa.org.il/wp-content/uploads/2025/12/דוח-שירות-אזרחים-ותיקים-בגין-שנת-2025.pdf",
+       "text": "דוח שירות אזרחים ותיקים",
+       "ctx": "דוח שירות אזרחים ותיקים"
+      },
+      {
+       "file": "https://www.jewishagency-kupa.org.il/wp-content/uploads/2021/10/10_zdadim_sohnut.pdf",
+       "text": "מבנה אחזקות וצדדים קשורים",
+       "ctx": "מבנה אחזקות וצדדים קשורים"
+      },
+      {
+       "file": "https://www.jewishagency-kupa.org.il/wp-content/uploads/2021/10/10_הודעה_על_העברת_ניהול.pdf",
+       "text": "הודעה על שינוי מבני",
+       "ctx": "הודעה על שינוי מבני"
+      },
+      {
+       "file": "https://www.jewishagency-kupa.org.il/wp-content/uploads/2025/08/נוהל-מספר-18-מדיניות-התגמול-2024-2027-002.pdf",
+       "text": "מדיניות תגמול נושאי משרה 2024-2027",
+       "ctx": "מדיניות תגמול נושאי משרה 2024-2027"
+      },
+      {
+       "file": "https://www.jewishagency-kupa.org.il/wp-content/uploads/2022/12/מדיניות-תגמול-נושאי-משרה-2020-2023.pdf",
+       "text": "מדיניות תגמול נושאי משרה 2020-2023",
+       "ctx": "מדיניות תגמול נושאי משרה 2020-2023"
+      },
+      {
+       "file": "https://www.jewishagency-kupa.org.il/wp-content/uploads/2021/10/10_מדיניות_תגמול_לשנים_2018_2020_סופי-2.pdf",
+       "text": "מדיניות תגמול נושאי משרה 2018-2020",
+       "ctx": "מדיניות תגמול נושאי משרה 2018-2020"
+      },
+      {
+       "file": "https://www.jewishagency-kupa.org.il/wp-content/uploads/2021/10/10_מדיניות_תגמול_לשנים_2015_2017-3.pdf",
+       "text": "מדיניות תגמול נושאי משרה 2015-2017",
+       "ctx": "מדיניות תגמול נושאי משרה 2015-2017"
+      },
+      {
+       "file": "https://www.jewishagency-kupa.org.il/wp-content/uploads/2021/10/10_מדיניותתגמול2014-2.pdf",
+       "text": "מדיניות תגמול נושאי משרה 2014",
+       "ctx": "מדיניות תגמול נושאי משרה 2014"
+      },
+      {
+       "file": "https://www.jewishagency-kupa.org.il/wp-content/uploads/2021/10/10_10_מדיניותתגמולנושאימשרהלשנת-2013-2.pdf",
+       "text": "מדיניות תגמול נושאי משרה 2013",
+       "ctx": "מדיניות תגמול נושאי משרה 2013"
+      },
+      {
+       "file": "https://www.jewishagency-kupa.org.il/wp-content/uploads/2021/10/10_10_מדיניותהשקעות2012.pdf",
+       "text": "מדיניות תגמול נושאי משרה 2012",
+       "ctx": "מדיניות תגמול נושאי משרה 2012"
+      },
+      {
+       "file": "https://www.jewishagency-kupa.org.il/wp-content/uploads/2025/12/דוח-שירות-אזרחים-ותיקים-בגין-שנת-2025.pdf",
+       "text": "דוח שירות אזרחים ותיקים",
+       "ctx": "דוח שירות אזרחים ותיקים"
+      },
+      {
+       "file": "https://www.jewishagency-kupa.org.il/wp-content/uploads/2024/04/דוח-חודשי-גמל-דצמבר-23.xlsx",
+       "text": "דו\"ח חודשי 12.2023",
+       "ctx": ""
+      },
+      {
+       "file": "https://www.jewishagency-kupa.org.il/wp-content/uploads/2024/04/דוח-חודשי-גמל-דצמבר-23.xlsx",
+       "text": "Download",
+       "ctx": ""
+      },
+      {
+       "file": "https://www.jewishagency-kupa.org.il/wp-content/uploads/2024/01/דוח-חודשי-גמל-נובמבר-23.xlsx",
+       "text": "דו\"ח חודשי 11.2023",
+       "ctx": ""
+      },
+      {
+       "file": "https://www.jewishagency-kupa.org.il/wp-content/uploads/2024/01/דוח-חודשי-גמל-נובמבר-23.xlsx",
+       "text": "Download",
+       "ctx": ""
+      },
+      {
+       "file": "https://www.jewishagency-kupa.org.il/wp-content/uploads/2023/11/דוח-חודשי-גמל-אוקטובר-23.xlsx",
+       "text": "דו\"ח חודשי 10.2023",
+       "ctx": ""
+      }
+     ]
+    },
+    {
+     "url": "https://www.jewishagency-kupa.org.il/%d7%93%d7%95%d7%97%d7%95%d7%aa/",
+     "links": 95,
+     "followed": [],
+     "files": 26,
+     "clicked": 0,
+     "captured": 0,
+     "selected": [
+      "https://www.jewishagency-kupa.org.il/wp-content/uploads/2026/07/מדיניות-הצבעה-באסיפות-כלליות-סוכנות-יהודית-2026-מעודכן-יולי-סופי-2026.docx.pdf",
+      "https://www.jewishagency-kupa.org.il/wp-content/uploads/2025/12/מדיניות-הצבעה-חברת-עמדה-2025-2026.pdf",
+      "https://www.jewishagency-kupa.org.il/wp-content/uploads/2026/02/מדיניות-ואמנת-שירות-לקוחות-1.pdf"
+     ],
+     "unselected_files": [
+      {
+       "file": "https://www.jewishagency-kupa.org.il/wp-content/uploads/2021/10/10_zdadim_sohnut.pdf",
+       "text": "מבנה אחזקות וצדדים קשורים",
+       "ctx": "מבנה אחזקות וצדדים קשורים"
+      },
+      {
+       "file": "https://www.jewishagency-kupa.org.il/wp-content/uploads/2021/10/10_הודעה_על_העברת_ניהול.pdf",
+       "text": "הודעה על שינוי מבני",
+       "ctx": "הודעה על שינוי מבני"
+      },
+      {
+       "file": "https://www.jewishagency-kupa.org.il/wp-content/uploads/2025/08/נוהל-מספר-18-מדיניות-התגמול-2024-2027-002.pdf",
+       "text": "מדיניות תגמול נושאי משרה 2024-2027",
+       "ctx": "מדיניות תגמול נושאי משרה 2024-2027"
+      },
+      {
+       "file": "https://www.jewishagency-kupa.org.il/wp-content/uploads/2022/12/מדיניות-תגמול-נושאי-משרה-2020-2023.pdf",
+       "text": "מדיניות תגמול נושאי משרה 2020-2023",
+       "ctx": "מדיניות תגמול נושאי משרה 2020-2023"
+      },
+      {
+       "file": "https://www.jewishagency-kupa.org.il/wp-content/uploads/2021/10/10_מדיניות_תגמול_לשנים_2018_2020_סופי-2.pdf",
+       "text": "מדיניות תגמול נושאי משרה 2018-2020",
+       "ctx": "מדיניות תגמול נושאי משרה 2018-2020"
+      },
+      {
+       "file": "https://www.jewishagency-kupa.org.il/wp-content/uploads/2021/10/10_מדיניות_תגמול_לשנים_2015_2017-3.pdf",
+       "text": "מדיניות תגמול נושאי משרה 2015-2017",
+       "ctx": "מדיניות תגמול נושאי משרה 2015-2017"
+      },
+      {
+       "file": "https://www.jewishagency-kupa.org.il/wp-content/uploads/2021/10/10_מדיניותתגמול2014-2.pdf",
+       "text": "מדיניות תגמול נושאי משרה 2014",
+       "ctx": "מדיניות תגמול נושאי משרה 2014"
+      },
+      {
+       "file": "https://www.jewishagency-kupa.org.il/wp-content/uploads/2021/10/10_10_מדיניותתגמולנושאימשרהלשנת-2013-2.pdf",
+       "text": "מדיניות תגמול נושאי משרה 2013",
+       "ctx": "מדיניות תגמול נושאי משרה 2013"
+      },
+      {
+       "file": "https://www.jewishagency-kupa.org.il/wp-content/uploads/2021/10/10_10_מדיניותהשקעות2012.pdf",
+       "text": "מדיניות תגמול נושאי משרה 2012",
+       "ctx": "מדיניות תגמול נושאי משרה 2012"
+      },
+      {
+       "file": "https://www.jewishagency-kupa.org.il/wp-content/uploads/2025/12/דוח-שירות-אזרחים-ותיקים-בגין-שנת-2025.pdf",
+       "text": "דוח שירות אזרחים ותיקים",
+       "ctx": "דוח שירות אזרחים ותיקים"
+      },
+      {
+       "file": "https://www.jewishagency-kupa.org.il/wp-content/uploads/2021/10/10_zdadim_sohnut.pdf",
+       "text": "מבנה אחזקות וצדדים קשורים",
+       "ctx": "מבנה אחזקות וצדדים קשורים"
+      },
+      {
+       "file": "https://www.jewishagency-kupa.org.il/wp-content/uploads/2021/10/10_הודעה_על_העברת_ניהול.pdf",
+       "text": "הודעה על שינוי מבני",
+       "ctx": "הודעה על שינוי מבני"
+      },
+      {
+       "file": "https://www.jewishagency-kupa.org.il/wp-content/uploads/2025/08/נוהל-מספר-18-מדיניות-התגמול-2024-2027-002.pdf",
+       "text": "מדיניות תגמול נושאי משרה 2024-2027",
+       "ctx": "מדיניות תגמול נושאי משרה 2024-2027"
+      },
+      {
+       "file": "https://www.jewishagency-kupa.org.il/wp-content/uploads/2022/12/מדיניות-תגמול-נושאי-משרה-2020-2023.pdf",
+       "text": "מדיניות תגמול נושאי משרה 2020-2023",
+       "ctx": "מדיניות תגמול נושאי משרה 2020-2023"
+      },
+      {
+       "file": "https://www.jewishagency-kupa.org.il/wp-content/uploads/2021/10/10_מדיניות_תגמול_לשנים_2018_2020_סופי-2.pdf",
+       "text": "מדיניות תגמול נושאי משרה 2018-2020",
+       "ctx": "מדיניות תגמול נושאי משרה 2018-2020"
+      },
+      {
+       "file": "https://www.jewishagency-kupa.org.il/wp-content/uploads/2021/10/10_מדיניות_תגמול_לשנים_2015_2017-3.pdf",
+       "text": "מדיניות תגמול נושאי משרה 2015-2017",
+       "ctx": "מדיניות תגמול נושאי משרה 2015-2017"
+      },
+      {
+       "file": "https://www.jewishagency-kupa.org.il/wp-content/uploads/2021/10/10_מדיניותתגמול2014-2.pdf",
+       "text": "מדיניות תגמול נושאי משרה 2014",
+       "ctx": "מדיניות תגמול נושאי משרה 2014"
+      },
+      {
+       "file": "https://www.jewishagency-kupa.org.il/wp-content/uploads/2021/10/10_10_מדיניותתגמולנושאימשרהלשנת-2013-2.pdf",
+       "text": "מדיניות תגמול נושאי משרה 2013",
+       "ctx": "מדיניות תגמול נושאי משרה 2013"
+      },
+      {
+       "file": "https://www.jewishagency-kupa.org.il/wp-content/uploads/2021/10/10_10_מדיניותהשקעות2012.pdf",
+       "text": "מדיניות תגמול נושאי משרה 2012",
+       "ctx": "מדיניות תגמול נושאי משרה 2012"
+      },
+      {
+       "file": "https://www.jewishagency-kupa.org.il/wp-content/uploads/2025/12/דוח-שירות-אזרחים-ותיקים-בגין-שנת-2025.pdf",
+       "text": "דוח שירות אזרחים ותיקים",
+       "ctx": "דוח שירות אזרחים ותיקים"
+      }
+     ]
+    },
+    {
+     "url": "https://www.jewishagency-kupa.org.il/%d7%93%d7%95%d7%97%d7%95%d7%aa-%d7%9b%d7%a1%d7%a4%d7%99%d7%99%d7%9d/",
+     "links": 93,
+     "followed": [],
+     "files": 26,
+     "clicked": 0,
+     "captured": 0,
+     "selected": [
+      "https://www.jewishagency-kupa.org.il/wp-content/uploads/2026/07/מדיניות-הצבעה-באסיפות-כלליות-סוכנות-יהודית-2026-מעודכן-יולי-סופי-2026.docx.pdf",
+      "https://www.jewishagency-kupa.org.il/wp-content/uploads/2025/12/מדיניות-הצבעה-חברת-עמדה-2025-2026.pdf",
+      "https://www.jewishagency-kupa.org.il/wp-content/uploads/2026/02/מדיניות-ואמנת-שירות-לקוחות-1.pdf"
+     ],
+     "unselected_files": [
+      {
+       "file": "https://www.jewishagency-kupa.org.il/wp-content/uploads/2021/10/10_zdadim_sohnut.pdf",
+       "text": "מבנה אחזקות וצדדים קשורים",
+       "ctx": "מבנה אחזקות וצדדים קשורים"
+      },
+      {
+       "file": "https://www.jewishagency-kupa.org.il/wp-content/uploads/2021/10/10_הודעה_על_העברת_ניהול.pdf",
+       "text": "הודעה על שינוי מבני",
+       "ctx": "הודעה על שינוי מבני"
+      },
+      {
+       "file": "https://www.jewishagency-kupa.org.il/wp-content/uploads/2025/08/נוהל-מספר-18-מדיניות-התגמול-2024-2027-002.pdf",
+       "text": "מדיניות תגמול נושאי משרה 2024-2027",
+       "ctx": "מדיניות תגמול נושאי משרה 2024-2027"
+      },
+      {
+       "file": "https://www.jewishagency-kupa.org.il/wp-content/uploads/2022/12/מדיניות-תגמול-נושאי-משרה-2020-2023.pdf",
+       "text": "מדיניות תגמול נושאי משרה 2020-2023",
+       "ctx": "מדיניות תגמול נושאי משרה 2020-2023"
+      },
+      {
+       "file": "https://www.jewishagency-kupa.org.il/wp-content/uploads/2021/10/10_מדיניות_תגמול_לשנים_2018_2020_סופי-2.pdf",
+       "text": "מדיניות תגמול נושאי משרה 2018-2020",
+       "ctx": "מדיניות תגמול נושאי משרה 2018-2020"
+      },
+      {
+       "file": "https://www.jewishagency-kupa.org.il/wp-content/uploads/2021/10/10_מדיניות_תגמול_לשנים_2015_2017-3.pdf",
+       "text": "מדיניות תגמול נושאי משרה 2015-2017",
+       "ctx": "מדיניות תגמול נושאי משרה 2015-2017"
+      },
+      {
+       "file": "https://www.jewishagency-kupa.org.il/wp-content/uploads/2021/10/10_מדיניותתגמול2014-2.pdf",
+       "text": "מדיניות תגמול נושאי משרה 2014",
+       "ctx": "מדיניות תגמול נושאי משרה 2014"
+      },
+      {
+       "file": "https://www.jewishagency-kupa.org.il/wp-content/uploads/2021/10/10_10_מדיניותתגמולנושאימשרהלשנת-2013-2.pdf",
+       "text": "מדיניות תגמול נושאי משרה 2013",
+       "ctx": "מדיניות תגמול נושאי משרה 2013"
+      },
+      {
+       "file": "https://www.jewishagency-kupa.org.il/wp-content/uploads/2021/10/10_10_מדיניותהשקעות2012.pdf",
+       "text": "מדיניות תגמול נושאי משרה 2012",
+       "ctx": "מדיניות תגמול נושאי משרה 2012"
+      },
+      {
+       "file": "https://www.jewishagency-kupa.org.il/wp-content/uploads/2025/12/דוח-שירות-אזרחים-ותיקים-בגין-שנת-2025.pdf",
+       "text": "דוח שירות אזרחים ותיקים",
+       "ctx": "דוח שירות אזרחים ותיקים"
+      },
+      {
+       "file": "https://www.jewishagency-kupa.org.il/wp-content/uploads/2021/10/10_zdadim_sohnut.pdf",
+       "text": "מבנה אחזקות וצדדים קשורים",
+       "ctx": "מבנה אחזקות וצדדים קשורים"
+      },
+      {
+       "file": "https://www.jewishagency-kupa.org.il/wp-content/uploads/2021/10/10_הודעה_על_העברת_ניהול.pdf",
+       "text": "הודעה על שינוי מבני",
+       "ctx": "הודעה על שינוי מבני"
+      },
+      {
+       "file": "https://www.jewishagency-kupa.org.il/wp-content/uploads/2025/08/נוהל-מספר-18-מדיניות-התגמול-2024-2027-002.pdf",
+       "text": "מדיניות תגמול נושאי משרה 2024-2027",
+       "ctx": "מדיניות תגמול נושאי משרה 2024-2027"
+      },
+      {
+       "file": "https://www.jewishagency-kupa.org.il/wp-content/uploads/2022/12/מדיניות-תגמול-נושאי-משרה-2020-2023.pdf",
+       "text": "מדיניות תגמול נושאי משרה 2020-2023",
+       "ctx": "מדיניות תגמול נושאי משרה 2020-2023"
+      },
+      {
+       "file": "https://www.jewishagency-kupa.org.il/wp-content/uploads/2021/10/10_מדיניות_תגמול_לשנים_2018_2020_סופי-2.pdf",
+       "text": "מדיניות תגמול נושאי משרה 2018-2020",
+       "ctx": "מדיניות תגמול נושאי משרה 2018-2020"
+      },
+      {
+       "file": "https://www.jewishagency-kupa.org.il/wp-content/uploads/2021/10/10_מדיניות_תגמול_לשנים_2015_2017-3.pdf",
+       "text": "מדיניות תגמול נושאי משרה 2015-2017",
+       "ctx": "מדיניות תגמול נושאי משרה 2015-2017"
+      },
+      {
+       "file": "https://www.jewishagency-kupa.org.il/wp-content/uploads/2021/10/10_מדיניותתגמול2014-2.pdf",
+       "text": "מדיניות תגמול נושאי משרה 2014",
+       "ctx": "מדיניות תגמול נושאי משרה 2014"
+      },
+      {
+       "file": "https://www.jewishagency-kupa.org.il/wp-content/uploads/2021/10/10_10_מדיניותתגמולנושאימשרהלשנת-2013-2.pdf",
+       "text": "מדיניות תגמול נושאי משרה 2013",
+       "ctx": "מדיניות תגמול נושאי משרה 2013"
+      },
+      {
+       "file": "https://www.jewishagency-kupa.org.il/wp-content/uploads/2021/10/10_10_מדיניותהשקעות2012.pdf",
+       "text": "מדיניות תגמול נושאי משרה 2012",
+       "ctx": "מדיניות תגמול נושאי משרה 2012"
+      },
+      {
+       "file": "https://www.jewishagency-kupa.org.il/wp-content/uploads/2025/12/דוח-שירות-אזרחים-ותיקים-בגין-שנת-2025.pdf",
+       "text": "דוח שירות אזרחים ותיקים",
+       "ctx": "דוח שירות אזרחים ותיקים"
+      }
+     ]
+    },
+    {
+     "url": "https://www.jewishagency-kupa.org.il/%d7%9e%d7%93%d7%99%d7%a0%d7%99%d7%95%d7%aa-%d7%95%d7%a0%d7%94%d7%9c%d7%99%d7%9d/",
+     "links": 132,
+     "followed": [],
+     "files": 65,
+     "clicked": 0,
+     "captured": 0,
+     "selected": [
+      "https://www.jewishagency-kupa.org.il/wp-content/uploads/2026/07/מדיניות-הצבעה-באסיפות-כלליות-סוכנות-יהודית-2026-מעודכן-יולי-סופי-2026.docx.pdf",
+      "https://www.jewishagency-kupa.org.il/wp-content/uploads/2025/12/מדיניות-הצבעה-חברת-עמדה-2025-2026.pdf",
+      "https://www.jewishagency-kupa.org.il/wp-content/uploads/2026/02/מדיניות-ואמנת-שירות-לקוחות-1.pdf",
+      "https://www.jewishagency-kupa.org.il/wp-content/uploads/2022/12/מדיניות-השקעה-צפויה-2023.xls",
+      "https://www.jewishagency-kupa.org.il/wp-content/uploads/2023/01/מדיניות-השקעה-צפויה-2023-1-1.xls",
+      "https://www.jewishagency-kupa.org.il/wp-content/uploads/2021/10/10_מדיניות_השקעה_צפויה_2020-1.xls",
+      "https://www.jewishagency-kupa.org.il/wp-content/uploads/2021/10/10_מדיניות_השקעה_צפויה_2019.xls",
+      "https://www.jewishagency-kupa.org.il/wp-content/uploads/2021/10/10_מדיניות_השקעה_צפויה_2018.xls",
+      "https://www.jewishagency-kupa.org.il/wp-content/uploads/2021/10/10_מדיניות_השקעה_צפויה_2017.xls",
+      "https://www.jewishagency-kupa.org.il/wp-content/uploads/2021/10/10_מדיניות_השקעה_צפוייה_2016.xls",
+      "https://www.jewishagency-kupa.org.il/wp-content/uploads/2021/10/10_מדיניות_השקעות_2015סוכנות_יהודית.pdf",
+      "https://www.jewishagency-kupa.org.il/wp-content/uploads/2021/10/10_10_מדיניותהשקעה-2014סופי.pdf",
+      "https://www.jewishagency-kupa.org.il/wp-content/uploads/2021/10/10_10_מדיניותהשקעותצפויה-2013.pdf",
+      "https://www.jewishagency-kupa.org.il/wp-content/uploads/2021/10/10_10_מדיניותהשקעות2012-1.pdf",
+      "https://www.jewishagency-kupa.org.il/wp-content/uploads/2021/10/10_מדיניותהשקעהסוכנותיהודית2011-2.xls",
+      "https://www.jewishagency-kupa.org.il/wp-content/uploads/2021/10/10_מדיניות_תגמול_2020-2023-2.pdf",
+      "https://www.jewishagency-kupa.org.il/wp-content/uploads/2021/10/10_מדיניות_תגמול_לשנים_2018_2020_סופי-2.pdf",
+      "https://www.jewishagency-kupa.org.il/wp-content/uploads/2021/10/10_מדיניות_תגמול_לשנים_2015_2017-3.pdf",
+      "https://www.jewishagency-kupa.org.il/wp-content/uploads/2021/10/10_מדיניותתגמול2014-2.pdf",
+      "https://www.jewishagency-kupa.org.il/wp-content/uploads/2021/10/10_10_מדיניותתגמולנושאימשרהלשנת-2013-2.pdf",
+      "https://www.jewishagency-kupa.org.il/wp-content/uploads/2021/10/10_10_מדיניותהשקעות2012.pdf"
+     ],
+     "unselected_files": [
+      {
+       "file": "https://www.jewishagency-kupa.org.il/wp-content/uploads/2021/10/10_zdadim_sohnut.pdf",
+       "text": "מבנה אחזקות וצדדים קשורים",
+       "ctx": "מבנה אחזקות וצדדים קשורים"
+      },
+      {
+       "file": "https://www.jewishagency-kupa.org.il/wp-content/uploads/2021/10/10_הודעה_על_העברת_ניהול.pdf",
+       "text": "הודעה על שינוי מבני",
+       "ctx": "הודעה על שינוי מבני"
+      },
+      {
+       "file": "https://www.jewishagency-kupa.org.il/wp-content/uploads/2025/08/נוהל-מספר-18-מדיניות-התגמול-2024-2027-002.pdf",
+       "text": "מדיניות תגמול נושאי משרה 2024-2027",
+       "ctx": "מדיניות תגמול נושאי משרה 2024-2027"
+      },
+      {
+       "file": "https://www.jewishagency-kupa.org.il/wp-content/uploads/2022/12/מדיניות-תגמול-נושאי-משרה-2020-2023.pdf",
+       "text": "מדיניות תגמול נושאי משרה 2020-2023",
+       "ctx": "מדיניות תגמול נושאי משרה 2020-2023"
+      },
+      {
+       "file": "https://www.jewishagency-kupa.org.il/wp-content/uploads/2025/12/דוח-שירות-אזרחים-ותיקים-בגין-שנת-2025.pdf",
+       "text": "דוח שירות אזרחים ותיקים",
+       "ctx": "דוח שירות אזרחים ותיקים"
+      },
+      {
+       "file": "https://www.jewishagency-kupa.org.il/wp-content/uploads/2021/10/10_zdadim_sohnut.pdf",
+       "text": "מבנה אחזקות וצדדים קשורים",
+       "ctx": "מבנה אחזקות וצדדים קשורים"
+      },
+      {
+       "file": "https://www.jewishagency-kupa.org.il/wp-content/uploads/2021/10/10_הודעה_על_העברת_ניהול.pdf",
+       "text": "הודעה על שינוי מבני",
+       "ctx": "הודעה על שינוי מבני"
+      },
+      {
+       "file": "https://www.jewishagency-kupa.org.il/wp-content/uploads/2025/08/נוהל-מספר-18-מדיניות-התגמול-2024-2027-002.pdf",
+       "text": "מדיניות תגמול נושאי משרה 2024-2027",
+       "ctx": "מדיניות תגמול נושאי משרה 2024-2027"
+      },
+      {
+       "file": "https://www.jewishagency-kupa.org.il/wp-content/uploads/2022/12/מדיניות-תגמול-נושאי-משרה-2020-2023.pdf",
+       "text": "מדיניות תגמול נושאי משרה 2020-2023",
+       "ctx": "מדיניות תגמול נושאי משרה 2020-2023"
+      },
+      {
+       "file": "https://www.jewishagency-kupa.org.il/wp-content/uploads/2025/12/דוח-שירות-אזרחים-ותיקים-בגין-שנת-2025.pdf",
+       "text": "דוח שירות אזרחים ותיקים",
+       "ctx": "דוח שירות אזרחים ותיקים"
+      },
+      {
+       "file": "https://www.jewishagency-kupa.org.il/wp-content/uploads/2021/10/10_10_קודאתי.pdf",
+       "text": "קוד אתי",
+       "ctx": ""
+      },
+      {
+       "file": "https://www.jewishagency-kupa.org.il/wp-content/uploads/2021/10/10_10_קודאתי.pdf",
+       "text": "להורדה",
+       "ctx": ""
+      }
+     ]
+    },
+    {
+     "url": "https://www.jewishagency-kupa.org.il/wp-content/uploads/2023/05/%D7%93%D7%95%D7%97-%D7%A2%D7%A1%D7%A7%D7%99-%D7%AA%D7%90%D7%92%D7%99%D7%93.doc",
+     "links": 0,
+     "followed": [],
+     "files": 0,
+     "clicked": 0,
+     "captured": 0,
+     "selected": [],
+     "unselected_files": []
+    },
+    {
+     "url": "https://www.jewishagency-kupa.org.il/wp-content/uploads/2023/05/%D7%93%D7%95%D7%97-%D7%93%D7%99%D7%A8%D7%A7%D7%98%D7%95%D7%A8%D7%99%D7%95%D7%9F-.doc",
+     "links": 0,
+     "followed": [],
+     "files": 0,
+     "clicked": 0,
+     "captured": 0,
+     "selected": [],
+     "unselected_files": []
+    },
+    {
+     "url": "https://www.jewishagency-kupa.org.il/wp-content/uploads/2022/08/%D7%93%D7%95%D7%97-%D7%A2%D7%99%D7%A1%D7%A7%D7%99-%D7%AA%D7%90%D7%92%D7%99%D7%93-%D7%97%D7%91%D7%A8%D7%94-%D7%9C%D7%A0%D7%99%D7%94%D7%95%D7%9C-%D7%A4%D7%A0%D7%A1%D7%99%D7%94-%D7%95%D7%AA%D7%92%D7%9E%D7%95%D7%9C%D7%99%D7%9D-2021.doc",
+     "links": 0,
+     "followed": [],
+     "files": 0,
+     "clicked": 0,
+     "captured": 0,
+     "selected": [],
+     "unselected_files": []
+    },
+    {
+     "url": "https://www.jewishagency-kupa.org.il/wp-content/uploads/2022/08/%D7%93%D7%95%D7%97-%D7%93%D7%99%D7%A8%D7%A7%D7%98%D7%95%D7%A8%D7%99%D7%95%D7%9F-%D7%97%D7%91%D7%A8%D7%94-%D7%9E%D7%A0%D7%94%D7%9C%D7%AA-%D7%A4%D7%A0%D7%A1%D7%99%D7%94-%D7%95%D7%AA%D7%92%D7%9E%D7%95%D7%9C%D7%99%D7%9D-2021.doc",
+     "links": 0,
+     "followed": [],
+     "files": 0,
+     "clicked": 0,
+     "captured": 0,
+     "selected": [],
+     "unselected_files": []
+    }
+   ],
+   "new_docs": 10,
+   "found": 665,
+   "selected": 48,
+   "had": 20,
+   "head_skip": 20,
+   "errors": [
+    "מדיניות-ואמנת-שירות-לקוחות-1.pdf -> 418",
+    "מדיניות-ואמנת-שירות-לקוחות-1.pdf -> 418",
+    "מדיניות-ואמנת-שירות-לקוחות-1.pdf -> 418",
+    "מדיניות-ואמנת-שירות-לקוחות-1.pdf -> 418",
+    "מדיניות-ואמנת-שירות-לקוחות-1.pdf -> 418",
+    "מדיניות-ואמנת-שירות-לקוחות-1.pdf -> 418",
+    "מדיניות-ואמנת-שירות-לקוחות-1.pdf -> 418",
+    "מדיניות-ואמנת-שירות-לקוחות-1.pdf -> 418",
+    "מדיניות-ואמנת-שירות-לקוחות-1.pdf -> 418",
+    "מדיניות-ואמנת-שירות-לקוחות-1.pdf -> 418",
+    "מדיניות-השקעה-צפויה-2023.xls -> 418",
+    "מדיניות-השקעה-צפויה-2023-1-1.xls -> 418",
+    "10_מדיניות_השקעה_צפויה_2020-1.xls -> 418",
+    "10_מדיניות_השקעה_צפויה_2019.xls -> 418",
+    "10_מדיניות_השקעה_צפויה_2018.xls -> 418",
+    "10_מדיניות_השקעה_צפויה_2017.xls -> 418",
+    "10_מדיניות_השקעה_צפוייה_2016.xls -> 418",
+    "10_מדיניותהשקעהסוכנותיהודית2011-2.xls -> 418"
+   ],
+   "diag": [
+    "החברה לניהול קופת : links=121 files=26 clicked=0 captured=0 selected=3",
+    "החברה לניהול קופת : links=105 files=26 clicked=0 captured=0 selected=3",
+    "החברה לניהול קופת : links=105 files=26 clicked=0 captured=0 selected=3",
+    "החברה לניהול קופת : links=93 files=26 clicked=0 captured=0 selected=3",
+    "החברה לניהול קופת : links=205 files=138 clicked=0 captured=0 selected=3",
+    "החברה לניהול קופת : links=169 files=96 clicked=0 captured=0 selected=3",
+    "החברה לניהול קופת : links=277 files=210 clicked=0 captured=0 selected=3",
+    "החברה לניהול קופת : links=95 files=26 clicked=0 captured=0 selected=3",
+    "החברה לניהול קופת : links=93 files=26 clicked=0 captured=0 selected=3",
+    "החברה לניהול קופת : links=132 files=65 clicked=0 captured=0 selected=21",
+    "החברה לניהול קופת : links=0 files=0 clicked=0 captured=0 selected=0",
+    "החברה לניהול קופת : links=0 files=0 clicked=0 captured=0 selected=0",
+    "החברה לניהול קופת : links=0 files=0 clicked=0 captured=0 selected=0",
+    "החברה לניהול קופת : links=0 files=0 clicked=0 captured=0 selected=0"
+   ],
+   "new_files": [
+    "cefc6edac0c1_10_מדיניות_השקעות_2015סוכנות_יהודית.pdf",
+    "04d20d480dfa_10_10_מדיניותהשקעה-2014סופי.pdf",
+    "66740185b757_10_10_מדיניותהשקעותצפויה-2013.pdf",
+    "30e5a4b61a78_10_10_מדיניותהשקעות2012-1.pdf",
+    "eb429c290655_10_מדיניות_תגמול_2020-2023-2.pdf",
+    "103b2032080e_10_מדיניות_תגמול_לשנים_2018_2020_סופי-2.pdf",
+    "937a010f1761_10_מדיניות_תגמול_לשנים_2015_2017-3.pdf",
+    "91e76fd147dc_10_מדיניותתגמול2014-2.pdf",
+    "a5440f65b6b5_10_10_מדיניותתגמולנושאימשרהלשנת-2013-2.pdf",
+    "30e5a4b61a78_10_10_מדיניותהשקעות2012.pdf"
+   ]
+  },
+  {
+   "legal_id": "520031824",
+   "name": "החברה המנהלת של רום קרן ההשתלמות לעובדי הרשויות המקומיות בע\"מ",
+   "pages": [
+    {
+     "url": "https://www.krm.co.il/?CategoryID=217&ArticleID=5",
+     "links": 338,
+     "followed": [],
+     "files": 237,
+     "clicked": 0,
+     "captured": 0,
+     "selected": [
+      "https://www.krm.co.il/_Uploads/dbsAttachedFiles/investment-forecast-clasic-12.07.2026.pdf",
+      "https://www.krm.co.il/_Uploads/dbsAttachedFiles/investment-forecast-clasic-2026(1).pdf",
+      "https://www.krm.co.il/_Uploads/dbsAttachedFiles/investment-forecast-clssic-2025.xlsx",
+      "https://www.krm.co.il/_Uploads/dbsAttachedFiles/investment-forecast-clssic-29.01.2024.xlsx",
+      "https://www.krm.co.il/_Uploads/dbsAttachedFiles/investment-forecast-classic-12.10.2023.xlsx",
+      "https://www.krm.co.il/_Uploads/dbsAttachedFiles/investment-forecast-classic-31.01.2023.xlsx",
+      "https://www.krm.co.il/_Uploads/dbsAttachedFiles/investment-forecast-classic-27.01.2022.pdf"
+     ],
+     "unselected_files": [
+      {
+       "file": "https://www.krm.co.il/_Uploads/dbsAttachedFiles/memune_rom_clasi_augest_2026.xlsx",
+       "text": "אוגוסט 2026",
+       "ctx": ""
+      },
+      {
+       "file": "https://www.krm.co.il/_Uploads/dbsAttachedFiles/memune_rom_clasic_july_2026.xlsx",
+       "text": "יולי 2026",
+       "ctx": ""
+      },
+      {
+       "file": "https://www.krm.co.il/_Uploads/dbsAttachedFiles/memune_rom_clasic_june_2026.xlsx",
+       "text": "יוני 2026",
+       "ctx": ""
+      },
+      {
+       "file": "https://www.krm.co.il/_Uploads/dbsAttachedFiles/memune_rom_clasic_may_2026.xlsx",
+       "text": "מאי 2026",
+       "ctx": ""
+      },
+      {
+       "file": "https://www.krm.co.il/_Uploads/dbsAttachedFiles/memune_rom_clasic_april_2026.xlsx",
+       "text": "אפריל 2026",
+       "ctx": ""
+      },
+      {
+       "file": "https://www.krm.co.il/_Uploads/dbsAttachedFiles/memune_rom_clasic_march_2026.xlsx",
+       "text": "מרץ 2026",
+       "ctx": ""
+      },
+      {
+       "file": "https://www.krm.co.il/_Uploads/dbsAttachedFiles/memune_rom_clasic_february_2026.xlsx",
+       "text": "פברואר 2026",
+       "ctx": ""
+      },
+      {
+       "file": "https://www.krm.co.il/_Uploads/dbsAttachedFiles/memune_rom_clasic_january_2026.xlsx",
+       "text": "ינואר 2026",
+       "ctx": ""
+      },
+      {
+       "file": "https://www.krm.co.il/_Uploads/dbsAttachedFiles/memune_rom_clasi_december_2025.xlsx",
+       "text": "דצמבר 2025",
+       "ctx": ""
+      },
+      {
+       "file": "https://www.krm.co.il/_Uploads/dbsAttachedFiles/memune_rom_clasi_november_2025.xlsx",
+       "text": "נובמבר 2025",
+       "ctx": ""
+      },
+      {
+       "file": "https://www.krm.co.il/_Uploads/dbsAttachedFiles/memune_rom_clasic_october_2025.xlsx",
+       "text": "אוקטובר 2025",
+       "ctx": ""
+      },
+      {
+       "file": "https://www.krm.co.il/_Uploads/dbsAttachedFiles/memune_rom_clasi_september_2025.xlsx",
+       "text": "ספטמבר 2025",
+       "ctx": ""
+      },
+      {
+       "file": "https://www.krm.co.il/_Uploads/dbsAttachedFiles/memune_rom_clasi_augest_2025.xlsx",
+       "text": "אוגוסט 2025",
+       "ctx": ""
+      },
+      {
+       "file": "https://www.krm.co.il/_Uploads/dbsAttachedFiles/memune_rom_clasic_july_2025.xlsx",
+       "text": "יולי 2025",
+       "ctx": ""
+      },
+      {
+       "file": "https://www.krm.co.il/_Uploads/dbsAttachedFiles/memune_rom_clasic_june_2025.xlsx",
+       "text": "יוני 2025",
+       "ctx": ""
+      },
+      {
+       "file": "https://www.krm.co.il/_Uploads/dbsAttachedFiles/memune_rom_clasic_may_2025.xlsx",
+       "text": "מאי 2025",
+       "ctx": ""
+      },
+      {
+       "file": "https://www.krm.co.il/_Uploads/dbsAttachedFiles/memune_rom_clasic_april_2025.xlsx",
+       "text": "אפריל 2025",
+       "ctx": ""
+      },
+      {
+       "file": "https://www.krm.co.il/_Uploads/dbsAttachedFiles/memune_rom_clasic_march_2025.xlsx",
+       "text": "מרץ 2025",
+       "ctx": ""
+      },
+      {
+       "file": "https://www.krm.co.il/_Uploads/dbsAttachedFiles/memune_rom_clasic_february_2025.xlsx",
+       "text": "פברואר 2025",
+       "ctx": ""
+      },
+      {
+       "file": "https://www.krm.co.il/_Uploads/dbsAttachedFiles/memune_rom_clasic_january_2025.xlsx",
+       "text": "ינואר 2025",
+       "ctx": ""
+      },
+      {
+       "file": "https://www.krm.co.il/_Uploads/dbsAttachedFiles/direct_expanses_clasi_december_2025(1).xlsx",
+       "text": "דצמבר 2025",
+       "ctx": ""
+      },
+      {
+       "file": "https://www.krm.co.il/_Uploads/dbsAttachedFiles/direct_expanses_clasi_december_2024.xlsx",
+       "text": "דצמבר 2024",
+       "ctx": ""
+      },
+      {
+       "file": "https://www.krm.co.il/_Uploads/dbsAttachedFiles/direct_expanses_clasi_december_2023(1).xlsx",
+       "text": "דצמבר 2023",
+       "ctx": ""
+      },
+      {
+       "file": "https://www.krm.co.il/_Uploads/dbsAttachedFiles/direct_expanses_clasi_december_2022.xlsx",
+       "text": "דצמבר 2022",
+       "ctx": ""
+      },
+      {
+       "file": "https://www.krm.co.il/_Uploads/dbsAttachedFiles/direct_expanses_clasi_december_2021.xlsx",
+       "text": "דצמבר 2021",
+       "ctx": ""
+      }
+     ]
+    },
+    {
+     "url": "https://www.krm.co.il/?CategoryID=217&ArticleID=3",
+     "links": 325,
+     "followed": [],
+     "files": 224,
+     "clicked": 0,
+     "captured": 0,
+     "selected": [
+      "https://www.krm.co.il/_Uploads/dbsAttachedFiles/investment-forecast-ravid-2026(1).pdf",
+      "https://www.krm.co.il/_Uploads/dbsAttachedFiles/investment-forecast-ravid-08.2025.pdf",
+      "https://www.krm.co.il/_Uploads/dbsAttachedFiles/investment-forecast-ravid-2025.pdf",
+      "https://www.krm.co.il/_Uploads/dbsAttachedFiles/investment-forecast-ravid-15.08.2024.1.pdf",
+      "https://www.krm.co.il/_Uploads/dbsAttachedFiles/investment-forecast-ravid-29.01.2024.pdf",
+      "https://www.krm.co.il/_Uploads/dbsAttachedFiles/investment-forecast-ravid-31.01.2023.pdf",
+      "https://www.krm.co.il/_Uploads/dbsAttachedFiles/investment-forecast-ravid-2022.pdf"
+     ],
+     "unselected_files": [
+      {
+       "file": "https://www.krm.co.il/_Uploads/dbsAttachedFiles/memune_rom_ravid_augest_2026.xlsx",
+       "text": "אוגוסט 2026",
+       "ctx": ""
+      },
+      {
+       "file": "https://www.krm.co.il/_Uploads/dbsAttachedFiles/memune_rom_ravid_july_2026.xlsx",
+       "text": "יולי 2026",
+       "ctx": ""
+      },
+      {
+       "file": "https://www.krm.co.il/_Uploads/dbsAttachedFiles/memune_rom_ravid_june_2026.xlsx",
+       "text": "יוני 2026",
+       "ctx": ""
+      },
+      {
+       "file": "https://www.krm.co.il/_Uploads/dbsAttachedFiles/memune_rom_ravid_may_2026.xlsx",
+       "text": "מאי 2026",
+       "ctx": ""
+      },
+      {
+       "file": "https://www.krm.co.il/_Uploads/dbsAttachedFiles/memune_rom_ravid_april_2026.xlsx",
+       "text": "אפריל 2026",
+       "ctx": ""
+      },
+      {
+       "file": "https://www.krm.co.il/_Uploads/dbsAttachedFiles/memune_rom_ravid_march_2026.xlsx",
+       "text": "מרץ 2026",
+       "ctx": ""
+      },
+      {
+       "file": "https://www.krm.co.il/_Uploads/dbsAttachedFiles/memune_rom_ravid_february_2026.xlsx",
+       "text": "פברואר 2026",
+       "ctx": ""
+      },
+      {
+       "file": "https://www.krm.co.il/_Uploads/dbsAttachedFiles/memune_rom_ravid_january_2026.xlsx",
+       "text": "ינואר 2026",
+       "ctx": ""
+      },
+      {
+       "file": "https://www.krm.co.il/_Uploads/dbsAttachedFiles/memune_rom_ravid_december_2025.xlsx",
+       "text": "דצמבר 2025",
+       "ctx": ""
+      },
+      {
+       "file": "https://www.krm.co.il/_Uploads/dbsAttachedFiles/memune_rom_ravid_november_2025.xlsx",
+       "text": "נובמבר 2025",
+       "ctx": ""
+      },
+      {
+       "file": "https://www.krm.co.il/_Uploads/dbsAttachedFiles/memune_rom_ravid_october_2025.xlsx",
+       "text": "אוקטובר 2025",
+       "ctx": ""
+      },
+      {
+       "file": "https://www.krm.co.il/_Uploads/dbsAttachedFiles/memune_rom_ravid_september_2025.xlsx",
+       "text": "ספטמבר 2025",
+       "ctx": ""
+      },
+      {
+       "file": "https://www.krm.co.il/_Uploads/dbsAttachedFiles/memune_rom_ravid_augest_2025.xlsx",
+       "text": "אוגוסט 2025",
+       "ctx": ""
+      },
+      {
+       "file": "https://www.krm.co.il/_Uploads/dbsAttachedFiles/memune_rom_ravid_july_2025.xlsx",
+       "text": "יולי 2025",
+       "ctx": ""
+      },
+      {
+       "file": "https://www.krm.co.il/_Uploads/dbsAttachedFiles/memune_rom_ravid_june_2025.xlsx",
+       "text": "יוני 2025",
+       "ctx": ""
+      },
+      {
+       "file": "https://www.krm.co.il/_Uploads/dbsAttachedFiles/memune_rom_ravid_may_2025.xlsx",
+       "text": "מאי 2025",
+       "ctx": ""
+      },
+      {
+       "file": "https://www.krm.co.il/_Uploads/dbsAttachedFiles/memune_rom_ravid_april_2025.xlsx",
+       "text": "אפריל 2025",
+       "ctx": ""
+      },
+      {
+       "file": "https://www.krm.co.il/_Uploads/dbsAttachedFiles/memune_rom_ravid_march_2025.xlsx",
+       "text": "מרץ 2025",
+       "ctx": ""
+      },
+      {
+       "file": "https://www.krm.co.il/_Uploads/dbsAttachedFiles/memune_rom_ravid_february_2025(1).xlsx",
+       "text": "פברואר 2025",
+       "ctx": ""
+      },
+      {
+       "file": "https://www.krm.co.il/_Uploads/dbsAttachedFiles/memune_rom_ravid_january_2025.xlsx",
+       "text": "ינואר 2025",
+       "ctx": ""
+      },
+      {
+       "file": "https://www.krm.co.il/_Uploads/dbsAttachedFiles/direct_expanses_ravid_december_2025.xlsx",
+       "text": "דצמבר 2025",
+       "ctx": ""
+      },
+      {
+       "file": "https://www.krm.co.il/_Uploads/dbsAttachedFiles/direct_expanses_ravid_december_2024.xlsx",
+       "text": "דצמבר 2024",
+       "ctx": ""
+      },
+      {
+       "file": "https://www.krm.co.il/_Uploads/dbsAttachedFiles/direct_expanses_ravid_december_2023(1).xlsx",
+       "text": "דצמבר 2023",
+       "ctx": ""
+      },
+      {
+       "file": "https://www.krm.co.il/_Uploads/dbsAttachedFiles/direct_expanses_ravid_december_2022.xlsx",
+       "text": "דצמבר 2022",
+       "ctx": ""
+      },
+      {
+       "file": "https://www.krm.co.il/_Uploads/dbsAttachedFiles/direct_expanses_ravid_december_2021.xlsx",
+       "text": "דצמבר 2021",
+       "ctx": ""
+      }
+     ]
+    },
+    {
+     "url": "https://www.krm.co.il/?CategoryID=217&ArticleID=7",
+     "links": 318,
+     "followed": [],
+     "files": 217,
+     "clicked": 0,
+     "captured": 0,
+     "selected": [
+      "https://www.krm.co.il/_Uploads/dbsAttachedFiles/investment-forecast-sapir-2026(1).pdf",
+      "https://www.krm.co.il/_Uploads/dbsAttachedFiles/investment-forecast-sapir-2025.pdf",
+      "https://www.krm.co.il/_Uploads/dbsAttachedFiles/investment-forecast-sapir-29.01.2024.pdf",
+      "https://www.krm.co.il/_Uploads/dbsAttachedFiles/investment-forecast-sapir-31.01.2023.pdf",
+      "https://www.krm.co.il/_Uploads/dbsAttachedFiles/investment-forecast-sapir-2022.pdf"
+     ],
+     "unselected_files": [
+      {
+       "file": "https://www.krm.co.il/_Uploads/dbsAttachedFiles/memune_rom_sapir_augest_2026.xlsx",
+       "text": "אוגוסט 2026",
+       "ctx": ""
+      },
+      {
+       "file": "https://www.krm.co.il/_Uploads/dbsAttachedFiles/memune_rom_sapir_july_2026.xlsx",
+       "text": "יולי 2026",
+       "ctx": ""
+      },
+      {
+       "file": "https://www.krm.co.il/_Uploads/dbsAttachedFiles/memune_rom_sapir_june_2026.xlsx",
+       "text": "יוני 2026",
+       "ctx": ""
+      },
+      {
+       "file": "https://www.krm.co.il/_Uploads/dbsAttachedFiles/memune_rom_sapir_mayl_2026.xlsx",
+       "text": "מאי 2026",
+       "ctx": ""
+      },
+      {
+       "file": "https://www.krm.co.il/_Uploads/dbsAttachedFiles/memune_rom_sapir_april_2026.xlsx",
+       "text": "אפריל 2026",
+       "ctx": ""
+      },
+      {
+       "file": "https://www.krm.co.il/_Uploads/dbsAttachedFiles/memune_rom_sapir_march_2026.xlsx",
+       "text": "מרץ 2026",
+       "ctx": ""
+      },
+      {
+       "file": "https://www.krm.co.il/_Uploads/dbsAttachedFiles/memune_rom_sapir_january_2026(1).xlsx",
+       "text": "פברואר 2026",
+       "ctx": ""
+      },
+      {
+       "file": "https://www.krm.co.il/_Uploads/dbsAttachedFiles/memune_rom_sapir_january_2026.xlsx",
+       "text": "ינואר 2026",
+       "ctx": ""
+      },
+      {
+       "file": "https://www.krm.co.il/_Uploads/dbsAttachedFiles/memune_rom_sapir_december_2025.xlsx",
+       "text": "דצמבר 2025",
+       "ctx": ""
+      },
+      {
+       "file": "https://www.krm.co.il/_Uploads/dbsAttachedFiles/memune_rom_sapir_november_2025.xlsx",
+       "text": "נובמבר 2025",
+       "ctx": ""
+      },
+      {
+       "file": "https://www.krm.co.il/_Uploads/dbsAttachedFiles/memune_rom_sapir_october_2025.xlsx",
+       "text": "אוקטובר 2025",
+       "ctx": ""
+      },
+      {
+       "file": "https://www.krm.co.il/_Uploads/dbsAttachedFiles/memune_rom_sapir_september_2025.xlsx",
+       "text": "ספטמבר 2025",
+       "ctx": ""
+      },
+      {
+       "file": "https://www.krm.co.il/_Uploads/dbsAttachedFiles/memune_rom_sapir_augest_2025.xlsx",
+       "text": "אוגוסט 2025",
+       "ctx": ""
+      },
+      {
+       "file": "https://www.krm.co.il/_Uploads/dbsAttachedFiles/memune_rom_sapir_july_2025.xlsx",
+       "text": "יולי 2025",
+       "ctx": ""
+      },
+      {
+       "file": "https://www.krm.co.il/_Uploads/dbsAttachedFiles/memune_rom_sapir_june_2025.xlsx",
+       "text": "יוני 2025",
+       "ctx": ""
+      },
+      {
+       "file": "https://www.krm.co.il/_Uploads/dbsAttachedFiles/memune_rom_sapir_may_2025.xlsx",
+       "text": "מאי 2025",
+       "ctx": ""
+      },
+      {
+       "file": "https://www.krm.co.il/_Uploads/dbsAttachedFiles/memune_rom_sapir_april_2025.xlsx",
+       "text": "אפריל 2025",
+       "ctx": ""
+      },
+      {
+       "file": "https://www.krm.co.il/_Uploads/dbsAttachedFiles/memune_rom_sapir_march_2025.xlsx",
+       "text": "מרץ 2025",
+       "ctx": ""
+      },
+      {
+       "file": "https://www.krm.co.il/_Uploads/dbsAttachedFiles/memune_rom_sapir_february_2025.xlsx",
+       "text": "פברואר 2025",
+       "ctx": ""
+      },
+      {
+       "file": "https://www.krm.co.il/_Uploads/dbsAttachedFiles/memune_rom_sapir_january_2025.xlsx",
+       "text": "ינואר 2025",
+       "ctx": ""
+      },
+      {
+       "file": "https://www.krm.co.il/_Uploads/dbsAttachedFiles/direct_expanses_sapir_december_2025.xlsx",
+       "text": "דצמבר 2025",
+       "ctx": ""
+      },
+      {
+       "file": "https://www.krm.co.il/_Uploads/dbsAttachedFiles/direct_expanses_sapir_december_2024.xlsx",
+       "text": "דצמבר 2024",
+       "ctx": ""
+      },
+      {
+       "file": "https://www.krm.co.il/_Uploads/dbsAttachedFiles/direct_expanses_sapir_december_2023(1).xlsx",
+       "text": "דצמבר 2023",
+       "ctx": ""
+      },
+      {
+       "file": "https://www.krm.co.il/_Uploads/dbsAttachedFiles/direct_expanses_sapir_december_2022.xlsx",
+       "text": "דצמבר 2022",
+       "ctx": ""
+      },
+      {
+       "file": "https://www.krm.co.il/_Uploads/dbsAttachedFiles/direct_expanses_sapir_december_2021.xlsx",
+       "text": "דצמבר 2021",
+       "ctx": ""
+      }
+     ]
+    },
+    {
+     "url": "https://www.krm.co.il/?CategoryID=217&ArticleID=12",
+     "links": 218,
+     "followed": [],
+     "files": 114,
+     "clicked": 0,
+     "captured": 0,
+     "selected": [
+      "https://www.krm.co.il/_Uploads/dbsAttachedFiles/investment-forecast-halaha-12.07.2026.pdf",
+      "https://www.krm.co.il/_Uploads/dbsAttachedFiles/investment-forecast-halaha-2026(1).pdf",
+      "https://www.krm.co.il/_Uploads/dbsAttachedFiles/investment-forecast-halaha-2025.pdf",
+      "https://www.krm.co.il/_Uploads/dbsAttachedFiles/investment-forecast-halaha-29.01.2024.pdf",
+      "https://www.krm.co.il/_Uploads/dbsAttachedFiles/investment-forecast-halaha-31.01.2023.pdf",
+      "https://www.krm.co.il/_Uploads/dbsAttachedFiles/investment-forecast-halaha-2022.pdf"
+     ],
+     "unselected_files": [
+      {
+       "file": "https://www.krm.co.il/_Uploads/dbsAttachedFiles/memune_rom_halaha_augest_2026.xlsx",
+       "text": "אוגוסט 2026",
+       "ctx": ""
+      },
+      {
+       "file": "https://www.krm.co.il/_Uploads/dbsAttachedFiles/memune_rom_halaha_july_2026.xlsx",
+       "text": "יולי 2026",
+       "ctx": ""
+      },
+      {
+       "file": "https://www.krm.co.il/_Uploads/dbsAttachedFiles/memune_rom_halaha_june_2026.xlsx",
+       "text": "יוני 2026",
+       "ctx": ""
+      },
+      {
+       "file": "https://www.krm.co.il/_Uploads/dbsAttachedFiles/memune_rom_halaha_may_2026.xlsx",
+       "text": "מאי 2026",
+       "ctx": ""
+      },
+      {
+       "file": "https://www.krm.co.il/_Uploads/dbsAttachedFiles/memune_rom_halaha_april_2026.xlsx",
+       "text": "אפריל 2026",
+       "ctx": ""
+      },
+      {
+       "file": "https://www.krm.co.il/_Uploads/dbsAttachedFiles/memune_rom_halaha_march_2026.xlsx",
+       "text": "מרץ 2026",
+       "ctx": ""
+      },
+      {
+       "file": "https://www.krm.co.il/_Uploads/dbsAttachedFiles/memune_rom_halaha_february_2026.xlsx",
+       "text": "פברואר 2026",
+       "ctx": ""
+      },
+      {
+       "file": "https://www.krm.co.il/_Uploads/dbsAttachedFiles/memune_rom_halaha_january_2026(1).xlsx",
+       "text": "ינואר 2026",
+       "ctx": ""
+      },
+      {
+       "file": "https://www.krm.co.il/_Uploads/dbsAttachedFiles/memune_rom_halaha_december_2025.xlsx",
+       "text": "דצמבר 2025",
+       "ctx": ""
+      },
+      {
+       "file": "https://www.krm.co.il/_Uploads/dbsAttachedFiles/memune_rom_halaha_november_2025.xlsx",
+       "text": "נובמבר 2025",
+       "ctx": ""
+      },
+      {
+       "file": "https://www.krm.co.il/_Uploads/dbsAttachedFiles/memune_rom_halaha_october_2025.xlsx",
+       "text": "אוקטובר 2025",
+       "ctx": ""
+      },
+      {
+       "file": "https://www.krm.co.il/_Uploads/dbsAttachedFiles/memune_rom_halaha_september_2025.xlsx",
+       "text": "ספטמבר 2025",
+       "ctx": ""
+      },
+      {
+       "file": "https://www.krm.co.il/_Uploads/dbsAttachedFiles/memune_rom_halaha_augest_2025.xlsx",
+       "text": "אוגוסט 2025",
+       "ctx": ""
+      },
+      {
+       "file": "https://www.krm.co.il/_Uploads/dbsAttachedFiles/memune_rom_halaha_july_2025.xlsx",
+       "text": "יולי 2025",
+       "ctx": ""
+      },
+      {
+       "file": "https://www.krm.co.il/_Uploads/dbsAttachedFiles/memune_rom_halaha_june_2025.xlsx",
+       "text": "יוני 2025",
+       "ctx": ""
+      },
+      {
+       "file": "https://www.krm.co.il/_Uploads/dbsAttachedFiles/memune_rom_halaha_may_2025.xlsx",
+       "text": "מאי 2025",
+       "ctx": ""
+      },
+      {
+       "file": "https://www.krm.co.il/_Uploads/dbsAttachedFiles/memune_rom_halaha_april_2025.xlsx",
+       "text": "אפריל 2025",
+       "ctx": ""
+      },
+      {
+       "file": "https://www.krm.co.il/_Uploads/dbsAttachedFiles/memune_rom_halaha_march_2025.xlsx",
+       "text": "מרץ 2025",
+       "ctx": ""
+      },
+      {
+       "file": "https://www.krm.co.il/_Uploads/dbsAttachedFiles/memune_rom_halaha_february_2025.xlsx",
+       "text": "פברואר 2025",
+       "ctx": ""
+      },
+      {
+       "file": "https://www.krm.co.il/_Uploads/dbsAttachedFiles/memune_rom_halaha_january_2025.xlsx",
+       "text": "ינואר 2025",
+       "ctx": ""
+      },
+      {
+       "file": "https://www.krm.co.il/_Uploads/dbsAttachedFiles/direct_expanses_halaha_december_2025.xlsx",
+       "text": "דצמבר 2025",
+       "ctx": ""
+      },
+      {
+       "file": "https://www.krm.co.il/_Uploads/dbsAttachedFiles/direct_expanses_halaha_december_2024.xlsx",
+       "text": "דצמבר 2024",
+       "ctx": ""
+      },
+      {
+       "file": "https://www.krm.co.il/_Uploads/dbsAttachedFiles/direct_expanses_halaha_december_2023(1).xlsx",
+       "text": "דצמבר 2023",
+       "ctx": ""
+      },
+      {
+       "file": "https://www.krm.co.il/_Uploads/dbsAttachedFiles/direct_expanses_halaha_december_2022.xlsx",
+       "text": "דצמבר 2022",
+       "ctx": ""
+      },
+      {
+       "file": "https://www.krm.co.il/_Uploads/dbsAttachedFiles/direct_expanses_halaha_december_2021.xlsx",
+       "text": "דצמבר 2021",
+       "ctx": ""
+      }
+     ]
+    },
+    {
+     "url": "https://www.krm.co.il/?CategoryID=217",
+     "links": 103,
+     "followed": [],
+     "files": 0,
+     "clicked": 0,
+     "captured": 0,
+     "selected": [],
+     "unselected_files": []
+    },
+    {
+     "url": "https://www.krm.co.il",
+     "links": 118,
+     "followed": [],
+     "files": 0,
+     "clicked": 0,
+     "captured": 0,
+     "selected": [],
+     "unselected_files": []
+    }
+   ],
+   "new_docs": 0,
+   "found": 792,
+   "selected": 25,
+   "had": 25,
+   "head_skip": 25,
+   "errors": [],
+   "diag": [
+    "החברה המנהלת של רו: links=338 files=237 clicked=0 captured=0 selected=7",
+    "החברה המנהלת של רו: links=325 files=224 clicked=0 captured=0 selected=7",
+    "החברה המנהלת של רו: links=318 files=217 clicked=0 captured=0 selected=5",
+    "החברה המנהלת של רו: links=218 files=114 clicked=0 captured=0 selected=6",
+    "החברה המנהלת של רו: links=103 files=0 clicked=0 captured=0 selected=0",
+    "החברה המנהלת של רו: links=118 files=0 clicked=0 captured=0 selected=0"
    ],
    "new_files": []
   }
