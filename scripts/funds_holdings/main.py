@@ -26,6 +26,7 @@ from .foreign_etf_reference import (
 from .funds import build_funds
 from .funds_detail import build_funds_detail
 from .funds_il import build_funds_il, build_funds_il_kashrut
+from .holdings_detail import build_holdings_detail
 from .funds_reference import build_funds_reference
 from .index_exposure import (
     build_index_exposure, build_index_table, report_month_by_key, summarize as summarize_index,
@@ -171,6 +172,7 @@ def build_master_table(
     print(f"[main] {len(bonds_heter_by_isin)} ניירות מ-bonds_heter (revach)")
     bonds_rank = build_bonds_rank(source, bonds_heter_by_isin)
     bonds_detail = build_bonds_detail(source, bonds_heter_by_isin)
+    holdings_detail = build_holdings_detail(source, isin_swap, funds_ref, isin_fractions)
 
     rows: dict[str, dict] = {}
     for t in tracks:
@@ -221,7 +223,7 @@ def build_master_table(
     for row in rows.values():
         row.setdefault("כשרות", NO_KASHRUT)
 
-    return list(rows.values()), funds_detail, bonds_detail, index_table
+    return list(rows.values()), funds_detail, bonds_detail, index_table, holdings_detail
 
 
 def main():
@@ -233,7 +235,7 @@ def main():
     tracks = fetch_tracks()
     print(f"[main] {len(tracks)} מסלולים מ-tracks")
 
-    master, funds_detail, bonds_detail, index_table = build_master_table(args.reports_dir, tracks)
+    master, funds_detail, bonds_detail, index_table, holdings_detail = build_master_table(args.reports_dir, tracks)
     print(f"[main] {len(master)} שורות בטבלה הראשית")
     print(f"[main] {len(funds_detail)} מסלולים עם רשימת קרנות מפורטת")
     print(f"[main] {len(bonds_detail)} מסלולים עם רשימת אג\"ח מפורטת")
@@ -247,6 +249,9 @@ def main():
         json.dump(bonds_detail, f, ensure_ascii=False, indent=2)
     with open(args.out_dir / "index_exposure.json", "w", encoding="utf-8") as f:
         json.dump(index_table, f, ensure_ascii=False, separators=(",", ":"))
+    with open(args.out_dir / "holdings_detail.json", "w", encoding="utf-8") as f:
+        json.dump(holdings_detail, f, ensure_ascii=False, separators=(",", ":"))
+    print(f"[main] {len(holdings_detail)} מסלולים עם פירוט החזקות מלא -> {args.out_dir}/holdings_detail.json")
     print(f"[main] נשמר -> {args.out_dir}/master.json, {args.out_dir}/funds_detail.json, "
           f"{args.out_dir}/bonds_detail.json, {args.out_dir}/index_exposure.json")
 
