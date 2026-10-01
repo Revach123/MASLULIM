@@ -16,7 +16,7 @@ from .derivatives_exposure import (
 from .excel_io import text_from, to_ratio
 from .funds import FUND_CATEGORIES, PLACEHOLDERS, _build_fund_map, _build_isin_set, _classify
 from .funds_classification import fund_siveg
-from .index_exposure import DIRECT_EQUITY_CATEGORIES, EQUITY_FUND_SIVEGS, is_local, report_month_by_key
+from .index_exposure import DIRECT_EQUITY_CATEGORIES, EQUITY_FUND_SIVEGS, equity_row_index, is_local, report_month_by_key
 from .sheet_source import PCT_COL
 
 # עמודות השורה: גיליון (אינדקס ל-cats), שם, מספר נייר, מנפיק, % מהנכסים, שווי (אלפי ש"ח),
@@ -58,6 +58,22 @@ def _info(row: dict) -> str | None:
             parts.append(text_from(v).strip())
             break
     return " · ".join(parts) or None
+
+
+FUND_KIND_LABEL = {"IL": "קרן ישראלית", "נסחרת": "נסחרת בת\"א", "חוץ": "קרן חו\"ל"}
+
+
+def _fund_lookup(row: dict, fund_map, isin_set, ref_by_num, ref_by_isin) -> tuple[str | None, dict | None]:
+    """(סוג: IL / נסחרת / חוץ, רשומת הקרן בהפניה של revach אם יש) - כמו build_funds."""
+    sec_num = row.get("מספר נייר ערך")
+    if sec_num is None or sec_num == "" or text_from(sec_num).strip() in PLACEHOLDERS:
+        return None, None
+    fund_number, sug = _classify(sec_num, fund_map, isin_set)
+    num = str(fund_number or "").strip()
+    ref = ref_by_num.get(num) or ref_by_isin.get(num.upper())
+    if ref is None:
+        ref = ref_by_isin.get(text_from(sec_num).strip().upper())
+    return sug, ref
 
 
 def _fund_equity_fraction(row: dict, fund_map, isin_set, ref_by_num, ref_by_isin, isin_fractions) -> tuple[float, str]:
@@ -102,7 +118,7 @@ def build_holdings_detail(source: list[dict], isin_swap: list[dict], funds_ref: 
     """index_trace: מ-build_index_exposure(trace=...) - שיוך כל שורה למדד/ים שלה."""
     fund_map, isin_set = _build_fund_map(isin_swap), _build_isin_set(isin_swap)
     trace_rows = (index_trace or {}).get("rows", {})
-    trace_labels = (index_trace or {}).get("labels", {})
+    trace_labels = dict((index_trace or {}).get("labels", {}))
     used_idx: dict[str, set[str]] = defaultdict(set)
     ref_by_num = {str(r["מספר קרן"]): r for r in funds_ref if r.get("מספר קרן")}
     ref_by_isin = {str(r["ISIN"]).upper(): r for r in funds_ref if r.get("ISIN")}
@@ -150,11 +166,35 @@ def build_holdings_detail(source: list[dict], isin_swap: list[dict], funds_ref: 
                 idx_list = [[i, round(v, 6)] for i, v in sorted(agg.items(), key=lambda x: -abs(x[1]))]
                 used_idx[key].update(agg)
                 eq = sum(agg.values())  # אותה חשיפה כמו בפירוק לפי מדד
+            else:
+                # שורה מנייתית בלי חשיפה (מניה ב-0%, אופציה שפוקעת ביום הדוח) - שייכת למדד שלה
+                # בחשיפה 0, לא לשאר הנכסים
+                found = equity_row_index(cat, row)
+                if found:
+                    i, label = found
+                    trace_labels.setdefault(i, label)
+                    idx_list = [[i, 0.0]]
+                    used_idx[key].add(i)
 
             cats = cats_by_key[key]
             if cat not in cats:
                 cats.append(cat)
             issuer = row.get("שם מנפיק")
+            info = _info(row)
+            if cat in FUND_CATEGORIES:
+                # קרן מזוהה בהפניה של revach: השם המעודכן ומנהל הקרן במקום מה שהגוף דיווח
+                # (שם ישן / קטוע / בלומברג); השם שבדוח נשמר בפרטים
+                sug, ref = _fund_lookup(row, fund_map, isin_set, ref_by_num, ref_by_isin)
+                parts = [FUND_KIND_LABEL.get(sug, "")] if sug else []
+                if ref and ref.get("שם קרן"):
+                    reported = text_from(name).strip() if name is not None else ""
+                    if reported and reported.upper() != str(ref["שם קרן"]).strip().upper():
+                        parts.append("בדוח: " + reported)
+                    name = ref["שם קרן"]
+                    issuer = ref.get("מנהל קרן") or issuer
+                if ref and ref.get("נכס בסיס"):
+                    parts.append(str(ref["נכס בסיס"]))
+                info = " · ".join(p for p in parts if p) or info
             rows_by_key[key].append([
                 cats.index(cat),
                 text_from(name).strip() if name is not None else None,
@@ -164,7 +204,7 @@ def build_holdings_detail(source: list[dict], isin_swap: list[dict], funds_ref: 
                 _round(value, 1),
                 _first(row, CCY_COLS),
                 row.get("מדינה לפי חשיפה כלכלית") or row.get('ישראל/חו"ל'),
-                _info(row),
+                info,
                 _round(eq, 6) if eq else (_round(deriv[id(row)][0], 6) if comp.endswith(":other") else None),
                 comp or None,
                 idx_list,
