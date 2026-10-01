@@ -10,7 +10,7 @@ import {
   utf8ToBase64,
 } from "./lib.js";
 import { readManifest, commitFiles, verifyRepo, getFileBase64 } from "./github.js";
-import { runPolicy, POLICY_ALARM } from "./policy.js";
+import { runPolicy, requestPolicyStop, POLICY_ALARM } from "./policy.js";
 
 const ALARM = "cma-daily";
 const INCREMENTAL_QUARTERS = 4;
@@ -540,6 +540,7 @@ chrome.runtime.onMessage.addListener((msg, _sender, sendResponse) => {
   if (msg?.type === "run-incremental") { runSafe("incremental").then(() => sendResponse({ ok: true })); return true; }
   if (msg?.type === "run-backfill") { runSafe("backfill").then(() => sendResponse({ ok: true })); return true; }
   if (msg?.type === "sync-local") { syncLocalFromArchive().then(() => sendResponse({ ok: true })); return true; }
+  if (msg?.type === "stop-policy") { requestPolicyStop(); sendResponse({ ok: true }); return false; }
   if (msg?.type === "run-policy") { runPolicySafe().then(() => sendResponse({ ok: true })); return true; }
   if (msg?.type === "stop") { stopRequested = true; setStatus({ progress: "עוצר..." }).then(() => sendResponse({ ok: true })); return true; }
   if (msg?.type === "verify") {

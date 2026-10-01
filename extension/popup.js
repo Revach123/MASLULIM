@@ -74,7 +74,11 @@ function renderPolicyState(st) {
   const secs = Math.round(((st.ended || Date.now()) - st.started) / 1000);
   document.getElementById("ps-head").textContent = st.running
     ? `${st.phase || "אתרים"}: ${st.done}/${st.total} הסתיימו · ${st.newDocs} מסמכים חדשים`
-    : `הסתיים: ${st.done}/${st.total} אתרים · ${st.newDocs} מסמכים חדשים`;
+    : `${st.stopped ? "נעצר" : "הסתיים"}: ${st.done}/${st.total} אתרים · ${st.newDocs} מסמכים חדשים`;
+  const stopBtn = document.getElementById("stop-policy");
+  stopBtn.hidden = !st.running;
+  stopBtn.disabled = !!st.stopping;
+  stopBtn.textContent = st.stopping ? "עוצר... (מסיים את הצעד הנוכחי ושולח את מה שהורד)" : "⏹ עצור משיכת מדיניות";
   document.getElementById("ps-time").textContent = `${Math.floor(secs / 60)}:${String(secs % 60).padStart(2, "0")}`;
   document.getElementById("ps-bar").style.width = `${st.total ? Math.round(100 * st.done / st.total) : 0}%`;
   document.getElementById("ps-active").innerHTML = (st.active || []).map((a) =>
@@ -167,6 +171,12 @@ render();
 // רענון יזום כל שנייה כל עוד הפופאפ פתוח - מבטיח שהפאי מתעדכן חי גם אם אירוע
 // storage.onChanged מתעכב בזמן שה-service worker עסוק.
 setInterval(render, 1000);
+
+document.getElementById("stop-policy").addEventListener("click", () => {
+  const b = document.getElementById("stop-policy");
+  b.disabled = true; b.textContent = "עוצר...";
+  chrome.runtime.sendMessage({ type: "stop-policy" });
+});
 
 document.getElementById("run-policy").addEventListener("click", () => {
   document.getElementById("msg").textContent = "מושך מסמכי מדיניות מהאתרים החסומים...";
