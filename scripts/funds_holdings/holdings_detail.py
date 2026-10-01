@@ -25,7 +25,7 @@ from .sheet_source import PCT_COL
 # עמודות השורה: גיליון (אינדקס ל-cats), שם, מספר נייר, מנפיק, % מהנכסים, שווי (אלפי ש"ח),
 # מטבע, מדינה, פרט (דירוג+פדיון לאג"ח / נכס בסיס לנגזר / סוג), חשיפה למניות, רכיב חשיפה,
 # והשיוך למדד: [[מזהה מדד, חשיפה], ...] - מאותו חישוב בדיוק כמו פירוק החשיפה לפי מדד, וסיווג
-# לשאר הנכסים (ר' _classify_row): cash / deposit / money_fund / bond_gov_il / bond_corp_abroad... / fx
+# לשאר הנכסים (ר' _classify_row): cash / deposit / bond_gov_il / bond_corp_abroad... / fx
 HOLDING_COLS = ["cat", "name", "id", "issuer", "pct", "value", "ccy", "country", "info", "equity", "component", "idx", "cls"]
 
 NAME_COLS = ("שם נייר ערך", "שם הלוואה", "שם הבנק", "טיקר", "שם מנפיק", "מאפיין עיקרי")
@@ -80,7 +80,7 @@ def _bond_loc(row: dict) -> str:
 
 
 def _classify_row(cat: str, row: dict, name, fund_ref: dict | None, fund_frac: dict | None) -> str | None:
-    """מזומן/פיקדון, אג"ח (ממשלתי/קונצרני × בארץ/בחו"ל - כולל קרנות אג"ח), קרן כספית, גידור מט"ח."""
+    """מזומן/פיקדון, אג"ח (ממשלתי/קונצרני × בארץ/בחו"ל - כולל קרנות אג"ח וכספיות), גידור מט"ח."""
     if cat == CASH_CATEGORY:
         return "cash"
     if cat == DEPOSIT_CATEGORY:
@@ -94,7 +94,8 @@ def _classify_row(cat: str, row: dict, name, fund_ref: dict | None, fund_frac: d
             main = str(fund_ref.get("סיווג ראשי") or "")
             sub = str(fund_ref.get("סיווג משני") or "")
             if main.startswith("קרן כספית"):
-                return "money_fund"
+                # קרן כספית = אג"ח קצר (מק"מ / ממשלתי קצר; "עם קונצרני" - גם קונצרני)
+                return "bond_corp_il" if "קונצרני" in sub else "bond_gov_il"
             if main.startswith('אג"ח'):
                 kind = "gov" if ("מדינה" in sub or "ממשל" in sub) else "corp"
                 return f"bond_{kind}_" + ("abroad" if 'חו"ל' in main else "il")
