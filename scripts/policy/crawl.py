@@ -122,7 +122,7 @@ def download(s, url):
 
 
 NOISE = re.compile(r"esg|אחראי|תגמול(?!ים)|tagmul(?!im)|פרטיות|privacy|תקנון|מבצע|גילוי[-_ ]נאות|דוח(ות)?[-_ ]כספי|מצגת|presentation|"
-                   r"investor|equal|שכר[-_ ]שווה|פוליסה|annuity|premi|מנתחים|אמות[-_ ]מידה|ממשל", re.I)
+                   r"investor|equal|שכר[-_ ]שווה|פוליסה|annuity|premi|מנתחים|אמות[-_ ]מידה|ממשל[-_ ]*תאגיד", re.I)  # "ממשל" לבד חסם את "אג\"ח ממשלות"
 POLICY = re.compile(r"מדיניות[-_ ]*(ה)?השקעה|מדיניות[-_ ]*(ה)?השקעות|מדיניות[-_ ]*מוצהרת|הצהרת[-_ ]*(מדיניות|השקעות)|"
                     r"הצהרה[-_ ]*על[-_ ]*מדיניות|מדיניות[-_ ]*צפויה|investment[-_ ]*polic|expected[-_ ]*investment|statement[-_ ]*investment|m[ae]dini?y?ut|inv[-_ ]*polic", re.I)
 

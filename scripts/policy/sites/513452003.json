@@ -15,5 +15,11 @@
  "search": false,
  "rev": 7,
  "home_source": "report_email:ovdim-tlv.org.il,bidacpa.com",
- "max_pages": 30
+ "max_pages": 30,
+ "track_no_map": [
+  [
+   "^מסלול לבני 50$",
+   "9957"
+  ]
+ ]
 }
