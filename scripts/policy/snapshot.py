@@ -214,27 +214,58 @@ def fetch_browser(pw, url):
         # כפתורי "הורדה" שלא מצביעים לקובץ (postback של ASP.NET / JS): לוחצים ולוכדים את ההורדה עצמה
         dl_dir = Path(os.environ.get("RUNNER_TEMP") or "/tmp") / "policy_dl"
         dl_dir.mkdir(parents=True, exist_ok=True)
-        for el in pg.query_selector_all("a, button, [role=button], input[type=submit], input[type=button]")[:300]:
+        els = pg.query_selector_all("a, button, [role=button], input[type=submit], input[type=button]")
+        def _label(el):
+            return " ".join(x for x in ((el.inner_text() or "").strip(), el.get_attribute("value") or "",
+                                        el.get_attribute("aria-label") or "", el.get_attribute("title") or "") if x)
+        cands = []
+        for el in els[:1500]:
             try:
-                t = (el.inner_text() or el.get_attribute("value") or "").strip()
-                href = el.get_attribute("href") or ""
-                if not re.search(r"הורד|להורדה|download|אקסל|excel|xls", t + " " + href, re.I):
-                    continue
-                if re.search(r"\.(xlsx|xls|pdf|docx)(\?|$)", href, re.I):
-                    continue  # קישור ישיר - כבר נאסף
+                t, href = _label(el), el.get_attribute("href") or ""
+                # מנורה: <a> בלי href, רק אייקון; התיאור ב-aria-label ("... - קובץ EXCEL להורדה")
+                if re.search(r"הורד|להורדה|download|אקסל|excel|xls", t + " " + href, re.I) \
+                        and not re.search(r"\.(xlsx|xls|pdf|docx)(\?|$)", href, re.I):
+                    cands.append((el, t))
+            except Exception:
+                pass
+        for el, t in cands[:80]:
+            try:
                 ctx_text = el.evaluate("e => (e.closest('tr,li,.row,[class*=item],[class*=card]') || e.parentElement || e).innerText || ''")
-                with pg.expect_download(timeout=15000) as info:
-                    el.click(timeout=3000)
-                dl = info.value
-                local = dl_dir / f"{abs(hash((url, dl.suggested_filename, ctx_text))) % 10**10}_{dl.suggested_filename}"
-                dl.save_as(str(local))
-                anchors.append({"href": f"{url}#download={dl.suggested_filename}",
-                                "text": re.sub(r"\s+", " ", f"{ctx_text} {dl.suggested_filename}")[:300], "local": str(local)})
+                ctx_text = re.sub(r"\s+", " ", f"{ctx_text} {t}").strip()[:300]
+                n_pages = len(ctx.pages)
+                if not el.is_visible():  # מנורה: האייקון בתוך אקורדיון מסלול סגור - פותחים את כל האבות הסגורים
+                    el.evaluate("""e => { for (let p = e.parentElement; p; p = p.parentElement) {
+                        const s = p.querySelector(':scope > [aria-expanded="false"]'); if (s) s.click(); } }""")
+                    pg.wait_for_timeout(700)
+                    if not el.is_visible():
+                        continue
+                try:
+                    with pg.expect_download(timeout=8000) as info:
+                        el.scroll_into_view_if_needed(timeout=2000); el.click(timeout=3000)
+                    dl = info.value
+                    local = dl_dir / f"{abs(hash((url, dl.suggested_filename, ctx_text))) % 10**10}_{dl.suggested_filename}"
+                    dl.save_as(str(local))
+                    anchors.append({"href": f"{url}#download={dl.suggested_filename}",
+                                    "text": f"{ctx_text} {dl.suggested_filename}"[:300], "local": str(local)})
+                except Exception:
+                    for np_ in ctx.pages[n_pages:]:  # הקובץ נפתח בלשונית חדשה (HTML/PDF) במקום הורדה
+                        try:
+                            np_.wait_for_load_state("domcontentloaded", timeout=10000)
+                        except Exception:
+                            pass
+                        if np_.url and np_.url != "about:blank":
+                            anchors.append({"href": np_.url, "text": ctx_text})
+                        np_.close()
                 if pg.url.split("#")[0] != url.split("#")[0]:
                     pg.goto(url, wait_until="networkidle", timeout=60000)
             except Exception:
                 pass
         anchors += [x for x in net if (x["href"], x["text"]) not in seen]
+        try:  # נתיבי קבצים בתוך ה-HTML/סקריפטים (Next.js __NEXT_DATA__ ודומיו)
+            for m in FILE_RX.findall(pg.content())[:300]:
+                anchors.append({"href": urljoin(url, m.replace("\\/", "/")), "text": "(html)"})
+        except Exception:
+            pass
         text = pg.inner_text("body")
         return anchors, (200 if status < 400 else status), text
     except Exception as e:
