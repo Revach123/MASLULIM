@@ -22,6 +22,7 @@
   "פנסיה"
  ],
  "search": false,
- "rev": 10,
- "note": "עמוד participating-portfolio-info/investment-policy = מסלולי מנורה *ביטוח* (520042540) - לא לחברה זו. פנסיה וגמל: עמודי הקרנות"
+ "rev": 11,
+ "note": "עמוד participating-portfolio-info/investment-policy = מסלולי מנורה *ביטוח* (520042540) - לא לחברה זו. פנסיה וגמל: עמודי הקרנות",
+ "exclude": "about-insurance|participating-portfolio|מנורה-ביטוח|משתתף"
 }

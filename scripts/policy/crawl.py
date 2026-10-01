@@ -65,7 +65,8 @@ def load_seeds() -> dict[str, dict]:
         out[cfg["legal_id"]] = {"home": cfg.get("home") or "", "extra": [x["url"] for x in pages],
                                 "products": {x["url"]: x.get("product") for x in pages}, "browser": cfg.get("browser", "headless"),
                                 "product_list": cfg.get("products", []), "search": cfg.get("search", True),
-                                "via": cfg.get("via", "cloud"), "max_pages": cfg.get("max_pages", 40)}
+                                "via": cfg.get("via", "cloud"), "max_pages": cfg.get("max_pages", 40),
+                                "exclude": cfg.get("exclude")}
     return out
 
 
@@ -351,6 +352,12 @@ def main():
                                         ensure_ascii=False, indent=1), "utf-8")
         all_changes += changes
         docs = select_docs(pages, set(extra))
+        if seed["exclude"]:  # מסמכים של חברה אחרת באותו אתר (מנורה: תיקי ביטוח משתתפים מקושרים מעמודי הפנסיה)
+            ex = re.compile(seed["exclude"])
+            docs = {k: d for k, d in docs.items() if not ex.search(unquote(k) + " " + unquote(d["page"]))}
+            for k in [k for k, e in index.items() if e.get("legal_id") == legal_id
+                      and ex.search(k + " " + unquote(e.get("source_page") or ""))]:
+                del index[k]
         errs = [f"{u}: {p['status']}" for u, p in pages.items() if p["status"] != 200][:5]
         got = 0
         for key, d in docs.items():

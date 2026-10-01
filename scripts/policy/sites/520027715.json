@@ -21,8 +21,9 @@
   "גמל"
  ],
  "search": false,
- "rev": 10,
+ "rev": 11,
  "home_source": "web_search",
  "max_pages": 20,
- "note": "עמוד participating-portfolio-info/investment-policy = מסלולי מנורה *ביטוח* (520042540) - לא לחברה זו. אומגה (מהנדסים)"
+ "note": "עמוד participating-portfolio-info/investment-policy = מסלולי מנורה *ביטוח* (520042540) - לא לחברה זו. אומגה (מהנדסים)",
+ "exclude": "about-insurance|participating-portfolio|מנורה-ביטוח|משתתף"
 }
