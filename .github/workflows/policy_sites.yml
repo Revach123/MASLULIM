@@ -79,6 +79,8 @@ jobs:
       - run: |
           pip install requests beautifulsoup4 pdfplumber openpyxl python-docx xlrd playwright
           if [ "${{ needs.matrix.outputs.mode }}" != "parse" ]; then python -m playwright install --with-deps chromium; fi
+          # סריקות (דן: מכתב מדיניות מסורק) - OCR עברית רק לאתרים שסומנו ocr
+          if [ "$(jq -r '.ocr // false' scripts/policy/sites/${{ matrix.id }}.json 2>/dev/null)" = "true" ]; then sudo apt-get update -q >/dev/null; sudo apt-get install -y -q tesseract-ocr tesseract-ocr-heb >/dev/null; fi
       - name: Crawl (snapshot + diff + download)
         if: needs.matrix.outputs.mode != 'parse'
         continue-on-error: true

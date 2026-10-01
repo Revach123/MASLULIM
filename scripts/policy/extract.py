@@ -13,7 +13,7 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parents[2]
 OUT = ROOT / (__import__("os").environ.get("POLICY_OUT") or "policy")  # ריצה לחברה: policy/companies/<LegalId>
 
-PARSER_VERSION = 14  # (v10: Ayalon, dated current column) # הגדלה = פרסור מחדש של כל המסמכים בריצה הבאה (שינוי בפרסרים)
+PARSER_VERSION = 15  # (v10: Ayalon, dated current column) # הגדלה = פרסור מחדש של כל המסמכים בריצה הבאה (שינוי בפרסרים)
 
 NUM = r"(\d{1,3}(?:\.\d+)?)"
 PCT = NUM + r"\s*%?"
@@ -125,6 +125,66 @@ def _fix_rtl(s: str) -> str:
     return "\n".join(out)
 
 
+def _ocr_pdf(path: Path) -> str:
+    import shutil, subprocess
+    if not shutil.which("tesseract"):
+        return ""
+    try:
+        import pypdfium2, io
+        out = []
+        doc = pypdfium2.PdfDocument(str(path))
+        for i in range(min(len(doc), 10)):
+            buf = io.BytesIO()
+            doc[i].render(scale=300 / 72).to_pil().convert("L").save(buf, "PNG")
+            r = subprocess.run(["tesseract", "-", "-", "-l", "heb"], input=buf.getvalue(), capture_output=True, timeout=120)
+            out.append(r.stdout.decode("utf-8", "ignore"))
+        return "\n".join(out)
+    except Exception as ex:
+        print(f"[extract] ocr {path.name}: {ex!r}", file=sys.stderr)
+        return ""
+
+
+PROSE_RX = re.compile(r"(?:(עד|לפחות|מקסימום|מינימום)\s*(\d{1,3}(?:\.\d+)?)\s*%|(\d{1,3}(?:\.\d+)?)\s*%\s*(לפחות|לכל היותר))"
+                      r"[^.%]{0,60}?(?:יושקעו|יושקע|יוחזקו|יהיו)\s+([^.]{3,120})")
+
+
+def parse_prose_limits(text: str) -> list[dict]:
+    """מדיניות במלל בלי טבלה (דן: "עד 10% מסך הכספים המנוהלים יושקעו במניות ..."): עד -> מקסימום, לפחות -> מינימום."""
+    if not re.search(r"מדיניות", text):
+        return []
+    flat = re.sub(r"\s+", " ", text)
+    ym = re.search(r"לשנת\s*(20\d\d)", flat)
+    out = []
+    for m in PROSE_RX.finditer(flat):
+        word = m.group(1) or m.group(4)
+        val = float(m.group(2) or m.group(3))
+        lab = re.sub(r"[\u200e\u200f\u202a-\u202e]", "", m.group(5))
+        lab = re.sub(r"אג[\'י״\"]{1,2}ח", 'אג"ח', lab)
+        lab = re.split(r"\s+(?:מדד|בדירוג|באמצעות|בבורסה)\b|,|\s-\s", lab)[0].strip()
+        lab = re.sub(r"^(ב|ל)(?=\S)", "", lab)[:60]
+        if not re.search(r"אג\"ח|פיקדונ|צמוד", lab) and re.search(r"בורסה|ת[\"״י']?א\s*\d+", m.group(5)):
+            lab = "מניות"  # "יושקעו בבורסה לניירות ערך ב- ת"א 125" (דן 2022)
+        if not lab or val > 100:
+            continue
+        mx = word in ("עד", "מקסימום", "לכל היותר")
+        out.append({"fund_id": None, "track_no": None, "track_code": "prose", "track_name": "כללי",
+                    "year": ym.group(1) if ym else None, "asset": lab, "asset_key": asset_key(lab),
+                    "current_pct": None, "expected_pct": None, "tolerance": None,
+                    "min_pct": None if mx else val, "max_pct": val if mx else None,
+                    "benchmark": None, "policy_text": m.group(0)[:200], "group": "prose", "sheet": "prose"})
+    return out
+
+
+_SITE_CFG = {}
+
+
+def _site_cfg(lid):
+    if lid not in _SITE_CFG:
+        cf = ROOT / "scripts" / "policy" / "sites" / f"{lid}.json"
+        _SITE_CFG[lid] = json.loads(cf.read_text("utf-8")) if lid and cf.exists() else {}
+    return _SITE_CFG[lid]
+
+
 def read_doc(path: Path):
     """-> (text, tables[list[rows]], names[list[str]]) - names = שמות גיליונות (ריק ל-PDF/DOCX)"""
     ext = path.suffix.lower()
@@ -143,7 +203,10 @@ def read_doc(path: Path):
                         tb = [[_fix_rtl(c) if isinstance(c, str) else c for c in reversed(r)] for r in tb]
                     tables.append([[title]] + tb if title else tb)
                     names.append(f"page{pn}")
-        return "\n".join(texts), tables, names
+        text = "\n".join(texts)
+        if len(re.sub(r"\s", "", text)) < 40:  # PDF סרוק (דן: מכתב מדיניות מסורק) - OCR עברית אם tesseract מותקן
+            text = _ocr_pdf(path) or text
+        return text, tables, names
     if ext == ".xls":
         import xlrd
         wb = xlrd.open_workbook(path)
@@ -611,6 +674,12 @@ def main():
         if fn_code and doc_rows and len({r.get("track_code") for r in doc_rows}) == 1 and not any(r.get("fund_id") for r in doc_rows):
             for r in doc_rows:
                 r["fund_id"] = r["track_no"] = fn_code.group(1)
+        if not n_long and _site_cfg(ent["legal_id"]).get("prose"):  # מדיניות במלל (מכתב, בלי טבלה) - רק באתרים שסומנו
+            prose = parse_prose_limits(text)
+            for r in prose:
+                r.update(legal_id=ent["legal_id"], track_code=f"{ent['legal_id']}|prose", url=url,
+                         doc_file=ent["file"], doc_first_seen=ent.get("first_seen"))
+            long_rows += prose; n_long += len(prose)
         recs = [] if n_long else extract_tracks_from_text(text)
         for nm, t in leftovers:
             recs += extract_tracks_from_table(t)
