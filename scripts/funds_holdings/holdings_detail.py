@@ -291,3 +291,30 @@ def build_holdings_detail(source: list[dict], isin_swap: list[dict], funds_ref: 
             },
         }
     return out
+
+
+def report_unplaced_funds(holdings: dict[str, dict], top: int = 25) -> str:
+    """אבחון: שורות קרן (סל/נאמנות) בלי מדד ובלי סיווג - בדף הן נשארות תחת "קרנות סל"/"קרנות נאמנות"
+    ולא במניות/אג"ח. מקובץ לפי סוג הקרן והסיבה, והגדולות (משקל מצטבר על פני המסלולים)."""
+    from collections import Counter
+    by_reason: Counter = Counter()
+    by_fund: Counter = Counter()
+    n_all = n_left = 0
+    for h in holdings.values():
+        C = {c: i for i, c in enumerate(h["cols"])}
+        for r in h["rows"]:
+            if h["cats"][r[C["cat"]]] not in FUND_CATEGORIES:
+                continue
+            n_all += 1
+            if r[C["idx"]] or r[C["cls"]]:
+                continue
+            n_left += 1
+            pct = r[C["pct"]] or 0.0
+            reason = (r[C["info"]] or "").split(" · ")[0] or "ללא פרטים"
+            by_reason[reason] += pct
+            by_fund[(r[C["id"]], r[C["name"]], reason)] += pct
+    lines = [f"[holdings] שורות קרן בלי מדד וסיווג: {n_left} מתוך {n_all}"]
+    lines += [f"[holdings]   {v*100:8.2f}%  {k}" for k, v in by_reason.most_common(12)]
+    lines += [f"[holdings]   {v*100:8.2f}%  {k[0]} | {k[1]} | {k[2]}" for k, v in by_fund.most_common(top)]
+    return "\n".join(lines)
+
