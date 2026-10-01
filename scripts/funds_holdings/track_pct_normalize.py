@@ -120,9 +120,70 @@ def rebase_guaranteed_channel(source: list[dict]) -> dict[str, float]:
     return rebased
 
 
+# מכנה משתמע לא עקבי בין קטגוריות של אותו מסלול (שווי/% שונה ביותר מ-10%): נמצא
+# בפועל ב-512237744 (קרנות סל ומזומנים 212 אלף, אפיק מובטח 297 אלף - 12147: 45.3%
+# חשיפה מול 37.5% רשמי; לפי שווי 36.1%) וב-520004896 (נכסים סחירים 20.1 אלף, לא
+# סחירים ומזומנים 29.4 אלף). אג"ח מיועדות לא נכנסות לחישוב המכנים: בדוח הן בשווי
+# הוגן, וה-% שלהן לפי עלות מתואמת (בסיס אחר - 512245812: מכנה גבוה ב-17% באופן
+# קבוע, והנתון הרשמי מתיישב עם ה-%). סימולציה מקומית: 21 מסלולים השתפרו, 2 החמירו
+# בעד 0.14 נק'.
+BASE_SPREAD = 1.1
+MIN_CATEGORY_PCT = 0.01
+DESIGNATED_BONDS_CATEGORY = "לא סחיר איגרות חוב מיועדות"
+
+
+def rebase_inconsistent_bases(source: list[dict], skip: tuple = ()) -> dict[str, float]:
+    """כשקטגוריות של אותו מסלול נותנות מכנה משתמע (שווי/%) שונה (מעל BASE_SPREAD בין
+    הגדול לקטן, בקטגוריות של 1%+ מסכום המסלול), מחשבים כל שורה מחדש כשווי חלקי סך
+    השווי: % × מכנה-הקטגוריה / T, T = Σ (% הקטגוריה × המכנה שלה). קטגוריה בלי מכנה
+    משלה - המכנה של אשכול הקטגוריות העקביות (עד BASE_SPREAD) עם השווי הגדול ביותר."""
+    cat_v = defaultdict(lambda: defaultdict(float))
+    cat_pv = defaultdict(lambda: defaultdict(float))
+    cat_p = defaultdict(lambda: defaultdict(float))
+    rows_by_key = defaultdict(list)
+    for rec in source:
+        if rec["מידע"] != "מידע":
+            continue
+        cat = rec.get("Category")
+        for row in rec["Clean"]:
+            key = row.get("מפתח")
+            pct = to_ratio(row.get(PCT_COL))
+            if key is None or pct is None:
+                continue
+            cat_p[key][cat] += pct
+            rows_by_key[key].append((row, cat, pct))
+            value = _value_k(row)
+            if value is not None and pct and cat not in skip:
+                cat_v[key][cat] += value
+                cat_pv[key][cat] += pct
+    out = {}
+    for key, cats in cat_pv.items():
+        bases = {c: cat_v[key][c] / p for c, p in cats.items() if p > 0 and cat_v[key][c] / p > 0}
+        scale = sum(abs(p) for p in cat_p[key].values())
+        major = [b for c, b in bases.items() if cats[c] >= MIN_CATEGORY_PCT * scale]
+        if len(major) < 2 or max(major) / min(major) <= BASE_SPREAD:
+            continue
+        clusters: list[list[str]] = []
+        for c in sorted(bases, key=bases.get):
+            if clusters and bases[c] / bases[clusters[-1][0]] <= BASE_SPREAD:
+                clusters[-1].append(c)
+            else:
+                clusters.append([c])
+        top = max(clusters, key=lambda cl: sum(cat_v[key][c] for c in cl))
+        ref = sum(cat_v[key][c] for c in top) / sum(cat_pv[key][c] for c in top)
+        total = sum(p * bases.get(c, ref) for c, p in cat_p[key].items())
+        if total <= 0:
+            continue
+        for row, cat, pct in rows_by_key[key]:
+            row[PCT_COL] = pct * bases.get(cat, ref) / total
+        out[key] = total
+    return out
+
+
 def normalize_track_pct(source: list[dict]) -> dict[str, float]:
     """מנרמל את source במקום, מחזיר {מפתח: מכפיל} למסלולים שתוקנו (לשקיפות)."""
     rebase_guaranteed_channel(source)
+    rebase_inconsistent_bases(source, skip=(DESIGNATED_BONDS_CATEGORY,))
     totals: dict[str, float] = defaultdict(float)
     rows_by_key: dict[str, list[dict]] = defaultdict(list)
     company_type_by_key: dict[str, str] = {}
