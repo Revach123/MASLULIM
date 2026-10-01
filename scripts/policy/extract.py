@@ -128,7 +128,7 @@ def _fix_rtl(s: str) -> str:
     return "\n".join(out)
 
 
-def _ocr_pdf(path: Path) -> str:
+def _ocr_pdf(path: Path, dpi: int = 300, psm: str = "6") -> str:
     import shutil, subprocess
     if not shutil.which("tesseract"):
         return ""
@@ -138,8 +138,8 @@ def _ocr_pdf(path: Path) -> str:
         doc = pypdfium2.PdfDocument(str(path))
         for i in range(min(len(doc), 10)):
             buf = io.BytesIO()
-            doc[i].render(scale=300 / 72).to_pil().convert("L").save(buf, "PNG")
-            r = subprocess.run(["tesseract", "-", "-", "-l", "heb+eng", "--psm", "6"], input=buf.getvalue(), capture_output=True, timeout=120)
+            doc[i].render(scale=dpi / 72, no_smoothtext=dpi > 300, no_smoothpath=dpi > 300).to_pil().convert("RGB" if dpi > 300 else "L").save(buf, "PNG", dpi=(dpi, dpi))
+            r = subprocess.run(["tesseract", "-", "-", "-l", "heb+eng", "--psm", psm], input=buf.getvalue(), capture_output=True, timeout=120)
             out.append(r.stdout.decode("utf-8", "ignore"))
         return "\n".join(out)
     except Exception as ex:
@@ -158,18 +158,34 @@ def parse_ocr_table_lines(text: str) -> list[dict]:
     ym = re.search(r"לשנת\s*(20\d\d)", title) or re.search(r"(20\d\d)", title)
     out = []
     for l in lines:
-        b = re.search(r"(\d{1,3}(?:\.\d+)?)\s*%\s*-\s*(\d{1,3}(?:\.\d+)?)\s*%", l)
+        l = re.sub(r"[\u200e\u200f\u202a-\u202e]", "", l)
+        # גבולות "33%-43%" / "17-25%" (ה-% הראשון נשמט ב-OCR)
+        b = re.search(r"(?<![\d.])(\d{1,3}(?:\.\d+)?)\s*%?\s*-\s*(\d{1,3}(?:\.\d+)?)\s*%", l)
         lab = re.match(r"^([א-ת\"'״ ,()\-]{2,60}?)\s*(?=[\d%(]|$)", l)
-        if not b or not lab or not re.search(r"[א-ת]{2}", lab.group(1)):
+        lab_txt = lab.group(1) if lab and re.search(r"[א-ת]{2}", lab.group(1)) else ""
+        if not lab_txt and re.match(r"^\W*(MSCI|ACWI)", l):
+            lab_txt = "מניות"  # שורת מדד הייחוס של המניות - התווית נשברה לשורה הקודמת
+        if not lab_txt:
+            m_ = re.search(r"(?<=[\d%\s])([א-ת][א-ת\"'״ ,()\-]{1,60})$", l)  # שורה בכיוון הפוך - התווית בסוף
+            lab_txt = m_.group(1) if m_ and re.search(r"[א-ת]{2}", m_.group(1)) else ""
+        if not b or not re.search(r"[א-ת]{2}", lab_txt):
             continue
         lo, hi = sorted((float(b.group(1)), float(b.group(2))))
         if hi > 150:
             continue
-        tol = re.search(r"(\d{1,2})\s*%\s*-/\+|\+/-\s*(\d{1,2})\s*%", l)
+        lb = l[:b.start()] + " " * (b.end() - b.start()) + l[b.end():] if b else l  # הסטייה - לא מתוך הגבולות
+        tol = (re.search(r"(?<![\d.])(\d{1,2})\s*%\s*(?:-/\+|\+/-)|(?:\+/-|-/\+)\s*(\d{1,2})\s*%", lb)
+               or re.search(r"(?<![\d.])(\d{1,2})\s*%\s*\+|\+\s*(\d{1,2})\s*%", lb))
         cut = min(x.start() for x in (b, tol) if x)
+        end = max(x.end() for x in (b, tol) if x)
         before = [float(x) for x in re.findall(r"(\d{1,3}(?:\.\d+)?)\s*%", l[:cut])]
-        exp = next((x for x in reversed(before) if lo <= x <= hi), None)
-        asset = lab.group(1).strip(" -,(")
+        after = [float(x) for x in re.findall(r"(\d{1,3}(?:\.\d+)?)\s*%", l[end:])]
+        if len(after) > len(before):  # שורה הפוכה: גבולות, סטייה, הצפוי, (קודמת), בפועל
+            exp = next((x for x in after if lo <= x <= hi), None)
+            before = list(reversed(after))
+        else:
+            exp = next((x for x in reversed(before) if lo <= x <= hi), None)
+        asset = lab_txt.strip(" -,(")
         out.append({"fund_id": fm.group(1) if fm else None, "track_no": fm.group(1) if fm else None, "track_code": "ocr",
                     "track_name": name, "group": "ocr", "year": ym.group(1) if ym else None, "asset": asset,
                     "asset_key": asset_key(asset), "current_pct": before[0] if len(before) > 2 else None, "expected_pct": exp,
@@ -771,6 +787,9 @@ def main():
         if not n_long and _site_cfg(ent["legal_id"]).get("ocr") and p.suffix.lower() == ".pdf":
             # PDF סרוק עם שכבת טקסט פגומה (מספרי הטבלה בתמונה) - OCR ופרסור שורות
             ocr_rows = parse_ocr_table_lines(_ocr_pdf(p))
+            # גליפים מצוירים (אין שכבת טקסט ואין תמונה - עובדי המדינה 7635/15404): גם רזולוציה גבוהה ופריסת עמודות, הטוב מבין השניים
+            alt = parse_ocr_table_lines(_ocr_pdf(p, 450, "4"))
+            ocr_rows = alt if len(alt) > len(ocr_rows) else ocr_rows
             for r in ocr_rows:
                 r.update(legal_id=ent["legal_id"], track_code=f"{ent['legal_id']}|ocr|{r['track_name']}", url=url,
                          doc_file=ent["file"], doc_first_seen=ent.get("first_seen"))
