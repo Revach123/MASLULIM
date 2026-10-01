@@ -213,6 +213,27 @@ async function readRules(cfg) {
   } catch (e) { return null; }  // אין קובץ / אין רשת - ברירות המחדל
 }
 
+async function readComplete(cfg) {
+  try {
+    const b64 = await getFileBase64(cfg.token, cfg.owner, cfg.repo, cfg.branch, "policy/extension_complete.json");
+    return JSON.parse(decodeURIComponent(escape(atob(b64)))).companies || {};
+  } catch (e) { return {}; }
+}
+
+// בדיקת HEAD לקובץ שכבר נשלח: ETag / Last-Modified / Content-Length זהים -> לא מורידים שוב.
+// פעם בשבוע (FULL_CHECK_DAYS) מורידים בכל זאת - אתרים שמחליפים קובץ בלי לשנות כותרות.
+const FULL_CHECK_DAYS = 7;
+async function headSig(url) {
+  const ac = new AbortController(); const t = setTimeout(() => ac.abort(), 15000);
+  try {
+    const r = await fetch(url, { method: "HEAD", credentials: "include", signal: ac.signal });
+    if (!r.ok) return null;
+    const h = (k) => r.headers.get(k) || "";
+    const sig = [h("etag"), h("last-modified"), h("content-length")].join("|");
+    return sig.replace(/\|/g, "") ? sig : null;
+  } catch (e) { return null; } finally { clearTimeout(t); }
+}
+
 async function readSites(cfg) {
   const b64 = await getFileBase64(cfg.token, cfg.owner, cfg.repo, cfg.branch, "policy/extension_sites.json");
   return JSON.parse(decodeURIComponent(escape(atob(b64))));
@@ -234,10 +255,10 @@ function keepMinimized(windowId) {
   }).catch(() => {});
 }
 
-async function runSite(site, cfg, seen, onProgress, windowId) {
+async function runSite(site, cfg, seen, onProgress, windowId, meta = {}) {
   const pages = [...new Set([...(site.pages || []).map((p) => p.url), site.home].filter(Boolean))];
   const files = [], errors = [], diag = [];
-  const stats = { found: 0, selected: 0, had: 0 };
+  const stats = { found: 0, selected: 0, had: 0, head_skip: 0 };
   const added = {};  // href -> sha שנוספו באתר הזה (נשמרים כ"כבר נשלח" רק אחרי commit מוצלח)
   const pageLog = [];  // לכל עמוד: מה נמצא/נבחר - ללוג  // לחלונית: קבצים שנמצאו בעמודים / נבחרו כמדיניות / כבר נשלחו בעבר
   const report = (pi, step) => onProgress({ page: pages[pi], pageNo: pi + 1, pages: pages.length, step, docs: files.length / 2 });
@@ -304,6 +325,11 @@ async function runSite(site, cfg, seen, onProgress, windowId) {
       for (const [di, d] of uniq.entries()) {
         if (stopRequested) break;
         await report(pi, `מוריד קובץ ${di + 1}/${uniq.length}`);
+        const sig = await headSig(d.href);
+        const m = meta[d.href];
+        if (sig && seen[d.href] && m && m.sig === sig && Date.now() - (m.full || 0) < FULL_CHECK_DAYS * 864e5) {
+          stats.had++; stats.head_skip++; continue;  // לא השתנה מאז ההורדה האחרונה
+        }
         let got = null;
         try { const [r2] = await execInTab(tab.id, pageFetchBase64, [d.href]); got = r2 && r2.result; } catch (e) { got = { __error: true, message: String(e) }; }
         if (!got || got.__error || !looksLikeDoc(got.base64)) {
@@ -315,6 +341,7 @@ async function runSite(site, cfg, seen, onProgress, windowId) {
           errors.push(`${decodeURIComponent(d.href.split("/").pop()).slice(0, 60)} -> ${String(why).slice(0, 80)}`); continue;
         }
         const sha = await sha256Hex(got.base64);
+        if (sig) meta[d.href] = { sig, full: Date.now() };
         if (seen[d.href] === sha) { stats.had++; continue; }
         const name = decodeURIComponent(new URL(d.href).pathname.split("/").pop()).replace(/[^\w.\-֐-׿]/g, "_").slice(0, 90);
         const base = `policy/inbox/${site.legal_id}/${sha.slice(0, 12)}_${name}`;
@@ -347,7 +374,22 @@ export async function runPolicy(cfg, setStatus) {
   stopRequested = false;
   const gotRules = await readRules(cfg);  // ההוראות העדכניות מ-GitHub, בכל ריצה
   applyRules(gotRules);
-  const sites = await readSites(cfg);
+  const allSites = await readSites(cfg);
+  // חברות שיש להן כבר מדיניות השנה לכל המסלולים (policy/extension_complete.json, מחושב ב-GitHub) - מדלגים עליהן
+  // skip_complete_hours (ברירת מחדל 24) מאז הריצה המוצלחת האחרונה שלהן בתוסף. 0 בכללים = לא מדלגים.
+  const complete = await readComplete(cfg);
+  const { policySiteOk = {}, policyMeta = {} } = await chrome.storage.local.get(["policySiteOk", "policyMeta"]);
+  const skipH = RULES.skip_complete_hours ?? 24;
+  const skipped = [];
+  const sites = allSites.filter((st) => {
+    const c = complete[st.legal_id];
+    const last = policySiteOk[st.legal_id] || 0;
+    if (skipH > 0 && c && c.complete && Date.now() - last < skipH * 36e5) {
+      skipped.push({ legal_id: st.legal_id, name: st.name, why: c.why, last_ok: new Date(last).toISOString() });
+      return false;
+    }
+    return true;
+  });
   const { policySeen } = await chrome.storage.local.get("policySeen");
   const seen = policySeen || {};
   const allFiles = [], allErrors = [], allDiag = [];
@@ -405,6 +447,7 @@ export async function runPolicy(cfg, setStatus) {
     extension_version: chrome.runtime.getManifest().version, started: new Date(started).toISOString(),
     updated: new Date().toISOString(), final, stopped: stopRequested, rules_from_github: rulesFromGithub, rules: RULES,
     total_sites: sites.length, done_sites: finished.length, new_docs: allFiles.length / 2,
+    skipped_complete: skipped,  // חברות שדולגו: מדיניות השנה לכל המסלולים + ריצה מוצלחת ב-skip_complete_hours האחרונות
     active: Object.entries(progress).map(([name, p]) => ({ name, page: p.page, page_no: p.pageNo, pages: p.pages, step: p.step })),
     sites: siteLog,
   });
@@ -443,7 +486,9 @@ export async function runPolicy(cfg, setStatus) {
         const { files, errors, diag, stats, pages, added } = await withTimeout(runSite(site, cfg, seen, async (p) => {
           progress[site.name] = p;
           await flushStatus();
-        }, windowId), 15 * 60000, `site ${site.name}`);
+        }, windowId, policyMeta), 15 * 60000, `site ${site.name}`);
+        if (!errors.length) policySiteOk[site.legal_id] = Date.now();
+        await chrome.storage.local.set({ policySiteOk, policyMeta });
         allFiles.push(...files);
         if (files.length) commitSite(site, files, added);  // שמירה מיד בסוף כל אתר - ריצה שנתקעת/נסגרת לא מאבדת את מה שכבר הורד
         allErrors.push(...errors);

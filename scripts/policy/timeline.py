@@ -360,6 +360,41 @@ def _write(name, fields, rows):
         w.writeheader(); w.writerows(rows)
 
 
+def write_complete(latest):
+    """policy/extension_complete.json - חברות שיש להן מדיניות של השנה הנוכחית לכל המסלולים, כדי שהתוסף ידלג
+    עליהן (skip_complete_hours בכללים, ברירת מחדל 24 שעות). מלא = כל מסלולי הרישום הרשמי (data.gov) של החברה
+    מכוסים במדיניות השנה; חברה שאינה ברישום (קרן ותיקה) - כל המסלולים הפעילים שלה עם מדיניות השנה."""
+    year = str(date.today().year)
+    reg = {}
+    rp = POL / "fund_registry.csv"
+    if rp.exists():
+        for r in csv.DictReader(open(rp, encoding="utf-8-sig")):
+            if r.get("legal_id") and r.get("track_no"):
+                reg.setdefault(r["legal_id"], set()).add(r["track_no"])
+    have, act, act_y = {}, {}, {}
+    for r in latest:
+        if not r.get("active"):
+            continue
+        lid = r["legal_id"]
+        k = (r.get("track_code"), r.get("track_name"))
+        act.setdefault(lid, set()).add(k)
+        if str(r.get("year") or "") >= year:
+            act_y.setdefault(lid, set()).add(k)
+            if r.get("track_no"):
+                have.setdefault(lid, set()).add(r["track_no"])
+    out = {}
+    for lid in set(act) | set(reg):
+        R, H = reg.get(lid, set()), have.get(lid, set())
+        if R:
+            ok, why = R <= H, f"registry {len(R & H)}/{len(R)}"
+        else:
+            ok = bool(act_y.get(lid)) and len(act_y[lid]) == len(act.get(lid, ()))
+            why = f"tracks {len(act_y.get(lid, ()))}/{len(act.get(lid, ()))} (not in registry)"
+        out[lid] = {"complete": ok, "why": why, "missing": sorted(R - H)[:50] if R else []}
+    (POL / "extension_complete.json").write_text(json.dumps(
+        {"year": year, "generated": date.today().isoformat(), "companies": out}, ensure_ascii=False, indent=1), "utf-8")
+
+
 def main():
     latest, summary, log = build()
     latest.sort(key=lambda r: (r["legal_id"], r["track_name"] or "", r["asset"] or ""))
@@ -372,6 +407,7 @@ def main():
     _write("tracks_latest.csv", FIELDS, latest)
     _write("tracks_summary.csv", SUMMARY_FIELDS, summary)
     _write("track_changes.csv", CHANGE_FIELDS, log)
+    write_complete(latest)
     lv = {}
     for s in summary:
         lv[s["last_change_level"]] = lv.get(s["last_change_level"], 0) + 1
