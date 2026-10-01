@@ -277,6 +277,21 @@ def assign(tracks):
             if reg.valid(t["legal_id"], n) and n not in t["_banned"] and (t["legal_id"], n) not in owned:
                 owned.add((t["legal_id"], n))
                 t["track_no"], t["track_no_source"] = n, "file_cells"; break
+    # track_no_map בהגדרות האתר: [[regex על שם המסלול, מספר]] - מיפוי ידני מבוקר כשהשמות בקובץ מקוצרים
+    # (קרנות מורים: "מות מקור הלכתי - מסלול מקוצר" = 2041)
+    import json as _json
+    sites = Path(__file__).with_name("sites")
+    maps = {}
+    act_owned = {(t["legal_id"], t["track_no"]) for t in tracks if t["track_no"] and t.get("active")}
+    for t in tracks:
+        lid = t["legal_id"]
+        if lid not in maps:
+            f = sites / f"{lid}.json"
+            maps[lid] = _json.loads(f.read_text("utf-8")).get("track_no_map") if f.exists() else None
+        if not t["track_no"] and maps[lid]:
+            n = next((str(n) for rx, n in maps[lid] if re.search(rx, t.get("track_name") or "")), None)
+            if n and (lid, n) not in act_owned:  # מסלול ישן (לא פעיל) עם אותו מספר לא חוסם
+                act_owned.add((lid, n)); owned.add((lid, n)); t["track_no"], t["track_no_source"] = n, "site_map"
     if reg.ok:  # מוצא אחרון: התאמת שם לרישום. ההתאמה הטובה ביותר קודמת ("פאסיבי לבני 50" לפני "לבני 50")
         fb = []
         for i, t in enumerate(tracks):
