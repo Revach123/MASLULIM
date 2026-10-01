@@ -2,12 +2,19 @@
  "legal_id": "515447035",
  "name": "הפניקס חח\"י קופה מרכזית לקצבה בע\"מ",
  "home": "https://www.fnx.co.il",
- "pages": [],
+ "pages": [
+  {
+   "product": "פנסיה",
+   "url": "https://www.fnx.co.il/pension-savings/iec-pension/"
+  }
+ ],
  "browser": "headless",
  "products": [
   "פנסיה"
  ],
- "search": true,
- "rev": 6,
- "home_source": "report_email:fnx.co.il"
+ "search": false,
+ "rev": 7,
+ "home_source": "report_email:fnx.co.il",
+ "exclude": "(?i)^(?!.*(iec|חח\\\"?י|hashmal))",
+ "note": "קופת חח\"י: רק מסמכים מעמוד חח\"י (קבצי מדיניות הפניקס הכלליים שייכים לביטוח / פנסיה וגמל)"
 }

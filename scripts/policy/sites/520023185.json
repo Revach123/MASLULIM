@@ -21,5 +21,6 @@
   "ביטוח"
  ],
  "search": true,
- "rev": 7
+ "rev": 8,
+ "exclude": "(?i)pension|pensia|gemel|xnes|xns|policychild|iec"
 }

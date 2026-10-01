@@ -22,5 +22,6 @@
   "פנסיה"
  ],
  "search": true,
- "rev": 6
+ "rev": 7,
+ "exclude": "(?i)bituach|iec"
 }
