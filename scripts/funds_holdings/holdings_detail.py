@@ -7,6 +7,7 @@ validate_equity_exposure ו-index_exposure. לדף המסלול ב-revach (/trac
    "summary": {"by_cat": {גיליון: %}, "equity": {רכיב: %}}}
 שורה = רשימה (לא אובייקט - חיסכון של ~60% בנפח ב-D1), לפי HOLDING_COLS.
 """
+import re
 from collections import defaultdict
 
 from .derivatives_exposure import (
@@ -16,13 +17,16 @@ from .derivatives_exposure import (
 from .excel_io import text_from, to_ratio
 from .funds import FUND_CATEGORIES, PLACEHOLDERS, _build_fund_map, _build_isin_set, _classify
 from .funds_classification import fund_siveg
-from .index_exposure import DIRECT_EQUITY_CATEGORIES, EQUITY_FUND_SIVEGS, equity_row_index, is_local, report_month_by_key
+from .index_exposure import (
+    DIRECT_EQUITY_CATEGORIES, EQUITY_FUND_SIVEGS, equity_row_index, index_geo, is_local, report_month_by_key,
+)
 from .sheet_source import PCT_COL
 
 # עמודות השורה: גיליון (אינדקס ל-cats), שם, מספר נייר, מנפיק, % מהנכסים, שווי (אלפי ש"ח),
 # מטבע, מדינה, פרט (דירוג+פדיון לאג"ח / נכס בסיס לנגזר / סוג), חשיפה למניות, רכיב חשיפה,
-# והשיוך למדד: [[מזהה מדד, חשיפה], ...] - מאותו חישוב בדיוק כמו פירוק החשיפה לפי מדד
-HOLDING_COLS = ["cat", "name", "id", "issuer", "pct", "value", "ccy", "country", "info", "equity", "component", "idx"]
+# והשיוך למדד: [[מזהה מדד, חשיפה], ...] - מאותו חישוב בדיוק כמו פירוק החשיפה לפי מדד, וסיווג
+# לשאר הנכסים (ר' _classify_row): cash / deposit / money_fund / bond_gov_il / bond_corp_abroad... / fx
+HOLDING_COLS = ["cat", "name", "id", "issuer", "pct", "value", "ccy", "country", "info", "equity", "component", "idx", "cls"]
 
 NAME_COLS = ("שם נייר ערך", "שם הלוואה", "שם הבנק", "טיקר", "שם מנפיק", "מאפיין עיקרי")
 ID_COLS = ("מספר נייר ערך", "מספר הלוואה", "מספר מזהה בנק", "מספר עסקה (רגל 1)")
@@ -58,6 +62,51 @@ def _info(row: dict) -> str | None:
             parts.append(text_from(v).strip())
             break
     return " · ".join(parts) or None
+
+
+# סיווג "שאר הנכסים" לדף המסלול
+CASH_CATEGORY, DEPOSIT_CATEGORY = "מזומנים ושווי מזומנים", "פיקדונות מעל 3 חודשים"
+GOV_BOND_CATEGORIES = {"איגרות חוב ממשלתיות", "לא סחיר איגרות חוב ממשלתיות", "לא סחיר איגרות חוב מיועדות"}
+CORP_BOND_CATEGORIES = {"איגרות חוב", "לא סחיר איגרות חוב", "ניירות ערך מסחריים", "לא סחיר ניירות ערך מסחריים"}
+FX_UNDERLYING = 'מט"ח'
+_GOV_NAME = re.compile(r"TREASUR|\bGOVT?\b|GOVERNMENT|SOVEREIGN|\bT-?BILL|ממשל|מדינה|מק\"?מ", re.IGNORECASE)
+
+
+def _bond_loc(row: dict) -> str:
+    country = str(row.get("מדינה לפי חשיפה כלכלית") or "").strip()
+    if country:
+        return "il" if country == "ישראל" else "abroad"
+    return "abroad" if 'חו"ל' in str(row.get('ישראל/חו"ל') or "") else "il"
+
+
+def _classify_row(cat: str, row: dict, name, fund_ref: dict | None, fund_frac: dict | None) -> str | None:
+    """מזומן/פיקדון, אג"ח (ממשלתי/קונצרני × בארץ/בחו"ל - כולל קרנות אג"ח), קרן כספית, גידור מט"ח."""
+    if cat == CASH_CATEGORY:
+        return "cash"
+    if cat == DEPOSIT_CATEGORY:
+        return "deposit"
+    if cat in GOV_BOND_CATEGORIES:
+        return "bond_gov_" + _bond_loc(row)
+    if cat in CORP_BOND_CATEGORIES:
+        return "bond_corp_" + _bond_loc(row)
+    if cat in FUND_CATEGORIES:
+        if fund_ref:
+            main = str(fund_ref.get("סיווג ראשי") or "")
+            sub = str(fund_ref.get("סיווג משני") or "")
+            if main.startswith("קרן כספית"):
+                return "money_fund"
+            if main.startswith('אג"ח'):
+                kind = "gov" if ("מדינה" in sub or "ממשל" in sub) else "corp"
+                return f"bond_{kind}_" + ("abroad" if 'חו"ל' in main else "il")
+            return None
+        frac = fund_frac or {}
+        if (frac.get("bond") or 0) >= 0.5 and (frac.get("equity") or 0) < 0.5:
+            return ("bond_gov_" if _GOV_NAME.search(str(name or "")) else "bond_corp_") + "abroad"
+        return None
+    for col in ("נכס בסיס", "סוג הנכס"):
+        if row.get(col) == FX_UNDERLYING:
+            return "fx"
+    return None
 
 
 FUND_KIND_LABEL = {"IL": "קרן ישראלית", "נסחרת": "נסחרת בת\"א", "חוץ": "קרן חו\"ל"}
@@ -111,6 +160,14 @@ def _derivative_exposure(source: list[dict]) -> dict[int, tuple[float, bool, str
         for d in opt:
             out[id(d["row"])] = (d["ratio"], True, "options")
     return out
+
+
+def _index_meta(idx: str, label: str) -> dict:
+    meta = {"label": label, "il": is_local(idx)}
+    geo = index_geo(idx)
+    if geo:
+        meta["geo"], meta["kind"] = geo
+    return meta
 
 
 def build_holdings_detail(source: list[dict], isin_swap: list[dict], funds_ref: list[dict],
@@ -181,10 +238,12 @@ def build_holdings_detail(source: list[dict], isin_swap: list[dict], funds_ref: 
                 cats.append(cat)
             issuer = row.get("שם מנפיק")
             info = _info(row)
+            fund_ref_row = None
             if cat in FUND_CATEGORIES:
                 # קרן מזוהה בהפניה של revach: השם המעודכן ומנהל הקרן במקום מה שהגוף דיווח
                 # (שם ישן / קטוע / בלומברג); השם שבדוח נשמר בפרטים
                 sug, ref = _fund_lookup(row, fund_map, isin_set, ref_by_num, ref_by_isin)
+                fund_ref_row = ref
                 parts = [FUND_KIND_LABEL.get(sug, "")] if sug else []
                 if ref and ref.get("שם קרן"):
                     reported = text_from(name).strip() if name is not None else ""
@@ -208,6 +267,9 @@ def build_holdings_detail(source: list[dict], isin_swap: list[dict], funds_ref: 
                 _round(eq, 6) if eq else (_round(deriv[id(row)][0], 6) if comp.endswith(":other") else None),
                 comp or None,
                 idx_list,
+                _classify_row(cat, row, name, fund_ref_row,
+                              isin_fractions.get(text_from(row.get("מספר נייר ערך") or "").strip().upper())
+                              if cat in FUND_CATEGORIES else None),
             ])
             if pct:
                 by_cat[key][cat] += pct
@@ -221,7 +283,7 @@ def build_holdings_detail(source: list[dict], isin_swap: list[dict], funds_ref: 
             "cats": cats_by_key[key],
             "cols": HOLDING_COLS,
             "rows": rows,
-            "indices": {i: {"label": trace_labels.get(i, i), "il": is_local(i)} for i in sorted(used_idx[key])},
+            "indices": {i: _index_meta(i, trace_labels.get(i, i)) for i in sorted(used_idx[key])},
             "summary": {
                 "by_cat": {c: round(v, 6) for c, v in by_cat[key].items()},
                 "equity": {c: round(v, 6) for c, v in equity[key].items()},

@@ -299,6 +299,37 @@ def _country_label(country) -> tuple[str, str]:
     return f"stocks:{c}", f"מניות {c}"
 
 
+_THEME_IDS = {t for _, t, _, _ in _THEMES}
+# מדד רחב של מדינה/אזור יחיד (ר' _REGION_BROAD) - אותה השקעה כמו מניות המדינה
+_BROAD_GEO = {"europe": "europe", "asia": "asia", "italy": "italy", "australia": "australia",
+              "china": "china", "japan": "japan", "india": "india"}
+# מדד בעל שם של מדינה/אזור יחיד - גם הוא מניות אותה מדינה (בכפתור המדינה, בשמו אם הוא לבד)
+_NAMED_GEO = {"dax": "גרמניה", "ftse100": "בריטניה", "smi": "שווייץ", "jpx400": "יפן", "nikkei225": "יפן",
+              "topix": "יפן", "hangseng": "סין", "korea": "דרום קוריאה", "taiwan": "טייוואן", "canada": "קנדה",
+              "stoxx600": "אירופה", "stoxx50": "אירופה"}
+_NOT_A_GEO = {"גלובלי", "עולמי", "לא ידוע", ""}
+
+
+def index_geo(idx: str) -> tuple[str, str] | None:
+    """(מדינה/אזור בעברית, סוג) של מזהה מדד: "sector" - ענף/סגנון במדינה ("banks:europe"),
+    "stocks" - מניות המדינה (ישירות / קרן אזורית / סל מותאם / מדד רחב של המדינה).
+    "index" - מדד בעל שם של מדינה אחת (DAX, ניקיי 225). None - מדד רב-מדינתי (S&P 500 נחשב
+    כאן ארה"ב דרך המיתוג בדף) או בלי מדינה. לקיבוץ בדף המסלול."""
+    head, _, tail = idx.partition(":")
+    out = None
+    if head in _THEME_IDS and tail in REGION_LABEL:
+        out = REGION_LABEL[tail], "sector"
+    elif head in ("stocks", "basket") and tail:
+        out = tail, "stocks"
+    elif head == "region" and tail in REGION_LABEL:
+        out = REGION_LABEL[tail], "stocks"
+    elif not tail and idx in _BROAD_GEO:
+        out = REGION_LABEL[_BROAD_GEO[idx]], "stocks"
+    elif not tail and idx in _NAMED_GEO:
+        out = _NAMED_GEO[idx], "index"
+    return out if out and out[0] not in _NOT_A_GEO else None
+
+
 def is_local(idx: str) -> bool:
     """חשיפה למניות בארץ: מדדי ת"א, נושא/אזור ישראל, מניות וסלים בישראל."""
     return idx in ("ta35", "ta125", "ta90") or idx.endswith((":il", ":ישראל"))
