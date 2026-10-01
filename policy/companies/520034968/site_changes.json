@@ -1,137 +1,641 @@
 [
  {
-  "kind": "new_page",
+  "kind": "text_changed",
   "page": "https://www.i-keren.co.il/%D7%9E%D7%93%D7%99%D7%A0%D7%99%D7%95%D7%AA-%D7%95%D7%A0%D7%94%D7%9C%D7%99%D7%9D/%D7%9E%D7%93%D7%99%D7%A0%D7%99%D7%95%D7%AA-%D7%94%D7%A9%D7%A7%D7%A2%D7%95%D7%AA/",
-  "text": "36 items",
+  "text": "אמנת שירות -> (html)",
+  "href": "https://www.i-keren.co.il/wp-content/uploads/2026/08/אמנת_שירות_לקוחות_2026.pdf",
+  "legal_id": "520034968",
+  "company": "החברה המנהלת של קרן השתלמות של עובדי חברת החשמל לישראל בע\"מ",
+  "detected": "2026-10-01T10:44:10+00:00"
+ },
+ {
+  "kind": "text_changed",
+  "page": "https://www.i-keren.co.il/%D7%9E%D7%93%D7%99%D7%A0%D7%99%D7%95%D7%AA-%D7%95%D7%A0%D7%94%D7%9C%D7%99%D7%9D/%D7%9E%D7%93%D7%99%D7%A0%D7%99%D7%95%D7%AA-%D7%94%D7%A9%D7%A7%D7%A2%D7%95%D7%AA/",
+  "text": "הורד -> (html)",
+  "href": "https://www.i-keren.co.il/wp-content/uploads/2026/01/mediniyut_hashkaa_2026_atar-1.pdf",
+  "legal_id": "520034968",
+  "company": "החברה המנהלת של קרן השתלמות של עובדי חברת החשמל לישראל בע\"מ",
+  "detected": "2026-10-01T10:44:10+00:00"
+ },
+ {
+  "kind": "text_changed",
+  "page": "https://www.i-keren.co.il/%D7%9E%D7%93%D7%99%D7%A0%D7%99%D7%95%D7%AA-%D7%95%D7%A0%D7%94%D7%9C%D7%99%D7%9D/%D7%9E%D7%93%D7%99%D7%A0%D7%99%D7%95%D7%AA-%D7%94%D7%A9%D7%A7%D7%A2%D7%95%D7%AA/",
+  "text": "הורד -> (html)",
+  "href": "https://www.i-keren.co.il/wp-content/uploads/2025/12/mediniyut_ESG.pdf",
+  "legal_id": "520034968",
+  "company": "החברה המנהלת של קרן השתלמות של עובדי חברת החשמל לישראל בע\"מ",
+  "detected": "2026-10-01T10:44:10+00:00"
+ },
+ {
+  "kind": "text_changed",
+  "page": "https://www.i-keren.co.il/%D7%9E%D7%93%D7%99%D7%A0%D7%99%D7%95%D7%AA-%D7%95%D7%A0%D7%94%D7%9C%D7%99%D7%9D/%D7%9E%D7%93%D7%99%D7%A0%D7%99%D7%95%D7%AA-%D7%94%D7%A9%D7%A7%D7%A2%D7%95%D7%AA/",
+  "text": "הורד -> (html)",
+  "href": "https://www.i-keren.co.il/wp-content/uploads/2025/05/mediniyut_hashkaa_2025.pdf",
+  "legal_id": "520034968",
+  "company": "החברה המנהלת של קרן השתלמות של עובדי חברת החשמל לישראל בע\"מ",
+  "detected": "2026-10-01T10:44:10+00:00"
+ },
+ {
+  "kind": "text_changed",
+  "page": "https://www.i-keren.co.il/%D7%9E%D7%93%D7%99%D7%A0%D7%99%D7%95%D7%AA-%D7%95%D7%A0%D7%94%D7%9C%D7%99%D7%9D/%D7%9E%D7%93%D7%99%D7%A0%D7%99%D7%95%D7%AA-%D7%94%D7%A9%D7%A7%D7%A2%D7%95%D7%AA/",
+  "text": "מדיניות הפרטיות -> (html)",
+  "href": "https://www.i-keren.co.il/wp-content/uploads/2025/08/מדיניות_הפרטיות.pdf",
+  "legal_id": "520034968",
+  "company": "החברה המנהלת של קרן השתלמות של עובדי חברת החשמל לישראל בע\"מ",
+  "detected": "2026-10-01T10:44:10+00:00"
+ },
+ {
+  "kind": "text_changed",
+  "page": "https://www.i-keren.co.il/%D7%9E%D7%93%D7%99%D7%A0%D7%99%D7%95%D7%AA-%D7%95%D7%A0%D7%94%D7%9C%D7%99%D7%9D/%D7%9E%D7%93%D7%99%D7%A0%D7%99%D7%95%D7%AA-%D7%94%D7%A9%D7%A7%D7%A2%D7%95%D7%AA/",
+  "text": "במדיניות הפרטיות -> (html)",
+  "href": "https://www.i-keren.co.il/wp-content/uploads/2025/08/%D7%9E%D7%93%D7%99%D7%A0%D7%99%D7%95%D7%AA_%D7%94%D7%A4%D7%A8%D7%98%D7%99%D7%95%D7%AA.pdf",
+  "legal_id": "520034968",
+  "company": "החברה המנהלת של קרן השתלמות של עובדי חברת החשמל לישראל בע\"מ",
+  "detected": "2026-10-01T10:44:10+00:00"
+ },
+ {
+  "kind": "text_changed",
+  "page": "https://www.i-keren.co.il/%D7%9E%D7%93%D7%99%D7%A0%D7%99%D7%95%D7%AA-%D7%95%D7%A0%D7%94%D7%9C%D7%99%D7%9D/%D7%9E%D7%93%D7%99%D7%A0%D7%99%D7%95%D7%AA-%D7%94%D7%A9%D7%A7%D7%A2%D7%95%D7%AA/",
+  "text": "הורד -> (html)",
+  "href": "https://www.i-keren.co.il/wp-content/uploads/2024/10/mediniyut_hashkaa_2024_240806_atar-1.pdf",
+  "legal_id": "520034968",
+  "company": "החברה המנהלת של קרן השתלמות של עובדי חברת החשמל לישראל בע\"מ",
+  "detected": "2026-10-01T10:44:10+00:00"
+ },
+ {
+  "kind": "text_changed",
+  "page": "https://www.i-keren.co.il/%D7%9E%D7%93%D7%99%D7%A0%D7%99%D7%95%D7%AA-%D7%95%D7%A0%D7%94%D7%9C%D7%99%D7%9D/%D7%9E%D7%93%D7%99%D7%A0%D7%99%D7%95%D7%AA-%D7%94%D7%A9%D7%A7%D7%A2%D7%95%D7%AA/",
+  "text": "הורד -> (html)",
+  "href": "https://www.i-keren.co.il/wp-content/uploads/2024/04/mediniyut_hashkaa_2024_240404_atar.pdf",
+  "legal_id": "520034968",
+  "company": "החברה המנהלת של קרן השתלמות של עובדי חברת החשמל לישראל בע\"מ",
+  "detected": "2026-10-01T10:44:10+00:00"
+ },
+ {
+  "kind": "text_changed",
+  "page": "https://www.i-keren.co.il/%D7%9E%D7%93%D7%99%D7%A0%D7%99%D7%95%D7%AA-%D7%95%D7%A0%D7%94%D7%9C%D7%99%D7%9D/%D7%9E%D7%93%D7%99%D7%A0%D7%99%D7%95%D7%AA-%D7%94%D7%A9%D7%A7%D7%A2%D7%95%D7%AA/",
+  "text": "הורד -> (html)",
+  "href": "https://www.i-keren.co.il/wp-content/uploads/2024/03/mediniyut_hashkaa_2024_240213_atar.pdf",
+  "legal_id": "520034968",
+  "company": "החברה המנהלת של קרן השתלמות של עובדי חברת החשמל לישראל בע\"מ",
+  "detected": "2026-10-01T10:44:10+00:00"
+ },
+ {
+  "kind": "text_changed",
+  "page": "https://www.i-keren.co.il/%D7%9E%D7%93%D7%99%D7%A0%D7%99%D7%95%D7%AA-%D7%95%D7%A0%D7%94%D7%9C%D7%99%D7%9D/%D7%9E%D7%93%D7%99%D7%A0%D7%99%D7%95%D7%AA-%D7%94%D7%A9%D7%A7%D7%A2%D7%95%D7%AA/",
+  "text": "הורד -> (html)",
+  "href": "https://www.i-keren.co.il/wp-content/uploads/2024/01/mediniyut_hashkaa_2024_231128_atar.pdf",
+  "legal_id": "520034968",
+  "company": "החברה המנהלת של קרן השתלמות של עובדי חברת החשמל לישראל בע\"מ",
+  "detected": "2026-10-01T10:44:10+00:00"
+ },
+ {
+  "kind": "text_changed",
+  "page": "https://www.i-keren.co.il/%D7%9E%D7%93%D7%99%D7%A0%D7%99%D7%95%D7%AA-%D7%95%D7%A0%D7%94%D7%9C%D7%99%D7%9D/%D7%9E%D7%93%D7%99%D7%A0%D7%99%D7%95%D7%AA-%D7%94%D7%A9%D7%A7%D7%A2%D7%95%D7%AA/",
+  "text": "הורד -> (html)",
+  "href": "https://www.i-keren.co.il/wp-content/uploads/2023/04/mediniyut_hashkaa_2023_230321_atar.pdf",
+  "legal_id": "520034968",
+  "company": "החברה המנהלת של קרן השתלמות של עובדי חברת החשמל לישראל בע\"מ",
+  "detected": "2026-10-01T10:44:10+00:00"
+ },
+ {
+  "kind": "text_changed",
+  "page": "https://www.i-keren.co.il/%D7%9E%D7%93%D7%99%D7%A0%D7%99%D7%95%D7%AA-%D7%95%D7%A0%D7%94%D7%9C%D7%99%D7%9D/%D7%9E%D7%93%D7%99%D7%A0%D7%99%D7%95%D7%AA-%D7%94%D7%A9%D7%A7%D7%A2%D7%95%D7%AA/",
+  "text": "הורד -> (html)",
+  "href": "https://www.i-keren.co.il/wp-content/uploads/2023/02/mediniyut_hashkaa_2023_221229.pdf",
+  "legal_id": "520034968",
+  "company": "החברה המנהלת של קרן השתלמות של עובדי חברת החשמל לישראל בע\"מ",
+  "detected": "2026-10-01T10:44:10+00:00"
+ },
+ {
+  "kind": "text_changed",
+  "page": "https://www.i-keren.co.il/%D7%9E%D7%93%D7%99%D7%A0%D7%99%D7%95%D7%AA-%D7%95%D7%A0%D7%94%D7%9C%D7%99%D7%9D/%D7%9E%D7%93%D7%99%D7%A0%D7%99%D7%95%D7%AA-%D7%94%D7%A9%D7%A7%D7%A2%D7%95%D7%AA/",
+  "text": "הורד -> (html)",
+  "href": "https://www.i-keren.co.il/wp-content/uploads/2022/04/mediniyut_hashkaa_2022_2200405.pdf",
+  "legal_id": "520034968",
+  "company": "החברה המנהלת של קרן השתלמות של עובדי חברת החשמל לישראל בע\"מ",
+  "detected": "2026-10-01T10:44:10+00:00"
+ },
+ {
+  "kind": "text_changed",
+  "page": "https://www.i-keren.co.il/%D7%9E%D7%93%D7%99%D7%A0%D7%99%D7%95%D7%AA-%D7%95%D7%A0%D7%94%D7%9C%D7%99%D7%9D/%D7%9E%D7%93%D7%99%D7%A0%D7%99%D7%95%D7%AA-%D7%94%D7%A9%D7%A7%D7%A2%D7%95%D7%AA/",
+  "text": "הורד -> (html)",
+  "href": "https://www.i-keren.co.il/wp-content/uploads/2022/02/mediniyut_hashkaa_2022_220127.pdf",
+  "legal_id": "520034968",
+  "company": "החברה המנהלת של קרן השתלמות של עובדי חברת החשמל לישראל בע\"מ",
+  "detected": "2026-10-01T10:44:10+00:00"
+ },
+ {
+  "kind": "text_changed",
+  "page": "https://www.i-keren.co.il/%D7%9E%D7%93%D7%99%D7%A0%D7%99%D7%95%D7%AA-%D7%95%D7%A0%D7%94%D7%9C%D7%99%D7%9D/%D7%9E%D7%93%D7%99%D7%A0%D7%99%D7%95%D7%AA-%D7%94%D7%A9%D7%A7%D7%A2%D7%95%D7%AA/",
+  "text": "הורד -> (html)",
+  "href": "https://www.i-keren.co.il/wp-content/uploads/2021/10/mediniyut_hashkaa_2021_2108241.xlsx",
+  "legal_id": "520034968",
+  "company": "החברה המנהלת של קרן השתלמות של עובדי חברת החשמל לישראל בע\"מ",
+  "detected": "2026-10-01T10:44:10+00:00"
+ },
+ {
+  "kind": "text_changed",
+  "page": "https://www.i-keren.co.il/%D7%9E%D7%93%D7%99%D7%A0%D7%99%D7%95%D7%AA-%D7%95%D7%A0%D7%94%D7%9C%D7%99%D7%9D/%D7%9E%D7%93%D7%99%D7%A0%D7%99%D7%95%D7%AA-%D7%94%D7%A9%D7%A7%D7%A2%D7%95%D7%AA/",
+  "text": "הורד -> (html)",
+  "href": "https://www.i-keren.co.il/wp-content/uploads/2021/04/mediniyut_hashkaa_2021_210408.xlsx",
+  "legal_id": "520034968",
+  "company": "החברה המנהלת של קרן השתלמות של עובדי חברת החשמל לישראל בע\"מ",
+  "detected": "2026-10-01T10:44:10+00:00"
+ },
+ {
+  "kind": "text_changed",
+  "page": "https://www.i-keren.co.il/%D7%9E%D7%93%D7%99%D7%A0%D7%99%D7%95%D7%AA-%D7%95%D7%A0%D7%94%D7%9C%D7%99%D7%9D/%D7%9E%D7%93%D7%99%D7%A0%D7%99%D7%95%D7%AA-%D7%94%D7%A9%D7%A7%D7%A2%D7%95%D7%AA/",
+  "text": "הורד -> (html)",
+  "href": "https://www.i-keren.co.il/wp-content/uploads/2021/01/mediniyut_hashkaa_2021.xlsx",
+  "legal_id": "520034968",
+  "company": "החברה המנהלת של קרן השתלמות של עובדי חברת החשמל לישראל בע\"מ",
+  "detected": "2026-10-01T10:44:10+00:00"
+ },
+ {
+  "kind": "text_changed",
+  "page": "https://www.i-keren.co.il/%D7%9E%D7%93%D7%99%D7%A0%D7%99%D7%95%D7%AA-%D7%95%D7%A0%D7%94%D7%9C%D7%99%D7%9D/%D7%9E%D7%93%D7%99%D7%A0%D7%99%D7%95%D7%AA-%D7%94%D7%A9%D7%A7%D7%A2%D7%95%D7%AA/",
+  "text": "הורד -> (html)",
+  "href": "https://www.i-keren.co.il/wp-content/uploads/2020/04/mediniyut_hashkaa_2020.pdf",
+  "legal_id": "520034968",
+  "company": "החברה המנהלת של קרן השתלמות של עובדי חברת החשמל לישראל בע\"מ",
+  "detected": "2026-10-01T10:44:10+00:00"
+ },
+ {
+  "kind": "text_changed",
+  "page": "https://www.i-keren.co.il/%D7%9E%D7%93%D7%99%D7%A0%D7%99%D7%95%D7%AA-%D7%95%D7%A0%D7%94%D7%9C%D7%99%D7%9D/%D7%9E%D7%93%D7%99%D7%A0%D7%99%D7%95%D7%AA-%D7%94%D7%A9%D7%A7%D7%A2%D7%95%D7%AA/",
+  "text": "הורד -> (html)",
+  "href": "https://www.i-keren.co.il/wp-content/uploads/2020/04/mediniyut_hashkaa-2019.xlsx",
+  "legal_id": "520034968",
+  "company": "החברה המנהלת של קרן השתלמות של עובדי חברת החשמל לישראל בע\"מ",
+  "detected": "2026-10-01T10:44:10+00:00"
+ },
+ {
+  "kind": "text_changed",
+  "page": "https://www.i-keren.co.il/%D7%9E%D7%93%D7%99%D7%A0%D7%99%D7%95%D7%AA-%D7%95%D7%A0%D7%94%D7%9C%D7%99%D7%9D/%D7%9E%D7%93%D7%99%D7%A0%D7%99%D7%95%D7%AA-%D7%94%D7%A9%D7%A7%D7%A2%D7%95%D7%AA/",
+  "text": "הורד -> (html)",
+  "href": "https://www.i-keren.co.il/wp-content/uploads/2020/04/keren_mediniyut_2018_atar.xlsx",
+  "legal_id": "520034968",
+  "company": "החברה המנהלת של קרן השתלמות של עובדי חברת החשמל לישראל בע\"מ",
+  "detected": "2026-10-01T10:44:10+00:00"
+ },
+ {
+  "kind": "text_changed",
+  "page": "https://www.i-keren.co.il/%D7%9E%D7%93%D7%99%D7%A0%D7%99%D7%95%D7%AA-%D7%95%D7%A0%D7%94%D7%9C%D7%99%D7%9D/%D7%9E%D7%93%D7%99%D7%A0%D7%99%D7%95%D7%AA-%D7%94%D7%A9%D7%A7%D7%A2%D7%95%D7%AA/",
+  "text": "הורד -> (html)",
+  "href": "https://www.i-keren.co.il/wp-content/uploads/2020/04/mediniyut_hashkaa-2.xlsx",
+  "legal_id": "520034968",
+  "company": "החברה המנהלת של קרן השתלמות של עובדי חברת החשמל לישראל בע\"מ",
+  "detected": "2026-10-01T10:44:10+00:00"
+ },
+ {
+  "kind": "text_changed",
+  "page": "https://www.i-keren.co.il/%D7%9E%D7%93%D7%99%D7%A0%D7%99%D7%95%D7%AA-%D7%95%D7%A0%D7%94%D7%9C%D7%99%D7%9D/%D7%9E%D7%93%D7%99%D7%A0%D7%99%D7%95%D7%AA-%D7%94%D7%A9%D7%A7%D7%A2%D7%95%D7%AA/",
+  "text": " -> Right Menu Button",
   "href": "https://www.i-keren.co.il/%D7%9E%D7%93%D7%99%D7%A0%D7%99%D7%95%D7%AA-%D7%95%D7%A0%D7%94%D7%9C%D7%99%D7%9D/%D7%9E%D7%93%D7%99%D7%A0%D7%99%D7%95%D7%AA-%D7%94%D7%A9%D7%A7%D7%A2%D7%95%D7%AA/",
   "legal_id": "520034968",
   "company": "החברה המנהלת של קרן השתלמות של עובדי חברת החשמל לישראל בע\"מ",
-  "detected": "2026-09-30T23:41:46+00:00"
+  "detected": "2026-10-01T10:44:10+00:00"
  },
  {
-  "kind": "new_page",
+  "kind": "text_changed",
   "page": "https://www.i-keren.co.il/%d7%9e%d7%93%d7%99%d7%a0%d7%99%d7%95%d7%aa-%d7%95%d7%a0%d7%94%d7%9c%d7%99%d7%9d/%d7%9e%d7%93%d7%99%d7%a0%d7%99%d7%95%d7%aa-%d7%94%d7%a9%d7%a7%d7%a2%d7%95%d7%aa/",
-  "text": "35 items",
+  "text": "אמנת שירות -> (html)",
+  "href": "https://www.i-keren.co.il/wp-content/uploads/2026/08/אמנת_שירות_לקוחות_2026.pdf",
+  "legal_id": "520034968",
+  "company": "החברה המנהלת של קרן השתלמות של עובדי חברת החשמל לישראל בע\"מ",
+  "detected": "2026-10-01T10:44:10+00:00"
+ },
+ {
+  "kind": "text_changed",
+  "page": "https://www.i-keren.co.il/%d7%9e%d7%93%d7%99%d7%a0%d7%99%d7%95%d7%aa-%d7%95%d7%a0%d7%94%d7%9c%d7%99%d7%9d/%d7%9e%d7%93%d7%99%d7%a0%d7%99%d7%95%d7%aa-%d7%94%d7%a9%d7%a7%d7%a2%d7%95%d7%aa/",
+  "text": "הורד -> (html)",
+  "href": "https://www.i-keren.co.il/wp-content/uploads/2026/01/mediniyut_hashkaa_2026_atar-1.pdf",
+  "legal_id": "520034968",
+  "company": "החברה המנהלת של קרן השתלמות של עובדי חברת החשמל לישראל בע\"מ",
+  "detected": "2026-10-01T10:44:10+00:00"
+ },
+ {
+  "kind": "text_changed",
+  "page": "https://www.i-keren.co.il/%d7%9e%d7%93%d7%99%d7%a0%d7%99%d7%95%d7%aa-%d7%95%d7%a0%d7%94%d7%9c%d7%99%d7%9d/%d7%9e%d7%93%d7%99%d7%a0%d7%99%d7%95%d7%aa-%d7%94%d7%a9%d7%a7%d7%a2%d7%95%d7%aa/",
+  "text": "הורד -> (html)",
+  "href": "https://www.i-keren.co.il/wp-content/uploads/2025/12/mediniyut_ESG.pdf",
+  "legal_id": "520034968",
+  "company": "החברה המנהלת של קרן השתלמות של עובדי חברת החשמל לישראל בע\"מ",
+  "detected": "2026-10-01T10:44:10+00:00"
+ },
+ {
+  "kind": "text_changed",
+  "page": "https://www.i-keren.co.il/%d7%9e%d7%93%d7%99%d7%a0%d7%99%d7%95%d7%aa-%d7%95%d7%a0%d7%94%d7%9c%d7%99%d7%9d/%d7%9e%d7%93%d7%99%d7%a0%d7%99%d7%95%d7%aa-%d7%94%d7%a9%d7%a7%d7%a2%d7%95%d7%aa/",
+  "text": "הורד -> (html)",
+  "href": "https://www.i-keren.co.il/wp-content/uploads/2025/05/mediniyut_hashkaa_2025.pdf",
+  "legal_id": "520034968",
+  "company": "החברה המנהלת של קרן השתלמות של עובדי חברת החשמל לישראל בע\"מ",
+  "detected": "2026-10-01T10:44:10+00:00"
+ },
+ {
+  "kind": "text_changed",
+  "page": "https://www.i-keren.co.il/%d7%9e%d7%93%d7%99%d7%a0%d7%99%d7%95%d7%aa-%d7%95%d7%a0%d7%94%d7%9c%d7%99%d7%9d/%d7%9e%d7%93%d7%99%d7%a0%d7%99%d7%95%d7%aa-%d7%94%d7%a9%d7%a7%d7%a2%d7%95%d7%aa/",
+  "text": "מדיניות הפרטיות -> (html)",
+  "href": "https://www.i-keren.co.il/wp-content/uploads/2025/08/מדיניות_הפרטיות.pdf",
+  "legal_id": "520034968",
+  "company": "החברה המנהלת של קרן השתלמות של עובדי חברת החשמל לישראל בע\"מ",
+  "detected": "2026-10-01T10:44:10+00:00"
+ },
+ {
+  "kind": "text_changed",
+  "page": "https://www.i-keren.co.il/%d7%9e%d7%93%d7%99%d7%a0%d7%99%d7%95%d7%aa-%d7%95%d7%a0%d7%94%d7%9c%d7%99%d7%9d/%d7%9e%d7%93%d7%99%d7%a0%d7%99%d7%95%d7%aa-%d7%94%d7%a9%d7%a7%d7%a2%d7%95%d7%aa/",
+  "text": "במדיניות הפרטיות -> (html)",
+  "href": "https://www.i-keren.co.il/wp-content/uploads/2025/08/%D7%9E%D7%93%D7%99%D7%A0%D7%99%D7%95%D7%AA_%D7%94%D7%A4%D7%A8%D7%98%D7%99%D7%95%D7%AA.pdf",
+  "legal_id": "520034968",
+  "company": "החברה המנהלת של קרן השתלמות של עובדי חברת החשמל לישראל בע\"מ",
+  "detected": "2026-10-01T10:44:10+00:00"
+ },
+ {
+  "kind": "text_changed",
+  "page": "https://www.i-keren.co.il/%d7%9e%d7%93%d7%99%d7%a0%d7%99%d7%95%d7%aa-%d7%95%d7%a0%d7%94%d7%9c%d7%99%d7%9d/%d7%9e%d7%93%d7%99%d7%a0%d7%99%d7%95%d7%aa-%d7%94%d7%a9%d7%a7%d7%a2%d7%95%d7%aa/",
+  "text": "הורד -> (html)",
+  "href": "https://www.i-keren.co.il/wp-content/uploads/2024/10/mediniyut_hashkaa_2024_240806_atar-1.pdf",
+  "legal_id": "520034968",
+  "company": "החברה המנהלת של קרן השתלמות של עובדי חברת החשמל לישראל בע\"מ",
+  "detected": "2026-10-01T10:44:10+00:00"
+ },
+ {
+  "kind": "text_changed",
+  "page": "https://www.i-keren.co.il/%d7%9e%d7%93%d7%99%d7%a0%d7%99%d7%95%d7%aa-%d7%95%d7%a0%d7%94%d7%9c%d7%99%d7%9d/%d7%9e%d7%93%d7%99%d7%a0%d7%99%d7%95%d7%aa-%d7%94%d7%a9%d7%a7%d7%a2%d7%95%d7%aa/",
+  "text": "הורד -> (html)",
+  "href": "https://www.i-keren.co.il/wp-content/uploads/2024/04/mediniyut_hashkaa_2024_240404_atar.pdf",
+  "legal_id": "520034968",
+  "company": "החברה המנהלת של קרן השתלמות של עובדי חברת החשמל לישראל בע\"מ",
+  "detected": "2026-10-01T10:44:10+00:00"
+ },
+ {
+  "kind": "text_changed",
+  "page": "https://www.i-keren.co.il/%d7%9e%d7%93%d7%99%d7%a0%d7%99%d7%95%d7%aa-%d7%95%d7%a0%d7%94%d7%9c%d7%99%d7%9d/%d7%9e%d7%93%d7%99%d7%a0%d7%99%d7%95%d7%aa-%d7%94%d7%a9%d7%a7%d7%a2%d7%95%d7%aa/",
+  "text": "הורד -> (html)",
+  "href": "https://www.i-keren.co.il/wp-content/uploads/2024/03/mediniyut_hashkaa_2024_240213_atar.pdf",
+  "legal_id": "520034968",
+  "company": "החברה המנהלת של קרן השתלמות של עובדי חברת החשמל לישראל בע\"מ",
+  "detected": "2026-10-01T10:44:10+00:00"
+ },
+ {
+  "kind": "text_changed",
+  "page": "https://www.i-keren.co.il/%d7%9e%d7%93%d7%99%d7%a0%d7%99%d7%95%d7%aa-%d7%95%d7%a0%d7%94%d7%9c%d7%99%d7%9d/%d7%9e%d7%93%d7%99%d7%a0%d7%99%d7%95%d7%aa-%d7%94%d7%a9%d7%a7%d7%a2%d7%95%d7%aa/",
+  "text": "הורד -> (html)",
+  "href": "https://www.i-keren.co.il/wp-content/uploads/2024/01/mediniyut_hashkaa_2024_231128_atar.pdf",
+  "legal_id": "520034968",
+  "company": "החברה המנהלת של קרן השתלמות של עובדי חברת החשמל לישראל בע\"מ",
+  "detected": "2026-10-01T10:44:10+00:00"
+ },
+ {
+  "kind": "text_changed",
+  "page": "https://www.i-keren.co.il/%d7%9e%d7%93%d7%99%d7%a0%d7%99%d7%95%d7%aa-%d7%95%d7%a0%d7%94%d7%9c%d7%99%d7%9d/%d7%9e%d7%93%d7%99%d7%a0%d7%99%d7%95%d7%aa-%d7%94%d7%a9%d7%a7%d7%a2%d7%95%d7%aa/",
+  "text": "הורד -> (html)",
+  "href": "https://www.i-keren.co.il/wp-content/uploads/2023/04/mediniyut_hashkaa_2023_230321_atar.pdf",
+  "legal_id": "520034968",
+  "company": "החברה המנהלת של קרן השתלמות של עובדי חברת החשמל לישראל בע\"מ",
+  "detected": "2026-10-01T10:44:10+00:00"
+ },
+ {
+  "kind": "text_changed",
+  "page": "https://www.i-keren.co.il/%d7%9e%d7%93%d7%99%d7%a0%d7%99%d7%95%d7%aa-%d7%95%d7%a0%d7%94%d7%9c%d7%99%d7%9d/%d7%9e%d7%93%d7%99%d7%a0%d7%99%d7%95%d7%aa-%d7%94%d7%a9%d7%a7%d7%a2%d7%95%d7%aa/",
+  "text": "הורד -> (html)",
+  "href": "https://www.i-keren.co.il/wp-content/uploads/2023/02/mediniyut_hashkaa_2023_221229.pdf",
+  "legal_id": "520034968",
+  "company": "החברה המנהלת של קרן השתלמות של עובדי חברת החשמל לישראל בע\"מ",
+  "detected": "2026-10-01T10:44:10+00:00"
+ },
+ {
+  "kind": "text_changed",
+  "page": "https://www.i-keren.co.il/%d7%9e%d7%93%d7%99%d7%a0%d7%99%d7%95%d7%aa-%d7%95%d7%a0%d7%94%d7%9c%d7%99%d7%9d/%d7%9e%d7%93%d7%99%d7%a0%d7%99%d7%95%d7%aa-%d7%94%d7%a9%d7%a7%d7%a2%d7%95%d7%aa/",
+  "text": "הורד -> (html)",
+  "href": "https://www.i-keren.co.il/wp-content/uploads/2022/04/mediniyut_hashkaa_2022_2200405.pdf",
+  "legal_id": "520034968",
+  "company": "החברה המנהלת של קרן השתלמות של עובדי חברת החשמל לישראל בע\"מ",
+  "detected": "2026-10-01T10:44:10+00:00"
+ },
+ {
+  "kind": "text_changed",
+  "page": "https://www.i-keren.co.il/%d7%9e%d7%93%d7%99%d7%a0%d7%99%d7%95%d7%aa-%d7%95%d7%a0%d7%94%d7%9c%d7%99%d7%9d/%d7%9e%d7%93%d7%99%d7%a0%d7%99%d7%95%d7%aa-%d7%94%d7%a9%d7%a7%d7%a2%d7%95%d7%aa/",
+  "text": "הורד -> (html)",
+  "href": "https://www.i-keren.co.il/wp-content/uploads/2022/02/mediniyut_hashkaa_2022_220127.pdf",
+  "legal_id": "520034968",
+  "company": "החברה המנהלת של קרן השתלמות של עובדי חברת החשמל לישראל בע\"מ",
+  "detected": "2026-10-01T10:44:10+00:00"
+ },
+ {
+  "kind": "text_changed",
+  "page": "https://www.i-keren.co.il/%d7%9e%d7%93%d7%99%d7%a0%d7%99%d7%95%d7%aa-%d7%95%d7%a0%d7%94%d7%9c%d7%99%d7%9d/%d7%9e%d7%93%d7%99%d7%a0%d7%99%d7%95%d7%aa-%d7%94%d7%a9%d7%a7%d7%a2%d7%95%d7%aa/",
+  "text": "הורד -> (html)",
+  "href": "https://www.i-keren.co.il/wp-content/uploads/2021/10/mediniyut_hashkaa_2021_2108241.xlsx",
+  "legal_id": "520034968",
+  "company": "החברה המנהלת של קרן השתלמות של עובדי חברת החשמל לישראל בע\"מ",
+  "detected": "2026-10-01T10:44:10+00:00"
+ },
+ {
+  "kind": "text_changed",
+  "page": "https://www.i-keren.co.il/%d7%9e%d7%93%d7%99%d7%a0%d7%99%d7%95%d7%aa-%d7%95%d7%a0%d7%94%d7%9c%d7%99%d7%9d/%d7%9e%d7%93%d7%99%d7%a0%d7%99%d7%95%d7%aa-%d7%94%d7%a9%d7%a7%d7%a2%d7%95%d7%aa/",
+  "text": "הורד -> (html)",
+  "href": "https://www.i-keren.co.il/wp-content/uploads/2021/04/mediniyut_hashkaa_2021_210408.xlsx",
+  "legal_id": "520034968",
+  "company": "החברה המנהלת של קרן השתלמות של עובדי חברת החשמל לישראל בע\"מ",
+  "detected": "2026-10-01T10:44:10+00:00"
+ },
+ {
+  "kind": "text_changed",
+  "page": "https://www.i-keren.co.il/%d7%9e%d7%93%d7%99%d7%a0%d7%99%d7%95%d7%aa-%d7%95%d7%a0%d7%94%d7%9c%d7%99%d7%9d/%d7%9e%d7%93%d7%99%d7%a0%d7%99%d7%95%d7%aa-%d7%94%d7%a9%d7%a7%d7%a2%d7%95%d7%aa/",
+  "text": "הורד -> (html)",
+  "href": "https://www.i-keren.co.il/wp-content/uploads/2021/01/mediniyut_hashkaa_2021.xlsx",
+  "legal_id": "520034968",
+  "company": "החברה המנהלת של קרן השתלמות של עובדי חברת החשמל לישראל בע\"מ",
+  "detected": "2026-10-01T10:44:10+00:00"
+ },
+ {
+  "kind": "text_changed",
+  "page": "https://www.i-keren.co.il/%d7%9e%d7%93%d7%99%d7%a0%d7%99%d7%95%d7%aa-%d7%95%d7%a0%d7%94%d7%9c%d7%99%d7%9d/%d7%9e%d7%93%d7%99%d7%a0%d7%99%d7%95%d7%aa-%d7%94%d7%a9%d7%a7%d7%a2%d7%95%d7%aa/",
+  "text": "הורד -> (html)",
+  "href": "https://www.i-keren.co.il/wp-content/uploads/2020/04/mediniyut_hashkaa_2020.pdf",
+  "legal_id": "520034968",
+  "company": "החברה המנהלת של קרן השתלמות של עובדי חברת החשמל לישראל בע\"מ",
+  "detected": "2026-10-01T10:44:10+00:00"
+ },
+ {
+  "kind": "text_changed",
+  "page": "https://www.i-keren.co.il/%d7%9e%d7%93%d7%99%d7%a0%d7%99%d7%95%d7%aa-%d7%95%d7%a0%d7%94%d7%9c%d7%99%d7%9d/%d7%9e%d7%93%d7%99%d7%a0%d7%99%d7%95%d7%aa-%d7%94%d7%a9%d7%a7%d7%a2%d7%95%d7%aa/",
+  "text": "הורד -> (html)",
+  "href": "https://www.i-keren.co.il/wp-content/uploads/2020/04/mediniyut_hashkaa-2019.xlsx",
+  "legal_id": "520034968",
+  "company": "החברה המנהלת של קרן השתלמות של עובדי חברת החשמל לישראל בע\"מ",
+  "detected": "2026-10-01T10:44:10+00:00"
+ },
+ {
+  "kind": "text_changed",
+  "page": "https://www.i-keren.co.il/%d7%9e%d7%93%d7%99%d7%a0%d7%99%d7%95%d7%aa-%d7%95%d7%a0%d7%94%d7%9c%d7%99%d7%9d/%d7%9e%d7%93%d7%99%d7%a0%d7%99%d7%95%d7%aa-%d7%94%d7%a9%d7%a7%d7%a2%d7%95%d7%aa/",
+  "text": "הורד -> (html)",
+  "href": "https://www.i-keren.co.il/wp-content/uploads/2020/04/keren_mediniyut_2018_atar.xlsx",
+  "legal_id": "520034968",
+  "company": "החברה המנהלת של קרן השתלמות של עובדי חברת החשמל לישראל בע\"מ",
+  "detected": "2026-10-01T10:44:10+00:00"
+ },
+ {
+  "kind": "text_changed",
+  "page": "https://www.i-keren.co.il/%d7%9e%d7%93%d7%99%d7%a0%d7%99%d7%95%d7%aa-%d7%95%d7%a0%d7%94%d7%9c%d7%99%d7%9d/%d7%9e%d7%93%d7%99%d7%a0%d7%99%d7%95%d7%aa-%d7%94%d7%a9%d7%a7%d7%a2%d7%95%d7%aa/",
+  "text": "הורד -> (html)",
+  "href": "https://www.i-keren.co.il/wp-content/uploads/2020/04/mediniyut_hashkaa-2.xlsx",
+  "legal_id": "520034968",
+  "company": "החברה המנהלת של קרן השתלמות של עובדי חברת החשמל לישראל בע\"מ",
+  "detected": "2026-10-01T10:44:10+00:00"
+ },
+ {
+  "kind": "text_changed",
+  "page": "https://www.i-keren.co.il/%d7%9e%d7%93%d7%99%d7%a0%d7%99%d7%95%d7%aa-%d7%95%d7%a0%d7%94%d7%9c%d7%99%d7%9d/%d7%9e%d7%93%d7%99%d7%a0%d7%99%d7%95%d7%aa-%d7%94%d7%a9%d7%a7%d7%a2%d7%95%d7%aa/",
+  "text": " -> Right Menu Button",
   "href": "https://www.i-keren.co.il/%d7%9e%d7%93%d7%99%d7%a0%d7%99%d7%95%d7%aa-%d7%95%d7%a0%d7%94%d7%9c%d7%99%d7%9d/%d7%9e%d7%93%d7%99%d7%a0%d7%99%d7%95%d7%aa-%d7%94%d7%a9%d7%a7%d7%a2%d7%95%d7%aa/",
   "legal_id": "520034968",
   "company": "החברה המנהלת של קרן השתלמות של עובדי חברת החשמל לישראל בע\"מ",
-  "detected": "2026-09-30T23:41:46+00:00"
+  "detected": "2026-10-01T10:44:10+00:00"
  },
  {
-  "kind": "new_page",
+  "kind": "text_changed",
   "page": "https://www.i-keren.co.il",
-  "text": "16 items",
+  "text": "קרן השתלמות לעובדי חברת החשמל לישראל בעמ -> מידע כללי אודות החברה המנהלת אודות קרן ההשתלמות חברי הדירקטוריון וועדותיו חברי הנהלה ובעלי תפקידים מידע סטטיסטי פירסומים לציבור תקנון מידע למעסיק חשבון מעסיק מקוון-כניסה למנוי קיים מידע לעמית מידע איש",
   "href": "https://www.i-keren.co.il",
   "legal_id": "520034968",
   "company": "החברה המנהלת של קרן השתלמות של עובדי חברת החשמל לישראל בע\"מ",
-  "detected": "2026-09-30T23:41:46+00:00"
+  "detected": "2026-10-01T10:44:10+00:00"
  },
  {
-  "kind": "new_page",
-  "page": "https://www.i-keren.co.il/%d7%9e%d7%99%d7%93%d7%a2-%d7%9b%d7%9c%d7%9c%d7%99/%d7%90%d7%95%d7%93%d7%95%d7%aa-%d7%a7%d7%a8%d7%9f-%d7%94%d7%94%d7%a9%d7%aa%d7%9c%d7%9e%d7%95%d7%aa/",
-  "text": "15 items",
-  "href": "https://www.i-keren.co.il/%d7%9e%d7%99%d7%93%d7%a2-%d7%9b%d7%9c%d7%9c%d7%99/%d7%90%d7%95%d7%93%d7%95%d7%aa-%d7%a7%d7%a8%d7%9f-%d7%94%d7%94%d7%a9%d7%aa%d7%9c%d7%9e%d7%95%d7%aa/",
-  "legal_id": "520034968",
-  "company": "החברה המנהלת של קרן השתלמות של עובדי חברת החשמל לישראל בע\"מ",
-  "detected": "2026-09-30T23:41:46+00:00"
- },
- {
-  "kind": "new_page",
-  "page": "https://www.i-keren.co.il/%d7%9e%d7%99%d7%93%d7%a2-%d7%9c%d7%a2%d7%9e%d7%99%d7%aa/%d7%aa%d7%a9%d7%95%d7%90%d7%aa-%d7%a7%d7%a8%d7%9f-%d7%94%d7%a9%d7%aa%d7%9c%d7%9e%d7%95%d7%aa/",
-  "text": "15 items",
-  "href": "https://www.i-keren.co.il/%d7%9e%d7%99%d7%93%d7%a2-%d7%9c%d7%a2%d7%9e%d7%99%d7%aa/%d7%aa%d7%a9%d7%95%d7%90%d7%aa-%d7%a7%d7%a8%d7%9f-%d7%94%d7%a9%d7%aa%d7%9c%d7%9e%d7%95%d7%aa/",
-  "legal_id": "520034968",
-  "company": "החברה המנהלת של קרן השתלמות של עובדי חברת החשמל לישראל בע\"מ",
-  "detected": "2026-09-30T23:41:46+00:00"
- },
- {
-  "kind": "new_page",
+  "kind": "new_item",
   "page": "https://www.i-keren.co.il/",
-  "text": "16 items",
+  "text": "מידע כללי אודות החברה המנהלת אודות קרן ההשתלמות חברי הדירקטוריון וועדותיו חברי הנהלה ובעלי תפקידים מידע סטטיסטי פירסומים לציבור תקנון מידע למעסיק חשבון מעסיק מקוון-כניסה למנוי קיים מידע לעמית מידע איש",
   "href": "https://www.i-keren.co.il/",
   "legal_id": "520034968",
   "company": "החברה המנהלת של קרן השתלמות של עובדי חברת החשמל לישראל בע\"מ",
-  "detected": "2026-09-30T23:41:46+00:00"
+  "detected": "2026-10-01T10:44:10+00:00"
  },
  {
-  "kind": "new_page",
+  "kind": "new_item",
   "page": "https://www.i-keren.co.il/%d7%9e%d7%99%d7%93%d7%a2-%d7%9b%d7%9c%d7%9c%d7%99/%d7%90%d7%95%d7%93%d7%95%d7%aa-%d7%94%d7%a7%d7%a8%d7%9f/",
-  "text": "16 items",
+  "text": "מידע כללי אודות החברה המנהלת אודות קרן ההשתלמות חברי הדירקטוריון וועדותיו חברי הנהלה ובעלי תפקידים מידע סטטיסטי פירסומים לציבור תקנון מידע למעסיק חשבון מעסיק מקוון-כניסה למנוי קיים מידע לעמית מידע איש",
   "href": "https://www.i-keren.co.il/%d7%9e%d7%99%d7%93%d7%a2-%d7%9b%d7%9c%d7%9c%d7%99/%d7%90%d7%95%d7%93%d7%95%d7%aa-%d7%94%d7%a7%d7%a8%d7%9f/",
   "legal_id": "520034968",
   "company": "החברה המנהלת של קרן השתלמות של עובדי חברת החשמל לישראל בע\"מ",
-  "detected": "2026-09-30T23:41:46+00:00"
+  "detected": "2026-10-01T10:44:10+00:00"
  },
  {
-  "kind": "new_page",
+  "kind": "text_changed",
   "page": "https://www.i-keren.co.il/%d7%9e%d7%99%d7%93%d7%a2-%d7%9b%d7%9c%d7%9c%d7%99/%d7%aa%d7%a7%d7%a0%d7%95%d7%9f/",
-  "text": "20 items",
-  "href": "https://www.i-keren.co.il/%d7%9e%d7%99%d7%93%d7%a2-%d7%9b%d7%9c%d7%9c%d7%99/%d7%aa%d7%a7%d7%a0%d7%95%d7%9f/",
+  "text": "הורד -> תקנון קרן השתלמות 07/01/2025 הורד הורד",
+  "href": "https://www.i-keren.co.il/wp-content/uploads/2026/07/takanon_423_250306_clean.pdf",
   "legal_id": "520034968",
   "company": "החברה המנהלת של קרן השתלמות של עובדי חברת החשמל לישראל בע\"מ",
-  "detected": "2026-09-30T23:41:46+00:00"
+  "detected": "2026-10-01T10:44:10+00:00"
  },
  {
-  "kind": "new_page",
-  "page": "https://www.i-keren.co.il/%d7%9e%d7%93%d7%99%d7%a0%d7%99%d7%95%d7%aa-%d7%95%d7%a0%d7%94%d7%9c%d7%99%d7%9d/",
-  "text": "15 items",
-  "href": "https://www.i-keren.co.il/%d7%9e%d7%93%d7%99%d7%a0%d7%99%d7%95%d7%aa-%d7%95%d7%a0%d7%94%d7%9c%d7%99%d7%9d/",
+  "kind": "text_changed",
+  "page": "https://www.i-keren.co.il/%d7%9e%d7%99%d7%93%d7%a2-%d7%9b%d7%9c%d7%9c%d7%99/%d7%aa%d7%a7%d7%a0%d7%95%d7%9f/",
+  "text": "הורד -> ריכוז שינויים בתקנון קרן השתלמות 07/01/2025 הורד הורד",
+  "href": "https://www.i-keren.co.il/wp-content/uploads/2026/07/rikuz_shinuim_250306.pdf",
   "legal_id": "520034968",
   "company": "החברה המנהלת של קרן השתלמות של עובדי חברת החשמל לישראל בע\"מ",
-  "detected": "2026-09-30T23:41:46+00:00"
+  "detected": "2026-10-01T10:44:10+00:00"
  },
  {
-  "kind": "new_page",
+  "kind": "text_changed",
+  "page": "https://www.i-keren.co.il/%d7%9e%d7%99%d7%93%d7%a2-%d7%9b%d7%9c%d7%9c%d7%99/%d7%aa%d7%a7%d7%a0%d7%95%d7%9f/",
+  "text": "הורד -> תקנון קרן ההשתלמות עדכון 24/11/2020 הורד הורד",
+  "href": "https://www.i-keren.co.il/wp-content/uploads/2020/12/takanon_423_201124_clean.pdf",
+  "legal_id": "520034968",
+  "company": "החברה המנהלת של קרן השתלמות של עובדי חברת החשמל לישראל בע\"מ",
+  "detected": "2026-10-01T10:44:10+00:00"
+ },
+ {
+  "kind": "text_changed",
+  "page": "https://www.i-keren.co.il/%d7%9e%d7%99%d7%93%d7%a2-%d7%9b%d7%9c%d7%9c%d7%99/%d7%aa%d7%a7%d7%a0%d7%95%d7%9f/",
+  "text": "הורד -> תקנון קרן ההשתלמות הורד הורד",
+  "href": "https://www.i-keren.co.il/wp-content/uploads/2020/02/takanon.pdf",
+  "legal_id": "520034968",
+  "company": "החברה המנהלת של קרן השתלמות של עובדי חברת החשמל לישראל בע\"מ",
+  "detected": "2026-10-01T10:44:10+00:00"
+ },
+ {
+  "kind": "text_changed",
+  "page": "https://www.i-keren.co.il/%d7%9e%d7%99%d7%93%d7%a2-%d7%9b%d7%9c%d7%9c%d7%99/%d7%aa%d7%a7%d7%a0%d7%95%d7%9f/",
+  "text": "הורד -> ריכוז השינויים בתקנון קרן ההשתלמות 24/11/2020 הורד הורד",
+  "href": "https://www.i-keren.co.il/wp-content/uploads/2020/12/rikuz_shinuim_201124.pdf",
+  "legal_id": "520034968",
+  "company": "החברה המנהלת של קרן השתלמות של עובדי חברת החשמל לישראל בע\"מ",
+  "detected": "2026-10-01T10:44:10+00:00"
+ },
+ {
+  "kind": "text_changed",
   "page": "https://www.i-keren.co.il/%d7%9e%d7%93%d7%99%d7%a0%d7%99%d7%95%d7%aa-%d7%95%d7%a0%d7%94%d7%9c%d7%99%d7%9d/%d7%9e%d7%93%d7%99%d7%a0%d7%99%d7%95%d7%aa-%d7%98%d7%99%d7%a4%d7%95%d7%9c-%d7%91%d7%97%d7%95%d7%91%d7%95%d7%aa-%d7%91%d7%a2%d7%99%d7%aa%d7%99%d7%99%d7%9d/",
-  "text": "16 items",
-  "href": "https://www.i-keren.co.il/%d7%9e%d7%93%d7%99%d7%a0%d7%99%d7%95%d7%aa-%d7%95%d7%a0%d7%94%d7%9c%d7%99%d7%9d/%d7%9e%d7%93%d7%99%d7%a0%d7%99%d7%95%d7%aa-%d7%98%d7%99%d7%a4%d7%95%d7%9c-%d7%91%d7%97%d7%95%d7%91%d7%95%d7%aa-%d7%91%d7%a2%d7%99%d7%aa%d7%99%d7%99%d7%9d/",
+  "text": "הורד -> מדיניות טיפול בחובות בעייתיים הורד הורד",
+  "href": "https://www.i-keren.co.il/wp-content/uploads/2022/02/טיפול-בחובות-בעיתיים.doc",
   "legal_id": "520034968",
   "company": "החברה המנהלת של קרן השתלמות של עובדי חברת החשמל לישראל בע\"מ",
-  "detected": "2026-09-30T23:41:46+00:00"
+  "detected": "2026-10-01T10:44:10+00:00"
  },
  {
-  "kind": "new_page",
+  "kind": "text_changed",
   "page": "https://www.i-keren.co.il/%d7%9e%d7%93%d7%99%d7%a0%d7%99%d7%95%d7%aa-%d7%95%d7%a0%d7%94%d7%9c%d7%99%d7%9d/%d7%a0%d7%95%d7%94%d7%9c-%d7%94%d7%a2%d7%91%d7%a8%d7%aa-%d7%96%d7%9b%d7%95%d7%99%d7%95%d7%aa-%d7%a2%d7%9e%d7%99%d7%aa%d7%99%d7%9d-%d7%a9%d7%9c%d7%90-%d7%91%d7%9e%d7%96%d7%95%d7%9e%d7%9f/",
-  "text": "18 items",
-  "href": "https://www.i-keren.co.il/%d7%9e%d7%93%d7%99%d7%a0%d7%99%d7%95%d7%aa-%d7%95%d7%a0%d7%94%d7%9c%d7%99%d7%9d/%d7%a0%d7%95%d7%94%d7%9c-%d7%94%d7%a2%d7%91%d7%a8%d7%aa-%d7%96%d7%9b%d7%95%d7%99%d7%95%d7%aa-%d7%a2%d7%9e%d7%99%d7%aa%d7%99%d7%9d-%d7%a9%d7%9c%d7%90-%d7%91%d7%9e%d7%96%d7%95%d7%9e%d7%9f/",
+  "text": "הורד -> דיווח רבעון 04/2025 הורד הורד",
+  "href": "https://www.i-keren.co.il/wp-content/uploads/2026/03/havarat_nehasim_2504.xlsx",
   "legal_id": "520034968",
   "company": "החברה המנהלת של קרן השתלמות של עובדי חברת החשמל לישראל בע\"מ",
-  "detected": "2026-09-30T23:41:46+00:00"
+  "detected": "2026-10-01T10:44:10+00:00"
  },
  {
-  "kind": "new_page",
+  "kind": "text_changed",
+  "page": "https://www.i-keren.co.il/%d7%9e%d7%93%d7%99%d7%a0%d7%99%d7%95%d7%aa-%d7%95%d7%a0%d7%94%d7%9c%d7%99%d7%9d/%d7%a0%d7%95%d7%94%d7%9c-%d7%94%d7%a2%d7%91%d7%a8%d7%aa-%d7%96%d7%9b%d7%95%d7%99%d7%95%d7%aa-%d7%a2%d7%9e%d7%99%d7%aa%d7%99%d7%9d-%d7%a9%d7%9c%d7%90-%d7%91%d7%9e%d7%96%d7%95%d7%9e%d7%9f/",
+  "text": "הורד -> דיווח רבעון 01/2022 הורד הורד",
+  "href": "https://www.i-keren.co.il/wp-content/uploads/2022/05/havarat_nehasim_2201.xlsx",
+  "legal_id": "520034968",
+  "company": "החברה המנהלת של קרן השתלמות של עובדי חברת החשמל לישראל בע\"מ",
+  "detected": "2026-10-01T10:44:10+00:00"
+ },
+ {
+  "kind": "text_changed",
+  "page": "https://www.i-keren.co.il/%d7%9e%d7%93%d7%99%d7%a0%d7%99%d7%95%d7%aa-%d7%95%d7%a0%d7%94%d7%9c%d7%99%d7%9d/%d7%a0%d7%95%d7%94%d7%9c-%d7%94%d7%a2%d7%91%d7%a8%d7%aa-%d7%96%d7%9b%d7%95%d7%99%d7%95%d7%aa-%d7%a2%d7%9e%d7%99%d7%aa%d7%99%d7%9d-%d7%a9%d7%9c%d7%90-%d7%91%d7%9e%d7%96%d7%95%d7%9e%d7%9f/",
+  "text": "הורד -> נוהל העברת זכויות עמיתים שלא במזומן הורד הורד",
+  "href": "https://www.i-keren.co.il/wp-content/uploads/2020/08/nohal_haavarat_zhuyot_lo_mezuman.pdf",
+  "legal_id": "520034968",
+  "company": "החברה המנהלת של קרן השתלמות של עובדי חברת החשמל לישראל בע\"מ",
+  "detected": "2026-10-01T10:44:10+00:00"
+ },
+ {
+  "kind": "text_changed",
   "page": "https://www.i-keren.co.il/%d7%9e%d7%93%d7%99%d7%a0%d7%99%d7%95%d7%aa-%d7%95%d7%a0%d7%94%d7%9c%d7%99%d7%9d/%d7%92%d7%9e%d7%95%d7%9c-%d7%a0%d7%95%d7%a9%d7%90%d7%99-%d7%9e%d7%a9%d7%a8%d7%94/",
-  "text": "28 items",
-  "href": "https://www.i-keren.co.il/%d7%9e%d7%93%d7%99%d7%a0%d7%99%d7%95%d7%aa-%d7%95%d7%a0%d7%94%d7%9c%d7%99%d7%9d/%d7%92%d7%9e%d7%95%d7%9c-%d7%a0%d7%95%d7%a9%d7%90%d7%99-%d7%9e%d7%a9%d7%a8%d7%94/",
+  "text": "הורד -> מדיניות תגמול לשנת 2026 הורד הורד",
+  "href": "https://www.i-keren.co.il/wp-content/uploads/2025/11/mediniyut_tagmul_2026-1.pdf",
   "legal_id": "520034968",
   "company": "החברה המנהלת של קרן השתלמות של עובדי חברת החשמל לישראל בע\"מ",
-  "detected": "2026-09-30T23:41:46+00:00"
+  "detected": "2026-10-01T10:44:10+00:00"
  },
  {
-  "kind": "new_page",
+  "kind": "text_changed",
+  "page": "https://www.i-keren.co.il/%d7%9e%d7%93%d7%99%d7%a0%d7%99%d7%95%d7%aa-%d7%95%d7%a0%d7%94%d7%9c%d7%99%d7%9d/%d7%92%d7%9e%d7%95%d7%9c-%d7%a0%d7%95%d7%a9%d7%90%d7%99-%d7%9e%d7%a9%d7%a8%d7%94/",
+  "text": "הורד -> מדיניות תגמול לשנת 2025 הורד הורד",
+  "href": "https://www.i-keren.co.il/wp-content/uploads/2025/09/mediniyut_tagmul_2025-1.pdf",
+  "legal_id": "520034968",
+  "company": "החברה המנהלת של קרן השתלמות של עובדי חברת החשמל לישראל בע\"מ",
+  "detected": "2026-10-01T10:44:10+00:00"
+ },
+ {
+  "kind": "text_changed",
+  "page": "https://www.i-keren.co.il/%d7%9e%d7%93%d7%99%d7%a0%d7%99%d7%95%d7%aa-%d7%95%d7%a0%d7%94%d7%9c%d7%99%d7%9d/%d7%92%d7%9e%d7%95%d7%9c-%d7%a0%d7%95%d7%a9%d7%90%d7%99-%d7%9e%d7%a9%d7%a8%d7%94/",
+  "text": "הורד -> מדיניות תגמול לשנת 2024 הורד הורד",
+  "href": "https://www.i-keren.co.il/wp-content/uploads/2024/03/mediniyut_tagmul_2024-1.pdf",
+  "legal_id": "520034968",
+  "company": "החברה המנהלת של קרן השתלמות של עובדי חברת החשמל לישראל בע\"מ",
+  "detected": "2026-10-01T10:44:10+00:00"
+ },
+ {
+  "kind": "text_changed",
+  "page": "https://www.i-keren.co.il/%d7%9e%d7%93%d7%99%d7%a0%d7%99%d7%95%d7%aa-%d7%95%d7%a0%d7%94%d7%9c%d7%99%d7%9d/%d7%92%d7%9e%d7%95%d7%9c-%d7%a0%d7%95%d7%a9%d7%90%d7%99-%d7%9e%d7%a9%d7%a8%d7%94/",
+  "text": "הורד -> מדיניות תגמול לשנת 2023 הורד הורד",
+  "href": "https://www.i-keren.co.il/wp-content/uploads/2023/03/מדיניות_תגמול_2023.pdf",
+  "legal_id": "520034968",
+  "company": "החברה המנהלת של קרן השתלמות של עובדי חברת החשמל לישראל בע\"מ",
+  "detected": "2026-10-01T10:44:10+00:00"
+ },
+ {
+  "kind": "text_changed",
+  "page": "https://www.i-keren.co.il/%d7%9e%d7%93%d7%99%d7%a0%d7%99%d7%95%d7%aa-%d7%95%d7%a0%d7%94%d7%9c%d7%99%d7%9d/%d7%92%d7%9e%d7%95%d7%9c-%d7%a0%d7%95%d7%a9%d7%90%d7%99-%d7%9e%d7%a9%d7%a8%d7%94/",
+  "text": "הורד -> מדיניות תגמול לשנת 2022 הורד הורד",
+  "href": "https://www.i-keren.co.il/wp-content/uploads/2022/05/מדיניות_תגמול_2022-1.pdf",
+  "legal_id": "520034968",
+  "company": "החברה המנהלת של קרן השתלמות של עובדי חברת החשמל לישראל בע\"מ",
+  "detected": "2026-10-01T10:44:10+00:00"
+ },
+ {
+  "kind": "text_changed",
+  "page": "https://www.i-keren.co.il/%d7%9e%d7%93%d7%99%d7%a0%d7%99%d7%95%d7%aa-%d7%95%d7%a0%d7%94%d7%9c%d7%99%d7%9d/%d7%92%d7%9e%d7%95%d7%9c-%d7%a0%d7%95%d7%a9%d7%90%d7%99-%d7%9e%d7%a9%d7%a8%d7%94/",
+  "text": "הורד -> מדיניות תגמול לשנת 2021 הורד הורד",
+  "href": "https://www.i-keren.co.il/wp-content/uploads/2021/04/מדיניות_תגמול_2021.pdf",
+  "legal_id": "520034968",
+  "company": "החברה המנהלת של קרן השתלמות של עובדי חברת החשמל לישראל בע\"מ",
+  "detected": "2026-10-01T10:44:10+00:00"
+ },
+ {
+  "kind": "text_changed",
+  "page": "https://www.i-keren.co.il/%d7%9e%d7%93%d7%99%d7%a0%d7%99%d7%95%d7%aa-%d7%95%d7%a0%d7%94%d7%9c%d7%99%d7%9d/%d7%92%d7%9e%d7%95%d7%9c-%d7%a0%d7%95%d7%a9%d7%90%d7%99-%d7%9e%d7%a9%d7%a8%d7%94/",
+  "text": "הורד -> מדיניות תגמול לשנת 2020 הורד הורד",
+  "href": "https://www.i-keren.co.il/wp-content/uploads/2020/08/מדיניות-תגמול-2020.pdf",
+  "legal_id": "520034968",
+  "company": "החברה המנהלת של קרן השתלמות של עובדי חברת החשמל לישראל בע\"מ",
+  "detected": "2026-10-01T10:44:10+00:00"
+ },
+ {
+  "kind": "text_changed",
+  "page": "https://www.i-keren.co.il/%d7%9e%d7%93%d7%99%d7%a0%d7%99%d7%95%d7%aa-%d7%95%d7%a0%d7%94%d7%9c%d7%99%d7%9d/%d7%92%d7%9e%d7%95%d7%9c-%d7%a0%d7%95%d7%a9%d7%90%d7%99-%d7%9e%d7%a9%d7%a8%d7%94/",
+  "text": "הורד -> מדיניות תגמול לשנת 2019 הורד הורד",
+  "href": "https://www.i-keren.co.il/wp-content/uploads/2020/04/mediniyut_tagmul_2019.pdf",
+  "legal_id": "520034968",
+  "company": "החברה המנהלת של קרן השתלמות של עובדי חברת החשמל לישראל בע\"מ",
+  "detected": "2026-10-01T10:44:10+00:00"
+ },
+ {
+  "kind": "text_changed",
+  "page": "https://www.i-keren.co.il/%d7%9e%d7%93%d7%99%d7%a0%d7%99%d7%95%d7%aa-%d7%95%d7%a0%d7%94%d7%9c%d7%99%d7%9d/%d7%92%d7%9e%d7%95%d7%9c-%d7%a0%d7%95%d7%a9%d7%90%d7%99-%d7%9e%d7%a9%d7%a8%d7%94/",
+  "text": "הורד -> מדיניות תגמול לשנת 2018 הורד הורד",
+  "href": "https://www.i-keren.co.il/wp-content/uploads/2020/04/mediniyut_tagmul_2018.pdf",
+  "legal_id": "520034968",
+  "company": "החברה המנהלת של קרן השתלמות של עובדי חברת החשמל לישראל בע\"מ",
+  "detected": "2026-10-01T10:44:10+00:00"
+ },
+ {
+  "kind": "text_changed",
+  "page": "https://www.i-keren.co.il/%d7%9e%d7%93%d7%99%d7%a0%d7%99%d7%95%d7%aa-%d7%95%d7%a0%d7%94%d7%9c%d7%99%d7%9d/%d7%92%d7%9e%d7%95%d7%9c-%d7%a0%d7%95%d7%a9%d7%90%d7%99-%d7%9e%d7%a9%d7%a8%d7%94/",
+  "text": "הורד -> מדיניות תגמול לשנת 2017 הורד הורד",
+  "href": "https://www.i-keren.co.il/wp-content/uploads/2020/04/מדיניות-תגמול-2017.pdf",
+  "legal_id": "520034968",
+  "company": "החברה המנהלת של קרן השתלמות של עובדי חברת החשמל לישראל בע\"מ",
+  "detected": "2026-10-01T10:44:10+00:00"
+ },
+ {
+  "kind": "text_changed",
+  "page": "https://www.i-keren.co.il/%d7%9e%d7%93%d7%99%d7%a0%d7%99%d7%95%d7%aa-%d7%95%d7%a0%d7%94%d7%9c%d7%99%d7%9d/%d7%92%d7%9e%d7%95%d7%9c-%d7%a0%d7%95%d7%a9%d7%90%d7%99-%d7%9e%d7%a9%d7%a8%d7%94/",
+  "text": "הורד -> מדיניות תגמול לשנת 2016 הורד הורד",
+  "href": "https://www.i-keren.co.il/wp-content/uploads/2020/04/mediniyut_tagmul_20160331.pdf",
+  "legal_id": "520034968",
+  "company": "החברה המנהלת של קרן השתלמות של עובדי חברת החשמל לישראל בע\"מ",
+  "detected": "2026-10-01T10:44:10+00:00"
+ },
+ {
+  "kind": "text_changed",
+  "page": "https://www.i-keren.co.il/%d7%9e%d7%93%d7%99%d7%a0%d7%99%d7%95%d7%aa-%d7%95%d7%a0%d7%94%d7%9c%d7%99%d7%9d/%d7%92%d7%9e%d7%95%d7%9c-%d7%a0%d7%95%d7%a9%d7%90%d7%99-%d7%9e%d7%a9%d7%a8%d7%94/",
+  "text": "הורד -> מדיניות תגמול לשנת 2015 הורד הורד",
+  "href": "https://www.i-keren.co.il/wp-content/uploads/2020/04/mediniyut_tagmul_20150325.pdf",
+  "legal_id": "520034968",
+  "company": "החברה המנהלת של קרן השתלמות של עובדי חברת החשמל לישראל בע\"מ",
+  "detected": "2026-10-01T10:44:10+00:00"
+ },
+ {
+  "kind": "text_changed",
+  "page": "https://www.i-keren.co.il/%d7%9e%d7%93%d7%99%d7%a0%d7%99%d7%95%d7%aa-%d7%95%d7%a0%d7%94%d7%9c%d7%99%d7%9d/%d7%92%d7%9e%d7%95%d7%9c-%d7%a0%d7%95%d7%a9%d7%90%d7%99-%d7%9e%d7%a9%d7%a8%d7%94/",
+  "text": "הורד -> מדיניות תגמול לפי חוזר גופים מוסדיים 2014-9-2 הורד הורד",
+  "href": "https://www.i-keren.co.il/wp-content/uploads/2020/04/mediniyut_tagmul_20150325-1.pdf",
+  "legal_id": "520034968",
+  "company": "החברה המנהלת של קרן השתלמות של עובדי חברת החשמל לישראל בע\"מ",
+  "detected": "2026-10-01T10:44:10+00:00"
+ },
+ {
+  "kind": "text_changed",
   "page": "https://www.i-keren.co.il/%d7%9e%d7%93%d7%99%d7%a0%d7%99%d7%95%d7%aa-%d7%95%d7%a0%d7%94%d7%9c%d7%99%d7%9d/%d7%9e%d7%93%d7%99%d7%a0%d7%99%d7%95%d7%aa-%d7%94%d7%a6%d7%91%d7%a2%d7%95%d7%aa-%d7%9e%d7%93%d7%99%d7%a0%d7%99%d7%95%d7%aa-%d7%94%d7%94%d7%a6%d7%91%d7%a2%d7%94/",
-  "text": "16 items",
-  "href": "https://www.i-keren.co.il/%d7%9e%d7%93%d7%99%d7%a0%d7%99%d7%95%d7%aa-%d7%95%d7%a0%d7%94%d7%9c%d7%99%d7%9d/%d7%9e%d7%93%d7%99%d7%a0%d7%99%d7%95%d7%aa-%d7%94%d7%a6%d7%91%d7%a2%d7%95%d7%aa-%d7%9e%d7%93%d7%99%d7%a0%d7%99%d7%95%d7%aa-%d7%94%d7%94%d7%a6%d7%91%d7%a2%d7%94/",
+  "text": "הורד -> נוהל אסיפות כלליות הורד הורד",
+  "href": "https://www.i-keren.co.il/wp-content/uploads/2022/12/מדיניות_הצבעה_באסיפות_.pdf",
   "legal_id": "520034968",
   "company": "החברה המנהלת של קרן השתלמות של עובדי חברת החשמל לישראל בע\"מ",
-  "detected": "2026-09-30T23:41:46+00:00"
+  "detected": "2026-10-01T10:44:10+00:00"
  },
  {
-  "kind": "new_page",
+  "kind": "text_changed",
   "page": "https://www.i-keren.co.il/%d7%9e%d7%93%d7%99%d7%a0%d7%99%d7%95%d7%aa-%d7%95%d7%a0%d7%94%d7%9c%d7%99%d7%9d/%d7%90%d7%99%d7%aa%d7%95%d7%a8-%d7%97%d7%a9%d7%91%d7%95%d7%a0%d7%95%d7%aa-%d7%a2%d7%9e%d7%99%d7%aa%d7%99%d7%9d/",
-  "text": "16 items",
-  "href": "https://www.i-keren.co.il/%d7%9e%d7%93%d7%99%d7%a0%d7%99%d7%95%d7%aa-%d7%95%d7%a0%d7%94%d7%9c%d7%99%d7%9d/%d7%90%d7%99%d7%aa%d7%95%d7%a8-%d7%97%d7%a9%d7%91%d7%95%d7%a0%d7%95%d7%aa-%d7%a2%d7%9e%d7%99%d7%aa%d7%99%d7%9d/",
+  "text": "הורד -> טופס הסרה מהממשק האינטרנטי הורד הורד",
+  "href": "https://www.i-keren.co.il/wp-content/uploads/2020/04/tofes_hasara_mmimshak_interneti.pdf",
   "legal_id": "520034968",
   "company": "החברה המנהלת של קרן השתלמות של עובדי חברת החשמל לישראל בע\"מ",
-  "detected": "2026-09-30T23:41:46+00:00"
- },
- {
-  "kind": "new_page",
-  "page": "https://www.i-keren.co.il/%d7%9e%d7%93%d7%99%d7%a0%d7%99%d7%95%d7%aa-%d7%95%d7%a0%d7%94%d7%9c%d7%99%d7%9d/%d7%9e%d7%93%d7%99%d7%a0%d7%99%d7%95%d7%aa-%d7%94%d7%a4%d7%a8%d7%98%d7%99%d7%95%d7%aa/",
-  "text": "15 items",
-  "href": "https://www.i-keren.co.il/%d7%9e%d7%93%d7%99%d7%a0%d7%99%d7%95%d7%aa-%d7%95%d7%a0%d7%94%d7%9c%d7%99%d7%9d/%d7%9e%d7%93%d7%99%d7%a0%d7%99%d7%95%d7%aa-%d7%94%d7%a4%d7%a8%d7%98%d7%99%d7%95%d7%aa/",
-  "legal_id": "520034968",
-  "company": "החברה המנהלת של קרן השתלמות של עובדי חברת החשמל לישראל בע\"מ",
-  "detected": "2026-09-30T23:41:46+00:00"
+  "detected": "2026-10-01T10:44:10+00:00"
  }
 ]
