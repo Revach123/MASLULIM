@@ -31,6 +31,8 @@ def _norm(s):
 
 def _toks(s):
     s = re.sub(r"(?i)s\s*&\s*p\s*(\d)", r"sp\1", str(s or ""))
+    s = re.sub(r"(?i)(\d+)\s*s\s*&\s*p\b", r"sp\1", s)  # "500 S&P" (הכשרה)
+    s = re.sub(r"(?<!\d)(19|20)\d\d(?!\d)", " ", s)  # שנה בשם ("מסלול כללי מור 2026")
     s = re.sub(r"[\"'״׳()\[\]\-–_,.:;/%]+", " ", s.lower())
     stop = {"מסלול", "קופת", "קופה", "קרן", "לשנת", "בע", "מ", "בעמ", "מסל", "לבני", "בני", "גילאי", "לגילאי", "עד", "ו"}
     return frozenset(w for w in s.split() if w not in stop)
@@ -109,10 +111,11 @@ class Registry:
         # השוואת קבוצות מילים, בלי המילים שמשותפות לכל שמות החברה ברישום ("ילין לפידות", "אלטשולר שחם").
         # גמל/להשקעה/השתלמות/פנסיה נשמרות (מבדילות בין קופות). קודם התאמה מלאה יחידה, אחר כך שם המסמך מוכל
         # בשם הרישום והמועמד עם הכי מעט מילים עודפות יחיד
-        digs = lambda x: sorted(re.findall(r"(?<!\d)\d{1,3}(?!\d)", re.sub(r"(?i)s\s*&\s*p\s*(\d)", r"sp\1", str(x or ""))))
+        digs = lambda x: sorted(re.findall(r"(?<!\d)\d{1,3}(?!\d)", re.sub(r"(?i)s\s*&\s*p\s*(\d)|(\d+)\s*s\s*&\s*p\b", r"sp\1\2", str(x or ""))))
         sets = {tn: _toks(nm) for tn, nm in cand.items() if digs(nm) == digs(name)}  # גילאים/אחוזים/מדד זהים
         alls = [_toks(nm) for nm in cand.values()]
         common = frozenset.intersection(*alls) if len(alls) > 1 else frozenset()
+        common |= {"חברה", "לביטוח", "בע", "מ", "בעמ"}  # "הכשרה חברה לביטוח בע"מ - כללי" = "הכשרה כללי"
         mine = _toks(name) - common
         if mine:
             same = [tn for tn, t in sets.items() if t - common == mine]

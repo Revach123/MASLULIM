@@ -2,27 +2,49 @@
  "year": "2026",
  "generated": "2026-10-01",
  "companies": {
-  "520031824": {
+  "520042177": {
    "complete": false,
-   "why": "registry 0/5",
+   "why": "registry 17/30",
    "missing": [
-    "1257",
-    "1258",
-    "13231",
-    "15371",
-    "408"
+    "12936",
+    "12938",
+    "13499",
+    "13500",
+    "141",
+    "142",
+    "14318",
+    "15825",
+    "15826",
+    "9300",
+    "9301",
+    "9720",
+    "9721"
    ]
   },
-  "511789190": {
+  "520042581": {
+   "complete": false,
+   "why": "registry 9/10",
+   "missing": [
+    "15394"
+   ]
+  },
+  "570007476": {
    "complete": true,
-   "why": "tracks 2/2 (not in registry)",
+   "why": "registry 1/1",
    "missing": []
   },
-  "520028556": {
+  "512237744": {
    "complete": false,
-   "why": "registry 3/4",
+   "why": "registry 79/87",
    "missing": [
-    "290"
+    "1161",
+    "1304",
+    "745",
+    "8888",
+    "8890",
+    "9895",
+    "9897",
+    "9898"
    ]
   },
   "520004078": {
@@ -61,32 +83,53 @@
     "9565"
    ]
   },
-  "520004896": {
+  "570002618": {
    "complete": false,
-   "why": "registry 18/21",
+   "why": "registry 5/6",
    "missing": [
-    "15691",
-    "15692",
-    "17013"
+    "9963"
    ]
   },
-  "510960586": {
-   "complete": false,
-   "why": "registry 3/10",
-   "missing": [
-    "1182",
-    "15416",
-    "7228",
-    "7229",
-    "969",
-    "9817",
-    "9818"
-   ]
-  },
-  "514956465": {
+  "511789190": {
    "complete": true,
-   "why": "registry 81/81",
+   "why": "tracks 2/2 (not in registry)",
    "missing": []
+  },
+  "520034968": {
+   "complete": false,
+   "why": "registry 1/2",
+   "missing": [
+    "423"
+   ]
+  },
+  "520020504": {
+   "complete": true,
+   "why": "tracks 1/1 (not in registry)",
+   "missing": []
+  },
+  "570011767": {
+   "complete": false,
+   "why": "registry 4/5",
+   "missing": [
+    "9930"
+   ]
+  },
+  "512008335": {
+   "complete": false,
+   "why": "registry 0/3",
+   "missing": [
+    "7209",
+    "7210",
+    "7211"
+   ]
+  },
+  "515977338": {
+   "complete": false,
+   "why": "registry 0/2",
+   "missing": [
+    "14936",
+    "14938"
+   ]
   },
   "520030198": {
    "complete": false,
@@ -95,12 +138,132 @@
     "295"
    ]
   },
+  "510142789": {
+   "complete": false,
+   "why": "registry 0/1",
+   "missing": [
+    "233"
+   ]
+  },
+  "520042615": {
+   "complete": false,
+   "why": "registry 3/6",
+   "missing": [
+    "15073",
+    "9936",
+    "9937"
+   ]
+  },
+  "520030693": {
+   "complete": false,
+   "why": "registry 0/3",
+   "missing": [
+    "13188",
+    "372",
+    "580"
+   ]
+  },
+  "570009449": {
+   "complete": false,
+   "why": "registry 1/4",
+   "missing": [
+    "1438",
+    "9783",
+    "9784"
+   ]
+  },
+  "517085874": {
+   "complete": true,
+   "why": "registry 40/40",
+   "missing": []
+  },
+  "520031659": {
+   "complete": true,
+   "why": "registry 1/1",
+   "missing": []
+  },
+  "520022963": {
+   "complete": true,
+   "why": "tracks 1/1 (not in registry)",
+   "missing": []
+  },
+  "520030677": {
+   "complete": false,
+   "why": "registry 18/19",
+   "missing": [
+    "9688"
+   ]
+  },
+  "510927536": {
+   "complete": false,
+   "why": "registry 0/2",
+   "missing": [
+    "1456",
+    "418"
+   ]
+  },
   "513621110": {
    "complete": false,
    "why": "registry 54/55",
    "missing": [
     "1539"
    ]
+  },
+  "520028861": {
+   "complete": false,
+   "why": "registry 1/3",
+   "missing": [
+    "1454",
+    "292"
+   ]
+  },
+  "570005959": {
+   "complete": false,
+   "why": "registry 0/3",
+   "missing": [
+    "7218",
+    "7219",
+    "7220"
+   ]
+  },
+  "520028812": {
+   "complete": true,
+   "why": "tracks 1/1 (not in registry)",
+   "missing": []
+  },
+  "512711409": {
+   "complete": true,
+   "why": "registry 10/10",
+   "missing": []
+  },
+  "570009852": {
+   "complete": true,
+   "why": "registry 1/1",
+   "missing": []
+  },
+  "510694821": {
+   "complete": false,
+   "why": "registry 0/1",
+   "missing": [
+    "1192"
+   ]
+  },
+  "510800402": {
+   "complete": false,
+   "why": "registry 0/1",
+   "missing": [
+    "383"
+   ]
+  },
+  "510806870": {
+   "complete": true,
+   "why": "registry 6/6",
+   "missing": []
+  },
+  "570005850": {
+   "complete": true,
+   "why": "registry 1/1",
+   "missing": []
   },
   "510930654": {
    "complete": false,
@@ -115,44 +278,6 @@
     "419"
    ]
   },
-  "520027251": {
-   "complete": false,
-   "why": "registry 0/6",
-   "missing": [
-    "2035",
-    "2036",
-    "2039",
-    "2040",
-    "284",
-    "484"
-   ]
-  },
-  "570005959": {
-   "complete": false,
-   "why": "registry 0/3",
-   "missing": [
-    "7218",
-    "7219",
-    "7220"
-   ]
-  },
-  "520020447": {
-   "complete": true,
-   "why": "tracks 1/1 (not in registry)",
-   "missing": []
-  },
-  "520030743": {
-   "complete": false,
-   "why": "registry 0/1",
-   "missing": [
-    "294"
-   ]
-  },
-  "570005850": {
-   "complete": true,
-   "why": "registry 1/1",
-   "missing": []
-  },
   "511880460": {
    "complete": false,
    "why": "registry 35/37",
@@ -161,301 +286,42 @@
     "16015"
    ]
   },
-  "570009449": {
+  "520023185": {
    "complete": false,
-   "why": "registry 1/4",
+   "why": "registry 35/58",
    "missing": [
-    "1438",
-    "9783",
-    "9784"
+    "11419",
+    "11420",
+    "11421",
+    "12089",
+    "12090",
+    "12091",
+    "13088",
+    "13092",
+    "13094",
+    "13095",
+    "13096",
+    "14663",
+    "2081",
+    "2245",
+    "2430",
+    "2459",
+    "2558",
+    "2588",
+    "7804",
+    "9498",
+    "9556",
+    "9577",
+    "9578"
    ]
   },
-  "516463635": {
+  "513452003": {
    "complete": false,
-   "why": "registry 0/4",
+   "why": "registry 2/4",
    "missing": [
-    "1541",
-    "1542",
-    "2098",
-    "2100"
+    "1282",
+    "9957"
    ]
-  },
-  "520042540": {
-   "complete": false,
-   "why": "registry 14/27",
-   "missing": [
-    "13029",
-    "13719",
-    "13720",
-    "13721",
-    "13722",
-    "13723",
-    "14316",
-    "14385",
-    "14386",
-    "180",
-    "41",
-    "43",
-    "9535"
-   ]
-  },
-  "520042607": {
-   "complete": false,
-   "why": "registry 6/8",
-   "missing": [
-    "9954",
-    "9955"
-   ]
-  },
-  "520029620": {
-   "complete": false,
-   "why": "registry 0/1",
-   "missing": [
-    "293"
-   ]
-  },
-  "514767490": {
-   "complete": false,
-   "why": "registry 0/4",
-   "missing": [
-    "1514",
-    "1515",
-    "2235",
-    "2236"
-   ]
-  },
-  "520024647": {
-   "complete": false,
-   "why": "registry 18/25",
-   "missing": [
-    "137",
-    "15230",
-    "4",
-    "6",
-    "7",
-    "9",
-    "99"
-   ]
-  },
-  "520031659": {
-   "complete": true,
-   "why": "registry 1/1",
-   "missing": []
-  },
-  "570014928": {
-   "complete": true,
-   "why": "registry 5/5",
-   "missing": []
-  },
-  "512362914": {
-   "complete": false,
-   "why": "registry 0/7",
-   "missing": [
-    "13711",
-    "15444",
-    "15923",
-    "556",
-    "7205",
-    "7206",
-    "7207"
-   ]
-  },
-  "520042573": {
-   "complete": false,
-   "why": "registry 0/3",
-   "missing": [
-    "7221",
-    "7222",
-    "7223"
-   ]
-  },
-  "510773922": {
-   "complete": false,
-   "why": "registry 0/3",
-   "missing": [
-    "9920",
-    "9921",
-    "9922"
-   ]
-  },
-  "510930670": {
-   "complete": false,
-   "why": "registry 1/2",
-   "missing": [
-    "420"
-   ]
-  },
-  "513026484": {
-   "complete": false,
-   "why": "registry 88/91",
-   "missing": [
-    "2023",
-    "2024",
-    "682"
-   ]
-  },
-  "512244146": {
-   "complete": true,
-   "why": "registry 84/84",
-   "missing": []
-  },
-  "512711409": {
-   "complete": true,
-   "why": "registry 10/10",
-   "missing": []
-  },
-  "520028390": {
-   "complete": false,
-   "why": "registry 0/6",
-   "missing": [
-    "2037",
-    "2038",
-    "2041",
-    "2042",
-    "285",
-    "485"
-   ]
-  },
-  "520023094": {
-   "complete": true,
-   "why": "tracks 1/1 (not in registry)",
-   "missing": []
-  },
-  "520027954": {
-   "complete": true,
-   "why": "registry 5/5",
-   "missing": []
-  },
-  "520030677": {
-   "complete": false,
-   "why": "registry 17/19",
-   "missing": [
-    "115",
-    "9688"
-   ]
-  },
-  "520042177": {
-   "complete": false,
-   "why": "registry 8/30",
-   "missing": [
-    "12936",
-    "12937",
-    "12938",
-    "13498",
-    "13499",
-    "13500",
-    "141",
-    "142",
-    "143",
-    "14318",
-    "15108",
-    "15825",
-    "15826",
-    "57",
-    "58",
-    "62",
-    "9300",
-    "9301",
-    "9302",
-    "9719",
-    "9720",
-    "9721"
-   ]
-  },
-  "517085874": {
-   "complete": true,
-   "why": "registry 40/40",
-   "missing": []
-  },
-  "512237744": {
-   "complete": false,
-   "why": "registry 79/87",
-   "missing": [
-    "1161",
-    "1304",
-    "745",
-    "8888",
-    "8890",
-    "9895",
-    "9897",
-    "9898"
-   ]
-  },
-  "520020504": {
-   "complete": true,
-   "why": "tracks 1/1 (not in registry)",
-   "missing": []
-  },
-  "512267592": {
-   "complete": false,
-   "why": "registry 99/100",
-   "missing": [
-    "820"
-   ]
-  },
-  "570011767": {
-   "complete": false,
-   "why": "registry 4/5",
-   "missing": [
-    "9930"
-   ]
-  },
-  "520022963": {
-   "complete": true,
-   "why": "tracks 1/1 (not in registry)",
-   "missing": []
-  },
-  "510927536": {
-   "complete": false,
-   "why": "registry 0/2",
-   "missing": [
-    "1456",
-    "418"
-   ]
-  },
-  "512008335": {
-   "complete": false,
-   "why": "registry 0/3",
-   "missing": [
-    "7209",
-    "7210",
-    "7211"
-   ]
-  },
-  "570024109": {
-   "complete": false,
-   "why": "registry 0/1",
-   "missing": [
-    "261"
-   ]
-  },
-  "520034968": {
-   "complete": false,
-   "why": "registry 1/2",
-   "missing": [
-    "423"
-   ]
-  },
-  "520042615": {
-   "complete": false,
-   "why": "registry 3/6",
-   "missing": [
-    "15073",
-    "9936",
-    "9937"
-   ]
-  },
-  "570002618": {
-   "complete": false,
-   "why": "registry 5/6",
-   "missing": [
-    "9963"
-   ]
-  },
-  "510806870": {
-   "complete": true,
-   "why": "registry 6/6",
-   "missing": []
   },
   "520030990": {
    "complete": false,
@@ -466,6 +332,55 @@
     "14156",
     "15378",
     "299"
+   ]
+  },
+  "570014928": {
+   "complete": true,
+   "why": "registry 5/5",
+   "missing": []
+  },
+  "513173393": {
+   "complete": false,
+   "why": "registry 41/79",
+   "missing": [
+    "1093",
+    "1094",
+    "11325",
+    "11326",
+    "11327",
+    "11328",
+    "12256",
+    "12257",
+    "1290",
+    "1377",
+    "1378",
+    "1398",
+    "1399",
+    "1417",
+    "14304",
+    "14305",
+    "14854",
+    "14862",
+    "14863",
+    "14864",
+    "14865",
+    "15028",
+    "15313",
+    "15315",
+    "15458",
+    "15541",
+    "15842",
+    "15843",
+    "1912",
+    "2008",
+    "2017",
+    "558",
+    "588",
+    "7798",
+    "7799",
+    "7800",
+    "7801",
+    "7802"
    ]
   },
   "512065202": {
@@ -480,50 +395,19 @@
     "885"
    ]
   },
-  "520028812": {
-   "complete": true,
-   "why": "tracks 1/1 (not in registry)",
-   "missing": []
-  },
-  "515977338": {
+  "512267592": {
    "complete": false,
-   "why": "registry 0/2",
+   "why": "registry 99/100",
    "missing": [
-    "14936",
-    "14938"
+    "820"
    ]
   },
-  "515447035": {
-   "complete": true,
-   "why": "tracks 1/1 (not in registry)",
-   "missing": []
-  },
-  "510142789": {
+  "510930670": {
    "complete": false,
-   "why": "registry 0/1",
+   "why": "registry 1/2",
    "missing": [
-    "233"
+    "420"
    ]
-  },
-  "520005497": {
-   "complete": false,
-   "why": "registry 0/1",
-   "missing": [
-    "229"
-   ]
-  },
-  "520028861": {
-   "complete": false,
-   "why": "registry 1/3",
-   "missing": [
-    "1454",
-    "292"
-   ]
-  },
-  "570009852": {
-   "complete": true,
-   "why": "registry 1/1",
-   "missing": []
   },
   "512245812": {
    "complete": false,
@@ -581,17 +465,37 @@
     "1645"
    ]
   },
-  "510694821": {
+  "520029620": {
    "complete": false,
    "why": "registry 0/1",
    "missing": [
-    "1192"
+    "293"
    ]
   },
-  "511033060": {
-   "complete": true,
-   "why": "registry 10/10",
-   "missing": []
+  "520024647": {
+   "complete": false,
+   "why": "registry 18/25",
+   "missing": [
+    "137",
+    "15230",
+    "4",
+    "6",
+    "7",
+    "9",
+    "99"
+   ]
+  },
+  "520028390": {
+   "complete": false,
+   "why": "registry 0/6",
+   "missing": [
+    "2037",
+    "2038",
+    "2041",
+    "2042",
+    "285",
+    "485"
+   ]
   },
   "520027715": {
    "complete": false,
@@ -606,11 +510,66 @@
     "9803"
    ]
   },
-  "510800402": {
+  "520032269": {
    "complete": false,
-   "why": "registry 0/1",
+   "why": "registry 1/6",
    "missing": [
-    "383"
+    "11414",
+    "1404",
+    "15404",
+    "7635",
+    "9479"
+   ]
+  },
+  "512244146": {
+   "complete": true,
+   "why": "registry 84/84",
+   "missing": []
+  },
+  "510773922": {
+   "complete": false,
+   "why": "registry 0/3",
+   "missing": [
+    "9920",
+    "9921",
+    "9922"
+   ]
+  },
+  "520022351": {
+   "complete": true,
+   "why": "tracks 1/1 (not in registry)",
+   "missing": []
+  },
+  "520042607": {
+   "complete": false,
+   "why": "registry 6/8",
+   "missing": [
+    "9954",
+    "9955"
+   ]
+  },
+  "520031824": {
+   "complete": false,
+   "why": "registry 0/5",
+   "missing": [
+    "1257",
+    "1258",
+    "13231",
+    "15371",
+    "408"
+   ]
+  },
+  "510960586": {
+   "complete": false,
+   "why": "registry 3/10",
+   "missing": [
+    "1182",
+    "15416",
+    "7228",
+    "7229",
+    "969",
+    "9817",
+    "9818"
    ]
   },
   "513910703": {
@@ -623,14 +582,35 @@
     "98"
    ]
   },
-  "520030941": {
+  "520030743": {
    "complete": false,
-   "why": "registry 0/3",
+   "why": "registry 0/1",
    "missing": [
-    "1433",
-    "15482",
-    "378"
+    "294"
    ]
+  },
+  "511033060": {
+   "complete": true,
+   "why": "registry 10/10",
+   "missing": []
+  },
+  "512362914": {
+   "complete": false,
+   "why": "registry 0/7",
+   "missing": [
+    "13711",
+    "15444",
+    "15923",
+    "556",
+    "7205",
+    "7206",
+    "7207"
+   ]
+  },
+  "520019688": {
+   "complete": true,
+   "why": "registry 1/1",
+   "missing": []
   },
   "513611509": {
    "complete": false,
@@ -660,86 +640,6 @@
     "9941"
    ]
   },
-  "511423048": {
-   "complete": false,
-   "why": "registry 0/2",
-   "missing": [
-    "8741",
-    "8742"
-   ]
-  },
-  "520042581": {
-   "complete": false,
-   "why": "registry 9/10",
-   "missing": [
-    "15394"
-   ]
-  },
-  "513173393": {
-   "complete": false,
-   "why": "registry 41/79",
-   "missing": [
-    "1093",
-    "1094",
-    "11325",
-    "11326",
-    "11327",
-    "11328",
-    "12256",
-    "12257",
-    "1290",
-    "1377",
-    "1378",
-    "1398",
-    "1399",
-    "1417",
-    "14304",
-    "14305",
-    "14854",
-    "14862",
-    "14863",
-    "14864",
-    "14865",
-    "15028",
-    "15313",
-    "15315",
-    "15458",
-    "15541",
-    "15842",
-    "15843",
-    "1912",
-    "2008",
-    "2017",
-    "558",
-    "588",
-    "7798",
-    "7799",
-    "7800",
-    "7801",
-    "7802"
-   ]
-  },
-  "520019688": {
-   "complete": true,
-   "why": "registry 1/1",
-   "missing": []
-  },
-  "520032269": {
-   "complete": false,
-   "why": "registry 1/6",
-   "missing": [
-    "11414",
-    "1404",
-    "15404",
-    "7635",
-    "9479"
-   ]
-  },
-  "570007476": {
-   "complete": true,
-   "why": "registry 1/1",
-   "missing": []
-  },
   "520024985": {
    "complete": false,
    "why": "registry 0/6",
@@ -752,55 +652,145 @@
     "8395"
    ]
   },
-  "513452003": {
-   "complete": false,
-   "why": "registry 2/4",
-   "missing": [
-    "1282",
-    "9957"
-   ]
+  "520023094": {
+   "complete": true,
+   "why": "tracks 1/1 (not in registry)",
+   "missing": []
   },
-  "520030693": {
+  "520030941": {
    "complete": false,
    "why": "registry 0/3",
    "missing": [
-    "13188",
-    "372",
-    "580"
+    "1433",
+    "15482",
+    "378"
    ]
   },
-  "520023185": {
-   "complete": false,
-   "why": "registry 35/58",
-   "missing": [
-    "11419",
-    "11420",
-    "11421",
-    "12089",
-    "12090",
-    "12091",
-    "13088",
-    "13092",
-    "13094",
-    "13095",
-    "13096",
-    "14663",
-    "2081",
-    "2245",
-    "2430",
-    "2459",
-    "2558",
-    "2588",
-    "7804",
-    "9498",
-    "9556",
-    "9577",
-    "9578"
-   ]
-  },
-  "520022351": {
+  "515447035": {
    "complete": true,
    "why": "tracks 1/1 (not in registry)",
+   "missing": []
+  },
+  "520042540": {
+   "complete": false,
+   "why": "registry 14/27",
+   "missing": [
+    "13029",
+    "13719",
+    "13720",
+    "13721",
+    "13722",
+    "13723",
+    "14316",
+    "14385",
+    "14386",
+    "180",
+    "41",
+    "43",
+    "9535"
+   ]
+  },
+  "570024109": {
+   "complete": false,
+   "why": "registry 0/1",
+   "missing": [
+    "261"
+   ]
+  },
+  "514956465": {
+   "complete": true,
+   "why": "registry 81/81",
+   "missing": []
+  },
+  "520027251": {
+   "complete": false,
+   "why": "registry 0/6",
+   "missing": [
+    "2035",
+    "2036",
+    "2039",
+    "2040",
+    "284",
+    "484"
+   ]
+  },
+  "514767490": {
+   "complete": false,
+   "why": "registry 0/4",
+   "missing": [
+    "1514",
+    "1515",
+    "2235",
+    "2236"
+   ]
+  },
+  "511423048": {
+   "complete": false,
+   "why": "registry 0/2",
+   "missing": [
+    "8741",
+    "8742"
+   ]
+  },
+  "520004896": {
+   "complete": false,
+   "why": "registry 18/21",
+   "missing": [
+    "15691",
+    "15692",
+    "17013"
+   ]
+  },
+  "520005497": {
+   "complete": false,
+   "why": "registry 0/1",
+   "missing": [
+    "229"
+   ]
+  },
+  "513026484": {
+   "complete": false,
+   "why": "registry 88/91",
+   "missing": [
+    "2023",
+    "2024",
+    "682"
+   ]
+  },
+  "516463635": {
+   "complete": false,
+   "why": "registry 0/4",
+   "missing": [
+    "1541",
+    "1542",
+    "2098",
+    "2100"
+   ]
+  },
+  "520020447": {
+   "complete": true,
+   "why": "tracks 1/1 (not in registry)",
+   "missing": []
+  },
+  "520028556": {
+   "complete": false,
+   "why": "registry 3/4",
+   "missing": [
+    "290"
+   ]
+  },
+  "520042573": {
+   "complete": false,
+   "why": "registry 0/3",
+   "missing": [
+    "7221",
+    "7222",
+    "7223"
+   ]
+  },
+  "520027954": {
+   "complete": true,
+   "why": "registry 5/5",
    "missing": []
   }
  }
