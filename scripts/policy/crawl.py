@@ -113,7 +113,7 @@ def download(s, url):
 NOISE = re.compile(r"esg|אחראי|תגמול|פרטיות|privacy|תקנון|מבצע|גילוי[-_ ]נאות|דוח(ות)?[-_ ]כספי|מצגת|presentation|"
                    r"investor|equal|שכר[-_ ]שווה|פוליסה|annuity|premi|מנתחים|אמות[-_ ]מידה|ממשל", re.I)
 POLICY = re.compile(r"מדיניות[-_ ]*(ה)?השקעה|מדיניות[-_ ]*(ה)?השקעות|מדיניות[-_ ]*מוצהרת|הצהרת[-_ ]*(מדיניות|השקעות)|"
-                    r"הצהרה[-_ ]*על[-_ ]*מדיניות|investment[-_ ]*polic|expected[-_ ]*investment|statement[-_ ]*investment", re.I)
+                    r"הצהרה[-_ ]*על[-_ ]*מדיניות|מדיניות[-_ ]*צפויה|investment[-_ ]*polic|expected[-_ ]*investment|statement[-_ ]*investment", re.I)
 
 
 SEARCH_EXCLUDE = re.compile(r"bizportal|themarker|globes|calcalist|ynet|walla|maariv|funder|mygemel|gemelnet|gemel-net|mypension|"

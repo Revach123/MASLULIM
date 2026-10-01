@@ -61,6 +61,8 @@ def fetch_static(s, url):
         return None, getattr(r, "status_code", "ERR"), ""
     soup = BeautifulSoup(r.content, "html.parser")  # bytes: הקידוד נקבע מה-meta/כותרות, לא ניחוש requests
     anchors = []
+    base = soup.find("base", href=True)  # <base href="/"> (ילין): קישורים יחסיים נפתרים מולו, לא מול נתיב העמוד
+    base_url = urljoin(url, base["href"]) if base else None
     for a in soup.find_all("a", href=True):
         t = a.get_text(" ", strip=True)
         if len(t) < 4 or re.match(r"(הורד|להורדה|הורדת|לצפייה|צפייה|download|pdf|xlsx?|קובץ)", t, re.I):
@@ -68,7 +70,7 @@ def fetch_static(s, url):
             ctx = re.sub(r"\s+", " ", row.get_text(" ", strip=True))[:200] if row else ""
             if ctx and ctx != t:
                 t = f"{ctx} {t}".strip()
-        anchors.append({"href": a["href"], "text": t})
+        anchors.append({"href": urljoin(base_url, a["href"]) if base_url else a["href"], "text": t})
     return anchors, 200, soup.get_text(" ", strip=True)
 
 
