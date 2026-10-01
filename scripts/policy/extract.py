@@ -7,6 +7,7 @@
 הכותרת הבאה מחלץ טווחי חשיפה (מינ'-מקס') לפי אפיק. כל שורה נושאת snippet מקור
 וציון ביטחון - חובה לעבור ידנית על מסמכים ראשונים כי פורמט משתנה בין חברות.
 """
+from urllib.parse import unquote
 import argparse, csv, json, re, sys
 from pathlib import Path
 
@@ -709,10 +710,19 @@ def main():
         if cfg.get("track_from_sheet") and sh and not re.match(r"(?i)^(page\s*\d+|גיליון\s*\d*|sheet\s*\d*)$", sh) \
                 and not (r.get("track_name") or "").startswith(sh):
             r["track_name"] = f"{sh} - {r.get('track_name') or ''}".strip(" -")
-        # track_from_file: [[regex על שם הקובץ, תווית]] - כמה קופות עם אותם שמות מסלולים בקבצים נפרדים
+        # track_from_link (regex עם קבוצה): קובץ למסלול, ושם המסלול רק בטקסט הקישור (ילין: "... - ילין לפידות -
+        # קופת גמל להשקעה מסלול כללי. עודכן ...") והפרסר מוצא שם כללי (page1)
+        lrx = cfg.get("track_from_link")
+        if lrx and re.match(r"(?i)^(page\s*\d+|גיליון\s*\d*|sheet\s*\d*|כללי)?$", (r.get("track_name") or "").strip()):
+            m = re.search(lrx, (index.get(r.get("url")) or {}).get("link_text") or "")
+            if m:
+                r["track_name"] = re.sub(r"\s+", " ", m.group(1)).strip()
+        # track_from_file: [[regex על שם הקובץ / url / עמוד המקור / טקסט הקישור, תווית]] - כמה קופות עם אותם שמות מסלולים בקבצים נפרדים
         # (איילון: "איילון מסלול כללי" בגמל להשקעה / השתלמות / גמל לחיסכון) -> "<תווית> - <מסלול>"
         for rx, label in cfg.get("track_from_file") or []:
-            if re.search(rx, r.get("doc_file") or r.get("url") or "") and not (r.get("track_name") or "").startswith(label):
+            ent_ = index.get(r.get("url")) or {}
+            where = " ".join(unquote(x or "") for x in (r.get("doc_file"), r.get("url"), ent_.get("source_page"), ent_.get("link_text")))
+            if re.search(rx, where) and not (r.get("track_name") or "").startswith(label):
                 r["track_name"] = f"{label} - {r.get('track_name') or ''}".strip(" -")
                 break
     if tf:
