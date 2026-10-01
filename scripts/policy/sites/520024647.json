@@ -13,11 +13,12 @@
   "ביטוח"
  ],
  "search": false,
- "rev": 9,
+ "rev": 10,
  "max_pages": 20,
  "note": "כלל: generalreports, סוג 20 (הצהרה מראש של גוף מוסדי) x שנה; txtCompanyId=2 (API GetCompanyAndYearList?numReportType=20: 2=כלל חברה לביטוח, 3=כלל פנסיה וגמל)",
  "budget": [
   60,
   30
- ]
+ ],
+ "exclude": "קופות-גמל|קופת-גמל|קרנות-הפנסיה|קרן-הפנסיה|השתלמות|לכל-ילד|hodshi|\\d{9}_[gp]\\d+"
 }
