@@ -17,7 +17,10 @@
   ],
   "clicks": null,
   "any_sheet": null,
-  "exclude": null
+  "exclude": null,
+  "settle_ms": null,
+  "capture_ms": null,
+  "download_rx": null
  },
  {
   "legal_id": "513910703",
@@ -35,7 +38,10 @@
   "click": null,
   "clicks": null,
   "any_sheet": null,
-  "exclude": null
+  "exclude": null,
+  "settle_ms": null,
+  "capture_ms": null,
+  "download_rx": null
  },
  {
   "legal_id": "514956465",
@@ -54,7 +60,10 @@
   "click": null,
   "clicks": null,
   "any_sheet": true,
-  "exclude": null
+  "exclude": null,
+  "settle_ms": null,
+  "capture_ms": null,
+  "download_rx": null
  },
  {
   "legal_id": "520027251",
@@ -72,7 +81,10 @@
   "click": null,
   "clicks": null,
   "any_sheet": null,
-  "exclude": null
+  "exclude": null,
+  "settle_ms": null,
+  "capture_ms": null,
+  "download_rx": null
  },
  {
   "legal_id": "520028390",
@@ -90,7 +102,10 @@
   "click": null,
   "clicks": null,
   "any_sheet": null,
-  "exclude": null
+  "exclude": null,
+  "settle_ms": null,
+  "capture_ms": null,
+  "download_rx": null
  },
  {
   "legal_id": "520030677",
@@ -111,7 +126,10 @@
   ],
   "clicks": null,
   "any_sheet": null,
-  "exclude": null
+  "exclude": null,
+  "settle_ms": null,
+  "capture_ms": null,
+  "download_rx": null
  },
  {
   "legal_id": "520030990",
@@ -133,7 +151,10 @@
   "click": null,
   "clicks": null,
   "any_sheet": null,
-  "exclude": null
+  "exclude": null,
+  "settle_ms": null,
+  "capture_ms": null,
+  "download_rx": null
  },
  {
   "legal_id": "520031824",
@@ -159,6 +180,9 @@
   "click": null,
   "clicks": null,
   "any_sheet": null,
-  "exclude": null
+  "exclude": null,
+  "settle_ms": null,
+  "capture_ms": null,
+  "download_rx": null
  }
 ]
