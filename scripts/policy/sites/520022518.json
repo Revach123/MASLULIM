@@ -1,26 +1,22 @@
 {
  "legal_id": "520022518",
  "name": "החברה לניהול קופת התגמולים והפנסיה של עובדי הסוכנות היהודית לארץ ישראל בע\"מ",
- "home": "https://www.jewishagency.org",
+ "home": "https://www.jewishagency-kupa.org.il",
  "pages": [
   {
    "product": "פנסיה",
-   "url": "https://www.jewishagency.org/he/"
-  },
-  {
-   "product": "פנסיה",
-   "url": "https://www.jafi.org/"
+   "url": "https://www.jewishagency-kupa.org.il/"
   }
  ],
  "browser": "headless",
  "products": [
   "פנסיה"
  ],
- "search": true,
- "rev": 8,
+ "search": false,
+ "rev": 9,
  "home_source": "report_email:jafi.org",
  "via": "extension",
- "follow_max": 15,
- "note": "jafi.org/he = דף שגיאה; האתר העברי של הסוכנות הוא jewishagency.org/he. איש קשר בדוח הרבעוני: @jafi.org",
- "follow_rx": "פנסי|תגמולים|קופ|pension|provident|retire"
+ "follow_max": 20,
+ "note": "אתר הקופה: jewishagency-kupa.org.il (לא jafi.org). follow_rx נכנס לעמודי מדיניות/השקעות/דוחות",
+ "follow_rx": "מדיניות|השקע|הצהר|דוח|מסמכ|policy|invest|report"
 }
