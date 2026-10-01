@@ -9,6 +9,14 @@
   },
   {
    "product": "ביטוח",
+   "url": "https://www.ayalon-ins.co.il/savings/nispah/"
+  },
+  {
+   "product": "ביטוח",
+   "url": "https://www.ayalon-ins.co.il/savings/nispah_prat/"
+  },
+  {
+   "product": "ביטוח",
    "url": "https://www.ayalon-ins.co.il/investments"
   }
  ],
@@ -17,7 +25,7 @@
   "ביטוח"
  ],
  "search": true,
- "rev": 9,
+ "rev": 10,
  "via": "extension",
  "note": "עמוד /investments: רשימה 'נושא' -> 'הצהרת מדיניות השקעות' -> אקורדיון שנים -> 'הצהרה מראש של גוף מוסדי לשנת YYYY' (להורדה, /media/.../guf_mosdi_YYYY-*.xlsx)",
  "clicks": {

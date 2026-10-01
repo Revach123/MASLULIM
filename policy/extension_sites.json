@@ -128,11 +128,19 @@
   "pages": [
    {
     "product": "גמל",
-    "url": "https://www.kranoth.org.il/מדיניות-ונהלים/"
+    "url": "https://www.kranoth.org.il/מדיניות-ותקנונים/מדיניות-השקעות-מורים-וגננות-רגיל/"
    },
    {
     "product": "גמל",
-    "url": "https://www.kranoth.org.il/"
+    "url": "https://www.kranoth.org.il/מדיניות-ותקנונים/מדיניות-השקעות-מורים-וגננות-מקור/"
+   },
+   {
+    "product": "גמל",
+    "url": "https://www.kranoth.org.il/מדיניות-ותקנונים/מדיניות-השקעות-מורים-וגננות-מקוצר/"
+   },
+   {
+    "product": "גמל",
+    "url": "https://www.kranoth.org.il/מדיניות-ותקנונים/"
    }
   ],
   "products": [
@@ -145,8 +153,8 @@
   "settle_ms": null,
   "capture_ms": null,
   "download_rx": null,
-  "follow_max": 25,
-  "follow_rx": "מדיניות-ונהלים|גננות"
+  "follow_max": 15,
+  "follow_rx": "גננות"
  },
  {
   "legal_id": "520028390",
@@ -202,6 +210,14 @@
    },
    {
     "product": "ביטוח",
+    "url": "https://www.ayalon-ins.co.il/savings/nispah/"
+   },
+   {
+    "product": "ביטוח",
+    "url": "https://www.ayalon-ins.co.il/savings/nispah_prat/"
+   },
+   {
+    "product": "ביטוח",
     "url": "https://www.ayalon-ins.co.il/investments"
    }
   ],
@@ -231,6 +247,10 @@
    {
     "product": "גמל",
     "url": "https://www.minhal.org/?CategoryID=164"
+   },
+   {
+    "product": "גמל",
+    "url": "https://www.minhal.org/?CategoryID=153"
    },
    {
     "product": "גמל",
