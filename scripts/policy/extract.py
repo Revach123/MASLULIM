@@ -13,7 +13,7 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parents[2]
 OUT = ROOT / (__import__("os").environ.get("POLICY_OUT") or "policy")  # ריצה לחברה: policy/companies/<LegalId>
 
-PARSER_VERSION = 11  # (v10: Ayalon, dated current column) # הגדלה = פרסור מחדש של כל המסמכים בריצה הבאה (שינוי בפרסרים)
+PARSER_VERSION = 12  # (v10: Ayalon, dated current column) # הגדלה = פרסור מחדש של כל המסמכים בריצה הבאה (שינוי בפרסרים)
 
 NUM = r"(\d{1,3}(?:\.\d+)?)"
 PCT = NUM + r"\s*%?"
@@ -419,11 +419,12 @@ def parse_titled_tables(rows, sheet=""):
             title = sheet.strip() or title
         name = norm_name(title)
         g = lambda r, k, off=0: r[cols[k] + off] if k in cols and cols[k] + off < len(r) else ""
+        n0 = len(out)
         for r in grid[ri + 1:]:
             lab = r[lc] if lc < len(r) else ""
             if lab.startswith("סוף") or hdr_rx.match(lab) or re.match(r"^(קידוד|שם\s+(ה)?(קופה|מסלול)|מסלולים\s)", lab) \
-                    or (any("צפוי" in t for t in r) and any(re.search(r"גבולות|סטי", t) for t in r)):
-                break  # תחילת הטבלה הבאה
+                    or (len(out) > n0 and any("צפוי" in t for t in r) and any(re.search(r"גבולות|סטי", t) for t in r)):
+                break  # תחילת הטבלה הבאה (שורת כותרת אחרי שורות נתונים; לא שורת המשך של הכותרת)
             lab = lab.lstrip("*").strip()
             if not lab or lab.startswith("(") or re.fullmatch(r"[\d./\-%]+", lab) or re.fullmatch(r"סה[\"״]?כ(\s+תיק)?", lab):
                 continue
