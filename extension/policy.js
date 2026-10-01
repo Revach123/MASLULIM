@@ -8,6 +8,11 @@
 import { commitFiles, getFileBase64 } from "./github.js";
 
 export const POLICY_ALARM = "policy-daily";
+
+// עצירה מהחלונית: לא מתחילים אתר/עמוד/הורדה חדשים; מה שכבר הורד עדיין נשלח ל-GitHub
+let stopRequested = false;
+let onStop = null;  // עדכון מיידי של החלונית ("עוצר...") - נקבע בתוך runPolicy
+export function requestPolicyStop() { stopRequested = true; if (onStop) onStop(); }
 const sleep = (ms) => new Promise((r) => setTimeout(r, ms));
 
 const DOC_RX = /\.(xlsx|xls|pdf|docx)(\?|#|$)/i;
@@ -154,6 +159,7 @@ async function runSite(site, cfg, seen, onProgress, windowId) {
   const files = [], errors = [], diag = [];
   const report = (pi, step) => onProgress({ page: pages[pi], pageNo: pi + 1, pages: pages.length, step, docs: files.length / 2 });
   for (const [pi, pageUrl] of pages.entries()) {
+    if (stopRequested) break;
     await report(pi, "טוען עמוד");
     let tab;
     try {
@@ -181,6 +187,7 @@ async function runSite(site, cfg, seen, onProgress, windowId) {
           diag.push(`   ? ${decodeURIComponent(l.href.split("/").pop()).slice(0, 60)} | ${(l.text || "").slice(0, 40)} | ${(l.ctx || "").replace(/\s+/g, " ").slice(0, 60)}`));
       }
       for (const [di, d] of uniq.entries()) {
+        if (stopRequested) break;
         await report(pi, `מוריד קובץ ${di + 1}/${uniq.length}`);
         const [r2] = await chrome.scripting.executeScript({ target: { tabId: tab.id }, func: pageFetchBase64, args: [d.href] });
         const got = r2 && r2.result;
@@ -215,6 +222,7 @@ const POLICY_CONCURRENCY = 4;
 // מחזיר {docs, errors, diag}. setStatus - לעדכון החלונית (שורה מצרפת,
 // כי כמה אתרים עשויים לדווח התקדמות בו-זמנית).
 export async function runPolicy(cfg, setStatus) {
+  stopRequested = false;
   const sites = await readSites(cfg);
   const { policySeen } = await chrome.storage.local.get("policySeen");
   const seen = policySeen || {};
@@ -227,7 +235,7 @@ export async function runPolicy(cfg, setStatus) {
   // ו-setStatus הוא read-modify-write
   let chain = Promise.resolve();
   function flushStatus(phase) {
-    const state = { running: true, phase: phase || "אתרים", total: sites.length, done: finished.length,
+    const state = { running: true, stopping: stopRequested, phase: phase || (stopRequested ? "עוצר" : "אתרים"), total: sites.length, done: finished.length,
                     newDocs: allFiles.length / 2 + Object.values(progress).reduce((a, p) => a + (p.docs || 0), 0),
                     started, active: Object.entries(progress).map(([name, p]) => ({ name, ...p })), finished };
     const text = state.active.map((a) => `${a.name}: ${a.step} (${a.pageNo}/${a.pages})`).join("\n") || "מתחיל...";
@@ -241,9 +249,10 @@ export async function runPolicy(cfg, setStatus) {
   try { workWin = await chrome.windows.create({ state: "minimized", focused: false, url: "about:blank" }); } catch (e) { workWin = null; }
   const windowId = workWin && workWin.id;
 
+  onStop = () => flushStatus();
   let nextIdx = 0;
   async function worker() {
-    while (nextIdx < sites.length) {
+    while (!stopRequested && nextIdx < sites.length) {
       const site = sites[nextIdx++];
       try {
         const { files, errors, diag } = await runSite(site, cfg, seen, async (p) => {
@@ -276,8 +285,9 @@ export async function runPolicy(cfg, setStatus) {
       `policy inbox (extension): ${allFiles.length / 2} documents from blocked sites`);
   }
   await chrome.storage.local.set({ policySeen: seen });
+  onStop = null;
   await chain;
-  await setStatus({ policyState: { running: false, total: sites.length, done: finished.length, newDocs: allFiles.length / 2,
+  await setStatus({ policyState: { running: false, stopped: stopRequested, total: sites.length, done: finished.length, newDocs: allFiles.length / 2,
                                    started, ended: Date.now(), active: [], finished } });
   return { docs: allFiles.length / 2, errors: allErrors, diag: allDiag };
 }
