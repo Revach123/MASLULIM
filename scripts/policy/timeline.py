@@ -359,10 +359,22 @@ def write_complete(latest):
     year = str(date.today().year)
     reg = {}
     rp = POL / "fund_registry.csv"
+    # מסלול שנסגר (דיווח אחרון בגמל-נט/פנסיה-נט/ביטוח-נט לפני השנה) או שאין לו מדיניות מעצם טיבו
+    # (IRA / בניהול אישי / הלוואות) - לא נדרש
+    last = {}
+    fp = POL / "fund_names.csv"
+    if fp.exists():
+        for r in csv.DictReader(open(fp, encoding="utf-8-sig")):
+            last[r["FUND_ID"]] = max(last.get(r["FUND_ID"], ""), str(r.get("REPORT_PERIOD") or ""))
+    na = re.compile(r"IRA|בניהול אישי|ניהול אישי|הלוואות")
     if rp.exists():
         for r in csv.DictReader(open(rp, encoding="utf-8-sig")):
-            if r.get("legal_id") and r.get("track_no"):
-                reg.setdefault(r["legal_id"], set()).add(r["track_no"])
+            tn = r.get("track_no")
+            if not (r.get("legal_id") and tn) or na.search(r.get("שם מסלול ארוך") or r.get("name") or ""):
+                continue
+            if tn in last and last[tn] < year + "01":
+                continue
+            reg.setdefault(r["legal_id"], set()).add(tn)
     have, act, act_y = {}, {}, {}
     for r in latest:
         if not r.get("active"):

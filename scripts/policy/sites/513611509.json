@@ -6,6 +6,22 @@
   {
    "product": "גמל",
    "url": "https://www.yl-invest.co.il/17/"
+  },
+  {
+   "product": "גמל",
+   "url": "https://www.yl-invest.co.il/קופת-גמל/"
+  },
+  {
+   "product": "גמל",
+   "url": "https://www.yl-invest.co.il/קרן-השתלמות/"
+  },
+  {
+   "product": "גמל",
+   "url": "https://www.yl-invest.co.il/קופת-גמל-להשקעה/"
+  },
+  {
+   "product": "גמל",
+   "url": "https://www.yl-invest.co.il/ניהול-קופות-גמל-והשתלמות/"
   }
  ],
  "browser": "headless",
@@ -13,7 +29,9 @@
   "גמל"
  ],
  "search": false,
- "rev": 6,
- "note": "/17/ = ניהול קופות גמל והשתלמות: כל המסמכים ב-uploads/n/<מספר>.pdf עם 'הורדת טופס' - הכותרת בשורה",
- "track_from_link": "ילין לפידות\\s*-\\s*(.+?)\\.?\\s*(?:עודכן|$)"
+ "rev": 7,
+ "note": "/17/ = ניהול קופות גמל והשתלמות: כל המסמכים ב-uploads/n/<מספר>.pdf עם 'הורדת טופס' - הכותרת בשורה. 2026-10: לכל מסלול עמוד מוצר ('לעמוד המוצר' בעמוד /17/) - follow לעמודי קופ*/קרן*; קודם נסרקו רק 5",
+ "track_from_link": "ילין לפידות\\s*-\\s*(.+?)\\.?\\s*(?:עודכן|$)",
+ "follow": "yl-invest\\.co\\.il/(%D7%A7%D7%95%D7%A4|%D7%A7%D7%A8%D7%9F|קופ|קרן)[^/]*/$",
+ "max_pages": 70
 }

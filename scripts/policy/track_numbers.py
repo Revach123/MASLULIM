@@ -250,6 +250,10 @@ def candidates(t):
         c.append((n, "doc_code"))
     for n in name_numbers(t.get("track_name")) + name_numbers((t.get("track_code") or "").split("|")[-1]):
         c.append((n, "name"))
+    # מספר קצר (1-2 ספרות) בסוף השם ("כלל כללי 99", "אשראי ואג ח 4") - רק אם הוא מסלול של אותה חברה ברישום (נבדק ב-assign)
+    m = re.search(r"(?<![\d%.])(\d{1,2})\s*$", str(t.get("track_name") or ""))
+    if m and m.group(1) not in ("50", "60") and not re.search(r"(עד|לבני|גיל|גילאי|ומעלה|ומטה|מעל|\d)\s*$", t["track_name"][:m.start()]):
+        c.append((str(int(m.group(1))), "name_short"))
     for f in t.get("fund_ids") or []:
         if not from_struct_code(t.get("track_code")):  # במיטב fund_id = מספר הקופה, לא המסלול
             c.append((str(int(f)) if str(f).isdigit() else str(f), "doc"))
@@ -264,7 +268,8 @@ def assign(tracks):
     מופיע בשמו (דליפה מהמסלול הקודם בגיליון - הפניקס/כלל); האחרים עוברים למקור הבא."""
     reg = Registry()
     for t in tracks:
-        t["_c"] = [x for x in candidates(t) if reg.valid(t["legal_id"], x[0])]
+        t["_c"] = [x for x in candidates(t) if reg.valid(t["legal_id"], x[0])
+                   and (x[1] != "name_short" or x[0] in reg.by_company.get(t["legal_id"], {}))]
         t["_banned"] = set()
     for _ in range(4):
         owners = {}
