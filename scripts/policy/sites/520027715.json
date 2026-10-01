@@ -22,5 +22,6 @@
  "max_pages": 70,
  "note": "מנורה: קובץ מדיניות לכל מסלול בעמוד המסלול (/funds/...), נחשף רק ברינדור. עמודי links/ = רשימות המסלולים; follow נכנס לכל מסלול בדפדפן. exclude: תיק ביטוח משתתף של מנורה ביטוח",
  "exclude": "about-insurance|participating-portfolio|מנורה-ביטוח|משתתף",
- "follow": "/funds/about-menora/engineers/omega-fund/"
+ "follow": "/funds/about-menora/engineers/omega-fund/",
+ "status_note": "קרן אומגה (9802) - דיווחים נעצרו ב-2024/04 (רבעון 4 2023): הקרן מוזגה, אין הצהרת מדיניות 2026"
 }
