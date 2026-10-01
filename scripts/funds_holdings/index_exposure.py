@@ -112,7 +112,7 @@ _THEMES = [
     (r"ENERGY|\bOIL\b|\bXLE\b|אנרגיה|נפט", "energy", "אנרגיה", "us"),
     (r"MATERIALS|METALS|MINING|MINERS|\bRESOURCES?\b|\bXLB\b|חומרי גלם|כרייה", "materials", "חומרי גלם", ""),
     # סגנון
-    (r"EQUAL\W?WEIGHT|משקל שווה|שווה משקל", "equal_weight", "שווה משקל", ""),
+    (r"EQUAL\W?WEIGHT|משקל שווה|שווה משקל", "equal_weight", "משקל שווה", ""),
     (r"\bESG\b|SUSTAIN|\bSUST\b|\bSRI\b|\bSDG\b|CLIMATE|PARIS|CIRCULAR|קיימות|^מעלה$", "esg", "ESG", ""),
     (r"DIVIDEN|\bDVD\b|\bDIV\b|דיבידנד|\bדיב\b", "dividend", "דיבידנד", ""),
     (r"MIN\W?VOL|LOW\W?VOL|תנודתיות נמוכה", "min_vol", "תנודתיות נמוכה", ""),
@@ -161,7 +161,7 @@ _P = [
     (r"DOW\W?JONES\W?INDUSTRIAL|\bDJIA\b|\bINDU\b|דאו ג'ונס", "dow30", "דאו ג'ונס"),
     (r"S\W?P\W?500\W?EX\W?FINANC", "sp500", "S&P 500"),
     (r"S\W?P\W?500.{0,12}EX\W?TECH|EX\W?TECHNOLOG|לא כולל טכנולוגיה", "sp500_ex_tech", "S&P (לא כולל טכנולוגיה)"),
-    (r"S\W?P\W?500.{0,25}EQUAL|S\W?P\W?500\W?שווה משקל|S\W?P\W?500\W?משקל שווה", "sp500_ew", "S&P 500 שווה משקל"),
+    (r"S\W?P\W?500.{0,25}EQUAL|S\W?P\W?500\W?שווה משקל|S\W?P\W?500\W?משקל שווה", "sp500_ew", "S&P 500 משקל שווה"),
     (r"S\W?P\W?500.{0,20}(ESG|SCORED|SRI|SUSTAIN|PARIS|CLIMATE)", "sp500_esg", "S&P 500 (ESG)"),
     (r"S\s?[&@+]\s?P\W?500|EMINI\W+S\W?P\b|S&P\W?500|\bSPY\b|\bVOO\b|\bIVV\b|\bCSPX\b|\bSP\W?500", "sp500", "S&P 500"),
     (r"NASDAQ\W?COMP", "nasdaq_comp", "נסדק קומפוזיט"),
@@ -230,7 +230,7 @@ def _region(s: str) -> str | None:
 
 def classify_index(text, full_name: str | None = None) -> tuple[str, str]:
     """(מזהה, שם לתצוגה). סדר: שם מלא (אם נפתר, למשל מ-OpenFIGI) / קוד מוכר ->
-    מדד רחב מיוחד (S&P 500 ESG/שווה משקל/ללא טכנולוגיה) -> נושא × אזור (ענף,
+    מדד רחב מיוחד (S&P 500 ESG/משקל שווה/ללא טכנולוגיה) -> נושא × אזור (ענף,
     סגנון או מגמה; "צמיחה עולמי", "טכנולוגיה ארה\"ב") -> מדד רחב -> אזור בלבד
     ("מניות ארה\"ב - אחר") -> השם המנורמל עצמו."""
     raw = normalize_name(text)
