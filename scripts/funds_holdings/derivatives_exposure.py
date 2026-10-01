@@ -70,7 +70,7 @@ from .option_delta_pricing import quote_scale, resolve_option_delta
 from .option_ticker_parse import (CONTRACT_MULTIPLIER, is_call_option, parse_maof_expiry_month, parse_strike,
                                   parse_underlying)
 from .futures_notional import FuturesResolver, build_rows as build_futures_rows
-from .swap_index_pricing import price_as_of as index_price_as_of, resolve_current_price
+from .swap_index_pricing import parse_deal_date, price_as_of as index_price_as_of, proxy_return, resolve_current_price
 
 FAIR_VALUE_COL = 'שווי הוגן (באלפי ש"ח)'
 SWAP_NET_FAIR_VALUE_COL = 'שווי הוגן (נטו באלפי ש"ח)'
@@ -350,11 +350,25 @@ MTM_LEG_SHARE = 0.2
 LIVE_SWAP_MAX_RATIO = 1.5
 
 
+SWAP_DEAL_DATE_COL = "מועד ההתקשרות בעסקה"
+
+
+def _current_index_price(row: dict, report_date) -> float | None:
+    """מחיר המדד ליום הדוח: סדרת המדד ב-INDICES, ואם אין - מחיר העסקה × תשואת תעודת
+    הסל העוקבת מיום העסקה (swap_index_pricing.proxy_return)."""
+    price, _ = resolve_current_price(row.get(SWAP_TICKER_COL), report_date)
+    if price is not None:
+        return price
+    deal_price = _num(row.get(SWAP_UNDERLYING_PRICE_COL))
+    ratio = proxy_return(row.get(SWAP_TICKER_COL), parse_deal_date(row.get(SWAP_DEAL_DATE_COL)), report_date)
+    return deal_price * ratio if deal_price and ratio else None
+
+
 def _live_swap_ratio(row: dict, report_date, fx_now: dict, total: float) -> float | None:
     """|יחידות| × מחיר המדד ליום הדוח (swap_index_pricing, רק טיקר ממופה) × שער
     מטבע המדד / נכסי המסלול. None אם אין מחיר / יחידות, או שהתוצאה לא סבירה לשורה."""
     leg1_col, leg2_col = SWAP_LEGS
-    price, _ = resolve_current_price(row.get(SWAP_TICKER_COL), report_date)
+    price = _current_index_price(row, report_date)
     if price is None:
         return None
     ccy1, ccy2 = row.get(leg1_col["currency"]), row.get(leg2_col["currency"])
@@ -522,7 +536,7 @@ def _swap_exposure(
                 # ~100 מיליון - פי ~15,000).
                 leg1_live = None
                 if used_priced:
-                    current_price, _index_id = resolve_current_price(row.get(SWAP_TICKER_COL), report_date)
+                    current_price = _current_index_price(row, report_date)
                     leg1_live = (abs(units1 * price_fx * current_price) / 1000
                                  if units1 is not None and price_fx is not None and current_price is not None else None)
 
