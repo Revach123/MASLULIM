@@ -21,12 +21,13 @@ from .excel_io import to_ratio
 from .file_list import get_file_list
 from .foreign_etf_reference import (
     build_foreign_equity, build_isin_fractions, classify_from_report_names, sanitize_fractions,
-    classify_via_openfigi_names, collect_unclassified_foreign_isins,
+    classify_via_openfigi_names, collect_unclassified_foreign_isins, repair_isin_typos,
     fetch_etf_universe, fetch_sec_etf_exposure,
 )
 from .funds import build_funds
 from .funds_reference import build_funds_reference
-from .funds_il import build_funds_il
+from .funds_il import build_funds_il_equity
+from .fund_exposure_reference import fetch_fund_exposure, fetch_tase_stocks
 from .isin_swap import build_isin_swap
 from .sheet_source import PCT_COL, build_source
 from .track_pct_normalize import normalize_track_pct
@@ -93,7 +94,7 @@ def compute_equity_totals(reports_dir: Path, tracks: list[dict]):
     funds_ref = build_funds_reference()
     isin_swap = build_isin_swap(funds_ref)
     funds = build_funds(source, isin_swap)
-    il_sums = build_funds_il(funds, funds_ref)
+    il_equity = build_funds_il_equity(funds, funds_ref, fetch_fund_exposure(), fetch_tase_stocks())
 
     isin_fractions = build_isin_fractions(fetch_etf_universe(), fetch_sec_etf_exposure())
     for isin, frac in classify_from_report_names(source).items():
@@ -125,6 +126,8 @@ def compute_equity_totals(reports_dir: Path, tracks: list[dict]):
     except Exception as e:
         print(f"[validate] שכבת שמות-מלאים OpenFIGI נכשלה (מדלג): {e}")
     print(f"[validate] {len(isin_fractions)} ISIN מסווגים סה\"כ (+שמות מלאים)")
+    repaired = repair_isin_typos(funds, isin_fractions)
+    print(f"[validate] {len(repaired)} ISIN עם טעות בקידומת המדינה (ספרת ביקורת) - סווגו לפי המתוקן: {repaired}")
     fixed = sanitize_fractions(isin_fractions, source)
     print(f"[validate] {len(fixed)} ISIN עם שבר מניות > 1 בקרן לא ממונפת - נורמלו: {fixed[:10]}")
 
@@ -207,8 +210,7 @@ def compute_equity_totals(reports_dir: Path, tracks: list[dict]):
     for key in keys:
         cats = category_pct.get(key, {})
         direct = sum(cats.get(c, 0.0) for c in DIRECT_EQUITY_CATEGORIES)
-        siveg = il_sums.get(key, {})
-        funds_eq = sum(v for k, v in siveg.items() if any(s in k for s in EQUITY_FUND_SIVEGS))
+        funds_eq = il_equity.get(key, 0.0)
         foreign_eq = sum(v for k, v in foreign_equity.get(key, {}).items()
                           if any(s in k for s in EQUITY_FUND_SIVEGS))
 

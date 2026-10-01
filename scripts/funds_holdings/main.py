@@ -21,11 +21,12 @@ from .file_list import get_file_list
 from .foreign_etf_reference import (
     build_foreign_equity, build_isin_fractions, sanitize_fractions,
     classify_from_report_names, classify_via_openfigi_names,
-    collect_unclassified_foreign_isins, fetch_etf_universe, fetch_sec_etf_exposure, official_fund_names,
+    collect_unclassified_foreign_isins, repair_isin_typos, fetch_etf_universe, fetch_sec_etf_exposure, official_fund_names,
 )
 from .funds import build_funds
 from .funds_detail import build_funds_detail
 from .funds_il import build_funds_il, build_funds_il_kashrut
+from .fund_exposure_reference import fetch_fund_exposure, fetch_tase_stocks
 from .alt_asset_reference import build_alt_classes
 from .holdings_detail import build_holdings_detail, report_unplaced_funds
 from .funds_reference import build_funds_reference
@@ -150,6 +151,8 @@ def build_master_table(
     except Exception as e:
         print(f"[main] שכבת שמות-מלאים OpenFIGI נכשלה (מדלג): {e}")
     print(f"[main] {len(isin_fractions)} ISIN מסווגים סה\"כ (+שמות מלאים)")
+    repaired = repair_isin_typos(funds, isin_fractions)
+    print(f"[main] {len(repaired)} ISIN עם טעות בקידומת המדינה (ספרת ביקורת) - סווגו לפי המתוקן: {repaired}")
     fixed = sanitize_fractions(isin_fractions, source)
     print(f"[main] {len(fixed)} ISIN עם שבר מניות > 1 בקרן לא ממונפת - נורמלו: {fixed[:10]}")
 
@@ -161,8 +164,9 @@ def build_master_table(
     # פירוק החשיפה למניות לפי מדד (ר' index_exposure.py) - אותם רכיבים בדיוק
     # כמו validate_equity_exposure, כל רכיב לפי המדד שמאחוריו.
     index_trace: dict = {}
+    fund_exposure, tase_stocks = fetch_fund_exposure(), fetch_tase_stocks()
     index_exp = build_index_exposure(source, funds, funds_ref, isin_fractions, resolve_online=True,
-                                     trace=index_trace)
+                                     trace=index_trace, fund_exposure=fund_exposure, tase_stocks=tase_stocks)
     tracks_by_key = {k: t for t in tracks if (k := track_key(t))}
     index_table = build_index_table(index_exp, tracks_by_key, report_month_by_key(source))
     print(f"[main] {len(index_table)} מסלולים עם פירוק חשיפה לפי מדד")
@@ -199,12 +203,15 @@ def build_master_table(
         print(f"[alt] OpenFIGI לא זמין (שמות מלאים): {e}")
         alt_full_names = {}
     official_names = official_fund_names(etf_universe, sec_exposure)
+    for bad, good in repaired.items():
+        if good in official_names:
+            official_names.setdefault(bad, official_names[good])
     for isin in alt_candidates:
         if isin in official_names:
             alt_full_names.setdefault(isin, official_names[isin])
     alt_classes = build_alt_classes(alt_candidates, etf_universe, alt_full_names)
     holdings_detail = build_holdings_detail(source, isin_swap, funds_ref, isin_fractions, index_trace, alt_classes,
-                                            official_names)
+                                            official_names, fund_exposure, tase_stocks)
     print(report_unplaced_funds(holdings_detail))
 
     rows: dict[str, dict] = {}
