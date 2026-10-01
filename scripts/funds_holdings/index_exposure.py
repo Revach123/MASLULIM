@@ -280,13 +280,17 @@ class _Acc:
         self.pct: dict[str, dict[str, float]] = defaultdict(lambda: defaultdict(float))
         self.label: dict[str, str] = {}
         self.src: dict[str, dict[str, dict[str, float]]] = defaultdict(lambda: defaultdict(lambda: defaultdict(float)))
+        # id(שורת המקור) -> [(מדד, חשיפה)] - לשיוך כל החזקה למדד שלה (holdings_detail)
+        self.rows: dict[int, list[tuple[str, float]]] = defaultdict(list)
 
-    def add(self, key, idx, label, value, source):
+    def add(self, key, idx, label, value, source, ref=None):
         if not value:
             return
         self.pct[key][idx] += value
         self.label.setdefault(idx, label)
         self.src[key][idx][source] += value
+        if ref is not None:
+            self.rows[id(ref)].append((idx, value))
 
 
 def _country_label(country) -> tuple[str, str]:
@@ -330,10 +334,12 @@ def _swap_index(row, full_names: dict[str, str] | None = None) -> tuple[str, str
 
 
 def build_index_exposure(source: list[dict], funds: list[dict], funds_ref: list[dict],
-                         isin_fractions: dict[str, dict[str, float]], resolve_online: bool = False) -> dict[str, dict]:
+                         isin_fractions: dict[str, dict[str, float]], resolve_online: bool = False,
+                         trace: dict | None = None) -> dict[str, dict]:
     """מפתח -> {"total": ..., "indices": {מזהה: {"label", "pct", "sources"}}}.
 
-    source צריך להיות אחרי normalize_track_pct (כמו בכל שאר הרכיבים)."""
+    source צריך להיות אחרי normalize_track_pct (כמו בכל שאר הרכיבים). trace (אופציונלי) מקבל
+    "rows" (id(שורת מקור) -> [(מדד, חשיפה)]) ו-"labels" (מדד -> שם) - לשיוך כל החזקה למדד."""
     acc = _Acc()
     totals = total_assets_by_key(source)
 
@@ -345,7 +351,7 @@ def build_index_exposure(source: list[dict], funds: list[dict], funds_ref: list[
             key, pct = row.get("מפתח"), to_ratio(row.get(PCT_COL))
             if key and pct:
                 idx, label = _country_label(row.get(COUNTRY_COL))
-                acc.add(key, idx, label, pct, "direct")
+                acc.add(key, idx, label, pct, "direct", row)
 
     # 2. קרנות IL/נסחרת בסיווג מניות - לפי "נכס בסיס"
     ref_by_num = {str(r["מספר קרן"]): r for r in funds_ref if r.get("מספר קרן")}
@@ -374,13 +380,13 @@ def build_index_exposure(source: list[dict], funds: list[dict], funds_ref: list[
                 continue
             for name, w in _equity_parts(r.get("נכס בסיס")):
                 idx, label = classify_index(name)
-                acc.add(key, idx, label, pct * w, "funds_il")
+                acc.add(key, idx, label, pct * w, "funds_il", f.get("_row"))
         elif f["סוג"] == "חוץ":
             frac = isin_fractions.get(num.upper())
             if not frac or not frac.get("equity"):
                 continue
             idx, label = classify_index(names_by_isin.get(num.upper(), num), full_names.get(num.upper()))
-            acc.add(key, idx, label, pct * frac["equity"], "funds_foreign")
+            acc.add(key, idx, label, pct * frac["equity"], "funds_foreign", f.get("_row"))
 
     # 3. חוזים עתידיים - אותה חשיפה לשורה כמו ב-derivatives_exposure
     fut_detail: list[dict] = []
@@ -404,8 +410,10 @@ def build_index_exposure(source: list[dict], funds: list[dict], funds_ref: list[
         _options_exposure(source, totals, cat, opt_detail)
         for d in opt_detail:
             idx, label = _option_index(d["ticker"], d["row"])
-            acc.add(d["key"], idx, label, d["ratio"], "options")
+            acc.add(d["key"], idx, label, d["ratio"], "options", d["row"])
 
+    if trace is not None:
+        trace["rows"], trace["labels"] = acc.rows, acc.label
     out = {}
     for key, by_idx in acc.pct.items():
         indices = {i: {"label": acc.label[i], "pct": v, "sources": dict(acc.src[key][i])}
@@ -456,7 +464,7 @@ def _add_derivative(acc: _Acc, detail: list[dict], capped_equity: dict[str, floa
         use_reported = abs(sum(d["ratio"] for d in rows) - capped_equity.get(key, 0.0)) > 1e-9
         for d in rows:
             idx, label = index_of(d)
-            acc.add(key, idx, label, d["row_pct"] if use_reported else d["ratio"], source)
+            acc.add(key, idx, label, d["row_pct"] if use_reported else d["ratio"], source, d["row"])
 
 
 TRACK_FIELDS = {
