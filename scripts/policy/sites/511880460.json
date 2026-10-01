@@ -9,5 +9,6 @@
  ],
  "search": true,
  "rev": 6,
- "home_source": "report_email:analyst.co.il"
+ "home_source": "report_email:analyst.co.il",
+ "track_from_link": "^(?:אנליסט\\s+)?(.+?)\\s+מדיניות\\s+צפויה"
 }

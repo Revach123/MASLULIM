@@ -14,7 +14,7 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parents[2]
 OUT = ROOT / (__import__("os").environ.get("POLICY_OUT") or "policy")  # ריצה לחברה: policy/companies/<LegalId>
 
-PARSER_VERSION = 15  # (v10: Ayalon, dated current column) # הגדלה = פרסור מחדש של כל המסמכים בריצה הבאה (שינוי בפרסרים)
+PARSER_VERSION = 16  # (v10: Ayalon, dated current column) # הגדלה = פרסור מחדש של כל המסמכים בריצה הבאה (שינוי בפרסרים)
 
 NUM = r"(\d{1,3}(?:\.\d+)?)"
 PCT = NUM + r"\s*%?"
@@ -198,7 +198,9 @@ def read_doc(path: Path):
                 rtl = _is_visual_rtl(t)
                 t = _fix_rtl(t) if rtl else t
                 texts.append(t)
-                title = next((l.strip() for l in t.splitlines() if re.search(r"מסלול|מדיניות", l)), "")
+                # כותרת העמוד: שורה עם מסלול/מדיניות/מספר מ.ה (אנליסט: "אנליסט גמל לבני 50-60 (מ.ה 9731)"), לא הערת שוליים
+                title = next((l.strip() for l in t.splitlines() if re.search(r"מסלול|מדיניות|מ\.?ה\.?\W{0,3}\d{3,6}", l)
+                              and not re.search(r"ESG|GSE|ראו פרסום", l)), "")
                 for tb in pg.extract_tables():
                     if rtl:  # עברית חזותית: מילים הפוכות וסדר עמודות הפוך
                         tb = [[_fix_rtl(c) if isinstance(c, str) else c for c in reversed(r)] for r in tb]
@@ -441,6 +443,15 @@ def parse_titled_tables(rows, sheet=""):
         joined = " ".join(row)
         if "גבולות" not in joined and not ("מינימום" in joined and "מקסימום" in joined):
             continue
+        # כותרת שנמשכת בשורות הבאות (PDF אנליסט: "שיעור" / "חשיפה" / "צפוי לשנת" / "2026" בשורות נפרדות):
+        # שורות טקסט בלי תווית אפיק ובלי מספרים מצטרפות לתאי הכותרת שמעליהן (לא "מינימום/מקסימום" - נבדק בנפרד)
+        row = list(row)
+        for nx in grid[ri + 1:ri + 4]:
+            if (lc < len(nx) and nx[lc]) or not any(nx) or any(re.search(r"\d%|^\d{1,3}(\.\d+)?$|מינימום|מקסימום", t) for t in nx):
+                break
+            for c, t in enumerate(nx):
+                if t and c < len(row) and row[c]:
+                    row[c] = f"{row[c]} {t}"
         cols = {}
         pol_years = sorted(int(m.group(1)) for t in row for m in [re.search(r"^מדיניות\s*(20\d\d)", t)] if m)
         for c, t in enumerate(row):
@@ -500,7 +511,7 @@ def parse_titled_tables(rows, sheet=""):
             if title:
                 break
             cands = [c for c in grid[r2] if c and not c.startswith(("תחילת", "סוף", "קידוד")) and not re.fullmatch(r"[\d./\-%]+", c)
-                     and not re.search(r"ייחוס|יחוס", c)]
+                     and not re.search(r"ייחוס|יחוס|ESG|GSE|ראו פרסום", c)]
             if cands:
                 t0 = max(cands, key=len)
                 if re.search(r"^הצהרה|מדיניות.*(צפוי|שנת|לשנת)", t0) and "מסלול" not in t0:
@@ -519,10 +530,23 @@ def parse_titled_tables(rows, sheet=""):
         if not title or re.search(r"מדיניות.*(צפוי|שנת|לשנת)|הצהרה", title):
             title = sheet.strip() or title
         name = norm_name(title)
-        g = lambda r, k, off=0: r[cols[k] + off] if k in cols and cols[k] + off < len(r) else ""
+        claimed = set(cols.values()) | {lc}
+
+        def g(r, k, off=0):
+            if k not in cols:
+                return ""
+            c = cols[k] + off
+            v = r[c] if c < len(r) else ""
+            if not v and not off:  # תא ממוזג: הערך בעמודה הסמוכה שאין לה כותרת (PDF אנליסט)
+                for c2 in (c + 1, c - 1):
+                    if 0 <= c2 < len(r) and c2 not in claimed and r[c2]:
+                        return r[c2]
+            return v
         n0 = len(out)
         for r in grid[ri + 1:]:
             lab = r[lc] if lc < len(r) else ""
+            if not lab and lc > 0 and lc - 1 not in claimed and lc - 1 < len(r) and re.search(r"[א-ת]", r[lc - 1] or ""):
+                lab = r[lc - 1]  # תווית האפיק בעמודה שמימין לכותרת (PDF אנליסט, תאים ממוזגים)
             if lab.startswith("סוף") or hdr_rx.match(lab) or re.match(r"^(קידוד|שם\s+(ה)?(קופה|מסלול)|מסלולים\s)", lab) \
                     or (len(out) > n0 and any("צפוי" in t for t in r) and any(re.search(r"גבולות|סטי", t) for t in r)):
                 break  # תחילת הטבלה הבאה (שורת כותרת אחרי שורות נתונים; לא שורת המשך של הכותרת)
