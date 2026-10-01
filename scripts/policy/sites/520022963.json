@@ -8,7 +8,7 @@
   "פנסיה"
  ],
  "search": true,
- "rev": 7,
+ "rev": 8,
  "home_source": "report_email:amitim.com",
- "track_filter": "^Hadasa\\b"
+ "track_filter": "^(Hadasa\\b|הדס)"
 }

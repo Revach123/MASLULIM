@@ -87,7 +87,7 @@ A_JS = """els => els.map(e => {
 FILE_RX = re.compile(r"""["'(=\s]((?:https?:)?[\w\-./%:?=&~א-ת]+?\.(?:xlsx|xls|pdf|docx))(?=["')\s&<,]|$)""", re.I)
 
 
-def fetch_browser(pw, url):
+def fetch_browser(pw, url, click_texts=None):
     """רינדור: רשת שקטה, פתיחת אקורדיונים/לשוניות, ולכידת בקשות רשת (JSON עם נתיבי קבצים, קבצים ישירים, iframes).
     -> (anchors, status, body_text)"""
     b = pw.chromium.launch(executable_path=os.environ.get("PW_CHROMIUM") or None, headless=os.environ.get("POLICY_HEADED") != "1",
@@ -143,6 +143,19 @@ def fetch_browser(pw, url):
                         pass
             collect()
 
+        # לחיצות מפורשות מהגדרות האתר (click_texts): טקסט מדויק, force (באנר עוגיות מכסה), המתנה לתוכן מ-API
+        # (הכשרה: הצ'יפ 'מדיניות השקעה משתתפות' - בלעדיו מוצגות רק ההצבעות)
+        for t in click_texts or []:
+            try:
+                pg.get_by_text(t, exact=True).first.click(timeout=8000, force=True)
+                pg.wait_for_timeout(4000); collect()
+                for _ in range(10):  # "טען עוד" / "הצג עוד" ברשימת הכרטיסים
+                    more = pg.get_by_text(re.compile(r"^(טען|הצג)\s+(עוד|נוספים)"))
+                    if not more.count():
+                        break
+                    more.first.click(timeout=3000, force=True); pg.wait_for_timeout(2000); collect()
+            except Exception as e:
+                print(f"[snapshot] click_texts {t!r}: {type(e).__name__}", flush=True)
         expand()
         t_int = time.monotonic() + float(os.environ.get("POLICY_PAGE_BUDGET", "120"))
         # לשוניות/כפתורי מוצר (הראל: גמל/השתלמות/פנסיה...): לוחצים על כל אחד, פותחים אקורדיונים, אוספים
@@ -325,7 +338,7 @@ def _prio(text: str, href: str) -> int:
     return 0 if POLICY.search(blob) else 1 if PRODUCT_RX.search(blob) else 2
 
 
-def snapshot_company(s, pw, home, extra, products=None, max_pages=15, depth_max=2, follow=None):
+def snapshot_company(s, pw, home, extra, products=None, max_pages=15, depth_max=2, follow=None, click_texts=None):
     """follow: regex לקישורים שתמיד נכנסים אליהם ותמיד ברינדור דפדפן (מנורה: עמוד לכל מסלול, הקובץ נחשף רק ברינדור)"""
     import heapq, itertools
     frx = re.compile(follow) if follow else None
@@ -354,7 +367,7 @@ def snapshot_company(s, pw, home, extra, products=None, max_pages=15, depth_max=
         forced = bool(frx and frx.search(unquote(url)))
         if pw and (forced or ((anchors is None or url in iframes or (d == 0 and url in extra) or policy_like < MIN_LINKS_STATIC) and (
                 url in extra or url in iframes or score(url) > 0 or d == 0))):
-            b_anchors, b_status, b_text = fetch_browser(pw, url)
+            b_anchors, b_status, b_text = fetch_browser(pw, url, click_texts if url in extra else None)
             if b_anchors is not None:
                 items.update(items_from_anchors(b_anchors, url, dom)); text, method, status = b_text, "browser", b_status
             elif anchors is None:

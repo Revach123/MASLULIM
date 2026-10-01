@@ -13,6 +13,9 @@
   "ביטוח"
  ],
  "search": false,
- "rev": 12,
- "note": "עמוד השקעות והצבעות: צ'יפ 'מדיניות השקעה משתתפות' (role=button) -> כרטיסים עם קישור xlsx ב-umbraco-api.hcsra.co.il/media"
+ "rev": 13,
+ "note": "עמוד השקעות והצבעות: צ'יפ 'מדיניות השקעה משתתפות' (role=button) -> כרטיסים עם קישור xlsx ב-umbraco-api.hcsra.co.il/media",
+ "click_texts": [
+  "מדיניות השקעה משתתפות"
+ ]
 }

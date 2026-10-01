@@ -6,6 +6,14 @@
   {
    "product": "פנסיה",
    "url": "https://www.fnx.co.il/pension-savings/iec-pension/"
+  },
+  {
+   "product": "פנסיה",
+   "url": "https://www.fnx.co.il/SPF/iframe-the-expected-investment-policy-2026.aspx"
+  },
+  {
+   "product": "פנסיה",
+   "url": "https://www.fnx.co.il/SPF/iframe-the-expected-investment-policy-{year}.aspx"
   }
  ],
  "browser": "headless",
@@ -13,8 +21,12 @@
   "פנסיה"
  ],
  "search": false,
- "rev": 7,
+ "rev": 8,
  "home_source": "report_email:fnx.co.il",
  "exclude": "(?i)^(?!.*(iec|חח\\\"?י|hashmal))",
- "note": "קופת חח\"י: רק מסמכים מעמוד חח\"י (קבצי מדיניות הפניקס הכלליים שייכים לביטוח / פנסיה וגמל)"
+ "note": "קופת חח\"י: רק מסמכים מעמוד חח\"י (קבצי מדיניות הפניקס הכלליים שייכים לביטוח / פנסיה וגמל)",
+ "budget": [
+  30,
+  30
+ ]
 }
