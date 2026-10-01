@@ -136,13 +136,15 @@ def fetch_browser(pw, url):
                         "button:has-text('הצג עוד')", "button:has-text('עוד')", "[class*=accordion] [class*=header]"):
                 for el in pg.query_selector_all(sel)[:80]:
                     try:
+                        if not el.is_visible():  # תפריטים מוסתרים: כל לחיצה הייתה מחכה 600ms לשווא (הכשרה: מאות)
+                            continue
                         el.click(timeout=600); pg.wait_for_timeout(120)
                     except Exception:
                         pass
             collect()
 
-        t_int = time.monotonic() + float(os.environ.get("POLICY_PAGE_BUDGET", "240"))
         expand()
+        t_int = time.monotonic() + float(os.environ.get("POLICY_PAGE_BUDGET", "240"))
         # לשוניות/כפתורי מוצר (הראל: גמל/השתלמות/פנסיה...): לוחצים על כל אחד, פותחים אקורדיונים, אוספים
         tabs = pg.query_selector_all('[role="tab"], button, [role="button"], li[tabindex], [class*=tab]:not(a)')
         # לשוניות/צ'יפים של מדיניות קודם (הכשרה: צ'יפ "מדיניות השקעה משתתפות" אחרי ~150 כפתורי תפריט)
