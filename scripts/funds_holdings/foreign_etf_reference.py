@@ -19,6 +19,7 @@
    חשיפה מדויקים (eqTotalPct/bondTotalPct) - עדיף על הסיווג הקטגורי.
 """
 import os
+import re
 
 import requests
 
@@ -348,6 +349,36 @@ def _build_equity_by_type(
         if frac["bond"]:
             d[bond_label] = d.get(bond_label, 0.0) + pct * frac["bond"]
     return sums
+
+
+# קרן ממונפת (ULTRA / 2X / 3X / LEVERAGED / BULL) - שבר מניות מעל 1 אמיתי (TQQQ = 3.0)
+_LEVERAGED_NAME = re.compile(r"ULTRA|\b[23]X\b|LEVERAG|\bBULL\b|DAILY\s+\d", re.IGNORECASE)
+MAX_UNLEVERED_EQUITY = 1.05
+
+
+def sanitize_fractions(isin_fractions: dict[str, dict[str, float]], source: list[dict]) -> list[str]:
+    """שבר מניות מעל 1 בקרן לא ממונפת הוא שגיאת מקור (US4642867729, iShares MSCI South
+    Korea: equity=13.07 משכבות ה-CI - 26% משקל מצטבר במסלולים, 11 נק' בכל מסלול
+    "כללי" של מיטב). מנרמל: מניות ואג"ח מחולקים בסכומם (אג"ח שלילי נחשב 0) כך שמניות
+    <= 1. קרן ממונפת (לפי השם בדוח) נשארת כמו שהיא. מחזיר את ה-ISIN שתוקנו."""
+    names: dict[str, str] = {}
+    for rec in source:
+        if rec.get("Category") in ("קרנות נאמנות", "קרנות סל"):
+            for r in rec["Clean"]:
+                isin = str(r.get("מספר נייר ערך") or "").strip().upper()
+                n = str(r.get("שם נייר ערך") or "")
+                if isin and len(n) > len(names.get(isin, "")):
+                    names[isin] = n
+    fixed = []
+    for isin, frac in isin_fractions.items():
+        eq = frac.get("equity") or 0.0
+        if eq <= MAX_UNLEVERED_EQUITY or _LEVERAGED_NAME.search(names.get(isin, "")):
+            continue
+        bond = max(frac.get("bond") or 0.0, 0.0)
+        total = eq + bond
+        isin_fractions[isin] = {**frac, "equity": eq / total, "bond": bond / total}
+        fixed.append(isin)
+    return fixed
 
 
 def build_foreign_equity(funds: list[dict], isin_fractions: dict[str, dict[str, float]]) -> dict[str, dict[str, float]]:

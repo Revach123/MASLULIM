@@ -20,7 +20,7 @@ from .derivatives_exposure import (
 from .excel_io import to_ratio
 from .file_list import get_file_list
 from .foreign_etf_reference import (
-    build_foreign_equity, build_isin_fractions, classify_from_report_names,
+    build_foreign_equity, build_isin_fractions, classify_from_report_names, sanitize_fractions,
     classify_via_openfigi_names, collect_unclassified_foreign_isins,
     fetch_etf_universe, fetch_sec_etf_exposure,
 )
@@ -125,6 +125,8 @@ def compute_equity_totals(reports_dir: Path, tracks: list[dict]):
     except Exception as e:
         print(f"[validate] שכבת שמות-מלאים OpenFIGI נכשלה (מדלג): {e}")
     print(f"[validate] {len(isin_fractions)} ISIN מסווגים סה\"כ (+שמות מלאים)")
+    fixed = sanitize_fractions(isin_fractions, source)
+    print(f"[validate] {len(fixed)} ISIN עם שבר מניות > 1 בקרן לא ממונפת - נורמלו: {fixed[:10]}")
 
     # אבחון: שבר מניות מעל 1 (קרן לונג לא אמורה לעבור 100%) - משקל מצטבר במסלולים
     weight_by_isin: dict[str, float] = {}

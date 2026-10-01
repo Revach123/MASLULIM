@@ -19,7 +19,7 @@ from .derivatives_exposure import (
 )
 from .file_list import get_file_list
 from .foreign_etf_reference import (
-    build_foreign_equity, build_isin_fractions,
+    build_foreign_equity, build_isin_fractions, sanitize_fractions,
     classify_from_report_names, classify_via_openfigi_names,
     collect_unclassified_foreign_isins, fetch_etf_universe, fetch_sec_etf_exposure,
 )
@@ -146,6 +146,8 @@ def build_master_table(
     except Exception as e:
         print(f"[main] שכבת שמות-מלאים OpenFIGI נכשלה (מדלג): {e}")
     print(f"[main] {len(isin_fractions)} ISIN מסווגים סה\"כ (+שמות מלאים)")
+    fixed = sanitize_fractions(isin_fractions, source)
+    print(f"[main] {len(fixed)} ISIN עם שבר מניות > 1 בקרן לא ממונפת - נורמלו: {fixed[:10]}")
 
     for key, cols in build_foreign_equity(funds, isin_fractions).items():
         d = il_sums.setdefault(key, {})
