@@ -14,7 +14,7 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parents[2]
 OUT = ROOT / (__import__("os").environ.get("POLICY_OUT") or "policy")  # ריצה לחברה: policy/companies/<LegalId>
 
-PARSER_VERSION = 16  # (v10: Ayalon, dated current column) # הגדלה = פרסור מחדש של כל המסמכים בריצה הבאה (שינוי בפרסרים)
+PARSER_VERSION = 17  # (v10: Ayalon, dated current column) # הגדלה = פרסור מחדש של כל המסמכים בריצה הבאה (שינוי בפרסרים)
 
 NUM = r"(\d{1,3}(?:\.\d+)?)"
 PCT = NUM + r"\s*%?"
@@ -46,6 +46,8 @@ def parse_range(s: str):
 
 
 def norm_name(s: str) -> str:
+    # "מחוג מסלול כללי - עדכון מיום 11.8.26": אותו מסלול כמו בגרסת ינואר - בלי סיומת העדכון
+    s = re.sub(r"\s*[-–—,]?\s*\(?(?:עדכון|עודכן|מעודכן)\s+(?:מיום|ביום|ליום|מתאריך)\s*[\d./\-\s]+\)?\s*$", "", s)
     s = re.sub(r"[\"'״׳\-–—()\[\]:.,]", " ", s)
     return re.sub(r"\s+", " ", s).strip()
 
@@ -176,6 +178,35 @@ def parse_prose_limits(text: str) -> list[dict]:
     return out
 
 
+EXPO_RX = re.compile(r"חשופ(?:ים|ות|ה)\s+(?:ל|למ|לנכסי\s+)?(.{2,90}?)(?:,|\s)[^.]{0,160}?(?:בשיעור|בשעור)\s+(?:חשיפה\s+)?שלא\s+יפחת\s+מ[-־\s]*(\d{1,3})\s*%"
+                     r"\s*ולא\s+יעלה\s+על\s*(\d{1,3})\s*%")
+
+
+def parse_exposure_prose(rows, sheet=""):
+    """גיליון מסלול מתמחה בלי טבלה (איי.די.איי): "נכסי המסלול יהיו חשופים לנכסי אג"ח ... בשיעור שלא יפחת מ-75% ולא יעלה
+    על 120%" -> אפיק עם מינימום/מקסימום; מדד הייחוס מהעמודה "מדד ייחוס". שם המסלול: שורת "מסלול ..." או שם הגיליון."""
+    cells = [str(c).strip() for r in rows for c in r if c not in (None, "") and str(c).strip()]
+    flat = re.sub(r"\s+", " ", " ".join(cells))
+    ms = list(EXPO_RX.finditer(flat))
+    if not ms:
+        return []
+    title = next((c for c in cells[:6] if re.match(r"^מסלול\s", c) and len(c) < 60), "") or sheet
+    ym = re.search(r"(?:לשנת|ייחוס)\s*(20\d\d)", flat)
+    bench = " ".join(c for c in cells if re.search(r"\d+(\.\d+)?\s*%?\s*-\s*\S|-\s*\d+(\.\d+)?\s*%|%\s*-", c) and len(c) < 60)[:200] or None
+    out = []
+    for m in ms:
+        lab = re.sub(r"^(נכסי|ה)(?=\S)", "", m.group(1)).strip()
+        lab = re.split(r"\s+(?:בארץ|בישראל|ובחו|לרבות|בכפוף)\b", lab)[0].strip()[:60]
+        if len(lab) < 4 or re.search(r"הבאים|^ם\s", lab):  # "חשופים לנכסים הבאים: ..." -> האפיק לפי שם המסלול
+            lab = re.sub(r"^מסלול\s+", "", norm_name(title)).replace("אג ח", 'אג"ח')
+        lo, hi = float(m.group(2)), float(m.group(3))
+        out.append({"fund_id": None, "track_no": None, "track_code": sheet, "track_name": norm_name(title),
+                    "group": sheet, "year": ym.group(1) if ym else None, "asset": lab, "asset_key": asset_key(lab),
+                    "current_pct": None, "expected_pct": None, "tolerance": None, "min_pct": lo, "max_pct": hi,
+                    "benchmark": bench, "policy_text": m.group(0)[:200], "sheet": sheet})
+    return out
+
+
 _SITE_CFG = {}
 
 
@@ -199,8 +230,9 @@ def read_doc(path: Path):
                 t = _fix_rtl(t) if rtl else t
                 texts.append(t)
                 # כותרת העמוד: שורה עם מסלול/מדיניות/מספר מ.ה (אנליסט: "אנליסט גמל לבני 50-60 (מ.ה 9731)"), לא הערת שוליים
-                title = next((l.strip() for l in t.splitlines() if re.search(r"מסלול|מדיניות|מ\.?ה\.?\W{0,3}\d{3,6}", l)
-                              and not re.search(r"ESG|GSE|ראו פרסום", l)), "")
+                lines = [l.strip() for l in t.splitlines() if not re.search(r"ESG|GSE|ראו פרסום", l)]
+                title = next((l for l in lines if re.search(r"מסלול|מ\.?ה\.?\W{0,3}\d{3,6}", l)), "") \
+                    or next((l for l in lines if "מדיניות" in l), "")  # שורת המסלול עדיפה על כותרת כללית (מחוג)
                 for tb in pg.extract_tables():
                     if rtl:  # עברית חזותית: מילים הפוכות וסדר עמודות הפוך
                         tb = [[_fix_rtl(c) if isinstance(c, str) else c for c in reversed(r)] for r in tb]
@@ -687,6 +719,12 @@ def main():
                 for r in chg:
                     r.update(legal_id=ent["legal_id"], url=url)
                 changes += chg; continue
+            ex = parse_exposure_prose(t, nm)  # מסלול מתמחה במלל ("חשופים ל... שלא יפחת מ-75% ולא יעלה על 120%")
+            if ex:
+                for r in ex:
+                    r.update(legal_id=ent["legal_id"], track_code=f"{ent['legal_id']}|{nm}|{r['track_name']}", url=url,
+                             doc_file=ent["file"], doc_first_seen=ent.get("first_seen"))
+                long_rows += ex; n_long += len(ex); continue
             leftovers.append((nm, t))
         # שנה חסרה בגיליון (למשל גיליון מתמחים מילולי) -> שנת המסמך: הרוב בגיליונות האחרים, אחרת מתוך שם הקובץ
         doc_rows = long_rows[len(long_rows) - n_long:] if n_long else []
@@ -741,6 +779,12 @@ def main():
             m = re.search(lrx, (index.get(r.get("url")) or {}).get("link_text") or "")
             if m:
                 r["track_name"] = re.sub(r"\s+", " ", m.group(1)).strip()
+        # track_name_from_file: [[regex על שם הקובץ, שם מסלול]] - קובץ לכל מסלול, השם רק בשם הקובץ (יחד רופאים: "הורד",
+        # PDF סרוק) -> השם מוחלף
+        for rx, label in cfg.get("track_name_from_file") or []:
+            if re.search(rx, unquote(r.get("url") or "")):
+                r["track_name"] = label
+                break
         # track_from_file: [[regex על שם הקובץ / url / עמוד המקור / טקסט הקישור, תווית]] - כמה קופות עם אותם שמות מסלולים בקבצים נפרדים
         # (איילון: "איילון מסלול כללי" בגמל להשקעה / השתלמות / גמל לחיסכון) -> "<תווית> - <מסלול>"
         for rx, label in cfg.get("track_from_file") or []:
