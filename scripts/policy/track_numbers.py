@@ -315,7 +315,7 @@ def assign(tracks):
     sites = Path(__file__).with_name("sites")
     maps = {}
     act_owned = {(t["legal_id"], t["track_no"]) for t in tracks if t["track_no"] and t.get("active")}
-    for t in tracks:
+    for t in sorted(tracks, key=lambda t: not t.get("active")):  # מסלול פעיל קודם (לאומי: page9 של 2026 לפני 2023)
         lid = t["legal_id"]
         if lid not in maps:
             f = sites / f"{lid}.json"
