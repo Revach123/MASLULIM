@@ -221,6 +221,7 @@ async function collectAndCommit(mode) {
     const repoInfo = await verifyRepo(cfg.token, cfg.owner, cfg.repo);
     if (repoInfo && repoInfo.permissions && repoInfo.permissions.push === false) {
       await setStatus({ running: false, tokenInvalid: true, progress: "", lastRun: Date.now(),
+        dailyPullLastRun: Date.now(), dailyPullLastRunOk: false,
         lastError: "לטוקן אין הרשאת כתיבה. צור טוקן עם Contents: Read and write ועדכן בהגדרות." });
       notify("אין הרשאת כתיבה", "הטוקן קורא אך לא כותב. צור טוקן עם Contents: Read and write.");
       return;
@@ -228,6 +229,7 @@ async function collectAndCommit(mode) {
   } catch (e) {
     const msg = String(e.message || e);
     await setStatus({ running: false, tokenInvalid: true, progress: "", lastRun: Date.now(),
+      dailyPullLastRun: Date.now(), dailyPullLastRunOk: false,
       lastError: `בדיקת החיבור ל-GitHub נכשלה (${msg.match(/HTTP \d+/)?.[0] || "שגיאה"}). ודא שהטוקן תקף ושייך לחשבון ${cfg.owner}.` });
     notify("חיבור GitHub נכשל", "הטוקן לא תקף או לא שייך לחשבון/repo הנכון. עדכן בהגדרות.");
     return;
@@ -356,6 +358,9 @@ async function collectAndCommit(mode) {
 
     await setStatus({
       running: false, blocked: false, lastRun: Date.now(), lastMode: mode,
+      // נעצר ידנית ע"י המשתמש = לא "הושלם בהצלחה היום" - לא חוסם ריצה
+      // אוטומטית הבאה (ר' dailyPullLastRunOk/ranSuccessfullyToday למטה).
+      dailyPullLastRun: Date.now(), dailyPullLastRunOk: !stopRequested,
       lastNewCount: downloaded, lastFailCount: failed, stopped: stopRequested,
       totalDocs: Object.keys(manifest.documents).length, lastError: null,
       progress: stopRequested ? `נעצר - ${downloaded} קבצים נמשכו עד העצירה` : "",
@@ -483,18 +488,42 @@ async function runSafe(mode) {
     const msg = String(e.message || e);
     if (isBadToken(msg)) {
       await setStatus({ running: false, progress: "", tokenInvalid: true, lastRun: Date.now(),
+        dailyPullLastRun: Date.now(), dailyPullLastRunOk: false,
         lastError: "הטוקן ל-GitHub לא תקף או פג תוקף. צור טוקן חדש (Contents: Read and write) ועדכן בהגדרות." });
       notify("טוקן GitHub לא תקף", "צור טוקן חדש (Contents: Read and write) ועדכן בהגדרות התוסף.");
     } else {
-      await setStatus({ running: false, tokenInvalid: false, lastError: msg, lastRun: Date.now() });
+      await setStatus({ running: false, tokenInvalid: false, lastError: msg, lastRun: Date.now(),
+        dailyPullLastRun: Date.now(), dailyPullLastRunOk: false });
       notify("שגיאה בריצה", msg.slice(0, 120));
     }
   }
 }
 
+// ----- קאש יומי (cma-daily בלבד - לפולסי יש כבר מנגנון עדין יותר ברמת
+// חברה/קובץ בתוך policy.js, skip_complete_hours): ריצה אוטומטית (alarm/
+// startup) של משיכת הדוחות הראשית שכבר הצליחה היום לא רצה שוב. לא חל על
+// טריגר ידני (כפתור בחלונית) - לחיצה מפורשת תמיד מריצה. סוגר תרחיש כפילות
+// אמיתי: ב-onStartup נוצר מחדש ה-ALARM עם delayInMinutes קצר *וגם* נקרא
+// maybeCatchUp() - אם המחשב התעורר אחרי יותר מ-20 שעות, שתי הדרכים עלולות
+// להפעיל ריצה כפולה תוך דקות. דגל ייעודי (dailyPullLastRun/Ok), לא lastRun/
+// lastError הכלליים - אלה משותפים גם ל-syncLocalFromArchive (כפתור נפרד
+// בחלונית, סנכרון מקומי), שגם הוא כותב אליהם לצורך תצוגת "ריצה אחרונה"
+// מאוחדת ב-popup.js. בלי הפרדה, סנכרון מקומי ידני היה "מכסה" בטעות על
+// המשיכה היומית האמיתית.
+function todayLocalStr(d = new Date()) {
+  return `${d.getFullYear()}-${String(d.getMonth() + 1).padStart(2, "0")}-${String(d.getDate()).padStart(2, "0")}`;
+}
+function sameLocalDay(ts, now = Date.now()) {
+  return !!ts && todayLocalStr(new Date(ts)) === todayLocalStr(new Date(now));
+}
+async function ranSuccessfullyToday() {
+  const { status } = await chrome.storage.local.get("status");
+  return !!status && sameLocalDay(status.dailyPullLastRun) && !!status.dailyPullLastRunOk;
+}
+
 async function maybeCatchUp() {
   const { status } = await chrome.storage.local.get("status");
-  if (Date.now() - (status?.lastRun || 0) > 20 * 60 * 60 * 1000) runSafe("incremental");
+  if (Date.now() - (status?.lastRun || 0) > 20 * 60 * 60 * 1000 && !(await ranSuccessfullyToday())) runSafe("incremental");
 }
 
 chrome.runtime.onInstalled.addListener(() => {
@@ -505,8 +534,8 @@ chrome.runtime.onStartup.addListener(() => {
   chrome.alarms.create(ALARM, { periodInMinutes: 24 * 60, delayInMinutes: 2 });
   maybeCatchUp();
 });
-chrome.alarms.onAlarm.addListener((a) => {
-  if (a.name === ALARM) runSafe("incremental");
+chrome.alarms.onAlarm.addListener(async (a) => {
+  if (a.name === ALARM) { if (!(await ranSuccessfullyToday())) runSafe("incremental"); }
   if (a.name === POLICY_CHECK_ALARM) checkPolicyTrigger();
   if (a.name === SELF_UPDATE_ALARM) checkSelfUpdate();
 });
