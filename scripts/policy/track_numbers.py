@@ -29,6 +29,13 @@ def _norm(s):
     return re.sub(r"\s+", " ", s).strip().lower()
 
 
+def _toks(s):
+    s = re.sub(r"(?i)s\s*&\s*p\s*(\d)", r"sp\1", str(s or ""))
+    s = re.sub(r"[\"'״׳()\[\]\-–_,.:;/%]+", " ", s.lower())
+    stop = {"מסלול", "קופת", "קופה", "קרן", "לשנת", "בע", "מ", "בעמ", "מסל", "לבני", "בני", "גילאי", "לגילאי", "עד", "ו"}
+    return frozenset(w for w in s.split() if w not in stop)
+
+
 def numbers_in(text):
     """מספרי מסלול אפשריים בטקסט: 3-6 ספרות, לא שנה, לא אחוז, לא שם מדד (ת"א 125)."""
     out = []
@@ -96,17 +103,25 @@ class Registry:
         if not a or not cand:
             return None, 0
         best, score, second = None, 0, 0
-        # אותן מילים בסדר אחר ("גמל להשקעה - איילון מסלול כללי" / "איילון קופת גמל להשקעה כללי"), בלי מילת
-        # הפתיחה של שם החברה - רק כשההתאמה יחידה
-        co = (_norm(next(iter(cand.values()), "")).split() or [""])[0]
-        toks = lambda x: frozenset(w for w in _norm(x).split() if w != co)
-        same = [tn for tn, nm in cand.items() if toks(nm) and toks(nm) == toks(name)]
-        if len(same) == 1:
-            return same[0], 0.95
-        digs = lambda x: sorted(re.findall(r"(?<!\d)\d{1,3}(?!\d)", x))
+        # השוואת קבוצות מילים, בלי המילים שמשותפות לכל שמות החברה ברישום ("ילין לפידות", "אלטשולר שחם").
+        # גמל/להשקעה/השתלמות/פנסיה נשמרות (מבדילות בין קופות). קודם התאמה מלאה יחידה, אחר כך שם המסמך מוכל
+        # בשם הרישום והמועמד עם הכי מעט מילים עודפות יחיד
+        digs = lambda x: sorted(re.findall(r"(?<!\d)\d{1,3}(?!\d)", re.sub(r"(?i)s\s*&\s*p\s*(\d)", r"sp\1", str(x or ""))))
+        sets = {tn: _toks(nm) for tn, nm in cand.items() if digs(nm) == digs(name)}  # גילאים/אחוזים/מדד זהים
+        alls = [_toks(nm) for nm in cand.values()]
+        common = frozenset.intersection(*alls) if len(alls) > 1 else frozenset()
+        mine = _toks(name) - common
+        if mine:
+            same = [tn for tn, t in sets.items() if t - common == mine]
+            if len(same) == 1:
+                return same[0], 0.95
+            if not same:
+                sub = [(len(t - common - mine), tn) for tn, t in sets.items() if mine <= t - common]
+                if len(sub) == 1:  # שם כללי שמתאים לכמה קופות (גל/כלנית "לבני 50 עד 60") - בלי ניחוש
+                    return sub[0][1], 0.9 - 0.01 * sub[0][0]
         for tn, nm in cand.items():
             b = _norm(nm)
-            if not b or digs(a) != digs(b):  # גילאים/אחוזים/מדד חייבים להיות זהים ("לבני 50 ומטה" != "לבני 60 ומעלה")
+            if not b or digs(nm) != digs(name):  # גילאים/אחוזים/מדד חייבים להיות זהים ("לבני 50 ומטה" != "לבני 60 ומעלה")
                 continue
             s = 1.0 if a == b else SequenceMatcher(None, a, b).ratio()
             if b.endswith(a) or a.endswith(b):
@@ -254,12 +269,19 @@ def assign(tracks):
             if reg.valid(t["legal_id"], n) and n not in t["_banned"] and (t["legal_id"], n) not in owned:
                 owned.add((t["legal_id"], n))
                 t["track_no"], t["track_no_source"] = n, "file_cells"; break
-        if not t["track_no"] and reg.ok:
-            for nm in (t.get("track_name"), t.get("sheet")):
-                n, _ = reg.match_name(t["legal_id"], nm)
-                if n and (t["legal_id"], n) not in owned:
-                    owned.add((t["legal_id"], n))
-                    t["track_no"], t["track_no_source"] = n, "registry_name_fallback"; break
+    if reg.ok:  # מוצא אחרון: התאמת שם לרישום. ההתאמה הטובה ביותר קודמת ("פאסיבי לבני 50" לפני "לבני 50")
+        fb = []
+        for i, t in enumerate(tracks):
+            if not t["track_no"]:
+                for pen, nm in ((0, t.get("track_name")), (0.1, t.get("sheet"))):  # שם גיליון - עדיפות נמוכה
+                    n, sc = reg.match_name(t["legal_id"], nm)
+                    if n:
+                        fb.append((pen - sc, i, n)); break
+        for _, i, n in sorted(fb):
+            t = tracks[i]
+            if (t["legal_id"], n) not in owned:
+                owned.add((t["legal_id"], n))
+                t["track_no"], t["track_no_source"] = n, "registry_name_fallback"
     for t in tracks:
         t.pop("_c", None); t.pop("_banned", None)
     save_cache()

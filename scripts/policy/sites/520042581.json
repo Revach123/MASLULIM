@@ -10,5 +10,15 @@
  "search": false,
  "rev": 8,
  "home_source": "web_search",
- "max_pages": 20
+ "max_pages": 20,
+ "track_from_file": [
+  [
+   "קופת-גמל-להשקעה",
+   "גמל להשקעה"
+  ],
+  [
+   "קופת-גמל-לחיסכון",
+   "גמל"
+  ]
+ ]
 }
