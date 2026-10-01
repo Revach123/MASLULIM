@@ -8,6 +8,9 @@
   "פנסיה"
  ],
  "search": true,
- "rev": 6,
- "home_source": "report_email:dan.co.il"
+ "rev": 7,
+ "home_source": "report_email:dan.co.il",
+ "prose": true,
+ "ocr": true,
+ "note": "מדיניות דן = מכתב מסורק במלל (עד 10% מניות...): OCR (tesseract heb) + parse_prose_limits"
 }

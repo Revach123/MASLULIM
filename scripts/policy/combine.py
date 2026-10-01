@@ -81,6 +81,8 @@ def main():
             ext.append({k: cfg.get(k) for k in ("legal_id", "name", "home", "pages", "products", "click", "clicks", "any_sheet", "exclude", "settle_ms", "capture_ms", "download_rx", "follow_max")})
     (POL / "extension_sites.json").write_text(json.dumps(ext, ensure_ascii=False, indent=1), "utf-8")
     print(f"[combine] companies={len(crawl)} docs={len(docs)} long={len(long_rows)} (history={n_all}) unparsed={len(unparsed)}")
+    from . import timeline  # הנתונים האחרונים לכל מסלול + תאריך השינוי האחרון וסוגו (גדול/קטן)
+    timeline.main()
 
 
 if __name__ == "__main__":
