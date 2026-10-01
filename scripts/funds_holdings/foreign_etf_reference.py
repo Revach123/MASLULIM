@@ -29,6 +29,7 @@ ETF_FUNDS_URL = "https://revach.pages.dev/api/etf-funds"
 MATCH_KEY_ENV = "REVACH_MATCH_KEY"
 
 SEC_CONTENTS_URL = "https://api.github.com/repos/Revach123/revach/contents/data/ETF/SEC/etf_exposure.json"
+SEC_NO_DATA = "NoData"  # assetClass של קרן שאין לה עדיין דוח N-PORT
 TOKEN_ENV = "PAT"
 
 FOREIGN_TYPE = "חוץ"
@@ -194,7 +195,23 @@ def build_isin_fractions(etf_universe: list[dict], sec_exposure: list[dict]) -> 
         eq, bd = rec.get("eqTotalPct"), rec.get("bondTotalPct")
         if eq is None and bd is None:
             continue
+        # קרן בלי דוח N-PORT (assetClass "NoData" - קרן חדשה, SMHC/NASA): ה-0/0 בטבלה הוא היעדר
+        # נתון, לא הרכב - לא נרשם, כדי שהשכבות הבאות (שם בדוח, N-PORT חי, Yahoo) יסווגו אותה
+        if str(rec.get("assetClass") or "") == SEC_NO_DATA:
+            continue
         out[isin] = {"equity": (eq or 0.0) / 100, "bond": (bd or 0.0) / 100}
+    return out
+
+
+def official_fund_names(etf_universe: list[dict], sec_exposure: list[dict]) -> dict[str, str]:
+    """ISIN -> שם הקרן הרשמי (אוניברסיטת ה-ETF / SEC). הגופים מדווחים לעיתים שם קטוע או שגוי
+    (US92206C7719 מדווח "MARKET VECTORS GOLD MINERS" והוא Vanguard Mortgage-Backed Securities ETF)."""
+    out: dict[str, str] = {}
+    for rec in (*sec_exposure, *etf_universe):
+        isin = _isin_key(rec.get("isin"))
+        name = str(rec.get("name") or "").strip()
+        if isin and name:
+            out[isin] = name
     return out
 
 
@@ -210,6 +227,7 @@ _REPORT_NAME_BOND_TERMS = (
     "sen sec", "senior sec", "corp debt", "floating rate", "credit", "govt",
     "gov bnd", "agg bnd", "municipal", "debenture", "clo income", "debt",
     "fallen angel", "short dur", "senior lo", "liq. corp", "hi yld", "inv gr cred",
+    "mortgage-backed", "mortgage backed",
     # מנפיקים/טווחי-מוצר שכל הקרנות בהם הן הכנסה קבועה בלבד תמיד - עובדה
     # יציבה על המותג/הטווח (לא ניחוש על קרן ספציפית, ולא ISIN-ים בודדים):
     # "bluebay" (RBC BlueBay Asset Management - אך ורק אג"ח/קרדיט); "pimco
@@ -254,6 +272,28 @@ def _classify_by_report_name(name: str | None) -> str | None:
     return None
 
 
+_NOT_EQUITY_FUND = re.compile(r"MACRO|FEEDER|HEDGE|LONG\W?SHORT|ABSOLUTE|P2P|PEER|LENDING|INCOME FUND|"
+                              r"INSURANCE|LIFE\b|SICAV ACC", re.IGNORECASE)
+
+
+def _sector_equity_by_name(name: str | None) -> str | None:
+    """"equity" כשהשם ממופה לענף/סגנון ע"י מסווג המדדים (index_exposure.classify_index):
+    VanEck China Semiconductor, SPDR Europe Industrials, Gold Miners (חומרי גלם) - קרנות מניות
+    שה-_classify_by_report_name המחמיר לא תופס (אין "equity"/"tech" בשם). לא לפי אזור בלבד
+    ("LION III EUR"), ולא סחורה/קריפטו/גידור/אשראי."""
+    if not name or _NOT_EQUITY_FUND.search(str(name)):
+        return None
+    from .alt_asset_reference import class_by_name
+    from .index_exposure import index_geo, _THEME_IDS, classify_index
+    if class_by_name(name):
+        return None
+    idx = classify_index(name)[0]
+    head = idx.partition(":")[0]
+    if head in _THEME_IDS:
+        return "equity"
+    return None
+
+
 def classify_from_report_names(source: list[dict]) -> dict[str, dict[str, float]]:
     """ISIN -> {"equity":.., "bond":..} לפי "שם נייר ערך" כפי שמדווח בגיליונות
     'קרנות סל'/'קרנות נאמנות' עצמם - מיועד כשכבת מוצא-אחרון (ר' תיעוד למעלה),
@@ -271,7 +311,7 @@ def classify_from_report_names(source: list[dict]) -> dict[str, dict[str, float]
             if isin.startswith("X9X9"):
                 out[isin] = {"equity": 0.0, "bond": 0.0}
                 continue
-            cls = _classify_by_report_name(row.get("שם נייר ערך"))
+            cls = _classify_by_report_name(row.get("שם נייר ערך")) or _sector_equity_by_name(row.get("שם נייר ערך"))
             if cls == "equity":
                 out[isin] = {"equity": 1.0, "bond": 0.0}
             elif cls == "bond":

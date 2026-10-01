@@ -17,21 +17,24 @@ from .derivatives_exposure import (
 from .excel_io import text_from, to_ratio
 from .funds import FUND_CATEGORIES, PLACEHOLDERS, _build_fund_map, _build_isin_set, _classify
 from .funds_classification import fund_siveg
+from .foreign_etf_reference import _classify_by_report_name
 from .index_exposure import (
-    DIRECT_EQUITY_CATEGORIES, EQUITY_FUND_SIVEGS, equity_row_index, index_geo, is_local, report_month_by_key,
+    DIRECT_EQUITY_CATEGORIES, EQUITY_FUND_SIVEGS, equity_row_index, index_geo, is_local, leveraged_equity,
+    report_month_by_key,
 )
 from .sheet_source import PCT_COL
 
 # עמודות השורה: גיליון (אינדקס ל-cats), שם, מספר נייר, מנפיק, % מהנכסים, שווי (אלפי ש"ח),
 # מטבע, מדינה, פרט (דירוג+פדיון לאג"ח / נכס בסיס לנגזר / סוג), חשיפה למניות, רכיב חשיפה,
 # והשיוך למדד: [[מזהה מדד, חשיפה], ...] - מאותו חישוב בדיוק כמו פירוק החשיפה לפי מדד, וסיווג
-# לשאר הנכסים (ר' _classify_row): cash / deposit / bond_gov_il / bond_corp_abroad... / commodity / digital / fx
+# לשאר הנכסים (ר' _classify_row): cash / deposit / bond_gov_il / bond_corp_abroad... / commodity / digital /
+# fx / credit / private / realestate / alt / commit
 HOLDING_COLS = ["cat", "name", "id", "issuer", "pct", "value", "ccy", "country", "info", "equity", "component", "idx", "cls"]
 
-NAME_COLS = ("שם נייר ערך", "שם הלוואה", "שם הבנק", "טיקר", "שם מנפיק", "מאפיין עיקרי")
+NAME_COLS = ("שם נייר ערך", "שם הלוואה", "שם קרן השקעה", "שם הבנק", "טיקר", "שם מנפיק", "מאפיין עיקרי")
 ID_COLS = ("מספר נייר ערך", "מספר הלוואה", "מספר מזהה בנק", "מספר עסקה (רגל 1)")
 VALUE_COLS = ('שווי הוגן (באלפי ש"ח)', 'שווי הנכסים באפיק (באלפי ש"ח)', 'שווי הוגן (נטו באלפי ש"ח)',
-              'עלות מופחתת (באלפי ש"ח)')
+              'עלות מופחתת (באלפי ש"ח)', 'יתרת המחויבות לתקופת הדיווח (באלפי ש"ח)')
 CCY_COLS = ("מטבע פעילות", "מטבע פעילות (רגל 1)")
 INFO_COLS = ("נכס בסיס", "סוג הנכס", "מאפיין עיקרי", "ענף מסחר")
 
@@ -69,6 +72,12 @@ CASH_CATEGORY, DEPOSIT_CATEGORY = "מזומנים ושווי מזומנים", "�
 GOV_BOND_CATEGORIES = {"איגרות חוב ממשלתיות", "לא סחיר איגרות חוב ממשלתיות", "לא סחיר איגרות חוב מיועדות"}
 CORP_BOND_CATEGORIES = {"איגרות חוב", "לא סחיר איגרות חוב", "ניירות ערך מסחריים", "לא סחיר ניירות ערך מסחריים"}
 FX_UNDERLYING = 'מט"ח'
+# שאר הנכסים לפי גיליון: אשראי פרטי, השקעות פרטיות, נדל"ן, התחייבויות להשקעה (לא נכס - בלי %)
+CATEGORY_CLASS = {"הלוואות": "credit", "לא סחיר מוצרים מובנים": "credit", "מוצרים מובנים": "credit",
+                  "קרנות השקעה": "private", "זכויות מקרקעין": "realestate",
+                  "יתרות התחייבות להשקעה": "commit"}
+_ALT_FUND_NAME = re.compile(r"MACRO|FEEDER|HEDGE|LONG\W?SHORT|ABSOLUTE\W?RETURN|MULTI\W?STRAT", re.IGNORECASE)
+_CREDIT_FUND_NAME = re.compile(r"\bP2P\b|PEER\W?TO\W?PEER|DIRECT\W?LENDING|PRIVATE\W?CREDIT|PRIVATE\W?DEBT", re.IGNORECASE)
 # קרן כספית בחו"ל בלי סיווג/הרכב (State Street USD LIQ LVNAV, BlackRock ICS US Treasury, JP Morgan
 # Liquidity) - אג"ח קצר, כמו כספית בארץ
 _MONEY_FUND_NAME = re.compile(r"LIQUIDITY|\bLIQ\b|LVNAV|CNAV|MONEY\W?MARKET|\bMMF\b|\bICS\b|כספית", re.IGNORECASE)
@@ -86,6 +95,11 @@ def _classify_row(cat: str, row: dict, name, fund_ref: dict | None, fund_frac: d
                   alt_class: str | None = None) -> str | None:
     """מזומן/פיקדון, אג"ח (ממשלתי/קונצרני × בארץ/בחו"ל - כולל קרנות אג"ח וכספיות), סחורות, נכסים דיגיטליים,
     גידור מט"ח."""
+    if cat in CATEGORY_CLASS:
+        # מוצר מובנה על מניות - לא אשראי
+        if CATEGORY_CLASS[cat] == "credit" and "מניות" in str(row.get("נכס בסיס") or ""):
+            return None
+        return CATEGORY_CLASS[cat]
     if cat == CASH_CATEGORY:
         return "cash"
     if cat == DEPOSIT_CATEGORY:
@@ -105,14 +119,24 @@ def _classify_row(cat: str, row: dict, name, fund_ref: dict | None, fund_frac: d
                 return "commodity"  # זהב/כסף/נפט/מדד סחורות
             if main.startswith("נכסים דיגיטליים"):
                 return "digital"  # ביטקוין/אתריום
+            if main.startswith(("גידור", "גמישות")):
+                return "alt"  # קרנות גידור / גמישות
             if main.startswith('אג"ח'):
                 kind = "gov" if ("מדינה" in sub or "ממשל" in sub) else "corp"
                 return f"bond_{kind}_" + ("abroad" if 'חו"ל' in main else "il")
             return None
         if alt_class:
             return alt_class  # סחורות / נכסים דיגיטליים (alt_asset_reference)
+        if not (fund_frac or {}).get("equity"):
+            if _CREDIT_FUND_NAME.search(str(name or "")):
+                return "credit"  # P2P / הלוואות ישירות
+            if _ALT_FUND_NAME.search(str(name or "")):
+                return "alt"  # קרן גידור / מאקרו / feeder
         frac = fund_frac or {}
         if (frac.get("bond") or 0) >= 0.5 and (frac.get("equity") or 0) < 0.5:
+            return ("bond_gov_" if _GOV_NAME.search(str(name or "")) else "bond_corp_") + "abroad"
+        if not frac.get("equity") and _classify_by_report_name(str(name or "")) == "bond":
+            # אג"ח לפי השם (הרשמי): Mortgage-Backed / Bond / Treasury - ההרכב בטבלת SEC 0/0
             return ("bond_gov_" if _GOV_NAME.search(str(name or "")) else "bond_corp_") + "abroad"
         if not frac.get("equity") and _MONEY_FUND_NAME.search(str(name or "")):
             return ("bond_gov_" if _GOV_NAME.search(str(name or "")) else "bond_corp_") + _bond_loc(row)
@@ -149,6 +173,9 @@ def _fund_equity_fraction(row: dict, fund_map, isin_set, ref_by_num, ref_by_isin
     num = str(fund_number or "").strip()
     if sug in ("IL", "נסחרת"):
         r = ref_by_num.get(num) or ref_by_isin.get(num.upper())
+        lev = leveraged_equity(r) if r else None
+        if lev:
+            return lev[0], "funds_il"  # ממונפת/בחסר: פי המכפיל
         if r and any(s in fund_siveg(r) for s in EQUITY_FUND_SIVEGS):
             return 1.0, "funds_il"
         return 0.0, ""
@@ -186,8 +213,11 @@ def _index_meta(idx: str, label: str) -> dict:
 
 def build_holdings_detail(source: list[dict], isin_swap: list[dict], funds_ref: list[dict],
                           isin_fractions: dict[str, dict], index_trace: dict | None = None,
-                          alt_classes: dict[str, str] | None = None) -> dict[str, dict]:
-    """index_trace: מ-build_index_exposure(trace=...) - שיוך כל שורה למדד/ים שלה."""
+                          alt_classes: dict[str, str] | None = None,
+                          official_names: dict[str, str] | None = None) -> dict[str, dict]:
+    """index_trace: מ-build_index_exposure(trace=...) - שיוך כל שורה למדד/ים שלה.
+    official_names: ISIN -> שם רשמי לקרן חו"ל (official_fund_names) - במקום השם שהגוף דיווח."""
+    official_names = official_names or {}
     fund_map, isin_set = _build_fund_map(isin_swap), _build_isin_set(isin_swap)
     trace_rows = (index_trace or {}).get("rows", {})
     trace_labels = dict((index_trace or {}).get("labels", {}))
@@ -251,7 +281,7 @@ def build_holdings_detail(source: list[dict], isin_swap: list[dict], funds_ref: 
             cats = cats_by_key[key]
             if cat not in cats:
                 cats.append(cat)
-            issuer = row.get("שם מנפיק")
+            issuer = row.get("שם מנפיק") or row.get("שם שותף כללי קרן השקעות")
             info = _info(row)
             fund_ref_row = None
             if cat in FUND_CATEGORIES:
@@ -260,11 +290,14 @@ def build_holdings_detail(source: list[dict], isin_swap: list[dict], funds_ref: 
                 sug, ref = _fund_lookup(row, fund_map, isin_set, ref_by_num, ref_by_isin)
                 fund_ref_row = ref
                 parts = [FUND_KIND_LABEL.get(sug, "")] if sug else []
-                if ref and ref.get("שם קרן"):
+                official = (ref or {}).get("שם קרן") or (
+                    official_names.get(text_from(row.get("מספר נייר ערך") or "").strip().upper()) if sug == "חוץ" else None)
+                if official:
                     reported = text_from(name).strip() if name is not None else ""
-                    if reported and reported.upper() != str(ref["שם קרן"]).strip().upper():
+                    if reported and reported.upper() != str(official).strip().upper():
                         parts.append("בדוח: " + reported)
-                    name = ref["שם קרן"]
+                    name = official
+                if ref and ref.get("שם קרן"):
                     issuer = ref.get("מנהל קרן") or issuer
                 if ref and ref.get("נכס בסיס"):
                     parts.append(str(ref["נכס בסיס"]))

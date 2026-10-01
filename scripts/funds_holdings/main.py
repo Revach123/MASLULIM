@@ -21,7 +21,7 @@ from .file_list import get_file_list
 from .foreign_etf_reference import (
     build_foreign_equity, build_isin_fractions, sanitize_fractions,
     classify_from_report_names, classify_via_openfigi_names,
-    collect_unclassified_foreign_isins, fetch_etf_universe, fetch_sec_etf_exposure,
+    collect_unclassified_foreign_isins, fetch_etf_universe, fetch_sec_etf_exposure, official_fund_names,
 )
 from .funds import build_funds
 from .funds_detail import build_funds_detail
@@ -107,7 +107,8 @@ def build_master_table(
     # כרגע דרך funds_reference.py. מצטרף לאותן עמודות "קרן מחקה - ..." -
     # אין חפיפה עם il_sums (כל שורת קרן מסווגת בדיוק ל-IL/נסחרת/חוץ אחת).
     etf_universe = fetch_etf_universe()
-    isin_fractions = build_isin_fractions(etf_universe, fetch_sec_etf_exposure())
+    sec_exposure = fetch_sec_etf_exposure()
+    isin_fractions = build_isin_fractions(etf_universe, sec_exposure)
     # שכבת מוצא-אחרון: קרנות לא-מזוהות באף מאגר - לפי שם הקרן כפי שמדווח
     # בדוח עצמו (ר' תיעוד ב-classify_from_report_names). לא דורס נתון קיים.
     for isin, frac in classify_from_report_names(source).items():
@@ -197,8 +198,13 @@ def build_master_table(
     except Exception as e:
         print(f"[alt] OpenFIGI לא זמין (שמות מלאים): {e}")
         alt_full_names = {}
+    official_names = official_fund_names(etf_universe, sec_exposure)
+    for isin in alt_candidates:
+        if isin in official_names:
+            alt_full_names.setdefault(isin, official_names[isin])
     alt_classes = build_alt_classes(alt_candidates, etf_universe, alt_full_names)
-    holdings_detail = build_holdings_detail(source, isin_swap, funds_ref, isin_fractions, index_trace, alt_classes)
+    holdings_detail = build_holdings_detail(source, isin_swap, funds_ref, isin_fractions, index_trace, alt_classes,
+                                            official_names)
     print(report_unplaced_funds(holdings_detail))
 
     rows: dict[str, dict] = {}

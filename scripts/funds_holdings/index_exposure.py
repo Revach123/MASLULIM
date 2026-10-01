@@ -30,7 +30,7 @@ from .derivatives_exposure import (
     is_equity_option, parse_underlying, total_assets_by_key,
 )
 from .excel_io import to_ratio
-from .funds_classification import fund_siveg
+from .funds_classification import fund_siveg, leverage_factor
 from .sheet_source import PCT_COL
 
 DIRECT_EQUITY_CATEGORIES = ("מניות מבכ ויהש", "לא סחיר מניות מבכ ויהש")
@@ -330,6 +330,16 @@ def index_geo(idx: str) -> tuple[str, str] | None:
     return out if out and out[0] not in _NOT_A_GEO else None
 
 
+def leveraged_equity(fund_ref: dict) -> tuple[float, bool] | None:
+    """(מכפיל, בארץ?) לקרן ממונפת/בחסר שנכס הבסיס שלה מניות (ת"א 35 פי 3, חסר ת"א נדל"ן);
+    None - לא ממונפת, בלי מכפיל מפורש, או נכס בסיס אג"ח (חסר תל בונד)."""
+    factor = leverage_factor(fund_ref)
+    base = str(fund_ref.get("נכס בסיס") or "").strip()
+    if factor is None or not base or base == "אחר" or is_bond_name(base):
+        return None
+    return factor, is_local(classify_index(base)[0])
+
+
 def is_local(idx: str) -> bool:
     """חשיפה למניות בארץ: מדדי ת"א, נושא/אזור ישראל, מניות וסלים בישראל."""
     return idx in ("ta35", "ta125", "ta90") or idx.endswith((":il", ":ישראל"))
@@ -429,11 +439,15 @@ def build_index_exposure(source: list[dict], funds: list[dict], funds_ref: list[
         num = str(f.get("מספר קרן") or "").strip()
         if f["סוג"] in ("IL", "נסחרת"):
             r = ref_by_num.get(num) or ref_by_isin.get(num.upper())
-            if not r or not any(s in fund_siveg(r) for s in EQUITY_FUND_SIVEGS):
+            if not r:
                 continue
+            lev = leveraged_equity(r)
+            if not lev and not any(s in fund_siveg(r) for s in EQUITY_FUND_SIVEGS):
+                continue
+            mult = lev[0] if lev else 1.0  # קרן ממונפת/בחסר: פי המכפיל
             for name, w in _equity_parts(r.get("נכס בסיס")):
                 idx, label = classify_index(name)
-                acc.add(key, idx, label, pct * w, "funds_il", f.get("_row"))
+                acc.add(key, idx, label, pct * w * mult, "funds_il", f.get("_row"))
         elif f["סוג"] == "חוץ":
             frac = isin_fractions.get(num.upper())
             if not frac or not frac.get("equity"):

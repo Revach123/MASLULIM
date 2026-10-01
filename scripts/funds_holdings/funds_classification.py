@@ -25,3 +25,18 @@ def fund_siveg(fund_ref: dict) -> str:
     machka = fund_ref.get("קרן מחקה") or ""
     rashi = fund_ref.get("סיווג ראשי") or ""
     return f"{machka} - {rashi}"
+
+
+# קרן ממונפת / בחסר ("סיווג ראשי" + "סיווג משני" בנתוני קרנות): מכפיל החשיפה לנכס הבסיס
+# (ת"א 35 פי 3 -> 3, "בחסר" -> -1). "ממונפות בסיכון גבוה"/"ממונפות אחר" - בלי מכפיל מפורש.
+LEVERAGE_FACTOR = {
+    ("מינוף", "פי 3"): 3.0, ("מינוף", "פי 2"): 2.0,
+    ("מינוף בחסר", "בחסר"): -1.0, ("מינוף בחסר", "בחסר פי 2"): -2.0,
+}
+
+
+def leverage_factor(fund_ref: dict) -> float | None:
+    main = str(fund_ref.get("סיווג ראשי") or "").strip()
+    sub = str(fund_ref.get("סיווג משני") or "").strip()
+    return LEVERAGE_FACTOR.get((main, sub))
+
