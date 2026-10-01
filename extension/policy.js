@@ -149,7 +149,7 @@ async function readSites(cfg) {
 // אותו טאב/session) - מוזז מתוך runPolicy כדי שאפשר יהיה להריץ כמה אתרים
 // שונים במקביל (ר' POLICY_CONCURRENCY). seen משותף בין כל האתרים - בדיוק
 // כמו בגרסה הרצית-לגמרי, כדי לשמר את אותה התנהגות דה-דופליקציה.
-async function runSite(site, cfg, seen, onProgress) {
+async function runSite(site, cfg, seen, onProgress, windowId) {
   const pages = [...new Set([...(site.pages || []).map((p) => p.url), site.home].filter(Boolean))];
   const files = [], errors = [], diag = [];
   const report = (pi, step) => onProgress({ page: pages[pi], pageNo: pi + 1, pages: pages.length, step, docs: files.length / 2 });
@@ -157,7 +157,7 @@ async function runSite(site, cfg, seen, onProgress) {
     await report(pi, "טוען עמוד");
     let tab;
     try {
-      tab = await tabsRetry(() => chrome.tabs.create({ url: pageUrl, active: false }));
+      tab = await tabsRetry(() => chrome.tabs.create({ url: pageUrl, active: false, ...(windowId ? { windowId } : {}) }));
       await waitComplete(tab.id);
       await sleep(3000);
       await report(pi, "פותח אקורדיונים ואוסף קישורים");
@@ -235,6 +235,12 @@ export async function runPolicy(cfg, setStatus) {
     return chain;
   }
 
+  // הטאבים נפתחים בחלון ממוזער נפרד (לא מופיעים בחלון העבודה; נסגר בסוף). Chrome לא מאפשר טאב מוסתר לגמרי.
+  // אם יצירת החלון נכשלת - כמו קודם, טאבי רקע בחלון הנוכחי.
+  let workWin = null;
+  try { workWin = await chrome.windows.create({ state: "minimized", focused: false, url: "about:blank" }); } catch (e) { workWin = null; }
+  const windowId = workWin && workWin.id;
+
   let nextIdx = 0;
   async function worker() {
     while (nextIdx < sites.length) {
@@ -243,7 +249,7 @@ export async function runPolicy(cfg, setStatus) {
         const { files, errors, diag } = await runSite(site, cfg, seen, async (p) => {
           progress[site.name] = p;
           await flushStatus();
-        });
+        }, windowId);
         allFiles.push(...files);
         allErrors.push(...errors);
         allDiag.push(...diag);
@@ -258,7 +264,11 @@ export async function runPolicy(cfg, setStatus) {
     }
   }
 
-  await Promise.all(Array.from({ length: Math.min(POLICY_CONCURRENCY, sites.length) }, worker));
+  try {
+    await Promise.all(Array.from({ length: Math.min(POLICY_CONCURRENCY, sites.length) }, worker));
+  } finally {
+    if (windowId) { try { await chrome.windows.remove(windowId); } catch (e) {} }
+  }
 
   if (allFiles.length) {
     await flushStatus(`מעלה ל-GitHub ${allFiles.length / 2} מסמכים`);
