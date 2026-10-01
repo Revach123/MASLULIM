@@ -5,6 +5,10 @@
  "pages": [
   {
    "product": "פנסיה",
+   "url": "https://www.jewishagency-kupa.org.il/sitemap/"
+  },
+  {
+   "product": "פנסיה",
    "url": "https://www.jewishagency-kupa.org.il/"
   }
  ],
@@ -13,10 +17,10 @@
   "פנסיה"
  ],
  "search": false,
- "rev": 9,
+ "rev": 10,
  "home_source": "report_email:jafi.org",
  "via": "extension",
  "follow_max": 20,
- "note": "אתר הקופה: jewishagency-kupa.org.il (לא jafi.org). follow_rx נכנס לעמודי מדיניות/השקעות/דוחות",
+ "note": "אתר הקופה: jewishagency-kupa.org.il. מפת האתר (/sitemap/) מקשרת לכל העמודים - follow_rx נכנס משם לעמודי מדיניות/השקעות/דוחות",
  "follow_rx": "מדיניות|השקע|הצהר|דוח|מסמכ|policy|invest|report"
 }
