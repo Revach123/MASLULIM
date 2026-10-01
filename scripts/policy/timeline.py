@@ -307,28 +307,6 @@ def build():
                            "prev_max_pct": (before["rows"].get(k) or {}).get("max_pct") if before else None,
                            "prev_benchmark": _clean((before["rows"].get(k) or {}).get("benchmark")) if before else None,
                            "prev_effective_date": before["date"][0] if before else "", "versions": len(vs), "active": active, "url": cur["url"]})
-    # מספר מסלול לכל מסלול (מהקבצים עצמם, ואחר כך רישום data.gov)
-    from .track_numbers import assign
-    url_tracks = {}
-    for (lid, tkey), versions in tracks.items():
-        for u in versions:
-            url_tracks.setdefault(versions[u]["url"], set()).add(tkey)
-    meta = []
-    for s_, (key, versions) in zip(summary, tracks.items()):
-        cur = max(versions.values(), key=lambda v: (v["date"][0], str(v["year"] or ""), _natural(v["url"])))
-        r0 = next(iter(cur["rows"].values()))
-        fids = [x for v in [cur] for r in v["rows"].values() for x in (r.get("fund_id"), r.get("track_no")) if x]
-        meta.append({"legal_id": key[0], "track_name": r0.get("track_name"), "track_code": r0.get("track_code"),
-                     "sheet": r0.get("sheet"), "url": cur["url"], "doc_file": r0.get("doc_file"), "fund_ids": fids,
-                     "single_track_file": len(url_tracks.get(cur["url"], ())) == 1, "active": s_["active"], "_s": s_})
-    assign(meta)
-    by_key = {}
-    for m in meta:
-        m["_s"]["track_no"], m["_s"]["track_no_source"] = m["track_no"], m["track_no_source"]
-        by_key[(m["_s"]["legal_id"], m["_s"]["url"], m["_s"]["track_code"])] = m
-    for r in latest:
-        m = by_key.get((r["legal_id"], r["url"], r["track_code"]))
-        r["track_no"], r["track_no_source"] = (m["track_no"], m["track_no_source"]) if m else ("", "")
     # מספר מסלול לכל מסלול - מהקבצים עצמם (track_numbers.py); התאמת שם רק כמוצא אחרון ומסומנת
     from .track_numbers import assign
     url_tracks = {}
@@ -351,6 +329,20 @@ def build():
     for r in latest:
         m = by_key.get((r["legal_id"], r["url"], r["track_code"]))
         r["track_no"], r["track_no_source"] = (m["track_no"], m["track_no_source"]) if m else ("", "")
+    # אותם קבצים באתר של שתי חברות (מגדל ביטוח מציג את קבצי מגדל מקפת): מסלול שהמספר שלו שייך ברישום לחברה אחרת,
+    # שגם אצלה המסלול קיים - נשאר רק אצל הבעלים
+    from .track_numbers import Registry
+    reg = Registry()
+    owner = {tn: lid for lid, d in reg.by_company.items() for tn in d}
+    have = {(s_["legal_id"], s_["track_no"]) for s_ in summary if s_.get("track_no")}
+    dup = {(s_["legal_id"], s_["track_code"], s_["url"]) for s_ in summary if s_.get("track_no")
+           and s_["track_no"] not in reg.by_company.get(s_["legal_id"], {}) and owner.get(s_["track_no"]) not in (None, s_["legal_id"])
+           and (owner[s_["track_no"]], s_["track_no"]) in have}
+    if dup:
+        drop_names = {(s_["legal_id"], s_["track_name"]) for s_ in summary if (s_["legal_id"], s_["track_code"], s_["url"]) in dup}
+        summary = [s_ for s_ in summary if (s_["legal_id"], s_["track_code"], s_["url"]) not in dup]
+        latest = [r for r in latest if (r["legal_id"], r["track_code"], r["url"]) not in dup]
+        log = [r for r in log if (r.get("legal_id"), r.get("track_name")) not in drop_names]
     return latest, summary, log
 
 
