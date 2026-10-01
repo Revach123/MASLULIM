@@ -296,7 +296,7 @@ class _Acc:
 def _country_label(country) -> tuple[str, str]:
     c = re.sub(r"\s+", " ", str(country or "")).strip() or "לא ידוע"
     c = _COUNTRY_ALIASES.get(c, c)
-    return f"stocks:{c}", f"מניות {c} (ישירות)"
+    return f"stocks:{c}", f"מניות {c}"
 
 
 def is_local(idx: str) -> bool:
