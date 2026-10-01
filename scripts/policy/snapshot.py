@@ -147,8 +147,13 @@ def fetch_browser(pw, url, click_texts=None):
         # (הכשרה: הצ'יפ 'מדיניות השקעה משתתפות' - בלעדיו מוצגות רק ההצבעות)
         for t in click_texts or []:
             try:
-                pg.get_by_text(t, exact=True).first.click(timeout=8000, force=True)
+                loc = pg.get_by_text(t, exact=True)
+                n0 = len(anchors)
+                vis = [i for i in range(min(loc.count(), 10)) if loc.nth(i).is_visible()]
+                (loc.nth(vis[0]) if vis else loc.first).click(timeout=8000, force=True)
                 pg.wait_for_timeout(4000); collect()
+                files = [a["href"] for a in anchors[n0:] if re.search(r"\.(xlsx?|pdf)(\?|$)", a["href"], re.I)]
+                print(f"[snapshot] click_texts {t!r}: matches={loc.count()} visible={vis} new_anchors={len(anchors) - n0} files={len(files)} {files[:3]}", flush=True)
                 for _ in range(10):  # "טען עוד" / "הצג עוד" ברשימת הכרטיסים
                     more = pg.get_by_text(re.compile(r"^(טען|הצג)\s+(עוד|נוספים)"))
                     if not more.count():
