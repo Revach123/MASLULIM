@@ -63,7 +63,7 @@ jobs:
     needs: matrix
     if: needs.matrix.outputs.ids != '[]'
     runs-on: ubuntu-latest
-    timeout-minutes: 40
+    timeout-minutes: 55
     strategy:
       fail-fast: false
       matrix:

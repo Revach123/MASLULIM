@@ -144,7 +144,7 @@ def fetch_browser(pw, url):
             collect()
 
         expand()
-        t_int = time.monotonic() + float(os.environ.get("POLICY_PAGE_BUDGET", "240"))
+        t_int = time.monotonic() + float(os.environ.get("POLICY_PAGE_BUDGET", "120"))
         # לשוניות/כפתורי מוצר (הראל: גמל/השתלמות/פנסיה...): לוחצים על כל אחד, פותחים אקורדיונים, אוספים
         tabs = pg.query_selector_all('[role="tab"], button, [role="button"], li[tabindex], [class*=tab]:not(a)')
         # לשוניות/צ'יפים של מדיניות קודם (הכשרה: צ'יפ "מדיניות השקעה משתתפות" אחרי ~150 כפתורי תפריט)
@@ -233,7 +233,7 @@ def fetch_browser(pw, url):
         pg.wait_for_timeout(1000)
         collect()
         # כפתורי "הורדה" שלא מצביעים לקובץ (postback של ASP.NET / JS): לוחצים ולוכדים את ההורדה עצמה
-        t_dl = time.monotonic() + float(os.environ.get("POLICY_DL_BUDGET", "400"))
+        t_dl = time.monotonic() + float(os.environ.get("POLICY_DL_BUDGET", "180"))
         dl_dir = Path(os.environ.get("RUNNER_TEMP") or "/tmp") / "policy_dl"
         dl_dir.mkdir(parents=True, exist_ok=True)
         els = pg.query_selector_all("a, button, [role=button], input[type=submit], input[type=button]")
@@ -330,7 +330,13 @@ def snapshot_company(s, pw, home, extra, products=None, max_pages=15, depth_max=
     tick = itertools.count()
     q = [(0, next(tick), u, 0) for u in extra] + [(1, next(tick), home, 0)]
     heapq.heapify(q)
+    # תקציב כולל לסריקה: ג'וב חברה מוגבל ל-40 דק' ובוטל = לא נשמר כלום. בתום התקציב עוצרים ועוברים להורדה/פרסור/commit
+    # עם מה שנאסף (עמודי ה-seed בעדיפות 0 - נסרקים ראשונים)
+    deadline = time.monotonic() + float(os.environ.get("POLICY_CRAWL_BUDGET", "1320"))
     while q and len(pages) < max_pages:
+        if time.monotonic() > deadline:
+            print(f"[snapshot] crawl budget reached after {len(pages)} pages - stopping", flush=True)
+            break
         _, _, url, d = heapq.heappop(q)
         url = urldefrag(url)[0]
         if url in seen:
