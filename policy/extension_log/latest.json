@@ -1,9 +1,9 @@
 {
- "extension_version": "2.27.0",
- "started": "2026-10-01T19:01:45.259Z",
- "updated": "2026-10-01T19:13:45.396Z",
+ "extension_version": "2.28.0",
+ "started": "2026-10-01T19:15:34.650Z",
+ "updated": "2026-10-01T19:17:30.329Z",
  "final": false,
- "stopped": false,
+ "stopped": true,
  "rules_from_github": true,
  "rules": {
   "doc_rx": "\\.(xlsx|xls|pdf|docx)(\\?|#|$)",
@@ -14,92 +14,81 @@
   "settle_ms": 3000,
   "capture_ms": 8000,
   "max_download_clicks": 40,
-  "_note": "כללי משיכת המדיניות של התוסף - נקראים מ-GitHub בתחילת כל ריצה (שינוי כאן = תקף בריצה הבאה, בלי לעדכן את התוסף). ביטויים רגולריים (בלי /) ומספרים בלבד."
+  "_note": "כללי משיכת המדיניות של התוסף - נקראים מ-GitHub בתחילת כל ריצה (שינוי כאן = תקף בריצה הבאה, בלי לעדכן את התוסף). ביטויים רגולריים (בלי /) ומספרים בלבד.",
+  "skip_complete_hours": 24,
+  "_note_skip": "חברה עם מדיניות השנה לכל המסלולים (policy/extension_complete.json) מדולגת N שעות מאז הריצה המוצלחת האחרונה שלה. 0 = לא מדלגים."
  },
  "total_sites": 10,
- "done_sites": 9,
- "new_docs": 53,
+ "done_sites": 4,
+ "new_docs": 2,
+ "skipped_complete": [],
  "active": [
   {
-   "name": "החברה המנהלת של מינהל קרן ההשתלמות לפקידים עובדי המנהל והשירותים בע\"מ",
-   "page": "https://minhal.org/%d7%90%d7%95%d7%93%d7%95%d7%aa-%d7%94%d7%a7%d7%a8%d7%9f/%d7%94%d7%95%d7%a6%d7%90%d7%95%d7%aa-%d7%99%d7%a9%d7%99%d7%a8%d7%95%d7%aa-%d7%91%d7%a2%d7%93-%d7%a0%d7%99%d7%94%d7%95%d7%9c-%d7%94%d7%a9%d7%a7%d7%a2%d7%95%d7%aa/",
-   "page_no": 6,
-   "pages": 8,
+   "name": "איילון קופות גמל בע\"מ",
+   "page": "https://www.ayalon-ins.co.il/savings",
+   "page_no": 5,
+   "pages": 20,
+   "step": "פותח אקורדיונים ואוסף קישורים"
+  },
+  {
+   "name": "קרנות השתלמות למורים ולגננות - חברה מנהלת בע\"מ",
+   "page": "https://www.kranoth.org.il/%D7%9E%D7%93%D7%99%D7%A0%D7%99%D7%95%D7%AA-%D7%95%D7%AA%D7%A7%D7%A0%D7%95%D7%A0%D7%99%D7%9D/%D7%9E%D7%93%D7%99%D7%A0%D7%99%D7%95%D7%AA-%D7%94%D7%A9%D7%A7%D7%A2%D7%95%D7%AA-%D7%9E%D7%95%D7%A8%D7%99%D7%9D-%D7%95%D7%92%D7%A0%D7%A0%D7%95%D7%AA-%D7%9E%D7%A7%D7%95%D7%A8/",
+   "page_no": 7,
+   "pages": 10,
+   "step": "טוען עמוד"
+  },
+  {
+   "name": "קרנות השתלמות למורים תיכוניים, מורי סמינרים ומפקחים - חברה מנהלת בע\"מ",
+   "page": "https://www.kranoth.org.il",
+   "page_no": 7,
+   "pages": 7,
    "step": "טוען עמוד"
   }
  ],
  "sites": [
   {
-   "legal_id": "513910703",
-   "name": "איי. די. איי. חברה לביטוח בע\"מ",
+   "legal_id": "514956465",
+   "name": "מור גמל ופנסיה בע\"מ",
    "pages": [
     {
-     "url": "https://www.555.co.il/about/hashkaot.html",
-     "links": 174,
+     "url": "https://www.moreinvest.co.il/מוצרים/גמל-ופנסיה/מידע-כללי-ורגולציה/הצהרה-על-מדיניות-השקעה/",
+     "links": 144,
      "followed": [],
-     "files": 14,
-     "clicked": 4,
+     "files": 3,
+     "clicked": 0,
      "captured": 0,
      "selected": [
-      "https://www.555.co.il/sites/default/files/Forms/medidyut2026.xlsx",
-      "https://www.555.co.il/sites/default/files/Forms/medidyut2025.xlsx",
-      "https://www.555.co.il/sites/default/files/General/medinyut_7.2024.xlsx",
-      "https://www.555.co.il/sites/default/files/General/medinyut_new_2024.xlsx",
-      "https://www.555.co.il/sites/default/files/General/medidyut2023.xlsx",
-      "https://www.555.co.il/sites/default/files/Forms/medidyut2022_0.xlsx",
-      "https://www.555.co.il/sites/default/files/General/medidyut2021.xlsx",
-      "https://www.555.co.il/sites/default/files/Forms/medinyut2020.xlsx",
-      "https://www.555.co.il/sites/default/files/Forms/Corporate governance standards 2026.pdf"
+      "https://www.moreinvest.co.il/media/crvlwpod/7_17_0_2026_9.xlsx",
+      "https://www.moreinvest.co.il/media/jm4fv05g/7_18_0_2026_9.xlsx"
      ],
      "unselected_files": [
       {
-       "file": "https://www.555.co.il/sites/default/files/Forms/ESG 2026_announcement.pdf",
-       "text": "לצפייה",
-       "ctx": "2026 2025 2024 2023 2022 2021 2020 אמות מידה 2026 הצהרה מראש של גוף מוסדי על מדיניות ההשקעה שלו לצפי"
-      },
-      {
-       "file": "https://www.555.co.il/sites/default/files/Forms/invest_policy_ESG_2025.pdf",
-       "text": "לצפייה",
-       "ctx": "2026 2025 2024 2023 2022 2021 2020 אמות מידה 2026 הצהרה מראש של גוף מוסדי על מדיניות ההשקעה שלו לצפי"
-      },
-      {
-       "file": "https://www.555.co.il/sites/default/files/General/invest_policy_ESG_2024_New.pdf.pdf",
-       "text": "לצפייה",
-       "ctx": "2026 2025 2024 2023 2022 2021 2020 אמות מידה 2026 הצהרה מראש של גוף מוסדי על מדיניות ההשקעה שלו לצפי"
-      },
-      {
-       "file": "https://www.555.co.il/sites/default/files/General/invest_policy_ESG_2023.pdf",
-       "text": "לצפייה",
-       "ctx": "2026 2025 2024 2023 2022 2021 2020 אמות מידה 2026 הצהרה מראש של גוף מוסדי על מדיניות ההשקעה שלו לצפי"
-      },
-      {
-       "file": "https://www.555.co.il/sites/default/files/Forms/integrating_esg_principles_investment_policies.pdf",
-       "text": "לצפייה",
-       "ctx": "2026 2025 2024 2023 2022 2021 2020 אמות מידה 2026 הצהרה מראש של גוף מוסדי על מדיניות ההשקעה שלו לצפי"
+       "file": "https://www.moreinvest.co.il/media/uhhlihpv/esg-מור-בית-השקעות-_-ינואר-2023-copy-1.pdf",
+       "text": "שילוב שיקולי ESG במדיניות ההשקעה",
+       "ctx": "שילוב שיקולי ESG במדיניות ההשקעה"
       }
      ]
     },
     {
-     "url": "https://www.555.co.il",
-     "links": 186,
+     "url": "https://www.moreinvest.co.il",
+     "links": 167,
      "followed": [],
      "files": 0,
-     "clicked": 6,
+     "clicked": 0,
      "captured": 0,
      "selected": [],
      "unselected_files": []
     }
    ],
    "new_docs": 0,
-   "found": 14,
-   "selected": 9,
-   "had": 8,
-   "errors": [
-    "Corporate governance standards 2026.pdf -> TypeError: Failed to fetch"
-   ],
+   "found": 3,
+   "selected": 2,
+   "had": 2,
+   "head_skip": 0,
+   "errors": [],
    "diag": [
-    "איי. די. איי. חברה: links=174 files=14 clicked=4 captured=0 selected=9",
-    "איי. די. איי. חברה: links=186 files=0 clicked=6 captured=0 selected=0"
+    "מור גמל ופנסיה בע\": links=144 files=3 clicked=0 captured=0 selected=2",
+    "מור גמל ופנסיה בע\": links=167 files=0 clicked=0 captured=0 selected=0"
    ],
    "new_files": []
   },
@@ -287,6 +276,7 @@
    "found": 48,
    "selected": 7,
    "had": 6,
+   "head_skip": 0,
    "errors": [
     "עדכונים-מדיניות-הצבעה-אפריל-2026.pdf -> 418"
    ],
@@ -301,255 +291,77 @@
    "new_files": []
   },
   {
-   "legal_id": "514956465",
-   "name": "מור גמל ופנסיה בע\"מ",
+   "legal_id": "513910703",
+   "name": "איי. די. איי. חברה לביטוח בע\"מ",
    "pages": [
     {
-     "url": "https://www.moreinvest.co.il/מוצרים/גמל-ופנסיה/מידע-כללי-ורגולציה/הצהרה-על-מדיניות-השקעה/",
-     "links": 206,
+     "url": "https://www.555.co.il/about/hashkaot.html",
+     "links": 174,
      "followed": [],
-     "files": 65,
-     "clicked": 0,
+     "files": 14,
+     "clicked": 4,
      "captured": 0,
      "selected": [
-      "https://www.moreinvest.co.il/media/l1th0dl1/7_17_0_2026_17.xlsx",
-      "https://www.moreinvest.co.il/media/crvlwpod/7_17_0_2026_9.xlsx",
-      "https://www.moreinvest.co.il/media/jwgpu2r0/7_17_0_2026_8.xlsx",
-      "https://www.moreinvest.co.il/media/wjcjuj3r/7_17_0_2026_7.xlsx",
-      "https://www.moreinvest.co.il/media/3wkdgup0/7_17_0_2026_6.xlsx",
-      "https://www.moreinvest.co.il/media/rljmh5o1/7_17_0_2026_5.xlsx",
-      "https://www.moreinvest.co.il/media/zqspbph2/7_17_0_2026_3.xlsx",
-      "https://www.moreinvest.co.il/media/b45a0eji/7_17_0_2026_2.xlsx",
-      "https://www.moreinvest.co.il/media/glnpmnvi/7_17_0_2026_1.xlsx",
-      "https://www.moreinvest.co.il/media/1yojvny4/7_17_0_2025_7.xlsx",
-      "https://www.moreinvest.co.il/media/wqzn5mk4/7_17_0_2025_6.xlsx",
-      "https://www.moreinvest.co.il/media/zlyd4snr/7_17_0_2025_5.xlsx",
-      "https://www.moreinvest.co.il/media/tw1ighpk/7_17_0_2025_4.xlsx",
-      "https://www.moreinvest.co.il/media/4xdg5nuf/7_17_0_2025_3.xlsx",
-      "https://www.moreinvest.co.il/media/qwdfgqiy/7_17_0_2025_2.xlsx",
-      "https://www.moreinvest.co.il/media/hjjbahea/7_17_0_2025_1.xlsx",
-      "https://www.moreinvest.co.il/media/gwmnaf4s/7_17_0_2024_18.xlsx",
-      "https://www.moreinvest.co.il/media/0t0jlqbb/7_17_0_2024_17.xlsx",
-      "https://www.moreinvest.co.il/media/phaignve/7_17_0_2024_15.xlsx",
-      "https://www.moreinvest.co.il/media/d2xeshfs/7_17_0_2024_12.xlsx",
-      "https://www.moreinvest.co.il/media/imdeebkp/7_17_0_2024_7.xlsx",
-      "https://www.moreinvest.co.il/media/uvebxth0/7_17_0_2024_4.xlsx",
-      "https://www.moreinvest.co.il/media/p2oo1pxj/7_17_0_2024_3.xlsx",
-      "https://www.moreinvest.co.il/media/qdbjyg2a/7_17_0_2024_2.xlsx",
-      "https://www.moreinvest.co.il/media/mrgh2wvs/7_17_0_2024_1.xlsx",
-      "https://www.moreinvest.co.il/media/ilepzxwv/7_17_0_2023_17.xlsx",
-      "https://www.moreinvest.co.il/media/kbvfzu3g/7_17_0_2023_16.xlsx",
-      "https://www.moreinvest.co.il/media/vomljbho/7_17_0_2023_12.xlsx",
-      "https://www.moreinvest.co.il/media/0vbbajmi/7_17_0_2023_11.xlsx",
-      "https://www.moreinvest.co.il/media/tdopjyvp/7_17_0_2023_10.xlsx",
-      "https://www.moreinvest.co.il/media/spupr0tm/7_17_0_2023_8.xlsx",
-      "https://www.moreinvest.co.il/media/tb4nyg2s/7_17_0_2023_7.xlsx",
-      "https://www.moreinvest.co.il/media/cacduzpn/7_17_0_2023_3.xlsx",
-      "https://www.moreinvest.co.il/media/x01p4gjm/7_17_0_2023_2.xlsx",
-      "https://www.moreinvest.co.il/media/kccnh4lz/7_17_0_2023_1.xlsx",
-      "https://www.moreinvest.co.il/media/ikqdjsng/7_18_0_2026_17.xlsx",
-      "https://www.moreinvest.co.il/media/jm4fv05g/7_18_0_2026_9.xlsx",
-      "https://www.moreinvest.co.il/media/nmfhqisn/7_18_0_2026_8.xlsx",
-      "https://www.moreinvest.co.il/media/y31nvjak/7_18_0_2026_7.xlsx",
-      "https://www.moreinvest.co.il/media/x4dfm4rj/7_18_0_2026_6.xlsx",
-      "https://www.moreinvest.co.il/media/h4ggfxuj/7_18_0_2026_5.xlsx",
-      "https://www.moreinvest.co.il/media/p4lbc04n/7_18_0_2026_3.xlsx",
-      "https://www.moreinvest.co.il/media/a5xhlwym/7_18_0_2026_2.xlsx",
-      "https://www.moreinvest.co.il/media/fqpbaka0/7_18_0_2026_1.xlsx",
-      "https://www.moreinvest.co.il/media/c2hbdvmq/7_18_0_2025_9.xlsx",
-      "https://www.moreinvest.co.il/media/1dzb1lbe/7_18_0_2025_7.xlsx",
-      "https://www.moreinvest.co.il/media/rokf2lpt/7_18_0_2025_6.xlsx",
-      "https://www.moreinvest.co.il/media/oq3e4vtt/7_18_0_2025_5.xlsx",
-      "https://www.moreinvest.co.il/media/0sqdjfpy/7_18_0_2025_4.xlsx",
-      "https://www.moreinvest.co.il/media/g1fhfbo3/7_18_0_2025_3.xlsx",
-      "https://www.moreinvest.co.il/media/vwaffzyq/7_18_0_2025_2.xlsx",
-      "https://www.moreinvest.co.il/media/fvonuovu/7_18_0_2025_1.xlsx",
-      "https://www.moreinvest.co.il/media/qknldjvr/7_18_0_2024_12.xlsx",
-      "https://www.moreinvest.co.il/media/to1mf2av/7_18_0_2024_7.xls",
-      "https://www.moreinvest.co.il/media/uqxjac4y/7_18_0_2024_1.xlsx",
-      "https://www.moreinvest.co.il/media/22tjxxea/7_18_0_2023_17.xls",
-      "https://www.moreinvest.co.il/media/njyh0h20/7_18_0_2023_12.xls",
-      "https://www.moreinvest.co.il/media/bkykwbzy/7_18_0_2023_7.xls",
-      "https://www.moreinvest.co.il/media/seulfcst/7_18_0_2023_3.xls",
-      "https://www.moreinvest.co.il/media/sokpsg1b/7_18_0_2023_1.xls",
-      "https://www.moreinvest.co.il/media/xifbcs2l/7_21_0_2026_14.xlsx",
-      "https://www.moreinvest.co.il/media/qjsb4gri/7_21_0_2025_14.xlsx",
-      "https://www.moreinvest.co.il/media/uywn0chp/7_21_0_2024_14.xlsx",
-      "https://www.moreinvest.co.il/media/iohlp1t5/7_21_0_2023_14.xlsx"
+      "https://www.555.co.il/sites/default/files/Forms/medidyut2026.xlsx",
+      "https://www.555.co.il/sites/default/files/Forms/medidyut2025.xlsx",
+      "https://www.555.co.il/sites/default/files/General/medinyut_7.2024.xlsx",
+      "https://www.555.co.il/sites/default/files/General/medinyut_new_2024.xlsx",
+      "https://www.555.co.il/sites/default/files/General/medidyut2023.xlsx",
+      "https://www.555.co.il/sites/default/files/Forms/medidyut2022_0.xlsx",
+      "https://www.555.co.il/sites/default/files/General/medidyut2021.xlsx",
+      "https://www.555.co.il/sites/default/files/Forms/medinyut2020.xlsx",
+      "https://www.555.co.il/sites/default/files/Forms/Corporate governance standards 2026.pdf"
      ],
      "unselected_files": [
       {
-       "file": "https://www.moreinvest.co.il/media/uhhlihpv/esg-מור-בית-השקעות-_-ינואר-2023-copy-1.pdf",
-       "text": "שילוב שיקולי ESG במדיניות ההשקעה",
-       "ctx": "שילוב שיקולי ESG במדיניות ההשקעה"
+       "file": "https://www.555.co.il/sites/default/files/Forms/ESG 2026_announcement.pdf",
+       "text": "לצפייה",
+       "ctx": "2026 2025 2024 2023 2022 2021 2020 אמות מידה 2026 הצהרה מראש של גוף מוסדי על מדיניות ההשקעה שלו לצפי"
+      },
+      {
+       "file": "https://www.555.co.il/sites/default/files/Forms/invest_policy_ESG_2025.pdf",
+       "text": "לצפייה",
+       "ctx": "2026 2025 2024 2023 2022 2021 2020 אמות מידה 2026 הצהרה מראש של גוף מוסדי על מדיניות ההשקעה שלו לצפי"
+      },
+      {
+       "file": "https://www.555.co.il/sites/default/files/General/invest_policy_ESG_2024_New.pdf.pdf",
+       "text": "לצפייה",
+       "ctx": "2026 2025 2024 2023 2022 2021 2020 אמות מידה 2026 הצהרה מראש של גוף מוסדי על מדיניות ההשקעה שלו לצפי"
+      },
+      {
+       "file": "https://www.555.co.il/sites/default/files/General/invest_policy_ESG_2023.pdf",
+       "text": "לצפייה",
+       "ctx": "2026 2025 2024 2023 2022 2021 2020 אמות מידה 2026 הצהרה מראש של גוף מוסדי על מדיניות ההשקעה שלו לצפי"
+      },
+      {
+       "file": "https://www.555.co.il/sites/default/files/Forms/integrating_esg_principles_investment_policies.pdf",
+       "text": "לצפייה",
+       "ctx": "2026 2025 2024 2023 2022 2021 2020 אמות מידה 2026 הצהרה מראש של גוף מוסדי על מדיניות ההשקעה שלו לצפי"
       }
      ]
     },
     {
-     "url": "https://www.moreinvest.co.il",
-     "links": 167,
+     "url": "https://www.555.co.il",
+     "links": 186,
      "followed": [],
      "files": 0,
-     "clicked": 0,
+     "clicked": 6,
      "captured": 0,
      "selected": [],
      "unselected_files": []
     }
    ],
    "new_docs": 0,
-   "found": 65,
-   "selected": 64,
-   "had": 64,
-   "errors": [],
-   "diag": [
-    "מור גמל ופנסיה בע\": links=206 files=65 clicked=0 captured=0 selected=64",
-    "מור גמל ופנסיה בע\": links=167 files=0 clicked=0 captured=0 selected=0"
+   "found": 14,
+   "selected": 9,
+   "had": 8,
+   "head_skip": 0,
+   "errors": [
+    "Corporate governance standards 2026.pdf -> TypeError: Failed to fetch"
    ],
-   "new_files": []
-  },
-  {
-   "legal_id": "520028390",
-   "name": "קרנות השתלמות למורים תיכוניים, מורי סמינרים ומפקחים - חברה מנהלת בע\"מ",
-   "pages": [
-    {
-     "url": "https://www.kranoth.org.il/%D7%9E%D7%93%D7%99%D7%A0%D7%99%D7%95%D7%AA-%D7%95%D7%A0%D7%94%D7%9C%D7%99%D7%9D/%D7%9E%D7%93%D7%99%D7%A0%D7%99%D7%95%D7%AA-%D7%95%D7%A0%D7%94%D7%9C%D7%99%D7%9D-%D7%9E%D7%95%D7%A8%D7%99%D7%9D-%D7%AA%D7%99%D7%9B%D7%95%D7%A0%D7%99%D7%99%D7%9D/%D7%9E%D7%93%D7%99%D7%A0%D7%99%D7%95%D7%AA-%D7%94%D7%A9%D7%A7%D7%A2%D7%95%D7%AA-%D7%9E%D7%95%D7%A8%D7%99%D7%9D-%D7%AA%D7%99%D7%9B%D7%95%D7%A0%D7%99%D7%99%D7%9D-%D7%A8%D7%92%D7%99%D7%9C/",
-     "links": 101,
-     "followed": [],
-     "files": 54,
-     "clicked": 0,
-     "captured": 0,
-     "selected": [
-      "https://kranoth.org.il/wp-content/uploads/2026/09/מדיניות_השקעות_צפויה_תשפז-מורים_תיכוניים_מסלול_כללי.xlsx",
-      "https://www.kranoth.org.il/wp-content/uploads/2026/06/מות_רגילה-מדיניות_השקעות_מרץ_2026.xlsx",
-      "https://www.kranoth.org.il/wp-content/uploads/2026/01/מדיניות_השקעה_צפויה_מורים_תיכונים_תשפו_מונגש_עדכון_דצמבר__2025.xlsx",
-      "https://www.kranoth.org.il/wp-content/uploads/2025/11/מדיניות_השקעות_צפויה_תשפו-מות_אשראי_ואגח.xlsx",
-      "https://www.kranoth.org.il/wp-content/uploads/2024/12/מות_רגילה-מסלול_כללי-מדיניות_תשפה_דצמבר_2024.xlsx",
-      "https://www.kranoth.org.il/wp-content/uploads/2024/11/מות_רגילה_מסלול_כללי_מדיניות_השקעות_צפויה_תשפה-1.xlsx",
-      "https://www.kranoth.org.il/wp-content/uploads/2024/01/מורים_תיכוניים_רגילה_כללי-מדיניות_השקעות_צפויה_25.12.23.xlsx",
-      "https://www.kranoth.org.il/wp-content/uploads/2023/08/מדיניות_השקעה_צפויה_תשפד-מות_רגילה-מסלול_כללי.xlsx",
-      "https://www.kranoth.org.il/wp-content/uploads/2023/01/מדיניות_השקעות_צפויה_מות_רגילה_תשפג-מסלול_כללי-_עדכון_דצמבר_2022.xlsx",
-      "https://www.kranoth.org.il/wp-content/uploads/2022/10/מדיניות_השקעות_צפויה_תשפג_מות_רגילה_מסלול_כללי.xlsx",
-      "https://kranoth.org.il/wp-content/uploads/2026/09/מדיניות_השקעות_צפויה_תשפז-מורים_תיכוניים_מסלול_הלכה.xlsx",
-      "https://www.kranoth.org.il/wp-content/uploads/2026/06/מות_רגילה_הלכה-מדיניות_השקעות_מרץ_2026.xlsx",
-      "https://www.kranoth.org.il/wp-content/uploads/2025/10/מדיניות_השקעות_צפויה_תשפו-מות_הלכתי.xlsx",
-      "https://www.kranoth.org.il/wp-content/uploads/2024/12/מות_רגילה-מסלול_הלכה-מדיניות_תשפה_דצמבר_2024.xlsx",
-      "https://www.kranoth.org.il/wp-content/uploads/2024/11/מות_רגילה_מסלול_הלכה_מדיניות_השקעות_צפויה_תשפה-1.xlsx",
-      "https://www.kranoth.org.il/wp-content/uploads/2024/01/מורים_תיכוניים_רגילה_הלכתי-מדיניות_השקעות_צפויה_25.12.23.xlsx",
-      "https://www.kranoth.org.il/wp-content/uploads/2023/08/מדיניות_השקעות_צפויה_תשפד-מות_רגילה-מסלול_הלכה.xlsx",
-      "https://www.kranoth.org.il/wp-content/uploads/2023/01/מדיניות_השקעות_צפויה_מות_רגילה_תשפג-מסלול_הלכה-עדכון_דצמבר_2022.xlsx",
-      "https://www.kranoth.org.il/wp-content/uploads/2022/10/מדיניות_השקעות_צפויה_תשפג_מות_רגילה_מסלול_הלכה.xlsx",
-      "https://kranoth.org.il/wp-content/uploads/2026/09/מדיניות_השקעות_צפויה_תשפז-מורים_תיכוניים-_מסלול_אשראי_ואגח.xlsx",
-      "https://www.kranoth.org.il/wp-content/uploads/2026/07/מדיניות_השקעות_צפויה_תשפו-מות_אשראי_ואגח.xlsx",
-      "https://www.kranoth.org.il/wp-content/uploads/2024/12/מות_רגילה-מסלול_אשראי_ואגח-מדיניות_תשפה_דצמבר_2024.xlsx",
-      "https://www.kranoth.org.il/wp-content/uploads/2024/11/מות_רגילה_מסלול_אשראי_ואגח_מדיניות_השקעות_צפויה_תשפה-1.xlsx",
-      "https://www.kranoth.org.il/wp-content/uploads/2024/01/מורים_תיכוניים_רגילה_אגח-מדיניות_השקעות_צפויה_25.12.23.xlsx",
-      "https://www.kranoth.org.il/wp-content/uploads/2023/08/מדיניות_השקעות_צפויה_תשפד-מות_רגילה-מסלול_אגח.xlsx",
-      "https://www.kranoth.org.il/wp-content/uploads/2023/01/מדיניות_השקעות_צפויה_מות_רגילה_תשפג-מסלול_אגח-עדכון_דצמבר_2022-1.xlsx",
-      "https://www.kranoth.org.il/wp-content/uploads/2022/10/מדיניות_השקעות_צפויה_תשפג_מות_רגילה_מסלול_אגח.xlsx"
-     ],
-     "unselected_files": []
-    },
-    {
-     "url": "https://www.kranoth.org.il/%D7%9E%D7%93%D7%99%D7%A0%D7%99%D7%95%D7%AA-%D7%95%D7%A0%D7%94%D7%9C%D7%99%D7%9D/%D7%9E%D7%93%D7%99%D7%A0%D7%99%D7%95%D7%AA-%D7%95%D7%A0%D7%94%D7%9C%D7%99%D7%9D-%D7%9E%D7%95%D7%A8%D7%99%D7%9D-%D7%AA%D7%99%D7%9B%D7%95%D7%A0%D7%99%D7%99%D7%9D/%D7%9E%D7%93%D7%99%D7%A0%D7%99%D7%95%D7%AA-%D7%94%D7%A9%D7%A7%D7%A2%D7%95%D7%AA-%D7%9E%D7%95%D7%A8%D7%99%D7%9D-%D7%AA%D7%99%D7%9B%D7%95%D7%A0%D7%99%D7%99%D7%9D-%D7%9E%D7%A7%D7%95%D7%A8/",
-     "links": 101,
-     "followed": [],
-     "files": 54,
-     "clicked": 0,
-     "captured": 0,
-     "selected": [
-      "https://kranoth.org.il/wp-content/uploads/2026/09/מדיניות_השקעות_צפויה_תשפז-מורים_תיכוניים_מקור-מסלול_כללי.xlsx",
-      "https://www.kranoth.org.il/wp-content/uploads/2026/06/מות_מקור-מדיניות_השקעות_מרץ_2026.xlsx",
-      "https://www.kranoth.org.il/wp-content/uploads/2025/11/מדיניות_השקעות_צפויה_תשפו-מות_מקור_אשראי_ואגח-1.xlsx",
-      "https://www.kranoth.org.il/wp-content/uploads/2024/12/מות_מקור-מסלול_כללי-מדיניות_תשפה_דצמבר_2024.xlsx",
-      "https://www.kranoth.org.il/wp-content/uploads/2024/11/מות_מקור_מסלול_כללי_מדיניות_השקעה_צפויה_תשפה-1.xlsx",
-      "https://www.kranoth.org.il/wp-content/uploads/2024/01/מורים_תיכונייים_מקור_כללי-מדיניות_השקעות_צפויה_25.12.23.xlsx",
-      "https://www.kranoth.org.il/wp-content/uploads/2023/08/מדיניות_השקעה_צפויה_תשפד-מות_מקור-מסלול_כללי.xlsx",
-      "https://www.kranoth.org.il/wp-content/uploads/2023/01/מדיניות_השקעות_צפויה_מות_מקור_תשפג-מסלול_כללי-עדכון_דצמבר_2022.xlsx",
-      "https://www.kranoth.org.il/wp-content/uploads/2022/10/מדיניות_השקעות_צפויה_תשפג_מות_מקור_מסלול_כללי.xlsx",
-      "https://kranoth.org.il/wp-content/uploads/2026/09/מדיניות_השקעות_צפויה_תשפז-מורים_תיכוניים_מקור-מסלול_הלכה.xlsx",
-      "https://www.kranoth.org.il/wp-content/uploads/2026/06/מות_מקור_הלכה-מדיניות_השקעות_מרץ_2026.xlsx",
-      "https://www.kranoth.org.il/wp-content/uploads/2025/10/מדיניות_השקעות_צפויה_תשפו-מות_מקור_הלכתי.xlsx",
-      "https://www.kranoth.org.il/wp-content/uploads/2024/12/מות_מקור-מסלול_הלכה-מדיניות_תשפה_דצמבר_2024.xlsx",
-      "https://www.kranoth.org.il/wp-content/uploads/2024/11/מות_מקור_מסלול_הלכה_מדיניות_השקעות_צפויה_תשפה-1.xlsx",
-      "https://www.kranoth.org.il/wp-content/uploads/2024/01/מורים_תיכונייים_מקור_הלכה-מדיניות_השקעות_צפויה_25.12.23.xlsx",
-      "https://www.kranoth.org.il/wp-content/uploads/2023/08/מדיניות_השקעות_צפויה_תשפד-מות_מקור-מסלול_הלכה.xlsx",
-      "https://www.kranoth.org.il/wp-content/uploads/2023/01/מדיניות_השקעות_צפויה_מות_מקור_תשפג-מסלול_הלכה-עדכון_דצמבר_2022.xlsx",
-      "https://www.kranoth.org.il/wp-content/uploads/2022/10/מדיניות_השקעות_צפויה_תשפג_מות_מקור_מסלול_הלכה.xlsx",
-      "https://kranoth.org.il/wp-content/uploads/2026/09/מדיניות_השקעות_צפויה_תשפז-מורים_תיכוניים_מקור-מסלול_אשראי_ואגח.xlsx",
-      "https://www.kranoth.org.il/wp-content/uploads/2026/07/מדיניות_השקעות_צפויה_תשפו-מות_מקור_אשראי_ואגח.xlsx",
-      "https://www.kranoth.org.il/wp-content/uploads/2024/12/מות_מקור-מסלול_אשראי_ואגח-מדיניות_תשפה_דצמבר_2024.xlsx",
-      "https://www.kranoth.org.il/wp-content/uploads/2024/11/מות_מקור_מסלול_אשראי_ואגח_מדיניות_השקעה_צפויה_תשפה-1.xlsx",
-      "https://www.kranoth.org.il/wp-content/uploads/2024/01/מורים_תיכוניים_מקור_אגח-מדיניות_השקעות_צפויה_25.12.23.xlsx",
-      "https://www.kranoth.org.il/wp-content/uploads/2023/08/מדיניות_השקעות_צפויה_תשפד-מות_מקור-מסלול_אגח.xlsx",
-      "https://www.kranoth.org.il/wp-content/uploads/2023/01/מדיניות_השקעות_צפויה_מות_מקור_תשפג-מסלול_אגח-עדכון_דצמבר_2022.xlsx",
-      "https://www.kranoth.org.il/wp-content/uploads/2022/10/מדיניות_השקעות_צפויה_תשפג_מות_מקור_מסלול_אגח.xlsx"
-     ],
-     "unselected_files": []
-    },
-    {
-     "url": "https://www.kranoth.org.il/%D7%9E%D7%93%D7%99%D7%A0%D7%99%D7%95%D7%AA-%D7%95%D7%A0%D7%94%D7%9C%D7%99%D7%9D/%D7%9E%D7%93%D7%99%D7%A0%D7%99%D7%95%D7%AA-%D7%95%D7%A0%D7%94%D7%9C%D7%99%D7%9D-%D7%9E%D7%95%D7%A8%D7%99%D7%9D-%D7%AA%D7%99%D7%9B%D7%95%D7%A0%D7%99%D7%99%D7%9D/%D7%9E%D7%93%D7%99%D7%A0%D7%99%D7%95%D7%AA-%D7%94%D7%A9%D7%A7%D7%A2%D7%95%D7%AA-%D7%9E%D7%95%D7%A8%D7%99%D7%9D-%D7%AA%D7%99%D7%9B%D7%95%D7%A0%D7%99%D7%99%D7%9D-%D7%90%D7%92%D7%97/",
-     "links": 47,
-     "followed": [],
-     "files": 0,
-     "clicked": 0,
-     "captured": 0,
-     "selected": [],
-     "unselected_files": []
-    },
-    {
-     "url": "https://www.kranoth.org.il/%D7%9E%D7%93%D7%99%D7%A0%D7%99%D7%95%D7%AA-%D7%95%D7%A0%D7%94%D7%9C%D7%99%D7%9D/%D7%9E%D7%93%D7%99%D7%A0%D7%99%D7%95%D7%AA-%D7%95%D7%A0%D7%94%D7%9C%D7%99%D7%9D-%D7%9E%D7%95%D7%A8%D7%99%D7%9D-%D7%AA%D7%99%D7%9B%D7%95%D7%A0%D7%99%D7%99%D7%9D/%D7%9E%D7%93%D7%99%D7%A0%D7%99%D7%95%D7%AA-%D7%94%D7%A9%D7%A7%D7%A2%D7%95%D7%AA-%D7%9E%D7%95%D7%A8%D7%99%D7%9D-%D7%AA%D7%99%D7%9B%D7%95%D7%A0%D7%99%D7%99%D7%9D-%D7%90%D7%92-%D7%97/",
-     "links": 47,
-     "followed": [],
-     "files": 0,
-     "clicked": 0,
-     "captured": 0,
-     "selected": [],
-     "unselected_files": []
-    },
-    {
-     "url": "https://www.kranoth.org.il/%D7%9E%D7%93%D7%99%D7%A0%D7%99%D7%95%D7%AA-%D7%95%D7%A0%D7%94%D7%9C%D7%99%D7%9D/%D7%9E%D7%93%D7%99%D7%A0%D7%99%D7%95%D7%AA-%D7%95%D7%A0%D7%94%D7%9C%D7%99%D7%9D-%D7%9E%D7%95%D7%A8%D7%99%D7%9D-%D7%AA%D7%99%D7%9B%D7%95%D7%A0%D7%99%D7%99%D7%9D/%D7%9E%D7%93%D7%99%D7%A0%D7%99%D7%95%D7%AA-%D7%94%D7%A9%D7%A7%D7%A2%D7%95%D7%AA-%D7%9E%D7%95%D7%A8%D7%99%D7%9D-%D7%AA%D7%99%D7%9B%D7%95%D7%A0%D7%99%D7%99%D7%9D-%D7%9C%D7%9C%D7%90-%D7%9E%D7%A0%D7%99%D7%95%D7%AA/",
-     "links": 47,
-     "followed": [],
-     "files": 0,
-     "clicked": 0,
-     "captured": 0,
-     "selected": [],
-     "unselected_files": []
-    },
-    {
-     "url": "https://www.kranoth.org.il/%D7%9E%D7%93%D7%99%D7%A0%D7%99%D7%95%D7%AA-%D7%95%D7%A0%D7%94%D7%9C%D7%99%D7%9D/%D7%9E%D7%93%D7%99%D7%A0%D7%99%D7%95%D7%AA-%D7%95%D7%A0%D7%94%D7%9C%D7%99%D7%9D-%D7%9E%D7%95%D7%A8%D7%99%D7%9D-%D7%AA%D7%99%D7%9B%D7%95%D7%A0%D7%99%D7%99%D7%9D/",
-     "links": 49,
-     "followed": [],
-     "files": 0,
-     "clicked": 0,
-     "captured": 0,
-     "selected": [],
-     "unselected_files": []
-    },
-    {
-     "url": "https://www.kranoth.org.il",
-     "links": 93,
-     "followed": [],
-     "files": 0,
-     "clicked": 0,
-     "captured": 0,
-     "selected": [],
-     "unselected_files": []
-    }
-   ],
-   "new_docs": 0,
-   "found": 108,
-   "selected": 53,
-   "had": 53,
-   "errors": [],
    "diag": [
-    "קרנות השתלמות למור: links=101 files=54 clicked=0 captured=0 selected=27",
-    "קרנות השתלמות למור: links=101 files=54 clicked=0 captured=0 selected=26",
-    "קרנות השתלמות למור: links=47 files=0 clicked=0 captured=0 selected=0",
-    "קרנות השתלמות למור: links=47 files=0 clicked=0 captured=0 selected=0",
-    "קרנות השתלמות למור: links=47 files=0 clicked=0 captured=0 selected=0",
-    "קרנות השתלמות למור: links=49 files=0 clicked=0 captured=0 selected=0",
-    "קרנות השתלמות למור: links=93 files=0 clicked=0 captured=0 selected=0"
+    "איי. די. איי. חברה: links=174 files=14 clicked=4 captured=0 selected=9",
+    "איי. די. איי. חברה: links=186 files=0 clicked=6 captured=0 selected=0"
    ],
    "new_files": []
   },
@@ -558,2041 +370,925 @@
    "name": "החברה לניהול קופת התגמולים והפנסיה של עובדי הסוכנות היהודית לארץ ישראל בע\"מ",
    "pages": [
     {
-     "url": "https://www.jewishagency.org/he/",
-     "links": 63,
-     "followed": [],
-     "files": 1,
+     "url": "https://www.jewishagency-kupa.org.il/sitemap/",
+     "links": 121,
+     "followed": [
+      "https://www.jewishagency-kupa.org.il/%d7%97%d7%91%d7%a8%d7%99-%d7%95%d7%a2%d7%93%d7%aa-%d7%94%d7%a9%d7%a7%d7%a2%d7%95%d7%aa/",
+      "https://www.jewishagency-kupa.org.il/%d7%93%d7%95%d7%97%d7%95%d7%aa-%d7%a8%d7%91%d7%a2%d7%95%d7%a0%d7%99%d7%99%d7%9d/",
+      "https://www.jewishagency-kupa.org.il/%d7%93%d7%95%d7%97%d7%95%d7%aa-%d7%a9%d7%a0%d7%aa%d7%99%d7%99%d7%9d/",
+      "https://www.jewishagency-kupa.org.il/%d7%93%d7%95%d7%97-%d7%97%d7%95%d7%93%d7%a9%d7%99/",
+      "https://www.jewishagency-kupa.org.il/%d7%93%d7%95%d7%97%d7%95%d7%aa/",
+      "https://www.jewishagency-kupa.org.il/%d7%93%d7%95%d7%97%d7%95%d7%aa-%d7%9b%d7%a1%d7%a4%d7%99%d7%99%d7%9d/",
+      "https://www.jewishagency-kupa.org.il/%d7%9e%d7%93%d7%99%d7%a0%d7%99%d7%95%d7%aa-%d7%95%d7%a0%d7%94%d7%9c%d7%99%d7%9d/"
+     ],
+     "files": 26,
      "clicked": 0,
      "captured": 0,
-     "selected": [],
+     "selected": [
+      "https://www.jewishagency-kupa.org.il/wp-content/uploads/2026/07/מדיניות-הצבעה-באסיפות-כלליות-סוכנות-יהודית-2026-מעודכן-יולי-סופי-2026.docx.pdf",
+      "https://www.jewishagency-kupa.org.il/wp-content/uploads/2025/12/מדיניות-הצבעה-חברת-עמדה-2025-2026.pdf",
+      "https://www.jewishagency-kupa.org.il/wp-content/uploads/2026/02/מדיניות-ואמנת-שירות-לקוחות-1.pdf"
+     ],
      "unselected_files": [
       {
-       "file": "https://www.jewishagency.org/il/wp-content/uploads/sites/10/2024/09/The-Jewish-Agency-Gender-Equality-Reprot-2023.pdf",
-       "text": "דוח שוויון מגדרי",
-       "ctx": ""
+       "file": "https://www.jewishagency-kupa.org.il/wp-content/uploads/2021/10/10_zdadim_sohnut.pdf",
+       "text": "מבנה אחזקות וצדדים קשורים",
+       "ctx": "מבנה אחזקות וצדדים קשורים"
+      },
+      {
+       "file": "https://www.jewishagency-kupa.org.il/wp-content/uploads/2021/10/10_הודעה_על_העברת_ניהול.pdf",
+       "text": "הודעה על שינוי מבני",
+       "ctx": "הודעה על שינוי מבני"
+      },
+      {
+       "file": "https://www.jewishagency-kupa.org.il/wp-content/uploads/2025/08/נוהל-מספר-18-מדיניות-התגמול-2024-2027-002.pdf",
+       "text": "מדיניות תגמול נושאי משרה 2024-2027",
+       "ctx": "מדיניות תגמול נושאי משרה 2024-2027"
+      },
+      {
+       "file": "https://www.jewishagency-kupa.org.il/wp-content/uploads/2022/12/מדיניות-תגמול-נושאי-משרה-2020-2023.pdf",
+       "text": "מדיניות תגמול נושאי משרה 2020-2023",
+       "ctx": "מדיניות תגמול נושאי משרה 2020-2023"
+      },
+      {
+       "file": "https://www.jewishagency-kupa.org.il/wp-content/uploads/2021/10/10_מדיניות_תגמול_לשנים_2018_2020_סופי-2.pdf",
+       "text": "מדיניות תגמול נושאי משרה 2018-2020",
+       "ctx": "מדיניות תגמול נושאי משרה 2018-2020"
+      },
+      {
+       "file": "https://www.jewishagency-kupa.org.il/wp-content/uploads/2021/10/10_מדיניות_תגמול_לשנים_2015_2017-3.pdf",
+       "text": "מדיניות תגמול נושאי משרה 2015-2017",
+       "ctx": "מדיניות תגמול נושאי משרה 2015-2017"
+      },
+      {
+       "file": "https://www.jewishagency-kupa.org.il/wp-content/uploads/2021/10/10_מדיניותתגמול2014-2.pdf",
+       "text": "מדיניות תגמול נושאי משרה 2014",
+       "ctx": "מדיניות תגמול נושאי משרה 2014"
+      },
+      {
+       "file": "https://www.jewishagency-kupa.org.il/wp-content/uploads/2021/10/10_10_מדיניותתגמולנושאימשרהלשנת-2013-2.pdf",
+       "text": "מדיניות תגמול נושאי משרה 2013",
+       "ctx": "מדיניות תגמול נושאי משרה 2013"
+      },
+      {
+       "file": "https://www.jewishagency-kupa.org.il/wp-content/uploads/2021/10/10_10_מדיניותהשקעות2012.pdf",
+       "text": "מדיניות תגמול נושאי משרה 2012",
+       "ctx": "מדיניות תגמול נושאי משרה 2012"
+      },
+      {
+       "file": "https://www.jewishagency-kupa.org.il/wp-content/uploads/2025/12/דוח-שירות-אזרחים-ותיקים-בגין-שנת-2025.pdf",
+       "text": "דוח שירות אזרחים ותיקים",
+       "ctx": "דוח שירות אזרחים ותיקים"
+      },
+      {
+       "file": "https://www.jewishagency-kupa.org.il/wp-content/uploads/2021/10/10_zdadim_sohnut.pdf",
+       "text": "מבנה אחזקות וצדדים קשורים",
+       "ctx": "מבנה אחזקות וצדדים קשורים"
+      },
+      {
+       "file": "https://www.jewishagency-kupa.org.il/wp-content/uploads/2021/10/10_הודעה_על_העברת_ניהול.pdf",
+       "text": "הודעה על שינוי מבני",
+       "ctx": "הודעה על שינוי מבני"
+      },
+      {
+       "file": "https://www.jewishagency-kupa.org.il/wp-content/uploads/2025/08/נוהל-מספר-18-מדיניות-התגמול-2024-2027-002.pdf",
+       "text": "מדיניות תגמול נושאי משרה 2024-2027",
+       "ctx": "מדיניות תגמול נושאי משרה 2024-2027"
+      },
+      {
+       "file": "https://www.jewishagency-kupa.org.il/wp-content/uploads/2022/12/מדיניות-תגמול-נושאי-משרה-2020-2023.pdf",
+       "text": "מדיניות תגמול נושאי משרה 2020-2023",
+       "ctx": "מדיניות תגמול נושאי משרה 2020-2023"
+      },
+      {
+       "file": "https://www.jewishagency-kupa.org.il/wp-content/uploads/2021/10/10_מדיניות_תגמול_לשנים_2018_2020_סופי-2.pdf",
+       "text": "מדיניות תגמול נושאי משרה 2018-2020",
+       "ctx": "מדיניות תגמול נושאי משרה 2018-2020"
+      },
+      {
+       "file": "https://www.jewishagency-kupa.org.il/wp-content/uploads/2021/10/10_מדיניות_תגמול_לשנים_2015_2017-3.pdf",
+       "text": "מדיניות תגמול נושאי משרה 2015-2017",
+       "ctx": "מדיניות תגמול נושאי משרה 2015-2017"
+      },
+      {
+       "file": "https://www.jewishagency-kupa.org.il/wp-content/uploads/2021/10/10_מדיניותתגמול2014-2.pdf",
+       "text": "מדיניות תגמול נושאי משרה 2014",
+       "ctx": "מדיניות תגמול נושאי משרה 2014"
+      },
+      {
+       "file": "https://www.jewishagency-kupa.org.il/wp-content/uploads/2021/10/10_10_מדיניותתגמולנושאימשרהלשנת-2013-2.pdf",
+       "text": "מדיניות תגמול נושאי משרה 2013",
+       "ctx": "מדיניות תגמול נושאי משרה 2013"
+      },
+      {
+       "file": "https://www.jewishagency-kupa.org.il/wp-content/uploads/2021/10/10_10_מדיניותהשקעות2012.pdf",
+       "text": "מדיניות תגמול נושאי משרה 2012",
+       "ctx": "מדיניות תגמול נושאי משרה 2012"
+      },
+      {
+       "file": "https://www.jewishagency-kupa.org.il/wp-content/uploads/2025/12/דוח-שירות-אזרחים-ותיקים-בגין-שנת-2025.pdf",
+       "text": "דוח שירות אזרחים ותיקים",
+       "ctx": "דוח שירות אזרחים ותיקים"
       }
      ]
     },
     {
-     "url": "https://www.jewishagency.org",
-     "links": 107,
+     "url": "https://www.jewishagency-kupa.org.il/",
+     "links": 105,
      "followed": [],
-     "files": 0,
+     "files": 26,
      "clicked": 0,
      "captured": 0,
-     "selected": [],
-     "unselected_files": []
-    }
-   ],
-   "new_docs": 0,
-   "found": 1,
-   "selected": 0,
-   "had": 0,
-   "errors": [
-    "https://www.jewishagency.org/he/: timeout 90s: pageCollectLinks -> light collect",
-    "https://www.jafi.org/: Frame with ID 0 is showing error page -> light collect",
-    "https://www.jafi.org/: Frame with ID 0 is showing error page"
-   ],
-   "diag": [
-    "החברה לניהול קופת : links=63 files=1 clicked=0 captured=0 selected=0",
-    "   ? The-Jewish-Agency-Gender-Equality-Reprot-2023.pdf | דוח שוויון מגדרי | ",
-    "החברה לניהול קופת : links=107 files=0 clicked=0 captured=0 selected=0"
-   ],
-   "new_files": []
-  },
-  {
-   "legal_id": "520027251",
-   "name": "קרנות השתלמות למורים ולגננות - חברה מנהלת בע\"מ",
-   "pages": [
-    {
-     "url": "https://www.kranoth.org.il/מדיניות-ונהלים/",
-     "links": 51,
-     "followed": [
-      "https://www.kranoth.org.il/%D7%9E%D7%93%D7%99%D7%A0%D7%99%D7%95%D7%AA-%D7%95%D7%A0%D7%94%D7%9C%D7%99%D7%9D/",
-      "https://www.kranoth.org.il/%d7%9e%d7%93%d7%99%d7%a0%d7%99%d7%95%d7%aa-%d7%95%d7%a0%d7%94%d7%9c%d7%99%d7%9d/%d7%9e%d7%93%d7%99%d7%a0%d7%99%d7%95%d7%aa-%d7%95%d7%a0%d7%94%d7%9c%d7%99%d7%9d-%d7%9e%d7%95%d7%a8%d7%99%d7%9d-%d7%95%d7%92%d7%92%d7%a0%d7%95%d7%aa/",
-      "https://www.kranoth.org.il/%d7%9e%d7%93%d7%99%d7%a0%d7%99%d7%95%d7%aa-%d7%95%d7%a0%d7%94%d7%9c%d7%99%d7%9d/%d7%9e%d7%93%d7%99%d7%a0%d7%99%d7%95%d7%aa-%d7%95%d7%a0%d7%94%d7%9c%d7%99%d7%9d-%d7%9e%d7%95%d7%a8%d7%99%d7%9d-%d7%aa%d7%99%d7%9b%d7%95%d7%a0%d7%99%d7%99%d7%9d/",
-      "https://www.kranoth.org.il/%d7%9e%d7%93%d7%99%d7%a0%d7%99%d7%95%d7%aa-%d7%95%d7%a0%d7%94%d7%9c%d7%99%d7%9d/%d7%90%d7%9e%d7%95%d7%aa-%d7%9e%d7%99%d7%93%d7%94-%d7%91%d7%99%d7%97%d7%a1-%d7%9c%d7%90%d7%99%d7%9b%d7%95%d7%aa-%d7%94%d7%9e%d7%9e%d7%a9%d7%9c-%d7%94%d7%aa%d7%90%d7%92%d7%99%d7%93%d7%99/",
-      "https://www.kranoth.org.il/%d7%9e%d7%93%d7%99%d7%a0%d7%99%d7%95%d7%aa-%d7%95%d7%a0%d7%94%d7%9c%d7%99%d7%9d/%d7%90%d7%9e%d7%a0%d7%aa-%d7%a9%d7%99%d7%a8%d7%95%d7%aa/"
+     "selected": [
+      "https://www.jewishagency-kupa.org.il/wp-content/uploads/2026/07/מדיניות-הצבעה-באסיפות-כלליות-סוכנות-יהודית-2026-מעודכן-יולי-סופי-2026.docx.pdf",
+      "https://www.jewishagency-kupa.org.il/wp-content/uploads/2025/12/מדיניות-הצבעה-חברת-עמדה-2025-2026.pdf",
+      "https://www.jewishagency-kupa.org.il/wp-content/uploads/2026/02/מדיניות-ואמנת-שירות-לקוחות-1.pdf"
      ],
-     "files": 0,
-     "clicked": 0,
-     "captured": 0,
-     "selected": [],
-     "unselected_files": []
-    },
-    {
-     "url": "https://www.kranoth.org.il/",
-     "links": 93,
-     "followed": [],
-     "files": 0,
-     "clicked": 0,
-     "captured": 0,
-     "selected": [],
-     "unselected_files": []
-    },
-    {
-     "url": "https://www.kranoth.org.il",
-     "links": 93,
-     "followed": [],
-     "files": 0,
-     "clicked": 0,
-     "captured": 0,
-     "selected": [],
-     "unselected_files": []
-    },
-    {
-     "url": "https://www.kranoth.org.il/%D7%9E%D7%93%D7%99%D7%A0%D7%99%D7%95%D7%AA-%D7%95%D7%A0%D7%94%D7%9C%D7%99%D7%9D/",
-     "links": 51,
-     "followed": [],
-     "files": 0,
-     "clicked": 0,
-     "captured": 0,
-     "selected": [],
-     "unselected_files": []
-    },
-    {
-     "url": "https://www.kranoth.org.il/%d7%9e%d7%93%d7%99%d7%a0%d7%99%d7%95%d7%aa-%d7%95%d7%a0%d7%94%d7%9c%d7%99%d7%9d/%d7%9e%d7%93%d7%99%d7%a0%d7%99%d7%95%d7%aa-%d7%95%d7%a0%d7%94%d7%9c%d7%99%d7%9d-%d7%9e%d7%95%d7%a8%d7%99%d7%9d-%d7%95%d7%92%d7%92%d7%a0%d7%95%d7%aa/",
-     "links": 49,
-     "followed": [
-      "https://www.kranoth.org.il/%d7%9e%d7%93%d7%99%d7%a0%d7%99%d7%95%d7%aa-%d7%95%d7%a0%d7%94%d7%9c%d7%99%d7%9d/",
-      "https://www.kranoth.org.il/%d7%9e%d7%93%d7%99%d7%a0%d7%99%d7%95%d7%aa-%d7%95%d7%a0%d7%94%d7%9c%d7%99%d7%9d-%d7%9e%d7%95%d7%a8%d7%99%d7%9d-%d7%95%d7%92%d7%92%d7%a0%d7%95%d7%aa/%d7%9e%d7%93%d7%99%d7%a0%d7%99%d7%95%d7%aa-%d7%94%d7%a9%d7%a7%d7%a2%d7%95%d7%aa-%d7%9e%d7%95%d7%a8%d7%99%d7%9d-%d7%95%d7%92%d7%a0%d7%a0%d7%95%d7%aa-%d7%a8%d7%92%d7%99%d7%9c/",
-      "https://www.kranoth.org.il/%d7%9e%d7%93%d7%99%d7%a0%d7%99%d7%95%d7%aa-%d7%95%d7%a0%d7%94%d7%9c%d7%99%d7%9d-%d7%9e%d7%95%d7%a8%d7%99%d7%9d-%d7%95%d7%92%d7%92%d7%a0%d7%95%d7%aa/%d7%9e%d7%93%d7%99%d7%a0%d7%99%d7%95%d7%aa-%d7%94%d7%a9%d7%a7%d7%a2%d7%95%d7%aa-%d7%9e%d7%95%d7%a8%d7%99%d7%9d-%d7%95%d7%92%d7%a0%d7%a0%d7%95%d7%aa-%d7%9e%d7%a7%d7%95%d7%a8/"
-     ],
-     "files": 0,
-     "clicked": 0,
-     "captured": 0,
-     "selected": [],
-     "unselected_files": []
-    },
-    {
-     "url": "https://www.kranoth.org.il/%d7%9e%d7%93%d7%99%d7%a0%d7%99%d7%95%d7%aa-%d7%95%d7%a0%d7%94%d7%9c%d7%99%d7%9d/%d7%9e%d7%93%d7%99%d7%a0%d7%99%d7%95%d7%aa-%d7%95%d7%a0%d7%94%d7%9c%d7%99%d7%9d-%d7%9e%d7%95%d7%a8%d7%99%d7%9d-%d7%aa%d7%99%d7%9b%d7%95%d7%a0%d7%99%d7%99%d7%9d/",
-     "links": 49,
-     "followed": [
-      "https://www.kranoth.org.il/%d7%9e%d7%93%d7%99%d7%a0%d7%99%d7%95%d7%aa-%d7%95%d7%a0%d7%94%d7%9c%d7%99%d7%9d-%d7%9e%d7%95%d7%a8%d7%99%d7%9d-%d7%aa%d7%99%d7%9b%d7%95%d7%a0%d7%99%d7%99%d7%9d/%d7%9e%d7%93%d7%99%d7%a0%d7%99%d7%95%d7%aa-%d7%94%d7%a9%d7%a7%d7%a2%d7%95%d7%aa-%d7%9e%d7%95%d7%a8%d7%99%d7%9d-%d7%aa%d7%99%d7%9b%d7%95%d7%a0%d7%99%d7%99%d7%9d-%d7%a8%d7%92%d7%99%d7%9c/",
-      "https://www.kranoth.org.il/%d7%9e%d7%93%d7%99%d7%a0%d7%99%d7%95%d7%aa-%d7%95%d7%a0%d7%94%d7%9c%d7%99%d7%9d-%d7%9e%d7%95%d7%a8%d7%99%d7%9d-%d7%aa%d7%99%d7%9b%d7%95%d7%a0%d7%99%d7%99%d7%9d/%d7%9e%d7%93%d7%99%d7%a0%d7%99%d7%95%d7%aa-%d7%94%d7%a9%d7%a7%d7%a2%d7%95%d7%aa-%d7%9e%d7%95%d7%a8%d7%99%d7%9d-%d7%aa%d7%99%d7%9b%d7%95%d7%a0%d7%99%d7%99%d7%9d-%d7%9e%d7%a7%d7%95%d7%a8/"
-     ],
-     "files": 0,
-     "clicked": 0,
-     "captured": 0,
-     "selected": [],
-     "unselected_files": []
-    },
-    {
-     "url": "https://www.kranoth.org.il/%d7%9e%d7%93%d7%99%d7%a0%d7%99%d7%95%d7%aa-%d7%95%d7%a0%d7%94%d7%9c%d7%99%d7%9d/%d7%90%d7%9e%d7%95%d7%aa-%d7%9e%d7%99%d7%93%d7%94-%d7%91%d7%99%d7%97%d7%a1-%d7%9c%d7%90%d7%99%d7%9b%d7%95%d7%aa-%d7%94%d7%9e%d7%9e%d7%a9%d7%9c-%d7%94%d7%aa%d7%90%d7%92%d7%99%d7%93%d7%99/",
-     "links": 48,
-     "followed": [],
-     "files": 0,
-     "clicked": 0,
-     "captured": 0,
-     "selected": [],
-     "unselected_files": []
-    },
-    {
-     "url": "https://www.kranoth.org.il/%d7%9e%d7%93%d7%99%d7%a0%d7%99%d7%95%d7%aa-%d7%95%d7%a0%d7%94%d7%9c%d7%99%d7%9d/%d7%90%d7%9e%d7%a0%d7%aa-%d7%a9%d7%99%d7%a8%d7%95%d7%aa/",
-     "links": 49,
-     "followed": [],
-     "files": 2,
-     "clicked": 0,
-     "captured": 0,
-     "selected": [],
      "unselected_files": [
       {
-       "file": "https://www.kranoth.org.il/wp-content/uploads/2023/11/אמנת_שירות_לקוחות2022.pdf",
-       "text": "אמנת שירות",
+       "file": "https://www.jewishagency-kupa.org.il/wp-content/uploads/2021/10/10_zdadim_sohnut.pdf",
+       "text": "מבנה אחזקות וצדדים קשורים",
+       "ctx": "מבנה אחזקות וצדדים קשורים"
+      },
+      {
+       "file": "https://www.jewishagency-kupa.org.il/wp-content/uploads/2021/10/10_הודעה_על_העברת_ניהול.pdf",
+       "text": "הודעה על שינוי מבני",
+       "ctx": "הודעה על שינוי מבני"
+      },
+      {
+       "file": "https://www.jewishagency-kupa.org.il/wp-content/uploads/2025/08/נוהל-מספר-18-מדיניות-התגמול-2024-2027-002.pdf",
+       "text": "מדיניות תגמול נושאי משרה 2024-2027",
+       "ctx": "מדיניות תגמול נושאי משרה 2024-2027"
+      },
+      {
+       "file": "https://www.jewishagency-kupa.org.il/wp-content/uploads/2022/12/מדיניות-תגמול-נושאי-משרה-2020-2023.pdf",
+       "text": "מדיניות תגמול נושאי משרה 2020-2023",
+       "ctx": "מדיניות תגמול נושאי משרה 2020-2023"
+      },
+      {
+       "file": "https://www.jewishagency-kupa.org.il/wp-content/uploads/2021/10/10_מדיניות_תגמול_לשנים_2018_2020_סופי-2.pdf",
+       "text": "מדיניות תגמול נושאי משרה 2018-2020",
+       "ctx": "מדיניות תגמול נושאי משרה 2018-2020"
+      },
+      {
+       "file": "https://www.jewishagency-kupa.org.il/wp-content/uploads/2021/10/10_מדיניות_תגמול_לשנים_2015_2017-3.pdf",
+       "text": "מדיניות תגמול נושאי משרה 2015-2017",
+       "ctx": "מדיניות תגמול נושאי משרה 2015-2017"
+      },
+      {
+       "file": "https://www.jewishagency-kupa.org.il/wp-content/uploads/2021/10/10_מדיניותתגמול2014-2.pdf",
+       "text": "מדיניות תגמול נושאי משרה 2014",
+       "ctx": "מדיניות תגמול נושאי משרה 2014"
+      },
+      {
+       "file": "https://www.jewishagency-kupa.org.il/wp-content/uploads/2021/10/10_10_מדיניותתגמולנושאימשרהלשנת-2013-2.pdf",
+       "text": "מדיניות תגמול נושאי משרה 2013",
+       "ctx": "מדיניות תגמול נושאי משרה 2013"
+      },
+      {
+       "file": "https://www.jewishagency-kupa.org.il/wp-content/uploads/2021/10/10_10_מדיניותהשקעות2012.pdf",
+       "text": "מדיניות תגמול נושאי משרה 2012",
+       "ctx": "מדיניות תגמול נושאי משרה 2012"
+      },
+      {
+       "file": "https://www.jewishagency-kupa.org.il/wp-content/uploads/2025/12/דוח-שירות-אזרחים-ותיקים-בגין-שנת-2025.pdf",
+       "text": "דוח שירות אזרחים ותיקים",
+       "ctx": "דוח שירות אזרחים ותיקים"
+      },
+      {
+       "file": "https://www.jewishagency-kupa.org.il/wp-content/uploads/2021/10/10_zdadim_sohnut.pdf",
+       "text": "מבנה אחזקות וצדדים קשורים",
+       "ctx": "מבנה אחזקות וצדדים קשורים"
+      },
+      {
+       "file": "https://www.jewishagency-kupa.org.il/wp-content/uploads/2021/10/10_הודעה_על_העברת_ניהול.pdf",
+       "text": "הודעה על שינוי מבני",
+       "ctx": "הודעה על שינוי מבני"
+      },
+      {
+       "file": "https://www.jewishagency-kupa.org.il/wp-content/uploads/2025/08/נוהל-מספר-18-מדיניות-התגמול-2024-2027-002.pdf",
+       "text": "מדיניות תגמול נושאי משרה 2024-2027",
+       "ctx": "מדיניות תגמול נושאי משרה 2024-2027"
+      },
+      {
+       "file": "https://www.jewishagency-kupa.org.il/wp-content/uploads/2022/12/מדיניות-תגמול-נושאי-משרה-2020-2023.pdf",
+       "text": "מדיניות תגמול נושאי משרה 2020-2023",
+       "ctx": "מדיניות תגמול נושאי משרה 2020-2023"
+      },
+      {
+       "file": "https://www.jewishagency-kupa.org.il/wp-content/uploads/2021/10/10_מדיניות_תגמול_לשנים_2018_2020_סופי-2.pdf",
+       "text": "מדיניות תגמול נושאי משרה 2018-2020",
+       "ctx": "מדיניות תגמול נושאי משרה 2018-2020"
+      },
+      {
+       "file": "https://www.jewishagency-kupa.org.il/wp-content/uploads/2021/10/10_מדיניות_תגמול_לשנים_2015_2017-3.pdf",
+       "text": "מדיניות תגמול נושאי משרה 2015-2017",
+       "ctx": "מדיניות תגמול נושאי משרה 2015-2017"
+      },
+      {
+       "file": "https://www.jewishagency-kupa.org.il/wp-content/uploads/2021/10/10_מדיניותתגמול2014-2.pdf",
+       "text": "מדיניות תגמול נושאי משרה 2014",
+       "ctx": "מדיניות תגמול נושאי משרה 2014"
+      },
+      {
+       "file": "https://www.jewishagency-kupa.org.il/wp-content/uploads/2021/10/10_10_מדיניותתגמולנושאימשרהלשנת-2013-2.pdf",
+       "text": "מדיניות תגמול נושאי משרה 2013",
+       "ctx": "מדיניות תגמול נושאי משרה 2013"
+      },
+      {
+       "file": "https://www.jewishagency-kupa.org.il/wp-content/uploads/2021/10/10_10_מדיניותהשקעות2012.pdf",
+       "text": "מדיניות תגמול נושאי משרה 2012",
+       "ctx": "מדיניות תגמול נושאי משרה 2012"
+      },
+      {
+       "file": "https://www.jewishagency-kupa.org.il/wp-content/uploads/2025/12/דוח-שירות-אזרחים-ותיקים-בגין-שנת-2025.pdf",
+       "text": "דוח שירות אזרחים ותיקים",
+       "ctx": "דוח שירות אזרחים ותיקים"
+      }
+     ]
+    },
+    {
+     "url": "https://www.jewishagency-kupa.org.il",
+     "links": 105,
+     "followed": [],
+     "files": 26,
+     "clicked": 0,
+     "captured": 0,
+     "selected": [
+      "https://www.jewishagency-kupa.org.il/wp-content/uploads/2026/07/מדיניות-הצבעה-באסיפות-כלליות-סוכנות-יהודית-2026-מעודכן-יולי-סופי-2026.docx.pdf",
+      "https://www.jewishagency-kupa.org.il/wp-content/uploads/2025/12/מדיניות-הצבעה-חברת-עמדה-2025-2026.pdf",
+      "https://www.jewishagency-kupa.org.il/wp-content/uploads/2026/02/מדיניות-ואמנת-שירות-לקוחות-1.pdf"
+     ],
+     "unselected_files": [
+      {
+       "file": "https://www.jewishagency-kupa.org.il/wp-content/uploads/2021/10/10_zdadim_sohnut.pdf",
+       "text": "מבנה אחזקות וצדדים קשורים",
+       "ctx": "מבנה אחזקות וצדדים קשורים"
+      },
+      {
+       "file": "https://www.jewishagency-kupa.org.il/wp-content/uploads/2021/10/10_הודעה_על_העברת_ניהול.pdf",
+       "text": "הודעה על שינוי מבני",
+       "ctx": "הודעה על שינוי מבני"
+      },
+      {
+       "file": "https://www.jewishagency-kupa.org.il/wp-content/uploads/2025/08/נוהל-מספר-18-מדיניות-התגמול-2024-2027-002.pdf",
+       "text": "מדיניות תגמול נושאי משרה 2024-2027",
+       "ctx": "מדיניות תגמול נושאי משרה 2024-2027"
+      },
+      {
+       "file": "https://www.jewishagency-kupa.org.il/wp-content/uploads/2022/12/מדיניות-תגמול-נושאי-משרה-2020-2023.pdf",
+       "text": "מדיניות תגמול נושאי משרה 2020-2023",
+       "ctx": "מדיניות תגמול נושאי משרה 2020-2023"
+      },
+      {
+       "file": "https://www.jewishagency-kupa.org.il/wp-content/uploads/2021/10/10_מדיניות_תגמול_לשנים_2018_2020_סופי-2.pdf",
+       "text": "מדיניות תגמול נושאי משרה 2018-2020",
+       "ctx": "מדיניות תגמול נושאי משרה 2018-2020"
+      },
+      {
+       "file": "https://www.jewishagency-kupa.org.il/wp-content/uploads/2021/10/10_מדיניות_תגמול_לשנים_2015_2017-3.pdf",
+       "text": "מדיניות תגמול נושאי משרה 2015-2017",
+       "ctx": "מדיניות תגמול נושאי משרה 2015-2017"
+      },
+      {
+       "file": "https://www.jewishagency-kupa.org.il/wp-content/uploads/2021/10/10_מדיניותתגמול2014-2.pdf",
+       "text": "מדיניות תגמול נושאי משרה 2014",
+       "ctx": "מדיניות תגמול נושאי משרה 2014"
+      },
+      {
+       "file": "https://www.jewishagency-kupa.org.il/wp-content/uploads/2021/10/10_10_מדיניותתגמולנושאימשרהלשנת-2013-2.pdf",
+       "text": "מדיניות תגמול נושאי משרה 2013",
+       "ctx": "מדיניות תגמול נושאי משרה 2013"
+      },
+      {
+       "file": "https://www.jewishagency-kupa.org.il/wp-content/uploads/2021/10/10_10_מדיניותהשקעות2012.pdf",
+       "text": "מדיניות תגמול נושאי משרה 2012",
+       "ctx": "מדיניות תגמול נושאי משרה 2012"
+      },
+      {
+       "file": "https://www.jewishagency-kupa.org.il/wp-content/uploads/2025/12/דוח-שירות-אזרחים-ותיקים-בגין-שנת-2025.pdf",
+       "text": "דוח שירות אזרחים ותיקים",
+       "ctx": "דוח שירות אזרחים ותיקים"
+      },
+      {
+       "file": "https://www.jewishagency-kupa.org.il/wp-content/uploads/2021/10/10_zdadim_sohnut.pdf",
+       "text": "מבנה אחזקות וצדדים קשורים",
+       "ctx": "מבנה אחזקות וצדדים קשורים"
+      },
+      {
+       "file": "https://www.jewishagency-kupa.org.il/wp-content/uploads/2021/10/10_הודעה_על_העברת_ניהול.pdf",
+       "text": "הודעה על שינוי מבני",
+       "ctx": "הודעה על שינוי מבני"
+      },
+      {
+       "file": "https://www.jewishagency-kupa.org.il/wp-content/uploads/2025/08/נוהל-מספר-18-מדיניות-התגמול-2024-2027-002.pdf",
+       "text": "מדיניות תגמול נושאי משרה 2024-2027",
+       "ctx": "מדיניות תגמול נושאי משרה 2024-2027"
+      },
+      {
+       "file": "https://www.jewishagency-kupa.org.il/wp-content/uploads/2022/12/מדיניות-תגמול-נושאי-משרה-2020-2023.pdf",
+       "text": "מדיניות תגמול נושאי משרה 2020-2023",
+       "ctx": "מדיניות תגמול נושאי משרה 2020-2023"
+      },
+      {
+       "file": "https://www.jewishagency-kupa.org.il/wp-content/uploads/2021/10/10_מדיניות_תגמול_לשנים_2018_2020_סופי-2.pdf",
+       "text": "מדיניות תגמול נושאי משרה 2018-2020",
+       "ctx": "מדיניות תגמול נושאי משרה 2018-2020"
+      },
+      {
+       "file": "https://www.jewishagency-kupa.org.il/wp-content/uploads/2021/10/10_מדיניות_תגמול_לשנים_2015_2017-3.pdf",
+       "text": "מדיניות תגמול נושאי משרה 2015-2017",
+       "ctx": "מדיניות תגמול נושאי משרה 2015-2017"
+      },
+      {
+       "file": "https://www.jewishagency-kupa.org.il/wp-content/uploads/2021/10/10_מדיניותתגמול2014-2.pdf",
+       "text": "מדיניות תגמול נושאי משרה 2014",
+       "ctx": "מדיניות תגמול נושאי משרה 2014"
+      },
+      {
+       "file": "https://www.jewishagency-kupa.org.il/wp-content/uploads/2021/10/10_10_מדיניותתגמולנושאימשרהלשנת-2013-2.pdf",
+       "text": "מדיניות תגמול נושאי משרה 2013",
+       "ctx": "מדיניות תגמול נושאי משרה 2013"
+      },
+      {
+       "file": "https://www.jewishagency-kupa.org.il/wp-content/uploads/2021/10/10_10_מדיניותהשקעות2012.pdf",
+       "text": "מדיניות תגמול נושאי משרה 2012",
+       "ctx": "מדיניות תגמול נושאי משרה 2012"
+      },
+      {
+       "file": "https://www.jewishagency-kupa.org.il/wp-content/uploads/2025/12/דוח-שירות-אזרחים-ותיקים-בגין-שנת-2025.pdf",
+       "text": "דוח שירות אזרחים ותיקים",
+       "ctx": "דוח שירות אזרחים ותיקים"
+      }
+     ]
+    },
+    {
+     "url": "https://www.jewishagency-kupa.org.il/%d7%97%d7%91%d7%a8%d7%99-%d7%95%d7%a2%d7%93%d7%aa-%d7%94%d7%a9%d7%a7%d7%a2%d7%95%d7%aa/",
+     "links": 93,
+     "followed": [],
+     "files": 26,
+     "clicked": 0,
+     "captured": 0,
+     "selected": [
+      "https://www.jewishagency-kupa.org.il/wp-content/uploads/2026/07/מדיניות-הצבעה-באסיפות-כלליות-סוכנות-יהודית-2026-מעודכן-יולי-סופי-2026.docx.pdf",
+      "https://www.jewishagency-kupa.org.il/wp-content/uploads/2025/12/מדיניות-הצבעה-חברת-עמדה-2025-2026.pdf",
+      "https://www.jewishagency-kupa.org.il/wp-content/uploads/2026/02/מדיניות-ואמנת-שירות-לקוחות-1.pdf"
+     ],
+     "unselected_files": [
+      {
+       "file": "https://www.jewishagency-kupa.org.il/wp-content/uploads/2021/10/10_zdadim_sohnut.pdf",
+       "text": "מבנה אחזקות וצדדים קשורים",
+       "ctx": "מבנה אחזקות וצדדים קשורים"
+      },
+      {
+       "file": "https://www.jewishagency-kupa.org.il/wp-content/uploads/2021/10/10_הודעה_על_העברת_ניהול.pdf",
+       "text": "הודעה על שינוי מבני",
+       "ctx": "הודעה על שינוי מבני"
+      },
+      {
+       "file": "https://www.jewishagency-kupa.org.il/wp-content/uploads/2025/08/נוהל-מספר-18-מדיניות-התגמול-2024-2027-002.pdf",
+       "text": "מדיניות תגמול נושאי משרה 2024-2027",
+       "ctx": "מדיניות תגמול נושאי משרה 2024-2027"
+      },
+      {
+       "file": "https://www.jewishagency-kupa.org.il/wp-content/uploads/2022/12/מדיניות-תגמול-נושאי-משרה-2020-2023.pdf",
+       "text": "מדיניות תגמול נושאי משרה 2020-2023",
+       "ctx": "מדיניות תגמול נושאי משרה 2020-2023"
+      },
+      {
+       "file": "https://www.jewishagency-kupa.org.il/wp-content/uploads/2021/10/10_מדיניות_תגמול_לשנים_2018_2020_סופי-2.pdf",
+       "text": "מדיניות תגמול נושאי משרה 2018-2020",
+       "ctx": "מדיניות תגמול נושאי משרה 2018-2020"
+      },
+      {
+       "file": "https://www.jewishagency-kupa.org.il/wp-content/uploads/2021/10/10_מדיניות_תגמול_לשנים_2015_2017-3.pdf",
+       "text": "מדיניות תגמול נושאי משרה 2015-2017",
+       "ctx": "מדיניות תגמול נושאי משרה 2015-2017"
+      },
+      {
+       "file": "https://www.jewishagency-kupa.org.il/wp-content/uploads/2021/10/10_מדיניותתגמול2014-2.pdf",
+       "text": "מדיניות תגמול נושאי משרה 2014",
+       "ctx": "מדיניות תגמול נושאי משרה 2014"
+      },
+      {
+       "file": "https://www.jewishagency-kupa.org.il/wp-content/uploads/2021/10/10_10_מדיניותתגמולנושאימשרהלשנת-2013-2.pdf",
+       "text": "מדיניות תגמול נושאי משרה 2013",
+       "ctx": "מדיניות תגמול נושאי משרה 2013"
+      },
+      {
+       "file": "https://www.jewishagency-kupa.org.il/wp-content/uploads/2021/10/10_10_מדיניותהשקעות2012.pdf",
+       "text": "מדיניות תגמול נושאי משרה 2012",
+       "ctx": "מדיניות תגמול נושאי משרה 2012"
+      },
+      {
+       "file": "https://www.jewishagency-kupa.org.il/wp-content/uploads/2025/12/דוח-שירות-אזרחים-ותיקים-בגין-שנת-2025.pdf",
+       "text": "דוח שירות אזרחים ותיקים",
+       "ctx": "דוח שירות אזרחים ותיקים"
+      },
+      {
+       "file": "https://www.jewishagency-kupa.org.il/wp-content/uploads/2021/10/10_zdadim_sohnut.pdf",
+       "text": "מבנה אחזקות וצדדים קשורים",
+       "ctx": "מבנה אחזקות וצדדים קשורים"
+      },
+      {
+       "file": "https://www.jewishagency-kupa.org.il/wp-content/uploads/2021/10/10_הודעה_על_העברת_ניהול.pdf",
+       "text": "הודעה על שינוי מבני",
+       "ctx": "הודעה על שינוי מבני"
+      },
+      {
+       "file": "https://www.jewishagency-kupa.org.il/wp-content/uploads/2025/08/נוהל-מספר-18-מדיניות-התגמול-2024-2027-002.pdf",
+       "text": "מדיניות תגמול נושאי משרה 2024-2027",
+       "ctx": "מדיניות תגמול נושאי משרה 2024-2027"
+      },
+      {
+       "file": "https://www.jewishagency-kupa.org.il/wp-content/uploads/2022/12/מדיניות-תגמול-נושאי-משרה-2020-2023.pdf",
+       "text": "מדיניות תגמול נושאי משרה 2020-2023",
+       "ctx": "מדיניות תגמול נושאי משרה 2020-2023"
+      },
+      {
+       "file": "https://www.jewishagency-kupa.org.il/wp-content/uploads/2021/10/10_מדיניות_תגמול_לשנים_2018_2020_סופי-2.pdf",
+       "text": "מדיניות תגמול נושאי משרה 2018-2020",
+       "ctx": "מדיניות תגמול נושאי משרה 2018-2020"
+      },
+      {
+       "file": "https://www.jewishagency-kupa.org.il/wp-content/uploads/2021/10/10_מדיניות_תגמול_לשנים_2015_2017-3.pdf",
+       "text": "מדיניות תגמול נושאי משרה 2015-2017",
+       "ctx": "מדיניות תגמול נושאי משרה 2015-2017"
+      },
+      {
+       "file": "https://www.jewishagency-kupa.org.il/wp-content/uploads/2021/10/10_מדיניותתגמול2014-2.pdf",
+       "text": "מדיניות תגמול נושאי משרה 2014",
+       "ctx": "מדיניות תגמול נושאי משרה 2014"
+      },
+      {
+       "file": "https://www.jewishagency-kupa.org.il/wp-content/uploads/2021/10/10_10_מדיניותתגמולנושאימשרהלשנת-2013-2.pdf",
+       "text": "מדיניות תגמול נושאי משרה 2013",
+       "ctx": "מדיניות תגמול נושאי משרה 2013"
+      },
+      {
+       "file": "https://www.jewishagency-kupa.org.il/wp-content/uploads/2021/10/10_10_מדיניותהשקעות2012.pdf",
+       "text": "מדיניות תגמול נושאי משרה 2012",
+       "ctx": "מדיניות תגמול נושאי משרה 2012"
+      },
+      {
+       "file": "https://www.jewishagency-kupa.org.il/wp-content/uploads/2025/12/דוח-שירות-אזרחים-ותיקים-בגין-שנת-2025.pdf",
+       "text": "דוח שירות אזרחים ותיקים",
+       "ctx": "דוח שירות אזרחים ותיקים"
+      }
+     ]
+    },
+    {
+     "url": "https://www.jewishagency-kupa.org.il/%d7%93%d7%95%d7%97%d7%95%d7%aa-%d7%a8%d7%91%d7%a2%d7%95%d7%a0%d7%99%d7%99%d7%9d/",
+     "links": 205,
+     "followed": [],
+     "files": 138,
+     "clicked": 0,
+     "captured": 0,
+     "selected": [
+      "https://www.jewishagency-kupa.org.il/wp-content/uploads/2026/07/מדיניות-הצבעה-באסיפות-כלליות-סוכנות-יהודית-2026-מעודכן-יולי-סופי-2026.docx.pdf",
+      "https://www.jewishagency-kupa.org.il/wp-content/uploads/2025/12/מדיניות-הצבעה-חברת-עמדה-2025-2026.pdf",
+      "https://www.jewishagency-kupa.org.il/wp-content/uploads/2026/02/מדיניות-ואמנת-שירות-לקוחות-1.pdf"
+     ],
+     "unselected_files": [
+      {
+       "file": "https://www.jewishagency-kupa.org.il/wp-content/uploads/2021/10/10_zdadim_sohnut.pdf",
+       "text": "מבנה אחזקות וצדדים קשורים",
+       "ctx": "מבנה אחזקות וצדדים קשורים"
+      },
+      {
+       "file": "https://www.jewishagency-kupa.org.il/wp-content/uploads/2021/10/10_הודעה_על_העברת_ניהול.pdf",
+       "text": "הודעה על שינוי מבני",
+       "ctx": "הודעה על שינוי מבני"
+      },
+      {
+       "file": "https://www.jewishagency-kupa.org.il/wp-content/uploads/2025/08/נוהל-מספר-18-מדיניות-התגמול-2024-2027-002.pdf",
+       "text": "מדיניות תגמול נושאי משרה 2024-2027",
+       "ctx": "מדיניות תגמול נושאי משרה 2024-2027"
+      },
+      {
+       "file": "https://www.jewishagency-kupa.org.il/wp-content/uploads/2022/12/מדיניות-תגמול-נושאי-משרה-2020-2023.pdf",
+       "text": "מדיניות תגמול נושאי משרה 2020-2023",
+       "ctx": "מדיניות תגמול נושאי משרה 2020-2023"
+      },
+      {
+       "file": "https://www.jewishagency-kupa.org.il/wp-content/uploads/2021/10/10_מדיניות_תגמול_לשנים_2018_2020_סופי-2.pdf",
+       "text": "מדיניות תגמול נושאי משרה 2018-2020",
+       "ctx": "מדיניות תגמול נושאי משרה 2018-2020"
+      },
+      {
+       "file": "https://www.jewishagency-kupa.org.il/wp-content/uploads/2021/10/10_מדיניות_תגמול_לשנים_2015_2017-3.pdf",
+       "text": "מדיניות תגמול נושאי משרה 2015-2017",
+       "ctx": "מדיניות תגמול נושאי משרה 2015-2017"
+      },
+      {
+       "file": "https://www.jewishagency-kupa.org.il/wp-content/uploads/2021/10/10_מדיניותתגמול2014-2.pdf",
+       "text": "מדיניות תגמול נושאי משרה 2014",
+       "ctx": "מדיניות תגמול נושאי משרה 2014"
+      },
+      {
+       "file": "https://www.jewishagency-kupa.org.il/wp-content/uploads/2021/10/10_10_מדיניותתגמולנושאימשרהלשנת-2013-2.pdf",
+       "text": "מדיניות תגמול נושאי משרה 2013",
+       "ctx": "מדיניות תגמול נושאי משרה 2013"
+      },
+      {
+       "file": "https://www.jewishagency-kupa.org.il/wp-content/uploads/2021/10/10_10_מדיניותהשקעות2012.pdf",
+       "text": "מדיניות תגמול נושאי משרה 2012",
+       "ctx": "מדיניות תגמול נושאי משרה 2012"
+      },
+      {
+       "file": "https://www.jewishagency-kupa.org.il/wp-content/uploads/2025/12/דוח-שירות-אזרחים-ותיקים-בגין-שנת-2025.pdf",
+       "text": "דוח שירות אזרחים ותיקים",
+       "ctx": "דוח שירות אזרחים ותיקים"
+      },
+      {
+       "file": "https://www.jewishagency-kupa.org.il/wp-content/uploads/2021/10/10_zdadim_sohnut.pdf",
+       "text": "מבנה אחזקות וצדדים קשורים",
+       "ctx": "מבנה אחזקות וצדדים קשורים"
+      },
+      {
+       "file": "https://www.jewishagency-kupa.org.il/wp-content/uploads/2021/10/10_הודעה_על_העברת_ניהול.pdf",
+       "text": "הודעה על שינוי מבני",
+       "ctx": "הודעה על שינוי מבני"
+      },
+      {
+       "file": "https://www.jewishagency-kupa.org.il/wp-content/uploads/2025/08/נוהל-מספר-18-מדיניות-התגמול-2024-2027-002.pdf",
+       "text": "מדיניות תגמול נושאי משרה 2024-2027",
+       "ctx": "מדיניות תגמול נושאי משרה 2024-2027"
+      },
+      {
+       "file": "https://www.jewishagency-kupa.org.il/wp-content/uploads/2022/12/מדיניות-תגמול-נושאי-משרה-2020-2023.pdf",
+       "text": "מדיניות תגמול נושאי משרה 2020-2023",
+       "ctx": "מדיניות תגמול נושאי משרה 2020-2023"
+      },
+      {
+       "file": "https://www.jewishagency-kupa.org.il/wp-content/uploads/2021/10/10_מדיניות_תגמול_לשנים_2018_2020_סופי-2.pdf",
+       "text": "מדיניות תגמול נושאי משרה 2018-2020",
+       "ctx": "מדיניות תגמול נושאי משרה 2018-2020"
+      },
+      {
+       "file": "https://www.jewishagency-kupa.org.il/wp-content/uploads/2021/10/10_מדיניות_תגמול_לשנים_2015_2017-3.pdf",
+       "text": "מדיניות תגמול נושאי משרה 2015-2017",
+       "ctx": "מדיניות תגמול נושאי משרה 2015-2017"
+      },
+      {
+       "file": "https://www.jewishagency-kupa.org.il/wp-content/uploads/2021/10/10_מדיניותתגמול2014-2.pdf",
+       "text": "מדיניות תגמול נושאי משרה 2014",
+       "ctx": "מדיניות תגמול נושאי משרה 2014"
+      },
+      {
+       "file": "https://www.jewishagency-kupa.org.il/wp-content/uploads/2021/10/10_10_מדיניותתגמולנושאימשרהלשנת-2013-2.pdf",
+       "text": "מדיניות תגמול נושאי משרה 2013",
+       "ctx": "מדיניות תגמול נושאי משרה 2013"
+      },
+      {
+       "file": "https://www.jewishagency-kupa.org.il/wp-content/uploads/2021/10/10_10_מדיניותהשקעות2012.pdf",
+       "text": "מדיניות תגמול נושאי משרה 2012",
+       "ctx": "מדיניות תגמול נושאי משרה 2012"
+      },
+      {
+       "file": "https://www.jewishagency-kupa.org.il/wp-content/uploads/2025/12/דוח-שירות-אזרחים-ותיקים-בגין-שנת-2025.pdf",
+       "text": "דוח שירות אזרחים ותיקים",
+       "ctx": "דוח שירות אזרחים ותיקים"
+      },
+      {
+       "file": "https://www.jewishagency-kupa.org.il/wp-content/uploads/2026/09/דוח-כספי-חברה-מנהלת.pdf",
+       "text": "דוחות כספיים חברה מנהלת פנסיה ותגמולים 06.2026",
+       "ctx": "2026"
+      },
+      {
+       "file": "https://www.jewishagency-kupa.org.il/wp-content/uploads/2026/06/520022518a_126-1.pdf",
+       "text": "דוחות כספיים חברה מנהלת פנסיה ותגמולים 03.2026",
+       "ctx": "2026"
+      },
+      {
+       "file": "https://www.jewishagency-kupa.org.il/wp-content/uploads/2026/06/דוח-כספי-חברה-מנהלת-מרץ-2025.pdf",
+       "text": "דוחות כספיים חברה מנהלת פנסיה ותגמולים 03.2025",
+       "ctx": "2025"
+      },
+      {
+       "file": "https://www.jewishagency-kupa.org.il/wp-content/uploads/2026/06/דוח-כספי-חברה-מנהלת-יוני-2025.pdf",
+       "text": "דוחות כספיים חברה מנהלת פנסיה ותגמולים 06.2025",
+       "ctx": "2025"
+      },
+      {
+       "file": "https://www.jewishagency-kupa.org.il/wp-content/uploads/2026/06/דוח-כספי-חברה-מנהלת-ספטמבר-2025.pdf",
+       "text": "דוחות כספיים חברה מנהלת פנסיה ותגמולים 09.2025",
+       "ctx": "2025"
+      }
+     ]
+    },
+    {
+     "url": "https://www.jewishagency-kupa.org.il/%d7%93%d7%95%d7%97%d7%95%d7%aa-%d7%a9%d7%a0%d7%aa%d7%99%d7%99%d7%9d/",
+     "links": 169,
+     "followed": [
+      "https://www.jewishagency-kupa.org.il/wp-content/uploads/2023/05/%D7%93%D7%95%D7%97-%D7%A2%D7%A1%D7%A7%D7%99-%D7%AA%D7%90%D7%92%D7%99%D7%93.doc",
+      "https://www.jewishagency-kupa.org.il/wp-content/uploads/2023/05/%D7%93%D7%95%D7%97-%D7%93%D7%99%D7%A8%D7%A7%D7%98%D7%95%D7%A8%D7%99%D7%95%D7%9F-.doc",
+      "https://www.jewishagency-kupa.org.il/wp-content/uploads/2022/08/%D7%93%D7%95%D7%97-%D7%A2%D7%99%D7%A1%D7%A7%D7%99-%D7%AA%D7%90%D7%92%D7%99%D7%93-%D7%97%D7%91%D7%A8%D7%94-%D7%9C%D7%A0%D7%99%D7%94%D7%95%D7%9C-%D7%A4%D7%A0%D7%A1%D7%99%D7%94-%D7%95%D7%AA%D7%92%D7%9E%D7%95%D7%9C%D7%99%D7%9D-2021.doc",
+      "https://www.jewishagency-kupa.org.il/wp-content/uploads/2022/08/%D7%93%D7%95%D7%97-%D7%93%D7%99%D7%A8%D7%A7%D7%98%D7%95%D7%A8%D7%99%D7%95%D7%9F-%D7%97%D7%91%D7%A8%D7%94-%D7%9E%D7%A0%D7%94%D7%9C%D7%AA-%D7%A4%D7%A0%D7%A1%D7%99%D7%94-%D7%95%D7%AA%D7%92%D7%9E%D7%95%D7%9C%D7%99%D7%9D-2021.doc"
+     ],
+     "files": 96,
+     "clicked": 0,
+     "captured": 0,
+     "selected": [
+      "https://www.jewishagency-kupa.org.il/wp-content/uploads/2026/07/מדיניות-הצבעה-באסיפות-כלליות-סוכנות-יהודית-2026-מעודכן-יולי-סופי-2026.docx.pdf",
+      "https://www.jewishagency-kupa.org.il/wp-content/uploads/2025/12/מדיניות-הצבעה-חברת-עמדה-2025-2026.pdf",
+      "https://www.jewishagency-kupa.org.il/wp-content/uploads/2026/02/מדיניות-ואמנת-שירות-לקוחות-1.pdf"
+     ],
+     "unselected_files": [
+      {
+       "file": "https://www.jewishagency-kupa.org.il/wp-content/uploads/2021/10/10_zdadim_sohnut.pdf",
+       "text": "מבנה אחזקות וצדדים קשורים",
+       "ctx": "מבנה אחזקות וצדדים קשורים"
+      },
+      {
+       "file": "https://www.jewishagency-kupa.org.il/wp-content/uploads/2021/10/10_הודעה_על_העברת_ניהול.pdf",
+       "text": "הודעה על שינוי מבני",
+       "ctx": "הודעה על שינוי מבני"
+      },
+      {
+       "file": "https://www.jewishagency-kupa.org.il/wp-content/uploads/2025/08/נוהל-מספר-18-מדיניות-התגמול-2024-2027-002.pdf",
+       "text": "מדיניות תגמול נושאי משרה 2024-2027",
+       "ctx": "מדיניות תגמול נושאי משרה 2024-2027"
+      },
+      {
+       "file": "https://www.jewishagency-kupa.org.il/wp-content/uploads/2022/12/מדיניות-תגמול-נושאי-משרה-2020-2023.pdf",
+       "text": "מדיניות תגמול נושאי משרה 2020-2023",
+       "ctx": "מדיניות תגמול נושאי משרה 2020-2023"
+      },
+      {
+       "file": "https://www.jewishagency-kupa.org.il/wp-content/uploads/2021/10/10_מדיניות_תגמול_לשנים_2018_2020_סופי-2.pdf",
+       "text": "מדיניות תגמול נושאי משרה 2018-2020",
+       "ctx": "מדיניות תגמול נושאי משרה 2018-2020"
+      },
+      {
+       "file": "https://www.jewishagency-kupa.org.il/wp-content/uploads/2021/10/10_מדיניות_תגמול_לשנים_2015_2017-3.pdf",
+       "text": "מדיניות תגמול נושאי משרה 2015-2017",
+       "ctx": "מדיניות תגמול נושאי משרה 2015-2017"
+      },
+      {
+       "file": "https://www.jewishagency-kupa.org.il/wp-content/uploads/2021/10/10_מדיניותתגמול2014-2.pdf",
+       "text": "מדיניות תגמול נושאי משרה 2014",
+       "ctx": "מדיניות תגמול נושאי משרה 2014"
+      },
+      {
+       "file": "https://www.jewishagency-kupa.org.il/wp-content/uploads/2021/10/10_10_מדיניותתגמולנושאימשרהלשנת-2013-2.pdf",
+       "text": "מדיניות תגמול נושאי משרה 2013",
+       "ctx": "מדיניות תגמול נושאי משרה 2013"
+      },
+      {
+       "file": "https://www.jewishagency-kupa.org.il/wp-content/uploads/2021/10/10_10_מדיניותהשקעות2012.pdf",
+       "text": "מדיניות תגמול נושאי משרה 2012",
+       "ctx": "מדיניות תגמול נושאי משרה 2012"
+      },
+      {
+       "file": "https://www.jewishagency-kupa.org.il/wp-content/uploads/2025/12/דוח-שירות-אזרחים-ותיקים-בגין-שנת-2025.pdf",
+       "text": "דוח שירות אזרחים ותיקים",
+       "ctx": "דוח שירות אזרחים ותיקים"
+      },
+      {
+       "file": "https://www.jewishagency-kupa.org.il/wp-content/uploads/2021/10/10_zdadim_sohnut.pdf",
+       "text": "מבנה אחזקות וצדדים קשורים",
+       "ctx": "מבנה אחזקות וצדדים קשורים"
+      },
+      {
+       "file": "https://www.jewishagency-kupa.org.il/wp-content/uploads/2021/10/10_הודעה_על_העברת_ניהול.pdf",
+       "text": "הודעה על שינוי מבני",
+       "ctx": "הודעה על שינוי מבני"
+      },
+      {
+       "file": "https://www.jewishagency-kupa.org.il/wp-content/uploads/2025/08/נוהל-מספר-18-מדיניות-התגמול-2024-2027-002.pdf",
+       "text": "מדיניות תגמול נושאי משרה 2024-2027",
+       "ctx": "מדיניות תגמול נושאי משרה 2024-2027"
+      },
+      {
+       "file": "https://www.jewishagency-kupa.org.il/wp-content/uploads/2022/12/מדיניות-תגמול-נושאי-משרה-2020-2023.pdf",
+       "text": "מדיניות תגמול נושאי משרה 2020-2023",
+       "ctx": "מדיניות תגמול נושאי משרה 2020-2023"
+      },
+      {
+       "file": "https://www.jewishagency-kupa.org.il/wp-content/uploads/2021/10/10_מדיניות_תגמול_לשנים_2018_2020_סופי-2.pdf",
+       "text": "מדיניות תגמול נושאי משרה 2018-2020",
+       "ctx": "מדיניות תגמול נושאי משרה 2018-2020"
+      },
+      {
+       "file": "https://www.jewishagency-kupa.org.il/wp-content/uploads/2021/10/10_מדיניות_תגמול_לשנים_2015_2017-3.pdf",
+       "text": "מדיניות תגמול נושאי משרה 2015-2017",
+       "ctx": "מדיניות תגמול נושאי משרה 2015-2017"
+      },
+      {
+       "file": "https://www.jewishagency-kupa.org.il/wp-content/uploads/2021/10/10_מדיניותתגמול2014-2.pdf",
+       "text": "מדיניות תגמול נושאי משרה 2014",
+       "ctx": "מדיניות תגמול נושאי משרה 2014"
+      },
+      {
+       "file": "https://www.jewishagency-kupa.org.il/wp-content/uploads/2021/10/10_10_מדיניותתגמולנושאימשרהלשנת-2013-2.pdf",
+       "text": "מדיניות תגמול נושאי משרה 2013",
+       "ctx": "מדיניות תגמול נושאי משרה 2013"
+      },
+      {
+       "file": "https://www.jewishagency-kupa.org.il/wp-content/uploads/2021/10/10_10_מדיניותהשקעות2012.pdf",
+       "text": "מדיניות תגמול נושאי משרה 2012",
+       "ctx": "מדיניות תגמול נושאי משרה 2012"
+      },
+      {
+       "file": "https://www.jewishagency-kupa.org.il/wp-content/uploads/2025/12/דוח-שירות-אזרחים-ותיקים-בגין-שנת-2025.pdf",
+       "text": "דוח שירות אזרחים ותיקים",
+       "ctx": "דוח שירות אזרחים ותיקים"
+      },
+      {
+       "file": "https://www.jewishagency-kupa.org.il/wp-content/uploads/2026/06/דוחות-כספיים-חברה-מנהלת-שנת-2025.pdf",
+       "text": "דוח כספי חברה מנהלת",
+       "ctx": "2025"
+      },
+      {
+       "file": "https://www.jewishagency-kupa.org.il/wp-content/uploads/2026/06/2025-דוח-דירקטוריון.pdf",
+       "text": "דוח דירקטוריון",
+       "ctx": "2025"
+      },
+      {
+       "file": "https://www.jewishagency-kupa.org.il/wp-content/uploads/2026/06/דוח-עסקי-תאגיד-31.12.24.pdf",
+       "text": "דוח עיסקי תאגיד",
+       "ctx": "2024"
+      },
+      {
+       "file": "https://www.jewishagency-kupa.org.il/wp-content/uploads/2026/06/דוחות-כספיים-חברה-מנהלת-תגמולים-ופנסיה-דצמבר-2024-1.pdf",
+       "text": "דוח כספי חברה מנהלת",
+       "ctx": "2024"
+      },
+      {
+       "file": "https://www.jewishagency-kupa.org.il/wp-content/uploads/2026/06/דוח-דירקטוריון-חברה-מנהלת-פנסיה-דצמבר-2024.pdf",
+       "text": "דוח דירקטוריון",
+       "ctx": "2024"
+      }
+     ]
+    },
+    {
+     "url": "https://www.jewishagency-kupa.org.il/%d7%93%d7%95%d7%97-%d7%97%d7%95%d7%93%d7%a9%d7%99/",
+     "links": 277,
+     "followed": [],
+     "files": 210,
+     "clicked": 0,
+     "captured": 0,
+     "selected": [
+      "https://www.jewishagency-kupa.org.il/wp-content/uploads/2026/07/מדיניות-הצבעה-באסיפות-כלליות-סוכנות-יהודית-2026-מעודכן-יולי-סופי-2026.docx.pdf",
+      "https://www.jewishagency-kupa.org.il/wp-content/uploads/2025/12/מדיניות-הצבעה-חברת-עמדה-2025-2026.pdf",
+      "https://www.jewishagency-kupa.org.il/wp-content/uploads/2026/02/מדיניות-ואמנת-שירות-לקוחות-1.pdf"
+     ],
+     "unselected_files": [
+      {
+       "file": "https://www.jewishagency-kupa.org.il/wp-content/uploads/2021/10/10_zdadim_sohnut.pdf",
+       "text": "מבנה אחזקות וצדדים קשורים",
+       "ctx": "מבנה אחזקות וצדדים קשורים"
+      },
+      {
+       "file": "https://www.jewishagency-kupa.org.il/wp-content/uploads/2021/10/10_הודעה_על_העברת_ניהול.pdf",
+       "text": "הודעה על שינוי מבני",
+       "ctx": "הודעה על שינוי מבני"
+      },
+      {
+       "file": "https://www.jewishagency-kupa.org.il/wp-content/uploads/2025/08/נוהל-מספר-18-מדיניות-התגמול-2024-2027-002.pdf",
+       "text": "מדיניות תגמול נושאי משרה 2024-2027",
+       "ctx": "מדיניות תגמול נושאי משרה 2024-2027"
+      },
+      {
+       "file": "https://www.jewishagency-kupa.org.il/wp-content/uploads/2022/12/מדיניות-תגמול-נושאי-משרה-2020-2023.pdf",
+       "text": "מדיניות תגמול נושאי משרה 2020-2023",
+       "ctx": "מדיניות תגמול נושאי משרה 2020-2023"
+      },
+      {
+       "file": "https://www.jewishagency-kupa.org.il/wp-content/uploads/2021/10/10_מדיניות_תגמול_לשנים_2018_2020_סופי-2.pdf",
+       "text": "מדיניות תגמול נושאי משרה 2018-2020",
+       "ctx": "מדיניות תגמול נושאי משרה 2018-2020"
+      },
+      {
+       "file": "https://www.jewishagency-kupa.org.il/wp-content/uploads/2021/10/10_מדיניות_תגמול_לשנים_2015_2017-3.pdf",
+       "text": "מדיניות תגמול נושאי משרה 2015-2017",
+       "ctx": "מדיניות תגמול נושאי משרה 2015-2017"
+      },
+      {
+       "file": "https://www.jewishagency-kupa.org.il/wp-content/uploads/2021/10/10_מדיניותתגמול2014-2.pdf",
+       "text": "מדיניות תגמול נושאי משרה 2014",
+       "ctx": "מדיניות תגמול נושאי משרה 2014"
+      },
+      {
+       "file": "https://www.jewishagency-kupa.org.il/wp-content/uploads/2021/10/10_10_מדיניותתגמולנושאימשרהלשנת-2013-2.pdf",
+       "text": "מדיניות תגמול נושאי משרה 2013",
+       "ctx": "מדיניות תגמול נושאי משרה 2013"
+      },
+      {
+       "file": "https://www.jewishagency-kupa.org.il/wp-content/uploads/2021/10/10_10_מדיניותהשקעות2012.pdf",
+       "text": "מדיניות תגמול נושאי משרה 2012",
+       "ctx": "מדיניות תגמול נושאי משרה 2012"
+      },
+      {
+       "file": "https://www.jewishagency-kupa.org.il/wp-content/uploads/2025/12/דוח-שירות-אזרחים-ותיקים-בגין-שנת-2025.pdf",
+       "text": "דוח שירות אזרחים ותיקים",
+       "ctx": "דוח שירות אזרחים ותיקים"
+      },
+      {
+       "file": "https://www.jewishagency-kupa.org.il/wp-content/uploads/2021/10/10_zdadim_sohnut.pdf",
+       "text": "מבנה אחזקות וצדדים קשורים",
+       "ctx": "מבנה אחזקות וצדדים קשורים"
+      },
+      {
+       "file": "https://www.jewishagency-kupa.org.il/wp-content/uploads/2021/10/10_הודעה_על_העברת_ניהול.pdf",
+       "text": "הודעה על שינוי מבני",
+       "ctx": "הודעה על שינוי מבני"
+      },
+      {
+       "file": "https://www.jewishagency-kupa.org.il/wp-content/uploads/2025/08/נוהל-מספר-18-מדיניות-התגמול-2024-2027-002.pdf",
+       "text": "מדיניות תגמול נושאי משרה 2024-2027",
+       "ctx": "מדיניות תגמול נושאי משרה 2024-2027"
+      },
+      {
+       "file": "https://www.jewishagency-kupa.org.il/wp-content/uploads/2022/12/מדיניות-תגמול-נושאי-משרה-2020-2023.pdf",
+       "text": "מדיניות תגמול נושאי משרה 2020-2023",
+       "ctx": "מדיניות תגמול נושאי משרה 2020-2023"
+      },
+      {
+       "file": "https://www.jewishagency-kupa.org.il/wp-content/uploads/2021/10/10_מדיניות_תגמול_לשנים_2018_2020_סופי-2.pdf",
+       "text": "מדיניות תגמול נושאי משרה 2018-2020",
+       "ctx": "מדיניות תגמול נושאי משרה 2018-2020"
+      },
+      {
+       "file": "https://www.jewishagency-kupa.org.il/wp-content/uploads/2021/10/10_מדיניות_תגמול_לשנים_2015_2017-3.pdf",
+       "text": "מדיניות תגמול נושאי משרה 2015-2017",
+       "ctx": "מדיניות תגמול נושאי משרה 2015-2017"
+      },
+      {
+       "file": "https://www.jewishagency-kupa.org.il/wp-content/uploads/2021/10/10_מדיניותתגמול2014-2.pdf",
+       "text": "מדיניות תגמול נושאי משרה 2014",
+       "ctx": "מדיניות תגמול נושאי משרה 2014"
+      },
+      {
+       "file": "https://www.jewishagency-kupa.org.il/wp-content/uploads/2021/10/10_10_מדיניותתגמולנושאימשרהלשנת-2013-2.pdf",
+       "text": "מדיניות תגמול נושאי משרה 2013",
+       "ctx": "מדיניות תגמול נושאי משרה 2013"
+      },
+      {
+       "file": "https://www.jewishagency-kupa.org.il/wp-content/uploads/2021/10/10_10_מדיניותהשקעות2012.pdf",
+       "text": "מדיניות תגמול נושאי משרה 2012",
+       "ctx": "מדיניות תגמול נושאי משרה 2012"
+      },
+      {
+       "file": "https://www.jewishagency-kupa.org.il/wp-content/uploads/2025/12/דוח-שירות-אזרחים-ותיקים-בגין-שנת-2025.pdf",
+       "text": "דוח שירות אזרחים ותיקים",
+       "ctx": "דוח שירות אזרחים ותיקים"
+      },
+      {
+       "file": "https://www.jewishagency-kupa.org.il/wp-content/uploads/2024/04/דוח-חודשי-גמל-דצמבר-23.xlsx",
+       "text": "דו\"ח חודשי 12.2023",
        "ctx": ""
       },
       {
-       "file": "https://www.kranoth.org.il/wp-content/uploads/2023/11/אמנת_שירות_לקוחות2022.pdf",
+       "file": "https://www.jewishagency-kupa.org.il/wp-content/uploads/2024/04/דוח-חודשי-גמל-דצמבר-23.xlsx",
        "text": "Download",
        "ctx": ""
-      }
-     ]
-    },
-    {
-     "url": "https://www.kranoth.org.il/%d7%9e%d7%93%d7%99%d7%a0%d7%99%d7%95%d7%aa-%d7%95%d7%a0%d7%94%d7%9c%d7%99%d7%9d/",
-     "links": 51,
-     "followed": [],
-     "files": 0,
-     "clicked": 0,
-     "captured": 0,
-     "selected": [],
-     "unselected_files": []
-    },
-    {
-     "url": "https://www.kranoth.org.il/%d7%9e%d7%93%d7%99%d7%a0%d7%99%d7%95%d7%aa-%d7%95%d7%a0%d7%94%d7%9c%d7%99%d7%9d-%d7%9e%d7%95%d7%a8%d7%99%d7%9d-%d7%95%d7%92%d7%92%d7%a0%d7%95%d7%aa/%d7%9e%d7%93%d7%99%d7%a0%d7%99%d7%95%d7%aa-%d7%94%d7%a9%d7%a7%d7%a2%d7%95%d7%aa-%d7%9e%d7%95%d7%a8%d7%99%d7%9d-%d7%95%d7%92%d7%a0%d7%a0%d7%95%d7%aa-%d7%a8%d7%92%d7%99%d7%9c/",
-     "links": 101,
-     "followed": [
-      "https://www.kranoth.org.il/%d7%9e%d7%93%d7%99%d7%a0%d7%99%d7%95%d7%aa-%d7%95%d7%aa%d7%a7%d7%a0%d7%95%d7%a0%d7%99%d7%9d/%d7%9e%d7%93%d7%99%d7%a0%d7%99%d7%95%d7%aa-%d7%94%d7%a9%d7%a7%d7%a2%d7%95%d7%aa-%d7%9e%d7%95%d7%a8%d7%99%d7%9d-%d7%95%d7%92%d7%a0%d7%a0%d7%95%d7%aa-%d7%a8%d7%92%d7%99%d7%9c/"
-     ],
-     "files": 54,
-     "clicked": 0,
-     "captured": 0,
-     "selected": [
-      "https://kranoth.org.il/wp-content/uploads/2026/09/מדיניות_השקעות_צפויה_תשפז-מורים_וגננות_מסלול_כללי.xlsx",
-      "https://www.kranoth.org.il/wp-content/uploads/2026/06/מוג_רגילה-מדיניות_השקעות_מרץ_2026.xlsx",
-      "https://www.kranoth.org.il/wp-content/uploads/2026/01/מדיניות_השקעות_צפויה_מורים_וגננות_תשפו_מונגש_עדכון_דצמבר_2025.xlsx",
-      "https://www.kranoth.org.il/wp-content/uploads/2025/11/מדיניות_השקעות_צפויה_תשפו-מוג_אשראי_ואגח.xlsx",
-      "https://www.kranoth.org.il/wp-content/uploads/2024/12/מורים_וגננות-מסלול_כללי-מדיניות_השקעות_תשפה_דצמבר_2024.xlsx",
-      "https://www.kranoth.org.il/wp-content/uploads/2024/11/מורים_וגננות_רגילה_מסלול_כללי_מדיניות_השקעות_תשפה-1.xlsx",
-      "https://www.kranoth.org.il/wp-content/uploads/2024/01/מוג_רגילה_כללי-מדיניות_השעות_צפויה_25.12.23.xlsx",
-      "https://www.kranoth.org.il/wp-content/uploads/2023/08/מדיניות_השקעות_צפויה_תשפד-מוג_רגילה-מסלול_כללי.xlsx",
-      "https://www.kranoth.org.il/wp-content/uploads/2023/01/מדיניות_השקעות_צפויה_מוג_רגילה_תשפג-מסלול_כללי-עדכון_דצמבר_2022.xlsx",
-      "https://www.kranoth.org.il/wp-content/uploads/2022/10/מדיניות_השקעות_צפויה_תשפג_מוג_רגילה_מסלול_כללי.xlsx",
-      "https://kranoth.org.il/wp-content/uploads/2026/09/מדיניות_השקעות_צפויה_תשפז-מורים_וגננות_מסלול_הלכה.xlsx",
-      "https://www.kranoth.org.il/wp-content/uploads/2026/06/מוג_רגילה_הלכה-מדיניות_הקשעות_מרץ_2026.xlsx",
-      "https://www.kranoth.org.il/wp-content/uploads/2025/10/מדיניות_השקעות_צפויה_תשפו-מוג_הלכתי.xlsx",
-      "https://www.kranoth.org.il/wp-content/uploads/2024/12/מוג_רגילה-מסלול_הלכה-מדיניות_תשפה_דצמבר_2024.xlsx",
-      "https://www.kranoth.org.il/wp-content/uploads/2024/11/מורים_וגננות_רגילה_מסלול_הלכה_מדיניות_השקעות_תשפה-1.xlsx",
-      "https://www.kranoth.org.il/wp-content/uploads/2024/01/מוג_רגילה_הלכה-מדיניות_השקעות_צפויה_25.12.23.xlsx",
-      "https://www.kranoth.org.il/wp-content/uploads/2023/08/מדיניות_השקעות_צפויה_תשפד-מוג_רגילה-מסלול_הלכה.xlsx",
-      "https://www.kranoth.org.il/wp-content/uploads/2023/01/מדיניות_השקעות_צפויה_מוג_רגילה_תשפג-מסלול_הלכה-עדכון_דצמבר_2022.xlsx",
-      "https://www.kranoth.org.il/wp-content/uploads/2022/10/מדיניות_השקעות_צפויה_תשפג_מוג_רגילה_מסלול_הלכה.xlsx",
-      "https://kranoth.org.il/wp-content/uploads/2026/09/מדיניות_השקעות_צפויה_תשפז-מורים_וגננות_מסלול_אשראי_ואגח.xlsx",
-      "https://www.kranoth.org.il/wp-content/uploads/2026/07/מדיניות_השקעות_צפויה_תשפו-מוג_אשראי_ואגח.xlsx",
-      "https://www.kranoth.org.il/wp-content/uploads/2024/12/מוג_רגילה-מסלול_אשראי_ואגח-מדיניות_תשפה_דצמבר_2024.xlsx",
-      "https://www.kranoth.org.il/wp-content/uploads/2024/11/מורים_וגננות_רגילה_מסלול_אשראי_ואגח_מדיניות_תשפה-1.xlsx",
-      "https://www.kranoth.org.il/wp-content/uploads/2024/01/מוג_רגילה_אגח-מדיניות_השקעות_צפויה_25.12.23.xlsx",
-      "https://www.kranoth.org.il/wp-content/uploads/2023/08/מדיניות_השקעות_צפויה_תשפד-מוג_רגילה-מסלול_אגח.xlsx",
-      "https://www.kranoth.org.il/wp-content/uploads/2023/01/מדיניות_השקעות_צפויה_מוג__רגילה_תשפג-מסלול_אגח-עדכון_דצמבר_2022.xlsx",
-      "https://www.kranoth.org.il/wp-content/uploads/2022/10/מדיניות_השקעות_צפויה_תשפג_מוג_רגילה_מסלול_אגח.xlsx"
-     ],
-     "unselected_files": []
-    },
-    {
-     "url": "https://www.kranoth.org.il/%d7%9e%d7%93%d7%99%d7%a0%d7%99%d7%95%d7%aa-%d7%95%d7%a0%d7%94%d7%9c%d7%99%d7%9d-%d7%9e%d7%95%d7%a8%d7%99%d7%9d-%d7%95%d7%92%d7%92%d7%a0%d7%95%d7%aa/%d7%9e%d7%93%d7%99%d7%a0%d7%99%d7%95%d7%aa-%d7%94%d7%a9%d7%a7%d7%a2%d7%95%d7%aa-%d7%9e%d7%95%d7%a8%d7%99%d7%9d-%d7%95%d7%92%d7%a0%d7%a0%d7%95%d7%aa-%d7%9e%d7%a7%d7%95%d7%a8/",
-     "links": 99,
-     "followed": [
-      "https://www.kranoth.org.il/%d7%9e%d7%93%d7%99%d7%a0%d7%99%d7%95%d7%aa-%d7%95%d7%aa%d7%a7%d7%a0%d7%95%d7%a0%d7%99%d7%9d/%d7%9e%d7%93%d7%99%d7%a0%d7%99%d7%95%d7%aa-%d7%94%d7%a9%d7%a7%d7%a2%d7%95%d7%aa-%d7%9e%d7%95%d7%a8%d7%99%d7%9d-%d7%95%d7%92%d7%a0%d7%a0%d7%95%d7%aa-%d7%9e%d7%a7%d7%95%d7%a8/"
-     ],
-     "files": 52,
-     "clicked": 0,
-     "captured": 0,
-     "selected": [
-      "https://kranoth.org.il/wp-content/uploads/2026/09/מדיניות_השקעות_צפויה_תשפז-מורים_וגננות_מקור-מסלול_כללי.xlsx",
-      "https://www.kranoth.org.il/wp-content/uploads/2026/06/מוג_מקור-מדיניות_השקעות_מרץ_2026.xlsx",
-      "https://www.kranoth.org.il/wp-content/uploads/2025/11/מדיניות_השקעות_צפויה_תשפו-מוג_מקור_אשראי_ואגח.xlsx",
-      "https://www.kranoth.org.il/wp-content/uploads/2024/12/מוג_מקור-מסלול_כללי-מדיניות_השקעות_תשפה_דצמבר_2024.xlsx",
-      "https://www.kranoth.org.il/wp-content/uploads/2024/11/מורים_וגננות_מקור_מסלול_כללי_מדיניות_השקעות_תשפה-1.xlsx",
-      "https://www.kranoth.org.il/wp-content/uploads/2024/01/מוג_מקור_כללי-מדיניות_השקעות_צפויה_25.12.23.xlsx",
-      "https://www.kranoth.org.il/wp-content/uploads/2024/01/מדיניות_השקעות_צפויה_תשפד-מוג_מקור-מסלול_כללי.xlsx",
-      "https://www.kranoth.org.il/wp-content/uploads/2023/01/מדיניות_השקעות_צפויה_מוג_מקור_תשפג-מסלול_כללי-עדכון_דצמבר_2022.xlsx",
-      "https://www.kranoth.org.il/wp-content/uploads/2022/10/מ_דיניות_השקעות_צפויה_תשפג_מוג_מקור_מסלול_כללי.xlsx",
-      "https://kranoth.org.il/wp-content/uploads/2026/09/מדיניות_השקעות_צפויה_תשפז-מורים_וגננות_מקור-מסלול_הלכה.xlsx",
-      "https://www.kranoth.org.il/wp-content/uploads/2026/06/מוג_מקור_הלכה-מדיניות_השקעות_מרץ_2026.xlsx",
-      "https://www.kranoth.org.il/wp-content/uploads/2025/10/מדיניות_השקעות_צפויה_תשפו-מוג_מקור_הלכתי.xlsx",
-      "https://www.kranoth.org.il/wp-content/uploads/2024/12/מוג_מקור-מסלול_הלכה-מדיניות_תשפה_דצמבר_2024.xlsx",
-      "https://www.kranoth.org.il/wp-content/uploads/2024/11/מורים_וגננות_מקור_מסלול_הלכה_מדיניות_השקעה_תשפה-1.xlsx",
-      "https://www.kranoth.org.il/wp-content/uploads/2024/01/מוג_מקור_הלכתי-מדיניות_השקעות_צפויה_25.12.23.xlsx",
-      "https://www.kranoth.org.il/wp-content/uploads/2023/08/מדיניות_השקעות_צפויה_תשפד-מוג_מקור-מסלול_הלכה.xlsx",
-      "https://www.kranoth.org.il/wp-content/uploads/2023/01/מדיניות_השקעות_צפויה_מוג_מקור_תשפג-מסלול_הלכה-עדכון_דצמבר_2022.xlsx",
-      "https://www.kranoth.org.il/wp-content/uploads/2022/10/מדיניות_השקעות_צפויה_תשפג_מוג_מקור_מסלול_הלכה.xlsx",
-      "https://kranoth.org.il/wp-content/uploads/2026/09/מדיניות_השקעות_צפויה_תשפז-מורים_וגננות_מקור-מסלול_אשראי_ואגח.xlsx",
-      "https://www.kranoth.org.il/wp-content/uploads/2026/07/מדיניות_השקעות_צפויה_תשפו-מוג_מקור_אשראי_ואגח.xlsx",
-      "https://www.kranoth.org.il/wp-content/uploads/2024/12/מוג_מקור-מסלול_אשראי_ואגח-מדיניות_תשפה_דצמבר_2024.xlsx",
-      "https://www.kranoth.org.il/wp-content/uploads/2024/11/מורים_וגננות_מקור_מסלול_אשראי_ואגח_מדיניות_השקעה_תשפה-1.xlsx",
-      "https://www.kranoth.org.il/wp-content/uploads/2024/01/מוג_מקור_אגח-מדיניות_השקעות_25.12.23.xlsx",
-      "https://www.kranoth.org.il/wp-content/uploads/2023/08/מדיניות_השקעות_צפויה_תשפד-מוג_מקוצר-מסלול_אגח.xlsx",
-      "https://www.kranoth.org.il/wp-content/uploads/2023/01/מדיניות_השקעות_צפויה_מוג_מקור_תשפג-מסלול_אגח-עדכון_דצמבר_2022.xlsx",
-      "https://www.kranoth.org.il/wp-content/uploads/2022/10/מדיניות_השקעות_צפויה_תשפג_מוג_מקור_מסלול_אגח.xlsx"
-     ],
-     "unselected_files": []
-    },
-    {
-     "url": "https://www.kranoth.org.il/%d7%9e%d7%93%d7%99%d7%a0%d7%99%d7%95%d7%aa-%d7%95%d7%a0%d7%94%d7%9c%d7%99%d7%9d-%d7%9e%d7%95%d7%a8%d7%99%d7%9d-%d7%aa%d7%99%d7%9b%d7%95%d7%a0%d7%99%d7%99%d7%9d/%d7%9e%d7%93%d7%99%d7%a0%d7%99%d7%95%d7%aa-%d7%94%d7%a9%d7%a7%d7%a2%d7%95%d7%aa-%d7%9e%d7%95%d7%a8%d7%99%d7%9d-%d7%aa%d7%99%d7%9b%d7%95%d7%a0%d7%99%d7%99%d7%9d-%d7%a8%d7%92%d7%99%d7%9c/",
-     "links": 101,
-     "followed": [],
-     "files": 54,
-     "clicked": 0,
-     "captured": 0,
-     "selected": [
-      "https://www.kranoth.org.il/wp-content/uploads/2025/11/מדיניות_השקעות_צפויה_תשפו-מות_אשראי_ואגח.xlsx",
-      "https://www.kranoth.org.il/wp-content/uploads/2023/08/מדיניות_השקעה_צפויה_תשפד-מות_רגילה-מסלול_כללי.xlsx",
-      "https://www.kranoth.org.il/wp-content/uploads/2025/10/מדיניות_השקעות_צפויה_תשפו-מות_הלכתי.xlsx",
-      "https://www.kranoth.org.il/wp-content/uploads/2023/08/מדיניות_השקעות_צפויה_תשפד-מות_רגילה-מסלול_הלכה.xlsx",
-      "https://www.kranoth.org.il/wp-content/uploads/2026/07/מדיניות_השקעות_צפויה_תשפו-מות_אשראי_ואגח.xlsx",
-      "https://www.kranoth.org.il/wp-content/uploads/2023/08/מדיניות_השקעות_צפויה_תשפד-מות_רגילה-מסלול_אגח.xlsx"
-     ],
-     "unselected_files": [
+      },
       {
-       "file": "https://kranoth.org.il/wp-content/uploads/2026/09/מדיניות_השקעות_צפויה_תשפז-מורים_תיכוניים_מסלול_כללי.xlsx",
-       "text": "קרן השתלמות למורים תיכוניים – מדיניות צפויה תשפ\"ז",
+       "file": "https://www.jewishagency-kupa.org.il/wp-content/uploads/2024/01/דוח-חודשי-גמל-נובמבר-23.xlsx",
+       "text": "דו\"ח חודשי 11.2023",
        "ctx": ""
       },
       {
-       "file": "https://kranoth.org.il/wp-content/uploads/2026/09/מדיניות_השקעות_צפויה_תשפז-מורים_תיכוניים_מסלול_כללי.xlsx",
-       "text": "הורד",
+       "file": "https://www.jewishagency-kupa.org.il/wp-content/uploads/2024/01/דוח-חודשי-גמל-נובמבר-23.xlsx",
+       "text": "Download",
        "ctx": ""
       },
       {
-       "file": "https://www.kranoth.org.il/wp-content/uploads/2026/06/מות_רגילה-מדיניות_השקעות_מרץ_2026.xlsx",
-       "text": "קרן השתלמות למורים תיכוניים – מדיניות צפויה תשפ\"ו – מרץ 2026",
-       "ctx": ""
-      },
-      {
-       "file": "https://www.kranoth.org.il/wp-content/uploads/2026/06/מות_רגילה-מדיניות_השקעות_מרץ_2026.xlsx",
-       "text": "הורד",
-       "ctx": ""
-      },
-      {
-       "file": "https://www.kranoth.org.il/wp-content/uploads/2026/01/מדיניות_השקעה_צפויה_מורים_תיכונים_תשפו_מונגש_עדכון_דצמבר__2025.xlsx",
-       "text": "קרן השתלמות למורים תיכוניים – מדיניות צפויה תשפ\"ו – דצמבר 2025",
-       "ctx": ""
-      },
-      {
-       "file": "https://www.kranoth.org.il/wp-content/uploads/2026/01/מדיניות_השקעה_צפויה_מורים_תיכונים_תשפו_מונגש_עדכון_דצמבר__2025.xlsx",
-       "text": "הורד",
-       "ctx": ""
-      },
-      {
-       "file": "https://www.kranoth.org.il/wp-content/uploads/2024/12/מות_רגילה-מסלול_כללי-מדיניות_תשפה_דצמבר_2024.xlsx",
-       "text": "קרן השתלמות למורים תיכוניים – מדיניות צפויה תשפ\"ה – דצמבר 2024",
-       "ctx": ""
-      },
-      {
-       "file": "https://www.kranoth.org.il/wp-content/uploads/2024/12/מות_רגילה-מסלול_כללי-מדיניות_תשפה_דצמבר_2024.xlsx",
-       "text": "הורד",
-       "ctx": ""
-      },
-      {
-       "file": "https://www.kranoth.org.il/wp-content/uploads/2024/11/מות_רגילה_מסלול_כללי_מדיניות_השקעות_צפויה_תשפה-1.xlsx",
-       "text": "קרן השתלמות למורים תיכוניים – מדיניות צפויה תשפ\"ה",
-       "ctx": ""
-      },
-      {
-       "file": "https://www.kranoth.org.il/wp-content/uploads/2024/11/מות_רגילה_מסלול_כללי_מדיניות_השקעות_צפויה_תשפה-1.xlsx",
-       "text": "הורד",
-       "ctx": ""
-      },
-      {
-       "file": "https://www.kranoth.org.il/wp-content/uploads/2024/01/מורים_תיכוניים_רגילה_כללי-מדיניות_השקעות_צפויה_25.12.23.xlsx",
-       "text": "קרן השתלמות למורים תיכוניים – מדיניות צפויה תשפ\"ד – עידכון ביום 25.12.23",
-       "ctx": ""
-      },
-      {
-       "file": "https://www.kranoth.org.il/wp-content/uploads/2024/01/מורים_תיכוניים_רגילה_כללי-מדיניות_השקעות_צפויה_25.12.23.xlsx",
-       "text": "הורד",
-       "ctx": ""
-      },
-      {
-       "file": "https://www.kranoth.org.il/wp-content/uploads/2023/01/מדיניות_השקעות_צפויה_מות_רגילה_תשפג-מסלול_כללי-_עדכון_דצמבר_2022.xlsx",
-       "text": "קרן השתלמות למורים תיכוניים – עידכון מדיניות צפויה תשפ\"ג דצמבר 2022",
-       "ctx": ""
-      },
-      {
-       "file": "https://www.kranoth.org.il/wp-content/uploads/2023/01/מדיניות_השקעות_צפויה_מות_רגילה_תשפג-מסלול_כללי-_עדכון_דצמבר_2022.xlsx",
-       "text": "הורד",
-       "ctx": ""
-      },
-      {
-       "file": "https://www.kranoth.org.il/wp-content/uploads/2022/10/מדיניות_השקעות_צפויה_תשפג_מות_רגילה_מסלול_כללי.xlsx",
-       "text": "קרן השתלמות למורים תיכוניים – מדיניות צפויה תשפ\"ג",
-       "ctx": ""
-      },
-      {
-       "file": "https://www.kranoth.org.il/wp-content/uploads/2022/10/מדיניות_השקעות_צפויה_תשפג_מות_רגילה_מסלול_כללי.xlsx",
-       "text": "הורד",
-       "ctx": ""
-      },
-      {
-       "file": "https://kranoth.org.il/wp-content/uploads/2026/09/מדיניות_השקעות_צפויה_תשפז-מורים_תיכוניים_מסלול_הלכה.xlsx",
-       "text": "קרן השתלמות למורים תיכוניים הלכתי – מדיניות צפויה תשפ\"ז",
-       "ctx": ""
-      },
-      {
-       "file": "https://kranoth.org.il/wp-content/uploads/2026/09/מדיניות_השקעות_צפויה_תשפז-מורים_תיכוניים_מסלול_הלכה.xlsx",
-       "text": "הורד",
-       "ctx": ""
-      },
-      {
-       "file": "https://www.kranoth.org.il/wp-content/uploads/2026/06/מות_רגילה_הלכה-מדיניות_השקעות_מרץ_2026.xlsx",
-       "text": "קרן השתלמות למורים תיכוניים הלכתי – מדיניות צפויה תשפ\"ו – מרץ 2026",
-       "ctx": ""
-      },
-      {
-       "file": "https://www.kranoth.org.il/wp-content/uploads/2026/06/מות_רגילה_הלכה-מדיניות_השקעות_מרץ_2026.xlsx",
-       "text": "הורד",
-       "ctx": ""
-      },
-      {
-       "file": "https://www.kranoth.org.il/wp-content/uploads/2024/12/מות_רגילה-מסלול_הלכה-מדיניות_תשפה_דצמבר_2024.xlsx",
-       "text": "קרן השתלמות למורים תיכוניים הלכתי – מדיניות צפויה תשפ\"ה – דצמבר 2024",
-       "ctx": ""
-      },
-      {
-       "file": "https://www.kranoth.org.il/wp-content/uploads/2024/12/מות_רגילה-מסלול_הלכה-מדיניות_תשפה_דצמבר_2024.xlsx",
-       "text": "הורד",
-       "ctx": ""
-      },
-      {
-       "file": "https://www.kranoth.org.il/wp-content/uploads/2024/11/מות_רגילה_מסלול_הלכה_מדיניות_השקעות_צפויה_תשפה-1.xlsx",
-       "text": "קרן השתלמות למורים תיכוניים הלכתי – מדיניות צפויה תשפ\"ה",
-       "ctx": ""
-      },
-      {
-       "file": "https://www.kranoth.org.il/wp-content/uploads/2024/11/מות_רגילה_מסלול_הלכה_מדיניות_השקעות_צפויה_תשפה-1.xlsx",
-       "text": "הורד",
-       "ctx": ""
-      },
-      {
-       "file": "https://www.kranoth.org.il/wp-content/uploads/2024/01/מורים_תיכוניים_רגילה_הלכתי-מדיניות_השקעות_צפויה_25.12.23.xlsx",
-       "text": "קרן השתלמות למורים תיכוניים הלכתי – מדיניות צפויה תשפ\"ד – עידכון ביום 25.12.23",
+       "file": "https://www.jewishagency-kupa.org.il/wp-content/uploads/2023/11/דוח-חודשי-גמל-אוקטובר-23.xlsx",
+       "text": "דו\"ח חודשי 10.2023",
        "ctx": ""
       }
      ]
-    },
-    {
-     "url": "https://www.kranoth.org.il/%d7%9e%d7%93%d7%99%d7%a0%d7%99%d7%95%d7%aa-%d7%95%d7%a0%d7%94%d7%9c%d7%99%d7%9d-%d7%9e%d7%95%d7%a8%d7%99%d7%9d-%d7%aa%d7%99%d7%9b%d7%95%d7%a0%d7%99%d7%99%d7%9d/%d7%9e%d7%93%d7%99%d7%a0%d7%99%d7%95%d7%aa-%d7%94%d7%a9%d7%a7%d7%a2%d7%95%d7%aa-%d7%9e%d7%95%d7%a8%d7%99%d7%9d-%d7%aa%d7%99%d7%9b%d7%95%d7%a0%d7%99%d7%99%d7%9d-%d7%9e%d7%a7%d7%95%d7%a8/",
-     "links": 101,
-     "followed": [],
-     "files": 54,
-     "clicked": 0,
-     "captured": 0,
-     "selected": [
-      "https://www.kranoth.org.il/wp-content/uploads/2025/11/מדיניות_השקעות_צפויה_תשפו-מות_מקור_אשראי_ואגח-1.xlsx",
-      "https://www.kranoth.org.il/wp-content/uploads/2023/08/מדיניות_השקעה_צפויה_תשפד-מות_מקור-מסלול_כללי.xlsx",
-      "https://www.kranoth.org.il/wp-content/uploads/2025/10/מדיניות_השקעות_צפויה_תשפו-מות_מקור_הלכתי.xlsx",
-      "https://www.kranoth.org.il/wp-content/uploads/2023/08/מדיניות_השקעות_צפויה_תשפד-מות_מקור-מסלול_הלכה.xlsx",
-      "https://www.kranoth.org.il/wp-content/uploads/2026/07/מדיניות_השקעות_צפויה_תשפו-מות_מקור_אשראי_ואגח.xlsx",
-      "https://www.kranoth.org.il/wp-content/uploads/2023/08/מדיניות_השקעות_צפויה_תשפד-מות_מקור-מסלול_אגח.xlsx"
-     ],
-     "unselected_files": [
-      {
-       "file": "https://kranoth.org.il/wp-content/uploads/2026/09/מדיניות_השקעות_צפויה_תשפז-מורים_תיכוניים_מקור-מסלול_כללי.xlsx",
-       "text": "קרן השתלמות למורים תיכוניים מקור – מדיניות צפויה תשפ\"ז",
-       "ctx": ""
-      },
-      {
-       "file": "https://kranoth.org.il/wp-content/uploads/2026/09/מדיניות_השקעות_צפויה_תשפז-מורים_תיכוניים_מקור-מסלול_כללי.xlsx",
-       "text": "הורד",
-       "ctx": ""
-      },
-      {
-       "file": "https://www.kranoth.org.il/wp-content/uploads/2026/06/מות_מקור-מדיניות_השקעות_מרץ_2026.xlsx",
-       "text": "קרן השתלמות למורים תיכוניים מקור – מדיניות צפויה תשפ\"ו – מרץ 2026",
-       "ctx": ""
-      },
-      {
-       "file": "https://www.kranoth.org.il/wp-content/uploads/2026/06/מות_מקור-מדיניות_השקעות_מרץ_2026.xlsx",
-       "text": "הורד",
-       "ctx": ""
-      },
-      {
-       "file": "https://www.kranoth.org.il/wp-content/uploads/2024/12/מות_מקור-מסלול_כללי-מדיניות_תשפה_דצמבר_2024.xlsx",
-       "text": "קרן השתלמות למורים תיכוניים מקור – מדיניות צפויה תשפ\"ה – דצמבר 2024",
-       "ctx": ""
-      },
-      {
-       "file": "https://www.kranoth.org.il/wp-content/uploads/2024/12/מות_מקור-מסלול_כללי-מדיניות_תשפה_דצמבר_2024.xlsx",
-       "text": "הורד",
-       "ctx": ""
-      },
-      {
-       "file": "https://www.kranoth.org.il/wp-content/uploads/2024/11/מות_מקור_מסלול_כללי_מדיניות_השקעה_צפויה_תשפה-1.xlsx",
-       "text": "קרן השתלמות למורים תיכוניים מקור – מדיניות צפויה תשפ\"ה",
-       "ctx": ""
-      },
-      {
-       "file": "https://www.kranoth.org.il/wp-content/uploads/2024/11/מות_מקור_מסלול_כללי_מדיניות_השקעה_צפויה_תשפה-1.xlsx",
-       "text": "הורד",
-       "ctx": ""
-      },
-      {
-       "file": "https://www.kranoth.org.il/wp-content/uploads/2024/01/מורים_תיכונייים_מקור_כללי-מדיניות_השקעות_צפויה_25.12.23.xlsx",
-       "text": "קרן השתלמות למורים תיכוניים מקור – מדיניות צפויה תשפ\"ד – עידכון ביום 25.12.23",
-       "ctx": ""
-      },
-      {
-       "file": "https://www.kranoth.org.il/wp-content/uploads/2024/01/מורים_תיכונייים_מקור_כללי-מדיניות_השקעות_צפויה_25.12.23.xlsx",
-       "text": "הורד",
-       "ctx": ""
-      },
-      {
-       "file": "https://www.kranoth.org.il/wp-content/uploads/2023/01/מדיניות_השקעות_צפויה_מות_מקור_תשפג-מסלול_כללי-עדכון_דצמבר_2022.xlsx",
-       "text": "קרן השתלמות למורים תיכוניים – עידכון מדיניות צפויה תשפ”ג דצמבר 2022",
-       "ctx": ""
-      },
-      {
-       "file": "https://www.kranoth.org.il/wp-content/uploads/2023/01/מדיניות_השקעות_צפויה_מות_מקור_תשפג-מסלול_כללי-עדכון_דצמבר_2022.xlsx",
-       "text": "הורד",
-       "ctx": ""
-      },
-      {
-       "file": "https://www.kranoth.org.il/wp-content/uploads/2022/10/מדיניות_השקעות_צפויה_תשפג_מות_מקור_מסלול_כללי.xlsx",
-       "text": "קרן השתלמות למורים תיכוניים מקור – מדיניות צפויה תשפ\"ג",
-       "ctx": ""
-      },
-      {
-       "file": "https://www.kranoth.org.il/wp-content/uploads/2022/10/מדיניות_השקעות_צפויה_תשפג_מות_מקור_מסלול_כללי.xlsx",
-       "text": "הורד",
-       "ctx": ""
-      },
-      {
-       "file": "https://kranoth.org.il/wp-content/uploads/2026/09/מדיניות_השקעות_צפויה_תשפז-מורים_תיכוניים_מקור-מסלול_הלכה.xlsx",
-       "text": "קרן השתלמות למורים תיכוניים מקור הלכתי – מדיניות צפויה תשפ\"ז",
-       "ctx": ""
-      },
-      {
-       "file": "https://kranoth.org.il/wp-content/uploads/2026/09/מדיניות_השקעות_צפויה_תשפז-מורים_תיכוניים_מקור-מסלול_הלכה.xlsx",
-       "text": "הורד",
-       "ctx": ""
-      },
-      {
-       "file": "https://www.kranoth.org.il/wp-content/uploads/2026/06/מות_מקור_הלכה-מדיניות_השקעות_מרץ_2026.xlsx",
-       "text": "קרן השתלמות למורים תיכוניים מקור הלכתי – מדיניות צפויה תשפ\"ו – מרץ 2026",
-       "ctx": ""
-      },
-      {
-       "file": "https://www.kranoth.org.il/wp-content/uploads/2026/06/מות_מקור_הלכה-מדיניות_השקעות_מרץ_2026.xlsx",
-       "text": "הורד",
-       "ctx": ""
-      },
-      {
-       "file": "https://www.kranoth.org.il/wp-content/uploads/2024/12/מות_מקור-מסלול_הלכה-מדיניות_תשפה_דצמבר_2024.xlsx",
-       "text": "קרן השתלמות למורים תיכוניים מקור הלכתי – מדיניות צפויה תשפ\"ה – דצמבר 2024",
-       "ctx": ""
-      },
-      {
-       "file": "https://www.kranoth.org.il/wp-content/uploads/2024/12/מות_מקור-מסלול_הלכה-מדיניות_תשפה_דצמבר_2024.xlsx",
-       "text": "הורד",
-       "ctx": ""
-      },
-      {
-       "file": "https://www.kranoth.org.il/wp-content/uploads/2024/11/מות_מקור_מסלול_הלכה_מדיניות_השקעות_צפויה_תשפה-1.xlsx",
-       "text": "קרן השתלמות למורים תיכוניים מקור הלכתי – מדיניות צפויה תשפ\"ה",
-       "ctx": ""
-      },
-      {
-       "file": "https://www.kranoth.org.il/wp-content/uploads/2024/11/מות_מקור_מסלול_הלכה_מדיניות_השקעות_צפויה_תשפה-1.xlsx",
-       "text": "הורד",
-       "ctx": ""
-      },
-      {
-       "file": "https://www.kranoth.org.il/wp-content/uploads/2024/01/מורים_תיכונייים_מקור_הלכה-מדיניות_השקעות_צפויה_25.12.23.xlsx",
-       "text": "קרן השתלמות למורים תיכוניים מקור הלכתי – מדיניות צפויה תשפ\"ד- עידכון ביום 25.12.",
-       "ctx": ""
-      },
-      {
-       "file": "https://www.kranoth.org.il/wp-content/uploads/2024/01/מורים_תיכונייים_מקור_הלכה-מדיניות_השקעות_צפויה_25.12.23.xlsx",
-       "text": "הורד",
-       "ctx": ""
-      },
-      {
-       "file": "https://www.kranoth.org.il/wp-content/uploads/2023/01/מדיניות_השקעות_צפויה_מות_מקור_תשפג-מסלול_הלכה-עדכון_דצמבר_2022.xlsx",
-       "text": "קרן השתלמות למורים תיכוניים – עידכון מדיניות צפויה תשפ”ג דצמבר 2022",
-       "ctx": ""
-      }
-     ]
-    },
-    {
-     "url": "https://www.kranoth.org.il/%d7%9e%d7%93%d7%99%d7%a0%d7%99%d7%95%d7%aa-%d7%95%d7%aa%d7%a7%d7%a0%d7%95%d7%a0%d7%99%d7%9d/%d7%9e%d7%93%d7%99%d7%a0%d7%99%d7%95%d7%aa-%d7%94%d7%a9%d7%a7%d7%a2%d7%95%d7%aa-%d7%9e%d7%95%d7%a8%d7%99%d7%9d-%d7%95%d7%92%d7%a0%d7%a0%d7%95%d7%aa-%d7%a8%d7%92%d7%99%d7%9c/",
-     "links": 101,
-     "followed": [],
-     "files": 54,
-     "clicked": 0,
-     "captured": 0,
-     "selected": [
-      "https://kranoth.org.il/wp-content/uploads/2026/09/מדיניות_השקעות_צפויה_תשפז-מורים_וגננות_מסלול_כללי.xlsx",
-      "https://www.kranoth.org.il/wp-content/uploads/2026/06/מוג_רגילה-מדיניות_השקעות_מרץ_2026.xlsx",
-      "https://www.kranoth.org.il/wp-content/uploads/2026/01/מדיניות_השקעות_צפויה_מורים_וגננות_תשפו_מונגש_עדכון_דצמבר_2025.xlsx",
-      "https://www.kranoth.org.il/wp-content/uploads/2025/11/מדיניות_השקעות_צפויה_תשפו-מוג_אשראי_ואגח.xlsx",
-      "https://www.kranoth.org.il/wp-content/uploads/2024/12/מורים_וגננות-מסלול_כללי-מדיניות_השקעות_תשפה_דצמבר_2024.xlsx",
-      "https://www.kranoth.org.il/wp-content/uploads/2024/11/מורים_וגננות_רגילה_מסלול_כללי_מדיניות_השקעות_תשפה-1.xlsx",
-      "https://www.kranoth.org.il/wp-content/uploads/2024/01/מוג_רגילה_כללי-מדיניות_השעות_צפויה_25.12.23.xlsx",
-      "https://www.kranoth.org.il/wp-content/uploads/2023/08/מדיניות_השקעות_צפויה_תשפד-מוג_רגילה-מסלול_כללי.xlsx",
-      "https://www.kranoth.org.il/wp-content/uploads/2023/01/מדיניות_השקעות_צפויה_מוג_רגילה_תשפג-מסלול_כללי-עדכון_דצמבר_2022.xlsx",
-      "https://www.kranoth.org.il/wp-content/uploads/2022/10/מדיניות_השקעות_צפויה_תשפג_מוג_רגילה_מסלול_כללי.xlsx",
-      "https://kranoth.org.il/wp-content/uploads/2026/09/מדיניות_השקעות_צפויה_תשפז-מורים_וגננות_מסלול_הלכה.xlsx",
-      "https://www.kranoth.org.il/wp-content/uploads/2026/06/מוג_רגילה_הלכה-מדיניות_הקשעות_מרץ_2026.xlsx",
-      "https://www.kranoth.org.il/wp-content/uploads/2025/10/מדיניות_השקעות_צפויה_תשפו-מוג_הלכתי.xlsx",
-      "https://www.kranoth.org.il/wp-content/uploads/2024/12/מוג_רגילה-מסלול_הלכה-מדיניות_תשפה_דצמבר_2024.xlsx",
-      "https://www.kranoth.org.il/wp-content/uploads/2024/11/מורים_וגננות_רגילה_מסלול_הלכה_מדיניות_השקעות_תשפה-1.xlsx",
-      "https://www.kranoth.org.il/wp-content/uploads/2024/01/מוג_רגילה_הלכה-מדיניות_השקעות_צפויה_25.12.23.xlsx",
-      "https://www.kranoth.org.il/wp-content/uploads/2023/08/מדיניות_השקעות_צפויה_תשפד-מוג_רגילה-מסלול_הלכה.xlsx",
-      "https://www.kranoth.org.il/wp-content/uploads/2023/01/מדיניות_השקעות_צפויה_מוג_רגילה_תשפג-מסלול_הלכה-עדכון_דצמבר_2022.xlsx",
-      "https://www.kranoth.org.il/wp-content/uploads/2022/10/מדיניות_השקעות_צפויה_תשפג_מוג_רגילה_מסלול_הלכה.xlsx",
-      "https://kranoth.org.il/wp-content/uploads/2026/09/מדיניות_השקעות_צפויה_תשפז-מורים_וגננות_מסלול_אשראי_ואגח.xlsx",
-      "https://www.kranoth.org.il/wp-content/uploads/2026/07/מדיניות_השקעות_צפויה_תשפו-מוג_אשראי_ואגח.xlsx",
-      "https://www.kranoth.org.il/wp-content/uploads/2024/12/מוג_רגילה-מסלול_אשראי_ואגח-מדיניות_תשפה_דצמבר_2024.xlsx",
-      "https://www.kranoth.org.il/wp-content/uploads/2024/11/מורים_וגננות_רגילה_מסלול_אשראי_ואגח_מדיניות_תשפה-1.xlsx",
-      "https://www.kranoth.org.il/wp-content/uploads/2024/01/מוג_רגילה_אגח-מדיניות_השקעות_צפויה_25.12.23.xlsx",
-      "https://www.kranoth.org.il/wp-content/uploads/2023/08/מדיניות_השקעות_צפויה_תשפד-מוג_רגילה-מסלול_אגח.xlsx",
-      "https://www.kranoth.org.il/wp-content/uploads/2023/01/מדיניות_השקעות_צפויה_מוג__רגילה_תשפג-מסלול_אגח-עדכון_דצמבר_2022.xlsx",
-      "https://www.kranoth.org.il/wp-content/uploads/2022/10/מדיניות_השקעות_צפויה_תשפג_מוג_רגילה_מסלול_אגח.xlsx"
-     ],
-     "unselected_files": []
-    },
-    {
-     "url": "https://www.kranoth.org.il/%d7%9e%d7%93%d7%99%d7%a0%d7%99%d7%95%d7%aa-%d7%95%d7%aa%d7%a7%d7%a0%d7%95%d7%a0%d7%99%d7%9d/%d7%9e%d7%93%d7%99%d7%a0%d7%99%d7%95%d7%aa-%d7%94%d7%a9%d7%a7%d7%a2%d7%95%d7%aa-%d7%9e%d7%95%d7%a8%d7%99%d7%9d-%d7%95%d7%92%d7%a0%d7%a0%d7%95%d7%aa-%d7%9e%d7%a7%d7%95%d7%a8/",
-     "links": 99,
-     "followed": [],
-     "files": 52,
-     "clicked": 0,
-     "captured": 0,
-     "selected": [
-      "https://kranoth.org.il/wp-content/uploads/2026/09/מדיניות_השקעות_צפויה_תשפז-מורים_וגננות_מקור-מסלול_כללי.xlsx",
-      "https://www.kranoth.org.il/wp-content/uploads/2026/06/מוג_מקור-מדיניות_השקעות_מרץ_2026.xlsx",
-      "https://www.kranoth.org.il/wp-content/uploads/2025/11/מדיניות_השקעות_צפויה_תשפו-מוג_מקור_אשראי_ואגח.xlsx",
-      "https://www.kranoth.org.il/wp-content/uploads/2024/12/מוג_מקור-מסלול_כללי-מדיניות_השקעות_תשפה_דצמבר_2024.xlsx",
-      "https://www.kranoth.org.il/wp-content/uploads/2024/11/מורים_וגננות_מקור_מסלול_כללי_מדיניות_השקעות_תשפה-1.xlsx",
-      "https://www.kranoth.org.il/wp-content/uploads/2024/01/מוג_מקור_כללי-מדיניות_השקעות_צפויה_25.12.23.xlsx",
-      "https://www.kranoth.org.il/wp-content/uploads/2024/01/מדיניות_השקעות_צפויה_תשפד-מוג_מקור-מסלול_כללי.xlsx",
-      "https://www.kranoth.org.il/wp-content/uploads/2023/01/מדיניות_השקעות_צפויה_מוג_מקור_תשפג-מסלול_כללי-עדכון_דצמבר_2022.xlsx",
-      "https://www.kranoth.org.il/wp-content/uploads/2022/10/מ_דיניות_השקעות_צפויה_תשפג_מוג_מקור_מסלול_כללי.xlsx",
-      "https://kranoth.org.il/wp-content/uploads/2026/09/מדיניות_השקעות_צפויה_תשפז-מורים_וגננות_מקור-מסלול_הלכה.xlsx",
-      "https://www.kranoth.org.il/wp-content/uploads/2026/06/מוג_מקור_הלכה-מדיניות_השקעות_מרץ_2026.xlsx",
-      "https://www.kranoth.org.il/wp-content/uploads/2025/10/מדיניות_השקעות_צפויה_תשפו-מוג_מקור_הלכתי.xlsx",
-      "https://www.kranoth.org.il/wp-content/uploads/2024/12/מוג_מקור-מסלול_הלכה-מדיניות_תשפה_דצמבר_2024.xlsx",
-      "https://www.kranoth.org.il/wp-content/uploads/2024/11/מורים_וגננות_מקור_מסלול_הלכה_מדיניות_השקעה_תשפה-1.xlsx",
-      "https://www.kranoth.org.il/wp-content/uploads/2024/01/מוג_מקור_הלכתי-מדיניות_השקעות_צפויה_25.12.23.xlsx",
-      "https://www.kranoth.org.il/wp-content/uploads/2023/08/מדיניות_השקעות_צפויה_תשפד-מוג_מקור-מסלול_הלכה.xlsx",
-      "https://www.kranoth.org.il/wp-content/uploads/2023/01/מדיניות_השקעות_צפויה_מוג_מקור_תשפג-מסלול_הלכה-עדכון_דצמבר_2022.xlsx",
-      "https://www.kranoth.org.il/wp-content/uploads/2022/10/מדיניות_השקעות_צפויה_תשפג_מוג_מקור_מסלול_הלכה.xlsx",
-      "https://kranoth.org.il/wp-content/uploads/2026/09/מדיניות_השקעות_צפויה_תשפז-מורים_וגננות_מקור-מסלול_אשראי_ואגח.xlsx",
-      "https://www.kranoth.org.il/wp-content/uploads/2026/07/מדיניות_השקעות_צפויה_תשפו-מוג_מקור_אשראי_ואגח.xlsx",
-      "https://www.kranoth.org.il/wp-content/uploads/2024/12/מוג_מקור-מסלול_אשראי_ואגח-מדיניות_תשפה_דצמבר_2024.xlsx",
-      "https://www.kranoth.org.il/wp-content/uploads/2024/11/מורים_וגננות_מקור_מסלול_אשראי_ואגח_מדיניות_השקעה_תשפה-1.xlsx",
-      "https://www.kranoth.org.il/wp-content/uploads/2024/01/מוג_מקור_אגח-מדיניות_השקעות_25.12.23.xlsx",
-      "https://www.kranoth.org.il/wp-content/uploads/2023/08/מדיניות_השקעות_צפויה_תשפד-מוג_מקוצר-מסלול_אגח.xlsx",
-      "https://www.kranoth.org.il/wp-content/uploads/2023/01/מדיניות_השקעות_צפויה_מוג_מקור_תשפג-מסלול_אגח-עדכון_דצמבר_2022.xlsx",
-      "https://www.kranoth.org.il/wp-content/uploads/2022/10/מדיניות_השקעות_צפויה_תשפג_מוג_מקור_מסלול_אגח.xlsx"
-     ],
-     "unselected_files": []
     }
    ],
-   "new_docs": 53,
-   "found": 322,
-   "selected": 118,
-   "had": 65,
-   "errors": [],
+   "new_docs": 2,
+   "found": 548,
+   "selected": 21,
+   "had": 10,
+   "head_skip": 10,
+   "errors": [
+    "מדיניות-ואמנת-שירות-לקוחות-1.pdf -> 418",
+    "מדיניות-ואמנת-שירות-לקוחות-1.pdf -> 418",
+    "מדיניות-ואמנת-שירות-לקוחות-1.pdf -> 418",
+    "מדיניות-ואמנת-שירות-לקוחות-1.pdf -> 418",
+    "מדיניות-ואמנת-שירות-לקוחות-1.pdf -> 418",
+    "מדיניות-ואמנת-שירות-לקוחות-1.pdf -> 418"
+   ],
    "diag": [
-    "קרנות השתלמות למור: links=51 files=0 clicked=0 captured=0 selected=0",
-    "קרנות השתלמות למור: links=93 files=0 clicked=0 captured=0 selected=0",
-    "קרנות השתלמות למור: links=93 files=0 clicked=0 captured=0 selected=0",
-    "קרנות השתלמות למור: links=51 files=0 clicked=0 captured=0 selected=0",
-    "קרנות השתלמות למור: links=49 files=0 clicked=0 captured=0 selected=0",
-    "קרנות השתלמות למור: links=49 files=0 clicked=0 captured=0 selected=0",
-    "קרנות השתלמות למור: links=48 files=0 clicked=0 captured=0 selected=0",
-    "קרנות השתלמות למור: links=49 files=2 clicked=0 captured=0 selected=0",
-    "   ? אמנת_שירות_לקוחות2022.pdf | אמנת שירות | ",
-    "   ? אמנת_שירות_לקוחות2022.pdf | Download | ",
-    "קרנות השתלמות למור: links=51 files=0 clicked=0 captured=0 selected=0",
-    "קרנות השתלמות למור: links=101 files=54 clicked=0 captured=0 selected=27",
-    "קרנות השתלמות למור: links=99 files=52 clicked=0 captured=0 selected=26",
-    "קרנות השתלמות למור: links=101 files=54 clicked=0 captured=0 selected=6",
-    "קרנות השתלמות למור: links=101 files=54 clicked=0 captured=0 selected=6",
-    "קרנות השתלמות למור: links=101 files=54 clicked=0 captured=0 selected=27",
-    "קרנות השתלמות למור: links=99 files=52 clicked=0 captured=0 selected=26"
+    "החברה לניהול קופת : links=121 files=26 clicked=0 captured=0 selected=3",
+    "החברה לניהול קופת : links=105 files=26 clicked=0 captured=0 selected=3",
+    "החברה לניהול קופת : links=105 files=26 clicked=0 captured=0 selected=3",
+    "החברה לניהול קופת : links=93 files=26 clicked=0 captured=0 selected=3",
+    "החברה לניהול קופת : links=205 files=138 clicked=0 captured=0 selected=3",
+    "החברה לניהול קופת : links=169 files=96 clicked=0 captured=0 selected=3",
+    "החברה לניהול קופת : links=277 files=210 clicked=0 captured=0 selected=3"
    ],
    "new_files": [
-    "86bb8c230c6e_מדיניות_השקעות_צפויה_תשפז-מורים_וגננות_מסלול_כללי.xlsx",
-    "1c7889d354ea_מוג_רגילה-מדיניות_השקעות_מרץ_2026.xlsx",
-    "31be1de0d12a_מדיניות_השקעות_צפויה_מורים_וגננות_תשפו_מונגש_עדכון_דצמבר_2025.xlsx",
-    "0bf765a357c7_מדיניות_השקעות_צפויה_תשפו-מוג_אשראי_ואגח.xlsx",
-    "0e798f303f9d_מורים_וגננות-מסלול_כללי-מדיניות_השקעות_תשפה_דצמבר_2024.xlsx",
-    "ed04f83692ac_מורים_וגננות_רגילה_מסלול_כללי_מדיניות_השקעות_תשפה-1.xlsx",
-    "a493e0b4627b_מוג_רגילה_כללי-מדיניות_השעות_צפויה_25.12.23.xlsx",
-    "9f3767cb79dc_מדיניות_השקעות_צפויה_תשפד-מוג_רגילה-מסלול_כללי.xlsx",
-    "fdc575cf786b_מדיניות_השקעות_צפויה_מוג_רגילה_תשפג-מסלול_כללי-עדכון_דצמבר_2022.xlsx",
-    "ec481ac10f1d_מדיניות_השקעות_צפויה_תשפג_מוג_רגילה_מסלול_כללי.xlsx",
-    "62b26b5c30da_מדיניות_השקעות_צפויה_תשפז-מורים_וגננות_מסלול_הלכה.xlsx",
-    "bfb0fd74a6aa_מוג_רגילה_הלכה-מדיניות_הקשעות_מרץ_2026.xlsx",
-    "04917f58aa7c_מדיניות_השקעות_צפויה_תשפו-מוג_הלכתי.xlsx",
-    "e24bcdd9632f_מוג_רגילה-מסלול_הלכה-מדיניות_תשפה_דצמבר_2024.xlsx",
-    "5c5ed4b10ae4_מורים_וגננות_רגילה_מסלול_הלכה_מדיניות_השקעות_תשפה-1.xlsx",
-    "a5445e68df99_מוג_רגילה_הלכה-מדיניות_השקעות_צפויה_25.12.23.xlsx",
-    "2fdf027b2e84_מדיניות_השקעות_צפויה_תשפד-מוג_רגילה-מסלול_הלכה.xlsx",
-    "2322ef12b3b1_מדיניות_השקעות_צפויה_מוג_רגילה_תשפג-מסלול_הלכה-עדכון_דצמבר_2022.xlsx",
-    "6cfd9c82321d_מדיניות_השקעות_צפויה_תשפג_מוג_רגילה_מסלול_הלכה.xlsx",
-    "69a63da2ee3e_מדיניות_השקעות_צפויה_תשפז-מורים_וגננות_מסלול_אשראי_ואגח.xlsx",
-    "0bf765a357c7_מדיניות_השקעות_צפויה_תשפו-מוג_אשראי_ואגח.xlsx",
-    "a0eb893d4fee_מוג_רגילה-מסלול_אשראי_ואגח-מדיניות_תשפה_דצמבר_2024.xlsx",
-    "f484e9ec6472_מורים_וגננות_רגילה_מסלול_אשראי_ואגח_מדיניות_תשפה-1.xlsx",
-    "db25745976a0_מוג_רגילה_אגח-מדיניות_השקעות_צפויה_25.12.23.xlsx",
-    "c20b8501e09e_מדיניות_השקעות_צפויה_תשפד-מוג_רגילה-מסלול_אגח.xlsx",
-    "ff39f2e4f8a7_מדיניות_השקעות_צפויה_מוג__רגילה_תשפג-מסלול_אגח-עדכון_דצמבר_2022.xlsx",
-    "2788c86186f8_מדיניות_השקעות_צפויה_תשפג_מוג_רגילה_מסלול_אגח.xlsx",
-    "4238d0e71ea7_מדיניות_השקעות_צפויה_תשפז-מורים_וגננות_מקור-מסלול_כללי.xlsx",
-    "0da9ec3ce0cb_מוג_מקור-מדיניות_השקעות_מרץ_2026.xlsx",
-    "c075d23b8e5f_מדיניות_השקעות_צפויה_תשפו-מוג_מקור_אשראי_ואגח.xlsx",
-    "e1e7908223ad_מוג_מקור-מסלול_כללי-מדיניות_השקעות_תשפה_דצמבר_2024.xlsx",
-    "0690fece1b44_מורים_וגננות_מקור_מסלול_כללי_מדיניות_השקעות_תשפה-1.xlsx",
-    "1cbeb8d27d5c_מוג_מקור_כללי-מדיניות_השקעות_צפויה_25.12.23.xlsx",
-    "66070d84fc8e_מדיניות_השקעות_צפויה_תשפד-מוג_מקור-מסלול_כללי.xlsx",
-    "abe86ef81313_מדיניות_השקעות_צפויה_מוג_מקור_תשפג-מסלול_כללי-עדכון_דצמבר_2022.xlsx",
-    "f76ef598ba07_מ_דיניות_השקעות_צפויה_תשפג_מוג_מקור_מסלול_כללי.xlsx",
-    "cc107f76bce3_מדיניות_השקעות_צפויה_תשפז-מורים_וגננות_מקור-מסלול_הלכה.xlsx",
-    "5924778a20d2_מוג_מקור_הלכה-מדיניות_השקעות_מרץ_2026.xlsx",
-    "b203bf7f416c_מדיניות_השקעות_צפויה_תשפו-מוג_מקור_הלכתי.xlsx",
-    "274f6d24e528_מוג_מקור-מסלול_הלכה-מדיניות_תשפה_דצמבר_2024.xlsx",
-    "a4b66fc71d50_מורים_וגננות_מקור_מסלול_הלכה_מדיניות_השקעה_תשפה-1.xlsx",
-    "90456ec3b930_מוג_מקור_הלכתי-מדיניות_השקעות_צפויה_25.12.23.xlsx",
-    "6e47250e938f_מדיניות_השקעות_צפויה_תשפד-מוג_מקור-מסלול_הלכה.xlsx",
-    "c27da50e55c9_מדיניות_השקעות_צפויה_מוג_מקור_תשפג-מסלול_הלכה-עדכון_דצמבר_2022.xlsx",
-    "9e5b15d0536a_מדיניות_השקעות_צפויה_תשפג_מוג_מקור_מסלול_הלכה.xlsx",
-    "42540a9e130d_מדיניות_השקעות_צפויה_תשפז-מורים_וגננות_מקור-מסלול_אשראי_ואגח.xlsx",
-    "c075d23b8e5f_מדיניות_השקעות_צפויה_תשפו-מוג_מקור_אשראי_ואגח.xlsx",
-    "4068bc5e3698_מוג_מקור-מסלול_אשראי_ואגח-מדיניות_תשפה_דצמבר_2024.xlsx",
-    "d64e5dd0deaf_מורים_וגננות_מקור_מסלול_אשראי_ואגח_מדיניות_השקעה_תשפה-1.xlsx",
-    "8eefd1c44712_מוג_מקור_אגח-מדיניות_השקעות_25.12.23.xlsx",
-    "6b68ec7fd9d4_מדיניות_השקעות_צפויה_תשפד-מוג_מקוצר-מסלול_אגח.xlsx",
-    "550f620e9fe9_מדיניות_השקעות_צפויה_מוג_מקור_תשפג-מסלול_אגח-עדכון_דצמבר_2022.xlsx",
-    "1343db84994c_מדיניות_השקעות_צפויה_תשפג_מוג_מקור_מסלול_אגח.xlsx"
+    "bca3d791c69d_מדיניות-הצבעה-באסיפות-כלליות-סוכנות-יהודית-2026-מעודכן-יולי-סופי-2026.docx.pdf",
+    "07d637b6f53b_מדיניות-הצבעה-חברת-עמדה-2025-2026.pdf"
    ]
-  },
-  {
-   "legal_id": "520031824",
-   "name": "החברה המנהלת של רום קרן ההשתלמות לעובדי הרשויות המקומיות בע\"מ",
-   "pages": [
-    {
-     "url": "https://www.krm.co.il/?CategoryID=217&ArticleID=5",
-     "links": 338,
-     "followed": [],
-     "files": 237,
-     "clicked": 0,
-     "captured": 0,
-     "selected": [
-      "https://www.krm.co.il/_Uploads/dbsAttachedFiles/investment-forecast-clasic-12.07.2026.pdf",
-      "https://www.krm.co.il/_Uploads/dbsAttachedFiles/investment-forecast-clasic-2026(1).pdf",
-      "https://www.krm.co.il/_Uploads/dbsAttachedFiles/investment-forecast-clssic-2025.xlsx",
-      "https://www.krm.co.il/_Uploads/dbsAttachedFiles/investment-forecast-clssic-29.01.2024.xlsx",
-      "https://www.krm.co.il/_Uploads/dbsAttachedFiles/investment-forecast-classic-12.10.2023.xlsx",
-      "https://www.krm.co.il/_Uploads/dbsAttachedFiles/investment-forecast-classic-31.01.2023.xlsx",
-      "https://www.krm.co.il/_Uploads/dbsAttachedFiles/investment-forecast-classic-27.01.2022.pdf"
-     ],
-     "unselected_files": [
-      {
-       "file": "https://www.krm.co.il/_Uploads/dbsAttachedFiles/memune_rom_clasi_augest_2026.xlsx",
-       "text": "אוגוסט 2026",
-       "ctx": ""
-      },
-      {
-       "file": "https://www.krm.co.il/_Uploads/dbsAttachedFiles/memune_rom_clasic_july_2026.xlsx",
-       "text": "יולי 2026",
-       "ctx": ""
-      },
-      {
-       "file": "https://www.krm.co.il/_Uploads/dbsAttachedFiles/memune_rom_clasic_june_2026.xlsx",
-       "text": "יוני 2026",
-       "ctx": ""
-      },
-      {
-       "file": "https://www.krm.co.il/_Uploads/dbsAttachedFiles/memune_rom_clasic_may_2026.xlsx",
-       "text": "מאי 2026",
-       "ctx": ""
-      },
-      {
-       "file": "https://www.krm.co.il/_Uploads/dbsAttachedFiles/memune_rom_clasic_april_2026.xlsx",
-       "text": "אפריל 2026",
-       "ctx": ""
-      },
-      {
-       "file": "https://www.krm.co.il/_Uploads/dbsAttachedFiles/memune_rom_clasic_march_2026.xlsx",
-       "text": "מרץ 2026",
-       "ctx": ""
-      },
-      {
-       "file": "https://www.krm.co.il/_Uploads/dbsAttachedFiles/memune_rom_clasic_february_2026.xlsx",
-       "text": "פברואר 2026",
-       "ctx": ""
-      },
-      {
-       "file": "https://www.krm.co.il/_Uploads/dbsAttachedFiles/memune_rom_clasic_january_2026.xlsx",
-       "text": "ינואר 2026",
-       "ctx": ""
-      },
-      {
-       "file": "https://www.krm.co.il/_Uploads/dbsAttachedFiles/memune_rom_clasi_december_2025.xlsx",
-       "text": "דצמבר 2025",
-       "ctx": ""
-      },
-      {
-       "file": "https://www.krm.co.il/_Uploads/dbsAttachedFiles/memune_rom_clasi_november_2025.xlsx",
-       "text": "נובמבר 2025",
-       "ctx": ""
-      },
-      {
-       "file": "https://www.krm.co.il/_Uploads/dbsAttachedFiles/memune_rom_clasic_october_2025.xlsx",
-       "text": "אוקטובר 2025",
-       "ctx": ""
-      },
-      {
-       "file": "https://www.krm.co.il/_Uploads/dbsAttachedFiles/memune_rom_clasi_september_2025.xlsx",
-       "text": "ספטמבר 2025",
-       "ctx": ""
-      },
-      {
-       "file": "https://www.krm.co.il/_Uploads/dbsAttachedFiles/memune_rom_clasi_augest_2025.xlsx",
-       "text": "אוגוסט 2025",
-       "ctx": ""
-      },
-      {
-       "file": "https://www.krm.co.il/_Uploads/dbsAttachedFiles/memune_rom_clasic_july_2025.xlsx",
-       "text": "יולי 2025",
-       "ctx": ""
-      },
-      {
-       "file": "https://www.krm.co.il/_Uploads/dbsAttachedFiles/memune_rom_clasic_june_2025.xlsx",
-       "text": "יוני 2025",
-       "ctx": ""
-      },
-      {
-       "file": "https://www.krm.co.il/_Uploads/dbsAttachedFiles/memune_rom_clasic_may_2025.xlsx",
-       "text": "מאי 2025",
-       "ctx": ""
-      },
-      {
-       "file": "https://www.krm.co.il/_Uploads/dbsAttachedFiles/memune_rom_clasic_april_2025.xlsx",
-       "text": "אפריל 2025",
-       "ctx": ""
-      },
-      {
-       "file": "https://www.krm.co.il/_Uploads/dbsAttachedFiles/memune_rom_clasic_march_2025.xlsx",
-       "text": "מרץ 2025",
-       "ctx": ""
-      },
-      {
-       "file": "https://www.krm.co.il/_Uploads/dbsAttachedFiles/memune_rom_clasic_february_2025.xlsx",
-       "text": "פברואר 2025",
-       "ctx": ""
-      },
-      {
-       "file": "https://www.krm.co.il/_Uploads/dbsAttachedFiles/memune_rom_clasic_january_2025.xlsx",
-       "text": "ינואר 2025",
-       "ctx": ""
-      },
-      {
-       "file": "https://www.krm.co.il/_Uploads/dbsAttachedFiles/direct_expanses_clasi_december_2025(1).xlsx",
-       "text": "דצמבר 2025",
-       "ctx": ""
-      },
-      {
-       "file": "https://www.krm.co.il/_Uploads/dbsAttachedFiles/direct_expanses_clasi_december_2024.xlsx",
-       "text": "דצמבר 2024",
-       "ctx": ""
-      },
-      {
-       "file": "https://www.krm.co.il/_Uploads/dbsAttachedFiles/direct_expanses_clasi_december_2023(1).xlsx",
-       "text": "דצמבר 2023",
-       "ctx": ""
-      },
-      {
-       "file": "https://www.krm.co.il/_Uploads/dbsAttachedFiles/direct_expanses_clasi_december_2022.xlsx",
-       "text": "דצמבר 2022",
-       "ctx": ""
-      },
-      {
-       "file": "https://www.krm.co.il/_Uploads/dbsAttachedFiles/direct_expanses_clasi_december_2021.xlsx",
-       "text": "דצמבר 2021",
-       "ctx": ""
-      }
-     ]
-    },
-    {
-     "url": "https://www.krm.co.il/?CategoryID=217&ArticleID=3",
-     "links": 325,
-     "followed": [],
-     "files": 224,
-     "clicked": 0,
-     "captured": 0,
-     "selected": [
-      "https://www.krm.co.il/_Uploads/dbsAttachedFiles/investment-forecast-ravid-2026(1).pdf",
-      "https://www.krm.co.il/_Uploads/dbsAttachedFiles/investment-forecast-ravid-08.2025.pdf",
-      "https://www.krm.co.il/_Uploads/dbsAttachedFiles/investment-forecast-ravid-2025.pdf",
-      "https://www.krm.co.il/_Uploads/dbsAttachedFiles/investment-forecast-ravid-15.08.2024.1.pdf",
-      "https://www.krm.co.il/_Uploads/dbsAttachedFiles/investment-forecast-ravid-29.01.2024.pdf",
-      "https://www.krm.co.il/_Uploads/dbsAttachedFiles/investment-forecast-ravid-31.01.2023.pdf",
-      "https://www.krm.co.il/_Uploads/dbsAttachedFiles/investment-forecast-ravid-2022.pdf"
-     ],
-     "unselected_files": [
-      {
-       "file": "https://www.krm.co.il/_Uploads/dbsAttachedFiles/memune_rom_ravid_augest_2026.xlsx",
-       "text": "אוגוסט 2026",
-       "ctx": ""
-      },
-      {
-       "file": "https://www.krm.co.il/_Uploads/dbsAttachedFiles/memune_rom_ravid_july_2026.xlsx",
-       "text": "יולי 2026",
-       "ctx": ""
-      },
-      {
-       "file": "https://www.krm.co.il/_Uploads/dbsAttachedFiles/memune_rom_ravid_june_2026.xlsx",
-       "text": "יוני 2026",
-       "ctx": ""
-      },
-      {
-       "file": "https://www.krm.co.il/_Uploads/dbsAttachedFiles/memune_rom_ravid_may_2026.xlsx",
-       "text": "מאי 2026",
-       "ctx": ""
-      },
-      {
-       "file": "https://www.krm.co.il/_Uploads/dbsAttachedFiles/memune_rom_ravid_april_2026.xlsx",
-       "text": "אפריל 2026",
-       "ctx": ""
-      },
-      {
-       "file": "https://www.krm.co.il/_Uploads/dbsAttachedFiles/memune_rom_ravid_march_2026.xlsx",
-       "text": "מרץ 2026",
-       "ctx": ""
-      },
-      {
-       "file": "https://www.krm.co.il/_Uploads/dbsAttachedFiles/memune_rom_ravid_february_2026.xlsx",
-       "text": "פברואר 2026",
-       "ctx": ""
-      },
-      {
-       "file": "https://www.krm.co.il/_Uploads/dbsAttachedFiles/memune_rom_ravid_january_2026.xlsx",
-       "text": "ינואר 2026",
-       "ctx": ""
-      },
-      {
-       "file": "https://www.krm.co.il/_Uploads/dbsAttachedFiles/memune_rom_ravid_december_2025.xlsx",
-       "text": "דצמבר 2025",
-       "ctx": ""
-      },
-      {
-       "file": "https://www.krm.co.il/_Uploads/dbsAttachedFiles/memune_rom_ravid_november_2025.xlsx",
-       "text": "נובמבר 2025",
-       "ctx": ""
-      },
-      {
-       "file": "https://www.krm.co.il/_Uploads/dbsAttachedFiles/memune_rom_ravid_october_2025.xlsx",
-       "text": "אוקטובר 2025",
-       "ctx": ""
-      },
-      {
-       "file": "https://www.krm.co.il/_Uploads/dbsAttachedFiles/memune_rom_ravid_september_2025.xlsx",
-       "text": "ספטמבר 2025",
-       "ctx": ""
-      },
-      {
-       "file": "https://www.krm.co.il/_Uploads/dbsAttachedFiles/memune_rom_ravid_augest_2025.xlsx",
-       "text": "אוגוסט 2025",
-       "ctx": ""
-      },
-      {
-       "file": "https://www.krm.co.il/_Uploads/dbsAttachedFiles/memune_rom_ravid_july_2025.xlsx",
-       "text": "יולי 2025",
-       "ctx": ""
-      },
-      {
-       "file": "https://www.krm.co.il/_Uploads/dbsAttachedFiles/memune_rom_ravid_june_2025.xlsx",
-       "text": "יוני 2025",
-       "ctx": ""
-      },
-      {
-       "file": "https://www.krm.co.il/_Uploads/dbsAttachedFiles/memune_rom_ravid_may_2025.xlsx",
-       "text": "מאי 2025",
-       "ctx": ""
-      },
-      {
-       "file": "https://www.krm.co.il/_Uploads/dbsAttachedFiles/memune_rom_ravid_april_2025.xlsx",
-       "text": "אפריל 2025",
-       "ctx": ""
-      },
-      {
-       "file": "https://www.krm.co.il/_Uploads/dbsAttachedFiles/memune_rom_ravid_march_2025.xlsx",
-       "text": "מרץ 2025",
-       "ctx": ""
-      },
-      {
-       "file": "https://www.krm.co.il/_Uploads/dbsAttachedFiles/memune_rom_ravid_february_2025(1).xlsx",
-       "text": "פברואר 2025",
-       "ctx": ""
-      },
-      {
-       "file": "https://www.krm.co.il/_Uploads/dbsAttachedFiles/memune_rom_ravid_january_2025.xlsx",
-       "text": "ינואר 2025",
-       "ctx": ""
-      },
-      {
-       "file": "https://www.krm.co.il/_Uploads/dbsAttachedFiles/direct_expanses_ravid_december_2025.xlsx",
-       "text": "דצמבר 2025",
-       "ctx": ""
-      },
-      {
-       "file": "https://www.krm.co.il/_Uploads/dbsAttachedFiles/direct_expanses_ravid_december_2024.xlsx",
-       "text": "דצמבר 2024",
-       "ctx": ""
-      },
-      {
-       "file": "https://www.krm.co.il/_Uploads/dbsAttachedFiles/direct_expanses_ravid_december_2023(1).xlsx",
-       "text": "דצמבר 2023",
-       "ctx": ""
-      },
-      {
-       "file": "https://www.krm.co.il/_Uploads/dbsAttachedFiles/direct_expanses_ravid_december_2022.xlsx",
-       "text": "דצמבר 2022",
-       "ctx": ""
-      },
-      {
-       "file": "https://www.krm.co.il/_Uploads/dbsAttachedFiles/direct_expanses_ravid_december_2021.xlsx",
-       "text": "דצמבר 2021",
-       "ctx": ""
-      }
-     ]
-    },
-    {
-     "url": "https://www.krm.co.il/?CategoryID=217&ArticleID=7",
-     "links": 318,
-     "followed": [],
-     "files": 217,
-     "clicked": 0,
-     "captured": 0,
-     "selected": [
-      "https://www.krm.co.il/_Uploads/dbsAttachedFiles/investment-forecast-sapir-2026(1).pdf",
-      "https://www.krm.co.il/_Uploads/dbsAttachedFiles/investment-forecast-sapir-2025.pdf",
-      "https://www.krm.co.il/_Uploads/dbsAttachedFiles/investment-forecast-sapir-29.01.2024.pdf",
-      "https://www.krm.co.il/_Uploads/dbsAttachedFiles/investment-forecast-sapir-31.01.2023.pdf",
-      "https://www.krm.co.il/_Uploads/dbsAttachedFiles/investment-forecast-sapir-2022.pdf"
-     ],
-     "unselected_files": [
-      {
-       "file": "https://www.krm.co.il/_Uploads/dbsAttachedFiles/memune_rom_sapir_augest_2026.xlsx",
-       "text": "אוגוסט 2026",
-       "ctx": ""
-      },
-      {
-       "file": "https://www.krm.co.il/_Uploads/dbsAttachedFiles/memune_rom_sapir_july_2026.xlsx",
-       "text": "יולי 2026",
-       "ctx": ""
-      },
-      {
-       "file": "https://www.krm.co.il/_Uploads/dbsAttachedFiles/memune_rom_sapir_june_2026.xlsx",
-       "text": "יוני 2026",
-       "ctx": ""
-      },
-      {
-       "file": "https://www.krm.co.il/_Uploads/dbsAttachedFiles/memune_rom_sapir_mayl_2026.xlsx",
-       "text": "מאי 2026",
-       "ctx": ""
-      },
-      {
-       "file": "https://www.krm.co.il/_Uploads/dbsAttachedFiles/memune_rom_sapir_april_2026.xlsx",
-       "text": "אפריל 2026",
-       "ctx": ""
-      },
-      {
-       "file": "https://www.krm.co.il/_Uploads/dbsAttachedFiles/memune_rom_sapir_march_2026.xlsx",
-       "text": "מרץ 2026",
-       "ctx": ""
-      },
-      {
-       "file": "https://www.krm.co.il/_Uploads/dbsAttachedFiles/memune_rom_sapir_january_2026(1).xlsx",
-       "text": "פברואר 2026",
-       "ctx": ""
-      },
-      {
-       "file": "https://www.krm.co.il/_Uploads/dbsAttachedFiles/memune_rom_sapir_january_2026.xlsx",
-       "text": "ינואר 2026",
-       "ctx": ""
-      },
-      {
-       "file": "https://www.krm.co.il/_Uploads/dbsAttachedFiles/memune_rom_sapir_december_2025.xlsx",
-       "text": "דצמבר 2025",
-       "ctx": ""
-      },
-      {
-       "file": "https://www.krm.co.il/_Uploads/dbsAttachedFiles/memune_rom_sapir_november_2025.xlsx",
-       "text": "נובמבר 2025",
-       "ctx": ""
-      },
-      {
-       "file": "https://www.krm.co.il/_Uploads/dbsAttachedFiles/memune_rom_sapir_october_2025.xlsx",
-       "text": "אוקטובר 2025",
-       "ctx": ""
-      },
-      {
-       "file": "https://www.krm.co.il/_Uploads/dbsAttachedFiles/memune_rom_sapir_september_2025.xlsx",
-       "text": "ספטמבר 2025",
-       "ctx": ""
-      },
-      {
-       "file": "https://www.krm.co.il/_Uploads/dbsAttachedFiles/memune_rom_sapir_augest_2025.xlsx",
-       "text": "אוגוסט 2025",
-       "ctx": ""
-      },
-      {
-       "file": "https://www.krm.co.il/_Uploads/dbsAttachedFiles/memune_rom_sapir_july_2025.xlsx",
-       "text": "יולי 2025",
-       "ctx": ""
-      },
-      {
-       "file": "https://www.krm.co.il/_Uploads/dbsAttachedFiles/memune_rom_sapir_june_2025.xlsx",
-       "text": "יוני 2025",
-       "ctx": ""
-      },
-      {
-       "file": "https://www.krm.co.il/_Uploads/dbsAttachedFiles/memune_rom_sapir_may_2025.xlsx",
-       "text": "מאי 2025",
-       "ctx": ""
-      },
-      {
-       "file": "https://www.krm.co.il/_Uploads/dbsAttachedFiles/memune_rom_sapir_april_2025.xlsx",
-       "text": "אפריל 2025",
-       "ctx": ""
-      },
-      {
-       "file": "https://www.krm.co.il/_Uploads/dbsAttachedFiles/memune_rom_sapir_march_2025.xlsx",
-       "text": "מרץ 2025",
-       "ctx": ""
-      },
-      {
-       "file": "https://www.krm.co.il/_Uploads/dbsAttachedFiles/memune_rom_sapir_february_2025.xlsx",
-       "text": "פברואר 2025",
-       "ctx": ""
-      },
-      {
-       "file": "https://www.krm.co.il/_Uploads/dbsAttachedFiles/memune_rom_sapir_january_2025.xlsx",
-       "text": "ינואר 2025",
-       "ctx": ""
-      },
-      {
-       "file": "https://www.krm.co.il/_Uploads/dbsAttachedFiles/direct_expanses_sapir_december_2025.xlsx",
-       "text": "דצמבר 2025",
-       "ctx": ""
-      },
-      {
-       "file": "https://www.krm.co.il/_Uploads/dbsAttachedFiles/direct_expanses_sapir_december_2024.xlsx",
-       "text": "דצמבר 2024",
-       "ctx": ""
-      },
-      {
-       "file": "https://www.krm.co.il/_Uploads/dbsAttachedFiles/direct_expanses_sapir_december_2023(1).xlsx",
-       "text": "דצמבר 2023",
-       "ctx": ""
-      },
-      {
-       "file": "https://www.krm.co.il/_Uploads/dbsAttachedFiles/direct_expanses_sapir_december_2022.xlsx",
-       "text": "דצמבר 2022",
-       "ctx": ""
-      },
-      {
-       "file": "https://www.krm.co.il/_Uploads/dbsAttachedFiles/direct_expanses_sapir_december_2021.xlsx",
-       "text": "דצמבר 2021",
-       "ctx": ""
-      }
-     ]
-    },
-    {
-     "url": "https://www.krm.co.il/?CategoryID=217&ArticleID=12",
-     "links": 218,
-     "followed": [],
-     "files": 114,
-     "clicked": 0,
-     "captured": 0,
-     "selected": [
-      "https://www.krm.co.il/_Uploads/dbsAttachedFiles/investment-forecast-halaha-12.07.2026.pdf",
-      "https://www.krm.co.il/_Uploads/dbsAttachedFiles/investment-forecast-halaha-2026(1).pdf",
-      "https://www.krm.co.il/_Uploads/dbsAttachedFiles/investment-forecast-halaha-2025.pdf",
-      "https://www.krm.co.il/_Uploads/dbsAttachedFiles/investment-forecast-halaha-29.01.2024.pdf",
-      "https://www.krm.co.il/_Uploads/dbsAttachedFiles/investment-forecast-halaha-31.01.2023.pdf",
-      "https://www.krm.co.il/_Uploads/dbsAttachedFiles/investment-forecast-halaha-2022.pdf"
-     ],
-     "unselected_files": [
-      {
-       "file": "https://www.krm.co.il/_Uploads/dbsAttachedFiles/memune_rom_halaha_augest_2026.xlsx",
-       "text": "אוגוסט 2026",
-       "ctx": ""
-      },
-      {
-       "file": "https://www.krm.co.il/_Uploads/dbsAttachedFiles/memune_rom_halaha_july_2026.xlsx",
-       "text": "יולי 2026",
-       "ctx": ""
-      },
-      {
-       "file": "https://www.krm.co.il/_Uploads/dbsAttachedFiles/memune_rom_halaha_june_2026.xlsx",
-       "text": "יוני 2026",
-       "ctx": ""
-      },
-      {
-       "file": "https://www.krm.co.il/_Uploads/dbsAttachedFiles/memune_rom_halaha_may_2026.xlsx",
-       "text": "מאי 2026",
-       "ctx": ""
-      },
-      {
-       "file": "https://www.krm.co.il/_Uploads/dbsAttachedFiles/memune_rom_halaha_april_2026.xlsx",
-       "text": "אפריל 2026",
-       "ctx": ""
-      },
-      {
-       "file": "https://www.krm.co.il/_Uploads/dbsAttachedFiles/memune_rom_halaha_march_2026.xlsx",
-       "text": "מרץ 2026",
-       "ctx": ""
-      },
-      {
-       "file": "https://www.krm.co.il/_Uploads/dbsAttachedFiles/memune_rom_halaha_february_2026.xlsx",
-       "text": "פברואר 2026",
-       "ctx": ""
-      },
-      {
-       "file": "https://www.krm.co.il/_Uploads/dbsAttachedFiles/memune_rom_halaha_january_2026(1).xlsx",
-       "text": "ינואר 2026",
-       "ctx": ""
-      },
-      {
-       "file": "https://www.krm.co.il/_Uploads/dbsAttachedFiles/memune_rom_halaha_december_2025.xlsx",
-       "text": "דצמבר 2025",
-       "ctx": ""
-      },
-      {
-       "file": "https://www.krm.co.il/_Uploads/dbsAttachedFiles/memune_rom_halaha_november_2025.xlsx",
-       "text": "נובמבר 2025",
-       "ctx": ""
-      },
-      {
-       "file": "https://www.krm.co.il/_Uploads/dbsAttachedFiles/memune_rom_halaha_october_2025.xlsx",
-       "text": "אוקטובר 2025",
-       "ctx": ""
-      },
-      {
-       "file": "https://www.krm.co.il/_Uploads/dbsAttachedFiles/memune_rom_halaha_september_2025.xlsx",
-       "text": "ספטמבר 2025",
-       "ctx": ""
-      },
-      {
-       "file": "https://www.krm.co.il/_Uploads/dbsAttachedFiles/memune_rom_halaha_augest_2025.xlsx",
-       "text": "אוגוסט 2025",
-       "ctx": ""
-      },
-      {
-       "file": "https://www.krm.co.il/_Uploads/dbsAttachedFiles/memune_rom_halaha_july_2025.xlsx",
-       "text": "יולי 2025",
-       "ctx": ""
-      },
-      {
-       "file": "https://www.krm.co.il/_Uploads/dbsAttachedFiles/memune_rom_halaha_june_2025.xlsx",
-       "text": "יוני 2025",
-       "ctx": ""
-      },
-      {
-       "file": "https://www.krm.co.il/_Uploads/dbsAttachedFiles/memune_rom_halaha_may_2025.xlsx",
-       "text": "מאי 2025",
-       "ctx": ""
-      },
-      {
-       "file": "https://www.krm.co.il/_Uploads/dbsAttachedFiles/memune_rom_halaha_april_2025.xlsx",
-       "text": "אפריל 2025",
-       "ctx": ""
-      },
-      {
-       "file": "https://www.krm.co.il/_Uploads/dbsAttachedFiles/memune_rom_halaha_march_2025.xlsx",
-       "text": "מרץ 2025",
-       "ctx": ""
-      },
-      {
-       "file": "https://www.krm.co.il/_Uploads/dbsAttachedFiles/memune_rom_halaha_february_2025.xlsx",
-       "text": "פברואר 2025",
-       "ctx": ""
-      },
-      {
-       "file": "https://www.krm.co.il/_Uploads/dbsAttachedFiles/memune_rom_halaha_january_2025.xlsx",
-       "text": "ינואר 2025",
-       "ctx": ""
-      },
-      {
-       "file": "https://www.krm.co.il/_Uploads/dbsAttachedFiles/direct_expanses_halaha_december_2025.xlsx",
-       "text": "דצמבר 2025",
-       "ctx": ""
-      },
-      {
-       "file": "https://www.krm.co.il/_Uploads/dbsAttachedFiles/direct_expanses_halaha_december_2024.xlsx",
-       "text": "דצמבר 2024",
-       "ctx": ""
-      },
-      {
-       "file": "https://www.krm.co.il/_Uploads/dbsAttachedFiles/direct_expanses_halaha_december_2023(1).xlsx",
-       "text": "דצמבר 2023",
-       "ctx": ""
-      },
-      {
-       "file": "https://www.krm.co.il/_Uploads/dbsAttachedFiles/direct_expanses_halaha_december_2022.xlsx",
-       "text": "דצמבר 2022",
-       "ctx": ""
-      },
-      {
-       "file": "https://www.krm.co.il/_Uploads/dbsAttachedFiles/direct_expanses_halaha_december_2021.xlsx",
-       "text": "דצמבר 2021",
-       "ctx": ""
-      }
-     ]
-    },
-    {
-     "url": "https://www.krm.co.il/?CategoryID=217",
-     "links": 103,
-     "followed": [],
-     "files": 0,
-     "clicked": 0,
-     "captured": 0,
-     "selected": [],
-     "unselected_files": []
-    },
-    {
-     "url": "https://www.krm.co.il",
-     "links": 118,
-     "followed": [],
-     "files": 0,
-     "clicked": 0,
-     "captured": 0,
-     "selected": [],
-     "unselected_files": []
-    }
-   ],
-   "new_docs": 0,
-   "found": 792,
-   "selected": 25,
-   "had": 25,
-   "errors": [],
-   "diag": [
-    "החברה המנהלת של רו: links=338 files=237 clicked=0 captured=0 selected=7",
-    "החברה המנהלת של רו: links=325 files=224 clicked=0 captured=0 selected=7",
-    "החברה המנהלת של רו: links=318 files=217 clicked=0 captured=0 selected=5",
-    "החברה המנהלת של רו: links=218 files=114 clicked=0 captured=0 selected=6",
-    "החברה המנהלת של רו: links=103 files=0 clicked=0 captured=0 selected=0",
-    "החברה המנהלת של רו: links=118 files=0 clicked=0 captured=0 selected=0"
-   ],
-   "new_files": []
-  },
-  {
-   "legal_id": "520030677",
-   "name": "איילון חברה לביטוח בע\"מ",
-   "pages": [
-    {
-     "url": "https://www.ayalon-ins.co.il/about-us/about-ayalon/investments/policy/",
-     "links": 391,
-     "followed": [
-      "https://www.ayalon-ins.co.il/about-us/about-ayalon/investments/publications/",
-      "https://www.ayalon-ins.co.il/career/finance-investments",
-      "https://www.ayalon-ins.co.il/about-us/about-ayalon/investments/",
-      "https://www.ayalon-ins.co.il/investments-provident",
-      "https://www.ayalon-ins.co.il/investments-directorate",
-      "https://www.ayalon-ins.co.il/investments-levelagreement"
-     ],
-     "files": 0,
-     "clicked": 2,
-     "captured": 0,
-     "selected": [],
-     "unselected_files": []
-    },
-    {
-     "url": "https://www.ayalon-ins.co.il/investments",
-     "links": 394,
-     "followed": [],
-     "files": 1,
-     "clicked": 2,
-     "captured": 0,
-     "selected": [],
-     "unselected_files": [
-      {
-       "file": "https://www.ayalon-ins.co.il/media/dtvlz32w/amitim_03_2026.pdf",
-       "text": "עקרונות נוהל העברת זכויות עמיתים שלא במזומן",
-       "ctx": ""
-      }
-     ]
-    },
-    {
-     "url": "https://www.ayalon-ins.co.il",
-     "links": 425,
-     "followed": [
-      "https://www.ayalon-ins.co.il/insurances/car/having-policy"
-     ],
-     "files": 0,
-     "clicked": 2,
-     "captured": 0,
-     "selected": [],
-     "unselected_files": []
-    },
-    {
-     "url": "https://www.ayalon-ins.co.il/about-us/about-ayalon/investments/publications/",
-     "links": 398,
-     "followed": [],
-     "files": 5,
-     "clicked": 2,
-     "captured": 0,
-     "selected": [],
-     "unselected_files": [
-      {
-       "file": "https://www.ayalon-ins.co.il/media/jqjekhjr/bakasha_hesder_pshara_nov_2025.pdf",
-       "text": "להורדה",
-       "ctx": ""
-      },
-      {
-       "file": "https://www.ayalon-ins.co.il/media/5uahnahv/hodaa_hagashat_hesder_nov_2025.pdf",
-       "text": "להורדה",
-       "ctx": ""
-      },
-      {
-       "file": "https://www.ayalon-ins.co.il/media/po0hzqzw/gilad_heker_apr_2026.pdf",
-       "text": "להורדה",
-       "ctx": ""
-      },
-      {
-       "file": "https://www.ayalon-ins.co.il/media/ycada1tc/br_yizugit_04_2026.pdf",
-       "text": "להורדה",
-       "ctx": ""
-      },
-      {
-       "file": "https://www.ayalon-ins.co.il/media/e0lgrfst/הודעה-על-אישור-הסדרי-פשרה.pdf",
-       "text": "להורדה",
-       "ctx": ""
-      }
-     ]
-    },
-    {
-     "url": "https://www.ayalon-ins.co.il/career/finance-investments",
-     "links": 402,
-     "followed": [],
-     "files": 0,
-     "clicked": 2,
-     "captured": 0,
-     "selected": [],
-     "unselected_files": []
-    },
-    {
-     "url": "https://www.ayalon-ins.co.il/about-us/about-ayalon/investments/",
-     "links": 391,
-     "followed": [],
-     "files": 0,
-     "clicked": 2,
-     "captured": 0,
-     "selected": [],
-     "unselected_files": []
-    },
-    {
-     "url": "https://www.ayalon-ins.co.il/investments-provident",
-     "links": 395,
-     "followed": [
-      "https://www.ayalon-ins.co.il/he/about-provident-container/investments/"
-     ],
-     "files": 1,
-     "clicked": 2,
-     "captured": 0,
-     "selected": [],
-     "unselected_files": [
-      {
-       "file": "https://www.ayalon-ins.co.il/media/dtvlz32w/amitim_03_2026.pdf",
-       "text": "לצפייה לחצו כאן",
-       "ctx": ""
-      }
-     ]
-    },
-    {
-     "url": "https://www.ayalon-ins.co.il/investments-directorate",
-     "links": 393,
-     "followed": [],
-     "files": 0,
-     "clicked": 2,
-     "captured": 0,
-     "selected": [],
-     "unselected_files": []
-    },
-    {
-     "url": "https://www.ayalon-ins.co.il/investments-levelagreement",
-     "links": 393,
-     "followed": [],
-     "files": 1,
-     "clicked": 2,
-     "captured": 0,
-     "selected": [],
-     "unselected_files": [
-      {
-       "file": "https://www.ayalon-ins.co.il/media/02rh04e2/אמנת-השירות-גמל-2026.pdf",
-       "text": "לאמנת השירות לחצו כאן",
-       "ctx": ""
-      }
-     ]
-    },
-    {
-     "url": "https://www.ayalon-ins.co.il/insurances/car/having-policy",
-     "links": 399,
-     "followed": [],
-     "files": 0,
-     "clicked": 2,
-     "captured": 0,
-     "selected": [],
-     "unselected_files": []
-    },
-    {
-     "url": "https://www.ayalon-ins.co.il/he/about-provident-container/investments/",
-     "links": 397,
-     "followed": [],
-     "files": 0,
-     "clicked": 2,
-     "captured": 0,
-     "selected": [],
-     "unselected_files": []
-    }
-   ],
-   "new_docs": 0,
-   "found": 8,
-   "selected": 0,
-   "had": 0,
-   "errors": [],
-   "diag": [
-    "איילון חברה לביטוח: links=391 files=0 clicked=2 captured=0 selected=0",
-    "איילון חברה לביטוח: links=394 files=1 clicked=2 captured=0 selected=0",
-    "   ? amitim_03_2026.pdf | עקרונות נוהל העברת זכויות עמיתים שלא במז | ",
-    "איילון חברה לביטוח: links=425 files=0 clicked=2 captured=0 selected=0",
-    "איילון חברה לביטוח: links=398 files=5 clicked=2 captured=0 selected=0",
-    "   ? bakasha_hesder_pshara_nov_2025.pdf | להורדה | ",
-    "   ? hodaa_hagashat_hesder_nov_2025.pdf | להורדה | ",
-    "   ? gilad_heker_apr_2026.pdf | להורדה | ",
-    "   ? br_yizugit_04_2026.pdf | להורדה | ",
-    "   ? הודעה-על-אישור-הסדרי-פשרה.pdf | להורדה | ",
-    "איילון חברה לביטוח: links=402 files=0 clicked=2 captured=0 selected=0",
-    "איילון חברה לביטוח: links=391 files=0 clicked=2 captured=0 selected=0",
-    "איילון חברה לביטוח: links=395 files=1 clicked=2 captured=0 selected=0",
-    "   ? amitim_03_2026.pdf | לצפייה לחצו כאן | ",
-    "איילון חברה לביטוח: links=393 files=0 clicked=2 captured=0 selected=0",
-    "איילון חברה לביטוח: links=393 files=1 clicked=2 captured=0 selected=0",
-    "   ? אמנת-השירות-גמל-2026.pdf | לאמנת השירות לחצו כאן | ",
-    "איילון חברה לביטוח: links=399 files=0 clicked=2 captured=0 selected=0",
-    "איילון חברה לביטוח: links=397 files=0 clicked=2 captured=0 selected=0"
-   ],
-   "new_files": []
-  },
-  {
-   "legal_id": "517085874",
-   "name": "איילון קופות גמל בע\"מ",
-   "pages": [
-    {
-     "url": "https://www.ayalon-ins.co.il/",
-     "links": 425,
-     "followed": [
-      "https://www.ayalon-ins.co.il/gemel/site-hp",
-      "https://www.ayalon-ins.co.il/insurances/car/having-policy",
-      "https://www.ayalon-ins.co.il/savings",
-      "https://www.ayalon-ins.co.il/providents",
-      "https://www.ayalon-ins.co.il/savings/study-fund",
-      "https://www.ayalon-ins.co.il/savings/provident-fund-invest",
-      "https://www.ayalon-ins.co.il/savings/provident-fund",
-      "https://www.ayalon-ins.co.il/savings/private",
-      "https://www.ayalon-ins.co.il/savings/pensionary",
-      "https://www.ayalon-ins.co.il/savings/reverse-mortgage",
-      "https://www.ayalon-ins.co.il/savings/business-loans",
-      "https://www.ayalon-ins.co.il/savings/investment-routes",
-      "https://www.ayalon-ins.co.il/providents/provident-fund",
-      "https://www.ayalon-ins.co.il/providents/study-fund",
-      "https://www.ayalon-ins.co.il/providents/provident-fund-invest",
-      "https://www.ayalon-ins.co.il/savings/app",
-      "https://www.ayalon-ins.co.il/investments-provident"
-     ],
-     "files": 0,
-     "clicked": 2,
-     "captured": 0,
-     "selected": [],
-     "unselected_files": []
-    },
-    {
-     "url": "https://www.ayalon-ins.co.il",
-     "links": 425,
-     "followed": [],
-     "files": 0,
-     "clicked": 2,
-     "captured": 0,
-     "selected": [],
-     "unselected_files": []
-    },
-    {
-     "url": "https://www.ayalon-ins.co.il/gemel/site-hp",
-     "links": 393,
-     "followed": [
-      "https://www.ayalon-ins.co.il/gemel/lp/calc"
-     ],
-     "files": 0,
-     "clicked": 2,
-     "captured": 0,
-     "selected": [],
-     "unselected_files": []
-    },
-    {
-     "url": "https://www.ayalon-ins.co.il/insurances/car/having-policy",
-     "links": 399,
-     "followed": [],
-     "files": 0,
-     "clicked": 2,
-     "captured": 0,
-     "selected": [],
-     "unselected_files": []
-    },
-    {
-     "url": "https://www.ayalon-ins.co.il/savings",
-     "links": 408,
-     "followed": [
-      "https://www.ayalon-ins.co.il/savings/site-prod",
-      "https://www.ayalon-ins.co.il/savings/business_loans/business_loans_lead/",
-      "https://www.ayalon-ins.co.il/savings/investment-routes/",
-      "https://www.ayalon-ins.co.il/savings/financial-review"
-     ],
-     "files": 0,
-     "clicked": 2,
-     "captured": 0,
-     "selected": [],
-     "unselected_files": []
-    },
-    {
-     "url": "https://www.ayalon-ins.co.il/providents",
-     "links": 405,
-     "followed": [
-      "https://www.ayalon-ins.co.il/gemel/site-prod",
-      "https://www.ayalon-ins.co.il/articles/differences-funds",
-      "https://www.ayalon-ins.co.il/articles/financial-future-kids"
-     ],
-     "files": 0,
-     "clicked": 2,
-     "captured": 0,
-     "selected": [],
-     "unselected_files": []
-    },
-    {
-     "url": "https://www.ayalon-ins.co.il/savings/study-fund",
-     "links": 408,
-     "followed": [],
-     "files": 3,
-     "clicked": 2,
-     "captured": 0,
-     "selected": [],
-     "unselected_files": [
-      {
-       "file": "https://www.ayalon-ins.co.il/mediastorage/media/3nydd2lo/טופס-הצטרפות-קרן-השתלמות-703-מהדורה-062026-1.pdf",
-       "text": "טופס הצטרפות לקרן השתלמות - 703 - מהדורה 06.2026",
-       "ctx": ""
-      },
-      {
-       "file": "https://www.ayalon-ins.co.il/mediastorage/media/zcaialwy/תקנון-קרן-השתלמות-15983-מהדורה-072026.pdf",
-       "text": "תקנון קרן השתלמות - 15983 - מהדורה 07.2026",
-       "ctx": ""
-      },
-      {
-       "file": "https://www.ayalon-ins.co.il/media/eqghchqh/איילון-השתלמות.pdf",
-       "text": "תעודת כשרות מסלולי השקעה לשנת 2026",
-       "ctx": ""
-      }
-     ]
-    },
-    {
-     "url": "https://www.ayalon-ins.co.il/savings/provident-fund-invest",
-     "links": 414,
-     "followed": [],
-     "files": 7,
-     "clicked": 2,
-     "captured": 0,
-     "selected": [],
-     "unselected_files": [
-      {
-       "file": "https://www.ayalon-ins.co.il/mediastorage/media/sn4mjoiz/טופס-הצטרפות-לקופת-גמל-להשקעה-102-מהדורה-062026-1.pdf",
-       "text": "טופס הצטרפות לקופת גמל להשקעה - 102 - מהדורה 06.2026",
-       "ctx": ""
-      },
-      {
-       "file": "https://www.ayalon-ins.co.il/media/qmqeukz4/טופס-הצטרפות-לקופת-גמל-להשקעה-קטין-105-מהדורה-062026.pdf",
-       "text": "טופס הצטרפות לקופת גמל להשקעה לקטין - 105 - מהדורה 06.2026",
-       "ctx": ""
-      },
-      {
-       "file": "https://www.ayalon-ins.co.il/media/0tlfzvqh/טופס-הצטרפות-לקופת-גמל-להשקעה-102-מהדורה-062026-2.pdf",
-       "text": "",
-       "ctx": ""
-      },
-      {
-       "file": "https://www.ayalon-ins.co.il/media/01ub3y4d/בקשת-העברת-כספים-לקופת-גמל-והשתלמות-901-מהדורה-062026.pdf",
-       "text": "בקשת העברת כספים לקופת גמל והשתלמות -",
-       "ctx": ""
-      },
-      {
-       "file": "https://www.ayalon-ins.co.il/media/01ub3y4d/בקשת-העברת-כספים-לקופת-גמל-והשתלמות-901-מהדורה-062026.pdf",
-       "text": "901",
-       "ctx": ""
-      },
-      {
-       "file": "https://www.ayalon-ins.co.il/mediastorage/media/k23nhvjs/תקנון-תקני-לקופת-גמל-להשקעה-15969-מהדורה-072026.pdf",
-       "text": "תקנון גמל להשקעה -  15969 - מהדורה 07.2026",
-       "ctx": ""
-      },
-      {
-       "file": "https://www.ayalon-ins.co.il/media/yhanbkfw/איילון-גמל-להשקעה.pdf",
-       "text": "תעודת כשרות מסלולי השקעה לשנת 2026",
-       "ctx": ""
-      }
-     ]
-    },
-    {
-     "url": "https://www.ayalon-ins.co.il/savings/provident-fund",
-     "links": 416,
-     "followed": [],
-     "files": 3,
-     "clicked": 2,
-     "captured": 0,
-     "selected": [],
-     "unselected_files": [
-      {
-       "file": "https://www.ayalon-ins.co.il/mediastorage/media/uunbejzs/טופס-הצטרפות-לקופת-גמל-לחיסכון-404-מהדורה-062026.pdf",
-       "text": "טופס הצטרפות קופת גמל לחיסכון - 404 - מהדורה 06.2026",
-       "ctx": ""
-      },
-      {
-       "file": "https://www.ayalon-ins.co.il/mediastorage/media/aifo2tct/תקנון-תקני-לקופת-גמל-לחיסכון-15942-מהדורה-072026.pdf",
-       "text": "תקנון גמל לחיסכון - 15942 - מהדורה 07.2026",
-       "ctx": ""
-      },
-      {
-       "file": "https://www.ayalon-ins.co.il/media/qicb3wzx/איילון-גמל.pdf",
-       "text": "תעודת כשרות מסלולי השקעה לשנת 2026",
-       "ctx": ""
-      }
-     ]
-    },
-    {
-     "url": "https://www.ayalon-ins.co.il/savings/private",
-     "links": 423,
-     "followed": [],
-     "files": 6,
-     "clicked": 2,
-     "captured": 0,
-     "selected": [],
-     "unselected_files": [
-      {
-       "file": "https://www.ayalon-ins.co.il/media/aytldxc0/hi_1203_sep_2024.pdf",
-       "text": "תנאים כלליים לתכנית איילון יתרון פיננסי - נספח 1203 - מהדורה 1.2023",
-       "ctx": ""
-      },
-      {
-       "file": "https://www.ayalon-ins.co.il/media/1fqddd40/hi_1519_nov_2024.pdf",
-       "text": "נספח מסלולי השקעה פרט 1519 - מהדורה 09.2024",
-       "ctx": ""
-      },
-      {
-       "file": "https://www.ayalon-ins.co.il/media/w5lackbu/bh_1102_mar_2026.pdf",
-       "text": "טופס הצעה איילון יתרון פיננסי - 1102",
-       "ctx": ""
-      },
-      {
-       "file": "https://www.ayalon-ins.co.il/mediastorage/media/xgtlnv3d/bh_3513.pdf",
-       "text": "עדכון משלם זר - יתרון פיננסי - 3513",
-       "ctx": ""
-      },
-      {
-       "file": "https://www.ayalon-ins.co.il/media/swpp2gkv/bh_8118.pdf",
-       "text": "שאלון איש ציבור - 8118",
-       "ctx": ""
-      },
-      {
-       "file": "https://www.ayalon-ins.co.il/media/0ffm50ca/kosher_02_2026.pdf",
-       "text": "תעודת כשרות למסלולי השקעה לשנת 2026",
-       "ctx": ""
-      }
-     ]
-    },
-    {
-     "url": "https://www.ayalon-ins.co.il/savings/pensionary",
-     "links": 415,
-     "followed": [],
-     "files": 0,
-     "clicked": 2,
-     "captured": 0,
-     "selected": [],
-     "unselected_files": []
-    },
-    {
-     "url": "https://www.ayalon-ins.co.il/savings/reverse-mortgage",
-     "links": 406,
-     "followed": [],
-     "files": 0,
-     "clicked": 2,
-     "captured": 0,
-     "selected": [],
-     "unselected_files": []
-    },
-    {
-     "url": "https://www.ayalon-ins.co.il/savings/business-loans",
-     "links": 398,
-     "followed": [],
-     "files": 0,
-     "clicked": 2,
-     "captured": 0,
-     "selected": [],
-     "unselected_files": []
-    },
-    {
-     "url": "https://www.ayalon-ins.co.il/savings/investment-routes",
-     "links": 403,
-     "followed": [],
-     "files": 0,
-     "clicked": 2,
-     "captured": 0,
-     "selected": [],
-     "unselected_files": []
-    },
-    {
-     "url": "https://www.ayalon-ins.co.il/providents/provident-fund",
-     "links": 416,
-     "followed": [],
-     "files": 3,
-     "clicked": 2,
-     "captured": 0,
-     "selected": [],
-     "unselected_files": [
-      {
-       "file": "https://www.ayalon-ins.co.il/mediastorage/media/uunbejzs/טופס-הצטרפות-לקופת-גמל-לחיסכון-404-מהדורה-062026.pdf",
-       "text": "טופס הצטרפות קופת גמל לחיסכון - 404 - מהדורה 06.2026",
-       "ctx": ""
-      },
-      {
-       "file": "https://www.ayalon-ins.co.il/mediastorage/media/aifo2tct/תקנון-תקני-לקופת-גמל-לחיסכון-15942-מהדורה-072026.pdf",
-       "text": "תקנון גמל לחיסכון - 15942 - מהדורה 07.2026",
-       "ctx": ""
-      },
-      {
-       "file": "https://www.ayalon-ins.co.il/media/qicb3wzx/איילון-גמל.pdf",
-       "text": "תעודת כשרות מסלולי השקעה לשנת 2026",
-       "ctx": ""
-      }
-     ]
-    },
-    {
-     "url": "https://www.ayalon-ins.co.il/providents/study-fund",
-     "links": 412,
-     "followed": [],
-     "files": 3,
-     "clicked": 2,
-     "captured": 0,
-     "selected": [],
-     "unselected_files": [
-      {
-       "file": "https://www.ayalon-ins.co.il/mediastorage/media/3nydd2lo/טופס-הצטרפות-קרן-השתלמות-703-מהדורה-062026-1.pdf",
-       "text": "טופס הצטרפות לקרן השתלמות - 703 - מהדורה 06.2026",
-       "ctx": ""
-      },
-      {
-       "file": "https://www.ayalon-ins.co.il/mediastorage/media/zcaialwy/תקנון-קרן-השתלמות-15983-מהדורה-072026.pdf",
-       "text": "תקנון קרן השתלמות - 15983 - מהדורה 07.2026",
-       "ctx": ""
-      },
-      {
-       "file": "https://www.ayalon-ins.co.il/media/eqghchqh/איילון-השתלמות.pdf",
-       "text": "תעודת כשרות מסלולי השקעה לשנת 2026",
-       "ctx": ""
-      }
-     ]
-    },
-    {
-     "url": "https://www.ayalon-ins.co.il/providents/provident-fund-invest",
-     "links": 414,
-     "followed": [],
-     "files": 7,
-     "clicked": 2,
-     "captured": 0,
-     "selected": [],
-     "unselected_files": [
-      {
-       "file": "https://www.ayalon-ins.co.il/mediastorage/media/sn4mjoiz/טופס-הצטרפות-לקופת-גמל-להשקעה-102-מהדורה-062026-1.pdf",
-       "text": "טופס הצטרפות לקופת גמל להשקעה - 102 - מהדורה 06.2026",
-       "ctx": ""
-      },
-      {
-       "file": "https://www.ayalon-ins.co.il/media/qmqeukz4/טופס-הצטרפות-לקופת-גמל-להשקעה-קטין-105-מהדורה-062026.pdf",
-       "text": "טופס הצטרפות לקופת גמל להשקעה לקטין - 105 - מהדורה 06.2026",
-       "ctx": ""
-      },
-      {
-       "file": "https://www.ayalon-ins.co.il/media/0tlfzvqh/טופס-הצטרפות-לקופת-גמל-להשקעה-102-מהדורה-062026-2.pdf",
-       "text": "",
-       "ctx": ""
-      },
-      {
-       "file": "https://www.ayalon-ins.co.il/media/01ub3y4d/בקשת-העברת-כספים-לקופת-גמל-והשתלמות-901-מהדורה-062026.pdf",
-       "text": "בקשת העברת כספים לקופת גמל והשתלמות -",
-       "ctx": ""
-      },
-      {
-       "file": "https://www.ayalon-ins.co.il/media/01ub3y4d/בקשת-העברת-כספים-לקופת-גמל-והשתלמות-901-מהדורה-062026.pdf",
-       "text": "901",
-       "ctx": ""
-      },
-      {
-       "file": "https://www.ayalon-ins.co.il/mediastorage/media/k23nhvjs/תקנון-תקני-לקופת-גמל-להשקעה-15969-מהדורה-072026.pdf",
-       "text": "תקנון גמל להשקעה -  15969 - מהדורה 07.2026",
-       "ctx": ""
-      },
-      {
-       "file": "https://www.ayalon-ins.co.il/media/yhanbkfw/איילון-גמל-להשקעה.pdf",
-       "text": "תעודת כשרות מסלולי השקעה לשנת 2026",
-       "ctx": ""
-      }
-     ]
-    },
-    {
-     "url": "https://www.ayalon-ins.co.il/savings/app",
-     "links": 398,
-     "followed": [],
-     "files": 0,
-     "clicked": 2,
-     "captured": 0,
-     "selected": [],
-     "unselected_files": []
-    },
-    {
-     "url": "https://www.ayalon-ins.co.il/investments-provident",
-     "links": 395,
-     "followed": [],
-     "files": 1,
-     "clicked": 2,
-     "captured": 0,
-     "selected": [],
-     "unselected_files": [
-      {
-       "file": "https://www.ayalon-ins.co.il/media/dtvlz32w/amitim_03_2026.pdf",
-       "text": "לצפייה לחצו כאן",
-       "ctx": ""
-      }
-     ]
-    },
-    {
-     "url": "https://www.ayalon-ins.co.il/gemel/lp/calc",
-     "links": 397,
-     "followed": [],
-     "files": 0,
-     "clicked": 2,
-     "captured": 0,
-     "selected": [],
-     "unselected_files": []
-    },
-    {
-     "url": "https://www.ayalon-ins.co.il/savings/site-prod",
-     "links": 393,
-     "followed": [],
-     "files": 0,
-     "clicked": 2,
-     "captured": 0,
-     "selected": [],
-     "unselected_files": []
-    },
-    {
-     "url": "https://www.ayalon-ins.co.il/savings/business_loans/business_loans_lead/",
-     "links": 178,
-     "followed": [],
-     "files": 0,
-     "clicked": 0,
-     "captured": 0,
-     "selected": [],
-     "unselected_files": []
-    },
-    {
-     "url": "https://www.ayalon-ins.co.il/savings/investment-routes/",
-     "links": 403,
-     "followed": [],
-     "files": 0,
-     "clicked": 2,
-     "captured": 0,
-     "selected": [],
-     "unselected_files": []
-    },
-    {
-     "url": "https://www.ayalon-ins.co.il/savings/financial-review",
-     "links": 411,
-     "followed": [],
-     "files": 0,
-     "clicked": 3,
-     "captured": 0,
-     "selected": [],
-     "unselected_files": []
-    },
-    {
-     "url": "https://www.ayalon-ins.co.il/gemel/site-prod",
-     "links": 393,
-     "followed": [],
-     "files": 0,
-     "clicked": 2,
-     "captured": 0,
-     "selected": [],
-     "unselected_files": []
-    },
-    {
-     "url": "https://www.ayalon-ins.co.il/articles/differences-funds",
-     "links": 398,
-     "followed": [],
-     "files": 0,
-     "clicked": 2,
-     "captured": 0,
-     "selected": [],
-     "unselected_files": []
-    },
-    {
-     "url": "https://www.ayalon-ins.co.il/articles/financial-future-kids",
-     "links": 397,
-     "followed": [],
-     "files": 0,
-     "clicked": 2,
-     "captured": 0,
-     "selected": [],
-     "unselected_files": []
-    }
-   ],
-   "new_docs": 0,
-   "found": 33,
-   "selected": 0,
-   "had": 0,
-   "errors": [],
-   "diag": [
-    "איילון קופות גמל ב: links=425 files=0 clicked=2 captured=0 selected=0",
-    "איילון קופות גמל ב: links=425 files=0 clicked=2 captured=0 selected=0",
-    "איילון קופות גמל ב: links=393 files=0 clicked=2 captured=0 selected=0",
-    "איילון קופות גמל ב: links=399 files=0 clicked=2 captured=0 selected=0",
-    "איילון קופות גמל ב: links=408 files=0 clicked=2 captured=0 selected=0",
-    "איילון קופות גמל ב: links=405 files=0 clicked=2 captured=0 selected=0",
-    "איילון קופות גמל ב: links=408 files=3 clicked=2 captured=0 selected=0",
-    "   ? טופס-הצטרפות-קרן-השתלמות-703-מהדורה-062026-1.pdf | טופס הצטרפות לקרן השתלמות - 703 - מהדורה | ",
-    "   ? תקנון-קרן-השתלמות-15983-מהדורה-072026.pdf | תקנון קרן השתלמות - 15983 - מהדורה 07.20 | ",
-    "   ? איילון-השתלמות.pdf | תעודת כשרות מסלולי השקעה לשנת 2026 | ",
-    "איילון קופות גמל ב: links=414 files=7 clicked=2 captured=0 selected=0",
-    "   ? טופס-הצטרפות-לקופת-גמל-להשקעה-102-מהדורה-062026-1.pdf | טופס הצטרפות לקופת גמל להשקעה - 102 - מה | ",
-    "   ? טופס-הצטרפות-לקופת-גמל-להשקעה-קטין-105-מהדורה-062026.pdf | טופס הצטרפות לקופת גמל להשקעה לקטין - 10 | ",
-    "   ? טופס-הצטרפות-לקופת-גמל-להשקעה-102-מהדורה-062026-2.pdf |  | ",
-    "   ? בקשת-העברת-כספים-לקופת-גמל-והשתלמות-901-מהדורה-062026.pdf | בקשת העברת כספים לקופת גמל והשתלמות - | ",
-    "   ? בקשת-העברת-כספים-לקופת-גמל-והשתלמות-901-מהדורה-062026.pdf | 901 | ",
-    "   ? תקנון-תקני-לקופת-גמל-להשקעה-15969-מהדורה-072026.pdf | תקנון גמל להשקעה -  15969 - מהדורה 07.20 | ",
-    "איילון קופות גמל ב: links=416 files=3 clicked=2 captured=0 selected=0",
-    "   ? טופס-הצטרפות-לקופת-גמל-לחיסכון-404-מהדורה-062026.pdf | טופס הצטרפות קופת גמל לחיסכון - 404 - מה | ",
-    "   ? תקנון-תקני-לקופת-גמל-לחיסכון-15942-מהדורה-072026.pdf | תקנון גמל לחיסכון - 15942 - מהדורה 07.20 | ",
-    "   ? איילון-גמל.pdf | תעודת כשרות מסלולי השקעה לשנת 2026 | ",
-    "איילון קופות גמל ב: links=423 files=6 clicked=2 captured=0 selected=0",
-    "   ? hi_1203_sep_2024.pdf | תנאים כלליים לתכנית איילון יתרון פיננסי  | ",
-    "   ? hi_1519_nov_2024.pdf | נספח מסלולי השקעה פרט 1519 - מהדורה 09.2 | ",
-    "   ? bh_1102_mar_2026.pdf | טופס הצעה איילון יתרון פיננסי - 1102 | ",
-    "   ? bh_3513.pdf | עדכון משלם זר - יתרון פיננסי - 3513 | ",
-    "   ? bh_8118.pdf | שאלון איש ציבור - 8118 | ",
-    "   ? kosher_02_2026.pdf | תעודת כשרות למסלולי השקעה לשנת 2026 | ",
-    "איילון קופות גמל ב: links=415 files=0 clicked=2 captured=0 selected=0",
-    "איילון קופות גמל ב: links=406 files=0 clicked=2 captured=0 selected=0",
-    "איילון קופות גמל ב: links=398 files=0 clicked=2 captured=0 selected=0",
-    "איילון קופות גמל ב: links=403 files=0 clicked=2 captured=0 selected=0",
-    "איילון קופות גמל ב: links=416 files=3 clicked=2 captured=0 selected=0",
-    "   ? טופס-הצטרפות-לקופת-גמל-לחיסכון-404-מהדורה-062026.pdf | טופס הצטרפות קופת גמל לחיסכון - 404 - מה | ",
-    "   ? תקנון-תקני-לקופת-גמל-לחיסכון-15942-מהדורה-072026.pdf | תקנון גמל לחיסכון - 15942 - מהדורה 07.20 | ",
-    "   ? איילון-גמל.pdf | תעודת כשרות מסלולי השקעה לשנת 2026 | ",
-    "איילון קופות גמל ב: links=412 files=3 clicked=2 captured=0 selected=0",
-    "   ? טופס-הצטרפות-קרן-השתלמות-703-מהדורה-062026-1.pdf | טופס הצטרפות לקרן השתלמות - 703 - מהדורה | ",
-    "   ? תקנון-קרן-השתלמות-15983-מהדורה-072026.pdf | תקנון קרן השתלמות - 15983 - מהדורה 07.20 | ",
-    "   ? איילון-השתלמות.pdf | תעודת כשרות מסלולי השקעה לשנת 2026 | ",
-    "איילון קופות גמל ב: links=414 files=7 clicked=2 captured=0 selected=0",
-    "   ? טופס-הצטרפות-לקופת-גמל-להשקעה-102-מהדורה-062026-1.pdf | טופס הצטרפות לקופת גמל להשקעה - 102 - מה | ",
-    "   ? טופס-הצטרפות-לקופת-גמל-להשקעה-קטין-105-מהדורה-062026.pdf | טופס הצטרפות לקופת גמל להשקעה לקטין - 10 | ",
-    "   ? טופס-הצטרפות-לקופת-גמל-להשקעה-102-מהדורה-062026-2.pdf |  | ",
-    "   ? בקשת-העברת-כספים-לקופת-גמל-והשתלמות-901-מהדורה-062026.pdf | בקשת העברת כספים לקופת גמל והשתלמות - | ",
-    "   ? בקשת-העברת-כספים-לקופת-גמל-והשתלמות-901-מהדורה-062026.pdf | 901 | ",
-    "   ? תקנון-תקני-לקופת-גמל-להשקעה-15969-מהדורה-072026.pdf | תקנון גמל להשקעה -  15969 - מהדורה 07.20 | ",
-    "איילון קופות גמל ב: links=398 files=0 clicked=2 captured=0 selected=0",
-    "איילון קופות גמל ב: links=395 files=1 clicked=2 captured=0 selected=0",
-    "   ? amitim_03_2026.pdf | לצפייה לחצו כאן | ",
-    "איילון קופות גמל ב: links=397 files=0 clicked=2 captured=0 selected=0",
-    "איילון קופות גמל ב: links=393 files=0 clicked=2 captured=0 selected=0",
-    "איילון קופות גמל ב: links=178 files=0 clicked=0 captured=0 selected=0",
-    "איילון קופות גמל ב: links=403 files=0 clicked=2 captured=0 selected=0",
-    "איילון קופות גמל ב: links=411 files=0 clicked=3 captured=0 selected=0",
-    "איילון קופות גמל ב: links=393 files=0 clicked=2 captured=0 selected=0",
-    "איילון קופות גמל ב: links=398 files=0 clicked=2 captured=0 selected=0",
-    "איילון קופות גמל ב: links=397 files=0 clicked=2 captured=0 selected=0"
-   ],
-   "new_files": []
   }
  ]
 }
