@@ -144,6 +144,14 @@ def fetch_browser(pw, url):
         expand()
         # לשוניות/כפתורי מוצר (הראל: גמל/השתלמות/פנסיה...): לוחצים על כל אחד, פותחים אקורדיונים, אוספים
         tabs = pg.query_selector_all('[role="tab"], button, [role="button"], li[tabindex], [class*=tab]:not(a)')
+        # לשוניות/צ'יפים של מדיניות קודם (הכשרה: צ'יפ "מדיניות השקעה משתתפות" אחרי ~150 כפתורי תפריט)
+        try:
+            ttxt = pg.eval_on_selector_all('[role="tab"], button, [role="button"], li[tabindex], [class*=tab]:not(a)',
+                                           "els => els.map(e => (e.innerText || '').trim().slice(0, 60))")
+            if len(ttxt) == len(tabs):
+                tabs = [el for _, el in sorted(zip(ttxt, tabs), key=lambda p: not re.search(r"מדיניות|הצהר", p[0]))]
+        except Exception:
+            pass
         clicked = set()
         for el in tabs[:150]:
             try:
