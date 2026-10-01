@@ -56,7 +56,13 @@
   <button id="sync-local">💾 סנכרן עותק מקומי (מ-git)</button>
   <button id="run-policy" style="background:#6a1b9a;color:#fff">📑 משוך מדיניות השקעה (אתרים חסומים)</button>
   <div class="card" id="policy-card"><div class="row"><span>מדיניות - ריצה אחרונה:</span><b id="policy-last">—</b></div>
-    <div class="row"><span>מסמכים חדשים:</span><b id="policy-docs">—</b></div><div id="policy-progress" style="font-size:11px;color:#555;white-space:pre-line"></div>
+    <div class="row"><span>מסמכים חדשים:</span><b id="policy-docs">—</b></div>
+    <div id="policy-state" hidden>
+      <div style="display:flex;justify-content:space-between;font-size:12px;margin-top:4px"><span id="ps-head"></span><span id="ps-time" style="color:#777"></span></div>
+      <div style="background:#eee;border-radius:4px;height:8px;overflow:hidden;margin:3px 0"><div id="ps-bar" style="background:#6a1b9a;height:100%;width:0;transition:width .4s"></div></div>
+      <div id="ps-active" style="font-size:11px;line-height:1.5"></div>
+      <div id="ps-finished" style="font-size:11px;color:#2e7d32;line-height:1.5;margin-top:2px"></div>
+    </div><div id="policy-progress" style="font-size:11px;color:#555;white-space:pre-line"></div>
     <div id="policy-err" style="font-size:11px;color:#c00;word-break:break-word"></div></div>
   <button id="stop" hidden>⏹ עצור</button>
   <button id="setup">⚙ הגדרות</button>
