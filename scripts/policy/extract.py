@@ -701,6 +701,14 @@ def main():
             rx = json.loads(cf.read_text("utf-8")).get("track_filter")
             if rx:
                 tf[lid] = re.compile(rx)
+    # track_from_sheet (הגדרות האתר): שם המסלול בקובץ כללי ("מסלול רגיל") והמסלול האמיתי בשם הגיליון
+    # (קרנות מורים: "מוג מקור אשראי ואגח") -> "<גיליון> - <מסלול>". מוגן מהכפלה (השורות נשמרות בין ריצות)
+    for r in long_rows:
+        cfg = _site_cfg(r.get("legal_id"))
+        sh = (r.get("sheet") or "").strip()
+        if cfg.get("track_from_sheet") and sh and not re.match(r"(?i)^(page\s*\d+|גיליון\s*\d*|sheet\s*\d*)$", sh) \
+                and not (r.get("track_name") or "").startswith(sh):
+            r["track_name"] = f"{sh} - {r.get('track_name') or ''}".strip(" -")
     if tf:
         keep_row = lambda r: r.get("legal_id") not in tf or bool(tf[r["legal_id"]].search(r.get("track_name") or ""))
         long_rows = [r for r in long_rows if keep_row(r)]

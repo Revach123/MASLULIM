@@ -33,9 +33,10 @@
   "גמל"
  ],
  "search": false,
- "rev": 9,
+ "rev": 10,
  "home_source": "web_search",
  "max_pages": 20,
  "via": "extension",
- "note": "kranoth.org.il חוסם שרתי ענן (Cloudflare 403) - נמשך ע\"י התוסף. שתי החברות באותו אתר; אם הקבצים מופרדים לפי קרן - להגדיר exclude"
+ "note": "kranoth.org.il חוסם שרתי ענן (Cloudflare 403) - נמשך ע\"י התוסף. שתי החברות באותו אתר; אם הקבצים מופרדים לפי קרן - להגדיר exclude",
+ "track_from_sheet": true
 }

@@ -330,6 +330,11 @@ async function runSite(site, cfg, seen, onProgress, windowId, meta = {}) {
         if (sig && seen[d.href] && m && m.sig === sig && Date.now() - (m.full || 0) < FULL_CHECK_DAYS * 864e5) {
           stats.had++; stats.head_skip++; continue;  // לא השתנה מאז ההורדה האחרונה
         }
+        if (sig && seen[d.href] && !m) {
+          // קובץ שכבר נשלח בגרסה קודמת, בלי חתימה: רושמים חתימה ולא מורידים עכשיו; הורדה מלאה בבדיקה השבועית (בעוד יום)
+          meta[d.href] = { sig, full: Date.now() - (FULL_CHECK_DAYS - 1) * 864e5 };
+          stats.had++; stats.head_skip++; continue;
+        }
         let got = null;
         try { const [r2] = await execInTab(tab.id, pageFetchBase64, [d.href]); got = r2 && r2.result; } catch (e) { got = { __error: true, message: String(e) }; }
         if (!got || got.__error || !looksLikeDoc(got.base64)) {
@@ -384,8 +389,9 @@ export async function runPolicy(cfg, setStatus) {
   const sites = allSites.filter((st) => {
     const c = complete[st.legal_id];
     const last = policySiteOk[st.legal_id] || 0;
-    if (skipH > 0 && c && c.complete && Date.now() - last < skipH * 36e5) {
-      skipped.push({ legal_id: st.legal_id, name: st.name, why: c.why, last_ok: new Date(last).toISOString() });
+    // אין רישום מקומי (ריצה ראשונה בגרסה) = מדלגים מיד; יש = רק בתוך skip_complete_hours מהריצה המוצלחת האחרונה
+    if (skipH > 0 && c && c.complete && (!last || Date.now() - last < skipH * 36e5)) {
+      skipped.push({ legal_id: st.legal_id, name: st.name, why: c.why, last_ok: last ? new Date(last).toISOString() : "" });
       return false;
     }
     return true;
@@ -487,7 +493,7 @@ export async function runPolicy(cfg, setStatus) {
           progress[site.name] = p;
           await flushStatus();
         }, windowId, policyMeta), 15 * 60000, `site ${site.name}`);
-        if (!errors.length) policySiteOk[site.legal_id] = Date.now();
+        policySiteOk[site.legal_id] = Date.now();  // האתר הסתיים (גם אם קובץ בודד נכשל - הצבעות 418 וכד')
         await chrome.storage.local.set({ policySiteOk, policyMeta });
         allFiles.push(...files);
         if (files.length) commitSite(site, files, added);  // שמירה מיד בסוף כל אתר - ריצה שנתקעת/נסגרת לא מאבדת את מה שכבר הורד
