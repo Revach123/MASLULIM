@@ -15,5 +15,12 @@
  ],
  "search": true,
  "rev": 5,
- "note": "מגדל (Wix): כל הקבצים ברשימת XHR (wix:document://v1/ugd/...) -> /_files/ugd/<id> ישיר. חיסכון לכל ילד ומרכזית לפיצויים לא נאספו בלחיצות"
+ "note": "מגדל (Wix): כל הקבצים ברשימת XHR (wix:document://v1/ugd/...) -> /_files/ugd/<id> ישיר. חיסכון לכל ילד ומרכזית לפיצויים לא נאספו בלחיצות",
+ "exclude": "michsat|hotzaot|yeshirot|esg|achraiot|mediniut-esg",
+ "track_no_map": [
+  [
+   "^מקפת אישית פנסיונרים עוקב מדדים למקבלי קצבה",
+   "12147"
+  ]
+ ]
 }
