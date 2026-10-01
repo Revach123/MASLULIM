@@ -16,10 +16,9 @@ from .derivatives_exposure import (
 )
 from .excel_io import text_from, to_ratio
 from .funds import FUND_CATEGORIES, PLACEHOLDERS, _build_fund_map, _build_isin_set, _classify
-from .funds_classification import fund_siveg
 from .foreign_etf_reference import _classify_by_report_name
 from .index_exposure import (
-    DIRECT_EQUITY_CATEGORIES, EQUITY_FUND_SIVEGS, equity_row_index, index_geo, is_local, leveraged_equity,
+    DIRECT_EQUITY_CATEGORIES, classify_index, equity_row_index, il_fund_equity, il_fund_indices, index_geo, is_local, misfiled_stock,
     report_month_by_key,
 )
 from .sheet_source import PCT_COL
@@ -163,7 +162,8 @@ def _fund_lookup(row: dict, fund_map, isin_set, ref_by_num, ref_by_isin) -> tupl
     return sug, ref
 
 
-def _fund_equity_fraction(row: dict, fund_map, isin_set, ref_by_num, ref_by_isin, isin_fractions) -> tuple[float, str]:
+def _fund_equity_fraction(row: dict, fund_map, isin_set, ref_by_num, ref_by_isin, isin_fractions,
+                          fund_exposure=None, tase_stocks=None) -> tuple[float, str]:
     """(שבר מניות, רכיב) לשורת קרן - כמו validate_equity_exposure: IL/נסחרת בסיווג
     מחקה-מניות = 1, חוץ = שבר המניות מהשכבות (ETF/SEC/Yahoo/OpenFIGI)."""
     sec_num = row.get("מספר נייר ערך")
@@ -173,14 +173,24 @@ def _fund_equity_fraction(row: dict, fund_map, isin_set, ref_by_num, ref_by_isin
     num = str(fund_number or "").strip()
     if sug in ("IL", "נסחרת"):
         r = ref_by_num.get(num) or ref_by_isin.get(num.upper())
-        lev = leveraged_equity(r) if r else None
-        if lev:
-            return lev[0], "funds_il"  # ממונפת/בחסר: פי המכפיל
-        if r and any(s in fund_siveg(r) for s in EQUITY_FUND_SIVEGS):
-            return 1.0, "funds_il"
-        return 0.0, ""
+        if not r and misfiled_stock(row, tase_stocks):
+            return 1.0, "direct"  # מניה בת"א שדווחה בגיליון קרנות
+        frac = il_fund_equity(r, fund_exposure) if r else 0.0  # מחקה / ממונפת / חשיפה מדווחת
+        return (frac, "funds_il") if frac else (0.0, "")
     frac = (isin_fractions.get(num.upper()) or {}).get("equity") or 0.0
     return float(frac), ("funds_foreign" if frac else "")
+
+
+def _fund_index(row: dict, name, fund_map, isin_set, ref_by_num, ref_by_isin,
+                official_names: dict[str, str]) -> tuple[str, str] | None:
+    """(מדד, שם) הראשי של קרן - כמו בפירוק לפי מדד: ישראלית לפי נכס הבסיס, חו"ל לפי השם."""
+    sug, ref = _fund_lookup(row, fund_map, isin_set, ref_by_num, ref_by_isin)
+    if ref:
+        parts = il_fund_indices(ref)
+        return parts[0][:2] if parts else None
+    isin = text_from(row.get("מספר נייר ערך") or "").strip().upper()
+    text = official_names.get(isin) or (text_from(name).strip() if name is not None else "")
+    return classify_index(text) if text else None
 
 
 def _derivative_exposure(source: list[dict]) -> dict[int, tuple[float, bool, str]]:
@@ -214,7 +224,9 @@ def _index_meta(idx: str, label: str) -> dict:
 def build_holdings_detail(source: list[dict], isin_swap: list[dict], funds_ref: list[dict],
                           isin_fractions: dict[str, dict], index_trace: dict | None = None,
                           alt_classes: dict[str, str] | None = None,
-                          official_names: dict[str, str] | None = None) -> dict[str, dict]:
+                          official_names: dict[str, str] | None = None,
+                          fund_exposure: dict[str, float] | None = None,
+                          tase_stocks: set[str] | None = None) -> dict[str, dict]:
     """index_trace: מ-build_index_exposure(trace=...) - שיוך כל שורה למדד/ים שלה.
     official_names: ISIN -> שם רשמי לקרן חו"ל (official_fund_names) - במקום השם שהגוף דיווח."""
     official_names = official_names or {}
@@ -247,11 +259,12 @@ def build_holdings_detail(source: list[dict], isin_swap: list[dict], funds_ref: 
             if not pct and not value and name is None:
                 continue  # שורת מילוי ריקה ("ריק במקור", מסגרת אשראי 0)
 
-            eq, comp = 0.0, ""
+            eq, comp, frac = 0.0, "", 0.0
             if cat in DIRECT_EQUITY_CATEGORIES:
                 eq, comp = (pct or 0.0), "direct"
             elif cat in FUND_CATEGORIES:
-                frac, comp = _fund_equity_fraction(row, fund_map, isin_set, ref_by_num, ref_by_isin, isin_fractions)
+                frac, comp = _fund_equity_fraction(row, fund_map, isin_set, ref_by_num, ref_by_isin, isin_fractions,
+                                                   fund_exposure, tase_stocks)
                 eq = (pct or 0.0) * frac
             elif id(row) in deriv:
                 ratio, is_eq, comp = deriv[id(row)]
@@ -272,6 +285,9 @@ def build_holdings_detail(source: list[dict], isin_swap: list[dict], funds_ref: 
                 # שורה מנייתית בלי חשיפה (מניה ב-0%, אופציה שפוקעת ביום הדוח) - שייכת למדד שלה
                 # בחשיפה 0, לא לשאר הנכסים
                 found = equity_row_index(cat, row)
+                if not found and cat in FUND_CATEGORIES and frac:
+                    # קרן מניות ב-0% (החזקה זניחה שעוגלה) - למדד שלה, לא ל"קרנות סל"
+                    found = _fund_index(row, name, fund_map, isin_set, ref_by_num, ref_by_isin, official_names)
                 if found:
                     i, label = found
                     trace_labels.setdefault(i, label)
@@ -290,6 +306,8 @@ def build_holdings_detail(source: list[dict], isin_swap: list[dict], funds_ref: 
                 sug, ref = _fund_lookup(row, fund_map, isin_set, ref_by_num, ref_by_isin)
                 fund_ref_row = ref
                 parts = [FUND_KIND_LABEL.get(sug, "")] if sug else []
+                if not ref and misfiled_stock(row, tase_stocks):
+                    parts = ['מניה בת"א (דווחה כקרן)']
                 official = (ref or {}).get("שם קרן") or (
                     official_names.get(text_from(row.get("מספר נייר ערך") or "").strip().upper()) if sug == "חוץ" else None)
                 if official:

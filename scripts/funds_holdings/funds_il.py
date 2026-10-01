@@ -93,6 +93,33 @@ def build_funds_il(funds: list[dict], funds_ref: list[dict]) -> dict[str, dict[s
     return sums
 
 
+def build_funds_il_equity(funds: list[dict], funds_ref: list[dict],
+                          fund_exposure: dict[str, float] | None = None,
+                          tase_stocks: set[str] | None = None) -> dict[str, float]:
+    """מפתח -> חשיפה למניות דרך קרנות ישראליות (IL/נסחרת): שיעור × il_fund_equity - מחקה 1,
+    ממונפת פי המכפיל, כל קרן אחרת לפי החשיפה למניות שהיא מדווחת. אותו שבר כמו בפירוק לפי מדד."""
+    from .index_exposure import il_fund_equity, misfiled_stock
+    ref_by_num = {k: r for r in funds_ref if (k := _fund_number_key(r.get("מספר קרן"))) is not None}
+    ref_by_isin = {k: r for r in funds_ref if (k := _isin_key(r.get("ISIN"))) is not None}
+    out: dict[str, float] = {}
+    for row in funds:
+        if row["סוג"] not in _IL_OR_TRADED:
+            continue
+        raw_pct = row.get("שיעור מסך נכסי ההשקעה")
+        if isinstance(raw_pct, str) and raw_pct in PLACEHOLDER_PCT:
+            continue
+        pct = to_ratio(raw_pct)
+        if not pct:
+            continue
+        r = (ref_by_num.get(_fund_number_key(row.get("מספר קרן"))) if row["סוג"] == "IL"
+             else ref_by_isin.get(_isin_key(row.get("מספר קרן"))))
+        frac = (il_fund_equity(r, fund_exposure) if r
+                else 1.0 if misfiled_stock(row.get("_row") or {}, tase_stocks) else 0.0)
+        if frac:
+            out[row["מפתח"]] = out.get(row["מפתח"], 0.0) + pct * frac
+    return out
+
+
 def build_funds_il_kashrut(
     funds: list[dict], funds_ref: list[dict], kashrut_by_num: dict[str, str]
 ) -> dict[str, dict[str, str]]:

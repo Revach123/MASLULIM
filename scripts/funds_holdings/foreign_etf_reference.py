@@ -102,6 +102,38 @@ def _isin_key(v) -> str | None:
     return s or None
 
 
+def isin_checksum_ok(isin: str) -> bool:
+    """ספרת הביקורת של ISIN (Luhn על הספרות, אותיות A=10..Z=35)."""
+    s = str(isin or "").strip().upper()
+    if len(s) != 12 or not s[:2].isalpha() or not s[-1].isdigit() or not s.isalnum():
+        return False
+    digits = "".join(str(int(c, 36)) for c in s[:-1])
+    total = 0
+    for k, ch in enumerate(reversed(digits)):
+        n = int(ch) * (2 if k % 2 == 0 else 1)
+        total += n // 10 + n % 10
+    return (10 - total % 10) % 10 == int(s[-1])
+
+
+def repair_isin_typos(funds: list[dict], isin_fractions: dict[str, dict[str, float]]) -> dict[str, str]:
+    """ISIN של קרן חו"ל שנכשל בספרת הביקורת ולא מסווג (טעות הקלדה של הגוף בקידומת המדינה:
+    UC4642886380): אם אותו גוף עם קידומת מדינה אחרת עובר את הבדיקה ומסווג - מקבל את סיווגו.
+    מחזיר שגוי -> מתוקן."""
+    prefixes = sorted({k[:2] for k in isin_fractions if len(k) == 12 and k[:2].isalpha()})
+    out: dict[str, str] = {}
+    for f in funds:
+        if f["סוג"] != FOREIGN_TYPE:
+            continue
+        bad = _isin_key(f.get("מספר קרן"))
+        if not bad or bad in isin_fractions or bad in out or len(bad) != 12 or isin_checksum_ok(bad):
+            continue
+        hits = [c for p in prefixes if (c := p + bad[2:]) in isin_fractions and isin_checksum_ok(c)]
+        if len(hits) == 1:
+            out[bad] = hits[0]
+            isin_fractions[bad] = isin_fractions[hits[0]]
+    return out
+
+
 # עוגנים ידניים: מותר רק כשאין שום דרך לבנות פייפליין דינמי שיעבוד (מגבלה
 # מבנית קבועה, לא "תקלת איסוף" זמנית) *וגם* כשאין שום אי-ודאות בסיווג -
 # חייב להישאר נכון לשנים קדימה בלי תחזוקה. לא כולל קרן שרק נכשלה להיתפס
@@ -248,6 +280,8 @@ _REPORT_NAME_EQUITY_TERMS = (
     # הקבועות של SPDR (S&P 500 לפי סקטור) - כולן מניות, עובדה קבועה על
     # טווח המוצר (לא ניחוש על קרן ספציפית).
     "holdrs", "sector spdr", "healthcare op", "mkt eq", "sml cap",
+    # חברות קטנות ("Smaller Companies" / "SM.CIE" / "SML CO") ו-NSDQ (קיצור Nasdaq) - קרנות מניות
+    "smaller", "sm.cie", "sml co", "nsdq",
 )
 
 # קרנות כספיות/מזומן (money-market) - לא מניות ולא אג"ח, תורמות 0 לשני
@@ -284,7 +318,7 @@ def _sector_equity_by_name(name: str | None) -> str | None:
     if not name or _NOT_EQUITY_FUND.search(str(name)):
         return None
     from .alt_asset_reference import class_by_name
-    from .index_exposure import index_geo, _THEME_IDS, classify_index
+    from .index_exposure import _THEME_IDS, classify_index
     if class_by_name(name):
         return None
     idx = classify_index(name)[0]

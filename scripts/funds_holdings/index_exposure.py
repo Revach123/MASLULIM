@@ -340,6 +340,44 @@ def leveraged_equity(fund_ref: dict) -> tuple[float, bool] | None:
     return factor, is_local(classify_index(base)[0])
 
 
+NOT_EQUITY_MAINS = ("סחורות", "נכסים דיגיטליים")  # "חשיפה למניות" בדוח הקרן 100% - אבל לא מניות
+MIXED_FUNDS_IDX = ("funds:mixed", "מניות - קרנות מעורבות")
+
+
+def il_fund_equity(fund_ref: dict, exposure: dict[str, float] | None = None) -> float:
+    """שבר המניות של קרן ישראלית: ממונפת/בחסר - המכפיל; מחקה מניות - 1; כל קרן אחרת - החשיפה
+    למניות שהקרן מדווחת (fund_exposure_reference: אקטיבית, אג"ח עם מניות, גמישה, גידור, אגד).
+    סחורות / נכסים דיגיטליים - 0. אין דיווח - 0 (כמו קודם)."""
+    lev = leveraged_equity(fund_ref)
+    if lev:
+        return lev[0]
+    if any(s in fund_siveg(fund_ref) for s in EQUITY_FUND_SIVEGS):
+        return 1.0
+    if str(fund_ref.get("סיווג ראשי") or "").startswith(NOT_EQUITY_MAINS):
+        return 0.0
+    from .fund_exposure_reference import fund_number_key
+    return (exposure or {}).get(fund_number_key(fund_ref.get("מספר קרן")) or "", 0.0)
+
+
+def misfiled_stock(row: dict, tase_stocks: set[str] | None) -> bool:
+    """שורה בגיליון קרנות שהנייר שלה מניה בת"א (KAMADA IL0010941198) - נספרת כמניה ישירה."""
+    return bool(tase_stocks) and str(row.get(SEC_NUM_COL) or "").strip().upper() in tase_stocks
+
+
+def il_fund_indices(fund_ref: dict) -> list[tuple[str, str, float]]:
+    """[(מדד, שם, משקל)] לחלק המנייתי של קרן ישראלית. בקרן שאינה מחקה/ממונפת (חשיפה מדווחת) נכס
+    בסיס שלא ממופה למדד מוכר ("All-Bond כללי", "אחר") - מניות ישראל לקרן "בארץ", אחרת קרנות מעורבות."""
+    tracked = leveraged_equity(fund_ref) or any(s in fund_siveg(fund_ref) for s in EQUITY_FUND_SIVEGS)
+    out = []
+    for name, w in _equity_parts(fund_ref.get("נכס בסיס")):
+        idx, label = classify_index(name)
+        if not tracked and not _is_recognized(idx):
+            idx, label = (("region:il", "מניות ישראל") if "בארץ" in str(fund_ref.get("סיווג ראשי") or "")
+                          else MIXED_FUNDS_IDX)
+        out.append((idx, label, w))
+    return out
+
+
 def is_local(idx: str) -> bool:
     """חשיפה למניות בארץ: מדדי ת"א, נושא/אזור ישראל, מניות וסלים בישראל."""
     return idx in ("ta35", "ta125", "ta90") or idx.endswith((":il", ":ישראל"))
@@ -398,7 +436,8 @@ def _swap_index(row, full_names: dict[str, str] | None = None) -> tuple[str, str
 
 def build_index_exposure(source: list[dict], funds: list[dict], funds_ref: list[dict],
                          isin_fractions: dict[str, dict[str, float]], resolve_online: bool = False,
-                         trace: dict | None = None) -> dict[str, dict]:
+                         trace: dict | None = None, fund_exposure: dict[str, float] | None = None,
+                         tase_stocks: set[str] | None = None) -> dict[str, dict]:
     """מפתח -> {"total": ..., "indices": {מזהה: {"label", "pct", "sources"}}}.
 
     source צריך להיות אחרי normalize_track_pct (כמו בכל שאר הרכיבים). trace (אופציונלי) מקבל
@@ -440,14 +479,15 @@ def build_index_exposure(source: list[dict], funds: list[dict], funds_ref: list[
         if f["סוג"] in ("IL", "נסחרת"):
             r = ref_by_num.get(num) or ref_by_isin.get(num.upper())
             if not r:
+                if misfiled_stock(f.get("_row") or {}, tase_stocks):
+                    idx, label = _country_label("ישראל")  # מניה בת"א שדווחה בגיליון קרנות
+                    acc.add(key, idx, label, pct, "direct", f.get("_row"))
                 continue
-            lev = leveraged_equity(r)
-            if not lev and not any(s in fund_siveg(r) for s in EQUITY_FUND_SIVEGS):
+            frac = il_fund_equity(r, fund_exposure)  # מחקה 1 / ממונפת פי המכפיל / אחרת החשיפה המדווחת
+            if not frac:
                 continue
-            mult = lev[0] if lev else 1.0  # קרן ממונפת/בחסר: פי המכפיל
-            for name, w in _equity_parts(r.get("נכס בסיס")):
-                idx, label = classify_index(name)
-                acc.add(key, idx, label, pct * w * mult, "funds_il", f.get("_row"))
+            for idx, label, w in il_fund_indices(r):
+                acc.add(key, idx, label, pct * w * frac, "funds_il", f.get("_row"))
         elif f["סוג"] == "חוץ":
             frac = isin_fractions.get(num.upper())
             if not frac or not frac.get("equity"):
