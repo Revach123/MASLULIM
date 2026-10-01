@@ -1,0 +1,11 @@
+{
+ "_note": "כללי משיכת המדיניות של התוסף - נקראים מ-GitHub בתחילת כל ריצה (שינוי כאן = תקף בריצה הבאה, בלי לעדכן את התוסף). ביטויים רגולריים (בלי /) ומספרים בלבד.",
+ "doc_rx": "\\.(xlsx|xls|pdf|docx)(\\?|#|$)",
+ "policy_rx": "מדיניות|הצהר|policy|mediniut|hatzarat|expected|investment",
+ "noise_rx": "esg|אחראי|תגמול(?!ים)|tagmul(?!im)|פרטיות|privacy|תקנון|מבצע|גילוי[-_ ]נאות|מצגת|presentation|נוהל|העברת זכויות|הצבעות|דוח[ -]כספי|רבעון",
+ "download_rx": "הורד|להורדה|download|אקסל|excel|xls",
+ "concurrency": 4,
+ "settle_ms": 3000,
+ "capture_ms": 8000,
+ "max_download_clicks": 40
+}

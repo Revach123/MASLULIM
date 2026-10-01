@@ -508,7 +508,34 @@ chrome.runtime.onStartup.addListener(() => {
 chrome.alarms.onAlarm.addListener((a) => {
   if (a.name === ALARM) runSafe("incremental");
   if (a.name === POLICY_ALARM) runPolicySafe();
+  if (a.name === SELF_UPDATE_ALARM) checkSelfUpdate();
 });
+
+// ----- עדכון: ההוראות (אתרים, כללים, תזמונים) נמשכות מ-GitHub בכל ריצה (policy/extension_sites.json + extension_rules.json),
+// כך שרוב השינויים לא דורשים עדכון תוסף. קוד - MV3 אוסר להריץ קוד מהרשת ותוסף לא יכול לכתוב לתיקייה שלו: החלונית מציגה
+// כשיש גרסת קוד חדשה ב-GitHub, ואחרי שהתיקייה עודכנה (בכל דרך) התוסף מזהה את הגרסה החדשה בדיסק וטוען את עצמו מחדש.
+const SELF_UPDATE_ALARM = "self-update";
+async function checkSelfUpdate() {
+  const loaded = chrome.runtime.getManifest().version;
+  try {
+    const cfg = await getConfig();
+    if (cfg.token && cfg.owner && cfg.repo) {
+      const b64 = await getFileBase64(cfg.token, cfg.owner, cfg.repo, cfg.branch || "main", "extension/manifest.json");
+      const remote = JSON.parse(decodeURIComponent(escape(atob(b64)))).version;
+      await setStatus({ extVersion: loaded, extRemoteVersion: remote, extCheckedAt: Date.now() });
+    }
+  } catch (e) {}
+  try {
+    const { status } = await chrome.storage.local.get("status");
+    if (policyRunning || status?.running) return;  // לא באמצע ריצה
+    const disk = await (await fetch(chrome.runtime.getURL("manifest.json"), { cache: "no-store" })).json();
+    if (disk.version && disk.version !== loaded) {
+      await setStatus({ extReloaded: { from: loaded, to: disk.version, at: Date.now() } });
+      chrome.runtime.reload();
+    }
+  } catch (e) {}
+}
+chrome.alarms.get(SELF_UPDATE_ALARM).then((a) => { if (!a) chrome.alarms.create(SELF_UPDATE_ALARM, { periodInMinutes: 5, delayInMinutes: 1 }); });
 
 // ----- מדיניות השקעה: אתרים שחוסמים שרתי ענן (ר' policy.js) -----
 let policyRunning = false;
@@ -540,6 +567,7 @@ chrome.runtime.onMessage.addListener((msg, _sender, sendResponse) => {
   if (msg?.type === "run-incremental") { runSafe("incremental").then(() => sendResponse({ ok: true })); return true; }
   if (msg?.type === "run-backfill") { runSafe("backfill").then(() => sendResponse({ ok: true })); return true; }
   if (msg?.type === "sync-local") { syncLocalFromArchive().then(() => sendResponse({ ok: true })); return true; }
+  if (msg?.type === "check-update") { checkSelfUpdate().then(() => sendResponse({ ok: true })); return true; }
   if (msg?.type === "stop-policy") { requestPolicyStop(); sendResponse({ ok: true }); return false; }
   if (msg?.type === "run-policy") { runPolicySafe().then(() => sendResponse({ ok: true })); return true; }
   if (msg?.type === "stop") { stopRequested = true; setStatus({ progress: "עוצר..." }).then(() => sendResponse({ ok: true })); return true; }

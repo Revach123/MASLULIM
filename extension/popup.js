@@ -83,8 +83,13 @@ function renderPolicyState(st) {
   document.getElementById("ps-bar").style.width = `${st.total ? Math.round(100 * st.done / st.total) : 0}%`;
   document.getElementById("ps-active").innerHTML = (st.active || []).map((a) =>
     `⏳ <b>${esc(a.name.slice(0, 28))}</b> · עמוד ${a.pageNo}/${a.pages} · ${esc(a.step)}${a.docs ? ` · ${a.docs} חדשים` : ""}`).join("<br>");
-  document.getElementById("ps-finished").innerHTML = (st.finished || []).map((f) =>
-    `${f.errors && !f.docs ? "⚠️" : "✔"} ${esc(f.name.slice(0, 28))}: ${f.docs} חדשים${f.errors ? ` · ${f.errors} שגיאות` : ""}`).join("<br>");
+  // לכל אתר: חדשים · כמה קבצים נמצאו / נבחרו כמדיניות / כבר נשלחו - כדי להבחין בין "אין חדש" ל"לא נמצא כלום"
+  document.getElementById("ps-finished").innerHTML = (st.finished || []).map((f) => {
+    const icon = f.errors && !f.docs ? "⚠️" : (f.found === 0 ? "❔" : "✔");
+    const det = f.found === undefined ? "" : ` · נמצאו ${f.found} קבצים, ${f.selected} מדיניות, ${f.had} כבר קיימים`;
+    const err = f.errors ? `<br><span style="color:#c00">&nbsp;&nbsp;${f.errors} שגיאות: ${esc((f.firstError || "").slice(0, 90))}</span>` : "";
+    return `${icon} <b>${esc(f.name.slice(0, 28))}</b>: ${f.docs} חדשים${det}${err}`;
+  }).join("<br>");
 }
 
 async function render() {
@@ -106,6 +111,12 @@ async function render() {
   document.getElementById("policy-progress").textContent = s.policyProgress || "";
   document.getElementById("policy-err").textContent = (s.policyErrors || []).join(" | ");
   renderPolicyState(s.policyState);
+  // גרסה טעונה מול GitHub (עדכון אוטומטי: git pull מתוזמן + טעינה עצמית)
+  const loaded = chrome.runtime.getManifest ? chrome.runtime.getManifest().version : "";
+  const remote = s.extRemoteVersion;
+  const rel = s.extReloaded && s.extReloaded.to === loaded ? ` · עודכן אוטומטית מ-${s.extReloaded.from}` : "";
+  document.getElementById("ext-ver").textContent = `גרסה ${loaded}` + (remote && remote !== loaded
+    ? ` · יש גרסת קוד חדשה ב-GitHub: ${remote} - לעדכן את תיקיית התוסף (טוען את עצמו מחדש)` : remote ? " · קוד מעודכן; הוראות/כללים נמשכים מ-GitHub בכל ריצה" : "") + rel;
   // בזמן ריצה ההתקדמות מוצגת בבלוק המובנה; אחרי הריצה - שורות האבחון
   document.getElementById("policy-progress").textContent =
     s.policyState && s.policyState.running ? "" : (s.policyProgress || (s.policyDiag || []).join("\n"));
@@ -168,6 +179,7 @@ document.getElementById("stop").addEventListener("click", () => {
 document.getElementById("setup").addEventListener("click", () => chrome.runtime.openOptionsPage());
 
 render();
+chrome.runtime.sendMessage({ type: "check-update" });  // בדיקת גרסה בכל פתיחת חלונית
 // רענון יזום כל שנייה כל עוד הפופאפ פתוח - מבטיח שהפאי מתעדכן חי גם אם אירוע
 // storage.onChanged מתעכב בזמן שה-service worker עסוק.
 setInterval(render, 1000);

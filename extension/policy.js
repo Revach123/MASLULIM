@@ -15,9 +15,27 @@ let onStop = null;  // עדכון מיידי של החלונית ("עוצר...")
 export function requestPolicyStop() { stopRequested = true; if (onStop) onStop(); }
 const sleep = (ms) => new Promise((r) => setTimeout(r, ms));
 
-const DOC_RX = /\.(xlsx|xls|pdf|docx)(\?|#|$)/i;
-const POLICY_RX = /מדיניות|הצהר|policy|mediniut|hatzarat|expected|investment/i;
-const NOISE_RX = /esg|אחראי|תגמול(?!ים)|tagmul(?!im)|פרטיות|privacy|תקנון|מבצע|גילוי[-_ ]נאות|מצגת|presentation|נוהל|העברת זכויות|הצבעות|דוח[ -]כספי|רבעון/i;
+// כללים: ברירות מחדל כאן, ובכל ריצה נמשכים מ-GitHub (policy/extension_rules.json) ודורסים אותן - שינוי כללים/תזמונים
+// נכנס לתוקף בריצה הבאה בלי לעדכן את התוסף. (MV3 אוסר קוד מהרשת - אלה נתונים בלבד: ביטויים רגולריים ומספרים.)
+const DEFAULT_RULES = {
+  doc_rx: "\\.(xlsx|xls|pdf|docx)(\\?|#|$)",
+  policy_rx: "מדיניות|הצהר|policy|mediniut|hatzarat|expected|investment",
+  noise_rx: "esg|אחראי|תגמול(?!ים)|tagmul(?!im)|פרטיות|privacy|תקנון|מבצע|גילוי[-_ ]נאות|מצגת|presentation|נוהל|העברת זכויות|הצבעות|דוח[ -]כספי|רבעון",
+  download_rx: "הורד|להורדה|download|אקסל|excel|xls",
+  concurrency: 4, settle_ms: 3000, capture_ms: 8000, max_download_clicks: 40,
+};
+let RULES = DEFAULT_RULES;
+let DOC_RX = new RegExp(DEFAULT_RULES.doc_rx, "i");
+let POLICY_RX = new RegExp(DEFAULT_RULES.policy_rx, "i");
+let NOISE_RX = new RegExp(DEFAULT_RULES.noise_rx, "i");
+
+function applyRules(r) {
+  RULES = { ...DEFAULT_RULES, ...(r || {}) };
+  try { DOC_RX = new RegExp(RULES.doc_rx, "i"); POLICY_RX = new RegExp(RULES.policy_rx, "i"); NOISE_RX = new RegExp(RULES.noise_rx, "i"); }
+  catch (e) {  // ביטוי שבור בקובץ - חוזרים לברירות המחדל במקום להפיל את הריצה
+    RULES = DEFAULT_RULES; DOC_RX = new RegExp(RULES.doc_rx, "i"); POLICY_RX = new RegExp(RULES.policy_rx, "i"); NOISE_RX = new RegExp(RULES.noise_rx, "i");
+  }
+}
 
 // Chrome דוחה זמנית עריכת טאבים ("Tabs cannot be edited right now (user may be dragging a tab)") - מנסים שוב.
 async function tabsRetry(fn, tries = 20) {
@@ -75,8 +93,8 @@ async function pageCollectLinks(clicks) {
 
 // רץ בתוך הדף: לוחץ על כפתורים/קישורים של הורדה שלא מצביעים ישירות לקובץ (JS / postback).
 // ההורדות עצמן נתפסות ברקע ע"י chrome.downloads.onCreated (ר' captureDownloads).
-function pageClickDownloads() {
-  const rx = /הורד|להורדה|download|אקסל|excel|xls/i;
+function pageClickDownloads(rxSource, maxClicks) {
+  const rx = new RegExp(rxSource, "i");
   const els = [...document.querySelectorAll("a, button, [role=button], input[type=button], input[type=submit]")];
   let n = 0;
   for (const el of els) {
@@ -84,7 +102,7 @@ function pageClickDownloads() {
     const href = el.getAttribute("href") || "";
     if (!rx.test(t) || /\.(xlsx|xls|pdf)(\?|$)/i.test(href)) continue;
     try { el.click(); n++; } catch (e) {}
-    if (n >= 40) break;
+    if (n >= maxClicks) break;
   }
   return n;
 }
@@ -101,7 +119,7 @@ function pageFetchBase64(url) {
 }
 
 // תופס הורדות שהדף מפעיל (לחיצה על כפתור) ומבטל אותן - מחזיר את כתובות הקבצים. מוריד אותם אח"כ בעצמנו.
-async function captureDownloads(tabId, ms = 8000) {
+async function captureDownloads(tabId, ms = RULES.capture_ms, rx = RULES.download_rx) {
   const urls = [];
   const onCreated = (item) => {
     urls.push({ href: item.finalUrl || item.url, text: item.filename || "" });
@@ -111,7 +129,7 @@ async function captureDownloads(tabId, ms = 8000) {
   chrome.downloads.onCreated.addListener(onCreated);
   let clicked = 0;
   try {
-    const [r] = await chrome.scripting.executeScript({ target: { tabId }, func: pageClickDownloads });
+    const [r] = await execInTab(tabId, pageClickDownloads, [rx, RULES.max_download_clicks]);
     clicked = (r && r.result) || 0;
     if (clicked) await sleep(ms);
   } finally {
@@ -138,12 +156,45 @@ async function sha256Hex(base64) {
   return [...new Uint8Array(h)].map((b) => b.toString(16).padStart(2, "0")).join("");
 }
 
+// הזרקת סקריפט לדף עם ניסיון חוזר: אתרים שמנווטים/נטענים מחדש באמצע (הפניה, לחיצה שמנווטת) מפילים את
+// ההזרקה ב-"Frame with ID 0 was removed" / "frame was removed" - מחכים שהטאב יתייצב ומנסים שוב
+async function execInTab(tabId, func, args = [], tries = 3) {
+  for (let i = 1; ; i++) {
+    try {
+      return await chrome.scripting.executeScript({ target: { tabId }, func, args });
+    } catch (e) {
+      const msg = String(e && e.message || e);
+      if (i >= tries || !/frame|removed|navigat|Cannot access|No tab/i.test(msg) || /No tab with id/i.test(msg)) throw e;
+      await sleep(1500); await waitComplete(tabId, 20000); await sleep(1500);
+    }
+  }
+}
+
+// הורדה מהקשר התוסף (הרשאות מארח => ללא CORS) - כשהורדה מתוך הדף נכשלת (קובץ בדומיין אחר / CORS)
+async function extFetchBase64(url) {
+  try {
+    const r = await fetch(url, { credentials: "include" });
+    if (!r.ok) return { __error: true, status: r.status };
+    const bytes = new Uint8Array(await r.arrayBuffer());
+    let bin = "";
+    for (let i = 0; i < bytes.length; i += 0x8000) bin += String.fromCharCode.apply(null, bytes.subarray(i, i + 0x8000));
+    return { base64: btoa(bin) };
+  } catch (e) { return { __error: true, message: String(e) }; }
+}
+
 function looksLikeDoc(base64) {
   const b = atob(base64.slice(0, 16));
   return b.startsWith("PK\x03\x04") || b.startsWith("\xd0\xcf\x11\xe0") || b.startsWith("%PDF-");
 }
 
 function utf8b64(s) { return btoa(unescape(encodeURIComponent(s))); }
+
+async function readRules(cfg) {
+  try {
+    const b64 = await getFileBase64(cfg.token, cfg.owner, cfg.repo, cfg.branch, "policy/extension_rules.json");
+    return JSON.parse(decodeURIComponent(escape(atob(b64))));
+  } catch (e) { return null; }  // אין קובץ / אין רשת - ברירות המחדל
+}
 
 async function readSites(cfg) {
   const b64 = await getFileBase64(cfg.token, cfg.owner, cfg.repo, cfg.branch, "policy/extension_sites.json");
@@ -169,6 +220,7 @@ function keepMinimized(windowId) {
 async function runSite(site, cfg, seen, onProgress, windowId) {
   const pages = [...new Set([...(site.pages || []).map((p) => p.url), site.home].filter(Boolean))];
   const files = [], errors = [], diag = [];
+  const stats = { found: 0, selected: 0, had: 0 };  // לחלונית: קבצים שנמצאו בעמודים / נבחרו כמדיניות / כבר נשלחו בעבר
   const report = (pi, step) => onProgress({ page: pages[pi], pageNo: pi + 1, pages: pages.length, step, docs: files.length / 2 });
   for (const [pi, pageUrl] of pages.entries()) {
     if (stopRequested) break;
@@ -179,13 +231,12 @@ async function runSite(site, cfg, seen, onProgress, windowId) {
       ourTabs.add(tab.id); openedBy[tab.id] = [];
       keepMinimized(windowId);  // Chrome ב-Windows משחזר לפעמים חלון ממוזער כשנוצר בו טאב
       await waitComplete(tab.id);
-      await sleep(3000);
+      await sleep(site.settle_ms || RULES.settle_ms);  // אתר איטי: settle_ms בהגדרות האתר
       await report(pi, "פותח אקורדיונים ואוסף קישורים");
-      const [res] = await chrome.scripting.executeScript({ target: { tabId: tab.id }, func: pageCollectLinks,
-                                                          args: [(site.clicks || {})[pageUrl] || site.click || []] });
+      const [res] = await execInTab(tab.id, pageCollectLinks, [(site.clicks || {})[pageUrl] || site.click || []]);
       const links = (res && res.result) || [];
       await report(pi, "ממתין לתור לחיצות ההורדה");
-      const cap = await withDownloadLock(async () => { await report(pi, "לוחץ על כפתורי הורדה"); return captureDownloads(tab.id); });
+      const cap = await withDownloadLock(async () => { await report(pi, "לוחץ על כפתורי הורדה"); return captureDownloads(tab.id, site.capture_ms || RULES.capture_ms, site.download_rx || RULES.download_rx); });
       links.push(...cap.urls.map((u) => ({ ...u, ctx: "(download)" })));
       links.push(...(openedBy[tab.id] || []).map((u) => ({ ...u, ctx: "(download)" })));  // קבצים שנפתחו בחלון/טאב חדש
       const docs = links.filter((l) => (DOC_RX.test(l.href) || l.ctx === "(download)" || DOC_RX.test(l.text)) && !NOISE_RX.test(l.text + " " + l.href)
@@ -196,6 +247,8 @@ async function runSite(site, cfg, seen, onProgress, windowId) {
       const ex = site.exclude ? new RegExp(site.exclude) : null;
       const uniq = [...new Map(docs.filter((d) => !ex || !ex.test(decodeURIComponent(d.href) + " " + d.text))
         .map((d) => [d.href, d])).values()];
+      stats.found += links.filter((l) => DOC_RX.test(l.href) || l.ctx === "(download)").length;
+      stats.selected += uniq.length;
       diag.push(`${site.name.slice(0, 18)}: links=${links.length} files=${links.filter((l) => DOC_RX.test(l.href)).length} clicked=${cap.clicked} captured=${cap.urls.length} selected=${uniq.length}`);
       if (!uniq.length) {  // אבחון: אילו קבצים נמצאו ולמה לא נבחרו
         links.filter((l) => DOC_RX.test(l.href)).slice(0, 6).forEach((l) =>
@@ -204,11 +257,18 @@ async function runSite(site, cfg, seen, onProgress, windowId) {
       for (const [di, d] of uniq.entries()) {
         if (stopRequested) break;
         await report(pi, `מוריד קובץ ${di + 1}/${uniq.length}`);
-        const [r2] = await chrome.scripting.executeScript({ target: { tabId: tab.id }, func: pageFetchBase64, args: [d.href] });
-        const got = r2 && r2.result;
-        if (!got || got.__error || !looksLikeDoc(got.base64)) { errors.push(`${d.href} -> ${got && (got.status || got.message)}`); continue; }
+        let got = null;
+        try { const [r2] = await execInTab(tab.id, pageFetchBase64, [d.href]); got = r2 && r2.result; } catch (e) { got = { __error: true, message: String(e) }; }
+        if (!got || got.__error || !looksLikeDoc(got.base64)) {
+          const viaExt = await extFetchBase64(d.href);  // CORS / דומיין אחר / הדף ניווט
+          if (!viaExt.__error && looksLikeDoc(viaExt.base64)) got = viaExt;
+        }
+        if (!got || got.__error || !looksLikeDoc(got.base64)) {
+          const why = got && got.__error ? (got.status || got.message) : "לא קובץ מסמך (HTML/דף שגיאה)";
+          errors.push(`${decodeURIComponent(d.href.split("/").pop()).slice(0, 60)} -> ${String(why).slice(0, 80)}`); continue;
+        }
         const sha = await sha256Hex(got.base64);
-        if (seen[d.href] === sha) continue;
+        if (seen[d.href] === sha) { stats.had++; continue; }
         const name = decodeURIComponent(new URL(d.href).pathname.split("/").pop()).replace(/[^\w.\-֐-׿]/g, "_").slice(0, 90);
         const base = `policy/inbox/${site.legal_id}/${sha.slice(0, 12)}_${name}`;
         files.push({ path: base, base64: got.base64 });
@@ -223,14 +283,14 @@ async function runSite(site, cfg, seen, onProgress, windowId) {
       if (tab) { ourTabs.delete(tab.id); delete openedBy[tab.id]; try { await tabsRetry(() => chrome.tabs.remove(tab.id)); } catch (e) {} }
     }
   }
-  return { files, errors, diag };
+  return { files, errors, diag, stats };
 }
 
 // כמה אתרים (לא עמודים בתוך אתר - שם אין תועלת, ר' runSite) מותר להריץ
 // במקביל - בכל אתר יש לו טאב/session נפרד משלו, אז מקביליות בין-אתרים
 // לא מתנגשת. "4" נבחר כמספר בטוח שלא יעמיס מדי על הדפדפן (לא "כל האתרים
 // ביחד" ללא הגבלה) - קבוע יחיד כדי שיהיה קל לכוונן.
-const POLICY_CONCURRENCY = 4;
+const POLICY_CONCURRENCY = 4;  // ברירת מחדל; בפועל RULES.concurrency
 
 // מריץ על כל האתרים, עד POLICY_CONCURRENCY במקביל (לא אחד-אחרי-השני) -
 // worker pool: כל worker מושך את האתר הבא מתוך תור משותף עד שנגמר.
@@ -238,6 +298,7 @@ const POLICY_CONCURRENCY = 4;
 // כי כמה אתרים עשויים לדווח התקדמות בו-זמנית).
 export async function runPolicy(cfg, setStatus) {
   stopRequested = false;
+  applyRules(await readRules(cfg));  // ההוראות העדכניות מ-GitHub, בכל ריצה
   const sites = await readSites(cfg);
   const { policySeen } = await chrome.storage.local.get("policySeen");
   const seen = policySeen || {};
@@ -293,16 +354,16 @@ export async function runPolicy(cfg, setStatus) {
     while (!stopRequested && nextIdx < sites.length) {
       const site = sites[nextIdx++];
       try {
-        const { files, errors, diag } = await runSite(site, cfg, seen, async (p) => {
+        const { files, errors, diag, stats } = await runSite(site, cfg, seen, async (p) => {
           progress[site.name] = p;
           await flushStatus();
         }, windowId);
         allFiles.push(...files);
         allErrors.push(...errors);
         allDiag.push(...diag);
-        finished.push({ name: site.name, docs: files.length / 2, errors: errors.length });
+        finished.push({ name: site.name, docs: files.length / 2, errors: errors.length, ...stats, firstError: errors[0] || "" });
       } catch (e) {
-        finished.push({ name: site.name, docs: 0, errors: 1 });
+        finished.push({ name: site.name, docs: 0, errors: 1, firstError: String(e && e.message || e) });
         allErrors.push(`${site.name}: ${e && e.message || e}`);
       } finally {
         delete progress[site.name];
@@ -312,7 +373,7 @@ export async function runPolicy(cfg, setStatus) {
   }
 
   try {
-    await Promise.all(Array.from({ length: Math.min(POLICY_CONCURRENCY, sites.length) }, worker));
+    await Promise.all(Array.from({ length: Math.min(RULES.concurrency || POLICY_CONCURRENCY, sites.length) }, worker));
   } finally {
     chrome.tabs.onCreated.removeListener(onTabCreated);
     chrome.tabs.onUpdated.removeListener(onTabUpdated);
