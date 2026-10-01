@@ -31,15 +31,20 @@ def _norm(s):
 
 def _toks(s):
     s = re.sub(r"(?i)s\s*&\s*p\s*(\d)", r"sp\1", str(s or ""))
+    s = re.sub(r"(?i)(\d+)\s*s\s*&\s*p\b", r"sp\1", s)  # "500 S&P" (הכשרה)
+    s = re.sub(r"(?<!\d)(19|20)\d\d(?!\d)", " ", s)  # שנה בשם ("מסלול כללי מור 2026")
     s = re.sub(r"[\"'״׳()\[\]\-–_,.:;/%]+", " ", s.lower())
     stop = {"מסלול", "קופת", "קופה", "קרן", "לשנת", "בע", "מ", "בעמ", "מסל", "לבני", "בני", "גילאי", "לגילאי", "עד", "ו"}
     return frozenset(w for w in s.split() if w not in stop)
 
 
 def numbers_in(text):
-    """מספרי מסלול אפשריים בטקסט: 3-6 ספרות, לא שנה, לא אחוז, לא שם מדד (ת"א 125)."""
+    """מספרי מסלול אפשריים בטקסט: 3-6 ספרות, לא שנה, לא אחוז, לא שם מדד (ת"א 125).
+    אחרי תווית מפורשת ("מספר מסלול באוצר 47", "מ.ה. 50") גם 1-2 ספרות (הפניקס: מסלולים 47, 50)."""
     out = []
     t = unquote(str(text or ""))
+    for m in re.finditer(r"(?:מספר|מס['׳]?)\s*מסלול(?:\s*באוצר)?\s*[:\-]?\s*(\d{1,2})(?!\d)|מ\.\s?ה\.?\s*(\d{1,2})(?!\d)", t):
+        out.append(str(int(m.group(1) or m.group(2))))
     for m in NUM.finditer(t):
         n = m.group(1)
         if re.fullmatch(r"(19|20)\d\d", n):
@@ -106,10 +111,11 @@ class Registry:
         # השוואת קבוצות מילים, בלי המילים שמשותפות לכל שמות החברה ברישום ("ילין לפידות", "אלטשולר שחם").
         # גמל/להשקעה/השתלמות/פנסיה נשמרות (מבדילות בין קופות). קודם התאמה מלאה יחידה, אחר כך שם המסמך מוכל
         # בשם הרישום והמועמד עם הכי מעט מילים עודפות יחיד
-        digs = lambda x: sorted(re.findall(r"(?<!\d)\d{1,3}(?!\d)", re.sub(r"(?i)s\s*&\s*p\s*(\d)", r"sp\1", str(x or ""))))
+        digs = lambda x: sorted(re.findall(r"(?<!\d)\d{1,3}(?!\d)", re.sub(r"(?i)s\s*&\s*p\s*(\d)|(\d+)\s*s\s*&\s*p\b", r"sp\1\2", str(x or ""))))
         sets = {tn: _toks(nm) for tn, nm in cand.items() if digs(nm) == digs(name)}  # גילאים/אחוזים/מדד זהים
         alls = [_toks(nm) for nm in cand.values()]
         common = frozenset.intersection(*alls) if len(alls) > 1 else frozenset()
+        common |= {"חברה", "לביטוח", "בע", "מ", "בעמ"}  # "הכשרה חברה לביטוח בע"מ - כללי" = "הכשרה כללי"
         mine = _toks(name) - common
         if mine:
             same = [tn for tn, t in sets.items() if t - common == mine]
@@ -256,6 +262,8 @@ def assign(tracks):
             if len({_norm(x.get("track_name")) for x in ts}) < 2:
                 continue
             keep = [x for x in ts if n in name_numbers(x.get("track_name")) or x["track_no_source"] == "doc_code"]
+            if len(keep) > 1 and all(x["track_no_source"] != "doc_code" for x in keep):
+                keep = keep[:1]  # אותו מסלול מופיע פעמיים בקובץ (הפניקס: גיליון פרט וגיליון ביטוח, אותו מספר באוצר)
             for x in ts:
                 if x not in keep or len(keep) > 1 and x["track_no_source"] != "doc_code":
                     x["_banned"].add(n); changed = True
@@ -269,6 +277,21 @@ def assign(tracks):
             if reg.valid(t["legal_id"], n) and n not in t["_banned"] and (t["legal_id"], n) not in owned:
                 owned.add((t["legal_id"], n))
                 t["track_no"], t["track_no_source"] = n, "file_cells"; break
+    # track_no_map בהגדרות האתר: [[regex על שם המסלול, מספר]] - מיפוי ידני מבוקר כשהשמות בקובץ מקוצרים
+    # (קרנות מורים: "מות מקור הלכתי - מסלול מקוצר" = 2041)
+    import json as _json
+    sites = Path(__file__).with_name("sites")
+    maps = {}
+    act_owned = {(t["legal_id"], t["track_no"]) for t in tracks if t["track_no"] and t.get("active")}
+    for t in tracks:
+        lid = t["legal_id"]
+        if lid not in maps:
+            f = sites / f"{lid}.json"
+            maps[lid] = _json.loads(f.read_text("utf-8")).get("track_no_map") if f.exists() else None
+        if not t["track_no"] and maps[lid]:
+            n = next((str(n) for rx, n in maps[lid] if re.search(rx, t.get("track_name") or "")), None)
+            if n and (lid, n) not in act_owned:  # מסלול ישן (לא פעיל) עם אותו מספר לא חוסם
+                act_owned.add((lid, n)); owned.add((lid, n)); t["track_no"], t["track_no_source"] = n, "site_map"
     if reg.ok:  # מוצא אחרון: התאמת שם לרישום. ההתאמה הטובה ביותר קודמת ("פאסיבי לבני 50" לפני "לבני 50")
         fb = []
         for i, t in enumerate(tracks):
