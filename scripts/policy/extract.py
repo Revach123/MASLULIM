@@ -14,7 +14,7 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parents[2]
 OUT = ROOT / (__import__("os").environ.get("POLICY_OUT") or "policy")  # ריצה לחברה: policy/companies/<LegalId>
 
-PARSER_VERSION = 17  # (v10: Ayalon, dated current column) # הגדלה = פרסור מחדש של כל המסמכים בריצה הבאה (שינוי בפרסרים)
+PARSER_VERSION = 18  # (v10: Ayalon, dated current column) # הגדלה = פרסור מחדש של כל המסמכים בריצה הבאה (שינוי בפרסרים)
 
 NUM = r"(\d{1,3}(?:\.\d+)?)"
 PCT = NUM + r"\s*%?"
@@ -139,12 +139,43 @@ def _ocr_pdf(path: Path) -> str:
         for i in range(min(len(doc), 10)):
             buf = io.BytesIO()
             doc[i].render(scale=300 / 72).to_pil().convert("L").save(buf, "PNG")
-            r = subprocess.run(["tesseract", "-", "-", "-l", "heb"], input=buf.getvalue(), capture_output=True, timeout=120)
+            r = subprocess.run(["tesseract", "-", "-", "-l", "heb+eng", "--psm", "6"], input=buf.getvalue(), capture_output=True, timeout=120)
             out.append(r.stdout.decode("utf-8", "ignore"))
         return "\n".join(out)
     except Exception as ex:
         print(f"[extract] ocr {path.name}: {ex!r}", file=sys.stderr)
         return ""
+
+
+def parse_ocr_table_lines(text: str) -> list[dict]:
+    """טבלת מדיניות מתוך OCR (PDF סרוק - עובדי המדינה 2026): שורה לכל אפיק - "מניות 94% 94% 6%-/+ 100%-88% ...".
+    גבולות = "X%-Y%"; סטייה = "N%-/+" או "+/-N%"; הצפוי = האחוז האחרון לפני הסטייה/הגבולות שנמצא בתוך הגבולות."""
+    lines = [l.strip() for l in text.splitlines() if l.strip()]
+    title = next((l for l in lines if "מסלול" in l), "")
+    tm = re.search(r"(מסלול[^(\-–]{2,60})", title)
+    name = norm_name(tm.group(1)) if tm else "כללי"
+    fm = re.search(r"\((\d{2,6})\)", title)
+    ym = re.search(r"לשנת\s*(20\d\d)", title) or re.search(r"(20\d\d)", title)
+    out = []
+    for l in lines:
+        b = re.search(r"(\d{1,3}(?:\.\d+)?)\s*%\s*-\s*(\d{1,3}(?:\.\d+)?)\s*%", l)
+        lab = re.match(r"^([א-ת\"'״ ,()\-]{2,60}?)\s*(?=[\d%(]|$)", l)
+        if not b or not lab or not re.search(r"[א-ת]{2}", lab.group(1)):
+            continue
+        lo, hi = sorted((float(b.group(1)), float(b.group(2))))
+        if hi > 150:
+            continue
+        tol = re.search(r"(\d{1,2})\s*%\s*-/\+|\+/-\s*(\d{1,2})\s*%", l)
+        cut = min(x.start() for x in (b, tol) if x)
+        before = [float(x) for x in re.findall(r"(\d{1,3}(?:\.\d+)?)\s*%", l[:cut])]
+        exp = next((x for x in reversed(before) if lo <= x <= hi), None)
+        asset = lab.group(1).strip(" -,(")
+        out.append({"fund_id": fm.group(1) if fm else None, "track_no": fm.group(1) if fm else None, "track_code": "ocr",
+                    "track_name": name, "group": "ocr", "year": ym.group(1) if ym else None, "asset": asset,
+                    "asset_key": asset_key(asset), "current_pct": before[0] if len(before) > 2 else None, "expected_pct": exp,
+                    "tolerance": (tol.group(1) or tol.group(2)) + "%" if tol else None, "min_pct": lo, "max_pct": hi,
+                    "benchmark": None, "policy_text": l[:200], "sheet": "ocr"})
+    return out if len(out) >= 2 else []  # שורה אחת בלבד = OCR חלקי (חסר אפיק המניות?) - לא מפרסמים תמונה חלקית
 
 
 PROSE_RX = re.compile(r"(?:(עד|לפחות|מקסימום|מינימום)\s*(\d{1,3}(?:\.\d+)?)\s*%|(\d{1,3}(?:\.\d+)?)\s*%\s*(לפחות|לכל היותר))"
@@ -737,6 +768,13 @@ def main():
         if fn_code and doc_rows and len({r.get("track_code") for r in doc_rows}) == 1 and not any(r.get("fund_id") for r in doc_rows):
             for r in doc_rows:
                 r["fund_id"] = r["track_no"] = fn_code.group(1)
+        if not n_long and _site_cfg(ent["legal_id"]).get("ocr") and p.suffix.lower() == ".pdf":
+            # PDF סרוק עם שכבת טקסט פגומה (מספרי הטבלה בתמונה) - OCR ופרסור שורות
+            ocr_rows = parse_ocr_table_lines(_ocr_pdf(p))
+            for r in ocr_rows:
+                r.update(legal_id=ent["legal_id"], track_code=f"{ent['legal_id']}|ocr|{r['track_name']}", url=url,
+                         doc_file=ent["file"], doc_first_seen=ent.get("first_seen"))
+            long_rows += ocr_rows; n_long += len(ocr_rows)
         if not n_long and _site_cfg(ent["legal_id"]).get("prose"):  # מדיניות במלל (מכתב, בלי טבלה) - רק באתרים שסומנו
             prose = parse_prose_limits(text)
             for r in prose:

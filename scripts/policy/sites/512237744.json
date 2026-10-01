@@ -2,12 +2,18 @@
  "legal_id": "512237744",
  "name": "מגדל מקפת קרנות פנסיה וקופות גמל בע\"מ",
  "home": "https://www.migdal.co.il",
- "pages": [],
+ "pages": [
+  {
+   "product": "גמל",
+   "url": "https://www.migdal.co.il/regulations/makefet-investment-policy"
+  }
+ ],
  "browser": "headless",
  "products": [
   "גמל",
   "פנסיה"
  ],
  "search": true,
- "rev": 4
+ "rev": 5,
+ "note": "מגדל (Wix): כל הקבצים ברשימת XHR (wix:document://v1/ugd/...) -> /_files/ugd/<id> ישיר. חיסכון לכל ילד ומרכזית לפיצויים לא נאספו בלחיצות"
 }

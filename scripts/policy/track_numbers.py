@@ -132,9 +132,12 @@ class Registry:
         digs = lambda x: sorted(re.findall(r"(?<!\d)\d{1,3}(?!\d)", re.sub(r"(?i)s\s*&\s*p\s*(\d)|(\d+)\s*s\s*&\s*p\b", r"sp\1\2", _ages(x))))
         sets = {tn: _toks(nm) for tn, nm in cand.items() if digs(nm) == digs(name)}  # גילאים/אחוזים/מדד זהים
         alls = [_toks(nm) for nm in cand.values()]
-        common = frozenset.intersection(*alls) if len(alls) > 1 else frozenset()
-        common |= {"חברה", "לביטוח", "בע", "מ", "בעמ"}  # "הכשרה חברה לביטוח בע"מ - כללי" = "הכשרה כללי"
+        common_reg = frozenset.intersection(*alls) if len(alls) > 1 else frozenset()
+        common = common_reg | {"חברה", "לביטוח", "בע", "מ", "בעמ"}  # "הכשרה חברה לביטוח בע"מ - כללי" = "הכשרה כללי"
         mine = _toks(name) - common
+        mine = frozenset(w for w in mine if not any(pre + w in common_reg for pre in "להוב"))  # "משפטנים" = "למשפטנים"
+        # שם ברישום בלי תיאור מסלול ("קרן השתלמות למשפטנים בע"מ") = המסלול הכללי
+        sets = {tn: (t if t - common else t | {"כללי"}) for tn, t in sets.items()}
         # ראשי תיבות של שם החברה ברישום ("ק.ל.ע", "עו\"ס") כמילה אחת במסמך ("מסלול קלע כללי") - לא מכריעים
         acr = {re.sub(r"[\"״'׳.]", "", m) for nm in cand.values() for m in re.findall(r"[א-ת]{1,3}(?:[\"״'׳.][א-ת]{1,3})+", str(nm))}
         if mine - acr:
