@@ -368,7 +368,9 @@ def _live_swap_ratio(row: dict, report_date, fx_now: dict, total: float) -> floa
     """|יחידות| × מחיר המדד ליום הדוח (swap_index_pricing, רק טיקר ממופה) × שער
     מטבע המדד / נכסי המסלול. None אם אין מחיר / יחידות, או שהתוצאה לא סבירה לשורה."""
     leg1_col, leg2_col = SWAP_LEGS
-    price = _current_index_price(row, report_date)
+    # רק סדרת מדד ישירה - לא פרוקסי: כאן קנה המידה של היחידות לא מאומת מול רגל 2
+    # (פרוקסי ב-512267592: יחידות בקנה מידה אחר -> 200%+ למסלול)
+    price, _ = resolve_current_price(row.get(SWAP_TICKER_COL), report_date)
     if price is None:
         return None
     ccy1, ccy2 = row.get(leg1_col["currency"]), row.get(leg2_col["currency"])
