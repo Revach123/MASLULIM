@@ -126,6 +126,18 @@ def compute_equity_totals(reports_dir: Path, tracks: list[dict]):
         print(f"[validate] שכבת שמות-מלאים OpenFIGI נכשלה (מדלג): {e}")
     print(f"[validate] {len(isin_fractions)} ISIN מסווגים סה\"כ (+שמות מלאים)")
 
+    # אבחון: שבר מניות מעל 1 (קרן לונג לא אמורה לעבור 100%) - משקל מצטבר במסלולים
+    weight_by_isin: dict[str, float] = {}
+    for f in funds:
+        if f.get("סוג") == "חוץ":
+            isin = str(f.get("מספר קרן") or "").strip().upper()
+            weight_by_isin[isin] = weight_by_isin.get(isin, 0.0) + (to_ratio(f.get("שיעור מסך נכסי ההשקעה")) or 0.0)
+    high = sorted(((w, i, isin_fractions[i]) for i, w in weight_by_isin.items()
+                   if i in isin_fractions and (isin_fractions[i].get("equity") or 0) > 1.05), reverse=True)
+    print(f"[validate] {len(high)} ISIN עם שבר מניות > 1.05:")
+    for w, i, fr in high[:30]:
+        print(f"[validate]   {i}  equity={fr.get('equity'):.3f} bond={fr.get('bond')}  משקל מצטבר={w*100:.1f}%")
+
     foreign_equity = build_foreign_equity(funds, isin_fractions)
 
     category_pct = build_category_pct(source)
