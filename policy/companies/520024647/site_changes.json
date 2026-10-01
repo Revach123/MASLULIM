@@ -1,560 +1,1613 @@
 [
  {
-  "kind": "new_page",
+  "kind": "page_changed",
   "page": "https://www.clalbit.co.il/aboutclalinsurance/generalreports/?txtTabId=1&txtReportsYearId=2026&txtCompanyId=2&txtReportTypeId=20",
-  "text": "222 items",
+  "text": "טקסט העמוד השתנה (אותם קישורים)",
   "href": "https://www.clalbit.co.il/aboutclalinsurance/generalreports/?txtTabId=1&txtReportsYearId=2026&txtCompanyId=2&txtReportTypeId=20",
   "legal_id": "520024647",
   "company": "כלל חברה לביטוח בע\"מ",
-  "detected": "2026-10-01T09:15:30+00:00"
+  "detected": "2026-10-01T09:43:01+00:00"
  },
  {
-  "kind": "new_page",
+  "kind": "text_changed",
   "page": "https://www.clalbit.co.il/aboutclalinsurance/generalreports/?txtTabId=1&txtReportsYearId=2025&txtCompanyId=2&txtReportTypeId=20",
-  "text": "457 items",
-  "href": "https://www.clalbit.co.il/aboutclalinsurance/generalreports/?txtTabId=1&txtReportsYearId=2025&txtCompanyId=2&txtReportTypeId=20",
+  "text": "(html) -> (xhr)",
+  "href": "https://www.clalbit.co.il/media/0off4fkw/צדדים-קשורים-תמר-כללי-31-12-2025.xls",
   "legal_id": "520024647",
   "company": "כלל חברה לביטוח בע\"מ",
-  "detected": "2026-10-01T09:15:30+00:00"
+  "detected": "2026-10-01T09:43:01+00:00"
  },
  {
-  "kind": "new_page",
+  "kind": "text_changed",
+  "page": "https://www.clalbit.co.il/aboutclalinsurance/generalreports/?txtTabId=1&txtReportsYearId=2025&txtCompanyId=2&txtReportTypeId=20",
+  "text": "(html) -> (xhr)",
+  "href": "https://www.clalbit.co.il/media/q5plpgpr/צדדים-קשורים-תמר-כללי-31-12-2025.xls",
+  "legal_id": "520024647",
+  "company": "כלל חברה לביטוח בע\"מ",
+  "detected": "2026-10-01T09:43:01+00:00"
+ },
+ {
+  "kind": "text_changed",
+  "page": "https://www.clalbit.co.il/aboutclalinsurance/generalreports/?txtTabId=1&txtReportsYearId=2025&txtCompanyId=2&txtReportTypeId=20",
+  "text": "(html) -> (xhr)",
+  "href": "https://www.clalbit.co.il/media/vsifkp2y/צדדים-קשורים-תמר-כללי-31-12-2025.xls",
+  "legal_id": "520024647",
+  "company": "כלל חברה לביטוח בע\"מ",
+  "detected": "2026-10-01T09:43:01+00:00"
+ },
+ {
+  "kind": "text_changed",
+  "page": "https://www.clalbit.co.il/aboutclalinsurance/generalreports/?txtTabId=1&txtReportsYearId=2025&txtCompanyId=2&txtReportTypeId=20",
+  "text": "(xhr) -> (html)",
+  "href": "https://www.clalbit.co.il/media/cy1f4kdb/צדדים-קשורים-תמר-כללי-31-12-2025.xls",
+  "legal_id": "520024647",
+  "company": "כלל חברה לביטוח בע\"מ",
+  "detected": "2026-10-01T09:43:01+00:00"
+ },
+ {
+  "kind": "text_changed",
+  "page": "https://www.clalbit.co.il/aboutclalinsurance/generalreports/?txtTabId=1&txtReportsYearId=2025&txtCompanyId=2&txtReportTypeId=20",
+  "text": "(xhr) -> (html)",
+  "href": "https://www.clalbit.co.il/media/2aebhpm0/צדדים-קשורים-תמר-כללי-31-12-2025.xls",
+  "legal_id": "520024647",
+  "company": "כלל חברה לביטוח בע\"מ",
+  "detected": "2026-10-01T09:43:01+00:00"
+ },
+ {
+  "kind": "text_changed",
+  "page": "https://www.clalbit.co.il/aboutclalinsurance/generalreports/?txtTabId=1&txtReportsYearId=2025&txtCompanyId=2&txtReportTypeId=20",
+  "text": "(xhr) -> (html)",
+  "href": "https://www.clalbit.co.il/media/unujk1c5/צדדים-קשורים-תמר-כללי-31-12-2025.xls",
+  "legal_id": "520024647",
+  "company": "כלל חברה לביטוח בע\"מ",
+  "detected": "2026-10-01T09:43:01+00:00"
+ },
+ {
+  "kind": "text_changed",
+  "page": "https://www.clalbit.co.il/aboutclalinsurance/generalreports/?txtTabId=1&txtReportsYearId=2025&txtCompanyId=2&txtReportTypeId=20",
+  "text": "(html) -> (xhr)",
+  "href": "https://www.clalbit.co.il/media/oumnstua/hodshi_clal_tamar_60_vamala_1025.xlsx",
+  "legal_id": "520024647",
+  "company": "כלל חברה לביטוח בע\"מ",
+  "detected": "2026-10-01T09:43:01+00:00"
+ },
+ {
+  "kind": "text_changed",
+  "page": "https://www.clalbit.co.il/aboutclalinsurance/generalreports/?txtTabId=1&txtReportsYearId=2025&txtCompanyId=2&txtReportTypeId=20",
+  "text": "(html) -> (xhr)",
+  "href": "https://www.clalbit.co.il/media/bmqdz5ey/hodshi_clal_tamar_60_vamala_1125.xlsx",
+  "legal_id": "520024647",
+  "company": "כלל חברה לביטוח בע\"מ",
+  "detected": "2026-10-01T09:43:01+00:00"
+ },
+ {
+  "kind": "text_changed",
+  "page": "https://www.clalbit.co.il/aboutclalinsurance/generalreports/?txtTabId=1&txtReportsYearId=2025&txtCompanyId=2&txtReportTypeId=20",
+  "text": "(html) -> (xhr)",
+  "href": "https://www.clalbit.co.il/media/3hnlqb0f/hodshi_clal_tamar_60_vamala_1225.xlsx",
+  "legal_id": "520024647",
+  "company": "כלל חברה לביטוח בע\"מ",
+  "detected": "2026-10-01T09:43:01+00:00"
+ },
+ {
+  "kind": "text_changed",
+  "page": "https://www.clalbit.co.il/aboutclalinsurance/generalreports/?txtTabId=1&txtReportsYearId=2025&txtCompanyId=2&txtReportTypeId=20",
+  "text": "(html) -> (xhr)",
+  "href": "https://www.clalbit.co.il/media/swbdpe3u/hodshi_clal_tamar_okev_madadim_gamish_0125.xlsx",
+  "legal_id": "520024647",
+  "company": "כלל חברה לביטוח בע\"מ",
+  "detected": "2026-10-01T09:43:01+00:00"
+ },
+ {
+  "kind": "text_changed",
+  "page": "https://www.clalbit.co.il/aboutclalinsurance/generalreports/?txtTabId=1&txtReportsYearId=2025&txtCompanyId=2&txtReportTypeId=20",
+  "text": "(html) -> (xhr)",
+  "href": "https://www.clalbit.co.il/media/3ind0knb/hodshi_clal_tamar_okev_madadim_gamish_0225.xlsx",
+  "legal_id": "520024647",
+  "company": "כלל חברה לביטוח בע\"מ",
+  "detected": "2026-10-01T09:43:01+00:00"
+ },
+ {
+  "kind": "text_changed",
+  "page": "https://www.clalbit.co.il/aboutclalinsurance/generalreports/?txtTabId=1&txtReportsYearId=2025&txtCompanyId=2&txtReportTypeId=20",
+  "text": "(html) -> (xhr)",
+  "href": "https://www.clalbit.co.il/media/irqgdb5x/hodshi_clal_tamar_okev_madadim_gamish_0325.xlsx",
+  "legal_id": "520024647",
+  "company": "כלל חברה לביטוח בע\"מ",
+  "detected": "2026-10-01T09:43:01+00:00"
+ },
+ {
+  "kind": "text_changed",
+  "page": "https://www.clalbit.co.il/aboutclalinsurance/generalreports/?txtTabId=1&txtReportsYearId=2025&txtCompanyId=2&txtReportTypeId=20",
+  "text": "(html) -> (xhr)",
+  "href": "https://www.clalbit.co.il/media/0nwbagh1/hodshi_clal_tamar_okev_madadim_gamish_0425.xlsx",
+  "legal_id": "520024647",
+  "company": "כלל חברה לביטוח בע\"מ",
+  "detected": "2026-10-01T09:43:01+00:00"
+ },
+ {
+  "kind": "text_changed",
+  "page": "https://www.clalbit.co.il/aboutclalinsurance/generalreports/?txtTabId=1&txtReportsYearId=2025&txtCompanyId=2&txtReportTypeId=20",
+  "text": "(html) -> (xhr)",
+  "href": "https://www.clalbit.co.il/media/xc3lpn3v/hodshi_clal_tamar_okev_madadim_gamish_0525.xlsx",
+  "legal_id": "520024647",
+  "company": "כלל חברה לביטוח בע\"מ",
+  "detected": "2026-10-01T09:43:01+00:00"
+ },
+ {
+  "kind": "text_changed",
+  "page": "https://www.clalbit.co.il/aboutclalinsurance/generalreports/?txtTabId=1&txtReportsYearId=2025&txtCompanyId=2&txtReportTypeId=20",
+  "text": "(html) -> (xhr)",
+  "href": "https://www.clalbit.co.il/media/0xgekiqv/hodshi_clal_tamar_okev_madadim_gamish_0625.xlsx",
+  "legal_id": "520024647",
+  "company": "כלל חברה לביטוח בע\"מ",
+  "detected": "2026-10-01T09:43:01+00:00"
+ },
+ {
+  "kind": "text_changed",
+  "page": "https://www.clalbit.co.il/aboutclalinsurance/generalreports/?txtTabId=1&txtReportsYearId=2025&txtCompanyId=2&txtReportTypeId=20",
+  "text": "(html) -> (xhr)",
+  "href": "https://www.clalbit.co.il/media/qztbgvu1/hodshi_clal_tamar_okev_madadim_gamish_0725.xlsx",
+  "legal_id": "520024647",
+  "company": "כלל חברה לביטוח בע\"מ",
+  "detected": "2026-10-01T09:43:01+00:00"
+ },
+ {
+  "kind": "text_changed",
+  "page": "https://www.clalbit.co.il/aboutclalinsurance/generalreports/?txtTabId=1&txtReportsYearId=2025&txtCompanyId=2&txtReportTypeId=20",
+  "text": "(html) -> (xhr)",
+  "href": "https://www.clalbit.co.il/media/svqa5rwp/hodshi_clal_tamar_okev_madadim_gamish_0825.xlsx",
+  "legal_id": "520024647",
+  "company": "כלל חברה לביטוח בע\"מ",
+  "detected": "2026-10-01T09:43:01+00:00"
+ },
+ {
+  "kind": "text_changed",
+  "page": "https://www.clalbit.co.il/aboutclalinsurance/generalreports/?txtTabId=1&txtReportsYearId=2025&txtCompanyId=2&txtReportTypeId=20",
+  "text": "(html) -> (xhr)",
+  "href": "https://www.clalbit.co.il/media/cp2ljr2b/hodshi_clal_tamar_okev_madadim_gamish_0925.xlsx",
+  "legal_id": "520024647",
+  "company": "כלל חברה לביטוח בע\"מ",
+  "detected": "2026-10-01T09:43:01+00:00"
+ },
+ {
+  "kind": "text_changed",
+  "page": "https://www.clalbit.co.il/aboutclalinsurance/generalreports/?txtTabId=1&txtReportsYearId=2025&txtCompanyId=2&txtReportTypeId=20",
+  "text": "(html) -> (xhr)",
+  "href": "https://www.clalbit.co.il/media/rllntgrw/hodshi_clal_tamar_okev_madadim_gamish_1025.xlsx",
+  "legal_id": "520024647",
+  "company": "כלל חברה לביטוח בע\"מ",
+  "detected": "2026-10-01T09:43:01+00:00"
+ },
+ {
+  "kind": "text_changed",
+  "page": "https://www.clalbit.co.il/aboutclalinsurance/generalreports/?txtTabId=1&txtReportsYearId=2025&txtCompanyId=2&txtReportTypeId=20",
+  "text": "(html) -> (xhr)",
+  "href": "https://www.clalbit.co.il/media/f2kbvsxo/hodshi_clal_tamar_okev_madadim_gamish_1125.xlsx",
+  "legal_id": "520024647",
+  "company": "כלל חברה לביטוח בע\"מ",
+  "detected": "2026-10-01T09:43:01+00:00"
+ },
+ {
+  "kind": "text_changed",
+  "page": "https://www.clalbit.co.il/aboutclalinsurance/generalreports/?txtTabId=1&txtReportsYearId=2025&txtCompanyId=2&txtReportTypeId=20",
+  "text": "(html) -> (xhr)",
+  "href": "https://www.clalbit.co.il/media/5bza4253/hodshi_clal_tamar_okev_madadim_gamish_1225.xlsx",
+  "legal_id": "520024647",
+  "company": "כלל חברה לביטוח בע\"מ",
+  "detected": "2026-10-01T09:43:01+00:00"
+ },
+ {
+  "kind": "text_changed",
+  "page": "https://www.clalbit.co.il/aboutclalinsurance/generalreports/?txtTabId=1&txtReportsYearId=2025&txtCompanyId=2&txtReportTypeId=20",
+  "text": "(html) -> (xhr)",
+  "href": "https://www.clalbit.co.il/media/bqsf5i2d/hodshi_clal_tamar_meshulav_sahir_0125.xlsx",
+  "legal_id": "520024647",
+  "company": "כלל חברה לביטוח בע\"מ",
+  "detected": "2026-10-01T09:43:01+00:00"
+ },
+ {
+  "kind": "text_changed",
+  "page": "https://www.clalbit.co.il/aboutclalinsurance/generalreports/?txtTabId=1&txtReportsYearId=2025&txtCompanyId=2&txtReportTypeId=20",
+  "text": "(html) -> (xhr)",
+  "href": "https://www.clalbit.co.il/media/pj4hgqpi/hodshi_clal_tamar_meshulav_sahir_0225.xlsx",
+  "legal_id": "520024647",
+  "company": "כלל חברה לביטוח בע\"מ",
+  "detected": "2026-10-01T09:43:01+00:00"
+ },
+ {
+  "kind": "text_changed",
+  "page": "https://www.clalbit.co.il/aboutclalinsurance/generalreports/?txtTabId=1&txtReportsYearId=2025&txtCompanyId=2&txtReportTypeId=20",
+  "text": "(html) -> (xhr)",
+  "href": "https://www.clalbit.co.il/media/pmgl5rse/hodshi_clal_tamar_meshulav_sahir_0325.xlsx",
+  "legal_id": "520024647",
+  "company": "כלל חברה לביטוח בע\"מ",
+  "detected": "2026-10-01T09:43:01+00:00"
+ },
+ {
+  "kind": "text_changed",
+  "page": "https://www.clalbit.co.il/aboutclalinsurance/generalreports/?txtTabId=1&txtReportsYearId=2025&txtCompanyId=2&txtReportTypeId=20",
+  "text": "(html) -> (xhr)",
+  "href": "https://www.clalbit.co.il/media/amnb3qe5/hodshi_clal_tamar_meshulav_sahir_0425.xlsx",
+  "legal_id": "520024647",
+  "company": "כלל חברה לביטוח בע\"מ",
+  "detected": "2026-10-01T09:43:01+00:00"
+ },
+ {
+  "kind": "text_changed",
+  "page": "https://www.clalbit.co.il/aboutclalinsurance/generalreports/?txtTabId=1&txtReportsYearId=2025&txtCompanyId=2&txtReportTypeId=20",
+  "text": "(html) -> (xhr)",
+  "href": "https://www.clalbit.co.il/media/3meluwja/hodshi_clal_tamar_meshulav_sahir_0525.xlsx",
+  "legal_id": "520024647",
+  "company": "כלל חברה לביטוח בע\"מ",
+  "detected": "2026-10-01T09:43:01+00:00"
+ },
+ {
+  "kind": "text_changed",
+  "page": "https://www.clalbit.co.il/aboutclalinsurance/generalreports/?txtTabId=1&txtReportsYearId=2025&txtCompanyId=2&txtReportTypeId=20",
+  "text": "(html) -> (xhr)",
+  "href": "https://www.clalbit.co.il/media/a0ypui4o/hodshi_clal_tamar_menayot_sahir_0628.xlsx",
+  "legal_id": "520024647",
+  "company": "כלל חברה לביטוח בע\"מ",
+  "detected": "2026-10-01T09:43:01+00:00"
+ },
+ {
+  "kind": "text_changed",
+  "page": "https://www.clalbit.co.il/aboutclalinsurance/generalreports/?txtTabId=1&txtReportsYearId=2025&txtCompanyId=2&txtReportTypeId=20",
+  "text": "(html) -> (xhr)",
+  "href": "https://www.clalbit.co.il/media/qkcapumn/hodshi_clal_tamar_meshulav_sahir_0725.xlsx",
+  "legal_id": "520024647",
+  "company": "כלל חברה לביטוח בע\"מ",
+  "detected": "2026-10-01T09:43:01+00:00"
+ },
+ {
+  "kind": "text_changed",
+  "page": "https://www.clalbit.co.il/aboutclalinsurance/generalreports/?txtTabId=1&txtReportsYearId=2025&txtCompanyId=2&txtReportTypeId=20",
+  "text": "(html) -> (xhr)",
+  "href": "https://www.clalbit.co.il/media/zxmcu0r2/hodshi_clal_tamar_meshulav_sahir_0825.xlsx",
+  "legal_id": "520024647",
+  "company": "כלל חברה לביטוח בע\"מ",
+  "detected": "2026-10-01T09:43:01+00:00"
+ },
+ {
+  "kind": "text_changed",
+  "page": "https://www.clalbit.co.il/aboutclalinsurance/generalreports/?txtTabId=1&txtReportsYearId=2025&txtCompanyId=2&txtReportTypeId=20",
+  "text": "(html) -> (xhr)",
+  "href": "https://www.clalbit.co.il/media/jp5hxnop/hodshi_clal_tamar_meshulav_sahir_0925.xlsx",
+  "legal_id": "520024647",
+  "company": "כלל חברה לביטוח בע\"מ",
+  "detected": "2026-10-01T09:43:01+00:00"
+ },
+ {
+  "kind": "text_changed",
+  "page": "https://www.clalbit.co.il/aboutclalinsurance/generalreports/?txtTabId=1&txtReportsYearId=2025&txtCompanyId=2&txtReportTypeId=20",
+  "text": "(html) -> (xhr)",
+  "href": "https://www.clalbit.co.il/media/4qkfojbk/hodshi_clal_tamar_meshulav_sahir_1025.xlsx",
+  "legal_id": "520024647",
+  "company": "כלל חברה לביטוח בע\"מ",
+  "detected": "2026-10-01T09:43:01+00:00"
+ },
+ {
+  "kind": "text_changed",
+  "page": "https://www.clalbit.co.il/aboutclalinsurance/generalreports/?txtTabId=1&txtReportsYearId=2025&txtCompanyId=2&txtReportTypeId=20",
+  "text": "(html) -> (xhr)",
+  "href": "https://www.clalbit.co.il/media/bwjfjuzv/hodshi_clal_tamar_meshulav_sahir_1125.xlsx",
+  "legal_id": "520024647",
+  "company": "כלל חברה לביטוח בע\"מ",
+  "detected": "2026-10-01T09:43:01+00:00"
+ },
+ {
+  "kind": "text_changed",
+  "page": "https://www.clalbit.co.il/aboutclalinsurance/generalreports/?txtTabId=1&txtReportsYearId=2025&txtCompanyId=2&txtReportTypeId=20",
+  "text": "(html) -> (xhr)",
+  "href": "https://www.clalbit.co.il/media/ejnfvigc/hodshi_clal_tamar_meshulav_sahir_1225.xlsx",
+  "legal_id": "520024647",
+  "company": "כלל חברה לביטוח בע\"מ",
+  "detected": "2026-10-01T09:43:01+00:00"
+ },
+ {
+  "kind": "text_changed",
+  "page": "https://www.clalbit.co.il/aboutclalinsurance/generalreports/?txtTabId=1&txtReportsYearId=2025&txtCompanyId=2&txtReportTypeId=20",
+  "text": "(xhr) -> (html)",
+  "href": "https://www.clalbit.co.il/media/wtymwjtm/hodshi_clal_tamar_menayot_sahir_0925.xlsx",
+  "legal_id": "520024647",
+  "company": "כלל חברה לביטוח בע\"מ",
+  "detected": "2026-10-01T09:43:01+00:00"
+ },
+ {
+  "kind": "text_changed",
+  "page": "https://www.clalbit.co.il/aboutclalinsurance/generalreports/?txtTabId=1&txtReportsYearId=2025&txtCompanyId=2&txtReportTypeId=20",
+  "text": "(xhr) -> (html)",
+  "href": "https://www.clalbit.co.il/media/ezglzttk/hodshi_clal_tamar_menayot_sahir_1025.xlsx",
+  "legal_id": "520024647",
+  "company": "כלל חברה לביטוח בע\"מ",
+  "detected": "2026-10-01T09:43:01+00:00"
+ },
+ {
+  "kind": "text_changed",
+  "page": "https://www.clalbit.co.il/aboutclalinsurance/generalreports/?txtTabId=1&txtReportsYearId=2025&txtCompanyId=2&txtReportTypeId=20",
+  "text": "(xhr) -> (html)",
+  "href": "https://www.clalbit.co.il/media/gkwbti04/hodshi_clal_tamar_menayot_sahir_1125.xlsx",
+  "legal_id": "520024647",
+  "company": "כלל חברה לביטוח בע\"מ",
+  "detected": "2026-10-01T09:43:01+00:00"
+ },
+ {
+  "kind": "text_changed",
+  "page": "https://www.clalbit.co.il/aboutclalinsurance/generalreports/?txtTabId=1&txtReportsYearId=2025&txtCompanyId=2&txtReportTypeId=20",
+  "text": "(xhr) -> (html)",
+  "href": "https://www.clalbit.co.il/media/rslhhj1o/hodshi_clal_tamar_menayot_sahir_1225.xlsx",
+  "legal_id": "520024647",
+  "company": "כלל חברה לביטוח בע\"מ",
+  "detected": "2026-10-01T09:43:01+00:00"
+ },
+ {
+  "kind": "text_changed",
+  "page": "https://www.clalbit.co.il/aboutclalinsurance/generalreports/?txtTabId=1&txtReportsYearId=2025&txtCompanyId=2&txtReportTypeId=20",
+  "text": "(xhr) -> (html)",
+  "href": "https://www.clalbit.co.il/media/4lynjhpk/hodshi_clal_tamar_agah_sahir_0225.xlsx",
+  "legal_id": "520024647",
+  "company": "כלל חברה לביטוח בע\"מ",
+  "detected": "2026-10-01T09:43:01+00:00"
+ },
+ {
+  "kind": "text_changed",
+  "page": "https://www.clalbit.co.il/aboutclalinsurance/generalreports/?txtTabId=1&txtReportsYearId=2025&txtCompanyId=2&txtReportTypeId=20",
+  "text": "(xhr) -> (html)",
+  "href": "https://www.clalbit.co.il/media/lsqos4ug/hodshi_clal_tamar_agah_sahir_0325.xlsx",
+  "legal_id": "520024647",
+  "company": "כלל חברה לביטוח בע\"מ",
+  "detected": "2026-10-01T09:43:01+00:00"
+ },
+ {
+  "kind": "text_changed",
+  "page": "https://www.clalbit.co.il/aboutclalinsurance/generalreports/?txtTabId=1&txtReportsYearId=2025&txtCompanyId=2&txtReportTypeId=20",
+  "text": "(xhr) -> (html)",
+  "href": "https://www.clalbit.co.il/media/5n1fbzkz/hodshi_clal_tamar_agah_sahir_0425.xlsx",
+  "legal_id": "520024647",
+  "company": "כלל חברה לביטוח בע\"מ",
+  "detected": "2026-10-01T09:43:01+00:00"
+ },
+ {
+  "kind": "text_changed",
+  "page": "https://www.clalbit.co.il/aboutclalinsurance/generalreports/?txtTabId=1&txtReportsYearId=2025&txtCompanyId=2&txtReportTypeId=20",
+  "text": "(xhr) -> (html)",
+  "href": "https://www.clalbit.co.il/media/wisgg4rw/hodshi_clal_tamar_agah_sahir_0525.xlsx",
+  "legal_id": "520024647",
+  "company": "כלל חברה לביטוח בע\"מ",
+  "detected": "2026-10-01T09:43:01+00:00"
+ },
+ {
+  "kind": "text_changed",
+  "page": "https://www.clalbit.co.il/aboutclalinsurance/generalreports/?txtTabId=1&txtReportsYearId=2025&txtCompanyId=2&txtReportTypeId=20",
+  "text": "(xhr) -> (html)",
+  "href": "https://www.clalbit.co.il/media/pwlfls4n/hodshi_clal_tamar_agah_sahir_0625.xlsx",
+  "legal_id": "520024647",
+  "company": "כלל חברה לביטוח בע\"מ",
+  "detected": "2026-10-01T09:43:01+00:00"
+ },
+ {
+  "kind": "text_changed",
+  "page": "https://www.clalbit.co.il/aboutclalinsurance/generalreports/?txtTabId=1&txtReportsYearId=2025&txtCompanyId=2&txtReportTypeId=20",
+  "text": "(xhr) -> (html)",
+  "href": "https://www.clalbit.co.il/media/y3hc1vu5/hodshi_clal_tamar_agah_sahir_0725.xlsx",
+  "legal_id": "520024647",
+  "company": "כלל חברה לביטוח בע\"מ",
+  "detected": "2026-10-01T09:43:01+00:00"
+ },
+ {
+  "kind": "text_changed",
+  "page": "https://www.clalbit.co.il/aboutclalinsurance/generalreports/?txtTabId=1&txtReportsYearId=2025&txtCompanyId=2&txtReportTypeId=20",
+  "text": "(xhr) -> (html)",
+  "href": "https://www.clalbit.co.il/media/luubhgme/hodshi_clal_tamar_agah_sahir_0825.xlsx",
+  "legal_id": "520024647",
+  "company": "כלל חברה לביטוח בע\"מ",
+  "detected": "2026-10-01T09:43:01+00:00"
+ },
+ {
+  "kind": "text_changed",
+  "page": "https://www.clalbit.co.il/aboutclalinsurance/generalreports/?txtTabId=1&txtReportsYearId=2025&txtCompanyId=2&txtReportTypeId=20",
+  "text": "(xhr) -> (html)",
+  "href": "https://www.clalbit.co.il/media/v5hdng2m/hodshi_clal_tamar_agah_sahir_0925.xlsx",
+  "legal_id": "520024647",
+  "company": "כלל חברה לביטוח בע\"מ",
+  "detected": "2026-10-01T09:43:01+00:00"
+ },
+ {
+  "kind": "text_changed",
+  "page": "https://www.clalbit.co.il/aboutclalinsurance/generalreports/?txtTabId=1&txtReportsYearId=2025&txtCompanyId=2&txtReportTypeId=20",
+  "text": "(xhr) -> (html)",
+  "href": "https://www.clalbit.co.il/media/ttdk2xce/hodshi_clal_tamar_agah_sahir_1025.xlsx",
+  "legal_id": "520024647",
+  "company": "כלל חברה לביטוח בע\"מ",
+  "detected": "2026-10-01T09:43:01+00:00"
+ },
+ {
+  "kind": "text_changed",
+  "page": "https://www.clalbit.co.il/aboutclalinsurance/generalreports/?txtTabId=1&txtReportsYearId=2025&txtCompanyId=2&txtReportTypeId=20",
+  "text": "(xhr) -> (html)",
+  "href": "https://www.clalbit.co.il/media/a5rd3r0n/hodshi_clal_tamar_agah_sahir_1125.xlsx",
+  "legal_id": "520024647",
+  "company": "כלל חברה לביטוח בע\"מ",
+  "detected": "2026-10-01T09:43:01+00:00"
+ },
+ {
+  "kind": "text_changed",
+  "page": "https://www.clalbit.co.il/aboutclalinsurance/generalreports/?txtTabId=1&txtReportsYearId=2025&txtCompanyId=2&txtReportTypeId=20",
+  "text": "(xhr) -> (html)",
+  "href": "https://www.clalbit.co.il/media/cs0a5lnh/hodshi_clal_tamar_agah_sahir_1225.xlsx",
+  "legal_id": "520024647",
+  "company": "כלל חברה לביטוח בע\"מ",
+  "detected": "2026-10-01T09:43:01+00:00"
+ },
+ {
+  "kind": "text_changed",
+  "page": "https://www.clalbit.co.il/aboutclalinsurance/generalreports/?txtTabId=1&txtReportsYearId=2025&txtCompanyId=2&txtReportTypeId=20",
+  "text": "(xhr) -> (html)",
+  "href": "https://www.clalbit.co.il/media/au4miifi/hodshi_clal_tamar_hilhaty_0125.xlsx",
+  "legal_id": "520024647",
+  "company": "כלל חברה לביטוח בע\"מ",
+  "detected": "2026-10-01T09:43:01+00:00"
+ },
+ {
+  "kind": "text_changed",
+  "page": "https://www.clalbit.co.il/aboutclalinsurance/generalreports/?txtTabId=1&txtReportsYearId=2025&txtCompanyId=2&txtReportTypeId=20",
+  "text": "(xhr) -> (html)",
+  "href": "https://www.clalbit.co.il/media/30wjsz2e/hodshi_clal_tamar_hilhaty_0225.xlsx",
+  "legal_id": "520024647",
+  "company": "כלל חברה לביטוח בע\"מ",
+  "detected": "2026-10-01T09:43:01+00:00"
+ },
+ {
+  "kind": "text_changed",
+  "page": "https://www.clalbit.co.il/aboutclalinsurance/generalreports/?txtTabId=1&txtReportsYearId=2025&txtCompanyId=2&txtReportTypeId=20",
+  "text": "(xhr) -> (html)",
+  "href": "https://www.clalbit.co.il/media/gy2fgakw/hodshi_clal_tamar_hilhaty_0325.xlsx",
+  "legal_id": "520024647",
+  "company": "כלל חברה לביטוח בע\"מ",
+  "detected": "2026-10-01T09:43:01+00:00"
+ },
+ {
+  "kind": "text_changed",
+  "page": "https://www.clalbit.co.il/aboutclalinsurance/generalreports/?txtTabId=1&txtReportsYearId=2025&txtCompanyId=2&txtReportTypeId=20",
+  "text": "(xhr) -> (html)",
+  "href": "https://www.clalbit.co.il/media/wkgayzs1/hodshi_clal_tamar_hilhaty_0425.xlsx",
+  "legal_id": "520024647",
+  "company": "כלל חברה לביטוח בע\"מ",
+  "detected": "2026-10-01T09:43:01+00:00"
+ },
+ {
+  "kind": "text_changed",
+  "page": "https://www.clalbit.co.il/aboutclalinsurance/generalreports/?txtTabId=1&txtReportsYearId=2025&txtCompanyId=2&txtReportTypeId=20",
+  "text": "(xhr) -> (html)",
+  "href": "https://www.clalbit.co.il/media/iehkfxjb/hodshi_clal_tamar_hilhaty_0525.xlsx",
+  "legal_id": "520024647",
+  "company": "כלל חברה לביטוח בע\"מ",
+  "detected": "2026-10-01T09:43:01+00:00"
+ },
+ {
+  "kind": "text_changed",
+  "page": "https://www.clalbit.co.il/aboutclalinsurance/generalreports/?txtTabId=1&txtReportsYearId=2025&txtCompanyId=2&txtReportTypeId=20",
+  "text": "(xhr) -> (html)",
+  "href": "https://www.clalbit.co.il/media/2okck5cd/hodshi_clal_tamar_hilhaty_0625.xlsx",
+  "legal_id": "520024647",
+  "company": "כלל חברה לביטוח בע\"מ",
+  "detected": "2026-10-01T09:43:01+00:00"
+ },
+ {
+  "kind": "text_changed",
+  "page": "https://www.clalbit.co.il/aboutclalinsurance/generalreports/?txtTabId=1&txtReportsYearId=2025&txtCompanyId=2&txtReportTypeId=20",
+  "text": "(xhr) -> (html)",
+  "href": "https://www.clalbit.co.il/media/ahwdolyk/hodshi_clal_tamar_hilhaty_0725.xlsx",
+  "legal_id": "520024647",
+  "company": "כלל חברה לביטוח בע\"מ",
+  "detected": "2026-10-01T09:43:01+00:00"
+ },
+ {
+  "kind": "text_changed",
+  "page": "https://www.clalbit.co.il/aboutclalinsurance/generalreports/?txtTabId=1&txtReportsYearId=2025&txtCompanyId=2&txtReportTypeId=20",
+  "text": "(xhr) -> (html)",
+  "href": "https://www.clalbit.co.il/media/ynida2sp/hodshi_clal_tamar_hilhaty_0825.xlsx",
+  "legal_id": "520024647",
+  "company": "כלל חברה לביטוח בע\"מ",
+  "detected": "2026-10-01T09:43:01+00:00"
+ },
+ {
+  "kind": "text_changed",
+  "page": "https://www.clalbit.co.il/aboutclalinsurance/generalreports/?txtTabId=1&txtReportsYearId=2025&txtCompanyId=2&txtReportTypeId=20",
+  "text": "(xhr) -> (html)",
+  "href": "https://www.clalbit.co.il/media/gpge2ola/hodshi_clal_tamar_hilhaty_0925.xlsx",
+  "legal_id": "520024647",
+  "company": "כלל חברה לביטוח בע\"מ",
+  "detected": "2026-10-01T09:43:01+00:00"
+ },
+ {
+  "kind": "text_changed",
+  "page": "https://www.clalbit.co.il/aboutclalinsurance/generalreports/?txtTabId=1&txtReportsYearId=2025&txtCompanyId=2&txtReportTypeId=20",
+  "text": "(xhr) -> (html)",
+  "href": "https://www.clalbit.co.il/media/xjippivt/hodshi_clal_tamar_hilhaty_1025.xlsx",
+  "legal_id": "520024647",
+  "company": "כלל חברה לביטוח בע\"מ",
+  "detected": "2026-10-01T09:43:01+00:00"
+ },
+ {
+  "kind": "text_changed",
+  "page": "https://www.clalbit.co.il/aboutclalinsurance/generalreports/?txtTabId=1&txtReportsYearId=2025&txtCompanyId=2&txtReportTypeId=20",
+  "text": "(xhr) -> (html)",
+  "href": "https://www.clalbit.co.il/media/cmfo41fw/hodshi_clal_tamar_hilhaty_1125.xlsx",
+  "legal_id": "520024647",
+  "company": "כלל חברה לביטוח בע\"מ",
+  "detected": "2026-10-01T09:43:01+00:00"
+ },
+ {
+  "kind": "text_changed",
+  "page": "https://www.clalbit.co.il/aboutclalinsurance/generalreports/?txtTabId=1&txtReportsYearId=2025&txtCompanyId=2&txtReportTypeId=20",
+  "text": "(xhr) -> (html)",
+  "href": "https://www.clalbit.co.il/media/aftbfe5a/hodshi_clal_tamar_hilhaty_1225.xlsx",
+  "legal_id": "520024647",
+  "company": "כלל חברה לביטוח בע\"מ",
+  "detected": "2026-10-01T09:43:01+00:00"
+ },
+ {
+  "kind": "text_changed",
   "page": "https://www.clalbit.co.il/aboutclalinsurance/generalreports/?txtTabId=1&txtReportsYearId=2024&txtCompanyId=2&txtReportTypeId=20",
-  "text": "532 items",
-  "href": "https://www.clalbit.co.il/aboutclalinsurance/generalreports/?txtTabId=1&txtReportsYearId=2024&txtCompanyId=2&txtReportTypeId=20",
+  "text": "(html) -> (xhr)",
+  "href": "https://www.clalbit.co.il/media/khzfmo2e/צדדים-קשורים-תמר-כללי-31-12-2024.xls",
   "legal_id": "520024647",
   "company": "כלל חברה לביטוח בע\"מ",
-  "detected": "2026-10-01T09:15:30+00:00"
+  "detected": "2026-10-01T09:43:01+00:00"
  },
  {
-  "kind": "new_page",
-  "page": "https://www.clalbit.co.il/aboutclalinsurance/generalreports/?txtTabId=1&txtReportsYearId=2023&txtCompanyId=2&txtReportTypeId=20",
-  "text": "434 items",
-  "href": "https://www.clalbit.co.il/aboutclalinsurance/generalreports/?txtTabId=1&txtReportsYearId=2023&txtCompanyId=2&txtReportTypeId=20",
+  "kind": "text_changed",
+  "page": "https://www.clalbit.co.il/aboutclalinsurance/generalreports/?txtTabId=1&txtReportsYearId=2024&txtCompanyId=2&txtReportTypeId=20",
+  "text": "(html) -> (xhr)",
+  "href": "https://www.clalbit.co.il/media/qoinrxx1/צדדים-קשורים-תמר-כללי-31-12-2024.xls",
   "legal_id": "520024647",
   "company": "כלל חברה לביטוח בע\"מ",
-  "detected": "2026-10-01T09:15:30+00:00"
+  "detected": "2026-10-01T09:43:01+00:00"
  },
  {
-  "kind": "new_page",
+  "kind": "text_changed",
+  "page": "https://www.clalbit.co.il/aboutclalinsurance/generalreports/?txtTabId=1&txtReportsYearId=2024&txtCompanyId=2&txtReportTypeId=20",
+  "text": "(xhr) -> (html)",
+  "href": "https://www.clalbit.co.il/media/dgsdgi4j/צדדים-קשורים-תמר-כללי-31-12-2024.xls",
+  "legal_id": "520024647",
+  "company": "כלל חברה לביטוח בע\"מ",
+  "detected": "2026-10-01T09:43:01+00:00"
+ },
+ {
+  "kind": "text_changed",
+  "page": "https://www.clalbit.co.il/aboutclalinsurance/generalreports/?txtTabId=1&txtReportsYearId=2024&txtCompanyId=2&txtReportTypeId=20",
+  "text": "(xhr) -> (html)",
+  "href": "https://www.clalbit.co.il/media/hcajp30h/צדדים-קשורים-תמר-כללי-31-12-2024.xls",
+  "legal_id": "520024647",
+  "company": "כלל חברה לביטוח בע\"מ",
+  "detected": "2026-10-01T09:43:01+00:00"
+ },
+ {
+  "kind": "text_changed",
+  "page": "https://www.clalbit.co.il/aboutclalinsurance/generalreports/?txtTabId=1&txtReportsYearId=2024&txtCompanyId=2&txtReportTypeId=20",
+  "text": "(xhr) -> (html)",
+  "href": "https://www.clalbit.co.il/media/0jhddle5/צדדים-קשורים-תמר-כללי-31-12-2024.xls",
+  "legal_id": "520024647",
+  "company": "כלל חברה לביטוח בע\"מ",
+  "detected": "2026-10-01T09:43:01+00:00"
+ },
+ {
+  "kind": "text_changed",
+  "page": "https://www.clalbit.co.il/aboutclalinsurance/generalreports/?txtTabId=1&txtReportsYearId=2024&txtCompanyId=2&txtReportTypeId=20",
+  "text": "(html) -> (xhr)",
+  "href": "https://www.clalbit.co.il/media/28807/hodshi_clal_tamar_okev_madadim_gamish_0124.xlsx",
+  "legal_id": "520024647",
+  "company": "כלל חברה לביטוח בע\"מ",
+  "detected": "2026-10-01T09:43:01+00:00"
+ },
+ {
+  "kind": "text_changed",
+  "page": "https://www.clalbit.co.il/aboutclalinsurance/generalreports/?txtTabId=1&txtReportsYearId=2024&txtCompanyId=2&txtReportTypeId=20",
+  "text": "(html) -> (xhr)",
+  "href": "https://www.clalbit.co.il/media/29079/hodshi_clal_tamar_okev_madadim_gamish_0224.xlsx",
+  "legal_id": "520024647",
+  "company": "כלל חברה לביטוח בע\"מ",
+  "detected": "2026-10-01T09:43:01+00:00"
+ },
+ {
+  "kind": "text_changed",
+  "page": "https://www.clalbit.co.il/aboutclalinsurance/generalreports/?txtTabId=1&txtReportsYearId=2024&txtCompanyId=2&txtReportTypeId=20",
+  "text": "(html) -> (xhr)",
+  "href": "https://www.clalbit.co.il/media/29647/hodshi_clal_tamar_okev_madadim_gamish_0324.xlsx",
+  "legal_id": "520024647",
+  "company": "כלל חברה לביטוח בע\"מ",
+  "detected": "2026-10-01T09:43:01+00:00"
+ },
+ {
+  "kind": "text_changed",
+  "page": "https://www.clalbit.co.il/aboutclalinsurance/generalreports/?txtTabId=1&txtReportsYearId=2024&txtCompanyId=2&txtReportTypeId=20",
+  "text": "(html) -> (xhr)",
+  "href": "https://www.clalbit.co.il/media/29952/hodshi_clal_tamar_okev_madadim_gamish_0424.xlsx",
+  "legal_id": "520024647",
+  "company": "כלל חברה לביטוח בע\"מ",
+  "detected": "2026-10-01T09:43:01+00:00"
+ },
+ {
+  "kind": "text_changed",
+  "page": "https://www.clalbit.co.il/aboutclalinsurance/generalreports/?txtTabId=1&txtReportsYearId=2024&txtCompanyId=2&txtReportTypeId=20",
+  "text": "(html) -> (xhr)",
+  "href": "https://www.clalbit.co.il/media/30204/hodshi_clal_tamar_okev_madadim_gamish_0524.xlsx",
+  "legal_id": "520024647",
+  "company": "כלל חברה לביטוח בע\"מ",
+  "detected": "2026-10-01T09:43:01+00:00"
+ },
+ {
+  "kind": "text_changed",
+  "page": "https://www.clalbit.co.il/aboutclalinsurance/generalreports/?txtTabId=1&txtReportsYearId=2024&txtCompanyId=2&txtReportTypeId=20",
+  "text": "(html) -> (xhr)",
+  "href": "https://www.clalbit.co.il/media/30344/hodshi_clal_tamar_okev_madadim_gamish_0624.xlsx",
+  "legal_id": "520024647",
+  "company": "כלל חברה לביטוח בע\"מ",
+  "detected": "2026-10-01T09:43:01+00:00"
+ },
+ {
+  "kind": "text_changed",
+  "page": "https://www.clalbit.co.il/aboutclalinsurance/generalreports/?txtTabId=1&txtReportsYearId=2024&txtCompanyId=2&txtReportTypeId=20",
+  "text": "(html) -> (xhr)",
+  "href": "https://www.clalbit.co.il/media/vzppyiju/hodshi_clal_tamar_okev_madadim_gamish_0724.xlsx",
+  "legal_id": "520024647",
+  "company": "כלל חברה לביטוח בע\"מ",
+  "detected": "2026-10-01T09:43:01+00:00"
+ },
+ {
+  "kind": "text_changed",
+  "page": "https://www.clalbit.co.il/aboutclalinsurance/generalreports/?txtTabId=1&txtReportsYearId=2024&txtCompanyId=2&txtReportTypeId=20",
+  "text": "(html) -> (xhr)",
+  "href": "https://www.clalbit.co.il/media/vlhpee3m/hodshi_clal_tamar_okev_madadim_gamish_0824.xlsx",
+  "legal_id": "520024647",
+  "company": "כלל חברה לביטוח בע\"מ",
+  "detected": "2026-10-01T09:43:01+00:00"
+ },
+ {
+  "kind": "text_changed",
+  "page": "https://www.clalbit.co.il/aboutclalinsurance/generalreports/?txtTabId=1&txtReportsYearId=2024&txtCompanyId=2&txtReportTypeId=20",
+  "text": "(html) -> (xhr)",
+  "href": "https://www.clalbit.co.il/media/pnicua2e/hodshi_clal_tamar_okev_madadim_gamish_0924.xlsx",
+  "legal_id": "520024647",
+  "company": "כלל חברה לביטוח בע\"מ",
+  "detected": "2026-10-01T09:43:01+00:00"
+ },
+ {
+  "kind": "text_changed",
+  "page": "https://www.clalbit.co.il/aboutclalinsurance/generalreports/?txtTabId=1&txtReportsYearId=2024&txtCompanyId=2&txtReportTypeId=20",
+  "text": "(html) -> (xhr)",
+  "href": "https://www.clalbit.co.il/media/tc3hioiv/hodshi_clal_tamar_okev_madadim_gamish_1024.xlsx",
+  "legal_id": "520024647",
+  "company": "כלל חברה לביטוח בע\"מ",
+  "detected": "2026-10-01T09:43:01+00:00"
+ },
+ {
+  "kind": "text_changed",
+  "page": "https://www.clalbit.co.il/aboutclalinsurance/generalreports/?txtTabId=1&txtReportsYearId=2024&txtCompanyId=2&txtReportTypeId=20",
+  "text": "(html) -> (xhr)",
+  "href": "https://www.clalbit.co.il/media/csqlgfnc/hodshi_clal_tamar_okev_madadim_gamish_1124.xlsx",
+  "legal_id": "520024647",
+  "company": "כלל חברה לביטוח בע\"מ",
+  "detected": "2026-10-01T09:43:01+00:00"
+ },
+ {
+  "kind": "text_changed",
+  "page": "https://www.clalbit.co.il/aboutclalinsurance/generalreports/?txtTabId=1&txtReportsYearId=2024&txtCompanyId=2&txtReportTypeId=20",
+  "text": "(html) -> (xhr)",
+  "href": "https://www.clalbit.co.il/media/klal43lg/hodshi_clal_tamar_okev_madadim_gamish_1224.xlsx",
+  "legal_id": "520024647",
+  "company": "כלל חברה לביטוח בע\"מ",
+  "detected": "2026-10-01T09:43:01+00:00"
+ },
+ {
+  "kind": "text_changed",
+  "page": "https://www.clalbit.co.il/aboutclalinsurance/generalreports/?txtTabId=1&txtReportsYearId=2024&txtCompanyId=2&txtReportTypeId=20",
+  "text": "(html) -> (xhr)",
+  "href": "https://www.clalbit.co.il/media/28804/hodshi_clal_tamar_meshulav_sahir_0124.xlsx",
+  "legal_id": "520024647",
+  "company": "כלל חברה לביטוח בע\"מ",
+  "detected": "2026-10-01T09:43:01+00:00"
+ },
+ {
+  "kind": "text_changed",
+  "page": "https://www.clalbit.co.il/aboutclalinsurance/generalreports/?txtTabId=1&txtReportsYearId=2024&txtCompanyId=2&txtReportTypeId=20",
+  "text": "(html) -> (xhr)",
+  "href": "https://www.clalbit.co.il/media/29078/hodshi_clal_tamar_meshulav_sahir_0224.xlsx",
+  "legal_id": "520024647",
+  "company": "כלל חברה לביטוח בע\"מ",
+  "detected": "2026-10-01T09:43:01+00:00"
+ },
+ {
+  "kind": "text_changed",
+  "page": "https://www.clalbit.co.il/aboutclalinsurance/generalreports/?txtTabId=1&txtReportsYearId=2024&txtCompanyId=2&txtReportTypeId=20",
+  "text": "(html) -> (xhr)",
+  "href": "https://www.clalbit.co.il/media/29646/hodshi_clal_tamar_meshulav_sahir_0324.xlsx",
+  "legal_id": "520024647",
+  "company": "כלל חברה לביטוח בע\"מ",
+  "detected": "2026-10-01T09:43:01+00:00"
+ },
+ {
+  "kind": "text_changed",
+  "page": "https://www.clalbit.co.il/aboutclalinsurance/generalreports/?txtTabId=1&txtReportsYearId=2024&txtCompanyId=2&txtReportTypeId=20",
+  "text": "(html) -> (xhr)",
+  "href": "https://www.clalbit.co.il/media/29951/hodshi_clal_tamar_meshulav_sahir_0424.xlsx",
+  "legal_id": "520024647",
+  "company": "כלל חברה לביטוח בע\"מ",
+  "detected": "2026-10-01T09:43:01+00:00"
+ },
+ {
+  "kind": "text_changed",
+  "page": "https://www.clalbit.co.il/aboutclalinsurance/generalreports/?txtTabId=1&txtReportsYearId=2024&txtCompanyId=2&txtReportTypeId=20",
+  "text": "(html) -> (xhr)",
+  "href": "https://www.clalbit.co.il/media/30203/hodshi_clal_tamar_meshulav_sahir_0524.xlsx",
+  "legal_id": "520024647",
+  "company": "כלל חברה לביטוח בע\"מ",
+  "detected": "2026-10-01T09:43:01+00:00"
+ },
+ {
+  "kind": "text_changed",
+  "page": "https://www.clalbit.co.il/aboutclalinsurance/generalreports/?txtTabId=1&txtReportsYearId=2024&txtCompanyId=2&txtReportTypeId=20",
+  "text": "(html) -> (xhr)",
+  "href": "https://www.clalbit.co.il/media/30343/hodshi_clal_tamar_meshulav_sahir_0624.xlsx",
+  "legal_id": "520024647",
+  "company": "כלל חברה לביטוח בע\"מ",
+  "detected": "2026-10-01T09:43:01+00:00"
+ },
+ {
+  "kind": "text_changed",
+  "page": "https://www.clalbit.co.il/aboutclalinsurance/generalreports/?txtTabId=1&txtReportsYearId=2024&txtCompanyId=2&txtReportTypeId=20",
+  "text": "(html) -> (xhr)",
+  "href": "https://www.clalbit.co.il/media/3k2f4ohl/hodshi_clal_tamar_meshulav_sahir_0724.xlsx",
+  "legal_id": "520024647",
+  "company": "כלל חברה לביטוח בע\"מ",
+  "detected": "2026-10-01T09:43:01+00:00"
+ },
+ {
+  "kind": "text_changed",
+  "page": "https://www.clalbit.co.il/aboutclalinsurance/generalreports/?txtTabId=1&txtReportsYearId=2024&txtCompanyId=2&txtReportTypeId=20",
+  "text": "(html) -> (xhr)",
+  "href": "https://www.clalbit.co.il/media/1oobmdrc/hodshi_clal_tamar_meshulav_sahir_0824.xlsx",
+  "legal_id": "520024647",
+  "company": "כלל חברה לביטוח בע\"מ",
+  "detected": "2026-10-01T09:43:01+00:00"
+ },
+ {
+  "kind": "text_changed",
+  "page": "https://www.clalbit.co.il/aboutclalinsurance/generalreports/?txtTabId=1&txtReportsYearId=2024&txtCompanyId=2&txtReportTypeId=20",
+  "text": "(html) -> (xhr)",
+  "href": "https://www.clalbit.co.il/media/xcwnadfg/hodshi_clal_tamar_meshulav_sahir_0924.xlsx",
+  "legal_id": "520024647",
+  "company": "כלל חברה לביטוח בע\"מ",
+  "detected": "2026-10-01T09:43:01+00:00"
+ },
+ {
+  "kind": "text_changed",
+  "page": "https://www.clalbit.co.il/aboutclalinsurance/generalreports/?txtTabId=1&txtReportsYearId=2024&txtCompanyId=2&txtReportTypeId=20",
+  "text": "(html) -> (xhr)",
+  "href": "https://www.clalbit.co.il/media/skibsiwu/hodshi_clal_tamar_meshulav_sahir_1024.xlsx",
+  "legal_id": "520024647",
+  "company": "כלל חברה לביטוח בע\"מ",
+  "detected": "2026-10-01T09:43:01+00:00"
+ },
+ {
+  "kind": "text_changed",
+  "page": "https://www.clalbit.co.il/aboutclalinsurance/generalreports/?txtTabId=1&txtReportsYearId=2024&txtCompanyId=2&txtReportTypeId=20",
+  "text": "(html) -> (xhr)",
+  "href": "https://www.clalbit.co.il/media/iv4kakab/hodshi_clal_tamar_meshulav_sahir_1124.xlsx",
+  "legal_id": "520024647",
+  "company": "כלל חברה לביטוח בע\"מ",
+  "detected": "2026-10-01T09:43:01+00:00"
+ },
+ {
+  "kind": "text_changed",
+  "page": "https://www.clalbit.co.il/aboutclalinsurance/generalreports/?txtTabId=1&txtReportsYearId=2024&txtCompanyId=2&txtReportTypeId=20",
+  "text": "(html) -> (xhr)",
+  "href": "https://www.clalbit.co.il/media/klndyqgr/hodshi_clal_tamar_meshulav_sahir_1224.xlsx",
+  "legal_id": "520024647",
+  "company": "כלל חברה לביטוח בע\"מ",
+  "detected": "2026-10-01T09:43:01+00:00"
+ },
+ {
+  "kind": "text_changed",
+  "page": "https://www.clalbit.co.il/aboutclalinsurance/generalreports/?txtTabId=1&txtReportsYearId=2024&txtCompanyId=2&txtReportTypeId=20",
+  "text": "(xhr) -> (html)",
+  "href": "https://www.clalbit.co.il/media/28798/hodshi_clal_tamar_hilhaty_0124.xlsx",
+  "legal_id": "520024647",
+  "company": "כלל חברה לביטוח בע\"מ",
+  "detected": "2026-10-01T09:43:01+00:00"
+ },
+ {
+  "kind": "text_changed",
+  "page": "https://www.clalbit.co.il/aboutclalinsurance/generalreports/?txtTabId=1&txtReportsYearId=2024&txtCompanyId=2&txtReportTypeId=20",
+  "text": "(xhr) -> (html)",
+  "href": "https://www.clalbit.co.il/media/29073/hodshi_clal_tamar_hilhaty_0224.xlsx",
+  "legal_id": "520024647",
+  "company": "כלל חברה לביטוח בע\"מ",
+  "detected": "2026-10-01T09:43:01+00:00"
+ },
+ {
+  "kind": "text_changed",
+  "page": "https://www.clalbit.co.il/aboutclalinsurance/generalreports/?txtTabId=1&txtReportsYearId=2024&txtCompanyId=2&txtReportTypeId=20",
+  "text": "(xhr) -> (html)",
+  "href": "https://www.clalbit.co.il/media/29642/hodshi_clal_tamar_hilhaty_0324.xlsx",
+  "legal_id": "520024647",
+  "company": "כלל חברה לביטוח בע\"מ",
+  "detected": "2026-10-01T09:43:01+00:00"
+ },
+ {
+  "kind": "text_changed",
+  "page": "https://www.clalbit.co.il/aboutclalinsurance/generalreports/?txtTabId=1&txtReportsYearId=2024&txtCompanyId=2&txtReportTypeId=20",
+  "text": "(xhr) -> (html)",
+  "href": "https://www.clalbit.co.il/media/29947/hodshi_clal_tamar_hilhaty_0424.xlsx",
+  "legal_id": "520024647",
+  "company": "כלל חברה לביטוח בע\"מ",
+  "detected": "2026-10-01T09:43:01+00:00"
+ },
+ {
+  "kind": "text_changed",
+  "page": "https://www.clalbit.co.il/aboutclalinsurance/generalreports/?txtTabId=1&txtReportsYearId=2024&txtCompanyId=2&txtReportTypeId=20",
+  "text": "(xhr) -> (html)",
+  "href": "https://www.clalbit.co.il/media/30199/hodshi_clal_tamar_hilhaty_0524.xlsx",
+  "legal_id": "520024647",
+  "company": "כלל חברה לביטוח בע\"מ",
+  "detected": "2026-10-01T09:43:01+00:00"
+ },
+ {
+  "kind": "text_changed",
+  "page": "https://www.clalbit.co.il/aboutclalinsurance/generalreports/?txtTabId=1&txtReportsYearId=2024&txtCompanyId=2&txtReportTypeId=20",
+  "text": "(xhr) -> (html)",
+  "href": "https://www.clalbit.co.il/media/30340/hodshi_clal_tamar_hilhaty_0624.xlsx",
+  "legal_id": "520024647",
+  "company": "כלל חברה לביטוח בע\"מ",
+  "detected": "2026-10-01T09:43:01+00:00"
+ },
+ {
+  "kind": "text_changed",
+  "page": "https://www.clalbit.co.il/aboutclalinsurance/generalreports/?txtTabId=1&txtReportsYearId=2024&txtCompanyId=2&txtReportTypeId=20",
+  "text": "(xhr) -> (html)",
+  "href": "https://www.clalbit.co.il/media/udsd05sc/hodshi_clal_tamar_hilhaty_0724.xlsx",
+  "legal_id": "520024647",
+  "company": "כלל חברה לביטוח בע\"מ",
+  "detected": "2026-10-01T09:43:01+00:00"
+ },
+ {
+  "kind": "text_changed",
+  "page": "https://www.clalbit.co.il/aboutclalinsurance/generalreports/?txtTabId=1&txtReportsYearId=2024&txtCompanyId=2&txtReportTypeId=20",
+  "text": "(xhr) -> (html)",
+  "href": "https://www.clalbit.co.il/media/kzqlh0md/hodshi_clal_tamar_hilhaty_0824.xlsx",
+  "legal_id": "520024647",
+  "company": "כלל חברה לביטוח בע\"מ",
+  "detected": "2026-10-01T09:43:01+00:00"
+ },
+ {
+  "kind": "text_changed",
+  "page": "https://www.clalbit.co.il/aboutclalinsurance/generalreports/?txtTabId=1&txtReportsYearId=2024&txtCompanyId=2&txtReportTypeId=20",
+  "text": "(xhr) -> (html)",
+  "href": "https://www.clalbit.co.il/media/dkoncevm/hodshi_clal_tamar_hilhaty_0924.xlsx",
+  "legal_id": "520024647",
+  "company": "כלל חברה לביטוח בע\"מ",
+  "detected": "2026-10-01T09:43:01+00:00"
+ },
+ {
+  "kind": "text_changed",
+  "page": "https://www.clalbit.co.il/aboutclalinsurance/generalreports/?txtTabId=1&txtReportsYearId=2024&txtCompanyId=2&txtReportTypeId=20",
+  "text": "(xhr) -> (html)",
+  "href": "https://www.clalbit.co.il/media/k4sjhoeb/hodshi_clal_tamar_hilhaty_1024.xlsx",
+  "legal_id": "520024647",
+  "company": "כלל חברה לביטוח בע\"מ",
+  "detected": "2026-10-01T09:43:01+00:00"
+ },
+ {
+  "kind": "text_changed",
+  "page": "https://www.clalbit.co.il/aboutclalinsurance/generalreports/?txtTabId=1&txtReportsYearId=2024&txtCompanyId=2&txtReportTypeId=20",
+  "text": "(xhr) -> (html)",
+  "href": "https://www.clalbit.co.il/media/5eqdd0h1/hodshi_clal_tamar_hilhaty_1124.xlsx",
+  "legal_id": "520024647",
+  "company": "כלל חברה לביטוח בע\"מ",
+  "detected": "2026-10-01T09:43:01+00:00"
+ },
+ {
+  "kind": "text_changed",
+  "page": "https://www.clalbit.co.il/aboutclalinsurance/generalreports/?txtTabId=1&txtReportsYearId=2024&txtCompanyId=2&txtReportTypeId=20",
+  "text": "(xhr) -> (html)",
+  "href": "https://www.clalbit.co.il/media/m3qlrlv2/hodshi_clal_tamar_hilhaty_1224.xlsx",
+  "legal_id": "520024647",
+  "company": "כלל חברה לביטוח בע\"מ",
+  "detected": "2026-10-01T09:43:01+00:00"
+ },
+ {
+  "kind": "text_changed",
+  "page": "https://www.clalbit.co.il/aboutclalinsurance/generalreports/?txtTabId=1&txtReportsYearId=2024&txtCompanyId=2&txtReportTypeId=20",
+  "text": "(xhr) -> (html)",
+  "href": "https://www.clalbit.co.il/media/28812/hodshi_clal_tamar_shkalim_0124.xlsx",
+  "legal_id": "520024647",
+  "company": "כלל חברה לביטוח בע\"מ",
+  "detected": "2026-10-01T09:43:01+00:00"
+ },
+ {
+  "kind": "text_changed",
+  "page": "https://www.clalbit.co.il/aboutclalinsurance/generalreports/?txtTabId=1&txtReportsYearId=2024&txtCompanyId=2&txtReportTypeId=20",
+  "text": "(xhr) -> (html)",
+  "href": "https://www.clalbit.co.il/media/29081/hodshi_clal_tamar_shkalim_0224.xlsx",
+  "legal_id": "520024647",
+  "company": "כלל חברה לביטוח בע\"מ",
+  "detected": "2026-10-01T09:43:01+00:00"
+ },
+ {
+  "kind": "text_changed",
+  "page": "https://www.clalbit.co.il/aboutclalinsurance/generalreports/?txtTabId=1&txtReportsYearId=2024&txtCompanyId=2&txtReportTypeId=20",
+  "text": "(xhr) -> (html)",
+  "href": "https://www.clalbit.co.il/media/29649/hodshi_clal_tamar_shkalim_0324.xlsx",
+  "legal_id": "520024647",
+  "company": "כלל חברה לביטוח בע\"מ",
+  "detected": "2026-10-01T09:43:01+00:00"
+ },
+ {
+  "kind": "text_changed",
+  "page": "https://www.clalbit.co.il/aboutclalinsurance/generalreports/?txtTabId=1&txtReportsYearId=2024&txtCompanyId=2&txtReportTypeId=20",
+  "text": "(xhr) -> (html)",
+  "href": "https://www.clalbit.co.il/media/29954/hodshi_clal_tamar_shkalim_0424.xlsx",
+  "legal_id": "520024647",
+  "company": "כלל חברה לביטוח בע\"מ",
+  "detected": "2026-10-01T09:43:01+00:00"
+ },
+ {
+  "kind": "text_changed",
+  "page": "https://www.clalbit.co.il/aboutclalinsurance/generalreports/?txtTabId=1&txtReportsYearId=2024&txtCompanyId=2&txtReportTypeId=20",
+  "text": "(xhr) -> (html)",
+  "href": "https://www.clalbit.co.il/media/30206/hodshi_clal_tamar_shkalim_0524.xlsx",
+  "legal_id": "520024647",
+  "company": "כלל חברה לביטוח בע\"מ",
+  "detected": "2026-10-01T09:43:01+00:00"
+ },
+ {
+  "kind": "text_changed",
+  "page": "https://www.clalbit.co.il/aboutclalinsurance/generalreports/?txtTabId=1&txtReportsYearId=2024&txtCompanyId=2&txtReportTypeId=20",
+  "text": "(xhr) -> (html)",
+  "href": "https://www.clalbit.co.il/media/30346/hodshi_clal_tamar_shkalim_0624.xlsx",
+  "legal_id": "520024647",
+  "company": "כלל חברה לביטוח בע\"מ",
+  "detected": "2026-10-01T09:43:01+00:00"
+ },
+ {
+  "kind": "text_changed",
+  "page": "https://www.clalbit.co.il/aboutclalinsurance/generalreports/?txtTabId=1&txtReportsYearId=2024&txtCompanyId=2&txtReportTypeId=20",
+  "text": "(xhr) -> (html)",
+  "href": "https://www.clalbit.co.il/media/29953/hodshi_clal_tamar_shikli_tk_0424.xlsx",
+  "legal_id": "520024647",
+  "company": "כלל חברה לביטוח בע\"מ",
+  "detected": "2026-10-01T09:43:01+00:00"
+ },
+ {
+  "kind": "text_changed",
+  "page": "https://www.clalbit.co.il/aboutclalinsurance/generalreports/?txtTabId=1&txtReportsYearId=2024&txtCompanyId=2&txtReportTypeId=20",
+  "text": "(xhr) -> (html)",
+  "href": "https://www.clalbit.co.il/media/30205/hodshi_clal_tamar_shikli_tk_0524.xlsx",
+  "legal_id": "520024647",
+  "company": "כלל חברה לביטוח בע\"מ",
+  "detected": "2026-10-01T09:43:01+00:00"
+ },
+ {
+  "kind": "text_changed",
+  "page": "https://www.clalbit.co.il/aboutclalinsurance/generalreports/?txtTabId=1&txtReportsYearId=2024&txtCompanyId=2&txtReportTypeId=20",
+  "text": "(xhr) -> (html)",
+  "href": "https://www.clalbit.co.il/media/30345/hodshi_clal_tamar_shikli_tk_0624.xlsx",
+  "legal_id": "520024647",
+  "company": "כלל חברה לביטוח בע\"מ",
+  "detected": "2026-10-01T09:43:01+00:00"
+ },
+ {
+  "kind": "text_changed",
+  "page": "https://www.clalbit.co.il/aboutclalinsurance/generalreports/?txtTabId=1&txtReportsYearId=2024&txtCompanyId=2&txtReportTypeId=20",
+  "text": "(xhr) -> (html)",
+  "href": "https://www.clalbit.co.il/media/28803/hodshi_clal_tamar_menayot_0124.xlsx",
+  "legal_id": "520024647",
+  "company": "כלל חברה לביטוח בע\"מ",
+  "detected": "2026-10-01T09:43:01+00:00"
+ },
+ {
+  "kind": "text_changed",
+  "page": "https://www.clalbit.co.il/aboutclalinsurance/generalreports/?txtTabId=1&txtReportsYearId=2024&txtCompanyId=2&txtReportTypeId=20",
+  "text": "(xhr) -> (html)",
+  "href": "https://www.clalbit.co.il/media/29077/hodshi_clal_tamar_menayot_0224.xlsx",
+  "legal_id": "520024647",
+  "company": "כלל חברה לביטוח בע\"מ",
+  "detected": "2026-10-01T09:43:01+00:00"
+ },
+ {
+  "kind": "text_changed",
   "page": "https://www.clalbit.co.il/aboutclalinsurance/generalreports/?txtTabId=1&txtReportsYearId=2022&txtCompanyId=2&txtReportTypeId=20",
-  "text": "367 items",
-  "href": "https://www.clalbit.co.il/aboutclalinsurance/generalreports/?txtTabId=1&txtReportsYearId=2022&txtCompanyId=2&txtReportTypeId=20",
+  "text": "(html) -> (xhr)",
+  "href": "https://www.clalbit.co.il/media/24903/צדדים-קשורים-תמר-כללי-31122022.xls",
   "legal_id": "520024647",
   "company": "כלל חברה לביטוח בע\"מ",
-  "detected": "2026-10-01T09:15:30+00:00"
+  "detected": "2026-10-01T09:43:01+00:00"
  },
  {
-  "kind": "new_page",
+  "kind": "text_changed",
+  "page": "https://www.clalbit.co.il/aboutclalinsurance/generalreports/?txtTabId=1&txtReportsYearId=2022&txtCompanyId=2&txtReportTypeId=20",
+  "text": "(html) -> (xhr)",
+  "href": "https://www.clalbit.co.il/media/24896/צדדים-קשורים-תמר-כללי-31122022.xls",
+  "legal_id": "520024647",
+  "company": "כלל חברה לביטוח בע\"מ",
+  "detected": "2026-10-01T09:43:01+00:00"
+ },
+ {
+  "kind": "text_changed",
+  "page": "https://www.clalbit.co.il/aboutclalinsurance/generalreports/?txtTabId=1&txtReportsYearId=2022&txtCompanyId=2&txtReportTypeId=20",
+  "text": "(xhr) -> (html)",
+  "href": "https://www.clalbit.co.il/media/24895/צדדים-קשורים-תמר-כללי-31122022.xls",
+  "legal_id": "520024647",
+  "company": "כלל חברה לביטוח בע\"מ",
+  "detected": "2026-10-01T09:43:01+00:00"
+ },
+ {
+  "kind": "text_changed",
+  "page": "https://www.clalbit.co.il/aboutclalinsurance/generalreports/?txtTabId=1&txtReportsYearId=2022&txtCompanyId=2&txtReportTypeId=20",
+  "text": "(xhr) -> (html)",
+  "href": "https://www.clalbit.co.il/media/24893/צדדים-קשורים-תמר-כללי-31122022.xls",
+  "legal_id": "520024647",
+  "company": "כלל חברה לביטוח בע\"מ",
+  "detected": "2026-10-01T09:43:01+00:00"
+ },
+ {
+  "kind": "text_changed",
+  "page": "https://www.clalbit.co.il/aboutclalinsurance/generalreports/?txtTabId=1&txtReportsYearId=2022&txtCompanyId=2&txtReportTypeId=20",
+  "text": "(xhr) -> (html)",
+  "href": "https://www.clalbit.co.il/media/24894/צדדים-קשורים-תמר-כללי-31122022.xls",
+  "legal_id": "520024647",
+  "company": "כלל חברה לביטוח בע\"מ",
+  "detected": "2026-10-01T09:43:01+00:00"
+ },
+ {
+  "kind": "text_changed",
+  "page": "https://www.clalbit.co.il/aboutclalinsurance/generalreports/?txtTabId=1&txtReportsYearId=2022&txtCompanyId=2&txtReportTypeId=20",
+  "text": "(html) -> (xhr)",
+  "href": "https://www.clalbit.co.il/media/22999/hodshi_clal_tamar_madad_0722.xlsx",
+  "legal_id": "520024647",
+  "company": "כלל חברה לביטוח בע\"מ",
+  "detected": "2026-10-01T09:43:01+00:00"
+ },
+ {
+  "kind": "text_changed",
+  "page": "https://www.clalbit.co.il/aboutclalinsurance/generalreports/?txtTabId=1&txtReportsYearId=2022&txtCompanyId=2&txtReportTypeId=20",
+  "text": "(html) -> (xhr)",
+  "href": "https://www.clalbit.co.il/media/23328/hodshi_clal_tamar_madad_0822.xlsx",
+  "legal_id": "520024647",
+  "company": "כלל חברה לביטוח בע\"מ",
+  "detected": "2026-10-01T09:43:01+00:00"
+ },
+ {
+  "kind": "text_changed",
+  "page": "https://www.clalbit.co.il/aboutclalinsurance/generalreports/?txtTabId=1&txtReportsYearId=2022&txtCompanyId=2&txtReportTypeId=20",
+  "text": "(html) -> (xhr)",
+  "href": "https://www.clalbit.co.il/media/23531/hodshi_clal_tamar_madad_0922.xlsx",
+  "legal_id": "520024647",
+  "company": "כלל חברה לביטוח בע\"מ",
+  "detected": "2026-10-01T09:43:01+00:00"
+ },
+ {
+  "kind": "text_changed",
+  "page": "https://www.clalbit.co.il/aboutclalinsurance/generalreports/?txtTabId=1&txtReportsYearId=2022&txtCompanyId=2&txtReportTypeId=20",
+  "text": "(html) -> (xhr)",
+  "href": "https://www.clalbit.co.il/media/23741/hodshi_clal_tamar_madad_1022.xlsx",
+  "legal_id": "520024647",
+  "company": "כלל חברה לביטוח בע\"מ",
+  "detected": "2026-10-01T09:43:01+00:00"
+ },
+ {
+  "kind": "text_changed",
+  "page": "https://www.clalbit.co.il/aboutclalinsurance/generalreports/?txtTabId=1&txtReportsYearId=2022&txtCompanyId=2&txtReportTypeId=20",
+  "text": "(html) -> (xhr)",
+  "href": "https://www.clalbit.co.il/media/24347/hodshi_clal_tamar_madad_1122.xlsx",
+  "legal_id": "520024647",
+  "company": "כלל חברה לביטוח בע\"מ",
+  "detected": "2026-10-01T09:43:01+00:00"
+ },
+ {
+  "kind": "text_changed",
+  "page": "https://www.clalbit.co.il/aboutclalinsurance/generalreports/?txtTabId=1&txtReportsYearId=2022&txtCompanyId=2&txtReportTypeId=20",
+  "text": "(html) -> (xhr)",
+  "href": "https://www.clalbit.co.il/media/24743/hodshi_clal_tamar_madad_1222.xlsx",
+  "legal_id": "520024647",
+  "company": "כלל חברה לביטוח בע\"מ",
+  "detected": "2026-10-01T09:43:01+00:00"
+ },
+ {
+  "kind": "text_changed",
+  "page": "https://www.clalbit.co.il/aboutclalinsurance/generalreports/?txtTabId=1&txtReportsYearId=2022&txtCompanyId=2&txtReportTypeId=20",
+  "text": "(html) -> (xhr)",
+  "href": "https://www.clalbit.co.il/media/21044/hodshi_clal_tamar_shikli_tk_0122.xlsx",
+  "legal_id": "520024647",
+  "company": "כלל חברה לביטוח בע\"מ",
+  "detected": "2026-10-01T09:43:01+00:00"
+ },
+ {
+  "kind": "text_changed",
+  "page": "https://www.clalbit.co.il/aboutclalinsurance/generalreports/?txtTabId=1&txtReportsYearId=2022&txtCompanyId=2&txtReportTypeId=20",
+  "text": "(html) -> (xhr)",
+  "href": "https://www.clalbit.co.il/media/21530/hodshi_clal_tamar_shikli_tk_0222.xlsx",
+  "legal_id": "520024647",
+  "company": "כלל חברה לביטוח בע\"מ",
+  "detected": "2026-10-01T09:43:01+00:00"
+ },
+ {
+  "kind": "text_changed",
+  "page": "https://www.clalbit.co.il/aboutclalinsurance/generalreports/?txtTabId=1&txtReportsYearId=2022&txtCompanyId=2&txtReportTypeId=20",
+  "text": "(html) -> (xhr)",
+  "href": "https://www.clalbit.co.il/media/21645/hodshi_clal_tamar_shikli_tk_0322.xlsx",
+  "legal_id": "520024647",
+  "company": "כלל חברה לביטוח בע\"מ",
+  "detected": "2026-10-01T09:43:01+00:00"
+ },
+ {
+  "kind": "text_changed",
+  "page": "https://www.clalbit.co.il/aboutclalinsurance/generalreports/?txtTabId=1&txtReportsYearId=2022&txtCompanyId=2&txtReportTypeId=20",
+  "text": "(html) -> (xhr)",
+  "href": "https://www.clalbit.co.il/media/21940/hodshi_clal_tamar_shikli_tk_0422.xlsx",
+  "legal_id": "520024647",
+  "company": "כלל חברה לביטוח בע\"מ",
+  "detected": "2026-10-01T09:43:01+00:00"
+ },
+ {
+  "kind": "text_changed",
+  "page": "https://www.clalbit.co.il/aboutclalinsurance/generalreports/?txtTabId=1&txtReportsYearId=2022&txtCompanyId=2&txtReportTypeId=20",
+  "text": "(html) -> (xhr)",
+  "href": "https://www.clalbit.co.il/media/22271/hodshi_clal_tamar_shikli_tk_0522.xlsx",
+  "legal_id": "520024647",
+  "company": "כלל חברה לביטוח בע\"מ",
+  "detected": "2026-10-01T09:43:01+00:00"
+ },
+ {
+  "kind": "text_changed",
+  "page": "https://www.clalbit.co.il/aboutclalinsurance/generalreports/?txtTabId=1&txtReportsYearId=2022&txtCompanyId=2&txtReportTypeId=20",
+  "text": "(html) -> (xhr)",
+  "href": "https://www.clalbit.co.il/media/22724/hodshi_clal_tamar_shikli_tk_0622.xlsx",
+  "legal_id": "520024647",
+  "company": "כלל חברה לביטוח בע\"מ",
+  "detected": "2026-10-01T09:43:01+00:00"
+ },
+ {
+  "kind": "text_changed",
+  "page": "https://www.clalbit.co.il/aboutclalinsurance/generalreports/?txtTabId=1&txtReportsYearId=2022&txtCompanyId=2&txtReportTypeId=20",
+  "text": "(html) -> (xhr)",
+  "href": "https://www.clalbit.co.il/media/23003/hodshi_clal_tamar_shikli_tk_0722.xlsx",
+  "legal_id": "520024647",
+  "company": "כלל חברה לביטוח בע\"מ",
+  "detected": "2026-10-01T09:43:01+00:00"
+ },
+ {
+  "kind": "text_changed",
+  "page": "https://www.clalbit.co.il/aboutclalinsurance/generalreports/?txtTabId=1&txtReportsYearId=2022&txtCompanyId=2&txtReportTypeId=20",
+  "text": "(html) -> (xhr)",
+  "href": "https://www.clalbit.co.il/media/23333/hodshi_clal_tamar_shikli_tk_0822.xlsx",
+  "legal_id": "520024647",
+  "company": "כלל חברה לביטוח בע\"מ",
+  "detected": "2026-10-01T09:43:01+00:00"
+ },
+ {
+  "kind": "text_changed",
+  "page": "https://www.clalbit.co.il/aboutclalinsurance/generalreports/?txtTabId=1&txtReportsYearId=2022&txtCompanyId=2&txtReportTypeId=20",
+  "text": "(html) -> (xhr)",
+  "href": "https://www.clalbit.co.il/media/23536/hodshi_clal_tamar_shikli_tk_0922.xlsx",
+  "legal_id": "520024647",
+  "company": "כלל חברה לביטוח בע\"מ",
+  "detected": "2026-10-01T09:43:01+00:00"
+ },
+ {
+  "kind": "text_changed",
+  "page": "https://www.clalbit.co.il/aboutclalinsurance/generalreports/?txtTabId=1&txtReportsYearId=2022&txtCompanyId=2&txtReportTypeId=20",
+  "text": "(html) -> (xhr)",
+  "href": "https://www.clalbit.co.il/media/23744/hodshi_clal_tamar_shikli_tk_1022.xlsx",
+  "legal_id": "520024647",
+  "company": "כלל חברה לביטוח בע\"מ",
+  "detected": "2026-10-01T09:43:01+00:00"
+ },
+ {
+  "kind": "text_changed",
+  "page": "https://www.clalbit.co.il/aboutclalinsurance/generalreports/?txtTabId=1&txtReportsYearId=2022&txtCompanyId=2&txtReportTypeId=20",
+  "text": "(html) -> (xhr)",
+  "href": "https://www.clalbit.co.il/media/24350/hodshi_clal_tamar_shikli_tk_1122.xlsx",
+  "legal_id": "520024647",
+  "company": "כלל חברה לביטוח בע\"מ",
+  "detected": "2026-10-01T09:43:01+00:00"
+ },
+ {
+  "kind": "text_changed",
+  "page": "https://www.clalbit.co.il/aboutclalinsurance/generalreports/?txtTabId=1&txtReportsYearId=2022&txtCompanyId=2&txtReportTypeId=20",
+  "text": "(html) -> (xhr)",
+  "href": "https://www.clalbit.co.il/media/24746/hodshi_clal_tamar_shikli_tk_1222.xlsx",
+  "legal_id": "520024647",
+  "company": "כלל חברה לביטוח בע\"מ",
+  "detected": "2026-10-01T09:43:01+00:00"
+ },
+ {
+  "kind": "text_changed",
+  "page": "https://www.clalbit.co.il/aboutclalinsurance/generalreports/?txtTabId=1&txtReportsYearId=2022&txtCompanyId=2&txtReportTypeId=20",
+  "text": "(html) -> (xhr)",
+  "href": "https://www.clalbit.co.il/media/21037/hodshi_clal_tamar_agah_0122.xlsx",
+  "legal_id": "520024647",
+  "company": "כלל חברה לביטוח בע\"מ",
+  "detected": "2026-10-01T09:43:01+00:00"
+ },
+ {
+  "kind": "text_changed",
+  "page": "https://www.clalbit.co.il/aboutclalinsurance/generalreports/?txtTabId=1&txtReportsYearId=2022&txtCompanyId=2&txtReportTypeId=20",
+  "text": "(html) -> (xhr)",
+  "href": "https://www.clalbit.co.il/media/21523/hodshi_clal_tamar_agah_0222.xlsx",
+  "legal_id": "520024647",
+  "company": "כלל חברה לביטוח בע\"מ",
+  "detected": "2026-10-01T09:43:01+00:00"
+ },
+ {
+  "kind": "text_changed",
+  "page": "https://www.clalbit.co.il/aboutclalinsurance/generalreports/?txtTabId=1&txtReportsYearId=2022&txtCompanyId=2&txtReportTypeId=20",
+  "text": "(html) -> (xhr)",
+  "href": "https://www.clalbit.co.il/media/21638/hodshi_clal_tamar_agah_0322.xlsx",
+  "legal_id": "520024647",
+  "company": "כלל חברה לביטוח בע\"מ",
+  "detected": "2026-10-01T09:43:01+00:00"
+ },
+ {
+  "kind": "text_changed",
+  "page": "https://www.clalbit.co.il/aboutclalinsurance/generalreports/?txtTabId=1&txtReportsYearId=2022&txtCompanyId=2&txtReportTypeId=20",
+  "text": "(html) -> (xhr)",
+  "href": "https://www.clalbit.co.il/media/21926/hodshi_clal_tamar_agah_0422.xlsx",
+  "legal_id": "520024647",
+  "company": "כלל חברה לביטוח בע\"מ",
+  "detected": "2026-10-01T09:43:01+00:00"
+ },
+ {
+  "kind": "text_changed",
+  "page": "https://www.clalbit.co.il/aboutclalinsurance/generalreports/?txtTabId=1&txtReportsYearId=2022&txtCompanyId=2&txtReportTypeId=20",
+  "text": "(html) -> (xhr)",
+  "href": "https://www.clalbit.co.il/media/22263/hodshi_clal_tamar_agah_0522.xlsx",
+  "legal_id": "520024647",
+  "company": "כלל חברה לביטוח בע\"מ",
+  "detected": "2026-10-01T09:43:01+00:00"
+ },
+ {
+  "kind": "text_changed",
+  "page": "https://www.clalbit.co.il/aboutclalinsurance/generalreports/?txtTabId=1&txtReportsYearId=2022&txtCompanyId=2&txtReportTypeId=20",
+  "text": "(html) -> (xhr)",
+  "href": "https://www.clalbit.co.il/media/22694/hodshi_clal_tamar_agah_0622.xlsx",
+  "legal_id": "520024647",
+  "company": "כלל חברה לביטוח בע\"מ",
+  "detected": "2026-10-01T09:43:01+00:00"
+ },
+ {
+  "kind": "text_changed",
+  "page": "https://www.clalbit.co.il/aboutclalinsurance/generalreports/?txtTabId=1&txtReportsYearId=2022&txtCompanyId=2&txtReportTypeId=20",
+  "text": "(html) -> (xhr)",
+  "href": "https://www.clalbit.co.il/media/22993/hodshi_clal_tamar_agah_0722.xlsx",
+  "legal_id": "520024647",
+  "company": "כלל חברה לביטוח בע\"מ",
+  "detected": "2026-10-01T09:43:01+00:00"
+ },
+ {
+  "kind": "text_changed",
+  "page": "https://www.clalbit.co.il/aboutclalinsurance/generalreports/?txtTabId=1&txtReportsYearId=2022&txtCompanyId=2&txtReportTypeId=20",
+  "text": "(html) -> (xhr)",
+  "href": "https://www.clalbit.co.il/media/23324/hodshi_clal_tamar_agah_0822.xlsx",
+  "legal_id": "520024647",
+  "company": "כלל חברה לביטוח בע\"מ",
+  "detected": "2026-10-01T09:43:01+00:00"
+ },
+ {
+  "kind": "text_changed",
+  "page": "https://www.clalbit.co.il/aboutclalinsurance/generalreports/?txtTabId=1&txtReportsYearId=2022&txtCompanyId=2&txtReportTypeId=20",
+  "text": "(html) -> (xhr)",
+  "href": "https://www.clalbit.co.il/media/23526/hodshi_clal_tamar_agah_0922.xlsx",
+  "legal_id": "520024647",
+  "company": "כלל חברה לביטוח בע\"מ",
+  "detected": "2026-10-01T09:43:01+00:00"
+ },
+ {
+  "kind": "text_changed",
+  "page": "https://www.clalbit.co.il/aboutclalinsurance/generalreports/?txtTabId=1&txtReportsYearId=2022&txtCompanyId=2&txtReportTypeId=20",
+  "text": "(html) -> (xhr)",
+  "href": "https://www.clalbit.co.il/media/23737/hodshi_clal_tamar_agah_1022.xlsx",
+  "legal_id": "520024647",
+  "company": "כלל חברה לביטוח בע\"מ",
+  "detected": "2026-10-01T09:43:01+00:00"
+ },
+ {
+  "kind": "text_changed",
+  "page": "https://www.clalbit.co.il/aboutclalinsurance/generalreports/?txtTabId=1&txtReportsYearId=2022&txtCompanyId=2&txtReportTypeId=20",
+  "text": "(html) -> (xhr)",
+  "href": "https://www.clalbit.co.il/media/24344/hodshi_clal_tamar_agah_1122.xlsx",
+  "legal_id": "520024647",
+  "company": "כלל חברה לביטוח בע\"מ",
+  "detected": "2026-10-01T09:43:01+00:00"
+ },
+ {
+  "kind": "text_changed",
+  "page": "https://www.clalbit.co.il/aboutclalinsurance/generalreports/?txtTabId=1&txtReportsYearId=2022&txtCompanyId=2&txtReportTypeId=20",
+  "text": "(html) -> (xhr)",
+  "href": "https://www.clalbit.co.il/media/24739/hodshi_clal_tamar_agah_1222.xlsx",
+  "legal_id": "520024647",
+  "company": "כלל חברה לביטוח בע\"מ",
+  "detected": "2026-10-01T09:43:01+00:00"
+ },
+ {
+  "kind": "text_changed",
+  "page": "https://www.clalbit.co.il/aboutclalinsurance/generalreports/?txtTabId=1&txtReportsYearId=2022&txtCompanyId=2&txtReportTypeId=20",
+  "text": "(xhr) -> (html)",
+  "href": "https://www.clalbit.co.il/media/23323/hodshi_clal_tamar_ad_50_0822.xlsx",
+  "legal_id": "520024647",
+  "company": "כלל חברה לביטוח בע\"מ",
+  "detected": "2026-10-01T09:43:01+00:00"
+ },
+ {
+  "kind": "text_changed",
+  "page": "https://www.clalbit.co.il/aboutclalinsurance/generalreports/?txtTabId=1&txtReportsYearId=2022&txtCompanyId=2&txtReportTypeId=20",
+  "text": "(xhr) -> (html)",
+  "href": "https://www.clalbit.co.il/media/23524/hodshi_clal_tamar_ad_50_0922.xlsx",
+  "legal_id": "520024647",
+  "company": "כלל חברה לביטוח בע\"מ",
+  "detected": "2026-10-01T09:43:01+00:00"
+ },
+ {
+  "kind": "text_changed",
+  "page": "https://www.clalbit.co.il/aboutclalinsurance/generalreports/?txtTabId=1&txtReportsYearId=2022&txtCompanyId=2&txtReportTypeId=20",
+  "text": "(xhr) -> (html)",
+  "href": "https://www.clalbit.co.il/media/23736/hodshi_clal_tamar_ad_50_1022.xlsx",
+  "legal_id": "520024647",
+  "company": "כלל חברה לביטוח בע\"מ",
+  "detected": "2026-10-01T09:43:01+00:00"
+ },
+ {
+  "kind": "text_changed",
+  "page": "https://www.clalbit.co.il/aboutclalinsurance/generalreports/?txtTabId=1&txtReportsYearId=2022&txtCompanyId=2&txtReportTypeId=20",
+  "text": "(xhr) -> (html)",
+  "href": "https://www.clalbit.co.il/media/24343/hodshi_clal_tamar_ad_50_1122.xlsx",
+  "legal_id": "520024647",
+  "company": "כלל חברה לביטוח בע\"מ",
+  "detected": "2026-10-01T09:43:01+00:00"
+ },
+ {
+  "kind": "text_changed",
+  "page": "https://www.clalbit.co.il/aboutclalinsurance/generalreports/?txtTabId=1&txtReportsYearId=2022&txtCompanyId=2&txtReportTypeId=20",
+  "text": "(xhr) -> (html)",
+  "href": "https://www.clalbit.co.il/media/24737/hodshi_clal_tamar_ad_50_1222.xlsx",
+  "legal_id": "520024647",
+  "company": "כלל חברה לביטוח בע\"מ",
+  "detected": "2026-10-01T09:43:01+00:00"
+ },
+ {
+  "kind": "text_changed",
+  "page": "https://www.clalbit.co.il/aboutclalinsurance/generalreports/?txtTabId=1&txtReportsYearId=2022&txtCompanyId=2&txtReportTypeId=20",
+  "text": "(xhr) -> (html)",
+  "href": "https://www.clalbit.co.il/media/21034/hodshi_clal_tamar_50-60_0122.xlsx",
+  "legal_id": "520024647",
+  "company": "כלל חברה לביטוח בע\"מ",
+  "detected": "2026-10-01T09:43:01+00:00"
+ },
+ {
+  "kind": "text_changed",
+  "page": "https://www.clalbit.co.il/aboutclalinsurance/generalreports/?txtTabId=1&txtReportsYearId=2022&txtCompanyId=2&txtReportTypeId=20",
+  "text": "(xhr) -> (html)",
+  "href": "https://www.clalbit.co.il/media/21520/hodshi_clal_tamar_50-60_0222.xlsx",
+  "legal_id": "520024647",
+  "company": "כלל חברה לביטוח בע\"מ",
+  "detected": "2026-10-01T09:43:01+00:00"
+ },
+ {
+  "kind": "text_changed",
+  "page": "https://www.clalbit.co.il/aboutclalinsurance/generalreports/?txtTabId=1&txtReportsYearId=2022&txtCompanyId=2&txtReportTypeId=20",
+  "text": "(xhr) -> (html)",
+  "href": "https://www.clalbit.co.il/media/21634/hodshi_clal_tamar_50-60_0322.xlsx",
+  "legal_id": "520024647",
+  "company": "כלל חברה לביטוח בע\"מ",
+  "detected": "2026-10-01T09:43:01+00:00"
+ },
+ {
+  "kind": "text_changed",
+  "page": "https://www.clalbit.co.il/aboutclalinsurance/generalreports/?txtTabId=1&txtReportsYearId=2022&txtCompanyId=2&txtReportTypeId=20",
+  "text": "(xhr) -> (html)",
+  "href": "https://www.clalbit.co.il/media/21921/hodshi_clal_tamar_50-60_0422.xlsx",
+  "legal_id": "520024647",
+  "company": "כלל חברה לביטוח בע\"מ",
+  "detected": "2026-10-01T09:43:01+00:00"
+ },
+ {
+  "kind": "text_changed",
+  "page": "https://www.clalbit.co.il/aboutclalinsurance/generalreports/?txtTabId=1&txtReportsYearId=2022&txtCompanyId=2&txtReportTypeId=20",
+  "text": "(xhr) -> (html)",
+  "href": "https://www.clalbit.co.il/media/22259/hodshi_clal_tamar_50-60_0522.xlsx",
+  "legal_id": "520024647",
+  "company": "כלל חברה לביטוח בע\"מ",
+  "detected": "2026-10-01T09:43:01+00:00"
+ },
+ {
+  "kind": "text_changed",
+  "page": "https://www.clalbit.co.il/aboutclalinsurance/generalreports/?txtTabId=1&txtReportsYearId=2022&txtCompanyId=2&txtReportTypeId=20",
+  "text": "(xhr) -> (html)",
+  "href": "https://www.clalbit.co.il/media/22691/hodshi_clal_tamar_50-60_0622.xlsx",
+  "legal_id": "520024647",
+  "company": "כלל חברה לביטוח בע\"מ",
+  "detected": "2026-10-01T09:43:01+00:00"
+ },
+ {
+  "kind": "text_changed",
+  "page": "https://www.clalbit.co.il/aboutclalinsurance/generalreports/?txtTabId=1&txtReportsYearId=2022&txtCompanyId=2&txtReportTypeId=20",
+  "text": "(xhr) -> (html)",
+  "href": "https://www.clalbit.co.il/media/22989/hodshi_clal_tamar_50-60_0722.xlsx",
+  "legal_id": "520024647",
+  "company": "כלל חברה לביטוח בע\"מ",
+  "detected": "2026-10-01T09:43:01+00:00"
+ },
+ {
+  "kind": "text_changed",
+  "page": "https://www.clalbit.co.il/aboutclalinsurance/generalreports/?txtTabId=1&txtReportsYearId=2022&txtCompanyId=2&txtReportTypeId=20",
+  "text": "(xhr) -> (html)",
+  "href": "https://www.clalbit.co.il/media/23319/hodshi_clal_tamar_50-60_0822.xlsx",
+  "legal_id": "520024647",
+  "company": "כלל חברה לביטוח בע\"מ",
+  "detected": "2026-10-01T09:43:01+00:00"
+ },
+ {
+  "kind": "text_changed",
+  "page": "https://www.clalbit.co.il/aboutclalinsurance/generalreports/?txtTabId=1&txtReportsYearId=2022&txtCompanyId=2&txtReportTypeId=20",
+  "text": "(xhr) -> (html)",
+  "href": "https://www.clalbit.co.il/media/23522/hodshi_clal_tamar_50-60_0922.xlsx",
+  "legal_id": "520024647",
+  "company": "כלל חברה לביטוח בע\"מ",
+  "detected": "2026-10-01T09:43:01+00:00"
+ },
+ {
+  "kind": "text_changed",
+  "page": "https://www.clalbit.co.il/aboutclalinsurance/generalreports/?txtTabId=1&txtReportsYearId=2022&txtCompanyId=2&txtReportTypeId=20",
+  "text": "(xhr) -> (html)",
+  "href": "https://www.clalbit.co.il/media/23734/hodshi_clal_tamar_50-60_1022.xlsx",
+  "legal_id": "520024647",
+  "company": "כלל חברה לביטוח בע\"מ",
+  "detected": "2026-10-01T09:43:01+00:00"
+ },
+ {
+  "kind": "text_changed",
+  "page": "https://www.clalbit.co.il/aboutclalinsurance/generalreports/?txtTabId=1&txtReportsYearId=2022&txtCompanyId=2&txtReportTypeId=20",
+  "text": "(xhr) -> (html)",
+  "href": "https://www.clalbit.co.il/media/24341/hodshi_clal_tamar_50-60_1122.xlsx",
+  "legal_id": "520024647",
+  "company": "כלל חברה לביטוח בע\"מ",
+  "detected": "2026-10-01T09:43:01+00:00"
+ },
+ {
+  "kind": "text_changed",
+  "page": "https://www.clalbit.co.il/aboutclalinsurance/generalreports/?txtTabId=1&txtReportsYearId=2022&txtCompanyId=2&txtReportTypeId=20",
+  "text": "(xhr) -> (html)",
+  "href": "https://www.clalbit.co.il/media/24732/hodshi_clal_tamar_50-60_1222.xlsx",
+  "legal_id": "520024647",
+  "company": "כלל חברה לביטוח בע\"מ",
+  "detected": "2026-10-01T09:43:01+00:00"
+ },
+ {
+  "kind": "text_changed",
+  "page": "https://www.clalbit.co.il/aboutclalinsurance/generalreports/?txtTabId=1&txtReportsYearId=2022&txtCompanyId=2&txtReportTypeId=20",
+  "text": "(xhr) -> (html)",
+  "href": "https://www.clalbit.co.il/media/21035/hodshi_clal_tamar_60_vamala_0122.xlsx",
+  "legal_id": "520024647",
+  "company": "כלל חברה לביטוח בע\"מ",
+  "detected": "2026-10-01T09:43:01+00:00"
+ },
+ {
+  "kind": "text_changed",
+  "page": "https://www.clalbit.co.il/aboutclalinsurance/generalreports/?txtTabId=1&txtReportsYearId=2022&txtCompanyId=2&txtReportTypeId=20",
+  "text": "(xhr) -> (html)",
+  "href": "https://www.clalbit.co.il/media/21521/hodshi_clal_tamar_60_vamala_0222.xlsx",
+  "legal_id": "520024647",
+  "company": "כלל חברה לביטוח בע\"מ",
+  "detected": "2026-10-01T09:43:01+00:00"
+ },
+ {
+  "kind": "text_changed",
+  "page": "https://www.clalbit.co.il/aboutclalinsurance/generalreports/?txtTabId=1&txtReportsYearId=2022&txtCompanyId=2&txtReportTypeId=20",
+  "text": "(xhr) -> (html)",
+  "href": "https://www.clalbit.co.il/media/21635/hodshi_clal_tamar_60_vamala_0322.xlsx",
+  "legal_id": "520024647",
+  "company": "כלל חברה לביטוח בע\"מ",
+  "detected": "2026-10-01T09:43:01+00:00"
+ },
+ {
+  "kind": "text_changed",
+  "page": "https://www.clalbit.co.il/aboutclalinsurance/generalreports/?txtTabId=1&txtReportsYearId=2022&txtCompanyId=2&txtReportTypeId=20",
+  "text": "(xhr) -> (html)",
+  "href": "https://www.clalbit.co.il/media/21923/hodshi_clal_tamar_60_vamala_0422.xlsx",
+  "legal_id": "520024647",
+  "company": "כלל חברה לביטוח בע\"מ",
+  "detected": "2026-10-01T09:43:01+00:00"
+ },
+ {
+  "kind": "text_changed",
+  "page": "https://www.clalbit.co.il/aboutclalinsurance/generalreports/?txtTabId=1&txtReportsYearId=2022&txtCompanyId=2&txtReportTypeId=20",
+  "text": "(xhr) -> (html)",
+  "href": "https://www.clalbit.co.il/media/22261/hodshi_clal_tamar_60_vamala_0522.xlsx",
+  "legal_id": "520024647",
+  "company": "כלל חברה לביטוח בע\"מ",
+  "detected": "2026-10-01T09:43:01+00:00"
+ },
+ {
+  "kind": "text_changed",
+  "page": "https://www.clalbit.co.il/aboutclalinsurance/generalreports/?txtTabId=1&txtReportsYearId=2022&txtCompanyId=2&txtReportTypeId=20",
+  "text": "(xhr) -> (html)",
+  "href": "https://www.clalbit.co.il/media/22692/hodshi_clal_tamar_60_vamala_0622.xlsx",
+  "legal_id": "520024647",
+  "company": "כלל חברה לביטוח בע\"מ",
+  "detected": "2026-10-01T09:43:01+00:00"
+ },
+ {
+  "kind": "text_changed",
+  "page": "https://www.clalbit.co.il/aboutclalinsurance/generalreports/?txtTabId=1&txtReportsYearId=2022&txtCompanyId=2&txtReportTypeId=20",
+  "text": "(xhr) -> (html)",
+  "href": "https://www.clalbit.co.il/media/22990/hodshi_clal_tamar_60_vamala_0722.xlsx",
+  "legal_id": "520024647",
+  "company": "כלל חברה לביטוח בע\"מ",
+  "detected": "2026-10-01T09:43:01+00:00"
+ },
+ {
+  "kind": "text_changed",
+  "page": "https://www.clalbit.co.il/aboutclalinsurance/generalreports/?txtTabId=1&txtReportsYearId=2022&txtCompanyId=2&txtReportTypeId=20",
+  "text": "(xhr) -> (html)",
+  "href": "https://www.clalbit.co.il/media/23322/hodshi_clal_tamar_60_vamala_0822.xlsx",
+  "legal_id": "520024647",
+  "company": "כלל חברה לביטוח בע\"מ",
+  "detected": "2026-10-01T09:43:01+00:00"
+ },
+ {
+  "kind": "text_changed",
+  "page": "https://www.clalbit.co.il/aboutclalinsurance/generalreports/?txtTabId=1&txtReportsYearId=2022&txtCompanyId=2&txtReportTypeId=20",
+  "text": "(xhr) -> (html)",
+  "href": "https://www.clalbit.co.il/media/23523/hodshi_clal_tamar_60_vamala_0922.xlsx",
+  "legal_id": "520024647",
+  "company": "כלל חברה לביטוח בע\"מ",
+  "detected": "2026-10-01T09:43:01+00:00"
+ },
+ {
+  "kind": "text_changed",
+  "page": "https://www.clalbit.co.il/aboutclalinsurance/generalreports/?txtTabId=1&txtReportsYearId=2022&txtCompanyId=2&txtReportTypeId=20",
+  "text": "(xhr) -> (html)",
+  "href": "https://www.clalbit.co.il/media/23735/hodshi_clal_tamar_60_vamala_1022.xlsx",
+  "legal_id": "520024647",
+  "company": "כלל חברה לביטוח בע\"מ",
+  "detected": "2026-10-01T09:43:01+00:00"
+ },
+ {
+  "kind": "text_changed",
+  "page": "https://www.clalbit.co.il/aboutclalinsurance/generalreports/?txtTabId=1&txtReportsYearId=2022&txtCompanyId=2&txtReportTypeId=20",
+  "text": "(xhr) -> (html)",
+  "href": "https://www.clalbit.co.il/media/24342/hodshi_clal_tamar_60_vamala_1122.xlsx",
+  "legal_id": "520024647",
+  "company": "כלל חברה לביטוח בע\"מ",
+  "detected": "2026-10-01T09:43:01+00:00"
+ },
+ {
+  "kind": "text_changed",
+  "page": "https://www.clalbit.co.il/aboutclalinsurance/generalreports/?txtTabId=1&txtReportsYearId=2022&txtCompanyId=2&txtReportTypeId=20",
+  "text": "(xhr) -> (html)",
+  "href": "https://www.clalbit.co.il/media/24734/hodshi_clal_tamar_60_vamala_1222.xlsx",
+  "legal_id": "520024647",
+  "company": "כלל חברה לביטוח בע\"מ",
+  "detected": "2026-10-01T09:43:01+00:00"
+ },
+ {
+  "kind": "page_changed",
   "page": "https://www.clalbit.co.il/aboutclalinsurance/generalreports/?txtTabId=1&txtReportsYearId=2021&txtCompanyId=2&txtReportTypeId=20",
-  "text": "88 items",
+  "text": "טקסט העמוד השתנה (אותם קישורים)",
   "href": "https://www.clalbit.co.il/aboutclalinsurance/generalreports/?txtTabId=1&txtReportsYearId=2021&txtCompanyId=2&txtReportTypeId=20",
   "legal_id": "520024647",
   "company": "כלל חברה לביטוח בע\"מ",
-  "detected": "2026-10-01T09:15:30+00:00"
+  "detected": "2026-10-01T09:43:01+00:00"
  },
  {
-  "kind": "new_page",
+  "kind": "page_changed",
   "page": "https://www.clalbit.co.il/aboutclalinsurance/generalreports/?txtTabId=1&txtReportsYearId=2020&txtCompanyId=2&txtReportTypeId=20",
-  "text": "123 items",
+  "text": "טקסט העמוד השתנה (אותם קישורים)",
   "href": "https://www.clalbit.co.il/aboutclalinsurance/generalreports/?txtTabId=1&txtReportsYearId=2020&txtCompanyId=2&txtReportTypeId=20",
   "legal_id": "520024647",
   "company": "כלל חברה לביטוח בע\"מ",
-  "detected": "2026-10-01T09:15:30+00:00"
- },
- {
-  "kind": "new_page",
-  "page": "https://www.clalbit.co.il/aboutclalinsurance/generalreports/?txtTabId=1&txtReportsYearId=2019&txtCompanyId=2&txtReportTypeId=20",
-  "text": "334 items",
-  "href": "https://www.clalbit.co.il/aboutclalinsurance/generalreports/?txtTabId=1&txtReportsYearId=2019&txtCompanyId=2&txtReportTypeId=20",
-  "legal_id": "520024647",
-  "company": "כלל חברה לביטוח בע\"מ",
-  "detected": "2026-10-01T09:15:30+00:00"
- },
- {
-  "kind": "new_page",
-  "page": "https://www.clalbit.co.il/aboutclalinsurance/generalreports/?txtTabId=1&txtReportsYearId=2024&txtCompanyId=3&txtReportTypeId=20",
-  "text": "547 items",
-  "href": "https://www.clalbit.co.il/aboutclalinsurance/generalreports/?txtTabId=1&txtReportsYearId=2024&txtCompanyId=3&txtReportTypeId=20",
-  "legal_id": "520024647",
-  "company": "כלל חברה לביטוח בע\"מ",
-  "detected": "2026-10-01T09:15:30+00:00"
- },
- {
-  "kind": "new_item",
-  "page": "https://www.clalbit.co.il",
-  "text": "תשואות קופות גמל להשקעה",
-  "href": "https://www.clalbit.co.il/investmentprovidentfundarticle/",
-  "legal_id": "520024647",
-  "company": "כלל חברה לביטוח בע\"מ",
-  "detected": "2026-10-01T09:15:30+00:00"
- },
- {
-  "kind": "new_item",
-  "page": "https://www.clalbit.co.il",
-  "text": "רשימת מסלולים כשרים",
-  "href": "https://www.clalbit.co.il/providentfund/faq/kosherfundslist/",
-  "legal_id": "520024647",
-  "company": "כלל חברה לביטוח בע\"מ",
-  "detected": "2026-10-01T09:15:30+00:00"
- },
- {
-  "kind": "new_item",
-  "page": "https://www.clalbit.co.il",
-  "text": "קרן השתלמות לעצמאים",
-  "href": "https://www.clalbit.co.il/educationfund/faq/clalhishtalmutarticle/",
-  "legal_id": "520024647",
-  "company": "כלל חברה לביטוח בע\"מ",
-  "detected": "2026-10-01T09:15:30+00:00"
- },
- {
-  "kind": "new_item",
-  "page": "https://www.clalbit.co.il",
-  "text": "קרן השתלמות",
-  "href": "https://www.clalbit.co.il/educationfund/",
-  "legal_id": "520024647",
-  "company": "כלל חברה לביטוח בע\"מ",
-  "detected": "2026-10-01T09:15:30+00:00"
- },
- {
-  "kind": "new_item",
-  "page": "https://www.clalbit.co.il",
-  "text": "קופת גמל להשקעה",
-  "href": "https://www.clalbit.co.il/investmentprovidentfund/",
-  "legal_id": "520024647",
-  "company": "כלל חברה לביטוח בע\"מ",
-  "detected": "2026-10-01T09:15:30+00:00"
- },
- {
-  "kind": "new_item",
-  "page": "https://www.clalbit.co.il",
-  "text": "קופת גמל",
-  "href": "https://www.clalbit.co.il/providentfund/",
-  "legal_id": "520024647",
-  "company": "כלל חברה לביטוח בע\"מ",
-  "detected": "2026-10-01T09:15:30+00:00"
- },
- {
-  "kind": "new_item",
-  "page": "https://www.clalbit.co.il",
-  "text": "פנסיה מבטיחה",
-  "href": "https://www.clalbit.co.il/pensionpro/",
-  "legal_id": "520024647",
-  "company": "כלל חברה לביטוח בע\"מ",
-  "detected": "2026-10-01T09:15:30+00:00"
- },
- {
-  "kind": "new_item",
-  "page": "https://www.clalbit.co.il",
-  "text": "פנסיה לעצמאים",
-  "href": "https://www.clalbit.co.il/pension/faq/pensionforindependent/",
-  "legal_id": "520024647",
-  "company": "כלל חברה לביטוח בע\"מ",
-  "detected": "2026-10-01T09:15:30+00:00"
- },
- {
-  "kind": "new_item",
-  "page": "https://www.clalbit.co.il",
-  "text": "פנסיה",
-  "href": "https://www.clalbit.co.il/pension/",
-  "legal_id": "520024647",
-  "company": "כלל חברה לביטוח בע\"מ",
-  "detected": "2026-10-01T09:15:30+00:00"
- },
- {
-  "kind": "new_item",
-  "page": "https://www.clalbit.co.il",
-  "text": "משיכת קרן השתלמות",
-  "href": "https://www.clalbit.co.il/moneywindrowhisnew/",
-  "legal_id": "520024647",
-  "company": "כלל חברה לביטוח בע\"מ",
-  "detected": "2026-10-01T09:15:30+00:00"
- },
- {
-  "kind": "new_item",
-  "page": "https://www.clalbit.co.il",
-  "text": "מחשבון גמל",
-  "href": "https://www.clalbit.co.il/providentfunds/",
-  "legal_id": "520024647",
-  "company": "כלל חברה לביטוח בע\"מ",
-  "detected": "2026-10-01T09:15:30+00:00"
- },
- {
-  "kind": "new_item",
-  "page": "https://www.clalbit.co.il",
-  "text": "למידע נוסף",
-  "href": "https://www.clalbit.co.il/providentfund/faq/eligibilityprovidentandstudyfundandpension/",
-  "legal_id": "520024647",
-  "company": "כלל חברה לביטוח בע\"מ",
-  "detected": "2026-10-01T09:15:30+00:00"
- },
- {
-  "kind": "new_item",
-  "page": "https://www.clalbit.co.il",
-  "text": "למידע נוסף",
-  "href": "https://www.clalbit.co.il/aboutclalinsurance/aboutpensiongemel/smallfundswithdrawal/",
-  "legal_id": "520024647",
-  "company": "כלל חברה לביטוח בע\"מ",
-  "detected": "2026-10-01T09:15:30+00:00"
- },
- {
-  "kind": "new_item",
-  "page": "https://www.clalbit.co.il",
-  "text": "חיסכון לכל ילד",
-  "href": "https://www.clalbit.co.il/providentfund/savingforkids/",
-  "legal_id": "520024647",
-  "company": "כלל חברה לביטוח בע\"מ",
-  "detected": "2026-10-01T09:15:30+00:00"
- },
- {
-  "kind": "new_item",
-  "page": "https://www.clalbit.co.il",
-  "text": "השוואת קרנות פנסיה",
-  "href": "https://www.clalbit.co.il/comparingpensionfunds/",
-  "legal_id": "520024647",
-  "company": "כלל חברה לביטוח בע\"מ",
-  "detected": "2026-10-01T09:15:30+00:00"
- },
- {
-  "kind": "new_item",
-  "page": "https://www.clalbit.co.il",
-  "text": "השוואת קרנות השתלמות",
-  "href": "https://www.clalbit.co.il/educationfund/faq/clalhishtalmutarticlen/",
-  "legal_id": "520024647",
-  "company": "כלל חברה לביטוח בע\"מ",
-  "detected": "2026-10-01T09:15:30+00:00"
- },
- {
-  "kind": "new_item",
-  "page": "https://www.clalbit.co.il",
-  "text": "הפרשות לפנסיה",
-  "href": "https://www.clalbit.co.il/pension/faq/pensiontips/",
-  "legal_id": "520024647",
-  "company": "כלל חברה לביטוח בע\"מ",
-  "detected": "2026-10-01T09:15:30+00:00"
- },
- {
-  "kind": "text_changed",
-  "page": "https://www.clalbit.co.il",
-  "text": "צפייה בפוליסת חובה -> ביטוח לנהג זמניתהליך שינויים בנח\"להגשת תביעהצפייה בפוליסת חובה צפייה בפוליסת חובה",
-  "href": "https://www.clalbit.co.il/portfolio/myPolicyDocuments/",
-  "legal_id": "520024647",
-  "company": "כלל חברה לביטוח בע\"מ",
-  "detected": "2026-10-01T09:15:30+00:00"
- },
- {
-  "kind": "new_item",
-  "page": "https://www.clalbit.co.il",
-  "text": "אודות כלל פנסיה וגמל",
-  "href": "https://www.clalbit.co.il/aboutclalinsurance/aboutpensiongemel/",
-  "legal_id": "520024647",
-  "company": "כלל חברה לביטוח בע\"מ",
-  "detected": "2026-10-01T09:15:30+00:00"
- },
- {
-  "kind": "new_page",
-  "page": "https://www.clalbit.co.il/aboutclalinsurance/aboutpensiongemel/",
-  "text": "6 items",
-  "href": "https://www.clalbit.co.il/aboutclalinsurance/aboutpensiongemel/",
-  "legal_id": "520024647",
-  "company": "כלל חברה לביטוח בע\"מ",
-  "detected": "2026-10-01T09:15:30+00:00"
- },
- {
-  "kind": "text_changed",
-  "page": "https://www.clalbit.co.il/investorrelationssection/",
-  "text": "הורדה -> רבעון ראשון 2026 2026 הורדה הורדה",
-  "href": "https://www.clalbit.co.il/media/abqdlwcy/רבעון-ראשון-2026.pdf",
-  "legal_id": "520024647",
-  "company": "כלל חברה לביטוח בע\"מ",
-  "detected": "2026-10-01T09:15:30+00:00"
- },
- {
-  "kind": "text_changed",
-  "page": "https://www.clalbit.co.il/investorrelationssection/",
-  "text": "הורדה -> מרץ 2025 2025 הורדה הורדה",
-  "href": "https://www.clalbit.co.il/media/fz0kyy25/מרץ-2025.pdf",
-  "legal_id": "520024647",
-  "company": "כלל חברה לביטוח בע\"מ",
-  "detected": "2026-10-01T09:15:30+00:00"
- },
- {
-  "kind": "text_changed",
-  "page": "https://www.clalbit.co.il/investorrelationssection/",
-  "text": "הורדה -> דצמבר 2025 2025 הורדה הורדה",
-  "href": "https://www.clalbit.co.il/media/dn2parpd/דצמבר-2025.pdf",
-  "legal_id": "520024647",
-  "company": "כלל חברה לביטוח בע\"מ",
-  "detected": "2026-10-01T09:15:30+00:00"
- },
- {
-  "kind": "text_changed",
-  "page": "https://www.clalbit.co.il/investorrelationsenglish/",
-  "text": "Download -> Q1 2026 2026 Download Download",
-  "href": "https://www.clalbit.co.il/media/42lgwgrx/q1-2026.pdf",
-  "legal_id": "520024647",
-  "company": "כלל חברה לביטוח בע\"מ",
-  "detected": "2026-10-01T09:15:30+00:00"
- },
- {
-  "kind": "text_changed",
-  "page": "https://www.clalbit.co.il/investorrelationsenglish/",
-  "text": "Download -> March 2025 2025 Download Download",
-  "href": "https://www.clalbit.co.il/media/5wuhz5to/march-2025.pdf",
-  "legal_id": "520024647",
-  "company": "כלל חברה לביטוח בע\"מ",
-  "detected": "2026-10-01T09:15:30+00:00"
- },
- {
-  "kind": "text_changed",
-  "page": "https://www.clalbit.co.il/investorrelationsenglish/",
-  "text": "Download -> Dec 2025 2025 Download Download",
-  "href": "https://www.clalbit.co.il/media/l41cl0nj/dec-2025.pdf",
-  "legal_id": "520024647",
-  "company": "כלל חברה לביטוח בע\"מ",
-  "detected": "2026-10-01T09:15:30+00:00"
- },
- {
-  "kind": "new_item",
-  "page": "https://www.clalbit.co.il/investorsrelations/",
-  "text": "(html)",
-  "href": "https://www.clalbit.co.il/media/4fzdgri0/מסמך-אמות-מידה-ממשל-תאגידי-2026-לפרסום.pdf",
-  "legal_id": "520024647",
-  "company": "כלל חברה לביטוח בע\"מ",
-  "detected": "2026-10-01T09:15:30+00:00"
- },
- {
-  "kind": "new_item",
-  "page": "https://www.clalbit.co.il/investorsrelations/",
-  "text": "תשואות קופות גמל להשקעה",
-  "href": "https://www.clalbit.co.il/investmentprovidentfundarticle/",
-  "legal_id": "520024647",
-  "company": "כלל חברה לביטוח בע\"מ",
-  "detected": "2026-10-01T09:15:30+00:00"
- },
- {
-  "kind": "new_item",
-  "page": "https://www.clalbit.co.il/investorsrelations/",
-  "text": "רשימת מסלולים כשרים",
-  "href": "https://www.clalbit.co.il/providentfund/faq/kosherfundslist/",
-  "legal_id": "520024647",
-  "company": "כלל חברה לביטוח בע\"מ",
-  "detected": "2026-10-01T09:15:30+00:00"
- },
- {
-  "kind": "new_item",
-  "page": "https://www.clalbit.co.il/investorsrelations/",
-  "text": "קרן השתלמות לעצמאים",
-  "href": "https://www.clalbit.co.il/educationfund/faq/clalhishtalmutarticle/",
-  "legal_id": "520024647",
-  "company": "כלל חברה לביטוח בע\"מ",
-  "detected": "2026-10-01T09:15:30+00:00"
- },
- {
-  "kind": "new_item",
-  "page": "https://www.clalbit.co.il/investorsrelations/",
-  "text": "קרן השתלמות",
-  "href": "https://www.clalbit.co.il/educationfund/",
-  "legal_id": "520024647",
-  "company": "כלל חברה לביטוח בע\"מ",
-  "detected": "2026-10-01T09:15:30+00:00"
- },
- {
-  "kind": "new_item",
-  "page": "https://www.clalbit.co.il/investorsrelations/",
-  "text": "קופת גמל להשקעה",
-  "href": "https://www.clalbit.co.il/investmentprovidentfund/",
-  "legal_id": "520024647",
-  "company": "כלל חברה לביטוח בע\"מ",
-  "detected": "2026-10-01T09:15:30+00:00"
- },
- {
-  "kind": "new_item",
-  "page": "https://www.clalbit.co.il/investorsrelations/",
-  "text": "קופת גמל",
-  "href": "https://www.clalbit.co.il/providentfund/",
-  "legal_id": "520024647",
-  "company": "כלל חברה לביטוח בע\"מ",
-  "detected": "2026-10-01T09:15:30+00:00"
- },
- {
-  "kind": "new_item",
-  "page": "https://www.clalbit.co.il/investorsrelations/",
-  "text": "פנסיה מבטיחה",
-  "href": "https://www.clalbit.co.il/pensionpro/",
-  "legal_id": "520024647",
-  "company": "כלל חברה לביטוח בע\"מ",
-  "detected": "2026-10-01T09:15:30+00:00"
- },
- {
-  "kind": "new_item",
-  "page": "https://www.clalbit.co.il/investorsrelations/",
-  "text": "פנסיה לעצמאים",
-  "href": "https://www.clalbit.co.il/pension/faq/pensionforindependent/",
-  "legal_id": "520024647",
-  "company": "כלל חברה לביטוח בע\"מ",
-  "detected": "2026-10-01T09:15:30+00:00"
- },
- {
-  "kind": "new_item",
-  "page": "https://www.clalbit.co.il/investorsrelations/",
-  "text": "פנסיה",
-  "href": "https://www.clalbit.co.il/pension/",
-  "legal_id": "520024647",
-  "company": "כלל חברה לביטוח בע\"מ",
-  "detected": "2026-10-01T09:15:30+00:00"
- },
- {
-  "kind": "new_item",
-  "page": "https://www.clalbit.co.il/investorsrelations/",
-  "text": "משיכת קרן השתלמות",
-  "href": "https://www.clalbit.co.il/moneywindrowhisnew/",
-  "legal_id": "520024647",
-  "company": "כלל חברה לביטוח בע\"מ",
-  "detected": "2026-10-01T09:15:30+00:00"
- },
- {
-  "kind": "new_item",
-  "page": "https://www.clalbit.co.il/investorsrelations/",
-  "text": "מחשבון גמל",
-  "href": "https://www.clalbit.co.il/providentfunds/",
-  "legal_id": "520024647",
-  "company": "כלל חברה לביטוח בע\"מ",
-  "detected": "2026-10-01T09:15:30+00:00"
- },
- {
-  "kind": "new_item",
-  "page": "https://www.clalbit.co.il/investorsrelations/",
-  "text": "חיסכון לכל ילד",
-  "href": "https://www.clalbit.co.il/providentfund/savingforkids/",
-  "legal_id": "520024647",
-  "company": "כלל חברה לביטוח בע\"מ",
-  "detected": "2026-10-01T09:15:30+00:00"
- },
- {
-  "kind": "new_item",
-  "page": "https://www.clalbit.co.il/investorsrelations/",
-  "text": "השוואת קרנות פנסיה",
-  "href": "https://www.clalbit.co.il/comparingpensionfunds/",
-  "legal_id": "520024647",
-  "company": "כלל חברה לביטוח בע\"מ",
-  "detected": "2026-10-01T09:15:30+00:00"
- },
- {
-  "kind": "new_item",
-  "page": "https://www.clalbit.co.il/investorsrelations/",
-  "text": "השוואת קרנות השתלמות",
-  "href": "https://www.clalbit.co.il/educationfund/faq/clalhishtalmutarticlen/",
-  "legal_id": "520024647",
-  "company": "כלל חברה לביטוח בע\"מ",
-  "detected": "2026-10-01T09:15:30+00:00"
- },
- {
-  "kind": "new_item",
-  "page": "https://www.clalbit.co.il/investorsrelations/",
-  "text": "הפרשות לפנסיה",
-  "href": "https://www.clalbit.co.il/pension/faq/pensiontips/",
-  "legal_id": "520024647",
-  "company": "כלל חברה לביטוח בע\"מ",
-  "detected": "2026-10-01T09:15:30+00:00"
- },
- {
-  "kind": "new_item",
-  "page": "https://www.clalbit.co.il/investorsrelations/",
-  "text": "הלוואה מקרן הפנסיה",
-  "href": "https://www.clalbit.co.il/loansandmortgage/pensionloans/",
-  "legal_id": "520024647",
-  "company": "כלל חברה לביטוח בע\"מ",
-  "detected": "2026-10-01T09:15:30+00:00"
- },
- {
-  "kind": "new_item",
-  "page": "https://www.clalbit.co.il/investorsrelations/",
-  "text": "הלוואה מקופת גמל והשתלמות",
-  "href": "https://www.clalbit.co.il/loansandmortgage/gemelloans/",
-  "legal_id": "520024647",
-  "company": "כלל חברה לביטוח בע\"מ",
-  "detected": "2026-10-01T09:15:30+00:00"
- },
- {
-  "kind": "text_changed",
-  "page": "https://www.clalbit.co.il/investorsrelations/",
-  "text": "צפייה בפוליסת חובה -> ביטוח לנהג זמניתהליך שינויים בנח\"להגשת תביעהצפייה בפוליסת חובה צפייה בפוליסת חובה",
-  "href": "https://www.clalbit.co.il/portfolio/myPolicyDocuments/",
-  "legal_id": "520024647",
-  "company": "כלל חברה לביטוח בע\"מ",
-  "detected": "2026-10-01T09:15:30+00:00"
- },
- {
-  "kind": "new_item",
-  "page": "https://www.clalbit.co.il/investorsrelations/",
-  "text": "אודות כלל פנסיה וגמל",
-  "href": "https://www.clalbit.co.il/aboutclalinsurance/aboutpensiongemel/",
-  "legal_id": "520024647",
-  "company": "כלל חברה לביטוח בע\"מ",
-  "detected": "2026-10-01T09:15:30+00:00"
- },
- {
-  "kind": "text_changed",
-  "page": "https://www.clalbit.co.il/investorsrelations/",
-  "text": "Read More -> (html)",
-  "href": "https://www.clalbit.co.il/media/ohzpub5l/holding-structure-acc.pdf",
-  "legal_id": "520024647",
-  "company": "כלל חברה לביטוח בע\"מ",
-  "detected": "2026-10-01T09:15:30+00:00"
- },
- {
-  "kind": "text_changed",
-  "page": "https://www.clalbit.co.il/investorsrelations/",
-  "text": "Read More -> (html)",
-  "href": "https://www.clalbit.co.il/media/bgwguu4z/shareholders-en-acc.pdf",
-  "legal_id": "520024647",
-  "company": "כלל חברה לביטוח בע\"מ",
-  "detected": "2026-10-01T09:15:30+00:00"
- },
- {
-  "kind": "new_page",
-  "page": "https://www.clalbit.co.il/providentfunds/",
-  "text": "3 items",
-  "href": "https://www.clalbit.co.il/providentfunds/",
-  "legal_id": "520024647",
-  "company": "כלל חברה לביטוח בע\"מ",
-  "detected": "2026-10-01T09:15:30+00:00"
- },
- {
-  "kind": "new_page",
-  "page": "https://www.clalbit.co.il/comparingpensionfunds/",
-  "text": "4 items",
-  "href": "https://www.clalbit.co.il/comparingpensionfunds/",
-  "legal_id": "520024647",
-  "company": "כלל חברה לביטוח בע\"מ",
-  "detected": "2026-10-01T09:15:30+00:00"
- },
- {
-  "kind": "new_page",
-  "page": "https://www.clalbit.co.il/educationfund/faq/clalhishtalmutarticlen/",
-  "text": "4 items",
-  "href": "https://www.clalbit.co.il/educationfund/faq/clalhishtalmutarticlen/",
-  "legal_id": "520024647",
-  "company": "כלל חברה לביטוח בע\"מ",
-  "detected": "2026-10-01T09:15:30+00:00"
- },
- {
-  "kind": "new_page",
-  "page": "https://www.clalbit.co.il/moneywindrowhisnew/",
-  "text": "0 items",
-  "href": "https://www.clalbit.co.il/moneywindrowhisnew/",
-  "legal_id": "520024647",
-  "company": "כלל חברה לביטוח בע\"מ",
-  "detected": "2026-10-01T09:15:30+00:00"
- },
- {
-  "kind": "new_page",
-  "page": "https://www.clalbit.co.il/pension/",
-  "text": "1 items",
-  "href": "https://www.clalbit.co.il/pension/",
-  "legal_id": "520024647",
-  "company": "כלל חברה לביטוח בע\"מ",
-  "detected": "2026-10-01T09:15:30+00:00"
+  "detected": "2026-10-01T09:43:01+00:00"
  }
 ]
