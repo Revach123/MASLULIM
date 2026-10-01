@@ -17,6 +17,7 @@ from .derivatives_exposure import (
 from .excel_io import text_from, to_ratio
 from .funds import FUND_CATEGORIES, PLACEHOLDERS, _build_fund_map, _build_isin_set, _classify
 from .funds_classification import fund_siveg
+from .foreign_etf_reference import _classify_by_report_name
 from .index_exposure import (
     DIRECT_EQUITY_CATEGORIES, EQUITY_FUND_SIVEGS, equity_row_index, index_geo, is_local, leveraged_equity,
     report_month_by_key,
@@ -134,6 +135,9 @@ def _classify_row(cat: str, row: dict, name, fund_ref: dict | None, fund_frac: d
         frac = fund_frac or {}
         if (frac.get("bond") or 0) >= 0.5 and (frac.get("equity") or 0) < 0.5:
             return ("bond_gov_" if _GOV_NAME.search(str(name or "")) else "bond_corp_") + "abroad"
+        if not frac.get("equity") and _classify_by_report_name(str(name or "")) == "bond":
+            # אג"ח לפי השם (הרשמי): Mortgage-Backed / Bond / Treasury - ההרכב בטבלת SEC 0/0
+            return ("bond_gov_" if _GOV_NAME.search(str(name or "")) else "bond_corp_") + "abroad"
         if not frac.get("equity") and _MONEY_FUND_NAME.search(str(name or "")):
             return ("bond_gov_" if _GOV_NAME.search(str(name or "")) else "bond_corp_") + _bond_loc(row)
         return None
@@ -209,8 +213,11 @@ def _index_meta(idx: str, label: str) -> dict:
 
 def build_holdings_detail(source: list[dict], isin_swap: list[dict], funds_ref: list[dict],
                           isin_fractions: dict[str, dict], index_trace: dict | None = None,
-                          alt_classes: dict[str, str] | None = None) -> dict[str, dict]:
-    """index_trace: מ-build_index_exposure(trace=...) - שיוך כל שורה למדד/ים שלה."""
+                          alt_classes: dict[str, str] | None = None,
+                          official_names: dict[str, str] | None = None) -> dict[str, dict]:
+    """index_trace: מ-build_index_exposure(trace=...) - שיוך כל שורה למדד/ים שלה.
+    official_names: ISIN -> שם רשמי לקרן חו"ל (official_fund_names) - במקום השם שהגוף דיווח."""
+    official_names = official_names or {}
     fund_map, isin_set = _build_fund_map(isin_swap), _build_isin_set(isin_swap)
     trace_rows = (index_trace or {}).get("rows", {})
     trace_labels = dict((index_trace or {}).get("labels", {}))
@@ -283,11 +290,14 @@ def build_holdings_detail(source: list[dict], isin_swap: list[dict], funds_ref: 
                 sug, ref = _fund_lookup(row, fund_map, isin_set, ref_by_num, ref_by_isin)
                 fund_ref_row = ref
                 parts = [FUND_KIND_LABEL.get(sug, "")] if sug else []
-                if ref and ref.get("שם קרן"):
+                official = (ref or {}).get("שם קרן") or (
+                    official_names.get(text_from(row.get("מספר נייר ערך") or "").strip().upper()) if sug == "חוץ" else None)
+                if official:
                     reported = text_from(name).strip() if name is not None else ""
-                    if reported and reported.upper() != str(ref["שם קרן"]).strip().upper():
+                    if reported and reported.upper() != str(official).strip().upper():
                         parts.append("בדוח: " + reported)
-                    name = ref["שם קרן"]
+                    name = official
+                if ref and ref.get("שם קרן"):
                     issuer = ref.get("מנהל קרן") or issuer
                 if ref and ref.get("נכס בסיס"):
                     parts.append(str(ref["נכס בסיס"]))

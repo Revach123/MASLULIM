@@ -29,6 +29,7 @@ ETF_FUNDS_URL = "https://revach.pages.dev/api/etf-funds"
 MATCH_KEY_ENV = "REVACH_MATCH_KEY"
 
 SEC_CONTENTS_URL = "https://api.github.com/repos/Revach123/revach/contents/data/ETF/SEC/etf_exposure.json"
+SEC_NO_DATA = "NoData"  # assetClass של קרן שאין לה עדיין דוח N-PORT
 TOKEN_ENV = "PAT"
 
 FOREIGN_TYPE = "חוץ"
@@ -194,7 +195,23 @@ def build_isin_fractions(etf_universe: list[dict], sec_exposure: list[dict]) -> 
         eq, bd = rec.get("eqTotalPct"), rec.get("bondTotalPct")
         if eq is None and bd is None:
             continue
+        # קרן בלי דוח N-PORT (assetClass "NoData" - קרן חדשה, SMHC/NASA): ה-0/0 בטבלה הוא היעדר
+        # נתון, לא הרכב - לא נרשם, כדי שהשכבות הבאות (שם בדוח, N-PORT חי, Yahoo) יסווגו אותה
+        if str(rec.get("assetClass") or "") == SEC_NO_DATA:
+            continue
         out[isin] = {"equity": (eq or 0.0) / 100, "bond": (bd or 0.0) / 100}
+    return out
+
+
+def official_fund_names(etf_universe: list[dict], sec_exposure: list[dict]) -> dict[str, str]:
+    """ISIN -> שם הקרן הרשמי (אוניברסיטת ה-ETF / SEC). הגופים מדווחים לעיתים שם קטוע או שגוי
+    (US92206C7719 מדווח "MARKET VECTORS GOLD MINERS" והוא Vanguard Mortgage-Backed Securities ETF)."""
+    out: dict[str, str] = {}
+    for rec in (*sec_exposure, *etf_universe):
+        isin = _isin_key(rec.get("isin"))
+        name = str(rec.get("name") or "").strip()
+        if isin and name:
+            out[isin] = name
     return out
 
 
@@ -210,6 +227,7 @@ _REPORT_NAME_BOND_TERMS = (
     "sen sec", "senior sec", "corp debt", "floating rate", "credit", "govt",
     "gov bnd", "agg bnd", "municipal", "debenture", "clo income", "debt",
     "fallen angel", "short dur", "senior lo", "liq. corp", "hi yld", "inv gr cred",
+    "mortgage-backed", "mortgage backed",
     # מנפיקים/טווחי-מוצר שכל הקרנות בהם הן הכנסה קבועה בלבד תמיד - עובדה
     # יציבה על המותג/הטווח (לא ניחוש על קרן ספציפית, ולא ISIN-ים בודדים):
     # "bluebay" (RBC BlueBay Asset Management - אך ורק אג"ח/קרדיט); "pimco
