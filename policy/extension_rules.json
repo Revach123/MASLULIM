@@ -7,5 +7,7 @@
  "concurrency": 4,
  "settle_ms": 3000,
  "capture_ms": 8000,
- "max_download_clicks": 40
+ "max_download_clicks": 40,
+ "skip_complete_hours": 24,
+ "_note_skip": "חברה עם מדיניות השנה לכל המסלולים (policy/extension_complete.json) מדולגת N שעות מאז הריצה המוצלחת האחרונה שלה. 0 = לא מדלגים."
 }
