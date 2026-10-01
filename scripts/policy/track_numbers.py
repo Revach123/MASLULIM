@@ -107,12 +107,18 @@ class Registry:
         self.ok = bool(self.by_company)
 
     def valid(self, lid, n):
-        """המספר קיים ברישום - באותה חברה, או בכל חברה (קרנות ותיקות רשומות תחת עמיתים וכד')."""
+        """המספר קיים ברישום - באותה חברה, או בכל חברה (קרנות ותיקות רשומות תחת עמיתים וכד'), או בגמל-נט/פנסיה-נט/
+        ביטוח-נט (fund_names: קרנות משתתפות ברווחים - הראל קרן י 259012, כלל קרן ט 14011 - אינן ברישום)."""
         if not self.ok or lid not in self.by_company or n in self.by_company[lid]:
             return True
         if not hasattr(self, "_all"):
             self._all = {x for d in self.by_company.values() for x in d}
-        return n in self._all
+            fp = POL / "fund_names.csv"
+            self._fn = {r["FUND_ID"] for r in csv.DictReader(open(fp, encoding="utf-8-sig"))} if fp.exists() else set()
+        if n in self._all:
+            return True
+        # רק בגמל-נט/פנסיה-נט/ביטוח-נט: לפחות 3 ספרות ולא שנה (2016 = מספר קופה/שנה, 75 = "2.075 מש"ח")
+        return n in self._fn and len(n) >= 3 and not (1990 <= int(n) <= 2035)
 
     def match_name(self, lid, name, taken=()):
         cand = self.by_company.get(lid) or {}
