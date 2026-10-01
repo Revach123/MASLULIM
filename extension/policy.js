@@ -58,6 +58,15 @@ async function waitComplete(tabId, timeoutMs = 45000) {
 }
 
 // רץ בתוך הדף: פותח אקורדיונים/לשוניות, ומחזיר את כל הקישורים (כולל בתוך iframes מאותו origin).
+// איסוף קל (גיבוי כשהאיסוף עם הלחיצות נתקע): כל הקישורים בדף ובמסגרות מאותו מקור, בלי לחיצות
+function pageCollectLinksLight() {
+  const out = [];
+  const grab = (doc) => doc.querySelectorAll("a[href]").forEach((a) => out.push({ href: a.href, text: (a.innerText || a.title || "").trim().slice(0, 200), ctx: "" }));
+  grab(document);
+  document.querySelectorAll("iframe").forEach((f) => { try { grab(f.contentDocument); } catch (e) {} });
+  return out;
+}
+
 async function pageCollectLinks(clicks) {
   const wait = (ms) => new Promise((r) => setTimeout(r, ms));
   const clickAll = (sel) => document.querySelectorAll(sel).forEach((el) => { try { el.click(); } catch (e) {} });
@@ -243,7 +252,14 @@ async function runSite(site, cfg, seen, onProgress, windowId) {
       await waitComplete(tab.id);
       await sleep(site.settle_ms || RULES.settle_ms);  // אתר איטי: settle_ms בהגדרות האתר
       await report(pi, "פותח אקורדיונים ואוסף קישורים");
-      const [res] = await execInTab(tab.id, pageCollectLinks, [(site.clicks || {})[pageUrl] || site.click || []]);
+      let res;
+      try {
+        [res] = await execInTab(tab.id, pageCollectLinks, [(site.clicks || {})[pageUrl] || site.click || []]);
+      } catch (e) {
+        // איסוף עם לחיצות נתקע (מינהל: timeout 90s) - איסוף קל: רק הקישורים שבדף, בלי לחיצות
+        errors.push(`${pageUrl}: ${e && e.message || e} -> light collect`);
+        [res] = await execInTab(tab.id, pageCollectLinksLight, []);
+      }
       const links = (res && res.result) || [];
       await report(pi, "ממתין לתור לחיצות ההורדה");
       const cap = await withDownloadLock(async () => { await report(pi, "לוחץ על כפתורי הורדה"); return captureDownloads(tab.id, site.capture_ms || RULES.capture_ms, site.download_rx || RULES.download_rx); });
@@ -251,14 +267,17 @@ async function runSite(site, cfg, seen, onProgress, windowId) {
       links.push(...(openedBy[tab.id] || []).map((u) => ({ ...u, ctx: "(download)" })));  // קבצים שנפתחו בחלון/טאב חדש
       // follow_max (אתר שעמוד המדיניות בו לא ידוע - הסוכנות): נכנסים לקישורים באותו אתר שנראים כמו מדיניות/השקעות
       const followed = [];
-      if (site.follow_max && pi < (site.pages || []).length + 1) {
+      // follow_rx: רק קישורים שתואמים (קרנות מורים וגננות: "מורים-וגננות"); גם מעמודים שנכנסו אליהם (כמה רמות),
+      // עד follow_max עמודים נוספים
+      const frx = site.follow_rx ? new RegExp(site.follow_rx, "i") : null;
+      if (site.follow_max && (frx || pi < (site.pages || []).length + 1)) {
         const host = new URL(pageUrl).hostname.replace(/^www\./, "");
         for (const l of links) {
           if (pages.length >= (site.pages || []).length + 1 + site.follow_max) break;
           let u; try { u = new URL(l.href); } catch (e) { continue; }
           if (u.hostname.replace(/^www\./, "") !== host || DOC_RX.test(l.href) || pages.includes(u.href.split("#")[0])) continue;
           const blob = decodeURIComponent(l.href) + " " + (l.text || "");
-          if ((POLICY_RX.test(blob) || /השקע|פנסי|תגמול|גמל|קופ|invest|pension/i.test(blob)) && !NOISE_RX.test(blob)) {
+          if ((frx ? frx.test(blob) : (POLICY_RX.test(blob) || /השקע|פנסי|תגמול|גמל|קופ|invest|pension/i.test(blob))) && !NOISE_RX.test(blob)) {
             pages.push(u.href.split("#")[0]); followed.push(u.href.split("#")[0]);
           }
         }

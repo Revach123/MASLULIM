@@ -17,7 +17,7 @@
   "ביטוח"
  ],
  "search": true,
- "rev": 8,
+ "rev": 9,
  "via": "extension",
  "note": "עמוד /investments: רשימה 'נושא' -> 'הצהרת מדיניות השקעות' -> אקורדיון שנים -> 'הצהרה מראש של גוף מוסדי לשנת YYYY' (להורדה, /media/.../guf_mosdi_YYYY-*.xlsx)",
  "clicks": {
@@ -25,5 +25,7 @@
    "נושא",
    "הצהרת מדיניות השקעות"
   ]
- }
+ },
+ "follow_max": 15,
+ "follow_rx": "מדיניות|policy|investments|השקעות"
 }
