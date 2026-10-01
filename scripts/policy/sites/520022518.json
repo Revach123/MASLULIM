@@ -2,12 +2,20 @@
  "legal_id": "520022518",
  "name": "החברה לניהול קופת התגמולים והפנסיה של עובדי הסוכנות היהודית לארץ ישראל בע\"מ",
  "home": "https://www.jafi.org",
- "pages": [],
+ "pages": [
+  {
+   "product": "פנסיה",
+   "url": "https://www.jafi.org/he"
+  }
+ ],
  "browser": "headless",
  "products": [
   "פנסיה"
  ],
  "search": true,
- "rev": 6,
- "home_source": "report_email:jafi.org"
+ "rev": 7,
+ "home_source": "report_email:jafi.org",
+ "via": "extension",
+ "follow_max": 8,
+ "note": "jafi.org חוסם/לא עונה לענן -> תוסף; עמוד המדיניות לא ידוע: follow_max נכנס לקישורי השקעות/פנסיה באותו אתר. הקישורים שנכנסו נרשמים ב-extension_log (followed)"
 }

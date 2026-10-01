@@ -20,7 +20,8 @@
   "exclude": null,
   "settle_ms": null,
   "capture_ms": null,
-  "download_rx": null
+  "download_rx": null,
+  "follow_max": null
  },
  {
   "legal_id": "513910703",
@@ -41,7 +42,8 @@
   "exclude": null,
   "settle_ms": null,
   "capture_ms": null,
-  "download_rx": null
+  "download_rx": null,
+  "follow_max": null
  },
  {
   "legal_id": "514956465",
@@ -63,7 +65,30 @@
   "exclude": null,
   "settle_ms": null,
   "capture_ms": null,
-  "download_rx": null
+  "download_rx": null,
+  "follow_max": null
+ },
+ {
+  "legal_id": "520022518",
+  "name": "החברה לניהול קופת התגמולים והפנסיה של עובדי הסוכנות היהודית לארץ ישראל בע\"מ",
+  "home": "https://www.jafi.org",
+  "pages": [
+   {
+    "product": "פנסיה",
+    "url": "https://www.jafi.org/he"
+   }
+  ],
+  "products": [
+   "פנסיה"
+  ],
+  "click": null,
+  "clicks": null,
+  "any_sheet": null,
+  "exclude": null,
+  "settle_ms": null,
+  "capture_ms": null,
+  "download_rx": null,
+  "follow_max": 8
  },
  {
   "legal_id": "520027251",
@@ -104,7 +129,8 @@
   "exclude": null,
   "settle_ms": null,
   "capture_ms": null,
-  "download_rx": null
+  "download_rx": null,
+  "follow_max": null
  },
  {
   "legal_id": "520028390",
@@ -145,7 +171,8 @@
   "exclude": null,
   "settle_ms": null,
   "capture_ms": null,
-  "download_rx": null
+  "download_rx": null,
+  "follow_max": null
  },
  {
   "legal_id": "520030677",
@@ -175,7 +202,8 @@
   "exclude": null,
   "settle_ms": null,
   "capture_ms": null,
-  "download_rx": null
+  "download_rx": null,
+  "follow_max": null
  },
  {
   "legal_id": "520030990",
@@ -208,7 +236,8 @@
   "exclude": null,
   "settle_ms": null,
   "capture_ms": null,
-  "download_rx": null
+  "download_rx": null,
+  "follow_max": null
  },
  {
   "legal_id": "520031824",
@@ -245,6 +274,7 @@
   "exclude": null,
   "settle_ms": null,
   "capture_ms": null,
-  "download_rx": null
+  "download_rx": null,
+  "follow_max": null
  }
 ]
