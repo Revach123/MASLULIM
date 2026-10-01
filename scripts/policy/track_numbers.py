@@ -23,7 +23,8 @@ CODE_LABEL = re.compile(r"(?:מספר|קוד|מס['׳]?)\s*(?:ה?מסלול|ה?�
 
 
 def _norm(s):
-    s = re.sub(r"[\"'״׳()\[\]\-–_,.:/%]+", " ", str(s or ""))
+    s = re.sub(r"(?i)s\s*&\s*p\s*(\d)", r"sp\1", str(s or ""))  # "S&P 500" = "S&P500"
+    s = re.sub(r"[\"'״׳()\[\]\-–_,.:/%]+", " ", s)
     s = re.sub(r"\b(מסלול|קופת|קרן|גמל|לשנת|בע\s*מ|מסל)\b", " ", s)
     return re.sub(r"\s+", " ", s).strip().lower()
 
@@ -94,17 +95,28 @@ class Registry:
         a = _norm(name)
         if not a or not cand:
             return None, 0
-        best, score = None, 0
+        best, score, second = None, 0, 0
+        # אותן מילים בסדר אחר ("גמל להשקעה - איילון מסלול כללי" / "איילון קופת גמל להשקעה כללי"), בלי מילת
+        # הפתיחה של שם החברה - רק כשההתאמה יחידה
+        co = (_norm(next(iter(cand.values()), "")).split() or [""])[0]
+        toks = lambda x: frozenset(w for w in _norm(x).split() if w != co)
+        same = [tn for tn, nm in cand.items() if toks(nm) and toks(nm) == toks(name)]
+        if len(same) == 1:
+            return same[0], 0.95
+        digs = lambda x: sorted(re.findall(r"(?<!\d)\d{1,3}(?!\d)", x))
         for tn, nm in cand.items():
             b = _norm(nm)
-            if not b:
+            if not b or digs(a) != digs(b):  # גילאים/אחוזים/מדד חייבים להיות זהים ("לבני 50 ומטה" != "לבני 60 ומעלה")
                 continue
             s = 1.0 if a == b else SequenceMatcher(None, a, b).ratio()
             if b.endswith(a) or a.endswith(b):
                 s = max(s, 0.9)
             if s > score:
-                best, score = tn, s
-        return (best, score) if score >= 0.82 else (None, score)
+                best, score, second = tn, s, score
+            elif s > second:
+                second = s
+        # שתי התאמות כמעט שוות (עמ"י: "גמל להשקעה ... S&P 500" / "גמל ... S&P 500") - אין הכרעה, עדיף בלי מספר
+        return (best, score) if score >= 0.82 and score - second >= 0.03 else (None, score)
 
 
 _DOC_CACHE = {}

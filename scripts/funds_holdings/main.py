@@ -26,6 +26,7 @@ from .foreign_etf_reference import (
 from .funds import build_funds
 from .funds_detail import build_funds_detail
 from .funds_il import build_funds_il, build_funds_il_kashrut
+from .alt_asset_reference import build_alt_classes
 from .holdings_detail import build_holdings_detail, report_unplaced_funds
 from .funds_reference import build_funds_reference
 from .index_exposure import (
@@ -105,7 +106,8 @@ def build_master_table(
     # (אוניברסיטת ETF אירופית + חשיפת ETF אמריקאיות לפי SEC) שלא ממופים
     # כרגע דרך funds_reference.py. מצטרף לאותן עמודות "קרן מחקה - ..." -
     # אין חפיפה עם il_sums (כל שורת קרן מסווגת בדיוק ל-IL/נסחרת/חוץ אחת).
-    isin_fractions = build_isin_fractions(fetch_etf_universe(), fetch_sec_etf_exposure())
+    etf_universe = fetch_etf_universe()
+    isin_fractions = build_isin_fractions(etf_universe, fetch_sec_etf_exposure())
     # שכבת מוצא-אחרון: קרנות לא-מזוהות באף מאגר - לפי שם הקרן כפי שמדווח
     # בדוח עצמו (ר' תיעוד ב-classify_from_report_names). לא דורס נתון קיים.
     for isin, frac in classify_from_report_names(source).items():
@@ -174,7 +176,29 @@ def build_master_table(
     print(f"[main] {len(bonds_heter_by_isin)} ניירות מ-bonds_heter (revach)")
     bonds_rank = build_bonds_rank(source, bonds_heter_by_isin)
     bonds_detail = build_bonds_detail(source, bonds_heter_by_isin)
-    holdings_detail = build_holdings_detail(source, isin_swap, funds_ref, isin_fractions, index_trace)
+    # סחורות / נכסים דיגיטליים בקרנות חו"ל בלי הרכב מניות/אג"ח (ר' alt_asset_reference.py)
+    report_names: dict[str, str] = {}
+    for rec in source:
+        if rec["Category"] in ("קרנות נאמנות", "קרנות סל"):
+            for r in rec["Clean"]:
+                isin = str(r.get("מספר נייר ערך") or "").strip().upper()
+                name = str(r.get("שם נייר ערך") or "").strip()
+                if isin and len(name) > len(report_names.get(isin, "")):
+                    report_names[isin] = name
+    alt_candidates = {}
+    for f in funds:
+        isin = str(f.get("מספר קרן") or "").strip().upper()
+        frac = isin_fractions.get(isin) or {}
+        if f["סוג"] == "חוץ" and isin and not frac.get("equity") and not frac.get("bond"):
+            alt_candidates[isin] = report_names.get(isin, "")
+    try:
+        from .sec_nport_reference import resolve_isin_to_name
+        alt_full_names = resolve_isin_to_name(sorted(alt_candidates))
+    except Exception as e:
+        print(f"[alt] OpenFIGI לא זמין (שמות מלאים): {e}")
+        alt_full_names = {}
+    alt_classes = build_alt_classes(alt_candidates, etf_universe, alt_full_names)
+    holdings_detail = build_holdings_detail(source, isin_swap, funds_ref, isin_fractions, index_trace, alt_classes)
     print(report_unplaced_funds(holdings_detail))
 
     rows: dict[str, dict] = {}

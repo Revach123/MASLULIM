@@ -25,7 +25,7 @@ from .sheet_source import PCT_COL
 # עמודות השורה: גיליון (אינדקס ל-cats), שם, מספר נייר, מנפיק, % מהנכסים, שווי (אלפי ש"ח),
 # מטבע, מדינה, פרט (דירוג+פדיון לאג"ח / נכס בסיס לנגזר / סוג), חשיפה למניות, רכיב חשיפה,
 # והשיוך למדד: [[מזהה מדד, חשיפה], ...] - מאותו חישוב בדיוק כמו פירוק החשיפה לפי מדד, וסיווג
-# לשאר הנכסים (ר' _classify_row): cash / deposit / bond_gov_il / bond_corp_abroad... / fx
+# לשאר הנכסים (ר' _classify_row): cash / deposit / bond_gov_il / bond_corp_abroad... / commodity / digital / fx
 HOLDING_COLS = ["cat", "name", "id", "issuer", "pct", "value", "ccy", "country", "info", "equity", "component", "idx", "cls"]
 
 NAME_COLS = ("שם נייר ערך", "שם הלוואה", "שם הבנק", "טיקר", "שם מנפיק", "מאפיין עיקרי")
@@ -82,8 +82,10 @@ def _bond_loc(row: dict) -> str:
     return "abroad" if 'חו"ל' in str(row.get('ישראל/חו"ל') or "") else "il"
 
 
-def _classify_row(cat: str, row: dict, name, fund_ref: dict | None, fund_frac: dict | None) -> str | None:
-    """מזומן/פיקדון, אג"ח (ממשלתי/קונצרני × בארץ/בחו"ל - כולל קרנות אג"ח וכספיות), גידור מט"ח."""
+def _classify_row(cat: str, row: dict, name, fund_ref: dict | None, fund_frac: dict | None,
+                  alt_class: str | None = None) -> str | None:
+    """מזומן/פיקדון, אג"ח (ממשלתי/קונצרני × בארץ/בחו"ל - כולל קרנות אג"ח וכספיות), סחורות, נכסים דיגיטליים,
+    גידור מט"ח."""
     if cat == CASH_CATEGORY:
         return "cash"
     if cat == DEPOSIT_CATEGORY:
@@ -99,10 +101,16 @@ def _classify_row(cat: str, row: dict, name, fund_ref: dict | None, fund_frac: d
             if main.startswith("קרן כספית"):
                 # קרן כספית = אג"ח קצר (מק"מ / ממשלתי קצר; "עם קונצרני" - גם קונצרני)
                 return "bond_corp_il" if "קונצרני" in sub else "bond_gov_il"
+            if main.startswith("סחורות"):
+                return "commodity"  # זהב/כסף/נפט/מדד סחורות
+            if main.startswith("נכסים דיגיטליים"):
+                return "digital"  # ביטקוין/אתריום
             if main.startswith('אג"ח'):
                 kind = "gov" if ("מדינה" in sub or "ממשל" in sub) else "corp"
                 return f"bond_{kind}_" + ("abroad" if 'חו"ל' in main else "il")
             return None
+        if alt_class:
+            return alt_class  # סחורות / נכסים דיגיטליים (alt_asset_reference)
         frac = fund_frac or {}
         if (frac.get("bond") or 0) >= 0.5 and (frac.get("equity") or 0) < 0.5:
             return ("bond_gov_" if _GOV_NAME.search(str(name or "")) else "bond_corp_") + "abroad"
@@ -177,7 +185,8 @@ def _index_meta(idx: str, label: str) -> dict:
 
 
 def build_holdings_detail(source: list[dict], isin_swap: list[dict], funds_ref: list[dict],
-                          isin_fractions: dict[str, dict], index_trace: dict | None = None) -> dict[str, dict]:
+                          isin_fractions: dict[str, dict], index_trace: dict | None = None,
+                          alt_classes: dict[str, str] | None = None) -> dict[str, dict]:
     """index_trace: מ-build_index_exposure(trace=...) - שיוך כל שורה למדד/ים שלה."""
     fund_map, isin_set = _build_fund_map(isin_swap), _build_isin_set(isin_swap)
     trace_rows = (index_trace or {}).get("rows", {})
@@ -275,6 +284,8 @@ def build_holdings_detail(source: list[dict], isin_swap: list[dict], funds_ref: 
                 idx_list,
                 _classify_row(cat, row, name, fund_ref_row,
                               isin_fractions.get(text_from(row.get("מספר נייר ערך") or "").strip().upper())
+                              if cat in FUND_CATEGORIES else None,
+                              (alt_classes or {}).get(text_from(row.get("מספר נייר ערך") or "").strip().upper())
                               if cat in FUND_CATEGORIES else None),
             ])
             if pct:

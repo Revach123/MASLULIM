@@ -709,6 +709,12 @@ def main():
         if cfg.get("track_from_sheet") and sh and not re.match(r"(?i)^(page\s*\d+|גיליון\s*\d*|sheet\s*\d*)$", sh) \
                 and not (r.get("track_name") or "").startswith(sh):
             r["track_name"] = f"{sh} - {r.get('track_name') or ''}".strip(" -")
+        # track_from_file: [[regex על שם הקובץ, תווית]] - כמה קופות עם אותם שמות מסלולים בקבצים נפרדים
+        # (איילון: "איילון מסלול כללי" בגמל להשקעה / השתלמות / גמל לחיסכון) -> "<תווית> - <מסלול>"
+        for rx, label in cfg.get("track_from_file") or []:
+            if re.search(rx, r.get("doc_file") or r.get("url") or "") and not (r.get("track_name") or "").startswith(label):
+                r["track_name"] = f"{label} - {r.get('track_name') or ''}".strip(" -")
+                break
     if tf:
         keep_row = lambda r: r.get("legal_id") not in tf or bool(tf[r["legal_id"]].search(r.get("track_name") or ""))
         long_rows = [r for r in long_rows if keep_row(r)]
