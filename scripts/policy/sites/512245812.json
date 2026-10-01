@@ -32,7 +32,7 @@
  "search": false,
  "rev": 13,
  "note": "מנורה: קובץ מדיניות לכל מסלול בעמוד המסלול (/funds/...), נחשף רק ברינדור. עמודי links/ = רשימות המסלולים; follow נכנס לכל מסלול בדפדפן. exclude: תיק ביטוח משתתף של מנורה ביטוח",
- "exclude": "about-insurance|participating-portfolio|מנורה-ביטוח|משתתף",
+ "exclude": "about-insurance|participating-portfolio|מנורה-ביטוח|משתתף|reports-publishs|העברת-זכויות|קשורים|mashlima|mash-year|_yield|_p\\d|תרומת-אפיקי|הוצאות-ישירות|pen-amit|דוח-חודשי",
  "follow": "/funds/pension-and-gemel/(pension-plans|gemel-hishtalmut-list/(menroa-keren-hishtalmut|menora-gemel|top-savings))/",
  "max_pages": 70
 }
