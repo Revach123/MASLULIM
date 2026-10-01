@@ -101,9 +101,17 @@ def price_as_of(index_id: str, as_of: date) -> float | None:
 # העסקה ליום הדוח משמש - לא רמת המחיר שלה, ר' האזהרה בראש הקובץ). נתוני ייחוס: מה
 # כל קרן עוקבת (IXC/XLC, IXY/XLY, IXT/XLK - Select Sector SPDR; MVIS US Listed
 # Semiconductor 25 / SMH; S&P 500 Software & Services ~ IGV, קירוב).
+# ערך "index:<id>" = סדרה ב-INDICES (data/prices/<id>.csv, למשל topix = 1306.T); רשימה =
+# הראשון שיש לו מחירים. MSCI World Momentum ~ IWMO.L (iShares Edge MSCI World Momentum,
+# MTUM כגיבוי); MSCI World IT ~ IXN; S&P 500 IT ~ XLK; TOPIX TR ~ topix; MSCI EM / ACWI ~
+# סדרות הפרוקסי ב-INDICES.
 PROXY_ETF = {
     "IXCTR": "XLC", "IXC": "XLC", "IXYTR": "XLY", "IXY": "XLY", "IXTTR": "XLK", "IXT": "XLK",
     "MVSMHTR": "SMH", "MVSMH": "SMH", "S5SFTW": "IGV",
+    "S5TECH": "XLK", "S5INFT": "XLK", "NDWUIT": "IXN", "M1WOMOM": ("IWMO.L", "MTUM"),
+    "TPXDDVD": "index:topix", "TPX": "index:topix",
+    "NDUEEGF": "index:msci_em_proxy", "M1EF": "index:msci_em_proxy",
+    "NDUEACWF": "index:acwi_proxy", "M1WD": "index:acwi_proxy",
 }
 _EXCEL_EPOCH = date(1899, 12, 30)
 
@@ -147,8 +155,14 @@ def proxy_return(raw_ticker: str | None, deal_date: date | None, report_date: da
     if deal_date > report_date:
         return None
     from .option_delta_pricing import price_as_of as etf_price_as_of
-    p0, p1 = etf_price_as_of(etf, deal_date), etf_price_as_of(etf, report_date)
-    return p1 / p0 if p0 and p1 else None
+    for proxy in (etf if isinstance(etf, tuple) else (etf,)):
+        if proxy.startswith("index:"):
+            p0, p1 = price_as_of(proxy[6:], deal_date), price_as_of(proxy[6:], report_date)
+        else:
+            p0, p1 = etf_price_as_of(proxy, deal_date), etf_price_as_of(proxy, report_date)
+        if p0 and p1:
+            return p1 / p0
+    return None
 
 
 def resolve_current_price(raw_ticker: str | None, report_date: date | None) -> tuple[float | None, str | None]:
