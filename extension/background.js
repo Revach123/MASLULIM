@@ -499,7 +499,7 @@ async function maybeCatchUp() {
 
 chrome.runtime.onInstalled.addListener(() => {
   chrome.alarms.create(ALARM, { periodInMinutes: 24 * 60, delayInMinutes: 2 });
-  chrome.alarms.create(POLICY_ALARM, { periodInMinutes: 24 * 60, delayInMinutes: 5 });
+  chrome.alarms.clear(POLICY_ALARM);  // הוחלף בבדיקה כל 15 דקות (POLICY_CHECK_ALARM)
 });
 chrome.runtime.onStartup.addListener(() => {
   chrome.alarms.create(ALARM, { periodInMinutes: 24 * 60, delayInMinutes: 2 });
@@ -507,7 +507,7 @@ chrome.runtime.onStartup.addListener(() => {
 });
 chrome.alarms.onAlarm.addListener((a) => {
   if (a.name === ALARM) runSafe("incremental");
-  if (a.name === POLICY_ALARM) runPolicySafe();
+  if (a.name === POLICY_CHECK_ALARM) checkPolicyTrigger();
   if (a.name === SELF_UPDATE_ALARM) checkSelfUpdate();
 });
 
@@ -538,6 +538,38 @@ async function checkSelfUpdate() {
 chrome.alarms.get(SELF_UPDATE_ALARM).then((a) => { if (!a) chrome.alarms.create(SELF_UPDATE_ALARM, { periodInMinutes: 5, delayInMinutes: 1 }); });
 
 // ----- מדיניות השקעה: אתרים שחוסמים שרתי ענן (ר' policy.js) -----
+// הפעלה אוטומטית: כל 15 דקות בודקים ב-GitHub אם משהו השתנה - רשימת האתרים, הכללים, קובץ ההפעלה
+// (policy/extension_trigger.json - שינוי בו = "תריץ עכשיו") או גרסת התוסף. השתנה -> ריצה מלאה מיד;
+// לא השתנה -> ריצה רק אם עברו 24 שעות מהריצה הקודמת.
+const POLICY_CHECK_ALARM = "policy-check";
+const POLICY_FILES = ["policy/extension_trigger.json", "policy/extension_sites.json", "policy/extension_rules.json"];
+async function policyFingerprint(cfg) {
+  const parts = [chrome.runtime.getManifest().version];
+  for (const f of POLICY_FILES) {
+    try { parts.push(await getFileBase64(cfg.token, cfg.owner, cfg.repo, cfg.branch || "main", f)); } catch (e) { parts.push(""); }
+  }
+  const buf = await crypto.subtle.digest("SHA-256", new TextEncoder().encode(parts.join("\n")));
+  return [...new Uint8Array(buf)].map((b) => b.toString(16).padStart(2, "0")).join("").slice(0, 16);
+}
+async function checkPolicyTrigger() {
+  try {
+    const { status } = await chrome.storage.local.get("status");
+    if (policyRunning || status?.policyState?.running) return;
+    const cfg = await getConfig();
+    if (!cfg.token || !cfg.owner || !cfg.repo) return;
+    const fp = await policyFingerprint(cfg);
+    const { policyFingerprint: lastFp } = await chrome.storage.local.get("policyFingerprint");
+    const due = Date.now() - (status?.policyLastRun || 0) > 24 * 3600 * 1000;
+    await setStatus({ policyCheckedAt: Date.now(), policyNextReason: fp !== lastFp ? "עדכון ב-GitHub" : due ? "24 שעות" : "" });
+    if (fp !== lastFp || due) {
+      await chrome.storage.local.set({ policyFingerprint: fp });
+      runPolicySafe();
+    }
+  } catch (e) {}
+}
+chrome.alarms.get(POLICY_CHECK_ALARM).then((a) => { if (!a) chrome.alarms.create(POLICY_CHECK_ALARM, { periodInMinutes: 15, delayInMinutes: 2 }); });
+chrome.alarms.clear(POLICY_ALARM);
+
 let policyRunning = false;
 async function runPolicySafe() {
   if (policyRunning) return;
