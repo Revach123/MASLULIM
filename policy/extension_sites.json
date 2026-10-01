@@ -16,7 +16,8 @@
    "מדיניות השקעה"
   ],
   "clicks": null,
-  "any_sheet": null
+  "any_sheet": null,
+  "exclude": null
  },
  {
   "legal_id": "514956465",
@@ -34,7 +35,44 @@
   ],
   "click": null,
   "clicks": null,
-  "any_sheet": true
+  "any_sheet": true,
+  "exclude": null
+ },
+ {
+  "legal_id": "520027251",
+  "name": "קרנות השתלמות למורים ולגננות - חברה מנהלת בע\"מ",
+  "home": "https://www.kranoth.org.il",
+  "pages": [
+   {
+    "product": "גמל",
+    "url": "https://www.kranoth.org.il/%D7%90%D7%95%D7%93%D7%95%D7%AA/%D7%9E%D7%A1%D7%9C%D7%95%D7%9C%D7%99-%D7%94%D7%A9%D7%A7%D7%A2%D7%94-%D7%97%D7%93%D7%A9%D7%99%D7%9D/"
+   }
+  ],
+  "products": [
+   "גמל"
+  ],
+  "click": null,
+  "clicks": null,
+  "any_sheet": null,
+  "exclude": null
+ },
+ {
+  "legal_id": "520028390",
+  "name": "קרנות השתלמות למורים תיכוניים, מורי סמינרים ומפקחים - חברה מנהלת בע\"מ",
+  "home": "https://www.kranoth.org.il",
+  "pages": [
+   {
+    "product": "גמל",
+    "url": "https://www.kranoth.org.il/%D7%90%D7%95%D7%93%D7%95%D7%AA/%D7%9E%D7%A1%D7%9C%D7%95%D7%9C%D7%99-%D7%94%D7%A9%D7%A7%D7%A2%D7%94-%D7%97%D7%93%D7%A9%D7%99%D7%9D/"
+   }
+  ],
+  "products": [
+   "גמל"
+  ],
+  "click": null,
+  "clicks": null,
+  "any_sheet": null,
+  "exclude": null
  },
  {
   "legal_id": "520030677",
@@ -54,7 +92,8 @@
    "הצהרת מדיניות השקעות"
   ],
   "clicks": null,
-  "any_sheet": null
+  "any_sheet": null,
+  "exclude": null
  },
  {
   "legal_id": "520030990",
@@ -75,7 +114,8 @@
   ],
   "click": null,
   "clicks": null,
-  "any_sheet": null
+  "any_sheet": null,
+  "exclude": null
  },
  {
   "legal_id": "520031824",
@@ -100,6 +140,7 @@
   ],
   "click": null,
   "clicks": null,
-  "any_sheet": null
+  "any_sheet": null,
+  "exclude": null
  }
 ]

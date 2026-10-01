@@ -159,7 +159,10 @@ export async function runPolicy(cfg, setStatus) {
           && (POLICY_RX.test(decodeURIComponent(l.href) + " " + l.text + " " + l.ctx)
               // any_sheet (מור: 7_17_0_2026_9.xlsx): בעמוד שהוגדר ידנית גם גיליונות בלי מילות מדיניות בשם - לא PDF כלליים
               || (site.any_sheet && (site.pages || []).some((p) => p.url === pageUrl) && /\.(xlsx|xls)(\?|#|$)/i.test(l.href))));
-        const uniq = [...new Map(docs.map((d) => [d.href, d])).values()];
+        // exclude: מסמכים של חברה אחרת באותו אתר (קרנות: מורים וגננות / מורים תיכוניים)
+        const ex = site.exclude ? new RegExp(site.exclude) : null;
+        const uniq = [...new Map(docs.filter((d) => !ex || !ex.test(decodeURIComponent(d.href) + " " + d.text))
+          .map((d) => [d.href, d])).values()];
         diag.push(`${site.name.slice(0, 18)}: links=${links.length} files=${links.filter((l) => DOC_RX.test(l.href)).length} clicked=${cap.clicked} captured=${cap.urls.length} selected=${uniq.length}`);
         if (!uniq.length) {  // אבחון: אילו קבצים נמצאו ולמה לא נבחרו
           links.filter((l) => DOC_RX.test(l.href)).slice(0, 6).forEach((l) =>
