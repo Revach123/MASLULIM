@@ -21,7 +21,7 @@ jobs:
         env:
           URLS: ${{ inputs.urls }}
         run: |
-          [ -z "$URLS" ] && URLS="https://www.menoramivt.co.il/rep-list/about-insurance/participating-portfolio-info/investment-policy https://www.hcsra.co.il/insurances/investments-credit-realestate/investments/ https://www.as-invest.co.il/interstedin/gemel/%D7%90%D7%9C%D7%98%D7%A9%D7%95%D7%9C%D7%A8-%D7%A9%D7%97%D7%9D-%D7%92%D7%9E%D7%9C-%D7%9E%D7%A0%D7%99%D7%95%D7%AA/ https://www.yl-invest.co.il/%D7%A7%D7%95%D7%A4%D7%95%D7%AA-%D7%92%D7%9E%D7%9C-%D7%9C%D7%94%D7%A9%D7%A7%D7%A2%D7%94-%D7%9E%D7%A1%D7%9C%D7%95%D7%9C-%D7%9E%D7%A0%D7%99%D7%95%D7%AA/ https://www.yl-invest.co.il/17/"
+          [ -z "$URLS" ] && URLS="https://www.menoramivt.co.il/rep-list/about-insurance/participating-portfolio-info/investment-policy https://www.hcsra.co.il/insurances/investments-credit-realestate/investments/"
           echo "urls=$(python3 -c 'import json,sys;print(json.dumps(sys.argv[1:]))' $URLS)" >> "$GITHUB_OUTPUT"
 
   probe:

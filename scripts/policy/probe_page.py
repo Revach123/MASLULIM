@@ -53,6 +53,22 @@ def probe(pw, url):
         btns = pg.eval_on_selector_all("button,[role=tab],[role=button],select,[aria-expanded]",
                                        "els=>els.filter(e=>e.offsetParent).map(e=>e.tagName+':'+(e.innerText||e.value||'').trim().slice(0,50))")
         print("  CONTROLS", [x for x in btns if len(x) > 4][:120])
+        # לחיצה על השנה העדכנית / מסנן מדיניות והצגת מה שהשתנה (DOM + רשת) - לאתרים שהקבצים נפתחים ב-JS
+        for label in ("2026", "מדיניות השקעה משתתפות"):
+            try:
+                n0 = len(net)
+                loc = pg.get_by_text(label, exact=True)
+                print(f"  CLICK {label!r}: matches={loc.count()}")
+                loc.first.click(timeout=3000); pg.wait_for_timeout(3500)
+                print("\n".join("   AFTER" + x for x in net[n0:n0 + 40]))
+                html = pg.evaluate("""(lab) => { const el = [...document.querySelectorAll('*')].find(e => (e.innerText||'').trim() === lab);
+                    let p = el; for (let i = 0; i < 4 && p && p.parentElement; i++) p = p.parentElement;
+                    return p ? p.outerHTML.slice(0, 6000) : ''; }""", label)
+                print("   HTML", re.sub(r"\s+", " ", html))
+                print("   ONCLICK", pg.eval_on_selector_all("[onclick],[data-url],[data-href],[data-file]",
+                      "els=>els.slice(0,30).map(e=>(e.getAttribute('onclick')||e.dataset.url||e.dataset.href||e.dataset.file||'').slice(0,200))"))
+            except Exception as e:
+                print("   click err", str(e)[:150])
         body = re.sub(r"\s+", " ", pg.inner_text("body"))
         i = max(0, body.find("מדיניות"))
         print("  TEXT", body[i:i + 2500])
