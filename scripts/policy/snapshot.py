@@ -16,7 +16,7 @@ from urllib.parse import urljoin, urldefrag, unquote
 
 from bs4 import BeautifulSoup
 
-from .crawl import DOC_EXT, UA, base_domain, get, load_companies, load_seeds, score
+from .crawl import DOC_EXT, UA, is_doc_url, base_domain, get, load_companies, load_seeds, score
 
 import requests
 
@@ -33,7 +33,7 @@ def year_of(text: str):
 
 def keep_item(text: str, href: str) -> bool:
     low = (text + " " + unquote(href)).lower()
-    return (score(text) + score(unquote(href)) > 0 or href.lower().split("?")[0].endswith(DOC_EXT)
+    return (score(text) + score(unquote(href)) > 0 or is_doc_url(href)
             or bool(DL_HINT.search(low)) or bool(re.search(r"גמל|פנסי|השתלמות|gemel|pension|provident|hishtalmut", low)))
 
 
@@ -50,7 +50,7 @@ def items_from_anchors(anchors, page_url, dom):
         if not href.startswith("http") or not (is_iframe or keep_item(text, href)):
             continue
         out[href] = {"text": text, "href": href, "year": year_of(text + " " + unquote(href)), "iframe": is_iframe,
-                     "doc": href.lower().split("?")[0].endswith(DOC_EXT) or bool(DL_HINT.search(text.lower())),
+                     "doc": is_doc_url(href) or bool(DL_HINT.search(text.lower())),
                      "internal": base_domain(href) == dom}
     return out
 
