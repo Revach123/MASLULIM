@@ -154,6 +154,18 @@ async function readSites(cfg) {
 // אותו טאב/session) - מוזז מתוך runPolicy כדי שאפשר יהיה להריץ כמה אתרים
 // שונים במקביל (ר' POLICY_CONCURRENCY). seen משותף בין כל האתרים - בדיוק
 // כמו בגרסה הרצית-לגמרי, כדי לשמר את אותה התנהגות דה-דופליקציה.
+// טאבים שפתחנו, וחלונות/טאבים שהאתרים עצמם פתחו מתוכם (window.open / target=_blank) - נסגרים מיד וכתובתם נשמרת
+// כמועמדת לקובץ (כמו הורדה שנתפסה). אחרת popup של אתר נפתח כחלון רגיל באמצע המסך.
+const ourTabs = new Set();
+const openedBy = {};  // openerTabId -> [{href, text}]
+
+function keepMinimized(windowId) {
+  if (!windowId) return;
+  chrome.windows.get(windowId).then((w) => {
+    if (w.state !== "minimized") return chrome.windows.update(windowId, { state: "minimized" });
+  }).catch(() => {});
+}
+
 async function runSite(site, cfg, seen, onProgress, windowId) {
   const pages = [...new Set([...(site.pages || []).map((p) => p.url), site.home].filter(Boolean))];
   const files = [], errors = [], diag = [];
@@ -164,6 +176,8 @@ async function runSite(site, cfg, seen, onProgress, windowId) {
     let tab;
     try {
       tab = await tabsRetry(() => chrome.tabs.create({ url: pageUrl, active: false, ...(windowId ? { windowId } : {}) }));
+      ourTabs.add(tab.id); openedBy[tab.id] = [];
+      keepMinimized(windowId);  // Chrome ב-Windows משחזר לפעמים חלון ממוזער כשנוצר בו טאב
       await waitComplete(tab.id);
       await sleep(3000);
       await report(pi, "פותח אקורדיונים ואוסף קישורים");
@@ -173,6 +187,7 @@ async function runSite(site, cfg, seen, onProgress, windowId) {
       await report(pi, "ממתין לתור לחיצות ההורדה");
       const cap = await withDownloadLock(async () => { await report(pi, "לוחץ על כפתורי הורדה"); return captureDownloads(tab.id); });
       links.push(...cap.urls.map((u) => ({ ...u, ctx: "(download)" })));
+      links.push(...(openedBy[tab.id] || []).map((u) => ({ ...u, ctx: "(download)" })));  // קבצים שנפתחו בחלון/טאב חדש
       const docs = links.filter((l) => (DOC_RX.test(l.href) || l.ctx === "(download)" || DOC_RX.test(l.text)) && !NOISE_RX.test(l.text + " " + l.href)
         && (POLICY_RX.test(decodeURIComponent(l.href) + " " + l.text + " " + l.ctx)
             // any_sheet (מור: 7_17_0_2026_9.xlsx): בעמוד שהוגדר ידנית גם גיליונות בלי מילות מדיניות בשם - לא PDF כלליים
@@ -205,7 +220,7 @@ async function runSite(site, cfg, seen, onProgress, windowId) {
     } catch (e) {
       errors.push(`${pageUrl}: ${e && e.message || e}`);
     } finally {
-      if (tab) { try { await tabsRetry(() => chrome.tabs.remove(tab.id)); } catch (e) {} }
+      if (tab) { ourTabs.delete(tab.id); delete openedBy[tab.id]; try { await tabsRetry(() => chrome.tabs.remove(tab.id)); } catch (e) {} }
     }
   }
   return { files, errors, diag };
@@ -249,6 +264,29 @@ export async function runPolicy(cfg, setStatus) {
   try { workWin = await chrome.windows.create({ state: "minimized", focused: false, url: "about:blank" }); } catch (e) { workWin = null; }
   const windowId = workWin && workWin.id;
 
+  // popup/טאב שאתר פתח מתוך אחד הטאבים שלנו: שומרים את הכתובת וסוגרים. אם הכתובת עוד לא ידועה - מחכים לניווט הראשון
+  const pendingPopups = new Map();  // tabId -> openerTabId
+  const grab = (tabId, opener, url) => {
+    if (url && !/^(about:|chrome)/.test(url) && openedBy[opener]) openedBy[opener].push({ href: url, text: "(popup)" });
+    chrome.tabs.remove(tabId).catch(() => {});
+  };
+  const onTabCreated = (t) => {
+    if (!t.openerTabId || !ourTabs.has(t.openerTabId)) return;
+    const url = t.pendingUrl || t.url;
+    if (url && !/^about:blank/.test(url)) grab(t.id, t.openerTabId, url);
+    else { pendingPopups.set(t.id, t.openerTabId); setTimeout(() => { if (pendingPopups.delete(t.id)) grab(t.id, t.openerTabId, null); }, 5000); }
+  };
+  const onTabUpdated = (tabId, info) => {
+    if (info.url && pendingPopups.has(tabId)) { const opener = pendingPopups.get(tabId); pendingPopups.delete(tabId); grab(tabId, opener, info.url); }
+  };
+  // החלון הממוזער שוחזר/קיבל פוקוס (הורדה, אתר שמבקש פוקוס) - ממזערים שוב
+  const onBounds = (w) => { if (w.id === windowId) keepMinimized(windowId); };
+  const onFocus = (id) => { if (id === windowId) keepMinimized(windowId); };
+  chrome.tabs.onCreated.addListener(onTabCreated);
+  chrome.tabs.onUpdated.addListener(onTabUpdated);
+  if (windowId && chrome.windows.onBoundsChanged) chrome.windows.onBoundsChanged.addListener(onBounds);
+  if (windowId) chrome.windows.onFocusChanged.addListener(onFocus);
+
   onStop = () => flushStatus();
   let nextIdx = 0;
   async function worker() {
@@ -276,6 +314,10 @@ export async function runPolicy(cfg, setStatus) {
   try {
     await Promise.all(Array.from({ length: Math.min(POLICY_CONCURRENCY, sites.length) }, worker));
   } finally {
+    chrome.tabs.onCreated.removeListener(onTabCreated);
+    chrome.tabs.onUpdated.removeListener(onTabUpdated);
+    if (chrome.windows.onBoundsChanged) chrome.windows.onBoundsChanged.removeListener(onBounds);
+    chrome.windows.onFocusChanged.removeListener(onFocus);
     if (windowId) { try { await chrome.windows.remove(windowId); } catch (e) {} }
   }
 
