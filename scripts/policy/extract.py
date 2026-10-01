@@ -13,7 +13,7 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parents[2]
 OUT = ROOT / (__import__("os").environ.get("POLICY_OUT") or "policy")  # ריצה לחברה: policy/companies/<LegalId>
 
-PARSER_VERSION = 13  # (v10: Ayalon, dated current column) # הגדלה = פרסור מחדש של כל המסמכים בריצה הבאה (שינוי בפרסרים)
+PARSER_VERSION = 14  # (v10: Ayalon, dated current column) # הגדלה = פרסור מחדש של כל המסמכים בריצה הבאה (שינוי בפרסרים)
 
 NUM = r"(\d{1,3}(?:\.\d+)?)"
 PCT = NUM + r"\s*%?"
@@ -363,7 +363,7 @@ def parse_titled_tables(rows, sheet=""):
     grid = [[_clean(c) for c in r] for r in rows]
     out = []
     year = next((m.group(1) for r in grid[:6] for c in r for m in [re.search(r"(20\d\d)", c)] if m), None)
-    hdr_rx = re.compile(r"^אפיק\s+(ה)?השקעה")
+    hdr_rx = re.compile(r"^אפיק(\s+(ה)?השקעה|\s*$)")  # "אפיק השקעה" או תא "אפיק" לבד (חח"י השתלמות)
     for ri, row in enumerate(grid):
         lc = next((c for c, t in enumerate(row) if hdr_rx.match(t)), None)
         if lc is None:  # בלי תא "אפיק השקעה": עמודת האפיק = העמודה הריקה משמאל לכותרות (סלייס)
@@ -410,6 +410,12 @@ def parse_titled_tables(rows, sheet=""):
                 cols["expected"] = c  # "שיעור חשיפה 2021" (שנה בלבד, בלי תאריך) = הצפוי
             elif re.search(r"שיעור\s+(ה)?חשיפה|ליום|לתאריך|עדכני|נכון ל", t) and "current" not in cols:
                 cols["current"] = c
+        sub = grid[ri + 1] if ri + 1 < len(grid) else []
+        if "min" not in cols and "max" not in cols:  # "גבולות" ובשורה שמתחת "מינימום | מקסימום"
+            mn = next((c for c, t in enumerate(sub) if t.startswith("מינימום")), None)
+            mx = next((c for c, t in enumerate(sub) if t.startswith("מקסימום")), None)
+            if mn is not None and mx is not None:
+                cols["min"], cols["max"] = mn, mx
         if "expected" not in cols and "bounds" not in cols and "min" not in cols:
             continue
         ey = re.search(r"(20\d\d)", row[cols["expected"]]) if "expected" in cols else None
@@ -425,13 +431,18 @@ def parse_titled_tables(rows, sheet=""):
                 if re.match(r"^(קוד|מספר)\s+(קופה|מסלול)", t2) and r2 + 1 < len(grid) and c2 < len(grid[r2 + 1]) \
                         and re.fullmatch(r"\d{2,6}", grid[r2 + 1][c2]):
                     code = code or grid[r2 + 1][c2]
+        generic = ""
         for r2 in range(ri - 1, max(ri - 5, -1), -1):
             if title:
                 break
             cands = [c for c in grid[r2] if c and not c.startswith(("תחילת", "סוף", "קידוד")) and not re.fullmatch(r"[\d./\-%]+", c)
                      and not re.search(r"ייחוס|יחוס", c)]
             if cands:
-                title = max(cands, key=len); break
+                t0 = max(cands, key=len)
+                if re.search(r"^הצהרה|מדיניות.*(צפוי|שנת|לשנת)", t0) and "מסלול" not in t0:
+                    generic = generic or t0; continue  # כותרת כללית - שם המסלול בשורה שמעליה (חח"י השתלמות)
+                title = t0; break
+        title = title or generic
         mt = re.search(r"(מסלול[^(\-–]+)", title or "") if re.search(r"מדיניות.*(צפוי|שנת|לשנת)", title or "") else None
         if mt:  # "מדיניות השקעה צפויה - מסלול כללי (מ"ס מ.ה 382) - לשנת 2021" (PDF עובדי המדינה)
             mf = re.search(r"מ\.?ה\D{0,4}(\d{2,6})|\((\d{2,6})\)", title)
@@ -456,6 +467,8 @@ def parse_titled_tables(rows, sheet=""):
                 continue
             lab = re.sub(r"^סה[\"״]?כ\s+", "", lab)  # "סה"כ מניות" -> "מניות" (מנורה)
             lo = hi = None
+            # "1%" הוא 1, לא שבר - לפי עמודה (ארם: גבולות "40%" אבל הצפוי 0.44)
+            bpct = any("%" in g(r, k) for k in ("min", "max", "bounds"))
             if "min" in cols and "max" in cols:
                 lo, hi = _num(g(r, "min")), _num(g(r, "max"))
             else:
@@ -466,12 +479,12 @@ def parse_titled_tables(rows, sheet=""):
                     nums = [x for x in (_num(g(r, "bounds", k)) for k in range(0, 4)) if x is not None][:2]
                     if len(nums) == 2:
                         lo, hi = min(nums), max(nums)
-            if lo is not None and hi is not None and max(abs(lo), abs(hi)) <= 1.5:
+            if lo is not None and hi is not None and max(abs(lo), abs(hi)) <= 1.5 and not bpct:
                 lo, hi = round(lo * 100, 2), round(hi * 100, 2)
             cur, exp = _num(g(r, "current")), _num(g(r, "expected"))
             if cur is None and exp is None and lo is None:
                 continue
-            pct = lambda x: None if x is None else round(x * 100, 2) if abs(x) <= 1.5 else x
+            pct = lambda x, k: None if x is None else round(x * 100, 2) if abs(x) <= 1.5 and "%" not in g(r, k) else x
             fm = re.search(r"(?:^|\s|\()(\d{3,6})\)?\s*$", name)  # קוד קופה בסוף השם ("כלל פנסיה מניות 9647")
             fid = fm.group(1) if fm and not re.fullmatch(r"(19|20)\d\d", fm.group(1)) else None
             if code and code.isdigit() and len(code) >= 20:  # <ח.פ.><אפסים><קופה><מסלול 5 ספרות> (סלייס)
@@ -486,7 +499,7 @@ def parse_titled_tables(rows, sheet=""):
                     fid = str(int(cp[1]))
             out.append({"fund_id": fid, "track_no": fid, "track_code": code or f"{sheet.strip()}|{name}", "track_name": name,
                         "group": sheet.strip(), "year": tyear, "asset": lab, "asset_key": asset_key(lab),
-                        "current_pct": pct(cur), "expected_pct": pct(exp), "tolerance": g(r, "tol") or None,
+                        "current_pct": pct(cur, "current"), "expected_pct": pct(exp, "expected"), "tolerance": g(r, "tol") or None,
                         "min_pct": lo, "max_pct": hi, "benchmark": (g(r, "bench").replace("\n", " ") or None), "sheet": sheet})
     return out
 
@@ -610,6 +623,22 @@ def main():
         ent["parser_version"] = PARSER_VERSION
         print(f"[extract] {p.name}: long={n_long} heuristic={len(recs)}", flush=True)
     idx_path.write_text(json.dumps(index, ensure_ascii=False, indent=1), "utf-8")
+    # track_filter (הגדרות החברה): קובץ אחד מכיל כמה קרנות (הוותיקות: Makefet + Mivtachim באותו גיליון) - נשמרות
+    # רק השורות של המסלולים של החברה הזו
+    tf = {}
+    for lid in {e.get("legal_id") for e in index.values()}:
+        cf = ROOT / "scripts" / "policy" / "sites" / f"{lid}.json"
+        if lid and cf.exists():
+            rx = json.loads(cf.read_text("utf-8")).get("track_filter")
+            if rx:
+                tf[lid] = re.compile(rx)
+    if tf:
+        keep_row = lambda r: r.get("legal_id") not in tf or bool(tf[r["legal_id"]].search(r.get("track_name") or ""))
+        long_rows = [r for r in long_rows if keep_row(r)]
+        changes = [r for r in changes if keep_row(r)]
+        rows = {k: r for k, r in rows.items() if keep_row(r)}
+    for r in long_rows:
+        sane_bounds(r)
     out = sorted(rows.values(), key=lambda r: (r["legal_id"], r["track_name"]))
     rows_path.write_text(json.dumps(out, ensure_ascii=False, indent=1), "utf-8")
     for path, data in ((long_path, long_rows), (chg_path, changes), (unp_path, unparsed)):
@@ -620,6 +649,22 @@ def main():
             w = csv.DictWriter(f, fields, extrasaction="ignore")
             w.writeheader(); w.writerows(data)
     print(f"[extract] long={len(long_rows)} changes={len(changes)} unparsed_docs={len(unparsed)}")
+
+
+def sane_bounds(r):
+    """גבולות הפוכים / משובשים מ-PDF מימין לשמאל (לאומי קמ"פ: "42%-30%" -> min 42 max 30; "26%-16%" -> 2016):
+    min>max -> החלפה; גבול משובש (מעל 400) -> צפוי ± סטייה (אם יש), אחרת ריק."""
+    lo, hi, exp = r.get("min_pct"), r.get("max_pct"), r.get("expected_pct")
+    if lo is None or hi is None:
+        return
+    if lo > hi:
+        lo, hi = hi, lo
+    if hi > 400 or lo < -400:  # חשיפה מעל 100% לגיטימית (מניות 94-106); 2016 = שני מספרים שהתחברו
+        m = re.search(r"(\d+(?:\.\d+)?)", str(r.get("tolerance") or ""))
+        tol = float(m.group(1)) if m else None
+        tol = tol * 100 if tol is not None and tol <= 1.5 and "%" not in str(r.get("tolerance")) else tol
+        lo, hi = (round(exp - tol, 2), round(exp + tol, 2)) if tol is not None and exp is not None else (None, None)
+    r["min_pct"], r["max_pct"] = lo, hi
 
 
 if __name__ == "__main__":

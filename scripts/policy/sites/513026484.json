@@ -5,15 +5,15 @@
  "pages": [
   {
    "product": null,
+   "url": "https://www.fnx.co.il/SPF/iframe-the-expected-investment-policy-2026.aspx"
+  },
+  {
+   "product": null,
+   "url": "https://www.fnx.co.il/SPF/iframe-the-expected-investment-policy-{year}.aspx"
+  },
+  {
+   "product": null,
    "url": "https://www.fnx.co.il/fnx-insurance-ltd/investment-information-reports/the-expected-investment-policy/"
-  },
-  {
-   "product": null,
-   "url": "https://www.fnx.co.il/fnx-insurance-ltd/investment-information-reports/the-expected-investment-policy/the-expected-investment-policy-2026/"
-  },
-  {
-   "product": null,
-   "url": "https://www.fnx.co.il/fnx-insurance-ltd/investment-information-reports/the-expected-investment-policy/the-expected-investment-policy-{year}/"
   }
  ],
  "browser": "headless",
@@ -22,5 +22,12 @@
   "פנסיה"
  ],
  "search": true,
- "rev": 6
+ "rev": 9,
+ "exclude": "(?i)bituach|iec",
+ "budget": [
+  30,
+  30
+ ],
+ "note": "המסמכים בתוך iframe (SPF/iframe-the-expected-investment-policy-<שנה>.aspx); עמודי השנה עצמם רק עוטפים אותו",
+ "track_filter": "^(?!.*(חנ ?י|חח\"?י) מרכזית לקצבה)"
 }

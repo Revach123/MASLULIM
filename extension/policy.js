@@ -51,7 +51,7 @@ async function tabsRetry(fn, tries = 20) {
 async function waitComplete(tabId, timeoutMs = 45000) {
   const start = Date.now();
   while (Date.now() - start < timeoutMs) {
-    const t = await chrome.tabs.get(tabId);
+    const t = await withTimeout(chrome.tabs.get(tabId), 10000, "tabs.get");
     if (t.status === "complete") return;
     await sleep(500);
   }
@@ -158,10 +158,17 @@ async function sha256Hex(base64) {
 
 // הזרקת סקריפט לדף עם ניסיון חוזר: אתרים שמנווטים/נטענים מחדש באמצע (הפניה, לחיצה שמנווטת) מפילים את
 // ההזרקה ב-"Frame with ID 0 was removed" / "frame was removed" - מחכים שהטאב יתייצב ומנסים שוב
+// צעד בתוך דף שנתקע (Minhal: 'פותח אקורדיונים' ללא סוף) לא יעצור את כל הריצה
+function withTimeout(promise, ms, label) {
+  let t;
+  const timer = new Promise((_, rej) => { t = setTimeout(() => rej(new Error(`timeout ${Math.round(ms / 1000)}s: ${label}`)), ms); });
+  return Promise.race([promise, timer]).finally(() => clearTimeout(t));
+}
+
 async function execInTab(tabId, func, args = [], tries = 3) {
   for (let i = 1; ; i++) {
     try {
-      return await chrome.scripting.executeScript({ target: { tabId }, func, args });
+      return await withTimeout(chrome.scripting.executeScript({ target: { tabId }, func, args }), 90000, func.name);
     } catch (e) {
       const msg = String(e && e.message || e);
       if (i >= tries || !/frame|removed|navigat|Cannot access|No tab/i.test(msg) || /No tab with id/i.test(msg)) throw e;
@@ -173,7 +180,8 @@ async function execInTab(tabId, func, args = [], tries = 3) {
 // הורדה מהקשר התוסף (הרשאות מארח => ללא CORS) - כשהורדה מתוך הדף נכשלת (קובץ בדומיין אחר / CORS)
 async function extFetchBase64(url) {
   try {
-    const r = await fetch(url, { credentials: "include" });
+    const ac = new AbortController(); const t = setTimeout(() => ac.abort(), 90000);
+    const r = await fetch(url, { credentials: "include", signal: ac.signal }).finally(() => clearTimeout(t));
     if (!r.ok) return { __error: true, status: r.status };
     const bytes = new Uint8Array(await r.arrayBuffer());
     let bin = "";
@@ -221,6 +229,7 @@ async function runSite(site, cfg, seen, onProgress, windowId) {
   const pages = [...new Set([...(site.pages || []).map((p) => p.url), site.home].filter(Boolean))];
   const files = [], errors = [], diag = [];
   const stats = { found: 0, selected: 0, had: 0 };
+  const added = {};  // href -> sha שנוספו באתר הזה (נשמרים כ"כבר נשלח" רק אחרי commit מוצלח)
   const pageLog = [];  // לכל עמוד: מה נמצא/נבחר - ללוג  // לחלונית: קבצים שנמצאו בעמודים / נבחרו כמדיניות / כבר נשלחו בעבר
   const report = (pi, step) => onProgress({ page: pages[pi], pageNo: pi + 1, pages: pages.length, step, docs: files.length / 2 });
   for (const [pi, pageUrl] of pages.entries()) {
@@ -280,7 +289,7 @@ async function runSite(site, cfg, seen, onProgress, windowId) {
         files.push({ path: base + ".json", base64: utf8b64(JSON.stringify({
           legal_id: site.legal_id, url: d.href, link_text: d.text || d.ctx, source_page: pageUrl,
           sha256: sha, fetched_at: new Date().toISOString(), via: "extension" }, null, 1)) });
-        seen[d.href] = sha;
+        seen[d.href] = sha; added[d.href] = sha;
       }
     } catch (e) {
       errors.push(`${pageUrl}: ${e && e.message || e}`);
@@ -288,7 +297,7 @@ async function runSite(site, cfg, seen, onProgress, windowId) {
       if (tab) { ourTabs.delete(tab.id); delete openedBy[tab.id]; try { await tabsRetry(() => chrome.tabs.remove(tab.id)); } catch (e) {} }
     }
   }
-  return { files, errors, diag, stats, pages: pageLog };
+  return { files, errors, diag, stats, pages: pageLog, added };
 }
 
 // כמה אתרים (לא עמודים בתוך אתר - שם אין תועלת, ר' runSite) מותר להריץ
@@ -374,16 +383,36 @@ export async function runPolicy(cfg, setStatus) {
     try { await commitFiles(cfg.token, cfg.owner, cfg.repo, cfg.branch, [logFile("policy/extension_log/latest.json", buildLog(false))],
                             `policy extension log: progress ${finished.length}/${sites.length}`); } catch (e) {}
   }, 30000);
+  // commit לכל אתר (בשרשרת - לא במקביל), ו-policySeen נשמר רק עם מה שנשלח בפועל
+  const committedSeen = { ...seen };
+  const pending = [];  // קבצים שה-commit שלהם נכשל - ננסה שוב בסוף
+  let commitChain = Promise.resolve();
+  function commitSite(site, files, added) {
+    commitChain = commitChain.then(async () => {
+      try {
+        await commitFiles(cfg.token, cfg.owner, cfg.repo, cfg.branch, [...files, logFile("policy/extension_log/latest.json", buildLog(false))],
+          `policy inbox (extension): ${files.length / 2} documents - ${site.name.slice(0, 40)}`);
+        Object.assign(committedSeen, added);
+        await chrome.storage.local.set({ policySeen: committedSeen });
+      } catch (e) {
+        pending.push({ files, added });
+        allErrors.push(`commit ${site.name}: ${e && e.message || e}`);
+      }
+    });
+    return commitChain;
+  }
+
   let nextIdx = 0;
   async function worker() {
     while (!stopRequested && nextIdx < sites.length) {
       const site = sites[nextIdx++];
       try {
-        const { files, errors, diag, stats, pages } = await runSite(site, cfg, seen, async (p) => {
+        const { files, errors, diag, stats, pages, added } = await withTimeout(runSite(site, cfg, seen, async (p) => {
           progress[site.name] = p;
           await flushStatus();
-        }, windowId);
+        }, windowId), 15 * 60000, `site ${site.name}`);
         allFiles.push(...files);
+        if (files.length) commitSite(site, files, added);  // שמירה מיד בסוף כל אתר - ריצה שנתקעת/נסגרת לא מאבדת את מה שכבר הורד
         allErrors.push(...errors);
         allDiag.push(...diag);
         finished.push({ name: site.name, docs: files.length / 2, errors: errors.length, ...stats, firstError: errors[0] || "" });
@@ -411,15 +440,18 @@ export async function runPolicy(cfg, setStatus) {
   }
 
   clearInterval(logTimer);
-  // קבצים + לוג סופי בקומיט אחד (גם כשאין קבצים חדשים - הלוג לבד)
+  await commitChain;
+  // לוג סופי + קבצים שה-commit שלהם נכשל באמצע
+  const pendingFiles = pending.flatMap((p) => p.files);
   const finalLog = buildLog(true);
   const stamp = new Date().toISOString().replace(/[:.]/g, "-").slice(0, 19);
   const logFiles = [logFile("policy/extension_log/latest.json", finalLog), logFile(`policy/extension_log/runs/${stamp}.json`, finalLog)];
-  await flushStatus(allFiles.length ? `מעלה ל-GitHub ${allFiles.length / 2} מסמכים + לוג` : "מעלה לוג ל-GitHub");
-  await commitFiles(cfg.token, cfg.owner, cfg.repo, cfg.branch, [...allFiles, ...logFiles],
-    allFiles.length ? `policy inbox (extension): ${allFiles.length / 2} documents from blocked sites`
-                    : `policy extension log: ${finished.length}/${sites.length} sites, 0 new documents`);
-  await chrome.storage.local.set({ policySeen: seen });
+  await flushStatus(pendingFiles.length ? `מעלה ל-GitHub ${pendingFiles.length / 2} מסמכים + לוג` : "מעלה לוג ל-GitHub");
+  await commitFiles(cfg.token, cfg.owner, cfg.repo, cfg.branch, [...pendingFiles, ...logFiles],
+    pendingFiles.length ? `policy inbox (extension): ${pendingFiles.length / 2} documents (retry)`
+                        : `policy extension log: ${finished.length}/${sites.length} sites, ${allFiles.length / 2} new documents`);
+  for (const p of pending) Object.assign(committedSeen, p.added);
+  await chrome.storage.local.set({ policySeen: committedSeen });
   onStop = null;
   await chain;
   await setStatus({ policyState: { running: false, stopped: stopRequested, total: sites.length, done: finished.length, newDocs: allFiles.length / 2,

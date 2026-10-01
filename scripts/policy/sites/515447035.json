@@ -2,12 +2,32 @@
  "legal_id": "515447035",
  "name": "הפניקס חח\"י קופה מרכזית לקצבה בע\"מ",
  "home": "https://www.fnx.co.il",
- "pages": [],
+ "pages": [
+  {
+   "product": "פנסיה",
+   "url": "https://www.fnx.co.il/pension-savings/iec-pension/"
+  },
+  {
+   "product": "פנסיה",
+   "url": "https://www.fnx.co.il/SPF/iframe-the-expected-investment-policy-2026.aspx"
+  },
+  {
+   "product": "פנסיה",
+   "url": "https://www.fnx.co.il/SPF/iframe-the-expected-investment-policy-{year}.aspx"
+  }
+ ],
  "browser": "headless",
  "products": [
   "פנסיה"
  ],
- "search": true,
- "rev": 6,
- "home_source": "report_email:fnx.co.il"
+ "search": false,
+ "rev": 9,
+ "home_source": "report_email:fnx.co.il",
+ "exclude": "(?i)^(?!.*(gemel|iec))",
+ "note": "קופת חח\"י: מסלול 12595 בתוך קובץ הגמל/השתלמות הכללי של הפניקס (iframe) - track_filter לוקח רק אותו; הפניקס פנסיה וגמל מסננת אותו החוצה",
+ "budget": [
+  30,
+  30
+ ],
+ "track_filter": "(חנ ?י|חח\"?י) מרכזית לקצבה"
 }

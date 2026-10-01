@@ -17,7 +17,8 @@
   "גמל"
  ],
  "search": false,
- "rev": 8,
+ "rev": 9,
  "home_source": "web_search",
- "max_pages": 20
+ "max_pages": 20,
+ "exclude": "(?i)^(?!.*inv[-_ ]?policy)"
 }

@@ -5,13 +5,20 @@
  "pages": [
   {
    "product": "ביטוח",
-   "url": "https://www.harel-group.co.il/about/harel-group/harel"
+   "url": "https://www.harel-group.co.il/about/harel-group/harel/investor-relations/Pages/investment-policy.aspx"
+  },
+  {
+   "product": "ביטוח",
+   "url": "https://www.harel-group.co.il/about/harel-group/harel/mesthtefet/Pages/details-of-investments.aspx"
   }
  ],
  "browser": "headless",
  "products": [
   "ביטוח"
  ],
- "search": true,
- "rev": 5
+ "search": false,
+ "rev": 7,
+ "track_filter": "^(?!הראל (קופת גמל|פנסיה|גמל|השתלמות)|עתידית|קרן חיסכון לצבא|קופת גמל (ל)?משרתי)",
+ "exclude": "(?i)גמל|פנסיה|השתלמות|pensia|gemel",
+ "note": "הראל ביטוח: עמוד מדיניות השקעות בקשרי משקיעים (מדיניות השקעות מוצהרת YYYY - ביטוח). קבצי גמל/פנסיה שייכים להראל פנסיה וגמל"
 }

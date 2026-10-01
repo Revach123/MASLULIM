@@ -92,8 +92,8 @@
   "year": "2022",
   "asset": "הלוואות לעמיתים",
   "asset_key": null,
-  "current_pct": 6.0,
-  "expected_pct": 100.0,
+  "current_pct": 0.06,
+  "expected_pct": 1.0,
   "tolerance": "5%",
   "min_pct": 0.0,
   "max_pct": 5.0,
@@ -345,7 +345,7 @@
   "asset": "אחר )קרנות השקעה\nפרטיות, קרנות נדלן,\nמכשירים מובנים(*",
   "asset_key": null,
   "current_pct": 0.0,
-  "expected_pct": 100.0,
+  "expected_pct": 1.0,
   "tolerance": "5%",
   "min_pct": 0.0,
   "max_pct": 6.0,
@@ -1773,7 +1773,7 @@
   "asset": "עו\"ש, פר\"י, פק\"מ",
   "asset_key": null,
   "current_pct": null,
-  "expected_pct": 150.0,
+  "expected_pct": 1.5,
   "tolerance": null,
   "min_pct": null,
   "max_pct": null,
@@ -2025,7 +2025,7 @@
   "asset": "עו\"ש, פר\"י, פק\"מ",
   "asset_key": null,
   "current_pct": null,
-  "expected_pct": 150.0,
+  "expected_pct": 1.5,
   "tolerance": null,
   "min_pct": null,
   "max_pct": null,
@@ -2781,7 +2781,7 @@
   "asset": "עו\"ש, פר\"י, פק\"מ",
   "asset_key": null,
   "current_pct": null,
-  "expected_pct": 150.0,
+  "expected_pct": 1.5,
   "tolerance": null,
   "min_pct": null,
   "max_pct": null,
@@ -3033,7 +3033,7 @@
   "asset": "עו\"ש, פר\"י, פק\"מ",
   "asset_key": null,
   "current_pct": null,
-  "expected_pct": 150.0,
+  "expected_pct": 1.5,
   "tolerance": null,
   "min_pct": null,
   "max_pct": null,
@@ -3966,7 +3966,7 @@
   "legal_id": "512008335",
   "url": "https://www.kav-habriut.co.il/wp-content/uploads/2026/01/מדיניות_צפויה_2026-סופי.pdf",
   "doc_file": "policy/companies/512008335/raw/512008335/b63e443dc6e7_מדיניות_צפויה_2026-סופי.pdf",
-  "doc_first_seen": "2026-10-01T10:54:54+00:00"
+  "doc_first_seen": "2026-10-01T10:46:06+00:00"
  },
  {
   "fund_id": null,
@@ -3987,7 +3987,7 @@
   "legal_id": "512008335",
   "url": "https://www.kav-habriut.co.il/wp-content/uploads/2026/01/מדיניות_צפויה_2026-סופי.pdf",
   "doc_file": "policy/companies/512008335/raw/512008335/b63e443dc6e7_מדיניות_צפויה_2026-סופי.pdf",
-  "doc_first_seen": "2026-10-01T10:54:54+00:00"
+  "doc_first_seen": "2026-10-01T10:46:06+00:00"
  },
  {
   "fund_id": null,
@@ -4008,7 +4008,7 @@
   "legal_id": "512008335",
   "url": "https://www.kav-habriut.co.il/wp-content/uploads/2026/01/מדיניות_צפויה_2026-סופי.pdf",
   "doc_file": "policy/companies/512008335/raw/512008335/b63e443dc6e7_מדיניות_צפויה_2026-סופי.pdf",
-  "doc_first_seen": "2026-10-01T10:54:54+00:00"
+  "doc_first_seen": "2026-10-01T10:46:06+00:00"
  },
  {
   "fund_id": null,
@@ -4020,7 +4020,7 @@
   "asset": "אחר (קרנות השקעה\nפרטיות, קרנות נדלן,\nמכשירים מובנים)*",
   "asset_key": null,
   "current_pct": 0.0,
-  "expected_pct": 100.0,
+  "expected_pct": 1.0,
   "tolerance": "5%",
   "min_pct": 0.0,
   "max_pct": 6.0,
@@ -4029,7 +4029,7 @@
   "legal_id": "512008335",
   "url": "https://www.kav-habriut.co.il/wp-content/uploads/2026/01/מדיניות_צפויה_2026-סופי.pdf",
   "doc_file": "policy/companies/512008335/raw/512008335/b63e443dc6e7_מדיניות_צפויה_2026-סופי.pdf",
-  "doc_first_seen": "2026-10-01T10:54:54+00:00"
+  "doc_first_seen": "2026-10-01T10:46:06+00:00"
  },
  {
   "fund_id": null,
@@ -4050,7 +4050,7 @@
   "legal_id": "512008335",
   "url": "https://www.kav-habriut.co.il/wp-content/uploads/2026/01/מדיניות_צפויה_2026-סופי.pdf",
   "doc_file": "policy/companies/512008335/raw/512008335/b63e443dc6e7_מדיניות_צפויה_2026-סופי.pdf",
-  "doc_first_seen": "2026-10-01T10:54:54+00:00"
+  "doc_first_seen": "2026-10-01T10:46:06+00:00"
  },
  {
   "fund_id": null,
@@ -4071,7 +4071,7 @@
   "legal_id": "512008335",
   "url": "https://www.kav-habriut.co.il/wp-content/uploads/2026/01/מדיניות_צפויה_2026-סופי.pdf",
   "doc_file": "policy/companies/512008335/raw/512008335/b63e443dc6e7_מדיניות_צפויה_2026-סופי.pdf",
-  "doc_first_seen": "2026-10-01T10:54:54+00:00"
+  "doc_first_seen": "2026-10-01T10:46:06+00:00"
  },
  {
   "fund_id": null,
@@ -4092,7 +4092,7 @@
   "legal_id": "512008335",
   "url": "https://www.kav-habriut.co.il/wp-content/uploads/2026/01/מדיניות_צפויה_2026-סופי.pdf",
   "doc_file": "policy/companies/512008335/raw/512008335/b63e443dc6e7_מדיניות_צפויה_2026-סופי.pdf",
-  "doc_first_seen": "2026-10-01T10:54:54+00:00"
+  "doc_first_seen": "2026-10-01T10:46:06+00:00"
  },
  {
   "fund_id": null,
@@ -4113,7 +4113,7 @@
   "legal_id": "512008335",
   "url": "https://www.kav-habriut.co.il/wp-content/uploads/2026/01/מדיניות_צפויה_2026-סופי.pdf",
   "doc_file": "policy/companies/512008335/raw/512008335/b63e443dc6e7_מדיניות_צפויה_2026-סופי.pdf",
-  "doc_first_seen": "2026-10-01T10:54:54+00:00"
+  "doc_first_seen": "2026-10-01T10:46:06+00:00"
  },
  {
   "fund_id": null,
@@ -4134,7 +4134,7 @@
   "legal_id": "512008335",
   "url": "https://www.kav-habriut.co.il/wp-content/uploads/2026/01/מדיניות_צפויה_2026-סופי.pdf",
   "doc_file": "policy/companies/512008335/raw/512008335/b63e443dc6e7_מדיניות_צפויה_2026-סופי.pdf",
-  "doc_first_seen": "2026-10-01T10:54:54+00:00"
+  "doc_first_seen": "2026-10-01T10:46:06+00:00"
  },
  {
   "fund_id": null,
@@ -4155,7 +4155,7 @@
   "legal_id": "512008335",
   "url": "https://www.kav-habriut.co.il/wp-content/uploads/2026/01/מדיניות_צפויה_2026-סופי.pdf",
   "doc_file": "policy/companies/512008335/raw/512008335/b63e443dc6e7_מדיניות_צפויה_2026-סופי.pdf",
-  "doc_first_seen": "2026-10-01T10:54:54+00:00"
+  "doc_first_seen": "2026-10-01T10:46:06+00:00"
  },
  {
   "fund_id": null,
@@ -4166,8 +4166,8 @@
   "year": "2026",
   "asset": "הלוואות לעמיתים",
   "asset_key": null,
-  "current_pct": 39.0,
-  "expected_pct": 100.0,
+  "current_pct": 0.39,
+  "expected_pct": 1.0,
   "tolerance": "5%",
   "min_pct": 0.0,
   "max_pct": 6.0,
@@ -4176,7 +4176,7 @@
   "legal_id": "512008335",
   "url": "https://www.kav-habriut.co.il/wp-content/uploads/2026/01/מדיניות_צפויה_2026-סופי.pdf",
   "doc_file": "policy/companies/512008335/raw/512008335/b63e443dc6e7_מדיניות_צפויה_2026-סופי.pdf",
-  "doc_first_seen": "2026-10-01T10:54:54+00:00"
+  "doc_first_seen": "2026-10-01T10:46:06+00:00"
  },
  {
   "fund_id": null,
@@ -4197,7 +4197,7 @@
   "legal_id": "512008335",
   "url": "https://www.kav-habriut.co.il/wp-content/uploads/2026/01/מדיניות_צפויה_2026-סופי.pdf",
   "doc_file": "policy/companies/512008335/raw/512008335/b63e443dc6e7_מדיניות_צפויה_2026-סופי.pdf",
-  "doc_first_seen": "2026-10-01T10:54:54+00:00"
+  "doc_first_seen": "2026-10-01T10:46:06+00:00"
  },
  {
   "fund_id": null,
@@ -4218,7 +4218,7 @@
   "legal_id": "512008335",
   "url": "https://www.kav-habriut.co.il/wp-content/uploads/2026/01/מדיניות_צפויה_2026-סופי.pdf",
   "doc_file": "policy/companies/512008335/raw/512008335/b63e443dc6e7_מדיניות_צפויה_2026-סופי.pdf",
-  "doc_first_seen": "2026-10-01T10:54:54+00:00"
+  "doc_first_seen": "2026-10-01T10:46:06+00:00"
  },
  {
   "fund_id": null,
@@ -4239,7 +4239,7 @@
   "legal_id": "512008335",
   "url": "https://www.kav-habriut.co.il/wp-content/uploads/2026/01/מדיניות_צפויה_2026-סופי.pdf",
   "doc_file": "policy/companies/512008335/raw/512008335/b63e443dc6e7_מדיניות_צפויה_2026-סופי.pdf",
-  "doc_first_seen": "2026-10-01T10:54:54+00:00"
+  "doc_first_seen": "2026-10-01T10:46:06+00:00"
  },
  {
   "fund_id": null,
@@ -4260,7 +4260,7 @@
   "legal_id": "512008335",
   "url": "https://www.kav-habriut.co.il/wp-content/uploads/2026/01/מדיניות_צפויה_2026-סופי.pdf",
   "doc_file": "policy/companies/512008335/raw/512008335/b63e443dc6e7_מדיניות_צפויה_2026-סופי.pdf",
-  "doc_first_seen": "2026-10-01T10:54:54+00:00"
+  "doc_first_seen": "2026-10-01T10:46:06+00:00"
  },
  {
   "fund_id": null,
@@ -4281,7 +4281,7 @@
   "legal_id": "512008335",
   "url": "https://www.kav-habriut.co.il/wp-content/uploads/2026/01/מדיניות_צפויה_2026-סופי.pdf",
   "doc_file": "policy/companies/512008335/raw/512008335/b63e443dc6e7_מדיניות_צפויה_2026-סופי.pdf",
-  "doc_first_seen": "2026-10-01T10:54:54+00:00"
+  "doc_first_seen": "2026-10-01T10:46:06+00:00"
  },
  {
   "fund_id": null,
@@ -4293,7 +4293,7 @@
   "asset": "אחר (קרנות השקעה\nפרטיות, קרנות נדלן,\nמכשירים מובנים)*",
   "asset_key": null,
   "current_pct": 0.0,
-  "expected_pct": 100.0,
+  "expected_pct": 1.0,
   "tolerance": "5%",
   "min_pct": 0.0,
   "max_pct": 6.0,
@@ -4302,7 +4302,7 @@
   "legal_id": "512008335",
   "url": "https://www.kav-habriut.co.il/wp-content/uploads/2026/01/מדיניות_צפויה_2026-סופי.pdf",
   "doc_file": "policy/companies/512008335/raw/512008335/b63e443dc6e7_מדיניות_צפויה_2026-סופי.pdf",
-  "doc_first_seen": "2026-10-01T10:54:54+00:00"
+  "doc_first_seen": "2026-10-01T10:46:06+00:00"
  },
  {
   "fund_id": null,
@@ -4323,7 +4323,7 @@
   "legal_id": "512008335",
   "url": "https://www.kav-habriut.co.il/wp-content/uploads/2026/01/מדיניות_צפויה_2026-סופי.pdf",
   "doc_file": "policy/companies/512008335/raw/512008335/b63e443dc6e7_מדיניות_צפויה_2026-סופי.pdf",
-  "doc_first_seen": "2026-10-01T10:54:54+00:00"
+  "doc_first_seen": "2026-10-01T10:46:06+00:00"
  },
  {
   "fund_id": null,
@@ -4344,6 +4344,6 @@
   "legal_id": "512008335",
   "url": "https://www.kav-habriut.co.il/wp-content/uploads/2026/01/מדיניות_צפויה_2026-סופי.pdf",
   "doc_file": "policy/companies/512008335/raw/512008335/b63e443dc6e7_מדיניות_צפויה_2026-סופי.pdf",
-  "doc_first_seen": "2026-10-01T10:54:54+00:00"
+  "doc_first_seen": "2026-10-01T10:46:06+00:00"
  }
 ]

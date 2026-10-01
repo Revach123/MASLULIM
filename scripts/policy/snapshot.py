@@ -87,7 +87,7 @@ A_JS = """els => els.map(e => {
 FILE_RX = re.compile(r"""["'(=\s]((?:https?:)?[\w\-./%:?=&~א-ת]+?\.(?:xlsx|xls|pdf|docx))(?=["')\s&<,]|$)""", re.I)
 
 
-def fetch_browser(pw, url):
+def fetch_browser(pw, url, click_texts=None):
     """רינדור: רשת שקטה, פתיחת אקורדיונים/לשוניות, ולכידת בקשות רשת (JSON עם נתיבי קבצים, קבצים ישירים, iframes).
     -> (anchors, status, body_text)"""
     b = pw.chromium.launch(executable_path=os.environ.get("PW_CHROMIUM") or None, headless=os.environ.get("POLICY_HEADED") != "1",
@@ -143,6 +143,24 @@ def fetch_browser(pw, url):
                         pass
             collect()
 
+        # לחיצות מפורשות מהגדרות האתר (click_texts): טקסט מדויק, force (באנר עוגיות מכסה), המתנה לתוכן מ-API
+        # (הכשרה: הצ'יפ 'מדיניות השקעה משתתפות' - בלעדיו מוצגות רק ההצבעות)
+        for t in click_texts or []:
+            try:
+                loc = pg.get_by_text(t, exact=True)
+                n0 = len(anchors)
+                vis = [i for i in range(min(loc.count(), 10)) if loc.nth(i).is_visible()]
+                (loc.nth(vis[0]) if vis else loc.first).click(timeout=8000, force=True)
+                pg.wait_for_timeout(4000); collect()
+                files = [a["href"] for a in anchors[n0:] if re.search(r"\.(xlsx?|pdf)(\?|$)", a["href"], re.I)]
+                print(f"[snapshot] click_texts {t!r}: matches={loc.count()} visible={vis} new_anchors={len(anchors) - n0} files={len(files)} {files[:3]}", flush=True)
+                for _ in range(10):  # "טען עוד" / "הצג עוד" ברשימת הכרטיסים
+                    more = pg.get_by_text(re.compile(r"^(טען|הצג)\s+(עוד|נוספים)"))
+                    if not more.count():
+                        break
+                    more.first.click(timeout=3000, force=True); pg.wait_for_timeout(2000); collect()
+            except Exception as e:
+                print(f"[snapshot] click_texts {t!r}: {type(e).__name__}", flush=True)
         expand()
         t_int = time.monotonic() + float(os.environ.get("POLICY_PAGE_BUDGET", "120"))
         # לשוניות/כפתורי מוצר (הראל: גמל/השתלמות/פנסיה...): לוחצים על כל אחד, פותחים אקורדיונים, אוספים
@@ -166,7 +184,12 @@ def fetch_browser(pw, url):
                 if re.search(r"חיפוש|אזור אישי|כניסה|צ'?אט|WhatsApp|סגור|✕|תפריט|נגישות|שפה|English|עוגיות|הבנתי|דלג", t):
                     continue
                 clicked.add(t)
-                el.click(timeout=800); pg.wait_for_timeout(400)
+                el.click(timeout=800)
+                # לשונית/צ'יפ של מדיניות: התוכן נטען אחרי הלחיצה (הכשרה: כרטיסים מ-API) - מחכים ואוספים לפני שהלשונית הבאה מחליפה אותו
+                if re.search(r"מדיניות|הצהר", t):
+                    pg.wait_for_timeout(2500); collect(); pg.wait_for_timeout(1500)
+                else:
+                    pg.wait_for_timeout(400)
                 if pg.url.split("#")[0] != url.split("#")[0]:  # כפתור שניווט החוצה - חוזרים
                     collect(); pg.go_back(wait_until="networkidle", timeout=30000)
                     continue
@@ -320,7 +343,7 @@ def _prio(text: str, href: str) -> int:
     return 0 if POLICY.search(blob) else 1 if PRODUCT_RX.search(blob) else 2
 
 
-def snapshot_company(s, pw, home, extra, products=None, max_pages=15, depth_max=2, follow=None):
+def snapshot_company(s, pw, home, extra, products=None, max_pages=15, depth_max=2, follow=None, click_texts=None):
     """follow: regex לקישורים שתמיד נכנסים אליהם ותמיד ברינדור דפדפן (מנורה: עמוד לכל מסלול, הקובץ נחשף רק ברינדור)"""
     import heapq, itertools
     frx = re.compile(follow) if follow else None
@@ -349,7 +372,7 @@ def snapshot_company(s, pw, home, extra, products=None, max_pages=15, depth_max=
         forced = bool(frx and frx.search(unquote(url)))
         if pw and (forced or ((anchors is None or url in iframes or (d == 0 and url in extra) or policy_like < MIN_LINKS_STATIC) and (
                 url in extra or url in iframes or score(url) > 0 or d == 0))):
-            b_anchors, b_status, b_text = fetch_browser(pw, url)
+            b_anchors, b_status, b_text = fetch_browser(pw, url, click_texts if url in extra else None)
             if b_anchors is not None:
                 items.update(items_from_anchors(b_anchors, url, dom)); text, method, status = b_text, "browser", b_status
             elif anchors is None:
