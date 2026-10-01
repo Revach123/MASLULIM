@@ -5,35 +5,20 @@
  "pages": [
   {
    "product": null,
-   "url": "https://www.clalbit.co.il/aboutclalinsurance/generalreports/?txtTabId=1&txtReportsYearId={year}&txtCompanyId=1&txtReportTypeId=20"
-  },
-  {
-   "product": null,
    "url": "https://www.clalbit.co.il/aboutclalinsurance/generalreports/?txtTabId=1&txtReportsYearId={year}&txtCompanyId=2&txtReportTypeId=20"
-  },
-  {
-   "product": null,
-   "url": "https://www.clalbit.co.il/aboutclalinsurance/generalreports/?txtTabId=1&txtReportsYearId={year}&txtCompanyId=3&txtReportTypeId=20"
-  },
-  {
-   "product": null,
-   "url": "https://www.clalbit.co.il/aboutclalinsurance/generalreports/?txtTabId=1&txtReportsYearId={year}&txtCompanyId=4&txtReportTypeId=20"
-  },
-  {
-   "product": null,
-   "url": "https://www.clalbit.co.il/aboutclalinsurance/generalreports/?txtTabId=1&txtReportsYearId={year}&txtCompanyId=5&txtReportTypeId=20"
-  },
-  {
-   "product": null,
-   "url": "https://www.clalbit.co.il/aboutclalinsurance/generalreports/?txtTabId=1&txtReportsYearId={year}&txtCompanyId=6&txtReportTypeId=20"
   }
  ],
  "browser": "headless",
  "products": [
   "ביטוח"
  ],
- "search": true,
- "rev": 7,
- "max_pages": 70,
- "note": "כלל: עמוד אחד לביטוח/פנסיה/גמל - סוג 'הצהרה מראש של גוף מוסדי' (txtReportTypeId=20) x שנה x חברה (txtCompanyId, מספרים לא מאומתים - סורקים 1..6)"
+ "search": false,
+ "rev": 10,
+ "max_pages": 20,
+ "note": "כלל: generalreports, סוג 20 (הצהרה מראש של גוף מוסדי) x שנה; txtCompanyId=2 (API GetCompanyAndYearList?numReportType=20: 2=כלל חברה לביטוח, 3=כלל פנסיה וגמל)",
+ "budget": [
+  60,
+  30
+ ],
+ "exclude": "קופות-גמל|קופת-גמל|קרנות-הפנסיה|קרן-הפנסיה|השתלמות|לכל-ילד|hodshi|\\d{9}_[gp]\\d+"
 }

@@ -65,7 +65,8 @@ def load_seeds() -> dict[str, dict]:
         out[cfg["legal_id"]] = {"home": cfg.get("home") or "", "extra": [x["url"] for x in pages],
                                 "products": {x["url"]: x.get("product") for x in pages}, "browser": cfg.get("browser", "headless"),
                                 "product_list": cfg.get("products", []), "search": cfg.get("search", True),
-                                "via": cfg.get("via", "cloud"), "max_pages": cfg.get("max_pages", 40)}
+                                "via": cfg.get("via", "cloud"), "max_pages": cfg.get("max_pages", 40),
+                                "exclude": cfg.get("exclude"), "follow": cfg.get("follow"), "budget": cfg.get("budget")}
     return out
 
 
@@ -119,10 +120,10 @@ def download(s, url):
     return r, 200
 
 
-NOISE = re.compile(r"esg|אחראי|תגמול|פרטיות|privacy|תקנון|מבצע|גילוי[-_ ]נאות|דוח(ות)?[-_ ]כספי|מצגת|presentation|"
+NOISE = re.compile(r"esg|אחראי|תגמול(?!ים)|tagmul(?!im)|פרטיות|privacy|תקנון|מבצע|גילוי[-_ ]נאות|דוח(ות)?[-_ ]כספי|מצגת|presentation|"
                    r"investor|equal|שכר[-_ ]שווה|פוליסה|annuity|premi|מנתחים|אמות[-_ ]מידה|ממשל", re.I)
 POLICY = re.compile(r"מדיניות[-_ ]*(ה)?השקעה|מדיניות[-_ ]*(ה)?השקעות|מדיניות[-_ ]*מוצהרת|הצהרת[-_ ]*(מדיניות|השקעות)|"
-                    r"הצהרה[-_ ]*על[-_ ]*מדיניות|מדיניות[-_ ]*צפויה|investment[-_ ]*polic|expected[-_ ]*investment|statement[-_ ]*investment", re.I)
+                    r"הצהרה[-_ ]*על[-_ ]*מדיניות|מדיניות[-_ ]*צפויה|investment[-_ ]*polic|expected[-_ ]*investment|statement[-_ ]*investment|medin(i)?ut|inv[-_ ]*polic", re.I)
 
 
 SEARCH_EXCLUDE = re.compile(r"bizportal|themarker|globes|calcalist|ynet|walla|maariv|funder|mygemel|gemelnet|gemel-net|mypension|"
@@ -336,7 +337,10 @@ def main():
         discovered = sitemap_policy_pages(s, seed["home"])
         print(f"[{legal_id}] sitemap policy pages: {len(discovered)}", *discovered[:10], sep="\n  ", flush=True)
         extra += [u for u in discovered if u not in extra]
-        pages = snapshot_company(s, pw, seed["home"], extra, products, max_pages=max(seed["max_pages"], len(extra) + 10))
+        if seed["budget"]:  # [שניות אינטראקציה, שניות לחיצות הורדה] לכל עמוד - אתרים שהקישורים בהם ישירים (כלל, וורדפרס)
+            os.environ["POLICY_PAGE_BUDGET"], os.environ["POLICY_DL_BUDGET"] = (str(x) for x in seed["budget"])
+        pages = snapshot_company(s, pw, seed["home"], extra, products, max_pages=max(seed["max_pages"], len(extra) + 10),
+                                 follow=seed["follow"])
         # תמונת מצב + שינויים מול הריצה הקודמת (פריט חדש/הוסר/טקסט השתנה) - זה מנגנון זיהוי העדכונים היומי
         snap_path = OUT / "site_snapshot" / f"{legal_id}.json"
         snap_path.parent.mkdir(parents=True, exist_ok=True)
@@ -351,6 +355,12 @@ def main():
                                         ensure_ascii=False, indent=1), "utf-8")
         all_changes += changes
         docs = select_docs(pages, set(extra))
+        if seed["exclude"]:  # מסמכים של חברה אחרת באותו אתר (מנורה: תיקי ביטוח משתתפים מקושרים מעמודי הפנסיה)
+            ex = re.compile(seed["exclude"])
+            docs = {k: d for k, d in docs.items() if not ex.search(unquote(k) + " " + unquote(d["page"]))}
+            for k in [k for k, e in index.items() if e.get("legal_id") == legal_id
+                      and ex.search(k + " " + unquote(e.get("source_page") or ""))]:
+                del index[k]
         errs = [f"{u}: {p['status']}" for u, p in pages.items() if p["status"] != 200][:5]
         got = 0
         for key, d in docs.items():

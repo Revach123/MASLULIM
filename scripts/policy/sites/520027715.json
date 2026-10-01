@@ -5,15 +5,11 @@
  "pages": [
   {
    "product": "גמל",
-   "url": "https://www.menoramivt.co.il/wps/portal/about-menora/menora-mivtachim-engineers/omega-engineers/"
+   "url": "https://www.menoramivt.co.il/links/keren-hishtalmut/omega-fund"
   },
   {
    "product": "גמל",
    "url": "https://www.menoramivt.co.il/funds/about-menora/engineers/omega-fund/omega-9802"
-  },
-  {
-   "product": "גמל",
-   "url": "https://www.menoramivt.co.il/funds/about-menora/engineers/procedures-e/engineer-code"
   }
  ],
  "browser": "headless",
@@ -21,8 +17,10 @@
   "גמל"
  ],
  "search": false,
- "rev": 10,
+ "rev": 13,
  "home_source": "web_search",
- "max_pages": 20,
- "note": "עמוד participating-portfolio-info/investment-policy = מסלולי מנורה *ביטוח* (520042540) - לא לחברה זו. אומגה (מהנדסים)"
+ "max_pages": 70,
+ "note": "מנורה: קובץ מדיניות לכל מסלול בעמוד המסלול (/funds/...), נחשף רק ברינדור. עמודי links/ = רשימות המסלולים; follow נכנס לכל מסלול בדפדפן. exclude: תיק ביטוח משתתף של מנורה ביטוח",
+ "exclude": "about-insurance|participating-portfolio|מנורה-ביטוח|משתתף",
+ "follow": "/funds/about-menora/engineers/omega-fund/"
 }

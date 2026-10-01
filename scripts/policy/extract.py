@@ -554,6 +554,9 @@ def main():
                                      OUT / "unparsed_layouts.json")
     _load = lambda p: json.loads(p.read_text("utf-8")) if keep and p.exists() else []
     long_rows, changes, unparsed = _load(long_path), _load(chg_path), _load(unp_path)
+    # מסמך שהוצא מהאינדקס (exclude / שיוך שגוי) - גם השורות שלו יוצאות
+    long_rows, changes, unparsed = ([r for r in x if r["url"] in index] for x in (long_rows, changes, unparsed))
+    rows = {k: r for k, r in rows.items() if r["url"] in index}
     for url, ent in index.items():
         if not a.all and ent.get("parsed_sha") == ent["sha256"] and ent.get("parser_version") == PARSER_VERSION:
             continue

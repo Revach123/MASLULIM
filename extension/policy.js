@@ -12,7 +12,7 @@ const sleep = (ms) => new Promise((r) => setTimeout(r, ms));
 
 const DOC_RX = /\.(xlsx|xls|pdf|docx)(\?|#|$)/i;
 const POLICY_RX = /מדיניות|הצהר|policy|mediniut|hatzarat|expected|investment/i;
-const NOISE_RX = /esg|אחראי|תגמול|פרטיות|privacy|תקנון|מבצע|גילוי[-_ ]נאות|מצגת|presentation|נוהל|העברת זכויות|הצבעות|דוח[ -]כספי|רבעון/i;
+const NOISE_RX = /esg|אחראי|תגמול(?!ים)|tagmul(?!im)|פרטיות|privacy|תקנון|מבצע|גילוי[-_ ]נאות|מצגת|presentation|נוהל|העברת זכויות|הצבעות|דוח[ -]כספי|רבעון/i;
 
 // Chrome דוחה זמנית עריכת טאבים ("Tabs cannot be edited right now (user may be dragging a tab)") - מנסים שוב.
 async function tabsRetry(fn, tries = 20) {
@@ -115,6 +115,16 @@ async function captureDownloads(tabId, ms = 8000) {
   return { clicked, urls };
 }
 
+// chrome.downloads.onCreated גלובלי לדפדפן (אין tabId בהורדה) - כשכמה אתרים רצים במקביל, הורדה שאתר אחד
+// הפעיל הייתה נתפסת גם ע"י המאזין של אתר אחר (ומשויכת לחברה הלא נכונה). לכן שלב לחיצות ההורדה רץ אתר-אחד-בכל-פעם;
+// טעינת העמודים, איסוף הקישורים וההורדות הישירות נשארים מקביליים.
+let downloadLock = Promise.resolve();
+function withDownloadLock(fn) {
+  const run = downloadLock.then(fn, fn);
+  downloadLock = run.catch(() => {});
+  return run;
+}
+
 async function sha256Hex(base64) {
   const bin = atob(base64);
   const bytes = new Uint8Array(bin.length);
@@ -152,13 +162,16 @@ async function runSite(site, cfg, seen, onProgress) {
       const [res] = await chrome.scripting.executeScript({ target: { tabId: tab.id }, func: pageCollectLinks,
                                                           args: [(site.clicks || {})[pageUrl] || site.click || []] });
       const links = (res && res.result) || [];
-      const cap = await captureDownloads(tab.id);
+      const cap = await withDownloadLock(() => captureDownloads(tab.id));
       links.push(...cap.urls.map((u) => ({ ...u, ctx: "(download)" })));
       const docs = links.filter((l) => (DOC_RX.test(l.href) || l.ctx === "(download)" || DOC_RX.test(l.text)) && !NOISE_RX.test(l.text + " " + l.href)
         && (POLICY_RX.test(decodeURIComponent(l.href) + " " + l.text + " " + l.ctx)
             // any_sheet (מור: 7_17_0_2026_9.xlsx): בעמוד שהוגדר ידנית גם גיליונות בלי מילות מדיניות בשם - לא PDF כלליים
             || (site.any_sheet && (site.pages || []).some((p) => p.url === pageUrl) && /\.(xlsx|xls)(\?|#|$)/i.test(l.href))));
-      const uniq = [...new Map(docs.map((d) => [d.href, d])).values()];
+      // exclude: מסמכים של חברה אחרת באותו אתר (קרנות: מורים וגננות / מורים תיכוניים)
+      const ex = site.exclude ? new RegExp(site.exclude) : null;
+      const uniq = [...new Map(docs.filter((d) => !ex || !ex.test(decodeURIComponent(d.href) + " " + d.text))
+        .map((d) => [d.href, d])).values()];
       diag.push(`${site.name.slice(0, 18)}: links=${links.length} files=${links.filter((l) => DOC_RX.test(l.href)).length} clicked=${cap.clicked} captured=${cap.urls.length} selected=${uniq.length}`);
       if (!uniq.length) {  // אבחון: אילו קבצים נמצאו ולמה לא נבחרו
         links.filter((l) => DOC_RX.test(l.href)).slice(0, 6).forEach((l) =>

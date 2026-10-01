@@ -1,14 +1,19 @@
 {
  "legal_id": "570002618",
  "name": "תגמולים של עובדים בעירית ת\"א-יפו א.ש. בע\"מ",
- "home": "https://tagmulimta.co.il",
- "pages": [],
+ "home": "https://tag.tagmulimta.co.il",
+ "pages": [
+  {
+   "product": "גמל",
+   "url": "https://tag.tagmulimta.co.il/%D7%AA%D7%A9%D7%95%D7%90%D7%95%D7%AA-%D7%95%D7%93%D7%9E%D7%99-%D7%A0%D7%99%D7%94%D7%95%D7%9C/%D7%9E%D7%93%D7%99%D7%A0%D7%99%D7%95%D7%AA-%D7%94%D7%A9%D7%A7%D7%A2%D7%94/"
+  }
+ ],
  "browser": "headless",
  "products": [
   "גמל"
  ],
  "search": false,
- "rev": 7,
+ "rev": 9,
  "home_source": "web_search",
- "max_pages": 20
+ "max_pages": 30
 }

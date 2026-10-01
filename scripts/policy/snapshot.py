@@ -8,7 +8,7 @@
 
 פלט: policy/site_snapshot/<LegalId>.json, site_changes.json, site_changes_log.csv, site_report.csv
 """
-import argparse, csv, hashlib, json, os, re
+import argparse, csv, hashlib, json, os, re, time
 from collections import deque
 from datetime import datetime, timezone
 from pathlib import Path
@@ -136,16 +136,29 @@ def fetch_browser(pw, url):
                         "button:has-text('הצג עוד')", "button:has-text('עוד')", "[class*=accordion] [class*=header]"):
                 for el in pg.query_selector_all(sel)[:80]:
                     try:
+                        if not el.is_visible():  # תפריטים מוסתרים: כל לחיצה הייתה מחכה 600ms לשווא (הכשרה: מאות)
+                            continue
                         el.click(timeout=600); pg.wait_for_timeout(120)
                     except Exception:
                         pass
             collect()
 
         expand()
+        t_int = time.monotonic() + float(os.environ.get("POLICY_PAGE_BUDGET", "240"))
         # לשוניות/כפתורי מוצר (הראל: גמל/השתלמות/פנסיה...): לוחצים על כל אחד, פותחים אקורדיונים, אוספים
         tabs = pg.query_selector_all('[role="tab"], button, [role="button"], li[tabindex], [class*=tab]:not(a)')
+        # לשוניות/צ'יפים של מדיניות קודם (הכשרה: צ'יפ "מדיניות השקעה משתתפות" אחרי ~150 כפתורי תפריט)
+        try:
+            ttxt = pg.eval_on_selector_all('[role="tab"], button, [role="button"], li[tabindex], [class*=tab]:not(a)',
+                                           "els => els.map(e => (e.innerText || '').trim().slice(0, 60))")
+            if len(ttxt) == len(tabs):
+                tabs = [el for _, el in sorted(zip(ttxt, tabs), key=lambda p: not re.search(r"מדיניות|הצהר", p[0]))]
+        except Exception:
+            pass
         clicked = set()
         for el in tabs[:150]:
+            if time.monotonic() > t_int:  # תקציב זמן לעמוד (כלל: 3 רשימות x עשרות אפשרויות = 13+ דקות)
+                break
             try:
                 t = (el.inner_text() or "").strip()
                 if not (2 <= len(t) <= 40) or t in clicked or not el.is_visible():
@@ -162,11 +175,15 @@ def fetch_browser(pw, url):
                 pass
         # רשימות נפתחות ("מה תרצו למצוא?", בחירת שנה/מוצר): כל אפשרות -> בחירה, פתיחה, איסוף
         for sel_el in pg.query_selector_all("select")[:6]:
+            if time.monotonic() > t_int:  # תקציב זמן לעמוד (כלל: 3 רשימות x עשרות אפשרויות = 13+ דקות)
+                break
             try:
                 opts = sel_el.eval_on_selector_all("option", "os => os.map(o => o.value)")
             except Exception:
                 continue
             for v in opts[:40]:
+                if time.monotonic() > t_int:  # תקציב זמן לעמוד (כלל: 3 רשימות x עשרות אפשרויות = 13+ דקות)
+                    break
                 try:
                     sel_el.select_option(v); pg.wait_for_timeout(700)
                     if pg.url.split("#")[0] != url.split("#")[0]:
@@ -175,6 +192,8 @@ def fetch_browser(pw, url):
                 except Exception:
                     pass
         for el in pg.query_selector_all('[role="option"], [role="menuitem"], [class*=dropdown] li, [class*=select] li')[:60]:
+            if time.monotonic() > t_int:  # תקציב זמן לעמוד (כלל: 3 רשימות x עשרות אפשרויות = 13+ דקות)
+                break
             try:
                 t = (el.inner_text() or "").strip()
                 if 2 <= len(t) <= 60 and el.is_visible():
@@ -199,6 +218,8 @@ def fetch_browser(pw, url):
         want = [t for t in dict.fromkeys(ptexts)
                 if t not in clicked and re.search(r"מדיניות|הצהר|השקע|policy|^(שנת\s*)?20[12]\d$", t) and not re.search(r"פרטיות|תגמול|נגישות|הצבע", t)]
         for t in want[:25]:
+            if time.monotonic() > t_int:  # תקציב זמן לעמוד (כלל: 3 רשימות x עשרות אפשרויות = 13+ דקות)
+                break
             try:
                 pg.get_by_text(t, exact=True).first.click(timeout=1500); pg.wait_for_timeout(1200)
                 if pg.url.split("#")[0] != url.split("#")[0]:
@@ -212,6 +233,7 @@ def fetch_browser(pw, url):
         pg.wait_for_timeout(1000)
         collect()
         # כפתורי "הורדה" שלא מצביעים לקובץ (postback של ASP.NET / JS): לוחצים ולוכדים את ההורדה עצמה
+        t_dl = time.monotonic() + float(os.environ.get("POLICY_DL_BUDGET", "400"))
         dl_dir = Path(os.environ.get("RUNNER_TEMP") or "/tmp") / "policy_dl"
         dl_dir.mkdir(parents=True, exist_ok=True)
         els = pg.query_selector_all("a, button, [role=button], input[type=submit], input[type=button]")
@@ -229,6 +251,8 @@ def fetch_browser(pw, url):
             except Exception:
                 pass
         for el, t in cands[:80]:
+            if time.monotonic() > t_dl:  # תקציב זמן לעמוד (כלל: 3 רשימות x עשרות אפשרויות = 13+ דקות)
+                break
             try:
                 ctx_text = el.evaluate("e => (e.closest('tr,li,.row,[class*=item],[class*=card]') || e.parentElement || e).innerText || ''")
                 ctx_text = re.sub(r"\s+", " ", f"{ctx_text} {t}").strip()[:300]
@@ -296,8 +320,10 @@ def _prio(text: str, href: str) -> int:
     return 0 if POLICY.search(blob) else 1 if PRODUCT_RX.search(blob) else 2
 
 
-def snapshot_company(s, pw, home, extra, products=None, max_pages=15, depth_max=2):
+def snapshot_company(s, pw, home, extra, products=None, max_pages=15, depth_max=2, follow=None):
+    """follow: regex לקישורים שתמיד נכנסים אליהם ותמיד ברינדור דפדפן (מנורה: עמוד לכל מסלול, הקובץ נחשף רק ברינדור)"""
     import heapq, itertools
+    frx = re.compile(follow) if follow else None
     products = products or {}
     dom = base_domain(home)
     pages, seen, iframes = {}, set(), set()
@@ -314,8 +340,9 @@ def snapshot_company(s, pw, home, extra, products=None, max_pages=15, depth_max=
         items = items_from_anchors(anchors or [], url, dom)
         method = "requests"
         policy_like = sum(score(i["text"]) >= 1 or i["doc"] for i in items.values())
-        if pw and (anchors is None or url in iframes or (d == 0 and url in extra) or policy_like < MIN_LINKS_STATIC) and (
-                url in extra or url in iframes or score(url) > 0 or d == 0):
+        forced = bool(frx and frx.search(unquote(url)))
+        if pw and (forced or ((anchors is None or url in iframes or (d == 0 and url in extra) or policy_like < MIN_LINKS_STATIC) and (
+                url in extra or url in iframes or score(url) > 0 or d == 0))):
             b_anchors, b_status, b_text = fetch_browser(pw, url)
             if b_anchors is not None:
                 items.update(items_from_anchors(b_anchors, url, dom)); text, method, status = b_text, "browser", b_status
@@ -331,8 +358,10 @@ def snapshot_company(s, pw, home, extra, products=None, max_pages=15, depth_max=
                     continue
                 if i.get("iframe"):
                     iframes.add(i["href"])
-                if i.get("iframe") or (i["internal"] and (score(i["text"] + unquote(i["href"])) > 0
-                                                          or PRODUCT_RX.search(i["text"] + unquote(i["href"])))):
+                if frx and frx.search(unquote(i["href"])):
+                    heapq.heappush(q, (0, next(tick), i["href"], d + 1))
+                elif i.get("iframe") or (i["internal"] and (score(i["text"] + unquote(i["href"])) > 0
+                                                            or PRODUCT_RX.search(i["text"] + unquote(i["href"])))):
                     heapq.heappush(q, (_prio(i["text"], i["href"]), next(tick), i["href"], d + 1))
     return pages
 
