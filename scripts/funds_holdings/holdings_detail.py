@@ -69,6 +69,9 @@ CASH_CATEGORY, DEPOSIT_CATEGORY = "מזומנים ושווי מזומנים", "�
 GOV_BOND_CATEGORIES = {"איגרות חוב ממשלתיות", "לא סחיר איגרות חוב ממשלתיות", "לא סחיר איגרות חוב מיועדות"}
 CORP_BOND_CATEGORIES = {"איגרות חוב", "לא סחיר איגרות חוב", "ניירות ערך מסחריים", "לא סחיר ניירות ערך מסחריים"}
 FX_UNDERLYING = 'מט"ח'
+# קרן כספית בחו"ל בלי סיווג/הרכב (State Street USD LIQ LVNAV, BlackRock ICS US Treasury, JP Morgan
+# Liquidity) - אג"ח קצר, כמו כספית בארץ
+_MONEY_FUND_NAME = re.compile(r"LIQUIDITY|\bLIQ\b|LVNAV|CNAV|MONEY\W?MARKET|\bMMF\b|\bICS\b|כספית", re.IGNORECASE)
 _GOV_NAME = re.compile(r"TREASUR|\bGOVT?\b|GOVERNMENT|SOVEREIGN|\bT-?BILL|ממשל|מדינה|מק\"?מ", re.IGNORECASE)
 
 
@@ -103,6 +106,8 @@ def _classify_row(cat: str, row: dict, name, fund_ref: dict | None, fund_frac: d
         frac = fund_frac or {}
         if (frac.get("bond") or 0) >= 0.5 and (frac.get("equity") or 0) < 0.5:
             return ("bond_gov_" if _GOV_NAME.search(str(name or "")) else "bond_corp_") + "abroad"
+        if not frac.get("equity") and _MONEY_FUND_NAME.search(str(name or "")):
+            return ("bond_gov_" if _GOV_NAME.search(str(name or "")) else "bond_corp_") + _bond_loc(row)
         return None
     for col in ("נכס בסיס", "סוג הנכס"):
         if row.get(col) == FX_UNDERLYING:
