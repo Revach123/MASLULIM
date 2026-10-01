@@ -60,9 +60,69 @@ MIN_RELIABLE_TOTAL = 0.001
 # בקובץ קרוב ל-100% (לא בדיוק, ר' 99.99999...% בפועל - שגיאות עיגול).
 FILE_TOTAL_TOLERANCE = 0.05
 
+# "אפיק השקעה מובטח תשואה" (מנגנון השלמת המדינה לתשואת היעד בפנסיה, שהחליף את
+# האג"ח המיועדות) - יש חברות שמדווחות את ה-% של שכבות האפיק ממכנה אחר מזה של
+# שאר שורות המסלול. נמצא בפועל (514956465/מור פנסיה): שכבות האפיק מסתכמות ל-52%-
+# 99.7% מהמסלול, אבל שווי/% שלהן נותן מכנה קטן פי 3-1000 מזה של שאר השורות
+# (אג"ח, מזומנים, קרנות - כולן עקביות ביניהן). המשקל האמיתי (שווי האפיק חלקי
+# אותו מכנה) יוצא 27%-29%, כמו בשאר החברות, והנתון הרשמי מתיישב איתו: מסלול
+# 13915 - 4.5% -> 70.1% מול 69.7% רשמי. אצל החברות האחרות (כלל, מגדל, הפניקס,
+# אינפיניטי...) היחס בין המכנים 0.91-1.0, ולכן הן לא מושפעות.
+GUARANTEED_CHANNEL_CATEGORY = "אפיק השקעה מובטח תשואה"
+REBASE_RATIO_LOW, REBASE_RATIO_HIGH = 0.8, 1.25
+
+
+def _value_k(row: dict) -> float | None:
+    """שווי השורה באלפי ש"ח (שווי הוגן / שווי הנכסים באפיק), אם יש."""
+    for col, v in row.items():
+        if "שווי" in col and "אלפי" in col and isinstance(v, (int, float)):
+            return float(v)
+    return None
+
+
+def rebase_guaranteed_channel(source: list[dict]) -> dict[str, float]:
+    """מחשב מחדש את ה-% של שורות האפיק המובטח לפי המכנה של שאר שורות המסלול,
+    כשהמכנה המשתמע (שווי/%) של האפיק לא עקבי איתו. מעדכן במקום, מחזיר
+    {מפתח: המשקל החדש של האפיק לפני נרמול ל-100%}. רץ לפני הנרמול, שמחזיר את
+    סך המסלול ל-100%."""
+    ch_rows: dict[str, list[tuple[dict, float, float]]] = defaultdict(list)
+    ref_v: dict[str, float] = defaultdict(float)
+    ref_p: dict[str, float] = defaultdict(float)
+    for rec in source:
+        if rec["מידע"] != "מידע":
+            continue
+        is_channel = rec.get("Category") == GUARANTEED_CHANNEL_CATEGORY
+        for row in rec["Clean"]:
+            key = row.get("מפתח")
+            pct = to_ratio(row.get(PCT_COL))
+            value = _value_k(row)
+            if key is None or pct is None or value is None:
+                continue
+            if is_channel:
+                ch_rows[key].append((row, pct, value))
+            elif pct:
+                ref_v[key] += value
+                ref_p[key] += pct
+
+    rebased: dict[str, float] = {}
+    for key, rows in ch_rows.items():
+        ch_p = sum(p for _, p, _ in rows)
+        ch_v = sum(v for _, _, v in rows)
+        if ch_p <= 0 or ch_v <= 0 or ref_p[key] <= 0 or ref_v[key] <= 0:
+            continue
+        ref_base = ref_v[key] / ref_p[key]
+        ratio = (ch_v / ch_p) / ref_base
+        if REBASE_RATIO_LOW <= ratio <= REBASE_RATIO_HIGH:
+            continue
+        for row, _, value in rows:
+            row[PCT_COL] = value / ref_base
+        rebased[key] = ch_v / ref_base
+    return rebased
+
 
 def normalize_track_pct(source: list[dict]) -> dict[str, float]:
     """מנרמל את source במקום, מחזיר {מפתח: מכפיל} למסלולים שתוקנו (לשקיפות)."""
+    rebase_guaranteed_channel(source)
     totals: dict[str, float] = defaultdict(float)
     rows_by_key: dict[str, list[dict]] = defaultdict(list)
     company_type_by_key: dict[str, str] = {}
