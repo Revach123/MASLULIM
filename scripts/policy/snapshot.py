@@ -233,6 +233,12 @@ def fetch_browser(pw, url):
                 ctx_text = el.evaluate("e => (e.closest('tr,li,.row,[class*=item],[class*=card]') || e.parentElement || e).innerText || ''")
                 ctx_text = re.sub(r"\s+", " ", f"{ctx_text} {t}").strip()[:300]
                 n_pages = len(ctx.pages)
+                if not el.is_visible():  # מנורה: האייקון בתוך אקורדיון מסלול סגור - פותחים את כל האבות הסגורים
+                    el.evaluate("""e => { for (let p = e.parentElement; p; p = p.parentElement) {
+                        const s = p.querySelector(':scope > [aria-expanded="false"]'); if (s) s.click(); } }""")
+                    pg.wait_for_timeout(700)
+                    if not el.is_visible():
+                        continue
                 try:
                     with pg.expect_download(timeout=8000) as info:
                         el.scroll_into_view_if_needed(timeout=2000); el.click(timeout=3000)
@@ -255,6 +261,11 @@ def fetch_browser(pw, url):
             except Exception:
                 pass
         anchors += [x for x in net if (x["href"], x["text"]) not in seen]
+        try:  # נתיבי קבצים בתוך ה-HTML/סקריפטים (Next.js __NEXT_DATA__ ודומיו)
+            for m in FILE_RX.findall(pg.content())[:300]:
+                anchors.append({"href": urljoin(url, m.replace("\\/", "/")), "text": "(html)"})
+        except Exception:
+            pass
         text = pg.inner_text("body")
         return anchors, (200 if status < 400 else status), text
     except Exception as e:
