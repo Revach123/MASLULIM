@@ -16,12 +16,92 @@
    "url": "https://www.menoramivt.co.il/links/pension-and-gemel/gemel-hishtalmut-list/menora-gemel"
   },
   {
+   "product": "פנסיה",
+   "url": "https://www.menoramivt.co.il/funds/pension-and-gemel/pension-plans/stock-track"
+  },
+  {
    "product": "גמל",
-   "url": "https://www.menoramivt.co.il/links/pension-and-gemel/gemel-hishtalmut-list/top-savings"
+   "url": "https://www.menoramivt.co.il/funds/pension-and-gemel/gemel-hishtalmut-list/menora-gemel/1154"
+  },
+  {
+   "product": "גמל",
+   "url": "https://www.menoramivt.co.il/funds/pension-and-gemel/gemel-hishtalmut-list/menora-gemel/119"
+  },
+  {
+   "product": "גמל",
+   "url": "https://www.menoramivt.co.il/funds/pension-and-gemel/gemel-hishtalmut-list/menora-gemel/1294"
+  },
+  {
+   "product": "גמל",
+   "url": "https://www.menoramivt.co.il/funds/pension-and-gemel/gemel-hishtalmut-list/menora-gemel/15421"
+  },
+  {
+   "product": "גמל",
+   "url": "https://www.menoramivt.co.il/funds/pension-and-gemel/gemel-hishtalmut-list/menora-gemel/260"
+  },
+  {
+   "product": "גמל",
+   "url": "https://www.menoramivt.co.il/funds/pension-and-gemel/gemel-hishtalmut-list/menora-gemel/530"
+  },
+  {
+   "product": "גמל",
+   "url": "https://www.menoramivt.co.il/funds/pension-and-gemel/gemel-hishtalmut-list/menora-gemel/531"
+  },
+  {
+   "product": "גמל",
+   "url": "https://www.menoramivt.co.il/funds/pension-and-gemel/gemel-hishtalmut-list/menora-gemel/532"
+  },
+  {
+   "product": "גמל",
+   "url": "https://www.menoramivt.co.il/funds/pension-and-gemel/gemel-hishtalmut-list/menora-gemel/9789"
+  },
+  {
+   "product": "גמל",
+   "url": "https://www.menoramivt.co.il/funds/pension-and-gemel/gemel-hishtalmut-list/menora-gemel/9790-fund"
+  },
+  {
+   "product": "גמל",
+   "url": "https://www.menoramivt.co.il/funds/pension-and-gemel/gemel-hishtalmut-list/menora-gemel/9791-fund"
+  },
+  {
+   "product": "גמל",
+   "url": "https://www.menoramivt.co.il/funds/pension-and-gemel/gemel-hishtalmut-list/menora-gemel-15725/tradable-equity-track"
+  },
+  {
+   "product": "גמל",
+   "url": "https://www.menoramivt.co.il/links/pension-and-gemel/gemel-hishtalmut-list/list-top-savings"
   },
   {
    "product": "פנסיה",
-   "url": "https://www.menoramivt.co.il/funds/pension-and-gemel/pension-plans/stock-track"
+   "url": "https://www.menoramivt.co.il/pension/menora-pension-mashlima"
+  },
+  {
+   "product": "פנסיה",
+   "url": "https://www.menoramivt.co.il/pension/pension-index-fund"
+  },
+  {
+   "product": "גמל",
+   "url": "https://www.menoramivt.co.il/funds/gemel-14271"
+  },
+  {
+   "product": "גמל",
+   "url": "https://www.menoramivt.co.il/funds/gemel-14272"
+  },
+  {
+   "product": "גמל",
+   "url": "https://www.menoramivt.co.il/funds/gemel-14679"
+  },
+  {
+   "product": "פנסיה",
+   "url": "https://www.menoramivt.co.il/funds/pension-14277"
+  },
+  {
+   "product": "פנסיה",
+   "url": "https://www.menoramivt.co.il/funds/pension-14278"
+  },
+  {
+   "product": "פנסיה",
+   "url": "https://www.menoramivt.co.il/funds/Insurers-pension-SP500"
   }
  ],
  "browser": "headed",
@@ -30,9 +110,14 @@
   "פנסיה"
  ],
  "search": false,
- "rev": 14,
- "note": "מנורה: קובץ מדיניות לכל מסלול בעמוד המסלול (/funds/...), נחשף רק ברינדור. עמודי links/ = רשימות המסלולים; follow נכנס לכל מסלול בדפדפן. exclude: תיק ביטוח משתתף של מנורה ביטוח",
- "exclude": "about-insurance|participating-portfolio|מנורה-ביטוח|משתתף|reports-publishs|העברת-זכויות|קשורים|mashlima|mash-year|_yield|_p\\d|תרומת-אפיקי|הוצאות-ישירות|pen-amit|דוח-חודשי",
- "follow": "/funds/pension-and-gemel/(pension-plans|gemel-hishtalmut-list/(menroa-keren-hishtalmut|menora-gemel|top-savings))/",
- "max_pages": 70
+ "rev": 15,
+ "note": "מנורה: קובץ מדיניות לכל מסלול בעמוד המסלול (/funds/...), נחשף רק ברינדור. עמודי links/ = רשימות המסלולים; follow נכנס לכל מסלול בדפדפן. exclude: תיק ביטוח משתתף של מנורה ביטוח. 2026-10: חסרו עמודי מסלול (תקציב זמן 22 דק' נגמר אחרי 38 עמודים) -> עמודים ישירים, budget קצר, crawl_budget 45 דק'; משלימה הוחזרה (שייכת לחברה)",
+ "exclude": "about-insurance|participating-portfolio|מנורה-ביטוח|משתתף|reports-publishs|העברת-זכויות|קשורים|mash-year|_yield|_p\\d|תרומת-אפיקי|הוצאות-ישירות|pen-amit|דוח-חודשי",
+ "follow": "/funds/(pension-and-gemel/(pension-plans|gemel-hishtalmut-list/(menroa-keren-hishtalmut|menora-gemel(-\\d+)?|top-savings|list-top-savings))/|(gemel|pension|gemel-mor|gemel-kayamut)-\\d+|Insurers-)",
+ "max_pages": 110,
+ "budget": [
+  30,
+  45
+ ],
+ "crawl_budget": 2700
 }

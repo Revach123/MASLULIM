@@ -25,6 +25,54 @@
   "follow_rx": null
  },
  {
+  "legal_id": "513173393",
+  "name": "אלטשולר שחם גמל ופנסיה בע\"מ",
+  "home": "https://www.as-invest.co.il",
+  "pages": [
+   {
+    "product": "גמל",
+    "url": "https://www.as-invest.co.il/interstedin/gemel/"
+   },
+   {
+    "product": "גמל",
+    "url": "https://www.as-invest.co.il/interstedin/קרנות-השתלמות/"
+   },
+   {
+    "product": "גמל",
+    "url": "https://www.as-invest.co.il/interstedin/קרנות-השתלמות/קרנות-ההשתלמות-שלנו/"
+   },
+   {
+    "product": "גמל",
+    "url": "https://www.as-invest.co.il/interstedin/חיסכון-והשקעה/קופת-גמל-להשקעה-המסלולים-שלנו/"
+   },
+   {
+    "product": "גמל",
+    "url": "https://www.as-invest.co.il/interstedin/gemel/קופות-מרכזיות-לפיצויים/"
+   },
+   {
+    "product": "פנסיה",
+    "url": "https://www.as-invest.co.il/interstedin/pension/comprehensive-fund/"
+   },
+   {
+    "product": "פנסיה",
+    "url": "https://www.as-invest.co.il/interstedin/pension/common-pension-fund/"
+   }
+  ],
+  "products": [
+   "גמל",
+   "פנסיה"
+  ],
+  "click": null,
+  "clicks": null,
+  "any_sheet": null,
+  "exclude": "לשנת 20(0\\d|1\\d|2[0-4])|_20(0\\d|1\\d|2[0-4])\\d{4}|20(1\\d|2[0-4])\\.xlsx",
+  "settle_ms": null,
+  "capture_ms": null,
+  "download_rx": null,
+  "follow_max": 95,
+  "follow_rx": "אלטשולר-שחם-|%D7%90%D7%9C%D7%98%D7%A9%D7%95%D7%9C%D7%A8-%D7%A9%D7%97%D7%9D-|חיסכון-לילד"
+ },
+ {
   "legal_id": "513910703",
   "name": "איי. די. איי. חברה לביטוח בע\"מ",
   "home": "https://www.555.co.il",

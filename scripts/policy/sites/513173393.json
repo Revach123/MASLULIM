@@ -8,8 +8,20 @@
    "url": "https://www.as-invest.co.il/interstedin/gemel/"
   },
   {
-   "product": "פנסיה",
-   "url": "https://www.as-invest.co.il/interstedin/pension/"
+   "product": "גמל",
+   "url": "https://www.as-invest.co.il/interstedin/קרנות-השתלמות/"
+  },
+  {
+   "product": "גמל",
+   "url": "https://www.as-invest.co.il/interstedin/קרנות-השתלמות/קרנות-ההשתלמות-שלנו/"
+  },
+  {
+   "product": "גמל",
+   "url": "https://www.as-invest.co.il/interstedin/חיסכון-והשקעה/קופת-גמל-להשקעה-המסלולים-שלנו/"
+  },
+  {
+   "product": "גמל",
+   "url": "https://www.as-invest.co.il/interstedin/gemel/קופות-מרכזיות-לפיצויים/"
   },
   {
    "product": "פנסיה",
@@ -18,18 +30,6 @@
   {
    "product": "פנסיה",
    "url": "https://www.as-invest.co.il/interstedin/pension/common-pension-fund/"
-  },
-  {
-   "product": "גמל",
-   "url": "https://www.as-invest.co.il/interstedin/%D7%A7%D7%A8%D7%A0%D7%95%D7%AA-%D7%94%D7%A9%D7%AA%D7%9C%D7%9E%D7%95%D7%AA/"
-  },
-  {
-   "product": "גמל",
-   "url": "https://www.as-invest.co.il/interstedin/%D7%97%D7%99%D7%A1%D7%9B%D7%95%D7%9F-%D7%95%D7%94%D7%A9%D7%A7%D7%A2%D7%94/"
-  },
-  {
-   "product": "גמל",
-   "url": "https://www.as-invest.co.il/interstedin/%D7%A7%D7%95%D7%A4%D7%95%D7%AA-%D7%92%D7%9E%D7%9C/"
   }
  ],
  "browser": "headless",
@@ -38,7 +38,11 @@
   "פנסיה"
  ],
  "search": false,
- "rev": 7,
+ "rev": 8,
  "max_pages": 150,
- "note": "מדיניות צפויה בעמוד של כל קרן/מסלול (קובץ <קוד מסלול>.xlsx, 'מדיניות השקעות צפויה לשנת YYYY') - עמודי רשימת המוצרים + מעבר לעמודי הקרנות"
+ "note": "מדיניות צפויה בעמוד של כל קרן/מסלול (קובץ <קוד מסלול>.xlsx, 'מדיניות השקעות צפויה לשנת YYYY') - עמודי רשימת המוצרים + מעבר לעמודי הקרנות. 2026-10: האתר חוסם את Actions (timeout בכל העמודים) -> תוסף. השתלמות/חיסכון פלוס/פיצויים/חיסכון לילד לא נסרקו מעולם; follow_rx לעמודי המסלולים; exclude לשנים עד 2024",
+ "via": "extension",
+ "follow_max": 95,
+ "follow_rx": "אלטשולר-שחם-|%D7%90%D7%9C%D7%98%D7%A9%D7%95%D7%9C%D7%A8-%D7%A9%D7%97%D7%9D-|חיסכון-לילד",
+ "exclude": "לשנת 20(0\\d|1\\d|2[0-4])|_20(0\\d|1\\d|2[0-4])\\d{4}|20(1\\d|2[0-4])\\.xlsx"
 }

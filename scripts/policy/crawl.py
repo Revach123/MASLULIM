@@ -67,7 +67,7 @@ def load_seeds() -> dict[str, dict]:
                                 "product_list": cfg.get("products", []), "search": cfg.get("search", True),
                                 "via": cfg.get("via", "cloud"), "max_pages": cfg.get("max_pages", 40),
                                 "exclude": cfg.get("exclude"), "follow": cfg.get("follow"), "budget": cfg.get("budget"),
-                                "click_texts": cfg.get("click_texts")}
+                                "click_texts": cfg.get("click_texts"), "crawl_budget": cfg.get("crawl_budget")}
     return out
 
 
@@ -362,6 +362,8 @@ def main():
         extra += [u for u in discovered if u not in extra]
         if seed["budget"]:  # [שניות אינטראקציה, שניות לחיצות הורדה] לכל עמוד - אתרים שהקישורים בהם ישירים (כלל, וורדפרס)
             os.environ["POLICY_PAGE_BUDGET"], os.environ["POLICY_DL_BUDGET"] = (str(x) for x in seed["budget"])
+        if seed.get("crawl_budget"):  # שניות לכל הסריקה (ברירת מחדל 1320) - אתרים עם עמוד לכל מסלול (מנורה)
+            os.environ["POLICY_CRAWL_BUDGET"] = str(seed["crawl_budget"])
         pages = snapshot_company(s, pw, seed["home"], extra, products, max_pages=max(seed["max_pages"], len(extra) + 10),
                                  follow=seed["follow"], click_texts=seed.get("click_texts"))
         # תמונת מצב + שינויים מול הריצה הקודמת (פריט חדש/הוסר/טקסט השתנה) - זה מנגנון זיהוי העדכונים היומי
