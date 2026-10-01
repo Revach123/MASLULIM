@@ -1,5 +1,6 @@
-"""ממיר out/master.json, out/funds_detail.json, out/bonds_detail.json ו-out/index_exposure.json
-ל-master.sql/funds_detail.sql/bonds_detail.sql/index_exposure.sql עבור wrangler d1 execute.
+"""ממיר out/master.json, out/funds_detail.json, out/bonds_detail.json, out/index_exposure.json
+ו-out/holdings_detail.json ל-master.sql/funds_detail.sql/bonds_detail.sql/index_exposure.sql/
+holdings_detail.sql עבור wrangler d1 execute.
 מקביל ל-build_d1.py/build_d1_tracks.py ב-revach.
 
 DB: maslulim_autopilot (binding AUTOPILOT ב-Pages).
@@ -17,6 +18,8 @@ DB: maslulim_autopilot (binding AUTOPILOT ב-Pages).
 הרצה: python -m funds_holdings.build_d1 --out-dir out
 """
 import argparse
+import base64
+import gzip
 import json
 from pathlib import Path
 
@@ -143,6 +146,29 @@ def build_detail_sql(detail: dict[str, list], out_path: Path, table: str) -> int
     return write_batched(out_path, table, detail_schema(table), col_names, rows)
 
 
+HOLDINGS_SCHEMA = (
+    "CREATE TABLE IF NOT EXISTS holdings_detail (\n"
+    "  מפתח TEXT,\n"
+    "  part INTEGER,\n"
+    "  data TEXT\n"
+    ");\n"
+    "CREATE INDEX IF NOT EXISTS idx_holdings_detail_key ON holdings_detail(מפתח);\n"
+)
+
+
+def build_holdings_sql(holdings: dict[str, dict], out_path: Path) -> int:
+    """פירוט החזקות מלא (holdings_detail.py): עד ~550KB JSON למסלול - נשמר כ-gzip+base64
+    (~26MB לכל המסלולים במקום ~130MB), מפוצל לחלקים של ROW_ITEM_LIMIT לפי part.
+    ה-API ב-revach מחבר את החלקים לפי הסדר ופותח את ה-gzip."""
+    rows = []
+    for key, payload in holdings.items():
+        raw = json.dumps(payload, ensure_ascii=False, separators=(",", ":")).encode("utf-8")
+        b64 = base64.b64encode(gzip.compress(raw, 9)).decode("ascii")
+        for part, i in enumerate(range(0, len(b64), ROW_ITEM_LIMIT)):
+            rows.append((sql_str(key), str(part), sql_str(b64[i:i + ROW_ITEM_LIMIT])))
+    return write_batched(out_path, "holdings_detail", HOLDINGS_SCHEMA, ["מפתח", "part", "data"], rows)
+
+
 def build_index_sql(index_table: list[dict], out_path: Path) -> int:
     """פירוק החשיפה למניות לפי מדד (index_exposure.py) - שורה למסלול, עד ~9KB."""
     rows = [(sql_str(r["key"]), sql_str(r.get("company")),
@@ -174,6 +200,12 @@ def main():
     print(f"[build_d1] bonds_detail: {n3} שורות -> {args.out_dir}/bonds_detail.sql")
     n4 = build_index_sql(index_table, args.out_dir / "index_exposure.sql")
     print(f"[build_d1] index_exposure: {n4} שורות -> {args.out_dir}/index_exposure.sql")
+    holdings_path = args.out_dir / "holdings_detail.json"
+    if holdings_path.exists():
+        with open(holdings_path, encoding="utf-8") as f:
+            holdings = json.load(f)
+        n5 = build_holdings_sql(holdings, args.out_dir / "holdings_detail.sql")
+        print(f"[build_d1] holdings_detail: {n5} שורות -> {args.out_dir}/holdings_detail.sql")
 
 
 if __name__ == "__main__":

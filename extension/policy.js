@@ -115,6 +115,16 @@ async function captureDownloads(tabId, ms = 8000) {
   return { clicked, urls };
 }
 
+// chrome.downloads.onCreated גלובלי לדפדפן (אין tabId בהורדה) - כשכמה אתרים רצים במקביל, הורדה שאתר אחד
+// הפעיל הייתה נתפסת גם ע"י המאזין של אתר אחר (ומשויכת לחברה הלא נכונה). לכן שלב לחיצות ההורדה רץ אתר-אחד-בכל-פעם;
+// טעינת העמודים, איסוף הקישורים וההורדות הישירות נשארים מקביליים.
+let downloadLock = Promise.resolve();
+function withDownloadLock(fn) {
+  const run = downloadLock.then(fn, fn);
+  downloadLock = run.catch(() => {});
+  return run;
+}
+
 async function sha256Hex(base64) {
   const bin = atob(base64);
   const bytes = new Uint8Array(bin.length);
@@ -135,64 +145,108 @@ async function readSites(cfg) {
   return JSON.parse(decodeURIComponent(escape(atob(b64))));
 }
 
-// מריץ על כל האתרים; מחזיר {files, errors}. setStatus - לעדכון החלונית.
+// מסלול אתר בודד (כל העמודים שלו, ברצף - בתוך אתר אחד אין תועלת למקביליות:
+// אותו טאב/session) - מוזז מתוך runPolicy כדי שאפשר יהיה להריץ כמה אתרים
+// שונים במקביל (ר' POLICY_CONCURRENCY). seen משותף בין כל האתרים - בדיוק
+// כמו בגרסה הרצית-לגמרי, כדי לשמר את אותה התנהגות דה-דופליקציה.
+async function runSite(site, cfg, seen, onProgress) {
+  const pages = [...new Set([...(site.pages || []).map((p) => p.url), site.home].filter(Boolean))];
+  const files = [], errors = [], diag = [];
+  for (const pageUrl of pages) {
+    await onProgress(pageUrl);
+    let tab;
+    try {
+      tab = await tabsRetry(() => chrome.tabs.create({ url: pageUrl, active: false }));
+      await waitComplete(tab.id);
+      await sleep(3000);
+      const [res] = await chrome.scripting.executeScript({ target: { tabId: tab.id }, func: pageCollectLinks,
+                                                          args: [(site.clicks || {})[pageUrl] || site.click || []] });
+      const links = (res && res.result) || [];
+      const cap = await withDownloadLock(() => captureDownloads(tab.id));
+      links.push(...cap.urls.map((u) => ({ ...u, ctx: "(download)" })));
+      const docs = links.filter((l) => (DOC_RX.test(l.href) || l.ctx === "(download)" || DOC_RX.test(l.text)) && !NOISE_RX.test(l.text + " " + l.href)
+        && (POLICY_RX.test(decodeURIComponent(l.href) + " " + l.text + " " + l.ctx)
+            // any_sheet (מור: 7_17_0_2026_9.xlsx): בעמוד שהוגדר ידנית גם גיליונות בלי מילות מדיניות בשם - לא PDF כלליים
+            || (site.any_sheet && (site.pages || []).some((p) => p.url === pageUrl) && /\.(xlsx|xls)(\?|#|$)/i.test(l.href))));
+      // exclude: מסמכים של חברה אחרת באותו אתר (קרנות: מורים וגננות / מורים תיכוניים)
+      const ex = site.exclude ? new RegExp(site.exclude) : null;
+      const uniq = [...new Map(docs.filter((d) => !ex || !ex.test(decodeURIComponent(d.href) + " " + d.text))
+        .map((d) => [d.href, d])).values()];
+      diag.push(`${site.name.slice(0, 18)}: links=${links.length} files=${links.filter((l) => DOC_RX.test(l.href)).length} clicked=${cap.clicked} captured=${cap.urls.length} selected=${uniq.length}`);
+      if (!uniq.length) {  // אבחון: אילו קבצים נמצאו ולמה לא נבחרו
+        links.filter((l) => DOC_RX.test(l.href)).slice(0, 6).forEach((l) =>
+          diag.push(`   ? ${decodeURIComponent(l.href.split("/").pop()).slice(0, 60)} | ${(l.text || "").slice(0, 40)} | ${(l.ctx || "").replace(/\s+/g, " ").slice(0, 60)}`));
+      }
+      for (const d of uniq) {
+        const [r2] = await chrome.scripting.executeScript({ target: { tabId: tab.id }, func: pageFetchBase64, args: [d.href] });
+        const got = r2 && r2.result;
+        if (!got || got.__error || !looksLikeDoc(got.base64)) { errors.push(`${d.href} -> ${got && (got.status || got.message)}`); continue; }
+        const sha = await sha256Hex(got.base64);
+        if (seen[d.href] === sha) continue;
+        const name = decodeURIComponent(new URL(d.href).pathname.split("/").pop()).replace(/[^\w.\-֐-׿]/g, "_").slice(0, 90);
+        const base = `policy/inbox/${site.legal_id}/${sha.slice(0, 12)}_${name}`;
+        files.push({ path: base, base64: got.base64 });
+        files.push({ path: base + ".json", base64: utf8b64(JSON.stringify({
+          legal_id: site.legal_id, url: d.href, link_text: d.text || d.ctx, source_page: pageUrl,
+          sha256: sha, fetched_at: new Date().toISOString(), via: "extension" }, null, 1)) });
+        seen[d.href] = sha;
+      }
+    } catch (e) {
+      errors.push(`${pageUrl}: ${e && e.message || e}`);
+    } finally {
+      if (tab) { try { await tabsRetry(() => chrome.tabs.remove(tab.id)); } catch (e) {} }
+    }
+  }
+  return { files, errors, diag };
+}
+
+// כמה אתרים (לא עמודים בתוך אתר - שם אין תועלת, ר' runSite) מותר להריץ
+// במקביל - בכל אתר יש לו טאב/session נפרד משלו, אז מקביליות בין-אתרים
+// לא מתנגשת. "4" נבחר כמספר בטוח שלא יעמיס מדי על הדפדפן (לא "כל האתרים
+// ביחד" ללא הגבלה) - קבוע יחיד כדי שיהיה קל לכוונן.
+const POLICY_CONCURRENCY = 4;
+
+// מריץ על כל האתרים, עד POLICY_CONCURRENCY במקביל (לא אחד-אחרי-השני) -
+// worker pool: כל worker מושך את האתר הבא מתוך תור משותף עד שנגמר.
+// מחזיר {docs, errors, diag}. setStatus - לעדכון החלונית (שורה מצרפת,
+// כי כמה אתרים עשויים לדווח התקדמות בו-זמנית).
 export async function runPolicy(cfg, setStatus) {
   const sites = await readSites(cfg);
   const { policySeen } = await chrome.storage.local.get("policySeen");
   const seen = policySeen || {};
-  const files = [], errors = [], diag = [];
-  for (const site of sites) {
-    const pages = [...new Set([...(site.pages || []).map((p) => p.url), site.home].filter(Boolean))];
-    for (const pageUrl of pages) {
-      await setStatus({ policyProgress: `${site.name}: ${pageUrl}` });
-      let tab;
+  const allFiles = [], allErrors = [], allDiag = [];
+  const progress = {};  // site.name -> שורת סטטוס נוכחית, לתצוגה מצרפת
+
+  async function flushStatus() {
+    const lines = Object.entries(progress).filter(([, v]) => v).map(([name, v]) => `${name}: ${v}`);
+    await setStatus({ policyProgress: lines.join(" | ") || "מתחיל..." });
+  }
+
+  let nextIdx = 0;
+  async function worker() {
+    while (nextIdx < sites.length) {
+      const site = sites[nextIdx++];
       try {
-        tab = await tabsRetry(() => chrome.tabs.create({ url: pageUrl, active: false }));
-        await waitComplete(tab.id);
-        await sleep(3000);
-        const [res] = await chrome.scripting.executeScript({ target: { tabId: tab.id }, func: pageCollectLinks,
-                                                            args: [(site.clicks || {})[pageUrl] || site.click || []] });
-        const links = (res && res.result) || [];
-        const cap = await captureDownloads(tab.id);
-        links.push(...cap.urls.map((u) => ({ ...u, ctx: "(download)" })));
-        const docs = links.filter((l) => (DOC_RX.test(l.href) || l.ctx === "(download)" || DOC_RX.test(l.text)) && !NOISE_RX.test(l.text + " " + l.href)
-          && (POLICY_RX.test(decodeURIComponent(l.href) + " " + l.text + " " + l.ctx)
-              // any_sheet (מור: 7_17_0_2026_9.xlsx): בעמוד שהוגדר ידנית גם גיליונות בלי מילות מדיניות בשם - לא PDF כלליים
-              || (site.any_sheet && (site.pages || []).some((p) => p.url === pageUrl) && /\.(xlsx|xls)(\?|#|$)/i.test(l.href))));
-        // exclude: מסמכים של חברה אחרת באותו אתר (קרנות: מורים וגננות / מורים תיכוניים)
-        const ex = site.exclude ? new RegExp(site.exclude) : null;
-        const uniq = [...new Map(docs.filter((d) => !ex || !ex.test(decodeURIComponent(d.href) + " " + d.text))
-          .map((d) => [d.href, d])).values()];
-        diag.push(`${site.name.slice(0, 18)}: links=${links.length} files=${links.filter((l) => DOC_RX.test(l.href)).length} clicked=${cap.clicked} captured=${cap.urls.length} selected=${uniq.length}`);
-        if (!uniq.length) {  // אבחון: אילו קבצים נמצאו ולמה לא נבחרו
-          links.filter((l) => DOC_RX.test(l.href)).slice(0, 6).forEach((l) =>
-            diag.push(`   ? ${decodeURIComponent(l.href.split("/").pop()).slice(0, 60)} | ${(l.text || "").slice(0, 40)} | ${(l.ctx || "").replace(/\s+/g, " ").slice(0, 60)}`));
-        }
-        for (const d of uniq) {
-          const [r2] = await chrome.scripting.executeScript({ target: { tabId: tab.id }, func: pageFetchBase64, args: [d.href] });
-          const got = r2 && r2.result;
-          if (!got || got.__error || !looksLikeDoc(got.base64)) { errors.push(`${d.href} -> ${got && (got.status || got.message)}`); continue; }
-          const sha = await sha256Hex(got.base64);
-          if (seen[d.href] === sha) continue;
-          const name = decodeURIComponent(new URL(d.href).pathname.split("/").pop()).replace(/[^\w.\-֐-׿]/g, "_").slice(0, 90);
-          const base = `policy/inbox/${site.legal_id}/${sha.slice(0, 12)}_${name}`;
-          files.push({ path: base, base64: got.base64 });
-          files.push({ path: base + ".json", base64: utf8b64(JSON.stringify({
-            legal_id: site.legal_id, url: d.href, link_text: d.text || d.ctx, source_page: pageUrl,
-            sha256: sha, fetched_at: new Date().toISOString(), via: "extension" }, null, 1)) });
-          seen[d.href] = sha;
-        }
-      } catch (e) {
-        errors.push(`${pageUrl}: ${e && e.message || e}`);
+        const { files, errors, diag } = await runSite(site, cfg, seen, async (pageUrl) => {
+          progress[site.name] = pageUrl;
+          await flushStatus();
+        });
+        allFiles.push(...files);
+        allErrors.push(...errors);
+        allDiag.push(...diag);
       } finally {
-        if (tab) { try { await tabsRetry(() => chrome.tabs.remove(tab.id)); } catch (e) {} }
+        delete progress[site.name];
+        await flushStatus();
       }
     }
   }
-  if (files.length) {
-    await commitFiles(cfg.token, cfg.owner, cfg.repo, cfg.branch, files,
-      `policy inbox (extension): ${files.length / 2} documents from blocked sites`);
+
+  await Promise.all(Array.from({ length: Math.min(POLICY_CONCURRENCY, sites.length) }, worker));
+
+  if (allFiles.length) {
+    await commitFiles(cfg.token, cfg.owner, cfg.repo, cfg.branch, allFiles,
+      `policy inbox (extension): ${allFiles.length / 2} documents from blocked sites`);
   }
   await chrome.storage.local.set({ policySeen: seen });
-  return { docs: files.length / 2, errors, diag };
+  return { docs: allFiles.length / 2, errors: allErrors, diag: allDiag };
 }

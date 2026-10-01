@@ -97,6 +97,74 @@ def price_as_of(index_id: str, as_of: date) -> float | None:
     return best
 
 
+# מדד בלי סדרה משלו ב-INDICES -> תעודת הסל שעוקבת אחריו (רק *יחס* התשואה שלה בין יום
+# העסקה ליום הדוח משמש - לא רמת המחיר שלה, ר' האזהרה בראש הקובץ). נתוני ייחוס: מה
+# כל קרן עוקבת (IXC/XLC, IXY/XLY, IXT/XLK - Select Sector SPDR; MVIS US Listed
+# Semiconductor 25 / SMH; S&P 500 Software & Services ~ IGV, קירוב).
+# ערך "index:<id>" = סדרה ב-INDICES (data/prices/<id>.csv, למשל topix = 1306.T); רשימה =
+# הראשון שיש לו מחירים. MSCI World Momentum ~ IWMO.L (iShares Edge MSCI World Momentum,
+# MTUM כגיבוי); MSCI World IT ~ IXN; S&P 500 IT ~ XLK; TOPIX TR ~ topix; MSCI EM / ACWI ~
+# סדרות הפרוקסי ב-INDICES.
+PROXY_ETF = {
+    "IXCTR": "XLC", "IXC": "XLC", "IXYTR": "XLY", "IXY": "XLY", "IXTTR": "XLK", "IXT": "XLK",
+    "MVSMHTR": "SMH", "MVSMH": "SMH", "S5SFTW": "IGV",
+    "S5TECH": "XLK", "S5INFT": "XLK", "NDWUIT": "IXN", "M1WOMOM": ("IWMO.L", "MTUM"),
+    "TPXDDVD": "index:topix", "TPX": "index:topix",
+    "NDUEEGF": "index:msci_em_proxy", "M1EF": "index:msci_em_proxy",
+    "NDUEACWF": "index:acwi_proxy", "M1WD": "index:acwi_proxy",
+}
+_EXCEL_EPOCH = date(1899, 12, 30)
+
+
+def parse_deal_date(v) -> date | None:
+    """"מועד ההתקשרות בעסקה" כפי שמופיע בדוחות: date / datetime, "29/09/2025", או
+    מספר סידורי של Excel ("46297.0" = 2026-10-02 לפי ספירת Excel)."""
+    if isinstance(v, datetime):
+        return v.date()
+    if isinstance(v, date):
+        return v
+    s = str(v or "").strip()
+    for fmt in ("%d/%m/%Y", "%Y-%m-%d", "%d.%m.%Y"):
+        try:
+            return datetime.strptime(s, fmt).date()
+        except ValueError:
+            pass
+    try:
+        n = float(s)
+    except ValueError:
+        return None
+    if 30000 <= n <= 60000:
+        from datetime import timedelta
+        return _EXCEL_EPOCH + timedelta(days=int(n))
+    return None
+
+
+def proxy_return(raw_ticker: str | None, deal_date: date | None, report_date: date | None) -> float | None:
+    """תשואת תעודת הסל העוקבת אחרי המדד מיום העסקה ליום הדוח (מחיר[דוח] / מחיר[עסקה]).
+    None אם אין פרוקסי / תאריך / מחיר."""
+    key = normalize_ticker(raw_ticker)
+    etf = PROXY_ETF.get(key or "")
+    if not etf or not deal_date or not report_date:
+        return None
+    if deal_date > report_date and deal_date.day <= 12:
+        # יום/חודש הפוכים ב-Excel ("10/02/2026" = 10 בפברואר נקרא 2 באוקטובר - 46297)
+        try:
+            deal_date = date(deal_date.year, deal_date.day, deal_date.month)
+        except ValueError:
+            return None
+    if deal_date > report_date:
+        return None
+    from .option_delta_pricing import price_as_of as etf_price_as_of
+    for proxy in (etf if isinstance(etf, tuple) else (etf,)):
+        if proxy.startswith("index:"):
+            p0, p1 = price_as_of(proxy[6:], deal_date), price_as_of(proxy[6:], report_date)
+        else:
+            p0, p1 = etf_price_as_of(proxy, deal_date), etf_price_as_of(proxy, report_date)
+        if p0 and p1:
+            return p1 / p0
+    return None
+
+
 def resolve_current_price(raw_ticker: str | None, report_date: date | None) -> tuple[float | None, str | None]:
     """(מחיר מדד עדכני נכון ל-report_date, index_id שנמצא) - (None, None) אם
     הטיקר לא ממופה, אין תאריך דוח, או שכשלה גישת הרשת. לא זורק."""

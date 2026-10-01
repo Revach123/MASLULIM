@@ -70,7 +70,7 @@ from .option_delta_pricing import quote_scale, resolve_option_delta
 from .option_ticker_parse import (CONTRACT_MULTIPLIER, is_call_option, parse_maof_expiry_month, parse_strike,
                                   parse_underlying)
 from .futures_notional import FuturesResolver, build_rows as build_futures_rows
-from .swap_index_pricing import price_as_of as index_price_as_of, resolve_current_price
+from .swap_index_pricing import parse_deal_date, price_as_of as index_price_as_of, proxy_return, resolve_current_price
 
 FAIR_VALUE_COL = 'שווי הוגן (באלפי ש"ח)'
 SWAP_NET_FAIR_VALUE_COL = 'שווי הוגן (נטו באלפי ש"ח)'
@@ -343,6 +343,32 @@ def _leg_market_values(row: dict, report_date, fx_now: dict[tuple, float]) -> li
     return out
 
 
+def _index_leg_value(row: dict, report_date, fx_now: dict[tuple, float],
+                     live_value: float | None = None) -> float | None:
+    """סוואפ מניות שרגל אחת בשקלים ורגל אחת במט"ח: רגל המט"ח היא רגל המדד (שווי
+    נוכחי), רגל השקל היא המימון - הנוציונל בשער יום העסקה. ממוצע של השתיים מחמיץ
+    את תנועת המדד והמט"ח מאז העסקה (513173393_13820: XNDX, רגל דולר 5,935 אלף = 19.2%,
+    רגל שקל 15,471 אלף = 16.8%; קרנות 52.5% + סוואפים לפי רגל המדד = 100.2% מול 100.1%
+    רשמי). גם כשהרגליים באותו מטבע: רגל ששוויה = יחידות × מחיר המדד ליום הדוח (live_value,
+    עד 5%) היא רגל המדד (513026484_13264: SPTR, רגל 1 = 39,146 = 2,333.72 × מחיר המדד,
+    רגל 2 = נוציונל המימון 39,810 מיום ה-Reset). None אם אין זוג כזה."""
+    legs = []
+    for leg in SWAP_LEGS:
+        value, ccy = _num(row.get(leg["fair_value"])), row.get(leg["currency"])
+        if value:
+            legs.append((ccy, value, leg))
+    if live_value:
+        for ccy, value, leg in legs:
+            fx = 1.0 if ccy == "ILS" else fx_now.get((ccy, report_date)) or _normalize_fx(ccy, _num(row.get(leg["fx"])))
+            if fx and abs(abs(value) * fx / live_value - 1) <= 0.05:
+                return abs(value) * fx
+    if len(legs) != 2 or [c == "ILS" for c, _, _ in legs].count(True) != 1:
+        return None
+    ccy, value, leg = next(x for x in legs if x[0] != "ILS")
+    fx = fx_now.get((ccy, report_date)) or _normalize_fx(ccy, _num(row.get(leg["fx"])))
+    return abs(value) * fx if fx else None
+
+
 # סוואפ מניות עם שווי רגליים: אם ממוצע הרגליים קטן מ-20% מיחידות × מחיר המדד העדכני,
 # הרגליים הן שינוי שווי (MTM) ולא הנוציונל. יחידות × מחיר מתקבל רק עד 1.5 מנכסי המסלול
 # (514956465_15249: יחידות 291,700 = פי 130 מהרגליים - שם הרגליים הן הנוציונל).
@@ -350,10 +376,26 @@ MTM_LEG_SHARE = 0.2
 LIVE_SWAP_MAX_RATIO = 1.5
 
 
+SWAP_DEAL_DATE_COL = "מועד ההתקשרות בעסקה"
+
+
+def _current_index_price(row: dict, report_date) -> float | None:
+    """מחיר המדד ליום הדוח: סדרת המדד ב-INDICES, ואם אין - מחיר העסקה × תשואת תעודת
+    הסל העוקבת מיום העסקה (swap_index_pricing.proxy_return)."""
+    price, _ = resolve_current_price(row.get(SWAP_TICKER_COL), report_date)
+    if price is not None:
+        return price
+    deal_price = _num(row.get(SWAP_UNDERLYING_PRICE_COL))
+    ratio = proxy_return(row.get(SWAP_TICKER_COL), parse_deal_date(row.get(SWAP_DEAL_DATE_COL)), report_date)
+    return deal_price * ratio if deal_price and ratio else None
+
+
 def _live_swap_ratio(row: dict, report_date, fx_now: dict, total: float) -> float | None:
     """|יחידות| × מחיר המדד ליום הדוח (swap_index_pricing, רק טיקר ממופה) × שער
     מטבע המדד / נכסי המסלול. None אם אין מחיר / יחידות, או שהתוצאה לא סבירה לשורה."""
     leg1_col, leg2_col = SWAP_LEGS
+    # רק סדרת מדד ישירה - לא פרוקסי: כאן קנה המידה של היחידות לא מאומת מול רגל 2
+    # (פרוקסי ב-512267592: יחידות בקנה מידה אחר -> 200%+ למסלול)
     price, _ = resolve_current_price(row.get(SWAP_TICKER_COL), report_date)
     if price is None:
         return None
@@ -363,11 +405,14 @@ def _live_swap_ratio(row: dict, report_date, fx_now: dict, total: float) -> floa
     if not units:
         return None
     # "ערך נקוב" שהוא כבר סכום במטבע (513611509_1038: 67,191.68 דולר, רגליים 66.8 / 67.2
-    # אלף) - שווי רגל ≈ יחידות / 1000 - אינו יחידות מדד; לא מתמחרים אותו
-    for n in (1, 2):
-        leg_fv = _num(row.get(f"שווי הוגן במטבע הנסחר (רגל {n})"))
-        if leg_fv and 0.5 <= abs(leg_fv) / (abs(units) / 1000) <= 2.0:
-            return None
+    # אלף) - שווי רגל ≈ יחידות / 1000 - אינו יחידות מדד; לא מתמחרים אותו. כל הרגליים
+    # המדווחות צריכות להתאים - רגל MTM קטנה יכולה ליפול במקרה ליד יחידות/1000
+    # (514956465_12536: 17,955 יחידות SPTR, רגל 2 = 25.7 - שורה של 6.3% מהמסלול
+    # נשארה בשווי הרגליים, 0.01%).
+    leg_fvs = [_num(row.get(f"שווי הוגן במטבע הנסחר (רגל {n})")) for n in (1, 2)]
+    leg_fvs = [v for v in leg_fvs if v]
+    if leg_fvs and all(0.8 <= abs(v) / (abs(units) / 1000) <= 1.25 for v in leg_fvs):
+        return None
     fx = 1.0 if ccy == "ILS" else (fx_now.get((ccy, report_date)) or _normalize_fx(ccy, _num(row.get(
         (leg1_col if ccy == ccy1 else leg2_col)["fx"]))))
     if fx is None:
@@ -484,7 +529,11 @@ def _swap_exposure(
                 line_ratio = live_ratio
             elif leg_values:
                 # שווי השוק של הרגליים הוא גודל החשיפה הנוכחי - בלי מוסכמות יחידות/מחיר
-                line_ratio = sum(leg_values) / len(leg_values) / total
+                index_leg = (_index_leg_value(row, report_date, fx_now,
+                                              live_ratio * total if live_ratio is not None else None)
+                             if is_equity else None)
+                line_ratio = (index_leg if index_leg is not None
+                              else sum(leg_values) / len(leg_values)) / total
             else:
                 units1 = _num(row.get(leg1_col["units"]))
                 fx1 = _normalize_fx(row.get(leg1_col["currency"]), _num(row.get(leg1_col["fx"])))
@@ -522,7 +571,7 @@ def _swap_exposure(
                 # ~100 מיליון - פי ~15,000).
                 leg1_live = None
                 if used_priced:
-                    current_price, _index_id = resolve_current_price(row.get(SWAP_TICKER_COL), report_date)
+                    current_price = _current_index_price(row, report_date)
                     leg1_live = (abs(units1 * price_fx * current_price) / 1000
                                  if units1 is not None and price_fx is not None and current_price is not None else None)
 

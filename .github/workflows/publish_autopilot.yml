@@ -11,7 +11,7 @@ on:
 jobs:
   publish:
     runs-on: ubuntu-latest
-    timeout-minutes: 20
+    timeout-minutes: 30
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-python@v5
@@ -55,6 +55,12 @@ jobs:
           apiToken:  ${{ secrets.CF_D1_TOKEN }}
           accountId: ${{ secrets.CF_ACCOUNT_ID }}
           command:   d1 execute maslulim_autopilot --remote --file=out/index_exposure.sql -y
+      - name: Load holdings_detail into D1
+        uses: cloudflare/wrangler-action@v3
+        with:
+          apiToken:  ${{ secrets.CF_D1_TOKEN }}
+          accountId: ${{ secrets.CF_ACCOUNT_ID }}
+          command:   d1 execute maslulim_autopilot --remote --file=out/holdings_detail.sql -y
       - uses: actions/upload-artifact@v4
         if: always()
         with:
