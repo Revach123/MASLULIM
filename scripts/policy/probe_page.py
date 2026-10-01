@@ -69,6 +69,30 @@ def probe(pw, url):
                       "els=>els.slice(0,30).map(e=>(e.getAttribute('onclick')||e.dataset.url||e.dataset.href||e.dataset.file||'').slice(0,200))"))
             except Exception as e:
                 print("   click err", str(e)[:150])
+        # מנורה: שנה -> מסלול -> אייקון הורדה (a בלי href, aria-label "... להורדה") - מה קורה בלחיצה?
+        try:
+            reqs = []
+            pg.on("request", lambda r: reqs.append(f"{r.method} {r.resource_type} {r.url[:250]}"))
+            pg.context.on("page", lambda p: reqs.append(f"NEWPAGE {p.url}"))
+            acc = pg.get_by_text("מנורה ביטוח מניות", exact=True).first
+            acc.click(timeout=3000); pg.wait_for_timeout(1500)
+            links = pg.locator("a[aria-label*='להורדה']")
+            print(f"  DL-LINKS count={links.count()} visible={[links.nth(k).is_visible() for k in range(min(links.count(), 5))]}")
+            n0 = len(reqs)
+            try:
+                with pg.expect_download(timeout=10000) as info:
+                    links.first.click(timeout=4000)
+                print("  DOWNLOAD", info.value.url, info.value.suggested_filename)
+            except Exception as e:
+                print("  no download:", str(e).splitlines()[0][:120])
+            pg.wait_for_timeout(3000)
+            print("\n".join("   REQ " + x for x in reqs[n0:n0 + 30]))
+            print("  PAGES", [p.url for p in pg.context.pages])
+            print("  REACT", pg.evaluate("""() => { const a = document.querySelector("a[aria-label*='להורדה']"); if (!a) return 'none';
+                const k = Object.keys(a).find(k => k.startsWith('__reactProps') || k.startsWith('__reactEventHandlers'));
+                return k ? Object.keys(a[k]).join(',') + ' | ' + String(a[k].onClick).slice(0, 400) : 'no-react'; }"""))
+        except Exception as e:
+            print("  menora-dl err", str(e)[:200])
         body = re.sub(r"\s+", " ", pg.inner_text("body"))
         i = max(0, body.find("מדיניות"))
         print("  TEXT", body[i:i + 2500])
