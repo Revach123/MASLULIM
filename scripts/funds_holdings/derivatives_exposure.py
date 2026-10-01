@@ -343,17 +343,25 @@ def _leg_market_values(row: dict, report_date, fx_now: dict[tuple, float]) -> li
     return out
 
 
-def _index_leg_value(row: dict, report_date, fx_now: dict[tuple, float]) -> float | None:
+def _index_leg_value(row: dict, report_date, fx_now: dict[tuple, float],
+                     live_value: float | None = None) -> float | None:
     """סוואפ מניות שרגל אחת בשקלים ורגל אחת במט"ח: רגל המט"ח היא רגל המדד (שווי
     נוכחי), רגל השקל היא המימון - הנוציונל בשער יום העסקה. ממוצע של השתיים מחמיץ
     את תנועת המדד והמט"ח מאז העסקה (513173393_13820: XNDX, רגל דולר 5,935 אלף = 19.2%,
     רגל שקל 15,471 אלף = 16.8%; קרנות 52.5% + סוואפים לפי רגל המדד = 100.2% מול 100.1%
-    רשמי). None אם אין זוג כזה."""
+    רשמי). גם כשהרגליים באותו מטבע: רגל ששוויה = יחידות × מחיר המדד ליום הדוח (live_value,
+    עד 5%) היא רגל המדד (513026484_13264: SPTR, רגל 1 = 39,146 = 2,333.72 × מחיר המדד,
+    רגל 2 = נוציונל המימון 39,810 מיום ה-Reset). None אם אין זוג כזה."""
     legs = []
     for leg in SWAP_LEGS:
         value, ccy = _num(row.get(leg["fair_value"])), row.get(leg["currency"])
         if value:
             legs.append((ccy, value, leg))
+    if live_value:
+        for ccy, value, leg in legs:
+            fx = 1.0 if ccy == "ILS" else fx_now.get((ccy, report_date)) or _normalize_fx(ccy, _num(row.get(leg["fx"])))
+            if fx and abs(abs(value) * fx / live_value - 1) <= 0.05:
+                return abs(value) * fx
     if len(legs) != 2 or [c == "ILS" for c, _, _ in legs].count(True) != 1:
         return None
     ccy, value, leg = next(x for x in legs if x[0] != "ILS")
@@ -521,7 +529,9 @@ def _swap_exposure(
                 line_ratio = live_ratio
             elif leg_values:
                 # שווי השוק של הרגליים הוא גודל החשיפה הנוכחי - בלי מוסכמות יחידות/מחיר
-                index_leg = _index_leg_value(row, report_date, fx_now) if is_equity else None
+                index_leg = (_index_leg_value(row, report_date, fx_now,
+                                              live_ratio * total if live_ratio is not None else None)
+                             if is_equity else None)
                 line_ratio = (index_leg if index_leg is not None
                               else sum(leg_values) / len(leg_values)) / total
             else:
