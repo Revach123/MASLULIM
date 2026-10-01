@@ -1,7 +1,7 @@
 {
  "legal_id": "520027715",
  "company": "מנורה מבטחים והסתדרות המהנדסים ניהול קופות גמל בע\"מ",
- "taken": "2026-10-01T03:53:42+00:00",
+ "taken": "2026-10-01T04:54:08+00:00",
  "pages": {
   "https://www.menoramivt.co.il/links/engineers": {
    "product": "גמל",
@@ -1672,27 +1672,372 @@
    "items": []
   },
   "https://www.menoramivt.co.il/pension": {
-   "product": "פנסיה",
+   "product": "פנסיה+ביטוח",
    "status": 200,
    "method": "requests",
-   "text_hash": "4b7bebf0261efb0de0f839f047d76b0b4409c029",
-   "text_head": "Radware Captcha Page We apologize for the inconvenience... ...but your activity and behavior on this site made us think that you are a bot. Note: A number of things could be going on here. If you are attempting to access this site using an anonymous Private/Proxy network, please disable that and try accessing site again. Due to previously detected malicious behavior which originated from the network you're using, please request unblock to site. Incident ID: bb0064ea-dcyu-433b-ae70-320b445c403b Please solve this CAPTCHA to request unblock to the website You reached this page when trying to acce",
-   "items": []
+   "text_hash": "532d5f6d49ee6012d625495bc945d7c994ce7e5e",
+   "text_head": "קרן פנסיה - הצטרפו לקרן הגדולה והיציבה בישראל דלג לתוכן הדף דלג לתוכן הדף ביטוחים חיסכון פנסיוני מנורה השקעות תביעות שירותים פעולות דברו איתנו | פורטלים ביטוחים ביטוח רכב ביטוח רכב לפי קילומטר ביטוח נהג חדש כיסוי לכל נהג ביטוח צד ג' לאופנוע ביטוח משאית ביטוח רכב אספנות ביטוח נסיעות לחו\"ל - Top Travel אפליקציית ביטוח נסיעות לחו\"ל - Menora ON ביטוח בריאות פרטי ביטוח בריאות קבוצתי ביטוח מחלות קשות ביטוח לעובדים זרים ותיירים ביטוח תאונות אישיות מנורה HUG - מרכז סיוע לקראת ניתוח ביטוח חיים פרטי ביטוח אובדן כושר עבודה ביטוח מטריה קבוצתית ביטוח לעסק ביטוח סייבר ביטוח הנדסי ביטוח משכנתא ביטוח דירה ביט",
+   "items": [
+    {
+     "text": "שינוי מסלול השקעה - גמל",
+     "href": "https://menoramivt.co.il/customer-login/?target=gemel-transfer-request",
+     "year": null,
+     "iframe": false,
+     "doc": false,
+     "internal": true
+    },
+    {
+     "text": "קרנות פנסיה",
+     "href": "https://www.menoramivt.co.il/links/pension/investment-routes-pension",
+     "year": null,
+     "iframe": false,
+     "doc": false,
+     "internal": true
+    },
+    {
+     "text": "קרנות השתלמות",
+     "href": "https://www.menoramivt.co.il/links/pension-and-gemel/gemel-hishtalmut-list/menroa-keren-hishtalmut",
+     "year": null,
+     "iframe": false,
+     "doc": false,
+     "internal": true
+    },
+    {
+     "text": "קרן פנסיה",
+     "href": "https://www.menoramivt.co.il/pension",
+     "year": null,
+     "iframe": false,
+     "doc": false,
+     "internal": true
+    },
+    {
+     "text": "קרן השתלמות לשכירים",
+     "href": "https://www.menoramivt.co.il/joining-gml/?process=eduFundEmployee&utm_source=website&utm_medium=banner&utm_campaign=product_page&utm_term=hishtalmut_shci",
+     "year": null,
+     "iframe": false,
+     "doc": false,
+     "internal": true
+    },
+    {
+     "text": "קרן השתלמות לעצמאים",
+     "href": "https://www.menoramivt.co.il/joining-gml/?process=eduFund&linkId=93643a881b3a02dba51ef124f3f68bd53ab735b2d97eaed348&utm_source=website&utm_medium=banner&utm_campaign=product_page&utm_term=hishtalmut",
+     "year": null,
+     "iframe": false,
+     "doc": false,
+     "internal": true
+    },
+    {
+     "text": "קרן השתלמות אומגה",
+     "href": "https://www.menoramivt.co.il/links/keren-hishtalmut/omega-fund",
+     "year": null,
+     "iframe": false,
+     "doc": false,
+     "internal": true
+    },
+    {
+     "text": "קרן השתלמות",
+     "href": "https://www.menoramivt.co.il/product/keren-hishtalmut",
+     "year": null,
+     "iframe": false,
+     "doc": false,
+     "internal": true
+    },
+    {
+     "text": "קופת גמל לחיסכון",
+     "href": "https://www.menoramivt.co.il/general/gemel-payments",
+     "year": null,
+     "iframe": false,
+     "doc": false,
+     "internal": true
+    },
+    {
+     "text": "קופת גמל להשקעה",
+     "href": "https://www.menoramivt.co.il/product/gemel-invest",
+     "year": null,
+     "iframe": false,
+     "doc": false,
+     "internal": true
+    },
+    {
+     "text": "קופת גמל חיסכון והשקעה",
+     "href": "https://www.menoramivt.co.il/product/gemel",
+     "year": null,
+     "iframe": false,
+     "doc": false,
+     "internal": true
+    },
+    {
+     "text": "קופת גמל",
+     "href": "https://www.menoramivt.co.il/customer-login/?target=gemel-transfer-request&originSource=marketingSite",
+     "year": null,
+     "iframe": false,
+     "doc": false,
+     "internal": true
+    },
+    {
+     "text": "קופות גמל להשקעה",
+     "href": "https://www.menoramivt.co.il/links/pension-and-gemel/gemel-hishtalmut-list/list-top-savings",
+     "year": null,
+     "iframe": false,
+     "doc": false,
+     "internal": true
+    },
+    {
+     "text": "פנסיה משלימה",
+     "href": "https://www.menoramivt.co.il/pension/menora-pension-mashlima",
+     "year": null,
+     "iframe": false,
+     "doc": false,
+     "internal": true
+    },
+    {
+     "text": "פנסיה לעצמאיים",
+     "href": "https://www.menoramivt.co.il/pension/independent-info",
+     "year": null,
+     "iframe": false,
+     "doc": false,
+     "internal": true
+    },
+    {
+     "text": "פנסיה",
+     "href": "https://www.menoramivt.co.il/product/pension-claim-list",
+     "year": null,
+     "iframe": false,
+     "doc": false,
+     "internal": true
+    },
+    {
+     "text": "פנסיה",
+     "href": "https://www.menoramivt.co.il/customer-login/?target=pension-investment-update&originSource=marketingSite",
+     "year": null,
+     "iframe": false,
+     "doc": false,
+     "internal": true
+    },
+    {
+     "text": "פורטל סוכנים",
+     "href": "https://menoranet.menora.co.il/my.policy",
+     "year": null,
+     "iframe": false,
+     "doc": false,
+     "internal": false
+    },
+    {
+     "text": "פדיון קרן השתלמות",
+     "href": "https://www.menoramivt.co.il/customer-login/?target=fund-redemption-keren&originSource=marketingSite",
+     "year": null,
+     "iframe": false,
+     "doc": false,
+     "internal": true
+    },
+    {
+     "text": "פדיון קופת גמל להשקעה",
+     "href": "https://www.menoramivt.co.il/customer-login/?target=fund-redemption-gemel&originSource=marketingSite",
+     "year": null,
+     "iframe": false,
+     "doc": false,
+     "internal": true
+    },
+    {
+     "text": "פדיון פנסיה",
+     "href": "https://www.menoramivt.co.il/customer-login/?target=pension-redemption&originSource=marketingSite",
+     "year": null,
+     "iframe": false,
+     "doc": false,
+     "internal": true
+    },
+    {
+     "text": "עדכון מוטבים",
+     "href": "https://meforms.menora.co.il/api/launch/templatelink/request-policy-changes",
+     "year": null,
+     "iframe": false,
+     "doc": false,
+     "internal": false
+    },
+    {
+     "text": "עדכון הו\"ק בפנסיה לעצמאים",
+     "href": "https://meforms.menora.co.il/api/launch/templatelink/HokPensionDirect",
+     "year": null,
+     "iframe": false,
+     "doc": false,
+     "internal": false
+    },
+    {
+     "text": "עדכון הו\"ק בגמל והשתלמות לעצמאים",
+     "href": "https://meforms.menora.co.il/api/launch/templatelink/update-direct-debit-gemel-Website",
+     "year": null,
+     "iframe": false,
+     "doc": false,
+     "internal": false
+    },
+    {
+     "text": "מערכת מ.מ.ש",
+     "href": "https://dent.menora.co.il/my.policy",
+     "year": null,
+     "iframe": false,
+     "doc": false,
+     "internal": false
+    },
+    {
+     "text": "מסלקה פנסיונית",
+     "href": "https://www.swiftness.co.il/",
+     "year": null,
+     "iframe": false,
+     "doc": false,
+     "internal": false
+    },
+    {
+     "text": "מסלולי השקעות בפרישה",
+     "href": "https://www.menoramivt.co.il/list/pension-member-info/retirement-investment-tracks",
+     "year": null,
+     "iframe": false,
+     "doc": false,
+     "internal": true
+    },
+    {
+     "text": "מחשבון פנסיה",
+     "href": "https://www.menoramivt.co.il/wps-frame/mivtcalc",
+     "year": null,
+     "iframe": false,
+     "doc": false,
+     "internal": true
+    },
+    {
+     "text": "מחזור הלוואה קיימת",
+     "href": "https://www.menoramivt.co.il/customer-login/?target=digital-loans-gemel-recycle&originSource=marketingSite",
+     "year": null,
+     "iframe": false,
+     "doc": false,
+     "internal": true
+    },
+    {
+     "text": "מדיניות פרטיות",
+     "href": "https://www.menoramivt.co.il/general/privacy-policy",
+     "year": null,
+     "iframe": false,
+     "doc": false,
+     "internal": true
+    },
+    {
+     "text": "זכאות לפנסיה ללא טופס",
+     "href": "https://ds.menoramivt.co.il/pension-joining-eligibility/",
+     "year": null,
+     "iframe": false,
+     "doc": false,
+     "internal": true
+    },
+    {
+     "text": "הפקדה חד פעמית לגמל להשקעה והשתלמות עצמאי",
+     "href": "https://www.menoramivt.co.il/customer-login/?target=one-time-deposit-gml&originSource=marketingSite",
+     "year": null,
+     "iframe": false,
+     "doc": false,
+     "internal": true
+    },
+    {
+     "text": "הלוואה מקרן פנסיה",
+     "href": "https://www.menoramivt.co.il/customer-login/?target=digital-loans-pension&originSource=marketingSite",
+     "year": null,
+     "iframe": false,
+     "doc": false,
+     "internal": true
+    },
+    {
+     "text": "הלוואה מכספי קופת גמל וקרן השתלמות",
+     "href": "https://www.menoramivt.co.il/customer-login/?target=digital-loans-gemel&originSource=marketingSite",
+     "year": null,
+     "iframe": false,
+     "doc": false,
+     "internal": true
+    },
+    {
+     "text": "דלג לתוכן הדף ביטוחים חיסכון פנסיוני מנורה השקעות תביעות שירותים פעולות דברו איתנו | פורטלים ביטוחים ביטוח רכב ביטוח רכב לפי קילומטר ביטוח נהג חדש כיסוי לכל נהג ביטוח צד ג' לאופנוע ביטוח משאית ביטוח ר",
+     "href": "https://www.menoramivt.co.il/",
+     "year": null,
+     "iframe": false,
+     "doc": false,
+     "internal": true
+    },
+    {
+     "text": "בקשת הלוואה מקרן השתלמות",
+     "href": "https://www.menoramivt.co.il/customer-login/?target=fund-loan",
+     "year": null,
+     "iframe": false,
+     "doc": false,
+     "internal": true
+    },
+    {
+     "text": "בקשה לפנסיית פרישה",
+     "href": "https://www.menoramivt.co.il/customer-login/?target=old-age-pension-claim",
+     "year": null,
+     "iframe": false,
+     "doc": false,
+     "internal": true
+    },
+    {
+     "text": "ביטול פוליסה קיימת",
+     "href": "https://www.menoramivt.co.il/customer-login/?target=customer-cancel-policy&originSource=marketingSite",
+     "year": null,
+     "iframe": false,
+     "doc": false,
+     "internal": true
+    },
+    {
+     "text": "ביטול פוליסה קיימת",
+     "href": "https://www.menoramivt.co.il/general/cancellation-of-policy",
+     "year": null,
+     "iframe": false,
+     "doc": false,
+     "internal": true
+    },
+    {
+     "text": "ביטול פוליסה",
+     "href": "https://www.menoramivt.co.il/customer-login/?target=customer-iframe-launcher-cancel-policy",
+     "year": null,
+     "iframe": false,
+     "doc": false,
+     "internal": true
+    },
+    {
+     "text": "ארכיון פוליסות",
+     "href": "https://www.menoramivt.co.il/policy/",
+     "year": null,
+     "iframe": false,
+     "doc": false,
+     "internal": true
+    },
+    {
+     "text": "אישור מס והצהרת הון",
+     "href": "https://www.menoramivt.co.il/personal/reports/?originSource=marketingSite",
+     "year": null,
+     "iframe": false,
+     "doc": false,
+     "internal": true
+    },
+    {
+     "text": "Investor Relations (EN)",
+     "href": "https://www.menoramivt.co.il/investor-relations",
+     "year": null,
+     "iframe": false,
+     "doc": false,
+     "internal": true
+    }
+   ]
   },
   "https://www.menoramivt.co.il/pension/menora-pension-mashlima": {
    "product": "פנסיה",
    "status": 200,
    "method": "requests",
-   "text_hash": "87318939ca0fdbdd2663b3f151bfa27eef40fbb0",
-   "text_head": "Radware Captcha Page We apologize for the inconvenience... ...but your activity and behavior on this site made us think that you are a bot. Note: A number of things could be going on here. If you are attempting to access this site using an anonymous Private/Proxy network, please disable that and try accessing site again. Due to previously detected malicious behavior which originated from the network you're using, please request unblock to site. Incident ID: 7c4a8fa7-dcyu-431a-a18f-b84a9ac60951 Please solve this CAPTCHA to request unblock to the website You reached this page when trying to acce",
+   "text_hash": "e3e2043690545c9154f8a15cf89c6d5afe0cdd43",
+   "text_head": "Radware Captcha Page We apologize for the inconvenience... ...but your activity and behavior on this site made us think that you are a bot. Note: A number of things could be going on here. If you are attempting to access this site using an anonymous Private/Proxy network, please disable that and try accessing site again. Due to previously detected malicious behavior which originated from the network you're using, please request unblock to site. Incident ID: 9c1b6dfd-dcyu-4a57-b5c1-345091174b61 Please solve this CAPTCHA to request unblock to the website You reached this page when trying to acce",
    "items": []
   },
   "https://www.menoramivt.co.il/pension/independent-info": {
    "product": "פנסיה",
    "status": 200,
    "method": "requests",
-   "text_hash": "c85ae7eb460eed2b6a92395a4f22e103e13391ef",
-   "text_head": "Radware Captcha Page We apologize for the inconvenience... ...but your activity and behavior on this site made us think that you are a bot. Note: A number of things could be going on here. If you are attempting to access this site using an anonymous Private/Proxy network, please disable that and try accessing site again. Due to previously detected malicious behavior which originated from the network you're using, please request unblock to site. Incident ID: c26b8774-dcyu-4926-babe-3326d1e33570 Please solve this CAPTCHA to request unblock to the website You reached this page when trying to acce",
+   "text_hash": "74582e01b7c1659252ef9bc4ea243d46844e3f88",
+   "text_head": "Radware Captcha Page We apologize for the inconvenience... ...but your activity and behavior on this site made us think that you are a bot. Note: A number of things could be going on here. If you are attempting to access this site using an anonymous Private/Proxy network, please disable that and try accessing site again. Due to previously detected malicious behavior which originated from the network you're using, please request unblock to site. Incident ID: 4bb0a712-dcyu-4386-9160-511abe910329 Please solve this CAPTCHA to request unblock to the website You reached this page when trying to acce",
    "items": []
   },
   "https://ds.menoramivt.co.il/pension-joining-eligibility/": {
@@ -2052,56 +2397,56 @@
    "product": "גמל",
    "status": 200,
    "method": "requests",
-   "text_hash": "1703c20a3473ef30be10e80911ffbb79cc48c6e4",
-   "text_head": "Radware Captcha Page We apologize for the inconvenience... ...but your activity and behavior on this site made us think that you are a bot. Note: A number of things could be going on here. If you are attempting to access this site using an anonymous Private/Proxy network, please disable that and try accessing site again. Due to previously detected malicious behavior which originated from the network you're using, please request unblock to site. Incident ID: cdc5bfbe-dcyu-466e-813b-141ff49e7bf1 Please solve this CAPTCHA to request unblock to the website You reached this page when trying to acce",
+   "text_hash": "9223478085603f325eb57b17474fb0d4fa878144",
+   "text_head": "Radware Captcha Page We apologize for the inconvenience... ...but your activity and behavior on this site made us think that you are a bot. Note: A number of things could be going on here. If you are attempting to access this site using an anonymous Private/Proxy network, please disable that and try accessing site again. Due to previously detected malicious behavior which originated from the network you're using, please request unblock to site. Incident ID: 341dccfd-dcyu-4bd2-ac15-26174cd5f5bb Please solve this CAPTCHA to request unblock to the website You reached this page when trying to acce",
    "items": []
   },
   "https://www.menoramivt.co.il/general/gemel-payments": {
    "product": "גמל",
    "status": 200,
    "method": "requests",
-   "text_hash": "8632776ee9912d588e779f956c7ec155f332a1eb",
-   "text_head": "Radware Captcha Page We apologize for the inconvenience... ...but your activity and behavior on this site made us think that you are a bot. Note: A number of things could be going on here. If you are attempting to access this site using an anonymous Private/Proxy network, please disable that and try accessing site again. Due to previously detected malicious behavior which originated from the network you're using, please request unblock to site. Incident ID: fd9716a2-dcyu-473d-9197-abc51d2d6c62 Please solve this CAPTCHA to request unblock to the website You reached this page when trying to acce",
+   "text_hash": "8a3fdfc045b82b6a9d6960970c215ef2dc79c923",
+   "text_head": "Radware Captcha Page We apologize for the inconvenience... ...but your activity and behavior on this site made us think that you are a bot. Note: A number of things could be going on here. If you are attempting to access this site using an anonymous Private/Proxy network, please disable that and try accessing site again. Due to previously detected malicious behavior which originated from the network you're using, please request unblock to site. Incident ID: 5553bc8b-dcyu-4828-bd41-08cc101dce69 Please solve this CAPTCHA to request unblock to the website You reached this page when trying to acce",
    "items": []
   },
   "https://www.menoramivt.co.il/product/gemel-invest": {
    "product": "גמל",
    "status": 200,
    "method": "requests",
-   "text_hash": "0c0746270b2169574b1268618dde551eeac60be3",
-   "text_head": "Radware Captcha Page We apologize for the inconvenience... ...but your activity and behavior on this site made us think that you are a bot. Note: A number of things could be going on here. If you are attempting to access this site using an anonymous Private/Proxy network, please disable that and try accessing site again. Due to previously detected malicious behavior which originated from the network you're using, please request unblock to site. Incident ID: d1d0bcff-dcyu-410b-87c5-468b75dbcfd8 Please solve this CAPTCHA to request unblock to the website You reached this page when trying to acce",
+   "text_hash": "6653bc74c45fb3071d67446a1eb27db48bb084b2",
+   "text_head": "Radware Captcha Page We apologize for the inconvenience... ...but your activity and behavior on this site made us think that you are a bot. Note: A number of things could be going on here. If you are attempting to access this site using an anonymous Private/Proxy network, please disable that and try accessing site again. Due to previously detected malicious behavior which originated from the network you're using, please request unblock to site. Incident ID: ab4b9cc3-dcyu-40d9-a937-4a8c913fc9c2 Please solve this CAPTCHA to request unblock to the website You reached this page when trying to acce",
    "items": []
   },
   "https://www.menoramivt.co.il/product/keren-hishtalmut": {
    "product": null,
    "status": 200,
    "method": "requests",
-   "text_hash": "9e6b4ddc70cc74ac809944faf7034a70d5d38fdc",
-   "text_head": "Radware Captcha Page We apologize for the inconvenience... ...but your activity and behavior on this site made us think that you are a bot. Note: A number of things could be going on here. If you are attempting to access this site using an anonymous Private/Proxy network, please disable that and try accessing site again. Due to previously detected malicious behavior which originated from the network you're using, please request unblock to site. Incident ID: 6189e8a6-dcyu-4996-9a2d-a61cd3abb872 Please solve this CAPTCHA to request unblock to the website You reached this page when trying to acce",
+   "text_hash": "84e88e03ebbad7d9f9dbf30c485462214ef94bfc",
+   "text_head": "Radware Captcha Page We apologize for the inconvenience... ...but your activity and behavior on this site made us think that you are a bot. Note: A number of things could be going on here. If you are attempting to access this site using an anonymous Private/Proxy network, please disable that and try accessing site again. Due to previously detected malicious behavior which originated from the network you're using, please request unblock to site. Incident ID: 2e288732-dcyu-48f4-8f18-7e3b5456a3eb Please solve this CAPTCHA to request unblock to the website You reached this page when trying to acce",
    "items": []
   },
   "https://www.menoramivt.co.il/joining-gml/?process=eduFundEmployee&utm_source=website&utm_medium=banner&utm_campaign=product_page&utm_term=hishtalmut_shci": {
    "product": null,
    "status": 200,
    "method": "requests",
-   "text_hash": "0cde1b96170a8124d00dcff241a1be3925edbcc7",
-   "text_head": "Radware Captcha Page We apologize for the inconvenience... ...but your activity and behavior on this site made us think that you are a bot. Note: A number of things could be going on here. If you are attempting to access this site using an anonymous Private/Proxy network, please disable that and try accessing site again. Due to previously detected malicious behavior which originated from the network you're using, please request unblock to site. Incident ID: abcf0020-dcyu-4c46-a46f-f638e6eaed08 Please solve this CAPTCHA to request unblock to the website You reached this page when trying to acce",
+   "text_hash": "fa8a6c32f060f05fa31d0c269436bcacf2e207cc",
+   "text_head": "Radware Captcha Page We apologize for the inconvenience... ...but your activity and behavior on this site made us think that you are a bot. Note: A number of things could be going on here. If you are attempting to access this site using an anonymous Private/Proxy network, please disable that and try accessing site again. Due to previously detected malicious behavior which originated from the network you're using, please request unblock to site. Incident ID: f005fd7d-dcyu-4ce9-8264-f9fc58ba80aa Please solve this CAPTCHA to request unblock to the website You reached this page when trying to acce",
    "items": []
   },
   "https://www.menoramivt.co.il/joining-gml/?process=eduFund&linkId=93643a881b3a02dba51ef124f3f68bd53ab735b2d97eaed348&utm_source=website&utm_medium=banner&utm_campaign=product_page&utm_term=hishtalmut": {
    "product": null,
    "status": 200,
    "method": "requests",
-   "text_hash": "caf53f7b87c2084b2815e411e33ba587eddd6915",
-   "text_head": "Radware Captcha Page We apologize for the inconvenience... ...but your activity and behavior on this site made us think that you are a bot. Note: A number of things could be going on here. If you are attempting to access this site using an anonymous Private/Proxy network, please disable that and try accessing site again. Due to previously detected malicious behavior which originated from the network you're using, please request unblock to site. Incident ID: 92d9eca0-dcyu-4242-8d71-82276574c367 Please solve this CAPTCHA to request unblock to the website You reached this page when trying to acce",
+   "text_hash": "92452fe6042dde520169c711910d22d863f7376d",
+   "text_head": "Radware Captcha Page We apologize for the inconvenience... ...but your activity and behavior on this site made us think that you are a bot. Note: A number of things could be going on here. If you are attempting to access this site using an anonymous Private/Proxy network, please disable that and try accessing site again. Due to previously detected malicious behavior which originated from the network you're using, please request unblock to site. Incident ID: 32e96c06-dcyu-4eb5-9dd4-12caa4176b46 Please solve this CAPTCHA to request unblock to the website You reached this page when trying to acce",
    "items": []
   },
   "https://www.menoramivt.co.il/links/keren-hishtalmut/omega-fund": {
    "product": null,
    "status": 200,
    "method": "requests",
-   "text_hash": "3f92122aab7371afcaca6f88f1d49fa7369f5ce0",
-   "text_head": "Radware Captcha Page We apologize for the inconvenience... ...but your activity and behavior on this site made us think that you are a bot. Note: A number of things could be going on here. If you are attempting to access this site using an anonymous Private/Proxy network, please disable that and try accessing site again. Due to previously detected malicious behavior which originated from the network you're using, please request unblock to site. Incident ID: 138b8124-dcyu-464a-824b-4d8b5aa2033f Please solve this CAPTCHA to request unblock to the website You reached this page when trying to acce",
+   "text_hash": "42d94445ba7c5952b4808b606e463948cbfb3307",
+   "text_head": "Radware Captcha Page We apologize for the inconvenience... ...but your activity and behavior on this site made us think that you are a bot. Note: A number of things could be going on here. If you are attempting to access this site using an anonymous Private/Proxy network, please disable that and try accessing site again. Due to previously detected malicious behavior which originated from the network you're using, please request unblock to site. Incident ID: 520e9e8b-dcyu-4452-9591-b1d8e87264a1 Please solve this CAPTCHA to request unblock to the website You reached this page when trying to acce",
    "items": []
   }
  }
