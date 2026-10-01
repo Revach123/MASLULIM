@@ -14,7 +14,7 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parents[2]
 OUT = ROOT / (__import__("os").environ.get("POLICY_OUT") or "policy")  # ריצה לחברה: policy/companies/<LegalId>
 
-PARSER_VERSION = 18  # (v10: Ayalon, dated current column) # הגדלה = פרסור מחדש של כל המסמכים בריצה הבאה (שינוי בפרסרים)
+PARSER_VERSION = 19  # (v10: Ayalon, dated current column) # הגדלה = פרסור מחדש של כל המסמכים בריצה הבאה (שינוי בפרסרים)
 
 NUM = r"(\d{1,3}(?:\.\d+)?)"
 PCT = NUM + r"\s*%?"
@@ -671,6 +671,39 @@ def parse_titled_tables(rows, sheet=""):
     return out
 
 
+def parse_shape_rows(rows, sheet=""):
+    """מוצא אחרון: שורות בצורה [אפיק | % ... | "+/- N%" | גבולות | מדד] כשהכותרת לא מיושרת לעמודות (PDF רום: כותרת
+    בשלוש שורות עם פחות תאים מהנתונים). הצפוי = האחוז שלפני הסטייה, בפועל = האחוז שלפניו (אם יש). שם = שורה עם "מסלול" מעל."""
+    grid = [[_clean(c) for c in r] for r in rows]
+    tol_rx = re.compile(r"^(?:\+/-|-/\+|±)\s*(\d{1,2}(?:\.\d+)?)\s*%$|^(\d{1,2}(?:\.\d+)?)\s*%\s*(?:\+/-|-/\+)$")
+    rng_rx = re.compile(r"^-?\s*(\d{1,3}(?:\.\d+)?)\s*%\s*-?\s*(\d{1,3}(?:\.\d+)?)\s*%$")
+    pct_rx = re.compile(r"^(\d{1,3}(?:\.\d+)?)\s*%$")
+    out, title = [], ""
+    for r in grid:
+        cells = [c for c in r if c]
+        if not cells:
+            continue
+        if len(cells) == 1 and "מסלול" in cells[0]:
+            title = cells[0]; continue
+        ti = next((i for i, c in enumerate(cells) if tol_rx.match(c)), None)
+        if ti is None or ti + 1 >= len(cells) or not rng_rx.match(cells[ti + 1]) or not re.search(r"[א-ת]{2}", cells[0]):
+            continue
+        pcts = [float(pct_rx.match(c).group(1)) for c in cells[1:ti] if pct_rx.match(c)]
+        if not pcts or not title:
+            continue
+        m = rng_rx.match(cells[ti + 1]); lo, hi = sorted((float(m.group(1)), float(m.group(2))))
+        tm = tol_rx.match(cells[ti])
+        ym = re.search(r"(20\d\d)", title)
+        nm = re.search(r"(מסלול.+)$", title)
+        name = norm_name(nm.group(1)) if nm else norm_name(title)
+        out.append({"fund_id": None, "track_no": None, "track_code": f"{sheet.strip()}|{name}", "track_name": name,
+                    "group": sheet.strip(), "year": ym.group(1) if ym else None, "asset": cells[0], "asset_key": asset_key(cells[0]),
+                    "current_pct": pcts[-2] if len(pcts) > 1 else None, "expected_pct": pcts[-1],
+                    "tolerance": (tm.group(1) or tm.group(2)) + "%", "min_pct": lo, "max_pct": hi,
+                    "benchmark": " ".join(cells[ti + 2:]).replace("\n", " ") or None, "sheet": sheet})
+    return out if len(out) >= 2 else []
+
+
 def parse_text_tracks(rows, sheet=""):
     """גיליון מסלולים מתמחים מילולי: [שם מסלול (קוד) | מדיניות השקעות (טקסט) | מדד ייחוס]. בלי טווחים מספריים."""
     grid = [[_clean(c) for c in r] for r in rows]
@@ -750,9 +783,15 @@ def main():
         except Exception as ex:
             print(f"[extract] {p.name}: {ex!r}", file=sys.stderr); continue
         names = names or [""] * len(tables)
+        if _site_cfg(ent["legal_id"]).get("join_split_letter"):
+            # PDF שבו האות האחרונה של מילה נפרדת ("אפיק השקע ה", "מסלול רום הלכ ה" - רום) - רק באתרים שסומנו,
+            # כי בשאר המקומות אות בודדת היא מילה ("קרן ט")
+            fx = lambda v: re.sub(r"(?<=[א-ת]{2}) ([א-ת])(?=[\s\"'״)]|$)", r"\1", v) if isinstance(v, str) else v
+            tables = [[[fx(c) for c in r] for r in t] for t in tables]
+            text = fx(text)
         n_long, leftovers = 0, []
         for nm, t in zip(names, tables):
-            found = parse_statement_blocks(t, nm) or parse_mh_blocks(t, nm) or parse_columns_blocks(t, nm) or parse_titled_tables(t, nm) or parse_text_tracks(t, nm)
+            found = parse_statement_blocks(t, nm) or parse_mh_blocks(t, nm) or parse_columns_blocks(t, nm) or parse_titled_tables(t, nm) or parse_text_tracks(t, nm) or parse_shape_rows(t, nm)
             if found:
                 for r in found:
                     r.setdefault("legal_id", ent["legal_id"])
@@ -780,7 +819,7 @@ def main():
         doc_year = fy.group(1) if fy else (max(set(years), key=years.count) if years else None)
         for r in doc_rows:  # שנה בשם הקובץ גוברת (בגוף הגיליון מופיעות לפעמים שנים של נתוני עבר)
             r["year"] = doc_year or r.get("year")
-        fn_code = re.search(r"-(\d{3,6})\.(xlsx?|pdf)$", Path(ent["file"]).name)  # מנורה: קובץ למסלול, הקוד בשם
+        fn_code = re.search(r"-(?!(?:19|20)\d\d\.)(\d{3,6})\.(xlsx?|pdf)$", Path(ent["file"]).name)  # מנורה: קובץ למסלול, הקוד בשם (לא שנה - רום "...-2025.pdf")
         if fn_code and doc_rows and len({r.get("track_code") for r in doc_rows}) == 1 and not any(r.get("fund_id") for r in doc_rows):
             for r in doc_rows:
                 r["fund_id"] = r["track_no"] = fn_code.group(1)
