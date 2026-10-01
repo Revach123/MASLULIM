@@ -556,6 +556,15 @@ async function runPolicySafe() {
     const st = status && status.policyState;
     await setStatus({ policyLastRun: Date.now(), policyErrors: [String(e && e.message || e)], policyProgress: "",
                       policyState: st ? { ...st, running: false, ended: Date.now(), active: [] } : null });
+    // ריצה שנכשלה לגמרי - גם היא נרשמת בלוג ב-GitHub
+    try {
+      const cfg = await getConfig();
+      const log = { extension_version: chrome.runtime.getManifest().version, updated: new Date().toISOString(), final: true,
+                    failed: true, error: String(e && e.stack || e), state: st || null };
+      await commitFiles(cfg.token, cfg.owner, cfg.repo, cfg.branch || "main",
+        [{ path: "policy/extension_log/latest.json", base64: utf8ToBase64(JSON.stringify(log, null, 1)) }],
+        "policy extension log: run failed");
+    } catch (e2) {}
   } finally {
     policyRunning = false;
     stopKeepAlive();
