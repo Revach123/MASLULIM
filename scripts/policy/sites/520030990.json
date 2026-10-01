@@ -1,23 +1,19 @@
 {
  "legal_id": "520030990",
  "name": "החברה המנהלת של מינהל קרן ההשתלמות לפקידים עובדי המנהל והשירותים בע\"מ",
- "home": "https://minhal.org",
+ "home": "https://www.minhal.org",
  "pages": [
   {
    "product": "גמל",
-   "url": "https://minhal.org/%D7%90%D7%95%D7%93%D7%95%D7%AA-%D7%94%D7%A7%D7%A8%D7%9F/%D7%9E%D7%93%D7%99%D7%A0%D7%99%D7%95%D7%AA-%D7%94%D7%A9%D7%A7%D7%A2%D7%94-%D7%A6%D7%A4%D7%95%D7%99%D7%94/"
+   "url": "https://www.minhal.org/?CategoryID=164"
   },
   {
    "product": "גמל",
-   "url": "https://minhal.org/%D7%90%D7%95%D7%93%D7%95%D7%AA-%D7%94%D7%A7%D7%A8%D7%9F/%D7%9E%D7%93%D7%99%D7%A0%D7%99%D7%95%D7%AA-%D7%94%D7%A9%D7%A7%D7%A2%D7%95%D7%AA-%D7%A6%D7%A4%D7%95%D7%99%D7%94/"
+   "url": "https://www.minhal.org/?CategoryID=0"
   },
   {
    "product": "גמל",
-   "url": "https://minhal.org/%D7%9E%D7%93%D7%99%D7%A0%D7%99%D7%95%D7%AA-%D7%94%D7%A9%D7%A7%D7%A2%D7%94-%D7%A6%D7%A4%D7%95%D7%99%D7%94/"
-  },
-  {
-   "product": "גמל",
-   "url": "https://minhal.org/%D7%90%D7%95%D7%93%D7%95%D7%AA-%D7%94%D7%A7%D7%A8%D7%9F/"
+   "url": "https://minhal.org/אודות-הקרן/"
   }
  ],
  "browser": "headless",
@@ -25,9 +21,11 @@
   "גמל"
  ],
  "search": false,
- "rev": 8,
+ "rev": 9,
  "home_source": "web_search",
  "max_pages": 20,
  "via": "extension",
- "note": "403 לשרתי ענן -> תוסף"
+ "note": "minhal.org: האיסוף עם לחיצות נתקע (timeout) -> איסוף קל + כניסה לקישורי מדיניות/השקעות. מסלולים 299/1262/1385/14156/15378",
+ "follow_max": 20,
+ "follow_rx": "מדיניות|השקע|CategoryID=164|ArticleID"
 }

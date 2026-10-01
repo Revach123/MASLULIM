@@ -1,11 +1,15 @@
 {
  "legal_id": "520022518",
  "name": "החברה לניהול קופת התגמולים והפנסיה של עובדי הסוכנות היהודית לארץ ישראל בע\"מ",
- "home": "https://www.jafi.org",
+ "home": "https://www.jewishagency.org",
  "pages": [
   {
    "product": "פנסיה",
-   "url": "https://www.jafi.org/he"
+   "url": "https://www.jewishagency.org/he/"
+  },
+  {
+   "product": "פנסיה",
+   "url": "https://www.jafi.org/"
   }
  ],
  "browser": "headless",
@@ -13,9 +17,10 @@
   "פנסיה"
  ],
  "search": true,
- "rev": 7,
+ "rev": 8,
  "home_source": "report_email:jafi.org",
  "via": "extension",
- "follow_max": 8,
- "note": "jafi.org חוסם/לא עונה לענן -> תוסף; עמוד המדיניות לא ידוע: follow_max נכנס לקישורי השקעות/פנסיה באותו אתר. הקישורים שנכנסו נרשמים ב-extension_log (followed)"
+ "follow_max": 15,
+ "note": "jafi.org/he = דף שגיאה; האתר העברי של הסוכנות הוא jewishagency.org/he. איש קשר בדוח הרבעוני: @jafi.org",
+ "follow_rx": "פנסי|תגמולים|קופ|pension|provident|retire"
 }

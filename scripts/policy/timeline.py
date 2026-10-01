@@ -30,13 +30,14 @@ MAJOR_PP = 10.0    # נק' אחוז: מכאן והלאה שינוי בחשיפה
 BENCH_PP = 10.0    # שינוי משקל במדד ייחוס (אותם מדדים) מתחת לזה = קטן
 NOISE_PP = 0.5     # הפרשי עיגול
 
-FIELDS = ["legal_id", "company", "track_code", "track_name", "year", "asset", "asset_key",
+FIELDS = ["legal_id", "company", "track_no", "track_no_source", "track_code", "track_name", "year", "asset", "asset_key",
           "expected_pct", "min_pct", "max_pct", "benchmark",
           "effective_date", "date_source", "last_change_date", "last_change_level", "last_major_change_date",
-          "asset_change", "versions", "active", "url"]
-SUMMARY_FIELDS = ["legal_id", "company", "track_code", "track_name", "year", "effective_date", "date_source",
-                  "last_change_date", "last_change_level", "last_major_change_date", "last_change_summary", "versions", "active", "url"]
-CHANGE_FIELDS = ["legal_id", "company", "track_code", "track_name", "date", "prev_date", "level", "summary", "url", "prev_url"]
+          "asset_change", "prev_expected_pct", "prev_min_pct", "prev_max_pct", "prev_benchmark", "prev_effective_date",
+          "versions", "active", "url"]
+SUMMARY_FIELDS = ["legal_id", "company", "track_no", "track_no_source", "track_code", "track_name", "year", "effective_date", "date_source",
+                  "last_change_date", "last_change_level", "last_major_change_date", "last_change_summary", "prev_effective_date", "prev_url", "versions", "active", "url"]
+CHANGE_FIELDS = ["legal_id", "company", "track_no", "track_no_source", "track_code", "track_name", "date", "prev_date", "level", "summary", "url", "prev_url"]
 
 
 def _natural(s):
@@ -269,13 +270,13 @@ def build():
                 max_year[lid] = max(max_year.get(lid, 0), int(v["year"]))
     for (lid, tkey), versions in tracks.items():
         vs = sorted(versions.values(), key=lambda v: (v["date"][0], str(v["year"] or ""), _natural(v["url"])))
-        last_change = (vs[0]["date"], "initial", [], {})  # (date, level, notes, per-asset)
+        last_change = (vs[0]["date"], "initial", [], {}, None)  # (date, level, notes, per-asset, הגרסה שלפני השינוי)
         last_major = vs[0]["date"][0]
         prev = vs[0]
         for v in vs[1:]:
             lv, notes, per = compare(prev["rows"], v["rows"])
             if lv:
-                last_change = (v["date"], lv, notes, per)
+                last_change = (v["date"], lv, notes, per, prev)
                 if lv == "major":
                     last_major = v["date"][0]
                 any_row = next(iter(v["rows"].values()))
@@ -286,19 +287,70 @@ def build():
         cur = vs[-1]
         tcode = next(iter(cur["rows"].values())).get("track_code")
         active = str(cur["year"] or "").isdigit() and int(cur["year"]) >= max_year.get(lid, 0)
-        (cdate, csrc), clevel, cnotes, cper = last_change
+        (cdate, csrc), clevel, cnotes, cper, before = last_change
         any_row = next(iter(cur["rows"].values()))
         summary.append({"legal_id": lid, "company": names.get(lid, ""), "track_code": tcode, "track_name": any_row.get("track_name"),
                         "year": cur["year"], "effective_date": cur["date"][0], "date_source": cur["date"][1],
                         "last_change_date": cdate, "last_change_level": clevel, "last_major_change_date": last_major,
-                        "last_change_summary": "; ".join(cnotes)[:500], "versions": len(vs), "active": active, "url": cur["url"]})
+                        "last_change_summary": "; ".join(cnotes)[:500],
+                        "prev_effective_date": before["date"][0] if before else "", "prev_url": before["url"] if before else "", "versions": len(vs), "active": active, "url": cur["url"]})
         for k, r in cur["rows"].items():
             latest.append({"legal_id": lid, "company": names.get(lid, ""), "track_code": tcode, "track_name": _clean(r.get("track_name")),
                            "year": cur["year"], "asset": _clean(r.get("asset")), "asset_key": r.get("asset_key"),
                            "expected_pct": r.get("expected_pct"), "min_pct": r.get("min_pct"), "max_pct": r.get("max_pct"),
                            "benchmark": _clean(r.get("benchmark")), "effective_date": cur["date"][0], "date_source": cur["date"][1],
                            "last_change_date": cdate, "last_change_level": clevel, "last_major_change_date": last_major,
-                           "asset_change": cper.get(k, ""), "versions": len(vs), "active": active, "url": cur["url"]})
+                           "asset_change": cper.get(k, ""),
+                           # המדיניות שהייתה בתוקף לפני השינוי האחרון (ריק אם אין שינוי / האפיק חדש)
+                           "prev_expected_pct": (before["rows"].get(k) or {}).get("expected_pct") if before else None,
+                           "prev_min_pct": (before["rows"].get(k) or {}).get("min_pct") if before else None,
+                           "prev_max_pct": (before["rows"].get(k) or {}).get("max_pct") if before else None,
+                           "prev_benchmark": _clean((before["rows"].get(k) or {}).get("benchmark")) if before else None,
+                           "prev_effective_date": before["date"][0] if before else "", "versions": len(vs), "active": active, "url": cur["url"]})
+    # מספר מסלול לכל מסלול (מהקבצים עצמם, ואחר כך רישום data.gov)
+    from .track_numbers import assign
+    url_tracks = {}
+    for (lid, tkey), versions in tracks.items():
+        for u in versions:
+            url_tracks.setdefault(versions[u]["url"], set()).add(tkey)
+    meta = []
+    for s_, (key, versions) in zip(summary, tracks.items()):
+        cur = max(versions.values(), key=lambda v: (v["date"][0], str(v["year"] or ""), _natural(v["url"])))
+        r0 = next(iter(cur["rows"].values()))
+        fids = [x for v in [cur] for r in v["rows"].values() for x in (r.get("fund_id"), r.get("track_no")) if x]
+        meta.append({"legal_id": key[0], "track_name": r0.get("track_name"), "track_code": r0.get("track_code"),
+                     "sheet": r0.get("sheet"), "url": cur["url"], "doc_file": r0.get("doc_file"), "fund_ids": fids,
+                     "single_track_file": len(url_tracks.get(cur["url"], ())) == 1, "active": s_["active"], "_s": s_})
+    assign(meta)
+    by_key = {}
+    for m in meta:
+        m["_s"]["track_no"], m["_s"]["track_no_source"] = m["track_no"], m["track_no_source"]
+        by_key[(m["_s"]["legal_id"], m["_s"]["url"], m["_s"]["track_code"])] = m
+    for r in latest:
+        m = by_key.get((r["legal_id"], r["url"], r["track_code"]))
+        r["track_no"], r["track_no_source"] = (m["track_no"], m["track_no_source"]) if m else ("", "")
+    # מספר מסלול לכל מסלול - מהקבצים עצמם (track_numbers.py); התאמת שם רק כמוצא אחרון ומסומנת
+    from .track_numbers import assign
+    url_tracks = {}
+    for (lid, tkey), versions in tracks.items():
+        for v in versions.values():
+            url_tracks.setdefault(v["url"], set()).add(tkey)
+    meta = []
+    for s_, (key, versions) in zip(summary, tracks.items()):
+        cur = max(versions.values(), key=lambda v: (v["date"][0], str(v["year"] or ""), _natural(v["url"])))
+        r0 = next(iter(cur["rows"].values()))
+        fids = [x for r in cur["rows"].values() for x in (r.get("fund_id"), r.get("track_no")) if x]
+        meta.append({"legal_id": key[0], "track_name": r0.get("track_name"), "track_code": r0.get("track_code"),
+                     "sheet": r0.get("sheet"), "url": cur["url"], "doc_file": r0.get("doc_file"), "fund_ids": fids,
+                     "single_track_file": len(url_tracks.get(cur["url"], ())) == 1, "active": s_["active"], "_s": s_})
+    assign(meta)
+    by_key = {}
+    for m in meta:
+        m["_s"]["track_no"], m["_s"]["track_no_source"] = m["track_no"], m["track_no_source"]
+        by_key[(m["_s"]["legal_id"], m["_s"]["url"], m["_s"]["track_code"])] = m
+    for r in latest:
+        m = by_key.get((r["legal_id"], r["url"], r["track_code"]))
+        r["track_no"], r["track_no_source"] = (m["track_no"], m["track_no_source"]) if m else ("", "")
     return latest, summary, log
 
 

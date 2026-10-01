@@ -78,7 +78,7 @@ def main():
     for p in sorted((ROOT / "scripts" / "policy" / "sites").glob("*.json")):
         cfg = json.loads(p.read_text("utf-8"))
         if cfg.get("via") == "extension":
-            ext.append({k: cfg.get(k) for k in ("legal_id", "name", "home", "pages", "products", "click", "clicks", "any_sheet", "exclude", "settle_ms", "capture_ms", "download_rx", "follow_max")})
+            ext.append({k: cfg.get(k) for k in ("legal_id", "name", "home", "pages", "products", "click", "clicks", "any_sheet", "exclude", "settle_ms", "capture_ms", "download_rx", "follow_max", "follow_rx")})
     (POL / "extension_sites.json").write_text(json.dumps(ext, ensure_ascii=False, indent=1), "utf-8")
     print(f"[combine] companies={len(crawl)} docs={len(docs)} long={len(long_rows)} (history={n_all}) unparsed={len(unparsed)}")
     from . import timeline  # הנתונים האחרונים לכל מסלול + תאריך השינוי האחרון וסוגו (גדול/קטן)
