@@ -254,6 +254,28 @@ def _classify_by_report_name(name: str | None) -> str | None:
     return None
 
 
+_NOT_EQUITY_FUND = re.compile(r"MACRO|FEEDER|HEDGE|LONG\W?SHORT|ABSOLUTE|P2P|PEER|LENDING|INCOME FUND|"
+                              r"INSURANCE|LIFE\b|SICAV ACC", re.IGNORECASE)
+
+
+def _sector_equity_by_name(name: str | None) -> str | None:
+    """"equity" כשהשם ממופה לענף/סגנון ע"י מסווג המדדים (index_exposure.classify_index):
+    VanEck China Semiconductor, SPDR Europe Industrials, Gold Miners (חומרי גלם) - קרנות מניות
+    שה-_classify_by_report_name המחמיר לא תופס (אין "equity"/"tech" בשם). לא לפי אזור בלבד
+    ("LION III EUR"), ולא סחורה/קריפטו/גידור/אשראי."""
+    if not name or _NOT_EQUITY_FUND.search(str(name)):
+        return None
+    from .alt_asset_reference import class_by_name
+    from .index_exposure import index_geo, _THEME_IDS, classify_index
+    if class_by_name(name):
+        return None
+    idx = classify_index(name)[0]
+    head = idx.partition(":")[0]
+    if head in _THEME_IDS:
+        return "equity"
+    return None
+
+
 def classify_from_report_names(source: list[dict]) -> dict[str, dict[str, float]]:
     """ISIN -> {"equity":.., "bond":..} לפי "שם נייר ערך" כפי שמדווח בגיליונות
     'קרנות סל'/'קרנות נאמנות' עצמם - מיועד כשכבת מוצא-אחרון (ר' תיעוד למעלה),
@@ -271,7 +293,7 @@ def classify_from_report_names(source: list[dict]) -> dict[str, dict[str, float]
             if isin.startswith("X9X9"):
                 out[isin] = {"equity": 0.0, "bond": 0.0}
                 continue
-            cls = _classify_by_report_name(row.get("שם נייר ערך"))
+            cls = _classify_by_report_name(row.get("שם נייר ערך")) or _sector_equity_by_name(row.get("שם נייר ערך"))
             if cls == "equity":
                 out[isin] = {"equity": 1.0, "bond": 0.0}
             elif cls == "bond":

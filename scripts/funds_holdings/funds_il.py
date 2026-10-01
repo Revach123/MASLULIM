@@ -53,6 +53,20 @@ def build_funds_il(funds: list[dict], funds_ref: list[dict]) -> dict[str, dict[s
         if isin is not None:
             siveg_by_isin[isin] = fund_siveg(r)
 
+    # קרן ממונפת/בחסר על מדד מניות: נספרת כקרן מחקה מניות (בארץ/בחו"ל) כפול המכפיל
+    from .index_exposure import leveraged_equity
+    lev_by_num: dict[str, tuple[float, bool]] = {}
+    lev_by_isin: dict[str, tuple[float, bool]] = {}
+    for r in funds_ref:
+        lev = leveraged_equity(r)
+        if not lev:
+            continue
+        k, isin = _fund_number_key(r.get("מספר קרן")), _isin_key(r.get("ISIN"))
+        if k is not None:
+            lev_by_num[k] = lev
+        if isin is not None:
+            lev_by_isin[isin] = lev
+
     sums: dict[str, dict[str, float]] = {}
     for row in funds:
         if row["סוג"] not in _IL_OR_TRADED:
@@ -63,7 +77,13 @@ def build_funds_il(funds: list[dict], funds_ref: list[dict]) -> dict[str, dict[s
         pct = to_ratio(raw_pct)
         if pct is None:
             continue
-        siveg = _siveg_lookup(row, siveg_by_num, siveg_by_isin)
+        lev = (lev_by_num.get(_fund_number_key(row.get("מספר קרן"))) if row["סוג"] == "IL"
+               else lev_by_isin.get(_isin_key(row.get("מספר קרן"))))
+        if lev:
+            factor, local = lev
+            siveg, pct = ("קרן מחקה - מניות בארץ" if local else 'קרן מחקה - מניות בחו"ל'), pct * factor
+        else:
+            siveg = _siveg_lookup(row, siveg_by_num, siveg_by_isin)
         if siveg is None:
             continue
         key = row["מפתח"]
