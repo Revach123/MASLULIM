@@ -793,6 +793,17 @@ def main():
             if re.search(rx, where) and not (r.get("track_name") or "").startswith(label):
                 r["track_name"] = f"{label} - {r.get('track_name') or ''}".strip(" -")
                 break
+    # track_split (הגדרות האתר): [[regex על שם המסלול, [[שם, מספר], ...]]] - מדיניות אחת לכמה מסלולים (הכשרה: "מסלול אג"ח
+    # ממשלות בניהול אלטשולר שחם, מיטב, ילין, מור, אנליסט" = 5 מסלולים, אחד לכל מנהל) -> שורה לכל מסלול עם המספר שלו
+    split_rows = []
+    for r in long_rows:
+        sp = next((sp for rx, sp in (_site_cfg(r.get("legal_id")).get("track_split") or []) if re.search(rx, r.get("track_name") or "")), None)
+        if not sp:
+            split_rows.append(r); continue
+        for nm, n in sp:
+            split_rows.append({**r, "track_name": nm, "fund_id": str(n), "track_no": str(n),
+                               "track_code": f"{r.get('legal_id')}|split|{n}"})
+    long_rows = split_rows
     if tf:
         keep_row = lambda r: r.get("legal_id") not in tf or bool(tf[r["legal_id"]].search(r.get("track_name") or ""))
         long_rows = [r for r in long_rows if keep_row(r)]
