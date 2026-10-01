@@ -343,6 +343,24 @@ def _leg_market_values(row: dict, report_date, fx_now: dict[tuple, float]) -> li
     return out
 
 
+def _index_leg_value(row: dict, report_date, fx_now: dict[tuple, float]) -> float | None:
+    """סוואפ מניות שרגל אחת בשקלים ורגל אחת במט"ח: רגל המט"ח היא רגל המדד (שווי
+    נוכחי), רגל השקל היא המימון - הנוציונל בשער יום העסקה. ממוצע של השתיים מחמיץ
+    את תנועת המדד והמט"ח מאז העסקה (513173393_13820: XNDX, רגל דולר 5,935 אלף = 19.2%,
+    רגל שקל 15,471 אלף = 16.8%; קרנות 52.5% + סוואפים לפי רגל המדד = 100.2% מול 100.1%
+    רשמי). None אם אין זוג כזה."""
+    legs = []
+    for leg in SWAP_LEGS:
+        value, ccy = _num(row.get(leg["fair_value"])), row.get(leg["currency"])
+        if value:
+            legs.append((ccy, value, leg))
+    if len(legs) != 2 or [c == "ILS" for c, _, _ in legs].count(True) != 1:
+        return None
+    ccy, value, leg = next(x for x in legs if x[0] != "ILS")
+    fx = fx_now.get((ccy, report_date)) or _normalize_fx(ccy, _num(row.get(leg["fx"])))
+    return abs(value) * fx if fx else None
+
+
 # סוואפ מניות עם שווי רגליים: אם ממוצע הרגליים קטן מ-20% מיחידות × מחיר המדד העדכני,
 # הרגליים הן שינוי שווי (MTM) ולא הנוציונל. יחידות × מחיר מתקבל רק עד 1.5 מנכסי המסלול
 # (514956465_15249: יחידות 291,700 = פי 130 מהרגליים - שם הרגליים הן הנוציונל).
@@ -503,7 +521,9 @@ def _swap_exposure(
                 line_ratio = live_ratio
             elif leg_values:
                 # שווי השוק של הרגליים הוא גודל החשיפה הנוכחי - בלי מוסכמות יחידות/מחיר
-                line_ratio = sum(leg_values) / len(leg_values) / total
+                index_leg = _index_leg_value(row, report_date, fx_now) if is_equity else None
+                line_ratio = (index_leg if index_leg is not None
+                              else sum(leg_values) / len(leg_values)) / total
             else:
                 units1 = _num(row.get(leg1_col["units"]))
                 fx1 = _normalize_fx(row.get(leg1_col["currency"]), _num(row.get(leg1_col["fx"])))
