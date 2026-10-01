@@ -16,7 +16,7 @@ from urllib.parse import urljoin, urldefrag, unquote
 
 from bs4 import BeautifulSoup
 
-from .crawl import DOC_EXT, UA, base_domain, get, load_companies, load_seeds, score
+from .crawl import DOC_EXT, UA, is_doc_url, base_domain, get, load_companies, load_seeds, score
 
 import requests
 
@@ -33,7 +33,7 @@ def year_of(text: str):
 
 def keep_item(text: str, href: str) -> bool:
     low = (text + " " + unquote(href)).lower()
-    return (score(text) + score(unquote(href)) > 0 or href.lower().split("?")[0].endswith(DOC_EXT)
+    return (score(text) + score(unquote(href)) > 0 or is_doc_url(href)
             or bool(DL_HINT.search(low)) or bool(re.search(r"גמל|פנסי|השתלמות|gemel|pension|provident|hishtalmut", low)))
 
 
@@ -50,7 +50,7 @@ def items_from_anchors(anchors, page_url, dom):
         if not href.startswith("http") or not (is_iframe or keep_item(text, href)):
             continue
         out[href] = {"text": text, "href": href, "year": year_of(text + " " + unquote(href)), "iframe": is_iframe,
-                     "doc": href.lower().split("?")[0].endswith(DOC_EXT) or bool(DL_HINT.search(text.lower())),
+                     "doc": is_doc_url(href) or bool(DL_HINT.search(text.lower())),
                      "internal": base_domain(href) == dom}
     return out
 
@@ -61,6 +61,8 @@ def fetch_static(s, url):
         return None, getattr(r, "status_code", "ERR"), ""
     soup = BeautifulSoup(r.content, "html.parser")  # bytes: הקידוד נקבע מה-meta/כותרות, לא ניחוש requests
     anchors = []
+    base = soup.find("base", href=True)  # <base href="/"> (ילין): קישורים יחסיים נפתרים מולו, לא מול נתיב העמוד
+    base_url = urljoin(url, base["href"]) if base else None
     for a in soup.find_all("a", href=True):
         t = a.get_text(" ", strip=True)
         if len(t) < 4 or re.match(r"(הורד|להורדה|הורדת|לצפייה|צפייה|download|pdf|xlsx?|קובץ)", t, re.I):
@@ -68,7 +70,7 @@ def fetch_static(s, url):
             ctx = re.sub(r"\s+", " ", row.get_text(" ", strip=True))[:200] if row else ""
             if ctx and ctx != t:
                 t = f"{ctx} {t}".strip()
-        anchors.append({"href": a["href"], "text": t})
+        anchors.append({"href": urljoin(base_url, a["href"]) if base_url else a["href"], "text": t})
     return anchors, 200, soup.get_text(" ", strip=True)
 
 

@@ -20,6 +20,13 @@ ROOT = Path(__file__).resolve().parents[2]
 OUT = ROOT / (__import__("os").environ.get("POLICY_OUT") or "policy")  # ריצה לחברה: policy/companies/<LegalId>
 UA = "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124 Safari/537.36"
 DOC_EXT = (".pdf", ".xlsx", ".xls", ".docx", ".doc")
+# קובץ HTML שהוא מסמך (מנורה: cdn.../public/docs/<מסלול>.htm) - רק בנתיב קבצים, לא כל עמוד .html
+HTML_DOC_RX = re.compile(r"/(docs|media|uploads|files)/[^?#]*\.html?(\?|#|$)", re.I)
+
+
+def is_doc_url(href: str) -> bool:
+    h = href.lower().split("?")[0]
+    return h.endswith(DOC_EXT) or bool(HTML_DOC_RX.search(href))
 # משקל מילות מפתח: מסמך מדיניות (גבוה) מול דפי ניווט סבירים (נמוך)
 STRONG = ["מדיניות השקעות", "מדיניות ההשקעות", "מדיניות השקעה", "מדיניות ההשקעה",
           "investment policy", "investment_policy", "investmentpolicy", "מדיניות_השקעות"]
@@ -90,8 +97,10 @@ def get(s: requests.Session, url: str, **kw):
     return None
 
 
-def sniff_ext(content: bytes) -> str | None:
-    """סוג הקובץ לפי תוכן (קישורי הורדה לרוב בלי סיומת). None = לא מסמך."""
+def sniff_ext(content: bytes, url: str = "") -> str | None:
+    """סוג הקובץ לפי תוכן (קישורי הורדה לרוב בלי סיומת). None = לא מסמך. HTML - רק בנתיב מסמך עם טבלה."""
+    if url and HTML_DOC_RX.search(url) and re.search(rb"<table", content[:400000], re.I):
+        return ".htm"
     if content[:4] == b"PK\x03\x04":
         return ".docx" if b"word/" in content[:4000] else ".xlsx"
     if content[:4] == b"\xd0\xcf\x11\xe0":
@@ -105,7 +114,7 @@ def download(s, url):
     r = get(s, url, stream=False)
     if r is None or r.status_code != 200:
         return None, getattr(r, "status_code", "ERR")
-    if sniff_ext(r.content) is None:
+    if sniff_ext(r.content, url) is None:
         return None, "not_a_document"
     return r, 200
 
@@ -113,7 +122,7 @@ def download(s, url):
 NOISE = re.compile(r"esg|אחראי|תגמול|פרטיות|privacy|תקנון|מבצע|גילוי[-_ ]נאות|דוח(ות)?[-_ ]כספי|מצגת|presentation|"
                    r"investor|equal|שכר[-_ ]שווה|פוליסה|annuity|premi|מנתחים|אמות[-_ ]מידה|ממשל", re.I)
 POLICY = re.compile(r"מדיניות[-_ ]*(ה)?השקעה|מדיניות[-_ ]*(ה)?השקעות|מדיניות[-_ ]*מוצהרת|הצהרת[-_ ]*(מדיניות|השקעות)|"
-                    r"הצהרה[-_ ]*על[-_ ]*מדיניות|investment[-_ ]*polic|expected[-_ ]*investment|statement[-_ ]*investment", re.I)
+                    r"הצהרה[-_ ]*על[-_ ]*מדיניות|מדיניות[-_ ]*צפויה|investment[-_ ]*polic|expected[-_ ]*investment|statement[-_ ]*investment", re.I)
 
 
 SEARCH_EXCLUDE = re.compile(r"bizportal|themarker|globes|calcalist|ynet|walla|maariv|funder|mygemel|gemelnet|gemel-net|mypension|"
@@ -248,7 +257,7 @@ def select_docs(pages: dict, extra: list[str]):
             href, blob = i["href"], unquote(i["href"]) + " " + i["text"]
             ext = href.lower().split("?")[0].rsplit(".", 1)[-1]
             ok = bool(POLICY.search(blob)) and not NOISE.search(blob)
-            ok = ok or (page_url in ctx_pages and ext in ("xlsx", "xls") and not NOISE.search(blob))
+            ok = ok or (page_url in ctx_pages and ext in ("xlsx", "xls", "htm", "html") and not NOISE.search(blob))
             if ok:
                 out.setdefault(unquote(href), {**i, "page": page_url})
     return out
@@ -357,7 +366,7 @@ def main():
             if content is None and pw and code in (403, "ERR") and not d.get("local"):
                 content = download_browser(pw, url)
                 code = 200 if content else code
-            if content is None or sniff_ext(content) is None:
+            if content is None or sniff_ext(content, url) is None:
                 errs.append(f"{url[-80:]} -> {code}"); continue
             sha = hashlib.sha256(content).hexdigest()
             ukey = unquote(url)
@@ -366,7 +375,7 @@ def main():
             if kind != "unchanged":
                 name = re.sub(r"[^\w.\-]", "_", unquote(url.split("#download=")[-1] if "#download=" in url
                                                           else urlparse(url).path.rsplit("/", 1)[-1]))[:80]
-                ext = sniff_ext(content)
+                ext = sniff_ext(content, url)
                 if not name.lower().endswith(ext):
                     name += ext
                 p = OUT / "raw" / legal_id / f"{sha[:12]}_{name}"

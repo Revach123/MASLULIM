@@ -13,7 +13,7 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parents[2]
 OUT = ROOT / (__import__("os").environ.get("POLICY_OUT") or "policy")  # ריצה לחברה: policy/companies/<LegalId>
 
-PARSER_VERSION = 12  # (v10: Ayalon, dated current column) # הגדלה = פרסור מחדש של כל המסמכים בריצה הבאה (שינוי בפרסרים)
+PARSER_VERSION = 13  # (v10: Ayalon, dated current column) # הגדלה = פרסור מחדש של כל המסמכים בריצה הבאה (שינוי בפרסרים)
 
 NUM = r"(\d{1,3}(?:\.\d+)?)"
 PCT = NUM + r"\s*%?"
@@ -161,6 +161,22 @@ def read_doc(path: Path):
         d = docx.Document(path)
         tables = [[[c.text for c in row.cells] for row in t.rows] for t in d.tables]
         return "\n".join(p.text for p in d.paragraphs), tables, []
+    if ext in (".htm", ".html"):  # מנורה: הצהרות כ-HTML (יצוא Word/Excel, לרוב windows-1255)
+        from bs4 import BeautifulSoup
+        soup = BeautifulSoup(path.read_bytes(), "html.parser")
+        tables = []
+        for t in soup.find_all("table"):
+            rows = []
+            for tr in t.find_all("tr"):
+                r = []
+                for c in tr.find_all(["td", "th"]):  # colspan -> תאים ריקים, שהעמודות יישארו מיושרות
+                    r.append(re.sub(r"\s+", " ", c.get_text(" ", strip=True)))
+                    r += [""] * (int(c.get("colspan", 1) or 1) - 1 if str(c.get("colspan", 1)).isdigit() else 0)
+                rows.append(r)
+            if rows:
+                tables.append(rows)
+        title = soup.title.get_text(" ", strip=True) if soup.title else ""
+        return soup.get_text("\n", strip=True), tables, [title or path.stem] * len(tables)
     return "", [], []  # .doc/.xls ישנים: לא נתמך - מדווח כ-unsupported
 
 
@@ -369,6 +385,9 @@ def parse_titled_tables(rows, sheet=""):
             py = re.search(r"^מדיניות\s*(20\d\d)", t)
             if "גבולות" in t and "bounds" not in cols:
                 cols["bounds"] = c
+            elif "גבולות" in t and re.search(r"20\d\d", t) and re.search(r"20\d\d", row[cols["bounds"]]) \
+                    and int(re.search(r"(20\d\d)", t).group(1)) > int(re.search(r"(20\d\d)", row[cols["bounds"]]).group(1)):
+                cols["bounds"] = c  # "גבולות ... 2018" | "גבולות ... 2019" (אנליסט): השנה המאוחרת
             elif "מינימום" in t and "min" not in cols:
                 cols["min"] = c
             elif "מקסימום" in t and "max" not in cols:
@@ -377,6 +396,11 @@ def parse_titled_tables(rows, sheet=""):
                 cols["expected" if int(py.group(1)) == pol_years[-1] else "current"] = c
             elif ("צפוי" in t or py) and "expected" not in cols:
                 cols["expected"] = c
+            elif "צפוי" in t and "bounds" not in cols and not re.search(r"גבולות|סטי", t) and (
+                    "צפוי" not in row[cols["expected"]]  # הקודם נבחר רק לפי שנה ("מוגדר לשנת 2017") - "צפוי" עדיף (עגור)
+                    or (re.search(r"צפוי.*20\d\d", row[cols["expected"]], re.S) and re.search(r"20\d\d", t)
+                        and int(re.search(r"(20\d\d)", t).group(1)) > int(re.search(r"(20\d\d)", row[cols["expected"]]).group(1)))):
+                cols["expected"] = c  # "צפוי לשנת 2024" | "צפוי לשנת 2025" (עובדי המדינה): השנה המאוחרת = המדיניות
             elif re.search(r"סטי", t) and "tol" not in cols:
                 cols["tol"] = c
             elif re.search(r"ייחוס|יחוס", t) and "bench" not in cols:
@@ -388,6 +412,8 @@ def parse_titled_tables(rows, sheet=""):
                 cols["current"] = c
         if "expected" not in cols and "bounds" not in cols and "min" not in cols:
             continue
+        ey = re.search(r"(20\d\d)", row[cols["expected"]]) if "expected" in cols else None
+        tyear = ey.group(1) if ey else year  # "שיעור חשיפה צפוי לשנת 2026" = שנת המדיניות (לא תאריך החשיפה בפועל)
         title, code = "", None
         for r2 in range(ri - 1, max(ri - 6, -1), -1):  # שורות תווית מפורשות: "שם מסלול (מ.ה.)" / "קידוד"
             cells = [c for c in grid[r2] if c]
@@ -434,8 +460,8 @@ def parse_titled_tables(rows, sheet=""):
                 lo, hi = _num(g(r, "min")), _num(g(r, "max"))
             else:
                 m = BOUNDS.search(g(r, "bounds"))
-                if m:
-                    lo, hi = float(m.group(1)), float(m.group(2))
+                if m:  # "51%-39%" (עברית: גבוה-נמוך) -> ממוינים
+                    lo, hi = sorted((float(m.group(1)), float(m.group(2))))
                 else:
                     nums = [x for x in (_num(g(r, "bounds", k)) for k in range(0, 4)) if x is not None][:2]
                     if len(nums) == 2:
@@ -459,7 +485,7 @@ def parse_titled_tables(rows, sheet=""):
                 elif len(cp) > 1 and cp[1].isdigit():
                     fid = str(int(cp[1]))
             out.append({"fund_id": fid, "track_no": fid, "track_code": code or f"{sheet.strip()}|{name}", "track_name": name,
-                        "group": sheet.strip(), "year": year, "asset": lab, "asset_key": asset_key(lab),
+                        "group": sheet.strip(), "year": tyear, "asset": lab, "asset_key": asset_key(lab),
                         "current_pct": pct(cur), "expected_pct": pct(exp), "tolerance": g(r, "tol") or None,
                         "min_pct": lo, "max_pct": hi, "benchmark": (g(r, "bench").replace("\n", " ") or None), "sheet": sheet})
     return out
