@@ -220,7 +220,8 @@ function keepMinimized(windowId) {
 async function runSite(site, cfg, seen, onProgress, windowId) {
   const pages = [...new Set([...(site.pages || []).map((p) => p.url), site.home].filter(Boolean))];
   const files = [], errors = [], diag = [];
-  const stats = { found: 0, selected: 0, had: 0 };  // לחלונית: קבצים שנמצאו בעמודים / נבחרו כמדיניות / כבר נשלחו בעבר
+  const stats = { found: 0, selected: 0, had: 0 };
+  const pageLog = [];  // לכל עמוד: מה נמצא/נבחר - ללוג  // לחלונית: קבצים שנמצאו בעמודים / נבחרו כמדיניות / כבר נשלחו בעבר
   const report = (pi, step) => onProgress({ page: pages[pi], pageNo: pi + 1, pages: pages.length, step, docs: files.length / 2 });
   for (const [pi, pageUrl] of pages.entries()) {
     if (stopRequested) break;
@@ -248,6 +249,10 @@ async function runSite(site, cfg, seen, onProgress, windowId) {
       const uniq = [...new Map(docs.filter((d) => !ex || !ex.test(decodeURIComponent(d.href) + " " + d.text))
         .map((d) => [d.href, d])).values()];
       stats.found += links.filter((l) => DOC_RX.test(l.href) || l.ctx === "(download)").length;
+      pageLog.push({ url: pageUrl, links: links.length, files: links.filter((l) => DOC_RX.test(l.href)).length, clicked: cap.clicked,
+                     captured: cap.urls.length, selected: uniq.map((d) => decodeURIComponent(d.href)),
+                     unselected_files: links.filter((l) => DOC_RX.test(l.href) && !uniq.some((d) => d.href === l.href)).slice(0, 25)
+                       .map((l) => ({ file: decodeURIComponent(l.href).slice(0, 200), text: (l.text || "").slice(0, 80), ctx: (l.ctx || "").replace(/\s+/g, " ").slice(0, 100) })) });
       stats.selected += uniq.length;
       diag.push(`${site.name.slice(0, 18)}: links=${links.length} files=${links.filter((l) => DOC_RX.test(l.href)).length} clicked=${cap.clicked} captured=${cap.urls.length} selected=${uniq.length}`);
       if (!uniq.length) {  // אבחון: אילו קבצים נמצאו ולמה לא נבחרו
@@ -283,7 +288,7 @@ async function runSite(site, cfg, seen, onProgress, windowId) {
       if (tab) { ourTabs.delete(tab.id); delete openedBy[tab.id]; try { await tabsRetry(() => chrome.tabs.remove(tab.id)); } catch (e) {} }
     }
   }
-  return { files, errors, diag, stats };
+  return { files, errors, diag, stats, pages: pageLog };
 }
 
 // כמה אתרים (לא עמודים בתוך אתר - שם אין תועלת, ר' runSite) מותר להריץ
@@ -298,13 +303,16 @@ const POLICY_CONCURRENCY = 4;  // ברירת מחדל; בפועל RULES.concurre
 // כי כמה אתרים עשויים לדווח התקדמות בו-זמנית).
 export async function runPolicy(cfg, setStatus) {
   stopRequested = false;
-  applyRules(await readRules(cfg));  // ההוראות העדכניות מ-GitHub, בכל ריצה
+  const gotRules = await readRules(cfg);  // ההוראות העדכניות מ-GitHub, בכל ריצה
+  applyRules(gotRules);
   const sites = await readSites(cfg);
   const { policySeen } = await chrome.storage.local.get("policySeen");
   const seen = policySeen || {};
   const allFiles = [], allErrors = [], allDiag = [];
   const progress = {};  // site.name -> {page, pageNo, pages, step, docs} - אתרים פעילים
   const finished = [];  // {name, docs, errors}
+  const siteLog = [];   // פירוט מלא לכל אתר - ללוג ב-GitHub
+  let rulesFromGithub = false;
   const started = Date.now();
 
   // מצב מובנה לחלונית (פס התקדמות + שורה לכל אתר). כתיבות מסודרות בשרשרת - כמה workers מעדכנים במקביל
@@ -349,12 +357,29 @@ export async function runPolicy(cfg, setStatus) {
   if (windowId) chrome.windows.onFocusChanged.addListener(onFocus);
 
   onStop = () => flushStatus();
+  rulesFromGithub = !!gotRules;
+  // לוג ריצה ב-GitHub (policy/extension_log/): התקדמות כל 3 דק' + לוג מלא בסוף - כדי שאפשר יהיה לעקוב ולאבחן מרחוק
+  const buildLog = (final) => ({
+    extension_version: chrome.runtime.getManifest().version, started: new Date(started).toISOString(),
+    updated: new Date().toISOString(), final, stopped: stopRequested, rules_from_github: rulesFromGithub, rules: RULES,
+    total_sites: sites.length, done_sites: finished.length, new_docs: allFiles.length / 2,
+    active: Object.entries(progress).map(([name, p]) => ({ name, page: p.page, page_no: p.pageNo, pages: p.pages, step: p.step })),
+    sites: siteLog,
+  });
+  const logFile = (path, obj) => ({ path, base64: utf8b64(JSON.stringify(obj, null, 1)) });
+  let lastLogAt = Date.now();
+  const logTimer = setInterval(async () => {
+    if (Date.now() - lastLogAt < 170000) return;
+    lastLogAt = Date.now();
+    try { await commitFiles(cfg.token, cfg.owner, cfg.repo, cfg.branch, [logFile("policy/extension_log/latest.json", buildLog(false))],
+                            `policy extension log: progress ${finished.length}/${sites.length}`); } catch (e) {}
+  }, 30000);
   let nextIdx = 0;
   async function worker() {
     while (!stopRequested && nextIdx < sites.length) {
       const site = sites[nextIdx++];
       try {
-        const { files, errors, diag, stats } = await runSite(site, cfg, seen, async (p) => {
+        const { files, errors, diag, stats, pages } = await runSite(site, cfg, seen, async (p) => {
           progress[site.name] = p;
           await flushStatus();
         }, windowId);
@@ -362,8 +387,11 @@ export async function runPolicy(cfg, setStatus) {
         allErrors.push(...errors);
         allDiag.push(...diag);
         finished.push({ name: site.name, docs: files.length / 2, errors: errors.length, ...stats, firstError: errors[0] || "" });
+        siteLog.push({ legal_id: site.legal_id, name: site.name, pages, new_docs: files.length / 2, ...stats, errors, diag,
+                       new_files: files.filter((f) => !f.path.endsWith(".json")).map((f) => f.path.split("/").pop()) });
       } catch (e) {
         finished.push({ name: site.name, docs: 0, errors: 1, firstError: String(e && e.message || e) });
+        siteLog.push({ legal_id: site.legal_id, name: site.name, new_docs: 0, errors: [String(e && e.message || e)] });
         allErrors.push(`${site.name}: ${e && e.message || e}`);
       } finally {
         delete progress[site.name];
@@ -382,11 +410,15 @@ export async function runPolicy(cfg, setStatus) {
     if (windowId) { try { await chrome.windows.remove(windowId); } catch (e) {} }
   }
 
-  if (allFiles.length) {
-    await flushStatus(`מעלה ל-GitHub ${allFiles.length / 2} מסמכים`);
-    await commitFiles(cfg.token, cfg.owner, cfg.repo, cfg.branch, allFiles,
-      `policy inbox (extension): ${allFiles.length / 2} documents from blocked sites`);
-  }
+  clearInterval(logTimer);
+  // קבצים + לוג סופי בקומיט אחד (גם כשאין קבצים חדשים - הלוג לבד)
+  const finalLog = buildLog(true);
+  const stamp = new Date().toISOString().replace(/[:.]/g, "-").slice(0, 19);
+  const logFiles = [logFile("policy/extension_log/latest.json", finalLog), logFile(`policy/extension_log/runs/${stamp}.json`, finalLog)];
+  await flushStatus(allFiles.length ? `מעלה ל-GitHub ${allFiles.length / 2} מסמכים + לוג` : "מעלה לוג ל-GitHub");
+  await commitFiles(cfg.token, cfg.owner, cfg.repo, cfg.branch, [...allFiles, ...logFiles],
+    allFiles.length ? `policy inbox (extension): ${allFiles.length / 2} documents from blocked sites`
+                    : `policy extension log: ${finished.length}/${sites.length} sites, 0 new documents`);
   await chrome.storage.local.set({ policySeen: seen });
   onStop = null;
   await chain;
