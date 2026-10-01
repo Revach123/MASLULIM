@@ -637,6 +637,8 @@ def main():
         long_rows = [r for r in long_rows if keep_row(r)]
         changes = [r for r in changes if keep_row(r)]
         rows = {k: r for k, r in rows.items() if keep_row(r)}
+    for r in long_rows:
+        sane_bounds(r)
     out = sorted(rows.values(), key=lambda r: (r["legal_id"], r["track_name"]))
     rows_path.write_text(json.dumps(out, ensure_ascii=False, indent=1), "utf-8")
     for path, data in ((long_path, long_rows), (chg_path, changes), (unp_path, unparsed)):
@@ -647,6 +649,22 @@ def main():
             w = csv.DictWriter(f, fields, extrasaction="ignore")
             w.writeheader(); w.writerows(data)
     print(f"[extract] long={len(long_rows)} changes={len(changes)} unparsed_docs={len(unparsed)}")
+
+
+def sane_bounds(r):
+    """גבולות הפוכים / משובשים מ-PDF מימין לשמאל (לאומי קמ"פ: "42%-30%" -> min 42 max 30; "26%-16%" -> 2016):
+    min>max -> החלפה; גבול משובש (מעל 400) -> צפוי ± סטייה (אם יש), אחרת ריק."""
+    lo, hi, exp = r.get("min_pct"), r.get("max_pct"), r.get("expected_pct")
+    if lo is None or hi is None:
+        return
+    if lo > hi:
+        lo, hi = hi, lo
+    if hi > 400 or lo < -400:  # חשיפה מעל 100% לגיטימית (מניות 94-106); 2016 = שני מספרים שהתחברו
+        m = re.search(r"(\d+(?:\.\d+)?)", str(r.get("tolerance") or ""))
+        tol = float(m.group(1)) if m else None
+        tol = tol * 100 if tol is not None and tol <= 1.5 and "%" not in str(r.get("tolerance")) else tol
+        lo, hi = (round(exp - tol, 2), round(exp + tol, 2)) if tol is not None and exp is not None else (None, None)
+    r["min_pct"], r["max_pct"] = lo, hi
 
 
 if __name__ == "__main__":

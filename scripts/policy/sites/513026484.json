@@ -22,11 +22,12 @@
   "פנסיה"
  ],
  "search": true,
- "rev": 8,
+ "rev": 9,
  "exclude": "(?i)bituach|iec",
  "budget": [
   30,
   30
  ],
- "note": "המסמכים בתוך iframe (SPF/iframe-the-expected-investment-policy-<שנה>.aspx); עמודי השנה עצמם רק עוטפים אותו"
+ "note": "המסמכים בתוך iframe (SPF/iframe-the-expected-investment-policy-<שנה>.aspx); עמודי השנה עצמם רק עוטפים אותו",
+ "track_filter": "^(?!.*(חנ ?י|חח\"?י) מרכזית לקצבה)"
 }
