@@ -525,7 +525,10 @@ async function runPolicySafe() {
     await setStatus({ policyLastRun: Date.now(), policyLastDocs: res.docs, policyErrors: res.errors.slice(0, 5),
                       policyDiag: res.diag || [], policyProgress: "" });
   } catch (e) {
-    await setStatus({ policyLastRun: Date.now(), policyErrors: [String(e && e.message || e)], policyProgress: "" });
+    const { status } = await chrome.storage.local.get("status");
+    const st = status && status.policyState;
+    await setStatus({ policyLastRun: Date.now(), policyErrors: [String(e && e.message || e)], policyProgress: "",
+                      policyState: st ? { ...st, running: false, ended: Date.now(), active: [] } : null });
   } finally {
     policyRunning = false;
     stopKeepAlive();

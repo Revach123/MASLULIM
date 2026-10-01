@@ -64,6 +64,25 @@ async function renderDashboard() {
   el.innerHTML = html;
 }
 
+function esc(t) { return String(t ?? "").replace(/[&<>"]/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c])); }
+
+// התקדמות משיכת המדיניות: פס (אתרים שהסתיימו/סה"כ), שורה לכל אתר פעיל (שלב + עמוד), ואתרים שהסתיימו עם מספר מסמכים
+function renderPolicyState(st) {
+  const box = document.getElementById("policy-state");
+  if (!st) { box.hidden = true; return; }
+  box.hidden = false;
+  const secs = Math.round(((st.ended || Date.now()) - st.started) / 1000);
+  document.getElementById("ps-head").textContent = st.running
+    ? `${st.phase || "אתרים"}: ${st.done}/${st.total} הסתיימו · ${st.newDocs} מסמכים חדשים`
+    : `הסתיים: ${st.done}/${st.total} אתרים · ${st.newDocs} מסמכים חדשים`;
+  document.getElementById("ps-time").textContent = `${Math.floor(secs / 60)}:${String(secs % 60).padStart(2, "0")}`;
+  document.getElementById("ps-bar").style.width = `${st.total ? Math.round(100 * st.done / st.total) : 0}%`;
+  document.getElementById("ps-active").innerHTML = (st.active || []).map((a) =>
+    `⏳ <b>${esc(a.name.slice(0, 28))}</b> · עמוד ${a.pageNo}/${a.pages} · ${esc(a.step)}${a.docs ? ` · ${a.docs} חדשים` : ""}`).join("<br>");
+  document.getElementById("ps-finished").innerHTML = (st.finished || []).map((f) =>
+    `${f.errors && !f.docs ? "⚠️" : "✔"} ${esc(f.name.slice(0, 28))}: ${f.docs} חדשים${f.errors ? ` · ${f.errors} שגיאות` : ""}`).join("<br>");
+}
+
 async function render() {
   const { status, config } = await chrome.storage.local.get(["status", "config"]);
   const s = status || {};
@@ -82,7 +101,10 @@ async function render() {
   document.getElementById("policy-docs").textContent = s.policyLastDocs ?? "—";
   document.getElementById("policy-progress").textContent = s.policyProgress || "";
   document.getElementById("policy-err").textContent = (s.policyErrors || []).join(" | ");
-  document.getElementById("policy-progress").textContent = s.policyProgress || (s.policyDiag || []).join("\n");
+  renderPolicyState(s.policyState);
+  // בזמן ריצה ההתקדמות מוצגת בבלוק המובנה; אחרי הריצה - שורות האבחון
+  document.getElementById("policy-progress").textContent =
+    s.policyState && s.policyState.running ? "" : (s.policyProgress || (s.policyDiag || []).join("\n"));
   document.getElementById("backfill").disabled = !!s.running;
   document.getElementById("sync-local").disabled = !!s.running;
   document.getElementById("stop").hidden = !s.running;
