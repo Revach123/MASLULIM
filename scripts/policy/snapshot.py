@@ -8,7 +8,7 @@
 
 פלט: policy/site_snapshot/<LegalId>.json, site_changes.json, site_changes_log.csv, site_report.csv
 """
-import argparse, csv, hashlib, json, os, re
+import argparse, csv, hashlib, json, os, re, time
 from collections import deque
 from datetime import datetime, timezone
 from pathlib import Path
@@ -141,6 +141,7 @@ def fetch_browser(pw, url):
                         pass
             collect()
 
+        t_int = time.monotonic() + float(os.environ.get("POLICY_PAGE_BUDGET", "240"))
         expand()
         # לשוניות/כפתורי מוצר (הראל: גמל/השתלמות/פנסיה...): לוחצים על כל אחד, פותחים אקורדיונים, אוספים
         tabs = pg.query_selector_all('[role="tab"], button, [role="button"], li[tabindex], [class*=tab]:not(a)')
@@ -154,6 +155,8 @@ def fetch_browser(pw, url):
             pass
         clicked = set()
         for el in tabs[:150]:
+            if time.monotonic() > t_int:  # תקציב זמן לעמוד (כלל: 3 רשימות x עשרות אפשרויות = 13+ דקות)
+                break
             try:
                 t = (el.inner_text() or "").strip()
                 if not (2 <= len(t) <= 40) or t in clicked or not el.is_visible():
@@ -170,11 +173,15 @@ def fetch_browser(pw, url):
                 pass
         # רשימות נפתחות ("מה תרצו למצוא?", בחירת שנה/מוצר): כל אפשרות -> בחירה, פתיחה, איסוף
         for sel_el in pg.query_selector_all("select")[:6]:
+            if time.monotonic() > t_int:  # תקציב זמן לעמוד (כלל: 3 רשימות x עשרות אפשרויות = 13+ דקות)
+                break
             try:
                 opts = sel_el.eval_on_selector_all("option", "os => os.map(o => o.value)")
             except Exception:
                 continue
             for v in opts[:40]:
+                if time.monotonic() > t_int:  # תקציב זמן לעמוד (כלל: 3 רשימות x עשרות אפשרויות = 13+ דקות)
+                    break
                 try:
                     sel_el.select_option(v); pg.wait_for_timeout(700)
                     if pg.url.split("#")[0] != url.split("#")[0]:
@@ -183,6 +190,8 @@ def fetch_browser(pw, url):
                 except Exception:
                     pass
         for el in pg.query_selector_all('[role="option"], [role="menuitem"], [class*=dropdown] li, [class*=select] li')[:60]:
+            if time.monotonic() > t_int:  # תקציב זמן לעמוד (כלל: 3 רשימות x עשרות אפשרויות = 13+ דקות)
+                break
             try:
                 t = (el.inner_text() or "").strip()
                 if 2 <= len(t) <= 60 and el.is_visible():
@@ -207,6 +216,8 @@ def fetch_browser(pw, url):
         want = [t for t in dict.fromkeys(ptexts)
                 if t not in clicked and re.search(r"מדיניות|הצהר|השקע|policy|^(שנת\s*)?20[12]\d$", t) and not re.search(r"פרטיות|תגמול|נגישות|הצבע", t)]
         for t in want[:25]:
+            if time.monotonic() > t_int:  # תקציב זמן לעמוד (כלל: 3 רשימות x עשרות אפשרויות = 13+ דקות)
+                break
             try:
                 pg.get_by_text(t, exact=True).first.click(timeout=1500); pg.wait_for_timeout(1200)
                 if pg.url.split("#")[0] != url.split("#")[0]:
@@ -220,6 +231,7 @@ def fetch_browser(pw, url):
         pg.wait_for_timeout(1000)
         collect()
         # כפתורי "הורדה" שלא מצביעים לקובץ (postback של ASP.NET / JS): לוחצים ולוכדים את ההורדה עצמה
+        t_dl = time.monotonic() + float(os.environ.get("POLICY_DL_BUDGET", "400"))
         dl_dir = Path(os.environ.get("RUNNER_TEMP") or "/tmp") / "policy_dl"
         dl_dir.mkdir(parents=True, exist_ok=True)
         els = pg.query_selector_all("a, button, [role=button], input[type=submit], input[type=button]")
@@ -237,6 +249,8 @@ def fetch_browser(pw, url):
             except Exception:
                 pass
         for el, t in cands[:80]:
+            if time.monotonic() > t_dl:  # תקציב זמן לעמוד (כלל: 3 רשימות x עשרות אפשרויות = 13+ דקות)
+                break
             try:
                 ctx_text = el.evaluate("e => (e.closest('tr,li,.row,[class*=item],[class*=card]') || e.parentElement || e).innerText || ''")
                 ctx_text = re.sub(r"\s+", " ", f"{ctx_text} {t}").strip()[:300]
