@@ -320,8 +320,10 @@ def _prio(text: str, href: str) -> int:
     return 0 if POLICY.search(blob) else 1 if PRODUCT_RX.search(blob) else 2
 
 
-def snapshot_company(s, pw, home, extra, products=None, max_pages=15, depth_max=2):
+def snapshot_company(s, pw, home, extra, products=None, max_pages=15, depth_max=2, follow=None):
+    """follow: regex לקישורים שתמיד נכנסים אליהם ותמיד ברינדור דפדפן (מנורה: עמוד לכל מסלול, הקובץ נחשף רק ברינדור)"""
     import heapq, itertools
+    frx = re.compile(follow) if follow else None
     products = products or {}
     dom = base_domain(home)
     pages, seen, iframes = {}, set(), set()
@@ -338,8 +340,9 @@ def snapshot_company(s, pw, home, extra, products=None, max_pages=15, depth_max=
         items = items_from_anchors(anchors or [], url, dom)
         method = "requests"
         policy_like = sum(score(i["text"]) >= 1 or i["doc"] for i in items.values())
-        if pw and (anchors is None or url in iframes or (d == 0 and url in extra) or policy_like < MIN_LINKS_STATIC) and (
-                url in extra or url in iframes or score(url) > 0 or d == 0):
+        forced = bool(frx and frx.search(unquote(url)))
+        if pw and (forced or ((anchors is None or url in iframes or (d == 0 and url in extra) or policy_like < MIN_LINKS_STATIC) and (
+                url in extra or url in iframes or score(url) > 0 or d == 0))):
             b_anchors, b_status, b_text = fetch_browser(pw, url)
             if b_anchors is not None:
                 items.update(items_from_anchors(b_anchors, url, dom)); text, method, status = b_text, "browser", b_status
@@ -355,8 +358,10 @@ def snapshot_company(s, pw, home, extra, products=None, max_pages=15, depth_max=
                     continue
                 if i.get("iframe"):
                     iframes.add(i["href"])
-                if i.get("iframe") or (i["internal"] and (score(i["text"] + unquote(i["href"])) > 0
-                                                          or PRODUCT_RX.search(i["text"] + unquote(i["href"])))):
+                if frx and frx.search(unquote(i["href"])):
+                    heapq.heappush(q, (0, next(tick), i["href"], d + 1))
+                elif i.get("iframe") or (i["internal"] and (score(i["text"] + unquote(i["href"])) > 0
+                                                            or PRODUCT_RX.search(i["text"] + unquote(i["href"])))):
                     heapq.heappush(q, (_prio(i["text"], i["href"]), next(tick), i["href"], d + 1))
     return pages
 

@@ -4,20 +4,24 @@
  "home": "https://www.menoramivt.co.il",
  "pages": [
   {
-   "product": "גמל",
-   "url": "https://www.menoramivt.co.il/rep-list/about-menora/pension-and-gemel/reports-publishs"
+   "product": "פנסיה",
+   "url": "https://www.menoramivt.co.il/links/pension-and-gemel/pension-plans"
   },
   {
    "product": "גמל",
-   "url": "https://www.menoramivt.co.il/general/about-menora/pension-and-gemel/about-pension-and-gemel"
+   "url": "https://www.menoramivt.co.il/links/pension-and-gemel/gemel-hishtalmut-list/menroa-keren-hishtalmut"
   },
   {
    "product": "גמל",
+   "url": "https://www.menoramivt.co.il/links/pension-and-gemel/gemel-hishtalmut-list/menora-gemel"
+  },
+  {
+   "product": "גמל",
+   "url": "https://www.menoramivt.co.il/links/pension-and-gemel/gemel-hishtalmut-list/top-savings"
+  },
+  {
+   "product": "פנסיה",
    "url": "https://www.menoramivt.co.il/funds/pension-and-gemel/pension-plans/stock-track"
-  },
-  {
-   "product": "גמל",
-   "url": "https://www.menoramivt.co.il/funds/pension-and-gemel/gemel-hishtalmut-list/menroa-keren-hishtalmut/1409"
   }
  ],
  "browser": "headed",
@@ -26,7 +30,9 @@
   "פנסיה"
  ],
  "search": false,
- "rev": 12,
- "note": "עמוד participating-portfolio-info/investment-policy = מסלולי מנורה *ביטוח* (520042540) - לא לחברה זו. פנסיה וגמל: עמודי הקרנות",
- "exclude": "about-insurance|participating-portfolio|מנורה-ביטוח|משתתף"
+ "rev": 13,
+ "note": "מנורה: קובץ מדיניות לכל מסלול בעמוד המסלול (/funds/...), נחשף רק ברינדור. עמודי links/ = רשימות המסלולים; follow נכנס לכל מסלול בדפדפן. exclude: תיק ביטוח משתתף של מנורה ביטוח",
+ "exclude": "about-insurance|participating-portfolio|מנורה-ביטוח|משתתף",
+ "follow": "/funds/pension-and-gemel/(pension-plans|gemel-hishtalmut-list/(menroa-keren-hishtalmut|menora-gemel|top-savings))/",
+ "max_pages": 70
 }
