@@ -1,911 +1,2162 @@
 [
  {
-  "kind": "new_item",
+  "kind": "text_changed",
   "page": "https://www.analyst.co.il/investment-policy/",
-  "text": "קרן השתלמות",
-  "href": "https://www.analyst.co.il/funds-lobby/training-funds/",
+  "text": " -> תגמול לסוכנים עבור קידום מכירות -אוקטובר 2026 הורדת מסמך",
+  "href": "https://www.analyst.co.il/wp-content/uploads/2026/09/%D7%A7%D7%91%D7%95%D7%A6%D7%94-32-1.pdf",
   "legal_id": "511880460",
   "company": "אנליסט קופות גמל בע\"מ",
-  "detected": "2026-09-30T22:26:07+00:00"
+  "detected": "2026-10-01T11:02:43+00:00"
+ },
+ {
+  "kind": "text_changed",
+  "page": "https://www.analyst.co.il/investment-policy/",
+  "text": " -> תגמול לסוכנים עבור קידום מכירות - ספטמבר 2026 הורדת מסמך",
+  "href": "https://www.analyst.co.il/wp-content/uploads/2026/09/%D7%A7%D7%91%D7%95%D7%A6%D7%94-31.pdf",
+  "legal_id": "511880460",
+  "company": "אנליסט קופות גמל בע\"מ",
+  "detected": "2026-10-01T11:02:43+00:00"
+ },
+ {
+  "kind": "text_changed",
+  "page": "https://www.analyst.co.il/investment-policy/",
+  "text": " -> תגמול לסוכנים עבור קידום מכירות - ספטמבר 2026 הורדת מסמך",
+  "href": "https://www.analyst.co.il/wp-content/uploads/2026/08/%D7%A7%D7%91%D7%95%D7%A6%D7%94-30.pdf",
+  "legal_id": "511880460",
+  "company": "אנליסט קופות גמל בע\"מ",
+  "detected": "2026-10-01T11:02:43+00:00"
+ },
+ {
+  "kind": "text_changed",
+  "page": "https://www.analyst.co.il/investment-policy/",
+  "text": " -> תגמול לסוכנים עבור קידום מכירות - מאי 2026 הורדת מסמך",
+  "href": "https://www.analyst.co.il/wp-content/uploads/2026/07/%D7%A7%D7%91%D7%95%D7%A6%D7%94-26-%D7%A0%D7%92%D7%99%D7%A9.pdf",
+  "legal_id": "511880460",
+  "company": "אנליסט קופות גמל בע\"מ",
+  "detected": "2026-10-01T11:02:43+00:00"
+ },
+ {
+  "kind": "text_changed",
+  "page": "https://www.analyst.co.il/investment-policy/",
+  "text": " -> תגמול לסוכנים עבור קידום מכירות - מאי 2026 הורדת מסמך",
+  "href": "https://www.analyst.co.il/wp-content/uploads/2026/05/%D7%A7%D7%91%D7%95%D7%A6%D7%94-1-%D7%A0%D7%92%D7%99%D7%A9.pdf",
+  "legal_id": "511880460",
+  "company": "אנליסט קופות גמל בע\"מ",
+  "detected": "2026-10-01T11:02:43+00:00"
+ },
+ {
+  "kind": "text_changed",
+  "page": "https://www.analyst.co.il/investment-policy/",
+  "text": " -> תגמול לסוכנים עבור קידום מכירות - מאי 2026 הורדת מסמך",
+  "href": "https://www.analyst.co.il/wp-content/uploads/2026/05/%D7%A7%D7%91%D7%95%D7%A6%D7%94-2-%D7%A0%D7%92%D7%99%D7%A9.pdf",
+  "legal_id": "511880460",
+  "company": "אנליסט קופות גמל בע\"מ",
+  "detected": "2026-10-01T11:02:43+00:00"
+ },
+ {
+  "kind": "text_changed",
+  "page": "https://www.analyst.co.il/investment-policy/",
+  "text": " -> תגמול לסוכנים עבור קידום מכירות - מאי 2026 הורדת מסמך",
+  "href": "https://www.analyst.co.il/wp-content/uploads/2026/05/%D7%A7%D7%91%D7%95%D7%A6%D7%94-3-%D7%A0%D7%92%D7%99%D7%A9.pdf",
+  "legal_id": "511880460",
+  "company": "אנליסט קופות גמל בע\"מ",
+  "detected": "2026-10-01T11:02:43+00:00"
+ },
+ {
+  "kind": "text_changed",
+  "page": "https://www.analyst.co.il/investment-policy/",
+  "text": " -> תגמול לסוכנים עבור קידום מכירות - מאי 2026 הורדת מסמך",
+  "href": "https://www.analyst.co.il/wp-content/uploads/2026/05/%D7%A7%D7%91%D7%95%D7%A6%D7%94-4-%D7%A0%D7%92%D7%99%D7%A9.pdf",
+  "legal_id": "511880460",
+  "company": "אנליסט קופות גמל בע\"מ",
+  "detected": "2026-10-01T11:02:43+00:00"
+ },
+ {
+  "kind": "text_changed",
+  "page": "https://www.analyst.co.il/investment-policy/",
+  "text": " -> תגמול לסוכנים עבור קידום מכירות - מאי 2026 הורדת מסמך",
+  "href": "https://www.analyst.co.il/wp-content/uploads/2026/05/%D7%A7%D7%91%D7%95%D7%A6%D7%94-5-%D7%A0%D7%92%D7%99%D7%A9.pdf",
+  "legal_id": "511880460",
+  "company": "אנליסט קופות גמל בע\"מ",
+  "detected": "2026-10-01T11:02:43+00:00"
+ },
+ {
+  "kind": "text_changed",
+  "page": "https://www.analyst.co.il/investment-policy/",
+  "text": " -> תגמול לסוכנים עבור קידום מכירות - מאי 2026 הורדת מסמך",
+  "href": "https://www.analyst.co.il/wp-content/uploads/2026/05/%D7%A7%D7%91%D7%95%D7%A6%D7%94-6-%D7%A0%D7%92%D7%99%D7%A9.pdf",
+  "legal_id": "511880460",
+  "company": "אנליסט קופות גמל בע\"מ",
+  "detected": "2026-10-01T11:02:43+00:00"
+ },
+ {
+  "kind": "text_changed",
+  "page": "https://www.analyst.co.il/investment-policy/",
+  "text": " -> תגמול לסוכנים עבור קידום מכירות - מאי 2026 הורדת מסמך",
+  "href": "https://www.analyst.co.il/wp-content/uploads/2026/05/%D7%A7%D7%91%D7%95%D7%A6%D7%94-7-%D7%A0%D7%92%D7%99%D7%A9.pdf",
+  "legal_id": "511880460",
+  "company": "אנליסט קופות גמל בע\"מ",
+  "detected": "2026-10-01T11:02:43+00:00"
+ },
+ {
+  "kind": "text_changed",
+  "page": "https://www.analyst.co.il/investment-policy/",
+  "text": " -> תגמול לסוכנים עבור קידום מכירות - מאי 2026 הורדת מסמך",
+  "href": "https://www.analyst.co.il/wp-content/uploads/2026/05/%D7%A7%D7%91%D7%95%D7%A6%D7%94-8-%D7%A0%D7%92%D7%99%D7%A9.pdf",
+  "legal_id": "511880460",
+  "company": "אנליסט קופות גמל בע\"מ",
+  "detected": "2026-10-01T11:02:43+00:00"
+ },
+ {
+  "kind": "text_changed",
+  "page": "https://www.analyst.co.il/investment-policy/",
+  "text": " -> תגמול לסוכנים עבור קידום מכירות - מאי 2026 הורדת מסמך",
+  "href": "https://www.analyst.co.il/wp-content/uploads/2026/05/%D7%A7%D7%91%D7%95%D7%A6%D7%94-9-%D7%A0%D7%92%D7%99%D7%A9.pdf",
+  "legal_id": "511880460",
+  "company": "אנליסט קופות גמל בע\"מ",
+  "detected": "2026-10-01T11:02:43+00:00"
+ },
+ {
+  "kind": "text_changed",
+  "page": "https://www.analyst.co.il/investment-policy/",
+  "text": " -> תגמול לסוכנים עבור קידום מכירות - מאי 2026 הורדת מסמך",
+  "href": "https://www.analyst.co.il/wp-content/uploads/2026/05/%D7%A7%D7%91%D7%95%D7%A6%D7%94-10-%D7%A0%D7%92%D7%99%D7%A9.pdf",
+  "legal_id": "511880460",
+  "company": "אנליסט קופות גמל בע\"מ",
+  "detected": "2026-10-01T11:02:43+00:00"
+ },
+ {
+  "kind": "text_changed",
+  "page": "https://www.analyst.co.il/investment-policy/",
+  "text": " -> תגמול לסוכנים עבור קידום מכירות - מאי 2026 הורדת מסמך",
+  "href": "https://www.analyst.co.il/wp-content/uploads/2026/05/%D7%A7%D7%91%D7%95%D7%A6%D7%94-11-%D7%A0%D7%92%D7%99%D7%A9.pdf",
+  "legal_id": "511880460",
+  "company": "אנליסט קופות גמל בע\"מ",
+  "detected": "2026-10-01T11:02:43+00:00"
+ },
+ {
+  "kind": "text_changed",
+  "page": "https://www.analyst.co.il/investment-policy/",
+  "text": " -> תגמול לסוכנים עבור קידום מכירות - מאי 2026 הורדת מסמך",
+  "href": "https://www.analyst.co.il/wp-content/uploads/2026/05/%D7%A7%D7%91%D7%95%D7%A6%D7%94-12-%D7%A0%D7%92%D7%99%D7%A9.pdf",
+  "legal_id": "511880460",
+  "company": "אנליסט קופות גמל בע\"מ",
+  "detected": "2026-10-01T11:02:43+00:00"
+ },
+ {
+  "kind": "text_changed",
+  "page": "https://www.analyst.co.il/investment-policy/",
+  "text": " -> תגמול לסוכנים עבור קידום מכירות - מאי 2026 הורדת מסמך",
+  "href": "https://www.analyst.co.il/wp-content/uploads/2026/05/%D7%A7%D7%91%D7%95%D7%A6%D7%94-13-%D7%A0%D7%92%D7%99%D7%A9.pdf",
+  "legal_id": "511880460",
+  "company": "אנליסט קופות גמל בע\"מ",
+  "detected": "2026-10-01T11:02:43+00:00"
+ },
+ {
+  "kind": "text_changed",
+  "page": "https://www.analyst.co.il/investment-policy/",
+  "text": " -> תגמול לסוכנים עבור קידום מכירות - מאי 2026 הורדת מסמך",
+  "href": "https://www.analyst.co.il/wp-content/uploads/2026/05/%D7%A7%D7%91%D7%95%D7%A6%D7%94-14-%D7%A0%D7%92%D7%99%D7%A9.pdf",
+  "legal_id": "511880460",
+  "company": "אנליסט קופות גמל בע\"מ",
+  "detected": "2026-10-01T11:02:43+00:00"
+ },
+ {
+  "kind": "text_changed",
+  "page": "https://www.analyst.co.il/investment-policy/",
+  "text": " -> תגמול לסוכנים עבור קידום מכירות - מאי 2026 הורדת מסמך",
+  "href": "https://www.analyst.co.il/wp-content/uploads/2026/05/%D7%A7%D7%91%D7%95%D7%A6%D7%94-15-%D7%A0%D7%92%D7%99%D7%A9.pdf",
+  "legal_id": "511880460",
+  "company": "אנליסט קופות גמל בע\"מ",
+  "detected": "2026-10-01T11:02:43+00:00"
+ },
+ {
+  "kind": "text_changed",
+  "page": "https://www.analyst.co.il/investment-policy/",
+  "text": " -> תגמול לסוכנים עבור קידום מכירות - מאי 2026 הורדת מסמך",
+  "href": "https://www.analyst.co.il/wp-content/uploads/2026/05/%D7%A7%D7%91%D7%95%D7%A6%D7%94-16-%D7%A0%D7%92%D7%99%D7%A9.pdf",
+  "legal_id": "511880460",
+  "company": "אנליסט קופות גמל בע\"מ",
+  "detected": "2026-10-01T11:02:43+00:00"
+ },
+ {
+  "kind": "text_changed",
+  "page": "https://www.analyst.co.il/investment-policy/",
+  "text": " -> תגמול לסוכנים עבור קידום מכירות - מאי 2026 הורדת מסמך",
+  "href": "https://www.analyst.co.il/wp-content/uploads/2026/05/%D7%A7%D7%91%D7%95%D7%A6%D7%94-17-%D7%A0%D7%92%D7%99%D7%A9.pdf",
+  "legal_id": "511880460",
+  "company": "אנליסט קופות גמל בע\"מ",
+  "detected": "2026-10-01T11:02:43+00:00"
+ },
+ {
+  "kind": "text_changed",
+  "page": "https://www.analyst.co.il/investment-policy/",
+  "text": " -> תגמול לסוכנים עבור קידום מכירות - מאי 2026 הורדת מסמך",
+  "href": "https://www.analyst.co.il/wp-content/uploads/2026/05/%D7%A7%D7%91%D7%95%D7%A6%D7%94-18-%D7%A0%D7%92%D7%99%D7%A9.pdf",
+  "legal_id": "511880460",
+  "company": "אנליסט קופות גמל בע\"מ",
+  "detected": "2026-10-01T11:02:43+00:00"
+ },
+ {
+  "kind": "text_changed",
+  "page": "https://www.analyst.co.il/investment-policy/",
+  "text": " -> תגמול לסוכנים עבור קידום מכירות - מאי 2026 הורדת מסמך",
+  "href": "https://www.analyst.co.il/wp-content/uploads/2026/05/%D7%A7%D7%91%D7%95%D7%A6%D7%94-19-%D7%A0%D7%92%D7%99%D7%A9.pdf",
+  "legal_id": "511880460",
+  "company": "אנליסט קופות גמל בע\"מ",
+  "detected": "2026-10-01T11:02:43+00:00"
+ },
+ {
+  "kind": "text_changed",
+  "page": "https://www.analyst.co.il/investment-policy/",
+  "text": " -> תגמול לסוכנים עבור קידום מכירות - מאי 2026 הורדת מסמך",
+  "href": "https://www.analyst.co.il/wp-content/uploads/2026/05/%D7%A7%D7%91%D7%95%D7%A6%D7%94-20-%D7%A0%D7%92%D7%99%D7%A9.pdf",
+  "legal_id": "511880460",
+  "company": "אנליסט קופות גמל בע\"מ",
+  "detected": "2026-10-01T11:02:43+00:00"
+ },
+ {
+  "kind": "text_changed",
+  "page": "https://www.analyst.co.il/investment-policy/",
+  "text": " -> תגמול לסוכנים עבור קידום מכירות - מאי 2026 הורדת מסמך",
+  "href": "https://www.analyst.co.il/wp-content/uploads/2026/05/%D7%A7%D7%91%D7%95%D7%A6%D7%94-21-%D7%A0%D7%92%D7%99%D7%A9.pdf",
+  "legal_id": "511880460",
+  "company": "אנליסט קופות גמל בע\"מ",
+  "detected": "2026-10-01T11:02:43+00:00"
+ },
+ {
+  "kind": "text_changed",
+  "page": "https://www.analyst.co.il/investment-policy/",
+  "text": " -> תגמול לסוכנים עבור קידום מכירות - מאי 2026 הורדת מסמך",
+  "href": "https://www.analyst.co.il/wp-content/uploads/2026/05/%D7%A7%D7%91%D7%95%D7%A6%D7%94-22-%D7%A0%D7%92%D7%99%D7%A9.pdf",
+  "legal_id": "511880460",
+  "company": "אנליסט קופות גמל בע\"מ",
+  "detected": "2026-10-01T11:02:43+00:00"
+ },
+ {
+  "kind": "text_changed",
+  "page": "https://www.analyst.co.il/investment-policy/",
+  "text": " -> תגמול לסוכנים עבור קידום מכירות - מאי 2026 הורדת מסמך",
+  "href": "https://www.analyst.co.il/wp-content/uploads/2026/05/%D7%A7%D7%91%D7%95%D7%A6%D7%94-23-%D7%A0%D7%92%D7%99%D7%A9.pdf",
+  "legal_id": "511880460",
+  "company": "אנליסט קופות גמל בע\"מ",
+  "detected": "2026-10-01T11:02:43+00:00"
+ },
+ {
+  "kind": "text_changed",
+  "page": "https://www.analyst.co.il/investment-policy/",
+  "text": " -> תגמול לסוכנים עבור קידום מכירות - מאי 2026 הורדת מסמך",
+  "href": "https://www.analyst.co.il/wp-content/uploads/2026/05/%D7%A7%D7%91%D7%95%D7%A6%D7%94-24-%D7%A0%D7%92%D7%99%D7%A9.pdf",
+  "legal_id": "511880460",
+  "company": "אנליסט קופות גמל בע\"מ",
+  "detected": "2026-10-01T11:02:43+00:00"
+ },
+ {
+  "kind": "text_changed",
+  "page": "https://www.analyst.co.il/investment-policy/",
+  "text": " -> תגמול לסוכנים עבור קידום מכירות - מאי 2026 הורדת מסמך",
+  "href": "https://www.analyst.co.il/wp-content/uploads/2026/05/%D7%A7%D7%91%D7%95%D7%A6%D7%94-25-%D7%A0%D7%92%D7%99%D7%A9.pdf",
+  "legal_id": "511880460",
+  "company": "אנליסט קופות גמל בע\"מ",
+  "detected": "2026-10-01T11:02:43+00:00"
+ },
+ {
+  "kind": "text_changed",
+  "page": "https://www.analyst.co.il/investment-policy/",
+  "text": " -> תגמול לסוכנים עבור קידום מכירות - יולי 2026 הורדת מסמך",
+  "href": "https://www.analyst.co.il/wp-content/uploads/2026/08/%D7%A7%D7%91%D7%95%D7%A6%D7%94-27-1.pdf",
+  "legal_id": "511880460",
+  "company": "אנליסט קופות גמל בע\"מ",
+  "detected": "2026-10-01T11:02:43+00:00"
+ },
+ {
+  "kind": "text_changed",
+  "page": "https://www.analyst.co.il/investment-policy/",
+  "text": " -> תגמול לסוכנים עבור קידום מכירות - אוגוסט 2026 הורדת מסמך",
+  "href": "https://www.analyst.co.il/wp-content/uploads/2026/08/%D7%A7%D7%91%D7%95%D7%A6%D7%94-29.pdf",
+  "legal_id": "511880460",
+  "company": "אנליסט קופות גמל בע\"מ",
+  "detected": "2026-10-01T11:02:43+00:00"
+ },
+ {
+  "kind": "text_changed",
+  "page": "https://www.analyst.co.il/investment-policy/",
+  "text": " -> תגמול לסוכנים עבור קידום מכירות - אוגוסט 2026 הורדת מסמך",
+  "href": "https://www.analyst.co.il/wp-content/uploads/2026/09/%D7%A7%D7%91%D7%95%D7%A6%D7%94-28-%D7%9E%D7%95%D7%A0%D7%92%D7%A9-1.pdf",
+  "legal_id": "511880460",
+  "company": "אנליסט קופות גמל בע\"מ",
+  "detected": "2026-10-01T11:02:43+00:00"
+ },
+ {
+  "kind": "text_changed",
+  "page": "https://www.analyst.co.il/investment-policy/",
+  "text": " -> מדיניות השקעה צפויה לשנת 2026, עדכון 28/09/2026, עדכון שיעור החשיפה הצפוי למניות בקופות: גמל מסלול לבני 50 ומטה, קופה מרכזית לפיצויים מסלול כללי, גמל לבני 50-60, גמל לבני 60 ומעלה, השתלמות כללי, גמל ל הורדת מסמך",
+  "href": "https://www.analyst.co.il/wp-content/uploads/2026/09/%D7%90%D7%A0%D7%9C%D7%99%D7%A1%D7%98-%D7%9E%D7%93%D7%99%D7%A0%D7%99%D7%95%D7%AA-%D7%94%D7%A9%D7%A7%D7%A2%D7%94-2026-%D7%9E%D7%95%D7%A0%D7%92%D7%A9.pdf",
+  "legal_id": "511880460",
+  "company": "אנליסט קופות גמל בע\"מ",
+  "detected": "2026-10-01T11:02:43+00:00"
+ },
+ {
+  "kind": "text_changed",
+  "page": "https://www.analyst.co.il/investment-policy/",
+  "text": " -> מדיניות השקעה צפויה לשנת 2026, עדכון 23/03/2026, עדכון שיעור החשיפה הצפוי למט\"ח בקופות: גמל מניות, גמל להשקעה מניות, השתלמות מניות, גמל חיסכון לכל ילד סיכון גבוה. עדכון שיעור החשיפה הצפוי לאג\"ח ממשלתי הורדת מסמך",
+  "href": "https://www.analyst.co.il/wp-content/uploads/2026/03/%D7%90%D7%A0%D7%9C%D7%99%D7%A1%D7%98-%D7%9E%D7%93%D7%99%D7%A0%D7%99%D7%95%D7%AA-%D7%94%D7%A9%D7%A7%D7%A2%D7%94-2026-PDFUA.pdf",
+  "legal_id": "511880460",
+  "company": "אנליסט קופות גמל בע\"מ",
+  "detected": "2026-10-01T11:02:43+00:00"
+ },
+ {
+  "kind": "text_changed",
+  "page": "https://www.analyst.co.il/investment-policy/",
+  "text": " -> מדיניות השקעה צפויה לשנת 2026, עדכון 18/05/2026, עדכון שיעור החשיפה הצפוי לאג\"ח ממשלתי בקופות: גמל עוקב מדד S&P500, השתלמות עוקב מדד S&P500, גמל להשקעה עוקב מדד S&P500 הורדת מסמך",
+  "href": "https://www.analyst.co.il/wp-content/uploads/2026/05/%D7%90%D7%A0%D7%9C%D7%99%D7%A1%D7%98-%D7%9E%D7%93%D7%99%D7%A0%D7%99%D7%95%D7%AA-%D7%94%D7%A9%D7%A7%D7%A2%D7%94-2026-PDFUA.pdf",
+  "legal_id": "511880460",
+  "company": "אנליסט קופות גמל בע\"מ",
+  "detected": "2026-10-01T11:02:43+00:00"
+ },
+ {
+  "kind": "text_changed",
+  "page": "https://www.analyst.co.il/investment-policy/",
+  "text": " -> מדיניות השקעה צפויה לשנת 2026, עדכון 09/02/2026, עדכון שיעור החשיפה הצפוי לאג\"ח ממשלתי ולמזומן בקופת: גמל מניות סחיר הורדת מסמך",
+  "href": "https://www.analyst.co.il/wp-content/uploads/2026/02/%D7%90%D7%A0%D7%9C%D7%99%D7%A1%D7%98-%D7%9E%D7%93%D7%99%D7%A0%D7%99%D7%95%D7%AA-%D7%94%D7%A9%D7%A7%D7%A2%D7%94-2026-PDFUA.pdf",
+  "legal_id": "511880460",
+  "company": "אנליסט קופות גמל בע\"מ",
+  "detected": "2026-10-01T11:02:43+00:00"
+ },
+ {
+  "kind": "text_changed",
+  "page": "https://www.analyst.co.il/investment-policy/",
+  "text": " -> מדיניות השקעה צפויה לשנת 2026 הורדת מסמך",
+  "href": "https://www.analyst.co.il/wp-content/uploads/2026/01/%D7%90%D7%A0%D7%9C%D7%99%D7%A1%D7%98-%D7%9E%D7%93%D7%99%D7%A0%D7%99%D7%95%D7%AA-%D7%94%D7%A9%D7%A7%D7%A2%D7%94-2026-PDFUA.pdf",
+  "legal_id": "511880460",
+  "company": "אנליסט קופות גמל בע\"מ",
+  "detected": "2026-10-01T11:02:43+00:00"
+ },
+ {
+  "kind": "text_changed",
+  "page": "https://www.analyst.co.il/investment-policy/",
+  "text": " -> מגבלת עמלת ניהול חיצוני - 2026 (גרסה מונגשת) הורדת מסמך",
+  "href": "https://www.analyst.co.il/wp-content/uploads/2026/01/%D7%9E%D7%92%D7%91%D7%9C%D7%AA-%D7%A2%D7%9E%D7%9C%D7%AA-%D7%A0%D7%99%D7%94%D7%95%D7%9C-%D7%97%D7%99%D7%A6%D7%95%D7%A0%D7%99-2026-%D7%9E%D7%95%D7%A0%D7%92%D7%A9.pdf",
+  "legal_id": "511880460",
+  "company": "אנליסט קופות גמל בע\"מ",
+  "detected": "2026-10-01T11:02:43+00:00"
+ },
+ {
+  "kind": "text_changed",
+  "page": "https://www.analyst.co.il/investment-policy/",
+  "text": " -> דו\"ח פומבי חוק שכר שווה לעובדת ולעובד הורדת מסמך",
+  "href": "https://www.analyst.co.il/wp-content/uploads/2026/06/%D7%93%D7%95%D7%97-%D7%A9%D7%9B%D7%A8-%D7%A9%D7%95%D7%95%D7%94-2025.pdf",
+  "legal_id": "511880460",
+  "company": "אנליסט קופות גמל בע\"מ",
+  "detected": "2026-10-01T11:02:43+00:00"
+ },
+ {
+  "kind": "text_changed",
+  "page": "https://www.analyst.co.il/investment-policy/",
+  "text": " -> (html)",
+  "href": "https://www.analyst.co.il/wp-content/uploads/2026/09/אנליסט-מדיניות-השקעה-2026-מונגש.pdf",
+  "legal_id": "511880460",
+  "company": "אנליסט קופות גמל בע\"מ",
+  "detected": "2026-10-01T11:02:43+00:00"
+ },
+ {
+  "kind": "text_changed",
+  "page": "https://www.analyst.co.il/investment-policy/",
+  "text": " -> (html)",
+  "href": "https://www.analyst.co.il/wp-content/uploads/2026/05/אנליסט-מדיניות-השקעה-2026-PDFUA.pdf",
+  "legal_id": "511880460",
+  "company": "אנליסט קופות גמל בע\"מ",
+  "detected": "2026-10-01T11:02:43+00:00"
+ },
+ {
+  "kind": "text_changed",
+  "page": "https://www.analyst.co.il/investment-policy/",
+  "text": " -> (html)",
+  "href": "https://www.analyst.co.il/wp-content/uploads/2026/03/אנליסט-מדיניות-השקעה-2026-PDFUA.pdf",
+  "legal_id": "511880460",
+  "company": "אנליסט קופות גמל בע\"מ",
+  "detected": "2026-10-01T11:02:43+00:00"
+ },
+ {
+  "kind": "text_changed",
+  "page": "https://www.analyst.co.il/investment-policy/",
+  "text": " -> (html)",
+  "href": "https://www.analyst.co.il/wp-content/uploads/2026/02/אנליסט-מדיניות-השקעה-2026-PDFUA.pdf",
+  "legal_id": "511880460",
+  "company": "אנליסט קופות גמל בע\"מ",
+  "detected": "2026-10-01T11:02:43+00:00"
+ },
+ {
+  "kind": "text_changed",
+  "page": "https://www.analyst.co.il/investment-policy/",
+  "text": " -> (html)",
+  "href": "https://www.analyst.co.il/wp-content/uploads/2026/01/אנליסט-מדיניות-השקעה-2026-PDFUA.pdf",
+  "legal_id": "511880460",
+  "company": "אנליסט קופות גמל בע\"מ",
+  "detected": "2026-10-01T11:02:43+00:00"
+ },
+ {
+  "kind": "text_changed",
+  "page": "https://www.analyst.co.il/investment-policy/",
+  "text": " -> (html)",
+  "href": "https://www.analyst.co.il/wp-content/uploads/2026/01/820-10885405389_flayer-amlat-hagbala.pdf",
+  "legal_id": "511880460",
+  "company": "אנליסט קופות גמל בע\"מ",
+  "detected": "2026-10-01T11:02:43+00:00"
+ },
+ {
+  "kind": "text_changed",
+  "page": "https://www.analyst.co.il/investment-policy/",
+  "text": " -> (html)",
+  "href": "https://www.analyst.co.il/wp-content/uploads/2026/01/מגבלת-עמלת-ניהול-חיצוני-2026-מונגש.pdf",
+  "legal_id": "511880460",
+  "company": "אנליסט קופות גמל בע\"מ",
+  "detected": "2026-10-01T11:02:43+00:00"
+ },
+ {
+  "kind": "text_changed",
+  "page": "https://www.analyst.co.il/investment-policy/",
+  "text": " -> (html)",
+  "href": "https://www.analyst.co.il/wp-content/uploads/2026/09/קבוצה-32-1.pdf",
+  "legal_id": "511880460",
+  "company": "אנליסט קופות גמל בע\"מ",
+  "detected": "2026-10-01T11:02:43+00:00"
+ },
+ {
+  "kind": "text_changed",
+  "page": "https://www.analyst.co.il/investment-policy/",
+  "text": " -> (html)",
+  "href": "https://www.analyst.co.il/wp-content/uploads/2026/09/קבוצה-31.pdf",
+  "legal_id": "511880460",
+  "company": "אנליסט קופות גמל בע\"מ",
+  "detected": "2026-10-01T11:02:43+00:00"
+ },
+ {
+  "kind": "text_changed",
+  "page": "https://www.analyst.co.il/investment-policy/",
+  "text": " -> (html)",
+  "href": "https://www.analyst.co.il/wp-content/uploads/2026/08/קבוצה-30.pdf",
+  "legal_id": "511880460",
+  "company": "אנליסט קופות גמל בע\"מ",
+  "detected": "2026-10-01T11:02:43+00:00"
+ },
+ {
+  "kind": "text_changed",
+  "page": "https://www.analyst.co.il/investment-policy/",
+  "text": " -> (html)",
+  "href": "https://www.analyst.co.il/wp-content/uploads/2026/08/קבוצה-29.pdf",
+  "legal_id": "511880460",
+  "company": "אנליסט קופות גמל בע\"מ",
+  "detected": "2026-10-01T11:02:43+00:00"
+ },
+ {
+  "kind": "text_changed",
+  "page": "https://www.analyst.co.il/investment-policy/",
+  "text": " -> (html)",
+  "href": "https://www.analyst.co.il/wp-content/uploads/2026/09/קבוצה-28-מונגש-1.pdf",
+  "legal_id": "511880460",
+  "company": "אנליסט קופות גמל בע\"מ",
+  "detected": "2026-10-01T11:02:43+00:00"
+ },
+ {
+  "kind": "text_changed",
+  "page": "https://www.analyst.co.il/investment-policy/",
+  "text": " -> (html)",
+  "href": "https://www.analyst.co.il/wp-content/uploads/2026/08/קבוצה-27-1.pdf",
+  "legal_id": "511880460",
+  "company": "אנליסט קופות גמל בע\"מ",
+  "detected": "2026-10-01T11:02:43+00:00"
+ },
+ {
+  "kind": "text_changed",
+  "page": "https://www.analyst.co.il/investment-policy/",
+  "text": " -> (html)",
+  "href": "https://www.analyst.co.il/wp-content/uploads/2026/07/קבוצה-26-נגיש.pdf",
+  "legal_id": "511880460",
+  "company": "אנליסט קופות גמל בע\"מ",
+  "detected": "2026-10-01T11:02:43+00:00"
+ },
+ {
+  "kind": "text_changed",
+  "page": "https://www.analyst.co.il/investment-policy/",
+  "text": " -> (html)",
+  "href": "https://www.analyst.co.il/wp-content/uploads/2026/05/קבוצה-1-נגיש.pdf",
+  "legal_id": "511880460",
+  "company": "אנליסט קופות גמל בע\"מ",
+  "detected": "2026-10-01T11:02:43+00:00"
+ },
+ {
+  "kind": "text_changed",
+  "page": "https://www.analyst.co.il/investment-policy/",
+  "text": " -> (html)",
+  "href": "https://www.analyst.co.il/wp-content/uploads/2026/05/קבוצה-2-נגיש.pdf",
+  "legal_id": "511880460",
+  "company": "אנליסט קופות גמל בע\"מ",
+  "detected": "2026-10-01T11:02:43+00:00"
+ },
+ {
+  "kind": "text_changed",
+  "page": "https://www.analyst.co.il/investment-policy/",
+  "text": " -> (html)",
+  "href": "https://www.analyst.co.il/wp-content/uploads/2026/05/קבוצה-3-נגיש.pdf",
+  "legal_id": "511880460",
+  "company": "אנליסט קופות גמל בע\"מ",
+  "detected": "2026-10-01T11:02:43+00:00"
+ },
+ {
+  "kind": "text_changed",
+  "page": "https://www.analyst.co.il/investment-policy/",
+  "text": " -> (html)",
+  "href": "https://www.analyst.co.il/wp-content/uploads/2026/05/קבוצה-4-נגיש.pdf",
+  "legal_id": "511880460",
+  "company": "אנליסט קופות גמל בע\"מ",
+  "detected": "2026-10-01T11:02:43+00:00"
+ },
+ {
+  "kind": "text_changed",
+  "page": "https://www.analyst.co.il/investment-policy/",
+  "text": " -> (html)",
+  "href": "https://www.analyst.co.il/wp-content/uploads/2026/05/קבוצה-5-נגיש.pdf",
+  "legal_id": "511880460",
+  "company": "אנליסט קופות גמל בע\"מ",
+  "detected": "2026-10-01T11:02:43+00:00"
+ },
+ {
+  "kind": "text_changed",
+  "page": "https://www.analyst.co.il/investment-policy/",
+  "text": " -> (html)",
+  "href": "https://www.analyst.co.il/wp-content/uploads/2026/05/קבוצה-6-נגיש.pdf",
+  "legal_id": "511880460",
+  "company": "אנליסט קופות גמל בע\"מ",
+  "detected": "2026-10-01T11:02:43+00:00"
+ },
+ {
+  "kind": "text_changed",
+  "page": "https://www.analyst.co.il/investment-policy/",
+  "text": " -> (html)",
+  "href": "https://www.analyst.co.il/wp-content/uploads/2026/05/קבוצה-7-נגיש.pdf",
+  "legal_id": "511880460",
+  "company": "אנליסט קופות גמל בע\"מ",
+  "detected": "2026-10-01T11:02:43+00:00"
+ },
+ {
+  "kind": "text_changed",
+  "page": "https://www.analyst.co.il/investment-policy/",
+  "text": " -> (html)",
+  "href": "https://www.analyst.co.il/wp-content/uploads/2026/05/קבוצה-8-נגיש.pdf",
+  "legal_id": "511880460",
+  "company": "אנליסט קופות גמל בע\"מ",
+  "detected": "2026-10-01T11:02:43+00:00"
+ },
+ {
+  "kind": "text_changed",
+  "page": "https://www.analyst.co.il/investment-policy/",
+  "text": " -> (html)",
+  "href": "https://www.analyst.co.il/wp-content/uploads/2026/05/קבוצה-9-נגיש.pdf",
+  "legal_id": "511880460",
+  "company": "אנליסט קופות גמל בע\"מ",
+  "detected": "2026-10-01T11:02:43+00:00"
+ },
+ {
+  "kind": "text_changed",
+  "page": "https://www.analyst.co.il/investment-policy/",
+  "text": " -> (html)",
+  "href": "https://www.analyst.co.il/wp-content/uploads/2026/05/קבוצה-10-נגיש.pdf",
+  "legal_id": "511880460",
+  "company": "אנליסט קופות גמל בע\"מ",
+  "detected": "2026-10-01T11:02:43+00:00"
+ },
+ {
+  "kind": "text_changed",
+  "page": "https://www.analyst.co.il/investment-policy/",
+  "text": " -> (html)",
+  "href": "https://www.analyst.co.il/wp-content/uploads/2026/05/קבוצה-11-נגיש.pdf",
+  "legal_id": "511880460",
+  "company": "אנליסט קופות גמל בע\"מ",
+  "detected": "2026-10-01T11:02:43+00:00"
+ },
+ {
+  "kind": "text_changed",
+  "page": "https://www.analyst.co.il/investment-policy/",
+  "text": " -> (html)",
+  "href": "https://www.analyst.co.il/wp-content/uploads/2026/05/קבוצה-12-נגיש.pdf",
+  "legal_id": "511880460",
+  "company": "אנליסט קופות גמל בע\"מ",
+  "detected": "2026-10-01T11:02:43+00:00"
+ },
+ {
+  "kind": "text_changed",
+  "page": "https://www.analyst.co.il/investment-policy/",
+  "text": " -> (html)",
+  "href": "https://www.analyst.co.il/wp-content/uploads/2026/05/קבוצה-13-נגיש.pdf",
+  "legal_id": "511880460",
+  "company": "אנליסט קופות גמל בע\"מ",
+  "detected": "2026-10-01T11:02:43+00:00"
+ },
+ {
+  "kind": "text_changed",
+  "page": "https://www.analyst.co.il/investment-policy/",
+  "text": " -> (html)",
+  "href": "https://www.analyst.co.il/wp-content/uploads/2026/05/קבוצה-14-נגיש.pdf",
+  "legal_id": "511880460",
+  "company": "אנליסט קופות גמל בע\"מ",
+  "detected": "2026-10-01T11:02:43+00:00"
+ },
+ {
+  "kind": "text_changed",
+  "page": "https://www.analyst.co.il/investment-policy/",
+  "text": " -> (html)",
+  "href": "https://www.analyst.co.il/wp-content/uploads/2026/05/קבוצה-15-נגיש.pdf",
+  "legal_id": "511880460",
+  "company": "אנליסט קופות גמל בע\"מ",
+  "detected": "2026-10-01T11:02:43+00:00"
+ },
+ {
+  "kind": "text_changed",
+  "page": "https://www.analyst.co.il/investment-policy/",
+  "text": " -> (html)",
+  "href": "https://www.analyst.co.il/wp-content/uploads/2026/05/קבוצה-16-נגיש.pdf",
+  "legal_id": "511880460",
+  "company": "אנליסט קופות גמל בע\"מ",
+  "detected": "2026-10-01T11:02:43+00:00"
+ },
+ {
+  "kind": "text_changed",
+  "page": "https://www.analyst.co.il/investment-policy/",
+  "text": " -> (html)",
+  "href": "https://www.analyst.co.il/wp-content/uploads/2026/05/קבוצה-17-נגיש.pdf",
+  "legal_id": "511880460",
+  "company": "אנליסט קופות גמל בע\"מ",
+  "detected": "2026-10-01T11:02:43+00:00"
+ },
+ {
+  "kind": "text_changed",
+  "page": "https://www.analyst.co.il/investment-policy/",
+  "text": " -> (html)",
+  "href": "https://www.analyst.co.il/wp-content/uploads/2026/05/קבוצה-18-נגיש.pdf",
+  "legal_id": "511880460",
+  "company": "אנליסט קופות גמל בע\"מ",
+  "detected": "2026-10-01T11:02:43+00:00"
+ },
+ {
+  "kind": "text_changed",
+  "page": "https://www.analyst.co.il/investment-policy/",
+  "text": " -> (html)",
+  "href": "https://www.analyst.co.il/wp-content/uploads/2026/05/קבוצה-19-נגיש.pdf",
+  "legal_id": "511880460",
+  "company": "אנליסט קופות גמל בע\"מ",
+  "detected": "2026-10-01T11:02:43+00:00"
+ },
+ {
+  "kind": "text_changed",
+  "page": "https://www.analyst.co.il/investment-policy/",
+  "text": " -> (html)",
+  "href": "https://www.analyst.co.il/wp-content/uploads/2026/05/קבוצה-20-נגיש.pdf",
+  "legal_id": "511880460",
+  "company": "אנליסט קופות גמל בע\"מ",
+  "detected": "2026-10-01T11:02:43+00:00"
+ },
+ {
+  "kind": "text_changed",
+  "page": "https://www.analyst.co.il/investment-policy/",
+  "text": " -> (html)",
+  "href": "https://www.analyst.co.il/wp-content/uploads/2026/05/קבוצה-21-נגיש.pdf",
+  "legal_id": "511880460",
+  "company": "אנליסט קופות גמל בע\"מ",
+  "detected": "2026-10-01T11:02:43+00:00"
+ },
+ {
+  "kind": "text_changed",
+  "page": "https://www.analyst.co.il/investment-policy/",
+  "text": " -> (html)",
+  "href": "https://www.analyst.co.il/wp-content/uploads/2026/05/קבוצה-22-נגיש.pdf",
+  "legal_id": "511880460",
+  "company": "אנליסט קופות גמל בע\"מ",
+  "detected": "2026-10-01T11:02:43+00:00"
+ },
+ {
+  "kind": "text_changed",
+  "page": "https://www.analyst.co.il/investment-policy/",
+  "text": " -> (html)",
+  "href": "https://www.analyst.co.il/wp-content/uploads/2026/05/קבוצה-23-נגיש.pdf",
+  "legal_id": "511880460",
+  "company": "אנליסט קופות גמל בע\"מ",
+  "detected": "2026-10-01T11:02:43+00:00"
+ },
+ {
+  "kind": "text_changed",
+  "page": "https://www.analyst.co.il/investment-policy/",
+  "text": " -> (html)",
+  "href": "https://www.analyst.co.il/wp-content/uploads/2026/05/קבוצה-24-נגיש.pdf",
+  "legal_id": "511880460",
+  "company": "אנליסט קופות גמל בע\"מ",
+  "detected": "2026-10-01T11:02:43+00:00"
+ },
+ {
+  "kind": "text_changed",
+  "page": "https://www.analyst.co.il/investment-policy/",
+  "text": " -> (html)",
+  "href": "https://www.analyst.co.il/wp-content/uploads/2026/05/קבוצה-25-נגיש.pdf",
+  "legal_id": "511880460",
+  "company": "אנליסט קופות גמל בע\"מ",
+  "detected": "2026-10-01T11:02:43+00:00"
+ },
+ {
+  "kind": "text_changed",
+  "page": "https://www.analyst.co.il/investment-policy/",
+  "text": " -> (html)",
+  "href": "https://www.analyst.co.il/wp-content/uploads/2026/06/דוח-שכר-שווה-2025.pdf",
+  "legal_id": "511880460",
+  "company": "אנליסט קופות גמל בע\"מ",
+  "detected": "2026-10-01T11:02:43+00:00"
+ },
+ {
+  "kind": "text_changed",
+  "page": "https://www.analyst.co.il/investment-policy/",
+  "text": "במדיניות הפרטיות המעודכנת שלנו -> (html)",
+  "href": "https://www.analyst.co.il/wp-content/uploads/2026/08/%D7%9E%D7%93%D7%99%D7%A0%D7%99%D7%95%D7%AA-%D7%94%D7%92%D7%A0%D7%AA-%D7%94%D7%A4%D7%A8%D7%98%D7%99%D7%95%D7%AA-%D7%9E%D7%A2%D7%95%D7%93%D7%9B%D7%A0%D7%AA-2026-PDF.pdf",
+  "legal_id": "511880460",
+  "company": "אנליסט קופות גמל בע\"מ",
+  "detected": "2026-10-01T11:02:43+00:00"
+ },
+ {
+  "kind": "text_changed",
+  "page": "https://www.analyst.co.il/investment-policy/",
+  "text": " -> תגמול לסוכנים עבור קידום מכירות - נובמבר 2025 הורדת מסמך",
+  "href": "https://www.analyst.co.il/wp-content/uploads/2025/11/%D7%A4%D7%A8%D7%A1%D7%95%D7%9D-%D7%9E%D7%A9%D7%95%D7%9C%D7%91-%D7%91%D7%90%D7%AA%D7%A8-%D7%A7%D7%91%D7%95%D7%A6%D7%94.pdf",
+  "legal_id": "511880460",
+  "company": "אנליסט קופות גמל בע\"מ",
+  "detected": "2026-10-01T11:02:43+00:00"
+ },
+ {
+  "kind": "text_changed",
+  "page": "https://www.analyst.co.il/investment-policy/",
+  "text": " -> תגמול לסוכנים עבור קידום מכירות - נובמבר 2025 הורדת מסמך",
+  "href": "https://www.analyst.co.il/wp-content/uploads/2025/11/%D7%A4%D7%A8%D7%A1%D7%95%D7%9D-%D7%9E%D7%A9%D7%95%D7%9C%D7%91-%D7%91%D7%90%D7%AA%D7%A8-%D7%A7%D7%91%D7%95%D7%A6%D7%94-1-%D7%9E%D7%95%D7%A0%D7%92%D7%A9.pdf",
+  "legal_id": "511880460",
+  "company": "אנליסט קופות גמל בע\"מ",
+  "detected": "2026-10-01T11:02:43+00:00"
+ },
+ {
+  "kind": "text_changed",
+  "page": "https://www.analyst.co.il/investment-policy/",
+  "text": " -> תגמול לסוכנים עבור קידום מכירות - נובמבר 2025 הורדת מסמך",
+  "href": "https://www.analyst.co.il/wp-content/uploads/2025/11/%D7%A4%D7%A8%D7%A1%D7%95%D7%9D-%D7%9E%D7%A9%D7%95%D7%9C%D7%91-%D7%91%D7%90%D7%AA%D7%A8-%D7%A7%D7%91%D7%95%D7%A6%D7%94-2-%D7%9E%D7%95%D7%A0%D7%92%D7%A9.pdf",
+  "legal_id": "511880460",
+  "company": "אנליסט קופות גמל בע\"מ",
+  "detected": "2026-10-01T11:02:43+00:00"
+ },
+ {
+  "kind": "text_changed",
+  "page": "https://www.analyst.co.il/investment-policy/",
+  "text": " -> תגמול לסוכנים עבור קידום מכירות - נובמבר 2025 הורדת מסמך",
+  "href": "https://www.analyst.co.il/wp-content/uploads/2025/11/%D7%A4%D7%A8%D7%A1%D7%95%D7%9D-%D7%9E%D7%A9%D7%95%D7%9C%D7%91-%D7%91%D7%90%D7%AA%D7%A8-%D7%A7%D7%91%D7%95%D7%A6%D7%94-3-%D7%9E%D7%95%D7%A0%D7%92%D7%A9.pdf",
+  "legal_id": "511880460",
+  "company": "אנליסט קופות גמל בע\"מ",
+  "detected": "2026-10-01T11:02:43+00:00"
+ },
+ {
+  "kind": "text_changed",
+  "page": "https://www.analyst.co.il/investment-policy/",
+  "text": " -> תגמול לסוכנים עבור קידום מכירות - נובמבר 2025 הורדת מסמך",
+  "href": "https://www.analyst.co.il/wp-content/uploads/2025/11/%D7%A4%D7%A8%D7%A1%D7%95%D7%9D-%D7%9E%D7%A9%D7%95%D7%9C%D7%91-%D7%91%D7%90%D7%AA%D7%A8-%D7%A7%D7%91%D7%95%D7%A6%D7%94-4-%D7%9E%D7%95%D7%A0%D7%92%D7%A9.pdf",
+  "legal_id": "511880460",
+  "company": "אנליסט קופות גמל בע\"מ",
+  "detected": "2026-10-01T11:02:43+00:00"
+ },
+ {
+  "kind": "text_changed",
+  "page": "https://www.analyst.co.il/investment-policy/",
+  "text": " -> תגמול לסוכנים עבור קידום מכירות - נובמבר 2025 הורדת מסמך",
+  "href": "https://www.analyst.co.il/wp-content/uploads/2025/11/%D7%A4%D7%A8%D7%A1%D7%95%D7%9D-%D7%9E%D7%A9%D7%95%D7%9C%D7%91-%D7%91%D7%90%D7%AA%D7%A8-%D7%A7%D7%91%D7%95%D7%A6%D7%94-5-%D7%9E%D7%95%D7%A0%D7%92%D7%A9.pdf",
+  "legal_id": "511880460",
+  "company": "אנליסט קופות גמל בע\"מ",
+  "detected": "2026-10-01T11:02:43+00:00"
+ },
+ {
+  "kind": "text_changed",
+  "page": "https://www.analyst.co.il/investment-policy/",
+  "text": " -> תגמול לסוכנים עבור קידום מכירות - נובמבר 2025 הורדת מסמך",
+  "href": "https://www.analyst.co.il/wp-content/uploads/2025/11/%D7%A4%D7%A8%D7%A1%D7%95%D7%9D-%D7%9E%D7%A9%D7%95%D7%9C%D7%91-%D7%91%D7%90%D7%AA%D7%A8-%D7%A7%D7%91%D7%95%D7%A6%D7%94-6-%D7%9E%D7%95%D7%A0%D7%92%D7%A9.pdf",
+  "legal_id": "511880460",
+  "company": "אנליסט קופות גמל בע\"מ",
+  "detected": "2026-10-01T11:02:43+00:00"
+ },
+ {
+  "kind": "text_changed",
+  "page": "https://www.analyst.co.il/investment-policy/",
+  "text": " -> תגמול לסוכנים עבור קידום מכירות - נובמבר 2025 הורדת מסמך",
+  "href": "https://www.analyst.co.il/wp-content/uploads/2025/11/%D7%A4%D7%A8%D7%A1%D7%95%D7%9D-%D7%9E%D7%A9%D7%95%D7%9C%D7%91-%D7%91%D7%90%D7%AA%D7%A8-%D7%A7%D7%91%D7%95%D7%A6%D7%94-7-%D7%9E%D7%95%D7%A0%D7%92%D7%A9.pdf",
+  "legal_id": "511880460",
+  "company": "אנליסט קופות גמל בע\"מ",
+  "detected": "2026-10-01T11:02:43+00:00"
+ },
+ {
+  "kind": "text_changed",
+  "page": "https://www.analyst.co.il/investment-policy/",
+  "text": " -> תגמול לסוכנים עבור קידום מכירות - נובמבר 2025 הורדת מסמך",
+  "href": "https://www.analyst.co.il/wp-content/uploads/2025/11/%D7%A4%D7%A8%D7%A1%D7%95%D7%9D-%D7%9E%D7%A9%D7%95%D7%9C%D7%91-%D7%91%D7%90%D7%AA%D7%A8-%D7%A7%D7%91%D7%95%D7%A6%D7%94-8-%D7%9E%D7%95%D7%A0%D7%92%D7%A9.pdf",
+  "legal_id": "511880460",
+  "company": "אנליסט קופות גמל בע\"מ",
+  "detected": "2026-10-01T11:02:43+00:00"
+ },
+ {
+  "kind": "text_changed",
+  "page": "https://www.analyst.co.il/investment-policy/",
+  "text": " -> תגמול לסוכנים עבור קידום מכירות - נובמבר 2025 הורדת מסמך",
+  "href": "https://www.analyst.co.il/wp-content/uploads/2025/11/%D7%A4%D7%A8%D7%A1%D7%95%D7%9D-%D7%9E%D7%A9%D7%95%D7%9C%D7%91-%D7%91%D7%90%D7%AA%D7%A8-%D7%A7%D7%91%D7%95%D7%A6%D7%94-9-%D7%9E%D7%95%D7%A0%D7%92%D7%A9.pdf",
+  "legal_id": "511880460",
+  "company": "אנליסט קופות גמל בע\"מ",
+  "detected": "2026-10-01T11:02:43+00:00"
+ },
+ {
+  "kind": "text_changed",
+  "page": "https://www.analyst.co.il/investment-policy/",
+  "text": " -> תגמול לסוכנים עבור קידום מכירות - נובמבר 2025 הורדת מסמך",
+  "href": "https://www.analyst.co.il/wp-content/uploads/2025/11/%D7%A4%D7%A8%D7%A1%D7%95%D7%9D-%D7%9E%D7%A9%D7%95%D7%9C%D7%91-%D7%91%D7%90%D7%AA%D7%A8-%D7%A7%D7%91%D7%95%D7%A6%D7%94-10-%D7%9E%D7%95%D7%A0%D7%92%D7%A9.pdf",
+  "legal_id": "511880460",
+  "company": "אנליסט קופות גמל בע\"מ",
+  "detected": "2026-10-01T11:02:43+00:00"
+ },
+ {
+  "kind": "text_changed",
+  "page": "https://www.analyst.co.il/investment-policy/",
+  "text": " -> תגמול לסוכנים עבור קידום מכירות - נובמבר 2025 הורדת מסמך",
+  "href": "https://www.analyst.co.il/wp-content/uploads/2025/11/%D7%A4%D7%A8%D7%A1%D7%95%D7%9D-%D7%9E%D7%A9%D7%95%D7%9C%D7%91-%D7%91%D7%90%D7%AA%D7%A8-%D7%A7%D7%91%D7%95%D7%A6%D7%94-11-%D7%9E%D7%95%D7%A0%D7%92%D7%A9.pdf",
+  "legal_id": "511880460",
+  "company": "אנליסט קופות גמל בע\"מ",
+  "detected": "2026-10-01T11:02:43+00:00"
+ },
+ {
+  "kind": "text_changed",
+  "page": "https://www.analyst.co.il/investment-policy/",
+  "text": " -> תגמול לסוכנים עבור קידום מכירות - נובמבר 2025 הורדת מסמך",
+  "href": "https://www.analyst.co.il/wp-content/uploads/2025/11/%D7%A4%D7%A8%D7%A1%D7%95%D7%9D-%D7%9E%D7%A9%D7%95%D7%9C%D7%91-%D7%91%D7%90%D7%AA%D7%A8-%D7%A7%D7%91%D7%95%D7%A6%D7%94-12-%D7%9E%D7%95%D7%A0%D7%92%D7%A9.pdf",
+  "legal_id": "511880460",
+  "company": "אנליסט קופות גמל בע\"מ",
+  "detected": "2026-10-01T11:02:43+00:00"
+ },
+ {
+  "kind": "text_changed",
+  "page": "https://www.analyst.co.il/investment-policy/",
+  "text": " -> תגמול לסוכנים עבור קידום מכירות - נובמבר 2025 הורדת מסמך",
+  "href": "https://www.analyst.co.il/wp-content/uploads/2025/11/%D7%A4%D7%A8%D7%A1%D7%95%D7%9D-%D7%9E%D7%A9%D7%95%D7%9C%D7%91-%D7%91%D7%90%D7%AA%D7%A8-%D7%A7%D7%91%D7%95%D7%A6%D7%94-13-%D7%9E%D7%95%D7%A0%D7%92%D7%A9.pdf",
+  "legal_id": "511880460",
+  "company": "אנליסט קופות גמל בע\"מ",
+  "detected": "2026-10-01T11:02:43+00:00"
+ },
+ {
+  "kind": "text_changed",
+  "page": "https://www.analyst.co.il/investment-policy/",
+  "text": " -> פוליסת ביטוח הורדת מסמך",
+  "href": "https://www.analyst.co.il/wp-content/uploads/2025/12/%D7%A4%D7%95%D7%9C%D7%99%D7%A1%D7%94-%D7%A7%D7%95%D7%A4%D7%95%D7%AA-%D7%92%D7%9E%D7%9C-%D7%90%D7%97%D7%A8%D7%99%D7%95%D7%AA-%D7%9E%D7%A7%D7%A6%D7%95%D7%A2%D7%99%D7%AA-25-26.pdf",
+  "legal_id": "511880460",
+  "company": "אנליסט קופות גמל בע\"מ",
+  "detected": "2026-10-01T11:02:43+00:00"
+ },
+ {
+  "kind": "text_changed",
+  "page": "https://www.analyst.co.il/investment-policy/",
+  "text": " -> מדיניות השקעה צפויה לשנת 2025, עדכון 20/10/2025, עדכון שיעור חשיפה הצפוי למט\"ח בקופות: השתלמות מניות, גמל חיסכון לכל ילד סיכון גבוה, גמל מניות, גמל להשקעה מניות הורדת מסמך",
+  "href": "https://www.analyst.co.il/wp-content/uploads/2025/10/%D7%90%D7%A0%D7%9C%D7%99%D7%A1%D7%98-%D7%9E%D7%93%D7%99%D7%A0%D7%99%D7%95%D7%AA-%D7%94%D7%A9%D7%A7%D7%A2%D7%94-2025.pdf",
+  "legal_id": "511880460",
+  "company": "אנליסט קופות גמל בע\"מ",
+  "detected": "2026-10-01T11:02:43+00:00"
+ },
+ {
+  "kind": "text_changed",
+  "page": "https://www.analyst.co.il/investment-policy/",
+  "text": " -> מדיניות השקעה צפויה לשנת 2025, עדכון 14/07/2025, עדכון שיעור חשיפה הצפוי למט\"ח בקופות: גמל לבני 50 ומטה, גמל לבני 50-60, השתלמות כללי, גמל להשקעה כללי, גמל חיסכון לכל ילד – סיכון בינוני. עדכון שיעור ה הורדת מסמך",
+  "href": "https://www.analyst.co.il/wp-content/uploads/2025/07/%D7%90%D7%A0%D7%9C%D7%99%D7%A1%D7%98-%D7%9E%D7%93%D7%99%D7%A0%D7%99%D7%95%D7%AA-%D7%94%D7%A9%D7%A7%D7%A2%D7%94-2025.pdf",
+  "legal_id": "511880460",
+  "company": "אנליסט קופות גמל בע\"מ",
+  "detected": "2026-10-01T11:02:43+00:00"
+ },
+ {
+  "kind": "text_changed",
+  "page": "https://www.analyst.co.il/investment-policy/",
+  "text": " -> מדיניות השקעה צפויה לשנת 2025 הורדת מסמך",
+  "href": "https://www.analyst.co.il/wp-content/uploads/2025/05/%D7%90%D7%A0%D7%9C%D7%99%D7%A1%D7%98-%D7%9E%D7%93%D7%99%D7%A0%D7%99%D7%95%D7%AA-%D7%94%D7%A9%D7%A7%D7%A2%D7%94-2025_PDFUA.pdf",
+  "legal_id": "511880460",
+  "company": "אנליסט קופות גמל בע\"מ",
+  "detected": "2026-10-01T11:02:43+00:00"
+ },
+ {
+  "kind": "text_changed",
+  "page": "https://www.analyst.co.il/investment-policy/",
+  "text": " -> מגבלת עמלת ניהול חיצוני - 2025 (גרסה מונגשת) הורדת מסמך",
+  "href": "https://www.analyst.co.il/wp-content/uploads/2024/12/%D7%A2%D7%9E%D7%9C%D7%AA-%D7%A0%D7%99%D7%94%D7%95%D7%9C-%D7%97%D7%99%D7%A6%D7%95%D7%A0%D7%99-31.12.2024.pdf",
+  "legal_id": "511880460",
+  "company": "אנליסט קופות גמל בע\"מ",
+  "detected": "2026-10-01T11:02:43+00:00"
+ },
+ {
+  "kind": "text_changed",
+  "page": "https://www.analyst.co.il/investment-policy/",
+  "text": " -> אישור קיום ביטוח הורדת מסמך",
+  "href": "https://www.analyst.co.il/wp-content/uploads/2025/12/%D7%90%D7%99%D7%A9%D7%95%D7%A8-%D7%A7%D7%99%D7%95%D7%9D-%D7%91%D7%99%D7%98%D7%95%D7%97-%D7%9B%D7%9C%D7%9C%D7%99-%D7%90%D7%A0%D7%9C%D7%99%D7%A1%D7%98-%D7%92%D7%9E%D7%9C.pdf",
+  "legal_id": "511880460",
+  "company": "אנליסט קופות גמל בע\"מ",
+  "detected": "2026-10-01T11:02:43+00:00"
+ },
+ {
+  "kind": "text_changed",
+  "page": "https://www.analyst.co.il/investment-policy/",
+  "text": " -> (html)",
+  "href": "https://www.analyst.co.il/wp-content/uploads/2025/10/אנליסט-מדיניות-השקעה-2025.pdf",
+  "legal_id": "511880460",
+  "company": "אנליסט קופות גמל בע\"מ",
+  "detected": "2026-10-01T11:02:43+00:00"
+ },
+ {
+  "kind": "text_changed",
+  "page": "https://www.analyst.co.il/investment-policy/",
+  "text": " -> (html)",
+  "href": "https://www.analyst.co.il/wp-content/uploads/2025/07/אנליסט-מדיניות-השקעה-2025.pdf",
+  "legal_id": "511880460",
+  "company": "אנליסט קופות גמל בע\"מ",
+  "detected": "2026-10-01T11:02:43+00:00"
+ },
+ {
+  "kind": "text_changed",
+  "page": "https://www.analyst.co.il/investment-policy/",
+  "text": " -> (html)",
+  "href": "https://www.analyst.co.il/wp-content/uploads/2025/05/אנליסט-מדיניות-השקעה-2025_PDFUA.pdf",
+  "legal_id": "511880460",
+  "company": "אנליסט קופות גמל בע\"מ",
+  "detected": "2026-10-01T11:02:43+00:00"
+ },
+ {
+  "kind": "text_changed",
+  "page": "https://www.analyst.co.il/investment-policy/",
+  "text": " -> (html)",
+  "href": "https://www.analyst.co.il/wp-content/uploads/2025/01/820-8138096414-Broshur-Hotzaot-yeshirot_Atar_02.pdf",
+  "legal_id": "511880460",
+  "company": "אנליסט קופות גמל בע\"מ",
+  "detected": "2026-10-01T11:02:43+00:00"
+ },
+ {
+  "kind": "text_changed",
+  "page": "https://www.analyst.co.il/investment-policy/",
+  "text": " -> (html)",
+  "href": "https://www.analyst.co.il/wp-content/uploads/2025/01/מדיניות-תגמול-מרץ-2024.pdf",
+  "legal_id": "511880460",
+  "company": "אנליסט קופות גמל בע\"מ",
+  "detected": "2026-10-01T11:02:43+00:00"
+ },
+ {
+  "kind": "text_changed",
+  "page": "https://www.analyst.co.il/investment-policy/",
+  "text": " -> (html)",
+  "href": "https://www.analyst.co.il/wp-content/uploads/2025/11/פרסום-משולב-באתר-קבוצה.pdf",
+  "legal_id": "511880460",
+  "company": "אנליסט קופות גמל בע\"מ",
+  "detected": "2026-10-01T11:02:43+00:00"
+ },
+ {
+  "kind": "text_changed",
+  "page": "https://www.analyst.co.il/investment-policy/",
+  "text": " -> (html)",
+  "href": "https://www.analyst.co.il/wp-content/uploads/2025/11/פרסום-משולב-באתר-קבוצה-1-מונגש.pdf",
+  "legal_id": "511880460",
+  "company": "אנליסט קופות גמל בע\"מ",
+  "detected": "2026-10-01T11:02:43+00:00"
+ },
+ {
+  "kind": "text_changed",
+  "page": "https://www.analyst.co.il/investment-policy/",
+  "text": " -> (html)",
+  "href": "https://www.analyst.co.il/wp-content/uploads/2025/11/פרסום-משולב-באתר-קבוצה-2-מונגש.pdf",
+  "legal_id": "511880460",
+  "company": "אנליסט קופות גמל בע\"מ",
+  "detected": "2026-10-01T11:02:43+00:00"
+ },
+ {
+  "kind": "text_changed",
+  "page": "https://www.analyst.co.il/investment-policy/",
+  "text": " -> (html)",
+  "href": "https://www.analyst.co.il/wp-content/uploads/2025/11/פרסום-משולב-באתר-קבוצה-3-מונגש.pdf",
+  "legal_id": "511880460",
+  "company": "אנליסט קופות גמל בע\"מ",
+  "detected": "2026-10-01T11:02:43+00:00"
+ },
+ {
+  "kind": "text_changed",
+  "page": "https://www.analyst.co.il/investment-policy/",
+  "text": " -> (html)",
+  "href": "https://www.analyst.co.il/wp-content/uploads/2025/11/פרסום-משולב-באתר-קבוצה-4-מונגש.pdf",
+  "legal_id": "511880460",
+  "company": "אנליסט קופות גמל בע\"מ",
+  "detected": "2026-10-01T11:02:43+00:00"
+ },
+ {
+  "kind": "text_changed",
+  "page": "https://www.analyst.co.il/investment-policy/",
+  "text": " -> (html)",
+  "href": "https://www.analyst.co.il/wp-content/uploads/2025/11/פרסום-משולב-באתר-קבוצה-5-מונגש.pdf",
+  "legal_id": "511880460",
+  "company": "אנליסט קופות גמל בע\"מ",
+  "detected": "2026-10-01T11:02:43+00:00"
+ },
+ {
+  "kind": "text_changed",
+  "page": "https://www.analyst.co.il/investment-policy/",
+  "text": " -> (html)",
+  "href": "https://www.analyst.co.il/wp-content/uploads/2025/11/פרסום-משולב-באתר-קבוצה-6-מונגש.pdf",
+  "legal_id": "511880460",
+  "company": "אנליסט קופות גמל בע\"מ",
+  "detected": "2026-10-01T11:02:43+00:00"
+ },
+ {
+  "kind": "text_changed",
+  "page": "https://www.analyst.co.il/investment-policy/",
+  "text": " -> (html)",
+  "href": "https://www.analyst.co.il/wp-content/uploads/2025/11/פרסום-משולב-באתר-קבוצה-7-מונגש.pdf",
+  "legal_id": "511880460",
+  "company": "אנליסט קופות גמל בע\"מ",
+  "detected": "2026-10-01T11:02:43+00:00"
+ },
+ {
+  "kind": "text_changed",
+  "page": "https://www.analyst.co.il/investment-policy/",
+  "text": " -> (html)",
+  "href": "https://www.analyst.co.il/wp-content/uploads/2025/11/פרסום-משולב-באתר-קבוצה-8-מונגש.pdf",
+  "legal_id": "511880460",
+  "company": "אנליסט קופות גמל בע\"מ",
+  "detected": "2026-10-01T11:02:43+00:00"
+ },
+ {
+  "kind": "text_changed",
+  "page": "https://www.analyst.co.il/investment-policy/",
+  "text": " -> (html)",
+  "href": "https://www.analyst.co.il/wp-content/uploads/2025/11/פרסום-משולב-באתר-קבוצה-9-מונגש.pdf",
+  "legal_id": "511880460",
+  "company": "אנליסט קופות גמל בע\"מ",
+  "detected": "2026-10-01T11:02:43+00:00"
+ },
+ {
+  "kind": "text_changed",
+  "page": "https://www.analyst.co.il/investment-policy/",
+  "text": " -> (html)",
+  "href": "https://www.analyst.co.il/wp-content/uploads/2025/11/פרסום-משולב-באתר-קבוצה-10-מונגש.pdf",
+  "legal_id": "511880460",
+  "company": "אנליסט קופות גמל בע\"מ",
+  "detected": "2026-10-01T11:02:43+00:00"
+ },
+ {
+  "kind": "text_changed",
+  "page": "https://www.analyst.co.il/investment-policy/",
+  "text": " -> (html)",
+  "href": "https://www.analyst.co.il/wp-content/uploads/2025/11/פרסום-משולב-באתר-קבוצה-11-מונגש.pdf",
+  "legal_id": "511880460",
+  "company": "אנליסט קופות גמל בע\"מ",
+  "detected": "2026-10-01T11:02:43+00:00"
+ },
+ {
+  "kind": "text_changed",
+  "page": "https://www.analyst.co.il/investment-policy/",
+  "text": " -> (html)",
+  "href": "https://www.analyst.co.il/wp-content/uploads/2025/11/פרסום-משולב-באתר-קבוצה-12-מונגש.pdf",
+  "legal_id": "511880460",
+  "company": "אנליסט קופות גמל בע\"מ",
+  "detected": "2026-10-01T11:02:43+00:00"
+ },
+ {
+  "kind": "text_changed",
+  "page": "https://www.analyst.co.il/investment-policy/",
+  "text": " -> (html)",
+  "href": "https://www.analyst.co.il/wp-content/uploads/2025/11/פרסום-משולב-באתר-קבוצה-13-מונגש.pdf",
+  "legal_id": "511880460",
+  "company": "אנליסט קופות גמל בע\"מ",
+  "detected": "2026-10-01T11:02:43+00:00"
+ },
+ {
+  "kind": "text_changed",
+  "page": "https://www.analyst.co.il/investment-policy/",
+  "text": " -> (html)",
+  "href": "https://www.analyst.co.il/wp-content/uploads/2025/11/פרסום-משולב-באתר-מבצע-סוכנים-תיקים.docx",
+  "legal_id": "511880460",
+  "company": "אנליסט קופות גמל בע\"מ",
+  "detected": "2026-10-01T11:02:43+00:00"
+ },
+ {
+  "kind": "text_changed",
+  "page": "https://www.analyst.co.il/investment-policy/",
+  "text": " -> (html)",
+  "href": "https://www.analyst.co.il/wp-content/uploads/2025/11/פרסום-משולב-באתר-קבוצה-1-2024.pdf",
+  "legal_id": "511880460",
+  "company": "אנליסט קופות גמל בע\"מ",
+  "detected": "2026-10-01T11:02:43+00:00"
+ },
+ {
+  "kind": "text_changed",
+  "page": "https://www.analyst.co.il/investment-policy/",
+  "text": " -> (html)",
+  "href": "https://www.analyst.co.il/wp-content/uploads/2025/11/פרסום-משולב-באתר-קבוצה-2-2024.pdf",
+  "legal_id": "511880460",
+  "company": "אנליסט קופות גמל בע\"מ",
+  "detected": "2026-10-01T11:02:43+00:00"
+ },
+ {
+  "kind": "text_changed",
+  "page": "https://www.analyst.co.il/investment-policy/",
+  "text": " -> (html)",
+  "href": "https://www.analyst.co.il/wp-content/uploads/2025/11/פרסום-משולב-באתר-קבוצה-3-2024.pdf",
+  "legal_id": "511880460",
+  "company": "אנליסט קופות גמל בע\"מ",
+  "detected": "2026-10-01T11:02:43+00:00"
+ },
+ {
+  "kind": "text_changed",
+  "page": "https://www.analyst.co.il/investment-policy/",
+  "text": " -> (html)",
+  "href": "https://www.analyst.co.il/wp-content/uploads/2025/11/פרסום-משולב-באתר-קבוצה-4-2024.pdf",
+  "legal_id": "511880460",
+  "company": "אנליסט קופות גמל בע\"מ",
+  "detected": "2026-10-01T11:02:43+00:00"
+ },
+ {
+  "kind": "text_changed",
+  "page": "https://www.analyst.co.il/investment-policy/",
+  "text": " -> (html)",
+  "href": "https://www.analyst.co.il/wp-content/uploads/2025/11/פרסום-משולב-באתר-קבוצה-5-2024.pdf",
+  "legal_id": "511880460",
+  "company": "אנליסט קופות גמל בע\"מ",
+  "detected": "2026-10-01T11:02:43+00:00"
+ },
+ {
+  "kind": "text_changed",
+  "page": "https://www.analyst.co.il/investment-policy/",
+  "text": " -> (html)",
+  "href": "https://www.analyst.co.il/wp-content/uploads/2025/01/דוח-שנתי-לאוצר-ממונה-אזרחים-ותיקים-2024.pdf",
+  "legal_id": "511880460",
+  "company": "אנליסט קופות גמל בע\"מ",
+  "detected": "2026-10-01T11:02:43+00:00"
+ },
+ {
+  "kind": "text_changed",
+  "page": "https://www.analyst.co.il/investment-policy/",
+  "text": " -> (html)",
+  "href": "https://www.analyst.co.il/wp-content/uploads/2025/12/פוליסה-קופות-גמל-אחריות-מקצועית-25-26.pdf",
+  "legal_id": "511880460",
+  "company": "אנליסט קופות גמל בע\"מ",
+  "detected": "2026-10-01T11:02:43+00:00"
+ },
+ {
+  "kind": "text_changed",
+  "page": "https://www.analyst.co.il/investment-policy/",
+  "text": " -> (html)",
+  "href": "https://www.analyst.co.il/wp-content/uploads/2025/12/אישור-קיום-ביטוח-כללי-אנליסט-גמל.pdf",
+  "legal_id": "511880460",
+  "company": "אנליסט קופות גמל בע\"מ",
+  "detected": "2026-10-01T11:02:43+00:00"
+ },
+ {
+  "kind": "text_changed",
+  "page": "https://www.analyst.co.il/investment-policy/",
+  "text": "דוח ממונה אזרחים ותיקים -> (html)",
+  "href": "https://www.analyst.co.il/wp-content/uploads/2025/01/%D7%93%D7%95%D7%97-%D7%A9%D7%A0%D7%AA%D7%99-%D7%9C%D7%90%D7%95%D7%A6%D7%A8-%D7%9E%D7%9E%D7%95%D7%A0%D7%94-%D7%90%D7%96%D7%A8%D7%97%D7%99%D7%9D-%D7%95%D7%AA%D7%99%D7%A7%D7%99%D7%9D-2024.pdf",
+  "legal_id": "511880460",
+  "company": "אנליסט קופות גמל בע\"מ",
+  "detected": "2026-10-01T11:02:43+00:00"
+ },
+ {
+  "kind": "text_changed",
+  "page": "https://www.analyst.co.il/investment-policy/",
+  "text": "תנאי שימוש -> (html)",
+  "href": "https://www.analyst.co.il/wp-content/uploads/2025/08/%D7%AA%D7%A0%D7%90%D7%99-%D7%A9%D7%99%D7%9E%D7%95%D7%A9.pdf",
+  "legal_id": "511880460",
+  "company": "אנליסט קופות גמל בע\"מ",
+  "detected": "2026-10-01T11:02:43+00:00"
+ },
+ {
+  "kind": "text_changed",
+  "page": "https://www.analyst.co.il/investment-policy/",
+  "text": "תנאי שימוש -> (html)",
+  "href": "https://www.analyst.co.il/wp-content/uploads/2025/08/תנאי-שימוש.pdf",
+  "legal_id": "511880460",
+  "company": "אנליסט קופות גמל בע\"מ",
+  "detected": "2026-10-01T11:02:43+00:00"
+ },
+ {
+  "kind": "text_changed",
+  "page": "https://www.analyst.co.il/investment-policy/",
+  "text": "קובץ להורדה -> תוכנית המיזוגים (יולי 2024) קובץ להורדה קובץ להורדה",
+  "href": "https://www.analyst.co.il/analyst07-2024/",
+  "legal_id": "511880460",
+  "company": "אנליסט קופות גמל בע\"מ",
+  "detected": "2026-10-01T11:02:43+00:00"
+ },
+ {
+  "kind": "text_changed",
+  "page": "https://www.analyst.co.il/investment-policy/",
+  "text": " -> תגמול לסוכנים עבור קידום מכירות - נובמבר 2024 הורדת מסמך",
+  "href": "https://www.analyst.co.il/wp-content/uploads/2025/11/%D7%A4%D7%A8%D7%A1%D7%95%D7%9D-%D7%9E%D7%A9%D7%95%D7%9C%D7%91-%D7%91%D7%90%D7%AA%D7%A8-%D7%A7%D7%91%D7%95%D7%A6%D7%94-1-2024.pdf",
+  "legal_id": "511880460",
+  "company": "אנליסט קופות גמל בע\"מ",
+  "detected": "2026-10-01T11:02:43+00:00"
+ },
+ {
+  "kind": "text_changed",
+  "page": "https://www.analyst.co.il/investment-policy/",
+  "text": " -> תגמול לסוכנים עבור קידום מכירות - נובמבר 2024 הורדת מסמך",
+  "href": "https://www.analyst.co.il/wp-content/uploads/2025/11/%D7%A4%D7%A8%D7%A1%D7%95%D7%9D-%D7%9E%D7%A9%D7%95%D7%9C%D7%91-%D7%91%D7%90%D7%AA%D7%A8-%D7%A7%D7%91%D7%95%D7%A6%D7%94-2-2024.pdf",
+  "legal_id": "511880460",
+  "company": "אנליסט קופות גמל בע\"מ",
+  "detected": "2026-10-01T11:02:43+00:00"
+ },
+ {
+  "kind": "text_changed",
+  "page": "https://www.analyst.co.il/investment-policy/",
+  "text": " -> תגמול לסוכנים עבור קידום מכירות - נובמבר 2024 הורדת מסמך",
+  "href": "https://www.analyst.co.il/wp-content/uploads/2025/11/%D7%A4%D7%A8%D7%A1%D7%95%D7%9D-%D7%9E%D7%A9%D7%95%D7%9C%D7%91-%D7%91%D7%90%D7%AA%D7%A8-%D7%A7%D7%91%D7%95%D7%A6%D7%94-3-2024.pdf",
+  "legal_id": "511880460",
+  "company": "אנליסט קופות גמל בע\"מ",
+  "detected": "2026-10-01T11:02:43+00:00"
+ },
+ {
+  "kind": "text_changed",
+  "page": "https://www.analyst.co.il/investment-policy/",
+  "text": " -> תגמול לסוכנים עבור קידום מכירות - נובמבר 2024 הורדת מסמך",
+  "href": "https://www.analyst.co.il/wp-content/uploads/2025/11/%D7%A4%D7%A8%D7%A1%D7%95%D7%9D-%D7%9E%D7%A9%D7%95%D7%9C%D7%91-%D7%91%D7%90%D7%AA%D7%A8-%D7%A7%D7%91%D7%95%D7%A6%D7%94-4-2024.pdf",
+  "legal_id": "511880460",
+  "company": "אנליסט קופות גמל בע\"מ",
+  "detected": "2026-10-01T11:02:43+00:00"
+ },
+ {
+  "kind": "text_changed",
+  "page": "https://www.analyst.co.il/investment-policy/",
+  "text": " -> תגמול לסוכנים עבור קידום מכירות - נובמבר 2024 הורדת מסמך",
+  "href": "https://www.analyst.co.il/wp-content/uploads/2025/11/%D7%A4%D7%A8%D7%A1%D7%95%D7%9D-%D7%9E%D7%A9%D7%95%D7%9C%D7%91-%D7%91%D7%90%D7%AA%D7%A8-%D7%A7%D7%91%D7%95%D7%A6%D7%94-5-2024.pdf",
+  "legal_id": "511880460",
+  "company": "אנליסט קופות גמל בע\"מ",
+  "detected": "2026-10-01T11:02:43+00:00"
+ },
+ {
+  "kind": "text_changed",
+  "page": "https://www.analyst.co.il/investment-policy/",
+  "text": " -> תגמול לסוכנים עבור קידום מכירות - דצמבר 2024 הורדת מסמך",
+  "href": "https://www.analyst.co.il/wp-content/uploads/2025/11/%D7%A4%D7%A8%D7%A1%D7%95%D7%9D-%D7%9E%D7%A9%D7%95%D7%9C%D7%91-%D7%91%D7%90%D7%AA%D7%A8-%D7%9E%D7%91%D7%A6%D7%A2-%D7%A1%D7%95%D7%9B%D7%A0%D7%99%D7%9D-%D7%AA%D7%99%D7%A7%D7%99%D7%9D.docx",
+  "legal_id": "511880460",
+  "company": "אנליסט קופות גמל בע\"מ",
+  "detected": "2026-10-01T11:02:43+00:00"
+ },
+ {
+  "kind": "text_changed",
+  "page": "https://www.analyst.co.il/investment-policy/",
+  "text": " -> מדיניות תגמול מרץ 2024 הורדת מסמך",
+  "href": "https://www.analyst.co.il/wp-content/uploads/2025/01/%D7%9E%D7%93%D7%99%D7%A0%D7%99%D7%95%D7%AA-%D7%AA%D7%92%D7%9E%D7%95%D7%9C-%D7%9E%D7%A8%D7%A5-2024.pdf",
+  "legal_id": "511880460",
+  "company": "אנליסט קופות גמל בע\"מ",
+  "detected": "2026-10-01T11:02:43+00:00"
+ },
+ {
+  "kind": "text_changed",
+  "page": "https://www.analyst.co.il/investment-policy/",
+  "text": " -> מדיניות השקעה צפויה לשנת 2024, עדכון מיום 23/09/2024, עדכון שיעור החשיפה הצפוי באפיק השקעה אג\"ח ממשלתי בקופה של אנליסט גמל עוקב מדדי מניות הורדת מסמך",
+  "href": "https://www.analyst.co.il/wp-content/uploads/2024/09/%D7%A7%D7%95%D7%91%D7%A5-%D7%9E%D7%9C%D7%90-23.09.2024-1.pdf",
+  "legal_id": "511880460",
+  "company": "אנליסט קופות גמל בע\"מ",
+  "detected": "2026-10-01T11:02:43+00:00"
+ },
+ {
+  "kind": "text_changed",
+  "page": "https://www.analyst.co.il/investment-policy/",
+  "text": " -> מדיניות השקעה צפויה לשנת 2024, עדכון מיום 15/7/24, עדכון שיעורי החשיפה במסלולים גמל להשקעה עוקב מדדי מניות והשתלמות עוקב מדדי מניות הורדת מסמך",
+  "href": "https://www.analyst.co.il/wp-content/uploads/2024/07/%D7%94%D7%A6%D7%94%D7%A8%D7%AA-%D7%9E%D7%93%D7%99%D7%A0%D7%99%D7%95%D7%AA-%D7%A6%D7%A4%D7%95%D7%99%D7%94-1.pdf",
+  "legal_id": "511880460",
+  "company": "אנליסט קופות גמל בע\"מ",
+  "detected": "2026-10-01T11:02:43+00:00"
+ },
+ {
+  "kind": "text_changed",
+  "page": "https://www.analyst.co.il/investment-policy/",
+  "text": " -> מדיניות השקעה צפויה לשנת 2024, עדכון מיום 12/08/2024, עודכנו שיעורי חשיפה בקופות: אנליסט השתלמות אג\"ח ממשלות, אנליסט גמל אג\"ח ממשלות, אנליסט השתלמות אשראי ואג\"ח, אנליסט גמל להשקעה אשראי ואג\"ח הורדת מסמך",
+  "href": "https://www.analyst.co.il/wp-content/uploads/2024/09/%D7%A7%D7%95%D7%91%D7%A5-%D7%9E%D7%9C%D7%90-08.09.2024-1.pdf",
+  "legal_id": "511880460",
+  "company": "אנליסט קופות גמל בע\"מ",
+  "detected": "2026-10-01T11:02:43+00:00"
+ },
+ {
+  "kind": "text_changed",
+  "page": "https://www.analyst.co.il/investment-policy/",
+  "text": " -> מדיניות השקעה צפויה לשנת 2024, עדכון מיום 09/09/2024, עדכון מדדי הייחוס בקופות: אנליסט גמל - עוקב מדדים גמיש, אנליסט השתלמות עוקב מדדי מניות, אנליסט גמל עוקב מדדי מניות, אנליסט גמל להשקעה עוקב מדדי מנ הורדת מסמך",
+  "href": "https://www.analyst.co.il/wp-content/uploads/2024/09/%D7%A7%D7%95%D7%91%D7%A5-%D7%9E%D7%9C%D7%90-08.09.2024.pdf",
+  "legal_id": "511880460",
+  "company": "אנליסט קופות גמל בע\"מ",
+  "detected": "2026-10-01T11:02:43+00:00"
+ },
+ {
+  "kind": "text_changed",
+  "page": "https://www.analyst.co.il/investment-policy/",
+  "text": " -> מדיניות השקעה צפויה לשנת 2024, עדכון מיום 01/07/24, בעקבות כניסה לתוקף של חוזר מסלולי השקעה החדש הורדת מסמך",
+  "href": "https://www.analyst.co.il/wp-content/uploads/2024/07/%D7%9E%D7%93%D7%99%D7%A0%D7%99%D7%95%D7%AA-%D7%94%D7%A9%D7%A7%D7%A2%D7%95%D7%AA-%D7%A6%D7%A4%D7%95%D7%99%D7%94-01.07.24.pdf",
+  "legal_id": "511880460",
+  "company": "אנליסט קופות גמל בע\"מ",
+  "detected": "2026-10-01T11:02:43+00:00"
+ },
+ {
+  "kind": "text_changed",
+  "page": "https://www.analyst.co.il/investment-policy/",
+  "text": " -> מדיניות השקעה צפויה לשנת 2024, עדכון 01/10/2024, עדכון מדיניות ההשקעה של הקופה אנליסט גמל עוקב מדדים- גמיש הורדת מסמך",
+  "href": "https://www.analyst.co.il/wp-content/uploads/2024/10/%D7%A7%D7%95%D7%91%D7%A5-%D7%9E%D7%9C%D7%90-01.10.2024.pdf",
+  "legal_id": "511880460",
+  "company": "אנליסט קופות גמל בע\"מ",
+  "detected": "2026-10-01T11:02:43+00:00"
+ },
+ {
+  "kind": "text_changed",
+  "page": "https://www.analyst.co.il/investment-policy/",
+  "text": " -> מגבלת עמלת ניהול חיצוני - 2024 לאחר 1.7.24 הורדת מסמך",
+  "href": "https://www.analyst.co.il/wp-content/uploads/2024/06/%D7%A2%D7%9E%D7%9C%D7%AA-%D7%A0%D7%99%D7%94%D7%95%D7%9C-%D7%97%D7%99%D7%A6%D7%95%D7%A0%D7%99-1.7.pdf",
+  "legal_id": "511880460",
+  "company": "אנליסט קופות גמל בע\"מ",
+  "detected": "2026-10-01T11:02:43+00:00"
+ },
+ {
+  "kind": "text_changed",
+  "page": "https://www.analyst.co.il/investment-policy/",
+  "text": " -> (html)",
+  "href": "https://www.analyst.co.il/wp-content/uploads/2024/10/קובץ-מלא-01.10.2024.pdf",
+  "legal_id": "511880460",
+  "company": "אנליסט קופות גמל בע\"מ",
+  "detected": "2026-10-01T11:02:43+00:00"
+ },
+ {
+  "kind": "text_changed",
+  "page": "https://www.analyst.co.il/investment-policy/",
+  "text": " -> (html)",
+  "href": "https://www.analyst.co.il/wp-content/uploads/2024/09/קובץ-מלא-23.09.2024-1.pdf",
+  "legal_id": "511880460",
+  "company": "אנליסט קופות גמל בע\"מ",
+  "detected": "2026-10-01T11:02:43+00:00"
+ },
+ {
+  "kind": "text_changed",
+  "page": "https://www.analyst.co.il/investment-policy/",
+  "text": " -> (html)",
+  "href": "https://www.analyst.co.il/wp-content/uploads/2024/09/קובץ-מלא-08.09.2024.pdf",
+  "legal_id": "511880460",
+  "company": "אנליסט קופות גמל בע\"מ",
+  "detected": "2026-10-01T11:02:43+00:00"
+ },
+ {
+  "kind": "text_changed",
+  "page": "https://www.analyst.co.il/investment-policy/",
+  "text": " -> (html)",
+  "href": "https://www.analyst.co.il/wp-content/uploads/2024/09/קובץ-מלא-08.09.2024-1.pdf",
+  "legal_id": "511880460",
+  "company": "אנליסט קופות גמל בע\"מ",
+  "detected": "2026-10-01T11:02:43+00:00"
+ },
+ {
+  "kind": "text_changed",
+  "page": "https://www.analyst.co.il/investment-policy/",
+  "text": " -> (html)",
+  "href": "https://www.analyst.co.il/wp-content/uploads/2024/07/הצהרת-מדיניות-צפויה-1.pdf",
+  "legal_id": "511880460",
+  "company": "אנליסט קופות גמל בע\"מ",
+  "detected": "2026-10-01T11:02:43+00:00"
+ },
+ {
+  "kind": "text_changed",
+  "page": "https://www.analyst.co.il/investment-policy/",
+  "text": " -> (html)",
+  "href": "https://www.analyst.co.il/wp-content/uploads/2024/07/מדיניות-השקעות-צפויה-01.07.24.pdf",
+  "legal_id": "511880460",
+  "company": "אנליסט קופות גמל בע\"מ",
+  "detected": "2026-10-01T11:02:43+00:00"
+ },
+ {
+  "kind": "text_changed",
+  "page": "https://www.analyst.co.il/investment-policy/",
+  "text": " -> (html)",
+  "href": "https://www.analyst.co.il/media/x1kldusc/%D7%9E%D7%93%D7%99%D7%A0%D7%99%D7%95%D7%AA-%D7%94%D7%A9%D7%A7%D7%A2%D7%94-%D7%A6%D7%A4%D7%95%D7%99%D7%99%D7%94-%D7%9C%D7%A9%D7%A0%D7%AA-2024.pdf",
+  "legal_id": "511880460",
+  "company": "אנליסט קופות גמל בע\"מ",
+  "detected": "2026-10-01T11:02:43+00:00"
+ },
+ {
+  "kind": "text_changed",
+  "page": "https://www.analyst.co.il/investment-policy/",
+  "text": " -> (html)",
+  "href": "https://www.analyst.co.il/media/5mwjvdvt/%D7%9E%D7%93%D7%99%D7%A0%D7%99%D7%95%D7%AA-%D7%94%D7%A9%D7%A7%D7%A2%D7%94-%D7%A6%D7%A4%D7%95%D7%99%D7%99%D7%94-%D7%9C%D7%A9%D7%A0%D7%AA-2024.pdf",
+  "legal_id": "511880460",
+  "company": "אנליסט קופות גמל בע\"מ",
+  "detected": "2026-10-01T11:02:43+00:00"
+ },
+ {
+  "kind": "text_changed",
+  "page": "https://www.analyst.co.il/investment-policy/",
+  "text": " -> (html)",
+  "href": "https://www.analyst.co.il/media/zzcgcskv/%D7%9E%D7%93%D7%99%D7%A0%D7%99%D7%95%D7%AA-%D7%94%D7%A9%D7%A7%D7%A2%D7%94-%D7%A6%D7%A4%D7%95%D7%99%D7%99%D7%94-%D7%9C%D7%A9%D7%A0%D7%AA-2024-%D7%A2%D7%93%D7%9B%D7%95%D7%9F-%D7%9E-1302.pdf",
+  "legal_id": "511880460",
+  "company": "אנליסט קופות גמל בע\"מ",
+  "detected": "2026-10-01T11:02:43+00:00"
+ },
+ {
+  "kind": "text_changed",
+  "page": "https://www.analyst.co.il/investment-policy/",
+  "text": " -> (html)",
+  "href": "https://www.analyst.co.il/media/qvzhjq2m/%D7%94%D7%A6%D7%94%D7%A8%D7%AA-%D7%9E%D7%93%D7%99%D7%A0%D7%99%D7%95%D7%AA-%D7%A6%D7%A4%D7%95%D7%99%D7%94-2024.pdf",
+  "legal_id": "511880460",
+  "company": "אנליסט קופות גמל בע\"מ",
+  "detected": "2026-10-01T11:02:43+00:00"
+ },
+ {
+  "kind": "text_changed",
+  "page": "https://www.analyst.co.il/investment-policy/",
+  "text": " -> (html)",
+  "href": "https://www.analyst.co.il/wp-content/uploads/2024/12/עמלת-ניהול-חיצוני-31.12.2024.pdf",
+  "legal_id": "511880460",
+  "company": "אנליסט קופות גמל בע\"מ",
+  "detected": "2026-10-01T11:02:43+00:00"
+ },
+ {
+  "kind": "text_changed",
+  "page": "https://www.analyst.co.il/investment-policy/",
+  "text": " -> (html)",
+  "href": "https://www.analyst.co.il/wp-content/uploads/2024/06/עמלת-ניהול-חיצוני-1.7.pdf",
+  "legal_id": "511880460",
+  "company": "אנליסט קופות גמל בע\"מ",
+  "detected": "2026-10-01T11:02:43+00:00"
+ },
+ {
+  "kind": "text_changed",
+  "page": "https://www.analyst.co.il/investment-policy/",
+  "text": " -> (html)",
+  "href": "https://www.analyst.co.il/media/y3shqsf2/%D7%94%D7%95%D7%A6%D7%90%D7%94-%D7%9C%D7%93%D7%9E%D7%99-%D7%A0%D7%99%D7%94%D7%95%D7%9C-%D7%97%D7%99%D7%A6%D7%95%D7%A0%D7%99-%D7%9E%D7%A7%D7%A1%D7%99%D7%9E%D7%9C%D7%99-2024.xlsx",
+  "legal_id": "511880460",
+  "company": "אנליסט קופות גמל בע\"מ",
+  "detected": "2026-10-01T11:02:43+00:00"
+ },
+ {
+  "kind": "text_changed",
+  "page": "https://www.analyst.co.il/investment-policy/",
+  "text": " -> (html)",
+  "href": "https://www.analyst.co.il/media/b10ilmhu/%D7%9E%D7%93%D7%99%D7%A0%D7%99%D7%95%D7%AA-%D7%94%D7%A9%D7%A7%D7%A2%D7%94-%D7%A6%D7%A4%D7%95%D7%99%D7%94-%D7%9C%D7%A9%D7%A0%D7%AA-2023-%D7%A2%D7%93%D7%9B%D7%95%D7%9F-%D7%9E%D7%99%D7%95%D7%9D-170723.pdf",
+  "legal_id": "511880460",
+  "company": "אנליסט קופות גמל בע\"מ",
+  "detected": "2026-10-01T11:02:43+00:00"
+ },
+ {
+  "kind": "text_changed",
+  "page": "https://www.analyst.co.il/investment-policy/",
+  "text": " -> (html)",
+  "href": "https://www.analyst.co.il/media/h2rdv2kp/%D7%9E%D7%93%D7%99%D7%A0%D7%99%D7%95%D7%AA-%D7%94%D7%A9%D7%A7%D7%A2%D7%94-%D7%A6%D7%A4%D7%95%D7%99%D7%94-%D7%9C%D7%A9%D7%A0%D7%AA-2023-%D7%9E%D7%A2%D7%95%D7%93%D7%9B%D7%9F-%D7%9C-0506.pdf",
+  "legal_id": "511880460",
+  "company": "אנליסט קופות גמל בע\"מ",
+  "detected": "2026-10-01T11:02:43+00:00"
+ },
+ {
+  "kind": "text_changed",
+  "page": "https://www.analyst.co.il/investment-policy/",
+  "text": " -> (html)",
+  "href": "https://www.analyst.co.il/media/110jbcnw/%D7%9E%D7%93%D7%99%D7%A0%D7%99%D7%95%D7%AA-%D7%94%D7%A9%D7%A7%D7%A2%D7%94-%D7%A6%D7%A4%D7%95%D7%99%D7%94-%D7%9C%D7%A9%D7%A0%D7%AA-2023.pdf",
+  "legal_id": "511880460",
+  "company": "אנליסט קופות גמל בע\"מ",
+  "detected": "2026-10-01T11:02:43+00:00"
+ },
+ {
+  "kind": "text_changed",
+  "page": "https://www.analyst.co.il/investment-policy/",
+  "text": " -> (html)",
+  "href": "https://www.analyst.co.il/media/acypddfc/%D7%A1%D7%95%D7%92-1-%D7%A4%D7%A8%D7%A1%D7%95%D7%9D-%D7%91%D7%90%D7%AA%D7%A8-%D7%9E%D7%A9%D7%95%D7%9C%D7%91-%D7%9E%D7%91%D7%A6%D7%A2-%D7%A1%D7%95%D7%A4%D7%A9%D7%A0%D7%94-2023-1.pdf",
+  "legal_id": "511880460",
+  "company": "אנליסט קופות גמל בע\"מ",
+  "detected": "2026-10-01T11:02:43+00:00"
+ },
+ {
+  "kind": "text_changed",
+  "page": "https://www.analyst.co.il/investment-policy/",
+  "text": " -> (html)",
+  "href": "https://www.analyst.co.il/media/ewjjthwf/%D7%A1%D7%95%D7%92-2-%D7%A4%D7%A8%D7%A1%D7%95%D7%9D-%D7%91%D7%90%D7%AA%D7%A8-%D7%9E%D7%A9%D7%95%D7%9C%D7%91-%D7%9E%D7%91%D7%A6%D7%A2-%D7%A1%D7%95%D7%A4%D7%A9%D7%A0%D7%94-2023-2.pdf",
+  "legal_id": "511880460",
+  "company": "אנליסט קופות גמל בע\"מ",
+  "detected": "2026-10-01T11:02:43+00:00"
+ },
+ {
+  "kind": "text_changed",
+  "page": "https://www.analyst.co.il/investment-policy/",
+  "text": " -> (html)",
+  "href": "https://www.analyst.co.il/media/jvpnx0zh/%D7%A1%D7%95%D7%92-3-%D7%A4%D7%A8%D7%A1%D7%95%D7%9D-%D7%91%D7%90%D7%AA%D7%A8-%D7%9E%D7%A9%D7%95%D7%9C%D7%91-%D7%9E%D7%91%D7%A6%D7%A2-%D7%A1%D7%95%D7%A4%D7%A9%D7%A0%D7%94-2023-1.pdf",
+  "legal_id": "511880460",
+  "company": "אנליסט קופות גמל בע\"מ",
+  "detected": "2026-10-01T11:02:43+00:00"
+ },
+ {
+  "kind": "text_changed",
+  "page": "https://www.analyst.co.il/investment-policy/",
+  "text": " -> (html)",
+  "href": "https://www.analyst.co.il/media/cgfhq0gj/%D7%A1%D7%95%D7%92-4-%D7%A4%D7%A8%D7%A1%D7%95%D7%9D-%D7%91%D7%90%D7%AA%D7%A8-%D7%9E%D7%A9%D7%95%D7%9C%D7%91-%D7%9E%D7%91%D7%A6%D7%A2-%D7%A1%D7%95%D7%A4%D7%A9%D7%A0%D7%94-2023-2.pdf",
+  "legal_id": "511880460",
+  "company": "אנליסט קופות גמל בע\"מ",
+  "detected": "2026-10-01T11:02:43+00:00"
+ },
+ {
+  "kind": "text_changed",
+  "page": "https://www.analyst.co.il/investment-policy/",
+  "text": " -> (html)",
+  "href": "https://www.analyst.co.il/media/am4b5cue/%D7%A4%D7%A8%D7%A1%D7%95%D7%9D-%D7%91%D7%90%D7%AA%D7%A8-%D7%9E%D7%A9%D7%95%D7%9C%D7%91-%D7%9E%D7%91%D7%A6%D7%A2-%D7%A7%D7%99%D7%A5-2023-%D7%94%D7%A1%D7%93%D7%A8.pdf",
+  "legal_id": "511880460",
+  "company": "אנליסט קופות גמל בע\"מ",
+  "detected": "2026-10-01T11:02:43+00:00"
+ },
+ {
+  "kind": "text_changed",
+  "page": "https://www.analyst.co.il/investment-policy/",
+  "text": " -> (html)",
+  "href": "https://www.analyst.co.il/media/gftjl5s5/%D7%A4%D7%A8%D7%A1%D7%95%D7%9D-%D7%91%D7%90%D7%AA%D7%A8-%D7%9E%D7%A9%D7%95%D7%9C%D7%91-%D7%9E%D7%91%D7%A6%D7%A2-%D7%A7%D7%99%D7%A5-2023-%D7%91%D7%95%D7%93%D7%93.pdf",
+  "legal_id": "511880460",
+  "company": "אנליסט קופות גמל בע\"מ",
+  "detected": "2026-10-01T11:02:43+00:00"
+ },
+ {
+  "kind": "text_changed",
+  "page": "https://www.analyst.co.il/investment-policy/",
+  "text": " -> (html)",
+  "href": "https://www.analyst.co.il/media/fwghz51b/%D7%93%D7%95%D7%97-%D7%A9%D7%A0%D7%AA%D7%99-%D7%9E%D7%9E%D7%95%D7%A0%D7%94-%D7%90%D7%96%D7%A8%D7%97%D7%99%D7%9D-%D7%95%D7%AA%D7%99%D7%A7%D7%99%D7%9D-2023.pdf",
+  "legal_id": "511880460",
+  "company": "אנליסט קופות גמל בע\"מ",
+  "detected": "2026-10-01T11:02:43+00:00"
+ },
+ {
+  "kind": "text_changed",
+  "page": "https://www.analyst.co.il/investment-policy/",
+  "text": " -> (html)",
+  "href": "https://www.analyst.co.il/media/nitpma4q/%D7%94%D7%A6%D7%94%D7%A8%D7%AA-%D7%9E%D7%93%D7%99%D7%A0%D7%99%D7%95%D7%AA-%D7%94%D7%A9%D7%A7%D7%A2%D7%94-%D7%A6%D7%A4%D7%95%D7%99%D7%94-2022-%D7%9E%D7%A2%D7%95%D7%93%D7%9B%D7%9F-%D7%9C%D7%90%D7%97%D7%A8-%D7%A2%D7%93%D7%9B%D7%95%D7%9F-%D7%9E%D7%A1%D7%9C%D7%95%D7%9C%D7%99%D7%9D-%D7%97%D7%93%D7%A9%D7%99%D7%9D.xlsx",
+  "legal_id": "511880460",
+  "company": "אנליסט קופות גמל בע\"מ",
+  "detected": "2026-10-01T11:02:43+00:00"
+ },
+ {
+  "kind": "text_changed",
+  "page": "https://www.analyst.co.il/investment-policy/",
+  "text": " -> (html)",
+  "href": "https://www.analyst.co.il/media/5xeblnts/%D7%94%D7%A6%D7%94%D7%A8%D7%AA-%D7%9E%D7%93%D7%99%D7%A0%D7%99%D7%95%D7%AA-%D7%94%D7%A9%D7%A7%D7%A2%D7%94-%D7%A6%D7%A4%D7%95%D7%99%D7%94-2022-3-1.xlsx",
+  "legal_id": "511880460",
+  "company": "אנליסט קופות גמל בע\"מ",
+  "detected": "2026-10-01T11:02:43+00:00"
+ },
+ {
+  "kind": "text_changed",
+  "page": "https://www.analyst.co.il/investment-policy/",
+  "text": " -> (html)",
+  "href": "https://www.analyst.co.il/media/kkpn3hut/%D7%9E%D7%93%D7%99%D7%A0%D7%99%D7%95%D7%AA-%D7%AA%D7%92%D7%9E%D7%95%D7%9C-%D7%93%D7%A6%D7%9E%D7%91%D7%A8-2022.pdf",
+  "legal_id": "511880460",
+  "company": "אנליסט קופות גמל בע\"מ",
+  "detected": "2026-10-01T11:02:43+00:00"
+ },
+ {
+  "kind": "text_changed",
+  "page": "https://www.analyst.co.il/investment-policy/",
+  "text": "אמנת שירות גמל -> (html)",
+  "href": "https://www.analyst.co.il/media/aytdfpks/%D7%90%D7%9E%D7%A8%D7%AA-%D7%A9%D7%99%D7%A8%D7%95%D7%AA-%D7%9C%D7%A7%D7%95%D7%97%D7%95%D7%AA-%D7%9E%D7%A8%D7%A5-2022.pdf",
+  "legal_id": "511880460",
+  "company": "אנליסט קופות גמל בע\"מ",
+  "detected": "2026-10-01T11:02:43+00:00"
+ },
+ {
+  "kind": "text_changed",
+  "page": "https://www.analyst.co.il/investment-policy/",
+  "text": " -> (html)",
+  "href": "https://www.analyst.co.il/media/ov0nldhx/%D7%9E%D7%93%D7%99%D7%A0%D7%99%D7%95%D7%AA-%D7%94%D7%A9%D7%A7%D7%A2%D7%94-%D7%A6%D7%A4%D7%95%D7%99%D7%94-2021-%D7%9C%D7%90%D7%AA%D7%A8-%D7%A2%D7%93%D7%9B%D7%95%D7%9F-%D7%9E%D7%99%D7%95%D7%9D-12_04_21-1.xls",
+  "legal_id": "511880460",
+  "company": "אנליסט קופות גמל בע\"מ",
+  "detected": "2026-10-01T11:02:43+00:00"
+ },
+ {
+  "kind": "text_changed",
+  "page": "https://www.analyst.co.il/investment-policy/",
+  "text": " -> (html)",
+  "href": "https://www.analyst.co.il/media/4sdb3js2/%D7%9E%D7%93%D7%99%D7%A0%D7%99%D7%95%D7%AA-%D7%94%D7%A9%D7%A7%D7%A2%D7%95%D7%AA-%D7%A6%D7%A4%D7%95%D7%99%D7%94-2021.xls",
+  "legal_id": "511880460",
+  "company": "אנליסט קופות גמל בע\"מ",
+  "detected": "2026-10-01T11:02:43+00:00"
+ },
+ {
+  "kind": "text_changed",
+  "page": "https://www.analyst.co.il/investment-policy/",
+  "text": " -> (html)",
+  "href": "https://www.analyst.co.il/media/ckeanzdt/%D7%94%D7%95%D7%93%D7%A2%D7%94-%D7%91%D7%93%D7%91%D7%A8-%D7%94%D7%A9%D7%9C%D7%9E%D7%AA-%D7%9E%D7%99%D7%96%D7%95%D7%92-%D7%9E%D7%A1%D7%9C%D7%95%D7%9C%D7%99%D7%9D-%D7%99%D7%A0%D7%95%D7%90%D7%A8-2021.pdf",
+  "legal_id": "511880460",
+  "company": "אנליסט קופות גמל בע\"מ",
+  "detected": "2026-10-01T11:02:43+00:00"
+ },
+ {
+  "kind": "text_changed",
+  "page": "https://www.analyst.co.il/investment-policy/",
+  "text": " -> (html)",
+  "href": "https://www.analyst.co.il/media/ljzplt4r/%D7%9E%D7%93%D7%99%D7%A0%D7%99%D7%95%D7%AA-%D7%94%D7%A9%D7%A7%D7%A2%D7%94-%D7%A6%D7%A4%D7%95%D7%99%D7%99%D7%94-%D7%9C-2020-%D7%A2%D7%93%D7%9B%D7%95%D7%9F-%D7%9E%D7%99%D7%95%D7%9D-190820-%D7%A9%D7%99%D7%A0%D7%95%D7%99-%D7%9E%D7%93%D7%99%D7%A0%D7%99%D7%95%D7%AA-%D7%91%D7%9E%D7%A1%D7%9C%D7%95%D7%9C-%D7%A1%D7%99%D7%9B%D7%95%D7%9F-%D7%91%D7%99%D7%A0%D7%95%D7%A0%D7%99.xls",
+  "legal_id": "511880460",
+  "company": "אנליסט קופות גמל בע\"מ",
+  "detected": "2026-10-01T11:02:43+00:00"
+ },
+ {
+  "kind": "text_changed",
+  "page": "https://www.analyst.co.il/investment-policy/",
+  "text": " -> (html)",
+  "href": "https://www.analyst.co.il/media/bllpdneb/%D7%9E%D7%93%D7%99%D7%A0%D7%99%D7%95%D7%AA-%D7%94%D7%A9%D7%A7%D7%A2%D7%95%D7%AA-%D7%A6%D7%A4%D7%95%D7%99%D7%94-%D7%9C%D7%A9%D7%A0%D7%AA-2020%D7%A2%D7%93%D7%9B%D7%95%D7%9F-%D7%9E%D7%99%D7%95%D7%9D-090220-%D7%91%D7%AA%D7%95%D7%A7%D7%A3-%D7%94%D7%97%D7%9C-%D7%9E-010120-%D7%94%D7%95%D7%A1%D7%A4%D7%AA-%D7%9E%D7%93%D7%93%D7%99-%D7%99%D7%99%D7%97%D7%95%D7%A1-%D7%91%D7%90%D7%A4%D7%99%D7%A7-%D7%9E%D7%96%D7%95%D7%9E%D7%9F-%D7%95%D7%9E%D7%98%D7%97.xls",
+  "legal_id": "511880460",
+  "company": "אנליסט קופות גמל בע\"מ",
+  "detected": "2026-10-01T11:02:43+00:00"
+ },
+ {
+  "kind": "text_changed",
+  "page": "https://www.analyst.co.il/investment-policy/",
+  "text": " -> (html)",
+  "href": "https://www.analyst.co.il/media/eiqmwhyd/%D7%9E%D7%93%D7%99%D7%A0%D7%99%D7%95%D7%AA-%D7%94%D7%A9%D7%A7%D7%A2%D7%95%D7%AA-%D7%A6%D7%A4%D7%95%D7%99%D7%94-2020.xls",
+  "legal_id": "511880460",
+  "company": "אנליסט קופות גמל בע\"מ",
+  "detected": "2026-10-01T11:02:43+00:00"
+ },
+ {
+  "kind": "text_changed",
+  "page": "https://www.analyst.co.il/investment-policy/",
+  "text": " -> (html)",
+  "href": "https://www.analyst.co.il/media/2htdrgu1/%D7%94%D7%95%D7%93%D7%A2%D7%94-%D7%91%D7%93%D7%91%D7%A8-%D7%9E%D7%99%D7%96%D7%95%D7%92-%D7%9E%D7%A1%D7%9C%D7%95%D7%9C%D7%99%D7%9D-16-11-2020.pdf",
+  "legal_id": "511880460",
+  "company": "אנליסט קופות גמל בע\"מ",
+  "detected": "2026-10-01T11:02:43+00:00"
+ },
+ {
+  "kind": "text_changed",
+  "page": "https://www.analyst.co.il/investment-policy/",
+  "text": " -> (html)",
+  "href": "https://www.analyst.co.il/media/cfaj3wwp/%D7%9E%D7%93%D7%99%D7%A0%D7%99%D7%95%D7%AA-%D7%94%D7%A9%D7%A7%D7%A2%D7%94-%D7%A6%D7%A4%D7%95%D7%99%D7%99%D7%94-%D7%9C-2019-%D7%A2%D7%93%D7%9B%D7%95%D7%9F-%D7%9E%D7%99%D7%95%D7%9D-25112019-%D7%A9%D7%99%D7%A0%D7%95%D7%99-%D7%9E%D7%92%D7%91%D7%9C%D7%95%D7%AA-%D7%97%D7%A9%D7%99%D7%A4%D7%94-%D7%91%D7%9E%D7%A1%D7%9C%D7%95%D7%9C-%D7%90%D7%A0%D7%9C%D7%99%D7%A1%D7%98-%D7%92%D7%9E%D7%9C-%D7%9C%D7%91%D7%A0%D7%99-50-%D7%95%D7%9E%D7%98%D7%94.xlsx",
+  "legal_id": "511880460",
+  "company": "אנליסט קופות גמל בע\"מ",
+  "detected": "2026-10-01T11:02:43+00:00"
+ },
+ {
+  "kind": "text_changed",
+  "page": "https://www.analyst.co.il/investment-policy/",
+  "text": " -> (html)",
+  "href": "https://www.analyst.co.il/media/bfcbt5sq/%D7%9E%D7%93%D7%99%D7%A0%D7%99%D7%95%D7%AA-%D7%94%D7%A9%D7%A7%D7%A2%D7%95%D7%AA-%D7%A6%D7%A4%D7%95%D7%99%D7%94-2019.xlsx",
+  "legal_id": "511880460",
+  "company": "אנליסט קופות גמל בע\"מ",
+  "detected": "2026-10-01T11:02:43+00:00"
+ },
+ {
+  "kind": "text_changed",
+  "page": "https://www.analyst.co.il/investment-policy/",
+  "text": " -> (html)",
+  "href": "https://www.analyst.co.il/media/mhghi3sz/%D7%94%D7%95%D7%93%D7%A2%D7%94-%D7%A2%D7%9C-%D7%94%D7%A9%D7%9C%D7%9E%D7%AA-%D7%9E%D7%99%D7%96%D7%95%D7%92-%D7%9E%D7%A1%D7%9C%D7%95%D7%9C%D7%99%D7%9D-%D7%91%D7%A7%D7%95%D7%A4%D7%95%D7%AA-%D7%90%D7%A0%D7%9C%D7%99%D7%A1%D7%98-10-01-2016.pdf",
+  "legal_id": "511880460",
+  "company": "אנליסט קופות גמל בע\"מ",
+  "detected": "2026-10-01T11:02:43+00:00"
+ },
+ {
+  "kind": "text_changed",
+  "page": "https://www.analyst.co.il/investment-policy/",
+  "text": " -> (html)",
+  "href": "https://www.analyst.co.il/media/1f3knr2q/%D7%94%D7%95%D7%93%D7%A2%D7%94-%D7%A2%D7%9C-%D7%9B%D7%95%D7%95%D7%A0%D7%AA-%D7%9E%D7%99%D7%96%D7%95%D7%92-%D7%9E%D7%A1%D7%9C%D7%95%D7%9C%D7%99%D7%9D-%D7%91%D7%A7%D7%95%D7%A4%D7%95%D7%AA-%D7%90%D7%A0%D7%9C%D7%99%D7%A1%D7%98-15-11-2015.pdf",
+  "legal_id": "511880460",
+  "company": "אנליסט קופות גמל בע\"מ",
+  "detected": "2026-10-01T11:02:43+00:00"
  },
  {
   "kind": "new_item",
   "page": "https://www.analyst.co.il/investment-policy/",
-  "text": "קופת גמל להשקעה",
-  "href": "https://www.analyst.co.il/funds-lobby/gemel-invest/",
+  "text": "בית השקעות אנליסט הינו מבתי ההשקעות הוותיקים והמנוסים בניהול השקעות בשוק ההון בישראל. 'אנליסט' נוסדה בשנת 1985, ומשנת 1994 היא חברה ציבורית שמניותיה נסחרות בבורסה לניירות ערך בתל-אביב, ניהול ההשקעות מ",
+  "href": "https://www.analyst.co.il",
   "legal_id": "511880460",
   "company": "אנליסט קופות גמל בע\"מ",
-  "detected": "2026-09-30T22:26:07+00:00"
- },
- {
-  "kind": "new_item",
-  "page": "https://www.analyst.co.il/investment-policy/",
-  "text": "קופות גמל וקרנות השתלמות",
-  "href": "https://www.analyst.co.il/funds-lobby/",
-  "legal_id": "511880460",
-  "company": "אנליסט קופות גמל בע\"מ",
-  "detected": "2026-09-30T22:26:07+00:00"
- },
- {
-  "kind": "new_item",
-  "page": "https://www.analyst.co.il/investment-policy/",
-  "text": "קופות גמל",
-  "href": "https://www.analyst.co.il/funds-lobby/provident-funds/",
-  "legal_id": "511880460",
-  "company": "אנליסט קופות גמל בע\"מ",
-  "detected": "2026-09-30T22:26:07+00:00"
- },
- {
-  "kind": "new_item",
-  "page": "https://www.analyst.co.il/investment-policy/",
-  "text": "פתיחת חשבון קרן השתלמות להפקדות חדשות",
-  "href": "https://www.analyst.co.il/openning-training-funds/",
-  "legal_id": "511880460",
-  "company": "אנליסט קופות גמל בע\"מ",
-  "detected": "2026-09-30T22:26:07+00:00"
- },
- {
-  "kind": "new_item",
-  "page": "https://www.analyst.co.il/investment-policy/",
-  "text": "פתיחת חשבון קופת גמל להפקדות חדשות",
-  "href": "https://www.analyst.co.il/join-provident-funds/",
-  "legal_id": "511880460",
-  "company": "אנליסט קופות גמל בע\"מ",
-  "detected": "2026-09-30T22:26:07+00:00"
- },
- {
-  "kind": "new_item",
-  "page": "https://www.analyst.co.il/investment-policy/",
-  "text": "פתיחת חשבון חדש לקופת גמל להשקעה",
-  "href": "https://www.analyst.co.il/gemel-invest-join/",
-  "legal_id": "511880460",
-  "company": "אנליסט קופות גמל בע\"מ",
-  "detected": "2026-09-30T22:26:07+00:00"
- },
- {
-  "kind": "new_item",
-  "page": "https://www.analyst.co.il/investment-policy/",
-  "text": "מחשבון תשואות – השוואה בין קרנות השתלמות וקופות גמל נבחרות",
-  "href": "https://www.analyst.co.il/yield-comparison-calculator/",
-  "legal_id": "511880460",
-  "company": "אנליסט קופות גמל בע\"מ",
-  "detected": "2026-09-30T22:26:07+00:00"
- },
- {
-  "kind": "new_item",
-  "page": "https://www.analyst.co.il/investment-policy/",
-  "text": "העברת חשבון קרן השתלמות",
-  "href": "https://www.analyst.co.il/transfer-training-funds/",
-  "legal_id": "511880460",
-  "company": "אנליסט קופות גמל בע\"מ",
-  "detected": "2026-09-30T22:26:07+00:00"
- },
- {
-  "kind": "new_item",
-  "page": "https://www.analyst.co.il/investment-policy/",
-  "text": "העברת חשבון קופת גמל",
-  "href": "https://www.analyst.co.il/account-transfer-provident-funds/",
-  "legal_id": "511880460",
-  "company": "אנליסט קופות גמל בע\"מ",
-  "detected": "2026-09-30T22:26:07+00:00"
- },
- {
-  "kind": "new_item",
-  "page": "https://www.analyst.co.il/investment-policy/",
-  "text": "אנליסט קופות גמל בע\"מ",
-  "href": "https://www.analyst.co.il/head-of-public-application/",
-  "legal_id": "511880460",
-  "company": "אנליסט קופות גמל בע\"מ",
-  "detected": "2026-09-30T22:26:07+00:00"
- },
- {
-  "kind": "new_item",
-  "page": "https://www.analyst.co.il/investment-policy/",
-  "text": "אודות קופות גמל",
-  "href": "https://www.analyst.co.il/about-us/provident/",
-  "legal_id": "511880460",
-  "company": "אנליסט קופות גמל בע\"מ",
-  "detected": "2026-09-30T22:26:07+00:00"
- },
- {
-  "kind": "new_item",
-  "page": "https://www.analyst.co.il/investment-policy/",
-  "text": "אודות נץ סוכנות לביטוח פנסיוני",
-  "href": "https://www.analyst.co.il/about-us/about-netz-pensionary-insurance/",
-  "legal_id": "511880460",
-  "company": "אנליסט קופות גמל בע\"מ",
-  "detected": "2026-09-30T22:26:07+00:00"
+  "detected": "2026-10-01T11:02:43+00:00"
  },
  {
   "kind": "new_item",
   "page": "https://www.analyst.co.il/investment-policy/",
   "text": "(iframe)",
-  "href": "https://www.google.com/recaptcha/api2/anchor?ar=1&k=6LeXx8spAAAAAOhAgvJ7_YyVQbF6U2MN4n-qr8jV&co=aHR0cHM6Ly93d3cuYW5hbHlzdC5jby5pbDo0NDM.&hl=iw&v=kemdRjWFxNjBELZirRCZG7oY&size=invisible&anchor-ms=20000&execute-ms=30000&ovv=CAB5am5W&cb=yzt8nbm09ir0",
+  "href": "https://www.google.com/recaptcha/api2/anchor?ar=1&k=6LeXx8spAAAAAOhAgvJ7_YyVQbF6U2MN4n-qr8jV&co=aHR0cHM6Ly93d3cuYW5hbHlzdC5jby5pbDo0NDM.&hl=iw&v=M3Y7JiHDsN9LioFC-iZZqjKA&size=invisible&anchor-ms=20000&execute-ms=30000&cb=6ooi6rg8k7ui",
   "legal_id": "511880460",
   "company": "אנליסט קופות גמל בע\"מ",
-  "detected": "2026-09-30T22:26:07+00:00"
+  "detected": "2026-10-01T11:02:43+00:00"
+ },
+ {
+  "kind": "text_changed",
+  "page": "https://www.analyst.co.il/investment-policy/",
+  "text": " -> (html)",
+  "href": "https://www.analyst.co.il/media/ex5hiizd/%D7%A2%D7%A7%D7%A8%D7%95%D7%A0%D7%95%D7%AA-%D7%A0%D7%95%D7%94%D7%9C-%D7%94%D7%A2%D7%91%D7%A8%D7%AA-%D7%96%D7%9B%D7%95%D7%99%D7%95%D7%AA-%D7%A2%D7%9E%D7%99%D7%AA%D7%99%D7%9D-%D7%A9%D7%9C%D7%90-%D7%91%D7%9E%D7%96%D7%95%D7%9E%D7%9F.pdf",
+  "legal_id": "511880460",
+  "company": "אנליסט קופות גמל בע\"מ",
+  "detected": "2026-10-01T11:02:43+00:00"
+ },
+ {
+  "kind": "text_changed",
+  "page": "https://www.analyst.co.il/investment-policy/",
+  "text": " -> (html)",
+  "href": "https://www.analyst.co.il/media/zjxht0lr/%D7%9E%D7%93%D7%99%D7%A0%D7%99%D7%95%D7%AA-%D7%AA%D7%92%D7%9E%D7%95%D7%9C.pdf",
+  "legal_id": "511880460",
+  "company": "אנליסט קופות גמל בע\"מ",
+  "detected": "2026-10-01T11:02:43+00:00"
+ },
+ {
+  "kind": "text_changed",
+  "page": "https://www.analyst.co.il/investment-policy/",
+  "text": " -> (html)",
+  "href": "https://www.analyst.co.il/media/icjdapf3/%D7%AA%D7%92%D7%9E%D7%95%D7%9C-1.pdf",
+  "legal_id": "511880460",
+  "company": "אנליסט קופות גמל בע\"מ",
+  "detected": "2026-10-01T11:02:43+00:00"
+ },
+ {
+  "kind": "text_changed",
+  "page": "https://www.analyst.co.il/investment-policy/",
+  "text": " -> (html)",
+  "href": "https://www.analyst.co.il/media/y1yc1x0m/%D7%AA%D7%92%D7%9E%D7%95%D7%9C-2.pdf",
+  "legal_id": "511880460",
+  "company": "אנליסט קופות גמל בע\"מ",
+  "detected": "2026-10-01T11:02:43+00:00"
+ },
+ {
+  "kind": "text_changed",
+  "page": "https://www.analyst.co.il/investment-policy/",
+  "text": " -> (html)",
+  "href": "https://www.analyst.co.il/media/syphbcex/%D7%AA%D7%92%D7%9E%D7%95%D7%9C-3.pdf",
+  "legal_id": "511880460",
+  "company": "אנליסט קופות גמל בע\"מ",
+  "detected": "2026-10-01T11:02:43+00:00"
+ },
+ {
+  "kind": "text_changed",
+  "page": "https://www.analyst.co.il/investment-policy/",
+  "text": " -> (html)",
+  "href": "https://www.analyst.co.il/media/53gb4at1/%D7%AA%D7%92%D7%9E%D7%95%D7%9C-%D7%9C%D7%A1%D7%95%D7%9B%D7%9F-%D7%A2%D7%91%D7%95%D7%A8-%D7%A7%D7%99%D7%93%D7%95%D7%9D-%D7%9E%D7%9B%D7%99%D7%A8%D7%95%D7%AA.pdf",
+  "legal_id": "511880460",
+  "company": "אנליסט קופות גמל בע\"מ",
+  "detected": "2026-10-01T11:02:43+00:00"
+ },
+ {
+  "kind": "text_changed",
+  "page": "https://www.analyst.co.il/investment-policy/",
+  "text": " -> (html)",
+  "href": "https://www.analyst.co.il/media/ydsewtr5/%D7%AA%D7%92%D7%9E%D7%95%D7%9C-%D7%9C%D7%A1%D7%95%D7%9B%D7%9F-%D7%A2%D7%91%D7%95%D7%A8-%D7%A7%D7%99%D7%93%D7%95%D7%9D-%D7%9E%D7%9B%D7%99%D7%A8%D7%95%D7%AA-%D7%A4%D7%A8%D7%A1%D7%95%D7%9D-%D7%91%D7%90%D7%99%D7%A0%D7%98%D7%A8%D7%A0%D7%98-%D7%A2%D7%93%D7%9B%D7%A0%D7%99-1.pdf",
+  "legal_id": "511880460",
+  "company": "אנליסט קופות גמל בע\"מ",
+  "detected": "2026-10-01T11:02:43+00:00"
+ },
+ {
+  "kind": "text_changed",
+  "page": "https://www.analyst.co.il/investment-policy/",
+  "text": " -> (html)",
+  "href": "https://www.analyst.co.il/media/qaolzcif/%D7%AA%D7%92%D7%9E%D7%95%D7%9C-%D7%9C%D7%A1%D7%95%D7%9B%D7%9F-%D7%A2%D7%91%D7%95%D7%A8-%D7%A7%D7%99%D7%93%D7%95%D7%9D-%D7%9E%D7%9B%D7%99%D7%A8%D7%95%D7%AA-%D7%A4%D7%A8%D7%A1%D7%95%D7%9D-%D7%91%D7%90%D7%99%D7%A0%D7%98%D7%A8%D7%A0%D7%98-%D7%A2%D7%93%D7%9B%D7%A0%D7%99-1.pdf",
+  "legal_id": "511880460",
+  "company": "אנליסט קופות גמל בע\"מ",
+  "detected": "2026-10-01T11:02:43+00:00"
+ },
+ {
+  "kind": "text_changed",
+  "page": "https://www.analyst.co.il/investment-policy/",
+  "text": " -> (html)",
+  "href": "https://www.analyst.co.il/media/e2pahuns/%D7%AA%D7%92%D7%9E%D7%95%D7%9C-%D7%9C%D7%A1%D7%95%D7%9B%D7%9F-%D7%A2%D7%91%D7%95%D7%A8-%D7%A7%D7%99%D7%93%D7%95%D7%9D-%D7%9E%D7%9B%D7%99%D7%A8%D7%95%D7%AA-%D7%A4%D7%A8%D7%A1%D7%95%D7%9D-%D7%91%D7%90%D7%99%D7%A0%D7%98%D7%A8%D7%A0%D7%98-%D7%A2%D7%93%D7%9B%D7%A0%D7%99-1-1.pdf",
+  "legal_id": "511880460",
+  "company": "אנליסט קופות גמל בע\"מ",
+  "detected": "2026-10-01T11:02:43+00:00"
+ },
+ {
+  "kind": "text_changed",
+  "page": "https://www.analyst.co.il/investment-policy/",
+  "text": " -> (html)",
+  "href": "https://www.analyst.co.il/media/3qmcu14a/%D7%93%D7%95%D7%97-%D7%A9%D7%A0%D7%AA%D7%99-%D7%9E%D7%9E%D7%95%D7%A0%D7%94-%D7%90%D7%96%D7%A8%D7%97%D7%99%D7%9D-%D7%95%D7%AA%D7%99%D7%A7%D7%99%D7%9D.pdf",
+  "legal_id": "511880460",
+  "company": "אנליסט קופות גמל בע\"מ",
+  "detected": "2026-10-01T11:02:43+00:00"
+ },
+ {
+  "kind": "text_changed",
+  "page": "https://www.analyst.co.il/investment-policy/",
+  "text": " -> (html)",
+  "href": "https://www.analyst.co.il/media/n3pcwlmd/%D7%A0%D7%95%D7%A1%D7%A3-1.pdf",
+  "legal_id": "511880460",
+  "company": "אנליסט קופות גמל בע\"מ",
+  "detected": "2026-10-01T11:02:43+00:00"
+ },
+ {
+  "kind": "text_changed",
+  "page": "https://www.analyst.co.il/investment-policy/",
+  "text": " -> (html)",
+  "href": "https://www.analyst.co.il/media/arsmavxk/%D7%A0%D7%95%D7%A1%D7%A3-2.pdf",
+  "legal_id": "511880460",
+  "company": "אנליסט קופות גמל בע\"מ",
+  "detected": "2026-10-01T11:02:43+00:00"
+ },
+ {
+  "kind": "text_changed",
+  "page": "https://www.analyst.co.il/investment-policy/",
+  "text": " -> (html)",
+  "href": "https://www.analyst.co.il/media/551kplmb/%D7%A0%D7%95%D7%A1%D7%A3-4.pdf",
+  "legal_id": "511880460",
+  "company": "אנליסט קופות גמל בע\"מ",
+  "detected": "2026-10-01T11:02:43+00:00"
+ },
+ {
+  "kind": "text_changed",
+  "page": "https://www.analyst.co.il/investment-policy/",
+  "text": " -> (html)",
+  "href": "https://www.analyst.co.il/media/1gqisbyk/%D7%93%D7%95%D7%97-%D7%AA%D7%A9%D7%95%D7%90%D7%95%D7%AA-%D7%9E%D7%A9%D7%9C%D7%99%D7%9D-%D7%A7%D7%95%D7%91%D7%A5-%D7%9C%D7%90%D7%AA%D7%A8.xls",
+  "legal_id": "511880460",
+  "company": "אנליסט קופות גמל בע\"מ",
+  "detected": "2026-10-01T11:02:43+00:00"
+ },
+ {
+  "kind": "text_changed",
+  "page": "https://www.analyst.co.il/investment-policy/",
+  "text": " -> (html)",
+  "href": "https://www.analyst.co.il/media/rfjhar22/%D7%AA%D7%A9%D7%95%D7%90%D7%95%D7%AA-%D7%99%D7%95%D7%9E%D7%99%D7%95%D7%AA-2008-%D7%A7%D7%95%D7%91%D7%A5-%D7%9C%D7%90%D7%AA%D7%A8.xls",
+  "legal_id": "511880460",
+  "company": "אנליסט קופות גמל בע\"מ",
+  "detected": "2026-10-01T11:02:43+00:00"
  },
  {
   "kind": "removed_item",
   "page": "https://www.analyst.co.il/investment-policy/",
   "text": "(iframe)",
-  "href": "https://www.google.com/recaptcha/api2/anchor?ar=1&k=6LeXx8spAAAAAOhAgvJ7_YyVQbF6U2MN4n-qr8jV&co=aHR0cHM6Ly93d3cuYW5hbHlzdC5jby5pbDo0NDM.&hl=iw&v=kemdRjWFxNjgsGdhRslyEPwU&size=invisible&anchor-ms=20000&execute-ms=30000&cb=b0ofad2munc1",
-  "legal_id": "511880460",
-  "company": "אנליסט קופות גמל בע\"מ",
-  "detected": "2026-09-30T22:26:07+00:00"
- },
- {
-  "kind": "new_page",
-  "page": "https://www.google.com/recaptcha/api2/anchor?ar=1&k=6LeXx8spAAAAAOhAgvJ7_YyVQbF6U2MN4n-qr8jV&co=aHR0cHM6Ly93d3cuYW5hbHlzdC5jby5pbDo0NDM.&hl=iw&v=kemdRjWFxNjBELZirRCZG7oY&size=invisible&anchor-ms=20000&execute-ms=30000&ovv=CAB5am5W&cb=yzt8nbm09ir0",
-  "text": "0 items",
   "href": "https://www.google.com/recaptcha/api2/anchor?ar=1&k=6LeXx8spAAAAAOhAgvJ7_YyVQbF6U2MN4n-qr8jV&co=aHR0cHM6Ly93d3cuYW5hbHlzdC5jby5pbDo0NDM.&hl=iw&v=kemdRjWFxNjBELZirRCZG7oY&size=invisible&anchor-ms=20000&execute-ms=30000&ovv=CAB5am5W&cb=yzt8nbm09ir0",
   "legal_id": "511880460",
   "company": "אנליסט קופות גמל בע\"מ",
-  "detected": "2026-09-30T22:26:07+00:00"
+  "detected": "2026-10-01T11:02:43+00:00"
+ },
+ {
+  "kind": "new_page",
+  "page": "https://www.google.com/recaptcha/api2/anchor?ar=1&k=6LeXx8spAAAAAOhAgvJ7_YyVQbF6U2MN4n-qr8jV&co=aHR0cHM6Ly93d3cuYW5hbHlzdC5jby5pbDo0NDM.&hl=iw&v=M3Y7JiHDsN9LioFC-iZZqjKA&size=invisible&anchor-ms=20000&execute-ms=30000&cb=6ooi6rg8k7ui",
+  "text": "0 items",
+  "href": "https://www.google.com/recaptcha/api2/anchor?ar=1&k=6LeXx8spAAAAAOhAgvJ7_YyVQbF6U2MN4n-qr8jV&co=aHR0cHM6Ly93d3cuYW5hbHlzdC5jby5pbDo0NDM.&hl=iw&v=M3Y7JiHDsN9LioFC-iZZqjKA&size=invisible&anchor-ms=20000&execute-ms=30000&cb=6ooi6rg8k7ui",
+  "legal_id": "511880460",
+  "company": "אנליסט קופות גמל בע\"מ",
+  "detected": "2026-10-01T11:02:43+00:00"
  },
  {
   "kind": "new_item",
-  "page": "https://www.analyst.co.il",
-  "text": "נץ סוכנות לביטוח פנסיוני (2021)",
-  "href": "https://www.analyst.co.il/about-us/about-netz-pensionary-insurance/",
-  "legal_id": "511880460",
-  "company": "אנליסט קופות גמל בע\"מ",
-  "detected": "2026-09-30T22:26:07+00:00"
- },
- {
-  "kind": "new_item",
-  "page": "https://www.analyst.co.il",
-  "text": "תקרת הפקדה לקרן השתלמות",
-  "href": "https://www.analyst.co.il/articles/deposit-amount/",
-  "legal_id": "511880460",
-  "company": "אנליסט קופות גמל בע\"מ",
-  "detected": "2026-09-30T22:26:07+00:00"
- },
- {
-  "kind": "new_item",
-  "page": "https://www.analyst.co.il",
-  "text": "קרן השתלמות",
-  "href": "https://www.analyst.co.il/funds-lobby/training-funds/",
-  "legal_id": "511880460",
-  "company": "אנליסט קופות גמל בע\"מ",
-  "detected": "2026-09-30T22:26:07+00:00"
- },
- {
-  "kind": "new_item",
-  "page": "https://www.analyst.co.il",
-  "text": "קופת גמל להשקעה",
-  "href": "https://www.analyst.co.il/funds-lobby/gemel-invest/",
-  "legal_id": "511880460",
-  "company": "אנליסט קופות גמל בע\"מ",
-  "detected": "2026-09-30T22:26:07+00:00"
- },
- {
-  "kind": "new_item",
-  "page": "https://www.analyst.co.il",
-  "text": "קופות גמל וקרן השתלמות",
-  "href": "https://www.analyst.co.il/funds-lobby/",
-  "legal_id": "511880460",
-  "company": "אנליסט קופות גמל בע\"מ",
-  "detected": "2026-09-30T22:26:07+00:00"
- },
- {
-  "kind": "new_item",
-  "page": "https://www.analyst.co.il",
-  "text": "קופות גמל",
-  "href": "https://www.analyst.co.il/funds-lobby/provident-funds/",
-  "legal_id": "511880460",
-  "company": "אנליסט קופות גמל בע\"מ",
-  "detected": "2026-09-30T22:26:07+00:00"
- },
- {
-  "kind": "new_item",
-  "page": "https://www.analyst.co.il",
-  "text": "פתיחת חשבון קרן השתלמות להפקדות חדשות",
-  "href": "https://www.analyst.co.il/openning-training-funds/",
-  "legal_id": "511880460",
-  "company": "אנליסט קופות גמל בע\"מ",
-  "detected": "2026-09-30T22:26:07+00:00"
- },
- {
-  "kind": "new_item",
-  "page": "https://www.analyst.co.il",
-  "text": "פתיחת חשבון קופת גמל להפקדות חדשות",
-  "href": "https://www.analyst.co.il/join-provident-funds/",
-  "legal_id": "511880460",
-  "company": "אנליסט קופות גמל בע\"מ",
-  "detected": "2026-09-30T22:26:07+00:00"
- },
- {
-  "kind": "new_item",
-  "page": "https://www.analyst.co.il",
-  "text": "פתיחת חשבון חדש לקופת גמל להשקעה",
-  "href": "https://www.analyst.co.il/gemel-invest-join/",
-  "legal_id": "511880460",
-  "company": "אנליסט קופות גמל בע\"מ",
-  "detected": "2026-09-30T22:26:07+00:00"
- },
- {
-  "kind": "new_item",
-  "page": "https://www.analyst.co.il",
-  "text": "מחשבון תשואות – השוואה בין קרנות השתלמות וקופות גמל נבחרות",
-  "href": "https://www.analyst.co.il/yield-comparison-calculator/",
-  "legal_id": "511880460",
-  "company": "אנליסט קופות גמל בע\"מ",
-  "detected": "2026-09-30T22:26:07+00:00"
- },
- {
-  "kind": "new_item",
-  "page": "https://www.analyst.co.il",
-  "text": "מהי קרן השתלמות",
-  "href": "https://www.analyst.co.il/articles/about-training-funds/",
-  "legal_id": "511880460",
-  "company": "אנליסט קופות גמל בע\"מ",
-  "detected": "2026-09-30T22:26:07+00:00"
- },
- {
-  "kind": "new_item",
-  "page": "https://www.analyst.co.il",
-  "text": "מהי קופת גמל?",
-  "href": "https://www.analyst.co.il/articles/about-provident-funds/",
-  "legal_id": "511880460",
-  "company": "אנליסט קופות גמל בע\"מ",
-  "detected": "2026-09-30T22:26:07+00:00"
- },
- {
-  "kind": "new_item",
-  "page": "https://www.analyst.co.il",
-  "text": "העברת חשבון קרן השתלמות",
-  "href": "https://www.analyst.co.il/transfer-training-funds/",
-  "legal_id": "511880460",
-  "company": "אנליסט קופות גמל בע\"מ",
-  "detected": "2026-09-30T22:26:07+00:00"
- },
- {
-  "kind": "new_item",
-  "page": "https://www.analyst.co.il",
-  "text": "העברת חשבון קופת גמל",
-  "href": "https://www.analyst.co.il/account-transfer-provident-funds/",
-  "legal_id": "511880460",
-  "company": "אנליסט קופות גמל בע\"מ",
-  "detected": "2026-09-30T22:26:07+00:00"
- },
- {
-  "kind": "text_changed",
-  "page": "https://www.analyst.co.il",
-  "text": "מידע לעמיתים -> דיווחי חברת הגמל",
+  "page": "https://www.analyst.co.il/about-us/portfolio-management/",
+  "text": "בית השקעות אנליסט הינו מבתי ההשקעות הוותיקים והמנוסים בניהול השקעות בשוק ההון בישראל. 'אנליסט' נוסדה בשנת 1985, ומשנת 1994 היא חברה ציבורית שמניותיה נסחרות בבורסה לניירות ערך בתל-אביב, ניהול ההשקעות מ",
   "href": "https://www.analyst.co.il",
   "legal_id": "511880460",
   "company": "אנליסט קופות גמל בע\"מ",
-  "detected": "2026-09-30T22:26:07+00:00"
+  "detected": "2026-10-01T11:02:43+00:00"
  },
  {
   "kind": "new_item",
-  "page": "https://www.analyst.co.il",
-  "text": "בדיקת יתרת קרן השתלמות",
-  "href": "https://www.analyst.co.il/articles/training-fund-balance-check/",
-  "legal_id": "511880460",
-  "company": "אנליסט קופות גמל בע\"מ",
-  "detected": "2026-09-30T22:26:07+00:00"
- },
- {
-  "kind": "new_item",
-  "page": "https://www.analyst.co.il",
-  "text": "אנליסט קופות גמל בע\"מ",
-  "href": "https://www.analyst.co.il/head-of-public-application/",
-  "legal_id": "511880460",
-  "company": "אנליסט קופות גמל בע\"מ",
-  "detected": "2026-09-30T22:26:07+00:00"
- },
- {
-  "kind": "new_item",
-  "page": "https://www.analyst.co.il",
-  "text": "אודות קופות גמל",
-  "href": "https://www.analyst.co.il/about-us/provident/",
-  "legal_id": "511880460",
-  "company": "אנליסט קופות גמל בע\"מ",
-  "detected": "2026-09-30T22:26:07+00:00"
- },
- {
-  "kind": "new_item",
-  "page": "https://www.analyst.co.il",
-  "text": "",
-  "href": "https://api.whatsapp.com/send?text=https://www.analyst.co.il/articles/about-provident-funds/",
-  "legal_id": "511880460",
-  "company": "אנליסט קופות גמל בע\"מ",
-  "detected": "2026-09-30T22:26:07+00:00"
- },
- {
-  "kind": "new_item",
-  "page": "https://www.analyst.co.il",
-  "text": "",
-  "href": "https://www.facebook.com/sharer/sharer.php?u=https://www.analyst.co.il/articles/about-provident-funds/",
-  "legal_id": "511880460",
-  "company": "אנליסט קופות גמל בע\"מ",
-  "detected": "2026-09-30T22:26:07+00:00"
- },
- {
-  "kind": "new_item",
-  "page": "https://www.analyst.co.il",
-  "text": "",
-  "href": "https://www.linkedin.com/shareArticle?mini=true&url=https://www.analyst.co.il/articles/about-provident-funds/",
-  "legal_id": "511880460",
-  "company": "אנליסט קופות גמל בע\"מ",
-  "detected": "2026-09-30T22:26:07+00:00"
- },
- {
-  "kind": "new_item",
-  "page": "https://www.analyst.co.il",
-  "text": "",
-  "href": "https://twitter.com/intent/tweet?url=https://www.analyst.co.il/articles/about-provident-funds/",
-  "legal_id": "511880460",
-  "company": "אנליסט קופות גמל בע\"מ",
-  "detected": "2026-09-30T22:26:07+00:00"
- },
- {
-  "kind": "new_item",
-  "page": "https://www.analyst.co.il/about-us/portfolio-management/",
-  "text": "קרן השתלמות",
-  "href": "https://www.analyst.co.il/funds-lobby/training-funds/",
-  "legal_id": "511880460",
-  "company": "אנליסט קופות גמל בע\"מ",
-  "detected": "2026-09-30T22:26:07+00:00"
- },
- {
-  "kind": "new_item",
-  "page": "https://www.analyst.co.il/about-us/portfolio-management/",
-  "text": "קופת גמל להשקעה",
-  "href": "https://www.analyst.co.il/funds-lobby/gemel-invest/",
-  "legal_id": "511880460",
-  "company": "אנליסט קופות גמל בע\"מ",
-  "detected": "2026-09-30T22:26:07+00:00"
- },
- {
-  "kind": "new_item",
-  "page": "https://www.analyst.co.il/about-us/portfolio-management/",
-  "text": "קופות גמל וקרנות השתלמות",
-  "href": "https://www.analyst.co.il/funds-lobby/",
-  "legal_id": "511880460",
-  "company": "אנליסט קופות גמל בע\"מ",
-  "detected": "2026-09-30T22:26:07+00:00"
- },
- {
-  "kind": "new_item",
-  "page": "https://www.analyst.co.il/about-us/portfolio-management/",
-  "text": "קופות גמל",
-  "href": "https://www.analyst.co.il/funds-lobby/provident-funds/",
-  "legal_id": "511880460",
-  "company": "אנליסט קופות גמל בע\"מ",
-  "detected": "2026-09-30T22:26:07+00:00"
- },
- {
-  "kind": "new_item",
-  "page": "https://www.analyst.co.il/about-us/portfolio-management/",
-  "text": "פתיחת חשבון קרן השתלמות להפקדות חדשות",
-  "href": "https://www.analyst.co.il/openning-training-funds/",
-  "legal_id": "511880460",
-  "company": "אנליסט קופות גמל בע\"מ",
-  "detected": "2026-09-30T22:26:07+00:00"
- },
- {
-  "kind": "new_item",
-  "page": "https://www.analyst.co.il/about-us/portfolio-management/",
-  "text": "פתיחת חשבון קופת גמל להפקדות חדשות",
-  "href": "https://www.analyst.co.il/join-provident-funds/",
-  "legal_id": "511880460",
-  "company": "אנליסט קופות גמל בע\"מ",
-  "detected": "2026-09-30T22:26:07+00:00"
- },
- {
-  "kind": "new_item",
-  "page": "https://www.analyst.co.il/about-us/portfolio-management/",
-  "text": "פתיחת חשבון חדש לקופת גמל להשקעה",
-  "href": "https://www.analyst.co.il/gemel-invest-join/",
-  "legal_id": "511880460",
-  "company": "אנליסט קופות גמל בע\"מ",
-  "detected": "2026-09-30T22:26:07+00:00"
- },
- {
-  "kind": "new_item",
-  "page": "https://www.analyst.co.il/about-us/portfolio-management/",
-  "text": "מחשבון תשואות – השוואה בין קרנות השתלמות וקופות גמל נבחרות",
-  "href": "https://www.analyst.co.il/yield-comparison-calculator/",
-  "legal_id": "511880460",
-  "company": "אנליסט קופות גמל בע\"מ",
-  "detected": "2026-09-30T22:26:07+00:00"
- },
- {
-  "kind": "new_item",
-  "page": "https://www.analyst.co.il/about-us/portfolio-management/",
-  "text": "העברת חשבון קרן השתלמות",
-  "href": "https://www.analyst.co.il/transfer-training-funds/",
-  "legal_id": "511880460",
-  "company": "אנליסט קופות גמל בע\"מ",
-  "detected": "2026-09-30T22:26:07+00:00"
- },
- {
-  "kind": "new_item",
-  "page": "https://www.analyst.co.il/about-us/portfolio-management/",
-  "text": "העברת חשבון קופת גמל",
-  "href": "https://www.analyst.co.il/account-transfer-provident-funds/",
-  "legal_id": "511880460",
-  "company": "אנליסט קופות גמל בע\"מ",
-  "detected": "2026-09-30T22:26:07+00:00"
- },
- {
-  "kind": "text_changed",
-  "page": "https://www.analyst.co.il/about-us/portfolio-management/",
-  "text": "מידע לעמיתים -> דיווחי חברת הגמל",
-  "href": "https://www.analyst.co.il/about-us/portfolio-management/",
-  "legal_id": "511880460",
-  "company": "אנליסט קופות גמל בע\"מ",
-  "detected": "2026-09-30T22:26:07+00:00"
- },
- {
-  "kind": "new_item",
-  "page": "https://www.analyst.co.il/about-us/portfolio-management/",
-  "text": "אנליסט קופות גמל בע\"מ",
-  "href": "https://www.analyst.co.il/head-of-public-application/",
-  "legal_id": "511880460",
-  "company": "אנליסט קופות גמל בע\"מ",
-  "detected": "2026-09-30T22:26:07+00:00"
- },
- {
-  "kind": "new_item",
-  "page": "https://www.analyst.co.il/about-us/portfolio-management/",
-  "text": "אודות קופות גמל",
-  "href": "https://www.analyst.co.il/about-us/provident/",
-  "legal_id": "511880460",
-  "company": "אנליסט קופות גמל בע\"מ",
-  "detected": "2026-09-30T22:26:07+00:00"
- },
- {
-  "kind": "new_item",
-  "page": "https://www.analyst.co.il/about-us/portfolio-management/",
-  "text": "אודות נץ סוכנות לביטוח פנסיוני",
-  "href": "https://www.analyst.co.il/about-us/about-netz-pensionary-insurance/",
-  "legal_id": "511880460",
-  "company": "אנליסט קופות גמל בע\"מ",
-  "detected": "2026-09-30T22:26:07+00:00"
- },
- {
-  "kind": "new_page",
   "page": "https://www.analyst.co.il/about-us/provident/",
-  "text": "24 items",
-  "href": "https://www.analyst.co.il/about-us/provident/",
+  "text": "בית השקעות אנליסט הינו מבתי ההשקעות הוותיקים והמנוסים בניהול השקעות בשוק ההון בישראל. 'אנליסט' נוסדה בשנת 1985, ומשנת 1994 היא חברה ציבורית שמניותיה נסחרות בבורסה לניירות ערך בתל-אביב, ניהול ההשקעות מ",
+  "href": "https://www.analyst.co.il",
   "legal_id": "511880460",
   "company": "אנליסט קופות גמל בע\"מ",
-  "detected": "2026-09-30T22:26:07+00:00"
+  "detected": "2026-10-01T11:02:43+00:00"
  },
  {
-  "kind": "new_page",
+  "kind": "new_item",
   "page": "https://www.analyst.co.il/about-us/about-netz-pensionary-insurance/",
-  "text": "26 items",
-  "href": "https://www.analyst.co.il/about-us/about-netz-pensionary-insurance/",
+  "text": "בית השקעות אנליסט הינו מבתי ההשקעות הוותיקים והמנוסים בניהול השקעות בשוק ההון בישראל. 'אנליסט' נוסדה בשנת 1985, ומשנת 1994 היא חברה ציבורית שמניותיה נסחרות בבורסה לניירות ערך בתל-אביב, ניהול ההשקעות מ",
+  "href": "https://www.analyst.co.il",
   "legal_id": "511880460",
   "company": "אנליסט קופות גמל בע\"מ",
-  "detected": "2026-09-30T22:26:07+00:00"
+  "detected": "2026-10-01T11:02:43+00:00"
  },
  {
-  "kind": "new_page",
+  "kind": "new_item",
   "page": "https://www.analyst.co.il/funds-lobby/",
-  "text": "25 items",
-  "href": "https://www.analyst.co.il/funds-lobby/",
+  "text": "בית השקעות אנליסט הינו מבתי ההשקעות הוותיקים והמנוסים בניהול השקעות בשוק ההון בישראל. 'אנליסט' נוסדה בשנת 1985, ומשנת 1994 היא חברה ציבורית שמניותיה נסחרות בבורסה לניירות ערך בתל-אביב, ניהול ההשקעות מ",
+  "href": "https://www.analyst.co.il",
   "legal_id": "511880460",
   "company": "אנליסט קופות גמל בע\"מ",
-  "detected": "2026-09-30T22:26:07+00:00"
+  "detected": "2026-10-01T11:02:43+00:00"
  },
  {
-  "kind": "new_page",
+  "kind": "new_item",
   "page": "https://www.analyst.co.il/funds-lobby/training-funds/",
-  "text": "46 items",
-  "href": "https://www.analyst.co.il/funds-lobby/training-funds/",
+  "text": "בית השקעות אנליסט הינו מבתי ההשקעות הוותיקים והמנוסים בניהול השקעות בשוק ההון בישראל. 'אנליסט' נוסדה בשנת 1985, ומשנת 1994 היא חברה ציבורית שמניותיה נסחרות בבורסה לניירות ערך בתל-אביב, ניהול ההשקעות מ",
+  "href": "https://www.analyst.co.il",
   "legal_id": "511880460",
   "company": "אנליסט קופות גמל בע\"מ",
-  "detected": "2026-09-30T22:26:07+00:00"
+  "detected": "2026-10-01T11:02:43+00:00"
  },
  {
-  "kind": "new_page",
+  "kind": "new_item",
   "page": "https://www.analyst.co.il/funds-lobby/provident-funds/",
-  "text": "58 items",
-  "href": "https://www.analyst.co.il/funds-lobby/provident-funds/",
+  "text": "בית השקעות אנליסט הינו מבתי ההשקעות הוותיקים והמנוסים בניהול השקעות בשוק ההון בישראל. 'אנליסט' נוסדה בשנת 1985, ומשנת 1994 היא חברה ציבורית שמניותיה נסחרות בבורסה לניירות ערך בתל-אביב, ניהול ההשקעות מ",
+  "href": "https://www.analyst.co.il",
   "legal_id": "511880460",
   "company": "אנליסט קופות גמל בע\"מ",
-  "detected": "2026-09-30T22:26:07+00:00"
+  "detected": "2026-10-01T11:02:43+00:00"
  },
  {
-  "kind": "new_page",
+  "kind": "new_item",
   "page": "https://www.analyst.co.il/funds-lobby/gemel-invest/",
-  "text": "66 items",
-  "href": "https://www.analyst.co.il/funds-lobby/gemel-invest/",
+  "text": "בית השקעות אנליסט הינו מבתי ההשקעות הוותיקים והמנוסים בניהול השקעות בשוק ההון בישראל. 'אנליסט' נוסדה בשנת 1985, ומשנת 1994 היא חברה ציבורית שמניותיה נסחרות בבורסה לניירות ערך בתל-אביב, ניהול ההשקעות מ",
+  "href": "https://www.analyst.co.il",
   "legal_id": "511880460",
   "company": "אנליסט קופות גמל בע\"מ",
-  "detected": "2026-09-30T22:26:07+00:00"
+  "detected": "2026-10-01T11:02:43+00:00"
  },
  {
   "kind": "new_item",
   "page": "https://www.analyst.co.il/portfolio-management/",
-  "text": "קרן השתלמות",
-  "href": "https://www.analyst.co.il/funds-lobby/training-funds/",
+  "text": "בית השקעות אנליסט הינו מבתי ההשקעות הוותיקים והמנוסים בניהול השקעות בשוק ההון בישראל. 'אנליסט' נוסדה בשנת 1985, ומשנת 1994 היא חברה ציבורית שמניותיה נסחרות בבורסה לניירות ערך בתל-אביב, ניהול ההשקעות מ",
+  "href": "https://www.analyst.co.il",
   "legal_id": "511880460",
   "company": "אנליסט קופות גמל בע\"מ",
-  "detected": "2026-09-30T22:26:07+00:00"
+  "detected": "2026-10-01T11:02:43+00:00"
  },
  {
   "kind": "new_item",
-  "page": "https://www.analyst.co.il/portfolio-management/",
-  "text": "קופת גמל להשקעה",
-  "href": "https://www.analyst.co.il/funds-lobby/gemel-invest/",
-  "legal_id": "511880460",
-  "company": "אנליסט קופות גמל בע\"מ",
-  "detected": "2026-09-30T22:26:07+00:00"
- },
- {
-  "kind": "new_item",
-  "page": "https://www.analyst.co.il/portfolio-management/",
-  "text": "קופות גמל וקרנות השתלמות",
-  "href": "https://www.analyst.co.il/funds-lobby/",
-  "legal_id": "511880460",
-  "company": "אנליסט קופות גמל בע\"מ",
-  "detected": "2026-09-30T22:26:07+00:00"
- },
- {
-  "kind": "new_item",
-  "page": "https://www.analyst.co.il/portfolio-management/",
-  "text": "קופות גמל",
-  "href": "https://www.analyst.co.il/funds-lobby/provident-funds/",
-  "legal_id": "511880460",
-  "company": "אנליסט קופות גמל בע\"מ",
-  "detected": "2026-09-30T22:26:07+00:00"
- },
- {
-  "kind": "new_item",
-  "page": "https://www.analyst.co.il/portfolio-management/",
-  "text": "פתיחת חשבון קרן השתלמות להפקדות חדשות",
-  "href": "https://www.analyst.co.il/openning-training-funds/",
-  "legal_id": "511880460",
-  "company": "אנליסט קופות גמל בע\"מ",
-  "detected": "2026-09-30T22:26:07+00:00"
- },
- {
-  "kind": "new_item",
-  "page": "https://www.analyst.co.il/portfolio-management/",
-  "text": "פתיחת חשבון קופת גמל להפקדות חדשות",
-  "href": "https://www.analyst.co.il/join-provident-funds/",
-  "legal_id": "511880460",
-  "company": "אנליסט קופות גמל בע\"מ",
-  "detected": "2026-09-30T22:26:07+00:00"
- },
- {
-  "kind": "new_item",
-  "page": "https://www.analyst.co.il/portfolio-management/",
-  "text": "פתיחת חשבון חדש לקופת גמל להשקעה",
-  "href": "https://www.analyst.co.il/gemel-invest-join/",
-  "legal_id": "511880460",
-  "company": "אנליסט קופות גמל בע\"מ",
-  "detected": "2026-09-30T22:26:07+00:00"
- },
- {
-  "kind": "new_item",
-  "page": "https://www.analyst.co.il/portfolio-management/",
-  "text": "מחשבון תשואות – השוואה בין קרנות השתלמות וקופות גמל נבחרות",
-  "href": "https://www.analyst.co.il/yield-comparison-calculator/",
-  "legal_id": "511880460",
-  "company": "אנליסט קופות גמל בע\"מ",
-  "detected": "2026-09-30T22:26:07+00:00"
- },
- {
-  "kind": "new_item",
-  "page": "https://www.analyst.co.il/portfolio-management/",
-  "text": "העברת חשבון קרן השתלמות",
-  "href": "https://www.analyst.co.il/transfer-training-funds/",
-  "legal_id": "511880460",
-  "company": "אנליסט קופות גמל בע\"מ",
-  "detected": "2026-09-30T22:26:07+00:00"
- },
- {
-  "kind": "new_item",
-  "page": "https://www.analyst.co.il/portfolio-management/",
-  "text": "העברת חשבון קופת גמל",
-  "href": "https://www.analyst.co.il/account-transfer-provident-funds/",
-  "legal_id": "511880460",
-  "company": "אנליסט קופות גמל בע\"מ",
-  "detected": "2026-09-30T22:26:07+00:00"
- },
- {
-  "kind": "text_changed",
-  "page": "https://www.analyst.co.il/portfolio-management/",
-  "text": "ניהול תיקי השקעות -> דיווחי חברת הגמל",
-  "href": "https://www.analyst.co.il/portfolio-management/",
-  "legal_id": "511880460",
-  "company": "אנליסט קופות גמל בע\"מ",
-  "detected": "2026-09-30T22:26:07+00:00"
- },
- {
-  "kind": "new_item",
-  "page": "https://www.analyst.co.il/portfolio-management/",
-  "text": "אנליסט קופות גמל בע\"מ",
-  "href": "https://www.analyst.co.il/head-of-public-application/",
-  "legal_id": "511880460",
-  "company": "אנליסט קופות גמל בע\"מ",
-  "detected": "2026-09-30T22:26:07+00:00"
- },
- {
-  "kind": "new_item",
-  "page": "https://www.analyst.co.il/portfolio-management/",
-  "text": "אודות קופות גמל",
-  "href": "https://www.analyst.co.il/about-us/provident/",
-  "legal_id": "511880460",
-  "company": "אנליסט קופות גמל בע\"מ",
-  "detected": "2026-09-30T22:26:07+00:00"
- },
- {
-  "kind": "new_item",
-  "page": "https://www.analyst.co.il/portfolio-management/",
-  "text": "אודות נץ סוכנות לביטוח פנסיוני",
-  "href": "https://www.analyst.co.il/about-us/about-netz-pensionary-insurance/",
-  "legal_id": "511880460",
-  "company": "אנליסט קופות גמל בע\"מ",
-  "detected": "2026-09-30T22:26:07+00:00"
- },
- {
-  "kind": "new_page",
   "page": "https://www.analyst.co.il/gemel-invest-join/",
-  "text": "26 items",
-  "href": "https://www.analyst.co.il/gemel-invest-join/",
+  "text": "בית השקעות אנליסט הינו מבתי ההשקעות הוותיקים והמנוסים בניהול השקעות בשוק ההון בישראל. 'אנליסט' נוסדה בשנת 1985, ומשנת 1994 היא חברה ציבורית שמניותיה נסחרות בבורסה לניירות ערך בתל-אביב, ניהול ההשקעות מ",
+  "href": "https://www.analyst.co.il",
   "legal_id": "511880460",
   "company": "אנליסט קופות גמל בע\"מ",
-  "detected": "2026-09-30T22:26:07+00:00"
+  "detected": "2026-10-01T11:02:43+00:00"
  },
  {
-  "kind": "new_page",
+  "kind": "new_item",
   "page": "https://www.analyst.co.il/openning-training-funds/",
-  "text": "27 items",
-  "href": "https://www.analyst.co.il/openning-training-funds/",
+  "text": "בית השקעות אנליסט הינו מבתי ההשקעות הוותיקים והמנוסים בניהול השקעות בשוק ההון בישראל. 'אנליסט' נוסדה בשנת 1985, ומשנת 1994 היא חברה ציבורית שמניותיה נסחרות בבורסה לניירות ערך בתל-אביב, ניהול ההשקעות מ",
+  "href": "https://www.analyst.co.il",
   "legal_id": "511880460",
   "company": "אנליסט קופות גמל בע\"מ",
-  "detected": "2026-09-30T22:26:07+00:00"
+  "detected": "2026-10-01T11:02:43+00:00"
  },
  {
-  "kind": "new_page",
+  "kind": "new_item",
   "page": "https://www.analyst.co.il/transfer-training-funds/",
-  "text": "28 items",
-  "href": "https://www.analyst.co.il/transfer-training-funds/",
+  "text": "בית השקעות אנליסט הינו מבתי ההשקעות הוותיקים והמנוסים בניהול השקעות בשוק ההון בישראל. 'אנליסט' נוסדה בשנת 1985, ומשנת 1994 היא חברה ציבורית שמניותיה נסחרות בבורסה לניירות ערך בתל-אביב, ניהול ההשקעות מ",
+  "href": "https://www.analyst.co.il",
   "legal_id": "511880460",
   "company": "אנליסט קופות גמל בע\"מ",
-  "detected": "2026-09-30T22:26:07+00:00"
+  "detected": "2026-10-01T11:02:43+00:00"
  },
  {
-  "kind": "new_page",
+  "kind": "new_item",
   "page": "https://www.analyst.co.il/join-provident-funds/",
-  "text": "27 items",
-  "href": "https://www.analyst.co.il/join-provident-funds/",
+  "text": "בית השקעות אנליסט הינו מבתי ההשקעות הוותיקים והמנוסים בניהול השקעות בשוק ההון בישראל. 'אנליסט' נוסדה בשנת 1985, ומשנת 1994 היא חברה ציבורית שמניותיה נסחרות בבורסה לניירות ערך בתל-אביב, ניהול ההשקעות מ",
+  "href": "https://www.analyst.co.il",
   "legal_id": "511880460",
   "company": "אנליסט קופות גמל בע\"מ",
-  "detected": "2026-09-30T22:26:07+00:00"
+  "detected": "2026-10-01T11:02:43+00:00"
  },
  {
-  "kind": "new_page",
+  "kind": "new_item",
   "page": "https://www.analyst.co.il/account-transfer-provident-funds/",
-  "text": "28 items",
-  "href": "https://www.analyst.co.il/account-transfer-provident-funds/",
+  "text": "בית השקעות אנליסט הינו מבתי ההשקעות הוותיקים והמנוסים בניהול השקעות בשוק ההון בישראל. 'אנליסט' נוסדה בשנת 1985, ומשנת 1994 היא חברה ציבורית שמניותיה נסחרות בבורסה לניירות ערך בתל-אביב, ניהול ההשקעות מ",
+  "href": "https://www.analyst.co.il",
   "legal_id": "511880460",
   "company": "אנליסט קופות גמל בע\"מ",
-  "detected": "2026-09-30T22:26:07+00:00"
+  "detected": "2026-10-01T11:02:43+00:00"
  },
  {
-  "kind": "new_page",
+  "kind": "new_item",
   "page": "https://www.analyst.co.il/yield-comparison-calculator/",
-  "text": "46 items",
-  "href": "https://www.analyst.co.il/yield-comparison-calculator/",
+  "text": "בית השקעות אנליסט הינו מבתי ההשקעות הוותיקים והמנוסים בניהול השקעות בשוק ההון בישראל. 'אנליסט' נוסדה בשנת 1985, ומשנת 1994 היא חברה ציבורית שמניותיה נסחרות בבורסה לניירות ערך בתל-אביב, ניהול ההשקעות מ",
+  "href": "https://www.analyst.co.il",
   "legal_id": "511880460",
   "company": "אנליסט קופות גמל בע\"מ",
-  "detected": "2026-09-30T22:26:07+00:00"
+  "detected": "2026-10-01T11:02:43+00:00"
  },
  {
-  "kind": "new_page",
+  "kind": "new_item",
   "page": "https://www.analyst.co.il/head-of-public-application/",
-  "text": "24 items",
-  "href": "https://www.analyst.co.il/head-of-public-application/",
+  "text": "בית השקעות אנליסט הינו מבתי ההשקעות הוותיקים והמנוסים בניהול השקעות בשוק ההון בישראל. 'אנליסט' נוסדה בשנת 1985, ומשנת 1994 היא חברה ציבורית שמניותיה נסחרות בבורסה לניירות ערך בתל-אביב, ניהול ההשקעות מ",
+  "href": "https://www.analyst.co.il",
   "legal_id": "511880460",
   "company": "אנליסט קופות גמל בע\"מ",
-  "detected": "2026-09-30T22:26:07+00:00"
+  "detected": "2026-10-01T11:02:43+00:00"
  },
  {
-  "kind": "new_page",
+  "kind": "new_item",
   "page": "https://www.analyst.co.il/funds-lobby/training-funds/fund-962/",
-  "text": "27 items",
-  "href": "https://www.analyst.co.il/funds-lobby/training-funds/fund-962/",
+  "text": "בית השקעות אנליסט הינו מבתי ההשקעות הוותיקים והמנוסים בניהול השקעות בשוק ההון בישראל. 'אנליסט' נוסדה בשנת 1985, ומשנת 1994 היא חברה ציבורית שמניותיה נסחרות בבורסה לניירות ערך בתל-אביב, ניהול ההשקעות מ",
+  "href": "https://www.analyst.co.il",
   "legal_id": "511880460",
   "company": "אנליסט קופות גמל בע\"מ",
-  "detected": "2026-09-30T22:26:07+00:00"
+  "detected": "2026-10-01T11:02:43+00:00"
  },
  {
-  "kind": "new_page",
+  "kind": "new_item",
   "page": "https://www.analyst.co.il/funds-lobby/training-funds/fund-963/",
-  "text": "27 items",
-  "href": "https://www.analyst.co.il/funds-lobby/training-funds/fund-963/",
+  "text": "בית השקעות אנליסט הינו מבתי ההשקעות הוותיקים והמנוסים בניהול השקעות בשוק ההון בישראל. 'אנליסט' נוסדה בשנת 1985, ומשנת 1994 היא חברה ציבורית שמניותיה נסחרות בבורסה לניירות ערך בתל-אביב, ניהול ההשקעות מ",
+  "href": "https://www.analyst.co.il",
   "legal_id": "511880460",
   "company": "אנליסט קופות גמל בע\"מ",
-  "detected": "2026-09-30T22:26:07+00:00"
+  "detected": "2026-10-01T11:02:43+00:00"
  },
  {
-  "kind": "new_page",
+  "kind": "new_item",
   "page": "https://www.analyst.co.il/funds-lobby/training-funds/fund-972/",
-  "text": "27 items",
-  "href": "https://www.analyst.co.il/funds-lobby/training-funds/fund-972/",
+  "text": "בית השקעות אנליסט הינו מבתי ההשקעות הוותיקים והמנוסים בניהול השקעות בשוק ההון בישראל. 'אנליסט' נוסדה בשנת 1985, ומשנת 1994 היא חברה ציבורית שמניותיה נסחרות בבורסה לניירות ערך בתל-אביב, ניהול ההשקעות מ",
+  "href": "https://www.analyst.co.il",
   "legal_id": "511880460",
   "company": "אנליסט קופות גמל בע\"מ",
-  "detected": "2026-09-30T22:26:07+00:00"
+  "detected": "2026-10-01T11:02:43+00:00"
  },
  {
-  "kind": "new_page",
+  "kind": "new_item",
   "page": "https://www.analyst.co.il/funds-lobby/training-funds/fund-973/",
-  "text": "27 items",
-  "href": "https://www.analyst.co.il/funds-lobby/training-funds/fund-973/",
+  "text": "בית השקעות אנליסט הינו מבתי ההשקעות הוותיקים והמנוסים בניהול השקעות בשוק ההון בישראל. 'אנליסט' נוסדה בשנת 1985, ומשנת 1994 היא חברה ציבורית שמניותיה נסחרות בבורסה לניירות ערך בתל-אביב, ניהול ההשקעות מ",
+  "href": "https://www.analyst.co.il",
   "legal_id": "511880460",
   "company": "אנליסט קופות גמל בע\"מ",
-  "detected": "2026-09-30T22:26:07+00:00"
+  "detected": "2026-10-01T11:02:43+00:00"
  },
  {
-  "kind": "new_page",
+  "kind": "new_item",
   "page": "https://www.analyst.co.il/funds-lobby/training-funds/fund-1535/",
-  "text": "27 items",
-  "href": "https://www.analyst.co.il/funds-lobby/training-funds/fund-1535/",
+  "text": "בית השקעות אנליסט הינו מבתי ההשקעות הוותיקים והמנוסים בניהול השקעות בשוק ההון בישראל. 'אנליסט' נוסדה בשנת 1985, ומשנת 1994 היא חברה ציבורית שמניותיה נסחרות בבורסה לניירות ערך בתל-אביב, ניהול ההשקעות מ",
+  "href": "https://www.analyst.co.il",
   "legal_id": "511880460",
   "company": "אנליסט קופות גמל בע\"מ",
-  "detected": "2026-09-30T22:26:07+00:00"
+  "detected": "2026-10-01T11:02:43+00:00"
  },
  {
-  "kind": "new_page",
+  "kind": "new_item",
   "page": "https://www.analyst.co.il/funds-lobby/training-funds/fund-8679/",
-  "text": "27 items",
-  "href": "https://www.analyst.co.il/funds-lobby/training-funds/fund-8679/",
+  "text": "בית השקעות אנליסט הינו מבתי ההשקעות הוותיקים והמנוסים בניהול השקעות בשוק ההון בישראל. 'אנליסט' נוסדה בשנת 1985, ומשנת 1994 היא חברה ציבורית שמניותיה נסחרות בבורסה לניירות ערך בתל-אביב, ניהול ההשקעות מ",
+  "href": "https://www.analyst.co.il",
   "legal_id": "511880460",
   "company": "אנליסט קופות גמל בע\"מ",
-  "detected": "2026-09-30T22:26:07+00:00"
+  "detected": "2026-10-01T11:02:43+00:00"
  },
  {
-  "kind": "new_page",
+  "kind": "new_item",
   "page": "https://www.analyst.co.il/funds-lobby/training-funds/fund-8779/",
-  "text": "27 items",
-  "href": "https://www.analyst.co.il/funds-lobby/training-funds/fund-8779/",
+  "text": "בית השקעות אנליסט הינו מבתי ההשקעות הוותיקים והמנוסים בניהול השקעות בשוק ההון בישראל. 'אנליסט' נוסדה בשנת 1985, ומשנת 1994 היא חברה ציבורית שמניותיה נסחרות בבורסה לניירות ערך בתל-אביב, ניהול ההשקעות מ",
+  "href": "https://www.analyst.co.il",
   "legal_id": "511880460",
   "company": "אנליסט קופות גמל בע\"מ",
-  "detected": "2026-09-30T22:26:07+00:00"
+  "detected": "2026-10-01T11:02:43+00:00"
  },
  {
-  "kind": "new_page",
+  "kind": "new_item",
   "page": "https://www.analyst.co.il/funds-lobby/training-funds/fund-13853/",
-  "text": "27 items",
-  "href": "https://www.analyst.co.il/funds-lobby/training-funds/fund-13853/",
+  "text": "בית השקעות אנליסט הינו מבתי ההשקעות הוותיקים והמנוסים בניהול השקעות בשוק ההון בישראל. 'אנליסט' נוסדה בשנת 1985, ומשנת 1994 היא חברה ציבורית שמניותיה נסחרות בבורסה לניירות ערך בתל-אביב, ניהול ההשקעות מ",
+  "href": "https://www.analyst.co.il",
   "legal_id": "511880460",
   "company": "אנליסט קופות גמל בע\"מ",
-  "detected": "2026-09-30T22:26:07+00:00"
+  "detected": "2026-10-01T11:02:43+00:00"
  },
  {
-  "kind": "new_page",
+  "kind": "new_item",
   "page": "https://www.analyst.co.il/funds-lobby/training-funds/fund-15311/",
-  "text": "27 items",
-  "href": "https://www.analyst.co.il/funds-lobby/training-funds/fund-15311/",
+  "text": "בית השקעות אנליסט הינו מבתי ההשקעות הוותיקים והמנוסים בניהול השקעות בשוק ההון בישראל. 'אנליסט' נוסדה בשנת 1985, ומשנת 1994 היא חברה ציבורית שמניותיה נסחרות בבורסה לניירות ערך בתל-אביב, ניהול ההשקעות מ",
+  "href": "https://www.analyst.co.il",
   "legal_id": "511880460",
   "company": "אנליסט קופות גמל בע\"מ",
-  "detected": "2026-09-30T22:26:07+00:00"
+  "detected": "2026-10-01T11:02:43+00:00"
  },
  {
-  "kind": "new_page",
+  "kind": "new_item",
   "page": "https://www.analyst.co.il/funds-lobby/training-funds/fund-15312/",
-  "text": "27 items",
-  "href": "https://www.analyst.co.il/funds-lobby/training-funds/fund-15312/",
+  "text": "בית השקעות אנליסט הינו מבתי ההשקעות הוותיקים והמנוסים בניהול השקעות בשוק ההון בישראל. 'אנליסט' נוסדה בשנת 1985, ומשנת 1994 היא חברה ציבורית שמניותיה נסחרות בבורסה לניירות ערך בתל-אביב, ניהול ההשקעות מ",
+  "href": "https://www.analyst.co.il",
   "legal_id": "511880460",
   "company": "אנליסט קופות גמל בע\"מ",
-  "detected": "2026-09-30T22:26:07+00:00"
+  "detected": "2026-10-01T11:02:43+00:00"
  },
  {
-  "kind": "new_page",
+  "kind": "new_item",
   "page": "https://www.analyst.co.il/funds-lobby/training-funds/fund-8129/",
-  "text": "27 items",
-  "href": "https://www.analyst.co.il/funds-lobby/training-funds/fund-8129/",
+  "text": "בית השקעות אנליסט הינו מבתי ההשקעות הוותיקים והמנוסים בניהול השקעות בשוק ההון בישראל. 'אנליסט' נוסדה בשנת 1985, ומשנת 1994 היא חברה ציבורית שמניותיה נסחרות בבורסה לניירות ערך בתל-אביב, ניהול ההשקעות מ",
+  "href": "https://www.analyst.co.il",
   "legal_id": "511880460",
   "company": "אנליסט קופות גמל בע\"מ",
-  "detected": "2026-09-30T22:26:07+00:00"
+  "detected": "2026-10-01T11:02:43+00:00"
  },
  {
-  "kind": "new_page",
+  "kind": "new_item",
   "page": "https://www.analyst.co.il/provident-fund-deposit/",
-  "text": "28 items",
-  "href": "https://www.analyst.co.il/provident-fund-deposit/",
+  "text": "בית השקעות אנליסט הינו מבתי ההשקעות הוותיקים והמנוסים בניהול השקעות בשוק ההון בישראל. 'אנליסט' נוסדה בשנת 1985, ומשנת 1994 היא חברה ציבורית שמניותיה נסחרות בבורסה לניירות ערך בתל-אביב, ניהול ההשקעות מ",
+  "href": "https://www.analyst.co.il",
   "legal_id": "511880460",
   "company": "אנליסט קופות גמל בע\"מ",
-  "detected": "2026-09-30T22:26:07+00:00"
+  "detected": "2026-10-01T11:02:43+00:00"
  },
  {
-  "kind": "new_page",
+  "kind": "new_item",
   "page": "https://www.analyst.co.il/funds-lobby/provident-funds/fund-814/",
-  "text": "28 items",
-  "href": "https://www.analyst.co.il/funds-lobby/provident-funds/fund-814/",
+  "text": "בית השקעות אנליסט הינו מבתי ההשקעות הוותיקים והמנוסים בניהול השקעות בשוק ההון בישראל. 'אנליסט' נוסדה בשנת 1985, ומשנת 1994 היא חברה ציבורית שמניותיה נסחרות בבורסה לניירות ערך בתל-אביב, ניהול ההשקעות מ",
+  "href": "https://www.analyst.co.il",
   "legal_id": "511880460",
   "company": "אנליסט קופות גמל בע\"מ",
-  "detected": "2026-09-30T22:26:07+00:00"
+  "detected": "2026-10-01T11:02:43+00:00"
  },
  {
-  "kind": "new_page",
+  "kind": "new_item",
   "page": "https://www.analyst.co.il/funds-lobby/provident-funds/fund-817/",
-  "text": "28 items",
-  "href": "https://www.analyst.co.il/funds-lobby/provident-funds/fund-817/",
+  "text": "בית השקעות אנליסט הינו מבתי ההשקעות הוותיקים והמנוסים בניהול השקעות בשוק ההון בישראל. 'אנליסט' נוסדה בשנת 1985, ומשנת 1994 היא חברה ציבורית שמניותיה נסחרות בבורסה לניירות ערך בתל-אביב, ניהול ההשקעות מ",
+  "href": "https://www.analyst.co.il",
   "legal_id": "511880460",
   "company": "אנליסט קופות גמל בע\"מ",
-  "detected": "2026-09-30T22:26:07+00:00"
+  "detected": "2026-10-01T11:02:43+00:00"
  },
  {
-  "kind": "new_page",
+  "kind": "new_item",
   "page": "https://www.analyst.co.il/funds-lobby/provident-funds/fund-813/",
-  "text": "29 items",
-  "href": "https://www.analyst.co.il/funds-lobby/provident-funds/fund-813/",
+  "text": "בית השקעות אנליסט הינו מבתי ההשקעות הוותיקים והמנוסים בניהול השקעות בשוק ההון בישראל. 'אנליסט' נוסדה בשנת 1985, ומשנת 1994 היא חברה ציבורית שמניותיה נסחרות בבורסה לניירות ערך בתל-אביב, ניהול ההשקעות מ",
+  "href": "https://www.analyst.co.il",
   "legal_id": "511880460",
   "company": "אנליסט קופות גמל בע\"מ",
-  "detected": "2026-09-30T22:26:07+00:00"
+  "detected": "2026-10-01T11:02:43+00:00"
  },
  {
-  "kind": "new_page",
+  "kind": "new_item",
   "page": "https://www.analyst.co.il/funds-lobby/provident-funds/fund-815/",
-  "text": "28 items",
-  "href": "https://www.analyst.co.il/funds-lobby/provident-funds/fund-815/",
+  "text": "בית השקעות אנליסט הינו מבתי ההשקעות הוותיקים והמנוסים בניהול השקעות בשוק ההון בישראל. 'אנליסט' נוסדה בשנת 1985, ומשנת 1994 היא חברה ציבורית שמניותיה נסחרות בבורסה לניירות ערך בתל-אביב, ניהול ההשקעות מ",
+  "href": "https://www.analyst.co.il",
   "legal_id": "511880460",
   "company": "אנליסט קופות גמל בע\"מ",
-  "detected": "2026-09-30T22:26:07+00:00"
+  "detected": "2026-10-01T11:02:43+00:00"
  },
  {
-  "kind": "new_page",
+  "kind": "new_item",
   "page": "https://www.analyst.co.il/funds-lobby/provident-funds/fund-818/",
-  "text": "29 items",
-  "href": "https://www.analyst.co.il/funds-lobby/provident-funds/fund-818/",
+  "text": "בית השקעות אנליסט הינו מבתי ההשקעות הוותיקים והמנוסים בניהול השקעות בשוק ההון בישראל. 'אנליסט' נוסדה בשנת 1985, ומשנת 1994 היא חברה ציבורית שמניותיה נסחרות בבורסה לניירות ערך בתל-אביב, ניהול ההשקעות מ",
+  "href": "https://www.analyst.co.il",
   "legal_id": "511880460",
   "company": "אנליסט קופות גמל בע\"מ",
-  "detected": "2026-09-30T22:26:07+00:00"
+  "detected": "2026-10-01T11:02:43+00:00"
  },
  {
-  "kind": "new_page",
+  "kind": "new_item",
   "page": "https://www.analyst.co.il/funds-lobby/provident-funds/fund-1412/",
-  "text": "28 items",
-  "href": "https://www.analyst.co.il/funds-lobby/provident-funds/fund-1412/",
+  "text": "בית השקעות אנליסט הינו מבתי ההשקעות הוותיקים והמנוסים בניהול השקעות בשוק ההון בישראל. 'אנליסט' נוסדה בשנת 1985, ומשנת 1994 היא חברה ציבורית שמניותיה נסחרות בבורסה לניירות ערך בתל-אביב, ניהול ההשקעות מ",
+  "href": "https://www.analyst.co.il",
   "legal_id": "511880460",
   "company": "אנליסט קופות גמל בע\"מ",
-  "detected": "2026-09-30T22:26:07+00:00"
+  "detected": "2026-10-01T11:02:43+00:00"
  },
  {
-  "kind": "new_page",
+  "kind": "new_item",
   "page": "https://www.analyst.co.il/funds-lobby/provident-funds/fund-9730/",
-  "text": "29 items",
-  "href": "https://www.analyst.co.il/funds-lobby/provident-funds/fund-9730/",
+  "text": "בית השקעות אנליסט הינו מבתי ההשקעות הוותיקים והמנוסים בניהול השקעות בשוק ההון בישראל. 'אנליסט' נוסדה בשנת 1985, ומשנת 1994 היא חברה ציבורית שמניותיה נסחרות בבורסה לניירות ערך בתל-אביב, ניהול ההשקעות מ",
+  "href": "https://www.analyst.co.il",
   "legal_id": "511880460",
   "company": "אנליסט קופות גמל בע\"מ",
-  "detected": "2026-09-30T22:26:07+00:00"
+  "detected": "2026-10-01T11:02:43+00:00"
  },
  {
-  "kind": "new_page",
+  "kind": "new_item",
   "page": "https://www.analyst.co.il/funds-lobby/provident-funds/fund-9731/",
-  "text": "28 items",
-  "href": "https://www.analyst.co.il/funds-lobby/provident-funds/fund-9731/",
+  "text": "בית השקעות אנליסט הינו מבתי ההשקעות הוותיקים והמנוסים בניהול השקעות בשוק ההון בישראל. 'אנליסט' נוסדה בשנת 1985, ומשנת 1994 היא חברה ציבורית שמניותיה נסחרות בבורסה לניירות ערך בתל-אביב, ניהול ההשקעות מ",
+  "href": "https://www.analyst.co.il",
   "legal_id": "511880460",
   "company": "אנליסט קופות גמל בע\"מ",
-  "detected": "2026-09-30T22:26:07+00:00"
+  "detected": "2026-10-01T11:02:43+00:00"
  },
  {
-  "kind": "new_page",
+  "kind": "new_item",
   "page": "https://www.analyst.co.il/funds-lobby/provident-funds/fund-9732/",
-  "text": "28 items",
-  "href": "https://www.analyst.co.il/funds-lobby/provident-funds/fund-9732/",
+  "text": "בית השקעות אנליסט הינו מבתי ההשקעות הוותיקים והמנוסים בניהול השקעות בשוק ההון בישראל. 'אנליסט' נוסדה בשנת 1985, ומשנת 1994 היא חברה ציבורית שמניותיה נסחרות בבורסה לניירות ערך בתל-אביב, ניהול ההשקעות מ",
+  "href": "https://www.analyst.co.il",
   "legal_id": "511880460",
   "company": "אנליסט קופות גמל בע\"מ",
-  "detected": "2026-09-30T22:26:07+00:00"
+  "detected": "2026-10-01T11:02:43+00:00"
  },
  {
-  "kind": "new_page",
+  "kind": "new_item",
   "page": "https://www.analyst.co.il/funds-lobby/provident-funds/fund-13855/",
-  "text": "28 items",
-  "href": "https://www.analyst.co.il/funds-lobby/provident-funds/fund-13855/",
+  "text": "בית השקעות אנליסט הינו מבתי ההשקעות הוותיקים והמנוסים בניהול השקעות בשוק ההון בישראל. 'אנליסט' נוסדה בשנת 1985, ומשנת 1994 היא חברה ציבורית שמניותיה נסחרות בבורסה לניירות ערך בתל-אביב, ניהול ההשקעות מ",
+  "href": "https://www.analyst.co.il",
   "legal_id": "511880460",
   "company": "אנליסט קופות גמל בע\"מ",
-  "detected": "2026-09-30T22:26:07+00:00"
+  "detected": "2026-10-01T11:02:43+00:00"
  }
 ]
