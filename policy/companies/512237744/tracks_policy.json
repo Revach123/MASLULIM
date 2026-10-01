@@ -1,1 +1,94 @@
-[]
+[
+ {
+  "track_name": "0",
+  "snippet": "0 | 1 | 0 |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | ",
+  "confidence": "table",
+  "equity_min": 0.0,
+  "equity_max": 0.0,
+  "legal_id": "512237744",
+  "url": "https://www.migdal.co.il/_files/ugd/5adfdb_bc23fe2119eb462f86ef8c85b7d6d664.xlsx",
+  "doc_file": "policy/companies/512237744/raw/512237744/2dfaee416d51_5adfdb_bc23fe2119eb462f86ef8c85b7d6d664.xlsx"
+ },
+ {
+  "track_name": "1",
+  "snippet": "1 | 0 | 0 |  |  |  |  |  |  |  |  |  |  |  |  |  | 0 |  |  |  |  |  |  |  |  |  |  |  |  |  | ",
+  "confidence": "table",
+  "equity_min": 0.0,
+  "equity_max": 0.0,
+  "legal_id": "512237744",
+  "url": "https://www.migdal.co.il/_files/ugd/5adfdb_bc23fe2119eb462f86ef8c85b7d6d664.xlsx",
+  "doc_file": "policy/companies/512237744/raw/512237744/2dfaee416d51_5adfdb_bc23fe2119eb462f86ef8c85b7d6d664.xlsx"
+ },
+ {
+  "track_name": "154425 97592983698",
+  "snippet": " |  |  | מגדל מסלול אגח עד 25% במניות | 154425.97592983698 | 0.073301044121045 |  |  |  |  |  |  |  | ",
+  "confidence": "table",
+  "equity_min": null,
+  "equity_max": 25.0,
+  "bonds_min": null,
+  "bonds_max": 25.0,
+  "legal_id": "512237744",
+  "url": "https://www.migdal.co.il/_files/ugd/5adfdb_bc23fe2119eb462f86ef8c85b7d6d664.xlsx",
+  "doc_file": "policy/companies/512237744/raw/512237744/2dfaee416d51_5adfdb_bc23fe2119eb462f86ef8c85b7d6d664.xlsx"
+ },
+ {
+  "track_name": "מגדל מסלול לבני 50 ומטה",
+  "snippet": " |  |  | מגדל מסלול לבני 50 ומטה | 461328.098559543 | 0.1011291946565957 |  |  |  |  |  |  |  | ",
+  "confidence": "table",
+  "equity_min": 50.0,
+  "equity_max": 50.0,
+  "bonds_min": 50.0,
+  "bonds_max": 50.0,
+  "legal_id": "512237744",
+  "url": "https://www.migdal.co.il/_files/ugd/5adfdb_bc23fe2119eb462f86ef8c85b7d6d664.xlsx",
+  "doc_file": "policy/companies/512237744/raw/512237744/2dfaee416d51_5adfdb_bc23fe2119eb462f86ef8c85b7d6d664.xlsx"
+ },
+ {
+  "track_name": "מגדל מסלול לבני 50 עד 60",
+  "snippet": " |  |  | מגדל מסלול לבני 50 עד 60 | 217465.47422524597 | 0.09631357507293635 |  |  |  |  |  |  |  | ",
+  "confidence": "table",
+  "equity_min": 50.0,
+  "equity_max": 60.0,
+  "bonds_min": 50.0,
+  "bonds_max": 60.0,
+  "legal_id": "512237744",
+  "url": "https://www.migdal.co.il/_files/ugd/5adfdb_bc23fe2119eb462f86ef8c85b7d6d664.xlsx",
+  "doc_file": "policy/companies/512237744/raw/512237744/2dfaee416d51_5adfdb_bc23fe2119eb462f86ef8c85b7d6d664.xlsx"
+ },
+ {
+  "track_name": "מגדל מסלול לבני 60 ומעלה",
+  "snippet": " |  |  | מגדל מסלול לבני 60 ומעלה | 161887.51816899097 | 0.06746788788966736 |  |  |  |  |  |  |  | ",
+  "confidence": "table",
+  "equity_min": 60.0,
+  "equity_max": 60.0,
+  "bonds_min": 60.0,
+  "bonds_max": 60.0,
+  "legal_id": "512237744",
+  "url": "https://www.migdal.co.il/_files/ugd/5adfdb_bc23fe2119eb462f86ef8c85b7d6d664.xlsx",
+  "doc_file": "policy/companies/512237744/raw/512237744/2dfaee416d51_5adfdb_bc23fe2119eb462f86ef8c85b7d6d664.xlsx"
+ },
+ {
+  "track_name": "מגדל מסלול מחקה מדד S&P 500",
+  "snippet": " |  |  | מגדל מסלול מחקה מדד S&P 500 | 41139.535452334 | 0.19882571891681605 |  |  |  |  |  |  |  | ",
+  "confidence": "table",
+  "equity_min": 500.0,
+  "equity_max": 500.0,
+  "bonds_min": 500.0,
+  "bonds_max": 500.0,
+  "legal_id": "512237744",
+  "url": "https://www.migdal.co.il/_files/ugd/5adfdb_bc23fe2119eb462f86ef8c85b7d6d664.xlsx",
+  "doc_file": "policy/companies/512237744/raw/512237744/2dfaee416d51_5adfdb_bc23fe2119eb462f86ef8c85b7d6d664.xlsx"
+ },
+ {
+  "track_name": "מסלול כללי עד 65 מניות",
+  "snippet": " |  |  | מסלול כללי עד 65 מניות | 81195.21612079901 | 0.15922409489316255 |  |  |  |  |  |  |  | ",
+  "confidence": "table",
+  "equity_min": null,
+  "equity_max": 65.0,
+  "bonds_min": null,
+  "bonds_max": 65.0,
+  "legal_id": "512237744",
+  "url": "https://www.migdal.co.il/_files/ugd/5adfdb_bc23fe2119eb462f86ef8c85b7d6d664.xlsx",
+  "doc_file": "policy/companies/512237744/raw/512237744/2dfaee416d51_5adfdb_bc23fe2119eb462f86ef8c85b7d6d664.xlsx"
+ }
+]

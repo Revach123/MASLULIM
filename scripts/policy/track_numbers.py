@@ -126,6 +126,8 @@ class Registry:
         if not a or not cand:
             return None, 0
         best, score, second = None, 0, 0
+        if len(cand) == 1 and re.search(r"(^|\s)כללי$", a) and not re.search(r"\d", a):
+            return next(iter(cand)), 0.85  # חברה עם מסלול אחד ברישום, ובקובץ "מסלול כללי" (שופטים, ביוכימאים)
         # השוואת קבוצות מילים, בלי המילים שמשותפות לכל שמות החברה ברישום ("ילין לפידות", "אלטשולר שחם").
         # גמל/להשקעה/השתלמות/פנסיה נשמרות (מבדילות בין קופות). קודם התאמה מלאה יחידה, אחר כך שם המסמך מוכל
         # בשם הרישום והמועמד עם הכי מעט מילים עודפות יחיד
@@ -313,7 +315,7 @@ def assign(tracks):
     sites = Path(__file__).with_name("sites")
     maps = {}
     act_owned = {(t["legal_id"], t["track_no"]) for t in tracks if t["track_no"] and t.get("active")}
-    for t in tracks:
+    for t in sorted(tracks, key=lambda t: not t.get("active")):  # מסלול פעיל קודם (לאומי: page9 של 2026 לפני 2023)
         lid = t["legal_id"]
         if lid not in maps:
             f = sites / f"{lid}.json"
