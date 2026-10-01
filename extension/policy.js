@@ -249,6 +249,20 @@ async function runSite(site, cfg, seen, onProgress, windowId) {
       const cap = await withDownloadLock(async () => { await report(pi, "לוחץ על כפתורי הורדה"); return captureDownloads(tab.id, site.capture_ms || RULES.capture_ms, site.download_rx || RULES.download_rx); });
       links.push(...cap.urls.map((u) => ({ ...u, ctx: "(download)" })));
       links.push(...(openedBy[tab.id] || []).map((u) => ({ ...u, ctx: "(download)" })));  // קבצים שנפתחו בחלון/טאב חדש
+      // follow_max (אתר שעמוד המדיניות בו לא ידוע - הסוכנות): נכנסים לקישורים באותו אתר שנראים כמו מדיניות/השקעות
+      const followed = [];
+      if (site.follow_max && pi < (site.pages || []).length + 1) {
+        const host = new URL(pageUrl).hostname.replace(/^www\./, "");
+        for (const l of links) {
+          if (pages.length >= (site.pages || []).length + 1 + site.follow_max) break;
+          let u; try { u = new URL(l.href); } catch (e) { continue; }
+          if (u.hostname.replace(/^www\./, "") !== host || DOC_RX.test(l.href) || pages.includes(u.href.split("#")[0])) continue;
+          const blob = decodeURIComponent(l.href) + " " + (l.text || "");
+          if ((POLICY_RX.test(blob) || /השקע|פנסי|תגמול|גמל|קופ|invest|pension/i.test(blob)) && !NOISE_RX.test(blob)) {
+            pages.push(u.href.split("#")[0]); followed.push(u.href.split("#")[0]);
+          }
+        }
+      }
       const docs = links.filter((l) => (DOC_RX.test(l.href) || l.ctx === "(download)" || DOC_RX.test(l.text)) && !NOISE_RX.test(l.text + " " + l.href)
         && (POLICY_RX.test(decodeURIComponent(l.href) + " " + l.text + " " + l.ctx)
             // any_sheet (מור: 7_17_0_2026_9.xlsx): בעמוד שהוגדר ידנית גם גיליונות בלי מילות מדיניות בשם - לא PDF כלליים
@@ -258,7 +272,7 @@ async function runSite(site, cfg, seen, onProgress, windowId) {
       const uniq = [...new Map(docs.filter((d) => !ex || !ex.test(decodeURIComponent(d.href) + " " + d.text))
         .map((d) => [d.href, d])).values()];
       stats.found += links.filter((l) => DOC_RX.test(l.href) || l.ctx === "(download)").length;
-      pageLog.push({ url: pageUrl, links: links.length, files: links.filter((l) => DOC_RX.test(l.href)).length, clicked: cap.clicked,
+      pageLog.push({ url: pageUrl, links: links.length, followed, files: links.filter((l) => DOC_RX.test(l.href)).length, clicked: cap.clicked,
                      captured: cap.urls.length, selected: uniq.map((d) => decodeURIComponent(d.href)),
                      unselected_files: links.filter((l) => DOC_RX.test(l.href) && !uniq.some((d) => d.href === l.href)).slice(0, 25)
                        .map((l) => ({ file: decodeURIComponent(l.href).slice(0, 200), text: (l.text || "").slice(0, 80), ctx: (l.ctx || "").replace(/\s+/g, " ").slice(0, 100) })) });

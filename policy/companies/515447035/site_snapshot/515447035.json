@@ -1,7 +1,7 @@
 {
  "legal_id": "515447035",
  "company": "הפניקס חח\"י קופה מרכזית לקצבה בע\"מ",
- "taken": "2026-10-01T13:30:32+00:00",
+ "taken": "2026-10-01T14:43:34+00:00",
  "pages": {
   "https://www.fnx.co.il/pension-savings/iec-pension/": {
    "product": "פנסיה",
@@ -536,8 +536,8 @@
    "product": "פנסיה",
    "status": 200,
    "method": "browser",
-   "text_hash": "d0b7d8cf760a9a97b2a7d20e87b72050bd713d2d",
-   "text_head": "We apologize for the inconvenience... ...but your activity and behavior on this site made us think that you are a bot. Note: A number of things could be going on here. If you are attempting to access this site using an anonymous Private/Proxy network, please disable that and try accessing site again. Due to previously detected malicious behavior which originated from the network you're using, please request unblock to site. Incident ID: 3aedbe15-db3u-4e6d-8110-e924d6047373 Please solve this CAPTCHA to request unblock to the website You reached this page when trying to access https://digital-co",
+   "text_hash": "5ebbb3ea1db06ac52d1141b168489e14945b7de6",
+   "text_head": "We apologize for the inconvenience... ...but your activity and behavior on this site made us think that you are a bot. Note: A number of things could be going on here. If you are attempting to access this site using an anonymous Private/Proxy network, please disable that and try accessing site again. Due to previously detected malicious behavior which originated from the network you're using, please request unblock to site. Incident ID: 777cde59-db3u-4a6e-9ad1-a86ca504c8a5 Please solve this CAPTCHA to request unblock to the website You reached this page when trying to access https://digital-co",
    "items": [
     {
      "text": "מדיניות השקעה צפויה לשנת 2026 - פנסיה - עדכון מדיניות פנסיה מקיפה עוקב s&p500 - עדכון אוגוסט 2026",
@@ -639,10 +639,10 @@
   },
   "https://www.fnx.co.il/SPF/iframe-the-expected-investment-policy-2025.aspx": {
    "product": "פנסיה",
-   "status": 404,
+   "status": 200,
    "method": "browser",
-   "text_hash": "195d83c1b11164a04ebecf99a33637ee4ad4f336",
-   "text_head": " ביטוח מדיניות השקעה צפויה לשנת 2025 - עדכון יולי 2025 מדיניות השקעה צפויה לשנת 2025 - עדכון פברואר 2025 מדיניות השקעה צפויה לשנת 2025 << | < הבא | 1 | הקודם > | >> פנסיה מדיניות השקעה צפויה לשנת 2025 << | < הבא | 1 | הקודם > | >> גמל ‏‏מדיניות השקעה צפויה לשנת 2025 << | < הבא | 1 | הקודם > | >> השקעות אחראיות השקעות אחראיות 2025 << | < הבא | 1 | הקודם > | >> נגישות ",
+   "text_hash": "368f82c04bbd68775ce6f10d58ead0b62eda4ef9",
+   "text_head": "We apologize for the inconvenience... ...but your activity and behavior on this site made us think that you are a bot. Note: A number of things could be going on here. If you are attempting to access this site using an anonymous Private/Proxy network, please disable that and try accessing site again. Due to previously detected malicious behavior which originated from the network you're using, please request unblock to site. Incident ID: 91d4cc7d-db3u-40f8-8916-0b8faa066d45 Please solve this CAPTCHA to request unblock to the website You reached this page when trying to access https://digital-co",
    "items": [
     {
      "text": "‏‏מדיניות השקעה צפויה לשנת 2025",
@@ -685,16 +685,8 @@
      "internal": true
     },
     {
-     "text": "כלים ומחשבונים",
+     "text": "השקעות אחראיות השקעות אחראיות 2025 << | < הבא | 1 | הקודם > | >> הורדת טפסים למחשב הורדה הטפסים שנבחרו יורדו למחשב שלך כקובץ Zip הורדה",
      "href": "https://www.fnx.co.il/SPF/iframe-the-expected-investment-policy-2025.aspx",
-     "year": "2025",
-     "iframe": false,
-     "doc": false,
-     "internal": true
-    },
-    {
-     "text": "חוק שכר שווה",
-     "href": "https://digital-content.fnx.co.il/Documents/fnx-equal-pay-law-public2025.pdf",
      "year": "2025",
      "iframe": false,
      "doc": true,
@@ -709,456 +701,8 @@
      "internal": true
     },
     {
-     "text": "(html)",
-     "href": "https://www.fnx.co.il/sites/docs/genery/mediniut_ashkaa_tzfuia/bituach2025-update0725.xlsx",
-     "year": "2025",
-     "iframe": false,
-     "doc": true,
-     "internal": true
-    },
-    {
-     "text": "(html)",
-     "href": "https://www.fnx.co.il/sites/docs/genery/mediniut_ashkaa_tzfuia/bituach2025-update0225.xlsx",
-     "year": "2025",
-     "iframe": false,
-     "doc": true,
-     "internal": true
-    },
-    {
-     "text": "(html)",
-     "href": "https://www.fnx.co.il/sites/docs/genery/mediniut_ashkaa_tzfuia/bituach2025.xlsx",
-     "year": "2025",
-     "iframe": false,
-     "doc": true,
-     "internal": true
-    },
-    {
-     "text": "(html)",
-     "href": "https://www.fnx.co.il/sites/docs/genery/mediniut_ashkaa_tzfuia/pension2025.xlsx",
-     "year": "2025",
-     "iframe": false,
-     "doc": true,
-     "internal": true
-    },
-    {
-     "text": "(html)",
-     "href": "https://www.fnx.co.il/sites/docs/genery/mediniut_ashkaa_tzfuia/gemel2025.xls",
-     "year": "2025",
-     "iframe": false,
-     "doc": true,
-     "internal": true
-    },
-    {
-     "text": "(html)",
-     "href": "https://www.fnx.co.il/sites/docs/genery/mediniut_ashkaa_tzfuia/responsible-investments-2025-he.pdf",
-     "year": "2025",
-     "iframe": false,
-     "doc": true,
-     "internal": true
-    },
-    {
-     "text": "רפורמה - יולי 2024",
-     "href": "https://www.fnx.co.il/pension-savings/investment-tracks/tracks-reform/",
-     "year": "2024",
-     "iframe": false,
-     "doc": false,
-     "internal": true
-    },
-    {
-     "text": "תשואות",
-     "href": "https://www.fnx.co.il/pension-savings/yields/",
-     "year": null,
-     "iframe": false,
-     "doc": false,
-     "internal": true
-    },
-    {
-     "text": "תכנון לגיל פרישה",
-     "href": "https://www.fnx.co.il/pension_retirement/",
-     "year": null,
-     "iframe": false,
-     "doc": false,
-     "internal": true
-    },
-    {
-     "text": "תיקון 190",
-     "href": "https://www.fnx.co.il/pension_retirement/new-route-for-retirement/",
-     "year": null,
-     "iframe": false,
-     "doc": false,
-     "internal": true
-    },
-    {
-     "text": "תחום פנסיה",
-     "href": "https://www.fnx.co.il/customer-service/pension-savings/",
-     "year": null,
-     "iframe": false,
-     "doc": false,
-     "internal": true
-    },
-    {
-     "text": "תחום גמל והשתלמות",
-     "href": "https://www.fnx.co.il/customer-service/gemel-ishtlamutfund/",
-     "year": null,
-     "iframe": false,
-     "doc": false,
-     "internal": true
-    },
-    {
-     "text": "תביעות פנסיה",
-     "href": "https://www.fnx.co.il/claims-customer-service/claims-all-embracing-pension/",
-     "year": null,
-     "iframe": false,
-     "doc": false,
-     "internal": true
-    },
-    {
-     "text": "שותפים עסקיים",
-     "href": "https://b.fnx.co.il/my.policy",
-     "year": null,
-     "iframe": false,
-     "doc": false,
-     "internal": true
-    },
-    {
-     "text": "קרן השתלמות לשכירים",
-     "href": "https://www.fnx.co.il/ishtalmutfund/employee/",
-     "year": null,
-     "iframe": false,
-     "doc": false,
-     "internal": true
-    },
-    {
-     "text": "קרן השתלמות לעצמאים",
-     "href": "https://www.fnx.co.il/ishtalmutfund/self-employee/",
-     "year": null,
-     "iframe": false,
-     "doc": false,
-     "internal": true
-    },
-    {
-     "text": "קרן השתלמות",
-     "href": "https://www.fnx.co.il/ishtalmutfund/",
-     "year": null,
-     "iframe": false,
-     "doc": false,
-     "internal": true
-    },
-    {
-     "text": "קצבה מיידית",
-     "href": "https://www.fnx.co.il/pension-savings/immediate-pension/",
-     "year": null,
-     "iframe": false,
-     "doc": false,
-     "internal": true
-    },
-    {
-     "text": "קופת גמל לשכירים",
-     "href": "https://www.fnx.co.il/gemel/employee/",
-     "year": null,
-     "iframe": false,
-     "doc": false,
-     "internal": true
-    },
-    {
-     "text": "קופת גמל להשקעה",
-     "href": "https://www.fnx.co.il/gemel/gemelhashkaa/",
-     "year": null,
-     "iframe": false,
-     "doc": false,
-     "internal": true
-    },
-    {
-     "text": "קופת גמל",
-     "href": "https://www.fnx.co.il/gemel/",
-     "year": null,
-     "iframe": false,
-     "doc": false,
-     "internal": true
-    },
-    {
-     "text": "פרמיות יומיות ביטוח נסיעות לחו\"ל",
-     "href": "https://www.fnx.co.il/Documents/premiot_nesiot_yomiot.xls",
-     "year": null,
-     "iframe": false,
-     "doc": true,
-     "internal": true
-    },
-    {
-     "text": "פנסיה",
-     "href": "https://www.fnx.co.il/pension-savings/",
-     "year": null,
-     "iframe": false,
-     "doc": false,
-     "internal": true
-    },
-    {
-     "text": "פורטל סוכנים",
-     "href": "https://agent.fnx.co.il/my.policy",
-     "year": null,
-     "iframe": false,
-     "doc": false,
-     "internal": true
-    },
-    {
-     "text": "ניוד פוליסות מקדמי קצבה",
-     "href": "https://www.fnx.co.il/sites/docs/genery/DocLib9/annuity-factor.xls",
-     "year": null,
-     "iframe": false,
-     "doc": true,
-     "internal": true
-    },
-    {
-     "text": "ניהול תיקי השקעות",
-     "href": "https://www.fnx.co.il/portfoliomanagement/",
-     "year": null,
-     "iframe": false,
-     "doc": false,
-     "internal": true
-    },
-    {
-     "text": "משכנתא הפוכה",
-     "href": "https://www.fnx.co.il/pension_retirement/reverse-mortgage/",
-     "year": null,
-     "iframe": false,
-     "doc": false,
-     "internal": true
-    },
-    {
-     "text": "משיכה מקופת גמל בעלת יתרה נמוכה",
-     "href": "https://www.fnx.co.il/gemel/gemel-information/notax/",
-     "year": null,
-     "iframe": false,
-     "doc": false,
-     "internal": true
-    },
-    {
-     "text": "מסלולי השקעה",
-     "href": "https://www.fnx.co.il/pension-savings/investment-tracks/",
-     "year": null,
-     "iframe": false,
-     "doc": false,
-     "internal": true
-    },
-    {
-     "text": "מיזוג קופות מסלוליות סלייס",
-     "href": "https://www.fnx.co.il/gemel/merging2/",
-     "year": null,
-     "iframe": false,
-     "doc": false,
-     "internal": true
-    },
-    {
-     "text": "מידע לעצמאים",
-     "href": "https://www.fnx.co.il/pension-savings/pensya-self-employee/",
-     "year": null,
-     "iframe": false,
-     "doc": false,
-     "internal": true
-    },
-    {
-     "text": "מחשבון תשואות - Excellence Invest",
-     "href": "https://www.fnx.co.il/calculators/excellnce_calculator/",
-     "year": null,
-     "iframe": false,
-     "doc": true,
-     "internal": true
-    },
-    {
-     "text": "מדיניות שמירת הפרטיות",
-     "href": "https://www.fnx.co.il/customer-service/terms-of-use/privacy-policy/",
-     "year": null,
-     "iframe": false,
-     "doc": false,
-     "internal": true
-    },
-    {
-     "text": "מדיניות שימוש אחראי בבינה מלאכותית",
-     "href": "https://www.fnx.co.il/customer-service/terms-of-use/terms-of-use-fnx-ai/",
-     "year": null,
-     "iframe": false,
-     "doc": false,
-     "internal": true
-    },
-    {
-     "text": "חלוקת חיסכון פנסיוני",
-     "href": "https://www.fnx.co.il/pension-savings/pension-spouse/",
-     "year": null,
-     "iframe": false,
-     "doc": false,
-     "internal": true
-    },
-    {
-     "text": "חיסכון לכל ילד",
-     "href": "https://www.fnx.co.il/gemel/child_investment/",
-     "year": null,
-     "iframe": false,
-     "doc": false,
-     "internal": true
-    },
-    {
-     "text": "חדש! מחשבון תשואות - גמל להשקעה",
-     "href": "https://gemel-calc.fnx.co.il/",
-     "year": null,
-     "iframe": false,
-     "doc": false,
-     "internal": true
-    },
-    {
-     "text": "השקעות מתקדמות",
-     "href": "https://www.fnx.co.il/alternativeinvestments/",
-     "year": null,
-     "iframe": false,
-     "doc": false,
-     "internal": true
-    },
-    {
-     "text": "הפניקס פנסיה וגמל בע\"מ",
-     "href": "https://www.fnx.co.il/pension-savings/fnx-pension-ltd/",
-     "year": null,
-     "iframe": false,
-     "doc": false,
-     "internal": true
-    },
-    {
-     "text": "הפניקס חח\"י קופה מרכזית לקצבה בע\"מ",
-     "href": "https://www.fnx.co.il/pension-savings/iec-pension/",
-     "year": null,
-     "iframe": false,
-     "doc": false,
-     "internal": true
-    },
-    {
-     "text": "הפניקס השקעות ביטוח, פיננסים - קישור לעמוד הבית קישור לאתר פנימי",
-     "href": "https://www.fnx.co.il/",
-     "year": null,
-     "iframe": false,
-     "doc": false,
-     "internal": true
-    },
-    {
-     "text": "הנחיות הפקדה לסוף שנה",
-     "href": "https://www.fnx.co.il/gemel/endofyear_deposite/",
-     "year": null,
-     "iframe": false,
-     "doc": false,
-     "internal": true
-    },
-    {
-     "text": "דוח ממונה אזרחים ותיקים",
-     "href": "https://digital-content.fnx.co.il/sites/docs/genery/for_new_site/esg/%D7%94%D7%A4%D7%A0%D7%99%D7%A7%D7%A1-%D7%93%D7%95%D7%97-%D7%9E%D7%9E%D7%95%D7%A0%D7%94-%D7%90%D7%96%D7%A8%D7%97%D7%99%D7%9D-%D7%95%D7%AA%D7%99%D7%A7%D7%99%D7%9D25.pdf",
-     "year": null,
-     "iframe": false,
-     "doc": true,
-     "internal": true
-    },
-    {
-     "text": "גמל - תיקון 190",
-     "href": "https://www.fnx.co.il/gemel/tikon190/",
-     "year": null,
-     "iframe": false,
-     "doc": false,
-     "internal": true
-    },
-    {
-     "text": "במדיניות הפרטיות",
-     "href": "https://www.fnx.co.il/customer-service/terms-of-use/privacy-policy",
-     "year": null,
-     "iframe": false,
-     "doc": false,
-     "internal": true
-    },
-    {
-     "text": "בית השקעות",
-     "href": "https://www.xnes.co.il/",
-     "year": null,
-     "iframe": false,
-     "doc": false,
-     "internal": false
-    },
-    {
-     "text": "ביטול פוליסה קיימת",
-     "href": "https://www.fnx.co.il/customer-service/request-for-cancel-policy/",
-     "year": null,
-     "iframe": false,
-     "doc": false,
-     "internal": true
-    },
-    {
-     "text": "ביטוח משרד",
-     "href": "https://www.fnx.co.il/business-insurance/office-extra-insurance-policy/",
-     "year": null,
-     "iframe": false,
-     "doc": false,
-     "internal": true
-    },
-    {
-     "text": "ביטוח מנהלים",
-     "href": "https://www.fnx.co.il/pension-savings/managers-insurance/",
-     "year": null,
-     "iframe": false,
-     "doc": false,
-     "internal": true
-    },
-    {
-     "text": "ביטוח חנות",
-     "href": "https://www.fnx.co.il/business-insurance/store-extra-insurance-policy/",
-     "year": null,
-     "iframe": false,
-     "doc": false,
-     "internal": true
-    },
-    {
-     "text": "בדיקת קיום פוליסת רכב חובה",
-     "href": "https://www.fnx.co.il/car-insurance/compulsory-insurance/compulsory-policy-existence/",
-     "year": null,
-     "iframe": false,
-     "doc": false,
-     "internal": true
-    },
-    {
-     "text": "אקסלנס טרייד",
-     "href": "https://www.fnx.co.il/trading/",
-     "year": null,
-     "iframe": false,
-     "doc": true,
-     "internal": true
-    },
-    {
-     "text": "אקסלנס טרייד",
-     "href": "https://www.xnes.co.il/trading/",
-     "year": null,
-     "iframe": false,
-     "doc": true,
-     "internal": false
-    },
-    {
-     "text": "אפליקציית הפניקס לפרטים והורדה",
-     "href": "https://www.fnx.co.il/customer-service/app/",
-     "year": null,
-     "iframe": false,
-     "doc": true,
-     "internal": true
-    },
-    {
-     "text": "אודות הפניקס",
-     "href": "https://www.fnx.co.il/investor-relations/",
-     "year": null,
-     "iframe": false,
-     "doc": false,
-     "internal": true
-    },
-    {
-     "text": "Investor Relations",
-     "href": "https://www.fnx.co.il/en/investor-relations/",
-     "year": null,
-     "iframe": false,
-     "doc": false,
-     "internal": true
-    },
-    {
      "text": "(iframe)",
-     "href": "https://cdn.glassix.com/clients/widget-in-iframe.html?apiKey=90741d7a-0786-4763-a958-90082e8cb8df&snippetId=aCrcNNrXAG0gjuBLE4Ee",
+     "href": "https://newassets.hcaptcha.com/captcha/v1/b9ca2a6602c2bf69741b771db488f3001ea35b08/static/hcaptcha.html",
      "year": null,
      "iframe": true,
      "doc": false,
@@ -1170,8 +714,8 @@
    "product": "פנסיה",
    "status": 200,
    "method": "browser",
-   "text_hash": "f2cf1fe81a8edfa68fe97fac8155698f7d7d2930",
-   "text_head": "We apologize for the inconvenience... ...but your activity and behavior on this site made us think that you are a bot. Note: A number of things could be going on here. If you are attempting to access this site using an anonymous Private/Proxy network, please disable that and try accessing site again. Due to previously detected malicious behavior which originated from the network you're using, please request unblock to site. Incident ID: 934afde0-db3u-4561-8865-fbbfbc1c3f77 Please solve this CAPTCHA to request unblock to the website You reached this page when trying to access https://digital-co",
+   "text_hash": "e2bf3248caad53f22ffaf12a8aff655bc6fe010d",
+   "text_head": "We apologize for the inconvenience... ...but your activity and behavior on this site made us think that you are a bot. Note: A number of things could be going on here. If you are attempting to access this site using an anonymous Private/Proxy network, please disable that and try accessing site again. Due to previously detected malicious behavior which originated from the network you're using, please request unblock to site. Incident ID: e1bec761-db3u-4b77-8461-404fcef777d4 Please solve this CAPTCHA to request unblock to the website You reached this page when trying to access https://digital-co",
    "items": [
     {
      "text": "‏‏מדיניות השקעה צפויה לשנת 2024 - עדכון פברואר 2024",
@@ -1283,8 +827,8 @@
    "product": "פנסיה",
    "status": 200,
    "method": "browser",
-   "text_hash": "ad992d2be1881a6fcbf0e6189721275a1c5a286d",
-   "text_head": "We apologize for the inconvenience... ...but your activity and behavior on this site made us think that you are a bot. Note: A number of things could be going on here. If you are attempting to access this site using an anonymous Private/Proxy network, please disable that and try accessing site again. Due to previously detected malicious behavior which originated from the network you're using, please request unblock to site. Incident ID: 0323e30a-db3u-4d04-bafb-957db6addb80 Please solve this CAPTCHA to request unblock to the website You reached this page when trying to access https://digital-co",
+   "text_hash": "0d41cf4aeb36c08dad50d1bc223951472392b2b6",
+   "text_head": "We apologize for the inconvenience... ...but your activity and behavior on this site made us think that you are a bot. Note: A number of things could be going on here. If you are attempting to access this site using an anonymous Private/Proxy network, please disable that and try accessing site again. Due to previously detected malicious behavior which originated from the network you're using, please request unblock to site. Incident ID: a1d4ad98-db3u-4d8f-bd40-95922398a7ae Please solve this CAPTCHA to request unblock to the website You reached this page when trying to access https://digital-co",
    "items": [
     {
      "text": "‏‏מדיניות השקעה צפויה לשנת 2023 - גמל - עדכון נובמבר 2023",
@@ -1436,8 +980,8 @@
    "product": "פנסיה",
    "status": 200,
    "method": "browser",
-   "text_hash": "ac83c8508f0f9db8387fffea197c3f7979349b31",
-   "text_head": "We apologize for the inconvenience... ...but your activity and behavior on this site made us think that you are a bot. Note: A number of things could be going on here. If you are attempting to access this site using an anonymous Private/Proxy network, please disable that and try accessing site again. Due to previously detected malicious behavior which originated from the network you're using, please request unblock to site. Incident ID: b60c8241-db3u-4273-bfb9-7c0fb7df3622 Please solve this CAPTCHA to request unblock to the website You reached this page when trying to access https://digital-co",
+   "text_hash": "87b0ac5315ce9ba8116bee90466b25e5dc9f6099",
+   "text_head": "We apologize for the inconvenience... ...but your activity and behavior on this site made us think that you are a bot. Note: A number of things could be going on here. If you are attempting to access this site using an anonymous Private/Proxy network, please disable that and try accessing site again. Due to previously detected malicious behavior which originated from the network you're using, please request unblock to site. Incident ID: ff351e62-db3u-4a26-9274-5286490700c6 Please solve this CAPTCHA to request unblock to the website You reached this page when trying to access https://digital-co",
    "items": [
     {
      "text": "מדיניות השקעה צפויה לשנת 2022 - עדכון פברואר 2022",
@@ -1541,8 +1085,8 @@
    "product": "פנסיה",
    "status": 200,
    "method": "browser",
-   "text_hash": "f9a3e295b78c8231b845768a169efd68f42c2d3f",
-   "text_head": "We apologize for the inconvenience... ...but your activity and behavior on this site made us think that you are a bot. Note: A number of things could be going on here. If you are attempting to access this site using an anonymous Private/Proxy network, please disable that and try accessing site again. Due to previously detected malicious behavior which originated from the network you're using, please request unblock to site. Incident ID: 6aa6a565-db3u-44ad-95fb-c53adc95afce Please solve this CAPTCHA to request unblock to the website You reached this page when trying to access https://digital-co",
+   "text_hash": "57b2bde8eb4cedb3e4319167c69b939a1270edc3",
+   "text_head": "We apologize for the inconvenience... ...but your activity and behavior on this site made us think that you are a bot. Note: A number of things could be going on here. If you are attempting to access this site using an anonymous Private/Proxy network, please disable that and try accessing site again. Due to previously detected malicious behavior which originated from the network you're using, please request unblock to site. Incident ID: e977906c-db3u-41e6-9722-362fb044a3d9 Please solve this CAPTCHA to request unblock to the website You reached this page when trying to access https://digital-co",
    "items": [
     {
      "text": "מדיניות השקעה צפויה לשנת 2021 - פנסיה - עדכון אפריל 2021",
@@ -1670,8 +1214,8 @@
    "product": "פנסיה",
    "status": 200,
    "method": "browser",
-   "text_hash": "b7956e4937b1030dcb6edc50988882682aa387c0",
-   "text_head": "We apologize for the inconvenience... ...but your activity and behavior on this site made us think that you are a bot. Note: A number of things could be going on here. If you are attempting to access this site using an anonymous Private/Proxy network, please disable that and try accessing site again. Due to previously detected malicious behavior which originated from the network you're using, please request unblock to site. Incident ID: bccc2450-db3u-4f9e-be36-70b2d43245c9 Please solve this CAPTCHA to request unblock to the website You reached this page when trying to access https://digital-co",
+   "text_hash": "5fa7404f7fdc65b8ca70baa6860e3463d034b44a",
+   "text_head": "We apologize for the inconvenience... ...but your activity and behavior on this site made us think that you are a bot. Note: A number of things could be going on here. If you are attempting to access this site using an anonymous Private/Proxy network, please disable that and try accessing site again. Due to previously detected malicious behavior which originated from the network you're using, please request unblock to site. Incident ID: bf6fa5b4-db3u-4c4c-80e6-974e291e02eb Please solve this CAPTCHA to request unblock to the website You reached this page when trying to access https://digital-co",
    "items": [
     {
      "text": "מדיניות השקעה צפויה לשנת 2020 - פנסיה-עדכון ספטמבר 2020",
@@ -1815,8 +1359,8 @@
    "product": "פנסיה",
    "status": 200,
    "method": "browser",
-   "text_hash": "4f214ef9ce5e3af77351b9cf8a189fc74e67ba6a",
-   "text_head": "We apologize for the inconvenience... ...but your activity and behavior on this site made us think that you are a bot. Note: A number of things could be going on here. If you are attempting to access this site using an anonymous Private/Proxy network, please disable that and try accessing site again. Due to previously detected malicious behavior which originated from the network you're using, please request unblock to site. Incident ID: 5620a462-db3u-4eda-b952-b476e6cfc365 Please solve this CAPTCHA to request unblock to the website You reached this page when trying to access https://digital-co",
+   "text_hash": "a6f1582cdf31ca6a2d23303e86e8d2b2ff62610e",
+   "text_head": "We apologize for the inconvenience... ...but your activity and behavior on this site made us think that you are a bot. Note: A number of things could be going on here. If you are attempting to access this site using an anonymous Private/Proxy network, please disable that and try accessing site again. Due to previously detected malicious behavior which originated from the network you're using, please request unblock to site. Incident ID: e885109e-db3u-4b3f-9558-185ddd1786e7 Please solve this CAPTCHA to request unblock to the website You reached this page when trying to access https://digital-co",
    "items": [
     {
      "text": "מדיניות השקעה צפויה לשנת 2019 - גמל להשקעה (עדכון יולי 2019)",

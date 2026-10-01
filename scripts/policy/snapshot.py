@@ -147,11 +147,29 @@ def fetch_browser(pw, url, click_texts=None):
         # (הכשרה: הצ'יפ 'מדיניות השקעה משתתפות' - בלעדיו מוצגות רק ההצבעות)
         for t in click_texts or []:
             try:
+                for ok_t in ("הבנתי", "אישור", "מאשר", "Accept"):  # באנר עוגיות שמכסה את הדף
+                    try:
+                        pg.get_by_role("button", name=ok_t, exact=True).first.click(timeout=1500)
+                    except Exception:
+                        pass
                 loc = pg.get_by_text(t, exact=True)
                 n0 = len(anchors)
-                vis = [i for i in range(min(loc.count(), 10)) if loc.nth(i).is_visible()]
-                (loc.nth(vis[0]) if vis else loc.first).click(timeout=8000, force=True)
-                pg.wait_for_timeout(4000); collect()
+                vis = []
+                for attempt in range(3):  # React: לחיצה לפני hydration לא עושה כלום - ממתינים לקישור קובץ, אחרת לוחצים שוב
+                    pg.wait_for_timeout(3000)
+                    vis = [i for i in range(min(loc.count(), 10)) if loc.nth(i).is_visible()]
+                    el = loc.nth(vis[0]) if vis else loc.first
+                    try:
+                        el.scroll_into_view_if_needed(timeout=3000); el.click(timeout=5000)
+                    except Exception:
+                        el.click(timeout=5000, force=True)
+                    try:
+                        pg.wait_for_selector("a[href*='.xls'], a[href*='.pdf'], a[href*='.XLS']", timeout=15000)
+                    except Exception:
+                        pass
+                    collect()
+                    if any(re.search(r"\.(xlsx?|pdf)(\?|$)", a["href"], re.I) for a in anchors[n0:]):
+                        break
                 files = [a["href"] for a in anchors[n0:] if re.search(r"\.(xlsx?|pdf)(\?|$)", a["href"], re.I)]
                 print(f"[snapshot] click_texts {t!r}: matches={loc.count()} visible={vis} new_anchors={len(anchors) - n0} files={len(files)} {files[:3]}", flush=True)
                 for _ in range(10):  # "טען עוד" / "הצג עוד" ברשימת הכרטיסים
