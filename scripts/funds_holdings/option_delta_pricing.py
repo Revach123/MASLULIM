@@ -131,6 +131,35 @@ def black_scholes_delta(spot: float, strike: float, years_to_expiry: float,
     return n_d1 if is_call else n_d1 - 1.0
 
 
+def black_scholes_price(spot: float, strike: float, years_to_expiry: float,
+                        vol: float, is_call: bool, r: float = RISK_FREE_RATE) -> float | None:
+    """מחיר B&S למניה אחת (באותן יחידות כמו spot/strike)."""
+    if spot is None or strike is None or vol is None:
+        return None
+    if spot <= 0 or strike <= 0 or vol <= 0 or years_to_expiry <= 0:
+        return None
+    sq = vol * math.sqrt(years_to_expiry)
+    d1 = (math.log(spot / strike) + (r + 0.5 * vol * vol) * years_to_expiry) / sq
+    d2 = d1 - sq
+    disc = strike * math.exp(-r * years_to_expiry)
+    if is_call:
+        return spot * _norm_cdf(d1) - disc * _norm_cdf(d2)
+    return disc * _norm_cdf(-d2) - spot * _norm_cdf(-d1)
+
+
+def resolve_option_value(ticker: str | None, strike: float | None, expiry: date | None,
+                         report_date: date | None, is_call: bool) -> tuple[float | None, float | None]:
+    """(מחיר B&S למניה, מחיר המניה) - אותם קלטים כמו resolve_option_delta."""
+    if not ticker or strike is None or expiry is None or report_date is None:
+        return None, None
+    years = (expiry - report_date).days / 365.25
+    spot = price_as_of(ticker, report_date) if years > 0 else None
+    vol = realized_vol_as_of(ticker, report_date) if spot is not None else None
+    if vol is None:
+        return None, None
+    return black_scholes_price(spot, strike, years, vol, is_call), spot
+
+
 def resolve_option_delta(ticker: str | None, strike: float | None, expiry: date | None,
                           report_date: date | None, is_call: bool) -> tuple[float | None, float | None]:
     """(delta, current_spot_price) - None,None אם חסר טיקר/נתון או שהחישוב

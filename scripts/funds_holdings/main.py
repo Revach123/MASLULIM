@@ -28,6 +28,7 @@ from .alt_asset_reference import build_alt_classes
 from .holdings_detail import build_holdings_detail, report_unplaced_funds
 from .funds_reference import build_funds_reference
 from .index_exposure import (
+    DIRECT_EQUITY_CATEGORIES,
     build_index_exposure, build_index_table, report_month_by_key, summarize as summarize_index,
 )
 from .interest import build_interest
@@ -72,11 +73,11 @@ def build_master_table(
     for key, cols in derivatives_exposure.items():
         category_pct.setdefault(key, {}).update(cols)
 
-    # "מניות (ישיר)" - סכום מניות מבכ"ל + לא סחיר (קטגוריות מקור נפרדות,
+    # "מניות (ישיר)" - סכום מניות מבכ"ל + לא סחיר + כתבי אופציה (קטגוריות מקור נפרדות,
     # ר' category_pct.py), לאזור החשיפה למניות בדשבורד - חשיפה ישירה
     # למניות בודדות/פרטיות, לא דרך קרן/נגזר.
     for key, cols in category_pct.items():
-        direct = cols.get("מניות מבכ ויהש", 0.0) + cols.get("לא סחיר מניות מבכ ויהש", 0.0)
+        direct = sum(cols.get(c, 0.0) for c in DIRECT_EQUITY_CATEGORIES)
         if direct:
             cols["מניות (ישיר)"] = direct
 
