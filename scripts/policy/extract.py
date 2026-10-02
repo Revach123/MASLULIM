@@ -817,6 +817,9 @@ def main():
         doc_rows = long_rows[len(long_rows) - n_long:] if n_long else []
         years = [r["year"] for r in doc_rows if r.get("year")]
         fy = re.search(r"(20[12]\d)", Path(ent["file"]).name)
+        if re.fullmatch(r"(?:[0-9a-f]{12}_)?\d{3,5}", Path(ent["file"]).stem):
+            fy = None  # שם הקובץ הוא מספר המסלול (אלטשולר ".../2017.xlsx" = גמל הלכה), לא שנה
+        fy = re.search(r"לשנת\s*(20[12]\d)", ent.get("link_text") or "") or fy  # "מדיניות השקעה צפויה לשנת 2026"
         doc_year = fy.group(1) if fy else (max(set(years), key=years.count) if years else None)
         for r in doc_rows:  # שנה בשם הקובץ גוברת (בגוף הגיליון מופיעות לפעמים שנים של נתוני עבר)
             r["year"] = doc_year or r.get("year")
