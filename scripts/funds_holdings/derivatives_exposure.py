@@ -67,7 +67,7 @@ from datetime import date, datetime
 from .excel_io import to_ratio
 from .sheet_source import PCT_COL
 from .option_delta_pricing import quote_scale, resolve_option_delta
-from .option_ticker_parse import (CONTRACT_MULTIPLIER, is_call_option, parse_maof_expiry_month, parse_strike,
+from .option_ticker_parse import (CONTRACT_MULTIPLIER, MAOF_STOCK_OPTION_SHARES, is_call_option, parse_maof_expiry_month, parse_strike,
                                   parse_underlying)
 from .futures_notional import FuturesResolver, build_rows as build_futures_rows
 from .swap_index_pricing import parse_deal_date, price_as_of as index_price_as_of, proxy_return, resolve_current_price
@@ -730,7 +730,7 @@ def _options_exposure(
                 continue
 
             name = row.get(OPT_NAME_COL)
-            ticker, _pattern = parse_underlying(str(name)) if name else (None, None)
+            ticker, pattern = parse_underlying(str(name)) if name else (None, None)
             is_call = is_call_option(str(name)) if name else None
             strike = _num(row.get(OPT_STRIKE_COL))
             if not strike or strike <= 0:  # עמודה ריקה / 0 - מהשם ("C004160M607-35ת")
@@ -745,7 +745,8 @@ def _options_exposure(
             if ticker is not None and is_call is not None and units is not None and fx is not None:
                 delta, spot = resolve_option_delta(ticker, strike, expiry, report_date, is_call)
                 if delta is not None and spot is not None:
-                    mult = CONTRACT_MULTIPLIER.get(ticker, 1.0)
+                    mult = CONTRACT_MULTIPLIER.get(ticker) or (
+                        MAOF_STOCK_OPTION_SHARES if pattern == "C_tase_maof_code" else 1.0)
                     notional_thousands = units * mult * delta * spot * quote_scale(ticker) * fx / 1000
                     line_ratio = notional_thousands / total
                     if fv_ratio is not None and abs(line_ratio) > LEVERAGE_CAP * abs(fv_ratio):
