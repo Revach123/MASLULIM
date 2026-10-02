@@ -270,6 +270,7 @@ async function runSite(site, cfg, seen, onProgress, windowId, meta = {}) {
   const resumeKey = `__resume:${site.legal_id}`;
   const startAt = Math.min(meta[resumeKey] || 0, Math.max(pages.length - 1, 0));
   const partial = { cut: false };
+  let blockedFails = 0;
   delete meta[resumeKey];
   for (const [pi, pageUrl] of pages.entries()) {
     if (pi < startAt && pi >= (site.pages || []).length + 1) continue;  // עמודי seed תמיד; עמודי follow שכבר עברנו - מדלגים
@@ -357,7 +358,7 @@ async function runSite(site, cfg, seen, onProgress, windowId, meta = {}) {
         }
         let got = null;
         // חסימת קצב (418/429/403 - WAF: עגור 134, הסוכנות 18): עד שני ניסיונות חוזרים עם המתנה גדלה
-        for (const wait of [0, 4000, 15000]) {
+        for (const wait of (blockedFails >= 2 ? [0] : [0, 4000, 15000])) {  // שני קבצים שנחסמו גם אחרי המתנה = חסימה קבועה, לא קצב
           if (wait) { await report(pi, `ממתין ${wait / 1000}s (חסימת קצב) - קובץ ${di + 1}/${uniq.length}`); await sleep(wait); }
           try { const [r2] = await execInTab(tab.id, pageFetchBase64, [d.href]); got = r2 && r2.result; } catch (e) { got = { __error: true, message: String(e) }; }
           if (!got || got.__error || !looksLikeDoc(got.base64)) {
@@ -368,6 +369,7 @@ async function runSite(site, cfg, seen, onProgress, windowId, meta = {}) {
           if (got && !got.__error && looksLikeDoc(got.base64)) break;
           if (!(got && [418, 429, 403, 503].includes(got.status))) break;
         }
+        if (got && [418, 429, 403, 503].includes(got.status)) blockedFails++;
         if (!got || got.__error || !looksLikeDoc(got.base64)) {
           const why = got && got.__error ? (got.status || got.message) : "לא קובץ מסמך (HTML/דף שגיאה)";
           errors.push(`${decodeURIComponent(d.href.split("/").pop()).slice(0, 60)} -> ${String(why).slice(0, 80)}`); continue;
