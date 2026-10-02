@@ -20,7 +20,9 @@
   "capture_ms": null,
   "download_rx": null,
   "follow_max": null,
-  "follow_rx": null
+  "follow_rx": null,
+  "timeout_min": null,
+  "download_delay_ms": null
  },
  {
   "legal_id": "511789190",
@@ -45,7 +47,9 @@
   "capture_ms": null,
   "download_rx": null,
   "follow_max": null,
-  "follow_rx": null
+  "follow_rx": null,
+  "timeout_min": null,
+  "download_delay_ms": null
  },
  {
   "legal_id": "512245812",
@@ -165,7 +169,9 @@
   "capture_ms": null,
   "download_rx": null,
   "follow_max": 110,
-  "follow_rx": "/funds/(pension-and-gemel/|gemel-|pension-|Insurers-)|%2Ffunds%2F"
+  "follow_rx": "/funds/(pension-and-gemel/|gemel-|pension-|Insurers-)|%2Ffunds%2F",
+  "timeout_min": 45,
+  "download_delay_ms": null
  },
  {
   "legal_id": "513173393",
@@ -213,7 +219,9 @@
   "capture_ms": null,
   "download_rx": null,
   "follow_max": 95,
-  "follow_rx": "אלטשולר-שחם-|%D7%90%D7%9C%D7%98%D7%A9%D7%95%D7%9C%D7%A8-%D7%A9%D7%97%D7%9D-|חיסכון-לילד"
+  "follow_rx": "אלטשולר-שחם-|%D7%90%D7%9C%D7%98%D7%A9%D7%95%D7%9C%D7%A8-%D7%A9%D7%97%D7%9D-|חיסכון-לילד",
+  "timeout_min": 45,
+  "download_delay_ms": null
  },
  {
   "legal_id": "513910703",
@@ -236,7 +244,9 @@
   "capture_ms": null,
   "download_rx": null,
   "follow_max": null,
-  "follow_rx": null
+  "follow_rx": null,
+  "timeout_min": null,
+  "download_delay_ms": null
  },
  {
   "legal_id": "514956465",
@@ -260,7 +270,9 @@
   "capture_ms": null,
   "download_rx": null,
   "follow_max": null,
-  "follow_rx": null
+  "follow_rx": null,
+  "timeout_min": null,
+  "download_delay_ms": null
  },
  {
   "legal_id": "517085874",
@@ -283,7 +295,9 @@
   "capture_ms": null,
   "download_rx": null,
   "follow_max": 25,
-  "follow_rx": "גמל|השתלמות|gemel|kupot|hishtalmut|provident|savings|מדיניות|policy"
+  "follow_rx": "גמל|השתלמות|gemel|kupot|hishtalmut|provident|savings|מדיניות|policy",
+  "timeout_min": null,
+  "download_delay_ms": null
  },
  {
   "legal_id": "520022518",
@@ -310,7 +324,9 @@
   "capture_ms": null,
   "download_rx": null,
   "follow_max": 20,
-  "follow_rx": "מדיניות|השקע|הצהר|דוח|מסמכ|policy|invest|report"
+  "follow_rx": "מדיניות|השקע|הצהר|דוח|מסמכ|policy|invest|report",
+  "timeout_min": null,
+  "download_delay_ms": null
  },
  {
   "legal_id": "520024985",
@@ -333,7 +349,9 @@
   "capture_ms": null,
   "download_rx": null,
   "follow_max": 5,
-  "follow_rx": null
+  "follow_rx": null,
+  "timeout_min": null,
+  "download_delay_ms": 1500
  },
  {
   "legal_id": "520027251",
@@ -368,7 +386,9 @@
   "capture_ms": null,
   "download_rx": null,
   "follow_max": 15,
-  "follow_rx": "גננות"
+  "follow_rx": "גננות",
+  "timeout_min": null,
+  "download_delay_ms": null
  },
  {
   "legal_id": "520027715",
@@ -395,7 +415,9 @@
   "capture_ms": null,
   "download_rx": null,
   "follow_max": 15,
-  "follow_rx": "omega"
+  "follow_rx": "omega",
+  "timeout_min": null,
+  "download_delay_ms": null
  },
  {
   "legal_id": "520028390",
@@ -438,7 +460,9 @@
   "capture_ms": null,
   "download_rx": null,
   "follow_max": null,
-  "follow_rx": null
+  "follow_rx": null,
+  "timeout_min": null,
+  "download_delay_ms": null
  },
  {
   "legal_id": "520030677",
@@ -478,7 +502,9 @@
   "capture_ms": null,
   "download_rx": null,
   "follow_max": 15,
-  "follow_rx": "מדיניות|policy|investments|השקעות"
+  "follow_rx": "מדיניות|policy|investments|השקעות",
+  "timeout_min": null,
+  "download_delay_ms": null
  },
  {
   "legal_id": "520030990",
@@ -513,7 +539,9 @@
   "capture_ms": null,
   "download_rx": null,
   "follow_max": 20,
-  "follow_rx": "מדיניות|השקע|CategoryID=164|ArticleID"
+  "follow_rx": "מדיניות|השקע|CategoryID=164|ArticleID",
+  "timeout_min": null,
+  "download_delay_ms": null
  },
  {
   "legal_id": "520031824",
@@ -552,6 +580,8 @@
   "capture_ms": null,
   "download_rx": null,
   "follow_max": null,
-  "follow_rx": null
+  "follow_rx": null,
+  "timeout_min": null,
+  "download_delay_ms": null
  }
 ]

@@ -110,7 +110,7 @@
   "פנסיה"
  ],
  "search": false,
- "rev": 16,
+ "rev": 17,
  "note": "מנורה: קובץ מדיניות לכל מסלול בעמוד המסלול (/funds/...), נחשף רק ברינדור. עמודי links/ = רשימות המסלולים; follow נכנס לכל מסלול בדפדפן. exclude: תיק ביטוח משתתף של מנורה ביטוח. 2026-10: חסרו עמודי מסלול (תקציב זמן 22 דק' נגמר אחרי 38 עמודים) -> עמודים ישירים, budget קצר, crawl_budget 45 דק'; משלימה הוחזרה (שייכת לחברה). 2026-10: Radware CAPTCHA חוסם את Actions אחרי כמה עמודים -> תוסף (כפתורי ההורדה עם aria-label 'להורדה' נלחצים ע\"י התוסף)",
  "exclude": "about-insurance|participating-portfolio|מנורה-ביטוח|משתתף|reports-publishs|העברת-זכויות|קשורים|mash-year|_yield|_p\\d|תרומת-אפיקי|הוצאות-ישירות|pen-amit|דוח-חודשי",
  "follow": "/funds/(pension-and-gemel/(pension-plans|gemel-hishtalmut-list/(menroa-keren-hishtalmut|menora-gemel(-\\d+)?|top-savings|list-top-savings))/|(gemel|pension|gemel-mor|gemel-kayamut)-\\d+|Insurers-)",
@@ -122,5 +122,6 @@
  "crawl_budget": 2700,
  "via": "extension",
  "follow_max": 110,
- "follow_rx": "/funds/(pension-and-gemel/|gemel-|pension-|Insurers-)|%2Ffunds%2F"
+ "follow_rx": "/funds/(pension-and-gemel/|gemel-|pension-|Insurers-)|%2Ffunds%2F",
+ "timeout_min": 45
 }

@@ -204,6 +204,8 @@ function looksLikeDoc(base64) {
   return b.startsWith("PK\x03\x04") || b.startsWith("\xd0\xcf\x11\xe0") || b.startsWith("%PDF-");
 }
 
+function siteBudgetMs(site) { return (site.timeout_min || RULES.site_timeout_min || 15) * 60000; }
+
 function utf8b64(s) { return btoa(unescape(encodeURIComponent(s))); }
 
 async function readRules(cfg) {
@@ -262,8 +264,21 @@ async function runSite(site, cfg, seen, onProgress, windowId, meta = {}) {
   const added = {};  // href -> sha שנוספו באתר הזה (נשמרים כ"כבר נשלח" רק אחרי commit מוצלח)
   const pageLog = [];  // לכל עמוד: מה נמצא/נבחר - ללוג  // לחלונית: קבצים שנמצאו בעמודים / נבחרו כמדיניות / כבר נשלחו בעבר
   const report = (pi, step) => onProgress({ page: pages[pi], pageNo: pi + 1, pages: pages.length, step, docs: files.length / 2 });
+  // תקציב זמן לאתר (timeout_min, ברירת מחדל 15): בהגעה אליו עוצרים בעדינות ומחזירים את מה שכבר הורד - לא זורקים הכל
+  // (מנורה/אלטשולר: 132/229 קבצים אבדו ב-timeout). הריצה הבאה ממשיכה מהעמוד שבו נעצרנו (meta.__resume).
+  const deadline = Date.now() + siteBudgetMs(site) - 60000;
+  const resumeKey = `__resume:${site.legal_id}`;
+  const startAt = Math.min(meta[resumeKey] || 0, Math.max(pages.length - 1, 0));
+  const partial = { cut: false };
+  delete meta[resumeKey];
   for (const [pi, pageUrl] of pages.entries()) {
+    if (pi < startAt && pi >= (site.pages || []).length + 1) continue;  // עמודי seed תמיד; עמודי follow שכבר עברנו - מדלגים
     if (stopRequested) break;
+    if (Date.now() > deadline) {
+      partial.cut = true; meta[resumeKey] = pi;
+      errors.push(`time budget ${Math.round(siteBudgetMs(site) / 60000)}m reached at page ${pi + 1}/${pages.length} - kept ${files.length / 2} files, next run resumes here`);
+      break;
+    }
     await report(pi, "טוען עמוד");
     let tab;
     try {
@@ -322,8 +337,13 @@ async function runSite(site, cfg, seen, onProgress, windowId, meta = {}) {
         links.filter((l) => DOC_RX.test(l.href)).slice(0, 6).forEach((l) =>
           diag.push(`   ? ${decodeURIComponent(l.href.split("/").pop()).slice(0, 60)} | ${(l.text || "").slice(0, 40)} | ${(l.ctx || "").replace(/\s+/g, " ").slice(0, 60)}`));
       }
+      // הקבצים העדכניים קודם (שנה גבוהה בשם/בטקסט) - חסימה/תקציב פוגעים בשנים הישנות ולא בשנה הנוכחית
+      const yr = (d) => Math.max(0, ...((decodeURIComponent(d.href) + " " + (d.text || "")).match(/20\d\d/g) || []).map(Number).filter((y) => y <= new Date().getFullYear() + 1));
+      uniq.sort((a, b) => yr(b) - yr(a));
       for (const [di, d] of uniq.entries()) {
         if (stopRequested) break;
+        if (Date.now() > deadline) { partial.cut = true; meta[resumeKey] = pi; break; }
+        if (site.download_delay_ms) await sleep(site.download_delay_ms);
         await report(pi, `מוריד קובץ ${di + 1}/${uniq.length}`);
         const sig = await headSig(d.href);
         const m = meta[d.href];
@@ -336,10 +356,17 @@ async function runSite(site, cfg, seen, onProgress, windowId, meta = {}) {
           stats.had++; stats.head_skip++; continue;
         }
         let got = null;
-        try { const [r2] = await execInTab(tab.id, pageFetchBase64, [d.href]); got = r2 && r2.result; } catch (e) { got = { __error: true, message: String(e) }; }
-        if (!got || got.__error || !looksLikeDoc(got.base64)) {
-          const viaExt = await extFetchBase64(d.href);  // CORS / דומיין אחר / הדף ניווט
-          if (!viaExt.__error && looksLikeDoc(viaExt.base64)) got = viaExt;
+        // חסימת קצב (418/429/403 - WAF: עגור 134, הסוכנות 18): עד שני ניסיונות חוזרים עם המתנה גדלה
+        for (const wait of [0, 4000, 15000]) {
+          if (wait) { await report(pi, `ממתין ${wait / 1000}s (חסימת קצב) - קובץ ${di + 1}/${uniq.length}`); await sleep(wait); }
+          try { const [r2] = await execInTab(tab.id, pageFetchBase64, [d.href]); got = r2 && r2.result; } catch (e) { got = { __error: true, message: String(e) }; }
+          if (!got || got.__error || !looksLikeDoc(got.base64)) {
+            const viaExt = await extFetchBase64(d.href);  // CORS / דומיין אחר / הדף ניווט
+            if (!viaExt.__error && looksLikeDoc(viaExt.base64)) got = viaExt;
+            else if (!(got && got.status)) got = viaExt.__error ? viaExt : got;  // שומרים את השגיאה עם קוד ה-HTTP
+          }
+          if (got && !got.__error && looksLikeDoc(got.base64)) break;
+          if (!(got && [418, 429, 403, 503].includes(got.status))) break;
         }
         if (!got || got.__error || !looksLikeDoc(got.base64)) {
           const why = got && got.__error ? (got.status || got.message) : "לא קובץ מסמך (HTML/דף שגיאה)";
@@ -507,7 +534,7 @@ export async function runPolicy(cfg, setStatus) {
         const { files, errors, diag, stats, pages, added } = await withTimeout(runSite(site, cfg, seen, async (p) => {
           progress[site.name] = p;
           await flushStatus();
-        }, windowId, policyMeta), 15 * 60000, `site ${site.name}`);
+        }, windowId, policyMeta), siteBudgetMs(site) + 5 * 60000, `site ${site.name}`);
         policySiteOk[site.legal_id] = Date.now();  // האתר הסתיים (גם אם קובץ בודד נכשל - הצבעות 418 וכד')
         await chrome.storage.local.set({ policySiteOk, policyMeta });
         allFiles.push(...files);
