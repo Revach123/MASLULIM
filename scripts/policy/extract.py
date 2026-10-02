@@ -14,7 +14,7 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parents[2]
 OUT = ROOT / (__import__("os").environ.get("POLICY_OUT") or "policy")  # ריצה לחברה: policy/companies/<LegalId>
 
-PARSER_VERSION = 18  # (v10: Ayalon, dated current column) # הגדלה = פרסור מחדש של כל המסמכים בריצה הבאה (שינוי בפרסרים)
+PARSER_VERSION = 19  # (v10: Ayalon, dated current column) # הגדלה = פרסור מחדש של כל המסמכים בריצה הבאה (שינוי בפרסרים)
 
 NUM = r"(\d{1,3}(?:\.\d+)?)"
 PCT = NUM + r"\s*%?"
@@ -128,7 +128,7 @@ def _fix_rtl(s: str) -> str:
     return "\n".join(out)
 
 
-def _ocr_pdf(path: Path) -> str:
+def _ocr_pdf(path: Path, dpi: int = 300, psm: str = "6") -> str:
     import shutil, subprocess
     if not shutil.which("tesseract"):
         return ""
@@ -138,8 +138,8 @@ def _ocr_pdf(path: Path) -> str:
         doc = pypdfium2.PdfDocument(str(path))
         for i in range(min(len(doc), 10)):
             buf = io.BytesIO()
-            doc[i].render(scale=300 / 72).to_pil().convert("L").save(buf, "PNG")
-            r = subprocess.run(["tesseract", "-", "-", "-l", "heb+eng", "--psm", "6"], input=buf.getvalue(), capture_output=True, timeout=120)
+            doc[i].render(scale=dpi / 72, no_smoothtext=dpi > 300, no_smoothpath=dpi > 300).to_pil().convert("RGB" if dpi > 300 else "L").save(buf, "PNG", dpi=(dpi, dpi))
+            r = subprocess.run(["tesseract", "-", "-", "-l", "heb+eng", "--psm", psm], input=buf.getvalue(), capture_output=True, timeout=120)
             out.append(r.stdout.decode("utf-8", "ignore"))
         return "\n".join(out)
     except Exception as ex:
@@ -158,18 +158,34 @@ def parse_ocr_table_lines(text: str) -> list[dict]:
     ym = re.search(r"לשנת\s*(20\d\d)", title) or re.search(r"(20\d\d)", title)
     out = []
     for l in lines:
-        b = re.search(r"(\d{1,3}(?:\.\d+)?)\s*%\s*-\s*(\d{1,3}(?:\.\d+)?)\s*%", l)
+        l = re.sub(r"[\u200e\u200f\u202a-\u202e]", "", l)
+        # גבולות "33%-43%" / "17-25%" (ה-% הראשון נשמט ב-OCR)
+        b = re.search(r"(?<![\d.])(\d{1,3}(?:\.\d+)?)\s*%?\s*-\s*(\d{1,3}(?:\.\d+)?)\s*%", l)
         lab = re.match(r"^([א-ת\"'״ ,()\-]{2,60}?)\s*(?=[\d%(]|$)", l)
-        if not b or not lab or not re.search(r"[א-ת]{2}", lab.group(1)):
+        lab_txt = lab.group(1) if lab and re.search(r"[א-ת]{2}", lab.group(1)) else ""
+        if not lab_txt and re.match(r"^\W*(MSCI|ACWI)", l):
+            lab_txt = "מניות"  # שורת מדד הייחוס של המניות - התווית נשברה לשורה הקודמת
+        if not lab_txt:
+            m_ = re.search(r"(?<=[\d%\s])([א-ת][א-ת\"'״ ,()\-]{1,60})$", l)  # שורה בכיוון הפוך - התווית בסוף
+            lab_txt = m_.group(1) if m_ and re.search(r"[א-ת]{2}", m_.group(1)) else ""
+        if not b or not re.search(r"[א-ת]{2}", lab_txt):
             continue
         lo, hi = sorted((float(b.group(1)), float(b.group(2))))
         if hi > 150:
             continue
-        tol = re.search(r"(\d{1,2})\s*%\s*-/\+|\+/-\s*(\d{1,2})\s*%", l)
+        lb = l[:b.start()] + " " * (b.end() - b.start()) + l[b.end():] if b else l  # הסטייה - לא מתוך הגבולות
+        tol = (re.search(r"(?<![\d.])(\d{1,2})\s*%\s*(?:-/\+|\+/-)|(?:\+/-|-/\+)\s*(\d{1,2})\s*%", lb)
+               or re.search(r"(?<![\d.])(\d{1,2})\s*%\s*\+|\+\s*(\d{1,2})\s*%", lb))
         cut = min(x.start() for x in (b, tol) if x)
+        end = max(x.end() for x in (b, tol) if x)
         before = [float(x) for x in re.findall(r"(\d{1,3}(?:\.\d+)?)\s*%", l[:cut])]
-        exp = next((x for x in reversed(before) if lo <= x <= hi), None)
-        asset = lab.group(1).strip(" -,(")
+        after = [float(x) for x in re.findall(r"(\d{1,3}(?:\.\d+)?)\s*%", l[end:])]
+        if len(after) > len(before):  # שורה הפוכה: גבולות, סטייה, הצפוי, (קודמת), בפועל
+            exp = next((x for x in after if lo <= x <= hi), None)
+            before = list(reversed(after))
+        else:
+            exp = next((x for x in reversed(before) if lo <= x <= hi), None)
+        asset = lab_txt.strip(" -,(")
         out.append({"fund_id": fm.group(1) if fm else None, "track_no": fm.group(1) if fm else None, "track_code": "ocr",
                     "track_name": name, "group": "ocr", "year": ym.group(1) if ym else None, "asset": asset,
                     "asset_key": asset_key(asset), "current_pct": before[0] if len(before) > 2 else None, "expected_pct": exp,
@@ -655,6 +671,39 @@ def parse_titled_tables(rows, sheet=""):
     return out
 
 
+def parse_shape_rows(rows, sheet=""):
+    """מוצא אחרון: שורות בצורה [אפיק | % ... | "+/- N%" | גבולות | מדד] כשהכותרת לא מיושרת לעמודות (PDF רום: כותרת
+    בשלוש שורות עם פחות תאים מהנתונים). הצפוי = האחוז שלפני הסטייה, בפועל = האחוז שלפניו (אם יש). שם = שורה עם "מסלול" מעל."""
+    grid = [[_clean(c) for c in r] for r in rows]
+    tol_rx = re.compile(r"^(?:\+/-|-/\+|±)\s*(\d{1,2}(?:\.\d+)?)\s*%$|^(\d{1,2}(?:\.\d+)?)\s*%\s*(?:\+/-|-/\+)$")
+    rng_rx = re.compile(r"^-?\s*(\d{1,3}(?:\.\d+)?)\s*%\s*-?\s*(\d{1,3}(?:\.\d+)?)\s*%$")
+    pct_rx = re.compile(r"^(\d{1,3}(?:\.\d+)?)\s*%$")
+    out, title = [], ""
+    for r in grid:
+        cells = [c for c in r if c]
+        if not cells:
+            continue
+        if len(cells) == 1 and "מסלול" in cells[0]:
+            title = cells[0]; continue
+        ti = next((i for i, c in enumerate(cells) if tol_rx.match(c)), None)
+        if ti is None or ti + 1 >= len(cells) or not rng_rx.match(cells[ti + 1]) or not re.search(r"[א-ת]{2}", cells[0]):
+            continue
+        pcts = [float(pct_rx.match(c).group(1)) for c in cells[1:ti] if pct_rx.match(c)]
+        if not pcts or not title:
+            continue
+        m = rng_rx.match(cells[ti + 1]); lo, hi = sorted((float(m.group(1)), float(m.group(2))))
+        tm = tol_rx.match(cells[ti])
+        ym = re.search(r"(20\d\d)", title)
+        nm = re.search(r"(מסלול.+)$", title)
+        name = norm_name(nm.group(1)) if nm else norm_name(title)
+        out.append({"fund_id": None, "track_no": None, "track_code": f"{sheet.strip()}|{name}", "track_name": name,
+                    "group": sheet.strip(), "year": ym.group(1) if ym else None, "asset": cells[0], "asset_key": asset_key(cells[0]),
+                    "current_pct": pcts[-2] if len(pcts) > 1 else None, "expected_pct": pcts[-1],
+                    "tolerance": (tm.group(1) or tm.group(2)) + "%", "min_pct": lo, "max_pct": hi,
+                    "benchmark": " ".join(cells[ti + 2:]).replace("\n", " ") or None, "sheet": sheet})
+    return out if len(out) >= 2 else []
+
+
 def parse_text_tracks(rows, sheet=""):
     """גיליון מסלולים מתמחים מילולי: [שם מסלול (קוד) | מדיניות השקעות (טקסט) | מדד ייחוס]. בלי טווחים מספריים."""
     grid = [[_clean(c) for c in r] for r in rows]
@@ -734,9 +783,15 @@ def main():
         except Exception as ex:
             print(f"[extract] {p.name}: {ex!r}", file=sys.stderr); continue
         names = names or [""] * len(tables)
+        if _site_cfg(ent["legal_id"]).get("join_split_letter"):
+            # PDF שבו האות האחרונה של מילה נפרדת ("אפיק השקע ה", "מסלול רום הלכ ה" - רום) - רק באתרים שסומנו,
+            # כי בשאר המקומות אות בודדת היא מילה ("קרן ט")
+            fx = lambda v: re.sub(r"(?<=[א-ת]{2}) ([א-ת])(?=[\s\"'״)]|$)", r"\1", v) if isinstance(v, str) else v
+            tables = [[[fx(c) for c in r] for r in t] for t in tables]
+            text = fx(text)
         n_long, leftovers = 0, []
         for nm, t in zip(names, tables):
-            found = parse_statement_blocks(t, nm) or parse_mh_blocks(t, nm) or parse_columns_blocks(t, nm) or parse_titled_tables(t, nm) or parse_text_tracks(t, nm)
+            found = parse_statement_blocks(t, nm) or parse_mh_blocks(t, nm) or parse_columns_blocks(t, nm) or parse_titled_tables(t, nm) or parse_text_tracks(t, nm) or parse_shape_rows(t, nm)
             if found:
                 for r in found:
                     r.setdefault("legal_id", ent["legal_id"])
@@ -764,13 +819,16 @@ def main():
         doc_year = fy.group(1) if fy else (max(set(years), key=years.count) if years else None)
         for r in doc_rows:  # שנה בשם הקובץ גוברת (בגוף הגיליון מופיעות לפעמים שנים של נתוני עבר)
             r["year"] = doc_year or r.get("year")
-        fn_code = re.search(r"-(\d{3,6})\.(xlsx?|pdf)$", Path(ent["file"]).name)  # מנורה: קובץ למסלול, הקוד בשם
+        fn_code = re.search(r"-(?!(?:19|20)\d\d\.)(\d{3,6})\.(xlsx?|pdf)$", Path(ent["file"]).name)  # מנורה: קובץ למסלול, הקוד בשם (לא שנה - רום "...-2025.pdf")
         if fn_code and doc_rows and len({r.get("track_code") for r in doc_rows}) == 1 and not any(r.get("fund_id") for r in doc_rows):
             for r in doc_rows:
                 r["fund_id"] = r["track_no"] = fn_code.group(1)
         if not n_long and _site_cfg(ent["legal_id"]).get("ocr") and p.suffix.lower() == ".pdf":
             # PDF סרוק עם שכבת טקסט פגומה (מספרי הטבלה בתמונה) - OCR ופרסור שורות
             ocr_rows = parse_ocr_table_lines(_ocr_pdf(p))
+            # גליפים מצוירים (אין שכבת טקסט ואין תמונה - עובדי המדינה 7635/15404): גם רזולוציה גבוהה ופריסת עמודות, הטוב מבין השניים
+            alt = parse_ocr_table_lines(_ocr_pdf(p, 450, "4"))
+            ocr_rows = alt if len(alt) > len(ocr_rows) else ocr_rows
             for r in ocr_rows:
                 r.update(legal_id=ent["legal_id"], track_code=f"{ent['legal_id']}|ocr|{r['track_name']}", url=url,
                          doc_file=ent["file"], doc_first_seen=ent.get("first_seen"))
