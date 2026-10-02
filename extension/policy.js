@@ -351,7 +351,12 @@ async function runSite(site, cfg, seen, onProgress, windowId, meta = {}, flush =
   // רק לעמודים שבמפה. בינואר (או כשהסריקה המלאה האחרונה משנה קודמת): עמוד במפה בלי קובץ של השנה הנוכחית ->
   // סריקה מלאה של האתר (עמוד חדש / מוצר חדש), שגם מעדכנת את המפה. no_map בהגדרות האתר = תמיד סריקה מלאה.
   const now = new Date(), yr = now.getFullYear();
-  const fullSt = (meta.__full = meta.__full || {})[site.legal_id];
+  // חתימת ההגדרות שמשפיעות על הסריקה המלאה (עמודים / follow): שינוי בהגדרות האתר אחרי הסריקה המלאה = סריקה מלאה אחת שוב
+  // (רום: follow לכתבות CategoryID=217 שנוסף אחרי שהאתר עבר למפה - לא רץ אף פעם)
+  const cfgSig = [...(site.pages || []).map((p) => p.url), site.home || "", site.follow_rx || "", site.follow_max || 0, site.exclude || ""].join("|");
+  let ch = 0; for (let i = 0; i < cfgSig.length; i++) ch = (ch * 31 + cfgSig.charCodeAt(i)) | 0;
+  let fullSt = (meta.__full = meta.__full || {})[site.legal_id];
+  if (fullSt && fullSt.cfg !== ch) fullSt = null;  // גם רשומה בלי חתימה (לפני 2.48) - סריקה מלאה אחת
   if (!site.__mapped && !site.__forceFull && !site.no_map && (site.doc_pages || []).length && fullSt) {
     // per_track_pages (מנורה/אלטשולר - עמוד לכל מסלול): גם עמודי הרשימה (seed), עם מעקב רק לעמודי מסלול שאינם במפה
     // (העמודים שבמפה כבר ברשימה ולא נוספים שוב) - מסלול חדש מתגלה בלי סריקה מלאה
@@ -596,7 +601,7 @@ async function runSite(site, cfg, seen, onProgress, windowId, meta = {}, flush =
   pageLog.sort((x, y) => pages.indexOf(x.url) - pages.indexOf(y.url));
   if (!partial.cut && !stopRequested) {
     delete meta[resumeKey];
-    if (!site.__mapped) meta.__full[site.legal_id] = { at: Date.now(), year: yr };  // סריקה מלאה שהסתיימה -> מעכשיו לפי המפה
+    if (!site.__mapped) meta.__full[site.legal_id] = { at: Date.now(), year: yr, cfg: ch };  // סריקה מלאה שהסתיימה -> מעכשיו לפי המפה
   }
   return { files, errors, diag, stats, pages: pageLog, added, rest: files.slice(flushed), restAdded: batchAdded };
 }
