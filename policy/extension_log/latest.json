@@ -1,7 +1,7 @@
 {
  "extension_version": "2.34.0",
  "started": "2026-10-02T05:55:02.465Z",
- "updated": "2026-10-02T06:01:02.546Z",
+ "updated": "2026-10-02T06:04:02.557Z",
  "final": false,
  "stopped": false,
  "rules_from_github": true,
@@ -19,7 +19,7 @@
   "_note_skip": "חברה עם מדיניות השנה לכל המסלולים (policy/extension_complete.json) מדולגת N שעות מאז הריצה המוצלחת האחרונה שלה. 0 = לא מדלגים."
  },
  "total_sites": 9,
- "done_sites": 2,
+ "done_sites": 4,
  "new_docs": 0,
  "skipped_complete": [
   {
@@ -62,31 +62,31 @@
  "active": [
   {
    "name": "מנורה מבטחים פנסיה וגמל בע\"מ",
-   "page": "https://www.menoramivt.co.il/funds/gemel-14271",
-   "page_no": 20,
+   "page": "https://www.menoramivt.co.il/funds/pension-and-gemel/pension-plans/track-under-50",
+   "page_no": 30,
    "pages": 77,
-   "step": "ממתין לתור לחיצות ההורדה"
-  },
-  {
-   "name": "אלטשולר שחם גמל ופנסיה בע\"מ",
-   "page": "https://www.as-invest.co.il/interstedin/gemel/%D7%90%D7%9C%D7%98%D7%A9%D7%95%D7%9C%D7%A8-%D7%A9%D7%97%D7%9D-%D7%92%D7%9E%D7%9C-%D7%94%D7%9C%D7%9B%D7%94/",
-   "page_no": 19,
-   "pages": 94,
    "step": "פותח אקורדיונים ואוסף קישורים"
   },
   {
-   "name": "עגור חברה לניהול קופות גמל וקרנות השתלמות בע\"מ",
-   "page": "https://kereni.co.il/%d7%9e%d7%93%d7%99%d7%a0%d7%99%d7%95%d7%aa-%d7%94%d7%a9%d7%a7%d7%a2%d7%94-%d7%95%d7%a0%d7%94%d7%9c%d7%99%d7%9d/",
-   "page_no": 5,
-   "pages": 7,
-   "step": "מוריד קובץ 17/82"
+   "name": "אלטשולר שחם גמל ופנסיה בע\"מ",
+   "page": "https://www.as-invest.co.il/interstedin/gemel/%D7%90%D7%9C%D7%98%D7%A9%D7%95%D7%9C%D7%A8-%D7%A9%D7%97%D7%9D-%D7%9C%D7%94%D7%A9%D7%AA%D7%AA%D7%A4%D7%95%D7%AA-%D7%91%D7%A4%D7%A0%D7%A1%D7%99%D7%94-%D7%AA%D7%A7%D7%A6%D7%99%D7%91%D7%99%D7%AA-%D7%9B%D7%9C%D7%9C%D7%99/",
+   "page_no": 25,
+   "pages": 100,
+   "step": "פותח אקורדיונים ואוסף קישורים"
   },
   {
-   "name": "מנורה מבטחים והסתדרות המהנדסים ניהול קופות גמל בע\"מ",
-   "page": "https://www.menoramivt.co.il/funds/about-menora/engineers/omega-fund/omega-14418",
-   "page_no": 8,
+   "name": "איילון חברה לביטוח בע\"מ",
+   "page": "https://www.ayalon-ins.co.il",
+   "page_no": 5,
    "pages": 11,
    "step": "לוחץ על כפתורי הורדה"
+  },
+  {
+   "name": "החברה המנהלת של מינהל קרן ההשתלמות לפקידים עובדי המנהל והשירותים בע\"מ",
+   "page": "https://www.minhal.org/?CategoryID=164",
+   "page_no": 1,
+   "pages": 5,
+   "step": "פותח אקורדיונים ואוסף קישורים"
   }
  ],
  "sites": [
@@ -1579,6 +1579,905 @@
     "החברה לניהול קופת : links=0 files=0 clicked=0 captured=0 selected=0",
     "החברה לניהול קופת : links=0 files=0 clicked=0 captured=0 selected=0",
     "החברה לניהול קופת : links=0 files=0 clicked=0 captured=0 selected=0"
+   ],
+   "new_files": []
+  },
+  {
+   "legal_id": "520027715",
+   "name": "מנורה מבטחים והסתדרות המהנדסים ניהול קופות גמל בע\"מ",
+   "pages": [
+    {
+     "url": "https://www.menoramivt.co.il/links/keren-hishtalmut/omega-fund",
+     "links": 237,
+     "followed": [
+      "https://www.menoramivt.co.il/funds/about-menora/engineers/omega-fund/omega-286",
+      "https://www.menoramivt.co.il/funds/about-menora/engineers/omega-fund/417",
+      "https://www.menoramivt.co.il/funds/about-menora/engineers/omega-fund/omega-1446",
+      "https://www.menoramivt.co.il/funds/about-menora/engineers/omega-fund/omega-9803",
+      "https://www.menoramivt.co.il/funds/about-menora/engineers/omega-fund/omega-14418",
+      "https://www.menoramivt.co.il/funds/about-menora/engineers/omega-fund/about-menora.engineers.omega-fund.omega-15738",
+      "https://www.menoramivt.co.il/funds/about-menora/engineers/omega-fund/omega-fund.omega-SP500"
+     ],
+     "files": 0,
+     "clicked": 0,
+     "captured": 0,
+     "selected": [],
+     "unselected_files": []
+    },
+    {
+     "url": "https://www.menoramivt.co.il/funds/about-menora/engineers/omega-fund/omega-9802",
+     "links": 233,
+     "followed": [
+      "https://www.menoramivt.co.il/links/regulations-hishtalmut-omega"
+     ],
+     "files": 0,
+     "clicked": 1,
+     "captured": 0,
+     "selected": [],
+     "unselected_files": []
+    },
+    {
+     "url": "https://www.menoramivt.co.il",
+     "links": 262,
+     "followed": [],
+     "files": 0,
+     "clicked": 0,
+     "captured": 0,
+     "selected": [],
+     "unselected_files": []
+    },
+    {
+     "url": "https://www.menoramivt.co.il/funds/about-menora/engineers/omega-fund/omega-286",
+     "links": 231,
+     "followed": [],
+     "files": 0,
+     "clicked": 1,
+     "captured": 0,
+     "selected": [],
+     "unselected_files": []
+    },
+    {
+     "url": "https://www.menoramivt.co.il/funds/about-menora/engineers/omega-fund/417",
+     "links": 231,
+     "followed": [],
+     "files": 0,
+     "clicked": 1,
+     "captured": 0,
+     "selected": [],
+     "unselected_files": []
+    },
+    {
+     "url": "https://www.menoramivt.co.il/funds/about-menora/engineers/omega-fund/omega-1446",
+     "links": 231,
+     "followed": [],
+     "files": 0,
+     "clicked": 1,
+     "captured": 0,
+     "selected": [],
+     "unselected_files": []
+    },
+    {
+     "url": "https://www.menoramivt.co.il/funds/about-menora/engineers/omega-fund/omega-9803",
+     "links": 231,
+     "followed": [],
+     "files": 0,
+     "clicked": 1,
+     "captured": 0,
+     "selected": [],
+     "unselected_files": []
+    },
+    {
+     "url": "https://www.menoramivt.co.il/funds/about-menora/engineers/omega-fund/omega-14418",
+     "links": 231,
+     "followed": [],
+     "files": 0,
+     "clicked": 1,
+     "captured": 0,
+     "selected": [],
+     "unselected_files": []
+    },
+    {
+     "url": "https://www.menoramivt.co.il/funds/about-menora/engineers/omega-fund/about-menora.engineers.omega-fund.omega-15738",
+     "links": 228,
+     "followed": [],
+     "files": 0,
+     "clicked": 1,
+     "captured": 0,
+     "selected": [],
+     "unselected_files": []
+    },
+    {
+     "url": "https://www.menoramivt.co.il/funds/about-menora/engineers/omega-fund/omega-fund.omega-SP500",
+     "links": 230,
+     "followed": [],
+     "files": 0,
+     "clicked": 1,
+     "captured": 0,
+     "selected": [],
+     "unselected_files": []
+    },
+    {
+     "url": "https://www.menoramivt.co.il/links/regulations-hishtalmut-omega",
+     "links": 232,
+     "followed": [],
+     "files": 4,
+     "clicked": 0,
+     "captured": 0,
+     "selected": [],
+     "unselected_files": [
+      {
+       "file": "https://cdn.menoramivt.co.il/public/docs/20260511/תקנון-מנורה-מבטחים-השתלמות---מאי-2026.pdf",
+       "text": "לתקנון",
+       "ctx": "תקנון עדכני נכון לתאריך: 05.05.2026 לתקנון"
+      },
+      {
+       "file": "https://cdn.menoramivt.co.il/public/docs/20260511/טבלת-ריכוז-שינויים---מנורה-מבטחים-השתלמות---מאי-2026.pdf",
+       "text": "לקריאה",
+       "ctx": "ריכוז שינויים אחרונים בתקנון שינויים שבוצעו ב-12 החודשים שקדמו ליום 05.05.2026 לקריאה"
+      },
+      {
+       "file": "https://cdn.menoramivt.co.il/public/docs/20251201/תקנון-אומגה-286-בתוקף-מיום-30.9.2025.pdf",
+       "text": "לתקנון",
+       "ctx": "תקנון עדכני נכון לתאריך: 30.09.2025 לתקנון"
+      },
+      {
+       "file": "https://cdn.menoramivt.co.il/public/docs/20251201/שינויים-אומגה-קרן-השתלמות-30.9.25.pdf",
+       "text": "לקריאה",
+       "ctx": "ריכוז שינויים אחרונים בתקנון שינויים שבוצעו ב-12 החודשים שקדמו ליום 30.09.2025 לקריאה"
+      }
+     ]
+    }
+   ],
+   "new_docs": 0,
+   "found": 4,
+   "selected": 0,
+   "had": 0,
+   "head_skip": 0,
+   "errors": [],
+   "diag": [
+    "מנורה מבטחים והסתד: links=237 files=0 clicked=0 captured=0 selected=0",
+    "מנורה מבטחים והסתד: links=233 files=0 clicked=1 captured=0 selected=0",
+    "מנורה מבטחים והסתד: links=262 files=0 clicked=0 captured=0 selected=0",
+    "מנורה מבטחים והסתד: links=231 files=0 clicked=1 captured=0 selected=0",
+    "מנורה מבטחים והסתד: links=231 files=0 clicked=1 captured=0 selected=0",
+    "מנורה מבטחים והסתד: links=231 files=0 clicked=1 captured=0 selected=0",
+    "מנורה מבטחים והסתד: links=231 files=0 clicked=1 captured=0 selected=0",
+    "מנורה מבטחים והסתד: links=231 files=0 clicked=1 captured=0 selected=0",
+    "מנורה מבטחים והסתד: links=228 files=0 clicked=1 captured=0 selected=0",
+    "מנורה מבטחים והסתד: links=230 files=0 clicked=1 captured=0 selected=0",
+    "מנורה מבטחים והסתד: links=232 files=4 clicked=0 captured=0 selected=0",
+    "   ? תקנון-מנורה-מבטחים-השתלמות---מאי-2026.pdf | לתקנון | תקנון עדכני נכון לתאריך: 05.05.2026 לתקנון",
+    "   ? טבלת-ריכוז-שינויים---מנורה-מבטחים-השתלמות---מאי-2026.pdf | לקריאה | ריכוז שינויים אחרונים בתקנון שינויים שבוצעו ב-12 החודשים שקד",
+    "   ? תקנון-אומגה-286-בתוקף-מיום-30.9.2025.pdf | לתקנון | תקנון עדכני נכון לתאריך: 30.09.2025 לתקנון",
+    "   ? שינויים-אומגה-קרן-השתלמות-30.9.25.pdf | לקריאה | ריכוז שינויים אחרונים בתקנון שינויים שבוצעו ב-12 החודשים שקד"
+   ],
+   "new_files": []
+  },
+  {
+   "legal_id": "520024985",
+   "name": "עגור חברה לניהול קופות גמל וקרנות השתלמות בע\"מ",
+   "pages": [
+    {
+     "url": "https://kereni.co.il/%D7%9E%D7%93%D7%99%D7%A0%D7%99%D7%95%D7%AA-%D7%94%D7%A9%D7%A7%D7%A2%D7%94-%D7%95%D7%A0%D7%94%D7%9C%D7%99%D7%9D/",
+     "links": 276,
+     "followed": [
+      "https://kereni.co.il/%d7%94%d7%a2%d7%91%d7%a8%d7%94-%d7%91%d7%99%d7%9f-%d7%9e%d7%a1%d7%9c%d7%95%d7%9c%d7%99-%d7%94%d7%a9%d7%a7%d7%a2%d7%94/",
+      "https://kereni.co.il/%d7%95%d7%a2%d7%93%d7%aa-%d7%94%d7%a9%d7%a7%d7%a2%d7%95%d7%aa/",
+      "https://kereni.co.il/%d7%9e%d7%93%d7%99%d7%a0%d7%99%d7%95%d7%aa-%d7%94%d7%a9%d7%a7%d7%a2%d7%94-%d7%95%d7%a0%d7%94%d7%9c%d7%99%d7%9d/",
+      "https://kereni.co.il/%d7%a0%d7%9b%d7%a1%d7%99-%d7%a7%d7%95%d7%a4%d7%94/",
+      "https://kereni.co.il/%d7%94%d7%a6%d7%94%d7%a8%d7%aa-%d7%a0%d7%92%d7%99%d7%a9%d7%95%d7%aa/"
+     ],
+     "files": 171,
+     "clicked": 0,
+     "captured": 0,
+     "selected": [
+      "https://kereni.co.il/wp-content/uploads/2024/01/מדיניות_מוצהרת_מסלול_כללי_2024-1.xls",
+      "https://kereni.co.il/wp-content/uploads/2024/01/עותק_של_עגור-_מדיניות_מוצהרת_2023_עיס_ומישור_שינויי_מיום_25.10.23.xls",
+      "https://kereni.co.il/wp-content/uploads/2024/01/עגור-_מדיניות_מוצהרת_2023_עיס_ומישור_שינויי_מיום_26.07.23.xls",
+      "https://kereni.co.il/wp-content/uploads/2024/01/עותק_של_עגור-_מדיניות_מוצהרת_2022_עיס_ומישור_מתוקן-9__1_.xls",
+      "https://kereni.co.il/wp-content/uploads/2024/01/עגור-_מדיניות_המלצה_למוצהרת_2023_עיס_ומישור1.xls",
+      "https://kereni.co.il/wp-content/uploads/2024/01/מדיניות_השקעה_מוצהרת_מעודכן_החל_מ-13.06.23___על_יסודי_2023.xls",
+      "https://kereni.co.il/wp-content/uploads/2024/01/מדניות_השקעה_מוצהרת_-_על_יסודי_2021.xlsx",
+      "https://kereni.co.il/wp-content/uploads/2024/01/מדיניות_השקעות_מוצהרת_2021_על_יסודי_כללי_-_מעודכן_נכון_ל_08.07.21.xlsx.xls",
+      "https://kereni.co.il/wp-content/uploads/2024/01/עגור_על_יסודי_כללי_מדיניות_מוצהרת_2020.xlsx",
+      "https://kereni.co.il/wp-content/uploads/2024/01/מדיניות_מוצהרת_2020_עגור_על_יסודי.xls",
+      "https://kereni.co.il/wp-content/uploads/2024/01/2019-policyAlYesodi.xls",
+      "https://kereni.co.il/wp-content/uploads/2024/01/7442.xls",
+      "https://kereni.co.il/wp-content/uploads/2024/01/7272.xls",
+      "https://kereni.co.il/wp-content/uploads/2024/01/6756.xls",
+      "https://kereni.co.il/wp-content/uploads/2024/01/מדיניות_מוצהרת_מסלולים_כשרים_2024-1.xls",
+      "https://kereni.co.il/wp-content/uploads/2024/01/עגור-_מדיניות_מוצהרת_2023_מסלולים_כשרים_שינויי_31.07.23.xls",
+      "https://kereni.co.il/wp-content/uploads/2024/01/מדיניות_השקעה_מוצהרת-_מסלולים_כשרים_2023.xls",
+      "https://kereni.co.il/wp-content/uploads/2024/01/עגור-_מדיניות_מוצהרת_2022_מסלולים_כשרים.xls",
+      "https://kereni.co.il/wp-content/uploads/2024/01/מדיניות_השקעות_מוצהרת_2021_על_יסודי_מסלול_כשר_-_מעודכן_נכון_ל_08.07.21.xlsx",
+      "https://kereni.co.il/wp-content/uploads/2024/01/מדניות_השקעה_מוצהרת_-_על_יסודי_הלכתי_2021.xls",
+      "https://kereni.co.il/wp-content/uploads/2024/01/מדיניות_מוצהרת_עגור_על-יסודי_כשר_עדכון_1_אפריל_2020.xlsx",
+      "https://kereni.co.il/wp-content/uploads/2024/01/מדיניות_מוצהרת_עגור_על_יסודי_מסלול_אגח.xlsx",
+      "https://kereni.co.il/wp-content/uploads/2024/01/2019-policyAlYesodiH.xls",
+      "https://kereni.co.il/wp-content/uploads/2024/01/7273.xls",
+      "https://kereni.co.il/wp-content/uploads/2024/01/6741.xls",
+      "https://kereni.co.il/wp-content/uploads/2024/01/מדיניות_מוצהרת_2024_מסלולי_אגח-1.xls",
+      "https://kereni.co.il/wp-content/uploads/2024/01/2023__מדיניות_השקעה_מוצהרת-_תיקי_אגח.xls",
+      "https://kereni.co.il/wp-content/uploads/2024/01/עותק_של_מדיניות_מוצהרת_ל2022_תיקי_אגח.xls",
+      "https://kereni.co.il/wp-content/uploads/2024/01/עגור-_מדניות_השקעה_מוצהרת_-_אגח_ללא_מניות_על_יסודי_2021.xlsx",
+      "https://kereni.co.il/wp-content/uploads/2024/01/מדיניות_מוצהרת_עגור_על_יסודי_מסלול_אגח-1.xlsx",
+      "https://kereni.co.il/wp-content/uploads/2024/01/2019-policyAlYesodiAgah.xlsx",
+      "https://kereni.co.il/wp-content/uploads/2024/01/7274.xls",
+      "https://kereni.co.il/wp-content/uploads/2024/01/6757.xls",
+      "https://kereni.co.il/wp-content/uploads/2026/01/עגור_2026_מסלולים_מישור.xls",
+      "https://kereni.co.il/wp-content/uploads/2025/03/עותק_של_עותק_של_עגור_מדיניות_מוצהרת_מסלול_כללי2025_הצעה_לשינויי_05.03.25.xls",
+      "https://kereni.co.il/wp-content/uploads/2025/01/עותק_של_עותק_של_עגור_מדיניות_מוצהרת_מסלול_כללי2025_הצעה.xls",
+      "https://kereni.co.il/wp-content/uploads/2024/01/מדיניות_מוצהרת_מסלול_כללי_2024-1-2.xls",
+      "https://kereni.co.il/wp-content/uploads/2024/01/עותק_של_עגור-_מדיניות_מוצהרת_2023_עיס_ומישור_שינויי_מיום_25.10.23-1.xls",
+      "https://kereni.co.il/wp-content/uploads/2024/01/עגור-_מדיניות_מוצהרת_2023_עיס_ומישור_שינויי_מיום_26.07.23-2.xls",
+      "https://kereni.co.il/wp-content/uploads/2024/01/מדיניות_השקעה_מוצהרת_מעודכן_החל_מ-13.06.23___מישור_2023.xls",
+      "https://kereni.co.il/wp-content/uploads/2024/01/עגור-_מדיניות_המלצה_למוצהרת_2023_עיס_ומישור1-1.xls",
+      "https://kereni.co.il/wp-content/uploads/2024/01/עותק_של_עגור-_מדיניות_מוצהרת_2022_עיס_ומישור_מתוקן-9__1_-1.xls",
+      "https://kereni.co.il/wp-content/uploads/2024/01/מדיניות_השקעות_מוצהרת_2021_מישור_כללי_-_מעודכן_נכון_ל_08.07.21.xlsx.xls",
+      "https://kereni.co.il/wp-content/uploads/2024/01/עגור-_מדיניות_מוצהרת_2020_מישור_.xls",
+      "https://kereni.co.il/wp-content/uploads/2024/01/מדיניות_2020_עגור_מישור.xls",
+      "https://kereni.co.il/wp-content/uploads/2024/01/2019-policyMishor.xls",
+      "https://kereni.co.il/wp-content/uploads/2024/01/7443.xls",
+      "https://kereni.co.il/wp-content/uploads/2024/01/7275.xls",
+      "https://kereni.co.il/wp-content/uploads/2024/01/6749.xls",
+      "https://kereni.co.il/wp-content/uploads/2024/01/מדניות_השקעה_מוצהרת_-_מישור_2021.xlsx",
+      "https://kereni.co.il/wp-content/uploads/2024/01/עגור-_מדיניות_מוצהרת_2020_מישור_-1.xls",
+      "https://kereni.co.il/wp-content/uploads/2024/01/מדיניות_2020_עגור_מישור-1.xls",
+      "https://kereni.co.il/wp-content/uploads/2024/01/2019-policyMishor-1.xls",
+      "https://kereni.co.il/wp-content/uploads/2024/01/7443-1.xls",
+      "https://kereni.co.il/wp-content/uploads/2024/01/7275-1.xls",
+      "https://kereni.co.il/wp-content/uploads/2024/01/6749-1.xls",
+      "https://kereni.co.il/wp-content/uploads/2026/01/עגור_מסלולים_כשר_מישור.xls",
+      "https://kereni.co.il/wp-content/uploads/2025/03/עותק_של_עותק_של_עגור_מדיניות_מוצהרת_מסלולים_כשרים_הצעה_למדיניות_2025_הצעה_לשינויי_03.03.25.xls",
+      "https://kereni.co.il/wp-content/uploads/2025/03/עותק_של_עותק_של_עגור_מדיניות_מוצהרת_מסלולים_כשרים_הצעה_למדיניות_2025__1_.xls",
+      "https://kereni.co.il/wp-content/uploads/2024/09/עגור_מדיניות_מוצהרת_מסלולים_כשרים_2024שינויי_23.09.24.xls",
+      "https://kereni.co.il/wp-content/uploads/2024/01/מדיניות_מוצהרת_מסלולים_כשרים_2024-1-1.xls",
+      "https://kereni.co.il/wp-content/uploads/2024/01/עגור-_מדיניות_מוצהרת_2023_מסלולים_כשרים_שינויי_31.07.23-1.xls",
+      "https://kereni.co.il/wp-content/uploads/2024/01/עגור-_מדיניות_מוצהרת_2022_מסלולים_כשרים-1.xls",
+      "https://kereni.co.il/wp-content/uploads/2024/01/מדיניות_השקעות_מוצהרת_2021_מישור_מסלול_כשר_-_מעודכן_נכון_ל_08.07.21.xlsx",
+      "https://kereni.co.il/wp-content/uploads/2024/01/מדניות_השקעה_מוצהרת_-_מישור_מסלול_הלכתי_2021.xls",
+      "https://kereni.co.il/wp-content/uploads/2024/01/עגור-_מישור_כשר_מדיניות_מוצהרת_2020_.xls",
+      "https://kereni.co.il/wp-content/uploads/2024/01/מדיניות_מוצהרת_2020_עגור_מישור_מסלול_הלכתי.xls",
+      "https://kereni.co.il/wp-content/uploads/2024/01/2019-policyMishorH.xls",
+      "https://kereni.co.il/wp-content/uploads/2024/01/7276.xls",
+      "https://kereni.co.il/wp-content/uploads/2024/01/6761.xls",
+      "https://kereni.co.il/wp-content/uploads/2026/01/עגור_מסלולי_אגח_מישור.xls",
+      "https://kereni.co.il/wp-content/uploads/2025/03/עותק_של_עותק_של_עותק_של_מדיניות_מוצהרת_2025_הצעה_מסלולי_אגח__2_.xls",
+      "https://kereni.co.il/wp-content/uploads/2024/01/מדיניות_מוצהרת_2024_מסלולי_אגח-1-1.xls",
+      "https://kereni.co.il/wp-content/uploads/2024/01/עותק_של_מדיניות_מוצהרת_ל2022_תיקי_אגח-1.xls",
+      "https://kereni.co.il/wp-content/uploads/2024/01/מדינות_השקעה_מוצהרת_-_מישור_מסלול_אגח_2021.xlsx",
+      "https://kereni.co.il/wp-content/uploads/2024/01/מדיניות_מוצהרת_עגור_מישור_מסלול_אגח.xlsx",
+      "https://kereni.co.il/wp-content/uploads/2024/01/2019-policyMishorAgah.xlsx",
+      "https://kereni.co.il/wp-content/uploads/2024/01/7277.xls",
+      "https://kereni.co.il/wp-content/uploads/2024/01/6759.xls",
+      "https://kereni.co.il/wp-content/uploads/2026/01/עגור_2026__על_יסודי.xls",
+      "https://kereni.co.il/wp-content/uploads/2026/01/עגור_מסלולים_כשר_על_יסודי.xls",
+      "https://kereni.co.il/wp-content/uploads/2026/01/עגור_מסלולי_אגח_על_יסודי.xls"
+     ],
+     "unselected_files": [
+      {
+       "file": "https://kereni.co.il/wp-content/uploads/2024/01/על_יסודי-_מגבלת_עמלות_ניהול_חיצוני_2024__1_-1-1.xlsxhttps://kereni.co.il/wp-content/uploads/2024/01/על_יסודי-_מגבלת_עמלות_ניהול_חיצוני_2024__1_-1-1.xlsx",
+       "text": "מגבלת עמלות ניהול חיצוני 2024",
+       "ctx": "מגבלת עמלות ניהול חיצוני 2024"
+      },
+      {
+       "file": "https://kereni.co.il/wp-content/uploads/2024/01/על_יסודי-_מגבלת_עמלות_ניהול_חיצוני_2023.xlsx",
+       "text": "מגבלת עמלות ניהול חיצוני 2023",
+       "ctx": "מגבלת עמלות ניהול חיצוני 2023"
+      },
+      {
+       "file": "https://kereni.co.il/wp-content/uploads/2024/01/הצהרה_על_השקעות_אחראיות.pdf",
+       "text": "הצהרה על השקעות אחראיות",
+       "ctx": "הצהרה על השקעות אחראיות"
+      },
+      {
+       "file": "https://kereni.co.il/wp-content/uploads/2024/01/על_יסודי-_מגבלת_עמלות_ניהול_חיצוני_2024__1_-1-1.xlsxhttps://kereni.co.il/wp-content/uploads/2024/01/על_יסודי-_מגבלת_עמלות_ניהול_חיצוני_2024__1_-1-1.xlsx",
+       "text": "מגבלת עמלות ניהול חיצוני 2024",
+       "ctx": "מגבלת עמלות ניהול חיצוני 2024"
+      },
+      {
+       "file": "https://kereni.co.il/wp-content/uploads/2024/01/על_יסודי-_מגבלת_עמלות_ניהול_חיצוני_2023.xlsx",
+       "text": "מגבלת עמלות ניהול חיצוני 2023",
+       "ctx": "מגבלת עמלות ניהול חיצוני 2023"
+      },
+      {
+       "file": "https://kereni.co.il/wp-content/uploads/2024/01/הצהרה_על_השקעות_אחראיות.pdf",
+       "text": "הצהרה על השקעות אחראיות",
+       "ctx": "הצהרה על השקעות אחראיות"
+      },
+      {
+       "file": "https://kereni.co.il/wp-content/uploads/2026/01/עותק_של_מישור-_מגבלת_עמלות_ניהול_חיצוני_2026____4_.xlsx",
+       "text": "מגבלת עמלות ניהול חיצוני 2026",
+       "ctx": "מגבלת עמלות ניהול חיצוני 2026"
+      },
+      {
+       "file": "https://kereni.co.il/wp-content/uploads/2025/01/עותק_של_מישור-_מגבלת_עמלות_ניהול_חיצוני_2025__9_.xlsx",
+       "text": "מגבלת עמלות ניהול חיצוני 2025",
+       "ctx": "מגבלת עמלות ניהול חיצוני 2025"
+      },
+      {
+       "file": "https://kereni.co.il/wp-content/uploads/2024/01/מישור-_מגבלת_עמלות_ניהול_חיצוני_2024__9_.xlsx",
+       "text": "מגבלת עמלות ניהול חיצוני 2024",
+       "ctx": "מגבלת עמלות ניהול חיצוני 2024"
+      },
+      {
+       "file": "https://kereni.co.il/wp-content/uploads/2024/01/מישור-_מגבלת_עמלות_ניהול_חיצוני_2023.xlsx",
+       "text": "מגבלת עמלות ניהול חיצוני 2023",
+       "ctx": "מגבלת עמלות ניהול חיצוני 2023"
+      },
+      {
+       "file": "https://kereni.co.il/wp-content/uploads/2024/01/הצהרה_על_השקעות_אחראיות-1.pdf",
+       "text": "הצהרה על השקעות אחראיות",
+       "ctx": "הצהרה על השקעות אחראיות"
+      },
+      {
+       "file": "https://kereni.co.il/wp-content/uploads/2024/01/הצהרה_על_השקעות_אחראיות-2.pdf",
+       "text": "הצהרה על השקעות אחראיות",
+       "ctx": "הצהרה על השקעות אחראיות"
+      },
+      {
+       "file": "https://kereni.co.il/wp-content/uploads/2026/01/עותק_של_על_יסודי-_מגבלת_עמלות_ניהול_חיצוני_2026__1_.xlsx",
+       "text": "מגבלת עמלות ניהול חיצוני 2026",
+       "ctx": "מגבלת עמלות ניהול חיצוני 2026"
+      },
+      {
+       "file": "https://kereni.co.il/wp-content/uploads/2025/01/עותק_של_על_יסודי-_מגבלת_עמלות_ניהול_חיצוני_2025__1_.xlsx",
+       "text": "מגבלת עמלות ניהול חיצוני 2025",
+       "ctx": "מגבלת עמלות ניהול חיצוני 2025"
+      },
+      {
+       "file": "https://kereni.co.il/wp-content/uploads/2024/01/על_יסודי-_מגבלת_עמלות_ניהול_חיצוני_2024__1_-1-1.xlsxhttps://kereni.co.il/wp-content/uploads/2024/01/על_יסודי-_מגבלת_עמלות_ניהול_חיצוני_2024__1_-1-1.xlsx",
+       "text": "מגבלת עמלות ניהול חיצוני 2024",
+       "ctx": "מגבלת עמלות ניהול חיצוני 2024"
+      },
+      {
+       "file": "https://kereni.co.il/wp-content/uploads/2024/01/על_יסודי-_מגבלת_עמלות_ניהול_חיצוני_2023.xlsx",
+       "text": "מגבלת עמלות ניהול חיצוני 2023",
+       "ctx": "מגבלת עמלות ניהול חיצוני 2023"
+      },
+      {
+       "file": "https://kereni.co.il/wp-content/uploads/2024/01/הצהרה_על_השקעות_אחראיות.pdf",
+       "text": "הצהרה על השקעות אחראיות",
+       "ctx": "הצהרה על השקעות אחראיות"
+      }
+     ]
+    },
+    {
+     "url": "https://kereni.co.il",
+     "links": 123,
+     "followed": [],
+     "files": 0,
+     "clicked": 0,
+     "captured": 0,
+     "selected": [],
+     "unselected_files": []
+    },
+    {
+     "url": "https://kereni.co.il/%d7%94%d7%a2%d7%91%d7%a8%d7%94-%d7%91%d7%99%d7%9f-%d7%9e%d7%a1%d7%9c%d7%95%d7%9c%d7%99-%d7%94%d7%a9%d7%a7%d7%a2%d7%94/",
+     "links": 106,
+     "followed": [],
+     "files": 4,
+     "clicked": 0,
+     "captured": 0,
+     "selected": [],
+     "unselected_files": [
+      {
+       "file": "https://kereni.co.il/wp-content/uploads/2018/08/5277.pdf",
+       "text": "היתר עיסקא",
+       "ctx": ""
+      },
+      {
+       "file": "https://kereni.co.il/wp-content/uploads/2018/08/5279.pdf",
+       "text": "תוספת",
+       "ctx": ""
+      },
+      {
+       "file": "https://kereni.co.il/wp-content/uploads/2024/01/היתר-עסקה.pdf",
+       "text": "קרן היתר עיסקא",
+       "ctx": "קרן היתר עיסקא"
+      },
+      {
+       "file": "https://kereni.co.il/wp-content/uploads/2024/01/תוספת-להיתר-עסקה.pdf",
+       "text": "תוספת להיתר עיסקא",
+       "ctx": "תוספת להיתר עיסקא"
+      }
+     ]
+    },
+    {
+     "url": "https://kereni.co.il/%d7%95%d7%a2%d7%93%d7%aa-%d7%94%d7%a9%d7%a7%d7%a2%d7%95%d7%aa/",
+     "links": 93,
+     "followed": [],
+     "files": 0,
+     "clicked": 0,
+     "captured": 0,
+     "selected": [],
+     "unselected_files": []
+    },
+    {
+     "url": "https://kereni.co.il/%d7%9e%d7%93%d7%99%d7%a0%d7%99%d7%95%d7%aa-%d7%94%d7%a9%d7%a7%d7%a2%d7%94-%d7%95%d7%a0%d7%94%d7%9c%d7%99%d7%9d/",
+     "links": 276,
+     "followed": [],
+     "files": 171,
+     "clicked": 0,
+     "captured": 0,
+     "selected": [
+      "https://kereni.co.il/wp-content/uploads/2024/01/מדיניות_מוצהרת_מסלול_כללי_2024-1.xls",
+      "https://kereni.co.il/wp-content/uploads/2024/01/עותק_של_עגור-_מדיניות_מוצהרת_2023_עיס_ומישור_שינויי_מיום_25.10.23.xls",
+      "https://kereni.co.il/wp-content/uploads/2024/01/עגור-_מדיניות_מוצהרת_2023_עיס_ומישור_שינויי_מיום_26.07.23.xls",
+      "https://kereni.co.il/wp-content/uploads/2024/01/עותק_של_עגור-_מדיניות_מוצהרת_2022_עיס_ומישור_מתוקן-9__1_.xls",
+      "https://kereni.co.il/wp-content/uploads/2024/01/עגור-_מדיניות_המלצה_למוצהרת_2023_עיס_ומישור1.xls",
+      "https://kereni.co.il/wp-content/uploads/2024/01/מדיניות_השקעה_מוצהרת_מעודכן_החל_מ-13.06.23___על_יסודי_2023.xls",
+      "https://kereni.co.il/wp-content/uploads/2024/01/מדניות_השקעה_מוצהרת_-_על_יסודי_2021.xlsx",
+      "https://kereni.co.il/wp-content/uploads/2024/01/מדיניות_השקעות_מוצהרת_2021_על_יסודי_כללי_-_מעודכן_נכון_ל_08.07.21.xlsx.xls",
+      "https://kereni.co.il/wp-content/uploads/2024/01/עגור_על_יסודי_כללי_מדיניות_מוצהרת_2020.xlsx",
+      "https://kereni.co.il/wp-content/uploads/2024/01/מדיניות_מוצהרת_2020_עגור_על_יסודי.xls",
+      "https://kereni.co.il/wp-content/uploads/2024/01/2019-policyAlYesodi.xls",
+      "https://kereni.co.il/wp-content/uploads/2024/01/7442.xls",
+      "https://kereni.co.il/wp-content/uploads/2024/01/7272.xls",
+      "https://kereni.co.il/wp-content/uploads/2024/01/6756.xls",
+      "https://kereni.co.il/wp-content/uploads/2024/01/מדיניות_מוצהרת_מסלולים_כשרים_2024-1.xls",
+      "https://kereni.co.il/wp-content/uploads/2024/01/עגור-_מדיניות_מוצהרת_2023_מסלולים_כשרים_שינויי_31.07.23.xls",
+      "https://kereni.co.il/wp-content/uploads/2024/01/מדיניות_השקעה_מוצהרת-_מסלולים_כשרים_2023.xls",
+      "https://kereni.co.il/wp-content/uploads/2024/01/עגור-_מדיניות_מוצהרת_2022_מסלולים_כשרים.xls",
+      "https://kereni.co.il/wp-content/uploads/2024/01/מדיניות_השקעות_מוצהרת_2021_על_יסודי_מסלול_כשר_-_מעודכן_נכון_ל_08.07.21.xlsx",
+      "https://kereni.co.il/wp-content/uploads/2024/01/מדניות_השקעה_מוצהרת_-_על_יסודי_הלכתי_2021.xls",
+      "https://kereni.co.il/wp-content/uploads/2024/01/מדיניות_מוצהרת_עגור_על-יסודי_כשר_עדכון_1_אפריל_2020.xlsx",
+      "https://kereni.co.il/wp-content/uploads/2024/01/מדיניות_מוצהרת_עגור_על_יסודי_מסלול_אגח.xlsx",
+      "https://kereni.co.il/wp-content/uploads/2024/01/2019-policyAlYesodiH.xls",
+      "https://kereni.co.il/wp-content/uploads/2024/01/7273.xls",
+      "https://kereni.co.il/wp-content/uploads/2024/01/6741.xls",
+      "https://kereni.co.il/wp-content/uploads/2024/01/מדיניות_מוצהרת_2024_מסלולי_אגח-1.xls",
+      "https://kereni.co.il/wp-content/uploads/2024/01/2023__מדיניות_השקעה_מוצהרת-_תיקי_אגח.xls",
+      "https://kereni.co.il/wp-content/uploads/2024/01/עותק_של_מדיניות_מוצהרת_ל2022_תיקי_אגח.xls",
+      "https://kereni.co.il/wp-content/uploads/2024/01/עגור-_מדניות_השקעה_מוצהרת_-_אגח_ללא_מניות_על_יסודי_2021.xlsx",
+      "https://kereni.co.il/wp-content/uploads/2024/01/מדיניות_מוצהרת_עגור_על_יסודי_מסלול_אגח-1.xlsx",
+      "https://kereni.co.il/wp-content/uploads/2024/01/2019-policyAlYesodiAgah.xlsx",
+      "https://kereni.co.il/wp-content/uploads/2024/01/7274.xls",
+      "https://kereni.co.il/wp-content/uploads/2024/01/6757.xls",
+      "https://kereni.co.il/wp-content/uploads/2026/01/עגור_2026_מסלולים_מישור.xls",
+      "https://kereni.co.il/wp-content/uploads/2025/03/עותק_של_עותק_של_עגור_מדיניות_מוצהרת_מסלול_כללי2025_הצעה_לשינויי_05.03.25.xls",
+      "https://kereni.co.il/wp-content/uploads/2025/01/עותק_של_עותק_של_עגור_מדיניות_מוצהרת_מסלול_כללי2025_הצעה.xls",
+      "https://kereni.co.il/wp-content/uploads/2024/01/מדיניות_מוצהרת_מסלול_כללי_2024-1-2.xls",
+      "https://kereni.co.il/wp-content/uploads/2024/01/עותק_של_עגור-_מדיניות_מוצהרת_2023_עיס_ומישור_שינויי_מיום_25.10.23-1.xls",
+      "https://kereni.co.il/wp-content/uploads/2024/01/עגור-_מדיניות_מוצהרת_2023_עיס_ומישור_שינויי_מיום_26.07.23-2.xls",
+      "https://kereni.co.il/wp-content/uploads/2024/01/מדיניות_השקעה_מוצהרת_מעודכן_החל_מ-13.06.23___מישור_2023.xls",
+      "https://kereni.co.il/wp-content/uploads/2024/01/עגור-_מדיניות_המלצה_למוצהרת_2023_עיס_ומישור1-1.xls",
+      "https://kereni.co.il/wp-content/uploads/2024/01/עותק_של_עגור-_מדיניות_מוצהרת_2022_עיס_ומישור_מתוקן-9__1_-1.xls",
+      "https://kereni.co.il/wp-content/uploads/2024/01/מדיניות_השקעות_מוצהרת_2021_מישור_כללי_-_מעודכן_נכון_ל_08.07.21.xlsx.xls",
+      "https://kereni.co.il/wp-content/uploads/2024/01/עגור-_מדיניות_מוצהרת_2020_מישור_.xls",
+      "https://kereni.co.il/wp-content/uploads/2024/01/מדיניות_2020_עגור_מישור.xls",
+      "https://kereni.co.il/wp-content/uploads/2024/01/2019-policyMishor.xls",
+      "https://kereni.co.il/wp-content/uploads/2024/01/7443.xls",
+      "https://kereni.co.il/wp-content/uploads/2024/01/7275.xls",
+      "https://kereni.co.il/wp-content/uploads/2024/01/6749.xls",
+      "https://kereni.co.il/wp-content/uploads/2024/01/מדניות_השקעה_מוצהרת_-_מישור_2021.xlsx",
+      "https://kereni.co.il/wp-content/uploads/2024/01/עגור-_מדיניות_מוצהרת_2020_מישור_-1.xls",
+      "https://kereni.co.il/wp-content/uploads/2024/01/מדיניות_2020_עגור_מישור-1.xls",
+      "https://kereni.co.il/wp-content/uploads/2024/01/2019-policyMishor-1.xls",
+      "https://kereni.co.il/wp-content/uploads/2024/01/7443-1.xls",
+      "https://kereni.co.il/wp-content/uploads/2024/01/7275-1.xls",
+      "https://kereni.co.il/wp-content/uploads/2024/01/6749-1.xls",
+      "https://kereni.co.il/wp-content/uploads/2026/01/עגור_מסלולים_כשר_מישור.xls",
+      "https://kereni.co.il/wp-content/uploads/2025/03/עותק_של_עותק_של_עגור_מדיניות_מוצהרת_מסלולים_כשרים_הצעה_למדיניות_2025_הצעה_לשינויי_03.03.25.xls",
+      "https://kereni.co.il/wp-content/uploads/2025/03/עותק_של_עותק_של_עגור_מדיניות_מוצהרת_מסלולים_כשרים_הצעה_למדיניות_2025__1_.xls",
+      "https://kereni.co.il/wp-content/uploads/2024/09/עגור_מדיניות_מוצהרת_מסלולים_כשרים_2024שינויי_23.09.24.xls",
+      "https://kereni.co.il/wp-content/uploads/2024/01/מדיניות_מוצהרת_מסלולים_כשרים_2024-1-1.xls",
+      "https://kereni.co.il/wp-content/uploads/2024/01/עגור-_מדיניות_מוצהרת_2023_מסלולים_כשרים_שינויי_31.07.23-1.xls",
+      "https://kereni.co.il/wp-content/uploads/2024/01/עגור-_מדיניות_מוצהרת_2022_מסלולים_כשרים-1.xls",
+      "https://kereni.co.il/wp-content/uploads/2024/01/מדיניות_השקעות_מוצהרת_2021_מישור_מסלול_כשר_-_מעודכן_נכון_ל_08.07.21.xlsx",
+      "https://kereni.co.il/wp-content/uploads/2024/01/מדניות_השקעה_מוצהרת_-_מישור_מסלול_הלכתי_2021.xls",
+      "https://kereni.co.il/wp-content/uploads/2024/01/עגור-_מישור_כשר_מדיניות_מוצהרת_2020_.xls",
+      "https://kereni.co.il/wp-content/uploads/2024/01/מדיניות_מוצהרת_2020_עגור_מישור_מסלול_הלכתי.xls",
+      "https://kereni.co.il/wp-content/uploads/2024/01/2019-policyMishorH.xls",
+      "https://kereni.co.il/wp-content/uploads/2024/01/7276.xls",
+      "https://kereni.co.il/wp-content/uploads/2024/01/6761.xls",
+      "https://kereni.co.il/wp-content/uploads/2026/01/עגור_מסלולי_אגח_מישור.xls",
+      "https://kereni.co.il/wp-content/uploads/2025/03/עותק_של_עותק_של_עותק_של_מדיניות_מוצהרת_2025_הצעה_מסלולי_אגח__2_.xls",
+      "https://kereni.co.il/wp-content/uploads/2024/01/מדיניות_מוצהרת_2024_מסלולי_אגח-1-1.xls",
+      "https://kereni.co.il/wp-content/uploads/2024/01/עותק_של_מדיניות_מוצהרת_ל2022_תיקי_אגח-1.xls",
+      "https://kereni.co.il/wp-content/uploads/2024/01/מדינות_השקעה_מוצהרת_-_מישור_מסלול_אגח_2021.xlsx",
+      "https://kereni.co.il/wp-content/uploads/2024/01/מדיניות_מוצהרת_עגור_מישור_מסלול_אגח.xlsx",
+      "https://kereni.co.il/wp-content/uploads/2024/01/2019-policyMishorAgah.xlsx",
+      "https://kereni.co.il/wp-content/uploads/2024/01/7277.xls",
+      "https://kereni.co.il/wp-content/uploads/2024/01/6759.xls",
+      "https://kereni.co.il/wp-content/uploads/2026/01/עגור_2026__על_יסודי.xls",
+      "https://kereni.co.il/wp-content/uploads/2026/01/עגור_מסלולים_כשר_על_יסודי.xls",
+      "https://kereni.co.il/wp-content/uploads/2026/01/עגור_מסלולי_אגח_על_יסודי.xls"
+     ],
+     "unselected_files": [
+      {
+       "file": "https://kereni.co.il/wp-content/uploads/2024/01/על_יסודי-_מגבלת_עמלות_ניהול_חיצוני_2024__1_-1-1.xlsxhttps://kereni.co.il/wp-content/uploads/2024/01/על_יסודי-_מגבלת_עמלות_ניהול_חיצוני_2024__1_-1-1.xlsx",
+       "text": "מגבלת עמלות ניהול חיצוני 2024",
+       "ctx": "מגבלת עמלות ניהול חיצוני 2024"
+      },
+      {
+       "file": "https://kereni.co.il/wp-content/uploads/2024/01/על_יסודי-_מגבלת_עמלות_ניהול_חיצוני_2023.xlsx",
+       "text": "מגבלת עמלות ניהול חיצוני 2023",
+       "ctx": "מגבלת עמלות ניהול חיצוני 2023"
+      },
+      {
+       "file": "https://kereni.co.il/wp-content/uploads/2024/01/הצהרה_על_השקעות_אחראיות.pdf",
+       "text": "הצהרה על השקעות אחראיות",
+       "ctx": "הצהרה על השקעות אחראיות"
+      },
+      {
+       "file": "https://kereni.co.il/wp-content/uploads/2024/01/על_יסודי-_מגבלת_עמלות_ניהול_חיצוני_2024__1_-1-1.xlsxhttps://kereni.co.il/wp-content/uploads/2024/01/על_יסודי-_מגבלת_עמלות_ניהול_חיצוני_2024__1_-1-1.xlsx",
+       "text": "מגבלת עמלות ניהול חיצוני 2024",
+       "ctx": "מגבלת עמלות ניהול חיצוני 2024"
+      },
+      {
+       "file": "https://kereni.co.il/wp-content/uploads/2024/01/על_יסודי-_מגבלת_עמלות_ניהול_חיצוני_2023.xlsx",
+       "text": "מגבלת עמלות ניהול חיצוני 2023",
+       "ctx": "מגבלת עמלות ניהול חיצוני 2023"
+      },
+      {
+       "file": "https://kereni.co.il/wp-content/uploads/2024/01/הצהרה_על_השקעות_אחראיות.pdf",
+       "text": "הצהרה על השקעות אחראיות",
+       "ctx": "הצהרה על השקעות אחראיות"
+      },
+      {
+       "file": "https://kereni.co.il/wp-content/uploads/2026/01/עותק_של_מישור-_מגבלת_עמלות_ניהול_חיצוני_2026____4_.xlsx",
+       "text": "מגבלת עמלות ניהול חיצוני 2026",
+       "ctx": "מגבלת עמלות ניהול חיצוני 2026"
+      },
+      {
+       "file": "https://kereni.co.il/wp-content/uploads/2025/01/עותק_של_מישור-_מגבלת_עמלות_ניהול_חיצוני_2025__9_.xlsx",
+       "text": "מגבלת עמלות ניהול חיצוני 2025",
+       "ctx": "מגבלת עמלות ניהול חיצוני 2025"
+      },
+      {
+       "file": "https://kereni.co.il/wp-content/uploads/2024/01/מישור-_מגבלת_עמלות_ניהול_חיצוני_2024__9_.xlsx",
+       "text": "מגבלת עמלות ניהול חיצוני 2024",
+       "ctx": "מגבלת עמלות ניהול חיצוני 2024"
+      },
+      {
+       "file": "https://kereni.co.il/wp-content/uploads/2024/01/מישור-_מגבלת_עמלות_ניהול_חיצוני_2023.xlsx",
+       "text": "מגבלת עמלות ניהול חיצוני 2023",
+       "ctx": "מגבלת עמלות ניהול חיצוני 2023"
+      },
+      {
+       "file": "https://kereni.co.il/wp-content/uploads/2024/01/הצהרה_על_השקעות_אחראיות-1.pdf",
+       "text": "הצהרה על השקעות אחראיות",
+       "ctx": "הצהרה על השקעות אחראיות"
+      },
+      {
+       "file": "https://kereni.co.il/wp-content/uploads/2024/01/הצהרה_על_השקעות_אחראיות-2.pdf",
+       "text": "הצהרה על השקעות אחראיות",
+       "ctx": "הצהרה על השקעות אחראיות"
+      },
+      {
+       "file": "https://kereni.co.il/wp-content/uploads/2026/01/עותק_של_על_יסודי-_מגבלת_עמלות_ניהול_חיצוני_2026__1_.xlsx",
+       "text": "מגבלת עמלות ניהול חיצוני 2026",
+       "ctx": "מגבלת עמלות ניהול חיצוני 2026"
+      },
+      {
+       "file": "https://kereni.co.il/wp-content/uploads/2025/01/עותק_של_על_יסודי-_מגבלת_עמלות_ניהול_חיצוני_2025__1_.xlsx",
+       "text": "מגבלת עמלות ניהול חיצוני 2025",
+       "ctx": "מגבלת עמלות ניהול חיצוני 2025"
+      },
+      {
+       "file": "https://kereni.co.il/wp-content/uploads/2024/01/על_יסודי-_מגבלת_עמלות_ניהול_חיצוני_2024__1_-1-1.xlsxhttps://kereni.co.il/wp-content/uploads/2024/01/על_יסודי-_מגבלת_עמלות_ניהול_חיצוני_2024__1_-1-1.xlsx",
+       "text": "מגבלת עמלות ניהול חיצוני 2024",
+       "ctx": "מגבלת עמלות ניהול חיצוני 2024"
+      },
+      {
+       "file": "https://kereni.co.il/wp-content/uploads/2024/01/על_יסודי-_מגבלת_עמלות_ניהול_חיצוני_2023.xlsx",
+       "text": "מגבלת עמלות ניהול חיצוני 2023",
+       "ctx": "מגבלת עמלות ניהול חיצוני 2023"
+      },
+      {
+       "file": "https://kereni.co.il/wp-content/uploads/2024/01/הצהרה_על_השקעות_אחראיות.pdf",
+       "text": "הצהרה על השקעות אחראיות",
+       "ctx": "הצהרה על השקעות אחראיות"
+      }
+     ]
+    },
+    {
+     "url": "https://kereni.co.il/%d7%a0%d7%9b%d7%a1%d7%99-%d7%a7%d7%95%d7%a4%d7%94/",
+     "links": 541,
+     "followed": [],
+     "files": 447,
+     "clicked": 0,
+     "captured": 0,
+     "selected": [],
+     "unselected_files": [
+      {
+       "file": "https://kereni.co.il/wp-content/uploads/2026/07/520024985_gm_0226.xlsx",
+       "text": "רשימת נכסים ברמת הנכס הבודד – עגור מאוחד 06.2026",
+       "ctx": "רשימת נכסים ברמת הנכס הבודד – עגור מאוחד 06.2026"
+      },
+      {
+       "file": "https://kereni.co.il/wp-content/uploads/2026/07/אישור_רואה_חשבון_רשימת__נכסים_30.6.2026.pdf",
+       "text": "אישור רוח רשימת נכסים ברמת הנכס הבודד – על יסודי 06.2026",
+       "ctx": "אישור רוח רשימת נכסים ברמת הנכס הבודד – על יסודי 06.2026"
+      },
+      {
+       "file": "https://kereni.co.il/wp-content/uploads/2026/05/520024985_gm_p_0126.xlsx",
+       "text": "רשימת נכסים ברמת הנכס הבודד – עגור מאוחד 03.2026",
+       "ctx": "רשימת נכסים ברמת הנכס הבודד – עגור מאוחד 03.2026"
+      },
+      {
+       "file": "https://kereni.co.il/wp-content/uploads/2026/05/אישור_רואה_חשבון_רשימת_נכסים__31.3.26.pdf",
+       "text": "אישור רוח רשימת נכסים ברמת הנכס הבודד – על יסודי 03.2026",
+       "ctx": "אישור רוח רשימת נכסים ברמת הנכס הבודד – על יסודי 03.2026"
+      },
+      {
+       "file": "https://kereni.co.il/wp-content/uploads/2026/03/520024985_gm_p_0425-1.xlsx",
+       "text": "רשימת נכסים ברמת הנכס הבודד – עגור מאוחד 12.2025",
+       "ctx": "רשימת נכסים ברמת הנכס הבודד – עגור מאוחד 12.2025"
+      },
+      {
+       "file": "https://kereni.co.il/wp-content/uploads/2026/03/אישור_רואי_חשבון_רשימת_נכסים_רבעונית_31.12.25-1.pdf",
+       "text": "אישור רוח רשימת נכסים ברמת הנכס הבודד – 12.2025",
+       "ctx": "אישור רוח רשימת נכסים ברמת הנכס הבודד – 12.2025"
+      },
+      {
+       "file": "https://kereni.co.il/wp-content/uploads/2025/11/520024985_gm_p_0325.xlsx",
+       "text": "רשימת נכסים ברמת הנכס הבודד – עגור מאוחד 09.2025",
+       "ctx": "רשימת נכסים ברמת הנכס הבודד – עגור מאוחד 09.2025"
+      },
+      {
+       "file": "https://kereni.co.il/wp-content/uploads/2025/11/אישור_רוח_30.9.25.pdf",
+       "text": "אישור רוח רשימת נכסים ברמת הנכס הבודד – על יסודי 09.2025",
+       "ctx": "אישור רוח רשימת נכסים ברמת הנכס הבודד – על יסודי 09.2025"
+      },
+      {
+       "file": "https://kereni.co.il/wp-content/uploads/2025/08/520024985_gm_p_0225.xlsx",
+       "text": "רשימת נכסים ברמת הנכס הבודד – עגור מאוחד 06.2025",
+       "ctx": "רשימת נכסים ברמת הנכס הבודד – עגור מאוחד 06.2025"
+      },
+      {
+       "file": "https://kereni.co.il/wp-content/uploads/2025/08/אישור_רוח_30.6.25.pdf",
+       "text": "אישור רוח רשימת נכסים ברמת הנכס הבודד – על יסודי 06.2025",
+       "ctx": "אישור רוח רשימת נכסים ברמת הנכס הבודד – על יסודי 06.2025"
+      },
+      {
+       "file": "https://kereni.co.il/wp-content/uploads/2025/03/520024985_gm_p_0424.xlsx",
+       "text": "רשימת נכסים ברמת הנכס הבודד – עגור מאוחד 12.2024",
+       "ctx": "רשימת נכסים ברמת הנכס הבודד – עגור מאוחד 12.2024"
+      },
+      {
+       "file": "https://kereni.co.il/wp-content/uploads/2025/03/אישור_רשימת_נכסים_רבעונית_ליום_31.12.24.pdf",
+       "text": "אישור רוח רשימת נכסים ברמת הנכס הבודד – על יסודי 12.2024",
+       "ctx": "אישור רוח רשימת נכסים ברמת הנכס הבודד – על יסודי 12.2024"
+      },
+      {
+       "file": "https://kereni.co.il/wp-content/uploads/2024/12/520024985_gm_p_0324.xlsx",
+       "text": "רשימת נכסים ברמת הנכס הבודד – עגור מאוחד 09.2024",
+       "ctx": "רשימת נכסים ברמת הנכס הבודד – עגור מאוחד 09.2024"
+      },
+      {
+       "file": "https://kereni.co.il/wp-content/uploads/2024/12/אישור_רואה_חשבון_רשימת_נכסים_30.9.24.pdf",
+       "text": "אישור רוח רשימת נכסים ברמת הנכס הבודד – על יסודי 09.2024",
+       "ctx": "אישור רוח רשימת נכסים ברמת הנכס הבודד – על יסודי 09.2024"
+      },
+      {
+       "file": "https://kereni.co.il/wp-content/uploads/2024/09/520024985_gm_p_0224.xlsx",
+       "text": "רשימת נכסים ברמת הנכס הבודד – עגור מאוחד 06.2024",
+       "ctx": "רשימת נכסים ברמת הנכס הבודד – עגור מאוחד 06.2024"
+      },
+      {
+       "file": "https://kereni.co.il/wp-content/uploads/2024/09/520024985_gm_p_0224.xlsx",
+       "text": "אישור רוח רשימת נכסים ברמת הנכס הבודד – על יסודי 06.2024",
+       "ctx": "אישור רוח רשימת נכסים ברמת הנכס הבודד – על יסודי 06.2024"
+      },
+      {
+       "file": "https://kereni.co.il/wp-content/uploads/2024/06/520024985_gm_p_0124.xlsx",
+       "text": "רשימת נכסים ברמת הנכס הבודד – עגור מאוחד 03.2024",
+       "ctx": "רשימת נכסים ברמת הנכס הבודד – עגור מאוחד 03.2024"
+      },
+      {
+       "file": "https://kereni.co.il/wp-content/uploads/2024/06/אישור_רואה_חשבון_מעודכן_-3.24.pdf",
+       "text": "אישור רוח רשימת נכסים ברמת הנכס הבודד – על יסודי 03.2024",
+       "ctx": "אישור רוח רשימת נכסים ברמת הנכס הבודד – על יסודי 03.2024"
+      },
+      {
+       "file": "https://kereni.co.il/wp-content/uploads/2024/03/520024985_gsum_P423.xlsx",
+       "text": "רשימת נכסים ברמת הנכס הבודד – עגור מאוחד 12.2023",
+       "ctx": "רשימת נכסים ברמת הנכס הבודד – עגור מאוחד 12.2023"
+      },
+      {
+       "file": "https://kereni.co.il/wp-content/uploads/2024/02/520024985_gsum_P323.xlsx",
+       "text": "רשימת נכסים ברמת הנכס הבודד – עגור מאוחד 09.2023",
+       "ctx": "רשימת נכסים ברמת הנכס הבודד – עגור מאוחד 09.2023"
+      },
+      {
+       "file": "https://kereni.co.il/wp-content/uploads/2024/02/520024985_gsum_P223.xlsx",
+       "text": "רשימת נכסים ברמת הנכס הבודד – עגור מאוחד 06.2023",
+       "ctx": "רשימת נכסים ברמת הנכס הבודד – עגור מאוחד 06.2023"
+      },
+      {
+       "file": "https://kereni.co.il/wp-content/uploads/2024/02/520024985_gsum_P123.xlsx",
+       "text": "רשימת נכסים ברמת הנכס הבודד – עגור מאוחד 03.2023",
+       "ctx": "רשימת נכסים ברמת הנכס הבודד – עגור מאוחד 03.2023"
+      },
+      {
+       "file": "https://kereni.co.il/wp-content/uploads/2024/02/520024985_gsum_P422.xlsx",
+       "text": "רשימת נכסים ברמת הנכס הבודד – עגור מאוחד 12.2022",
+       "ctx": "רשימת נכסים ברמת הנכס הבודד – עגור מאוחד 12.2022"
+      },
+      {
+       "file": "https://kereni.co.il/wp-content/uploads/2024/08/520024985_gsum_P322.xlsx",
+       "text": "רשימת נכסים ברמת הנכס הבודד – עגור מאוחד 09.2022",
+       "ctx": "רשימת נכסים ברמת הנכס הבודד – עגור מאוחד 09.2022"
+      },
+      {
+       "file": "https://kereni.co.il/wp-content/uploads/2024/08/520024985_gsum_P222.xlsx",
+       "text": "רשימת נכסים ברמת הנכס הבודד – עגור מאוחד 06.2022",
+       "ctx": "רשימת נכסים ברמת הנכס הבודד – עגור מאוחד 06.2022"
+      }
+     ]
+    },
+    {
+     "url": "https://kereni.co.il/%d7%94%d7%a6%d7%94%d7%a8%d7%aa-%d7%a0%d7%92%d7%99%d7%a9%d7%95%d7%aa/",
+     "links": 102,
+     "followed": [],
+     "files": 0,
+     "clicked": 0,
+     "captured": 0,
+     "selected": [],
+     "unselected_files": []
+    }
+   ],
+   "new_docs": 0,
+   "found": 793,
+   "selected": 164,
+   "had": 30,
+   "head_skip": 30,
+   "errors": [
+    "עגור_2026_מסלולים_מישור.xls -> 418",
+    "עגור_מסלולי_אגח_מישור.xls -> 418",
+    "עגור_2026__על_יסודי.xls -> 418",
+    "עגור_מסלולי_אגח_על_יסודי.xls -> 418",
+    "עותק_של_עותק_של_עגור_מדיניות_מוצהרת_מסלול_כללי2025_הצעה_לשינ -> 418",
+    "עותק_של_עותק_של_עגור_מדיניות_מוצהרת_מסלול_כללי2025_הצעה.xls -> 418",
+    "עותק_של_עותק_של_עגור_מדיניות_מוצהרת_מסלולים_כשרים_הצעה_למדינ -> 418",
+    "עותק_של_עותק_של_עגור_מדיניות_מוצהרת_מסלולים_כשרים_הצעה_למדינ -> 418",
+    "עותק_של_עותק_של_עותק_של_מדיניות_מוצהרת_2025_הצעה_מסלולי_אגח_ -> 418",
+    "מדיניות_מוצהרת_מסלול_כללי_2024-1.xls -> 418",
+    "עותק_של_עגור-_מדיניות_מוצהרת_2023_עיס_ומישור_שינויי_מיום_25. -> 418",
+    "עגור-_מדיניות_מוצהרת_2023_עיס_ומישור_שינויי_מיום_26.07.23.xl -> 418",
+    "עותק_של_עגור-_מדיניות_מוצהרת_2022_עיס_ומישור_מתוקן-9__1_.xls -> 418",
+    "עגור-_מדיניות_המלצה_למוצהרת_2023_עיס_ומישור1.xls -> 418",
+    "מדיניות_השקעה_מוצהרת_מעודכן_החל_מ-13.06.23___על_יסודי_2023.x -> 418",
+    "מדיניות_השקעות_מוצהרת_2021_על_יסודי_כללי_-_מעודכן_נכון_ל_08. -> 418",
+    "מדיניות_מוצהרת_2020_עגור_על_יסודי.xls -> 418",
+    "2019-policyAlYesodi.xls -> 418",
+    "7442.xls -> 418",
+    "7272.xls -> 418",
+    "6756.xls -> 418",
+    "מדיניות_מוצהרת_מסלולים_כשרים_2024-1.xls -> 418",
+    "עגור-_מדיניות_מוצהרת_2023_מסלולים_כשרים_שינויי_31.07.23.xls -> 418",
+    "מדיניות_השקעה_מוצהרת-_מסלולים_כשרים_2023.xls -> 418",
+    "עגור-_מדיניות_מוצהרת_2022_מסלולים_כשרים.xls -> 418",
+    "מדניות_השקעה_מוצהרת_-_על_יסודי_הלכתי_2021.xls -> 418",
+    "2019-policyAlYesodiH.xls -> 418",
+    "7273.xls -> 418",
+    "6741.xls -> 418",
+    "מדיניות_מוצהרת_2024_מסלולי_אגח-1.xls -> 418",
+    "2023__מדיניות_השקעה_מוצהרת-_תיקי_אגח.xls -> 418",
+    "עותק_של_מדיניות_מוצהרת_ל2022_תיקי_אגח.xls -> 418",
+    "7274.xls -> 418",
+    "6757.xls -> 418",
+    "מדיניות_מוצהרת_מסלול_כללי_2024-1-2.xls -> 418",
+    "עותק_של_עגור-_מדיניות_מוצהרת_2023_עיס_ומישור_שינויי_מיום_25. -> 418",
+    "עגור-_מדיניות_מוצהרת_2023_עיס_ומישור_שינויי_מיום_26.07.23-2. -> 418",
+    "מדיניות_השקעה_מוצהרת_מעודכן_החל_מ-13.06.23___מישור_2023.xls -> 418",
+    "עגור-_מדיניות_המלצה_למוצהרת_2023_עיס_ומישור1-1.xls -> 418",
+    "עותק_של_עגור-_מדיניות_מוצהרת_2022_עיס_ומישור_מתוקן-9__1_-1.x -> 418",
+    "מדיניות_השקעות_מוצהרת_2021_מישור_כללי_-_מעודכן_נכון_ל_08.07. -> 418",
+    "עגור-_מדיניות_מוצהרת_2020_מישור_.xls -> 418",
+    "מדיניות_2020_עגור_מישור.xls -> 418",
+    "2019-policyMishor.xls -> 418",
+    "7443.xls -> 418",
+    "7275.xls -> 418",
+    "6749.xls -> 418",
+    "עגור-_מדיניות_מוצהרת_2020_מישור_-1.xls -> 418",
+    "מדיניות_2020_עגור_מישור-1.xls -> 418",
+    "2019-policyMishor-1.xls -> 418",
+    "7443-1.xls -> 418",
+    "7275-1.xls -> 418",
+    "6749-1.xls -> 418",
+    "עגור_מדיניות_מוצהרת_מסלולים_כשרים_2024שינויי_23.09.24.xls -> 418",
+    "מדיניות_מוצהרת_מסלולים_כשרים_2024-1-1.xls -> 418",
+    "עגור-_מדיניות_מוצהרת_2023_מסלולים_כשרים_שינויי_31.07.23-1.xl -> 418",
+    "עגור-_מדיניות_מוצהרת_2022_מסלולים_כשרים-1.xls -> 418",
+    "מדניות_השקעה_מוצהרת_-_מישור_מסלול_הלכתי_2021.xls -> 418",
+    "עגור-_מישור_כשר_מדיניות_מוצהרת_2020_.xls -> 418",
+    "מדיניות_מוצהרת_2020_עגור_מישור_מסלול_הלכתי.xls -> 418",
+    "2019-policyMishorH.xls -> 418",
+    "7276.xls -> 418",
+    "6761.xls -> 418",
+    "מדיניות_מוצהרת_2024_מסלולי_אגח-1-1.xls -> 418",
+    "עותק_של_מדיניות_מוצהרת_ל2022_תיקי_אגח-1.xls -> 418",
+    "7277.xls -> 418",
+    "6759.xls -> 418",
+    "עגור_2026_מסלולים_מישור.xls -> 418",
+    "עגור_מסלולי_אגח_מישור.xls -> 418",
+    "עגור_2026__על_יסודי.xls -> 418",
+    "עגור_מסלולי_אגח_על_יסודי.xls -> 418",
+    "עותק_של_עותק_של_עגור_מדיניות_מוצהרת_מסלול_כללי2025_הצעה_לשינ -> 418",
+    "עותק_של_עותק_של_עגור_מדיניות_מוצהרת_מסלול_כללי2025_הצעה.xls -> 418",
+    "עותק_של_עותק_של_עגור_מדיניות_מוצהרת_מסלולים_כשרים_הצעה_למדינ -> 418",
+    "עותק_של_עותק_של_עגור_מדיניות_מוצהרת_מסלולים_כשרים_הצעה_למדינ -> 418",
+    "עותק_של_עותק_של_עותק_של_מדיניות_מוצהרת_2025_הצעה_מסלולי_אגח_ -> 418",
+    "מדיניות_מוצהרת_מסלול_כללי_2024-1.xls -> 418",
+    "עותק_של_עגור-_מדיניות_מוצהרת_2023_עיס_ומישור_שינויי_מיום_25. -> 418",
+    "עגור-_מדיניות_מוצהרת_2023_עיס_ומישור_שינויי_מיום_26.07.23.xl -> 418",
+    "עותק_של_עגור-_מדיניות_מוצהרת_2022_עיס_ומישור_מתוקן-9__1_.xls -> 418",
+    "עגור-_מדיניות_המלצה_למוצהרת_2023_עיס_ומישור1.xls -> 418",
+    "מדיניות_השקעה_מוצהרת_מעודכן_החל_מ-13.06.23___על_יסודי_2023.x -> 418",
+    "מדיניות_השקעות_מוצהרת_2021_על_יסודי_כללי_-_מעודכן_נכון_ל_08. -> 418",
+    "מדיניות_מוצהרת_2020_עגור_על_יסודי.xls -> 418",
+    "2019-policyAlYesodi.xls -> 418",
+    "7442.xls -> 418",
+    "7272.xls -> 418",
+    "6756.xls -> 418",
+    "מדיניות_מוצהרת_מסלולים_כשרים_2024-1.xls -> 418",
+    "עגור-_מדיניות_מוצהרת_2023_מסלולים_כשרים_שינויי_31.07.23.xls -> 418",
+    "מדיניות_השקעה_מוצהרת-_מסלולים_כשרים_2023.xls -> 418",
+    "עגור-_מדיניות_מוצהרת_2022_מסלולים_כשרים.xls -> 418",
+    "מדניות_השקעה_מוצהרת_-_על_יסודי_הלכתי_2021.xls -> 418",
+    "2019-policyAlYesodiH.xls -> 418",
+    "7273.xls -> 418",
+    "6741.xls -> 418",
+    "מדיניות_מוצהרת_2024_מסלולי_אגח-1.xls -> 418",
+    "2023__מדיניות_השקעה_מוצהרת-_תיקי_אגח.xls -> 418",
+    "עותק_של_מדיניות_מוצהרת_ל2022_תיקי_אגח.xls -> 418",
+    "7274.xls -> 418",
+    "6757.xls -> 418",
+    "מדיניות_מוצהרת_מסלול_כללי_2024-1-2.xls -> 418",
+    "עותק_של_עגור-_מדיניות_מוצהרת_2023_עיס_ומישור_שינויי_מיום_25. -> 418",
+    "עגור-_מדיניות_מוצהרת_2023_עיס_ומישור_שינויי_מיום_26.07.23-2. -> 418",
+    "מדיניות_השקעה_מוצהרת_מעודכן_החל_מ-13.06.23___מישור_2023.xls -> 418",
+    "עגור-_מדיניות_המלצה_למוצהרת_2023_עיס_ומישור1-1.xls -> 418",
+    "עותק_של_עגור-_מדיניות_מוצהרת_2022_עיס_ומישור_מתוקן-9__1_-1.x -> 418",
+    "מדיניות_השקעות_מוצהרת_2021_מישור_כללי_-_מעודכן_נכון_ל_08.07. -> 418",
+    "עגור-_מדיניות_מוצהרת_2020_מישור_.xls -> 418",
+    "מדיניות_2020_עגור_מישור.xls -> 418",
+    "2019-policyMishor.xls -> 418",
+    "7443.xls -> 418",
+    "7275.xls -> 418",
+    "6749.xls -> 418",
+    "עגור-_מדיניות_מוצהרת_2020_מישור_-1.xls -> 418",
+    "מדיניות_2020_עגור_מישור-1.xls -> 418",
+    "2019-policyMishor-1.xls -> 418",
+    "7443-1.xls -> 418",
+    "7275-1.xls -> 418",
+    "6749-1.xls -> 418",
+    "עגור_מדיניות_מוצהרת_מסלולים_כשרים_2024שינויי_23.09.24.xls -> 418",
+    "מדיניות_מוצהרת_מסלולים_כשרים_2024-1-1.xls -> 418",
+    "עגור-_מדיניות_מוצהרת_2023_מסלולים_כשרים_שינויי_31.07.23-1.xl -> 418",
+    "עגור-_מדיניות_מוצהרת_2022_מסלולים_כשרים-1.xls -> 418",
+    "מדניות_השקעה_מוצהרת_-_מישור_מסלול_הלכתי_2021.xls -> 418",
+    "עגור-_מישור_כשר_מדיניות_מוצהרת_2020_.xls -> 418",
+    "מדיניות_מוצהרת_2020_עגור_מישור_מסלול_הלכתי.xls -> 418",
+    "2019-policyMishorH.xls -> 418",
+    "7276.xls -> 418",
+    "6761.xls -> 418",
+    "מדיניות_מוצהרת_2024_מסלולי_אגח-1-1.xls -> 418",
+    "עותק_של_מדיניות_מוצהרת_ל2022_תיקי_אגח-1.xls -> 418",
+    "7277.xls -> 418",
+    "6759.xls -> 418"
+   ],
+   "diag": [
+    "עגור חברה לניהול ק: links=276 files=171 clicked=0 captured=0 selected=82",
+    "עגור חברה לניהול ק: links=123 files=0 clicked=0 captured=0 selected=0",
+    "עגור חברה לניהול ק: links=106 files=4 clicked=0 captured=0 selected=0",
+    "   ? 5277.pdf | היתר עיסקא | ",
+    "   ? 5279.pdf | תוספת | ",
+    "   ? היתר-עסקה.pdf | קרן היתר עיסקא | קרן היתר עיסקא",
+    "   ? תוספת-להיתר-עסקה.pdf | תוספת להיתר עיסקא | תוספת להיתר עיסקא",
+    "עגור חברה לניהול ק: links=93 files=0 clicked=0 captured=0 selected=0",
+    "עגור חברה לניהול ק: links=276 files=171 clicked=0 captured=0 selected=82",
+    "עגור חברה לניהול ק: links=541 files=447 clicked=0 captured=0 selected=0",
+    "   ? 520024985_gm_0226.xlsx | רשימת נכסים ברמת הנכס הבודד – עגור מאוחד | רשימת נכסים ברמת הנכס הבודד – עגור מאוחד 06.2026",
+    "   ? אישור_רואה_חשבון_רשימת__נכסים_30.6.2026.pdf | אישור רוח רשימת נכסים ברמת הנכס הבודד –  | אישור רוח רשימת נכסים ברמת הנכס הבודד – על יסודי 06.2026",
+    "   ? 520024985_gm_p_0126.xlsx | רשימת נכסים ברמת הנכס הבודד – עגור מאוחד | רשימת נכסים ברמת הנכס הבודד – עגור מאוחד 03.2026",
+    "   ? אישור_רואה_חשבון_רשימת_נכסים__31.3.26.pdf | אישור רוח רשימת נכסים ברמת הנכס הבודד –  | אישור רוח רשימת נכסים ברמת הנכס הבודד – על יסודי 03.2026",
+    "   ? 520024985_gm_p_0425-1.xlsx | רשימת נכסים ברמת הנכס הבודד – עגור מאוחד | רשימת נכסים ברמת הנכס הבודד – עגור מאוחד 12.2025",
+    "   ? אישור_רואי_חשבון_רשימת_נכסים_רבעונית_31.12.25-1.pdf | אישור רוח רשימת נכסים ברמת הנכס הבודד –  | אישור רוח רשימת נכסים ברמת הנכס הבודד – 12.2025",
+    "עגור חברה לניהול ק: links=102 files=0 clicked=0 captured=0 selected=0"
    ],
    "new_files": []
   }
