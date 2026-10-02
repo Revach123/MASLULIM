@@ -112,7 +112,48 @@ PROXY_ETF = {
     "TPXDDVD": "index:topix", "TPX": "index:topix",
     "NDUEEGF": "index:msci_em_proxy", "M1EF": "index:msci_em_proxy",
     "NDUEACWF": "index:acwi_proxy", "M1WD": "index:acwi_proxy",
+    # STOXX Europe 600 (GR) ~ EXSA.DE; STOXX Europe 600 Banks (GR) ~ EXV1.DE (iShares, Xetra);
+    # S&P/ASX 200 TR ~ asx200; MVIS US Listed Pharmaceutical 25 TR ~ PPH
+    "SXXGR": "EXSA.DE", "SXXR": "EXSA.DE", "SXXP": "EXSA.DE", "SX7GR": "EXV1.DE", "SX7R": "EXV1.DE",
+    "SX7P": "EXV1.DE", "AS51T": "index:asx200", "AS51": "index:asx200", "MVPPHTR": "PPH",
 }
+# סוואפ על מניה בודדת ("2330 TT", "PHOE IT", "V US", "TT2330"): תשואת המניה עצמה מיום העסקה.
+# קוד בורסה של בלומברג -> סיומת Yahoo
+_BBG_EXCH_SUFFIX = {
+    **{x: "" for x in ("US", "UW", "UN", "UQ", "UP", "UA", "UR", "UF", "UV")},
+    "IT": ".TA", "IL": ".TA", "TT": ".TW", "JT": ".T", "JP": ".T", "LN": ".L", "GY": ".DE", "GR": ".DE",
+    "FP": ".PA", "NA": ".AS", "SM": ".MC", "IM": ".MI", "SW": ".SW", "SE": ".SW", "HK": ".HK", "KS": ".KS",
+    "KP": ".KS", "AU": ".AX", "AT": ".AX", "CN": ".TO", "CT": ".TO",
+}
+_STOCK_TICKER = re.compile(r"^([A-Z0-9]{1,6})(?:/[A-Z])? ([A-Z]{2})$")
+_STOCK_TICKER_EXCH_FIRST = re.compile(r"^(TT|JT|JP|HK|KS|KP)(\d{4,6})$")
+
+
+def single_stock_symbol(raw_ticker: str | None) -> str | None:
+    """סימול Yahoo של מניה בודדת מטיקר סוואפ בסגנון בלומברג; None כשאינו כזה."""
+    key = normalize_ticker(raw_ticker)
+    if not key:
+        return None
+    m = _STOCK_TICKER.match(key)
+    if m and m.group(2) in _BBG_EXCH_SUFFIX:
+        return m.group(1) + _BBG_EXCH_SUFFIX[m.group(2)]
+    m = _STOCK_TICKER_EXCH_FIRST.match(key)
+    if m:
+        return m.group(2) + _BBG_EXCH_SUFFIX[m.group(1)]
+    return None
+
+
+def has_price_source(raw_ticker: str | None) -> bool:
+    """לטיקר יש מקור מחיר ליום הדוח: סדרה ב-INDICES, תעודת סל עוקבת, או מניה בודדת."""
+    key = normalize_ticker(raw_ticker)
+    if not key:
+        return False
+    try:
+        tmap = _load_ticker_map()
+    except Exception:
+        tmap = {}
+    return bool(tmap.get(key) or tmap.get(key.replace("-", "")) or PROXY_ETF.get(key)
+                or single_stock_symbol(key))
 _EXCEL_EPOCH = date(1899, 12, 30)
 
 
@@ -143,7 +184,7 @@ def proxy_return(raw_ticker: str | None, deal_date: date | None, report_date: da
     """תשואת תעודת הסל העוקבת אחרי המדד מיום העסקה ליום הדוח (מחיר[דוח] / מחיר[עסקה]).
     None אם אין פרוקסי / תאריך / מחיר."""
     key = normalize_ticker(raw_ticker)
-    etf = PROXY_ETF.get(key or "")
+    etf = PROXY_ETF.get(key or "") or single_stock_symbol(key)
     if not etf or not deal_date or not report_date:
         return None
     if deal_date > report_date and deal_date.day <= 12:
@@ -174,7 +215,8 @@ def resolve_current_price(raw_ticker: str | None, report_date: date | None) -> t
     if not key:
         return None, None
     try:
-        index_id = _load_ticker_map().get(key)
+        tmap = _load_ticker_map()
+        index_id = tmap.get(key) or tmap.get(key.replace("-", ""))  # "TA-125 INDEX" = TA125
     except Exception:
         return None, None
     if not index_id:

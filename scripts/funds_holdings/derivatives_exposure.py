@@ -665,29 +665,22 @@ def _swap_exposure(
 
 
 def collect_unresolved_swap_tickers(source: list[dict]) -> dict[str, set[str]]:
-    """מפתח -> סט טיקרים של סוואפ-מדד (סוג הנכס == מניות לרבות מדדי מניות)
-    שלא נמצא להם מיפוי ב-swap_ticker_map.csv (revach123/INDICES) - בין אם
-    כי אין להם מקור נתונים ציבורי (סלים קנייניים בנקאיים, ר' swap_ticker_map.csv
-    לסיבה המדויקת לכל טיקר) ובין אם כי טיקר חדש שלא נראה עדיין בסריקה שבנתה
-    את המיפוי. מיועד לדגל "לטיפול" בדשבורד - לא משפיע על חישוב החשיפה עצמו."""
-    from .swap_index_pricing import _load_ticker_map, normalize_ticker
-
-    try:
-        ticker_map = _load_ticker_map()
-    except Exception:
-        return {}
+    """מפתח -> סט טיקרים של סוואפ-מדד (סוג הנכס == מניות לרבות מדדי מניות) שאין להם מקור
+    מחיר ליום הדוח: לא סדרה ב-INDICES (swap_ticker_map.csv), לא תעודת סל עוקבת (PROXY_ETF) ולא
+    מניה בודדת (single_stock_symbol) - בעיקר סלים קנייניים בנקאיים (GS*/JPM*/CGAS*/MLBL*), או טיקר
+    חדש. מיועד לדגל "לטיפול" בדשבורד - לא משפיע על חישוב החשיפה עצמו."""
+    from .swap_index_pricing import has_price_source, normalize_ticker
 
     out: dict[str, set[str]] = {}
     for rec in source:
         if rec["Category"] != SWAP_CATEGORY or rec["מידע"] != "מידע":
             continue
         for row in rec["Clean"]:
-            if row.get(SWAP_ASSET_TYPE_COL) != SWAP_EQUITY_ASSET_TYPE:
+            if row.get(SWAP_ASSET_TYPE_COL) != SWAP_EQUITY_ASSET_TYPE or swap_on_bond_etf(row):
                 continue
             key = row.get("מפתח")
             raw_ticker = row.get(SWAP_TICKER_COL)
-            norm = normalize_ticker(raw_ticker)
-            if key is None or not norm or norm in ticker_map:
+            if key is None or not normalize_ticker(raw_ticker) or has_price_source(raw_ticker):
                 continue
             out.setdefault(key, set()).add(str(raw_ticker).strip())
     return out

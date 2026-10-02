@@ -69,7 +69,9 @@ def _load_price_history(symbol: str) -> tuple[tuple[date, float], ...]:
         r = requests.get(url, timeout=TIMEOUT)
         r.raise_for_status()
     except requests.RequestException:
-        return ()
+        # סימול שאין לו סדרה ב-INDICES (הרשימה שם מתעדכנת ידנית) - ישירות מ-Yahoo, אותו מקור
+        # ואותן מוסכמות (ניירות ת"א באגורות), כדי שטיקר חדש בדוחות יתומחר בלי עדכון ידני
+        return () if symbol in INDEX_SERIES else _yahoo_history(symbol)
     out = []
     for row in csv.DictReader(io.StringIO(r.text)):
         try:
@@ -80,6 +82,26 @@ def _load_price_history(symbol: str) -> tuple[tuple[date, float], ...]:
         out.append((d, c))
     out.sort()
     return tuple(out)
+
+
+YAHOO_CHART_URL = "https://query1.finance.yahoo.com/v8/finance/chart/{symbol}"
+YAHOO_PERIOD1 = int(datetime(2023, 6, 1).timestamp())  # כמו fetch_single_names.py ב-INDICES
+
+
+def _yahoo_history(symbol: str) -> tuple[tuple[date, float], ...]:
+    import time
+    try:
+        r = requests.get(YAHOO_CHART_URL.format(symbol=symbol), timeout=TIMEOUT,
+                         params={"period1": YAHOO_PERIOD1, "period2": int(time.time()), "interval": "1d"},
+                         headers={"User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) Chrome/128.0 Safari/537.36"})
+        r.raise_for_status()
+        res = ((r.json().get("chart") or {}).get("result") or [None])[0] or {}
+    except (requests.RequestException, ValueError):
+        return ()
+    closes = (((res.get("indicators") or {}).get("quote") or [{}])[0]).get("close") or []
+    out = [(datetime.utcfromtimestamp(t).date(), float(c)) for t, c in zip(res.get("timestamp") or [], closes)
+           if c is not None]
+    return tuple(sorted(out))
 
 
 def price_as_of(symbol: str, as_of: date) -> float | None:
