@@ -27,10 +27,11 @@ def fund_number_key(v) -> str | None:
         return s or None
 
 
-def parse_fund_exposure(text: str) -> dict[str, float]:
-    """מספר קרן -> שבר חשיפה למניות (0.8005). כותרת העמודה מגיעה עם תווי כיווניות (U+202B...)."""
+def parse_fund_exposure(text: str, word: str = "מניות") -> dict[str, float]:
+    """מספר קרן -> שבר החשיפה בעמודה שכותרתה מכילה word ("מניות" / "מט"): 0.8005.
+    כותרת העמודה מגיעה עם תווי כיווניות (U+202B...)."""
     reader = csv.DictReader(io.StringIO(text.lstrip("﻿")))
-    eq_col = next((c for c in reader.fieldnames or [] if "מניות" in c), None)
+    eq_col = next((c for c in reader.fieldnames or [] if word in c), None)
     out: dict[str, float] = {}
     if eq_col is None:
         return out
@@ -82,4 +83,15 @@ def fetch_fund_exposure(session: requests.Session | None = None) -> dict[str, fl
         print(f"[fund_exposure] לא זמין: {e}")
         return {}
     print(f"[fund_exposure] חשיפה למניות מדווחת ל-{len(out)} קרנות ישראליות")
+    return out
+
+
+def fetch_fund_fx_exposure(session: requests.Session | None = None) -> dict[str, float]:
+    """מספר קרן -> שבר החשיפה למט"ח שהקרן מדווחת (אותו קובץ, עמודת "חשיפה למט"ח")."""
+    try:
+        out = parse_fund_exposure(_get_raw(EXPOSURE_CONTENTS_URL, session), "מט")
+    except Exception as e:
+        print(f"[fund_exposure] חשיפה למט\"ח לא זמינה: {e}")
+        return {}
+    print(f"[fund_exposure] חשיפה למט\"ח מדווחת ל-{len(out)} קרנות ישראליות")
     return out

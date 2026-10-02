@@ -65,6 +65,12 @@ def _num(v) -> float | None:
 
 def fetch_stock_exposure(periods: set[str]) -> dict[tuple[str, str, str], float]:
     """(תחום, מס' מסלול, YYYYMM) -> חשיפה למניות (שבר), לחודשים המבוקשים בלבד."""
+    return fetch_exposure(periods, "STOCK_MARKET_EXPOSURE")
+
+
+def fetch_exposure(periods: set[str], field: str) -> dict[tuple[str, str, str], float]:
+    """(תחום, מס' מסלול, YYYYMM) -> חשיפה (שבר מנכסי המסלול) לפי field: STOCK_MARKET_EXPOSURE /
+    FOREIGN_CURRENCY_EXPOSURE / FOREIGN_EXPOSURE."""
     s = _session()
     out: dict[tuple[str, str, str], float] = {}
     for domain, title in DOMAINS.items():
@@ -80,8 +86,8 @@ def fetch_stock_exposure(periods: set[str]) -> dict[tuple[str, str, str], float]
                                    filters=json.dumps({"REPORT_PERIOD": str(period)}))
                     recs = res["records"]
                     for r in recs:
-                        # STOCK_MARKET_EXPOSURE הוא סכום, לא אחוז - כמו exposure_pct ב-revach
-                        e, assets = _num(r.get("STOCK_MARKET_EXPOSURE")), _num(r.get("TOTAL_ASSETS"))
+                        # החשיפה היא סכום, לא אחוז - כמו exposure_pct ב-revach
+                        e, assets = _num(r.get(field)), _num(r.get("TOTAL_ASSETS"))
                         if r.get("FUND_ID") is not None and e is not None and assets:
                             out[(domain, str(int(float(r["FUND_ID"]))), period)] = e / assets
                     offset += len(recs)
