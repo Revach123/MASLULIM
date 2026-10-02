@@ -1,23 +1,15 @@
 {
  "legal_id": "520030990",
  "name": "החברה המנהלת של מינהל קרן ההשתלמות לפקידים עובדי המנהל והשירותים בע\"מ",
- "home": "https://www.minhal.org",
+ "home": "https://minhal.org",
  "pages": [
   {
    "product": "גמל",
-   "url": "https://www.minhal.org/?CategoryID=164"
+   "url": "https://minhal.org/הרכב-נכסים/"
   },
   {
    "product": "גמל",
-   "url": "https://www.minhal.org/?CategoryID=153"
-  },
-  {
-   "product": "גמל",
-   "url": "https://www.minhal.org/?CategoryID=0"
-  },
-  {
-   "product": "גמל",
-   "url": "https://minhal.org/אודות-הקרן/"
+   "url": "https://minhal.org/הרכב-נכסים/מסלול-עוקב-מדד-500-ps/"
   }
  ],
  "browser": "headless",
@@ -25,11 +17,12 @@
   "גמל"
  ],
  "search": false,
- "rev": 10,
+ "rev": 11,
  "home_source": "web_search",
  "max_pages": 20,
  "via": "extension",
- "note": "minhal.org: האיסוף עם לחיצות נתקע (timeout) -> איסוף קל + כניסה לקישורי מדיניות/השקעות. מסלולים 299/1262/1385/14156/15378",
- "follow_max": 20,
- "follow_rx": "מדיניות|השקע|CategoryID=164|ArticleID"
+ "note": "2026-10-02 (מהמשתמש): האתר החדש minhal.org (וורדפרס) - מדיניות צפויה בעמוד כל מסלול תחת \"הרכב נכסים\", קובץ wp-content/uploads/YYYY/MM/mediniyut_zfuya_<מסלול>YYYY.xlsx.pdf. עמודי CategoryID הישנים נתקעו (timeout). מסלולים 299/1262/1385/14156/15378",
+ "follow_max": 15,
+ "follow_rx": "minhal\\.org/(הרכב-נכסים|%d7%94%d7%a8%d7%9b%d7%91-%d7%a0%d7%9b%d7%a1%d7%99%d7%9d)/[^/]+",
+ "per_track_pages": true
 }
