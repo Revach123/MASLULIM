@@ -382,4 +382,34 @@ def build_rows(source: list[dict], category: str, cols: dict) -> list[tuple[dict
                 units=units, price=price, report_date=d,
                 liability=is_liability_leg(row, price, units),
                 security=security_id(row.get(cols["ticker"])))))
+    _fix_units_by_fair_value(out, cols["ticker"])
     return out
+
+
+FV_COL = 'שווי הוגן (באלפי ש"ח)'
+UNITS_MIN_ROWS, UNITS_AGREE, UNITS_OUTLIER = 3, 0.6, 30
+
+
+def _fix_units_by_fair_value(rows: list[tuple[dict, FuturesRow]], ticker_col: str) -> None:
+    """כמות חוזים שסותרת את השווי ההוגן של השורה: באותו גוף, חוזה ותאריך דוח השווי לחוזה אחיד (אותו
+    מחיר), כך שכשרוב השורות (60%+) מסכימות - שורה שהשווי שלה לחוזה רחוק פי 30+ מהחציון מקבלת כמות
+    מהשווי. (איילון 46011, NQU6: 2.84 חוזים מול שווי 0.48 אלף ש"ח - 0.017 חוזים לפי השווי; במסלול
+    האח 46012 0.6 חוזים בשווי 80 אלף ש"ח.)"""
+    groups: dict[tuple, list[int]] = defaultdict(list)
+    for i, (row, r) in enumerate(rows):
+        fv = _num(row.get(FV_COL))
+        contract = str(row.get(ticker_col) or "").strip().upper() or r.name
+        if r.units and fv and contract:
+            groups[(r.legal_id, contract, r.report_date)].append(i)
+    for idx in groups.values():
+        if len(idx) < UNITS_MIN_ROWS:
+            continue
+        per = {i: abs(_num(rows[i][0].get(FV_COL)) / rows[i][1].units) for i in idx}
+        med = statistics.median(per.values())
+        if not med or sum(med / 2 <= q <= med * 2 for q in per.values()) / len(per) < UNITS_AGREE:
+            continue
+        for i, q in per.items():
+            if q / med > UNITS_OUTLIER or q / med < 1 / UNITS_OUTLIER:
+                row, r = rows[i]
+                units = abs(_num(row.get(FV_COL))) / med * (1 if r.units > 0 else -1)
+                rows[i] = (row, FuturesRow(**{**r.__dict__, "units": units}))
