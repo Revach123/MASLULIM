@@ -2,7 +2,8 @@
 
 1. מאגרים קבועים: אוניברסיטת ה-ETF של revach + חשיפת SEC (build_isin_fractions).
 2. השם בדוח (classify_from_report_names) והשם הרשמי במאגרים (classify_from_registry_names).
-3. שכבות רשת על מה שחסר: SEC N-PORT חי, Yahoo/Morningstar, OpenFIGI (שם מלא / סוג נייר).
+3. שכבות רשת על מה שחסר: SEC N-PORT חי, Yahoo/Morningstar, FT (קרנות נאמנות זרות - פילוח נכסים /
+   קטגוריית Morningstar), OpenFIGI (שם מלא / סוג נייר).
 4. מטמון שכבות הרשת: Yahoo/OpenFIGI נכשלים חלקית בכל ריצה (חסימה / מגבלת קצב), וקרן שסווגה
    אתמול נשארת היום בלי סיווג - בדף היא קופצת בין "מניות" ל"קרנות נאמנות". תוצאה טרייה תמיד
    קודמת; מה שנכשל בריצה הזו נלקח מהמטמון (FUND_CLASS_CACHE, נשמר ב-actions/cache).
@@ -47,7 +48,11 @@ def _online_layers():
         from .yahoo_fund_reference import build_isin_fractions_via_yahoo
         return build_isin_fractions_via_yahoo(missing)
 
-    return (("N-PORT חי", nport), ("Yahoo/Morningstar", yahoo), ("OpenFIGI", classify_via_openfigi_names))
+    def ft(missing):
+        from .ft_fund_reference import build_isin_fractions_via_ft
+        return build_isin_fractions_via_ft(missing)
+
+    return (("N-PORT חי", nport), ("Yahoo/Morningstar", yahoo), ("FT", ft), ("OpenFIGI", classify_via_openfigi_names))
 
 
 def build_foreign_fractions(source: list[dict], funds: list[dict], tag: str, cache_path: Path = CACHE_PATH):
