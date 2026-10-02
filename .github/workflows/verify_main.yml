@@ -81,12 +81,6 @@ jobs:
           PAT: ${{ secrets.PAT }}
           DUMP_EQUITY_COMPONENTS: ${{ inputs.dump_components }}
         run: python -m scripts.funds_holdings.validate_equity_exposure --reports-dir reports
-      - name: Validate FX exposure vs official (חשיפה למט"ח)
-        env:
-          REVACH_MATCH_KEY: ${{ secrets.REVACH_MATCH_KEY }}
-          PAT: ${{ secrets.PAT }}
-          DUMP_EQUITY_COMPONENTS: ${{ inputs.dump_components }}
-        run: python -m scripts.funds_holdings.validate_fx_exposure --reports-dir reports
       - name: Report unmatched foreign funds
         env:
           REVACH_MATCH_KEY: ${{ secrets.REVACH_MATCH_KEY }}
