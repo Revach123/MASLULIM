@@ -6,9 +6,10 @@
   פרטיות/הלוואות/נדל"ן/אחר - לפי שיעורו מנכסי המסלול.
 - קרן ישראלית (IL / נסחרת): שיעורה × החשיפה למט"ח שהקרן עצמה מדווחת (revach
   data/funds_info/exposure.csv) - קרן סל על S&P 500 בשקלים חשופה לדולר; קרן גידור מט"ח לא.
-- נגזרים עם רגליים (פורוורד / סוואפ ב"לא סחיר נגזרים אחרים"): השווי המסומן של כל רגל במטבע
-  חוץ ("שווי הוגן במטבע הנסחר", באלפים) × שער החליפין (מכירת דולר בפורוורד = שלילי; סוואפ ששתי
-  רגליו בדולר מתקזז). מפוצל לפי "סוג הנכס" (מט"ח / מניות /
+- נגזרים עם רגליים (פורוורד / סוואפ ב"לא סחיר נגזרים אחרים"): כל רגל במטבע חוץ, מסומנת - בעסקת
+  מט"ח הערך הנקוב × שער החליפין, בסוואפ מניות/ריבית השווי ("שווי הוגן במטבע הנסחר", באלפים) ×
+  השער (מכירת דולר בפורוורד = שלילי; סוואפ ששתי רגליו בדולר מתקזז). שער שמצוטט ל-100 יחידות (ין)
+  מנורמל; עסקה בין שני מטבעות חוץ לא משנה את הסך, רק מעבירה בין מטבעות. מפוצל לפי "סוג הנכס" (מט"ח / מניות /
   ריבית) - פורוורד גידור מוריד את החשיפה, סוואפ על מדד זר בדולר מוסיף.
 - חוזים עתידיים במטבע חוץ: הנוציונל - רכיב נפרד (מטבע החוזה הוא מט"ח, אבל רק המרווח הוא נכס
   בפועל - נבדק מול הנתון הרשמי).
@@ -16,6 +17,7 @@
 """
 from __future__ import annotations
 
+import re
 from collections import defaultdict
 
 from .derivatives_exposure import _futures_exposure, _num, total_assets_by_key
@@ -36,10 +38,16 @@ STOCKS = {"מניות מבכ ויהש", "לא סחיר מניות מבכ ויה�
 BONDS_WORD = ("איגרות חוב", "ניירות ערך מסחריים")
 LEG_KIND = {'מט"ח': "fx", "מניות לרבות מדדי מניות": "equity", 'ריבית ואג"ח': "rates"}
 
+_ILS_HEDGED = re.compile(r"(ILS|NIS|SHEKEL|שקל)\W{0,3}(H\b|HDG|HEDGED)|HEDGED\W{0,3}(ILS|NIS)|מנוטרל|מגודר", re.IGNORECASE)
 IL_FUNDS_CCY = "קרנות ישראליות"  # חשיפה מדווחת של הקרן, בלי פירוט מטבע
 OTHER_CCY = "אחר"
 COMPONENTS = ("cash", "bonds", "stocks", "funds_foreign", "funds_il", "other", "legs_fx", "legs_equity",
-              "legs_rates", "legs_other", "futures", "options")
+              "legs_rates", "legs_other", "legs_cross", "futures", "options")
+# מה שנכנס לסך החשיפה - לפי האימות מול הנתון הרשמי (validate_fx_exposure, ריצה 102 / 1,182 מסלולים):
+# חוזים עתידיים - רק המרווח הוא נכס במטבע החוזה, לא הנוציונל (MAE 11.26 עם / 3.36 בלי); רגלי סוואפ
+# מניות - לא נספרות ברשמי (3.36 עם / 2.92 בלי); אופציות - שולי (3.357 / 3.355)
+TOTAL_COMPONENTS = ("cash", "bonds", "stocks", "funds_foreign", "funds_il", "other", "legs_fx", "legs_rates",
+                    "legs_other", "legs_cross")
 
 
 def is_foreign_ccy(ccy) -> bool:
@@ -58,6 +66,41 @@ def _asset_component(cat: str) -> str:
     return "other"
 
 
+RATE_COLS = ("שער חליפין (רגל 1)", "שער חליפין (רגל 2)", "שער חליפין")
+CCY_FOR_RATE = {"שער חליפין (רגל 1)": "מטבע פעילות (רגל 1)", "שער חליפין (רגל 2)": "מטבע פעילות (רגל 2)",
+                "שער חליפין": CCY_COL}
+
+
+def typical_rates(source: list[dict]) -> dict[str, float]:
+    """מטבע -> שער החליפין החציוני בכל הדוחות (לשורות ולרגליים)."""
+    from statistics import median
+    vals: dict[str, list[float]] = defaultdict(list)
+    for rec in source:
+        if rec["מידע"] != "מידע":
+            continue
+        for row in rec["Clean"]:
+            for rc in RATE_COLS:
+                r = _num(row.get(rc))
+                c = str(row.get(CCY_FOR_RATE[rc]) or "").strip().upper()
+                if r and r > 0 and is_foreign_ccy(c):
+                    vals[c].append(r)
+    return {c: median(v) for c, v in vals.items() if v}
+
+
+def norm_rate(rate: float | None, ccy, typical: dict[str, float]) -> float | None:
+    """שער שמצוטט ל-100 יחידות (ין: 1.8341 ש"ח ל-100 ין, במקום 0.0183 ל-1) - מנורמל לפי השער הטיפוסי
+    של אותו מטבע: פי ~100 ממנו -> חלקי 100 (ולהפך)."""
+    t = typical.get(str(ccy or "").strip().upper())
+    if not rate or not t:
+        return rate
+    q = rate / t
+    if 30 < q < 300:
+        return rate / 100
+    if 1 / 300 < q < 1 / 30:
+        return rate * 100
+    return rate
+
+
 def build_fx_exposure(source: list[dict], isin_swap: list[dict], funds_ref: list[dict],
                       fund_fx: dict[str, float] | None = None,
                       by_currency: dict[str, dict[str, float]] | None = None) -> dict[str, dict[str, float]]:
@@ -68,6 +111,7 @@ def build_fx_exposure(source: list[dict], isin_swap: list[dict], funds_ref: list
     ref_by_num = {str(r["מספר קרן"]): r for r in funds_ref if r.get("מספר קרן")}
     ref_by_isin = {str(r["ISIN"]).upper(): r for r in funds_ref if r.get("ISIN")}
     totals = total_assets_by_key(source)
+    typical = typical_rates(source)
     out: dict[str, dict[str, float]] = defaultdict(lambda: defaultdict(float))
     ccy_out = by_currency if by_currency is not None else {}
 
@@ -92,15 +136,34 @@ def build_fx_exposure(source: list[dict], isin_swap: list[dict], funds_ref: list
                 if not total:
                     continue
                 kind = LEG_KIND.get(str(row.get("סוג הנכס") or "").strip(), "other")
+                c1, c2 = row.get("מטבע פעילות (רגל 1)"), row.get("מטבע פעילות (רגל 2)")
+                if is_foreign_ccy(c1) and is_foreign_ccy(c2):
+                    # שני מטבעות חוץ (USD מול JPY): לא משנה את סך החשיפה למט"ח, רק מעביר בין מטבעות -
+                    # לפי הרגל הראשונה (רגל במטבע השני מדווחת לעיתים בקנה מידה אחר: 1,569 אלף ין מול 221
+                    # מיליון דולר)
+                    nominal = _num(row.get("ערך נקוב (רגל 1)"))
+                    rate = norm_rate(_num(row.get("שער חליפין (רגל 1)")), c1, typical)
+                    if nominal is not None and rate:
+                        add(key, "legs_cross", nominal * rate / 1000 / total, c1)
+                        add(key, "legs_cross", -nominal * rate / 1000 / total, c2)
+                    continue
                 for leg in (1, 2):
                     if not is_foreign_ccy(row.get(f"מטבע פעילות (רגל {leg})")):
                         continue
-                    # שווי הרגל במטבע שלה (באלפים) - "ערך נקוב" של רגל מדד הוא כמות יחידות, לא סכום
-                    fv = _num(row.get(f"שווי הוגן במטבע הנסחר (רגל {leg})"))
-                    rate = _num(row.get(f"שער חליפין (רגל {leg})"))
-                    if fv is None or not rate:
+                    rate = norm_rate(_num(row.get(f"שער חליפין (רגל {leg})")), row.get(f"מטבע פעילות (רגל {leg})"), typical)
+                    if not rate:
                         continue
-                    add(key, "legs_" + kind, fv * rate / total, row.get(f"מטבע פעילות (רגל {leg})"))
+                    # עסקת מט"ח: הערך הנקוב הוא סכום במטבע (יש גופים שמדווחים את "שווי הוגן במטבע הנסחר"
+                    # כבר בשקלים). סוואפ מניות / ריבית: השווי (באלפים) - "ערך נקוב" של רגל מדד הוא יחידות
+                    nominal = _num(row.get(f"ערך נקוב (רגל {leg})")) if kind == "fx" else None
+                    if nominal is not None:
+                        value = nominal * rate / 1000
+                    else:
+                        fv = _num(row.get(f"שווי הוגן במטבע הנסחר (רגל {leg})"))
+                        if fv is None:
+                            continue
+                        value = fv * rate
+                    add(key, "legs_" + kind, value / total, row.get(f"מטבע פעילות (רגל {leg})"))
                 continue
             pct = to_ratio(row.get(PCT_COL))
             if not pct:
@@ -119,8 +182,14 @@ def build_fx_exposure(source: list[dict], isin_swap: list[dict], funds_ref: list
                         if fx is not None:
                             add(key, "funds_il", pct * fx, IL_FUNDS_CCY)
                             continue
+                sec_txt = text_from(sec).strip().upper() if sec not in (None, "") else ""
+                foreign_isin = len(sec_txt) == 12 and sec_txt[:2].isalpha() and not sec_txt.startswith("IL")
+                name = str(row.get("שם נייר ערך") or "")
                 if is_foreign_ccy(row.get(CCY_COL)):
                     add(key, "funds_foreign", pct, row.get(CCY_COL))
+                elif foreign_isin and not _ILS_HEDGED.search(name):
+                    # קרן זרה בדואלי בת"א (iShares / Invesco S&P 500, IE...) - נסחרת בשקלים, הנכסים בדולר
+                    add(key, "funds_foreign", pct, OTHER_CCY)
                 continue
             if is_foreign_ccy(row.get(CCY_COL)):
                 add(key, _asset_component(cat), pct, row.get(CCY_COL))
@@ -134,5 +203,5 @@ def build_fx_exposure(source: list[dict], isin_swap: list[dict], funds_ref: list
     return {k: dict(v) for k, v in out.items()}
 
 
-def fx_total(components: dict[str, float], include=COMPONENTS) -> float:
+def fx_total(components: dict[str, float], include=TOTAL_COMPONENTS) -> float:
     return sum(v for c, v in components.items() if c in include)

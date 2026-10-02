@@ -11,16 +11,17 @@ from pathlib import Path
 from .file_list import get_file_list
 from .fund_exposure_reference import fetch_fund_fx_exposure
 from .funds_reference import build_funds_reference
-from .fx_exposure import COMPONENTS, build_fx_exposure, fx_total
+from .fx_exposure import COMPONENTS, TOTAL_COMPONENTS, build_fx_exposure, fx_total
 from .isin_swap import build_isin_swap
 from .sheet_source import build_source
 from .track_pct_normalize import normalize_track_pct
 from .tracks_reference import fetch_tracks, track_key
 
 VARIANTS = {
-    "מלא": COMPONENTS,
-    "בלי חוזים עתידיים": tuple(c for c in COMPONENTS if c != "futures"),
-    "בלי חוזים ואופציות": tuple(c for c in COMPONENTS if c not in ("futures", "options")),
+    "המודל": TOTAL_COMPONENTS,
+    "עם רגלי סוואפ מניות": TOTAL_COMPONENTS + ("legs_equity",),
+    "עם חוזים עתידיים": TOTAL_COMPONENTS + ("futures",),
+    "עם אופציות": TOTAL_COMPONENTS + ("options",),
 }
 
 
