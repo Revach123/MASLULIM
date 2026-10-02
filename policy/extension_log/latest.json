@@ -1,7 +1,7 @@
 {
  "extension_version": "2.42.0",
  "started": "2026-10-02T10:20:50.093Z",
- "updated": "2026-10-02T10:45:59.275Z",
+ "updated": "2026-10-02T10:47:12.031Z",
  "final": false,
  "stopped": false,
  "rules_from_github": true,
@@ -20,8 +20,8 @@
   "page_cache_days": 3
  },
  "total_sites": 7,
- "done_sites": 5,
- "new_docs": 0,
+ "done_sites": 6,
+ "new_docs": 9,
  "skipped_complete": [
   {
    "legal_id": "510930654",
@@ -74,18 +74,11 @@
  ],
  "active": [
   {
-   "name": "מנורה מבטחים פנסיה וגמל בע\"מ",
-   "page": "https://www.menoramivt.co.il/funds/pension-and-gemel/sum-assets-management-fee/pos-assets-list",
-   "page_no": 76,
-   "pages": 77,
-   "step": "טוען עמוד"
-  },
-  {
    "name": "אלטשולר שחם גמל ופנסיה בע\"מ",
-   "page": "https://www.as-invest.co.il/interstedin/pension/common-pension-fund/%D7%90%D7%9C%D7%98%D7%A9%D7%95%D7%9C%D7%A8-%D7%A9%D7%97%D7%9D-%D7%A4%D7%A0%D7%A1%D7%99%D7%94-%D7%9B%D7%9C%D7%9C%D7%99%D7%AA-%D7%9E%D7%A1%D7%9C%D7%95%D7%9C-%D7%9C%D7%91%D7%A0%D7%99-50-%D7%95%D7%9E%D7%98%D7%94/",
-   "page_no": 71,
+   "page": "https://www.as-invest.co.il/interstedin/pension/common-pension-fund/%D7%90%D7%9C%D7%98%D7%A9%D7%95%D7%9C%D7%A8-%D7%A9%D7%97%D7%9D-%D7%A4%D7%A0%D7%A1%D7%99%D7%94-%D7%9B%D7%9C%D7%9C%D7%99%D7%AA-%D7%9E%D7%A1%D7%9C%D7%95%D7%9C-%D7%9C%D7%91%D7%A0%D7%99-60-%D7%95%D7%9E%D7%A2%D7%9C%D7%94/",
+   "page_no": 72,
    "pages": 103,
-   "step": "מוריד קובץ 5/7"
+   "step": "מוריד קובץ 5/8"
   }
  ],
  "sites": [
@@ -2673,6 +2666,2778 @@
     "החברה המנהלת של מי: links=0 files=0 clicked=0 captured=0 selected=0"
    ],
    "new_files": []
+  },
+  {
+   "legal_id": "512245812",
+   "name": "מנורה מבטחים פנסיה וגמל בע\"מ",
+   "pages": [
+    {
+     "url": "https://www.menoramivt.co.il/funds/pension-and-gemel/gemel-hishtalmut-list/top-savings/8675",
+     "links": 231,
+     "followed": [],
+     "files": 0,
+     "clicked": 0,
+     "captured": 0,
+     "selected": [],
+     "unselected_files": []
+    },
+    {
+     "url": "https://www.menoramivt.co.il/funds/pension-and-gemel/gemel-hishtalmut-list/top-savings/8678",
+     "links": 232,
+     "followed": [],
+     "files": 1,
+     "clicked": 0,
+     "captured": 0,
+     "selected": [],
+     "unselected_files": [
+      {
+       "file": "https://cdn.menoramivt.co.il/public/docs/20241117/8678---גמל-להשקעה-אגח.pdf",
+       "text": "לחצו כאן",
+       "ctx": ""
+      }
+     ]
+    },
+    {
+     "url": "https://www.menoramivt.co.il/funds/pension-and-gemel/gemel-hishtalmut-list/top-savings/8683",
+     "links": 231,
+     "followed": [],
+     "files": 0,
+     "clicked": 0,
+     "captured": 0,
+     "selected": [],
+     "unselected_files": []
+    },
+    {
+     "url": "https://www.menoramivt.co.il/funds/pension-and-gemel/gemel-hishtalmut-list/top-savings/8684",
+     "links": 231,
+     "followed": [],
+     "files": 0,
+     "clicked": 0,
+     "captured": 0,
+     "selected": [],
+     "unselected_files": []
+    },
+    {
+     "url": "https://www.menoramivt.co.il/funds/pension-and-gemel/gemel-hishtalmut-list/top-savings/8693",
+     "links": 233,
+     "followed": [],
+     "files": 2,
+     "clicked": 0,
+     "captured": 0,
+     "selected": [],
+     "unselected_files": [
+      {
+       "file": "https://cdn.menoramivt.co.il/public/docs/20260319/תעודות-עד-כא-טבת-תשפ''ז-31.12.26-.pdf",
+       "text": "תעודת כשרות - בית יוסף",
+       "ctx": "תעודת כשרות - בית יוסף"
+      },
+      {
+       "file": "https://cdn.menoramivt.co.il/public/docs/20260421/בדצ-מונגש--מנורה-קופות-גמל-להשקעה.pdf",
+       "text": "תעודת כשרות - בד\"צ",
+       "ctx": "תעודת כשרות - בד\"צ"
+      }
+     ]
+    },
+    {
+     "url": "https://www.menoramivt.co.il/funds/pension-and-gemel/gemel-hishtalmut-list/top-savings/8716",
+     "links": 234,
+     "followed": [],
+     "files": 3,
+     "clicked": 0,
+     "captured": 0,
+     "selected": [],
+     "unselected_files": [
+      {
+       "file": "https://cdn.menoramivt.co.il/public/docs/20260319/תעודות-עד-כא-טבת-תשפ''ז-31.12.26-.pdf",
+       "text": "תעודת כשרות - בית יוסף",
+       "ctx": "תעודת כשרות - בית יוסף"
+      },
+      {
+       "file": "https://cdn.menoramivt.co.il/public/docs/20260421/בדצ-מונגש--מנורה-קופות-גמל-להשקעה.pdf",
+       "text": "תעודת כשרות - בד\"צ",
+       "ctx": "תעודת כשרות - בד\"צ"
+      },
+      {
+       "file": "https://cdn.menoramivt.co.il/public/docs/20260901/תעודת-כשרות-ועד-ההלכה.pdf",
+       "text": "תעודת כשרות - גלאט הון",
+       "ctx": "תעודת כשרות - גלאט הון"
+      }
+     ]
+    },
+    {
+     "url": "https://www.menoramivt.co.il/funds/pension-and-gemel/gemel-hishtalmut-list/top-savings/13353",
+     "links": 234,
+     "followed": [],
+     "files": 3,
+     "clicked": 0,
+     "captured": 0,
+     "selected": [],
+     "unselected_files": [
+      {
+       "file": "https://cdn.menoramivt.co.il/public/docs/20241117/13353---גמל-להשקעה-מדדי-מניות-חול.pdf",
+       "text": "לחצו כאן",
+       "ctx": ""
+      },
+      {
+       "file": "https://cdn.menoramivt.co.il/public/docs/20260319/תעודות-עד-כא-טבת-תשפ''ז-31.12.26-.pdf",
+       "text": "תעודת כשרות - בית יוסף",
+       "ctx": "תעודת כשרות - בית יוסף"
+      },
+      {
+       "file": "https://cdn.menoramivt.co.il/public/docs/20260421/בדצ-מונגש--מנורה-קופות-גמל-להשקעה.pdf",
+       "text": "תעודת כשרות - בד\"צ",
+       "ctx": "תעודת כשרות - בד\"צ"
+      }
+     ]
+    },
+    {
+     "url": "https://www.menoramivt.co.il/funds/pension-and-gemel/gemel-hishtalmut-list/top-savings/13354",
+     "links": 232,
+     "followed": [],
+     "files": 1,
+     "clicked": 0,
+     "captured": 0,
+     "selected": [],
+     "unselected_files": [
+      {
+       "file": "https://cdn.menoramivt.co.il/public/docs/20241117/13354---גמל-להשקעה-חול.pdf",
+       "text": "לחצו כאן",
+       "ctx": ""
+      }
+     ]
+    },
+    {
+     "url": "https://www.menoramivt.co.il/funds/pension-and-gemel/gemel-hishtalmut-list/top-savings/15465",
+     "links": 231,
+     "followed": [],
+     "files": 0,
+     "clicked": 0,
+     "captured": 0,
+     "selected": [],
+     "unselected_files": []
+    },
+    {
+     "url": "https://www.menoramivt.co.il/funds/pension-and-gemel/gemel-hishtalmut-list/menroa-keren-hishtalmut/1114",
+     "links": 233,
+     "followed": [],
+     "files": 1,
+     "clicked": 0,
+     "captured": 0,
+     "selected": [],
+     "unselected_files": [
+      {
+       "file": "https://cdn.menoramivt.co.il/public/docs/20260420/בדצ-מונגש--מנורה-השתלמות.pdf",
+       "text": "תעודת כשרות - בד\"צ",
+       "ctx": "תעודת כשרות - בד\"צ"
+      }
+     ]
+    },
+    {
+     "url": "https://www.menoramivt.co.il/funds/pension-and-gemel/gemel-hishtalmut-list/menroa-keren-hishtalmut/11409",
+     "links": 231,
+     "followed": [],
+     "files": 1,
+     "clicked": 0,
+     "captured": 0,
+     "selected": [],
+     "unselected_files": [
+      {
+       "file": "https://cdn.menoramivt.co.il/public/docs/20241117/11409---השתלמות-פאסיבי-מדדי-אגח-עד-15-אחוז.pdf",
+       "text": "לחצו כאן",
+       "ctx": ""
+      }
+     ]
+    },
+    {
+     "url": "https://www.menoramivt.co.il/funds/pension-and-gemel/gemel-hishtalmut-list/menroa-keren-hishtalmut/9662",
+     "links": 233,
+     "followed": [],
+     "files": 1,
+     "clicked": 0,
+     "captured": 0,
+     "selected": [],
+     "unselected_files": [
+      {
+       "file": "https://cdn.menoramivt.co.il/public/docs/20241117/9662--השתלמות-עד-20-אחוז-מניות.pdf",
+       "text": "לחצו כאן",
+       "ctx": ""
+      }
+     ]
+    },
+    {
+     "url": "https://www.menoramivt.co.il/funds/pension-and-gemel/gemel/provident-to-investment-14678",
+     "links": 233,
+     "followed": [],
+     "files": 0,
+     "clicked": 0,
+     "captured": 0,
+     "selected": [],
+     "unselected_files": []
+    },
+    {
+     "url": "https://www.menoramivt.co.il/funds/pension-and-gemel/gemel/pension-and-gemel.gemel.provident-to-investment-15724",
+     "links": 231,
+     "followed": [],
+     "files": 0,
+     "clicked": 0,
+     "captured": 0,
+     "selected": [],
+     "unselected_files": []
+    },
+    {
+     "url": "https://www.menoramivt.co.il/funds/gemel-SP500",
+     "links": 233,
+     "followed": [
+      "https://www.menoramivt.co.il/funds/pension-and-gemel/sum-assets-management-fee/gemel-hishtalmut-assets-list"
+     ],
+     "files": 2,
+     "clicked": 0,
+     "captured": 0,
+     "selected": [],
+     "unselected_files": [
+      {
+       "file": "https://cdn.menoramivt.co.il/public/docs/20260319/תעודות-עד-כא-טבת-תשפ''ז-31.12.26-.pdf",
+       "text": "תעודת כשרות - בית יוסף",
+       "ctx": "תעודת כשרות - בית יוסף"
+      },
+      {
+       "file": "https://cdn.menoramivt.co.il/public/docs/20260420/בדצ-מונגש--מנורה-קופות-גמל.pdf",
+       "text": "תעודת כשרות - בד\"צ",
+       "ctx": "תעודת כשרות - בד\"צ"
+      }
+     ]
+    },
+    {
+     "url": "https://www.menoramivt.co.il/funds/gemel-kayamut-14351",
+     "links": 231,
+     "followed": [],
+     "files": 0,
+     "clicked": 0,
+     "captured": 0,
+     "selected": [],
+     "unselected_files": []
+    },
+    {
+     "url": "https://www.menoramivt.co.il/funds/gemel-mor-14403",
+     "links": 231,
+     "followed": [],
+     "files": 0,
+     "clicked": 0,
+     "captured": 0,
+     "selected": [],
+     "unselected_files": []
+    },
+    {
+     "url": "https://www.menoramivt.co.il/funds/gemel-mor-14404",
+     "links": 231,
+     "followed": [],
+     "files": 0,
+     "clicked": 0,
+     "captured": 0,
+     "selected": [],
+     "unselected_files": []
+    },
+    {
+     "url": "https://www.menoramivt.co.il/funds/pension-and-gemel/gemel-hishtalmut-list/menora-gemel/1343-short-term",
+     "links": 233,
+     "followed": [],
+     "files": 2,
+     "clicked": 0,
+     "captured": 0,
+     "selected": [],
+     "unselected_files": [
+      {
+       "file": "https://cdn.menoramivt.co.il/public/docs/20260319/תעודות-עד-כא-טבת-תשפ''ז-31.12.26-.pdf",
+       "text": "תעודת כשרות - בית יוסף",
+       "ctx": "תעודת כשרות - בית יוסף"
+      },
+      {
+       "file": "https://cdn.menoramivt.co.il/public/docs/20260420/בדצ-מונגש--מנורה-קופות-גמל.pdf",
+       "text": "תעודת כשרות - בד\"צ",
+       "ctx": "תעודת כשרות - בד\"צ"
+      }
+     ]
+    },
+    {
+     "url": "https://www.menoramivt.co.il/funds/pension-and-gemel/pension-plans/pension-plans-pension-plans-15673",
+     "links": 237,
+     "followed": [
+      "https://www.menoramivt.co.il/funds/pension-and-gemel/sum-assets-management-fee/pos-assets-list"
+     ],
+     "files": 5,
+     "clicked": 0,
+     "captured": 0,
+     "selected": [
+      "https://cdn.menoramivt.co.il/public/docs/20260130/מדיניות-השקעה-לשנת-2026-מנורה-מבטחים-משלימה-עוקב-מדדים-למקבלי-קצבה-15673.xlsx",
+      "https://cdn.menoramivt.co.il/public/docs/20250826/מדיניות-השקעה-לשנת-2025-מנורה-מבטחים-משלימה-עוקב-מדדים-למקבלי-קצבה-15673.xlsx"
+     ],
+     "unselected_files": [
+      {
+       "file": "https://cdn.menoramivt.co.il/public/docs/20260719/תרומת-אפיקי-השקעה-לתשואה-הכוללת---מנורה-מבטחים-משלימה-עוקב-מדדים-למקבלי-קצבה.xlsx",
+       "text": "",
+       "ctx": "2026 30.06"
+      },
+      {
+       "file": "https://cdn.menoramivt.co.il/public/docs/20260504/תרומת-אפיקי-השקעה-לתשואה-הכוללת---מנורה-מבטחים-משלימה-עוקב-מדדים-למקבלי-קצבה.xlsx",
+       "text": "",
+       "ctx": "2026 31.03"
+      },
+      {
+       "file": "https://cdn.menoramivt.co.il/public/docs/20260203/תרומת-אפיקי-השקעה-לתשואה-הכוללת---מנורה-מבטחים-משלימה-עוקב-מדדים-למקבלי-קצבה.xlsx",
+       "text": "",
+       "ctx": "2025 31.12"
+      }
+     ]
+    },
+    {
+     "url": "https://www.menoramivt.co.il/pension/investment-routes-pension",
+     "links": 231,
+     "followed": [],
+     "files": 0,
+     "clicked": 0,
+     "captured": 0,
+     "selected": [],
+     "unselected_files": []
+    },
+    {
+     "url": "https://www.menoramivt.co.il/links/pension-and-gemel/gemel-hishtalmut-list/menroa-keren-hishtalmut",
+     "links": 241,
+     "followed": [],
+     "files": 0,
+     "clicked": 0,
+     "captured": 0,
+     "selected": [],
+     "unselected_files": []
+    },
+    {
+     "url": "https://www.menoramivt.co.il/links/pension-and-gemel/gemel-hishtalmut-list/list-top-savings",
+     "links": 242,
+     "followed": [],
+     "files": 0,
+     "clicked": 0,
+     "captured": 0,
+     "selected": [],
+     "unselected_files": []
+    },
+    {
+     "url": "https://www.menoramivt.co.il/pension/menora-pension-mashlima",
+     "links": 234,
+     "followed": [
+      "https://www.menoramivt.co.il/funds/pension-and-gemel/pension-procedures/pension-plan-code"
+     ],
+     "files": 0,
+     "clicked": 0,
+     "captured": 0,
+     "selected": [],
+     "unselected_files": []
+    },
+    {
+     "url": "https://www.menoramivt.co.il/links/pension-and-gemel/pension-plans",
+     "links": 248,
+     "followed": [],
+     "files": 0,
+     "clicked": 0,
+     "captured": 0,
+     "selected": [],
+     "unselected_files": []
+    },
+    {
+     "url": "https://www.menoramivt.co.il/pension/pension-index-fund",
+     "links": 232,
+     "followed": [],
+     "files": 0,
+     "clicked": 0,
+     "captured": 0,
+     "selected": [],
+     "unselected_files": []
+    },
+    {
+     "url": "https://www.menoramivt.co.il/funds/pension-14277",
+     "links": 231,
+     "followed": [],
+     "files": 0,
+     "clicked": 0,
+     "captured": 0,
+     "selected": [],
+     "unselected_files": []
+    },
+    {
+     "url": "https://www.menoramivt.co.il/funds/pension-14278",
+     "links": 231,
+     "followed": [],
+     "files": 0,
+     "clicked": 0,
+     "captured": 0,
+     "selected": [],
+     "unselected_files": []
+    },
+    {
+     "url": "https://www.menoramivt.co.il/funds/Insurers-pension-SP500",
+     "links": 233,
+     "followed": [],
+     "files": 2,
+     "clicked": 0,
+     "captured": 0,
+     "selected": [],
+     "unselected_files": [
+      {
+       "file": "https://cdn.menoramivt.co.il/public/docs/20260319/תעודות-עד-כא-טבת-תשפ''ז-31.12.26-.pdf",
+       "text": "תעודת כשרות - בית יוסף",
+       "ctx": "תעודת כשרות - בית יוסף"
+      },
+      {
+       "file": "https://cdn.menoramivt.co.il/public/docs/20260119/1768383334___מנורה_פנסיה_מקיפה.pdf",
+       "text": "תעודת כשרות - בד\"צ",
+       "ctx": "תעודת כשרות - בד\"צ"
+      }
+     ]
+    },
+    {
+     "url": "https://www.menoramivt.co.il/funds/gemel-14271",
+     "links": 231,
+     "followed": [],
+     "files": 0,
+     "clicked": 0,
+     "captured": 0,
+     "selected": [],
+     "unselected_files": []
+    },
+    {
+     "url": "https://www.menoramivt.co.il/funds/gemel-14272",
+     "links": 231,
+     "followed": [],
+     "files": 0,
+     "clicked": 0,
+     "captured": 0,
+     "selected": [],
+     "unselected_files": []
+    },
+    {
+     "url": "https://www.menoramivt.co.il/funds/gemel-14679",
+     "links": 231,
+     "followed": [],
+     "files": 0,
+     "clicked": 0,
+     "captured": 0,
+     "selected": [],
+     "unselected_files": []
+    },
+    {
+     "url": "https://www.menoramivt.co.il/funds/pension-and-gemel/pension-plans/stock-track",
+     "links": 268,
+     "followed": [],
+     "files": 31,
+     "clicked": 0,
+     "captured": 0,
+     "selected": [
+      "https://cdn.menoramivt.co.il/public/docs/20260130/מדיניות-השקעה-לשנת-2026-מנורה-מבטחים-פנסיה-מניות-2063.xlsx",
+      "https://cdn.menoramivt.co.il/public/docs/20250122/מדיניות-השקעה-לשנת-2025-מנורה-מבטחים-פנסיה-מניות-2063.xlsx",
+      "https://cdn.menoramivt.co.il/public/docs/20240630/מדיניות-השקעה-לשנת-2024-מנורה-מבטחים-פנסיה-מניות-2063.xlsx",
+      "https://cdn.menoramivt.co.il/public/docs/20240304/מדיניות-השקעה-לשנת-2024-מנורה-מבטחים-פנסיה-מניות-2063.xlsx",
+      "https://cdn.menoramivt.co.il/public/docs/20240124/מדיניות-השקעה-לשנת-2024-מבטחים-החדשה---מסלול-מניות-2063.xlsx",
+      "https://cdn.menoramivt.co.il/public/docs/20230620/מדיניות-השקעה-לשנת-2023-מבטחים-החדשה---מסלול-מניות-2063.xlsx",
+      "https://cdn.menoramivt.co.il/public/docs/20220125/מדיניות-השקעה-לשנת-2022-מבטחים-החדשה---מסלול-מניות.xlsx",
+      "https://cdn.menoramivt.co.il/public/docs/20210125/מדיניות-השקעה-לשנת-2021-מבטחים-החדשה---מסלול-מניות.xlsx",
+      "https://cdn.menoramivt.co.il/public/docs/מדיניות-השקעה-לשנת-2020-מנורה-מבטחים-פנסיה---מסלול-מניות.xlsx",
+      "https://cdn.menoramivt.co.il/public/docs/מסלול-מניות-מדיניות-השקעה-2019.xlsx",
+      "https://cdn.menoramivt.co.il/public/docs/מסלול-מניות-מדיניות-השקעה-2018.xlsx",
+      "https://cdn.menoramivt.co.il/public/docs/מסלול-מניות-מדיניות-השקעה-2017.xlsx",
+      "https://cdn.menoramivt.co.il/public/docs/מסלול-מניות-מדיניות-השקעה-2016.xlsx"
+     ],
+     "unselected_files": [
+      {
+       "file": "https://cdn.menoramivt.co.il/public/docs/20240404/512245812_p2063_p423.xlsx",
+       "text": "",
+       "ctx": "שנה 2023 תאריך דוח 31/12/2023 תאריך פרסום הדוח (עבור רשימת נכסים רבעונית) 04/04/2024"
+      },
+      {
+       "file": "https://cdn.menoramivt.co.il/public/docs/20231204/512245812_p2063_p323.xlsx",
+       "text": "",
+       "ctx": "שנה 2023 תאריך דוח 30/09/2023 תאריך פרסום הדוח (עבור רשימת נכסים רבעונית) 04/12/2023"
+      },
+      {
+       "file": "https://cdn.menoramivt.co.il/public/docs/20230905/512245812_p2063_p223.xlsx",
+       "text": "",
+       "ctx": "שנה 2023 תאריך דוח 30/06/2023 תאריך פרסום הדוח (עבור רשימת נכסים רבעונית) 05/09/2023"
+      },
+      {
+       "file": "https://cdn.menoramivt.co.il/public/docs/20230601/512245812_p2063_p123.xlsx",
+       "text": "",
+       "ctx": "שנה 2023 תאריך דוח 31/03/2023 תאריך פרסום הדוח (עבור רשימת נכסים רבעונית) 01/06/2023"
+      },
+      {
+       "file": "https://cdn.menoramivt.co.il/public/docs/20230328/512245812_p2063_p422.xlsx",
+       "text": "",
+       "ctx": "שנה 2022 תאריך דוח 31/12/2022 תאריך פרסום הדוח (עבור רשימת נכסים רבעונית) 28/03/2023"
+      },
+      {
+       "file": "https://cdn.menoramivt.co.il/public/docs/20221206/512245812_p2063_p322.xlsx",
+       "text": "",
+       "ctx": "שנה 2022 תאריך דוח 30/09/2022 תאריך פרסום הדוח (עבור רשימת נכסים רבעונית) 06/12/2022"
+      },
+      {
+       "file": "https://cdn.menoramivt.co.il/public/docs/20240408/512245812_p2063_p222.xlsx",
+       "text": "",
+       "ctx": "שנה 2022 תאריך דוח 30/06/2022 תאריך פרסום הדוח (עבור רשימת נכסים רבעונית) 06/09/2022"
+      },
+      {
+       "file": "https://cdn.menoramivt.co.il/public/docs/20260719/תרומת-אפיקי-השקעה-לתשואה-הכוללת---מנורה-מבטחים-פנסיה-מניות.xlsx",
+       "text": "",
+       "ctx": "2026 נכון לרבעון 30.06"
+      },
+      {
+       "file": "https://cdn.menoramivt.co.il/public/docs/20260503/תרומת-אפיקי-השקעה-לתשואה-הכוללת---מנורה-מבטחים-פנסיה-מניות.xlsx",
+       "text": "",
+       "ctx": "2026 נכון לרבעון 31.03"
+      },
+      {
+       "file": "https://cdn.menoramivt.co.il/public/docs/20260202/תרומת-אפיקי-השקעה-לתשואה-הכוללת---מנורה-מבטחים-פנסיה-מניות.xlsx",
+       "text": "",
+       "ctx": "2025 נכון לרבעון 31.12"
+      },
+      {
+       "file": "https://cdn.menoramivt.co.il/public/docs/20251030/תרומת-אפיקי-השקעה-לתשואה-הכוללת---מנורה-מבטחים-פנסיה-מניות.xlsx",
+       "text": "",
+       "ctx": "2025 נכון לרבעון 30.09"
+      },
+      {
+       "file": "https://cdn.menoramivt.co.il/public/docs/20250728/תרומת-אפיקי-השקעה-לתשואה-הכוללת---מנורה-מבטחים-פנסיה-מניות.xlsx",
+       "text": "",
+       "ctx": "2025 נכון לרבעון 30.06"
+      },
+      {
+       "file": "https://cdn.menoramivt.co.il/public/docs/20250504/תרומת-אפיקי-השקעה-לתשואה-הכוללת---מנורה-מבטחים-פנסיה-מניות.xlsx",
+       "text": "",
+       "ctx": "2025 נכון לרבעון 31.03"
+      },
+      {
+       "file": "https://cdn.menoramivt.co.il/public/docs/20250203/תרומת-אפיקי-השקעה-לתשואה-הכוללת---מנורה-מבטחים-פנסיה-מניות.xlsx",
+       "text": "",
+       "ctx": "2024 נכון לרבעון 31.12"
+      },
+      {
+       "file": "https://cdn.menoramivt.co.il/public/docs/20241106/תרומת-אפיקי-השקעה-לתשואה-הכוללת---מנורה-מבטחים-פנסיה-מניות.xlsx",
+       "text": "",
+       "ctx": "2024 נכון לרבעון 30.09"
+      },
+      {
+       "file": "https://cdn.menoramivt.co.il/public/docs/20240729/תרומת-אפיקי-השקעה-לתשואה-הכוללת---מנורה-מבטחים-פנסיה-מניות.xlsx",
+       "text": "",
+       "ctx": "2024 נכון לרבעון 30.06"
+      },
+      {
+       "file": "https://cdn.menoramivt.co.il/public/docs/20240519/תרומת-אפיקי-השקעה-לתשואה-הכוללת-מנורה-מבטחים-פנסיה---מסלול-מניות.xlsx",
+       "text": "",
+       "ctx": "2024 נכון לרבעון 31.03"
+      },
+      {
+       "file": "https://cdn.menoramivt.co.il/public/docs/20240320/תרומת-אפיקי-השקעה-לתשואה-הכוללת-מנורה-מבטחים-פנסיה---מניות.xlsx",
+       "text": "",
+       "ctx": "2023 נכון לרבעון 31.12"
+      }
+     ]
+    },
+    {
+     "url": "https://www.menoramivt.co.il/links/pension-and-gemel/gemel-hishtalmut-list/menora-gemel",
+     "links": 257,
+     "followed": [],
+     "files": 0,
+     "clicked": 0,
+     "captured": 0,
+     "selected": [],
+     "unselected_files": []
+    },
+    {
+     "url": "https://www.menoramivt.co.il/funds/pension-and-gemel/gemel-hishtalmut-list/menora-gemel/1154",
+     "links": 237,
+     "followed": [],
+     "files": 4,
+     "clicked": 0,
+     "captured": 0,
+     "selected": [],
+     "unselected_files": [
+      {
+       "file": "https://cdn.menoramivt.co.il/public/docs/מבטחים-חגים-1154-תקנון-2014-10.pdf",
+       "text": "",
+       "ctx": "שם מסמך תקנון הקופה נכון לתאריך 07.10.2014"
+      },
+      {
+       "file": "https://cdn.menoramivt.co.il/public/docs/מבטחים-חגים-1154-תקנון-2013-12.pdf",
+       "text": "",
+       "ctx": "שם מסמך תקנון הקופה נכון לתאריך 31.12.2013"
+      },
+      {
+       "file": "https://cdn.menoramivt.co.il/public/docs/מבטחים-חגים-1154-תקנון-2013-02.pdf",
+       "text": "",
+       "ctx": "שם מסמך תקנון קופה חגים והבראה נכון לתאריך 25.02.2013"
+      },
+      {
+       "file": "https://cdn.menoramivt.co.il/public/docs/מבטחים-חגים-1154-תקנון-2005-08.pdf",
+       "text": "",
+       "ctx": "שם מסמך תקנון הקופה נכון לתאריך 01.08.2005"
+      }
+     ]
+    },
+    {
+     "url": "https://www.menoramivt.co.il/funds/pension-and-gemel/gemel-hishtalmut-list/menora-gemel/119",
+     "links": 237,
+     "followed": [],
+     "files": 4,
+     "clicked": 0,
+     "captured": 0,
+     "selected": [],
+     "unselected_files": [
+      {
+       "file": "https://cdn.menoramivt.co.il/public/docs/מבטחים-יותר-ד'-119-תקנון-2013-12-31.pdf",
+       "text": "",
+       "ctx": "שם מסמך תקנון הקופה נכון לתאריך 31.12.2013"
+      },
+      {
+       "file": "https://cdn.menoramivt.co.il/public/docs/מבטחים-יותר-ד'-119-תקנון-2013-12-11.pdf",
+       "text": "",
+       "ctx": "שם מסמך תקנון מעודכן נכון לתאריך 11.12.2013"
+      },
+      {
+       "file": "https://cdn.menoramivt.co.il/public/docs/מבטחים-יותר-ד'-119-תקנון-2013-01.pdf",
+       "text": "",
+       "ctx": "שם מסמך תקנון נכון לתאריך 01.01.2013"
+      },
+      {
+       "file": "https://cdn.menoramivt.co.il/public/docs/מבטחים-יותר-ד'-119-תקנון-2011-06.pdf",
+       "text": "",
+       "ctx": "שם מסמך תקנון נכון לתאריך 12.05.2011"
+      }
+     ]
+    },
+    {
+     "url": "https://www.menoramivt.co.il/funds/pension-and-gemel/gemel-hishtalmut-list/menora-gemel/1294",
+     "links": 231,
+     "followed": [],
+     "files": 0,
+     "clicked": 0,
+     "captured": 0,
+     "selected": [],
+     "unselected_files": []
+    },
+    {
+     "url": "https://www.menoramivt.co.il/funds/pension-and-gemel/gemel-hishtalmut-list/menora-gemel/15421",
+     "links": 229,
+     "followed": [],
+     "files": 0,
+     "clicked": 0,
+     "captured": 0,
+     "selected": [],
+     "unselected_files": []
+    },
+    {
+     "url": "https://www.menoramivt.co.il/funds/pension-and-gemel/gemel-hishtalmut-list/menora-gemel/260",
+     "links": 233,
+     "followed": [],
+     "files": 3,
+     "clicked": 0,
+     "captured": 0,
+     "selected": [],
+     "unselected_files": [
+      {
+       "file": "https://cdn.menoramivt.co.il/public/docs/מבטחים-אמיר-כללי-260-תקנון-2013-12.pdf",
+       "text": "",
+       "ctx": "שם מסמך תקנון הקופה נכון לתאריך 31.12.2013"
+      },
+      {
+       "file": "https://cdn.menoramivt.co.il/public/docs/מבטחים-אמיר-כללי-260-תקנון-2010-01.pdf",
+       "text": "",
+       "ctx": "שם מסמך תקנון קופה נכון לתאריך 01.01.2010"
+      },
+      {
+       "file": "https://cdn.menoramivt.co.il/public/docs/מבטחים-אמיר-כללי-260-תקנון-2009-04.pdf",
+       "text": "",
+       "ctx": "שם מסמך תקנון קופה נכון לתאריך 24.04.2009"
+      }
+     ]
+    },
+    {
+     "url": "https://www.menoramivt.co.il/funds/pension-and-gemel/gemel-hishtalmut-list/menora-gemel/530",
+     "links": 235,
+     "followed": [],
+     "files": 2,
+     "clicked": 0,
+     "captured": 0,
+     "selected": [],
+     "unselected_files": [
+      {
+       "file": "https://cdn.menoramivt.co.il/public/docs/מבטחים-יותר-א'-530-תקנון-2013-12.pdf",
+       "text": "",
+       "ctx": "שם מסמך תקנון הקופה נכון לתאריך 31.12.2013"
+      },
+      {
+       "file": "https://cdn.menoramivt.co.il/public/docs/מבטחים-יותר-א'-530-תקנון-2008-11.pdf",
+       "text": "",
+       "ctx": "שם מסמך תקנון הקופה נכון לתאריך 10.11.2008"
+      }
+     ]
+    },
+    {
+     "url": "https://www.menoramivt.co.il/funds/pension-and-gemel/gemel-hishtalmut-list/menora-gemel/531",
+     "links": 236,
+     "followed": [],
+     "files": 3,
+     "clicked": 0,
+     "captured": 0,
+     "selected": [],
+     "unselected_files": [
+      {
+       "file": "https://cdn.menoramivt.co.il/public/docs/מבטחים-יותר-ב-531-תקנון-2013-12-31.pdf",
+       "text": "",
+       "ctx": "שם מסמך תקנון הקופה נכון לתאריך 31.12.2013"
+      },
+      {
+       "file": "https://cdn.menoramivt.co.il/public/docs/מבטחים-יותר-ב-531-תקנון-2013-12-11.pdf",
+       "text": "",
+       "ctx": "שם מסמך תקנון הקופה נכון לתאריך 11.12.2013"
+      },
+      {
+       "file": "https://cdn.menoramivt.co.il/public/docs/מבטחים-יותר-ב-531-תקנון-2008-11-10.pdf",
+       "text": "",
+       "ctx": "שם מסמך תקנון נכון לתאריך 10.11.2008"
+      }
+     ]
+    },
+    {
+     "url": "https://www.menoramivt.co.il/funds/pension-and-gemel/gemel-hishtalmut-list/menora-gemel/532",
+     "links": 234,
+     "followed": [],
+     "files": 1,
+     "clicked": 0,
+     "captured": 0,
+     "selected": [],
+     "unselected_files": [
+      {
+       "file": "https://cdn.menoramivt.co.il/public/docs/מבטחים-יותר-ג'-532-תקנון-2013-12-31.pdf",
+       "text": "",
+       "ctx": "שם מסמך תקנון הקופה נכון לתאריך 31.12.2013"
+      }
+     ]
+    },
+    {
+     "url": "https://www.menoramivt.co.il/funds/pension-and-gemel/gemel-hishtalmut-list/menora-gemel/9789",
+     "links": 231,
+     "followed": [],
+     "files": 0,
+     "clicked": 0,
+     "captured": 0,
+     "selected": [],
+     "unselected_files": []
+    },
+    {
+     "url": "https://www.menoramivt.co.il/funds/pension-and-gemel/gemel-hishtalmut-list/menora-gemel/9790-fund",
+     "links": 231,
+     "followed": [],
+     "files": 0,
+     "clicked": 0,
+     "captured": 0,
+     "selected": [],
+     "unselected_files": []
+    },
+    {
+     "url": "https://www.menoramivt.co.il/funds/pension-and-gemel/gemel-hishtalmut-list/menora-gemel/9791-fund",
+     "links": 231,
+     "followed": [],
+     "files": 0,
+     "clicked": 0,
+     "captured": 0,
+     "selected": [],
+     "unselected_files": []
+    },
+    {
+     "url": "https://www.menoramivt.co.il/funds/pension-and-gemel/gemel-hishtalmut-list/menora-gemel-15725/tradable-equity-track",
+     "links": 230,
+     "followed": [],
+     "files": 1,
+     "clicked": 0,
+     "captured": 0,
+     "selected": [],
+     "unselected_files": [
+      {
+       "file": "https://cdn.menoramivt.co.il/public/docs/20251201/826.pdf",
+       "text": "",
+       "ctx": "תקנון הקופה"
+      }
+     ]
+    },
+    {
+     "url": "https://www.menoramivt.co.il/funds/pension-and-gemel/gemel-hishtalmut-list/menora-gemel/13355",
+     "links": 232,
+     "followed": [],
+     "files": 1,
+     "clicked": 0,
+     "captured": 0,
+     "selected": [],
+     "unselected_files": [
+      {
+       "file": "https://cdn.menoramivt.co.il/public/docs/20241117/13355---תגמולים-ופיצויים-חול.pdf",
+       "text": "לחצו כאן",
+       "ctx": ""
+      }
+     ]
+    },
+    {
+     "url": "https://www.menoramivt.co.il/funds/pension-and-gemel/gemel-hishtalmut-list/menora-gemel/13356",
+     "links": 233,
+     "followed": [],
+     "files": 2,
+     "clicked": 0,
+     "captured": 0,
+     "selected": [],
+     "unselected_files": [
+      {
+       "file": "https://cdn.menoramivt.co.il/public/docs/20260319/תעודות-עד-כא-טבת-תשפ''ז-31.12.26-.pdf",
+       "text": "תעודת כשרות - בית יוסף",
+       "ctx": "תעודת כשרות - בית יוסף"
+      },
+      {
+       "file": "https://cdn.menoramivt.co.il/public/docs/20260420/בדצ-מונגש--מנורה-קופות-גמל.pdf",
+       "text": "תעודת כשרות - בד\"צ",
+       "ctx": "תעודת כשרות - בד\"צ"
+      }
+     ]
+    },
+    {
+     "url": "https://www.menoramivt.co.il/funds/pension-and-gemel/gemel-hishtalmut-list/menora-gemel/533",
+     "links": 238,
+     "followed": [],
+     "files": 5,
+     "clicked": 0,
+     "captured": 0,
+     "selected": [],
+     "unselected_files": [
+      {
+       "file": "https://cdn.menoramivt.co.il/public/docs/מבטחים-אמיר-ידוע-533-תקנון-2013-12.pdf",
+       "text": "",
+       "ctx": "שם מסמך תקנון הקופה נכון לתאריך 31.12.2013"
+      },
+      {
+       "file": "https://cdn.menoramivt.co.il/public/docs/מבטחים-אמיר-ידוע-533-תקנון-2010-01.pdf",
+       "text": "",
+       "ctx": "שם מסמך תקנון קופה נכון לתאריך 01.01.2010"
+      },
+      {
+       "file": "https://cdn.menoramivt.co.il/public/docs/מבטחים-אמיר-ידוע-533-תקנון-2009-04.pdf",
+       "text": "",
+       "ctx": "שם מסמך תקנון קופה נכון לתאריך 23.04.2009"
+      },
+      {
+       "file": "https://cdn.menoramivt.co.il/public/docs/מבטחים-אמיר-ידוע-533-תקנון-2008-08.pdf",
+       "text": "",
+       "ctx": "שם מסמך תקנון קופה נכון לתאריך 20.08.2008"
+      },
+      {
+       "file": "https://cdn.menoramivt.co.il/public/docs/מבטחים-אמיר-ידוע-533-תקנון-2007-06.pdf",
+       "text": "",
+       "ctx": "שם מסמך תקנון קופה נכון לתאריך 25.06.2007"
+      }
+     ]
+    },
+    {
+     "url": "https://www.menoramivt.co.il/funds/pension-and-gemel/gemel-hishtalmut-list/menora-gemel/536",
+     "links": 238,
+     "followed": [],
+     "files": 5,
+     "clicked": 0,
+     "captured": 0,
+     "selected": [],
+     "unselected_files": [
+      {
+       "file": "https://cdn.menoramivt.co.il/public/docs/מבטחים-מדד-בגין-536-תקנון-2013-12.pdf",
+       "text": "",
+       "ctx": "שם מסמך תקנון הקופה נכון לתאריך 31.12.2013"
+      },
+      {
+       "file": "https://cdn.menoramivt.co.il/public/docs/מבטחים-מדד-בגין-536-תקנון-2010-01.pdf",
+       "text": "",
+       "ctx": "שם מסמך תקנון קופה נכון לתאריך 01.01.2010"
+      },
+      {
+       "file": "https://cdn.menoramivt.co.il/public/docs/מבטחים-מדד-בגין-536-תקנון-2009-04.pdf",
+       "text": "",
+       "ctx": "שם מסמך תקנון קופה נכון לתאריך 23.04.2009"
+      },
+      {
+       "file": "https://cdn.menoramivt.co.il/public/docs/מבטחים-מדד-בגין-536-תקנון-2008-08.pdf",
+       "text": "",
+       "ctx": "שם מסמך תקנון קופה נכון לתאריך 20.08.2008"
+      },
+      {
+       "file": "https://cdn.menoramivt.co.il/public/docs/מבטחים-מדד-בגין-536-תקנון-2007-06.pdf",
+       "text": "",
+       "ctx": "שם מסמך תקנון קופה נכון לתאריך 25.06.2007"
+      }
+     ]
+    },
+    {
+     "url": "https://www.menoramivt.co.il/funds/pension-and-gemel/gemel-hishtalmut-list/menora-gemel/9792",
+     "links": 231,
+     "followed": [],
+     "files": 0,
+     "clicked": 0,
+     "captured": 0,
+     "selected": [],
+     "unselected_files": []
+    },
+    {
+     "url": "https://www.menoramivt.co.il/funds/pension-and-gemel/gemel-hishtalmut-list/menora-gemel/9793",
+     "links": 231,
+     "followed": [],
+     "files": 0,
+     "clicked": 0,
+     "captured": 0,
+     "selected": [],
+     "unselected_files": []
+    },
+    {
+     "url": "https://www.menoramivt.co.il/funds/pension-and-gemel/gemel-hishtalmut-list/menora-gemel/9794",
+     "links": 231,
+     "followed": [],
+     "files": 0,
+     "clicked": 0,
+     "captured": 0,
+     "selected": [],
+     "unselected_files": []
+    },
+    {
+     "url": "https://www.menoramivt.co.il/funds/pension-and-gemel/gemel-hishtalmut-list/menora-gemel/9795",
+     "links": 233,
+     "followed": [],
+     "files": 2,
+     "clicked": 0,
+     "captured": 0,
+     "selected": [],
+     "unselected_files": [
+      {
+       "file": "https://cdn.menoramivt.co.il/public/docs/20260319/תעודות-עד-כא-טבת-תשפ''ז-31.12.26-.pdf",
+       "text": "תעודת כשרות - בית יוסף",
+       "ctx": "תעודת כשרות - בית יוסף"
+      },
+      {
+       "file": "https://cdn.menoramivt.co.il/public/docs/20260420/בדצ-מונגש--מנורה-קופות-גמל.pdf",
+       "text": "תעודת כשרות - בד\"צ",
+       "ctx": "תעודת כשרות - בד\"צ"
+      }
+     ]
+    },
+    {
+     "url": "https://www.menoramivt.co.il/funds/pension-and-gemel/gemel-hishtalmut-list/menroa-keren-hishtalmut/11408",
+     "links": 230,
+     "followed": [],
+     "files": 0,
+     "clicked": 0,
+     "captured": 0,
+     "selected": [],
+     "unselected_files": []
+    },
+    {
+     "url": "https://www.menoramivt.co.il/funds/pension-and-gemel/gemel-hishtalmut-list/menroa-keren-hishtalmut/1256",
+     "links": 232,
+     "followed": [],
+     "files": 0,
+     "clicked": 0,
+     "captured": 0,
+     "selected": [],
+     "unselected_files": []
+    },
+    {
+     "url": "https://www.menoramivt.co.il/funds/pension-and-gemel/gemel-hishtalmut-list/menroa-keren-hishtalmut/13357",
+     "links": 231,
+     "followed": [],
+     "files": 1,
+     "clicked": 0,
+     "captured": 0,
+     "selected": [],
+     "unselected_files": [
+      {
+       "file": "https://cdn.menoramivt.co.il/public/docs/20241117/13357---השתלמות-חול.pdf",
+       "text": "לחצו כאן",
+       "ctx": ""
+      }
+     ]
+    },
+    {
+     "url": "https://www.menoramivt.co.il/funds/pension-and-gemel/gemel-hishtalmut-list/menroa-keren-hishtalmut/1409",
+     "links": 233,
+     "followed": [],
+     "files": 1,
+     "clicked": 0,
+     "captured": 0,
+     "selected": [],
+     "unselected_files": [
+      {
+       "file": "https://cdn.menoramivt.co.il/public/docs/20241117/1409--השתלמות-מניות-חול.pdf",
+       "text": "לחצו כאן",
+       "ctx": ""
+      }
+     ]
+    },
+    {
+     "url": "https://www.menoramivt.co.il/funds/pension-and-gemel/gemel-hishtalmut-list/menroa-keren-hishtalmut/15466",
+     "links": 232,
+     "followed": [],
+     "files": 0,
+     "clicked": 0,
+     "captured": 0,
+     "selected": [],
+     "unselected_files": []
+    },
+    {
+     "url": "https://www.menoramivt.co.il/funds/pension-and-gemel/gemel-hishtalmut-list/menroa-keren-hishtalmut/828",
+     "links": 232,
+     "followed": [],
+     "files": 0,
+     "clicked": 0,
+     "captured": 0,
+     "selected": [],
+     "unselected_files": []
+    },
+    {
+     "url": "https://www.menoramivt.co.il/funds/pension-and-gemel/gemel-hishtalmut-list/menroa-keren-hishtalmut/menroa-keren-hishtalmut-14676",
+     "links": 232,
+     "followed": [],
+     "files": 0,
+     "clicked": 0,
+     "captured": 0,
+     "selected": [],
+     "unselected_files": []
+    },
+    {
+     "url": "https://www.menoramivt.co.il/funds/pension-and-gemel/pension-plans/entitled-retired-portfolio",
+     "links": 267,
+     "followed": [],
+     "files": 30,
+     "clicked": 0,
+     "captured": 0,
+     "selected": [
+      "https://cdn.menoramivt.co.il/public/docs/20260130/מדיניות-השקעה-לשנת-2026-מנורה-מבטחים-פנסיה---מסלול-קצבה-לזכאים-קיימים-8561.xlsx",
+      "https://cdn.menoramivt.co.il/public/docs/20250122/מדיניות-השקעה-לשנת-2025-מנורה-מבטחים-פנסיה---מסלול-קצבה-לזכאים-קיימים-8561.xlsx",
+      "https://cdn.menoramivt.co.il/public/docs/20240703/מדיניות-השקעה-לשנת-2024-מנורה-מבטחים-קצבה-לזכאים-קיימים-8561.xlsx",
+      "https://cdn.menoramivt.co.il/public/docs/20240124/מדיניות-השקעה-לשנת-2024-מבטחים-החדשה---פנסיונרים-זכאים-8561.xlsx",
+      "https://cdn.menoramivt.co.il/public/docs/20230620/מדיניות-השקעה-לשנת-2023-מבטחים-החדשה---פנסיונרים-זכאים-8561.xlsx",
+      "https://cdn.menoramivt.co.il/public/docs/20220125/מדיניות-השקעה-לשנת-2022-מבטחים-החדשה---חשבון-פנסיונרים-זכאים.xlsx",
+      "https://cdn.menoramivt.co.il/public/docs/20210125/מדיניות-השקעה-לשנת-2021-מבטחים-החדשה---חשבון-פנסיונרים-זכאים.xlsx",
+      "https://cdn.menoramivt.co.il/public/docs/מדיניות-השקעה-לשנת-2020-מנורה-מבטחים-פנסיה---תיק-זכאים-קיימים.xlsx",
+      "https://cdn.menoramivt.co.il/public/docs/פנסיונרים-זכאים-מדיניות-השקעה-2019.xlsx",
+      "https://cdn.menoramivt.co.il/public/docs/פנסיונרים-זכאים-מדיניות-השקעה-2018.xlsx",
+      "https://cdn.menoramivt.co.il/public/docs/פנסיונרים-זכאים-מדיניות-השקעה-2017.xlsx",
+      "https://cdn.menoramivt.co.il/public/docs/פנסיונרים-זכאים-מדיניות-השקעה-2016.xlsx"
+     ],
+     "unselected_files": [
+      {
+       "file": "https://cdn.menoramivt.co.il/public/docs/20240404/512245812_p8561_p423.xlsx",
+       "text": "",
+       "ctx": "שנה 2023 תאריך דוח 31/12/2023 תאריך פרסום הדוח (עבור רשימת נכסים רבעונית) 04/04/2024"
+      },
+      {
+       "file": "https://cdn.menoramivt.co.il/public/docs/20231204/512245812_p8561_p323.xlsx",
+       "text": "",
+       "ctx": "שנה 2023 תאריך דוח 30/09/2023 תאריך פרסום הדוח (עבור רשימת נכסים רבעונית) 04/12/2023"
+      },
+      {
+       "file": "https://cdn.menoramivt.co.il/public/docs/20230907/512245812_p8561_p223.xlsx",
+       "text": "",
+       "ctx": "שנה 2023 תאריך דוח 30/06/2023 תאריך פרסום הדוח (עבור רשימת נכסים רבעונית) 07/09/2023"
+      },
+      {
+       "file": "https://cdn.menoramivt.co.il/public/docs/20230601/512245812_p8561_p123.xlsx",
+       "text": "",
+       "ctx": "שנה 2023 תאריך דוח 31/03/2023 תאריך פרסום הדוח (עבור רשימת נכסים רבעונית) 01/06/2023"
+      },
+      {
+       "file": "https://cdn.menoramivt.co.il/public/docs/20230329/512245812_p8561_p422.xlsx",
+       "text": "",
+       "ctx": "שנה 2022 תאריך דוח 31/12/2022 תאריך פרסום הדוח (עבור רשימת נכסים רבעונית) 29/03/2023"
+      },
+      {
+       "file": "https://cdn.menoramivt.co.il/public/docs/20221206/512245812_p8561_p322.xlsx",
+       "text": "",
+       "ctx": "שנה 2022 תאריך דוח 30/09/2022 תאריך פרסום הדוח (עבור רשימת נכסים רבעונית) 06/12/2022"
+      },
+      {
+       "file": "https://cdn.menoramivt.co.il/public/docs/20240408/512245812_p8561_p222.xlsx",
+       "text": "",
+       "ctx": "שנה 2022 תאריך דוח 30/06/2022 תאריך פרסום הדוח (עבור רשימת נכסים רבעונית) 06/09/2022"
+      },
+      {
+       "file": "https://cdn.menoramivt.co.il/public/docs/20260719/תרומת-אפיקי-השקעה-לתשואה-הכוללת---מנורה-מבטחים-פנסיה---מסלול-קצבה-לזכאים-קיימים.xlsx",
+       "text": "",
+       "ctx": "2026 נכון לרבעון 30.06"
+      },
+      {
+       "file": "https://cdn.menoramivt.co.il/public/docs/20260503/תרומת-אפיקי-השקעה-לתשואה-הכוללת---מנורה-מבטחים-פנסיה---מסלול-קצבה-לזכאים-קיימים.xlsx",
+       "text": "",
+       "ctx": "2026 נכון לרבעון 31.03"
+      },
+      {
+       "file": "https://cdn.menoramivt.co.il/public/docs/20260202/תרומת-אפיקי-השקעה-לתשואה-הכוללת---מנורה-מבטחים-פנסיה---מסלול-קצבה-לזכאים-קיימים.xlsx",
+       "text": "",
+       "ctx": "2025 נכון לרבעון 31.12"
+      },
+      {
+       "file": "https://cdn.menoramivt.co.il/public/docs/20251030/תרומת-אפיקי-השקעה-לתשואה-הכוללת---מנורה-מבטחים-פנסיה---מסלול-קצבה-לזכאים-קיימים.xlsx",
+       "text": "",
+       "ctx": "2025 נכון לרבעון 30.09"
+      },
+      {
+       "file": "https://cdn.menoramivt.co.il/public/docs/20250728/תרומת-אפיקי-השקעה-לתשואה-הכוללת---מנורה-מבטחים-פנסיה---מסלול-קצבה-לזכאים-קיימים.xlsx",
+       "text": "",
+       "ctx": "2025 נכון לרבעון 30.06"
+      },
+      {
+       "file": "https://cdn.menoramivt.co.il/public/docs/20250504/תרומת-אפיקי-השקעה-לתשואה-הכוללת---מנורה-מבטחים-פנסיה---מסלול-קצבה-לזכאים-קיימים.xlsx",
+       "text": "",
+       "ctx": "2025 נכון לרבעון 31.03"
+      },
+      {
+       "file": "https://cdn.menoramivt.co.il/public/docs/20250203/תרומת-אפיקי-השקעה-לתשואה-הכוללת---מנורה-מבטחים-פנסיה---מסלול-קצבה-לזכאים-קיימים.xlsx",
+       "text": "",
+       "ctx": "2024 נכון לרבעון 31.12"
+      },
+      {
+       "file": "https://cdn.menoramivt.co.il/public/docs/20241106/תרומת-אפיקי-השקעה-לתשואה-הכוללת---מנורה-מבטחים-פנסיה---מסלול-קצבה-לזכאים-קיימים.xlsx",
+       "text": "",
+       "ctx": "2024 נכון לרבעון 30.09"
+      },
+      {
+       "file": "https://cdn.menoramivt.co.il/public/docs/20240729/תרומת-אפיקי-השקעה-לתשואה-הכוללת---מנורה-מבטחים-פנסיה---מסלול-קצבה-לזכאים-קיימים.xlsx",
+       "text": "",
+       "ctx": "2024 נכון לרבעון 30.06"
+      },
+      {
+       "file": "https://cdn.menoramivt.co.il/public/docs/20240519/תרומת-אפיקי-השקעה-לתשואה-הכוללת-מנורה-מבטחים-פנסיה---זכאים-קיימים.xlsx",
+       "text": "",
+       "ctx": "2024 נכון לרבעון 31.03"
+      },
+      {
+       "file": "https://cdn.menoramivt.co.il/public/docs/20240320/תרומת-אפיקי-השקעה-לתשואה-הכוללת-מנורה-מבטחים-פנסיה--פנסיונרים-זכאים.xlsx",
+       "text": "",
+       "ctx": "2023 נכון לרבעון 31.12"
+      }
+     ]
+    },
+    {
+     "url": "https://www.menoramivt.co.il/funds/pension-and-gemel/pension-plans/general-track",
+     "links": 268,
+     "followed": [],
+     "files": 31,
+     "clicked": 0,
+     "captured": 0,
+     "selected": [
+      "https://cdn.menoramivt.co.il/public/docs/20260130/מדיניות-השקעה-לשנת-2026-מנורה-מבטחים-פנסיה-כללי-2009.xlsx",
+      "https://cdn.menoramivt.co.il/public/docs/20250122/מדיניות-השקעה-לשנת-2025-מנורה-מבטחים-פנסיה-כללי-2009.xlsx",
+      "https://cdn.menoramivt.co.il/public/docs/20241203/מדיניות-השקעה-לשנת-2024-מנורה-מבטחים-פנסיה-כללי-2009.xlsx",
+      "https://cdn.menoramivt.co.il/public/docs/20240630/מדיניות-השקעה-לשנת-2024-מנורה-מבטחים-פנסיה-כללי-2009.xlsx",
+      "https://cdn.menoramivt.co.il/public/docs/20240303/מדיניות-השקעה-לשנת-2024-מנורה-מבטחים-פנסיה-כללי-2009.xlsx",
+      "https://cdn.menoramivt.co.il/public/docs/20230620/מדיניות-השקעה-לשנת-2023-מבטחים-החדשה---מסלול-כללי-א-2009.xlsx",
+      "https://cdn.menoramivt.co.il/public/docs/20220125/מדיניות-השקעה-לשנת-2022-מבטחים-החדשה---מסלול-כללי-א.xlsx",
+      "https://cdn.menoramivt.co.il/public/docs/20210818/מדיניות-השקעה-לשנת-2021-מבטחים-החדשה---מסלול-כללי-א---החל-מ-11.7.21.xlsx",
+      "https://cdn.menoramivt.co.il/public/docs/20210125/מדיניות-השקעה-לשנת-2021-מבטחים-החדשה---מסלול-כללי-א.xlsx",
+      "https://cdn.menoramivt.co.il/public/docs/מדיניות-השקעה-לשנת-2020-מנורה-מבטחים-פנסיה-כללי.xlsx",
+      "https://cdn.menoramivt.co.il/public/docs/2019מדיניות+השקעה+לשנת+2019+מנורה+מבטחים+פנסיה+-+כללי.xlsx"
+     ],
+     "unselected_files": [
+      {
+       "file": "https://cdn.menoramivt.co.il/public/docs/20250605/512245812_ca_p_0125.xlsx",
+       "text": "",
+       "ctx": "שנה 2025 תאריך דוח 31/03/2025 תאריך פרסום הדוח (עבור רשימת נכסים רבעונית) 05/06/2025"
+      },
+      {
+       "file": "https://cdn.menoramivt.co.il/public/docs/20250605/512245812_ca_p_0125.xlsx",
+       "text": "",
+       "ctx": "שנה 2025 תאריך דוח 31/03/2025 תאריך פרסום הדוח (עבור רשימת נכסים רבעונית) 05/06/2025"
+      },
+      {
+       "file": "https://cdn.menoramivt.co.il/public/docs/20240407/512245812_p2009_p423.xlsx",
+       "text": "",
+       "ctx": "שנה 2023 תאריך דוח 31/12/2023 תאריך פרסום הדוח (עבור רשימת נכסים רבעונית) 04/04/2024"
+      },
+      {
+       "file": "https://cdn.menoramivt.co.il/public/docs/20231204/512245812_p2009_p323.xlsx",
+       "text": "",
+       "ctx": "שנה 2023 תאריך דוח 30/09/2023 תאריך פרסום הדוח (עבור רשימת נכסים רבעונית) 04/12/2023"
+      },
+      {
+       "file": "https://cdn.menoramivt.co.il/public/docs/20230905/512245812_p2009_p223.xlsx",
+       "text": "",
+       "ctx": "שנה 2023 תאריך דוח 30/06/2023 תאריך פרסום הדוח (עבור רשימת נכסים רבעונית) 05/09/2023"
+      },
+      {
+       "file": "https://cdn.menoramivt.co.il/public/docs/20230601/512245812_p2009_p123.xlsx",
+       "text": "",
+       "ctx": "שנה 2023 תאריך דוח 31/03/2023 תאריך פרסום הדוח (עבור רשימת נכסים רבעונית) 01/06/2023"
+      },
+      {
+       "file": "https://cdn.menoramivt.co.il/public/docs/20230514/512245812_p2009_p422.xlsx",
+       "text": "",
+       "ctx": "שנה 2022 תאריך דוח 31/12/2022 תאריך פרסום הדוח (עבור רשימת נכסים רבעונית) 28/03/2023"
+      },
+      {
+       "file": "https://cdn.menoramivt.co.il/public/docs/20230514/512245812_p2009_p322.xlsx",
+       "text": "",
+       "ctx": "שנה 2022 תאריך דוח 30/09/2022 תאריך פרסום הדוח (עבור רשימת נכסים רבעונית) 06/12/2022"
+      },
+      {
+       "file": "https://cdn.menoramivt.co.il/public/docs/20240408/512245812_p2009_p222.xlsx",
+       "text": "",
+       "ctx": "שנה 2022 תאריך דוח 30/06/2022 תאריך פרסום הדוח (עבור רשימת נכסים רבעונית) 06/09/2022"
+      },
+      {
+       "file": "https://cdn.menoramivt.co.il/public/docs/20260719/תרומת-אפיקי-השקעה-לתשואה-הכוללת---מנורה-מבטחים-פנסיה-כללי.xlsx",
+       "text": "",
+       "ctx": "2026 נכון לרבעון 30.06"
+      },
+      {
+       "file": "https://cdn.menoramivt.co.il/public/docs/20260503/תרומת-אפיקי-השקעה-לתשואה-הכוללת---מנורה-מבטחים-פנסיה-כללי.xlsx",
+       "text": "",
+       "ctx": "2026 נכון לרבעון 31.03"
+      },
+      {
+       "file": "https://cdn.menoramivt.co.il/public/docs/20260202/תרומת-אפיקי-השקעה-לתשואה-הכוללת---מנורה-מבטחים-פנסיה-כללי.xlsx",
+       "text": "",
+       "ctx": "2025 נכון לרבעון 31.12"
+      },
+      {
+       "file": "https://cdn.menoramivt.co.il/public/docs/20251030/תרומת-אפיקי-השקעה-לתשואה-הכוללת---מנורה-מבטחים-פנסיה-כללי.xlsx",
+       "text": "",
+       "ctx": "2025 נכון לרבעון 30.09"
+      },
+      {
+       "file": "https://cdn.menoramivt.co.il/public/docs/20250728/תרומת-אפיקי-השקעה-לתשואה-הכוללת---מנורה-מבטחים-פנסיה-כללי.xlsx",
+       "text": "",
+       "ctx": "2025 נכון לרבעון 30.06"
+      },
+      {
+       "file": "https://cdn.menoramivt.co.il/public/docs/20250504/תרומת-אפיקי-השקעה-לתשואה-הכוללת---מנורה-מבטחים-פנסיה-כללי.xlsx",
+       "text": "",
+       "ctx": "2025 נכון לרבעון 31.03"
+      },
+      {
+       "file": "https://cdn.menoramivt.co.il/public/docs/20250203/תרומת-אפיקי-השקעה-לתשואה-הכוללת---מנורה-מבטחים-פנסיה-כללי.xlsx",
+       "text": "",
+       "ctx": "2024 נכון לרבעון 31.12"
+      },
+      {
+       "file": "https://cdn.menoramivt.co.il/public/docs/20241106/תרומת-אפיקי-השקעה-לתשואה-הכוללת---מנורה-מבטחים-פנסיה-כללי.xlsx",
+       "text": "",
+       "ctx": "2024 נכון לרבעון 30.09"
+      },
+      {
+       "file": "https://cdn.menoramivt.co.il/public/docs/20240729/תרומת-אפיקי-השקעה-לתשואה-הכוללת---מנורה-מבטחים-פנסיה-כללי.xlsx",
+       "text": "",
+       "ctx": "2024 נכון לרבעון 30.06"
+      },
+      {
+       "file": "https://cdn.menoramivt.co.il/public/docs/20240519/תרומת-אפיקי-השקעה-לתשואה-הכוללת-מנורה-מבטחים-פנסיה---כללי.xlsx",
+       "text": "",
+       "ctx": "2024 נכון לרבעון 31.03"
+      },
+      {
+       "file": "https://cdn.menoramivt.co.il/public/docs/20240320/תרומת-אפיקי-השקעה-לתשואה-הכוללת-מנורה-מבטחים-פנסיה---כללי-א.xlsx",
+       "text": "",
+       "ctx": "2023 נכון לרבעון 31.12"
+      }
+     ]
+    },
+    {
+     "url": "https://www.menoramivt.co.il/funds/pension-and-gemel/pension-plans/halacha-track",
+     "links": 271,
+     "followed": [],
+     "files": 34,
+     "clicked": 0,
+     "captured": 0,
+     "selected": [
+      "https://cdn.menoramivt.co.il/public/docs/20260130/מדיניות-השקעה-לשנת-2026-מנורה-מבטחים-פנסיה-הלכה-2182.xlsx",
+      "https://cdn.menoramivt.co.il/public/docs/20250122/מדיניות-השקעה-לשנת-2025-מנורה-מבטחים-פנסיה-הלכה-2182.xlsx",
+      "https://cdn.menoramivt.co.il/public/docs/20240630/מדיניות-השקעה-לשנת-2024-מנורה-מבטחים-פנסיה-הלכה-2182.xlsx",
+      "https://cdn.menoramivt.co.il/public/docs/20240303/מדיניות-השקעה-לשנת-2024-מנורה-מבטחים-פנסיה-הלכה-2182.xlsx",
+      "https://cdn.menoramivt.co.il/public/docs/20230620/מדיניות-השקעה-לשנת-2023-מבטחים---מסלול-כללי-ג'-(כפוף-לכללי-ההלכה-היהודית)-2182.xlsx",
+      "https://cdn.menoramivt.co.il/public/docs/20220125/מדיניות-השקעה-לשנת-2022-מבטחים---מסלול-כללי-ג'-(כפוף-לכללי-ההלכה-היהודית).xlsx",
+      "https://cdn.menoramivt.co.il/public/docs/20211006/מדיניות-השקעה-לשנת-2021-מבטחים---מסלול-כללי-ג'-(כפוף-לכללי-ההלכה-היהודית)---החל-מ-1.9.21.xlsx",
+      "https://cdn.menoramivt.co.il/public/docs/20210125/מדיניות-השקעה-לשנת-2021-מבטחים---מסלול-כללי-ג'-(כפוף-לכללי-ההלכה-היהודית).xlsx",
+      "https://cdn.menoramivt.co.il/public/docs/מדיניות-השקעה-לשנת-2020-מנורה-מבטחים-פנסיה---מסלול-הלכה.xlsx",
+      "https://cdn.menoramivt.co.il/public/docs/הלכה-מדיניות-השקעה-2019.xlsx",
+      "https://cdn.menoramivt.co.il/public/docs/הלכה-מדיניות-השקעה-2018.xlsx",
+      "https://cdn.menoramivt.co.il/public/docs/הלכה-מדיניות-השקעה-2017.xlsx",
+      "https://cdn.menoramivt.co.il/public/docs/הלכה-מדיניות-השקעה-2016.xlsx"
+     ],
+     "unselected_files": [
+      {
+       "file": "https://cdn.menoramivt.co.il/public/docs/20260319/תעודות-עד-כא-טבת-תשפ''ז-31.12.26-.pdf",
+       "text": "תעודת כשרות - בית יוסף",
+       "ctx": "תעודת כשרות - בית יוסף"
+      },
+      {
+       "file": "https://cdn.menoramivt.co.il/public/docs/20260119/1768383334___מנורה_פנסיה_מקיפה.pdf",
+       "text": "תעודת כשרות - בד\"צ",
+       "ctx": "תעודת כשרות - בד\"צ"
+      },
+      {
+       "file": "https://cdn.menoramivt.co.il/public/docs/20260901/תעודת-כשרות-ועד-ההלכה.pdf",
+       "text": "תעודת כשרות - גלאט הון",
+       "ctx": "תעודת כשרות - גלאט הון"
+      },
+      {
+       "file": "https://cdn.menoramivt.co.il/public/docs/20240404/512245812_p2182_p423.xlsx",
+       "text": "",
+       "ctx": "שנה 2023 תאריך דוח 31/12/2023 תאריך פרסום הדוח (עבור רשימת נכסים רבעונית) 04/04/2024"
+      },
+      {
+       "file": "https://cdn.menoramivt.co.il/public/docs/20231204/512245812_p2182_p323.xlsx",
+       "text": "",
+       "ctx": "שנה 2023 תאריך דוח 30/09/2023 תאריך פרסום הדוח (עבור רשימת נכסים רבעונית) 04/12/2023"
+      },
+      {
+       "file": "https://cdn.menoramivt.co.il/public/docs/20230926/512245812_p2182_p223.xlsx",
+       "text": "",
+       "ctx": "שנה 2023 תאריך דוח 30/06/2023 תאריך פרסום הדוח (עבור רשימת נכסים רבעונית) 05/09/2023"
+      },
+      {
+       "file": "https://cdn.menoramivt.co.il/public/docs/20230927/512245812_p2182_p123.xlsx",
+       "text": "",
+       "ctx": "שנה 2023 תאריך דוח 31/03/2023 תאריך פרסום הדוח (עבור רשימת נכסים רבעונית) 01/06/2023"
+      },
+      {
+       "file": "https://cdn.menoramivt.co.il/public/docs/20230927/512245812_p2182_p422.xlsx",
+       "text": "",
+       "ctx": "שנה 2022 תאריך דוח 31/12/2022 תאריך פרסום הדוח (עבור רשימת נכסים רבעונית) 28/03/2023"
+      },
+      {
+       "file": "https://cdn.menoramivt.co.il/public/docs/20230927/512245812_p2182_p322.xlsx",
+       "text": "",
+       "ctx": "שנה 2022 תאריך דוח 30/09/2022 תאריך פרסום הדוח (עבור רשימת נכסים רבעונית) 06/12/2022"
+      },
+      {
+       "file": "https://cdn.menoramivt.co.il/public/docs/20240408/512245812_p2182_p222.xlsx",
+       "text": "",
+       "ctx": "שנה 2022 תאריך דוח 30/06/2022 תאריך פרסום הדוח (עבור רשימת נכסים רבעונית) 06/09/2022"
+      },
+      {
+       "file": "https://cdn.menoramivt.co.il/public/docs/20260719/תרומת-אפיקי-השקעה-לתשואה-הכוללת---מנורה-מבטחים-פנסיה-הלכה.xlsx",
+       "text": "",
+       "ctx": "2026 נכון לרבעון 30.06"
+      },
+      {
+       "file": "https://cdn.menoramivt.co.il/public/docs/20260503/תרומת-אפיקי-השקעה-לתשואה-הכוללת---מנורה-מבטחים-פנסיה-הלכה.xlsx",
+       "text": "",
+       "ctx": "2026 נכון לרבעון 31.03"
+      },
+      {
+       "file": "https://cdn.menoramivt.co.il/public/docs/20260202/תרומת-אפיקי-השקעה-לתשואה-הכוללת---מנורה-מבטחים-פנסיה-הלכה.xlsx",
+       "text": "",
+       "ctx": "2025 נכון לרבעון 31.12"
+      },
+      {
+       "file": "https://cdn.menoramivt.co.il/public/docs/20251030/תרומת-אפיקי-השקעה-לתשואה-הכוללת---מנורה-מבטחים-פנסיה-הלכה.xlsx",
+       "text": "",
+       "ctx": "2025 נכון לרבעון 30.09"
+      },
+      {
+       "file": "https://cdn.menoramivt.co.il/public/docs/20250728/תרומת-אפיקי-השקעה-לתשואה-הכוללת---מנורה-מבטחים-פנסיה-הלכה.xlsx",
+       "text": "",
+       "ctx": "2025 נכון לרבעון 30.06"
+      },
+      {
+       "file": "https://cdn.menoramivt.co.il/public/docs/20250504/תרומת-אפיקי-השקעה-לתשואה-הכוללת---מנורה-מבטחים-פנסיה-הלכה.xlsx",
+       "text": "",
+       "ctx": "2025 נכון לרבעון 31.03"
+      },
+      {
+       "file": "https://cdn.menoramivt.co.il/public/docs/20250203/תרומת-אפיקי-השקעה-לתשואה-הכוללת---מנורה-מבטחים-פנסיה-הלכה.xlsx",
+       "text": "",
+       "ctx": "2024 נכון לרבעון 31.12"
+      },
+      {
+       "file": "https://cdn.menoramivt.co.il/public/docs/20241106/תרומת-אפיקי-השקעה-לתשואה-הכוללת---מנורה-מבטחים-פנסיה-הלכה.xlsx",
+       "text": "",
+       "ctx": "2024 נכון לרבעון 30.09"
+      },
+      {
+       "file": "https://cdn.menoramivt.co.il/public/docs/20240729/תרומת-אפיקי-השקעה-לתשואה-הכוללת---מנורה-מבטחים-פנסיה-הלכה.xlsx",
+       "text": "",
+       "ctx": "2024 נכון לרבעון 30.06"
+      },
+      {
+       "file": "https://cdn.menoramivt.co.il/public/docs/20240519/תרומת-אפיקי-השקעה-לתשואה-הכוללת-מנורה-מבטחים-פנסיה---מסלול-הלכה.xlsx",
+       "text": "",
+       "ctx": "2024 נכון לרבעון 31.03"
+      },
+      {
+       "file": "https://cdn.menoramivt.co.il/public/docs/20240320/תרומת-אפיקי-השקעה-לתשואה-הכוללת-מנורה-מבטחים-פנסיה---כללי-ג.xlsx",
+       "text": "",
+       "ctx": "2023 נכון לרבעון 31.12"
+      }
+     ]
+    },
+    {
+     "url": "https://www.menoramivt.co.il/funds/pension-and-gemel/pension-plans/new-pension",
+     "links": 266,
+     "followed": [],
+     "files": 29,
+     "clicked": 0,
+     "captured": 0,
+     "selected": [
+      "https://cdn.menoramivt.co.il/public/docs/20260130/מדיניות-השקעה-לשנת-2026-מנורה-מבטחים-פנסיה--מסלול-בסיסי-למקבלי-קצבה-12155.xlsx",
+      "https://cdn.menoramivt.co.il/public/docs/20250122/מדיניות-השקעה-לשנת-2025-מנורה-מבטחים-פנסיה-בסיסי-למקבלי-קצבה-12155.xlsx",
+      "https://cdn.menoramivt.co.il/public/docs/20240818/מדיניות-השקעה-לשנת-2024-מנורה-מבטחים-פנסיה-בסיסי-למקבלי-קצבה-12155.xlsx",
+      "https://cdn.menoramivt.co.il/public/docs/20240124/מדיניות-השקעה-לשנת-2024-מבטחים-החדשה---פנסיונרים-חדשים-12155.xlsx",
+      "https://cdn.menoramivt.co.il/public/docs/20230620/מדיניות-השקעה-לשנת-2023-מבטחים-החדשה---פנסיונרים-חדשים-12155.xlsx",
+      "https://cdn.menoramivt.co.il/public/docs/20220125/מדיניות-השקעה-לשנת-2022-מבטחים-החדשה---פנסיונרים-חדשים.xlsx",
+      "https://cdn.menoramivt.co.il/public/docs/20210125/מדיניות-השקעה-לשנת-2021-מבטחים-החדשה---מסלול-פנסיונרים-חדשים.xlsx",
+      "https://cdn.menoramivt.co.il/public/docs/מדיניות-השקעה-לשנת-2020-מנורה-מבטחים-פנסיה---תיק-מקבלי-פנסיה-חדשים.xlsx",
+      "https://cdn.menoramivt.co.il/public/docs/new-pension-Investment-policy-2019.xlsx",
+      "https://cdn.menoramivt.co.il/public/docs/new-pension-Investment-policy-2018.xlsx"
+     ],
+     "unselected_files": [
+      {
+       "file": "https://cdn.menoramivt.co.il/public/docs/20240407/512245812_p12155_p423.xlsx",
+       "text": "",
+       "ctx": "שנה 2023 תאריך דוח 31/12/2023 תאריך פרסום הדוח (עבור רשימת נכסים רבעונית) 04/04/2024"
+      },
+      {
+       "file": "https://cdn.menoramivt.co.il/public/docs/20240407/512245812_p12155_p423.xlsx",
+       "text": "",
+       "ctx": "שנה 2023 תאריך דוח 31/12/2023 תאריך פרסום הדוח (עבור רשימת נכסים רבעונית) 07/04/2024"
+      },
+      {
+       "file": "https://cdn.menoramivt.co.il/public/docs/20231204/512245812_p12155_p323.xlsx",
+       "text": "",
+       "ctx": "שנה 2023 תאריך דוח 30/09/2023 תאריך פרסום הדוח (עבור רשימת נכסים רבעונית) 04/12/2023"
+      },
+      {
+       "file": "https://cdn.menoramivt.co.il/public/docs/20230905/512245812_p12155_p223.xlsx",
+       "text": "",
+       "ctx": "שנה 2023 תאריך דוח 30/06/2023 תאריך פרסום הדוח (עבור רשימת נכסים רבעונית) 05/09/2023"
+      },
+      {
+       "file": "https://cdn.menoramivt.co.il/public/docs/20230601/512245812_p12155_p123.xlsx",
+       "text": "",
+       "ctx": "שנה 2023 תאריך דוח 31/03/2023 תאריך פרסום הדוח (עבור רשימת נכסים רבעונית) 01/06/2023"
+      },
+      {
+       "file": "https://cdn.menoramivt.co.il/public/docs/20230515/512245812_p12155_p422.xlsx",
+       "text": "",
+       "ctx": "שנה 2022 תאריך דוח 31/12/2022 תאריך פרסום הדוח (עבור רשימת נכסים רבעונית) 28/03/2023"
+      },
+      {
+       "file": "https://cdn.menoramivt.co.il/public/docs/20230517/512245812_p12155_p322.xlsx",
+       "text": "",
+       "ctx": "שנה 2022 תאריך דוח 30/09/2022 תאריך פרסום הדוח (עבור רשימת נכסים רבעונית) 06/12/2022"
+      },
+      {
+       "file": "https://cdn.menoramivt.co.il/public/docs/20240408/512245812_p12155_p222.xlsx",
+       "text": "",
+       "ctx": "שנה 2022 תאריך דוח 30/06/2022 תאריך פרסום הדוח (עבור רשימת נכסים רבעונית) 06/09/2022"
+      },
+      {
+       "file": "https://cdn.menoramivt.co.il/public/docs/20260719/תרומת-אפיקי-השקעה-לתשואה-הכוללת---מנורה-מבטחים-פנסיה---מסלול-בסיסי-למקבלי-קצבה.xlsx",
+       "text": "",
+       "ctx": "2026 30.06"
+      },
+      {
+       "file": "https://cdn.menoramivt.co.il/public/docs/20260503/תרומת-אפיקי-השקעה-לתשואה-הכוללת---מנורה-מבטחים-פנסיה---מסלול-בסיסי-למקבלי-קצבה.xlsx",
+       "text": "",
+       "ctx": "2026 31.03"
+      },
+      {
+       "file": "https://cdn.menoramivt.co.il/public/docs/20260202/תרומת-אפיקי-השקעה-לתשואה-הכוללת---מנורה-מבטחים-פנסיה---מסלול-בסיסי-למקבלי-קצבה.xlsx",
+       "text": "",
+       "ctx": "2025 31.12"
+      },
+      {
+       "file": "https://cdn.menoramivt.co.il/public/docs/20251030/תרומת-אפיקי-השקעה-לתשואה-הכוללת---מנורה-מבטחים-פנסיה---מסלול-בסיסי-למקבלי-קצבה.xlsx",
+       "text": "",
+       "ctx": "2025 30.09"
+      },
+      {
+       "file": "https://cdn.menoramivt.co.il/public/docs/20250728/תרומת-אפיקי-השקעה-לתשואה-הכוללת---מנורה-מבטחים-פנסיה---מסלול-בסיסי-למקבלי-קצבה.xlsx",
+       "text": "",
+       "ctx": "2025 30.06"
+      },
+      {
+       "file": "https://cdn.menoramivt.co.il/public/docs/20250504/תרומת-אפיקי-השקעה-לתשואה-הכוללת---מנורה-מבטחים-פנסיה---מסלול-בסיסי-למקבלי-קצבה.xlsx",
+       "text": "",
+       "ctx": "2025 31.03"
+      },
+      {
+       "file": "https://cdn.menoramivt.co.il/public/docs/20250203/תרומת-אפיקי-השקעה-לתשואה-הכוללת---מנורה-מבטחים-פנסיה---מסלול-בסיסי-למקבלי-קצבה.xlsx",
+       "text": "",
+       "ctx": "2024 31.12"
+      },
+      {
+       "file": "https://cdn.menoramivt.co.il/public/docs/20241106/תרומת-אפיקי-השקעה-לתשואה-הכוללת---מנורה-מבטחים-פנסיה---מסלול-בסיסי-למקבלי-קצבה.xlsx",
+       "text": "",
+       "ctx": "2024 30.09"
+      },
+      {
+       "file": "https://cdn.menoramivt.co.il/public/docs/20240729/תרומת-אפיקי-השקעה-לתשואה-הכוללת---מנורה-מבטחים-פנסיה---מסלול-בסיסי-למקבלי-קצבה.xlsx",
+       "text": "",
+       "ctx": "2024 30.06"
+      },
+      {
+       "file": "https://cdn.menoramivt.co.il/public/docs/20240519/תרומת-אפיקי-השקעה-לתשואה-הכוללת-מנורה-מבטחים-פנסיה-מקבלי-פנסיה-חדשים.xlsx",
+       "text": "",
+       "ctx": "2024 31.03"
+      },
+      {
+       "file": "https://cdn.menoramivt.co.il/public/docs/20240320/תרומת-אפיקי-השקעה-לתשואה-הכוללת-מנורה-מבטחים-פנסיה---פנסיונרים-חדשים.xlsx",
+       "text": "",
+       "ctx": "2023 31.12"
+      }
+     ]
+    },
+    {
+     "url": "https://www.menoramivt.co.il/funds/pension-and-gemel/pension-plans/pension-abroad-track",
+     "links": 264,
+     "followed": [],
+     "files": 27,
+     "clicked": 0,
+     "captured": 0,
+     "selected": [
+      "https://cdn.menoramivt.co.il/public/docs/20260130/מדיניות-השקעה-לשנת-2026-מנורה-מבטחים-פנסיה-אשראי-ואגח-13349.xlsx",
+      "https://cdn.menoramivt.co.il/public/docs/20250122/מדיניות-השקעה-לשנת-2025-מנורה-מבטחים-פנסיה-אשראי-ואגח-13349.xlsx",
+      "https://cdn.menoramivt.co.il/public/docs/20240630/מדיניות-השקעה-לשנת-2024-מנורה-מבטחים-פנסיה-אשראי-ואגח-13349.xlsx",
+      "https://cdn.menoramivt.co.il/public/docs/20240305/מדיניות-השקעה-לשנת-2024-מנורה-מבטחים-פנסיה-מסלול-חול-13349.xlsx",
+      "https://cdn.menoramivt.co.il/public/docs/20240124/מדיניות-השקעה-לשנת-2024-מנורה-מבטחים-פנסיה-חול-13349.xlsx",
+      "https://cdn.menoramivt.co.il/public/docs/20230620/מדיניות-השקעה-לשנת-2023-מנורה-מבטחים-פנסיה-חול-13349.xlsx",
+      "https://cdn.menoramivt.co.il/public/docs/20220125/מדיניות-השקעה-לשנת-2022-מנורה-מבטחים-פנסיה-חול.xlsx",
+      "https://cdn.menoramivt.co.il/public/docs/20211212/מדיניות-השקעה-לשנת-2021-מנורה-מבטחים-פנסיה-חול.xlsx"
+     ],
+     "unselected_files": [
+      {
+       "file": "https://cdn.menoramivt.co.il/public/docs/20241117/13349---מקיפה-חול.pdf",
+       "text": "לחצו כאן",
+       "ctx": ""
+      },
+      {
+       "file": "https://cdn.menoramivt.co.il/public/docs/20240404/512245812_p13349_p423.xlsx",
+       "text": "",
+       "ctx": "שנה 2023 תאריך הדוח 31/12/2023 תאריך פרסום הדוח (עבור רשימת נכסים רבעונית) 04/04/2024"
+      },
+      {
+       "file": "https://cdn.menoramivt.co.il/public/docs/20231204/512245812_p13349_p323.xlsx",
+       "text": "",
+       "ctx": "שנה 2023 תאריך הדוח 30/09/2023 תאריך פרסום הדוח (עבור רשימת נכסים רבעונית) 04/12/2023"
+      },
+      {
+       "file": "https://cdn.menoramivt.co.il/public/docs/20230905/512245812_p13349_p223.xlsx",
+       "text": "",
+       "ctx": "שנה 2023 תאריך הדוח 30/06/2023 תאריך פרסום הדוח (עבור רשימת נכסים רבעונית) 05/09/2023"
+      },
+      {
+       "file": "https://cdn.menoramivt.co.il/public/docs/20230601/512245812_p13349_p123.xlsx",
+       "text": "",
+       "ctx": "שנה 2023 תאריך הדוח 31/03/2023 תאריך פרסום הדוח (עבור רשימת נכסים רבעונית) 01/06/2023"
+      },
+      {
+       "file": "https://cdn.menoramivt.co.il/public/docs/20230328/512245812_p13349_p422.xlsx",
+       "text": "",
+       "ctx": "שנה 2022 תאריך הדוח 31/12/2022 תאריך פרסום הדוח (עבור רשימת נכסים רבעונית) 28/03/2023"
+      },
+      {
+       "file": "https://cdn.menoramivt.co.il/public/docs/20221206/512245812_p13349_p322.xlsx",
+       "text": "",
+       "ctx": "שנה 2022 תאריך הדוח 30/09/2022 תאריך פרסום הדוח (עבור רשימת נכסים רבעונית) 06/12/2022"
+      },
+      {
+       "file": "https://cdn.menoramivt.co.il/public/docs/20240408/512245812_p13349_p222.xlsx",
+       "text": "",
+       "ctx": "שנה 2022 תאריך הדוח 30/06/2022 תאריך פרסום הדוח (עבור רשימת נכסים רבעונית) 06/09/2022"
+      },
+      {
+       "file": "https://cdn.menoramivt.co.il/public/docs/20260719/תרומת-אפיקי-השקעה-לתשואה-הכוללת---מנורה-מבטחים-פנסיה-אשראי-ואגח.xlsx",
+       "text": "",
+       "ctx": "2026 30.06"
+      },
+      {
+       "file": "https://cdn.menoramivt.co.il/public/docs/20260503/תרומת-אפיקי-השקעה-לתשואה-הכוללת---מנורה-מבטחים-פנסיה-אשראי-ואגח.xlsx",
+       "text": "",
+       "ctx": "2026 31.03"
+      },
+      {
+       "file": "https://cdn.menoramivt.co.il/public/docs/20260202/תרומת-אפיקי-השקעה-לתשואה-הכוללת---מנורה-מבטחים-פנסיה-אשראי-ואגח.xlsx",
+       "text": "",
+       "ctx": "2025 31.12"
+      },
+      {
+       "file": "https://cdn.menoramivt.co.il/public/docs/20251030/תרומת-אפיקי-השקעה-לתשואה-הכוללת---מנורה-מבטחים-פנסיה-אשראי-ואגח.xlsx",
+       "text": "",
+       "ctx": "2025 30.09"
+      },
+      {
+       "file": "https://cdn.menoramivt.co.il/public/docs/20250728/תרומת-אפיקי-השקעה-לתשואה-הכוללת---מנורה-מבטחים-פנסיה-אשראי-ואגח.xlsx",
+       "text": "",
+       "ctx": "2025 30.06"
+      },
+      {
+       "file": "https://cdn.menoramivt.co.il/public/docs/20250504/תרומת-אפיקי-השקעה-לתשואה-הכוללת---מנורה-מבטחים-פנסיה-אשראי-ואגח.xlsx",
+       "text": "",
+       "ctx": "2025 31.03"
+      },
+      {
+       "file": "https://cdn.menoramivt.co.il/public/docs/20250203/תרומת-אפיקי-השקעה-לתשואה-הכוללת---מנורה-מבטחים-פנסיה-אשראי-ואגח.xlsx",
+       "text": "",
+       "ctx": "2024 31.12"
+      },
+      {
+       "file": "https://cdn.menoramivt.co.il/public/docs/20241106/תרומת-אפיקי-השקעה-לתשואה-הכוללת---מנורה-מבטחים-פנסיה-אשראי-ואגח.xlsx",
+       "text": "",
+       "ctx": "2024 30.09"
+      },
+      {
+       "file": "https://cdn.menoramivt.co.il/public/docs/20240729/תרומת-אפיקי-השקעה-לתשואה-הכוללת---מנורה-מבטחים-פנסיה-אשראי-ואגח.xlsx",
+       "text": "",
+       "ctx": "2024 30.06"
+      },
+      {
+       "file": "https://cdn.menoramivt.co.il/public/docs/20240519/תרומת-אפיקי-השקעה-לתשואה-הכוללת-מנורה-מבטחים-פנסיה-חול.xlsx",
+       "text": "",
+       "ctx": "2024 31.03"
+      },
+      {
+       "file": "https://cdn.menoramivt.co.il/public/docs/20240320/תרומת-אפיקי-השקעה-לתשואה-הכוללת-מנורה-מבטחים-פנסיה---מסלול-חול.xlsx",
+       "text": "",
+       "ctx": "2023 31.12"
+      }
+     ]
+    },
+    {
+     "url": "https://www.menoramivt.co.il/funds/pension-and-gemel/pension-plans/pension-kayamut-14348",
+     "links": 256,
+     "followed": [],
+     "files": 19,
+     "clicked": 0,
+     "captured": 0,
+     "selected": [
+      "https://cdn.menoramivt.co.il/public/docs/20260130/מדיניות-השקעה-לשנת-2026-מנורה-מבטחים-פנסיה-קיימות-14348.xlsx",
+      "https://cdn.menoramivt.co.il/public/docs/20250122/מדיניות-השקעה-לשנת-2025-מנורה-מבטחים-פנסיה-קיימות-14348.xlsx",
+      "https://cdn.menoramivt.co.il/public/docs/20240630/מדיניות-השקעה-לשנת-2024-מנורה-מבטחים-פנסיה-קיימות-14348.xlsx",
+      "https://cdn.menoramivt.co.il/public/docs/20240124/מדיניות-השקעה-לשנת-2024-מנורה-מבטחים-פנסיה-מסלול-קיימות-14348.xlsx",
+      "https://cdn.menoramivt.co.il/public/docs/20230620/מדיניות-השקעה-לשנת-2023-מנורה-מבטחים-פנסיה-מסלול-קיימות-14348.xlsx"
+     ],
+     "unselected_files": [
+      {
+       "file": "https://cdn.menoramivt.co.il/public/docs/20240404/512245812_p14348_p423.xlsx",
+       "text": "",
+       "ctx": "שנה 2023 תאריך דוח 31/12/2023 תאריך פרסום הדוח (עבור רשימת נכסים רבעונית) 04/04/2024"
+      },
+      {
+       "file": "https://cdn.menoramivt.co.il/public/docs/20231204/512245812_p14348_p323.xlsx",
+       "text": "",
+       "ctx": "שנה 2023 תאריך דוח 30/09/2023 תאריך פרסום הדוח (עבור רשימת נכסים רבעונית) 04/12/2023"
+      },
+      {
+       "file": "https://cdn.menoramivt.co.il/public/docs/20230905/512245812_p14348_p223.xlsx",
+       "text": "",
+       "ctx": "שנה 2023 תאריך דוח 30/06/2023 תאריך פרסום הדוח (עבור רשימת נכסים רבעונית) 05/09/2023"
+      },
+      {
+       "file": "https://cdn.menoramivt.co.il/public/docs/20260719/תרומת-אפיקי-השקעה-לתשואה-הכוללת---מנורה-מבטחים-פנסיה-קיימות.xlsx",
+       "text": "",
+       "ctx": "2026 30.06"
+      },
+      {
+       "file": "https://cdn.menoramivt.co.il/public/docs/20260503/תרומת-אפיקי-השקעה-לתשואה-הכוללת---מנורה-מבטחים-פנסיה-קיימות.xlsx",
+       "text": "",
+       "ctx": "2026 31.03"
+      },
+      {
+       "file": "https://cdn.menoramivt.co.il/public/docs/20260202/תרומת-אפיקי-השקעה-לתשואה-הכוללת---מנורה-מבטחים-פנסיה-קיימות.xlsx",
+       "text": "",
+       "ctx": "2025 31.12"
+      },
+      {
+       "file": "https://cdn.menoramivt.co.il/public/docs/20251030/תרומת-אפיקי-השקעה-לתשואה-הכוללת---מנורה-מבטחים-פנסיה-קיימות.xlsx",
+       "text": "",
+       "ctx": "2025 30.09"
+      },
+      {
+       "file": "https://cdn.menoramivt.co.il/public/docs/20250728/תרומת-אפיקי-השקעה-לתשואה-הכוללת---מנורה-מבטחים-פנסיה-קיימות.xlsx",
+       "text": "",
+       "ctx": "2025 30.06"
+      },
+      {
+       "file": "https://cdn.menoramivt.co.il/public/docs/20250504/תרומת-אפיקי-השקעה-לתשואה-הכוללת---מנורה-מבטחים-פנסיה-קיימות.xlsx",
+       "text": "",
+       "ctx": "2025 31.03"
+      },
+      {
+       "file": "https://cdn.menoramivt.co.il/public/docs/20250203/תרומת-אפיקי-השקעה-לתשואה-הכוללת---מנורה-מבטחים-פנסיה-קיימות.xlsx",
+       "text": "",
+       "ctx": "2024 31.12"
+      },
+      {
+       "file": "https://cdn.menoramivt.co.il/public/docs/20241106/תרומת-אפיקי-השקעה-לתשואה-הכוללת---מנורה-מבטחים-פנסיה-קיימות.xlsx",
+       "text": "",
+       "ctx": "2024 30.09"
+      },
+      {
+       "file": "https://cdn.menoramivt.co.il/public/docs/20240729/תרומת-אפיקי-השקעה-לתשואה-הכוללת---מנורה-מבטחים-פנסיה-קיימות.xlsx",
+       "text": "",
+       "ctx": "2024 30.06"
+      },
+      {
+       "file": "https://cdn.menoramivt.co.il/public/docs/20240519/תרומת-אפיקי-השקעה-לתשואה-הכוללת-מנורה-מבטחים-פנסיה-קיימות.xlsx",
+       "text": "",
+       "ctx": "2024 31.03"
+      },
+      {
+       "file": "https://cdn.menoramivt.co.il/public/docs/20240320/תרומת-אפיקי-השקעה-לתשואה-הכוללת-מנורה-מבטחים-פנסיה---קיימות.xlsx",
+       "text": "",
+       "ctx": "2023 31.12"
+      }
+     ]
+    },
+    {
+     "url": "https://www.menoramivt.co.il/funds/pension-and-gemel/pension-plans/pension-plans-15661",
+     "links": 237,
+     "followed": [],
+     "files": 5,
+     "clicked": 0,
+     "captured": 0,
+     "selected": [
+      "https://cdn.menoramivt.co.il/public/docs/20260130/מדיניות-השקעה-לשנת-2026-מנורה-מבטחים-פנסיה-עוקב-מדדים-למקבלי-קצבה-15661.xlsx",
+      "https://cdn.menoramivt.co.il/public/docs/20250826/מדיניות-השקעה-לשנת-2025-מנורה-מבטחים-פנסיה-עוקב-מדדים-למקבלי-קצבה-15661.xlsx"
+     ],
+     "unselected_files": [
+      {
+       "file": "https://cdn.menoramivt.co.il/public/docs/20260719/תרומת-אפיקי-השקעה-לתשואה-הכוללת---מנורה-מבטחים-פנסיה-עוקב-מדדים-למקבלי-קצבה.xlsx",
+       "text": "",
+       "ctx": "2026 30.06"
+      },
+      {
+       "file": "https://cdn.menoramivt.co.il/public/docs/20260504/תרומת-אפיקי-השקעה-לתשואה-הכוללת---מנורה-מבטחים-פנסיה-עוקב-מדדים-למקבלי-קצבה.xlsx",
+       "text": "",
+       "ctx": "2026 31.03"
+      },
+      {
+       "file": "https://cdn.menoramivt.co.il/public/docs/20260203/תרומת-אפיקי-השקעה-לתשואה-הכוללת---מנורה-מבטחים-פנסיה-עוקב-מדדים-למקבלי-קצבה.xlsx",
+       "text": "",
+       "ctx": "2025 31.12"
+      }
+     ]
+    },
+    {
+     "url": "https://www.menoramivt.co.il/funds/pension-and-gemel/pension-plans/pension-stock-abroad-track",
+     "links": 266,
+     "followed": [],
+     "files": 29,
+     "clicked": 0,
+     "captured": 0,
+     "selected": [
+      "https://cdn.menoramivt.co.il/public/docs/20260130/מדיניות-השקעה-לשנת-2026-מנורה-מבטחים-פנסיה-עוקב-מדדי-מניות-13350.xlsx",
+      "https://cdn.menoramivt.co.il/public/docs/20250122/מדיניות-השקעה-לשנת-2025-מנורה-מבטחים-פנסיה-עוקב-מדדי-מניות-13350.xlsx",
+      "https://cdn.menoramivt.co.il/public/docs/20240630/מדיניות-השקעה-לשנת-2024-מנורה-מבטחים-פנסיה-עוקב-מדדי-מניות-13350.xlsx",
+      "https://cdn.menoramivt.co.il/public/docs/20240303/מדיניות-השקעה-לשנת-2024-מנורה-מבטחים-פנסיה-מסלול-מדדי-מניות-חול---פאסיבי-13350.xlsx",
+      "https://cdn.menoramivt.co.il/public/docs/20230620/מדיניות-השקעה-לשנת-2023-מנורה-מבטחים-פנסיה-מדדי-מניות-חול---פאסיבי-13350.xlsx",
+      "https://cdn.menoramivt.co.il/public/docs/20220515/מדיניות-השקעה-לשנת-2022-מנורה-מבטחים-פנסיה-מדדי-מניות-חול---פאסיבי.xlsx",
+      "https://cdn.menoramivt.co.il/public/docs/20210214/מדיניות-השקעה-לשנת-2021-מנורה-מבטחים-פנסיה-מדדי-מניות-חול---פאסיבי.xlsx"
+     ],
+     "unselected_files": [
+      {
+       "file": "https://cdn.menoramivt.co.il/public/docs/20241117/13350---מקיפה-מדדי-מניות-חול-פאסיבי.pdf",
+       "text": "לחצו כאן",
+       "ctx": ""
+      },
+      {
+       "file": "https://cdn.menoramivt.co.il/public/docs/20240829/בית-יוסף-תעודה-עד-י-ט-טבת-פ-ד-31.12.23-מנורה-פנסיה.pdf",
+       "text": "תעודת כשרות - בית יוסף",
+       "ctx": "תעודת כשרות - בית יוסף"
+      },
+      {
+       "file": "https://cdn.menoramivt.co.il/public/docs/20240829/כשרות-בדצ-מנורה-פנסיה-מקיפה.pdf",
+       "text": "תעודת כשרות - בד\"צ",
+       "ctx": "תעודת כשרות - בד\"צ"
+      },
+      {
+       "file": "https://cdn.menoramivt.co.il/public/docs/20240404/512245812_p13350_p423.xlsx",
+       "text": "",
+       "ctx": "שנה 2023 תאריך הדוח 31/12/2023 תאריך פרסום הדוח (עבור רשימת נכסים רבעונית) 04/04/2024"
+      },
+      {
+       "file": "https://cdn.menoramivt.co.il/public/docs/20231204/512245812_p13350_p323.xlsx",
+       "text": "",
+       "ctx": "שנה 2023 תאריך הדוח 30/09/2023 תאריך פרסום הדוח (עבור רשימת נכסים רבעונית) 04/12/2023"
+      },
+      {
+       "file": "https://cdn.menoramivt.co.il/public/docs/20230905/512245812_p13350_p223.xlsx",
+       "text": "",
+       "ctx": "שנה 2023 תאריך הדוח 30/06/2023 תאריך פרסום הדוח (עבור רשימת נכסים רבעונית) 05/09/2023"
+      },
+      {
+       "file": "https://cdn.menoramivt.co.il/public/docs/20230601/512245812_p13350_p123.xlsx",
+       "text": "",
+       "ctx": "שנה 2023 תאריך הדוח 31/03/2023 תאריך פרסום הדוח (עבור רשימת נכסים רבעונית) 01/06/2023"
+      },
+      {
+       "file": "https://cdn.menoramivt.co.il/public/docs/20230910/512245812_p13350_p422.xlsx",
+       "text": "",
+       "ctx": "שנה 2022 תאריך הדוח 31/12/2022 תאריך פרסום הדוח (עבור רשימת נכסים רבעונית) 31/12/2022"
+      },
+      {
+       "file": "https://cdn.menoramivt.co.il/public/docs/20221206/512245812_p13350_p322.xlsx",
+       "text": "",
+       "ctx": "שנה 2022 תאריך הדוח 30/09/2022 תאריך פרסום הדוח (עבור רשימת נכסים רבעונית) 06/12/2022"
+      },
+      {
+       "file": "https://cdn.menoramivt.co.il/public/docs/20240408/512245812_p13350_p222.xlsx",
+       "text": "",
+       "ctx": "שנה 2022 תאריך הדוח 30/06/2022 תאריך פרסום הדוח (עבור רשימת נכסים רבעונית) 06/09/2022"
+      },
+      {
+       "file": "https://cdn.menoramivt.co.il/public/docs/20221120/מנורה-מבטחים-פנסיה-מדדי-מניות-חול---פאסיבי-1.11.22.xlsx",
+       "text": "",
+       "ctx": "שנה 2022 החל מ- 1.11.22"
+      },
+      {
+       "file": "https://cdn.menoramivt.co.il/public/docs/20260719/תרומת-אפיקי-השקעה-לתשואה-הכוללת---מנורה-מבטחים-פנסיה-עוקב-מדדי-מניות.xlsx",
+       "text": "",
+       "ctx": "2026 30.06"
+      },
+      {
+       "file": "https://cdn.menoramivt.co.il/public/docs/20260503/תרומת-אפיקי-השקעה-לתשואה-הכוללת---מנורה-מבטחים-פנסיה-עוקב-מדדי-מניות.xlsx",
+       "text": "",
+       "ctx": "2026 31.03"
+      },
+      {
+       "file": "https://cdn.menoramivt.co.il/public/docs/20260202/תרומת-אפיקי-השקעה-לתשואה-הכוללת---מנורה-מבטחים-פנסיה-עוקב-מדדי-מניות.xlsx",
+       "text": "",
+       "ctx": "2025 31.12"
+      },
+      {
+       "file": "https://cdn.menoramivt.co.il/public/docs/20251030/תרומת-אפיקי-השקעה-לתשואה-הכוללת---מנורה-מבטחים-פנסיה-עוקב-מדדי-מניות.xlsx",
+       "text": "",
+       "ctx": "2025 30.09"
+      },
+      {
+       "file": "https://cdn.menoramivt.co.il/public/docs/20250728/תרומת-אפיקי-השקעה-לתשואה-הכוללת---מנורה-מבטחים-פנסיה-עוקב-מדדי-מניות.xlsx",
+       "text": "",
+       "ctx": "2025 30.06"
+      },
+      {
+       "file": "https://cdn.menoramivt.co.il/public/docs/20250504/תרומת-אפיקי-השקעה-לתשואה-הכוללת---מנורה-מבטחים-פנסיה-עוקב-מדדי-מניות.xlsx",
+       "text": "",
+       "ctx": "2025 31.03"
+      },
+      {
+       "file": "https://cdn.menoramivt.co.il/public/docs/20250203/תרומת-אפיקי-השקעה-לתשואה-הכוללת---מנורה-מבטחים-פנסיה-עוקב-מדדי-מניות.xlsx",
+       "text": "",
+       "ctx": "2024 31.12"
+      },
+      {
+       "file": "https://cdn.menoramivt.co.il/public/docs/20241106/תרומת-אפיקי-השקעה-לתשואה-הכוללת---מנורה-מבטחים-פנסיה-עוקב-מדדי-מניות.xlsx",
+       "text": "",
+       "ctx": "2024 30.09"
+      },
+      {
+       "file": "https://cdn.menoramivt.co.il/public/docs/20240729/תרומת-אפיקי-השקעה-לתשואה-הכוללת---מנורה-מבטחים-פנסיה-עוקב-מדדי-מניות.xlsx",
+       "text": "",
+       "ctx": "2024 30.06"
+      },
+      {
+       "file": "https://cdn.menoramivt.co.il/public/docs/20240519/תרומת-אפיקי-השקעה-לתשואה-הכוללת-מנורה-מבטחים-פנסיה-מדדי-מניות-חול---פאסיבי.xlsx",
+       "text": "",
+       "ctx": "2024 31.03"
+      },
+      {
+       "file": "https://cdn.menoramivt.co.il/public/docs/20240320/תרומת-אפיקי-השקעה-לתשואה-הכוללת-מנורה-מבטחים-פנסיה---מסלול-חול-פאסיבי.xlsx",
+       "text": "",
+       "ctx": "2023 31.12"
+      }
+     ]
+    },
+    {
+     "url": "https://www.menoramivt.co.il/funds/pension-and-gemel/pension-plans/retired-portfolio",
+     "links": 267,
+     "followed": [],
+     "files": 30,
+     "clicked": 0,
+     "captured": 0,
+     "selected": [
+      "https://cdn.menoramivt.co.il/public/docs/20260130/מדיניות-השקעה-לשנת-2026-מנורה-מבטחים-פנסיה---מסלול-מקבלי-קצבה-קיימים-2212.xlsx",
+      "https://cdn.menoramivt.co.il/public/docs/20250122/מדיניות-השקעה-לשנת-2025-מנורה-מבטחים-פנסיה-מקבלי-קצבה-קיימים-2212.xlsx",
+      "https://cdn.menoramivt.co.il/public/docs/20240818/מדיניות-השקעה-לשנת-2024-מנורה-מבטחים-פנסיה-מקבלי-קצבה-קיימים-2212.xlsx",
+      "https://cdn.menoramivt.co.il/public/docs/20240124/מדיניות-השקעה-לשנת-2024-מבטחים-החדשה---מסלול-פנסיונרים-2212.xlsx",
+      "https://cdn.menoramivt.co.il/public/docs/20230620/מדיניות-השקעה-לשנת-2023-מבטחים-החדשה---מסלול-פנסיונרים-2212.xlsx",
+      "https://cdn.menoramivt.co.il/public/docs/20220125/מדיניות-השקעה-לשנת-2022-מבטחים-החדשה---מסלול-פנסיונרים.xlsx",
+      "https://cdn.menoramivt.co.il/public/docs/20210125/מדיניות-השקעה-לשנת-2021-מבטחים-החדשה---מסלול-פנסיונרים.xlsx",
+      "https://cdn.menoramivt.co.il/public/docs/מדיניות-השקעה-לשנת-2020-מנורה-מבטחים-פנסיה---תיק-מקבלי-פנסיה-קיימים.xlsx",
+      "https://cdn.menoramivt.co.il/public/docs/פנסיונרים-מדיניות-השקעה-2019.xlsx",
+      "https://cdn.menoramivt.co.il/public/docs/פנסיונרים-מדיניות-השקעה-2018.xlsx",
+      "https://cdn.menoramivt.co.il/public/docs/פנסיונרים-מדיניות-השקעה-2017.xlsx",
+      "https://cdn.menoramivt.co.il/public/docs/פנסיונרים-מדיניות-השקעה-2016.xlsx"
+     ],
+     "unselected_files": [
+      {
+       "file": "https://cdn.menoramivt.co.il/public/docs/20240404/512245812_p2212_p423.xlsx",
+       "text": "",
+       "ctx": "שנה 2023 תאריך דוח 31/12/2023 תאריך פרסום הדוח (עבור רשימת נכסים רבעונית) 04/04/2024"
+      },
+      {
+       "file": "https://cdn.menoramivt.co.il/public/docs/20231204/512245812_p2212_p323.xlsx",
+       "text": "",
+       "ctx": "שנה 2023 תאריך דוח 30/09/2023 תאריך פרסום הדוח (עבור רשימת נכסים רבעונית) 04/12/2023"
+      },
+      {
+       "file": "https://cdn.menoramivt.co.il/public/docs/20230905/512245812_p2212_p223.xlsx",
+       "text": "",
+       "ctx": "שנה 2023 תאריך דוח 30/06/2023 תאריך פרסום הדוח (עבור רשימת נכסים רבעונית) 05/09/2023"
+      },
+      {
+       "file": "https://cdn.menoramivt.co.il/public/docs/20230601/512245812_p2212_p123.xlsx",
+       "text": "",
+       "ctx": "שנה 2023 תאריך דוח 31/03/2023 תאריך פרסום הדוח (עבור רשימת נכסים רבעונית) 01/06/2023"
+      },
+      {
+       "file": "https://cdn.menoramivt.co.il/public/docs/20230328/512245812_p2212_p422.xlsx",
+       "text": "",
+       "ctx": "שנה 2022 תאריך דוח 31/12/2022 תאריך פרסום הדוח (עבור רשימת נכסים רבעונית) 28/03/2023"
+      },
+      {
+       "file": "https://cdn.menoramivt.co.il/public/docs/20221206/512245812_p2212_p322.xlsx",
+       "text": "",
+       "ctx": "שנה 2022 תאריך דוח 30/09/2022 תאריך פרסום הדוח (עבור רשימת נכסים רבעונית) 06/12/2022"
+      },
+      {
+       "file": "https://cdn.menoramivt.co.il/public/docs/20240408/512245812_p2212_p222.xlsx",
+       "text": "",
+       "ctx": "שנה 2022 תאריך דוח 30/06/2022 תאריך פרסום הדוח (עבור רשימת נכסים רבעונית) 06/09/2022"
+      },
+      {
+       "file": "https://cdn.menoramivt.co.il/public/docs/20260719/תרומת-אפיקי-השקעה-לתשואה-הכוללת---מנורה-מבטחים-פנסיה---מסלול-מקבלי-קצבה-קיימים.xlsx",
+       "text": "",
+       "ctx": "2026 נכון לרבעון 30.06"
+      },
+      {
+       "file": "https://cdn.menoramivt.co.il/public/docs/20260503/תרומת-אפיקי-השקעה-לתשואה-הכוללת---מנורה-מבטחים-פנסיה---מסלול-מקבלי-קצבה-קיימים.xlsx",
+       "text": "",
+       "ctx": "2026 נכון לרבעון 31.03"
+      },
+      {
+       "file": "https://cdn.menoramivt.co.il/public/docs/20260202/תרומת-אפיקי-השקעה-לתשואה-הכוללת---מנורה-מבטחים-פנסיה---מסלול-מקבלי-קצבה-קיימים.xlsx",
+       "text": "",
+       "ctx": "2025 נכון לרבעון 31.12"
+      },
+      {
+       "file": "https://cdn.menoramivt.co.il/public/docs/20251030/תרומת-אפיקי-השקעה-לתשואה-הכוללת---מנורה-מבטחים-פנסיה---מסלול-מקבלי-קצבה-קיימים.xlsx",
+       "text": "",
+       "ctx": "2025 נכון לרבעון 30.09"
+      },
+      {
+       "file": "https://cdn.menoramivt.co.il/public/docs/20250728/תרומת-אפיקי-השקעה-לתשואה-הכוללת---מנורה-מבטחים-פנסיה---מסלול-מקבלי-קצבה-קיימים.xlsx",
+       "text": "",
+       "ctx": "2025 נכון לרבעון 30.06"
+      },
+      {
+       "file": "https://cdn.menoramivt.co.il/public/docs/20250504/תרומת-אפיקי-השקעה-לתשואה-הכוללת---מנורה-מבטחים-פנסיה---מסלול-מקבלי-קצבה-קיימים.xlsx",
+       "text": "",
+       "ctx": "2025 נכון לרבעון 31.03"
+      },
+      {
+       "file": "https://cdn.menoramivt.co.il/public/docs/20250203/תרומת-אפיקי-השקעה-לתשואה-הכוללת---מנורה-מבטחים-פנסיה---מסלול-מקבלי-קצבה-קיימים.xlsx",
+       "text": "",
+       "ctx": "2024 נכון לרבעון 31.12"
+      },
+      {
+       "file": "https://cdn.menoramivt.co.il/public/docs/20241106/תרומת-אפיקי-השקעה-לתשואה-הכוללת---מנורה-מבטחים-פנסיה---מסלול-מקבלי-קצבה-קיימים.xlsx",
+       "text": "",
+       "ctx": "2024 נכון לרבעון 30.09"
+      },
+      {
+       "file": "https://cdn.menoramivt.co.il/public/docs/20240729/תרומת-אפיקי-השקעה-לתשואה-הכוללת---מנורה-מבטחים-פנסיה---מסלול-מקבלי-קצבה-קיימים.xlsx",
+       "text": "",
+       "ctx": "2024 נכון לרבעון 30.06"
+      },
+      {
+       "file": "https://cdn.menoramivt.co.il/public/docs/20240519/תרומת-אפיקי-השקעה-לתשואה-הכוללת-מנורה-מבטחים-פנסיה---פנסיונרים-קיימים.xlsx",
+       "text": "",
+       "ctx": "2024 נכון לרבעון 31.03"
+      },
+      {
+       "file": "https://cdn.menoramivt.co.il/public/docs/20240320/תרומת-אפיקי-השקעה-לתשואה-הכוללת-מנורה-מבטחים-פנסיה--פנסיונרים.xlsx",
+       "text": "",
+       "ctx": "2023 נכון לרבעון 31.12"
+      }
+     ]
+    },
+    {
+     "url": "https://www.menoramivt.co.il/funds/pension-and-gemel/pension-plans/track-50-60",
+     "links": 263,
+     "followed": [],
+     "files": 30,
+     "clicked": 0,
+     "captured": 0,
+     "selected": [
+      "https://cdn.menoramivt.co.il/public/docs/20260130/מדיניות-השקעה-לשנת-2026-מנורה-מבטחים-פנסיה-יעד-לפרישה-2040-2015.xlsx",
+      "https://cdn.menoramivt.co.il/public/docs/20250122/מדיניות-השקעה-לשנת-2025-מנורה-מבטחים-פנסיה-יעד-לפרישה-2040-2015.xlsx",
+      "https://cdn.menoramivt.co.il/public/docs/20240630/מדיניות-השקעה-לשנת-2024-מנורה-מבטחים-פנסיה-יעד-לפרישה-2040-2015.xlsx",
+      "https://cdn.menoramivt.co.il/public/docs/20240303/מדיניות-השקעה-לשנת-2024-מנורה-מבטחים-פנסיה-מסלול-יעד-לפרישה-2040-2015.xlsx",
+      "https://cdn.menoramivt.co.il/public/docs/20230620/מדיניות-השקעה-לשנת-2023-מבטחים-החדשה---מסלול-יעד-לפרישה-2040-2015.xlsx",
+      "https://cdn.menoramivt.co.il/public/docs/20220320/מדיניות-השקעה-לשנת-2022-מבטחים-החדשה---מסלול-יעד-לפרישה-2040.xlsx",
+      "https://cdn.menoramivt.co.il/public/docs/20210125/מדיניות-השקעה-לשנת-2021-מבטחים-החדשה---מסלול-יעד-לפרישה-2040.xlsx",
+      "https://cdn.menoramivt.co.il/public/docs/מדיניות-השקעה-לשנת-2020-מנורה-מבטחים-פנסיה---מסלול-יעד-לפרישה-2040.xlsx",
+      "https://cdn.menoramivt.co.il/public/docs/מסלול-יעד-לפרישה-2040-מדיניות-השקעה-של-החברה-2019.xlsx",
+      "https://cdn.menoramivt.co.il/public/docs/מסלול-יעד-לפרישה-2040-מדיניות-השקעה-של-החברה-2018.xlsx",
+      "https://cdn.menoramivt.co.il/public/docs/מסלול-יעד-לפרישה-2040-מדיניות-השקעה-של-החברה-2017.xlsx",
+      "https://cdn.menoramivt.co.il/public/docs/מסלול-יעד-לפרישה-2040-מדיניות-השקעה-של-החברה-2016.xlsx"
+     ],
+     "unselected_files": [
+      {
+       "file": "https://cdn.menoramivt.co.il/public/docs/20240404/512245812_p2015_p423.xlsx",
+       "text": "",
+       "ctx": "שנה 2023 תאריך דוח 31/12/2023 תאריך פרסום הדוח (עבור רשימת נכסים רבעונית) 04/04/2024"
+      },
+      {
+       "file": "https://cdn.menoramivt.co.il/public/docs/20231204/512245812_p2015_p323.xlsx",
+       "text": "",
+       "ctx": "שנה 2023 תאריך דוח 30/09/2023 תאריך פרסום הדוח (עבור רשימת נכסים רבעונית) 04/12/2023"
+      },
+      {
+       "file": "https://cdn.menoramivt.co.il/public/docs/20230907/512245812_p2015_p223.xlsx",
+       "text": "",
+       "ctx": "שנה 2023 תאריך דוח 30/06/2023 תאריך פרסום הדוח (עבור רשימת נכסים רבעונית) 07/09/2023"
+      },
+      {
+       "file": "https://cdn.menoramivt.co.il/public/docs/20230601/512245812_p2015_p123.xlsx",
+       "text": "",
+       "ctx": "שנה 2023 תאריך דוח 31/03/2023 תאריך פרסום הדוח (עבור רשימת נכסים רבעונית) 01/06/2023"
+      },
+      {
+       "file": "https://cdn.menoramivt.co.il/public/docs/20230514/512245812_p2015_p422.xlsx",
+       "text": "",
+       "ctx": "שנה 2022 תאריך דוח 31/12/2022 תאריך פרסום הדוח (עבור רשימת נכסים רבעונית) 28/03/2023"
+      },
+      {
+       "file": "https://cdn.menoramivt.co.il/public/docs/20230514/512245812_p2015_p322.xlsx",
+       "text": "",
+       "ctx": "שנה 2022 תאריך דוח 30/09/2022 תאריך פרסום הדוח (עבור רשימת נכסים רבעונית) 06/12/2022"
+      },
+      {
+       "file": "https://cdn.menoramivt.co.il/public/docs/20240408/512245812_p2015_p222.xlsx",
+       "text": "",
+       "ctx": "שנה 2022 תאריך דוח 30/06/2022 תאריך פרסום הדוח (עבור רשימת נכסים רבעונית) 06/09/2022"
+      },
+      {
+       "file": "https://cdn.menoramivt.co.il/public/docs/20260719/תרומת-אפיקי-השקעה-לתשואה-הכוללת---מנורה-מבטחים-פנסיה-יעד-לפרישה-2040.xlsx",
+       "text": "",
+       "ctx": "2026 30.06"
+      },
+      {
+       "file": "https://cdn.menoramivt.co.il/public/docs/20260503/תרומת-אפיקי-השקעה-לתשואה-הכוללת---מנורה-מבטחים-פנסיה-יעד-לפרישה-2040.xlsx",
+       "text": "",
+       "ctx": "2026 31.03"
+      },
+      {
+       "file": "https://cdn.menoramivt.co.il/public/docs/20260202/תרומת-אפיקי-השקעה-לתשואה-הכוללת---מנורה-מבטחים-פנסיה-יעד-לפרישה-2040.xlsx",
+       "text": "",
+       "ctx": "2025 31.12"
+      },
+      {
+       "file": "https://cdn.menoramivt.co.il/public/docs/20251030/תרומת-אפיקי-השקעה-לתשואה-הכוללת---מנורה-מבטחים-פנסיה-יעד-לפרישה-2040.xlsx",
+       "text": "",
+       "ctx": "2025 30.09"
+      },
+      {
+       "file": "https://cdn.menoramivt.co.il/public/docs/20250728/תרומת-אפיקי-השקעה-לתשואה-הכוללת---מנורה-מבטחים-פנסיה-יעד-לפרישה-2040.xlsx",
+       "text": "",
+       "ctx": "2025 30.06"
+      },
+      {
+       "file": "https://cdn.menoramivt.co.il/public/docs/20250504/תרומת-אפיקי-השקעה-לתשואה-הכוללת---מנורה-מבטחים-פנסיה-יעד-לפרישה-2040.xlsx",
+       "text": "",
+       "ctx": "2025 31.03"
+      },
+      {
+       "file": "https://cdn.menoramivt.co.il/public/docs/20250203/תרומת-אפיקי-השקעה-לתשואה-הכוללת---מנורה-מבטחים-פנסיה-יעד-לפרישה-2040.xlsx",
+       "text": "",
+       "ctx": "2024 31.12"
+      },
+      {
+       "file": "https://cdn.menoramivt.co.il/public/docs/20241106/תרומת-אפיקי-השקעה-לתשואה-הכוללת---מנורה-מבטחים-פנסיה-יעד-לפרישה-2040.xlsx",
+       "text": "",
+       "ctx": "2024 30.09"
+      },
+      {
+       "file": "https://cdn.menoramivt.co.il/public/docs/20240729/תרומת-אפיקי-השקעה-לתשואה-הכוללת---מנורה-מבטחים-פנסיה-יעד-לפרישה-2040.xlsx",
+       "text": "",
+       "ctx": "2024 30.06"
+      },
+      {
+       "file": "https://cdn.menoramivt.co.il/public/docs/20240519/תרומת-אפיקי-השקעה-לתשואה-הכוללת-מנורה-מבטחים-פנסיה---מסלול-יעד-לפרישה-2040.xlsx",
+       "text": "",
+       "ctx": "2024 31.03"
+      },
+      {
+       "file": "https://cdn.menoramivt.co.il/public/docs/20240320/תרומת-אפיקי-השקעה-לתשואה-הכוללת-מנורה-מבטחים-פנסיה--יעד-2040.xlsx",
+       "text": "",
+       "ctx": "2023 31.12"
+      }
+     ]
+    },
+    {
+     "url": "https://www.menoramivt.co.il/funds/pension-and-gemel/pension-plans/track-60-plus",
+     "links": 264,
+     "followed": [],
+     "files": 31,
+     "clicked": 0,
+     "captured": 0,
+     "selected": [
+      "https://cdn.menoramivt.co.il/public/docs/20260130/מדיניות-השקעה-לשנת-2026-מנורה-מבטחים-פנסיה-יעד-לפרישה-2030-2013.xlsx",
+      "https://cdn.menoramivt.co.il/public/docs/20250122/מדיניות-השקעה-לשנת-2025-מנורה-מבטחים-פנסיה-יעד-לפרישה-2030-2013.xlsx",
+      "https://cdn.menoramivt.co.il/public/docs/20240630/מדיניות-השקעה-לשנת-2024-מנורה-מבטחים-פנסיה-יעד-לפרישה-2030-2013.xlsx",
+      "https://cdn.menoramivt.co.il/public/docs/20240303/מדיניות-השקעה-לשנת-2024-מנורה-מבטחים-פנסיה-מסלול-יעד-לפרישה-2030-2013.xlsx",
+      "https://cdn.menoramivt.co.il/public/docs/20230620/מדיניות-השקעה-לשנת-2023-מבטחים-החדשה---מסלול-יעד-לפרישה-2030-2013.xlsx",
+      "https://cdn.menoramivt.co.il/public/docs/20221018/מדיניות-השקעה-לשנת-2022-מבטחים-החדשה---מסלול-יעד-לפרישה-2030---החל-מ-28.8.22.xlsx",
+      "https://cdn.menoramivt.co.il/public/docs/20220320/מדיניות-השקעה-לשנת-2022-מבטחים-החדשה---מסלול-יעד-לפרישה-2030.xlsx",
+      "https://cdn.menoramivt.co.il/public/docs/20210125/מדיניות-השקעה-לשנת-2021-מבטחים-החדשה-מסלול-יעד-לפרישה-2030.xlsx",
+      "https://cdn.menoramivt.co.il/public/docs/מדיניות-השקעה-לשנת-2020-מנורה-מבטחים-פנסיה---מסלול-יעד-לפרישה-2030.xlsx",
+      "https://cdn.menoramivt.co.il/public/docs/מסלול-יעד-לפרישה-2030---מדיניות-השקעה-של-החברה---2019.xlsx",
+      "https://cdn.menoramivt.co.il/public/docs/מסלול-יעד-לפרישה-2030---מדיניות-השקעה-של-החברה---2018.xlsx",
+      "https://cdn.menoramivt.co.il/public/docs/מסלול-יעד-לפרישה-2030---מדיניות-השקעה-של-החברה---2017.xlsx",
+      "https://cdn.menoramivt.co.il/public/docs/מסלול-יעד-לפרישה-2030---מדיניות-השקעה-של-החברה---2016.xlsx"
+     ],
+     "unselected_files": [
+      {
+       "file": "https://cdn.menoramivt.co.il/public/docs/20240404/512245812_p2013_p423.xlsx",
+       "text": "",
+       "ctx": "שנה 2023 תאריך דוח 31/12/2023 תאריך פרסום הדוח (עבור רשימת נכסים רבעונית) 04/04/2024"
+      },
+      {
+       "file": "https://cdn.menoramivt.co.il/public/docs/20231204/512245812_p2013_p323.xlsx",
+       "text": "",
+       "ctx": "שנה 2023 תאריך דוח 30/09/2023 תאריך פרסום הדוח (עבור רשימת נכסים רבעונית) 04/12/2023"
+      },
+      {
+       "file": "https://cdn.menoramivt.co.il/public/docs/20230905/512245812_p2013_p223.xlsx",
+       "text": "",
+       "ctx": "שנה 2023 תאריך דוח 30/06/2023 תאריך פרסום הדוח (עבור רשימת נכסים רבעונית) 05/09/2023"
+      },
+      {
+       "file": "https://cdn.menoramivt.co.il/public/docs/20230601/512245812_p2013_p123.xlsx",
+       "text": "",
+       "ctx": "שנה 2023 תאריך דוח 31/03/2023 תאריך פרסום הדוח (עבור רשימת נכסים רבעונית) 01/06/2023"
+      },
+      {
+       "file": "https://cdn.menoramivt.co.il/public/docs/20230514/512245812_p2013_p422.xlsx",
+       "text": "",
+       "ctx": "שנה 2022 תאריך דוח 31/12/2022 תאריך פרסום הדוח (עבור רשימת נכסים רבעונית) 28/03/2023"
+      },
+      {
+       "file": "https://cdn.menoramivt.co.il/public/docs/20230514/512245812_p2013_p322.xlsx",
+       "text": "",
+       "ctx": "שנה 2022 תאריך דוח 30/09/2022 תאריך פרסום הדוח (עבור רשימת נכסים רבעונית) 06/12/2022"
+      },
+      {
+       "file": "https://cdn.menoramivt.co.il/public/docs/20240408/512245812_p2013_p222.xlsx",
+       "text": "",
+       "ctx": "שנה 2022 תאריך דוח 30/06/2022 תאריך פרסום הדוח (עבור רשימת נכסים רבעונית) 06/09/2022"
+      },
+      {
+       "file": "https://cdn.menoramivt.co.il/public/docs/20260719/תרומת-אפיקי-השקעה-לתשואה-הכוללת---מנורה-מבטחים-פנסיה-יעד-לפרישה-2030.xlsx",
+       "text": "",
+       "ctx": "2026 30.06"
+      },
+      {
+       "file": "https://cdn.menoramivt.co.il/public/docs/20260503/תרומת-אפיקי-השקעה-לתשואה-הכוללת---מנורה-מבטחים-פנסיה-יעד-לפרישה-2030.xlsx",
+       "text": "",
+       "ctx": "2026 31.03"
+      },
+      {
+       "file": "https://cdn.menoramivt.co.il/public/docs/20260202/תרומת-אפיקי-השקעה-לתשואה-הכוללת---מנורה-מבטחים-פנסיה-יעד-לפרישה-2030.xlsx",
+       "text": "",
+       "ctx": "2025 31.12"
+      },
+      {
+       "file": "https://cdn.menoramivt.co.il/public/docs/20251030/תרומת-אפיקי-השקעה-לתשואה-הכוללת---מנורה-מבטחים-פנסיה-יעד-לפרישה-2030.xlsx",
+       "text": "",
+       "ctx": "2025 30.09"
+      },
+      {
+       "file": "https://cdn.menoramivt.co.il/public/docs/20250728/תרומת-אפיקי-השקעה-לתשואה-הכוללת---מנורה-מבטחים-פנסיה-יעד-לפרישה-2030.xlsx",
+       "text": "",
+       "ctx": "2025 30.06"
+      },
+      {
+       "file": "https://cdn.menoramivt.co.il/public/docs/20250504/תרומת-אפיקי-השקעה-לתשואה-הכוללת---מנורה-מבטחים-פנסיה-יעד-לפרישה-2030.xlsx",
+       "text": "",
+       "ctx": "2025 31.03"
+      },
+      {
+       "file": "https://cdn.menoramivt.co.il/public/docs/20250203/תרומת-אפיקי-השקעה-לתשואה-הכוללת---מנורה-מבטחים-פנסיה-יעד-לפרישה-2030.xlsx",
+       "text": "",
+       "ctx": "2024 31.12"
+      },
+      {
+       "file": "https://cdn.menoramivt.co.il/public/docs/20241106/תרומת-אפיקי-השקעה-לתשואה-הכוללת---מנורה-מבטחים-פנסיה-יעד-לפרישה-2030.xlsx",
+       "text": "",
+       "ctx": "2024 30.09"
+      },
+      {
+       "file": "https://cdn.menoramivt.co.il/public/docs/20240729/תרומת-אפיקי-השקעה-לתשואה-הכוללת---מנורה-מבטחים-פנסיה-יעד-לפרישה-2030.xlsx",
+       "text": "",
+       "ctx": "2024 30.06"
+      },
+      {
+       "file": "https://cdn.menoramivt.co.il/public/docs/20240519/תרומת-אפיקי-השקעה-לתשואה-הכוללת-מנורה-מבטחים-פנסיה---מסלול-יעד-לפרישה-2030.xlsx",
+       "text": "",
+       "ctx": "2024 31.03"
+      },
+      {
+       "file": "https://cdn.menoramivt.co.il/public/docs/20240320/תרומת-אפיקי-השקעה-לתשואה-הכוללת-מנורה-מבטחים-פנסיה--יעד-2030.xlsx",
+       "text": "",
+       "ctx": "2023 31.12"
+      }
+     ]
+    },
+    {
+     "url": "https://www.menoramivt.co.il/funds/pension-and-gemel/pension-plans/track-under-50",
+     "links": 264,
+     "followed": [],
+     "files": 31,
+     "clicked": 0,
+     "captured": 0,
+     "selected": [
+      "https://cdn.menoramivt.co.il/public/docs/20260130/מדיניות-השקעה-לשנת-2026-מנורה-מבטחים-פנסיה-יעד-לפרישה-2055-2184.xlsx",
+      "https://cdn.menoramivt.co.il/public/docs/20250122/מדיניות-השקעה-לשנת-2025-מנורה-מבטחים-פנסיה-יעד-לפרישה-2055-2184.xlsx",
+      "https://cdn.menoramivt.co.il/public/docs/20241203/מדיניות-השקעה-לשנת-2024-מנורה-מבטחים-פנסיה-יעד-לפרישה-2055-2184.xlsx",
+      "https://cdn.menoramivt.co.il/public/docs/20240630/מדיניות-השקעה-לשנת-2024-מנורה-מבטחים-פנסיה-יעד-לפרישה-2055-2184.xlsx",
+      "https://cdn.menoramivt.co.il/public/docs/20240303/מדיניות-השקעה-לשנת-2024-מנורה-מבטחים-פנסיה-מסלול-יעד-לפרישה-2055-2184.xlsx",
+      "https://cdn.menoramivt.co.il/public/docs/20230620/מדיניות-השקעה-לשנת-2023-מבטחים-החדשה---מסלול-יעד-לפרישה-2055-2184.xlsx",
+      "https://cdn.menoramivt.co.il/public/docs/20220320/מדיניות-השקעה-לשנת-2022-מבטחים-החדשה---מסלול-יעד-לפרישה-2055.xlsx",
+      "https://cdn.menoramivt.co.il/public/docs/20210125/מדיניות-השקעה-לשנת-2021-מבטחים-החדשה---מסלול-יעד-לפרישה-2055.xlsx",
+      "https://cdn.menoramivt.co.il/public/docs/מדיניות-השקעה-לשנת-2020-מנורה-מבטחים-פנסיה---מסלול-יעד-לפרישה-2055.xlsx",
+      "https://cdn.menoramivt.co.il/public/docs/מסלול-יעד-לפרישה-2055-מדיניות-השקעה-של-החברה-2019.xlsx",
+      "https://cdn.menoramivt.co.il/public/docs/מסלול-יעד-לפרישה-2055-מדיניות-השקעה-של-החברה-2018.xlsx",
+      "https://cdn.menoramivt.co.il/public/docs/מסלול-יעד-לפרישה-2055-מדיניות-השקעה-של-החברה-2017.xlsx",
+      "https://cdn.menoramivt.co.il/public/docs/מסלול-יעד-לפרישה-2055-מדיניות-השקעה-של-החברה-2016.xlsx"
+     ],
+     "unselected_files": [
+      {
+       "file": "https://cdn.menoramivt.co.il/public/docs/20240404/512245812_p2184_p423.xlsx",
+       "text": "",
+       "ctx": "שנה 2023 תאריך דוח 31/12/2023 תאריך פרסום הדוח (עבור רשימת נכסים רבעונית) 04/04/2024"
+      },
+      {
+       "file": "https://cdn.menoramivt.co.il/public/docs/20231204/512245812_p2184_p323.xlsx",
+       "text": "",
+       "ctx": "שנה 2023 תאריך דוח 30/09/2023 תאריך פרסום הדוח (עבור רשימת נכסים רבעונית) 04/12/2023"
+      },
+      {
+       "file": "https://cdn.menoramivt.co.il/public/docs/20230905/512245812_p2184_p223.xlsx",
+       "text": "",
+       "ctx": "שנה 2023 תאריך דוח 30/06/2023 תאריך פרסום הדוח (עבור רשימת נכסים רבעונית) 05/09/2023"
+      },
+      {
+       "file": "https://cdn.menoramivt.co.il/public/docs/20230601/512245812_p2184_p123.xlsx",
+       "text": "",
+       "ctx": "שנה 2023 תאריך דוח 31/03/2023 תאריך פרסום הדוח (עבור רשימת נכסים רבעונית) 01/06/2023"
+      },
+      {
+       "file": "https://cdn.menoramivt.co.il/public/docs/20230514/512245812_p2184_p422.xlsx",
+       "text": "",
+       "ctx": "שנה 2022 תאריך דוח 31/12/2022 תאריך פרסום הדוח (עבור רשימת נכסים רבעונית) 28/03/2023"
+      },
+      {
+       "file": "https://cdn.menoramivt.co.il/public/docs/20230514/512245812_p2184_p322.xlsx",
+       "text": "",
+       "ctx": "שנה 2022 תאריך דוח 30/09/2022 תאריך פרסום הדוח (עבור רשימת נכסים רבעונית) 06/12/2022"
+      },
+      {
+       "file": "https://cdn.menoramivt.co.il/public/docs/20240408/512245812_p2184_p222.xlsx",
+       "text": "",
+       "ctx": "שנה 2022 תאריך דוח 30/06/2022 תאריך פרסום הדוח (עבור רשימת נכסים רבעונית) 06/09/2022"
+      },
+      {
+       "file": "https://cdn.menoramivt.co.il/public/docs/20260719/תרומת-אפיקי-השקעה-לתשואה-הכוללת---מנורה-מבטחים-פנסיה-יעד-לפרישה-2055.xlsx",
+       "text": "",
+       "ctx": "2026 30.06"
+      },
+      {
+       "file": "https://cdn.menoramivt.co.il/public/docs/20260503/תרומת-אפיקי-השקעה-לתשואה-הכוללת---מנורה-מבטחים-פנסיה-יעד-לפרישה-2055.xlsx",
+       "text": "",
+       "ctx": "2026 31.03"
+      },
+      {
+       "file": "https://cdn.menoramivt.co.il/public/docs/20260202/תרומת-אפיקי-השקעה-לתשואה-הכוללת---מנורה-מבטחים-פנסיה-יעד-לפרישה-2055.xlsx",
+       "text": "",
+       "ctx": "2025 31.12"
+      },
+      {
+       "file": "https://cdn.menoramivt.co.il/public/docs/20251030/תרומת-אפיקי-השקעה-לתשואה-הכוללת---מנורה-מבטחים-פנסיה-יעד-לפרישה-2055.xlsx",
+       "text": "",
+       "ctx": "2025 30.09"
+      },
+      {
+       "file": "https://cdn.menoramivt.co.il/public/docs/20250728/תרומת-אפיקי-השקעה-לתשואה-הכוללת---מנורה-מבטחים-פנסיה-יעד-לפרישה-2055.xlsx",
+       "text": "",
+       "ctx": "2025 30.06"
+      },
+      {
+       "file": "https://cdn.menoramivt.co.il/public/docs/20250504/תרומת-אפיקי-השקעה-לתשואה-הכוללת---מנורה-מבטחים-פנסיה-יעד-לפרישה-2055.xlsx",
+       "text": "",
+       "ctx": "2025 31.03"
+      },
+      {
+       "file": "https://cdn.menoramivt.co.il/public/docs/20250203/תרומת-אפיקי-השקעה-לתשואה-הכוללת---מנורה-מבטחים-פנסיה-יעד-לפרישה-2055.xlsx",
+       "text": "",
+       "ctx": "2024 31.12"
+      },
+      {
+       "file": "https://cdn.menoramivt.co.il/public/docs/20241106/תרומת-אפיקי-השקעה-לתשואה-הכוללת---מנורה-מבטחים-פנסיה-יעד-לפרישה-2055.xlsx",
+       "text": "",
+       "ctx": "2024 30.09"
+      },
+      {
+       "file": "https://cdn.menoramivt.co.il/public/docs/20240729/תרומת-אפיקי-השקעה-לתשואה-הכוללת---מנורה-מבטחים-פנסיה-יעד-לפרישה-2055.xlsx",
+       "text": "",
+       "ctx": "2024 30.06"
+      },
+      {
+       "file": "https://cdn.menoramivt.co.il/public/docs/20240519/תרומת-אפיקי-השקעה-לתשואה-הכוללת-מנורה-מבטחים-פנסיה---מסלול-יעד-לפרישה-2055.xlsx",
+       "text": "",
+       "ctx": "2024 31.03"
+      },
+      {
+       "file": "https://cdn.menoramivt.co.il/public/docs/20240320/תרומת-אפיקי-השקעה-לתשואה-הכוללת-מנורה-מבטחים-פנסיה--יעד-2055.xlsx",
+       "text": "",
+       "ctx": "2023 31.12"
+      }
+     ]
+    },
+    {
+     "url": "https://www.menoramivt.co.il/funds/pension-and-gemel/pension-plans/tradable-stocks-plan",
+     "links": 235,
+     "followed": [],
+     "files": 3,
+     "clicked": 0,
+     "captured": 0,
+     "selected": [
+      "https://cdn.menoramivt.co.il/public/docs/20260201/מדיניות-השקעה-לשנת-2026-מנורה-מבטחים-פנסיה-מניות-סחיר-15783.xlsx"
+     ],
+     "unselected_files": [
+      {
+       "file": "https://cdn.menoramivt.co.il/public/docs/20260720/תרומת-אפיקי-השקעה-לתשואה-הכוללת---מנורה-מבטחים-פנסיה-מניות-סחיר.xlsx",
+       "text": "",
+       "ctx": "2026 נכון לרבעון 30.06"
+      },
+      {
+       "file": "https://cdn.menoramivt.co.il/public/docs/20260503/תרומת-אפיקי-השקעה-לתשואה-הכוללת---מנורה-מבטחים-פנסיה-מניות-סחיר.xlsx",
+       "text": "",
+       "ctx": "2026 נכון לרבעון 31.03"
+      }
+     ]
+    },
+    {
+     "url": "https://www.menoramivt.co.il/funds/pension-and-gemel/sum-assets-management-fee/gemel-hishtalmut-assets-list",
+     "links": 245,
+     "followed": [],
+     "files": 17,
+     "clicked": 0,
+     "captured": 0,
+     "selected": [],
+     "unselected_files": [
+      {
+       "file": "https://cdn.menoramivt.co.il/public/docs/20260817/512245812_gm_p_0226.xlsx",
+       "text": "",
+       "ctx": "30.06.2026"
+      },
+      {
+       "file": "https://cdn.menoramivt.co.il/public/docs/20260618/512245812_gm_p_0126.xlsx",
+       "text": "",
+       "ctx": "31.03.2026"
+      },
+      {
+       "file": "https://cdn.menoramivt.co.il/public/docs/20260329/512245812_gm_p_0425.xlsx",
+       "text": "",
+       "ctx": "31.12.2025"
+      },
+      {
+       "file": "https://cdn.menoramivt.co.il/public/docs/20251202/512245812_gm_0325.xlsx",
+       "text": "",
+       "ctx": "30.09.2025"
+      },
+      {
+       "file": "https://cdn.menoramivt.co.il/public/docs/20250901/512245812_gm_p_0225.xlsx",
+       "text": "",
+       "ctx": "30.06.2025"
+      },
+      {
+       "file": "https://cdn.menoramivt.co.il/public/docs/20250605/512245812_gm_p_0125.xlsx",
+       "text": "",
+       "ctx": "31.03.2025"
+      },
+      {
+       "file": "https://cdn.menoramivt.co.il/public/docs/20250408/512245812_gm_p_0424.xlsx",
+       "text": "",
+       "ctx": "31.12.2024"
+      },
+      {
+       "file": "https://cdn.menoramivt.co.il/public/docs/20241205/512245812_gm_p_0324.xlsx",
+       "text": "",
+       "ctx": "30.09.2024"
+      },
+      {
+       "file": "https://cdn.menoramivt.co.il/public/docs/20240905/512245812_gm_p_0224.xlsx",
+       "text": "",
+       "ctx": "30.06.2024"
+      },
+      {
+       "file": "https://cdn.menoramivt.co.il/public/docs/20240624/512245812_gm_p_0124.xlsx",
+       "text": "",
+       "ctx": "31.03.2024"
+      },
+      {
+       "file": "https://cdn.menoramivt.co.il/public/docs/20240404/512245812_gsum_p423.xlsx",
+       "text": "",
+       "ctx": "31.12.2023"
+      },
+      {
+       "file": "https://cdn.menoramivt.co.il/public/docs/20231207/512245812_gsum_p323.xlsx",
+       "text": "",
+       "ctx": "30.09.2023"
+      },
+      {
+       "file": "https://cdn.menoramivt.co.il/public/docs/20230904/512245812_gsum_p223.xlsx",
+       "text": "",
+       "ctx": "30.06.2023"
+      },
+      {
+       "file": "https://cdn.menoramivt.co.il/public/docs/20230604/512245812_gsum_p123.xlsx",
+       "text": "",
+       "ctx": "31.03.2023"
+      },
+      {
+       "file": "https://cdn.menoramivt.co.il/public/docs/20230511/512245812_gsum_p422.xlsx",
+       "text": "",
+       "ctx": "31.12.2022"
+      },
+      {
+       "file": "https://cdn.menoramivt.co.il/public/docs/20230511/512245812_gsum_p322.xlsx",
+       "text": "",
+       "ctx": "30.09.2022"
+      },
+      {
+       "file": "https://cdn.menoramivt.co.il/public/docs/20240408/512245812_gsum_p222.xlsx",
+       "text": "",
+       "ctx": "30.06.2022"
+      }
+     ]
+    },
+    {
+     "url": "https://www.menoramivt.co.il/funds/pension-and-gemel/sum-assets-management-fee/pos-assets-list",
+     "links": 268,
+     "followed": [],
+     "files": 34,
+     "clicked": 0,
+     "captured": 0,
+     "selected": [],
+     "unselected_files": [
+      {
+       "file": "https://cdn.menoramivt.co.il/public/docs/20260203/12.25-הרכב-נכסים-מנורה-מבטחים-פנסיה.xlsx",
+       "text": "",
+       "ctx": "מנורה מבטחים פנסיה - הרכב השקעות של הקרן לתקופה של 12 חודשים - לחצו כאן"
+      },
+      {
+       "file": "https://cdn.menoramivt.co.il/public/docs/20260915/08.26-הרכב-נכסים-מנורה-מבטחים-פנסיה.xlsx",
+       "text": "לחצו כאן",
+       "ctx": "מנורה מבטחים פנסיה - הרכב השקעות של הקרן לתקופה של 12 חודשים - לחצו כאן"
+      },
+      {
+       "file": "https://cdn.menoramivt.co.il/public/docs/20251215/11.25-הרכב-נכסים-מנורה-מבטחים-פנסיה.xlsx",
+       "text": "",
+       "ctx": "מנורה מבטחים פנסיה - הרכב השקעות של הקרן לתקופה של 12 חודשים - לחצו כאן"
+      },
+      {
+       "file": "https://cdn.menoramivt.co.il/public/docs/20260915/08.26-הרכב-נכסים-מנורה-מבטחים-משלימה.xlsx",
+       "text": "לחצו כאן",
+       "ctx": "מנורה מבטחים משלימה - הרכב השקעות הקרן לתקופה של 12 חודשים - לחצו כאן"
+      },
+      {
+       "file": "https://cdn.menoramivt.co.il/public/docs/20260817/512245812_pn_p_0226.xlsx",
+       "text": "",
+       "ctx": "30.06.2026"
+      },
+      {
+       "file": "https://cdn.menoramivt.co.il/public/docs/20260618/512245812_pn_p_0126.xlsx",
+       "text": "",
+       "ctx": "31.03.2026"
+      },
+      {
+       "file": "https://cdn.menoramivt.co.il/public/docs/20260329/512245812_pn_p_0425.xlsx",
+       "text": "",
+       "ctx": "31.12.2025"
+      },
+      {
+       "file": "https://cdn.menoramivt.co.il/public/docs/20251203/512245812_pn_p_0325.xlsx",
+       "text": "",
+       "ctx": "30.09.2025"
+      },
+      {
+       "file": "https://cdn.menoramivt.co.il/public/docs/20250901/512245812_pn_p_0225.xlsx",
+       "text": "",
+       "ctx": "30.06.2025"
+      },
+      {
+       "file": "https://cdn.menoramivt.co.il/public/general/20250605/assets_report_2025.xlsx",
+       "text": "",
+       "ctx": "31.03.2025"
+      },
+      {
+       "file": "https://cdn.menoramivt.co.il/public/docs/20250408/512245812_pn_p_0424.xlsx",
+       "text": "",
+       "ctx": "31.12.2024"
+      },
+      {
+       "file": "https://cdn.menoramivt.co.il/public/docs/20241205/512245812_pn_p_0324.xlsx",
+       "text": "",
+       "ctx": "30.09.2024"
+      },
+      {
+       "file": "https://cdn.menoramivt.co.il/public/docs/20240905/512245812_pn_p_0224.xlsx",
+       "text": "",
+       "ctx": "30.06.2024"
+      },
+      {
+       "file": "https://cdn.menoramivt.co.il/public/docs/20240624/512245812_pn_p_0124.xlsx",
+       "text": "",
+       "ctx": "31.03.2024"
+      },
+      {
+       "file": "https://cdn.menoramivt.co.il/public/docs/20240404/512245812_psum_p423.xlsx",
+       "text": "",
+       "ctx": "31.12.2023"
+      },
+      {
+       "file": "https://cdn.menoramivt.co.il/public/docs/20231204/512245812_psum_p323.xlsx",
+       "text": "",
+       "ctx": "30.09.2023"
+      },
+      {
+       "file": "https://cdn.menoramivt.co.il/public/docs/20230905/512245812_psum_p223.xlsx",
+       "text": "",
+       "ctx": "30.06.2023"
+      },
+      {
+       "file": "https://cdn.menoramivt.co.il/public/docs/20230601/512245812_psum_p123.xlsx",
+       "text": "",
+       "ctx": "31.03.2023"
+      },
+      {
+       "file": "https://cdn.menoramivt.co.il/public/docs/20230511/512245812_psum_p422.xlsx",
+       "text": "",
+       "ctx": "31.12.2022"
+      },
+      {
+       "file": "https://cdn.menoramivt.co.il/public/docs/20240410/512245812_psum_p322.xlsx",
+       "text": "",
+       "ctx": "30.09.2022"
+      },
+      {
+       "file": "https://cdn.menoramivt.co.il/public/docs/20240408/512245812_psum_p222.xlsx",
+       "text": "",
+       "ctx": "30.06.2022"
+      },
+      {
+       "file": "https://cdn.menoramivt.co.il/public/docs/20260817/512245812_ca_p_0226.xlsx",
+       "text": "",
+       "ctx": "30.06.2026"
+      },
+      {
+       "file": "https://cdn.menoramivt.co.il/public/docs/20260618/512245812_ca_p_0126.xlsx",
+       "text": "",
+       "ctx": "31.03.2026"
+      },
+      {
+       "file": "https://cdn.menoramivt.co.il/public/docs/20260329/512245812_ca_p_0425.xlsx",
+       "text": "",
+       "ctx": "31.12.2025"
+      },
+      {
+       "file": "https://cdn.menoramivt.co.il/public/docs/20251203/512245812_ca_p_0325.xlsx",
+       "text": "",
+       "ctx": "30.09.2025"
+      }
+     ]
+    },
+    {
+     "url": "https://www.menoramivt.co.il/funds/pension-and-gemel/pension-procedures/pension-plan-code",
+     "links": 228,
+     "followed": [],
+     "files": 0,
+     "clicked": 0,
+     "captured": 0,
+     "selected": [],
+     "unselected_files": []
+    }
+   ],
+   "new_docs": 9,
+   "found": 470,
+   "selected": 134,
+   "had": 125,
+   "head_skip": 0,
+   "old_skip": 100,
+   "mode": "map",
+   "errors": [],
+   "diag": [
+    "מנורה מבטחים פנסיה: links=231 files=0 clicked=0 captured=0 selected=0",
+    "מנורה מבטחים פנסיה: links=232 files=1 clicked=0 captured=0 selected=0",
+    "   ? 8678---גמל-להשקעה-אגח.pdf | לחצו כאן | ",
+    "מנורה מבטחים פנסיה: links=231 files=0 clicked=0 captured=0 selected=0",
+    "מנורה מבטחים פנסיה: links=231 files=0 clicked=0 captured=0 selected=0",
+    "מנורה מבטחים פנסיה: links=233 files=2 clicked=0 captured=0 selected=0",
+    "   ? תעודות-עד-כא-טבת-תשפ''ז-31.12.26-.pdf | תעודת כשרות - בית יוסף | תעודת כשרות - בית יוסף",
+    "   ? בדצ-מונגש--מנורה-קופות-גמל-להשקעה.pdf | תעודת כשרות - בד\"צ | תעודת כשרות - בד\"צ",
+    "מנורה מבטחים פנסיה: links=234 files=3 clicked=0 captured=0 selected=0",
+    "   ? תעודות-עד-כא-טבת-תשפ''ז-31.12.26-.pdf | תעודת כשרות - בית יוסף | תעודת כשרות - בית יוסף",
+    "   ? בדצ-מונגש--מנורה-קופות-גמל-להשקעה.pdf | תעודת כשרות - בד\"צ | תעודת כשרות - בד\"צ",
+    "   ? תעודת-כשרות-ועד-ההלכה.pdf | תעודת כשרות - גלאט הון | תעודת כשרות - גלאט הון",
+    "מנורה מבטחים פנסיה: links=234 files=3 clicked=0 captured=0 selected=0",
+    "   ? 13353---גמל-להשקעה-מדדי-מניות-חול.pdf | לחצו כאן | ",
+    "   ? תעודות-עד-כא-טבת-תשפ''ז-31.12.26-.pdf | תעודת כשרות - בית יוסף | תעודת כשרות - בית יוסף",
+    "   ? בדצ-מונגש--מנורה-קופות-גמל-להשקעה.pdf | תעודת כשרות - בד\"צ | תעודת כשרות - בד\"צ",
+    "מנורה מבטחים פנסיה: links=232 files=1 clicked=0 captured=0 selected=0",
+    "   ? 13354---גמל-להשקעה-חול.pdf | לחצו כאן | ",
+    "מנורה מבטחים פנסיה: links=231 files=0 clicked=0 captured=0 selected=0",
+    "מנורה מבטחים פנסיה: links=233 files=1 clicked=0 captured=0 selected=0",
+    "   ? בדצ-מונגש--מנורה-השתלמות.pdf | תעודת כשרות - בד\"צ | תעודת כשרות - בד\"צ",
+    "מנורה מבטחים פנסיה: links=231 files=1 clicked=0 captured=0 selected=0",
+    "   ? 11409---השתלמות-פאסיבי-מדדי-אגח-עד-15-אחוז.pdf | לחצו כאן | ",
+    "מנורה מבטחים פנסיה: links=233 files=1 clicked=0 captured=0 selected=0",
+    "   ? 9662--השתלמות-עד-20-אחוז-מניות.pdf | לחצו כאן | ",
+    "מנורה מבטחים פנסיה: links=233 files=0 clicked=0 captured=0 selected=0",
+    "מנורה מבטחים פנסיה: links=231 files=0 clicked=0 captured=0 selected=0",
+    "מנורה מבטחים פנסיה: links=233 files=2 clicked=0 captured=0 selected=0",
+    "   ? תעודות-עד-כא-טבת-תשפ''ז-31.12.26-.pdf | תעודת כשרות - בית יוסף | תעודת כשרות - בית יוסף",
+    "   ? בדצ-מונגש--מנורה-קופות-גמל.pdf | תעודת כשרות - בד\"צ | תעודת כשרות - בד\"צ",
+    "מנורה מבטחים פנסיה: links=231 files=0 clicked=0 captured=0 selected=0",
+    "מנורה מבטחים פנסיה: links=231 files=0 clicked=0 captured=0 selected=0",
+    "מנורה מבטחים פנסיה: links=231 files=0 clicked=0 captured=0 selected=0",
+    "מנורה מבטחים פנסיה: links=233 files=2 clicked=0 captured=0 selected=0",
+    "   ? תעודות-עד-כא-טבת-תשפ''ז-31.12.26-.pdf | תעודת כשרות - בית יוסף | תעודת כשרות - בית יוסף",
+    "   ? בדצ-מונגש--מנורה-קופות-גמל.pdf | תעודת כשרות - בד\"צ | תעודת כשרות - בד\"צ",
+    "מנורה מבטחים פנסיה: links=237 files=5 clicked=0 captured=0 selected=2",
+    "מנורה מבטחים פנסיה: links=231 files=0 clicked=0 captured=0 selected=0",
+    "מנורה מבטחים פנסיה: links=241 files=0 clicked=0 captured=0 selected=0",
+    "מנורה מבטחים פנסיה: links=242 files=0 clicked=0 captured=0 selected=0",
+    "מנורה מבטחים פנסיה: links=234 files=0 clicked=0 captured=0 selected=0",
+    "מנורה מבטחים פנסיה: links=248 files=0 clicked=0 captured=0 selected=0",
+    "מנורה מבטחים פנסיה: links=232 files=0 clicked=0 captured=0 selected=0",
+    "מנורה מבטחים פנסיה: links=231 files=0 clicked=0 captured=0 selected=0",
+    "מנורה מבטחים פנסיה: links=231 files=0 clicked=0 captured=0 selected=0",
+    "מנורה מבטחים פנסיה: links=233 files=2 clicked=0 captured=0 selected=0",
+    "   ? תעודות-עד-כא-טבת-תשפ''ז-31.12.26-.pdf | תעודת כשרות - בית יוסף | תעודת כשרות - בית יוסף",
+    "   ? 1768383334___מנורה_פנסיה_מקיפה.pdf | תעודת כשרות - בד\"צ | תעודת כשרות - בד\"צ",
+    "מנורה מבטחים פנסיה: links=231 files=0 clicked=0 captured=0 selected=0",
+    "מנורה מבטחים פנסיה: links=231 files=0 clicked=0 captured=0 selected=0",
+    "מנורה מבטחים פנסיה: links=231 files=0 clicked=0 captured=0 selected=0",
+    "מנורה מבטחים פנסיה: links=268 files=31 clicked=0 captured=0 selected=13",
+    "מנורה מבטחים פנסיה: links=257 files=0 clicked=0 captured=0 selected=0",
+    "מנורה מבטחים פנסיה: links=237 files=4 clicked=0 captured=0 selected=0",
+    "   ? מבטחים-חגים-1154-תקנון-2014-10.pdf |  | שם מסמך תקנון הקופה נכון לתאריך 07.10.2014",
+    "   ? מבטחים-חגים-1154-תקנון-2013-12.pdf |  | שם מסמך תקנון הקופה נכון לתאריך 31.12.2013",
+    "   ? מבטחים-חגים-1154-תקנון-2013-02.pdf |  | שם מסמך תקנון קופה חגים והבראה נכון לתאריך 25.02.2013",
+    "   ? מבטחים-חגים-1154-תקנון-2005-08.pdf |  | שם מסמך תקנון הקופה נכון לתאריך 01.08.2005",
+    "מנורה מבטחים פנסיה: links=237 files=4 clicked=0 captured=0 selected=0",
+    "   ? מבטחים-יותר-ד'-119-תקנון-2013-12-31.pdf |  | שם מסמך תקנון הקופה נכון לתאריך 31.12.2013",
+    "   ? מבטחים-יותר-ד'-119-תקנון-2013-12-11.pdf |  | שם מסמך תקנון מעודכן נכון לתאריך 11.12.2013",
+    "   ? מבטחים-יותר-ד'-119-תקנון-2013-01.pdf |  | שם מסמך תקנון נכון לתאריך 01.01.2013",
+    "   ? מבטחים-יותר-ד'-119-תקנון-2011-06.pdf |  | שם מסמך תקנון נכון לתאריך 12.05.2011",
+    "מנורה מבטחים פנסיה: links=231 files=0 clicked=0 captured=0 selected=0",
+    "מנורה מבטחים פנסיה: links=229 files=0 clicked=0 captured=0 selected=0",
+    "מנורה מבטחים פנסיה: links=233 files=3 clicked=0 captured=0 selected=0",
+    "   ? מבטחים-אמיר-כללי-260-תקנון-2013-12.pdf |  | שם מסמך תקנון הקופה נכון לתאריך 31.12.2013",
+    "   ? מבטחים-אמיר-כללי-260-תקנון-2010-01.pdf |  | שם מסמך תקנון קופה נכון לתאריך 01.01.2010",
+    "   ? מבטחים-אמיר-כללי-260-תקנון-2009-04.pdf |  | שם מסמך תקנון קופה נכון לתאריך 24.04.2009",
+    "מנורה מבטחים פנסיה: links=235 files=2 clicked=0 captured=0 selected=0",
+    "   ? מבטחים-יותר-א'-530-תקנון-2013-12.pdf |  | שם מסמך תקנון הקופה נכון לתאריך 31.12.2013",
+    "   ? מבטחים-יותר-א'-530-תקנון-2008-11.pdf |  | שם מסמך תקנון הקופה נכון לתאריך 10.11.2008",
+    "מנורה מבטחים פנסיה: links=236 files=3 clicked=0 captured=0 selected=0",
+    "   ? מבטחים-יותר-ב-531-תקנון-2013-12-31.pdf |  | שם מסמך תקנון הקופה נכון לתאריך 31.12.2013",
+    "   ? מבטחים-יותר-ב-531-תקנון-2013-12-11.pdf |  | שם מסמך תקנון הקופה נכון לתאריך 11.12.2013",
+    "   ? מבטחים-יותר-ב-531-תקנון-2008-11-10.pdf |  | שם מסמך תקנון נכון לתאריך 10.11.2008",
+    "מנורה מבטחים פנסיה: links=234 files=1 clicked=0 captured=0 selected=0",
+    "   ? מבטחים-יותר-ג'-532-תקנון-2013-12-31.pdf |  | שם מסמך תקנון הקופה נכון לתאריך 31.12.2013",
+    "מנורה מבטחים פנסיה: links=231 files=0 clicked=0 captured=0 selected=0",
+    "מנורה מבטחים פנסיה: links=231 files=0 clicked=0 captured=0 selected=0",
+    "מנורה מבטחים פנסיה: links=231 files=0 clicked=0 captured=0 selected=0",
+    "מנורה מבטחים פנסיה: links=230 files=1 clicked=0 captured=0 selected=0",
+    "   ? 826.pdf |  | תקנון הקופה",
+    "מנורה מבטחים פנסיה: links=232 files=1 clicked=0 captured=0 selected=0",
+    "   ? 13355---תגמולים-ופיצויים-חול.pdf | לחצו כאן | ",
+    "מנורה מבטחים פנסיה: links=233 files=2 clicked=0 captured=0 selected=0",
+    "   ? תעודות-עד-כא-טבת-תשפ''ז-31.12.26-.pdf | תעודת כשרות - בית יוסף | תעודת כשרות - בית יוסף",
+    "   ? בדצ-מונגש--מנורה-קופות-גמל.pdf | תעודת כשרות - בד\"צ | תעודת כשרות - בד\"צ",
+    "מנורה מבטחים פנסיה: links=238 files=5 clicked=0 captured=0 selected=0",
+    "   ? מבטחים-אמיר-ידוע-533-תקנון-2013-12.pdf |  | שם מסמך תקנון הקופה נכון לתאריך 31.12.2013",
+    "   ? מבטחים-אמיר-ידוע-533-תקנון-2010-01.pdf |  | שם מסמך תקנון קופה נכון לתאריך 01.01.2010",
+    "   ? מבטחים-אמיר-ידוע-533-תקנון-2009-04.pdf |  | שם מסמך תקנון קופה נכון לתאריך 23.04.2009",
+    "   ? מבטחים-אמיר-ידוע-533-תקנון-2008-08.pdf |  | שם מסמך תקנון קופה נכון לתאריך 20.08.2008",
+    "   ? מבטחים-אמיר-ידוע-533-תקנון-2007-06.pdf |  | שם מסמך תקנון קופה נכון לתאריך 25.06.2007",
+    "מנורה מבטחים פנסיה: links=238 files=5 clicked=0 captured=0 selected=0",
+    "   ? מבטחים-מדד-בגין-536-תקנון-2013-12.pdf |  | שם מסמך תקנון הקופה נכון לתאריך 31.12.2013",
+    "   ? מבטחים-מדד-בגין-536-תקנון-2010-01.pdf |  | שם מסמך תקנון קופה נכון לתאריך 01.01.2010",
+    "   ? מבטחים-מדד-בגין-536-תקנון-2009-04.pdf |  | שם מסמך תקנון קופה נכון לתאריך 23.04.2009",
+    "   ? מבטחים-מדד-בגין-536-תקנון-2008-08.pdf |  | שם מסמך תקנון קופה נכון לתאריך 20.08.2008",
+    "   ? מבטחים-מדד-בגין-536-תקנון-2007-06.pdf |  | שם מסמך תקנון קופה נכון לתאריך 25.06.2007",
+    "מנורה מבטחים פנסיה: links=231 files=0 clicked=0 captured=0 selected=0",
+    "מנורה מבטחים פנסיה: links=231 files=0 clicked=0 captured=0 selected=0",
+    "מנורה מבטחים פנסיה: links=231 files=0 clicked=0 captured=0 selected=0",
+    "מנורה מבטחים פנסיה: links=233 files=2 clicked=0 captured=0 selected=0",
+    "   ? תעודות-עד-כא-טבת-תשפ''ז-31.12.26-.pdf | תעודת כשרות - בית יוסף | תעודת כשרות - בית יוסף",
+    "   ? בדצ-מונגש--מנורה-קופות-גמל.pdf | תעודת כשרות - בד\"צ | תעודת כשרות - בד\"צ",
+    "מנורה מבטחים פנסיה: links=230 files=0 clicked=0 captured=0 selected=0",
+    "מנורה מבטחים פנסיה: links=232 files=0 clicked=0 captured=0 selected=0",
+    "מנורה מבטחים פנסיה: links=231 files=1 clicked=0 captured=0 selected=0",
+    "   ? 13357---השתלמות-חול.pdf | לחצו כאן | ",
+    "מנורה מבטחים פנסיה: links=233 files=1 clicked=0 captured=0 selected=0",
+    "   ? 1409--השתלמות-מניות-חול.pdf | לחצו כאן | ",
+    "מנורה מבטחים פנסיה: links=232 files=0 clicked=0 captured=0 selected=0",
+    "מנורה מבטחים פנסיה: links=232 files=0 clicked=0 captured=0 selected=0",
+    "מנורה מבטחים פנסיה: links=232 files=0 clicked=0 captured=0 selected=0",
+    "מנורה מבטחים פנסיה: links=267 files=30 clicked=0 captured=0 selected=12",
+    "מנורה מבטחים פנסיה: links=268 files=31 clicked=0 captured=0 selected=11",
+    "מנורה מבטחים פנסיה: links=271 files=34 clicked=0 captured=0 selected=13",
+    "מנורה מבטחים פנסיה: links=266 files=29 clicked=0 captured=0 selected=10",
+    "מנורה מבטחים פנסיה: links=264 files=27 clicked=0 captured=0 selected=8",
+    "מנורה מבטחים פנסיה: links=256 files=19 clicked=0 captured=0 selected=5",
+    "מנורה מבטחים פנסיה: links=237 files=5 clicked=0 captured=0 selected=2",
+    "מנורה מבטחים פנסיה: links=266 files=29 clicked=0 captured=0 selected=7",
+    "מנורה מבטחים פנסיה: links=267 files=30 clicked=0 captured=0 selected=12",
+    "מנורה מבטחים פנסיה: links=263 files=30 clicked=0 captured=0 selected=12",
+    "מנורה מבטחים פנסיה: links=264 files=31 clicked=0 captured=0 selected=13",
+    "מנורה מבטחים פנסיה: links=264 files=31 clicked=0 captured=0 selected=13",
+    "מנורה מבטחים פנסיה: links=235 files=3 clicked=0 captured=0 selected=1",
+    "מנורה מבטחים פנסיה: links=245 files=17 clicked=0 captured=0 selected=0",
+    "   ? 512245812_gm_p_0226.xlsx |  | 30.06.2026",
+    "   ? 512245812_gm_p_0126.xlsx |  | 31.03.2026",
+    "   ? 512245812_gm_p_0425.xlsx |  | 31.12.2025",
+    "   ? 512245812_gm_0325.xlsx |  | 30.09.2025",
+    "   ? 512245812_gm_p_0225.xlsx |  | 30.06.2025",
+    "   ? 512245812_gm_p_0125.xlsx |  | 31.03.2025",
+    "מנורה מבטחים פנסיה: links=268 files=34 clicked=0 captured=0 selected=0",
+    "   ? 12.25-הרכב-נכסים-מנורה-מבטחים-פנסיה.xlsx |  | מנורה מבטחים פנסיה - הרכב השקעות של הקרן לתקופה של 12 חודשים",
+    "   ? 08.26-הרכב-נכסים-מנורה-מבטחים-פנסיה.xlsx | לחצו כאן | מנורה מבטחים פנסיה - הרכב השקעות של הקרן לתקופה של 12 חודשים",
+    "   ? 11.25-הרכב-נכסים-מנורה-מבטחים-פנסיה.xlsx |  | מנורה מבטחים פנסיה - הרכב השקעות של הקרן לתקופה של 12 חודשים",
+    "   ? 08.26-הרכב-נכסים-מנורה-מבטחים-משלימה.xlsx | לחצו כאן | מנורה מבטחים משלימה - הרכב השקעות הקרן לתקופה של 12 חודשים -",
+    "   ? 512245812_pn_p_0226.xlsx |  | 30.06.2026",
+    "   ? 512245812_pn_p_0126.xlsx |  | 31.03.2026",
+    "מנורה מבטחים פנסיה: links=228 files=0 clicked=0 captured=0 selected=0"
+   ],
+   "new_files": [
+    "0cc846252d59_מדיניות-השקעה-לשנת-2026-מנורה-מבטחים-משלימה-עוקב-מדדים-למקבלי-קצבה-15673.xlsx",
+    "d8bedf8beea8_מדיניות-השקעה-לשנת-2025-מנורה-מבטחים-משלימה-עוקב-מדדים-למקבלי-קצבה-15673.xlsx",
+    "7fb1115e0a36_מדיניות-השקעה-לשנת-2022-מבטחים-החדשה---פנסיונרים-חדשים.xlsx",
+    "cb2e678404d3_מדיניות-השקעה-לשנת-2021-מבטחים-החדשה---מסלול-פנסיונרים-חדשים.xlsx",
+    "b62b5fa6596c_מדיניות-השקעה-לשנת-2020-מנורה-מבטחים-פנסיה---תיק-מקבלי-פנסיה-חדשים.xlsx",
+    "2fd62c5c0f2b_new-pension-Investment-policy-2019.xlsx",
+    "1cb17e08c6f2_new-pension-Investment-policy-2018.xlsx",
+    "75bc265995bd_מדיניות-השקעה-לשנת-2026-מנורה-מבטחים-פנסיה-עוקב-מדדים-למקבלי-קצבה-15661.xlsx",
+    "aa30e2c7380a_מדיניות-השקעה-לשנת-2025-מנורה-מבטחים-פנסיה-עוקב-מדדים-למקבלי-קצבה-15661.xlsx"
+   ]
   }
  ]
 }
