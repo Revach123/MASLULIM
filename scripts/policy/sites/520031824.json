@@ -29,10 +29,12 @@
   "גמל"
  ],
  "search": false,
- "rev": 9,
+ "rev": 10,
  "home_source": "web_search",
  "max_pages": 20,
  "via": "extension",
- "note": "403 לשרתי ענן -> תוסף. רום: קבצים ב-/_Uploads/dbsAttachedFiles/investment-forecast-<מסלול>-YYYY.pdf",
- "join_split_letter": true
+ "note": "403 לשרתי ענן -> תוסף. רום: קבצים ב-/_Uploads/dbsAttachedFiles/investment-forecast-<מסלול>-YYYY.pdf | 2026-10-02: מעקב לכל מאמרי CategoryID=217 (מסלול עוקב 15371 לא היה ברשימה הקבועה)",
+ "join_split_letter": true,
+ "follow_rx": "CategoryID=217&ArticleID=\\d+",
+ "follow_max": 15
 }
