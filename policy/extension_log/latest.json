@@ -1,7 +1,7 @@
 {
  "extension_version": "2.48.0",
  "started": "2026-10-02T13:28:07.012Z",
- "updated": "2026-10-02T13:29:24.081Z",
+ "updated": "2026-10-02T13:30:01.942Z",
  "final": false,
  "stopped": false,
  "rules_from_github": true,
@@ -82,31 +82,31 @@
  "active": [
   {
    "name": "מנורה מבטחים פנסיה וגמל בע\"מ",
-   "page": "https://www.menoramivt.co.il/funds/pension-and-gemel/gemel-hishtalmut-list/top-savings/8683",
-   "page_no": 4,
+   "page": "https://www.menoramivt.co.il/funds/pension-and-gemel/gemel-hishtalmut-list/top-savings/13353",
+   "page_no": 8,
    "pages": 50,
-   "step": "[3 במקביל] מוריד קובץ 9/9"
+   "step": "[3 במקביל] מוריד קובץ 5/7"
   },
   {
    "name": "אלטשולר שחם גמל ופנסיה בע\"מ",
-   "page": "https://www.as-invest.co.il/interstedin/חיסכון-והשקעה/קופת-גמל-להשקעה-המסלולים-שלנו/",
-   "page_no": 3,
-   "pages": 20,
-   "step": "ממתין לתור לחיצות ההורדה"
+   "page": "https://www.as-invest.co.il/interstedin/gemel/",
+   "page_no": 5,
+   "pages": 34,
+   "step": "טוען עמוד"
   },
   {
    "name": "החברה לניהול קופת התגמולים והפנסיה של עובדי הסוכנות היהודית לארץ ישראל בע\"מ",
-   "page": "https://www.jewishagency-kupa.org.il/%d7%97%d7%91%d7%a8%d7%99-%d7%95%d7%a2%d7%93%d7%aa-%d7%94%d7%a9%d7%a7%d7%a2%d7%95%d7%aa/",
-   "page_no": 4,
+   "page": "https://www.jewishagency-kupa.org.il/%d7%93%d7%95%d7%97%d7%95%d7%aa-%d7%a9%d7%a0%d7%aa%d7%99%d7%99%d7%9d/",
+   "page_no": 6,
    "pages": 10,
-   "step": "ממתין לתור לחיצות ההורדה"
+   "step": "טוען עמוד"
   },
   {
    "name": "מנורה מבטחים והסתדרות המהנדסים ניהול קופות גמל בע\"מ",
-   "page": "https://www.menoramivt.co.il/funds/about-menora/engineers/omega-fund/omega-1446",
-   "page_no": 3,
+   "page": "https://www.menoramivt.co.il/funds/about-menora/engineers/omega-fund/omega-9803",
+   "page_no": 4,
    "pages": 11,
-   "step": "ממתין לתור לחיצות ההורדה"
+   "step": "פותח אקורדיונים ואוסף קישורים"
   }
  ],
  "sites": []
