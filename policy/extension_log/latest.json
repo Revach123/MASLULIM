@@ -1,7 +1,7 @@
 {
  "extension_version": "2.41.0",
  "started": "2026-10-02T09:50:40.187Z",
- "updated": "2026-10-02T10:09:16.874Z",
+ "updated": "2026-10-02T10:11:27.862Z",
  "final": false,
  "stopped": false,
  "rules_from_github": true,
@@ -75,17 +75,17 @@
  "active": [
   {
    "name": "מנורה מבטחים פנסיה וגמל בע\"מ",
-   "page": "https://www.menoramivt.co.il/funds/pension-and-gemel/pension-plans/halacha-track",
-   "page_no": 55,
+   "page": "https://www.menoramivt.co.il/funds/pension-and-gemel/sum-assets-management-fee/pos-assets-list",
+   "page_no": 63,
    "pages": 77,
-   "step": "פותח אקורדיונים ואוסף קישורים"
+   "step": "טוען עמוד"
   },
   {
    "name": "אלטשולר שחם גמל ופנסיה בע\"מ",
-   "page": "https://www.as-invest.co.il/interstedin/pension/comprehensive-fund/%D7%90%D7%9C%D7%98%D7%A9%D7%95%D7%9C%D7%A8-%D7%A9%D7%97%D7%9D-%D7%A4%D7%A0%D7%A1%D7%99%D7%94-%D7%9E%D7%A7%D7%99%D7%A4%D7%94-%D7%9C%D7%9E%D7%A7%D7%91%D7%9C%D7%99-%D7%A7%D7%A6%D7%91%D7%94-%D7%A7%D7%99%D7%99%D7%9E%D7%99%D7%9D/",
-   "page_no": 62,
+   "page": "https://www.as-invest.co.il/interstedin/pension/comprehensive-fund/%D7%90%D7%9C%D7%98%D7%A9%D7%95%D7%9C%D7%A8-%D7%A9%D7%97%D7%9D-%D7%A4%D7%A0%D7%A1%D7%99%D7%94-%D7%9E%D7%A7%D7%99%D7%A4%D7%94-%D7%A2%D7%95%D7%A7%D7%91-%D7%9E%D7%93%D7%93%D7%99%D7%9D-%D7%92%D7%9E%D7%99%D7%A9/",
+   "page_no": 67,
    "pages": 103,
-   "step": "טוען עמוד"
+   "step": "מוריד קובץ 1/4"
   }
  ],
  "sites": [
