@@ -70,6 +70,46 @@
   "pages": [
    {
     "product": "פנסיה",
+    "url": "https://www.menoramivt.co.il/links/pension-and-gemel/mashlima"
+   },
+   {
+    "product": "גמל",
+    "url": "https://www.menoramivt.co.il/links/pension-and-gemel/gemel-hishtalmut-list/kid-saving"
+   },
+   {
+    "product": "גמל",
+    "url": "https://www.menoramivt.co.il/links/pension-and-gemel/gemel-hishtalmut-list/compensation-funds"
+   },
+   {
+    "product": "גמל",
+    "url": "https://www.menoramivt.co.il/links/pension-and-gemel/gemel-hishtalmut-list/budget-pension-list"
+   },
+   {
+    "product": "פנסיה",
+    "url": "https://www.menoramivt.co.il/funds/pension-and-gemel/pension-plans/retire-track-2045"
+   },
+   {
+    "product": "פנסיה",
+    "url": "https://www.menoramivt.co.il/funds/pension-and-gemel/mashlima/mashlima-retire-track-2045"
+   },
+   {
+    "product": "גמל",
+    "url": "https://www.menoramivt.co.il/funds/pension-and-gemel/gemel-hishtalmut-list/savings-for-children/kids-halacha"
+   },
+   {
+    "product": "פנסיה",
+    "url": "https://www.menoramivt.co.il/funds/pension-and-gemel/pension-plans/menayot-14677"
+   },
+   {
+    "product": "פנסיה",
+    "url": "https://www.menoramivt.co.il/funds/pension-and-gemel/mashlima/mashlima-stock-abroad-track"
+   },
+   {
+    "product": "פנסיה",
+    "url": "https://www.menoramivt.co.il/funds/-pension-mashlima-14309"
+   },
+   {
+    "product": "פנסיה",
     "url": "https://www.menoramivt.co.il/list/pension-member-info/retirement-investment-tracks"
    },
    {
@@ -264,12 +304,12 @@
   "click": null,
   "clicks": null,
   "any_sheet": null,
-  "exclude": "about-insurance|participating-portfolio|מנורה-ביטוח|משתתף|reports-publishs|העברת-זכויות|קשורים|mash-year|_yield|_p\\d|תרומת-אפיקי|הוצאות-ישירות|pen-amit|דוח-חודשי",
+  "exclude": "about-insurance|participating-portfolio|מנורה-ביטוח|משתתף(?!ת)|reports-publishs|העברת-זכויות|קשורים|mash-year|_yield|_p\\d|תרומת-אפיקי|הוצאות-ישירות|pen-amit|דוח-חודשי",
   "settle_ms": null,
   "capture_ms": null,
   "download_rx": null,
-  "follow_max": 110,
-  "follow_rx": "/funds/(pension-and-gemel/|gemel-|pension-|Insurers-)|%2Ffunds%2F",
+  "follow_max": 140,
+  "follow_rx": "/funds/(pension-and-gemel/|gemel-|-?pension-|Insurers-)|%2Ffunds%2F",
   "timeout_min": 45,
   "download_delay_ms": null,
   "no_map": null,
@@ -776,9 +816,7 @@
    "https://www.menoramivt.co.il/funds/about-menora/engineers/omega-fund/about-menora.engineers.omega-fund.omega-15738",
    "https://www.menoramivt.co.il/funds/about-menora/engineers/omega-fund/omega-14418",
    "https://www.menoramivt.co.il/funds/about-menora/engineers/omega-fund/omega-1446",
-   "https://www.menoramivt.co.il/funds/about-menora/engineers/omega-fund/omega-286",
-   "https://www.menoramivt.co.il/funds/about-menora/engineers/omega-fund/omega-9803",
-   "https://www.menoramivt.co.il/funds/about-menora/engineers/omega-fund/omega-9802"
+   "https://www.menoramivt.co.il/funds/about-menora/engineers/omega-fund/omega-286"
   ]
  },
  {

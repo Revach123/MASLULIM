@@ -5,6 +5,46 @@
  "pages": [
   {
    "product": "פנסיה",
+   "url": "https://www.menoramivt.co.il/links/pension-and-gemel/mashlima"
+  },
+  {
+   "product": "גמל",
+   "url": "https://www.menoramivt.co.il/links/pension-and-gemel/gemel-hishtalmut-list/kid-saving"
+  },
+  {
+   "product": "גמל",
+   "url": "https://www.menoramivt.co.il/links/pension-and-gemel/gemel-hishtalmut-list/compensation-funds"
+  },
+  {
+   "product": "גמל",
+   "url": "https://www.menoramivt.co.il/links/pension-and-gemel/gemel-hishtalmut-list/budget-pension-list"
+  },
+  {
+   "product": "פנסיה",
+   "url": "https://www.menoramivt.co.il/funds/pension-and-gemel/pension-plans/retire-track-2045"
+  },
+  {
+   "product": "פנסיה",
+   "url": "https://www.menoramivt.co.il/funds/pension-and-gemel/mashlima/mashlima-retire-track-2045"
+  },
+  {
+   "product": "גמל",
+   "url": "https://www.menoramivt.co.il/funds/pension-and-gemel/gemel-hishtalmut-list/savings-for-children/kids-halacha"
+  },
+  {
+   "product": "פנסיה",
+   "url": "https://www.menoramivt.co.il/funds/pension-and-gemel/pension-plans/menayot-14677"
+  },
+  {
+   "product": "פנסיה",
+   "url": "https://www.menoramivt.co.il/funds/pension-and-gemel/mashlima/mashlima-stock-abroad-track"
+  },
+  {
+   "product": "פנסיה",
+   "url": "https://www.menoramivt.co.il/funds/-pension-mashlima-14309"
+  },
+  {
+   "product": "פנסיה",
    "url": "https://www.menoramivt.co.il/list/pension-member-info/retirement-investment-tracks"
   },
   {
@@ -198,19 +238,19 @@
   "פנסיה"
  ],
  "search": false,
- "rev": 21,
- "note": "מנורה: קובץ מדיניות לכל מסלול בעמוד המסלול (/funds/...), נחשף רק ברינדור. עמודי links/ = רשימות המסלולים; follow נכנס לכל מסלול בדפדפן. exclude: תיק ביטוח משתתף של מנורה ביטוח. 2026-10: חסרו עמודי מסלול (תקציב זמן 22 דק' נגמר אחרי 38 עמודים) -> עמודים ישירים, budget קצר, crawl_budget 45 דק'; משלימה הוחזרה (שייכת לחברה). 2026-10: Radware CAPTCHA חוסם את Actions אחרי כמה עמודים -> תוסף (כפתורי ההורדה עם aria-label 'להורדה' נלחצים ע\"י התוסף) | 2026-10-02: סדר העמודים - השתלמות/גמל להשקעה/משלימה/פנסיה (חסרים) קודם, עמודי מסלולי הגמל (מכוסים) בסוף | 2026-10-02: עמודי מסלול שהמעקב לא הגיע אליהם (גמל להשקעה top-savings, השתלמות 1114/11409/9662, S&P, קיימות, מור...) - כ-seed בראש הרשימה | יעד לפרישה 2035/2045/2050/2060/2065 (פנסיה+משלימה): retirement-investment-tracks כ-seed",
- "exclude": "about-insurance|participating-portfolio|מנורה-ביטוח|משתתף|reports-publishs|העברת-זכויות|קשורים|mash-year|_yield|_p\\d|תרומת-אפיקי|הוצאות-ישירות|pen-amit|דוח-חודשי",
- "follow": "/funds/(pension-and-gemel/(pension-plans|gemel-hishtalmut-list/(menroa-keren-hishtalmut|menora-gemel(-\\d+)?|top-savings|list-top-savings))/|(gemel|pension|gemel-mor|gemel-kayamut)-\\d+|Insurers-)",
- "max_pages": 110,
+ "rev": 22,
+ "note": "מנורה: קובץ מדיניות לכל מסלול בעמוד המסלול (/funds/...), נחשף רק ברינדור. עמודי links/ = רשימות המסלולים; follow נכנס לכל מסלול בדפדפן. exclude: תיק ביטוח משתתף של מנורה ביטוח. 2026-10: חסרו עמודי מסלול (תקציב זמן 22 דק' נגמר אחרי 38 עמודים) -> עמודים ישירים, budget קצר, crawl_budget 45 דק'; משלימה הוחזרה (שייכת לחברה). 2026-10: Radware CAPTCHA חוסם את Actions אחרי כמה עמודים -> תוסף (כפתורי ההורדה עם aria-label 'להורדה' נלחצים ע\"י התוסף) | 2026-10-02: סדר העמודים - השתלמות/גמל להשקעה/משלימה/פנסיה (חסרים) קודם, עמודי מסלולי הגמל (מכוסים) בסוף | 2026-10-02: עמודי מסלול שהמעקב לא הגיע אליהם (גמל להשקעה top-savings, השתלמות 1114/11409/9662, S&P, קיימות, מור...) - כ-seed בראש הרשימה | יעד לפרישה 2035/2045/2050/2060/2065 (פנסיה+משלימה): retirement-investment-tracks כ-seed | 2026-10-02: עמודי רשימה (נמצאו בחיפוש): משלימה, חיסכון לכל ילד, מרכזיות לפיצויים, משתתפת בפנסיה תקציבית, pension-plans (יעד לפרישה retire-track-YYYY); follow_rx גם /funds/-pension-mashlima-NNNN",
+ "exclude": "about-insurance|participating-portfolio|מנורה-ביטוח|משתתף(?!ת)|reports-publishs|העברת-זכויות|קשורים|mash-year|_yield|_p\\d|תרומת-אפיקי|הוצאות-ישירות|pen-amit|דוח-חודשי",
+ "follow": "/funds/(pension-and-gemel/|-?(gemel|pension)|Insurers-)",
+ "max_pages": 140,
  "budget": [
   30,
   45
  ],
  "crawl_budget": 2700,
  "via": "extension",
- "follow_max": 110,
- "follow_rx": "/funds/(pension-and-gemel/|gemel-|pension-|Insurers-)|%2Ffunds%2F",
+ "follow_max": 140,
+ "follow_rx": "/funds/(pension-and-gemel/|gemel-|-?pension-|Insurers-)|%2Ffunds%2F",
  "timeout_min": 45,
  "per_track_pages": true
 }
