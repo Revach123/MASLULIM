@@ -397,7 +397,8 @@ async function runSite(site, cfg, seen, onProgress, windowId, meta = {}, flush =
       links.push(...cap.urls.map((u) => ({ ...u, ctx: "(download)" })));
       links.push(...(openedBy[tab.id] || []).map((u) => ({ ...u, ctx: "(download)" })));  // קבצים שנפתחו בחלון/טאב חדש
       if (sig === null) sig = await pageSig(pageUrl);
-      if (links.length) PAGE_CACHE[pk] = {  // עמוד ריק (נכשל / נחסם) לא נשמר - אחרת היה "ריק" 3 ימים at: Date.now(), full: Date.now(), sig,
+      // עמוד ריק (נכשל / נחסם) לא נשמר - אחרת היה "ריק" 3 ימים
+      if (links.length) PAGE_CACHE[pk] = { at: Date.now(), full: Date.now(), sig,
                               links: cacheLinks(links, pageUrl, site.follow_rx ? new RegExp(site.follow_rx, "i") : null), captured: skipClicks ? 0 : cap.urls.length,
                               capAt: skipClicks ? pc.capAt : Date.now() };
       }
