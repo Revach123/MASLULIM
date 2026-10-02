@@ -57,20 +57,56 @@
   "home": "https://www.menoramivt.co.il",
   "pages": [
    {
-    "product": "פנסיה",
-    "url": "https://www.menoramivt.co.il/links/pension-and-gemel/pension-plans"
-   },
-   {
     "product": "גמל",
     "url": "https://www.menoramivt.co.il/links/pension-and-gemel/gemel-hishtalmut-list/menroa-keren-hishtalmut"
    },
    {
     "product": "גמל",
-    "url": "https://www.menoramivt.co.il/links/pension-and-gemel/gemel-hishtalmut-list/menora-gemel"
+    "url": "https://www.menoramivt.co.il/links/pension-and-gemel/gemel-hishtalmut-list/list-top-savings"
+   },
+   {
+    "product": "פנסיה",
+    "url": "https://www.menoramivt.co.il/pension/menora-pension-mashlima"
+   },
+   {
+    "product": "פנסיה",
+    "url": "https://www.menoramivt.co.il/links/pension-and-gemel/pension-plans"
+   },
+   {
+    "product": "פנסיה",
+    "url": "https://www.menoramivt.co.il/pension/pension-index-fund"
+   },
+   {
+    "product": "פנסיה",
+    "url": "https://www.menoramivt.co.il/funds/pension-14277"
+   },
+   {
+    "product": "פנסיה",
+    "url": "https://www.menoramivt.co.il/funds/pension-14278"
+   },
+   {
+    "product": "פנסיה",
+    "url": "https://www.menoramivt.co.il/funds/Insurers-pension-SP500"
+   },
+   {
+    "product": "גמל",
+    "url": "https://www.menoramivt.co.il/funds/gemel-14271"
+   },
+   {
+    "product": "גמל",
+    "url": "https://www.menoramivt.co.il/funds/gemel-14272"
+   },
+   {
+    "product": "גמל",
+    "url": "https://www.menoramivt.co.il/funds/gemel-14679"
    },
    {
     "product": "פנסיה",
     "url": "https://www.menoramivt.co.il/funds/pension-and-gemel/pension-plans/stock-track"
+   },
+   {
+    "product": "גמל",
+    "url": "https://www.menoramivt.co.il/links/pension-and-gemel/gemel-hishtalmut-list/menora-gemel"
    },
    {
     "product": "גמל",
@@ -119,42 +155,6 @@
    {
     "product": "גמל",
     "url": "https://www.menoramivt.co.il/funds/pension-and-gemel/gemel-hishtalmut-list/menora-gemel-15725/tradable-equity-track"
-   },
-   {
-    "product": "גמל",
-    "url": "https://www.menoramivt.co.il/links/pension-and-gemel/gemel-hishtalmut-list/list-top-savings"
-   },
-   {
-    "product": "פנסיה",
-    "url": "https://www.menoramivt.co.il/pension/menora-pension-mashlima"
-   },
-   {
-    "product": "פנסיה",
-    "url": "https://www.menoramivt.co.il/pension/pension-index-fund"
-   },
-   {
-    "product": "גמל",
-    "url": "https://www.menoramivt.co.il/funds/gemel-14271"
-   },
-   {
-    "product": "גמל",
-    "url": "https://www.menoramivt.co.il/funds/gemel-14272"
-   },
-   {
-    "product": "גמל",
-    "url": "https://www.menoramivt.co.il/funds/gemel-14679"
-   },
-   {
-    "product": "פנסיה",
-    "url": "https://www.menoramivt.co.il/funds/pension-14277"
-   },
-   {
-    "product": "פנסיה",
-    "url": "https://www.menoramivt.co.il/funds/pension-14278"
-   },
-   {
-    "product": "פנסיה",
-    "url": "https://www.menoramivt.co.il/funds/Insurers-pension-SP500"
    }
   ],
   "products": [
@@ -180,15 +180,11 @@
   "pages": [
    {
     "product": "גמל",
-    "url": "https://www.as-invest.co.il/interstedin/gemel/"
+    "url": "https://www.as-invest.co.il/interstedin/קרנות-השתלמות/קרנות-ההשתלמות-שלנו/"
    },
    {
     "product": "גמל",
     "url": "https://www.as-invest.co.il/interstedin/קרנות-השתלמות/"
-   },
-   {
-    "product": "גמל",
-    "url": "https://www.as-invest.co.il/interstedin/קרנות-השתלמות/קרנות-ההשתלמות-שלנו/"
    },
    {
     "product": "גמל",
@@ -197,6 +193,10 @@
    {
     "product": "גמל",
     "url": "https://www.as-invest.co.il/interstedin/gemel/קופות-מרכזיות-לפיצויים/"
+   },
+   {
+    "product": "גמל",
+    "url": "https://www.as-invest.co.il/interstedin/gemel/"
    },
    {
     "product": "פנסיה",
