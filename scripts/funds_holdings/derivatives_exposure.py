@@ -666,9 +666,8 @@ def _swap_exposure(
 
 def collect_unresolved_swap_tickers(source: list[dict]) -> dict[str, set[str]]:
     """מפתח -> סט טיקרים של סוואפ-מדד (סוג הנכס == מניות לרבות מדדי מניות) שאין להם מקור
-    מחיר ליום הדוח: לא סדרה ב-INDICES (swap_ticker_map.csv), לא תעודת סל עוקבת (PROXY_ETF) ולא
-    מניה בודדת (single_stock_symbol) - בעיקר סלים קנייניים בנקאיים (GS*/JPM*/CGAS*/MLBL*), או טיקר
-    חדש. מיועד לדגל "לטיפול" בדשבורד - לא משפיע על חישוב החשיפה עצמו."""
+    מחיר ליום הדוח: לא סדרה ב-INDICES (swap_ticker_map.csv) ולא תעודת סל עוקבת (PROXY_ETF) - סלים
+    קנייניים בנקאיים (GS*/JPM*/CGAS*/MLBL*), מניות בודדות, או טיקר חדש. מיועד לדגל "לטיפול" בדשבורד - לא משפיע על חישוב החשיפה עצמו."""
     from .swap_index_pricing import has_price_source, normalize_ticker
 
     out: dict[str, set[str]] = {}
