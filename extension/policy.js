@@ -210,6 +210,12 @@ function looksLikeDoc(base64) {
 // אין חתימה (עמוד שנבנה ב-JS / חוסם fetch - מנורה) -> המטמון תקף page_cache_days (ברירת מחדל 3, בכללים ב-GitHub).
 // ביקור מלא לפחות פעם ב-PAGE_FULL_DAYS. page_cache_days=0 בכללים = כבוי.
 let PAGE_CACHE = {};
+// מפתח מטמון מנורמל: אותו עמוד מגיע בקידודים שונים (במפה מ-GitHub - מפוענח; במעקב - %D7..), עם/בלי / בסוף
+function pageKey(url) {
+  let u = String(url || "");
+  try { u = decodeURI(u); } catch (e) {}
+  return u.replace(/#.*$/, "").replace(/\/+$/, "").replace(/^https?:\/\/(www\.)?/i, "").toLowerCase();
+}
 const PAGE_FULL_DAYS = 7;
 async function pageSig(url) {
   const ac = new AbortController(); const t = setTimeout(() => ac.abort(), 15000);
@@ -217,7 +223,8 @@ async function pageSig(url) {
     const r = await fetch(url, { credentials: "include", signal: ac.signal });
     if (!r.ok) return null;
     const html = await r.text();
-    const docs = [...html.matchAll(/href\s*=\s*["']([^"'#]+)["']/gi)].map((m) => m[1]).filter((h) => DOC_RX.test(h));
+    // בלי פרמטרים (?v=... משתנים בכל טעינה) - רק נתיב הקובץ
+    const docs = [...html.matchAll(/href\s*=\s*["']([^"'#]+)["']/gi)].map((m) => m[1]).filter((h) => DOC_RX.test(h)).map((h) => h.split("?")[0]);
     if (!docs.length) return null;  // אין מסמכים ב-HTML הגולמי (נטען ב-JS) - לא ניתן להשוות
     const sig = [...new Set(docs)].sort().join("\n");
     let h = 0; for (let i = 0; i < sig.length; i++) h = (h * 31 + sig.charCodeAt(i)) | 0;
@@ -346,16 +353,23 @@ async function runSite(site, cfg, seen, onProgress, windowId, meta = {}, flush =
     let tab;
     try {
       // מטמון עמודים (ר' PAGE_CACHE)
-      const pc = PAGE_CACHE[pageUrl];
+      const pk = pageKey(pageUrl);
+      const pc = PAGE_CACHE[pk];
+      let cacheWhy = pc ? "" : "none";
       const cacheDays = RULES.page_cache_days ?? 3;
       let links = null, cap = { clicked: 0, urls: [] }, sig = null, fromCache = false;
       if (pc && cacheDays > 0 && !site.no_page_cache && Date.now() - (pc.full || 0) < PAGE_FULL_DAYS * 864e5) {
         await report(pi, "בודק אם העמוד השתנה");
         sig = await pageSig(pageUrl);
         if ((sig && sig === pc.sig) || (!sig && !pc.sig && Date.now() - pc.at < cacheDays * 864e5)) {
-          links = pc.links.map((l) => ({ ...l })); fromCache = true; stats.page_cache = (stats.page_cache || 0) + 1;
+          links = pc.links.map((l) => ({ ...l })); fromCache = true; stats.page_cache = (stats.page_cache || 0) + 1; cacheWhy = "hit";
+        } else {
+          cacheWhy = sig && pc.sig ? "changed" : sig || pc.sig ? "sig-mismatch" : "expired";
         }
+      } else if (pc) {
+        cacheWhy = cacheDays <= 0 ? "off" : site.no_page_cache ? "site-off" : "weekly-full";
       }
+      stats["cache_" + (cacheWhy || "none")] = (stats["cache_" + (cacheWhy || "none")] || 0) + 1;
       if (!fromCache) {
       await report(pi, "טוען עמוד");
       tab = await tabsRetry(() => chrome.tabs.create({ url: pageUrl, active: false, ...(windowId ? { windowId } : {}) }));
@@ -383,7 +397,7 @@ async function runSite(site, cfg, seen, onProgress, windowId, meta = {}, flush =
       links.push(...cap.urls.map((u) => ({ ...u, ctx: "(download)" })));
       links.push(...(openedBy[tab.id] || []).map((u) => ({ ...u, ctx: "(download)" })));  // קבצים שנפתחו בחלון/טאב חדש
       if (sig === null) sig = await pageSig(pageUrl);
-      if (links.length) PAGE_CACHE[pageUrl] = {  // עמוד ריק (נכשל / נחסם) לא נשמר - אחרת היה "ריק" 3 ימים at: Date.now(), full: Date.now(), sig,
+      if (links.length) PAGE_CACHE[pk] = {  // עמוד ריק (נכשל / נחסם) לא נשמר - אחרת היה "ריק" 3 ימים at: Date.now(), full: Date.now(), sig,
                               links: cacheLinks(links, pageUrl, site.follow_rx ? new RegExp(site.follow_rx, "i") : null), captured: skipClicks ? 0 : cap.urls.length,
                               capAt: skipClicks ? pc.capAt : Date.now() };
       }
@@ -413,7 +427,7 @@ async function runSite(site, cfg, seen, onProgress, windowId, meta = {}, flush =
       const uniq = [...new Map(docs.filter((d) => !ex || !ex.test(decodeURIComponent(d.href) + " " + d.text))
         .map((d) => [d.href, d])).values()];
       stats.found += links.filter((l) => DOC_RX.test(l.href) || l.ctx === "(download)").length;
-      pageLog.push({ url: pageUrl, links: links.length, followed, files: links.filter((l) => DOC_RX.test(l.href)).length, clicked: cap.clicked,
+      pageLog.push({ url: pageUrl, cache: cacheWhy, links: links.length, followed, files: links.filter((l) => DOC_RX.test(l.href)).length, clicked: cap.clicked,
                      captured: cap.urls.length, selected: uniq.map((d) => decodeURIComponent(d.href)),
                      unselected_files: links.filter((l) => DOC_RX.test(l.href) && !uniq.some((d) => d.href === l.href)).slice(0, 25)
                        .map((l) => ({ file: decodeURIComponent(l.href).slice(0, 200), text: (l.text || "").slice(0, 80), ctx: (l.ctx || "").replace(/\s+/g, " ").slice(0, 100) })) });
@@ -512,7 +526,8 @@ export async function runPolicy(cfg, setStatus) {
   // skip_complete_hours (ברירת מחדל 24) מאז הריצה המוצלחת האחרונה שלהן בתוסף. 0 בכללים = לא מדלגים.
   const complete = await readComplete(cfg);
   const { policySiteOk = {}, policyMeta = {}, policyPageCache = {} } = await chrome.storage.local.get(["policySiteOk", "policyMeta", "policyPageCache"]);
-  PAGE_CACHE = policyPageCache;
+  // מפתחות ישנים (כתובת כפי שהיא) -> מפתח מנורמל, בלי לאבד את המטמון שכבר נבנה
+  PAGE_CACHE = Object.fromEntries(Object.entries(policyPageCache).map(([k, v]) => [pageKey(k), v]));
   const skipH = RULES.skip_complete_hours ?? 24;
   const skipped = [];
   const sites = allSites.filter((st) => {
