@@ -345,6 +345,10 @@
   "pages": [
    {
     "product": "גמל",
+    "url": "https://www.as-invest.co.il/interstedin/חיסכון-והשקעה/חיסכון-לכל-ילד/"
+   },
+   {
+    "product": "גמל",
     "url": "https://www.as-invest.co.il/interstedin/קרנות-השתלמות/קרנות-ההשתלמות-שלנו/"
    },
    {
@@ -756,7 +760,7 @@
   "click": null,
   "clicks": null,
   "any_sheet": null,
-  "exclude": "about-insurance|participating-portfolio|מנורה-ביטוח|משתתף",
+  "exclude": "about-insurance|participating-portfolio|מנורה-ביטוח|משתתף|קשורים|_yield|_p\\d|תרומת-אפיקי|דוח-חודשי|esg-report",
   "settle_ms": null,
   "capture_ms": null,
   "download_rx": null,
@@ -773,6 +777,7 @@
    "https://www.menoramivt.co.il/funds/about-menora/engineers/omega-fund/omega-14418",
    "https://www.menoramivt.co.il/funds/about-menora/engineers/omega-fund/omega-1446",
    "https://www.menoramivt.co.il/funds/about-menora/engineers/omega-fund/omega-286",
+   "https://www.menoramivt.co.il/funds/about-menora/engineers/omega-fund/omega-9803",
    "https://www.menoramivt.co.il/funds/about-menora/engineers/omega-fund/omega-9802"
   ]
  },
