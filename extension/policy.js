@@ -257,7 +257,7 @@ function keepMinimized(windowId) {
   }).catch(() => {});
 }
 
-async function runSite(site, cfg, seen, onProgress, windowId, meta = {}) {
+async function runSite(site, cfg, seen, onProgress, windowId, meta = {}, flush = null) {
   const pages = [...new Set([...(site.pages || []).map((p) => p.url), site.home].filter(Boolean))];
   const files = [], errors = [], diag = [];
   const stats = { found: 0, selected: 0, had: 0, head_skip: 0 };
@@ -271,6 +271,7 @@ async function runSite(site, cfg, seen, onProgress, windowId, meta = {}) {
   const startAt = Math.min(meta[resumeKey] || 0, Math.max(pages.length - 1, 0));
   const partial = { cut: false };
   let blockedFails = 0;
+  let flushed = 0, batchAdded = {};  // מסמכים שכבר נשלחו במנות (flush)
   delete meta[resumeKey];
   for (const [pi, pageUrl] of pages.entries()) {
     if (pi < startAt && pi >= (site.pages || []).length + 1) continue;  // עמודי seed תמיד; עמודי follow שכבר עברנו - מדלגים
@@ -383,7 +384,14 @@ async function runSite(site, cfg, seen, onProgress, windowId, meta = {}) {
         files.push({ path: base + ".json", base64: utf8b64(JSON.stringify({
           legal_id: site.legal_id, url: d.href, link_text: d.text || d.ctx, source_page: pageUrl,
           sha256: sha, fetched_at: new Date().toISOString(), via: "extension" }, null, 1)) });
-        seen[d.href] = sha; added[d.href] = sha;
+        seen[d.href] = sha; added[d.href] = sha; batchAdded[d.href] = sha;
+        // העלאה במנות של 25 מסמכים תוך כדי האתר (מנורה/אלטשולר: מאות קבצים) - מחשב שנרדם / דפדפן שנסגר באמצע
+        // מאבד לכל היותר מנה אחת, לא את כל האתר
+        if (flush && files.length - flushed >= 50) {
+          meta[resumeKey] = pi;  // נקטע אחרי המנה הזו -> הריצה הבאה ממשיכה מהעמוד הזה (נמחק בסיום רגיל של האתר)
+          flush(files.slice(flushed), batchAdded);
+          flushed = files.length; batchAdded = {};
+        }
       }
     } catch (e) {
       errors.push(`${pageUrl}: ${e && e.message || e}`);
@@ -391,7 +399,8 @@ async function runSite(site, cfg, seen, onProgress, windowId, meta = {}) {
       if (tab) { ourTabs.delete(tab.id); delete openedBy[tab.id]; try { await tabsRetry(() => chrome.tabs.remove(tab.id)); } catch (e) {} }
     }
   }
-  return { files, errors, diag, stats, pages: pageLog, added };
+  if (!partial.cut && !stopRequested) delete meta[resumeKey];
+  return { files, errors, diag, stats, pages: pageLog, added, rest: files.slice(flushed), restAdded: batchAdded };
 }
 
 // כמה אתרים (לא עמודים בתוך אתר - שם אין תועלת, ר' runSite) מותר להריץ
@@ -519,7 +528,7 @@ export async function runPolicy(cfg, setStatus) {
         await commitFiles(cfg.token, cfg.owner, cfg.repo, cfg.branch, [...files, logFile("policy/extension_log/latest.json", buildLog(false))],
           `policy inbox (extension): ${files.length / 2} documents - ${site.name.slice(0, 40)}`);
         Object.assign(committedSeen, added);
-        await chrome.storage.local.set({ policySeen: committedSeen });
+        await chrome.storage.local.set({ policySeen: committedSeen, policyMeta });  // גם חתימות HEAD ונקודת ההמשך - ריצה שנקטעה לא מורידה שוב
       } catch (e) {
         pending.push({ files, added });
         allErrors.push(`commit ${site.name}: ${e && e.message || e}`);
@@ -533,14 +542,14 @@ export async function runPolicy(cfg, setStatus) {
     while (!stopRequested && nextIdx < sites.length) {
       const site = sites[nextIdx++];
       try {
-        const { files, errors, diag, stats, pages, added } = await withTimeout(runSite(site, cfg, seen, async (p) => {
+        const { files, errors, diag, stats, pages, rest, restAdded } = await withTimeout(runSite(site, cfg, seen, async (p) => {
           progress[site.name] = p;
           await flushStatus();
-        }, windowId, policyMeta), siteBudgetMs(site) + 5 * 60000, `site ${site.name}`);
+        }, windowId, policyMeta, (batch, batchAdded) => commitSite(site, batch, batchAdded)), siteBudgetMs(site) + 5 * 60000, `site ${site.name}`);
         policySiteOk[site.legal_id] = Date.now();  // האתר הסתיים (גם אם קובץ בודד נכשל - הצבעות 418 וכד')
         await chrome.storage.local.set({ policySiteOk, policyMeta });
         allFiles.push(...files);
-        if (files.length) commitSite(site, files, added);  // שמירה מיד בסוף כל אתר - ריצה שנתקעת/נסגרת לא מאבדת את מה שכבר הורד
+        if (rest.length) commitSite(site, rest, restAdded);  // שמירה מיד בסוף כל אתר - ריצה שנתקעת/נסגרת לא מאבדת את מה שכבר הורד
         allErrors.push(...errors);
         allDiag.push(...diag);
         finished.push({ name: site.name, docs: files.length / 2, errors: errors.length, ...stats, firstError: errors[0] || "" });
