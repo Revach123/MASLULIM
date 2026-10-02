@@ -846,23 +846,15 @@
  {
   "legal_id": "520030990",
   "name": "החברה המנהלת של מינהל קרן ההשתלמות לפקידים עובדי המנהל והשירותים בע\"מ",
-  "home": "https://www.minhal.org",
+  "home": "https://minhal.org",
   "pages": [
    {
     "product": "גמל",
-    "url": "https://www.minhal.org/?CategoryID=164"
+    "url": "https://minhal.org/הרכב-נכסים/"
    },
    {
     "product": "גמל",
-    "url": "https://www.minhal.org/?CategoryID=153"
-   },
-   {
-    "product": "גמל",
-    "url": "https://www.minhal.org/?CategoryID=0"
-   },
-   {
-    "product": "גמל",
-    "url": "https://minhal.org/אודות-הקרן/"
+    "url": "https://minhal.org/הרכב-נכסים/מסלול-עוקב-מדד-500-ps/"
    }
   ],
   "products": [
@@ -875,12 +867,12 @@
   "settle_ms": null,
   "capture_ms": null,
   "download_rx": null,
-  "follow_max": 20,
-  "follow_rx": "מדיניות|השקע|CategoryID=164|ArticleID",
+  "follow_max": 15,
+  "follow_rx": "minhal\\.org/(הרכב-נכסים|%d7%94%d7%a8%d7%9b%d7%91-%d7%a0%d7%9b%d7%a1%d7%99%d7%9d)/[^/]+",
   "timeout_min": null,
   "download_delay_ms": null,
   "no_map": null,
-  "per_track_pages": null,
+  "per_track_pages": true,
   "doc_pages": []
  },
  {
