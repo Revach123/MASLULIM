@@ -22,7 +22,7 @@ const DEFAULT_RULES = {
   policy_rx: "מדיניות|הצהר|policy|mediniut|hatzarat|expected|investment",
   noise_rx: "esg|אחראי|תגמול(?!ים)|tagmul(?!im)|פרטיות|privacy|תקנון|מבצע|גילוי[-_ ]נאות|מצגת|presentation|נוהל|העברת זכויות|הצבעות|דוח[ -]כספי|רבעון",
   download_rx: "הורד|להורדה|download|אקסל|excel|xls",
-  concurrency: 4, settle_ms: 3000, capture_ms: 8000, max_download_clicks: 40,
+  concurrency: 4, page_parallel: 3, settle_ms: 3000, capture_ms: 8000, max_download_clicks: 40,
 };
 let RULES = DEFAULT_RULES;
 let DOC_RX = new RegExp(DEFAULT_RULES.doc_rx, "i");
@@ -252,7 +252,8 @@ async function wpMediaDocs(site) {
         const r = await fetch(`${site.home.replace(/\/$/, "")}/wp-json/wp/v2/media?search=${encodeURIComponent(q)}&per_page=100&page=${page}`, { credentials: "include" });
         if (!r.ok) break;
         const arr = await r.json();
-        for (const m of arr || []) if (m && m.source_url) out.push({ href: m.source_url, text: (m.title && m.title.rendered) || m.slug || "", ctx: "(wp-media)" });
+        // רק מסמכים - וורדפרס מחזיר גם תמונות תצוגה מקדימה (mediniyut_...xlsx.pdf.png)
+        for (const m of arr || []) if (m && m.source_url && DOC_RX.test(m.source_url) && !/\.(png|jpe?g|gif|webp)$/i.test(m.source_url)) out.push({ href: m.source_url, text: (m.title && m.title.rendered) || m.slug || "", ctx: "(wp-media)" });
         if (!arr || arr.length < 100) break;
       } catch (e) { break; }
     }
@@ -304,6 +305,9 @@ async function readSites(cfg) {
 // טאבים שפתחנו, וחלונות/טאבים שהאתרים עצמם פתחו מתוכם (window.open / target=_blank) - נסגרים מיד וכתובתם נשמרת
 // כמועמדת לקובץ (כמו הורדה שנתפסה). אחרת popup של אתר נפתח כחלון רגיל באמצע המסך.
 const ourTabs = new Set();
+// "נתיבים" פתוחים בכל הריצה: workers של אתרים + נתיבי עמודים נוספים בתוך אתר. כשנשארים פחות אתרים מ-concurrency,
+// אתר עם הרבה עמודים (מנורה/אלטשולר) פותח כמה עמודים במקביל בנתיבים הפנויים (עד page_parallel)
+const LANES = { sites: 0, extra: 0 };
 const openedBy = {};  // openerTabId -> [{href, text}]
 
 function keepMinimized(windowId) {
@@ -346,7 +350,7 @@ async function runSite(site, cfg, seen, onProgress, windowId, meta = {}, flush =
   const stats = { found: 0, selected: 0, had: 0, head_skip: 0 };
   const added = {};  // href -> sha שנוספו באתר הזה (נשמרים כ"כבר נשלח" רק אחרי commit מוצלח)
   const pageLog = [];  // לכל עמוד: מה נמצא/נבחר - ללוג  // לחלונית: קבצים שנמצאו בעמודים / נבחרו כמדיניות / כבר נשלחו בעבר
-  const report = (pi, step) => onProgress({ page: pages[pi], pageNo: pi + 1, pages: pages.length, step, docs: files.length / 2 });
+  const report = (pi, step) => onProgress({ page: pages[pi], pageNo: pi + 1, pages: pages.length, step: (lanes > 1 ? `[${lanes} במקביל] ` : "") + step, docs: files.length / 2 });
   // תקציב זמן לאתר (timeout_min, ברירת מחדל 15): בהגעה אליו עוצרים בעדינות ומחזירים את מה שכבר הורד - לא זורקים הכל
   // (מנורה/אלטשולר: 132/229 קבצים אבדו ב-timeout). הריצה הבאה ממשיכה מהעמוד שבו נעצרנו (meta.__resume).
   const deadline = Date.now() + siteBudgetMs(site) - 60000;
@@ -362,13 +366,19 @@ async function runSite(site, cfg, seen, onProgress, windowId, meta = {}, flush =
   if (site.wp_media_search) diag.push(`${site.name.slice(0, 18)}: wp-media ${wpDocs.length} files`);
   let flushed = 0, batchAdded = {};  // מסמכים שכבר נשלחו במנות (flush)
   delete meta[resumeKey];
-  for (const [pi, pageUrl] of pages.entries()) {
-    if (pi < startAt && pi >= (site.pages || []).length + 1) continue;  // עמודי seed תמיד; עמודי follow שכבר עברנו - מדלגים
-    if (stopRequested) break;
+  // עמודים במקביל: נקודת ההמשך = העמוד המוקדם ביותר שעוד בעבודה (עמודים אחריו שכבר נגמרו ייבדקו שוב - מהמטמון)
+  const inProg = new Set();
+  let nextPi = 0, busy = 0, lanes = 1;
+  const resumeAt = (pi) => Math.min(pi, ...inProg);
+  let halt = false;
+  async function doPage(pi) {
+    const pageUrl = pages[pi];
+    if (pi < startAt && pi >= (site.pages || []).length + 1) return;  // עמודי seed תמיד; עמודי follow שכבר עברנו - מדלגים
+    if (stopRequested) { halt = true; return; }
     if (Date.now() > deadline) {
-      partial.cut = true; meta[resumeKey] = pi;
-      errors.push(`time budget ${Math.round(siteBudgetMs(site) / 60000)}m reached at page ${pi + 1}/${pages.length} - kept ${files.length / 2} files, next run resumes here`);
-      break;
+      if (!partial.cut) errors.push(`time budget ${Math.round(siteBudgetMs(site) / 60000)}m reached at page ${pi + 1}/${pages.length} - kept ${files.length / 2} files, next run resumes here`);
+      partial.cut = true; halt = true; meta[resumeKey] = resumeAt(pi);
+      return;
     }
     let tab;
     try {
@@ -434,6 +444,10 @@ async function runSite(site, cfg, seen, onProgress, windowId, meta = {}, flush =
           if (pages.length >= (site.pages || []).length + 1 + site.follow_max) break;
           let u; try { u = new URL(l.href); } catch (e) { continue; }
           if (u.hostname.replace(/^www\./, "") !== host || DOC_RX.test(l.href) || pages.includes(u.href.split("#")[0])) continue;
+          // קישור יחסי שמשרשר את עצמו (אלטשולר: .../מסלול/x1/x1 - אותו עמוד שוב): קטע חוזר ברצף, או תת-נתיב קצר של העמוד הנוכחי
+          const segs = u.pathname.split("/").filter(Boolean), cur = new URL(pageUrl).pathname.split("/").filter(Boolean);
+          if (segs.some((sg, i) => i && sg === segs[i - 1])
+              || (segs.length === cur.length + 1 && cur.every((sg, i) => sg === segs[i]) && segs[segs.length - 1].length <= 3)) continue;
           const blob = decodeURIComponent(l.href) + " " + (l.text || "");
           if ((frx ? frx.test(blob) : (POLICY_RX.test(blob) || /השקע|פנסי|תגמול|גמל|קופ|invest|pension/i.test(blob))) && !NOISE_RX.test(blob)) {
             pages.push(u.href.split("#")[0]); followed.push(u.href.split("#")[0]);
@@ -464,7 +478,7 @@ async function runSite(site, cfg, seen, onProgress, windowId, meta = {}, flush =
       uniq.sort((a, b) => yr(b) - yr(a));
       for (const [di, d] of uniq.entries()) {
         if (stopRequested) break;
-        if (Date.now() > deadline) { partial.cut = true; meta[resumeKey] = pi; break; }
+        if (Date.now() > deadline) { partial.cut = true; halt = true; meta[resumeKey] = resumeAt(pi); break; }
         if (site.download_delay_ms) await sleep(site.download_delay_ms);
         await report(pi, `מוריד קובץ ${di + 1}/${uniq.length}`);
         // קובץ שכבר נשלח ושנת המדיניות בשמו לפני השנה הקודמת (2016-2024) - לא ישתנה עוד: בלי בדיקת HEAD
@@ -484,7 +498,8 @@ async function runSite(site, cfg, seen, onProgress, windowId, meta = {}, flush =
         // חסימת קצב (418/429/403 - WAF: עגור 134, הסוכנות 18): עד שני ניסיונות חוזרים עם המתנה גדלה
         for (const wait of (blockedFails >= 2 ? [0] : [0, 4000, 15000])) {  // שני קבצים שנחסמו גם אחרי המתנה = חסימה קבועה, לא קצב
           if (wait) { await report(pi, `ממתין ${wait / 1000}s (חסימת קצב) - קובץ ${di + 1}/${uniq.length}`); await sleep(wait); }
-          try { const [r2] = await execInTab(tab.id, pageFetchBase64, [d.href]); got = r2 && r2.result; } catch (e) { got = { __error: true, message: String(e) }; }
+          // עמוד מהמטמון - אין טאב: ישר להורדה דרך התוסף
+          if (tab) try { const [r2] = await execInTab(tab.id, pageFetchBase64, [d.href]); got = r2 && r2.result; } catch (e) { got = { __error: true, message: String(e) }; }
           if (!got || got.__error || !looksLikeDoc(got.base64)) {
             const viaExt = await extFetchBase64(d.href);  // CORS / דומיין אחר / הדף ניווט
             if (!viaExt.__error && looksLikeDoc(viaExt.base64)) got = viaExt;
@@ -511,7 +526,7 @@ async function runSite(site, cfg, seen, onProgress, windowId, meta = {}, flush =
         // העלאה במנות של 25 מסמכים תוך כדי האתר (מנורה/אלטשולר: מאות קבצים) - מחשב שנרדם / דפדפן שנסגר באמצע
         // מאבד לכל היותר מנה אחת, לא את כל האתר
         if (flush && files.length - flushed >= 50) {
-          meta[resumeKey] = pi;  // נקטע אחרי המנה הזו -> הריצה הבאה ממשיכה מהעמוד הזה (נמחק בסיום רגיל של האתר)
+          meta[resumeKey] = resumeAt(pi);  // נקטע אחרי המנה הזו -> הריצה הבאה ממשיכה מהעמוד הזה (נמחק בסיום רגיל של האתר)
           flush(files.slice(flushed), batchAdded);
           flushed = files.length; batchAdded = {};
         }
@@ -522,6 +537,34 @@ async function runSite(site, cfg, seen, onProgress, windowId, meta = {}, flush =
       if (tab) { ourTabs.delete(tab.id); delete openedBy[tab.id]; try { await tabsRetry(() => chrome.tabs.remove(tab.id)); } catch (e) {} }
     }
   }
+  // נתיב ראשי תמיד; נתיבים נוספים רק כשיש נתיבים פנויים בריצה (פחות אתרים פעילים מ-concurrency) ונשארו עמודים.
+  // אתר עם השהיית הורדות (download_delay_ms - חסימת קצב) או page_parallel=1 - עמוד אחד בכל פעם
+  const maxLanes = site.download_delay_ms ? 1 : Math.max(1, site.page_parallel ?? RULES.page_parallel ?? 3);
+  const extras = [];
+  const spawn = () => {
+    while (!halt && !stopRequested && lanes < maxLanes && pages.length - nextPi > 1
+           && LANES.sites + LANES.extra < (RULES.concurrency || POLICY_CONCURRENCY)) {
+      lanes++; LANES.extra++; extras.push(lane(true));
+      stats.page_lanes = Math.max(stats.page_lanes || 1, lanes);
+    }
+  };
+  async function lane(extra) {
+    try {
+      while (!halt) {
+        if (nextPi >= pages.length) {
+          if (extra || busy === 0) return;  // הנתיב הראשי מחכה לעמודים שעוד בעבודה (עשויים להוסיף עמודי follow)
+          await sleep(500); continue;
+        }
+        const pi = nextPi++; busy++; inProg.add(pi);
+        try { await doPage(pi); } finally { busy--; inProg.delete(pi); }
+        spawn();
+      }
+    } finally { if (extra) { lanes--; LANES.extra--; } }
+  }
+  spawn();
+  await lane(false);
+  for (let n = 0; n < extras.length; n++) await extras[n];
+  pageLog.sort((x, y) => pages.indexOf(x.url) - pages.indexOf(y.url));
   if (!partial.cut && !stopRequested) {
     delete meta[resumeKey];
     if (!site.__mapped) meta.__full[site.legal_id] = { at: Date.now(), year: yr };  // סריקה מלאה שהסתיימה -> מעכשיו לפי המפה
@@ -666,7 +709,12 @@ export async function runPolicy(cfg, setStatus) {
   }
 
   let nextIdx = 0;
+  LANES.sites = 0; LANES.extra = 0;
   async function worker() {
+    LANES.sites++;
+    try { await siteLoop(); } finally { LANES.sites--; }  // התור נגמר -> הנתיב מתפנה לעמודים במקביל באתרים שעוד רצים
+  }
+  async function siteLoop() {
     while (!stopRequested && nextIdx < sites.length) {
       const site = sites[nextIdx++];
       try {
