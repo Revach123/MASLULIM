@@ -589,7 +589,7 @@ def _add_derivative(acc: _Acc, detail: list[dict], capped_equity: dict[str, floa
 TRACK_FIELDS = {
     "company": "שם החברה", "product": "סוג קרן", "track_number": "מס' מסלול",
     "track_name": "שם מסלול קצר", "track_name_long": "שם מסלול ההשקעה", "track_type": "סוג מסלול",
-    "official_equity": "חשיפה למניות", "official_month": "נכון לחודש",
+    "official_equity": "חשיפה למניות", "official_fx": "חשיפה למטח", "official_month": "נכון לחודש",
     # כשרות - מ-tracks (כמו /sharetracks), לכל המסלולים כולל לא כשרים
     "kosher": "הכשר", "glatt_hon": "גלאט הון", "eda": "עד''ח", "tshua_kahalacha": "תשואה כהלכה",
     "rav_dvir": "ר א דביר",
@@ -612,9 +612,12 @@ def report_month_by_key(source: list[dict]) -> dict[str, str]:
 
 
 def build_index_table(index_exp: dict[str, dict], tracks_by_key: dict[str, dict],
-                      report_month: dict[str, str]) -> list[dict]:
+                      report_month: dict[str, str], fx: dict[str, dict[str, float]] | None = None,
+                      fx_ccy: dict[str, dict[str, float]] | None = None) -> list[dict]:
     """רשומה למסלול: פרטי המסלול (מ-tracks) + סה"כ חשיפה למניות + פירוק לפי מדד,
-    מהגדול לקטן. רק מסלולים שיש להם נתוני דוח."""
+    מהגדול לקטן. רק מסלולים שיש להם נתוני דוח. fx / fx_ccy (fx_exposure): החשיפה למט"ח לפי הדוח -
+    fx_total, הרכיבים (fx) והפירוק לפי מטבע (fx_ccy, מהגדול לקטן)."""
+    from .fx_exposure import fx_total
     out = []
     empty = {"total": 0.0, "indices": {}}
     for key in set(index_exp) | set(report_month):
@@ -627,6 +630,11 @@ def build_index_table(index_exp: dict[str, dict], tracks_by_key: dict[str, dict]
              "sources": {s: round(v, 6) for s, v in e["sources"].items()}}
             for i, e in sorted(exp["indices"].items(), key=lambda x: -x[1]["pct"])
         ]
+        if fx is not None and key in fx:
+            rec["fx_total"] = round(fx_total(fx[key]), 6)
+            rec["fx"] = {c: round(v, 6) for c, v in fx[key].items() if abs(v) >= 1e-6}
+            rec["fx_ccy"] = [[c, round(v, 6)] for c, v in sorted((fx_ccy or {}).get(key, {}).items(),
+                                                              key=lambda x: -abs(x[1])) if abs(v) >= 0.0005]
         out.append(rec)
     return sorted(out, key=lambda r: (str(r.get("company") or ""), str(r["key"])))
 

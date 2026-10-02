@@ -36,6 +36,8 @@ STOCKS = {"מניות מבכ ויהש", "לא סחיר מניות מבכ ויה�
 BONDS_WORD = ("איגרות חוב", "ניירות ערך מסחריים")
 LEG_KIND = {'מט"ח': "fx", "מניות לרבות מדדי מניות": "equity", 'ריבית ואג"ח': "rates"}
 
+IL_FUNDS_CCY = "קרנות ישראליות"  # חשיפה מדווחת של הקרן, בלי פירוט מטבע
+OTHER_CCY = "אחר"
 COMPONENTS = ("cash", "bonds", "stocks", "funds_foreign", "funds_il", "other", "legs_fx", "legs_equity",
               "legs_rates", "legs_other", "futures", "options")
 
@@ -57,14 +59,23 @@ def _asset_component(cat: str) -> str:
 
 
 def build_fx_exposure(source: list[dict], isin_swap: list[dict], funds_ref: list[dict],
-                      fund_fx: dict[str, float] | None = None) -> dict[str, dict[str, float]]:
-    """מפתח -> {רכיב: שבר}. fund_fx: מספר קרן -> חשיפה למט"ח מדווחת (fetch_fund_fx_exposure)."""
+                      fund_fx: dict[str, float] | None = None,
+                      by_currency: dict[str, dict[str, float]] | None = None) -> dict[str, dict[str, float]]:
+    """מפתח -> {רכיב: שבר}. fund_fx: מספר קרן -> חשיפה למט"ח מדווחת (fetch_fund_fx_exposure).
+    by_currency (אופציונלי) מתמלא: מפתח -> {מטבע: שבר} - קרנות ישראליות (בלי פירוט מטבע) תחת IL_FUNDS_CCY."""
     fund_fx = fund_fx or {}
     fund_map, isin_set = _build_fund_map(isin_swap), _build_isin_set(isin_swap)
     ref_by_num = {str(r["מספר קרן"]): r for r in funds_ref if r.get("מספר קרן")}
     ref_by_isin = {str(r["ISIN"]).upper(): r for r in funds_ref if r.get("ISIN")}
     totals = total_assets_by_key(source)
     out: dict[str, dict[str, float]] = defaultdict(lambda: defaultdict(float))
+    ccy_out = by_currency if by_currency is not None else {}
+
+    def add(key, comp, value, ccy):
+        out[key][comp] += value
+        c = str(ccy or "").strip().upper() or OTHER_CCY
+        d = ccy_out.setdefault(key, {})
+        d[c] = d.get(c, 0.0) + value
 
     for rec in source:
         if rec["מידע"] != "מידע":
@@ -89,14 +100,14 @@ def build_fx_exposure(source: list[dict], isin_swap: list[dict], funds_ref: list
                     rate = _num(row.get(f"שער חליפין (רגל {leg})"))
                     if fv is None or not rate:
                         continue
-                    out[key]["legs_" + kind] += fv * rate / total
+                    add(key, "legs_" + kind, fv * rate / total, row.get(f"מטבע פעילות (רגל {leg})"))
                 continue
             pct = to_ratio(row.get(PCT_COL))
             if not pct:
                 continue
             if cat in DERIVATIVE_CATEGORIES:
                 if is_foreign_ccy(row.get(CCY_COL)):
-                    out[key]["options"] += pct
+                    add(key, "options", pct, row.get(CCY_COL))
                 continue
             if cat in FUND_CATEGORIES:
                 sec = row.get("מספר נייר ערך")
@@ -106,20 +117,20 @@ def build_fx_exposure(source: list[dict], isin_swap: list[dict], funds_ref: list
                         ref = ref_by_num.get(str(num).strip()) or ref_by_isin.get(str(num).strip().upper())
                         fx = fund_fx.get(fund_number_key(ref.get("מספר קרן")) or "") if ref else None
                         if fx is not None:
-                            out[key]["funds_il"] += pct * fx
+                            add(key, "funds_il", pct * fx, IL_FUNDS_CCY)
                             continue
                 if is_foreign_ccy(row.get(CCY_COL)):
-                    out[key]["funds_foreign"] += pct
+                    add(key, "funds_foreign", pct, row.get(CCY_COL))
                 continue
             if is_foreign_ccy(row.get(CCY_COL)):
-                out[key][_asset_component(cat)] += pct
+                add(key, _asset_component(cat), pct, row.get(CCY_COL))
 
     # חוזים עתידיים: הנוציונל של חוזה במטבע חוץ (אותו חישוב כמו בחשיפה למניות)
     fut: list[dict] = []
     _futures_exposure(source, totals, fut)
     for d in fut:
         if is_foreign_ccy(d["row"].get(CCY_COL)):
-            out[d["key"]]["futures"] += d["ratio"]
+            add(d["key"], "futures", d["ratio"], d["row"].get(CCY_COL))
     return {k: dict(v) for k, v in out.items()}
 
 
