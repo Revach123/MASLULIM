@@ -2,8 +2,8 @@
 
 כל רכיב של החשיפה למניות (אותם רכיבים ש-validate_equity_exposure מסכם מול
 הנתון הרשמי) מפורק לפי המדד שמאחוריו:
-- מניות ישירות ("מניות מבכ ויהש", "לא סחיר מניות מבכ ויהש") - "מניות בודדות"
-  לפי "מדינה לפי חשיפה כלכלית".
+- מניות ישירות ("מניות מבכ ויהש", "לא סחיר מניות מבכ ויהש") וכתבי אופציה על מניות (סחירים ולא
+  סחירים, לפי שווי השוק) - "מניות בודדות" לפי "מדינה לפי חשיפה כלכלית".
 - קרנות ישראליות (IL/נסחרת) מסווג מניות - "נכס בסיס" של הקרן (מנתוני הקרנות
   ב-revach), כולל מדדים משולבים ("All-Bond כללי 70%, ת"א 125 30%") שמפוצלים
   לפי המשקלים, רק החלק המנייתי.
@@ -27,13 +27,17 @@ from .derivatives_exposure import (
     EQUITY_UNDERLYING, FUT_UNDERLYING_COL, FUTURES_CATEGORY, OPTIONS_CATEGORIES, SWAP_ASSET_TYPE_COL,
     SWAP_CATEGORY as SWAP_CATEGORY_NAME,
     SWAP_EQUITY_ASSET_TYPE, SWAP_TICKER_COL, _futures_exposure, _options_exposure, _swap_exposure,
-    is_equity_option, parse_underlying, total_assets_by_key,
+    is_equity_option, parse_underlying, swap_on_bond_etf, total_assets_by_key,
 )
 from .excel_io import to_ratio
 from .funds_classification import fund_siveg, leverage_factor
 from .sheet_source import PCT_COL
 
-DIRECT_EQUITY_CATEGORIES = ("מניות מבכ ויהש", "לא סחיר מניות מבכ ויהש")
+# כתבי אופציה (נאייקס אפ 1, ג'נריישן קפיטל אופ ל.ס) - זכות לקנות מניה של החברה, חלק מהחשיפה
+# למניות בנתון הרשמי: הוספתם לפי שווי השוק מקטינה את הפער מול data.gov.il ברוב הגופים (מור, הראל,
+# הפניקס, כלל, מנורה, ילין)
+WARRANT_CATEGORIES = ("כתבי אופציה", "לא סחיר כתבי אופציה")
+DIRECT_EQUITY_CATEGORIES = ("מניות מבכ ויהש", "לא סחיר מניות מבכ ויהש") + WARRANT_CATEGORIES
 EQUITY_FUND_SIVEGS = ("מחקה - מניות בארץ", "מחקה - מניות בחו\"ל")
 COUNTRY_COL = "מדינה לפי חשיפה כלכלית"
 NAME_COL = "שם נייר ערך"
@@ -423,7 +427,7 @@ def equity_row_index(category: str, row: dict, full_names: dict[str, str] | None
             return None
         return classify_index(str(row.get(NAME_COL) or ""))
     if category == SWAP_CATEGORY_NAME:
-        if row.get(SWAP_ASSET_TYPE_COL) != SWAP_EQUITY_ASSET_TYPE:
+        if row.get(SWAP_ASSET_TYPE_COL) != SWAP_EQUITY_ASSET_TYPE or swap_on_bond_etf(row):
             return None
         return _swap_index(row, full_names)
     return None

@@ -61,13 +61,15 @@
    קרנות...) כבר משקפות שווי שוק אמיתי, אין בהן את הבאג.
 """
 
+import math
+import re
 import statistics
 from datetime import date, datetime
 
 from .excel_io import to_ratio
 from .sheet_source import PCT_COL
-from .option_delta_pricing import quote_scale, resolve_option_delta
-from .option_ticker_parse import (CONTRACT_MULTIPLIER, is_call_option, parse_maof_expiry_month, parse_strike,
+from .option_delta_pricing import quote_scale, resolve_option_delta, resolve_option_value
+from .option_ticker_parse import (CONTRACT_MULTIPLIER, MAOF_STOCK_OPTION_SHARES, is_call_option, parse_maof_expiry_month, parse_strike,
                                   parse_underlying)
 from .futures_notional import FuturesResolver, build_rows as build_futures_rows
 from .swap_index_pricing import parse_deal_date, price_as_of as index_price_as_of, proxy_return, resolve_current_price
@@ -127,6 +129,34 @@ SWAP_UNDERLYING_PRICE_COL = "שער נכס הבסיס במועד ההתקשרו�
 SWAP_TICKER_COL = "טיקר"
 SWAP_ASSET_TYPE_COL = "סוג הנכס"
 SWAP_EQUITY_ASSET_TYPE = "מניות לרבות מדדי מניות"
+# סוואפ על תעודת סל אמריקאית ("LQD US", "HYG US Equity"): הדוח מסווג "מניות לרבות מדדי מניות" גם כשהקרן
+# היא קרן אג"ח (LQD - אג"ח קונצרני, HYG - תשואה גבוהה). שבר המניות של הקרן מ-SEC N-PORT (eqTotalPct);
+# קרן שרובה לא מניות - הסוואפ אינו חשיפה למניות
+_US_ETF_SWAP_TICKER = re.compile(r"^([A-Z]{1,5})\s+U[SNWQPARFV](?:\s+EQUITY)?$")
+_ETF_EQUITY_BY_SYMBOL: dict[str, float] | None = None
+
+
+def _etf_equity_by_symbol() -> dict[str, float]:
+    global _ETF_EQUITY_BY_SYMBOL
+    if _ETF_EQUITY_BY_SYMBOL is None:
+        try:
+            from .foreign_etf_reference import SEC_NO_DATA, fetch_sec_etf_exposure
+            _ETF_EQUITY_BY_SYMBOL = {
+                str(x["symbol"]).strip().upper(): (x.get("eqTotalPct") or 0.0) / 100
+                for x in fetch_sec_etf_exposure() if x.get("symbol") and x.get("assetClass") != SEC_NO_DATA}
+        except (Exception, SystemExit) as e:  # בלי PAT / רשת - כמו קודם (לפי סוג הנכס בדוח)
+            print(f"[swaps] שברי מניות של תעודות סל (SEC) לא זמינים: {e}")
+            _ETF_EQUITY_BY_SYMBOL = {}
+    return _ETF_EQUITY_BY_SYMBOL
+
+
+def swap_on_bond_etf(row: dict) -> bool:
+    """סוואפ שנכס הבסיס שלו תעודת סל אמריקאית שרובה לא מניות (SEC N-PORT)."""
+    m = _US_ETF_SWAP_TICKER.match(re.sub(r"\s+", " ", str(row.get(SWAP_TICKER_COL) or "")).strip().upper())
+    if not m:
+        return False
+    frac = _etf_equity_by_symbol().get(m.group(1))
+    return frac is not None and frac < 0.5
 SWAP_MAIN_TYPE_COL = "מאפיין עיקרי"  # "Unfunded Swap"/"Funded Total Return/Equity Swap"/... - נבדק בפועל
 SWAP_LABEL_COL = SWAP_MAIN_TYPE_COL
 FUNDED_SWAP_CATEGORY = "החלף עם מימון (Funded)"
@@ -209,6 +239,7 @@ OPT_EXPIRY_COL = "תאריך פקיעה"
 OPT_UNITS_COL = "ערך נקוב (יחידות)"
 OPT_FX_COL = "שער חליפין"
 OPT_CURRENCY_COL = "מטבע פעילות"
+OPT_PRICE_COL = "שער נייר הערך"  # במעו"ף - לחוזה, באגורות
 
 
 def _normalize_fx(currency, fx: float | None) -> float | None:
@@ -501,7 +532,7 @@ def _swap_exposure(
             total = total_assets.get(key) if key is not None else None
             if not total:
                 continue
-            is_equity = row.get(SWAP_ASSET_TYPE_COL) == SWAP_EQUITY_ASSET_TYPE
+            is_equity = row.get(SWAP_ASSET_TYPE_COL) == SWAP_EQUITY_ASSET_TYPE and not swap_on_bond_etf(row)
             label = row.get(SWAP_LABEL_COL)
             # ה-fallback (כשקנה המידה לא אמין) משתמש בעמודת האחוז כפי שהדוח
             # עצמו מדווח - נמצא בפועל מדויק יותר מ-fv/total_assets_by_key
@@ -702,6 +733,44 @@ def _option_expiry(row: dict, name, report_date) -> date | None:
     return expiry
 
 
+MAOF_PATTERN = "C_tase_maof_code"
+MAOF_SIZES = (1.0, 10.0, 100.0, 1000.0, 10000.0)
+MAOF_MIN_VALUE_SHARE = 0.02  # שורה אמינה ללימוד גודל החוזה: ערך האופציה 2%+ ממחיר המניה (לא שער מינימום)
+
+
+def _maof_contract_sizes(source: list[dict]) -> dict[str, float]:
+    """טיקר מניה -> מניות לחוזה מעו"ף: שער האופציה לחוזה / מחיר B&S למניה, מעוגל לחזקת 10, חציון על
+    השורות האמינות של אותה מניה (בכל הגופים)."""
+    ratios: dict[str, list[float]] = {}
+    for rec in source:
+        if rec["Category"] not in OPTIONS_CATEGORIES or rec["מידע"] != "מידע":
+            continue
+        report_date = rec.get("ReportMonth")
+        for row in rec["Clean"]:
+            name = row.get(OPT_NAME_COL)
+            if not name:
+                continue
+            ticker, pattern = parse_underlying(str(name))
+            if pattern != MAOF_PATTERN or ticker in CONTRACT_MULTIPLIER:
+                continue
+            is_call = is_call_option(str(name))
+            strike = _num(row.get(OPT_STRIKE_COL))
+            if not strike or strike <= 0:
+                strike = parse_strike(str(name))
+            px = _num(row.get(OPT_PRICE_COL))
+            if is_call is None or not strike or not px or px <= 0:
+                continue
+            value, spot = resolve_option_value(ticker, strike, _option_expiry(row, name, report_date),
+                                               report_date, is_call)
+            if value and spot and value >= MAOF_MIN_VALUE_SHARE * spot:
+                ratios.setdefault(ticker, []).append(px / value)
+    out = {}
+    for ticker, rs in ratios.items():
+        med = statistics.median(rs)
+        out[ticker] = min(MAOF_SIZES, key=lambda m: abs(math.log10(med / m)))
+    return out
+
+
 def _options_exposure(
     source: list[dict], total_assets: dict[str, float], category: str, detail: list | None = None
 ) -> tuple[dict[str, float], dict[str, float]]:
@@ -714,6 +783,7 @@ def _options_exposure(
     אותה חשיפה ונכס הבסיס שזוהה (לפירוק לפי מדד, index_exposure)."""
     sums: dict[str, float] = {}
     equity_sums: dict[str, float] = {}
+    maof_sizes = _maof_contract_sizes(source)
     for rec in source:
         if rec["Category"] != category or rec["מידע"] != "מידע":
             continue
@@ -730,7 +800,7 @@ def _options_exposure(
                 continue
 
             name = row.get(OPT_NAME_COL)
-            ticker, _pattern = parse_underlying(str(name)) if name else (None, None)
+            ticker, pattern = parse_underlying(str(name)) if name else (None, None)
             is_call = is_call_option(str(name)) if name else None
             strike = _num(row.get(OPT_STRIKE_COL))
             if not strike or strike <= 0:  # עמודה ריקה / 0 - מהשם ("C004160M607-35ת")
@@ -740,18 +810,24 @@ def _options_exposure(
             fx = _normalize_fx(row.get(OPT_CURRENCY_COL), _num(row.get(OPT_FX_COL)))
 
             line_ratio = None
+            fv = _num(row.get(FAIR_VALUE_COL))
+            fv_ratio = (fv / total) if fv is not None else None
             if ticker is not None and is_call is not None and units is not None and fx is not None:
                 delta, spot = resolve_option_delta(ticker, strike, expiry, report_date, is_call)
                 if delta is not None and spot is not None:
-                    mult = CONTRACT_MULTIPLIER.get(ticker, 1.0)
+                    mult = CONTRACT_MULTIPLIER.get(ticker) or (
+                        maof_sizes.get(ticker, MAOF_STOCK_OPTION_SHARES) if pattern == MAOF_PATTERN else 1.0)
                     notional_thousands = units * mult * delta * spot * quote_scale(ticker) * fx / 1000
                     line_ratio = notional_thousands / total
-                    fv = _num(row.get(FAIR_VALUE_COL))
-                    fv_ratio = (fv / total) if fv is not None else None
                     if fv_ratio is not None and abs(line_ratio) > LEVERAGE_CAP * abs(fv_ratio):
                         line_ratio = None
             if line_ratio is None or abs(line_ratio) > SANITY_CAP:
                 line_ratio = row_pct
+            # קול לונג: החשיפה (דלתא × נכס הבסיס) לעולם לא קטנה משווי האופציה (C <= S·N(d1)). קול
+            # "ממומן" שדווח בשווי נכס הבסיס המלא (הפניקס "עסקת CALL לאומי": שווי = יחידות × שער המניה,
+            # דלתא B&S 0.46) - החשיפה היא השווי
+            if is_call and units and units > 0 and fv_ratio is not None and 0 < line_ratio < fv_ratio <= SANITY_CAP:
+                line_ratio = fv_ratio
             sums[key] = sums.get(key, 0.0) + line_ratio
             equity_sums[key] = equity_sums.get(key, 0.0) + line_ratio
             if detail is not None:
