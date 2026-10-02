@@ -49,6 +49,27 @@ def latest_only(rows):
     return [r for r in rows if best[(r.get("legal_id"), r.get("track_code"), r.get("year"))][1] == r.get("url")]
 
 
+def _doc_pages(legal_id):
+    """מפת עמודים לתוסף: העמודים שמהם נלקחו קבצי מדיניות (source_page) של השנה הקודמת ואילך, או בלי שנה בשם.
+    התוסף נכנס רק אליהם בריצה רגילה; בינואר (ובשנה חדשה) עמוד בלי קובץ של השנה החדשה -> סריקה מלאה של האתר."""
+    import re as _re
+    from datetime import date as _date
+    from urllib.parse import unquote as _unq
+    f = ROOT / "policy" / "companies" / legal_id / "docs_index.json"
+    if not f.exists():
+        return []
+    cur = _date.today().year
+    pages = {}
+    for url, e in json.loads(f.read_text("utf-8")).items():
+        src = e.get("source_page")
+        if not src or not str(src).startswith("http"):  # העלאה ידנית - אין עמוד
+            continue
+        ys = [int(y) for y in _re.findall(r"(?<!\d)(20\d\d)(?!\d)", _unq(url)) if int(y) <= cur + 1]
+        if not ys or max(ys) >= cur - 1:
+            pages[src] = max(pages.get(src, 0), max(ys) if ys else 0)
+    return sorted(pages, key=lambda u: (-pages[u], u))
+
+
 def main():
     long_rows, changes, unparsed, crawl, site_log, docs = [], [], [], [], [], []
     for d in sorted(p for p in COMP.iterdir() if p.is_dir()) if COMP.exists() else []:
@@ -78,7 +99,9 @@ def main():
     for p in sorted((ROOT / "scripts" / "policy" / "sites").glob("*.json")):
         cfg = json.loads(p.read_text("utf-8"))
         if cfg.get("via") == "extension":
-            ext.append({k: cfg.get(k) for k in ("legal_id", "name", "home", "pages", "products", "click", "clicks", "any_sheet", "exclude", "settle_ms", "capture_ms", "download_rx", "follow_max", "follow_rx", "timeout_min", "download_delay_ms")})
+            ent = {k: cfg.get(k) for k in ("legal_id", "name", "home", "pages", "products", "click", "clicks", "any_sheet", "exclude", "settle_ms", "capture_ms", "download_rx", "follow_max", "follow_rx", "timeout_min", "download_delay_ms", "no_map")}
+            ent["doc_pages"] = _doc_pages(cfg["legal_id"])
+            ext.append(ent)
     (POL / "extension_sites.json").write_text(json.dumps(ext, ensure_ascii=False, indent=1), "utf-8")
     print(f"[combine] companies={len(crawl)} docs={len(docs)} long={len(long_rows)} (history={n_all}) unparsed={len(unparsed)}")
     from . import timeline  # הנתונים האחרונים לכל מסלול + תאריך השינוי האחרון וסוגו (גדול/קטן)
