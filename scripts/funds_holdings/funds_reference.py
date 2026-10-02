@@ -12,7 +12,10 @@ Contents: Read בלבד על revach123/revach, מוגדר כ-secret בשם PAT �
 גלאט הון, עדה חרדית, תשואה כהלכה, הרב דביר, סיווג ראשי.
 """
 import base64
+import csv
 import os
+
+from pathlib import Path
 
 import requests
 
@@ -51,12 +54,46 @@ def fetch_raw(session: requests.Session | None = None) -> list[dict]:
     return r.json()
 
 
+MERGERS_PATH = Path(__file__).with_name("fund_mergers.csv")
+
+
+def load_fund_mergers(path: Path = MERGERS_PATH) -> dict[str, str]:
+    """מספר קרן ישן -> מספר הקרן שאליה מוזגה ("0" = נסגרה בלי ממשיכה)."""
+    try:
+        with path.open(encoding="utf-8") as f:
+            return {r["old_fund"].strip(): r["new_fund"].strip() for r in csv.DictReader(f)}
+    except OSError:
+        return {}
+
+
+def add_merged_aliases(records: list[dict], mergers: dict[str, str]) -> int:
+    """רשומה לכל מספר קרן ישן שמוזג, עם נתוני הקרן הממשיכה (גם בשרשרת: ישן -> ביניים -> חדש) -
+    כך שדוח שמדווח מספר ישן מתמפה לקרן הנוכחית בכל מקום שמשתמש ברשימת הקרנות."""
+    by_num = {str(r.get("מספר קרן")): r for r in records if r.get("מספר קרן")}
+    added = 0
+    for old in mergers:
+        if old in by_num:
+            continue
+        new, seen = mergers[old], {old}
+        while new in mergers and new not in by_num and new not in seen:
+            seen.add(new)
+            new = mergers[new]
+        target = by_num.get(new)
+        if target:
+            records.append({**target, "מספר קרן": old, "ISIN": None})
+            added += 1
+    return added
+
+
 def build_funds_reference(session: requests.Session | None = None) -> list[dict]:
-    """רשימת רשומות, רק השדות הרלוונטיים, {v} בלבד (בלי {v,c})."""
+    """רשימת רשומות, רק השדות הרלוונטיים, {v} בלבד (בלי {v,c}), ועוד רשומת כינוי לכל קרן ישנה
+    שמוזגה לקרן קיימת (fund_mergers.csv)."""
     raw = fetch_raw(session)
     out = []
     for rec in raw:
         out.append({f: _cell(rec, f) for f in FIELDS})
+    added = add_merged_aliases(out, load_fund_mergers())
+    print(f"[funds_reference] {added} מספרי קרן ישנים שמוזגו מופו לקרן הממשיכה")
     return out
 
 

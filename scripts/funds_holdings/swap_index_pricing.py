@@ -112,7 +112,21 @@ PROXY_ETF = {
     "TPXDDVD": "index:topix", "TPX": "index:topix",
     "NDUEEGF": "index:msci_em_proxy", "M1EF": "index:msci_em_proxy",
     "NDUEACWF": "index:acwi_proxy", "M1WD": "index:acwi_proxy",
+    # STOXX Europe 600 (GR) ~ EXSA.DE; STOXX Europe 600 Banks (GR) ~ EXV1.DE (iShares, Xetra);
+    # S&P/ASX 200 TR ~ asx200; MVIS US Listed Pharmaceutical 25 TR ~ PPH
+    "SXXGR": "EXSA.DE", "SXXR": "EXSA.DE", "SXXP": "EXSA.DE", "SX7GR": "EXV1.DE", "SX7R": "EXV1.DE",
+    "SX7P": "EXV1.DE", "AS51T": "index:asx200", "AS51": "index:asx200", "MVPPHTR": "PPH",
 }
+def has_price_source(raw_ticker: str | None) -> bool:
+    """לטיקר יש מקור מחיר ליום הדוח: סדרה ב-INDICES או תעודת סל עוקבת."""
+    key = normalize_ticker(raw_ticker)
+    if not key:
+        return False
+    try:
+        tmap = _load_ticker_map()
+    except Exception:
+        tmap = {}
+    return bool(tmap.get(key) or tmap.get(key.replace("-", "")) or PROXY_ETF.get(key))
 _EXCEL_EPOCH = date(1899, 12, 30)
 
 
@@ -174,7 +188,8 @@ def resolve_current_price(raw_ticker: str | None, report_date: date | None) -> t
     if not key:
         return None, None
     try:
-        index_id = _load_ticker_map().get(key)
+        tmap = _load_ticker_map()
+        index_id = tmap.get(key) or tmap.get(key.replace("-", ""))  # "TA-125 INDEX" = TA125
     except Exception:
         return None, None
     if not index_id:
