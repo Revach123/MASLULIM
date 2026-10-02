@@ -526,8 +526,14 @@ async function maybeCatchUp() {
   if (Date.now() - (status?.lastRun || 0) > 20 * 60 * 60 * 1000 && !(await ranSuccessfullyToday())) runSafe("incremental");
 }
 
-chrome.runtime.onInstalled.addListener(() => {
+chrome.runtime.onInstalled.addListener(async () => {
   chrome.alarms.create(ALARM, { periodInMinutes: 24 * 60, delayInMinutes: 2 });
+  // עדכון / טעינה מחדש של התוסף קוטעים ריצה פעילה - מצב "running" שנשאר באחסון הוא של ריצה שכבר לא קיימת.
+  // מנקים מיד ובודקים בעוד דקה (בלי זה הבדיקה האוטומטית חיכתה 20 דקות לפני שזיהתה את הריצה הקטועה)
+  const { status } = await chrome.storage.local.get("status");
+  const st = status?.policyState;
+  if (st?.running) await setStatus({ policyState: { ...st, running: false, interrupted: true, ended: Date.now(), active: [] } });
+  chrome.alarms.create(POLICY_CHECK_ALARM, { periodInMinutes: 15, delayInMinutes: 1 });
   chrome.alarms.clear(POLICY_ALARM);  // הוחלף בבדיקה כל 15 דקות (POLICY_CHECK_ALARM)
 });
 chrome.runtime.onStartup.addListener(async () => {
