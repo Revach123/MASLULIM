@@ -1,7 +1,7 @@
 {
  "legal_id": "510694821",
  "company": "לאומי קמ\"פ בע\"מ",
- "taken": "2026-10-01T14:43:41+00:00",
+ "taken": "2026-10-02T10:30:21+00:00",
  "pages": {
   "https://www.leumi.co.il/he/Articles/40446": {
    "product": "גמל",
@@ -123,6 +123,22 @@
      "internal": true
     },
     {
+     "text": "פברואר",
+     "href": "https://bl-drupal-p-s3-01.s3.eu-west-1.amazonaws.com/leumi-hebrew/s3fs-public/03-2025/Monthly_report_%20finanace_feb_25_acc.xlsx",
+     "year": "2025",
+     "iframe": false,
+     "doc": true,
+     "internal": false
+    },
+    {
+     "text": "28.02.2025",
+     "href": "https://bl-drupal-p-s3-01.s3.eu-west-1.amazonaws.com/leumi-hebrew/s3fs-public/03-2025/Investment_28.02.2025_acc.xlsx",
+     "year": "2025",
+     "iframe": false,
+     "doc": true,
+     "internal": false
+    },
+    {
      "text": "(html)",
      "href": "https://www.leumi.co.il/leumi-hebrew/s3fs-public/complex_link_file/01-25/inv_policy_2025_acc.pdf",
      "year": "2025",
@@ -236,14 +252,6 @@
     },
     {
      "text": "(html)",
-     "href": "https://www.leumi.co.il/leumi-hebrew/s3fs-public/03-2025/Investment_28.02.2025_acc.xlsx",
-     "year": "2025",
-     "iframe": false,
-     "doc": true,
-     "internal": true
-    },
-    {
-     "text": "(html)",
      "href": "https://www.leumi.co.il/leumi-hebrew/s3fs-public/complex_link_file/02-25/Investment_31.12.2025_acc.xlsx",
      "year": "2025",
      "iframe": false,
@@ -332,11 +340,35 @@
     },
     {
      "text": "(html)",
+     "href": "https://www.leumi.co.il/leumi-hebrew/s3fs-public/03-2025/Investment_28.02.2025_acc.xlsx",
+     "year": "2025",
+     "iframe": false,
+     "doc": true,
+     "internal": true
+    },
+    {
+     "text": "(html)",
      "href": "https://www.leumi.co.il/leumi-hebrew/s3fs-public/03-2025/Monthly_report_%20finanace_feb_25_acc.xlsx",
      "year": "2025",
      "iframe": false,
      "doc": true,
      "internal": true
+    },
+    {
+     "text": "לרשימת הנכסים ליום 31.12.2024",
+     "href": "https://bl-drupal-p-s3-01.s3.eu-west-1.amazonaws.com/leumi-hebrew/s3fs-public/newsite/kupot%20hagemel%20%20vhatgmulim/Assets_list_31122024.pdf",
+     "year": "2024",
+     "iframe": false,
+     "doc": true,
+     "internal": false
+    },
+    {
+     "text": "דין וחשבון ליום 31.12.2024",
+     "href": "https://bl-drupal-p-s3-01.s3.eu-west-1.amazonaws.com/leumi-hebrew/s3fs-public/newsite/kupot%20hagemel%20%20vhatgmulim/Report_31.12.2024.pdf",
+     "year": "2024",
+     "iframe": false,
+     "doc": true,
+     "internal": false
     },
     {
      "text": "(html)",
@@ -388,14 +420,6 @@
     },
     {
      "text": "(html)",
-     "href": "https://www.leumi.co.il/leumi-hebrew/s3fs-public/newsite/kupot%20hagemel%20%20vhatgmulim/Assets_list_31122024.pdf",
-     "year": "2024",
-     "iframe": false,
-     "doc": true,
-     "internal": true
-    },
-    {
-     "text": "(html)",
      "href": "https://www.leumi.co.il/leumi-hebrew/s3fs-public/complex_link_file/12-24/Assets_list_30092024.pdf",
      "year": "2024",
      "iframe": false,
@@ -428,7 +452,7 @@
     },
     {
      "text": "(html)",
-     "href": "https://www.leumi.co.il/leumi-hebrew/s3fs-public/newsite/kupot%20hagemel%20%20vhatgmulim/Report_31.12.2024.pdf",
+     "href": "https://www.leumi.co.il/leumi-hebrew/s3fs-public/complex_link_file/02-24/Deserving_2024_Acc.pdf",
      "year": "2024",
      "iframe": false,
      "doc": true,
@@ -436,7 +460,15 @@
     },
     {
      "text": "(html)",
-     "href": "https://www.leumi.co.il/leumi-hebrew/s3fs-public/complex_link_file/02-24/Deserving_2024_Acc.pdf",
+     "href": "https://www.leumi.co.il/leumi-hebrew/s3fs-public/newsite/kupot%20hagemel%20%20vhatgmulim/Assets_list_31122024.pdf",
+     "year": "2024",
+     "iframe": false,
+     "doc": true,
+     "internal": true
+    },
+    {
+     "text": "(html)",
+     "href": "https://www.leumi.co.il/leumi-hebrew/s3fs-public/newsite/kupot%20hagemel%20%20vhatgmulim/Report_31.12.2024.pdf",
      "year": "2024",
      "iframe": false,
      "doc": true,
@@ -460,7 +492,7 @@
     },
     {
      "text": "(iframe)",
-     "href": "https://4694204.fls.doubleclick.net/activityi;src=4694204;type=invmedia;cat=uczoryjr;rcb=4;ord=8762142415188;npa=0;auiddc=1301038014.1790865825;gdid=dYWJhMj;uaa=x86;uab=64;uafvl=HeadlessChrome%3B153.0.8010.12%7CNot_A%2520Brand%3B8.0.0.0%7CChromium%3B153.0.8010.12;uamb=0;uam=;uap=Linux;uapv=;uaw=0;pscdl=noapi;frm=0;_tu=KFA;gtm=45fe69t1v9181662105z871741711za20gzb71741711zd71741711xeaxf1;gcs=G111;gcd=13v3v3v3v5l1;dma=0;dc_fmt=2;tag_exp=115938465~115938469~118897920~118897930~120213116~120385422~120469145~120469153~121280970;epver=2;dc_random=1790865825_8vNX9K6QN7-4fOa2yZ-83CEAZ93cB5aKlA;_dc_test=1;~oref=https%3A%2F%2Fwww.leumi.co.il%2Fhe%2FArticles%2F40446",
+     "href": "https://4694204.fls.doubleclick.net/activityi;src=4694204;type=invmedia;cat=uczoryjr;rcb=15;ord=2486607222378;npa=0;auiddc=707906611.1790937026;gdid=dYWJhMj;uaa=x86;uab=64;uafvl=HeadlessChrome%3B153.0.8010.12%7CNot_A%2520Brand%3B8.0.0.0%7CChromium%3B153.0.8010.12;uamb=0;uam=;uap=Linux;uapv=;uaw=0;pscdl=noapi;frm=0;_tu=KFA;gtm=45fe69u2v9181662105z871741711za20gzb71741711zd71741711xeaxf1;gcs=G111;gcd=13v3v3v3v5l1;dma=0;dc_fmt=2;tag_exp=115938465~115938468~117776795~118897920~118897930~120213116~120385422~120469145~120469153;epver=2;dc_random=1790937026_5tXtnJ5V_Xv08k2WQoB4MTs04eJY8n8_8Q;_dc_test=1;~oref=https%3A%2F%2Fwww.leumi.co.il%2Fhe%2FArticles%2F40446",
      "year": "2021",
      "iframe": true,
      "doc": false,
@@ -468,7 +500,7 @@
     },
     {
      "text": "(iframe)",
-     "href": "https://8083177.fls.doubleclick.net/activityi;src=8083177;type=remar0;cat=leumi002;rcb=9;ord=8993565988629;npa=0;auiddc=1301038014.1790865825;gdid=dYWJhMj;uaa=x86;uab=64;uafvl=HeadlessChrome%3B153.0.8010.12%7CNot_A%2520Brand%3B8.0.0.0%7CChromium%3B153.0.8010.12;uamb=0;uam=;uap=Linux;uapv=;uaw=0;pscdl=noapi;frm=0;_tu=KFA;gtm=45fe69t1v9189583035z871741711za20gzb71741711zd71741711xeaxf1;gcs=G111;gcd=13v3v3v3v5l1;dma=0;dc_fmt=2;tag_exp=115938465~115938468~118897920~118897930~120213116~120385422~120469145~120469153~121280970;epver=2;dc_random=1790865825_euGR5-OuZQDwitjBdeBPQnQzcsK1k9GfAg;_dc_test=1;~oref=https%3A%2F%2Fwww.leumi.co.il%2Fhe%2FArticles%2F40446",
+     "href": "https://8083177.fls.doubleclick.net/activityi;src=8083177;type=remar0;cat=leumi002;rcb=12;ord=1846622777767;npa=0;auiddc=707906611.1790937026;gdid=dYWJhMj;uaa=x86;uab=64;uafvl=HeadlessChrome%3B153.0.8010.12%7CNot_A%2520Brand%3B8.0.0.0%7CChromium%3B153.0.8010.12;uamb=0;uam=;uap=Linux;uapv=;uaw=0;pscdl=noapi;frm=0;_tu=KFA;gtm=45fe69u2v9189583035z871741711za20gzb71741711zd71741711xeaxf1;gcs=G111;gcd=13v3v3v3v5l1;dma=0;dc_fmt=2;tag_exp=115938465~115938469~117776795~118897920~118897930~120213116~120385423~120469145~120469153;epver=2;dc_random=1790937027_53x7fEVWYRXjpm1TVNE5zo8p5yf25eoGUQ;_dc_test=1;~oref=https%3A%2F%2Fwww.leumi.co.il%2Fhe%2FArticles%2F40446",
      "year": "2021",
      "iframe": true,
      "doc": false,
@@ -486,6 +518,14 @@
      "text": "(html)",
      "href": "https://www.leumi.co.il/leumi-hebrew/s3fs-public/complex_link_file/01-25/Report_31.12.2020.pdf",
      "year": "2020",
+     "iframe": false,
+     "doc": true,
+     "internal": true
+    },
+    {
+     "text": "ינואר",
+     "href": "https://www.leumi.co.il/leumi-hebrew/s3fs-public/complex_link_file/02-25/Monthly_report_ finanace_jan_25_acc_20190.xlsx",
+     "year": "2019",
      "iframe": false,
      "doc": true,
      "internal": true
@@ -805,7 +845,7 @@
    "items": [
     {
      "text": "(iframe)",
-     "href": "https://4694204.fls.doubleclick.net/activityi;src=4694204;type=invmedia;cat=uczoryjr;rcb=1;ord=6813495689938;npa=0;auiddc=1854066483.1790865891;gdid=dYWJhMj;uaa=x86;uab=64;uafvl=HeadlessChrome%3B153.0.8010.12%7CNot_A%2520Brand%3B8.0.0.0%7CChromium%3B153.0.8010.12;uamb=0;uam=;uap=Linux;uapv=;uaw=0;pscdl=noapi;frm=0;_tu=KFA;gtm=45fe69t1h1v9181662105z871741711za20gzb71741711zd71741711xeaxf1;gcs=G111;gcd=13v3v3v3v5l1;dma=0;dc_fmt=2;tag_exp=115938465~115938469~118897920~118897930~120213116~120385423~120469145~120469153;epver=2;dc_random=1790865891_mbAC7C-sVo82XinM1izC7Xq4yP8Ntav2cw;_dc_test=1;~oref=https%3A%2F%2Fwww.leumi.co.il%2Fhe%2FArticles%2F48131",
+     "href": "https://4694204.fls.doubleclick.net/activityi;src=4694204;type=invmedia;cat=uczoryjr;rcb=9;ord=3995878410430;npa=0;auiddc=1581204741.1790937095;gdid=dYWJhMj;uaa=x86;uab=64;uafvl=HeadlessChrome%3B153.0.8010.12%7CNot_A%2520Brand%3B8.0.0.0%7CChromium%3B153.0.8010.12;uamb=0;uam=;uap=Linux;uapv=;uaw=0;pscdl=noapi;frm=0;_tu=KFA;gtm=45fe6a10h2v9181662105z871741711za20gzb71741711zd71741711xeaxf1;gcs=G111;gcd=13v3v3v3v5l1;dma=0;dc_fmt=2;tag_exp=115938465~115938469~118897920~118897930~120213116~120385423~120469145~120469153~121246026~121246034;epver=2;dc_random=1790937095_rnNpeOUwYFX_zChnw7Bz_xb66FOAx_Q25w;_dc_test=1;~oref=https%3A%2F%2Fwww.leumi.co.il%2Fhe%2FArticles%2F48131",
      "year": "2021",
      "iframe": true,
      "doc": false,
@@ -813,7 +853,7 @@
     },
     {
      "text": "(iframe)",
-     "href": "https://8083177.fls.doubleclick.net/activityi;src=8083177;type=remar0;cat=leumi002;rcb=2;ord=2411157094358;npa=0;auiddc=1854066483.1790865891;gdid=dYWJhMj;uaa=x86;uab=64;uafvl=HeadlessChrome%3B153.0.8010.12%7CNot_A%2520Brand%3B8.0.0.0%7CChromium%3B153.0.8010.12;uamb=0;uam=;uap=Linux;uapv=;uaw=0;pscdl=noapi;frm=0;_tu=KFA;gtm=45fe69t1h1v9189583035z871741711za20gzb71741711zd71741711xeaxf1;gcs=G111;gcd=13v3v3v3v5l1;dma=0;dc_fmt=2;tag_exp=115938465~115938469~118897920~118897930~119793972~120213116~120385422~120412527~120469145~120469153~121125487;epver=2;dc_random=1790865891_OU25TXS6QZ5d2Wf2kB13MnL3phC16JGdYQ;_dc_test=1;~oref=https%3A%2F%2Fwww.leumi.co.il%2Fhe%2FArticles%2F48131",
+     "href": "https://8083177.fls.doubleclick.net/activityi;src=8083177;type=remar0;cat=leumi002;rcb=17;ord=9034920434060;npa=0;auiddc=1581204741.1790937095;gdid=dYWJhMj;uaa=x86;uab=64;uafvl=HeadlessChrome%3B153.0.8010.12%7CNot_A%2520Brand%3B8.0.0.0%7CChromium%3B153.0.8010.12;uamb=0;uam=;uap=Linux;uapv=;uaw=0;pscdl=noapi;frm=0;_tu=KFA;gtm=45fe6a10h2v9189583035z871741711za20gzb71741711zd71741711xeaxf1;gcs=G111;gcd=13v3v3v3v5l1;dma=0;dc_fmt=2;tag_exp=115938465~115938468~118897920~118897930~119793973~120213116~120385422~120469145~120469153;epver=2;dc_random=1790937095_GxXC-qLUDZLuQXDr2py2Y-RB2ZFm_szvyg;_dc_test=1;~oref=https%3A%2F%2Fwww.leumi.co.il%2Fhe%2FArticles%2F48131",
      "year": "2021",
      "iframe": true,
      "doc": false,
@@ -901,13 +941,29 @@
    "text_head": "Ready",
    "items": []
   },
-  "https://www.leumi.co.il": {
+  "https://www.leumi.co.il/he": {
    "product": null,
    "status": 200,
-   "method": "requests",
-   "text_hash": "6b7c7e7fba4cb122fcd38cfa839d368267f7d67b",
-   "text_head": "בנק לאומי - הבנק הכי נוח בשירות דילוג לתוכן העיקרי דילוג לתפריט הראשי דילוג לתפריט התחתון באתר זה נעשה שימוש בטכנולוגיות איסוף מידע כגון Cookies, לרבות על ידי צדדים שלישיים, כדי לספק לך חווית גלישה טובה יותר וכן למטרות סטטיסטיקה, איפיון ושיווק. המשך הגלישה באתר מהווה הסכמתך לכך. למידע נוסף בנושא ואפשרות לנהל את השימוש באמצעים הללו, ראו את מדיניות הפרטיות המעודכנת של הבנק × סגירה פרטיים פרטיים עסקים מוצרים ושירותים בחירת שפה דברו איתנו נגישות מוצרים ושירותים פתיחת חשבון הלוואות כרטיסי אשראי מטבע חוץ משכנתאות שוק ההון פיקדונות מוצרי שוק הכסף לאומי בונוס פעולות בדיגיטל ייעוץ פנסיוני חשבון נאמנות ",
+   "method": "browser",
+   "text_hash": "4e2bb61edf3c289a8836382eb43d13186f2530b2",
+   "text_head": "דילוג לתוכן העיקרי דילוג לתפריט הראשי דילוג לתפריט התחתון פרטיים עסקים מוצרים ושירותים דברו איתנו פתיחת חשבון כניסה לחשבון דף הבית- בנק לאומי בנק לאומי מאחל חג סוכות שמח לכל בית ישראל הלוואות כרטיסי אשראי מטבע חוץ פיקדונות מוצרי שוק הכסף קשרי משקיעים שערים יציגים מדדים לכל שערי המטבע > לכל המדדים > איזו הלוואה מתאימה לך? הלוואה לעסק סטודנטים רכב מתחדשים שכירים סולארית לכל ההלוואות אי עמידה בפירעון ההלוואה עלול לגרור חיוב בריבית פיגורים והליכי הוצאה לפועל שעות פעילות בנק לאומי במהלך חגי תשרי למידע נוסף הקלות ללקוחות בנק לאומי למידע נוסף שעות פעילות בנק לאומי במהלך חגי תשרי למידע נוסף הקלות ללקו",
    "items": [
+    {
+     "text": "(iframe)",
+     "href": "https://4694204.fls.doubleclick.net/activityi;src=4694204;type=invmedia;cat=uczoryjr;rcb=5;ord=9973408008026;npa=0;auiddc=1348124821.1790937126;gdid=dYWJhMj;uaa=x86;uab=64;uafvl=HeadlessChrome%3B153.0.8010.12%7CNot_A%2520Brand%3B8.0.0.0%7CChromium%3B153.0.8010.12;uamb=0;uam=;uap=Linux;uapv=;uaw=0;pscdl=noapi;frm=0;_tu=KFA;gtm=45fe69u2v9181662105z871741711za20gzb71741711zd71741711xeaxf1;gcs=G111;gcd=13v3v3v3v5l1;dma=0;dc_fmt=2;tag_exp=115938465~115938469~117776796~118131808~118897920~118897930~120213116~120385422~120469145~120469153;epver=2;dc_random=1790937126_l0ZzSdyQ_Q_77y9AjWXxZ2RbUf9c3W1_tg;_dc_test=1;~oref=https%3A%2F%2Fwww.leumi.co.il%2Fhe",
+     "year": "2021",
+     "iframe": true,
+     "doc": false,
+     "internal": false
+    },
+    {
+     "text": "(iframe)",
+     "href": "https://8083177.fls.doubleclick.net/activityi;src=8083177;type=remar0;cat=leumi002;rcb=1;ord=4683782802336;npa=0;auiddc=1348124821.1790937126;gdid=dYWJhMj;uaa=x86;uab=64;uafvl=HeadlessChrome%3B153.0.8010.12%7CNot_A%2520Brand%3B8.0.0.0%7CChromium%3B153.0.8010.12;uamb=0;uam=;uap=Linux;uapv=;uaw=0;pscdl=noapi;frm=0;_tu=KFA;gtm=45fe69u2v9189583035z871741711za20gzb71741711zd71741711xeaxf1;gcs=G111;gcd=13v3v3v3v5l1;dma=0;dc_fmt=2;tag_exp=115616986~115938465~115938468~117776796~118131808~118897920~118897930~120213116~120385422~120469145~120469153~121246027~121246035;epver=2;dc_random=1790937126_td1ZvJKmceNSN9OUcgSxvYozHvXNYFBLmg;_dc_test=1;~oref=https%3A%2F%2Fwww.leumi.co.il%2Fhe",
+     "year": "2021",
+     "iframe": true,
+     "doc": false,
+     "internal": false
+    },
     {
      "text": "ראו את מדיניות הפרטיות המעודכנת של הבנק",
      "href": "https://www.leumi.co.il/he/privacy_policy",
@@ -941,14 +997,6 @@
      "internal": true
     },
     {
-     "text": "מדיניות הפרטיות בלאומי",
-     "href": "https://www.leumi.co.il/he/Articles/privacy_policy",
-     "year": null,
-     "iframe": false,
-     "doc": false,
-     "internal": true
-    },
-    {
      "text": "ייעוץ פנסיוני",
      "href": "https://www.leumi.co.il/he/pension-advising",
      "year": null,
@@ -958,7 +1006,7 @@
     },
     {
      "text": "טפסים להורדה",
-     "href": "https://www.leumi.co.il",
+     "href": "https://www.leumi.co.il/he",
      "year": null,
      "iframe": false,
      "doc": true,
@@ -971,8 +1019,72 @@
      "iframe": false,
      "doc": false,
      "internal": true
+    },
+    {
+     "text": "Click here to learn more about our Privacy Policy.",
+     "href": "https://www.leumi.co.il/he/Articles/privacy_policy",
+     "year": null,
+     "iframe": false,
+     "doc": false,
+     "internal": true
+    },
+    {
+     "text": "(iframe)",
+     "href": "https://www.bankleumi.co.il/Rates/CapitalMarket/CapitalMarketIfr/rates.html?w=1400&h=1000",
+     "year": null,
+     "iframe": true,
+     "doc": false,
+     "internal": false
+    },
+    {
+     "text": "(iframe)",
+     "href": "https://www.bankleumi.co.il/Rates/CapitalMarket/CapitalMarketIfr/shaarim.html?w=1400&h=1000",
+     "year": null,
+     "iframe": true,
+     "doc": false,
+     "internal": false
+    },
+    {
+     "text": "(iframe)",
+     "href": "https://cache.bankleumi.co.il/adrum-xd.686372e97eae8d992d3f1df53d051927.html",
+     "year": null,
+     "iframe": true,
+     "doc": false,
+     "internal": false
     }
    ]
+  },
+  "https://www.bankleumi.co.il/Rates/CapitalMarket/CapitalMarketIfr/rates.html?w=1400&h=1000": {
+   "product": null,
+   "status": 200,
+   "method": "browser",
+   "text_hash": "589e1cc656e98d57e60bae50e63a0c26f1b39de9",
+   "text_head": "דולר ארה\"ב 3.06 אירו 3.4419 לירה שטרלינג 4.0407 100 ין יפני 1.9414 עודכן לאחרונה ב־2 באוקטובר, 2026",
+   "items": []
+  },
+  "https://www.bankleumi.co.il/Rates/CapitalMarket/CapitalMarketIfr/shaarim.html?w=1400&h=1000": {
+   "product": null,
+   "status": 200,
+   "method": "browser",
+   "text_hash": "727fa8fe547a26058fc802f49e92846d6a5a1710",
+   "text_head": "ת״א 35 4218.25 ת״א 125 4072.30 ת״א גלובל בלוטק 626.72 עודכן לאחרונה ב-1 באוקטובר, 2026 14:31",
+   "items": []
+  },
+  "https://4694204.fls.doubleclick.net/activityi;src=4694204;type=invmedia;cat=uczoryjr;rcb=5;ord=9973408008026;npa=0;auiddc=1348124821.1790937126;gdid=dYWJhMj;uaa=x86;uab=64;uafvl=HeadlessChrome%3B153.0.8010.12%7CNot_A%2520Brand%3B8.0.0.0%7CChromium%3B153.0.8010.12;uamb=0;uam=;uap=Linux;uapv=;uaw=0;pscdl=noapi;frm=0;_tu=KFA;gtm=45fe69u2v9181662105z871741711za20gzb71741711zd71741711xeaxf1;gcs=G111;gcd=13v3v3v3v5l1;dma=0;dc_fmt=2;tag_exp=115938465~115938469~117776796~118131808~118897920~118897930~120213116~120385422~120469145~120469153;epver=2;dc_random=1790937126_l0ZzSdyQ_Q_77y9AjWXxZ2RbUf9c3W1_tg;_dc_test=1;~oref=https%3A%2F%2Fwww.leumi.co.il%2Fhe": {
+   "product": null,
+   "status": 200,
+   "method": "browser",
+   "text_hash": null,
+   "text_head": "",
+   "items": []
+  },
+  "https://8083177.fls.doubleclick.net/activityi;src=8083177;type=remar0;cat=leumi002;rcb=1;ord=4683782802336;npa=0;auiddc=1348124821.1790937126;gdid=dYWJhMj;uaa=x86;uab=64;uafvl=HeadlessChrome%3B153.0.8010.12%7CNot_A%2520Brand%3B8.0.0.0%7CChromium%3B153.0.8010.12;uamb=0;uam=;uap=Linux;uapv=;uaw=0;pscdl=noapi;frm=0;_tu=KFA;gtm=45fe69u2v9189583035z871741711za20gzb71741711zd71741711xeaxf1;gcs=G111;gcd=13v3v3v3v5l1;dma=0;dc_fmt=2;tag_exp=115616986~115938465~115938468~117776796~118131808~118897920~118897930~120213116~120385422~120469145~120469153~121246027~121246035;epver=2;dc_random=1790937126_td1ZvJKmceNSN9OUcgSxvYozHvXNYFBLmg;_dc_test=1;~oref=https%3A%2F%2Fwww.leumi.co.il%2Fhe": {
+   "product": null,
+   "status": 200,
+   "method": "browser",
+   "text_hash": null,
+   "text_head": "",
+   "items": []
   },
   "https://www.leumi.co.il/he/pension-advising": {
    "product": "פנסיה",
@@ -1588,7 +1700,7 @@
    "items": [
     {
      "text": "(iframe)",
-     "href": "https://8083177.fls.doubleclick.net/activityi;src=8083177;type=remar0;cat=leumi002;rcb=7;ord=632425173984;npa=0;auiddc=301733235.1790865921;gdid=dYWJhMj;uaa=x86;uab=64;uafvl=HeadlessChrome%3B153.0.8010.12%7CNot_A%2520Brand%3B8.0.0.0%7CChromium%3B153.0.8010.12;uamb=0;uam=;uap=Linux;uapv=;uaw=0;pscdl=noapi;frm=0;_tu=KFA;gtm=45fe69t1v9189583035z871741711za20gzb71741711zd71741711xeaxf1;gcs=G111;gcd=13v3v3v3v5l1;dma=0;dc_fmt=2;tag_exp=115616986~115938465~115938469~117227714~118897920~118897930~120213116~120385422~120469145~120469153~121280969;epver=2;dc_random=1790865921_HnrS8jtTCuAYQw6Rco89HPjtzV2DtExXNg;_dc_test=1;~oref=https%3A%2F%2Fwww.leumi.co.il%2Fhe%2FInvestor-Relations%2Fabout-leumi",
+     "href": "https://8083177.fls.doubleclick.net/activityi;src=8083177;type=remar0;cat=leumi002;rcb=0;ord=8199601982198;npa=0;auiddc=115638618.1790937181;gdid=dYWJhMj;uaa=x86;uab=64;uafvl=HeadlessChrome%3B153.0.8010.12%7CNot_A%2520Brand%3B8.0.0.0%7CChromium%3B153.0.8010.12;uamb=0;uam=;uap=Linux;uapv=;uaw=0;pscdl=noapi;frm=0;_tu=KFA;gtm=45fe69u2v9189583035z871741711za20gzb71741711zd71741711xeaxf1;gcs=G111;gcd=13v3v3v3v5l1;dma=0;dc_fmt=2;tag_exp=115938465~115938469~118897920~118897930~120213116~120385423~120469145~120469153;epver=2;dc_random=1790937181_b6kRlqvoTSbX_GRxB0QFyBzShvqj8uLSvQ;_dc_test=1;~oref=https%3A%2F%2Fwww.leumi.co.il%2Fhe%2FInvestor-Relations%2Fabout-leumi",
      "year": "2021",
      "iframe": true,
      "doc": false,
@@ -1596,7 +1708,7 @@
     },
     {
      "text": "(iframe)",
-     "href": "https://4694204.fls.doubleclick.net/activityi;src=4694204;type=invmedia;cat=uczoryjr;rcb=10;ord=7025065491502;npa=0;auiddc=301733235.1790865921;gdid=dYWJhMj;uaa=x86;uab=64;uafvl=HeadlessChrome%3B153.0.8010.12%7CNot_A%2520Brand%3B8.0.0.0%7CChromium%3B153.0.8010.12;uamb=0;uam=;uap=Linux;uapv=;uaw=0;pscdl=noapi;frm=0;_tu=KFA;gtm=45fe69t1v9181662105z871741711za20gzb71741711zd71741711xeaxf1;gcs=G111;gcd=13v3v3v3v5l1;dma=0;dc_fmt=2;tag_exp=115938465~115938469~117227714~118897920~118897930~120213116~120385422~120469145~120469153~121246026~121246034~121280969;epver=2;dc_random=1790865921_DYyokMNYVc6F4lLlTMD3t6jE3x-n8W9aVg;_dc_test=1;~oref=https%3A%2F%2Fwww.leumi.co.il%2Fhe%2FInvestor-Relations%2Fabout-leumi",
+     "href": "https://4694204.fls.doubleclick.net/activityi;src=4694204;type=invmedia;cat=uczoryjr;rcb=3;ord=3619272513711;npa=0;auiddc=115638618.1790937181;gdid=dYWJhMj;uaa=x86;uab=64;uafvl=HeadlessChrome%3B153.0.8010.12%7CNot_A%2520Brand%3B8.0.0.0%7CChromium%3B153.0.8010.12;uamb=0;uam=;uap=Linux;uapv=;uaw=0;pscdl=noapi;frm=0;_tu=KFA;gtm=45fe69u2v9181662105z871741711za20gzb71741711zd71741711xeaxf1;gcs=G111;gcd=13v3v3v3v5l1;dma=0;dc_fmt=2;tag_exp=115938465~115938468~118897920~118897930~120213116~120385422~120469145~120469153;epver=2;dc_random=1790937181_Bi01Q5QLgca7b6mvpv99rSO1iqku260thw;_dc_test=1;~oref=https%3A%2F%2Fwww.leumi.co.il%2Fhe%2FInvestor-Relations%2Fabout-leumi",
      "year": "2021",
      "iframe": true,
      "doc": false,
@@ -1725,7 +1837,7 @@
    "items": [
     {
      "text": "(iframe)",
-     "href": "https://8083177.fls.doubleclick.net/activityi;src=8083177;type=remar0;cat=leumi002;rcb=12;ord=330439428639;npa=0;auiddc=2084915206.1790865934;gdid=dYWJhMj;uaa=x86;uab=64;uafvl=HeadlessChrome%3B153.0.8010.12%7CNot_A%2520Brand%3B8.0.0.0%7CChromium%3B153.0.8010.12;uamb=0;uam=;uap=Linux;uapv=;uaw=0;pscdl=noapi;frm=0;_tu=KFA;gtm=45fe69t1h1v9189583035z871741711za20gzb71741711zd71741711xeaxf1;gcs=G111;gcd=13v3v3v3v5l1;dma=0;dc_fmt=2;tag_exp=115616986~115938465~115938468~118897920~118897930~120213116~120385423~120469145~120469153;epver=2;dc_random=1790865934_S-g-aAWVS8zXIQskqhlqQXZUO1rNBzt2fQ;_dc_test=1;~oref=https%3A%2F%2Fwww.leumi.co.il%2Fhe%2FInvestor-Relations%2FSubsidiaries-and-affiliates",
+     "href": "https://4694204.fls.doubleclick.net/activityi;src=4694204;type=invmedia;cat=uczoryjr;rcb=19;ord=6589345383262;npa=0;auiddc=1825931422.1790937194;gdid=dYWJhMj;uaa=x86;uab=64;uafvl=HeadlessChrome%3B153.0.8010.12%7CNot_A%2520Brand%3B8.0.0.0%7CChromium%3B153.0.8010.12;uamb=0;uam=;uap=Linux;uapv=;uaw=0;pscdl=noapi;frm=0;_tu=KFA;gtm=45fe69u2v9181662105z871741711za20gzb71741711zd71741711xeaxf1;gcs=G111;gcd=13v3v3v3v5l1;dma=0;dc_fmt=2;tag_exp=115938466~115938468~117776796~118897920~118897930~120213116~120385423~120469145~120469153~121046263~121046271~121280971;epver=2;dc_random=1790937194_3k-qE-566GM64EG2OJZCBvP9J3vInIe5Jg;_dc_test=1;~oref=https%3A%2F%2Fwww.leumi.co.il%2Fhe%2FInvestor-Relations%2FSubsidiaries-and-affiliates",
      "year": "2021",
      "iframe": true,
      "doc": false,
@@ -1733,7 +1845,7 @@
     },
     {
      "text": "(iframe)",
-     "href": "https://4694204.fls.doubleclick.net/activityi;src=4694204;type=invmedia;cat=uczoryjr;rcb=16;ord=2679226282502;npa=0;auiddc=2084915206.1790865934;gdid=dYWJhMj;uaa=x86;uab=64;uafvl=HeadlessChrome%3B153.0.8010.12%7CNot_A%2520Brand%3B8.0.0.0%7CChromium%3B153.0.8010.12;uamb=0;uam=;uap=Linux;uapv=;uaw=0;pscdl=noapi;frm=0;_tu=KFA;gtm=45fe69t1h1v9181662105z871741711za20gzb71741711zd71741711xeaxf1;gcs=G111;gcd=13v3v3v3v5l1;dma=0;dc_fmt=2;tag_exp=115938465~115938468~118897920~118897930~120213116~120385423~120469145~120469153;epver=2;dc_random=1790865934_KoWsDXJOavkbMinne7K_8xDbFCstiLCddA;_dc_test=1;~oref=https%3A%2F%2Fwww.leumi.co.il%2Fhe%2FInvestor-Relations%2FSubsidiaries-and-affiliates",
+     "href": "https://8083177.fls.doubleclick.net/activityi;src=8083177;type=remar0;cat=leumi002;rcb=8;ord=9750627112496;npa=0;auiddc=1825931422.1790937194;gdid=dYWJhMj;uaa=x86;uab=64;uafvl=HeadlessChrome%3B153.0.8010.12%7CNot_A%2520Brand%3B8.0.0.0%7CChromium%3B153.0.8010.12;uamb=0;uam=;uap=Linux;uapv=;uaw=0;pscdl=noapi;frm=0;_tu=KFA;gtm=45fe69u2v9189583035z871741711za20gzb71741711zd71741711xeaxf1;gcs=G111;gcd=13v3v3v3v5l1;dma=0;dc_fmt=2;tag_exp=115616985~115938466~115938469~117776796~118897920~118897930~120213116~120385423~120469145~120469153~121246026~121246034~121280971;epver=2;dc_random=1790937195_7Thd-0AdIT_lFqwy8-RA5O6lXUfya6hLHQ;_dc_test=1;~oref=https%3A%2F%2Fwww.leumi.co.il%2Fhe%2FInvestor-Relations%2FSubsidiaries-and-affiliates",
      "year": "2021",
      "iframe": true,
      "doc": false,
@@ -2112,7 +2224,7 @@
    "items": [
     {
      "text": "(iframe)",
-     "href": "https://8083177.fls.doubleclick.net/activityi;src=8083177;type=remar0;cat=leumi002;rcb=5;ord=4130065142110;npa=0;auiddc=1970377925.1790865947;gdid=dYWJhMj;uaa=x86;uab=64;uafvl=HeadlessChrome%3B153.0.8010.12%7CNot_A%2520Brand%3B8.0.0.0%7CChromium%3B153.0.8010.12;uamb=0;uam=;uap=Linux;uapv=;uaw=0;pscdl=noapi;frm=0;_tu=KFA;gtm=45fe69t1v9189583035z871741711za20gzb71741711zd71741711xeaxf1;gcs=G111;gcd=13v3v3v3v5l1;dma=0;dc_fmt=2;tag_exp=115938465~115938468~118897920~118897930~120213116~120385423~120469145~120469153;epver=2;dc_random=1790865947_rx3i9e8g_pUHUTqNZpiDsRXzxf9wzrGDYw;_dc_test=1;~oref=https%3A%2F%2Fwww.leumi.co.il%2Fhe%2Fabout-leumi%2FInvestor-Relations%2FCredit_Rating",
+     "href": "https://4694204.fls.doubleclick.net/activityi;src=4694204;type=invmedia;cat=uczoryjr;rcb=4;ord=1582000801633;npa=0;auiddc=954780567.1790937208;gdid=dYWJhMj;uaa=x86;uab=64;uafvl=HeadlessChrome%3B153.0.8010.12%7CNot_A%2520Brand%3B8.0.0.0%7CChromium%3B153.0.8010.12;uamb=0;uam=;uap=Linux;uapv=;uaw=0;pscdl=noapi;frm=0;_tu=KFA;gtm=45fe69u2v9181662105z871741711za20gzb71741711zd71741711xeaxf1;gcs=G111;gcd=13v3v3v3v5l1;dma=0;dc_fmt=2;tag_exp=115616985~115938465~115938468~118897920~118897930~120213116~120385423~120469145~120469153;epver=2;dc_random=1790937208_6W6S4Vd_gT4udvENRUYGGn2Rbu8v-tDhRA;_dc_test=1;~oref=https%3A%2F%2Fwww.leumi.co.il%2Fhe%2Fabout-leumi%2FInvestor-Relations%2FCredit_Rating",
      "year": "2021",
      "iframe": true,
      "doc": false,
@@ -2120,8 +2232,8 @@
     },
     {
      "text": "(iframe)",
-     "href": "https://4694204.fls.doubleclick.net/activityi;src=4694204;type=invmedia;cat=uczoryjr;rcb=17;ord=4664442320108;npa=0;auiddc=1970377925.1790865947;gdid=dYWJhMj;uaa=x86;uab=64;uafvl=HeadlessChrome%3B153.0.8010.12%7CNot_A%2520Brand%3B8.0.0.0%7CChromium%3B153.0.8010.12;uamb=0;uam=;uap=Linux;uapv=;uaw=0;pscdl=noapi;frm=0;_tu=KFA;gtm=45fe69t1v9181662105z871741711za20gzb71741711zd71741711xeaxf1;gcs=G111;gcd=13v3v3v3v5l1;dma=0;dc_fmt=2;tag_exp=115938465~115938469~118897920~118897930~120213116~120385423~120469145~120469153;epver=2;dc_random=1790865947_h0E25xoSQpmYR0o6l74Bbq15PH2s0azdDA;_dc_test=1;~oref=https%3A%2F%2Fwww.leumi.co.il%2Fhe%2Fabout-leumi%2FInvestor-Relations%2FCredit_Rating",
-     "year": "2010",
+     "href": "https://8083177.fls.doubleclick.net/activityi;src=8083177;type=remar0;cat=leumi002;rcb=14;ord=1846559639511;npa=0;auiddc=954780567.1790937208;gdid=dYWJhMj;uaa=x86;uab=64;uafvl=HeadlessChrome%3B153.0.8010.12%7CNot_A%2520Brand%3B8.0.0.0%7CChromium%3B153.0.8010.12;uamb=0;uam=;uap=Linux;uapv=;uaw=0;pscdl=noapi;frm=0;_tu=KFA;gtm=45fe69u2v9189583035z871741711za20gzb71741711zd71741711xeaxf1;gcs=G111;gcd=13v3v3v3v5l1;dma=0;dc_fmt=2;tag_exp=115938465~115938468~118897920~118897930~120213116~120385422~120469145~120469153;epver=2;dc_random=1790937208_AxPU1sSXB7sgi5L5lpKkgzY2Wu5foFoxtg;_dc_test=1;~oref=https%3A%2F%2Fwww.leumi.co.il%2Fhe%2Fabout-leumi%2FInvestor-Relations%2FCredit_Rating",
+     "year": "2021",
      "iframe": true,
      "doc": false,
      "internal": false
@@ -2249,15 +2361,15 @@
    "items": [
     {
      "text": "(iframe)",
-     "href": "https://4694204.fls.doubleclick.net/activityi;src=4694204;type=invmedia;cat=uczoryjr;rcb=5;ord=2028586861190;npa=0;auiddc=2106077753.1790865980;gdid=dYWJhMj;uaa=x86;uab=64;uafvl=HeadlessChrome%3B153.0.8010.12%7CNot_A%2520Brand%3B8.0.0.0%7CChromium%3B153.0.8010.12;uamb=0;uam=;uap=Linux;uapv=;uaw=0;pscdl=noapi;frm=0;_tu=KFA;gtm=45fe69t1v9181662105z871741711za20gzb71741711zd71741711xeaxf1;gcs=G111;gcd=13v3v3v3v5l1;dma=0;dc_fmt=2;tag_exp=115938465~115938468~117776796~118897920~118897930~120213116~120385422~120469145~120469153;epver=2;dc_random=1790865980_I87XGXgKbGt6awdznpaqR7K6eAVZ_1zXHg;_dc_test=1;~oref=https%3A%2F%2Fwww.leumi.co.il%2Fhe%2FInvestor-Relations%2FFinancial-Targets",
-     "year": "2028",
+     "href": "https://4694204.fls.doubleclick.net/activityi;src=4694204;type=invmedia;cat=uczoryjr;rcb=10;ord=9898030931669;npa=0;auiddc=353978568.1790937222;gdid=dYWJhMj;uaa=x86;uab=64;uafvl=HeadlessChrome%3B153.0.8010.12%7CNot_A%2520Brand%3B8.0.0.0%7CChromium%3B153.0.8010.12;uamb=0;uam=;uap=Linux;uapv=;uaw=0;pscdl=noapi;frm=0;_tu=KFA;gtm=45fe69u2v9181662105z871741711za20gzb71741711zd71741711xeaxf1;gcs=G111;gcd=13v3v3v3v5l1;dma=0;dc_fmt=2;tag_exp=115938466~115938469~118897920~118897930~120213116~120385423~120469145~120469153~121246026~121246034;epver=2;dc_random=1790937222_rxG8S03Tf8G2DB1fRRgKl-jjdvzdZfmn6A;_dc_test=1;~oref=https%3A%2F%2Fwww.leumi.co.il%2Fhe%2FInvestor-Relations%2FFinancial-Targets",
+     "year": "2021",
      "iframe": true,
      "doc": false,
      "internal": false
     },
     {
      "text": "(iframe)",
-     "href": "https://8083177.fls.doubleclick.net/activityi;src=8083177;type=remar0;cat=leumi002;rcb=1;ord=6720814255084;npa=0;auiddc=2106077753.1790865980;gdid=dYWJhMj;uaa=x86;uab=64;uafvl=HeadlessChrome%3B153.0.8010.12%7CNot_A%2520Brand%3B8.0.0.0%7CChromium%3B153.0.8010.12;uamb=0;uam=;uap=Linux;uapv=;uaw=0;pscdl=noapi;frm=0;_tu=KFA;gtm=45fe69t1v9189583035z871741711za20gzb71741711zd71741711xeaxf1;gcs=G111;gcd=13v3v3v3v5l1;dma=0;dc_fmt=2;tag_exp=115938465~115938469~117776796~118897920~118897930~120213116~120385422~120469145~120469153;epver=2;dc_random=1790865980_W41rgGxhQeZ8z5KFXlCfq0by6gYTr_e86w;_dc_test=1;~oref=https%3A%2F%2Fwww.leumi.co.il%2Fhe%2FInvestor-Relations%2FFinancial-Targets",
+     "href": "https://8083177.fls.doubleclick.net/activityi;src=8083177;type=remar0;cat=leumi002;rcb=13;ord=7870730591058;npa=0;auiddc=353978568.1790937222;gdid=dYWJhMj;uaa=x86;uab=64;uafvl=HeadlessChrome%3B153.0.8010.12%7CNot_A%2520Brand%3B8.0.0.0%7CChromium%3B153.0.8010.12;uamb=0;uam=;uap=Linux;uapv=;uaw=0;pscdl=noapi;frm=0;_tu=KFA;gtm=45fe69u2v9189583035z871741711za20gzb71741711zd71741711xeaxf1;gcs=G111;gcd=13v3v3v3v5l1;dma=0;dc_fmt=2;tag_exp=115938466~115938469~118897920~118897930~120213116~120385422~120469145~120469153~121246027~121246035;epver=2;dc_random=1790937222_Xo1ltzZNk94itF_LBBbmwKHboMa-3dKZaA;_dc_test=1;~oref=https%3A%2F%2Fwww.leumi.co.il%2Fhe%2FInvestor-Relations%2FFinancial-Targets",
      "year": "2021",
      "iframe": true,
      "doc": false,
@@ -2386,7 +2498,7 @@
    "items": [
     {
      "text": "(iframe)",
-     "href": "https://4694204.fls.doubleclick.net/activityi;src=4694204;type=invmedia;cat=uczoryjr;rcb=2;ord=7421181001178;npa=0;auiddc=1470218603.1790865993;gdid=dYWJhMj;uaa=x86;uab=64;uafvl=HeadlessChrome%3B153.0.8010.12%7CNot_A%2520Brand%3B8.0.0.0%7CChromium%3B153.0.8010.12;uamb=0;uam=;uap=Linux;uapv=;uaw=0;pscdl=noapi;frm=0;_tu=KFA;gtm=45fe69t1h1v9181662105z871741711za20gzb71741711zd71741711xeaxf1;gcs=G111;gcd=13v3v3v3v5l1;dma=0;dc_fmt=2;tag_exp=115616986~115938466~115938468~118897920~118897930~120213116~120385423~120469145~120469153~121280970;epver=2;dc_random=1790865992_uGodt37n3rwHAAsZAdwJuTOpPCF4k26VKw;_dc_test=1;~oref=https%3A%2F%2Fwww.leumi.co.il%2Fhe%2FInvestor-Relations%2FAnalyst-Coverage",
+     "href": "https://4694204.fls.doubleclick.net/activityi;src=4694204;type=invmedia;cat=uczoryjr;rcb=8;ord=8874552127682;npa=0;auiddc=419990620.1790937236;gdid=dYWJhMj;uaa=x86;uab=64;uafvl=HeadlessChrome%3B153.0.8010.12%7CNot_A%2520Brand%3B8.0.0.0%7CChromium%3B153.0.8010.12;uamb=0;uam=;uap=Linux;uapv=;uaw=0;pscdl=noapi;frm=0;_tu=KFA;gtm=45fe69u2v9181662105z871741711za20gzb71741711zd71741711xeaxf1;gcs=G111;gcd=13v3v3v3v5l1;dma=0;dc_fmt=2;tag_exp=115616986~115938465~115938468~118897920~118897930~119318177~120213116~120385423~120469145~120469153~121046262~121046270~121280971;epver=2;dc_random=1790937295_xd-ZchJt0_UQ4Y_JwxANTdHoczPVTfpB-Q;_dc_test=1;~oref=https%3A%2F%2Fwww.leumi.co.il%2Fhe%2FInvestor-Relations%2FAnalyst-Coverage",
      "year": "2021",
      "iframe": true,
      "doc": false,
@@ -2394,7 +2506,7 @@
     },
     {
      "text": "(iframe)",
-     "href": "https://8083177.fls.doubleclick.net/activityi;src=8083177;type=remar0;cat=leumi002;rcb=0;ord=850288491133;npa=0;auiddc=1470218603.1790865993;gdid=dYWJhMj;uaa=x86;uab=64;uafvl=HeadlessChrome%3B153.0.8010.12%7CNot_A%2520Brand%3B8.0.0.0%7CChromium%3B153.0.8010.12;uamb=0;uam=;uap=Linux;uapv=;uaw=0;pscdl=noapi;frm=0;_tu=KFA;gtm=45fe69t1h1v9189583035z871741711za20gzb71741711zd71741711xeaxf1;gcs=G111;gcd=13v3v3v3v5l1;dma=0;dc_fmt=2;tag_exp=115938466~115938469~118897920~118897930~120213116~120385422~120469145~120469153~121280970;epver=2;dc_random=1790865993_gWjYZarE9uSzyNgT6rrMzM3juZqB1uX3sQ;_dc_test=1;~oref=https%3A%2F%2Fwww.leumi.co.il%2Fhe%2FInvestor-Relations%2FAnalyst-Coverage",
+     "href": "https://8083177.fls.doubleclick.net/activityi;src=8083177;type=remar0;cat=leumi002;rcb=13;ord=9918982545300;npa=0;auiddc=419990620.1790937236;gdid=dYWJhMj;uaa=x86;uab=64;uafvl=HeadlessChrome%3B153.0.8010.12%7CNot_A%2520Brand%3B8.0.0.0%7CChromium%3B153.0.8010.12;uamb=0;uam=;uap=Linux;uapv=;uaw=0;pscdl=noapi;frm=0;_tu=KFA;gtm=45fe69u2v9189583035z871741711za20gzb71741711zd71741711xeaxf1;gcs=G111;gcd=13v3v3v3v5l1;dma=0;dc_fmt=2;tag_exp=115938465~115938468~118897920~118897930~119318177~120213116~120385423~120469145~120469153~121280971;epver=2;dc_random=1790937295_VnGUNbJmQfqWmke-bMnxtWaDclBZZ4PykQ;_dc_test=1;~oref=https%3A%2F%2Fwww.leumi.co.il%2Fhe%2FInvestor-Relations%2FAnalyst-Coverage",
      "year": "2021",
      "iframe": true,
      "doc": false,
@@ -2483,554 +2595,6 @@
     {
      "text": "SWIFT",
      "href": "https://www.leumi.co.il/he/Investor-Relations/Analyst-Coverage",
-     "year": null,
-     "iframe": false,
-     "doc": false,
-     "internal": true
-    },
-    {
-     "text": "ESG",
-     "href": "https://www.leumi.co.il/he/Investor-Relations/ESG",
-     "year": null,
-     "iframe": false,
-     "doc": false,
-     "internal": true
-    },
-    {
-     "text": "Click here to learn more about our Privacy Policy.",
-     "href": "https://www.leumi.co.il/he/Articles/privacy_policy",
-     "year": null,
-     "iframe": false,
-     "doc": false,
-     "internal": true
-    },
-    {
-     "text": "(iframe)",
-     "href": "https://cache.bankleumi.co.il/adrum-xd.686372e97eae8d992d3f1df53d051927.html",
-     "year": null,
-     "iframe": true,
-     "doc": false,
-     "internal": false
-    }
-   ]
-  },
-  "https://www.leumi.co.il/he/Investor-Relations/ESG": {
-   "product": null,
-   "status": 200,
-   "method": "requests",
-   "text_hash": "a020058f0700e0c892e67f3075e842e4615fb55a",
-   "text_head": "ESG - בנק לאומי דילוג לתוכן העיקרי דילוג לתפריט הראשי דילוג לתפריט התחתון בחירת שפה דברו איתנו נגישות לוגו ראשי בחירת שפה דברו איתנו נגישות ראשי אודות בחירת שפה דברו איתנו נגישות אודות אודות לאומי חברי הנהלה מבנה ארגוני חברות בנות חזון וערכים מידע פיננסי בחירת שפה דברו איתנו נגישות מידע פיננסי דוחות כספיים ושיחות משקיעים דירוג אשראי יעדים פיננסיים סיקור אנליסטים הודעות לעיתונות בחירת שפה דברו איתנו נגישות הודעות לעיתונות אירועים בחירת שפה דברו איתנו נגישות אירועים ESG בחירת שפה דברו איתנו נגישות ESG חיפוש חפש חיפושים נפוצים: חיסכון לכל ילד שינוי סיסמה כניסה לחשבון התכתבות עם בנקאי סניפים טפסים",
-   "items": [
-    {
-     "text": "Leumi ESG Report 2025",
-     "href": "https://www.leumi.co.il/leumi-hebrew/s3fs-public/newsite/financialstatement/25/heb/04-25/לאומי - דוח ESG - TCFD - TNFD - ISSB מאוחד - 2025.pdf",
-     "year": "2025",
-     "iframe": false,
-     "doc": true,
-     "internal": true
-    },
-    {
-     "text": "ESG 2025 - Investors highlights",
-     "href": "https://www.leumi.co.il/leumi-hebrew/s3fs-public/newsite/financialstatement/25/heb/03-2025/ESG Report 2025  Investors Highlights.pdf",
-     "year": "2025",
-     "iframe": false,
-     "doc": true,
-     "internal": true
-    },
-    {
-     "text": "Impact Reporting Review",
-     "href": "https://www.leumi.co.il/leumi-hebrew/s3fs-public/newsite/investor_relations/IMPACT_Reporting_Review_S&P_2024_Acc.pdf",
-     "year": "2024",
-     "iframe": false,
-     "doc": true,
-     "internal": true
-    },
-    {
-     "text": "Green Bond Allocation and Impact Report",
-     "href": "https://www.leumi.co.il/leumi-hebrew/s3fs-public/newsite/investor_relations/Green_Bond_Allocation_and_Impact_Report_2024_Acc.pdf",
-     "year": "2024",
-     "iframe": false,
-     "doc": true,
-     "internal": true
-    },
-    {
-     "text": "ראשי",
-     "href": "https://www.leumi.co.il/he/Investor-Relations",
-     "year": null,
-     "iframe": false,
-     "doc": false,
-     "internal": true
-    },
-    {
-     "text": "סיקור אנליסטים",
-     "href": "https://www.leumi.co.il/he/Investor-Relations/Analyst-Coverage",
-     "year": null,
-     "iframe": false,
-     "doc": false,
-     "internal": true
-    },
-    {
-     "text": "יעדים פיננסיים",
-     "href": "https://www.leumi.co.il/he/Investor-Relations/Financial-Targets",
-     "year": null,
-     "iframe": false,
-     "doc": false,
-     "internal": true
-    },
-    {
-     "text": "חזון וערכים",
-     "href": "https://www.leumi.co.il/he/Investor-Relations/Vision-and-Values",
-     "year": null,
-     "iframe": false,
-     "doc": false,
-     "internal": true
-    },
-    {
-     "text": "חברות בנות",
-     "href": "https://www.leumi.co.il/he/Investor-Relations/Subsidiaries-and-affiliates",
-     "year": null,
-     "iframe": false,
-     "doc": false,
-     "internal": true
-    },
-    {
-     "text": "הוספה",
-     "href": "https://www.leumi.co.il/he/Investor-Relations/ESG",
-     "year": null,
-     "iframe": false,
-     "doc": false,
-     "internal": true
-    },
-    {
-     "text": "הודעות לעיתונות",
-     "href": "https://www.leumi.co.il/he/about-leumi/Investor-Relations/Press-Releases",
-     "year": null,
-     "iframe": false,
-     "doc": false,
-     "internal": true
-    },
-    {
-     "text": "דירוג אשראי",
-     "href": "https://www.leumi.co.il/he/about-leumi/Investor-Relations/Credit_Rating",
-     "year": null,
-     "iframe": false,
-     "doc": false,
-     "internal": true
-    },
-    {
-     "text": "דוחות כספיים ושיחות משקיעים",
-     "href": "https://www.leumi.co.il/he/about-leumi/Investor-Relations/Financial_Statements",
-     "year": null,
-     "iframe": false,
-     "doc": false,
-     "internal": true
-    },
-    {
-     "text": "אנגלית",
-     "href": "https://www.leumi.co.il/en/Investor-Relations",
-     "year": null,
-     "iframe": false,
-     "doc": false,
-     "internal": true
-    },
-    {
-     "text": "אודות לאומי",
-     "href": "https://www.leumi.co.il/he/Investor-Relations/about-leumi",
-     "year": null,
-     "iframe": false,
-     "doc": false,
-     "internal": true
-    },
-    {
-     "text": "Full document",
-     "href": "https://www.leumi.co.il/leumi-hebrew/s3fs-public/newsite/investor_relations/Leumi_Way.acc.pdf",
-     "year": null,
-     "iframe": false,
-     "doc": true,
-     "internal": true
-    },
-    {
-     "text": "EIB Loans",
-     "href": "https://www.leumi.co.il/leumi-hebrew/s3fs-public/newsite/investor_relations/EIBLOANS_en_acc.pdf",
-     "year": null,
-     "iframe": false,
-     "doc": true,
-     "internal": true
-    },
-    {
-     "text": "Bank Leumi Green UoP SPO Final Report",
-     "href": "https://www.leumi.co.il/leumi-hebrew/s3fs-public/newsite/investor_relations/Green_UoP_SPO_Final_Report_Acc.pdf",
-     "year": null,
-     "iframe": false,
-     "doc": true,
-     "internal": true
-    },
-    {
-     "text": "Bank Leumi - Green Bond Framework",
-     "href": "https://www.leumi.co.il/leumi-hebrew/s3fs-public/newsite/investor_relations/Green_Bond_Framework_Acc.pdf",
-     "year": null,
-     "iframe": false,
-     "doc": true,
-     "internal": true
-    }
-   ]
-  },
-  "https://www.leumi.co.il/en/Investor-Relations": {
-   "product": null,
-   "status": 200,
-   "method": "requests",
-   "text_hash": "86427b46f8e7e84622ebcba7df9c827d95585239",
-   "text_head": "Investor Relations - Bank Leumi Skip to main content Skip to Header Skip to Footer Choose language Contact Us Accessibility LOGO Main Choose language Contact Us Accessibility Main About Choose language Contact Us Accessibility About Overview Strategy Members of Management Organizational Structure Subsidiary companies Financials Choose language Contact Us Accessibility Financials Financial Statements & Webcasts Financial Targets Immediate Reports Analyst Coverage Press Release Choose language Contact Us Accessibility Press Release ESG Choose language Contact Us Accessibility ESG ESG Reports and",
-   "items": [
-    {
-     "text": "Press Release",
-     "href": "https://www.leumi.co.il/leumi-hebrew/s3fs-public/newsite/financialstatement/26/q2/en/PR_Q2_2026_2 Acc.pdf",
-     "year": "2026",
-     "iframe": false,
-     "doc": true,
-     "internal": true
-    },
-    {
-     "text": "Investor Presentation",
-     "href": "https://www.leumi.co.il/leumi-hebrew/s3fs-public/newsite/financialstatement/26/q2/en/Investor_Presentation_Q2_2026_Acc.pdf",
-     "year": "2026",
-     "iframe": false,
-     "doc": true,
-     "internal": true
-    },
-    {
-     "text": "Financial Statements",
-     "href": "https://www.leumi.co.il/leumi-hebrew/s3fs-public/newsite/financialstatement/26/q2/en/Financial_Statements_Q2_2026.pdf",
-     "year": "2026",
-     "iframe": false,
-     "doc": true,
-     "internal": true
-    },
-    {
-     "text": "13 January 2026 For the first time in Israel: Bank Leumi issues covered bonds to foreign investors – at a significantly higher rating than the State of Israel and at a lower interest rate",
-     "href": "https://www.leumi.co.il/en/node/2485",
-     "year": "2026",
-     "iframe": false,
-     "doc": false,
-     "internal": true
-    },
-    {
-     "text": "03 June 2026 Another vote of confidence from international investors: Bank Leumi Completes Overseas CoCo Bond Issuance totaling USD 1 Billion – in the lowest spread in the history of an Israeli bank issuance ‎",
-     "href": "https://www.leumi.co.il/en/node/2660",
-     "year": "2026",
-     "iframe": false,
-     "doc": false,
-     "internal": true
-    },
-    {
-     "text": "Subsidiary companies",
-     "href": "https://www.leumi.co.il/en/Lobby-Investor-Relations/about/Subsidiaries-and-affiliates",
-     "year": null,
-     "iframe": false,
-     "doc": false,
-     "internal": true
-    },
-    {
-     "text": "Previous Reports",
-     "href": "https://www.leumi.co.il/en/about-leumi/Investor-Relations/Financial_Statements/Previous-Statements",
-     "year": null,
-     "iframe": false,
-     "doc": false,
-     "internal": true
-    },
-    {
-     "text": "Investor Call",
-     "href": "https://youtu.be/-mwwzHJ05ww",
-     "year": null,
-     "iframe": false,
-     "doc": false,
-     "internal": false
-    },
-    {
-     "text": "Immediate Reports",
-     "href": "https://www.leumi.co.il/en/Investor-Relations/Immediate-Reports",
-     "year": null,
-     "iframe": false,
-     "doc": false,
-     "internal": true
-    },
-    {
-     "text": "Hebrew",
-     "href": "https://www.leumi.co.il/he/Investor-Relations",
-     "year": null,
-     "iframe": false,
-     "doc": false,
-     "internal": true
-    },
-    {
-     "text": "Financial Targets",
-     "href": "https://www.leumi.co.il/en/Lobby-Investor-Relations-financial%20targets",
-     "year": null,
-     "iframe": false,
-     "doc": false,
-     "internal": true
-    },
-    {
-     "text": "Financial Statements & Webcasts",
-     "href": "https://www.leumi.co.il/en/Investor-Relations/Financial-Statements",
-     "year": null,
-     "iframe": false,
-     "doc": false,
-     "internal": true
-    },
-    {
-     "text": "ESG Reports and Related Materials",
-     "href": "https://www.leumi.co.il/en/Lobby-Investor-Relations/ESG",
-     "year": null,
-     "iframe": false,
-     "doc": false,
-     "internal": true
-    },
-    {
-     "text": "Credit Ratings",
-     "href": "https://www.leumi.co.il/en/Investor-Relations/Credit-Ratings",
-     "year": null,
-     "iframe": false,
-     "doc": false,
-     "internal": true
-    },
-    {
-     "text": "Analyst Coverage",
-     "href": "https://www.leumi.co.il/en/Investor-Relations/Analyst-Coverage",
-     "year": null,
-     "iframe": false,
-     "doc": false,
-     "internal": true
-    },
-    {
-     "text": "Add",
-     "href": "https://www.leumi.co.il/en/Investor-Relations",
-     "year": null,
-     "iframe": false,
-     "doc": false,
-     "internal": true
-    }
-   ]
-  },
-  "https://www.leumi.co.il/he/node/2551": {
-   "product": null,
-   "status": 200,
-   "method": "requests",
-   "text_hash": "2cb57ae6b6f2414ee2f5373667d183a68de26df5",
-   "text_head": "הודעות לעיתונות - בנק לאומי דילוג לתוכן העיקרי דילוג לתפריט הראשי דילוג לתפריט התחתון בחירת שפה דברו איתנו נגישות לוגו ראשי בחירת שפה דברו איתנו נגישות ראשי אודות בחירת שפה דברו איתנו נגישות אודות אודות לאומי חברי הנהלה מבנה ארגוני חברות בנות חזון וערכים מידע פיננסי בחירת שפה דברו איתנו נגישות מידע פיננסי דוחות כספיים ושיחות משקיעים דירוג אשראי יעדים פיננסיים סיקור אנליסטים הודעות לעיתונות בחירת שפה דברו איתנו נגישות הודעות לעיתונות אירועים בחירת שפה דברו איתנו נגישות אירועים ESG בחירת שפה דברו איתנו נגישות ESG חיפוש חפש חיפושים נפוצים: חיסכון לכל ילד שינוי סיסמה כניסה לחשבון התכתבות עם בנקאי ",
-   "items": [
-    {
-     "text": "עברית",
-     "href": "https://www.leumi.co.il/he/Investor-Relations",
-     "year": null,
-     "iframe": false,
-     "doc": false,
-     "internal": true
-    },
-    {
-     "text": "סיקור אנליסטים",
-     "href": "https://www.leumi.co.il/he/Investor-Relations/Analyst-Coverage",
-     "year": null,
-     "iframe": false,
-     "doc": false,
-     "internal": true
-    },
-    {
-     "text": "יעדים פיננסיים",
-     "href": "https://www.leumi.co.il/he/Investor-Relations/Financial-Targets",
-     "year": null,
-     "iframe": false,
-     "doc": false,
-     "internal": true
-    },
-    {
-     "text": "טפסים להורדה",
-     "href": "https://www.leumi.co.il/he/node/2551",
-     "year": null,
-     "iframe": false,
-     "doc": true,
-     "internal": true
-    },
-    {
-     "text": "חזון וערכים",
-     "href": "https://www.leumi.co.il/he/Investor-Relations/Vision-and-Values",
-     "year": null,
-     "iframe": false,
-     "doc": false,
-     "internal": true
-    },
-    {
-     "text": "חברות בנות",
-     "href": "https://www.leumi.co.il/he/Investor-Relations/Subsidiaries-and-affiliates",
-     "year": null,
-     "iframe": false,
-     "doc": false,
-     "internal": true
-    },
-    {
-     "text": "הודעות לעיתונות",
-     "href": "https://www.leumi.co.il/he/about-leumi/Investor-Relations/Press-Releases",
-     "year": null,
-     "iframe": false,
-     "doc": false,
-     "internal": true
-    },
-    {
-     "text": "דירוג אשראי",
-     "href": "https://www.leumi.co.il/he/about-leumi/Investor-Relations/Credit_Rating",
-     "year": null,
-     "iframe": false,
-     "doc": false,
-     "internal": true
-    },
-    {
-     "text": "דוחות כספיים ושיחות משקיעים",
-     "href": "https://www.leumi.co.il/he/about-leumi/Investor-Relations/Financial_Statements",
-     "year": null,
-     "iframe": false,
-     "doc": false,
-     "internal": true
-    },
-    {
-     "text": "אנגלית",
-     "href": "https://www.leumi.co.il/en/Investor-Relations",
-     "year": null,
-     "iframe": false,
-     "doc": false,
-     "internal": true
-    },
-    {
-     "text": "אודות לאומי",
-     "href": "https://www.leumi.co.il/he/Investor-Relations/about-leumi",
-     "year": null,
-     "iframe": false,
-     "doc": false,
-     "internal": true
-    },
-    {
-     "text": "ESG בחירת שפה דברו איתנו נגישות ESG ESG",
-     "href": "https://www.leumi.co.il/he/Investor-Relations/ESG",
-     "year": null,
-     "iframe": false,
-     "doc": false,
-     "internal": true
-    }
-   ]
-  },
-  "https://www.leumi.co.il/he/Investor-Relations/Press-Releas/2024-02-ESG-strategy": {
-   "product": null,
-   "status": 200,
-   "method": "browser",
-   "text_hash": "2398ab48036af8c7d9a269d1c8dabf5fd575b72a",
-   "text_head": "דילוג לתוכן העיקרי דילוג לתפריט הראשי דילוג לתפריט התחתון באתר זה נעשה שימוש בטכנולוגיות איסוף מידע כגון Cookies, לרבות על ידי צדדים שלישיים, כדי לספק לך חווית גלישה טובה יותר וכן למטרות סטטיסטיקה, איפיון ושיווק. המשך הגלישה באתר מהווה הסכמתך לכך. למידע נוסף בנושא ואפשרות לנהל את השימוש באמצעים הללו, ראו את מדיניות הפרטיות המעודכנת של הבנק סגירה ראשי אודות מידע פיננסי הודעות לעיתונות אירועים ESG Eng לאתר לאומי יצירת קשר ראשי הודעות לעיתונות הודעות לעיתונות השלב הבא ביישום אסטרטגיית ה-ESG המתקדמת של לאומי 01 בפברואר 2024 רבע מיליארד אירו נוספים לפרויקטים סביבתיים וחברתיים: בנק לאומי ובנק ההשקעו",
-   "items": [
-    {
-     "text": "SWIFT",
-     "href": "https://www.leumi.co.il/he/Investor-Relations/Press-Releas/2024-02-ESG-strategy",
-     "year": "2024",
-     "iframe": false,
-     "doc": false,
-     "internal": true
-    },
-    {
-     "text": "(iframe)",
-     "href": "https://8083177.fls.doubleclick.net/activityi;src=8083177;type=remar0;cat=leumi002;rcb=1;ord=5524710043678;npa=0;auiddc=1840443556.1790866005;gdid=dYWJhMj;uaa=x86;uab=64;uafvl=HeadlessChrome%3B153.0.8010.12%7CNot_A%2520Brand%3B8.0.0.0%7CChromium%3B153.0.8010.12;uamb=0;uam=;uap=Linux;uapv=;uaw=0;pscdl=noapi;frm=0;_tu=KFA;gtm=45fe69u0h2v9189583035z871741711za20gzb71741711zd71741711xeaxf1;gcs=G111;gcd=13v3v3v3v5l1;dma=0;dc_fmt=2;tag_exp=115938465~115938468~118897920~118897930~120213116~120385423~120469145~120469153;epver=2;dc_random=1790866005_pUkFi4UfmYRYyyjFtKrjHuVXWGxPFZakvQ;_dc_test=1;~oref=https%3A%2F%2Fwww.leumi.co.il%2Fhe%2FInvestor-Relations%2FPress-Releas%2F2024-02-ESG-strategy",
-     "year": "2021",
-     "iframe": true,
-     "doc": false,
-     "internal": false
-    },
-    {
-     "text": "(iframe)",
-     "href": "https://4694204.fls.doubleclick.net/activityi;src=4694204;type=invmedia;cat=uczoryjr;rcb=0;ord=8828936316832;npa=0;auiddc=1840443556.1790866005;gdid=dYWJhMj;uaa=x86;uab=64;uafvl=HeadlessChrome%3B153.0.8010.12%7CNot_A%2520Brand%3B8.0.0.0%7CChromium%3B153.0.8010.12;uamb=0;uam=;uap=Linux;uapv=;uaw=0;pscdl=noapi;frm=0;_tu=KFA;gtm=45fe69u0h2v9181662105z871741711za20gzb71741711zd71741711xeaxf1;gcs=G111;gcd=13v3v3v3v5l1;dma=0;dc_fmt=2;tag_exp=115616985~115938465~115938469~118897920~118897930~120213116~120385422~120469145~120469153;epver=2;dc_random=1790866005_VuOtCD1EusdkbksvBu6uHLYvtxP6QieyHA;_dc_test=1;~oref=https%3A%2F%2Fwww.leumi.co.il%2Fhe%2FInvestor-Relations%2FPress-Releas%2F2024-02-ESG-strategy",
-     "year": "2021",
-     "iframe": true,
-     "doc": false,
-     "internal": false
-    },
-    {
-     "text": "ראו את מדיניות הפרטיות המעודכנת של הבנק",
-     "href": "https://www.leumi.co.il/he/privacy_policy",
-     "year": null,
-     "iframe": false,
-     "doc": false,
-     "internal": true
-    },
-    {
-     "text": "עברית",
-     "href": "https://www.leumi.co.il/he/Investor-Relations",
-     "year": null,
-     "iframe": false,
-     "doc": false,
-     "internal": true
-    },
-    {
-     "text": "סיקור אנליסטים",
-     "href": "https://www.leumi.co.il/he/Investor-Relations/Analyst-Coverage",
-     "year": null,
-     "iframe": false,
-     "doc": false,
-     "internal": true
-    },
-    {
-     "text": "יעדים פיננסיים",
-     "href": "https://www.leumi.co.il/he/Investor-Relations/Financial-Targets",
-     "year": null,
-     "iframe": false,
-     "doc": false,
-     "internal": true
-    },
-    {
-     "text": "חזון וערכים",
-     "href": "https://www.leumi.co.il/he/Investor-Relations/Vision-and-Values",
-     "year": null,
-     "iframe": false,
-     "doc": false,
-     "internal": true
-    },
-    {
-     "text": "חברות בנות",
-     "href": "https://www.leumi.co.il/he/Investor-Relations/Subsidiaries-and-affiliates",
-     "year": null,
-     "iframe": false,
-     "doc": false,
-     "internal": true
-    },
-    {
-     "text": "הודעות לעיתונות",
-     "href": "https://www.leumi.co.il/he/about-leumi/Investor-Relations/Press-Releases",
-     "year": null,
-     "iframe": false,
-     "doc": false,
-     "internal": true
-    },
-    {
-     "text": "דירוג אשראי",
-     "href": "https://www.leumi.co.il/he/about-leumi/Investor-Relations/Credit_Rating",
-     "year": null,
-     "iframe": false,
-     "doc": false,
-     "internal": true
-    },
-    {
-     "text": "דוחות כספיים ושיחות משקיעים",
-     "href": "https://www.leumi.co.il/he/about-leumi/Investor-Relations/Financial_Statements",
-     "year": null,
-     "iframe": false,
-     "doc": false,
-     "internal": true
-    },
-    {
-     "text": "אנגלית",
-     "href": "https://www.leumi.co.il/en/Investor-Relations",
-     "year": null,
-     "iframe": false,
-     "doc": false,
-     "internal": true
-    },
-    {
-     "text": "אודות לאומי",
-     "href": "https://www.leumi.co.il/he/Investor-Relations/about-leumi",
      "year": null,
      "iframe": false,
      "doc": false,
