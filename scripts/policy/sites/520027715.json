@@ -17,7 +17,7 @@
   "גמל"
  ],
  "search": false,
- "rev": 15,
+ "rev": 16,
  "home_source": "web_search",
  "max_pages": 70,
  "note": "מנורה: קובץ מדיניות לכל מסלול בעמוד המסלול (/funds/...), נחשף רק ברינדור. עמודי links/ = רשימות המסלולים; follow נכנס לכל מסלול בדפדפן. exclude: תיק ביטוח משתתף של מנורה ביטוח. 2026-10: אומגה פעילה (רק 9802 מוזג ב-2023) - 7 מסלולים מדווחים ב-2026; מנורה חוסמת Actions (CAPTCHA) -> תוסף",
@@ -25,5 +25,6 @@
  "follow": "/funds/about-menora/engineers/omega-fund/",
  "via": "extension",
  "follow_max": 15,
- "follow_rx": "omega"
+ "follow_rx": "omega",
+ "per_track_pages": true
 }
