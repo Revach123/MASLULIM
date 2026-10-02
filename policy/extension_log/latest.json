@@ -1,7 +1,7 @@
 {
  "extension_version": "2.48.0",
  "started": "2026-10-02T13:28:07.012Z",
- "updated": "2026-10-02T13:34:07.187Z",
+ "updated": "2026-10-02T13:34:09.956Z",
  "final": false,
  "stopped": false,
  "rules_from_github": true,
@@ -82,10 +82,10 @@
  "active": [
   {
    "name": "מנורה מבטחים פנסיה וגמל בע\"מ",
-   "page": "https://www.menoramivt.co.il/funds/gemel-14679",
-   "page_no": 33,
+   "page": "https://www.menoramivt.co.il/funds/pension-and-gemel/gemel-hishtalmut-list/menora-gemel/119",
+   "page_no": 37,
    "pages": 72,
-   "step": "[3 במקביל] מוריד קובץ 5/5"
+   "step": "[3 במקביל] טוען עמוד"
   },
   {
    "name": "אלטשולר שחם גמל ופנסיה בע\"מ",
@@ -99,14 +99,14 @@
    "page": "https://www.menoramivt.co.il/funds/about-menora/engineers/omega-fund/about-menora.engineers.omega-fund.omega-15738",
    "page_no": 13,
    "pages": 14,
-   "step": "ממתין לתור לחיצות ההורדה"
+   "step": "לוחץ על כפתורי הורדה"
   },
   {
    "name": "איילון חברה לביטוח בע\"מ",
-   "page": "https://www.ayalon-ins.co.il/investments",
-   "page_no": 4,
+   "page": "https://www.ayalon-ins.co.il",
+   "page_no": 5,
    "pages": 11,
-   "step": "לוחץ על כפתורי הורדה"
+   "step": "טוען עמוד"
   }
  ],
  "sites": [
