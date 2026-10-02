@@ -1,7 +1,7 @@
 {
  "extension_version": "2.44.0",
  "started": "2026-10-02T11:57:42.647Z",
- "updated": "2026-10-02T12:00:42.753Z",
+ "updated": "2026-10-02T12:03:42.761Z",
  "final": false,
  "stopped": false,
  "rules_from_github": true,
@@ -20,7 +20,7 @@
   "page_cache_days": 3
  },
  "total_sites": 7,
- "done_sites": 1,
+ "done_sites": 2,
  "new_docs": 0,
  "skipped_complete": [
   {
@@ -75,31 +75,31 @@
  "active": [
   {
    "name": "מנורה מבטחים פנסיה וגמל בע\"מ",
-   "page": "https://www.menoramivt.co.il/funds/pension-and-gemel/gemel-hishtalmut-list/menroa-keren-hishtalmut/11409",
-   "page_no": 12,
-   "pages": 76,
+   "page": "https://www.menoramivt.co.il/links/pension-and-gemel/gemel-hishtalmut-list/list-top-savings",
+   "page_no": 24,
+   "pages": 78,
    "step": "טוען עמוד"
   },
   {
    "name": "אלטשולר שחם גמל ופנסיה בע\"מ",
-   "page": "https://www.as-invest.co.il/interstedin/%D7%97%D7%99%D7%A1%D7%9B%D7%95%D7%9F-%D7%95%D7%94%D7%A9%D7%A7%D7%A2%D7%94/%D7%90%D7%9C%D7%98%D7%A9%D7%95%D7%9C%D7%A8-%D7%A9%D7%97%D7%9D-%D7%97%D7%99%D7%A1%D7%9B%D7%95%D7%9F-%D7%A4%D7%9C%D7%95%D7%A1-%D7%A2%D7%95%D7%A7%D7%91-%D7%9E%D7%93%D7%93%D7%99%D7%9D-%D7%92%D7%9E%D7%99%D7%A9/",
-   "page_no": 15,
-   "pages": 132,
-   "step": "טוען עמוד"
-  },
-  {
-   "name": "מנורה מבטחים והסתדרות המהנדסים ניהול קופות גמל בע\"מ",
-   "page": "https://www.menoramivt.co.il/funds/about-menora/engineers/omega-fund/about-menora.engineers.omega-fund.omega-15738",
-   "page_no": 12,
-   "pages": 13,
+   "page": "https://www.as-invest.co.il/interstedin/%D7%A7%D7%A8%D7%A0%D7%95%D7%AA-%D7%94%D7%A9%D7%AA%D7%9C%D7%9E%D7%95%D7%AA/%D7%90%D7%9C%D7%98%D7%A9%D7%95%D7%9C%D7%A8-%D7%A9%D7%97%D7%9D-%D7%94%D7%A9%D7%AA%D7%9C%D7%9E%D7%95%D7%AA-%D7%A2%D7%95%D7%A7%D7%91-%D7%9E%D7%93%D7%93%D7%99%D7%9D-%D7%92%D7%9E%D7%99%D7%A9/",
+   "page_no": 27,
+   "pages": 144,
    "step": "פותח אקורדיונים ואוסף קישורים"
   },
   {
    "name": "איילון חברה לביטוח בע\"מ",
-   "page": "https://www.ayalon-ins.co.il/about-us/about-ayalon/investments/policy/",
-   "page_no": 1,
-   "pages": 5,
+   "page": "https://www.ayalon-ins.co.il/insurances/car/having-policy",
+   "page_no": 12,
+   "pages": 13,
    "step": "טוען עמוד"
+  },
+  {
+   "name": "החברה המנהלת של מינהל קרן ההשתלמות לפקידים עובדי המנהל והשירותים בע\"מ",
+   "page": "https://minhal.org/הרכב-נכסים/מסלול-עוקב-מדד-500-ps/",
+   "page_no": 2,
+   "pages": 8,
+   "step": "פותח אקורדיונים ואוסף קישורים"
   }
  ],
  "sites": [
@@ -1543,6 +1543,210 @@
     "החברה לניהול קופת : links=0 files=0 clicked=0 captured=0 selected=0",
     "החברה לניהול קופת : links=0 files=0 clicked=0 captured=0 selected=0",
     "החברה לניהול קופת : links=0 files=0 clicked=0 captured=0 selected=0"
+   ],
+   "new_files": []
+  },
+  {
+   "legal_id": "520027715",
+   "name": "מנורה מבטחים והסתדרות המהנדסים ניהול קופות גמל בע\"מ",
+   "pages": [
+    {
+     "url": "https://www.menoramivt.co.il/funds/about-menora/engineers/omega-fund/omega-286",
+     "cache": "weekly-full",
+     "links": 231,
+     "followed": [
+      "https://www.menoramivt.co.il/links/regulations-hishtalmut-omega"
+     ],
+     "files": 0,
+     "clicked": 0,
+     "captured": 0,
+     "selected": [],
+     "unselected_files": []
+    },
+    {
+     "url": "https://www.menoramivt.co.il/funds/about-menora/engineers/omega-fund/omega-1445",
+     "cache": "weekly-full",
+     "links": 226,
+     "followed": [],
+     "files": 0,
+     "clicked": 0,
+     "captured": 0,
+     "selected": [],
+     "unselected_files": []
+    },
+    {
+     "url": "https://www.menoramivt.co.il/funds/about-menora/engineers/omega-fund/omega-1446",
+     "cache": "weekly-full",
+     "links": 231,
+     "followed": [],
+     "files": 0,
+     "clicked": 0,
+     "captured": 0,
+     "selected": [],
+     "unselected_files": []
+    },
+    {
+     "url": "https://www.menoramivt.co.il/funds/about-menora/engineers/omega-fund/omega-9803",
+     "cache": "weekly-full",
+     "links": 231,
+     "followed": [],
+     "files": 0,
+     "clicked": 0,
+     "captured": 0,
+     "selected": [],
+     "unselected_files": []
+    },
+    {
+     "url": "https://www.menoramivt.co.il/funds/about-menora/engineers/omega-fund/omega-14418",
+     "cache": "weekly-full",
+     "links": 231,
+     "followed": [],
+     "files": 0,
+     "clicked": 0,
+     "captured": 0,
+     "selected": [],
+     "unselected_files": []
+    },
+    {
+     "url": "https://www.menoramivt.co.il/funds/about-menora/engineers/omega-fund/omega-15738",
+     "cache": "weekly-full",
+     "links": 226,
+     "followed": [],
+     "files": 0,
+     "clicked": 0,
+     "captured": 0,
+     "selected": [],
+     "unselected_files": []
+    },
+    {
+     "url": "https://www.menoramivt.co.il/funds/about-menora/engineers/omega-fund/omega-15739",
+     "cache": "weekly-full",
+     "links": 226,
+     "followed": [],
+     "files": 0,
+     "clicked": 0,
+     "captured": 0,
+     "selected": [],
+     "unselected_files": []
+    },
+    {
+     "url": "https://www.menoramivt.co.il/links/keren-hishtalmut/omega-fund",
+     "cache": "weekly-full",
+     "links": 237,
+     "followed": [
+      "https://www.menoramivt.co.il/funds/about-menora/engineers/omega-fund/417",
+      "https://www.menoramivt.co.il/funds/about-menora/engineers/omega-fund/about-menora.engineers.omega-fund.omega-15738",
+      "https://www.menoramivt.co.il/funds/about-menora/engineers/omega-fund/omega-fund.omega-SP500"
+     ],
+     "files": 0,
+     "clicked": 0,
+     "captured": 0,
+     "selected": [],
+     "unselected_files": []
+    },
+    {
+     "url": "https://www.menoramivt.co.il/funds/about-menora/engineers/omega-fund/omega-9802",
+     "cache": "weekly-full",
+     "links": 233,
+     "followed": [],
+     "files": 0,
+     "clicked": 0,
+     "captured": 0,
+     "selected": [],
+     "unselected_files": []
+    },
+    {
+     "url": "https://www.menoramivt.co.il/links/regulations-hishtalmut-omega",
+     "cache": "weekly-full",
+     "links": 232,
+     "followed": [],
+     "files": 4,
+     "clicked": 0,
+     "captured": 0,
+     "selected": [],
+     "unselected_files": [
+      {
+       "file": "https://cdn.menoramivt.co.il/public/docs/20260511/תקנון-מנורה-מבטחים-השתלמות---מאי-2026.pdf",
+       "text": "לתקנון",
+       "ctx": "תקנון עדכני נכון לתאריך: 05.05.2026 לתקנון"
+      },
+      {
+       "file": "https://cdn.menoramivt.co.il/public/docs/20260511/טבלת-ריכוז-שינויים---מנורה-מבטחים-השתלמות---מאי-2026.pdf",
+       "text": "לקריאה",
+       "ctx": "ריכוז שינויים אחרונים בתקנון שינויים שבוצעו ב-12 החודשים שקדמו ליום 05.05.2026 לקריאה"
+      },
+      {
+       "file": "https://cdn.menoramivt.co.il/public/docs/20251201/תקנון-אומגה-286-בתוקף-מיום-30.9.2025.pdf",
+       "text": "לתקנון",
+       "ctx": "תקנון עדכני נכון לתאריך: 30.09.2025 לתקנון"
+      },
+      {
+       "file": "https://cdn.menoramivt.co.il/public/docs/20251201/שינויים-אומגה-קרן-השתלמות-30.9.25.pdf",
+       "text": "לקריאה",
+       "ctx": "ריכוז שינויים אחרונים בתקנון שינויים שבוצעו ב-12 החודשים שקדמו ליום 30.09.2025 לקריאה"
+      }
+     ]
+    },
+    {
+     "url": "https://www.menoramivt.co.il/funds/about-menora/engineers/omega-fund/417",
+     "cache": "weekly-full",
+     "links": 231,
+     "followed": [],
+     "files": 0,
+     "clicked": 0,
+     "captured": 0,
+     "selected": [],
+     "unselected_files": []
+    },
+    {
+     "url": "https://www.menoramivt.co.il/funds/about-menora/engineers/omega-fund/about-menora.engineers.omega-fund.omega-15738",
+     "cache": "weekly-full",
+     "links": 228,
+     "followed": [],
+     "files": 0,
+     "clicked": 0,
+     "captured": 0,
+     "selected": [],
+     "unselected_files": []
+    },
+    {
+     "url": "https://www.menoramivt.co.il/funds/about-menora/engineers/omega-fund/omega-fund.omega-SP500",
+     "cache": "weekly-full",
+     "links": 230,
+     "followed": [],
+     "files": 0,
+     "clicked": 0,
+     "captured": 0,
+     "selected": [],
+     "unselected_files": []
+    }
+   ],
+   "new_docs": 0,
+   "found": 4,
+   "selected": 0,
+   "had": 0,
+   "head_skip": 0,
+   "cache_weekly-full": 13,
+   "mode": "map",
+   "errors": [],
+   "diag": [
+    "מנורה מבטחים והסתד: links=231 files=0 clicked=0 captured=0 selected=0",
+    "מנורה מבטחים והסתד: links=226 files=0 clicked=0 captured=0 selected=0",
+    "מנורה מבטחים והסתד: links=231 files=0 clicked=0 captured=0 selected=0",
+    "מנורה מבטחים והסתד: links=231 files=0 clicked=0 captured=0 selected=0",
+    "מנורה מבטחים והסתד: links=231 files=0 clicked=0 captured=0 selected=0",
+    "מנורה מבטחים והסתד: links=226 files=0 clicked=0 captured=0 selected=0",
+    "מנורה מבטחים והסתד: links=226 files=0 clicked=0 captured=0 selected=0",
+    "מנורה מבטחים והסתד: links=237 files=0 clicked=0 captured=0 selected=0",
+    "מנורה מבטחים והסתד: links=233 files=0 clicked=0 captured=0 selected=0",
+    "מנורה מבטחים והסתד: links=232 files=4 clicked=0 captured=0 selected=0",
+    "   ? תקנון-מנורה-מבטחים-השתלמות---מאי-2026.pdf | לתקנון | תקנון עדכני נכון לתאריך: 05.05.2026 לתקנון",
+    "   ? טבלת-ריכוז-שינויים---מנורה-מבטחים-השתלמות---מאי-2026.pdf | לקריאה | ריכוז שינויים אחרונים בתקנון שינויים שבוצעו ב-12 החודשים שקד",
+    "   ? תקנון-אומגה-286-בתוקף-מיום-30.9.2025.pdf | לתקנון | תקנון עדכני נכון לתאריך: 30.09.2025 לתקנון",
+    "   ? שינויים-אומגה-קרן-השתלמות-30.9.25.pdf | לקריאה | ריכוז שינויים אחרונים בתקנון שינויים שבוצעו ב-12 החודשים שקד",
+    "מנורה מבטחים והסתד: links=231 files=0 clicked=0 captured=0 selected=0",
+    "מנורה מבטחים והסתד: links=228 files=0 clicked=0 captured=0 selected=0",
+    "מנורה מבטחים והסתד: links=230 files=0 clicked=0 captured=0 selected=0"
    ],
    "new_files": []
   }
