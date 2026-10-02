@@ -289,6 +289,26 @@ function keepMinimized(windowId) {
 }
 
 async function runSite(site, cfg, seen, onProgress, windowId, meta = {}, flush = null) {
+  // מפת עמודים (doc_pages, מחושב ב-GitHub מהעמודים שמהם נלקחו קבצים): אחרי סריקה מלאה אחת שהסתיימה, ריצה רגילה נכנסת
+  // רק לעמודים שבמפה. בינואר (או כשהסריקה המלאה האחרונה משנה קודמת): עמוד במפה בלי קובץ של השנה הנוכחית ->
+  // סריקה מלאה של האתר (עמוד חדש / מוצר חדש), שגם מעדכנת את המפה. no_map בהגדרות האתר = תמיד סריקה מלאה.
+  const now = new Date(), yr = now.getFullYear();
+  const fullSt = (meta.__full = meta.__full || {})[site.legal_id];
+  if (!site.__mapped && !site.__forceFull && !site.no_map && (site.doc_pages || []).length && fullSt) {
+    const mres = await runSite({ ...site, pages: site.doc_pages.map((u) => ({ url: u })), home: "", follow_max: 0, __mapped: true },
+                               cfg, seen, onProgress, windowId, meta, flush);
+    mres.stats.mode = "map";
+    if (!(now.getMonth() === 0 || (fullSt.year || 0) < yr) || stopRequested) return mres;
+    const stale = mres.pages.filter((p) => !(p.selected || []).some((u) => u.includes(String(yr))));
+    if (!stale.length) return mres;
+    mres.errors.push(`${stale.length}/${mres.pages.length} mapped pages without ${yr} documents -> full crawl for new pages`);
+    const fres = await runSite({ ...site, __forceFull: true }, cfg, seen, onProgress, windowId, meta, flush);
+    for (const k of Object.keys(fres.stats)) if (typeof fres.stats[k] === "number") mres.stats[k] = (mres.stats[k] || 0) + fres.stats[k];
+    mres.stats.mode = "map+full";
+    return { files: [...mres.files, ...fres.files], errors: [...mres.errors, ...fres.errors], diag: [...mres.diag, ...fres.diag],
+             stats: mres.stats, pages: [...mres.pages, ...fres.pages], added: { ...mres.added, ...fres.added },
+             rest: [...mres.rest, ...fres.rest], restAdded: { ...mres.restAdded, ...fres.restAdded } };
+  }
   const pages = [...new Set([...(site.pages || []).map((p) => p.url), site.home].filter(Boolean))];
   const files = [], errors = [], diag = [];
   const stats = { found: 0, selected: 0, had: 0, head_skip: 0 };
@@ -456,7 +476,10 @@ async function runSite(site, cfg, seen, onProgress, windowId, meta = {}, flush =
       if (tab) { ourTabs.delete(tab.id); delete openedBy[tab.id]; try { await tabsRetry(() => chrome.tabs.remove(tab.id)); } catch (e) {} }
     }
   }
-  if (!partial.cut && !stopRequested) delete meta[resumeKey];
+  if (!partial.cut && !stopRequested) {
+    delete meta[resumeKey];
+    if (!site.__mapped) meta.__full[site.legal_id] = { at: Date.now(), year: yr };  // סריקה מלאה שהסתיימה -> מעכשיו לפי המפה
+  }
   return { files, errors, diag, stats, pages: pageLog, added, rest: files.slice(flushed), restAdded: batchAdded };
 }
 

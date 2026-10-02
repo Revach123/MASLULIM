@@ -22,7 +22,11 @@
   "follow_max": null,
   "follow_rx": null,
   "timeout_min": null,
-  "download_delay_ms": null
+  "download_delay_ms": null,
+  "no_map": null,
+  "doc_pages": [
+   "https://www.krn-rofim.co.il/%D7%9E%D7%93%D7%99%D7%A0%D7%99%D7%95%D7%AA/%D7%9E%D7%93%D7%99%D7%A0%D7%99%D7%95%D7%AA-%D7%94%D7%A9%D7%A7%D7%A2%D7%94-%D7%A6%D7%A4%D7%95%D7%99%D7%94/"
+  ]
  },
  {
   "legal_id": "511789190",
@@ -49,7 +53,11 @@
   "follow_max": null,
   "follow_rx": null,
   "timeout_min": null,
-  "download_delay_ms": null
+  "download_delay_ms": null,
+  "no_map": null,
+  "doc_pages": [
+   "https://atudotvatika.co.il/%d7%a0%d7%aa%d7%95%d7%a0%d7%99-%d7%94%d7%a7%d7%a8%d7%9f/"
+  ]
  },
  {
   "legal_id": "512245812",
@@ -171,7 +179,55 @@
   "follow_max": 110,
   "follow_rx": "/funds/(pension-and-gemel/|gemel-|pension-|Insurers-)|%2Ffunds%2F",
   "timeout_min": 45,
-  "download_delay_ms": null
+  "download_delay_ms": null,
+  "no_map": null,
+  "doc_pages": [
+   "https://www.menoramivt.co.il/funds/gemel-14271",
+   "https://www.menoramivt.co.il/funds/gemel-14272",
+   "https://www.menoramivt.co.il/funds/gemel-14679",
+   "https://www.menoramivt.co.il/funds/pension-14277",
+   "https://www.menoramivt.co.il/funds/pension-14278",
+   "https://www.menoramivt.co.il/funds/pension-and-gemel/gemel-hishtalmut-list/menora-gemel-15725/tradable-equity-track",
+   "https://www.menoramivt.co.il/funds/pension-and-gemel/gemel-hishtalmut-list/menora-gemel/1154",
+   "https://www.menoramivt.co.il/funds/pension-and-gemel/gemel-hishtalmut-list/menora-gemel/119",
+   "https://www.menoramivt.co.il/funds/pension-and-gemel/gemel-hishtalmut-list/menora-gemel/1294",
+   "https://www.menoramivt.co.il/funds/pension-and-gemel/gemel-hishtalmut-list/menora-gemel/13355",
+   "https://www.menoramivt.co.il/funds/pension-and-gemel/gemel-hishtalmut-list/menora-gemel/13356",
+   "https://www.menoramivt.co.il/funds/pension-and-gemel/gemel-hishtalmut-list/menora-gemel/260",
+   "https://www.menoramivt.co.il/funds/pension-and-gemel/gemel-hishtalmut-list/menora-gemel/530",
+   "https://www.menoramivt.co.il/funds/pension-and-gemel/gemel-hishtalmut-list/menora-gemel/531",
+   "https://www.menoramivt.co.il/funds/pension-and-gemel/gemel-hishtalmut-list/menora-gemel/532",
+   "https://www.menoramivt.co.il/funds/pension-and-gemel/gemel-hishtalmut-list/menora-gemel/533",
+   "https://www.menoramivt.co.il/funds/pension-and-gemel/gemel-hishtalmut-list/menora-gemel/536",
+   "https://www.menoramivt.co.il/funds/pension-and-gemel/gemel-hishtalmut-list/menora-gemel/9789",
+   "https://www.menoramivt.co.il/funds/pension-and-gemel/gemel-hishtalmut-list/menora-gemel/9790-fund",
+   "https://www.menoramivt.co.il/funds/pension-and-gemel/gemel-hishtalmut-list/menora-gemel/9791-fund",
+   "https://www.menoramivt.co.il/funds/pension-and-gemel/gemel-hishtalmut-list/menora-gemel/9792",
+   "https://www.menoramivt.co.il/funds/pension-and-gemel/gemel-hishtalmut-list/menora-gemel/9793",
+   "https://www.menoramivt.co.il/funds/pension-and-gemel/gemel-hishtalmut-list/menora-gemel/9794",
+   "https://www.menoramivt.co.il/funds/pension-and-gemel/gemel-hishtalmut-list/menora-gemel/9795",
+   "https://www.menoramivt.co.il/funds/pension-and-gemel/gemel-hishtalmut-list/menroa-keren-hishtalmut/11408",
+   "https://www.menoramivt.co.il/funds/pension-and-gemel/gemel-hishtalmut-list/menroa-keren-hishtalmut/1256",
+   "https://www.menoramivt.co.il/funds/pension-and-gemel/gemel-hishtalmut-list/menroa-keren-hishtalmut/13357",
+   "https://www.menoramivt.co.il/funds/pension-and-gemel/gemel-hishtalmut-list/menroa-keren-hishtalmut/1409",
+   "https://www.menoramivt.co.il/funds/pension-and-gemel/gemel-hishtalmut-list/menroa-keren-hishtalmut/15466",
+   "https://www.menoramivt.co.il/funds/pension-and-gemel/gemel-hishtalmut-list/menroa-keren-hishtalmut/828",
+   "https://www.menoramivt.co.il/funds/pension-and-gemel/gemel-hishtalmut-list/menroa-keren-hishtalmut/menroa-keren-hishtalmut-14676",
+   "https://www.menoramivt.co.il/funds/pension-and-gemel/pension-plans/entitled-retired-portfolio",
+   "https://www.menoramivt.co.il/funds/pension-and-gemel/pension-plans/general-track",
+   "https://www.menoramivt.co.il/funds/pension-and-gemel/pension-plans/halacha-track",
+   "https://www.menoramivt.co.il/funds/pension-and-gemel/pension-plans/new-pension",
+   "https://www.menoramivt.co.il/funds/pension-and-gemel/pension-plans/pension-abroad-track",
+   "https://www.menoramivt.co.il/funds/pension-and-gemel/pension-plans/pension-kayamut-14348",
+   "https://www.menoramivt.co.il/funds/pension-and-gemel/pension-plans/pension-plans-15661",
+   "https://www.menoramivt.co.il/funds/pension-and-gemel/pension-plans/pension-stock-abroad-track",
+   "https://www.menoramivt.co.il/funds/pension-and-gemel/pension-plans/retired-portfolio",
+   "https://www.menoramivt.co.il/funds/pension-and-gemel/pension-plans/stock-track",
+   "https://www.menoramivt.co.il/funds/pension-and-gemel/pension-plans/track-50-60",
+   "https://www.menoramivt.co.il/funds/pension-and-gemel/pension-plans/track-60-plus",
+   "https://www.menoramivt.co.il/funds/pension-and-gemel/pension-plans/track-under-50",
+   "https://www.menoramivt.co.il/funds/pension-and-gemel/pension-plans/tradable-stocks-plan"
+  ]
  },
  {
   "legal_id": "513173393",
@@ -221,7 +277,83 @@
   "follow_max": 95,
   "follow_rx": "אלטשולר-שחם-|%D7%90%D7%9C%D7%98%D7%A9%D7%95%D7%9C%D7%A8-%D7%A9%D7%97%D7%9D-|חיסכון-לילד",
   "timeout_min": 45,
-  "download_delay_ms": null
+  "download_delay_ms": null,
+  "no_map": null,
+  "doc_pages": [
+   "https://www.as-invest.co.il/interstedin/%D7%A7%D7%A8%D7%A0%D7%95%D7%AA-%D7%94%D7%A9%D7%AA%D7%9C%D7%9E%D7%95%D7%AA/%D7%90%D7%9C%D7%98%D7%A9%D7%95%D7%9C%D7%A8-%D7%A9%D7%97%D7%9D-%D7%94%D7%A9%D7%AA%D7%9C%D7%9E%D7%95%D7%AA-%D7%90%D7%92%D7%97-%D7%9E%D7%9E%D7%A9%D7%9C%D7%95%D7%AA/",
+   "https://www.as-invest.co.il/interstedin/%D7%A7%D7%A8%D7%A0%D7%95%D7%AA-%D7%94%D7%A9%D7%AA%D7%9C%D7%9E%D7%95%D7%AA/%D7%90%D7%9C%D7%98%D7%A9%D7%95%D7%9C%D7%A8-%D7%A9%D7%97%D7%9D-%D7%94%D7%A9%D7%AA%D7%9C%D7%9E%D7%95%D7%AA-%D7%90%D7%A9%D7%A8%D7%90%D7%99-%D7%95%D7%90%D7%92%D7%97-%D7%A2%D7%9D-%D7%9E%D7%A0%D7%99%D7%95%D7%AA-%D7%A2%D7%93-25-%D7%9E%D7%A0%D7%99%D7%95%D7%AA/",
+   "https://www.as-invest.co.il/interstedin/%D7%A7%D7%A8%D7%A0%D7%95%D7%AA-%D7%94%D7%A9%D7%AA%D7%9C%D7%9E%D7%95%D7%AA/%D7%90%D7%9C%D7%98%D7%A9%D7%95%D7%9C%D7%A8-%D7%A9%D7%97%D7%9D-%D7%94%D7%A9%D7%AA%D7%9C%D7%9E%D7%95%D7%AA-%D7%90%D7%A9%D7%A8%D7%90%D7%99-%D7%95%D7%90%D7%92%D7%97/",
+   "https://www.as-invest.co.il/interstedin/%D7%A7%D7%A8%D7%A0%D7%95%D7%AA-%D7%94%D7%A9%D7%AA%D7%9C%D7%9E%D7%95%D7%AA/%D7%90%D7%9C%D7%98%D7%A9%D7%95%D7%9C%D7%A8-%D7%A9%D7%97%D7%9D-%D7%94%D7%A9%D7%AA%D7%9C%D7%9E%D7%95%D7%AA-%D7%94%D7%9C%D7%9B%D7%94/",
+   "https://www.as-invest.co.il/interstedin/%D7%A7%D7%A8%D7%A0%D7%95%D7%AA-%D7%94%D7%A9%D7%AA%D7%9C%D7%9E%D7%95%D7%AA/%D7%90%D7%9C%D7%98%D7%A9%D7%95%D7%9C%D7%A8-%D7%A9%D7%97%D7%9D-%D7%94%D7%A9%D7%AA%D7%9C%D7%9E%D7%95%D7%AA-%D7%9B%D7%9C%D7%9C%D7%99-%D7%91/",
+   "https://www.as-invest.co.il/interstedin/%D7%A7%D7%A8%D7%A0%D7%95%D7%AA-%D7%94%D7%A9%D7%AA%D7%9C%D7%9E%D7%95%D7%AA/%D7%90%D7%9C%D7%98%D7%A9%D7%95%D7%9C%D7%A8-%D7%A9%D7%97%D7%9D-%D7%94%D7%A9%D7%AA%D7%9C%D7%9E%D7%95%D7%AA-%D7%9B%D7%9C%D7%9C%D7%99/",
+   "https://www.as-invest.co.il/interstedin/%D7%A7%D7%A8%D7%A0%D7%95%D7%AA-%D7%94%D7%A9%D7%AA%D7%9C%D7%9E%D7%95%D7%AA/%D7%90%D7%9C%D7%98%D7%A9%D7%95%D7%9C%D7%A8-%D7%A9%D7%97%D7%9D-%D7%94%D7%A9%D7%AA%D7%9C%D7%9E%D7%95%D7%AA-%D7%9B%D7%A1%D7%A4%D7%99-%D7%A9%D7%A7%D7%9C%D7%99/",
+   "https://www.as-invest.co.il/interstedin/%D7%A7%D7%A8%D7%A0%D7%95%D7%AA-%D7%94%D7%A9%D7%AA%D7%9C%D7%9E%D7%95%D7%AA/%D7%90%D7%9C%D7%98%D7%A9%D7%95%D7%9C%D7%A8-%D7%A9%D7%97%D7%9D-%D7%94%D7%A9%D7%AA%D7%9C%D7%9E%D7%95%D7%AA-%D7%9E%D7%A0%D7%99%D7%95%D7%AA/",
+   "https://www.as-invest.co.il/interstedin/%D7%A7%D7%A8%D7%A0%D7%95%D7%AA-%D7%94%D7%A9%D7%AA%D7%9C%D7%9E%D7%95%D7%AA/%D7%90%D7%9C%D7%98%D7%A9%D7%95%D7%9C%D7%A8-%D7%A9%D7%97%D7%9D-%D7%94%D7%A9%D7%AA%D7%9C%D7%9E%D7%95%D7%AA-%D7%9E%D7%A9%D7%95%D7%9C%D7%91-%D7%A1%D7%97%D7%99%D7%A8/",
+   "https://www.as-invest.co.il/interstedin/%D7%A7%D7%A8%D7%A0%D7%95%D7%AA-%D7%94%D7%A9%D7%AA%D7%9C%D7%9E%D7%95%D7%AA/%D7%90%D7%9C%D7%98%D7%A9%D7%95%D7%9C%D7%A8-%D7%A9%D7%97%D7%9D-%D7%94%D7%A9%D7%AA%D7%9C%D7%9E%D7%95%D7%AA-%D7%A2%D7%95%D7%A7%D7%91-%D7%9E%D7%93%D7%93%D7%99%D7%9D-%D7%92%D7%9E%D7%99%D7%A9/",
+   "https://www.as-invest.co.il/interstedin/%D7%A7%D7%A8%D7%A0%D7%95%D7%AA-%D7%94%D7%A9%D7%AA%D7%9C%D7%9E%D7%95%D7%AA/%D7%90%D7%9C%D7%98%D7%A9%D7%95%D7%9C%D7%A8-%D7%A9%D7%97%D7%9D-%D7%94%D7%A9%D7%AA%D7%9C%D7%9E%D7%95%D7%AA-%D7%A2%D7%95%D7%A7%D7%91-%D7%9E%D7%93%D7%93%D7%99-%D7%9E%D7%A0%D7%99%D7%95%D7%AA/",
+   "https://www.as-invest.co.il/interstedin/gemel/%D7%90%D7%9C%D7%98%D7%A9%D7%95%D7%9C%D7%A8-%D7%A9%D7%97%D7%9D-%D7%92%D7%9E%D7%9C-%D7%90%D7%92%D7%97-%D7%9E%D7%9E%D7%A9%D7%9C%D7%95%D7%AA/",
+   "https://www.as-invest.co.il/interstedin/gemel/%D7%90%D7%9C%D7%98%D7%A9%D7%95%D7%9C%D7%A8-%D7%A9%D7%97%D7%9D-%D7%92%D7%9E%D7%9C-%D7%90%D7%A9%D7%A8%D7%90%D7%99-%D7%95%D7%90%D7%92%D7%97/",
+   "https://www.as-invest.co.il/interstedin/gemel/%D7%90%D7%9C%D7%98%D7%A9%D7%95%D7%9C%D7%A8-%D7%A9%D7%97%D7%9D-%D7%92%D7%9E%D7%9C-%D7%9B%D7%A1%D7%A4%D7%99-%D7%A9%D7%A7%D7%9C%D7%99/",
+   "https://www.as-invest.co.il/interstedin/gemel/%D7%90%D7%9C%D7%98%D7%A9%D7%95%D7%9C%D7%A8-%D7%A9%D7%97%D7%9D-%D7%92%D7%9E%D7%9C-%D7%9C%D7%91%D7%A0%D7%99-50-%D7%95%D7%9E%D7%98%D7%94/",
+   "https://www.as-invest.co.il/interstedin/gemel/%D7%90%D7%9C%D7%98%D7%A9%D7%95%D7%9C%D7%A8-%D7%A9%D7%97%D7%9D-%D7%92%D7%9E%D7%9C-%D7%9C%D7%91%D7%A0%D7%99-50-%D7%A2%D7%93-60/",
+   "https://www.as-invest.co.il/interstedin/gemel/%D7%90%D7%9C%D7%98%D7%A9%D7%95%D7%9C%D7%A8-%D7%A9%D7%97%D7%9D-%D7%92%D7%9E%D7%9C-%D7%9C%D7%91%D7%A0%D7%99-60-%D7%95%D7%9E%D7%A2%D7%9C%D7%94/",
+   "https://www.as-invest.co.il/interstedin/gemel/%D7%90%D7%9C%D7%98%D7%A9%D7%95%D7%9C%D7%A8-%D7%A9%D7%97%D7%9D-%D7%92%D7%9E%D7%9C-%D7%9C%D7%A2%D7%9E%D7%99%D7%AA%D7%99-%D7%97%D7%91%D7%A8-%D7%9C%D7%91%D7%A0%D7%99-50-%D7%95%D7%9E%D7%98%D7%94/",
+   "https://www.as-invest.co.il/interstedin/gemel/%D7%90%D7%9C%D7%98%D7%A9%D7%95%D7%9C%D7%A8-%D7%A9%D7%97%D7%9D-%D7%92%D7%9E%D7%9C-%D7%9C%D7%A2%D7%9E%D7%99%D7%AA%D7%99-%D7%97%D7%91%D7%A8-%D7%9C%D7%91%D7%A0%D7%99-50-%D7%A2%D7%93-60/",
+   "https://www.as-invest.co.il/interstedin/gemel/%D7%90%D7%9C%D7%98%D7%A9%D7%95%D7%9C%D7%A8-%D7%A9%D7%97%D7%9D-%D7%92%D7%9E%D7%9C-%D7%9C%D7%A2%D7%9E%D7%99%D7%AA%D7%99-%D7%97%D7%91%D7%A8-%D7%9C%D7%91%D7%A0%D7%99-60-%D7%95%D7%9E%D7%A2%D7%9C%D7%94/",
+   "https://www.as-invest.co.il/interstedin/gemel/%D7%90%D7%9C%D7%98%D7%A9%D7%95%D7%9C%D7%A8-%D7%A9%D7%97%D7%9D-%D7%92%D7%9E%D7%9C-%D7%9C%D7%A2%D7%9E%D7%99%D7%AA%D7%99-%D7%97%D7%91%D7%A8-%D7%9E%D7%A9%D7%95%D7%9C%D7%91-%D7%A1%D7%97%D7%99%D7%A8/",
+   "https://www.as-invest.co.il/interstedin/gemel/%D7%90%D7%9C%D7%98%D7%A9%D7%95%D7%9C%D7%A8-%D7%A9%D7%97%D7%9D-%D7%92%D7%9E%D7%9C-%D7%9C%D7%A2%D7%9E%D7%99%D7%AA%D7%99-%D7%97%D7%91%D7%A8-%D7%A2%D7%95%D7%A7%D7%91-%D7%9E%D7%93%D7%93%D7%99%D7%9D-%D7%92%D7%9E%D7%99%D7%A9/",
+   "https://www.as-invest.co.il/interstedin/gemel/%D7%90%D7%9C%D7%98%D7%A9%D7%95%D7%9C%D7%A8-%D7%A9%D7%97%D7%9D-%D7%92%D7%9E%D7%9C-%D7%9E%D7%A0%D7%99%D7%95%D7%AA-%D7%A1%D7%97%D7%99%D7%A8/",
+   "https://www.as-invest.co.il/interstedin/gemel/%D7%90%D7%9C%D7%98%D7%A9%D7%95%D7%9C%D7%A8-%D7%A9%D7%97%D7%9D-%D7%92%D7%9E%D7%9C-%D7%9E%D7%A0%D7%99%D7%95%D7%AA/",
+   "https://www.as-invest.co.il/interstedin/gemel/%D7%90%D7%9C%D7%98%D7%A9%D7%95%D7%9C%D7%A8-%D7%A9%D7%97%D7%9D-%D7%92%D7%9E%D7%9C-%D7%9E%D7%A9%D7%95%D7%9C%D7%91-%D7%A1%D7%97%D7%99%D7%A8/",
+   "https://www.as-invest.co.il/interstedin/gemel/%D7%90%D7%9C%D7%98%D7%A9%D7%95%D7%9C%D7%A8-%D7%A9%D7%97%D7%9D-%D7%92%D7%9E%D7%9C-%D7%A2%D7%95%D7%A7%D7%91-%D7%9E%D7%93%D7%93%D7%99%D7%9D-%D7%92%D7%9E%D7%99%D7%A9/",
+   "https://www.as-invest.co.il/interstedin/gemel/%D7%90%D7%9C%D7%98%D7%A9%D7%95%D7%9C%D7%A8-%D7%A9%D7%97%D7%9D-%D7%92%D7%9E%D7%9C-%D7%A2%D7%95%D7%A7%D7%91-%D7%9E%D7%93%D7%93%D7%99-%D7%9E%D7%A0%D7%99%D7%95%D7%AA/",
+   "https://www.as-invest.co.il/interstedin/gemel/%D7%90%D7%9C%D7%98%D7%A9%D7%95%D7%9C%D7%A8-%D7%A9%D7%97%D7%9D-%D7%92%D7%9E%D7%9C-%D7%A2%D7%95%D7%A7%D7%91-%D7%9E%D7%93%D7%93-sp-500/",
+   "https://www.as-invest.co.il/interstedin/gemel/%D7%90%D7%9C%D7%98%D7%A9%D7%95%D7%9C%D7%A8-%D7%A9%D7%97%D7%9D-%D7%9C%D7%94%D7%A9%D7%AA%D7%AA%D7%A4%D7%95%D7%AA-%D7%91%D7%A4%D7%A0%D7%A1%D7%99%D7%94-%D7%AA%D7%A7%D7%A6%D7%99%D7%91%D7%99%D7%AA-%D7%90%D7%92%D7%97/",
+   "https://www.as-invest.co.il/interstedin/gemel/%D7%90%D7%9C%D7%98%D7%A9%D7%95%D7%9C%D7%A8-%D7%A9%D7%97%D7%9D-%D7%9C%D7%94%D7%A9%D7%AA%D7%AA%D7%A4%D7%95%D7%AA-%D7%91%D7%A4%D7%A0%D7%A1%D7%99%D7%94-%D7%AA%D7%A7%D7%A6%D7%99%D7%91%D7%99%D7%AA-%D7%9B%D7%9C%D7%9C%D7%99/",
+   "https://www.as-invest.co.il/interstedin/gemel/%D7%90%D7%9C%D7%98%D7%A9%D7%95%D7%9C%D7%A8-%D7%A9%D7%97%D7%9D-%D7%9E%D7%A8%D7%A4%D7%90-%D7%A7%D7%95%D7%A4%D7%94-%D7%9E%D7%A8%D7%9B%D7%96%D7%99%D7%AA-%D7%9C%D7%93%D7%9E%D7%99-%D7%9E%D7%97%D7%9C%D7%94/",
+   "https://www.as-invest.co.il/interstedin/gemel/אלטשולר-שחם-גמל-אשראי-ואגח/",
+   "https://www.as-invest.co.il/interstedin/gemel/אלטשולר-שחם-גמל-הלכה/",
+   "https://www.as-invest.co.il/interstedin/gemel/אלטשולר-שחם-גמל-כספי-שקלי/",
+   "https://www.as-invest.co.il/interstedin/gemel/אלטשולר-שחם-גמל-לבני-50-ומטה/",
+   "https://www.as-invest.co.il/interstedin/gemel/אלטשולר-שחם-גמל-לבני-50-עד-60/",
+   "https://www.as-invest.co.il/interstedin/gemel/אלטשולר-שחם-גמל-לבני-60-ומעלה/",
+   "https://www.as-invest.co.il/interstedin/gemel/אלטשולר-שחם-גמל-לעמיתי-חבר-לבני-50-ומטה/",
+   "https://www.as-invest.co.il/interstedin/gemel/אלטשולר-שחם-גמל-לעמיתי-חבר-לבני-50-עד-60/",
+   "https://www.as-invest.co.il/interstedin/gemel/אלטשולר-שחם-גמל-לעמיתי-חבר-לבני-60-ומעלה/",
+   "https://www.as-invest.co.il/interstedin/gemel/אלטשולר-שחם-גמל-לעמיתי-חבר-משולב-סחיר/",
+   "https://www.as-invest.co.il/interstedin/gemel/אלטשולר-שחם-גמל-לעמיתי-חבר-עוקב-מדדים-גמיש/",
+   "https://www.as-invest.co.il/interstedin/gemel/אלטשולר-שחם-גמל-מניות-סחיר/",
+   "https://www.as-invest.co.il/interstedin/gemel/אלטשולר-שחם-גמל-מניות/",
+   "https://www.as-invest.co.il/interstedin/gemel/אלטשולר-שחם-גמל-משולב-סחיר/",
+   "https://www.as-invest.co.il/interstedin/gemel/אלטשולר-שחם-גמל-עוקב-מדד-sp-500/",
+   "https://www.as-invest.co.il/interstedin/gemel/אלטשולר-שחם-גמל-עוקב-מדדי-מניות/",
+   "https://www.as-invest.co.il/interstedin/gemel/אלטשולר-שחם-גמל-עוקב-מדדים-גמיש/",
+   "https://www.as-invest.co.il/interstedin/gemel/אלטשולר-שחם-להשתתפות-בפנסיה-תקציבית-אגח/",
+   "https://www.as-invest.co.il/interstedin/gemel/אלטשולר-שחם-להשתתפות-בפנסיה-תקציבית-כללי/",
+   "https://www.as-invest.co.il/interstedin/gemel/אלטשולר-שחם-מרפא-קופה-מרכזית-לדמי-מחלה/",
+   "https://www.as-invest.co.il/interstedin/pension/common-pension-fund/אלטשולר-שחם-פנסיה-כללית-בסיסי-למקבלי-קצבה/",
+   "https://www.as-invest.co.il/interstedin/pension/common-pension-fund/אלטשולר-שחם-פנסיה-כללית-הלכה/",
+   "https://www.as-invest.co.il/interstedin/pension/common-pension-fund/אלטשולר-שחם-פנסיה-כללית-למקבלי-קצבה-קיימים/",
+   "https://www.as-invest.co.il/interstedin/pension/common-pension-fund/אלטשולר-שחם-פנסיה-כללית-מניות/",
+   "https://www.as-invest.co.il/interstedin/pension/common-pension-fund/אלטשולר-שחם-פנסיה-כללית-מסלול-לבני-50-ומטה/",
+   "https://www.as-invest.co.il/interstedin/pension/common-pension-fund/אלטשולר-שחם-פנסיה-כללית-מסלול-לבני-50-עד-60/",
+   "https://www.as-invest.co.il/interstedin/pension/common-pension-fund/אלטשולר-שחם-פנסיה-כללית-מסלול-לבני-60-ומעלה/",
+   "https://www.as-invest.co.il/interstedin/pension/common-pension-fund/אלטשולר-שחם-פנסיה-כללית-עוקב-מדדי-מניות/",
+   "https://www.as-invest.co.il/interstedin/pension/comprehensive-fund/אלטשולר-שחם-פנסיה-מקיפה-בסיסי-למקבלי-קצבה/",
+   "https://www.as-invest.co.il/interstedin/pension/comprehensive-fund/אלטשולר-שחם-פנסיה-מקיפה-הלכה-למקבלי-קצבה/",
+   "https://www.as-invest.co.il/interstedin/pension/comprehensive-fund/אלטשולר-שחם-פנסיה-מקיפה-הלכה/",
+   "https://www.as-invest.co.il/interstedin/pension/comprehensive-fund/אלטשולר-שחם-פנסיה-מקיפה-למקבלי-קצבה-קיימים/",
+   "https://www.as-invest.co.il/interstedin/pension/comprehensive-fund/אלטשולר-שחם-פנסיה-מקיפה-מניות-סחיר/",
+   "https://www.as-invest.co.il/interstedin/pension/comprehensive-fund/אלטשולר-שחם-פנסיה-מקיפה-מניות/",
+   "https://www.as-invest.co.il/interstedin/pension/comprehensive-fund/אלטשולר-שחם-פנסיה-מקיפה-מסלול-לבני-50-ומטה/",
+   "https://www.as-invest.co.il/interstedin/pension/comprehensive-fund/אלטשולר-שחם-פנסיה-מקיפה-מסלול-לבני-50-עד-60/",
+   "https://www.as-invest.co.il/interstedin/pension/comprehensive-fund/אלטשולר-שחם-פנסיה-מקיפה-מסלול-לבני-60-ומעלה/",
+   "https://www.as-invest.co.il/interstedin/pension/comprehensive-fund/אלטשולר-שחם-פנסיה-מקיפה-משולב-סחיר/",
+   "https://www.as-invest.co.il/interstedin/pension/comprehensive-fund/אלטשולר-שחם-פנסיה-מקיפה-עוקב-מדד-sp-500/",
+   "https://www.as-invest.co.il/interstedin/pension/comprehensive-fund/אלטשולר-שחם-פנסיה-מקיפה-עוקב-מדדי-מניות/",
+   "https://www.as-invest.co.il/interstedin/pension/comprehensive-fund/אלטשולר-שחם-פנסיה-מקיפה-עוקב-מדדים-גמיש/",
+   "https://www.as-invest.co.il/interstedin/pension/comprehensive-fund/אלטשולר-שחם-פנסיה-מקיפה-עוקב-מדדים-למקבלי-קצבה/"
+  ]
  },
  {
   "legal_id": "513910703",
@@ -246,7 +378,11 @@
   "follow_max": null,
   "follow_rx": null,
   "timeout_min": null,
-  "download_delay_ms": null
+  "download_delay_ms": null,
+  "no_map": null,
+  "doc_pages": [
+   "https://www.555.co.il/about/hashkaot.html"
+  ]
  },
  {
   "legal_id": "514956465",
@@ -272,7 +408,11 @@
   "follow_max": null,
   "follow_rx": null,
   "timeout_min": null,
-  "download_delay_ms": null
+  "download_delay_ms": null,
+  "no_map": null,
+  "doc_pages": [
+   "https://www.moreinvest.co.il/מוצרים/גמל-ופנסיה/מידע-כללי-ורגולציה/הצהרה-על-מדיניות-השקעה/"
+  ]
  },
  {
   "legal_id": "517085874",
@@ -297,7 +437,9 @@
   "follow_max": 25,
   "follow_rx": "גמל|השתלמות|gemel|kupot|hishtalmut|provident|savings|מדיניות|policy",
   "timeout_min": null,
-  "download_delay_ms": null
+  "download_delay_ms": null,
+  "no_map": null,
+  "doc_pages": []
  },
  {
   "legal_id": "520022518",
@@ -326,7 +468,9 @@
   "follow_max": 20,
   "follow_rx": "מדיניות|השקע|הצהר|דוח|מסמכ|policy|invest|report",
   "timeout_min": null,
-  "download_delay_ms": null
+  "download_delay_ms": null,
+  "no_map": null,
+  "doc_pages": []
  },
  {
   "legal_id": "520024985",
@@ -351,7 +495,11 @@
   "follow_max": 5,
   "follow_rx": null,
   "timeout_min": null,
-  "download_delay_ms": 1500
+  "download_delay_ms": 1500,
+  "no_map": null,
+  "doc_pages": [
+   "https://kereni.co.il/%D7%9E%D7%93%D7%99%D7%A0%D7%99%D7%95%D7%AA-%D7%94%D7%A9%D7%A7%D7%A2%D7%94-%D7%95%D7%A0%D7%94%D7%9C%D7%99%D7%9D/"
+  ]
  },
  {
   "legal_id": "520027251",
@@ -388,7 +536,12 @@
   "follow_max": 15,
   "follow_rx": "גננות",
   "timeout_min": null,
-  "download_delay_ms": null
+  "download_delay_ms": null,
+  "no_map": null,
+  "doc_pages": [
+   "https://www.kranoth.org.il/%d7%9e%d7%93%d7%99%d7%a0%d7%99%d7%95%d7%aa-%d7%95%d7%a0%d7%94%d7%9c%d7%99%d7%9d-%d7%9e%d7%95%d7%a8%d7%99%d7%9d-%d7%95%d7%92%d7%92%d7%a0%d7%95%d7%aa/%d7%9e%d7%93%d7%99%d7%a0%d7%99%d7%95%d7%aa-%d7%94%d7%a9%d7%a7%d7%a2%d7%95%d7%aa-%d7%9e%d7%95%d7%a8%d7%99%d7%9d-%d7%95%d7%92%d7%a0%d7%a0%d7%95%d7%aa-%d7%9e%d7%a7%d7%95%d7%a8/",
+   "https://www.kranoth.org.il/%d7%9e%d7%93%d7%99%d7%a0%d7%99%d7%95%d7%aa-%d7%95%d7%a0%d7%94%d7%9c%d7%99%d7%9d-%d7%9e%d7%95%d7%a8%d7%99%d7%9d-%d7%95%d7%92%d7%92%d7%a0%d7%95%d7%aa/%d7%9e%d7%93%d7%99%d7%a0%d7%99%d7%95%d7%aa-%d7%94%d7%a9%d7%a7%d7%a2%d7%95%d7%aa-%d7%9e%d7%95%d7%a8%d7%99%d7%9d-%d7%95%d7%92%d7%a0%d7%a0%d7%95%d7%aa-%d7%a8%d7%92%d7%99%d7%9c/"
+  ]
  },
  {
   "legal_id": "520027715",
@@ -417,7 +570,11 @@
   "follow_max": 15,
   "follow_rx": "omega",
   "timeout_min": null,
-  "download_delay_ms": null
+  "download_delay_ms": null,
+  "no_map": null,
+  "doc_pages": [
+   "https://www.menoramivt.co.il/funds/about-menora/engineers/omega-fund/omega-9802"
+  ]
  },
  {
   "legal_id": "520028390",
@@ -462,7 +619,12 @@
   "follow_max": null,
   "follow_rx": null,
   "timeout_min": null,
-  "download_delay_ms": null
+  "download_delay_ms": null,
+  "no_map": null,
+  "doc_pages": [
+   "https://www.kranoth.org.il/%D7%9E%D7%93%D7%99%D7%A0%D7%99%D7%95%D7%AA-%D7%95%D7%A0%D7%94%D7%9C%D7%99%D7%9D/%D7%9E%D7%93%D7%99%D7%A0%D7%99%D7%95%D7%AA-%D7%95%D7%A0%D7%94%D7%9C%D7%99%D7%9D-%D7%9E%D7%95%D7%A8%D7%99%D7%9D-%D7%AA%D7%99%D7%9B%D7%95%D7%A0%D7%99%D7%99%D7%9D/%D7%9E%D7%93%D7%99%D7%A0%D7%99%D7%95%D7%AA-%D7%94%D7%A9%D7%A7%D7%A2%D7%95%D7%AA-%D7%9E%D7%95%D7%A8%D7%99%D7%9D-%D7%AA%D7%99%D7%9B%D7%95%D7%A0%D7%99%D7%99%D7%9D-%D7%9E%D7%A7%D7%95%D7%A8/",
+   "https://www.kranoth.org.il/%D7%9E%D7%93%D7%99%D7%A0%D7%99%D7%95%D7%AA-%D7%95%D7%A0%D7%94%D7%9C%D7%99%D7%9D/%D7%9E%D7%93%D7%99%D7%A0%D7%99%D7%95%D7%AA-%D7%95%D7%A0%D7%94%D7%9C%D7%99%D7%9D-%D7%9E%D7%95%D7%A8%D7%99%D7%9D-%D7%AA%D7%99%D7%9B%D7%95%D7%A0%D7%99%D7%99%D7%9D/%D7%9E%D7%93%D7%99%D7%A0%D7%99%D7%95%D7%AA-%D7%94%D7%A9%D7%A7%D7%A2%D7%95%D7%AA-%D7%9E%D7%95%D7%A8%D7%99%D7%9D-%D7%AA%D7%99%D7%9B%D7%95%D7%A0%D7%99%D7%99%D7%9D-%D7%A8%D7%92%D7%99%D7%9C/"
+  ]
  },
  {
   "legal_id": "520030677",
@@ -504,7 +666,9 @@
   "follow_max": 15,
   "follow_rx": "מדיניות|policy|investments|השקעות",
   "timeout_min": null,
-  "download_delay_ms": null
+  "download_delay_ms": null,
+  "no_map": null,
+  "doc_pages": []
  },
  {
   "legal_id": "520030990",
@@ -541,7 +705,9 @@
   "follow_max": 20,
   "follow_rx": "מדיניות|השקע|CategoryID=164|ArticleID",
   "timeout_min": null,
-  "download_delay_ms": null
+  "download_delay_ms": null,
+  "no_map": null,
+  "doc_pages": []
  },
  {
   "legal_id": "520031824",
@@ -582,6 +748,13 @@
   "follow_max": null,
   "follow_rx": null,
   "timeout_min": null,
-  "download_delay_ms": null
+  "download_delay_ms": null,
+  "no_map": null,
+  "doc_pages": [
+   "https://www.krm.co.il/?CategoryID=217&ArticleID=12",
+   "https://www.krm.co.il/?CategoryID=217&ArticleID=3",
+   "https://www.krm.co.il/?CategoryID=217&ArticleID=5",
+   "https://www.krm.co.il/?CategoryID=217&ArticleID=7"
+  ]
  }
 ]
