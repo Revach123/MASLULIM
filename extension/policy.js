@@ -61,10 +61,22 @@ async function waitComplete(tabId, timeoutMs = 45000) {
 // איסוף קל (גיבוי כשהאיסוף עם הלחיצות נתקע): כל הקישורים בדף ובמסגרות מאותו מקור, בלי לחיצות
 function pageCollectLinksLight() {
   const out = [];
+  // נתיבי קבצים בתוך ה-HTML/סקריפטים (Next.js __NEXT_DATA__ - מנורה: עמודי המסלול בלי קישור <a> לקובץ), כמו בסורק הענן
+  const htmlFiles = () => {
+    const res = [], seenH = new Set();
+    const html = document.documentElement.innerHTML.replace(/\\\//g, "/");
+    for (const m of html.matchAll(/["'(=\s]((?:https?:)?[\w\-./%:?=&~\u0590-\u05FF]+?\.(?:xlsx|xls|pdf|docx))(?=["')\s&<,\\]|$)/gi)) {
+      let h; try { h = new URL(m[1], location.href).href; } catch (e) { continue; }
+      if (!seenH.has(h)) { seenH.add(h); res.push({ href: h, text: "(html)", ctx: "" }); }
+      if (res.length >= 300) break;
+    }
+    return res;
+  };
   const grab = (doc) => doc.querySelectorAll("a[href]").forEach((a) => out.push({ href: a.href, text: (a.innerText || a.title || "").trim().slice(0, 200), ctx: "" }));
   grab(document);
   document.querySelectorAll("iframe").forEach((f) => { try { grab(f.contentDocument); } catch (e) {} });
-  return out;
+  const have = new Set(out.map((l) => l.href));
+  return out.concat(htmlFiles().filter((l) => !have.has(l.href)));
 }
 
 async function pageCollectLinks(clicks) {
@@ -89,6 +101,17 @@ async function pageCollectLinks(clicks) {
     .forEach((el) => { try { el.click(); } catch (e) {} });
   await wait(1500);
   const out = [];
+  // נתיבי קבצים בתוך ה-HTML/סקריפטים (Next.js __NEXT_DATA__ - מנורה: עמודי המסלול בלי קישור <a> לקובץ), כמו בסורק הענן
+  const htmlFiles = () => {
+    const res = [], seenH = new Set();
+    const html = document.documentElement.innerHTML.replace(/\\\//g, "/");
+    for (const m of html.matchAll(/["'(=\s]((?:https?:)?[\w\-./%:?=&~\u0590-\u05FF]+?\.(?:xlsx|xls|pdf|docx))(?=["')\s&<,\\]|$)/gi)) {
+      let h; try { h = new URL(m[1], location.href).href; } catch (e) { continue; }
+      if (!seenH.has(h)) { seenH.add(h); res.push({ href: h, text: "(html)", ctx: "" }); }
+      if (res.length >= 300) break;
+    }
+    return res;
+  };
   const grab = (doc, base) => {
     doc.querySelectorAll("a[href]").forEach((a) => {
       const row = a.closest("tr,li,.row,[class*=item],[class*=card]");
@@ -97,7 +120,11 @@ async function pageCollectLinks(clicks) {
     });
     doc.querySelectorAll("iframe").forEach((f) => { try { if (f.contentDocument) grab(f.contentDocument, f.src); } catch (e) {} });
   };
-  return new Promise((resolve) => setTimeout(() => { grab(document, location.href); resolve(out); }, 2500));
+  return new Promise((resolve) => setTimeout(() => {
+    grab(document, location.href);
+    const have = new Set(out.map((l) => l.href));
+    resolve(out.concat(htmlFiles().filter((l) => !have.has(l.href))));
+  }, 2500));
 }
 
 // רץ בתוך הדף: לוחץ על כפתורים/קישורים של הורדה שלא מצביעים ישירות לקובץ (JS / postback).
@@ -217,6 +244,8 @@ function pageKey(url) {
   return u.replace(/#.*$/, "").replace(/\/+$/, "").replace(/^https?:\/\/(www\.)?/i, "").toLowerCase();
 }
 const PAGE_FULL_DAYS = 7;
+// גרסת תוכן המטמון: עולה כשאיסוף הקישורים משתנה (2.47: קבצים מתוך ה-HTML) - רשומות ישנות = ביקור מלא
+const PAGE_CACHE_V = 2;
 async function pageSig(url) {
   const ac = new AbortController(); const t = setTimeout(() => ac.abort(), 15000);
   try {
@@ -384,7 +413,7 @@ async function runSite(site, cfg, seen, onProgress, windowId, meta = {}, flush =
     try {
       // מטמון עמודים (ר' PAGE_CACHE)
       const pk = pageKey(pageUrl);
-      const pc = PAGE_CACHE[pk];
+      const pc = PAGE_CACHE[pk] && PAGE_CACHE[pk].v === PAGE_CACHE_V ? PAGE_CACHE[pk] : null;
       let cacheWhy = pc ? "" : "none";
       const cacheDays = RULES.page_cache_days ?? 3;
       let links = null, cap = { clicked: 0, urls: [] }, sig = null, fromCache = false;
@@ -428,7 +457,7 @@ async function runSite(site, cfg, seen, onProgress, windowId, meta = {}, flush =
       links.push(...(openedBy[tab.id] || []).map((u) => ({ ...u, ctx: "(download)" })));  // קבצים שנפתחו בחלון/טאב חדש
       if (sig === null) sig = await pageSig(pageUrl);
       // עמוד ריק (נכשל / נחסם) לא נשמר - אחרת היה "ריק" 3 ימים
-      if (links.length) PAGE_CACHE[pk] = { at: Date.now(), full: Date.now(), sig,
+      if (links.length) PAGE_CACHE[pk] = { v: PAGE_CACHE_V, at: Date.now(), full: Date.now(), sig,
                               links: cacheLinks(links, pageUrl, site.follow_rx ? new RegExp(site.follow_rx, "i") : null), captured: skipClicks ? 0 : cap.urls.length,
                               capAt: skipClicks ? pc.capAt : Date.now() };
       }
