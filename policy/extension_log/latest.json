@@ -1,7 +1,7 @@
 {
  "extension_version": "2.37.0",
  "started": "2026-10-02T09:31:44.312Z",
- "updated": "2026-10-02T09:34:44.443Z",
+ "updated": "2026-10-02T09:34:58.645Z",
  "final": false,
  "stopped": false,
  "rules_from_github": true,
@@ -74,31 +74,31 @@
  "active": [
   {
    "name": "מנורה מבטחים פנסיה וגמל בע\"מ",
-   "page": "https://www.menoramivt.co.il/funds/gemel-14679",
-   "page_no": 11,
+   "page": "https://www.menoramivt.co.il/funds/pension-and-gemel/pension-plans/stock-track",
+   "page_no": 12,
    "pages": 64,
-   "step": "פותח אקורדיונים ואוסף קישורים"
+   "step": "טוען עמוד"
   },
   {
    "name": "אלטשולר שחם גמל ופנסיה בע\"מ",
    "page": "https://www.as-invest.co.il/interstedin/%D7%A7%D7%A8%D7%A0%D7%95%D7%AA-%D7%94%D7%A9%D7%AA%D7%9C%D7%9E%D7%95%D7%AA/%D7%90%D7%9C%D7%98%D7%A9%D7%95%D7%9C%D7%A8-%D7%A9%D7%97%D7%9D-%D7%94%D7%A9%D7%AA%D7%9C%D7%9E%D7%95%D7%AA-%D7%90%D7%A9%D7%A8%D7%90%D7%99-%D7%95%D7%90%D7%92%D7%97/",
    "page_no": 12,
-   "pages": 87,
-   "step": "פותח אקורדיונים ואוסף קישורים"
+   "pages": 88,
+   "step": "מוריד קובץ 5/6"
   },
   {
    "name": "החברה לניהול קופת התגמולים והפנסיה של עובדי הסוכנות היהודית לארץ ישראל בע\"מ",
-   "page": "https://www.jewishagency-kupa.org.il/wp-content/uploads/2023/05/%D7%93%D7%95%D7%97-%D7%93%D7%99%D7%A8%D7%A7%D7%98%D7%95%D7%A8%D7%99%D7%95%D7%9F-.doc",
-   "page_no": 12,
+   "page": "https://www.jewishagency-kupa.org.il/wp-content/uploads/2022/08/%D7%93%D7%95%D7%97-%D7%93%D7%99%D7%A8%D7%A7%D7%98%D7%95%D7%A8%D7%99%D7%95%D7%9F-%D7%97%D7%91%D7%A8%D7%94-%D7%9E%D7%A0%D7%94%D7%9C%D7%AA-%D7%A4%D7%A0%D7%A1%D7%99%D7%94-%D7%95%D7%AA%D7%92%D7%9E%D7%95%D7%9C%D7%99%D7%9D-2021.doc",
+   "page_no": 14,
    "pages": 14,
-   "step": "פותח אקורדיונים ואוסף קישורים"
+   "step": "טוען עמוד"
   },
   {
    "name": "מנורה מבטחים והסתדרות המהנדסים ניהול קופות גמל בע\"מ",
-   "page": "https://www.menoramivt.co.il/funds/about-menora/engineers/omega-fund/about-menora.engineers.omega-fund.omega-15738",
-   "page_no": 9,
+   "page": "https://www.menoramivt.co.il/funds/about-menora/engineers/omega-fund/omega-fund.omega-SP500",
+   "page_no": 10,
    "pages": 11,
-   "step": "לוחץ על כפתורי הורדה"
+   "step": "פותח אקורדיונים ואוסף קישורים"
   }
  ],
  "sites": []
