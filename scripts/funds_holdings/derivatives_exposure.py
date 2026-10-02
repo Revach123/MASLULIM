@@ -61,13 +61,14 @@
    קרנות...) כבר משקפות שווי שוק אמיתי, אין בהן את הבאג.
 """
 
+import math
 import re
 import statistics
 from datetime import date, datetime
 
 from .excel_io import to_ratio
 from .sheet_source import PCT_COL
-from .option_delta_pricing import quote_scale, resolve_option_delta
+from .option_delta_pricing import quote_scale, resolve_option_delta, resolve_option_value
 from .option_ticker_parse import (CONTRACT_MULTIPLIER, MAOF_STOCK_OPTION_SHARES, is_call_option, parse_maof_expiry_month, parse_strike,
                                   parse_underlying)
 from .futures_notional import FuturesResolver, build_rows as build_futures_rows
@@ -238,6 +239,7 @@ OPT_EXPIRY_COL = "תאריך פקיעה"
 OPT_UNITS_COL = "ערך נקוב (יחידות)"
 OPT_FX_COL = "שער חליפין"
 OPT_CURRENCY_COL = "מטבע פעילות"
+OPT_PRICE_COL = "שער נייר הערך"  # במעו"ף - לחוזה, באגורות
 
 
 def _normalize_fx(currency, fx: float | None) -> float | None:
@@ -731,6 +733,44 @@ def _option_expiry(row: dict, name, report_date) -> date | None:
     return expiry
 
 
+MAOF_PATTERN = "C_tase_maof_code"
+MAOF_SIZES = (1.0, 10.0, 100.0, 1000.0, 10000.0)
+MAOF_MIN_VALUE_SHARE = 0.02  # שורה אמינה ללימוד גודל החוזה: ערך האופציה 2%+ ממחיר המניה (לא שער מינימום)
+
+
+def _maof_contract_sizes(source: list[dict]) -> dict[str, float]:
+    """טיקר מניה -> מניות לחוזה מעו"ף: שער האופציה לחוזה / מחיר B&S למניה, מעוגל לחזקת 10, חציון על
+    השורות האמינות של אותה מניה (בכל הגופים)."""
+    ratios: dict[str, list[float]] = {}
+    for rec in source:
+        if rec["Category"] not in OPTIONS_CATEGORIES or rec["מידע"] != "מידע":
+            continue
+        report_date = rec.get("ReportMonth")
+        for row in rec["Clean"]:
+            name = row.get(OPT_NAME_COL)
+            if not name:
+                continue
+            ticker, pattern = parse_underlying(str(name))
+            if pattern != MAOF_PATTERN or ticker in CONTRACT_MULTIPLIER:
+                continue
+            is_call = is_call_option(str(name))
+            strike = _num(row.get(OPT_STRIKE_COL))
+            if not strike or strike <= 0:
+                strike = parse_strike(str(name))
+            px = _num(row.get(OPT_PRICE_COL))
+            if is_call is None or not strike or not px or px <= 0:
+                continue
+            value, spot = resolve_option_value(ticker, strike, _option_expiry(row, name, report_date),
+                                               report_date, is_call)
+            if value and spot and value >= MAOF_MIN_VALUE_SHARE * spot:
+                ratios.setdefault(ticker, []).append(px / value)
+    out = {}
+    for ticker, rs in ratios.items():
+        med = statistics.median(rs)
+        out[ticker] = min(MAOF_SIZES, key=lambda m: abs(math.log10(med / m)))
+    return out
+
+
 def _options_exposure(
     source: list[dict], total_assets: dict[str, float], category: str, detail: list | None = None
 ) -> tuple[dict[str, float], dict[str, float]]:
@@ -743,6 +783,7 @@ def _options_exposure(
     אותה חשיפה ונכס הבסיס שזוהה (לפירוק לפי מדד, index_exposure)."""
     sums: dict[str, float] = {}
     equity_sums: dict[str, float] = {}
+    maof_sizes = _maof_contract_sizes(source)
     for rec in source:
         if rec["Category"] != category or rec["מידע"] != "מידע":
             continue
@@ -775,7 +816,7 @@ def _options_exposure(
                 delta, spot = resolve_option_delta(ticker, strike, expiry, report_date, is_call)
                 if delta is not None and spot is not None:
                     mult = CONTRACT_MULTIPLIER.get(ticker) or (
-                        MAOF_STOCK_OPTION_SHARES if pattern == "C_tase_maof_code" else 1.0)
+                        maof_sizes.get(ticker, MAOF_STOCK_OPTION_SHARES) if pattern == MAOF_PATTERN else 1.0)
                     notional_thousands = units * mult * delta * spot * quote_scale(ticker) * fx / 1000
                     line_ratio = notional_thousands / total
                     if fv_ratio is not None and abs(line_ratio) > LEVERAGE_CAP * abs(fv_ratio):
