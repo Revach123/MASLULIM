@@ -411,7 +411,7 @@ export async function runPolicy(cfg, setStatus) {
   function flushStatus(phase) {
     const state = { running: true, stopping: stopRequested, phase: phase || (stopRequested ? "עוצר" : "אתרים"), total: sites.length, done: finished.length,
                     newDocs: allFiles.length / 2 + Object.values(progress).reduce((a, p) => a + (p.docs || 0), 0),
-                    started, active: Object.entries(progress).map(([name, p]) => ({ name, ...p })), finished };
+                    started, updated: Date.now(), active: Object.entries(progress).map(([name, p]) => ({ name, ...p })), finished };
     const text = state.active.map((a) => `${a.name}: ${a.step} (${a.pageNo}/${a.pages})`).join("\n") || "מתחיל...";
     chain = chain.then(() => setStatus({ policyState: state, policyProgress: text })).catch(() => {});
     return chain;
