@@ -27,7 +27,8 @@ from .sheet_source import PCT_COL
 # מטבע, מדינה, פרט (דירוג+פדיון לאג"ח / נכס בסיס לנגזר / סוג), חשיפה למניות, רכיב חשיפה,
 # והשיוך למדד: [[מזהה מדד, חשיפה], ...] - מאותו חישוב בדיוק כמו פירוק החשיפה לפי מדד, וסיווג
 # לשאר הנכסים (ר' _classify_row): cash / deposit / bond_gov_il / bond_corp_abroad... / commodity / digital /
-# fx / credit / private / realestate / alt / commit
+# loan_member / loan_individual / loan_corp / loan_other / rates (ריבית ואשראי) /
+# fx / private / realestate / alt / commit
 HOLDING_COLS = ["cat", "name", "id", "issuer", "pct", "value", "ccy", "country", "info", "equity", "component", "idx", "cls"]
 
 NAME_COLS = ("שם נייר ערך", "שם הלוואה", "שם קרן השקעה", "שם הבנק", "טיקר", "שם מנפיק", "מאפיין עיקרי")
@@ -72,9 +73,14 @@ GOV_BOND_CATEGORIES = {"איגרות חוב ממשלתיות", "לא סחיר א
 CORP_BOND_CATEGORIES = {"איגרות חוב", "לא סחיר איגרות חוב", "ניירות ערך מסחריים", "לא סחיר ניירות ערך מסחריים"}
 FX_UNDERLYING = 'מט"ח'
 # שאר הנכסים לפי גיליון: אשראי פרטי, השקעות פרטיות, נדל"ן, התחייבויות להשקעה (לא נכס - בלי %)
-CATEGORY_CLASS = {"הלוואות": "credit", "לא סחיר מוצרים מובנים": "credit", "מוצרים מובנים": "credit",
+CATEGORY_CLASS = {"לא סחיר מוצרים מובנים": "rates", "מוצרים מובנים": "rates", "מסגרות אשראי": "rates",
                   "קרנות השקעה": "private", "זכויות מקרקעין": "realestate",
                   "יתרות התחייבות להשקעה": "commit"}
+# הלוואות - לפי "מאפיין עיקרי" בדוח (loan_member / loan_individual / loan_corp / loan_other)
+LOANS_CATEGORY = "הלוואות"
+LOAN_KIND = {"עמית/מבוטח": "member", "יחיד שאינו עמית/מבוטח": "individual", "תאגיד": "corp"}
+# נגזר (חוזה / סוואפ / אופציה) על ריבית ואג"ח או על המדד - "ריבית ואשראי"
+RATES_UNDERLYINGS = {'ריבית ואג"ח', "מדד המחירים לצרכן"}
 _ALT_FUND_NAME = re.compile(r"MACRO|FEEDER|HEDGE|LONG\W?SHORT|ABSOLUTE\W?RETURN|MULTI\W?STRAT", re.IGNORECASE)
 _CREDIT_FUND_NAME = re.compile(r"\bP2P\b|PEER\W?TO\W?PEER|DIRECT\W?LENDING|PRIVATE\W?CREDIT|PRIVATE\W?DEBT", re.IGNORECASE)
 # קרן כספית בחו"ל בלי סיווג/הרכב (State Street USD LIQ LVNAV, BlackRock ICS US Treasury, JP Morgan
@@ -94,9 +100,11 @@ def _classify_row(cat: str, row: dict, name, fund_ref: dict | None, fund_frac: d
                   alt_class: str | None = None) -> str | None:
     """מזומן/פיקדון, אג"ח (ממשלתי/קונצרני × בארץ/בחו"ל - כולל קרנות אג"ח וכספיות), סחורות, נכסים דיגיטליים,
     גידור מט"ח."""
+    if cat == LOANS_CATEGORY:
+        return "loan_" + LOAN_KIND.get(str(row.get("מאפיין עיקרי") or "").strip(), "other")
     if cat in CATEGORY_CLASS:
         # מוצר מובנה על מניות - לא אשראי
-        if CATEGORY_CLASS[cat] == "credit" and "מניות" in str(row.get("נכס בסיס") or ""):
+        if CATEGORY_CLASS[cat] == "rates" and "מניות" in str(row.get("נכס בסיס") or ""):
             return None
         return CATEGORY_CLASS[cat]
     if cat == CASH_CATEGORY:
@@ -128,7 +136,7 @@ def _classify_row(cat: str, row: dict, name, fund_ref: dict | None, fund_frac: d
             return alt_class  # סחורות / נכסים דיגיטליים (alt_asset_reference)
         if not (fund_frac or {}).get("equity"):
             if _CREDIT_FUND_NAME.search(str(name or "")):
-                return "credit"  # P2P / הלוואות ישירות
+                return "rates"  # קרן אשראי: P2P / הלוואות ישירות
             if _ALT_FUND_NAME.search(str(name or "")):
                 return "alt"  # קרן גידור / מאקרו / feeder
         frac = fund_frac or {}
@@ -143,6 +151,8 @@ def _classify_row(cat: str, row: dict, name, fund_ref: dict | None, fund_frac: d
     for col in ("נכס בסיס", "סוג הנכס"):
         if row.get(col) == FX_UNDERLYING:
             return "fx"
+        if str(row.get(col) or "").strip() in RATES_UNDERLYINGS:
+            return "rates"
     return None
 
 
