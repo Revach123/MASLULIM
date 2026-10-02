@@ -5,6 +5,34 @@
  "pages": [
   {
    "product": "גמל",
+   "url": "https://www.menoramivt.co.il/funds/about-menora/engineers/omega-fund/omega-286"
+  },
+  {
+   "product": "גמל",
+   "url": "https://www.menoramivt.co.il/funds/about-menora/engineers/omega-fund/omega-1445"
+  },
+  {
+   "product": "גמל",
+   "url": "https://www.menoramivt.co.il/funds/about-menora/engineers/omega-fund/omega-1446"
+  },
+  {
+   "product": "גמל",
+   "url": "https://www.menoramivt.co.il/funds/about-menora/engineers/omega-fund/omega-9803"
+  },
+  {
+   "product": "גמל",
+   "url": "https://www.menoramivt.co.il/funds/about-menora/engineers/omega-fund/omega-14418"
+  },
+  {
+   "product": "גמל",
+   "url": "https://www.menoramivt.co.il/funds/about-menora/engineers/omega-fund/omega-15738"
+  },
+  {
+   "product": "גמל",
+   "url": "https://www.menoramivt.co.il/funds/about-menora/engineers/omega-fund/omega-15739"
+  },
+  {
+   "product": "גמל",
    "url": "https://www.menoramivt.co.il/links/keren-hishtalmut/omega-fund"
   },
   {
@@ -17,10 +45,10 @@
   "גמל"
  ],
  "search": false,
- "rev": 16,
+ "rev": 17,
  "home_source": "web_search",
  "max_pages": 70,
- "note": "מנורה: קובץ מדיניות לכל מסלול בעמוד המסלול (/funds/...), נחשף רק ברינדור. עמודי links/ = רשימות המסלולים; follow נכנס לכל מסלול בדפדפן. exclude: תיק ביטוח משתתף של מנורה ביטוח. 2026-10: אומגה פעילה (רק 9802 מוזג ב-2023) - 7 מסלולים מדווחים ב-2026; מנורה חוסמת Actions (CAPTCHA) -> תוסף",
+ "note": "מנורה: קובץ מדיניות לכל מסלול בעמוד המסלול (/funds/...), נחשף רק ברינדור. עמודי links/ = רשימות המסלולים; follow נכנס לכל מסלול בדפדפן. exclude: תיק ביטוח משתתף של מנורה ביטוח. 2026-10: אומגה פעילה (רק 9802 מוזג ב-2023) - 7 מסלולים מדווחים ב-2026; מנורה חוסמת Actions (CAPTCHA) -> תוסף | 2026-10-02: עמוד לכל מסלול omega-<מספר> (נמצא omega-286 במעקב) - כ-seed לכל 7 המסלולים",
  "exclude": "about-insurance|participating-portfolio|מנורה-ביטוח|משתתף",
  "follow": "/funds/about-menora/engineers/omega-fund/",
  "via": "extension",
