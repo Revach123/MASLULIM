@@ -1,0 +1,26 @@
+name: Fund sources probe
+
+# בדיקת מקורות לסיווג קרנות נאמנות זרות לפי ISIN (FT / Morningstar / Yahoo) - פלט ללוג
+on:
+  push:
+    branches: [claude/great-davinci-u2tlx3]
+    paths: [".github/workflows/fund_sources_probe.yml", "scripts/probe/fund_sources_probe.py"]
+  workflow_dispatch:
+    inputs:
+      isins:
+        description: "ISIN מופרדים ברווח (ריק = רשימת ברירת המחדל)"
+        required: false
+
+jobs:
+  probe:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: pip install requests
+      - env:
+          ISINS: ${{ inputs.isins }}
+        run: python scripts/probe/fund_sources_probe.py $ISINS
