@@ -169,6 +169,18 @@ def compute_equity_totals(reports_dir: Path, tracks: list[dict]):
     except Exception as e:
         print(f"[validate] data.gov.il לא זמין (מדלג על השוואה לחודש הדוח): {e}")
 
+    # אבחון: קרנות חוץ שתורמות מניות לכל מסלול (ISIN, משקל, שבר מניות) - להדפסה במסלולים עם פער
+    foreign_parts: dict[str, list] = {}
+    if os.environ.get("DUMP_EQUITY_COMPONENTS"):
+        for f in funds:
+            if f.get("סוג") != "חוץ":
+                continue
+            isin = str(f.get("מספר קרן") or "").strip().upper()
+            eq = (isin_fractions.get(isin) or {}).get("equity") or 0.0
+            w = to_ratio(f.get("שיעור מסך נכסי ההשקעה")) or 0.0
+            if eq and w:
+                foreign_parts.setdefault(f.get("מפתח"), []).append((w * eq, isin, w, eq, str((f.get("_row") or {}).get("שם נייר ערך") or "")[:30]))
+
     keys = set(official)
     rows = []
     for key in keys:
@@ -188,6 +200,10 @@ def compute_equity_totals(reports_dir: Path, tracks: list[dict]):
                 fut_new.get(key, 0.0), swap_new.get(key, 0.0), _opt_new(key), key in category_pct,
                 official_month.get(key, ""), report_month.get(key, ""),
                 official_at_report.get(key, ""))))
+            ref = official_at_report.get(key, official[key])
+            if abs(full - ref) > 0.01:
+                for part in sorted(foreign_parts.get(key, []), reverse=True)[:8]:
+                    print("FUNDEQ|%s|%s|w=%.4f|eq=%.3f|contrib=%.4f|%s" % (key, part[1], part[2], part[3], part[0], part[4]))
         # has_data: האם קיימת ולו שורת דוח אחת (בכל גיליון/קטגוריה) למסלול
         # הזה בארכיון המקומי - לא "0% חשיפה למניות בפועל" (מסלול אג"ח טהור
         # לגיטימי, שגם הוא יכול לצאת old=deriv=full=0.0 בלי שום בעיה), אלא
