@@ -1,7 +1,7 @@
 {
  "extension_version": "2.36.0",
  "started": "2026-10-02T09:14:49.791Z",
- "updated": "2026-10-02T09:23:49.892Z",
+ "updated": "2026-10-02T09:24:53.349Z",
  "final": false,
  "stopped": false,
  "rules_from_github": true,
@@ -74,31 +74,31 @@
  "active": [
   {
    "name": "מנורה מבטחים פנסיה וגמל בע\"מ",
-   "page": "https://www.menoramivt.co.il/funds/pension-and-gemel/pension-plans/track-50-60",
-   "page_no": 29,
+   "page": "https://www.menoramivt.co.il/funds/pension-and-gemel/pension-plans/pension-kayamut-14348",
+   "page_no": 34,
    "pages": 77,
-   "step": "מוריד קובץ 12/12"
+   "step": "טוען עמוד"
   },
   {
    "name": "אלטשולר שחם גמל ופנסיה בע\"מ",
-   "page": "https://www.as-invest.co.il/interstedin/%D7%A7%D7%A8%D7%A0%D7%95%D7%AA-%D7%94%D7%A9%D7%AA%D7%9C%D7%9E%D7%95%D7%AA/%D7%90%D7%9C%D7%98%D7%A9%D7%95%D7%9C%D7%A8-%D7%A9%D7%97%D7%9D-%D7%94%D7%A9%D7%AA%D7%9C%D7%9E%D7%95%D7%AA-%D7%90%D7%A9%D7%A8%D7%90%D7%99-%D7%95%D7%90%D7%92%D7%97/",
-   "page_no": 34,
+   "page": "https://www.as-invest.co.il/interstedin/%D7%A7%D7%A8%D7%A0%D7%95%D7%AA-%D7%94%D7%A9%D7%AA%D7%9C%D7%9E%D7%95%D7%AA/%D7%90%D7%9C%D7%98%D7%A9%D7%95%D7%9C%D7%A8-%D7%A9%D7%97%D7%9D-%D7%94%D7%A9%D7%AA%D7%9C%D7%9E%D7%95%D7%AA-%D7%90%D7%A9%D7%A8%D7%90%D7%99-%D7%95%D7%90%D7%92%D7%97-%D7%A2%D7%9D-%D7%9E%D7%A0%D7%99%D7%95%D7%AA-%D7%A2%D7%93-25-%D7%9E%D7%A0%D7%99%D7%95%D7%AA/",
+   "page_no": 38,
    "pages": 103,
-   "step": "פותח אקורדיונים ואוסף קישורים"
+   "step": "מוריד קובץ 3/7"
   },
   {
    "name": "החברה המנהלת של מינהל קרן ההשתלמות לפקידים עובדי המנהל והשירותים בע\"מ",
    "page": "https://minhal.org/אודות-הקרן/",
    "page_no": 4,
    "pages": 9,
-   "step": "טוען עמוד"
+   "step": "פותח אקורדיונים ואוסף קישורים"
   },
   {
    "name": "החברה המנהלת של רום קרן ההשתלמות לעובדי הרשויות המקומיות בע\"מ",
-   "page": "https://www.krm.co.il/?CategoryID=217&ArticleID=5",
-   "page_no": 1,
+   "page": "https://www.krm.co.il",
+   "page_no": 6,
    "pages": 6,
-   "step": "טוען עמוד"
+   "step": "פותח אקורדיונים ואוסף קישורים"
   }
  ],
  "sites": [
