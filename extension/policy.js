@@ -267,7 +267,11 @@ async function runSite(site, cfg, seen, onProgress, windowId, meta = {}, flush =
   // תקציב זמן לאתר (timeout_min, ברירת מחדל 15): בהגעה אליו עוצרים בעדינות ומחזירים את מה שכבר הורד - לא זורקים הכל
   // (מנורה/אלטשולר: 132/229 קבצים אבדו ב-timeout). הריצה הבאה ממשיכה מהעמוד שבו נעצרנו (meta.__resume).
   const deadline = Date.now() + siteBudgetMs(site) - 60000;
-  const resumeKey = `__resume:${site.legal_id}`;
+  // נקודת ההמשך קשורה לרשימת העמודים - שינוי סדר/עמודים בהגדרות האתר = מתחילים מהתחלה (אינדקס ישן היה מדלג על העמודים הלא נכונים)
+  const seedSig = [...(site.pages || []).map((p) => p.url), site.home || ""].join("|");
+  let h = 0; for (let i = 0; i < seedSig.length; i++) h = (h * 31 + seedSig.charCodeAt(i)) | 0;
+  const resumeKey = `__resume:${site.legal_id}:${h}`;
+  for (const k of Object.keys(meta)) if (k.startsWith(`__resume:${site.legal_id}`) && k !== resumeKey) delete meta[k];
   const startAt = Math.min(meta[resumeKey] || 0, Math.max(pages.length - 1, 0));
   const partial = { cut: false };
   let blockedFails = 0;
