@@ -78,6 +78,8 @@ def from_long_code(code):
 def from_file_name(url):
     name = unquote(url or "").split("/")[-1].split("?")[0]
     name = re.sub(r"\.(xlsx?|pdf|docx?)$", "", name, flags=re.I)
+    if re.fullmatch(r"\d{3,5}", name) and not 2016 <= int(name) <= 2035:  # רק המספר (אלטשולר "1912.xlsx") - מסלול גם אם נראה כשנה; לא שנת מדיניות
+        return [str(int(name))]
     name = re.sub(r"(?<!\d)\d{1,2}[._-]\d{1,2}[._-]\d{2,4}(?!\d)", " ", name)  # תאריכים
     name = re.sub(r"(?<!\d)(19|20)\d{6}(?!\d)", " ", name)
     c = [n for n in numbers_in(name) if not re.fullmatch(r"\d{6}", n)]  # 6 ספרות בשם קובץ = לרוב תאריך (260811)
