@@ -612,12 +612,9 @@ def report_month_by_key(source: list[dict]) -> dict[str, str]:
 
 
 def build_index_table(index_exp: dict[str, dict], tracks_by_key: dict[str, dict],
-                      report_month: dict[str, str], fx: dict[str, dict[str, float]] | None = None,
-                      fx_ccy: dict[str, dict[str, float]] | None = None) -> list[dict]:
-    """רשומה למסלול: פרטי המסלול (מ-tracks) + סה"כ חשיפה למניות + פירוק לפי מדד,
-    מהגדול לקטן. רק מסלולים שיש להם נתוני דוח. fx / fx_ccy (fx_exposure): החשיפה למט"ח לפי הדוח -
-    fx_total, הרכיבים (fx) והפירוק לפי מטבע (fx_ccy, מהגדול לקטן)."""
-    from .fx_exposure import fx_total
+                      report_month: dict[str, str]) -> list[dict]:
+    """רשומה למסלול: פרטי המסלול (מ-tracks, כולל החשיפה למט"ח המדווחת - official_fx) + סה"כ חשיפה
+    למניות + פירוק לפי מדד, מהגדול לקטן. רק מסלולים שיש להם נתוני דוח."""
     out = []
     empty = {"total": 0.0, "indices": {}}
     for key in set(index_exp) | set(report_month):
@@ -630,11 +627,6 @@ def build_index_table(index_exp: dict[str, dict], tracks_by_key: dict[str, dict]
              "sources": {s: round(v, 6) for s, v in e["sources"].items()}}
             for i, e in sorted(exp["indices"].items(), key=lambda x: -x[1]["pct"])
         ]
-        if fx is not None and key in fx:
-            rec["fx_total"] = round(fx_total(fx[key]), 6)
-            rec["fx"] = {c: round(v, 6) for c, v in fx[key].items() if abs(v) >= 1e-6}
-            rec["fx_ccy"] = [[c, round(v, 6)] for c, v in sorted((fx_ccy or {}).get(key, {}).items(),
-                                                              key=lambda x: -abs(x[1])) if abs(v) >= 0.0005]
         out.append(rec)
     return sorted(out, key=lambda r: (str(r.get("company") or ""), str(r["key"])))
 

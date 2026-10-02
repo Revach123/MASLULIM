@@ -23,8 +23,7 @@ from .foreign_fund_layers import build_foreign_fractions
 from .funds import build_funds
 from .funds_detail import build_funds_detail
 from .funds_il import build_funds_il, build_funds_il_kashrut
-from .fund_exposure_reference import fetch_fund_exposure, fetch_fund_fx_exposure, fetch_tase_stocks
-from .fx_exposure import build_fx_exposure
+from .fund_exposure_reference import fetch_fund_exposure, fetch_tase_stocks
 from .alt_asset_reference import build_alt_classes
 from .holdings_detail import build_holdings_detail, report_unplaced_funds
 from .funds_reference import build_funds_reference
@@ -120,10 +119,7 @@ def build_master_table(
                                      trace=index_trace, fund_exposure=fund_exposure, tase_stocks=tase_stocks,
                                      official_names=official_names)
     tracks_by_key = {k: t for t in tracks if (k := track_key(t))}
-    # חשיפה למט"ח לפי הדוח (fx_exposure) - בטבלת המדדים, לבדיקת המדיניות בדף המסלול וב-/sharetracks
-    fx_ccy: dict = {}
-    fx = build_fx_exposure(source, isin_swap, funds_ref, fetch_fund_fx_exposure(), fx_ccy)
-    index_table = build_index_table(index_exp, tracks_by_key, report_month_by_key(source), fx, fx_ccy)
+    index_table = build_index_table(index_exp, tracks_by_key, report_month_by_key(source))
     print(f"[main] {len(index_table)} מסלולים עם פירוק חשיפה לפי מדד")
     print(summarize_index(index_table))
 

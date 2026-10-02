@@ -85,13 +85,3 @@ def fetch_fund_exposure(session: requests.Session | None = None) -> dict[str, fl
     print(f"[fund_exposure] חשיפה למניות מדווחת ל-{len(out)} קרנות ישראליות")
     return out
 
-
-def fetch_fund_fx_exposure(session: requests.Session | None = None) -> dict[str, float]:
-    """מספר קרן -> שבר החשיפה למט"ח שהקרן מדווחת (אותו קובץ, עמודת "חשיפה למט"ח")."""
-    try:
-        out = parse_fund_exposure(_get_raw(EXPOSURE_CONTENTS_URL, session), "מט")
-    except Exception as e:
-        print(f"[fund_exposure] חשיפה למט\"ח לא זמינה: {e}")
-        return {}
-    print(f"[fund_exposure] חשיפה למט\"ח מדווחת ל-{len(out)} קרנות ישראליות")
-    return out
