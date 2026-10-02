@@ -530,9 +530,13 @@ chrome.runtime.onInstalled.addListener(() => {
   chrome.alarms.create(ALARM, { periodInMinutes: 24 * 60, delayInMinutes: 2 });
   chrome.alarms.clear(POLICY_ALARM);  // הוחלף בבדיקה כל 15 דקות (POLICY_CHECK_ALARM)
 });
-chrome.runtime.onStartup.addListener(() => {
+chrome.runtime.onStartup.addListener(async () => {
   chrome.alarms.create(ALARM, { periodInMinutes: 24 * 60, delayInMinutes: 2 });
   maybeCatchUp();
+  // דפדפן שעלה מחדש - שום ריצת מדיניות לא יכולה להיות פעילה; מצב "running" שנשאר מהפעלה קודמת = ריצה שנקטעה
+  const { status } = await chrome.storage.local.get("status");
+  const st = status?.policyState;
+  if (st?.running) await setStatus({ policyState: { ...st, running: false, interrupted: true, ended: Date.now(), active: [] } });
 });
 chrome.alarms.onAlarm.addListener(async (a) => {
   if (a.name === ALARM) { if (!(await ranSuccessfullyToday())) runSafe("incremental"); }
@@ -583,7 +587,14 @@ async function policyFingerprint(cfg) {
 async function checkPolicyTrigger() {
   try {
     const { status } = await chrome.storage.local.get("status");
-    if (policyRunning || status?.policyState?.running) return;
+    if (policyRunning) return;
+    const st = status?.policyState;
+    if (st?.running) {
+      // ריצה שנקטעה (המחשב כבה / הדפדפן נסגר באמצע) נשארת "running" באחסון ולא נוקתה - בלי זה הבדיקה חוזרת כאן לנצח
+      // ואף ריצה לא מתחילה. בזיכרון אין ריצה (policyRunning=false) ואין עדכון 20 דקות -> המצב ישן, מנקים וממשיכים.
+      if (Date.now() - (st.updated || st.started || 0) < 20 * 60 * 1000) return;
+      await setStatus({ policyState: { ...st, running: false, interrupted: true, ended: Date.now(), active: [] } });
+    }
     const cfg = await getConfig();
     if (!cfg.token || !cfg.owner || !cfg.repo) return;
     const fp = await policyFingerprint(cfg);
