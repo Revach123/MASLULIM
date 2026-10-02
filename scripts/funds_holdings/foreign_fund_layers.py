@@ -68,8 +68,7 @@ def _report_class(row: dict) -> str | None:
     return next(iter(found)) if found else None
 
 
-def classify_from_report_columns(source: list[dict], isins) -> dict[str, dict[str, float]]:
-    """רוב השורות של אותו ISIN בכל הדוחות: הכרעה רק כש-80%+ מהשורות המכריעות/הסותרות מסכימות."""
+def _report_votes(source: list[dict], isins) -> dict[str, Counter]:
     want = {str(i).strip().upper() for i in isins}
     votes: dict[str, Counter] = {}
     for rec in source:
@@ -81,11 +80,41 @@ def classify_from_report_columns(source: list[dict], isins) -> dict[str, dict[st
                 cls = _report_class(row)
                 if cls:
                     votes.setdefault(isin, Counter())[cls] += 1
+    return votes
+
+
+def _decided(c: Counter, min_rows: int = 1) -> str | None:
+    cls, n = c.most_common(1)[0]
+    total = sum(c.values())
+    return cls if cls != "conflict" and total >= min_rows and n >= 0.8 * total else None
+
+
+def _frac(cls: str) -> dict[str, float]:
+    return {"equity": 1.0, "bond": 0.0} if cls == "equity" else {"equity": 0.0, "bond": 1.0}
+
+
+def classify_from_report_columns(source: list[dict], isins) -> dict[str, dict[str, float]]:
+    """רוב השורות של אותו ISIN בכל הדוחות: הכרעה רק כש-80%+ מהשורות המכריעות/הסותרות מסכימות."""
     out = {}
-    for isin, c in votes.items():
-        cls, n = c.most_common(1)[0]
-        if cls != "conflict" and n >= 0.8 * sum(c.values()):
-            out[isin] = {"equity": 1.0, "bond": 0.0} if cls == "equity" else {"equity": 0.0, "bond": 1.0}
+    for isin, c in _report_votes(source, isins).items():
+        cls = _decided(c)
+        if cls:
+            out[isin] = _frac(cls)
+    return out
+
+
+def report_overrides(source: list[dict], fractions: dict[str, dict[str, float]], strong: set[str]) -> dict[str, str]:
+    """סיווג ממקור חלש (Yahoo / FT / OpenFIGI / שם / מטמון - לא אוניברסיטת ה-ETF / SEC) שסותר את סיווג הגוף
+    בדוח (3+ שורות, 80%+ מסכימות): הדוח קובע. LO Funds Asia LU2332096192 - "מניות" 100% ממקור חלש, 38/38
+    שורות בדוח: Bond/Fixed Income + אג"ח קונצרני."""
+    weak = [i for i in fractions if i not in strong]
+    out = {}
+    for isin, c in _report_votes(source, weak).items():
+        cls = _decided(c, min_rows=3)
+        eq = fractions[isin].get("equity") or 0.0
+        if cls == "bond" and eq > 0.5 or cls == "equity" and eq < 0.5 and not fractions[isin].get("stock"):
+            fractions[isin] = _frac(cls)
+            out[isin] = cls
     return out
 
 
@@ -111,6 +140,7 @@ def build_foreign_fractions(source: list[dict], funds: list[dict], tag: str, cac
     sec_exposure = fetch_sec_etf_exposure()
     official_names = official_fund_names(etf_universe, sec_exposure, fetch_us_security_names())
     isin_fractions = build_isin_fractions(etf_universe, sec_exposure)
+    strong = set(isin_fractions)  # אוניברסיטת ה-ETF / SEC - לא נדרסים ע"י סיווג הדוח
     for isin, frac in classify_from_report_names(source).items():
         isin_fractions.setdefault(isin, frac)
     missing = collect_unclassified_foreign_isins(funds, isin_fractions)
@@ -148,6 +178,10 @@ def build_foreign_fractions(source: list[dict], funds: list[dict], tag: str, cac
         isin_fractions.setdefault(isin, frac)
     print(f"[{tag}] סיווג הגוף בדוח (מוצא אחרון): {len(from_report)} מתוך {len(missing)} ISIN שנותרו: "
           f"{sorted(from_report)[:10]}")
+
+    overridden = report_overrides(source, isin_fractions, strong)
+    print(f"[{tag}] {len(overridden)} ISIN שסיווגם ממקור חלש סתר את סיווג הגוף בדוח - לפי הדוח: "
+          f"{dict(list(overridden.items())[:10])}")
 
     repaired = repair_isin_typos(funds, isin_fractions)
     for bad, good in repaired.items():
