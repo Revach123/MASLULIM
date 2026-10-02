@@ -204,6 +204,37 @@ function looksLikeDoc(base64) {
   return b.startsWith("PK\x03\x04") || b.startsWith("\xd0\xcf\x11\xe0") || b.startsWith("%PDF-");
 }
 
+// ----- מטמון עמודים: ביקור בעמוד (טאב + אקורדיונים + לחיצות הורדה) הוא החלק היקר של הריצה (30-60 שנ' לעמוד).
+// אחרי ביקור מלא נשמרים הקישורים שנמצאו. בריצה הבאה: חתימה זולה של העמוד (fetch של ה-HTML, בלי טאב - רשימת קישורי
+// המסמכים שבו). חתימה זהה -> הקישורים מהמטמון, בלי טאב (הקבצים עצמם עדיין נבדקים ב-HEAD - קובץ שהוחלף מתגלה מיד).
+// אין חתימה (עמוד שנבנה ב-JS / חוסם fetch - מנורה) -> המטמון תקף page_cache_days (ברירת מחדל 3, בכללים ב-GitHub).
+// ביקור מלא לפחות פעם ב-PAGE_FULL_DAYS. page_cache_days=0 בכללים = כבוי.
+let PAGE_CACHE = {};
+const PAGE_FULL_DAYS = 7;
+async function pageSig(url) {
+  const ac = new AbortController(); const t = setTimeout(() => ac.abort(), 15000);
+  try {
+    const r = await fetch(url, { credentials: "include", signal: ac.signal });
+    if (!r.ok) return null;
+    const html = await r.text();
+    const docs = [...html.matchAll(/href\s*=\s*["']([^"'#]+)["']/gi)].map((m) => m[1]).filter((h) => DOC_RX.test(h));
+    if (!docs.length) return null;  // אין מסמכים ב-HTML הגולמי (נטען ב-JS) - לא ניתן להשוות
+    const sig = [...new Set(docs)].sort().join("\n");
+    let h = 0; for (let i = 0; i < sig.length; i++) h = (h * 31 + sig.charCodeAt(i)) | 0;
+    return `${docs.length}:${h}`;
+  } catch (e) { return null; } finally { clearTimeout(t); }
+}
+function cacheLinks(links, pageUrl, frx = null) {  // רק מה שצריך: מסמכים / הורדות / קישורים באותו אתר (עמודי המשך), עד 600
+  let host = ""; try { host = new URL(pageUrl).hostname.replace(/^www\./, ""); } catch (e) {}
+  return links.filter((l) => {
+    if (DOC_RX.test(l.href) || l.ctx === "(download)" || DOC_RX.test(l.text || "")) return true;
+    try {  // קישור באותו אתר - רק כאלה שעשויים להיות עמודי המשך (מדיניות/השקעות/מוצרים), לא תפריטים כלליים
+      const blob = decodeURIComponent(l.href) + " " + (l.text || "");
+      return new URL(l.href).hostname.replace(/^www\./, "") === host && ((frx && frx.test(blob)) || POLICY_RX.test(blob) || /השקע|פנסי|תגמול|גמל|קופ|השתלמ|חיסכון|פיצוי|מסלול|fund|invest|pension|gemel/i.test(blob));
+    } catch (e) { return false; }
+  }).slice(0, 400).map((l) => ({ href: l.href, text: (l.text || "").slice(0, 120), ctx: (l.ctx || "").slice(0, 120) }));
+}
+
 function siteBudgetMs(site) { return (site.timeout_min || RULES.site_timeout_min || 15) * 60000; }
 
 function utf8b64(s) { return btoa(unescape(encodeURIComponent(s))); }
@@ -285,9 +316,21 @@ async function runSite(site, cfg, seen, onProgress, windowId, meta = {}, flush =
       errors.push(`time budget ${Math.round(siteBudgetMs(site) / 60000)}m reached at page ${pi + 1}/${pages.length} - kept ${files.length / 2} files, next run resumes here`);
       break;
     }
-    await report(pi, "טוען עמוד");
     let tab;
     try {
+      // מטמון עמודים (ר' PAGE_CACHE)
+      const pc = PAGE_CACHE[pageUrl];
+      const cacheDays = RULES.page_cache_days ?? 3;
+      let links = null, cap = { clicked: 0, urls: [] }, sig = null, fromCache = false;
+      if (pc && cacheDays > 0 && !site.no_page_cache && Date.now() - (pc.full || 0) < PAGE_FULL_DAYS * 864e5) {
+        await report(pi, "בודק אם העמוד השתנה");
+        sig = await pageSig(pageUrl);
+        if ((sig && sig === pc.sig) || (!sig && !pc.sig && Date.now() - pc.at < cacheDays * 864e5)) {
+          links = pc.links.map((l) => ({ ...l })); fromCache = true; stats.page_cache = (stats.page_cache || 0) + 1;
+        }
+      }
+      if (!fromCache) {
+      await report(pi, "טוען עמוד");
       tab = await tabsRetry(() => chrome.tabs.create({ url: pageUrl, active: false, ...(windowId ? { windowId } : {}) }));
       ourTabs.add(tab.id); openedBy[tab.id] = [];
       keepMinimized(windowId);  // Chrome ב-Windows משחזר לפעמים חלון ממוזער כשנוצר בו טאב
@@ -302,11 +345,21 @@ async function runSite(site, cfg, seen, onProgress, windowId, meta = {}, flush =
         errors.push(`${pageUrl}: ${e && e.message || e} -> light collect`);
         [res] = await execInTab(tab.id, pageCollectLinksLight, []);
       }
-      const links = (res && res.result) || [];
-      await report(pi, "ממתין לתור לחיצות ההורדה");
-      const cap = await withDownloadLock(async () => { await report(pi, "לוחץ על כפתורי הורדה"); return captureDownloads(tab.id, site.capture_ms || RULES.capture_ms, site.download_rx || RULES.download_rx); });
+      links = (res && res.result) || [];
+      // לחיצות הורדה: תור משותף לכל האתרים ו-8 שנ' לעמוד. עמוד שבביקור המלא הקודם הלחיצות בו לא תפסו כלום - מדלגים
+      // (עד הביקור המלא השבועי)
+      const skipClicks = pc && pc.captured === 0 && Date.now() - (pc.capAt || 0) < PAGE_FULL_DAYS * 864e5;
+      if (!skipClicks) {
+        await report(pi, "ממתין לתור לחיצות ההורדה");
+        cap = await withDownloadLock(async () => { await report(pi, "לוחץ על כפתורי הורדה"); return captureDownloads(tab.id, site.capture_ms || RULES.capture_ms, site.download_rx || RULES.download_rx); });
+      }
       links.push(...cap.urls.map((u) => ({ ...u, ctx: "(download)" })));
       links.push(...(openedBy[tab.id] || []).map((u) => ({ ...u, ctx: "(download)" })));  // קבצים שנפתחו בחלון/טאב חדש
+      if (sig === null) sig = await pageSig(pageUrl);
+      if (links.length) PAGE_CACHE[pageUrl] = {  // עמוד ריק (נכשל / נחסם) לא נשמר - אחרת היה "ריק" 3 ימים at: Date.now(), full: Date.now(), sig,
+                              links: cacheLinks(links, pageUrl, site.follow_rx ? new RegExp(site.follow_rx, "i") : null), captured: skipClicks ? 0 : cap.urls.length,
+                              capAt: skipClicks ? pc.capAt : Date.now() };
+      }
       // follow_max (אתר שעמוד המדיניות בו לא ידוע - הסוכנות): נכנסים לקישורים באותו אתר שנראים כמו מדיניות/השקעות
       const followed = [];
       // follow_rx: רק קישורים שתואמים (קרנות מורים וגננות: "מורים-וגננות"); גם מעמודים שנכנסו אליהם (כמה רמות),
@@ -425,7 +478,8 @@ export async function runPolicy(cfg, setStatus) {
   // חברות שיש להן כבר מדיניות השנה לכל המסלולים (policy/extension_complete.json, מחושב ב-GitHub) - מדלגים עליהן
   // skip_complete_hours (ברירת מחדל 24) מאז הריצה המוצלחת האחרונה שלהן בתוסף. 0 בכללים = לא מדלגים.
   const complete = await readComplete(cfg);
-  const { policySiteOk = {}, policyMeta = {} } = await chrome.storage.local.get(["policySiteOk", "policyMeta"]);
+  const { policySiteOk = {}, policyMeta = {}, policyPageCache = {} } = await chrome.storage.local.get(["policySiteOk", "policyMeta", "policyPageCache"]);
+  PAGE_CACHE = policyPageCache;
   const skipH = RULES.skip_complete_hours ?? 24;
   const skipped = [];
   const sites = allSites.filter((st) => {
@@ -532,7 +586,7 @@ export async function runPolicy(cfg, setStatus) {
         await commitFiles(cfg.token, cfg.owner, cfg.repo, cfg.branch, [...files, logFile("policy/extension_log/latest.json", buildLog(false))],
           `policy inbox (extension): ${files.length / 2} documents - ${site.name.slice(0, 40)}`);
         Object.assign(committedSeen, added);
-        await chrome.storage.local.set({ policySeen: committedSeen, policyMeta });  // גם חתימות HEAD ונקודת ההמשך - ריצה שנקטעה לא מורידה שוב
+        await chrome.storage.local.set({ policySeen: committedSeen, policyMeta, policyPageCache: PAGE_CACHE });  // גם חתימות HEAD ונקודת ההמשך - ריצה שנקטעה לא מורידה שוב
       } catch (e) {
         pending.push({ files, added });
         allErrors.push(`commit ${site.name}: ${e && e.message || e}`);
@@ -551,7 +605,7 @@ export async function runPolicy(cfg, setStatus) {
           await flushStatus();
         }, windowId, policyMeta, (batch, batchAdded) => commitSite(site, batch, batchAdded)), siteBudgetMs(site) + 5 * 60000, `site ${site.name}`);
         policySiteOk[site.legal_id] = Date.now();  // האתר הסתיים (גם אם קובץ בודד נכשל - הצבעות 418 וכד')
-        await chrome.storage.local.set({ policySiteOk, policyMeta });
+        await chrome.storage.local.set({ policySiteOk, policyMeta, policyPageCache: PAGE_CACHE });
         allFiles.push(...files);
         if (rest.length) commitSite(site, rest, restAdded);  // שמירה מיד בסוף כל אתר - ריצה שנתקעת/נסגרת לא מאבדת את מה שכבר הורד
         allErrors.push(...errors);

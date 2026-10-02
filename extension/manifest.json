@@ -1,10 +1,11 @@
 {
   "manifest_version": 3,
   "name": "מעקב דוחות רבעוניים - רשות שוק ההון",
-  "version": "2.37.0",
+  "version": "2.38.0",
   "description": "מושך אחת ליום מהאתר של רשות שוק ההון את קבצי הדוחות הרבעוניים החדשים (מתוך דף האתר עצמו, מהחיבור הביתי שלך) ודוחף אותם אוטומטית ל-GitHub, מסודרים לפי רבעון, עם manifest ל-Power Query. בנוסף: משיכה יומית של מסמכי מדיניות השקעה מאתרים שחוסמים שרתי ענן.",
   "permissions": [
     "storage",
+    "unlimitedStorage",
     "alarms",
     "notifications",
     "scripting",
