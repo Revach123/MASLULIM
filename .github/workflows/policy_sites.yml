@@ -15,6 +15,9 @@ on:
       only:
         description: "LegalId מופרדים ברווח (ריק = כולן)"
         required: false
+      cloud:
+        description: "1 = לסרוק מהענן גם אתרים שמסומנים via=extension (ריצה ידנית, כשהתוסף לא זמין)"
+        required: false
 
 permissions:
   contents: write
@@ -84,6 +87,8 @@ jobs:
       - name: Crawl (snapshot + diff + download)
         if: needs.matrix.outputs.mode != 'parse'
         continue-on-error: true
+        env:
+          POLICY_FORCE_CLOUD: ${{ inputs.cloud }}
         run: |
           if [ "$(jq -r '.browser // "headless"' scripts/policy/sites/$ID.json)" = "headed" ]; then
             POLICY_HEADED=1 xvfb-run -a python -m scripts.policy.crawl --only "$ID"
