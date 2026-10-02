@@ -431,6 +431,9 @@ async function runSite(site, cfg, seen, onProgress, windowId, meta = {}, flush =
         if (Date.now() > deadline) { partial.cut = true; meta[resumeKey] = pi; break; }
         if (site.download_delay_ms) await sleep(site.download_delay_ms);
         await report(pi, `מוריד קובץ ${di + 1}/${uniq.length}`);
+        // קובץ שכבר נשלח ושנת המדיניות בשמו לפני השנה הקודמת (2016-2024) - לא ישתנה עוד: בלי בדיקת HEAD
+        // (אלטשולר ~750 קבצים, מנורה ~450 - בדיקת HEAD לכל קובץ היסטורי בכל ריצה)
+        if (seen[d.href] && yr(d) && yr(d) < new Date().getFullYear() - 1) { stats.had++; stats.old_skip = (stats.old_skip || 0) + 1; continue; }
         const sig = await headSig(d.href);
         const m = meta[d.href];
         if (sig && seen[d.href] && m && m.sig === sig && Date.now() - (m.full || 0) < FULL_CHECK_DAYS * 864e5) {
