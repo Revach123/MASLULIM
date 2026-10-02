@@ -232,13 +232,38 @@ def build_isin_fractions(etf_universe: list[dict], sec_exposure: list[dict]) -> 
         if str(rec.get("assetClass") or "") == SEC_NO_DATA:
             continue
         out[isin] = {"equity": (eq or 0.0) / 100, "bond": (bd or 0.0) / 100}
+        if (rec.get("eqSynthPct") or 0) > 0:
+            out[isin]["synth"] = rec["eqSynthPct"] / 100  # מניות דרך נגזרים (סוואפ) - האג"ח הן בטוחה
     return out
 
 
-def official_fund_names(etf_universe: list[dict], sec_exposure: list[dict]) -> dict[str, str]:
+US_SECURITIES_URL = "https://api.github.com/repos/Revach123/revach/contents/data/securities_us/us_securities.json"
+
+
+def fetch_us_security_names(session: requests.Session | None = None) -> dict[str, str]:
+    """ISIN -> שם הנייר הרשמי מרשימת ניירות ארה"ב של revach (security_name: "Corgi Lithography &
+    Semiconductor Photonics ETF" ל-EUV, שאין לה עדיין דוח SEC ולא נמצאת באוניברסיטת ה-ETF)."""
+    token = (os.environ.get(TOKEN_ENV) or "").strip()
+    if not token:
+        return {}
+    try:
+        s = session or requests.Session()
+        r = s.get(US_SECURITIES_URL, headers={"Authorization": f"Bearer {token}",
+                                              "Accept": "application/vnd.github.raw"}, timeout=120)
+        r.raise_for_status()
+        rows = (r.json() or {}).get("securities") or []
+    except Exception as e:
+        print(f"[foreign_etf] ניירות ארה\"ב (revach) לא זמינים: {e}")
+        return {}
+    return {isin: str(x["security_name"]).strip() for x in rows
+            if (isin := _isin_key(x.get("isin"))) and x.get("security_name")}
+
+
+def official_fund_names(etf_universe: list[dict], sec_exposure: list[dict],
+                        us_names: dict[str, str] | None = None) -> dict[str, str]:
     """ISIN -> שם הקרן הרשמי (אוניברסיטת ה-ETF / SEC). הגופים מדווחים לעיתים שם קטוע או שגוי
     (US92206C7719 מדווח "MARKET VECTORS GOLD MINERS" והוא Vanguard Mortgage-Backed Securities ETF)."""
-    out: dict[str, str] = {}
+    out: dict[str, str] = dict(us_names or {})
     for rec in (*sec_exposure, *etf_universe):
         isin = _isin_key(rec.get("isin"))
         name = str(rec.get("name") or "").strip()
@@ -281,7 +306,7 @@ _REPORT_NAME_EQUITY_TERMS = (
     # טווח המוצר (לא ניחוש על קרן ספציפית).
     "holdrs", "sector spdr", "healthcare op", "mkt eq", "sml cap",
     # חברות קטנות ("Smaller Companies" / "SM.CIE" / "SML CO") ו-NSDQ (קיצור Nasdaq) - קרנות מניות
-    "smaller", "sm.cie", "sml co", "nsdq",
+    "smaller", "sm.cie", "sml co", "nsdq", "equities",
 )
 
 # קרנות כספיות/מזומן (money-market) - לא מניות ולא אג"ח, תורמות 0 לשני
@@ -345,7 +370,10 @@ def classify_from_report_names(source: list[dict]) -> dict[str, dict[str, float]
             if isin.startswith("X9X9"):
                 out[isin] = {"equity": 0.0, "bond": 0.0}
                 continue
-            cls = _classify_by_report_name(row.get("שם נייר ערך")) or _sector_equity_by_name(row.get("שם נייר ערך"))
+            # "שם מנפיק" מחזיק לעיתים את שם הקרן המלא ("CT Lux Japan Equities") ולעיתים את המנהל
+            # ("State Street Bank") - ממנו רק המונחים המובהקים, לא ענף לפי שם
+            cls = (_classify_by_report_name(row.get("שם נייר ערך")) or _sector_equity_by_name(row.get("שם נייר ערך"))
+                   or _classify_by_report_name(row.get("שם מנפיק")))
             if cls == "equity":
                 out[isin] = {"equity": 1.0, "bond": 0.0}
             elif cls == "bond":
@@ -368,18 +396,44 @@ def classify_via_openfigi_names(missing_isins: list[str]) -> dict[str, dict[str,
     לא ליצור תלות מעגלית בין שני המודולים."""
     if not missing_isins:
         return {}
-    from .sec_nport_reference import resolve_isin_to_name
+    from .sec_nport_reference import _openfigi_lookup
 
-    names = resolve_isin_to_name(missing_isins)
+    figi = _openfigi_lookup([i for i in missing_isins if i])
+    names = {isin: d["name"].strip() for isin, d in figi.items() if d.get("name")}
     print(f"[openfigi_names] {len(names)}/{len(missing_isins)} ISIN נפתרו לשם מלא דרך OpenFIGI")
     out: dict[str, dict[str, float]] = {}
+    for isin, d in figi.items():
+        # מניה שגוף דיווח בגיליון קרנות (DISCO CORP JP3046680009) - סוג הנייר ב-OpenFIGI
+        if STOCK_FIGI_TYPES & {d.get("securityType"), d.get("securityType2")}:
+            out[isin] = {"equity": 1.0, "bond": 0.0, "stock": True}
     for isin, full_name in names.items():
+        if isin in out:
+            continue
         cls = _classify_by_report_name(full_name)
         if cls == "equity":
             out[isin] = {"equity": 1.0, "bond": 0.0}
         elif cls == "bond":
             out[isin] = {"equity": 0.0, "bond": 1.0}
     print(f"[openfigi_names] {len(out)}/{len(missing_isins)} ISIN סווגו בהצלחה")
+    return out
+
+
+STOCK_FIGI_TYPES = {"Common Stock", "ADR", "GDR", "REIT"}
+
+
+def classify_from_registry_names(missing_isins: list[str], official_names: dict[str, str]) -> dict[str, dict[str, float]]:
+    """קרן שלא סווגה, לפי שמה הרשמי במאגרים (SEC / אוניברסיטת ה-ETF / ניירות ארה"ב של revach) - שם
+    מלא ונקי, לכן גם ענף לפי שם ("Corgi Lithography & Semiconductor Photonics ETF" -> מניות)."""
+    out: dict[str, dict[str, float]] = {}
+    for isin in missing_isins:
+        name = official_names.get(isin)
+        cls = _classify_by_report_name(name) or _sector_equity_by_name(name)
+        if cls == "equity":
+            out[isin] = {"equity": 1.0, "bond": 0.0}
+        elif cls == "bond":
+            out[isin] = {"equity": 0.0, "bond": 1.0}
+        elif cls == "cash":
+            out[isin] = {"equity": 0.0, "bond": 0.0}
     return out
 
 
@@ -447,6 +501,11 @@ def sanitize_fractions(isin_fractions: dict[str, dict[str, float]], source: list
     for isin, frac in isin_fractions.items():
         eq = frac.get("equity") or 0.0
         if eq <= MAX_UNLEVERED_EQUITY or _LEVERAGED_NAME.search(names.get(isin, "")):
+            continue
+        if frac.get("synth"):
+            # מניות פיזיות + דרך סוואפ >= 100% (MAGS: 43% + 66%, אג"ח 53%): האג"ח הן בטוחה לסוואפ
+            isin_fractions[isin] = {**frac, "equity": 1.0, "bond": 0.0}
+            fixed.append(isin)
             continue
         bond = max(frac.get("bond") or 0.0, 0.0)
         total = eq + bond

@@ -18,11 +18,8 @@ from .derivatives_exposure import (
     build_derivatives_exposure, collect_unresolved_swap_tickers,
 )
 from .file_list import get_file_list
-from .foreign_etf_reference import (
-    build_foreign_equity, build_isin_fractions, sanitize_fractions,
-    classify_from_report_names, classify_via_openfigi_names,
-    collect_unclassified_foreign_isins, repair_isin_typos, fetch_etf_universe, fetch_sec_etf_exposure, official_fund_names,
-)
+from .foreign_etf_reference import build_foreign_equity
+from .foreign_fund_layers import build_foreign_fractions
 from .funds import build_funds
 from .funds_detail import build_funds_detail
 from .funds_il import build_funds_il, build_funds_il_kashrut
@@ -107,54 +104,7 @@ def build_master_table(
     # (אוניברסיטת ETF אירופית + חשיפת ETF אמריקאיות לפי SEC) שלא ממופים
     # כרגע דרך funds_reference.py. מצטרף לאותן עמודות "קרן מחקה - ..." -
     # אין חפיפה עם il_sums (כל שורת קרן מסווגת בדיוק ל-IL/נסחרת/חוץ אחת).
-    etf_universe = fetch_etf_universe()
-    sec_exposure = fetch_sec_etf_exposure()
-    isin_fractions = build_isin_fractions(etf_universe, sec_exposure)
-    # שכבת מוצא-אחרון: קרנות לא-מזוהות באף מאגר - לפי שם הקרן כפי שמדווח
-    # בדוח עצמו (ר' תיעוד ב-classify_from_report_names). לא דורס נתון קיים.
-    for isin, frac in classify_from_report_names(source).items():
-        isin_fractions.setdefault(isin, frac)
-    print(f"[main] {len(isin_fractions)} ISIN מסווגים (ETF זרות: אירופה+SEC+שם-קרן)")
-
-    # שכבה אחרונה, יקרה (קריאות רשת חיות ל-SEC) - רק על מה שעדיין חסר
-    # (ר' תיעוד ב-sec_nport_reference.py). כשלון רשת כולל (OpenFIGI/SEC לא
-    # זמינים בסביבת הריצה) לא מפיל את הפייפליין - מדלג בשקט (רשימה ריקה).
-    still_missing = collect_unclassified_foreign_isins(funds, isin_fractions)
-    try:
-        from .sec_nport_reference import build_isin_fractions_via_nport
-        for isin, frac in build_isin_fractions_via_nport(still_missing).items():
-            isin_fractions.setdefault(isin, frac)
-    except Exception as e:
-        print(f"[main] שכבת SEC N-PORT חי נכשלה (מדלג): {e}")
-    print(f"[main] {len(isin_fractions)} ISIN מסווגים סה\"כ (+N-PORT חי)")
-
-    # שכבה נוספת, יקרה: פילוח Morningstar אמיתי (stock/bond בפועל בתיק
-    # הקרן, לא ניחוש משם) דרך Yahoo Finance - ר' תיעוד ב-
-    # yahoo_fund_reference.py. בעיקר סוגרת קרנות UCITS אירופיות שלא
-    # אמריקאיות (SEC N-PORT לא מכסה) ולא נתפסות במאגרי ETF הקבועים.
-    still_missing_yahoo = collect_unclassified_foreign_isins(funds, isin_fractions)
-    try:
-        from .yahoo_fund_reference import build_isin_fractions_via_yahoo
-        for isin, frac in build_isin_fractions_via_yahoo(still_missing_yahoo).items():
-            isin_fractions.setdefault(isin, frac)
-    except Exception as e:
-        print(f"[main] שכבת Yahoo/Morningstar נכשלה (מדלג): {e}")
-    print(f"[main] {len(isin_fractions)} ISIN מסווגים סה\"כ (+Yahoo/Morningstar)")
-
-    # עוד שכבה אחרונה, יקרה: שם מלא לא-קצוץ דרך OpenFIGI (לא רק US) - תופסת
-    # קרנות שהשם המקוצר בדוח לא הכיל מונח מזהה, ר' תיעוד ב-
-    # classify_via_openfigi_names. רצה אחרי SEC N-PORT ורק על מה שעדיין חסר.
-    still_missing_2 = collect_unclassified_foreign_isins(funds, isin_fractions)
-    try:
-        for isin, frac in classify_via_openfigi_names(still_missing_2).items():
-            isin_fractions.setdefault(isin, frac)
-    except Exception as e:
-        print(f"[main] שכבת שמות-מלאים OpenFIGI נכשלה (מדלג): {e}")
-    print(f"[main] {len(isin_fractions)} ISIN מסווגים סה\"כ (+שמות מלאים)")
-    repaired = repair_isin_typos(funds, isin_fractions)
-    print(f"[main] {len(repaired)} ISIN עם טעות בקידומת המדינה (ספרת ביקורת) - סווגו לפי המתוקן: {repaired}")
-    fixed = sanitize_fractions(isin_fractions, source)
-    print(f"[main] {len(fixed)} ISIN עם שבר מניות > 1 בקרן לא ממונפת - נורמלו: {fixed[:10]}")
+    isin_fractions, etf_universe, sec_exposure, official_names = build_foreign_fractions(source, funds, "main")
 
     for key, cols in build_foreign_equity(funds, isin_fractions).items():
         d = il_sums.setdefault(key, {})
@@ -166,7 +116,8 @@ def build_master_table(
     index_trace: dict = {}
     fund_exposure, tase_stocks = fetch_fund_exposure(), fetch_tase_stocks()
     index_exp = build_index_exposure(source, funds, funds_ref, isin_fractions, resolve_online=True,
-                                     trace=index_trace, fund_exposure=fund_exposure, tase_stocks=tase_stocks)
+                                     trace=index_trace, fund_exposure=fund_exposure, tase_stocks=tase_stocks,
+                                     official_names=official_names)
     tracks_by_key = {k: t for t in tracks if (k := track_key(t))}
     index_table = build_index_table(index_exp, tracks_by_key, report_month_by_key(source))
     print(f"[main] {len(index_table)} מסלולים עם פירוק חשיפה לפי מדד")
@@ -202,10 +153,6 @@ def build_master_table(
     except Exception as e:
         print(f"[alt] OpenFIGI לא זמין (שמות מלאים): {e}")
         alt_full_names = {}
-    official_names = official_fund_names(etf_universe, sec_exposure)
-    for bad, good in repaired.items():
-        if good in official_names:
-            official_names.setdefault(bad, official_names[good])
     for isin in alt_candidates:
         if isin in official_names:
             alt_full_names.setdefault(isin, official_names[isin])

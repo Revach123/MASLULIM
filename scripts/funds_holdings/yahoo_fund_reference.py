@@ -89,7 +89,7 @@ def build_isin_fractions_via_yahoo(missing_isins: list[str]) -> dict[str, dict[s
         # ודאי בלי קריאת רשת נוספת, ר' תיעוד למעלה. "ETF"/"MUTUALFUND"
         # ממשיכים לשכבת asset_classes (לא ודאי-מניות סתם מ-quoteType).
         if quote.get("quoteType") == "EQUITY":
-            out[isin] = {"equity": 1.0, "bond": 0.0}
+            out[isin] = {"equity": 1.0, "bond": 0.0, "stock": True}
             n_classified += 1
             n_via_quote_type += 1
             continue

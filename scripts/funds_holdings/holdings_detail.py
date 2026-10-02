@@ -18,7 +18,7 @@ from .excel_io import text_from, to_ratio
 from .funds import FUND_CATEGORIES, PLACEHOLDERS, _build_fund_map, _build_isin_set, _classify
 from .foreign_etf_reference import _classify_by_report_name
 from .index_exposure import (
-    DIRECT_EQUITY_CATEGORIES, classify_index, equity_row_index, il_fund_equity, il_fund_indices, index_geo, is_local, misfiled_stock,
+    DIRECT_EQUITY_CATEGORIES, equity_row_index, foreign_fund_index, il_fund_equity, il_fund_indices, index_geo, is_local, misfiled_stock,
     report_month_by_key,
 )
 from .sheet_source import PCT_COL
@@ -182,15 +182,16 @@ def _fund_equity_fraction(row: dict, fund_map, isin_set, ref_by_num, ref_by_isin
 
 
 def _fund_index(row: dict, name, fund_map, isin_set, ref_by_num, ref_by_isin,
-                official_names: dict[str, str]) -> tuple[str, str] | None:
+                official_names: dict[str, str], isin_fractions: dict[str, dict]) -> tuple[str, str] | None:
     """(מדד, שם) הראשי של קרן - כמו בפירוק לפי מדד: ישראלית לפי נכס הבסיס, חו"ל לפי השם."""
     sug, ref = _fund_lookup(row, fund_map, isin_set, ref_by_num, ref_by_isin)
     if ref:
         parts = il_fund_indices(ref)
         return parts[0][:2] if parts else None
     isin = text_from(row.get("מספר נייר ערך") or "").strip().upper()
-    text = official_names.get(isin) or (text_from(name).strip() if name is not None else "")
-    return classify_index(text) if text else None
+    text = text_from(name).strip() if name is not None else ""
+    return foreign_fund_index(isin_fractions.get(isin) or {}, text or isin, official_names.get(isin),
+                              row.get("מדינה לפי חשיפה כלכלית"))
 
 
 def _derivative_exposure(source: list[dict]) -> dict[int, tuple[float, bool, str]]:
@@ -287,7 +288,7 @@ def build_holdings_detail(source: list[dict], isin_swap: list[dict], funds_ref: 
                 found = equity_row_index(cat, row)
                 if not found and cat in FUND_CATEGORIES and frac:
                     # קרן מניות ב-0% (החזקה זניחה שעוגלה) - למדד שלה, לא ל"קרנות סל"
-                    found = _fund_index(row, name, fund_map, isin_set, ref_by_num, ref_by_isin, official_names)
+                    found = _fund_index(row, name, fund_map, isin_set, ref_by_num, ref_by_isin, official_names, isin_fractions)
                 if found:
                     i, label = found
                     trace_labels.setdefault(i, label)
