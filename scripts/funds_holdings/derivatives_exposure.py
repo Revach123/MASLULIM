@@ -740,18 +740,23 @@ def _options_exposure(
             fx = _normalize_fx(row.get(OPT_CURRENCY_COL), _num(row.get(OPT_FX_COL)))
 
             line_ratio = None
+            fv = _num(row.get(FAIR_VALUE_COL))
+            fv_ratio = (fv / total) if fv is not None else None
             if ticker is not None and is_call is not None and units is not None and fx is not None:
                 delta, spot = resolve_option_delta(ticker, strike, expiry, report_date, is_call)
                 if delta is not None and spot is not None:
                     mult = CONTRACT_MULTIPLIER.get(ticker, 1.0)
                     notional_thousands = units * mult * delta * spot * quote_scale(ticker) * fx / 1000
                     line_ratio = notional_thousands / total
-                    fv = _num(row.get(FAIR_VALUE_COL))
-                    fv_ratio = (fv / total) if fv is not None else None
                     if fv_ratio is not None and abs(line_ratio) > LEVERAGE_CAP * abs(fv_ratio):
                         line_ratio = None
             if line_ratio is None or abs(line_ratio) > SANITY_CAP:
                 line_ratio = row_pct
+            # קול לונג: החשיפה (דלתא × נכס הבסיס) לעולם לא קטנה משווי האופציה (C <= S·N(d1)). קול
+            # "ממומן" שדווח בשווי נכס הבסיס המלא (הפניקס "עסקת CALL לאומי": שווי = יחידות × שער המניה,
+            # דלתא B&S 0.46) - החשיפה היא השווי
+            if is_call and units and units > 0 and fv_ratio is not None and 0 < line_ratio < fv_ratio <= SANITY_CAP:
+                line_ratio = fv_ratio
             sums[key] = sums.get(key, 0.0) + line_ratio
             equity_sums[key] = equity_sums.get(key, 0.0) + line_ratio
             if detail is not None:
