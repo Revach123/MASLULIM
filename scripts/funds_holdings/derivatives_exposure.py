@@ -72,7 +72,8 @@ from .option_delta_pricing import quote_scale, resolve_option_delta, resolve_opt
 from .option_ticker_parse import (CONTRACT_MULTIPLIER, MAOF_STOCK_OPTION_SHARES, is_call_option, parse_maof_expiry_month, parse_strike,
                                   parse_underlying)
 from .futures_notional import FuturesResolver, build_rows as build_futures_rows
-from .swap_index_pricing import parse_deal_date, price_as_of as index_price_as_of, proxy_return, resolve_current_price
+from .swap_index_pricing import (fx_to_ils, parse_deal_date, price_as_of as index_price_as_of, proxy_return,
+                                 resolve_current_price, single_stock_currency)
 
 FAIR_VALUE_COL = 'שווי הוגן (באלפי ש"ח)'
 SWAP_NET_FAIR_VALUE_COL = 'שווי הוגן (נטו באלפי ש"ח)'
@@ -577,6 +578,15 @@ def _swap_exposure(
                 price_ccy = ccy2 if ccy1 == "ILS" and ccy2 else ccy1
                 price_fx = (1.0 if price_ccy == "ILS" else fx_now.get((price_ccy, report_date))
                             or (fx2 if price_ccy == ccy2 else fx1))
+                # מניה בודדת: מטבע המחיר לפי הבורסה, לא לפי תווית הרגל (מיטב TT2330: רגל "USD",
+                # 12,551 מניות x 1,740 דולר טייוואני). אותו מטבע ברגל 2 - הנוציונל שלה באותו מטבע
+                stock_ccy = single_stock_currency(row.get(SWAP_TICKER_COL))
+                if stock_ccy and stock_ccy != price_ccy and report_date:
+                    stock_fx = fx_now.get((stock_ccy, report_date)) or fx_to_ils(stock_ccy, report_date)
+                    if stock_fx:
+                        if price_ccy == ccy2:
+                            fx2 = stock_fx
+                        price_fx = stock_fx
 
                 leg2_val = abs(units2 * fx2) / 1000 if units2 is not None and fx2 is not None else None
                 leg1_raw = abs(units1 * fx1) / 1000 if units1 is not None and fx1 is not None else None
