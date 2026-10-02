@@ -295,12 +295,19 @@ async function runSite(site, cfg, seen, onProgress, windowId, meta = {}, flush =
   const now = new Date(), yr = now.getFullYear();
   const fullSt = (meta.__full = meta.__full || {})[site.legal_id];
   if (!site.__mapped && !site.__forceFull && !site.no_map && (site.doc_pages || []).length && fullSt) {
-    const mres = await runSite({ ...site, pages: site.doc_pages.map((u) => ({ url: u })), home: "", follow_max: 0, __mapped: true },
+    // per_track_pages (מנורה/אלטשולר - עמוד לכל מסלול): גם עמודי הרשימה (seed), עם מעקב רק לעמודי מסלול שאינם במפה
+    // (העמודים שבמפה כבר ברשימה ולא נוספים שוב) - מסלול חדש מתגלה בלי סריקה מלאה
+    const mapPages = site.per_track_pages
+      ? [...new Map([...(site.pages || []).map((p) => p.url), ...site.doc_pages].map((u) => [u, { url: u }])).values()]
+      : site.doc_pages.map((u) => ({ url: u }));
+    const mres = await runSite({ ...site, pages: mapPages, home: "", follow_max: site.per_track_pages ? site.follow_max : 0, __mapped: true },
                                cfg, seen, onProgress, windowId, meta, flush);
     mres.stats.mode = "map";
     if (!(now.getMonth() === 0 || (fullSt.year || 0) < yr) || stopRequested) return mres;
     const stale = mres.pages.filter((p) => !(p.selected || []).some((u) => u.includes(String(yr))));
-    if (!stale.length) return mres;
+    // עמוד לכל מסלול: מסלול שעוד לא פרסם לשנה החדשה הוא מצב רגיל בינואר (נבדק שוב מחר במפה) - סריקה מלאה רק אם
+    // אף עמוד במפה לא קיבל קובץ של השנה (מבנה האתר השתנה)
+    if (!stale.length || (site.per_track_pages && stale.length < mres.pages.length)) return mres;
     mres.errors.push(`${stale.length}/${mres.pages.length} mapped pages without ${yr} documents -> full crawl for new pages`);
     const fres = await runSite({ ...site, __forceFull: true }, cfg, seen, onProgress, windowId, meta, flush);
     for (const k of Object.keys(fres.stats)) if (typeof fres.stats[k] === "number") mres.stats[k] = (mres.stats[k] || 0) + fres.stats[k];

@@ -99,7 +99,7 @@ def main():
     for p in sorted((ROOT / "scripts" / "policy" / "sites").glob("*.json")):
         cfg = json.loads(p.read_text("utf-8"))
         if cfg.get("via") == "extension":
-            ent = {k: cfg.get(k) for k in ("legal_id", "name", "home", "pages", "products", "click", "clicks", "any_sheet", "exclude", "settle_ms", "capture_ms", "download_rx", "follow_max", "follow_rx", "timeout_min", "download_delay_ms", "no_map")}
+            ent = {k: cfg.get(k) for k in ("legal_id", "name", "home", "pages", "products", "click", "clicks", "any_sheet", "exclude", "settle_ms", "capture_ms", "download_rx", "follow_max", "follow_rx", "timeout_min", "download_delay_ms", "no_map", "per_track_pages")}
             ent["doc_pages"] = _doc_pages(cfg["legal_id"])
             ext.append(ent)
     (POL / "extension_sites.json").write_text(json.dumps(ext, ensure_ascii=False, indent=1), "utf-8")
