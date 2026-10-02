@@ -143,29 +143,6 @@ def single_stock_symbol(raw_ticker: str | None) -> str | None:
     return None
 
 
-# מטבע הציטוט של מניה לפי סיומת הבורסה (לונדון מצוטטת בפני - לא מנחשים)
-_SUFFIX_CCY = {"": "USD", ".TA": "ILS", ".TW": "TWD", ".T": "JPY", ".DE": "EUR", ".PA": "EUR", ".AS": "EUR",
-               ".MC": "EUR", ".MI": "EUR", ".SW": "CHF", ".HK": "HKD", ".KS": "KRW", ".AX": "AUD", ".TO": "CAD"}
-
-
-def single_stock_currency(raw_ticker: str | None) -> str | None:
-    """מטבע מחיר המניה של סוואפ על מניה בודדת ("TT2330" -> TWD). מיטב מדווחת את רגל הנוציונל
-    "USD" גם כשהמחיר בעסקה (1,740) הוא בדולר טייוואני - המטבע נקבע לפי הבורסה, לא לפי התווית."""
-    sym = single_stock_symbol(raw_ticker)
-    if not sym:
-        return None
-    suffix = sym[sym.rfind("."):] if "." in sym else ""
-    return _SUFFIX_CCY.get(suffix)
-
-
-def fx_to_ils(ccy: str, as_of: date) -> float | None:
-    """שער מטבע לשקל ליום נתון מ-Yahoo ("TWDILS=X") - למטבע שאינו מופיע בדוחות."""
-    if ccy == "ILS":
-        return 1.0
-    from .option_delta_pricing import price_as_of as yahoo_price_as_of
-    return yahoo_price_as_of(f"{ccy}ILS=X", as_of)
-
-
 def has_price_source(raw_ticker: str | None) -> bool:
     """לטיקר יש מקור מחיר ליום הדוח: סדרה ב-INDICES, תעודת סל עוקבת, או מניה בודדת."""
     key = normalize_ticker(raw_ticker)
