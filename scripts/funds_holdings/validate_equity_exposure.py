@@ -25,6 +25,7 @@ from .funds import build_funds
 from .funds_reference import build_funds_reference
 from .funds_il import build_funds_il_equity
 from .fund_exposure_reference import fetch_fund_exposure, fetch_tase_stocks
+from .index_exposure import DIRECT_EQUITY_CATEGORIES
 from .isin_swap import build_isin_swap
 from .sheet_source import PCT_COL, build_source
 from .track_pct_normalize import normalize_track_pct
@@ -35,7 +36,6 @@ FUT_BASE_COL = "נכס בסיס"
 SWAP_TYPE_COL = "סוג הנכס"
 OPT_BASE_COL = "נכס בסיס"
 
-DIRECT_EQUITY_CATEGORIES = ("מניות מבכ ויהש", "לא סחיר מניות מבכ ויהש")
 OPTIONS_CATEGORIES = (OPTIONS_LISTED_CATEGORY, OPTIONS_OTC_CATEGORY)
 EQUITY_FUND_SIVEGS = ("מחקה - מניות בארץ", "מחקה - מניות בחו\"ל")
 
