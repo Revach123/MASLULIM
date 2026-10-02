@@ -1,0 +1,3769 @@
+{
+ "extension_version": "2.42.0",
+ "started": "2026-10-02T11:43:54.660Z",
+ "updated": "2026-10-02T11:48:07.060Z",
+ "final": true,
+ "stopped": true,
+ "rules_from_github": true,
+ "rules": {
+  "doc_rx": "\\.(xlsx|xls|pdf|docx)(\\?|#|$)",
+  "policy_rx": "מדיניות|הצהר|policy|m[ae]dini?y?ut|hatzarat|expected|investment|inv[-_ ]*polic",
+  "noise_rx": "esg|אחראי|תגמול(?!ים)|tagmul(?!im)|פרטיות|privacy|תקנון|מבצע|גילוי[-_ ]נאות|מצגת|presentation|נוהל|העברת זכויות|הצבע|דוח[ -]כספי|רבעון",
+  "download_rx": "הורד|להורדה|download|אקסל|excel|xls",
+  "concurrency": 4,
+  "settle_ms": 3000,
+  "capture_ms": 8000,
+  "max_download_clicks": 40,
+  "_note": "כללי משיכת המדיניות של התוסף - נקראים מ-GitHub בתחילת כל ריצה (שינוי כאן = תקף בריצה הבאה, בלי לעדכן את התוסף). ביטויים רגולריים (בלי /) ומספרים בלבד.",
+  "skip_complete_hours": 24,
+  "_note_skip": "חברה עם מדיניות השנה לכל המסלולים (policy/extension_complete.json) מדולגת N שעות מאז הריצה המוצלחת האחרונה שלה. 0 = לא מדלגים.",
+  "page_cache_days": 3
+ },
+ "total_sites": 7,
+ "done_sites": 6,
+ "new_docs": 0,
+ "skipped_complete": [
+  {
+   "legal_id": "510930654",
+   "name": "יחד רופאים - חברה לניהול קופות גמל בע\"מ",
+   "why": "registry 7/7",
+   "last_ok": "2026-10-02T05:56:06.995Z"
+  },
+  {
+   "legal_id": "511789190",
+   "name": "\"עתודות\" - קרן פנסיה לשכירים ועצמאיים בע\"מ",
+   "why": "tracks 2/2 (not in registry)",
+   "last_ok": ""
+  },
+  {
+   "legal_id": "513910703",
+   "name": "איי. די. איי. חברה לביטוח בע\"מ",
+   "why": "registry 5/5",
+   "last_ok": "2026-10-01T19:37:31.459Z"
+  },
+  {
+   "legal_id": "514956465",
+   "name": "מור גמל ופנסיה בע\"מ",
+   "why": "registry 81/81",
+   "last_ok": "2026-10-01T19:16:03.519Z"
+  },
+  {
+   "legal_id": "517085874",
+   "name": "איילון קופות גמל בע\"מ",
+   "why": "registry 40/40",
+   "last_ok": "2026-10-01T19:48:48.966Z"
+  },
+  {
+   "legal_id": "520024985",
+   "name": "עגור חברה לניהול קופות גמל וקרנות השתלמות בע\"מ",
+   "why": "registry 6/6",
+   "last_ok": "2026-10-02T06:03:26.998Z"
+  },
+  {
+   "legal_id": "520027251",
+   "name": "קרנות השתלמות למורים ולגננות - חברה מנהלת בע\"מ",
+   "why": "registry 6/6",
+   "last_ok": "2026-10-01T19:39:15.572Z"
+  },
+  {
+   "legal_id": "520028390",
+   "name": "קרנות השתלמות למורים תיכוניים, מורי סמינרים ומפקחים - חברה מנהלת בע\"מ",
+   "why": "registry 6/6",
+   "last_ok": "2026-10-01T19:38:47.318Z"
+  }
+ ],
+ "active": [],
+ "sites": [
+  {
+   "legal_id": "520022518",
+   "name": "החברה לניהול קופת התגמולים והפנסיה של עובדי הסוכנות היהודית לארץ ישראל בע\"מ",
+   "pages": [
+    {
+     "url": "https://www.jewishagency-kupa.org.il/sitemap/",
+     "links": 121,
+     "followed": [
+      "https://www.jewishagency-kupa.org.il/%d7%97%d7%91%d7%a8%d7%99-%d7%95%d7%a2%d7%93%d7%aa-%d7%94%d7%a9%d7%a7%d7%a2%d7%95%d7%aa/",
+      "https://www.jewishagency-kupa.org.il/%d7%93%d7%95%d7%97%d7%95%d7%aa-%d7%a8%d7%91%d7%a2%d7%95%d7%a0%d7%99%d7%99%d7%9d/",
+      "https://www.jewishagency-kupa.org.il/%d7%93%d7%95%d7%97%d7%95%d7%aa-%d7%a9%d7%a0%d7%aa%d7%99%d7%99%d7%9d/",
+      "https://www.jewishagency-kupa.org.il/%d7%93%d7%95%d7%97-%d7%97%d7%95%d7%93%d7%a9%d7%99/",
+      "https://www.jewishagency-kupa.org.il/%d7%93%d7%95%d7%97%d7%95%d7%aa/",
+      "https://www.jewishagency-kupa.org.il/%d7%93%d7%95%d7%97%d7%95%d7%aa-%d7%9b%d7%a1%d7%a4%d7%99%d7%99%d7%9d/",
+      "https://www.jewishagency-kupa.org.il/%d7%9e%d7%93%d7%99%d7%a0%d7%99%d7%95%d7%aa-%d7%95%d7%a0%d7%94%d7%9c%d7%99%d7%9d/"
+     ],
+     "files": 26,
+     "clicked": 0,
+     "captured": 0,
+     "selected": [
+      "https://www.jewishagency-kupa.org.il/wp-content/uploads/2026/02/מדיניות-ואמנת-שירות-לקוחות-1.pdf"
+     ],
+     "unselected_files": [
+      {
+       "file": "https://www.jewishagency-kupa.org.il/wp-content/uploads/2021/10/10_zdadim_sohnut.pdf",
+       "text": "מבנה אחזקות וצדדים קשורים",
+       "ctx": "מבנה אחזקות וצדדים קשורים"
+      },
+      {
+       "file": "https://www.jewishagency-kupa.org.il/wp-content/uploads/2021/10/10_הודעה_על_העברת_ניהול.pdf",
+       "text": "הודעה על שינוי מבני",
+       "ctx": "הודעה על שינוי מבני"
+      },
+      {
+       "file": "https://www.jewishagency-kupa.org.il/wp-content/uploads/2025/08/נוהל-מספר-18-מדיניות-התגמול-2024-2027-002.pdf",
+       "text": "מדיניות תגמול נושאי משרה 2024-2027",
+       "ctx": "מדיניות תגמול נושאי משרה 2024-2027"
+      },
+      {
+       "file": "https://www.jewishagency-kupa.org.il/wp-content/uploads/2022/12/מדיניות-תגמול-נושאי-משרה-2020-2023.pdf",
+       "text": "מדיניות תגמול נושאי משרה 2020-2023",
+       "ctx": "מדיניות תגמול נושאי משרה 2020-2023"
+      },
+      {
+       "file": "https://www.jewishagency-kupa.org.il/wp-content/uploads/2021/10/10_מדיניות_תגמול_לשנים_2018_2020_סופי-2.pdf",
+       "text": "מדיניות תגמול נושאי משרה 2018-2020",
+       "ctx": "מדיניות תגמול נושאי משרה 2018-2020"
+      },
+      {
+       "file": "https://www.jewishagency-kupa.org.il/wp-content/uploads/2021/10/10_מדיניות_תגמול_לשנים_2015_2017-3.pdf",
+       "text": "מדיניות תגמול נושאי משרה 2015-2017",
+       "ctx": "מדיניות תגמול נושאי משרה 2015-2017"
+      },
+      {
+       "file": "https://www.jewishagency-kupa.org.il/wp-content/uploads/2021/10/10_מדיניותתגמול2014-2.pdf",
+       "text": "מדיניות תגמול נושאי משרה 2014",
+       "ctx": "מדיניות תגמול נושאי משרה 2014"
+      },
+      {
+       "file": "https://www.jewishagency-kupa.org.il/wp-content/uploads/2021/10/10_10_מדיניותתגמולנושאימשרהלשנת-2013-2.pdf",
+       "text": "מדיניות תגמול נושאי משרה 2013",
+       "ctx": "מדיניות תגמול נושאי משרה 2013"
+      },
+      {
+       "file": "https://www.jewishagency-kupa.org.il/wp-content/uploads/2021/10/10_10_מדיניותהשקעות2012.pdf",
+       "text": "מדיניות תגמול נושאי משרה 2012",
+       "ctx": "מדיניות תגמול נושאי משרה 2012"
+      },
+      {
+       "file": "https://www.jewishagency-kupa.org.il/wp-content/uploads/2026/07/מדיניות-הצבעה-באסיפות-כלליות-סוכנות-יהודית-2026-מעודכן-יולי-סופי-2026.docx.pdf",
+       "text": "מדיניות הצבעה באסיפות כלליות סוכנות יהודית 2026",
+       "ctx": "מדיניות הצבעה באסיפות כלליות סוכנות יהודית 2026"
+      },
+      {
+       "file": "https://www.jewishagency-kupa.org.il/wp-content/uploads/2025/12/מדיניות-הצבעה-חברת-עמדה-2025-2026.pdf",
+       "text": "מדיניות הצבעה חברת עמדה 2025-2026",
+       "ctx": "מדיניות הצבעה חברת עמדה 2025-2026"
+      },
+      {
+       "file": "https://www.jewishagency-kupa.org.il/wp-content/uploads/2025/12/דוח-שירות-אזרחים-ותיקים-בגין-שנת-2025.pdf",
+       "text": "דוח שירות אזרחים ותיקים",
+       "ctx": "דוח שירות אזרחים ותיקים"
+      },
+      {
+       "file": "https://www.jewishagency-kupa.org.il/wp-content/uploads/2021/10/10_zdadim_sohnut.pdf",
+       "text": "מבנה אחזקות וצדדים קשורים",
+       "ctx": "מבנה אחזקות וצדדים קשורים"
+      },
+      {
+       "file": "https://www.jewishagency-kupa.org.il/wp-content/uploads/2021/10/10_הודעה_על_העברת_ניהול.pdf",
+       "text": "הודעה על שינוי מבני",
+       "ctx": "הודעה על שינוי מבני"
+      },
+      {
+       "file": "https://www.jewishagency-kupa.org.il/wp-content/uploads/2025/08/נוהל-מספר-18-מדיניות-התגמול-2024-2027-002.pdf",
+       "text": "מדיניות תגמול נושאי משרה 2024-2027",
+       "ctx": "מדיניות תגמול נושאי משרה 2024-2027"
+      },
+      {
+       "file": "https://www.jewishagency-kupa.org.il/wp-content/uploads/2022/12/מדיניות-תגמול-נושאי-משרה-2020-2023.pdf",
+       "text": "מדיניות תגמול נושאי משרה 2020-2023",
+       "ctx": "מדיניות תגמול נושאי משרה 2020-2023"
+      },
+      {
+       "file": "https://www.jewishagency-kupa.org.il/wp-content/uploads/2021/10/10_מדיניות_תגמול_לשנים_2018_2020_סופי-2.pdf",
+       "text": "מדיניות תגמול נושאי משרה 2018-2020",
+       "ctx": "מדיניות תגמול נושאי משרה 2018-2020"
+      },
+      {
+       "file": "https://www.jewishagency-kupa.org.il/wp-content/uploads/2021/10/10_מדיניות_תגמול_לשנים_2015_2017-3.pdf",
+       "text": "מדיניות תגמול נושאי משרה 2015-2017",
+       "ctx": "מדיניות תגמול נושאי משרה 2015-2017"
+      },
+      {
+       "file": "https://www.jewishagency-kupa.org.il/wp-content/uploads/2021/10/10_מדיניותתגמול2014-2.pdf",
+       "text": "מדיניות תגמול נושאי משרה 2014",
+       "ctx": "מדיניות תגמול נושאי משרה 2014"
+      },
+      {
+       "file": "https://www.jewishagency-kupa.org.il/wp-content/uploads/2021/10/10_10_מדיניותתגמולנושאימשרהלשנת-2013-2.pdf",
+       "text": "מדיניות תגמול נושאי משרה 2013",
+       "ctx": "מדיניות תגמול נושאי משרה 2013"
+      },
+      {
+       "file": "https://www.jewishagency-kupa.org.il/wp-content/uploads/2021/10/10_10_מדיניותהשקעות2012.pdf",
+       "text": "מדיניות תגמול נושאי משרה 2012",
+       "ctx": "מדיניות תגמול נושאי משרה 2012"
+      },
+      {
+       "file": "https://www.jewishagency-kupa.org.il/wp-content/uploads/2026/07/מדיניות-הצבעה-באסיפות-כלליות-סוכנות-יהודית-2026-מעודכן-יולי-סופי-2026.docx.pdf",
+       "text": "מדיניות הצבעה באסיפות כלליות סוכנות יהודית 2026",
+       "ctx": "מדיניות הצבעה באסיפות כלליות סוכנות יהודית 2026"
+      },
+      {
+       "file": "https://www.jewishagency-kupa.org.il/wp-content/uploads/2025/12/מדיניות-הצבעה-חברת-עמדה-2025-2026.pdf",
+       "text": "מדיניות הצבעה חברת עמדה 2025-2026",
+       "ctx": "מדיניות הצבעה חברת עמדה 2025-2026"
+      },
+      {
+       "file": "https://www.jewishagency-kupa.org.il/wp-content/uploads/2025/12/דוח-שירות-אזרחים-ותיקים-בגין-שנת-2025.pdf",
+       "text": "דוח שירות אזרחים ותיקים",
+       "ctx": "דוח שירות אזרחים ותיקים"
+      }
+     ]
+    },
+    {
+     "url": "https://www.jewishagency-kupa.org.il/",
+     "links": 105,
+     "followed": [],
+     "files": 26,
+     "clicked": 0,
+     "captured": 0,
+     "selected": [
+      "https://www.jewishagency-kupa.org.il/wp-content/uploads/2026/02/מדיניות-ואמנת-שירות-לקוחות-1.pdf"
+     ],
+     "unselected_files": [
+      {
+       "file": "https://www.jewishagency-kupa.org.il/wp-content/uploads/2021/10/10_zdadim_sohnut.pdf",
+       "text": "מבנה אחזקות וצדדים קשורים",
+       "ctx": "מבנה אחזקות וצדדים קשורים"
+      },
+      {
+       "file": "https://www.jewishagency-kupa.org.il/wp-content/uploads/2021/10/10_הודעה_על_העברת_ניהול.pdf",
+       "text": "הודעה על שינוי מבני",
+       "ctx": "הודעה על שינוי מבני"
+      },
+      {
+       "file": "https://www.jewishagency-kupa.org.il/wp-content/uploads/2025/08/נוהל-מספר-18-מדיניות-התגמול-2024-2027-002.pdf",
+       "text": "מדיניות תגמול נושאי משרה 2024-2027",
+       "ctx": "מדיניות תגמול נושאי משרה 2024-2027"
+      },
+      {
+       "file": "https://www.jewishagency-kupa.org.il/wp-content/uploads/2022/12/מדיניות-תגמול-נושאי-משרה-2020-2023.pdf",
+       "text": "מדיניות תגמול נושאי משרה 2020-2023",
+       "ctx": "מדיניות תגמול נושאי משרה 2020-2023"
+      },
+      {
+       "file": "https://www.jewishagency-kupa.org.il/wp-content/uploads/2021/10/10_מדיניות_תגמול_לשנים_2018_2020_סופי-2.pdf",
+       "text": "מדיניות תגמול נושאי משרה 2018-2020",
+       "ctx": "מדיניות תגמול נושאי משרה 2018-2020"
+      },
+      {
+       "file": "https://www.jewishagency-kupa.org.il/wp-content/uploads/2021/10/10_מדיניות_תגמול_לשנים_2015_2017-3.pdf",
+       "text": "מדיניות תגמול נושאי משרה 2015-2017",
+       "ctx": "מדיניות תגמול נושאי משרה 2015-2017"
+      },
+      {
+       "file": "https://www.jewishagency-kupa.org.il/wp-content/uploads/2021/10/10_מדיניותתגמול2014-2.pdf",
+       "text": "מדיניות תגמול נושאי משרה 2014",
+       "ctx": "מדיניות תגמול נושאי משרה 2014"
+      },
+      {
+       "file": "https://www.jewishagency-kupa.org.il/wp-content/uploads/2021/10/10_10_מדיניותתגמולנושאימשרהלשנת-2013-2.pdf",
+       "text": "מדיניות תגמול נושאי משרה 2013",
+       "ctx": "מדיניות תגמול נושאי משרה 2013"
+      },
+      {
+       "file": "https://www.jewishagency-kupa.org.il/wp-content/uploads/2021/10/10_10_מדיניותהשקעות2012.pdf",
+       "text": "מדיניות תגמול נושאי משרה 2012",
+       "ctx": "מדיניות תגמול נושאי משרה 2012"
+      },
+      {
+       "file": "https://www.jewishagency-kupa.org.il/wp-content/uploads/2026/07/מדיניות-הצבעה-באסיפות-כלליות-סוכנות-יהודית-2026-מעודכן-יולי-סופי-2026.docx.pdf",
+       "text": "מדיניות הצבעה באסיפות כלליות סוכנות יהודית 2026",
+       "ctx": "מדיניות הצבעה באסיפות כלליות סוכנות יהודית 2026"
+      },
+      {
+       "file": "https://www.jewishagency-kupa.org.il/wp-content/uploads/2025/12/מדיניות-הצבעה-חברת-עמדה-2025-2026.pdf",
+       "text": "מדיניות הצבעה חברת עמדה 2025-2026",
+       "ctx": "מדיניות הצבעה חברת עמדה 2025-2026"
+      },
+      {
+       "file": "https://www.jewishagency-kupa.org.il/wp-content/uploads/2025/12/דוח-שירות-אזרחים-ותיקים-בגין-שנת-2025.pdf",
+       "text": "דוח שירות אזרחים ותיקים",
+       "ctx": "דוח שירות אזרחים ותיקים"
+      },
+      {
+       "file": "https://www.jewishagency-kupa.org.il/wp-content/uploads/2021/10/10_zdadim_sohnut.pdf",
+       "text": "מבנה אחזקות וצדדים קשורים",
+       "ctx": "מבנה אחזקות וצדדים קשורים"
+      },
+      {
+       "file": "https://www.jewishagency-kupa.org.il/wp-content/uploads/2021/10/10_הודעה_על_העברת_ניהול.pdf",
+       "text": "הודעה על שינוי מבני",
+       "ctx": "הודעה על שינוי מבני"
+      },
+      {
+       "file": "https://www.jewishagency-kupa.org.il/wp-content/uploads/2025/08/נוהל-מספר-18-מדיניות-התגמול-2024-2027-002.pdf",
+       "text": "מדיניות תגמול נושאי משרה 2024-2027",
+       "ctx": "מדיניות תגמול נושאי משרה 2024-2027"
+      },
+      {
+       "file": "https://www.jewishagency-kupa.org.il/wp-content/uploads/2022/12/מדיניות-תגמול-נושאי-משרה-2020-2023.pdf",
+       "text": "מדיניות תגמול נושאי משרה 2020-2023",
+       "ctx": "מדיניות תגמול נושאי משרה 2020-2023"
+      },
+      {
+       "file": "https://www.jewishagency-kupa.org.il/wp-content/uploads/2021/10/10_מדיניות_תגמול_לשנים_2018_2020_סופי-2.pdf",
+       "text": "מדיניות תגמול נושאי משרה 2018-2020",
+       "ctx": "מדיניות תגמול נושאי משרה 2018-2020"
+      },
+      {
+       "file": "https://www.jewishagency-kupa.org.il/wp-content/uploads/2021/10/10_מדיניות_תגמול_לשנים_2015_2017-3.pdf",
+       "text": "מדיניות תגמול נושאי משרה 2015-2017",
+       "ctx": "מדיניות תגמול נושאי משרה 2015-2017"
+      },
+      {
+       "file": "https://www.jewishagency-kupa.org.il/wp-content/uploads/2021/10/10_מדיניותתגמול2014-2.pdf",
+       "text": "מדיניות תגמול נושאי משרה 2014",
+       "ctx": "מדיניות תגמול נושאי משרה 2014"
+      },
+      {
+       "file": "https://www.jewishagency-kupa.org.il/wp-content/uploads/2021/10/10_10_מדיניותתגמולנושאימשרהלשנת-2013-2.pdf",
+       "text": "מדיניות תגמול נושאי משרה 2013",
+       "ctx": "מדיניות תגמול נושאי משרה 2013"
+      },
+      {
+       "file": "https://www.jewishagency-kupa.org.il/wp-content/uploads/2021/10/10_10_מדיניותהשקעות2012.pdf",
+       "text": "מדיניות תגמול נושאי משרה 2012",
+       "ctx": "מדיניות תגמול נושאי משרה 2012"
+      },
+      {
+       "file": "https://www.jewishagency-kupa.org.il/wp-content/uploads/2026/07/מדיניות-הצבעה-באסיפות-כלליות-סוכנות-יהודית-2026-מעודכן-יולי-סופי-2026.docx.pdf",
+       "text": "מדיניות הצבעה באסיפות כלליות סוכנות יהודית 2026",
+       "ctx": "מדיניות הצבעה באסיפות כלליות סוכנות יהודית 2026"
+      },
+      {
+       "file": "https://www.jewishagency-kupa.org.il/wp-content/uploads/2025/12/מדיניות-הצבעה-חברת-עמדה-2025-2026.pdf",
+       "text": "מדיניות הצבעה חברת עמדה 2025-2026",
+       "ctx": "מדיניות הצבעה חברת עמדה 2025-2026"
+      },
+      {
+       "file": "https://www.jewishagency-kupa.org.il/wp-content/uploads/2025/12/דוח-שירות-אזרחים-ותיקים-בגין-שנת-2025.pdf",
+       "text": "דוח שירות אזרחים ותיקים",
+       "ctx": "דוח שירות אזרחים ותיקים"
+      }
+     ]
+    },
+    {
+     "url": "https://www.jewishagency-kupa.org.il",
+     "links": 105,
+     "followed": [],
+     "files": 26,
+     "clicked": 0,
+     "captured": 0,
+     "selected": [
+      "https://www.jewishagency-kupa.org.il/wp-content/uploads/2026/02/מדיניות-ואמנת-שירות-לקוחות-1.pdf"
+     ],
+     "unselected_files": [
+      {
+       "file": "https://www.jewishagency-kupa.org.il/wp-content/uploads/2021/10/10_zdadim_sohnut.pdf",
+       "text": "מבנה אחזקות וצדדים קשורים",
+       "ctx": "מבנה אחזקות וצדדים קשורים"
+      },
+      {
+       "file": "https://www.jewishagency-kupa.org.il/wp-content/uploads/2021/10/10_הודעה_על_העברת_ניהול.pdf",
+       "text": "הודעה על שינוי מבני",
+       "ctx": "הודעה על שינוי מבני"
+      },
+      {
+       "file": "https://www.jewishagency-kupa.org.il/wp-content/uploads/2025/08/נוהל-מספר-18-מדיניות-התגמול-2024-2027-002.pdf",
+       "text": "מדיניות תגמול נושאי משרה 2024-2027",
+       "ctx": "מדיניות תגמול נושאי משרה 2024-2027"
+      },
+      {
+       "file": "https://www.jewishagency-kupa.org.il/wp-content/uploads/2022/12/מדיניות-תגמול-נושאי-משרה-2020-2023.pdf",
+       "text": "מדיניות תגמול נושאי משרה 2020-2023",
+       "ctx": "מדיניות תגמול נושאי משרה 2020-2023"
+      },
+      {
+       "file": "https://www.jewishagency-kupa.org.il/wp-content/uploads/2021/10/10_מדיניות_תגמול_לשנים_2018_2020_סופי-2.pdf",
+       "text": "מדיניות תגמול נושאי משרה 2018-2020",
+       "ctx": "מדיניות תגמול נושאי משרה 2018-2020"
+      },
+      {
+       "file": "https://www.jewishagency-kupa.org.il/wp-content/uploads/2021/10/10_מדיניות_תגמול_לשנים_2015_2017-3.pdf",
+       "text": "מדיניות תגמול נושאי משרה 2015-2017",
+       "ctx": "מדיניות תגמול נושאי משרה 2015-2017"
+      },
+      {
+       "file": "https://www.jewishagency-kupa.org.il/wp-content/uploads/2021/10/10_מדיניותתגמול2014-2.pdf",
+       "text": "מדיניות תגמול נושאי משרה 2014",
+       "ctx": "מדיניות תגמול נושאי משרה 2014"
+      },
+      {
+       "file": "https://www.jewishagency-kupa.org.il/wp-content/uploads/2021/10/10_10_מדיניותתגמולנושאימשרהלשנת-2013-2.pdf",
+       "text": "מדיניות תגמול נושאי משרה 2013",
+       "ctx": "מדיניות תגמול נושאי משרה 2013"
+      },
+      {
+       "file": "https://www.jewishagency-kupa.org.il/wp-content/uploads/2021/10/10_10_מדיניותהשקעות2012.pdf",
+       "text": "מדיניות תגמול נושאי משרה 2012",
+       "ctx": "מדיניות תגמול נושאי משרה 2012"
+      },
+      {
+       "file": "https://www.jewishagency-kupa.org.il/wp-content/uploads/2026/07/מדיניות-הצבעה-באסיפות-כלליות-סוכנות-יהודית-2026-מעודכן-יולי-סופי-2026.docx.pdf",
+       "text": "מדיניות הצבעה באסיפות כלליות סוכנות יהודית 2026",
+       "ctx": "מדיניות הצבעה באסיפות כלליות סוכנות יהודית 2026"
+      },
+      {
+       "file": "https://www.jewishagency-kupa.org.il/wp-content/uploads/2025/12/מדיניות-הצבעה-חברת-עמדה-2025-2026.pdf",
+       "text": "מדיניות הצבעה חברת עמדה 2025-2026",
+       "ctx": "מדיניות הצבעה חברת עמדה 2025-2026"
+      },
+      {
+       "file": "https://www.jewishagency-kupa.org.il/wp-content/uploads/2025/12/דוח-שירות-אזרחים-ותיקים-בגין-שנת-2025.pdf",
+       "text": "דוח שירות אזרחים ותיקים",
+       "ctx": "דוח שירות אזרחים ותיקים"
+      },
+      {
+       "file": "https://www.jewishagency-kupa.org.il/wp-content/uploads/2021/10/10_zdadim_sohnut.pdf",
+       "text": "מבנה אחזקות וצדדים קשורים",
+       "ctx": "מבנה אחזקות וצדדים קשורים"
+      },
+      {
+       "file": "https://www.jewishagency-kupa.org.il/wp-content/uploads/2021/10/10_הודעה_על_העברת_ניהול.pdf",
+       "text": "הודעה על שינוי מבני",
+       "ctx": "הודעה על שינוי מבני"
+      },
+      {
+       "file": "https://www.jewishagency-kupa.org.il/wp-content/uploads/2025/08/נוהל-מספר-18-מדיניות-התגמול-2024-2027-002.pdf",
+       "text": "מדיניות תגמול נושאי משרה 2024-2027",
+       "ctx": "מדיניות תגמול נושאי משרה 2024-2027"
+      },
+      {
+       "file": "https://www.jewishagency-kupa.org.il/wp-content/uploads/2022/12/מדיניות-תגמול-נושאי-משרה-2020-2023.pdf",
+       "text": "מדיניות תגמול נושאי משרה 2020-2023",
+       "ctx": "מדיניות תגמול נושאי משרה 2020-2023"
+      },
+      {
+       "file": "https://www.jewishagency-kupa.org.il/wp-content/uploads/2021/10/10_מדיניות_תגמול_לשנים_2018_2020_סופי-2.pdf",
+       "text": "מדיניות תגמול נושאי משרה 2018-2020",
+       "ctx": "מדיניות תגמול נושאי משרה 2018-2020"
+      },
+      {
+       "file": "https://www.jewishagency-kupa.org.il/wp-content/uploads/2021/10/10_מדיניות_תגמול_לשנים_2015_2017-3.pdf",
+       "text": "מדיניות תגמול נושאי משרה 2015-2017",
+       "ctx": "מדיניות תגמול נושאי משרה 2015-2017"
+      },
+      {
+       "file": "https://www.jewishagency-kupa.org.il/wp-content/uploads/2021/10/10_מדיניותתגמול2014-2.pdf",
+       "text": "מדיניות תגמול נושאי משרה 2014",
+       "ctx": "מדיניות תגמול נושאי משרה 2014"
+      },
+      {
+       "file": "https://www.jewishagency-kupa.org.il/wp-content/uploads/2021/10/10_10_מדיניותתגמולנושאימשרהלשנת-2013-2.pdf",
+       "text": "מדיניות תגמול נושאי משרה 2013",
+       "ctx": "מדיניות תגמול נושאי משרה 2013"
+      },
+      {
+       "file": "https://www.jewishagency-kupa.org.il/wp-content/uploads/2021/10/10_10_מדיניותהשקעות2012.pdf",
+       "text": "מדיניות תגמול נושאי משרה 2012",
+       "ctx": "מדיניות תגמול נושאי משרה 2012"
+      },
+      {
+       "file": "https://www.jewishagency-kupa.org.il/wp-content/uploads/2026/07/מדיניות-הצבעה-באסיפות-כלליות-סוכנות-יהודית-2026-מעודכן-יולי-סופי-2026.docx.pdf",
+       "text": "מדיניות הצבעה באסיפות כלליות סוכנות יהודית 2026",
+       "ctx": "מדיניות הצבעה באסיפות כלליות סוכנות יהודית 2026"
+      },
+      {
+       "file": "https://www.jewishagency-kupa.org.il/wp-content/uploads/2025/12/מדיניות-הצבעה-חברת-עמדה-2025-2026.pdf",
+       "text": "מדיניות הצבעה חברת עמדה 2025-2026",
+       "ctx": "מדיניות הצבעה חברת עמדה 2025-2026"
+      },
+      {
+       "file": "https://www.jewishagency-kupa.org.il/wp-content/uploads/2025/12/דוח-שירות-אזרחים-ותיקים-בגין-שנת-2025.pdf",
+       "text": "דוח שירות אזרחים ותיקים",
+       "ctx": "דוח שירות אזרחים ותיקים"
+      }
+     ]
+    },
+    {
+     "url": "https://www.jewishagency-kupa.org.il/%d7%97%d7%91%d7%a8%d7%99-%d7%95%d7%a2%d7%93%d7%aa-%d7%94%d7%a9%d7%a7%d7%a2%d7%95%d7%aa/",
+     "links": 93,
+     "followed": [],
+     "files": 26,
+     "clicked": 0,
+     "captured": 0,
+     "selected": [
+      "https://www.jewishagency-kupa.org.il/wp-content/uploads/2026/02/מדיניות-ואמנת-שירות-לקוחות-1.pdf"
+     ],
+     "unselected_files": [
+      {
+       "file": "https://www.jewishagency-kupa.org.il/wp-content/uploads/2021/10/10_zdadim_sohnut.pdf",
+       "text": "מבנה אחזקות וצדדים קשורים",
+       "ctx": "מבנה אחזקות וצדדים קשורים"
+      },
+      {
+       "file": "https://www.jewishagency-kupa.org.il/wp-content/uploads/2021/10/10_הודעה_על_העברת_ניהול.pdf",
+       "text": "הודעה על שינוי מבני",
+       "ctx": "הודעה על שינוי מבני"
+      },
+      {
+       "file": "https://www.jewishagency-kupa.org.il/wp-content/uploads/2025/08/נוהל-מספר-18-מדיניות-התגמול-2024-2027-002.pdf",
+       "text": "מדיניות תגמול נושאי משרה 2024-2027",
+       "ctx": "מדיניות תגמול נושאי משרה 2024-2027"
+      },
+      {
+       "file": "https://www.jewishagency-kupa.org.il/wp-content/uploads/2022/12/מדיניות-תגמול-נושאי-משרה-2020-2023.pdf",
+       "text": "מדיניות תגמול נושאי משרה 2020-2023",
+       "ctx": "מדיניות תגמול נושאי משרה 2020-2023"
+      },
+      {
+       "file": "https://www.jewishagency-kupa.org.il/wp-content/uploads/2021/10/10_מדיניות_תגמול_לשנים_2018_2020_סופי-2.pdf",
+       "text": "מדיניות תגמול נושאי משרה 2018-2020",
+       "ctx": "מדיניות תגמול נושאי משרה 2018-2020"
+      },
+      {
+       "file": "https://www.jewishagency-kupa.org.il/wp-content/uploads/2021/10/10_מדיניות_תגמול_לשנים_2015_2017-3.pdf",
+       "text": "מדיניות תגמול נושאי משרה 2015-2017",
+       "ctx": "מדיניות תגמול נושאי משרה 2015-2017"
+      },
+      {
+       "file": "https://www.jewishagency-kupa.org.il/wp-content/uploads/2021/10/10_מדיניותתגמול2014-2.pdf",
+       "text": "מדיניות תגמול נושאי משרה 2014",
+       "ctx": "מדיניות תגמול נושאי משרה 2014"
+      },
+      {
+       "file": "https://www.jewishagency-kupa.org.il/wp-content/uploads/2021/10/10_10_מדיניותתגמולנושאימשרהלשנת-2013-2.pdf",
+       "text": "מדיניות תגמול נושאי משרה 2013",
+       "ctx": "מדיניות תגמול נושאי משרה 2013"
+      },
+      {
+       "file": "https://www.jewishagency-kupa.org.il/wp-content/uploads/2021/10/10_10_מדיניותהשקעות2012.pdf",
+       "text": "מדיניות תגמול נושאי משרה 2012",
+       "ctx": "מדיניות תגמול נושאי משרה 2012"
+      },
+      {
+       "file": "https://www.jewishagency-kupa.org.il/wp-content/uploads/2026/07/מדיניות-הצבעה-באסיפות-כלליות-סוכנות-יהודית-2026-מעודכן-יולי-סופי-2026.docx.pdf",
+       "text": "מדיניות הצבעה באסיפות כלליות סוכנות יהודית 2026",
+       "ctx": "מדיניות הצבעה באסיפות כלליות סוכנות יהודית 2026"
+      },
+      {
+       "file": "https://www.jewishagency-kupa.org.il/wp-content/uploads/2025/12/מדיניות-הצבעה-חברת-עמדה-2025-2026.pdf",
+       "text": "מדיניות הצבעה חברת עמדה 2025-2026",
+       "ctx": "מדיניות הצבעה חברת עמדה 2025-2026"
+      },
+      {
+       "file": "https://www.jewishagency-kupa.org.il/wp-content/uploads/2025/12/דוח-שירות-אזרחים-ותיקים-בגין-שנת-2025.pdf",
+       "text": "דוח שירות אזרחים ותיקים",
+       "ctx": "דוח שירות אזרחים ותיקים"
+      },
+      {
+       "file": "https://www.jewishagency-kupa.org.il/wp-content/uploads/2021/10/10_zdadim_sohnut.pdf",
+       "text": "מבנה אחזקות וצדדים קשורים",
+       "ctx": "מבנה אחזקות וצדדים קשורים"
+      },
+      {
+       "file": "https://www.jewishagency-kupa.org.il/wp-content/uploads/2021/10/10_הודעה_על_העברת_ניהול.pdf",
+       "text": "הודעה על שינוי מבני",
+       "ctx": "הודעה על שינוי מבני"
+      },
+      {
+       "file": "https://www.jewishagency-kupa.org.il/wp-content/uploads/2025/08/נוהל-מספר-18-מדיניות-התגמול-2024-2027-002.pdf",
+       "text": "מדיניות תגמול נושאי משרה 2024-2027",
+       "ctx": "מדיניות תגמול נושאי משרה 2024-2027"
+      },
+      {
+       "file": "https://www.jewishagency-kupa.org.il/wp-content/uploads/2022/12/מדיניות-תגמול-נושאי-משרה-2020-2023.pdf",
+       "text": "מדיניות תגמול נושאי משרה 2020-2023",
+       "ctx": "מדיניות תגמול נושאי משרה 2020-2023"
+      },
+      {
+       "file": "https://www.jewishagency-kupa.org.il/wp-content/uploads/2021/10/10_מדיניות_תגמול_לשנים_2018_2020_סופי-2.pdf",
+       "text": "מדיניות תגמול נושאי משרה 2018-2020",
+       "ctx": "מדיניות תגמול נושאי משרה 2018-2020"
+      },
+      {
+       "file": "https://www.jewishagency-kupa.org.il/wp-content/uploads/2021/10/10_מדיניות_תגמול_לשנים_2015_2017-3.pdf",
+       "text": "מדיניות תגמול נושאי משרה 2015-2017",
+       "ctx": "מדיניות תגמול נושאי משרה 2015-2017"
+      },
+      {
+       "file": "https://www.jewishagency-kupa.org.il/wp-content/uploads/2021/10/10_מדיניותתגמול2014-2.pdf",
+       "text": "מדיניות תגמול נושאי משרה 2014",
+       "ctx": "מדיניות תגמול נושאי משרה 2014"
+      },
+      {
+       "file": "https://www.jewishagency-kupa.org.il/wp-content/uploads/2021/10/10_10_מדיניותתגמולנושאימשרהלשנת-2013-2.pdf",
+       "text": "מדיניות תגמול נושאי משרה 2013",
+       "ctx": "מדיניות תגמול נושאי משרה 2013"
+      },
+      {
+       "file": "https://www.jewishagency-kupa.org.il/wp-content/uploads/2021/10/10_10_מדיניותהשקעות2012.pdf",
+       "text": "מדיניות תגמול נושאי משרה 2012",
+       "ctx": "מדיניות תגמול נושאי משרה 2012"
+      },
+      {
+       "file": "https://www.jewishagency-kupa.org.il/wp-content/uploads/2026/07/מדיניות-הצבעה-באסיפות-כלליות-סוכנות-יהודית-2026-מעודכן-יולי-סופי-2026.docx.pdf",
+       "text": "מדיניות הצבעה באסיפות כלליות סוכנות יהודית 2026",
+       "ctx": "מדיניות הצבעה באסיפות כלליות סוכנות יהודית 2026"
+      },
+      {
+       "file": "https://www.jewishagency-kupa.org.il/wp-content/uploads/2025/12/מדיניות-הצבעה-חברת-עמדה-2025-2026.pdf",
+       "text": "מדיניות הצבעה חברת עמדה 2025-2026",
+       "ctx": "מדיניות הצבעה חברת עמדה 2025-2026"
+      },
+      {
+       "file": "https://www.jewishagency-kupa.org.il/wp-content/uploads/2025/12/דוח-שירות-אזרחים-ותיקים-בגין-שנת-2025.pdf",
+       "text": "דוח שירות אזרחים ותיקים",
+       "ctx": "דוח שירות אזרחים ותיקים"
+      }
+     ]
+    },
+    {
+     "url": "https://www.jewishagency-kupa.org.il/%d7%93%d7%95%d7%97%d7%95%d7%aa-%d7%a8%d7%91%d7%a2%d7%95%d7%a0%d7%99%d7%99%d7%9d/",
+     "links": 205,
+     "followed": [],
+     "files": 138,
+     "clicked": 0,
+     "captured": 0,
+     "selected": [
+      "https://www.jewishagency-kupa.org.il/wp-content/uploads/2026/02/מדיניות-ואמנת-שירות-לקוחות-1.pdf"
+     ],
+     "unselected_files": [
+      {
+       "file": "https://www.jewishagency-kupa.org.il/wp-content/uploads/2021/10/10_zdadim_sohnut.pdf",
+       "text": "מבנה אחזקות וצדדים קשורים",
+       "ctx": "מבנה אחזקות וצדדים קשורים"
+      },
+      {
+       "file": "https://www.jewishagency-kupa.org.il/wp-content/uploads/2021/10/10_הודעה_על_העברת_ניהול.pdf",
+       "text": "הודעה על שינוי מבני",
+       "ctx": "הודעה על שינוי מבני"
+      },
+      {
+       "file": "https://www.jewishagency-kupa.org.il/wp-content/uploads/2025/08/נוהל-מספר-18-מדיניות-התגמול-2024-2027-002.pdf",
+       "text": "מדיניות תגמול נושאי משרה 2024-2027",
+       "ctx": "מדיניות תגמול נושאי משרה 2024-2027"
+      },
+      {
+       "file": "https://www.jewishagency-kupa.org.il/wp-content/uploads/2022/12/מדיניות-תגמול-נושאי-משרה-2020-2023.pdf",
+       "text": "מדיניות תגמול נושאי משרה 2020-2023",
+       "ctx": "מדיניות תגמול נושאי משרה 2020-2023"
+      },
+      {
+       "file": "https://www.jewishagency-kupa.org.il/wp-content/uploads/2021/10/10_מדיניות_תגמול_לשנים_2018_2020_סופי-2.pdf",
+       "text": "מדיניות תגמול נושאי משרה 2018-2020",
+       "ctx": "מדיניות תגמול נושאי משרה 2018-2020"
+      },
+      {
+       "file": "https://www.jewishagency-kupa.org.il/wp-content/uploads/2021/10/10_מדיניות_תגמול_לשנים_2015_2017-3.pdf",
+       "text": "מדיניות תגמול נושאי משרה 2015-2017",
+       "ctx": "מדיניות תגמול נושאי משרה 2015-2017"
+      },
+      {
+       "file": "https://www.jewishagency-kupa.org.il/wp-content/uploads/2021/10/10_מדיניותתגמול2014-2.pdf",
+       "text": "מדיניות תגמול נושאי משרה 2014",
+       "ctx": "מדיניות תגמול נושאי משרה 2014"
+      },
+      {
+       "file": "https://www.jewishagency-kupa.org.il/wp-content/uploads/2021/10/10_10_מדיניותתגמולנושאימשרהלשנת-2013-2.pdf",
+       "text": "מדיניות תגמול נושאי משרה 2013",
+       "ctx": "מדיניות תגמול נושאי משרה 2013"
+      },
+      {
+       "file": "https://www.jewishagency-kupa.org.il/wp-content/uploads/2021/10/10_10_מדיניותהשקעות2012.pdf",
+       "text": "מדיניות תגמול נושאי משרה 2012",
+       "ctx": "מדיניות תגמול נושאי משרה 2012"
+      },
+      {
+       "file": "https://www.jewishagency-kupa.org.il/wp-content/uploads/2026/07/מדיניות-הצבעה-באסיפות-כלליות-סוכנות-יהודית-2026-מעודכן-יולי-סופי-2026.docx.pdf",
+       "text": "מדיניות הצבעה באסיפות כלליות סוכנות יהודית 2026",
+       "ctx": "מדיניות הצבעה באסיפות כלליות סוכנות יהודית 2026"
+      },
+      {
+       "file": "https://www.jewishagency-kupa.org.il/wp-content/uploads/2025/12/מדיניות-הצבעה-חברת-עמדה-2025-2026.pdf",
+       "text": "מדיניות הצבעה חברת עמדה 2025-2026",
+       "ctx": "מדיניות הצבעה חברת עמדה 2025-2026"
+      },
+      {
+       "file": "https://www.jewishagency-kupa.org.il/wp-content/uploads/2025/12/דוח-שירות-אזרחים-ותיקים-בגין-שנת-2025.pdf",
+       "text": "דוח שירות אזרחים ותיקים",
+       "ctx": "דוח שירות אזרחים ותיקים"
+      },
+      {
+       "file": "https://www.jewishagency-kupa.org.il/wp-content/uploads/2021/10/10_zdadim_sohnut.pdf",
+       "text": "מבנה אחזקות וצדדים קשורים",
+       "ctx": "מבנה אחזקות וצדדים קשורים"
+      },
+      {
+       "file": "https://www.jewishagency-kupa.org.il/wp-content/uploads/2021/10/10_הודעה_על_העברת_ניהול.pdf",
+       "text": "הודעה על שינוי מבני",
+       "ctx": "הודעה על שינוי מבני"
+      },
+      {
+       "file": "https://www.jewishagency-kupa.org.il/wp-content/uploads/2025/08/נוהל-מספר-18-מדיניות-התגמול-2024-2027-002.pdf",
+       "text": "מדיניות תגמול נושאי משרה 2024-2027",
+       "ctx": "מדיניות תגמול נושאי משרה 2024-2027"
+      },
+      {
+       "file": "https://www.jewishagency-kupa.org.il/wp-content/uploads/2022/12/מדיניות-תגמול-נושאי-משרה-2020-2023.pdf",
+       "text": "מדיניות תגמול נושאי משרה 2020-2023",
+       "ctx": "מדיניות תגמול נושאי משרה 2020-2023"
+      },
+      {
+       "file": "https://www.jewishagency-kupa.org.il/wp-content/uploads/2021/10/10_מדיניות_תגמול_לשנים_2018_2020_סופי-2.pdf",
+       "text": "מדיניות תגמול נושאי משרה 2018-2020",
+       "ctx": "מדיניות תגמול נושאי משרה 2018-2020"
+      },
+      {
+       "file": "https://www.jewishagency-kupa.org.il/wp-content/uploads/2021/10/10_מדיניות_תגמול_לשנים_2015_2017-3.pdf",
+       "text": "מדיניות תגמול נושאי משרה 2015-2017",
+       "ctx": "מדיניות תגמול נושאי משרה 2015-2017"
+      },
+      {
+       "file": "https://www.jewishagency-kupa.org.il/wp-content/uploads/2021/10/10_מדיניותתגמול2014-2.pdf",
+       "text": "מדיניות תגמול נושאי משרה 2014",
+       "ctx": "מדיניות תגמול נושאי משרה 2014"
+      },
+      {
+       "file": "https://www.jewishagency-kupa.org.il/wp-content/uploads/2021/10/10_10_מדיניותתגמולנושאימשרהלשנת-2013-2.pdf",
+       "text": "מדיניות תגמול נושאי משרה 2013",
+       "ctx": "מדיניות תגמול נושאי משרה 2013"
+      },
+      {
+       "file": "https://www.jewishagency-kupa.org.il/wp-content/uploads/2021/10/10_10_מדיניותהשקעות2012.pdf",
+       "text": "מדיניות תגמול נושאי משרה 2012",
+       "ctx": "מדיניות תגמול נושאי משרה 2012"
+      },
+      {
+       "file": "https://www.jewishagency-kupa.org.il/wp-content/uploads/2026/07/מדיניות-הצבעה-באסיפות-כלליות-סוכנות-יהודית-2026-מעודכן-יולי-סופי-2026.docx.pdf",
+       "text": "מדיניות הצבעה באסיפות כלליות סוכנות יהודית 2026",
+       "ctx": "מדיניות הצבעה באסיפות כלליות סוכנות יהודית 2026"
+      },
+      {
+       "file": "https://www.jewishagency-kupa.org.il/wp-content/uploads/2025/12/מדיניות-הצבעה-חברת-עמדה-2025-2026.pdf",
+       "text": "מדיניות הצבעה חברת עמדה 2025-2026",
+       "ctx": "מדיניות הצבעה חברת עמדה 2025-2026"
+      },
+      {
+       "file": "https://www.jewishagency-kupa.org.il/wp-content/uploads/2025/12/דוח-שירות-אזרחים-ותיקים-בגין-שנת-2025.pdf",
+       "text": "דוח שירות אזרחים ותיקים",
+       "ctx": "דוח שירות אזרחים ותיקים"
+      },
+      {
+       "file": "https://www.jewishagency-kupa.org.il/wp-content/uploads/2026/09/דוח-כספי-חברה-מנהלת.pdf",
+       "text": "דוחות כספיים חברה מנהלת פנסיה ותגמולים 06.2026",
+       "ctx": "2026"
+      }
+     ]
+    },
+    {
+     "url": "https://www.jewishagency-kupa.org.il/%d7%93%d7%95%d7%97%d7%95%d7%aa-%d7%a9%d7%a0%d7%aa%d7%99%d7%99%d7%9d/",
+     "links": 169,
+     "followed": [
+      "https://www.jewishagency-kupa.org.il/wp-content/uploads/2023/05/%D7%93%D7%95%D7%97-%D7%A2%D7%A1%D7%A7%D7%99-%D7%AA%D7%90%D7%92%D7%99%D7%93.doc",
+      "https://www.jewishagency-kupa.org.il/wp-content/uploads/2023/05/%D7%93%D7%95%D7%97-%D7%93%D7%99%D7%A8%D7%A7%D7%98%D7%95%D7%A8%D7%99%D7%95%D7%9F-.doc",
+      "https://www.jewishagency-kupa.org.il/wp-content/uploads/2022/08/%D7%93%D7%95%D7%97-%D7%A2%D7%99%D7%A1%D7%A7%D7%99-%D7%AA%D7%90%D7%92%D7%99%D7%93-%D7%97%D7%91%D7%A8%D7%94-%D7%9C%D7%A0%D7%99%D7%94%D7%95%D7%9C-%D7%A4%D7%A0%D7%A1%D7%99%D7%94-%D7%95%D7%AA%D7%92%D7%9E%D7%95%D7%9C%D7%99%D7%9D-2021.doc",
+      "https://www.jewishagency-kupa.org.il/wp-content/uploads/2022/08/%D7%93%D7%95%D7%97-%D7%93%D7%99%D7%A8%D7%A7%D7%98%D7%95%D7%A8%D7%99%D7%95%D7%9F-%D7%97%D7%91%D7%A8%D7%94-%D7%9E%D7%A0%D7%94%D7%9C%D7%AA-%D7%A4%D7%A0%D7%A1%D7%99%D7%94-%D7%95%D7%AA%D7%92%D7%9E%D7%95%D7%9C%D7%99%D7%9D-2021.doc"
+     ],
+     "files": 96,
+     "clicked": 0,
+     "captured": 0,
+     "selected": [
+      "https://www.jewishagency-kupa.org.il/wp-content/uploads/2026/02/מדיניות-ואמנת-שירות-לקוחות-1.pdf"
+     ],
+     "unselected_files": [
+      {
+       "file": "https://www.jewishagency-kupa.org.il/wp-content/uploads/2021/10/10_zdadim_sohnut.pdf",
+       "text": "מבנה אחזקות וצדדים קשורים",
+       "ctx": "מבנה אחזקות וצדדים קשורים"
+      },
+      {
+       "file": "https://www.jewishagency-kupa.org.il/wp-content/uploads/2021/10/10_הודעה_על_העברת_ניהול.pdf",
+       "text": "הודעה על שינוי מבני",
+       "ctx": "הודעה על שינוי מבני"
+      },
+      {
+       "file": "https://www.jewishagency-kupa.org.il/wp-content/uploads/2025/08/נוהל-מספר-18-מדיניות-התגמול-2024-2027-002.pdf",
+       "text": "מדיניות תגמול נושאי משרה 2024-2027",
+       "ctx": "מדיניות תגמול נושאי משרה 2024-2027"
+      },
+      {
+       "file": "https://www.jewishagency-kupa.org.il/wp-content/uploads/2022/12/מדיניות-תגמול-נושאי-משרה-2020-2023.pdf",
+       "text": "מדיניות תגמול נושאי משרה 2020-2023",
+       "ctx": "מדיניות תגמול נושאי משרה 2020-2023"
+      },
+      {
+       "file": "https://www.jewishagency-kupa.org.il/wp-content/uploads/2021/10/10_מדיניות_תגמול_לשנים_2018_2020_סופי-2.pdf",
+       "text": "מדיניות תגמול נושאי משרה 2018-2020",
+       "ctx": "מדיניות תגמול נושאי משרה 2018-2020"
+      },
+      {
+       "file": "https://www.jewishagency-kupa.org.il/wp-content/uploads/2021/10/10_מדיניות_תגמול_לשנים_2015_2017-3.pdf",
+       "text": "מדיניות תגמול נושאי משרה 2015-2017",
+       "ctx": "מדיניות תגמול נושאי משרה 2015-2017"
+      },
+      {
+       "file": "https://www.jewishagency-kupa.org.il/wp-content/uploads/2021/10/10_מדיניותתגמול2014-2.pdf",
+       "text": "מדיניות תגמול נושאי משרה 2014",
+       "ctx": "מדיניות תגמול נושאי משרה 2014"
+      },
+      {
+       "file": "https://www.jewishagency-kupa.org.il/wp-content/uploads/2021/10/10_10_מדיניותתגמולנושאימשרהלשנת-2013-2.pdf",
+       "text": "מדיניות תגמול נושאי משרה 2013",
+       "ctx": "מדיניות תגמול נושאי משרה 2013"
+      },
+      {
+       "file": "https://www.jewishagency-kupa.org.il/wp-content/uploads/2021/10/10_10_מדיניותהשקעות2012.pdf",
+       "text": "מדיניות תגמול נושאי משרה 2012",
+       "ctx": "מדיניות תגמול נושאי משרה 2012"
+      },
+      {
+       "file": "https://www.jewishagency-kupa.org.il/wp-content/uploads/2026/07/מדיניות-הצבעה-באסיפות-כלליות-סוכנות-יהודית-2026-מעודכן-יולי-סופי-2026.docx.pdf",
+       "text": "מדיניות הצבעה באסיפות כלליות סוכנות יהודית 2026",
+       "ctx": "מדיניות הצבעה באסיפות כלליות סוכנות יהודית 2026"
+      },
+      {
+       "file": "https://www.jewishagency-kupa.org.il/wp-content/uploads/2025/12/מדיניות-הצבעה-חברת-עמדה-2025-2026.pdf",
+       "text": "מדיניות הצבעה חברת עמדה 2025-2026",
+       "ctx": "מדיניות הצבעה חברת עמדה 2025-2026"
+      },
+      {
+       "file": "https://www.jewishagency-kupa.org.il/wp-content/uploads/2025/12/דוח-שירות-אזרחים-ותיקים-בגין-שנת-2025.pdf",
+       "text": "דוח שירות אזרחים ותיקים",
+       "ctx": "דוח שירות אזרחים ותיקים"
+      },
+      {
+       "file": "https://www.jewishagency-kupa.org.il/wp-content/uploads/2021/10/10_zdadim_sohnut.pdf",
+       "text": "מבנה אחזקות וצדדים קשורים",
+       "ctx": "מבנה אחזקות וצדדים קשורים"
+      },
+      {
+       "file": "https://www.jewishagency-kupa.org.il/wp-content/uploads/2021/10/10_הודעה_על_העברת_ניהול.pdf",
+       "text": "הודעה על שינוי מבני",
+       "ctx": "הודעה על שינוי מבני"
+      },
+      {
+       "file": "https://www.jewishagency-kupa.org.il/wp-content/uploads/2025/08/נוהל-מספר-18-מדיניות-התגמול-2024-2027-002.pdf",
+       "text": "מדיניות תגמול נושאי משרה 2024-2027",
+       "ctx": "מדיניות תגמול נושאי משרה 2024-2027"
+      },
+      {
+       "file": "https://www.jewishagency-kupa.org.il/wp-content/uploads/2022/12/מדיניות-תגמול-נושאי-משרה-2020-2023.pdf",
+       "text": "מדיניות תגמול נושאי משרה 2020-2023",
+       "ctx": "מדיניות תגמול נושאי משרה 2020-2023"
+      },
+      {
+       "file": "https://www.jewishagency-kupa.org.il/wp-content/uploads/2021/10/10_מדיניות_תגמול_לשנים_2018_2020_סופי-2.pdf",
+       "text": "מדיניות תגמול נושאי משרה 2018-2020",
+       "ctx": "מדיניות תגמול נושאי משרה 2018-2020"
+      },
+      {
+       "file": "https://www.jewishagency-kupa.org.il/wp-content/uploads/2021/10/10_מדיניות_תגמול_לשנים_2015_2017-3.pdf",
+       "text": "מדיניות תגמול נושאי משרה 2015-2017",
+       "ctx": "מדיניות תגמול נושאי משרה 2015-2017"
+      },
+      {
+       "file": "https://www.jewishagency-kupa.org.il/wp-content/uploads/2021/10/10_מדיניותתגמול2014-2.pdf",
+       "text": "מדיניות תגמול נושאי משרה 2014",
+       "ctx": "מדיניות תגמול נושאי משרה 2014"
+      },
+      {
+       "file": "https://www.jewishagency-kupa.org.il/wp-content/uploads/2021/10/10_10_מדיניותתגמולנושאימשרהלשנת-2013-2.pdf",
+       "text": "מדיניות תגמול נושאי משרה 2013",
+       "ctx": "מדיניות תגמול נושאי משרה 2013"
+      },
+      {
+       "file": "https://www.jewishagency-kupa.org.il/wp-content/uploads/2021/10/10_10_מדיניותהשקעות2012.pdf",
+       "text": "מדיניות תגמול נושאי משרה 2012",
+       "ctx": "מדיניות תגמול נושאי משרה 2012"
+      },
+      {
+       "file": "https://www.jewishagency-kupa.org.il/wp-content/uploads/2026/07/מדיניות-הצבעה-באסיפות-כלליות-סוכנות-יהודית-2026-מעודכן-יולי-סופי-2026.docx.pdf",
+       "text": "מדיניות הצבעה באסיפות כלליות סוכנות יהודית 2026",
+       "ctx": "מדיניות הצבעה באסיפות כלליות סוכנות יהודית 2026"
+      },
+      {
+       "file": "https://www.jewishagency-kupa.org.il/wp-content/uploads/2025/12/מדיניות-הצבעה-חברת-עמדה-2025-2026.pdf",
+       "text": "מדיניות הצבעה חברת עמדה 2025-2026",
+       "ctx": "מדיניות הצבעה חברת עמדה 2025-2026"
+      },
+      {
+       "file": "https://www.jewishagency-kupa.org.il/wp-content/uploads/2025/12/דוח-שירות-אזרחים-ותיקים-בגין-שנת-2025.pdf",
+       "text": "דוח שירות אזרחים ותיקים",
+       "ctx": "דוח שירות אזרחים ותיקים"
+      },
+      {
+       "file": "https://www.jewishagency-kupa.org.il/wp-content/uploads/2026/06/דוחות-כספיים-חברה-מנהלת-שנת-2025.pdf",
+       "text": "דוח כספי חברה מנהלת",
+       "ctx": "2025"
+      }
+     ]
+    },
+    {
+     "url": "https://www.jewishagency-kupa.org.il/%d7%93%d7%95%d7%97-%d7%97%d7%95%d7%93%d7%a9%d7%99/",
+     "links": 277,
+     "followed": [],
+     "files": 210,
+     "clicked": 0,
+     "captured": 0,
+     "selected": [
+      "https://www.jewishagency-kupa.org.il/wp-content/uploads/2026/02/מדיניות-ואמנת-שירות-לקוחות-1.pdf"
+     ],
+     "unselected_files": [
+      {
+       "file": "https://www.jewishagency-kupa.org.il/wp-content/uploads/2021/10/10_zdadim_sohnut.pdf",
+       "text": "מבנה אחזקות וצדדים קשורים",
+       "ctx": "מבנה אחזקות וצדדים קשורים"
+      },
+      {
+       "file": "https://www.jewishagency-kupa.org.il/wp-content/uploads/2021/10/10_הודעה_על_העברת_ניהול.pdf",
+       "text": "הודעה על שינוי מבני",
+       "ctx": "הודעה על שינוי מבני"
+      },
+      {
+       "file": "https://www.jewishagency-kupa.org.il/wp-content/uploads/2025/08/נוהל-מספר-18-מדיניות-התגמול-2024-2027-002.pdf",
+       "text": "מדיניות תגמול נושאי משרה 2024-2027",
+       "ctx": "מדיניות תגמול נושאי משרה 2024-2027"
+      },
+      {
+       "file": "https://www.jewishagency-kupa.org.il/wp-content/uploads/2022/12/מדיניות-תגמול-נושאי-משרה-2020-2023.pdf",
+       "text": "מדיניות תגמול נושאי משרה 2020-2023",
+       "ctx": "מדיניות תגמול נושאי משרה 2020-2023"
+      },
+      {
+       "file": "https://www.jewishagency-kupa.org.il/wp-content/uploads/2021/10/10_מדיניות_תגמול_לשנים_2018_2020_סופי-2.pdf",
+       "text": "מדיניות תגמול נושאי משרה 2018-2020",
+       "ctx": "מדיניות תגמול נושאי משרה 2018-2020"
+      },
+      {
+       "file": "https://www.jewishagency-kupa.org.il/wp-content/uploads/2021/10/10_מדיניות_תגמול_לשנים_2015_2017-3.pdf",
+       "text": "מדיניות תגמול נושאי משרה 2015-2017",
+       "ctx": "מדיניות תגמול נושאי משרה 2015-2017"
+      },
+      {
+       "file": "https://www.jewishagency-kupa.org.il/wp-content/uploads/2021/10/10_מדיניותתגמול2014-2.pdf",
+       "text": "מדיניות תגמול נושאי משרה 2014",
+       "ctx": "מדיניות תגמול נושאי משרה 2014"
+      },
+      {
+       "file": "https://www.jewishagency-kupa.org.il/wp-content/uploads/2021/10/10_10_מדיניותתגמולנושאימשרהלשנת-2013-2.pdf",
+       "text": "מדיניות תגמול נושאי משרה 2013",
+       "ctx": "מדיניות תגמול נושאי משרה 2013"
+      },
+      {
+       "file": "https://www.jewishagency-kupa.org.il/wp-content/uploads/2021/10/10_10_מדיניותהשקעות2012.pdf",
+       "text": "מדיניות תגמול נושאי משרה 2012",
+       "ctx": "מדיניות תגמול נושאי משרה 2012"
+      },
+      {
+       "file": "https://www.jewishagency-kupa.org.il/wp-content/uploads/2026/07/מדיניות-הצבעה-באסיפות-כלליות-סוכנות-יהודית-2026-מעודכן-יולי-סופי-2026.docx.pdf",
+       "text": "מדיניות הצבעה באסיפות כלליות סוכנות יהודית 2026",
+       "ctx": "מדיניות הצבעה באסיפות כלליות סוכנות יהודית 2026"
+      },
+      {
+       "file": "https://www.jewishagency-kupa.org.il/wp-content/uploads/2025/12/מדיניות-הצבעה-חברת-עמדה-2025-2026.pdf",
+       "text": "מדיניות הצבעה חברת עמדה 2025-2026",
+       "ctx": "מדיניות הצבעה חברת עמדה 2025-2026"
+      },
+      {
+       "file": "https://www.jewishagency-kupa.org.il/wp-content/uploads/2025/12/דוח-שירות-אזרחים-ותיקים-בגין-שנת-2025.pdf",
+       "text": "דוח שירות אזרחים ותיקים",
+       "ctx": "דוח שירות אזרחים ותיקים"
+      },
+      {
+       "file": "https://www.jewishagency-kupa.org.il/wp-content/uploads/2021/10/10_zdadim_sohnut.pdf",
+       "text": "מבנה אחזקות וצדדים קשורים",
+       "ctx": "מבנה אחזקות וצדדים קשורים"
+      },
+      {
+       "file": "https://www.jewishagency-kupa.org.il/wp-content/uploads/2021/10/10_הודעה_על_העברת_ניהול.pdf",
+       "text": "הודעה על שינוי מבני",
+       "ctx": "הודעה על שינוי מבני"
+      },
+      {
+       "file": "https://www.jewishagency-kupa.org.il/wp-content/uploads/2025/08/נוהל-מספר-18-מדיניות-התגמול-2024-2027-002.pdf",
+       "text": "מדיניות תגמול נושאי משרה 2024-2027",
+       "ctx": "מדיניות תגמול נושאי משרה 2024-2027"
+      },
+      {
+       "file": "https://www.jewishagency-kupa.org.il/wp-content/uploads/2022/12/מדיניות-תגמול-נושאי-משרה-2020-2023.pdf",
+       "text": "מדיניות תגמול נושאי משרה 2020-2023",
+       "ctx": "מדיניות תגמול נושאי משרה 2020-2023"
+      },
+      {
+       "file": "https://www.jewishagency-kupa.org.il/wp-content/uploads/2021/10/10_מדיניות_תגמול_לשנים_2018_2020_סופי-2.pdf",
+       "text": "מדיניות תגמול נושאי משרה 2018-2020",
+       "ctx": "מדיניות תגמול נושאי משרה 2018-2020"
+      },
+      {
+       "file": "https://www.jewishagency-kupa.org.il/wp-content/uploads/2021/10/10_מדיניות_תגמול_לשנים_2015_2017-3.pdf",
+       "text": "מדיניות תגמול נושאי משרה 2015-2017",
+       "ctx": "מדיניות תגמול נושאי משרה 2015-2017"
+      },
+      {
+       "file": "https://www.jewishagency-kupa.org.il/wp-content/uploads/2021/10/10_מדיניותתגמול2014-2.pdf",
+       "text": "מדיניות תגמול נושאי משרה 2014",
+       "ctx": "מדיניות תגמול נושאי משרה 2014"
+      },
+      {
+       "file": "https://www.jewishagency-kupa.org.il/wp-content/uploads/2021/10/10_10_מדיניותתגמולנושאימשרהלשנת-2013-2.pdf",
+       "text": "מדיניות תגמול נושאי משרה 2013",
+       "ctx": "מדיניות תגמול נושאי משרה 2013"
+      },
+      {
+       "file": "https://www.jewishagency-kupa.org.il/wp-content/uploads/2021/10/10_10_מדיניותהשקעות2012.pdf",
+       "text": "מדיניות תגמול נושאי משרה 2012",
+       "ctx": "מדיניות תגמול נושאי משרה 2012"
+      },
+      {
+       "file": "https://www.jewishagency-kupa.org.il/wp-content/uploads/2026/07/מדיניות-הצבעה-באסיפות-כלליות-סוכנות-יהודית-2026-מעודכן-יולי-סופי-2026.docx.pdf",
+       "text": "מדיניות הצבעה באסיפות כלליות סוכנות יהודית 2026",
+       "ctx": "מדיניות הצבעה באסיפות כלליות סוכנות יהודית 2026"
+      },
+      {
+       "file": "https://www.jewishagency-kupa.org.il/wp-content/uploads/2025/12/מדיניות-הצבעה-חברת-עמדה-2025-2026.pdf",
+       "text": "מדיניות הצבעה חברת עמדה 2025-2026",
+       "ctx": "מדיניות הצבעה חברת עמדה 2025-2026"
+      },
+      {
+       "file": "https://www.jewishagency-kupa.org.il/wp-content/uploads/2025/12/דוח-שירות-אזרחים-ותיקים-בגין-שנת-2025.pdf",
+       "text": "דוח שירות אזרחים ותיקים",
+       "ctx": "דוח שירות אזרחים ותיקים"
+      },
+      {
+       "file": "https://www.jewishagency-kupa.org.il/wp-content/uploads/2024/04/דוח-חודשי-גמל-דצמבר-23.xlsx",
+       "text": "דו\"ח חודשי 12.2023",
+       "ctx": ""
+      }
+     ]
+    },
+    {
+     "url": "https://www.jewishagency-kupa.org.il/%d7%93%d7%95%d7%97%d7%95%d7%aa/",
+     "links": 95,
+     "followed": [],
+     "files": 26,
+     "clicked": 0,
+     "captured": 0,
+     "selected": [
+      "https://www.jewishagency-kupa.org.il/wp-content/uploads/2026/02/מדיניות-ואמנת-שירות-לקוחות-1.pdf"
+     ],
+     "unselected_files": [
+      {
+       "file": "https://www.jewishagency-kupa.org.il/wp-content/uploads/2021/10/10_zdadim_sohnut.pdf",
+       "text": "מבנה אחזקות וצדדים קשורים",
+       "ctx": "מבנה אחזקות וצדדים קשורים"
+      },
+      {
+       "file": "https://www.jewishagency-kupa.org.il/wp-content/uploads/2021/10/10_הודעה_על_העברת_ניהול.pdf",
+       "text": "הודעה על שינוי מבני",
+       "ctx": "הודעה על שינוי מבני"
+      },
+      {
+       "file": "https://www.jewishagency-kupa.org.il/wp-content/uploads/2025/08/נוהל-מספר-18-מדיניות-התגמול-2024-2027-002.pdf",
+       "text": "מדיניות תגמול נושאי משרה 2024-2027",
+       "ctx": "מדיניות תגמול נושאי משרה 2024-2027"
+      },
+      {
+       "file": "https://www.jewishagency-kupa.org.il/wp-content/uploads/2022/12/מדיניות-תגמול-נושאי-משרה-2020-2023.pdf",
+       "text": "מדיניות תגמול נושאי משרה 2020-2023",
+       "ctx": "מדיניות תגמול נושאי משרה 2020-2023"
+      },
+      {
+       "file": "https://www.jewishagency-kupa.org.il/wp-content/uploads/2021/10/10_מדיניות_תגמול_לשנים_2018_2020_סופי-2.pdf",
+       "text": "מדיניות תגמול נושאי משרה 2018-2020",
+       "ctx": "מדיניות תגמול נושאי משרה 2018-2020"
+      },
+      {
+       "file": "https://www.jewishagency-kupa.org.il/wp-content/uploads/2021/10/10_מדיניות_תגמול_לשנים_2015_2017-3.pdf",
+       "text": "מדיניות תגמול נושאי משרה 2015-2017",
+       "ctx": "מדיניות תגמול נושאי משרה 2015-2017"
+      },
+      {
+       "file": "https://www.jewishagency-kupa.org.il/wp-content/uploads/2021/10/10_מדיניותתגמול2014-2.pdf",
+       "text": "מדיניות תגמול נושאי משרה 2014",
+       "ctx": "מדיניות תגמול נושאי משרה 2014"
+      },
+      {
+       "file": "https://www.jewishagency-kupa.org.il/wp-content/uploads/2021/10/10_10_מדיניותתגמולנושאימשרהלשנת-2013-2.pdf",
+       "text": "מדיניות תגמול נושאי משרה 2013",
+       "ctx": "מדיניות תגמול נושאי משרה 2013"
+      },
+      {
+       "file": "https://www.jewishagency-kupa.org.il/wp-content/uploads/2021/10/10_10_מדיניותהשקעות2012.pdf",
+       "text": "מדיניות תגמול נושאי משרה 2012",
+       "ctx": "מדיניות תגמול נושאי משרה 2012"
+      },
+      {
+       "file": "https://www.jewishagency-kupa.org.il/wp-content/uploads/2026/07/מדיניות-הצבעה-באסיפות-כלליות-סוכנות-יהודית-2026-מעודכן-יולי-סופי-2026.docx.pdf",
+       "text": "מדיניות הצבעה באסיפות כלליות סוכנות יהודית 2026",
+       "ctx": "מדיניות הצבעה באסיפות כלליות סוכנות יהודית 2026"
+      },
+      {
+       "file": "https://www.jewishagency-kupa.org.il/wp-content/uploads/2025/12/מדיניות-הצבעה-חברת-עמדה-2025-2026.pdf",
+       "text": "מדיניות הצבעה חברת עמדה 2025-2026",
+       "ctx": "מדיניות הצבעה חברת עמדה 2025-2026"
+      },
+      {
+       "file": "https://www.jewishagency-kupa.org.il/wp-content/uploads/2025/12/דוח-שירות-אזרחים-ותיקים-בגין-שנת-2025.pdf",
+       "text": "דוח שירות אזרחים ותיקים",
+       "ctx": "דוח שירות אזרחים ותיקים"
+      },
+      {
+       "file": "https://www.jewishagency-kupa.org.il/wp-content/uploads/2021/10/10_zdadim_sohnut.pdf",
+       "text": "מבנה אחזקות וצדדים קשורים",
+       "ctx": "מבנה אחזקות וצדדים קשורים"
+      },
+      {
+       "file": "https://www.jewishagency-kupa.org.il/wp-content/uploads/2021/10/10_הודעה_על_העברת_ניהול.pdf",
+       "text": "הודעה על שינוי מבני",
+       "ctx": "הודעה על שינוי מבני"
+      },
+      {
+       "file": "https://www.jewishagency-kupa.org.il/wp-content/uploads/2025/08/נוהל-מספר-18-מדיניות-התגמול-2024-2027-002.pdf",
+       "text": "מדיניות תגמול נושאי משרה 2024-2027",
+       "ctx": "מדיניות תגמול נושאי משרה 2024-2027"
+      },
+      {
+       "file": "https://www.jewishagency-kupa.org.il/wp-content/uploads/2022/12/מדיניות-תגמול-נושאי-משרה-2020-2023.pdf",
+       "text": "מדיניות תגמול נושאי משרה 2020-2023",
+       "ctx": "מדיניות תגמול נושאי משרה 2020-2023"
+      },
+      {
+       "file": "https://www.jewishagency-kupa.org.il/wp-content/uploads/2021/10/10_מדיניות_תגמול_לשנים_2018_2020_סופי-2.pdf",
+       "text": "מדיניות תגמול נושאי משרה 2018-2020",
+       "ctx": "מדיניות תגמול נושאי משרה 2018-2020"
+      },
+      {
+       "file": "https://www.jewishagency-kupa.org.il/wp-content/uploads/2021/10/10_מדיניות_תגמול_לשנים_2015_2017-3.pdf",
+       "text": "מדיניות תגמול נושאי משרה 2015-2017",
+       "ctx": "מדיניות תגמול נושאי משרה 2015-2017"
+      },
+      {
+       "file": "https://www.jewishagency-kupa.org.il/wp-content/uploads/2021/10/10_מדיניותתגמול2014-2.pdf",
+       "text": "מדיניות תגמול נושאי משרה 2014",
+       "ctx": "מדיניות תגמול נושאי משרה 2014"
+      },
+      {
+       "file": "https://www.jewishagency-kupa.org.il/wp-content/uploads/2021/10/10_10_מדיניותתגמולנושאימשרהלשנת-2013-2.pdf",
+       "text": "מדיניות תגמול נושאי משרה 2013",
+       "ctx": "מדיניות תגמול נושאי משרה 2013"
+      },
+      {
+       "file": "https://www.jewishagency-kupa.org.il/wp-content/uploads/2021/10/10_10_מדיניותהשקעות2012.pdf",
+       "text": "מדיניות תגמול נושאי משרה 2012",
+       "ctx": "מדיניות תגמול נושאי משרה 2012"
+      },
+      {
+       "file": "https://www.jewishagency-kupa.org.il/wp-content/uploads/2026/07/מדיניות-הצבעה-באסיפות-כלליות-סוכנות-יהודית-2026-מעודכן-יולי-סופי-2026.docx.pdf",
+       "text": "מדיניות הצבעה באסיפות כלליות סוכנות יהודית 2026",
+       "ctx": "מדיניות הצבעה באסיפות כלליות סוכנות יהודית 2026"
+      },
+      {
+       "file": "https://www.jewishagency-kupa.org.il/wp-content/uploads/2025/12/מדיניות-הצבעה-חברת-עמדה-2025-2026.pdf",
+       "text": "מדיניות הצבעה חברת עמדה 2025-2026",
+       "ctx": "מדיניות הצבעה חברת עמדה 2025-2026"
+      },
+      {
+       "file": "https://www.jewishagency-kupa.org.il/wp-content/uploads/2025/12/דוח-שירות-אזרחים-ותיקים-בגין-שנת-2025.pdf",
+       "text": "דוח שירות אזרחים ותיקים",
+       "ctx": "דוח שירות אזרחים ותיקים"
+      }
+     ]
+    },
+    {
+     "url": "https://www.jewishagency-kupa.org.il/%d7%93%d7%95%d7%97%d7%95%d7%aa-%d7%9b%d7%a1%d7%a4%d7%99%d7%99%d7%9d/",
+     "links": 93,
+     "followed": [],
+     "files": 26,
+     "clicked": 0,
+     "captured": 0,
+     "selected": [
+      "https://www.jewishagency-kupa.org.il/wp-content/uploads/2026/02/מדיניות-ואמנת-שירות-לקוחות-1.pdf"
+     ],
+     "unselected_files": [
+      {
+       "file": "https://www.jewishagency-kupa.org.il/wp-content/uploads/2021/10/10_zdadim_sohnut.pdf",
+       "text": "מבנה אחזקות וצדדים קשורים",
+       "ctx": "מבנה אחזקות וצדדים קשורים"
+      },
+      {
+       "file": "https://www.jewishagency-kupa.org.il/wp-content/uploads/2021/10/10_הודעה_על_העברת_ניהול.pdf",
+       "text": "הודעה על שינוי מבני",
+       "ctx": "הודעה על שינוי מבני"
+      },
+      {
+       "file": "https://www.jewishagency-kupa.org.il/wp-content/uploads/2025/08/נוהל-מספר-18-מדיניות-התגמול-2024-2027-002.pdf",
+       "text": "מדיניות תגמול נושאי משרה 2024-2027",
+       "ctx": "מדיניות תגמול נושאי משרה 2024-2027"
+      },
+      {
+       "file": "https://www.jewishagency-kupa.org.il/wp-content/uploads/2022/12/מדיניות-תגמול-נושאי-משרה-2020-2023.pdf",
+       "text": "מדיניות תגמול נושאי משרה 2020-2023",
+       "ctx": "מדיניות תגמול נושאי משרה 2020-2023"
+      },
+      {
+       "file": "https://www.jewishagency-kupa.org.il/wp-content/uploads/2021/10/10_מדיניות_תגמול_לשנים_2018_2020_סופי-2.pdf",
+       "text": "מדיניות תגמול נושאי משרה 2018-2020",
+       "ctx": "מדיניות תגמול נושאי משרה 2018-2020"
+      },
+      {
+       "file": "https://www.jewishagency-kupa.org.il/wp-content/uploads/2021/10/10_מדיניות_תגמול_לשנים_2015_2017-3.pdf",
+       "text": "מדיניות תגמול נושאי משרה 2015-2017",
+       "ctx": "מדיניות תגמול נושאי משרה 2015-2017"
+      },
+      {
+       "file": "https://www.jewishagency-kupa.org.il/wp-content/uploads/2021/10/10_מדיניותתגמול2014-2.pdf",
+       "text": "מדיניות תגמול נושאי משרה 2014",
+       "ctx": "מדיניות תגמול נושאי משרה 2014"
+      },
+      {
+       "file": "https://www.jewishagency-kupa.org.il/wp-content/uploads/2021/10/10_10_מדיניותתגמולנושאימשרהלשנת-2013-2.pdf",
+       "text": "מדיניות תגמול נושאי משרה 2013",
+       "ctx": "מדיניות תגמול נושאי משרה 2013"
+      },
+      {
+       "file": "https://www.jewishagency-kupa.org.il/wp-content/uploads/2021/10/10_10_מדיניותהשקעות2012.pdf",
+       "text": "מדיניות תגמול נושאי משרה 2012",
+       "ctx": "מדיניות תגמול נושאי משרה 2012"
+      },
+      {
+       "file": "https://www.jewishagency-kupa.org.il/wp-content/uploads/2026/07/מדיניות-הצבעה-באסיפות-כלליות-סוכנות-יהודית-2026-מעודכן-יולי-סופי-2026.docx.pdf",
+       "text": "מדיניות הצבעה באסיפות כלליות סוכנות יהודית 2026",
+       "ctx": "מדיניות הצבעה באסיפות כלליות סוכנות יהודית 2026"
+      },
+      {
+       "file": "https://www.jewishagency-kupa.org.il/wp-content/uploads/2025/12/מדיניות-הצבעה-חברת-עמדה-2025-2026.pdf",
+       "text": "מדיניות הצבעה חברת עמדה 2025-2026",
+       "ctx": "מדיניות הצבעה חברת עמדה 2025-2026"
+      },
+      {
+       "file": "https://www.jewishagency-kupa.org.il/wp-content/uploads/2025/12/דוח-שירות-אזרחים-ותיקים-בגין-שנת-2025.pdf",
+       "text": "דוח שירות אזרחים ותיקים",
+       "ctx": "דוח שירות אזרחים ותיקים"
+      },
+      {
+       "file": "https://www.jewishagency-kupa.org.il/wp-content/uploads/2021/10/10_zdadim_sohnut.pdf",
+       "text": "מבנה אחזקות וצדדים קשורים",
+       "ctx": "מבנה אחזקות וצדדים קשורים"
+      },
+      {
+       "file": "https://www.jewishagency-kupa.org.il/wp-content/uploads/2021/10/10_הודעה_על_העברת_ניהול.pdf",
+       "text": "הודעה על שינוי מבני",
+       "ctx": "הודעה על שינוי מבני"
+      },
+      {
+       "file": "https://www.jewishagency-kupa.org.il/wp-content/uploads/2025/08/נוהל-מספר-18-מדיניות-התגמול-2024-2027-002.pdf",
+       "text": "מדיניות תגמול נושאי משרה 2024-2027",
+       "ctx": "מדיניות תגמול נושאי משרה 2024-2027"
+      },
+      {
+       "file": "https://www.jewishagency-kupa.org.il/wp-content/uploads/2022/12/מדיניות-תגמול-נושאי-משרה-2020-2023.pdf",
+       "text": "מדיניות תגמול נושאי משרה 2020-2023",
+       "ctx": "מדיניות תגמול נושאי משרה 2020-2023"
+      },
+      {
+       "file": "https://www.jewishagency-kupa.org.il/wp-content/uploads/2021/10/10_מדיניות_תגמול_לשנים_2018_2020_סופי-2.pdf",
+       "text": "מדיניות תגמול נושאי משרה 2018-2020",
+       "ctx": "מדיניות תגמול נושאי משרה 2018-2020"
+      },
+      {
+       "file": "https://www.jewishagency-kupa.org.il/wp-content/uploads/2021/10/10_מדיניות_תגמול_לשנים_2015_2017-3.pdf",
+       "text": "מדיניות תגמול נושאי משרה 2015-2017",
+       "ctx": "מדיניות תגמול נושאי משרה 2015-2017"
+      },
+      {
+       "file": "https://www.jewishagency-kupa.org.il/wp-content/uploads/2021/10/10_מדיניותתגמול2014-2.pdf",
+       "text": "מדיניות תגמול נושאי משרה 2014",
+       "ctx": "מדיניות תגמול נושאי משרה 2014"
+      },
+      {
+       "file": "https://www.jewishagency-kupa.org.il/wp-content/uploads/2021/10/10_10_מדיניותתגמולנושאימשרהלשנת-2013-2.pdf",
+       "text": "מדיניות תגמול נושאי משרה 2013",
+       "ctx": "מדיניות תגמול נושאי משרה 2013"
+      },
+      {
+       "file": "https://www.jewishagency-kupa.org.il/wp-content/uploads/2021/10/10_10_מדיניותהשקעות2012.pdf",
+       "text": "מדיניות תגמול נושאי משרה 2012",
+       "ctx": "מדיניות תגמול נושאי משרה 2012"
+      },
+      {
+       "file": "https://www.jewishagency-kupa.org.il/wp-content/uploads/2026/07/מדיניות-הצבעה-באסיפות-כלליות-סוכנות-יהודית-2026-מעודכן-יולי-סופי-2026.docx.pdf",
+       "text": "מדיניות הצבעה באסיפות כלליות סוכנות יהודית 2026",
+       "ctx": "מדיניות הצבעה באסיפות כלליות סוכנות יהודית 2026"
+      },
+      {
+       "file": "https://www.jewishagency-kupa.org.il/wp-content/uploads/2025/12/מדיניות-הצבעה-חברת-עמדה-2025-2026.pdf",
+       "text": "מדיניות הצבעה חברת עמדה 2025-2026",
+       "ctx": "מדיניות הצבעה חברת עמדה 2025-2026"
+      },
+      {
+       "file": "https://www.jewishagency-kupa.org.il/wp-content/uploads/2025/12/דוח-שירות-אזרחים-ותיקים-בגין-שנת-2025.pdf",
+       "text": "דוח שירות אזרחים ותיקים",
+       "ctx": "דוח שירות אזרחים ותיקים"
+      }
+     ]
+    },
+    {
+     "url": "https://www.jewishagency-kupa.org.il/%d7%9e%d7%93%d7%99%d7%a0%d7%99%d7%95%d7%aa-%d7%95%d7%a0%d7%94%d7%9c%d7%99%d7%9d/",
+     "links": 132,
+     "followed": [],
+     "files": 65,
+     "clicked": 0,
+     "captured": 0,
+     "selected": [
+      "https://www.jewishagency-kupa.org.il/wp-content/uploads/2026/02/מדיניות-ואמנת-שירות-לקוחות-1.pdf",
+      "https://www.jewishagency-kupa.org.il/wp-content/uploads/2022/12/מדיניות-השקעה-צפויה-2023.xls",
+      "https://www.jewishagency-kupa.org.il/wp-content/uploads/2023/01/מדיניות-השקעה-צפויה-2023-1-1.xls",
+      "https://www.jewishagency-kupa.org.il/wp-content/uploads/2021/10/10_מדיניות_השקעה_צפויה_2020-1.xls",
+      "https://www.jewishagency-kupa.org.il/wp-content/uploads/2021/10/10_מדיניות_השקעה_צפויה_2019.xls",
+      "https://www.jewishagency-kupa.org.il/wp-content/uploads/2021/10/10_מדיניות_השקעה_צפויה_2018.xls",
+      "https://www.jewishagency-kupa.org.il/wp-content/uploads/2021/10/10_מדיניות_השקעה_צפויה_2017.xls",
+      "https://www.jewishagency-kupa.org.il/wp-content/uploads/2021/10/10_מדיניות_השקעה_צפוייה_2016.xls",
+      "https://www.jewishagency-kupa.org.il/wp-content/uploads/2021/10/10_מדיניות_השקעות_2015סוכנות_יהודית.pdf",
+      "https://www.jewishagency-kupa.org.il/wp-content/uploads/2021/10/10_10_מדיניותהשקעה-2014סופי.pdf",
+      "https://www.jewishagency-kupa.org.il/wp-content/uploads/2021/10/10_10_מדיניותהשקעותצפויה-2013.pdf",
+      "https://www.jewishagency-kupa.org.il/wp-content/uploads/2021/10/10_10_מדיניותהשקעות2012-1.pdf",
+      "https://www.jewishagency-kupa.org.il/wp-content/uploads/2021/10/10_מדיניותהשקעהסוכנותיהודית2011-2.xls",
+      "https://www.jewishagency-kupa.org.il/wp-content/uploads/2021/10/10_מדיניות_תגמול_2020-2023-2.pdf",
+      "https://www.jewishagency-kupa.org.il/wp-content/uploads/2021/10/10_מדיניות_תגמול_לשנים_2018_2020_סופי-2.pdf",
+      "https://www.jewishagency-kupa.org.il/wp-content/uploads/2021/10/10_מדיניות_תגמול_לשנים_2015_2017-3.pdf",
+      "https://www.jewishagency-kupa.org.il/wp-content/uploads/2021/10/10_מדיניותתגמול2014-2.pdf",
+      "https://www.jewishagency-kupa.org.il/wp-content/uploads/2021/10/10_10_מדיניותתגמולנושאימשרהלשנת-2013-2.pdf",
+      "https://www.jewishagency-kupa.org.il/wp-content/uploads/2021/10/10_10_מדיניותהשקעות2012.pdf"
+     ],
+     "unselected_files": [
+      {
+       "file": "https://www.jewishagency-kupa.org.il/wp-content/uploads/2021/10/10_zdadim_sohnut.pdf",
+       "text": "מבנה אחזקות וצדדים קשורים",
+       "ctx": "מבנה אחזקות וצדדים קשורים"
+      },
+      {
+       "file": "https://www.jewishagency-kupa.org.il/wp-content/uploads/2021/10/10_הודעה_על_העברת_ניהול.pdf",
+       "text": "הודעה על שינוי מבני",
+       "ctx": "הודעה על שינוי מבני"
+      },
+      {
+       "file": "https://www.jewishagency-kupa.org.il/wp-content/uploads/2025/08/נוהל-מספר-18-מדיניות-התגמול-2024-2027-002.pdf",
+       "text": "מדיניות תגמול נושאי משרה 2024-2027",
+       "ctx": "מדיניות תגמול נושאי משרה 2024-2027"
+      },
+      {
+       "file": "https://www.jewishagency-kupa.org.il/wp-content/uploads/2022/12/מדיניות-תגמול-נושאי-משרה-2020-2023.pdf",
+       "text": "מדיניות תגמול נושאי משרה 2020-2023",
+       "ctx": "מדיניות תגמול נושאי משרה 2020-2023"
+      },
+      {
+       "file": "https://www.jewishagency-kupa.org.il/wp-content/uploads/2026/07/מדיניות-הצבעה-באסיפות-כלליות-סוכנות-יהודית-2026-מעודכן-יולי-סופי-2026.docx.pdf",
+       "text": "מדיניות הצבעה באסיפות כלליות סוכנות יהודית 2026",
+       "ctx": "מדיניות הצבעה באסיפות כלליות סוכנות יהודית 2026"
+      },
+      {
+       "file": "https://www.jewishagency-kupa.org.il/wp-content/uploads/2025/12/מדיניות-הצבעה-חברת-עמדה-2025-2026.pdf",
+       "text": "מדיניות הצבעה חברת עמדה 2025-2026",
+       "ctx": "מדיניות הצבעה חברת עמדה 2025-2026"
+      },
+      {
+       "file": "https://www.jewishagency-kupa.org.il/wp-content/uploads/2025/12/דוח-שירות-אזרחים-ותיקים-בגין-שנת-2025.pdf",
+       "text": "דוח שירות אזרחים ותיקים",
+       "ctx": "דוח שירות אזרחים ותיקים"
+      },
+      {
+       "file": "https://www.jewishagency-kupa.org.il/wp-content/uploads/2021/10/10_zdadim_sohnut.pdf",
+       "text": "מבנה אחזקות וצדדים קשורים",
+       "ctx": "מבנה אחזקות וצדדים קשורים"
+      },
+      {
+       "file": "https://www.jewishagency-kupa.org.il/wp-content/uploads/2021/10/10_הודעה_על_העברת_ניהול.pdf",
+       "text": "הודעה על שינוי מבני",
+       "ctx": "הודעה על שינוי מבני"
+      },
+      {
+       "file": "https://www.jewishagency-kupa.org.il/wp-content/uploads/2025/08/נוהל-מספר-18-מדיניות-התגמול-2024-2027-002.pdf",
+       "text": "מדיניות תגמול נושאי משרה 2024-2027",
+       "ctx": "מדיניות תגמול נושאי משרה 2024-2027"
+      },
+      {
+       "file": "https://www.jewishagency-kupa.org.il/wp-content/uploads/2022/12/מדיניות-תגמול-נושאי-משרה-2020-2023.pdf",
+       "text": "מדיניות תגמול נושאי משרה 2020-2023",
+       "ctx": "מדיניות תגמול נושאי משרה 2020-2023"
+      },
+      {
+       "file": "https://www.jewishagency-kupa.org.il/wp-content/uploads/2026/07/מדיניות-הצבעה-באסיפות-כלליות-סוכנות-יהודית-2026-מעודכן-יולי-סופי-2026.docx.pdf",
+       "text": "מדיניות הצבעה באסיפות כלליות סוכנות יהודית 2026",
+       "ctx": "מדיניות הצבעה באסיפות כלליות סוכנות יהודית 2026"
+      },
+      {
+       "file": "https://www.jewishagency-kupa.org.il/wp-content/uploads/2025/12/מדיניות-הצבעה-חברת-עמדה-2025-2026.pdf",
+       "text": "מדיניות הצבעה חברת עמדה 2025-2026",
+       "ctx": "מדיניות הצבעה חברת עמדה 2025-2026"
+      },
+      {
+       "file": "https://www.jewishagency-kupa.org.il/wp-content/uploads/2025/12/דוח-שירות-אזרחים-ותיקים-בגין-שנת-2025.pdf",
+       "text": "דוח שירות אזרחים ותיקים",
+       "ctx": "דוח שירות אזרחים ותיקים"
+      },
+      {
+       "file": "https://www.jewishagency-kupa.org.il/wp-content/uploads/2021/10/10_10_קודאתי.pdf",
+       "text": "קוד אתי",
+       "ctx": ""
+      },
+      {
+       "file": "https://www.jewishagency-kupa.org.il/wp-content/uploads/2021/10/10_10_קודאתי.pdf",
+       "text": "להורדה",
+       "ctx": ""
+      }
+     ]
+    },
+    {
+     "url": "https://www.jewishagency-kupa.org.il/wp-content/uploads/2023/05/%D7%93%D7%95%D7%97-%D7%A2%D7%A1%D7%A7%D7%99-%D7%AA%D7%90%D7%92%D7%99%D7%93.doc",
+     "links": 0,
+     "followed": [],
+     "files": 0,
+     "clicked": 0,
+     "captured": 0,
+     "selected": [],
+     "unselected_files": []
+    },
+    {
+     "url": "https://www.jewishagency-kupa.org.il/wp-content/uploads/2023/05/%D7%93%D7%95%D7%97-%D7%93%D7%99%D7%A8%D7%A7%D7%98%D7%95%D7%A8%D7%99%D7%95%D7%9F-.doc",
+     "links": 0,
+     "followed": [],
+     "files": 0,
+     "clicked": 0,
+     "captured": 0,
+     "selected": [],
+     "unselected_files": []
+    },
+    {
+     "url": "https://www.jewishagency-kupa.org.il/wp-content/uploads/2022/08/%D7%93%D7%95%D7%97-%D7%A2%D7%99%D7%A1%D7%A7%D7%99-%D7%AA%D7%90%D7%92%D7%99%D7%93-%D7%97%D7%91%D7%A8%D7%94-%D7%9C%D7%A0%D7%99%D7%94%D7%95%D7%9C-%D7%A4%D7%A0%D7%A1%D7%99%D7%94-%D7%95%D7%AA%D7%92%D7%9E%D7%95%D7%9C%D7%99%D7%9D-2021.doc",
+     "links": 0,
+     "followed": [],
+     "files": 0,
+     "clicked": 0,
+     "captured": 0,
+     "selected": [],
+     "unselected_files": []
+    },
+    {
+     "url": "https://www.jewishagency-kupa.org.il/wp-content/uploads/2022/08/%D7%93%D7%95%D7%97-%D7%93%D7%99%D7%A8%D7%A7%D7%98%D7%95%D7%A8%D7%99%D7%95%D7%9F-%D7%97%D7%91%D7%A8%D7%94-%D7%9E%D7%A0%D7%94%D7%9C%D7%AA-%D7%A4%D7%A0%D7%A1%D7%99%D7%94-%D7%95%D7%AA%D7%92%D7%9E%D7%95%D7%9C%D7%99%D7%9D-2021.doc",
+     "links": 0,
+     "followed": [],
+     "files": 0,
+     "clicked": 0,
+     "captured": 0,
+     "selected": [],
+     "unselected_files": []
+    }
+   ],
+   "new_docs": 0,
+   "found": 665,
+   "selected": 28,
+   "had": 10,
+   "head_skip": 0,
+   "old_skip": 10,
+   "errors": [
+    "מדיניות-ואמנת-שירות-לקוחות-1.pdf -> 418",
+    "מדיניות-ואמנת-שירות-לקוחות-1.pdf -> 418",
+    "מדיניות-ואמנת-שירות-לקוחות-1.pdf -> 418",
+    "מדיניות-ואמנת-שירות-לקוחות-1.pdf -> 418",
+    "מדיניות-ואמנת-שירות-לקוחות-1.pdf -> 418",
+    "מדיניות-ואמנת-שירות-לקוחות-1.pdf -> 418",
+    "מדיניות-ואמנת-שירות-לקוחות-1.pdf -> 418",
+    "מדיניות-ואמנת-שירות-לקוחות-1.pdf -> 418",
+    "מדיניות-ואמנת-שירות-לקוחות-1.pdf -> 418",
+    "מדיניות-ואמנת-שירות-לקוחות-1.pdf -> 418",
+    "מדיניות-השקעה-צפויה-2023.xls -> 418",
+    "מדיניות-השקעה-צפויה-2023-1-1.xls -> 418",
+    "10_מדיניות_השקעה_צפויה_2020-1.xls -> 418",
+    "10_מדיניות_השקעה_צפויה_2019.xls -> 418",
+    "10_מדיניות_השקעה_צפויה_2018.xls -> 418",
+    "10_מדיניות_השקעה_צפויה_2017.xls -> 418",
+    "10_מדיניות_השקעה_צפוייה_2016.xls -> 418",
+    "10_מדיניותהשקעהסוכנותיהודית2011-2.xls -> 418"
+   ],
+   "diag": [
+    "החברה לניהול קופת : links=121 files=26 clicked=0 captured=0 selected=1",
+    "החברה לניהול קופת : links=105 files=26 clicked=0 captured=0 selected=1",
+    "החברה לניהול קופת : links=105 files=26 clicked=0 captured=0 selected=1",
+    "החברה לניהול קופת : links=93 files=26 clicked=0 captured=0 selected=1",
+    "החברה לניהול קופת : links=205 files=138 clicked=0 captured=0 selected=1",
+    "החברה לניהול קופת : links=169 files=96 clicked=0 captured=0 selected=1",
+    "החברה לניהול קופת : links=277 files=210 clicked=0 captured=0 selected=1",
+    "החברה לניהול קופת : links=95 files=26 clicked=0 captured=0 selected=1",
+    "החברה לניהול קופת : links=93 files=26 clicked=0 captured=0 selected=1",
+    "החברה לניהול קופת : links=132 files=65 clicked=0 captured=0 selected=19",
+    "החברה לניהול קופת : links=0 files=0 clicked=0 captured=0 selected=0",
+    "החברה לניהול קופת : links=0 files=0 clicked=0 captured=0 selected=0",
+    "החברה לניהול קופת : links=0 files=0 clicked=0 captured=0 selected=0",
+    "החברה לניהול קופת : links=0 files=0 clicked=0 captured=0 selected=0"
+   ],
+   "new_files": []
+  },
+  {
+   "legal_id": "520027715",
+   "name": "מנורה מבטחים והסתדרות המהנדסים ניהול קופות גמל בע\"מ",
+   "pages": [
+    {
+     "url": "https://www.menoramivt.co.il/funds/about-menora/engineers/omega-fund/omega-286",
+     "links": 231,
+     "followed": [
+      "https://www.menoramivt.co.il/links/regulations-hishtalmut-omega"
+     ],
+     "files": 0,
+     "clicked": 0,
+     "captured": 0,
+     "selected": [],
+     "unselected_files": []
+    },
+    {
+     "url": "https://www.menoramivt.co.il/funds/about-menora/engineers/omega-fund/omega-1445",
+     "links": 226,
+     "followed": [],
+     "files": 0,
+     "clicked": 0,
+     "captured": 0,
+     "selected": [],
+     "unselected_files": []
+    },
+    {
+     "url": "https://www.menoramivt.co.il/funds/about-menora/engineers/omega-fund/omega-1446",
+     "links": 231,
+     "followed": [],
+     "files": 0,
+     "clicked": 0,
+     "captured": 0,
+     "selected": [],
+     "unselected_files": []
+    },
+    {
+     "url": "https://www.menoramivt.co.il/funds/about-menora/engineers/omega-fund/omega-9803",
+     "links": 231,
+     "followed": [],
+     "files": 0,
+     "clicked": 0,
+     "captured": 0,
+     "selected": [],
+     "unselected_files": []
+    },
+    {
+     "url": "https://www.menoramivt.co.il/funds/about-menora/engineers/omega-fund/omega-14418",
+     "links": 231,
+     "followed": [],
+     "files": 0,
+     "clicked": 0,
+     "captured": 0,
+     "selected": [],
+     "unselected_files": []
+    },
+    {
+     "url": "https://www.menoramivt.co.il/funds/about-menora/engineers/omega-fund/omega-15738",
+     "links": 226,
+     "followed": [],
+     "files": 0,
+     "clicked": 0,
+     "captured": 0,
+     "selected": [],
+     "unselected_files": []
+    },
+    {
+     "url": "https://www.menoramivt.co.il/funds/about-menora/engineers/omega-fund/omega-15739",
+     "links": 226,
+     "followed": [],
+     "files": 0,
+     "clicked": 0,
+     "captured": 0,
+     "selected": [],
+     "unselected_files": []
+    },
+    {
+     "url": "https://www.menoramivt.co.il/links/keren-hishtalmut/omega-fund",
+     "links": 237,
+     "followed": [
+      "https://www.menoramivt.co.il/funds/about-menora/engineers/omega-fund/417",
+      "https://www.menoramivt.co.il/funds/about-menora/engineers/omega-fund/about-menora.engineers.omega-fund.omega-15738",
+      "https://www.menoramivt.co.il/funds/about-menora/engineers/omega-fund/omega-fund.omega-SP500"
+     ],
+     "files": 0,
+     "clicked": 0,
+     "captured": 0,
+     "selected": [],
+     "unselected_files": []
+    },
+    {
+     "url": "https://www.menoramivt.co.il/funds/about-menora/engineers/omega-fund/omega-9802",
+     "links": 233,
+     "followed": [],
+     "files": 0,
+     "clicked": 0,
+     "captured": 0,
+     "selected": [],
+     "unselected_files": []
+    },
+    {
+     "url": "https://www.menoramivt.co.il/links/regulations-hishtalmut-omega",
+     "links": 232,
+     "followed": [],
+     "files": 4,
+     "clicked": 0,
+     "captured": 0,
+     "selected": [],
+     "unselected_files": [
+      {
+       "file": "https://cdn.menoramivt.co.il/public/docs/20260511/תקנון-מנורה-מבטחים-השתלמות---מאי-2026.pdf",
+       "text": "לתקנון",
+       "ctx": "תקנון עדכני נכון לתאריך: 05.05.2026 לתקנון"
+      },
+      {
+       "file": "https://cdn.menoramivt.co.il/public/docs/20260511/טבלת-ריכוז-שינויים---מנורה-מבטחים-השתלמות---מאי-2026.pdf",
+       "text": "לקריאה",
+       "ctx": "ריכוז שינויים אחרונים בתקנון שינויים שבוצעו ב-12 החודשים שקדמו ליום 05.05.2026 לקריאה"
+      },
+      {
+       "file": "https://cdn.menoramivt.co.il/public/docs/20251201/תקנון-אומגה-286-בתוקף-מיום-30.9.2025.pdf",
+       "text": "לתקנון",
+       "ctx": "תקנון עדכני נכון לתאריך: 30.09.2025 לתקנון"
+      },
+      {
+       "file": "https://cdn.menoramivt.co.il/public/docs/20251201/שינויים-אומגה-קרן-השתלמות-30.9.25.pdf",
+       "text": "לקריאה",
+       "ctx": "ריכוז שינויים אחרונים בתקנון שינויים שבוצעו ב-12 החודשים שקדמו ליום 30.09.2025 לקריאה"
+      }
+     ]
+    },
+    {
+     "url": "https://www.menoramivt.co.il/funds/about-menora/engineers/omega-fund/417",
+     "links": 231,
+     "followed": [],
+     "files": 0,
+     "clicked": 0,
+     "captured": 0,
+     "selected": [],
+     "unselected_files": []
+    },
+    {
+     "url": "https://www.menoramivt.co.il/funds/about-menora/engineers/omega-fund/about-menora.engineers.omega-fund.omega-15738",
+     "links": 228,
+     "followed": [],
+     "files": 0,
+     "clicked": 0,
+     "captured": 0,
+     "selected": [],
+     "unselected_files": []
+    },
+    {
+     "url": "https://www.menoramivt.co.il/funds/about-menora/engineers/omega-fund/omega-fund.omega-SP500",
+     "links": 230,
+     "followed": [],
+     "files": 0,
+     "clicked": 0,
+     "captured": 0,
+     "selected": [],
+     "unselected_files": []
+    }
+   ],
+   "new_docs": 0,
+   "found": 4,
+   "selected": 0,
+   "had": 0,
+   "head_skip": 0,
+   "mode": "map",
+   "errors": [],
+   "diag": [
+    "מנורה מבטחים והסתד: links=231 files=0 clicked=0 captured=0 selected=0",
+    "מנורה מבטחים והסתד: links=226 files=0 clicked=0 captured=0 selected=0",
+    "מנורה מבטחים והסתד: links=231 files=0 clicked=0 captured=0 selected=0",
+    "מנורה מבטחים והסתד: links=231 files=0 clicked=0 captured=0 selected=0",
+    "מנורה מבטחים והסתד: links=231 files=0 clicked=0 captured=0 selected=0",
+    "מנורה מבטחים והסתד: links=226 files=0 clicked=0 captured=0 selected=0",
+    "מנורה מבטחים והסתד: links=226 files=0 clicked=0 captured=0 selected=0",
+    "מנורה מבטחים והסתד: links=237 files=0 clicked=0 captured=0 selected=0",
+    "מנורה מבטחים והסתד: links=233 files=0 clicked=0 captured=0 selected=0",
+    "מנורה מבטחים והסתד: links=232 files=4 clicked=0 captured=0 selected=0",
+    "   ? תקנון-מנורה-מבטחים-השתלמות---מאי-2026.pdf | לתקנון | תקנון עדכני נכון לתאריך: 05.05.2026 לתקנון",
+    "   ? טבלת-ריכוז-שינויים---מנורה-מבטחים-השתלמות---מאי-2026.pdf | לקריאה | ריכוז שינויים אחרונים בתקנון שינויים שבוצעו ב-12 החודשים שקד",
+    "   ? תקנון-אומגה-286-בתוקף-מיום-30.9.2025.pdf | לתקנון | תקנון עדכני נכון לתאריך: 30.09.2025 לתקנון",
+    "   ? שינויים-אומגה-קרן-השתלמות-30.9.25.pdf | לקריאה | ריכוז שינויים אחרונים בתקנון שינויים שבוצעו ב-12 החודשים שקד",
+    "מנורה מבטחים והסתד: links=231 files=0 clicked=0 captured=0 selected=0",
+    "מנורה מבטחים והסתד: links=228 files=0 clicked=0 captured=0 selected=0",
+    "מנורה מבטחים והסתד: links=230 files=0 clicked=0 captured=0 selected=0"
+   ],
+   "new_files": []
+  },
+  {
+   "legal_id": "520030990",
+   "name": "החברה המנהלת של מינהל קרן ההשתלמות לפקידים עובדי המנהל והשירותים בע\"מ",
+   "pages": [],
+   "new_docs": 0,
+   "found": 0,
+   "selected": 0,
+   "had": 0,
+   "head_skip": 0,
+   "errors": [
+    "https://minhal.org/הרכב-נכסים/: Frame with ID 0 was removed. -> light collect",
+    "https://minhal.org/הרכב-נכסים/: No tab with id: 657242865"
+   ],
+   "diag": [],
+   "new_files": []
+  },
+  {
+   "legal_id": "513173393",
+   "name": "אלטשולר שחם גמל ופנסיה בע\"מ",
+   "pages": [
+    {
+     "url": "https://www.as-invest.co.il/interstedin/קרנות-השתלמות/קרנות-ההשתלמות-שלנו/",
+     "links": 156,
+     "followed": [],
+     "files": 0,
+     "clicked": 0,
+     "captured": 0,
+     "selected": [],
+     "unselected_files": []
+    },
+    {
+     "url": "https://www.as-invest.co.il/interstedin/קרנות-השתלמות/",
+     "links": 222,
+     "followed": [],
+     "files": 0,
+     "clicked": 0,
+     "captured": 0,
+     "selected": [],
+     "unselected_files": []
+    },
+    {
+     "url": "https://www.as-invest.co.il/interstedin/חיסכון-והשקעה/קופת-גמל-להשקעה-המסלולים-שלנו/",
+     "links": 165,
+     "followed": [],
+     "files": 0,
+     "clicked": 0,
+     "captured": 0,
+     "selected": [],
+     "unselected_files": []
+    },
+    {
+     "url": "https://www.as-invest.co.il/interstedin/gemel/קופות-מרכזיות-לפיצויים/",
+     "links": 156,
+     "followed": [
+      "https://www.as-invest.co.il/interstedin/gemel/%D7%90%D7%9C%D7%98%D7%A9%D7%95%D7%9C%D7%A8-%D7%A9%D7%97%D7%9D-%D7%A4%D7%99%D7%A6%D7%95%D7%99%D7%99%D7%9D-%D7%9B%D7%A1%D7%A4%D7%99-%D7%A9%D7%A7%D7%9C%D7%99/"
+     ],
+     "files": 0,
+     "clicked": 0,
+     "captured": 0,
+     "selected": [],
+     "unselected_files": []
+    },
+    {
+     "url": "https://www.as-invest.co.il/interstedin/gemel/",
+     "links": 287,
+     "followed": [
+      "https://www.as-invest.co.il/interstedin/gemel/%D7%90%D7%9C%D7%98%D7%A9%D7%95%D7%9C%D7%A8-%D7%A9%D7%97%D7%9D-%D7%92%D7%9E%D7%9C-%D7%94%D7%9C%D7%9B%D7%94/"
+     ],
+     "files": 1,
+     "clicked": 0,
+     "captured": 0,
+     "selected": [],
+     "unselected_files": [
+      {
+       "file": "https://www.as-invest.co.il/media/10832/אמנת-שרות.pdf",
+       "text": "אמנת שירות לסוכנות לביטוח.",
+       "ctx": "עברית - HE פתח חיפוש אזור אישי סוכנים מעסיקים מתפעלים Toggle navigation חיפוש באתר חפש כניסה לאזור ה"
+      }
+     ]
+    },
+    {
+     "url": "https://www.as-invest.co.il/interstedin/pension/comprehensive-fund/",
+     "links": 424,
+     "followed": [],
+     "files": 0,
+     "clicked": 0,
+     "captured": 0,
+     "selected": [],
+     "unselected_files": []
+    },
+    {
+     "url": "https://www.as-invest.co.il/interstedin/pension/common-pension-fund/",
+     "links": 146,
+     "followed": [],
+     "files": 0,
+     "clicked": 0,
+     "captured": 0,
+     "selected": [],
+     "unselected_files": []
+    },
+    {
+     "url": "https://www.as-invest.co.il/interstedin/%D7%97%D7%99%D7%A1%D7%9B%D7%95%D7%9F-%D7%95%D7%94%D7%A9%D7%A7%D7%A2%D7%94/%D7%90%D7%9C%D7%98%D7%A9%D7%95%D7%9C%D7%A8-%D7%A9%D7%97%D7%9D-%D7%97%D7%99%D7%A1%D7%9B%D7%95%D7%9F-%D7%A4%D7%9C%D7%95%D7%A1-%D7%90%D7%A9%D7%A8%D7%90%D7%99-%D7%95%D7%90%D7%92%D7%97-%D7%A2%D7%9D-%D7%9E%D7%A0%D7%99%D7%95%D7%AA-%D7%A2%D7%93-25-%D7%9E%D7%A0%D7%99%D7%95%D7%AA/",
+     "links": 246,
+     "followed": [
+      "https://www.as-invest.co.il/interstedin/%D7%97%D7%99%D7%A1%D7%9B%D7%95%D7%9F-%D7%95%D7%94%D7%A9%D7%A7%D7%A2%D7%94/%D7%90%D7%9C%D7%98%D7%A9%D7%95%D7%9C%D7%A8-%D7%A9%D7%97%D7%9D-%D7%97%D7%99%D7%A1%D7%9B%D7%95%D7%9F-%D7%A4%D7%9C%D7%95%D7%A1-%D7%90%D7%A9%D7%A8%D7%90%D7%99-%D7%95%D7%90%D7%92%D7%97-%D7%A2%D7%9D-%D7%9E%D7%A0%D7%99%D7%95%D7%AA-%D7%A2%D7%93-25-%D7%9E%D7%A0%D7%99%D7%95%D7%AA/x1",
+      "https://www.as-invest.co.il/interstedin/gemel/%D7%93%D7%95%D7%97%D7%95%D7%AA-%D7%9B%D7%A1%D7%A4%D7%99%D7%99%D7%9D-%D7%90%D7%9C%D7%98%D7%A9%D7%95%D7%9C%D7%A8-%D7%A9%D7%97%D7%9D-%D7%92%D7%9E%D7%9C/"
+     ],
+     "files": 78,
+     "clicked": 0,
+     "captured": 0,
+     "selected": [
+      "https://www.as-invest.co.il/media/ooonq3ug/7800.xlsx",
+      "https://www.as-invest.co.il/media/5wpmtwfr/7800.xlsx",
+      "https://www.as-invest.co.il/media/20cb1opz/7800.xlsx",
+      "https://www.as-invest.co.il/media/34ajqrrt/7800.xlsx",
+      "https://www.as-invest.co.il/media/qikpnb4y/7800.xlsx",
+      "https://www.as-invest.co.il/media/bi4b4sbl/7800_אלטשולר-שחם-חיסכון-פלוס-אשראי-ואגח-עם-מניות-עד-25-מניות-_20250307.xlsx",
+      "https://www.as-invest.co.il/media/mmgjbqsy/7800_אלטשולר-שחם-חיסכון-פלוס-אשראי-ואגח-עם-מניות-עד-25-מניות-_20250101.xlsx"
+     ],
+     "unselected_files": [
+      {
+       "file": "https://www.as-invest.co.il/media/3xdh50ky/אלטשולר-שחם-גמל-להשקעה-חיסכון-פלוס-תקנון-מהדורת-שינויים-מרץ-2025.pdf",
+       "text": "תקנון הקופה מיום 01.03.2025 בעקוב אחר שינויים",
+       "ctx": "תקנון הקופה מיום 01.03.2025 בעקוב אחר שינויים"
+      },
+      {
+       "file": "https://www.as-invest.co.il/media/miyf5dyv/אלטשולר-שחם-גמל-להשקעה-חיסכון-פלוס-תקנון-ריכוז-שינויים-מרץ-2025.pdf",
+       "text": "פירוט השינויים בתקנון מיום 01.03.2025",
+       "ctx": "פירוט השינויים בתקנון מיום 01.03.2025"
+      },
+      {
+       "file": "https://www.as-invest.co.il/media/md1afb1l/אלטשולר-שחם-גמל-להשקעה-חיסכון-פלוס-תקנון-נקי-מרץ-2025.pdf",
+       "text": "תקנון הקופה מיום 01.03.2025",
+       "ctx": "תקנון הקופה מיום 01.03.2025"
+      },
+      {
+       "file": "https://www.as-invest.co.il/media/bw5gg3mu/אלטשולר-שחם-גמל-להשקעה-חיסכון-פלוס-תקנון-מהדורת-שינויים-יולי-2024.pdf",
+       "text": "תקנון הקופה מיום 01.07.2024 בעקוב אחר שינויים",
+       "ctx": "תקנון הקופה מיום 01.07.2024 בעקוב אחר שינויים"
+      },
+      {
+       "file": "https://www.as-invest.co.il/media/odsjpmm0/אלטשולר-שחם-גמל-להשקעה-חיסכון-פלוס-תקנון-ריכוז-שינויים-יולי-2024.pdf",
+       "text": "פירוט השינויים בתקנון מיום 01.07.2024",
+       "ctx": "פירוט השינויים בתקנון מיום 01.07.2024"
+      },
+      {
+       "file": "https://www.as-invest.co.il/media/zsgdouj4/אלטשולר-שחם-גמל-להשקעה-חיסכון-פלוס-תקנון-נקי-יולי-2024.pdf",
+       "text": "תקנון הקופה מיום 01.07.2024",
+       "ctx": "תקנון הקופה מיום 01.07.2024"
+      },
+      {
+       "file": "https://www.as-invest.co.il/media/23449/אלטשולר-שחם-חיסכון-פלוס-תקנון-מהדורת-שינויים-מונגש-אוקטובר-2023.pdf",
+       "text": "תקנון הקופה מיום 31.10.2023 בעקוב אחר שינויים",
+       "ctx": "תקנון הקופה מיום 31.10.2023 בעקוב אחר שינויים"
+      },
+      {
+       "file": "https://www.as-invest.co.il/media/23450/תקנון-קופת-גמל-להשקעה-תקנון-ריכוז-שינויים-מונגש-אוקטובר-2023.pdf",
+       "text": "פירוט השינויים בתקנון מיום 31.10.2023",
+       "ctx": "פירוט השינויים בתקנון מיום 31.10.2023"
+      },
+      {
+       "file": "https://www.as-invest.co.il/media/23448/תקנון-קופת-גמל-להשקעה-תקנון-נקי-מונגש-אוקטובר-2023.pdf",
+       "text": "תקנון הקופה מיום 31.10.2023",
+       "ctx": "תקנון הקופה מיום 31.10.2023"
+      },
+      {
+       "file": "https://www.as-invest.co.il/media/8166/פירוט-השינויים-שנערכו-בתקנון-של-קופת-גמל-להשקעה-סופי-200618.pdf",
+       "text": "פירוט השינויים בתקנון מיום 27.02.2018",
+       "ctx": "פירוט השינויים בתקנון מיום 27.02.2018"
+      },
+      {
+       "file": "https://www.as-invest.co.il/media/8165/תקנון-אלטשולר-שחם-קופת-גמל-להשקעה-סופי-200618.pdf",
+       "text": "תקנון קופה מיום 27.02.2018",
+       "ctx": "תקנון קופה מיום 27.02.2018"
+      },
+      {
+       "file": "https://www.as-invest.co.il/media/wnca2gav/מבנה-אחזקות-אלטשולר-גמל-9326.pdf",
+       "text": "תרשים מבנה אחזקות",
+       "ctx": "תרשים מבנה אחזקות"
+      },
+      {
+       "file": "https://www.as-invest.co.il/media/ugzikt3s/צדדים-קשורים-ספטמבר-2026.pdf",
+       "text": "צדדים קשורים ספטמבר 2026",
+       "ctx": "צדדים קשורים ספטמבר 2026"
+      },
+      {
+       "file": "https://www.as-invest.co.il/media/bcljeejq/גמל-להשקעה.xlsx",
+       "text": "שנת 2025",
+       "ctx": "שנת 2025"
+      },
+      {
+       "file": "https://www.as-invest.co.il/media/hgijrekq/גמל-להשקעה.xlsx",
+       "text": "שנת 2024",
+       "ctx": "שנת 2024"
+      },
+      {
+       "file": "https://www.as-invest.co.il/media/b31beg4h/גמל-להשקעה.xlsx",
+       "text": "שנת 2023",
+       "ctx": "שנת 2023"
+      },
+      {
+       "file": "https://www.as-invest.co.il/media/20962/גמל-להשקעה.xlsx",
+       "text": "שנת 2022",
+       "ctx": "שנת 2022"
+      },
+      {
+       "file": "https://www.as-invest.co.il/media/pucjcrzv/7800.xlsx",
+       "text": "אוגוסט 2026",
+       "ctx": "אוגוסט 2026"
+      },
+      {
+       "file": "https://www.as-invest.co.il/media/pucjcrzv/7800.xlsx",
+       "text": "יולי 2026",
+       "ctx": "יולי 2026"
+      },
+      {
+       "file": "https://www.as-invest.co.il/media/pucjcrzv/7800.xlsx",
+       "text": "יוני 2026",
+       "ctx": "יוני 2026"
+      },
+      {
+       "file": "https://www.as-invest.co.il/media/pucjcrzv/7800.xlsx",
+       "text": "מאי 2026",
+       "ctx": "מאי 2026"
+      },
+      {
+       "file": "https://www.as-invest.co.il/media/pucjcrzv/7800.xlsx",
+       "text": "אפריל 2026",
+       "ctx": "אפריל 2026"
+      },
+      {
+       "file": "https://www.as-invest.co.il/media/pucjcrzv/7800.xlsx",
+       "text": "מרץ 2026",
+       "ctx": "מרץ 2026"
+      },
+      {
+       "file": "https://www.as-invest.co.il/media/pucjcrzv/7800.xlsx",
+       "text": "פברואר 2026",
+       "ctx": "פברואר 2026"
+      },
+      {
+       "file": "https://www.as-invest.co.il/media/pucjcrzv/7800.xlsx",
+       "text": "ינואר 2026",
+       "ctx": "ינואר 2026"
+      }
+     ]
+    },
+    {
+     "url": "https://www.as-invest.co.il/interstedin/%D7%97%D7%99%D7%A1%D7%9B%D7%95%D7%9F-%D7%95%D7%94%D7%A9%D7%A7%D7%A2%D7%94/%D7%90%D7%9C%D7%98%D7%A9%D7%95%D7%9C%D7%A8-%D7%A9%D7%97%D7%9D-%D7%97%D7%99%D7%A1%D7%9B%D7%95%D7%9F-%D7%A4%D7%9C%D7%95%D7%A1-%D7%90%D7%A9%D7%A8%D7%90%D7%99-%D7%95%D7%90%D7%92%D7%97/",
+     "links": 245,
+     "followed": [
+      "https://www.as-invest.co.il/interstedin/%D7%97%D7%99%D7%A1%D7%9B%D7%95%D7%9F-%D7%95%D7%94%D7%A9%D7%A7%D7%A2%D7%94/%D7%90%D7%9C%D7%98%D7%A9%D7%95%D7%9C%D7%A8-%D7%A9%D7%97%D7%9D-%D7%97%D7%99%D7%A1%D7%9B%D7%95%D7%9F-%D7%A4%D7%9C%D7%95%D7%A1-%D7%90%D7%A9%D7%A8%D7%90%D7%99-%D7%95%D7%90%D7%92%D7%97/x1"
+     ],
+     "files": 77,
+     "clicked": 0,
+     "captured": 0,
+     "selected": [
+      "https://www.as-invest.co.il/media/hwuib1kr/7801.xlsx",
+      "https://www.as-invest.co.il/media/fcjcbnl1/7801.xlsx",
+      "https://www.as-invest.co.il/media/buyblpze/7801.xlsx",
+      "https://www.as-invest.co.il/media/z5lnkci1/7801.xlsx",
+      "https://www.as-invest.co.il/media/jwvhdlic/7801.xlsx",
+      "https://www.as-invest.co.il/media/be1odfd0/7801_אלטשולר-שחם-חיסכון-פלוס-אשראי-ואגח_20250307.xlsx",
+      "https://www.as-invest.co.il/media/mmcbqsi2/7801_אלטשולר-שחם-חיסכון-פלוס-אשראי-ואגח_20250101.xlsx"
+     ],
+     "unselected_files": [
+      {
+       "file": "https://www.as-invest.co.il/media/3xdh50ky/אלטשולר-שחם-גמל-להשקעה-חיסכון-פלוס-תקנון-מהדורת-שינויים-מרץ-2025.pdf",
+       "text": "תקנון הקופה מיום 01.03.2025 בעקוב אחר שינויים",
+       "ctx": "תקנון הקופה מיום 01.03.2025 בעקוב אחר שינויים"
+      },
+      {
+       "file": "https://www.as-invest.co.il/media/miyf5dyv/אלטשולר-שחם-גמל-להשקעה-חיסכון-פלוס-תקנון-ריכוז-שינויים-מרץ-2025.pdf",
+       "text": "פירוט השינויים בתקנון מיום 01.03.2025",
+       "ctx": "פירוט השינויים בתקנון מיום 01.03.2025"
+      },
+      {
+       "file": "https://www.as-invest.co.il/media/md1afb1l/אלטשולר-שחם-גמל-להשקעה-חיסכון-פלוס-תקנון-נקי-מרץ-2025.pdf",
+       "text": "תקנון הקופה מיום 01.03.2025",
+       "ctx": "תקנון הקופה מיום 01.03.2025"
+      },
+      {
+       "file": "https://www.as-invest.co.il/media/bw5gg3mu/אלטשולר-שחם-גמל-להשקעה-חיסכון-פלוס-תקנון-מהדורת-שינויים-יולי-2024.pdf",
+       "text": "תקנון הקופה מיום 01.07.2024 בעקוב אחר שינויים",
+       "ctx": "תקנון הקופה מיום 01.07.2024 בעקוב אחר שינויים"
+      },
+      {
+       "file": "https://www.as-invest.co.il/media/odsjpmm0/אלטשולר-שחם-גמל-להשקעה-חיסכון-פלוס-תקנון-ריכוז-שינויים-יולי-2024.pdf",
+       "text": "פירוט השינויים בתקנון מיום 01.07.2024",
+       "ctx": "פירוט השינויים בתקנון מיום 01.07.2024"
+      },
+      {
+       "file": "https://www.as-invest.co.il/media/zsgdouj4/אלטשולר-שחם-גמל-להשקעה-חיסכון-פלוס-תקנון-נקי-יולי-2024.pdf",
+       "text": "תקנון הקופה מיום 01.07.2024",
+       "ctx": "תקנון הקופה מיום 01.07.2024"
+      },
+      {
+       "file": "https://www.as-invest.co.il/media/23449/אלטשולר-שחם-חיסכון-פלוס-תקנון-מהדורת-שינויים-מונגש-אוקטובר-2023.pdf",
+       "text": "תקנון הקופה מיום 31.10.2023 בעקוב אחר שינויים",
+       "ctx": "תקנון הקופה מיום 31.10.2023 בעקוב אחר שינויים"
+      },
+      {
+       "file": "https://www.as-invest.co.il/media/23450/תקנון-קופת-גמל-להשקעה-תקנון-ריכוז-שינויים-מונגש-אוקטובר-2023.pdf",
+       "text": "פירוט השינויים בתקנון מיום 31.10.2023",
+       "ctx": "פירוט השינויים בתקנון מיום 31.10.2023"
+      },
+      {
+       "file": "https://www.as-invest.co.il/media/23448/תקנון-קופת-גמל-להשקעה-תקנון-נקי-מונגש-אוקטובר-2023.pdf",
+       "text": "תקנון הקופה מיום 31.10.2023",
+       "ctx": "תקנון הקופה מיום 31.10.2023"
+      },
+      {
+       "file": "https://www.as-invest.co.il/media/8166/פירוט-השינויים-שנערכו-בתקנון-של-קופת-גמל-להשקעה-סופי-200618.pdf",
+       "text": "פירוט השינויים בתקנון מיום 27.02.2018",
+       "ctx": "פירוט השינויים בתקנון מיום 27.02.2018"
+      },
+      {
+       "file": "https://www.as-invest.co.il/media/8165/תקנון-אלטשולר-שחם-קופת-גמל-להשקעה-סופי-200618.pdf",
+       "text": "תקנון קופה מיום 27.02.2018",
+       "ctx": "תקנון קופה מיום 27.02.2018"
+      },
+      {
+       "file": "https://www.as-invest.co.il/media/wnca2gav/מבנה-אחזקות-אלטשולר-גמל-9326.pdf",
+       "text": "תרשים מבנה אחזקות",
+       "ctx": "תרשים מבנה אחזקות"
+      },
+      {
+       "file": "https://www.as-invest.co.il/media/ugzikt3s/צדדים-קשורים-ספטמבר-2026.pdf",
+       "text": "צדדים קשורים ספטמבר 2026",
+       "ctx": "צדדים קשורים ספטמבר 2026"
+      },
+      {
+       "file": "https://www.as-invest.co.il/media/bcljeejq/גמל-להשקעה.xlsx",
+       "text": "שנת 2025",
+       "ctx": "שנת 2025"
+      },
+      {
+       "file": "https://www.as-invest.co.il/media/hgijrekq/גמל-להשקעה.xlsx",
+       "text": "שנת 2024",
+       "ctx": "שנת 2024"
+      },
+      {
+       "file": "https://www.as-invest.co.il/media/b31beg4h/גמל-להשקעה.xlsx",
+       "text": "שנת 2023",
+       "ctx": "שנת 2023"
+      },
+      {
+       "file": "https://www.as-invest.co.il/media/20962/גמל-להשקעה.xlsx",
+       "text": "שנת 2022",
+       "ctx": "שנת 2022"
+      },
+      {
+       "file": "https://www.as-invest.co.il/media/phgd2nw0/7801.xlsx",
+       "text": "אוגוסט 2026",
+       "ctx": "אוגוסט 2026"
+      },
+      {
+       "file": "https://www.as-invest.co.il/media/phgd2nw0/7801.xlsx",
+       "text": "יולי 2026",
+       "ctx": "יולי 2026"
+      },
+      {
+       "file": "https://www.as-invest.co.il/media/phgd2nw0/7801.xlsx",
+       "text": "יוני 2026",
+       "ctx": "יוני 2026"
+      },
+      {
+       "file": "https://www.as-invest.co.il/media/phgd2nw0/7801.xlsx",
+       "text": "מאי 2026",
+       "ctx": "מאי 2026"
+      },
+      {
+       "file": "https://www.as-invest.co.il/media/phgd2nw0/7801.xlsx",
+       "text": "אפריל 2026",
+       "ctx": "אפריל 2026"
+      },
+      {
+       "file": "https://www.as-invest.co.il/media/phgd2nw0/7801.xlsx",
+       "text": "מרץ 2026",
+       "ctx": "מרץ 2026"
+      },
+      {
+       "file": "https://www.as-invest.co.il/media/phgd2nw0/7801.xlsx",
+       "text": "פברואר 2026",
+       "ctx": "פברואר 2026"
+      },
+      {
+       "file": "https://www.as-invest.co.il/media/phgd2nw0/7801.xlsx",
+       "text": "ינואר 2026",
+       "ctx": "ינואר 2026"
+      }
+     ]
+    },
+    {
+     "url": "https://www.as-invest.co.il/interstedin/%D7%97%D7%99%D7%A1%D7%9B%D7%95%D7%9F-%D7%95%D7%94%D7%A9%D7%A7%D7%A2%D7%94/%D7%90%D7%9C%D7%98%D7%A9%D7%95%D7%9C%D7%A8-%D7%A9%D7%97%D7%9D-%D7%97%D7%99%D7%A1%D7%9B%D7%95%D7%9F-%D7%A4%D7%9C%D7%95%D7%A1-%D7%94%D7%9C%D7%9B%D7%94/",
+     "links": 247,
+     "followed": [
+      "https://www.as-invest.co.il/interstedin/%D7%97%D7%99%D7%A1%D7%9B%D7%95%D7%9F-%D7%95%D7%94%D7%A9%D7%A7%D7%A2%D7%94/%D7%90%D7%9C%D7%98%D7%A9%D7%95%D7%9C%D7%A8-%D7%A9%D7%97%D7%9D-%D7%97%D7%99%D7%A1%D7%9B%D7%95%D7%9F-%D7%A4%D7%9C%D7%95%D7%A1-%D7%94%D7%9C%D7%9B%D7%94/x1"
+     ],
+     "files": 79,
+     "clicked": 0,
+     "captured": 0,
+     "selected": [
+      "https://www.as-invest.co.il/media/1ozdp0l0/12257.xlsx",
+      "https://www.as-invest.co.il/media/2d4g0byy/12257.xlsx",
+      "https://www.as-invest.co.il/media/4r3jltha/12257.xlsx",
+      "https://www.as-invest.co.il/media/qb3ady1h/12257.xlsx",
+      "https://www.as-invest.co.il/media/qf2fceyi/12257.xlsx",
+      "https://www.as-invest.co.il/media/4brfpd2f/12257.xlsx",
+      "https://www.as-invest.co.il/media/5mqjwzvj/12257_אלטשולר-שחם-חיסכון-פלוס-הלכה_20250101.xlsx"
+     ],
+     "unselected_files": [
+      {
+       "file": "https://www.as-invest.co.il/media/jvkprek0/תשואה-כהלכה-בתוקף-עד-230828.pdf",
+       "text": "לחץ כאן",
+       "ctx": "לצפייה בתעודת הכשרות של תשואה כהלכה לחץ כאן"
+      },
+      {
+       "file": "https://www.as-invest.co.il/media/ykiprb2w/תעודת-כשרות-מכון-כתר.pdf",
+       "text": "לחץ כאן",
+       "ctx": "לצפייה בתעודת הכשרות של מכון כת\"ר לחץ כאן"
+      },
+      {
+       "file": "https://www.as-invest.co.il/media/3xdh50ky/אלטשולר-שחם-גמל-להשקעה-חיסכון-פלוס-תקנון-מהדורת-שינויים-מרץ-2025.pdf",
+       "text": "תקנון הקופה מיום 01.03.2025 בעקוב אחר שינויים",
+       "ctx": "תקנון הקופה מיום 01.03.2025 בעקוב אחר שינויים"
+      },
+      {
+       "file": "https://www.as-invest.co.il/media/miyf5dyv/אלטשולר-שחם-גמל-להשקעה-חיסכון-פלוס-תקנון-ריכוז-שינויים-מרץ-2025.pdf",
+       "text": "פירוט השינויים בתקנון מיום 01.03.2025",
+       "ctx": "פירוט השינויים בתקנון מיום 01.03.2025"
+      },
+      {
+       "file": "https://www.as-invest.co.il/media/md1afb1l/אלטשולר-שחם-גמל-להשקעה-חיסכון-פלוס-תקנון-נקי-מרץ-2025.pdf",
+       "text": "תקנון הקופה מיום 01.03.2025",
+       "ctx": "תקנון הקופה מיום 01.03.2025"
+      },
+      {
+       "file": "https://www.as-invest.co.il/media/bw5gg3mu/אלטשולר-שחם-גמל-להשקעה-חיסכון-פלוס-תקנון-מהדורת-שינויים-יולי-2024.pdf",
+       "text": "תקנון הקופה מיום 01.07.2024 בעקוב אחר שינויים",
+       "ctx": "תקנון הקופה מיום 01.07.2024 בעקוב אחר שינויים"
+      },
+      {
+       "file": "https://www.as-invest.co.il/media/odsjpmm0/אלטשולר-שחם-גמל-להשקעה-חיסכון-פלוס-תקנון-ריכוז-שינויים-יולי-2024.pdf",
+       "text": "פירוט השינויים בתקנון מיום 01.07.2024",
+       "ctx": "פירוט השינויים בתקנון מיום 01.07.2024"
+      },
+      {
+       "file": "https://www.as-invest.co.il/media/zsgdouj4/אלטשולר-שחם-גמל-להשקעה-חיסכון-פלוס-תקנון-נקי-יולי-2024.pdf",
+       "text": "תקנון הקופה מיום 01.07.2024",
+       "ctx": "תקנון הקופה מיום 01.07.2024"
+      },
+      {
+       "file": "https://www.as-invest.co.il/media/23449/אלטשולר-שחם-חיסכון-פלוס-תקנון-מהדורת-שינויים-מונגש-אוקטובר-2023.pdf",
+       "text": "תקנון הקופה מיום 31.10.2023 בעקוב אחר שינויים",
+       "ctx": "תקנון הקופה מיום 31.10.2023 בעקוב אחר שינויים"
+      },
+      {
+       "file": "https://www.as-invest.co.il/media/23450/תקנון-קופת-גמל-להשקעה-תקנון-ריכוז-שינויים-מונגש-אוקטובר-2023.pdf",
+       "text": "פירוט השינויים בתקנון מיום 31.10.2023",
+       "ctx": "פירוט השינויים בתקנון מיום 31.10.2023"
+      },
+      {
+       "file": "https://www.as-invest.co.il/media/23448/תקנון-קופת-גמל-להשקעה-תקנון-נקי-מונגש-אוקטובר-2023.pdf",
+       "text": "תקנון הקופה מיום 31.10.2023",
+       "ctx": "תקנון הקופה מיום 31.10.2023"
+      },
+      {
+       "file": "https://www.as-invest.co.il/media/8166/פירוט-השינויים-שנערכו-בתקנון-של-קופת-גמל-להשקעה-סופי-200618.pdf",
+       "text": "פירוט השינויים בתקנון מיום 27.02.2018",
+       "ctx": "פירוט השינויים בתקנון מיום 27.02.2018"
+      },
+      {
+       "file": "https://www.as-invest.co.il/media/8165/תקנון-אלטשולר-שחם-קופת-גמל-להשקעה-סופי-200618.pdf",
+       "text": "תקנון הקופה מיום 27.02.2018",
+       "ctx": "תקנון הקופה מיום 27.02.2018"
+      },
+      {
+       "file": "https://www.as-invest.co.il/media/wnca2gav/מבנה-אחזקות-אלטשולר-גמל-9326.pdf",
+       "text": "תרשים מבנה אחזקות",
+       "ctx": "תרשים מבנה אחזקות"
+      },
+      {
+       "file": "https://www.as-invest.co.il/media/ugzikt3s/צדדים-קשורים-ספטמבר-2026.pdf",
+       "text": "צדדים קשורים ספטמבר 2026",
+       "ctx": "צדדים קשורים ספטמבר 2026"
+      },
+      {
+       "file": "https://www.as-invest.co.il/media/bcljeejq/גמל-להשקעה.xlsx",
+       "text": "שנת 2025",
+       "ctx": "שנת 2025"
+      },
+      {
+       "file": "https://www.as-invest.co.il/media/hgijrekq/גמל-להשקעה.xlsx",
+       "text": "שנת 2024",
+       "ctx": "שנת 2024"
+      },
+      {
+       "file": "https://www.as-invest.co.il/media/b31beg4h/גמל-להשקעה.xlsx",
+       "text": "שנת 2023",
+       "ctx": "שנת 2023"
+      },
+      {
+       "file": "https://www.as-invest.co.il/media/20962/גמל-להשקעה.xlsx",
+       "text": "שנת 2022",
+       "ctx": "שנת 2022"
+      },
+      {
+       "file": "https://www.as-invest.co.il/media/ntapts2z/12257.xlsx",
+       "text": "אוגוסט 2026",
+       "ctx": "אוגוסט 2026"
+      },
+      {
+       "file": "https://www.as-invest.co.il/media/ntapts2z/12257.xlsx",
+       "text": "יולי 2026",
+       "ctx": "יולי 2026"
+      },
+      {
+       "file": "https://www.as-invest.co.il/media/ntapts2z/12257.xlsx",
+       "text": "יוני 2026",
+       "ctx": "יוני 2026"
+      },
+      {
+       "file": "https://www.as-invest.co.il/media/ntapts2z/12257.xlsx",
+       "text": "מאי 2026",
+       "ctx": "מאי 2026"
+      },
+      {
+       "file": "https://www.as-invest.co.il/media/ntapts2z/12257.xlsx",
+       "text": "אפריל 2026",
+       "ctx": "אפריל 2026"
+      },
+      {
+       "file": "https://www.as-invest.co.il/media/ntapts2z/12257.xlsx",
+       "text": "מרץ 2026",
+       "ctx": "מרץ 2026"
+      }
+     ]
+    },
+    {
+     "url": "https://www.as-invest.co.il/interstedin/%D7%97%D7%99%D7%A1%D7%9B%D7%95%D7%9F-%D7%95%D7%94%D7%A9%D7%A7%D7%A2%D7%94/%D7%90%D7%9C%D7%98%D7%A9%D7%95%D7%9C%D7%A8-%D7%A9%D7%97%D7%9D-%D7%97%D7%99%D7%A1%D7%9B%D7%95%D7%9F-%D7%A4%D7%9C%D7%95%D7%A1-%D7%9B%D7%9C%D7%9C%D7%99/",
+     "links": 251,
+     "followed": [
+      "https://www.as-invest.co.il/interstedin/%D7%97%D7%99%D7%A1%D7%9B%D7%95%D7%9F-%D7%95%D7%94%D7%A9%D7%A7%D7%A2%D7%94/%D7%90%D7%9C%D7%98%D7%A9%D7%95%D7%9C%D7%A8-%D7%A9%D7%97%D7%9D-%D7%97%D7%99%D7%A1%D7%9B%D7%95%D7%9F-%D7%A4%D7%9C%D7%95%D7%A1-%D7%9B%D7%9C%D7%9C%D7%99/x1"
+     ],
+     "files": 83,
+     "clicked": 0,
+     "captured": 0,
+     "selected": [
+      "https://www.as-invest.co.il/media/3mzh2cej/7798.xlsx",
+      "https://www.as-invest.co.il/media/f2kjbhua/7798.xlsx",
+      "https://www.as-invest.co.il/media/j40dixck/7798.xlsx",
+      "https://www.as-invest.co.il/media/500nezk4/7798.xlsx",
+      "https://www.as-invest.co.il/media/tzjnrxrg/7798.xlsx",
+      "https://www.as-invest.co.il/media/aqwcgqmb/7798.xlsx",
+      "https://www.as-invest.co.il/media/z5fdshwi/7798_אלטשולר-שחם-חיסכון-פלוס-כללי_20250101.xlsx"
+     ],
+     "unselected_files": [
+      {
+       "file": "https://www.as-invest.co.il/media/3xdh50ky/אלטשולר-שחם-גמל-להשקעה-חיסכון-פלוס-תקנון-מהדורת-שינויים-מרץ-2025.pdf",
+       "text": "תקנון הקופה מיום 01.03.2025 בעקוב אחר שינויים",
+       "ctx": "תקנון הקופה מיום 01.03.2025 בעקוב אחר שינויים"
+      },
+      {
+       "file": "https://www.as-invest.co.il/media/miyf5dyv/אלטשולר-שחם-גמל-להשקעה-חיסכון-פלוס-תקנון-ריכוז-שינויים-מרץ-2025.pdf",
+       "text": "פירוט השינויים בתקנון מיום 01.03.2025",
+       "ctx": "פירוט השינויים בתקנון מיום 01.03.2025"
+      },
+      {
+       "file": "https://www.as-invest.co.il/media/md1afb1l/אלטשולר-שחם-גמל-להשקעה-חיסכון-פלוס-תקנון-נקי-מרץ-2025.pdf",
+       "text": "תקנון הקופה מיום 01.03.2025",
+       "ctx": "תקנון הקופה מיום 01.03.2025"
+      },
+      {
+       "file": "https://www.as-invest.co.il/media/bw5gg3mu/אלטשולר-שחם-גמל-להשקעה-חיסכון-פלוס-תקנון-מהדורת-שינויים-יולי-2024.pdf",
+       "text": "תקנון הקופה מיום 01.07.2024 בעקוב אחר שינויים",
+       "ctx": "תקנון הקופה מיום 01.07.2024 בעקוב אחר שינויים"
+      },
+      {
+       "file": "https://www.as-invest.co.il/media/odsjpmm0/אלטשולר-שחם-גמל-להשקעה-חיסכון-פלוס-תקנון-ריכוז-שינויים-יולי-2024.pdf",
+       "text": "פירוט השינויים בתקנון מיום 01.07.2024",
+       "ctx": "פירוט השינויים בתקנון מיום 01.07.2024"
+      },
+      {
+       "file": "https://www.as-invest.co.il/media/zsgdouj4/אלטשולר-שחם-גמל-להשקעה-חיסכון-פלוס-תקנון-נקי-יולי-2024.pdf",
+       "text": "תקנון הקופה מיום 01.07.2024",
+       "ctx": "תקנון הקופה מיום 01.07.2024"
+      },
+      {
+       "file": "https://www.as-invest.co.il/media/23449/אלטשולר-שחם-חיסכון-פלוס-תקנון-מהדורת-שינויים-מונגש-אוקטובר-2023.pdf",
+       "text": "תקנון הקופה מיום 31.10.2023 בעקוב אחר שינויים",
+       "ctx": "תקנון הקופה מיום 31.10.2023 בעקוב אחר שינויים"
+      },
+      {
+       "file": "https://www.as-invest.co.il/media/23450/תקנון-קופת-גמל-להשקעה-תקנון-ריכוז-שינויים-מונגש-אוקטובר-2023.pdf",
+       "text": "פירוט השינויים בתקנון מיום 31.10.2023",
+       "ctx": "פירוט השינויים בתקנון מיום 31.10.2023"
+      },
+      {
+       "file": "https://www.as-invest.co.il/media/23448/תקנון-קופת-גמל-להשקעה-תקנון-נקי-מונגש-אוקטובר-2023.pdf",
+       "text": "תקנון הקופה מיום 31.10.2023",
+       "ctx": "תקנון הקופה מיום 31.10.2023"
+      },
+      {
+       "file": "https://www.as-invest.co.il/media/8166/פירוט-השינויים-שנערכו-בתקנון-של-קופת-גמל-להשקעה-סופי-200618.pdf",
+       "text": "פירוט השינויים בתקנון מיום 27.02.2018",
+       "ctx": "פירוט השינויים בתקנון מיום 27.02.2018"
+      },
+      {
+       "file": "https://www.as-invest.co.il/media/8165/תקנון-אלטשולר-שחם-קופת-גמל-להשקעה-סופי-200618.pdf",
+       "text": "תקנון קופה מיום 27.02.2018",
+       "ctx": "תקנון קופה מיום 27.02.2018"
+      },
+      {
+       "file": "https://www.as-invest.co.il/media/wnca2gav/מבנה-אחזקות-אלטשולר-גמל-9326.pdf",
+       "text": "תרשים מבנה אחזקות",
+       "ctx": "תרשים מבנה אחזקות"
+      },
+      {
+       "file": "https://www.as-invest.co.il/media/ugzikt3s/צדדים-קשורים-ספטמבר-2026.pdf",
+       "text": "צדדים קשורים ספטמבר 2026",
+       "ctx": "צדדים קשורים ספטמבר 2026"
+      },
+      {
+       "file": "https://www.as-invest.co.il/media/bcljeejq/גמל-להשקעה.xlsx",
+       "text": "שנת 2025",
+       "ctx": "שנת 2025"
+      },
+      {
+       "file": "https://www.as-invest.co.il/media/hgijrekq/גמל-להשקעה.xlsx",
+       "text": "שנת 2024",
+       "ctx": "שנת 2024"
+      },
+      {
+       "file": "https://www.as-invest.co.il/media/b31beg4h/גמל-להשקעה.xlsx",
+       "text": "שנת 2023",
+       "ctx": "שנת 2023"
+      },
+      {
+       "file": "https://www.as-invest.co.il/media/20962/גמל-להשקעה.xlsx",
+       "text": "שנת 2022",
+       "ctx": "שנת 2022"
+      },
+      {
+       "file": "https://www.as-invest.co.il/media/cqenzdzm/7798.xlsx",
+       "text": "אוגוסט 2026",
+       "ctx": "אוגוסט 2026"
+      },
+      {
+       "file": "https://www.as-invest.co.il/media/cqenzdzm/7798.xlsx",
+       "text": "יולי 2026",
+       "ctx": "יולי 2026"
+      },
+      {
+       "file": "https://www.as-invest.co.il/media/cqenzdzm/7798.xlsx",
+       "text": "יוני 2026",
+       "ctx": "יוני 2026"
+      },
+      {
+       "file": "https://www.as-invest.co.il/media/cqenzdzm/7798.xlsx",
+       "text": "מאי 2026",
+       "ctx": "מאי 2026"
+      },
+      {
+       "file": "https://www.as-invest.co.il/media/cqenzdzm/7798.xlsx",
+       "text": "אפריל 2026",
+       "ctx": "אפריל 2026"
+      },
+      {
+       "file": "https://www.as-invest.co.il/media/cqenzdzm/7798.xlsx",
+       "text": "מרץ 2026",
+       "ctx": "מרץ 2026"
+      },
+      {
+       "file": "https://www.as-invest.co.il/media/cqenzdzm/7798.xlsx",
+       "text": "פברואר 2026",
+       "ctx": "פברואר 2026"
+      },
+      {
+       "file": "https://www.as-invest.co.il/media/cqenzdzm/7798.xlsx",
+       "text": "ינואר 2026",
+       "ctx": "ינואר 2026"
+      }
+     ]
+    },
+    {
+     "url": "https://www.as-invest.co.il/interstedin/%D7%97%D7%99%D7%A1%D7%9B%D7%95%D7%9F-%D7%95%D7%94%D7%A9%D7%A7%D7%A2%D7%94/%D7%90%D7%9C%D7%98%D7%A9%D7%95%D7%9C%D7%A8-%D7%A9%D7%97%D7%9D-%D7%97%D7%99%D7%A1%D7%9B%D7%95%D7%9F-%D7%A4%D7%9C%D7%95%D7%A1-%D7%9B%D7%A1%D7%A4%D7%99-%D7%A9%D7%A7%D7%9C%D7%99/",
+     "links": 238,
+     "followed": [
+      "https://www.as-invest.co.il/interstedin/%D7%97%D7%99%D7%A1%D7%9B%D7%95%D7%9F-%D7%95%D7%94%D7%A9%D7%A7%D7%A2%D7%94/%D7%90%D7%9C%D7%98%D7%A9%D7%95%D7%9C%D7%A8-%D7%A9%D7%97%D7%9D-%D7%97%D7%99%D7%A1%D7%9B%D7%95%D7%9F-%D7%A4%D7%9C%D7%95%D7%A1-%D7%9B%D7%A1%D7%A4%D7%99-%D7%A9%D7%A7%D7%9C%D7%99/x1"
+     ],
+     "files": 70,
+     "clicked": 0,
+     "captured": 0,
+     "selected": [
+      "https://www.as-invest.co.il/media/fk1f2jot/7802.xlsx",
+      "https://www.as-invest.co.il/media/xs4bwnky/7802_אלטשולר-שחם-חיסכון-פלוס-כספי-שקלי-_20250720.xlsx",
+      "https://www.as-invest.co.il/media/ccmb4ewe/7802_אלטשולר-שחם-חיסכון-פלוס-כספי-שקלי-_20250101.xlsx"
+     ],
+     "unselected_files": [
+      {
+       "file": "https://www.as-invest.co.il/media/3xdh50ky/אלטשולר-שחם-גמל-להשקעה-חיסכון-פלוס-תקנון-מהדורת-שינויים-מרץ-2025.pdf",
+       "text": "תקנון הקופה מיום 01.03.2025 בעקוב אחר שינויים",
+       "ctx": "תקנון הקופה מיום 01.03.2025 בעקוב אחר שינויים"
+      },
+      {
+       "file": "https://www.as-invest.co.il/media/miyf5dyv/אלטשולר-שחם-גמל-להשקעה-חיסכון-פלוס-תקנון-ריכוז-שינויים-מרץ-2025.pdf",
+       "text": "פירוט השינויים בתקנון מיום 01.03.2025",
+       "ctx": "פירוט השינויים בתקנון מיום 01.03.2025"
+      },
+      {
+       "file": "https://www.as-invest.co.il/media/md1afb1l/אלטשולר-שחם-גמל-להשקעה-חיסכון-פלוס-תקנון-נקי-מרץ-2025.pdf",
+       "text": "תקנון הקופה מיום 01.03.2025",
+       "ctx": "תקנון הקופה מיום 01.03.2025"
+      },
+      {
+       "file": "https://www.as-invest.co.il/media/bw5gg3mu/אלטשולר-שחם-גמל-להשקעה-חיסכון-פלוס-תקנון-מהדורת-שינויים-יולי-2024.pdf",
+       "text": "תקנון הקופה מיום 01.07.2024 בעקוב אחר שינויים",
+       "ctx": "תקנון הקופה מיום 01.07.2024 בעקוב אחר שינויים"
+      },
+      {
+       "file": "https://www.as-invest.co.il/media/odsjpmm0/אלטשולר-שחם-גמל-להשקעה-חיסכון-פלוס-תקנון-ריכוז-שינויים-יולי-2024.pdf",
+       "text": "פירוט השינויים בתקנון מיום 01.07.2024",
+       "ctx": "פירוט השינויים בתקנון מיום 01.07.2024"
+      },
+      {
+       "file": "https://www.as-invest.co.il/media/zsgdouj4/אלטשולר-שחם-גמל-להשקעה-חיסכון-פלוס-תקנון-נקי-יולי-2024.pdf",
+       "text": "תקנון הקופה מיום 01.07.2024",
+       "ctx": "תקנון הקופה מיום 01.07.2024"
+      },
+      {
+       "file": "https://www.as-invest.co.il/media/23449/אלטשולר-שחם-חיסכון-פלוס-תקנון-מהדורת-שינויים-מונגש-אוקטובר-2023.pdf",
+       "text": "תקנון הקופה מיום 31.10.2023 בעקוב אחר שינויים",
+       "ctx": "תקנון הקופה מיום 31.10.2023 בעקוב אחר שינויים"
+      },
+      {
+       "file": "https://www.as-invest.co.il/media/23450/תקנון-קופת-גמל-להשקעה-תקנון-ריכוז-שינויים-מונגש-אוקטובר-2023.pdf",
+       "text": "פירוט השינויים בתקנון מיום 31.10.2023",
+       "ctx": "פירוט השינויים בתקנון מיום 31.10.2023"
+      },
+      {
+       "file": "https://www.as-invest.co.il/media/23448/תקנון-קופת-גמל-להשקעה-תקנון-נקי-מונגש-אוקטובר-2023.pdf",
+       "text": "תקנון הקופה מיום 31.10.2023",
+       "ctx": "תקנון הקופה מיום 31.10.2023"
+      },
+      {
+       "file": "https://www.as-invest.co.il/media/8166/פירוט-השינויים-שנערכו-בתקנון-של-קופת-גמל-להשקעה-סופי-200618.pdf",
+       "text": "פירוט השינויים בתקנון מיום 27.02.2018",
+       "ctx": "פירוט השינויים בתקנון מיום 27.02.2018"
+      },
+      {
+       "file": "https://www.as-invest.co.il/media/8165/תקנון-אלטשולר-שחם-קופת-גמל-להשקעה-סופי-200618.pdf",
+       "text": "תקנון קופה מיום 27.02.2018",
+       "ctx": "תקנון קופה מיום 27.02.2018"
+      },
+      {
+       "file": "https://www.as-invest.co.il/media/wnca2gav/מבנה-אחזקות-אלטשולר-גמל-9326.pdf",
+       "text": "תרשים מבנה אחזקות",
+       "ctx": "תרשים מבנה אחזקות"
+      },
+      {
+       "file": "https://www.as-invest.co.il/media/ugzikt3s/צדדים-קשורים-ספטמבר-2026.pdf",
+       "text": "צדדים קשורים ספטמבר 2026",
+       "ctx": "צדדים קשורים ספטמבר 2026"
+      },
+      {
+       "file": "https://www.as-invest.co.il/media/bcljeejq/גמל-להשקעה.xlsx",
+       "text": "שנת 2025",
+       "ctx": "שנת 2025"
+      },
+      {
+       "file": "https://www.as-invest.co.il/media/hgijrekq/גמל-להשקעה.xlsx",
+       "text": "שנת 2024",
+       "ctx": "שנת 2024"
+      },
+      {
+       "file": "https://www.as-invest.co.il/media/b31beg4h/גמל-להשקעה.xlsx",
+       "text": "שנת 2023",
+       "ctx": "שנת 2023"
+      },
+      {
+       "file": "https://www.as-invest.co.il/media/20962/גמל-להשקעה.xlsx",
+       "text": "שנת 2022",
+       "ctx": "שנת 2022"
+      },
+      {
+       "file": "https://www.as-invest.co.il/media/mg1ljqyo/7802.xlsx",
+       "text": "דוח רבעון 2 2026",
+       "ctx": "דוח רבעון 2 2026"
+      },
+      {
+       "file": "https://www.as-invest.co.il/media/mg1ljqyo/7802.xlsx",
+       "text": "דוח רבעון 1 2026",
+       "ctx": "דוח רבעון 1 2026"
+      },
+      {
+       "file": "https://www.as-invest.co.il/media/mg1ljqyo/7802.xlsx",
+       "text": "דוח רבעון 4 2025",
+       "ctx": "דוח רבעון 4 2025"
+      },
+      {
+       "file": "https://www.as-invest.co.il/media/134hu2zv/7802.xlsx",
+       "text": "דוח רבעון 3 2025",
+       "ctx": "דוח רבעון 3 2025"
+      },
+      {
+       "file": "https://www.as-invest.co.il/media/hfcfaqfl/7802.xlsx",
+       "text": "אוגוסט 2026",
+       "ctx": "אוגוסט 2026"
+      },
+      {
+       "file": "https://www.as-invest.co.il/media/hfcfaqfl/7802.xlsx",
+       "text": "יולי 2026",
+       "ctx": "יולי 2026"
+      },
+      {
+       "file": "https://www.as-invest.co.il/media/hfcfaqfl/7802.xlsx",
+       "text": "יוני 2026",
+       "ctx": "יוני 2026"
+      },
+      {
+       "file": "https://www.as-invest.co.il/media/hfcfaqfl/7802.xlsx",
+       "text": "מאי 2026",
+       "ctx": "מאי 2026"
+      }
+     ]
+    },
+    {
+     "url": "https://www.as-invest.co.il/interstedin/%D7%97%D7%99%D7%A1%D7%9B%D7%95%D7%9F-%D7%95%D7%94%D7%A9%D7%A7%D7%A2%D7%94/%D7%90%D7%9C%D7%98%D7%A9%D7%95%D7%9C%D7%A8-%D7%A9%D7%97%D7%9D-%D7%97%D7%99%D7%A1%D7%9B%D7%95%D7%9F-%D7%A4%D7%9C%D7%95%D7%A1-%D7%9E%D7%A0%D7%99%D7%95%D7%AA/",
+     "links": 245,
+     "followed": [
+      "https://www.as-invest.co.il/interstedin/%D7%97%D7%99%D7%A1%D7%9B%D7%95%D7%9F-%D7%95%D7%94%D7%A9%D7%A7%D7%A2%D7%94/%D7%90%D7%9C%D7%98%D7%A9%D7%95%D7%9C%D7%A8-%D7%A9%D7%97%D7%9D-%D7%97%D7%99%D7%A1%D7%9B%D7%95%D7%9F-%D7%A4%D7%9C%D7%95%D7%A1-%D7%9E%D7%A0%D7%99%D7%95%D7%AA/x1"
+     ],
+     "files": 77,
+     "clicked": 0,
+     "captured": 0,
+     "selected": [
+      "https://www.as-invest.co.il/media/i5qanwlo/7799.xlsx",
+      "https://www.as-invest.co.il/media/obsorz3c/7799.xlsx",
+      "https://www.as-invest.co.il/media/dbpg1zlh/7799.xlsx",
+      "https://www.as-invest.co.il/media/tgxb05cg/7799.xlsx",
+      "https://www.as-invest.co.il/media/bhehl1yk/7799.xlsx",
+      "https://www.as-invest.co.il/media/nuhdhzcn/7799.xlsx",
+      "https://www.as-invest.co.il/media/1w1gth5d/7799_אלטשולר-שחם-חיסכון-פלוס-מניות_20250101.xlsx"
+     ],
+     "unselected_files": [
+      {
+       "file": "https://www.as-invest.co.il/media/3xdh50ky/אלטשולר-שחם-גמל-להשקעה-חיסכון-פלוס-תקנון-מהדורת-שינויים-מרץ-2025.pdf",
+       "text": "תקנון הקופה מיום 01.03.2025 בעקוב אחר שינויים",
+       "ctx": "תקנון הקופה מיום 01.03.2025 בעקוב אחר שינויים"
+      },
+      {
+       "file": "https://www.as-invest.co.il/media/miyf5dyv/אלטשולר-שחם-גמל-להשקעה-חיסכון-פלוס-תקנון-ריכוז-שינויים-מרץ-2025.pdf",
+       "text": "פירוט השינויים בתקנון מיום 01.03.2025",
+       "ctx": "פירוט השינויים בתקנון מיום 01.03.2025"
+      },
+      {
+       "file": "https://www.as-invest.co.il/media/md1afb1l/אלטשולר-שחם-גמל-להשקעה-חיסכון-פלוס-תקנון-נקי-מרץ-2025.pdf",
+       "text": "תקנון הקופה מיום 01.03.2025",
+       "ctx": "תקנון הקופה מיום 01.03.2025"
+      },
+      {
+       "file": "https://www.as-invest.co.il/media/bw5gg3mu/אלטשולר-שחם-גמל-להשקעה-חיסכון-פלוס-תקנון-מהדורת-שינויים-יולי-2024.pdf",
+       "text": "תקנון הקופה מיום 01.07.2024 בעקוב אחר שינויים",
+       "ctx": "תקנון הקופה מיום 01.07.2024 בעקוב אחר שינויים"
+      },
+      {
+       "file": "https://www.as-invest.co.il/media/odsjpmm0/אלטשולר-שחם-גמל-להשקעה-חיסכון-פלוס-תקנון-ריכוז-שינויים-יולי-2024.pdf",
+       "text": "פירוט השינויים בתקנון מיום 01.07.2024",
+       "ctx": "פירוט השינויים בתקנון מיום 01.07.2024"
+      },
+      {
+       "file": "https://www.as-invest.co.il/media/zsgdouj4/אלטשולר-שחם-גמל-להשקעה-חיסכון-פלוס-תקנון-נקי-יולי-2024.pdf",
+       "text": "תקנון הקופה מיום 01.07.2024",
+       "ctx": "תקנון הקופה מיום 01.07.2024"
+      },
+      {
+       "file": "https://www.as-invest.co.il/media/23449/אלטשולר-שחם-חיסכון-פלוס-תקנון-מהדורת-שינויים-מונגש-אוקטובר-2023.pdf",
+       "text": "תקנון הקופה מיום 31.10.2023 בעקוב אחר שינויים",
+       "ctx": "תקנון הקופה מיום 31.10.2023 בעקוב אחר שינויים"
+      },
+      {
+       "file": "https://www.as-invest.co.il/media/23450/תקנון-קופת-גמל-להשקעה-תקנון-ריכוז-שינויים-מונגש-אוקטובר-2023.pdf",
+       "text": "פירוט השינויים בתקנון מיום 31.10.2023",
+       "ctx": "פירוט השינויים בתקנון מיום 31.10.2023"
+      },
+      {
+       "file": "https://www.as-invest.co.il/media/23448/תקנון-קופת-גמל-להשקעה-תקנון-נקי-מונגש-אוקטובר-2023.pdf",
+       "text": "תקנון הקופה מיום 31.10.2023",
+       "ctx": "תקנון הקופה מיום 31.10.2023"
+      },
+      {
+       "file": "https://www.as-invest.co.il/media/8166/פירוט-השינויים-שנערכו-בתקנון-של-קופת-גמל-להשקעה-סופי-200618.pdf",
+       "text": "פירוט השינויים בתקנון מיום 27.02.2018",
+       "ctx": "פירוט השינויים בתקנון מיום 27.02.2018"
+      },
+      {
+       "file": "https://www.as-invest.co.il/media/8165/תקנון-אלטשולר-שחם-קופת-גמל-להשקעה-סופי-200618.pdf",
+       "text": "תקנון קופה מיום 27.02.2018",
+       "ctx": "תקנון קופה מיום 27.02.2018"
+      },
+      {
+       "file": "https://www.as-invest.co.il/media/wnca2gav/מבנה-אחזקות-אלטשולר-גמל-9326.pdf",
+       "text": "תרשים מבנה אחזקות",
+       "ctx": "תרשים מבנה אחזקות"
+      },
+      {
+       "file": "https://www.as-invest.co.il/media/ugzikt3s/צדדים-קשורים-ספטמבר-2026.pdf",
+       "text": "צדדים קשורים ספטמבר 2026",
+       "ctx": "צדדים קשורים ספטמבר 2026"
+      },
+      {
+       "file": "https://www.as-invest.co.il/media/bcljeejq/גמל-להשקעה.xlsx",
+       "text": "שנת 2025",
+       "ctx": "שנת 2025"
+      },
+      {
+       "file": "https://www.as-invest.co.il/media/hgijrekq/גמל-להשקעה.xlsx",
+       "text": "שנת 2024",
+       "ctx": "שנת 2024"
+      },
+      {
+       "file": "https://www.as-invest.co.il/media/b31beg4h/גמל-להשקעה.xlsx",
+       "text": "שנת 2023",
+       "ctx": "שנת 2023"
+      },
+      {
+       "file": "https://www.as-invest.co.il/media/20962/גמל-להשקעה.xlsx",
+       "text": "שנת 2022",
+       "ctx": "שנת 2022"
+      },
+      {
+       "file": "https://www.as-invest.co.il/media/q3phsky3/7799.xlsx",
+       "text": "אוגוסט 2026",
+       "ctx": "אוגוסט 2026"
+      },
+      {
+       "file": "https://www.as-invest.co.il/media/q3phsky3/7799.xlsx",
+       "text": "יולי 2026",
+       "ctx": "יולי 2026"
+      },
+      {
+       "file": "https://www.as-invest.co.il/media/q3phsky3/7799.xlsx",
+       "text": "יוני 2026",
+       "ctx": "יוני 2026"
+      },
+      {
+       "file": "https://www.as-invest.co.il/media/q3phsky3/7799.xlsx",
+       "text": "מאי 2026",
+       "ctx": "מאי 2026"
+      },
+      {
+       "file": "https://www.as-invest.co.il/media/q3phsky3/7799.xlsx",
+       "text": "אפריל 2026",
+       "ctx": "אפריל 2026"
+      },
+      {
+       "file": "https://www.as-invest.co.il/media/q3phsky3/7799.xlsx",
+       "text": "מרץ 2026",
+       "ctx": "מרץ 2026"
+      },
+      {
+       "file": "https://www.as-invest.co.il/media/q3phsky3/7799.xlsx",
+       "text": "פברואר 2026",
+       "ctx": "פברואר 2026"
+      },
+      {
+       "file": "https://www.as-invest.co.il/media/q3phsky3/7799.xlsx",
+       "text": "ינואר 2026",
+       "ctx": "ינואר 2026"
+      }
+     ]
+    },
+    {
+     "url": "https://www.as-invest.co.il/interstedin/%D7%97%D7%99%D7%A1%D7%9B%D7%95%D7%9F-%D7%95%D7%94%D7%A9%D7%A7%D7%A2%D7%94/%D7%90%D7%9C%D7%98%D7%A9%D7%95%D7%9C%D7%A8-%D7%A9%D7%97%D7%9D-%D7%97%D7%99%D7%A1%D7%9B%D7%95%D7%9F-%D7%A4%D7%9C%D7%95%D7%A1-%D7%9E%D7%A9%D7%95%D7%9C%D7%91-%D7%A1%D7%97%D7%99%D7%A8/",
+     "links": 204,
+     "followed": [
+      "https://www.as-invest.co.il/interstedin/%D7%97%D7%99%D7%A1%D7%9B%D7%95%D7%9F-%D7%95%D7%94%D7%A9%D7%A7%D7%A2%D7%94/%D7%90%D7%9C%D7%98%D7%A9%D7%95%D7%9C%D7%A8-%D7%A9%D7%97%D7%9D-%D7%97%D7%99%D7%A1%D7%9B%D7%95%D7%9F-%D7%A4%D7%9C%D7%95%D7%A1-%D7%9E%D7%A9%D7%95%D7%9C%D7%91-%D7%A1%D7%97%D7%99%D7%A8/x1"
+     ],
+     "files": 36,
+     "clicked": 0,
+     "captured": 0,
+     "selected": [
+      "https://www.as-invest.co.il/media/q2vitazn/15541.xlsx",
+      "https://www.as-invest.co.il/media/taah2zvm/15541.xlsx",
+      "https://www.as-invest.co.il/media/4p4pph5k/15541.xlsx",
+      "https://www.as-invest.co.il/media/5r0pbplu/15541_אלטשולר-שחם-חיסכון-פלוס-משולב-סחיר_20250206.xlsx"
+     ],
+     "unselected_files": [
+      {
+       "file": "https://www.as-invest.co.il/media/3xdh50ky/אלטשולר-שחם-גמל-להשקעה-חיסכון-פלוס-תקנון-מהדורת-שינויים-מרץ-2025.pdf",
+       "text": "תקנון הקופה מיום 01.03.2025 בעקוב אחר שינויים",
+       "ctx": "תקנון הקופה מיום 01.03.2025 בעקוב אחר שינויים"
+      },
+      {
+       "file": "https://www.as-invest.co.il/media/miyf5dyv/אלטשולר-שחם-גמל-להשקעה-חיסכון-פלוס-תקנון-ריכוז-שינויים-מרץ-2025.pdf",
+       "text": "פירוט השינויים בתקנון מיום 01.03.2025",
+       "ctx": "פירוט השינויים בתקנון מיום 01.03.2025"
+      },
+      {
+       "file": "https://www.as-invest.co.il/media/md1afb1l/אלטשולר-שחם-גמל-להשקעה-חיסכון-פלוס-תקנון-נקי-מרץ-2025.pdf",
+       "text": "תקנון הקופה מיום 01.03.2025",
+       "ctx": "תקנון הקופה מיום 01.03.2025"
+      },
+      {
+       "file": "https://www.as-invest.co.il/media/wnca2gav/מבנה-אחזקות-אלטשולר-גמל-9326.pdf",
+       "text": "תרשים מבנה אחזקות",
+       "ctx": "תרשים מבנה אחזקות"
+      },
+      {
+       "file": "https://www.as-invest.co.il/media/ugzikt3s/צדדים-קשורים-ספטמבר-2026.pdf",
+       "text": "צדדים קשורים ספטמבר 2026",
+       "ctx": "צדדים קשורים ספטמבר 2026"
+      },
+      {
+       "file": "https://www.as-invest.co.il/media/bcljeejq/גמל-להשקעה.xlsx",
+       "text": "שנת 2025",
+       "ctx": "שנת 2025"
+      },
+      {
+       "file": "https://www.as-invest.co.il/media/hgijrekq/גמל-להשקעה.xlsx",
+       "text": "שנת 2024",
+       "ctx": "שנת 2024"
+      },
+      {
+       "file": "https://www.as-invest.co.il/media/16103/מסגרת-כללית-של-היערכות-לזיהוי-וטיפול-בחובות-בעייתיים.pdf",
+       "text": "מסגרת כללית של היערכות לזיהוי וטיפול בחובות בעייתיים",
+       "ctx": "מסגרת כללית של היערכות לזיהוי וטיפול בחובות בעייתיים"
+      },
+      {
+       "file": "https://www.as-invest.co.il/media/g54l2bop/רשימת-נכסים-מאוחד-גמל-החל-מתאריך-112024.pdf",
+       "text": "רשימת נכסים מאוחדת מתאריך 1.1.2024",
+       "ctx": "רשימת נכסים מאוחדת מתאריך 1.1.2024"
+      },
+      {
+       "file": "https://www.as-invest.co.il/media/hotmhp0q/15541.xlsx",
+       "text": "אוגוסט 2026",
+       "ctx": "אוגוסט 2026"
+      },
+      {
+       "file": "https://www.as-invest.co.il/media/hotmhp0q/15541.xlsx",
+       "text": "יולי 2026",
+       "ctx": "יולי 2026"
+      },
+      {
+       "file": "https://www.as-invest.co.il/media/hotmhp0q/15541.xlsx",
+       "text": "יוני 2026",
+       "ctx": "יוני 2026"
+      },
+      {
+       "file": "https://www.as-invest.co.il/media/hotmhp0q/15541.xlsx",
+       "text": "מאי 2026",
+       "ctx": "מאי 2026"
+      },
+      {
+       "file": "https://www.as-invest.co.il/media/hotmhp0q/15541.xlsx",
+       "text": "אפריל 2026",
+       "ctx": "אפריל 2026"
+      },
+      {
+       "file": "https://www.as-invest.co.il/media/hotmhp0q/15541.xlsx",
+       "text": "מרץ 2026",
+       "ctx": "מרץ 2026"
+      },
+      {
+       "file": "https://www.as-invest.co.il/media/hotmhp0q/15541.xlsx",
+       "text": "פברואר 2026",
+       "ctx": "פברואר 2026"
+      },
+      {
+       "file": "https://www.as-invest.co.il/media/hotmhp0q/15541.xlsx",
+       "text": "ינואר 2026",
+       "ctx": "ינואר 2026"
+      },
+      {
+       "file": "https://www.as-invest.co.il/media/5zakpyzw/15541.xlsx",
+       "text": "דצמבר 2025",
+       "ctx": "דצמבר 2025"
+      },
+      {
+       "file": "https://www.as-invest.co.il/media/0loo5tms/15541.xlsx",
+       "text": "נובמבר 2025",
+       "ctx": "נובמבר 2025"
+      },
+      {
+       "file": "https://www.as-invest.co.il/media/w4gibrug/15541.xlsx",
+       "text": "אוקטובר 2025",
+       "ctx": "אוקטובר 2025"
+      },
+      {
+       "file": "https://www.as-invest.co.il/media/gprf0b0i/15541.xlsx",
+       "text": "ספטמבר 2025",
+       "ctx": "ספטמבר 2025"
+      },
+      {
+       "file": "https://www.as-invest.co.il/media/xyzlvjnc/15541.xlsx",
+       "text": "דוח רבעון 2 2026",
+       "ctx": "דוח רבעון 2 2026"
+      },
+      {
+       "file": "https://www.as-invest.co.il/media/xyzlvjnc/15541.xlsx",
+       "text": "דוח רבעון 1 2026",
+       "ctx": "דוח רבעון 1 2026"
+      },
+      {
+       "file": "https://www.as-invest.co.il/media/xyzlvjnc/15541.xlsx",
+       "text": "דוח רבעון 4 2025",
+       "ctx": "דוח רבעון 4 2025"
+      },
+      {
+       "file": "https://www.as-invest.co.il/media/bunhmstm/15541.xlsx",
+       "text": "דוח רבעון 3 2025",
+       "ctx": "דוח רבעון 3 2025"
+      }
+     ]
+    },
+    {
+     "url": "https://www.as-invest.co.il/interstedin/%D7%97%D7%99%D7%A1%D7%9B%D7%95%D7%9F-%D7%95%D7%94%D7%A9%D7%A7%D7%A2%D7%94/%D7%90%D7%9C%D7%98%D7%A9%D7%95%D7%9C%D7%A8-%D7%A9%D7%97%D7%9D-%D7%97%D7%99%D7%A1%D7%9B%D7%95%D7%9F-%D7%A4%D7%9C%D7%95%D7%A1-%D7%A2%D7%95%D7%A7%D7%91-%D7%9E%D7%93%D7%93%D7%99%D7%9D-%D7%92%D7%9E%D7%99%D7%A9/",
+     "links": 210,
+     "followed": [
+      "https://www.as-invest.co.il/interstedin/%D7%97%D7%99%D7%A1%D7%9B%D7%95%D7%9F-%D7%95%D7%94%D7%A9%D7%A7%D7%A2%D7%94/%D7%90%D7%9C%D7%98%D7%A9%D7%95%D7%9C%D7%A8-%D7%A9%D7%97%D7%9D-%D7%97%D7%99%D7%A1%D7%9B%D7%95%D7%9F-%D7%A4%D7%9C%D7%95%D7%A1-%D7%A2%D7%95%D7%A7%D7%91-%D7%9E%D7%93%D7%93%D7%99%D7%9D-%D7%92%D7%9E%D7%99%D7%A9/x1"
+     ],
+     "files": 42,
+     "clicked": 0,
+     "captured": 0,
+     "selected": [
+      "https://www.as-invest.co.il/media/qh0bucou/15315.xlsx",
+      "https://www.as-invest.co.il/media/3eahrp4u/15315.xlsx",
+      "https://www.as-invest.co.il/media/10kdvuuf/15315.xlsx",
+      "https://www.as-invest.co.il/media/2asg4xc2/15315.xlsx",
+      "https://www.as-invest.co.il/media/aabjpmf2/15315_אלטשולר-שחם-חיסכון-פלוס-עוקב-מדדים-גמיש_20250101.xlsx"
+     ],
+     "unselected_files": [
+      {
+       "file": "https://www.as-invest.co.il/media/3xdh50ky/אלטשולר-שחם-גמל-להשקעה-חיסכון-פלוס-תקנון-מהדורת-שינויים-מרץ-2025.pdf",
+       "text": "תקנון הקופה מיום 01.03.2025 בעקוב אחר שינויים",
+       "ctx": "תקנון הקופה מיום 01.03.2025 בעקוב אחר שינויים"
+      },
+      {
+       "file": "https://www.as-invest.co.il/media/miyf5dyv/אלטשולר-שחם-גמל-להשקעה-חיסכון-פלוס-תקנון-ריכוז-שינויים-מרץ-2025.pdf",
+       "text": "פירוט השינויים בתקנון מיום 01.03.2025",
+       "ctx": "פירוט השינויים בתקנון מיום 01.03.2025"
+      },
+      {
+       "file": "https://www.as-invest.co.il/media/md1afb1l/אלטשולר-שחם-גמל-להשקעה-חיסכון-פלוס-תקנון-נקי-מרץ-2025.pdf",
+       "text": "תקנון הקופה מיום 01.03.2025",
+       "ctx": "תקנון הקופה מיום 01.03.2025"
+      },
+      {
+       "file": "https://www.as-invest.co.il/media/bw5gg3mu/אלטשולר-שחם-גמל-להשקעה-חיסכון-פלוס-תקנון-מהדורת-שינויים-יולי-2024.pdf",
+       "text": "תקנון הקופה מיום 01.07.2024 בעקוב אחר שינויים",
+       "ctx": "תקנון הקופה מיום 01.07.2024 בעקוב אחר שינויים"
+      },
+      {
+       "file": "https://www.as-invest.co.il/media/odsjpmm0/אלטשולר-שחם-גמל-להשקעה-חיסכון-פלוס-תקנון-ריכוז-שינויים-יולי-2024.pdf",
+       "text": "פירוט השינויים בתקנון מיום 01.07.2024",
+       "ctx": "פירוט השינויים בתקנון מיום 01.07.2024"
+      },
+      {
+       "file": "https://www.as-invest.co.il/media/zsgdouj4/אלטשולר-שחם-גמל-להשקעה-חיסכון-פלוס-תקנון-נקי-יולי-2024.pdf",
+       "text": "תקנון הקופה מיום 01.07.2024",
+       "ctx": "תקנון הקופה מיום 01.07.2024"
+      },
+      {
+       "file": "https://www.as-invest.co.il/media/wnca2gav/מבנה-אחזקות-אלטשולר-גמל-9326.pdf",
+       "text": "תרשים מבנה אחזקות",
+       "ctx": "תרשים מבנה אחזקות"
+      },
+      {
+       "file": "https://www.as-invest.co.il/media/ugzikt3s/צדדים-קשורים-ספטמבר-2026.pdf",
+       "text": "צדדים קשורים ספטמבר 2026",
+       "ctx": "צדדים קשורים ספטמבר 2026"
+      },
+      {
+       "file": "https://www.as-invest.co.il/media/bcljeejq/גמל-להשקעה.xlsx",
+       "text": "שנת 2025",
+       "ctx": "שנת 2025"
+      },
+      {
+       "file": "https://www.as-invest.co.il/media/hgijrekq/גמל-להשקעה.xlsx",
+       "text": "שנת 2024",
+       "ctx": "שנת 2024"
+      },
+      {
+       "file": "https://www.as-invest.co.il/media/16103/מסגרת-כללית-של-היערכות-לזיהוי-וטיפול-בחובות-בעייתיים.pdf",
+       "text": "מסגרת כללית של היערכות לזיהוי וטיפול בחובות בעייתיים",
+       "ctx": "מסגרת כללית של היערכות לזיהוי וטיפול בחובות בעייתיים"
+      },
+      {
+       "file": "https://www.as-invest.co.il/media/g54l2bop/רשימת-נכסים-מאוחד-גמל-החל-מתאריך-112024.pdf",
+       "text": "רשימת נכסים מאוחדת מתאריך 1.1.2024",
+       "ctx": "רשימת נכסים מאוחדת מתאריך 1.1.2024"
+      },
+      {
+       "file": "https://www.as-invest.co.il/media/2j1kxksu/15315.xlsx",
+       "text": "אוגוסט 2026",
+       "ctx": "אוגוסט 2026"
+      },
+      {
+       "file": "https://www.as-invest.co.il/media/2j1kxksu/15315.xlsx",
+       "text": "יולי 2026",
+       "ctx": "יולי 2026"
+      },
+      {
+       "file": "https://www.as-invest.co.il/media/2j1kxksu/15315.xlsx",
+       "text": "יוני 2026",
+       "ctx": "יוני 2026"
+      },
+      {
+       "file": "https://www.as-invest.co.il/media/2j1kxksu/15315.xlsx",
+       "text": "מאי 2026",
+       "ctx": "מאי 2026"
+      },
+      {
+       "file": "https://www.as-invest.co.il/media/2j1kxksu/15315.xlsx",
+       "text": "אפריל 2026",
+       "ctx": "אפריל 2026"
+      },
+      {
+       "file": "https://www.as-invest.co.il/media/2j1kxksu/15315.xlsx",
+       "text": "מרץ 2026",
+       "ctx": "מרץ 2026"
+      },
+      {
+       "file": "https://www.as-invest.co.il/media/2j1kxksu/15315.xlsx",
+       "text": "פברואר 2026",
+       "ctx": "פברואר 2026"
+      },
+      {
+       "file": "https://www.as-invest.co.il/media/2j1kxksu/15315.xlsx",
+       "text": "ינואר 2026",
+       "ctx": "ינואר 2026"
+      },
+      {
+       "file": "https://www.as-invest.co.il/media/jukkicbd/15315.xlsx",
+       "text": "דצמבר 2025",
+       "ctx": "דצמבר 2025"
+      },
+      {
+       "file": "https://www.as-invest.co.il/media/3yfbcfbc/15315.xlsx",
+       "text": "נובמבר 2025",
+       "ctx": "נובמבר 2025"
+      },
+      {
+       "file": "https://www.as-invest.co.il/media/huievtpt/15315.xlsx",
+       "text": "אוקטובר 2025",
+       "ctx": "אוקטובר 2025"
+      },
+      {
+       "file": "https://www.as-invest.co.il/media/0vpdokpe/15315.xlsx",
+       "text": "ספטמבר 2025",
+       "ctx": "ספטמבר 2025"
+      },
+      {
+       "file": "https://www.as-invest.co.il/media/yyhhlj4d/15315.xlsx",
+       "text": "דוח רבעון 2 2026",
+       "ctx": "דוח רבעון 2 2026"
+      }
+     ]
+    },
+    {
+     "url": "https://www.as-invest.co.il/interstedin/%D7%97%D7%99%D7%A1%D7%9B%D7%95%D7%9F-%D7%95%D7%94%D7%A9%D7%A7%D7%A2%D7%94/%D7%90%D7%9C%D7%98%D7%A9%D7%95%D7%9C%D7%A8-%D7%A9%D7%97%D7%9D-%D7%97%D7%99%D7%A1%D7%9B%D7%95%D7%9F-%D7%A4%D7%9C%D7%95%D7%A1-%D7%A2%D7%95%D7%A7%D7%91-%D7%9E%D7%93%D7%93%D7%99-%D7%9E%D7%A0%D7%99%D7%95%D7%AA/",
+     "links": 222,
+     "followed": [
+      "https://www.as-invest.co.il/interstedin/%D7%97%D7%99%D7%A1%D7%9B%D7%95%D7%9F-%D7%95%D7%94%D7%A9%D7%A7%D7%A2%D7%94/%D7%90%D7%9C%D7%98%D7%A9%D7%95%D7%9C%D7%A8-%D7%A9%D7%97%D7%9D-%D7%97%D7%99%D7%A1%D7%9B%D7%95%D7%9F-%D7%A4%D7%9C%D7%95%D7%A1-%D7%A2%D7%95%D7%A7%D7%91-%D7%9E%D7%93%D7%93%D7%99-%D7%9E%D7%A0%D7%99%D7%95%D7%AA/x1"
+     ],
+     "files": 54,
+     "clicked": 0,
+     "captured": 0,
+     "selected": [
+      "https://www.as-invest.co.il/media/5g0ht3mh/14864.xlsx",
+      "https://www.as-invest.co.il/media/5zcajxyk/14864.xlsx",
+      "https://www.as-invest.co.il/media/glahbbtt/14864.xlsx",
+      "https://www.as-invest.co.il/media/5adaq1e1/14864_אלטשולר-שחם-חיסכון-פלוס-עוקב-מדדי-מניות_20250101.xlsx"
+     ],
+     "unselected_files": [
+      {
+       "file": "https://www.as-invest.co.il/media/jvkprek0/תשואה-כהלכה-בתוקף-עד-230828.pdf",
+       "text": "לחץ כאן",
+       "ctx": "לצפייה בתעודת הכשרות של תשואה כהלכה לחץ כאן"
+      },
+      {
+       "file": "https://www.as-invest.co.il/media/ykiprb2w/תעודת-כשרות-מכון-כתר.pdf",
+       "text": "לחץ כאן",
+       "ctx": "לצפייה בתעודת הכשרות של מכון כת\"ר לחץ כאן"
+      },
+      {
+       "file": "https://www.as-invest.co.il/media/komlgsb5/תעודת-כשרות-בדצ-קופות-גמל-להשקעה-בתוקף-עד-111126.pdf",
+       "text": "לחץ כאן",
+       "ctx": "לצפייה בתעודת הכשרות של בד\"צ לחץ כאן"
+      },
+      {
+       "file": "https://www.as-invest.co.il/media/3xdh50ky/אלטשולר-שחם-גמל-להשקעה-חיסכון-פלוס-תקנון-מהדורת-שינויים-מרץ-2025.pdf",
+       "text": "תקנון הקופה מיום 01.03.2025 בעקוב אחר שינויים",
+       "ctx": "תקנון הקופה מיום 01.03.2025 בעקוב אחר שינויים"
+      },
+      {
+       "file": "https://www.as-invest.co.il/media/miyf5dyv/אלטשולר-שחם-גמל-להשקעה-חיסכון-פלוס-תקנון-ריכוז-שינויים-מרץ-2025.pdf",
+       "text": "פירוט השינויים בתקנון מיום 01.03.2025",
+       "ctx": "פירוט השינויים בתקנון מיום 01.03.2025"
+      },
+      {
+       "file": "https://www.as-invest.co.il/media/md1afb1l/אלטשולר-שחם-גמל-להשקעה-חיסכון-פלוס-תקנון-נקי-מרץ-2025.pdf",
+       "text": "תקנון הקופה מיום 01.03.2025",
+       "ctx": "תקנון הקופה מיום 01.03.2025"
+      },
+      {
+       "file": "https://www.as-invest.co.il/media/bw5gg3mu/אלטשולר-שחם-גמל-להשקעה-חיסכון-פלוס-תקנון-מהדורת-שינויים-יולי-2024.pdf",
+       "text": "תקנון הקופה מיום 01.07.2024 בעקוב אחר שינויים",
+       "ctx": "תקנון הקופה מיום 01.07.2024 בעקוב אחר שינויים"
+      },
+      {
+       "file": "https://www.as-invest.co.il/media/odsjpmm0/אלטשולר-שחם-גמל-להשקעה-חיסכון-פלוס-תקנון-ריכוז-שינויים-יולי-2024.pdf",
+       "text": "פירוט השינויים בתקנון מיום 01.07.2024",
+       "ctx": "פירוט השינויים בתקנון מיום 01.07.2024"
+      },
+      {
+       "file": "https://www.as-invest.co.il/media/zsgdouj4/אלטשולר-שחם-גמל-להשקעה-חיסכון-פלוס-תקנון-נקי-יולי-2024.pdf",
+       "text": "תקנון הקופה מיום 01.07.2024",
+       "ctx": "תקנון הקופה מיום 01.07.2024"
+      },
+      {
+       "file": "https://www.as-invest.co.il/media/23448/תקנון-קופת-גמל-להשקעה-תקנון-נקי-מונגש-אוקטובר-2023.pdf",
+       "text": "תקנון הקופה מיום 31.10.2023",
+       "ctx": "תקנון הקופה מיום 31.10.2023"
+      },
+      {
+       "file": "https://www.as-invest.co.il/media/23450/תקנון-קופת-גמל-להשקעה-תקנון-ריכוז-שינויים-מונגש-אוקטובר-2023.pdf",
+       "text": "פירוט השינויים בתקנון מיום 31.10.2023",
+       "ctx": "פירוט השינויים בתקנון מיום 31.10.2023"
+      },
+      {
+       "file": "https://www.as-invest.co.il/media/23449/אלטשולר-שחם-חיסכון-פלוס-תקנון-מהדורת-שינויים-מונגש-אוקטובר-2023.pdf",
+       "text": "תקנון הקופה מיום 31.10.2023 בעקוב אחר שינויים",
+       "ctx": "תקנון הקופה מיום 31.10.2023 בעקוב אחר שינויים"
+      },
+      {
+       "file": "https://www.as-invest.co.il/media/wnca2gav/מבנה-אחזקות-אלטשולר-גמל-9326.pdf",
+       "text": "תרשים מבנה אחזקות",
+       "ctx": "תרשים מבנה אחזקות"
+      },
+      {
+       "file": "https://www.as-invest.co.il/media/ugzikt3s/צדדים-קשורים-ספטמבר-2026.pdf",
+       "text": "צדדים קשורים ספטמבר 2026",
+       "ctx": "צדדים קשורים ספטמבר 2026"
+      },
+      {
+       "file": "https://www.as-invest.co.il/media/bcljeejq/גמל-להשקעה.xlsx",
+       "text": "שנת 2025",
+       "ctx": "שנת 2025"
+      },
+      {
+       "file": "https://www.as-invest.co.il/media/hgijrekq/גמל-להשקעה.xlsx",
+       "text": "שנת 2024",
+       "ctx": "שנת 2024"
+      },
+      {
+       "file": "https://www.as-invest.co.il/media/b31beg4h/גמל-להשקעה.xlsx",
+       "text": "שנת 2023",
+       "ctx": "שנת 2023"
+      },
+      {
+       "file": "https://www.as-invest.co.il/media/16103/מסגרת-כללית-של-היערכות-לזיהוי-וטיפול-בחובות-בעייתיים.pdf",
+       "text": "מסגרת כללית של היערכות לזיהוי וטיפול בחובות בעייתיים",
+       "ctx": "מסגרת כללית של היערכות לזיהוי וטיפול בחובות בעייתיים"
+      },
+      {
+       "file": "https://www.as-invest.co.il/media/g54l2bop/רשימת-נכסים-מאוחד-גמל-החל-מתאריך-112024.pdf",
+       "text": "רשימת נכסים מאוחדת מתאריך 1.1.2024",
+       "ctx": "רשימת נכסים מאוחדת מתאריך 1.1.2024"
+      },
+      {
+       "file": "https://www.as-invest.co.il/media/gdwcxy50/513173393_g14864_p423.xlsx",
+       "text": "רבעון 4 לשנת 2023",
+       "ctx": "רבעון 4 לשנת 2023"
+      },
+      {
+       "file": "https://www.as-invest.co.il/media/o0vciyvi/14864.xlsx",
+       "text": "אוגוסט 2026",
+       "ctx": "אוגוסט 2026"
+      },
+      {
+       "file": "https://www.as-invest.co.il/media/o0vciyvi/14864.xlsx",
+       "text": "יולי 2026",
+       "ctx": "יולי 2026"
+      },
+      {
+       "file": "https://www.as-invest.co.il/media/o0vciyvi/14864.xlsx",
+       "text": "יוני 2026",
+       "ctx": "יוני 2026"
+      },
+      {
+       "file": "https://www.as-invest.co.il/media/o0vciyvi/14864.xlsx",
+       "text": "מאי 2026",
+       "ctx": "מאי 2026"
+      },
+      {
+       "file": "https://www.as-invest.co.il/media/o0vciyvi/14864.xlsx",
+       "text": "אפריל 2026",
+       "ctx": "אפריל 2026"
+      }
+     ]
+    },
+    {
+     "url": "https://www.as-invest.co.il/interstedin/%D7%97%D7%99%D7%A1%D7%9B%D7%95%D7%9F-%D7%95%D7%94%D7%A9%D7%A7%D7%A2%D7%94/%D7%90%D7%9C%D7%98%D7%A9%D7%95%D7%9C%D7%A8-%D7%A9%D7%97%D7%9D-%D7%97%D7%99%D7%A1%D7%9B%D7%95%D7%9F-%D7%A4%D7%9C%D7%95%D7%A1-%D7%A2%D7%95%D7%A7%D7%91-%D7%9E%D7%93%D7%93-sp-500/",
+     "links": 222,
+     "followed": [
+      "https://www.as-invest.co.il/interstedin/%D7%97%D7%99%D7%A1%D7%9B%D7%95%D7%9F-%D7%95%D7%94%D7%A9%D7%A7%D7%A2%D7%94/%D7%90%D7%9C%D7%98%D7%A9%D7%95%D7%9C%D7%A8-%D7%A9%D7%97%D7%9D-%D7%97%D7%99%D7%A1%D7%9B%D7%95%D7%9F-%D7%A4%D7%9C%D7%95%D7%A1-%D7%A2%D7%95%D7%A7%D7%91-%D7%9E%D7%93%D7%93-sp-500/x1"
+     ],
+     "files": 54,
+     "clicked": 0,
+     "captured": 0,
+     "selected": [
+      "https://www.as-invest.co.il/media/4ayluq0t/14865.xlsx",
+      "https://www.as-invest.co.il/media/ni2dpt4i/14865.xlsx",
+      "https://www.as-invest.co.il/media/25ghlgd2/14865.xlsx",
+      "https://www.as-invest.co.il/media/3ptoyso5/14865_אלטשולר-שחם-חיסכון-פלוס-עוקב-מדד-sp-500_20250101.xlsx"
+     ],
+     "unselected_files": [
+      {
+       "file": "https://www.as-invest.co.il/media/jvkprek0/תשואה-כהלכה-בתוקף-עד-230828.pdf",
+       "text": "לחץ כאן",
+       "ctx": "לצפייה בתעודת הכשרות של תשואה כהלכה לחץ כאן"
+      },
+      {
+       "file": "https://www.as-invest.co.il/media/ykiprb2w/תעודת-כשרות-מכון-כתר.pdf",
+       "text": "לחץ כאן",
+       "ctx": "לצפייה בתעודת הכשרות של מכון כת\"ר לחץ כאן"
+      },
+      {
+       "file": "https://www.as-invest.co.il/media/komlgsb5/תעודת-כשרות-בדצ-קופות-גמל-להשקעה-בתוקף-עד-111126.pdf",
+       "text": "לחץ כאן",
+       "ctx": "לצפייה בתעודת הכשרות של בד\"צ לחץ כאן"
+      },
+      {
+       "file": "https://www.as-invest.co.il/media/3xdh50ky/אלטשולר-שחם-גמל-להשקעה-חיסכון-פלוס-תקנון-מהדורת-שינויים-מרץ-2025.pdf",
+       "text": "תקנון הקופה מיום 01.03.2025 בעקוב אחר שינויים",
+       "ctx": "תקנון הקופה מיום 01.03.2025 בעקוב אחר שינויים"
+      },
+      {
+       "file": "https://www.as-invest.co.il/media/miyf5dyv/אלטשולר-שחם-גמל-להשקעה-חיסכון-פלוס-תקנון-ריכוז-שינויים-מרץ-2025.pdf",
+       "text": "פירוט השינויים בתקנון מיום 01.03.2025",
+       "ctx": "פירוט השינויים בתקנון מיום 01.03.2025"
+      },
+      {
+       "file": "https://www.as-invest.co.il/media/md1afb1l/אלטשולר-שחם-גמל-להשקעה-חיסכון-פלוס-תקנון-נקי-מרץ-2025.pdf",
+       "text": "תקנון הקופה מיום 01.03.2025",
+       "ctx": "תקנון הקופה מיום 01.03.2025"
+      },
+      {
+       "file": "https://www.as-invest.co.il/media/bw5gg3mu/אלטשולר-שחם-גמל-להשקעה-חיסכון-פלוס-תקנון-מהדורת-שינויים-יולי-2024.pdf",
+       "text": "תקנון הקופה מיום 01.07.2024 בעקוב אחר שינויים",
+       "ctx": "תקנון הקופה מיום 01.07.2024 בעקוב אחר שינויים"
+      },
+      {
+       "file": "https://www.as-invest.co.il/media/odsjpmm0/אלטשולר-שחם-גמל-להשקעה-חיסכון-פלוס-תקנון-ריכוז-שינויים-יולי-2024.pdf",
+       "text": "פירוט השינויים בתקנון מיום 01.07.2024",
+       "ctx": "פירוט השינויים בתקנון מיום 01.07.2024"
+      },
+      {
+       "file": "https://www.as-invest.co.il/media/zsgdouj4/אלטשולר-שחם-גמל-להשקעה-חיסכון-פלוס-תקנון-נקי-יולי-2024.pdf",
+       "text": "תקנון הקופה מיום 01.07.2024",
+       "ctx": "תקנון הקופה מיום 01.07.2024"
+      },
+      {
+       "file": "https://www.as-invest.co.il/media/23448/תקנון-קופת-גמל-להשקעה-תקנון-נקי-מונגש-אוקטובר-2023.pdf",
+       "text": "תקנון הקופה מיום 31.10.2023",
+       "ctx": "תקנון הקופה מיום 31.10.2023"
+      },
+      {
+       "file": "https://www.as-invest.co.il/media/23450/תקנון-קופת-גמל-להשקעה-תקנון-ריכוז-שינויים-מונגש-אוקטובר-2023.pdf",
+       "text": "פירוט השינויים בתקנון מיום 31.10.2023",
+       "ctx": "פירוט השינויים בתקנון מיום 31.10.2023"
+      },
+      {
+       "file": "https://www.as-invest.co.il/media/23449/אלטשולר-שחם-חיסכון-פלוס-תקנון-מהדורת-שינויים-מונגש-אוקטובר-2023.pdf",
+       "text": "תקנון הקופה מיום 31.10.2023 בעקוב אחר שינויים",
+       "ctx": "תקנון הקופה מיום 31.10.2023 בעקוב אחר שינויים"
+      },
+      {
+       "file": "https://www.as-invest.co.il/media/wnca2gav/מבנה-אחזקות-אלטשולר-גמל-9326.pdf",
+       "text": "תרשים מבנה אחזקות",
+       "ctx": "תרשים מבנה אחזקות"
+      },
+      {
+       "file": "https://www.as-invest.co.il/media/ugzikt3s/צדדים-קשורים-ספטמבר-2026.pdf",
+       "text": "צדדים קשורים ספטמבר 2026",
+       "ctx": "צדדים קשורים ספטמבר 2026"
+      },
+      {
+       "file": "https://www.as-invest.co.il/media/bcljeejq/גמל-להשקעה.xlsx",
+       "text": "שנת 2025",
+       "ctx": "שנת 2025"
+      },
+      {
+       "file": "https://www.as-invest.co.il/media/hgijrekq/גמל-להשקעה.xlsx",
+       "text": "שנת 2024",
+       "ctx": "שנת 2024"
+      },
+      {
+       "file": "https://www.as-invest.co.il/media/b31beg4h/גמל-להשקעה.xlsx",
+       "text": "שנת 2023",
+       "ctx": "שנת 2023"
+      },
+      {
+       "file": "https://www.as-invest.co.il/media/16103/מסגרת-כללית-של-היערכות-לזיהוי-וטיפול-בחובות-בעייתיים.pdf",
+       "text": "מסגרת כללית של היערכות לזיהוי וטיפול בחובות בעייתיים",
+       "ctx": "מסגרת כללית של היערכות לזיהוי וטיפול בחובות בעייתיים"
+      },
+      {
+       "file": "https://www.as-invest.co.il/media/g54l2bop/רשימת-נכסים-מאוחד-גמל-החל-מתאריך-112024.pdf",
+       "text": "רשימת נכסים מאוחדת מתאריך 1.1.2024",
+       "ctx": "רשימת נכסים מאוחדת מתאריך 1.1.2024"
+      },
+      {
+       "file": "https://www.as-invest.co.il/media/ppxhzdvo/513173393_g14865_p423.xlsx",
+       "text": "רבעון 4 לשנת 2023",
+       "ctx": "רבעון 4 לשנת 2023"
+      },
+      {
+       "file": "https://www.as-invest.co.il/media/ietgj41a/14865.xlsx",
+       "text": "אוגוסט 2026",
+       "ctx": "אוגוסט 2026"
+      },
+      {
+       "file": "https://www.as-invest.co.il/media/ietgj41a/14865.xlsx",
+       "text": "יולי 2026",
+       "ctx": "יולי 2026"
+      },
+      {
+       "file": "https://www.as-invest.co.il/media/ietgj41a/14865.xlsx",
+       "text": "יוני 2026",
+       "ctx": "יוני 2026"
+      },
+      {
+       "file": "https://www.as-invest.co.il/media/ietgj41a/14865.xlsx",
+       "text": "מאי 2026",
+       "ctx": "מאי 2026"
+      },
+      {
+       "file": "https://www.as-invest.co.il/media/ietgj41a/14865.xlsx",
+       "text": "אפריל 2026",
+       "ctx": "אפריל 2026"
+      }
+     ]
+    },
+    {
+     "url": "https://www.as-invest.co.il/interstedin/%D7%A7%D7%A8%D7%A0%D7%95%D7%AA-%D7%94%D7%A9%D7%AA%D7%9C%D7%9E%D7%95%D7%AA/%D7%90%D7%9C%D7%98%D7%A9%D7%95%D7%9C%D7%A8-%D7%A9%D7%97%D7%9D-%D7%94%D7%A9%D7%AA%D7%9C%D7%9E%D7%95%D7%AA-%D7%90%D7%92%D7%97-%D7%9E%D7%9E%D7%A9%D7%9C%D7%95%D7%AA/",
+     "links": 249,
+     "followed": [
+      "https://www.as-invest.co.il/interstedin/%D7%A7%D7%A8%D7%A0%D7%95%D7%AA-%D7%94%D7%A9%D7%AA%D7%9C%D7%9E%D7%95%D7%AA/%D7%90%D7%9C%D7%98%D7%A9%D7%95%D7%9C%D7%A8-%D7%A9%D7%97%D7%9D-%D7%94%D7%A9%D7%AA%D7%9C%D7%9E%D7%95%D7%AA-%D7%90%D7%92%D7%97-%D7%9E%D7%9E%D7%A9%D7%9C%D7%95%D7%AA/x1"
+     ],
+     "files": 91,
+     "clicked": 0,
+     "captured": 0,
+     "selected": [
+      "https://www.as-invest.co.il/media/u2ofee1l/1399.xlsx",
+      "https://www.as-invest.co.il/media/nawd3miw/1399.xlsx",
+      "https://www.as-invest.co.il/media/lwlhzop4/1399.xlsx",
+      "https://www.as-invest.co.il/media/l4ep3zgp/1399.xlsx",
+      "https://www.as-invest.co.il/media/onyavgkl/1399_אלטשולר-שחם-השתלמות-אגח-ממשלות_20250101.xlsx"
+     ],
+     "unselected_files": [
+      {
+       "file": "https://www.as-invest.co.il/media/jvkprek0/תשואה-כהלכה-בתוקף-עד-230828.pdf",
+       "text": "לחץ כאן",
+       "ctx": "לצפייה בתעודת הכשרות של תשואה כהלכה לחץ כאן"
+      },
+      {
+       "file": "https://www.as-invest.co.il/media/ykiprb2w/תעודת-כשרות-מכון-כתר.pdf",
+       "text": "לחץ כאן",
+       "ctx": "לצפייה בתעודת הכשרות של מכון כת\"ר לחץ כאן"
+      },
+      {
+       "file": "https://www.as-invest.co.il/media/pjsft451/תעודת-כשרות-בדצ-קרנות-השתלמות-בתוקף-עד-111126.pdf",
+       "text": "לחץ כאן",
+       "ctx": "לצפייה בתעודת הכשרות של בד\"צ לחץ כאן"
+      },
+      {
+       "file": "https://www.as-invest.co.il/media/khpp32k5/אלטשולר-שחם-השתלמות-תקנון-מהדורת-שינויים-דצמבר-2024.pdf",
+       "text": "תקנון הקופה מיום 01.12.2024 בעקוב אחר שינויים",
+       "ctx": "תקנון הקופה מיום 01.12.2024 בעקוב אחר שינויים"
+      },
+      {
+       "file": "https://www.as-invest.co.il/media/v1inzao3/אלטשולר-שחם-השתלמות-תקנון-ריכוז-שינויים-דצמבר-2024.pdf",
+       "text": "פירוט השינויים בתקנון מיום 01.12.2024",
+       "ctx": "פירוט השינויים בתקנון מיום 01.12.2024"
+      },
+      {
+       "file": "https://www.as-invest.co.il/media/hwtnos11/אלטשולר-שחם-השתלמות-תקנון-נקי-דצמבר-2024.pdf",
+       "text": "תקנון הקופה מיום 01.12.2024",
+       "ctx": "תקנון הקופה מיום 01.12.2024"
+      },
+      {
+       "file": "https://www.as-invest.co.il/media/vpnlelfe/אלטשולר-שחם-השתלמות-תקנון-מהדורת-שינויים-מיום-24072024.pdf",
+       "text": "תקנון הקופה מיום 24.07.2024 בעקוב אחר שינויים",
+       "ctx": "תקנון הקופה מיום 24.07.2024 בעקוב אחר שינויים"
+      },
+      {
+       "file": "https://www.as-invest.co.il/media/2dhhxlzn/אלטשולר-שחם-השתלמות-תקנון-ריכוז-שינויים-מיום-24072024.pdf",
+       "text": "פירוט השינויים בתקנון מיום 24.07.2024",
+       "ctx": "פירוט השינויים בתקנון מיום 24.07.2024"
+      },
+      {
+       "file": "https://www.as-invest.co.il/media/p3odeebp/אלטשולר-שחם-השתלמות-תקנון-נקי-מיום-24072024.pdf",
+       "text": "תקנון הקופה מיום 24.07.2024",
+       "ctx": "תקנון הקופה מיום 24.07.2024"
+      },
+      {
+       "file": "https://www.as-invest.co.il/media/nyxmoafw/אלטשולר-שחם-השתלמות-תקנון-מהדורת-שינויים-יולי-2024.pdf",
+       "text": "תקנון הקופה מיום 01.07.2024 בעקוב אחר שינויים",
+       "ctx": "תקנון הקופה מיום 01.07.2024 בעקוב אחר שינויים"
+      },
+      {
+       "file": "https://www.as-invest.co.il/media/qbynjgiz/אלטשולר-שחם-השתלמות-תקנון-ריכוז-שינויים-יולי-2024.pdf",
+       "text": "פירוט השינויים בתקנון מיום 01.07.2024",
+       "ctx": "פירוט השינויים בתקנון מיום 01.07.2024"
+      },
+      {
+       "file": "https://www.as-invest.co.il/media/gxpljvf1/אלטשולר-שחם-השתלמות-תקנון-נקי-יולי-2024.pdf",
+       "text": "תקנון הקופה מיום 01.07.2024",
+       "ctx": "תקנון הקופה מיום 01.07.2024"
+      },
+      {
+       "file": "https://www.as-invest.co.il/media/wzsp5drq/תקנון-אלטשולר-שחם-השתלמות-ריכוז-שינויים-מונגש-מהדורת-פברואר-2024.pdf",
+       "text": "תקנון קופה ריכוז שינויים 1.2.2024",
+       "ctx": "תקנון קופה ריכוז שינויים 1.2.2024"
+      },
+      {
+       "file": "https://www.as-invest.co.il/media/rrkp2z1x/אלטשולר-שחם-השתלמות-מהדורת-שינויים-מונגש-מהדורת-פברואר-2024.pdf",
+       "text": "פירוט השינויים בתקנון מיום 1.2.2024",
+       "ctx": "פירוט השינויים בתקנון מיום 1.2.2024"
+      },
+      {
+       "file": "https://www.as-invest.co.il/media/ymvl3tl2/אלטשולר-שחם-השתלמות-נקי-מונגש-מהדורת-פברואר-2024.pdf",
+       "text": "תקנון קופה מיום 1.2.2024",
+       "ctx": "תקנון קופה מיום 1.2.2024"
+      },
+      {
+       "file": "https://www.as-invest.co.il/media/xa1ktihv/אלטשולר-שחם-השתלמות-תקנון-מהדורת-שינויים-מונגש-אוקטובר-2023.pdf",
+       "text": "תקנון הקופה מיום 31.10.2023 בעקוב אחר שינויים",
+       "ctx": "תקנון הקופה מיום 31.10.2023 בעקוב אחר שינויים"
+      },
+      {
+       "file": "https://www.as-invest.co.il/media/23453/אלטשולר-שחם-השתלמות-תקנון-ריכוז-שינויים-מונגש-אוקטובר-2023.pdf",
+       "text": "פירוט השינויים בתקנון מיום 31.10.2023",
+       "ctx": "פירוט השינויים בתקנון מיום 31.10.2023"
+      },
+      {
+       "file": "https://www.as-invest.co.il/media/23451/אלטשולר-שחם-השתלמות-תקנון-נקי-מונגש-אוקטובר-2023.pdf",
+       "text": "תקנון הקופה מיום 31.10.2023",
+       "ctx": "תקנון הקופה מיום 31.10.2023"
+      },
+      {
+       "file": "https://www.as-invest.co.il/media/20177/תקנון-הקופה-מיום-19092022-בעקוב-אחר-שינויים.pdf",
+       "text": "תקנון הקופה מיום 19.09.2022 בעקוב אחר שינויים",
+       "ctx": "תקנון הקופה מיום 19.09.2022 בעקוב אחר שינויים"
+      },
+      {
+       "file": "https://www.as-invest.co.il/media/20176/פירוט-השינויים-בתקנון-מיום-19092022.pdf",
+       "text": "פירוט השינויים בתקנון מיום 19.09.2022",
+       "ctx": "פירוט השינויים בתקנון מיום 19.09.2022"
+      },
+      {
+       "file": "https://www.as-invest.co.il/media/20175/תקנון-קופה-מיום-19092022.pdf",
+       "text": "תקנון קופה מיום 19.09.2022",
+       "ctx": "תקנון קופה מיום 19.09.2022"
+      },
+      {
+       "file": "https://www.as-invest.co.il/media/16438/תקנון-הקופה-מיום-30092021-בעקוב-אחר-שינויים.pdf",
+       "text": "תקנון הקופה מיום 30.09.2021 בעקוב אחר שינויים",
+       "ctx": "תקנון הקופה מיום 30.09.2021 בעקוב אחר שינויים"
+      },
+      {
+       "file": "https://www.as-invest.co.il/media/16151/פירוט-השינויים-בתקנון-מיום-30092021.pdf",
+       "text": "פירוט השינויים בתקנון מיום 30.09.2021",
+       "ctx": "פירוט השינויים בתקנון מיום 30.09.2021"
+      },
+      {
+       "file": "https://www.as-invest.co.il/media/16437/תקנון-הקופה-מיום-30092021.pdf",
+       "text": "תקנון קופה מיום 30.09.2021",
+       "ctx": "תקנון קופה מיום 30.09.2021"
+      },
+      {
+       "file": "https://www.as-invest.co.il/media/8115/פירוט-השינויים-שנערכו-בתקנון-של-קרן-ההשתלמות-סופי-180618.pdf",
+       "text": "פירוט השינויים בתקנון מיום 27.02.2018",
+       "ctx": "פירוט השינויים בתקנון מיום 27.02.2018"
+      }
+     ]
+    }
+   ],
+   "new_docs": 0,
+   "found": 742,
+   "selected": 60,
+   "had": 60,
+   "head_skip": 60,
+   "mode": "map",
+   "errors": [
+    "https://www.as-invest.co.il/interstedin/%D7%A7%D7%A8%D7%A0%D7%95%D7%AA-%D7%94%D7%A9%D7%AA%D7%9C%D7%9E%D7%95%D7%AA/%D7%90%D7%9C%D7%98%D7%A9%D7%95%D7%9C%D7%A8-%D7%A9%D7%97%D7%9D-%D7%94%D7%A9%D7%AA%D7%9C%D7%9E%D7%95%D7%AA-%D7%90%D7%A9%D7%A8%D7%90%D7%99-%D7%95%D7%90%D7%92%D7%97-%D7%A2%D7%9D-%D7%9E%D7%A0%D7%99%D7%95%D7%AA-%D7%A2%D7%93-25-%D7%9E%D7%A0%D7%99%D7%95%D7%AA/: Frame with ID 0 was removed. -> light collect",
+    "https://www.as-invest.co.il/interstedin/%D7%A7%D7%A8%D7%A0%D7%95%D7%AA-%D7%94%D7%A9%D7%AA%D7%9C%D7%9E%D7%95%D7%AA/%D7%90%D7%9C%D7%98%D7%A9%D7%95%D7%9C%D7%A8-%D7%A9%D7%97%D7%9D-%D7%94%D7%A9%D7%AA%D7%9C%D7%9E%D7%95%D7%AA-%D7%90%D7%A9%D7%A8%D7%90%D7%99-%D7%95%D7%90%D7%92%D7%97-%D7%A2%D7%9D-%D7%9E%D7%A0%D7%99%D7%95%D7%AA-%D7%A2%D7%93-25-%D7%9E%D7%A0%D7%99%D7%95%D7%AA/: No tab with id: 657242905"
+   ],
+   "diag": [
+    "אלטשולר שחם גמל ופ: links=156 files=0 clicked=0 captured=0 selected=0",
+    "אלטשולר שחם גמל ופ: links=222 files=0 clicked=0 captured=0 selected=0",
+    "אלטשולר שחם גמל ופ: links=165 files=0 clicked=0 captured=0 selected=0",
+    "אלטשולר שחם גמל ופ: links=156 files=0 clicked=0 captured=0 selected=0",
+    "אלטשולר שחם גמל ופ: links=287 files=1 clicked=0 captured=0 selected=0",
+    "   ? אמנת-שרות.pdf | אמנת שירות לסוכנות לביטוח. | עברית - HE פתח חיפוש אזור אישי סוכנים מעסיקים מתפעלים Toggle",
+    "אלטשולר שחם גמל ופ: links=424 files=0 clicked=0 captured=0 selected=0",
+    "אלטשולר שחם גמל ופ: links=146 files=0 clicked=0 captured=0 selected=0",
+    "אלטשולר שחם גמל ופ: links=246 files=78 clicked=0 captured=0 selected=7",
+    "אלטשולר שחם גמל ופ: links=245 files=77 clicked=0 captured=0 selected=7",
+    "אלטשולר שחם גמל ופ: links=247 files=79 clicked=0 captured=0 selected=7",
+    "אלטשולר שחם גמל ופ: links=251 files=83 clicked=0 captured=0 selected=7",
+    "אלטשולר שחם גמל ופ: links=238 files=70 clicked=0 captured=0 selected=3",
+    "אלטשולר שחם גמל ופ: links=245 files=77 clicked=0 captured=0 selected=7",
+    "אלטשולר שחם גמל ופ: links=204 files=36 clicked=0 captured=0 selected=4",
+    "אלטשולר שחם גמל ופ: links=210 files=42 clicked=0 captured=0 selected=5",
+    "אלטשולר שחם גמל ופ: links=222 files=54 clicked=0 captured=0 selected=4",
+    "אלטשולר שחם גמל ופ: links=222 files=54 clicked=0 captured=0 selected=4",
+    "אלטשולר שחם גמל ופ: links=249 files=91 clicked=0 captured=0 selected=5"
+   ],
+   "new_files": []
+  },
+  {
+   "legal_id": "512245812",
+   "name": "מנורה מבטחים פנסיה וגמל בע\"מ",
+   "pages": [
+    {
+     "url": "https://www.menoramivt.co.il/list/pension-member-info/retirement-investment-tracks",
+     "links": 235,
+     "followed": [],
+     "files": 0,
+     "clicked": 0,
+     "captured": 0,
+     "selected": [],
+     "unselected_files": []
+    },
+    {
+     "url": "https://www.menoramivt.co.il/funds/pension-and-gemel/gemel-hishtalmut-list/top-savings/8675",
+     "links": 231,
+     "followed": [],
+     "files": 0,
+     "clicked": 0,
+     "captured": 0,
+     "selected": [],
+     "unselected_files": []
+    },
+    {
+     "url": "https://www.menoramivt.co.il/funds/pension-and-gemel/gemel-hishtalmut-list/top-savings/8678",
+     "links": 232,
+     "followed": [],
+     "files": 1,
+     "clicked": 0,
+     "captured": 0,
+     "selected": [],
+     "unselected_files": [
+      {
+       "file": "https://cdn.menoramivt.co.il/public/docs/20241117/8678---גמל-להשקעה-אגח.pdf",
+       "text": "לחצו כאן",
+       "ctx": ""
+      }
+     ]
+    },
+    {
+     "url": "https://www.menoramivt.co.il/funds/pension-and-gemel/gemel-hishtalmut-list/top-savings/8683",
+     "links": 231,
+     "followed": [],
+     "files": 0,
+     "clicked": 0,
+     "captured": 0,
+     "selected": [],
+     "unselected_files": []
+    },
+    {
+     "url": "https://www.menoramivt.co.il/funds/pension-and-gemel/gemel-hishtalmut-list/top-savings/8684",
+     "links": 231,
+     "followed": [],
+     "files": 0,
+     "clicked": 0,
+     "captured": 0,
+     "selected": [],
+     "unselected_files": []
+    },
+    {
+     "url": "https://www.menoramivt.co.il/funds/pension-and-gemel/gemel-hishtalmut-list/top-savings/8693",
+     "links": 233,
+     "followed": [],
+     "files": 2,
+     "clicked": 0,
+     "captured": 0,
+     "selected": [],
+     "unselected_files": [
+      {
+       "file": "https://cdn.menoramivt.co.il/public/docs/20260319/תעודות-עד-כא-טבת-תשפ''ז-31.12.26-.pdf",
+       "text": "תעודת כשרות - בית יוסף",
+       "ctx": "תעודת כשרות - בית יוסף"
+      },
+      {
+       "file": "https://cdn.menoramivt.co.il/public/docs/20260421/בדצ-מונגש--מנורה-קופות-גמל-להשקעה.pdf",
+       "text": "תעודת כשרות - בד\"צ",
+       "ctx": "תעודת כשרות - בד\"צ"
+      }
+     ]
+    },
+    {
+     "url": "https://www.menoramivt.co.il/funds/pension-and-gemel/gemel-hishtalmut-list/top-savings/8716",
+     "links": 234,
+     "followed": [],
+     "files": 3,
+     "clicked": 0,
+     "captured": 0,
+     "selected": [],
+     "unselected_files": [
+      {
+       "file": "https://cdn.menoramivt.co.il/public/docs/20260319/תעודות-עד-כא-טבת-תשפ''ז-31.12.26-.pdf",
+       "text": "תעודת כשרות - בית יוסף",
+       "ctx": "תעודת כשרות - בית יוסף"
+      },
+      {
+       "file": "https://cdn.menoramivt.co.il/public/docs/20260421/בדצ-מונגש--מנורה-קופות-גמל-להשקעה.pdf",
+       "text": "תעודת כשרות - בד\"צ",
+       "ctx": "תעודת כשרות - בד\"צ"
+      },
+      {
+       "file": "https://cdn.menoramivt.co.il/public/docs/20260901/תעודת-כשרות-ועד-ההלכה.pdf",
+       "text": "תעודת כשרות - גלאט הון",
+       "ctx": "תעודת כשרות - גלאט הון"
+      }
+     ]
+    },
+    {
+     "url": "https://www.menoramivt.co.il/funds/pension-and-gemel/gemel-hishtalmut-list/top-savings/13353",
+     "links": 234,
+     "followed": [],
+     "files": 3,
+     "clicked": 0,
+     "captured": 0,
+     "selected": [],
+     "unselected_files": [
+      {
+       "file": "https://cdn.menoramivt.co.il/public/docs/20241117/13353---גמל-להשקעה-מדדי-מניות-חול.pdf",
+       "text": "לחצו כאן",
+       "ctx": ""
+      },
+      {
+       "file": "https://cdn.menoramivt.co.il/public/docs/20260319/תעודות-עד-כא-טבת-תשפ''ז-31.12.26-.pdf",
+       "text": "תעודת כשרות - בית יוסף",
+       "ctx": "תעודת כשרות - בית יוסף"
+      },
+      {
+       "file": "https://cdn.menoramivt.co.il/public/docs/20260421/בדצ-מונגש--מנורה-קופות-גמל-להשקעה.pdf",
+       "text": "תעודת כשרות - בד\"צ",
+       "ctx": "תעודת כשרות - בד\"צ"
+      }
+     ]
+    },
+    {
+     "url": "https://www.menoramivt.co.il/funds/pension-and-gemel/gemel-hishtalmut-list/top-savings/13354",
+     "links": 232,
+     "followed": [],
+     "files": 1,
+     "clicked": 0,
+     "captured": 0,
+     "selected": [],
+     "unselected_files": [
+      {
+       "file": "https://cdn.menoramivt.co.il/public/docs/20241117/13354---גמל-להשקעה-חול.pdf",
+       "text": "לחצו כאן",
+       "ctx": ""
+      }
+     ]
+    },
+    {
+     "url": "https://www.menoramivt.co.il/funds/pension-and-gemel/gemel-hishtalmut-list/top-savings/15465",
+     "links": 231,
+     "followed": [],
+     "files": 0,
+     "clicked": 0,
+     "captured": 0,
+     "selected": [],
+     "unselected_files": []
+    },
+    {
+     "url": "https://www.menoramivt.co.il/funds/pension-and-gemel/gemel-hishtalmut-list/menroa-keren-hishtalmut/1114",
+     "links": 233,
+     "followed": [],
+     "files": 1,
+     "clicked": 0,
+     "captured": 0,
+     "selected": [],
+     "unselected_files": [
+      {
+       "file": "https://cdn.menoramivt.co.il/public/docs/20260420/בדצ-מונגש--מנורה-השתלמות.pdf",
+       "text": "תעודת כשרות - בד\"צ",
+       "ctx": "תעודת כשרות - בד\"צ"
+      }
+     ]
+    },
+    {
+     "url": "https://www.menoramivt.co.il/funds/pension-and-gemel/gemel-hishtalmut-list/menroa-keren-hishtalmut/11409",
+     "links": 231,
+     "followed": [],
+     "files": 1,
+     "clicked": 0,
+     "captured": 0,
+     "selected": [],
+     "unselected_files": [
+      {
+       "file": "https://cdn.menoramivt.co.il/public/docs/20241117/11409---השתלמות-פאסיבי-מדדי-אגח-עד-15-אחוז.pdf",
+       "text": "לחצו כאן",
+       "ctx": ""
+      }
+     ]
+    },
+    {
+     "url": "https://www.menoramivt.co.il/funds/pension-and-gemel/gemel-hishtalmut-list/menroa-keren-hishtalmut/9662",
+     "links": 233,
+     "followed": [],
+     "files": 1,
+     "clicked": 0,
+     "captured": 0,
+     "selected": [],
+     "unselected_files": [
+      {
+       "file": "https://cdn.menoramivt.co.il/public/docs/20241117/9662--השתלמות-עד-20-אחוז-מניות.pdf",
+       "text": "לחצו כאן",
+       "ctx": ""
+      }
+     ]
+    },
+    {
+     "url": "https://www.menoramivt.co.il/funds/pension-and-gemel/gemel/provident-to-investment-14678",
+     "links": 233,
+     "followed": [],
+     "files": 0,
+     "clicked": 0,
+     "captured": 0,
+     "selected": [],
+     "unselected_files": []
+    },
+    {
+     "url": "https://www.menoramivt.co.il/funds/pension-and-gemel/gemel/pension-and-gemel.gemel.provident-to-investment-15724",
+     "links": 231,
+     "followed": [],
+     "files": 0,
+     "clicked": 0,
+     "captured": 0,
+     "selected": [],
+     "unselected_files": []
+    }
+   ],
+   "new_docs": 0,
+   "found": 13,
+   "selected": 0,
+   "had": 0,
+   "head_skip": 0,
+   "mode": "map",
+   "errors": [
+    "https://www.menoramivt.co.il/funds/gemel-SP500: Frame with ID 0 was removed. -> light collect",
+    "https://www.menoramivt.co.il/funds/gemel-SP500: No tab with id: 657242909"
+   ],
+   "diag": [
+    "מנורה מבטחים פנסיה: links=235 files=0 clicked=0 captured=0 selected=0",
+    "מנורה מבטחים פנסיה: links=231 files=0 clicked=0 captured=0 selected=0",
+    "מנורה מבטחים פנסיה: links=232 files=1 clicked=0 captured=0 selected=0",
+    "   ? 8678---גמל-להשקעה-אגח.pdf | לחצו כאן | ",
+    "מנורה מבטחים פנסיה: links=231 files=0 clicked=0 captured=0 selected=0",
+    "מנורה מבטחים פנסיה: links=231 files=0 clicked=0 captured=0 selected=0",
+    "מנורה מבטחים פנסיה: links=233 files=2 clicked=0 captured=0 selected=0",
+    "   ? תעודות-עד-כא-טבת-תשפ''ז-31.12.26-.pdf | תעודת כשרות - בית יוסף | תעודת כשרות - בית יוסף",
+    "   ? בדצ-מונגש--מנורה-קופות-גמל-להשקעה.pdf | תעודת כשרות - בד\"צ | תעודת כשרות - בד\"צ",
+    "מנורה מבטחים פנסיה: links=234 files=3 clicked=0 captured=0 selected=0",
+    "   ? תעודות-עד-כא-טבת-תשפ''ז-31.12.26-.pdf | תעודת כשרות - בית יוסף | תעודת כשרות - בית יוסף",
+    "   ? בדצ-מונגש--מנורה-קופות-גמל-להשקעה.pdf | תעודת כשרות - בד\"צ | תעודת כשרות - בד\"צ",
+    "   ? תעודת-כשרות-ועד-ההלכה.pdf | תעודת כשרות - גלאט הון | תעודת כשרות - גלאט הון",
+    "מנורה מבטחים פנסיה: links=234 files=3 clicked=0 captured=0 selected=0",
+    "   ? 13353---גמל-להשקעה-מדדי-מניות-חול.pdf | לחצו כאן | ",
+    "   ? תעודות-עד-כא-טבת-תשפ''ז-31.12.26-.pdf | תעודת כשרות - בית יוסף | תעודת כשרות - בית יוסף",
+    "   ? בדצ-מונגש--מנורה-קופות-גמל-להשקעה.pdf | תעודת כשרות - בד\"צ | תעודת כשרות - בד\"צ",
+    "מנורה מבטחים פנסיה: links=232 files=1 clicked=0 captured=0 selected=0",
+    "   ? 13354---גמל-להשקעה-חול.pdf | לחצו כאן | ",
+    "מנורה מבטחים פנסיה: links=231 files=0 clicked=0 captured=0 selected=0",
+    "מנורה מבטחים פנסיה: links=233 files=1 clicked=0 captured=0 selected=0",
+    "   ? בדצ-מונגש--מנורה-השתלמות.pdf | תעודת כשרות - בד\"צ | תעודת כשרות - בד\"צ",
+    "מנורה מבטחים פנסיה: links=231 files=1 clicked=0 captured=0 selected=0",
+    "   ? 11409---השתלמות-פאסיבי-מדדי-אגח-עד-15-אחוז.pdf | לחצו כאן | ",
+    "מנורה מבטחים פנסיה: links=233 files=1 clicked=0 captured=0 selected=0",
+    "   ? 9662--השתלמות-עד-20-אחוז-מניות.pdf | לחצו כאן | ",
+    "מנורה מבטחים פנסיה: links=233 files=0 clicked=0 captured=0 selected=0",
+    "מנורה מבטחים פנסיה: links=231 files=0 clicked=0 captured=0 selected=0"
+   ],
+   "new_files": []
+  },
+  {
+   "legal_id": "520030677",
+   "name": "איילון חברה לביטוח בע\"מ",
+   "pages": [
+    {
+     "url": "https://www.ayalon-ins.co.il/about-us/about-ayalon/investments/policy/",
+     "links": 394,
+     "followed": [
+      "https://www.ayalon-ins.co.il/about-us/about-ayalon/investments/publications/",
+      "https://www.ayalon-ins.co.il/career/finance-investments",
+      "https://www.ayalon-ins.co.il/about-us/about-ayalon/investments/",
+      "https://www.ayalon-ins.co.il/investments-provident",
+      "https://www.ayalon-ins.co.il/investments-directorate",
+      "https://www.ayalon-ins.co.il/investments-levelagreement"
+     ],
+     "files": 1,
+     "clicked": 0,
+     "captured": 0,
+     "selected": [],
+     "unselected_files": [
+      {
+       "file": "https://www.ayalon-ins.co.il/media/dtvlz32w/amitim_03_2026.pdf",
+       "text": "עקרונות נוהל העברת זכויות עמיתים שלא במזומן",
+       "ctx": ""
+      }
+     ]
+    },
+    {
+     "url": "https://www.ayalon-ins.co.il/savings/nispah/",
+     "links": 160,
+     "followed": [],
+     "files": 0,
+     "clicked": 0,
+     "captured": 0,
+     "selected": [],
+     "unselected_files": []
+    },
+    {
+     "url": "https://www.ayalon-ins.co.il/savings/nispah_prat/",
+     "links": 160,
+     "followed": [],
+     "files": 0,
+     "clicked": 0,
+     "captured": 0,
+     "selected": [],
+     "unselected_files": []
+    },
+    {
+     "url": "https://www.ayalon-ins.co.il/investments",
+     "links": 394,
+     "followed": [],
+     "files": 1,
+     "clicked": 0,
+     "captured": 0,
+     "selected": [],
+     "unselected_files": [
+      {
+       "file": "https://www.ayalon-ins.co.il/media/dtvlz32w/amitim_03_2026.pdf",
+       "text": "עקרונות נוהל העברת זכויות עמיתים שלא במזומן",
+       "ctx": ""
+      }
+     ]
+    }
+   ],
+   "new_docs": 0,
+   "found": 2,
+   "selected": 0,
+   "had": 0,
+   "head_skip": 0,
+   "errors": [
+    "https://www.ayalon-ins.co.il: No tab with id: 657242913."
+   ],
+   "diag": [
+    "איילון חברה לביטוח: links=394 files=1 clicked=0 captured=0 selected=0",
+    "   ? amitim_03_2026.pdf | עקרונות נוהל העברת זכויות עמיתים שלא במז | ",
+    "איילון חברה לביטוח: links=160 files=0 clicked=0 captured=0 selected=0",
+    "איילון חברה לביטוח: links=160 files=0 clicked=0 captured=0 selected=0",
+    "איילון חברה לביטוח: links=394 files=1 clicked=0 captured=0 selected=0",
+    "   ? amitim_03_2026.pdf | עקרונות נוהל העברת זכויות עמיתים שלא במז | "
+   ],
+   "new_files": []
+  }
+ ]
+}
