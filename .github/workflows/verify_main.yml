@@ -22,6 +22,12 @@ jobs:
       - uses: actions/setup-python@v5
         with:
           python-version: "3.12"
+      - name: Restore foreign-fund classification cache
+        uses: actions/cache@v4
+        with:
+          path: .cache
+          key: fund-class-${{ github.run_id }}
+          restore-keys: fund-class-
       - name: Install deps
         run: pip install requests python-calamine yfinance
       - name: Run main pipeline
@@ -75,6 +81,12 @@ jobs:
           PAT: ${{ secrets.PAT }}
           DUMP_EQUITY_COMPONENTS: ${{ inputs.dump_components }}
         run: python -m scripts.funds_holdings.validate_equity_exposure --reports-dir reports
+      - name: Validate FX exposure vs official (חשיפה למט"ח)
+        env:
+          REVACH_MATCH_KEY: ${{ secrets.REVACH_MATCH_KEY }}
+          PAT: ${{ secrets.PAT }}
+          DUMP_EQUITY_COMPONENTS: ${{ inputs.dump_components }}
+        run: python -m scripts.funds_holdings.validate_fx_exposure --reports-dir reports
       - name: Report unmatched foreign funds
         env:
           REVACH_MATCH_KEY: ${{ secrets.REVACH_MATCH_KEY }}

@@ -359,6 +359,15 @@ def il_fund_equity(fund_ref: dict, exposure: dict[str, float] | None = None) -> 
     return (exposure or {}).get(fund_number_key(fund_ref.get("מספר קרן")) or "", 0.0)
 
 
+def foreign_fund_index(frac: dict, reported_name, full_name, country) -> tuple[str, str]:
+    """המדד של קרן חו"ל: לפי השם (המלא/הרשמי כשיש). מניה שדווחה כקרן (frac["stock"] - DISCO CORP),
+    או שם שלא ממופה למדד מוכר ("JT 1629") - מניות המדינה שהגוף דיווח, לא כפתור בשם הגולמי."""
+    idx, label = classify_index(reported_name, full_name)
+    if (frac or {}).get("stock") or not _is_recognized(idx):
+        return _country_label(country)
+    return idx, label
+
+
 def misfiled_stock(row: dict, tase_stocks: set[str] | None) -> bool:
     """שורה בגיליון קרנות שהנייר שלה מניה בת"א (KAMADA IL0010941198) - נספרת כמניה ישירה."""
     return bool(tase_stocks) and str(row.get(SEC_NUM_COL) or "").strip().upper() in tase_stocks
@@ -437,7 +446,8 @@ def _swap_index(row, full_names: dict[str, str] | None = None) -> tuple[str, str
 def build_index_exposure(source: list[dict], funds: list[dict], funds_ref: list[dict],
                          isin_fractions: dict[str, dict[str, float]], resolve_online: bool = False,
                          trace: dict | None = None, fund_exposure: dict[str, float] | None = None,
-                         tase_stocks: set[str] | None = None) -> dict[str, dict]:
+                         tase_stocks: set[str] | None = None,
+                         official_names: dict[str, str] | None = None) -> dict[str, dict]:
     """מפתח -> {"total": ..., "indices": {מזהה: {"label", "pct", "sources"}}}.
 
     source צריך להיות אחרי normalize_track_pct (כמו בכל שאר הרכיבים). trace (אופציונלי) מקבל
@@ -492,7 +502,9 @@ def build_index_exposure(source: list[dict], funds: list[dict], funds_ref: list[
             frac = isin_fractions.get(num.upper())
             if not frac or not frac.get("equity"):
                 continue
-            idx, label = classify_index(names_by_isin.get(num.upper(), num), full_names.get(num.upper()))
+            idx, label = foreign_fund_index(frac, names_by_isin.get(num.upper(), num),
+                                            full_names.get(num.upper()) or (official_names or {}).get(num.upper()),
+                                            (f.get("_row") or {}).get(COUNTRY_COL))
             acc.add(key, idx, label, pct * frac["equity"], "funds_foreign", f.get("_row"))
 
     # 3. חוזים עתידיים - אותה חשיפה לשורה כמו ב-derivatives_exposure
@@ -577,7 +589,7 @@ def _add_derivative(acc: _Acc, detail: list[dict], capped_equity: dict[str, floa
 TRACK_FIELDS = {
     "company": "שם החברה", "product": "סוג קרן", "track_number": "מס' מסלול",
     "track_name": "שם מסלול קצר", "track_name_long": "שם מסלול ההשקעה", "track_type": "סוג מסלול",
-    "official_equity": "חשיפה למניות", "official_month": "נכון לחודש",
+    "official_equity": "חשיפה למניות", "official_fx": "חשיפה למטח", "official_month": "נכון לחודש",
     # כשרות - מ-tracks (כמו /sharetracks), לכל המסלולים כולל לא כשרים
     "kosher": "הכשר", "glatt_hon": "גלאט הון", "eda": "עד''ח", "tshua_kahalacha": "תשואה כהלכה",
     "rav_dvir": "ר א דביר",
@@ -600,9 +612,12 @@ def report_month_by_key(source: list[dict]) -> dict[str, str]:
 
 
 def build_index_table(index_exp: dict[str, dict], tracks_by_key: dict[str, dict],
-                      report_month: dict[str, str]) -> list[dict]:
+                      report_month: dict[str, str], fx: dict[str, dict[str, float]] | None = None,
+                      fx_ccy: dict[str, dict[str, float]] | None = None) -> list[dict]:
     """רשומה למסלול: פרטי המסלול (מ-tracks) + סה"כ חשיפה למניות + פירוק לפי מדד,
-    מהגדול לקטן. רק מסלולים שיש להם נתוני דוח."""
+    מהגדול לקטן. רק מסלולים שיש להם נתוני דוח. fx / fx_ccy (fx_exposure): החשיפה למט"ח לפי הדוח -
+    fx_total, הרכיבים (fx) והפירוק לפי מטבע (fx_ccy, מהגדול לקטן)."""
+    from .fx_exposure import fx_total
     out = []
     empty = {"total": 0.0, "indices": {}}
     for key in set(index_exp) | set(report_month):
@@ -615,6 +630,11 @@ def build_index_table(index_exp: dict[str, dict], tracks_by_key: dict[str, dict]
              "sources": {s: round(v, 6) for s, v in e["sources"].items()}}
             for i, e in sorted(exp["indices"].items(), key=lambda x: -x[1]["pct"])
         ]
+        if fx is not None and key in fx:
+            rec["fx_total"] = round(fx_total(fx[key]), 6)
+            rec["fx"] = {c: round(v, 6) for c, v in fx[key].items() if abs(v) >= 1e-6}
+            rec["fx_ccy"] = [[c, round(v, 6)] for c, v in sorted((fx_ccy or {}).get(key, {}).items(),
+                                                              key=lambda x: -abs(x[1])) if abs(v) >= 0.0005]
         out.append(rec)
     return sorted(out, key=lambda r: (str(r.get("company") or ""), str(r["key"])))
 

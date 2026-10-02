@@ -19,11 +19,8 @@ from .derivatives_exposure import (
 )
 from .excel_io import to_ratio
 from .file_list import get_file_list
-from .foreign_etf_reference import (
-    build_foreign_equity, build_isin_fractions, classify_from_report_names, sanitize_fractions,
-    classify_via_openfigi_names, collect_unclassified_foreign_isins, repair_isin_typos,
-    fetch_etf_universe, fetch_sec_etf_exposure,
-)
+from .foreign_etf_reference import build_foreign_equity
+from .foreign_fund_layers import build_foreign_fractions
 from .funds import build_funds
 from .funds_reference import build_funds_reference
 from .funds_il import build_funds_il_equity
@@ -96,40 +93,7 @@ def compute_equity_totals(reports_dir: Path, tracks: list[dict]):
     funds = build_funds(source, isin_swap)
     il_equity = build_funds_il_equity(funds, funds_ref, fetch_fund_exposure(), fetch_tase_stocks())
 
-    isin_fractions = build_isin_fractions(fetch_etf_universe(), fetch_sec_etf_exposure())
-    for isin, frac in classify_from_report_names(source).items():
-        isin_fractions.setdefault(isin, frac)
-    print(f"[validate] {len(isin_fractions)} ISIN מסווגים (ETF זרות: אירופה+SEC+שם-קרן)")
-
-    still_missing = collect_unclassified_foreign_isins(funds, isin_fractions)
-    try:
-        from .sec_nport_reference import build_isin_fractions_via_nport
-        for isin, frac in build_isin_fractions_via_nport(still_missing).items():
-            isin_fractions.setdefault(isin, frac)
-    except Exception as e:
-        print(f"[validate] שכבת SEC N-PORT חי נכשלה (מדלג): {e}")
-    print(f"[validate] {len(isin_fractions)} ISIN מסווגים סה\"כ (+N-PORT חי)")
-
-    still_missing_yahoo = collect_unclassified_foreign_isins(funds, isin_fractions)
-    try:
-        from .yahoo_fund_reference import build_isin_fractions_via_yahoo
-        for isin, frac in build_isin_fractions_via_yahoo(still_missing_yahoo).items():
-            isin_fractions.setdefault(isin, frac)
-    except Exception as e:
-        print(f"[validate] שכבת Yahoo/Morningstar נכשלה (מדלג): {e}")
-    print(f"[validate] {len(isin_fractions)} ISIN מסווגים סה\"כ (+Yahoo/Morningstar)")
-
-    still_missing_2 = collect_unclassified_foreign_isins(funds, isin_fractions)
-    try:
-        for isin, frac in classify_via_openfigi_names(still_missing_2).items():
-            isin_fractions.setdefault(isin, frac)
-    except Exception as e:
-        print(f"[validate] שכבת שמות-מלאים OpenFIGI נכשלה (מדלג): {e}")
-    print(f"[validate] {len(isin_fractions)} ISIN מסווגים סה\"כ (+שמות מלאים)")
-    repaired = repair_isin_typos(funds, isin_fractions)
-    print(f"[validate] {len(repaired)} ISIN עם טעות בקידומת המדינה (ספרת ביקורת) - סווגו לפי המתוקן: {repaired}")
-    fixed = sanitize_fractions(isin_fractions, source)
-    print(f"[validate] {len(fixed)} ISIN עם שבר מניות > 1 בקרן לא ממונפת - נורמלו: {fixed[:10]}")
+    isin_fractions = build_foreign_fractions(source, funds, "validate")[0]
 
     # אבחון: שבר מניות מעל 1 (קרן לונג לא אמורה לעבור 100%) - משקל מצטבר במסלולים
     weight_by_isin: dict[str, float] = {}
