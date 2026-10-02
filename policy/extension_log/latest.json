@@ -1,7 +1,7 @@
 {
  "extension_version": "2.41.0",
  "started": "2026-10-02T09:50:40.187Z",
- "updated": "2026-10-02T10:08:40.279Z",
+ "updated": "2026-10-02T10:09:16.874Z",
  "final": false,
  "stopped": false,
  "rules_from_github": true,
@@ -20,7 +20,7 @@
   "page_cache_days": 3
  },
  "total_sites": 7,
- "done_sites": 4,
+ "done_sites": 5,
  "new_docs": 0,
  "skipped_complete": [
   {
@@ -75,24 +75,17 @@
  "active": [
   {
    "name": "מנורה מבטחים פנסיה וגמל בע\"מ",
-   "page": "https://www.menoramivt.co.il/funds/pension-and-gemel/pension-plans/pension-stock-abroad-track",
-   "page_no": 53,
+   "page": "https://www.menoramivt.co.il/funds/pension-and-gemel/pension-plans/halacha-track",
+   "page_no": 55,
    "pages": 77,
-   "step": "טוען עמוד"
+   "step": "פותח אקורדיונים ואוסף קישורים"
   },
   {
    "name": "אלטשולר שחם גמל ופנסיה בע\"מ",
-   "page": "https://www.as-invest.co.il/interstedin/pension/comprehensive-fund/%D7%90%D7%9C%D7%98%D7%A9%D7%95%D7%9C%D7%A8-%D7%A9%D7%97%D7%9D-%D7%A4%D7%A0%D7%A1%D7%99%D7%94-%D7%9E%D7%A7%D7%99%D7%A4%D7%94-%D7%9E%D7%A1%D7%9C%D7%95%D7%9C-%D7%9C%D7%91%D7%A0%D7%99-60-%D7%95%D7%9E%D7%A2%D7%9C%D7%94/",
-   "page_no": 60,
+   "page": "https://www.as-invest.co.il/interstedin/pension/comprehensive-fund/%D7%90%D7%9C%D7%98%D7%A9%D7%95%D7%9C%D7%A8-%D7%A9%D7%97%D7%9D-%D7%A4%D7%A0%D7%A1%D7%99%D7%94-%D7%9E%D7%A7%D7%99%D7%A4%D7%94-%D7%9C%D7%9E%D7%A7%D7%91%D7%9C%D7%99-%D7%A7%D7%A6%D7%91%D7%94-%D7%A7%D7%99%D7%99%D7%9E%D7%99%D7%9D/",
+   "page_no": 62,
    "pages": 103,
-   "step": "מוריד קובץ 5/8"
-  },
-  {
-   "name": "החברה המנהלת של מינהל קרן ההשתלמות לפקידים עובדי המנהל והשירותים בע\"מ",
-   "page": "https://minhal.org/%D7%90%D7%95%D7%93%D7%95%D7%AA-%D7%94%D7%A7%D7%A8%D7%9F/",
-   "page_no": 10,
-   "pages": 10,
-   "step": "פותח אקורדיונים ואוסף קישורים"
+   "step": "טוען עמוד"
   }
  ],
  "sites": [
@@ -2530,6 +2523,209 @@
     "החברה המנהלת של רו: links=218 files=114 clicked=0 captured=0 selected=6",
     "החברה המנהלת של רו: links=103 files=0 clicked=0 captured=0 selected=0",
     "החברה המנהלת של רו: links=118 files=0 clicked=0 captured=0 selected=0"
+   ],
+   "new_files": []
+  },
+  {
+   "legal_id": "520030990",
+   "name": "החברה המנהלת של מינהל קרן ההשתלמות לפקידים עובדי המנהל והשירותים בע\"מ",
+   "pages": [
+    {
+     "url": "https://www.minhal.org/?CategoryID=164",
+     "links": 268,
+     "followed": [
+      "https://minhal.org/%d7%90%d7%95%d7%93%d7%95%d7%aa-%d7%94%d7%a7%d7%a8%d7%9f/%d7%a4%d7%a0%d7%99%d7%95%d7%aa-%d7%94%d7%a6%d7%99%d7%91%d7%95%d7%a8/",
+      "https://minhal.org/%d7%90%d7%95%d7%93%d7%95%d7%aa-%d7%94%d7%a7%d7%a8%d7%9f/%d7%94%d7%95%d7%a6%d7%90%d7%95%d7%aa-%d7%99%d7%a9%d7%99%d7%a8%d7%95%d7%aa-%d7%91%d7%a2%d7%93-%d7%a0%d7%99%d7%94%d7%95%d7%9c-%d7%94%d7%a9%d7%a7%d7%a2%d7%95%d7%aa/",
+      "https://minhal.org/%d7%a0%d7%9b%d7%a1%d7%99-%d7%94%d7%a7%d7%a8%d7%9f/%d7%94%d7%aa%d7%a4%d7%9c%d7%92%d7%95%d7%aa-%d7%90%d7%a4%d7%99%d7%a7%d7%99-%d7%94%d7%a9%d7%a7%d7%a2%d7%94/",
+      "https://minhal.org/%d7%a0%d7%9b%d7%a1%d7%99-%d7%94%d7%a7%d7%a8%d7%9f/"
+     ],
+     "files": 1,
+     "clicked": 0,
+     "captured": 0,
+     "selected": [],
+     "unselected_files": [
+      {
+       "file": "https://minhal.org/wp-content/uploads/2026/08/מדיניות-פרטיות.pdf",
+       "text": "מדיניות פרטיות",
+       "ctx": ""
+      }
+     ]
+    },
+    {
+     "url": "https://www.minhal.org/?CategoryID=153",
+     "links": 268,
+     "followed": [],
+     "files": 1,
+     "clicked": 0,
+     "captured": 0,
+     "selected": [],
+     "unselected_files": [
+      {
+       "file": "https://minhal.org/wp-content/uploads/2026/08/מדיניות-פרטיות.pdf",
+       "text": "מדיניות פרטיות",
+       "ctx": ""
+      }
+     ]
+    },
+    {
+     "url": "https://www.minhal.org/?CategoryID=0",
+     "links": 268,
+     "followed": [],
+     "files": 1,
+     "clicked": 0,
+     "captured": 0,
+     "selected": [],
+     "unselected_files": [
+      {
+       "file": "https://minhal.org/wp-content/uploads/2026/08/מדיניות-פרטיות.pdf",
+       "text": "מדיניות פרטיות",
+       "ctx": ""
+      }
+     ]
+    },
+    {
+     "url": "https://minhal.org/אודות-הקרן/",
+     "links": 280,
+     "followed": [
+      "https://minhal.org/%D7%90%D7%95%D7%93%D7%95%D7%AA-%D7%94%D7%A7%D7%A8%D7%9F/"
+     ],
+     "files": 2,
+     "clicked": 0,
+     "captured": 0,
+     "selected": [],
+     "unselected_files": [
+      {
+       "file": "https://minhal.org/wp-content/uploads/2024/07/heter_iska_minhal1.pdf",
+       "text": "לחץ כאן",
+       "ctx": ""
+      },
+      {
+       "file": "https://minhal.org/wp-content/uploads/2026/08/מדיניות-פרטיות.pdf",
+       "text": "מדיניות פרטיות",
+       "ctx": ""
+      }
+     ]
+    },
+    {
+     "url": "https://www.minhal.org",
+     "links": 268,
+     "followed": [],
+     "files": 1,
+     "clicked": 0,
+     "captured": 0,
+     "selected": [],
+     "unselected_files": [
+      {
+       "file": "https://minhal.org/wp-content/uploads/2026/08/מדיניות-פרטיות.pdf",
+       "text": "מדיניות פרטיות",
+       "ctx": ""
+      }
+     ]
+    },
+    {
+     "url": "https://minhal.org/%d7%90%d7%95%d7%93%d7%95%d7%aa-%d7%94%d7%a7%d7%a8%d7%9f/%d7%a4%d7%a0%d7%99%d7%95%d7%aa-%d7%94%d7%a6%d7%99%d7%91%d7%95%d7%a8/",
+     "links": 0,
+     "followed": [],
+     "files": 0,
+     "clicked": 0,
+     "captured": 0,
+     "selected": [],
+     "unselected_files": []
+    },
+    {
+     "url": "https://minhal.org/%d7%90%d7%95%d7%93%d7%95%d7%aa-%d7%94%d7%a7%d7%a8%d7%9f/%d7%94%d7%95%d7%a6%d7%90%d7%95%d7%aa-%d7%99%d7%a9%d7%99%d7%a8%d7%95%d7%aa-%d7%91%d7%a2%d7%93-%d7%a0%d7%99%d7%94%d7%95%d7%9c-%d7%94%d7%a9%d7%a7%d7%a2%d7%95%d7%aa/",
+     "links": 268,
+     "followed": [],
+     "files": 1,
+     "clicked": 0,
+     "captured": 0,
+     "selected": [],
+     "unselected_files": [
+      {
+       "file": "https://minhal.org/wp-content/uploads/2026/08/מדיניות-פרטיות.pdf",
+       "text": "מדיניות פרטיות",
+       "ctx": ""
+      }
+     ]
+    },
+    {
+     "url": "https://minhal.org/%d7%a0%d7%9b%d7%a1%d7%99-%d7%94%d7%a7%d7%a8%d7%9f/%d7%94%d7%aa%d7%a4%d7%9c%d7%92%d7%95%d7%aa-%d7%90%d7%a4%d7%99%d7%a7%d7%99-%d7%94%d7%a9%d7%a7%d7%a2%d7%94/",
+     "links": 268,
+     "followed": [],
+     "files": 1,
+     "clicked": 0,
+     "captured": 0,
+     "selected": [],
+     "unselected_files": [
+      {
+       "file": "https://minhal.org/wp-content/uploads/2026/08/מדיניות-פרטיות.pdf",
+       "text": "מדיניות פרטיות",
+       "ctx": ""
+      }
+     ]
+    },
+    {
+     "url": "https://minhal.org/%d7%a0%d7%9b%d7%a1%d7%99-%d7%94%d7%a7%d7%a8%d7%9f/",
+     "links": 0,
+     "followed": [],
+     "files": 0,
+     "clicked": 0,
+     "captured": 0,
+     "selected": [],
+     "unselected_files": []
+    },
+    {
+     "url": "https://minhal.org/%D7%90%D7%95%D7%93%D7%95%D7%AA-%D7%94%D7%A7%D7%A8%D7%9F/",
+     "links": 268,
+     "followed": [],
+     "files": 1,
+     "clicked": 0,
+     "captured": 0,
+     "selected": [],
+     "unselected_files": [
+      {
+       "file": "https://minhal.org/wp-content/uploads/2026/08/מדיניות-פרטיות.pdf",
+       "text": "מדיניות פרטיות",
+       "ctx": ""
+      }
+     ]
+    }
+   ],
+   "new_docs": 0,
+   "found": 9,
+   "selected": 0,
+   "had": 0,
+   "head_skip": 0,
+   "errors": [
+    "https://www.minhal.org/?CategoryID=164: timeout 90s: pageCollectLinks -> light collect",
+    "https://www.minhal.org/?CategoryID=153: timeout 90s: pageCollectLinks -> light collect",
+    "https://www.minhal.org/?CategoryID=0: timeout 90s: pageCollectLinks -> light collect",
+    "https://www.minhal.org: timeout 90s: pageCollectLinks -> light collect",
+    "https://minhal.org/%d7%90%d7%95%d7%93%d7%95%d7%aa-%d7%94%d7%a7%d7%a8%d7%9f/%d7%a4%d7%a0%d7%99%d7%95%d7%aa-%d7%94%d7%a6%d7%99%d7%91%d7%95%d7%a8/: timeout 90s: pageCollectLinks -> light collect",
+    "https://minhal.org/%d7%90%d7%95%d7%93%d7%95%d7%aa-%d7%94%d7%a7%d7%a8%d7%9f/%d7%94%d7%95%d7%a6%d7%90%d7%95%d7%aa-%d7%99%d7%a9%d7%99%d7%a8%d7%95%d7%aa-%d7%91%d7%a2%d7%93-%d7%a0%d7%99%d7%94%d7%95%d7%9c-%d7%94%d7%a9%d7%a7%d7%a2%d7%95%d7%aa/: timeout 90s: pageCollectLinks -> light collect",
+    "https://minhal.org/%d7%a0%d7%9b%d7%a1%d7%99-%d7%94%d7%a7%d7%a8%d7%9f/%d7%94%d7%aa%d7%a4%d7%9c%d7%92%d7%95%d7%aa-%d7%90%d7%a4%d7%99%d7%a7%d7%99-%d7%94%d7%a9%d7%a7%d7%a2%d7%94/: timeout 90s: pageCollectLinks -> light collect",
+    "https://minhal.org/%D7%90%D7%95%D7%93%D7%95%D7%AA-%D7%94%D7%A7%D7%A8%D7%9F/: timeout 90s: pageCollectLinks -> light collect"
+   ],
+   "diag": [
+    "החברה המנהלת של מי: links=268 files=1 clicked=0 captured=0 selected=0",
+    "   ? מדיניות-פרטיות.pdf | מדיניות פרטיות | ",
+    "החברה המנהלת של מי: links=268 files=1 clicked=0 captured=0 selected=0",
+    "   ? מדיניות-פרטיות.pdf | מדיניות פרטיות | ",
+    "החברה המנהלת של מי: links=268 files=1 clicked=0 captured=0 selected=0",
+    "   ? מדיניות-פרטיות.pdf | מדיניות פרטיות | ",
+    "החברה המנהלת של מי: links=280 files=2 clicked=0 captured=0 selected=0",
+    "   ? heter_iska_minhal1.pdf | לחץ כאן | ",
+    "   ? מדיניות-פרטיות.pdf | מדיניות פרטיות | ",
+    "החברה המנהלת של מי: links=268 files=1 clicked=0 captured=0 selected=0",
+    "   ? מדיניות-פרטיות.pdf | מדיניות פרטיות | ",
+    "החברה המנהלת של מי: links=0 files=0 clicked=0 captured=0 selected=0",
+    "החברה המנהלת של מי: links=268 files=1 clicked=0 captured=0 selected=0",
+    "   ? מדיניות-פרטיות.pdf | מדיניות פרטיות | ",
+    "החברה המנהלת של מי: links=268 files=1 clicked=0 captured=0 selected=0",
+    "   ? מדיניות-פרטיות.pdf | מדיניות פרטיות | ",
+    "החברה המנהלת של מי: links=0 files=0 clicked=0 captured=0 selected=0",
+    "החברה המנהלת של מי: links=268 files=1 clicked=0 captured=0 selected=0",
+    "   ? מדיניות-פרטיות.pdf | מדיניות פרטיות | "
    ],
    "new_files": []
   }
