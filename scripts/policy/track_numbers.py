@@ -249,7 +249,8 @@ def name_numbers(name):
     """מספרים בשם המסלול. מספר בסוף השם נחשב גם אם נראה כשנה ("מיטבית עתודות ספיר 2002")."""
     out = numbers_in(name)
     m = re.search(r"(?<![\d%])((?:19|20)\d\d)\s*$", str(name or ""))
-    if m and not re.search(r"לשנת|שנת|מעודכן", str(name)):
+    # לא שנת יעד ("יעד לפרישה 2040" - מנורה: המסלול הוא 2015; 2040 הוא מסלול של חברה אחרת והמסלול נמחק בכפילויות)
+    if m and not re.search(r"לשנת|שנת|מעודכן|פרישה|יעד", str(name)):
         out.append(m.group(1))
     return out
 

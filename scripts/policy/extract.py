@@ -10,6 +10,7 @@
 from urllib.parse import unquote
 import argparse, csv, json, re, sys
 from pathlib import Path
+from datetime import datetime
 
 ROOT = Path(__file__).resolve().parents[2]
 OUT = ROOT / (__import__("os").environ.get("POLICY_OUT") or "policy")  # ריצה לחברה: policy/companies/<LegalId>
@@ -819,7 +820,9 @@ def main():
         doc_year = fy.group(1) if fy else (max(set(years), key=years.count) if years else None)
         for r in doc_rows:  # שנה בשם הקובץ גוברת (בגוף הגיליון מופיעות לפעמים שנים של נתוני עבר)
             r["year"] = doc_year or r.get("year")
-        fn_code = re.search(r"-(?!(?:19|20)\d\d\.)(\d{3,6})\.(xlsx?|pdf)$", Path(ent["file"]).name)  # מנורה: קובץ למסלול, הקוד בשם (לא שנה - רום "...-2025.pdf")
+        fn_code = re.search(r"-(\d{3,6})\.(xlsx?|pdf)$", Path(ent["file"]).name)  # מנורה: קובץ למסלול, הקוד בשם
+        if fn_code and 2016 <= int(fn_code.group(1)) <= datetime.now().year + 1:
+            fn_code = None  # שנת מדיניות (רום "...-2025.pdf"), לא מסלול; מספרי מסלול כמו 2009/2013/2015 (מנורה פנסיה) נשארים
         if fn_code and doc_rows and len({r.get("track_code") for r in doc_rows}) == 1 and not any(r.get("fund_id") for r in doc_rows):
             for r in doc_rows:
                 r["fund_id"] = r["track_no"] = fn_code.group(1)
