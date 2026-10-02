@@ -61,6 +61,7 @@
    קרנות...) כבר משקפות שווי שוק אמיתי, אין בהן את הבאג.
 """
 
+import re
 import statistics
 from datetime import date, datetime
 
@@ -127,6 +128,34 @@ SWAP_UNDERLYING_PRICE_COL = "שער נכס הבסיס במועד ההתקשרו�
 SWAP_TICKER_COL = "טיקר"
 SWAP_ASSET_TYPE_COL = "סוג הנכס"
 SWAP_EQUITY_ASSET_TYPE = "מניות לרבות מדדי מניות"
+# סוואפ על תעודת סל אמריקאית ("LQD US", "HYG US Equity"): הדוח מסווג "מניות לרבות מדדי מניות" גם כשהקרן
+# היא קרן אג"ח (LQD - אג"ח קונצרני, HYG - תשואה גבוהה). שבר המניות של הקרן מ-SEC N-PORT (eqTotalPct);
+# קרן שרובה לא מניות - הסוואפ אינו חשיפה למניות
+_US_ETF_SWAP_TICKER = re.compile(r"^([A-Z]{1,5})\s+U[SNWQPARFV](?:\s+EQUITY)?$")
+_ETF_EQUITY_BY_SYMBOL: dict[str, float] | None = None
+
+
+def _etf_equity_by_symbol() -> dict[str, float]:
+    global _ETF_EQUITY_BY_SYMBOL
+    if _ETF_EQUITY_BY_SYMBOL is None:
+        try:
+            from .foreign_etf_reference import SEC_NO_DATA, fetch_sec_etf_exposure
+            _ETF_EQUITY_BY_SYMBOL = {
+                str(x["symbol"]).strip().upper(): (x.get("eqTotalPct") or 0.0) / 100
+                for x in fetch_sec_etf_exposure() if x.get("symbol") and x.get("assetClass") != SEC_NO_DATA}
+        except (Exception, SystemExit) as e:  # בלי PAT / רשת - כמו קודם (לפי סוג הנכס בדוח)
+            print(f"[swaps] שברי מניות של תעודות סל (SEC) לא זמינים: {e}")
+            _ETF_EQUITY_BY_SYMBOL = {}
+    return _ETF_EQUITY_BY_SYMBOL
+
+
+def swap_on_bond_etf(row: dict) -> bool:
+    """סוואפ שנכס הבסיס שלו תעודת סל אמריקאית שרובה לא מניות (SEC N-PORT)."""
+    m = _US_ETF_SWAP_TICKER.match(re.sub(r"\s+", " ", str(row.get(SWAP_TICKER_COL) or "")).strip().upper())
+    if not m:
+        return False
+    frac = _etf_equity_by_symbol().get(m.group(1))
+    return frac is not None and frac < 0.5
 SWAP_MAIN_TYPE_COL = "מאפיין עיקרי"  # "Unfunded Swap"/"Funded Total Return/Equity Swap"/... - נבדק בפועל
 SWAP_LABEL_COL = SWAP_MAIN_TYPE_COL
 FUNDED_SWAP_CATEGORY = "החלף עם מימון (Funded)"
@@ -501,7 +530,7 @@ def _swap_exposure(
             total = total_assets.get(key) if key is not None else None
             if not total:
                 continue
-            is_equity = row.get(SWAP_ASSET_TYPE_COL) == SWAP_EQUITY_ASSET_TYPE
+            is_equity = row.get(SWAP_ASSET_TYPE_COL) == SWAP_EQUITY_ASSET_TYPE and not swap_on_bond_etf(row)
             label = row.get(SWAP_LABEL_COL)
             # ה-fallback (כשקנה המידה לא אמין) משתמש בעמודת האחוז כפי שהדוח
             # עצמו מדווח - נמצא בפועל מדויק יותר מ-fv/total_assets_by_key

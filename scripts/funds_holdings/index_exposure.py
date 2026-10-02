@@ -27,7 +27,7 @@ from .derivatives_exposure import (
     EQUITY_UNDERLYING, FUT_UNDERLYING_COL, FUTURES_CATEGORY, OPTIONS_CATEGORIES, SWAP_ASSET_TYPE_COL,
     SWAP_CATEGORY as SWAP_CATEGORY_NAME,
     SWAP_EQUITY_ASSET_TYPE, SWAP_TICKER_COL, _futures_exposure, _options_exposure, _swap_exposure,
-    is_equity_option, parse_underlying, total_assets_by_key,
+    is_equity_option, parse_underlying, swap_on_bond_etf, total_assets_by_key,
 )
 from .excel_io import to_ratio
 from .funds_classification import fund_siveg, leverage_factor
@@ -427,7 +427,7 @@ def equity_row_index(category: str, row: dict, full_names: dict[str, str] | None
             return None
         return classify_index(str(row.get(NAME_COL) or ""))
     if category == SWAP_CATEGORY_NAME:
-        if row.get(SWAP_ASSET_TYPE_COL) != SWAP_EQUITY_ASSET_TYPE:
+        if row.get(SWAP_ASSET_TYPE_COL) != SWAP_EQUITY_ASSET_TYPE or swap_on_bond_etf(row):
             return None
         return _swap_index(row, full_names)
     return None
