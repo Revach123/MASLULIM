@@ -22,6 +22,94 @@
   {
    "product": "גמל",
    "url": "https://www.yl-invest.co.il/ניהול-קופות-גמל-והשתלמות/"
+  },
+  {
+   "product": "גמל",
+   "url": "https://www.yl-invest.co.il/מסלול-לבני-50-עד-60/"
+  },
+  {
+   "product": "גמל",
+   "url": "https://www.yl-invest.co.il/מסלול-לבני-50-ומטה/"
+  },
+  {
+   "product": "גמל",
+   "url": "https://www.yl-invest.co.il/מסלול-אשראי-ואג-ח/"
+  },
+  {
+   "product": "גמל",
+   "url": "https://www.yl-invest.co.il/מסלול-לבני-60-ומעלה/"
+  },
+  {
+   "product": "גמל",
+   "url": "https://www.yl-invest.co.il/מסלול-אג-ח-ממשלות/"
+  },
+  {
+   "product": "גמל",
+   "url": "https://www.yl-invest.co.il/מסלול-משולב-סחיר/"
+  },
+  {
+   "product": "גמל",
+   "url": "https://www.yl-invest.co.il/מסלול-עוקב-מדדים-גמיש/"
+  },
+  {
+   "product": "גמל",
+   "url": "https://www.yl-invest.co.il/238-1726570680-מסלול-עוקב-מדד-s-p-500/"
+  },
+  {
+   "product": "גמל",
+   "url": "https://www.yl-invest.co.il/185-1719748859-מסלול-עוקב-מדדים-גמיש/"
+  },
+  {
+   "product": "גמל",
+   "url": "https://www.yl-invest.co.il/מסלול-אגח-ממשלות/"
+  },
+  {
+   "product": "גמל",
+   "url": "https://www.yl-invest.co.il/31-1719748647-מסלול-אשראי-ואג-ח/"
+  },
+  {
+   "product": "גמל",
+   "url": "https://www.yl-invest.co.il/33-1719748695-מסלול-אשראי-ואג-ח-עם-מניות-עד-25-מניות/"
+  },
+  {
+   "product": "גמל",
+   "url": "https://www.yl-invest.co.il/מסלול-עוקב-מדד-s-p-500/"
+  },
+  {
+   "product": "גמל",
+   "url": "https://www.yl-invest.co.il/duplicated-1760593330/"
+  },
+  {
+   "product": "גמל",
+   "url": "https://www.yl-invest.co.il/מסלול-אשראי-ואג-ח-עם-מניות-עד-25-מניות/"
+  },
+  {
+   "product": "גמל",
+   "url": "https://www.yl-invest.co.il/37-1719748451-מסלול-אג-ח-ממשלות/"
+  },
+  {
+   "product": "גמל",
+   "url": "https://www.yl-invest.co.il/36-1719748337-מסלול-אשראי-ואג-ח/"
+  },
+  {
+   "product": "גמל",
+   "url": "https://www.yl-invest.co.il/201-1719748487-מסלול-עוקב-מדדים-גמיש/"
+  },
+  {
+   "product": "גמל",
+   "url": "https://www.yl-invest.co.il/178-1726570890-מסלול-עוקב-מדד-s-p-500/"
+  },
+  {
+   "product": "גמל",
+   "url": "https://www.yl-invest.co.il/duplicated-1760593888/"
+  },
+  {
+   "product": "גמל",
+   "url": "https://www.yl-invest.co.il/קופה-מרכזית-לפיצויים-מסלול-כללי/"
+  },
+  {
+   "product": "גמל",
+   "url": "https://www.yl-invest.co.il/קופה-מרכזית-לפיצויים-כללי-ב/"
   }
  ],
  "browser": "headless",
@@ -29,9 +117,9 @@
   "גמל"
  ],
  "search": false,
- "rev": 7,
- "note": "/17/ = ניהול קופות גמל והשתלמות: כל המסמכים ב-uploads/n/<מספר>.pdf עם 'הורדת טופס' - הכותרת בשורה. 2026-10: לכל מסלול עמוד מוצר ('לעמוד המוצר' בעמוד /17/) - follow לעמודי קופ*/קרן*; קודם נסרקו רק 5",
+ "rev": 8,
+ "note": "/17/ = ניהול קופות גמל והשתלמות: כל המסמכים ב-uploads/n/<מספר>.pdf עם 'הורדת טופס' - הכותרת בשורה. 2026-10: לכל מסלול עמוד מוצר ('לעמוד המוצר' בעמוד /17/) - follow לעמודי קופ*/קרן*; קודם נסרקו רק 5 | 2026-10-02: עמוד מוצר לכל מסלול בתפריט \"המוצרים שלנו\" (27 מסלולים; נסרקו רק 5) - כולם כ-seed",
  "track_from_link": "ילין לפידות\\s*-\\s*(.+?)\\.?\\s*(?:עודכן|$)",
  "follow": "yl-invest\\.co\\.il/(%D7%A7%D7%95%D7%A4|%D7%A7%D7%A8%D7%9F|קופ|קרן)[^/]*/$",
- "max_pages": 70
+ "max_pages": 90
 }
