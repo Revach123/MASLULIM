@@ -362,7 +362,7 @@
   "click": null,
   "clicks": null,
   "any_sheet": null,
-  "exclude": "לשנת 20(0\\d|1\\d|2[0-4])|_20(0\\d|1\\d|2[0-4])\\d{4}|20(1\\d|2[0-4])\\.xlsx",
+  "exclude": "לשנת 20(0\\d|1\\d|2[0-4])|_20(0\\d|1\\d|2[0-4])\\d{4}|[^/\\d]20(1\\d|2[0-4])\\.xlsx",
   "settle_ms": null,
   "capture_ms": null,
   "download_rx": null,
