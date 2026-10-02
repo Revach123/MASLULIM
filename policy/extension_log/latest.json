@@ -1,7 +1,7 @@
 {
  "extension_version": "2.48.0",
  "started": "2026-10-02T13:28:07.012Z",
- "updated": "2026-10-02T13:37:13.843Z",
+ "updated": "2026-10-02T13:39:20.580Z",
  "final": false,
  "stopped": false,
  "rules_from_github": true,
@@ -21,8 +21,8 @@
   "page_cache_days": 3
  },
  "total_sites": 6,
- "done_sites": 2,
- "new_docs": 37,
+ "done_sites": 4,
+ "new_docs": 40,
  "skipped_complete": [
   {
    "legal_id": "510930654",
@@ -82,31 +82,17 @@
  "active": [
   {
    "name": "מנורה מבטחים פנסיה וגמל בע\"מ",
-   "page": "https://www.menoramivt.co.il/funds/pension-and-gemel/gemel-hishtalmut-list/menroa-keren-hishtalmut/13357",
-   "page_no": 56,
+   "page": "https://www.menoramivt.co.il/funds/pension-and-gemel/pension-plans/retired-portfolio",
+   "page_no": 70,
    "pages": 80,
-   "step": "[3 במקביל] טוען עמוד"
+   "step": "[3 במקביל] פותח אקורדיונים ואוסף קישורים"
   },
   {
    "name": "אלטשולר שחם גמל ופנסיה בע\"מ",
-   "page": "https://www.as-invest.co.il/interstedin/%D7%97%D7%99%D7%A1%D7%9B%D7%95%D7%9F-%D7%95%D7%94%D7%A9%D7%A7%D7%A2%D7%94/%D7%90%D7%9C%D7%98%D7%A9%D7%95%D7%9C%D7%A8-%D7%A9%D7%97%D7%9D-%D7%97%D7%99%D7%A1%D7%9B%D7%95%D7%9F-%D7%A4%D7%9C%D7%95%D7%A1-%D7%94%D7%9C%D7%9B%D7%94/",
-   "page_no": 26,
+   "page": "https://www.as-invest.co.il/interstedin/gemel/%D7%90%D7%9C%D7%98%D7%A9%D7%95%D7%9C%D7%A8-%D7%A9%D7%97%D7%9D-%D7%A4%D7%99%D7%A6%D7%95%D7%99%D7%99%D7%9D-%D7%90%D7%A9%D7%A8%D7%90%D7%99-%D7%95%D7%90%D7%92%D7%97/",
+   "page_no": 33,
    "pages": 84,
-   "step": "פותח אקורדיונים ואוסף קישורים"
-  },
-  {
-   "name": "איילון חברה לביטוח בע\"מ",
-   "page": "https://www.ayalon-ins.co.il/investments-levelagreement",
-   "page_no": 11,
-   "pages": 13,
-   "step": "פותח אקורדיונים ואוסף קישורים"
-  },
-  {
-   "name": "החברה המנהלת של רום קרן ההשתלמות לעובדי הרשויות המקומיות בע\"מ",
-   "page": "https://www.krm.co.il/?CategoryID=217&ArticleID=25",
-   "page_no": 10,
-   "pages": 11,
-   "step": "ממתין לתור לחיצות ההורדה"
+   "step": "טוען עמוד"
   }
  ],
  "sites": [
@@ -2773,6 +2759,1476 @@
     "09313e23d48a_מדיניות-השקעה-לשנת-2021-אומגה-קרן-השתלמות-מסלול-אגח.xlsx",
     "223cdd60f7c5_מדיניות-השקעה-לשנת-2026-מנורה-מבטחים-קרן-השתלמות-אומגה-מניות-סחיר-15738.xlsx"
    ]
+  },
+  {
+   "legal_id": "520031824",
+   "name": "החברה המנהלת של רום קרן ההשתלמות לעובדי הרשויות המקומיות בע\"מ",
+   "pages": [
+    {
+     "url": "https://www.krm.co.il/?CategoryID=217&ArticleID=5",
+     "cache": "none",
+     "links": 338,
+     "followed": [
+      "https://www.krm.co.il/?CategoryID=217&ArticleID=10"
+     ],
+     "files": 237,
+     "clicked": 0,
+     "captured": 0,
+     "selected": [
+      "https://www.krm.co.il/_Uploads/dbsAttachedFiles/investment-forecast-clasic-12.07.2026.pdf",
+      "https://www.krm.co.il/_Uploads/dbsAttachedFiles/investment-forecast-clasic-2026(1).pdf",
+      "https://www.krm.co.il/_Uploads/dbsAttachedFiles/investment-forecast-clssic-2025.xlsx",
+      "https://www.krm.co.il/_Uploads/dbsAttachedFiles/investment-forecast-clssic-29.01.2024.xlsx",
+      "https://www.krm.co.il/_Uploads/dbsAttachedFiles/investment-forecast-classic-12.10.2023.xlsx",
+      "https://www.krm.co.il/_Uploads/dbsAttachedFiles/investment-forecast-classic-31.01.2023.xlsx",
+      "https://www.krm.co.il/_Uploads/dbsAttachedFiles/investment-forecast-classic-27.01.2022.pdf"
+     ],
+     "unselected_files": [
+      {
+       "file": "https://www.krm.co.il/_Uploads/dbsAttachedFiles/memune_rom_clasi_augest_2026.xlsx",
+       "text": "אוגוסט 2026",
+       "ctx": ""
+      },
+      {
+       "file": "https://www.krm.co.il/_Uploads/dbsAttachedFiles/memune_rom_clasic_july_2026.xlsx",
+       "text": "יולי 2026",
+       "ctx": ""
+      },
+      {
+       "file": "https://www.krm.co.il/_Uploads/dbsAttachedFiles/memune_rom_clasic_june_2026.xlsx",
+       "text": "יוני 2026",
+       "ctx": ""
+      },
+      {
+       "file": "https://www.krm.co.il/_Uploads/dbsAttachedFiles/memune_rom_clasic_may_2026.xlsx",
+       "text": "מאי 2026",
+       "ctx": ""
+      },
+      {
+       "file": "https://www.krm.co.il/_Uploads/dbsAttachedFiles/memune_rom_clasic_april_2026.xlsx",
+       "text": "אפריל 2026",
+       "ctx": ""
+      },
+      {
+       "file": "https://www.krm.co.il/_Uploads/dbsAttachedFiles/memune_rom_clasic_march_2026.xlsx",
+       "text": "מרץ 2026",
+       "ctx": ""
+      },
+      {
+       "file": "https://www.krm.co.il/_Uploads/dbsAttachedFiles/memune_rom_clasic_february_2026.xlsx",
+       "text": "פברואר 2026",
+       "ctx": ""
+      },
+      {
+       "file": "https://www.krm.co.il/_Uploads/dbsAttachedFiles/memune_rom_clasic_january_2026.xlsx",
+       "text": "ינואר 2026",
+       "ctx": ""
+      },
+      {
+       "file": "https://www.krm.co.il/_Uploads/dbsAttachedFiles/memune_rom_clasi_december_2025.xlsx",
+       "text": "דצמבר 2025",
+       "ctx": ""
+      },
+      {
+       "file": "https://www.krm.co.il/_Uploads/dbsAttachedFiles/memune_rom_clasi_november_2025.xlsx",
+       "text": "נובמבר 2025",
+       "ctx": ""
+      },
+      {
+       "file": "https://www.krm.co.il/_Uploads/dbsAttachedFiles/memune_rom_clasic_october_2025.xlsx",
+       "text": "אוקטובר 2025",
+       "ctx": ""
+      },
+      {
+       "file": "https://www.krm.co.il/_Uploads/dbsAttachedFiles/memune_rom_clasi_september_2025.xlsx",
+       "text": "ספטמבר 2025",
+       "ctx": ""
+      },
+      {
+       "file": "https://www.krm.co.il/_Uploads/dbsAttachedFiles/memune_rom_clasi_augest_2025.xlsx",
+       "text": "אוגוסט 2025",
+       "ctx": ""
+      },
+      {
+       "file": "https://www.krm.co.il/_Uploads/dbsAttachedFiles/memune_rom_clasic_july_2025.xlsx",
+       "text": "יולי 2025",
+       "ctx": ""
+      },
+      {
+       "file": "https://www.krm.co.il/_Uploads/dbsAttachedFiles/memune_rom_clasic_june_2025.xlsx",
+       "text": "יוני 2025",
+       "ctx": ""
+      },
+      {
+       "file": "https://www.krm.co.il/_Uploads/dbsAttachedFiles/memune_rom_clasic_may_2025.xlsx",
+       "text": "מאי 2025",
+       "ctx": ""
+      },
+      {
+       "file": "https://www.krm.co.il/_Uploads/dbsAttachedFiles/memune_rom_clasic_april_2025.xlsx",
+       "text": "אפריל 2025",
+       "ctx": ""
+      },
+      {
+       "file": "https://www.krm.co.il/_Uploads/dbsAttachedFiles/memune_rom_clasic_march_2025.xlsx",
+       "text": "מרץ 2025",
+       "ctx": ""
+      },
+      {
+       "file": "https://www.krm.co.il/_Uploads/dbsAttachedFiles/memune_rom_clasic_february_2025.xlsx",
+       "text": "פברואר 2025",
+       "ctx": ""
+      },
+      {
+       "file": "https://www.krm.co.il/_Uploads/dbsAttachedFiles/memune_rom_clasic_january_2025.xlsx",
+       "text": "ינואר 2025",
+       "ctx": ""
+      },
+      {
+       "file": "https://www.krm.co.il/_Uploads/dbsAttachedFiles/direct_expanses_clasi_december_2025(1).xlsx",
+       "text": "דצמבר 2025",
+       "ctx": ""
+      },
+      {
+       "file": "https://www.krm.co.il/_Uploads/dbsAttachedFiles/direct_expanses_clasi_december_2024.xlsx",
+       "text": "דצמבר 2024",
+       "ctx": ""
+      },
+      {
+       "file": "https://www.krm.co.il/_Uploads/dbsAttachedFiles/direct_expanses_clasi_december_2023(1).xlsx",
+       "text": "דצמבר 2023",
+       "ctx": ""
+      },
+      {
+       "file": "https://www.krm.co.il/_Uploads/dbsAttachedFiles/direct_expanses_clasi_december_2022.xlsx",
+       "text": "דצמבר 2022",
+       "ctx": ""
+      },
+      {
+       "file": "https://www.krm.co.il/_Uploads/dbsAttachedFiles/direct_expanses_clasi_december_2021.xlsx",
+       "text": "דצמבר 2021",
+       "ctx": ""
+      }
+     ]
+    },
+    {
+     "url": "https://www.krm.co.il/?CategoryID=217&ArticleID=3",
+     "cache": "none",
+     "links": 325,
+     "followed": [
+      "https://www.krm.co.il/?CategoryID=217&ArticleID=9&dbsAuthToken="
+     ],
+     "files": 224,
+     "clicked": 0,
+     "captured": 0,
+     "selected": [
+      "https://www.krm.co.il/_Uploads/dbsAttachedFiles/investment-forecast-ravid-2026(1).pdf",
+      "https://www.krm.co.il/_Uploads/dbsAttachedFiles/investment-forecast-ravid-08.2025.pdf",
+      "https://www.krm.co.il/_Uploads/dbsAttachedFiles/investment-forecast-ravid-2025.pdf",
+      "https://www.krm.co.il/_Uploads/dbsAttachedFiles/investment-forecast-ravid-15.08.2024.1.pdf",
+      "https://www.krm.co.il/_Uploads/dbsAttachedFiles/investment-forecast-ravid-29.01.2024.pdf",
+      "https://www.krm.co.il/_Uploads/dbsAttachedFiles/investment-forecast-ravid-31.01.2023.pdf",
+      "https://www.krm.co.il/_Uploads/dbsAttachedFiles/investment-forecast-ravid-2022.pdf"
+     ],
+     "unselected_files": [
+      {
+       "file": "https://www.krm.co.il/_Uploads/dbsAttachedFiles/memune_rom_ravid_augest_2026.xlsx",
+       "text": "אוגוסט 2026",
+       "ctx": ""
+      },
+      {
+       "file": "https://www.krm.co.il/_Uploads/dbsAttachedFiles/memune_rom_ravid_july_2026.xlsx",
+       "text": "יולי 2026",
+       "ctx": ""
+      },
+      {
+       "file": "https://www.krm.co.il/_Uploads/dbsAttachedFiles/memune_rom_ravid_june_2026.xlsx",
+       "text": "יוני 2026",
+       "ctx": ""
+      },
+      {
+       "file": "https://www.krm.co.il/_Uploads/dbsAttachedFiles/memune_rom_ravid_may_2026.xlsx",
+       "text": "מאי 2026",
+       "ctx": ""
+      },
+      {
+       "file": "https://www.krm.co.il/_Uploads/dbsAttachedFiles/memune_rom_ravid_april_2026.xlsx",
+       "text": "אפריל 2026",
+       "ctx": ""
+      },
+      {
+       "file": "https://www.krm.co.il/_Uploads/dbsAttachedFiles/memune_rom_ravid_march_2026.xlsx",
+       "text": "מרץ 2026",
+       "ctx": ""
+      },
+      {
+       "file": "https://www.krm.co.il/_Uploads/dbsAttachedFiles/memune_rom_ravid_february_2026.xlsx",
+       "text": "פברואר 2026",
+       "ctx": ""
+      },
+      {
+       "file": "https://www.krm.co.il/_Uploads/dbsAttachedFiles/memune_rom_ravid_january_2026.xlsx",
+       "text": "ינואר 2026",
+       "ctx": ""
+      },
+      {
+       "file": "https://www.krm.co.il/_Uploads/dbsAttachedFiles/memune_rom_ravid_december_2025.xlsx",
+       "text": "דצמבר 2025",
+       "ctx": ""
+      },
+      {
+       "file": "https://www.krm.co.il/_Uploads/dbsAttachedFiles/memune_rom_ravid_november_2025.xlsx",
+       "text": "נובמבר 2025",
+       "ctx": ""
+      },
+      {
+       "file": "https://www.krm.co.il/_Uploads/dbsAttachedFiles/memune_rom_ravid_october_2025.xlsx",
+       "text": "אוקטובר 2025",
+       "ctx": ""
+      },
+      {
+       "file": "https://www.krm.co.il/_Uploads/dbsAttachedFiles/memune_rom_ravid_september_2025.xlsx",
+       "text": "ספטמבר 2025",
+       "ctx": ""
+      },
+      {
+       "file": "https://www.krm.co.il/_Uploads/dbsAttachedFiles/memune_rom_ravid_augest_2025.xlsx",
+       "text": "אוגוסט 2025",
+       "ctx": ""
+      },
+      {
+       "file": "https://www.krm.co.il/_Uploads/dbsAttachedFiles/memune_rom_ravid_july_2025.xlsx",
+       "text": "יולי 2025",
+       "ctx": ""
+      },
+      {
+       "file": "https://www.krm.co.il/_Uploads/dbsAttachedFiles/memune_rom_ravid_june_2025.xlsx",
+       "text": "יוני 2025",
+       "ctx": ""
+      },
+      {
+       "file": "https://www.krm.co.il/_Uploads/dbsAttachedFiles/memune_rom_ravid_may_2025.xlsx",
+       "text": "מאי 2025",
+       "ctx": ""
+      },
+      {
+       "file": "https://www.krm.co.il/_Uploads/dbsAttachedFiles/memune_rom_ravid_april_2025.xlsx",
+       "text": "אפריל 2025",
+       "ctx": ""
+      },
+      {
+       "file": "https://www.krm.co.il/_Uploads/dbsAttachedFiles/memune_rom_ravid_march_2025.xlsx",
+       "text": "מרץ 2025",
+       "ctx": ""
+      },
+      {
+       "file": "https://www.krm.co.il/_Uploads/dbsAttachedFiles/memune_rom_ravid_february_2025(1).xlsx",
+       "text": "פברואר 2025",
+       "ctx": ""
+      },
+      {
+       "file": "https://www.krm.co.il/_Uploads/dbsAttachedFiles/memune_rom_ravid_january_2025.xlsx",
+       "text": "ינואר 2025",
+       "ctx": ""
+      },
+      {
+       "file": "https://www.krm.co.il/_Uploads/dbsAttachedFiles/direct_expanses_ravid_december_2025.xlsx",
+       "text": "דצמבר 2025",
+       "ctx": ""
+      },
+      {
+       "file": "https://www.krm.co.il/_Uploads/dbsAttachedFiles/direct_expanses_ravid_december_2024.xlsx",
+       "text": "דצמבר 2024",
+       "ctx": ""
+      },
+      {
+       "file": "https://www.krm.co.il/_Uploads/dbsAttachedFiles/direct_expanses_ravid_december_2023(1).xlsx",
+       "text": "דצמבר 2023",
+       "ctx": ""
+      },
+      {
+       "file": "https://www.krm.co.il/_Uploads/dbsAttachedFiles/direct_expanses_ravid_december_2022.xlsx",
+       "text": "דצמבר 2022",
+       "ctx": ""
+      },
+      {
+       "file": "https://www.krm.co.il/_Uploads/dbsAttachedFiles/direct_expanses_ravid_december_2021.xlsx",
+       "text": "דצמבר 2021",
+       "ctx": ""
+      }
+     ]
+    },
+    {
+     "url": "https://www.krm.co.il/?CategoryID=217&ArticleID=7",
+     "cache": "none",
+     "links": 318,
+     "followed": [
+      "https://www.krm.co.il/?CategoryID=217&ArticleID=11"
+     ],
+     "files": 217,
+     "clicked": 0,
+     "captured": 0,
+     "selected": [
+      "https://www.krm.co.il/_Uploads/dbsAttachedFiles/investment-forecast-sapir-2026(1).pdf",
+      "https://www.krm.co.il/_Uploads/dbsAttachedFiles/investment-forecast-sapir-2025.pdf",
+      "https://www.krm.co.il/_Uploads/dbsAttachedFiles/investment-forecast-sapir-29.01.2024.pdf",
+      "https://www.krm.co.il/_Uploads/dbsAttachedFiles/investment-forecast-sapir-31.01.2023.pdf",
+      "https://www.krm.co.il/_Uploads/dbsAttachedFiles/investment-forecast-sapir-2022.pdf"
+     ],
+     "unselected_files": [
+      {
+       "file": "https://www.krm.co.il/_Uploads/dbsAttachedFiles/memune_rom_sapir_augest_2026.xlsx",
+       "text": "אוגוסט 2026",
+       "ctx": ""
+      },
+      {
+       "file": "https://www.krm.co.il/_Uploads/dbsAttachedFiles/memune_rom_sapir_july_2026.xlsx",
+       "text": "יולי 2026",
+       "ctx": ""
+      },
+      {
+       "file": "https://www.krm.co.il/_Uploads/dbsAttachedFiles/memune_rom_sapir_june_2026.xlsx",
+       "text": "יוני 2026",
+       "ctx": ""
+      },
+      {
+       "file": "https://www.krm.co.il/_Uploads/dbsAttachedFiles/memune_rom_sapir_mayl_2026.xlsx",
+       "text": "מאי 2026",
+       "ctx": ""
+      },
+      {
+       "file": "https://www.krm.co.il/_Uploads/dbsAttachedFiles/memune_rom_sapir_april_2026.xlsx",
+       "text": "אפריל 2026",
+       "ctx": ""
+      },
+      {
+       "file": "https://www.krm.co.il/_Uploads/dbsAttachedFiles/memune_rom_sapir_march_2026.xlsx",
+       "text": "מרץ 2026",
+       "ctx": ""
+      },
+      {
+       "file": "https://www.krm.co.il/_Uploads/dbsAttachedFiles/memune_rom_sapir_january_2026(1).xlsx",
+       "text": "פברואר 2026",
+       "ctx": ""
+      },
+      {
+       "file": "https://www.krm.co.il/_Uploads/dbsAttachedFiles/memune_rom_sapir_january_2026.xlsx",
+       "text": "ינואר 2026",
+       "ctx": ""
+      },
+      {
+       "file": "https://www.krm.co.il/_Uploads/dbsAttachedFiles/memune_rom_sapir_december_2025.xlsx",
+       "text": "דצמבר 2025",
+       "ctx": ""
+      },
+      {
+       "file": "https://www.krm.co.il/_Uploads/dbsAttachedFiles/memune_rom_sapir_november_2025.xlsx",
+       "text": "נובמבר 2025",
+       "ctx": ""
+      },
+      {
+       "file": "https://www.krm.co.il/_Uploads/dbsAttachedFiles/memune_rom_sapir_october_2025.xlsx",
+       "text": "אוקטובר 2025",
+       "ctx": ""
+      },
+      {
+       "file": "https://www.krm.co.il/_Uploads/dbsAttachedFiles/memune_rom_sapir_september_2025.xlsx",
+       "text": "ספטמבר 2025",
+       "ctx": ""
+      },
+      {
+       "file": "https://www.krm.co.il/_Uploads/dbsAttachedFiles/memune_rom_sapir_augest_2025.xlsx",
+       "text": "אוגוסט 2025",
+       "ctx": ""
+      },
+      {
+       "file": "https://www.krm.co.il/_Uploads/dbsAttachedFiles/memune_rom_sapir_july_2025.xlsx",
+       "text": "יולי 2025",
+       "ctx": ""
+      },
+      {
+       "file": "https://www.krm.co.il/_Uploads/dbsAttachedFiles/memune_rom_sapir_june_2025.xlsx",
+       "text": "יוני 2025",
+       "ctx": ""
+      },
+      {
+       "file": "https://www.krm.co.il/_Uploads/dbsAttachedFiles/memune_rom_sapir_may_2025.xlsx",
+       "text": "מאי 2025",
+       "ctx": ""
+      },
+      {
+       "file": "https://www.krm.co.il/_Uploads/dbsAttachedFiles/memune_rom_sapir_april_2025.xlsx",
+       "text": "אפריל 2025",
+       "ctx": ""
+      },
+      {
+       "file": "https://www.krm.co.il/_Uploads/dbsAttachedFiles/memune_rom_sapir_march_2025.xlsx",
+       "text": "מרץ 2025",
+       "ctx": ""
+      },
+      {
+       "file": "https://www.krm.co.il/_Uploads/dbsAttachedFiles/memune_rom_sapir_february_2025.xlsx",
+       "text": "פברואר 2025",
+       "ctx": ""
+      },
+      {
+       "file": "https://www.krm.co.il/_Uploads/dbsAttachedFiles/memune_rom_sapir_january_2025.xlsx",
+       "text": "ינואר 2025",
+       "ctx": ""
+      },
+      {
+       "file": "https://www.krm.co.il/_Uploads/dbsAttachedFiles/direct_expanses_sapir_december_2025.xlsx",
+       "text": "דצמבר 2025",
+       "ctx": ""
+      },
+      {
+       "file": "https://www.krm.co.il/_Uploads/dbsAttachedFiles/direct_expanses_sapir_december_2024.xlsx",
+       "text": "דצמבר 2024",
+       "ctx": ""
+      },
+      {
+       "file": "https://www.krm.co.il/_Uploads/dbsAttachedFiles/direct_expanses_sapir_december_2023(1).xlsx",
+       "text": "דצמבר 2023",
+       "ctx": ""
+      },
+      {
+       "file": "https://www.krm.co.il/_Uploads/dbsAttachedFiles/direct_expanses_sapir_december_2022.xlsx",
+       "text": "דצמבר 2022",
+       "ctx": ""
+      },
+      {
+       "file": "https://www.krm.co.il/_Uploads/dbsAttachedFiles/direct_expanses_sapir_december_2021.xlsx",
+       "text": "דצמבר 2021",
+       "ctx": ""
+      }
+     ]
+    },
+    {
+     "url": "https://www.krm.co.il/?CategoryID=217&ArticleID=12",
+     "cache": "none",
+     "links": 218,
+     "followed": [],
+     "files": 114,
+     "clicked": 0,
+     "captured": 0,
+     "selected": [
+      "https://www.krm.co.il/_Uploads/dbsAttachedFiles/investment-forecast-halaha-12.07.2026.pdf",
+      "https://www.krm.co.il/_Uploads/dbsAttachedFiles/investment-forecast-halaha-2026(1).pdf",
+      "https://www.krm.co.il/_Uploads/dbsAttachedFiles/investment-forecast-halaha-2025.pdf",
+      "https://www.krm.co.il/_Uploads/dbsAttachedFiles/investment-forecast-halaha-29.01.2024.pdf",
+      "https://www.krm.co.il/_Uploads/dbsAttachedFiles/investment-forecast-halaha-31.01.2023.pdf",
+      "https://www.krm.co.il/_Uploads/dbsAttachedFiles/investment-forecast-halaha-2022.pdf"
+     ],
+     "unselected_files": [
+      {
+       "file": "https://www.krm.co.il/_Uploads/dbsAttachedFiles/memune_rom_halaha_augest_2026.xlsx",
+       "text": "אוגוסט 2026",
+       "ctx": ""
+      },
+      {
+       "file": "https://www.krm.co.il/_Uploads/dbsAttachedFiles/memune_rom_halaha_july_2026.xlsx",
+       "text": "יולי 2026",
+       "ctx": ""
+      },
+      {
+       "file": "https://www.krm.co.il/_Uploads/dbsAttachedFiles/memune_rom_halaha_june_2026.xlsx",
+       "text": "יוני 2026",
+       "ctx": ""
+      },
+      {
+       "file": "https://www.krm.co.il/_Uploads/dbsAttachedFiles/memune_rom_halaha_may_2026.xlsx",
+       "text": "מאי 2026",
+       "ctx": ""
+      },
+      {
+       "file": "https://www.krm.co.il/_Uploads/dbsAttachedFiles/memune_rom_halaha_april_2026.xlsx",
+       "text": "אפריל 2026",
+       "ctx": ""
+      },
+      {
+       "file": "https://www.krm.co.il/_Uploads/dbsAttachedFiles/memune_rom_halaha_march_2026.xlsx",
+       "text": "מרץ 2026",
+       "ctx": ""
+      },
+      {
+       "file": "https://www.krm.co.il/_Uploads/dbsAttachedFiles/memune_rom_halaha_february_2026.xlsx",
+       "text": "פברואר 2026",
+       "ctx": ""
+      },
+      {
+       "file": "https://www.krm.co.il/_Uploads/dbsAttachedFiles/memune_rom_halaha_january_2026(1).xlsx",
+       "text": "ינואר 2026",
+       "ctx": ""
+      },
+      {
+       "file": "https://www.krm.co.il/_Uploads/dbsAttachedFiles/memune_rom_halaha_december_2025.xlsx",
+       "text": "דצמבר 2025",
+       "ctx": ""
+      },
+      {
+       "file": "https://www.krm.co.il/_Uploads/dbsAttachedFiles/memune_rom_halaha_november_2025.xlsx",
+       "text": "נובמבר 2025",
+       "ctx": ""
+      },
+      {
+       "file": "https://www.krm.co.il/_Uploads/dbsAttachedFiles/memune_rom_halaha_october_2025.xlsx",
+       "text": "אוקטובר 2025",
+       "ctx": ""
+      },
+      {
+       "file": "https://www.krm.co.il/_Uploads/dbsAttachedFiles/memune_rom_halaha_september_2025.xlsx",
+       "text": "ספטמבר 2025",
+       "ctx": ""
+      },
+      {
+       "file": "https://www.krm.co.il/_Uploads/dbsAttachedFiles/memune_rom_halaha_augest_2025.xlsx",
+       "text": "אוגוסט 2025",
+       "ctx": ""
+      },
+      {
+       "file": "https://www.krm.co.il/_Uploads/dbsAttachedFiles/memune_rom_halaha_july_2025.xlsx",
+       "text": "יולי 2025",
+       "ctx": ""
+      },
+      {
+       "file": "https://www.krm.co.il/_Uploads/dbsAttachedFiles/memune_rom_halaha_june_2025.xlsx",
+       "text": "יוני 2025",
+       "ctx": ""
+      },
+      {
+       "file": "https://www.krm.co.il/_Uploads/dbsAttachedFiles/memune_rom_halaha_may_2025.xlsx",
+       "text": "מאי 2025",
+       "ctx": ""
+      },
+      {
+       "file": "https://www.krm.co.il/_Uploads/dbsAttachedFiles/memune_rom_halaha_april_2025.xlsx",
+       "text": "אפריל 2025",
+       "ctx": ""
+      },
+      {
+       "file": "https://www.krm.co.il/_Uploads/dbsAttachedFiles/memune_rom_halaha_march_2025.xlsx",
+       "text": "מרץ 2025",
+       "ctx": ""
+      },
+      {
+       "file": "https://www.krm.co.il/_Uploads/dbsAttachedFiles/memune_rom_halaha_february_2025.xlsx",
+       "text": "פברואר 2025",
+       "ctx": ""
+      },
+      {
+       "file": "https://www.krm.co.il/_Uploads/dbsAttachedFiles/memune_rom_halaha_january_2025.xlsx",
+       "text": "ינואר 2025",
+       "ctx": ""
+      },
+      {
+       "file": "https://www.krm.co.il/_Uploads/dbsAttachedFiles/direct_expanses_halaha_december_2025.xlsx",
+       "text": "דצמבר 2025",
+       "ctx": ""
+      },
+      {
+       "file": "https://www.krm.co.il/_Uploads/dbsAttachedFiles/direct_expanses_halaha_december_2024.xlsx",
+       "text": "דצמבר 2024",
+       "ctx": ""
+      },
+      {
+       "file": "https://www.krm.co.il/_Uploads/dbsAttachedFiles/direct_expanses_halaha_december_2023(1).xlsx",
+       "text": "דצמבר 2023",
+       "ctx": ""
+      },
+      {
+       "file": "https://www.krm.co.il/_Uploads/dbsAttachedFiles/direct_expanses_halaha_december_2022.xlsx",
+       "text": "דצמבר 2022",
+       "ctx": ""
+      },
+      {
+       "file": "https://www.krm.co.il/_Uploads/dbsAttachedFiles/direct_expanses_halaha_december_2021.xlsx",
+       "text": "דצמבר 2021",
+       "ctx": ""
+      }
+     ]
+    },
+    {
+     "url": "https://www.krm.co.il/?CategoryID=217",
+     "cache": "none",
+     "links": 103,
+     "followed": [
+      "https://www.krm.co.il/?CategoryID=217&ArticleID=25",
+      "https://www.krm.co.il/?CategoryID=217&ArticleID=14"
+     ],
+     "files": 0,
+     "clicked": 0,
+     "captured": 0,
+     "selected": [],
+     "unselected_files": []
+    },
+    {
+     "url": "https://www.krm.co.il",
+     "cache": "none",
+     "links": 118,
+     "followed": [],
+     "files": 0,
+     "clicked": 0,
+     "captured": 0,
+     "selected": [],
+     "unselected_files": []
+    },
+    {
+     "url": "https://www.krm.co.il/?CategoryID=217&ArticleID=10",
+     "cache": "none",
+     "links": 135,
+     "followed": [],
+     "files": 47,
+     "clicked": 0,
+     "captured": 0,
+     "selected": [],
+     "unselected_files": [
+      {
+       "file": "https://www.krm.co.il/_Uploads/dbsAttachedFiles/memune_rom_clasi_october_2017(1).xls",
+       "text": "אוקטובר 2017",
+       "ctx": ""
+      },
+      {
+       "file": "https://www.krm.co.il/_Uploads/dbsAttachedFiles/memune_rom_clasi_september_2017xls(1).xls",
+       "text": "ספטמבר 2017",
+       "ctx": ""
+      },
+      {
+       "file": "https://www.krm.co.il/_Uploads/dbsAttachedFiles/memune_rom_clasi_august_2017.xls",
+       "text": "אוגוסט 2017",
+       "ctx": ""
+      },
+      {
+       "file": "https://www.krm.co.il/_Uploads/dbsAttachedFiles/memune_rom_clasi_july_2017(1).xls",
+       "text": "יולי 2017",
+       "ctx": ""
+      },
+      {
+       "file": "https://www.krm.co.il/_Uploads/dbsAttachedFiles/memune_rom_clasi_june_2017(1).xls",
+       "text": "יוני 2017",
+       "ctx": ""
+      },
+      {
+       "file": "https://www.krm.co.il/_Uploads/dbsAttachedFiles/memune_rom_clasi_may_2017(1).xls",
+       "text": "מאי 2017",
+       "ctx": ""
+      },
+      {
+       "file": "https://www.krm.co.il/_Uploads/dbsAttachedFiles/memune_rom_clasi_april_2017(1).xls",
+       "text": "אפריל 2017",
+       "ctx": ""
+      },
+      {
+       "file": "https://www.krm.co.il/_Uploads/dbsAttachedFiles/memune_rom_clasi_march_2017(1).xls",
+       "text": "מרץ 2017",
+       "ctx": ""
+      },
+      {
+       "file": "https://www.krm.co.il/_Uploads/dbsAttachedFiles/memune_rom_clasi_fabruary_2017(1).xls",
+       "text": "פברואר 2017",
+       "ctx": ""
+      },
+      {
+       "file": "https://www.krm.co.il/_Uploads/dbsAttachedFiles/memune_rom_clasi_january_2017(1).xls",
+       "text": "ינואר 2017",
+       "ctx": ""
+      },
+      {
+       "file": "https://www.krm.co.il/_Uploads/dbsAttachedFiles/memune_rom_clasi_december_2016(1).xls",
+       "text": "דצמבר 2016",
+       "ctx": ""
+      },
+      {
+       "file": "https://www.krm.co.il/_Uploads/dbsAttachedFiles/memune_rom_clasi_november_2016(1).xls",
+       "text": "נובמבר 2016",
+       "ctx": ""
+      },
+      {
+       "file": "https://www.krm.co.il/_Uploads/dbsAttachedFiles/memune_rom_clasi_october_2016(1).xls",
+       "text": "אוקטובר 2016",
+       "ctx": ""
+      },
+      {
+       "file": "https://www.krm.co.il/_Uploads/dbsAttachedFiles/memune_rom_clasi_september_2016.xls",
+       "text": "ספטמבר 2016",
+       "ctx": ""
+      },
+      {
+       "file": "https://www.krm.co.il/_Uploads/dbsAttachedFiles/memune_rom_classi_august_2016.xls",
+       "text": "אוגוסט 2016",
+       "ctx": ""
+      },
+      {
+       "file": "https://www.krm.co.il/_Uploads/dbsAttachedFiles/memune_rom_clasi_june_2016.xls",
+       "text": "יוני 2016",
+       "ctx": ""
+      },
+      {
+       "file": "https://www.krm.co.il/_Uploads/dbsAttachedFiles/memune_rom_clasi_may_2016.xls",
+       "text": "מאי 2016",
+       "ctx": ""
+      },
+      {
+       "file": "https://www.krm.co.il/_Uploads/dbsAttachedFiles/memune_rom_clasi_april_2016.xls",
+       "text": "אפריל 2016",
+       "ctx": ""
+      },
+      {
+       "file": "https://www.krm.co.il/_Uploads/dbsAttachedFiles/memune_rom_clasi_march_2016.xls",
+       "text": "מרץ 2016",
+       "ctx": ""
+      },
+      {
+       "file": "https://www.krm.co.il/_Uploads/dbsAttachedFiles/memune_rom_clasi_fabruary_2016.xls",
+       "text": "פברואר 2016",
+       "ctx": ""
+      },
+      {
+       "file": "https://www.krm.co.il/_Uploads/dbsAttachedFiles/memune_rom_clasi_january_2016.xls",
+       "text": "ינואר 2016",
+       "ctx": ""
+      },
+      {
+       "file": "https://www.krm.co.il/_Uploads/dbsAttachedFiles/memune_rom_sapir_december_2015(1).xls",
+       "text": "דצמבר 2015",
+       "ctx": ""
+      },
+      {
+       "file": "https://www.krm.co.il/_Uploads/dbsAttachedFiles/memune_rom_clasi_november_2015.xls",
+       "text": "נובמבר 2015",
+       "ctx": ""
+      },
+      {
+       "file": "https://www.krm.co.il/_Uploads/dbsAttachedFiles/memune_rom_classi_august_2015.xls",
+       "text": "יולי 2015",
+       "ctx": ""
+      },
+      {
+       "file": "https://www.krm.co.il/_Uploads/dbsAttachedFiles/memune_rom_clasi_october_2015.xls",
+       "text": "אוקטובר 2015",
+       "ctx": ""
+      }
+     ]
+    },
+    {
+     "url": "https://www.krm.co.il/?CategoryID=217&ArticleID=9&dbsAuthToken=",
+     "cache": "none",
+     "links": 136,
+     "followed": [],
+     "files": 48,
+     "clicked": 0,
+     "captured": 0,
+     "selected": [],
+     "unselected_files": [
+      {
+       "file": "https://www.krm.co.il/_Uploads/dbsAttachedFiles/memune_rom_ravid_october_2017(1).xls",
+       "text": "אוקטובר 2017",
+       "ctx": ""
+      },
+      {
+       "file": "https://www.krm.co.il/_Uploads/dbsAttachedFiles/memune_rom_ravid_september_2017(1).xls",
+       "text": "ספטמבר 2017",
+       "ctx": ""
+      },
+      {
+       "file": "https://www.krm.co.il/_Uploads/dbsAttachedFiles/memune_rom_ravid_august_2017(1).xls",
+       "text": "אוגוסט 2017",
+       "ctx": ""
+      },
+      {
+       "file": "https://www.krm.co.il/_Uploads/dbsAttachedFiles/memune_rom_ravid_july_2017(1).xls",
+       "text": "יולי 2017",
+       "ctx": ""
+      },
+      {
+       "file": "https://www.krm.co.il/_Uploads/dbsAttachedFiles/memune_rom_ravid_june_2017(1).xls",
+       "text": "יוני 2017",
+       "ctx": ""
+      },
+      {
+       "file": "https://www.krm.co.il/_Uploads/dbsAttachedFiles/memune_rom_ravid_may_2017(1).xls",
+       "text": "מאי 2017",
+       "ctx": ""
+      },
+      {
+       "file": "https://www.krm.co.il/_Uploads/dbsAttachedFiles/memune_rom_ravid_april_2017(1).xls",
+       "text": "אפריל 2017",
+       "ctx": ""
+      },
+      {
+       "file": "https://www.krm.co.il/_Uploads/dbsAttachedFiles/memune_rom_ravid_march_2017(1).xls",
+       "text": "מרץ 2017",
+       "ctx": ""
+      },
+      {
+       "file": "https://www.krm.co.il/_Uploads/dbsAttachedFiles/memune_rom_ravid_fabruary_2017(1).xls",
+       "text": "פברואר 2017",
+       "ctx": ""
+      },
+      {
+       "file": "https://www.krm.co.il/_Uploads/dbsAttachedFiles/memune_rom_ravid_january_2017(1).xls",
+       "text": "ינואר 2017",
+       "ctx": ""
+      },
+      {
+       "file": "https://www.krm.co.il/_Uploads/dbsAttachedFiles/memune_rom_ravid_december_2016(1).xls",
+       "text": "דצמבר 2016",
+       "ctx": ""
+      },
+      {
+       "file": "https://www.krm.co.il/_Uploads/dbsAttachedFiles/memune_rom_ravid_november_2016(1).xls",
+       "text": "נובמבר 2016",
+       "ctx": ""
+      },
+      {
+       "file": "https://www.krm.co.il/_Uploads/dbsAttachedFiles/memune_rom_ravid_october_2016(1).xls",
+       "text": "אוקטובר 2016",
+       "ctx": ""
+      },
+      {
+       "file": "https://www.krm.co.il/_Uploads/dbsAttachedFiles/memune_rom_ravid_september_2016(1).xls",
+       "text": "ספטמבר 2016",
+       "ctx": ""
+      },
+      {
+       "file": "https://www.krm.co.il/_Uploads/dbsAttachedFiles/memune_rom_ravid_august_2016.xls",
+       "text": "אוגוסט 2016",
+       "ctx": ""
+      },
+      {
+       "file": "https://www.krm.co.il/_Uploads/dbsAttachedFiles/memune_rom_ravid_july_2016.xls",
+       "text": "יולי 2016",
+       "ctx": ""
+      },
+      {
+       "file": "https://www.krm.co.il/_Uploads/dbsAttachedFiles/memune_rom_ravid_may_2016.xls",
+       "text": "מאי 2016",
+       "ctx": ""
+      },
+      {
+       "file": "https://www.krm.co.il/_Uploads/dbsAttachedFiles/memune_rom_ravid_june_2016.xls",
+       "text": "יוני 2016",
+       "ctx": ""
+      },
+      {
+       "file": "https://www.krm.co.il/_Uploads/dbsAttachedFiles/memune_rom_ravid_april_2016.xls",
+       "text": "אפריל 2016",
+       "ctx": ""
+      },
+      {
+       "file": "https://www.krm.co.il/_Uploads/dbsAttachedFiles/memune_rom_ravid_march_2016.xls",
+       "text": "מרץ 2016",
+       "ctx": ""
+      },
+      {
+       "file": "https://www.krm.co.il/_Uploads/dbsAttachedFiles/memune_rom_ravid_fabruary_2016.xls",
+       "text": "פברואר 2016",
+       "ctx": ""
+      },
+      {
+       "file": "https://www.krm.co.il/_Uploads/dbsAttachedFiles/memune_rom_ravid_january_2016.xls",
+       "text": "ינואר 2016",
+       "ctx": ""
+      },
+      {
+       "file": "https://www.krm.co.il/_Uploads/dbsAttachedFiles/memune_rom_ravid_december_2015.xls",
+       "text": "דצמבר 2015",
+       "ctx": ""
+      },
+      {
+       "file": "https://www.krm.co.il/_Uploads/dbsAttachedFiles/memune_rom_ravid_november_2015.xls",
+       "text": "נובמבר 2015",
+       "ctx": ""
+      },
+      {
+       "file": "https://www.krm.co.il/_Uploads/dbsAttachedFiles/memune_rom_ravid_september_2015.xls",
+       "text": "ספטמבר 2015",
+       "ctx": ""
+      }
+     ]
+    },
+    {
+     "url": "https://www.krm.co.il/?CategoryID=217&ArticleID=11",
+     "cache": "none",
+     "links": 134,
+     "followed": [],
+     "files": 46,
+     "clicked": 0,
+     "captured": 0,
+     "selected": [],
+     "unselected_files": [
+      {
+       "file": "https://www.krm.co.il/_Uploads/dbsAttachedFiles/memune_rom_sapir_august_2017(1).xls",
+       "text": "אוגוסט 2017",
+       "ctx": ""
+      },
+      {
+       "file": "https://www.krm.co.il/_Uploads/dbsAttachedFiles/memune_rom_sapir_july_2017(1).xls",
+       "text": "יולי 2017",
+       "ctx": ""
+      },
+      {
+       "file": "https://www.krm.co.il/_Uploads/dbsAttachedFiles/memune_rom_sapir_june_2017(1).xls",
+       "text": "יוני 2017",
+       "ctx": ""
+      },
+      {
+       "file": "https://www.krm.co.il/_Uploads/dbsAttachedFiles/memune_rom_sapir_may_2017(1).xls",
+       "text": "מאי 2017",
+       "ctx": ""
+      },
+      {
+       "file": "https://www.krm.co.il/_Uploads/dbsAttachedFiles/memune_rom_sapir_april_2017(1).xls",
+       "text": "אפריל 2017",
+       "ctx": ""
+      },
+      {
+       "file": "https://www.krm.co.il/_Uploads/dbsAttachedFiles/memune_rom_sapir_march_2017(1).xls",
+       "text": "מרץ 2017",
+       "ctx": ""
+      },
+      {
+       "file": "https://www.krm.co.il/_Uploads/dbsAttachedFiles/memune_rom_sapir_fabruary_2017(1).xls",
+       "text": "פברואר 2017",
+       "ctx": ""
+      },
+      {
+       "file": "https://www.krm.co.il/_Uploads/dbsAttachedFiles/memune_rom_sapir_january_2017.xls",
+       "text": "ינואר 2017",
+       "ctx": ""
+      },
+      {
+       "file": "https://www.krm.co.il/_Uploads/dbsAttachedFiles/memune_rom_sapir_december_2016.xls",
+       "text": "דצמבר 2016",
+       "ctx": ""
+      },
+      {
+       "file": "https://www.krm.co.il/_Uploads/dbsAttachedFiles/memune_rom_sapir_november_2016.xls",
+       "text": "נובמבר 2016",
+       "ctx": ""
+      },
+      {
+       "file": "https://www.krm.co.il/_Uploads/dbsAttachedFiles/memune_rom_sapir_october_2016.xls",
+       "text": "אוקטובר 2016",
+       "ctx": ""
+      },
+      {
+       "file": "https://www.krm.co.il/_Uploads/dbsAttachedFiles/memune_rom_sapir_september_2016.xls",
+       "text": "ספטמבר 2016",
+       "ctx": ""
+      },
+      {
+       "file": "https://www.krm.co.il/_Uploads/dbsAttachedFiles/memune_rom_sapir_august_2016.xls",
+       "text": "אוגוסט 2016",
+       "ctx": ""
+      },
+      {
+       "file": "https://www.krm.co.il/_Uploads/dbsAttachedFiles/memune_rom_sapir_july_2016.xls",
+       "text": "יולי 2016",
+       "ctx": ""
+      },
+      {
+       "file": "https://www.krm.co.il/_Uploads/dbsAttachedFiles/memune_rom_sapir_june_2016.xls",
+       "text": "יוני 2016",
+       "ctx": ""
+      },
+      {
+       "file": "https://www.krm.co.il/_Uploads/dbsAttachedFiles/memune_rom_sapir_may_2016.xls",
+       "text": "מאי 2016",
+       "ctx": ""
+      },
+      {
+       "file": "https://www.krm.co.il/_Uploads/dbsAttachedFiles/memune_rom_sapir_april_2016.xls",
+       "text": "אפריל 2016",
+       "ctx": ""
+      },
+      {
+       "file": "https://www.krm.co.il/_Uploads/dbsAttachedFiles/memune_rom_sapir_march_2016.xls",
+       "text": "מרץ 2016",
+       "ctx": ""
+      },
+      {
+       "file": "https://www.krm.co.il/_Uploads/dbsAttachedFiles/memune_rom_sapir_fabruary_2016.xls",
+       "text": "פברואר 2016",
+       "ctx": ""
+      },
+      {
+       "file": "https://www.krm.co.il/_Uploads/dbsAttachedFiles/memune_rom_sapir_january_2016.xls",
+       "text": "ינואר 2016",
+       "ctx": ""
+      },
+      {
+       "file": "https://www.krm.co.il/_Uploads/dbsAttachedFiles/memune_rom_sapir_december_2015.xls",
+       "text": "דצמבר 2015",
+       "ctx": ""
+      },
+      {
+       "file": "https://www.krm.co.il/_Uploads/dbsAttachedFiles/memune_rom_sapir_november_2015.xls",
+       "text": "נובמבר 2015",
+       "ctx": ""
+      },
+      {
+       "file": "https://www.krm.co.il/_Uploads/dbsAttachedFiles/memune_rom_sapir_october_2015.xls",
+       "text": "אוקטובר 2015",
+       "ctx": ""
+      },
+      {
+       "file": "https://www.krm.co.il/_Uploads/dbsAttachedFiles/memune_rom_sapir_september_2015.xls",
+       "text": "ספטמבר 2015",
+       "ctx": ""
+      },
+      {
+       "file": "https://www.krm.co.il/_Uploads/dbsAttachedFiles/memune_rom_sapir_august_2015.xls",
+       "text": "אוגוסט 2015",
+       "ctx": ""
+      }
+     ]
+    },
+    {
+     "url": "https://www.krm.co.il/?CategoryID=217&ArticleID=25",
+     "cache": "none",
+     "links": 149,
+     "followed": [],
+     "files": 49,
+     "clicked": 0,
+     "captured": 0,
+     "selected": [
+      "https://www.krm.co.il/_Uploads/dbsAttachedFiles/investment-forecast-s.p500-2026(2).pdf",
+      "https://www.krm.co.il/_Uploads/dbsAttachedFiles/investment-forecast-s.p500-2025.pdf",
+      "https://www.krm.co.il/_Uploads/dbsAttachedFiles/investment-forecast-s.p500.pdf"
+     ],
+     "unselected_files": [
+      {
+       "file": "https://www.krm.co.il/_Uploads/dbsAttachedFiles/memune_rom_s_p500_augest_2026.xlsx",
+       "text": "אוגוסט 2026",
+       "ctx": ""
+      },
+      {
+       "file": "https://www.krm.co.il/_Uploads/dbsAttachedFiles/memune_rom_s_p500_july_2026.xlsx",
+       "text": "יולי 2026",
+       "ctx": ""
+      },
+      {
+       "file": "https://www.krm.co.il/_Uploads/dbsAttachedFiles/memune_rom_s_p500_june_2026.xlsx",
+       "text": "יוני 2026",
+       "ctx": ""
+      },
+      {
+       "file": "https://www.krm.co.il/_Uploads/dbsAttachedFiles/memune_rom_s_p500_may_2026.xlsx",
+       "text": "מאי 2026",
+       "ctx": ""
+      },
+      {
+       "file": "https://www.krm.co.il/_Uploads/dbsAttachedFiles/memune_rom_s_p500_april_2026.xlsx",
+       "text": "אפריל 2026",
+       "ctx": ""
+      },
+      {
+       "file": "https://www.krm.co.il/_Uploads/dbsAttachedFiles/memune_rom_s_p500_march_2026.xlsx",
+       "text": "מרץ 2026",
+       "ctx": ""
+      },
+      {
+       "file": "https://www.krm.co.il/_Uploads/dbsAttachedFiles/memune_rom_s_p500_february_2026.xlsx",
+       "text": "פברואר 2026",
+       "ctx": ""
+      },
+      {
+       "file": "https://www.krm.co.il/_Uploads/dbsAttachedFiles/memune_rom_s_p500_january_2026.xlsx",
+       "text": "ינואר 2026",
+       "ctx": ""
+      },
+      {
+       "file": "https://www.krm.co.il/_Uploads/dbsAttachedFiles/memune_rom_s_p500_december_2025.xlsx",
+       "text": "דצמבר 2025",
+       "ctx": ""
+      },
+      {
+       "file": "https://www.krm.co.il/_Uploads/dbsAttachedFiles/memune_rom_s_p500_november_2025.xlsx",
+       "text": "נובמבר 2025",
+       "ctx": ""
+      },
+      {
+       "file": "https://www.krm.co.il/_Uploads/dbsAttachedFiles/memune_rom_s_p500_october_2025.xlsx",
+       "text": "אוקטובר 2025",
+       "ctx": ""
+      },
+      {
+       "file": "https://www.krm.co.il/_Uploads/dbsAttachedFiles/memune_rom_s_p500_september_2025.xlsx",
+       "text": "ספטמבר 2025",
+       "ctx": ""
+      },
+      {
+       "file": "https://www.krm.co.il/_Uploads/dbsAttachedFiles/memune_rom_s_p500_augest_2025.xlsx",
+       "text": "אוגוסט 2025",
+       "ctx": ""
+      },
+      {
+       "file": "https://www.krm.co.il/_Uploads/dbsAttachedFiles/memune_rom_s_p500_july_2025.xlsx",
+       "text": "יולי 2025",
+       "ctx": ""
+      },
+      {
+       "file": "https://www.krm.co.il/_Uploads/dbsAttachedFiles/memune_rom_s_p500_june_2025.xlsx",
+       "text": "יוני 2025",
+       "ctx": ""
+      },
+      {
+       "file": "https://www.krm.co.il/_Uploads/dbsAttachedFiles/memune_rom_s_p500_may_2025.xlsx",
+       "text": "מאי 2025",
+       "ctx": ""
+      },
+      {
+       "file": "https://www.krm.co.il/_Uploads/dbsAttachedFiles/memune_rom_s_p500_april_2025.xlsx",
+       "text": "אפריל 2025",
+       "ctx": ""
+      },
+      {
+       "file": "https://www.krm.co.il/_Uploads/dbsAttachedFiles/memune_rom_s_p500_march_2025.xlsx",
+       "text": "מרץ 2025",
+       "ctx": ""
+      },
+      {
+       "file": "https://www.krm.co.il/_Uploads/dbsAttachedFiles/memune_rom_s_p500_february_2025.xlsx",
+       "text": "פברואר 2025",
+       "ctx": ""
+      },
+      {
+       "file": "https://www.krm.co.il/_Uploads/dbsAttachedFiles/memune_rom_s_p500_january_2024.xlsx",
+       "text": "ינואר 2025",
+       "ctx": ""
+      },
+      {
+       "file": "https://www.krm.co.il/_Uploads/dbsAttachedFiles/direct_expanses_s_p500_december_2025.xlsx",
+       "text": "דצמבר 2025",
+       "ctx": ""
+      },
+      {
+       "file": "https://www.krm.co.il/_Uploads/dbsAttachedFiles/direct_expanses_s_p500_december_2024.xlsx",
+       "text": "דצמבר 2024",
+       "ctx": ""
+      },
+      {
+       "file": "https://www.krm.co.il/_Uploads/dbsAttachedFiles/truma_tsua_rom_s_p500_june_2026.xlsx",
+       "text": "יוני 2026",
+       "ctx": ""
+      },
+      {
+       "file": "https://www.krm.co.il/_Uploads/dbsAttachedFiles/truma_tsua_rom_s_p500_march_2026.xlsx",
+       "text": "מרץ 2026",
+       "ctx": ""
+      },
+      {
+       "file": "https://www.krm.co.il/_Uploads/dbsAttachedFiles/truma_tsua_rom_s_p500_december_2025.xlsx",
+       "text": "דצמבר 2025",
+       "ctx": ""
+      }
+     ]
+    },
+    {
+     "url": "https://www.krm.co.il/?CategoryID=217&ArticleID=14",
+     "cache": "none",
+     "links": 89,
+     "followed": [],
+     "files": 0,
+     "clicked": 0,
+     "captured": 0,
+     "selected": [],
+     "unselected_files": []
+    }
+   ],
+   "new_docs": 3,
+   "found": 982,
+   "selected": 28,
+   "had": 25,
+   "head_skip": 11,
+   "cache_none": 11,
+   "old_skip": 14,
+   "errors": [],
+   "diag": [
+    "החברה המנהלת של רו: links=338 files=237 clicked=0 captured=0 selected=7",
+    "החברה המנהלת של רו: links=325 files=224 clicked=0 captured=0 selected=7",
+    "החברה המנהלת של רו: links=318 files=217 clicked=0 captured=0 selected=5",
+    "החברה המנהלת של רו: links=218 files=114 clicked=0 captured=0 selected=6",
+    "החברה המנהלת של רו: links=103 files=0 clicked=0 captured=0 selected=0",
+    "החברה המנהלת של רו: links=118 files=0 clicked=0 captured=0 selected=0",
+    "החברה המנהלת של רו: links=135 files=47 clicked=0 captured=0 selected=0",
+    "   ? memune_rom_clasi_october_2017(1).xls | אוקטובר 2017 | ",
+    "   ? memune_rom_clasi_september_2017xls(1).xls | ספטמבר 2017 | ",
+    "   ? memune_rom_clasi_august_2017.xls | אוגוסט 2017 | ",
+    "   ? memune_rom_clasi_july_2017(1).xls | יולי 2017 | ",
+    "   ? memune_rom_clasi_june_2017(1).xls | יוני 2017 | ",
+    "   ? memune_rom_clasi_may_2017(1).xls | מאי 2017 | ",
+    "החברה המנהלת של רו: links=136 files=48 clicked=0 captured=0 selected=0",
+    "   ? memune_rom_ravid_october_2017(1).xls | אוקטובר 2017 | ",
+    "   ? memune_rom_ravid_september_2017(1).xls | ספטמבר 2017 | ",
+    "   ? memune_rom_ravid_august_2017(1).xls | אוגוסט 2017 | ",
+    "   ? memune_rom_ravid_july_2017(1).xls | יולי 2017 | ",
+    "   ? memune_rom_ravid_june_2017(1).xls | יוני 2017 | ",
+    "   ? memune_rom_ravid_may_2017(1).xls | מאי 2017 | ",
+    "החברה המנהלת של רו: links=134 files=46 clicked=0 captured=0 selected=0",
+    "   ? memune_rom_sapir_august_2017(1).xls | אוגוסט 2017 | ",
+    "   ? memune_rom_sapir_july_2017(1).xls | יולי 2017 | ",
+    "   ? memune_rom_sapir_june_2017(1).xls | יוני 2017 | ",
+    "   ? memune_rom_sapir_may_2017(1).xls | מאי 2017 | ",
+    "   ? memune_rom_sapir_april_2017(1).xls | אפריל 2017 | ",
+    "   ? memune_rom_sapir_march_2017(1).xls | מרץ 2017 | ",
+    "החברה המנהלת של רו: links=149 files=49 clicked=0 captured=0 selected=3",
+    "החברה המנהלת של רו: links=89 files=0 clicked=0 captured=0 selected=0"
+   ],
+   "new_files": [
+    "c6904bfc202e_investment-forecast-s.p500-2026_2_.pdf",
+    "3738be4dbf4d_investment-forecast-s.p500-2025.pdf",
+    "5d0f1ebb56b0_investment-forecast-s.p500.pdf"
+   ]
+  },
+  {
+   "legal_id": "520030677",
+   "name": "איילון חברה לביטוח בע\"מ",
+   "pages": [
+    {
+     "url": "https://www.ayalon-ins.co.il/about-us/about-ayalon/investments/policy/",
+     "cache": "none",
+     "links": 394,
+     "followed": [
+      "https://www.ayalon-ins.co.il/about-us/about-ayalon/investments/publications/",
+      "https://www.ayalon-ins.co.il/career/finance-investments",
+      "https://www.ayalon-ins.co.il/about-us/about-ayalon/investments/",
+      "https://www.ayalon-ins.co.il/investments-provident",
+      "https://www.ayalon-ins.co.il/investments-directorate",
+      "https://www.ayalon-ins.co.il/investments-levelagreement"
+     ],
+     "files": 1,
+     "clicked": 2,
+     "captured": 0,
+     "selected": [],
+     "unselected_files": [
+      {
+       "file": "https://www.ayalon-ins.co.il/media/dtvlz32w/amitim_03_2026.pdf",
+       "text": "עקרונות נוהל העברת זכויות עמיתים שלא במזומן",
+       "ctx": ""
+      }
+     ]
+    },
+    {
+     "url": "https://www.ayalon-ins.co.il/savings/nispah/",
+     "cache": "none",
+     "links": 408,
+     "followed": [],
+     "files": 0,
+     "clicked": 2,
+     "captured": 0,
+     "selected": [],
+     "unselected_files": []
+    },
+    {
+     "url": "https://www.ayalon-ins.co.il/savings/nispah_prat/",
+     "cache": "none",
+     "links": 160,
+     "followed": [],
+     "files": 0,
+     "clicked": 0,
+     "captured": 0,
+     "selected": [],
+     "unselected_files": []
+    },
+    {
+     "url": "https://www.ayalon-ins.co.il/investments",
+     "cache": "none",
+     "links": 394,
+     "followed": [],
+     "files": 1,
+     "clicked": 2,
+     "captured": 0,
+     "selected": [],
+     "unselected_files": [
+      {
+       "file": "https://www.ayalon-ins.co.il/media/dtvlz32w/amitim_03_2026.pdf",
+       "text": "עקרונות נוהל העברת זכויות עמיתים שלא במזומן",
+       "ctx": ""
+      }
+     ]
+    },
+    {
+     "url": "https://www.ayalon-ins.co.il",
+     "cache": "none",
+     "links": 425,
+     "followed": [
+      "https://www.ayalon-ins.co.il/insurances/car/having-policy"
+     ],
+     "files": 0,
+     "clicked": 2,
+     "captured": 0,
+     "selected": [],
+     "unselected_files": []
+    },
+    {
+     "url": "https://www.ayalon-ins.co.il/about-us/about-ayalon/investments/publications/",
+     "cache": "none",
+     "links": 398,
+     "followed": [],
+     "files": 5,
+     "clicked": 2,
+     "captured": 0,
+     "selected": [],
+     "unselected_files": [
+      {
+       "file": "https://www.ayalon-ins.co.il/media/jqjekhjr/bakasha_hesder_pshara_nov_2025.pdf",
+       "text": "להורדה",
+       "ctx": ""
+      },
+      {
+       "file": "https://www.ayalon-ins.co.il/media/5uahnahv/hodaa_hagashat_hesder_nov_2025.pdf",
+       "text": "להורדה",
+       "ctx": ""
+      },
+      {
+       "file": "https://www.ayalon-ins.co.il/media/po0hzqzw/gilad_heker_apr_2026.pdf",
+       "text": "להורדה",
+       "ctx": ""
+      },
+      {
+       "file": "https://www.ayalon-ins.co.il/media/ycada1tc/br_yizugit_04_2026.pdf",
+       "text": "להורדה",
+       "ctx": ""
+      },
+      {
+       "file": "https://www.ayalon-ins.co.il/media/e0lgrfst/הודעה-על-אישור-הסדרי-פשרה.pdf",
+       "text": "להורדה",
+       "ctx": ""
+      }
+     ]
+    },
+    {
+     "url": "https://www.ayalon-ins.co.il/career/finance-investments",
+     "cache": "none",
+     "links": 402,
+     "followed": [],
+     "files": 0,
+     "clicked": 2,
+     "captured": 0,
+     "selected": [],
+     "unselected_files": []
+    },
+    {
+     "url": "https://www.ayalon-ins.co.il/about-us/about-ayalon/investments/",
+     "cache": "none",
+     "links": 394,
+     "followed": [],
+     "files": 1,
+     "clicked": 2,
+     "captured": 0,
+     "selected": [],
+     "unselected_files": [
+      {
+       "file": "https://www.ayalon-ins.co.il/media/dtvlz32w/amitim_03_2026.pdf",
+       "text": "עקרונות נוהל העברת זכויות עמיתים שלא במזומן",
+       "ctx": ""
+      }
+     ]
+    },
+    {
+     "url": "https://www.ayalon-ins.co.il/investments-provident",
+     "cache": "none",
+     "links": 395,
+     "followed": [
+      "https://www.ayalon-ins.co.il/he/about-provident-container/investments/"
+     ],
+     "files": 1,
+     "clicked": 2,
+     "captured": 0,
+     "selected": [],
+     "unselected_files": [
+      {
+       "file": "https://www.ayalon-ins.co.il/media/dtvlz32w/amitim_03_2026.pdf",
+       "text": "לצפייה לחצו כאן",
+       "ctx": ""
+      }
+     ]
+    },
+    {
+     "url": "https://www.ayalon-ins.co.il/investments-directorate",
+     "cache": "none",
+     "links": 393,
+     "followed": [],
+     "files": 0,
+     "clicked": 2,
+     "captured": 0,
+     "selected": [],
+     "unselected_files": []
+    },
+    {
+     "url": "https://www.ayalon-ins.co.il/investments-levelagreement",
+     "cache": "none",
+     "links": 393,
+     "followed": [],
+     "files": 1,
+     "clicked": 2,
+     "captured": 0,
+     "selected": [],
+     "unselected_files": [
+      {
+       "file": "https://www.ayalon-ins.co.il/media/02rh04e2/אמנת-השירות-גמל-2026.pdf",
+       "text": "לאמנת השירות לחצו כאן",
+       "ctx": ""
+      }
+     ]
+    },
+    {
+     "url": "https://www.ayalon-ins.co.il/insurances/car/having-policy",
+     "cache": "none",
+     "links": 399,
+     "followed": [],
+     "files": 0,
+     "clicked": 2,
+     "captured": 0,
+     "selected": [],
+     "unselected_files": []
+    },
+    {
+     "url": "https://www.ayalon-ins.co.il/he/about-provident-container/investments/",
+     "cache": "none",
+     "links": 397,
+     "followed": [],
+     "files": 0,
+     "clicked": 2,
+     "captured": 0,
+     "selected": [],
+     "unselected_files": []
+    }
+   ],
+   "new_docs": 0,
+   "found": 10,
+   "selected": 0,
+   "had": 0,
+   "head_skip": 0,
+   "cache_none": 13,
+   "errors": [],
+   "diag": [
+    "איילון חברה לביטוח: links=394 files=1 clicked=2 captured=0 selected=0",
+    "   ? amitim_03_2026.pdf | עקרונות נוהל העברת זכויות עמיתים שלא במז | ",
+    "איילון חברה לביטוח: links=408 files=0 clicked=2 captured=0 selected=0",
+    "איילון חברה לביטוח: links=160 files=0 clicked=0 captured=0 selected=0",
+    "איילון חברה לביטוח: links=394 files=1 clicked=2 captured=0 selected=0",
+    "   ? amitim_03_2026.pdf | עקרונות נוהל העברת זכויות עמיתים שלא במז | ",
+    "איילון חברה לביטוח: links=425 files=0 clicked=2 captured=0 selected=0",
+    "איילון חברה לביטוח: links=398 files=5 clicked=2 captured=0 selected=0",
+    "   ? bakasha_hesder_pshara_nov_2025.pdf | להורדה | ",
+    "   ? hodaa_hagashat_hesder_nov_2025.pdf | להורדה | ",
+    "   ? gilad_heker_apr_2026.pdf | להורדה | ",
+    "   ? br_yizugit_04_2026.pdf | להורדה | ",
+    "   ? הודעה-על-אישור-הסדרי-פשרה.pdf | להורדה | ",
+    "איילון חברה לביטוח: links=402 files=0 clicked=2 captured=0 selected=0",
+    "איילון חברה לביטוח: links=394 files=1 clicked=2 captured=0 selected=0",
+    "   ? amitim_03_2026.pdf | עקרונות נוהל העברת זכויות עמיתים שלא במז | ",
+    "איילון חברה לביטוח: links=395 files=1 clicked=2 captured=0 selected=0",
+    "   ? amitim_03_2026.pdf | לצפייה לחצו כאן | ",
+    "איילון חברה לביטוח: links=393 files=0 clicked=2 captured=0 selected=0",
+    "איילון חברה לביטוח: links=393 files=1 clicked=2 captured=0 selected=0",
+    "   ? אמנת-השירות-גמל-2026.pdf | לאמנת השירות לחצו כאן | ",
+    "איילון חברה לביטוח: links=399 files=0 clicked=2 captured=0 selected=0",
+    "איילון חברה לביטוח: links=397 files=0 clicked=2 captured=0 selected=0"
+   ],
+   "new_files": []
   }
  ]
 }
