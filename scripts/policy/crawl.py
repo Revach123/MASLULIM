@@ -67,7 +67,8 @@ def load_seeds() -> dict[str, dict]:
                                 "product_list": cfg.get("products", []), "search": cfg.get("search", True),
                                 "via": cfg.get("via", "cloud"), "max_pages": cfg.get("max_pages", 40),
                                 "exclude": cfg.get("exclude"), "follow": cfg.get("follow"), "budget": cfg.get("budget"),
-                                "click_texts": cfg.get("click_texts"), "crawl_budget": cfg.get("crawl_budget")}
+                                "click_texts": cfg.get("click_texts"), "crawl_budget": cfg.get("crawl_budget"),
+                                "force_docs": cfg.get("force_docs")}
     return out
 
 
@@ -380,6 +381,12 @@ def main():
                                         ensure_ascii=False, indent=1), "utf-8")
         all_changes += changes
         docs = select_docs(pages, set(extra))
+        if seed.get("force_docs"):  # מסמכים בלי טקסט קישור / מילת מדיניות (עמ"י S&P להשקעה: קישור PDF ריק) - נבחרים לפי כתובת
+            frx_ = re.compile(seed["force_docs"])
+            for pu_, p_ in pages.items():
+                for i in p_["items"]:
+                    if i.get("doc") and frx_.search(unquote(i["href"])):
+                        docs.setdefault(unquote(i["href"]), {**i, "page": pu_})
         if seed["exclude"]:  # מסמכים של חברה אחרת באותו אתר (מנורה: תיקי ביטוח משתתפים מקושרים מעמודי הפנסיה)
             ex = re.compile(seed["exclude"])
             docs = {k: d for k, d in docs.items() if not ex.search(unquote(k) + " " + unquote(d["page"]))}
