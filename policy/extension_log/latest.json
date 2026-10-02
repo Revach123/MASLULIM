@@ -1,7 +1,7 @@
 {
  "extension_version": "2.36.0",
  "started": "2026-10-02T09:14:49.791Z",
- "updated": "2026-10-02T09:19:33.284Z",
+ "updated": "2026-10-02T09:20:33.866Z",
  "final": false,
  "stopped": false,
  "rules_from_github": true,
@@ -74,30 +74,30 @@
  "active": [
   {
    "name": "מנורה מבטחים פנסיה וגמל בע\"מ",
-   "page": "https://www.menoramivt.co.il/funds/pension-and-gemel/gemel-hishtalmut-list/menora-gemel-15725/tradable-equity-track",
-   "page_no": 16,
-   "pages": 64,
-   "step": "טוען עמוד"
+   "page": "https://www.menoramivt.co.il/pension/pension-index-fund",
+   "page_no": 19,
+   "pages": 76,
+   "step": "פותח אקורדיונים ואוסף קישורים"
   },
   {
    "name": "אלטשולר שחם גמל ופנסיה בע\"מ",
-   "page": "https://www.as-invest.co.il/interstedin/gemel/%D7%90%D7%9C%D7%98%D7%A9%D7%95%D7%9C%D7%A8-%D7%A9%D7%97%D7%9D-%D7%92%D7%9E%D7%9C-%D7%A2%D7%95%D7%A7%D7%91-%D7%9E%D7%93%D7%93%D7%99-%D7%9E%D7%A0%D7%99%D7%95%D7%AA/",
-   "page_no": 18,
-   "pages": 94,
-   "step": "מוריד קובץ 2/4"
+   "page": "https://www.as-invest.co.il/interstedin/gemel/%D7%90%D7%9C%D7%98%D7%A9%D7%95%D7%9C%D7%A8-%D7%A9%D7%97%D7%9D-%D7%9E%D7%A8%D7%A4%D7%90-%D7%A7%D7%95%D7%A4%D7%94-%D7%9E%D7%A8%D7%9B%D7%96%D7%99%D7%AA-%D7%9C%D7%93%D7%9E%D7%99-%D7%9E%D7%97%D7%9C%D7%94/",
+   "page_no": 23,
+   "pages": 98,
+   "step": "טוען עמוד"
   },
   {
    "name": "איילון חברה לביטוח בע\"מ",
-   "page": "https://www.ayalon-ins.co.il/savings/nispah_prat/",
-   "page_no": 3,
-   "pages": 11,
-   "step": "לוחץ על כפתורי הורדה"
+   "page": "https://www.ayalon-ins.co.il/about-us/about-ayalon/investments/publications/",
+   "page_no": 6,
+   "pages": 12,
+   "step": "פותח אקורדיונים ואוסף קישורים"
   },
   {
    "name": "החברה המנהלת של מינהל קרן ההשתלמות לפקידים עובדי המנהל והשירותים בע\"מ",
-   "page": "https://www.minhal.org/?CategoryID=164",
-   "page_no": 1,
-   "pages": 5,
+   "page": "https://www.minhal.org/?CategoryID=153",
+   "page_no": 2,
+   "pages": 9,
    "step": "פותח אקורדיונים ואוסף קישורים"
   }
  ],
