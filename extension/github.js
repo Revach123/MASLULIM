@@ -86,7 +86,15 @@ const sleep = (ms) => new Promise((r) => setTimeout(r, ms));
 // אם ה-ref זז בינתיים (422 "not a fast forward" - commit מקביל) - קורא את
 // ה-ref מחדש, בונה tree/commit על הבסיס החדש, ומנסה שוב. ה-blobs נוצרים פעם
 // אחת (הם לפי תוכן), אז רק ה-tree/commit נבנים מחדש.
-export async function commitFiles(token, owner, repo, branch, files, message) {
+// כל ה-commits של התוסף בתור אחד (לוג כל 3 דקות + מנות של עד 4 אתרים במקביל התחרו זה בזה על אותו ref)
+let commitQueue = Promise.resolve();
+export function commitFiles(token, owner, repo, branch, files, message) {
+  const run = commitQueue.then(() => commitFilesNow(token, owner, repo, branch, files, message));
+  commitQueue = run.catch(() => {});
+  return run;
+}
+
+async function commitFilesNow(token, owner, repo, branch, files, message) {
   if (files.length === 0) return { committed: 0 };
   const refPath = `/repos/${owner}/${repo}/git/refs/heads/${encodeURIComponent(branch)}`;
 
@@ -97,7 +105,7 @@ export async function commitFiles(token, owner, repo, branch, files, message) {
     treeEntries.push({ path: f.path, mode: "100644", type: "blob", sha: blob.sha });
   }
 
-  for (let attempt = 1; attempt <= 7; attempt++) {
+  for (let attempt = 1; attempt <= 15; attempt++) {  // main זז גם מ-GitHub Actions (קליטה, לוגים)
     // ref/tree בסיס עדכניים
     let baseCommitSha = null, baseTreeSha = null;
     const refRes = await fetch(`${API}/repos/${owner}/${repo}/git/ref/heads/${encodeURIComponent(branch)}`, { headers: authHeaders(token) });
@@ -129,7 +137,7 @@ export async function commitFiles(token, owner, repo, branch, files, message) {
       const msg = String(e && e.message || e);
       // ה-ref זז (commit מקביל) או שכבר קיים - ננסה שוב על בסיס טרי
       if (/HTTP 422/.test(msg) || /fast forward/i.test(msg) || /HTTP 409/.test(msg)) {
-        await sleep(600 * attempt);
+        await sleep(Math.min(1000 * attempt, 8000) + Math.random() * 2000);  // המתנה גדלה + אקראיות
         continue;
       }
       throw e;
