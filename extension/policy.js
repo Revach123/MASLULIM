@@ -242,6 +242,24 @@ function cacheLinks(links, pageUrl, frx = null) {  // רק מה שצריך: מס
   }).slice(0, 400).map((l) => ({ href: l.href, text: (l.text || "").slice(0, 120), ctx: (l.ctx || "").slice(0, 120) }));
 }
 
+// וורדפרס: רשימת הקבצים שהועלו לאתר (wp-json/wp/v2/media) - כשקובץ המדיניות לא מופיע כקישור בעמוד (מינהל: נטען ב-JS).
+// הבקשה יוצאת מהדפדפן של המשתמש (Cloudflare חוסם את הענן, לא אותו)
+async function wpMediaDocs(site) {
+  const out = [];
+  for (const q of [].concat(site.wp_media_search || [])) {
+    for (let page = 1; page <= 3; page++) {
+      try {
+        const r = await fetch(`${site.home.replace(/\/$/, "")}/wp-json/wp/v2/media?search=${encodeURIComponent(q)}&per_page=100&page=${page}`, { credentials: "include" });
+        if (!r.ok) break;
+        const arr = await r.json();
+        for (const m of arr || []) if (m && m.source_url) out.push({ href: m.source_url, text: (m.title && m.title.rendered) || m.slug || "", ctx: "(wp-media)" });
+        if (!arr || arr.length < 100) break;
+      } catch (e) { break; }
+    }
+  }
+  return out;
+}
+
 function siteBudgetMs(site) { return (site.timeout_min || RULES.site_timeout_min || 15) * 60000; }
 
 function utf8b64(s) { return btoa(unescape(encodeURIComponent(s))); }
@@ -340,6 +358,8 @@ async function runSite(site, cfg, seen, onProgress, windowId, meta = {}, flush =
   const startAt = Math.min(meta[resumeKey] || 0, Math.max(pages.length - 1, 0));
   const partial = { cut: false };
   let blockedFails = 0;
+  const wpDocs = site.wp_media_search ? await wpMediaDocs(site) : [];
+  if (site.wp_media_search) diag.push(`${site.name.slice(0, 18)}: wp-media ${wpDocs.length} files`);
   let flushed = 0, batchAdded = {};  // מסמכים שכבר נשלחו במנות (flush)
   delete meta[resumeKey];
   for (const [pi, pageUrl] of pages.entries()) {
@@ -402,6 +422,7 @@ async function runSite(site, cfg, seen, onProgress, windowId, meta = {}, flush =
                               links: cacheLinks(links, pageUrl, site.follow_rx ? new RegExp(site.follow_rx, "i") : null), captured: skipClicks ? 0 : cap.urls.length,
                               capAt: skipClicks ? pc.capAt : Date.now() };
       }
+      if (pi === 0 && wpDocs.length) links.push(...wpDocs);  // קבצי וורדפרס (wp_media_search) - עם העמוד הראשון
       // follow_max (אתר שעמוד המדיניות בו לא ידוע - הסוכנות): נכנסים לקישורים באותו אתר שנראים כמו מדיניות/השקעות
       const followed = [];
       // follow_rx: רק קישורים שתואמים (קרנות מורים וגננות: "מורים-וגננות"); גם מעמודים שנכנסו אליהם (כמה רמות),
