@@ -7,12 +7,17 @@
 4. מטמון שכבות הרשת: Yahoo/OpenFIGI נכשלים חלקית בכל ריצה (חסימה / מגבלת קצב), וקרן שסווגה
    אתמול נשארת היום בלי סיווג - בדף היא קופצת בין "מניות" ל"קרנות נאמנות". תוצאה טרייה תמיד
    קודמת; מה שנכשל בריצה הזו נלקח מהמטמון (FUND_CLASS_CACHE, נשמר ב-actions/cache).
-5. תיקון ISIN עם טעות בקידומת (repair_isin_typos) ונרמול שבר מניות > 1 (sanitize_fractions).
+5. מוצא אחרון - הסיווג שהגוף עצמו רשם בדוח ("סיווג הקרן" + "מאפיין עיקרי": Bond/Fixed Income Funds +
+   אג"ח קונצרני -> אג"ח; Equity Funds / מניות בחו"ל / עוקב אחר מדדי מניות -> מניות), רק כשאין סתירה
+   (ACC SICAV LI1165463954, LION III IE00B804LV55 - קרנות אג"ח שאינן באף מאגר).
+6. תיקון ISIN עם טעות בקידומת (repair_isin_typos) ונרמול שבר מניות > 1 (sanitize_fractions).
 """
 from __future__ import annotations
 
 import json
 import os
+import re
+from collections import Counter
 from pathlib import Path
 
 from .foreign_etf_reference import (
@@ -37,6 +42,51 @@ def _save_cache(path: Path, cache: dict[str, dict]) -> None:
         path.write_text(json.dumps(cache, ensure_ascii=False, sort_keys=True), encoding="utf-8")
     except OSError as e:
         print(f"[fund_class] שמירת המטמון נכשלה: {e}")
+
+
+FUND_CLASS_COL, MAIN_TRAIT_COL = "סיווג הקרן", "מאפיין עיקרי"
+_REPORT_EQUITY = re.compile(r'מניות|Equity Fund', re.IGNORECASE)
+_REPORT_BOND = re.compile(r'אג"?ח|Bond|Fixed Income|Money Market|כספית', re.IGNORECASE)
+
+
+_REPORT_OTHER = re.compile(r'Commodit|סחורות|Currency|מט"ח בלבד|Real Estate|נדל"ן', re.IGNORECASE)
+
+
+def _report_class(row: dict) -> str | None:
+    """"equity" / "bond" לפי שתי עמודות הסיווג של הדוח; "conflict" כשהן סותרות או מזכירות סחורות/מטבע/נדל"ן
+    (Kijani Commodity: "Commodity Funds" + "מניות"); None כשאין הכרעה (Index Funds, אחר)."""
+    found = set()
+    for col in (FUND_CLASS_COL, MAIN_TRAIT_COL):
+        v = str(row.get(col) or "")
+        if _REPORT_OTHER.search(v):
+            return "conflict"
+        eq, bd = bool(_REPORT_EQUITY.search(v)), bool(_REPORT_BOND.search(v))
+        if eq != bd:
+            found.add("equity" if eq else "bond")
+    if len(found) > 1:
+        return "conflict"
+    return next(iter(found)) if found else None
+
+
+def classify_from_report_columns(source: list[dict], isins) -> dict[str, dict[str, float]]:
+    """רוב השורות של אותו ISIN בכל הדוחות: הכרעה רק כש-80%+ מהשורות המכריעות/הסותרות מסכימות."""
+    want = {str(i).strip().upper() for i in isins}
+    votes: dict[str, Counter] = {}
+    for rec in source:
+        if rec.get("Category") not in ("קרנות נאמנות", "קרנות סל"):
+            continue
+        for row in rec.get("Clean") or []:
+            isin = str(row.get("מספר נייר ערך") or "").strip().upper()
+            if isin in want:
+                cls = _report_class(row)
+                if cls:
+                    votes.setdefault(isin, Counter())[cls] += 1
+    out = {}
+    for isin, c in votes.items():
+        cls, n = c.most_common(1)[0]
+        if cls != "conflict" and n >= 0.8 * sum(c.values()):
+            out[isin] = {"equity": 1.0, "bond": 0.0} if cls == "equity" else {"equity": 0.0, "bond": 1.0}
+    return out
 
 
 def _online_layers():
@@ -91,6 +141,13 @@ def build_foreign_fractions(source: list[dict], funds: list[dict], tag: str, cac
     _save_cache(cache_path, cache)
     print(f"[{tag}] מטמון שכבות רשת: {from_cache} ISIN מהמטמון (נכשלו בריצה הזו), "
           f"{len(online)} עודכנו, {len(cache)} במטמון")
+
+    missing = collect_unclassified_foreign_isins(funds, isin_fractions)
+    from_report = classify_from_report_columns(source, missing) if missing else {}
+    for isin, frac in from_report.items():
+        isin_fractions.setdefault(isin, frac)
+    print(f"[{tag}] סיווג הגוף בדוח (מוצא אחרון): {len(from_report)} מתוך {len(missing)} ISIN שנותרו: "
+          f"{sorted(from_report)[:10]}")
 
     repaired = repair_isin_typos(funds, isin_fractions)
     for bad, good in repaired.items():
