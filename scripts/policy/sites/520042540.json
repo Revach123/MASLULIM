@@ -6,6 +6,10 @@
   {
    "product": "ביטוח",
    "url": "https://www.menoramivt.co.il/rep-list/about-insurance/participating-portfolio-info/investment-policy"
+  },
+  {
+   "product": "ביטוח",
+   "url": "https://www.menoramivt.co.il/funds/savings/top-finance/top-finance-info"
   }
  ],
  "browser": "headed",
@@ -13,8 +17,8 @@
   "ביטוח"
  ],
  "search": true,
- "rev": 12,
- "note": "מנורה: שנה -> אקורדיון מסלול -> אייקון <a> בלי href (aria-label 'קובץ EXCEL להורדה') -> הורדה מ-cdn.menoramivt.co.il/public/docs/<תאריך>/מדיניות-השקעה-לשנת-YYYY-<מסלול>.xlsx",
+ "rev": 13,
+ "note": "מנורה: שנה -> אקורדיון מסלול -> אייקון <a> בלי href (aria-label 'קובץ EXCEL להורדה') -> הורדה מ-cdn.menoramivt.co.il/public/docs/<תאריך>/מדיניות-השקעה-לשנת-YYYY-<מסלול>.xlsx | 2026-10-03: מסלולי פוליסות חיסכון (top-finance-info) - S&P 14316 ומסלולי (משת)",
  "track_no_map": [
   [
    "משתתף 91",

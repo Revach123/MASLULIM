@@ -4,6 +4,34 @@
  "home": "https://www.menoramivt.co.il",
  "pages": [
   {
+   "product": "גמל",
+   "url": "https://www.menoramivt.co.il/funds/top-SP500"
+  },
+  {
+   "product": "גמל",
+   "url": "https://www.menoramivt.co.il/funds/Education-fund-SP500"
+  },
+  {
+   "product": "פנסיה",
+   "url": "https://www.menoramivt.co.il/funds/insurers-complementary-pension-SP500"
+  },
+  {
+   "product": "גמל",
+   "url": "https://www.menoramivt.co.il/funds/Education-fund-halacha"
+  },
+  {
+   "product": "גמל",
+   "url": "https://www.menoramivt.co.il/funds/gov-bonds-15342"
+  },
+  {
+   "product": "גמל",
+   "url": "https://www.menoramivt.co.il/funds/stock-1364"
+  },
+  {
+   "product": "פנסיה",
+   "url": "https://www.menoramivt.co.il/funds/pension-and-gemel/pension-plans/tradble-stocks-plan-15748"
+  },
+  {
    "product": "פנסיה",
    "url": "https://www.menoramivt.co.il/links/pension-and-gemel/mashlima"
   },
@@ -238,10 +266,10 @@
   "פנסיה"
  ],
  "search": false,
- "rev": 22,
- "note": "מנורה: קובץ מדיניות לכל מסלול בעמוד המסלול (/funds/...), נחשף רק ברינדור. עמודי links/ = רשימות המסלולים; follow נכנס לכל מסלול בדפדפן. exclude: תיק ביטוח משתתף של מנורה ביטוח. 2026-10: חסרו עמודי מסלול (תקציב זמן 22 דק' נגמר אחרי 38 עמודים) -> עמודים ישירים, budget קצר, crawl_budget 45 דק'; משלימה הוחזרה (שייכת לחברה). 2026-10: Radware CAPTCHA חוסם את Actions אחרי כמה עמודים -> תוסף (כפתורי ההורדה עם aria-label 'להורדה' נלחצים ע\"י התוסף) | 2026-10-02: סדר העמודים - השתלמות/גמל להשקעה/משלימה/פנסיה (חסרים) קודם, עמודי מסלולי הגמל (מכוסים) בסוף | 2026-10-02: עמודי מסלול שהמעקב לא הגיע אליהם (גמל להשקעה top-savings, השתלמות 1114/11409/9662, S&P, קיימות, מור...) - כ-seed בראש הרשימה | יעד לפרישה 2035/2045/2050/2060/2065 (פנסיה+משלימה): retirement-investment-tracks כ-seed | 2026-10-02: עמודי רשימה (נמצאו בחיפוש): משלימה, חיסכון לכל ילד, מרכזיות לפיצויים, משתתפת בפנסיה תקציבית, pension-plans (יעד לפרישה retire-track-YYYY); follow_rx גם /funds/-pension-mashlima-NNNN",
+ "rev": 23,
+ "note": "מנורה: קובץ מדיניות לכל מסלול בעמוד המסלול (/funds/...), נחשף רק ברינדור. עמודי links/ = רשימות המסלולים; follow נכנס לכל מסלול בדפדפן. exclude: תיק ביטוח משתתף של מנורה ביטוח. 2026-10: חסרו עמודי מסלול (תקציב זמן 22 דק' נגמר אחרי 38 עמודים) -> עמודים ישירים, budget קצר, crawl_budget 45 דק'; משלימה הוחזרה (שייכת לחברה). 2026-10: Radware CAPTCHA חוסם את Actions אחרי כמה עמודים -> תוסף (כפתורי ההורדה עם aria-label 'להורדה' נלחצים ע\"י התוסף) | 2026-10-02: סדר העמודים - השתלמות/גמל להשקעה/משלימה/פנסיה (חסרים) קודם, עמודי מסלולי הגמל (מכוסים) בסוף | 2026-10-02: עמודי מסלול שהמעקב לא הגיע אליהם (גמל להשקעה top-savings, השתלמות 1114/11409/9662, S&P, קיימות, מור...) - כ-seed בראש הרשימה | יעד לפרישה 2035/2045/2050/2060/2065 (פנסיה+משלימה): retirement-investment-tracks כ-seed | 2026-10-02: עמודי רשימה (נמצאו בחיפוש): משלימה, חיסכון לכל ילד, מרכזיות לפיצויים, משתתפת בפנסיה תקציבית, pension-plans (יעד לפרישה retire-track-YYYY); follow_rx גם /funds/-pension-mashlima-NNNN | 2026-10-03: עמודי /funds/<slug> (top-SP500, Education-fund-SP500/halacha, insurers-complementary-pension-SP500, gov-bonds-15342, stock-1364) - נמצאו בחיפוש; follow_rx לכל /funds/ חוץ מאומגה ופוליסות חיסכון",
  "exclude": "about-insurance|participating-portfolio|מנורה-ביטוח|משתתף(?!ת)|reports-publishs|העברת-זכויות|קשורים|mash-year|_yield|_p\\d|תרומת-אפיקי|הוצאות-ישירות|pen-amit|דוח-חודשי",
- "follow": "/funds/(pension-and-gemel/|-?(gemel|pension)|Insurers-)",
+ "follow": "/funds/(?!about-menora/|savings/)[^/?#]",
  "max_pages": 140,
  "budget": [
   30,
@@ -250,7 +278,7 @@
  "crawl_budget": 2700,
  "via": "extension",
  "follow_max": 140,
- "follow_rx": "/funds/(pension-and-gemel/|gemel-|-?pension-|Insurers-)|%2Ffunds%2F",
+ "follow_rx": "/funds/(?!about-menora/|savings/)[^/?#]|%2Ffunds%2F",
  "timeout_min": 45,
  "per_track_pages": true
 }

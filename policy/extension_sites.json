@@ -69,6 +69,34 @@
   "home": "https://www.menoramivt.co.il",
   "pages": [
    {
+    "product": "גמל",
+    "url": "https://www.menoramivt.co.il/funds/top-SP500"
+   },
+   {
+    "product": "גמל",
+    "url": "https://www.menoramivt.co.il/funds/Education-fund-SP500"
+   },
+   {
+    "product": "פנסיה",
+    "url": "https://www.menoramivt.co.il/funds/insurers-complementary-pension-SP500"
+   },
+   {
+    "product": "גמל",
+    "url": "https://www.menoramivt.co.il/funds/Education-fund-halacha"
+   },
+   {
+    "product": "גמל",
+    "url": "https://www.menoramivt.co.il/funds/gov-bonds-15342"
+   },
+   {
+    "product": "גמל",
+    "url": "https://www.menoramivt.co.il/funds/stock-1364"
+   },
+   {
+    "product": "פנסיה",
+    "url": "https://www.menoramivt.co.il/funds/pension-and-gemel/pension-plans/tradble-stocks-plan-15748"
+   },
+   {
     "product": "פנסיה",
     "url": "https://www.menoramivt.co.il/links/pension-and-gemel/mashlima"
    },
@@ -309,7 +337,7 @@
   "capture_ms": null,
   "download_rx": null,
   "follow_max": 140,
-  "follow_rx": "/funds/(pension-and-gemel/|gemel-|-?pension-|Insurers-)|%2Ffunds%2F",
+  "follow_rx": "/funds/(?!about-menora/|savings/)[^/?#]|%2Ffunds%2F",
   "timeout_min": 45,
   "download_delay_ms": null,
   "no_map": null,
