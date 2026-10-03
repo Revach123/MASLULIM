@@ -297,6 +297,8 @@ def assign(tracks):
             if len({_norm(x.get("track_name")) for x in ts}) < 2:
                 continue
             keep = [x for x in ts if n in name_numbers(x.get("track_name")) or x["track_no_source"] == "doc_code"]
+            if not keep:  # אף אחד לא נושא את המספר בשמו: מי ששמו מתאים לשם ברישום (מגדל 17013 "מגדל - כללי" מול "י החדשה")
+                keep = [x for x in ts if reg.match_name(lid, x.get("track_name"))[0] == n][:1]
             if len(keep) > 1 and all(x["track_no_source"] != "doc_code" for x in keep):
                 keep = keep[:1]  # אותו מסלול מופיע פעמיים בקובץ (הפניקס: גיליון פרט וגיליון ביטוח, אותו מספר באוצר)
             for x in ts:
