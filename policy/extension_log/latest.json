@@ -1,7 +1,7 @@
 {
  "extension_version": "2.48.0",
  "started": "2026-10-03T18:28:59.326Z",
- "updated": "2026-10-03T18:37:59.457Z",
+ "updated": "2026-10-03T18:38:18.716Z",
  "final": false,
  "stopped": false,
  "rules_from_github": true,
@@ -34,31 +34,31 @@
  "active": [
   {
    "name": "מנורה מבטחים פנסיה וגמל בע\"מ",
-   "page": "https://www.menoramivt.co.il/funds/pension-and-gemel/pension-plans/track-under-50",
-   "page_no": 92,
+   "page": "https://www.menoramivt.co.il/funds/pension-and-gemel/mashlima/mashlima-track-under-50",
+   "page_no": 95,
    "pages": 106,
-   "step": "[2 במקביל] בודק אם העמוד השתנה"
+   "step": "[2 במקביל] מוריד קובץ 3/12"
   },
   {
    "name": "אלטשולר שחם גמל ופנסיה בע\"מ",
-   "page": "https://www.as-invest.co.il/interstedin/%D7%A7%D7%A8%D7%A0%D7%95%D7%AA-%D7%94%D7%A9%D7%AA%D7%9C%D7%9E%D7%95%D7%AA/%D7%90%D7%9C%D7%98%D7%A9%D7%95%D7%9C%D7%A8-%D7%A9%D7%97%D7%9D-%D7%94%D7%A9%D7%AA%D7%9C%D7%9E%D7%95%D7%AA-%D7%9E%D7%A0%D7%99%D7%95%D7%AA/",
-   "page_no": 30,
+   "page": "https://www.as-invest.co.il/interstedin/%D7%A7%D7%A8%D7%A0%D7%95%D7%AA-%D7%94%D7%A9%D7%AA%D7%9C%D7%9E%D7%95%D7%AA/%D7%90%D7%9C%D7%98%D7%A9%D7%95%D7%9C%D7%A8-%D7%A9%D7%97%D7%9D-%D7%94%D7%A9%D7%AA%D7%9C%D7%9E%D7%95%D7%AA-%D7%A2%D7%95%D7%A7%D7%91-%D7%9E%D7%93%D7%93%D7%99-%D7%9E%D7%A0%D7%99%D7%95%D7%AA/",
+   "page_no": 33,
    "pages": 131,
-   "step": "מוריד קובץ 6/7"
+   "step": "בודק אם העמוד השתנה"
   },
   {
    "name": "עגור חברה לניהול קופות גמל וקרנות השתלמות בע\"מ",
    "page": "https://kereni.co.il/%D7%9E%D7%93%D7%99%D7%A0%D7%99%D7%95%D7%AA-%D7%94%D7%A9%D7%A7%D7%A2%D7%94-%D7%95%D7%A0%D7%94%D7%9C%D7%99%D7%9D/",
    "page_no": 1,
    "pages": 7,
-   "step": "מוריד קובץ 19/82"
+   "step": "מוריד קובץ 26/82"
   },
   {
    "name": "קרנות השתלמות למורים ולגננות - חברה מנהלת בע\"מ",
-   "page": "https://www.kranoth.org.il",
-   "page_no": 5,
+   "page": "https://www.kranoth.org.il/%D7%9E%D7%93%D7%99%D7%A0%D7%99%D7%95%D7%AA-%D7%95%D7%AA%D7%A7%D7%A0%D7%95%D7%A0%D7%99%D7%9D/%D7%9E%D7%93%D7%99%D7%A0%D7%99%D7%95%D7%AA-%D7%94%D7%A9%D7%A7%D7%A2%D7%95%D7%AA-%D7%9E%D7%95%D7%A8%D7%99%D7%9D-%D7%95%D7%92%D7%A0%D7%A0%D7%95%D7%AA-%D7%A8%D7%92%D7%99%D7%9C/",
+   "page_no": 6,
    "pages": 10,
-   "step": "לוחץ על כפתורי הורדה"
+   "step": "פותח אקורדיונים ואוסף קישורים"
   }
  ],
  "sites": [
