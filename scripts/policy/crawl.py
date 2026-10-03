@@ -68,7 +68,7 @@ def load_seeds() -> dict[str, dict]:
                                 "via": cfg.get("via", "cloud"), "max_pages": cfg.get("max_pages", 40),
                                 "exclude": cfg.get("exclude"), "follow": cfg.get("follow"), "budget": cfg.get("budget"),
                                 "click_texts": cfg.get("click_texts"), "crawl_budget": cfg.get("crawl_budget"),
-                                "force_docs": cfg.get("force_docs")}
+                                "force_docs": cfg.get("force_docs"), "docs": cfg.get("docs") or []}
     return out
 
 
@@ -387,6 +387,12 @@ def main():
                 for i in p_["items"]:
                     if i.get("doc") and frx_.search(unquote(i["href"])):
                         docs.setdefault(unquote(i["href"]), {**i, "page": pu_})
+        # docs בהגדרות: כתובות ישירות לקבצי מדיניות שלא מקושרים בשום עמוד שהסורק מגיע אליו (מנורה ביטוח S&P 14316 -
+        # רק אחרי פתיחת אקורדיון שנה -> מסלול). משויכים לעמוד ה-seed הראשון שנסרק
+        if seed.get("docs") and pages:
+            src_page = next((u for u in extra if u in pages), next(iter(pages)))
+            for du in seed["docs"]:
+                docs.setdefault(unquote(du), {"href": du, "text": "(config docs)", "doc": True, "page": src_page})
         if seed["exclude"]:  # מסמכים של חברה אחרת באותו אתר (מנורה: תיקי ביטוח משתתפים מקושרים מעמודי הפנסיה)
             ex = re.compile(seed["exclude"])
             docs = {k: d for k, d in docs.items() if not ex.search(unquote(k) + " " + unquote(d["page"]))}

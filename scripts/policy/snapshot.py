@@ -333,7 +333,8 @@ def fetch_browser(pw, url, click_texts=None):
                 pass
         anchors += [x for x in net if (x["href"], x["text"]) not in seen]
         try:  # נתיבי קבצים בתוך ה-HTML/סקריפטים (Next.js __NEXT_DATA__ ודומיו)
-            for m in FILE_RX.findall(pg.content().replace("&amp;", "&"))[:300]:  # S&P בשם הקובץ (מנורה)
+            for m in FILE_RX.findall(re.sub(r"\\u0026", "&", pg.content().replace("&amp;", "&"), flags=re.I))[:300]:
+                # & בשם הקובץ (מנורה "...-s&p500-14316.xlsx"): ב-HTML &amp;, ב-JSON של Next.js \u0026
                 anchors.append({"href": urljoin(url, m.replace("\\/", "/")), "text": "(html)"})
         except Exception:
             pass
