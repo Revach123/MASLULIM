@@ -373,12 +373,15 @@ def write_complete(latest):
         for r in csv.DictReader(open(fp, encoding="utf-8-sig")):
             last[r["FUND_ID"]] = max(last.get(r["FUND_ID"], ""), str(r.get("REPORT_PERIOD") or ""))
     na = re.compile(r"IRA|בניהול אישי|ניהול אישי|הלוואות")
+    # מסלולים שסומנו כבלתי פתירים (policy/known_unresolvable.json - אין להם מסמך מדיניות משלהם) - לא נדרשים
+    kp = POL / "known_unresolvable.json"
+    unresolvable = set(json.loads(kp.read_text("utf-8")).get("tracks", {})) if kp.exists() else set()
     if rp.exists():
         for r in csv.DictReader(open(rp, encoding="utf-8-sig")):
             tn = r.get("track_no")
             if not (r.get("legal_id") and tn) or na.search(r.get("שם מסלול ארוך") or r.get("name") or ""):
                 continue
-            if tn in last and last[tn] < year + "01":
+            if tn in last and last[tn] < year + "01" or tn in unresolvable:
                 continue
             reg.setdefault(r["legal_id"], set()).add(tn)
     have, act, act_y = {}, {}, {}
