@@ -6,6 +6,14 @@
   {
    "product": "גמל",
    "url": "https://www.meitav.co.il/provident_pension/statement_investment_policy/"
+  },
+  {
+   "product": "גמל",
+   "url": "https://www.meitav.co.il/companies-and-business-units/kupat-gemel/gemel-info/a-list-of-funds-to-the-employer-compensations/"
+  },
+  {
+   "product": "גמל",
+   "url": "https://www.meitav.co.il/provident_pension/compensation_reports/"
   }
  ],
  "browser": "headless",
@@ -14,5 +22,6 @@
   "פנסיה"
  ],
  "search": true,
- "rev": 4
+ "rev": 5,
+ "note": "2026-10-03: עמוד קופה מרכזית לפיצויים רבת מסלולים (נמצא בחיפוש)"
 }

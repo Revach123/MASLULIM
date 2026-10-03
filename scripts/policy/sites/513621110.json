@@ -10,6 +10,14 @@
   {
    "product": "גמל",
    "url": "https://infinity.co.il/%D7%9E%D7%93%D7%99%D7%A0%D7%99%D7%95%D7%AA-%D7%95%D7%9E%D7%A1%D7%9C%D7%95%D7%9C%D7%99-%D7%94%D7%A9%D7%A7%D7%A2%D7%94-%D7%93%D7%95%D7%97%D7%95%D7%AA/"
+  },
+  {
+   "product": "גמל",
+   "url": "https://infinity.co.il/פיצויים/"
+  },
+  {
+   "product": "גמל",
+   "url": "https://infinity.co.il/category-services/קופות-הפיצויים-שלנו/"
   }
  ],
  "browser": "headless",
@@ -18,7 +26,8 @@
   "פנסיה"
  ],
  "search": false,
- "rev": 8,
+ "rev": 9,
  "home_source": "report_email:infinity.co.il",
- "exclude": "קהר"
+ "exclude": "קהר",
+ "note": "2026-10-03: עמוד קופה מרכזית לפיצויים רבת מסלולים (נמצא בחיפוש)"
 }
