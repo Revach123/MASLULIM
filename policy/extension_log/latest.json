@@ -1,7 +1,7 @@
 {
  "extension_version": "2.48.0",
  "started": "2026-10-03T18:28:59.326Z",
- "updated": "2026-10-03T18:31:59.447Z",
+ "updated": "2026-10-03T18:34:59.451Z",
  "final": false,
  "stopped": false,
  "rules_from_github": true,
@@ -21,7 +21,7 @@
   "page_cache_days": 3
  },
  "total_sites": 14,
- "done_sites": 3,
+ "done_sites": 4,
  "new_docs": 0,
  "skipped_complete": [
   {
@@ -34,31 +34,31 @@
  "active": [
   {
    "name": "מנורה מבטחים פנסיה וגמל בע\"מ",
-   "page": "https://www.menoramivt.co.il/funds/pension-14277",
-   "page_no": 38,
+   "page": "https://www.menoramivt.co.il/funds/pension-and-gemel/gemel-hishtalmut-list/menora-gemel/9795",
+   "page_no": 68,
    "pages": 106,
    "step": "[2 במקביל] בודק אם העמוד השתנה"
   },
   {
    "name": "אלטשולר שחם גמל ופנסיה בע\"מ",
-   "page": "https://www.as-invest.co.il/interstedin/%D7%97%D7%99%D7%A1%D7%9B%D7%95%D7%9F-%D7%95%D7%94%D7%A9%D7%A7%D7%A2%D7%94/%D7%90%D7%9C%D7%98%D7%A9%D7%95%D7%9C%D7%A8-%D7%A9%D7%97%D7%9D-%D7%97%D7%99%D7%A1%D7%9B%D7%95%D7%9F-%D7%9C%D7%99%D7%9C%D7%93-%D7%97%D7%95%D7%A1%D7%9B%D7%99%D7%9D-%D7%94%D7%9E%D7%A2%D7%93%D7%99%D7%A4%D7%99%D7%9D-%D7%A1%D7%99%D7%9B%D7%95%D7%9F-%D7%9E%D7%95%D7%A2%D7%98/",
-   "page_no": 12,
+   "page": "https://www.as-invest.co.il/interstedin/%D7%97%D7%99%D7%A1%D7%9B%D7%95%D7%9F-%D7%95%D7%94%D7%A9%D7%A7%D7%A2%D7%94/%D7%90%D7%9C%D7%98%D7%A9%D7%95%D7%9C%D7%A8-%D7%A9%D7%97%D7%9D-%D7%97%D7%99%D7%A1%D7%9B%D7%95%D7%9F-%D7%A4%D7%9C%D7%95%D7%A1-%D7%A2%D7%95%D7%A7%D7%91-%D7%9E%D7%93%D7%93%D7%99-%D7%9E%D7%A0%D7%99%D7%95%D7%AA/",
+   "page_no": 21,
    "pages": 131,
-   "step": "מוריד קובץ 2/8"
-  },
-  {
-   "name": "איילון קופות גמל בע\"מ",
-   "page": "https://www.ayalon-ins.co.il/savings/study-fund",
-   "page_no": 7,
-   "pages": 16,
-   "step": "לוחץ על כפתורי הורדה"
+   "step": "מוריד קובץ 1/4"
   },
   {
    "name": "החברה לניהול קופת התגמולים והפנסיה של עובדי הסוכנות היהודית לארץ ישראל בע\"מ",
-   "page": "https://www.jewishagency-kupa.org.il/sitemap/",
+   "page": "https://www.jewishagency-kupa.org.il/wp-content/uploads/2022/08/%D7%93%D7%95%D7%97-%D7%93%D7%99%D7%A8%D7%A7%D7%98%D7%95%D7%A8%D7%99%D7%95%D7%9F-%D7%97%D7%91%D7%A8%D7%94-%D7%9E%D7%A0%D7%94%D7%9C%D7%AA-%D7%A4%D7%A0%D7%A1%D7%99%D7%94-%D7%95%D7%AA%D7%92%D7%9E%D7%95%D7%9C%D7%99%D7%9D-2021.doc",
+   "page_no": 14,
+   "pages": 14,
+   "step": "טוען עמוד"
+  },
+  {
+   "name": "עגור חברה לניהול קופות גמל וקרנות השתלמות בע\"מ",
+   "page": "https://kereni.co.il/%D7%9E%D7%93%D7%99%D7%A0%D7%99%D7%95%D7%AA-%D7%94%D7%A9%D7%A7%D7%A2%D7%94-%D7%95%D7%A0%D7%94%D7%9C%D7%99%D7%9D/",
    "page_no": 1,
-   "pages": 10,
-   "step": "ממתין 15s (חסימת קצב) - קובץ 1/1"
+   "pages": 2,
+   "step": "טוען עמוד"
   }
  ],
  "sites": [
@@ -152,6 +152,223 @@
    "diag": [
     "מור גמל ופנסיה בע\": links=145 files=4 clicked=0 captured=0 selected=2",
     "מור גמל ופנסיה בע\": links=167 files=0 clicked=0 captured=0 selected=0"
+   ],
+   "new_files": []
+  },
+  {
+   "legal_id": "517085874",
+   "name": "איילון קופות גמל בע\"מ",
+   "pages": [
+    {
+     "url": "https://www.ayalon-ins.co.il/",
+     "cache": "hit",
+     "links": 74,
+     "followed": [
+      "https://www.ayalon-ins.co.il/gemel/site-hp",
+      "https://www.ayalon-ins.co.il/insurances/car/having-policy",
+      "https://www.ayalon-ins.co.il/savings",
+      "https://www.ayalon-ins.co.il/providents",
+      "https://www.ayalon-ins.co.il/savings/study-fund",
+      "https://www.ayalon-ins.co.il/savings/provident-fund-invest",
+      "https://www.ayalon-ins.co.il/savings/provident-fund",
+      "https://www.ayalon-ins.co.il/savings/pensionary",
+      "https://www.ayalon-ins.co.il/savings/private",
+      "https://www.ayalon-ins.co.il/savings/investment-routes",
+      "https://www.ayalon-ins.co.il/providents/provident-fund",
+      "https://www.ayalon-ins.co.il/providents/study-fund",
+      "https://www.ayalon-ins.co.il/providents/provident-fund-invest",
+      "https://www.ayalon-ins.co.il/investments-provident"
+     ],
+     "files": 0,
+     "clicked": 0,
+     "captured": 0,
+     "selected": [],
+     "unselected_files": []
+    },
+    {
+     "url": "https://www.ayalon-ins.co.il",
+     "cache": "hit",
+     "links": 74,
+     "followed": [],
+     "files": 0,
+     "clicked": 0,
+     "captured": 0,
+     "selected": [],
+     "unselected_files": []
+    },
+    {
+     "url": "https://www.ayalon-ins.co.il/insurances/car/having-policy",
+     "cache": "hit",
+     "links": 67,
+     "followed": [],
+     "files": 0,
+     "clicked": 0,
+     "captured": 0,
+     "selected": [],
+     "unselected_files": []
+    },
+    {
+     "url": "https://www.ayalon-ins.co.il/savings/study-fund",
+     "cache": "none",
+     "links": 0,
+     "followed": [],
+     "files": 0,
+     "clicked": 0,
+     "captured": 0,
+     "selected": [],
+     "unselected_files": []
+    },
+    {
+     "url": "https://www.ayalon-ins.co.il/savings/provident-fund-invest",
+     "cache": "none",
+     "links": 0,
+     "followed": [],
+     "files": 0,
+     "clicked": 0,
+     "captured": 0,
+     "selected": [],
+     "unselected_files": []
+    },
+    {
+     "url": "https://www.ayalon-ins.co.il/savings/provident-fund",
+     "cache": "none",
+     "links": 0,
+     "followed": [],
+     "files": 0,
+     "clicked": 0,
+     "captured": 0,
+     "selected": [],
+     "unselected_files": []
+    },
+    {
+     "url": "https://www.ayalon-ins.co.il/savings/pensionary",
+     "cache": "none",
+     "links": 0,
+     "followed": [],
+     "files": 0,
+     "clicked": 0,
+     "captured": 0,
+     "selected": [],
+     "unselected_files": []
+    },
+    {
+     "url": "https://www.ayalon-ins.co.il/savings/private",
+     "cache": "none",
+     "links": 0,
+     "followed": [],
+     "files": 0,
+     "clicked": 0,
+     "captured": 0,
+     "selected": [],
+     "unselected_files": []
+    },
+    {
+     "url": "https://www.ayalon-ins.co.il/savings/investment-routes",
+     "cache": "none",
+     "links": 0,
+     "followed": [],
+     "files": 0,
+     "clicked": 0,
+     "captured": 0,
+     "selected": [],
+     "unselected_files": []
+    },
+    {
+     "url": "https://www.ayalon-ins.co.il/providents/provident-fund",
+     "cache": "none",
+     "links": 0,
+     "followed": [],
+     "files": 0,
+     "clicked": 0,
+     "captured": 0,
+     "selected": [],
+     "unselected_files": []
+    },
+    {
+     "url": "https://www.ayalon-ins.co.il/providents/study-fund",
+     "cache": "none",
+     "links": 0,
+     "followed": [],
+     "files": 0,
+     "clicked": 0,
+     "captured": 0,
+     "selected": [],
+     "unselected_files": []
+    },
+    {
+     "url": "https://www.ayalon-ins.co.il/providents/provident-fund-invest",
+     "cache": "none",
+     "links": 0,
+     "followed": [],
+     "files": 0,
+     "clicked": 0,
+     "captured": 0,
+     "selected": [],
+     "unselected_files": []
+    },
+    {
+     "url": "https://www.ayalon-ins.co.il/investments-provident",
+     "cache": "hit",
+     "links": 70,
+     "followed": [
+      "https://www.ayalon-ins.co.il/he/about-provident-container/investments/"
+     ],
+     "files": 1,
+     "clicked": 0,
+     "captured": 0,
+     "selected": [],
+     "unselected_files": [
+      {
+       "file": "https://www.ayalon-ins.co.il/media/dtvlz32w/amitim_03_2026.pdf",
+       "text": "לצפייה לחצו כאן",
+       "ctx": ""
+      }
+     ]
+    },
+    {
+     "url": "https://www.ayalon-ins.co.il/he/about-provident-container/investments/",
+     "cache": "hit",
+     "links": 66,
+     "followed": [],
+     "files": 0,
+     "clicked": 0,
+     "captured": 0,
+     "selected": [],
+     "unselected_files": []
+    }
+   ],
+   "new_docs": 0,
+   "found": 1,
+   "selected": 0,
+   "had": 0,
+   "head_skip": 0,
+   "page_cache": 5,
+   "cache_hit": 5,
+   "cache_none": 12,
+   "errors": [
+    "https://www.ayalon-ins.co.il/gemel/site-hp: Cannot access contents of url \"http://validate.perfdrive.com/9173f36d92939444046c6ccf70c6d670/?ssa=29dca061-5e4b-4db1-b248-e94e93e6fcbc&ssb=19333274123&ssc=https%3A%2F%2Fwww.ayalon-ins.co.il%2Fgemel%2Fsite-hp&ssi=5a0f80d1-bpnz-4947-9b17-6b2c90682f68&ssk=support@shieldsquare.com&ssm=09697633431539104102760502012183370&ssn=56b0e05b28f09da1d13a0f8ad60e608d3baa8f84a4b4-5635-496e-be1dce&sso=6d0e94f9-dc33c77259b50b86249520bbb3c3ff559e09ae9ccc7330bd&ssp=10025921181790858250179105201610766&ssq=91264215219243366070209616279152438565578&ssr=MzEuMTU0LjI3LjEzMA==&sst=Mozilla/5.0%20(Windows%20NT%2010.0;%20Win64;%20x64)%20AppleWebKit/537.36%20(KHTML,%20like%20Gecko)%20Chrome/154.0.0.0%20Safari/537.36&ssu=L2FFQnB2SGFsckxHM2FMcHAyOUx2aXErWUJOZFpYbWhWZXdBVUtlNk5vdz0=&ssv=&ssw=&ssx=eyJfX3V6bWYiOiI3ZjkwMDBkMGU1NjM2Zi00NzA4LTRmMTMtODU1Ny0wY2Q1ODYwZmJiNTMyMi0xNzc0MTMxMTkwMjg5MTY5MjEwMDI0NzEtMDA1NTg2ZjA1OTMyMDc3MTY5NDExNTgxIiwidXpteCI6IjdmYzAwMDVlYmE0YWQyLWIzYTgtNDFjNC1hYWZjLWM5YTZiMmIyZjhmOTIyLTE3NzQxMzExOTAyODkxNjkyMTAwMjQ3MS0wMDc3YTBmNzlhODk4MDIyODRiMTE1ODEiLCJyZCI6ImF5YWxvbi1pbnMuY28uaWwifQ==\". Extension manifest must request permission to access this host. -> light collect",
+    "https://www.ayalon-ins.co.il/gemel/site-hp: Cannot access contents of url \"http://validate.perfdrive.com/9173f36d92939444046c6ccf70c6d670/?ssa=29dca061-5e4b-4db1-b248-e94e93e6fcbc&ssb=19333274123&ssc=https%3A%2F%2Fwww.ayalon-ins.co.il%2Fgemel%2Fsite-hp&ssi=5a0f80d1-bpnz-4947-9b17-6b2c90682f68&ssk=support@shieldsquare.com&ssm=09697633431539104102760502012183370&ssn=56b0e05b28f09da1d13a0f8ad60e608d3baa8f84a4b4-5635-496e-be1dce&sso=6d0e94f9-dc33c77259b50b86249520bbb3c3ff559e09ae9ccc7330bd&ssp=10025921181790858250179105201610766&ssq=91264215219243366070209616279152438565578&ssr=MzEuMTU0LjI3LjEzMA==&sst=Mozilla/5.0%20(Windows%20NT%2010.0;%20Win64;%20x64)%20AppleWebKit/537.36%20(KHTML,%20like%20Gecko)%20Chrome/154.0.0.0%20Safari/537.36&ssu=L2FFQnB2SGFsckxHM2FMcHAyOUx2aXErWUJOZFpYbWhWZXdBVUtlNk5vdz0=&ssv=&ssw=&ssx=eyJfX3V6bWYiOiI3ZjkwMDBkMGU1NjM2Zi00NzA4LTRmMTMtODU1Ny0wY2Q1ODYwZmJiNTMyMi0xNzc0MTMxMTkwMjg5MTY5MjEwMDI0NzEtMDA1NTg2ZjA1OTMyMDc3MTY5NDExNTgxIiwidXpteCI6IjdmYzAwMDVlYmE0YWQyLWIzYTgtNDFjNC1hYWZjLWM5YTZiMmIyZjhmOTIyLTE3NzQxMzExOTAyODkxNjkyMTAwMjQ3MS0wMDc3YTBmNzlhODk4MDIyODRiMTE1ODEiLCJyZCI6ImF5YWxvbi1pbnMuY28uaWwifQ==\". Extension manifest must request permission to access this host.",
+    "https://www.ayalon-ins.co.il/savings: Frame with ID 0 is showing error page -> light collect",
+    "https://www.ayalon-ins.co.il/savings: Frame with ID 0 is showing error page",
+    "https://www.ayalon-ins.co.il/providents: Cannot access contents of url \"http://validate.perfdrive.com/9173f36d92939444046c6ccf70c6d670/?ssa=33154880-ed3f-4d49-b8bf-4b52dc0fe7c5&ssb=79072235757&ssc=https%3A%2F%2Fwww.ayalon-ins.co.il%2Fprovidents&ssi=5141ef0b-bpnz-4880-8bfc-f657dfc892a5&ssk=support@shieldsquare.com&ssm=33905909762805345102824610974302843&ssn=befbef5c25a37e3ca602925b46bef29cd6f48f84a4b4-5635-496e-bb4249&sso=112024f9-dc33c77259b57e68d29635caad1c0a2e7ed23fab32465f5b&ssp=11028868071790859563179105879757067&ssq=77096945224887587994809616528992522369429&ssr=MzEuMTU0LjI3LjEzMA==&sst=Mozilla/5.0%20(Windows%20NT%2010.0;%20Win64;%20x64)%20AppleWebKit/537.36%20(KHTML,%20like%20Gecko)%20Chrome/154.0.0.0%20Safari/537.36&ssu=L2FFQnB2SGFsckxHM2FMcHAyOUx2aXErWUJOZFpYbWhWZXdBVUtlNk5vdz0=&ssv=&ssw=&ssx=eyJ1em14IjoiN2ZjMDAwNWViYTRhZDItYjNhOC00MWM0LWFhZmMtYzlhNmIyYjJmOGY5MjItMTc3NDEzMTE5MDI4OTE2OTIxMDU4NDM1LTAwNzBhYzQ3OGIyYjZhMzEyZjYxMTU4NyIsIl9fdXptZiI6IjdmOTAwMGQwZTU2MzZmLTQ3MDgtNGYxMy04NTU3LTBjZDU4NjBmYmI1MzIyLTE3NzQxMzExOTAyODkxNjkyMTA1ODQzNS0wMDU3ZjFiZDA1Yzc2MWQ3MWU0MTE1ODciLCJyZCI6ImF5YWxvbi1pbnMuY28uaWwifQ==\". Extension manifest must request permission to access this host. -> light collect",
+    "https://www.ayalon-ins.co.il/providents: Cannot access contents of url \"http://validate.perfdrive.com/9173f36d92939444046c6ccf70c6d670/?ssa=33154880-ed3f-4d49-b8bf-4b52dc0fe7c5&ssb=79072235757&ssc=https%3A%2F%2Fwww.ayalon-ins.co.il%2Fprovidents&ssi=5141ef0b-bpnz-4880-8bfc-f657dfc892a5&ssk=support@shieldsquare.com&ssm=33905909762805345102824610974302843&ssn=befbef5c25a37e3ca602925b46bef29cd6f48f84a4b4-5635-496e-bb4249&sso=112024f9-dc33c77259b57e68d29635caad1c0a2e7ed23fab32465f5b&ssp=11028868071790859563179105879757067&ssq=77096945224887587994809616528992522369429&ssr=MzEuMTU0LjI3LjEzMA==&sst=Mozilla/5.0%20(Windows%20NT%2010.0;%20Win64;%20x64)%20AppleWebKit/537.36%20(KHTML,%20like%20Gecko)%20Chrome/154.0.0.0%20Safari/537.36&ssu=L2FFQnB2SGFsckxHM2FMcHAyOUx2aXErWUJOZFpYbWhWZXdBVUtlNk5vdz0=&ssv=&ssw=&ssx=eyJ1em14IjoiN2ZjMDAwNWViYTRhZDItYjNhOC00MWM0LWFhZmMtYzlhNmIyYjJmOGY5MjItMTc3NDEzMTE5MDI4OTE2OTIxMDU4NDM1LTAwNzBhYzQ3OGIyYjZhMzEyZjYxMTU4NyIsIl9fdXptZiI6IjdmOTAwMGQwZTU2MzZmLTQ3MDgtNGYxMy04NTU3LTBjZDU4NjBmYmI1MzIyLTE3NzQxMzExOTAyODkxNjkyMTA1ODQzNS0wMDU3ZjFiZDA1Yzc2MWQ3MWU0MTE1ODciLCJyZCI6ImF5YWxvbi1pbnMuY28uaWwifQ==\". Extension manifest must request permission to access this host."
+   ],
+   "diag": [
+    "איילון קופות גמל ב: links=74 files=0 clicked=0 captured=0 selected=0",
+    "איילון קופות גמל ב: links=74 files=0 clicked=0 captured=0 selected=0",
+    "איילון קופות גמל ב: links=67 files=0 clicked=0 captured=0 selected=0",
+    "איילון קופות גמל ב: links=0 files=0 clicked=0 captured=0 selected=0",
+    "איילון קופות גמל ב: links=0 files=0 clicked=0 captured=0 selected=0",
+    "איילון קופות גמל ב: links=0 files=0 clicked=0 captured=0 selected=0",
+    "איילון קופות גמל ב: links=0 files=0 clicked=0 captured=0 selected=0",
+    "איילון קופות גמל ב: links=0 files=0 clicked=0 captured=0 selected=0",
+    "איילון קופות גמל ב: links=0 files=0 clicked=0 captured=0 selected=0",
+    "איילון קופות גמל ב: links=0 files=0 clicked=0 captured=0 selected=0",
+    "איילון קופות גמל ב: links=0 files=0 clicked=0 captured=0 selected=0",
+    "איילון קופות גמל ב: links=0 files=0 clicked=0 captured=0 selected=0",
+    "איילון קופות גמל ב: links=70 files=1 clicked=0 captured=0 selected=0",
+    "   ? amitim_03_2026.pdf | לצפייה לחצו כאן | ",
+    "איילון קופות גמל ב: links=66 files=0 clicked=0 captured=0 selected=0"
    ],
    "new_files": []
   }
