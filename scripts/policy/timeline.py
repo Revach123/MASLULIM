@@ -31,7 +31,7 @@ BENCH_PP = 10.0    # שינוי משקל במדד ייחוס (אותם מדדי�
 NOISE_PP = 0.5     # הפרשי עיגול
 
 FIELDS = ["legal_id", "company", "track_no", "track_no_source", "track_code", "track_name", "year", "asset", "asset_key",
-          "expected_pct", "min_pct", "max_pct", "benchmark",
+          "expected_pct", "min_pct", "max_pct", "benchmark", "tolerance", "current_pct", "policy_text",
           "effective_date", "date_source", "last_change_date", "last_change_level", "last_major_change_date",
           "asset_change", "prev_expected_pct", "prev_min_pct", "prev_max_pct", "prev_benchmark", "prev_effective_date",
           "versions", "active", "url"]
@@ -241,7 +241,10 @@ def build():
         rows = json.loads((d / "tracks_policy_long.json").read_text("utf-8")) if (d / "tracks_policy_long.json").exists() else []
         dcache = {}
         generic = {}  # url -> {name: version} - מסלולים בשם כללי, משויכים בהמשך לפי תוכן
+        from .extract import asset_key as _asset_key_of
         for r in rows:
+            if not r.get("asset_key"):  # מסמכים שפורסרו לפני תיקון הסיווג (מט"ח עם הערת שוליים צמודה: "מט"ח6")
+                r["asset_key"] = _asset_key_of(r["asset"]) if isinstance(r.get("asset"), str) else None
             if GENERIC.match((r.get("track_name") or "").strip()):
                 url = r.get("url")
                 if (url, r.get("year")) not in dcache:
@@ -298,6 +301,9 @@ def build():
             latest.append({"legal_id": lid, "company": names.get(lid, ""), "track_code": tcode, "track_name": _clean(r.get("track_name")),
                            "year": cur["year"], "asset": _clean(r.get("asset")), "asset_key": r.get("asset_key"),
                            "expected_pct": r.get("expected_pct"), "min_pct": r.get("min_pct"), "max_pct": r.get("max_pct"),
+                           # כל מה שבמסמך לאפיק (לחלון המסלול): סטייה מותרת, חשיפה בפועל במועד המסמך, תיאור מילולי
+                           "tolerance": _clean(r.get("tolerance")), "current_pct": r.get("current_pct"),
+                           "policy_text": _clean(r.get("policy_text")),
                            "benchmark": _clean(r.get("benchmark")), "effective_date": cur["date"][0], "date_source": cur["date"][1],
                            "last_change_date": cdate, "last_change_level": clevel, "last_major_change_date": last_major,
                            "asset_change": cper.get(k, ""),
