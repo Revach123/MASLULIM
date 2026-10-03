@@ -6,6 +6,14 @@
   {
    "product": "גמל",
    "url": "https://www.harel-group.co.il/about/harel-group/harel-pensia-gemel/gemel-pensia/investment-policy"
+  },
+  {
+   "product": "גמל",
+   "url": "https://www.harel-group.co.il/long-term-savings/severance/severance-packages/Pages/personal-profile-820/personal-profile.aspx"
+  },
+  {
+   "product": "גמל",
+   "url": "https://www.harel-group.co.il/long-term-savings/severance/severance-packages/Pages/personal-profile-820/investment-policy.aspx"
   }
  ],
  "browser": "headless",
@@ -14,6 +22,7 @@
   "פנסיה"
  ],
  "search": true,
- "rev": 5,
- "track_filter": "^(?!קרן חיסכון לצבא הקבע|עתידית|קופת גמל (ל)?משרתי)"
+ "rev": 6,
+ "track_filter": "^(?!קרן חיסכון לצבא הקבע|עתידית|קופת גמל (ל)?משרתי)",
+ "note": "2026-10-03: עמוד קופה מרכזית לפיצויים רבת מסלולים (נמצא בחיפוש)"
 }
