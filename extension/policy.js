@@ -63,13 +63,17 @@ function pageCollectLinksLight() {
   const out = [];
   // נתיבי קבצים בתוך ה-HTML/סקריפטים (Next.js __NEXT_DATA__ - מנורה: עמודי המסלול בלי קישור <a> לקובץ), כמו בסורק הענן
   const htmlFiles = () => {
-    const res = [], seenH = new Set();
+    const res = [], seenH = new Set(), raws = [];
     // &amp; ב-HTML (קובץ "...-S&P-500-13874.xlsx" במנורה) - אחרת הנתיב נחתך ולא נמצא
     const html = document.documentElement.innerHTML.replace(/\\\//g, "/").replace(/&amp;/g, "&").replace(/\\u0026/gi, "&");  // Next.js: & ב-JSON = \u0026
-    for (const m of html.matchAll(/["'(=\s]((?:https?:)?[\w\-./%:?=&~\u0590-\u05FF]+?\.(?:xlsx|xls|pdf|docx))(?=["')\s&<,\\]|$)/gi)) {
+    // כתובת מלאה קודם: מותר ( ) ' בשם הקובץ (מנורה "...-כספי-(שקלי)-41.xlsx"); אחר כך נתיבים יחסיים
+    const ms = [...html.matchAll(/(https?:\/\/[\w.\-]+\/[^"<>\s\\]*?\.(?:xlsx|xls|pdf|docx))(?![\w])/gi),
+                ...html.matchAll(/["'(=\s]((?:https?:)?[\w\-./%:?=&~\u0590-\u05FF]+?\.(?:xlsx|xls|pdf|docx))(?=["')\s&<,\\]|$)/gi)];
+    for (const m of ms) {
       let h; try { h = new URL(m[1], location.href).href; } catch (e) { continue; }
-      if (!seenH.has(h)) { seenH.add(h); res.push({ href: h, text: "(html)", ctx: "" }); }
-      if (res.length >= 300) break;
+      if (seenH.has(h) || raws.some((o) => o.endsWith(m[1]))) continue;  // קטע של כתובת שכבר נמצאה
+      seenH.add(h); raws.push(m[1]); res.push({ href: h, text: "(html)", ctx: "" });
+      if (res.length >= 800) break;
     }
     return res;
   };
@@ -104,13 +108,17 @@ async function pageCollectLinks(clicks) {
   const out = [];
   // נתיבי קבצים בתוך ה-HTML/סקריפטים (Next.js __NEXT_DATA__ - מנורה: עמודי המסלול בלי קישור <a> לקובץ), כמו בסורק הענן
   const htmlFiles = () => {
-    const res = [], seenH = new Set();
+    const res = [], seenH = new Set(), raws = [];
     // &amp; ב-HTML (קובץ "...-S&P-500-13874.xlsx" במנורה) - אחרת הנתיב נחתך ולא נמצא
     const html = document.documentElement.innerHTML.replace(/\\\//g, "/").replace(/&amp;/g, "&").replace(/\\u0026/gi, "&");  // Next.js: & ב-JSON = \u0026
-    for (const m of html.matchAll(/["'(=\s]((?:https?:)?[\w\-./%:?=&~\u0590-\u05FF]+?\.(?:xlsx|xls|pdf|docx))(?=["')\s&<,\\]|$)/gi)) {
+    // כתובת מלאה קודם: מותר ( ) ' בשם הקובץ (מנורה "...-כספי-(שקלי)-41.xlsx"); אחר כך נתיבים יחסיים
+    const ms = [...html.matchAll(/(https?:\/\/[\w.\-]+\/[^"<>\s\\]*?\.(?:xlsx|xls|pdf|docx))(?![\w])/gi),
+                ...html.matchAll(/["'(=\s]((?:https?:)?[\w\-./%:?=&~\u0590-\u05FF]+?\.(?:xlsx|xls|pdf|docx))(?=["')\s&<,\\]|$)/gi)];
+    for (const m of ms) {
       let h; try { h = new URL(m[1], location.href).href; } catch (e) { continue; }
-      if (!seenH.has(h)) { seenH.add(h); res.push({ href: h, text: "(html)", ctx: "" }); }
-      if (res.length >= 300) break;
+      if (seenH.has(h) || raws.some((o) => o.endsWith(m[1]))) continue;  // קטע של כתובת שכבר נמצאה
+      seenH.add(h); raws.push(m[1]); res.push({ href: h, text: "(html)", ctx: "" });
+      if (res.length >= 800) break;
     }
     return res;
   };
@@ -247,7 +255,7 @@ function pageKey(url) {
 }
 const PAGE_FULL_DAYS = 7;
 // גרסת תוכן המטמון: עולה כשאיסוף הקישורים משתנה (2.47: קבצים מתוך ה-HTML) - רשומות ישנות = ביקור מלא
-const PAGE_CACHE_V = 4;  // 2.50: \u0026 (Next.js) ו-&amp; בנתיבי קבצים
+const PAGE_CACHE_V = 5;  // 2.51: ( ) ' בשם הקובץ, בלי כפילויות, עד 800
 async function pageSig(url) {
   const ac = new AbortController(); const t = setTimeout(() => ac.abort(), 15000);
   try {

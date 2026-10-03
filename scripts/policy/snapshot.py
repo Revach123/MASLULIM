@@ -85,6 +85,18 @@ A_JS = """els => els.map(e => {
     return {href: e.href, text: t};
 })"""
 FILE_RX = re.compile(r"""["'(=\s]((?:https?:)?[\w\-./%:?=&~א-ת]+?\.(?:xlsx|xls|pdf|docx))(?=["')\s&<,]|$)""", re.I)
+# כתובת מלאה עם ( ) ' בשם הקובץ (מנורה "...-כספי-(שקלי)-41.xlsx", "תשפ''ז-31.12.26-.pdf") - FILE_RX נחתך בהם
+FILE_URL_RX = re.compile(r"""(https?://[\w.\-]+/[^"<>\s\\]*?\.(?:xlsx|xls|pdf|docx))(?![\w])""", re.I)
+
+
+def html_files(html):
+    """נתיבי קבצים ב-HTML/סקריפטים, בלי כפילויות (עמוד מנורה מחזיק >300 התאמות כפולות)."""
+    html = re.sub(r"\\u0026", "&", html.replace("&amp;", "&").replace("\\/", "/"), flags=re.I)
+    out = []
+    for m in FILE_URL_RX.findall(html) + FILE_RX.findall(html):
+        if m not in out and not any(o.endswith(m) for o in out):
+            out.append(m)
+    return out[:800]
 
 
 def fetch_browser(pw, url, click_texts=None):
@@ -333,9 +345,9 @@ def fetch_browser(pw, url, click_texts=None):
                 pass
         anchors += [x for x in net if (x["href"], x["text"]) not in seen]
         try:  # נתיבי קבצים בתוך ה-HTML/סקריפטים (Next.js __NEXT_DATA__ ודומיו)
-            for m in FILE_RX.findall(re.sub(r"\\u0026", "&", pg.content().replace("&amp;", "&"), flags=re.I))[:300]:
+            for m in html_files(pg.content()):
                 # & בשם הקובץ (מנורה "...-s&p500-14316.xlsx"): ב-HTML &amp;, ב-JSON של Next.js \u0026
-                anchors.append({"href": urljoin(url, m.replace("\\/", "/")), "text": "(html)"})
+                anchors.append({"href": urljoin(url, m), "text": "(html)"})
         except Exception:
             pass
         text = pg.inner_text("body")
