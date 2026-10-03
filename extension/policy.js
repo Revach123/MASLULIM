@@ -64,7 +64,8 @@ function pageCollectLinksLight() {
   // נתיבי קבצים בתוך ה-HTML/סקריפטים (Next.js __NEXT_DATA__ - מנורה: עמודי המסלול בלי קישור <a> לקובץ), כמו בסורק הענן
   const htmlFiles = () => {
     const res = [], seenH = new Set();
-    const html = document.documentElement.innerHTML.replace(/\\\//g, "/");
+    // &amp; ב-HTML (קובץ "...-S&P-500-13874.xlsx" במנורה) - אחרת הנתיב נחתך ולא נמצא
+    const html = document.documentElement.innerHTML.replace(/\\\//g, "/").replace(/&amp;/g, "&");
     for (const m of html.matchAll(/["'(=\s]((?:https?:)?[\w\-./%:?=&~\u0590-\u05FF]+?\.(?:xlsx|xls|pdf|docx))(?=["')\s&<,\\]|$)/gi)) {
       let h; try { h = new URL(m[1], location.href).href; } catch (e) { continue; }
       if (!seenH.has(h)) { seenH.add(h); res.push({ href: h, text: "(html)", ctx: "" }); }
@@ -104,7 +105,8 @@ async function pageCollectLinks(clicks) {
   // נתיבי קבצים בתוך ה-HTML/סקריפטים (Next.js __NEXT_DATA__ - מנורה: עמודי המסלול בלי קישור <a> לקובץ), כמו בסורק הענן
   const htmlFiles = () => {
     const res = [], seenH = new Set();
-    const html = document.documentElement.innerHTML.replace(/\\\//g, "/");
+    // &amp; ב-HTML (קובץ "...-S&P-500-13874.xlsx" במנורה) - אחרת הנתיב נחתך ולא נמצא
+    const html = document.documentElement.innerHTML.replace(/\\\//g, "/").replace(/&amp;/g, "&");
     for (const m of html.matchAll(/["'(=\s]((?:https?:)?[\w\-./%:?=&~\u0590-\u05FF]+?\.(?:xlsx|xls|pdf|docx))(?=["')\s&<,\\]|$)/gi)) {
       let h; try { h = new URL(m[1], location.href).href; } catch (e) { continue; }
       if (!seenH.has(h)) { seenH.add(h); res.push({ href: h, text: "(html)", ctx: "" }); }
@@ -245,7 +247,7 @@ function pageKey(url) {
 }
 const PAGE_FULL_DAYS = 7;
 // גרסת תוכן המטמון: עולה כשאיסוף הקישורים משתנה (2.47: קבצים מתוך ה-HTML) - רשומות ישנות = ביקור מלא
-const PAGE_CACHE_V = 2;
+const PAGE_CACHE_V = 3;  // 2.49: &amp; בנתיבי קבצים ב-HTML
 async function pageSig(url) {
   const ac = new AbortController(); const t = setTimeout(() => ac.abort(), 15000);
   try {
