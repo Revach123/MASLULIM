@@ -37,6 +37,7 @@ def run_site(c, timeout_min):
     (work / "docs_index.json").write_text(json.dumps(before, ensure_ascii=False), "utf-8")
     env = dict(os.environ, POLICY_OUT=str(work.relative_to(ROOT)), POLICY_FORCE_CLOUD="1", POLICY_TRUST_INDEX="1")
     env.setdefault("POLICY_HEADED", "1")
+    env.setdefault("POLICY_OFFSCREEN", "1")  # חלון אמיתי (נחסם פחות מ-headless) אבל מחוץ למסך - לא מפריע למשתמש
     t0 = datetime.now(timezone.utc)
     try:
         p = subprocess.run([sys.executable, "-m", "scripts.policy.crawl", "--only", lid], cwd=ROOT, env=env,
