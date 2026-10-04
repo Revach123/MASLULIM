@@ -62,7 +62,7 @@
 """
 
 import math
-from collections import defaultdict
+from collections import Counter, defaultdict
 import re
 import statistics
 from datetime import date, datetime
@@ -510,6 +510,38 @@ def _legs_reconcile(row: dict, report_date, fx_now: dict) -> bool:
     return abs(sum(vals) - net) <= max(0.15 * max(abs(x) for x in vals), 0.5)
 
 
+_CCY_CODE = re.compile(r"^[A-Z]{3}$")
+# טיקר סוואפ -> מטבע המדד (המטבע הלא-שקלי הנפוץ בשורות שלו), לרגל שהמטבע שלה "ריק במקור"
+_TICKER_CCY: dict[str, str] = {}
+
+
+def _ticker_currencies(source: list[dict]) -> dict[str, str]:
+    votes: dict[str, Counter] = defaultdict(Counter)
+    for rec in source:
+        if rec["Category"] != SWAP_CATEGORY or rec["מידע"] != "מידע":
+            continue
+        for row in rec["Clean"]:
+            t = str(row.get(SWAP_TICKER_COL) or "").strip().upper()
+            for leg in SWAP_LEGS:
+                c = str(row.get(leg["currency"]) or "").strip().upper()
+                if t and _CCY_CODE.match(c) and c != "ILS":
+                    votes[t][c] += 1
+    return {t: c.most_common(1)[0][0] for t, c in votes.items()}
+
+
+def _swap_ccys(row: dict) -> tuple[str | None, str | None]:
+    """מטבעות שתי הרגליים; מטבע לא תקין ("ריק במקור") ברגל אחת לצד רגל שקלית - מטבע הטיקר
+    בשאר השורות (512065202_15361 ב-0425: NDWUIT, רגל שקלית ורגל "ריק במקור" -> דולר)."""
+    out = []
+    for leg in SWAP_LEGS:
+        c = str(row.get(leg["currency"]) or "").strip().upper()
+        out.append(c if _CCY_CODE.match(c) else None)
+    if out.count("ILS") == 1 and None in out:
+        t = str(row.get(SWAP_TICKER_COL) or "").strip().upper()
+        out[out.index(None)] = _TICKER_CCY.get(t)
+    return out[0], out[1]
+
+
 def _mirrored_units(row: dict, report_date, fx_now: dict) -> float | None:
     """"ערך נקוב" זהה בשתי הרגליים - באותו מטבע, או רגל שקלית ורגל במט"ח עד כדי השער (ש"ח =
     מט"ח × שער, עד 3%): זו כמות יחידות המדד (בשקלים), לא סכום (512065202_13246 ב-0126: SPTR,
@@ -517,7 +549,7 @@ def _mirrored_units(row: dict, report_date, fx_now: dict) -> float | None:
     כמו הרשמי. 512065202_769 ב-0126: ת"א 125, 300 / 300-, במחיר העסקה 764.6 אלף ש"ח). None
     אם אין תבנית כזו."""
     leg1_col, leg2_col = SWAP_LEGS
-    ccy1, ccy2 = row.get(leg1_col["currency"]), row.get(leg2_col["currency"])
+    ccy1, ccy2 = _swap_ccys(row)
     if ccy1 and ccy1 == ccy2:
         u1, u2 = _num(row.get(leg1_col["units"])), _num(row.get(leg2_col["units"]))
         if u1 and u2 is None:
@@ -531,7 +563,10 @@ def _mirrored_units(row: dict, report_date, fx_now: dict) -> float | None:
     u_ils, u_fx = _num(row.get(ils_leg["units"])), _num(row.get(fx_leg["units"]))
     if u_ils and u_fx is None:
         return u_ils  # רגל המט"ח בלי "ערך נקוב" ("ריק במקור") - הכמות ברגל השקלית
-    ccy = row.get(fx_leg["currency"])
+    if u_ils and u_fx and abs(abs(u_ils / u_fx) - 1) <= 0.001 and not _CCY_CODE.match(
+            str(row.get(fx_leg["currency"]) or "").strip().upper()):
+        return u_ils  # העתק של הכמות ברגל בלי מטבע (512065202_15350 ב-0425: NDWUIT 5,257.38 / 5,257.38)
+    ccy = ccy2 if ccy1 == "ILS" else ccy1
     fx = fx_now.get((ccy, report_date)) or _normalize_fx(ccy, _num(row.get(fx_leg["fx"])))
     if not u_ils or not u_fx or not fx or abs(abs(u_ils / u_fx) / fx - 1) > 0.03:
         return None
@@ -550,7 +585,7 @@ def _live_swap_ratio(row: dict, report_date, fx_now: dict, total: float) -> floa
              else resolve_current_price(row.get(SWAP_TICKER_COL), report_date)[0])
     if price is None:
         return None
-    ccy1, ccy2 = row.get(leg1_col["currency"]), row.get(leg2_col["currency"])
+    ccy1, ccy2 = _swap_ccys(row)
     ccy = ccy1 if ccy1 != "ILS" or not ccy2 else ccy2
     units = mirrored or (_num(row.get(leg1_col["units"])) if ccy1 != "ILS" or not ccy2
                          else _num(row.get(leg2_col["units"])))
@@ -668,6 +703,8 @@ def _swap_exposure(
     leg1_col, leg2_col = SWAP_LEGS
     fx_now = _current_fx_rates(source)
     offset = _offsetting_rows(source)
+    _TICKER_CCY.clear()
+    _TICKER_CCY.update(_ticker_currencies(source))
     for rec in source:
         if rec["Category"] != SWAP_CATEGORY or rec["מידע"] != "מידע":
             continue
