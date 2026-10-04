@@ -51,7 +51,8 @@ def main():
                                   "last_seen": meta["fetched_at"], "file": str(dest.relative_to(ROOT)),
                                   "sha256": meta["sha256"], "size": dest.stat().st_size, "parsed_sha": None,
                                   "history": hist, "link_text": meta.get("link_text"),
-                                  "source_page": meta.get("source_page"), "via": "extension"}
+                                  "source_page": meta.get("source_page"), "via": "extension",
+                                  **({"last_modified": meta["last_modified"]} if meta.get("last_modified") else {})}
         idx_path.parent.mkdir(parents=True, exist_ok=True)
         idx_path.write_text(json.dumps(index, ensure_ascii=False, indent=1), "utf-8")
         if not any(d.iterdir()):
