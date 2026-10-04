@@ -12,6 +12,7 @@
 from __future__ import annotations
 
 import json
+import statistics
 from datetime import date
 from pathlib import Path
 
@@ -80,17 +81,33 @@ def _load() -> dict[str, list[tuple[date, float]]]:
     return _ANCHORS
 
 
+def _etf_ratio(ticker: str, d0: date, d1: date) -> float | None:
+    """מחיר תעודת הסל העוקבת ב-d1 / ב-d0 - בכל סדר תאריכים (עוגן מדוח מאוחר מגולגל אחורה)."""
+    from .option_delta_pricing import price_as_of as etf_price_as_of
+    from .swap_index_pricing import PROXY_ETF, price_as_of
+    etf = PROXY_ETF.get(ticker)
+    for proxy in (etf if isinstance(etf, tuple) else (etf,)) if etf else ():
+        get = (lambda d, x=proxy[6:]: price_as_of(x, d)) if proxy.startswith("index:") else \
+              (lambda d, x=proxy: etf_price_as_of(x, d))
+        p0, p1 = get(d0), get(d1)
+        if p0 and p1:
+            return p1 / p0
+    return None
+
+
 def anchored_price(legal_id: str, raw_ticker, deal_date: date | None, report_date: date | None) -> float | None:
-    """רמת המדד ליום הדוח מעוגן של אותו גוף: אותה עסקה (אותו יום) אם קיימת, אחרת העוגן
-    הקרוב ביותר בזמן עד יום הדוח; × תשואת תעודת הסל העוקבת מיום העוגן. None אם אין."""
-    from .swap_index_pricing import normalize_ticker, proxy_return
+    """רמת המדד ליום הדוח מעוגני אותו גוף (אותו קנה מידה של ציטוט) - גם מדוח מאוחר יותר
+    (512065202 NDWUIT: מחיר עסקה רק מ-05/2026, לדוחות 2025) - כל עוגן × יחס מחירי תעודת הסל
+    העוקבת בין יומו ליום הדוח. None אם אין."""
+    from .swap_index_pricing import normalize_ticker
     t = normalize_ticker(raw_ticker)
     if not t or not report_date:
         return None
-    cands = [(d, p) for d, p in _load().get(f"{legal_id}|{t}", []) if d <= report_date]
-    if not cands:
-        return None
-    same = [c for c in cands if c[0] == deal_date]
-    d, p = same[0] if same else min(cands, key=lambda c: abs((report_date - c[0]).days))
-    ratio = proxy_return(t, d, report_date)
-    return p * ratio if ratio else None
+    # כל העוגנים מגולגלים ליום הדוח, והחציון - עמיד לעוגן שגוי (512065202 NDWUIT: 3.3059 - שער
+    # הדולר בעמודת מחיר העסקה - לצד 1,195.6 באותו יום)
+    levels = []
+    for d, p in _load().get(f"{legal_id}|{t}", []):
+        ratio = _etf_ratio(t, d, report_date)
+        if ratio:
+            levels.append(p * ratio)
+    return statistics.median(levels) if levels else None

@@ -462,15 +462,18 @@ def _current_index_price(row: dict, report_date) -> float | None:
     price, _ = resolve_current_price(row.get(SWAP_TICKER_COL), report_date)
     if price is not None:
         return price
+    from .swap_deal_anchors import anchored_price
     deal_price = _num(row.get(SWAP_UNDERLYING_PRICE_COL))
     deal_date = parse_deal_date(row.get(SWAP_DEAL_DATE_COL))
-    if not deal_price or deal_price <= 0:
-        # בלי מחיר עסקה בדוח - עוגן ממחירי העסקה של אותו גוף בשאר הדוחות (swap_deal_anchors)
-        from .swap_deal_anchors import anchored_price
-        return anchored_price(str(row.get("מפתח") or "").split("_")[0], row.get(SWAP_TICKER_COL),
+    ratio = proxy_return(row.get(SWAP_TICKER_COL), deal_date, report_date) if deal_price and deal_price > 0 else None
+    from_deal = deal_price * ratio if ratio else None
+    # עוגן ממחירי העסקה של אותו גוף בכל הדוחות (swap_deal_anchors): כשאין מחיר עסקה בשורה, או
+    # כשהוא רחוק פי 2+ מהעוגן (512065202_15352 ב-0425: NDWUIT "מחיר עסקה" 3.3059 = שער הדולר)
+    anchored = anchored_price(str(row.get("מפתח") or "").split("_")[0], row.get(SWAP_TICKER_COL),
                               deal_date, report_date)
-    ratio = proxy_return(row.get(SWAP_TICKER_COL), deal_date, report_date)
-    return deal_price * ratio if ratio else None
+    if anchored and (from_deal is None or not 0.5 <= from_deal / anchored <= 2):
+        return anchored
+    return from_deal
 
 
 def _legs_reconcile(row: dict, report_date, fx_now: dict) -> bool:
@@ -484,6 +487,12 @@ def _legs_reconcile(row: dict, report_date, fx_now: dict) -> bool:
         if v and fx:
             vals.append(v * fx)
     net = _num(row.get(SWAP_NET_FAIR_VALUE_COL))
+    if net is None and len(vals) == 1:
+        # רגל אחת בלבד, ונטו ריק: העתק של "ערך נקוב" / 1000 הוא מילוי (512065202_15352 ב-0425:
+        # NDWUIT, 23,715.5 ש"ח -> 23.716, רגל הדולר "ריק במקור")
+        v, u = next((_num(row.get(leg["fair_value"])), _num(row.get(leg["units"]))) for leg in SWAP_LEGS
+                    if _num(row.get(leg["fair_value"])))
+        return not (u and abs(abs(v) / (abs(u) / 1000) - 1) <= 0.0005)
     if len(vals) != 2:
         return True
     if net is None:
@@ -516,6 +525,8 @@ def _mirrored_units(row: dict, report_date, fx_now: dict) -> float | None:
         return None
     ils_leg, fx_leg = (leg1_col, leg2_col) if ccy1 == "ILS" else (leg2_col, leg1_col)
     u_ils, u_fx = _num(row.get(ils_leg["units"])), _num(row.get(fx_leg["units"]))
+    if u_ils and u_fx is None:
+        return u_ils  # רגל המט"ח בלי "ערך נקוב" ("ריק במקור") - הכמות ברגל השקלית
     ccy = row.get(fx_leg["currency"])
     fx = fx_now.get((ccy, report_date)) or _normalize_fx(ccy, _num(row.get(fx_leg["fx"])))
     if not u_ils or not u_fx or not fx or abs(abs(u_ils / u_fx) / fx - 1) > 0.03:
