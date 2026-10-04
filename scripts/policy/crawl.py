@@ -412,7 +412,8 @@ def main():
             url = d["href"]
             lm = d.get("last_modified")  # מועד הפרסום באתר (Last-Modified של השרת) - עוגן לתאריך הגרסה ולשנת המדיניות
             old = index.get(unquote(url))
-            if (old and old.get("sha256") and old.get("file") and (ROOT / old["file"]).exists()
+            if (old and old.get("sha256") and old.get("file")
+                    and ((ROOT / old["file"]).exists() or os.environ.get("POLICY_TRUST_INDEX") == "1")  # home_crawl: בלי קבצי raw
                     and DOC_PATH.search(urlparse(url).path)):
                 # קובץ מסמך שכבר הורד לא משתנה - עדכון מתפרסם כקובץ חדש. לא מורידים שוב; רק HEAD למועד הפרסום אם חסר.
                 # (כתובת בלי סיומת מסמך - "migdal.co.il/regulations/...-investment-policy" = קישור לגרסה האחרונה - כן נבדקת)
