@@ -278,7 +278,8 @@ def download_browser(pw, url, referer=None):
     try:
         if "ctx" not in _BROWSER:
             b = pw.chromium.launch(executable_path=os.environ.get("PW_CHROMIUM") or None, headless=os.environ.get("POLICY_HEADED") != "1",
-                                   args=["--disable-blink-features=AutomationControlled", "--disable-http2"])
+                                   args=["--disable-blink-features=AutomationControlled", "--disable-http2",
+                         *(["--window-position=-32000,-32000"] if os.environ.get("POLICY_OFFSCREEN") == "1" else [])])
             _BROWSER.update(b=b, ctx=b.new_context(user_agent=UA, locale="he-IL"), visited=set())
         ctx = _BROWSER["ctx"]
         if referer and referer not in _BROWSER["visited"]:
