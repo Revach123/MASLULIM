@@ -54,6 +54,8 @@ def learn_counted_types(model: dict[str, float], official: dict[str, float],
         present = [t for t in CANDIDATE_TYPES if any(d.get(t) for _, d in rows)]
         if not present:
             continue
+        # רק מסלולים שמחזיקים קרן מהסוגים האלה - בשאר אין מה להשתנות (520042581: 3 מתוך 10)
+        rows = [(e, d) for e, d in rows if any(d.get(t) for t in present)]
         base = sum(min(ERR_CAP, abs(e)) for e, _ in rows)
         best, best_types = base, ()
         for n in range(1, MAX_TYPES + 1):
