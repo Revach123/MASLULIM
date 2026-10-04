@@ -1,0 +1,35 @@
+name: data.gov peek (track rows)
+
+# בדיקה ידנית: השורות החודשיות של מסלולים מגמל-נט/פנסיה-נט/ביטוח-נט, מודפסות ללוג (data.gov.il חסום מחלק מהסביבות)
+on:
+  workflow_dispatch:
+    inputs:
+      domain:
+        description: "גמל / פנסיה / ביטוח"
+        required: true
+        default: "ביטוח"
+      ids:
+        description: "מספרי מסלול מופרדים ברווח"
+        required: true
+      months:
+        description: "כמה חודשים אחרונים"
+        required: false
+        default: "12"
+
+jobs:
+  peek:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          sparse-checkout: scripts
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: pip install -q requests
+      - env:
+          DOMAIN: ${{ inputs.domain }}
+          IDS: ${{ inputs.ids }}
+          MONTHS: ${{ inputs.months }}
+        run: python -m scripts.policy.datagov_peek --domain "$DOMAIN" --ids $IDS --months "$MONTHS"
