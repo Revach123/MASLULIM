@@ -409,6 +409,22 @@ LIVE_SWAP_MAX_RATIO = 1.5
 
 SWAP_DEAL_DATE_COL = "מועד ההתקשרות בעסקה"
 
+# רגליים שקולות זו לזו (רגל המדד מול רגל המימון, עד 20% הפרש) הן הנוציונל עצמו, לא שינוי
+# שווי - אז "ערך נקוב" שמתומחר פי LEGS_NOTIONAL_FACTOR ומעלה מהרגליים אינו יחידות מדד
+# (514956465_12532 ב-0126: SPTR, 183,190 "יחידות", רגליים 19,632 / 19,246 אלף דולר = 107
+# דולר ליחידה; יחידות × מחיר המדד = 137% מהמסלול). שינוי שווי (MTM) נראה אחרת: רגליים
+# שונות מאוד זו מזו (514956465_9452: 354 / 1,930), ויחידות אמיתיות עם רגליים שקולות
+# מתומחרות עד פי ~10 מהן (512237744_9898: 62.67 יחידות × 14,660 = רגל 2 של 918,813 דולר).
+LEGS_CONSISTENT = 0.8
+LEGS_NOTIONAL_FACTOR = 20.0
+
+
+def _legs_are_notional(row: dict, legs_ratio: float, live_ratio: float) -> bool:
+    raw = [abs(_num(row.get(f"שווי הוגן במטבע הנסחר (רגל {n})")) or 0.0) for n in (1, 2)]
+    if not min(raw):
+        return False
+    return min(raw) / max(raw) >= LEGS_CONSISTENT and live_ratio >= LEGS_NOTIONAL_FACTOR * legs_ratio
+
 
 def _current_index_price(row: dict, report_date) -> float | None:
     """מחיר המדד ליום הדוח: סדרת המדד ב-INDICES, ואם אין - מחיר העסקה × תשואת תעודת
@@ -421,18 +437,60 @@ def _current_index_price(row: dict, report_date) -> float | None:
     return deal_price * ratio if deal_price and ratio else None
 
 
+def _legs_reconcile(row: dict, report_date, fx_now: dict) -> bool:
+    """שווי הרגליים (בסימן, בשקלים) מסתכם לשווי ההוגן נטו של השורה (עד 15% מהרגל הגדולה).
+    כך בכל הגופים (אלפי שורות לגוף, 0126 ו-0226), חוץ משורות שבהן "שווי הרגל" הוא בעצם
+    "ערך נקוב" / 1000 (512065202 ב-0126: 0.07 / 0.07- מול נטו 214.7-) - שם הרגליים אינן שווי."""
+    vals = []
+    for leg in SWAP_LEGS:
+        v, ccy = _num(row.get(leg["fair_value"])), row.get(leg["currency"])
+        fx = 1.0 if ccy == "ILS" else fx_now.get((ccy, report_date)) or _normalize_fx(ccy, _num(row.get(leg["fx"])))
+        if v and fx:
+            vals.append(v * fx)
+    net = _num(row.get(SWAP_NET_FAIR_VALUE_COL))
+    if len(vals) != 2 or net is None:
+        return True
+    return abs(sum(vals) - net) <= max(0.15 * max(abs(x) for x in vals), 0.5)
+
+
+def _mirrored_units(row: dict, report_date, fx_now: dict) -> float | None:
+    """"ערך נקוב" זהה בשתי הרגליים - באותו מטבע, או רגל שקלית ורגל במט"ח עד כדי השער (ש"ח =
+    מט"ח × שער, עד 3%): זו כמות יחידות המדד (בשקלים), לא סכום (512065202_13246 ב-0126: SPTR,
+    1,436.76 ש"ח / 453.95- דולר = 3.165; באותה עסקה ב-0226: 1,393.47 יחידות × מחיר המדד = 3.5%,
+    כמו הרשמי. 512065202_769 ב-0126: ת"א 125, 300 / 300-, במחיר העסקה 764.6 אלף ש"ח). None
+    אם אין תבנית כזו."""
+    leg1_col, leg2_col = SWAP_LEGS
+    ccy1, ccy2 = row.get(leg1_col["currency"]), row.get(leg2_col["currency"])
+    if ccy1 and ccy1 == ccy2:
+        u1, u2 = _num(row.get(leg1_col["units"])), _num(row.get(leg2_col["units"]))
+        return u1 if u1 and u2 and abs(abs(u1 / u2) - 1) <= 0.001 else None
+    if not ccy1 or not ccy2 or (ccy1 == "ILS") == (ccy2 == "ILS"):
+        return None
+    ils_leg, fx_leg = (leg1_col, leg2_col) if ccy1 == "ILS" else (leg2_col, leg1_col)
+    u_ils, u_fx = _num(row.get(ils_leg["units"])), _num(row.get(fx_leg["units"]))
+    ccy = row.get(fx_leg["currency"])
+    fx = fx_now.get((ccy, report_date)) or _normalize_fx(ccy, _num(row.get(fx_leg["fx"])))
+    if not u_ils or not u_fx or not fx or abs(abs(u_ils / u_fx) / fx - 1) > 0.03:
+        return None
+    return u_ils
+
+
 def _live_swap_ratio(row: dict, report_date, fx_now: dict, total: float) -> float | None:
     """|יחידות| × מחיר המדד ליום הדוח (swap_index_pricing, רק טיקר ממופה) × שער
     מטבע המדד / נכסי המסלול. None אם אין מחיר / יחידות, או שהתוצאה לא סבירה לשורה."""
     leg1_col, leg2_col = SWAP_LEGS
     # רק סדרת מדד ישירה - לא פרוקסי: כאן קנה המידה של היחידות לא מאומת מול רגל 2
-    # (פרוקסי ב-512267592: יחידות בקנה מידה אחר -> 200%+ למסלול)
-    price, _ = resolve_current_price(row.get(SWAP_TICKER_COL), report_date)
+    # (פרוקסי ב-512267592: יחידות בקנה מידה אחר -> 200%+ למסלול). ביחידות שמשתקפות בין
+    # הרגליים (_mirrored_units) היחידות מאומתות - שם גם מחיר העסקה × תשואת תעודת הסל העוקבת
+    mirrored = _mirrored_units(row, report_date, fx_now)
+    price = (_current_index_price(row, report_date) if mirrored
+             else resolve_current_price(row.get(SWAP_TICKER_COL), report_date)[0])
     if price is None:
         return None
     ccy1, ccy2 = row.get(leg1_col["currency"]), row.get(leg2_col["currency"])
-    units = _num(row.get(leg1_col["units"])) if ccy1 != "ILS" or not ccy2 else _num(row.get(leg2_col["units"]))
     ccy = ccy1 if ccy1 != "ILS" or not ccy2 else ccy2
+    units = mirrored or (_num(row.get(leg1_col["units"])) if ccy1 != "ILS" or not ccy2
+                         else _num(row.get(leg2_col["units"])))
     if not units:
         return None
     # "ערך נקוב" שהוא כבר סכום במטבע (513611509_1038: 67,191.68 דולר, רגליים 66.8 / 67.2
@@ -442,7 +500,7 @@ def _live_swap_ratio(row: dict, report_date, fx_now: dict, total: float) -> floa
     # נשארה בשווי הרגליים, 0.01%).
     leg_fvs = [_num(row.get(f"שווי הוגן במטבע הנסחר (רגל {n})")) for n in (1, 2)]
     leg_fvs = [v for v in leg_fvs if v]
-    if leg_fvs and all(0.8 <= abs(v) / (abs(units) / 1000) <= 1.25 for v in leg_fvs):
+    if not mirrored and leg_fvs and all(0.8 <= abs(v) / (abs(units) / 1000) <= 1.25 for v in leg_fvs):
         return None
     fx = 1.0 if ccy == "ILS" else (fx_now.get((ccy, report_date)) or _normalize_fx(ccy, _num(row.get(
         (leg1_col if ccy == ccy1 else leg2_col)["fx"]))))
@@ -553,8 +611,22 @@ def _swap_exposure(
             is_funded = _is_funded_swap(row.get(SWAP_MAIN_TYPE_COL))
 
             leg_values = _leg_market_values(row, report_date, fx_now)
-            live_ratio = _live_swap_ratio(row, report_date, fx_now, total) if is_equity and leg_values else None
-            if leg_values and live_ratio is not None and sum(leg_values) / len(leg_values) / total < MTM_LEG_SHARE * live_ratio:
+            if leg_values and not _legs_reconcile(row, report_date, fx_now):
+                leg_values = []  # "שווי" הרגליים לא מסתכם לנטו - לא שווי שוק
+            # יחידות זהות בשתי הרגליים - רק כשאין שווי רגליים תקף (שורה רגילה לא משתנה)
+            mirrored_units = _mirrored_units(row, report_date, fx_now) if is_equity and not leg_values else None
+            mirrored = mirrored_units is not None
+            live_ratio = (_live_swap_ratio(row, report_date, fx_now, total)
+                          if is_equity and (leg_values or mirrored) else None)
+            if (live_ratio is not None and leg_values and not mirrored
+                    and _legs_are_notional(row, sum(leg_values) / len(leg_values) / total, live_ratio)):
+                live_ratio = None
+            if mirrored and live_ratio is not None:
+                # יחידות שמשתקפות בשער בין הרגליים - הרגליים (אם יש) הן היחידות / 1000, לא שווי.
+                # הסימן של היחידות בשקלים הוא כיוון העסקה (512065202_13246 ב-0126: עסקה אחת
+                # של 1,077.57- מול עשר חיוביות; בסימן - 99.4% מול 99.5% רשמי, בערך מוחלט 104.7%)
+                line_ratio = math.copysign(live_ratio, mirrored_units)
+            elif leg_values and live_ratio is not None and sum(leg_values) / len(leg_values) / total < MTM_LEG_SHARE * live_ratio:
                 # הרגליים הן רק שינוי השווי מאז הפתיחה / ה-Reset (514956465_9452: ±9,253.6
                 # יחידות SPTR, רגליים 354 / 1,930 אלף דולר = 0.3%) - החשיפה היא יחידות × מחיר המדד
                 line_ratio = live_ratio

@@ -1,10 +1,40 @@
 """עזרי קריאת Excel: python-calamine, בלי המרת טיפוסים (כמו Excel.Workbook(..., null, true))."""
+import io
+import re
+import zipfile
+
 from python_calamine import CalamineWorkbook
+
+# תא בעמודה של שלוש אותיות (AAA ומעלה, 703+) - הדוחות משתמשים בעשרות עמודות בלבד. תאים
+# בודדים בעמודה XFD (16,384) בכל שורה (513026484_gm_0126: 4 גיליונות A1:XFD15824) גורמים
+# ל-calamine לבנות 16,384 עמודות לכל שורה - ~8GB לגיליון אחד וקריסת זיכרון.
+_FAR_DIMENSION = re.compile(rb'<dimension ref="[A-Z]+\d+:[A-Z]{3}\d+"\s*/>')
+_FAR_CELL = re.compile(rb'<c r="[A-Z]{3}\d+"[^>]*?(?:/>|>.*?</c>)', re.S)
+_ANY_DIMENSION = re.compile(rb'<dimension ref="[^"]*"\s*/>')
+
+
+def _trim_far_columns(path) -> io.BytesIO | None:
+    """עותק בזיכרון של הקובץ בלי תאים מעמודה AAA והלאה, רק כשיש גיליון שמגיע אליהן."""
+    with zipfile.ZipFile(path) as z:
+        sheets = [n for n in z.namelist() if n.startswith("xl/worksheets/") and n.endswith(".xml")]
+        wide = {n for n in sheets if _FAR_DIMENSION.search(z.open(n).read(4096))}
+        if not wide:
+            return None
+        buf = io.BytesIO()
+        with zipfile.ZipFile(buf, "w", zipfile.ZIP_DEFLATED) as out:
+            for item in z.infolist():
+                data = z.read(item.filename)
+                if item.filename in wide:
+                    data = _ANY_DIMENSION.sub(b"", _FAR_CELL.sub(b"", data), count=1)
+                out.writestr(item, data)
+    buf.seek(0)
+    return buf
 
 
 def read_workbook_sheets(path) -> dict[str, list[list]]:
     """שם גיליון -> רשימת שורות (כל שורה = רשימת ערכים גולמיים, בלי המרה)."""
-    wb = CalamineWorkbook.from_path(str(path))
+    trimmed = _trim_far_columns(path)
+    wb = CalamineWorkbook.from_filelike(trimmed) if trimmed else CalamineWorkbook.from_path(str(path))
     return {name: wb.get_sheet_by_name(name).to_python() for name in wb.sheet_names}
 
 

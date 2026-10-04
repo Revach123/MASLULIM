@@ -7,6 +7,10 @@ on:
         description: "Print per-track equity components (COMP|...) for offline analysis"
         required: false
         default: ""
+      validate_dir:
+        description: "Reports dir for the validation step (e.g. reports/2026Q1 to backtest a previous quarter)"
+        required: false
+        default: "reports"
   schedule:
     # כל יום ראשון ב-02:00 UTC (שעה לפני Publish AUTOPILOT to D1) - כדי
     # שתמיד יהיה מדד MAE עדכני מול הרשמי לפני שה-publish הופך את הנתונים
@@ -80,7 +84,7 @@ jobs:
           REVACH_MATCH_KEY: ${{ secrets.REVACH_MATCH_KEY }}
           PAT: ${{ secrets.PAT }}
           DUMP_EQUITY_COMPONENTS: ${{ inputs.dump_components }}
-        run: python -m scripts.funds_holdings.validate_equity_exposure --reports-dir reports
+        run: python -m scripts.funds_holdings.validate_equity_exposure --reports-dir ${{ inputs.validate_dir || 'reports' }}
       - name: Report unmatched foreign funds
         env:
           REVACH_MATCH_KEY: ${{ secrets.REVACH_MATCH_KEY }}
