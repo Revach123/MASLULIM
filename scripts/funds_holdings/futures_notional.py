@@ -77,9 +77,11 @@ CONTRACT_SPECS: dict[str, tuple[float, str | None]] = {
     "FPO": (100, None),         # Eurex Taiwan USD NTR (FMTW, FPOA)
     "JJY": (50, None),          # Eurex Korea USD NTR (FMKR)
     "ZWP": (10, None),          # Eurex World USD NTR (FMWO, ZWPA)
-    "RVP": (10, None),          # Eurex World USD price (FMWP, RVPA)
+    # RVP/HRL - אף גוף לא מצטט רמה בכל הארכיון (512065202 מדווח רווח/הפסד) -> סדרת המדד של
+    # MSCI ב-Yahoo (^<קוד MSCI>-USD-<וריאנט>): World price 990100, World ESG Screened NTR 721415
+    "RVP": (10, "yahoo:^990100-USD-STRD"),   # Eurex World USD price (FMWP, RVPA)
     "ZTL": (100, None),         # Eurex ACWI USD NTR (FMAC, ZTLA)
-    "HRL": (10, None),          # Eurex World ESG Screened USD NTR (FMSW, HRLA)
+    "HRL": (10, "yahoo:^721415-USD-NETR"),   # Eurex World ESG Screened USD NTR (FMSW, HRLA)
     "WMW": (200, None),         # ICE US ACWI USD NTR (MMW, WMWA)
     # ICE
     "Z": (10, "ftse100"),       # FTSE 100
@@ -250,6 +252,7 @@ class FuturesRow:
     report_date: date | None
     liability: bool
     security: str | None = None
+    by_name: bool = False       # השורש נלמד משם זהה אצל גוף אחר (לא קוד בשורה עצמה)
 
 
 class FuturesResolver:
@@ -261,6 +264,7 @@ class FuturesResolver:
         self._learn_name_map()
         self._learn_filer_scales()
         self._build_levels()
+        self._recheck_by_name()
         self._identify_remaining()
         for r in self.rows:
             if r.root in MICRO_OF and _MICRO_NAME.search(str(r.name).upper()):
@@ -269,17 +273,21 @@ class FuturesResolver:
     # --- זיהוי --------------------------------------------------------
     def _learn_name_map(self):
         votes: dict[str, Counter] = defaultdict(Counter)
+        voters: dict[str, set] = defaultdict(set)
         for r in self.rows:
             if r.root in CONTRACT_SPECS:
                 nm = normalize_name(r.name)
                 if nm:
                     votes[nm][r.root] += 1
+                    voters[nm].add(r.legal_id)
         self.name_map = {nm: c.most_common(1)[0][0] for nm, c in votes.items() if len(c) == 1}
         for r in self.rows:
             if r.root not in CONTRACT_SPECS:
-                root = self.name_map.get(normalize_name(r.name))
+                nm = normalize_name(r.name)
+                root = self.name_map.get(nm)
                 if root:
                     r.root = root
+                    r.by_name = r.legal_id not in voters[nm]
         # אותו מספר נייר אצל גופים שונים = אותו חוזה (למשל "FM607-1תא" = "TLF JUL2026 TA 125")
         by_sec: dict[str, Counter] = defaultdict(Counter)
         for r in self.rows:
@@ -333,7 +341,7 @@ class FuturesResolver:
         roots_of: dict[str, str] = {}
         for r in self.rows:
             s = self.filer_scale.get(r.legal_id)
-            if r.root not in CONTRACT_SPECS or not s or not r.price or r.price <= 0 or r.liability:
+            if r.root not in CONTRACT_SPECS or not s or not r.price or r.price <= 0 or r.liability or r.by_name:
                 continue
             lvl = r.price / s
             idx = self._index_of(r.root)
@@ -352,6 +360,32 @@ class FuturesResolver:
         idx = self._index_of(root)
         return (self.levels.get((idx, month, d)) or self.levels.get((idx, None, d))
                 or self._ref(root, d))
+
+    def _fits(self, r: FuturesRow, root: str) -> bool:
+        scales = [self.filer_scale[r.legal_id]] if r.legal_id in self.filer_scale else list(SCALES)
+        lvl = self.level(root, None, r.report_date)
+        return bool(lvl) and any(abs(r.price / s / lvl - 1) < IDENTIFY_TOL for s in scales)
+
+    def _recheck_by_name(self):
+        """שם כללי שנלמד מגוף אחר ("MSCI WORLD" - RVPU6 של 512065202, מחיר העולמי) לא מכריע מול
+        מחיר שהוא רמה של חוזה אחר באותו מטבע (512244146 "MSCI World Index Sep26" ב-1,571,200 = רמת
+        ZWP ×100): השורה עוברת לחוזה שהרמה שלו מתאימה, ורק אז תורמת לרמות."""
+        moved = False
+        for r in self.rows:
+            if not r.by_name or r.liability or not r.price or r.price <= 0:
+                continue
+            if not self._fits(r, r.root):
+                matches = {root for root in CONTRACT_SPECS
+                           if self.root_ccy.get(root) == r.ccy and self._fits(r, root)}
+                if len({self._index_of(m) for m in matches}) == 1:
+                    r.root = max(matches, key=lambda m: self.root_count.get(m, 0))
+                    moved = True
+                elif matches or self.level(r.root, None, r.report_date):
+                    continue
+            r.by_name = False
+            moved = True
+        if moved:
+            self._build_levels()
 
     def _identify_remaining(self):
         """שורות בלי קוד ובלי שם מוכר: זיהוי לפי רמת המחיר מול רמות ידועות באותו מטבע."""

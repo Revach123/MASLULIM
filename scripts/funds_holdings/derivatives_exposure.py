@@ -73,6 +73,7 @@ from .option_delta_pricing import quote_scale, resolve_option_delta, resolve_opt
 from .option_ticker_parse import (CONTRACT_MULTIPLIER, FUTURES_OPTION, MAOF_STOCK_OPTION_SHARES, is_call_option, parse_maof_expiry_month, parse_strike,
                                   parse_underlying)
 from .futures_notional import FuturesResolver, build_rows as build_futures_rows
+from .stock_quote import stock_quote
 from .swap_index_pricing import (
     has_price_source, parse_deal_date, price_as_of as index_price_as_of, proxy_return, resolve_current_price,
 )
@@ -456,10 +457,32 @@ def _legs_are_notional(row: dict, legs_ratio: float, live_ratio: float) -> bool:
     return min(raw) / max(raw) >= LEGS_CONSISTENT and live_ratio >= LEGS_NOTIONAL_FACTOR * legs_ratio
 
 
-def _current_index_price(row: dict, report_date) -> float | None:
-    """מחיר המדד ליום הדוח: סדרת המדד ב-INDICES, ואם אין - מחיר העסקה × תשואת תעודת
-    הסל העוקבת מיום העסקה (swap_index_pricing.proxy_return)."""
+# מחיר עסקה מגולגל שרחוק מחציון עוגני הגוף (מגולגלים אף הם) יותר מפי ANCHOR_TOL - התאריך שלו לא
+# שייך למחיר: 512065202 מדווח לעתים מחיר איפוס עם מועד העסקה המקורי (7867 ב-0126: MVSMHTR 16,327.32
+# "מ-23/06/2025", אותו מחיר כמו בעסקאות מ-12/2025; מגולגל 9 חודשים ב-SMH = 23,900 ו-25% מהמסלול,
+# בחציון העוגנים ~16,000; רשמי: 6.96%+ -> 0.6%-). בגלגול תקין העוגנים מסכימים עד כדי סטיית תעודת הסל
+ANCHOR_TOL = 1.3
+
+
+def _direct_price(row: dict, report_date) -> float | None:
+    """מחיר ליום הדוח ממקור ישיר: סדרת המדד ב-INDICES, או מחיר המניה (stock_quote, במטבע
+    הבורסה שלה). None אם אין."""
     price, _ = resolve_current_price(row.get(SWAP_TICKER_COL), report_date)
+    if price is not None:
+        return price
+    stock = stock_quote(row.get(SWAP_TICKER_COL))
+    if stock and report_date:
+        from .option_delta_pricing import price_as_of as single_price_as_of
+        p = single_price_as_of(stock.symbol, report_date)
+        if p:
+            return p * stock.factor
+    return None
+
+
+def _current_index_price(row: dict, report_date) -> float | None:
+    """מחיר המדד ליום הדוח: מקור ישיר (_direct_price), ואם אין - מחיר העסקה × תשואת תעודת
+    הסל העוקבת מיום העסקה (swap_index_pricing.proxy_return)."""
+    price = _direct_price(row, report_date)
     if price is not None:
         return price
     from .swap_deal_anchors import anchored_price
@@ -468,10 +491,10 @@ def _current_index_price(row: dict, report_date) -> float | None:
     ratio = proxy_return(row.get(SWAP_TICKER_COL), deal_date, report_date) if deal_price and deal_price > 0 else None
     from_deal = deal_price * ratio if ratio else None
     # עוגן ממחירי העסקה של אותו גוף בכל הדוחות (swap_deal_anchors): כשאין מחיר עסקה בשורה, או
-    # כשהוא רחוק פי 2+ מהעוגן (512065202_15352 ב-0425: NDWUIT "מחיר עסקה" 3.3059 = שער הדולר)
+    # כשהוא רחוק מהעוגן (ANCHOR_TOL; 512065202_15352 ב-0425: NDWUIT "מחיר עסקה" 3.3059 = שער הדולר)
     anchored = anchored_price(str(row.get("מפתח") or "").split("_")[0], row.get(SWAP_TICKER_COL),
                               deal_date, report_date)
-    if anchored and (from_deal is None or not 0.5 <= from_deal / anchored <= 2):
+    if anchored and (from_deal is None or not 1 / ANCHOR_TOL <= from_deal / anchored <= ANCHOR_TOL):
         return anchored
     return from_deal
 
@@ -508,6 +531,22 @@ def _legs_reconcile(row: dict, report_date, fx_now: dict) -> bool:
         return not (tol is not None
                     and all(v and u and abs(abs(v) / (abs(u) / 1000) - 1) <= tol for v, u in legs))
     return abs(sum(vals) - net) <= max(0.15 * max(abs(x) for x in vals), 0.5)
+
+
+def _ccy_to_ils(ccy: str | None, report_date, fx_now: dict) -> float | None:
+    """שער מטבע לשקל ליום הדוח: מהחוזים העתידיים, ואם המטבע לא שם (דולר טייוואני) - דרך הדולר
+    ושער המטבע לדולר מ-Yahoo ("TWD=X" = יחידות מטבע לדולר)."""
+    if ccy == "ILS":
+        return 1.0
+    fx = fx_now.get((ccy, report_date))
+    if fx or not ccy or not report_date:
+        return fx
+    usd = fx_now.get(("USD", report_date))
+    if not usd:
+        return None
+    from .option_delta_pricing import price_as_of as single_price_as_of
+    per_usd = single_price_as_of(f"{ccy}=X", report_date)
+    return usd / per_usd if per_usd else None
 
 
 _CCY_CODE = re.compile(r"^[A-Z]{3}$")
@@ -591,6 +630,9 @@ def _live_swap_ratio(row: dict, report_date, fx_now: dict, total: float) -> floa
         # כמות יחידות של מדד במט"ח בשתי רגליים שקליות - מטבע המדד מהשורות האחרות של הטיקר
         # (512065202_15352 ב-0126: NDWUIT, 22,816.9 / 22,816.9 ש"ח - בלי שער הדולר 6% במקום 19%)
         ccy = _TICKER_CCY.get(str(row.get(SWAP_TICKER_COL) or "").strip().upper(), "ILS")
+    stock = stock_quote(row.get(SWAP_TICKER_COL)) if mirrored else None
+    if stock and stock.currency != "ILS":
+        ccy = stock.currency  # מחיר מניה במטבע הבורסה שלה, לא במטבע הרגל (512065202 "2330 TT")
     units = mirrored or (_num(row.get(leg1_col["units"])) if ccy1 != "ILS" or not ccy2
                          else _num(row.get(leg2_col["units"])))
     if not units:
@@ -604,8 +646,9 @@ def _live_swap_ratio(row: dict, report_date, fx_now: dict, total: float) -> floa
     leg_fvs = [v for v in leg_fvs if v]
     if not mirrored and leg_fvs and all(0.8 <= abs(v) / (abs(units) / 1000) <= 1.25 for v in leg_fvs):
         return None
-    fx = 1.0 if ccy == "ILS" else (fx_now.get((ccy, report_date)) or _normalize_fx(ccy, _num(row.get(
-        (leg1_col if ccy == ccy1 else leg2_col)["fx"]))))
+    fx = 1.0 if ccy == "ILS" else (fx_now.get((ccy, report_date)) or (
+        _normalize_fx(ccy, _num(row.get((leg1_col if ccy == ccy1 else leg2_col)["fx"]))) if ccy in (ccy1, ccy2)
+        else _ccy_to_ils(ccy, report_date, fx_now)))
     if fx is None:
         return None
     ratio = abs(units) * price * fx / 1000 / total
@@ -790,6 +833,18 @@ def _swap_exposure(
                 price_ccy = ccy2 if ccy1 == "ILS" and ccy2 else ccy1
                 price_fx = (1.0 if price_ccy == "ILS" else fx_now.get((price_ccy, report_date))
                             or (fx2 if price_ccy == ccy2 else fx1))
+                stock = stock_quote(row.get(SWAP_TICKER_COL)) if is_equity else None
+                stock_fx = None
+                stock_ccy = bool(stock and stock.currency not in ("ILS", price_ccy) and price is not None)
+                if stock_ccy:
+                    # מחיר העסקה של מניה נקוב במטבע הבורסה שלה; רגל "USD" שהיא יחידות × המחיר הזה
+                    # היא סכום באותו מטבע (512065202_877 ב-0126: TT2330, 61,688.8 × 1,740 = 107.3
+                    # מיליון "USD" - דולר טייוואני). בלי שער למטבע - אין תמחור (שווי השורה)
+                    stock_fx = _ccy_to_ils(stock.currency, report_date, fx_now)
+                    price, price_fx = price * stock.factor, (stock_fx or None)
+                    if (stock_fx and units1 and units2 and fx2 is not None
+                            and abs(abs(units2 / units1) / (price / stock.factor) - 1) <= 0.01):
+                        fx2 = stock_fx * stock.factor
 
                 leg2_val = abs(units2 * fx2) / 1000 if units2 is not None and fx2 is not None else None
                 leg1_raw = abs(units1 * fx1) / 1000 if units1 is not None and fx1 is not None else None
@@ -821,6 +876,8 @@ def _swap_exposure(
 
                 if leg1_live is not None:
                     candidates = [leg1_live]  # לא ממוצעים עם leg2 - ר' הערת הפונקציה
+                elif stock_ccy and not stock_fx:
+                    candidates = []
                 else:
                     candidates = [v for v in (leg1_val, leg2_val) if v is not None]
 
