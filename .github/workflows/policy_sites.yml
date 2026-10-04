@@ -120,7 +120,23 @@ jobs:
           mkdir -p /tmp/out && cp -r "$POLICY_OUT" /tmp/out/$ID
           for i in 1 2 3 4 5 6 7 8; do
             git fetch -q origin "$B" && git reset -q --hard "origin/$B"
-            rm -rf "$POLICY_OUT" && mkdir -p policy/companies && cp -r /tmp/out/$ID "$POLICY_OUT"
+            # בלי rm -rf: מסמכים שנוספו ל-head בזמן הריצה (קליטת תוסף, מיזוג) נשמרים - האינדקס מאוחד והחסרים נקראים מחדש
+            mkdir -p "$POLICY_OUT" && cp "$POLICY_OUT/docs_index.json" /tmp/head_idx.json 2>/dev/null || echo '{}' > /tmp/head_idx.json
+            cp -r /tmp/out/$ID/. "$POLICY_OUT"/
+            ADDED=$(python3 - "$POLICY_OUT/docs_index.json" <<'PY'
+          import json, sys
+          p = sys.argv[1]
+          cur = json.load(open(p, encoding="utf-8")) if __import__("os").path.exists(p) else {}
+          head = json.load(open("/tmp/head_idx.json", encoding="utf-8"))
+          n = 0
+          for k, v in head.items():
+              if k not in cur:
+                  v["parsed_sha"] = None; cur[k] = v; n += 1
+          json.dump(cur, open(p, "w", encoding="utf-8"), ensure_ascii=False, indent=1)
+          print(n)
+          PY
+            )
+            [ "${ADDED:-0}" != "0" ] && echo "kept $ADDED docs from head" && python -m scripts.policy.extract
             POLICY_OUT= python -m scripts.policy.combine
             git add policy
             if git diff --cached --quiet; then echo "nothing to commit"; break; fi
