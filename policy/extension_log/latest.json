@@ -1,13 +1,13 @@
 {
- "extension_version": "2.51.0",
- "started": "2026-10-04T06:53:40.353Z",
- "updated": "2026-10-04T06:56:04.954Z",
+ "extension_version": "2.52.0",
+ "started": "2026-10-04T07:11:21.774Z",
+ "updated": "2026-10-04T07:20:28.437Z",
  "final": true,
  "stopped": false,
  "rules_from_github": true,
  "rules": {
   "doc_rx": "\\.(xlsx|xls|pdf|docx)(\\?|#|$)",
-  "policy_rx": "מדיניות|הצהר|policy|m[ae]dini?y?ut|hatzarat|expected|investment|inv[-_ ]*polic",
+  "policy_rx": "מדיניות|מדינית[-_ ]*השקע|הצהר|policy|m[ae]dini?y?ut|hatzarat|expected|investment|inv[-_ ]*polic",
   "noise_rx": "esg|אחראי|תגמול(?!ים)|tagmul(?!im)|פרטיות|privacy|תקנון|מבצע|גילוי[-_ ]נאות|מצגת|presentation|נוהל|העברת זכויות|הצבע|דוח[ -]כספי|רבעון",
   "download_rx": "הורד|להורדה|download|אקסל|excel|xls",
   "concurrency": 4,
@@ -22,7 +22,7 @@
  },
  "total_sites": 3,
  "done_sites": 3,
- "new_docs": 0,
+ "new_docs": 6,
  "skipped_complete": [
   {
    "legal_id": "510930654",
@@ -100,177 +100,13 @@
  "active": [],
  "sites": [
   {
-   "legal_id": "520030677",
-   "name": "איילון חברה לביטוח בע\"מ",
-   "pages": [
-    {
-     "url": "https://www.ayalon-ins.co.il/about-us/about-ayalon/investments/policy/",
-     "cache": "hit",
-     "links": 69,
-     "followed": [
-      "https://www.ayalon-ins.co.il/about-us/about-ayalon/investments/publications/",
-      "https://www.ayalon-ins.co.il/career/finance-investments",
-      "https://www.ayalon-ins.co.il/about-us/about-ayalon/investments/",
-      "https://www.ayalon-ins.co.il/investments-provident",
-      "https://www.ayalon-ins.co.il/investments-directorate",
-      "https://www.ayalon-ins.co.il/investments-levelagreement"
-     ],
-     "files": 1,
-     "clicked": 0,
-     "captured": 0,
-     "selected": [],
-     "unselected_files": [
-      {
-       "file": "https://www.ayalon-ins.co.il/media/dtvlz32w/amitim_03_2026.pdf",
-       "text": "עקרונות נוהל העברת זכויות עמיתים שלא במזומן",
-       "ctx": ""
-      }
-     ]
-    },
-    {
-     "url": "https://www.ayalon-ins.co.il/savings/nispah/",
-     "cache": "none",
-     "links": 0,
-     "followed": [],
-     "files": 0,
-     "clicked": 0,
-     "captured": 0,
-     "selected": [],
-     "unselected_files": []
-    },
-    {
-     "url": "https://www.ayalon-ins.co.il/savings/nispah_prat/",
-     "cache": "none",
-     "links": 0,
-     "followed": [],
-     "files": 0,
-     "clicked": 0,
-     "captured": 0,
-     "selected": [],
-     "unselected_files": []
-    },
-    {
-     "url": "https://www.ayalon-ins.co.il/investments",
-     "cache": "none",
-     "links": 0,
-     "followed": [],
-     "files": 0,
-     "clicked": 0,
-     "captured": 0,
-     "selected": [],
-     "unselected_files": []
-    },
-    {
-     "url": "https://www.ayalon-ins.co.il",
-     "cache": "none",
-     "links": 0,
-     "followed": [],
-     "files": 0,
-     "clicked": 0,
-     "captured": 0,
-     "selected": [],
-     "unselected_files": []
-    },
-    {
-     "url": "https://www.ayalon-ins.co.il/about-us/about-ayalon/investments/publications/",
-     "cache": "none",
-     "links": 0,
-     "followed": [],
-     "files": 0,
-     "clicked": 0,
-     "captured": 0,
-     "selected": [],
-     "unselected_files": []
-    },
-    {
-     "url": "https://www.ayalon-ins.co.il/career/finance-investments",
-     "cache": "hit",
-     "links": 68,
-     "followed": [],
-     "files": 0,
-     "clicked": 0,
-     "captured": 0,
-     "selected": [],
-     "unselected_files": []
-    },
-    {
-     "url": "https://www.ayalon-ins.co.il/about-us/about-ayalon/investments/",
-     "cache": "none",
-     "links": 0,
-     "followed": [],
-     "files": 0,
-     "clicked": 0,
-     "captured": 0,
-     "selected": [],
-     "unselected_files": []
-    },
-    {
-     "url": "https://www.ayalon-ins.co.il/investments-provident",
-     "cache": "none",
-     "links": 0,
-     "followed": [],
-     "files": 0,
-     "clicked": 0,
-     "captured": 0,
-     "selected": [],
-     "unselected_files": []
-    },
-    {
-     "url": "https://www.ayalon-ins.co.il/investments-directorate",
-     "cache": "none",
-     "links": 0,
-     "followed": [],
-     "files": 0,
-     "clicked": 0,
-     "captured": 0,
-     "selected": [],
-     "unselected_files": []
-    },
-    {
-     "url": "https://www.ayalon-ins.co.il/investments-levelagreement",
-     "cache": "none",
-     "links": 0,
-     "followed": [],
-     "files": 0,
-     "clicked": 0,
-     "captured": 0,
-     "selected": [],
-     "unselected_files": []
-    }
-   ],
-   "new_docs": 0,
-   "found": 1,
-   "selected": 0,
-   "had": 0,
-   "head_skip": 0,
-   "page_cache": 2,
-   "cache_hit": 2,
-   "cache_none": 9,
-   "errors": [],
-   "diag": [
-    "איילון חברה לביטוח: links=69 files=1 clicked=0 captured=0 selected=0",
-    "   ? amitim_03_2026.pdf | עקרונות נוהל העברת זכויות עמיתים שלא במז | ",
-    "איילון חברה לביטוח: links=0 files=0 clicked=0 captured=0 selected=0",
-    "איילון חברה לביטוח: links=0 files=0 clicked=0 captured=0 selected=0",
-    "איילון חברה לביטוח: links=0 files=0 clicked=0 captured=0 selected=0",
-    "איילון חברה לביטוח: links=0 files=0 clicked=0 captured=0 selected=0",
-    "איילון חברה לביטוח: links=0 files=0 clicked=0 captured=0 selected=0",
-    "איילון חברה לביטוח: links=68 files=0 clicked=0 captured=0 selected=0",
-    "איילון חברה לביטוח: links=0 files=0 clicked=0 captured=0 selected=0",
-    "איילון חברה לביטוח: links=0 files=0 clicked=0 captured=0 selected=0",
-    "איילון חברה לביטוח: links=0 files=0 clicked=0 captured=0 selected=0",
-    "איילון חברה לביטוח: links=0 files=0 clicked=0 captured=0 selected=0"
-   ],
-   "new_files": []
-  },
-  {
    "legal_id": "520022518",
    "name": "החברה לניהול קופת התגמולים והפנסיה של עובדי הסוכנות היהודית לארץ ישראל בע\"מ",
    "pages": [
     {
      "url": "https://www.jewishagency-kupa.org.il/sitemap/",
-     "cache": "sig-mismatch",
-     "links": 122,
+     "cache": "hit",
+     "links": 64,
      "followed": [
       "https://www.jewishagency-kupa.org.il/%d7%97%d7%91%d7%a8%d7%99-%d7%95%d7%a2%d7%93%d7%aa-%d7%94%d7%a9%d7%a7%d7%a2%d7%95%d7%aa/",
       "https://www.jewishagency-kupa.org.il/%d7%93%d7%95%d7%97%d7%95%d7%aa-%d7%a8%d7%91%d7%a2%d7%95%d7%a0%d7%99%d7%99%d7%9d/",
@@ -1673,9 +1509,8 @@
    "selected": 38,
    "had": 10,
    "head_skip": 0,
-   "cache_sig-mismatch": 1,
-   "page_cache": 9,
-   "cache_hit": 9,
+   "page_cache": 10,
+   "cache_hit": 10,
    "old_skip": 10,
    "cache_none": 4,
    "errors": [
@@ -1706,10 +1541,11 @@
     "10_מדיניות_השקעה_צפויה_2018.xls -> 418",
     "10_מדיניות_השקעה_צפויה_2017.xls -> 418",
     "10_מדיניות_השקעה_צפוייה_2016.xls -> 418",
-    "10_מדיניותהשקעהסוכנותיהודית2011-2.xls -> 418"
+    "10_מדיניותהשקעהסוכנותיהודית2011-2.xls -> 418",
+    "https://www.jewishagency-kupa.org.il/wp-content/uploads/2023/05/%D7%93%D7%95%D7%97-%D7%93%D7%99%D7%A8%D7%A7%D7%98%D7%95%D7%A8%D7%99%D7%95%D7%9F-.doc: timeout 90s: pageCollectLinks -> light collect"
    ],
    "diag": [
-    "החברה לניהול קופת : links=122 files=27 clicked=0 captured=0 selected=2",
+    "החברה לניהול קופת : links=64 files=27 clicked=0 captured=0 selected=2",
     "החברה לניהול קופת : links=55 files=27 clicked=0 captured=0 selected=2",
     "החברה לניהול קופת : links=55 files=27 clicked=0 captured=0 selected=2",
     "החברה לניהול קופת : links=65 files=27 clicked=0 captured=0 selected=2",
@@ -1727,13 +1563,168 @@
    "new_files": []
   },
   {
+   "legal_id": "520030677",
+   "name": "איילון חברה לביטוח בע\"מ",
+   "pages": [
+    {
+     "url": "https://www.ayalon-ins.co.il/about-us/about-ayalon/investments/policy/",
+     "cache": "hit",
+     "links": 69,
+     "followed": [
+      "https://www.ayalon-ins.co.il/about-us/about-ayalon/investments/publications/",
+      "https://www.ayalon-ins.co.il/career/finance-investments",
+      "https://www.ayalon-ins.co.il/about-us/about-ayalon/investments/",
+      "https://www.ayalon-ins.co.il/investments-provident",
+      "https://www.ayalon-ins.co.il/investments-directorate",
+      "https://www.ayalon-ins.co.il/investments-levelagreement"
+     ],
+     "files": 1,
+     "clicked": 0,
+     "captured": 0,
+     "selected": [],
+     "unselected_files": [
+      {
+       "file": "https://www.ayalon-ins.co.il/media/dtvlz32w/amitim_03_2026.pdf",
+       "text": "עקרונות נוהל העברת זכויות עמיתים שלא במזומן",
+       "ctx": ""
+      }
+     ]
+    },
+    {
+     "url": "https://www.ayalon-ins.co.il/savings/nispah/",
+     "cache": "none",
+     "links": 160,
+     "followed": [],
+     "files": 0,
+     "clicked": 0,
+     "captured": 0,
+     "selected": [],
+     "unselected_files": []
+    },
+    {
+     "url": "https://www.ayalon-ins.co.il/savings/nispah_prat/",
+     "cache": "none",
+     "links": 0,
+     "followed": [],
+     "files": 0,
+     "clicked": 0,
+     "captured": 0,
+     "selected": [],
+     "unselected_files": []
+    },
+    {
+     "url": "https://www.ayalon-ins.co.il/investments",
+     "cache": "none",
+     "links": 0,
+     "followed": [],
+     "files": 0,
+     "clicked": 0,
+     "captured": 0,
+     "selected": [],
+     "unselected_files": []
+    },
+    {
+     "url": "https://www.ayalon-ins.co.il",
+     "cache": "none",
+     "links": 0,
+     "followed": [],
+     "files": 0,
+     "clicked": 0,
+     "captured": 0,
+     "selected": [],
+     "unselected_files": []
+    },
+    {
+     "url": "https://www.ayalon-ins.co.il/about-us/about-ayalon/investments/publications/",
+     "cache": "none",
+     "links": 0,
+     "followed": [],
+     "files": 0,
+     "clicked": 0,
+     "captured": 0,
+     "selected": [],
+     "unselected_files": []
+    },
+    {
+     "url": "https://www.ayalon-ins.co.il/career/finance-investments",
+     "cache": "hit",
+     "links": 68,
+     "followed": [],
+     "files": 0,
+     "clicked": 0,
+     "captured": 0,
+     "selected": [],
+     "unselected_files": []
+    },
+    {
+     "url": "https://www.ayalon-ins.co.il/about-us/about-ayalon/investments/",
+     "cache": "none",
+     "links": 0,
+     "followed": [],
+     "files": 0,
+     "clicked": 0,
+     "captured": 0,
+     "selected": [],
+     "unselected_files": []
+    },
+    {
+     "url": "https://www.ayalon-ins.co.il/investments-directorate",
+     "cache": "none",
+     "links": 0,
+     "followed": [],
+     "files": 0,
+     "clicked": 0,
+     "captured": 0,
+     "selected": [],
+     "unselected_files": []
+    },
+    {
+     "url": "https://www.ayalon-ins.co.il/investments-levelagreement",
+     "cache": "none",
+     "links": 0,
+     "followed": [],
+     "files": 0,
+     "clicked": 0,
+     "captured": 0,
+     "selected": [],
+     "unselected_files": []
+    }
+   ],
+   "new_docs": 0,
+   "found": 1,
+   "selected": 0,
+   "had": 0,
+   "head_skip": 0,
+   "page_cache": 2,
+   "cache_hit": 2,
+   "cache_none": 9,
+   "errors": [
+    "https://www.ayalon-ins.co.il/investments-provident: Frame with ID 0 is showing error page -> light collect",
+    "https://www.ayalon-ins.co.il/investments-provident: Frame with ID 0 is showing error page"
+   ],
+   "diag": [
+    "איילון חברה לביטוח: links=69 files=1 clicked=0 captured=0 selected=0",
+    "   ? amitim_03_2026.pdf | עקרונות נוהל העברת זכויות עמיתים שלא במז | ",
+    "איילון חברה לביטוח: links=160 files=0 clicked=0 captured=0 selected=0",
+    "איילון חברה לביטוח: links=0 files=0 clicked=0 captured=0 selected=0",
+    "איילון חברה לביטוח: links=0 files=0 clicked=0 captured=0 selected=0",
+    "איילון חברה לביטוח: links=0 files=0 clicked=0 captured=0 selected=0",
+    "איילון חברה לביטוח: links=0 files=0 clicked=0 captured=0 selected=0",
+    "איילון חברה לביטוח: links=68 files=0 clicked=0 captured=0 selected=0",
+    "איילון חברה לביטוח: links=0 files=0 clicked=0 captured=0 selected=0",
+    "איילון חברה לביטוח: links=0 files=0 clicked=0 captured=0 selected=0",
+    "איילון חברה לביטוח: links=0 files=0 clicked=0 captured=0 selected=0"
+   ],
+   "new_files": []
+  },
+  {
    "legal_id": "512245812",
    "name": "מנורה מבטחים פנסיה וגמל בע\"מ",
    "pages": [
     {
      "url": "https://www.menoramivt.co.il/funds/top-SP500",
-     "cache": "sig-mismatch",
-     "links": 278,
+     "cache": "hit",
+     "links": 122,
      "followed": [],
      "files": 47,
      "clicked": 0,
@@ -1876,8 +1867,8 @@
     },
     {
      "url": "https://www.menoramivt.co.il/funds/Education-fund-SP500",
-     "cache": "sig-mismatch",
-     "links": 275,
+     "cache": "hit",
+     "links": 118,
      "followed": [],
      "files": 45,
      "clicked": 0,
@@ -2020,9 +2011,11 @@
     },
     {
      "url": "https://www.menoramivt.co.il/funds/insurers-complementary-pension-SP500",
-     "cache": "sig-mismatch",
-     "links": 258,
-     "followed": [],
+     "cache": "hit",
+     "links": 102,
+     "followed": [
+      "https://www.menoramivt.co.il/funds/pension-and-gemel/sum-assets-management-fee/pos-assets-list"
+     ],
      "files": 27,
      "clicked": 0,
      "captured": 0,
@@ -2290,9 +2283,7 @@
      "url": "https://www.menoramivt.co.il/funds/gov-bonds-15342",
      "cache": "hit",
      "links": 91,
-     "followed": [
-      "https://www.menoramivt.co.il/funds/pension-and-gemel/sum-assets-management-fee/pos-assets-list"
-     ],
+     "followed": [],
      "files": 13,
      "clicked": 0,
      "captured": 0,
@@ -11630,8 +11621,8 @@
     },
     {
      "url": "https://www.menoramivt.co.il/funds/pension-and-gemel/gemel-hishtalmut-list/menroa-keren-hishtalmut/13357",
-     "cache": "hit",
-     "links": 121,
+     "cache": "sig-mismatch",
+     "links": 278,
      "followed": [],
      "files": 48,
      "clicked": 0,
@@ -15380,6 +15371,12 @@
      "clicked": 0,
      "captured": 0,
      "selected": [
+      "https://cdn.menoramivt.co.il/public/docs/20260126/מדינית-השקעה-לשנת-2026-מנורה-מבטחים-משתתפת-בפנסיה-תקציבית-1280.xlsx",
+      "https://cdn.menoramivt.co.il/public/docs/20250122/מדינית-השקעה-לשנת-2025-מנורה-מבטחים-משתתפת-בפנסיה-תקציבית-1280.xlsx",
+      "https://cdn.menoramivt.co.il/public/docs/20240125/מדינית-השקעה-לשנת-2024-מנורה-מבטחים-משתתפת-בפנסיה-תקציבית-1280.xlsx",
+      "https://cdn.menoramivt.co.il/public/docs/20230622/מדינית-השקעה-לשנת-2023-מנורה-מבטחים-משתתפת-בפנסיה-תקציבית-1280.xlsx",
+      "https://cdn.menoramivt.co.il/public/docs/20220124/מדינית-השקעה-לשנת-2022-מנורה-מבטחים-משתתפת-בפנסיה-תקציבית.xlsx",
+      "https://cdn.menoramivt.co.il/public/docs/20210404/מדינית-השקעה-לשנת-2021-מנורה-מבטחים-משתתפת-בפנסיה-תקציבית.xlsx",
       "https://cdn.menoramivt.co.il/public/docs/פנסיה-תקציבית-מדיניות-השקעה-2020.xlsx",
       "https://cdn.menoramivt.co.il/public/docs/פנסיה-תקציבית-מדיניות-השקעה-2019.xlsx"
      ],
@@ -15475,37 +15472,37 @@
        "ctx": ""
       },
       {
-       "file": "https://cdn.menoramivt.co.il/public/docs/20260126/מדינית-השקעה-לשנת-2026-מנורה-מבטחים-משתתפת-בפנסיה-תקציבית-1280.xlsx",
-       "text": "(html)",
-       "ctx": ""
-      },
-      {
-       "file": "https://cdn.menoramivt.co.il/public/docs/20250122/מדינית-השקעה-לשנת-2025-מנורה-מבטחים-משתתפת-בפנסיה-תקציבית-1280.xlsx",
-       "text": "(html)",
-       "ctx": ""
-      },
-      {
-       "file": "https://cdn.menoramivt.co.il/public/docs/20240125/מדינית-השקעה-לשנת-2024-מנורה-מבטחים-משתתפת-בפנסיה-תקציבית-1280.xlsx",
-       "text": "(html)",
-       "ctx": ""
-      },
-      {
-       "file": "https://cdn.menoramivt.co.il/public/docs/20230622/מדינית-השקעה-לשנת-2023-מנורה-מבטחים-משתתפת-בפנסיה-תקציבית-1280.xlsx",
-       "text": "(html)",
-       "ctx": ""
-      },
-      {
-       "file": "https://cdn.menoramivt.co.il/public/docs/20220124/מדינית-השקעה-לשנת-2022-מנורה-מבטחים-משתתפת-בפנסיה-תקציבית.xlsx",
-       "text": "(html)",
-       "ctx": ""
-      },
-      {
-       "file": "https://cdn.menoramivt.co.il/public/docs/20210404/מדינית-השקעה-לשנת-2021-מנורה-מבטחים-משתתפת-בפנסיה-תקציבית.xlsx",
-       "text": "(html)",
-       "ctx": ""
-      },
-      {
        "file": "https://cdn.menoramivt.co.il/public/docs/20260914/דוח-חודשי-לאתר.1280.08.2026.xlsx",
+       "text": "(html)",
+       "ctx": ""
+      },
+      {
+       "file": "https://cdn.menoramivt.co.il/public/docs/20260720/תרומת-אפיקי-השקעה-לתשואה-הכוללת---מנורה-מבטחים-משתתפת-בפנסיה-תקציבית.xlsx",
+       "text": "(html)",
+       "ctx": ""
+      },
+      {
+       "file": "https://cdn.menoramivt.co.il/public/docs/20260503/512245812_g1280_yield126.xlsx",
+       "text": "(html)",
+       "ctx": ""
+      },
+      {
+       "file": "https://cdn.menoramivt.co.il/public/docs/20260202/512245812_g1280_yield425.xlsx",
+       "text": "(html)",
+       "ctx": ""
+      },
+      {
+       "file": "https://cdn.menoramivt.co.il/public/docs/20251029/512245812_g1280_yield325.xlsx",
+       "text": "(html)",
+       "ctx": ""
+      },
+      {
+       "file": "https://cdn.menoramivt.co.il/public/docs/20250728/512245812_g1280_yield225.xlsx",
+       "text": "(html)",
+       "ctx": ""
+      },
+      {
+       "file": "https://cdn.menoramivt.co.il/public/docs/20250504/512245812_g1280_yield125.xlsx",
        "text": "(html)",
        "ctx": ""
       }
@@ -15571,29 +15568,29 @@
      ]
     }
    ],
-   "new_docs": 0,
+   "new_docs": 6,
    "found": 4025,
-   "selected": 846,
+   "selected": 852,
    "had": 845,
    "head_skip": 0,
    "page_lanes": 3,
-   "cache_sig-mismatch": 3,
-   "old_skip": 641,
-   "page_cache": 117,
-   "cache_hit": 117,
+   "page_cache": 119,
+   "cache_hit": 119,
+   "old_skip": 845,
+   "cache_sig-mismatch": 1,
    "mode": "map",
    "errors": [
     "חיסכון-לילד-סיכון-מועט-מדיניות-השקעה-2018.xlsx -> 500"
    ],
    "diag": [
-    "מנורה מבטחים פנסיה: links=275 files=45 clicked=0 captured=0 selected=6",
-    "מנורה מבטחים פנסיה: links=278 files=47 clicked=0 captured=0 selected=6",
+    "מנורה מבטחים פנסיה: links=102 files=27 clicked=0 captured=0 selected=6",
+    "מנורה מבטחים פנסיה: links=118 files=45 clicked=0 captured=0 selected=6",
+    "מנורה מבטחים פנסיה: links=122 files=47 clicked=0 captured=0 selected=6",
     "מנורה מבטחים פנסיה: links=117 files=44 clicked=0 captured=0 selected=6",
-    "מנורה מבטחים פנסיה: links=91 files=13 clicked=0 captured=0 selected=3",
     "מנורה מבטחים פנסיה: links=138 files=62 clicked=0 captured=0 selected=10",
+    "מנורה מבטחים פנסיה: links=91 files=13 clicked=0 captured=0 selected=3",
     "מנורה מבטחים פנסיה: links=88 files=1 clicked=0 captured=0 selected=0",
     "   ? esg-report-2021-22022.pdf | (html) | ",
-    "מנורה מבטחים פנסיה: links=258 files=27 clicked=0 captured=0 selected=6",
     "מנורה מבטחים פנסיה: links=85 files=6 clicked=0 captured=0 selected=1",
     "מנורה מבטחים פנסיה: links=78 files=1 clicked=0 captured=0 selected=0",
     "   ? esg-report-2021-22022.pdf | (html) | ",
@@ -15605,35 +15602,35 @@
     "מנורה מבטחים פנסיה: links=113 files=32 clicked=0 captured=0 selected=12",
     "מנורה מבטחים פנסיה: links=125 files=50 clicked=0 captured=0 selected=7",
     "מנורה מבטחים פנסיה: links=103 files=21 clicked=0 captured=0 selected=6",
-    "מנורה מבטחים פנסיה: links=96 files=21 clicked=0 captured=0 selected=5",
-    "מנורה מבטחים פנסיה: links=111 files=30 clicked=0 captured=0 selected=7",
     "מנורה מבטחים פנסיה: links=78 files=1 clicked=0 captured=0 selected=0",
     "   ? esg-report-2021-22022.pdf | (html) | ",
-    "מנורה מבטחים פנסיה: links=125 files=50 clicked=0 captured=0 selected=9",
-    "מנורה מבטחים פנסיה: links=126 files=51 clicked=0 captured=0 selected=9",
+    "מנורה מבטחים פנסיה: links=96 files=21 clicked=0 captured=0 selected=5",
+    "מנורה מבטחים פנסיה: links=111 files=30 clicked=0 captured=0 selected=7",
     "מנורה מבטחים פנסיה: links=127 files=52 clicked=0 captured=0 selected=11",
-    "מנורה מבטחים פנסיה: links=129 files=54 clicked=0 captured=0 selected=10",
+    "מנורה מבטחים פנסיה: links=126 files=51 clicked=0 captured=0 selected=9",
+    "מנורה מבטחים פנסיה: links=125 files=50 clicked=0 captured=0 selected=9",
     "מנורה מבטחים פנסיה: links=126 files=51 clicked=0 captured=0 selected=10",
     "מנורה מבטחים פנסיה: links=127 files=52 clicked=0 captured=0 selected=9",
+    "מנורה מבטחים פנסיה: links=129 files=54 clicked=0 captured=0 selected=10",
     "מנורה מבטחים פנסיה: links=126 files=51 clicked=0 captured=0 selected=7",
     "מנורה מבטחים פנסיה: links=123 files=48 clicked=0 captured=0 selected=7",
     "מנורה מבטחים פנסיה: links=88 files=13 clicked=0 captured=0 selected=2",
     "מנורה מבטחים פנסיה: links=125 files=50 clicked=0 captured=0 selected=9",
-    "מנורה מבטחים פנסיה: links=125 files=52 clicked=0 captured=0 selected=10",
     "מנורה מבטחים פנסיה: links=127 files=52 clicked=0 captured=0 selected=10",
+    "מנורה מבטחים פנסיה: links=125 files=52 clicked=0 captured=0 selected=10",
     "מנורה מבטחים פנסיה: links=108 files=31 clicked=0 captured=0 selected=5",
-    "מנורה מבטחים פנסיה: links=85 files=10 clicked=0 captured=0 selected=2",
     "מנורה מבטחים פנסיה: links=120 files=45 clicked=0 captured=0 selected=6",
-    "מנורה מבטחים פנסיה: links=109 files=34 clicked=0 captured=0 selected=5",
+    "מנורה מבטחים פנסיה: links=85 files=10 clicked=0 captured=0 selected=2",
     "מנורה מבטחים פנסיה: links=106 files=31 clicked=0 captured=0 selected=5",
     "מנורה מבטחים פנסיה: links=107 files=32 clicked=0 captured=0 selected=5",
-    "מנורה מבטחים פנסיה: links=127 files=52 clicked=0 captured=0 selected=9",
+    "מנורה מבטחים פנסיה: links=109 files=34 clicked=0 captured=0 selected=5",
     "מנורה מבטחים פנסיה: links=75 files=1 clicked=0 captured=0 selected=0",
     "   ? esg-report-2021-22022.pdf | (html) | ",
+    "מנורה מבטחים פנסיה: links=127 files=52 clicked=0 captured=0 selected=9",
     "מנורה מבטחים פנסיה: links=82 files=7 clicked=0 captured=0 selected=2",
-    "מנורה מבטחים פנסיה: links=86 files=1 clicked=0 captured=0 selected=0",
-    "   ? esg-report-2021-22022.pdf | (html) | ",
     "מנורה מבטחים פנסיה: links=85 files=1 clicked=0 captured=0 selected=0",
+    "   ? esg-report-2021-22022.pdf | (html) | ",
+    "מנורה מבטחים פנסיה: links=86 files=1 clicked=0 captured=0 selected=0",
     "   ? esg-report-2021-22022.pdf | (html) | ",
     "מנורה מבטחים פנסיה: links=78 files=1 clicked=0 captured=0 selected=0",
     "   ? esg-report-2021-22022.pdf | (html) | ",
@@ -15646,26 +15643,26 @@
     "מנורה מבטחים פנסיה: links=102 files=27 clicked=0 captured=0 selected=6",
     "מנורה מבטחים פנסיה: links=107 files=32 clicked=0 captured=0 selected=5",
     "מנורה מבטחים פנסיה: links=107 files=32 clicked=0 captured=0 selected=5",
-    "מנורה מבטחים פנסיה: links=113 files=32 clicked=0 captured=0 selected=13",
     "מנורה מבטחים פנסיה: links=107 files=32 clicked=0 captured=0 selected=5",
+    "מנורה מבטחים פנסיה: links=113 files=32 clicked=0 captured=0 selected=13",
+    "מנורה מבטחים פנסיה: links=118 files=42 clicked=0 captured=0 selected=9",
     "מנורה מבטחים פנסיה: links=102 files=1 clicked=0 captured=0 selected=0",
     "   ? esg-report-2021-22022.pdf | (html) | ",
-    "מנורה מבטחים פנסיה: links=118 files=42 clicked=0 captured=0 selected=9",
     "מנורה מבטחים פנסיה: links=163 files=87 clicked=0 captured=0 selected=10",
     "מנורה מבטחים פנסיה: links=125 files=50 clicked=0 captured=0 selected=10",
-    "מנורה מבטחים פנסיה: links=132 files=58 clicked=0 captured=0 selected=10",
     "מנורה מבטחים פנסיה: links=92 files=19 clicked=0 captured=0 selected=3",
-    "מנורה מבטחים פנסיה: links=127 files=51 clicked=0 captured=0 selected=8",
+    "מנורה מבטחים פנסיה: links=132 files=58 clicked=0 captured=0 selected=10",
     "מנורה מבטחים פנסיה: links=130 files=54 clicked=0 captured=0 selected=8",
+    "מנורה מבטחים פנסיה: links=127 files=51 clicked=0 captured=0 selected=8",
     "מנורה מבטחים פנסיה: links=126 files=50 clicked=0 captured=0 selected=8",
     "מנורה מבטחים פנסיה: links=126 files=51 clicked=0 captured=0 selected=11",
     "מנורה מבטחים פנסיה: links=125 files=50 clicked=0 captured=0 selected=10",
     "מנורה מבטחים פנסיה: links=125 files=50 clicked=0 captured=0 selected=10",
-    "מנורה מבטחים פנסיה: links=112 files=31 clicked=0 captured=0 selected=12",
     "מנורה מבטחים פנסיה: links=84 files=11 clicked=0 captured=0 selected=2",
+    "מנורה מבטחים פנסיה: links=112 files=31 clicked=0 captured=0 selected=12",
     "מנורה מבטחים פנסיה: links=112 files=30 clicked=0 captured=0 selected=11",
-    "מנורה מבטחים פנסיה: links=113 files=32 clicked=0 captured=0 selected=13",
     "מנורה מבטחים פנסיה: links=108 files=27 clicked=0 captured=0 selected=8",
+    "מנורה מבטחים פנסיה: links=113 files=32 clicked=0 captured=0 selected=13",
     "מנורה מבטחים פנסיה: links=112 files=31 clicked=0 captured=0 selected=12",
     "מנורה מבטחים פנסיה: links=112 files=31 clicked=0 captured=0 selected=12",
     "מנורה מבטחים פנסיה: links=112 files=31 clicked=0 captured=0 selected=12",
@@ -15673,8 +15670,8 @@
     "מנורה מבטחים פנסיה: links=124 files=51 clicked=0 captured=0 selected=9",
     "מנורה מבטחים פנסיה: links=122 files=49 clicked=0 captured=0 selected=8",
     "מנורה מבטחים פנסיה: links=122 files=49 clicked=0 captured=0 selected=8",
-    "מנורה מבטחים פנסיה: links=123 files=50 clicked=0 captured=0 selected=8",
     "מנורה מבטחים פנסיה: links=122 files=47 clicked=0 captured=0 selected=7",
+    "מנורה מבטחים פנסיה: links=123 files=50 clicked=0 captured=0 selected=8",
     "מנורה מבטחים פנסיה: links=122 files=47 clicked=0 captured=0 selected=7",
     "מנורה מבטחים פנסיה: links=129 files=53 clicked=0 captured=0 selected=8",
     "מנורה מבטחים פנסיה: links=129 files=53 clicked=0 captured=0 selected=8",
@@ -15684,43 +15681,35 @@
     "מנורה מבטחים פנסיה: links=127 files=52 clicked=0 captured=0 selected=10",
     "מנורה מבטחים פנסיה: links=125 files=52 clicked=0 captured=0 selected=11",
     "מנורה מבטחים פנסיה: links=125 files=50 clicked=0 captured=0 selected=10",
-    "מנורה מבטחים פנסיה: links=121 files=48 clicked=0 captured=0 selected=7",
     "מנורה מבטחים פנסיה: links=125 files=50 clicked=0 captured=0 selected=8",
-    "מנורה מבטחים פנסיה: links=129 files=54 clicked=0 captured=0 selected=12",
     "מנורה מבטחים פנסיה: links=90 files=15 clicked=0 captured=0 selected=2",
+    "מנורה מבטחים פנסיה: links=129 files=54 clicked=0 captured=0 selected=12",
     "מנורה מבטחים פנסיה: links=108 files=33 clicked=0 captured=0 selected=5",
-    "מנורה מבטחים פנסיה: links=125 files=50 clicked=0 captured=0 selected=9",
     "מנורה מבטחים פנסיה: links=126 files=51 clicked=0 captured=0 selected=8",
+    "מנורה מבטחים פנסיה: links=125 files=50 clicked=0 captured=0 selected=9",
+    "מנורה מבטחים פנסיה: links=125 files=50 clicked=0 captured=0 selected=9",
     "מנורה מבטחים פנסיה: links=124 files=49 clicked=0 captured=0 selected=8",
     "מנורה מבטחים פנסיה: links=108 files=27 clicked=0 captured=0 selected=7",
     "מנורה מבטחים פנסיה: links=110 files=32 clicked=0 captured=0 selected=12",
-    "מנורה מבטחים פנסיה: links=125 files=50 clicked=0 captured=0 selected=9",
     "מנורה מבטחים פנסיה: links=109 files=31 clicked=0 captured=0 selected=12",
+    "מנורה מבטחים פנסיה: links=109 files=31 clicked=0 captured=0 selected=12",
+    "מנורה מבטחים פנסיה: links=112 files=31 clicked=0 captured=0 selected=12",
     "מנורה מבטחים פנסיה: links=112 files=32 clicked=0 captured=0 selected=10",
-    "מנורה מבטחים פנסיה: links=109 files=31 clicked=0 captured=0 selected=12",
+    "מנורה מבטחים פנסיה: links=278 files=48 clicked=0 captured=0 selected=7",
     "מנורה מבטחים פנסיה: links=112 files=31 clicked=0 captured=0 selected=12",
-    "מנורה מבטחים פנסיה: links=112 files=31 clicked=0 captured=0 selected=12",
-    "מנורה מבטחים פנסיה: links=116 files=35 clicked=0 captured=0 selected=13",
     "מנורה מבטחים פנסיה: links=113 files=32 clicked=0 captured=0 selected=11",
+    "מנורה מבטחים פנסיה: links=116 files=35 clicked=0 captured=0 selected=13",
     "מנורה מבטחים פנסיה: links=111 files=30 clicked=0 captured=0 selected=10",
-    "מנורה מבטחים פנסיה: links=102 files=21 clicked=0 captured=0 selected=5",
     "מנורה מבטחים פנסיה: links=109 files=28 clicked=0 captured=0 selected=8",
+    "מנורה מבטחים פנסיה: links=102 files=21 clicked=0 captured=0 selected=5",
     "מנורה מבטחים פנסיה: links=82 files=7 clicked=0 captured=0 selected=2",
     "מנורה מבטחים פנסיה: links=111 files=30 clicked=0 captured=0 selected=7",
     "מנורה מבטחים פנסיה: links=112 files=31 clicked=0 captured=0 selected=12",
     "מנורה מבטחים פנסיה: links=109 files=31 clicked=0 captured=0 selected=12",
     "מנורה מבטחים פנסיה: links=110 files=32 clicked=0 captured=0 selected=13",
     "מנורה מבטחים פנסיה: links=110 files=32 clicked=0 captured=0 selected=13",
-    "מנורה מבטחים פנסיה: links=83 files=6 clicked=0 captured=0 selected=1",
     "מנורה מבטחים פנסיה: links=95 files=20 clicked=0 captured=0 selected=5",
-    "מנורה מבטחים פנסיה: links=114 files=36 clicked=0 captured=0 selected=0",
-    "   ? 12.25-הרכב-נכסים-מנורה-מבטחים-פנסיה.xlsx |  | מנורה מבטחים פנסיה - הרכב השקעות של הקרן לתקופה של 12 חודשים",
-    "   ? 08.26-הרכב-נכסים-מנורה-מבטחים-פנסיה.xlsx | לחצו כאן | מנורה מבטחים פנסיה - הרכב השקעות של הקרן לתקופה של 12 חודשים",
-    "   ? 11.25-הרכב-נכסים-מנורה-מבטחים-פנסיה.xlsx |  | מנורה מבטחים פנסיה - הרכב השקעות של הקרן לתקופה של 12 חודשים",
-    "   ? 08.26-הרכב-נכסים-מנורה-מבטחים-משלימה.xlsx | לחצו כאן | מנורה מבטחים משלימה - הרכב השקעות הקרן לתקופה של 12 חודשים -",
-    "   ? 512245812_pn_p_0226.xlsx |  | 30.06.2026",
-    "   ? 512245812_pn_p_0126.xlsx |  | 31.03.2026",
-    "מנורה מבטחים פנסיה: links=124 files=49 clicked=0 captured=0 selected=2",
+    "מנורה מבטחים פנסיה: links=83 files=6 clicked=0 captured=0 selected=1",
     "מנורה מבטחים פנסיה: links=89 files=18 clicked=0 captured=0 selected=0",
     "   ? 512245812_gm_p_0226.xlsx |  | 30.06.2026",
     "   ? 512245812_gm_p_0126.xlsx |  | 31.03.2026",
@@ -15728,6 +15717,14 @@
     "   ? 512245812_gm_0325.xlsx |  | 30.09.2025",
     "   ? 512245812_gm_p_0225.xlsx |  | 30.06.2025",
     "   ? 512245812_gm_p_0125.xlsx |  | 31.03.2025",
+    "מנורה מבטחים פנסיה: links=114 files=36 clicked=0 captured=0 selected=0",
+    "   ? 12.25-הרכב-נכסים-מנורה-מבטחים-פנסיה.xlsx |  | מנורה מבטחים פנסיה - הרכב השקעות של הקרן לתקופה של 12 חודשים",
+    "   ? 08.26-הרכב-נכסים-מנורה-מבטחים-פנסיה.xlsx | לחצו כאן | מנורה מבטחים פנסיה - הרכב השקעות של הקרן לתקופה של 12 חודשים",
+    "   ? 11.25-הרכב-נכסים-מנורה-מבטחים-פנסיה.xlsx |  | מנורה מבטחים פנסיה - הרכב השקעות של הקרן לתקופה של 12 חודשים",
+    "   ? 08.26-הרכב-נכסים-מנורה-מבטחים-משלימה.xlsx | לחצו כאן | מנורה מבטחים משלימה - הרכב השקעות הקרן לתקופה של 12 חודשים -",
+    "   ? 512245812_pn_p_0226.xlsx |  | 30.06.2026",
+    "   ? 512245812_pn_p_0126.xlsx |  | 31.03.2026",
+    "מנורה מבטחים פנסיה: links=124 files=49 clicked=0 captured=0 selected=8",
     "מנורה מבטחים פנסיה: links=74 files=1 clicked=0 captured=0 selected=0",
     "   ? esg-report-2021-22022.pdf | (html) | ",
     "מנורה מבטחים פנסיה: links=77 files=6 clicked=0 captured=0 selected=0",
@@ -15738,7 +15735,14 @@
     "   ? צדדים-קשורים-2021.xlsx |  | שם הדוח משתתפת כללי",
     "   ? esg-report-2021-22022.pdf | (html) | "
    ],
-   "new_files": []
+   "new_files": [
+    "6e9d76e647a0_מדינית-השקעה-לשנת-2026-מנורה-מבטחים-משתתפת-בפנסיה-תקציבית-1280.xlsx",
+    "8fd3c5177fa5_מדינית-השקעה-לשנת-2025-מנורה-מבטחים-משתתפת-בפנסיה-תקציבית-1280.xlsx",
+    "212ce35cc67a_מדינית-השקעה-לשנת-2024-מנורה-מבטחים-משתתפת-בפנסיה-תקציבית-1280.xlsx",
+    "c1ddde8228dc_מדינית-השקעה-לשנת-2023-מנורה-מבטחים-משתתפת-בפנסיה-תקציבית-1280.xlsx",
+    "5ec4e7b70867_מדינית-השקעה-לשנת-2022-מנורה-מבטחים-משתתפת-בפנסיה-תקציבית.xlsx",
+    "af5313604522_מדינית-השקעה-לשנת-2021-מנורה-מבטחים-משתתפת-בפנסיה-תקציבית.xlsx"
+   ]
   }
  ]
 }
