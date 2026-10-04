@@ -1,7 +1,7 @@
 {
  "extension_version": "2.51.0",
  "started": "2026-10-03T23:59:55.628Z",
- "updated": "2026-10-04T00:05:55.720Z",
+ "updated": "2026-10-04T00:07:10.490Z",
  "final": false,
  "stopped": false,
  "rules_from_github": true,
@@ -21,8 +21,8 @@
   "page_cache_days": 3
  },
  "total_sites": 4,
- "done_sites": 2,
- "new_docs": 0,
+ "done_sites": 3,
+ "new_docs": 5,
  "skipped_complete": [
   {
    "legal_id": "510930654",
@@ -94,17 +94,10 @@
  "active": [
   {
    "name": "מנורה מבטחים פנסיה וגמל בע\"מ",
-   "page": "https://www.menoramivt.co.il/funds/gemel-kayamut-14351",
-   "page_no": 34,
-   "pages": 110,
-   "step": "[3 במקביל] לוחץ על כפתורי הורדה"
-  },
-  {
-   "name": "מנורה מבטחים והסתדרות המהנדסים ניהול קופות גמל בע\"מ",
-   "page": "https://www.menoramivt.co.il/funds/about-menora/engineers/omega-fund/about-menora.engineers.omega-fund.omega-15738",
-   "page_no": 11,
-   "pages": 13,
-   "step": "טוען עמוד"
+   "page": "https://www.menoramivt.co.il/pension/pension-index-fund",
+   "page_no": 44,
+   "pages": 111,
+   "step": "[3 במקביל] פותח אקורדיונים ואוסף קישורים"
   }
  ],
  "sites": [
@@ -1731,6 +1724,1141 @@
     "החברה לניהול קופת : links=0 files=0 clicked=0 captured=0 selected=0"
    ],
    "new_files": []
+  },
+  {
+   "legal_id": "520027715",
+   "name": "מנורה מבטחים והסתדרות המהנדסים ניהול קופות גמל בע\"מ",
+   "pages": [
+    {
+     "url": "https://www.menoramivt.co.il/funds/about-menora/engineers/omega-fund/omega-286",
+     "cache": "none",
+     "links": 277,
+     "followed": [
+      "https://www.menoramivt.co.il/links/regulations-hishtalmut-omega"
+     ],
+     "files": 46,
+     "clicked": 1,
+     "captured": 0,
+     "selected": [
+      "https://cdn.menoramivt.co.il/public/docs/20260126/מדיניות-השקעה-לשנת-2026-מנורה-מבטחים-קרן-השתלמות-אומגה-כללי-286.xlsx",
+      "https://cdn.menoramivt.co.il/public/docs/20250122/מדיניות-השקעה-לשנת-2025-מנורה-מבטחים-קרן-השתלמות-אומגה-כללי-286.xlsx",
+      "https://cdn.menoramivt.co.il/public/docs/20240124/מדיניות-השקעה-לשנת-2024-אומגה-קרן-השתלמות-מסלול-כללי-286.xlsx",
+      "https://cdn.menoramivt.co.il/public/docs/20230620/מדיניות-השקעה-לשנת-2023-אומגה-קרן-השתלמות-מסלול-כללי-286.xlsx",
+      "https://cdn.menoramivt.co.il/public/docs/20220124/מדיניות-השקעה-לשנת-2022-אומגה-קרן-השתלמות-מסלול-כללי.xlsx",
+      "https://cdn.menoramivt.co.il/public/docs/20210919/מדיניות-השקעה-לשנת-2021-אומגה-קרן-השתלמות-מסלול-כללי---החל-מ-16.8.21.xlsx",
+      "https://cdn.menoramivt.co.il/public/docs/20210124/מדיניות-השקעה-לשנת-2021-אומגה-קרן-השתלמות-כללי.xlsx"
+     ],
+     "unselected_files": [
+      {
+       "file": "https://cdn.menoramivt.co.il/public/docs/20240331/esg-report-2021-22022.pdf",
+       "text": "(html)",
+       "ctx": ""
+      },
+      {
+       "file": "https://cdn.menoramivt.co.il/public/docs/20260323/g286a_425.pdf",
+       "text": "(html)",
+       "ctx": ""
+      },
+      {
+       "file": "https://cdn.menoramivt.co.il/public/docs/20250304/g286b_424.pdf",
+       "text": "(html)",
+       "ctx": ""
+      },
+      {
+       "file": "https://cdn.menoramivt.co.il/public/docs/20240331/g286a_423.pdf",
+       "text": "(html)",
+       "ctx": ""
+      },
+      {
+       "file": "https://cdn.menoramivt.co.il/public/docs/20230316/g286a_422.pdf",
+       "text": "(html)",
+       "ctx": ""
+      },
+      {
+       "file": "https://cdn.menoramivt.co.il/public/docs/20260420/צדדים-קשורים.אומגה-קרן-השתלמות.12.2025.xlsx",
+       "text": "(html)",
+       "ctx": ""
+      },
+      {
+       "file": "https://cdn.menoramivt.co.il/public/docs/20250624/צדדים-קשורים.אומגה-קרן-השתלמות.12.2024.xlsx",
+       "text": "(html)",
+       "ctx": ""
+      },
+      {
+       "file": "https://cdn.menoramivt.co.il/public/docs/20240401/צדדים-קשורים.אומגה-קרן-השתלמות.12.2023.xlsx",
+       "text": "(html)",
+       "ctx": ""
+      },
+      {
+       "file": "https://cdn.menoramivt.co.il/public/docs/20230323/צדדים-קשורים.אומגה-קרן-השתלמות.12.2022.xlsx",
+       "text": "(html)",
+       "ctx": ""
+      },
+      {
+       "file": "https://cdn.menoramivt.co.il/public/docs/20240404/520027715_g286_p423.xlsx",
+       "text": "(html)",
+       "ctx": ""
+      },
+      {
+       "file": "https://cdn.menoramivt.co.il/public/docs/20231207/520027715_g286_p323.xlsx",
+       "text": "(html)",
+       "ctx": ""
+      },
+      {
+       "file": "https://cdn.menoramivt.co.il/public/docs/20230829/520027715_g286_p223.xlsx",
+       "text": "(html)",
+       "ctx": ""
+      },
+      {
+       "file": "https://cdn.menoramivt.co.il/public/docs/20230601/520027715_g286_p123.xlsx",
+       "text": "(html)",
+       "ctx": ""
+      },
+      {
+       "file": "https://cdn.menoramivt.co.il/public/docs/20230517/520027715_g286_p422-(1).xlsx",
+       "text": "(html)",
+       "ctx": ""
+      },
+      {
+       "file": "https://cdn.menoramivt.co.il/public/docs/20230517/520027715_g286_p322-(1).xlsx",
+       "text": "(html)",
+       "ctx": ""
+      },
+      {
+       "file": "https://cdn.menoramivt.co.il/public/docs/20240408/520027715_g286_p222.xlsx",
+       "text": "(html)",
+       "ctx": ""
+      },
+      {
+       "file": "https://cdn.menoramivt.co.il/public/docs/20260914/דוח-חודשי-לאתר.286.08.2026.xlsx",
+       "text": "(html)",
+       "ctx": ""
+      },
+      {
+       "file": "https://cdn.menoramivt.co.il/public/docs/20260720/תרומת-אפיקי-השקעה-לתשואה-הכוללת---מנורה-מבטחים-קרן-השתלמות-אומגה-כללי.xlsx",
+       "text": "(html)",
+       "ctx": ""
+      },
+      {
+       "file": "https://cdn.menoramivt.co.il/public/docs/20260503/520027715_g286_yield126.xlsx",
+       "text": "(html)",
+       "ctx": ""
+      },
+      {
+       "file": "https://cdn.menoramivt.co.il/public/docs/20260202/520027715_g286_yield425.xlsx",
+       "text": "(html)",
+       "ctx": ""
+      },
+      {
+       "file": "https://cdn.menoramivt.co.il/public/docs/20251029/520027715_g286_yield325.xlsx",
+       "text": "(html)",
+       "ctx": ""
+      },
+      {
+       "file": "https://cdn.menoramivt.co.il/public/docs/20250728/520027715_g286_yield225.xlsx",
+       "text": "(html)",
+       "ctx": ""
+      },
+      {
+       "file": "https://cdn.menoramivt.co.il/public/docs/20250504/520027715_g286_yield125.xlsx",
+       "text": "(html)",
+       "ctx": ""
+      },
+      {
+       "file": "https://cdn.menoramivt.co.il/public/docs/20250319/520027715_g286_yield424.xlsx",
+       "text": "(html)",
+       "ctx": ""
+      },
+      {
+       "file": "https://cdn.menoramivt.co.il/public/docs/20241106/520027715_g286_yield324.xlsx",
+       "text": "(html)",
+       "ctx": ""
+      }
+     ]
+    },
+    {
+     "url": "https://www.menoramivt.co.il/funds/about-menora/engineers/omega-fund/omega-1445",
+     "cache": "none",
+     "links": 227,
+     "followed": [],
+     "files": 1,
+     "clicked": 0,
+     "captured": 0,
+     "selected": [],
+     "unselected_files": [
+      {
+       "file": "https://cdn.menoramivt.co.il/public/docs/20240331/esg-report-2021-22022.pdf",
+       "text": "(html)",
+       "ctx": ""
+      }
+     ]
+    },
+    {
+     "url": "https://www.menoramivt.co.il/funds/about-menora/engineers/omega-fund/omega-1446",
+     "cache": "none",
+     "links": 278,
+     "followed": [],
+     "files": 47,
+     "clicked": 1,
+     "captured": 0,
+     "selected": [
+      "https://cdn.menoramivt.co.il/public/docs/20260310/מדיניות-השקעה-לשנת-2026-מנורה-מבטחים-קרן-השתלמות-אומגה-מניות-1446.xlsx",
+      "https://cdn.menoramivt.co.il/public/docs/20250122/מדיניות-השקעה-לשנת-2025-מנורה-מבטחים-קרן-השתלמות-אומגה-מניות-1446.xlsx",
+      "https://cdn.menoramivt.co.il/public/docs/20240304/מדיניות-השקעה-לשנת-2024-אומגה-קרן-השתלמות-מסלול-מניות-1446.xlsx",
+      "https://cdn.menoramivt.co.il/public/docs/20240124/מדיניות-השקעה-לשנת-2024-אומגה-קרן-השתלמות-מסלול-מניות-1446.xlsx",
+      "https://cdn.menoramivt.co.il/public/docs/20230620/מדיניות-השקעה-לשנת-2023-אומגה-קרן-השתלמות-מסלול-מניות-1446.xlsx",
+      "https://cdn.menoramivt.co.il/public/docs/20220124/מדיניות-השקעה-לשנת-2022-אומגה-קרן-השתלמות-מסלול-מניות.xlsx",
+      "https://cdn.menoramivt.co.il/public/docs/20210124/מדיניות-השקעה-לשנת-2021-אומגה-קרן-השתלמות-מסלול-מניות.xlsx",
+      "https://cdn.menoramivt.co.il/public/docs/מדיניות-השקעה-לשנת-2020-אומגה-קרן-השתלמות-מסלול-מניות.xlsx"
+     ],
+     "unselected_files": [
+      {
+       "file": "https://cdn.menoramivt.co.il/public/docs/20240331/esg-report-2021-22022.pdf",
+       "text": "(html)",
+       "ctx": ""
+      },
+      {
+       "file": "https://cdn.menoramivt.co.il/public/docs/20260323/g286a_425.pdf",
+       "text": "(html)",
+       "ctx": ""
+      },
+      {
+       "file": "https://cdn.menoramivt.co.il/public/docs/20250304/g286b_424.pdf",
+       "text": "(html)",
+       "ctx": ""
+      },
+      {
+       "file": "https://cdn.menoramivt.co.il/public/docs/20240331/g286a_423.pdf",
+       "text": "(html)",
+       "ctx": ""
+      },
+      {
+       "file": "https://cdn.menoramivt.co.il/public/docs/20230316/g286a_422.pdf",
+       "text": "(html)",
+       "ctx": ""
+      },
+      {
+       "file": "https://cdn.menoramivt.co.il/public/docs/20260420/צדדים-קשורים.אומגה-קרן-השתלמות.12.2025.xlsx",
+       "text": "(html)",
+       "ctx": ""
+      },
+      {
+       "file": "https://cdn.menoramivt.co.il/public/docs/20250624/צדדים-קשורים.אומגה-קרן-השתלמות.12.2024.xlsx",
+       "text": "(html)",
+       "ctx": ""
+      },
+      {
+       "file": "https://cdn.menoramivt.co.il/public/docs/20240401/צדדים-קשורים.אומגה-קרן-השתלמות.12.2023.xlsx",
+       "text": "(html)",
+       "ctx": ""
+      },
+      {
+       "file": "https://cdn.menoramivt.co.il/public/docs/20230323/צדדים-קשורים.אומגה-קרן-השתלמות.12.2022.xlsx",
+       "text": "(html)",
+       "ctx": ""
+      },
+      {
+       "file": "https://cdn.menoramivt.co.il/public/docs/20240404/520027715_g1446_p423.xlsx",
+       "text": "(html)",
+       "ctx": ""
+      },
+      {
+       "file": "https://cdn.menoramivt.co.il/public/docs/20231207/520027715_g1446_p323.xlsx",
+       "text": "(html)",
+       "ctx": ""
+      },
+      {
+       "file": "https://cdn.menoramivt.co.il/public/docs/20230829/520027715_g1446_p223.xlsx",
+       "text": "(html)",
+       "ctx": ""
+      },
+      {
+       "file": "https://cdn.menoramivt.co.il/public/docs/20230601/520027715_g1446_p123.xlsx",
+       "text": "(html)",
+       "ctx": ""
+      },
+      {
+       "file": "https://cdn.menoramivt.co.il/public/docs/20230329/520027715_g1446_p422.xlsx",
+       "text": "(html)",
+       "ctx": ""
+      },
+      {
+       "file": "https://cdn.menoramivt.co.il/public/docs/20221204/520027715_g1446_p322.xlsx",
+       "text": "(html)",
+       "ctx": ""
+      },
+      {
+       "file": "https://cdn.menoramivt.co.il/public/docs/20240408/520027715_g1446_p222.xlsx",
+       "text": "(html)",
+       "ctx": ""
+      },
+      {
+       "file": "https://cdn.menoramivt.co.il/public/docs/20260914/דוח-חודשי-לאתר.1446.08.2026.xlsx",
+       "text": "(html)",
+       "ctx": ""
+      },
+      {
+       "file": "https://cdn.menoramivt.co.il/public/docs/20260720/תרומת-אפיקי-השקעה-לתשואה-הכוללת---מנורה-מבטחים-קרן-השתלמות-אומגה-מניות.xlsx",
+       "text": "(html)",
+       "ctx": ""
+      },
+      {
+       "file": "https://cdn.menoramivt.co.il/public/docs/20260503/520027715_g1446_yield126.xlsx",
+       "text": "(html)",
+       "ctx": ""
+      },
+      {
+       "file": "https://cdn.menoramivt.co.il/public/docs/20260202/520027715_g1446_yield425.xlsx",
+       "text": "(html)",
+       "ctx": ""
+      },
+      {
+       "file": "https://cdn.menoramivt.co.il/public/docs/20251029/520027715_g1446_yield325.xlsx",
+       "text": "(html)",
+       "ctx": ""
+      },
+      {
+       "file": "https://cdn.menoramivt.co.il/public/docs/20250728/520027715_g1446_yield225.xlsx",
+       "text": "(html)",
+       "ctx": ""
+      },
+      {
+       "file": "https://cdn.menoramivt.co.il/public/docs/20250504/520027715_g1446_yield125.xlsx",
+       "text": "(html)",
+       "ctx": ""
+      },
+      {
+       "file": "https://cdn.menoramivt.co.il/public/docs/20250319/520027715_g1446_yield424.xlsx",
+       "text": "(html)",
+       "ctx": ""
+      },
+      {
+       "file": "https://cdn.menoramivt.co.il/public/docs/20241106/520027715_g1446_yield324.xlsx",
+       "text": "(html)",
+       "ctx": ""
+      }
+     ]
+    },
+    {
+     "url": "https://www.menoramivt.co.il/funds/about-menora/engineers/omega-fund/omega-9803",
+     "cache": "none",
+     "links": 278,
+     "followed": [],
+     "files": 47,
+     "clicked": 1,
+     "captured": 0,
+     "selected": [
+      "https://cdn.menoramivt.co.il/public/docs/20260126/מדיניות-השקעה-לשנת-2026-מנורה-מבטחים-קרן-השתלמות-אומגה-אשראי-ואגח-עם-מניות-(עד-25-אחוז-מניות)-9803.xlsx",
+      "https://cdn.menoramivt.co.il/public/docs/20250122/מדיניות-השקעה-לשנת-2025-מנורה-מבטחים-קרן-השתלמות-אומגה-אשראי-ואגח-עם-מניות-(עד-25-אחוז-מניות)-9803.xlsx",
+      "https://cdn.menoramivt.co.il/public/docs/20240630/מדיניות-השקעה-לשנת-2024-מנורה-מבטחים-קרן-השתלמות-אומגה-אשראי-ואגח-עם-מניות-(עד-25-אחוז-מניות)-9803.xlsx",
+      "https://cdn.menoramivt.co.il/public/docs/20240124/מדיניות-השקעה-לשנת-2024-אומגה-קרן-השתלמות-אגח-עד-25-מניות-9803.xlsx",
+      "https://cdn.menoramivt.co.il/public/docs/20230620/מדיניות-השקעה-לשנת-2023-אומגה-קרן-השתלמות-אגח-עד-25-מניות-9803.xlsx",
+      "https://cdn.menoramivt.co.il/public/docs/20220124/מדיניות-השקעה-לשנת-2022-אומגה-קרן-השתלמות-אגח-עד-25-אחוז-מניות.xlsx",
+      "https://cdn.menoramivt.co.il/public/docs/20210124/מדיניות-השקעה-לשנת-2021-אומגה-קרן-השתלמות-אגח-עד-25-אחוז-מניות.xlsx"
+     ],
+     "unselected_files": [
+      {
+       "file": "https://cdn.menoramivt.co.il/public/docs/20240331/esg-report-2021-22022.pdf",
+       "text": "(html)",
+       "ctx": ""
+      },
+      {
+       "file": "https://cdn.menoramivt.co.il/public/docs/20260323/g286a_425.pdf",
+       "text": "(html)",
+       "ctx": ""
+      },
+      {
+       "file": "https://cdn.menoramivt.co.il/public/docs/20250304/g286b_424.pdf",
+       "text": "(html)",
+       "ctx": ""
+      },
+      {
+       "file": "https://cdn.menoramivt.co.il/public/docs/20240331/g286a_423.pdf",
+       "text": "(html)",
+       "ctx": ""
+      },
+      {
+       "file": "https://cdn.menoramivt.co.il/public/docs/20230316/g286a_422.pdf",
+       "text": "(html)",
+       "ctx": ""
+      },
+      {
+       "file": "https://cdn.menoramivt.co.il/public/docs/20260420/צדדים-קשורים.אומגה-קרן-השתלמות.12.2025.xlsx",
+       "text": "(html)",
+       "ctx": ""
+      },
+      {
+       "file": "https://cdn.menoramivt.co.il/public/docs/20250624/צדדים-קשורים.אומגה-קרן-השתלמות.12.2024.xlsx",
+       "text": "(html)",
+       "ctx": ""
+      },
+      {
+       "file": "https://cdn.menoramivt.co.il/public/docs/20240401/צדדים-קשורים.אומגה-קרן-השתלמות.12.2023.xlsx",
+       "text": "(html)",
+       "ctx": ""
+      },
+      {
+       "file": "https://cdn.menoramivt.co.il/public/docs/20230323/צדדים-קשורים.אומגה-קרן-השתלמות.12.2022.xlsx",
+       "text": "(html)",
+       "ctx": ""
+      },
+      {
+       "file": "https://cdn.menoramivt.co.il/public/docs/20240404/520027715_g9803_p423.xlsx",
+       "text": "(html)",
+       "ctx": ""
+      },
+      {
+       "file": "https://cdn.menoramivt.co.il/public/docs/20231207/520027715_g9803_p323.xlsx",
+       "text": "(html)",
+       "ctx": ""
+      },
+      {
+       "file": "https://cdn.menoramivt.co.il/public/docs/20230829/520027715_g9803_p223.xlsx",
+       "text": "(html)",
+       "ctx": ""
+      },
+      {
+       "file": "https://cdn.menoramivt.co.il/public/docs/20230601/520027715_g9803_p123.xlsx",
+       "text": "(html)",
+       "ctx": ""
+      },
+      {
+       "file": "https://cdn.menoramivt.co.il/public/docs/20230329/520027715_g9803_p422.xlsx",
+       "text": "(html)",
+       "ctx": ""
+      },
+      {
+       "file": "https://cdn.menoramivt.co.il/public/docs/20221204/520027715_g9803_p322.xlsx",
+       "text": "(html)",
+       "ctx": ""
+      },
+      {
+       "file": "https://cdn.menoramivt.co.il/public/docs/20240408/520027715_g9803_p222.xlsx",
+       "text": "(html)",
+       "ctx": ""
+      },
+      {
+       "file": "https://cdn.menoramivt.co.il/public/docs/20260914/דוח-חודשי-לאתר.9803.08.2026.xlsx",
+       "text": "(html)",
+       "ctx": ""
+      },
+      {
+       "file": "https://cdn.menoramivt.co.il/public/docs/20260721/תרומת-אפיקי-השקעה-לתשואה-הכוללת---מנורה-מבטחים-קרן-השתלמות-אומגה-אשראי-ואגח-עם-מניות-עד-25-מניות.xlsx",
+       "text": "(html)",
+       "ctx": ""
+      },
+      {
+       "file": "https://cdn.menoramivt.co.il/public/docs/20260503/520027715_g9803_yield126.xlsx",
+       "text": "(html)",
+       "ctx": ""
+      },
+      {
+       "file": "https://cdn.menoramivt.co.il/public/docs/20260202/520027715_g9803_yield425.xlsx",
+       "text": "(html)",
+       "ctx": ""
+      },
+      {
+       "file": "https://cdn.menoramivt.co.il/public/docs/20251029/520027715_g9803_yield325.xlsx",
+       "text": "(html)",
+       "ctx": ""
+      },
+      {
+       "file": "https://cdn.menoramivt.co.il/public/docs/20250728/520027715_g9803_yield225.xlsx",
+       "text": "(html)",
+       "ctx": ""
+      },
+      {
+       "file": "https://cdn.menoramivt.co.il/public/docs/20250504/520027715_g9803_yield125.xlsx",
+       "text": "(html)",
+       "ctx": ""
+      },
+      {
+       "file": "https://cdn.menoramivt.co.il/public/docs/20250319/520027715_g9803_yield424.xlsx",
+       "text": "(html)",
+       "ctx": ""
+      },
+      {
+       "file": "https://cdn.menoramivt.co.il/public/docs/20241106/520027715_g9803_yield324.xlsx",
+       "text": "(html)",
+       "ctx": ""
+      }
+     ]
+    },
+    {
+     "url": "https://www.menoramivt.co.il/funds/about-menora/engineers/omega-fund/omega-14418",
+     "cache": "none",
+     "links": 265,
+     "followed": [],
+     "files": 34,
+     "clicked": 1,
+     "captured": 0,
+     "selected": [
+      "https://cdn.menoramivt.co.il/public/docs/20260126/מדיניות-השקעה-לשנת-2026-מנורה-מבטחים-קרן-השתלמות-אומגה-עוקב-מדדי-מניות-14418.xlsx",
+      "https://cdn.menoramivt.co.il/public/docs/20250122/מדיניות-השקעה-לשנת-2025-מנורה-מבטחים-קרן-השתלמות-אומגה-עוקב-מדדי-מניות-14418.xlsx",
+      "https://cdn.menoramivt.co.il/public/docs/20240701/מדיניות-השקעה-לשנת-2024-מנורה-מבטחים-קרן-השתלמות-אומגה-עוקב-מדדי-מניות-14418.xlsx",
+      "https://cdn.menoramivt.co.il/public/docs/20240124/מדיניות-השקעה-לשנת-2024-אומגה-קרן-השתלמות-מסלול-פאסיבי---מדדי-מניות-14418.xlsx",
+      "https://cdn.menoramivt.co.il/public/docs/20230620/מדיניות-השקעה-לשנת-2023-אומגה-קרן-השתלמות-מסלול-פאסיבי---מדדי-מניות-14418.xlsx"
+     ],
+     "unselected_files": [
+      {
+       "file": "https://cdn.menoramivt.co.il/public/docs/20240331/esg-report-2021-22022.pdf",
+       "text": "(html)",
+       "ctx": ""
+      },
+      {
+       "file": "https://cdn.menoramivt.co.il/public/docs/20260323/g286a_425.pdf",
+       "text": "(html)",
+       "ctx": ""
+      },
+      {
+       "file": "https://cdn.menoramivt.co.il/public/docs/20250304/g286b_424.pdf",
+       "text": "(html)",
+       "ctx": ""
+      },
+      {
+       "file": "https://cdn.menoramivt.co.il/public/docs/20240331/g286a_423.pdf",
+       "text": "(html)",
+       "ctx": ""
+      },
+      {
+       "file": "https://cdn.menoramivt.co.il/public/docs/20260420/צדדים-קשורים.אומגה-קרן-השתלמות.12.2025.xlsx",
+       "text": "(html)",
+       "ctx": ""
+      },
+      {
+       "file": "https://cdn.menoramivt.co.il/public/docs/20250624/צדדים-קשורים.אומגה-קרן-השתלמות.12.2024.xlsx",
+       "text": "(html)",
+       "ctx": ""
+      },
+      {
+       "file": "https://cdn.menoramivt.co.il/public/docs/20240401/צדדים-קשורים.אומגה-קרן-השתלמות.12.2023.xlsx",
+       "text": "(html)",
+       "ctx": ""
+      },
+      {
+       "file": "https://cdn.menoramivt.co.il/public/docs/20230323/צדדים-קשורים.אומגה-קרן-השתלמות.12.2022.xlsx",
+       "text": "(html)",
+       "ctx": ""
+      },
+      {
+       "file": "https://cdn.menoramivt.co.il/public/docs/20240404/520027715_g14418_p423.xlsx",
+       "text": "(html)",
+       "ctx": ""
+      },
+      {
+       "file": "https://cdn.menoramivt.co.il/public/docs/20231207/520027715_g14418_p323.xlsx",
+       "text": "(html)",
+       "ctx": ""
+      },
+      {
+       "file": "https://cdn.menoramivt.co.il/public/docs/20230829/520027715_g14418_p223.xlsx",
+       "text": "(html)",
+       "ctx": ""
+      },
+      {
+       "file": "https://cdn.menoramivt.co.il/public/docs/20230601/520027715_g14418_p123.xlsx",
+       "text": "(html)",
+       "ctx": ""
+      },
+      {
+       "file": "https://cdn.menoramivt.co.il/public/docs/20260914/דוח-חודשי-לאתר.14418.08.2026.xlsx",
+       "text": "(html)",
+       "ctx": ""
+      },
+      {
+       "file": "https://cdn.menoramivt.co.il/public/docs/20260720/תרומת-אפיקי-השקעה-לתשואה-הכוללת---מנורה-מבטחים-קרן-השתלמות-אומגה-עוקב-מדדי-מניות.xlsx",
+       "text": "(html)",
+       "ctx": ""
+      },
+      {
+       "file": "https://cdn.menoramivt.co.il/public/docs/20260503/520027715_g14418_yield126.xlsx",
+       "text": "(html)",
+       "ctx": ""
+      },
+      {
+       "file": "https://cdn.menoramivt.co.il/public/docs/20260202/520027715_g14418_yield425.xlsx",
+       "text": "(html)",
+       "ctx": ""
+      },
+      {
+       "file": "https://cdn.menoramivt.co.il/public/docs/20251029/520027715_g14418_yield325.xlsx",
+       "text": "(html)",
+       "ctx": ""
+      },
+      {
+       "file": "https://cdn.menoramivt.co.il/public/docs/20250728/520027715_g14418_yield225.xlsx",
+       "text": "(html)",
+       "ctx": ""
+      },
+      {
+       "file": "https://cdn.menoramivt.co.il/public/docs/20250504/520027715_g14418_yield125.xlsx",
+       "text": "(html)",
+       "ctx": ""
+      },
+      {
+       "file": "https://cdn.menoramivt.co.il/public/docs/20250319/520027715_g14418_yield424.xlsx",
+       "text": "(html)",
+       "ctx": ""
+      },
+      {
+       "file": "https://cdn.menoramivt.co.il/public/docs/20241106/520027715_g14418_yield324.xlsx",
+       "text": "(html)",
+       "ctx": ""
+      },
+      {
+       "file": "https://cdn.menoramivt.co.il/public/docs/20240728/520027715_g14418_yield224.xlsx",
+       "text": "(html)",
+       "ctx": ""
+      },
+      {
+       "file": "https://cdn.menoramivt.co.il/public/docs/20240708/520027715_g14418_yield124.xlsx",
+       "text": "(html)",
+       "ctx": ""
+      },
+      {
+       "file": "https://cdn.menoramivt.co.il/public/docs/20240311/520027715_g14418_yield423.xlsx",
+       "text": "(html)",
+       "ctx": ""
+      },
+      {
+       "file": "https://cdn.menoramivt.co.il/public/docs/20231105/520027715_g14418_yield323.xlsx",
+       "text": "(html)",
+       "ctx": ""
+      }
+     ]
+    },
+    {
+     "url": "https://www.menoramivt.co.il/funds/about-menora/engineers/omega-fund/omega-15738",
+     "cache": "none",
+     "links": 227,
+     "followed": [],
+     "files": 1,
+     "clicked": 0,
+     "captured": 0,
+     "selected": [],
+     "unselected_files": [
+      {
+       "file": "https://cdn.menoramivt.co.il/public/docs/20240331/esg-report-2021-22022.pdf",
+       "text": "(html)",
+       "ctx": ""
+      }
+     ]
+    },
+    {
+     "url": "https://www.menoramivt.co.il/funds/about-menora/engineers/omega-fund/omega-15739",
+     "cache": "none",
+     "links": 227,
+     "followed": [],
+     "files": 1,
+     "clicked": 0,
+     "captured": 0,
+     "selected": [],
+     "unselected_files": [
+      {
+       "file": "https://cdn.menoramivt.co.il/public/docs/20240331/esg-report-2021-22022.pdf",
+       "text": "(html)",
+       "ctx": ""
+      }
+     ]
+    },
+    {
+     "url": "https://www.menoramivt.co.il/links/keren-hishtalmut/omega-fund",
+     "cache": "none",
+     "links": 238,
+     "followed": [],
+     "files": 1,
+     "clicked": 0,
+     "captured": 0,
+     "selected": [],
+     "unselected_files": [
+      {
+       "file": "https://cdn.menoramivt.co.il/public/docs/20240331/esg-report-2021-22022.pdf",
+       "text": "(html)",
+       "ctx": ""
+      }
+     ]
+    },
+    {
+     "url": "https://www.menoramivt.co.il/funds/about-menora/engineers/omega-fund/omega-9802",
+     "cache": "none",
+     "links": 268,
+     "followed": [],
+     "files": 35,
+     "clicked": 1,
+     "captured": 0,
+     "selected": [
+      "https://cdn.menoramivt.co.il/public/docs/20230620/מדיניות-השקעה-לשנת-2023-אומגה-קרן-השתלמות-אגח-עד-15-מניות-9802.xlsx",
+      "https://cdn.menoramivt.co.il/public/docs/20220124/מדיניות-השקעה-לשנת-2022-אומגה-קרן-השתלמות-אגח-עד-15-אחוז-מניות.xlsx",
+      "https://cdn.menoramivt.co.il/public/docs/20210124/מדיניות-השקעה-לשנת-2021-אומגה-קרן-השתלמות-אגח-עד-15-אחוז-מניות.xlsx",
+      "https://cdn.menoramivt.co.il/public/docs/מדיניות-השקעה-לשנת-2020-אומגה-קרן-השתלמות-אגח-עד-15-אחוז-מניות.xlsx",
+      "https://cdn.menoramivt.co.il/public/docs/אומגה-9802-מדיניות-השקעה-2019.xlsx"
+     ],
+     "unselected_files": [
+      {
+       "file": "https://cdn.menoramivt.co.il/public/docs/20240331/esg-report-2021-22022.pdf",
+       "text": "(html)",
+       "ctx": ""
+      },
+      {
+       "file": "https://cdn.menoramivt.co.il/public/docs/20240331/g286a_423.pdf",
+       "text": "(html)",
+       "ctx": ""
+      },
+      {
+       "file": "https://cdn.menoramivt.co.il/public/docs/20230316/g286a_422.pdf",
+       "text": "(html)",
+       "ctx": ""
+      },
+      {
+       "file": "https://cdn.menoramivt.co.il/public/docs/20220330/g286a_421.pdf",
+       "text": "(html)",
+       "ctx": ""
+      },
+      {
+       "file": "https://cdn.menoramivt.co.il/public/docs/20210321/אומגה-דוח-כספי-2020.pdf",
+       "text": "(html)",
+       "ctx": ""
+      },
+      {
+       "file": "https://cdn.menoramivt.co.il/public/docs/20240401/צדדים-קשורים.אומגה-קרן-השתלמות.12.2023.xlsx",
+       "text": "(html)",
+       "ctx": ""
+      },
+      {
+       "file": "https://cdn.menoramivt.co.il/public/docs/20220330/צדדים-קשורים.אומגה-קרן-השתלמות.12.2021.xlsx",
+       "text": "(html)",
+       "ctx": ""
+      },
+      {
+       "file": "https://cdn.menoramivt.co.il/public/docs/20210324/צדדים-קשורים.אומגה-קרן-השתלמות.12.2020.xlsx",
+       "text": "(html)",
+       "ctx": ""
+      },
+      {
+       "file": "https://cdn.menoramivt.co.il/public/docs/צדדים-קשורים.אומגה-קרן-השתלמות.12.2019.xlsx",
+       "text": "(html)",
+       "ctx": ""
+      },
+      {
+       "file": "https://cdn.menoramivt.co.il/public/docs/20240404/520027715_g9802_p423.xlsx",
+       "text": "(html)",
+       "ctx": ""
+      },
+      {
+       "file": "https://cdn.menoramivt.co.il/public/docs/20231207/520027715_g9802_p323.xlsx",
+       "text": "(html)",
+       "ctx": ""
+      },
+      {
+       "file": "https://cdn.menoramivt.co.il/public/docs/20230829/520027715_g9802_p223.xlsx",
+       "text": "(html)",
+       "ctx": ""
+      },
+      {
+       "file": "https://cdn.menoramivt.co.il/public/docs/20230601/520027715_g9802_p123.xlsx",
+       "text": "(html)",
+       "ctx": ""
+      },
+      {
+       "file": "https://cdn.menoramivt.co.il/public/docs/20240408/520027715_g9802_p422.xlsx",
+       "text": "(html)",
+       "ctx": ""
+      },
+      {
+       "file": "https://cdn.menoramivt.co.il/public/docs/20221204/520027715_g9802_p322.xlsx",
+       "text": "(html)",
+       "ctx": ""
+      },
+      {
+       "file": "https://cdn.menoramivt.co.il/public/docs/20220908/520027715_g9802_p222.xlsx",
+       "text": "(html)",
+       "ctx": ""
+      },
+      {
+       "file": "https://cdn.menoramivt.co.il/public/docs/20231105/דוח-חודשי-לאתר.9802.09.2023.xlsx",
+       "text": "(html)",
+       "ctx": ""
+      },
+      {
+       "file": "https://cdn.menoramivt.co.il/public/docs/20240311/520027715_g9802_yield423.xlsx",
+       "text": "(html)",
+       "ctx": ""
+      },
+      {
+       "file": "https://cdn.menoramivt.co.il/public/docs/20231105/520027715_g9802_yield323.xlsx",
+       "text": "(html)",
+       "ctx": ""
+      },
+      {
+       "file": "https://cdn.menoramivt.co.il/public/docs/20230801/520027715_g9802_yield223.xlsx",
+       "text": "(html)",
+       "ctx": ""
+      },
+      {
+       "file": "https://cdn.menoramivt.co.il/public/docs/20230508/520027715_g9802_yield123.xlsx",
+       "text": "(html)",
+       "ctx": ""
+      },
+      {
+       "file": "https://cdn.menoramivt.co.il/public/docs/20230126/520027715_g9802_yield422.xlsx",
+       "text": "(html)",
+       "ctx": ""
+      },
+      {
+       "file": "https://cdn.menoramivt.co.il/public/docs/20221107/520027715_g9802_yield322.xlsx",
+       "text": "(html)",
+       "ctx": ""
+      },
+      {
+       "file": "https://cdn.menoramivt.co.il/public/docs/20220725/520027715_g9802_yield222.xlsx",
+       "text": "(html)",
+       "ctx": ""
+      },
+      {
+       "file": "https://cdn.menoramivt.co.il/public/docs/20220512/520027715_g9802_yield122.xlsx",
+       "text": "(html)",
+       "ctx": ""
+      }
+     ]
+    },
+    {
+     "url": "https://www.menoramivt.co.il/funds/about-menora/engineers/omega-fund/417",
+     "cache": "none",
+     "links": 278,
+     "followed": [],
+     "files": 47,
+     "clicked": 1,
+     "captured": 0,
+     "selected": [
+      "https://cdn.menoramivt.co.il/public/docs/20260126/מדיניות-השקעה-לשנת-2026-מנורה-מבטחים-קרן-השתלמות-אומגה-אשראי-ואגח-1445.xlsx",
+      "https://cdn.menoramivt.co.il/public/docs/20250122/מדיניות-השקעה-לשנת-2025-מנורה-מבטחים-קרן-השתלמות-אומגה-אשראי-ואגח-1445.xlsx",
+      "https://cdn.menoramivt.co.il/public/docs/20240630/מדיניות-השקעה-לשנת-2024-מנורה-מבטחים-קרן-השתלמות-אומגה-אשראי-ואגח-1445.xlsx",
+      "https://cdn.menoramivt.co.il/public/docs/20240124/מדיניות-השקעה-לשנת-2024-אומגה-קרן-השתלמות-מסלול-אגח-1445.xlsx",
+      "https://cdn.menoramivt.co.il/public/docs/20230620/מדיניות-השקעה-לשנת-2023-אומגה-קרן-השתלמות-מסלול-אגח-1445.xlsx",
+      "https://cdn.menoramivt.co.il/public/docs/20220124/מדיניות-השקעה-לשנת-2022-אומגה-קרן-השתלמות-מסלול-אגח.xlsx",
+      "https://cdn.menoramivt.co.il/public/docs/20210124/מדיניות-השקעה-לשנת-2021-אומגה-קרן-השתלמות-מסלול-אגח.xlsx"
+     ],
+     "unselected_files": [
+      {
+       "file": "https://cdn.menoramivt.co.il/public/docs/20240331/esg-report-2021-22022.pdf",
+       "text": "(html)",
+       "ctx": ""
+      },
+      {
+       "file": "https://cdn.menoramivt.co.il/public/docs/20260323/g286a_425.pdf",
+       "text": "(html)",
+       "ctx": ""
+      },
+      {
+       "file": "https://cdn.menoramivt.co.il/public/docs/20250304/g286b_424.pdf",
+       "text": "(html)",
+       "ctx": ""
+      },
+      {
+       "file": "https://cdn.menoramivt.co.il/public/docs/20240331/g286a_423.pdf",
+       "text": "(html)",
+       "ctx": ""
+      },
+      {
+       "file": "https://cdn.menoramivt.co.il/public/docs/20230316/g286a_422.pdf",
+       "text": "(html)",
+       "ctx": ""
+      },
+      {
+       "file": "https://cdn.menoramivt.co.il/public/docs/20260420/צדדים-קשורים.אומגה-קרן-השתלמות.12.2025.xlsx",
+       "text": "(html)",
+       "ctx": ""
+      },
+      {
+       "file": "https://cdn.menoramivt.co.il/public/docs/20250624/צדדים-קשורים.אומגה-קרן-השתלמות.12.2024.xlsx",
+       "text": "(html)",
+       "ctx": ""
+      },
+      {
+       "file": "https://cdn.menoramivt.co.il/public/docs/20240401/צדדים-קשורים.אומגה-קרן-השתלמות.12.2023.xlsx",
+       "text": "(html)",
+       "ctx": ""
+      },
+      {
+       "file": "https://cdn.menoramivt.co.il/public/docs/20230323/צדדים-קשורים.אומגה-קרן-השתלמות.12.2022.xlsx",
+       "text": "(html)",
+       "ctx": ""
+      },
+      {
+       "file": "https://cdn.menoramivt.co.il/public/docs/20240404/520027715_g1445_p423.xlsx",
+       "text": "(html)",
+       "ctx": ""
+      },
+      {
+       "file": "https://cdn.menoramivt.co.il/public/docs/20231207/520027715_g1445_p323.xlsx",
+       "text": "(html)",
+       "ctx": ""
+      },
+      {
+       "file": "https://cdn.menoramivt.co.il/public/docs/20230829/520027715_g1445_p223.xlsx",
+       "text": "(html)",
+       "ctx": ""
+      },
+      {
+       "file": "https://cdn.menoramivt.co.il/public/docs/20230601/520027715_g1445_p123.xlsx",
+       "text": "(html)",
+       "ctx": ""
+      },
+      {
+       "file": "https://cdn.menoramivt.co.il/public/docs/20230515/520027715_g1445_p422.xlsx",
+       "text": "(html)",
+       "ctx": ""
+      },
+      {
+       "file": "https://cdn.menoramivt.co.il/public/docs/20230515/520027715_g1445_p322.xlsx",
+       "text": "(html)",
+       "ctx": ""
+      },
+      {
+       "file": "https://cdn.menoramivt.co.il/public/docs/20240408/520027715_g1445_p222.xlsx",
+       "text": "(html)",
+       "ctx": ""
+      },
+      {
+       "file": "https://cdn.menoramivt.co.il/public/docs/20260914/דוח-חודשי-לאתר.1445.08.2026.xlsx",
+       "text": "(html)",
+       "ctx": ""
+      },
+      {
+       "file": "https://cdn.menoramivt.co.il/public/docs/20260720/תרומת-אפיקי-השקעה-לתשואה-הכוללת---מנורה-מבטחים-קרן-השתלמות-אומגה-אשראי-ואגח.xlsx",
+       "text": "(html)",
+       "ctx": ""
+      },
+      {
+       "file": "https://cdn.menoramivt.co.il/public/docs/20260503/520027715_g1445_yield126.xlsx",
+       "text": "(html)",
+       "ctx": ""
+      },
+      {
+       "file": "https://cdn.menoramivt.co.il/public/docs/20260202/520027715_g1445_yield425.xlsx",
+       "text": "(html)",
+       "ctx": ""
+      },
+      {
+       "file": "https://cdn.menoramivt.co.il/public/docs/20251029/520027715_g1445_yield325.xlsx",
+       "text": "(html)",
+       "ctx": ""
+      },
+      {
+       "file": "https://cdn.menoramivt.co.il/public/docs/20250728/520027715_g1445_yield225.xlsx",
+       "text": "(html)",
+       "ctx": ""
+      },
+      {
+       "file": "https://cdn.menoramivt.co.il/public/docs/20250504/520027715_g1445_yield125.xlsx",
+       "text": "(html)",
+       "ctx": ""
+      },
+      {
+       "file": "https://cdn.menoramivt.co.il/public/docs/20250319/520027715_g1445_yield424.xlsx",
+       "text": "(html)",
+       "ctx": ""
+      },
+      {
+       "file": "https://cdn.menoramivt.co.il/public/docs/20250204/520027715_g1445_yield424.xlsx",
+       "text": "(html)",
+       "ctx": ""
+      }
+     ]
+    },
+    {
+     "url": "https://www.menoramivt.co.il/funds/about-menora/engineers/omega-fund/about-menora.engineers.omega-fund.omega-15738",
+     "cache": "none",
+     "links": 238,
+     "followed": [],
+     "files": 10,
+     "clicked": 1,
+     "captured": 0,
+     "selected": [
+      "https://cdn.menoramivt.co.il/public/docs/20260126/מדיניות-השקעה-לשנת-2026-מנורה-מבטחים-קרן-השתלמות-אומגה-מניות-סחיר-15738.xlsx",
+      "https://cdn.menoramivt.co.il/public/docs/20251201/מדיניות-השקעה-לשנת-2025-מנורה-מבטחים-קרן-השתלמות-אומגה-מניות-סחיר-15738-(1).xlsx"
+     ],
+     "unselected_files": [
+      {
+       "file": "https://cdn.menoramivt.co.il/public/docs/20240331/esg-report-2021-22022.pdf",
+       "text": "(html)",
+       "ctx": ""
+      },
+      {
+       "file": "https://cdn.menoramivt.co.il/public/docs/20260323/g286a_425.pdf",
+       "text": "(html)",
+       "ctx": ""
+      },
+      {
+       "file": "https://cdn.menoramivt.co.il/public/docs/20260420/צדדים-קשורים.אומגה-קרן-השתלמות.12.2025.xlsx",
+       "text": "(html)",
+       "ctx": ""
+      },
+      {
+       "file": "https://cdn.menoramivt.co.il/public/docs/20260914/דוח-חודשי-לאתר.15738.08.2026.xlsx",
+       "text": "(html)",
+       "ctx": ""
+      },
+      {
+       "file": "https://cdn.menoramivt.co.il/public/docs/20260720/תרומת-אפיקי-השקעה-לתשואה-הכוללת---מנורה-מבטחים-קרן-השתלמות-אומגה-מניות-סחיר.xlsx",
+       "text": "(html)",
+       "ctx": ""
+      },
+      {
+       "file": "https://cdn.menoramivt.co.il/public/docs/20260504/520027715_g15738_yield126.xlsx",
+       "text": "(html)",
+       "ctx": ""
+      },
+      {
+       "file": "https://cdn.menoramivt.co.il/public/docs/20260203/520027715_g15738_yield425.xlsx",
+       "text": "(html)",
+       "ctx": ""
+      },
+      {
+       "file": "https://www.menoramivt.co.il/funds/about-menora/engineers/omega-fund/520027715_g286_Yield322.xlsx",
+       "text": "(html)",
+       "ctx": ""
+      }
+     ]
+    },
+    {
+     "url": "https://www.menoramivt.co.il/funds/about-menora/engineers/omega-fund/omega-fund.omega-SP500",
+     "cache": "none",
+     "links": 241,
+     "followed": [],
+     "files": 11,
+     "clicked": 1,
+     "captured": 0,
+     "selected": [
+      "https://cdn.menoramivt.co.il/public/docs/20260126/מדיניות-השקעה-לשנת-2026-מנורה-מבטחים-קרן-השתלמות-אומגה-עוקב-מדד-s&p-500-15739.xlsx",
+      "https://cdn.menoramivt.co.il/public/docs/20251201/מדיניות-השקעה-לשנת-2025-מנורה-מבטחים-קרן-השתלמות-אומגה-עוקב-מדד-s&p500-15739-(1).xlsx"
+     ],
+     "unselected_files": [
+      {
+       "file": "https://cdn.menoramivt.co.il/public/docs/20240331/esg-report-2021-22022.pdf",
+       "text": "(html)",
+       "ctx": ""
+      },
+      {
+       "file": "https://cdn.menoramivt.co.il/public/docs/20260323/g286a_425.pdf",
+       "text": "(html)",
+       "ctx": ""
+      },
+      {
+       "file": "https://cdn.menoramivt.co.il/public/docs/20260420/צדדים-קשורים.אומגה-קרן-השתלמות.12.2025.xlsx",
+       "text": "(html)",
+       "ctx": ""
+      },
+      {
+       "file": "https://cdn.menoramivt.co.il/public/docs/20260914/דוח-חודשי-לאתר.15739.08.2026.xlsx",
+       "text": "(html)",
+       "ctx": ""
+      },
+      {
+       "file": "https://cdn.menoramivt.co.il/public/docs/20260720/תרומת-אפיקי-השקעה-לתשואה-הכוללת---מנורה-מבטחים-קרן-השתלמות-אומגה-עוקב-מדד-s&p-500.xlsx",
+       "text": "(html)",
+       "ctx": ""
+      },
+      {
+       "file": "https://cdn.menoramivt.co.il/public/docs/20260504/520027715_g15739_yield126.xlsx",
+       "text": "(html)",
+       "ctx": ""
+      },
+      {
+       "file": "https://cdn.menoramivt.co.il/public/docs/20260203/520027715_g15739_yield425.xlsx",
+       "text": "(html)",
+       "ctx": ""
+      },
+      {
+       "file": "https://www.menoramivt.co.il/funds/about-menora/engineers/omega-fund/520027715_g286_Yield322.xlsx",
+       "text": "(html)",
+       "ctx": ""
+      },
+      {
+       "file": "https://www.menoramivt.co.il/funds/about-menora/engineers/omega-fund/30.9.2025.pdf",
+       "text": "(html)",
+       "ctx": ""
+      }
+     ]
+    },
+    {
+     "url": "https://www.menoramivt.co.il/links/regulations-hishtalmut-omega",
+     "cache": "none",
+     "links": 233,
+     "followed": [],
+     "files": 5,
+     "clicked": 0,
+     "captured": 0,
+     "selected": [],
+     "unselected_files": [
+      {
+       "file": "https://cdn.menoramivt.co.il/public/docs/20260511/תקנון-מנורה-מבטחים-השתלמות---מאי-2026.pdf",
+       "text": "לתקנון",
+       "ctx": "תקנון עדכני נכון לתאריך: 05.05.2026 לתקנון"
+      },
+      {
+       "file": "https://cdn.menoramivt.co.il/public/docs/20260511/טבלת-ריכוז-שינויים---מנורה-מבטחים-השתלמות---מאי-2026.pdf",
+       "text": "לקריאה",
+       "ctx": "ריכוז שינויים אחרונים בתקנון שינויים שבוצעו ב-12 החודשים שקדמו ליום 05.05.2026 לקריאה"
+      },
+      {
+       "file": "https://cdn.menoramivt.co.il/public/docs/20251201/תקנון-אומגה-286-בתוקף-מיום-30.9.2025.pdf",
+       "text": "לתקנון",
+       "ctx": "תקנון עדכני נכון לתאריך: 30.09.2025 לתקנון"
+      },
+      {
+       "file": "https://cdn.menoramivt.co.il/public/docs/20251201/שינויים-אומגה-קרן-השתלמות-30.9.25.pdf",
+       "text": "לקריאה",
+       "ctx": "ריכוז שינויים אחרונים בתקנון שינויים שבוצעו ב-12 החודשים שקדמו ליום 30.09.2025 לקריאה"
+      },
+      {
+       "file": "https://cdn.menoramivt.co.il/public/docs/20240331/esg-report-2021-22022.pdf",
+       "text": "(html)",
+       "ctx": ""
+      }
+     ]
+    }
+   ],
+   "new_docs": 5,
+   "found": 286,
+   "selected": 43,
+   "had": 38,
+   "head_skip": 0,
+   "cache_none": 13,
+   "old_skip": 28,
+   "mode": "map",
+   "errors": [],
+   "diag": [
+    "מנורה מבטחים והסתד: links=277 files=46 clicked=1 captured=0 selected=7",
+    "מנורה מבטחים והסתד: links=227 files=1 clicked=0 captured=0 selected=0",
+    "   ? esg-report-2021-22022.pdf | (html) | ",
+    "מנורה מבטחים והסתד: links=278 files=47 clicked=1 captured=0 selected=8",
+    "מנורה מבטחים והסתד: links=278 files=47 clicked=1 captured=0 selected=7",
+    "מנורה מבטחים והסתד: links=265 files=34 clicked=1 captured=0 selected=5",
+    "מנורה מבטחים והסתד: links=227 files=1 clicked=0 captured=0 selected=0",
+    "   ? esg-report-2021-22022.pdf | (html) | ",
+    "מנורה מבטחים והסתד: links=227 files=1 clicked=0 captured=0 selected=0",
+    "   ? esg-report-2021-22022.pdf | (html) | ",
+    "מנורה מבטחים והסתד: links=238 files=1 clicked=0 captured=0 selected=0",
+    "   ? esg-report-2021-22022.pdf | (html) | ",
+    "מנורה מבטחים והסתד: links=268 files=35 clicked=1 captured=0 selected=5",
+    "מנורה מבטחים והסתד: links=278 files=47 clicked=1 captured=0 selected=7",
+    "מנורה מבטחים והסתד: links=238 files=10 clicked=1 captured=0 selected=2",
+    "מנורה מבטחים והסתד: links=241 files=11 clicked=1 captured=0 selected=2",
+    "מנורה מבטחים והסתד: links=233 files=5 clicked=0 captured=0 selected=0",
+    "   ? תקנון-מנורה-מבטחים-השתלמות---מאי-2026.pdf | לתקנון | תקנון עדכני נכון לתאריך: 05.05.2026 לתקנון",
+    "   ? טבלת-ריכוז-שינויים---מנורה-מבטחים-השתלמות---מאי-2026.pdf | לקריאה | ריכוז שינויים אחרונים בתקנון שינויים שבוצעו ב-12 החודשים שקד",
+    "   ? תקנון-אומגה-286-בתוקף-מיום-30.9.2025.pdf | לתקנון | תקנון עדכני נכון לתאריך: 30.09.2025 לתקנון",
+    "   ? שינויים-אומגה-קרן-השתלמות-30.9.25.pdf | לקריאה | ריכוז שינויים אחרונים בתקנון שינויים שבוצעו ב-12 החודשים שקד",
+    "   ? esg-report-2021-22022.pdf | (html) | "
+   ],
+   "new_files": [
+    "86b7765feb2c_מדיניות-השקעה-לשנת-2026-מנורה-מבטחים-קרן-השתלמות-אומגה-אשראי-ואגח-עם-מניות-_עד-25-אחוז-מני",
+    "58ea634094e5_מדיניות-השקעה-לשנת-2025-מנורה-מבטחים-קרן-השתלמות-אומגה-אשראי-ואגח-עם-מניות-_עד-25-אחוז-מני",
+    "f53a89f168a5_מדיניות-השקעה-לשנת-2024-מנורה-מבטחים-קרן-השתלמות-אומגה-אשראי-ואגח-עם-מניות-_עד-25-אחוז-מני",
+    "2c2daf6bb8d2_מדיניות-השקעה-לשנת-2025-מנורה-מבטחים-קרן-השתלמות-אומגה-מניות-סחיר-15738-_1_.xlsx",
+    "b9c97303599f_מדיניות-השקעה-לשנת-2025-מנורה-מבטחים-קרן-השתלמות-אומגה-עוקב-מדד-s_p500-15739-_1_.xlsx"
+   ]
   }
  ]
 }
