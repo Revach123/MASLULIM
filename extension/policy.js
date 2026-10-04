@@ -160,7 +160,7 @@ function pageFetchBase64(url) {
     const bytes = new Uint8Array(await r.arrayBuffer());
     let bin = "";
     for (let i = 0; i < bytes.length; i += 0x8000) bin += String.fromCharCode.apply(null, bytes.subarray(i, i + 0x8000));
-    return { base64: btoa(bin), type: r.headers.get("content-type") || "" };
+    return { base64: btoa(bin), type: r.headers.get("content-type") || "", lm: r.headers.get("last-modified") || "" };
   }).catch((e) => ({ __error: true, message: String(e) }));
 }
 
@@ -232,7 +232,7 @@ async function extFetchBase64(url) {
     const bytes = new Uint8Array(await r.arrayBuffer());
     let bin = "";
     for (let i = 0; i < bytes.length; i += 0x8000) bin += String.fromCharCode.apply(null, bytes.subarray(i, i + 0x8000));
-    return { base64: btoa(bin) };
+    return { base64: btoa(bin), lm: r.headers.get("last-modified") || "" };  // מועד הפרסום באתר
   } catch (e) { return { __error: true, message: String(e) }; }
 }
 
@@ -527,7 +527,9 @@ async function runSite(site, cfg, seen, onProgress, windowId, meta = {}, flush =
         await report(pi, `מוריד קובץ ${di + 1}/${uniq.length}`);
         // קובץ שכבר נשלח ושנת המדיניות בשמו לפני השנה הקודמת (2016-2024) - לא ישתנה עוד: בלי בדיקת HEAD
         // (אלטשולר ~750 קבצים, מנורה ~450 - בדיקת HEAD לכל קובץ היסטורי בכל ריצה)
-        if (seen[d.href] && yr(d) && yr(d) < new Date().getFullYear() - 1) { stats.had++; stats.old_skip = (stats.old_skip || 0) + 1; continue; }
+        // קובץ מסמך שכבר נשלח לא משתנה - עדכון מתפרסם כקובץ חדש: לא מורידים שוב ולא בודקים HEAD.
+        // (כתובת בלי סיומת מסמך - קישור "לגרסה האחרונה" - ממשיכה לבדיקת HEAD למטה)
+        if (seen[d.href] && /\.(xlsx?|xlsm|pdf|docx?|csv)$/i.test(new URL(d.href).pathname)) { stats.had++; stats.old_skip = (stats.old_skip || 0) + 1; continue; }
         const sig = await headSig(d.href);
         const m = meta[d.href];
         if (sig && seen[d.href] && m && m.sig === sig && Date.now() - (m.full || 0) < FULL_CHECK_DAYS * 864e5) {
@@ -560,12 +562,15 @@ async function runSite(site, cfg, seen, onProgress, windowId, meta = {}, flush =
         const sha = await sha256Hex(got.base64);
         if (sig) meta[d.href] = { sig, full: Date.now() };
         if (seen[d.href] === sha) { stats.had++; continue; }
-        const name = decodeURIComponent(new URL(d.href).pathname.split("/").pop()).replace(/[^\w.\-֐-׿]/g, "_").slice(0, 90);
+        // שם קצר עם הסיומת (שם ארוך נחתך בלי ".xlsx" - מנורה "...(עד-25-אחוז-מניות)-8678.xlsx")
+        const fullName = decodeURIComponent(new URL(d.href).pathname.split("/").pop()).replace(/[^\w.\-֐-׿]/g, "_");
+        const ext = (fullName.match(/\.[A-Za-z0-9]{2,5}$/) || [""])[0];
+        const name = fullName.length <= 90 ? fullName : fullName.slice(0, 90 - ext.length) + ext;
         const base = `policy/inbox/${site.legal_id}/${sha.slice(0, 12)}_${name}`;
         files.push({ path: base, base64: got.base64 });
         files.push({ path: base + ".json", base64: utf8b64(JSON.stringify({
           legal_id: site.legal_id, url: d.href, link_text: d.text || d.ctx, source_page: pageUrl,
-          sha256: sha, fetched_at: new Date().toISOString(), via: "extension" }, null, 1)) });
+          sha256: sha, fetched_at: new Date().toISOString(), last_modified: got.lm || "", via: "extension" }, null, 1)) });
         seen[d.href] = sha; added[d.href] = sha; batchAdded[d.href] = sha;
         // העלאה במנות של 25 מסמכים תוך כדי האתר (מנורה/אלטשולר: מאות קבצים) - מחשב שנרדם / דפדפן שנסגר באמצע
         // מאבד לכל היותר מנה אחת, לא את כל האתר

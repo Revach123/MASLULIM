@@ -100,6 +100,9 @@ def get(s: requests.Session, url: str, **kw):
     return None
 
 
+DOC_PATH = re.compile(r"\.(xlsx?|xlsm|pdf|docx?|csv)$", re.I)  # נתיב שמסתיים בסיומת מסמך = קובץ קבוע
+
+
 def sniff_ext(content: bytes, url: str = "") -> str | None:
     """סוג הקובץ לפי תוכן (קישורי הורדה לרוב בלי סיומת). None = לא מסמך. HTML - רק בנתיב מסמך עם טבלה."""
     if url and HTML_DOC_RX.search(url) and re.search(rb"<table", content[:400000], re.I):
@@ -124,7 +127,7 @@ def download(s, url):
 
 NOISE = re.compile(r"esg|אחראי|תגמול(?!ים)|tagmul(?!im)|פרטיות|privacy|תקנון|מבצע|גילוי[-_ ]נאות|דוח(ות)?[-_ ]כספי|מצגת|presentation|"
                    r"investor|equal|שכר[-_ ]שווה|פוליסה|annuity|premi|מנתחים|אמות[-_ ]מידה|ממשל[-_ ]*תאגיד", re.I)  # "ממשל" לבד חסם את "אג\"ח ממשלות"
-POLICY = re.compile(r"מדיניות[-_ ]*(ה)?השקעה|מדיניות[-_ ]*(ה)?השקעות|מדיניות[-_ ]*מוצהרת|הצהרת[-_ ]*(מדיניות|השקעות)|"
+POLICY = re.compile(r"מדיניו?ת[-_ ]*(ה)?השקעה|מדיניות[-_ ]*(ה)?השקעות|מדיניות[-_ ]*מוצהרת|הצהרת[-_ ]*(מדיניות|השקעות)|"
                     r"הצהרה[-_ ]*על[-_ ]*מדיניות|מדיניות[-_ ]*צפויה|investment[-_ ]*polic|expected[-_ ]*investment|statement[-_ ]*investment|m[ae]dini?y?ut|inv[-_ ]*polic", re.I)
 
 
@@ -288,6 +291,7 @@ def download_browser(pw, url, referer=None):
             pg.wait_for_timeout(3000)
             pg.close()
         r = ctx.request.get(url, timeout=60000, headers={"Referer": referer} if referer else None)
+        _BROWSER["last_modified"] = r.headers.get("last-modified") if r.status == 200 else None
         return r.body() if r.status == 200 else None
     except Exception:
         return None
@@ -406,14 +410,32 @@ def main():
                 continue
             done.add(key)
             url = d["href"]
+            lm = d.get("last_modified")  # מועד הפרסום באתר (Last-Modified של השרת) - עוגן לתאריך הגרסה ולשנת המדיניות
+            old = index.get(unquote(url))
+            if (old and old.get("sha256") and old.get("file") and (ROOT / old["file"]).exists()
+                    and DOC_PATH.search(urlparse(url).path)):
+                # קובץ מסמך שכבר הורד לא משתנה - עדכון מתפרסם כקובץ חדש. לא מורידים שוב; רק HEAD למועד הפרסום אם חסר.
+                # (כתובת בלי סיומת מסמך - "migdal.co.il/regulations/...-investment-policy" = קישור לגרסה האחרונה - כן נבדקת)
+                if not old.get("last_modified") and not d.get("local"):
+                    try:
+                        h = s.head(url, timeout=20, allow_redirects=True, headers={"User-Agent": UA})
+                        if h.ok and h.headers.get("Last-Modified"):
+                            old["last_modified"] = h.headers["Last-Modified"]
+                    except requests.RequestException:
+                        pass
+                old.update({"last_seen": now, "source_page": d["page"]})
+                got += 1
+                continue
             if d.get("local"):  # הורדה שנלכדה בלחיצה בדפדפן
                 content, code = Path(d["local"]).read_bytes(), 200
             else:
                 r, code = download(s, url)
                 content = r.content if r is not None else None
+                lm = (r.headers.get("Last-Modified") if r is not None else None) or lm
             if content is None and pw and code not in (404, 410, "not_a_document") and not d.get("local"):
                 content = download_browser(pw, url, d.get("page"))
                 code = 200 if content else code
+                lm = _BROWSER.get("last_modified") or lm
             if content is None or sniff_ext(content, url) is None:
                 errs.append(f"{url[-80:]} -> {code}"); continue
             sha = hashlib.sha256(content).hexdigest()
@@ -435,6 +457,8 @@ def main():
                        "parsed_sha": None, "history": prev.get("history", [])}
                 if prev.get("sha256"):
                     ent["history"].append({"sha256": prev["sha256"], "file": prev.get("file"), "last_seen": prev.get("last_seen")})
+            if lm:
+                ent["last_modified"] = lm
             ent.update({"sha256": sha, "size": len(content), "last_seen": now, "link_text": d["text"],
                         "source_page": d["page"], "product": pages[d["page"]].get("product")})
             index[ukey] = ent
