@@ -926,6 +926,47 @@ def _maof_contract_sizes(source: list[dict]) -> dict[str, float]:
     return out
 
 
+def _option_key(row: dict, legal_id: str) -> tuple | None:
+    name = row.get(OPT_NAME_COL)
+    if not name:
+        return None
+    ticker, _ = parse_underlying(str(name))
+    strike = _num(row.get(OPT_STRIKE_COL)) or parse_strike(str(name))
+    if not ticker or not strike:
+        return None
+    return legal_id, ticker, strike, str(row.get(OPT_EXPIRY_COL) or "")
+
+
+def _mislabeled_call_put(source: list[dict], category: str) -> set[int]:
+    """id של שורות אופציה שהשם שלהן אומר קול והמחיר אומר פוט (או להפך): לאותו גוף, נכס בסיס,
+    מימוש ופקיעה יש מחיר אחד לקול ואחד לפוט בכל המסלולים. שורה שהמחיר שלה רחוק 20%+ מחציון
+    הסוג שלה וקרוב עד 5% לחציון הסוג השני - מהסוג השני (512065202_14267 ב-0325: "tlC 3100 NOV"
+    פעמיים, במחיר 10,016 ובמחיר 1,484 = מחיר "tlP 3100 NOV" במסלולים האחים - קול ופוט שקוזזו)."""
+    prices: dict[tuple, dict[bool, list[float]]] = defaultdict(lambda: {True: [], False: []})
+    rows = []
+    for rec in source:
+        if rec["Category"] != category or rec["מידע"] != "מידע":
+            continue
+        legal_id = str(rec.get("LegalId") or "")
+        for row in rec["Clean"]:
+            k = _option_key(row, legal_id)
+            price = _num(row.get(OPT_PRICE_COL))
+            is_call = is_call_option(str(row.get(OPT_NAME_COL) or ""))
+            if k is None or not price or price <= 0 or is_call is None:
+                continue
+            prices[k][is_call].append(price)
+            rows.append((id(row), k, is_call, price))
+    out = set()
+    for rid, k, is_call, price in rows:
+        own, other = prices[k][is_call], prices[k][not is_call]
+        if not other:
+            continue
+        own_med, other_med = statistics.median(own), statistics.median(other)
+        if abs(price / own_med - 1) > 0.2 and abs(price / other_med - 1) <= 0.05:
+            out.add(rid)
+    return out
+
+
 def _options_exposure(
     source: list[dict], total_assets: dict[str, float], category: str, detail: list | None = None
 ) -> tuple[dict[str, float], dict[str, float]]:
@@ -939,6 +980,7 @@ def _options_exposure(
     sums: dict[str, float] = {}
     equity_sums: dict[str, float] = {}
     maof_sizes = _maof_contract_sizes(source)
+    flipped = _mislabeled_call_put(source, category)
     for rec in source:
         if rec["Category"] != category or rec["מידע"] != "מידע":
             continue
@@ -957,6 +999,8 @@ def _options_exposure(
             name = row.get(OPT_NAME_COL)
             ticker, pattern = parse_underlying(str(name)) if name else (None, None)
             is_call = is_call_option(str(name)) if name else None
+            if is_call is not None and id(row) in flipped:
+                is_call = not is_call
             strike = _num(row.get(OPT_STRIKE_COL))
             if not strike or strike <= 0:  # עמודה ריקה / 0 - מהשם ("C004160M607-35ת")
                 strike = parse_strike(str(name)) if name else None
