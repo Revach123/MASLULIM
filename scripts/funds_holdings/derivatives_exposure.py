@@ -587,6 +587,10 @@ def _live_swap_ratio(row: dict, report_date, fx_now: dict, total: float) -> floa
         return None
     ccy1, ccy2 = _swap_ccys(row)
     ccy = ccy1 if ccy1 != "ILS" or not ccy2 else ccy2
+    if mirrored and ccy == "ILS":
+        # כמות יחידות של מדד במט"ח בשתי רגליים שקליות - מטבע המדד מהשורות האחרות של הטיקר
+        # (512065202_15352 ב-0126: NDWUIT, 22,816.9 / 22,816.9 ש"ח - בלי שער הדולר 6% במקום 19%)
+        ccy = _TICKER_CCY.get(str(row.get(SWAP_TICKER_COL) or "").strip().upper(), "ILS")
     units = mirrored or (_num(row.get(leg1_col["units"])) if ccy1 != "ILS" or not ccy2
                          else _num(row.get(leg2_col["units"])))
     if not units:
