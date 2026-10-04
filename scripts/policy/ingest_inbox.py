@@ -8,8 +8,11 @@ policy/companies/<LegalId>/raw/<LegalId>/, נרשם ב-docs_index.json של הח
 import json, shutil
 from pathlib import Path
 
+from .crawl import sniff_ext
+
 ROOT = Path(__file__).resolve().parents[2]
 INBOX = ROOT / "policy" / "inbox"
+DOC_EXTS = {".xlsx", ".xls", ".pdf", ".docx", ".htm", ".html", ".doc", ".csv"}
 
 
 def main():
@@ -25,6 +28,8 @@ def main():
                 continue
             meta = json.loads(meta_p.read_text("utf-8"))
             dest = comp / "raw" / lid / f.name
+            if dest.suffix.lower() not in DOC_EXTS:  # שם ארוך שנחתך בתוסף ("...-(עד-25-אחוז-מניות)-867") - הסיומת לפי התוכן
+                dest = dest.with_name(dest.name + (sniff_ext(f.read_bytes()[:400000]) or ""))
             dest.parent.mkdir(parents=True, exist_ok=True)
             shutil.move(str(f), dest)
             meta_p.unlink()
