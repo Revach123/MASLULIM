@@ -335,7 +335,7 @@ def main():
         seed = seeds.get(legal_id)
         if not seed:
             report.append([legal_id, c["name"], "", "no_config", 0, 0, ""]); continue
-        if seed["via"] == "extension" and os.environ.get("POLICY_FORCE_CLOUD") != "1":  # חוסם שרתי ענן - נמשך ע"י תוסף ה-Chrome (policy/inbox -> ingest_inbox.py)
+        if seed["via"] == "extension" and os.environ.get("POLICY_FORCE_CLOUD") != "1":  # via=both: ענן וגם תוסף  # חוסם שרתי ענן - נמשך ע"י תוסף ה-Chrome (policy/inbox -> ingest_inbox.py)
             report.append([legal_id, c["name"], seed["home"], "via_extension", 0, 0, ""]); continue
         extra = expand_templates(seed["extra"])
         products = {u: seed["products"].get(t) for t in seed["extra"] for u in expand_templates([t])}
@@ -412,7 +412,8 @@ def main():
             url = d["href"]
             lm = d.get("last_modified")  # מועד הפרסום באתר (Last-Modified של השרת) - עוגן לתאריך הגרסה ולשנת המדיניות
             old = index.get(unquote(url))
-            if (old and old.get("sha256") and old.get("file") and (ROOT / old["file"]).exists()
+            if (old and old.get("sha256") and old.get("file")
+                    and ((ROOT / old["file"]).exists() or os.environ.get("POLICY_TRUST_INDEX") == "1")  # home_crawl: בלי קבצי raw
                     and DOC_PATH.search(urlparse(url).path)):
                 # קובץ מסמך שכבר הורד לא משתנה - עדכון מתפרסם כקובץ חדש. לא מורידים שוב; רק HEAD למועד הפרסום אם חסר.
                 # (כתובת בלי סיומת מסמך - "migdal.co.il/regulations/...-investment-policy" = קישור לגרסה האחרונה - כן נבדקת)
