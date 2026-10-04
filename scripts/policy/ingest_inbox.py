@@ -37,6 +37,10 @@ def main():
             if not f.exists():
                 continue
             meta = json.loads(meta_p.read_text("utf-8"))
+            # אותו תוכן כבר באינדקס בכתובת אחרת (קובץ שהמשתמש העלה ידנית ואחר כך נמצא באתר) - לא כפילות
+            if meta["url"] not in index and any(e.get("sha256") == meta["sha256"] for e in index.values()):
+                f.unlink(); meta_p.unlink()
+                continue
             dest = comp / "raw" / lid / f.name
             if dest.suffix.lower() not in DOC_EXTS:  # שם ארוך שנחתך בתוסף ("...-(עד-25-אחוז-מניות)-867") - הסיומת לפי התוכן
                 dest = dest.with_name(dest.name + (sniff_ext(f.read_bytes()[:400000]) or ""))
