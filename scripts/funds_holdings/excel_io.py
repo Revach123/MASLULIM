@@ -33,9 +33,14 @@ def _trim_far_columns(path) -> io.BytesIO | None:
 
 def read_workbook_sheets(path) -> dict[str, list[list]]:
     """שם גיליון -> רשימת שורות (כל שורה = רשימת ערכים גולמיים, בלי המרה)."""
+    return read_sheet_rows(path, lambda name: True)
+
+
+def read_sheet_rows(path, want) -> dict[str, list[list]]:
+    """כמו read_workbook_sheets, רק לגיליונות ש-want(שם) מחזיר עבורם True."""
     trimmed = _trim_far_columns(path)
     wb = CalamineWorkbook.from_filelike(trimmed) if trimmed else CalamineWorkbook.from_path(str(path))
-    return {name: wb.get_sheet_by_name(name).to_python() for name in wb.sheet_names}
+    return {name: wb.get_sheet_by_name(name).to_python() for name in wb.sheet_names if want(name)}
 
 
 def to_ratio(v) -> float | None:

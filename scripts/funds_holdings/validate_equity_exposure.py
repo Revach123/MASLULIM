@@ -15,7 +15,7 @@ from pathlib import Path
 from .category_pct import build_category_pct
 from .derivatives_exposure import (
     FUTURES_CATEGORY, FUTURES_EQUITY_COLUMN, OPTIONS_LISTED_CATEGORY, OPTIONS_OTC_CATEGORY, SWAP_CATEGORY,
-    _options_exposure, build_derivatives_exposure, swap_on_bond_etf, total_assets_by_key,
+    _options_exposure, build_derivatives_exposure, is_equity_swap, total_assets_by_key,
 )
 from .excel_io import to_ratio
 from .file_list import get_file_list
@@ -63,8 +63,8 @@ def _equity_derivative_pct(source, category, base_col, use_fixed):
                 filtered.append(rec)
                 continue
             # סוואפ על תעודת סל של אג"ח (LQD/HYG) - לא מניות, כמו בפייפליין הראשי (swap_on_bond_etf)
-            keep_rows = [r for r in rec["Clean"] if r.get(base_col) == EQUITY_UNDERLYING
-                         and not (category == SWAP_CATEGORY and swap_on_bond_etf(r))]
+            keep_rows = [r for r in rec["Clean"] if (is_equity_swap(r) if category == SWAP_CATEGORY
+                                                     else r.get(base_col) == EQUITY_UNDERLYING)]
             filtered.append({**rec, "Clean": keep_rows})
         totals = total_assets_by_key(filtered)
         deriv = build_derivatives_exposure(filtered)
@@ -237,6 +237,17 @@ def compute_equity_totals(reports_dir: Path, tracks: list[dict]):
     return rows
 
 
+def _load_anomalies() -> set[tuple[str, str]]:
+    """(חודש YYYYMM או "*", מפתח) מ-official_anomalies.csv - טעויות דיווח של החברות, כל אחת עם ראיה."""
+    import csv
+    path = Path(__file__).with_name("official_anomalies.csv")
+    try:
+        with open(path, encoding="utf-8") as f:
+            return {(r["month"].strip(), r["key"].strip()) for r in csv.DictReader(f)}
+    except OSError:
+        return set()
+
+
 def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--reports-dir", type=Path, default=Path("reports"))
@@ -330,6 +341,12 @@ def main():
         mae_at = sum(abs(r[4] - r[8]) for r in at) / len(at)
         print(f"MAE (שיטה מלאה) מול הנתון הרשמי לחודש הדוח (data.gov.il): {len(at)} מסלולים, "
               f"{mae_at*100:.3f} נק' אחוז (מול החודש האחרון, אותם מסלולים: {mae(4, at)*100:.3f})")
+        # בלי טעויות דיווח מתועדות של החברות (official_anomalies.csv - חודש, מפתח, ראיה)
+        anomalies = _load_anomalies()
+        clean = [r for r in at if (r[7], r[0]) not in anomalies and ("*", r[0]) not in anomalies]
+        if clean:
+            print(f"MAE (שיטה מלאה) בלי טעויות דיווח של החברות: {len(clean)} מסלולים "
+                  f"({len(at) - len(clean)} הוצאו), {sum(abs(r[4] - r[8]) for r in clean) / len(clean) * 100:.3f} נק' אחוז")
 
     rows_sorted = sorted(rows, key=lambda r: -abs(r[4] - r[1]))
     print("\n15 הפערים הגדולים ביותר (שיטה מלאה מול רשמי):")

@@ -62,6 +62,7 @@
 """
 
 import math
+from collections import Counter, defaultdict
 import re
 import statistics
 from datetime import date, datetime
@@ -69,10 +70,13 @@ from datetime import date, datetime
 from .excel_io import to_ratio
 from .sheet_source import PCT_COL
 from .option_delta_pricing import quote_scale, resolve_option_delta, resolve_option_value
-from .option_ticker_parse import (CONTRACT_MULTIPLIER, MAOF_STOCK_OPTION_SHARES, is_call_option, parse_maof_expiry_month, parse_strike,
+from .option_ticker_parse import (CONTRACT_MULTIPLIER, FUTURES_OPTION, MAOF_STOCK_OPTION_SHARES, is_call_option, parse_maof_expiry_month, parse_strike,
                                   parse_underlying)
 from .futures_notional import FuturesResolver, build_rows as build_futures_rows
-from .swap_index_pricing import parse_deal_date, price_as_of as index_price_as_of, proxy_return, resolve_current_price
+from .stock_quote import stock_quote
+from .swap_index_pricing import (
+    has_price_source, parse_deal_date, price_as_of as index_price_as_of, proxy_return, resolve_current_price,
+)
 
 FAIR_VALUE_COL = 'שווי הוגן (באלפי ש"ח)'
 SWAP_NET_FAIR_VALUE_COL = 'שווי הוגן (נטו באלפי ש"ח)'
@@ -157,6 +161,18 @@ def swap_on_bond_etf(row: dict) -> bool:
         return False
     frac = _etf_equity_by_symbol().get(m.group(1))
     return frac is not None and frac < 0.5
+def is_equity_swap(row: dict) -> bool:
+    """סוואפ על מניות: "סוג הנכס" = מניות, או "אחר" / ריק על טיקר של מדד מניות שיש לו מקור
+    מחיר (INDICES / תעודת סל עוקבת - כולם מדדי מניות). 512065202_7867 ב-0425: IXYTR / IXCTR /
+    MVSMHTR חלקן "מניות" וחלקן "אחר" באותו דוח. סוואפ על תעודת סל של אג"ח - לא."""
+    if swap_on_bond_etf(row):
+        return False
+    kind = row.get(SWAP_ASSET_TYPE_COL)
+    if kind == SWAP_EQUITY_ASSET_TYPE:
+        return True
+    return str(kind or "").strip() in ("", "אחר") and has_price_source(row.get(SWAP_TICKER_COL))
+
+
 SWAP_MAIN_TYPE_COL = "מאפיין עיקרי"  # "Unfunded Swap"/"Funded Total Return/Equity Swap"/... - נבדק בפועל
 SWAP_LABEL_COL = SWAP_MAIN_TYPE_COL
 FUNDED_SWAP_CATEGORY = "החלף עם מימון (Funded)"
@@ -252,6 +268,18 @@ def _normalize_fx(currency, fx: float | None) -> float | None:
     return fx
 
 
+FX_CONSENSUS_TOL = 0.2
+
+
+def _consensus_fx(currency, fx_row: float | None, fx_market: float | None) -> float | None:
+    """שער השורה, אלא אם הוא רחוק מהשער החציוני של אותו מטבע ליום הדוח (כל הגופים) ביותר
+    מ-20% - אז החציוני (512267592_gc_0325: 0.022332 בכל שורות החוזים, גם בדולר ובאירו)."""
+    fx = _normalize_fx(currency, fx_row)
+    if fx_market and (fx is None or abs(fx / fx_market - 1) > FX_CONSENSUS_TOL):
+        return fx_market
+    return fx
+
+
 def _num(v) -> float | None:
     if v is None or v == "":
         return None
@@ -302,6 +330,9 @@ def _futures_exposure(
     תקרת-מסלול: סכום השורות למסלול מעל SANITY_CAP -> נפילה לסכום ה-PCT_COL
     המדווח (כמו ב-swap)."""
     pairs = build_futures_rows(source, FUTURES_CATEGORY, _FUT_COLS)
+    fx_now = _current_fx_rates(source)
+    rec_month = {id(r): rec.get("ReportMonth") for rec in source if rec["Category"] == FUTURES_CATEGORY
+                 for r in rec["Clean"]}
     resolver = FuturesResolver([fr for _, fr in pairs], index_price_as_of)
     sums: dict[str, float] = {}
     equity_sums: dict[str, float] = {}
@@ -320,7 +351,7 @@ def _futures_exposure(
         if is_equity:
             equity_row_pct_sums[key] = equity_row_pct_sums.get(key, 0.0) + row_pct
         notional = resolver.notional(fr)
-        fx = 1.0 if fr.ccy == "ILS" else _normalize_fx(fr.ccy, _num(row.get(FUT_FX_COL)))
+        fx = 1.0 if fr.ccy == "ILS" else _consensus_fx(fr.ccy, _num(row.get(FUT_FX_COL)), fx_now.get((fr.ccy, rec_month.get(id(row)))))
         if notional is not None and fx is not None:
             line_ratio = notional * fx / 1000 / total
         else:
@@ -426,15 +457,46 @@ def _legs_are_notional(row: dict, legs_ratio: float, live_ratio: float) -> bool:
     return min(raw) / max(raw) >= LEGS_CONSISTENT and live_ratio >= LEGS_NOTIONAL_FACTOR * legs_ratio
 
 
-def _current_index_price(row: dict, report_date) -> float | None:
-    """מחיר המדד ליום הדוח: סדרת המדד ב-INDICES, ואם אין - מחיר העסקה × תשואת תעודת
-    הסל העוקבת מיום העסקה (swap_index_pricing.proxy_return)."""
+# מחיר עסקה מגולגל שרחוק מחציון עוגני הגוף (מגולגלים אף הם) יותר מפי ANCHOR_TOL - התאריך שלו לא
+# שייך למחיר: 512065202 מדווח לעתים מחיר איפוס עם מועד העסקה המקורי (7867 ב-0126: MVSMHTR 16,327.32
+# "מ-23/06/2025", אותו מחיר כמו בעסקאות מ-12/2025; מגולגל 9 חודשים ב-SMH = 23,900 ו-25% מהמסלול,
+# בחציון העוגנים ~16,000; רשמי: 6.96%+ -> 0.6%-). בגלגול תקין העוגנים מסכימים עד כדי סטיית תעודת הסל
+ANCHOR_TOL = 1.3
+
+
+def _direct_price(row: dict, report_date) -> float | None:
+    """מחיר ליום הדוח ממקור ישיר: סדרת המדד ב-INDICES, או מחיר המניה (stock_quote, במטבע
+    הבורסה שלה). None אם אין."""
     price, _ = resolve_current_price(row.get(SWAP_TICKER_COL), report_date)
     if price is not None:
         return price
+    stock = stock_quote(row.get(SWAP_TICKER_COL))
+    if stock and report_date:
+        from .option_delta_pricing import price_as_of as single_price_as_of
+        p = single_price_as_of(stock.symbol, report_date)
+        if p:
+            return p * stock.factor
+    return None
+
+
+def _current_index_price(row: dict, report_date) -> float | None:
+    """מחיר המדד ליום הדוח: מקור ישיר (_direct_price), ואם אין - מחיר העסקה × תשואת תעודת
+    הסל העוקבת מיום העסקה (swap_index_pricing.proxy_return)."""
+    price = _direct_price(row, report_date)
+    if price is not None:
+        return price
+    from .swap_deal_anchors import anchored_price
     deal_price = _num(row.get(SWAP_UNDERLYING_PRICE_COL))
-    ratio = proxy_return(row.get(SWAP_TICKER_COL), parse_deal_date(row.get(SWAP_DEAL_DATE_COL)), report_date)
-    return deal_price * ratio if deal_price and ratio else None
+    deal_date = parse_deal_date(row.get(SWAP_DEAL_DATE_COL))
+    ratio = proxy_return(row.get(SWAP_TICKER_COL), deal_date, report_date) if deal_price and deal_price > 0 else None
+    from_deal = deal_price * ratio if ratio else None
+    # עוגן ממחירי העסקה של אותו גוף בכל הדוחות (swap_deal_anchors): כשאין מחיר עסקה בשורה, או
+    # כשהוא רחוק מהעוגן (ANCHOR_TOL; 512065202_15352 ב-0425: NDWUIT "מחיר עסקה" 3.3059 = שער הדולר)
+    anchored = anchored_price(str(row.get("מפתח") or "").split("_")[0], row.get(SWAP_TICKER_COL),
+                              deal_date, report_date)
+    if anchored and (from_deal is None or not 1 / ANCHOR_TOL <= from_deal / anchored <= ANCHOR_TOL):
+        return anchored
+    return from_deal
 
 
 def _legs_reconcile(row: dict, report_date, fx_now: dict) -> bool:
@@ -448,9 +510,75 @@ def _legs_reconcile(row: dict, report_date, fx_now: dict) -> bool:
         if v and fx:
             vals.append(v * fx)
     net = _num(row.get(SWAP_NET_FAIR_VALUE_COL))
-    if len(vals) != 2 or net is None:
+    if net is None and len(vals) == 1:
+        # רגל אחת בלבד, ונטו ריק: העתק של "ערך נקוב" / 1000 הוא מילוי (512065202_15352 ב-0425:
+        # NDWUIT, 23,715.5 ש"ח -> 23.716, רגל הדולר "ריק במקור")
+        v, u = next((_num(row.get(leg["fair_value"])), _num(row.get(leg["units"]))) for leg in SWAP_LEGS
+                    if _num(row.get(leg["fair_value"])))
+        return not (u and abs(abs(v) / (abs(u) / 1000) - 1) <= 0.0005)
+    if len(vals) != 2:
         return True
+    if net is None:
+        # בלי נטו לבדיקה: רגליים שהן בדיוק "ערך נקוב" / 1000 בשתיהן הן מילוי, לא שווי
+        # (512065202 ב-0325: IXCTR 21,422.806 / 6,479.978- -> 21.423 / 6.48-, נטו ריק)
+        # רק ברגליים בשני מטבעות (שקל / מט"ח): באותו מטבע זה גם סוואפ קטן שה"ערך נקוב" שלו
+        # הוא סכום בשקלים (513173393_13211 ב-0325: ת"א 90, 24,261.63- ש"ח, רגליים 24.35 / 24.37)
+        # באותו מטבע רק העתק מדויק בשתי הרגליים (512065202_769 ב-0425: ת"א 125, 300 / 300-,
+        # רגליים 0.3 / 0.3-; שם הסוואפ הקטן של 13211 הרגליים 24.353 / 24.371 - שווי אמיתי)
+        ccys = {row.get(leg["currency"]) for leg in SWAP_LEGS}
+        legs = [(_num(row.get(leg["fair_value"])), _num(row.get(leg["units"]))) for leg in SWAP_LEGS]
+        tol = 0.005 if "ILS" in ccys and len(ccys) == 2 else 0.0005 if len(ccys) == 1 else None
+        return not (tol is not None
+                    and all(v and u and abs(abs(v) / (abs(u) / 1000) - 1) <= tol for v, u in legs))
     return abs(sum(vals) - net) <= max(0.15 * max(abs(x) for x in vals), 0.5)
+
+
+def _ccy_to_ils(ccy: str | None, report_date, fx_now: dict) -> float | None:
+    """שער מטבע לשקל ליום הדוח: מהחוזים העתידיים, ואם המטבע לא שם (דולר טייוואני) - דרך הדולר
+    ושער המטבע לדולר מ-Yahoo ("TWD=X" = יחידות מטבע לדולר)."""
+    if ccy == "ILS":
+        return 1.0
+    fx = fx_now.get((ccy, report_date))
+    if fx or not ccy or not report_date:
+        return fx
+    usd = fx_now.get(("USD", report_date))
+    if not usd:
+        return None
+    from .option_delta_pricing import price_as_of as single_price_as_of
+    per_usd = single_price_as_of(f"{ccy}=X", report_date)
+    return usd / per_usd if per_usd else None
+
+
+_CCY_CODE = re.compile(r"^[A-Z]{3}$")
+# טיקר סוואפ -> מטבע המדד (המטבע הלא-שקלי הנפוץ בשורות שלו), לרגל שהמטבע שלה "ריק במקור"
+_TICKER_CCY: dict[str, str] = {}
+
+
+def _ticker_currencies(source: list[dict]) -> dict[str, str]:
+    votes: dict[str, Counter] = defaultdict(Counter)
+    for rec in source:
+        if rec["Category"] != SWAP_CATEGORY or rec["מידע"] != "מידע":
+            continue
+        for row in rec["Clean"]:
+            t = str(row.get(SWAP_TICKER_COL) or "").strip().upper()
+            for leg in SWAP_LEGS:
+                c = str(row.get(leg["currency"]) or "").strip().upper()
+                if t and _CCY_CODE.match(c) and c != "ILS":
+                    votes[t][c] += 1
+    return {t: c.most_common(1)[0][0] for t, c in votes.items()}
+
+
+def _swap_ccys(row: dict) -> tuple[str | None, str | None]:
+    """מטבעות שתי הרגליים; מטבע לא תקין ("ריק במקור") ברגל אחת לצד רגל שקלית - מטבע הטיקר
+    בשאר השורות (512065202_15361 ב-0425: NDWUIT, רגל שקלית ורגל "ריק במקור" -> דולר)."""
+    out = []
+    for leg in SWAP_LEGS:
+        c = str(row.get(leg["currency"]) or "").strip().upper()
+        out.append(c if _CCY_CODE.match(c) else None)
+    if out.count("ILS") == 1 and None in out:
+        t = str(row.get(SWAP_TICKER_COL) or "").strip().upper()
+        out[out.index(None)] = _TICKER_CCY.get(t)
+    return out[0], out[1]
 
 
 def _mirrored_units(row: dict, report_date, fx_now: dict) -> float | None:
@@ -460,15 +588,24 @@ def _mirrored_units(row: dict, report_date, fx_now: dict) -> float | None:
     כמו הרשמי. 512065202_769 ב-0126: ת"א 125, 300 / 300-, במחיר העסקה 764.6 אלף ש"ח). None
     אם אין תבנית כזו."""
     leg1_col, leg2_col = SWAP_LEGS
-    ccy1, ccy2 = row.get(leg1_col["currency"]), row.get(leg2_col["currency"])
+    ccy1, ccy2 = _swap_ccys(row)
     if ccy1 and ccy1 == ccy2:
         u1, u2 = _num(row.get(leg1_col["units"])), _num(row.get(leg2_col["units"]))
+        if u1 and u2 is None:
+            # רגל אחת עם "ערך נקוב" והשנייה ריקה (512065202_15361 ב-0126: NDWUIT, 1,650.39 / "ריק
+            # במקור") - כמות; מחיר לא סביר (סכום ולא כמות) נפסל ב-LIVE_SWAP_MAX_RATIO
+            return u1
         return u1 if u1 and u2 and abs(abs(u1 / u2) - 1) <= 0.001 else None
     if not ccy1 or not ccy2 or (ccy1 == "ILS") == (ccy2 == "ILS"):
         return None
     ils_leg, fx_leg = (leg1_col, leg2_col) if ccy1 == "ILS" else (leg2_col, leg1_col)
     u_ils, u_fx = _num(row.get(ils_leg["units"])), _num(row.get(fx_leg["units"]))
-    ccy = row.get(fx_leg["currency"])
+    if u_ils and u_fx is None:
+        return u_ils  # רגל המט"ח בלי "ערך נקוב" ("ריק במקור") - הכמות ברגל השקלית
+    if u_ils and u_fx and abs(abs(u_ils / u_fx) - 1) <= 0.001 and not _CCY_CODE.match(
+            str(row.get(fx_leg["currency"]) or "").strip().upper()):
+        return u_ils  # העתק של הכמות ברגל בלי מטבע (512065202_15350 ב-0425: NDWUIT 5,257.38 / 5,257.38)
+    ccy = ccy2 if ccy1 == "ILS" else ccy1
     fx = fx_now.get((ccy, report_date)) or _normalize_fx(ccy, _num(row.get(fx_leg["fx"])))
     if not u_ils or not u_fx or not fx or abs(abs(u_ils / u_fx) / fx - 1) > 0.03:
         return None
@@ -487,8 +624,15 @@ def _live_swap_ratio(row: dict, report_date, fx_now: dict, total: float) -> floa
              else resolve_current_price(row.get(SWAP_TICKER_COL), report_date)[0])
     if price is None:
         return None
-    ccy1, ccy2 = row.get(leg1_col["currency"]), row.get(leg2_col["currency"])
+    ccy1, ccy2 = _swap_ccys(row)
     ccy = ccy1 if ccy1 != "ILS" or not ccy2 else ccy2
+    if mirrored and ccy == "ILS":
+        # כמות יחידות של מדד במט"ח בשתי רגליים שקליות - מטבע המדד מהשורות האחרות של הטיקר
+        # (512065202_15352 ב-0126: NDWUIT, 22,816.9 / 22,816.9 ש"ח - בלי שער הדולר 6% במקום 19%)
+        ccy = _TICKER_CCY.get(str(row.get(SWAP_TICKER_COL) or "").strip().upper(), "ILS")
+    stock = stock_quote(row.get(SWAP_TICKER_COL)) if mirrored else None
+    if stock and stock.currency != "ILS":
+        ccy = stock.currency  # מחיר מניה במטבע הבורסה שלה, לא במטבע הרגל (512065202 "2330 TT")
     units = mirrored or (_num(row.get(leg1_col["units"])) if ccy1 != "ILS" or not ccy2
                          else _num(row.get(leg2_col["units"])))
     if not units:
@@ -502,12 +646,36 @@ def _live_swap_ratio(row: dict, report_date, fx_now: dict, total: float) -> floa
     leg_fvs = [v for v in leg_fvs if v]
     if not mirrored and leg_fvs and all(0.8 <= abs(v) / (abs(units) / 1000) <= 1.25 for v in leg_fvs):
         return None
-    fx = 1.0 if ccy == "ILS" else (fx_now.get((ccy, report_date)) or _normalize_fx(ccy, _num(row.get(
-        (leg1_col if ccy == ccy1 else leg2_col)["fx"]))))
+    fx = 1.0 if ccy == "ILS" else (fx_now.get((ccy, report_date)) or (
+        _normalize_fx(ccy, _num(row.get((leg1_col if ccy == ccy1 else leg2_col)["fx"]))) if ccy in (ccy1, ccy2)
+        else _ccy_to_ils(ccy, report_date, fx_now)))
     if fx is None:
         return None
     ratio = abs(units) * price * fx / 1000 / total
     return ratio if ratio <= LIVE_SWAP_MAX_RATIO else None
+
+
+def _offsetting_rows(source: list[dict]) -> set[int]:
+    """id של שורות סוואפ שמתקזזות בזוגות: באותו מסלול, אותו טיקר ומחיר עסקה, "ערך נקוב" (רגל 1)
+    זהה בסימן הפוך - עסקה שנסגרה בעסקה הפוכה (513026484_13465 ב-0425: SPTR 7,648.38 / 7,648.38-
+    במחיר 15,199.655, ושלושה זוגות נוספים - בלי קיזוז 138% במקום ~80%). לא תלוי במוסכמת הסימן של
+    הגוף: רק זוגות מדויקים."""
+    groups: dict[tuple, dict[int, list[int]]] = defaultdict(lambda: {1: [], -1: []})
+    for rec in source:
+        if rec["Category"] != SWAP_CATEGORY or rec["מידע"] != "מידע":
+            continue
+        for row in rec["Clean"]:
+            u = _num(row.get(SWAP_LEGS[0]["units"]))
+            if not u:
+                continue
+            k = (row.get("מפתח"), str(row.get(SWAP_TICKER_COL) or "").strip().upper(),
+                 _num(row.get(SWAP_UNDERLYING_PRICE_COL)), round(abs(u), 6))
+            groups[k][1 if u > 0 else -1].append(id(row))
+    out: set[int] = set()
+    for g in groups.values():
+        n = min(len(g[1]), len(g[-1]))
+        out.update(g[1][:n] + g[-1][:n])
+    return out
 
 
 def _swap_exposure(
@@ -581,6 +749,9 @@ def _swap_exposure(
     equity_fv_by_label: dict[str, dict[str, float]] = {}
     leg1_col, leg2_col = SWAP_LEGS
     fx_now = _current_fx_rates(source)
+    offset = _offsetting_rows(source)
+    _TICKER_CCY.clear()
+    _TICKER_CCY.update(_ticker_currencies(source))
     for rec in source:
         if rec["Category"] != SWAP_CATEGORY or rec["מידע"] != "מידע":
             continue
@@ -590,7 +761,15 @@ def _swap_exposure(
             total = total_assets.get(key) if key is not None else None
             if not total:
                 continue
-            is_equity = row.get(SWAP_ASSET_TYPE_COL) == SWAP_EQUITY_ASSET_TYPE and not swap_on_bond_etf(row)
+            if id(row) in offset:
+                # עסקה שנסגרה בעסקה הפוכה זהה - שתיהן יחד אפס חשיפה
+                row_pct = to_ratio(row.get(PCT_COL)) or 0.0
+                fv_sums[key] = fv_sums.get(key, 0.0) + row_pct
+                if detail is not None:
+                    detail.append({"key": key, "row": row, "ratio": 0.0, "row_pct": row_pct,
+                                   "equity": is_equity_swap(row)})
+                continue
+            is_equity = is_equity_swap(row)
             label = row.get(SWAP_LABEL_COL)
             # ה-fallback (כשקנה המידה לא אמין) משתמש בעמודת האחוז כפי שהדוח
             # עצמו מדווח - נמצא בפועל מדויק יותר מ-fv/total_assets_by_key
@@ -610,7 +789,7 @@ def _swap_exposure(
             # ספציפי (לא עקבי בין מגישים תחת אותה תווית בדיוק).
             is_funded = _is_funded_swap(row.get(SWAP_MAIN_TYPE_COL))
 
-            leg_values = _leg_market_values(row, report_date, fx_now)
+            leg_values = raw_legs = _leg_market_values(row, report_date, fx_now)
             if leg_values and not _legs_reconcile(row, report_date, fx_now):
                 leg_values = []  # "שווי" הרגליים לא מסתכם לנטו - לא שווי שוק
             # יחידות זהות בשתי הרגליים - רק כשאין שווי רגליים תקף (שורה רגילה לא משתנה)
@@ -621,6 +800,11 @@ def _swap_exposure(
             if (live_ratio is not None and leg_values and not mirrored
                     and _legs_are_notional(row, sum(leg_values) / len(leg_values) / total, live_ratio)):
                 live_ratio = None
+            if mirrored and live_ratio is None and raw_legs:
+                # "ערך נקוב" זהה ברגליים שהוא סכום ולא כמות (יחידות × מחיר לא סביר) - הרגליים הן
+                # הנוציונל גם כשהנטו כולל ריבית צבורה ולא מסתכם (511880460_963 ב-0425: SPTR, 26.9
+                # מיליון דולר, רגליים 26,922 / 26,926- אלף)
+                leg_values, mirrored = raw_legs, False
             if mirrored and live_ratio is not None:
                 # יחידות שמשתקפות בשער בין הרגליים - הרגליים (אם יש) הן היחידות / 1000, לא שווי.
                 # הסימן של היחידות בשקלים הוא כיוון העסקה (512065202_13246 ב-0126: עסקה אחת
@@ -649,6 +833,18 @@ def _swap_exposure(
                 price_ccy = ccy2 if ccy1 == "ILS" and ccy2 else ccy1
                 price_fx = (1.0 if price_ccy == "ILS" else fx_now.get((price_ccy, report_date))
                             or (fx2 if price_ccy == ccy2 else fx1))
+                stock = stock_quote(row.get(SWAP_TICKER_COL)) if is_equity else None
+                stock_fx = None
+                stock_ccy = bool(stock and stock.currency not in ("ILS", price_ccy) and price is not None)
+                if stock_ccy:
+                    # מחיר העסקה של מניה נקוב במטבע הבורסה שלה; רגל "USD" שהיא יחידות × המחיר הזה
+                    # היא סכום באותו מטבע (512065202_877 ב-0126: TT2330, 61,688.8 × 1,740 = 107.3
+                    # מיליון "USD" - דולר טייוואני). בלי שער למטבע - אין תמחור (שווי השורה)
+                    stock_fx = _ccy_to_ils(stock.currency, report_date, fx_now)
+                    price, price_fx = price * stock.factor, (stock_fx or None)
+                    if (stock_fx and units1 and units2 and fx2 is not None
+                            and abs(abs(units2 / units1) / (price / stock.factor) - 1) <= 0.01):
+                        fx2 = stock_fx * stock.factor
 
                 leg2_val = abs(units2 * fx2) / 1000 if units2 is not None and fx2 is not None else None
                 leg1_raw = abs(units1 * fx1) / 1000 if units1 is not None and fx1 is not None else None
@@ -680,6 +876,8 @@ def _swap_exposure(
 
                 if leg1_live is not None:
                     candidates = [leg1_live]  # לא ממוצעים עם leg2 - ר' הערת הפונקציה
+                elif stock_ccy and not stock_fx:
+                    candidates = []
                 else:
                     candidates = [v for v in (leg1_val, leg2_val) if v is not None]
 
@@ -747,7 +945,7 @@ def collect_unresolved_swap_tickers(source: list[dict]) -> dict[str, set[str]]:
         if rec["Category"] != SWAP_CATEGORY or rec["מידע"] != "מידע":
             continue
         for row in rec["Clean"]:
-            if row.get(SWAP_ASSET_TYPE_COL) != SWAP_EQUITY_ASSET_TYPE or swap_on_bond_etf(row):
+            if not is_equity_swap(row):
                 continue
             key = row.get("מפתח")
             raw_ticker = row.get(SWAP_TICKER_COL)
@@ -835,6 +1033,66 @@ def _maof_contract_sizes(source: list[dict]) -> dict[str, float]:
     return out
 
 
+_FO_CANDIDATES = ("ES_FO", "NQ_FO", "RTY_FO", "YM_FO")
+
+
+def _futures_option_underlying(strike: float | None, report_date) -> str | None:
+    """נכס הבסיס של אופציה על חוזה E-mini לפי המימוש: המדד שהמימוש הכי קרוב לרמתו ביום הדוח
+    (עד פי 1.6 לכל כיוון). S&P ~6-7K, נאסד"ק-100 ~21-31K, ראסל ~2.5K, דאו ~45K - טווחים נפרדים."""
+    from .option_delta_pricing import UNDERLYING_ALIAS, price_as_of as spot_as_of
+    if not strike or not report_date:
+        return None
+    best = None
+    for cand in _FO_CANDIDATES:
+        spot = spot_as_of(UNDERLYING_ALIAS[cand], report_date)
+        if spot:
+            dist = abs(math.log(strike / spot))
+            if dist <= math.log(1.6) and (best is None or dist < best[0]):
+                best = (dist, cand)
+    return best[1] if best else None
+
+
+def _option_key(row: dict, legal_id: str) -> tuple | None:
+    name = row.get(OPT_NAME_COL)
+    if not name:
+        return None
+    ticker, _ = parse_underlying(str(name))
+    strike = _num(row.get(OPT_STRIKE_COL)) or parse_strike(str(name))
+    if not ticker or not strike:
+        return None
+    return legal_id, ticker, strike, str(row.get(OPT_EXPIRY_COL) or "")
+
+
+def _mislabeled_call_put(source: list[dict], category: str) -> set[int]:
+    """id של שורות אופציה שהשם שלהן אומר קול והמחיר אומר פוט (או להפך): לאותו גוף, נכס בסיס,
+    מימוש ופקיעה יש מחיר אחד לקול ואחד לפוט בכל המסלולים. שורה שהמחיר שלה רחוק 20%+ מחציון
+    הסוג שלה וקרוב עד 5% לחציון הסוג השני - מהסוג השני (512065202_14267 ב-0325: "tlC 3100 NOV"
+    פעמיים, במחיר 10,016 ובמחיר 1,484 = מחיר "tlP 3100 NOV" במסלולים האחים - קול ופוט שקוזזו)."""
+    prices: dict[tuple, dict[bool, list[float]]] = defaultdict(lambda: {True: [], False: []})
+    rows = []
+    for rec in source:
+        if rec["Category"] != category or rec["מידע"] != "מידע":
+            continue
+        legal_id = str(rec.get("LegalId") or "")
+        for row in rec["Clean"]:
+            k = _option_key(row, legal_id)
+            price = _num(row.get(OPT_PRICE_COL))
+            is_call = is_call_option(str(row.get(OPT_NAME_COL) or ""))
+            if k is None or not price or price <= 0 or is_call is None:
+                continue
+            prices[k][is_call].append(price)
+            rows.append((id(row), k, is_call, price))
+    out = set()
+    for rid, k, is_call, price in rows:
+        own, other = prices[k][is_call], prices[k][not is_call]
+        if not other:
+            continue
+        own_med, other_med = statistics.median(own), statistics.median(other)
+        if abs(price / own_med - 1) > 0.2 and abs(price / other_med - 1) <= 0.05:
+            out.add(rid)
+    return out
+
+
 def _options_exposure(
     source: list[dict], total_assets: dict[str, float], category: str, detail: list | None = None
 ) -> tuple[dict[str, float], dict[str, float]]:
@@ -848,6 +1106,7 @@ def _options_exposure(
     sums: dict[str, float] = {}
     equity_sums: dict[str, float] = {}
     maof_sizes = _maof_contract_sizes(source)
+    flipped = _mislabeled_call_put(source, category)
     for rec in source:
         if rec["Category"] != category or rec["מידע"] != "מידע":
             continue
@@ -866,9 +1125,13 @@ def _options_exposure(
             name = row.get(OPT_NAME_COL)
             ticker, pattern = parse_underlying(str(name)) if name else (None, None)
             is_call = is_call_option(str(name)) if name else None
+            if is_call is not None and id(row) in flipped:
+                is_call = not is_call
             strike = _num(row.get(OPT_STRIKE_COL))
             if not strike or strike <= 0:  # עמודה ריקה / 0 - מהשם ("C004160M607-35ת")
                 strike = parse_strike(str(name)) if name else None
+            if ticker == FUTURES_OPTION:
+                ticker = _futures_option_underlying(strike, report_date)
             expiry = _option_expiry(row, name, report_date)
             units = _num(row.get(OPT_UNITS_COL))
             fx = _normalize_fx(row.get(OPT_CURRENCY_COL), _num(row.get(OPT_FX_COL)))

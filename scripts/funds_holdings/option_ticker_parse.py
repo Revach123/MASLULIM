@@ -39,7 +39,19 @@ PATTERN_C = re.compile(r"^ת?[CP][\d.]+M\d+-(.+)$")
 # Pattern G: אופציית מדד מעו"ף חודשית בשם מקוצר "C 4300 APR" / "P 4300 APR" (עגור) -
 # מתחיל ישר ב-C/P ומחיר מימוש ברמת ת"א 35 (קודי מניות מעו"ף מתחילים בקוד: "BZ C 250 AUG").
 # הזיהוי מאומת בחישוב עצמו: מימוש/מחיר המדד חייב להיות סביר (option_delta_pricing).
-PATTERN_G = re.compile(r"^ת?([CP])\s?(\d{3,5}(?:\.\d+)?)\s+(JAN|FEB|MAR|APR|MAY|JUN|JUL|AUG|SEP|OCT|NOV|DEC)\b", re.IGNORECASE)
+# קידומת "tl" אצל חלק מהגופים ("tlC 3100 NOV" ב-512065202_gm_0325; ברבעון שאחריו "C 3400 JAN 26 TL1")
+# אופציה על חוזה E-mini (CME) בקוד בלומברג: שורש + חודש + ספרת שנה + C/P (+ ספרת שבוע) ומימוש -
+# "ESH6P 6400", "QNAK6C 25000", "SCK6P 6000", "3EF6C 7000", "IMBWN6C2 7680" (513173393). נכס הבסיס
+# (S&P / נאסד"ק / ראסל / דאו) נקבע לפי המימוש מול רמות המדדים ביום הדוח (derivatives_exposure)
+PATTERN_FO = re.compile(r"^([0-9A-Z]{1,6}?)[FGHJKMNQUVXZ]\d([CP])\d?\s+\d+(?:\.\d+)?(?:\s+INDEX)?$", re.IGNORECASE)
+PATTERN_FO_NAME = re.compile(r"(?:S&P\s*500|NASDAQ\s*100).*E-?MINI|E-?MINI.*(?:S&P|NASDAQ)", re.IGNORECASE)
+FUTURES_OPTION = "IDX_FO"
+# אופציה על מניה בת"א בפורמט בלומברג: "BEZQ IT C7.5 17.12.25" (512245812)
+PATTERN_IT = re.compile(r"^([A-Z]{2,6})\s+IT\s+[CP]\d")
+# ניקיי (OSE): "NKY 4 P51000" (513173393) - הפורמט עם תאריך מכוסה בדפוס A
+PATTERN_NKY = re.compile(r"^NKY\s+\d{1,2}\s+[CP]\d")
+# קידומת "b" אצל מגדל / כלל ("bC 3100 NOV", "BC 3400 JAN 26")
+PATTERN_G = re.compile(r"^(?:ת|TL|B)?([CP])\s?(\d{3,5}(?:\.\d+)?)\s+(JAN|FEB|MAR|APR|MAY|JUN|JUL|AUG|SEP|OCT|NOV|DEC)\b", re.IGNORECASE)
 # מחיר מימוש מתוך קוד מעו"ף "C004160M607-35ת" (כשעמודת שער המימוש ריקה / 0)
 _MAOF_STRIKE = re.compile(r"^ת?[CP]0*(\d+(?:\.\d+)?)M\d")
 # חודש פקיעה מתוך קוד מעו"ף: M<ספרת שנה><חודש> - "M607" = 07/2026
@@ -108,7 +120,9 @@ MAOF_ABBREV_TICKER = {
 
 # מכפיל חוזה (₪ לנקודת מדד) - "ערך נקוב (יחידות)" באופציות מעו"ף הוא מספר חוזים,
 # לא יחידות נכס בסיס (שווי הוגן = יחידות × מחיר חוזה). לשאר הנכסים: 1.
-CONTRACT_MULTIPLIER = {"TA35": 50.0, "TA125": 50.0, "TA90": 50.0}
+CONTRACT_MULTIPLIER = {"TA35": 50.0, "TA125": 50.0, "TA90": 50.0,
+                       # ניקיי 225 ב-OSE: ¥1,000 לנקודה; אופציות על חוזי E-mini - מכפיל החוזה
+                       "NKY": 1000.0, "ES_FO": 50.0, "NQ_FO": 20.0, "RTY_FO": 50.0, "YM_FO": 5.0}
 # אופציה על מניה בודדת במעו"ף (קוד "P028000M607-כלל"): שער האופציה בדוח הוא לחוזה, וגודל החוזה משתנה לפי
 # מניה - כלל 100 מניות (פוט 280 כשהמניה ב-228.4: 514,700 אג' = (280-228.4) x 100), בזק 1,000 (פוט 8.00
 # כשהמניה ב-7.027: 96,500 אג'). נלמד מהנתונים (derivatives_exposure._maof_contract_sizes); 100 כשאין שורה
@@ -117,7 +131,7 @@ MAOF_STOCK_OPTION_SHARES = 100.0
 
 _CALL_WORD = re.compile(r"\bCALL", re.IGNORECASE)
 _PUT_WORD = re.compile(r"\bPUT", re.IGNORECASE)
-_CP_LETTER = re.compile(r"(?:^ת?|\s)([CP])\s?\d|\d\s?([CP])(?:\s|$)")
+_CP_LETTER = re.compile(r"(?:^(?:ת|tl|TL|b|B)?|\s)([CP])\s?\d|\d\s?([CPcp])(?:\s|$)")
 
 
 def parse_hebrew_company_name(name: str) -> str | None:
@@ -129,13 +143,16 @@ def parse_hebrew_company_name(name: str) -> str | None:
 
 def is_call_option(name: str) -> bool | None:
     """True=call, False=put, None=לא ניתן לקבוע (משאיר לא-ממופה)."""
+    m = PATTERN_FO.match(name.strip())
+    if m:
+        return m.group(2).upper() == "C"
     if _CALL_WORD.search(name):
         return True
     if _PUT_WORD.search(name):
         return False
     m = _CP_LETTER.search(name)
     if m:
-        letter = m.group(1) or m.group(2)
+        letter = (m.group(1) or m.group(2)).upper()
         return letter == "C"
     return None
 
@@ -177,6 +194,13 @@ def parse_underlying(name: str) -> tuple[str | None, str | None]:
         return None, None  # שם עברי לא-מאומת - נשאר לא-ממופה, לא ניחוש
     if PATTERN_G.match(name):
         return "TA35", "G_maof_index_month"
+    if PATTERN_FO.match(name) or PATTERN_FO_NAME.search(name):
+        return FUTURES_OPTION, "FO_emini_option"
+    m = PATTERN_IT.match(name)
+    if m:
+        return m.group(1) + ".TA", "IT_tase_stock"
+    if PATTERN_NKY.match(name):
+        return "NKY", "NKY_ose"
     for pattern, label, group_upper in (
         (PATTERN_A3, "A3_ticker_dash_us_date", False),
         (PATTERN_A, "A_us_slash_date", False),

@@ -42,9 +42,14 @@ CONTRACT_SPECS: dict[str, tuple[float, str | None]] = {
     "SLB": (500, "sp500_esg"),  # E-mini S&P 500 ESG = $500 × S&P 500 Scored & Screened (מפרט CME)
     "NQ": (20, "nasdaq100"),    # E-mini Nasdaq-100
     "HWB": (2, "nasdaq100"),    # Micro E-mini Nasdaq-100
+    "M2K": (5, "russell2000"),  # Micro E-mini Russell 2000
+    "MYM": (0.5, "dow30"),      # Micro E-mini Dow
     "RTY": (50, "russell2000"),  # E-mini Russell 2000
+    "RTS": (50, "russell2000"),  # אותו חוזה בקוד פנימי ("RTY Index" / RTSZ5 - 513026484, 520023185)
+    "NX": (5, "nikkei225"),     # CME Nikkei 225 Dollar ("NIKKEI 225 FU 12/25" NXZ5 - 512267592, 520004078)
     "DM": (5, "dow30"),         # E-mini Dow
     "FAW": (100, None),         # E-mini S&P MidCap 400
+    "FA": (100, None),          # אותו חוזה בקוד בלומברג ("FAH6 INDEX" ב-513026484_gm_0425)
     "IXT": (100, None),         # E-mini Technology Select Sector (XAK)
     "XAS": (250, None),         # E-mini Communication Services Select Sector (XAZ) - $250 x index (מפרט CME, SER-8207R)
     "XAY": (100, None),         # E-mini Consumer Discretionary Select Sector
@@ -59,8 +64,11 @@ CONTRACT_SPECS: dict[str, tuple[float, str | None]] = {
     "VG": (10, "stoxx50"),      # EURO STOXX 50
     "GX": (25, "dax"),          # DAX
     "DFW": (5, "dax"),          # Mini-DAX
+    "MZS": (1, "dax"),          # Micro-DAX (Eurex FDXS, €1 לנקודה - "F 12/25 MICRO DAX" MZSZ5, 513621110)
+    "CF": (10, None),           # CAC 40 (Euronext, €10 לנקודה - "INDEX CAC 40" CFV5, 513026484)
     "SXO": (50, None),          # STOXX Europe 600
     "CA": (50, None),           # EURO STOXX Banks
+    "UL": (50, None),           # STOXX Europe 600 Technology (Eurex FSTY) - "ULZ5 Index" ב-512244146_gm_0325
     "SM": (10, "smi"),          # SMI
     # MSCI: קוד מוצר בבלומברג -> מכפיל, מתוך "Listed futures and options based on
     # MSCI indexes" (MSCI, Q2 2023). JJY (FMKR) הושק ב-2025 - ממפרט Eurex.
@@ -69,9 +77,11 @@ CONTRACT_SPECS: dict[str, tuple[float, str | None]] = {
     "FPO": (100, None),         # Eurex Taiwan USD NTR (FMTW, FPOA)
     "JJY": (50, None),          # Eurex Korea USD NTR (FMKR)
     "ZWP": (10, None),          # Eurex World USD NTR (FMWO, ZWPA)
-    "RVP": (10, None),          # Eurex World USD price (FMWP, RVPA)
+    # RVP/HRL - אף גוף לא מצטט רמה בכל הארכיון (512065202 מדווח רווח/הפסד) -> סדרת המדד של
+    # MSCI ב-Yahoo (^<קוד MSCI>-USD-<וריאנט>): World price 990100, World ESG Screened NTR 721415
+    "RVP": (10, "yahoo:^990100-USD-STRD"),   # Eurex World USD price (FMWP, RVPA)
     "ZTL": (100, None),         # Eurex ACWI USD NTR (FMAC, ZTLA)
-    "HRL": (10, None),          # Eurex World ESG Screened USD NTR (FMSW, HRLA)
+    "HRL": (10, "yahoo:^721415-USD-NETR"),   # Eurex World ESG Screened USD NTR (FMSW, HRLA)
     "WMW": (200, None),         # ICE US ACWI USD NTR (MMW, WMWA)
     # ICE
     "Z": (10, "ftse100"),       # FTSE 100
@@ -102,7 +112,12 @@ CONTRACT_SPECS: dict[str, tuple[float, str | None]] = {
 # חוזים בבורסות שונות על אותו מדד (קוד המדד מתוך חוברת MSCI) - חולקים רמה.
 # למשל ZTL (Eurex) מוחזק רק אצל גופים שמדווחים רווח/הפסד במקום רמה, והרמה
 # נלקחת מ-WMW (ICE) שמדווח ברמה אצל גופים אחרים.
-SAME_INDEX = {"ZTL": "M1WD", "WMW": "M1WD", "MES": "MXEF", "RBE": "MXEF"}
+SAME_INDEX = {"ZTL": "M1WD", "WMW": "M1WD", "MES": "MXEF", "RBE": "MXEF", "UL": "SX8P", "SX6TECH": "SX8P", "FA": "MID400", "FAW": "MID400"}
+
+# חוזה Micro בשם ("NASD100 MICRO EMINDEC25", "SP500 MIC EMIN FUTDEC25" ב-510806870_gc_0325) שזוהה
+# לפי המדד כחוזה הרגיל - עשירית ממנו (פי 10 בחשיפה: 47% במקום 4.7%, רשמי 24.1%)
+MICRO_OF = {"ES": "HWA", "ME": "HWA", "NQ": "HWB", "RTY": "M2K", "DM": "MYM"}
+_MICRO_NAME = re.compile(r"\bMICRO\b|\bMIC\b")
 
 NON_EQUITY_ROOTS = frozenset({"G", "TU", "FV", "TY", "UXY", "US", "WN", "CL"})
 
@@ -123,6 +138,12 @@ _TASE_NAMES = (
     ("TABANKS", re.compile(r'^BF\b|בנקים|BANKS')),
 )
 _ISIN_IL = re.compile(r"^IL0(\d{8})\d$")
+_NAME_ROOTS = (
+    (re.compile(r"\bFESX\b"), "VG"),                          # Eurex EURO STOXX 50
+    (re.compile(r"\bEM(?:I)?NI\s+(?:NSDQ|NASDAQ)\b"), "NQ"),   # CME E-mini Nasdaq-100
+    (re.compile(r"\bEMINI\s+S&P\b"), "ES"),                   # CME E-mini S&P 500
+    (re.compile(r"\bOSE\s+TOPIX\b"), "TP"),                   # OSE TOPIX (large)
+)
 _STOXX600_SECTOR = re.compile(r"\bSTOXX\s*(?:EUROPE\s*)?600\s+([A-Z][A-Z&]{2,})")
 STOXX600_SECTOR_MULTIPLIER = 50.0
 
@@ -172,6 +193,11 @@ def parse_code(raw_ticker, name, report_date: date | None) -> tuple[str | None, 
     first = str(name or "").upper().split(maxsplit=1)
     if first and len(first[0]) >= 3 and first[0] in CONTRACT_SPECS:
         return first[0], None
+    # שמות מלאים בלי קוד (511789190: "ERX-F FESX 25 Dec 0", "IMM EMNI NSDQ 26 Mar 0")
+    up = str(name or "").upper()
+    for rx, root in _NAME_ROOTS:
+        if rx.search(up):
+            return root, None
     # חוזה סקטור STOXX Europe 600 (Eurex, €50 לנקודה בכל הסקטורים) - שורש לכל סקטור, כי לכל
     # אחד רמה משלו ("STOXX 600 TECH    Jun26" ב-512244146_gm_0126: 138 חוזים × 787.8 × 50 =
     # 27.6% מהמסלול, ובלעדיו 69.5% מול 99.4% רשמי)
@@ -226,6 +252,7 @@ class FuturesRow:
     report_date: date | None
     liability: bool
     security: str | None = None
+    by_name: bool = False       # השורש נלמד משם זהה אצל גוף אחר (לא קוד בשורה עצמה)
 
 
 class FuturesResolver:
@@ -237,22 +264,30 @@ class FuturesResolver:
         self._learn_name_map()
         self._learn_filer_scales()
         self._build_levels()
+        self._recheck_by_name()
         self._identify_remaining()
+        for r in self.rows:
+            if r.root in MICRO_OF and _MICRO_NAME.search(str(r.name).upper()):
+                r.root = MICRO_OF[r.root]
 
     # --- זיהוי --------------------------------------------------------
     def _learn_name_map(self):
         votes: dict[str, Counter] = defaultdict(Counter)
+        voters: dict[str, set] = defaultdict(set)
         for r in self.rows:
             if r.root in CONTRACT_SPECS:
                 nm = normalize_name(r.name)
                 if nm:
                     votes[nm][r.root] += 1
+                    voters[nm].add(r.legal_id)
         self.name_map = {nm: c.most_common(1)[0][0] for nm, c in votes.items() if len(c) == 1}
         for r in self.rows:
             if r.root not in CONTRACT_SPECS:
-                root = self.name_map.get(normalize_name(r.name))
+                nm = normalize_name(r.name)
+                root = self.name_map.get(nm)
                 if root:
                     r.root = root
+                    r.by_name = r.legal_id not in voters[nm]
         # אותו מספר נייר אצל גופים שונים = אותו חוזה (למשל "FM607-1תא" = "TLF JUL2026 TA 125")
         by_sec: dict[str, Counter] = defaultdict(Counter)
         for r in self.rows:
@@ -306,7 +341,7 @@ class FuturesResolver:
         roots_of: dict[str, str] = {}
         for r in self.rows:
             s = self.filer_scale.get(r.legal_id)
-            if r.root not in CONTRACT_SPECS or not s or not r.price or r.price <= 0 or r.liability:
+            if r.root not in CONTRACT_SPECS or not s or not r.price or r.price <= 0 or r.liability or r.by_name:
                 continue
             lvl = r.price / s
             idx = self._index_of(r.root)
@@ -325,6 +360,32 @@ class FuturesResolver:
         idx = self._index_of(root)
         return (self.levels.get((idx, month, d)) or self.levels.get((idx, None, d))
                 or self._ref(root, d))
+
+    def _fits(self, r: FuturesRow, root: str) -> bool:
+        scales = [self.filer_scale[r.legal_id]] if r.legal_id in self.filer_scale else list(SCALES)
+        lvl = self.level(root, None, r.report_date)
+        return bool(lvl) and any(abs(r.price / s / lvl - 1) < IDENTIFY_TOL for s in scales)
+
+    def _recheck_by_name(self):
+        """שם כללי שנלמד מגוף אחר ("MSCI WORLD" - RVPU6 של 512065202, מחיר העולמי) לא מכריע מול
+        מחיר שהוא רמה של חוזה אחר באותו מטבע (512244146 "MSCI World Index Sep26" ב-1,571,200 = רמת
+        ZWP ×100): השורה עוברת לחוזה שהרמה שלו מתאימה, ורק אז תורמת לרמות."""
+        moved = False
+        for r in self.rows:
+            if not r.by_name or r.liability or not r.price or r.price <= 0:
+                continue
+            if not self._fits(r, r.root):
+                matches = {root for root in CONTRACT_SPECS
+                           if self.root_ccy.get(root) == r.ccy and self._fits(r, root)}
+                if len({self._index_of(m) for m in matches}) == 1:
+                    r.root = max(matches, key=lambda m: self.root_count.get(m, 0))
+                    moved = True
+                elif matches or self.level(r.root, None, r.report_date):
+                    continue
+            r.by_name = False
+            moved = True
+        if moved:
+            self._build_levels()
 
     def _identify_remaining(self):
         """שורות בלי קוד ובלי שם מוכר: זיהוי לפי רמת המחיר מול רמות ידועות באותו מטבע."""
@@ -419,7 +480,10 @@ def _fix_units_by_fair_value(rows: list[tuple[dict, FuturesRow]], ticker_col: st
         if not med or sum(med / 2 <= q <= med * 2 for q in per.values()) / len(per) < UNITS_AGREE:
             continue
         for i, q in per.items():
-            if q / med > UNITS_OUTLIER or q / med < 1 / UNITS_OUTLIER:
+            # רק הקטנה: שווי לחוזה זעיר מול העמיתים = כמות מנופחת. שווי לחוזה גדול לא מוכיח כמות
+            # גדולה - השווי הוא רווח/הפסד מצטבר שתלוי במועד הכניסה (513026484_8765 ב-0425: 0.43-
+            # חוזי ES בשווי 1.05 אלף ש"ח "תוקנו" ל-19.1- חוזים = 148%- מהמסלול)
+            if q / med < 1 / UNITS_OUTLIER:
                 row, r = rows[i]
                 units = abs(_num(row.get(FV_COL))) / med * (1 if r.units > 0 else -1)
                 rows[i] = (row, FuturesRow(**{**r.__dict__, "units": units}))

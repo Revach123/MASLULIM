@@ -52,7 +52,8 @@ def _report_month(last_part: str) -> date | None:
 def list_files(reports_dir: Path) -> list[ReportFile]:
     """כל קבצי ה-xlsx תחת reports_dir, עם CompanyType ו-SortKey."""
     out = []
-    for p in sorted(reports_dir.rglob("*.xlsx")):
+    # סיומת בלי תלות באותיות גדולות/קטנות (520023094_pn_0126.XLSX)
+    for p in sorted(x for x in reports_dir.rglob("*") if x.is_file() and x.suffix.lower() == ".xlsx"):
         parts = _stem_parts(p.name)
         if len(parts) < 2:
             continue  # שם שלא תואם לתבנית הצפויה - לא ניתן לסווג, מדולג
