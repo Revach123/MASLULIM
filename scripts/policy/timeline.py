@@ -99,6 +99,11 @@ def version_date(url, ent, year):
     d = date_from_text(url, year) or date_from_text(ent.get("link_text"), year)
     if d:
         return d.isoformat(), "doc"
+    # מועד הפרסום באתר (Last-Modified / תיקיית ההעלאה בכתובת) - אם סביר לשנת המדיניות
+    from .pubdate import published, fits
+    pd_, src = published(url, ent)
+    if pd_ and (not year or not str(year).isdigit() or fits(year, pd_)):
+        return pd_.isoformat(), src
     f = ROOT / ent["file"] if ent.get("file") else None
     d = date_from_file(f, year) if f and f.exists() else None
     if d:
