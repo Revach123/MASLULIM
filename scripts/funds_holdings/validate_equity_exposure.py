@@ -225,7 +225,8 @@ def compute_equity_totals(reports_dir: Path, tracks: list[dict]):
                 official_at_report.get(key, ""), counted.get(key, 0.0))))
             ref = official_at_report.get(key, official[key])
             if abs(full - ref) > 0.01:
-                for part in sorted(foreign_parts.get(key, []), reverse=True)[:8]:
+                parts = sorted(foreign_parts.get(key, []), reverse=True)
+                for part in parts[:8] + [p for p in parts[8:] if not 0 <= p[3] <= 1.05]:
                     print("FUNDEQ|%s|%s|w=%.4f|eq=%.3f|contrib=%.4f|%s" % (key, part[1], part[2], part[3], part[0], part[4]))
         # has_data: האם קיימת ולו שורת דוח אחת (בכל גיליון/קטגוריה) למסלול
         # הזה בארכיון המקומי - לא "0% חשיפה למניות בפועל" (מסלול אג"ח טהור
