@@ -15,7 +15,7 @@ from pathlib import Path
 from .category_pct import build_category_pct
 from .derivatives_exposure import (
     FUTURES_CATEGORY, FUTURES_EQUITY_COLUMN, OPTIONS_LISTED_CATEGORY, OPTIONS_OTC_CATEGORY, SWAP_CATEGORY,
-    _options_exposure, build_derivatives_exposure, swap_on_bond_etf, total_assets_by_key,
+    _options_exposure, build_derivatives_exposure, is_equity_swap, total_assets_by_key,
 )
 from .excel_io import to_ratio
 from .file_list import get_file_list
@@ -63,8 +63,8 @@ def _equity_derivative_pct(source, category, base_col, use_fixed):
                 filtered.append(rec)
                 continue
             # סוואפ על תעודת סל של אג"ח (LQD/HYG) - לא מניות, כמו בפייפליין הראשי (swap_on_bond_etf)
-            keep_rows = [r for r in rec["Clean"] if r.get(base_col) == EQUITY_UNDERLYING
-                         and not (category == SWAP_CATEGORY and swap_on_bond_etf(r))]
+            keep_rows = [r for r in rec["Clean"] if (is_equity_swap(r) if category == SWAP_CATEGORY
+                                                     else r.get(base_col) == EQUITY_UNDERLYING)]
             filtered.append({**rec, "Clean": keep_rows})
         totals = total_assets_by_key(filtered)
         deriv = build_derivatives_exposure(filtered)

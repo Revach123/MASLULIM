@@ -215,7 +215,7 @@ def _derivative_exposure(source: list[dict]) -> dict[int, tuple[float, bool, str
     sw: list[dict] = []
     _swap_exposure(source, totals, sw)
     for d in sw:
-        out[id(d["row"])] = (d["ratio"], d["row"].get("סוג הנכס") == SWAP_EQUITY_ASSET_TYPE, "swaps")
+        out[id(d["row"])] = (d["ratio"], bool(d["equity"]), "swaps")
     for cat in (OPTIONS_LISTED_CATEGORY, OPTIONS_OTC_CATEGORY):
         opt: list[dict] = []
         _options_exposure(source, totals, cat, opt)

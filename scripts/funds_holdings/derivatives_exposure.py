@@ -73,7 +73,9 @@ from .option_delta_pricing import quote_scale, resolve_option_delta, resolve_opt
 from .option_ticker_parse import (CONTRACT_MULTIPLIER, MAOF_STOCK_OPTION_SHARES, is_call_option, parse_maof_expiry_month, parse_strike,
                                   parse_underlying)
 from .futures_notional import FuturesResolver, build_rows as build_futures_rows
-from .swap_index_pricing import parse_deal_date, price_as_of as index_price_as_of, proxy_return, resolve_current_price
+from .swap_index_pricing import (
+    has_price_source, parse_deal_date, price_as_of as index_price_as_of, proxy_return, resolve_current_price,
+)
 
 FAIR_VALUE_COL = 'שווי הוגן (באלפי ש"ח)'
 SWAP_NET_FAIR_VALUE_COL = 'שווי הוגן (נטו באלפי ש"ח)'
@@ -158,6 +160,18 @@ def swap_on_bond_etf(row: dict) -> bool:
         return False
     frac = _etf_equity_by_symbol().get(m.group(1))
     return frac is not None and frac < 0.5
+def is_equity_swap(row: dict) -> bool:
+    """סוואפ על מניות: "סוג הנכס" = מניות, או "אחר" / ריק על טיקר של מדד מניות שיש לו מקור
+    מחיר (INDICES / תעודת סל עוקבת - כולם מדדי מניות). 512065202_7867 ב-0425: IXYTR / IXCTR /
+    MVSMHTR חלקן "מניות" וחלקן "אחר" באותו דוח. סוואפ על תעודת סל של אג"ח - לא."""
+    if swap_on_bond_etf(row):
+        return False
+    kind = row.get(SWAP_ASSET_TYPE_COL)
+    if kind == SWAP_EQUITY_ASSET_TYPE:
+        return True
+    return str(kind or "").strip() in ("", "אחר") and has_price_source(row.get(SWAP_TICKER_COL))
+
+
 SWAP_MAIN_TYPE_COL = "מאפיין עיקרי"  # "Unfunded Swap"/"Funded Total Return/Equity Swap"/... - נבדק בפועל
 SWAP_LABEL_COL = SWAP_MAIN_TYPE_COL
 FUNDED_SWAP_CATEGORY = "החלף עם מימון (Funded)"
@@ -477,10 +491,13 @@ def _legs_reconcile(row: dict, report_date, fx_now: dict) -> bool:
         # (512065202 ב-0325: IXCTR 21,422.806 / 6,479.978- -> 21.423 / 6.48-, נטו ריק)
         # רק ברגליים בשני מטבעות (שקל / מט"ח): באותו מטבע זה גם סוואפ קטן שה"ערך נקוב" שלו
         # הוא סכום בשקלים (513173393_13211 ב-0325: ת"א 90, 24,261.63- ש"ח, רגליים 24.35 / 24.37)
+        # באותו מטבע רק העתק מדויק בשתי הרגליים (512065202_769 ב-0425: ת"א 125, 300 / 300-,
+        # רגליים 0.3 / 0.3-; שם הסוואפ הקטן של 13211 הרגליים 24.353 / 24.371 - שווי אמיתי)
         ccys = {row.get(leg["currency"]) for leg in SWAP_LEGS}
         legs = [(_num(row.get(leg["fair_value"])), _num(row.get(leg["units"]))) for leg in SWAP_LEGS]
-        return not ("ILS" in ccys and len(ccys) == 2
-                    and all(v and u and abs(abs(v) / (abs(u) / 1000) - 1) <= 0.005 for v, u in legs))
+        tol = 0.005 if "ILS" in ccys and len(ccys) == 2 else 0.0005 if len(ccys) == 1 else None
+        return not (tol is not None
+                    and all(v and u and abs(abs(v) / (abs(u) / 1000) - 1) <= tol for v, u in legs))
     return abs(sum(vals) - net) <= max(0.15 * max(abs(x) for x in vals), 0.5)
 
 
@@ -651,9 +668,9 @@ def _swap_exposure(
                 fv_sums[key] = fv_sums.get(key, 0.0) + row_pct
                 if detail is not None:
                     detail.append({"key": key, "row": row, "ratio": 0.0, "row_pct": row_pct,
-                                   "equity": row.get(SWAP_ASSET_TYPE_COL) == SWAP_EQUITY_ASSET_TYPE})
+                                   "equity": is_equity_swap(row)})
                 continue
-            is_equity = row.get(SWAP_ASSET_TYPE_COL) == SWAP_EQUITY_ASSET_TYPE and not swap_on_bond_etf(row)
+            is_equity = is_equity_swap(row)
             label = row.get(SWAP_LABEL_COL)
             # ה-fallback (כשקנה המידה לא אמין) משתמש בעמודת האחוז כפי שהדוח
             # עצמו מדווח - נמצא בפועל מדויק יותר מ-fv/total_assets_by_key
@@ -810,7 +827,7 @@ def collect_unresolved_swap_tickers(source: list[dict]) -> dict[str, set[str]]:
         if rec["Category"] != SWAP_CATEGORY or rec["מידע"] != "מידע":
             continue
         for row in rec["Clean"]:
-            if row.get(SWAP_ASSET_TYPE_COL) != SWAP_EQUITY_ASSET_TYPE or swap_on_bond_etf(row):
+            if not is_equity_swap(row):
                 continue
             key = row.get("מפתח")
             raw_ticker = row.get(SWAP_TICKER_COL)

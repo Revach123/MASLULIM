@@ -26,7 +26,7 @@ from collections import defaultdict
 from .derivatives_exposure import (
     EQUITY_UNDERLYING, FUT_UNDERLYING_COL, FUTURES_CATEGORY, OPTIONS_CATEGORIES, SWAP_ASSET_TYPE_COL,
     SWAP_CATEGORY as SWAP_CATEGORY_NAME,
-    SWAP_EQUITY_ASSET_TYPE, SWAP_TICKER_COL, _futures_exposure, _options_exposure, _swap_exposure,
+    SWAP_EQUITY_ASSET_TYPE, SWAP_TICKER_COL, _futures_exposure, _options_exposure, _swap_exposure, is_equity_swap,
     is_equity_option, parse_underlying, swap_on_bond_etf, total_assets_by_key,
 )
 from .excel_io import to_ratio
@@ -427,7 +427,7 @@ def equity_row_index(category: str, row: dict, full_names: dict[str, str] | None
             return None
         return classify_index(str(row.get(NAME_COL) or ""))
     if category == SWAP_CATEGORY_NAME:
-        if row.get(SWAP_ASSET_TYPE_COL) != SWAP_EQUITY_ASSET_TYPE or swap_on_bond_etf(row):
+        if not is_equity_swap(row):
             return None
         return _swap_index(row, full_names)
     return None
@@ -520,7 +520,7 @@ def build_index_exposure(source: list[dict], funds: list[dict], funds_ref: list[
     # 4. עסקאות החלף - רק "סוג הנכס" = מניות (כמו validate_equity_exposure)
     swap_detail: list[dict] = []
     _swap_exposure(source, totals, swap_detail)
-    swap_detail = [d for d in swap_detail if d["row"].get(SWAP_ASSET_TYPE_COL) == SWAP_EQUITY_ASSET_TYPE]
+    swap_detail = [d for d in swap_detail if is_equity_swap(d["row"])]
     swap_eq: dict[str, float] = defaultdict(float)
     for d in swap_detail:
         swap_eq[d["key"]] += d["ratio"]
@@ -559,7 +559,7 @@ def _resolve_full_names(source: list[dict], funds: list[dict], names_by_isin: di
         if rec["Category"] != SWAP_CATEGORY_NAME:
             continue
         for row in rec["Clean"]:
-            if row.get(SWAP_ASSET_TYPE_COL) != SWAP_EQUITY_ASSET_TYPE:
+            if not is_equity_swap(row):
                 continue
             raw = str(row.get(SWAP_TICKER_COL) or "")
             t = normalize_name(re.sub(r"\s+(INDEX|IND|EQUITY)$", "", raw, flags=re.IGNORECASE)).upper()
