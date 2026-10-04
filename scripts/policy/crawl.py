@@ -335,7 +335,7 @@ def main():
         seed = seeds.get(legal_id)
         if not seed:
             report.append([legal_id, c["name"], "", "no_config", 0, 0, ""]); continue
-        if seed["via"] == "extension" and os.environ.get("POLICY_FORCE_CLOUD") != "1":  # חוסם שרתי ענן - נמשך ע"י תוסף ה-Chrome (policy/inbox -> ingest_inbox.py)
+        if seed["via"] == "extension" and os.environ.get("POLICY_FORCE_CLOUD") != "1":  # via=both: ענן וגם תוסף  # חוסם שרתי ענן - נמשך ע"י תוסף ה-Chrome (policy/inbox -> ingest_inbox.py)
             report.append([legal_id, c["name"], seed["home"], "via_extension", 0, 0, ""]); continue
         extra = expand_templates(seed["extra"])
         products = {u: seed["products"].get(t) for t in seed["extra"] for u in expand_templates([t])}

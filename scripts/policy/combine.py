@@ -98,7 +98,7 @@ def main():
     ext = []
     for p in sorted((ROOT / "scripts" / "policy" / "sites").glob("*.json")):
         cfg = json.loads(p.read_text("utf-8"))
-        if cfg.get("via") == "extension":
+        if cfg.get("via") in ("extension", "both"):  # both = ענן יומי + התוסף כגיבוי
             ent = {k: cfg.get(k) for k in ("legal_id", "name", "home", "pages", "products", "click", "clicks", "any_sheet", "exclude", "settle_ms", "capture_ms", "download_rx", "follow_max", "follow_rx", "timeout_min", "download_delay_ms", "no_map", "per_track_pages", "wp_media_search")}
             ent["doc_pages"] = _doc_pages(cfg["legal_id"])
             ext.append(ent)
