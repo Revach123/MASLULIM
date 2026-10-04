@@ -822,6 +822,10 @@ def main():
             fy = None  # שם הקובץ הוא מספר המסלול (אלטשולר ".../2017.xlsx" = גמל הלכה), לא שנה
         fy = re.search(r"לשנת\s*(20[12]\d)", ent.get("link_text") or "") or fy  # "מדיניות השקעה צפויה לשנת 2026"
         doc_year = fy.group(1) if fy else (max(set(years), key=years.count) if years else None)
+        if fy and years and int(max(set(years), key=years.count)) > int(fy.group(1)):
+            # שם קובץ ישן על תוכן חדש (מנורה "...לשנת-2025-...-1343.xlsx" בתיקייה 20260126, "צפוי לשנת 2026") -
+            # שנים של נתוני עבר בגיליון הן מוקדמות, לא מאוחרות; רוב השורות בשנה מאוחרת = שנת המדיניות
+            doc_year = max(set(years), key=years.count)
         for r in doc_rows:  # שנה בשם הקובץ גוברת (בגוף הגיליון מופיעות לפעמים שנים של נתוני עבר)
             r["year"] = doc_year or r.get("year")
         fn_code = re.search(r"-(\d{3,6})\.(xlsx?|pdf)$", Path(ent["file"]).name)  # מנורה: קובץ למסלול, הקוד בשם

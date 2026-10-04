@@ -6,6 +6,10 @@
   {
    "product": null,
    "url": "https://www.clalbit.co.il/aboutclalinsurance/generalreports/?txtTabId=1&txtReportsYearId={year}&txtCompanyId=2&txtReportTypeId=20"
+  },
+  {
+   "product": "ביטוח",
+   "url": "https://www.clalbit.co.il/statestreet/"
   }
  ],
  "browser": "headless",
@@ -13,9 +17,9 @@
   "ביטוח"
  ],
  "search": false,
- "rev": 10,
+ "rev": 11,
  "max_pages": 20,
- "note": "כלל: generalreports, סוג 20 (הצהרה מראש של גוף מוסדי) x שנה; txtCompanyId=2 (API GetCompanyAndYearList?numReportType=20: 2=כלל חברה לביטוח, 3=כלל פנסיה וגמל)",
+ "note": "כלל: generalreports, סוג 20 (הצהרה מראש של גוף מוסדי) x שנה; txtCompanyId=2 (API GetCompanyAndYearList?numReportType=20: 2=כלל חברה לביטוח, 3=כלל פנסיה וגמל) | 2026-10-04: עמוד State Street (מסלולים 15229/15230/15231) - שני ה-PDF \"למידע נוסף\" כ-docs; 15230 (אשראי ואג\"ח) לא בקובץ ההצהרות של 2026",
  "budget": [
   60,
   30
@@ -30,5 +34,9 @@
    "קרן י\\b",
    "14012"
   ]
+ ],
+ "docs": [
+  "https://www.clalbit.co.il/media/nkpjarco/a4-1-002.pdf",
+  "https://www.clalbit.co.il/media/y1iadydy/מניות-002.pdf"
  ]
 }
