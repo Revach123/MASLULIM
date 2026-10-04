@@ -19,7 +19,7 @@ from .derivatives_exposure import (
 )
 from .file_list import get_file_list
 from .foreign_etf_reference import build_foreign_equity
-from .fund_type_convention import add_counted_to_index, fund_type_pct, learn_counted_types, official_from_tracks
+from .fund_type_convention import add_counted_to_index, fund_type_pct, learn_counted_types, official_at_report
 from .foreign_fund_layers import build_foreign_fractions
 from .funds import build_funds
 from .funds_detail import build_funds_detail
@@ -123,7 +123,8 @@ def build_master_table(
     # קרנות השקעה שהחברה סופרת כמניות בדיווח הרשמי (ר' fund_type_convention) - נלמד לכל
     # חברה מול "חשיפה למניות" ב-tracks, ומתווסף לפירוק כמדד נפרד
     conventions = learn_counted_types({k: v["total"] for k, v in index_exp.items()},
-                                      official_from_tracks(tracks, track_key), fund_type_pct(source))
+                                      official_at_report(tracks, track_key, report_month_by_key(source)),
+                                      fund_type_pct(source))
     added = add_counted_to_index(index_exp, source, conventions, index_trace)
     print(f"[main] קרנות השקעה שנספרות כמניות: {len(conventions)} חברות ({added} שורות): "
           + "; ".join(f"{co}: {', '.join(t)}" for co, t in sorted(conventions.items())))

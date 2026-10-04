@@ -86,6 +86,26 @@ _TYPE_IDS = {"פרייבט אקוויטי": "pe", "קרן גידור (Hedge Fund
 LOCATION_COL = 'ישראל/חו"ל'
 
 
+def official_at_report(tracks: list[dict], track_key, report_month: dict[str, str]) -> dict[str, float]:
+    """מפתח -> החשיפה הרשמית לחודש הדוח (data.gov.il, כמו ב-validate), ואם אין - האחרונה ב-tracks.
+    הלמידה מול החודש האחרון (אוגוסט מול דוח יוני) רועשת - חודשיים של תנועה בשוק ובתיק."""
+    out = official_from_tracks(tracks, track_key)
+    try:
+        from .official_history import fetch_stock_exposure
+        hist = fetch_stock_exposure({m for m in report_month.values() if m})
+    except Exception as e:  # רשת
+        print(f"[fund_type] data.gov.il לא זמין - לפי הנתון האחרון ב-tracks: {e}")
+        return out
+    for t in tracks:
+        key = track_key(t)
+        if key is None:
+            continue
+        v = hist.get((str(t.get("תחום") or "").strip(), key.split("_", 1)[1], report_month.get(key, "")))
+        if v is not None:
+            out[key] = v
+    return out
+
+
 def official_from_tracks(tracks: list[dict], track_key) -> dict[str, float]:
     """מפתח -> "חשיפה למניות" הרשמית (שבר) מ-tracks - כמו ב-validate_equity_exposure."""
     out = {}
