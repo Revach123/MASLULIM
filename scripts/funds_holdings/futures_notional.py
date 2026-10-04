@@ -47,6 +47,7 @@ CONTRACT_SPECS: dict[str, tuple[float, str | None]] = {
     "RTY": (50, "russell2000"),  # E-mini Russell 2000
     "DM": (5, "dow30"),         # E-mini Dow
     "FAW": (100, None),         # E-mini S&P MidCap 400
+    "FA": (100, None),          # אותו חוזה בקוד בלומברג ("FAH6 INDEX" ב-513026484_gm_0425)
     "IXT": (100, None),         # E-mini Technology Select Sector (XAK)
     "XAS": (250, None),         # E-mini Communication Services Select Sector (XAZ) - $250 x index (מפרט CME, SER-8207R)
     "XAY": (100, None),         # E-mini Consumer Discretionary Select Sector
@@ -105,7 +106,7 @@ CONTRACT_SPECS: dict[str, tuple[float, str | None]] = {
 # חוזים בבורסות שונות על אותו מדד (קוד המדד מתוך חוברת MSCI) - חולקים רמה.
 # למשל ZTL (Eurex) מוחזק רק אצל גופים שמדווחים רווח/הפסד במקום רמה, והרמה
 # נלקחת מ-WMW (ICE) שמדווח ברמה אצל גופים אחרים.
-SAME_INDEX = {"ZTL": "M1WD", "WMW": "M1WD", "MES": "MXEF", "RBE": "MXEF", "UL": "SX8P", "SX6TECH": "SX8P"}
+SAME_INDEX = {"ZTL": "M1WD", "WMW": "M1WD", "MES": "MXEF", "RBE": "MXEF", "UL": "SX8P", "SX6TECH": "SX8P", "FA": "MID400", "FAW": "MID400"}
 
 # חוזה Micro בשם ("NASD100 MICRO EMINDEC25", "SP500 MIC EMIN FUTDEC25" ב-510806870_gc_0325) שזוהה
 # לפי המדד כחוזה הרגיל - עשירית ממנו (פי 10 בחשיפה: 47% במקום 4.7%, רשמי 24.1%)
