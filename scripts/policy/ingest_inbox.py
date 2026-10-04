@@ -8,11 +8,21 @@ policy/companies/<LegalId>/raw/<LegalId>/, נרשם ב-docs_index.json של הח
 import json, shutil
 from pathlib import Path
 
-from .crawl import sniff_ext
 
 ROOT = Path(__file__).resolve().parents[2]
 INBOX = ROOT / "policy" / "inbox"
 DOC_EXTS = {".xlsx", ".xls", ".pdf", ".docx", ".htm", ".html", ".doc", ".csv"}
+
+
+def sniff_ext(content):
+    """סוג הקובץ לפי תוכן (כמו crawl.sniff_ext; כאן בלי import של crawl - ב-workflow של ה-inbox אין requests)."""
+    if content[:4] == b"PK\x03\x04":
+        return ".docx" if b"word/" in content[:4000] else ".xlsx"
+    if content[:4] == b"\xd0\xcf\x11\xe0":
+        return ".xls"
+    if content[:5] == b"%PDF-":
+        return ".pdf"
+    return None
 
 
 def main():

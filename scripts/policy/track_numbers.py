@@ -83,6 +83,10 @@ def from_file_name(url):
     name = re.sub(r"(?<!\d)\d{1,2}[._-]\d{1,2}[._-]\d{2,4}(?!\d)", " ", name)  # תאריכים
     name = re.sub(r"(?<!\d)(19|20)\d{6}(?!\d)", " ", name)
     c = [n for n in numbers_in(name) if not re.fullmatch(r"\d{6}", n)]  # 6 ספרות בשם קובץ = לרוב תאריך (260811)
+    # מספר מסלול שנראה כשנה, אחרי שנת יעד בסוף השם (מנורה "...יעד-לפרישה-2035-2014", "-2045-2016")
+    m = re.search(r"(?<!\d)(?:19|20)\d\d[-_ ]+((?:19|20)\d\d)$", name.strip(" -_"))
+    if m and m.group(1) not in c:
+        c.append(m.group(1))
     return c
 
 
@@ -108,7 +112,7 @@ class Registry:
                         d[tn] = byid[tn]
         self.ok = bool(self.by_company)
 
-    def valid(self, lid, n):
+    def valid(self, lid, n, from_doc=False):
         """המספר קיים ברישום - באותה חברה, או בכל חברה (קרנות ותיקות רשומות תחת עמיתים וכד'), או בגמל-נט/פנסיה-נט/
         ביטוח-נט (fund_names: קרנות משתתפות ברווחים - הראל קרן י 259012, כלל קרן ט 14011 - אינן ברישום)."""
         if not self.ok or lid not in self.by_company or n in self.by_company[lid]:
@@ -120,7 +124,8 @@ class Registry:
         if n in self._all:
             return True
         # רק בגמל-נט/פנסיה-נט/ביטוח-נט: לפחות 3 ספרות ולא שנה (2016 = מספר קופה/שנה, 75 = "2.075 מש"ח")
-        return n in self._fn and len(n) >= 3 and not (1990 <= int(n) <= 2035)
+        # מספר שנראה כשנה מותר כשהוא מספר הקופה בתוך המסמך עצמו (מנורה פנסיה 2014 "יעד לפרישה 2035", בפנסיה-נט בלבד)
+        return n in self._fn and len(n) >= 3 and (from_doc or not (1990 <= int(n) <= 2035))
 
     def match_name(self, lid, name, taken=()):
         cand = self.by_company.get(lid) or {}
@@ -282,7 +287,8 @@ def assign(tracks):
     מופיע בשמו (דליפה מהמסלול הקודם בגיליון - הפניקס/כלל); האחרים עוברים למקור הבא."""
     reg = Registry()
     for t in tracks:
-        t["_c"] = [x for x in candidates(t) if reg.valid(t["legal_id"], x[0])
+        t["_c"] = [x for x in candidates(t) if reg.valid(t["legal_id"], x[0], from_doc=x[1] == "doc" or (
+                       x[1] == "file_name" and re.search(rf"(?<!\d)(19|20)\d\d[-_ ]+{x[0]}\.\w+$", unquote(t.get("url") or ""))))
                    and (x[1] != "name_short" or x[0] in reg.by_company.get(t["legal_id"], {}))]
         t["_banned"] = set()
     for _ in range(4):
