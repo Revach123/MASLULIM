@@ -48,7 +48,7 @@ CONTRACT_SPECS: dict[str, tuple[float, str | None]] = {
     "IXT": (100, None),         # E-mini Technology Select Sector (XAK)
     "XAS": (250, None),         # E-mini Communication Services Select Sector (XAZ) - $250 x index (מפרט CME, SER-8207R)
     "XAY": (100, None),         # E-mini Consumer Discretionary Select Sector
-    "SWO": (25, None),          # E-mini PHLX Semiconductor Sector (SOX)
+    "SWO": (25, "yahoo:^SOX"),  # E-mini PHLX Semiconductor Sector (SOX) - רמה מ-Yahoo כשאף גוף לא מצטט רמה
     # OSE / SGX
     "NK": (1000, "nikkei225"),  # Nikkei 225 (OSE, large)
     "NO": (100, "nikkei225"),   # Nikkei 225 mini (OSE)
@@ -123,6 +123,8 @@ _TASE_NAMES = (
     ("TABANKS", re.compile(r'^BF\b|בנקים|BANKS')),
 )
 _ISIN_IL = re.compile(r"^IL0(\d{8})\d$")
+_STOXX600_SECTOR = re.compile(r"\bSTOXX\s*(?:EUROPE\s*)?600\s+([A-Z][A-Z&]{2,})")
+STOXX600_SECTOR_MULTIPLIER = 50.0
 
 LIABILITY_MARK = "התחייבות"
 SCALES = (1.0, 100.0)
@@ -170,6 +172,14 @@ def parse_code(raw_ticker, name, report_date: date | None) -> tuple[str | None, 
     first = str(name or "").upper().split(maxsplit=1)
     if first and len(first[0]) >= 3 and first[0] in CONTRACT_SPECS:
         return first[0], None
+    # חוזה סקטור STOXX Europe 600 (Eurex, €50 לנקודה בכל הסקטורים) - שורש לכל סקטור, כי לכל
+    # אחד רמה משלו ("STOXX 600 TECH    Jun26" ב-512244146_gm_0126: 138 חוזים × 787.8 × 50 =
+    # 27.6% מהמסלול, ובלעדיו 69.5% מול 99.4% רשמי)
+    m = _STOXX600_SECTOR.search(str(name or "").upper())
+    if m:
+        root = "SX6" + m.group(1)[:4]
+        CONTRACT_SPECS.setdefault(root, (STOXX600_SECTOR_MULTIPLIER, None))
+        return root, None
     return None, None
 
 

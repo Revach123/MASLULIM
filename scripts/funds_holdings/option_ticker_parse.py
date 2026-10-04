@@ -192,7 +192,9 @@ def parse_underlying(name: str) -> tuple[str | None, str | None]:
             continue
         ticker = m.group(1).strip()
         if pattern is PATTERN_C:
-            resolved = MAOF_ABBREV_TICKER.get(ticker)
+            # מדד: ה-ת' לפני או אחרי המספר ("35ת" / "ת35" - C004280M604-ת35 ב-512267592_gm_0126)
+            bare = ticker.replace("ת", "")
+            resolved = MAOF_ABBREV_TICKER.get(ticker) or (MAOF_ABBREV_TICKER.get(bare) if bare.isdigit() else None)
             return (resolved, label) if resolved else (None, None)
         if group_upper:
             ticker = ticker.upper()

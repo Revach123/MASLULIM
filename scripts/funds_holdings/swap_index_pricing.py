@@ -82,9 +82,16 @@ def _load_index_prices(index_id: str) -> tuple[tuple[date, float], ...]:
     return tuple(out)
 
 
+YAHOO_PREFIX = "yahoo:"
+
+
 def price_as_of(index_id: str, as_of: date) -> float | None:
     """מחיר הסגירה האחרון הידוע עד (וכולל) as_of. None אם אין מחיר במאגר
-    לפני as_of, או שאין בכלל היסטוריה למדד הזה (רשת נכשלה/index_id שגוי)."""
+    לפני as_of, או שאין בכלל היסטוריה למדד הזה (רשת נכשלה/index_id שגוי).
+    "yahoo:<סימול>" - מדד בלי סדרה ב-INDICES, מ-Yahoo (כמו בתמחור האופציות)."""
+    if index_id.startswith(YAHOO_PREFIX):
+        from .option_delta_pricing import price_as_of as single_price_as_of
+        return single_price_as_of(index_id[len(YAHOO_PREFIX):], as_of)
     try:
         bars = _load_index_prices(index_id)
     except Exception:

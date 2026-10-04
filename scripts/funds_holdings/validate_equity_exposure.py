@@ -24,6 +24,7 @@ from .foreign_fund_layers import build_foreign_fractions
 from .funds import build_funds
 from .funds_reference import build_funds_reference
 from .funds_il import build_funds_il_equity
+from .fund_type_convention import counted_fund_equity, fund_type_pct, learn_counted_types
 from .fund_exposure_reference import fetch_fund_exposure, fetch_tase_stocks
 from .index_exposure import DIRECT_EQUITY_CATEGORIES
 from .isin_swap import build_isin_swap
@@ -184,24 +185,44 @@ def compute_equity_totals(reports_dir: Path, tracks: list[dict]):
                 foreign_parts.setdefault(f.get("מפתח"), []).append((w * eq, isin, w, eq, str((f.get("_row") or {}).get("שם נייר ערך") or "")[:30]))
 
     keys = set(official)
-    rows = []
-    for key in keys:
+
+    def _parts(key):
         cats = category_pct.get(key, {})
         direct = sum(cats.get(c, 0.0) for c in DIRECT_EQUITY_CATEGORIES)
         funds_eq = il_equity.get(key, 0.0)
         foreign_eq = sum(v for k, v in foreign_equity.get(key, {}).items()
                           if any(s in k for s in EQUITY_FUND_SIVEGS))
+        return direct, funds_eq, foreign_eq
+
+    # קרנות השקעה שהחברה סופרת כמניות (ר' fund_type_convention) - נלמד מול הנתון הרשמי
+    # לחודש הדוח (ואם אין - האחרון), על כל מסלולי החברה יחד
+    type_pct = fund_type_pct(source)
+    model_now = {}
+    for key in keys:
+        direct, funds_eq, foreign_eq = _parts(key)
+        model_now[key] = (direct + funds_eq + foreign_eq + fut_new.get(key, 0.0)
+                          + swap_new.get(key, 0.0) + _opt_new(key))
+    conventions = learn_counted_types(model_now, {k: official_at_report.get(k, official[k]) for k in keys},
+                                      type_pct)
+    counted = counted_fund_equity(type_pct, conventions)
+    print(f"[validate] קרנות השקעה שנספרות כמניות: {len(conventions)} חברות, {len(counted)} מסלולים")
+    for co, types in sorted(conventions.items()):
+        print(f"[validate]   {co}: {', '.join(types)}")
+
+    rows = []
+    for key in keys:
+        direct, funds_eq, foreign_eq = _parts(key)
 
         base = direct + funds_eq
         old_total = base + fut_old.get(key, 0.0) + swap_old.get(key, 0.0) + _opt_old(key)
         deriv_only = base + fut_new.get(key, 0.0) + swap_new.get(key, 0.0) + _opt_new(key)
-        full = deriv_only + foreign_eq
+        full = deriv_only + foreign_eq + counted.get(key, 0.0)
         if os.environ.get("DUMP_EQUITY_COMPONENTS"):
             print("COMP|" + "|".join(str(x) for x in (
                 key, official[key], direct, funds_eq, foreign_eq,
                 fut_new.get(key, 0.0), swap_new.get(key, 0.0), _opt_new(key), key in category_pct,
                 official_month.get(key, ""), report_month.get(key, ""),
-                official_at_report.get(key, ""))))
+                official_at_report.get(key, ""), counted.get(key, 0.0))))
             ref = official_at_report.get(key, official[key])
             if abs(full - ref) > 0.01:
                 for part in sorted(foreign_parts.get(key, []), reverse=True)[:8]:
