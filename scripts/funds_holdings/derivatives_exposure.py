@@ -701,7 +701,7 @@ def _swap_exposure(
             # ספציפי (לא עקבי בין מגישים תחת אותה תווית בדיוק).
             is_funded = _is_funded_swap(row.get(SWAP_MAIN_TYPE_COL))
 
-            leg_values = _leg_market_values(row, report_date, fx_now)
+            leg_values = raw_legs = _leg_market_values(row, report_date, fx_now)
             if leg_values and not _legs_reconcile(row, report_date, fx_now):
                 leg_values = []  # "שווי" הרגליים לא מסתכם לנטו - לא שווי שוק
             # יחידות זהות בשתי הרגליים - רק כשאין שווי רגליים תקף (שורה רגילה לא משתנה)
@@ -712,6 +712,11 @@ def _swap_exposure(
             if (live_ratio is not None and leg_values and not mirrored
                     and _legs_are_notional(row, sum(leg_values) / len(leg_values) / total, live_ratio)):
                 live_ratio = None
+            if mirrored and live_ratio is None and raw_legs:
+                # "ערך נקוב" זהה ברגליים שהוא סכום ולא כמות (יחידות × מחיר לא סביר) - הרגליים הן
+                # הנוציונל גם כשהנטו כולל ריבית צבורה ולא מסתכם (511880460_963 ב-0425: SPTR, 26.9
+                # מיליון דולר, רגליים 26,922 / 26,926- אלף)
+                leg_values, mirrored = raw_legs, False
             if mirrored and live_ratio is not None:
                 # יחידות שמשתקפות בשער בין הרגליים - הרגליים (אם יש) הן היחידות / 1000, לא שווי.
                 # הסימן של היחידות בשקלים הוא כיוון העסקה (512065202_13246 ב-0126: עסקה אחת
