@@ -520,6 +520,10 @@ def _mirrored_units(row: dict, report_date, fx_now: dict) -> float | None:
     ccy1, ccy2 = row.get(leg1_col["currency"]), row.get(leg2_col["currency"])
     if ccy1 and ccy1 == ccy2:
         u1, u2 = _num(row.get(leg1_col["units"])), _num(row.get(leg2_col["units"]))
+        if u1 and u2 is None:
+            # רגל אחת עם "ערך נקוב" והשנייה ריקה (512065202_15361 ב-0126: NDWUIT, 1,650.39 / "ריק
+            # במקור") - כמות; מחיר לא סביר (סכום ולא כמות) נפסל ב-LIVE_SWAP_MAX_RATIO
+            return u1
         return u1 if u1 and u2 and abs(abs(u1 / u2) - 1) <= 0.001 else None
     if not ccy1 or not ccy2 or (ccy1 == "ILS") == (ccy2 == "ILS"):
         return None

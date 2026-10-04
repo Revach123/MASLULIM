@@ -237,6 +237,17 @@ def compute_equity_totals(reports_dir: Path, tracks: list[dict]):
     return rows
 
 
+def _load_anomalies() -> set[tuple[str, str]]:
+    """(חודש YYYYMM או "*", מפתח) מ-official_anomalies.csv - טעויות דיווח של החברות, כל אחת עם ראיה."""
+    import csv
+    path = Path(__file__).with_name("official_anomalies.csv")
+    try:
+        with open(path, encoding="utf-8") as f:
+            return {(r["month"].strip(), r["key"].strip()) for r in csv.DictReader(f)}
+    except OSError:
+        return set()
+
+
 def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--reports-dir", type=Path, default=Path("reports"))
@@ -330,6 +341,12 @@ def main():
         mae_at = sum(abs(r[4] - r[8]) for r in at) / len(at)
         print(f"MAE (שיטה מלאה) מול הנתון הרשמי לחודש הדוח (data.gov.il): {len(at)} מסלולים, "
               f"{mae_at*100:.3f} נק' אחוז (מול החודש האחרון, אותם מסלולים: {mae(4, at)*100:.3f})")
+        # בלי טעויות דיווח מתועדות של החברות (official_anomalies.csv - חודש, מפתח, ראיה)
+        anomalies = _load_anomalies()
+        clean = [r for r in at if (r[7], r[0]) not in anomalies and ("*", r[0]) not in anomalies]
+        if clean:
+            print(f"MAE (שיטה מלאה) בלי טעויות דיווח של החברות: {len(clean)} מסלולים "
+                  f"({len(at) - len(clean)} הוצאו), {sum(abs(r[4] - r[8]) for r in clean) / len(clean) * 100:.3f} נק' אחוז")
 
     rows_sorted = sorted(rows, key=lambda r: -abs(r[4] - r[1]))
     print("\n15 הפערים הגדולים ביותר (שיטה מלאה מול רשמי):")
