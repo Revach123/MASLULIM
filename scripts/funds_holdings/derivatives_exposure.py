@@ -70,7 +70,7 @@ from datetime import date, datetime
 from .excel_io import to_ratio
 from .sheet_source import PCT_COL
 from .option_delta_pricing import quote_scale, resolve_option_delta, resolve_option_value
-from .option_ticker_parse import (CONTRACT_MULTIPLIER, MAOF_STOCK_OPTION_SHARES, is_call_option, parse_maof_expiry_month, parse_strike,
+from .option_ticker_parse import (CONTRACT_MULTIPLIER, FUTURES_OPTION, MAOF_STOCK_OPTION_SHARES, is_call_option, parse_maof_expiry_month, parse_strike,
                                   parse_underlying)
 from .futures_notional import FuturesResolver, build_rows as build_futures_rows
 from .swap_index_pricing import (
@@ -931,6 +931,25 @@ def _maof_contract_sizes(source: list[dict]) -> dict[str, float]:
     return out
 
 
+_FO_CANDIDATES = ("ES_FO", "NQ_FO", "RTY_FO", "YM_FO")
+
+
+def _futures_option_underlying(strike: float | None, report_date) -> str | None:
+    """נכס הבסיס של אופציה על חוזה E-mini לפי המימוש: המדד שהמימוש הכי קרוב לרמתו ביום הדוח
+    (עד פי 1.6 לכל כיוון). S&P ~6-7K, נאסד"ק-100 ~21-31K, ראסל ~2.5K, דאו ~45K - טווחים נפרדים."""
+    from .option_delta_pricing import UNDERLYING_ALIAS, price_as_of as spot_as_of
+    if not strike or not report_date:
+        return None
+    best = None
+    for cand in _FO_CANDIDATES:
+        spot = spot_as_of(UNDERLYING_ALIAS[cand], report_date)
+        if spot:
+            dist = abs(math.log(strike / spot))
+            if dist <= math.log(1.6) and (best is None or dist < best[0]):
+                best = (dist, cand)
+    return best[1] if best else None
+
+
 def _option_key(row: dict, legal_id: str) -> tuple | None:
     name = row.get(OPT_NAME_COL)
     if not name:
@@ -1009,6 +1028,8 @@ def _options_exposure(
             strike = _num(row.get(OPT_STRIKE_COL))
             if not strike or strike <= 0:  # עמודה ריקה / 0 - מהשם ("C004160M607-35ת")
                 strike = parse_strike(str(name)) if name else None
+            if ticker == FUTURES_OPTION:
+                ticker = _futures_option_underlying(strike, report_date)
             expiry = _option_expiry(row, name, report_date)
             units = _num(row.get(OPT_UNITS_COL))
             fx = _normalize_fx(row.get(OPT_CURRENCY_COL), _num(row.get(OPT_FX_COL)))

@@ -35,6 +35,9 @@ TRADING_DAYS_PER_YEAR = 252
 UNDERLYING_ALIAS = {
     "SPXW": "^GSPC",
     "NDXP": "^NDX",
+    "NKY": "^N225",
+    # אופציות על חוזי E-mini (option_ticker_parse.FUTURES_OPTION) - לפי המדד שנבחר מהמימוש
+    "ES_FO": "^GSPC", "NQ_FO": "^NDX", "RTY_FO": "^RUT", "YM_FO": "^DJI",
 }
 
 
