@@ -1,15 +1,23 @@
 {
  "legal_id": "511880460",
  "company": "אנליסט קופות גמל בע\"מ",
- "taken": "2026-10-03T10:13:11+00:00",
+ "taken": "2026-10-04T10:49:19+00:00",
  "pages": {
   "https://www.analyst.co.il/investment-policy/": {
    "product": "גמל",
    "status": 200,
    "method": "browser",
-   "text_hash": "41c9fc35017317c78cb59d73e849fcc3d8034119",
+   "text_hash": "4a1c736aea544dd12063a88ce4d303f480dbeb5a",
    "text_head": "מעסיקים סוכנים אזור אישי עמיתים אודות קופות גמל וקרנות השתלמות קרנות נאמנות ניהול תיקי השקעות צור קשר קריירה מרכז הידע חיפוש לאזור האישי ראשי > מסמכים ודוחות מנהליים מסמכים ודוחות מנהליים מדיניות השקעות שם הדו\"ח קובץ להורדה מדיניות השקעה צפויה לשנת 2026, עדכון 28/09/2026, עדכון שיעור החשיפה הצפוי למניות בקופות: גמל מסלול לבני 50 ומטה, קופה מרכזית לפיצויים מסלול כללי, גמל לבני 50-60, גמל לבני 60 ומעלה, השתלמות כללי, גמל להשקעה כללי, חיסכון לכל ילד - סיכון בינוני, חיסכון לכל ילד - סיכון מועט. עדכון שיעור החשיפה הצפוי למט\"ח בקופות: גמל מסלול לבני 50 ומטה, גמל לבני 50-60, השתלמות כללי, גמל להשקעה ",
    "items": [
+    {
+     "text": "תגמול לסוכנים עבור קידום מכירות -אוקטובר 2026 הורדת מסמך",
+     "href": "https://www.analyst.co.il/wp-content/uploads/2026/10/%D7%A7%D7%91%D7%95%D7%A6%D7%94-33.pdf",
+     "year": "2026",
+     "iframe": false,
+     "doc": true,
+     "internal": true
+    },
     {
      "text": "תגמול לסוכנים עבור קידום מכירות -אוקטובר 2026 הורדת מסמך",
      "href": "https://www.analyst.co.il/wp-content/uploads/2026/09/%D7%A7%D7%91%D7%95%D7%A6%D7%94-32-1.pdf",
@@ -373,6 +381,14 @@
     {
      "text": "(html)",
      "href": "https://www.analyst.co.il/wp-content/uploads/2026/01/מגבלת-עמלת-ניהול-חיצוני-2026-מונגש.pdf",
+     "year": "2026",
+     "iframe": false,
+     "doc": true,
+     "internal": true
+    },
+    {
+     "text": "(html)",
+     "href": "https://www.analyst.co.il/wp-content/uploads/2026/10/קבוצה-33.pdf",
      "year": "2026",
      "iframe": false,
      "doc": true,
@@ -1644,7 +1660,7 @@
     },
     {
      "text": "(iframe)",
-     "href": "https://www.google.com/recaptcha/api2/anchor?ar=1&k=6LeXx8spAAAAAOhAgvJ7_YyVQbF6U2MN4n-qr8jV&co=aHR0cHM6Ly93d3cuYW5hbHlzdC5jby5pbDo0NDM.&hl=iw&v=guXhH0v-XMxlzmbTwqkaT4i5&size=invisible&anchor-ms=20000&execute-ms=30000&cb=cf06t5g31277",
+     "href": "https://www.google.com/recaptcha/api2/anchor?ar=1&k=6LeXx8spAAAAAOhAgvJ7_YyVQbF6U2MN4n-qr8jV&co=aHR0cHM6Ly93d3cuYW5hbHlzdC5jby5pbDo0NDM.&hl=iw&v=guXhH0v-XMxlzmbTwqkaT4i5&size=invisible&anchor-ms=20000&execute-ms=30000&cb=9y0zsmr2bujf",
      "year": null,
      "iframe": true,
      "doc": false,
@@ -1769,10 +1785,18 @@
      "iframe": false,
      "doc": true,
      "internal": true
+    },
+    {
+     "text": "(html)",
+     "href": "https://www.analyst.co.il/media/u0fl5prs/%D7%9E%D7%93%D7%99%D7%A0%D7%99%D7%95%D7%AA-%D7%A4%D7%A8%D7%98%D7%99%D7%95%D7%AA-1422.pdf",
+     "year": null,
+     "iframe": false,
+     "doc": true,
+     "internal": true
     }
    ]
   },
-  "https://www.google.com/recaptcha/api2/anchor?ar=1&k=6LeXx8spAAAAAOhAgvJ7_YyVQbF6U2MN4n-qr8jV&co=aHR0cHM6Ly93d3cuYW5hbHlzdC5jby5pbDo0NDM.&hl=iw&v=guXhH0v-XMxlzmbTwqkaT4i5&size=invisible&anchor-ms=20000&execute-ms=30000&cb=cf06t5g31277": {
+  "https://www.google.com/recaptcha/api2/anchor?ar=1&k=6LeXx8spAAAAAOhAgvJ7_YyVQbF6U2MN4n-qr8jV&co=aHR0cHM6Ly93d3cuYW5hbHlzdC5jby5pbDo0NDM.&hl=iw&v=guXhH0v-XMxlzmbTwqkaT4i5&size=invisible&anchor-ms=20000&execute-ms=30000&cb=9y0zsmr2bujf": {
    "product": null,
    "status": 200,
    "method": "browser",
@@ -1784,7 +1808,7 @@
    "product": "פנסיה+גמל+ביטוח",
    "status": 200,
    "method": "requests",
-   "text_hash": "3e83fda486e390ef21e9b68054fbdfa0f26ac5bc",
+   "text_hash": "a0dfd5dbe65ecdb196919a12c3189dacb137d444",
    "text_head": "אנליסט בית השקעות | אנליסט זה לא מקצוע זו מומחיות מעסיקים סוכנים אזור אישי עמיתים אודות אודות אנליסט אודות ניהול תיקי השקעות אודות קרנות נאמנות אודות קופות גמל אודות נץ סוכנות לביטוח פנסיוני הודעות החברה קופות גמל וקרנות השתלמות קרן השתלמות קופות גמל קופת גמל להשקעה תוכנית חיסכון לכל ילד קופה מרכזית לפיצויים תיקון 190 טפסים שימושיים מחשבון חישוב שיעור עלות שנתית צפויה הפקדה לקופות במעמד עצמאי תקנונים קרנות נאמנות ממונה על פניות הציבור הצהרה בנושא ESG ניהול תיקי השקעות רמות סיכון מחלקת מחקר דסק עסקי טופס CRS הצהרה בנושא ESG צור קשר קריירה מרכז הידע אנליסט PLAY חדשות פיננסיות מילון מושגים חיפוש ",
    "items": [
     {
