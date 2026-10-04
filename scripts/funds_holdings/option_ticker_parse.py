@@ -39,7 +39,8 @@ PATTERN_C = re.compile(r"^ת?[CP][\d.]+M\d+-(.+)$")
 # Pattern G: אופציית מדד מעו"ף חודשית בשם מקוצר "C 4300 APR" / "P 4300 APR" (עגור) -
 # מתחיל ישר ב-C/P ומחיר מימוש ברמת ת"א 35 (קודי מניות מעו"ף מתחילים בקוד: "BZ C 250 AUG").
 # הזיהוי מאומת בחישוב עצמו: מימוש/מחיר המדד חייב להיות סביר (option_delta_pricing).
-PATTERN_G = re.compile(r"^ת?([CP])\s?(\d{3,5}(?:\.\d+)?)\s+(JAN|FEB|MAR|APR|MAY|JUN|JUL|AUG|SEP|OCT|NOV|DEC)\b", re.IGNORECASE)
+# קידומת "tl" אצל חלק מהגופים ("tlC 3100 NOV" ב-512065202_gm_0325; ברבעון שאחריו "C 3400 JAN 26 TL1")
+PATTERN_G = re.compile(r"^(?:ת|TL)?([CP])\s?(\d{3,5}(?:\.\d+)?)\s+(JAN|FEB|MAR|APR|MAY|JUN|JUL|AUG|SEP|OCT|NOV|DEC)\b", re.IGNORECASE)
 # מחיר מימוש מתוך קוד מעו"ף "C004160M607-35ת" (כשעמודת שער המימוש ריקה / 0)
 _MAOF_STRIKE = re.compile(r"^ת?[CP]0*(\d+(?:\.\d+)?)M\d")
 # חודש פקיעה מתוך קוד מעו"ף: M<ספרת שנה><חודש> - "M607" = 07/2026
@@ -117,7 +118,7 @@ MAOF_STOCK_OPTION_SHARES = 100.0
 
 _CALL_WORD = re.compile(r"\bCALL", re.IGNORECASE)
 _PUT_WORD = re.compile(r"\bPUT", re.IGNORECASE)
-_CP_LETTER = re.compile(r"(?:^ת?|\s)([CP])\s?\d|\d\s?([CP])(?:\s|$)")
+_CP_LETTER = re.compile(r"(?:^(?:ת|tl|TL)?|\s)([CP])\s?\d|\d\s?([CP])(?:\s|$)")
 
 
 def parse_hebrew_company_name(name: str) -> str | None:

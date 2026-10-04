@@ -42,6 +42,8 @@ CONTRACT_SPECS: dict[str, tuple[float, str | None]] = {
     "SLB": (500, "sp500_esg"),  # E-mini S&P 500 ESG = $500 × S&P 500 Scored & Screened (מפרט CME)
     "NQ": (20, "nasdaq100"),    # E-mini Nasdaq-100
     "HWB": (2, "nasdaq100"),    # Micro E-mini Nasdaq-100
+    "M2K": (5, "russell2000"),  # Micro E-mini Russell 2000
+    "MYM": (0.5, "dow30"),      # Micro E-mini Dow
     "RTY": (50, "russell2000"),  # E-mini Russell 2000
     "DM": (5, "dow30"),         # E-mini Dow
     "FAW": (100, None),         # E-mini S&P MidCap 400
@@ -61,6 +63,7 @@ CONTRACT_SPECS: dict[str, tuple[float, str | None]] = {
     "DFW": (5, "dax"),          # Mini-DAX
     "SXO": (50, None),          # STOXX Europe 600
     "CA": (50, None),           # EURO STOXX Banks
+    "UL": (50, None),           # STOXX Europe 600 Technology (Eurex FSTY) - "ULZ5 Index" ב-512244146_gm_0325
     "SM": (10, "smi"),          # SMI
     # MSCI: קוד מוצר בבלומברג -> מכפיל, מתוך "Listed futures and options based on
     # MSCI indexes" (MSCI, Q2 2023). JJY (FMKR) הושק ב-2025 - ממפרט Eurex.
@@ -102,7 +105,12 @@ CONTRACT_SPECS: dict[str, tuple[float, str | None]] = {
 # חוזים בבורסות שונות על אותו מדד (קוד המדד מתוך חוברת MSCI) - חולקים רמה.
 # למשל ZTL (Eurex) מוחזק רק אצל גופים שמדווחים רווח/הפסד במקום רמה, והרמה
 # נלקחת מ-WMW (ICE) שמדווח ברמה אצל גופים אחרים.
-SAME_INDEX = {"ZTL": "M1WD", "WMW": "M1WD", "MES": "MXEF", "RBE": "MXEF"}
+SAME_INDEX = {"ZTL": "M1WD", "WMW": "M1WD", "MES": "MXEF", "RBE": "MXEF", "UL": "SX8P", "SX6TECH": "SX8P"}
+
+# חוזה Micro בשם ("NASD100 MICRO EMINDEC25", "SP500 MIC EMIN FUTDEC25" ב-510806870_gc_0325) שזוהה
+# לפי המדד כחוזה הרגיל - עשירית ממנו (פי 10 בחשיפה: 47% במקום 4.7%, רשמי 24.1%)
+MICRO_OF = {"ES": "HWA", "ME": "HWA", "NQ": "HWB", "RTY": "M2K", "DM": "MYM"}
+_MICRO_NAME = re.compile(r"\bMICRO\b|\bMIC\b")
 
 NON_EQUITY_ROOTS = frozenset({"G", "TU", "FV", "TY", "UXY", "US", "WN", "CL"})
 
@@ -238,6 +246,9 @@ class FuturesResolver:
         self._learn_filer_scales()
         self._build_levels()
         self._identify_remaining()
+        for r in self.rows:
+            if r.root in MICRO_OF and _MICRO_NAME.search(str(r.name).upper()):
+                r.root = MICRO_OF[r.root]
 
     # --- זיהוי --------------------------------------------------------
     def _learn_name_map(self):
@@ -419,7 +430,10 @@ def _fix_units_by_fair_value(rows: list[tuple[dict, FuturesRow]], ticker_col: st
         if not med or sum(med / 2 <= q <= med * 2 for q in per.values()) / len(per) < UNITS_AGREE:
             continue
         for i, q in per.items():
-            if q / med > UNITS_OUTLIER or q / med < 1 / UNITS_OUTLIER:
+            # רק הקטנה: שווי לחוזה זעיר מול העמיתים = כמות מנופחת. שווי לחוזה גדול לא מוכיח כמות
+            # גדולה - השווי הוא רווח/הפסד מצטבר שתלוי במועד הכניסה (513026484_8765 ב-0425: 0.43-
+            # חוזי ES בשווי 1.05 אלף ש"ח "תוקנו" ל-19.1- חוזים = 148%- מהמסלול)
+            if q / med < 1 / UNITS_OUTLIER:
                 row, r = rows[i]
                 units = abs(_num(row.get(FV_COL))) / med * (1 if r.units > 0 else -1)
                 rows[i] = (row, FuturesRow(**{**r.__dict__, "units": units}))
