@@ -47,8 +47,9 @@ def run_site(c, timeout_min):
         log, code = f"timeout after {timeout_min} min\n" + str(e.stdout or "")[-2000:], "timeout"
     after = json.loads((work / "docs_index.json").read_text("utf-8")) if (work / "docs_index.json").exists() else {}
     new = []
+    known_sha = {e.get("sha256") for e in before.values()}  # אותו קובץ בכתובת בצורה אחרת (מקודדת/לא) - לא חדש
     for url, ent in after.items():
-        if before.get(url, {}).get("sha256") == ent.get("sha256") or not ent.get("file"):
+        if before.get(url, {}).get("sha256") == ent.get("sha256") or not ent.get("file") or ent.get("sha256") in known_sha:
             continue
         src = ROOT / ent["file"]
         if not src.exists():
