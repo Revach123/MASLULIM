@@ -45,6 +45,8 @@ CONTRACT_SPECS: dict[str, tuple[float, str | None]] = {
     "M2K": (5, "russell2000"),  # Micro E-mini Russell 2000
     "MYM": (0.5, "dow30"),      # Micro E-mini Dow
     "RTY": (50, "russell2000"),  # E-mini Russell 2000
+    "RTS": (50, "russell2000"),  # אותו חוזה בקוד פנימי ("RTY Index" / RTSZ5 - 513026484, 520023185)
+    "NX": (5, "nikkei225"),     # CME Nikkei 225 Dollar ("NIKKEI 225 FU 12/25" NXZ5 - 512267592, 520004078)
     "DM": (5, "dow30"),         # E-mini Dow
     "FAW": (100, None),         # E-mini S&P MidCap 400
     "FA": (100, None),          # אותו חוזה בקוד בלומברג ("FAH6 INDEX" ב-513026484_gm_0425)
@@ -62,6 +64,8 @@ CONTRACT_SPECS: dict[str, tuple[float, str | None]] = {
     "VG": (10, "stoxx50"),      # EURO STOXX 50
     "GX": (25, "dax"),          # DAX
     "DFW": (5, "dax"),          # Mini-DAX
+    "MZS": (1, "dax"),          # Micro-DAX (Eurex FDXS, €1 לנקודה - "F 12/25 MICRO DAX" MZSZ5, 513621110)
+    "CF": (10, None),           # CAC 40 (Euronext, €10 לנקודה - "INDEX CAC 40" CFV5, 513026484)
     "SXO": (50, None),          # STOXX Europe 600
     "CA": (50, None),           # EURO STOXX Banks
     "UL": (50, None),           # STOXX Europe 600 Technology (Eurex FSTY) - "ULZ5 Index" ב-512244146_gm_0325
@@ -132,6 +136,12 @@ _TASE_NAMES = (
     ("TABANKS", re.compile(r'^BF\b|בנקים|BANKS')),
 )
 _ISIN_IL = re.compile(r"^IL0(\d{8})\d$")
+_NAME_ROOTS = (
+    (re.compile(r"\bFESX\b"), "VG"),                          # Eurex EURO STOXX 50
+    (re.compile(r"\bEM(?:I)?NI\s+(?:NSDQ|NASDAQ)\b"), "NQ"),   # CME E-mini Nasdaq-100
+    (re.compile(r"\bEMINI\s+S&P\b"), "ES"),                   # CME E-mini S&P 500
+    (re.compile(r"\bOSE\s+TOPIX\b"), "TP"),                   # OSE TOPIX (large)
+)
 _STOXX600_SECTOR = re.compile(r"\bSTOXX\s*(?:EUROPE\s*)?600\s+([A-Z][A-Z&]{2,})")
 STOXX600_SECTOR_MULTIPLIER = 50.0
 
@@ -181,6 +191,11 @@ def parse_code(raw_ticker, name, report_date: date | None) -> tuple[str | None, 
     first = str(name or "").upper().split(maxsplit=1)
     if first and len(first[0]) >= 3 and first[0] in CONTRACT_SPECS:
         return first[0], None
+    # שמות מלאים בלי קוד (511789190: "ERX-F FESX 25 Dec 0", "IMM EMNI NSDQ 26 Mar 0")
+    up = str(name or "").upper()
+    for rx, root in _NAME_ROOTS:
+        if rx.search(up):
+            return root, None
     # חוזה סקטור STOXX Europe 600 (Eurex, €50 לנקודה בכל הסקטורים) - שורש לכל סקטור, כי לכל
     # אחד רמה משלו ("STOXX 600 TECH    Jun26" ב-512244146_gm_0126: 138 חוזים × 787.8 × 50 =
     # 27.6% מהמסלול, ובלעדיו 69.5% מול 99.4% רשמי)
