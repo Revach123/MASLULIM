@@ -6,6 +6,7 @@ on:
   push:
     branches: [main]  # התוסף דוחף ל-main; בענפים אחרים (מיזוגים) אין לקלוט שוב - יוצר התנגשויות
     paths: ["policy/inbox/**"]
+  workflow_dispatch:  # workflows אחרים (backfill_lastmod) דוחפים עם GITHUB_TOKEN - push כזה לא מפעיל workflow, dispatch כן
 
 permissions:
   contents: write
