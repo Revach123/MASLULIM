@@ -37,6 +37,26 @@ def keep_item(text: str, href: str) -> bool:
             or bool(DL_HINT.search(low)) or bool(re.search(r"גמל|פנסי|השתלמות|gemel|pension|provident|hishtalmut", low)))
 
 
+TECH_TEXT = re.compile(r"^\((html|xhr|network file|config docs|iframe)\)")
+
+
+def better_text(old, new):
+    """הטקסט שהמשתמש רואה באתר (קישור + השורה/הכרטיס סביבו) עדיף על תווית טכנית ("(html)" - נתיב שנמצא בקוד
+    המקור): תווית טכנית לא דורסת טקסט אמיתי, וטקסט אמיתי מחליף תווית טכנית."""
+    if not old or (TECH_TEXT.match(old) and not TECH_TEXT.match(new or "")):
+        return new
+    return old
+
+
+def merge_items(base, extra):
+    for h, it in extra.items():
+        if h in base:
+            it = {**it, "text": better_text(base[h]["text"], it["text"])}
+            it["year"] = it["year"] or base[h].get("year")
+        base[h] = it
+    return base
+
+
 def items_from_anchors(anchors, page_url, dom):
     out = {}
     for a in anchors:
@@ -49,6 +69,8 @@ def items_from_anchors(anchors, page_url, dom):
             continue
         if not href.startswith("http") or not (is_iframe or keep_item(text, href)):
             continue
+        if href in out:  # אותו קובץ גם כקישור גלוי וגם בקוד המקור - נשמר הטקסט הגלוי
+            text = better_text(out[href]["text"], text)
         out[href] = {"text": text, "href": href, "year": year_of(text + " " + unquote(href)), "iframe": is_iframe,
                      "doc": is_doc_url(href) or bool(DL_HINT.search(text.lower())),
                      "internal": base_domain(href) == dom}
@@ -346,9 +368,24 @@ def fetch_browser(pw, url, click_texts=None):
                 pass
         anchors += [x for x in net if (x["href"], x["text"]) not in seen]
         try:  # נתיבי קבצים בתוך ה-HTML/סקריפטים (Next.js __NEXT_DATA__ ודומיו)
-            for m in html_files(pg.content()):
+            found = html_files(pg.content())
+            # הטקסט סביב הקובץ בעמוד (שורה/כרטיס של האלמנט שמחזיק את הנתיב באחת מתכונותיו) - מה שהמשתמש רואה
+            names = [unquote(m.rsplit("/", 1)[-1]) for m in found]
+            ctxs = pg.evaluate("""names => names.map(n => {
+                const els = document.querySelectorAll('a,[href],[src],[data-href],[data-url],[data-file],[data-src],[onclick]');
+                for (const e of els) {
+                    let hit = false;
+                    for (const a of e.attributes) { let v = a.value; try { v = decodeURIComponent(v); } catch (x) {} if (v.includes(n)) { hit = true; break; } }
+                    if (!hit) continue;
+                    const row = e.closest('tr,li,[class*=item],[class*=row],[class*=card],[class*=file],[class*=doc]') || e.parentElement;
+                    const t = ((row || e).innerText || '').replace(/\\s+/g, ' ').trim();
+                    if (t) return t.slice(0, 200);
+                }
+                return '';
+            })""", names) if found else []
+            for m, c in zip(found, ctxs):
                 # & בשם הקובץ (מנורה "...-s&p500-14316.xlsx"): ב-HTML &amp;, ב-JSON של Next.js \u0026
-                anchors.append({"href": urljoin(url, m), "text": "(html)"})
+                anchors.append({"href": urljoin(url, m), "text": c or "(html)"})
         except Exception:
             pass
         text = pg.inner_text("body")
@@ -412,7 +449,7 @@ def snapshot_company(s, pw, home, extra, products=None, max_pages=15, depth_max=
                 url in extra or url in iframes or score(url) > 0 or d == 0))):
             b_anchors, b_status, b_text = fetch_browser(pw, url, click_texts if url in extra else None)
             if b_anchors is not None:
-                items.update(items_from_anchors(b_anchors, url, dom)); text, method, status = b_text, "browser", b_status
+                merge_items(items, items_from_anchors(b_anchors, url, dom)); text, method, status = b_text, "browser", b_status
             elif anchors is None:
                 status = b_status
         pages[url] = {"product": product_of(url, text, products.get(url)), "status": status, "method": method, "text_hash": hashlib.sha1(text.encode()).hexdigest() if text else None, "text_head": re.sub(r"\s+", " ", text)[:600],
