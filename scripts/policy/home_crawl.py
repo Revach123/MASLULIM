@@ -9,13 +9,30 @@ last_modified, via=home). יומן לכל אתר: policy/extension_log/home/<מ�
 
 הרצה: python -m scripts.policy.home_crawl [--only LEGAL_ID ...] [--timeout-min 40]
 """
-import argparse, json, os, shutil, subprocess, sys
+import argparse, json, os, re, shutil, subprocess, sys
 from datetime import datetime, timezone
 from pathlib import Path
+from urllib.parse import unquote
 
 ROOT = Path(__file__).resolve().parents[2]
 POL = ROOT / "policy"
 SITES = Path(__file__).with_name("sites")
+
+
+def known_shas():
+    """כל ה-sha256 שבכל האינדקסים (גם של חברות אחרות: אתרים משותפים - kranoth.org.il לשתי קרנות המורים)."""
+    out = set()
+    for p in (POL / "companies").glob("*/docs_index.json"):
+        out |= {e.get("sha256") for e in json.loads(p.read_text("utf-8")).values()}
+    return out
+
+
+def policy_filter():
+    """אותו סינון כמו התוסף (policy/extension_rules.json): קישור/שם קובץ של מדיניות, בלי רעש.
+    בלעדיו crawl.py שולח כל גיליון בעמוד מדיניות - דוחות לאוצר, רשימות נכסים, תרומה לתשואה (רום: 485 קבצים)."""
+    r = json.loads((POL / "extension_rules.json").read_text("utf-8"))
+    pol, noise = re.compile(r["policy_rx"], re.I), re.compile(r["noise_rx"], re.I)
+    return lambda url, text: bool(pol.search(unquote(url) + " " + (text or ""))) and not noise.search(unquote(url) + " " + (text or ""))
 
 
 def home_sites(only):
@@ -27,7 +44,7 @@ def home_sites(only):
     return out
 
 
-def run_site(c, timeout_min):
+def run_site(c, timeout_min, known, is_policy):
     lid = c["legal_id"]
     work = POL / "_home" / lid
     shutil.rmtree(work, ignore_errors=True)
@@ -47,9 +64,13 @@ def run_site(c, timeout_min):
         log, code = f"timeout after {timeout_min} min\n" + str(e.stdout or "")[-2000:], "timeout"
     after = json.loads((work / "docs_index.json").read_text("utf-8")) if (work / "docs_index.json").exists() else {}
     new = []
-    known_sha = {e.get("sha256") for e in before.values()}  # אותו קובץ בכתובת בצורה אחרת (מקודדת/לא) - לא חדש
+    skipped = 0
     for url, ent in after.items():
-        if before.get(url, {}).get("sha256") == ent.get("sha256") or not ent.get("file") or ent.get("sha256") in known_sha:
+        if before.get(url, {}).get("sha256") == ent.get("sha256") or not ent.get("file"):
+            continue
+        # אותו תוכן כבר באינדקס (כתובת בקידוד אחר / אתר משותף לחברה אחרת), או לא מסמך מדיניות - לא נשלח
+        if ent.get("sha256") in known or not is_policy(url, ent.get("link_text")):
+            skipped += 1
             continue
         src = ROOT / ent["file"]
         if not src.exists():
@@ -64,11 +85,12 @@ def run_site(c, timeout_min):
             meta["last_modified"] = ent["last_modified"]
         Path(str(dst) + ".json").write_text(json.dumps(meta, ensure_ascii=False, indent=1), "utf-8")
         new.append(url)
+        known.add(ent.get("sha256"))
     shutil.rmtree(work, ignore_errors=True)
     status = "ok" if code == 0 else f"exit {code}"
     blocked = any(s in log for s in ("status=403", "Cloudflare", "you have been blocked", "בגלישה מחו"))
     return {"legal_id": lid, "name": c["name"], "status": status, "blocked": blocked, "new_docs": len(new),
-            "known_docs": len(before), "seconds": int((datetime.now(timezone.utc) - t0).total_seconds()),
+            "known_docs": len(before), "skipped": skipped, "seconds": int((datetime.now(timezone.utc) - t0).total_seconds()),
             "new": new[:50], "log_tail": log[-1200:]}
 
 
@@ -79,10 +101,11 @@ def main():
     a = ap.parse_args()
     started = datetime.now(timezone.utc)
     results = []
+    known, is_policy = known_shas(), policy_filter()
     for c in home_sites(a.only):
-        r = run_site(c, a.timeout_min)
+        r = run_site(c, a.timeout_min, known, is_policy)
         results.append(r)
-        print(f"[{r['legal_id']}] {r['name'][:30]}: {r['status']} new={r['new_docs']}"
+        print(f"[{r['legal_id']}] {r['name'][:30]}: {r['status']} new={r['new_docs']} skipped={r['skipped']}"
               f"{' BLOCKED' if r['blocked'] else ''} ({r['seconds']}s)", flush=True)
     logd = POL / "extension_log" / "home"
     logd.mkdir(parents=True, exist_ok=True)
