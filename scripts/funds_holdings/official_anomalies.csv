@@ -19,7 +19,7 @@ month,key,reason
 202509,520042177_9631,same
 202509,520042177_9720,same
 202509,520042177_9888,same
-202509,512065202_15345,"equity swaps (NDWUIT, M1WOMOM) missing from the 0325 report; present in 0425"
+202509,512065202_15345,"Cboe MSCI USA / World futures ('F-12/25 MSCI US' FJWZ5 at 68,000, 'F-12/25 MSCI WO' OEYZ5 at 49,500) - no level source (Cboe MXUSA/MXWLD not on Yahoo/INDICES) and the filer's price convention is inconsistent; units x price matches the ~40-point gap. Only in 0325"
 202509,512065202_15350,same
 202509,512065202_15352,same
 202509,512065202_15360,same
