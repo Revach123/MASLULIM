@@ -425,6 +425,12 @@ class FuturesResolver:
             return 0.0
         if r.root not in CONTRACT_SPECS or r.units is None:
             return None
+        # שורש שנלמד מהשם, שהמחיר בשורה לא מתאים לרמה שלו ואין חוזה אחר שמתאים (_recheck_by_name
+        # השאיר by_name) - וריאנט אחר של המדד. הרמה ידועה כשגויה לשורה הזו -> השווי המדווח (עגור
+        # "MSCI World Index Jun26" ב-13,830 = World NTR, שויך ל-RVP = World price ~4,000 - פי 3.5 פחות
+        # כשבאותו קובץ אין דוחות של גופים אחרים לאותו תאריך שמלמדים את רמת ZWP)
+        if r.by_name and r.price and r.price > 0:
+            return None
         lvl = self.level(r.root, r.month, r.report_date)
         if not lvl:
             return None
