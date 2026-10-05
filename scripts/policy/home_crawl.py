@@ -86,11 +86,24 @@ def run_site(c, timeout_min, known, is_policy):
         Path(str(dst) + ".json").write_text(json.dumps(meta, ensure_ascii=False, indent=1), "utf-8")
         new.append(url)
         known.add(ent.get("sha256"))
+    # מסמכים מוכרים: טקסט גלוי טוב יותר / מועד פרסום שהושלם - נשלחים כעדכון מטא-דאטה (לא כקובץ)
+    meta_upd = {}
+    for url, ent in after.items():
+        b = before.get(url)
+        if not b:
+            continue
+        upd = {k: ent[k] for k in ("link_text", "last_modified") if ent.get(k) and ent.get(k) != b.get(k)}
+        if upd:
+            meta_upd[url] = upd
+    if meta_upd:
+        mp = POL / "inbox" / lid / "_meta.json"
+        mp.parent.mkdir(parents=True, exist_ok=True)
+        mp.write_text(json.dumps(meta_upd, ensure_ascii=False, indent=1), "utf-8")
     shutil.rmtree(work, ignore_errors=True)
     status = "ok" if code == 0 else f"exit {code}"
     blocked = any(s in log for s in ("status=403", "Cloudflare", "you have been blocked", "בגלישה מחו"))
     return {"legal_id": lid, "name": c["name"], "status": status, "blocked": blocked, "new_docs": len(new),
-            "known_docs": len(before), "skipped": skipped, "seconds": int((datetime.now(timezone.utc) - t0).total_seconds()),
+            "known_docs": len(before), "skipped": skipped, "meta_updates": len(meta_upd), "seconds": int((datetime.now(timezone.utc) - t0).total_seconds()),
             "new": new[:50], "log_tail": log[-1200:]}
 
 

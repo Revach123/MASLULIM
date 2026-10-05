@@ -269,6 +269,15 @@ def select_docs(pages: dict, extra: list[str]):
     return out
 
 
+def visible_text_better(old, new):
+    """טקסט חדש מהאתר עדיף על הקיים כשהקיים טכני ("(html)") או כללי ("הורד") והחדש אינפורמטיבי,
+    או כשרק בחדש יש שנה/תאריך (שורת הטבלה סביב הקישור: "מדיניות צפויה לשנת 2026 ... עודכן 12.03.2026")."""
+    info = lambda t: bool(t) and not re.match(r"^\((html|xhr|network file|config docs|iframe)\)", t) \
+        and not re.fullmatch(r"\s*(הורד\w*|להורדה|לצפייה|צפייה|download|pdf|xlsx?|קובץ)?\s*", t, re.I)
+    when = lambda t: bool(re.search(r"(?<!\d)(19|20)\d\d(?!\d)|\d{1,2}[./]\d{1,2}[./]\d{2,4}|תש[א-ת][\"״][א-ת]", t or ""))
+    return info(new) and new != old and (not info(old) or (when(new) and not when(old)))
+
+
 _BROWSER = {}  # דפדפן אחד לכל ריצה (לא לכל קובץ) + עמודי מקור שכבר נפתחו בו
 
 
@@ -426,6 +435,9 @@ def main():
                     except requests.RequestException:
                         pass
                 old.update({"last_seen": now, "source_page": d["page"]})
+                if visible_text_better(old.get("link_text"), d.get("text")):
+                    old["link_text"] = d["text"]  # הטקסט שהמשתמש רואה באתר - מקור התאריך/השנה (timeline, extract)
+                    old["parsed_sha"] = None  # שנת המסמך נקבעת גם מהטקסט הגלוי - פרסור מחדש
                 got += 1
                 continue
             if d.get("local"):  # הורדה שנלכדה בלחיצה בדפדפן

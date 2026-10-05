@@ -44,7 +44,19 @@ def main():
                 else:
                     ent["last_modified_checked"] = date.today().isoformat()  # נבדק ואין - לא לבדוק שוב
             lm_p.unlink()
+        meta_p = d / "_meta.json"  # עדכוני מסמכים מוכרים מהמחשב הביתי: {url: {link_text, last_modified}}
+        if meta_p.exists():
+            for url, upd in json.loads(meta_p.read_text("utf-8")).items():
+                if url in index:
+                    if upd.get("last_modified") and not index[url].get("last_modified"):
+                        index[url]["last_modified"] = upd["last_modified"]
+                    if upd.get("link_text"):
+                        index[url]["link_text"] = upd["link_text"]
+                        index[url]["parsed_sha"] = None  # השנה נקבעת גם מהטקסט הגלוי - פרסור מחדש
+            meta_p.unlink()
         for meta_p in sorted(d.glob("*.json")):
+            if meta_p.name.startswith("_"):
+                continue
             f = meta_p.with_suffix("")  # "<name>.json" -> "<name>"
             if not f.exists():
                 continue

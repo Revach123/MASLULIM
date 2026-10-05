@@ -874,7 +874,14 @@ def main():
         fy = re.search(r"(20[12]\d)", fname)
         if re.fullmatch(r"(?:[0-9a-f]{12}_)?\d{3,5}", Path(ent["file"]).stem):
             fy = None  # שם הקובץ הוא מספר המסלול (אלטשולר ".../2017.xlsx" = גמל הלכה), לא שנה
-        fy = re.search(r"לשנת\s*(20[12]\d)", ent.get("link_text") or "") or fy  # "מדיניות השקעה צפויה לשנת 2026"
+        # הטקסט שהמשתמש רואה באתר (הקישור + השורה/הכרטיס סביבו) גובר על שם הקובץ: "לשנת 2026", או שנה יחידה בטקסט
+        # ("מדיניות השקעה 2025"); תווית טכנית ("(html)") - לא טקסט גלוי
+        lt = "" if re.match(r"^\((html|xhr|network file|config docs|iframe)\)", ent.get("link_text") or "") else (ent.get("link_text") or "")
+        # תאריכים ("12.03.2026", "דצמבר 2024", "(מאי 2018)") הם מועד פרסום/עדכון, לא שנת המדיניות - לא נספרים
+        lt_years = set(re.findall(r"(?<!\d)(20[12]\d)(?!\d)", re.sub(
+            r"\d{1,2}[./]\d{1,2}[./](20)?\d\d|(ינואר|פברואר|מרץ|מרס|אפריל|מאי|יוני|יולי|אוגוסט|ספטמבר|אוקטובר|נובמבר|דצמבר)\s*,?\s*(20)?\d\d",
+            " ", lt)))
+        fy = re.search(r"לשנת\s*(20[12]\d)", lt) or (re.search(r"(?<!\d)(20[12]\d)(?!\d)", " ".join(lt_years)) if len(lt_years) == 1 else None) or fy
         doc_year = fy.group(1) if fy else (max(set(years), key=years.count) if years else None)
         content_year = max(set(years), key=years.count) if years else None
         if fy and content_year and content_year != fy.group(1):
