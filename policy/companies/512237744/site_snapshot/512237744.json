@@ -1,24 +1,15 @@
 {
  "legal_id": "512237744",
  "company": "מגדל מקפת קרנות פנסיה וקופות גמל בע\"מ",
- "taken": "2026-10-05T11:29:16+00:00",
+ "taken": "2026-10-05T21:21:08+00:00",
  "pages": {
   "https://www.migdal.co.il/regulations/makefet-investment-policy": {
    "product": "גמל",
    "status": 200,
    "method": "browser",
-   "text_hash": "857072be631d87fcb9cae39184c6affa4b3f8e79",
+   "text_hash": "ebb6d3d80b2f501245a90ea0ff3a5ec52f9d4344",
    "text_head": "אתר זה עושה שימוש בטכנולוגיות איסוף מידע כגון עוגיות (Cookies), לרבות על ידי צדדים שלישיים, כדי לספק לך חווית גלישה טובה יותר, וכן לניתוח השימוש ולצרכי פרסום מותאם. המשך הגלישה מהווה את הסכמתך לשימוש זה. למידע נוסף, יש לעיין במדיניות הפרטיות המעודכנת Skip to Main Content חיסכון אישי והשקעות חיסכון פנסיוני ביטוחים תביעות שירותים פעולות כניסה לפורטלים עברית מגדל שלי דף הבית הצהרה מראש על מדיניות השקעה צפויה הצהרה מראש על מדיניות השקעה צפויה-מקפת ​ ​ קופות גמל והשתלמות הצהרה מראש על מדיניות השקעה צפויה - מגדל השתלמות - לשנת 2026 (אוגוסט 2026) להורדה הצהרה מראש על מדיניות השקעה צפויה - מקפת - לשנת",
    "items": [
-    {
-     "text": "הצהרה מראש על מדיניות השקעה צפויה - מגדל השתלמות - לשנת 2026 (יולי 2026) להורדה להורדה להורדה Hatzarat Migdal Hishtalmut JUL 2026_P - ACC.xlsx",
-     "href": "https://www.migdal.co.il/regulations/makefet-investment-policy",
-     "year": "2026",
-     "iframe": false,
-     "doc": true,
-     "internal": true,
-     "local": "/home/runner/work/_temp/policy_dl/6056497018_Hatzarat Migdal Hishtalmut JUL 2026_P - ACC.xlsx"
-    },
     {
      "text": "(xhr) michsat hotzaot yeshirot yozma 2026_VP - ACC.xlsx",
      "href": "https://www.migdal.co.il/_files/ugd/a0a61c_8bdf624a26184a08bd25b46c22a1b688.xlsx",
@@ -836,6 +827,15 @@
      "internal": true
     },
     {
+     "text": "הצהרה מראש על מדיניות השקעה צפויה לשנת 2020 (אפריל 2020) מיום 13.04.2020 להורדה להורדה להורדה hatzhara_makefet.xls",
+     "href": "https://www.migdal.co.il/regulations/makefet-investment-policy",
+     "year": "2020",
+     "iframe": false,
+     "doc": true,
+     "internal": true,
+     "local": "/home/runner/work/_temp/policy_dl/6460075472_hatzhara_makefet.xls"
+    },
+    {
      "text": "(xhr) mediniut_hashkaa_tagmulim012020.xls",
      "href": "https://www.migdal.co.il/_files/ugd/5adfdb_ee89a5db4ad24fffbed6e158e5cf6cfa.xls",
      "year": "2020",
@@ -892,24 +892,8 @@
      "internal": true
     },
     {
-     "text": "קרן פנסיה משלימה",
-     "href": "https://www.migdal.co.il/product-lobby/upplementary-pension-fund",
-     "year": null,
-     "iframe": false,
-     "doc": false,
-     "internal": true
-    },
-    {
      "text": "קרן פנסיה לעצמאים",
      "href": "https://www.migdal.co.il/product-lobby/pension-fund-self-employed",
-     "year": null,
-     "iframe": false,
-     "doc": false,
-     "internal": true
-    },
-    {
-     "text": "קרן פנסיה אישית",
-     "href": "https://www.migdal.co.il/product-lobby/pensionary-savings",
      "year": null,
      "iframe": false,
      "doc": false,
@@ -972,8 +956,32 @@
      "internal": true
     },
     {
+     "text": "פנסיה משלימה",
+     "href": "https://www.migdal.co.il/product-lobby/upplementary-pension-fund",
+     "year": null,
+     "iframe": false,
+     "doc": false,
+     "internal": true
+    },
+    {
+     "text": "פנסיה אישית",
+     "href": "https://www.migdal.co.il/product-lobby/pensionary-savings",
+     "year": null,
+     "iframe": false,
+     "doc": false,
+     "internal": true
+    },
+    {
      "text": "פדיון פנסיה",
      "href": "https://my.migdal.co.il/mymigdal/process/pensionredemption",
+     "year": null,
+     "iframe": false,
+     "doc": false,
+     "internal": true
+    },
+    {
+     "text": "מנהלים לשכירים",
+     "href": "https://www.migdal.co.il/product-lobby/personal-pension-complementary",
      "year": null,
      "iframe": false,
      "doc": false,
@@ -1070,14 +1078,6 @@
     {
      "text": "ביטול פוליסה קיימת",
      "href": "https://my.migdal.co.il/support/existing-policy-cancellation",
-     "year": null,
-     "iframe": false,
-     "doc": false,
-     "internal": true
-    },
-    {
-     "text": "ביטוח מנהלים לשכירים",
-     "href": "https://www.migdal.co.il/product-lobby/personal-pension-complementary",
      "year": null,
      "iframe": false,
      "doc": false,
@@ -1221,7 +1221,7 @@
     },
     {
      "text": "(network file)",
-     "href": "https://download-files.wixmp.com/ugd/571a7f_6ca1556039ab484c9d5d1bdd464f7412.xlsx?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJvYmoiOltbeyJwYXRoIjoiL3VnZC81NzFhN2ZfNmNhMTU1NjAzOWFiNDg0YzlkNWQxYmRkNDY0Zjc0MTIueGxzeCJ9XV0sImRpcyI6eyJmaWxlbmFtZSI6IkhhdHphcmF0IE1pZ2RhbCBIaXNodGFsbXV0IEFVRyAyMDI2X1AgLSBBQ0MueGxzeCIsInR5cGUiOiJhdHRhY2htZW50In0sImF1ZCI6WyJ1cm46c2VydmljZTpmaWxlLmRvd25sb2FkIl0sImV4cCI6MTc5MTIzNTgzNywianRpIjoiOWU4OGQzZmQtODgxZi00ZjU0LTgyODYtNDFmZmE5ZDc5MGQyIiwiaWF0IjoxNzkxMTk5ODM3LCJpc3MiOiJ1cm46YXBwOmU2NjYzMGU3MTRmMDQ5MGFhZWExZjE0OWIzYjY5ZTMyIiwic3ViIjoidXJuOmFwcDplNjY2MzBlNzE0ZjA0OTBhYWVhMWYxNDliM2I2OWUzMiJ9.JtvC6Cxv_t_Va1UhKdGRyVYX_bzuSEuXGJBZqYdEsow",
+     "href": "https://download-files.wixmp.com/ugd/571a7f_6ca1556039ab484c9d5d1bdd464f7412.xlsx?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJvYmoiOltbeyJwYXRoIjoiL3VnZC81NzFhN2ZfNmNhMTU1NjAzOWFiNDg0YzlkNWQxYmRkNDY0Zjc0MTIueGxzeCJ9XV0sImRpcyI6eyJmaWxlbmFtZSI6IkhhdHphcmF0IE1pZ2RhbCBIaXNodGFsbXV0IEFVRyAyMDI2X1AgLSBBQ0MueGxzeCIsInR5cGUiOiJhdHRhY2htZW50In0sImF1ZCI6WyJ1cm46c2VydmljZTpmaWxlLmRvd25sb2FkIl0sImV4cCI6MTc5MTI3MTMzNCwianRpIjoiYTgwYjJiM2EtMDQ1ZC00ZDk3LWFhYWMtNmFkOTEwNjAzNjJmIiwiaWF0IjoxNzkxMjM1MzM0LCJpc3MiOiJ1cm46YXBwOmU2NjYzMGU3MTRmMDQ5MGFhZWExZjE0OWIzYjY5ZTMyIiwic3ViIjoidXJuOmFwcDplNjY2MzBlNzE0ZjA0OTBhYWVhMWYxNDliM2I2OWUzMiJ9.t6PQ9ciSKQgIhIkkDokCWq3A124vWtV1DVqBh1jCbsg",
      "year": null,
      "iframe": false,
      "doc": true,
@@ -1229,7 +1229,7 @@
     },
     {
      "text": "(network file)",
-     "href": "https://download-files.wixmp.com/ugd/571a7f_6ca1556039ab484c9d5d1bdd464f7412.xlsx?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJvYmoiOltbeyJwYXRoIjoiL3VnZC81NzFhN2ZfNmNhMTU1NjAzOWFiNDg0YzlkNWQxYmRkNDY0Zjc0MTIueGxzeCJ9XV0sImRpcyI6eyJmaWxlbmFtZSI6IkhhdHphcmF0IE1pZ2RhbCBIaXNodGFsbXV0IEFVRyAyMDI2X1AgLSBBQ0MueGxzeCIsInR5cGUiOiJhdHRhY2htZW50In0sImF1ZCI6WyJ1cm46c2VydmljZTpmaWxlLmRvd25sb2FkIl0sImV4cCI6MTc5MTIzNTg5NSwianRpIjoiNGMwOTFlMWMtMWM3NC00ZWI5LThkMjctNGM1MWIyN2JkNmQ2IiwiaWF0IjoxNzkxMTk5ODk1LCJpc3MiOiJ1cm46YXBwOmU2NjYzMGU3MTRmMDQ5MGFhZWExZjE0OWIzYjY5ZTMyIiwic3ViIjoidXJuOmFwcDplNjY2MzBlNzE0ZjA0OTBhYWVhMWYxNDliM2I2OWUzMiJ9.peOYZUMplPJIifWaDX5_mrt0wWKNH1Zzs_T4_Lutpn0",
+     "href": "https://download-files.wixmp.com/ugd/571a7f_6ca1556039ab484c9d5d1bdd464f7412.xlsx?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJvYmoiOltbeyJwYXRoIjoiL3VnZC81NzFhN2ZfNmNhMTU1NjAzOWFiNDg0YzlkNWQxYmRkNDY0Zjc0MTIueGxzeCJ9XV0sImRpcyI6eyJmaWxlbmFtZSI6IkhhdHphcmF0IE1pZ2RhbCBIaXNodGFsbXV0IEFVRyAyMDI2X1AgLSBBQ0MueGxzeCIsInR5cGUiOiJhdHRhY2htZW50In0sImF1ZCI6WyJ1cm46c2VydmljZTpmaWxlLmRvd25sb2FkIl0sImV4cCI6MTc5MTI3MTM5MiwianRpIjoiYjFjNzRmNzQtNTk5Ny00NGM3LWJhN2MtM2JhYzdlMTQ2ZmNhIiwiaWF0IjoxNzkxMjM1MzkyLCJpc3MiOiJ1cm46YXBwOmU2NjYzMGU3MTRmMDQ5MGFhZWExZjE0OWIzYjY5ZTMyIiwic3ViIjoidXJuOmFwcDplNjY2MzBlNzE0ZjA0OTBhYWVhMWYxNDliM2I2OWUzMiJ9.CxbHV7dpm5RO96X-pb0Hyj5KMT-cdNdq_qJBgxUegAk",
      "year": null,
      "iframe": false,
      "doc": true,
@@ -1237,7 +1237,7 @@
     },
     {
      "text": "(network file)",
-     "href": "https://download-files.wixmp.com/ugd/571a7f_245118d9982243a1a5bacbe730b7a844.xlsx?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJvYmoiOltbeyJwYXRoIjoiL3VnZC81NzFhN2ZfMjQ1MTE4ZDk5ODIyNDNhMWE1YmFjYmU3MzBiN2E4NDQueGxzeCJ9XV0sImRpcyI6eyJmaWxlbmFtZSI6IkhhdHphcmF0IE1pZ2RhbCBNYWtlZmV0IFBlbnNpb24gQVVHIDIwMjZfUCAtIEFDQy54bHN4IiwidHlwZSI6ImF0dGFjaG1lbnQifSwiYXVkIjpbInVybjpzZXJ2aWNlOmZpbGUuZG93bmxvYWQiXSwiZXhwIjoxNzkxMjM1ODk2LCJqdGkiOiI0MTY5ODIzNS1hNjhhLTQyYzItOWM2YS0xOGI3NzE1ZDdhYWQiLCJpYXQiOjE3OTExOTk4OTYsImlzcyI6InVybjphcHA6ZTY2NjMwZTcxNGYwNDkwYWFlYTFmMTQ5YjNiNjllMzIiLCJzdWIiOiJ1cm46YXBwOmU2NjYzMGU3MTRmMDQ5MGFhZWExZjE0OWIzYjY5ZTMyIn0.wzHeDamj_JrCaL-tW6so5M8h9Jwa2n06YVk3KLBH51k",
+     "href": "https://download-files.wixmp.com/ugd/571a7f_245118d9982243a1a5bacbe730b7a844.xlsx?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJvYmoiOltbeyJwYXRoIjoiL3VnZC81NzFhN2ZfMjQ1MTE4ZDk5ODIyNDNhMWE1YmFjYmU3MzBiN2E4NDQueGxzeCJ9XV0sImRpcyI6eyJmaWxlbmFtZSI6IkhhdHphcmF0IE1pZ2RhbCBNYWtlZmV0IFBlbnNpb24gQVVHIDIwMjZfUCAtIEFDQy54bHN4IiwidHlwZSI6ImF0dGFjaG1lbnQifSwiYXVkIjpbInVybjpzZXJ2aWNlOmZpbGUuZG93bmxvYWQiXSwiZXhwIjoxNzkxMjcxMzkzLCJqdGkiOiIwOGQxMGQ2Ny0xYmE5LTQyYmMtYTdmNi1jYmQwMzgxOTUzZjkiLCJpYXQiOjE3OTEyMzUzOTMsImlzcyI6InVybjphcHA6ZTY2NjMwZTcxNGYwNDkwYWFlYTFmMTQ5YjNiNjllMzIiLCJzdWIiOiJ1cm46YXBwOmU2NjYzMGU3MTRmMDQ5MGFhZWExZjE0OWIzYjY5ZTMyIn0.C8EQG4FVY3cVv7PBHLQZKDorJO8pGtl2jT_WuO3r0Yk",
      "year": null,
      "iframe": false,
      "doc": true,
@@ -1245,7 +1245,7 @@
     },
     {
      "text": "(network file)",
-     "href": "https://download-files.wixmp.com/ugd/571a7f_4fa1ed659d644ac29d948d6fd06395ec.xlsx?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJvYmoiOltbeyJwYXRoIjoiL3VnZC81NzFhN2ZfNGZhMWVkNjU5ZDY0NGFjMjlkOTQ4ZDZmZDA2Mzk1ZWMueGxzeCJ9XV0sImRpcyI6eyJmaWxlbmFtZSI6IkhhdHphcmF0IG1pZ2RhbCBHZW1lbCBMZWhhc2hrYWEgQVVHIDIwMjZfUCAtIEFDQy54bHN4IiwidHlwZSI6ImF0dGFjaG1lbnQifSwiYXVkIjpbInVybjpzZXJ2aWNlOmZpbGUuZG93bmxvYWQiXSwiZXhwIjoxNzkxMjM1ODk3LCJqdGkiOiIzNmNlOWU4MC1iYjJmLTQzMGItYjZmYi01YzBkZWY3NTJiOTAiLCJpYXQiOjE3OTExOTk4OTcsImlzcyI6InVybjphcHA6ZTY2NjMwZTcxNGYwNDkwYWFlYTFmMTQ5YjNiNjllMzIiLCJzdWIiOiJ1cm46YXBwOmU2NjYzMGU3MTRmMDQ5MGFhZWExZjE0OWIzYjY5ZTMyIn0.TdUb-T0P5c0HDQouxuIA3ReJwwMCvibbJXrnfDfLRss",
+     "href": "https://download-files.wixmp.com/ugd/571a7f_4fa1ed659d644ac29d948d6fd06395ec.xlsx?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJvYmoiOltbeyJwYXRoIjoiL3VnZC81NzFhN2ZfNGZhMWVkNjU5ZDY0NGFjMjlkOTQ4ZDZmZDA2Mzk1ZWMueGxzeCJ9XV0sImRpcyI6eyJmaWxlbmFtZSI6IkhhdHphcmF0IG1pZ2RhbCBHZW1lbCBMZWhhc2hrYWEgQVVHIDIwMjZfUCAtIEFDQy54bHN4IiwidHlwZSI6ImF0dGFjaG1lbnQifSwiYXVkIjpbInVybjpzZXJ2aWNlOmZpbGUuZG93bmxvYWQiXSwiZXhwIjoxNzkxMjcxMzk0LCJqdGkiOiIwNjU4YTY3Ni04ZTkyLTRiMjYtOThjNy02NGZmNjAyOGFiMjkiLCJpYXQiOjE3OTEyMzUzOTQsImlzcyI6InVybjphcHA6ZTY2NjMwZTcxNGYwNDkwYWFlYTFmMTQ5YjNiNjllMzIiLCJzdWIiOiJ1cm46YXBwOmU2NjYzMGU3MTRmMDQ5MGFhZWExZjE0OWIzYjY5ZTMyIn0.gJ38p4f60nJG3Zw656p9oFNZrtsb0v8UcL9QvBllZ34",
      "year": null,
      "iframe": false,
      "doc": true,
@@ -1253,7 +1253,7 @@
     },
     {
      "text": "(network file)",
-     "href": "https://download-files.wixmp.com/ugd/571a7f_52272c93bfa0462189bade2df882fc1b.xlsx?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJvYmoiOltbeyJwYXRoIjoiL3VnZC81NzFhN2ZfNTIyNzJjOTNiZmEwNDYyMTg5YmFkZTJkZjg4MmZjMWIueGxzeCJ9XV0sImRpcyI6eyJmaWxlbmFtZSI6IkhhdHphcmF0IE1pZ2RhbCBUYWdtdWxpbSBBVUcgMjAyNl9QIC0gQUNDLnhsc3giLCJ0eXBlIjoiYXR0YWNobWVudCJ9LCJhdWQiOlsidXJuOnNlcnZpY2U6ZmlsZS5kb3dubG9hZCJdLCJleHAiOjE3OTEyMzU4OTcsImp0aSI6IjFjMWJjYzBjLWQyMTctNGY3OC1hOWI4LWQ1YTc2YjJhYzIzMSIsImlhdCI6MTc5MTE5OTg5NywiaXNzIjoidXJuOmFwcDplNjY2MzBlNzE0ZjA0OTBhYWVhMWYxNDliM2I2OWUzMiIsInN1YiI6InVybjphcHA6ZTY2NjMwZTcxNGYwNDkwYWFlYTFmMTQ5YjNiNjllMzIifQ.bQ1Oh9wU3gODLAiUKiEvi1pQL1e3K7nV5V85VuNWpEc",
+     "href": "https://download-files.wixmp.com/ugd/571a7f_52272c93bfa0462189bade2df882fc1b.xlsx?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJvYmoiOltbeyJwYXRoIjoiL3VnZC81NzFhN2ZfNTIyNzJjOTNiZmEwNDYyMTg5YmFkZTJkZjg4MmZjMWIueGxzeCJ9XV0sImRpcyI6eyJmaWxlbmFtZSI6IkhhdHphcmF0IE1pZ2RhbCBUYWdtdWxpbSBBVUcgMjAyNl9QIC0gQUNDLnhsc3giLCJ0eXBlIjoiYXR0YWNobWVudCJ9LCJhdWQiOlsidXJuOnNlcnZpY2U6ZmlsZS5kb3dubG9hZCJdLCJleHAiOjE3OTEyNzEzOTQsImp0aSI6IjFhNzRmNjdmLWI0ODAtNGIxNS1iNTNmLTQxNzNkMjM1Zjk3ZSIsImlhdCI6MTc5MTIzNTM5NCwiaXNzIjoidXJuOmFwcDplNjY2MzBlNzE0ZjA0OTBhYWVhMWYxNDliM2I2OWUzMiIsInN1YiI6InVybjphcHA6ZTY2NjMwZTcxNGYwNDkwYWFlYTFmMTQ5YjNiNjllMzIifQ.dCZmUZRQ7pk4kEKIAbolC0SqDvbIXNEQX-VZnhP73ww",
      "year": null,
      "iframe": false,
      "doc": true,
@@ -1261,7 +1261,7 @@
     },
     {
      "text": "(network file)",
-     "href": "https://download-files.wixmp.com/ugd/ebf348_d096631b9be5447aab4599fa915c73bc.xlsx?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJvYmoiOltbeyJwYXRoIjoiL3VnZC9lYmYzNDhfZDA5NjYzMWI5YmU1NDQ3YWFiNDU5OWZhOTE1YzczYmMueGxzeCJ9XV0sImRpcyI6eyJmaWxlbmFtZSI6IkhhdHphcmF0IE1pZ2RhbCBNYWtlZmV0IFBlbnNpb24gSlVMIDIwMjZfUCAtIEFDQy54bHN4IiwidHlwZSI6ImF0dGFjaG1lbnQifSwiYXVkIjpbInVybjpzZXJ2aWNlOmZpbGUuZG93bmxvYWQiXSwiZXhwIjoxNzkxMjM1ODk4LCJqdGkiOiJhOGE0MWY2Yi00NDFhLTQxZDItOTVjYS1kM2E5N2RlNDQ5N2IiLCJpYXQiOjE3OTExOTk4OTgsImlzcyI6InVybjphcHA6ZTY2NjMwZTcxNGYwNDkwYWFlYTFmMTQ5YjNiNjllMzIiLCJzdWIiOiJ1cm46YXBwOmU2NjYzMGU3MTRmMDQ5MGFhZWExZjE0OWIzYjY5ZTMyIn0.YbxodG0JMyEP1oKDywMVUThkNjpJefmkSxzIKBdYcyE",
+     "href": "https://download-files.wixmp.com/ugd/ebf348_d096631b9be5447aab4599fa915c73bc.xlsx?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJvYmoiOltbeyJwYXRoIjoiL3VnZC9lYmYzNDhfZDA5NjYzMWI5YmU1NDQ3YWFiNDU5OWZhOTE1YzczYmMueGxzeCJ9XV0sImRpcyI6eyJmaWxlbmFtZSI6IkhhdHphcmF0IE1pZ2RhbCBNYWtlZmV0IFBlbnNpb24gSlVMIDIwMjZfUCAtIEFDQy54bHN4IiwidHlwZSI6ImF0dGFjaG1lbnQifSwiYXVkIjpbInVybjpzZXJ2aWNlOmZpbGUuZG93bmxvYWQiXSwiZXhwIjoxNzkxMjcxMzk1LCJqdGkiOiJlYzQwNDhhZC05MDY2LTQyMmUtYmYyMi0yNjUwYzIwZTNjNzkiLCJpYXQiOjE3OTEyMzUzOTUsImlzcyI6InVybjphcHA6ZTY2NjMwZTcxNGYwNDkwYWFlYTFmMTQ5YjNiNjllMzIiLCJzdWIiOiJ1cm46YXBwOmU2NjYzMGU3MTRmMDQ5MGFhZWExZjE0OWIzYjY5ZTMyIn0.QlkIALtuA3aZNX89augT9pOd7X8khpxuRVQybNqGZkk",
      "year": null,
      "iframe": false,
      "doc": true,
@@ -1269,7 +1269,55 @@
     },
     {
      "text": "(network file)",
-     "href": "https://download-files.wixmp.com/ugd/ebf348_dcc6cb4e1e554249b4dab1623d2fc9ec.xlsx?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJvYmoiOltbeyJwYXRoIjoiL3VnZC9lYmYzNDhfZGNjNmNiNGUxZTU1NDI0OWI0ZGFiMTYyM2QyZmM5ZWMueGxzeCJ9XV0sImRpcyI6eyJmaWxlbmFtZSI6IkhhdHphcmF0IE1pZ2RhbCBIaXNodGFsbXV0IEpVTCAyMDI2X1AgLSBBQ0MueGxzeCIsInR5cGUiOiJhdHRhY2htZW50In0sImF1ZCI6WyJ1cm46c2VydmljZTpmaWxlLmRvd25sb2FkIl0sImV4cCI6MTc5MTIzNTg5OCwianRpIjoiZjg1ZTFhODYtMmNiNC00Mjk4LWExNGUtY2ZlYmEzZGZmMmY2IiwiaWF0IjoxNzkxMTk5ODk4LCJpc3MiOiJ1cm46YXBwOmU2NjYzMGU3MTRmMDQ5MGFhZWExZjE0OWIzYjY5ZTMyIiwic3ViIjoidXJuOmFwcDplNjY2MzBlNzE0ZjA0OTBhYWVhMWYxNDliM2I2OWUzMiJ9.n-Ht_0Zw0u_Hplr_76CNx1wtlfpJnsTZRoHd8yAFzDk",
+     "href": "https://download-files.wixmp.com/ugd/ebf348_dcc6cb4e1e554249b4dab1623d2fc9ec.xlsx?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJvYmoiOltbeyJwYXRoIjoiL3VnZC9lYmYzNDhfZGNjNmNiNGUxZTU1NDI0OWI0ZGFiMTYyM2QyZmM5ZWMueGxzeCJ9XV0sImRpcyI6eyJmaWxlbmFtZSI6IkhhdHphcmF0IE1pZ2RhbCBIaXNodGFsbXV0IEpVTCAyMDI2X1AgLSBBQ0MueGxzeCIsInR5cGUiOiJhdHRhY2htZW50In0sImF1ZCI6WyJ1cm46c2VydmljZTpmaWxlLmRvd25sb2FkIl0sImV4cCI6MTc5MTI3MTM5NiwianRpIjoiODMzMTU2NDUtNGE4NS00MzgyLWE4ZDItOTRkZTE5NjdlMjZiIiwiaWF0IjoxNzkxMjM1Mzk2LCJpc3MiOiJ1cm46YXBwOmU2NjYzMGU3MTRmMDQ5MGFhZWExZjE0OWIzYjY5ZTMyIiwic3ViIjoidXJuOmFwcDplNjY2MzBlNzE0ZjA0OTBhYWVhMWYxNDliM2I2OWUzMiJ9.IcuBr_SeAQ_O1A4rzSocBjNmM0b-ITCpp4WV4DTgBQg",
+     "year": null,
+     "iframe": false,
+     "doc": true,
+     "internal": false
+    },
+    {
+     "text": "(network file)",
+     "href": "https://download-files.wixmp.com/ugd/571a7f_245118d9982243a1a5bacbe730b7a844.xlsx?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJvYmoiOltbeyJwYXRoIjoiL3VnZC81NzFhN2ZfMjQ1MTE4ZDk5ODIyNDNhMWE1YmFjYmU3MzBiN2E4NDQueGxzeCJ9XV0sImRpcyI6eyJmaWxlbmFtZSI6IkhhdHphcmF0IE1pZ2RhbCBNYWtlZmV0IFBlbnNpb24gQVVHIDIwMjZfUCAtIEFDQy54bHN4IiwidHlwZSI6ImF0dGFjaG1lbnQifSwiYXVkIjpbInVybjpzZXJ2aWNlOmZpbGUuZG93bmxvYWQiXSwiZXhwIjoxNzkxMjcxMzk3LCJqdGkiOiIwODhkMWUzZS01Y2U0LTQ4ZDYtOWNhZC0xMjA0MzgyYzhkM2YiLCJpYXQiOjE3OTEyMzUzOTcsImlzcyI6InVybjphcHA6ZTY2NjMwZTcxNGYwNDkwYWFlYTFmMTQ5YjNiNjllMzIiLCJzdWIiOiJ1cm46YXBwOmU2NjYzMGU3MTRmMDQ5MGFhZWExZjE0OWIzYjY5ZTMyIn0.qOVl9eDtm5vTyJeNtLKsHtAJ-GGiUuGUuwxYkODl5EY",
+     "year": null,
+     "iframe": false,
+     "doc": true,
+     "internal": false
+    },
+    {
+     "text": "(network file)",
+     "href": "https://download-files.wixmp.com/ugd/571a7f_45531cec9a864d5aada46290ecdbfde4.xlsx?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJvYmoiOltbeyJwYXRoIjoiL3VnZC81NzFhN2ZfNDU1MzFjZWM5YTg2NGQ1YWFkYTQ2MjkwZWNkYmZkZTQueGxzeCJ9XV0sImRpcyI6eyJmaWxlbmFtZSI6IkhhdHphcmF0IE1pZ2RhbCBNYWtlZmV0IFBlbnNpb24gamFuIDIwMjZfUC54bHN4IiwidHlwZSI6ImF0dGFjaG1lbnQifSwiYXVkIjpbInVybjpzZXJ2aWNlOmZpbGUuZG93bmxvYWQiXSwiZXhwIjoxNzkxMjcxMzk3LCJqdGkiOiJkY2FkMWQ5MS01OGViLTQ2YzMtYjg0Yi1kYmQyZjEyNjJlMGQiLCJpYXQiOjE3OTEyMzUzOTcsImlzcyI6InVybjphcHA6ZTY2NjMwZTcxNGYwNDkwYWFlYTFmMTQ5YjNiNjllMzIiLCJzdWIiOiJ1cm46YXBwOmU2NjYzMGU3MTRmMDQ5MGFhZWExZjE0OWIzYjY5ZTMyIn0.Rjty1vnJWKk7Thb3W3UknMiAnR3QvyVc7bQt6LWs93s",
+     "year": null,
+     "iframe": false,
+     "doc": true,
+     "internal": false
+    },
+    {
+     "text": "(network file)",
+     "href": "https://download-files.wixmp.com/ugd/ebf348_561c9883dc174aac8e0888d2bfa00e55.xlsx?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJvYmoiOltbeyJwYXRoIjoiL3VnZC9lYmYzNDhfNTYxYzk4ODNkYzE3NGFhYzhlMDg4OGQyYmZhMDBlNTUueGxzeCJ9XV0sImRpcyI6eyJmaWxlbmFtZSI6IkhhdHphcmF0IE1pZ2RhbCBNYWtlZmV0IFBlbnNpb24gTWFyIDIwMjZfUC54bHN4IiwidHlwZSI6ImF0dGFjaG1lbnQifSwiYXVkIjpbInVybjpzZXJ2aWNlOmZpbGUuZG93bmxvYWQiXSwiZXhwIjoxNzkxMjcxMzk4LCJqdGkiOiJiNzc2MDNiNC1mM2YzLTQ1NDAtYjkzYS1kMWRmNjMzMTBhZTkiLCJpYXQiOjE3OTEyMzUzOTgsImlzcyI6InVybjphcHA6ZTY2NjMwZTcxNGYwNDkwYWFlYTFmMTQ5YjNiNjllMzIiLCJzdWIiOiJ1cm46YXBwOmU2NjYzMGU3MTRmMDQ5MGFhZWExZjE0OWIzYjY5ZTMyIn0.j7SU4B9rlnJ2RU4aCzJpqYBckAHfCZhJXUuCzTD8U0k",
+     "year": null,
+     "iframe": false,
+     "doc": true,
+     "internal": false
+    },
+    {
+     "text": "(network file)",
+     "href": "https://download-files.wixmp.com/ugd/571a7f_68cc7eba35f4472f9db9deb3f56096e9.xlsx?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJvYmoiOltbeyJwYXRoIjoiL3VnZC81NzFhN2ZfNjhjYzdlYmEzNWY0NDcyZjlkYjlkZWIzZjU2MDk2ZTkueGxzeCJ9XV0sImRpcyI6eyJmaWxlbmFtZSI6IkhhdHphcmF0IFlvem1hIEphbiAyMDI2X1AueGxzeCIsInR5cGUiOiJhdHRhY2htZW50In0sImF1ZCI6WyJ1cm46c2VydmljZTpmaWxlLmRvd25sb2FkIl0sImV4cCI6MTc5MTI3MTM5OSwianRpIjoiYzNhODIwNzItYTVjNC00MGJiLWEyN2YtYTRiNWFjODE2MTY0IiwiaWF0IjoxNzkxMjM1Mzk5LCJpc3MiOiJ1cm46YXBwOmU2NjYzMGU3MTRmMDQ5MGFhZWExZjE0OWIzYjY5ZTMyIiwic3ViIjoidXJuOmFwcDplNjY2MzBlNzE0ZjA0OTBhYWVhMWYxNDliM2I2OWUzMiJ9.W4MMjOwi8nF4GVhjUNqm3YdGhuM-CJuOKzBQ5m8dvcM",
+     "year": null,
+     "iframe": false,
+     "doc": true,
+     "internal": false
+    },
+    {
+     "text": "(network file)",
+     "href": "https://download-files.wixmp.com/ugd/5adfdb_b0be41a52d0f495591552cf82c807574.xls?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJvYmoiOltbeyJwYXRoIjoiL3VnZC81YWRmZGJfYjBiZTQxYTUyZDBmNDk1NTkxNTUyY2Y4MmM4MDc1NzQueGxzIn1dXSwiZGlzIjp7ImZpbGVuYW1lIjoiaW52ZXN0bWVudF9wb2xpY3lfbWFrZWZldDAxMjAyMC54bHMiLCJ0eXBlIjoiYXR0YWNobWVudCJ9LCJhdWQiOlsidXJuOnNlcnZpY2U6ZmlsZS5kb3dubG9hZCJdLCJleHAiOjE3OTEyNzE0MDAsImp0aSI6IjI2OGM4NzVmLTg3N2UtNDg0OC04NDhlLTEzYjJiZThmYmU3MCIsImlhdCI6MTc5MTIzNTQwMCwiaXNzIjoidXJuOmFwcDplNjY2MzBlNzE0ZjA0OTBhYWVhMWYxNDliM2I2OWUzMiIsInN1YiI6InVybjphcHA6ZTY2NjMwZTcxNGYwNDkwYWFlYTFmMTQ5YjNiNjllMzIifQ.4WynM1ziSe-wblxbcCUR15wDFZEciwREcyxhR4xNIFk",
+     "year": null,
+     "iframe": false,
+     "doc": true,
+     "internal": false
+    },
+    {
+     "text": "(network file)",
+     "href": "https://download-files.wixmp.com/ugd/5adfdb_a965ef6d1c834483a03eb6127a9a35e0.xls?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJvYmoiOltbeyJwYXRoIjoiL3VnZC81YWRmZGJfYTk2NWVmNmQxYzgzNDQ4M2EwM2ViNjEyN2E5YTM1ZTAueGxzIn1dXSwiZGlzIjp7ImZpbGVuYW1lIjoiaGF0emhhcmFfbWFrZWZldC54bHMiLCJ0eXBlIjoiYXR0YWNobWVudCJ9LCJhdWQiOlsidXJuOnNlcnZpY2U6ZmlsZS5kb3dubG9hZCJdLCJleHAiOjE3OTEyNzE0MDAsImp0aSI6ImY1ZDFhMTdjLTE5NDYtNDVlZC04NzMyLTdhMjdlNjhmZjQ0NyIsImlhdCI6MTc5MTIzNTQwMCwiaXNzIjoidXJuOmFwcDplNjY2MzBlNzE0ZjA0OTBhYWVhMWYxNDliM2I2OWUzMiIsInN1YiI6InVybjphcHA6ZTY2NjMwZTcxNGYwNDkwYWFlYTFmMTQ5YjNiNjllMzIifQ.eRLvI6WzozgGPivpT9acyzKcW5wyEzxbVxnedOyy0qc",
      "year": null,
      "iframe": false,
      "doc": true,
@@ -1289,9 +1337,18 @@
    "product": null,
    "status": 200,
    "method": "browser",
-   "text_hash": "cd2823c73a0091c5281fd004a405b414e510103e",
+   "text_hash": "9bb0bc96ddd6650b2a0dceff1dd40030059fb148",
    "text_head": "אתר זה עושה שימוש בטכנולוגיות איסוף מידע כגון עוגיות (Cookies), לרבות על ידי צדדים שלישיים, כדי לספק לך חווית גלישה טובה יותר, וכן לניתוח השימוש ולצרכי פרסום מותאם. המשך הגלישה מהווה את הסכמתך לשימוש זה. למידע נוסף, יש לעיין במדיניות הפרטיות המעודכנת Skip to Main Content חיסכון אישי והשקעות חיסכון פנסיוני ביטוחים תביעות שירותים פעולות כניסה לפורטלים עברית מגדל שלי דף הבית מגדל - הצהרה מראש על מדיניות השקעה צפויה הצהרה מראש על מדיניות השקעה צפויה ​ ​ הצהרה מראש על מדיניות השקעה צפויה הצהרה מראש על מדיניות השקעה צפויה - לשנת 2026 (יולי 2026) להורדה הצהרה מראש על מדיניות השקעה צפויה - לשנת 2026 (",
    "items": [
+    {
+     "text": "הצהרה מראש על מדיניות השקעה צפויה - לשנת 2026 (ינואר 2026) להורדה להורדה להורדה Hatzarat Migdal Bituach jan 2026_P.xlsx",
+     "href": "https://www.migdal.co.il/regulations/migdal-investment-policy",
+     "year": "2026",
+     "iframe": false,
+     "doc": true,
+     "internal": true,
+     "local": "/home/runner/work/_temp/policy_dl/1374269788_Hatzarat Migdal Bituach jan 2026_P.xlsx"
+    },
     {
      "text": "(xhr) michsat hotzaot yeshirot bituach 2026_VP - ACC.xlsx",
      "href": "https://www.migdal.co.il/_files/ugd/a0a61c_20d70c1becf4496d9e35b3a2ffbf08f9.xlsx",
@@ -1339,15 +1396,6 @@
      "iframe": false,
      "doc": true,
      "internal": true
-    },
-    {
-     "text": "הצהרה מראש על מדיניות השקעה צפויה - לשנת 2025 מיום 30.01.2025 להורדה להורדה להורדה hatzarat-migdal-bituach-jan-2025_v.xlsx",
-     "href": "https://www.migdal.co.il/regulations/migdal-investment-policy",
-     "year": "2025",
-     "iframe": false,
-     "doc": true,
-     "internal": true,
-     "local": "/home/runner/work/_temp/policy_dl/9998704685_hatzarat-migdal-bituach-jan-2025_v.xlsx"
     },
     {
      "text": "(xhr) מדיניות השקעות אחראיות נובמבר 2025 נקי_.pdf",
@@ -1767,7 +1815,7 @@
     },
     {
      "text": "(network file)",
-     "href": "https://download-files.wixmp.com/ugd/ebf348_0d35df52dd8d480dbe50ccc4558449db.xlsx?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJvYmoiOltbeyJwYXRoIjoiL3VnZC9lYmYzNDhfMGQzNWRmNTJkZDhkNDgwZGJlNTBjY2M0NTU4NDQ5ZGIueGxzeCJ9XV0sImRpcyI6eyJmaWxlbmFtZSI6IkhhdHphcmF0IE1pZ2RhbCBCaXR1YWNoIEpVTCAyMDI2X1AgLSBBQ0MueGxzeCIsInR5cGUiOiJhdHRhY2htZW50In0sImF1ZCI6WyJ1cm46c2VydmljZTpmaWxlLmRvd25sb2FkIl0sImV4cCI6MTc5MTIzNTkzNCwianRpIjoiZGNlMTU2NDEtOTllMy00OGFmLTk2Y2YtZWEyNGM0OTM3NzE1IiwiaWF0IjoxNzkxMTk5OTM0LCJpc3MiOiJ1cm46YXBwOmU2NjYzMGU3MTRmMDQ5MGFhZWExZjE0OWIzYjY5ZTMyIiwic3ViIjoidXJuOmFwcDplNjY2MzBlNzE0ZjA0OTBhYWVhMWYxNDliM2I2OWUzMiJ9.1NEqZWkv-YPaTzSNFyBokMfgMsw3CEM1MVceymkDfmk",
+     "href": "https://download-files.wixmp.com/ugd/ebf348_0d35df52dd8d480dbe50ccc4558449db.xlsx?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJvYmoiOltbeyJwYXRoIjoiL3VnZC9lYmYzNDhfMGQzNWRmNTJkZDhkNDgwZGJlNTBjY2M0NTU4NDQ5ZGIueGxzeCJ9XV0sImRpcyI6eyJmaWxlbmFtZSI6IkhhdHphcmF0IE1pZ2RhbCBCaXR1YWNoIEpVTCAyMDI2X1AgLSBBQ0MueGxzeCIsInR5cGUiOiJhdHRhY2htZW50In0sImF1ZCI6WyJ1cm46c2VydmljZTpmaWxlLmRvd25sb2FkIl0sImV4cCI6MTc5MTI3MTQ4MiwianRpIjoiZDgzZTIwY2ItNTFjOS00NTVmLTlhMGYtZDY5NjE5OWViOTM2IiwiaWF0IjoxNzkxMjM1NDgyLCJpc3MiOiJ1cm46YXBwOmU2NjYzMGU3MTRmMDQ5MGFhZWExZjE0OWIzYjY5ZTMyIiwic3ViIjoidXJuOmFwcDplNjY2MzBlNzE0ZjA0OTBhYWVhMWYxNDliM2I2OWUzMiJ9.3trh54MEqP0hq5X4x9EeSGv3Jpujccox4oRDgoQjSIE",
      "year": null,
      "iframe": false,
      "doc": true,
@@ -1775,7 +1823,7 @@
     },
     {
      "text": "(network file)",
-     "href": "https://download-files.wixmp.com/ugd/ebf348_0d35df52dd8d480dbe50ccc4558449db.xlsx?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJvYmoiOltbeyJwYXRoIjoiL3VnZC9lYmYzNDhfMGQzNWRmNTJkZDhkNDgwZGJlNTBjY2M0NTU4NDQ5ZGIueGxzeCJ9XV0sImRpcyI6eyJmaWxlbmFtZSI6IkhhdHphcmF0IE1pZ2RhbCBCaXR1YWNoIEpVTCAyMDI2X1AgLSBBQ0MueGxzeCIsInR5cGUiOiJhdHRhY2htZW50In0sImF1ZCI6WyJ1cm46c2VydmljZTpmaWxlLmRvd25sb2FkIl0sImV4cCI6MTc5MTIzNTk2NCwianRpIjoiMmNlYmE1MDUtNmY4YS00YzZhLThkMzktMTE0YjY0NjJhMjJhIiwiaWF0IjoxNzkxMTk5OTY0LCJpc3MiOiJ1cm46YXBwOmU2NjYzMGU3MTRmMDQ5MGFhZWExZjE0OWIzYjY5ZTMyIiwic3ViIjoidXJuOmFwcDplNjY2MzBlNzE0ZjA0OTBhYWVhMWYxNDliM2I2OWUzMiJ9.n4w5YJd98lyU4bIGudha-RtFfTFarEOAI4XaXeJFLkw",
+     "href": "https://download-files.wixmp.com/ugd/ebf348_0d35df52dd8d480dbe50ccc4558449db.xlsx?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJvYmoiOltbeyJwYXRoIjoiL3VnZC9lYmYzNDhfMGQzNWRmNTJkZDhkNDgwZGJlNTBjY2M0NTU4NDQ5ZGIueGxzeCJ9XV0sImRpcyI6eyJmaWxlbmFtZSI6IkhhdHphcmF0IE1pZ2RhbCBCaXR1YWNoIEpVTCAyMDI2X1AgLSBBQ0MueGxzeCIsInR5cGUiOiJhdHRhY2htZW50In0sImF1ZCI6WyJ1cm46c2VydmljZTpmaWxlLmRvd25sb2FkIl0sImV4cCI6MTc5MTI3MTUzNywianRpIjoiMDhkMTI5NTUtMjM5YS00NDc4LWE0MzItMGFiZjk5N2I2NDY5IiwiaWF0IjoxNzkxMjM1NTM3LCJpc3MiOiJ1cm46YXBwOmU2NjYzMGU3MTRmMDQ5MGFhZWExZjE0OWIzYjY5ZTMyIiwic3ViIjoidXJuOmFwcDplNjY2MzBlNzE0ZjA0OTBhYWVhMWYxNDliM2I2OWUzMiJ9.ZhUPB_WaXU2T7Op20uBZOEs7MkIHz4bguiLnCGvuGIU",
      "year": null,
      "iframe": false,
      "doc": true,
@@ -1783,7 +1831,7 @@
     },
     {
      "text": "(network file)",
-     "href": "https://download-files.wixmp.com/ugd/571a7f_709456d96b5e4bc2a64fb2c32961db40.xlsx?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJvYmoiOltbeyJwYXRoIjoiL3VnZC81NzFhN2ZfNzA5NDU2ZDk2YjVlNGJjMmE2NGZiMmMzMjk2MWRiNDAueGxzeCJ9XV0sImRpcyI6eyJmaWxlbmFtZSI6IkhhdHphcmF0IE1pZ2RhbCBCaXR1YWNoIGF1ZyAyMDI2X1AgLSBBQ0MueGxzeCIsInR5cGUiOiJhdHRhY2htZW50In0sImF1ZCI6WyJ1cm46c2VydmljZTpmaWxlLmRvd25sb2FkIl0sImV4cCI6MTc5MTIzNTk2NCwianRpIjoiYWMwNzE1ODAtNTlhMS00NmIxLWFiOWUtYTNmOWYwMGVjODA2IiwiaWF0IjoxNzkxMTk5OTY0LCJpc3MiOiJ1cm46YXBwOmU2NjYzMGU3MTRmMDQ5MGFhZWExZjE0OWIzYjY5ZTMyIiwic3ViIjoidXJuOmFwcDplNjY2MzBlNzE0ZjA0OTBhYWVhMWYxNDliM2I2OWUzMiJ9.AXpy0cMlpPXWrXyMQg8uO7XyHlwzhttSMTxGg2NA3tI",
+     "href": "https://download-files.wixmp.com/ugd/571a7f_709456d96b5e4bc2a64fb2c32961db40.xlsx?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJvYmoiOltbeyJwYXRoIjoiL3VnZC81NzFhN2ZfNzA5NDU2ZDk2YjVlNGJjMmE2NGZiMmMzMjk2MWRiNDAueGxzeCJ9XV0sImRpcyI6eyJmaWxlbmFtZSI6IkhhdHphcmF0IE1pZ2RhbCBCaXR1YWNoIGF1ZyAyMDI2X1AgLSBBQ0MueGxzeCIsInR5cGUiOiJhdHRhY2htZW50In0sImF1ZCI6WyJ1cm46c2VydmljZTpmaWxlLmRvd25sb2FkIl0sImV4cCI6MTc5MTI3MTUzOCwianRpIjoiYWM4YzUwY2QtYjcxNi00NmM1LWE0MmItMjZmZGY3MTZkZmQ4IiwiaWF0IjoxNzkxMjM1NTM4LCJpc3MiOiJ1cm46YXBwOmU2NjYzMGU3MTRmMDQ5MGFhZWExZjE0OWIzYjY5ZTMyIiwic3ViIjoidXJuOmFwcDplNjY2MzBlNzE0ZjA0OTBhYWVhMWYxNDliM2I2OWUzMiJ9.JosmO2IxK8ZyU5bsZg6IYJuOS3MZNvSC4a-6ioHFZFg",
      "year": null,
      "iframe": false,
      "doc": true,
@@ -1791,7 +1839,7 @@
     },
     {
      "text": "(network file)",
-     "href": "https://download-files.wixmp.com/ugd/ebf348_d2e99aba30034c2fb0ce3d4abb2b75a3.xlsx?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJvYmoiOltbeyJwYXRoIjoiL3VnZC9lYmYzNDhfZDJlOTlhYmEzMDAzNGMyZmIwY2UzZDRhYmIyYjc1YTMueGxzeCJ9XV0sImRpcyI6eyJmaWxlbmFtZSI6IkhhdHphcmF0IE1pZ2RhbCBCaXR1YWNoIE1hciAyMDI2X1AueGxzeCIsInR5cGUiOiJhdHRhY2htZW50In0sImF1ZCI6WyJ1cm46c2VydmljZTpmaWxlLmRvd25sb2FkIl0sImV4cCI6MTc5MTIzNTk2NSwianRpIjoiMzU1ZjU1MzEtMzlmOC00M2FlLWI3MWItMjYxNWY4YmY1OGY3IiwiaWF0IjoxNzkxMTk5OTY1LCJpc3MiOiJ1cm46YXBwOmU2NjYzMGU3MTRmMDQ5MGFhZWExZjE0OWIzYjY5ZTMyIiwic3ViIjoidXJuOmFwcDplNjY2MzBlNzE0ZjA0OTBhYWVhMWYxNDliM2I2OWUzMiJ9.OQQv54iA7jkQiYkMW-otNTEXeH0My5lwSEQMS8OvEBQ",
+     "href": "https://download-files.wixmp.com/ugd/ebf348_d2e99aba30034c2fb0ce3d4abb2b75a3.xlsx?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJvYmoiOltbeyJwYXRoIjoiL3VnZC9lYmYzNDhfZDJlOTlhYmEzMDAzNGMyZmIwY2UzZDRhYmIyYjc1YTMueGxzeCJ9XV0sImRpcyI6eyJmaWxlbmFtZSI6IkhhdHphcmF0IE1pZ2RhbCBCaXR1YWNoIE1hciAyMDI2X1AueGxzeCIsInR5cGUiOiJhdHRhY2htZW50In0sImF1ZCI6WyJ1cm46c2VydmljZTpmaWxlLmRvd25sb2FkIl0sImV4cCI6MTc5MTI3MTUzOSwianRpIjoiOTE2ZWU1NjUtOGU0Zi00NzQ3LTkzMGUtYzc1YTI5YzNmOGZlIiwiaWF0IjoxNzkxMjM1NTM5LCJpc3MiOiJ1cm46YXBwOmU2NjYzMGU3MTRmMDQ5MGFhZWExZjE0OWIzYjY5ZTMyIiwic3ViIjoidXJuOmFwcDplNjY2MzBlNzE0ZjA0OTBhYWVhMWYxNDliM2I2OWUzMiJ9.vxThZxKstlcKx5MuCrl6wkCVjCAwS31G9mihSz9jxHc",
      "year": null,
      "iframe": false,
      "doc": true,
@@ -1799,7 +1847,7 @@
     },
     {
      "text": "(network file)",
-     "href": "https://download-files.wixmp.com/ugd/ebf348_9574f28d722b44d6bbf54bc896a3f2cf.pdf?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJvYmoiOltbeyJwYXRoIjoiL3VnZC9lYmYzNDhfOTU3NGYyOGQ3MjJiNDRkNmJiZjU0YmM4OTZhM2YyY2YucGRmIn1dXSwiZGlzIjp7ImZpbGVuYW1lIjoi157Xk9eZ16DXmdeV16og15TXqden16LXldeqINeQ15fXqNeQ15nXldeqINeg15XXkdee15HXqCAyMDI1INeg16fXmV8ucGRmIiwidHlwZSI6ImF0dGFjaG1lbnQifSwiYXVkIjpbInVybjpzZXJ2aWNlOmZpbGUuZG93bmxvYWQiXSwiZXhwIjoxNzkxMjM1OTY1LCJqdGkiOiJiMDc3NGVlMi1hZDFlLTRkYWQtODViOC03MGMzYjk5YTIxMTQiLCJpYXQiOjE3OTExOTk5NjUsImlzcyI6InVybjphcHA6ZTY2NjMwZTcxNGYwNDkwYWFlYTFmMTQ5YjNiNjllMzIiLCJzdWIiOiJ1cm46YXBwOmU2NjYzMGU3MTRmMDQ5MGFhZWExZjE0OWIzYjY5ZTMyIn0.kEEUcFmB7m_aokFQA9lHGcQbJP0yzfmapPOqhvI9lEI",
+     "href": "https://download-files.wixmp.com/ugd/ebf348_9574f28d722b44d6bbf54bc896a3f2cf.pdf?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJvYmoiOltbeyJwYXRoIjoiL3VnZC9lYmYzNDhfOTU3NGYyOGQ3MjJiNDRkNmJiZjU0YmM4OTZhM2YyY2YucGRmIn1dXSwiZGlzIjp7ImZpbGVuYW1lIjoi157Xk9eZ16DXmdeV16og15TXqden16LXldeqINeQ15fXqNeQ15nXldeqINeg15XXkdee15HXqCAyMDI1INeg16fXmV8ucGRmIiwidHlwZSI6ImF0dGFjaG1lbnQifSwiYXVkIjpbInVybjpzZXJ2aWNlOmZpbGUuZG93bmxvYWQiXSwiZXhwIjoxNzkxMjcxNTM5LCJqdGkiOiI4YjBlNDgwMS1jN2EzLTRlZDctODExOS01Nzk3YTQyYmFiNjIiLCJpYXQiOjE3OTEyMzU1MzksImlzcyI6InVybjphcHA6ZTY2NjMwZTcxNGYwNDkwYWFlYTFmMTQ5YjNiNjllMzIiLCJzdWIiOiJ1cm46YXBwOmU2NjYzMGU3MTRmMDQ5MGFhZWExZjE0OWIzYjY5ZTMyIn0.J8_L_hngC1eVIcTSFiMCyazv7vab9WcFSuFVlxaUtwk",
      "year": null,
      "iframe": false,
      "doc": true,
@@ -1807,7 +1855,7 @@
     },
     {
      "text": "(network file)",
-     "href": "https://download-files.wixmp.com/ugd/ebf348_00d67fd3475a4bc1abb29a703b3e3098.xlsx?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJvYmoiOltbeyJwYXRoIjoiL3VnZC9lYmYzNDhfMDBkNjdmZDM0NzVhNGJjMWFiYjI5YTcwM2IzZTMwOTgueGxzeCJ9XV0sImRpcyI6eyJmaWxlbmFtZSI6IkhhdHphcmF0IE1pZ2RhbCBCaXR1YWNoIGZlYiAyMDI2X1AueGxzeCIsInR5cGUiOiJhdHRhY2htZW50In0sImF1ZCI6WyJ1cm46c2VydmljZTpmaWxlLmRvd25sb2FkIl0sImV4cCI6MTc5MTIzNTk2NiwianRpIjoiZDk4Y2E2NDAtOGEyYS00ZmJkLWE0NmYtYmIzM2Q3MWU1MjMxIiwiaWF0IjoxNzkxMTk5OTY2LCJpc3MiOiJ1cm46YXBwOmU2NjYzMGU3MTRmMDQ5MGFhZWExZjE0OWIzYjY5ZTMyIiwic3ViIjoidXJuOmFwcDplNjY2MzBlNzE0ZjA0OTBhYWVhMWYxNDliM2I2OWUzMiJ9.NTHGbFv8MZkSCIWd-8mHJfag3f7clIz37oe7bOB5EJM",
+     "href": "https://download-files.wixmp.com/ugd/ebf348_00d67fd3475a4bc1abb29a703b3e3098.xlsx?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJvYmoiOltbeyJwYXRoIjoiL3VnZC9lYmYzNDhfMDBkNjdmZDM0NzVhNGJjMWFiYjI5YTcwM2IzZTMwOTgueGxzeCJ9XV0sImRpcyI6eyJmaWxlbmFtZSI6IkhhdHphcmF0IE1pZ2RhbCBCaXR1YWNoIGZlYiAyMDI2X1AueGxzeCIsInR5cGUiOiJhdHRhY2htZW50In0sImF1ZCI6WyJ1cm46c2VydmljZTpmaWxlLmRvd25sb2FkIl0sImV4cCI6MTc5MTI3MTU0MCwianRpIjoiMzY4NGI2YzAtYWIzYi00NDM0LTgyYzEtNDdjZGUyZGJhZGQ2IiwiaWF0IjoxNzkxMjM1NTQwLCJpc3MiOiJ1cm46YXBwOmU2NjYzMGU3MTRmMDQ5MGFhZWExZjE0OWIzYjY5ZTMyIiwic3ViIjoidXJuOmFwcDplNjY2MzBlNzE0ZjA0OTBhYWVhMWYxNDliM2I2OWUzMiJ9.23bogJn14hafB1iJponP57ZAgGg6YTmlT0sJRFOtwkc",
      "year": null,
      "iframe": false,
      "doc": true,
@@ -1815,103 +1863,7 @@
     },
     {
      "text": "(network file)",
-     "href": "https://download-files.wixmp.com/ugd/571a7f_193b8426041e4e80aafd7903be7e08c0.xlsx?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJvYmoiOltbeyJwYXRoIjoiL3VnZC81NzFhN2ZfMTkzYjg0MjYwNDFlNGU4MGFhZmQ3OTAzYmU3ZTA4YzAueGxzeCJ9XV0sImRpcyI6eyJmaWxlbmFtZSI6IkhhdHphcmF0IE1pZ2RhbCBCaXR1YWNoIGphbiAyMDI2X1AueGxzeCIsInR5cGUiOiJhdHRhY2htZW50In0sImF1ZCI6WyJ1cm46c2VydmljZTpmaWxlLmRvd25sb2FkIl0sImV4cCI6MTc5MTIzNTk2NiwianRpIjoiYmYyZjJiOTItMmY4Yi00YTZiLTljYTctZjlmNmVkNjNjZjdkIiwiaWF0IjoxNzkxMTk5OTY2LCJpc3MiOiJ1cm46YXBwOmU2NjYzMGU3MTRmMDQ5MGFhZWExZjE0OWIzYjY5ZTMyIiwic3ViIjoidXJuOmFwcDplNjY2MzBlNzE0ZjA0OTBhYWVhMWYxNDliM2I2OWUzMiJ9.EFAF4mifdORpjXUtbV24SODmrojIR8zbcPJikWTbDb8",
-     "year": null,
-     "iframe": false,
-     "doc": true,
-     "internal": false
-    },
-    {
-     "text": "(network file)",
-     "href": "https://download-files.wixmp.com/ugd/5adfdb_9b755543c5a04873aaf250be9bb933f4.xlsx?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJvYmoiOltbeyJwYXRoIjoiL3VnZC81YWRmZGJfOWI3NTU1NDNjNWEwNDg3M2FhZjI1MGJlOWJiOTMzZjQueGxzeCJ9XV0sImRpcyI6eyJmaWxlbmFtZSI6ImhhdHphcmF0LW1pZ2RhbC1iaXR1YWNoLXNlcF8yMDI1X3YueGxzeCIsInR5cGUiOiJhdHRhY2htZW50In0sImF1ZCI6WyJ1cm46c2VydmljZTpmaWxlLmRvd25sb2FkIl0sImV4cCI6MTc5MTIzNTk2NywianRpIjoiZmNjN2M4NjEtODZiYS00NWRlLThjMDAtNDMzOGJlYTQwYTQ3IiwiaWF0IjoxNzkxMTk5OTY3LCJpc3MiOiJ1cm46YXBwOmU2NjYzMGU3MTRmMDQ5MGFhZWExZjE0OWIzYjY5ZTMyIiwic3ViIjoidXJuOmFwcDplNjY2MzBlNzE0ZjA0OTBhYWVhMWYxNDliM2I2OWUzMiJ9.axzpgIcN5n5Sa2PCWo8tZwGEUw0dZaETdrftmfypxSo",
-     "year": null,
-     "iframe": false,
-     "doc": true,
-     "internal": false
-    },
-    {
-     "text": "(network file)",
-     "href": "https://download-files.wixmp.com/ugd/5adfdb_54e8c393156b46afa3e6c4a2e377faea.xlsx?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJvYmoiOltbeyJwYXRoIjoiL3VnZC81YWRmZGJfNTRlOGMzOTMxNTZiNDZhZmEzZTZjNGEyZTM3N2ZhZWEueGxzeCJ9XV0sImRpcyI6eyJmaWxlbmFtZSI6ImhhdHphcmF0LW1pZ2RhbC1iaXR1YWNoLW1hcmNoLTIwMjUtbXVuZ2FzaC54bHN4IiwidHlwZSI6ImF0dGFjaG1lbnQifSwiYXVkIjpbInVybjpzZXJ2aWNlOmZpbGUuZG93bmxvYWQiXSwiZXhwIjoxNzkxMjM1OTY4LCJqdGkiOiI0Y2MyM2M3ZC1lZjYyLTQ3YmMtYmQ5Mi03ODlkOWZlODE2NjAiLCJpYXQiOjE3OTExOTk5NjgsImlzcyI6InVybjphcHA6ZTY2NjMwZTcxNGYwNDkwYWFlYTFmMTQ5YjNiNjllMzIiLCJzdWIiOiJ1cm46YXBwOmU2NjYzMGU3MTRmMDQ5MGFhZWExZjE0OWIzYjY5ZTMyIn0.E-qbp_WQFl6BpGGOL9Zppa_JOA3FPInbI8pf-CQKku0",
-     "year": null,
-     "iframe": false,
-     "doc": true,
-     "internal": false
-    },
-    {
-     "text": "(network file)",
-     "href": "https://download-files.wixmp.com/ugd/5adfdb_dda43b05a2224773a8a2386bf8a2ae8c.pdf?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJvYmoiOltbeyJwYXRoIjoiL3VnZC81YWRmZGJfZGRhNDNiMDVhMjIyNDc3M2E4YTIzODZiZjhhMmFlOGMucGRmIn1dXSwiZGlzIjp7ImZpbGVuYW1lIjoiaG9kYWEtYWwtc2hpbnVpLWhhdHphcmF0LW1lZGluaXV0LWhhc2hrYW90LXR6ZnV5YS1sZXNobmF0LTIwMjEtYml0dWFjLnBkZiIsInR5cGUiOiJhdHRhY2htZW50In0sImF1ZCI6WyJ1cm46c2VydmljZTpmaWxlLmRvd25sb2FkIl0sImV4cCI6MTc5MTIzNTk2OCwianRpIjoiZTc1YTIxOWEtNTc5OC00ZTVlLTk2YmYtZjhkMGY0NDBiYWM1IiwiaWF0IjoxNzkxMTk5OTY4LCJpc3MiOiJ1cm46YXBwOmU2NjYzMGU3MTRmMDQ5MGFhZWExZjE0OWIzYjY5ZTMyIiwic3ViIjoidXJuOmFwcDplNjY2MzBlNzE0ZjA0OTBhYWVhMWYxNDliM2I2OWUzMiJ9.jox7UJlCNSTC16s6rWgzqN4nbUie7ZQLGHx8OHZsct4",
-     "year": null,
-     "iframe": false,
-     "doc": true,
-     "internal": false
-    },
-    {
-     "text": "(network file)",
-     "href": "https://download-files.wixmp.com/ugd/5adfdb_7b5fdc5493c44033afb1a54954fce42c.pdf?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJvYmoiOltbeyJwYXRoIjoiL3VnZC81YWRmZGJfN2I1ZmRjNTQ5M2M0NDAzM2FmYjFhNTQ5NTRmY2U0MmMucGRmIn1dXSwiZGlzIjp7ImZpbGVuYW1lIjoibWVkaW5pdXRfaGFzaGthb3RfYWNocmFpb3RfMjAyNV9tdW5nYXNoLnBkZiIsInR5cGUiOiJhdHRhY2htZW50In0sImF1ZCI6WyJ1cm46c2VydmljZTpmaWxlLmRvd25sb2FkIl0sImV4cCI6MTc5MTIzNTk2OSwianRpIjoiNWVjOWQxMzItNjk0NS00OWYzLWJiNjYtZmM1OGUwMmIzZDQ3IiwiaWF0IjoxNzkxMTk5OTY5LCJpc3MiOiJ1cm46YXBwOmU2NjYzMGU3MTRmMDQ5MGFhZWExZjE0OWIzYjY5ZTMyIiwic3ViIjoidXJuOmFwcDplNjY2MzBlNzE0ZjA0OTBhYWVhMWYxNDliM2I2OWUzMiJ9.1X9oLxZc-JgvMA0fYgsKcYekHw1n2JI-sz1vAKJVddE",
-     "year": null,
-     "iframe": false,
-     "doc": true,
-     "internal": false
-    },
-    {
-     "text": "(network file)",
-     "href": "https://download-files.wixmp.com/ugd/5adfdb_c6ed3dcf099844beb8eeeb54445c2ac5.pdf?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJvYmoiOltbeyJwYXRoIjoiL3VnZC81YWRmZGJfYzZlZDNkY2YwOTk4NDRiZWI4ZWVlYjU0NDQ1YzJhYzUucGRmIn1dXSwiZGlzIjp7ImZpbGVuYW1lIjoibWlnZGFsLW1lZGluaXV0LWhhc2hrYW90LWFjaHJhaW90LTIwMjQtbXVuZ2FzaC5wZGYiLCJ0eXBlIjoiYXR0YWNobWVudCJ9LCJhdWQiOlsidXJuOnNlcnZpY2U6ZmlsZS5kb3dubG9hZCJdLCJleHAiOjE3OTEyMzU5NjksImp0aSI6IjA0ODgzOTBiLWU3MTItNDUxMi05ZTk2LTQ1NzY0ZDA0MzAyYSIsImlhdCI6MTc5MTE5OTk2OSwiaXNzIjoidXJuOmFwcDplNjY2MzBlNzE0ZjA0OTBhYWVhMWYxNDliM2I2OWUzMiIsInN1YiI6InVybjphcHA6ZTY2NjMwZTcxNGYwNDkwYWFlYTFmMTQ5YjNiNjllMzIifQ.NrMAdGH29W6-MD5JugMZaoxifHkeLsDcGaWfs1YCY0Q",
-     "year": null,
-     "iframe": false,
-     "doc": true,
-     "internal": false
-    },
-    {
-     "text": "(network file)",
-     "href": "https://download-files.wixmp.com/ugd/5adfdb_2e2c06b6f93247d3b85247b81f78ec5e.xlsx?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJvYmoiOltbeyJwYXRoIjoiL3VnZC81YWRmZGJfMmUyYzA2YjZmOTMyNDdkM2I4NTI0N2I4MWY3OGVjNWUueGxzeCJ9XV0sImRpcyI6eyJmaWxlbmFtZSI6ImhhdHphcmF0LW1pZ2RhbC1iaXR1YWNoLWp1bi0yMDI0X3YueGxzeCIsInR5cGUiOiJhdHRhY2htZW50In0sImF1ZCI6WyJ1cm46c2VydmljZTpmaWxlLmRvd25sb2FkIl0sImV4cCI6MTc5MTIzNTk3MSwianRpIjoiOTIyNDZmNjgtOGZjYy00ZGU1LWE1OTUtZDM4MzM4MTBiZDYyIiwiaWF0IjoxNzkxMTk5OTcxLCJpc3MiOiJ1cm46YXBwOmU2NjYzMGU3MTRmMDQ5MGFhZWExZjE0OWIzYjY5ZTMyIiwic3ViIjoidXJuOmFwcDplNjY2MzBlNzE0ZjA0OTBhYWVhMWYxNDliM2I2OWUzMiJ9.JvbbzF8kMPQPauh2R1JP2wsP6BFflHc_McazKZBFSaE",
-     "year": null,
-     "iframe": false,
-     "doc": true,
-     "internal": false
-    },
-    {
-     "text": "(network file)",
-     "href": "https://download-files.wixmp.com/ugd/5adfdb_316c4ced56b84cb895c62aeaa48e248e.xls?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJvYmoiOltbeyJwYXRoIjoiL3VnZC81YWRmZGJfMzE2YzRjZWQ1NmI4NGNiODk1YzYyYWVhYTQ4ZTI0OGUueGxzIn1dXSwiZGlzIjp7ImZpbGVuYW1lIjoiaW52ZXN0bWVudF9wb2xpY3lfMDEyMDIwLnhscyIsInR5cGUiOiJhdHRhY2htZW50In0sImF1ZCI6WyJ1cm46c2VydmljZTpmaWxlLmRvd25sb2FkIl0sImV4cCI6MTc5MTIzNTk3MSwianRpIjoiNDljYTFmNjctMTI5MC00NDg0LWJhZTYtNzFhYWQxYTY5ZGYxIiwiaWF0IjoxNzkxMTk5OTcxLCJpc3MiOiJ1cm46YXBwOmU2NjYzMGU3MTRmMDQ5MGFhZWExZjE0OWIzYjY5ZTMyIiwic3ViIjoidXJuOmFwcDplNjY2MzBlNzE0ZjA0OTBhYWVhMWYxNDliM2I2OWUzMiJ9.lBIgH8QE8d0on1_OxuEBXcCePe-QxDNZacQneWpPTd8",
-     "year": null,
-     "iframe": false,
-     "doc": true,
-     "internal": false
-    },
-    {
-     "text": "(network file)",
-     "href": "https://download-files.wixmp.com/ugd/5adfdb_92e52c0adb404c3592211e6f9688a96b.pdf?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJvYmoiOltbeyJwYXRoIjoiL3VnZC81YWRmZGJfOTJlNTJjMGFkYjQwNGMzNTkyMjExZTZmOTY4OGE5NmIucGRmIn1dXSwiZGlzIjp7ImZpbGVuYW1lIjoiZXNnX211bmdhc2gxMTIwLnBkZiIsInR5cGUiOiJhdHRhY2htZW50In0sImF1ZCI6WyJ1cm46c2VydmljZTpmaWxlLmRvd25sb2FkIl0sImV4cCI6MTc5MTIzNTk3MiwianRpIjoiZjlkZTlmZDYtNzgyNS00OWU4LWIxMDEtY2IwMjIzYjg5MWUyIiwiaWF0IjoxNzkxMTk5OTcyLCJpc3MiOiJ1cm46YXBwOmU2NjYzMGU3MTRmMDQ5MGFhZWExZjE0OWIzYjY5ZTMyIiwic3ViIjoidXJuOmFwcDplNjY2MzBlNzE0ZjA0OTBhYWVhMWYxNDliM2I2OWUzMiJ9.88uaWa0fk9MqmwdXMZ65a3I8IwH_MMY73jkcLv1Dlk0",
-     "year": null,
-     "iframe": false,
-     "doc": true,
-     "internal": false
-    },
-    {
-     "text": "(network file)",
-     "href": "https://download-files.wixmp.com/ugd/5adfdb_25e823ea5b1b4c4981a25d7e24b2411b.pdf?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJvYmoiOltbeyJwYXRoIjoiL3VnZC81YWRmZGJfMjVlODIzZWE1YjFiNGM0OTgxYTI1ZDdlMjRiMjQxMWIucGRmIn1dXSwiZGlzIjp7ImZpbGVuYW1lIjoibWVkaW5pdXQtZXNnLTIwMjMtbXVuZ2FzaC5wZGYiLCJ0eXBlIjoiYXR0YWNobWVudCJ9LCJhdWQiOlsidXJuOnNlcnZpY2U6ZmlsZS5kb3dubG9hZCJdLCJleHAiOjE3OTEyMzU5NzMsImp0aSI6IjJlMGQ1ZTFlLTZlMTEtNDk5Yy1iYzllLTM4OWM4Y2YxYjRjOSIsImlhdCI6MTc5MTE5OTk3MywiaXNzIjoidXJuOmFwcDplNjY2MzBlNzE0ZjA0OTBhYWVhMWYxNDliM2I2OWUzMiIsInN1YiI6InVybjphcHA6ZTY2NjMwZTcxNGYwNDkwYWFlYTFmMTQ5YjNiNjllMzIifQ.yELuaU9YsR-RJTXqOIPWaDhyzUyJgXNMk3jOXW5Ymz0",
-     "year": null,
-     "iframe": false,
-     "doc": true,
-     "internal": false
-    },
-    {
-     "text": "(network file)",
-     "href": "https://download-files.wixmp.com/ugd/5adfdb_085cd0b61cd54c04aa9842043aab23db.xlsx?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJvYmoiOltbeyJwYXRoIjoiL3VnZC81YWRmZGJfMDg1Y2QwYjYxY2Q1NGMwNGFhOTg0MjA0M2FhYjIzZGIueGxzeCJ9XV0sImRpcyI6eyJmaWxlbmFtZSI6ImhhdHphcmF0LW1pZ2RhbC1iaXR1YWNoLTMyMDIxLnhsc3giLCJ0eXBlIjoiYXR0YWNobWVudCJ9LCJhdWQiOlsidXJuOnNlcnZpY2U6ZmlsZS5kb3dubG9hZCJdLCJleHAiOjE3OTEyMzU5NzMsImp0aSI6IjAwYTA2YmY3LThjZmQtNDBhMi04YTgxLTc0ODhmODUxNzc3ZCIsImlhdCI6MTc5MTE5OTk3MywiaXNzIjoidXJuOmFwcDplNjY2MzBlNzE0ZjA0OTBhYWVhMWYxNDliM2I2OWUzMiIsInN1YiI6InVybjphcHA6ZTY2NjMwZTcxNGYwNDkwYWFlYTFmMTQ5YjNiNjllMzIifQ.Z7axVaflYpm_d5m_qOhqT-f2WHbyyfTQFSxFWJuFzRI",
-     "year": null,
-     "iframe": false,
-     "doc": true,
-     "internal": false
-    },
-    {
-     "text": "(network file)",
-     "href": "https://download-files.wixmp.com/ugd/5adfdb_bee21035fb624dadb000a8fcfa230f05.pdf?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJvYmoiOltbeyJwYXRoIjoiL3VnZC81YWRmZGJfYmVlMjEwMzVmYjYyNGRhZGIwMDBhOGZjZmEyMzBmMDUucGRmIn1dXSwiZGlzIjp7ImZpbGVuYW1lIjoibWVkaW5pdXQtZXNnLTIwMjItbXVuZ2FzaC5wZGYiLCJ0eXBlIjoiYXR0YWNobWVudCJ9LCJhdWQiOlsidXJuOnNlcnZpY2U6ZmlsZS5kb3dubG9hZCJdLCJleHAiOjE3OTEyMzU5NzQsImp0aSI6ImJlYThmYzkwLThhMWItNDA2Ni04OWM0LWM2NjZkNTc0NmMxZiIsImlhdCI6MTc5MTE5OTk3NCwiaXNzIjoidXJuOmFwcDplNjY2MzBlNzE0ZjA0OTBhYWVhMWYxNDliM2I2OWUzMiIsInN1YiI6InVybjphcHA6ZTY2NjMwZTcxNGYwNDkwYWFlYTFmMTQ5YjNiNjllMzIifQ.j_TIV_YFGgoUocAZADmChSAOKAGKWvDFbdngQphupJE",
-     "year": null,
-     "iframe": false,
-     "doc": true,
-     "internal": false
-    },
-    {
-     "text": "(network file)",
-     "href": "https://download-files.wixmp.com/ugd/5adfdb_3e8ea24c2a2a49e9930a97c243d7a7d8.xlsx?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJvYmoiOltbeyJwYXRoIjoiL3VnZC81YWRmZGJfM2U4ZWEyNGMyYTJhNDllOTkzMGE5N2MyNDNkN2E3ZDgueGxzeCJ9XV0sImRpcyI6eyJmaWxlbmFtZSI6ImhhdHphcmF0LW1pZ2RhbC1iaXR1YWNoLWphbi0yMDI1X3YueGxzeCIsInR5cGUiOiJhdHRhY2htZW50In0sImF1ZCI6WyJ1cm46c2VydmljZTpmaWxlLmRvd25sb2FkIl0sImV4cCI6MTc5MTIzNTk3NSwianRpIjoiZWM0NmY5M2UtZGY4MS00OGI0LThhNmEtNmU0MGFjY2IxMDhlIiwiaWF0IjoxNzkxMTk5OTc1LCJpc3MiOiJ1cm46YXBwOmU2NjYzMGU3MTRmMDQ5MGFhZWExZjE0OWIzYjY5ZTMyIiwic3ViIjoidXJuOmFwcDplNjY2MzBlNzE0ZjA0OTBhYWVhMWYxNDliM2I2OWUzMiJ9.01FGG7afe52RzhquHI-tqELZKlZtowL8RnEr-xDEviU",
+     "href": "https://download-files.wixmp.com/ugd/571a7f_193b8426041e4e80aafd7903be7e08c0.xlsx?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJvYmoiOltbeyJwYXRoIjoiL3VnZC81NzFhN2ZfMTkzYjg0MjYwNDFlNGU4MGFhZmQ3OTAzYmU3ZTA4YzAueGxzeCJ9XV0sImRpcyI6eyJmaWxlbmFtZSI6IkhhdHphcmF0IE1pZ2RhbCBCaXR1YWNoIGphbiAyMDI2X1AueGxzeCIsInR5cGUiOiJhdHRhY2htZW50In0sImF1ZCI6WyJ1cm46c2VydmljZTpmaWxlLmRvd25sb2FkIl0sImV4cCI6MTc5MTI3MTU0MSwianRpIjoiMzYyNGVkN2YtNWNkNi00ZGUwLTk5ZmEtYjI3N2U0YjAyMWY1IiwiaWF0IjoxNzkxMjM1NTQxLCJpc3MiOiJ1cm46YXBwOmU2NjYzMGU3MTRmMDQ5MGFhZWExZjE0OWIzYjY5ZTMyIiwic3ViIjoidXJuOmFwcDplNjY2MzBlNzE0ZjA0OTBhYWVhMWYxNDliM2I2OWUzMiJ9.3USURiicONMBGpV7dDrRZ-MOqr1SJndjTttUU6aUjnA",
      "year": null,
      "iframe": false,
      "doc": true,
@@ -1931,7 +1883,7 @@
    "product": null,
    "status": 200,
    "method": "browser",
-   "text_hash": "2a2f5615b89c68158bcc25b1d818490b75f7fa4a",
+   "text_hash": "c23d061f70ff65784a8f052422fc5080443668a6",
    "text_head": "אתר זה עושה שימוש בטכנולוגיות איסוף מידע כגון עוגיות (Cookies), לרבות על ידי צדדים שלישיים, כדי לספק לך חווית גלישה טובה יותר, וכן לניתוח השימוש ולצרכי פרסום מותאם. המשך הגלישה מהווה את הסכמתך לשימוש זה. למידע נוסף, יש לעיין במדיניות הפרטיות המעודכנת Skip to Main Content חיסכון אישי והשקעות חיסכון פנסיוני ביטוחים תביעות שירותים פעולות כניסה לפורטלים עברית מגדל שלי דף הבית קרן הפנסיה יוזמה – מדיניות השקעה צפויה קרן הפנסיה יוזמה – מדיניות השקעה צפויה ​ ​ הצהרה מראש על מדיניות השקעה צפויה מדיניות השקעות אחראיות (ינואר 24) להורדה הצהרה מראש על מדיניות השקעה צפויה לשנת 2015 (ינואר 2015) להורדה הצהר",
    "items": [
     {
@@ -1941,15 +1893,6 @@
      "iframe": false,
      "doc": true,
      "internal": true
-    },
-    {
-     "text": "הצהרה מראש על מדיניות השקעה צפויה לשנת 2023 (אוקטובר 2023) להורדה להורדה להורדה hatzarat-yozma-102023.xlsx",
-     "href": "https://www.migdal.co.il/regulations/yozma-expected-investment-policy",
-     "year": "2023",
-     "iframe": false,
-     "doc": true,
-     "internal": true,
-     "local": "/home/runner/work/_temp/policy_dl/1063061624_hatzarat-yozma-102023.xlsx"
     },
     {
      "text": "(xhr) hatzarat-yozma-102023.xlsx",
@@ -2014,6 +1957,15 @@
      "iframe": false,
      "doc": true,
      "internal": true
+    },
+    {
+     "text": "עדכון על פירוט השינוי מראש על מדיניות השקעה צפויה לשנת 2018 (מאי 2018) להורדה להורדה להורדה mediniut_hashkaa_yozma052018.xls",
+     "href": "https://www.migdal.co.il/regulations/yozma-expected-investment-policy",
+     "year": "2018",
+     "iframe": false,
+     "doc": true,
+     "internal": true,
+     "local": "/home/runner/work/_temp/policy_dl/1821965138_mediniut_hashkaa_yozma052018.xls"
     },
     {
      "text": "(xhr) mediniut_hashkaa_yozma2018.xls",
@@ -2321,7 +2273,7 @@
     },
     {
      "text": "(network file)",
-     "href": "https://download-files.wixmp.com/ugd/5adfdb_5529a1241e764807bfeb2209b662f2ac.pdf?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJvYmoiOltbeyJwYXRoIjoiL3VnZC81YWRmZGJfNTUyOWExMjQxZTc2NDgwN2JmZWIyMjA5YjY2MmYyYWMucGRmIn1dXSwiZGlzIjp7ImZpbGVuYW1lIjoibWlnZGFsLW1lZGluaXV0LWhhc2hrYW90LWFjaHJhaW90LTIwMjQtbXVuZ2FzaC5wZGYiLCJ0eXBlIjoiYXR0YWNobWVudCJ9LCJhdWQiOlsidXJuOnNlcnZpY2U6ZmlsZS5kb3dubG9hZCJdLCJleHAiOjE3OTEyMzYwMDAsImp0aSI6IjU5Mjg2Njk4LTRlMzEtNGIxZi1iYTc3LWM5NWNiNWNiZWIwMCIsImlhdCI6MTc5MTIwMDAwMCwiaXNzIjoidXJuOmFwcDplNjY2MzBlNzE0ZjA0OTBhYWVhMWYxNDliM2I2OWUzMiIsInN1YiI6InVybjphcHA6ZTY2NjMwZTcxNGYwNDkwYWFlYTFmMTQ5YjNiNjllMzIifQ.OU5UuxU2DqPSuuhl3xGVCgK4gFbdymRQgIQqS-iGeSA",
+     "href": "https://download-files.wixmp.com/ugd/5adfdb_5529a1241e764807bfeb2209b662f2ac.pdf?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJvYmoiOltbeyJwYXRoIjoiL3VnZC81YWRmZGJfNTUyOWExMjQxZTc2NDgwN2JmZWIyMjA5YjY2MmYyYWMucGRmIn1dXSwiZGlzIjp7ImZpbGVuYW1lIjoibWlnZGFsLW1lZGluaXV0LWhhc2hrYW90LWFjaHJhaW90LTIwMjQtbXVuZ2FzaC5wZGYiLCJ0eXBlIjoiYXR0YWNobWVudCJ9LCJhdWQiOlsidXJuOnNlcnZpY2U6ZmlsZS5kb3dubG9hZCJdLCJleHAiOjE3OTEyNzE2MjMsImp0aSI6IjgxYWE4ZGM0LWVhNGYtNDU5Mi1iN2JiLTExZTQ3MjIxNGNlMiIsImlhdCI6MTc5MTIzNTYyMywiaXNzIjoidXJuOmFwcDplNjY2MzBlNzE0ZjA0OTBhYWVhMWYxNDliM2I2OWUzMiIsInN1YiI6InVybjphcHA6ZTY2NjMwZTcxNGYwNDkwYWFlYTFmMTQ5YjNiNjllMzIifQ.O_YbbiAPiyhZ6SmGrdwQaIC-BazXELiKFrsj-FRIyx0",
      "year": null,
      "iframe": false,
      "doc": true,
@@ -2329,7 +2281,7 @@
     },
     {
      "text": "(network file)",
-     "href": "https://download-files.wixmp.com/ugd/5adfdb_5529a1241e764807bfeb2209b662f2ac.pdf?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJvYmoiOltbeyJwYXRoIjoiL3VnZC81YWRmZGJfNTUyOWExMjQxZTc2NDgwN2JmZWIyMjA5YjY2MmYyYWMucGRmIn1dXSwiZGlzIjp7ImZpbGVuYW1lIjoibWlnZGFsLW1lZGluaXV0LWhhc2hrYW90LWFjaHJhaW90LTIwMjQtbXVuZ2FzaC5wZGYiLCJ0eXBlIjoiYXR0YWNobWVudCJ9LCJhdWQiOlsidXJuOnNlcnZpY2U6ZmlsZS5kb3dubG9hZCJdLCJleHAiOjE3OTEyMzYwMzUsImp0aSI6ImEwYzdkMmJkLWM5NTItNDdlMi05ZDEwLWFhYjBiMzA5YzY0NSIsImlhdCI6MTc5MTIwMDAzNSwiaXNzIjoidXJuOmFwcDplNjY2MzBlNzE0ZjA0OTBhYWVhMWYxNDliM2I2OWUzMiIsInN1YiI6InVybjphcHA6ZTY2NjMwZTcxNGYwNDkwYWFlYTFmMTQ5YjNiNjllMzIifQ.yLqa901K2OEi37w8X8ZFCNfDU4z_DXGJzbWj7Iphags",
+     "href": "https://download-files.wixmp.com/ugd/5adfdb_5529a1241e764807bfeb2209b662f2ac.pdf?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJvYmoiOltbeyJwYXRoIjoiL3VnZC81YWRmZGJfNTUyOWExMjQxZTc2NDgwN2JmZWIyMjA5YjY2MmYyYWMucGRmIn1dXSwiZGlzIjp7ImZpbGVuYW1lIjoibWlnZGFsLW1lZGluaXV0LWhhc2hrYW90LWFjaHJhaW90LTIwMjQtbXVuZ2FzaC5wZGYiLCJ0eXBlIjoiYXR0YWNobWVudCJ9LCJhdWQiOlsidXJuOnNlcnZpY2U6ZmlsZS5kb3dubG9hZCJdLCJleHAiOjE3OTEyNzE2NzgsImp0aSI6ImQwMDkxYjY4LTgxNDEtNDI0ZS1hMzljLWM1NzhhNjQyYWE5MSIsImlhdCI6MTc5MTIzNTY3OCwiaXNzIjoidXJuOmFwcDplNjY2MzBlNzE0ZjA0OTBhYWVhMWYxNDliM2I2OWUzMiIsInN1YiI6InVybjphcHA6ZTY2NjMwZTcxNGYwNDkwYWFlYTFmMTQ5YjNiNjllMzIifQ.EY2tDlOZZ3A4mnJu_sXlxY3Utn30HDuTwB1ogUBo-Ak",
      "year": null,
      "iframe": false,
      "doc": true,
@@ -2337,7 +2289,7 @@
     },
     {
      "text": "(network file)",
-     "href": "https://download-files.wixmp.com/ugd/5adfdb_5529a1241e764807bfeb2209b662f2ac.pdf?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJvYmoiOltbeyJwYXRoIjoiL3VnZC81YWRmZGJfNTUyOWExMjQxZTc2NDgwN2JmZWIyMjA5YjY2MmYyYWMucGRmIn1dXSwiZGlzIjp7ImZpbGVuYW1lIjoibWlnZGFsLW1lZGluaXV0LWhhc2hrYW90LWFjaHJhaW90LTIwMjQtbXVuZ2FzaC5wZGYiLCJ0eXBlIjoiYXR0YWNobWVudCJ9LCJhdWQiOlsidXJuOnNlcnZpY2U6ZmlsZS5kb3dubG9hZCJdLCJleHAiOjE3OTEyMzYwMzYsImp0aSI6ImMwNTFhMDkxLTdmNGUtNGU5Ni05NDQzLTMxOGY1NjIxYjMwNyIsImlhdCI6MTc5MTIwMDAzNiwiaXNzIjoidXJuOmFwcDplNjY2MzBlNzE0ZjA0OTBhYWVhMWYxNDliM2I2OWUzMiIsInN1YiI6InVybjphcHA6ZTY2NjMwZTcxNGYwNDkwYWFlYTFmMTQ5YjNiNjllMzIifQ.4y_o1t42Nd6YlEpbuM9-1koKet0ZUoe8HDSCEPrX_as",
+     "href": "https://download-files.wixmp.com/ugd/5adfdb_38e46ee02b0c4135b4ac3b00d2793cae.xls?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJvYmoiOltbeyJwYXRoIjoiL3VnZC81YWRmZGJfMzhlNDZlZTAyYjBjNDEzNWI0YWMzYjAwZDI3OTNjYWUueGxzIn1dXSwiZGlzIjp7ImZpbGVuYW1lIjoieW96bWFfamFuMjAxNS54bHMiLCJ0eXBlIjoiYXR0YWNobWVudCJ9LCJhdWQiOlsidXJuOnNlcnZpY2U6ZmlsZS5kb3dubG9hZCJdLCJleHAiOjE3OTEyNzE2NzgsImp0aSI6ImZkY2VmM2I5LTBhODctNDBiNi05ZmVjLThlY2ViZWFhYWE4ZSIsImlhdCI6MTc5MTIzNTY3OCwiaXNzIjoidXJuOmFwcDplNjY2MzBlNzE0ZjA0OTBhYWVhMWYxNDliM2I2OWUzMiIsInN1YiI6InVybjphcHA6ZTY2NjMwZTcxNGYwNDkwYWFlYTFmMTQ5YjNiNjllMzIifQ.6eWopvl0W4y8OU3irqslvANt95ZOzyexqsiqnqWgHG0",
      "year": null,
      "iframe": false,
      "doc": true,
@@ -2345,7 +2297,7 @@
     },
     {
      "text": "(network file)",
-     "href": "https://download-files.wixmp.com/ugd/5adfdb_38e46ee02b0c4135b4ac3b00d2793cae.xls?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJvYmoiOltbeyJwYXRoIjoiL3VnZC81YWRmZGJfMzhlNDZlZTAyYjBjNDEzNWI0YWMzYjAwZDI3OTNjYWUueGxzIn1dXSwiZGlzIjp7ImZpbGVuYW1lIjoieW96bWFfamFuMjAxNS54bHMiLCJ0eXBlIjoiYXR0YWNobWVudCJ9LCJhdWQiOlsidXJuOnNlcnZpY2U6ZmlsZS5kb3dubG9hZCJdLCJleHAiOjE3OTEyMzYwMzYsImp0aSI6IjQ5NzMyYjk1LWM1MWItNDYyYy04YmE3LTMzNTlmNjQwNjIxMCIsImlhdCI6MTc5MTIwMDAzNiwiaXNzIjoidXJuOmFwcDplNjY2MzBlNzE0ZjA0OTBhYWVhMWYxNDliM2I2OWUzMiIsInN1YiI6InVybjphcHA6ZTY2NjMwZTcxNGYwNDkwYWFlYTFmMTQ5YjNiNjllMzIifQ.ZVoyhqsuIYGuqQvUeifcmq2-ohrIWjtC3a3aQO136HY",
+     "href": "https://download-files.wixmp.com/ugd/5adfdb_8fe8a69d54e04de1a09678fb1eba05e7.xls?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJvYmoiOltbeyJwYXRoIjoiL3VnZC81YWRmZGJfOGZlOGE2OWQ1NGUwNGRlMWEwOTY3OGZiMWViYTA1ZTcueGxzIn1dXSwiZGlzIjp7ImZpbGVuYW1lIjoiaW52ZXN0X3BvbGljeV95b3ptYTMxMDEyMDE2LnhscyIsInR5cGUiOiJhdHRhY2htZW50In0sImF1ZCI6WyJ1cm46c2VydmljZTpmaWxlLmRvd25sb2FkIl0sImV4cCI6MTc5MTI3MTY3OSwianRpIjoiMTYwNjNhYTItOWE0OS00OGZiLTk1YzMtNjBjYjEyMGUxODZhIiwiaWF0IjoxNzkxMjM1Njc5LCJpc3MiOiJ1cm46YXBwOmU2NjYzMGU3MTRmMDQ5MGFhZWExZjE0OWIzYjY5ZTMyIiwic3ViIjoidXJuOmFwcDplNjY2MzBlNzE0ZjA0OTBhYWVhMWYxNDliM2I2OWUzMiJ9.YD7C7o4TTatWO5EhhGDJ7wClp_94HEdloDraeZD72uk",
      "year": null,
      "iframe": false,
      "doc": true,
@@ -2353,7 +2305,7 @@
     },
     {
      "text": "(network file)",
-     "href": "https://download-files.wixmp.com/ugd/5adfdb_8fe8a69d54e04de1a09678fb1eba05e7.xls?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJvYmoiOltbeyJwYXRoIjoiL3VnZC81YWRmZGJfOGZlOGE2OWQ1NGUwNGRlMWEwOTY3OGZiMWViYTA1ZTcueGxzIn1dXSwiZGlzIjp7ImZpbGVuYW1lIjoiaW52ZXN0X3BvbGljeV95b3ptYTMxMDEyMDE2LnhscyIsInR5cGUiOiJhdHRhY2htZW50In0sImF1ZCI6WyJ1cm46c2VydmljZTpmaWxlLmRvd25sb2FkIl0sImV4cCI6MTc5MTIzNjAzNiwianRpIjoiODA5MzVmZjktMmE3ZC00YWM0LTgzYTUtYWU2Y2M5ZjZiZjBlIiwiaWF0IjoxNzkxMjAwMDM2LCJpc3MiOiJ1cm46YXBwOmU2NjYzMGU3MTRmMDQ5MGFhZWExZjE0OWIzYjY5ZTMyIiwic3ViIjoidXJuOmFwcDplNjY2MzBlNzE0ZjA0OTBhYWVhMWYxNDliM2I2OWUzMiJ9.VCdgKBwv86Vn7K5BH6IlcKPRTT903wy0Oc_1sH5kG8M",
+     "href": "https://download-files.wixmp.com/ugd/5adfdb_39e184ab9ff24c18806e1dbda1efa1cc.xls?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJvYmoiOltbeyJwYXRoIjoiL3VnZC81YWRmZGJfMzllMTg0YWI5ZmYyNGMxODgwNmUxZGJkYTFlZmExY2MueGxzIn1dXSwiZGlzIjp7ImZpbGVuYW1lIjoiaW52ZXN0X3BvbGljeV95b3ptYV8xMjAxNy54bHMiLCJ0eXBlIjoiYXR0YWNobWVudCJ9LCJhdWQiOlsidXJuOnNlcnZpY2U6ZmlsZS5kb3dubG9hZCJdLCJleHAiOjE3OTEyNzE2ODAsImp0aSI6IjhkOTc0NGRlLWFmYWYtNDlhMi05NzA0LTM0Nzc4OTQxZmY0NiIsImlhdCI6MTc5MTIzNTY4MCwiaXNzIjoidXJuOmFwcDplNjY2MzBlNzE0ZjA0OTBhYWVhMWYxNDliM2I2OWUzMiIsInN1YiI6InVybjphcHA6ZTY2NjMwZTcxNGYwNDkwYWFlYTFmMTQ5YjNiNjllMzIifQ.iFt_rNdJsitg8oUIja4zVsUoaC7zRAqLEXXzwDT0ejY",
      "year": null,
      "iframe": false,
      "doc": true,
@@ -2361,7 +2313,7 @@
     },
     {
      "text": "(network file)",
-     "href": "https://download-files.wixmp.com/ugd/5adfdb_39e184ab9ff24c18806e1dbda1efa1cc.xls?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJvYmoiOltbeyJwYXRoIjoiL3VnZC81YWRmZGJfMzllMTg0YWI5ZmYyNGMxODgwNmUxZGJkYTFlZmExY2MueGxzIn1dXSwiZGlzIjp7ImZpbGVuYW1lIjoiaW52ZXN0X3BvbGljeV95b3ptYV8xMjAxNy54bHMiLCJ0eXBlIjoiYXR0YWNobWVudCJ9LCJhdWQiOlsidXJuOnNlcnZpY2U6ZmlsZS5kb3dubG9hZCJdLCJleHAiOjE3OTEyMzYwMzcsImp0aSI6Ijc2MWZjNzdmLWMzOWQtNGVjYi05OWE3LTFmMTZjZmRmOWVmNyIsImlhdCI6MTc5MTIwMDAzNywiaXNzIjoidXJuOmFwcDplNjY2MzBlNzE0ZjA0OTBhYWVhMWYxNDliM2I2OWUzMiIsInN1YiI6InVybjphcHA6ZTY2NjMwZTcxNGYwNDkwYWFlYTFmMTQ5YjNiNjllMzIifQ.4o0AdCIX_Nx7g1TAyxHMkwB5LBbuIBqf1bQg1seKrB4",
+     "href": "https://download-files.wixmp.com/ugd/5adfdb_3dc5fc7789e3421c9941923e685881a7.xls?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJvYmoiOltbeyJwYXRoIjoiL3VnZC81YWRmZGJfM2RjNWZjNzc4OWUzNDIxYzk5NDE5MjNlNjg1ODgxYTcueGxzIn1dXSwiZGlzIjp7ImZpbGVuYW1lIjoibWVkaW5pdXRfaGFzaGthYV95b3ptYTIwMTgueGxzIiwidHlwZSI6ImF0dGFjaG1lbnQifSwiYXVkIjpbInVybjpzZXJ2aWNlOmZpbGUuZG93bmxvYWQiXSwiZXhwIjoxNzkxMjcxNjgxLCJqdGkiOiJmNzk0NGI4Zi02ZDY1LTRiOTMtYjJhMS05ZWEwZDVkNzllNzIiLCJpYXQiOjE3OTEyMzU2ODEsImlzcyI6InVybjphcHA6ZTY2NjMwZTcxNGYwNDkwYWFlYTFmMTQ5YjNiNjllMzIiLCJzdWIiOiJ1cm46YXBwOmU2NjYzMGU3MTRmMDQ5MGFhZWExZjE0OWIzYjY5ZTMyIn0.xNduCwBggKEtYll_OCjscbBp1of2ElvNUa3Gk8VkInM",
      "year": null,
      "iframe": false,
      "doc": true,
@@ -2369,111 +2321,7 @@
     },
     {
      "text": "(network file)",
-     "href": "https://download-files.wixmp.com/ugd/5adfdb_3dc5fc7789e3421c9941923e685881a7.xls?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJvYmoiOltbeyJwYXRoIjoiL3VnZC81YWRmZGJfM2RjNWZjNzc4OWUzNDIxYzk5NDE5MjNlNjg1ODgxYTcueGxzIn1dXSwiZGlzIjp7ImZpbGVuYW1lIjoibWVkaW5pdXRfaGFzaGthYV95b3ptYTIwMTgueGxzIiwidHlwZSI6ImF0dGFjaG1lbnQifSwiYXVkIjpbInVybjpzZXJ2aWNlOmZpbGUuZG93bmxvYWQiXSwiZXhwIjoxNzkxMjM2MDM3LCJqdGkiOiJmZjEwOGYwMy0yMTQ1LTQyZWUtOTI0MS1iY2UyZDJhNTUwM2MiLCJpYXQiOjE3OTEyMDAwMzcsImlzcyI6InVybjphcHA6ZTY2NjMwZTcxNGYwNDkwYWFlYTFmMTQ5YjNiNjllMzIiLCJzdWIiOiJ1cm46YXBwOmU2NjYzMGU3MTRmMDQ5MGFhZWExZjE0OWIzYjY5ZTMyIn0.qZXsCavUvYxggfPDb7VUAnPGmYk7aDpF16Esu2cWiuM",
-     "year": null,
-     "iframe": false,
-     "doc": true,
-     "internal": false
-    },
-    {
-     "text": "(network file)",
-     "href": "https://download-files.wixmp.com/ugd/5adfdb_4b0d14c95e6f45b4b06387d4af492ccf.xls?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJvYmoiOltbeyJwYXRoIjoiL3VnZC81YWRmZGJfNGIwZDE0Yzk1ZTZmNDViNGIwNjM4N2Q0YWY0OTJjY2YueGxzIn1dXSwiZGlzIjp7ImZpbGVuYW1lIjoibWVkaW5pdXRfaGFzaGthYV95b3ptYTA1MjAxOC54bHMiLCJ0eXBlIjoiYXR0YWNobWVudCJ9LCJhdWQiOlsidXJuOnNlcnZpY2U6ZmlsZS5kb3dubG9hZCJdLCJleHAiOjE3OTEyMzYwMzcsImp0aSI6ImYwOGU4MWIxLTA1ZDYtNGRkZC1hZmU1LTEzNzM1NGRmNzJmMSIsImlhdCI6MTc5MTIwMDAzNywiaXNzIjoidXJuOmFwcDplNjY2MzBlNzE0ZjA0OTBhYWVhMWYxNDliM2I2OWUzMiIsInN1YiI6InVybjphcHA6ZTY2NjMwZTcxNGYwNDkwYWFlYTFmMTQ5YjNiNjllMzIifQ._occ5EBYxNQ2Z1KPRGievGEp1Zcj4rhj8x6HC_55MpE",
-     "year": null,
-     "iframe": false,
-     "doc": true,
-     "internal": false
-    },
-    {
-     "text": "(network file)",
-     "href": "https://download-files.wixmp.com/ugd/5adfdb_21ec3149915e4d429ab5c1af9438db9f.pdf?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJvYmoiOltbeyJwYXRoIjoiL3VnZC81YWRmZGJfMjFlYzMxNDk5MTVlNGQ0MjlhYjVjMWFmOTQzOGRiOWYucGRmIn1dXSwiZGlzIjp7ImZpbGVuYW1lIjoibWVkaW5pdXRfaGFzaGthYV95b3ptYTIwMTgucGRmIiwidHlwZSI6ImF0dGFjaG1lbnQifSwiYXVkIjpbInVybjpzZXJ2aWNlOmZpbGUuZG93bmxvYWQiXSwiZXhwIjoxNzkxMjM2MDM4LCJqdGkiOiI5MjRkYThhMi1mM2MxLTQ4MmYtOGU5NS05MGU1OGE2ZDg3OTAiLCJpYXQiOjE3OTEyMDAwMzgsImlzcyI6InVybjphcHA6ZTY2NjMwZTcxNGYwNDkwYWFlYTFmMTQ5YjNiNjllMzIiLCJzdWIiOiJ1cm46YXBwOmU2NjYzMGU3MTRmMDQ5MGFhZWExZjE0OWIzYjY5ZTMyIn0.GI7o1s6lcDl9zc5ruM12cs8UfYpPmbniVRGjMoKcGBo",
-     "year": null,
-     "iframe": false,
-     "doc": true,
-     "internal": false
-    },
-    {
-     "text": "(network file)",
-     "href": "https://download-files.wixmp.com/ugd/5adfdb_592ccbb97f364a81ab2a1882413aa290.xls?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJvYmoiOltbeyJwYXRoIjoiL3VnZC81YWRmZGJfNTkyY2NiYjk3ZjM2NGE4MWFiMmExODgyNDEzYWEyOTAueGxzIn1dXSwiZGlzIjp7ImZpbGVuYW1lIjoibWVkaW5pdXRfaGFzaGthYV95b3ptYTAxMjAxOWEueGxzIiwidHlwZSI6ImF0dGFjaG1lbnQifSwiYXVkIjpbInVybjpzZXJ2aWNlOmZpbGUuZG93bmxvYWQiXSwiZXhwIjoxNzkxMjM2MDM5LCJqdGkiOiJmYTJmYWZmOS1mMTIwLTQzNGQtODRjZi03NDM5NWRhYzAzNDciLCJpYXQiOjE3OTEyMDAwMzksImlzcyI6InVybjphcHA6ZTY2NjMwZTcxNGYwNDkwYWFlYTFmMTQ5YjNiNjllMzIiLCJzdWIiOiJ1cm46YXBwOmU2NjYzMGU3MTRmMDQ5MGFhZWExZjE0OWIzYjY5ZTMyIn0.NPTQ8bnNS6HX4n-I1wfccXDCvQ1aY-YQP0sta7R6kIM",
-     "year": null,
-     "iframe": false,
-     "doc": true,
-     "internal": false
-    },
-    {
-     "text": "(network file)",
-     "href": "https://download-files.wixmp.com/ugd/5adfdb_dbd1f29ab75242918ffa99c394c741b1.xls?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJvYmoiOltbeyJwYXRoIjoiL3VnZC81YWRmZGJfZGJkMWYyOWFiNzUyNDI5MThmZmE5OWMzOTRjNzQxYjEueGxzIn1dXSwiZGlzIjp7ImZpbGVuYW1lIjoibWVkaW5pdXRfaGFzaGthYV95b3ptYTAxMjAxOS54bHMiLCJ0eXBlIjoiYXR0YWNobWVudCJ9LCJhdWQiOlsidXJuOnNlcnZpY2U6ZmlsZS5kb3dubG9hZCJdLCJleHAiOjE3OTEyMzYwMzksImp0aSI6IjEyZDg3NzdhLTZjMzMtNGU3My04NDIzLWFmNzFjOGY3NTI1YiIsImlhdCI6MTc5MTIwMDAzOSwiaXNzIjoidXJuOmFwcDplNjY2MzBlNzE0ZjA0OTBhYWVhMWYxNDliM2I2OWUzMiIsInN1YiI6InVybjphcHA6ZTY2NjMwZTcxNGYwNDkwYWFlYTFmMTQ5YjNiNjllMzIifQ.AHZ966C42N7PMluFmJDd45MSuYNnnK0XnKVau5IqtV4",
-     "year": null,
-     "iframe": false,
-     "doc": true,
-     "internal": false
-    },
-    {
-     "text": "(network file)",
-     "href": "https://download-files.wixmp.com/ugd/5adfdb_a90b0ddac98c4a0bb00368b3c20d9cb5.pdf?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJvYmoiOltbeyJwYXRoIjoiL3VnZC81YWRmZGJfYTkwYjBkZGFjOThjNGEwYmIwMDM2OGIzYzIwZDljYjUucGRmIn1dXSwiZGlzIjp7ImZpbGVuYW1lIjoiaGF0emhhcmFfYWxfbWVkaW5pdXRfaGFzaGthYS5wZGYiLCJ0eXBlIjoiYXR0YWNobWVudCJ9LCJhdWQiOlsidXJuOnNlcnZpY2U6ZmlsZS5kb3dubG9hZCJdLCJleHAiOjE3OTEyMzYwNDAsImp0aSI6IjRjZmNhNDIyLTUxYzYtNGMzOC05NDA2LTEwZTA4ZmZmYTYxNCIsImlhdCI6MTc5MTIwMDA0MCwiaXNzIjoidXJuOmFwcDplNjY2MzBlNzE0ZjA0OTBhYWVhMWYxNDliM2I2OWUzMiIsInN1YiI6InVybjphcHA6ZTY2NjMwZTcxNGYwNDkwYWFlYTFmMTQ5YjNiNjllMzIifQ.hMwWqPGwxbVpdm1FwhzW_1Ss5mz4yAUiH9bYPUr6WTM",
-     "year": null,
-     "iframe": false,
-     "doc": true,
-     "internal": false
-    },
-    {
-     "text": "(network file)",
-     "href": "https://download-files.wixmp.com/ugd/5adfdb_66603881e43540449ee370a4e5f28890.xls?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJvYmoiOltbeyJwYXRoIjoiL3VnZC81YWRmZGJfNjY2MDM4ODFlNDM1NDA0NDllZTM3MGE0ZTVmMjg4OTAueGxzIn1dXSwiZGlzIjp7ImZpbGVuYW1lIjoibWVkaW5pdXRfaGFzaGthYV95b3ptYTAxMjAyMC54bHMiLCJ0eXBlIjoiYXR0YWNobWVudCJ9LCJhdWQiOlsidXJuOnNlcnZpY2U6ZmlsZS5kb3dubG9hZCJdLCJleHAiOjE3OTEyMzYwNDAsImp0aSI6ImJjZjFiZjE1LWFjODEtNDY1Mi1iYzI4LTIxYmRjZGUyMGVhMiIsImlhdCI6MTc5MTIwMDA0MCwiaXNzIjoidXJuOmFwcDplNjY2MzBlNzE0ZjA0OTBhYWVhMWYxNDliM2I2OWUzMiIsInN1YiI6InVybjphcHA6ZTY2NjMwZTcxNGYwNDkwYWFlYTFmMTQ5YjNiNjllMzIifQ.wGS2Ma6vhiCSmEHH3ogfK02fO5UoGh69w83qotxIU9o",
-     "year": null,
-     "iframe": false,
-     "doc": true,
-     "internal": false
-    },
-    {
-     "text": "(network file)",
-     "href": "https://download-files.wixmp.com/ugd/5adfdb_f1d86e7665d142e29303d4e4ee192b59.xls?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJvYmoiOltbeyJwYXRoIjoiL3VnZC81YWRmZGJfZjFkODZlNzY2NWQxNDJlMjkzMDNkNGU0ZWUxOTJiNTkueGxzIn1dXSwiZGlzIjp7ImZpbGVuYW1lIjoiaGF0emhhcmFfeW96bWEueGxzIiwidHlwZSI6ImF0dGFjaG1lbnQifSwiYXVkIjpbInVybjpzZXJ2aWNlOmZpbGUuZG93bmxvYWQiXSwiZXhwIjoxNzkxMjM2MDQxLCJqdGkiOiJhZTcxNGI0MC01YThjLTQwZjItODk3NS0yMjEzOGUyMjk2NTAiLCJpYXQiOjE3OTEyMDAwNDEsImlzcyI6InVybjphcHA6ZTY2NjMwZTcxNGYwNDkwYWFlYTFmMTQ5YjNiNjllMzIiLCJzdWIiOiJ1cm46YXBwOmU2NjYzMGU3MTRmMDQ5MGFhZWExZjE0OWIzYjY5ZTMyIn0.iwOSPaWTf7YhXfsKFpb2SDRp1C4sUjOwhciPHWGNXv0",
-     "year": null,
-     "iframe": false,
-     "doc": true,
-     "internal": false
-    },
-    {
-     "text": "(network file)",
-     "href": "https://download-files.wixmp.com/ugd/5adfdb_4671723615f945398353fcbb3fdc4f6d.pdf?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJvYmoiOltbeyJwYXRoIjoiL3VnZC81YWRmZGJfNDY3MTcyMzYxNWY5NDUzOTgzNTNmY2JiM2ZkYzRmNmQucGRmIn1dXSwiZGlzIjp7ImZpbGVuYW1lIjoiZXNnX211bmdhc2gxMTIwLnBkZiIsInR5cGUiOiJhdHRhY2htZW50In0sImF1ZCI6WyJ1cm46c2VydmljZTpmaWxlLmRvd25sb2FkIl0sImV4cCI6MTc5MTIzNjA0MSwianRpIjoiYTQ2OGIzOWEtZGM3ZS00MTgyLTkyOWEtMDE1YjE0NGQ5YWQ4IiwiaWF0IjoxNzkxMjAwMDQxLCJpc3MiOiJ1cm46YXBwOmU2NjYzMGU3MTRmMDQ5MGFhZWExZjE0OWIzYjY5ZTMyIiwic3ViIjoidXJuOmFwcDplNjY2MzBlNzE0ZjA0OTBhYWVhMWYxNDliM2I2OWUzMiJ9.2b4fyW3pmvbN44ZppnQECkD2bA_aCqjbFyYSENFqYUQ",
-     "year": null,
-     "iframe": false,
-     "doc": true,
-     "internal": false
-    },
-    {
-     "text": "(network file)",
-     "href": "https://download-files.wixmp.com/ugd/5adfdb_83ce33a63e5b4054b19341ac5eaea23b.xlsx?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJvYmoiOltbeyJwYXRoIjoiL3VnZC81YWRmZGJfODNjZTMzYTYzZTViNDA1NGIxOTM0MWFjNWVhZWEyM2IueGxzeCJ9XV0sImRpcyI6eyJmaWxlbmFtZSI6ImhhdHphcmF0LXlvem1hLTEyMDIxLnhsc3giLCJ0eXBlIjoiYXR0YWNobWVudCJ9LCJhdWQiOlsidXJuOnNlcnZpY2U6ZmlsZS5kb3dubG9hZCJdLCJleHAiOjE3OTEyMzYwNDIsImp0aSI6IjkwZTRlMWEzLTNkMzgtNGIyYS1iMDVhLWM2ZGIyZjZmN2YyMyIsImlhdCI6MTc5MTIwMDA0MiwiaXNzIjoidXJuOmFwcDplNjY2MzBlNzE0ZjA0OTBhYWVhMWYxNDliM2I2OWUzMiIsInN1YiI6InVybjphcHA6ZTY2NjMwZTcxNGYwNDkwYWFlYTFmMTQ5YjNiNjllMzIifQ.hAXvj100OBRHfz2G5DFwVPpM2zyI2BdNif2PsdB51tA",
-     "year": null,
-     "iframe": false,
-     "doc": true,
-     "internal": false
-    },
-    {
-     "text": "(network file)",
-     "href": "https://download-files.wixmp.com/ugd/5adfdb_fa60ef215a15407995999a7f3d58cf16.pdf?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJvYmoiOltbeyJwYXRoIjoiL3VnZC81YWRmZGJfZmE2MGVmMjE1YTE1NDA3OTk1OTk5YTdmM2Q1OGNmMTYucGRmIn1dXSwiZGlzIjp7ImZpbGVuYW1lIjoiaG9kYWEtYWwtc2hpbnVpLWhhdHphcmF0LW1lZGluaXV0LWhhc2hrYW90LXR6ZnV5YS1sZXNobmF0LTIwMjEteW96bWEtbXVuZ2FzaC5wZGYiLCJ0eXBlIjoiYXR0YWNobWVudCJ9LCJhdWQiOlsidXJuOnNlcnZpY2U6ZmlsZS5kb3dubG9hZCJdLCJleHAiOjE3OTEyMzYwNDMsImp0aSI6IjAwZjJjMzA2LTMwMTgtNDBiNy04NWIyLTEzM2NhNjY2OTk2NiIsImlhdCI6MTc5MTIwMDA0MywiaXNzIjoidXJuOmFwcDplNjY2MzBlNzE0ZjA0OTBhYWVhMWYxNDliM2I2OWUzMiIsInN1YiI6InVybjphcHA6ZTY2NjMwZTcxNGYwNDkwYWFlYTFmMTQ5YjNiNjllMzIifQ.ZknDduMKIHwhAzOw1eDN_1T61ebkMyfC1_52RRnasus",
-     "year": null,
-     "iframe": false,
-     "doc": true,
-     "internal": false
-    },
-    {
-     "text": "(network file)",
-     "href": "https://download-files.wixmp.com/ugd/5adfdb_f2abb670c97f4b7094b4edcda977ec41.xlsx?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJvYmoiOltbeyJwYXRoIjoiL3VnZC81YWRmZGJfZjJhYmI2NzBjOTdmNGI3MDk0YjRlZGNkYTk3N2VjNDEueGxzeCJ9XV0sImRpcyI6eyJmaWxlbmFtZSI6ImhhdHphcmF0LXlvem1hLTExMjAyMS54bHN4IiwidHlwZSI6ImF0dGFjaG1lbnQifSwiYXVkIjpbInVybjpzZXJ2aWNlOmZpbGUuZG93bmxvYWQiXSwiZXhwIjoxNzkxMjM2MDQzLCJqdGkiOiIwYTRkYmQ4MS1mNTlhLTQ1OGItOGU0Ny0wOWViNjRlOGYxN2IiLCJpYXQiOjE3OTEyMDAwNDMsImlzcyI6InVybjphcHA6ZTY2NjMwZTcxNGYwNDkwYWFlYTFmMTQ5YjNiNjllMzIiLCJzdWIiOiJ1cm46YXBwOmU2NjYzMGU3MTRmMDQ5MGFhZWExZjE0OWIzYjY5ZTMyIn0.XmqEpSCFRk3yP-igRiLLXAiM900j32jQgZDURBqnRhI",
-     "year": null,
-     "iframe": false,
-     "doc": true,
-     "internal": false
-    },
-    {
-     "text": "(network file)",
-     "href": "https://download-files.wixmp.com/ugd/5adfdb_81d836d2c4ac486f94719f2eb0b42be7.xlsx?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJvYmoiOltbeyJwYXRoIjoiL3VnZC81YWRmZGJfODFkODM2ZDJjNGFjNDg2Zjk0NzE5ZjJlYjBiNDJiZTcueGxzeCJ9XV0sImRpcyI6eyJmaWxlbmFtZSI6ImhhdHphcmF0LXlvem1hLTEyMDIyLnhsc3giLCJ0eXBlIjoiYXR0YWNobWVudCJ9LCJhdWQiOlsidXJuOnNlcnZpY2U6ZmlsZS5kb3dubG9hZCJdLCJleHAiOjE3OTEyMzYwNDQsImp0aSI6IjIyNWM2M2UzLTNiM2EtNDAzNS05OGI3LTEzMjdiNzNjNTgwYyIsImlhdCI6MTc5MTIwMDA0NCwiaXNzIjoidXJuOmFwcDplNjY2MzBlNzE0ZjA0OTBhYWVhMWYxNDliM2I2OWUzMiIsInN1YiI6InVybjphcHA6ZTY2NjMwZTcxNGYwNDkwYWFlYTFmMTQ5YjNiNjllMzIifQ.TSGTw0MzFo_2oFibtlILMin-tVInYdqO0HQ5zORyrwI",
-     "year": null,
-     "iframe": false,
-     "doc": true,
-     "internal": false
-    },
-    {
-     "text": "(network file)",
-     "href": "https://download-files.wixmp.com/ugd/5adfdb_df3862d2efec4239bc4bf4e2bd48d57d.xlsx?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJvYmoiOltbeyJwYXRoIjoiL3VnZC81YWRmZGJfZGYzODYyZDJlZmVjNDIzOWJjNGJmNGUyYmQ0OGQ1N2QueGxzeCJ9XV0sImRpcyI6eyJmaWxlbmFtZSI6ImhhdHphcmF0LXlvem1hLTEwMjAyMy54bHN4IiwidHlwZSI6ImF0dGFjaG1lbnQifSwiYXVkIjpbInVybjpzZXJ2aWNlOmZpbGUuZG93bmxvYWQiXSwiZXhwIjoxNzkxMjM2MDQ0LCJqdGkiOiIyM2NlYjgxNi1hMTE2LTRmMjktOTI5Mi1iNjU0YWZjM2M4ZTMiLCJpYXQiOjE3OTEyMDAwNDQsImlzcyI6InVybjphcHA6ZTY2NjMwZTcxNGYwNDkwYWFlYTFmMTQ5YjNiNjllMzIiLCJzdWIiOiJ1cm46YXBwOmU2NjYzMGU3MTRmMDQ5MGFhZWExZjE0OWIzYjY5ZTMyIn0.wfYDx6mZpC9CVeAEc6MAi_7rHtRUD7oeARtQdEov2QU",
+     "href": "https://download-files.wixmp.com/ugd/5adfdb_4b0d14c95e6f45b4b06387d4af492ccf.xls?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJvYmoiOltbeyJwYXRoIjoiL3VnZC81YWRmZGJfNGIwZDE0Yzk1ZTZmNDViNGIwNjM4N2Q0YWY0OTJjY2YueGxzIn1dXSwiZGlzIjp7ImZpbGVuYW1lIjoibWVkaW5pdXRfaGFzaGthYV95b3ptYTA1MjAxOC54bHMiLCJ0eXBlIjoiYXR0YWNobWVudCJ9LCJhdWQiOlsidXJuOnNlcnZpY2U6ZmlsZS5kb3dubG9hZCJdLCJleHAiOjE3OTEyNzE2ODEsImp0aSI6IjBlY2JlMWFhLWExMmEtNDQ0ZS1hMzI0LTI5YTU3NGVhZGFkNSIsImlhdCI6MTc5MTIzNTY4MSwiaXNzIjoidXJuOmFwcDplNjY2MzBlNzE0ZjA0OTBhYWVhMWYxNDliM2I2OWUzMiIsInN1YiI6InVybjphcHA6ZTY2NjMwZTcxNGYwNDkwYWFlYTFmMTQ5YjNiNjllMzIifQ.omw9b5XSbCpa9cJ5sIAoLmHYbZAVtXX7BnJOtuCZNTQ",
      "year": null,
      "iframe": false,
      "doc": true,
@@ -2501,7 +2349,7 @@
    "product": "פנסיה+גמל+ביטוח",
    "status": 200,
    "method": "requests",
-   "text_hash": "7cac70139cfea62cc608abcae0ea2b5132f1c89e",
+   "text_hash": "11d2a5a6648eb1114b139832feedf5653586daca",
    "text_head": "מגדל: השקעות, ביטוח, פנסיה, גמל, ופיננסים top of page Close פתח תפריט ניווט כניסה למגדל שלי - Close חסכון אישי והשקעות חסכון פנסיוני ביטוחים תביעות שירותים פעולות אני רוצה לקבל הצעה אונליין ביטוח רכב חסכון פנסיוני ביטח דירה ביטוח נסיעות לחו\"ל התנתקות עברית Close עברית ערבית Pусский English Close Menu Close חיסכון אישי והשקעות ​ ​ חיסכון פנסיוני ​ ​ ביטוחים ​ ​ תביעות ​ ​ שירותים ​ ​ פעולות ​ ​ Menu Close כניסה לפורטלים מעסיקים ועסקים מפתחים- בנקאות פתוחה סוכנים מגדל CONNECT קשרי משקיעים מעסיקים ועסקים מפתחים- בנ\u0000קאות פתוחה סוכנים מגדל CONNECT קשרי משקיעים Menu Close עברית ערבית Pусский English",
    "items": [
     {
@@ -2662,7 +2510,7 @@
    "product": "פנסיה+גמל+ביטוח",
    "status": 200,
    "method": "requests",
-   "text_hash": "5fafab300576d68a3e77530f577a52712cdfa28d",
+   "text_hash": "475bcaf179af2da96596ac6d4443002bd69b658c",
    "text_head": "קופת גמל להשקעה - מגדל top of page Close פתח תפריט ניווט כניסה למגדל שלי - Close חסכון אישי והשקע\u0000ות חסכון פנסיוני ביטוחים תביעות שירותים פעולות אני רוצה לקבל הצעה אונליין ביטוח רכב חסכון פנסיוני ביטח דירה ביטוח נסיעות לחו\"ל התנתקות עברית Close עברית ערבית Pусский English Close Menu Close חיסכון אישי והשקעות ​ ​ חיסכון פנסיוני ​ ​ ביטוחים ​ ​ תביעות ​ ​ שירותים ​ ​ פעולות ​ ​ Menu Close כניסה לפורטלים מעסיקים ועסקים מפתחים- בנקאות פתוחה סוכנים מגדל CONNECT קשרי משקיעים מעסיקים ועסקים מפתחים- בנ\u0000קאות פתוחה סוכנים מגדל CONNECT קשרי משקיעים Menu Close עברית ערבית Pусский English עברית ערבית Pусск",
    "items": [
     {
@@ -2764,14 +2612,6 @@
     {
      "text": "חישוב עלות שנתית צפויה בשל דמי ניהול והוצאות ישירות",
      "href": "https://my.migdal.co.il/pension-funds/support/operating-fees",
-     "year": null,
-     "iframe": false,
-     "doc": false,
-     "internal": true
-    },
-    {
-     "text": "הכירו את \"מגדל גמל להשקעה\" - הדור הבא של קופות הגמל",
-     "href": "https://www.migdal.co.il/articles/migdal-investment-provident-fund",
      "year": null,
      "iframe": false,
      "doc": false,
@@ -3460,7 +3300,7 @@
    "product": "פנסיה+ביטוח",
    "status": 200,
    "method": "requests",
-   "text_hash": "daea301eb9ccd79412ebb572db681cbde8bfc222",
+   "text_hash": "f86f951b4f84c794e99518f4d3a048e5335b62b5",
    "text_head": "קרן פנסיה משלימה של מגדל top of page Close פתח תפריט ניווט כניסה למגדל שלי - Close חסכון אישי והשקע\u0000ות חסכון פנסיוני ביטוחים תביעות שירותים פעולות אני רוצה לקבל הצעה אונליין ביטוח רכב חסכון פנסיוני ביטח דירה ביטוח נסיעות לחו\"ל התנתקות עברית Close עברית ערבית Pусский English Close Menu Close חיסכון אישי והשקעות ​ ​ חיסכון פנסיוני ​ ​ ביטוחים ​ ​ תביעות ​ ​ שירותים ​ ​ פעולות ​ ​ Menu Close כניסה לפורטלים מעסיקים ועסקים מפתחים- בנקאות פתוחה סוכנים מגדל CONNECT קשרי משקיעים מעסיקים ועסקים מפתחים- בנ\u0000קאות פתוחה סוכנים מגדל CONNECT קשרי משקיעים Menu Close עברית ערבית Pусский English עברית ערבית Pус",
    "items": [
     {
@@ -3474,14 +3314,6 @@
     {
      "text": "קרן פנסיה משלימה",
      "href": "https://www.migdal.co.il/product-lobby/upplementary-pension-fund",
-     "year": null,
-     "iframe": false,
-     "doc": false,
-     "internal": true
-    },
-    {
-     "text": "קרן פנסיה לעצמאים",
-     "href": "https://www.migdal.co.il/articles/advantages-for-self-employed",
      "year": null,
      "iframe": false,
      "doc": false,
@@ -3552,22 +3384,6 @@
      "internal": true
     },
     {
-     "text": "פנסיה לעצמאים וחיסכון פנסיוני לעצמאים",
-     "href": "https://www.migdal.co.il/articles/pension-and-savings",
-     "year": null,
-     "iframe": false,
-     "doc": false,
-     "internal": true
-    },
-    {
-     "text": "מקפת אישית או משלימה - איזו קרן פנסיה מתאימה לכם?",
-     "href": "https://www.migdal.co.il/articles/personal-vs-complementary",
-     "year": null,
-     "iframe": false,
-     "doc": false,
-     "internal": true
-    },
-    {
      "text": "מעניין, ספרו לי עוד",
      "href": "https://www.migdal.co.il/regulations/taxation-pension",
      "year": null,
@@ -3586,14 +3402,6 @@
     {
      "text": "מחשבון לקצבת פרישה",
      "href": "https://my.migdal.co.il/pension-funds/support/simultor-prisha",
-     "year": null,
-     "iframe": false,
-     "doc": false,
-     "internal": true
-    },
-    {
-     "text": "מגדל מקפת - אחת מקרנות הפנסיה הגדולות והמובילות בישראל",
-     "href": "https://www.migdal.co.il/articles/makefet",
      "year": null,
      "iframe": false,
      "doc": false,
@@ -3624,56 +3432,8 @@
      "internal": true
     },
     {
-     "text": "טיפים לבחירת קרן פנסיה",
-     "href": "https://www.migdal.co.il/articles/choosing-a-pension-fund-tips",
-     "year": null,
-     "iframe": false,
-     "doc": false,
-     "internal": true
-    },
-    {
      "text": "חישוב עלות שנתית צפויה בשל דמי ניהול והוצאות ישירות",
      "href": "https://my.migdal.co.il/pension-funds/support/operating-fees",
-     "year": null,
-     "iframe": false,
-     "doc": false,
-     "internal": true
-    },
-    {
-     "text": "חיסכון פנסיוני - מה חשוב לך?",
-     "href": "https://www.migdal.co.il/articles/what-is-important-to-you",
-     "year": null,
-     "iframe": false,
-     "doc": false,
-     "internal": true
-    },
-    {
-     "text": "חוק פנסיה חובה לעצמאים - כל מה שחשוב לדעת",
-     "href": "https://www.migdal.co.il/articles/mandatory-pension-law",
-     "year": null,
-     "iframe": false,
-     "doc": false,
-     "internal": true
-    },
-    {
-     "text": "התקבלת לעבודה? אלו הן הזכויות הפנסיוניות שלך",
-     "href": "https://www.migdal.co.il/articles/employees-pension-rights",
-     "year": null,
-     "iframe": false,
-     "doc": false,
-     "internal": true
-    },
-    {
-     "text": "דאגו לעצמכם: פנסיה לעצמאים עם הכנסה לכל החיים",
-     "href": "https://www.migdal.co.il/articles/pension-for-self-employed",
-     "year": null,
-     "iframe": false,
-     "doc": false,
-     "internal": true
-    },
-    {
-     "text": "דאגו לעצמכם לתקופת הפנסיה - הכול על קרן השתלמות לעצמאים",
-     "href": "https://www.migdal.co.il/articles/self-employed",
      "year": null,
      "iframe": false,
      "doc": false,
@@ -3722,14 +3482,6 @@
     {
      "text": "איחוד חשבונות קרנות פנסיה",
      "href": "https://my.migdal.co.il/makefet/pension-funds-consolidation?_gl=1*8jbvub*_gcl_au*OTIzNDY2MTE0LjE3NTA5MTgwNTQ.*_ga*MjAzMTMwMTg2Ni4xNzUwOTE4MDUw*_ga_PK7X7KDXKV*czE3NTA5MTgwNTEkbzEkZzEkdDE3NTA5MjE2MTckajEyJGwwJGgw",
-     "year": null,
-     "iframe": false,
-     "doc": false,
-     "internal": true
-    },
-    {
-     "text": "5 טיפים מנצחים למצטרפים חדשים לקרן פנסיה",
-     "href": "https://www.migdal.co.il/articles/tips-for-beginners-1",
      "year": null,
      "iframe": false,
      "doc": false,
@@ -4050,6 +3802,14 @@
      "internal": true
     },
     {
+     "text": "חישוב תשואות מסלולי השקעה",
+     "href": "https://my.migdal.co.il/pensionary-savings/life-insurance/investment-tracks-yields",
+     "year": null,
+     "iframe": false,
+     "doc": false,
+     "internal": true
+    },
+    {
      "text": "חישוב עלות שנתית צפויה בשל דמי ניהול והוצאות ישירות",
      "href": "https://my.migdal.co.il/pension-funds/support/operating-fees",
      "year": null,
@@ -4090,14 +3850,6 @@
      "internal": true
     },
     {
-     "text": "בדיקת תשואות מסלולי השקעה",
-     "href": "https://my.migdal.co.il/pensionary-savings/life-insurance/investment-tracks-yields",
-     "year": null,
-     "iframe": false,
-     "doc": false,
-     "internal": true
-    },
-    {
      "text": "בדיקת קיומה פוליסה - צד ג'",
      "href": "https://my.migdal.co.il/car-insurance/support/third-party-policy-examination?_gl=1*19qvjhg*_gcl_au*MTE4OTg5ODA4MS4xNzcyMDk1NzYwLjExNDYzMDg4NTguMTc3MzIzMTA4NC4xNzczMjMxMDgz*_ga*MTg0MjEyNDE3MS4xNzcyMDMzNzQz*_ga_PK7X7KDXKV*czE3NzMyMzk5NDckbzM2JGcxJHQxNzczMjQwMDgwJGo4JGwwJGgw",
      "year": null,
@@ -4127,7 +3879,7 @@
    "product": "פנסיה+גמל+ביטוח",
    "status": 200,
    "method": "requests",
-   "text_hash": "e6515a2b98da55e078bf42043adfc5034ac515c5",
+   "text_hash": "df7360e606f60166fc115b14debbdf0bd14bf5d7",
    "text_head": "קופת גמל לעצמאיים של מגדל top of page Close פתח תפריט ניווט כניסה למגדל שלי - Close חסכון אישי והשקע\u0000ות חסכון פנסיוני ביטוחים תביעות שירותים פעולות אני רוצה לקבל הצעה אונליין ביטוח רכב חסכון פנסיוני ביטח דירה ביטוח נסיעות לחו\"ל התנתקות עברית Close עברית ערבית Pусский English Close Menu Close חיסכון אישי והשקעות ​ ​ חיסכון פנסיוני ​ ​ ביטוחים ​ ​ תביעות ​ ​ שירותים ​ ​ פעולות ​ ​ Menu Close כניסה לפורטלים מעסיקים ועסקים מפתחים- בנקאות פתוחה סוכנים מגדל CONNECT קשרי משקיעים מעסיקים ועסקים מפתחים- בנ\u0000קאות פתוחה סוכנים מגדל CONNECT קשרי משקיעים Menu Close עברית ערבית Pусский English עברית ערבית Pу",
    "items": [
     {
@@ -4243,8 +3995,8 @@
      "internal": true
     },
     {
-     "text": "טיפים לבחירת קרן פנסיה",
-     "href": "https://www.migdal.co.il/articles/choosing-a-pension-fund-tips",
+     "text": "חישוב תשואות מסלולי השקעה",
+     "href": "https://my.migdal.co.il/pensionary-savings/life-insurance/investment-tracks-yields",
      "year": null,
      "iframe": false,
      "doc": false,
@@ -4253,14 +4005,6 @@
     {
      "text": "חישוב עלות שנתית צפויה בשל דמי ניהול והוצאות ישירות",
      "href": "https://my.migdal.co.il/pension-funds/support/operating-fees",
-     "year": null,
-     "iframe": false,
-     "doc": false,
-     "internal": true
-    },
-    {
-     "text": "התקבלת לעבודה? אלו הן הזכויות הפנסיוניות שלך",
-     "href": "https://www.migdal.co.il/articles/employees-pension-rights",
      "year": null,
      "iframe": false,
      "doc": false,
@@ -4291,14 +4035,6 @@
      "internal": true
     },
     {
-     "text": "בדיקת תשואות מסלולי השקעה",
-     "href": "https://my.migdal.co.il/pensionary-savings/life-insurance/investment-tracks-yields",
-     "year": null,
-     "iframe": false,
-     "doc": false,
-     "internal": true
-    },
-    {
      "text": "בדיקת קיומה פוליסה - צד ג'",
      "href": "https://my.migdal.co.il/car-insurance/support/third-party-policy-examination?_gl=1*19qvjhg*_gcl_au*MTE4OTg5ODA4MS4xNzcyMDk1NzYwLjExNDYzMDg4NTguMTc3MzIzMTA4NC4xNzczMjMxMDgz*_ga*MTg0MjEyNDE3MS4xNzcyMDMzNzQz*_ga_PK7X7KDXKV*czE3NzMyMzk5NDckbzM2JGcxJHQxNzczMjQwMDgwJGo4JGwwJGgw",
      "year": null,
@@ -4309,14 +4045,6 @@
     {
      "text": "איחוד חשבונות קרנות פנסיה",
      "href": "https://my.migdal.co.il/makefet/pension-funds-consolidation?_gl=1*8jbvub*_gcl_au*OTIzNDY2MTE0LjE3NTA5MTgwNTQ.*_ga*MjAzMTMwMTg2Ni4xNzUwOTE4MDUw*_ga_PK7X7KDXKV*czE3NTA5MTgwNTEkbzEkZzEkdDE3NTA5MjE2MTckajEyJGwwJGgw",
-     "year": null,
-     "iframe": false,
-     "doc": false,
-     "internal": true
-    },
-    {
-     "text": "5 טיפים מנצחים למצטרפים חדשים לקרן פנסיה",
-     "href": "https://www.migdal.co.il/articles/tips-for-beginners-1",
      "year": null,
      "iframe": false,
      "doc": false,
@@ -4349,7 +4077,7 @@
    "text_head": "בקשה לפרישה דלג לתוכן דברו איתנו בטלפון 0768866215 שעות פעילות בימים א'-ה' 08:00-19:00 אפשר גם בוואטסאפ רוצה לבדוק כמה תהיה הקצבה שלך? לפניך סימולטור שבאמצעותו אפשר לדעת מה יהיה גובה קצבת הפרישה החודשית הצפויה לך בהתאם לנתונים שבחרת. לאחר קבלת תוצאות חישוב הקצבה, אפשר לעבור לתהליך דיגיטלי לבקשת הקצבה בפועל. נשמח ללוות אותך צעד אחר צעד. דברו איתנו בטלפון 0768866215 שעות פעילות בימים א'-ה' 08:00-19:00 אפשר גם בוואטסאפ",
    "items": [
     {
-     "text": "דברו איתנו בטלפון 0768866215 שעות פעילות בימים א'-ה' 08:00-19:00 אפשר גם בוואטסאפ",
+     "text": "דלג לתוכן",
      "href": "https://my.migdal.co.il/mymigdal/onlinepurchase/retirementpensionsimulation",
      "year": null,
      "iframe": false,
@@ -4795,32 +4523,8 @@
      "internal": true
     },
     {
-     "text": "קשרי משקיעים",
-     "href": "https://my.migdal.co.il/investors-relations",
-     "year": null,
-     "iframe": false,
-     "doc": false,
-     "internal": true
-    },
-    {
-     "text": "קרן פנסיה משלימה",
-     "href": "https://www.migdal.co.il/product-lobby/upplementary-pension-fund",
-     "year": null,
-     "iframe": false,
-     "doc": false,
-     "internal": true
-    },
-    {
      "text": "קרן פנסיה לעצמאים",
      "href": "https://www.migdal.co.il/product-lobby/pension-fund-self-employed",
-     "year": null,
-     "iframe": false,
-     "doc": false,
-     "internal": true
-    },
-    {
-     "text": "קרן פנסיה אישית",
-     "href": "https://www.migdal.co.il/product-lobby/pensionary-savings",
      "year": null,
      "iframe": false,
      "doc": false,
@@ -4883,6 +4587,22 @@
      "internal": true
     },
     {
+     "text": "פנסיה משלימה",
+     "href": "https://www.migdal.co.il/product-lobby/upplementary-pension-fund",
+     "year": null,
+     "iframe": false,
+     "doc": false,
+     "internal": true
+    },
+    {
+     "text": "פנסיה אישית",
+     "href": "https://www.migdal.co.il/product-lobby/pensionary-savings",
+     "year": null,
+     "iframe": false,
+     "doc": false,
+     "internal": true
+    },
+    {
      "text": "פדיון פנסיה",
      "href": "https://my.migdal.co.il/mymigdal/process/pensionredemption",
      "year": null,
@@ -4891,7 +4611,15 @@
      "internal": true
     },
     {
-     "text": "מניית מגדל",
+     "text": "מנהלים לשכירים",
+     "href": "https://www.migdal.co.il/product-lobby/personal-pension-complementary",
+     "year": null,
+     "iframe": false,
+     "doc": false,
+     "internal": true
+    },
+    {
+     "text": "מידע על המניה",
      "href": "https://my.migdal.co.il/investors-relations/stock-info",
      "year": null,
      "iframe": false,
@@ -4939,7 +4667,7 @@
      "internal": true
     },
     {
-     "text": "חסכון פנסיוני קרנות פנסיה פנסיה אישית פנסיה משלימה פרישה לפנסיה מגדל סניוריטי קופות גמל קופת גמל לשכירים קופת גמל לעצמאים קופת גמל להשקעה ביטוח מנהלים מנהלים לשכירים מנהלים לעצמאים פעולות מהירות צפייה צפייה בדוחות שלי",
+     "text": "חסכון אישי והשקעות תוכניות חיסכון והשקעה קופת גמל להשקעה מגדל קשת לפרט חיסכון לכל ילד קרן השתלמות השקעות חטיבת ההשקעות שלנו פעולות מהירות צפייה בדוחות שלי שינוי מסלול השקעה כל הדרכים להפקיד כספים משיכ צפייה בדוחות שלי",
      "href": "https://my.migdal.co.il/mymigdal/info/approvals",
      "year": null,
      "iframe": false,
@@ -4979,6 +4707,14 @@
      "internal": true
     },
     {
+     "text": "היבטי אחריות תאגידית במגדל",
+     "href": "https://my.migdal.co.il/investors-relations/corporate-responsibility",
+     "year": null,
+     "iframe": false,
+     "doc": false,
+     "internal": true
+    },
+    {
      "text": "הודעות לעיתונות",
      "href": "https://my.migdal.co.il/investors-relations/press-releases",
      "year": null,
@@ -4989,6 +4725,14 @@
     {
      "text": "הגשת תביעה- בריאות, פנסיה וחיים",
      "href": "https://my.migdal.co.il/mymigdal/lobbyclaims/",
+     "year": null,
+     "iframe": false,
+     "doc": false,
+     "internal": true
+    },
+    {
+     "text": "דלג לתוכן",
+     "href": "https://my.migdal.co.il/investors-relations",
      "year": null,
      "iframe": false,
      "doc": false,
@@ -5027,14 +4771,6 @@
      "internal": true
     },
     {
-     "text": "ביטוח מנהלים לשכירים",
-     "href": "https://www.migdal.co.il/product-lobby/personal-pension-complementary",
-     "year": null,
-     "iframe": false,
-     "doc": false,
-     "internal": true
-    },
-    {
      "text": "בדיקת קיומה פוליסה - צד ג'",
      "href": "https://my.migdal.co.il/car-insurance/support/third-party-policy-examination?_gl=1*19qvjhg*_gcl_au*MTE4OTg5ODA4MS4xNzcyMDk1NzYwLjExNDYzMDg4NTguMTc3MzIzMTA4NC4xNzczMjMxMDgz*_ga*MTg0MjEyNDE3MS4xNzcyMDMzNzQz*_ga_PK7X7KDXKV*czE3NzMyMzk5NDckbzM2JGcxJHQxNzczMjQwMDgwJGo4JGwwJGgw",
      "year": null,
@@ -5053,14 +4789,6 @@
     {
      "text": "איחוד חשבונות קרנות פנסיה",
      "href": "https://my.migdal.co.il/makefet/pension-funds-consolidation?_gl=1*8jbvub*_gcl_au*OTIzNDY2MTE0LjE3NTA5MTgwNTQ.*_ga*MjAzMTMwMTg2Ni4xNzUwOTE4MDUw*_ga_PK7X7KDXKV*czE3NTA5MTgwNTEkbzEkZzEkdDE3NTA5MjE2MTckajEyJGwwJGgw",
-     "year": null,
-     "iframe": false,
-     "doc": false,
-     "internal": true
-    },
-    {
-     "text": "אחריות תאגידית",
-     "href": "https://my.migdal.co.il/investors-relations/corporate-responsibility",
      "year": null,
      "iframe": false,
      "doc": false,
@@ -5369,7 +5097,7 @@
    "product": "פנסיה+גמל+ביטוח",
    "status": 200,
    "method": "requests",
-   "text_hash": "971a223cf01d5e36260f5fc6260991293c780788",
+   "text_hash": "39286f250ea19ec359f4733f879e15a87395f932",
    "text_head": "קופת גמל למעסיקים של מגדל top of page Close פתח תפריט ניווט כניסה למגדל שלי - Close חסכון אישי והשקע\u0000ות חסכון פנסיוני ביטוחים תביעות שירותים פעולות אני רוצה לקבל הצעה אונליין ביטוח רכב חסכון פנסיוני ביטח דירה ביטוח נסיעות לחו\"ל התנתקות עברית Close עברית ערבית Pусский English Close Menu Close חיסכון אישי והשקעות ​ ​ חיסכון פנסיוני ​ ​ ביטוחים ​ ​ תביעות ​ ​ שירותים ​ ​ פעולות ​ ​ Menu Close כניסה לפורטלים מעסיקים ועסקים מפתחים- בנקאות פתוחה סוכנים מגדל CONNECT קשרי משקיעים מעסיקים ועסקים מפתחים- בנ\u0000קאות פתוחה סוכנים מגדל CONNECT קשרי משקיעים Menu Close עברית ערבית Pусский English עברית ערבית Pу",
    "items": [
     {
@@ -5493,8 +5221,8 @@
      "internal": true
     },
     {
-     "text": "טיפים לבחירת קרן פנסיה",
-     "href": "https://www.migdal.co.il/articles/choosing-a-pension-fund-tips",
+     "text": "חישוב תשואות מסלולי השקעה",
+     "href": "https://my.migdal.co.il/pensionary-savings/life-insurance/investment-tracks-yields",
      "year": null,
      "iframe": false,
      "doc": false,
@@ -5503,14 +5231,6 @@
     {
      "text": "חישוב עלות שנתית צפויה בשל דמי ניהול והוצאות ישירות",
      "href": "https://my.migdal.co.il/pension-funds/support/operating-fees",
-     "year": null,
-     "iframe": false,
-     "doc": false,
-     "internal": true
-    },
-    {
-     "text": "התקבלת לעבודה? אלו הן הזכויות הפנסיוניות שלך",
-     "href": "https://www.migdal.co.il/articles/employees-pension-rights",
      "year": null,
      "iframe": false,
      "doc": false,
@@ -5541,14 +5261,6 @@
      "internal": true
     },
     {
-     "text": "בדיקת תשואות מסלולי השקעה",
-     "href": "https://my.migdal.co.il/pensionary-savings/life-insurance/investment-tracks-yields",
-     "year": null,
-     "iframe": false,
-     "doc": false,
-     "internal": true
-    },
-    {
      "text": "בדיקת קיומה פוליסה - צד ג'",
      "href": "https://my.migdal.co.il/car-insurance/support/third-party-policy-examination?_gl=1*19qvjhg*_gcl_au*MTE4OTg5ODA4MS4xNzcyMDk1NzYwLjExNDYzMDg4NTguMTc3MzIzMTA4NC4xNzczMjMxMDgz*_ga*MTg0MjEyNDE3MS4xNzcyMDMzNzQz*_ga_PK7X7KDXKV*czE3NzMyMzk5NDckbzM2JGcxJHQxNzczMjQwMDgwJGo4JGwwJGgw",
      "year": null,
@@ -5563,14 +5275,6 @@
      "iframe": false,
      "doc": false,
      "internal": true
-    },
-    {
-     "text": "5 טיפים מנצחים למצטרפים חדשים לקרן פנסיה",
-     "href": "https://www.migdal.co.il/articles/tips-for-beginners-1",
-     "year": null,
-     "iframe": false,
-     "doc": false,
-     "internal": true
     }
    ]
   },
@@ -5578,20 +5282,12 @@
    "product": "פנסיה+ביטוח",
    "status": 200,
    "method": "requests",
-   "text_hash": "db4320c1375d08169e9b6ebbd368888949e6af32",
+   "text_hash": "fa757977ef587f6fc15e1c1f78f983fc696c577b",
    "text_head": "חיסכון אישי - קשת לפרט - מגדל top of page Close פתח תפריט ניווט כניסה למגדל שלי - Close חסכון אישי והשקע\u0000ות חסכון פנסיוני ביטוחים תביעות שירותים פעולות אני רוצה לקבל הצעה אונליין ביטוח רכב חסכון פנסיוני ביטח דירה ביטוח נסיעות לחו\"ל התנתקות עברית Close עברית ערבית Pусский English Close Menu Close חיסכון אישי והשקעות ​ ​ חיסכון פנסיוני ​ ​ ביטוחים ​ ​ תביעות ​ ​ שירותים ​ ​ פעולות ​ ​ Menu Close כניסה לפורטלים מעסיקים ועסקים מפתחים- בנקאות פתוחה סוכנים מגדל CONNECT קשרי משקיעים מעסיקים ועסקים מפתחים- בנ\u0000קאות פתוחה סוכנים מגדל CONNECT קשרי משקיעים Menu Close עברית ערבית Pусский English עברית ערבי",
    "items": [
     {
      "text": "קשרי משקיעים",
      "href": "https://my.migdal.co.il/investors-relations",
-     "year": null,
-     "iframe": false,
-     "doc": false,
-     "internal": true
-    },
-    {
-     "text": "קרן פנסיה: כל מה שרציתם לדעת על דוח הפנסיה השנתי שלכם",
-     "href": "https://www.migdal.co.il/articles/annual-report",
      "year": null,
      "iframe": false,
      "doc": false,
@@ -5616,14 +5312,6 @@
     {
      "text": "קרן פנסיה אישית",
      "href": "https://www.migdal.co.il/product-lobby/pensionary-savings",
-     "year": null,
-     "iframe": false,
-     "doc": false,
-     "internal": true
-    },
-    {
-     "text": "קרן פנסיה - העתיד שלך בידיים שלך",
-     "href": "https://www.migdal.co.il/articles/cotrol-the-future",
      "year": null,
      "iframe": false,
      "doc": false,
@@ -5696,14 +5384,6 @@
     {
      "text": "חישוב עלות שנתית צפויה בשל דמי ניהול והוצאות ישירות",
      "href": "https://my.migdal.co.il/pension-funds/support/operating-fees",
-     "year": null,
-     "iframe": false,
-     "doc": false,
-     "internal": true
-    },
-    {
-     "text": "הכירו את \"מגדל גמל להשקעה\" - הדור הבא של קופות הגמל",
-     "href": "https://www.migdal.co.il/articles/migdal-investment-provident-fund",
      "year": null,
      "iframe": false,
      "doc": false,
@@ -6194,7 +5874,7 @@
      "internal": true
     },
     {
-     "text": "× \"בלחיצה על כפתור \"חזרו אלי\" את.ה מאשר.ת ומסכים.ה כי: (1) המידע שנמסר על ידך יישמר במאגרי המידע ויעשה בו שימוש בהתאם למדיניות הפרטיות ותנאי השימוש שלנו; (2) המידע שנמסר על ידך יועבר לסוכן הביטוח שלך ×",
+     "text": "דלג לתוכן",
      "href": "https://my.migdal.co.il/online/pension-funds",
      "year": null,
      "iframe": false,
@@ -6742,14 +6422,6 @@
      "internal": true
     },
     {
-     "text": "קרן השתלמות",
-     "href": "https://www.migdal.co.il/product-lobby/employees-or-self-employed",
-     "year": null,
-     "iframe": false,
-     "doc": false,
-     "internal": true
-    },
-    {
      "text": "קופת גמל לשכירים",
      "href": "https://www.migdal.co.il/product-lobby/provident-funds",
      "year": null,
@@ -6776,6 +6448,14 @@
     {
      "text": "קופת גמל להשקעה",
      "href": "https://www.migdal.co.il/product-lobby/personal-savings",
+     "year": null,
+     "iframe": false,
+     "doc": false,
+     "internal": true
+    },
+    {
+     "text": "למידע נוסף על קרנות השתלמות >",
+     "href": "https://www.migdal.co.il/product-lobby/employees-or-self-employed",
      "year": null,
      "iframe": false,
      "doc": false,
@@ -7058,14 +6738,6 @@
     },
     {
      "text": "קופת גמל לשכירים",
-     "href": "https://www.migdal.co.il/product-lobby/provident-funds",
-     "year": null,
-     "iframe": false,
-     "doc": false,
-     "internal": true
-    },
-    {
-     "text": "קופת גמל לשכירים",
      "href": "https://my.migdal.co.il/onlinepurchase/provident-fund-for-employees",
      "year": null,
      "iframe": false,
@@ -7099,6 +6771,14 @@
     {
      "text": "קופת גמל להשקעה",
      "href": "https://www.migdal.co.il/product-lobby/personal-savings",
+     "year": null,
+     "iframe": false,
+     "doc": false,
+     "internal": true
+    },
+    {
+     "text": "קופות גמל",
+     "href": "https://www.migdal.co.il/product-lobby/provident-funds",
      "year": null,
      "iframe": false,
      "doc": false,
