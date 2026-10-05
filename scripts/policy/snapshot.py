@@ -140,6 +140,59 @@ def json_file_labels(body):
     return out
 
 
+def html_json_labels(html):
+    """{שם קובץ: כותרת} לקבצים שנמצאים בנתוני JSON שמוטמעים בעמוד (Next.js __NEXT_DATA__ / self.__next_f, מנורה):
+    האובייקט {...} הקרוב שמחזיק את הנתיב, ושדות הטקסט הקצרים שבו - כמו json_file_labels, בלי לפענח את כל העמוד
+    (ה-payload של __next_f הוא מחרוזות JS ולא JSON תקין)."""
+    h = html.replace('\\\\"', '"').replace('\\"', '"').replace("\\/", "/")
+    h = re.sub(r"\\u0026", "&", h.replace("&amp;", "&").replace("&quot;", '"'), flags=re.I)
+    out = {}
+
+    def enclosing(a, b):
+        """גבולות האובייקט {...} שמכיל את h[a:b], או None."""
+        depth, i = 0, a
+        while i > max(0, a - 4000):
+            i -= 1
+            if h[i] == "}":
+                depth += 1
+            elif h[i] == "{":
+                if depth == 0:
+                    break
+                depth -= 1
+        else:
+            return None
+        depth, j = 0, b
+        while j < min(len(h), b + 4000):
+            if h[j] == "{":
+                depth += 1
+            elif h[j] == "}":
+                if depth == 0:
+                    return i, j + 1
+                depth -= 1
+            j += 1
+        return None
+
+    for m in re.finditer(r"""[^"'\s<>]+?\.(?:xlsx|xls|pdf|docx)(?![\w])""", h, re.I):
+        name = unquote(m.group(0)).split("?")[0].rsplit("/", 1)[-1]
+        if name in out:
+            continue
+        span = (m.start(), m.end())
+        for _ in range(3):  # הנתיב בתת-אובייקט ({"file": {"url": ...}, "title": ...}) - עולים עד שתי רמות
+            span = enclosing(*span)
+            if not span:
+                break
+            obj = h[span[0] + 1:span[1] - 1]
+            while re.search(r"\{[^{}]*\}", obj):
+                obj = re.sub(r"\{[^{}]*\}", "", obj)
+            vals = re.findall(r'"[\w$-]+"\s*:\s*"([^"\n]{3,200})"', obj)
+            lab = [v.strip() for v in vals if not re.search(r"\.(xlsx|xls|pdf|docx)(\?|$)", v, re.I)
+                   and not re.match(r"^(https?:|/|\$|[\w-]{20,}$)", v.strip()) and re.search(r"[א-ת]|\d{4}", v)]
+            if lab:
+                out[name] = " ".join(dict.fromkeys(lab))[:200]
+                break
+    return out
+
+
 def html_files(html):
     """נתיבי קבצים ב-HTML/סקריפטים, בלי כפילויות (עמוד מנורה מחזיק >300 התאמות כפולות)."""
     html = re.sub(r"\\u0026", "&", html.replace("&amp;", "&").replace("\\/", "/"), flags=re.I)
@@ -399,7 +452,9 @@ def fetch_browser(pw, url, click_texts=None):
                 pass
         anchors += [x for x in net if (x["href"], x["text"]) not in seen]
         try:  # נתיבי קבצים בתוך ה-HTML/סקריפטים (Next.js __NEXT_DATA__ ודומיו)
-            found = html_files(pg.content())
+            html = pg.content()
+            found = html_files(html)
+            jlabels = html_json_labels(html) if found and len(html) < 5_000_000 else {}
             # הטקסט סביב הקובץ בעמוד (שורה/כרטיס של האלמנט שמחזיק את הנתיב באחת מתכונותיו) - מה שהמשתמש רואה
             names = [unquote(m.rsplit("/", 1)[-1]) for m in found]
             ctxs = pg.evaluate("""names => names.map(n => {
@@ -416,7 +471,7 @@ def fetch_browser(pw, url, click_texts=None):
             })""", names) if found else []
             for m, c in zip(found, ctxs):
                 # & בשם הקובץ (מנורה "...-s&p500-14316.xlsx"): ב-HTML &amp;, ב-JSON של Next.js \u0026
-                anchors.append({"href": urljoin(url, m), "text": c or "(html)"})
+                anchors.append({"href": urljoin(url, m), "text": c or jlabels.get(unquote(m).split("?")[0].rsplit("/", 1)[-1]) or "(html)"})
         except Exception:
             pass
         text = pg.inner_text("body")
