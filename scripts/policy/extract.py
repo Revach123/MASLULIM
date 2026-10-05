@@ -503,6 +503,18 @@ def parse_columns_blocks(rows, sheet=""):
     return out
 
 
+_GEM = dict(zip("אבגדהוזחטיכלמנסעפצקרשת", [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 20, 30, 40, 50, 60, 70, 80, 90, 100, 200, 300, 400]))
+
+
+def heb_year(t):
+    """שנה עברית בכותרת -> לועזית ('לשנת תשפ"ו' -> 'לשנת 2026'): קרנות המורים כותבות תשפ"ה | תשפ"ו בשתי עמודות.
+    תשפ"ו = 5786 = ספט' 2025 עד אוג' 2026 -> 2026 (השנה שבה מסתיימת, כמו שנת המדיניות שלהן)."""
+    def rep(m):
+        v = sum(_GEM[ch] for ch in m.group(0) if ch in _GEM)
+        return str(5000 + v - 3760) if 700 <= v < 900 else m.group(0)
+    return re.sub(r"(?<![א-ת])ת[ש-ת][א-ת]?[\"״][א-ת](?![א-ת])", rep, t) if "ת" in t else t
+
+
 def parse_titled_tables(rows, sheet=""):
     """מבנה כללי 'שורת כותרת + שורה לאפיק' (הפניקס/רעות/האוניברסיטה/כלל/ארם...): תא 'אפיק (ה)השקעה' בכל עמודה,
     עמודות לפי טקסט הכותרת. גבולות: טקסט '38%-50%', או שני מספרים אחרי 'גבולות' (בכל סדר), או עמודות מינימום/מקסימום.
@@ -533,12 +545,15 @@ def parse_titled_tables(rows, sheet=""):
             for c, t in enumerate(nx):
                 if t and c < len(row) and row[c]:
                     row[c] = f"{row[c]} {t}"
-        cols = {}
+        raw_row, row = row, [heb_year(t) for t in row]  # השנה העברית רק לבחירת העמודות; שנת המדיניות - כמו קודם (raw_row)
+        cols, bounds_cands = {}, []
         pol_years = sorted(int(m.group(1)) for t in row for m in [re.search(r"^מדיניות\s*(20\d\d)", t)] if m)
         for c, t in enumerate(row):
             if c <= lc or not t:
                 continue
             py = re.search(r"^מדיניות\s*(20\d\d)", t)
+            if "גבולות" in t:
+                bounds_cands.append(c)
             if "גבולות" in t and "bounds" not in cols:
                 cols["bounds"] = c
             elif "גבולות" in t and re.search(r"20\d\d", t) and re.search(r"20\d\d", row[cols["bounds"]]) \
@@ -550,7 +565,10 @@ def parse_titled_tables(rows, sheet=""):
                 cols["max"] = c
             elif py and len(pol_years) > 1:  # "מדיניות 2025" | "מדיניות 2026" (הפניקס 2026)
                 cols["expected" if int(py.group(1)) == pol_years[-1] else "current"] = c
-            elif ("צפוי" in t or py) and "expected" not in cols:
+            elif ("צפוי" in t or "מוצהר" in t or py) and ("expected" not in cols or (
+                    "מוצהר" in row[cols["expected"]] + t and re.search(r"(20\d\d)", t) and re.search(r"(20\d\d)", row[cols["expected"]])
+                    and int(re.search(r"(20\d\d)", t).group(1)) > int(re.search(r"(20\d\d)", row[cols["expected"]]).group(1)))):
+                # "מדיניות מוצהרת 2026" (מינהל) = הצפוי; "מדיניות מוצהרת 2022" | "מדיניות 2023 החל..." (עגור) -> השנה המאוחרת
                 cols["expected"] = c
             elif "צפוי" in t and "bounds" not in cols and not re.search(r"גבולות|סטי", t) and (
                     "צפוי" not in row[cols["expected"]]  # הקודם נבחר רק לפי שנה ("מוגדר לשנת 2017") - "צפוי" עדיף (עגור)
@@ -562,10 +580,18 @@ def parse_titled_tables(rows, sheet=""):
             elif re.search(r"ייחוס|יחוס", t) and "bench" not in cols:
                 cols["bench"] = c
             elif re.search(r"שיעור\s+(ה)?חשיפה", t) and re.search(r"(?<![\d.])(20\d\d)\s*$", t) \
-                    and not re.search(r"\d{1,2}[./-]\d{1,2}[./-](20)?\d\d|ליום|לתאריך|נכון ל", t) and "expected" not in cols:
-                cols["expected"] = c  # "שיעור חשיפה 2021" (שנה בלבד, בלי תאריך) = הצפוי
+                    and not re.search(r"\d{1,2}[./-]\d{1,2}[./-](20)?\d\d|ליום|לתאריך|נכון ל", t) and (
+                    "expected" not in cols or (re.search(r"(20\d\d)\s*$", row[cols["expected"]])
+                                               and int(re.search(r"(20\d\d)\s*$", t).group(1))
+                                               > int(re.search(r"(20\d\d)\s*$", row[cols["expected"]]).group(1)))):
+                cols["expected"] = c  # "שיעור חשיפה 2021" (שנה בלבד, בלי תאריך) = הצפוי; שתי שנים -> המאוחרת (תשפ"ה|תשפ"ו)
             elif re.search(r"שיעור\s+(ה)?חשיפה|ליום|לתאריך|עדכני|נכון ל", t) and "current" not in cols:
                 cols["current"] = c
+        if len(bounds_cands) > 1 and "expected" in cols and not any(re.search(r"20\d\d", row[c]) for c in bounds_cands):
+            # שתי עמודות "גבולות" בלי שנה (מחוג 2026, קלע 2020: [צפוי 2025, גבולות, ..., צפוי 2026, גבולות]):
+            # הגבולות של הצפוי שנבחר = עמודת הגבולות הראשונה אחריו
+            after = [c for c in bounds_cands if c > cols["expected"]]
+            cols["bounds"] = after[0] if after else cols["bounds"]
         sub = grid[ri + 1] if ri + 1 < len(grid) else []
         if "min" not in cols and "max" not in cols:  # "גבולות" ובשורה שמתחת "מינימום | מקסימום"
             mn = next((c for c, t in enumerate(sub) if t.startswith("מינימום")), None)
@@ -574,7 +600,7 @@ def parse_titled_tables(rows, sheet=""):
                 cols["min"], cols["max"] = mn, mx
         if "expected" not in cols and "bounds" not in cols and "min" not in cols:
             continue
-        ey = re.search(r"(20\d\d)", row[cols["expected"]]) if "expected" in cols else None
+        ey = re.search(r"(20\d\d)", raw_row[cols["expected"]]) if "expected" in cols else None
         tyear = ey.group(1) if ey else year  # "שיעור חשיפה צפוי לשנת 2026" = שנת המדיניות (לא תאריך החשיפה בפועל)
         title, code = "", None
         for r2 in range(ri - 1, max(ri - 6, -1), -1):  # שורות תווית מפורשות: "שם מסלול (מ.ה.)" / "קידוד"
@@ -624,6 +650,7 @@ def parse_titled_tables(rows, sheet=""):
                         return r[c2]
             return v
         n0 = len(out)
+        raw = []  # (מיקום ב-out, שורת הנתונים) - להסקת עמודת הצפוי כשאין לה כותרת מזוהה
         for r in grid[ri + 1:]:
             lab = r[lc] if lc < len(r) else ""
             if not lab and lc > 0 and lc - 1 not in claimed and lc - 1 < len(r) and re.search(r"[א-ת]", r[lc - 1] or ""):
@@ -641,7 +668,9 @@ def parse_titled_tables(rows, sheet=""):
             if "min" in cols and "max" in cols:
                 lo, hi = _num(g(r, "min")), _num(g(r, "max"))
             else:
-                m = BOUNDS.search(g(r, "bounds"))
+                bt = g(r, "bounds")
+                bt = re.sub(r"^\s*-\s*(\d+(?:\.\d+)?)\s*%\s+(\d+(?:\.\d+)?)\s*%\s*$", r"\1%-\2%", bt)  # "-67% 57%" (PDF רום: המקף זז)
+                m = BOUNDS.search(bt)
                 if m:  # "51%-39%" (עברית: גבוה-נמוך) -> ממוינים
                     lo, hi = sorted((float(m.group(1)), float(m.group(2))))
                 else:
@@ -670,6 +699,28 @@ def parse_titled_tables(rows, sheet=""):
                         "group": sheet.strip(), "year": tyear, "asset": lab, "asset_key": asset_key(lab),
                         "current_pct": pct(cur, "current"), "expected_pct": pct(exp, "expected"), "tolerance": g(r, "tol") or None,
                         "min_pct": lo, "max_pct": hi, "benchmark": (g(r, "bench").replace("\n", " ") or None), "sheet": sheet})
+            raw.append((len(out) - 1, r))
+        if "expected" not in cols and raw:
+            # כותרת הצפוי לא זוהתה (PDF רום: "שיעור חשיפה / צפוי לשנת / 2026" בשלוש שורות ובעמודה אחרת מהערכים):
+            # עמודה בלי כותרת שהערכים בה (אחוזים) בתוך הגבולות ברוב השורות = הצפוי
+            def inside(c):
+                hits = n = 0
+                for i, r in raw:
+                    lo, hi = out[i]["min_pct"], out[i]["max_pct"]
+                    v = _num(r[c]) if c < len(r) else None
+                    if lo is None or hi is None or v is None:
+                        continue
+                    v = v * 100 if abs(v) <= 1.5 and "%" not in r[c] else v
+                    n += 1; hits += lo <= v <= hi
+                return hits, n
+            cands = [(inside(c), c) for c in range(max(len(r) for _, r in raw)) if c not in claimed]
+            best = max(cands, default=((0, 0), None))
+            (hits, n), bc = best
+            if bc is not None and hits >= 2 and hits >= 0.6 * n:
+                for i, r in raw:
+                    v = _num(r[bc]) if bc < len(r) else None
+                    if v is not None and out[i]["expected_pct"] is None:
+                        out[i]["expected_pct"] = round(v * 100, 2) if abs(v) <= 1.5 and "%" not in r[bc] else v
     return out
 
 
@@ -817,7 +868,10 @@ def main():
         # שנה חסרה בגיליון (למשל גיליון מתמחים מילולי) -> שנת המסמך: הרוב בגיליונות האחרים, אחרת מתוך שם הקובץ
         doc_rows = long_rows[len(long_rows) - n_long:] if n_long else []
         years = [r["year"] for r in doc_rows if r.get("year")]
-        fy = re.search(r"(20[12]\d)", Path(ent["file"]).name)
+        # שנה בשם הקובץ - בלי הקידומת שלנו (12 תווי sha: "4222020f457f_" הוא לא 2020) ובלי מחרוזות hash
+        # (מגדל/Wix: "5adfdb_528d2d37ad314229b89356c20197cc79" - ה-"2019" שבתוכה אינו שנה)
+        fname = re.sub(r"[0-9a-f]{16,}", " ", re.sub(r"^[0-9a-f]{12}_", "", Path(ent["file"]).name))
+        fy = re.search(r"(20[12]\d)", fname)
         if re.fullmatch(r"(?:[0-9a-f]{12}_)?\d{3,5}", Path(ent["file"]).stem):
             fy = None  # שם הקובץ הוא מספר המסלול (אלטשולר ".../2017.xlsx" = גמל הלכה), לא שנה
         fy = re.search(r"לשנת\s*(20[12]\d)", ent.get("link_text") or "") or fy  # "מדיניות השקעה צפויה לשנת 2026"

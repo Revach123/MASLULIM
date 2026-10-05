@@ -1,0 +1,42 @@
+name: Policy publication dates (Last-Modified backfill)
+
+# השלמת מועד הפרסום באתר למסמכים שנאספו בלעדיו (HEAD בלבד, בלי הורדה) - לאתרים שנגישים מהענן.
+# אתרים שחוסמים ענן (via=extension) - מהמחשב הביתי (policy-home ב-Revach). הפלט ל-policy/inbox/<id>/_lastmod.json
+# וה-workflow של ה-inbox ממזג לאינדקס. מסמך שנבדק בלי תאריך מסומן ולא נבדק שוב - ריצה שבועית בודקת רק חדשים.
+on:
+  schedule:
+    - cron: "23 6 * * 2"
+  workflow_dispatch:
+
+concurrency:
+  group: policy-lastmod
+  cancel-in-progress: false
+
+jobs:
+  backfill:
+    runs-on: ubuntu-latest
+    timeout-minutes: 60
+    permissions:
+      contents: write
+      actions: write
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: pip install -q requests
+      - run: python -m scripts.policy.backfill_lastmod --via cloud
+      - name: Push to inbox
+        run: |
+          git config user.name "github-actions"
+          git config user.email "github-actions@users.noreply.github.com"
+          git add policy/inbox
+          git diff --cached --quiet && exit 0
+          git commit -q -m "policy inbox: Last-Modified backfill"
+          ok=0
+          for i in 1 2 3 4; do git pull -q --rebase origin main && git push -q origin HEAD:main && ok=1 && break; sleep $((5*i)); done
+          [ $ok = 1 ] || exit 1
+          # push עם GITHUB_TOKEN לא מפעיל את ה-inbox - מפעילים ידנית
+          gh workflow run policy_inbox.yml --ref main
+        env:
+          GH_TOKEN: ${{ github.token }}

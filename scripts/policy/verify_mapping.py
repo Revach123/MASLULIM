@@ -78,13 +78,16 @@ def main():
     ap.add_argument("--year", type=int, default=2026)
     a = ap.parse_args()
     gov = datagov_period(f"{a.year - 1}12")
-    by_id = defaultdict(list)
-    for (dom, fid), v in gov.items():
-        by_id[fid].append(v)
+    # מספרי מסלול חוזרים בין הדומיינים (128 = "כלל תמר" בגמל וגם "מנורה ביטוח כללי" בביטוח): הדומיין לפי הרישום הרשמי
+    dom_of = defaultdict(set)
+    for r in csv.DictReader(open(POL / "fund_registry.csv", encoding="utf-8-sig")):
+        if r.get("track_no") and r.get("legal_id"):
+            dom_of[(r["legal_id"], r["track_no"])].add(r.get("domain") or r.get("תחום"))
     rows = []
     for (lid, tn), d in sorted(doc_exposures(a.year).items()):
-        g = by_id.get(tn, [])
-        g = g[0] if len(g) == 1 else (max(g, key=lambda v: v["assets"]) if g else None)  # אותו מספר בשני דומיינים - הגדול
+        doms = dom_of.get((lid, tn)) or set(DOMAINS)
+        g = [gov[(dm, tn)] for dm in doms if (dm, tn) in gov]
+        g = g[0] if len(g) == 1 else (max(g, key=lambda v: v["assets"]) if g else None)
         diffs = [abs(d[k] - g[k]) for k in ("equity", "fx") if g and d.get(k) is not None and g.get(k) is not None]
         worst = max(diffs) if diffs else None
         status = "no_data" if worst is None else "ok" if worst <= 5 else "check" if worst <= 12 else "mismatch"

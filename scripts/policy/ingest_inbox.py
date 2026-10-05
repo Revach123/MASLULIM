@@ -32,6 +32,18 @@ def main():
         comp = ROOT / "policy" / "companies" / lid
         idx_path = comp / "docs_index.json"
         index = json.loads(idx_path.read_text("utf-8")) if idx_path.exists() else {}
+        lm_p = d / "_lastmod.json"  # השלמת מועד פרסום (backfill_lastmod): {url: Last-Modified | null}
+        if lm_p.exists():
+            from datetime import date
+            for url, lm in json.loads(lm_p.read_text("utf-8")).items():
+                ent = index.get(url)
+                if ent is None or ent.get("last_modified"):
+                    continue
+                if lm:
+                    ent["last_modified"] = lm
+                else:
+                    ent["last_modified_checked"] = date.today().isoformat()  # נבדק ואין - לא לבדוק שוב
+            lm_p.unlink()
         for meta_p in sorted(d.glob("*.json")):
             f = meta_p.with_suffix("")  # "<name>.json" -> "<name>"
             if not f.exists():
