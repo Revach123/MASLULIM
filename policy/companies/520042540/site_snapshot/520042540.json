@@ -1,7 +1,7 @@
 {
  "legal_id": "520042540",
  "company": "מנורה מבטחים ביטוח בע\"מ",
- "taken": "2026-10-05T11:55:58+00:00",
+ "taken": "2026-10-05T20:40:21+00:00",
  "pages": {
   "https://www.menoramivt.co.il/rep-list/about-insurance/participating-portfolio-info/investment-policy": {
    "product": "ביטוח",
@@ -1963,24 +1963,16 @@
      "internal": true
     },
     {
+     "text": "קשרי משקיעים Investor Relations",
+     "href": "https://www.menoramivt.co.il/investor-relations",
+     "year": null,
+     "iframe": false,
+     "doc": false,
+     "internal": true
+    },
+    {
      "text": "קרנות פנסיה",
      "href": "https://www.menoramivt.co.il/links/pension/investment-routes-pension",
-     "year": null,
-     "iframe": false,
-     "doc": false,
-     "internal": true
-    },
-    {
-     "text": "קרנות השתלמות",
-     "href": "https://www.menoramivt.co.il/links/pension-and-gemel/gemel-hishtalmut-list/menroa-keren-hishtalmut",
-     "year": null,
-     "iframe": false,
-     "doc": false,
-     "internal": true
-    },
-    {
-     "text": "קרן פנסיה",
-     "href": "https://www.menoramivt.co.il/pension",
      "year": null,
      "iframe": false,
      "doc": false,
@@ -2059,6 +2051,22 @@
      "internal": true
     },
     {
+     "text": "פרישה דיגיטלית",
+     "href": "https://www.menoramivt.co.il/customer-login/?target=old-age-pension-claim",
+     "year": null,
+     "iframe": false,
+     "doc": false,
+     "internal": true
+    },
+    {
+     "text": "פנסיות זקנה, נכות ושארים",
+     "href": "https://www.menoramivt.co.il/wps-frame/mivtcalc",
+     "year": null,
+     "iframe": false,
+     "doc": false,
+     "internal": true
+    },
+    {
      "text": "פנסיה משלימה",
      "href": "https://www.menoramivt.co.il/pension/menora-pension-mashlima",
      "year": null,
@@ -2067,7 +2075,15 @@
      "internal": true
     },
     {
-     "text": "פנסיה לעצמאיים",
+     "text": "פנסיה מקיפה",
+     "href": "https://www.menoramivt.co.il/pension",
+     "year": null,
+     "iframe": false,
+     "doc": false,
+     "internal": true
+    },
+    {
+     "text": "פנסיה לעצמאים",
      "href": "https://www.menoramivt.co.il/pension/independent-info",
      "year": null,
      "iframe": false,
@@ -2171,8 +2187,8 @@
      "internal": true
     },
     {
-     "text": "מחשבון פנסיה",
-     "href": "https://www.menoramivt.co.il/wps-frame/mivtcalc",
+     "text": "מסלולי השקעה בקרן ההשתלמות",
+     "href": "https://www.menoramivt.co.il/links/pension-and-gemel/gemel-hishtalmut-list/menroa-keren-hishtalmut",
      "year": null,
      "iframe": false,
      "doc": false,
@@ -2227,16 +2243,32 @@
      "internal": true
     },
     {
-     "text": "בקשת הלוואה מקרן השתלמות",
-     "href": "https://www.menoramivt.co.il/customer-login/?target=fund-loan",
+     "text": "הדוחות שלי",
+     "href": "https://www.menoramivt.co.il/personal/reports/?originSource=marketingSite",
      "year": null,
      "iframe": false,
      "doc": false,
      "internal": true
     },
     {
-     "text": "בקשה לפנסיית פרישה",
-     "href": "https://www.menoramivt.co.il/customer-login/?target=old-age-pension-claim",
+     "text": "דלג לתוכן הדף ביטוחים חיסכון פנסיוני מנורה השקעות תביעות שירותים פעולות דברו איתנו | פורטלים ביטוחים ביטוח רכב ביטוח רכב לפי קילומטר ביטוח נהג חדש כיסוי לכל נהג ביטוח צד ג' לאופנוע ביטוח משאית ביטוח ר",
+     "href": "https://www.menoramivt.co.il/",
+     "year": null,
+     "iframe": false,
+     "doc": false,
+     "internal": true
+    },
+    {
+     "text": "דלג לתוכן הדף",
+     "href": "https://www.menoramivt.co.il/rep-list/about-insurance/participating-portfolio-info/investment-policy",
+     "year": null,
+     "iframe": false,
+     "doc": false,
+     "internal": true
+    },
+    {
+     "text": "בקשת הלוואה מקרן השתלמות",
+     "href": "https://www.menoramivt.co.il/customer-login/?target=fund-loan",
      "year": null,
      "iframe": false,
      "doc": false,
@@ -2267,32 +2299,8 @@
      "internal": true
     },
     {
-     "text": "ארכיון פוליסות",
+     "text": "ארכיון פוליסות ותקנונים",
      "href": "https://www.menoramivt.co.il/policy/",
-     "year": null,
-     "iframe": false,
-     "doc": false,
-     "internal": true
-    },
-    {
-     "text": "אישור מס והצהרת הון",
-     "href": "https://www.menoramivt.co.il/personal/reports/?originSource=marketingSite",
-     "year": null,
-     "iframe": false,
-     "doc": false,
-     "internal": true
-    },
-    {
-     "text": "Investor Relations (EN)",
-     "href": "https://www.menoramivt.co.il/investor-relations",
-     "year": null,
-     "iframe": false,
-     "doc": false,
-     "internal": true
-    },
-    {
-     "text": "",
-     "href": "https://www.menoramivt.co.il/rep-list/about-insurance/participating-portfolio-info/investment-policy",
      "year": null,
      "iframe": false,
      "doc": false,
@@ -2307,6 +2315,30 @@
    "text_hash": "f0ce7286fcdd80dee0078c6f8cf45a5d1a7aaf4d",
    "text_head": "דלג לתוכן הדף ביטוחיםחיסכון פנסיונימנורה השקעותתביעותשירותיםפעולותדברו איתנו|פורטלים פורטל סוכנים פורטל מעסיקים מערכת מ.מ.ש קשרי משקיעים Investor Relations מוסכי הסדר ✕ כניסה לאזור האישי אתר זה משתמש בעוגיות (Cookies) לשיפור חווית הגלישה והתאמת תכנים. למידע נוסף ראה מדיניות הפרטיות הבנתי דף הבית> תוכניות חיסכון והשקעה> פוליסות חיסכון> פוליסת ביטוח חיים עם חיסכון - מסלולי השקעה היי👋 רק רצינו לעדכן שמהיום ניתן לקבל שירות גם ב-WhatsApp במספר 054-7108187 להתחלת שיחה מעדיפים להמשיך לדבר איתנו כאן? בשמחה! עם מי יש לנו הכבוד? 😊 (אנא הקלידו שם מלא) מעדיפים להמשיך לדבר איתנו כאן? בשמחה!$br עם מי יש לנו",
    "items": [
+    {
+     "text": "פברואר 2026",
+     "href": "https://cdn.menoramivt.co.il/public/docs/20260331/עלון-תשואות-פברואר-2026--מונגש.pdf",
+     "year": "2026",
+     "iframe": false,
+     "doc": true,
+     "internal": true
+    },
+    {
+     "text": "מרץ 2026",
+     "href": "https://cdn.menoramivt.co.il/public/docs/20260503/עלון-תשואות--מרץ-2026--אתר-שיווקי-מונגש.pdf",
+     "year": "2026",
+     "iframe": false,
+     "doc": true,
+     "internal": true
+    },
+    {
+     "text": "מאי 2026",
+     "href": "https://cdn.menoramivt.co.il/public/docs/20260628/עלון-תשואות-מאי-2026---מונגש.pdf",
+     "year": "2026",
+     "iframe": false,
+     "doc": true,
+     "internal": true
+    },
     {
      "text": "לחץ להורדת קובץ PDF פברואר - 2026",
      "href": "https://cdn.menoramivt.co.il/public/docs/20260331/%D7%A2%D7%9C%D7%95%D7%9F-%D7%AA%D7%A9%D7%95%D7%90%D7%95%D7%AA-%D7%A4%D7%91%D7%A8%D7%95%D7%90%D7%A8-2026--%D7%9E%D7%95%D7%A0%D7%92%D7%A9.pdf",
@@ -2372,63 +2404,7 @@
      "internal": true
     },
     {
-     "text": "(html)",
-     "href": "https://cdn.menoramivt.co.il/public/docs/20261004/עלון-תשואות-אוגוסט-2026--סוכנים---מונגש.pdf",
-     "year": "2026",
-     "iframe": false,
-     "doc": true,
-     "internal": true
-    },
-    {
-     "text": "(html)",
-     "href": "https://cdn.menoramivt.co.il/public/docs/20260825/עלון-תשואות-יולי-2026---מונגש.pdf",
-     "year": "2026",
-     "iframe": false,
-     "doc": true,
-     "internal": true
-    },
-    {
-     "text": "(html)",
-     "href": "https://cdn.menoramivt.co.il/public/docs/20260721/עלון-תשואות-יוני-2026--מונגש.pdf",
-     "year": "2026",
-     "iframe": false,
-     "doc": true,
-     "internal": true
-    },
-    {
-     "text": "(html)",
-     "href": "https://cdn.menoramivt.co.il/public/docs/20260628/עלון-תשואות-מאי-2026---מונגש.pdf",
-     "year": "2026",
-     "iframe": false,
-     "doc": true,
-     "internal": true
-    },
-    {
-     "text": "(html)",
-     "href": "https://cdn.menoramivt.co.il/public/docs/20260528/עלון-תשואות-אפריל-2026--אתר-שיווקי---מונגש.pdf",
-     "year": "2026",
-     "iframe": false,
-     "doc": true,
-     "internal": true
-    },
-    {
-     "text": "(html)",
-     "href": "https://cdn.menoramivt.co.il/public/docs/20260503/עלון-תשואות--מרץ-2026--אתר-שיווקי-מונגש.pdf",
-     "year": "2026",
-     "iframe": false,
-     "doc": true,
-     "internal": true
-    },
-    {
-     "text": "(html)",
-     "href": "https://cdn.menoramivt.co.il/public/docs/20260331/עלון-תשואות-פברואר-2026--מונגש.pdf",
-     "year": "2026",
-     "iframe": false,
-     "doc": true,
-     "internal": true
-    },
-    {
-     "text": "(html)",
+     "text": "ינואר 2026",
      "href": "https://cdn.menoramivt.co.il/public/docs/20260301/עלון-תשואות-ינואר-2026---מונגש.pdf",
      "year": "2026",
      "iframe": false,
@@ -2436,9 +2412,73 @@
      "internal": true
     },
     {
-     "text": "(html)",
-     "href": "https://cdn.menoramivt.co.il/public/docs/20260217/מונגש_עלון_תשואות_דצמבר_2025.pdf",
+     "text": "יוני 2026",
+     "href": "https://cdn.menoramivt.co.il/public/docs/20260721/עלון-תשואות-יוני-2026--מונגש.pdf",
      "year": "2026",
+     "iframe": false,
+     "doc": true,
+     "internal": true
+    },
+    {
+     "text": "יולי 2026",
+     "href": "https://cdn.menoramivt.co.il/public/docs/20260825/עלון-תשואות-יולי-2026---מונגש.pdf",
+     "year": "2026",
+     "iframe": false,
+     "doc": true,
+     "internal": true
+    },
+    {
+     "text": "אפריל 2026",
+     "href": "https://cdn.menoramivt.co.il/public/docs/20260528/עלון-תשואות-אפריל-2026--אתר-שיווקי---מונגש.pdf",
+     "year": "2026",
+     "iframe": false,
+     "doc": true,
+     "internal": true
+    },
+    {
+     "text": "אוגוסט 2026",
+     "href": "https://cdn.menoramivt.co.il/public/docs/20261004/עלון-תשואות-אוגוסט-2026--סוכנים---מונגש.pdf",
+     "year": "2026",
+     "iframe": false,
+     "doc": true,
+     "internal": true
+    },
+    {
+     "text": "פברואר 2025",
+     "href": "https://cdn.menoramivt.co.il/public/docs/20250330/עלון-תשואות-פברואר-2025---מונגש.pdf",
+     "year": "2025",
+     "iframe": false,
+     "doc": true,
+     "internal": true
+    },
+    {
+     "text": "ספטמבר 2025",
+     "href": "https://cdn.menoramivt.co.il/public/docs/20251102/בקשה-להפקדת-סכום-חד-פעמי-בפוליסת-פרט-עצמאים---מונגש.pdf",
+     "year": "2025",
+     "iframe": false,
+     "doc": true,
+     "internal": true
+    },
+    {
+     "text": "נובמבר 2025",
+     "href": "https://cdn.menoramivt.co.il/public/docs/20251225/נגיש-עלון-תשואות-נובמבר-2025.pdf",
+     "year": "2025",
+     "iframe": false,
+     "doc": true,
+     "internal": true
+    },
+    {
+     "text": "מרץ 2025",
+     "href": "https://cdn.menoramivt.co.il/public/docs/20250507/עלון-תשואות-מרץ---מונגש.pdf",
+     "year": "2025",
+     "iframe": false,
+     "doc": true,
+     "internal": true
+    },
+    {
+     "text": "מאי 2025",
+     "href": "https://cdn.menoramivt.co.il/public/docs/20250630/עלון-תשואות-05.2025-מונגש.pdf",
+     "year": "2025",
      "iframe": false,
      "doc": true,
      "internal": true
@@ -2540,87 +2580,7 @@
      "internal": true
     },
     {
-     "text": "(html)",
-     "href": "https://cdn.menoramivt.co.il/public/docs/20251225/נגיש-עלון-תשואות-נובמבר-2025.pdf",
-     "year": "2025",
-     "iframe": false,
-     "doc": true,
-     "internal": true
-    },
-    {
-     "text": "(html)",
-     "href": "https://cdn.menoramivt.co.il/public/docs/20251130/עלון-תשואות-אוקטובר-2025--מונגש.pdf",
-     "year": "2025",
-     "iframe": false,
-     "doc": true,
-     "internal": true
-    },
-    {
-     "text": "(html)",
-     "href": "https://cdn.menoramivt.co.il/public/docs/20251102/בקשה-להפקדת-סכום-חד-פעמי-בפוליסת-פרט-עצמאים---מונגש.pdf",
-     "year": "2025",
-     "iframe": false,
-     "doc": true,
-     "internal": true
-    },
-    {
-     "text": "(html)",
-     "href": "https://cdn.menoramivt.co.il/public/docs/20251016/מונגש-עלון_תשואות_8.25.pdf",
-     "year": "2025",
-     "iframe": false,
-     "doc": true,
-     "internal": true
-    },
-    {
-     "text": "(html)",
-     "href": "https://cdn.menoramivt.co.il/public/docs/20250826/מונגש--עלון-תשואות-יולי-2025.pdf",
-     "year": "2025",
-     "iframe": false,
-     "doc": true,
-     "internal": true
-    },
-    {
-     "text": "(html)",
-     "href": "https://cdn.menoramivt.co.il/public/docs/20250722/עלון-תשואות---יוני-2025-מונגש.pdf",
-     "year": "2025",
-     "iframe": false,
-     "doc": true,
-     "internal": true
-    },
-    {
-     "text": "(html)",
-     "href": "https://cdn.menoramivt.co.il/public/docs/20250630/עלון-תשואות-05.2025-מונגש.pdf",
-     "year": "2025",
-     "iframe": false,
-     "doc": true,
-     "internal": true
-    },
-    {
-     "text": "(html)",
-     "href": "https://cdn.menoramivt.co.il/public/docs/20250820/עלון-תשואות---04.2025-(מונגש).pdf",
-     "year": "2025",
-     "iframe": false,
-     "doc": true,
-     "internal": true
-    },
-    {
-     "text": "(html)",
-     "href": "https://cdn.menoramivt.co.il/public/docs/20250507/עלון-תשואות-מרץ---מונגש.pdf",
-     "year": "2025",
-     "iframe": false,
-     "doc": true,
-     "internal": true
-    },
-    {
-     "text": "(html)",
-     "href": "https://cdn.menoramivt.co.il/public/docs/20250330/עלון-תשואות-פברואר-2025---מונגש.pdf",
-     "year": "2025",
-     "iframe": false,
-     "doc": true,
-     "internal": true
-    },
-    {
-     "text": "(html)",
+     "text": "ינואר 2025",
      "href": "https://cdn.menoramivt.co.il/public/docs/20250302/עלון-תשואות---ינואר-2025---מונגש.pdf",
      "year": "2025",
      "iframe": false,
@@ -2628,9 +2588,97 @@
      "internal": true
     },
     {
-     "text": "(html)",
-     "href": "https://cdn.menoramivt.co.il/public/docs/20250129/מונגש--עלון-תשואות-דצמבר.pdf",
+     "text": "יוני 2025",
+     "href": "https://cdn.menoramivt.co.il/public/docs/20250722/עלון-תשואות---יוני-2025-מונגש.pdf",
      "year": "2025",
+     "iframe": false,
+     "doc": true,
+     "internal": true
+    },
+    {
+     "text": "יולי 2025",
+     "href": "https://cdn.menoramivt.co.il/public/docs/20250826/מונגש--עלון-תשואות-יולי-2025.pdf",
+     "year": "2025",
+     "iframe": false,
+     "doc": true,
+     "internal": true
+    },
+    {
+     "text": "דצמבר 2025",
+     "href": "https://cdn.menoramivt.co.il/public/docs/20260217/מונגש_עלון_תשואות_דצמבר_2025.pdf",
+     "year": "2025",
+     "iframe": false,
+     "doc": true,
+     "internal": true
+    },
+    {
+     "text": "אפריל 2025",
+     "href": "https://cdn.menoramivt.co.il/public/docs/20250820/עלון-תשואות---04.2025-(מונגש).pdf",
+     "year": "2025",
+     "iframe": false,
+     "doc": true,
+     "internal": true
+    },
+    {
+     "text": "אוקטובר 2025",
+     "href": "https://cdn.menoramivt.co.il/public/docs/20251130/עלון-תשואות-אוקטובר-2025--מונגש.pdf",
+     "year": "2025",
+     "iframe": false,
+     "doc": true,
+     "internal": true
+    },
+    {
+     "text": "אוגוסט 2025",
+     "href": "https://cdn.menoramivt.co.il/public/docs/20251016/מונגש-עלון_תשואות_8.25.pdf",
+     "year": "2025",
+     "iframe": false,
+     "doc": true,
+     "internal": true
+    },
+    {
+     "text": "פברואר 2024",
+     "href": "https://cdn.menoramivt.co.il/public/docs/20240401/מונגש---עלון-תשואות-פברואר-2024.pdf",
+     "year": "2024",
+     "iframe": false,
+     "doc": true,
+     "internal": true
+    },
+    {
+     "text": "ספטמבר 2024",
+     "href": "https://cdn.menoramivt.co.il/public/docs/20241110/עלון-תשואות-ספטמבר-2024-מונגש.pdf",
+     "year": "2024",
+     "iframe": false,
+     "doc": true,
+     "internal": true
+    },
+    {
+     "text": "נובמבר 2024",
+     "href": "https://cdn-int.menora.co.il/public/docs/20241229/עלון-תשואות-נובמבר-2024-מונגש.pdf",
+     "year": "2024",
+     "iframe": false,
+     "doc": true,
+     "internal": false
+    },
+    {
+     "text": "מרץ 2024",
+     "href": "https://cdn.menoramivt.co.il/public/docs/20240430/מונגש---עלון-תשואות-מרץ-2024.pdf",
+     "year": "2024",
+     "iframe": false,
+     "doc": true,
+     "internal": true
+    },
+    {
+     "text": "מאי 2024",
+     "href": "https://cdn.menoramivt.co.il/public/docs/20240630/עלון-תשואות-מאי-2024-מונגש.pdf",
+     "year": "2024",
+     "iframe": false,
+     "doc": true,
+     "internal": true
+    },
+    {
+     "text": "לפירוט השינויים במסלולי השקעה – לחצו כאן",
+     "href": "https://cdn.menoramivt.co.il/public/docs/20240710/עלון-שינוי-מסלולי-השקעה-ביטוח-חיים---מונגש.pdf",
+     "year": "2024",
      "iframe": false,
      "doc": true,
      "internal": true
@@ -2740,95 +2788,7 @@
      "internal": true
     },
     {
-     "text": "(html)",
-     "href": "https://cdn.menoramivt.co.il/public/docs/20240710/עלון-שינוי-מסלולי-השקעה-ביטוח-חיים---מונגש.pdf",
-     "year": "2024",
-     "iframe": false,
-     "doc": true,
-     "internal": true
-    },
-    {
-     "text": "(html)",
-     "href": "https://cdn-int.menora.co.il/public/docs/20241229/עלון-תשואות-נובמבר-2024-מונגש.pdf",
-     "year": "2024",
-     "iframe": false,
-     "doc": true,
-     "internal": false
-    },
-    {
-     "text": "(html)",
-     "href": "https://cdn.menoramivt.co.il/public/docs/20241204/עלון-תשואות---אוקטובר-2024-מונגש.pdf",
-     "year": "2024",
-     "iframe": false,
-     "doc": true,
-     "internal": true
-    },
-    {
-     "text": "(html)",
-     "href": "https://cdn.menoramivt.co.il/public/docs/20241110/עלון-תשואות-ספטמבר-2024-מונגש.pdf",
-     "year": "2024",
-     "iframe": false,
-     "doc": true,
-     "internal": true
-    },
-    {
-     "text": "(html)",
-     "href": "https://cdn.menoramivt.co.il/public/docs/20241001/עלון-תשואות---אוגוסט-2024-מונגש.pdf",
-     "year": "2024",
-     "iframe": false,
-     "doc": true,
-     "internal": true
-    },
-    {
-     "text": "(html)",
-     "href": "https://cdn.menoramivt.co.il/public/docs/20240902/מונגש---עלון-תשואות-יולי-2024.pdf",
-     "year": "2024",
-     "iframe": false,
-     "doc": true,
-     "internal": true
-    },
-    {
-     "text": "(html)",
-     "href": "https://cdn.menoramivt.co.il/public/docs/20240728/עלון-תשואות-יוני-2024---מונגש.pdf",
-     "year": "2024",
-     "iframe": false,
-     "doc": true,
-     "internal": true
-    },
-    {
-     "text": "(html)",
-     "href": "https://cdn.menoramivt.co.il/public/docs/20240630/עלון-תשואות-מאי-2024-מונגש.pdf",
-     "year": "2024",
-     "iframe": false,
-     "doc": true,
-     "internal": true
-    },
-    {
-     "text": "(html)",
-     "href": "https://cdn.menoramivt.co.il/public/docs/20240530/מונגש---עלון-תשואות-אפריל-2024.pdf",
-     "year": "2024",
-     "iframe": false,
-     "doc": true,
-     "internal": true
-    },
-    {
-     "text": "(html)",
-     "href": "https://cdn.menoramivt.co.il/public/docs/20240430/מונגש---עלון-תשואות-מרץ-2024.pdf",
-     "year": "2024",
-     "iframe": false,
-     "doc": true,
-     "internal": true
-    },
-    {
-     "text": "(html)",
-     "href": "https://cdn.menoramivt.co.il/public/docs/20240401/מונגש---עלון-תשואות-פברואר-2024.pdf",
-     "year": "2024",
-     "iframe": false,
-     "doc": true,
-     "internal": true
-    },
-    {
-     "text": "(html)",
+     "text": "ינואר 2024",
      "href": "https://cdn.menoramivt.co.il/public/docs/20240228/עלון-תשואות-ינואר-2024---מונגש.pdf",
      "year": "2024",
      "iframe": false,
@@ -2836,16 +2796,48 @@
      "internal": true
     },
     {
-     "text": "(html)",
-     "href": "https://cdn.menoramivt.co.il/public/docs/20240205/עלון-תשואות-12.2023-מנורה-מבטחים-ביטוח---מונגש.pdf",
+     "text": "יוני 2024",
+     "href": "https://cdn.menoramivt.co.il/public/docs/20240728/עלון-תשואות-יוני-2024---מונגש.pdf",
      "year": "2024",
      "iframe": false,
      "doc": true,
      "internal": true
     },
     {
-     "text": "(html)",
-     "href": "https://cdn.menoramivt.co.il/public/docs/20240102/מונגש---עלון-תשואות-נובמבר-2023.pdf",
+     "text": "יולי 2024",
+     "href": "https://cdn.menoramivt.co.il/public/docs/20240902/מונגש---עלון-תשואות-יולי-2024.pdf",
+     "year": "2024",
+     "iframe": false,
+     "doc": true,
+     "internal": true
+    },
+    {
+     "text": "דצמבר 2024",
+     "href": "https://cdn.menoramivt.co.il/public/docs/20250129/מונגש--עלון-תשואות-דצמבר.pdf",
+     "year": "2024",
+     "iframe": false,
+     "doc": true,
+     "internal": true
+    },
+    {
+     "text": "אפריל 2024",
+     "href": "https://cdn.menoramivt.co.il/public/docs/20240530/מונגש---עלון-תשואות-אפריל-2024.pdf",
+     "year": "2024",
+     "iframe": false,
+     "doc": true,
+     "internal": true
+    },
+    {
+     "text": "אוקטובר 2024",
+     "href": "https://cdn.menoramivt.co.il/public/docs/20241204/עלון-תשואות---אוקטובר-2024-מונגש.pdf",
+     "year": "2024",
+     "iframe": false,
+     "doc": true,
+     "internal": true
+    },
+    {
+     "text": "אוגוסט 2024",
+     "href": "https://cdn.menoramivt.co.il/public/docs/20241001/עלון-תשואות---אוגוסט-2024-מונגש.pdf",
      "year": "2024",
      "iframe": false,
      "doc": true,
@@ -2855,6 +2847,30 @@
      "text": "(html)",
      "href": "https://cdn.menoramivt.co.il/public/docs/20240331/esg-report-2021-22022.pdf",
      "year": "2024",
+     "iframe": false,
+     "doc": true,
+     "internal": true
+    },
+    {
+     "text": "ספטמבר 2023",
+     "href": "https://cdn.menoramivt.co.il/public/docs/20231029/עלון-תשואות-ספטמבר-2023---מונגש.pdf",
+     "year": "2023",
+     "iframe": false,
+     "doc": true,
+     "internal": true
+    },
+    {
+     "text": "נובמבר 2023",
+     "href": "https://cdn.menoramivt.co.il/public/docs/20240102/מונגש---עלון-תשואות-נובמבר-2023.pdf",
+     "year": "2023",
+     "iframe": false,
+     "doc": true,
+     "internal": true
+    },
+    {
+     "text": "לחץ להורדת קובץ PDF פברואר - 2023",
+     "href": "https://cdn.menoramivt.co.il/public/docs/20230402/30-30245-090323-alon_tsuot_feb_2023_17_b.pdf",
+     "year": "2023",
      "iframe": false,
      "doc": true,
      "internal": true
@@ -2870,6 +2886,22 @@
     {
      "text": "לחץ להורדת קובץ PDF נובמבר - 2023",
      "href": "https://cdn.menoramivt.co.il/public/docs/20240102/%D7%9E%D7%95%D7%A0%D7%92%D7%A9---%D7%A2%D7%9C%D7%95%D7%9F-%D7%AA%D7%A9%D7%95%D7%90%D7%95%D7%AA-%D7%A0%D7%95%D7%91%D7%9E%D7%91%D7%A8-2023.pdf",
+     "year": "2023",
+     "iframe": false,
+     "doc": true,
+     "internal": true
+    },
+    {
+     "text": "לחץ להורדת קובץ PDF מרץ - 2023",
+     "href": "https://cdn.menoramivt.co.il/public/docs/20230501/30-30249-160423-alon_tsuot_meuhad_mer23_13_c-(1).pdf",
+     "year": "2023",
+     "iframe": false,
+     "doc": true,
+     "internal": true
+    },
+    {
+     "text": "לחץ להורדת קובץ PDF מאי - 2023",
+     "href": "https://cdn.menoramivt.co.il/public/docs/20230627/30-30524-110623-alon_tsuot_may_meuhad_23_08.pdf",
      "year": "2023",
      "iframe": false,
      "doc": true,
@@ -2932,87 +2964,7 @@
      "internal": true
     },
     {
-     "text": "(html)",
-     "href": "https://cdn.menoramivt.co.il/public/docs/20230627/30-30524-110623-alon_tsuot_may_meuhad_23_08.pdf",
-     "year": "2023",
-     "iframe": false,
-     "doc": true,
-     "internal": true
-    },
-    {
-     "text": "(html)",
-     "href": "https://cdn.menoramivt.co.il/public/docs/20230501/30-30249-160423-alon_tsuot_meuhad_mer23_13_c-(1).pdf",
-     "year": "2023",
-     "iframe": false,
-     "doc": true,
-     "internal": true
-    },
-    {
-     "text": "(html)",
-     "href": "https://cdn.menoramivt.co.il/public/docs/20230402/30-30245-090323-alon_tsuot_feb_2023_17_b.pdf",
-     "year": "2023",
-     "iframe": false,
-     "doc": true,
-     "internal": true
-    },
-    {
-     "text": "(html)",
-     "href": "https://cdn.menoramivt.co.il/public/docs/20230122/30-30240-150123-alon_tsuot_dec_22_05_biz_v2.pdf",
-     "year": "2023",
-     "iframe": false,
-     "doc": true,
-     "internal": true
-    },
-    {
-     "text": "(html)",
-     "href": "https://cdn.menoramivt.co.il/public/docs/20231126/עלון-תשואות-אוקטובר-2023---מונגש.pdf",
-     "year": "2023",
-     "iframe": false,
-     "doc": true,
-     "internal": true
-    },
-    {
-     "text": "(html)",
-     "href": "https://cdn.menoramivt.co.il/public/docs/20231029/עלון-תשואות-ספטמבר-2023---מונגש.pdf",
-     "year": "2023",
-     "iframe": false,
-     "doc": true,
-     "internal": true
-    },
-    {
-     "text": "(html)",
-     "href": "https://cdn.menoramivt.co.il/public/docs/20230926/1695282214_עלון_תשואות_אוגוסט_2023.pdf",
-     "year": "2023",
-     "iframe": false,
-     "doc": true,
-     "internal": true
-    },
-    {
-     "text": "(html)",
-     "href": "https://cdn.menoramivt.co.il/public/docs/20230906/עלון-תשואות-יולי-2023.pdf",
-     "year": "2023",
-     "iframe": false,
-     "doc": true,
-     "internal": true
-    },
-    {
-     "text": "(html)",
-     "href": "https://cdn.menoramivt.co.il/public/docs/20230731/עלון-תשואות---יוני-2023.pdf",
-     "year": "2023",
-     "iframe": false,
-     "doc": true,
-     "internal": true
-    },
-    {
-     "text": "(html)",
-     "href": "https://cdn.menoramivt.co.il/public/docs/20230529/עלון-תשואות-ביטוח-פנסיה-גמל-והשתלמות-042023.pdf",
-     "year": "2023",
-     "iframe": false,
-     "doc": true,
-     "internal": true
-    },
-    {
-     "text": "(html)",
+     "text": "ינואר 2023",
      "href": "https://cdn.menoramivt.co.il/public/docs/20230223/עלון-תשואות-ינואר-2023---1.pdf",
      "year": "2023",
      "iframe": false,
@@ -3020,9 +2972,105 @@
      "internal": true
     },
     {
-     "text": "(html)",
-     "href": "https://www.menoramivt.co.il/funds/savings/top-finance/Alon_tsuot_FEB_2023_17_B.pdf",
+     "text": "יוני 2023",
+     "href": "https://cdn.menoramivt.co.il/public/docs/20230731/עלון-תשואות---יוני-2023.pdf",
      "year": "2023",
+     "iframe": false,
+     "doc": true,
+     "internal": true
+    },
+    {
+     "text": "יולי 2023",
+     "href": "https://cdn.menoramivt.co.il/public/docs/20230906/עלון-תשואות-יולי-2023.pdf",
+     "year": "2023",
+     "iframe": false,
+     "doc": true,
+     "internal": true
+    },
+    {
+     "text": "דצמבר 2023",
+     "href": "https://cdn.menoramivt.co.il/public/docs/20240205/עלון-תשואות-12.2023-מנורה-מבטחים-ביטוח---מונגש.pdf",
+     "year": "2023",
+     "iframe": false,
+     "doc": true,
+     "internal": true
+    },
+    {
+     "text": "אפריל 2023",
+     "href": "https://cdn.menoramivt.co.il/public/docs/20230529/עלון-תשואות-ביטוח-פנסיה-גמל-והשתלמות-042023.pdf",
+     "year": "2023",
+     "iframe": false,
+     "doc": true,
+     "internal": true
+    },
+    {
+     "text": "אוקטובר 2023",
+     "href": "https://cdn.menoramivt.co.il/public/docs/20231126/עלון-תשואות-אוקטובר-2023---מונגש.pdf",
+     "year": "2023",
+     "iframe": false,
+     "doc": true,
+     "internal": true
+    },
+    {
+     "text": "אוגוסט 2023",
+     "href": "https://cdn.menoramivt.co.il/public/docs/20230926/1695282214_עלון_תשואות_אוגוסט_2023.pdf",
+     "year": "2023",
+     "iframe": false,
+     "doc": true,
+     "internal": true
+    },
+    {
+     "text": "לחץ להורדת קובץ PDF פברואר - 2022",
+     "href": "https://cdn.menoramivt.co.il/public/docs/20220323/30-10339-150322-alon_tsuot_feb_02_vers1.pdf",
+     "year": "2022",
+     "iframe": false,
+     "doc": true,
+     "internal": true
+    },
+    {
+     "text": "לחץ להורדת קובץ PDF ספטמבר - 2022",
+     "href": "https://cdn.menoramivt.co.il/public/docs/20221031/30-30013-191022_alon_tsuot_sep22_06_biz_b-(1).pdf",
+     "year": "2022",
+     "iframe": false,
+     "doc": true,
+     "internal": true
+    },
+    {
+     "text": "לחץ להורדת קובץ PDF נובמבר - 2022",
+     "href": "https://cdn.menoramivt.co.il/public/docs/20221227/30-30230-131222_alon_tsuot_oct_22_05_biz_01.pdf",
+     "year": "2022",
+     "iframe": false,
+     "doc": true,
+     "internal": true
+    },
+    {
+     "text": "לחץ להורדת קובץ PDF מרץ - 2022",
+     "href": "https://cdn.menoramivt.co.il/public/docs/20220502/30-10346-10422-alon-tsuot-march_006_biz_vers1.pdf",
+     "year": "2022",
+     "iframe": false,
+     "doc": true,
+     "internal": true
+    },
+    {
+     "text": "לחץ להורדת קובץ PDF מאי - 2022",
+     "href": "https://cdn.menoramivt.co.il/public/docs/20220626/30-10350-08062022_alon-tsuot_may-4_biz_vers1.pdf",
+     "year": "2022",
+     "iframe": false,
+     "doc": true,
+     "internal": true
+    },
+    {
+     "text": "לחץ להורדת קובץ PDF ינואר - 2022",
+     "href": "https://cdn.menoramivt.co.il/public/docs/20220220/30-10330-140222-alon_tsuot_jan_05_vers1.pdf",
+     "year": "2022",
+     "iframe": false,
+     "doc": true,
+     "internal": true
+    },
+    {
+     "text": "לחץ להורדת קובץ PDF יוני - 2022",
+     "href": "https://cdn.menoramivt.co.il/public/docs/20220727/30-42045-070722_alon-tsuot_jun22_04_vers1.pdf",
+     "year": "2022",
      "iframe": false,
      "doc": true,
      "internal": true
@@ -3036,55 +3084,15 @@
      "internal": true
     },
     {
-     "text": "(html)",
-     "href": "https://cdn.menoramivt.co.il/public/docs/20221227/30-30230-131222_alon_tsuot_oct_22_05_biz_01.pdf",
+     "text": "לחץ להורדת קובץ PDF דצמבר - 2022",
+     "href": "https://cdn.menoramivt.co.il/public/docs/20230122/30-30240-150123-alon_tsuot_dec_22_05_biz_v2.pdf",
      "year": "2022",
      "iframe": false,
      "doc": true,
      "internal": true
     },
     {
-     "text": "(html)",
-     "href": "https://cdn.menoramivt.co.il/public/docs/20221127/30-30216-101122-alon_tsuot_oct_22_06_vers-a.pdf",
-     "year": "2022",
-     "iframe": false,
-     "doc": true,
-     "internal": true
-    },
-    {
-     "text": "(html)",
-     "href": "https://cdn.menoramivt.co.il/public/docs/20221031/30-30013-191022_alon_tsuot_sep22_06_biz_b-(1).pdf",
-     "year": "2022",
-     "iframe": false,
-     "doc": true,
-     "internal": true
-    },
-    {
-     "text": "(html)",
-     "href": "https://cdn.menoramivt.co.il/public/docs/20220929/30-30209-080922_alon-tsuot_august22_05.pdf",
-     "year": "2022",
-     "iframe": false,
-     "doc": true,
-     "internal": true
-    },
-    {
-     "text": "(html)",
-     "href": "https://cdn.menoramivt.co.il/public/docs/20220727/30-42045-070722_alon-tsuot_jun22_04_vers1.pdf",
-     "year": "2022",
-     "iframe": false,
-     "doc": true,
-     "internal": true
-    },
-    {
-     "text": "(html)",
-     "href": "https://cdn.menoramivt.co.il/public/docs/20220626/30-10350-08062022_alon-tsuot_may-4_biz_vers1.pdf",
-     "year": "2022",
-     "iframe": false,
-     "doc": true,
-     "internal": true
-    },
-    {
-     "text": "(html)",
+     "text": "לחץ להורדת קובץ PDF אפריל - 2022",
      "href": "https://cdn.menoramivt.co.il/public/docs/20220523/30-10349-160522-alon-tsuot-april_05_vers1.pdf",
      "year": "2022",
      "iframe": false,
@@ -3092,47 +3100,23 @@
      "internal": true
     },
     {
-     "text": "(html)",
-     "href": "https://cdn.menoramivt.co.il/public/docs/20220502/30-10346-10422-alon-tsuot-march_006_biz_vers1.pdf",
+     "text": "לחץ להורדת קובץ PDF אוקטובר - 2022",
+     "href": "https://cdn.menoramivt.co.il/public/docs/20221127/30-30216-101122-alon_tsuot_oct_22_06_vers-a.pdf",
      "year": "2022",
      "iframe": false,
      "doc": true,
      "internal": true
     },
     {
-     "text": "(html)",
-     "href": "https://cdn.menoramivt.co.il/public/docs/20220323/30-10339-150322-alon_tsuot_feb_02_vers1.pdf",
+     "text": "לחץ להורדת קובץ PDF אוגוסט - 2022",
+     "href": "https://cdn.menoramivt.co.il/public/docs/20220929/30-30209-080922_alon-tsuot_august22_05.pdf",
      "year": "2022",
      "iframe": false,
      "doc": true,
      "internal": true
     },
     {
-     "text": "(html)",
-     "href": "https://cdn.menoramivt.co.il/public/docs/20220220/30-10330-140222-alon_tsuot_jan_05_vers1.pdf",
-     "year": "2022",
-     "iframe": false,
-     "doc": true,
-     "internal": true
-    },
-    {
-     "text": "(html)",
-     "href": "https://cdn.menoramivt.co.il/public/docs/20220124/30-10326-130122-alon_tsuot_dec_06.pdf",
-     "year": "2022",
-     "iframe": false,
-     "doc": true,
-     "internal": true
-    },
-    {
-     "text": "(html)",
-     "href": "https://cdn.menoramivt.co.il/public/docs/20220123/30-10324-121221-alon_tsuot_nov_05.pdf",
-     "year": "2022",
-     "iframe": false,
-     "doc": true,
-     "internal": true
-    },
-    {
-     "text": "(html)",
+     "text": "יולי 2022",
      "href": "https://cdn.menoramivt.co.il/public/docs/20220830/30-30203-080822_alon-tsuot_july22_08_biz_vers1--מונגש.pdf",
      "year": "2022",
      "iframe": false,
@@ -3140,17 +3124,25 @@
      "internal": true
     },
     {
-     "text": "(html)",
-     "href": "https://cdn.menoramivt.co.il/public/docs/20220103/עלון-תשואות-top-finance-מונגש.pdf",
-     "year": "2022",
+     "text": "ספטמבר 2021",
+     "href": "https://cdn.menoramivt.co.il/public/docs/20220103/עלון-תשואות-top-finance-ספטמבר-מונגש.pdf",
+     "year": "2021",
      "iframe": false,
      "doc": true,
      "internal": true
     },
     {
-     "text": "(html)",
-     "href": "https://cdn.menoramivt.co.il/public/docs/20220103/עלון-תשואות-top-finance-ספטמבר-מונגש.pdf",
-     "year": "2022",
+     "text": "מרץ 2021",
+     "href": "https://cdn.menoramivt.co.il/public/docs/20210726/עלון-תשואות-מרץ-21-.pdf",
+     "year": "2021",
+     "iframe": false,
+     "doc": true,
+     "internal": true
+    },
+    {
+     "text": "לחץ להורדת קובץ PDF פברואר - 2021",
+     "href": "https://cdn.menoramivt.co.il/public/docs/20210413/30-30091-110321_alon_tsuot_finansim_feb21_biz_print-(1).pdf",
+     "year": "2021",
      "iframe": false,
      "doc": true,
      "internal": true
@@ -3158,6 +3150,14 @@
     {
      "text": "לחץ להורדת קובץ PDF ספטמבר - 2021",
      "href": "https://cdn.menoramivt.co.il/public/docs/20220103/%D7%A2%D7%9C%D7%95%D7%9F-%D7%AA%D7%A9%D7%95%D7%90%D7%95%D7%AA-top-finance-%D7%A1%D7%A4%D7%98%D7%9E%D7%91%D7%A8-%D7%9E%D7%95%D7%A0%D7%92%D7%A9.pdf",
+     "year": "2021",
+     "iframe": false,
+     "doc": true,
+     "internal": true
+    },
+    {
+     "text": "לחץ להורדת קובץ PDF נובמבר - 2021",
+     "href": "https://cdn.menoramivt.co.il/public/docs/20220123/30-10324-121221-alon_tsuot_nov_05.pdf",
      "year": "2021",
      "iframe": false,
      "doc": true,
@@ -3172,6 +3172,54 @@
      "internal": true
     },
     {
+     "text": "לחץ להורדת קובץ PDF מאי - 2021",
+     "href": "https://cdn.menoramivt.co.il/public/docs/20210809/30-10307-150621_alon_tsuot_may21_06.pdf",
+     "year": "2021",
+     "iframe": false,
+     "doc": true,
+     "internal": true
+    },
+    {
+     "text": "לחץ להורדת קובץ PDF ינואר - 2021",
+     "href": "https://cdn.menoramivt.co.il/public/docs/20210422/30-30089-140221_alon_tsuot_finansim_jan21_biz.pdf",
+     "year": "2021",
+     "iframe": false,
+     "doc": true,
+     "internal": true
+    },
+    {
+     "text": "לחץ להורדת קובץ PDF יוני - 2021",
+     "href": "https://cdn.menoramivt.co.il/public/docs/20210809/30-10311-120721-alon_tsuot_june__04.pdf",
+     "year": "2021",
+     "iframe": false,
+     "doc": true,
+     "internal": true
+    },
+    {
+     "text": "לחץ להורדת קובץ PDF יולי - 2021",
+     "href": "https://cdn.menoramivt.co.il/public/docs/20211007/30-10312-120821-alon_tsuot_aug_15.pdf",
+     "year": "2021",
+     "iframe": false,
+     "doc": true,
+     "internal": true
+    },
+    {
+     "text": "לחץ להורדת קובץ PDF דצמבר - 2021",
+     "href": "https://cdn.menoramivt.co.il/public/docs/20220124/30-10326-130122-alon_tsuot_dec_06.pdf",
+     "year": "2021",
+     "iframe": false,
+     "doc": true,
+     "internal": true
+    },
+    {
+     "text": "לחץ להורדת קובץ PDF אפריל - 2021",
+     "href": "https://cdn.menoramivt.co.il/public/docs/20210809/30-10302-130521-alon_tsuot_april_2021_04.pdf",
+     "year": "2021",
+     "iframe": false,
+     "doc": true,
+     "internal": true
+    },
+    {
      "text": "לחץ להורדת קובץ PDF אוקטובר - 2021",
      "href": "https://cdn.menoramivt.co.il/public/docs/20220103/%D7%A2%D7%9C%D7%95%D7%9F-%D7%AA%D7%A9%D7%95%D7%90%D7%95%D7%AA-top-finance-%D7%9E%D7%95%D7%A0%D7%92%D7%A9.pdf",
      "year": "2021",
@@ -3180,7 +3228,7 @@
      "internal": true
     },
     {
-     "text": "(html)",
+     "text": "לחץ להורדת קובץ PDF אוגוסט - 2021",
      "href": "https://cdn.menoramivt.co.il/public/docs/20211006/30-10312-120821-alon_tsuot_aug_15-.pdf",
      "year": "2021",
      "iframe": false,
@@ -3188,65 +3236,41 @@
      "internal": true
     },
     {
-     "text": "(html)",
-     "href": "https://cdn.menoramivt.co.il/public/docs/20211007/30-10312-120821-alon_tsuot_aug_15.pdf",
+     "text": "אוקטובר 2021",
+     "href": "https://cdn.menoramivt.co.il/public/docs/20220103/עלון-תשואות-top-finance-מונגש.pdf",
      "year": "2021",
      "iframe": false,
      "doc": true,
      "internal": true
     },
     {
-     "text": "(html)",
-     "href": "https://cdn.menoramivt.co.il/public/docs/20210809/30-10311-120721-alon_tsuot_june__04.pdf",
-     "year": "2021",
+     "text": "פברואר 2020",
+     "href": "https://cdn.menoramivt.co.il/public/docs/20200903/טופ-פייננס-תשואות-ונעשים-2020-פברואר.pdf",
+     "year": "2020",
      "iframe": false,
      "doc": true,
      "internal": true
     },
     {
-     "text": "(html)",
-     "href": "https://cdn.menoramivt.co.il/public/docs/20210809/30-10307-150621_alon_tsuot_may21_06.pdf",
-     "year": "2021",
+     "text": "ספטמבר 2020",
+     "href": "https://cdn.menoramivt.co.il/public/docs/20201022/טופ-פיננס-תשואות-ונכסים-ספטמבר-2020.pdf",
+     "year": "2020",
      "iframe": false,
      "doc": true,
      "internal": true
     },
     {
-     "text": "(html)",
-     "href": "https://cdn.menoramivt.co.il/public/docs/20210809/30-10302-130521-alon_tsuot_april_2021_04.pdf",
-     "year": "2021",
+     "text": "נובמבר 2020",
+     "href": "https://cdn.menoramivt.co.il/public/docs/20201220/עלון-תשואות-נובמבר-2020-סגור-להנגשה.pdf",
+     "year": "2020",
      "iframe": false,
      "doc": true,
      "internal": true
     },
     {
-     "text": "(html)",
-     "href": "https://cdn.menoramivt.co.il/public/docs/20210413/30-30091-110321_alon_tsuot_finansim_feb21_biz_print-(1).pdf",
-     "year": "2021",
-     "iframe": false,
-     "doc": true,
-     "internal": true
-    },
-    {
-     "text": "(html)",
-     "href": "https://cdn.menoramivt.co.il/public/docs/20210422/30-30089-140221_alon_tsuot_finansim_jan21_biz.pdf",
-     "year": "2021",
-     "iframe": false,
-     "doc": true,
-     "internal": true
-    },
-    {
-     "text": "(html)",
-     "href": "https://cdn.menoramivt.co.il/public/docs/20210422/30-30085-120121_alon_tsuot_finansim_dec20_biz.pdf",
-     "year": "2021",
-     "iframe": false,
-     "doc": true,
-     "internal": true
-    },
-    {
-     "text": "(html)",
-     "href": "https://cdn.menoramivt.co.il/public/docs/20210726/עלון-תשואות-מרץ-21-.pdf",
-     "year": "2021",
+     "text": "מאי 2020",
+     "href": "https://cdn.menoramivt.co.il/public/docs/20200903/טופ-פייננס-תשואות-ונכסים-2020-מאי.pdf",
+     "year": "2020",
      "iframe": false,
      "doc": true,
      "internal": true
@@ -3270,6 +3294,14 @@
     {
      "text": "לחץ להורדת קובץ PDF נובמבר - 2020",
      "href": "https://cdn.menoramivt.co.il/public/docs/20201220/%D7%A2%D7%9C%D7%95%D7%9F-%D7%AA%D7%A9%D7%95%D7%90%D7%95%D7%AA-%D7%A0%D7%95%D7%91%D7%9E%D7%91%D7%A8-2020-%D7%A1%D7%92%D7%95%D7%A8-%D7%9C%D7%94%D7%A0%D7%92%D7%A9%D7%94.pdf",
+     "year": "2020",
+     "iframe": false,
+     "doc": true,
+     "internal": true
+    },
+    {
+     "text": "לחץ להורדת קובץ PDF מרץ - 2020",
+     "href": "https://cdn.menoramivt.co.il/public/docs/%D7%A2%D7%9C%D7%95%D7%9F-%D7%AA%D7%A9%D7%95%D7%90%D7%95%D7%AA-%D7%95%D7%94%D7%A8%D7%9B%D7%91-%D7%A0%D7%9B%D7%A1%D7%99%D7%9D-%D7%9E%D7%A8%D7%A5-20.pdf",
      "year": "2020",
      "iframe": false,
      "doc": true,
@@ -3308,6 +3340,14 @@
      "internal": true
     },
     {
+     "text": "לחץ להורדת קובץ PDF דצמבר - 2020",
+     "href": "https://cdn.menoramivt.co.il/public/docs/20210422/30-30085-120121_alon_tsuot_finansim_dec20_biz.pdf",
+     "year": "2020",
+     "iframe": false,
+     "doc": true,
+     "internal": true
+    },
+    {
      "text": "לחץ להורדת קובץ PDF אפריל - 2020",
      "href": "https://cdn.menoramivt.co.il/public/docs/20200903/%D7%98%D7%95%D7%A4-%D7%A4%D7%99%D7%A0%D7%A0%D7%A1-%D7%AA%D7%A9%D7%95%D7%90%D7%95%D7%AA-%D7%95%D7%A0%D7%9B%D7%A1%D7%99%D7%9D-2020-%D7%90%D7%A4%D7%A8%D7%99%D7%9C.pdf",
      "year": "2020",
@@ -3324,71 +3364,7 @@
      "internal": true
     },
     {
-     "text": "(html)",
-     "href": "https://cdn.menoramivt.co.il/public/docs/20201220/עלון-תשואות-נובמבר-2020-סגור-להנגשה.pdf",
-     "year": "2020",
-     "iframe": false,
-     "doc": true,
-     "internal": true
-    },
-    {
-     "text": "(html)",
-     "href": "https://cdn.menoramivt.co.il/public/docs/20201022/טופ-פיננס-תשואות-ונכסים-ספטמבר-2020.pdf",
-     "year": "2020",
-     "iframe": false,
-     "doc": true,
-     "internal": true
-    },
-    {
-     "text": "(html)",
-     "href": "https://cdn.menoramivt.co.il/public/docs/20200916/טופ-פייננס-תשואות-ונכסים-אוגוסט-2020.pdf",
-     "year": "2020",
-     "iframe": false,
-     "doc": true,
-     "internal": true
-    },
-    {
-     "text": "(html)",
-     "href": "https://cdn.menoramivt.co.il/public/docs/20200914/טופ-פייננס-תשואות-ונכסים-יולי-2020.pdf",
-     "year": "2020",
-     "iframe": false,
-     "doc": true,
-     "internal": true
-    },
-    {
-     "text": "(html)",
-     "href": "https://cdn.menoramivt.co.il/public/docs/20200903/טופ-פייננס-תשואות-ונכסים-2020-יוני.pdf",
-     "year": "2020",
-     "iframe": false,
-     "doc": true,
-     "internal": true
-    },
-    {
-     "text": "(html)",
-     "href": "https://cdn.menoramivt.co.il/public/docs/20200903/טופ-פייננס-תשואות-ונכסים-2020-מאי.pdf",
-     "year": "2020",
-     "iframe": false,
-     "doc": true,
-     "internal": true
-    },
-    {
-     "text": "(html)",
-     "href": "https://cdn.menoramivt.co.il/public/docs/20200903/טופ-פיננס-תשואות-ונכסים-2020-אפריל.pdf",
-     "year": "2020",
-     "iframe": false,
-     "doc": true,
-     "internal": true
-    },
-    {
-     "text": "(html)",
-     "href": "https://cdn.menoramivt.co.il/public/docs/20200903/טופ-פייננס-תשואות-ונעשים-2020-פברואר.pdf",
-     "year": "2020",
-     "iframe": false,
-     "doc": true,
-     "internal": true
-    },
-    {
-     "text": "(html)",
+     "text": "ינואר 2020",
      "href": "https://cdn.menoramivt.co.il/public/docs/20200903/טופ-פייננס-תשואות-ונכסים-2020-ינואר.pdf",
      "year": "2020",
      "iframe": false,
@@ -3396,63 +3372,39 @@
      "internal": true
     },
     {
-     "text": "(html)",
-     "href": "https://cdn.menoramivt.co.il/public/docs/%D7%98%D7%95%D7%A4-%D7%A4%D7%99%D7%A0%D7%A0%D7%A1-%D7%AA%D7%A9%D7%95%D7%90%D7%95%D7%AA-%D7%95%D7%A0%D7%9B%D7%A1%D7%99%D7%9D-2019-%D7%90%D7%95%D7%A7.pdf",
-     "year": "2019",
+     "text": "יוני 2020",
+     "href": "https://cdn.menoramivt.co.il/public/docs/20200903/טופ-פייננס-תשואות-ונכסים-2020-יוני.pdf",
+     "year": "2020",
      "iframe": false,
      "doc": true,
      "internal": true
     },
     {
-     "text": "(html)",
-     "href": "https://cdn.menoramivt.co.il/public/docs/%D7%98%D7%95%D7%A4-%D7%A4%D7%99%D7%A0%D7%A0%D7%A1-%D7%AA%D7%A9%D7%95%D7%90%D7%95%D7%AA-%D7%95%D7%A0%D7%9B%D7%A1%D7%99%D7%9D-2019-%D7%A1%D7%A4%D7%98.pdf",
-     "year": "2019",
+     "text": "יולי 2020",
+     "href": "https://cdn.menoramivt.co.il/public/docs/20200914/טופ-פייננס-תשואות-ונכסים-יולי-2020.pdf",
+     "year": "2020",
      "iframe": false,
      "doc": true,
      "internal": true
     },
     {
-     "text": "(html)",
-     "href": "https://cdn.menoramivt.co.il/public/docs/%D7%98%D7%95%D7%A4-%D7%A4%D7%99%D7%A0%D7%A0%D7%A1-%D7%AA%D7%A9%D7%95%D7%90%D7%95%D7%AA-%D7%95%D7%A0%D7%9B%D7%A1%D7%99%D7%9D-2019-%D7%90%D7%95%D7%92.pdf",
-     "year": "2019",
+     "text": "אפריל 2020",
+     "href": "https://cdn.menoramivt.co.il/public/docs/20200903/טופ-פיננס-תשואות-ונכסים-2020-אפריל.pdf",
+     "year": "2020",
      "iframe": false,
      "doc": true,
      "internal": true
     },
     {
-     "text": "(html)",
-     "href": "https://cdn.menoramivt.co.il/public/docs/%D7%98%D7%95%D7%A4-%D7%A4%D7%99%D7%A0%D7%A0%D7%A1-%D7%AA%D7%A9%D7%95%D7%90%D7%95%D7%AA-%D7%95%D7%A0%D7%9B%D7%A1%D7%99%D7%9D-2019-%D7%99%D7%95%D7%9C%D7%99.pdf",
-     "year": "2019",
+     "text": "אוגוסט 2020",
+     "href": "https://cdn.menoramivt.co.il/public/docs/20200916/טופ-פייננס-תשואות-ונכסים-אוגוסט-2020.pdf",
+     "year": "2020",
      "iframe": false,
      "doc": true,
      "internal": true
     },
     {
-     "text": "(html)",
-     "href": "https://cdn.menoramivt.co.il/public/docs/%D7%98%D7%95%D7%A4-%D7%A4%D7%99%D7%A0%D7%A0%D7%A1-%D7%AA%D7%A9%D7%95%D7%90%D7%95%D7%AA-%D7%95%D7%A0%D7%9B%D7%A1%D7%99%D7%9D-2019-%D7%99%D7%95%D7%A0.pdf",
-     "year": "2019",
-     "iframe": false,
-     "doc": true,
-     "internal": true
-    },
-    {
-     "text": "(html)",
-     "href": "https://cdn.menoramivt.co.il/public/docs/%D7%98%D7%95%D7%A4-%D7%A4%D7%99%D7%A0%D7%A0%D7%A1-%D7%AA%D7%A9%D7%95%D7%90%D7%95%D7%AA-%D7%95%D7%A0%D7%9B%D7%A1%D7%99%D7%9D-2019-%D7%9E%D7%90%D7%99.pdf",
-     "year": "2019",
-     "iframe": false,
-     "doc": true,
-     "internal": true
-    },
-    {
-     "text": "(html)",
-     "href": "https://cdn.menoramivt.co.il/public/docs/%D7%98%D7%95%D7%A4-%D7%A4%D7%99%D7%A0%D7%A0%D7%A1-%D7%AA%D7%A9%D7%95%D7%90%D7%95%D7%AA-%D7%95%D7%A0%D7%9B%D7%A1%D7%99%D7%9D-2019-%D7%90%D7%A4%D7%A8.pdf",
-     "year": "2019",
-     "iframe": false,
-     "doc": true,
-     "internal": true
-    },
-    {
-     "text": "(html)",
+     "text": "לחץ להורדת קובץ PDF פברואר - 2019",
      "href": "https://cdn.menoramivt.co.il/public/docs/%D7%98%D7%95%D7%A4-%D7%A4%D7%99%D7%A0%D7%A0%D7%A1-%D7%AA%D7%A9%D7%95%D7%90%D7%95%D7%AA-%D7%95%D7%A0%D7%9B%D7%A1%D7%99%D7%9D-2019-%D7%A4%D7%91%D7%A8.pdf",
      "year": "2019",
      "iframe": false,
@@ -3460,7 +3412,23 @@
      "internal": true
     },
     {
-     "text": "(html)",
+     "text": "לחץ להורדת קובץ PDF ספטמבר - 2019",
+     "href": "https://cdn.menoramivt.co.il/public/docs/%D7%98%D7%95%D7%A4-%D7%A4%D7%99%D7%A0%D7%A0%D7%A1-%D7%AA%D7%A9%D7%95%D7%90%D7%95%D7%AA-%D7%95%D7%A0%D7%9B%D7%A1%D7%99%D7%9D-2019-%D7%A1%D7%A4%D7%98.pdf",
+     "year": "2019",
+     "iframe": false,
+     "doc": true,
+     "internal": true
+    },
+    {
+     "text": "לחץ להורדת קובץ PDF מאי - 2019",
+     "href": "https://cdn.menoramivt.co.il/public/docs/%D7%98%D7%95%D7%A4-%D7%A4%D7%99%D7%A0%D7%A0%D7%A1-%D7%AA%D7%A9%D7%95%D7%90%D7%95%D7%AA-%D7%95%D7%A0%D7%9B%D7%A1%D7%99%D7%9D-2019-%D7%9E%D7%90%D7%99.pdf",
+     "year": "2019",
+     "iframe": false,
+     "doc": true,
+     "internal": true
+    },
+    {
+     "text": "לחץ להורדת קובץ PDF ינואר - 2019",
      "href": "https://cdn.menoramivt.co.il/public/docs/%D7%98%D7%95%D7%A4-%D7%A4%D7%99%D7%A0%D7%A0%D7%A1-%D7%AA%D7%A9%D7%95%D7%90%D7%95%D7%AA-%D7%95%D7%A0%D7%9B%D7%A1%D7%99%D7%9D-2019-%D7%99%D7%A0%D7%95.pdf",
      "year": "2019",
      "iframe": false,
@@ -3468,15 +3436,47 @@
      "internal": true
     },
     {
-     "text": "(html)",
-     "href": "https://cdn.menoramivt.co.il/public/docs/%D7%98%D7%95%D7%A4-%D7%A4%D7%99%D7%A0%D7%A0%D7%A1-%D7%AA%D7%A9%D7%95%D7%90%D7%95%D7%AA-%D7%95%D7%A0%D7%9B%D7%A1%D7%99%D7%9D-2018-%D7%93%D7%A6%D7%9E.pdf",
-     "year": "2018",
+     "text": "לחץ להורדת קובץ PDF יוני - 2019",
+     "href": "https://cdn.menoramivt.co.il/public/docs/%D7%98%D7%95%D7%A4-%D7%A4%D7%99%D7%A0%D7%A0%D7%A1-%D7%AA%D7%A9%D7%95%D7%90%D7%95%D7%AA-%D7%95%D7%A0%D7%9B%D7%A1%D7%99%D7%9D-2019-%D7%99%D7%95%D7%A0.pdf",
+     "year": "2019",
      "iframe": false,
      "doc": true,
      "internal": true
     },
     {
-     "text": "(html)",
+     "text": "לחץ להורדת קובץ PDF יולי - 2019",
+     "href": "https://cdn.menoramivt.co.il/public/docs/%D7%98%D7%95%D7%A4-%D7%A4%D7%99%D7%A0%D7%A0%D7%A1-%D7%AA%D7%A9%D7%95%D7%90%D7%95%D7%AA-%D7%95%D7%A0%D7%9B%D7%A1%D7%99%D7%9D-2019-%D7%99%D7%95%D7%9C%D7%99.pdf",
+     "year": "2019",
+     "iframe": false,
+     "doc": true,
+     "internal": true
+    },
+    {
+     "text": "לחץ להורדת קובץ PDF אפריל - 2019",
+     "href": "https://cdn.menoramivt.co.il/public/docs/%D7%98%D7%95%D7%A4-%D7%A4%D7%99%D7%A0%D7%A0%D7%A1-%D7%AA%D7%A9%D7%95%D7%90%D7%95%D7%AA-%D7%95%D7%A0%D7%9B%D7%A1%D7%99%D7%9D-2019-%D7%90%D7%A4%D7%A8.pdf",
+     "year": "2019",
+     "iframe": false,
+     "doc": true,
+     "internal": true
+    },
+    {
+     "text": "לחץ להורדת קובץ PDF אוקטובר - 2019",
+     "href": "https://cdn.menoramivt.co.il/public/docs/%D7%98%D7%95%D7%A4-%D7%A4%D7%99%D7%A0%D7%A0%D7%A1-%D7%AA%D7%A9%D7%95%D7%90%D7%95%D7%AA-%D7%95%D7%A0%D7%9B%D7%A1%D7%99%D7%9D-2019-%D7%90%D7%95%D7%A7.pdf",
+     "year": "2019",
+     "iframe": false,
+     "doc": true,
+     "internal": true
+    },
+    {
+     "text": "לחץ להורדת קובץ PDF אוגוסט - 2019",
+     "href": "https://cdn.menoramivt.co.il/public/docs/%D7%98%D7%95%D7%A4-%D7%A4%D7%99%D7%A0%D7%A0%D7%A1-%D7%AA%D7%A9%D7%95%D7%90%D7%95%D7%AA-%D7%95%D7%A0%D7%9B%D7%A1%D7%99%D7%9D-2019-%D7%90%D7%95%D7%92.pdf",
+     "year": "2019",
+     "iframe": false,
+     "doc": true,
+     "internal": true
+    },
+    {
+     "text": "לחץ להורדת קובץ PDF ספטמבר - 2018",
      "href": "https://cdn.menoramivt.co.il/public/docs/%D7%98%D7%95%D7%A4-%D7%A4%D7%99%D7%A0%D7%A0%D7%A1-%D7%AA%D7%A9%D7%95%D7%90%D7%95%D7%AA-%D7%95%D7%A0%D7%9B%D7%A1%D7%99%D7%9D-2018-%D7%A1%D7%A4%D7%98.pdf",
      "year": "2018",
      "iframe": false,
@@ -3484,23 +3484,7 @@
      "internal": true
     },
     {
-     "text": "(html)",
-     "href": "https://cdn.menoramivt.co.il/public/docs/%D7%98%D7%95%D7%A4-%D7%A4%D7%99%D7%A0%D7%A0%D7%A1-%D7%AA%D7%A9%D7%95%D7%90%D7%95%D7%AA-%D7%95%D7%A0%D7%9B%D7%A1%D7%99%D7%9D-2018-%D7%90%D7%95%D7%92.pdf",
-     "year": "2018",
-     "iframe": false,
-     "doc": true,
-     "internal": true
-    },
-    {
-     "text": "(html)",
-     "href": "https://cdn.menoramivt.co.il/public/docs/%D7%98%D7%95%D7%A4-%D7%A4%D7%99%D7%A0%D7%A0%D7%A1-%D7%AA%D7%A9%D7%95%D7%90%D7%95%D7%AA-%D7%95%D7%A0%D7%9B%D7%A1%D7%99%D7%9D-2018-%D7%99%D7%95%D7%9C.pdf",
-     "year": "2018",
-     "iframe": false,
-     "doc": true,
-     "internal": true
-    },
-    {
-     "text": "(html)",
+     "text": "לחץ להורדת קובץ PDF יוני - 2018",
      "href": "https://cdn.menoramivt.co.il/public/docs/%D7%98%D7%95%D7%A4-%D7%A4%D7%99%D7%A0%D7%A0%D7%A1-%D7%AA%D7%A9%D7%95%D7%90%D7%95%D7%AA-%D7%95%D7%A0%D7%9B%D7%A1%D7%99%D7%9D-2018-%D7%99%D7%95%D7%A0.pdf",
      "year": "2018",
      "iframe": false,
@@ -3508,87 +3492,31 @@
      "internal": true
     },
     {
-     "text": "(html)",
-     "href": "https://cdn.menoramivt.co.il/public/docs/%D7%98%D7%95%D7%A4-%D7%A4%D7%99%D7%A0%D7%A0%D7%A1-%D7%AA%D7%A9%D7%95%D7%90%D7%95%D7%AA-%D7%95%D7%A0%D7%9B%D7%A1%D7%99%D7%9D-2017-%D7%93%D7%A6%D7%9E.pdf",
-     "year": "2017",
+     "text": "לחץ להורדת קובץ PDF יולי - 2018",
+     "href": "https://cdn.menoramivt.co.il/public/docs/%D7%98%D7%95%D7%A4-%D7%A4%D7%99%D7%A0%D7%A0%D7%A1-%D7%AA%D7%A9%D7%95%D7%90%D7%95%D7%AA-%D7%95%D7%A0%D7%9B%D7%A1%D7%99%D7%9D-2018-%D7%99%D7%95%D7%9C.pdf",
+     "year": "2018",
      "iframe": false,
      "doc": true,
      "internal": true
     },
     {
-     "text": "(html)",
-     "href": "https://cdn.menoramivt.co.il/public/docs/%D7%98%D7%95%D7%A4-%D7%A4%D7%99%D7%A0%D7%A0%D7%A1-%D7%AA%D7%A9%D7%95%D7%90%D7%95%D7%AA-%D7%95%D7%A0%D7%9B%D7%A1%D7%99%D7%9D-2017-%D7%A0%D7%95%D7%91.pdf",
-     "year": "2017",
+     "text": "לחץ להורדת קובץ PDF דצמבר - 2018",
+     "href": "https://cdn.menoramivt.co.il/public/docs/%D7%98%D7%95%D7%A4-%D7%A4%D7%99%D7%A0%D7%A0%D7%A1-%D7%AA%D7%A9%D7%95%D7%90%D7%95%D7%AA-%D7%95%D7%A0%D7%9B%D7%A1%D7%99%D7%9D-2018-%D7%93%D7%A6%D7%9E.pdf",
+     "year": "2018",
      "iframe": false,
      "doc": true,
      "internal": true
     },
     {
-     "text": "(html)",
-     "href": "https://cdn.menoramivt.co.il/public/docs/%D7%98%D7%95%D7%A4-%D7%A4%D7%99%D7%A0%D7%A0%D7%A1-%D7%AA%D7%A9%D7%95%D7%90%D7%95%D7%AA-%D7%95%D7%A0%D7%9B%D7%A1%D7%99%D7%9D-2017-%D7%90%D7%95%D7%A7.pdf",
-     "year": "2017",
+     "text": "לחץ להורדת קובץ PDF אוגוסט - 2018",
+     "href": "https://cdn.menoramivt.co.il/public/docs/%D7%98%D7%95%D7%A4-%D7%A4%D7%99%D7%A0%D7%A0%D7%A1-%D7%AA%D7%A9%D7%95%D7%90%D7%95%D7%AA-%D7%95%D7%A0%D7%9B%D7%A1%D7%99%D7%9D-2018-%D7%90%D7%95%D7%92.pdf",
+     "year": "2018",
      "iframe": false,
      "doc": true,
      "internal": true
     },
     {
-     "text": "(html)",
-     "href": "https://cdn.menoramivt.co.il/public/docs/%D7%98%D7%95%D7%A4-%D7%A4%D7%99%D7%A0%D7%A0%D7%A1-%D7%AA%D7%A9%D7%95%D7%90%D7%95%D7%AA-%D7%95%D7%A0%D7%9B%D7%A1%D7%99%D7%9D-2017-%D7%A1%D7%A4%D7%98.pdf",
-     "year": "2017",
-     "iframe": false,
-     "doc": true,
-     "internal": true
-    },
-    {
-     "text": "(html)",
-     "href": "https://cdn.menoramivt.co.il/public/docs/%D7%98%D7%95%D7%A4-%D7%A4%D7%99%D7%A0%D7%A0%D7%A1-%D7%AA%D7%A9%D7%95%D7%90%D7%95%D7%AA-%D7%95%D7%A0%D7%9B%D7%A1%D7%99%D7%9D-2017-%D7%90%D7%95%D7%92.pdf",
-     "year": "2017",
-     "iframe": false,
-     "doc": true,
-     "internal": true
-    },
-    {
-     "text": "(html)",
-     "href": "https://cdn.menoramivt.co.il/public/docs/%D7%98%D7%95%D7%A4-%D7%A4%D7%99%D7%A0%D7%A0%D7%A1-%D7%AA%D7%A9%D7%95%D7%90%D7%95%D7%AA-%D7%95%D7%A0%D7%9B%D7%A1%D7%99%D7%9D-2017-%D7%99%D7%95%D7%9C.pdf",
-     "year": "2017",
-     "iframe": false,
-     "doc": true,
-     "internal": true
-    },
-    {
-     "text": "(html)",
-     "href": "https://cdn.menoramivt.co.il/public/docs/%D7%98%D7%95%D7%A4-%D7%A4%D7%99%D7%A0%D7%A0%D7%A1-%D7%AA%D7%A9%D7%95%D7%90%D7%95%D7%AA-%D7%95%D7%A0%D7%9B%D7%A1%D7%99%D7%9D-2017-%D7%99%D7%95%D7%A0.pdf",
-     "year": "2017",
-     "iframe": false,
-     "doc": true,
-     "internal": true
-    },
-    {
-     "text": "(html)",
-     "href": "https://cdn.menoramivt.co.il/public/docs/%D7%98%D7%95%D7%A4-%D7%A4%D7%99%D7%A0%D7%A0%D7%A1-%D7%AA%D7%A9%D7%95%D7%90%D7%95%D7%AA-%D7%95%D7%A0%D7%9B%D7%A1%D7%99%D7%9D-2017-%D7%9E%D7%90%D7%99.pdf",
-     "year": "2017",
-     "iframe": false,
-     "doc": true,
-     "internal": true
-    },
-    {
-     "text": "(html)",
-     "href": "https://cdn.menoramivt.co.il/public/docs/%D7%98%D7%95%D7%A4-%D7%A4%D7%99%D7%A0%D7%A0%D7%A1-%D7%AA%D7%A9%D7%95%D7%90%D7%95%D7%AA-%D7%95%D7%A0%D7%9B%D7%A1%D7%99%D7%9D-2017-%D7%90%D7%A4%D7%A8.pdf",
-     "year": "2017",
-     "iframe": false,
-     "doc": true,
-     "internal": true
-    },
-    {
-     "text": "(html)",
-     "href": "https://cdn.menoramivt.co.il/public/docs/%D7%98%D7%95%D7%A4-%D7%A4%D7%99%D7%A0%D7%A0%D7%A1-%D7%AA%D7%A9%D7%95%D7%90%D7%95%D7%AA-%D7%95%D7%A0%D7%9B%D7%A1%D7%99%D7%9D-2017-%D7%9E%D7%A8%D7%A5.pdf",
-     "year": "2017",
-     "iframe": false,
-     "doc": true,
-     "internal": true
-    },
-    {
-     "text": "(html)",
+     "text": "לחץ להורדת קובץ PDF פברואר - 2017",
      "href": "https://cdn.menoramivt.co.il/public/docs/%D7%98%D7%95%D7%A4-%D7%A4%D7%99%D7%A0%D7%A0%D7%A1-%D7%AA%D7%A9%D7%95%D7%90%D7%95%D7%AA-%D7%95%D7%A0%D7%9B%D7%A1%D7%99%D7%9D-2017-%D7%A4%D7%91%D7%A8.pdf",
      "year": "2017",
      "iframe": false,
@@ -3596,7 +3524,39 @@
      "internal": true
     },
     {
-     "text": "(html)",
+     "text": "לחץ להורדת קובץ PDF ספטמבר - 2017",
+     "href": "https://cdn.menoramivt.co.il/public/docs/%D7%98%D7%95%D7%A4-%D7%A4%D7%99%D7%A0%D7%A0%D7%A1-%D7%AA%D7%A9%D7%95%D7%90%D7%95%D7%AA-%D7%95%D7%A0%D7%9B%D7%A1%D7%99%D7%9D-2017-%D7%A1%D7%A4%D7%98.pdf",
+     "year": "2017",
+     "iframe": false,
+     "doc": true,
+     "internal": true
+    },
+    {
+     "text": "לחץ להורדת קובץ PDF נובמבר - 2017",
+     "href": "https://cdn.menoramivt.co.il/public/docs/%D7%98%D7%95%D7%A4-%D7%A4%D7%99%D7%A0%D7%A0%D7%A1-%D7%AA%D7%A9%D7%95%D7%90%D7%95%D7%AA-%D7%95%D7%A0%D7%9B%D7%A1%D7%99%D7%9D-2017-%D7%A0%D7%95%D7%91.pdf",
+     "year": "2017",
+     "iframe": false,
+     "doc": true,
+     "internal": true
+    },
+    {
+     "text": "לחץ להורדת קובץ PDF מרץ - 2017",
+     "href": "https://cdn.menoramivt.co.il/public/docs/%D7%98%D7%95%D7%A4-%D7%A4%D7%99%D7%A0%D7%A0%D7%A1-%D7%AA%D7%A9%D7%95%D7%90%D7%95%D7%AA-%D7%95%D7%A0%D7%9B%D7%A1%D7%99%D7%9D-2017-%D7%9E%D7%A8%D7%A5.pdf",
+     "year": "2017",
+     "iframe": false,
+     "doc": true,
+     "internal": true
+    },
+    {
+     "text": "לחץ להורדת קובץ PDF מאי - 2017",
+     "href": "https://cdn.menoramivt.co.il/public/docs/%D7%98%D7%95%D7%A4-%D7%A4%D7%99%D7%A0%D7%A0%D7%A1-%D7%AA%D7%A9%D7%95%D7%90%D7%95%D7%AA-%D7%95%D7%A0%D7%9B%D7%A1%D7%99%D7%9D-2017-%D7%9E%D7%90%D7%99.pdf",
+     "year": "2017",
+     "iframe": false,
+     "doc": true,
+     "internal": true
+    },
+    {
+     "text": "לחץ להורדת קובץ PDF ינואר - 2017",
      "href": "https://cdn.menoramivt.co.il/public/docs/%D7%98%D7%95%D7%A4-%D7%A4%D7%99%D7%A0%D7%A0%D7%A1-%D7%AA%D7%A9%D7%95%D7%90%D7%95%D7%AA-%D7%95%D7%A0%D7%9B%D7%A1%D7%99%D7%9D-2017-%D7%99%D7%A0%D7%95.pdf",
      "year": "2017",
      "iframe": false,
@@ -3604,87 +3564,55 @@
      "internal": true
     },
     {
-     "text": "(html)",
-     "href": "https://cdn.menoramivt.co.il/public/docs/%D7%98%D7%95%D7%A4-%D7%A4%D7%99%D7%A0%D7%A0%D7%A1-%D7%AA%D7%A9%D7%95%D7%90%D7%95%D7%AA-%D7%95%D7%A0%D7%9B%D7%A1%D7%99%D7%9D-2016-%D7%93%D7%A6%D7%9E.pdf",
-     "year": "2016",
+     "text": "לחץ להורדת קובץ PDF יוני - 2017",
+     "href": "https://cdn.menoramivt.co.il/public/docs/%D7%98%D7%95%D7%A4-%D7%A4%D7%99%D7%A0%D7%A0%D7%A1-%D7%AA%D7%A9%D7%95%D7%90%D7%95%D7%AA-%D7%95%D7%A0%D7%9B%D7%A1%D7%99%D7%9D-2017-%D7%99%D7%95%D7%A0.pdf",
+     "year": "2017",
      "iframe": false,
      "doc": true,
      "internal": true
     },
     {
-     "text": "(html)",
-     "href": "https://cdn.menoramivt.co.il/public/docs/%D7%98%D7%95%D7%A4-%D7%A4%D7%99%D7%A0%D7%A0%D7%A1-%D7%AA%D7%A9%D7%95%D7%90%D7%95%D7%AA-%D7%95%D7%A0%D7%9B%D7%A1%D7%99%D7%9D-2016-%D7%A0%D7%95%D7%91.pdf",
-     "year": "2016",
+     "text": "לחץ להורדת קובץ PDF יולי - 2017",
+     "href": "https://cdn.menoramivt.co.il/public/docs/%D7%98%D7%95%D7%A4-%D7%A4%D7%99%D7%A0%D7%A0%D7%A1-%D7%AA%D7%A9%D7%95%D7%90%D7%95%D7%AA-%D7%95%D7%A0%D7%9B%D7%A1%D7%99%D7%9D-2017-%D7%99%D7%95%D7%9C.pdf",
+     "year": "2017",
      "iframe": false,
      "doc": true,
      "internal": true
     },
     {
-     "text": "(html)",
-     "href": "https://cdn.menoramivt.co.il/public/docs/%D7%98%D7%95%D7%A4-%D7%A4%D7%99%D7%A0%D7%A0%D7%A1-%D7%AA%D7%A9%D7%95%D7%90%D7%95%D7%AA-%D7%95%D7%A0%D7%9B%D7%A1%D7%99%D7%9D-2016-%D7%90%D7%95%D7%A7.pdf",
-     "year": "2016",
+     "text": "לחץ להורדת קובץ PDF דצמבר - 2017",
+     "href": "https://cdn.menoramivt.co.il/public/docs/%D7%98%D7%95%D7%A4-%D7%A4%D7%99%D7%A0%D7%A0%D7%A1-%D7%AA%D7%A9%D7%95%D7%90%D7%95%D7%AA-%D7%95%D7%A0%D7%9B%D7%A1%D7%99%D7%9D-2017-%D7%93%D7%A6%D7%9E.pdf",
+     "year": "2017",
      "iframe": false,
      "doc": true,
      "internal": true
     },
     {
-     "text": "(html)",
-     "href": "https://cdn.menoramivt.co.il/public/docs/%D7%98%D7%95%D7%A4-%D7%A4%D7%99%D7%A0%D7%A0%D7%A1-%D7%AA%D7%A9%D7%95%D7%90%D7%95%D7%AA-%D7%95%D7%A0%D7%9B%D7%A1%D7%99%D7%9D-2016-%D7%A1%D7%A4%D7%98.pdf",
-     "year": "2016",
+     "text": "לחץ להורדת קובץ PDF אפריל - 2017",
+     "href": "https://cdn.menoramivt.co.il/public/docs/%D7%98%D7%95%D7%A4-%D7%A4%D7%99%D7%A0%D7%A0%D7%A1-%D7%AA%D7%A9%D7%95%D7%90%D7%95%D7%AA-%D7%95%D7%A0%D7%9B%D7%A1%D7%99%D7%9D-2017-%D7%90%D7%A4%D7%A8.pdf",
+     "year": "2017",
      "iframe": false,
      "doc": true,
      "internal": true
     },
     {
-     "text": "(html)",
-     "href": "https://cdn.menoramivt.co.il/public/docs/%D7%98%D7%95%D7%A4-%D7%A4%D7%99%D7%A0%D7%A0%D7%A1-%D7%AA%D7%A9%D7%95%D7%90%D7%95%D7%AA-%D7%95%D7%A0%D7%9B%D7%A1%D7%99%D7%9D-2016-%D7%90%D7%95%D7%92.pdf",
-     "year": "2016",
+     "text": "לחץ להורדת קובץ PDF אוקטובר - 2017",
+     "href": "https://cdn.menoramivt.co.il/public/docs/%D7%98%D7%95%D7%A4-%D7%A4%D7%99%D7%A0%D7%A0%D7%A1-%D7%AA%D7%A9%D7%95%D7%90%D7%95%D7%AA-%D7%95%D7%A0%D7%9B%D7%A1%D7%99%D7%9D-2017-%D7%90%D7%95%D7%A7.pdf",
+     "year": "2017",
      "iframe": false,
      "doc": true,
      "internal": true
     },
     {
-     "text": "(html)",
-     "href": "https://cdn.menoramivt.co.il/public/docs/%D7%98%D7%95%D7%A4-%D7%A4%D7%99%D7%A0%D7%A0%D7%A1-%D7%AA%D7%A9%D7%95%D7%90%D7%95%D7%AA-%D7%95%D7%A0%D7%9B%D7%A1%D7%99%D7%9D-2016-%D7%99%D7%95%D7%9C.pdf",
-     "year": "2016",
+     "text": "לחץ להורדת קובץ PDF אוגוסט - 2017",
+     "href": "https://cdn.menoramivt.co.il/public/docs/%D7%98%D7%95%D7%A4-%D7%A4%D7%99%D7%A0%D7%A0%D7%A1-%D7%AA%D7%A9%D7%95%D7%90%D7%95%D7%AA-%D7%95%D7%A0%D7%9B%D7%A1%D7%99%D7%9D-2017-%D7%90%D7%95%D7%92.pdf",
+     "year": "2017",
      "iframe": false,
      "doc": true,
      "internal": true
     },
     {
-     "text": "(html)",
-     "href": "https://cdn.menoramivt.co.il/public/docs/%D7%98%D7%95%D7%A4-%D7%A4%D7%99%D7%A0%D7%A0%D7%A1-%D7%AA%D7%A9%D7%95%D7%90%D7%95%D7%AA-%D7%95%D7%A0%D7%9B%D7%A1%D7%99%D7%9D-2016-%D7%99%D7%95%D7%A0.pdf",
-     "year": "2016",
-     "iframe": false,
-     "doc": true,
-     "internal": true
-    },
-    {
-     "text": "(html)",
-     "href": "https://cdn.menoramivt.co.il/public/docs/%D7%98%D7%95%D7%A4-%D7%A4%D7%99%D7%A0%D7%A0%D7%A1-%D7%AA%D7%A9%D7%95%D7%90%D7%95%D7%AA-%D7%95%D7%A0%D7%9B%D7%A1%D7%99%D7%9D-2016-%D7%9E%D7%90%D7%99.pdf",
-     "year": "2016",
-     "iframe": false,
-     "doc": true,
-     "internal": true
-    },
-    {
-     "text": "(html)",
-     "href": "https://cdn.menoramivt.co.il/public/docs/%D7%98%D7%95%D7%A4-%D7%A4%D7%99%D7%A0%D7%A0%D7%A1-%D7%AA%D7%A9%D7%95%D7%90%D7%95%D7%AA-%D7%95%D7%A0%D7%9B%D7%A1%D7%99%D7%9D-2016-%D7%90%D7%A4%D7%A8.pdf",
-     "year": "2016",
-     "iframe": false,
-     "doc": true,
-     "internal": true
-    },
-    {
-     "text": "(html)",
-     "href": "https://cdn.menoramivt.co.il/public/docs/%D7%98%D7%95%D7%A4-%D7%A4%D7%99%D7%A0%D7%A0%D7%A1-%D7%AA%D7%A9%D7%95%D7%90%D7%95%D7%AA-%D7%95%D7%A0%D7%9B%D7%A1%D7%99%D7%9D-2016-%D7%9E%D7%A8%D7%A5.pdf",
-     "year": "2016",
-     "iframe": false,
-     "doc": true,
-     "internal": true
-    },
-    {
-     "text": "(html)",
+     "text": "לחץ להורדת קובץ PDF פברואר - 2016",
      "href": "https://cdn.menoramivt.co.il/public/docs/%D7%98%D7%95%D7%A4-%D7%A4%D7%99%D7%A0%D7%A0%D7%A1-%D7%AA%D7%A9%D7%95%D7%90%D7%95%D7%AA-%D7%95%D7%A0%D7%9B%D7%A1%D7%99%D7%9D-2016-%D7%A4%D7%91%D7%A8.pdf",
      "year": "2016",
      "iframe": false,
@@ -3692,7 +3620,39 @@
      "internal": true
     },
     {
-     "text": "(html)",
+     "text": "לחץ להורדת קובץ PDF ספטמבר - 2016",
+     "href": "https://cdn.menoramivt.co.il/public/docs/%D7%98%D7%95%D7%A4-%D7%A4%D7%99%D7%A0%D7%A0%D7%A1-%D7%AA%D7%A9%D7%95%D7%90%D7%95%D7%AA-%D7%95%D7%A0%D7%9B%D7%A1%D7%99%D7%9D-2016-%D7%A1%D7%A4%D7%98.pdf",
+     "year": "2016",
+     "iframe": false,
+     "doc": true,
+     "internal": true
+    },
+    {
+     "text": "לחץ להורדת קובץ PDF נובמבר - 2016",
+     "href": "https://cdn.menoramivt.co.il/public/docs/%D7%98%D7%95%D7%A4-%D7%A4%D7%99%D7%A0%D7%A0%D7%A1-%D7%AA%D7%A9%D7%95%D7%90%D7%95%D7%AA-%D7%95%D7%A0%D7%9B%D7%A1%D7%99%D7%9D-2016-%D7%A0%D7%95%D7%91.pdf",
+     "year": "2016",
+     "iframe": false,
+     "doc": true,
+     "internal": true
+    },
+    {
+     "text": "לחץ להורדת קובץ PDF מרץ - 2016",
+     "href": "https://cdn.menoramivt.co.il/public/docs/%D7%98%D7%95%D7%A4-%D7%A4%D7%99%D7%A0%D7%A0%D7%A1-%D7%AA%D7%A9%D7%95%D7%90%D7%95%D7%AA-%D7%95%D7%A0%D7%9B%D7%A1%D7%99%D7%9D-2016-%D7%9E%D7%A8%D7%A5.pdf",
+     "year": "2016",
+     "iframe": false,
+     "doc": true,
+     "internal": true
+    },
+    {
+     "text": "לחץ להורדת קובץ PDF מאי - 2016",
+     "href": "https://cdn.menoramivt.co.il/public/docs/%D7%98%D7%95%D7%A4-%D7%A4%D7%99%D7%A0%D7%A0%D7%A1-%D7%AA%D7%A9%D7%95%D7%90%D7%95%D7%AA-%D7%95%D7%A0%D7%9B%D7%A1%D7%99%D7%9D-2016-%D7%9E%D7%90%D7%99.pdf",
+     "year": "2016",
+     "iframe": false,
+     "doc": true,
+     "internal": true
+    },
+    {
+     "text": "לחץ להורדת קובץ PDF ינואר - 2016",
      "href": "https://cdn.menoramivt.co.il/public/docs/%D7%98%D7%95%D7%A4-%D7%A4%D7%99%D7%A0%D7%A0%D7%A1-%D7%AA%D7%A9%D7%95%D7%90%D7%95%D7%AA-%D7%95%D7%A0%D7%9B%D7%A1%D7%99%D7%9D-2016-%D7%99%D7%A0%D7%95.pdf",
      "year": "2016",
      "iframe": false,
@@ -3700,31 +3660,63 @@
      "internal": true
     },
     {
-     "text": "(html)",
-     "href": "https://cdn.menoramivt.co.il/public/docs/%D7%98%D7%95%D7%A4-%D7%A4%D7%99%D7%A0%D7%A0%D7%A1-%D7%AA%D7%A9%D7%95%D7%90%D7%95%D7%AA-%D7%95%D7%A0%D7%9B%D7%A1%D7%99%D7%9D-2015-%D7%93%D7%A6%D7%9E.pdf",
+     "text": "לחץ להורדת קובץ PDF יוני - 2016",
+     "href": "https://cdn.menoramivt.co.il/public/docs/%D7%98%D7%95%D7%A4-%D7%A4%D7%99%D7%A0%D7%A0%D7%A1-%D7%AA%D7%A9%D7%95%D7%90%D7%95%D7%AA-%D7%95%D7%A0%D7%9B%D7%A1%D7%99%D7%9D-2016-%D7%99%D7%95%D7%A0.pdf",
+     "year": "2016",
+     "iframe": false,
+     "doc": true,
+     "internal": true
+    },
+    {
+     "text": "לחץ להורדת קובץ PDF יולי - 2016",
+     "href": "https://cdn.menoramivt.co.il/public/docs/%D7%98%D7%95%D7%A4-%D7%A4%D7%99%D7%A0%D7%A0%D7%A1-%D7%AA%D7%A9%D7%95%D7%90%D7%95%D7%AA-%D7%95%D7%A0%D7%9B%D7%A1%D7%99%D7%9D-2016-%D7%99%D7%95%D7%9C.pdf",
+     "year": "2016",
+     "iframe": false,
+     "doc": true,
+     "internal": true
+    },
+    {
+     "text": "לחץ להורדת קובץ PDF דצמבר - 2016",
+     "href": "https://cdn.menoramivt.co.il/public/docs/%D7%98%D7%95%D7%A4-%D7%A4%D7%99%D7%A0%D7%A0%D7%A1-%D7%AA%D7%A9%D7%95%D7%90%D7%95%D7%AA-%D7%95%D7%A0%D7%9B%D7%A1%D7%99%D7%9D-2016-%D7%93%D7%A6%D7%9E.pdf",
+     "year": "2016",
+     "iframe": false,
+     "doc": true,
+     "internal": true
+    },
+    {
+     "text": "לחץ להורדת קובץ PDF אפריל - 2016",
+     "href": "https://cdn.menoramivt.co.il/public/docs/%D7%98%D7%95%D7%A4-%D7%A4%D7%99%D7%A0%D7%A0%D7%A1-%D7%AA%D7%A9%D7%95%D7%90%D7%95%D7%AA-%D7%95%D7%A0%D7%9B%D7%A1%D7%99%D7%9D-2016-%D7%90%D7%A4%D7%A8.pdf",
+     "year": "2016",
+     "iframe": false,
+     "doc": true,
+     "internal": true
+    },
+    {
+     "text": "לחץ להורדת קובץ PDF אוקטובר - 2016",
+     "href": "https://cdn.menoramivt.co.il/public/docs/%D7%98%D7%95%D7%A4-%D7%A4%D7%99%D7%A0%D7%A0%D7%A1-%D7%AA%D7%A9%D7%95%D7%90%D7%95%D7%AA-%D7%95%D7%A0%D7%9B%D7%A1%D7%99%D7%9D-2016-%D7%90%D7%95%D7%A7.pdf",
+     "year": "2016",
+     "iframe": false,
+     "doc": true,
+     "internal": true
+    },
+    {
+     "text": "לחץ להורדת קובץ PDF אוגוסט - 2016",
+     "href": "https://cdn.menoramivt.co.il/public/docs/%D7%98%D7%95%D7%A4-%D7%A4%D7%99%D7%A0%D7%A0%D7%A1-%D7%AA%D7%A9%D7%95%D7%90%D7%95%D7%AA-%D7%95%D7%A0%D7%9B%D7%A1%D7%99%D7%9D-2016-%D7%90%D7%95%D7%92.pdf",
+     "year": "2016",
+     "iframe": false,
+     "doc": true,
+     "internal": true
+    },
+    {
+     "text": "לחץ להורדת קובץ PDF פברואר - 2015",
+     "href": "https://cdn.menoramivt.co.il/public/docs/%D7%98%D7%95%D7%A4-%D7%A4%D7%99%D7%A0%D7%A0%D7%A1-%D7%AA%D7%A9%D7%95%D7%90%D7%95%D7%AA-%D7%95%D7%A0%D7%9B%D7%A1%D7%99%D7%9D-2015-%D7%A4%D7%91%D7%A8.pdf",
      "year": "2015",
      "iframe": false,
      "doc": true,
      "internal": true
     },
     {
-     "text": "(html)",
-     "href": "https://cdn.menoramivt.co.il/public/docs/%D7%98%D7%95%D7%A4-%D7%A4%D7%99%D7%A0%D7%A0%D7%A1-%D7%AA%D7%A9%D7%95%D7%90%D7%95%D7%AA-%D7%95%D7%A0%D7%9B%D7%A1%D7%99%D7%9D-2015-%D7%A0%D7%95%D7%91.pdf",
-     "year": "2015",
-     "iframe": false,
-     "doc": true,
-     "internal": true
-    },
-    {
-     "text": "(html)",
-     "href": "https://cdn.menoramivt.co.il/public/docs/%D7%98%D7%95%D7%A4-%D7%A4%D7%99%D7%A0%D7%A0%D7%A1-%D7%AA%D7%A9%D7%95%D7%90%D7%95%D7%AA-%D7%95%D7%A0%D7%9B%D7%A1%D7%99%D7%9D-2015-%D7%90%D7%95%D7%A7.pdf",
-     "year": "2015",
-     "iframe": false,
-     "doc": true,
-     "internal": true
-    },
-    {
-     "text": "(html)",
+     "text": "לחץ להורדת קובץ PDF ספטמבר - 2015",
      "href": "https://cdn.menoramivt.co.il/public/docs/%D7%98%D7%95%D7%A4-%D7%A4%D7%99%D7%A0%D7%A0%D7%A1-%D7%AA%D7%A9%D7%95%D7%90%D7%95%D7%AA-%D7%95%D7%A0%D7%9B%D7%A1%D7%99%D7%9D-2015-%D7%A1%D7%A4%D7%98.pdf",
      "year": "2015",
      "iframe": false,
@@ -3732,47 +3724,15 @@
      "internal": true
     },
     {
-     "text": "(html)",
-     "href": "https://cdn.menoramivt.co.il/public/docs/%D7%98%D7%95%D7%A4-%D7%A4%D7%99%D7%A0%D7%A0%D7%A1-%D7%AA%D7%A9%D7%95%D7%90%D7%95%D7%AA-%D7%95%D7%A0%D7%9B%D7%A1%D7%99%D7%9D-2015-%D7%90%D7%95%D7%92.pdf",
+     "text": "לחץ להורדת קובץ PDF נובמבר - 2015",
+     "href": "https://cdn.menoramivt.co.il/public/docs/%D7%98%D7%95%D7%A4-%D7%A4%D7%99%D7%A0%D7%A0%D7%A1-%D7%AA%D7%A9%D7%95%D7%90%D7%95%D7%AA-%D7%95%D7%A0%D7%9B%D7%A1%D7%99%D7%9D-2015-%D7%A0%D7%95%D7%91.pdf",
      "year": "2015",
      "iframe": false,
      "doc": true,
      "internal": true
     },
     {
-     "text": "(html)",
-     "href": "https://cdn.menoramivt.co.il/public/docs/%D7%98%D7%95%D7%A4-%D7%A4%D7%99%D7%A0%D7%A0%D7%A1-%D7%AA%D7%A9%D7%95%D7%90%D7%95%D7%AA-%D7%95%D7%A0%D7%9B%D7%A1%D7%99%D7%9D-2015-%D7%99%D7%95%D7%9C.pdf",
-     "year": "2015",
-     "iframe": false,
-     "doc": true,
-     "internal": true
-    },
-    {
-     "text": "(html)",
-     "href": "https://cdn.menoramivt.co.il/public/docs/%D7%98%D7%95%D7%A4-%D7%A4%D7%99%D7%A0%D7%A0%D7%A1-%D7%AA%D7%A9%D7%95%D7%90%D7%95%D7%AA-%D7%95%D7%A0%D7%9B%D7%A1%D7%99%D7%9D-2015-%D7%99%D7%95%D7%A0.pdf",
-     "year": "2015",
-     "iframe": false,
-     "doc": true,
-     "internal": true
-    },
-    {
-     "text": "(html)",
-     "href": "https://cdn.menoramivt.co.il/public/docs/%D7%98%D7%95%D7%A4-%D7%A4%D7%99%D7%A0%D7%A0%D7%A1-%D7%AA%D7%A9%D7%95%D7%90%D7%95%D7%AA-%D7%95%D7%A0%D7%9B%D7%A1%D7%99%D7%9D-2015-%D7%9E%D7%90%D7%99.pdf",
-     "year": "2015",
-     "iframe": false,
-     "doc": true,
-     "internal": true
-    },
-    {
-     "text": "(html)",
-     "href": "https://cdn.menoramivt.co.il/public/docs/%D7%98%D7%95%D7%A4-%D7%A4%D7%99%D7%A0%D7%A0%D7%A1-%D7%AA%D7%A9%D7%95%D7%90%D7%95%D7%AA-%D7%95%D7%A0%D7%9B%D7%A1%D7%99%D7%9D-2015-%D7%90%D7%A4%D7%A8.pdf",
-     "year": "2015",
-     "iframe": false,
-     "doc": true,
-     "internal": true
-    },
-    {
-     "text": "(html)",
+     "text": "לחץ להורדת קובץ PDF מרץ - 2015",
      "href": "https://cdn.menoramivt.co.il/public/docs/%D7%98%D7%95%D7%A4-%D7%A4%D7%99%D7%A0%D7%A0%D7%A1-%D7%AA%D7%A9%D7%95%D7%90%D7%95%D7%AA-%D7%95%D7%A0%D7%9B%D7%A1%D7%99%D7%9D-2015-%D7%9E%D7%A8%D7%A5.pdf",
      "year": "2015",
      "iframe": false,
@@ -3780,8 +3740,56 @@
      "internal": true
     },
     {
-     "text": "(html)",
-     "href": "https://cdn.menoramivt.co.il/public/docs/%D7%98%D7%95%D7%A4-%D7%A4%D7%99%D7%A0%D7%A0%D7%A1-%D7%AA%D7%A9%D7%95%D7%90%D7%95%D7%AA-%D7%95%D7%A0%D7%9B%D7%A1%D7%99%D7%9D-2015-%D7%A4%D7%91%D7%A8.pdf",
+     "text": "לחץ להורדת קובץ PDF מאי - 2015",
+     "href": "https://cdn.menoramivt.co.il/public/docs/%D7%98%D7%95%D7%A4-%D7%A4%D7%99%D7%A0%D7%A0%D7%A1-%D7%AA%D7%A9%D7%95%D7%90%D7%95%D7%AA-%D7%95%D7%A0%D7%9B%D7%A1%D7%99%D7%9D-2015-%D7%9E%D7%90%D7%99.pdf",
+     "year": "2015",
+     "iframe": false,
+     "doc": true,
+     "internal": true
+    },
+    {
+     "text": "לחץ להורדת קובץ PDF יוני - 2015",
+     "href": "https://cdn.menoramivt.co.il/public/docs/%D7%98%D7%95%D7%A4-%D7%A4%D7%99%D7%A0%D7%A0%D7%A1-%D7%AA%D7%A9%D7%95%D7%90%D7%95%D7%AA-%D7%95%D7%A0%D7%9B%D7%A1%D7%99%D7%9D-2015-%D7%99%D7%95%D7%A0.pdf",
+     "year": "2015",
+     "iframe": false,
+     "doc": true,
+     "internal": true
+    },
+    {
+     "text": "לחץ להורדת קובץ PDF יולי - 2015",
+     "href": "https://cdn.menoramivt.co.il/public/docs/%D7%98%D7%95%D7%A4-%D7%A4%D7%99%D7%A0%D7%A0%D7%A1-%D7%AA%D7%A9%D7%95%D7%90%D7%95%D7%AA-%D7%95%D7%A0%D7%9B%D7%A1%D7%99%D7%9D-2015-%D7%99%D7%95%D7%9C.pdf",
+     "year": "2015",
+     "iframe": false,
+     "doc": true,
+     "internal": true
+    },
+    {
+     "text": "לחץ להורדת קובץ PDF דצמבר - 2015",
+     "href": "https://cdn.menoramivt.co.il/public/docs/%D7%98%D7%95%D7%A4-%D7%A4%D7%99%D7%A0%D7%A0%D7%A1-%D7%AA%D7%A9%D7%95%D7%90%D7%95%D7%AA-%D7%95%D7%A0%D7%9B%D7%A1%D7%99%D7%9D-2015-%D7%93%D7%A6%D7%9E.pdf",
+     "year": "2015",
+     "iframe": false,
+     "doc": true,
+     "internal": true
+    },
+    {
+     "text": "לחץ להורדת קובץ PDF אפריל - 2015",
+     "href": "https://cdn.menoramivt.co.il/public/docs/%D7%98%D7%95%D7%A4-%D7%A4%D7%99%D7%A0%D7%A0%D7%A1-%D7%AA%D7%A9%D7%95%D7%90%D7%95%D7%AA-%D7%95%D7%A0%D7%9B%D7%A1%D7%99%D7%9D-2015-%D7%90%D7%A4%D7%A8.pdf",
+     "year": "2015",
+     "iframe": false,
+     "doc": true,
+     "internal": true
+    },
+    {
+     "text": "לחץ להורדת קובץ PDF אוקטובר - 2015",
+     "href": "https://cdn.menoramivt.co.il/public/docs/%D7%98%D7%95%D7%A4-%D7%A4%D7%99%D7%A0%D7%A0%D7%A1-%D7%AA%D7%A9%D7%95%D7%90%D7%95%D7%AA-%D7%95%D7%A0%D7%9B%D7%A1%D7%99%D7%9D-2015-%D7%90%D7%95%D7%A7.pdf",
+     "year": "2015",
+     "iframe": false,
+     "doc": true,
+     "internal": true
+    },
+    {
+     "text": "לחץ להורדת קובץ PDF אוגוסט - 2015",
+     "href": "https://cdn.menoramivt.co.il/public/docs/%D7%98%D7%95%D7%A4-%D7%A4%D7%99%D7%A0%D7%A0%D7%A1-%D7%AA%D7%A9%D7%95%D7%90%D7%95%D7%AA-%D7%95%D7%A0%D7%9B%D7%A1%D7%99%D7%9D-2015-%D7%90%D7%95%D7%92.pdf",
      "year": "2015",
      "iframe": false,
      "doc": true,
@@ -3796,24 +3804,16 @@
      "internal": true
     },
     {
+     "text": "קשרי משקיעים Investor Relations",
+     "href": "https://www.menoramivt.co.il/investor-relations",
+     "year": null,
+     "iframe": false,
+     "doc": false,
+     "internal": true
+    },
+    {
      "text": "קרנות פנסיה",
      "href": "https://www.menoramivt.co.il/links/pension/investment-routes-pension",
-     "year": null,
-     "iframe": false,
-     "doc": false,
-     "internal": true
-    },
-    {
-     "text": "קרנות השתלמות",
-     "href": "https://www.menoramivt.co.il/links/pension-and-gemel/gemel-hishtalmut-list/menroa-keren-hishtalmut",
-     "year": null,
-     "iframe": false,
-     "doc": false,
-     "internal": true
-    },
-    {
-     "text": "קרן פנסיה",
-     "href": "https://www.menoramivt.co.il/pension",
      "year": null,
      "iframe": false,
      "doc": false,
@@ -3892,6 +3892,22 @@
      "internal": true
     },
     {
+     "text": "פרישה דיגיטלית",
+     "href": "https://www.menoramivt.co.il/customer-login/?target=old-age-pension-claim",
+     "year": null,
+     "iframe": false,
+     "doc": false,
+     "internal": true
+    },
+    {
+     "text": "פנסיות זקנה, נכות ושארים",
+     "href": "https://www.menoramivt.co.il/wps-frame/mivtcalc",
+     "year": null,
+     "iframe": false,
+     "doc": false,
+     "internal": true
+    },
+    {
      "text": "פנסיה משלימה",
      "href": "https://www.menoramivt.co.il/pension/menora-pension-mashlima",
      "year": null,
@@ -3900,7 +3916,15 @@
      "internal": true
     },
     {
-     "text": "פנסיה לעצמאיים",
+     "text": "פנסיה מקיפה",
+     "href": "https://www.menoramivt.co.il/pension",
+     "year": null,
+     "iframe": false,
+     "doc": false,
+     "internal": true
+    },
+    {
+     "text": "פנסיה לעצמאים",
      "href": "https://www.menoramivt.co.il/pension/independent-info",
      "year": null,
      "iframe": false,
@@ -4004,16 +4028,8 @@
      "internal": true
     },
     {
-     "text": "מנורה השקעות",
-     "href": "https://www.menoramivt.co.il/funds/savings/top-finance/top-finance-info",
-     "year": null,
-     "iframe": false,
-     "doc": false,
-     "internal": true
-    },
-    {
-     "text": "מחשבון פנסיה",
-     "href": "https://www.menoramivt.co.il/wps-frame/mivtcalc",
+     "text": "מסלולי השקעה בקרן ההשתלמות",
+     "href": "https://www.menoramivt.co.il/links/pension-and-gemel/gemel-hishtalmut-list/menroa-keren-hishtalmut",
      "year": null,
      "iframe": false,
      "doc": false,
@@ -4028,8 +4044,8 @@
      "internal": true
     },
     {
-     "text": "מדיניות פרטיות",
-     "href": "https://www.menoramivt.co.il/general/privacy-policy",
+     "text": "חיסכון פנסיוני",
+     "href": "https://www.menoramivt.co.il/funds/savings/top-finance/top-finance-info",
      "year": null,
      "iframe": false,
      "doc": false,
@@ -4068,16 +4084,16 @@
      "internal": true
     },
     {
-     "text": "בקשת הלוואה מקרן השתלמות",
-     "href": "https://www.menoramivt.co.il/customer-login/?target=fund-loan",
+     "text": "הדוחות שלי",
+     "href": "https://www.menoramivt.co.il/personal/reports/?originSource=marketingSite",
      "year": null,
      "iframe": false,
      "doc": false,
      "internal": true
     },
     {
-     "text": "בקשה לפנסיית פרישה",
-     "href": "https://www.menoramivt.co.il/customer-login/?target=old-age-pension-claim",
+     "text": "בקשת הלוואה מקרן השתלמות",
+     "href": "https://www.menoramivt.co.il/customer-login/?target=fund-loan",
      "year": null,
      "iframe": false,
      "doc": false,
@@ -4108,35 +4124,19 @@
      "internal": true
     },
     {
-     "text": "ארכיון פוליסות",
+     "text": "אתר זה משתמש בעוגיות (Cookies) לשיפור חווית הגלישה והתאמת תכנים. למידע נוסף ראה מדיניות הפרטיות",
+     "href": "https://www.menoramivt.co.il/general/privacy-policy",
+     "year": null,
+     "iframe": false,
+     "doc": false,
+     "internal": true
+    },
+    {
+     "text": "ארכיון פוליסות ותקנונים",
      "href": "https://www.menoramivt.co.il/policy/",
      "year": null,
      "iframe": false,
      "doc": false,
-     "internal": true
-    },
-    {
-     "text": "אישור מס והצהרת הון",
-     "href": "https://www.menoramivt.co.il/personal/reports/?originSource=marketingSite",
-     "year": null,
-     "iframe": false,
-     "doc": false,
-     "internal": true
-    },
-    {
-     "text": "Investor Relations (EN)",
-     "href": "https://www.menoramivt.co.il/investor-relations",
-     "year": null,
-     "iframe": false,
-     "doc": false,
-     "internal": true
-    },
-    {
-     "text": "(html)",
-     "href": "https://cdn.menoramivt.co.il/public/docs/%D7%A2%D7%9C%D7%95%D7%9F-%D7%AA%D7%A9%D7%95%D7%90%D7%95%D7%AA-%D7%95%D7%94%D7%A8%D7%9B%D7%91-%D7%A0%D7%9B%D7%A1%D7%99%D7%9D-%D7%9E%D7%A8%D7%A5-20.pdf",
-     "year": null,
-     "iframe": false,
-     "doc": true,
      "internal": true
     }
    ]
@@ -4173,24 +4173,16 @@
      "internal": true
     },
     {
+     "text": "קשרי משקיעים Investor Relations",
+     "href": "https://www.menoramivt.co.il/investor-relations",
+     "year": null,
+     "iframe": false,
+     "doc": false,
+     "internal": true
+    },
+    {
      "text": "קרנות פנסיה",
      "href": "https://www.menoramivt.co.il/links/pension/investment-routes-pension",
-     "year": null,
-     "iframe": false,
-     "doc": false,
-     "internal": true
-    },
-    {
-     "text": "קרנות השתלמות",
-     "href": "https://www.menoramivt.co.il/links/pension-and-gemel/gemel-hishtalmut-list/menroa-keren-hishtalmut",
-     "year": null,
-     "iframe": false,
-     "doc": false,
-     "internal": true
-    },
-    {
-     "text": "קרן פנסיה",
-     "href": "https://www.menoramivt.co.il/pension",
      "year": null,
      "iframe": false,
      "doc": false,
@@ -4269,6 +4261,22 @@
      "internal": true
     },
     {
+     "text": "פרישה דיגיטלית",
+     "href": "https://www.menoramivt.co.il/customer-login/?target=old-age-pension-claim",
+     "year": null,
+     "iframe": false,
+     "doc": false,
+     "internal": true
+    },
+    {
+     "text": "פנסיות זקנה, נכות ושארים",
+     "href": "https://www.menoramivt.co.il/wps-frame/mivtcalc",
+     "year": null,
+     "iframe": false,
+     "doc": false,
+     "internal": true
+    },
+    {
      "text": "פנסיה משלימה",
      "href": "https://www.menoramivt.co.il/pension/menora-pension-mashlima",
      "year": null,
@@ -4277,7 +4285,15 @@
      "internal": true
     },
     {
-     "text": "פנסיה לעצמאיים",
+     "text": "פנסיה מקיפה",
+     "href": "https://www.menoramivt.co.il/pension",
+     "year": null,
+     "iframe": false,
+     "doc": false,
+     "internal": true
+    },
+    {
+     "text": "פנסיה לעצמאים",
      "href": "https://www.menoramivt.co.il/pension/independent-info",
      "year": null,
      "iframe": false,
@@ -4389,16 +4405,8 @@
      "internal": true
     },
     {
-     "text": "מנורה השקעות",
-     "href": "https://www.menoramivt.co.il/",
-     "year": null,
-     "iframe": false,
-     "doc": false,
-     "internal": true
-    },
-    {
-     "text": "מחשבון פנסיה",
-     "href": "https://www.menoramivt.co.il/wps-frame/mivtcalc",
+     "text": "מסלולי השקעה בקרן ההשתלמות",
+     "href": "https://www.menoramivt.co.il/links/pension-and-gemel/gemel-hishtalmut-list/menroa-keren-hishtalmut",
      "year": null,
      "iframe": false,
      "doc": false,
@@ -4431,6 +4439,14 @@
     {
      "text": "טיפול בכספי נפטרים",
      "href": "https://www.menoramivt.co.il/list/hishtalmut-member-info/deceased-links",
+     "year": null,
+     "iframe": false,
+     "doc": false,
+     "internal": true
+    },
+    {
+     "text": "חיסכון פנסיוני",
+     "href": "https://www.menoramivt.co.il/",
      "year": null,
      "iframe": false,
      "doc": false,
@@ -4493,16 +4509,16 @@
      "internal": true
     },
     {
-     "text": "בקשת הלוואה מקרן השתלמות",
-     "href": "https://www.menoramivt.co.il/customer-login/?target=fund-loan",
+     "text": "הדוחות שלי",
+     "href": "https://www.menoramivt.co.il/personal/reports/?originSource=marketingSite",
      "year": null,
      "iframe": false,
      "doc": false,
      "internal": true
     },
     {
-     "text": "בקשה לפנסיית פרישה",
-     "href": "https://www.menoramivt.co.il/customer-login/?target=old-age-pension-claim",
+     "text": "בקשת הלוואה מקרן השתלמות",
+     "href": "https://www.menoramivt.co.il/customer-login/?target=fund-loan",
      "year": null,
      "iframe": false,
      "doc": false,
@@ -4534,14 +4550,6 @@
     },
     {
      "text": "ארכיון פוליסות ותקנונים",
-     "href": "https://menoramivt.co.il/policy/",
-     "year": null,
-     "iframe": false,
-     "doc": false,
-     "internal": true
-    },
-    {
-     "text": "ארכיון פוליסות",
      "href": "https://www.menoramivt.co.il/policy/",
      "year": null,
      "iframe": false,
@@ -4549,16 +4557,8 @@
      "internal": true
     },
     {
-     "text": "אישור מס והצהרת הון",
-     "href": "https://www.menoramivt.co.il/personal/reports/?originSource=marketingSite",
-     "year": null,
-     "iframe": false,
-     "doc": false,
-     "internal": true
-    },
-    {
-     "text": "Investor Relations (EN)",
-     "href": "https://www.menoramivt.co.il/investor-relations",
+     "text": "ארכיון פוליסות ותקנונים",
+     "href": "https://menoramivt.co.il/policy/",
      "year": null,
      "iframe": false,
      "doc": false,
@@ -4654,28 +4654,36 @@
    "text_head": "שגיאה בהגדרות של נגן הווידאו שגיאה בהגדרות של נגן הווידאו שגיאה 153 צפייה בסרטון ב-YouTube למידע נוסף שגיאה 153",
    "items": []
   },
+  "https://www.menoramivt.co.il/": {
+   "product": null,
+   "status": 200,
+   "method": "requests",
+   "text_hash": "511564e4cfa3dc65d07aa1d63e4912c35d3b0c58",
+   "text_head": "Radware Captcha Page We apologize for the inconvenience... ...but your activity and behavior on this site made us think that you are a bot. Note: A number of things could be going on here. If you are attempting to access this site using an anonymous Private/Proxy network, please disable that and try accessing site again. Due to previously detected malicious behavior which originated from the network you're using, please request unblock to site. Incident ID: 83ec71fd-dcyu-4acb-91fc-c5123607218c Please solve this CAPTCHA to request unblock to the website You reached this page when trying to acce",
+   "items": []
+  },
   "https://www.menoramivt.co.il/pension": {
    "product": "פנסיה",
    "status": 200,
    "method": "requests",
-   "text_hash": "513b85be3f798dd388a6c6eca4d6689f37c44d70",
-   "text_head": "Radware Captcha Page We apologize for the inconvenience... ...but your activity and behavior on this site made us think that you are a bot. Note: A number of things could be going on here. If you are attempting to access this site using an anonymous Private/Proxy network, please disable that and try accessing site again. Due to previously detected malicious behavior which originated from the network you're using, please request unblock to site. Incident ID: be79e96d-dcyu-4b1a-8afa-7ee53d5cb2ee Please solve this CAPTCHA to request unblock to the website You reached this page when trying to acce",
+   "text_hash": "755ceea36cd318dd119970451a810b3b6d4cfe17",
+   "text_head": "Radware Captcha Page We apologize for the inconvenience... ...but your activity and behavior on this site made us think that you are a bot. Note: A number of things could be going on here. If you are attempting to access this site using an anonymous Private/Proxy network, please disable that and try accessing site again. Due to previously detected malicious behavior which originated from the network you're using, please request unblock to site. Incident ID: e2fd616f-dcyu-4bbe-897b-2fb151a86d77 Please solve this CAPTCHA to request unblock to the website You reached this page when trying to acce",
    "items": []
   },
   "https://www.menoramivt.co.il/pension/menora-pension-mashlima": {
    "product": "פנסיה",
    "status": 200,
    "method": "requests",
-   "text_hash": "970e53c964a0eb12a5fcd1927c07931ad293406f",
-   "text_head": "Radware Captcha Page We apologize for the inconvenience... ...but your activity and behavior on this site made us think that you are a bot. Note: A number of things could be going on here. If you are attempting to access this site using an anonymous Private/Proxy network, please disable that and try accessing site again. Due to previously detected malicious behavior which originated from the network you're using, please request unblock to site. Incident ID: 08ab2706-dcyu-4120-911d-f151eb87b199 Please solve this CAPTCHA to request unblock to the website You reached this page when trying to acce",
+   "text_hash": "6da92d8358726a6b58eaa92a894af5659b9a9b6c",
+   "text_head": "Radware Captcha Page We apologize for the inconvenience... ...but your activity and behavior on this site made us think that you are a bot. Note: A number of things could be going on here. If you are attempting to access this site using an anonymous Private/Proxy network, please disable that and try accessing site again. Due to previously detected malicious behavior which originated from the network you're using, please request unblock to site. Incident ID: f127ebdb-dcyu-4280-b618-c3f967926a75 Please solve this CAPTCHA to request unblock to the website You reached this page when trying to acce",
    "items": []
   },
   "https://www.menoramivt.co.il/pension/independent-info": {
    "product": "פנסיה",
    "status": 200,
    "method": "requests",
-   "text_hash": "d679c18bb3595eccc7b54b9e8ebc56a3c5663b40",
-   "text_head": "Radware Captcha Page We apologize for the inconvenience... ...but your activity and behavior on this site made us think that you are a bot. Note: A number of things could be going on here. If you are attempting to access this site using an anonymous Private/Proxy network, please disable that and try accessing site again. Due to previously detected malicious behavior which originated from the network you're using, please request unblock to site. Incident ID: 8f5e2163-dcyu-46ee-b707-0ec5393f640a Please solve this CAPTCHA to request unblock to the website You reached this page when trying to acce",
+   "text_hash": "5832412ab239d997b87130451f1b51d33d85f4c9",
+   "text_head": "Radware Captcha Page We apologize for the inconvenience... ...but your activity and behavior on this site made us think that you are a bot. Note: A number of things could be going on here. If you are attempting to access this site using an anonymous Private/Proxy network, please disable that and try accessing site again. Due to previously detected malicious behavior which originated from the network you're using, please request unblock to site. Incident ID: faf42e27-dcyu-4d25-9f07-78d013cc1cc1 Please solve this CAPTCHA to request unblock to the website You reached this page when trying to acce",
    "items": []
   },
   "https://ds.menoramivt.co.il/pension-joining-eligibility/": {
@@ -4686,14 +4694,6 @@
    "text_head": "זכאות הצטרפות לפנסיה ללא טפסים דלג לתוכן הדף דלג לתוכן הדף ביטוחים חיסכון פנסיוני מנורה השקעות תביעות שירותים פעולות דברו איתנו | פורטלים ביטוחים ביטוח רכב ביטוח רכב לפי קילומטר ביטוח נהג חדש כיסוי לכל נהג ביטוח צד ג' לאופנוע ביטוח משאית ביטוח רכב אספנות ביטוח נסיעות לחו\"ל - Top Travel אפליקציית ביטוח נסיעות לחו\"ל - Menora ON ביטוח בריאות פרטי ביטוח בריאות קבוצתי ביטוח מחלות קשות ביטוח לעובדים זרים ותיירים ביטוח תאונות אישיות מנורה HUG - מרכז סיוע לקראת ניתוח ביטוח חיים פרטי ביטוח אובדן כושר עבודה ביטוח מטריה קבוצתית ביטוח לעסק ביטוח סייבר ביטוח הנדסי ביטוח משכנתא ביטוח דירה ביטוח בתים משותפים",
    "items": [
     {
-     "text": "✖",
-     "href": "https://ds.menoramivt.co.il/pension-joining-eligibility/",
-     "year": null,
-     "iframe": false,
-     "doc": false,
-     "internal": true
-    },
-    {
      "text": "שינוי מסלול השקעה - גמל",
      "href": "https://menoramivt.co.il/customer-login/?target=gemel-transfer-request",
      "year": null,
@@ -4702,24 +4702,16 @@
      "internal": true
     },
     {
+     "text": "קשרי משקיעים Investor Relations",
+     "href": "https://www.menoramivt.co.il/investor-relations",
+     "year": null,
+     "iframe": false,
+     "doc": false,
+     "internal": true
+    },
+    {
      "text": "קרנות פנסיה",
      "href": "https://www.menoramivt.co.il/links/pension/investment-routes-pension",
-     "year": null,
-     "iframe": false,
-     "doc": false,
-     "internal": true
-    },
-    {
-     "text": "קרנות השתלמות",
-     "href": "https://www.menoramivt.co.il/links/pension-and-gemel/gemel-hishtalmut-list/menroa-keren-hishtalmut",
-     "year": null,
-     "iframe": false,
-     "doc": false,
-     "internal": true
-    },
-    {
-     "text": "קרן פנסיה",
-     "href": "https://www.menoramivt.co.il/pension",
      "year": null,
      "iframe": false,
      "doc": false,
@@ -4798,6 +4790,22 @@
      "internal": true
     },
     {
+     "text": "פרישה דיגיטלית",
+     "href": "https://www.menoramivt.co.il/customer-login/?target=old-age-pension-claim",
+     "year": null,
+     "iframe": false,
+     "doc": false,
+     "internal": true
+    },
+    {
+     "text": "פנסיות זקנה, נכות ושארים",
+     "href": "https://www.menoramivt.co.il/wps-frame/mivtcalc",
+     "year": null,
+     "iframe": false,
+     "doc": false,
+     "internal": true
+    },
+    {
      "text": "פנסיה משלימה",
      "href": "https://www.menoramivt.co.il/pension/menora-pension-mashlima",
      "year": null,
@@ -4806,7 +4814,15 @@
      "internal": true
     },
     {
-     "text": "פנסיה לעצמאיים",
+     "text": "פנסיה מקיפה",
+     "href": "https://www.menoramivt.co.il/pension",
+     "year": null,
+     "iframe": false,
+     "doc": false,
+     "internal": true
+    },
+    {
+     "text": "פנסיה לעצמאים",
      "href": "https://www.menoramivt.co.il/pension/independent-info",
      "year": null,
      "iframe": false,
@@ -4910,8 +4926,8 @@
      "internal": true
     },
     {
-     "text": "מחשבון פנסיה",
-     "href": "https://www.menoramivt.co.il/wps-frame/mivtcalc",
+     "text": "מסלולי השקעה בקרן ההשתלמות",
+     "href": "https://www.menoramivt.co.il/links/pension-and-gemel/gemel-hishtalmut-list/menroa-keren-hishtalmut",
      "year": null,
      "iframe": false,
      "doc": false,
@@ -4958,6 +4974,14 @@
      "internal": true
     },
     {
+     "text": "הדוחות שלי",
+     "href": "https://www.menoramivt.co.il/personal/reports/?originSource=marketingSite",
+     "year": null,
+     "iframe": false,
+     "doc": false,
+     "internal": true
+    },
+    {
      "text": "דלג לתוכן הדף ביטוחים חיסכון פנסיוני מנורה השקעות תביעות שירותים פעולות דברו איתנו | פורטלים ביטוחים ביטוח רכב ביטוח רכב לפי קילומטר ביטוח נהג חדש כיסוי לכל נהג ביטוח צד ג' לאופנוע ביטוח משאית ביטוח ר",
      "href": "https://www.menoramivt.co.il/",
      "year": null,
@@ -4966,16 +4990,16 @@
      "internal": true
     },
     {
-     "text": "בקשת הלוואה מקרן השתלמות",
-     "href": "https://www.menoramivt.co.il/customer-login/?target=fund-loan",
+     "text": "דלג לתוכן הדף",
+     "href": "https://ds.menoramivt.co.il/pension-joining-eligibility/",
      "year": null,
      "iframe": false,
      "doc": false,
      "internal": true
     },
     {
-     "text": "בקשה לפנסיית פרישה",
-     "href": "https://www.menoramivt.co.il/customer-login/?target=old-age-pension-claim",
+     "text": "בקשת הלוואה מקרן השתלמות",
+     "href": "https://www.menoramivt.co.il/customer-login/?target=fund-loan",
      "year": null,
      "iframe": false,
      "doc": false,
@@ -5006,24 +5030,8 @@
      "internal": true
     },
     {
-     "text": "ארכיון פוליסות",
+     "text": "ארכיון פוליסות ותקנונים",
      "href": "https://www.menoramivt.co.il/policy/",
-     "year": null,
-     "iframe": false,
-     "doc": false,
-     "internal": true
-    },
-    {
-     "text": "אישור מס והצהרת הון",
-     "href": "https://www.menoramivt.co.il/personal/reports/?originSource=marketingSite",
-     "year": null,
-     "iframe": false,
-     "doc": false,
-     "internal": true
-    },
-    {
-     "text": "Investor Relations (EN)",
-     "href": "https://www.menoramivt.co.il/investor-relations",
      "year": null,
      "iframe": false,
      "doc": false,
@@ -5035,193 +5043,201 @@
    "product": "גמל",
    "status": 200,
    "method": "requests",
-   "text_hash": "4ffc9b35e274de183433f9a5e93a493deaf57c3d",
-   "text_head": "Radware Captcha Page We apologize for the inconvenience... ...but your activity and behavior on this site made us think that you are a bot. Note: A number of things could be going on here. If you are attempting to access this site using an anonymous Private/Proxy network, please disable that and try accessing site again. Due to previously detected malicious behavior which originated from the network you're using, please request unblock to site. Incident ID: 84c88d78-dcyu-462d-8b51-c597c0f379a8 Please solve this CAPTCHA to request unblock to the website You reached this page when trying to acce",
+   "text_hash": "be2c57da681df30ed91cf5702e0883627e8f949d",
+   "text_head": "Radware Captcha Page We apologize for the inconvenience... ...but your activity and behavior on this site made us think that you are a bot. Note: A number of things could be going on here. If you are attempting to access this site using an anonymous Private/Proxy network, please disable that and try accessing site again. Due to previously detected malicious behavior which originated from the network you're using, please request unblock to site. Incident ID: 35c98601-dcyu-4069-ab00-1bb8cfa99db4 Please solve this CAPTCHA to request unblock to the website You reached this page when trying to acce",
    "items": []
   },
   "https://www.menoramivt.co.il/general/gemel-payments": {
    "product": "גמל",
    "status": 200,
    "method": "requests",
-   "text_hash": "1e8675f1238c685073bddc020166412ac137e590",
-   "text_head": "Radware Captcha Page We apologize for the inconvenience... ...but your activity and behavior on this site made us think that you are a bot. Note: A number of things could be going on here. If you are attempting to access this site using an anonymous Private/Proxy network, please disable that and try accessing site again. Due to previously detected malicious behavior which originated from the network you're using, please request unblock to site. Incident ID: 5c60683f-dcyu-4c99-befd-b40e94f0f194 Please solve this CAPTCHA to request unblock to the website You reached this page when trying to acce",
+   "text_hash": "adc5692bb13b8db788b0879f941ff4a9217f7966",
+   "text_head": "Radware Captcha Page We apologize for the inconvenience... ...but your activity and behavior on this site made us think that you are a bot. Note: A number of things could be going on here. If you are attempting to access this site using an anonymous Private/Proxy network, please disable that and try accessing site again. Due to previously detected malicious behavior which originated from the network you're using, please request unblock to site. Incident ID: cae9cd9e-dcyu-4d77-8f67-e86920278386 Please solve this CAPTCHA to request unblock to the website You reached this page when trying to acce",
    "items": []
   },
   "https://www.menoramivt.co.il/product/gemel-invest": {
    "product": "גמל",
    "status": 200,
    "method": "requests",
-   "text_hash": "13b8c76fa2b53211f5eeae0c0038ec194c8dc23c",
-   "text_head": "Radware Captcha Page We apologize for the inconvenience... ...but your activity and behavior on this site made us think that you are a bot. Note: A number of things could be going on here. If you are attempting to access this site using an anonymous Private/Proxy network, please disable that and try accessing site again. Due to previously detected malicious behavior which originated from the network you're using, please request unblock to site. Incident ID: 8c637978-dcyu-484c-80fc-7125b9b8ecfa Please solve this CAPTCHA to request unblock to the website You reached this page when trying to acce",
+   "text_hash": "0b14facb68635579976166c335545a06be5980bd",
+   "text_head": "Radware Captcha Page We apologize for the inconvenience... ...but your activity and behavior on this site made us think that you are a bot. Note: A number of things could be going on here. If you are attempting to access this site using an anonymous Private/Proxy network, please disable that and try accessing site again. Due to previously detected malicious behavior which originated from the network you're using, please request unblock to site. Incident ID: 8947e82b-dcyu-408c-ba7d-c0943dc473f6 Please solve this CAPTCHA to request unblock to the website You reached this page when trying to acce",
    "items": []
   },
   "https://www.menoramivt.co.il/product/keren-hishtalmut": {
    "product": null,
    "status": 200,
    "method": "requests",
-   "text_hash": "9b4d243f72e333cb0abb4d19406d9dc53ca2024a",
-   "text_head": "Radware Captcha Page We apologize for the inconvenience... ...but your activity and behavior on this site made us think that you are a bot. Note: A number of things could be going on here. If you are attempting to access this site using an anonymous Private/Proxy network, please disable that and try accessing site again. Due to previously detected malicious behavior which originated from the network you're using, please request unblock to site. Incident ID: 0d86f3fb-dcyu-4421-ae62-d70b099f8e09 Please solve this CAPTCHA to request unblock to the website You reached this page when trying to acce",
+   "text_hash": "97b3de2a82971cc7e2cd03368da43d3f8d299751",
+   "text_head": "Radware Captcha Page We apologize for the inconvenience... ...but your activity and behavior on this site made us think that you are a bot. Note: A number of things could be going on here. If you are attempting to access this site using an anonymous Private/Proxy network, please disable that and try accessing site again. Due to previously detected malicious behavior which originated from the network you're using, please request unblock to site. Incident ID: 866f21a1-dcyu-4ab4-b406-d06b58f6ccfd Please solve this CAPTCHA to request unblock to the website You reached this page when trying to acce",
    "items": []
   },
   "https://www.menoramivt.co.il/joining-gml/?process=eduFundEmployee&utm_source=website&utm_medium=banner&utm_campaign=product_page&utm_term=hishtalmut_shci": {
    "product": null,
    "status": 200,
    "method": "requests",
-   "text_hash": "d30e3420a9baa55c515260693002c99f034a6cca",
-   "text_head": "Radware Captcha Page We apologize for the inconvenience... ...but your activity and behavior on this site made us think that you are a bot. Note: A number of things could be going on here. If you are attempting to access this site using an anonymous Private/Proxy network, please disable that and try accessing site again. Due to previously detected malicious behavior which originated from the network you're using, please request unblock to site. Incident ID: 185ba0aa-dcyu-4110-9373-3d6b86843266 Please solve this CAPTCHA to request unblock to the website You reached this page when trying to acce",
+   "text_hash": "1e9674e9420d0d9bfe4d612e7faa5e012829f550",
+   "text_head": "Radware Captcha Page We apologize for the inconvenience... ...but your activity and behavior on this site made us think that you are a bot. Note: A number of things could be going on here. If you are attempting to access this site using an anonymous Private/Proxy network, please disable that and try accessing site again. Due to previously detected malicious behavior which originated from the network you're using, please request unblock to site. Incident ID: 47fc54e9-dcyu-471e-b73a-9fa71b76e67d Please solve this CAPTCHA to request unblock to the website You reached this page when trying to acce",
    "items": []
   },
   "https://www.menoramivt.co.il/joining-gml/?process=eduFund&linkId=93643a881b3a02dba51ef124f3f68bd53ab735b2d97eaed348&utm_source=website&utm_medium=banner&utm_campaign=product_page&utm_term=hishtalmut": {
    "product": null,
    "status": 200,
    "method": "requests",
-   "text_hash": "dbde6c7864046c24093d7c0657584f0c53eaa48c",
-   "text_head": "Radware Captcha Page We apologize for the inconvenience... ...but your activity and behavior on this site made us think that you are a bot. Note: A number of things could be going on here. If you are attempting to access this site using an anonymous Private/Proxy network, please disable that and try accessing site again. Due to previously detected malicious behavior which originated from the network you're using, please request unblock to site. Incident ID: 1b97ecac-dcyu-4d95-baa1-420fbe14b752 Please solve this CAPTCHA to request unblock to the website You reached this page when trying to acce",
+   "text_hash": "fd57c9666ab9ce992e69d38686c2331b46564fd6",
+   "text_head": "Radware Captcha Page We apologize for the inconvenience... ...but your activity and behavior on this site made us think that you are a bot. Note: A number of things could be going on here. If you are attempting to access this site using an anonymous Private/Proxy network, please disable that and try accessing site again. Due to previously detected malicious behavior which originated from the network you're using, please request unblock to site. Incident ID: c1c9407d-dcyu-4338-bcad-a50e07f789ec Please solve this CAPTCHA to request unblock to the website You reached this page when trying to acce",
    "items": []
   },
   "https://www.menoramivt.co.il/links/keren-hishtalmut/omega-fund": {
    "product": null,
    "status": 200,
    "method": "requests",
-   "text_hash": "f8bb9799b70706b47ed519f167dca885e4137646",
-   "text_head": "Radware Captcha Page We apologize for the inconvenience... ...but your activity and behavior on this site made us think that you are a bot. Note: A number of things could be going on here. If you are attempting to access this site using an anonymous Private/Proxy network, please disable that and try accessing site again. Due to previously detected malicious behavior which originated from the network you're using, please request unblock to site. Incident ID: 575470d7-dcyu-4747-8a5b-9678f65adc28 Please solve this CAPTCHA to request unblock to the website You reached this page when trying to acce",
+   "text_hash": "e5411f44a783376b096c7a83afe05a5297bda572",
+   "text_head": "Radware Captcha Page We apologize for the inconvenience... ...but your activity and behavior on this site made us think that you are a bot. Note: A number of things could be going on here. If you are attempting to access this site using an anonymous Private/Proxy network, please disable that and try accessing site again. Due to previously detected malicious behavior which originated from the network you're using, please request unblock to site. Incident ID: ca7b9d22-dcyu-4271-b59a-1ea20bfa4523 Please solve this CAPTCHA to request unblock to the website You reached this page when trying to acce",
    "items": []
   },
   "https://www.menoramivt.co.il/customer-login/?target=old-age-pension-claim": {
    "product": "פנסיה",
    "status": 200,
    "method": "requests",
-   "text_hash": "5ae84c4b84537ece128c590127f014d8a0a531eb",
-   "text_head": "Radware Captcha Page We apologize for the inconvenience... ...but your activity and behavior on this site made us think that you are a bot. Note: A number of things could be going on here. If you are attempting to access this site using an anonymous Private/Proxy network, please disable that and try accessing site again. Due to previously detected malicious behavior which originated from the network you're using, please request unblock to site. Incident ID: 770ad09c-dcyu-4078-b9c2-69186192c09d Please solve this CAPTCHA to request unblock to the website You reached this page when trying to acce",
+   "text_hash": "0d4b15e228b109629915e1c84a6fa7b2817735fd",
+   "text_head": "Radware Captcha Page We apologize for the inconvenience... ...but your activity and behavior on this site made us think that you are a bot. Note: A number of things could be going on here. If you are attempting to access this site using an anonymous Private/Proxy network, please disable that and try accessing site again. Due to previously detected malicious behavior which originated from the network you're using, please request unblock to site. Incident ID: 4dd20e8c-dcyu-405c-a820-10d505a7623e Please solve this CAPTCHA to request unblock to the website You reached this page when trying to acce",
    "items": []
   },
   "https://www.menoramivt.co.il/list/pension-member-info/retirement-investment-tracks": {
    "product": "פנסיה",
    "status": 200,
    "method": "requests",
-   "text_hash": "81c02bc8a3aa3d801481402e27279f0b41ac01ad",
-   "text_head": "Radware Captcha Page We apologize for the inconvenience... ...but your activity and behavior on this site made us think that you are a bot. Note: A number of things could be going on here. If you are attempting to access this site using an anonymous Private/Proxy network, please disable that and try accessing site again. Due to previously detected malicious behavior which originated from the network you're using, please request unblock to site. Incident ID: 917b536e-dcyu-4dcd-9ae1-9fb91e31e01a Please solve this CAPTCHA to request unblock to the website You reached this page when trying to acce",
+   "text_hash": "2024f9c993045741e20dc32991aff4233cc589bb",
+   "text_head": "Radware Captcha Page We apologize for the inconvenience... ...but your activity and behavior on this site made us think that you are a bot. Note: A number of things could be going on here. If you are attempting to access this site using an anonymous Private/Proxy network, please disable that and try accessing site again. Due to previously detected malicious behavior which originated from the network you're using, please request unblock to site. Incident ID: 301283bc-dcyu-46cc-9ab7-71b10ee7911f Please solve this CAPTCHA to request unblock to the website You reached this page when trying to acce",
    "items": []
   },
   "https://www.menoramivt.co.il/links/pension-and-gemel/gemel-hishtalmut-list/menroa-keren-hishtalmut": {
    "product": "פנסיה+גמל",
    "status": 200,
    "method": "requests",
-   "text_hash": "ec4eb942108ecae51fbfcd9996df32544815cdb0",
-   "text_head": "Radware Captcha Page We apologize for the inconvenience... ...but your activity and behavior on this site made us think that you are a bot. Note: A number of things could be going on here. If you are attempting to access this site using an anonymous Private/Proxy network, please disable that and try accessing site again. Due to previously detected malicious behavior which originated from the network you're using, please request unblock to site. Incident ID: ab395fab-dcyu-44cb-a300-cc9f3034fd59 Please solve this CAPTCHA to request unblock to the website You reached this page when trying to acce",
+   "text_hash": "ce6725855dc1cf03491ac576598bd751460e367a",
+   "text_head": "Radware Captcha Page We apologize for the inconvenience... ...but your activity and behavior on this site made us think that you are a bot. Note: A number of things could be going on here. If you are attempting to access this site using an anonymous Private/Proxy network, please disable that and try accessing site again. Due to previously detected malicious behavior which originated from the network you're using, please request unblock to site. Incident ID: acb49739-dcyu-4c30-8670-dbf0f8689b9a Please solve this CAPTCHA to request unblock to the website You reached this page when trying to acce",
    "items": []
   },
   "https://www.menoramivt.co.il/links/pension/investment-routes-pension": {
    "product": "פנסיה",
    "status": 200,
    "method": "requests",
-   "text_hash": "c65f0db741f4dfff40a53d03b87cd3577afa56dd",
-   "text_head": "Radware Captcha Page We apologize for the inconvenience... ...but your activity and behavior on this site made us think that you are a bot. Note: A number of things could be going on here. If you are attempting to access this site using an anonymous Private/Proxy network, please disable that and try accessing site again. Due to previously detected malicious behavior which originated from the network you're using, please request unblock to site. Incident ID: 0fa9fab3-dcyu-4e55-bbfd-e6cc756fec21 Please solve this CAPTCHA to request unblock to the website You reached this page when trying to acce",
+   "text_hash": "58da09ff86854e554bed59c1359c0685cd4768be",
+   "text_head": "Radware Captcha Page We apologize for the inconvenience... ...but your activity and behavior on this site made us think that you are a bot. Note: A number of things could be going on here. If you are attempting to access this site using an anonymous Private/Proxy network, please disable that and try accessing site again. Due to previously detected malicious behavior which originated from the network you're using, please request unblock to site. Incident ID: bc76a2a5-dcyu-4649-9578-a33867b4f19d Please solve this CAPTCHA to request unblock to the website You reached this page when trying to acce",
    "items": []
   },
   "https://www.menoramivt.co.il/links/pension-and-gemel/gemel-hishtalmut-list/list-top-savings": {
    "product": "פנסיה+גמל",
    "status": 200,
    "method": "requests",
-   "text_hash": "469f4d5ef63882baf9bd088a67011ac8054a2c14",
-   "text_head": "Radware Captcha Page We apologize for the inconvenience... ...but your activity and behavior on this site made us think that you are a bot. Note: A number of things could be going on here. If you are attempting to access this site using an anonymous Private/Proxy network, please disable that and try accessing site again. Due to previously detected malicious behavior which originated from the network you're using, please request unblock to site. Incident ID: 173eedf6-dcyu-48b6-8da5-1b8f38a13e78 Please solve this CAPTCHA to request unblock to the website You reached this page when trying to acce",
+   "text_hash": "8ba93149656924732de36a06cd4054eddc86ebd0",
+   "text_head": "Radware Captcha Page We apologize for the inconvenience... ...but your activity and behavior on this site made us think that you are a bot. Note: A number of things could be going on here. If you are attempting to access this site using an anonymous Private/Proxy network, please disable that and try accessing site again. Due to previously detected malicious behavior which originated from the network you're using, please request unblock to site. Incident ID: 6076314c-dcyu-486a-a2ed-9d2fdb0a508f Please solve this CAPTCHA to request unblock to the website You reached this page when trying to acce",
    "items": []
   },
   "https://www.menoramivt.co.il/product/pension-claim-list": {
    "product": "פנסיה",
    "status": 200,
    "method": "requests",
-   "text_hash": "61bfd0ccacf7cd1d3aa99e48359eed0631698d6d",
-   "text_head": "Radware Captcha Page We apologize for the inconvenience... ...but your activity and behavior on this site made us think that you are a bot. Note: A number of things could be going on here. If you are attempting to access this site using an anonymous Private/Proxy network, please disable that and try accessing site again. Due to previously detected malicious behavior which originated from the network you're using, please request unblock to site. Incident ID: 0f373cb1-dcyu-4cae-b2f3-bd6541c9b77b Please solve this CAPTCHA to request unblock to the website You reached this page when trying to acce",
+   "text_hash": "7c3819ac55b96e20b92088451fb20005948ada96",
+   "text_head": "Radware Captcha Page We apologize for the inconvenience... ...but your activity and behavior on this site made us think that you are a bot. Note: A number of things could be going on here. If you are attempting to access this site using an anonymous Private/Proxy network, please disable that and try accessing site again. Due to previously detected malicious behavior which originated from the network you're using, please request unblock to site. Incident ID: 9453e38b-dcyu-4c5f-bb49-b5526729a529 Please solve this CAPTCHA to request unblock to the website You reached this page when trying to acce",
    "items": []
   },
   "https://www.menoramivt.co.il/wps-frame/mivtcalc": {
    "product": null,
    "status": 200,
    "method": "requests",
-   "text_hash": "f227095081332028d21df301e626481835f33c54",
-   "text_head": "Radware Captcha Page We apologize for the inconvenience... ...but your activity and behavior on this site made us think that you are a bot. Note: A number of things could be going on here. If you are attempting to access this site using an anonymous Private/Proxy network, please disable that and try accessing site again. Due to previously detected malicious behavior which originated from the network you're using, please request unblock to site. Incident ID: 02e4aab7-dcyu-4125-97a3-4c25ead675d2 Please solve this CAPTCHA to request unblock to the website You reached this page when trying to acce",
+   "text_hash": "493e7765acacddbafc04247c4033051390928350",
+   "text_head": "Radware Captcha Page We apologize for the inconvenience... ...but your activity and behavior on this site made us think that you are a bot. Note: A number of things could be going on here. If you are attempting to access this site using an anonymous Private/Proxy network, please disable that and try accessing site again. Due to previously detected malicious behavior which originated from the network you're using, please request unblock to site. Incident ID: a7d73543-dcyu-4001-8ae5-bbda53becdb2 Please solve this CAPTCHA to request unblock to the website You reached this page when trying to acce",
    "items": []
   },
   "https://www.menoramivt.co.il/customer-login/?target=one-time-deposit-gml&originSource=marketingSite": {
    "product": null,
    "status": 200,
    "method": "requests",
-   "text_hash": "3b5b9185f6d69e82c00230f1318c61677fb53d05",
-   "text_head": "Radware Captcha Page We apologize for the inconvenience... ...but your activity and behavior on this site made us think that you are a bot. Note: A number of things could be going on here. If you are attempting to access this site using an anonymous Private/Proxy network, please disable that and try accessing site again. Due to previously detected malicious behavior which originated from the network you're using, please request unblock to site. Incident ID: bca0bd1c-dcyu-452b-bccd-261edc399219 Please solve this CAPTCHA to request unblock to the website You reached this page when trying to acce",
+   "text_hash": "e25fdbbdf79f4ec69c50d29481e23b9dc71f9011",
+   "text_head": "Radware Captcha Page We apologize for the inconvenience... ...but your activity and behavior on this site made us think that you are a bot. Note: A number of things could be going on here. If you are attempting to access this site using an anonymous Private/Proxy network, please disable that and try accessing site again. Due to previously detected malicious behavior which originated from the network you're using, please request unblock to site. Incident ID: b51b2a69-dcyu-4d9c-8da5-b4e28450ff42 Please solve this CAPTCHA to request unblock to the website You reached this page when trying to acce",
    "items": []
   },
   "https://www.menoramivt.co.il/customer-login/?target=digital-loans-pension&originSource=marketingSite": {
    "product": "פנסיה",
    "status": 200,
    "method": "requests",
-   "text_hash": "c97c2cff7bc887206c3b1d2015467fe96669f2d7",
-   "text_head": "Radware Captcha Page We apologize for the inconvenience... ...but your activity and behavior on this site made us think that you are a bot. Note: A number of things could be going on here. If you are attempting to access this site using an anonymous Private/Proxy network, please disable that and try accessing site again. Due to previously detected malicious behavior which originated from the network you're using, please request unblock to site. Incident ID: de7e84bd-dcyu-48b1-a560-57953a1a177e Please solve this CAPTCHA to request unblock to the website You reached this page when trying to acce",
+   "text_hash": "2e6c82383f8c0cc76bb3b6574dc62740fe271967",
+   "text_head": "Radware Captcha Page We apologize for the inconvenience... ...but your activity and behavior on this site made us think that you are a bot. Note: A number of things could be going on here. If you are attempting to access this site using an anonymous Private/Proxy network, please disable that and try accessing site again. Due to previously detected malicious behavior which originated from the network you're using, please request unblock to site. Incident ID: ccdd6584-dcyu-4ffc-b64a-dc596de0f404 Please solve this CAPTCHA to request unblock to the website You reached this page when trying to acce",
    "items": []
   },
   "https://www.menoramivt.co.il/customer-login/?target=digital-loans-gemel&originSource=marketingSite": {
    "product": "גמל",
    "status": 200,
    "method": "requests",
-   "text_hash": "0ccfb30cc252d9b1dab2b469bc679fbc17009709",
-   "text_head": "Radware Captcha Page We apologize for the inconvenience... ...but your activity and behavior on this site made us think that you are a bot. Note: A number of things could be going on here. If you are attempting to access this site using an anonymous Private/Proxy network, please disable that and try accessing site again. Due to previously detected malicious behavior which originated from the network you're using, please request unblock to site. Incident ID: 8543739e-dcyu-4534-9e36-1626331b3508 Please solve this CAPTCHA to request unblock to the website You reached this page when trying to acce",
+   "text_hash": "a1c2ac54f743f677b81837d7c4fd83e443501eab",
+   "text_head": "Radware Captcha Page We apologize for the inconvenience... ...but your activity and behavior on this site made us think that you are a bot. Note: A number of things could be going on here. If you are attempting to access this site using an anonymous Private/Proxy network, please disable that and try accessing site again. Due to previously detected malicious behavior which originated from the network you're using, please request unblock to site. Incident ID: 527dba83-dcyu-4dc0-9eaf-ed97e59b1e62 Please solve this CAPTCHA to request unblock to the website You reached this page when trying to acce",
    "items": []
   },
   "https://www.menoramivt.co.il/customer-login/?target=digital-loans-gemel-recycle&originSource=marketingSite": {
    "product": "גמל",
    "status": 200,
    "method": "requests",
-   "text_hash": "a42b22faffbd03a43b25998b3da1012f3eba0ae7",
-   "text_head": "Radware Captcha Page We apologize for the inconvenience... ...but your activity and behavior on this site made us think that you are a bot. Note: A number of things could be going on here. If you are attempting to access this site using an anonymous Private/Proxy network, please disable that and try accessing site again. Due to previously detected malicious behavior which originated from the network you're using, please request unblock to site. Incident ID: 5665d7f1-dcyu-4b3f-a26f-04713001ef49 Please solve this CAPTCHA to request unblock to the website You reached this page when trying to acce",
+   "text_hash": "a2d7d5c0563a732d1c9cae1476da1348896d4413",
+   "text_head": "Radware Captcha Page We apologize for the inconvenience... ...but your activity and behavior on this site made us think that you are a bot. Note: A number of things could be going on here. If you are attempting to access this site using an anonymous Private/Proxy network, please disable that and try accessing site again. Due to previously detected malicious behavior which originated from the network you're using, please request unblock to site. Incident ID: 8a634b3b-dcyu-43c0-a295-d215d2540d38 Please solve this CAPTCHA to request unblock to the website You reached this page when trying to acce",
    "items": []
   },
   "https://www.menoramivt.co.il/customer-login/?target=gemel-transfer-request&originSource=marketingSite": {
    "product": "גמל",
    "status": 200,
    "method": "requests",
-   "text_hash": "2b3bf62f9576eb2ffd0f57da142f2f00eab6713c",
-   "text_head": "Radware Captcha Page We apologize for the inconvenience... ...but your activity and behavior on this site made us think that you are a bot. Note: A number of things could be going on here. If you are attempting to access this site using an anonymous Private/Proxy network, please disable that and try accessing site again. Due to previously detected malicious behavior which originated from the network you're using, please request unblock to site. Incident ID: 34fc399e-dcyu-4846-86d9-b3ba7826ec9b Please solve this CAPTCHA to request unblock to the website You reached this page when trying to acce",
+   "text_hash": "ddf288e55e71aa10738180335f5fa02b4087cbbf",
+   "text_head": "Radware Captcha Page We apologize for the inconvenience... ...but your activity and behavior on this site made us think that you are a bot. Note: A number of things could be going on here. If you are attempting to access this site using an anonymous Private/Proxy network, please disable that and try accessing site again. Due to previously detected malicious behavior which originated from the network you're using, please request unblock to site. Incident ID: 169f22a4-dcyu-4381-a6ed-d0afad8dca28 Please solve this CAPTCHA to request unblock to the website You reached this page when trying to acce",
    "items": []
   },
   "https://www.menoramivt.co.il/customer-login/?target=pension-investment-update&originSource=marketingSite": {
    "product": "פנסיה",
    "status": 200,
    "method": "requests",
-   "text_hash": "eb08f9043beaa78f895da455ab4c1083e30b1f55",
-   "text_head": "Radware Captcha Page We apologize for the inconvenience... ...but your activity and behavior on this site made us think that you are a bot. Note: A number of things could be going on here. If you are attempting to access this site using an anonymous Private/Proxy network, please disable that and try accessing site again. Due to previously detected malicious behavior which originated from the network you're using, please request unblock to site. Incident ID: 84b795df-dcyu-4194-885d-cf7ce271d287 Please solve this CAPTCHA to request unblock to the website You reached this page when trying to acce",
+   "text_hash": "ae4bd094295579418c43db55f59ce8f2990e9ece",
+   "text_head": "Radware Captcha Page We apologize for the inconvenience... ...but your activity and behavior on this site made us think that you are a bot. Note: A number of things could be going on here. If you are attempting to access this site using an anonymous Private/Proxy network, please disable that and try accessing site again. Due to previously detected malicious behavior which originated from the network you're using, please request unblock to site. Incident ID: 5168291e-dcyu-4c4b-8a28-ebfb8cbd6d17 Please solve this CAPTCHA to request unblock to the website You reached this page when trying to acce",
    "items": []
   },
   "https://www.menoramivt.co.il/customer-login/?target=pension-redemption&originSource=marketingSite": {
    "product": "פנסיה",
    "status": 200,
    "method": "requests",
-   "text_hash": "043bcac4e68ebf58a43c9561affa747a0d34be66",
-   "text_head": "Radware Captcha Page We apologize for the inconvenience... ...but your activity and behavior on this site made us think that you are a bot. Note: A number of things could be going on here. If you are attempting to access this site using an anonymous Private/Proxy network, please disable that and try accessing site again. Due to previously detected malicious behavior which originated from the network you're using, please request unblock to site. Incident ID: 3e556fed-dcyu-403f-9853-050ceac32a84 Please solve this CAPTCHA to request unblock to the website You reached this page when trying to acce",
+   "text_hash": "8b8d16b7b19609f2a18cdd726fc66fc1dbdbd83d",
+   "text_head": "Radware Captcha Page We apologize for the inconvenience... ...but your activity and behavior on this site made us think that you are a bot. Note: A number of things could be going on here. If you are attempting to access this site using an anonymous Private/Proxy network, please disable that and try accessing site again. Due to previously detected malicious behavior which originated from the network you're using, please request unblock to site. Incident ID: 215f0523-dcyu-4558-9327-705c564a4116 Please solve this CAPTCHA to request unblock to the website You reached this page when trying to acce",
    "items": []
   },
   "https://www.menoramivt.co.il/customer-login/?target=fund-redemption-keren&originSource=marketingSite": {
    "product": null,
    "status": 200,
    "method": "requests",
-   "text_hash": "6f2404561dd89c7c46d57f9ad0b1721ad9501ee7",
-   "text_head": "Radware Captcha Page We apologize for the inconvenience... ...but your activity and behavior on this site made us think that you are a bot. Note: A number of things could be going on here. If you are attempting to access this site using an anonymous Private/Proxy network, please disable that and try accessing site again. Due to previously detected malicious behavior which originated from the network you're using, please request unblock to site. Incident ID: e785087c-dcyu-47b5-9b69-04bac3eb63ae Please solve this CAPTCHA to request unblock to the website You reached this page when trying to acce",
+   "text_hash": "b0fee587c6fc709e3cff09d0f1c2dffd46322150",
+   "text_head": "Radware Captcha Page We apologize for the inconvenience... ...but your activity and behavior on this site made us think that you are a bot. Note: A number of things could be going on here. If you are attempting to access this site using an anonymous Private/Proxy network, please disable that and try accessing site again. Due to previously detected malicious behavior which originated from the network you're using, please request unblock to site. Incident ID: 53a63dd1-dcyu-4b67-840c-56734f0c0b98 Please solve this CAPTCHA to request unblock to the website You reached this page when trying to acce",
    "items": []
   },
   "https://www.menoramivt.co.il/customer-login/?target=fund-redemption-gemel&originSource=marketingSite": {
    "product": "גמל",
    "status": 200,
    "method": "requests",
-   "text_hash": "8fb5076f7b7126e7b43911e1731a59295ab36de5",
-   "text_head": "Radware Captcha Page We apologize for the inconvenience... ...but your activity and behavior on this site made us think that you are a bot. Note: A number of things could be going on here. If you are attempting to access this site using an anonymous Private/Proxy network, please disable that and try accessing site again. Due to previously detected malicious behavior which originated from the network you're using, please request unblock to site. Incident ID: a67020e9-dcyu-43d3-8e4d-1ae1ff203e07 Please solve this CAPTCHA to request unblock to the website You reached this page when trying to acce",
+   "text_hash": "67845347fe62e6ec413792a6e87710c760992402",
+   "text_head": "Radware Captcha Page We apologize for the inconvenience... ...but your activity and behavior on this site made us think that you are a bot. Note: A number of things could be going on here. If you are attempting to access this site using an anonymous Private/Proxy network, please disable that and try accessing site again. Due to previously detected malicious behavior which originated from the network you're using, please request unblock to site. Incident ID: 5daf32e7-dcyu-4237-a228-9d3d511a1bc0 Please solve this CAPTCHA to request unblock to the website You reached this page when trying to acce",
    "items": []
   },
   "https://www.menoramivt.co.il/investor-relations": {
    "product": null,
    "status": 200,
    "method": "browser",
-   "text_hash": "8b5a71605011b5474cc399aeccbd5844c12b3ce0",
-   "text_head": "דלג לתוכן הדף Home Our Company Corporate Structure Financial Reports Immediate Releases Presentations Press Release Contact Us Press Coverage Analysts Coverage Menora Mivtachim Investor Relations (IR) Hey investors! Welcome to Menora Welcome to Menora TLV: MMHD.TA 511.8 NIS -0.93% 15 minutes minimum delay | October 05, 2026 | 11:43 AM Company Profile Menora Mivtachim Holdings Ltd. is one of the five largest insurance and financial groups in Israel, and manages the largest pension fund in Israel - \"Menora Mivtachim Pension\". The group specializes in managing clients and Planholder funds. Read M",
+   "text_hash": "8f12bf0eb321565c1a5d7d482df106c04cc92bb8",
+   "text_head": "דלג לתוכן הדף Home Our Company Corporate Structure Financial Reports Immediate Releases Presentations Press Release Contact Us Press Coverage Analysts Coverage Menora Mivtachim Investor Relations (IR) Hey investors! Welcome to Menora Welcome to Menora TLV: MMHD.TA 520.1 NIS +0.68% 15 minutes minimum delay | October 05, 2026 | 2:29 PM Company Profile Menora Mivtachim Holdings Ltd. is one of the five largest insurance and financial groups in Israel, and manages the largest pension fund in Israel - \"Menora Mivtachim Pension\". The group specializes in managing clients and Planholder funds. Read Mo",
    "items": [
+    {
+     "text": "Menora Mivtachim Holdings About Investors Procedure Major Shareholders Board and Senior Management ESG ESG",
+     "href": "https://cdn.menoramivt.co.il/public/docs/20240331/esg-report-2021-22022.pdf",
+     "year": "2024",
+     "iframe": false,
+     "doc": true,
+     "internal": true
+    },
     {
      "text": "Immediate Releases Read More",
      "href": "https://maya.tase.co.il/en/reports/companies?fromDate=2024-01-01&toDate=2025-02-25&isPriority=false&isTradeHalt=false&by=company&companyId=566&company%5Btype%5D=COMPANY&company%5Bkey%5D=566&company%5Bvalue%5D=MENORA%20MIVTACHIM%20HOLDINGS%20LTD&eventsFamilyIds=200,100,300,400,1100,1400,500,1300,600,1600,1200,700,1500,900",
@@ -5231,24 +5247,16 @@
      "internal": false
     },
     {
-     "text": "(html)",
-     "href": "https://cdn.menoramivt.co.il/public/docs/20240331/esg-report-2021-22022.pdf",
-     "year": "2024",
-     "iframe": false,
-     "doc": true,
-     "internal": true
-    },
-    {
-     "text": "Privacy Policy",
-     "href": "https://www.menoramivt.co.il/general/privacy-policy-page",
+     "text": "דלג לתוכן הדף",
+     "href": "https://www.menoramivt.co.il/investor-relations",
      "year": null,
      "iframe": false,
      "doc": false,
      "internal": true
     },
     {
-     "text": "Press Release",
-     "href": "https://www.menoramivt.co.il/investor-relations",
+     "text": "Privacy Policy",
+     "href": "https://www.menoramivt.co.il/general/privacy-policy-page",
      "year": null,
      "iframe": false,
      "doc": false,
@@ -5348,24 +5356,16 @@
    "product": null,
    "status": 200,
    "method": "requests",
-   "text_hash": "d02b397aca2ec5215b7a0cd08460019fbb46bbb2",
-   "text_head": "Radware Captcha Page We apologize for the inconvenience... ...but your activity and behavior on this site made us think that you are a bot. Note: A number of things could be going on here. If you are attempting to access this site using an anonymous Private/Proxy network, please disable that and try accessing site again. Due to previously detected malicious behavior which originated from the network you're using, please request unblock to site. Incident ID: d804b11e-dcyu-4904-be84-d2555dbe3594 Please solve this CAPTCHA to request unblock to the website You reached this page when trying to acce",
+   "text_hash": "2339114a7be226071d25c786707a0996393c8bdb",
+   "text_head": "Radware Captcha Page We apologize for the inconvenience... ...but your activity and behavior on this site made us think that you are a bot. Note: A number of things could be going on here. If you are attempting to access this site using an anonymous Private/Proxy network, please disable that and try accessing site again. Due to previously detected malicious behavior which originated from the network you're using, please request unblock to site. Incident ID: 38fa53ff-dcyu-46f4-ae33-eb21fe00965e Please solve this CAPTCHA to request unblock to the website You reached this page when trying to acce",
    "items": []
   },
   "https://menoramivt.co.il/customer-login/?target=gemel-transfer-request": {
    "product": "גמל",
    "status": 200,
    "method": "requests",
-   "text_hash": "0c574b9fe09d248061b579976ba4d59e59f7b57e",
-   "text_head": "Radware Captcha Page We apologize for the inconvenience... ...but your activity and behavior on this site made us think that you are a bot. Note: A number of things could be going on here. If you are attempting to access this site using an anonymous Private/Proxy network, please disable that and try accessing site again. Due to previously detected malicious behavior which originated from the network you're using, please request unblock to site. Incident ID: a5e827ea-dcyu-48dd-9b5f-d06729c00332 Please solve this CAPTCHA to request unblock to the website You reached this page when trying to acce",
-   "items": []
-  },
-  "https://www.menoramivt.co.il/": {
-   "product": null,
-   "status": 200,
-   "method": "requests",
-   "text_hash": "596803100f2b50612c412edadc3de21d5c165314",
-   "text_head": "Radware Captcha Page We apologize for the inconvenience... ...but your activity and behavior on this site made us think that you are a bot. Note: A number of things could be going on here. If you are attempting to access this site using an anonymous Private/Proxy network, please disable that and try accessing site again. Due to previously detected malicious behavior which originated from the network you're using, please request unblock to site. Incident ID: 5c99313f-dcyu-47f4-be29-8b12ace8cf5f Please solve this CAPTCHA to request unblock to the website You reached this page when trying to acce",
+   "text_hash": "1f5886c79bea26e0cdbcaf903ee8da9668080db3",
+   "text_head": "Radware Captcha Page We apologize for the inconvenience... ...but your activity and behavior on this site made us think that you are a bot. Note: A number of things could be going on here. If you are attempting to access this site using an anonymous Private/Proxy network, please disable that and try accessing site again. Due to previously detected malicious behavior which originated from the network you're using, please request unblock to site. Incident ID: 96d6a55c-dcyu-4484-8b7a-68c926de3cf8 Please solve this CAPTCHA to request unblock to the website You reached this page when trying to acce",
    "items": []
   },
   "https://marketing.menoramivt.co.il/pension_manyot?utm_source=website&utm_medium=main_banner_website&utm_campaign=main_banner_website": {
