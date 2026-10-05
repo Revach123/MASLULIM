@@ -111,6 +111,35 @@ FILE_RX = re.compile(r"""["'(=\s]((?:https?:)?[\w\-./%:?=&~א-ת]+?\.(?:xlsx|xls
 FILE_URL_RX = re.compile(r"""(https?://[\w.\-]+/[^"<>\s\\]*?\.(?:xlsx|xls|pdf|docx))(?![\w])""", re.I)
 
 
+def json_file_labels(body):
+    """{שם קובץ: הטקסט שהאתר מציג לו} מתוך תגובת JSON: לכל אובייקט שמחזיק נתיב קובץ - שאר שדות הטקסט הקצרים
+    באותו אובייקט (title/name/description/date), בלי כתובות ומזהים. רשימות קבצים שנטענות ב-XHR (הראל) כך מקבלות
+    את הכותרת הגלויה במקום התווית הטכנית "(xhr)"."""
+    try:
+        data = json.loads(body)
+    except Exception:
+        return {}
+    out = {}
+
+    def walk(o):
+        if isinstance(o, dict):
+            strs = [v for v in o.values() if isinstance(v, str)]
+            files = [v for v in strs if re.search(r"\.(xlsx|xls|pdf|docx)(\?|$)", v, re.I)]
+            if files:
+                lab = [v.strip() for v in strs if v not in files and 2 < len(v.strip()) <= 200
+                       and not re.match(r"^(https?:|/|[\w-]{20,}$|\{)", v.strip()) and re.search(r"[א-ת]|\d{4}", v)]
+                if lab:
+                    for f in files:
+                        out.setdefault(unquote(f).split("?")[0].rsplit("/", 1)[-1], " ".join(dict.fromkeys(lab))[:200])
+            for v in o.values():
+                walk(v)
+        elif isinstance(o, list):
+            for v in o:
+                walk(v)
+    walk(data)
+    return out
+
+
 def html_files(html):
     """נתיבי קבצים ב-HTML/סקריפטים, בלי כפילויות (עמוד מנורה מחזיק >300 התאמות כפולות)."""
     html = re.sub(r"\\u0026", "&", html.replace("&amp;", "&").replace("\\/", "/"), flags=re.I)
@@ -140,6 +169,7 @@ def fetch_browser(pw, url, click_texts=None):
                     net.append({"href": u, "text": "(network file)"})
                 elif "json" in ct or "x-component" in ct or "javascript" not in ct and "text/html" not in ct and "xml" in ct:  # x-component: Next.js RSC
                     body = r.text()
+                    labels = json_file_labels(body) if len(body) < 3_000_000 else {}
                     if len(body) < 3_000_000:
                         for m in FILE_RX.findall(body):
                             h = urljoin(u, m.replace("\\/", "/"))
@@ -148,7 +178,8 @@ def fetch_browser(pw, url, click_texts=None):
                                 host = re.match(r"https?://[^/]+", url).group(0)
                                 net.append({"href": f"{host}/_files/ugd/{w.group(1)}", "text": f"(xhr) {unquote(w.group(2))}".strip()})
                             else:
-                                net.append({"href": h, "text": "(xhr)"})
+                                # הכותרת שהאתר מציג לקובץ - שדות הטקסט באותו אובייקט JSON (הראל: title/name ליד נתיב הקובץ)
+                                net.append({"href": h, "text": labels.get(unquote(m.replace("\\/", "/")).rsplit("/", 1)[-1]) or "(xhr)"})
             except Exception:
                 pass
 
