@@ -546,12 +546,14 @@ def parse_titled_tables(rows, sheet=""):
                 if t and c < len(row) and row[c]:
                     row[c] = f"{row[c]} {t}"
         raw_row, row = row, [heb_year(t) for t in row]  # השנה העברית רק לבחירת העמודות; שנת המדיניות - כמו קודם (raw_row)
-        cols = {}
+        cols, bounds_cands = {}, []
         pol_years = sorted(int(m.group(1)) for t in row for m in [re.search(r"^מדיניות\s*(20\d\d)", t)] if m)
         for c, t in enumerate(row):
             if c <= lc or not t:
                 continue
             py = re.search(r"^מדיניות\s*(20\d\d)", t)
+            if "גבולות" in t:
+                bounds_cands.append(c)
             if "גבולות" in t and "bounds" not in cols:
                 cols["bounds"] = c
             elif "גבולות" in t and re.search(r"20\d\d", t) and re.search(r"20\d\d", row[cols["bounds"]]) \
@@ -563,8 +565,11 @@ def parse_titled_tables(rows, sheet=""):
                 cols["max"] = c
             elif py and len(pol_years) > 1:  # "מדיניות 2025" | "מדיניות 2026" (הפניקס 2026)
                 cols["expected" if int(py.group(1)) == pol_years[-1] else "current"] = c
-            elif ("צפוי" in t or "מוצהר" in t or py) and "expected" not in cols:
-                cols["expected"] = c  # "מדיניות מוצהרת 2026" (מינהל) = הצפוי
+            elif ("צפוי" in t or "מוצהר" in t or py) and ("expected" not in cols or (
+                    "מוצהר" in row[cols["expected"]] + t and re.search(r"(20\d\d)", t) and re.search(r"(20\d\d)", row[cols["expected"]])
+                    and int(re.search(r"(20\d\d)", t).group(1)) > int(re.search(r"(20\d\d)", row[cols["expected"]]).group(1)))):
+                # "מדיניות מוצהרת 2026" (מינהל) = הצפוי; "מדיניות מוצהרת 2022" | "מדיניות 2023 החל..." (עגור) -> השנה המאוחרת
+                cols["expected"] = c
             elif "צפוי" in t and "bounds" not in cols and not re.search(r"גבולות|סטי", t) and (
                     "צפוי" not in row[cols["expected"]]  # הקודם נבחר רק לפי שנה ("מוגדר לשנת 2017") - "צפוי" עדיף (עגור)
                     or (re.search(r"צפוי.*20\d\d", row[cols["expected"]], re.S) and re.search(r"20\d\d", t)
@@ -582,6 +587,11 @@ def parse_titled_tables(rows, sheet=""):
                 cols["expected"] = c  # "שיעור חשיפה 2021" (שנה בלבד, בלי תאריך) = הצפוי; שתי שנים -> המאוחרת (תשפ"ה|תשפ"ו)
             elif re.search(r"שיעור\s+(ה)?חשיפה|ליום|לתאריך|עדכני|נכון ל", t) and "current" not in cols:
                 cols["current"] = c
+        if len(bounds_cands) > 1 and "expected" in cols and not any(re.search(r"20\d\d", row[c]) for c in bounds_cands):
+            # שתי עמודות "גבולות" בלי שנה (מחוג 2026, קלע 2020: [צפוי 2025, גבולות, ..., צפוי 2026, גבולות]):
+            # הגבולות של הצפוי שנבחר = עמודת הגבולות הראשונה אחריו
+            after = [c for c in bounds_cands if c > cols["expected"]]
+            cols["bounds"] = after[0] if after else cols["bounds"]
         sub = grid[ri + 1] if ri + 1 < len(grid) else []
         if "min" not in cols and "max" not in cols:  # "גבולות" ובשורה שמתחת "מינימום | מקסימום"
             mn = next((c for c, t in enumerate(sub) if t.startswith("מינימום")), None)
