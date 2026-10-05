@@ -858,7 +858,10 @@ def main():
         # שנה חסרה בגיליון (למשל גיליון מתמחים מילולי) -> שנת המסמך: הרוב בגיליונות האחרים, אחרת מתוך שם הקובץ
         doc_rows = long_rows[len(long_rows) - n_long:] if n_long else []
         years = [r["year"] for r in doc_rows if r.get("year")]
-        fy = re.search(r"(20[12]\d)", Path(ent["file"]).name)
+        # שנה בשם הקובץ - בלי הקידומת שלנו (12 תווי sha: "4222020f457f_" הוא לא 2020) ובלי מחרוזות hash
+        # (מגדל/Wix: "5adfdb_528d2d37ad314229b89356c20197cc79" - ה-"2019" שבתוכה אינו שנה)
+        fname = re.sub(r"[0-9a-f]{16,}", " ", re.sub(r"^[0-9a-f]{12}_", "", Path(ent["file"]).name))
+        fy = re.search(r"(20[12]\d)", fname)
         if re.fullmatch(r"(?:[0-9a-f]{12}_)?\d{3,5}", Path(ent["file"]).stem):
             fy = None  # שם הקובץ הוא מספר המסלול (אלטשולר ".../2017.xlsx" = גמל הלכה), לא שנה
         fy = re.search(r"לשנת\s*(20[12]\d)", ent.get("link_text") or "") or fy  # "מדיניות השקעה צפויה לשנת 2026"
