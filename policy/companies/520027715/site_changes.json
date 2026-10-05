@@ -1,21 +1,813 @@
 [
  {
-  "kind": "page_changed",
-  "page": "https://www.menoramivt.co.il/rep-list/about-insurance/participating-portfolio-info/investment-policy",
-  "text": "טקסט העמוד השתנה (אותם קישורים)",
-  "href": "https://www.menoramivt.co.il/rep-list/about-insurance/participating-portfolio-info/investment-policy",
+  "kind": "text_changed",
+  "page": "https://www.menoramivt.co.il/funds/about-menora/engineers/omega-fund/omega-286",
+  "text": "Investor Relations (EN) -> קשרי משקיעים Investor Relations",
+  "href": "https://www.menoramivt.co.il/investor-relations",
   "legal_id": "520027715",
   "company": "מנורה מבטחים והסתדרות המהנדסים ניהול קופות גמל בע\"מ",
-  "detected": "2026-10-05T11:24:45+00:00"
+  "detected": "2026-10-05T21:35:09+00:00"
+ },
+ {
+  "kind": "text_changed",
+  "page": "https://www.menoramivt.co.il/funds/about-menora/engineers/omega-fund/omega-286",
+  "text": "אומגה קרן השתלמות -> קרן השתלמות אומגה",
+  "href": "https://www.menoramivt.co.il/links/keren-hishtalmut/omega-fund",
+  "legal_id": "520027715",
+  "company": "מנורה מבטחים והסתדרות המהנדסים ניהול קופות גמל בע\"מ",
+  "detected": "2026-10-05T21:35:09+00:00"
+ },
+ {
+  "kind": "text_changed",
+  "page": "https://www.menoramivt.co.il/funds/about-menora/engineers/omega-fund/omega-286",
+  "text": "בקשה לפנסיית פרישה -> פרישה דיגיטלית",
+  "href": "https://www.menoramivt.co.il/customer-login/?target=old-age-pension-claim",
+  "legal_id": "520027715",
+  "company": "מנורה מבטחים והסתדרות המהנדסים ניהול קופות גמל בע\"מ",
+  "detected": "2026-10-05T21:35:09+00:00"
+ },
+ {
+  "kind": "text_changed",
+  "page": "https://www.menoramivt.co.il/funds/about-menora/engineers/omega-fund/omega-286",
+  "text": "מחשבון פנסיה -> פנסיות זקנה, נכות ושארים",
+  "href": "https://www.menoramivt.co.il/wps-frame/mivtcalc",
+  "legal_id": "520027715",
+  "company": "מנורה מבטחים והסתדרות המהנדסים ניהול קופות גמל בע\"מ",
+  "detected": "2026-10-05T21:35:09+00:00"
+ },
+ {
+  "kind": "text_changed",
+  "page": "https://www.menoramivt.co.il/funds/about-menora/engineers/omega-fund/omega-286",
+  "text": "קרן פנסיה -> פנסיה מקיפה",
+  "href": "https://www.menoramivt.co.il/pension",
+  "legal_id": "520027715",
+  "company": "מנורה מבטחים והסתדרות המהנדסים ניהול קופות גמל בע\"מ",
+  "detected": "2026-10-05T21:35:09+00:00"
+ },
+ {
+  "kind": "text_changed",
+  "page": "https://www.menoramivt.co.il/funds/about-menora/engineers/omega-fund/omega-286",
+  "text": "פנסיה לעצמאיים -> פנסיה לעצמאים",
+  "href": "https://www.menoramivt.co.il/pension/independent-info",
+  "legal_id": "520027715",
+  "company": "מנורה מבטחים והסתדרות המהנדסים ניהול קופות גמל בע\"מ",
+  "detected": "2026-10-05T21:35:09+00:00"
+ },
+ {
+  "kind": "text_changed",
+  "page": "https://www.menoramivt.co.il/funds/about-menora/engineers/omega-fund/omega-286",
+  "text": "קרנות השתלמות -> מסלולי השקעה בקרן ההשתלמות",
+  "href": "https://www.menoramivt.co.il/links/pension-and-gemel/gemel-hishtalmut-list/menroa-keren-hishtalmut",
+  "legal_id": "520027715",
+  "company": "מנורה מבטחים והסתדרות המהנדסים ניהול קופות גמל בע\"מ",
+  "detected": "2026-10-05T21:35:09+00:00"
+ },
+ {
+  "kind": "text_changed",
+  "page": "https://www.menoramivt.co.il/funds/about-menora/engineers/omega-fund/omega-286",
+  "text": "מנורה השקעות -> חיסכון פנסיוני",
+  "href": "https://www.menoramivt.co.il/funds/about-menora/engineers/omega-fund/omega-286",
+  "legal_id": "520027715",
+  "company": "מנורה מבטחים והסתדרות המהנדסים ניהול קופות גמל בע\"מ",
+  "detected": "2026-10-05T21:35:09+00:00"
+ },
+ {
+  "kind": "text_changed",
+  "page": "https://www.menoramivt.co.il/funds/about-menora/engineers/omega-fund/omega-286",
+  "text": "אישור מס והצהרת הון -> הדוחות שלי",
+  "href": "https://www.menoramivt.co.il/personal/reports/?originSource=marketingSite",
+  "legal_id": "520027715",
+  "company": "מנורה מבטחים והסתדרות המהנדסים ניהול קופות גמל בע\"מ",
+  "detected": "2026-10-05T21:35:09+00:00"
+ },
+ {
+  "kind": "text_changed",
+  "page": "https://www.menoramivt.co.il/funds/about-menora/engineers/omega-fund/omega-286",
+  "text": "מדיניות פרטיות -> אתר זה משתמש בעוגיות (Cookies) לשיפור חווית הגלישה והתאמת תכנים. למידע נוסף ראה מדיניות הפרטיות",
+  "href": "https://www.menoramivt.co.il/general/privacy-policy",
+  "legal_id": "520027715",
+  "company": "מנורה מבטחים והסתדרות המהנדסים ניהול קופות גמל בע\"מ",
+  "detected": "2026-10-05T21:35:09+00:00"
+ },
+ {
+  "kind": "text_changed",
+  "page": "https://www.menoramivt.co.il/funds/about-menora/engineers/omega-fund/omega-286",
+  "text": "ארכיון פוליסות -> ארכיון פוליסות ותקנונים",
+  "href": "https://www.menoramivt.co.il/policy/",
+  "legal_id": "520027715",
+  "company": "מנורה מבטחים והסתדרות המהנדסים ניהול קופות גמל בע\"מ",
+  "detected": "2026-10-05T21:35:09+00:00"
  },
  {
   "kind": "removed_item",
-  "page": "https://www.menoramivt.co.il",
-  "text": "איך בוחרים קרן פנסיה ומה חשוב לבדוק? זמן קריאה: 4 דקות",
-  "href": "https://www.menoramivt.co.il/general/articles-fellow/choose-pension",
+  "page": "https://www.menoramivt.co.il/funds/about-menora/engineers/omega-fund/omega-286",
+  "text": "(html)",
+  "href": "https://www.menoramivt.co.il/funds/about-menora/engineers/omega-fund/לאתר.286.06.2025.xlsx",
   "legal_id": "520027715",
   "company": "מנורה מבטחים והסתדרות המהנדסים ניהול קופות גמל בע\"מ",
-  "detected": "2026-10-05T11:24:45+00:00"
+  "detected": "2026-10-05T21:35:09+00:00"
+ },
+ {
+  "kind": "text_changed",
+  "page": "https://www.menoramivt.co.il/funds/about-menora/engineers/omega-fund/omega-1446",
+  "text": "Investor Relations (EN) -> קשרי משקיעים Investor Relations",
+  "href": "https://www.menoramivt.co.il/investor-relations",
+  "legal_id": "520027715",
+  "company": "מנורה מבטחים והסתדרות המהנדסים ניהול קופות גמל בע\"מ",
+  "detected": "2026-10-05T21:35:09+00:00"
+ },
+ {
+  "kind": "text_changed",
+  "page": "https://www.menoramivt.co.il/funds/about-menora/engineers/omega-fund/omega-1446",
+  "text": "אומגה קרן השתלמות -> קרן השתלמות אומגה",
+  "href": "https://www.menoramivt.co.il/links/keren-hishtalmut/omega-fund",
+  "legal_id": "520027715",
+  "company": "מנורה מבטחים והסתדרות המהנדסים ניהול קופות גמל בע\"מ",
+  "detected": "2026-10-05T21:35:09+00:00"
+ },
+ {
+  "kind": "text_changed",
+  "page": "https://www.menoramivt.co.il/funds/about-menora/engineers/omega-fund/omega-1446",
+  "text": "בקשה לפנסיית פרישה -> פרישה דיגיטלית",
+  "href": "https://www.menoramivt.co.il/customer-login/?target=old-age-pension-claim",
+  "legal_id": "520027715",
+  "company": "מנורה מבטחים והסתדרות המהנדסים ניהול קופות גמל בע\"מ",
+  "detected": "2026-10-05T21:35:09+00:00"
+ },
+ {
+  "kind": "text_changed",
+  "page": "https://www.menoramivt.co.il/funds/about-menora/engineers/omega-fund/omega-1446",
+  "text": "מחשבון פנסיה -> פנסיות זקנה, נכות ושארים",
+  "href": "https://www.menoramivt.co.il/wps-frame/mivtcalc",
+  "legal_id": "520027715",
+  "company": "מנורה מבטחים והסתדרות המהנדסים ניהול קופות גמל בע\"מ",
+  "detected": "2026-10-05T21:35:09+00:00"
+ },
+ {
+  "kind": "text_changed",
+  "page": "https://www.menoramivt.co.il/funds/about-menora/engineers/omega-fund/omega-1446",
+  "text": "קרן פנסיה -> פנסיה מקיפה",
+  "href": "https://www.menoramivt.co.il/pension",
+  "legal_id": "520027715",
+  "company": "מנורה מבטחים והסתדרות המהנדסים ניהול קופות גמל בע\"מ",
+  "detected": "2026-10-05T21:35:09+00:00"
+ },
+ {
+  "kind": "text_changed",
+  "page": "https://www.menoramivt.co.il/funds/about-menora/engineers/omega-fund/omega-1446",
+  "text": "פנסיה לעצמאיים -> פנסיה לעצמאים",
+  "href": "https://www.menoramivt.co.il/pension/independent-info",
+  "legal_id": "520027715",
+  "company": "מנורה מבטחים והסתדרות המהנדסים ניהול קופות גמל בע\"מ",
+  "detected": "2026-10-05T21:35:09+00:00"
+ },
+ {
+  "kind": "text_changed",
+  "page": "https://www.menoramivt.co.il/funds/about-menora/engineers/omega-fund/omega-1446",
+  "text": "קרנות השתלמות -> מסלולי השקעה בקרן ההשתלמות",
+  "href": "https://www.menoramivt.co.il/links/pension-and-gemel/gemel-hishtalmut-list/menroa-keren-hishtalmut",
+  "legal_id": "520027715",
+  "company": "מנורה מבטחים והסתדרות המהנדסים ניהול קופות גמל בע\"מ",
+  "detected": "2026-10-05T21:35:09+00:00"
+ },
+ {
+  "kind": "text_changed",
+  "page": "https://www.menoramivt.co.il/funds/about-menora/engineers/omega-fund/omega-1446",
+  "text": "מנורה השקעות -> חיסכון פנסיוני",
+  "href": "https://www.menoramivt.co.il/funds/about-menora/engineers/omega-fund/omega-1446",
+  "legal_id": "520027715",
+  "company": "מנורה מבטחים והסתדרות המהנדסים ניהול קופות גמל בע\"מ",
+  "detected": "2026-10-05T21:35:09+00:00"
+ },
+ {
+  "kind": "text_changed",
+  "page": "https://www.menoramivt.co.il/funds/about-menora/engineers/omega-fund/omega-1446",
+  "text": "אישור מס והצהרת הון -> הדוחות שלי",
+  "href": "https://www.menoramivt.co.il/personal/reports/?originSource=marketingSite",
+  "legal_id": "520027715",
+  "company": "מנורה מבטחים והסתדרות המהנדסים ניהול קופות גמל בע\"מ",
+  "detected": "2026-10-05T21:35:09+00:00"
+ },
+ {
+  "kind": "text_changed",
+  "page": "https://www.menoramivt.co.il/funds/about-menora/engineers/omega-fund/omega-1446",
+  "text": "מדיניות פרטיות -> אתר זה משתמש בעוגיות (Cookies) לשיפור חווית הגלישה והתאמת תכנים. למידע נוסף ראה מדיניות הפרטיות",
+  "href": "https://www.menoramivt.co.il/general/privacy-policy",
+  "legal_id": "520027715",
+  "company": "מנורה מבטחים והסתדרות המהנדסים ניהול קופות גמל בע\"מ",
+  "detected": "2026-10-05T21:35:09+00:00"
+ },
+ {
+  "kind": "text_changed",
+  "page": "https://www.menoramivt.co.il/funds/about-menora/engineers/omega-fund/omega-1446",
+  "text": "ארכיון פוליסות -> ארכיון פוליסות ותקנונים",
+  "href": "https://www.menoramivt.co.il/policy/",
+  "legal_id": "520027715",
+  "company": "מנורה מבטחים והסתדרות המהנדסים ניהול קופות גמל בע\"מ",
+  "detected": "2026-10-05T21:35:09+00:00"
+ },
+ {
+  "kind": "removed_item",
+  "page": "https://www.menoramivt.co.il/funds/about-menora/engineers/omega-fund/omega-1446",
+  "text": "(html)",
+  "href": "https://www.menoramivt.co.il/funds/about-menora/engineers/omega-fund/לאתר.1446.06.2025.xlsx",
+  "legal_id": "520027715",
+  "company": "מנורה מבטחים והסתדרות המהנדסים ניהול קופות גמל בע\"מ",
+  "detected": "2026-10-05T21:35:09+00:00"
+ },
+ {
+  "kind": "text_changed",
+  "page": "https://www.menoramivt.co.il/funds/about-menora/engineers/omega-fund/omega-9803",
+  "text": "Investor Relations (EN) -> קשרי משקיעים Investor Relations",
+  "href": "https://www.menoramivt.co.il/investor-relations",
+  "legal_id": "520027715",
+  "company": "מנורה מבטחים והסתדרות המהנדסים ניהול קופות גמל בע\"מ",
+  "detected": "2026-10-05T21:35:09+00:00"
+ },
+ {
+  "kind": "text_changed",
+  "page": "https://www.menoramivt.co.il/funds/about-menora/engineers/omega-fund/omega-9803",
+  "text": "אומגה קרן השתלמות -> קרן השתלמות אומגה",
+  "href": "https://www.menoramivt.co.il/links/keren-hishtalmut/omega-fund",
+  "legal_id": "520027715",
+  "company": "מנורה מבטחים והסתדרות המהנדסים ניהול קופות גמל בע\"מ",
+  "detected": "2026-10-05T21:35:09+00:00"
+ },
+ {
+  "kind": "text_changed",
+  "page": "https://www.menoramivt.co.il/funds/about-menora/engineers/omega-fund/omega-9803",
+  "text": "בקשה לפנסיית פרישה -> פרישה דיגיטלית",
+  "href": "https://www.menoramivt.co.il/customer-login/?target=old-age-pension-claim",
+  "legal_id": "520027715",
+  "company": "מנורה מבטחים והסתדרות המהנדסים ניהול קופות גמל בע\"מ",
+  "detected": "2026-10-05T21:35:09+00:00"
+ },
+ {
+  "kind": "text_changed",
+  "page": "https://www.menoramivt.co.il/funds/about-menora/engineers/omega-fund/omega-9803",
+  "text": "מחשבון פנסיה -> פנסיות זקנה, נכות ושארים",
+  "href": "https://www.menoramivt.co.il/wps-frame/mivtcalc",
+  "legal_id": "520027715",
+  "company": "מנורה מבטחים והסתדרות המהנדסים ניהול קופות גמל בע\"מ",
+  "detected": "2026-10-05T21:35:09+00:00"
+ },
+ {
+  "kind": "text_changed",
+  "page": "https://www.menoramivt.co.il/funds/about-menora/engineers/omega-fund/omega-9803",
+  "text": "קרן פנסיה -> פנסיה מקיפה",
+  "href": "https://www.menoramivt.co.il/pension",
+  "legal_id": "520027715",
+  "company": "מנורה מבטחים והסתדרות המהנדסים ניהול קופות גמל בע\"מ",
+  "detected": "2026-10-05T21:35:09+00:00"
+ },
+ {
+  "kind": "text_changed",
+  "page": "https://www.menoramivt.co.il/funds/about-menora/engineers/omega-fund/omega-9803",
+  "text": "פנסיה לעצמאיים -> פנסיה לעצמאים",
+  "href": "https://www.menoramivt.co.il/pension/independent-info",
+  "legal_id": "520027715",
+  "company": "מנורה מבטחים והסתדרות המהנדסים ניהול קופות גמל בע\"מ",
+  "detected": "2026-10-05T21:35:09+00:00"
+ },
+ {
+  "kind": "text_changed",
+  "page": "https://www.menoramivt.co.il/funds/about-menora/engineers/omega-fund/omega-9803",
+  "text": "קרנות השתלמות -> מסלולי השקעה בקרן ההשתלמות",
+  "href": "https://www.menoramivt.co.il/links/pension-and-gemel/gemel-hishtalmut-list/menroa-keren-hishtalmut",
+  "legal_id": "520027715",
+  "company": "מנורה מבטחים והסתדרות המהנדסים ניהול קופות גמל בע\"מ",
+  "detected": "2026-10-05T21:35:09+00:00"
+ },
+ {
+  "kind": "text_changed",
+  "page": "https://www.menoramivt.co.il/funds/about-menora/engineers/omega-fund/omega-9803",
+  "text": "מנורה השקעות -> חיסכון פנסיוני",
+  "href": "https://www.menoramivt.co.il/funds/about-menora/engineers/omega-fund/omega-9803",
+  "legal_id": "520027715",
+  "company": "מנורה מבטחים והסתדרות המהנדסים ניהול קופות גמל בע\"מ",
+  "detected": "2026-10-05T21:35:09+00:00"
+ },
+ {
+  "kind": "text_changed",
+  "page": "https://www.menoramivt.co.il/funds/about-menora/engineers/omega-fund/omega-9803",
+  "text": "אישור מס והצהרת הון -> הדוחות שלי",
+  "href": "https://www.menoramivt.co.il/personal/reports/?originSource=marketingSite",
+  "legal_id": "520027715",
+  "company": "מנורה מבטחים והסתדרות המהנדסים ניהול קופות גמל בע\"מ",
+  "detected": "2026-10-05T21:35:09+00:00"
+ },
+ {
+  "kind": "text_changed",
+  "page": "https://www.menoramivt.co.il/funds/about-menora/engineers/omega-fund/omega-9803",
+  "text": "מדיניות פרטיות -> אתר זה משתמש בעוגיות (Cookies) לשיפור חווית הגלישה והתאמת תכנים. למידע נוסף ראה מדיניות הפרטיות",
+  "href": "https://www.menoramivt.co.il/general/privacy-policy",
+  "legal_id": "520027715",
+  "company": "מנורה מבטחים והסתדרות המהנדסים ניהול קופות גמל בע\"מ",
+  "detected": "2026-10-05T21:35:09+00:00"
+ },
+ {
+  "kind": "text_changed",
+  "page": "https://www.menoramivt.co.il/funds/about-menora/engineers/omega-fund/omega-9803",
+  "text": "ארכיון פוליסות -> ארכיון פוליסות ותקנונים",
+  "href": "https://www.menoramivt.co.il/policy/",
+  "legal_id": "520027715",
+  "company": "מנורה מבטחים והסתדרות המהנדסים ניהול קופות גמל בע\"מ",
+  "detected": "2026-10-05T21:35:09+00:00"
+ },
+ {
+  "kind": "removed_item",
+  "page": "https://www.menoramivt.co.il/funds/about-menora/engineers/omega-fund/omega-9803",
+  "text": "(html)",
+  "href": "https://www.menoramivt.co.il/funds/about-menora/engineers/omega-fund/לאתר.9803.06.2025.xlsx",
+  "legal_id": "520027715",
+  "company": "מנורה מבטחים והסתדרות המהנדסים ניהול קופות גמל בע\"מ",
+  "detected": "2026-10-05T21:35:09+00:00"
+ },
+ {
+  "kind": "text_changed",
+  "page": "https://www.menoramivt.co.il/funds/about-menora/engineers/omega-fund/omega-14418",
+  "text": "Investor Relations (EN) -> קשרי משקיעים Investor Relations",
+  "href": "https://www.menoramivt.co.il/investor-relations",
+  "legal_id": "520027715",
+  "company": "מנורה מבטחים והסתדרות המהנדסים ניהול קופות גמל בע\"מ",
+  "detected": "2026-10-05T21:35:09+00:00"
+ },
+ {
+  "kind": "text_changed",
+  "page": "https://www.menoramivt.co.il/funds/about-menora/engineers/omega-fund/omega-14418",
+  "text": "אומגה קרן השתלמות -> קרן השתלמות אומגה",
+  "href": "https://www.menoramivt.co.il/links/keren-hishtalmut/omega-fund",
+  "legal_id": "520027715",
+  "company": "מנורה מבטחים והסתדרות המהנדסים ניהול קופות גמל בע\"מ",
+  "detected": "2026-10-05T21:35:09+00:00"
+ },
+ {
+  "kind": "text_changed",
+  "page": "https://www.menoramivt.co.il/funds/about-menora/engineers/omega-fund/omega-14418",
+  "text": "בקשה לפנסיית פרישה -> פרישה דיגיטלית",
+  "href": "https://www.menoramivt.co.il/customer-login/?target=old-age-pension-claim",
+  "legal_id": "520027715",
+  "company": "מנורה מבטחים והסתדרות המהנדסים ניהול קופות גמל בע\"מ",
+  "detected": "2026-10-05T21:35:09+00:00"
+ },
+ {
+  "kind": "text_changed",
+  "page": "https://www.menoramivt.co.il/funds/about-menora/engineers/omega-fund/omega-14418",
+  "text": "מחשבון פנסיה -> פנסיות זקנה, נכות ושארים",
+  "href": "https://www.menoramivt.co.il/wps-frame/mivtcalc",
+  "legal_id": "520027715",
+  "company": "מנורה מבטחים והסתדרות המהנדסים ניהול קופות גמל בע\"מ",
+  "detected": "2026-10-05T21:35:09+00:00"
+ },
+ {
+  "kind": "text_changed",
+  "page": "https://www.menoramivt.co.il/funds/about-menora/engineers/omega-fund/omega-14418",
+  "text": "קרן פנסיה -> פנסיה מקיפה",
+  "href": "https://www.menoramivt.co.il/pension",
+  "legal_id": "520027715",
+  "company": "מנורה מבטחים והסתדרות המהנדסים ניהול קופות גמל בע\"מ",
+  "detected": "2026-10-05T21:35:09+00:00"
+ },
+ {
+  "kind": "text_changed",
+  "page": "https://www.menoramivt.co.il/funds/about-menora/engineers/omega-fund/omega-14418",
+  "text": "פנסיה לעצמאיים -> פנסיה לעצמאים",
+  "href": "https://www.menoramivt.co.il/pension/independent-info",
+  "legal_id": "520027715",
+  "company": "מנורה מבטחים והסתדרות המהנדסים ניהול קופות גמל בע\"מ",
+  "detected": "2026-10-05T21:35:09+00:00"
+ },
+ {
+  "kind": "text_changed",
+  "page": "https://www.menoramivt.co.il/funds/about-menora/engineers/omega-fund/omega-14418",
+  "text": "קרנות השתלמות -> מסלולי השקעה בקרן ההשתלמות",
+  "href": "https://www.menoramivt.co.il/links/pension-and-gemel/gemel-hishtalmut-list/menroa-keren-hishtalmut",
+  "legal_id": "520027715",
+  "company": "מנורה מבטחים והסתדרות המהנדסים ניהול קופות גמל בע\"מ",
+  "detected": "2026-10-05T21:35:09+00:00"
+ },
+ {
+  "kind": "text_changed",
+  "page": "https://www.menoramivt.co.il/funds/about-menora/engineers/omega-fund/omega-14418",
+  "text": "מנורה השקעות -> חיסכון פנסיוני",
+  "href": "https://www.menoramivt.co.il/funds/about-menora/engineers/omega-fund/omega-14418",
+  "legal_id": "520027715",
+  "company": "מנורה מבטחים והסתדרות המהנדסים ניהול קופות גמל בע\"מ",
+  "detected": "2026-10-05T21:35:09+00:00"
+ },
+ {
+  "kind": "text_changed",
+  "page": "https://www.menoramivt.co.il/funds/about-menora/engineers/omega-fund/omega-14418",
+  "text": "אישור מס והצהרת הון -> הדוחות שלי",
+  "href": "https://www.menoramivt.co.il/personal/reports/?originSource=marketingSite",
+  "legal_id": "520027715",
+  "company": "מנורה מבטחים והסתדרות המהנדסים ניהול קופות גמל בע\"מ",
+  "detected": "2026-10-05T21:35:09+00:00"
+ },
+ {
+  "kind": "text_changed",
+  "page": "https://www.menoramivt.co.il/funds/about-menora/engineers/omega-fund/omega-14418",
+  "text": "מדיניות פרטיות -> אתר זה משתמש בעוגיות (Cookies) לשיפור חווית הגלישה והתאמת תכנים. למידע נוסף ראה מדיניות הפרטיות",
+  "href": "https://www.menoramivt.co.il/general/privacy-policy",
+  "legal_id": "520027715",
+  "company": "מנורה מבטחים והסתדרות המהנדסים ניהול קופות גמל בע\"מ",
+  "detected": "2026-10-05T21:35:09+00:00"
+ },
+ {
+  "kind": "text_changed",
+  "page": "https://www.menoramivt.co.il/funds/about-menora/engineers/omega-fund/omega-14418",
+  "text": "ארכיון פוליסות -> ארכיון פוליסות ותקנונים",
+  "href": "https://www.menoramivt.co.il/policy/",
+  "legal_id": "520027715",
+  "company": "מנורה מבטחים והסתדרות המהנדסים ניהול קופות גמל בע\"מ",
+  "detected": "2026-10-05T21:35:09+00:00"
+ },
+ {
+  "kind": "removed_item",
+  "page": "https://www.menoramivt.co.il/funds/about-menora/engineers/omega-fund/omega-14418",
+  "text": "(html)",
+  "href": "https://www.menoramivt.co.il/funds/about-menora/engineers/omega-fund/לאתר.14418.06.2025.xlsx",
+  "legal_id": "520027715",
+  "company": "מנורה מבטחים והסתדרות המהנדסים ניהול קופות גמל בע\"מ",
+  "detected": "2026-10-05T21:35:09+00:00"
+ },
+ {
+  "kind": "text_changed",
+  "page": "https://www.menoramivt.co.il/links/keren-hishtalmut/omega-fund",
+  "text": "Investor Relations (EN) -> קשרי משקיעים Investor Relations",
+  "href": "https://www.menoramivt.co.il/investor-relations",
+  "legal_id": "520027715",
+  "company": "מנורה מבטחים והסתדרות המהנדסים ניהול קופות גמל בע\"מ",
+  "detected": "2026-10-05T21:35:09+00:00"
+ },
+ {
+  "kind": "text_changed",
+  "page": "https://www.menoramivt.co.il/links/keren-hishtalmut/omega-fund",
+  "text": "לדף הראשי -> קרן השתלמות",
+  "href": "https://www.menoramivt.co.il/product/keren-hishtalmut",
+  "legal_id": "520027715",
+  "company": "מנורה מבטחים והסתדרות המהנדסים ניהול קופות גמל בע\"מ",
+  "detected": "2026-10-05T21:35:09+00:00"
+ },
+ {
+  "kind": "text_changed",
+  "page": "https://www.menoramivt.co.il/links/keren-hishtalmut/omega-fund",
+  "text": "בקשה לפנסיית פרישה -> פרישה דיגיטלית",
+  "href": "https://www.menoramivt.co.il/customer-login/?target=old-age-pension-claim",
+  "legal_id": "520027715",
+  "company": "מנורה מבטחים והסתדרות המהנדסים ניהול קופות גמל בע\"מ",
+  "detected": "2026-10-05T21:35:09+00:00"
+ },
+ {
+  "kind": "text_changed",
+  "page": "https://www.menoramivt.co.il/links/keren-hishtalmut/omega-fund",
+  "text": "מחשבון פנסיה -> פנסיות זקנה, נכות ושארים",
+  "href": "https://www.menoramivt.co.il/wps-frame/mivtcalc",
+  "legal_id": "520027715",
+  "company": "מנורה מבטחים והסתדרות המהנדסים ניהול קופות גמל בע\"מ",
+  "detected": "2026-10-05T21:35:09+00:00"
+ },
+ {
+  "kind": "text_changed",
+  "page": "https://www.menoramivt.co.il/links/keren-hishtalmut/omega-fund",
+  "text": "קרן פנסיה -> פנסיה מקיפה",
+  "href": "https://www.menoramivt.co.il/pension",
+  "legal_id": "520027715",
+  "company": "מנורה מבטחים והסתדרות המהנדסים ניהול קופות גמל בע\"מ",
+  "detected": "2026-10-05T21:35:09+00:00"
+ },
+ {
+  "kind": "text_changed",
+  "page": "https://www.menoramivt.co.il/links/keren-hishtalmut/omega-fund",
+  "text": "פנסיה לעצמאיים -> פנסיה לעצמאים",
+  "href": "https://www.menoramivt.co.il/pension/independent-info",
+  "legal_id": "520027715",
+  "company": "מנורה מבטחים והסתדרות המהנדסים ניהול קופות גמל בע\"מ",
+  "detected": "2026-10-05T21:35:09+00:00"
+ },
+ {
+  "kind": "text_changed",
+  "page": "https://www.menoramivt.co.il/links/keren-hishtalmut/omega-fund",
+  "text": "קרנות השתלמות -> מסלולי השקעה בקרן ההשתלמות",
+  "href": "https://www.menoramivt.co.il/links/pension-and-gemel/gemel-hishtalmut-list/menroa-keren-hishtalmut",
+  "legal_id": "520027715",
+  "company": "מנורה מבטחים והסתדרות המהנדסים ניהול קופות גמל בע\"מ",
+  "detected": "2026-10-05T21:35:09+00:00"
+ },
+ {
+  "kind": "text_changed",
+  "page": "https://www.menoramivt.co.il/links/keren-hishtalmut/omega-fund",
+  "text": "אישור מס והצהרת הון -> הדוחות שלי",
+  "href": "https://www.menoramivt.co.il/personal/reports/?originSource=marketingSite",
+  "legal_id": "520027715",
+  "company": "מנורה מבטחים והסתדרות המהנדסים ניהול קופות גמל בע\"מ",
+  "detected": "2026-10-05T21:35:09+00:00"
+ },
+ {
+  "kind": "text_changed",
+  "page": "https://www.menoramivt.co.il/links/keren-hishtalmut/omega-fund",
+  "text": " -> דלג לתוכן הדף",
+  "href": "https://www.menoramivt.co.il/links/keren-hishtalmut/omega-fund",
+  "legal_id": "520027715",
+  "company": "מנורה מבטחים והסתדרות המהנדסים ניהול קופות גמל בע\"מ",
+  "detected": "2026-10-05T21:35:09+00:00"
+ },
+ {
+  "kind": "text_changed",
+  "page": "https://www.menoramivt.co.il/links/keren-hishtalmut/omega-fund",
+  "text": "מדיניות פרטיות -> אתר זה משתמש בעוגיות (Cookies) לשיפור חווית הגלישה והתאמת תכנים. למידע נוסף ראה מדיניות הפרטיות",
+  "href": "https://www.menoramivt.co.il/general/privacy-policy",
+  "legal_id": "520027715",
+  "company": "מנורה מבטחים והסתדרות המהנדסים ניהול קופות גמל בע\"מ",
+  "detected": "2026-10-05T21:35:09+00:00"
+ },
+ {
+  "kind": "text_changed",
+  "page": "https://www.menoramivt.co.il/links/keren-hishtalmut/omega-fund",
+  "text": "ארכיון פוליסות -> ארכיון פוליסות ותקנונים",
+  "href": "https://www.menoramivt.co.il/policy/",
+  "legal_id": "520027715",
+  "company": "מנורה מבטחים והסתדרות המהנדסים ניהול קופות גמל בע\"מ",
+  "detected": "2026-10-05T21:35:09+00:00"
+ },
+ {
+  "kind": "text_changed",
+  "page": "https://www.menoramivt.co.il/funds/about-menora/engineers/omega-fund/omega-9802",
+  "text": "Investor Relations (EN) -> קשרי משקיעים Investor Relations",
+  "href": "https://www.menoramivt.co.il/investor-relations",
+  "legal_id": "520027715",
+  "company": "מנורה מבטחים והסתדרות המהנדסים ניהול קופות גמל בע\"מ",
+  "detected": "2026-10-05T21:35:09+00:00"
+ },
+ {
+  "kind": "text_changed",
+  "page": "https://www.menoramivt.co.il/funds/about-menora/engineers/omega-fund/omega-9802",
+  "text": "אומגה קרן השתלמות -> קרן השתלמות אומגה",
+  "href": "https://www.menoramivt.co.il/links/keren-hishtalmut/omega-fund",
+  "legal_id": "520027715",
+  "company": "מנורה מבטחים והסתדרות המהנדסים ניהול קופות גמל בע\"מ",
+  "detected": "2026-10-05T21:35:09+00:00"
+ },
+ {
+  "kind": "text_changed",
+  "page": "https://www.menoramivt.co.il/funds/about-menora/engineers/omega-fund/omega-9802",
+  "text": "בקשה לפנסיית פרישה -> פרישה דיגיטלית",
+  "href": "https://www.menoramivt.co.il/customer-login/?target=old-age-pension-claim",
+  "legal_id": "520027715",
+  "company": "מנורה מבטחים והסתדרות המהנדסים ניהול קופות גמל בע\"מ",
+  "detected": "2026-10-05T21:35:09+00:00"
+ },
+ {
+  "kind": "text_changed",
+  "page": "https://www.menoramivt.co.il/funds/about-menora/engineers/omega-fund/omega-9802",
+  "text": "מחשבון פנסיה -> פנסיות זקנה, נכות ושארים",
+  "href": "https://www.menoramivt.co.il/wps-frame/mivtcalc",
+  "legal_id": "520027715",
+  "company": "מנורה מבטחים והסתדרות המהנדסים ניהול קופות גמל בע\"מ",
+  "detected": "2026-10-05T21:35:09+00:00"
+ },
+ {
+  "kind": "text_changed",
+  "page": "https://www.menoramivt.co.il/funds/about-menora/engineers/omega-fund/omega-9802",
+  "text": "קרן פנסיה -> פנסיה מקיפה",
+  "href": "https://www.menoramivt.co.il/pension",
+  "legal_id": "520027715",
+  "company": "מנורה מבטחים והסתדרות המהנדסים ניהול קופות גמל בע\"מ",
+  "detected": "2026-10-05T21:35:09+00:00"
+ },
+ {
+  "kind": "text_changed",
+  "page": "https://www.menoramivt.co.il/funds/about-menora/engineers/omega-fund/omega-9802",
+  "text": "פנסיה לעצמאיים -> פנסיה לעצמאים",
+  "href": "https://www.menoramivt.co.il/pension/independent-info",
+  "legal_id": "520027715",
+  "company": "מנורה מבטחים והסתדרות המהנדסים ניהול קופות גמל בע\"מ",
+  "detected": "2026-10-05T21:35:09+00:00"
+ },
+ {
+  "kind": "text_changed",
+  "page": "https://www.menoramivt.co.il/funds/about-menora/engineers/omega-fund/omega-9802",
+  "text": "קרנות השתלמות -> מסלולי השקעה בקרן ההשתלמות",
+  "href": "https://www.menoramivt.co.il/links/pension-and-gemel/gemel-hishtalmut-list/menroa-keren-hishtalmut",
+  "legal_id": "520027715",
+  "company": "מנורה מבטחים והסתדרות המהנדסים ניהול קופות גמל בע\"מ",
+  "detected": "2026-10-05T21:35:09+00:00"
+ },
+ {
+  "kind": "text_changed",
+  "page": "https://www.menoramivt.co.il/funds/about-menora/engineers/omega-fund/omega-9802",
+  "text": "מנורה השקעות -> חיסכון פנסיוני",
+  "href": "https://www.menoramivt.co.il/funds/about-menora/engineers/omega-fund/omega-9802",
+  "legal_id": "520027715",
+  "company": "מנורה מבטחים והסתדרות המהנדסים ניהול קופות גמל בע\"מ",
+  "detected": "2026-10-05T21:35:09+00:00"
+ },
+ {
+  "kind": "text_changed",
+  "page": "https://www.menoramivt.co.il/funds/about-menora/engineers/omega-fund/omega-9802",
+  "text": "אישור מס והצהרת הון -> הדוחות שלי",
+  "href": "https://www.menoramivt.co.il/personal/reports/?originSource=marketingSite",
+  "legal_id": "520027715",
+  "company": "מנורה מבטחים והסתדרות המהנדסים ניהול קופות גמל בע\"מ",
+  "detected": "2026-10-05T21:35:09+00:00"
+ },
+ {
+  "kind": "text_changed",
+  "page": "https://www.menoramivt.co.il/funds/about-menora/engineers/omega-fund/omega-9802",
+  "text": "מדיניות פרטיות -> אתר זה משתמש בעוגיות (Cookies) לשיפור חווית הגלישה והתאמת תכנים. למידע נוסף ראה מדיניות הפרטיות",
+  "href": "https://www.menoramivt.co.il/general/privacy-policy",
+  "legal_id": "520027715",
+  "company": "מנורה מבטחים והסתדרות המהנדסים ניהול קופות גמל בע\"מ",
+  "detected": "2026-10-05T21:35:09+00:00"
+ },
+ {
+  "kind": "text_changed",
+  "page": "https://www.menoramivt.co.il/funds/about-menora/engineers/omega-fund/omega-9802",
+  "text": "ארכיון פוליסות -> ארכיון פוליסות ותקנונים",
+  "href": "https://www.menoramivt.co.il/policy/",
+  "legal_id": "520027715",
+  "company": "מנורה מבטחים והסתדרות המהנדסים ניהול קופות גמל בע\"מ",
+  "detected": "2026-10-05T21:35:09+00:00"
+ },
+ {
+  "kind": "removed_item",
+  "page": "https://www.menoramivt.co.il/funds/about-menora/engineers/omega-fund/omega-9802",
+  "text": "(html)",
+  "href": "https://www.menoramivt.co.il/funds/about-menora/engineers/omega-fund/השתלמות.12.2022.xlsx",
+  "legal_id": "520027715",
+  "company": "מנורה מבטחים והסתדרות המהנדסים ניהול קופות גמל בע\"מ",
+  "detected": "2026-10-05T21:35:09+00:00"
+ },
+ {
+  "kind": "text_changed",
+  "page": "https://www.menoramivt.co.il/rep-list/about-insurance/participating-portfolio-info/investment-policy",
+  "text": "Investor Relations (EN) -> קשרי משקיעים Investor Relations",
+  "href": "https://www.menoramivt.co.il/investor-relations",
+  "legal_id": "520027715",
+  "company": "מנורה מבטחים והסתדרות המהנדסים ניהול קופות גמל בע\"מ",
+  "detected": "2026-10-05T21:35:09+00:00"
+ },
+ {
+  "kind": "text_changed",
+  "page": "https://www.menoramivt.co.il/rep-list/about-insurance/participating-portfolio-info/investment-policy",
+  "text": "בקשה לפנסיית פרישה -> פרישה דיגיטלית",
+  "href": "https://www.menoramivt.co.il/customer-login/?target=old-age-pension-claim",
+  "legal_id": "520027715",
+  "company": "מנורה מבטחים והסתדרות המהנדסים ניהול קופות גמל בע\"מ",
+  "detected": "2026-10-05T21:35:09+00:00"
+ },
+ {
+  "kind": "text_changed",
+  "page": "https://www.menoramivt.co.il/rep-list/about-insurance/participating-portfolio-info/investment-policy",
+  "text": "מחשבון פנסיה -> פנסיות זקנה, נכות ושארים",
+  "href": "https://www.menoramivt.co.il/wps-frame/mivtcalc",
+  "legal_id": "520027715",
+  "company": "מנורה מבטחים והסתדרות המהנדסים ניהול קופות גמל בע\"מ",
+  "detected": "2026-10-05T21:35:09+00:00"
+ },
+ {
+  "kind": "text_changed",
+  "page": "https://www.menoramivt.co.il/rep-list/about-insurance/participating-portfolio-info/investment-policy",
+  "text": "קרן פנסיה -> פנסיה מקיפה",
+  "href": "https://www.menoramivt.co.il/pension",
+  "legal_id": "520027715",
+  "company": "מנורה מבטחים והסתדרות המהנדסים ניהול קופות גמל בע\"מ",
+  "detected": "2026-10-05T21:35:09+00:00"
+ },
+ {
+  "kind": "text_changed",
+  "page": "https://www.menoramivt.co.il/rep-list/about-insurance/participating-portfolio-info/investment-policy",
+  "text": "פנסיה לעצמאיים -> פנסיה לעצמאים",
+  "href": "https://www.menoramivt.co.il/pension/independent-info",
+  "legal_id": "520027715",
+  "company": "מנורה מבטחים והסתדרות המהנדסים ניהול קופות גמל בע\"מ",
+  "detected": "2026-10-05T21:35:09+00:00"
+ },
+ {
+  "kind": "text_changed",
+  "page": "https://www.menoramivt.co.il/rep-list/about-insurance/participating-portfolio-info/investment-policy",
+  "text": "קרנות השתלמות -> מסלולי השקעה בקרן ההשתלמות",
+  "href": "https://www.menoramivt.co.il/links/pension-and-gemel/gemel-hishtalmut-list/menroa-keren-hishtalmut",
+  "legal_id": "520027715",
+  "company": "מנורה מבטחים והסתדרות המהנדסים ניהול קופות גמל בע\"מ",
+  "detected": "2026-10-05T21:35:09+00:00"
+ },
+ {
+  "kind": "text_changed",
+  "page": "https://www.menoramivt.co.il/rep-list/about-insurance/participating-portfolio-info/investment-policy",
+  "text": "אישור מס והצהרת הון -> הדוחות שלי",
+  "href": "https://www.menoramivt.co.il/personal/reports/?originSource=marketingSite",
+  "legal_id": "520027715",
+  "company": "מנורה מבטחים והסתדרות המהנדסים ניהול קופות גמל בע\"מ",
+  "detected": "2026-10-05T21:35:09+00:00"
+ },
+ {
+  "kind": "text_changed",
+  "page": "https://www.menoramivt.co.il/rep-list/about-insurance/participating-portfolio-info/investment-policy",
+  "text": " -> דלג לתוכן הדף",
+  "href": "https://www.menoramivt.co.il/rep-list/about-insurance/participating-portfolio-info/investment-policy",
+  "legal_id": "520027715",
+  "company": "מנורה מבטחים והסתדרות המהנדסים ניהול קופות גמל בע\"מ",
+  "detected": "2026-10-05T21:35:09+00:00"
+ },
+ {
+  "kind": "text_changed",
+  "page": "https://www.menoramivt.co.il/rep-list/about-insurance/participating-portfolio-info/investment-policy",
+  "text": "מדיניות פרטיות -> אתר זה משתמש בעוגיות (Cookies) לשיפור חווית הגלישה והתאמת תכנים. למידע נוסף ראה מדיניות הפרטיות",
+  "href": "https://www.menoramivt.co.il/general/privacy-policy",
+  "legal_id": "520027715",
+  "company": "מנורה מבטחים והסתדרות המהנדסים ניהול קופות גמל בע\"מ",
+  "detected": "2026-10-05T21:35:09+00:00"
+ },
+ {
+  "kind": "text_changed",
+  "page": "https://www.menoramivt.co.il/rep-list/about-insurance/participating-portfolio-info/investment-policy",
+  "text": "ארכיון פוליסות -> ארכיון פוליסות ותקנונים",
+  "href": "https://www.menoramivt.co.il/policy/",
+  "legal_id": "520027715",
+  "company": "מנורה מבטחים והסתדרות המהנדסים ניהול קופות גמל בע\"מ",
+  "detected": "2026-10-05T21:35:09+00:00"
+ },
+ {
+  "kind": "text_changed",
+  "page": "https://www.menoramivt.co.il",
+  "text": "Investor Relations (EN) -> קשרי משקיעים Investor Relations",
+  "href": "https://www.menoramivt.co.il/investor-relations",
+  "legal_id": "520027715",
+  "company": "מנורה מבטחים והסתדרות המהנדסים ניהול קופות גמל בע\"מ",
+  "detected": "2026-10-05T21:35:09+00:00"
+ },
+ {
+  "kind": "text_changed",
+  "page": "https://www.menoramivt.co.il",
+  "text": "בקשה לפנסיית פרישה -> פרישה דיגיטלית",
+  "href": "https://www.menoramivt.co.il/customer-login/?target=old-age-pension-claim",
+  "legal_id": "520027715",
+  "company": "מנורה מבטחים והסתדרות המהנדסים ניהול קופות גמל בע\"מ",
+  "detected": "2026-10-05T21:35:09+00:00"
+ },
+ {
+  "kind": "text_changed",
+  "page": "https://www.menoramivt.co.il",
+  "text": "מחשבון פנסיה -> פנסיות זקנה, נכות ושארים",
+  "href": "https://www.menoramivt.co.il/wps-frame/mivtcalc",
+  "legal_id": "520027715",
+  "company": "מנורה מבטחים והסתדרות המהנדסים ניהול קופות גמל בע\"מ",
+  "detected": "2026-10-05T21:35:09+00:00"
+ },
+ {
+  "kind": "text_changed",
+  "page": "https://www.menoramivt.co.il",
+  "text": "קרן פנסיה -> פנסיה מקיפה",
+  "href": "https://www.menoramivt.co.il/pension",
+  "legal_id": "520027715",
+  "company": "מנורה מבטחים והסתדרות המהנדסים ניהול קופות גמל בע\"מ",
+  "detected": "2026-10-05T21:35:09+00:00"
+ },
+ {
+  "kind": "text_changed",
+  "page": "https://www.menoramivt.co.il",
+  "text": "פנסיה לעצמאיים -> פנסיה לעצמאים",
+  "href": "https://www.menoramivt.co.il/pension/independent-info",
+  "legal_id": "520027715",
+  "company": "מנורה מבטחים והסתדרות המהנדסים ניהול קופות גמל בע\"מ",
+  "detected": "2026-10-05T21:35:09+00:00"
+ },
+ {
+  "kind": "text_changed",
+  "page": "https://www.menoramivt.co.il",
+  "text": "קרנות השתלמות -> מסלולי השקעה בקרן ההשתלמות",
+  "href": "https://www.menoramivt.co.il/links/pension-and-gemel/gemel-hishtalmut-list/menroa-keren-hishtalmut",
+  "legal_id": "520027715",
+  "company": "מנורה מבטחים והסתדרות המהנדסים ניהול קופות גמל בע\"מ",
+  "detected": "2026-10-05T21:35:09+00:00"
+ },
+ {
+  "kind": "text_changed",
+  "page": "https://www.menoramivt.co.il",
+  "text": "מנורה השקעות -> חיסכון פנסיוני",
+  "href": "https://www.menoramivt.co.il/",
+  "legal_id": "520027715",
+  "company": "מנורה מבטחים והסתדרות המהנדסים ניהול קופות גמל בע\"מ",
+  "detected": "2026-10-05T21:35:09+00:00"
+ },
+ {
+  "kind": "text_changed",
+  "page": "https://www.menoramivt.co.il",
+  "text": "אישור מס והצהרת הון -> הדוחות שלי",
+  "href": "https://www.menoramivt.co.il/personal/reports/?originSource=marketingSite",
+  "legal_id": "520027715",
+  "company": "מנורה מבטחים והסתדרות המהנדסים ניהול קופות גמל בע\"מ",
+  "detected": "2026-10-05T21:35:09+00:00"
+ },
+ {
+  "kind": "text_changed",
+  "page": "https://www.menoramivt.co.il",
+  "text": "ארכיון פוליסות -> ארכיון פוליסות ותקנונים",
+  "href": "https://www.menoramivt.co.il/policy/",
+  "legal_id": "520027715",
+  "company": "מנורה מבטחים והסתדרות המהנדסים ניהול קופות גמל בע\"מ",
+  "detected": "2026-10-05T21:35:09+00:00"
  },
  {
   "kind": "page_changed",
@@ -24,7 +816,7 @@
   "href": "https://www.menoramivt.co.il/pension",
   "legal_id": "520027715",
   "company": "מנורה מבטחים והסתדרות המהנדסים ניהול קופות גמל בע\"מ",
-  "detected": "2026-10-05T11:24:45+00:00"
+  "detected": "2026-10-05T21:35:09+00:00"
  },
  {
   "kind": "page_changed",
@@ -33,7 +825,7 @@
   "href": "https://www.menoramivt.co.il/pension/menora-pension-mashlima",
   "legal_id": "520027715",
   "company": "מנורה מבטחים והסתדרות המהנדסים ניהול קופות גמל בע\"מ",
-  "detected": "2026-10-05T11:24:45+00:00"
+  "detected": "2026-10-05T21:35:09+00:00"
  },
  {
   "kind": "page_changed",
@@ -42,7 +834,88 @@
   "href": "https://www.menoramivt.co.il/pension/independent-info",
   "legal_id": "520027715",
   "company": "מנורה מבטחים והסתדרות המהנדסים ניהול קופות גמל בע\"מ",
-  "detected": "2026-10-05T11:24:45+00:00"
+  "detected": "2026-10-05T21:35:09+00:00"
+ },
+ {
+  "kind": "text_changed",
+  "page": "https://ds.menoramivt.co.il/pension-joining-eligibility/",
+  "text": "Investor Relations (EN) -> קשרי משקיעים Investor Relations",
+  "href": "https://www.menoramivt.co.il/investor-relations",
+  "legal_id": "520027715",
+  "company": "מנורה מבטחים והסתדרות המהנדסים ניהול קופות גמל בע\"מ",
+  "detected": "2026-10-05T21:35:09+00:00"
+ },
+ {
+  "kind": "text_changed",
+  "page": "https://ds.menoramivt.co.il/pension-joining-eligibility/",
+  "text": "בקשה לפנסיית פרישה -> פרישה דיגיטלית",
+  "href": "https://www.menoramivt.co.il/customer-login/?target=old-age-pension-claim",
+  "legal_id": "520027715",
+  "company": "מנורה מבטחים והסתדרות המהנדסים ניהול קופות גמל בע\"מ",
+  "detected": "2026-10-05T21:35:09+00:00"
+ },
+ {
+  "kind": "text_changed",
+  "page": "https://ds.menoramivt.co.il/pension-joining-eligibility/",
+  "text": "מחשבון פנסיה -> פנסיות זקנה, נכות ושארים",
+  "href": "https://www.menoramivt.co.il/wps-frame/mivtcalc",
+  "legal_id": "520027715",
+  "company": "מנורה מבטחים והסתדרות המהנדסים ניהול קופות גמל בע\"מ",
+  "detected": "2026-10-05T21:35:09+00:00"
+ },
+ {
+  "kind": "text_changed",
+  "page": "https://ds.menoramivt.co.il/pension-joining-eligibility/",
+  "text": "קרן פנסיה -> פנסיה מקיפה",
+  "href": "https://www.menoramivt.co.il/pension",
+  "legal_id": "520027715",
+  "company": "מנורה מבטחים והסתדרות המהנדסים ניהול קופות גמל בע\"מ",
+  "detected": "2026-10-05T21:35:09+00:00"
+ },
+ {
+  "kind": "text_changed",
+  "page": "https://ds.menoramivt.co.il/pension-joining-eligibility/",
+  "text": "פנסיה לעצמאיים -> פנסיה לעצמאים",
+  "href": "https://www.menoramivt.co.il/pension/independent-info",
+  "legal_id": "520027715",
+  "company": "מנורה מבטחים והסתדרות המהנדסים ניהול קופות גמל בע\"מ",
+  "detected": "2026-10-05T21:35:09+00:00"
+ },
+ {
+  "kind": "text_changed",
+  "page": "https://ds.menoramivt.co.il/pension-joining-eligibility/",
+  "text": "קרנות השתלמות -> מסלולי השקעה בקרן ההשתלמות",
+  "href": "https://www.menoramivt.co.il/links/pension-and-gemel/gemel-hishtalmut-list/menroa-keren-hishtalmut",
+  "legal_id": "520027715",
+  "company": "מנורה מבטחים והסתדרות המהנדסים ניהול קופות גמל בע\"מ",
+  "detected": "2026-10-05T21:35:09+00:00"
+ },
+ {
+  "kind": "text_changed",
+  "page": "https://ds.menoramivt.co.il/pension-joining-eligibility/",
+  "text": "אישור מס והצהרת הון -> הדוחות שלי",
+  "href": "https://www.menoramivt.co.il/personal/reports/?originSource=marketingSite",
+  "legal_id": "520027715",
+  "company": "מנורה מבטחים והסתדרות המהנדסים ניהול קופות גמל בע\"מ",
+  "detected": "2026-10-05T21:35:09+00:00"
+ },
+ {
+  "kind": "text_changed",
+  "page": "https://ds.menoramivt.co.il/pension-joining-eligibility/",
+  "text": "✖ -> דלג לתוכן הדף",
+  "href": "https://ds.menoramivt.co.il/pension-joining-eligibility/",
+  "legal_id": "520027715",
+  "company": "מנורה מבטחים והסתדרות המהנדסים ניהול קופות גמל בע\"מ",
+  "detected": "2026-10-05T21:35:09+00:00"
+ },
+ {
+  "kind": "text_changed",
+  "page": "https://ds.menoramivt.co.il/pension-joining-eligibility/",
+  "text": "ארכיון פוליסות -> ארכיון פוליסות ותקנונים",
+  "href": "https://www.menoramivt.co.il/policy/",
+  "legal_id": "520027715",
+  "company": "מנורה מבטחים והסתדרות המהנדסים ניהול קופות גמל בע\"מ",
+  "detected": "2026-10-05T21:35:09+00:00"
  },
  {
   "kind": "page_changed",
@@ -51,7 +924,7 @@
   "href": "https://www.menoramivt.co.il/product/gemel",
   "legal_id": "520027715",
   "company": "מנורה מבטחים והסתדרות המהנדסים ניהול קופות גמל בע\"מ",
-  "detected": "2026-10-05T11:24:45+00:00"
+  "detected": "2026-10-05T21:35:09+00:00"
  },
  {
   "kind": "page_changed",
@@ -60,7 +933,7 @@
   "href": "https://www.menoramivt.co.il/general/gemel-payments",
   "legal_id": "520027715",
   "company": "מנורה מבטחים והסתדרות המהנדסים ניהול קופות גמל בע\"מ",
-  "detected": "2026-10-05T11:24:45+00:00"
+  "detected": "2026-10-05T21:35:09+00:00"
  },
  {
   "kind": "page_changed",
@@ -69,7 +942,7 @@
   "href": "https://www.menoramivt.co.il/product/gemel-invest",
   "legal_id": "520027715",
   "company": "מנורה מבטחים והסתדרות המהנדסים ניהול קופות גמל בע\"מ",
-  "detected": "2026-10-05T11:24:45+00:00"
+  "detected": "2026-10-05T21:35:09+00:00"
  },
  {
   "kind": "page_changed",
@@ -78,7 +951,7 @@
   "href": "https://www.menoramivt.co.il/product/keren-hishtalmut",
   "legal_id": "520027715",
   "company": "מנורה מבטחים והסתדרות המהנדסים ניהול קופות גמל בע\"מ",
-  "detected": "2026-10-05T11:24:45+00:00"
+  "detected": "2026-10-05T21:35:09+00:00"
  },
  {
   "kind": "page_changed",
@@ -87,7 +960,7 @@
   "href": "https://www.menoramivt.co.il/joining-gml/?process=eduFundEmployee&utm_source=website&utm_medium=banner&utm_campaign=product_page&utm_term=hishtalmut_shci",
   "legal_id": "520027715",
   "company": "מנורה מבטחים והסתדרות המהנדסים ניהול קופות גמל בע\"מ",
-  "detected": "2026-10-05T11:24:45+00:00"
+  "detected": "2026-10-05T21:35:09+00:00"
  },
  {
   "kind": "page_changed",
@@ -96,7 +969,7 @@
   "href": "https://www.menoramivt.co.il/joining-gml/?process=eduFund&linkId=93643a881b3a02dba51ef124f3f68bd53ab735b2d97eaed348&utm_source=website&utm_medium=banner&utm_campaign=product_page&utm_term=hishtalmut",
   "legal_id": "520027715",
   "company": "מנורה מבטחים והסתדרות המהנדסים ניהול קופות גמל בע\"מ",
-  "detected": "2026-10-05T11:24:45+00:00"
+  "detected": "2026-10-05T21:35:09+00:00"
  },
  {
   "kind": "page_changed",
@@ -105,7 +978,7 @@
   "href": "https://www.menoramivt.co.il/customer-login/?target=old-age-pension-claim",
   "legal_id": "520027715",
   "company": "מנורה מבטחים והסתדרות המהנדסים ניהול קופות גמל בע\"מ",
-  "detected": "2026-10-05T11:24:45+00:00"
+  "detected": "2026-10-05T21:35:09+00:00"
  },
  {
   "kind": "page_changed",
@@ -114,7 +987,7 @@
   "href": "https://www.menoramivt.co.il/list/pension-member-info/retirement-investment-tracks",
   "legal_id": "520027715",
   "company": "מנורה מבטחים והסתדרות המהנדסים ניהול קופות גמל בע\"מ",
-  "detected": "2026-10-05T11:24:45+00:00"
+  "detected": "2026-10-05T21:35:09+00:00"
  },
  {
   "kind": "page_changed",
@@ -123,7 +996,7 @@
   "href": "https://www.menoramivt.co.il/links/pension-and-gemel/gemel-hishtalmut-list/menroa-keren-hishtalmut",
   "legal_id": "520027715",
   "company": "מנורה מבטחים והסתדרות המהנדסים ניהול קופות גמל בע\"מ",
-  "detected": "2026-10-05T11:24:45+00:00"
+  "detected": "2026-10-05T21:35:09+00:00"
  },
  {
   "kind": "page_changed",
@@ -132,7 +1005,7 @@
   "href": "https://www.menoramivt.co.il/links/pension/investment-routes-pension",
   "legal_id": "520027715",
   "company": "מנורה מבטחים והסתדרות המהנדסים ניהול קופות גמל בע\"מ",
-  "detected": "2026-10-05T11:24:45+00:00"
+  "detected": "2026-10-05T21:35:09+00:00"
  },
  {
   "kind": "page_changed",
@@ -141,7 +1014,7 @@
   "href": "https://www.menoramivt.co.il/links/pension-and-gemel/gemel-hishtalmut-list/list-top-savings",
   "legal_id": "520027715",
   "company": "מנורה מבטחים והסתדרות המהנדסים ניהול קופות גמל בע\"מ",
-  "detected": "2026-10-05T11:24:45+00:00"
+  "detected": "2026-10-05T21:35:09+00:00"
  },
  {
   "kind": "page_changed",
@@ -150,7 +1023,7 @@
   "href": "https://www.menoramivt.co.il/product/pension-claim-list",
   "legal_id": "520027715",
   "company": "מנורה מבטחים והסתדרות המהנדסים ניהול קופות גמל בע\"מ",
-  "detected": "2026-10-05T11:24:45+00:00"
+  "detected": "2026-10-05T21:35:09+00:00"
  },
  {
   "kind": "page_changed",
@@ -159,7 +1032,7 @@
   "href": "https://www.menoramivt.co.il/wps-frame/mivtcalc",
   "legal_id": "520027715",
   "company": "מנורה מבטחים והסתדרות המהנדסים ניהול קופות גמל בע\"מ",
-  "detected": "2026-10-05T11:24:45+00:00"
+  "detected": "2026-10-05T21:35:09+00:00"
  },
  {
   "kind": "page_changed",
@@ -168,7 +1041,7 @@
   "href": "https://www.menoramivt.co.il/customer-login/?target=one-time-deposit-gml&originSource=marketingSite",
   "legal_id": "520027715",
   "company": "מנורה מבטחים והסתדרות המהנדסים ניהול קופות גמל בע\"מ",
-  "detected": "2026-10-05T11:24:45+00:00"
+  "detected": "2026-10-05T21:35:09+00:00"
  },
  {
   "kind": "page_changed",
@@ -177,7 +1050,7 @@
   "href": "https://www.menoramivt.co.il/customer-login/?target=digital-loans-pension&originSource=marketingSite",
   "legal_id": "520027715",
   "company": "מנורה מבטחים והסתדרות המהנדסים ניהול קופות גמל בע\"מ",
-  "detected": "2026-10-05T11:24:45+00:00"
+  "detected": "2026-10-05T21:35:09+00:00"
  },
  {
   "kind": "page_changed",
@@ -186,7 +1059,7 @@
   "href": "https://www.menoramivt.co.il/customer-login/?target=digital-loans-gemel&originSource=marketingSite",
   "legal_id": "520027715",
   "company": "מנורה מבטחים והסתדרות המהנדסים ניהול קופות גמל בע\"מ",
-  "detected": "2026-10-05T11:24:45+00:00"
+  "detected": "2026-10-05T21:35:09+00:00"
  },
  {
   "kind": "page_changed",
@@ -195,7 +1068,7 @@
   "href": "https://www.menoramivt.co.il/customer-login/?target=digital-loans-gemel-recycle&originSource=marketingSite",
   "legal_id": "520027715",
   "company": "מנורה מבטחים והסתדרות המהנדסים ניהול קופות גמל בע\"מ",
-  "detected": "2026-10-05T11:24:45+00:00"
+  "detected": "2026-10-05T21:35:09+00:00"
  },
  {
   "kind": "page_changed",
@@ -204,7 +1077,7 @@
   "href": "https://www.menoramivt.co.il/customer-login/?target=gemel-transfer-request&originSource=marketingSite",
   "legal_id": "520027715",
   "company": "מנורה מבטחים והסתדרות המהנדסים ניהול קופות גמל בע\"מ",
-  "detected": "2026-10-05T11:24:45+00:00"
+  "detected": "2026-10-05T21:35:09+00:00"
  },
  {
   "kind": "page_changed",
@@ -213,7 +1086,7 @@
   "href": "https://www.menoramivt.co.il/customer-login/?target=pension-investment-update&originSource=marketingSite",
   "legal_id": "520027715",
   "company": "מנורה מבטחים והסתדרות המהנדסים ניהול קופות גמל בע\"מ",
-  "detected": "2026-10-05T11:24:45+00:00"
+  "detected": "2026-10-05T21:35:09+00:00"
  },
  {
   "kind": "page_changed",
@@ -222,7 +1095,7 @@
   "href": "https://www.menoramivt.co.il/customer-login/?target=pension-redemption&originSource=marketingSite",
   "legal_id": "520027715",
   "company": "מנורה מבטחים והסתדרות המהנדסים ניהול קופות גמל בע\"מ",
-  "detected": "2026-10-05T11:24:45+00:00"
+  "detected": "2026-10-05T21:35:09+00:00"
  },
  {
   "kind": "page_changed",
@@ -231,7 +1104,7 @@
   "href": "https://www.menoramivt.co.il/customer-login/?target=fund-redemption-keren&originSource=marketingSite",
   "legal_id": "520027715",
   "company": "מנורה מבטחים והסתדרות המהנדסים ניהול קופות גמל בע\"מ",
-  "detected": "2026-10-05T11:24:45+00:00"
+  "detected": "2026-10-05T21:35:09+00:00"
  },
  {
   "kind": "page_changed",
@@ -240,16 +1113,25 @@
   "href": "https://www.menoramivt.co.il/customer-login/?target=fund-redemption-gemel&originSource=marketingSite",
   "legal_id": "520027715",
   "company": "מנורה מבטחים והסתדרות המהנדסים ניהול קופות גמל בע\"מ",
-  "detected": "2026-10-05T11:24:45+00:00"
+  "detected": "2026-10-05T21:35:09+00:00"
  },
  {
-  "kind": "page_changed",
+  "kind": "text_changed",
   "page": "https://www.menoramivt.co.il/investor-relations",
-  "text": "טקסט העמוד השתנה (אותם קישורים)",
+  "text": "(html) -> Menora Mivtachim Holdings About Investors Procedure Major Shareholders Board and Senior Management ESG ESG",
+  "href": "https://cdn.menoramivt.co.il/public/docs/20240331/esg-report-2021-22022.pdf",
+  "legal_id": "520027715",
+  "company": "מנורה מבטחים והסתדרות המהנדסים ניהול קופות גמל בע\"מ",
+  "detected": "2026-10-05T21:35:09+00:00"
+ },
+ {
+  "kind": "text_changed",
+  "page": "https://www.menoramivt.co.il/investor-relations",
+  "text": "Press Release -> דלג לתוכן הדף",
   "href": "https://www.menoramivt.co.il/investor-relations",
   "legal_id": "520027715",
   "company": "מנורה מבטחים והסתדרות המהנדסים ניהול קופות גמל בע\"מ",
-  "detected": "2026-10-05T11:24:45+00:00"
+  "detected": "2026-10-05T21:35:09+00:00"
  },
  {
   "kind": "page_changed",
@@ -258,7 +1140,7 @@
   "href": "https://www.menoramivt.co.il/rep-list/lobby-returns-gemel-hishtalmut",
   "legal_id": "520027715",
   "company": "מנורה מבטחים והסתדרות המהנדסים ניהול קופות גמל בע\"מ",
-  "detected": "2026-10-05T11:24:45+00:00"
+  "detected": "2026-10-05T21:35:09+00:00"
  },
  {
   "kind": "page_changed",
@@ -267,7 +1149,7 @@
   "href": "https://www.menoramivt.co.il/customer-login/?target=fund-loan",
   "legal_id": "520027715",
   "company": "מנורה מבטחים והסתדרות המהנדסים ניהול קופות גמל בע\"מ",
-  "detected": "2026-10-05T11:24:45+00:00"
+  "detected": "2026-10-05T21:35:09+00:00"
  },
  {
   "kind": "page_changed",
@@ -276,7 +1158,7 @@
   "href": "https://menoramivt.co.il/customer-login/?target=gemel-transfer-request",
   "legal_id": "520027715",
   "company": "מנורה מבטחים והסתדרות המהנדסים ניהול קופות גמל בע\"מ",
-  "detected": "2026-10-05T11:24:45+00:00"
+  "detected": "2026-10-05T21:35:09+00:00"
  },
  {
   "kind": "page_changed",
@@ -285,7 +1167,7 @@
   "href": "https://www.menoramivt.co.il/general/pension-and-gemel/pension-management-board/pension-structure",
   "legal_id": "520027715",
   "company": "מנורה מבטחים והסתדרות המהנדסים ניהול קופות גמל בע\"מ",
-  "detected": "2026-10-05T11:24:45+00:00"
+  "detected": "2026-10-05T21:35:09+00:00"
  },
  {
   "kind": "page_changed",
@@ -294,7 +1176,7 @@
   "href": "https://www.menoramivt.co.il/general/pension-and-gemel/pension-procedures/more-procedures/engineers-problematic-debts",
   "legal_id": "520027715",
   "company": "מנורה מבטחים והסתדרות המהנדסים ניהול קופות גמל בע\"מ",
-  "detected": "2026-10-05T11:24:45+00:00"
+  "detected": "2026-10-05T21:35:09+00:00"
  },
  {
   "kind": "page_changed",
@@ -303,7 +1185,7 @@
   "href": "https://www.menoramivt.co.il/",
   "legal_id": "520027715",
   "company": "מנורה מבטחים והסתדרות המהנדסים ניהול קופות גמל בע\"מ",
-  "detected": "2026-10-05T11:24:45+00:00"
+  "detected": "2026-10-05T21:35:09+00:00"
  },
  {
   "kind": "page_changed",
@@ -312,7 +1194,7 @@
   "href": "https://www.menoramivt.co.il/customer-login/?target=digital-loans-pension",
   "legal_id": "520027715",
   "company": "מנורה מבטחים והסתדרות המהנדסים ניהול קופות גמל בע\"מ",
-  "detected": "2026-10-05T11:24:45+00:00"
+  "detected": "2026-10-05T21:35:09+00:00"
  },
  {
   "kind": "page_changed",
@@ -321,7 +1203,7 @@
   "href": "https://www.menoramivt.co.il/customer-login/?target=digital-loans-gemel",
   "legal_id": "520027715",
   "company": "מנורה מבטחים והסתדרות המהנדסים ניהול קופות גמל בע\"מ",
-  "detected": "2026-10-05T11:24:45+00:00"
+  "detected": "2026-10-05T21:35:09+00:00"
  },
  {
   "kind": "page_changed",
@@ -330,7 +1212,7 @@
   "href": "https://www.menoramivt.co.il/general/articles-fellow/invest-gemel-kids",
   "legal_id": "520027715",
   "company": "מנורה מבטחים והסתדרות המהנדסים ניהול קופות גמל בע\"מ",
-  "detected": "2026-10-05T11:24:45+00:00"
+  "detected": "2026-10-05T21:35:09+00:00"
  },
  {
   "kind": "page_changed",
@@ -339,7 +1221,7 @@
   "href": "https://www.menoramivt.co.il/general/articles-fellow/merge-pension",
   "legal_id": "520027715",
   "company": "מנורה מבטחים והסתדרות המהנדסים ניהול קופות גמל בע\"מ",
-  "detected": "2026-10-05T11:24:45+00:00"
+  "detected": "2026-10-05T21:35:09+00:00"
  },
  {
   "kind": "page_changed",
@@ -348,7 +1230,7 @@
   "href": "https://www.menoramivt.co.il/general/merging-target-date-funds",
   "legal_id": "520027715",
   "company": "מנורה מבטחים והסתדרות המהנדסים ניהול קופות גמל בע\"מ",
-  "detected": "2026-10-05T11:24:45+00:00"
+  "detected": "2026-10-05T21:35:09+00:00"
  },
  {
   "kind": "page_changed",
@@ -357,42 +1239,591 @@
   "href": "https://www.menoramivt.co.il/customer-login/?target=gemel-transfer-request",
   "legal_id": "520027715",
   "company": "מנורה מבטחים והסתדרות המהנדסים ניהול קופות גמל בע\"מ",
-  "detected": "2026-10-05T11:24:45+00:00"
+  "detected": "2026-10-05T21:35:09+00:00"
  },
  {
-  "kind": "page_changed",
+  "kind": "text_changed",
+  "page": "https://www.menoramivt.co.il/general/investors-structure",
+  "text": "(html) -> Menora Mivtachim Holdings About Investors Procedure Major Shareholders Board and Senior Management ESG ESG",
+  "href": "https://cdn.menoramivt.co.il/public/docs/20240331/esg-report-2021-22022.pdf",
+  "legal_id": "520027715",
+  "company": "מנורה מבטחים והסתדרות המהנדסים ניהול קופות גמל בע\"מ",
+  "detected": "2026-10-05T21:35:09+00:00"
+ },
+ {
+  "kind": "text_changed",
+  "page": "https://www.menoramivt.co.il/general/investors-structure",
+  "text": "Press Release -> דלג לתוכן הדף",
+  "href": "https://www.menoramivt.co.il/general/investors-structure",
+  "legal_id": "520027715",
+  "company": "מנורה מבטחים והסתדרות המהנדסים ניהול קופות גמל בע\"מ",
+  "detected": "2026-10-05T21:35:09+00:00"
+ },
+ {
+  "kind": "text_changed",
+  "page": "https://www.menoramivt.co.il/rep-list/investor-presentations-en",
+  "text": "(html) -> Menora Mivtachim Holdings About Investors Procedure Major Shareholders Board and Senior Management ESG ESG",
+  "href": "https://cdn.menoramivt.co.il/public/docs/20240331/esg-report-2021-22022.pdf",
+  "legal_id": "520027715",
+  "company": "מנורה מבטחים והסתדרות המהנדסים ניהול קופות גמל בע\"מ",
+  "detected": "2026-10-05T21:35:09+00:00"
+ },
+ {
+  "kind": "text_changed",
+  "page": "https://www.menoramivt.co.il/rep-list/investor-presentations-en",
+  "text": "Press Release -> דלג לתוכן הדף",
+  "href": "https://www.menoramivt.co.il/rep-list/investor-presentations-en",
+  "legal_id": "520027715",
+  "company": "מנורה מבטחים והסתדרות המהנדסים ניהול קופות גמל בע\"מ",
+  "detected": "2026-10-05T21:35:09+00:00"
+ },
+ {
+  "kind": "text_changed",
   "page": "https://www.menoramivt.co.il/investor-relations/",
-  "text": "טקסט העמוד השתנה (אותם קישורים)",
+  "text": "(html) -> Menora Mivtachim Holdings About Investors Procedure Major Shareholders Board and Senior Management ESG ESG",
+  "href": "https://cdn.menoramivt.co.il/public/docs/20240331/esg-report-2021-22022.pdf",
+  "legal_id": "520027715",
+  "company": "מנורה מבטחים והסתדרות המהנדסים ניהול קופות גמל בע\"מ",
+  "detected": "2026-10-05T21:35:09+00:00"
+ },
+ {
+  "kind": "text_changed",
+  "page": "https://www.menoramivt.co.il/investor-relations/",
+  "text": "Contact Us -> דלג לתוכן הדף",
   "href": "https://www.menoramivt.co.il/investor-relations/",
   "legal_id": "520027715",
   "company": "מנורה מבטחים והסתדרות המהנדסים ניהול קופות גמל בע\"מ",
-  "detected": "2026-10-05T11:24:45+00:00"
+  "detected": "2026-10-05T21:35:09+00:00"
  },
  {
   "kind": "new_item",
-  "page": "https://www.menoramivt.co.il/general/privacy-policy",
-  "text": "דלג לתוכן הדף ביטוחים חיסכון פנסיוני מנורה השקעות תביעות שירותים פעולות דברו איתנו | פורטלים ביטוחים ביטוח רכב ביטוח רכב לפי קילומטר ביטוח נהג חדש כיסוי לכל נהג ביטוח צד ג' לאופנוע ביטוח משאית ביטוח ר",
+  "page": "https://www.menoramivt.co.il/general/investors-about",
+  "text": "דלג לתוכן הדף Home Our Company Corporate Structure Financial Reports Immediate Releases Presentations Press Release Contact Us",
   "href": "https://www.menoramivt.co.il/",
   "legal_id": "520027715",
   "company": "מנורה מבטחים והסתדרות המהנדסים ניהול קופות גמל בע\"מ",
-  "detected": "2026-10-05T11:24:45+00:00"
+  "detected": "2026-10-05T21:35:09+00:00"
+ },
+ {
+  "kind": "text_changed",
+  "page": "https://www.menoramivt.co.il/general/investors-about",
+  "text": "About -> דלג לתוכן הדף",
+  "href": "https://www.menoramivt.co.il/general/investors-about",
+  "legal_id": "520027715",
+  "company": "מנורה מבטחים והסתדרות המהנדסים ניהול קופות גמל בע\"מ",
+  "detected": "2026-10-05T21:35:09+00:00"
  },
  {
   "kind": "removed_item",
+  "page": "https://www.menoramivt.co.il/general/investors-about",
+  "text": "(html)",
+  "href": "https://cdn.menoramivt.co.il/public/docs/20240331/esg-report-2021-22022.pdf",
+  "legal_id": "520027715",
+  "company": "מנורה מבטחים והסתדרות המהנדסים ניהול קופות גמל בע\"מ",
+  "detected": "2026-10-05T21:35:09+00:00"
+ },
+ {
+  "kind": "removed_item",
+  "page": "https://www.menoramivt.co.il/general/investors-about",
+  "text": "אתר זה משתמש בעוגיות (Cookies) לשיפור חווית הגלישה והתאמת תכנים. למידע נוסף ראה מדיניות הפרטיות",
+  "href": "https://www.menoramivt.co.il/general/privacy-policy",
+  "legal_id": "520027715",
+  "company": "מנורה מבטחים והסתדרות המהנדסים ניהול קופות גמל בע\"מ",
+  "detected": "2026-10-05T21:35:09+00:00"
+ },
+ {
+  "kind": "removed_item",
+  "page": "https://www.menoramivt.co.il/general/investors-about",
+  "text": "Major Shareholders",
+  "href": "https://www.menoramivt.co.il/general/investors-shareholders",
+  "legal_id": "520027715",
+  "company": "מנורה מבטחים והסתדרות המהנדסים ניהול קופות גמל בע\"מ",
+  "detected": "2026-10-05T21:35:09+00:00"
+ },
+ {
+  "kind": "removed_item",
+  "page": "https://www.menoramivt.co.il/general/investors-about",
+  "text": "Investors Procedure",
+  "href": "https://www.menoramivt.co.il/general/investors-procedure",
+  "legal_id": "520027715",
+  "company": "מנורה מבטחים והסתדרות המהנדסים ניהול קופות גמל בע\"מ",
+  "detected": "2026-10-05T21:35:09+00:00"
+ },
+ {
+  "kind": "removed_item",
+  "page": "https://www.menoramivt.co.il/general/investors-about",
+  "text": "Board and Senior Management",
+  "href": "https://www.menoramivt.co.il/general/investors-board",
+  "legal_id": "520027715",
+  "company": "מנורה מבטחים והסתדרות המהנדסים ניהול קופות גמל בע\"מ",
+  "detected": "2026-10-05T21:35:09+00:00"
+ },
+ {
+  "kind": "text_changed",
+  "page": "https://www.menoramivt.co.il/general/investors-procedure",
+  "text": "(html) -> Menora Mivtachim Holdings About Investors Procedure Major Shareholders Board and Senior Management ESG ESG",
+  "href": "https://cdn.menoramivt.co.il/public/docs/20240331/esg-report-2021-22022.pdf",
+  "legal_id": "520027715",
+  "company": "מנורה מבטחים והסתדרות המהנדסים ניהול קופות גמל בע\"מ",
+  "detected": "2026-10-05T21:35:09+00:00"
+ },
+ {
+  "kind": "text_changed",
+  "page": "https://www.menoramivt.co.il/general/investors-procedure",
+  "text": "Investors Procedure -> דלג לתוכן הדף",
+  "href": "https://www.menoramivt.co.il/general/investors-procedure",
+  "legal_id": "520027715",
+  "company": "מנורה מבטחים והסתדרות המהנדסים ניהול קופות גמל בע\"מ",
+  "detected": "2026-10-05T21:35:09+00:00"
+ },
+ {
+  "kind": "text_changed",
+  "page": "https://www.menoramivt.co.il/general/investors-shareholders",
+  "text": "(html) -> Menora Mivtachim Holdings About Investors Procedure Major Shareholders Board and Senior Management ESG ESG",
+  "href": "https://cdn.menoramivt.co.il/public/docs/20240331/esg-report-2021-22022.pdf",
+  "legal_id": "520027715",
+  "company": "מנורה מבטחים והסתדרות המהנדסים ניהול קופות גמל בע\"מ",
+  "detected": "2026-10-05T21:35:09+00:00"
+ },
+ {
+  "kind": "text_changed",
+  "page": "https://www.menoramivt.co.il/general/investors-shareholders",
+  "text": "Major Shareholders -> דלג לתוכן הדף",
+  "href": "https://www.menoramivt.co.il/general/investors-shareholders",
+  "legal_id": "520027715",
+  "company": "מנורה מבטחים והסתדרות המהנדסים ניהול קופות גמל בע\"מ",
+  "detected": "2026-10-05T21:35:09+00:00"
+ },
+ {
+  "kind": "text_changed",
+  "page": "https://www.menoramivt.co.il/general/investors-board",
+  "text": "(html) -> Menora Mivtachim Holdings About Investors Procedure Major Shareholders Board and Senior Management ESG ESG",
+  "href": "https://cdn.menoramivt.co.il/public/docs/20240331/esg-report-2021-22022.pdf",
+  "legal_id": "520027715",
+  "company": "מנורה מבטחים והסתדרות המהנדסים ניהול קופות גמל בע\"מ",
+  "detected": "2026-10-05T21:35:09+00:00"
+ },
+ {
+  "kind": "text_changed",
+  "page": "https://www.menoramivt.co.il/general/investors-board",
+  "text": "Board and Senior Management -> דלג לתוכן הדף",
+  "href": "https://www.menoramivt.co.il/general/investors-board",
+  "legal_id": "520027715",
+  "company": "מנורה מבטחים והסתדרות המהנדסים ניהול קופות גמל בע\"מ",
+  "detected": "2026-10-05T21:35:09+00:00"
+ },
+ {
+  "kind": "text_changed",
+  "page": "https://www.menoramivt.co.il/policy/",
+  "text": "(html) -> לפירוט תגמולי ביטוח בביטוחי בריאות (פוליסת ניתוחיים פלוס) - לחצו כאן",
+  "href": "https://cdn.menoramivt.co.il/public/docs/20260817/פירוט-תגמולי-ביטוח-ניתוחיים-פלוס-17.08.2026.pdf",
+  "legal_id": "520027715",
+  "company": "מנורה מבטחים והסתדרות המהנדסים ניהול קופות גמל בע\"מ",
+  "detected": "2026-10-05T21:35:09+00:00"
+ },
+ {
+  "kind": "text_changed",
+  "page": "https://www.menoramivt.co.il/policy/",
+  "text": "(html) -> לחצו כאן",
+  "href": "https://cdn.menoramivt.co.il/public/docs/20230327/%D7%A8%D7%A9%D7%99%D7%9E%D7%AA-%D7%AA%D7%97%D7%91%D7%99%D7%91%D7%99%D7%9D-%D7%94%D7%9E%D7%95%D7%92%D7%93%D7%A8%D7%99%D7%9D-%D7%9B%D7%A1%D7%A4%D7%95%D7%A8%D7%98-%D7%90%D7%AA%D7%92%D7%A8%D7%99-%D7%90%D7%95-%D7%A4%D7%A2%D7%99%D7%9C%D7%95%D7%AA-%D7%90%D7%AA%D7%92%D7%A8%D7%99%D7%AA-3.2023.pdf",
+  "legal_id": "520027715",
+  "company": "מנורה מבטחים והסתדרות המהנדסים ניהול קופות גמל בע\"מ",
+  "detected": "2026-10-05T21:35:09+00:00"
+ },
+ {
+  "kind": "text_changed",
+  "page": "https://www.menoramivt.co.il/policy/",
+  "text": "(html) -> לספר הניתוחים בריא ושלם - לחצו כאן",
+  "href": "https://cdn.menoramivt.co.il/public/docs/20210413/ספר+ניתוחים+בריא+ושלם+.pdf",
+  "legal_id": "520027715",
+  "company": "מנורה מבטחים והסתדרות המהנדסים ניהול קופות גמל בע\"מ",
+  "detected": "2026-10-05T21:35:09+00:00"
+ },
+ {
+  "kind": "text_changed",
+  "page": "https://www.menoramivt.co.il/policy/",
+  "text": "(html) -> לכללים ומבחנים לגמלת סיעוד - לחצו כאן",
+  "href": "https://cdn.menoramivt.co.il/public/docs/20210413/כללים+ומבחנים+לקבלת+גמלת+סיעוד+.pdf",
+  "legal_id": "520027715",
+  "company": "מנורה מבטחים והסתדרות המהנדסים ניהול קופות גמל בע\"מ",
+  "detected": "2026-10-05T21:35:09+00:00"
+ },
+ {
+  "kind": "text_changed",
+  "page": "https://www.menoramivt.co.il/policy/",
+  "text": "Investor Relations (EN) -> קשרי משקיעים Investor Relations",
+  "href": "https://www.menoramivt.co.il/investor-relations",
+  "legal_id": "520027715",
+  "company": "מנורה מבטחים והסתדרות המהנדסים ניהול קופות גמל בע\"מ",
+  "detected": "2026-10-05T21:35:09+00:00"
+ },
+ {
+  "kind": "text_changed",
+  "page": "https://www.menoramivt.co.il/policy/",
+  "text": "בקשה לפנסיית פרישה -> פרישה דיגיטלית",
+  "href": "https://www.menoramivt.co.il/customer-login/?target=old-age-pension-claim",
+  "legal_id": "520027715",
+  "company": "מנורה מבטחים והסתדרות המהנדסים ניהול קופות גמל בע\"מ",
+  "detected": "2026-10-05T21:35:09+00:00"
+ },
+ {
+  "kind": "text_changed",
+  "page": "https://www.menoramivt.co.il/policy/",
+  "text": "מחשבון פנסיה -> פנסיות זקנה, נכות ושארים",
+  "href": "https://www.menoramivt.co.il/wps-frame/mivtcalc",
+  "legal_id": "520027715",
+  "company": "מנורה מבטחים והסתדרות המהנדסים ניהול קופות גמל בע\"מ",
+  "detected": "2026-10-05T21:35:09+00:00"
+ },
+ {
+  "kind": "text_changed",
+  "page": "https://www.menoramivt.co.il/policy/",
+  "text": "קרן פנסיה -> פנסיה מקיפה",
+  "href": "https://www.menoramivt.co.il/pension",
+  "legal_id": "520027715",
+  "company": "מנורה מבטחים והסתדרות המהנדסים ניהול קופות גמל בע\"מ",
+  "detected": "2026-10-05T21:35:09+00:00"
+ },
+ {
+  "kind": "text_changed",
+  "page": "https://www.menoramivt.co.il/policy/",
+  "text": "פנסיה לעצמאיים -> פנסיה לעצמאים",
+  "href": "https://www.menoramivt.co.il/pension/independent-info",
+  "legal_id": "520027715",
+  "company": "מנורה מבטחים והסתדרות המהנדסים ניהול קופות גמל בע\"מ",
+  "detected": "2026-10-05T21:35:09+00:00"
+ },
+ {
+  "kind": "text_changed",
+  "page": "https://www.menoramivt.co.il/policy/",
+  "text": "קרנות השתלמות -> מסלולי השקעה בקרן ההשתלמות",
+  "href": "https://www.menoramivt.co.il/links/pension-and-gemel/gemel-hishtalmut-list/menroa-keren-hishtalmut",
+  "legal_id": "520027715",
+  "company": "מנורה מבטחים והסתדרות המהנדסים ניהול קופות גמל בע\"מ",
+  "detected": "2026-10-05T21:35:09+00:00"
+ },
+ {
+  "kind": "text_changed",
+  "page": "https://www.menoramivt.co.il/policy/",
+  "text": "אישור מס והצהרת הון -> הדוחות שלי",
+  "href": "https://www.menoramivt.co.il/personal/reports/?originSource=marketingSite",
+  "legal_id": "520027715",
+  "company": "מנורה מבטחים והסתדרות המהנדסים ניהול קופות גמל בע\"מ",
+  "detected": "2026-10-05T21:35:09+00:00"
+ },
+ {
+  "kind": "text_changed",
+  "page": "https://www.menoramivt.co.il/policy/",
+  "text": "ארכיון פוליסות -> דלג לתוכן הדף",
+  "href": "https://www.menoramivt.co.il/policy/",
+  "legal_id": "520027715",
+  "company": "מנורה מבטחים והסתדרות המהנדסים ניהול קופות גמל בע\"מ",
+  "detected": "2026-10-05T21:35:09+00:00"
+ },
+ {
+  "kind": "text_changed",
+  "page": "https://www.menoramivt.co.il/policy/",
+  "text": "מדיניות פרטיות -> אתר זה משתמש בעוגיות (Cookies) לשיפור חווית הגלישה והתאמת תכנים. למידע נוסף ראה מדיניות הפרטיות",
+  "href": "https://www.menoramivt.co.il/general/privacy-policy",
+  "legal_id": "520027715",
+  "company": "מנורה מבטחים והסתדרות המהנדסים ניהול קופות גמל בע\"מ",
+  "detected": "2026-10-05T21:35:09+00:00"
+ },
+ {
+  "kind": "text_changed",
+  "page": "https://www.menoramivt.co.il/general/cancellation-of-policy",
+  "text": "(html) -> טופס בקשה לביטול פוליסה או כיסוי ביטוחי. להורדת טופס בקשה לביטול, לחצו כאן.",
+  "href": "https://cdn.menoramivt.co.il/public/docs/20250410/טופס-ביטול-פוליסה-או-כיסוי-לוגו-חדש-מונגש.pdf",
+  "legal_id": "520027715",
+  "company": "מנורה מבטחים והסתדרות המהנדסים ניהול קופות גמל בע\"מ",
+  "detected": "2026-10-05T21:35:09+00:00"
+ },
+ {
+  "kind": "text_changed",
+  "page": "https://www.menoramivt.co.il/general/cancellation-of-policy",
+  "text": "Investor Relations (EN) -> קשרי משקיעים Investor Relations",
+  "href": "https://www.menoramivt.co.il/investor-relations",
+  "legal_id": "520027715",
+  "company": "מנורה מבטחים והסתדרות המהנדסים ניהול קופות גמל בע\"מ",
+  "detected": "2026-10-05T21:35:09+00:00"
+ },
+ {
+  "kind": "text_changed",
+  "page": "https://www.menoramivt.co.il/general/cancellation-of-policy",
+  "text": "בקשה לפנסיית פרישה -> פרישה דיגיטלית",
+  "href": "https://www.menoramivt.co.il/customer-login/?target=old-age-pension-claim",
+  "legal_id": "520027715",
+  "company": "מנורה מבטחים והסתדרות המהנדסים ניהול קופות גמל בע\"מ",
+  "detected": "2026-10-05T21:35:09+00:00"
+ },
+ {
+  "kind": "text_changed",
+  "page": "https://www.menoramivt.co.il/general/cancellation-of-policy",
+  "text": "מחשבון פנסיה -> פנסיות זקנה, נכות ושארים",
+  "href": "https://www.menoramivt.co.il/wps-frame/mivtcalc",
+  "legal_id": "520027715",
+  "company": "מנורה מבטחים והסתדרות המהנדסים ניהול קופות גמל בע\"מ",
+  "detected": "2026-10-05T21:35:09+00:00"
+ },
+ {
+  "kind": "text_changed",
+  "page": "https://www.menoramivt.co.il/general/cancellation-of-policy",
+  "text": "קרן פנסיה -> פנסיה מקיפה",
+  "href": "https://www.menoramivt.co.il/pension",
+  "legal_id": "520027715",
+  "company": "מנורה מבטחים והסתדרות המהנדסים ניהול קופות גמל בע\"מ",
+  "detected": "2026-10-05T21:35:09+00:00"
+ },
+ {
+  "kind": "text_changed",
+  "page": "https://www.menoramivt.co.il/general/cancellation-of-policy",
+  "text": "פנסיה לעצמאיים -> פנסיה לעצמאים",
+  "href": "https://www.menoramivt.co.il/pension/independent-info",
+  "legal_id": "520027715",
+  "company": "מנורה מבטחים והסתדרות המהנדסים ניהול קופות גמל בע\"מ",
+  "detected": "2026-10-05T21:35:09+00:00"
+ },
+ {
+  "kind": "text_changed",
+  "page": "https://www.menoramivt.co.il/general/cancellation-of-policy",
+  "text": "קרנות השתלמות -> מסלולי השקעה בקרן ההשתלמות",
+  "href": "https://www.menoramivt.co.il/links/pension-and-gemel/gemel-hishtalmut-list/menroa-keren-hishtalmut",
+  "legal_id": "520027715",
+  "company": "מנורה מבטחים והסתדרות המהנדסים ניהול קופות גמל בע\"מ",
+  "detected": "2026-10-05T21:35:09+00:00"
+ },
+ {
+  "kind": "text_changed",
+  "page": "https://www.menoramivt.co.il/general/cancellation-of-policy",
+  "text": "(html) -> לחצו כאן.",
+  "href": "https://cdn.menoramivt.co.il/public/docs/%D7%91%D7%A7%D7%A9%D7%94-%D7%9C%D7%91%D7%99%D7%98%D7%95%D7%9C-%D7%A4%D7%95%D7%9C%D7%99%D7%A1%D7%94.pdf",
+  "legal_id": "520027715",
+  "company": "מנורה מבטחים והסתדרות המהנדסים ניהול קופות גמל בע\"מ",
+  "detected": "2026-10-05T21:35:09+00:00"
+ },
+ {
+  "kind": "text_changed",
+  "page": "https://www.menoramivt.co.il/general/cancellation-of-policy",
+  "text": "אישור מס והצהרת הון -> הדוחות שלי",
+  "href": "https://www.menoramivt.co.il/personal/reports/?originSource=marketingSite",
+  "legal_id": "520027715",
+  "company": "מנורה מבטחים והסתדרות המהנדסים ניהול קופות גמל בע\"מ",
+  "detected": "2026-10-05T21:35:09+00:00"
+ },
+ {
+  "kind": "text_changed",
+  "page": "https://www.menoramivt.co.il/general/cancellation-of-policy",
+  "text": " -> דלג לתוכן הדף",
+  "href": "https://www.menoramivt.co.il/general/cancellation-of-policy",
+  "legal_id": "520027715",
+  "company": "מנורה מבטחים והסתדרות המהנדסים ניהול קופות גמל בע\"מ",
+  "detected": "2026-10-05T21:35:09+00:00"
+ },
+ {
+  "kind": "text_changed",
+  "page": "https://www.menoramivt.co.il/general/cancellation-of-policy",
+  "text": "מדיניות פרטיות -> אתר זה משתמש בעוגיות (Cookies) לשיפור חווית הגלישה והתאמת תכנים. למידע נוסף ראה מדיניות הפרטיות",
+  "href": "https://www.menoramivt.co.il/general/privacy-policy",
+  "legal_id": "520027715",
+  "company": "מנורה מבטחים והסתדרות המהנדסים ניהול קופות גמל בע\"מ",
+  "detected": "2026-10-05T21:35:09+00:00"
+ },
+ {
+  "kind": "text_changed",
+  "page": "https://www.menoramivt.co.il/general/cancellation-of-policy",
+  "text": "ארכיון פוליסות -> ארכיון פוליסות ותקנונים",
+  "href": "https://www.menoramivt.co.il/policy/",
+  "legal_id": "520027715",
+  "company": "מנורה מבטחים והסתדרות המהנדסים ניהול קופות גמל בע\"מ",
+  "detected": "2026-10-05T21:35:09+00:00"
+ },
+ {
+  "kind": "new_item",
   "page": "https://www.menoramivt.co.il/general/privacy-policy",
   "text": "(html)",
   "href": "https://cdn.menoramivt.co.il/public/docs/20240331/esg-report-2021-22022.pdf",
   "legal_id": "520027715",
   "company": "מנורה מבטחים והסתדרות המהנדסים ניהול קופות גמל בע\"מ",
-  "detected": "2026-10-05T11:24:45+00:00"
+  "detected": "2026-10-05T21:35:09+00:00"
  },
  {
-  "kind": "new_page",
+  "kind": "text_changed",
+  "page": "https://www.menoramivt.co.il/general/privacy-policy",
+  "text": "Investor Relations (EN) -> קשרי משקיעים Investor Relations",
+  "href": "https://www.menoramivt.co.il/investor-relations",
+  "legal_id": "520027715",
+  "company": "מנורה מבטחים והסתדרות המהנדסים ניהול קופות גמל בע\"מ",
+  "detected": "2026-10-05T21:35:09+00:00"
+ },
+ {
+  "kind": "text_changed",
+  "page": "https://www.menoramivt.co.il/general/privacy-policy",
+  "text": "בקשה לפנסיית פרישה -> פרישה דיגיטלית",
+  "href": "https://www.menoramivt.co.il/customer-login/?target=old-age-pension-claim",
+  "legal_id": "520027715",
+  "company": "מנורה מבטחים והסתדרות המהנדסים ניהול קופות גמל בע\"מ",
+  "detected": "2026-10-05T21:35:09+00:00"
+ },
+ {
+  "kind": "text_changed",
+  "page": "https://www.menoramivt.co.il/general/privacy-policy",
+  "text": "מחשבון פנסיה -> פנסיות זקנה, נכות ושארים",
+  "href": "https://www.menoramivt.co.il/wps-frame/mivtcalc",
+  "legal_id": "520027715",
+  "company": "מנורה מבטחים והסתדרות המהנדסים ניהול קופות גמל בע\"מ",
+  "detected": "2026-10-05T21:35:09+00:00"
+ },
+ {
+  "kind": "text_changed",
+  "page": "https://www.menoramivt.co.il/general/privacy-policy",
+  "text": "קרן פנסיה -> פנסיה מקיפה",
+  "href": "https://www.menoramivt.co.il/pension",
+  "legal_id": "520027715",
+  "company": "מנורה מבטחים והסתדרות המהנדסים ניהול קופות גמל בע\"מ",
+  "detected": "2026-10-05T21:35:09+00:00"
+ },
+ {
+  "kind": "text_changed",
+  "page": "https://www.menoramivt.co.il/general/privacy-policy",
+  "text": "פנסיה לעצמאיים -> פנסיה לעצמאים",
+  "href": "https://www.menoramivt.co.il/pension/independent-info",
+  "legal_id": "520027715",
+  "company": "מנורה מבטחים והסתדרות המהנדסים ניהול קופות גמל בע\"מ",
+  "detected": "2026-10-05T21:35:09+00:00"
+ },
+ {
+  "kind": "text_changed",
+  "page": "https://www.menoramivt.co.il/general/privacy-policy",
+  "text": "קרנות השתלמות -> מסלולי השקעה בקרן ההשתלמות",
+  "href": "https://www.menoramivt.co.il/links/pension-and-gemel/gemel-hishtalmut-list/menroa-keren-hishtalmut",
+  "legal_id": "520027715",
+  "company": "מנורה מבטחים והסתדרות המהנדסים ניהול קופות גמל בע\"מ",
+  "detected": "2026-10-05T21:35:09+00:00"
+ },
+ {
+  "kind": "text_changed",
+  "page": "https://www.menoramivt.co.il/general/privacy-policy",
+  "text": "אישור מס והצהרת הון -> הדוחות שלי",
+  "href": "https://www.menoramivt.co.il/personal/reports/?originSource=marketingSite",
+  "legal_id": "520027715",
+  "company": "מנורה מבטחים והסתדרות המהנדסים ניהול קופות גמל בע\"מ",
+  "detected": "2026-10-05T21:35:09+00:00"
+ },
+ {
+  "kind": "text_changed",
+  "page": "https://www.menoramivt.co.il/general/privacy-policy",
+  "text": "מדיניות פרטיות -> דלג לתוכן הדף",
+  "href": "https://www.menoramivt.co.il/general/privacy-policy",
+  "legal_id": "520027715",
+  "company": "מנורה מבטחים והסתדרות המהנדסים ניהול קופות גמל בע\"מ",
+  "detected": "2026-10-05T21:35:09+00:00"
+ },
+ {
+  "kind": "text_changed",
+  "page": "https://www.menoramivt.co.il/general/privacy-policy",
+  "text": "ארכיון פוליסות -> ארכיון פוליסות ותקנונים",
+  "href": "https://www.menoramivt.co.il/policy/",
+  "legal_id": "520027715",
+  "company": "מנורה מבטחים והסתדרות המהנדסים ניהול קופות גמל בע\"מ",
+  "detected": "2026-10-05T21:35:09+00:00"
+ },
+ {
+  "kind": "removed_item",
+  "page": "https://www.menoramivt.co.il/general/privacy-policy",
+  "text": "דלג לתוכן הדף ביטוחים חיסכון פנסיוני מנורה השקעות תביעות שירותים פעולות דברו איתנו | פורטלים ביטוחים ביטוח רכב ביטוח רכב לפי קילומטר ביטוח נהג חדש כיסוי לכל נהג ביטוח צד ג' לאופנוע ביטוח משאית ביטוח ר",
+  "href": "https://www.menoramivt.co.il/",
+  "legal_id": "520027715",
+  "company": "מנורה מבטחים והסתדרות המהנדסים ניהול קופות גמל בע\"מ",
+  "detected": "2026-10-05T21:35:09+00:00"
+ },
+ {
+  "kind": "text_changed",
   "page": "https://www.menoramivt.co.il/rep-list/about-menora/engineers/engineers-reports",
-  "text": "118 items",
+  "text": "Investor Relations (EN) -> קשרי משקיעים Investor Relations",
+  "href": "https://www.menoramivt.co.il/investor-relations",
+  "legal_id": "520027715",
+  "company": "מנורה מבטחים והסתדרות המהנדסים ניהול קופות גמל בע\"מ",
+  "detected": "2026-10-05T21:35:09+00:00"
+ },
+ {
+  "kind": "text_changed",
+  "page": "https://www.menoramivt.co.il/rep-list/about-menora/engineers/engineers-reports",
+  "text": "בקשה לפנסיית פרישה -> פרישה דיגיטלית",
+  "href": "https://www.menoramivt.co.il/customer-login/?target=old-age-pension-claim",
+  "legal_id": "520027715",
+  "company": "מנורה מבטחים והסתדרות המהנדסים ניהול קופות גמל בע\"מ",
+  "detected": "2026-10-05T21:35:09+00:00"
+ },
+ {
+  "kind": "text_changed",
+  "page": "https://www.menoramivt.co.il/rep-list/about-menora/engineers/engineers-reports",
+  "text": "מחשבון פנסיה -> פנסיות זקנה, נכות ושארים",
+  "href": "https://www.menoramivt.co.il/wps-frame/mivtcalc",
+  "legal_id": "520027715",
+  "company": "מנורה מבטחים והסתדרות המהנדסים ניהול קופות גמל בע\"מ",
+  "detected": "2026-10-05T21:35:09+00:00"
+ },
+ {
+  "kind": "text_changed",
+  "page": "https://www.menoramivt.co.il/rep-list/about-menora/engineers/engineers-reports",
+  "text": "קרן פנסיה -> פנסיה מקיפה",
+  "href": "https://www.menoramivt.co.il/pension",
+  "legal_id": "520027715",
+  "company": "מנורה מבטחים והסתדרות המהנדסים ניהול קופות גמל בע\"מ",
+  "detected": "2026-10-05T21:35:09+00:00"
+ },
+ {
+  "kind": "text_changed",
+  "page": "https://www.menoramivt.co.il/rep-list/about-menora/engineers/engineers-reports",
+  "text": "פנסיה לעצמאיים -> פנסיה לעצמאים",
+  "href": "https://www.menoramivt.co.il/pension/independent-info",
+  "legal_id": "520027715",
+  "company": "מנורה מבטחים והסתדרות המהנדסים ניהול קופות גמל בע\"מ",
+  "detected": "2026-10-05T21:35:09+00:00"
+ },
+ {
+  "kind": "text_changed",
+  "page": "https://www.menoramivt.co.il/rep-list/about-menora/engineers/engineers-reports",
+  "text": "קרנות השתלמות -> מסלולי השקעה בקרן ההשתלמות",
+  "href": "https://www.menoramivt.co.il/links/pension-and-gemel/gemel-hishtalmut-list/menroa-keren-hishtalmut",
+  "legal_id": "520027715",
+  "company": "מנורה מבטחים והסתדרות המהנדסים ניהול קופות גמל בע\"מ",
+  "detected": "2026-10-05T21:35:09+00:00"
+ },
+ {
+  "kind": "text_changed",
+  "page": "https://www.menoramivt.co.il/rep-list/about-menora/engineers/engineers-reports",
+  "text": "אישור מס והצהרת הון -> הדוחות שלי",
+  "href": "https://www.menoramivt.co.il/personal/reports/?originSource=marketingSite",
+  "legal_id": "520027715",
+  "company": "מנורה מבטחים והסתדרות המהנדסים ניהול קופות גמל בע\"מ",
+  "detected": "2026-10-05T21:35:09+00:00"
+ },
+ {
+  "kind": "text_changed",
+  "page": "https://www.menoramivt.co.il/rep-list/about-menora/engineers/engineers-reports",
+  "text": " -> דלג לתוכן הדף",
   "href": "https://www.menoramivt.co.il/rep-list/about-menora/engineers/engineers-reports",
   "legal_id": "520027715",
   "company": "מנורה מבטחים והסתדרות המהנדסים ניהול קופות גמל בע\"מ",
-  "detected": "2026-10-05T11:24:45+00:00"
+  "detected": "2026-10-05T21:35:09+00:00"
+ },
+ {
+  "kind": "text_changed",
+  "page": "https://www.menoramivt.co.il/rep-list/about-menora/engineers/engineers-reports",
+  "text": "מדיניות פרטיות -> אתר זה משתמש בעוגיות (Cookies) לשיפור חווית הגלישה והתאמת תכנים. למידע נוסף ראה מדיניות הפרטיות",
+  "href": "https://www.menoramivt.co.il/general/privacy-policy",
+  "legal_id": "520027715",
+  "company": "מנורה מבטחים והסתדרות המהנדסים ניהול קופות גמל בע\"מ",
+  "detected": "2026-10-05T21:35:09+00:00"
+ },
+ {
+  "kind": "text_changed",
+  "page": "https://www.menoramivt.co.il/rep-list/about-menora/engineers/engineers-reports",
+  "text": "ארכיון פוליסות -> ארכיון פוליסות ותקנונים",
+  "href": "https://www.menoramivt.co.il/policy/",
+  "legal_id": "520027715",
+  "company": "מנורה מבטחים והסתדרות המהנדסים ניהול קופות גמל בע\"מ",
+  "detected": "2026-10-05T21:35:09+00:00"
  }
 ]
