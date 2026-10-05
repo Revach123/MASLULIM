@@ -313,6 +313,9 @@ def total_assets_by_key(source: list[dict]) -> dict[str, float]:
     return {k: v[1] for k, v in best.items()}
 
 
+FV_OVER_NOTIONAL = 1.5
+
+
 def _futures_exposure(
     source: list[dict], total_assets: dict[str, float], detail: list | None = None
 ) -> tuple[dict[str, float], dict[str, float]]:
@@ -354,6 +357,12 @@ def _futures_exposure(
         fx = 1.0 if fr.ccy == "ILS" else _consensus_fx(fr.ccy, _num(row.get(FUT_FX_COL)), fx_now.get((fr.ccy, rec_month.get(id(row)))))
         if notional is not None and fx is not None:
             line_ratio = notional * fx / 1000 / total
+            # השווי ההוגן של חוזה עתידי הוא הנוציונל המלא או רווח/הפסד קטן ממנו בהרבה - לעולם לא גדול
+            # ממנו. נוציונל מחושב קטן משמעותית מהשווי המדווח = רמה של מדד אחר (עגור "MSCI World Index
+            # Jun26": שויך מהשם ל-RVP - World price ~4,000 - כשהחוזה הוא World NTR ~13,830; 11.9 מול
+            # 41.1 מיליון ש"ח מדווחים) -> השווי המדווח. הראל (רווח/הפסד 1.8 מול נוציונל 164 מיליון) לא נוגע.
+            if abs(row_pct) > FV_OVER_NOTIONAL * abs(line_ratio):
+                line_ratio = row_pct
         else:
             line_ratio = row_pct
         sums[key] = sums.get(key, 0.0) + line_ratio
