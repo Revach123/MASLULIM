@@ -361,7 +361,9 @@ def _futures_exposure(
             # ממנו. נוציונל מחושב קטן משמעותית מהשווי המדווח = רמה של מדד אחר (עגור "MSCI World Index
             # Jun26": שויך מהשם ל-RVP - World price ~4,000 - כשהחוזה הוא World NTR ~13,830; 11.9 מול
             # 41.1 מיליון ש"ח מדווחים) -> השווי המדווח. הראל (רווח/הפסד 1.8 מול נוציונל 164 מיליון) לא נוגע.
-            if abs(row_pct) > FV_OVER_NOTIONAL * abs(line_ratio):
+            # רק בשורה ששורשה נלמד מהשם (by_name - המחיר שלה לא התאים לרמה): כלל מדווח שווי גדול
+            # מהנוציונל המחושב גם בחוזים שזוהו מהקוד, שם הרמה נכונה
+            if fr.by_name and abs(row_pct) > FV_OVER_NOTIONAL * abs(line_ratio):
                 line_ratio = row_pct
         else:
             line_ratio = row_pct
