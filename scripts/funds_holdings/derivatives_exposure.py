@@ -72,7 +72,7 @@ from .sheet_source import PCT_COL
 from .option_delta_pricing import quote_scale, resolve_option_delta, resolve_option_value
 from .option_ticker_parse import (CONTRACT_MULTIPLIER, FUTURES_OPTION, MAOF_STOCK_OPTION_SHARES, is_call_option, parse_maof_expiry_month, parse_strike,
                                   parse_underlying)
-from .futures_notional import CONTRACT_SPECS, FuturesResolver, build_rows as build_futures_rows
+from .futures_notional import FuturesResolver, build_rows as build_futures_rows
 from .stock_quote import stock_quote
 from .swap_index_pricing import (
     has_price_source, parse_deal_date, price_as_of as index_price_as_of, proxy_return, resolve_current_price,
@@ -313,24 +313,6 @@ def total_assets_by_key(source: list[dict]) -> dict[str, float]:
     return {k: v[1] for k, v in best.items()}
 
 
-def _reports_own_notional(row: dict, fr, fx: float, tol: float = 0.03) -> bool:
-    """השווי ההוגן בשורה = הנוציונל המלא לפי המחיר שבשורה עצמה (חוזים × מכפיל × מחיר × שער, עד חזקת
-    10 - מוסכמת היחידות של הגוף). בשורה ששורשה נלמד רק מהשם, כשהמחיר לא מתאים לרמה של השורש
-    (by_name נשאר - ר' FuturesResolver._recheck_by_name), זו ההוכחה שהשורה היא וריאנט אחר של המדד
-    והשווי המדווח הוא החשיפה: עגור "MSCI World Index Jun26" - 90 × 10 × 13,830 (World NTR) × 3.306 =
-    41,149 אלף ש"ח = השווי ההוגן, בעוד שהשם משייך ל-RVP (World price, ~4,000 - פי 3.5 פחות).
-    שורה שהשווי שלה הוא רווח/הפסד (הראל, אינפיניטי) לא עונה על התנאי ונשארת לפי הרמה."""
-    fv, price = _num(row.get(FAIR_VALUE_COL)), fr.price
-    mult = CONTRACT_SPECS.get(fr.root, (None,))[0]
-    if not fv or not price or not fr.units or not mult or price <= 0:
-        return False
-    q = fr.units * mult * price * fx / (fv * 1000)
-    if q <= 0:
-        return False
-    e = math.log10(q)
-    return abs(e - round(e)) <= math.log10(1 + tol)
-
-
 def _futures_exposure(
     source: list[dict], total_assets: dict[str, float], detail: list | None = None
 ) -> tuple[dict[str, float], dict[str, float]]:
@@ -372,8 +354,6 @@ def _futures_exposure(
         fx = 1.0 if fr.ccy == "ILS" else _consensus_fx(fr.ccy, _num(row.get(FUT_FX_COL)), fx_now.get((fr.ccy, rec_month.get(id(row)))))
         if notional is not None and fx is not None:
             line_ratio = notional * fx / 1000 / total
-            if fr.by_name and _reports_own_notional(row, fr, fx):
-                line_ratio = row_pct
         else:
             line_ratio = row_pct
         sums[key] = sums.get(key, 0.0) + line_ratio
