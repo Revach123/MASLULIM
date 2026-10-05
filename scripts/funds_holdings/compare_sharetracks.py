@@ -201,6 +201,66 @@ def main():
     print(f"\n[compare] מניות בארץ: {len(local)} שורות ידניות; {len(both)} עם מסלול תואם; פער מוחלט ממוצע "
           f"{sum(abs(r['auto_local'] - r['manual_local']) for r in both) / max(len(both), 1) * 100:.1f} נק' אחוז")
     print(lmd)
+    hd_path = args.out_dir / "holdings_detail.json"
+    hd = json.load(open(hd_path, encoding="utf-8")) if hd_path.exists() else {}
+    print(local_detail(both, index_table, hd))
+    print(overlap_detail(matched, hd))
+
+
+def holdings_lines(key: str, hd: dict, top: int = 10) -> list[str]:
+    """ההחזקות הגדולות בחשיפה למניות של מסלול (holdings_detail): שם, רכיב, חשיפה והמדד ששויך."""
+    d = hd.get(key) or {}
+    cols, cats = d.get("cols") or [], d.get("cats") or []
+    if not cols:
+        return []
+    ix = {c: i for i, c in enumerate(cols)}
+    rows = [r for r in d.get("rows") or [] if r[ix["equity"]]]
+    rows.sort(key=lambda r: -abs(r[ix["equity"]] or 0))
+    out = []
+    for r in rows[:top]:
+        idx = ", ".join(f"{i} {v * 100:.1f}" for i, v in (r[ix["idx"]] or []))
+        cat = cats[r[ix["cat"]]] if isinstance(r[ix["cat"]], int) and r[ix["cat"]] < len(cats) else r[ix["cat"]]
+        out.append(f"[compare-hold] {key}   {r[ix['equity']] * 100:6.2f}  {cat} | {r[ix['name']]} | "
+                   f"{r[ix['country']] or ''} | {r[ix['component']] or ''} -> {idx}")
+    return out
+
+
+def overlap_detail(rows: list[dict], hd: dict, max_overlap: float = 0.6) -> str:
+    """שורות עם חפיפה נמוכה להרכב הידני - ההחזקות שמאחורי הפירוק האוטומטי, לבדיקת הסיווג."""
+    lines = []
+    for r in rows:
+        if r["overlap"] is None or r["overlap"] >= max_overlap:
+            continue
+        for k in r["tracks"][:2]:
+            lines += holdings_lines(k, hd)
+    return "\n".join(lines)
+
+
+def local_detail(rows: list[dict], index_table: list[dict], hd: dict | None = None, min_gap: float = 0.05) -> str:
+    """פירוט לכל מסלול בשורה עם פער של 5 נק' ומעלה: החשיפה למניות, ממה מורכב החלק בארץ (מדד ומקור:
+    מניות ישירות / קרנות / חוזים / אופציות / סוואפים) והמדדים בחו"ל - כדי להבחין בין שינוי אמיתי במסלול
+    לבין סיווג שגוי שלנו."""
+    by_key = {t["key"]: t for t in index_table}
+    fmt = lambda v: f"{v * 100:.1f}"
+    lines = []
+    for r in sorted(rows, key=lambda r: -abs(r["auto_local"] - r["manual_local"])):
+        if abs(r["auto_local"] - r["manual_local"]) < min_gap:
+            continue
+        for k in r["tracks"]:
+            t = by_key.get(k) or {}
+            tot = t.get("equity_total") or 0.0
+            if tot <= 0:
+                continue
+            loc = [e for e in t["indices"] if e.get("il")]
+            frn = [e for e in t["indices"] if not e.get("il")]
+            part = lambda es: "; ".join(f"{e['label']} {fmt(e['pct'])} (" + ", ".join(
+                f"{s} {fmt(v)}" for s, v in e["sources"].items()) + ")" for e in es[:5])
+            lines.append(f"[compare-local] {r['company']} {r['product']} {k} דוח {t.get('report_month')} "
+                         f"מניות {fmt(tot)} | בארץ {fmt(sum(e['pct'] for e in loc))}: {part(loc)} | "
+                         f"חו\"ל {fmt(sum(e['pct'] for e in frn))}: {part(frn)}")
+            if abs(r["auto_local"] - r["manual_local"]) >= 0.08:
+                lines += holdings_lines(k, hd or {}, top=6)
+    return "\n".join(lines)
 
 
 if __name__ == "__main__":
