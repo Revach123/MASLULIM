@@ -1,0 +1,35 @@
+name: Policy mapping check (data.gov)
+
+# אימות שיוך מסמך -> מספר מסלול: חשיפה למניות/מט"ח במסמך מול גמל-נט/פנסיה-נט/ביטוח-נט באותו חודש.
+# פלט: policy/mapping_check.csv. שבועי + ידני.
+on:
+  schedule:
+    - cron: "41 5 * * 1"
+  workflow_dispatch:
+
+concurrency:
+  group: policy-verify
+  cancel-in-progress: false
+
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: pip install -q requests
+      - run: python -m scripts.policy.verify_mapping
+      - name: Commit report
+        run: |
+          git config user.name "github-actions"
+          git config user.email "github-actions@users.noreply.github.com"
+          git add policy/mapping_check.csv
+          git diff --cached --quiet && exit 0
+          git commit -q -m "policy: mapping check (data.gov)"
+          for i in 1 2 3 4; do git pull -q --rebase origin main && git push -q origin HEAD:main && exit 0; sleep $((5*i)); done
+          exit 1
