@@ -72,7 +72,7 @@ from .sheet_source import PCT_COL
 from .option_delta_pricing import quote_scale, resolve_option_delta, resolve_option_value
 from .option_ticker_parse import (CONTRACT_MULTIPLIER, FUTURES_OPTION, MAOF_STOCK_OPTION_SHARES, is_call_option, parse_maof_expiry_month, parse_strike,
                                   parse_underlying)
-from .futures_notional import CONTRACT_SPECS, FuturesResolver, build_rows as build_futures_rows
+from .futures_notional import CONTRACT_SPECS, SCALES as FUTURES_SCALES, FuturesResolver, build_rows as build_futures_rows
 from .stock_quote import stock_quote
 from .swap_index_pricing import (
     has_price_source, parse_deal_date, price_as_of as index_price_as_of, proxy_return, resolve_current_price,
@@ -313,6 +313,18 @@ def total_assets_by_key(source: list[dict]) -> dict[str, float]:
     return {k: v[1] for k, v in best.items()}
 
 
+VARIANT_GAP = 0.5
+
+
+def _other_variant(fr, resolver) -> bool:
+    """המחיר בשורה רחוק מהרמה של השורש ביותר מ-50% בכל קנה מידה - מדד אחר (מחיר מול NTR: עגור 13,830
+    מול RVP ~4,000), לא מחיר כניסה/תאריך אחר של אותו מדד (הראל: פער של אחוזים בודדים - שם הרמה נכונה)."""
+    lvl = resolver.level(fr.root, fr.month, fr.report_date)
+    if not lvl or not fr.price or fr.price <= 0:
+        return False
+    return all(abs(fr.price / s / lvl - 1) > VARIANT_GAP for s in FUTURES_SCALES)
+
+
 def _reports_own_notional(row: dict, fr, fx: float, tol: float = 0.03) -> bool:
     """השווי ההוגן בשורה = הנוציונל המלא לפי המחיר שבשורה עצמה (חוזים × מכפיל × מחיר × שער, עד חזקת
     10 - מוסכמת היחידות של הגוף). בשורה ששורשה נלמד רק מהשם, כשהמחיר לא מתאים לרמה של השורש
@@ -372,7 +384,7 @@ def _futures_exposure(
         fx = 1.0 if fr.ccy == "ILS" else _consensus_fx(fr.ccy, _num(row.get(FUT_FX_COL)), fx_now.get((fr.ccy, rec_month.get(id(row)))))
         if notional is not None and fx is not None:
             line_ratio = notional * fx / 1000 / total
-            if fr.by_name and _reports_own_notional(row, fr, fx):
+            if fr.by_name and _other_variant(fr, resolver) and _reports_own_notional(row, fr, fx):
                 line_ratio = row_pct
         else:
             line_ratio = row_pct
