@@ -783,6 +783,16 @@ def parse_text_tracks(rows, sheet=""):
     return out
 
 
+def _iso_date(v):
+    """'2026-09-29' / '29/09/2026' / datetime -> 'YYYY-MM-DD', אחרת None."""
+    v = str(v or "")[:10]
+    m = re.match(r"(20\d\d)-(\d\d)-(\d\d)", v) or None
+    if m:
+        return v
+    m = re.match(r"(\d{1,2})[./](\d{1,2})[./](20\d\d|\d\d)(?!\d)", v)  # "29/09/2026", "5.11.25"
+    return f"{m.group(3) if len(m.group(3)) == 4 else '20' + m.group(3)}-{int(m.group(2)):02d}-{int(m.group(1)):02d}" if m else None
+
+
 def parse_change_log(rows, sheet=""):
     """גיליון "מהות שינויים": מספר מסלול | שם מסלול | מהות השינוי | תאריך עדכון."""
     if not rows or [str(c).strip() for c in rows[0][:4]] != ["מספר מסלול", "שם מסלול", "מהות השינוי", "תאריך עדכון"]:
@@ -857,7 +867,12 @@ def main():
             if chg:
                 for r in chg:
                     r.update(legal_id=ent["legal_id"], url=url)
-                changes += chg; continue
+                changes += chg
+                # תאריך הגרסה מתוך הקובץ (מיטב: "עדכון מספר 2" בלי תאריך באתר ובשרת; בגיליון "מהות שינויים" - "תאריך עדכון")
+                ds = sorted(d for d in (_iso_date(r.get("updated")) for r in chg) if d)
+                if ds:
+                    ent["content_date"] = ds[-1]
+                continue
             ex = parse_exposure_prose(t, nm)  # מסלול מתמחה במלל ("חשופים ל... שלא יפחת מ-75% ולא יעלה על 120%")
             if ex:
                 for r in ex:
