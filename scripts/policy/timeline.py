@@ -83,7 +83,7 @@ def date_from_text(s: str, year=None):
     for m in re.finditer(r"(?<![\w./])(\d{1,2})[./](20\d\d)(?!\d|[./]\d)", s):                       # עדכון-8.2026 (חודש.שנה)
         if 1 <= int(m.group(1)) <= 12:
             cands.append(_mk(m.group(2), m.group(1), 1))
-    for m in re.finditer(r"(?<![\d.])(0[1-9]|1[0-2])(20[12]\d)(?!\d)", s):                         # -082025 (חודש+שנה, גילעד)
+    for m in re.finditer(r"(?<![A-Za-zא-ת\d.])(0?[1-9]|1[0-2])(20[12]\d)(?!\d)", s):                         # -082025 (חודש+שנה, גילעד)
         cands.append(_mk(m.group(2), m.group(1), 1))
     for m in re.finditer(rf"(?<!\d)(\d{{1,2}})[\s\-_]+({_MONTH_RX})[\s\-_,]+(20\d\d)(?!\d)", s, re.I):    # 20 אוגוסט 2015
         cands.append(_mk(m.group(3), str(_month_no(m.group(2))), m.group(1)))
@@ -125,25 +125,57 @@ def date_from_file(path: Path, year=None):
         return None
 
 
-def version_date(url, ent, year):
-    # הכיתוב באתר קודם ("החל מתאריך 04.11.2024"); הכתובת (תיקיית העלאה "/20241203/") אחריו
-    d = date_from_text(ent.get("link_text"), year) or date_from_text(url, year)
+UPDATE_RX = re.compile(r"עדכון|עידכון|מעודכ|עודכנ|שינוי|תיקון|מתוקנ|החל\s*מ|update|amend", re.I)
+_BULK = {}
+
+
+def _bulk_days(legal_id):
+    """ימי העלאה המונית בחברה: באותו יום Last-Modified קבצים של כמה שנות מדיניות (מגדל 05.01.2026, אל על 02/2025) -
+    העלאה מחדש של ארכיון, לא מועד פרסום."""
+    if legal_id in _BULK:
+        return _BULK[legal_id]
+    from .pubdate import from_header
+    p = ROOT / "policy" / "companies" / str(legal_id) / "docs_index.json"
+    days = {}
+    for u, e in (json.loads(p.read_text("utf-8")) if p.exists() else {}).items():
+        d = from_header(e.get("last_modified"))
+        ys = set(re.findall(r"(?<!\d)(20[12]\d)(?!\d)", f"{e.get('link_text') or ''} {unquote(u).rsplit('/', 1)[-1]}"))
+        if d and len(ys) == 1:
+            n, yrs = days.get(d, (0, set()))
+            days[d] = (n + 1, yrs | ys)
+    _BULK[legal_id] = {d for d, (n, yrs) in days.items() if n >= 4 and len(yrs) >= 2}
+    return _BULK[legal_id]
+
+
+def _snap(rows):
+    """תוכן גרסה להשוואה: לכל אפיק - צפוי, מינימום, מקסימום."""
+    return {k: (r.get("expected_pct"), r.get("min_pct"), r.get("max_pct")) for k, r in rows.items()}
+
+
+def version_date(url, ent, year, as_update=False):
+    """(YYYY-MM-DD, מקור). כלל המשתמש: מה שכתוב באתר קובע; גרסה שנתית (בלי "עדכון"/"שינוי" בכיתוב או בשם הקובץ) -
+    תחילת השנה; לעדכון אין להניח תחילת שנה - תאריך כתוב (כיתוב, שם קובץ, תוך הקובץ), אחרת מועד העלאה בתוך השנה
+    שאינו העלאה המונית, אחרת "update_undated" (אחרי הגרסה השנתית, בלי תאריך מומצא)."""
+    y_ok = year and str(year).isdigit()
+    # הכיתוב באתר קודם ("החל מתאריך 04.11.2024")
+    d = date_from_text(ent.get("link_text"), year)
     if d:
         return d.isoformat(), "doc"
-    cd = ent.get("content_date")  # "תאריך עדכון" בגיליון השינויים שבתוך הקובץ (extract)
-    if cd and (not year or not str(year).isdigit() or int(year) - 1 <= int(cd[:4]) <= int(year)):
-        return cd, "doc_content"
-    # מועד הפרסום באתר (Last-Modified / תיקיית ההעלאה בכתובת) - אם סביר לשנת המדיניות
-    from .pubdate import published, fits
-    pd_, src = published(url, ent)
-    if pd_ and (not year or not str(year).isdigit() or fits(year, pd_)):
-        return pd_.isoformat(), src
-    f = ROOT / ent["file"] if ent.get("file") else None
-    d = date_from_file(f, year) if f and f.exists() else None
+    is_update = as_update or bool(UPDATE_RX.search(f"{ent.get('link_text') or ''} {unquote(url).rsplit('/', 1)[-1]}"))
+    if not is_update and y_ok:
+        return f"{year}-01-01", "year_start"  # גרסה שנתית
+    d = date_from_text(url, year)  # שם הקובץ / תיקיית ההעלאה ("-עדכון-אפריל", "/20241203/")
     if d:
-        return d.isoformat(), "file_meta"
-    if year and str(year).isdigit():
-        return f"{year}-01-01", "year_start"
+        return d.isoformat(), "doc"
+    cd = ent.get("content_date")  # בתוך הקובץ: יומן שינויים / "אושרה בדירקטוריון ביום"
+    if cd and (not y_ok or int(year) - 1 <= int(cd[:4]) <= int(year)):
+        return cd, "doc_content"
+    from .pubdate import published
+    pd_, src = published(url, ent)
+    if pd_ and (not y_ok or pd_.year == int(year)) and pd_ not in _bulk_days(ent.get("legal_id")):
+        return pd_.isoformat(), src
+    if y_ok:
+        return f"{year}-01-01", "update_undated"
     return (ent.get("first_seen") or "")[:10], "first_seen"
 
 
@@ -311,7 +343,25 @@ def build():
             if str(v["year"] or "").isdigit():
                 max_year[lid] = max(max_year.get(lid, 0), int(v["year"]))
     for (lid, tkey), versions in tracks.items():
-        vs = sorted(versions.values(), key=lambda v: (v["date"][0], str(v["year"] or ""), _natural(v["url"])))
+        # כמה גרסאות "שנתיות" (בלי "עדכון" בשם) לאותה שנה: תוכן זהה = אותה גרסה (קובץ מאוחד + קובץ למסלול);
+        # תוכן שונה = הראשונה (לפי מועד העלאה) שנתית, השאר עדכונים - תאריך כתוב / העלאה בתוך השנה (version_date as_update)
+        by_year = {}
+        for v in versions.values():
+            if v["date"][1] == "year_start":
+                by_year.setdefault(v["year"], []).append(v)
+        for yr, same in by_year.items():
+            if len(same) < 2 or len({json.dumps(_snap(v["rows"]), sort_keys=True) for v in same}) < 2:
+                continue
+            idx = json.loads((COMP / lid / "docs_index.json").read_text("utf-8")) if (COMP / lid / "docs_index.json").exists() else {}
+            from .pubdate import published
+            order = sorted(same, key=lambda v: (str(published(v["url"], idx.get(v["url"], {}))[0] or "9999"),
+                                                idx.get(v["url"], {}).get("first_seen") or "", _natural(v["url"])))
+            base = json.dumps(_snap(order[0]["rows"]), sort_keys=True)
+            for v in order[1:]:
+                if json.dumps(_snap(v["rows"]), sort_keys=True) != base:
+                    v["date"] = version_date(v["url"], idx.get(v["url"], {}), yr, as_update=True)
+        # עדכון בלי תאריך - אחרי הגרסה השנתית של אותה שנה
+        vs = sorted(versions.values(), key=lambda v: (v["date"][0], v["date"][1] == "update_undated", str(v["year"] or ""), _natural(v["url"])))
         last_change = (vs[0]["date"], "initial", [], {}, None)  # (date, level, notes, per-asset, הגרסה שלפני השינוי)
         last_major = vs[0]["date"][0]
         prev = vs[0]
