@@ -277,10 +277,17 @@ def visible_text_better(old, new):
         and not re.fullmatch(r"\s*(הורד\w*|להורדה|לצפייה|צפייה|download|pdf|xlsx?|קובץ|למידע נוסף|לפרטים|לחצ?ו? כאן|קרא עוד|>)?\s*", t, re.I)
     # 2 = תאריך מלא / חודש ושנה, 1 = שנה בלבד, 0 = בלי. אלטשולר מעדכנת את הכיתוב באותו קישור:
     # "מדיניות השקעה צפויה לשנת 2026" -> "... לשנת 2026 – מיום 12.05.2026" - התאריך המלא מחליף את השנה בלבד
-    MON = r"ינואר|פברואר|מרץ|מרס|אפריל|מאי|יוני|יולי|אוגוסט|ספטמבר|אוקטובר|נובמבר|דצמבר|jan|feb|mar|apr|may|jun|jul|aug|sep|oct|nov|dec"
-    when = lambda t: 2 if re.search(rf"\d{{1,2}}[./]\d{{1,2}}[./]\d{{2,4}}|(?:{MON})\w*[\s,_-]*(?:20)?\d\d(?!\d)", t or "", re.I) else \
-        1 if re.search(r"(?<!\d)(19|20)\d\d(?!\d)|תש[א-ת][\"״][א-ת]", t or "") else 0
-    return info(new) and new != old and (not info(old) or when(new) > when(old))
+    return info(new) and new != old and (not info(old) or text_date_rank(new) > text_date_rank(old))
+
+
+_MON = r"ינואר|פברואר|מרץ|מרס|אפריל|מאי|יוני|יולי|אוגוסט|ספטמבר|אוקטובר|נובמבר|דצמבר|jan|feb|mar|apr|may|jun|jul|aug|sep|oct|nov|dec"
+
+
+def text_date_rank(t):
+    """2 = תאריך מלא / חודש ושנה, 1 = שנה בלבד, 0 = בלי."""
+    if re.search(rf"\d{{1,2}}[./]\d{{1,2}}[./]\d{{2,4}}|(?:{_MON})\w*[\s,_-]*(?:20)?\d\d(?!\d)", t or "", re.I):
+        return 2
+    return 1 if re.search(r"(?<!\d)(19|20)\d\d(?!\d)|תש[א-ת][\"״][א-ת]", t or "") else 0
 
 
 _BROWSER = {}  # דפדפן אחד לכל ריצה (לא לכל קובץ) + עמודי מקור שכבר נפתחו בו
@@ -427,7 +434,10 @@ def main():
             url = d["href"]
             lm = d.get("last_modified")  # מועד הפרסום באתר (Last-Modified של השרת) - עוגן לתאריך הגרסה ולשנת המדיניות
             old = index.get(find_key(index, url))
-            if (old and old.get("sha256") and old.get("file")
+            # אותו קישור עם תאריך עדכון חדש בכיתוב (אלטשולר: כל הקישורים של 2026 מפנים ל-".../kmnaqaao/1394.xlsx",
+            # והקובץ נדרס בכל עדכון - "מיום 17.02.2026" -> "מיום 12.05.2026") - מורידים שוב; תוכן שונה נשמר כגרסה
+            new_date = bool(old) and text_date_rank(d.get("text")) == 2 and d.get("text") != old.get("link_text")
+            if (old and old.get("sha256") and old.get("file") and not new_date
                     and ((ROOT / old["file"]).exists() or os.environ.get("POLICY_TRUST_INDEX") == "1")  # home_crawl: בלי קבצי raw
                     and DOC_PATH.search(urlparse(url).path)):
                 # קובץ מסמך שכבר הורד לא משתנה - עדכון מתפרסם כקובץ חדש. לא מורידים שוב; רק HEAD למועד הפרסום אם חסר.
