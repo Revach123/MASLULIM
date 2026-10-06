@@ -152,6 +152,14 @@ SCALES = (1.0, 100.0)
 SCALE_TOL = 0.05        # מחיר/רמת-ייחוס בתוך 5% (בסיס חוזה מול מדד, הפרשי תאריכים)
 LEVEL_TOL = 0.05
 IDENTIFY_TOL = 0.02     # זיהוי לפי רמה - צר יותר (למשל MSCI Korea 3,093 מול Russell 3,046)
+# חוזה שאין לו רמה (שורש לא מוכר / בלי מקור רמה), כשה"מחיר" בשורה הוא שווי חוזה אחד (מכפיל × רמת
+# המדד): מחיר ÷ מכפיל סטנדרטי = רמה ידועה של מדד מניות באותו מטבע (מהדוחות / INDICES / Yahoo), עד 3%
+# (הפרש בסיס עד הפקיעה) -> נוציונל = חוזים × מחיר. מיטב 2025Q3, זירה CBOE: "F-12/25 MSCI US" FJWZ5 ב-68,000
+# (S&P 500 6,688 × 10) ו-"F-12/25 MSCI WO" OEYZ5 ב-49,500 (MSCI ACWI 984.8 × 50).
+CONTRACT_VALUE_MULTS = (5.0, 10.0, 20.0, 25.0, 50.0, 100.0)
+CONTRACT_VALUE_TOL = 0.03
+# מדדי מניות נפוצים בלי חוזה בטבלה - רק לזיהוי שווי חוזה (Yahoo: רמת המחיר של MSCI)
+EXTRA_VALUE_REFS = {"USD": ("yahoo:^892400-USD-STRD",)}   # MSCI ACWI price
 MIN_SCALE_VOTES = 3
 SCALE_MAJORITY = 0.8
 
@@ -419,16 +427,43 @@ class FuturesResolver:
             return None
         return r.root not in NON_EQUITY_ROOTS
 
+    def contract_value_match(self, r: FuturesRow) -> list[str]:
+        """מדדי המניות (באותו מטבע) שהמחיר בשורה הוא שווי חוזה אחד שלהם: מחיר ÷ מכפיל סטנדרטי = הרמה
+        שלהם בתאריך הדוח (ר' CONTRACT_VALUE_MULTS). ריק - המחיר אינו שווי חוזה מזוהה."""
+        if not r.price or r.price <= 0 or r.report_date is None or r.ccy in (None, "ILS"):
+            return []
+        cands: dict[str, float] = {}
+        for root in CONTRACT_SPECS:
+            if root in NON_EQUITY_ROOTS or self.root_ccy.get(root) != r.ccy:
+                continue
+            lvl = self.level(root, None, r.report_date)
+            if lvl:
+                cands[self._index_of(root)] = lvl
+        for ref in EXTRA_VALUE_REFS.get(r.ccy, ()):
+            try:
+                lvl = self._ref_level(ref, r.report_date)
+            except Exception:
+                lvl = None
+            if lvl:
+                cands[ref] = lvl
+        return [idx for idx, lvl in cands.items()
+                if any(abs(r.price / m / lvl - 1) < CONTRACT_VALUE_TOL for m in CONTRACT_VALUE_MULTS)]
+
     def notional(self, r: FuturesRow) -> float | None:
         """נוציונל במטבע החוזה (חתום לפי כיוון הפוזיציה). 0.0 לרגל התחייבות. None - לא נפתר."""
         if r.liability:
             return 0.0
-        if r.root not in CONTRACT_SPECS or r.units is None:
+        if r.units is None:
             return None
-        lvl = self.level(r.root, r.month, r.report_date)
-        if not lvl:
-            return None
-        return r.units * lvl * CONTRACT_SPECS[r.root][0]
+        if r.root in CONTRACT_SPECS:
+            lvl = self.level(r.root, r.month, r.report_date)
+            if lvl:
+                return r.units * lvl * CONTRACT_SPECS[r.root][0]
+        # קוד חוזה שאינו בטבלה (ולכן בלי מכפיל ורמה): המחיר בשורה כשווי חוזה אחד של מדד מניות מוכר.
+        # לא לשורש מוכר בלי רמה (SWO/TWT כש-Yahoo נכשל) - שם המחיר הוא רמה, וההתאמה מקרית
+        if r.root not in CONTRACT_SPECS and self.contract_value_match(r):
+            return r.units * r.price
+        return None
 
 
 def build_rows(source: list[dict], category: str, cols: dict) -> list[tuple[dict, FuturesRow]]:

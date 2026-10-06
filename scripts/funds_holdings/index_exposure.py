@@ -31,6 +31,7 @@ from .derivatives_exposure import (
 )
 from .excel_io import to_ratio
 from .funds_classification import fund_siveg, leverage_factor
+from .futures_notional import CONTRACT_SPECS
 from .sheet_source import PCT_COL
 
 # כתבי אופציה (נאייקס אפ 1, ג'נריישן קפיטל אופ ל.ס) - זכות לקנות מניה של החברה, חלק מהחשיפה
@@ -515,7 +516,7 @@ def build_index_exposure(source: list[dict], funds: list[dict], funds_ref: list[
     fut_detail: list[dict] = []
     fut_eq = _futures_exposure(source, totals, fut_detail)[1]
     _add_derivative(acc, fut_detail, fut_eq, "futures",
-                    lambda d: classify_index(d["root"]) if d["root"] else classify_index(d["row"].get(NAME_COL)))
+                    lambda d: classify_index(d["root"]) if d["root"] in CONTRACT_SPECS else classify_index(d["row"].get(NAME_COL)))
 
     # 4. עסקאות החלף - רק "סוג הנכס" = מניות (כמו validate_equity_exposure)
     swap_detail: list[dict] = []
