@@ -2,7 +2,8 @@
 1. אותה כתובת בשתי צורות (התוסף שמר מקודד %D7%9E..., הסריקה בענן קריא) - רשומה אחת: המפתח הקריא,
    הכיתוב הגלוי הטוב מבין השתיים, first_seen המוקדם, last_seen ו-last_modified הקיימים. השורות של הכפילות
    יוצאות בפרסור הבא (extract מוחק שורות של כתובת שלא באינדקס).
-2. כתובת הורדה חתומה (מגדל/Wix) עם תווית טכנית - שם הקובץ המקורי מתוך ה-token ("... JUL 2026_P - ACC.xlsx").
+2. הכיתוב העדכני מתמונת האתר האחרונה (site_snapshot), כשהוא עדיף על השמור (תאריך מלא במקום שנה בלבד).
+3. כתובת הורדה חתומה (מגדל/Wix) עם תווית טכנית - שם הקובץ המקורי מתוך ה-token ("... JUL 2026_P - ACC.xlsx").
 הרצה: python -m scripts.policy.normalize_index  -> מדפיס את החברות שהשתנו (לפרסור מחדש).
 """
 import json
@@ -43,21 +44,31 @@ def main():
         groups = {}
         for u in index:
             groups.setdefault(unquote(u), []).append(u)
-        new, n_merged, n_named = {}, 0, 0
+        snap = {}
+        for sp in idx_path.parent.glob("site_snapshot/*.json"):
+            for pg in json.loads(sp.read_text("utf-8")).get("pages", {}).values():
+                for it in pg.get("items", []) if isinstance(pg, dict) else []:
+                    h, t = unquote(it.get("href") or ""), (it.get("text") or "").strip()
+                    if h and visible_text_better(snap.get(h), t):
+                        snap[h] = t
+        new, n_merged, n_named, n_snap = {}, 0, 0, 0
         for readable, keys in groups.items():
             keep = readable if readable in keys else keys[0]
             ent = index[keep]
             for k in keys:
                 if k != keep:
                     ent = merge(ent, index[k]); n_merged += 1
+            t = snap.get(readable)
+            if t and visible_text_better(ent.get("link_text"), t):
+                ent = {**ent, "link_text": t, "parsed_sha": None}; n_snap += 1
             name = signed_url_name(keep)
             if name and visible_text_better(ent.get("link_text"), name):
                 ent = {**ent, "link_text": name, "parsed_sha": None}; n_named += 1
             new[keep] = ent
-        if n_merged or n_named:
+        if n_merged or n_named or n_snap:
             idx_path.write_text(json.dumps(new, ensure_ascii=False, indent=1), "utf-8")
             changed.append(idx_path.parent.name)
-            print(f"{idx_path.parent.name}: merged {n_merged} duplicate urls, {n_named} names from signed urls", flush=True)
+            print(f"{idx_path.parent.name}: merged {n_merged} duplicate urls, {n_named} names from signed urls, {n_snap} texts from site snapshot", flush=True)
     print(" ".join(changed))
 
 
