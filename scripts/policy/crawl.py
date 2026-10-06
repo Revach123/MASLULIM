@@ -469,6 +469,8 @@ def main():
                 errs.append(f"{url[-80:]} -> {code}"); continue
             sha = hashlib.sha256(content).hexdigest()
             ukey = find_key(index, url)
+            if ukey not in index and "?" in ukey:  # אותו קובץ כבר באינדקס בלי הפרמטר ("...xls?pid=2412")
+                ukey = next((k for k, e in index.items() if k == ukey.split("?")[0] and e.get("sha256") == sha), ukey)
             ent = index.get(ukey)
             kind = "new" if ent is None else ("changed" if ent["sha256"] != sha else "unchanged")
             if kind != "unchanged":

@@ -68,7 +68,7 @@ def date_from_text(s: str, year=None):
     """תאריך מפורש בשם קובץ / טקסט קישור. year (שנת המדיניות) מסנן תאריכים לא סבירים."""
     s = unquote(s or "")
     # "עד תאריך 30.06.2024" / "עד ליום ..." = סוף התוקף של הגרסה הקודמת, לא מועד הגרסה (מנורה) - לא נספר
-    s = re.sub(r"עד\s*(?:ל?תאריך|ל?יום)?\s*[-:]?\s*\d{1,2}[./]\d{1,2}[./]\d{2,4}", " ", s)
+    s = re.sub(r"עד\s*(?:ל?תאריך|ל?יום)?\s*[-:]?\s*\d{1,2}(?:[./]\d{1,2}[./]\d{2,4}|\s+ב?\S+\s+20\d\d)", " ", s)
     cands = []
     for m in re.finditer(r"(?<!\d)(\d{1,2})[./_-](\d{1,2})[./_-](20\d\d|\d\d)(?!\d)", s):      # 06-05-2026, 27.8.20
         cands.append(_mk(m.group(3), m.group(2), m.group(1)))
@@ -76,7 +76,9 @@ def date_from_text(s: str, year=None):
         cands.append(_mk(m.group(1), m.group(2), m.group(3)))
     for m in re.finditer(r"(?<!\d)(\d\d)(\d\d)(20\d\d)(?!\d)", s):                              # 10032024
         cands.append(_mk(m.group(3), m.group(2), m.group(1)))
-    for m in re.finditer(r"(?<=[_\-])(\d\d)(\d\d)(\d\d)(?=[_\-.]|$)", s):                   # _260811 (YYMMDD) / _101225 (DDMMYY)
+    for m in re.finditer(r"(?<!\d)(20\d\d)-(\d\d)-(\d\d)(?:T|(?!\d))", s):                         # 2020-03-30T00:00:00
+        cands.append(_mk(m.group(1), m.group(2), m.group(3)))
+    for m in re.finditer(r"(?:(?<=[_\-/])|^)(\d\d)(\d\d)(\d\d)(?=[_\-.]|[א-ת]|$)", s):                   # _260811 (YYMMDD) / _101225 (DDMMYY)
         cands += [_mk(m.group(1), m.group(2), m.group(3)), _mk(m.group(3), m.group(2), m.group(1))]
     for m in re.finditer(r"(?<=[_\-])(\d\d)(\d)(\d\d)(?=[_\-.]|$)", s):                        # -26826 (D D M YY, הכשרה)
         cands.append(_mk(m.group(3), m.group(2), m.group(1)))
@@ -85,7 +87,7 @@ def date_from_text(s: str, year=None):
             cands.append(_mk(m.group(2), m.group(1), 1))
     for m in re.finditer(r"(?<![A-Za-zא-ת\d.])(0?[1-9]|1[0-2])(20[12]\d)(?!\d)", s):                         # -082025 (חודש+שנה, גילעד)
         cands.append(_mk(m.group(2), m.group(1), 1))
-    for m in re.finditer(rf"(?<!\d)(\d{{1,2}})[\s\-_]+({_MONTH_RX})[\s\-_,]+(20\d\d)(?!\d)", s, re.I):    # 20 אוגוסט 2015
+    for m in re.finditer(rf"(?<!\d)(\d{{1,2}})[\s\-_]+ב?({_MONTH_RX})[\s\-_,]+(20\d\d)(?!\d)", s, re.I):    # 20 אוגוסט 2015
         cands.append(_mk(m.group(3), str(_month_no(m.group(2))), m.group(1)))
     for m in re.finditer(r"update[-_]?(\d\d)(20\d\d|\d\d)(?!\d)", s, re.I):                     # update052026 / update0526
         cands.append(_mk(m.group(2), m.group(1), 1))
