@@ -11,6 +11,7 @@ import argparse, csv, hashlib, json, os, re, sys, time
 from collections import deque
 from datetime import datetime, timezone
 from pathlib import Path
+from scripts.policy.urlkey import doc_key, find_key  # noqa: F401 (doc_key גם ל-normalize_index)
 from urllib.parse import urljoin, urlparse, urldefrag, unquote
 
 import requests
@@ -425,7 +426,7 @@ def main():
             done.add(key)
             url = d["href"]
             lm = d.get("last_modified")  # מועד הפרסום באתר (Last-Modified של השרת) - עוגן לתאריך הגרסה ולשנת המדיניות
-            old = index.get(unquote(url))
+            old = index.get(find_key(index, url))
             if (old and old.get("sha256") and old.get("file")
                     and ((ROOT / old["file"]).exists() or os.environ.get("POLICY_TRUST_INDEX") == "1")  # home_crawl: בלי קבצי raw
                     and DOC_PATH.search(urlparse(url).path)):
@@ -457,7 +458,7 @@ def main():
             if content is None or sniff_ext(content, url) is None:
                 errs.append(f"{url[-80:]} -> {code}"); continue
             sha = hashlib.sha256(content).hexdigest()
-            ukey = unquote(url)
+            ukey = find_key(index, url)
             ent = index.get(ukey)
             kind = "new" if ent is None else ("changed" if ent["sha256"] != sha else "unchanged")
             if kind != "unchanged":

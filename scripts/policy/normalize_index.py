@@ -2,6 +2,7 @@
 1. אותה כתובת בשתי צורות (התוסף שמר מקודד %D7%9E..., הסריקה בענן קריא) - רשומה אחת: המפתח הקריא,
    הכיתוב הגלוי הטוב מבין השתיים, first_seen המוקדם, last_seen ו-last_modified הקיימים. השורות של הכפילות
    יוצאות בפרסור הבא (extract מוחק שורות של כתובת שלא באינדקס).
+   כתובת הורדה חתומה (מגדל/Wix, token חדש בכל סריקה) - בלי ה-token (crawl.doc_key).
 2. הכיתוב העדכני מתמונת האתר האחרונה (site_snapshot), כשהוא עדיף על השמור (תאריך מלא במקום שנה בלבד).
 3. כתובת הורדה חתומה (מגדל/Wix) עם תווית טכנית - שם הקובץ המקורי מתוך ה-token ("... JUL 2026_P - ACC.xlsx").
 הרצה: python -m scripts.policy.normalize_index  -> מדפיס את החברות שהשתנו (לפרסור מחדש).
@@ -11,6 +12,7 @@ from pathlib import Path
 from urllib.parse import unquote
 
 from scripts.policy.crawl import visible_text_better
+from scripts.policy.urlkey import doc_key, wix_id
 from scripts.policy.snapshot import signed_url_name
 
 ROOT = Path(__file__).resolve().parents[2]
@@ -42,8 +44,9 @@ def main():
     for idx_path in sorted((ROOT / "policy" / "companies").glob("*/docs_index.json")):
         index = json.loads(idx_path.read_text("utf-8"))
         groups = {}
+        pub = {wix_id(u): doc_key(u) for u in index if wix_id(u) and "/_files/" in u}  # Wix: הכתובת הציבורית
         for u in index:
-            groups.setdefault(unquote(u), []).append(u)
+            groups.setdefault(pub.get(wix_id(u)) or doc_key(u), []).append(u)
         snap = {}
         for sp in idx_path.parent.glob("site_snapshot/*.json"):
             for pg in json.loads(sp.read_text("utf-8")).get("pages", {}).values():
@@ -58,13 +61,16 @@ def main():
             for k in keys:
                 if k != keep:
                     ent = merge(ent, index[k]); n_merged += 1
+            signed = next((k for k in keys if signed_url_name(k)), None)
             t = snap.get(readable)
             if t and visible_text_better(ent.get("link_text"), t):
                 ent = {**ent, "link_text": t, "parsed_sha": None}; n_snap += 1
-            name = signed_url_name(keep)
+            name = signed_url_name(signed) if signed else None
             if name and visible_text_better(ent.get("link_text"), name):
                 ent = {**ent, "link_text": name, "parsed_sha": None}; n_named += 1
-            new[keep] = ent
+            if keep != readable:  # המפתח הקבוע (בלי token) - השורות של הכתובת הישנה יוצאות, פרסור מחדש
+                ent = {**ent, "parsed_sha": None}
+            new[readable] = ent
         if n_merged or n_named or n_snap:
             idx_path.write_text(json.dumps(new, ensure_ascii=False, indent=1), "utf-8")
             changed.append(idx_path.parent.name)

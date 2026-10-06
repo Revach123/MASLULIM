@@ -917,7 +917,10 @@ def main():
                 r.update(legal_id=ent["legal_id"], track_code=f"{ent['legal_id']}|prose", url=url,
                          doc_file=ent["file"], doc_first_seen=ent.get("first_seen"))
             long_rows += prose; n_long += len(prose)
-        recs = [] if n_long else extract_tracks_from_text(text)
+        if fy:  # שורות OCR/מלל נוספו אחרי קביעת שנת המסמך - השנה מהקישור/שם הקובץ (דן: "...לשנת 2022")
+            for r in long_rows[len(long_rows) - n_long:]:
+                r["year"] = r.get("year") or fy.group(1)
+        recs =[] if n_long else extract_tracks_from_text(text)
         for nm, t in leftovers:
             recs += extract_tracks_from_table(t)
         for r in recs:
