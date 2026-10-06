@@ -8,14 +8,14 @@
 וציון ביטחון - חובה לעבור ידנית על מסמכים ראשונים כי פורמט משתנה בין חברות.
 """
 from urllib.parse import unquote
-import argparse, csv, json, re, sys
+import argparse, csv, json, os, re, sys
 from pathlib import Path
 from datetime import datetime
 
 ROOT = Path(__file__).resolve().parents[2]
 OUT = ROOT / (__import__("os").environ.get("POLICY_OUT") or "policy")  # ריצה לחברה: policy/companies/<LegalId>
 
-PARSER_VERSION = 21  # (v21: בלי 'נכון לתאריך') (v20: תאריך כתוב בגוף המסמך, יומן שינויים לפי שמות עמודות) (v10: Ayalon, dated current column) # הגדלה = פרסור מחדש של כל המסמכים בריצה הבאה (שינוי בפרסרים)
+PARSER_VERSION = 22  # (v22: "48.21%" לא 4821) (v21: בלי 'נכון לתאריך') (v20: תאריך כתוב בגוף המסמך, יומן שינויים לפי שמות עמודות) (v10: Ayalon, dated current column) # הגדלה = פרסור מחדש של כל המסמכים בריצה הבאה (שינוי בפרסרים)
 
 NUM = r"(\d{1,3}(?:\.\d+)?)"
 PCT = NUM + r"\s*%?"
@@ -392,8 +392,8 @@ def parse_statement_blocks(rows, sheet=""):
                 continue
             name = lab.rstrip("*").strip()
             out.append({**cur, "asset": name, "asset_key": asset_key(name),
-                        "current_pct": None if cur_pct is None else round(cur_pct * 100, 2),
-                        "expected_pct": None if exp is None else round(exp * 100, 2),
+                        "current_pct": _as_pct(cur_pct, g("current")),
+                        "expected_pct": _as_pct(exp, g("expected")),
                         "tolerance": g("tol"), "min_pct": float(m.group(1)) if m else None,
                         "max_pct": float(m.group(2)) if m else None,
                         "benchmark": (str(g("bench")).replace("\n", " ") if g("bench") else None), "sheet": sheet})
@@ -442,8 +442,8 @@ def parse_mh_blocks(rows, sheet=""):
                 for fund_id, tname in tracks:
                     out.append({"fund_id": fund_id, "track_no": fund_id, "track_name": tname, "group": group,
                                 "year": year, "asset": name, "asset_key": asset_key(name),
-                                "current_pct": None if cur is None else round(cur * 100, 2),
-                                "expected_pct": None if exp is None else round(exp * 100, 2),
+                                "current_pct": _as_pct(cur, g(rr - 1, "current")),
+                                "expected_pct": _as_pct(exp, g(rr - 1, "expected")),
                                 "tolerance": g(rr - 1, "tol") if _num(g(rr - 1, "tol")) is None and g(rr - 1, "tol") != "ריק במקור" else None,
                                 "min_pct": float(m.group(1)) if m else None, "max_pct": float(m.group(2)) if m else None,
                                 "benchmark": (str(g(rr - 1, "bench")).strip().replace("\n", " ") if g(rr - 1, "bench") not in (None, "ריק במקור") else None),
@@ -783,6 +783,13 @@ def parse_text_tracks(rows, sheet=""):
     return out
 
 
+def _as_pct(v, raw):
+    """שבר (0.48) -> אחוזים; ערך שכבר באחוזים - טקסט עם % ("48.21%", מור) או מעל 1.5 - כמו שהוא (לא 4821)."""
+    if v is None:
+        return None
+    return round(v, 2) if "%" in str(raw) or abs(v) > 1.5 else round(v * 100, 2)
+
+
 def _iso_date(v):
     """'2026-09-29' / '29/09/2026' / datetime -> 'YYYY-MM-DD', אחרת None."""
     if re.fullmatch(r"4\d{4}(\.0)?", str(v or "").strip()):  # מספר סידורי של אקסל (xls: 46235.0 = 2026-08-01)
@@ -868,126 +875,166 @@ def main():
     # מסמך שהוצא מהאינדקס (exclude / שיוך שגוי) - גם השורות שלו יוצאות
     long_rows, changes, unparsed = ([r for r in x if r["url"] in index] for x in (long_rows, changes, unparsed))
     rows = {k: r for k, r in rows.items() if r["url"] in index}
-    for url, ent in index.items():
-        if not a.all and ent.get("parsed_sha") == ent["sha256"] and ent.get("parser_version") == PARSER_VERSION:
-            continue
-        # החלפת תוצאות קודמות של אותו url (מסמך שהתעדכן)
-        long_rows = [r for r in long_rows if r["url"] != url]
-        changes = [r for r in changes if r["url"] != url]
-        unparsed = [r for r in unparsed if r["url"] != url]
-        p = ROOT / ent["file"]
+    # הגנות זמן (ריצה בענן נקטעת ב-55 דק' ולא נשמר כלום - כל יום מאפס): מסמך שנתקע > POLICY_DOC_TIMEOUT שניות מדולג
+    # ומסומן parse_error (לא ינוסה שוב עד שינוי בפרסר); אחרי POLICY_PARSE_BUDGET שניות עוצרים ושומרים - ההרצה הבאה ממשיכה
+    import signal, time as _time
+
+    class _DocTimeout(BaseException):  # לא Exception - אחרת "except Exception" בקריאת הקובץ בולע אותו
+        pass
+
+    def _alarm(*_):
+        raise _DocTimeout()
+
+    doc_timeout = int(os.environ.get("POLICY_DOC_TIMEOUT", "120"))
+    stop_at = _time.monotonic() + float(os.environ.get("POLICY_PARSE_BUDGET", "1800"))
+    can_alarm = hasattr(signal, "SIGALRM")
+    if can_alarm:
+        signal.signal(signal.SIGALRM, _alarm)
+    done, cur, budget_hit = set(), {}, False
+    while True:
         try:
-            text, tables, names = read_doc(p)
-        except Exception as ex:
-            print(f"[extract] {p.name}: {ex!r}", file=sys.stderr); continue
-        names = names or [""] * len(tables)
-        if _site_cfg(ent["legal_id"]).get("join_split_letter"):
-            # PDF שבו האות האחרונה של מילה נפרדת ("אפיק השקע ה", "מסלול רום הלכ ה" - רום) - רק באתרים שסומנו,
-            # כי בשאר המקומות אות בודדת היא מילה ("קרן ט")
-            fx = lambda v: re.sub(r"(?<=[א-ת]{2}) ([א-ת])(?=[\s\"'״)]|$)", r"\1", v) if isinstance(v, str) else v
-            tables = [[[fx(c) for c in r] for r in t] for t in tables]
-            text = fx(text)
-        n_long, leftovers = 0, []
-        for nm, t in zip(names, tables):
-            found = parse_statement_blocks(t, nm) or parse_mh_blocks(t, nm) or parse_columns_blocks(t, nm) or parse_titled_tables(t, nm) or parse_text_tracks(t, nm) or parse_shape_rows(t, nm)
-            if found:
-                for r in found:
-                    r.setdefault("legal_id", ent["legal_id"])
-                    r["track_code"] = r.get("track_code") if r.get("track_code") and r.get("fund_id") is None and "|" in r["track_code"] and r["track_code"].startswith(ent["legal_id"]) else (
-                        r.get("track_code") if r.get("fund_id") is not None and r.get("track_code") else
-                        f"{ent['legal_id']}|{r['track_code']}" if r.get("track_code") else f"{ent['legal_id']}-{r['fund_id']}")
-                    r.update(url=url, doc_file=ent["file"], doc_first_seen=ent.get("first_seen"))
-                long_rows += found; n_long += len(found); continue
-            chg = parse_change_log(t, nm)
-            if chg:
-                for r in chg:
-                    r.update(legal_id=ent["legal_id"], url=url)
-                changes += chg
-                # תאריך הגרסה מתוך הקובץ (מיטב: "עדכון מספר 2" בלי תאריך באתר ובשרת; בגיליון "מהות שינויים" - "תאריך עדכון")
-                ds = sorted(d for d in (_iso_date(r.get("updated")) for r in chg)
-                            if d and d <= datetime.now().strftime("%Y-%m-%d"))  # "25.02.2027" (שגיאת הקלדה) - לא
-                if ds:
-                    ent["content_date"] = ds[-1]
-                continue
-            ex = parse_exposure_prose(t, nm)  # מסלול מתמחה במלל ("חשופים ל... שלא יפחת מ-75% ולא יעלה על 120%")
-            if ex:
-                for r in ex:
-                    r.update(legal_id=ent["legal_id"], track_code=f"{ent['legal_id']}|{nm}|{r['track_name']}", url=url,
-                             doc_file=ent["file"], doc_first_seen=ent.get("first_seen"))
-                long_rows += ex; n_long += len(ex); continue
-            leftovers.append((nm, t))
-        # שנה חסרה בגיליון (למשל גיליון מתמחים מילולי) -> שנת המסמך: הרוב בגיליונות האחרים, אחרת מתוך שם הקובץ
-        doc_rows = long_rows[len(long_rows) - n_long:] if n_long else []
-        years = [r["year"] for r in doc_rows if r.get("year")]
-        # שנה בשם הקובץ - בלי הקידומת שלנו (12 תווי sha: "4222020f457f_" הוא לא 2020) ובלי מחרוזות hash
-        # (מגדל/Wix: "5adfdb_528d2d37ad314229b89356c20197cc79" - ה-"2019" שבתוכה אינו שנה)
-        fname = re.sub(r"[0-9a-f]{16,}", " ", re.sub(r"^[0-9a-f]{12}_", "", Path(ent["file"]).name))
-        fy = re.search(r"(20[12]\d)", fname)
-        if re.fullmatch(r"(?:[0-9a-f]{12}_)?\d{3,5}", Path(ent["file"]).stem):
-            fy = None  # שם הקובץ הוא מספר המסלול (אלטשולר ".../2017.xlsx" = גמל הלכה), לא שנה
-        # הטקסט שהמשתמש רואה באתר (הקישור + השורה/הכרטיס סביבו) גובר על שם הקובץ: "לשנת 2026", או שנה יחידה בטקסט
-        # ("מדיניות השקעה 2025"); תווית טכנית ("(html)") - לא טקסט גלוי
-        lt = "" if re.match(r"^\((html|xhr|network file|config docs|iframe)\)", ent.get("link_text") or "") else (ent.get("link_text") or "")
-        # תאריכים ("12.03.2026", "דצמבר 2024", "(מאי 2018)") הם מועד פרסום/עדכון, לא שנת המדיניות - לא נספרים
-        lt_years = set(re.findall(r"(?<!\d)(20[12]\d)(?!\d)", re.sub(
-            r"\d{1,2}[./]\d{1,2}[./](20)?\d\d|(ינואר|פברואר|מרץ|מרס|אפריל|מאי|יוני|יולי|אוגוסט|ספטמבר|אוקטובר|נובמבר|דצמבר)\s*,?\s*(20)?\d\d",
-            " ", lt)))
-        fy = re.search(r"לשנת\s*(20[12]\d)", lt) or (re.search(r"(?<!\d)(20[12]\d)(?!\d)", " ".join(lt_years)) if len(lt_years) == 1 else None) or fy
-        doc_year = fy.group(1) if fy else (max(set(years), key=years.count) if years else None)
-        content_year = max(set(years), key=years.count) if years else None
-        if fy and content_year and content_year != fy.group(1):
-            # שם הקובץ והתוכן סותרים (מנורה "...לשנת-2025-...-1343.xlsx" בתיקייה 20260126 עם "צפוי לשנת 2026"):
-            # מועד הפרסום באתר מכריע; בלעדיו - שנה מאוחרת בתוכן גוברת (שנות נתוני עבר בגיליון מוקדמות, לא מאוחרות)
-            from .pubdate import published, fits
-            pub, _ = published(url, ent)
-            if pub and fits(content_year, pub) and not fits(fy.group(1), pub):
-                doc_year = content_year
-            elif not pub and int(content_year) > int(fy.group(1)):
-                doc_year = content_year
-        for r in doc_rows:  # שנה בשם הקובץ גוברת (בגוף הגיליון מופיעות לפעמים שנים של נתוני עבר)
-            r["year"] = doc_year or r.get("year")
-        fn_code = re.search(r"-(\d{3,6})\.(xlsx?|pdf)$", Path(ent["file"]).name)  # מנורה: קובץ למסלול, הקוד בשם
-        if fn_code and 2016 <= int(fn_code.group(1)) <= datetime.now().year + 1:
-            fn_code = None  # שנת מדיניות (רום "...-2025.pdf"), לא מסלול; מספרי מסלול כמו 2009/2013/2015 (מנורה פנסיה) נשארים
-        if fn_code and doc_rows and len({r.get("track_code") for r in doc_rows}) == 1 and not any(r.get("fund_id") for r in doc_rows):
-            for r in doc_rows:
-                r["fund_id"] = r["track_no"] = fn_code.group(1)
-        if not n_long and _site_cfg(ent["legal_id"]).get("ocr") and p.suffix.lower() == ".pdf":
-            # PDF סרוק עם שכבת טקסט פגומה (מספרי הטבלה בתמונה) - OCR ופרסור שורות
-            ocr_rows = parse_ocr_table_lines(_ocr_pdf(p))
-            # גליפים מצוירים (אין שכבת טקסט ואין תמונה - עובדי המדינה 7635/15404): גם רזולוציה גבוהה ופריסת עמודות, הטוב מבין השניים
-            alt = parse_ocr_table_lines(_ocr_pdf(p, 450, "4"))
-            ocr_rows = alt if len(alt) > len(ocr_rows) else ocr_rows
-            for r in ocr_rows:
-                r.update(legal_id=ent["legal_id"], track_code=f"{ent['legal_id']}|ocr|{r['track_name']}", url=url,
-                         doc_file=ent["file"], doc_first_seen=ent.get("first_seen"))
-            long_rows += ocr_rows; n_long += len(ocr_rows)
-        if not n_long and _site_cfg(ent["legal_id"]).get("prose"):  # מדיניות במלל (מכתב, בלי טבלה) - רק באתרים שסומנו
-            prose = parse_prose_limits(text)
-            for r in prose:
-                r.update(legal_id=ent["legal_id"], track_code=f"{ent['legal_id']}|prose", url=url,
-                         doc_file=ent["file"], doc_first_seen=ent.get("first_seen"))
-            long_rows += prose; n_long += len(prose)
-        if fy:  # שורות OCR/מלל נוספו אחרי קביעת שנת המסמך - השנה מהקישור/שם הקובץ (דן: "...לשנת 2022")
-            for r in long_rows[len(long_rows) - n_long:]:
-                r["year"] = r.get("year") or fy.group(1)
-        recs =[] if n_long else extract_tracks_from_text(text)
-        for nm, t in leftovers:
-            recs += extract_tracks_from_table(t)
-        for r in recs:
-            r.update(legal_id=ent["legal_id"], url=url, doc_file=ent["file"])
-            rows[url + "|" + r["track_name"]] = r
-        if not n_long and not recs:
-            unparsed.append(dump_layout(names, tables, ent, url))
-        if not any(parse_change_log(t) for t in tables):  # בלי יומן שינויים - תאריך כתוב בגוף המסמך
-            cd = doc_text_date(text, tables)
-            if cd:
-                ent["content_date"] = cd
-            else:
-                ent.pop("content_date", None)
-        ent["parsed_sha"] = ent["sha256"]
-        ent["parser_version"] = PARSER_VERSION
-        print(f"[extract] {p.name}: long={n_long} heuristic={len(recs)}", flush=True)
+            for url, ent in index.items():
+                if url in done:
+                    continue
+                done.add(url)
+                if not a.all and ent.get("parsed_sha") == ent["sha256"] and ent.get("parser_version") == PARSER_VERSION:
+                    continue
+                if _time.monotonic() > stop_at:
+                    budget_hit = True
+                    print(f"[extract] parse budget reached - stopping, the next run continues", flush=True)
+                    break
+                cur.update(url=url, ent=ent)
+                if can_alarm:
+                    signal.alarm(doc_timeout)
+                # החלפת תוצאות קודמות של אותו url (מסמך שהתעדכן)
+                long_rows = [r for r in long_rows if r["url"] != url]
+                changes = [r for r in changes if r["url"] != url]
+                unparsed = [r for r in unparsed if r["url"] != url]
+                p = ROOT / ent["file"]
+                try:
+                    text, tables, names = read_doc(p)
+                except Exception as ex:
+                    print(f"[extract] {p.name}: {ex!r}", file=sys.stderr); continue
+                names = names or [""] * len(tables)
+                if _site_cfg(ent["legal_id"]).get("join_split_letter"):
+                    # PDF שבו האות האחרונה של מילה נפרדת ("אפיק השקע ה", "מסלול רום הלכ ה" - רום) - רק באתרים שסומנו,
+                    # כי בשאר המקומות אות בודדת היא מילה ("קרן ט")
+                    fx = lambda v: re.sub(r"(?<=[א-ת]{2}) ([א-ת])(?=[\s\"'״)]|$)", r"\1", v) if isinstance(v, str) else v
+                    tables = [[[fx(c) for c in r] for r in t] for t in tables]
+                    text = fx(text)
+                n_long, leftovers = 0, []
+                for nm, t in zip(names, tables):
+                    found = parse_statement_blocks(t, nm) or parse_mh_blocks(t, nm) or parse_columns_blocks(t, nm) or parse_titled_tables(t, nm) or parse_text_tracks(t, nm) or parse_shape_rows(t, nm)
+                    if found:
+                        for r in found:
+                            r.setdefault("legal_id", ent["legal_id"])
+                            r["track_code"] = r.get("track_code") if r.get("track_code") and r.get("fund_id") is None and "|" in r["track_code"] and r["track_code"].startswith(ent["legal_id"]) else (
+                                r.get("track_code") if r.get("fund_id") is not None and r.get("track_code") else
+                                f"{ent['legal_id']}|{r['track_code']}" if r.get("track_code") else f"{ent['legal_id']}-{r['fund_id']}")
+                            r.update(url=url, doc_file=ent["file"], doc_first_seen=ent.get("first_seen"))
+                        long_rows += found; n_long += len(found); continue
+                    chg = parse_change_log(t, nm)
+                    if chg:
+                        for r in chg:
+                            r.update(legal_id=ent["legal_id"], url=url)
+                        changes += chg
+                        # תאריך הגרסה מתוך הקובץ (מיטב: "עדכון מספר 2" בלי תאריך באתר ובשרת; בגיליון "מהות שינויים" - "תאריך עדכון")
+                        ds = sorted(d for d in (_iso_date(r.get("updated")) for r in chg)
+                                    if d and d <= datetime.now().strftime("%Y-%m-%d"))  # "25.02.2027" (שגיאת הקלדה) - לא
+                        if ds:
+                            ent["content_date"] = ds[-1]
+                        continue
+                    ex = parse_exposure_prose(t, nm)  # מסלול מתמחה במלל ("חשופים ל... שלא יפחת מ-75% ולא יעלה על 120%")
+                    if ex:
+                        for r in ex:
+                            r.update(legal_id=ent["legal_id"], track_code=f"{ent['legal_id']}|{nm}|{r['track_name']}", url=url,
+                                     doc_file=ent["file"], doc_first_seen=ent.get("first_seen"))
+                        long_rows += ex; n_long += len(ex); continue
+                    leftovers.append((nm, t))
+                # שנה חסרה בגיליון (למשל גיליון מתמחים מילולי) -> שנת המסמך: הרוב בגיליונות האחרים, אחרת מתוך שם הקובץ
+                doc_rows = long_rows[len(long_rows) - n_long:] if n_long else []
+                years = [r["year"] for r in doc_rows if r.get("year")]
+                # שנה בשם הקובץ - בלי הקידומת שלנו (12 תווי sha: "4222020f457f_" הוא לא 2020) ובלי מחרוזות hash
+                # (מגדל/Wix: "5adfdb_528d2d37ad314229b89356c20197cc79" - ה-"2019" שבתוכה אינו שנה)
+                fname = re.sub(r"[0-9a-f]{16,}", " ", re.sub(r"^[0-9a-f]{12}_", "", Path(ent["file"]).name))
+                fy = re.search(r"(20[12]\d)", fname)
+                if re.fullmatch(r"(?:[0-9a-f]{12}_)?\d{3,5}", Path(ent["file"]).stem):
+                    fy = None  # שם הקובץ הוא מספר המסלול (אלטשולר ".../2017.xlsx" = גמל הלכה), לא שנה
+                # הטקסט שהמשתמש רואה באתר (הקישור + השורה/הכרטיס סביבו) גובר על שם הקובץ: "לשנת 2026", או שנה יחידה בטקסט
+                # ("מדיניות השקעה 2025"); תווית טכנית ("(html)") - לא טקסט גלוי
+                lt = "" if re.match(r"^\((html|xhr|network file|config docs|iframe)\)", ent.get("link_text") or "") else (ent.get("link_text") or "")
+                # תאריכים ("12.03.2026", "דצמבר 2024", "(מאי 2018)") הם מועד פרסום/עדכון, לא שנת המדיניות - לא נספרים
+                lt_years = set(re.findall(r"(?<!\d)(20[12]\d)(?!\d)", re.sub(
+                    r"\d{1,2}[./]\d{1,2}[./](20)?\d\d|(ינואר|פברואר|מרץ|מרס|אפריל|מאי|יוני|יולי|אוגוסט|ספטמבר|אוקטובר|נובמבר|דצמבר)\s*,?\s*(20)?\d\d",
+                    " ", lt)))
+                fy = re.search(r"לשנת\s*(20[12]\d)", lt) or (re.search(r"(?<!\d)(20[12]\d)(?!\d)", " ".join(lt_years)) if len(lt_years) == 1 else None) or fy
+                doc_year = fy.group(1) if fy else (max(set(years), key=years.count) if years else None)
+                content_year = max(set(years), key=years.count) if years else None
+                if fy and content_year and content_year != fy.group(1):
+                    # שם הקובץ והתוכן סותרים (מנורה "...לשנת-2025-...-1343.xlsx" בתיקייה 20260126 עם "צפוי לשנת 2026"):
+                    # מועד הפרסום באתר מכריע; בלעדיו - שנה מאוחרת בתוכן גוברת (שנות נתוני עבר בגיליון מוקדמות, לא מאוחרות)
+                    from .pubdate import published, fits
+                    pub, _ = published(url, ent)
+                    if pub and fits(content_year, pub) and not fits(fy.group(1), pub):
+                        doc_year = content_year
+                    elif not pub and int(content_year) > int(fy.group(1)):
+                        doc_year = content_year
+                for r in doc_rows:  # שנה בשם הקובץ גוברת (בגוף הגיליון מופיעות לפעמים שנים של נתוני עבר)
+                    r["year"] = doc_year or r.get("year")
+                fn_code = re.search(r"-(\d{3,6})\.(xlsx?|pdf)$", Path(ent["file"]).name)  # מנורה: קובץ למסלול, הקוד בשם
+                if fn_code and 2016 <= int(fn_code.group(1)) <= datetime.now().year + 1:
+                    fn_code = None  # שנת מדיניות (רום "...-2025.pdf"), לא מסלול; מספרי מסלול כמו 2009/2013/2015 (מנורה פנסיה) נשארים
+                if fn_code and doc_rows and len({r.get("track_code") for r in doc_rows}) == 1 and not any(r.get("fund_id") for r in doc_rows):
+                    for r in doc_rows:
+                        r["fund_id"] = r["track_no"] = fn_code.group(1)
+                if not n_long and _site_cfg(ent["legal_id"]).get("ocr") and p.suffix.lower() == ".pdf":
+                    # PDF סרוק עם שכבת טקסט פגומה (מספרי הטבלה בתמונה) - OCR ופרסור שורות
+                    ocr_rows = parse_ocr_table_lines(_ocr_pdf(p))
+                    # גליפים מצוירים (אין שכבת טקסט ואין תמונה - עובדי המדינה 7635/15404): גם רזולוציה גבוהה ופריסת עמודות, הטוב מבין השניים
+                    alt = parse_ocr_table_lines(_ocr_pdf(p, 450, "4"))
+                    ocr_rows = alt if len(alt) > len(ocr_rows) else ocr_rows
+                    for r in ocr_rows:
+                        r.update(legal_id=ent["legal_id"], track_code=f"{ent['legal_id']}|ocr|{r['track_name']}", url=url,
+                                 doc_file=ent["file"], doc_first_seen=ent.get("first_seen"))
+                    long_rows += ocr_rows; n_long += len(ocr_rows)
+                if not n_long and _site_cfg(ent["legal_id"]).get("prose"):  # מדיניות במלל (מכתב, בלי טבלה) - רק באתרים שסומנו
+                    prose = parse_prose_limits(text)
+                    for r in prose:
+                        r.update(legal_id=ent["legal_id"], track_code=f"{ent['legal_id']}|prose", url=url,
+                                 doc_file=ent["file"], doc_first_seen=ent.get("first_seen"))
+                    long_rows += prose; n_long += len(prose)
+                if fy:  # שורות OCR/מלל נוספו אחרי קביעת שנת המסמך - השנה מהקישור/שם הקובץ (דן: "...לשנת 2022")
+                    for r in long_rows[len(long_rows) - n_long:]:
+                        r["year"] = r.get("year") or fy.group(1)
+                recs =[] if n_long else extract_tracks_from_text(text)
+                for nm, t in leftovers:
+                    recs += extract_tracks_from_table(t)
+                for r in recs:
+                    r.update(legal_id=ent["legal_id"], url=url, doc_file=ent["file"])
+                    rows[url + "|" + r["track_name"]] = r
+                if not n_long and not recs:
+                    unparsed.append(dump_layout(names, tables, ent, url))
+                if not any(parse_change_log(t) for t in tables):  # בלי יומן שינויים - תאריך כתוב בגוף המסמך
+                    cd = doc_text_date(text, tables)
+                    if cd:
+                        ent["content_date"] = cd
+                    else:
+                        ent.pop("content_date", None)
+                ent["parsed_sha"] = ent["sha256"]
+                ent["parser_version"] = PARSER_VERSION
+                print(f"[extract] {p.name}: long={n_long} heuristic={len(recs)}", flush=True)
+                if can_alarm:
+                    signal.alarm(0)
+            break
+        except _DocTimeout:
+            u, e = cur["url"], cur["ent"]
+            print(f"[extract] {Path(e['file']).name}: parse timeout ({doc_timeout}s) - skipped", flush=True)
+            long_rows = [r for r in long_rows if r["url"] != u]
+            changes = [r for r in changes if r["url"] != u]
+            rows = {k: r for k, r in rows.items() if r["url"] != u}
+            e.update(parse_error=f"timeout {doc_timeout}s", parsed_sha=e["sha256"], parser_version=PARSER_VERSION)
+    if can_alarm:
+        signal.alarm(0)
     idx_path.write_text(json.dumps(index, ensure_ascii=False, indent=1), "utf-8")
     # track_filter (הגדרות החברה): קובץ אחד מכיל כמה קרנות (הוותיקות: Makefet + Mivtachim באותו גיליון) - נשמרות
     # רק השורות של המסלולים של החברה הזו

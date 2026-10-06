@@ -343,8 +343,13 @@ def assign(tracks):
                     n, sc = reg.match_name(t["legal_id"], nm)
                     if n:  # מסלול פעיל קודם למסלול ישן עם אותו שם
                         fb.append((0 if t.get("active") else 1, pen - sc, i, n)); break
+        rej_p = Path(__file__).resolve().parents[2] / "policy" / "mapping_rejects.json"  # verify_mapping: נסתר ע"י data.gov
+        rejected = {(x["legal_id"], x["track_no"], x["track_name"]) for x in
+                    (_json.loads(rej_p.read_text("utf-8")) if rej_p.exists() else [])}
         for _, _, i, n in sorted(fb):
             t = tracks[i]
+            if (t["legal_id"], n, t.get("track_name")) in rejected:
+                continue
             if (t["legal_id"], n) not in owned:
                 owned.add((t["legal_id"], n))
                 t["track_no"], t["track_no_source"] = n, "registry_name_fallback"
