@@ -15,7 +15,7 @@ from datetime import datetime
 ROOT = Path(__file__).resolve().parents[2]
 OUT = ROOT / (__import__("os").environ.get("POLICY_OUT") or "policy")  # ריצה לחברה: policy/companies/<LegalId>
 
-PARSER_VERSION = 19  # (v10: Ayalon, dated current column) # הגדלה = פרסור מחדש של כל המסמכים בריצה הבאה (שינוי בפרסרים)
+PARSER_VERSION = 20  # (v20: תאריך כתוב בגוף המסמך, יומן שינויים לפי שמות עמודות) (v10: Ayalon, dated current column) # הגדלה = פרסור מחדש של כל המסמכים בריצה הבאה (שינוי בפרסרים)
 
 NUM = r"(\d{1,3}(?:\.\d+)?)"
 PCT = NUM + r"\s*%?"
@@ -785,6 +785,9 @@ def parse_text_tracks(rows, sheet=""):
 
 def _iso_date(v):
     """'2026-09-29' / '29/09/2026' / datetime -> 'YYYY-MM-DD', אחרת None."""
+    if re.fullmatch(r"4\d{4}(\.0)?", str(v or "").strip()):  # מספר סידורי של אקסל (xls: 46235.0 = 2026-08-01)
+        from datetime import date, timedelta
+        return (date(1899, 12, 30) + timedelta(days=int(float(v)))).isoformat()
     v = str(v or "")[:10]
     m = re.match(r"(20\d\d)-(\d\d)-(\d\d)", v) or None
     if m:
@@ -793,12 +796,43 @@ def _iso_date(v):
     return f"{m.group(3) if len(m.group(3)) == 4 else '20' + m.group(3)}-{int(m.group(2)):02d}-{int(m.group(1)):02d}" if m else None
 
 
+_DATE = r"(\d{1,2}[./]\d{1,2}[./](?:20)?\d\d)(?!\d)"
+_DOC_DATE_RX = re.compile(
+    r"(?:נכון\s*ל?(?:תאריך|יום)|(?:אושר|אושרה|עודכן|עודכנה|מעודכנ?ת?|עדכון)\s*(?:ב?דירקטוריון\s*)?(?:ביום|מיום|בתאריך|מתאריך|החל\s*מ-?)"
+    r"|החל\s*מ(?:תאריך|יום)?\s*-?)\s*:?\s*" + _DATE)
+
+
+def doc_text_date(text, tables):
+    """תאריך שכתוב בגוף המסמך: "נכון לתאריך 12/09/2023" (מינהל), "אושרה בדירקטוריון ביום 26.05.2021" (עובדי המדינה),
+    "עודכן ביום ..." / "החל מ-...". המאוחר שאינו בעתיד, כ-YYYY-MM-DD."""
+    hay = [text or ""] + [" ".join(str(c) for c in r if c not in (None, "")) for t in tables for r in t[:40]]
+    today = datetime.now().strftime("%Y-%m-%d")
+    ds = sorted(d for h in hay for m in _DOC_DATE_RX.finditer(h) if (d := _iso_date(m.group(1))) and d <= today)
+    return ds[-1] if ds else None
+
+
 def parse_change_log(rows, sheet=""):
-    """גיליון "מהות שינויים": מספר מסלול | שם מסלול | מהות השינוי | תאריך עדכון."""
-    if not rows or [str(c).strip() for c in rows[0][:4]] != ["מספר מסלול", "שם מסלול", "מהות השינוי", "תאריך עדכון"]:
+    """גיליון "מהות שינויים": עמודות לפי שם (מיטב: מספר מסלול | שם מסלול | מהות השינוי | תאריך עדכון;
+    אינפיניטי: קופה | שם מסלול | אפיק | מהות השינוי | תאריך עדכון | מספר מגבלה)."""
+    if not rows:
         return []
-    return [{"track_code": str(r[0]), "track_name": r[1], "change": str(r[2] or "").replace("\n", " "),
-             "updated": str(r[3])[:10]} for r in rows[1:] if r and r[0]]
+    head = [str(c or "").strip() for c in rows[0]]
+    col = lambda *ks: next((i for i, h in enumerate(head) if any(k in h for k in ks)), None)
+    c_chg, c_date = col("מהות השינוי"), col("תאריך עדכון")
+    if c_chg is None or c_date is None:
+        return []
+    c_code, c_name, c_asset = col("מספר מסלול", "קידוד"), col("שם מסלול"), col("אפיק")
+    get = lambda r, c: r[c] if c is not None and c < len(r) else None
+    out = []
+    for r in rows[1:]:
+        if not r or not any(r):
+            continue
+        chg = str(get(r, c_chg) or "").replace("\n", " ").strip()
+        if c_asset is not None and get(r, c_asset):
+            chg = f"{get(r, c_asset)}: {chg}"
+        out.append({"track_code": str(get(r, c_code) or get(r, c_name) or ""), "track_name": get(r, c_name),
+                    "change": chg, "updated": _iso_date(get(r, c_date)) or str(get(r, c_date) or "")[:10]})
+    return out
 
 
 LONG_FIELDS = ["legal_id", "fund_id", "track_no", "track_code", "track_name", "year", "asset", "asset_key",
@@ -869,7 +903,8 @@ def main():
                     r.update(legal_id=ent["legal_id"], url=url)
                 changes += chg
                 # תאריך הגרסה מתוך הקובץ (מיטב: "עדכון מספר 2" בלי תאריך באתר ובשרת; בגיליון "מהות שינויים" - "תאריך עדכון")
-                ds = sorted(d for d in (_iso_date(r.get("updated")) for r in chg) if d)
+                ds = sorted(d for d in (_iso_date(r.get("updated")) for r in chg)
+                            if d and d <= datetime.now().strftime("%Y-%m-%d"))  # "25.02.2027" (שגיאת הקלדה) - לא
                 if ds:
                     ent["content_date"] = ds[-1]
                 continue
@@ -943,6 +978,12 @@ def main():
             rows[url + "|" + r["track_name"]] = r
         if not n_long and not recs:
             unparsed.append(dump_layout(names, tables, ent, url))
+        if not any(parse_change_log(t) for t in tables):  # בלי יומן שינויים - תאריך כתוב בגוף המסמך
+            cd = doc_text_date(text, tables)
+            if cd:
+                ent["content_date"] = cd
+            else:
+                ent.pop("content_date", None)
         ent["parsed_sha"] = ent["sha256"]
         ent["parser_version"] = PARSER_VERSION
         print(f"[extract] {p.name}: long={n_long} heuristic={len(recs)}", flush=True)
