@@ -245,7 +245,7 @@ def fetch_browser(pw, url, click_texts=None):
                             w = re.match(r"wix:document://v1/(?:ugd/)?([0-9a-f]+_[0-9a-f]+\.(?:xlsx|xls|pdf|docx))/?(.*)", h)
                             if w:  # Wix (מגדל): כל הקבצים ברשימת ה-XHR - כתובת ציבורית ישירה, בלי לחיצה על כפתור הורדה
                                 host = re.match(r"https?://[^/]+", url).group(0)
-                                net.append({"href": f"{host}/_files/ugd/{w.group(1)}", "text": f"(xhr) {unquote(w.group(2))}".strip()})
+                                net.append({"href": f"{host}/_files/ugd/{w.group(1)}", "text": unquote(w.group(2)).strip() or "(xhr)"})  # שם הקובץ שמוצג (מגדל: "Hatzarat ... Mar 2026")
                             else:
                                 # הכותרת שהאתר מציג לקובץ - שדות הטקסט באותו אובייקט JSON (הראל: title/name ליד נתיב הקובץ)
                                 net.append({"href": h, "text": labels.get(unquote(m.replace("\\/", "/")).rsplit("/", 1)[-1]) or "(xhr)"})

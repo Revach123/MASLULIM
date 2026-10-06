@@ -61,6 +61,9 @@ def main():
             for k in keys:
                 if k != keep:
                     ent = merge(ent, index[k]); n_merged += 1
+            lt0 = ent.get("link_text") or ""
+            if lt0.startswith("(xhr) ") and lt0[6:].strip():  # "(xhr) Hatzarat ... Mar 2026" - שם הקובץ שמוצג באתר
+                ent = {**ent, "link_text": lt0[6:].strip(), "parsed_sha": None}; n_named += 1
             signed = next((k for k in keys if signed_url_name(k)), None)
             t = snap.get(readable)
             if t and visible_text_better(ent.get("link_text"), t):
