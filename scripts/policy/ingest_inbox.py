@@ -9,6 +9,8 @@ import json, shutil
 from pathlib import Path
 from urllib.parse import unquote
 
+from scripts.policy.urlkey import doc_key, find_key
+
 
 ROOT = Path(__file__).resolve().parents[2]
 INBOX = ROOT / "policy" / "inbox"
@@ -34,8 +36,8 @@ def main():
         idx_path = comp / "docs_index.json"
         index = json.loads(idx_path.read_text("utf-8")) if idx_path.exists() else {}
         # אותה כתובת בצורה אחרת (התוסף שולח מקודד %D7%9E..., הסריקה בענן קריא) -> המפתח הקיים, לא רשומה כפולה
-        canon = {unquote(k): k for k in index}
-        key = lambda u: u if u in index else canon.get(unquote(u), u)
+        canon = {doc_key(k): k for k in index}
+        key = lambda u: u if u in index else canon.get(doc_key(u)) or find_key(index, u)
         lm_p = d / "_lastmod.json"  # השלמת מועד פרסום (backfill_lastmod): {url: Last-Modified | null}
         if lm_p.exists():
             from datetime import date
@@ -87,7 +89,7 @@ def main():
                                   "history": hist, "link_text": meta.get("link_text"),
                                   "source_page": meta.get("source_page"), "via": "extension",
                                   **({"last_modified": meta["last_modified"]} if meta.get("last_modified") else {})}
-            canon[unquote(meta["url"])] = meta["url"]
+            canon[doc_key(meta["url"])] = meta["url"]
         idx_path.parent.mkdir(parents=True, exist_ok=True)
         idx_path.write_text(json.dumps(index, ensure_ascii=False, indent=1), "utf-8")
         if not any(d.iterdir()):
