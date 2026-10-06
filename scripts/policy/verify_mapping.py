@@ -68,6 +68,7 @@ def doc_exposures(year):
             continue
         k = (s["legal_id"], s["track_no"])
         out[k].setdefault(r["asset_key"], r["current_pct"])
+        out[k]["_cur_sum"] = out[k].get("_cur_sum", 0) + abs(r["current_pct"] or 0)
         out[k]["source"] = s["track_no_source"]
         out[k]["name"] = s["track_name"]
     return out
@@ -91,11 +92,15 @@ def main():
         diffs = [abs(d[k] - g[k]) for k in ("equity", "fx") if g and d.get(k) is not None and g.get(k) is not None]
         worst = max(diffs) if diffs else None
         status = "no_data" if worst is None else "ok" if worst <= 5 else "check" if worst <= 12 else "mismatch"
+        if status in ("check", "mismatch") and not d.get("_cur_sum"):
+            status = "new_track"  # חשיפה עדכנית 0 בכל האפיקים במסמך - מסלול שנפתח במהלך השנה, אין עם מה להשוות
         rows.append({"legal_id": lid, "track_no": tn, "track_no_source": d.get("source"), "track_name": d.get("name"),
                      "doc_equity": d.get("equity"), "gov_equity": g and g["equity"], "doc_fx": d.get("fx"),
                      "gov_fx": g and g["fx"], "max_gap": worst, "status": status})
     with open(POL / "mapping_check.csv", "w", encoding="utf-8-sig", newline="") as f:
         w = csv.DictWriter(f, list(rows[0])); w.writeheader(); w.writerows(rows)
+    # policy/mapping_rejects.json (שיוכים שנפסלו - track_numbers לא משייך אותם) מתעדכן ידנית בלבד, אחרי בדיקה:
+    # אי-התאמה היא לא תמיד שיוך שגוי (קרנות ותיקות: data.gov מחשב מניות מהתיק החופשי בלי אג"ח מיועדות - 8% מול 60%)
     tot = defaultdict(lambda: defaultdict(int))
     for r in rows:
         tot[r["track_no_source"]][r["status"]] += 1

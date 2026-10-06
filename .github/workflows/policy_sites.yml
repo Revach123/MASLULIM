@@ -5,9 +5,7 @@ name: Policy per-company
 #       רק חברות הבדיקה (CANARY) - לא כולן, כדי לא להיחסם ב-WAF של האתרים מריבוי ריצות.
 # schedule: כל החברות, כל יום (זיהוי מסמכים חדשים/עדכונים).
 on:
-  push:
-    branches: [claude/tender-wozniak-of4b7i]
-    paths: ["scripts/policy/**", ".github/workflows/policy_sites.yml"]
+  # בלי הפעלה על push: הסריקה היומית רצה עם הקוד העדכני, וסריקות שנכתבות לענף העבודה יצרו התנגשויות מיזוג
   schedule:
     - cron: "0 4 * * *"
   workflow_dispatch:
@@ -75,6 +73,8 @@ jobs:
       ID: ${{ matrix.id }}
       POLICY_OUT: policy/companies/${{ matrix.id }}
     steps:
+      - name: Job start time
+        run: echo "JOB_T0=$(date +%s)" >> "$GITHUB_ENV"
       - uses: actions/checkout@v4
       - uses: actions/setup-python@v5
         with:
@@ -97,7 +97,11 @@ jobs:
           fi
       - name: Parse
         continue-on-error: true
-        run: python -m scripts.policy.extract
+        # תקציב: מה שנשאר מ-55 הדקות פחות 6 לשמירה; מה שלא הספיק - בריצה הבאה (מסמכים שפוענחו מסומנים)
+        run: |
+          left=$(( 55*60 - ($(date +%s) - JOB_T0) - 360 ))
+          [ "$left" -lt 120 ] && left=120
+          POLICY_PARSE_BUDGET=$left python -m scripts.policy.extract
       - name: Summary
         if: always()
         run: |
