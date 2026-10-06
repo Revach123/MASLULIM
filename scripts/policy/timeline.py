@@ -52,6 +52,18 @@ def _mk(y, m, d):
         return None
 
 
+_MONTHS = [("ינואר", "january", "jan"), ("פברואר", "february", "feb"), ("מרץ", "מרס", "march", "mar"), ("אפריל", "april", "apr"),
+           ("מאי", "may"), ("יוני", "june", "jun"), ("יולי", "july", "jul"), ("אוגוסט", "august", "aug"),
+           ("ספטמבר", "september", "sept", "sep"), ("אוקטובר", "october", "oct"), ("נובמבר", "november", "nov"),
+           ("דצמבר", "december", "dec")]
+_MONTH_RX = "|".join(sorted((w for ws in _MONTHS for w in ws), key=len, reverse=True))
+
+
+def _month_no(w):
+    w = w.lower()
+    return next((i + 1 for i, ws in enumerate(_MONTHS) if w in ws), None)
+
+
 def date_from_text(s: str, year=None):
     """תאריך מפורש בשם קובץ / טקסט קישור. year (שנת המדיניות) מסנן תאריכים לא סבירים."""
     s = unquote(s or "")
@@ -68,6 +80,15 @@ def date_from_text(s: str, year=None):
         cands.append(_mk(m.group(3), m.group(2), m.group(1)))
     for m in re.finditer(r"update[-_]?(\d\d)(20\d\d|\d\d)(?!\d)", s, re.I):                     # update052026 / update0526
         cands.append(_mk(m.group(2), m.group(1), 1))
+    # חודש בשם ("עדכון אפריל 2026", "אוגוסט 2026", "יולי (2) 2026", "JUL 2026", "march-2025", "-עדכון-אפריל.xlsx"):
+    # היום הראשון בחודש; בלי שנה צמודה - שנת המדיניות. רק אם אין תאריך מלא (תאריך מלא מדויק יותר)
+    if not cands:
+        for m in re.finditer(rf"(?<![א-תa-z])({_MONTH_RX})(?![א-תa-z])[\s\-_,.()]{{0,4}}(?:\(\d\)[\s\-_]*)?(?:(20\d\d)|(\d\d))?(?!\d)",
+                             s, re.I):
+            mon = _month_no(m.group(1))
+            y = m.group(2) or (("20" + m.group(3)) if m.group(3) else None) or (str(year) if year and str(year).isdigit() else None)
+            if mon and y:
+                cands.append(_mk(y, str(mon), "1"))
     cands = [c for c in cands if c and date(2010, 1, 1) <= c <= date.today()]
     if year and str(year).isdigit():
         y = int(year)
@@ -99,6 +120,9 @@ def version_date(url, ent, year):
     d = date_from_text(url, year) or date_from_text(ent.get("link_text"), year)
     if d:
         return d.isoformat(), "doc"
+    cd = ent.get("content_date")  # "תאריך עדכון" בגיליון השינויים שבתוך הקובץ (extract)
+    if cd and (not year or not str(year).isdigit() or int(year) - 1 <= int(cd[:4]) <= int(year)):
+        return cd, "doc_content"
     # מועד הפרסום באתר (Last-Modified / תיקיית ההעלאה בכתובת) - אם סביר לשנת המדיניות
     from .pubdate import published, fits
     pd_, src = published(url, ent)
