@@ -272,10 +272,14 @@ def select_docs(pages: dict, extra: list[str]):
 def visible_text_better(old, new):
     """טקסט חדש מהאתר עדיף על הקיים כשהקיים טכני ("(html)") או כללי ("הורד") והחדש אינפורמטיבי,
     או כשרק בחדש יש שנה/תאריך (שורת הטבלה סביב הקישור: "מדיניות צפויה לשנת 2026 ... עודכן 12.03.2026")."""
-    info = lambda t: bool(t) and not re.match(r"^\((html|xhr|network file|config docs|iframe)\)", t) \
-        and not re.fullmatch(r"\s*(הורד\w*|להורדה|לצפייה|צפייה|download|pdf|xlsx?|קובץ)?\s*", t, re.I)
-    when = lambda t: bool(re.search(r"(?<!\d)(19|20)\d\d(?!\d)|\d{1,2}[./]\d{1,2}[./]\d{2,4}|תש[א-ת][\"״][א-ת]", t or ""))
-    return info(new) and new != old and (not info(old) or (when(new) and not when(old)))
+    info = lambda t: bool(t) and len(t) <= 150 and not re.match(r"^\((html|xhr|network file|config docs|iframe)\)", t) \
+        and not re.fullmatch(r"\s*(הורד\w*|להורדה|לצפייה|צפייה|download|pdf|xlsx?|קובץ|למידע נוסף|לפרטים|לחצ?ו? כאן|קרא עוד|>)?\s*", t, re.I)
+    # 2 = תאריך מלא / חודש ושנה, 1 = שנה בלבד, 0 = בלי. אלטשולר מעדכנת את הכיתוב באותו קישור:
+    # "מדיניות השקעה צפויה לשנת 2026" -> "... לשנת 2026 – מיום 12.05.2026" - התאריך המלא מחליף את השנה בלבד
+    MON = r"ינואר|פברואר|מרץ|מרס|אפריל|מאי|יוני|יולי|אוגוסט|ספטמבר|אוקטובר|נובמבר|דצמבר|jan|feb|mar|apr|may|jun|jul|aug|sep|oct|nov|dec"
+    when = lambda t: 2 if re.search(rf"\d{{1,2}}[./]\d{{1,2}}[./]\d{{2,4}}|(?:{MON})\w*[\s,_-]*(?:20)?\d\d(?!\d)", t or "", re.I) else \
+        1 if re.search(r"(?<!\d)(19|20)\d\d(?!\d)|תש[א-ת][\"״][א-ת]", t or "") else 0
+    return info(new) and new != old and (not info(old) or when(new) > when(old))
 
 
 _BROWSER = {}  # דפדפן אחד לכל ריצה (לא לכל קובץ) + עמודי מקור שכבר נפתחו בו
