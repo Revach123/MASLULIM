@@ -45,7 +45,10 @@ def better_text(old, new):
     המקור): תווית טכנית לא דורסת טקסט אמיתי, וטקסט אמיתי מחליף תווית טכנית."""
     if not old or (TECH_TEXT.match(old) and not TECH_TEXT.match(new or "")):
         return new
-    return old
+    # כמה קישורים לאותו קובץ בשורה (אייקון "הורד"/"לפרטים נוספים" + הכותרת "...תשפ"ו – מרץ 2026"):
+    # הכותרת, ועדיף עם תאריך (crawl.visible_text_better)
+    from .crawl import visible_text_better
+    return new if not TECH_TEXT.match(new or "") and visible_text_better(old, new) else old
 
 
 def merge_items(base, extra):
