@@ -7,6 +7,7 @@ policy/companies/<LegalId>/raw/<LegalId>/, נרשם ב-docs_index.json של הח
 """
 import json, shutil
 from pathlib import Path
+from urllib.parse import unquote
 
 
 ROOT = Path(__file__).resolve().parents[2]
@@ -32,11 +33,14 @@ def main():
         comp = ROOT / "policy" / "companies" / lid
         idx_path = comp / "docs_index.json"
         index = json.loads(idx_path.read_text("utf-8")) if idx_path.exists() else {}
+        # אותה כתובת בצורה אחרת (התוסף שולח מקודד %D7%9E..., הסריקה בענן קריא) -> המפתח הקיים, לא רשומה כפולה
+        canon = {unquote(k): k for k in index}
+        key = lambda u: u if u in index else canon.get(unquote(u), u)
         lm_p = d / "_lastmod.json"  # השלמת מועד פרסום (backfill_lastmod): {url: Last-Modified | null}
         if lm_p.exists():
             from datetime import date
             for url, lm in json.loads(lm_p.read_text("utf-8")).items():
-                ent = index.get(url)
+                ent = index.get(key(url))
                 if ent is None or ent.get("last_modified"):
                     continue
                 if lm:
@@ -47,6 +51,7 @@ def main():
         meta_p = d / "_meta.json"  # עדכוני מסמכים מוכרים מהמחשב הביתי: {url: {link_text, last_modified}}
         if meta_p.exists():
             for url, upd in json.loads(meta_p.read_text("utf-8")).items():
+                url = key(url)
                 if url in index:
                     if upd.get("last_modified") and not index[url].get("last_modified"):
                         index[url]["last_modified"] = upd["last_modified"]
@@ -61,6 +66,7 @@ def main():
             if not f.exists():
                 continue
             meta = json.loads(meta_p.read_text("utf-8"))
+            meta["url"] = key(meta["url"])
             # אותו תוכן כבר באינדקס בכתובת אחרת (קובץ שהמשתמש העלה ידנית ואחר כך נמצא באתר) - לא כפילות
             if meta["url"] not in index and any(e.get("sha256") == meta["sha256"] for e in index.values()):
                 f.unlink(); meta_p.unlink()
@@ -81,6 +87,7 @@ def main():
                                   "history": hist, "link_text": meta.get("link_text"),
                                   "source_page": meta.get("source_page"), "via": "extension",
                                   **({"last_modified": meta["last_modified"]} if meta.get("last_modified") else {})}
+            canon[unquote(meta["url"])] = meta["url"]
         idx_path.parent.mkdir(parents=True, exist_ok=True)
         idx_path.write_text(json.dumps(index, ensure_ascii=False, indent=1), "utf-8")
         if not any(d.iterdir()):
