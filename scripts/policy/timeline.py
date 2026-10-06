@@ -78,6 +78,9 @@ def date_from_text(s: str, year=None):
         cands += [_mk(m.group(1), m.group(2), m.group(3)), _mk(m.group(3), m.group(2), m.group(1))]
     for m in re.finditer(r"(?<=[_\-])(\d\d)(\d)(\d\d)(?=[_\-.]|$)", s):                        # -26826 (D D M YY, הכשרה)
         cands.append(_mk(m.group(3), m.group(2), m.group(1)))
+    for m in re.finditer(r"(?<![\w./])(\d{1,2})[./](20\d\d)(?!\d|[./]\d)", s):                       # עדכון-8.2026 (חודש.שנה)
+        if 1 <= int(m.group(1)) <= 12:
+            cands.append(_mk(m.group(2), m.group(1), 1))
     for m in re.finditer(r"update[-_]?(\d\d)(20\d\d|\d\d)(?!\d)", s, re.I):                     # update052026 / update0526
         cands.append(_mk(m.group(2), m.group(1), 1))
     # חודש בשם ("עדכון אפריל 2026", "אוגוסט 2026", "יולי (2) 2026", "JUL 2026", "march-2025", "-עדכון-אפריל.xlsx"):
