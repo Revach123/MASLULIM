@@ -203,6 +203,20 @@ def html_files(html):
     return out[:800]
 
 
+def signed_url_name(u):
+    """שם הקובץ המקורי מתוך כתובת הורדה חתומה (מגדל/Wix: download-files.wixmp.com/...?token=<JWT>, ב-dis.filename:
+    "Hatzarat Migdal Bituach JUL 2026_P - ACC.xlsx") - בכתובת עצמה רק מזהה."""
+    m = re.search(r"[?&]token=([\w-]+)\.([\w-]+)\.", u)
+    if not m:
+        return None
+    try:
+        import base64
+        pl = json.loads(base64.urlsafe_b64decode(m.group(2) + "=" * (-len(m.group(2)) % 4)))
+        return (pl.get("dis") or {}).get("filename")
+    except Exception:
+        return None
+
+
 def fetch_browser(pw, url, click_texts=None):
     """רינדור: רשת שקטה, פתיחת אקורדיונים/לשוניות, ולכידת בקשות רשת (JSON עם נתיבי קבצים, קבצים ישירים, iframes).
     -> (anchors, status, body_text)"""
@@ -213,13 +227,15 @@ def fetch_browser(pw, url, click_texts=None):
         ctx = b.new_context(locale="he-IL", user_agent=UA, viewport={"width": 1400, "height": 1000})
         pg = ctx.new_page()
         net = []
+        clicked_row = {"text": None, "at": 0.0}  # שורת כפתור ההורדה שנלחץ עכשיו - הכיתוב של הקובץ שיגיע ברשת
 
         def on_response(r):
             try:
                 ct = r.headers.get("content-type", "")
                 u = r.url
                 if re.search(r"\.(xlsx|xls|pdf|docx)(\?|$)", u, re.I) or re.search(r"spreadsheet|pdf|msword|excel", ct):
-                    net.append({"href": u, "text": "(network file)"})
+                    row = clicked_row["text"] if time.monotonic() - clicked_row["at"] < 15 else None
+                    net.append({"href": u, "text": row or signed_url_name(u) or "(network file)"})
                 elif "json" in ct or "x-component" in ct or "javascript" not in ct and "text/html" not in ct and "xml" in ct:  # x-component: Next.js RSC
                     body = r.text()
                     labels = json_file_labels(body) if len(body) < 3_000_000 else {}
@@ -313,7 +329,10 @@ def fetch_browser(pw, url, click_texts=None):
             ttxt = pg.eval_on_selector_all('[role="tab"], button, [role="button"], li[tabindex], [class*=tab]:not(a)',
                                            "els => els.map(e => (e.innerText || '').trim().slice(0, 60))")
             if len(ttxt) == len(tabs):
-                tabs = [el for _, el in sorted(zip(ttxt, tabs), key=lambda p: not re.search(r"מדיניות|הצהר", p[0]))]
+                # אחריהן צ'יפים של מוצר (הראל: "הראל השתלמות", "קרן החיסכון לצבא הקבע" - אחרי עשרות כפתורי תפריט,
+                # ותקציב הזמן נגמר לפני שהגענו אליהם: הקבצים נמצאו בקוד העמוד אבל בלי הכותרת שמוצגת בלשונית)
+                prio = lambda t: 0 if re.search(r"מדיניות|הצהר", t) else 1 if re.search(r"גמל|פנסי|השתלמ|קרן|קופ|ביטוח|חיסכון", t) and len(t) <= 35 else 2
+                tabs = [el for _, el in sorted(zip(ttxt, tabs), key=lambda p: prio(p[0]))]
         except Exception:
             pass
         clicked = set()
@@ -429,6 +448,7 @@ def fetch_browser(pw, url, click_texts=None):
                     pg.wait_for_timeout(700)
                     if not el.is_visible():
                         continue
+                clicked_row.update(text=ctx_text, at=time.monotonic())
                 try:
                     with pg.expect_download(timeout=8000) as info:
                         el.scroll_into_view_if_needed(timeout=2000); el.click(timeout=3000)
