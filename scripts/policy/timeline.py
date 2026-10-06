@@ -67,6 +67,8 @@ def _month_no(w):
 def date_from_text(s: str, year=None):
     """תאריך מפורש בשם קובץ / טקסט קישור. year (שנת המדיניות) מסנן תאריכים לא סבירים."""
     s = unquote(s or "")
+    # "עד תאריך 30.06.2024" / "עד ליום ..." = סוף התוקף של הגרסה הקודמת, לא מועד הגרסה (מנורה) - לא נספר
+    s = re.sub(r"עד\s*(?:ל?תאריך|ל?יום)?\s*[-:]?\s*\d{1,2}[./]\d{1,2}[./]\d{2,4}", " ", s)
     cands = []
     for m in re.finditer(r"(?<!\d)(\d{1,2})[./_-](\d{1,2})[./_-](20\d\d|\d\d)(?!\d)", s):      # 06-05-2026, 27.8.20
         cands.append(_mk(m.group(3), m.group(2), m.group(1)))
@@ -120,7 +122,8 @@ def date_from_file(path: Path, year=None):
 
 
 def version_date(url, ent, year):
-    d = date_from_text(url, year) or date_from_text(ent.get("link_text"), year)
+    # הכיתוב באתר קודם ("החל מתאריך 04.11.2024"); הכתובת (תיקיית העלאה "/20241203/") אחריו
+    d = date_from_text(ent.get("link_text"), year) or date_from_text(url, year)
     if d:
         return d.isoformat(), "doc"
     cd = ent.get("content_date")  # "תאריך עדכון" בגיליון השינויים שבתוך הקובץ (extract)
