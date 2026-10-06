@@ -45,8 +45,13 @@ def main():
         index = json.loads(idx_path.read_text("utf-8"))
         groups = {}
         pub = {wix_id(u): doc_key(u) for u in index if wix_id(u) and "/_files/" in u}  # Wix: הכתובת הציבורית
-        for u in index:
-            groups.setdefault(pub.get(wix_id(u)) or doc_key(u), []).append(u)
+        # אותו קובץ עם/בלי פרמטר ("...xls?pid=2412", יחד רופאים/יהב) - אותו נתיב ואותו תוכן -> הכתובת בלי הפרמטר
+        plain = {(doc_key(u).split("?")[0], e.get("sha256")): doc_key(u) for u, e in index.items() if "?" not in u}
+        for u, e in index.items():
+            k = pub.get(wix_id(u)) or doc_key(u)
+            if "?" in k:
+                k = plain.get((k.split("?")[0], e.get("sha256")), k)
+            groups.setdefault(k, []).append(u)
         snap = {}
         for sp in idx_path.parent.glob("site_snapshot/*.json"):
             for pg in json.loads(sp.read_text("utf-8")).get("pages", {}).values():
