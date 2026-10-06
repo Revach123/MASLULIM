@@ -59,11 +59,13 @@ def datagov_period(period):
 def doc_exposures(year):
     """{(legal_id, track_no): {"equity": %, "fx": %, "source": ..., "name": ...}} מהמסמכים של השנה."""
     # המספר נקבע בשלב הסיכום (track_numbers) - הצירוף לפי track_code, לא לפי track_no שבשורות המסמך
-    summ = {(r["legal_id"], r["track_code"]): r for r in csv.DictReader(open(POL / "tracks_summary.csv", encoding="utf-8-sig"))
+    # גם שם המסלול: track_code גנרי משותף לכמה קבצים (יחד רופאים: "page1|page1" למניות ולאג"ח ממשלות)
+    summ = {(r["legal_id"], r["track_code"], r["track_name"]): r
+            for r in csv.DictReader(open(POL / "tracks_summary.csv", encoding="utf-8-sig"))
             if r["track_no"] and r["year"] == str(year)}
     out = defaultdict(dict)
     for r in json.loads((POL / "tracks_policy_long.json").read_text("utf-8")):
-        s = summ.get((r.get("legal_id"), r.get("track_code")))
+        s = summ.get((r.get("legal_id"), r.get("track_code"), r.get("track_name")))
         if r.get("year") != str(year) or not s or r.get("current_pct") is None or r.get("asset_key") not in ("equity", "fx"):
             continue
         k = (s["legal_id"], s["track_no"])
@@ -92,8 +94,8 @@ def main():
         diffs = [abs(d[k] - g[k]) for k in ("equity", "fx") if g and d.get(k) is not None and g.get(k) is not None]
         worst = max(diffs) if diffs else None
         status = "no_data" if worst is None else "ok" if worst <= 5 else "check" if worst <= 12 else "mismatch"
-        if status in ("check", "mismatch") and not d.get("_cur_sum"):
-            status = "new_track"  # חשיפה עדכנית 0 בכל האפיקים במסמך - מסלול שנפתח במהלך השנה, אין עם מה להשוות
+        if status in ("check", "mismatch") and (not d.get("_cur_sum") or g and not g.get("equity") and not g.get("fx")):
+            status = "new_track"  # חשיפה עדכנית 0 בכל האפיקים במסמך, או 0 מניות ו-0 מט"ח ב-data.gov (מור 15274) - מסלול שנפתח במהלך השנה, אין עם מה להשוות
         rows.append({"legal_id": lid, "track_no": tn, "track_no_source": d.get("source"), "track_name": d.get("name"),
                      "doc_equity": d.get("equity"), "gov_equity": g and g["equity"], "doc_fx": d.get("fx"),
                      "gov_fx": g and g["fx"], "max_gap": worst, "status": status})

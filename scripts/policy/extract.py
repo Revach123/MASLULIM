@@ -15,7 +15,7 @@ from datetime import datetime
 ROOT = Path(__file__).resolve().parents[2]
 OUT = ROOT / (__import__("os").environ.get("POLICY_OUT") or "policy")  # ריצה לחברה: policy/companies/<LegalId>
 
-PARSER_VERSION = 22  # (v22: "48.21%" לא 4821) (v21: בלי 'נכון לתאריך') (v20: תאריך כתוב בגוף המסמך, יומן שינויים לפי שמות עמודות) (v10: Ayalon, dated current column) # הגדלה = פרסור מחדש של כל המסמכים בריצה הבאה (שינוי בפרסרים)
+PARSER_VERSION = 23  # (v23: עמודת "ליום" המאוחרת) (v22: "48.21%" לא 4821) (v21: בלי 'נכון לתאריך') (v20: תאריך כתוב בגוף המסמך, יומן שינויים לפי שמות עמודות) (v10: Ayalon, dated current column) # הגדלה = פרסור מחדש של כל המסמכים בריצה הבאה (שינוי בפרסרים)
 
 NUM = r"(\d{1,3}(?:\.\d+)?)"
 PCT = NUM + r"\s*%?"
@@ -335,7 +335,7 @@ def asset_key(name: str):
     n = re.sub(r"[\d*()]+$", "", n)  # מספר / כוכבית של הערת שוליים צמודים לשם ("מט"ח6", "חשיפה למט"ח4", "מט"ח(*)")
     if n.startswith(("מניות", "חשיפהלמניות", "סהכמניות")):
         return "equity"
-    if n in ("מטח", "חשיפהלמטח", "חשיפהלמטבעחוץ"):
+    if n in ("מטח", "חשיפהלמטח", "חשיפהלמטבעחוץ", "חשיפהמטבעית", "חשיפהמטחית"):
         return "fx"
     return None
 
@@ -377,7 +377,8 @@ def parse_statement_blocks(rows, sheet=""):
                     for c, t in texts.items():
                         for key, pat in (("current", r"עדכני|ליום"), ("expected", r"צפוי"), ("tol", r"סטי"),
                                          ("bounds", r"גבולות"), ("bench", r"ייחוס")):
-                            if key not in cols and re.search(pat, t):
+                            if re.search(pat, t) and (key not in cols or key == "current"
+                                                      and _hdr_date(t) > _hdr_date(texts[cols[key]])):
                                 cols[key] = c
                     hdr_row = r
                 continue
@@ -585,8 +586,9 @@ def parse_titled_tables(rows, sheet=""):
                                                and int(re.search(r"(20\d\d)\s*$", t).group(1))
                                                > int(re.search(r"(20\d\d)\s*$", row[cols["expected"]]).group(1)))):
                 cols["expected"] = c  # "שיעור חשיפה 2021" (שנה בלבד, בלי תאריך) = הצפוי; שתי שנים -> המאוחרת (תשפ"ה|תשפ"ו)
-            elif re.search(r"שיעור\s+(ה)?חשיפה|ליום|לתאריך|עדכני|נכון ל", t) and "current" not in cols:
-                cols["current"] = c
+            elif re.search(r"שיעור\s+(ה)?חשיפה|ליום|לתאריך|עדכני|נכון ל", t) and (
+                    "current" not in cols or _hdr_date(t) > _hdr_date(row[cols["current"]])):
+                cols["current"] = c  # שתי עמודות "ליום 31.12.2024 | ליום 31.12.2025" (אל על) - המאוחרת
         if len(bounds_cands) > 1 and "expected" in cols and not any(re.search(r"20\d\d", row[c]) for c in bounds_cands):
             # שתי עמודות "גבולות" בלי שנה (מחוג 2026, קלע 2020: [צפוי 2025, גבולות, ..., צפוי 2026, גבולות]):
             # הגבולות של הצפוי שנבחר = עמודת הגבולות הראשונה אחריו
@@ -781,6 +783,15 @@ def parse_text_tracks(rows, sheet=""):
                     "current_pct": None, "expected_pct": None, "tolerance": None,
                     "benchmark": (r[bc].replace("\n", " ") if bc < len(r) else None), "policy_text": text[:1500], "sheet": sheet})
     return out
+
+
+def _hdr_date(t):
+    """תאריך בכותרת עמודה ("ליום 31.12.2025", "ליום 30/11/25") כ-YYYY-MM-DD להשוואה; בלי תאריך - ""."""
+    m = re.search(r"(\d{1,2})[./](\d{1,2})[./](20\d\d|\d\d)(?!\d)", str(t or ""))
+    if not m:
+        return ""
+    y = m.group(3) if len(m.group(3)) == 4 else "20" + m.group(3)
+    return f"{y}-{int(m.group(2)):02d}-{int(m.group(1)):02d}"
 
 
 def _as_pct(v, raw):
@@ -981,6 +992,18 @@ def main():
                         doc_year = content_year
                 for r in doc_rows:  # שנה בשם הקובץ גוברת (בגוף הגיליון מופיעות לפעמים שנים של נתוני עבר)
                     r["year"] = doc_year or r.get("year")
+                # עמודת "חשיפה עדכנית" פגומה במקור (כלל "משתתף חכם": "15" בכל האפיקים או *KEY_ERR) - אותו ערך (לא 0) ב-3+ אפיקים
+                # של מסלול = לא נתון; החשיפה העדכנית של המסלול נמחקת (הצפוי והגבולות נשארים)
+                by_track = {}
+                for r in doc_rows:
+                    by_track.setdefault((r.get("track_code"), r.get("sheet"), r.get("track_name")), []).append(r)
+                for rs in by_track.values():
+                    vals = list({str(r.get("asset") or "").strip(): r.get("current_pct") for r in rs  # אפיק שונה (לא שורה כפולה)
+                 if r.get("current_pct") not in (None, 0, 0.0)
+                 and not str(r.get("asset") or "").strip().startswith("סה")}.values())  # בלי סה"כ (מניות 100 + סה"כ 100)
+                    if len(vals) >= 3 and max(vals.count(v) for v in vals) >= 3 and len(set(vals)) <= max(1, len(vals) // 3):
+                        for r in rs:
+                            r["current_pct"] = None
                 fn_code = re.search(r"-(\d{3,6})\.(xlsx?|pdf)$", Path(ent["file"]).name)  # מנורה: קובץ למסלול, הקוד בשם
                 if fn_code and 2016 <= int(fn_code.group(1)) <= datetime.now().year + 1:
                     fn_code = None  # שנת מדיניות (רום "...-2025.pdf"), לא מסלול; מספרי מסלול כמו 2009/2013/2015 (מנורה פנסיה) נשארים
