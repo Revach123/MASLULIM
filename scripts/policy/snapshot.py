@@ -140,6 +140,11 @@ def json_file_labels(body):
     return out
 
 
+def file_tail(u, parts=2):
+    """תיקייה/שם-קובץ מהכתובת (מפוענח, בלי query) - לזיהוי קובץ בעמוד כששמות זהים בתיקיות שונות."""
+    return "/".join(unquote(u).split("?")[0].rstrip("/").split("/")[-parts:])
+
+
 def html_json_labels(html):
     """{שם קובץ: כותרת} לקבצים שנמצאים בנתוני JSON שמוטמעים בעמוד (Next.js __NEXT_DATA__ / self.__next_f, מנורה):
     האובייקט {...} הקרוב שמחזיק את הנתיב, ושדות הטקסט הקצרים שבו - כמו json_file_labels, בלי לפענח את כל העמוד
@@ -173,7 +178,7 @@ def html_json_labels(html):
         return None
 
     for m in re.finditer(r"""[^"'\s<>]+?\.(?:xlsx|xls|pdf|docx)(?![\w])""", h, re.I):
-        name = unquote(m.group(0)).split("?")[0].rsplit("/", 1)[-1]
+        name = file_tail(m.group(0))
         if name in out:
             continue
         span = (m.start(), m.end())
@@ -189,6 +194,7 @@ def html_json_labels(html):
                    and not re.match(r"^(https?:|/|\$|[\w-]{20,}$)", v.strip()) and re.search(r"[א-ת]|\d{4}", v)]
             if lab:
                 out[name] = " ".join(dict.fromkeys(lab))[:200]
+                out.setdefault(file_tail(m.group(0), 1), out[name])
                 break
     return out
 
@@ -476,7 +482,8 @@ def fetch_browser(pw, url, click_texts=None):
             found = html_files(html)
             jlabels = html_json_labels(html) if found and len(html) < 5_000_000 else {}
             # הטקסט סביב הקובץ בעמוד (שורה/כרטיס של האלמנט שמחזיק את הנתיב באחת מתכונותיו) - מה שהמשתמש רואה
-            names = [unquote(m.rsplit("/", 1)[-1]) for m in found]
+            # תיקייה + שם (מנורה: אותו שם קובץ בתיקיות 20240124/ ו-20241201/ - "עד" ו"החל מ" - כל אחד והשורה שלו)
+            names = [file_tail(m) for m in found]
             ctxs = pg.evaluate("""names => names.map(n => {
                 const els = document.querySelectorAll('a,[href],[src],[data-href],[data-url],[data-file],[data-src],[onclick]');
                 for (const e of els) {
@@ -491,7 +498,7 @@ def fetch_browser(pw, url, click_texts=None):
             })""", names) if found else []
             for m, c in zip(found, ctxs):
                 # & בשם הקובץ (מנורה "...-s&p500-14316.xlsx"): ב-HTML &amp;, ב-JSON של Next.js \u0026
-                anchors.append({"href": urljoin(url, m), "text": c or jlabels.get(unquote(m).split("?")[0].rsplit("/", 1)[-1]) or "(html)"})
+                anchors.append({"href": urljoin(url, m), "text": c or jlabels.get(file_tail(m)) or jlabels.get(file_tail(m, 1)) or "(html)"})
         except Exception:
             pass
         text = pg.inner_text("body")
