@@ -1,7 +1,7 @@
 {
  "legal_id": "520042581",
  "company": "עמ\"י - חברה לניהול קופות גמל ענפיות בע\"מ",
- "taken": "2026-10-05T12:06:04+00:00",
+ "taken": "2026-10-06T11:40:36+00:00",
  "pages": {
   "https://ami-gml.co.il/קופת-גמל-להשקעה/השקעה-מסלולי-השקעה/מסלול-עוקב-מדד-sp500-השקעה/": {
    "product": "גמל",
@@ -77,6 +77,22 @@
     {
      "text": "עלות שנתית צפויה 2026",
      "href": "https://www.ami-gml.co.il/wp-content/uploads/2026/07/67190ImageFile3.pdf",
+     "year": "2026",
+     "iframe": false,
+     "doc": true,
+     "internal": true
+    },
+    {
+     "text": "מדיניות צפויה לשנת 2026",
+     "href": "https://www.ami-gml.co.il/wp-content/uploads/2026/07/67210ImageFile3.pdf",
+     "year": "2026",
+     "iframe": false,
+     "doc": true,
+     "internal": true
+    },
+    {
+     "text": "מדיניות צפויה לשנת 2025",
+     "href": "https://www.ami-gml.co.il/wp-content/uploads/2026/07/67126ImageFile3.pdf",
      "year": "2026",
      "iframe": false,
      "doc": true,
@@ -275,22 +291,6 @@
      "internal": true
     },
     {
-     "text": "",
-     "href": "https://www.ami-gml.co.il/wp-content/uploads/2026/07/67210ImageFile3.pdf",
-     "year": "2026",
-     "iframe": false,
-     "doc": true,
-     "internal": true
-    },
-    {
-     "text": "",
-     "href": "https://www.ami-gml.co.il/wp-content/uploads/2026/07/67126ImageFile3.pdf",
-     "year": "2026",
-     "iframe": false,
-     "doc": true,
-     "internal": true
-    },
-    {
      "text": "עלות שנתית צפויה 2025",
      "href": "https://www.ami-gml.co.il/wp-content/uploads/2026/07/66957ImageFile3.pdf",
      "year": "2025",
@@ -309,14 +309,6 @@
     {
      "text": "תקנון הקופה",
      "href": "https://www.ami-gml.co.il/%d7%90%d7%95%d7%93%d7%95%d7%aa%d7%99%d7%a0%d7%95/%d7%aa%d7%a7%d7%a0%d7%95%d7%9f-%d7%94%d7%a7%d7%95%d7%a4%d7%94/",
-     "year": null,
-     "iframe": false,
-     "doc": false,
-     "internal": true
-    },
-    {
-     "text": "תיקון 190",
-     "href": "https://www.ami-gml.co.il/%d7%a7%d7%95%d7%a4%d7%aa-%d7%92%d7%9e%d7%9c-%d7%9c%d7%97%d7%99%d7%a1%d7%9b%d7%95%d7%9f/%d7%aa%d7%99%d7%a7%d7%95%d7%9f-190/",
      "year": null,
      "iframe": false,
      "doc": false,
@@ -491,7 +483,7 @@
      "internal": true
     },
     {
-     "text": "מדיניות הפרטיות",
+     "text": "מדיניות פרטיות",
      "href": "https://www.ami-gml.co.il/%d7%90%d7%95%d7%93%d7%95%d7%aa%d7%99%d7%a0%d7%95/%d7%9e%d7%93%d7%99%d7%a0%d7%99%d7%95%d7%aa-%d7%a4%d7%a8%d7%98%d7%99%d7%95%d7%aa/",
      "year": null,
      "iframe": false,
@@ -499,7 +491,7 @@
      "internal": true
     },
     {
-     "text": "מדיניות הפרטיות",
+     "text": "מדיניות פרטיות",
      "href": "https://ami-gml.co.il/%d7%90%d7%95%d7%93%d7%95%d7%aa%d7%99%d7%a0%d7%95/%d7%9e%d7%93%d7%99%d7%a0%d7%99%d7%95%d7%aa-%d7%a4%d7%a8%d7%98%d7%99%d7%95%d7%aa/",
      "year": null,
      "iframe": false,
@@ -521,6 +513,14 @@
      "iframe": false,
      "doc": false,
      "internal": false
+    },
+    {
+     "text": "חיסכון לפי תיקון 190",
+     "href": "https://www.ami-gml.co.il/%d7%a7%d7%95%d7%a4%d7%aa-%d7%92%d7%9e%d7%9c-%d7%9c%d7%97%d7%99%d7%a1%d7%9b%d7%95%d7%9f/%d7%aa%d7%99%d7%a7%d7%95%d7%9f-190/",
+     "year": null,
+     "iframe": false,
+     "doc": false,
+     "internal": true
     },
     {
      "text": "הוצאות ישירות",
@@ -563,16 +563,16 @@
      "internal": true
     },
     {
-     "text": "בית › קופת גמל להשקעה › מסלולי השקעה › מסלול עוקב מדד S&P500 בית",
-     "href": "https://www.ami-gml.co.il/",
+     "text": "אמות מידה לבחינת איכות הממשל התאגידי ESG בהשקעות",
+     "href": "https://www.ami-gml.co.il/%d7%90%d7%95%d7%93%d7%95%d7%aa%d7%99%d7%a0%d7%95/%d7%a0%d7%94%d7%9c%d7%99%d7%9d-%d7%95%d7%a4%d7%a8%d7%a1%d7%95%d7%9e%d7%99%d7%9d/%d7%90%d7%9e%d7%95%d7%aa-%d7%9e%d7%99%d7%93%d7%94-%d7%9c%d7%91%d7%97%d7%99%d7%a0%d7%aa-%d7%90%d7%99%d7%9b%d7%95%d7%aa-%d7%94%d7%9e%d7%9e%d7%a9%d7%9c-%d7%94%d7%aa%d7%90%d7%92%d7%99%d7%93%d7%99-esg/",
      "year": null,
      "iframe": false,
      "doc": false,
      "internal": true
     },
     {
-     "text": "אמות מידה לבחינת איכות הממשל התאגידי ESG בהשקעות",
-     "href": "https://www.ami-gml.co.il/%d7%90%d7%95%d7%93%d7%95%d7%aa%d7%99%d7%a0%d7%95/%d7%a0%d7%94%d7%9c%d7%99%d7%9d-%d7%95%d7%a4%d7%a8%d7%a1%d7%95%d7%9e%d7%99%d7%9d/%d7%90%d7%9e%d7%95%d7%aa-%d7%9e%d7%99%d7%93%d7%94-%d7%9c%d7%91%d7%97%d7%99%d7%a0%d7%aa-%d7%90%d7%99%d7%9b%d7%95%d7%aa-%d7%94%d7%9e%d7%9e%d7%a9%d7%9c-%d7%94%d7%aa%d7%90%d7%92%d7%99%d7%93%d7%99-esg/",
+     "text": "אודותינו הצטרפו אלינו הלוואה לכל מטרה קופת גמל לחיסכון קופת גמל להשקעה טפסים יצירת קשר מעבר לדוחות דיגיטליים",
+     "href": "https://www.ami-gml.co.il/",
      "year": null,
      "iframe": false,
      "doc": false,
@@ -592,20 +592,12 @@
    "product": "גמל",
    "status": 200,
    "method": "requests",
-   "text_hash": "6e472ad72038826b687f6908160c0bc29cbe53d6",
+   "text_hash": "03eb5dca7310a64b91a0351e13cd364ebdc4d5ce",
    "text_head": "קופת הגמל של עובדי המדינה. שווים יותר, יחד. - עמ\"י קופות גמל פורטל מעסיקים כניסה לאזור האישי אודותינו אמנת שירות דוחות ודיווחים אסיפות כלליות מידע סטטיסטי צדדים קשורים צדדים קשורים דיווח על עסקאות רשימות נכסים רשימות נכסים 2026 רשימות נכסים 2025 רשימות נכסים 2024 רשימות נכסים 2023 רשימת נכסים 2022 2022 רשימות נכסים 2021 רשימות נכסים 2020 רשימות נכסים 2019 דוחות כספיים דוחות כספיים 2026 רבעון ראשון דוחות כספיים 2025 דוח כספי חברה מנהלת רבעון ראשון דוחות כספיים 2024 רבעון ראשון דוחות כספיים 2022 דוחות כספיים 2023 דוח כספי חברה מנהלת רבעון ראשון דוחות כספיים 2021 2016 2017 2018 2019 2020 2021 דוח",
    "items": [
     {
      "text": "תקנון הקופה",
      "href": "https://www.ami-gml.co.il/%d7%90%d7%95%d7%93%d7%95%d7%aa%d7%99%d7%a0%d7%95/%d7%aa%d7%a7%d7%a0%d7%95%d7%9f-%d7%94%d7%a7%d7%95%d7%a4%d7%94/",
-     "year": null,
-     "iframe": false,
-     "doc": false,
-     "internal": true
-    },
-    {
-     "text": "תיקון 190",
-     "href": "https://www.ami-gml.co.il/%d7%a7%d7%95%d7%a4%d7%aa-%d7%92%d7%9e%d7%9c-%d7%9c%d7%97%d7%99%d7%a1%d7%9b%d7%95%d7%9f/%d7%aa%d7%99%d7%a7%d7%95%d7%9f-190/",
      "year": null,
      "iframe": false,
      "doc": false,
@@ -748,7 +740,7 @@
      "internal": true
     },
     {
-     "text": "מדיניות הפרטיות",
+     "text": "מדיניות פרטיות",
      "href": "https://www.ami-gml.co.il/%d7%90%d7%95%d7%93%d7%95%d7%aa%d7%99%d7%a0%d7%95/%d7%9e%d7%93%d7%99%d7%a0%d7%99%d7%95%d7%aa-%d7%a4%d7%a8%d7%98%d7%99%d7%95%d7%aa/",
      "year": null,
      "iframe": false,
@@ -778,6 +770,14 @@
      "iframe": false,
      "doc": false,
      "internal": false
+    },
+    {
+     "text": "חיסכון לפי תיקון 190",
+     "href": "https://www.ami-gml.co.il/%d7%a7%d7%95%d7%a4%d7%aa-%d7%92%d7%9e%d7%9c-%d7%9c%d7%97%d7%99%d7%a1%d7%9b%d7%95%d7%9f/%d7%aa%d7%99%d7%a7%d7%95%d7%9f-190/",
+     "year": null,
+     "iframe": false,
+     "doc": false,
+     "internal": true
     },
     {
      "text": "הוצאות ישירות",
@@ -845,14 +845,6 @@
      "internal": true
     },
     {
-     "text": "תיקון 190",
-     "href": "https://www.ami-gml.co.il/%d7%a7%d7%95%d7%a4%d7%aa-%d7%92%d7%9e%d7%9c-%d7%9c%d7%97%d7%99%d7%a1%d7%9b%d7%95%d7%9f/%d7%aa%d7%99%d7%a7%d7%95%d7%9f-190/",
-     "year": null,
-     "iframe": false,
-     "doc": false,
-     "internal": true
-    },
-    {
      "text": "קופת גמל לחיסכון",
      "href": "https://www.ami-gml.co.il/%d7%a7%d7%95%d7%a4%d7%aa-%d7%92%d7%9e%d7%9c-%d7%9c%d7%97%d7%99%d7%a1%d7%9b%d7%95%d7%9f/",
      "year": null,
@@ -989,7 +981,7 @@
      "internal": true
     },
     {
-     "text": "מדיניות הפרטיות",
+     "text": "מדיניות פרטיות",
      "href": "https://www.ami-gml.co.il/%d7%90%d7%95%d7%93%d7%95%d7%aa%d7%99%d7%a0%d7%95/%d7%9e%d7%93%d7%99%d7%a0%d7%99%d7%95%d7%aa-%d7%a4%d7%a8%d7%98%d7%99%d7%95%d7%aa/",
      "year": null,
      "iframe": false,
@@ -1011,6 +1003,14 @@
      "iframe": false,
      "doc": false,
      "internal": false
+    },
+    {
+     "text": "חיסכון לפי תיקון 190",
+     "href": "https://www.ami-gml.co.il/%d7%a7%d7%95%d7%a4%d7%aa-%d7%92%d7%9e%d7%9c-%d7%9c%d7%97%d7%99%d7%a1%d7%9b%d7%95%d7%9f/%d7%aa%d7%99%d7%a7%d7%95%d7%9f-190/",
+     "year": null,
+     "iframe": false,
+     "doc": false,
+     "internal": true
     },
     {
      "text": "הוצאות ישירות",
@@ -1110,14 +1110,6 @@
      "internal": true
     },
     {
-     "text": "תיקון 190",
-     "href": "https://www.ami-gml.co.il/%d7%a7%d7%95%d7%a4%d7%aa-%d7%92%d7%9e%d7%9c-%d7%9c%d7%97%d7%99%d7%a1%d7%9b%d7%95%d7%9f/%d7%aa%d7%99%d7%a7%d7%95%d7%9f-190/",
-     "year": null,
-     "iframe": false,
-     "doc": false,
-     "internal": true
-    },
-    {
      "text": "קופת גמל לחיסכון",
      "href": "https://www.ami-gml.co.il/%d7%a7%d7%95%d7%a4%d7%aa-%d7%92%d7%9e%d7%9c-%d7%9c%d7%97%d7%99%d7%a1%d7%9b%d7%95%d7%9f/",
      "year": null,
@@ -1254,7 +1246,7 @@
      "internal": true
     },
     {
-     "text": "מדיניות הפרטיות",
+     "text": "מדיניות פרטיות",
      "href": "https://www.ami-gml.co.il/%d7%90%d7%95%d7%93%d7%95%d7%aa%d7%99%d7%a0%d7%95/%d7%9e%d7%93%d7%99%d7%a0%d7%99%d7%95%d7%aa-%d7%a4%d7%a8%d7%98%d7%99%d7%95%d7%aa/",
      "year": null,
      "iframe": false,
@@ -1276,6 +1268,14 @@
      "iframe": false,
      "doc": false,
      "internal": false
+    },
+    {
+     "text": "חיסכון לפי תיקון 190",
+     "href": "https://www.ami-gml.co.il/%d7%a7%d7%95%d7%a4%d7%aa-%d7%92%d7%9e%d7%9c-%d7%9c%d7%97%d7%99%d7%a1%d7%9b%d7%95%d7%9f/%d7%aa%d7%99%d7%a7%d7%95%d7%9f-190/",
+     "year": null,
+     "iframe": false,
+     "doc": false,
+     "internal": true
     },
     {
      "text": "הוצאות ישירות",
@@ -1351,14 +1351,6 @@
      "internal": true
     },
     {
-     "text": "תיקון 190",
-     "href": "https://www.ami-gml.co.il/%d7%a7%d7%95%d7%a4%d7%aa-%d7%92%d7%9e%d7%9c-%d7%9c%d7%97%d7%99%d7%a1%d7%9b%d7%95%d7%9f/%d7%aa%d7%99%d7%a7%d7%95%d7%9f-190/",
-     "year": null,
-     "iframe": false,
-     "doc": false,
-     "internal": true
-    },
-    {
      "text": "קופת גמל לחיסכון",
      "href": "https://www.ami-gml.co.il/%d7%a7%d7%95%d7%a4%d7%aa-%d7%92%d7%9e%d7%9c-%d7%9c%d7%97%d7%99%d7%a1%d7%9b%d7%95%d7%9f/",
      "year": null,
@@ -1495,7 +1487,7 @@
      "internal": true
     },
     {
-     "text": "מדיניות הפרטיות",
+     "text": "מדיניות פרטיות",
      "href": "https://www.ami-gml.co.il/%d7%90%d7%95%d7%93%d7%95%d7%aa%d7%99%d7%a0%d7%95/%d7%9e%d7%93%d7%99%d7%a0%d7%99%d7%95%d7%aa-%d7%a4%d7%a8%d7%98%d7%99%d7%95%d7%aa/",
      "year": null,
      "iframe": false,
@@ -1517,6 +1509,14 @@
      "iframe": false,
      "doc": false,
      "internal": false
+    },
+    {
+     "text": "חיסכון לפי תיקון 190",
+     "href": "https://www.ami-gml.co.il/%d7%a7%d7%95%d7%a4%d7%aa-%d7%92%d7%9e%d7%9c-%d7%9c%d7%97%d7%99%d7%a1%d7%9b%d7%95%d7%9f/%d7%aa%d7%99%d7%a7%d7%95%d7%9f-190/",
+     "year": null,
+     "iframe": false,
+     "doc": false,
+     "internal": true
     },
     {
      "text": "הוצאות ישירות",
@@ -1592,14 +1592,6 @@
      "internal": true
     },
     {
-     "text": "תיקון 190",
-     "href": "https://www.ami-gml.co.il/%d7%a7%d7%95%d7%a4%d7%aa-%d7%92%d7%9e%d7%9c-%d7%9c%d7%97%d7%99%d7%a1%d7%9b%d7%95%d7%9f/%d7%aa%d7%99%d7%a7%d7%95%d7%9f-190/",
-     "year": null,
-     "iframe": false,
-     "doc": false,
-     "internal": true
-    },
-    {
      "text": "קופת גמל לחיסכון",
      "href": "https://www.ami-gml.co.il/%d7%a7%d7%95%d7%a4%d7%aa-%d7%92%d7%9e%d7%9c-%d7%9c%d7%97%d7%99%d7%a1%d7%9b%d7%95%d7%9f/",
      "year": null,
@@ -1736,7 +1728,7 @@
      "internal": true
     },
     {
-     "text": "מדיניות הפרטיות",
+     "text": "מדיניות פרטיות",
      "href": "https://www.ami-gml.co.il/%d7%90%d7%95%d7%93%d7%95%d7%aa%d7%99%d7%a0%d7%95/%d7%9e%d7%93%d7%99%d7%a0%d7%99%d7%95%d7%aa-%d7%a4%d7%a8%d7%98%d7%99%d7%95%d7%aa/",
      "year": null,
      "iframe": false,
@@ -1766,6 +1758,14 @@
      "iframe": false,
      "doc": false,
      "internal": false
+    },
+    {
+     "text": "חיסכון לפי תיקון 190",
+     "href": "https://www.ami-gml.co.il/%d7%a7%d7%95%d7%a4%d7%aa-%d7%92%d7%9e%d7%9c-%d7%9c%d7%97%d7%99%d7%a1%d7%9b%d7%95%d7%9f/%d7%aa%d7%99%d7%a7%d7%95%d7%9f-190/",
+     "year": null,
+     "iframe": false,
+     "doc": false,
+     "internal": true
     },
     {
      "text": "הוצאות ישירות",
@@ -1841,14 +1841,6 @@
      "internal": true
     },
     {
-     "text": "תיקון 190",
-     "href": "https://www.ami-gml.co.il/%d7%a7%d7%95%d7%a4%d7%aa-%d7%92%d7%9e%d7%9c-%d7%9c%d7%97%d7%99%d7%a1%d7%9b%d7%95%d7%9f/%d7%aa%d7%99%d7%a7%d7%95%d7%9f-190/",
-     "year": null,
-     "iframe": false,
-     "doc": false,
-     "internal": true
-    },
-    {
      "text": "קופת גמל לחיסכון",
      "href": "https://www.ami-gml.co.il/%d7%a7%d7%95%d7%a4%d7%aa-%d7%92%d7%9e%d7%9c-%d7%9c%d7%97%d7%99%d7%a1%d7%9b%d7%95%d7%9f/",
      "year": null,
@@ -1985,7 +1977,7 @@
      "internal": true
     },
     {
-     "text": "מדיניות הפרטיות",
+     "text": "מדיניות פרטיות",
      "href": "https://www.ami-gml.co.il/%d7%90%d7%95%d7%93%d7%95%d7%aa%d7%99%d7%a0%d7%95/%d7%9e%d7%93%d7%99%d7%a0%d7%99%d7%95%d7%aa-%d7%a4%d7%a8%d7%98%d7%99%d7%95%d7%aa/",
      "year": null,
      "iframe": false,
@@ -2007,6 +1999,14 @@
      "iframe": false,
      "doc": false,
      "internal": false
+    },
+    {
+     "text": "חיסכון לפי תיקון 190",
+     "href": "https://www.ami-gml.co.il/%d7%a7%d7%95%d7%a4%d7%aa-%d7%92%d7%9e%d7%9c-%d7%9c%d7%97%d7%99%d7%a1%d7%9b%d7%95%d7%9f/%d7%aa%d7%99%d7%a7%d7%95%d7%9f-190/",
+     "year": null,
+     "iframe": false,
+     "doc": false,
+     "internal": true
     },
     {
      "text": "הוצאות ישירות",
@@ -2866,6 +2866,14 @@
      "internal": true
     },
     {
+     "text": "2.26",
+     "href": "https://www.ami-gml.co.il/wp-content/uploads/2026/07/67153ImageFile3.xlsx",
+     "year": "2026",
+     "iframe": false,
+     "doc": true,
+     "internal": true
+    },
+    {
      "text": "2.25",
      "href": "https://www.ami-gml.co.il/wp-content/uploads/2026/07/66872ImageFile3.xlsx",
      "year": "2026",
@@ -3058,14 +3066,6 @@
      "internal": true
     },
     {
-     "text": "1.26",
-     "href": "https://www.ami-gml.co.il/wp-content/uploads/2026/07/67153ImageFile3.xlsx",
-     "year": "2026",
-     "iframe": false,
-     "doc": true,
-     "internal": true
-    },
-    {
      "text": "1.25",
      "href": "https://www.ami-gml.co.il/wp-content/uploads/2026/07/66852ImageFile3.xlsx",
      "year": "2026",
@@ -3202,22 +3202,6 @@
      "internal": true
     },
     {
-     "text": "תיקון 190",
-     "href": "https://www.ami-gml.co.il/%d7%a7%d7%95%d7%a4%d7%aa-%d7%92%d7%9e%d7%9c-%d7%9c%d7%97%d7%99%d7%a1%d7%9b%d7%95%d7%9f/%d7%aa%d7%99%d7%a7%d7%95%d7%9f-190/",
-     "year": null,
-     "iframe": false,
-     "doc": false,
-     "internal": true
-    },
-    {
-     "text": "רבעון שני",
-     "href": "https://www.ami-gml.co.il/%d7%a7%d7%95%d7%a4%d7%aa-%d7%92%d7%9e%d7%9c-%d7%9c%d7%97%d7%99%d7%a1%d7%9b%d7%95%d7%9f/%d7%97%d7%99%d7%a1%d7%9b%d7%95%d7%9f-%d7%9e%d7%a1%d7%9c%d7%95%d7%9c%d7%99-%d7%94%d7%a9%d7%a7%d7%a2%d7%94/%d7%9e%d7%a1%d7%9c%d7%95%d7%9c-%d7%9c%d7%91%d7%a0%d7%99-50-%d7%95%d7%9e%d7%98%d7%94/",
-     "year": null,
-     "iframe": false,
-     "doc": false,
-     "internal": true
-    },
-    {
      "text": "קופת גמל לחיסכון",
      "href": "https://www.ami-gml.co.il/%d7%a7%d7%95%d7%a4%d7%aa-%d7%92%d7%9e%d7%9c-%d7%9c%d7%97%d7%99%d7%a1%d7%9b%d7%95%d7%9f/",
      "year": null,
@@ -3298,6 +3282,14 @@
      "internal": true
     },
     {
+     "text": "מסלול לבני 50 ומטה",
+     "href": "https://www.ami-gml.co.il/%d7%a7%d7%95%d7%a4%d7%aa-%d7%92%d7%9e%d7%9c-%d7%9c%d7%97%d7%99%d7%a1%d7%9b%d7%95%d7%9f/%d7%97%d7%99%d7%a1%d7%9b%d7%95%d7%9f-%d7%9e%d7%a1%d7%9c%d7%95%d7%9c%d7%99-%d7%94%d7%a9%d7%a7%d7%a2%d7%94/%d7%9e%d7%a1%d7%9c%d7%95%d7%9c-%d7%9c%d7%91%d7%a0%d7%99-50-%d7%95%d7%9e%d7%98%d7%94/",
+     "year": null,
+     "iframe": false,
+     "doc": false,
+     "internal": true
+    },
+    {
      "text": "מסלול כללי",
      "href": "https://www.ami-gml.co.il/%d7%a7%d7%95%d7%a4%d7%aa-%d7%92%d7%9e%d7%9c-%d7%9c%d7%94%d7%a9%d7%a7%d7%a2%d7%94/%d7%94%d7%a9%d7%a7%d7%a2%d7%94-%d7%9e%d7%a1%d7%9c%d7%95%d7%9c%d7%99-%d7%94%d7%a9%d7%a7%d7%a2%d7%94/%d7%9e%d7%a1%d7%9c%d7%95%d7%9c-%d7%9b%d7%9c%d7%9c%d7%99/",
      "year": null,
@@ -3346,7 +3338,7 @@
      "internal": true
     },
     {
-     "text": "מדיניות הפרטיות",
+     "text": "מדיניות פרטיות",
      "href": "https://www.ami-gml.co.il/%d7%90%d7%95%d7%93%d7%95%d7%aa%d7%99%d7%a0%d7%95/%d7%9e%d7%93%d7%99%d7%a0%d7%99%d7%95%d7%aa-%d7%a4%d7%a8%d7%98%d7%99%d7%95%d7%aa/",
      "year": null,
      "iframe": false,
@@ -3368,6 +3360,14 @@
      "iframe": false,
      "doc": false,
      "internal": false
+    },
+    {
+     "text": "חיסכון לפי תיקון 190",
+     "href": "https://www.ami-gml.co.il/%d7%a7%d7%95%d7%a4%d7%aa-%d7%92%d7%9e%d7%9c-%d7%9c%d7%97%d7%99%d7%a1%d7%9b%d7%95%d7%9f/%d7%aa%d7%99%d7%a7%d7%95%d7%9f-190/",
+     "year": null,
+     "iframe": false,
+     "doc": false,
+     "internal": true
     },
     {
      "text": "הוצאות ישירות",
@@ -3840,14 +3840,6 @@
      "year": "2026",
      "iframe": false,
      "doc": true,
-     "internal": true
-    },
-    {
-     "text": "מדיניות צפויה לשנת 2026",
-     "href": "https://www.ami-gml.co.il/%d7%a7%d7%95%d7%a4%d7%aa-%d7%92%d7%9e%d7%9c-%d7%9c%d7%97%d7%99%d7%a1%d7%9b%d7%95%d7%9f/%d7%97%d7%99%d7%a1%d7%9b%d7%95%d7%9f-%d7%9e%d7%a1%d7%9c%d7%95%d7%9c%d7%99-%d7%94%d7%a9%d7%a7%d7%a2%d7%94/%d7%9e%d7%a1%d7%9c%d7%95%d7%9c-%d7%9c%d7%91%d7%a0%d7%99-50-60/",
-     "year": "2026",
-     "iframe": false,
-     "doc": false,
      "internal": true
     },
     {
@@ -4587,14 +4579,6 @@
      "internal": true
     },
     {
-     "text": "תיקון 190",
-     "href": "https://www.ami-gml.co.il/%d7%a7%d7%95%d7%a4%d7%aa-%d7%92%d7%9e%d7%9c-%d7%9c%d7%97%d7%99%d7%a1%d7%9b%d7%95%d7%9f/%d7%aa%d7%99%d7%a7%d7%95%d7%9f-190/",
-     "year": null,
-     "iframe": false,
-     "doc": false,
-     "internal": true
-    },
-    {
      "text": "קופת גמל לחיסכון",
      "href": "https://www.ami-gml.co.il/%d7%a7%d7%95%d7%a4%d7%aa-%d7%92%d7%9e%d7%9c-%d7%9c%d7%97%d7%99%d7%a1%d7%9b%d7%95%d7%9f/",
      "year": null,
@@ -4667,6 +4651,14 @@
      "internal": true
     },
     {
+     "text": "מסלול לבני 50-60",
+     "href": "https://www.ami-gml.co.il/%d7%a7%d7%95%d7%a4%d7%aa-%d7%92%d7%9e%d7%9c-%d7%9c%d7%97%d7%99%d7%a1%d7%9b%d7%95%d7%9f/%d7%97%d7%99%d7%a1%d7%9b%d7%95%d7%9f-%d7%9e%d7%a1%d7%9c%d7%95%d7%9c%d7%99-%d7%94%d7%a9%d7%a7%d7%a2%d7%94/%d7%9e%d7%a1%d7%9c%d7%95%d7%9c-%d7%9c%d7%91%d7%a0%d7%99-50-60/",
+     "year": null,
+     "iframe": false,
+     "doc": false,
+     "internal": true
+    },
+    {
      "text": "מסלול לבני 50 ומטה",
      "href": "https://www.ami-gml.co.il/%d7%a7%d7%95%d7%a4%d7%aa-%d7%92%d7%9e%d7%9c-%d7%9c%d7%97%d7%99%d7%a1%d7%9b%d7%95%d7%9f/%d7%97%d7%99%d7%a1%d7%9b%d7%95%d7%9f-%d7%9e%d7%a1%d7%9c%d7%95%d7%9c%d7%99-%d7%94%d7%a9%d7%a7%d7%a2%d7%94/%d7%9e%d7%a1%d7%9c%d7%95%d7%9c-%d7%9c%d7%91%d7%a0%d7%99-50-%d7%95%d7%9e%d7%98%d7%94/",
      "year": null,
@@ -4723,7 +4715,7 @@
      "internal": true
     },
     {
-     "text": "מדיניות הפרטיות",
+     "text": "מדיניות פרטיות",
      "href": "https://www.ami-gml.co.il/%d7%90%d7%95%d7%93%d7%95%d7%aa%d7%99%d7%a0%d7%95/%d7%9e%d7%93%d7%99%d7%a0%d7%99%d7%95%d7%aa-%d7%a4%d7%a8%d7%98%d7%99%d7%95%d7%aa/",
      "year": null,
      "iframe": false,
@@ -4745,6 +4737,14 @@
      "iframe": false,
      "doc": false,
      "internal": false
+    },
+    {
+     "text": "חיסכון לפי תיקון 190",
+     "href": "https://www.ami-gml.co.il/%d7%a7%d7%95%d7%a4%d7%aa-%d7%92%d7%9e%d7%9c-%d7%9c%d7%97%d7%99%d7%a1%d7%9b%d7%95%d7%9f/%d7%aa%d7%99%d7%a7%d7%95%d7%9f-190/",
+     "year": null,
+     "iframe": false,
+     "doc": false,
+     "internal": true
     },
     {
      "text": "הוצאות ישירות",
@@ -5908,14 +5908,6 @@
      "internal": true
     },
     {
-     "text": "תיקון 190",
-     "href": "https://www.ami-gml.co.il/%d7%a7%d7%95%d7%a4%d7%aa-%d7%92%d7%9e%d7%9c-%d7%9c%d7%97%d7%99%d7%a1%d7%9b%d7%95%d7%9f/%d7%aa%d7%99%d7%a7%d7%95%d7%9f-190/",
-     "year": null,
-     "iframe": false,
-     "doc": false,
-     "internal": true
-    },
-    {
      "text": "קופת גמל לחיסכון",
      "href": "https://www.ami-gml.co.il/%d7%a7%d7%95%d7%a4%d7%aa-%d7%92%d7%9e%d7%9c-%d7%9c%d7%97%d7%99%d7%a1%d7%9b%d7%95%d7%9f/",
      "year": null,
@@ -5974,6 +5966,14 @@
     {
      "text": "מסלול מניות",
      "href": "https://www.ami-gml.co.il/%d7%a7%d7%95%d7%a4%d7%aa-%d7%92%d7%9e%d7%9c-%d7%9c%d7%94%d7%a9%d7%a7%d7%a2%d7%94/%d7%94%d7%a9%d7%a7%d7%a2%d7%94-%d7%9e%d7%a1%d7%9c%d7%95%d7%9c%d7%99-%d7%94%d7%a9%d7%a7%d7%a2%d7%94/%d7%9e%d7%a1%d7%9c%d7%95%d7%9c-%d7%9e%d7%a0%d7%99%d7%95%d7%aa-%d7%94%d7%a9%d7%a7%d7%a2%d7%94/",
+     "year": null,
+     "iframe": false,
+     "doc": false,
+     "internal": true
+    },
+    {
+     "text": "מסלול לבני 60 ומעלה",
+     "href": "https://www.ami-gml.co.il/%d7%a7%d7%95%d7%a4%d7%aa-%d7%92%d7%9e%d7%9c-%d7%9c%d7%97%d7%99%d7%a1%d7%9b%d7%95%d7%9f/%d7%97%d7%99%d7%a1%d7%9b%d7%95%d7%9f-%d7%9e%d7%a1%d7%9c%d7%95%d7%9c%d7%99-%d7%94%d7%a9%d7%a7%d7%a2%d7%94/%d7%9e%d7%a1%d7%9c%d7%95%d7%9c-%d7%9c%d7%91%d7%a0%d7%99-60-%d7%95%d7%9e%d7%a2%d7%9c%d7%94/",
      "year": null,
      "iframe": false,
      "doc": false,
@@ -6044,7 +6044,7 @@
      "internal": true
     },
     {
-     "text": "מדיניות הפרטיות",
+     "text": "מדיניות פרטיות",
      "href": "https://www.ami-gml.co.il/%d7%90%d7%95%d7%93%d7%95%d7%aa%d7%99%d7%a0%d7%95/%d7%9e%d7%93%d7%99%d7%a0%d7%99%d7%95%d7%aa-%d7%a4%d7%a8%d7%98%d7%99%d7%95%d7%aa/",
      "year": null,
      "iframe": false,
@@ -6066,6 +6066,14 @@
      "iframe": false,
      "doc": false,
      "internal": false
+    },
+    {
+     "text": "חיסכון לפי תיקון 190",
+     "href": "https://www.ami-gml.co.il/%d7%a7%d7%95%d7%a4%d7%aa-%d7%92%d7%9e%d7%9c-%d7%9c%d7%97%d7%99%d7%a1%d7%9b%d7%95%d7%9f/%d7%aa%d7%99%d7%a7%d7%95%d7%9f-190/",
+     "year": null,
+     "iframe": false,
+     "doc": false,
+     "internal": true
     },
     {
      "text": "הוצאות ישירות",
@@ -6110,14 +6118,6 @@
     {
      "text": "אמות מידה לבחינת איכות הממשל התאגידי ESG בהשקעות",
      "href": "https://www.ami-gml.co.il/%d7%90%d7%95%d7%93%d7%95%d7%aa%d7%99%d7%a0%d7%95/%d7%a0%d7%94%d7%9c%d7%99%d7%9d-%d7%95%d7%a4%d7%a8%d7%a1%d7%95%d7%9e%d7%99%d7%9d/%d7%90%d7%9e%d7%95%d7%aa-%d7%9e%d7%99%d7%93%d7%94-%d7%9c%d7%91%d7%97%d7%99%d7%a0%d7%aa-%d7%90%d7%99%d7%9b%d7%95%d7%aa-%d7%94%d7%9e%d7%9e%d7%a9%d7%9c-%d7%94%d7%aa%d7%90%d7%92%d7%99%d7%93%d7%99-esg/",
-     "year": null,
-     "iframe": false,
-     "doc": false,
-     "internal": true
-    },
-    {
-     "text": "12.21",
-     "href": "https://www.ami-gml.co.il/%d7%a7%d7%95%d7%a4%d7%aa-%d7%92%d7%9e%d7%9c-%d7%9c%d7%97%d7%99%d7%a1%d7%9b%d7%95%d7%9f/%d7%97%d7%99%d7%a1%d7%9b%d7%95%d7%9f-%d7%9e%d7%a1%d7%9c%d7%95%d7%9c%d7%99-%d7%94%d7%a9%d7%a7%d7%a2%d7%94/%d7%9e%d7%a1%d7%9c%d7%95%d7%9c-%d7%9c%d7%91%d7%a0%d7%99-60-%d7%95%d7%9e%d7%a2%d7%9c%d7%94/",
      "year": null,
      "iframe": false,
      "doc": false,
@@ -7253,8 +7253,8 @@
      "internal": true
     },
     {
-     "text": "תיקון 190",
-     "href": "https://www.ami-gml.co.il/%d7%a7%d7%95%d7%a4%d7%aa-%d7%92%d7%9e%d7%9c-%d7%9c%d7%97%d7%99%d7%a1%d7%9b%d7%95%d7%9f/%d7%aa%d7%99%d7%a7%d7%95%d7%9f-190/",
+     "text": "תקנון הקופה",
+     "href": "https://www.ami-gml.co.il/%d7%90%d7%95%d7%93%d7%95%d7%aa%d7%99%d7%a0%d7%95/%d7%aa%d7%a7%d7%a0%d7%95%d7%9f-%d7%94%d7%a7%d7%95%d7%a4%d7%94/",
      "year": null,
      "iframe": false,
      "doc": false,
@@ -7365,6 +7365,14 @@
      "internal": true
     },
     {
+     "text": "מסלול אשראי ואג\"ח",
+     "href": "https://www.ami-gml.co.il/%d7%a7%d7%95%d7%a4%d7%aa-%d7%92%d7%9e%d7%9c-%d7%9c%d7%97%d7%99%d7%a1%d7%9b%d7%95%d7%9f/%d7%97%d7%99%d7%a1%d7%9b%d7%95%d7%9f-%d7%9e%d7%a1%d7%9c%d7%95%d7%9c%d7%99-%d7%94%d7%a9%d7%a7%d7%a2%d7%94/%d7%9e%d7%a1%d7%9c%d7%95%d7%9c-%d7%90%d7%a9%d7%a8%d7%90%d7%99-%d7%95%d7%90%d7%92%d7%97/",
+     "year": null,
+     "iframe": false,
+     "doc": false,
+     "internal": true
+    },
+    {
      "text": "מידע כללי והצטרפות",
      "href": "https://www.ami-gml.co.il/%d7%a7%d7%95%d7%a4%d7%aa-%d7%92%d7%9e%d7%9c-%d7%9c%d7%97%d7%99%d7%a1%d7%9b%d7%95%d7%9f/%d7%97%d7%99%d7%a1%d7%9b%d7%95%d7%9f-%d7%9e%d7%99%d7%93%d7%a2-%d7%95%d7%94%d7%a6%d7%98%d7%a8%d7%a4%d7%95%d7%aa/",
      "year": null,
@@ -7389,7 +7397,7 @@
      "internal": true
     },
     {
-     "text": "מדיניות הפרטיות",
+     "text": "מדיניות פרטיות",
      "href": "https://www.ami-gml.co.il/%d7%90%d7%95%d7%93%d7%95%d7%aa%d7%99%d7%a0%d7%95/%d7%9e%d7%93%d7%99%d7%a0%d7%99%d7%95%d7%aa-%d7%a4%d7%a8%d7%98%d7%99%d7%95%d7%aa/",
      "year": null,
      "iframe": false,
@@ -7411,6 +7419,14 @@
      "iframe": false,
      "doc": false,
      "internal": false
+    },
+    {
+     "text": "חיסכון לפי תיקון 190",
+     "href": "https://www.ami-gml.co.il/%d7%a7%d7%95%d7%a4%d7%aa-%d7%92%d7%9e%d7%9c-%d7%9c%d7%97%d7%99%d7%a1%d7%9b%d7%95%d7%9f/%d7%aa%d7%99%d7%a7%d7%95%d7%9f-190/",
+     "year": null,
+     "iframe": false,
+     "doc": false,
+     "internal": true
     },
     {
      "text": "הוצאות ישירות",
@@ -7437,14 +7453,6 @@
      "internal": true
     },
     {
-     "text": "בתקנון הקופה",
-     "href": "https://www.ami-gml.co.il/%d7%90%d7%95%d7%93%d7%95%d7%aa%d7%99%d7%a0%d7%95/%d7%aa%d7%a7%d7%a0%d7%95%d7%9f-%d7%94%d7%a7%d7%95%d7%a4%d7%94/",
-     "year": null,
-     "iframe": false,
-     "doc": false,
-     "internal": true
-    },
-    {
      "text": "בעלי רישיון פנסיוני",
      "href": "https://www.ami-gml.co.il/%d7%90%d7%95%d7%93%d7%95%d7%aa%d7%99%d7%a0%d7%95/%d7%91%d7%a2%d7%9c%d7%99-%d7%a8%d7%99%d7%a9%d7%99%d7%95%d7%9f-%d7%a4%d7%a0%d7%a1%d7%99%d7%95%d7%a0%d7%99/",
      "year": null,
@@ -7463,14 +7471,6 @@
     {
      "text": "אמות מידה לבחינת איכות הממשל התאגידי ESG בהשקעות",
      "href": "https://www.ami-gml.co.il/%d7%90%d7%95%d7%93%d7%95%d7%aa%d7%99%d7%a0%d7%95/%d7%a0%d7%94%d7%9c%d7%99%d7%9d-%d7%95%d7%a4%d7%a8%d7%a1%d7%95%d7%9e%d7%99%d7%9d/%d7%90%d7%9e%d7%95%d7%aa-%d7%9e%d7%99%d7%93%d7%94-%d7%9c%d7%91%d7%97%d7%99%d7%a0%d7%aa-%d7%90%d7%99%d7%9b%d7%95%d7%aa-%d7%94%d7%9e%d7%9e%d7%a9%d7%9c-%d7%94%d7%aa%d7%90%d7%92%d7%99%d7%93%d7%99-esg/",
-     "year": null,
-     "iframe": false,
-     "doc": false,
-     "internal": true
-    },
-    {
-     "text": "1.20",
-     "href": "https://www.ami-gml.co.il/%d7%a7%d7%95%d7%a4%d7%aa-%d7%92%d7%9e%d7%9c-%d7%9c%d7%97%d7%99%d7%a1%d7%9b%d7%95%d7%9f/%d7%97%d7%99%d7%a1%d7%9b%d7%95%d7%9f-%d7%9e%d7%a1%d7%9c%d7%95%d7%9c%d7%99-%d7%94%d7%a9%d7%a7%d7%a2%d7%94/%d7%9e%d7%a1%d7%9c%d7%95%d7%9c-%d7%90%d7%a9%d7%a8%d7%90%d7%99-%d7%95%d7%90%d7%92%d7%97/",
      "year": null,
      "iframe": false,
      "doc": false,
@@ -8606,14 +8606,6 @@
      "internal": true
     },
     {
-     "text": "תיקון 190",
-     "href": "https://www.ami-gml.co.il/%d7%a7%d7%95%d7%a4%d7%aa-%d7%92%d7%9e%d7%9c-%d7%9c%d7%97%d7%99%d7%a1%d7%9b%d7%95%d7%9f/%d7%aa%d7%99%d7%a7%d7%95%d7%9f-190/",
-     "year": null,
-     "iframe": false,
-     "doc": false,
-     "internal": true
-    },
-    {
      "text": "קופת גמל לחיסכון",
      "href": "https://www.ami-gml.co.il/%d7%a7%d7%95%d7%a4%d7%aa-%d7%92%d7%9e%d7%9c-%d7%9c%d7%97%d7%99%d7%a1%d7%9b%d7%95%d7%9f/",
      "year": null,
@@ -8750,7 +8742,7 @@
      "internal": true
     },
     {
-     "text": "מדיניות הפרטיות",
+     "text": "מדיניות פרטיות",
      "href": "https://www.ami-gml.co.il/%d7%90%d7%95%d7%93%d7%95%d7%aa%d7%99%d7%a0%d7%95/%d7%9e%d7%93%d7%99%d7%a0%d7%99%d7%95%d7%aa-%d7%a4%d7%a8%d7%98%d7%99%d7%95%d7%aa/",
      "year": null,
      "iframe": false,
@@ -8772,6 +8764,14 @@
      "iframe": false,
      "doc": false,
      "internal": false
+    },
+    {
+     "text": "חיסכון לפי תיקון 190",
+     "href": "https://www.ami-gml.co.il/%d7%a7%d7%95%d7%a4%d7%aa-%d7%92%d7%9e%d7%9c-%d7%9c%d7%97%d7%99%d7%a1%d7%9b%d7%95%d7%9f/%d7%aa%d7%99%d7%a7%d7%95%d7%9f-190/",
+     "year": null,
+     "iframe": false,
+     "doc": false,
+     "internal": true
     },
     {
      "text": "הוצאות ישירות",
@@ -9151,14 +9151,6 @@
      "internal": true
     },
     {
-     "text": "תיקון 190",
-     "href": "https://www.ami-gml.co.il/%d7%a7%d7%95%d7%a4%d7%aa-%d7%92%d7%9e%d7%9c-%d7%9c%d7%97%d7%99%d7%a1%d7%9b%d7%95%d7%9f/%d7%aa%d7%99%d7%a7%d7%95%d7%9f-190/",
-     "year": null,
-     "iframe": false,
-     "doc": false,
-     "internal": true
-    },
-    {
      "text": "קופת גמל לחיסכון",
      "href": "https://www.ami-gml.co.il/%d7%a7%d7%95%d7%a4%d7%aa-%d7%92%d7%9e%d7%9c-%d7%9c%d7%97%d7%99%d7%a1%d7%9b%d7%95%d7%9f/",
      "year": null,
@@ -9295,7 +9287,7 @@
      "internal": true
     },
     {
-     "text": "מדיניות הפרטיות",
+     "text": "מדיניות פרטיות",
      "href": "https://www.ami-gml.co.il/%d7%90%d7%95%d7%93%d7%95%d7%aa%d7%99%d7%a0%d7%95/%d7%9e%d7%93%d7%99%d7%a0%d7%99%d7%95%d7%aa-%d7%a4%d7%a8%d7%98%d7%99%d7%95%d7%aa/",
      "year": null,
      "iframe": false,
@@ -9317,6 +9309,14 @@
      "iframe": false,
      "doc": false,
      "internal": false
+    },
+    {
+     "text": "חיסכון לפי תיקון 190",
+     "href": "https://www.ami-gml.co.il/%d7%a7%d7%95%d7%a4%d7%aa-%d7%92%d7%9e%d7%9c-%d7%9c%d7%97%d7%99%d7%a1%d7%9b%d7%95%d7%9f/%d7%aa%d7%99%d7%a7%d7%95%d7%9f-190/",
+     "year": null,
+     "iframe": false,
+     "doc": false,
+     "internal": true
     },
     {
      "text": "הוצאות ישירות",
@@ -9392,14 +9392,6 @@
      "internal": true
     },
     {
-     "text": "תיקון 190",
-     "href": "https://www.ami-gml.co.il/%d7%a7%d7%95%d7%a4%d7%aa-%d7%92%d7%9e%d7%9c-%d7%9c%d7%97%d7%99%d7%a1%d7%9b%d7%95%d7%9f/%d7%aa%d7%99%d7%a7%d7%95%d7%9f-190/",
-     "year": null,
-     "iframe": false,
-     "doc": false,
-     "internal": true
-    },
-    {
      "text": "קופת גמל לחיסכון",
      "href": "https://www.ami-gml.co.il/%d7%a7%d7%95%d7%a4%d7%aa-%d7%92%d7%9e%d7%9c-%d7%9c%d7%97%d7%99%d7%a1%d7%9b%d7%95%d7%9f/",
      "year": null,
@@ -9536,7 +9528,7 @@
      "internal": true
     },
     {
-     "text": "מדיניות הפרטיות",
+     "text": "מדיניות פרטיות",
      "href": "https://www.ami-gml.co.il/%d7%90%d7%95%d7%93%d7%95%d7%aa%d7%99%d7%a0%d7%95/%d7%9e%d7%93%d7%99%d7%a0%d7%99%d7%95%d7%aa-%d7%a4%d7%a8%d7%98%d7%99%d7%95%d7%aa/",
      "year": null,
      "iframe": false,
@@ -9558,6 +9550,14 @@
      "iframe": false,
      "doc": false,
      "internal": false
+    },
+    {
+     "text": "חיסכון לפי תיקון 190",
+     "href": "https://www.ami-gml.co.il/%d7%a7%d7%95%d7%a4%d7%aa-%d7%92%d7%9e%d7%9c-%d7%9c%d7%97%d7%99%d7%a1%d7%9b%d7%95%d7%9f/%d7%aa%d7%99%d7%a7%d7%95%d7%9f-190/",
+     "year": null,
+     "iframe": false,
+     "doc": false,
+     "internal": true
     },
     {
      "text": "הוצאות ישירות",
@@ -9681,14 +9681,6 @@
      "internal": true
     },
     {
-     "text": "תיקון 190",
-     "href": "https://www.ami-gml.co.il/%d7%a7%d7%95%d7%a4%d7%aa-%d7%92%d7%9e%d7%9c-%d7%9c%d7%97%d7%99%d7%a1%d7%9b%d7%95%d7%9f/%d7%aa%d7%99%d7%a7%d7%95%d7%9f-190/",
-     "year": null,
-     "iframe": false,
-     "doc": false,
-     "internal": true
-    },
-    {
      "text": "קופת גמל לחיסכון",
      "href": "https://www.ami-gml.co.il/%d7%a7%d7%95%d7%a4%d7%aa-%d7%92%d7%9e%d7%9c-%d7%9c%d7%97%d7%99%d7%a1%d7%9b%d7%95%d7%9f/",
      "year": null,
@@ -9825,7 +9817,7 @@
      "internal": true
     },
     {
-     "text": "מדיניות הפרטיות",
+     "text": "מדיניות פרטיות",
      "href": "https://www.ami-gml.co.il/%d7%90%d7%95%d7%93%d7%95%d7%aa%d7%99%d7%a0%d7%95/%d7%9e%d7%93%d7%99%d7%a0%d7%99%d7%95%d7%aa-%d7%a4%d7%a8%d7%98%d7%99%d7%95%d7%aa/",
      "year": null,
      "iframe": false,
@@ -9847,6 +9839,14 @@
      "iframe": false,
      "doc": false,
      "internal": false
+    },
+    {
+     "text": "חיסכון לפי תיקון 190",
+     "href": "https://www.ami-gml.co.il/%d7%a7%d7%95%d7%a4%d7%aa-%d7%92%d7%9e%d7%9c-%d7%9c%d7%97%d7%99%d7%a1%d7%9b%d7%95%d7%9f/%d7%aa%d7%99%d7%a7%d7%95%d7%9f-190/",
+     "year": null,
+     "iframe": false,
+     "doc": false,
+     "internal": true
     },
     {
      "text": "הוצאות ישירות",
@@ -9922,14 +9922,6 @@
      "internal": true
     },
     {
-     "text": "תיקון 190",
-     "href": "https://www.ami-gml.co.il/%d7%a7%d7%95%d7%a4%d7%aa-%d7%92%d7%9e%d7%9c-%d7%9c%d7%97%d7%99%d7%a1%d7%9b%d7%95%d7%9f/%d7%aa%d7%99%d7%a7%d7%95%d7%9f-190/",
-     "year": null,
-     "iframe": false,
-     "doc": false,
-     "internal": true
-    },
-    {
      "text": "קופת גמל לחיסכון",
      "href": "https://www.ami-gml.co.il/%d7%a7%d7%95%d7%a4%d7%aa-%d7%92%d7%9e%d7%9c-%d7%9c%d7%97%d7%99%d7%a1%d7%9b%d7%95%d7%9f/",
      "year": null,
@@ -10066,7 +10058,7 @@
      "internal": true
     },
     {
-     "text": "מדיניות הפרטיות",
+     "text": "מדיניות פרטיות",
      "href": "https://www.ami-gml.co.il/%d7%90%d7%95%d7%93%d7%95%d7%aa%d7%99%d7%a0%d7%95/%d7%9e%d7%93%d7%99%d7%a0%d7%99%d7%95%d7%aa-%d7%a4%d7%a8%d7%98%d7%99%d7%95%d7%aa/",
      "year": null,
      "iframe": false,
@@ -10088,6 +10080,14 @@
      "iframe": false,
      "doc": false,
      "internal": false
+    },
+    {
+     "text": "חיסכון לפי תיקון 190",
+     "href": "https://www.ami-gml.co.il/%d7%a7%d7%95%d7%a4%d7%aa-%d7%92%d7%9e%d7%9c-%d7%9c%d7%97%d7%99%d7%a1%d7%9b%d7%95%d7%9f/%d7%aa%d7%99%d7%a7%d7%95%d7%9f-190/",
+     "year": null,
+     "iframe": false,
+     "doc": false,
+     "internal": true
     },
     {
      "text": "הוצאות ישירות",
@@ -10171,14 +10171,6 @@
      "internal": true
     },
     {
-     "text": "תיקון 190",
-     "href": "https://www.ami-gml.co.il/%d7%a7%d7%95%d7%a4%d7%aa-%d7%92%d7%9e%d7%9c-%d7%9c%d7%97%d7%99%d7%a1%d7%9b%d7%95%d7%9f/%d7%aa%d7%99%d7%a7%d7%95%d7%9f-190/",
-     "year": null,
-     "iframe": false,
-     "doc": false,
-     "internal": true
-    },
-    {
      "text": "קופת גמל לחיסכון",
      "href": "https://www.ami-gml.co.il/%d7%a7%d7%95%d7%a4%d7%aa-%d7%92%d7%9e%d7%9c-%d7%9c%d7%97%d7%99%d7%a1%d7%9b%d7%95%d7%9f/",
      "year": null,
@@ -10315,7 +10307,7 @@
      "internal": true
     },
     {
-     "text": "מדיניות הפרטיות",
+     "text": "מדיניות פרטיות",
      "href": "https://www.ami-gml.co.il/%d7%90%d7%95%d7%93%d7%95%d7%aa%d7%99%d7%a0%d7%95/%d7%9e%d7%93%d7%99%d7%a0%d7%99%d7%95%d7%aa-%d7%a4%d7%a8%d7%98%d7%99%d7%95%d7%aa/",
      "year": null,
      "iframe": false,
@@ -10337,6 +10329,14 @@
      "iframe": false,
      "doc": false,
      "internal": false
+    },
+    {
+     "text": "חיסכון לפי תיקון 190",
+     "href": "https://www.ami-gml.co.il/%d7%a7%d7%95%d7%a4%d7%aa-%d7%92%d7%9e%d7%9c-%d7%9c%d7%97%d7%99%d7%a1%d7%9b%d7%95%d7%9f/%d7%aa%d7%99%d7%a7%d7%95%d7%9f-190/",
+     "year": null,
+     "iframe": false,
+     "doc": false,
+     "internal": true
     },
     {
      "text": "הוצאות ישירות",
@@ -10412,14 +10412,6 @@
      "internal": true
     },
     {
-     "text": "תיקון 190",
-     "href": "https://www.ami-gml.co.il/%d7%a7%d7%95%d7%a4%d7%aa-%d7%92%d7%9e%d7%9c-%d7%9c%d7%97%d7%99%d7%a1%d7%9b%d7%95%d7%9f/%d7%aa%d7%99%d7%a7%d7%95%d7%9f-190/",
-     "year": null,
-     "iframe": false,
-     "doc": false,
-     "internal": true
-    },
-    {
      "text": "קופת גמל לחיסכון",
      "href": "https://www.ami-gml.co.il/%d7%a7%d7%95%d7%a4%d7%aa-%d7%92%d7%9e%d7%9c-%d7%9c%d7%97%d7%99%d7%a1%d7%9b%d7%95%d7%9f/",
      "year": null,
@@ -10556,7 +10548,7 @@
      "internal": true
     },
     {
-     "text": "מדיניות הפרטיות",
+     "text": "מדיניות פרטיות",
      "href": "https://www.ami-gml.co.il/%d7%90%d7%95%d7%93%d7%95%d7%aa%d7%99%d7%a0%d7%95/%d7%9e%d7%93%d7%99%d7%a0%d7%99%d7%95%d7%aa-%d7%a4%d7%a8%d7%98%d7%99%d7%95%d7%aa/",
      "year": null,
      "iframe": false,
@@ -10578,6 +10570,14 @@
      "iframe": false,
      "doc": false,
      "internal": false
+    },
+    {
+     "text": "חיסכון לפי תיקון 190",
+     "href": "https://www.ami-gml.co.il/%d7%a7%d7%95%d7%a4%d7%aa-%d7%92%d7%9e%d7%9c-%d7%9c%d7%97%d7%99%d7%a1%d7%9b%d7%95%d7%9f/%d7%aa%d7%99%d7%a7%d7%95%d7%9f-190/",
+     "year": null,
+     "iframe": false,
+     "doc": false,
+     "internal": true
     },
     {
      "text": "הוצאות ישירות",
@@ -11253,14 +11253,6 @@
      "internal": true
     },
     {
-     "text": "תיקון 190",
-     "href": "https://www.ami-gml.co.il/%d7%a7%d7%95%d7%a4%d7%aa-%d7%92%d7%9e%d7%9c-%d7%9c%d7%97%d7%99%d7%a1%d7%9b%d7%95%d7%9f/%d7%aa%d7%99%d7%a7%d7%95%d7%9f-190/",
-     "year": null,
-     "iframe": false,
-     "doc": false,
-     "internal": true
-    },
-    {
      "text": "קופת גמל לחיסכון",
      "href": "https://www.ami-gml.co.il/%d7%a7%d7%95%d7%a4%d7%aa-%d7%92%d7%9e%d7%9c-%d7%9c%d7%97%d7%99%d7%a1%d7%9b%d7%95%d7%9f/",
      "year": null,
@@ -11397,7 +11389,7 @@
      "internal": true
     },
     {
-     "text": "מדיניות הפרטיות",
+     "text": "מדיניות פרטיות",
      "href": "https://www.ami-gml.co.il/%d7%90%d7%95%d7%93%d7%95%d7%aa%d7%99%d7%a0%d7%95/%d7%9e%d7%93%d7%99%d7%a0%d7%99%d7%95%d7%aa-%d7%a4%d7%a8%d7%98%d7%99%d7%95%d7%aa/",
      "year": null,
      "iframe": false,
@@ -11419,6 +11411,14 @@
      "iframe": false,
      "doc": false,
      "internal": false
+    },
+    {
+     "text": "חיסכון לפי תיקון 190",
+     "href": "https://www.ami-gml.co.il/%d7%a7%d7%95%d7%a4%d7%aa-%d7%92%d7%9e%d7%9c-%d7%9c%d7%97%d7%99%d7%a1%d7%9b%d7%95%d7%9f/%d7%aa%d7%99%d7%a7%d7%95%d7%9f-190/",
+     "year": null,
+     "iframe": false,
+     "doc": false,
+     "internal": true
     },
     {
      "text": "הוצאות ישירות",
@@ -12086,14 +12086,6 @@
      "internal": true
     },
     {
-     "text": "תיקון 190",
-     "href": "https://www.ami-gml.co.il/%d7%a7%d7%95%d7%a4%d7%aa-%d7%92%d7%9e%d7%9c-%d7%9c%d7%97%d7%99%d7%a1%d7%9b%d7%95%d7%9f/%d7%aa%d7%99%d7%a7%d7%95%d7%9f-190/",
-     "year": null,
-     "iframe": false,
-     "doc": false,
-     "internal": true
-    },
-    {
      "text": "קופת גמל לחיסכון",
      "href": "https://www.ami-gml.co.il/%d7%a7%d7%95%d7%a4%d7%aa-%d7%92%d7%9e%d7%9c-%d7%9c%d7%97%d7%99%d7%a1%d7%9b%d7%95%d7%9f/",
      "year": null,
@@ -12230,7 +12222,7 @@
      "internal": true
     },
     {
-     "text": "מדיניות הפרטיות",
+     "text": "מדיניות פרטיות",
      "href": "https://www.ami-gml.co.il/%d7%90%d7%95%d7%93%d7%95%d7%aa%d7%99%d7%a0%d7%95/%d7%9e%d7%93%d7%99%d7%a0%d7%99%d7%95%d7%aa-%d7%a4%d7%a8%d7%98%d7%99%d7%95%d7%aa/",
      "year": null,
      "iframe": false,
@@ -12252,6 +12244,14 @@
      "iframe": false,
      "doc": false,
      "internal": false
+    },
+    {
+     "text": "חיסכון לפי תיקון 190",
+     "href": "https://www.ami-gml.co.il/%d7%a7%d7%95%d7%a4%d7%aa-%d7%92%d7%9e%d7%9c-%d7%9c%d7%97%d7%99%d7%a1%d7%9b%d7%95%d7%9f/%d7%aa%d7%99%d7%a7%d7%95%d7%9f-190/",
+     "year": null,
+     "iframe": false,
+     "doc": false,
+     "internal": true
     },
     {
      "text": "הוצאות ישירות",
