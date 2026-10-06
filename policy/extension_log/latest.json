@@ -1,7 +1,7 @@
 {
  "extension_version": "2.52.0",
  "started": "2026-10-06T03:35:19.903Z",
- "updated": "2026-10-06T03:36:23.132Z",
+ "updated": "2026-10-06T03:36:45.827Z",
  "final": false,
  "stopped": false,
  "rules_from_github": true,
@@ -40,9 +40,9 @@
  "active": [
   {
    "name": "מנורה מבטחים פנסיה וגמל בע\"מ",
-   "page": "https://www.menoramivt.co.il/funds/pension-and-gemel/mashlima/mashlima-retire-track-2035",
-   "page_no": 69,
-   "pages": 119,
+   "page": "https://www.menoramivt.co.il/funds/pension-and-gemel/gemel-hishtalmut-list/savings-for-children/medium-risk",
+   "page_no": 96,
+   "pages": 120,
    "step": "[3 במקביל] בודק אם העמוד השתנה"
   },
   {
@@ -50,14 +50,21 @@
    "page": "https://www.555.co.il/about/financial_reports/votes.html",
    "page_no": 2,
    "pages": 2,
-   "step": "מוריד קובץ 13/43"
+   "step": "מוריד קובץ 26/43"
   },
   {
    "name": "החברה לניהול קופת התגמולים והפנסיה של עובדי הסוכנות היהודית לארץ ישראל בע\"מ",
-   "page": "https://www.jewishagency-kupa.org.il/sitemap/",
-   "page_no": 1,
+   "page": "https://www.jewishagency-kupa.org.il/",
+   "page_no": 2,
    "pages": 10,
    "step": "ממתין 4s (חסימת קצב) - קובץ 1/2"
+  },
+  {
+   "name": "עגור חברה לניהול קופות גמל וקרנות השתלמות בע\"מ",
+   "page": "https://kereni.co.il/%D7%9E%D7%93%D7%99%D7%A0%D7%99%D7%95%D7%AA-%D7%94%D7%A9%D7%A7%D7%A2%D7%94-%D7%95%D7%A0%D7%94%D7%9C%D7%99%D7%9D/",
+   "page_no": 1,
+   "pages": 1,
+   "step": "ממתין 15s (חסימת קצב) - קובץ 1/84"
   }
  ],
  "sites": [
