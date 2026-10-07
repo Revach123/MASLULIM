@@ -1,11 +1,11 @@
 {
  "totals": {
   "companies": 76,
-  "with_data": 32,
-  "tracks": 660,
+  "with_data": 33,
+  "tracks": 698,
   "registry_tracks": 1289,
-  "registry_found": 316,
-  "docs": 4002
+  "registry_found": 346,
+  "docs": 4052
  },
  "companies": [
   {
@@ -423,6 +423,19 @@
    "last_month": "2026-06",
    "docs_returns": 15,
    "nostro": false
+  },
+  {
+   "legal_id": "520042177",
+   "company": "הכשרה חברה לביטוח בע\"מ",
+   "tracks": 38,
+   "tracks_numbered": 37,
+   "registry_tracks": 30,
+   "registry_found": 30,
+   "registry_coverage": 100.0,
+   "first_month": "2018-01",
+   "last_month": "2026-06",
+   "docs_returns": 50,
+   "nostro": true
   }
  ]
 }
