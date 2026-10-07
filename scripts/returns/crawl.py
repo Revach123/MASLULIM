@@ -29,9 +29,10 @@ SITES = ROOT / "scripts" / "policy" / "sites"
 RET_ROOT = ROOT / "returns"
 
 # דוח מרכיבי תשואה: בטקסט הקישור, בשם הקובץ או בכתובת העמוד
-RETURNS_RX = re.compile(r"מרכיבי[-_ ]*(ה)?תשוא|תרומ(ת|ה)[-_ ]*(ה)?(אפיקי|לתשואה)|פירוט[-_ ]*תרומת|(?<![a-z])yield(?![a-z])|"
-                        r"_yield|yield_?(elements|components)|merkivei|mrkivei|tsua|tshua|nostro[-_ ]*yield|"
-                        r"תשוא(ה|ות)[-_ ]*לפי[-_ ]*אפיק|tesuah[-_ ]*lefi[-_ ]*afikim|tsua[-_ ]*lefi", re.I)
+RETURNS_RX = re.compile(r"מרכיבי[-_ ]*(ה)?תשוא|תרומ(ת|ה)[-_ ]*(ה)?(אפיקי|לתשואה)|פירוט[-_ ]*תרומת|"
+                        r"yield_?\d|yield[-_]?(elements|components)|return[-_]?(elements|components)|merkivei|mrkivei|"
+                        r"nostro[-_ ]*yield|תשוא(ה|ות)[-_ ]*לפי[-_ ]*אפיק|tesuah[-_ ]*lefi[-_ ]*afikim|tsua[-_ ]*lefi", re.I)
+# ("yield" לבד - כתבות "תשואות אג"ח" במיטב; "tsua" לבד - כל עמוד תשואות)
 # עמוד ניווט סביר בדרך לדוחות (ציון נמוך)
 WEAK = ["תשואות", "תשואה", "דוחות", "דיווחים", "השקעות", "נכסי הקופה", "נכסי הקרן", "מידע לעמיתים", "מידע לחוסכים",
         "מידע פיננסי", "פרסומים", "גילוי", "investments", "reports", "returns", "yields"]
@@ -170,6 +171,15 @@ def crawl_company(s, pw, lid, name, out, now, a):
     products = {(p["url"] if isinstance(p, dict) else p): (p.get("product") if isinstance(p, dict) else None)
                 for p in cfg.get("returns_pages", [])}
     snap_pages, snap_docs = snapshot_seeds(lid)
+    # עמודי המדיניות של החברה ועמוד האב שלהם - דוחות מרכיבי התשואה לרוב באותו אזור באתר (עמוד המסלול / "מידע לעמיתים")
+    pol_pages = []
+    for u in [x["url"] for x in cfg.get("pages", []) if "{year}" not in x.get("url", "")] if not cfg.get("returns_pages") else []:
+        pol_pages.append(u)
+        pr = urlparse(u)
+        parent = pr.path.rstrip("/").rsplit("/", 1)[0]
+        if parent and parent.count("/") >= 1:
+            pol_pages.append(f"{pr.scheme}://{pr.netloc}{parent}/")
+    snap_pages = snap_pages + [u for u in dict.fromkeys(pol_pages) if u not in snap_pages]
     home = cfg.get("home") or disc.get("home") or ""
     pdisc = ROOT / "policy" / "companies" / lid / "discovered.json"
     if not home and pdisc.exists():
@@ -195,7 +205,7 @@ def crawl_company(s, pw, lid, name, out, now, a):
         extra = list(dict.fromkeys(seeds + searched + sitemap))
         os.environ["POLICY_CRAWL_BUDGET"] = str(cfg.get("returns_crawl_budget") or 1500)
         os.environ["POLICY_PAGE_BUDGET"], os.environ["POLICY_DL_BUDGET"] = (str(x) for x in (cfg.get("returns_budget") or [90, 240]))
-        pages = ps.snapshot_company(s, pw, home, extra, products, max_pages=max(int(cfg.get("returns_max_pages") or 30), len(extra) + 8),
+        pages = ps.snapshot_company(s, pw, home, extra, products, max_pages=max(int(cfg.get("returns_max_pages") or 45), len(extra) + 15),
                                     follow=cfg.get("returns_follow"), click_texts=cfg.get("returns_click_texts"))
         # עמודים שנמצאו ובהם קבצי מרכיבי תשואה - נשמרים כנקודת פתיחה לריצות הבאות (החיפוש לא תמיד זמין)
         good = [u for u, p in pages.items() if p.get("status") == 200 and any(

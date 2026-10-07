@@ -45,16 +45,29 @@ def main():
     ver = {(r["legal_id"], r["key"]): r for r in csv.DictReader(open(vpath, encoding="utf-8-sig"))} if vpath.exists() else {}
     tracks_rows, monthly, cov, nostro_rows, idx = [], [], [], [], []
     ids = sorted(set(names) | {p.name for p in COMP.glob("*") if p.is_dir()})
+    # מסלולים לפי החברה שהם שייכים לה (owner - אתר משותף); כפילות -> העותק מהאתר של החברה עצמה
+    by_owner = defaultdict(dict)
+    for lid in ids:
+        f = COMP / lid / "tracks.json"
+        if not f.exists():
+            continue
+        data = json.loads(f.read_text("utf-8"))
+        for t in data["tracks"]:
+            own = t.get("owner") or lid
+            cur = by_owner[own].get(t["key"])
+            if cur is None or (cur[0] != own and lid == own) or (cur[0] != own and lid != own and t.get("n_months", 0) > cur[1].get("n_months", 0)):
+                by_owner[own][t["key"]] = (lid, t, data.get("assets") or [])
     for lid in ids:
         d = COMP / lid
         rep = json.loads((d / "crawl_report.json").read_text("utf-8")) if (d / "crawl_report.json").exists() else {}
         index = json.loads((d / "docs_index.json").read_text("utf-8")) if (d / "docs_index.json").exists() else {}
-        data = json.loads((d / "tracks.json").read_text("utf-8")) if (d / "tracks.json").exists() else {"tracks": [], "docs": {}, "assets": []}
-        assets = data.get("assets") or []
-        ix = {k: i for i, k in enumerate(assets)}
+        data = {"tracks": [x[1] for x in by_owner.get(lid, {}).values()]}
+        src_of = {k: (x[0], x[2]) for k, x in by_owner.get(lid, {}).items()}
         found = set()
         months_all = []
         for t in data["tracks"]:
+            src_lid, assets = src_of[t["key"]]
+            ix = {k: i for i, k in enumerate(assets)}
             months = list(t["m"])
             months_all += months
             if t.get("track_no"):
@@ -62,7 +75,7 @@ def main():
             last = t["m"][months[-1]] if months else None
             tot = lambda v: (v["c"][ix["total"]] if v and "total" in ix and len(v["c"]) > ix["total"] else None)
             v = ver.get((lid, t["key"]), {})
-            tracks_rows.append({"legal_id": lid, "company": names.get(lid, lid), "key": t["key"], "track_no": t.get("track_no"),
+            tracks_rows.append({"legal_id": lid, "company": names.get(lid, lid), "source_legal_id": src_lid, "key": t["key"], "track_no": t.get("track_no"),
                                 "track_no_src": t.get("track_no_src"), "track_name": t.get("name"), "registry_name": t.get("registry_name"),
                                 "product": t.get("product"), "first_month": t.get("first"), "last_month": t.get("last"),
                                 "n_months": t.get("n_months"), "last_return": tot(last), "revisions": len(t.get("revisions") or []),
@@ -70,7 +83,7 @@ def main():
                                 "docs": len({x["d"] for x in t["m"].values()})})
             for ym, val in t["m"].items():
                 st = ix.get("stocks")
-                monthly.append({"legal_id": lid, "key": t["key"], "track_no": t.get("track_no"), "ym": ym, "total": tot(val),
+                monthly.append({"legal_id": lid, "source_legal_id": src_lid, "key": t["key"], "track_no": t.get("track_no"), "ym": ym, "total": tot(val),
                                 "stocks": val["c"][st] if st is not None and len(val["c"]) > st else None, "doc": val["d"]})
         regs = set(reg.by_co.get(lid, {}))
         docs_ok = sum(1 for e in index.values() if not e.get("not_returns") and not e.get("parse_error"))
@@ -91,7 +104,7 @@ def main():
                                                  "registry_coverage", "first_month", "last_month", "docs_returns")},
                         "nostro": (d / "nostro.json").exists()})
     _w("tracks.csv", list(tracks_rows[0]) if tracks_rows else ["legal_id"], tracks_rows)
-    _w("monthly_totals.csv", ["legal_id", "key", "track_no", "ym", "total", "stocks", "doc"], monthly)
+    _w("monthly_totals.csv", ["legal_id", "source_legal_id", "key", "track_no", "ym", "total", "stocks", "doc"], monthly)
     _w("coverage.csv", list(cov[0]) if cov else ["legal_id"], cov)
     nf = ["legal_id", "portfolio", "year", "quarter", "period", "asset_key", "asset_label", "inv_income_ils", "inv_income_share",
           "total_income_ils", "total_income_share", "assets_ils", "assets_share", "d"]
@@ -104,7 +117,8 @@ def main():
         tot["registry_tracks"] += r["registry_tracks"]
         tot["registry_found"] += r["registry_found"]
         tot["docs"] += r["docs_returns"]
-    (RET / "index.json").write_text(json.dumps({"totals": tot, "companies": idx}, ensure_ascii=False, indent=1), "utf-8")
+    sources = sorted(p.parent.name for p in COMP.glob("*/tracks.json"))  # לאתר: מאילו תיקיות לקרוא (owner בתוך כל מסלול)
+    (RET / "index.json").write_text(json.dumps({"totals": tot, "companies": idx, "sources": sources}, ensure_ascii=False, indent=1), "utf-8")
     print(f"[returns.combine] companies={tot['companies']} with_data={tot['with_data']} tracks={tot['tracks']} "
           f"registry {tot['registry_found']}/{tot['registry_tracks']} docs={tot['docs']}")
 

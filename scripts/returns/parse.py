@@ -183,7 +183,7 @@ def _meta_from_rows(rows, lo, hi):
             "report_date": None, "titles": []}
     for r in rows[lo:hi]:
         cells = [_clean(c) for c in r if _clean(c)]
-        cells = [c for c in cells if not re.match(r"^(לא קיים מידע נוסף|סוף הגיליון|הגעת לשדה|תא ללא תוכן)", c)]
+        cells = [c for c in cells if not re.match(r"^(לא קיים מידע נוסף|סוף הגיליון|הגעת לשדה|תא ללא תוכן|תחילת מידע|חזרה$|תאריך הפקה)", c)]
         if not cells:
             continue
         line = " ".join(cells)
@@ -446,9 +446,60 @@ def file_hints(name: str, link_text: str = ""):
     return h
 
 
+def read_xlsx_raw(path: Path):
+    """קריאת xlsx ישירות מה-XML (בלי openpyxl) - קבצים שבהם openpyxl נכשל על סגנונות (אינפיניטי: NamedCellStyle)."""
+    import zipfile, xml.etree.ElementTree as ET
+    ns = {"m": "http://schemas.openxmlformats.org/spreadsheetml/2006/main",
+          "r": "http://schemas.openxmlformats.org/officeDocument/2006/relationships"}
+    z = zipfile.ZipFile(path)
+    shared = []
+    if "xl/sharedStrings.xml" in z.namelist():
+        for si in ET.fromstring(z.read("xl/sharedStrings.xml")).findall("m:si", ns):
+            shared.append("".join(t.text or "" for t in si.iter(f"{{{ns['m']}}}t")))
+    wb = ET.fromstring(z.read("xl/workbook.xml"))
+    rels = ET.fromstring(z.read("xl/_rels/workbook.xml.rels"))
+    target = {r.get("Id"): r.get("Target") for r in rels}
+    tables, names = [], []
+    for sh in wb.find("m:sheets", ns):
+        rid = sh.get(f"{{{ns['r']}}}id")
+        t = target.get(rid, "")
+        t = t.lstrip("/") if t.startswith("/") else "xl/" + t
+        if t not in z.namelist():
+            continue
+        rows = []
+        for row in ET.fromstring(z.read(t)).iter(f"{{{ns['m']}}}row"):
+            cells = {}
+            for c in row.findall("m:c", ns):
+                ref = c.get("r") or ""
+                col = 0
+                for ch in re.match(r"[A-Z]*", ref).group(0):
+                    col = col * 26 + ord(ch) - 64
+                v = c.find("m:v", ns)
+                if c.get("t") == "s" and v is not None:
+                    val = shared[int(v.text)]
+                elif c.get("t") == "inlineStr":
+                    val = "".join(x.text or "" for x in c.iter(f"{{{ns['m']}}}t"))
+                else:
+                    val = v.text if v is not None else ""
+                cells[max(col, 1) - 1] = val or ""
+            r_i = int(row.get("r") or len(rows) + 1)
+            while len(rows) < r_i - 1:
+                rows.append([])
+            rows.append([cells.get(i, "") for i in range(max(cells) + 1)] if cells else [])
+        tables.append(rows)
+        names.append(sh.get("name"))
+    text = "\n".join(" ".join(c for c in r if c) for tb in tables for r in tb)
+    return text, tables, names
+
+
 def parse_file(path, link_text=""):
     path = Path(path)
-    text, tables, names = read_doc(path)
+    try:
+        text, tables, names = read_doc(path)
+    except Exception:
+        if path.suffix.lower() not in (".xlsx", ".xlsm"):
+            raise
+        text, tables, names = read_xlsx_raw(path)
     hints = file_hints(path.name, link_text)
     blocks = []
     for t, (rows) in enumerate(tables):

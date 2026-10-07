@@ -24,7 +24,7 @@ from scripts.returns.parse import parse_file, ASSET_ORDER
 ROOT = Path(__file__).resolve().parents[2]
 POL = ROOT / "policy"
 RET = ROOT / "returns"
-PARSER_VERSION = 1
+PARSER_VERSION = 2  # (v2: קורא xlsx גולמי כש-openpyxl נכשל, בלי "תחילת מידע טבלה" בשם)
 
 
 def norm_name(s):
@@ -70,6 +70,9 @@ class Registry:
             for r in csv.DictReader(open(p, encoding="utf-8-sig")):
                 self.names[str(r["FUND_ID"])] = r.get("FUND_NAME") or ""
                 self.domain.setdefault(str(r["FUND_ID"]), r.get("domain"))
+        self.companies = set(self.by_co)
+        for sp in (ROOT / "scripts" / "policy" / "sites").glob("*.json"):
+            self.companies.add(sp.stem)
         p = RET / "datagov_track_map.json"
         self.yield_map = json.loads(p.read_text("utf-8")) if p.exists() else {}
 
@@ -239,6 +242,26 @@ def build(lid: str, out: Path, index: dict, reg: Registry):
             if prev is None or rank > prev["_rank"]:
                 nostro[k] = {**o, "portfolio": port, "d": did, "_rank": rank}
     tracks = {k: t for k, t in tracks.items() if t["m"] or t["ytd"]}
+    # אתר משותף לכמה חברות (מגדל פנסיה/ביטוח, הקרנות הוותיקות באתר עמיתים): המסלול שייך לחברה שהמספר שלו רשום אצלה
+    # ברישום הרשמי; בלי רישום - לח.פ. שבתחילת שם הקובץ (<ח.פ.>_g526_Yield226). combine והאתר מקבצים לפי owner
+    known = reg.companies
+    for t in tracks.values():
+        owners = {c for c, nos in reg.by_co.items() if t["track_no"] and t["track_no"] in nos}
+        if owners and lid not in owners:
+            # רק כשהשם תואם את המסלול ברישום של החברה האחרת (152 "פסגות כללי" בהכשרה 2018 != 152 של כלל היום)
+            own = sorted(owners)[0] if len(owners) == 1 else None
+            a, b = _toks(t["names"][-1] if t["names"] else ""), _toks(reg.by_co.get(own, {}).get(t["track_no"], "")) if own else set()
+            if own and a and b and len(a & b) / len(a | b) >= 0.3:
+                t["owner"] = own
+            elif not t["track_no_src"].endswith("_unverified"):
+                t["track_no_src"] += "_other_company"
+        elif not owners:
+            pref = {m.group(1) for ym in t["m"].values() for m in [re.match(r"(\d{9})_", Path(docs.get(ym["d"], {}).get("file") or "").name.split("_", 1)[-1])] if m}
+            pref &= known
+            if len(pref) == 1 and lid not in pref:
+                t["owner"] = pref.pop()
+        if not t.get("owner"):
+            t.pop("owner", None)
     for t in tracks.values():
         t.pop("_rank")
         t["name"] = display_name(t["names"][-1]) if t["names"] else None

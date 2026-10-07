@@ -45,5 +45,8 @@
    "^ביטוח הראל אשראי ואג ח עם מניות עד 25%",
    "90"
   ]
- ]
+ ],
+ "returns_follow": "harel-group\\.co\\.il/(about/harel-group/harel/[^?#]+|long-term-savings/[^/]+/(funds|plans)/[^?#]+)$",
+ "returns_max_pages": 90,
+ "returns_crawl_budget": 2300
 }

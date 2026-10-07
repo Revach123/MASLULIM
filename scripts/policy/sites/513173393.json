@@ -50,5 +50,8 @@
  "follow_rx": "אלטשולר-שחם-|%D7%90%D7%9C%D7%98%D7%A9%D7%95%D7%9C%D7%A8-%D7%A9%D7%97%D7%9D-|חיסכון-לילד",
  "exclude": "לשנת 20(0\\d|1\\d|2[0-4])|_20(0\\d|1\\d|2[0-4])\\d{4}|[^/\\d]20(1\\d|2[0-4])\\.xlsx",
  "timeout_min": 45,
- "per_track_pages": true
+ "per_track_pages": true,
+ "returns_follow": "as-invest\\.co\\.il/interstedin/[^?#]*(מסלול|%D7%9E%D7%A1%D7%9C%D7%95%D7%9C)",
+ "returns_max_pages": 90,
+ "returns_crawl_budget": 2300
 }

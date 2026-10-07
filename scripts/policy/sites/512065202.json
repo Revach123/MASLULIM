@@ -23,5 +23,8 @@
  ],
  "search": true,
  "rev": 5,
- "note": "2026-10-03: עמוד קופה מרכזית לפיצויים רבת מסלולים (נמצא בחיפוש)"
+ "note": "2026-10-03: עמוד קופה מרכזית לפיצויים רבת מסלולים (נמצא בחיפוש)",
+ "returns_follow": "meitav\\.co\\.il/(provident_pension|companies-and-business-units)/[^?#]+/$",
+ "returns_max_pages": 90,
+ "returns_crawl_budget": 2300
 }

@@ -109,14 +109,14 @@ def main():
                     found = cands[0]
                     if found[1] != no:
                         ymap[f"{lid}|{norm_name(t.get('name') or '')}"] = found[1]
-            row = {"legal_id": lid, "key": t["key"], "track_no": no, "track_no_src": t.get("track_no_src"), "track_name": t.get("name"),
+            row = {"legal_id": t.get("owner") or lid, "key": t["key"], "track_no": no, "track_no_src": t.get("track_no_src"), "track_name": t.get("name"),
                    "domain": dom, "status": st, "n": best and best["n"], "median_gap": best and best["median_gap"],
                    "max_gap": best and best["max_gap"], "months": len(ours),
                    "datagov_match": found and found[1], "datagov_match_gap": found and found[0]}
             rows.append(row)
             for ym, a, b, g in (best or {}).get("gaps", []):
                 if g > MONTH_GAP:
-                    gap_rows.append({"legal_id": lid, "key": t["key"], "track_no": no, "ym": ym, "ours": a, "datagov": b, "gap": round(g, 4)})
+                    gap_rows.append({"legal_id": t.get("owner") or lid, "key": t["key"], "track_no": no, "ym": ym, "ours": a, "datagov": b, "gap": round(g, 4)})
     with open(RET / "verify_tracks.csv", "w", encoding="utf-8-sig", newline="") as f:
         w = csv.DictWriter(f, list(rows[0]) if rows else ["legal_id"]); w.writeheader(); w.writerows(rows)
     with open(RET / "verify_gaps.csv", "w", encoding="utf-8-sig", newline="") as f:
