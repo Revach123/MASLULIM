@@ -1,11 +1,11 @@
 {
  "totals": {
   "companies": 76,
-  "with_data": 18,
-  "tracks": 281,
+  "with_data": 19,
+  "tracks": 351,
   "registry_tracks": 1289,
-  "registry_found": 161,
-  "docs": 1930
+  "registry_found": 187,
+  "docs": 2397
  },
  "companies": [
   {
@@ -123,6 +123,19 @@
    "first_month": "2022-01",
    "last_month": "2026-06",
    "docs_returns": 402,
+   "nostro": false
+  },
+  {
+   "legal_id": "512245812",
+   "company": "מנורה מבטחים פנסיה וגמל בע\"מ",
+   "tracks": 70,
+   "tracks_numbered": 51,
+   "registry_tracks": 96,
+   "registry_found": 26,
+   "registry_coverage": 27.1,
+   "first_month": "2017-01",
+   "last_month": "2026-06",
+   "docs_returns": 467,
    "nostro": false
   },
   {
