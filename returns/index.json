@@ -1,11 +1,11 @@
 {
  "totals": {
   "companies": 76,
-  "with_data": 38,
-  "tracks": 772,
+  "with_data": 39,
+  "tracks": 775,
   "registry_tracks": 1289,
-  "registry_found": 365,
-  "docs": 4687
+  "registry_found": 366,
+  "docs": 4740
  },
  "companies": [
   {
@@ -497,6 +497,19 @@
    "registry_tracks": 1,
    "registry_found": 0,
    "registry_coverage": 0.0,
+   "first_month": "2022-01",
+   "last_month": "2026-06",
+   "docs_returns": 53,
+   "nostro": false
+  },
+  {
+   "legal_id": "570009852",
+   "company": "קרן מקפת מרכז לפנסיה ותגמולים אגודה שיתופית בע\"מ",
+   "tracks": 3,
+   "tracks_numbered": 3,
+   "registry_tracks": 1,
+   "registry_found": 1,
+   "registry_coverage": 100.0,
    "first_month": "2022-01",
    "last_month": "2026-06",
    "docs_returns": 53,
