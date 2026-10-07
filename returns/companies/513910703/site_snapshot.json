@@ -1,0 +1,14 @@
+{
+ "legal_id": "513910703",
+ "taken": "2026-10-07T17:58:05+00:00",
+ "pages": {
+  "https://www.555.co.il": {
+   "product": null,
+   "status": "browser:TimeoutError:Page.goto: Timeout 60000ms exceeded.",
+   "method": "requests",
+   "text_hash": null,
+   "text_head": "",
+   "items": []
+  }
+ }
+}
