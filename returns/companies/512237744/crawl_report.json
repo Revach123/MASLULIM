@@ -1,0 +1,25 @@
+{
+ "legal_id": "512237744",
+ "company": "מגדל מקפת קרנות פנסיה וקופות גמל בע\"מ",
+ "run": "2026-10-07T17:54:28+00:00",
+ "errors": [],
+ "seeds": {
+  "config": 0,
+  "discovered": 0,
+  "policy_snapshot": 0,
+  "policy_snapshot_docs": 0,
+  "search": 0,
+  "sitemap": 4
+ },
+ "imported_from_policy": 0,
+ "pages": 30,
+ "pages_failed": [
+  "https://undefined/: browser:Error:Page.goto: net::ERR_NAME_NOT_RESOLVED at https://undefined/",
+  "https://www.migdal.co.il/product-lobby/pension-fund-self-employed: 404"
+ ],
+ "candidates": 461,
+ "docs": 461,
+ "new_docs": 402,
+ "index_size": 402,
+ "seconds": 550
+}

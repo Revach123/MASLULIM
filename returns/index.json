@@ -1,11 +1,11 @@
 {
  "totals": {
   "companies": 76,
-  "with_data": 12,
-  "tracks": 146,
+  "with_data": 13,
+  "tracks": 262,
   "registry_tracks": 1289,
-  "registry_found": 72,
-  "docs": 1155
+  "registry_found": 157,
+  "docs": 1557
  },
  "companies": [
   {
@@ -97,6 +97,19 @@
    "first_month": "2021-01",
    "last_month": "2026-06",
    "docs_returns": 6,
+   "nostro": false
+  },
+  {
+   "legal_id": "512237744",
+   "company": "מגדל מקפת קרנות פנסיה וקופות גמל בע\"מ",
+   "tracks": 116,
+   "tracks_numbered": 116,
+   "registry_tracks": 87,
+   "registry_found": 85,
+   "registry_coverage": 97.7,
+   "first_month": "2022-01",
+   "last_month": "2026-06",
+   "docs_returns": 402,
    "nostro": false
   },
   {
