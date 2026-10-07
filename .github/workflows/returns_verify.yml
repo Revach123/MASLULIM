@@ -1,0 +1,52 @@
+name: Returns verify (data.gov)
+
+# מרכיבי תשואה מול גמל-נט/פנסיה-נט/ביטוח-נט: סך התרומות לחודש מול MONTHLY_YIELD של המסלול. ר' scripts/returns/verify.py
+# אחרי האימות: בנייה מחדש של כל החברות (מספרי מסלול שזוהו לפי התאמת תשואות) + טבלאות מאוחדות.
+on:
+  schedule:
+    - cron: "23 9 * * *"
+  workflow_dispatch:
+  push:
+    branches: ["claude/**"]
+    paths: ["returns/verify_run.json"]
+
+concurrency:
+  group: returns-verify
+  cancel-in-progress: false
+
+permissions:
+  contents: write
+
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    timeout-minutes: 50
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: pip install -q requests openpyxl xlrd pdfplumber beautifulsoup4 python-docx
+      - run: python -m scripts.returns.verify
+        env:
+          RETURNS_GOV_CACHE: /tmp/gov.json
+      - name: Rebuild (track numbers from data.gov) + combine
+        env:
+          RETURNS_GOV_CACHE: /tmp/gov.json
+        run: |
+          RETURNS_PARSE_BUDGET=600 python -m scripts.returns.extract
+          python -m scripts.returns.verify
+          python -m scripts.returns.combine
+      - name: Commit
+        run: |
+          git config user.name "github-actions"
+          git config user.email "actions@users.noreply.github.com"
+          B="${GITHUB_REF_NAME}"
+          git add -A returns
+          git diff --cached --quiet && exit 0
+          git commit -q -m "returns: verify (data.gov)"
+          for i in 1 2 3 4 5 6; do
+            git pull -q --rebase -X theirs origin "$B" && git push -q origin "HEAD:$B" && exit 0
+            sleep $((10*i))
+          done
+          exit 1

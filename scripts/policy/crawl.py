@@ -126,7 +126,9 @@ def download(s, url):
     return r, 200
 
 
-NOISE = re.compile(r"esg|אחראי|תגמול(?!ים)|tagmul(?!im)|פרטיות|privacy|תקנון|מבצע|גילוי[-_ ]נאות|דוח(ות)?[-_ ]כספי|מצגת|presentation|"
+# דוחות מרכיבי תשואה ("פירוט תרומת אפיקי ההשקעה לתשואה") - נאספים בנפרד (scripts/returns -> returns/), לא כמסמכי מדיניות
+RETURNS_DOC = re.compile(r"מרכיבי[-_ ]*(ה)?תשוא|תרומת[-_ ]*(ה)?אפיקי|(?<![a-z])yield\d|_yield|nostro[-_ ]*yield", re.I)
+NOISE = re.compile(r"מרכיבי[-_ ]*(ה)?תשוא|תרומת[-_ ]*(ה)?אפיקי|(?<![a-z])yield\d|_yield|nostro[-_ ]*yield|esg|אחראי|תגמול(?!ים)|tagmul(?!im)|פרטיות|privacy|תקנון|מבצע|גילוי[-_ ]נאות|דוח(ות)?[-_ ]כספי|מצגת|presentation|"
                    r"investor|equal|שכר[-_ ]שווה|פוליסה|annuity|premi|מנתחים|אמות[-_ ]מידה|ממשל[-_ ]*תאגיד", re.I)  # "ממשל" לבד חסם את "אג\"ח ממשלות"
 POLICY = re.compile(r"מדיניו?ת[-_ ]*(ה)?השקעה|מדיניות[-_ ]*(ה)?השקעות|מדיניות[-_ ]*מוצהרת|הצהרת[-_ ]*(מדיניות|השקעות)|"
                     r"הצהרה[-_ ]*על[-_ ]*מדיניות|מדיניות[-_ ]*צפויה|investment[-_ ]*polic|expected[-_ ]*investment|statement[-_ ]*investment|m[ae]dini?y?ut|inv[-_ ]*polic", re.I)
@@ -338,6 +340,12 @@ def main():
     OUT.mkdir(exist_ok=True)
     idx_path = OUT / "docs_index.json"
     index = json.loads(idx_path.read_text("utf-8")) if idx_path.exists() else {}
+    # דוחות מרכיבי תשואה שנאספו בעבר כמסמכי מדיניות (העתק נשמר ב-returns/companies/<id>/raw) - יוצאים מהאינדקס
+    for k in [k for k, e in index.items() if RETURNS_DOC.search(unquote(k) + " " + (e.get("link_text") or ""))]:
+        f = ROOT / (index[k].get("file") or "")
+        if index[k].get("file") and f.exists() and (ROOT / "returns" / "companies" / index[k].get("legal_id", "") / "raw" / f.name).exists():
+            f.unlink()
+        del index[k]
     cos, seeds = load_companies(), load_seeds()
     s = requests.Session()
     now = datetime.now(timezone.utc).isoformat(timespec="seconds")
