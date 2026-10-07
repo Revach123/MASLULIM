@@ -1,11 +1,11 @@
 {
  "totals": {
   "companies": 76,
-  "with_data": 39,
-  "tracks": 775,
+  "with_data": 40,
+  "tracks": 780,
   "registry_tracks": 1289,
-  "registry_found": 366,
-  "docs": 4740
+  "registry_found": 371,
+  "docs": 4850
  },
  "companies": [
   {
@@ -513,6 +513,19 @@
    "first_month": "2022-01",
    "last_month": "2026-06",
    "docs_returns": 53,
+   "nostro": false
+  },
+  {
+   "legal_id": "570011767",
+   "company": "קופת תגמולים של עובדי אל על נתיבי אוויר לישראל בע\"מ אגודה שיתופית",
+   "tracks": 5,
+   "tracks_numbered": 5,
+   "registry_tracks": 5,
+   "registry_found": 5,
+   "registry_coverage": 100.0,
+   "first_month": "2021-01",
+   "last_month": "2026-06",
+   "docs_returns": 110,
    "nostro": false
   }
  ]
