@@ -1,11 +1,11 @@
 {
  "totals": {
   "companies": 76,
-  "with_data": 16,
-  "tracks": 275,
+  "with_data": 17,
+  "tracks": 278,
   "registry_tracks": 1289,
   "registry_found": 161,
-  "docs": 1824
+  "docs": 1877
  },
  "companies": [
   {
@@ -206,6 +206,19 @@
   {
    "legal_id": "520020504",
    "company": "קרן הגמלאות המרכזית של עובדי ההסתדרות בע\"מ",
+   "tracks": 3,
+   "tracks_numbered": 3,
+   "registry_tracks": 0,
+   "registry_found": 0,
+   "registry_coverage": null,
+   "first_month": "2022-01",
+   "last_month": "2026-06",
+   "docs_returns": 53,
+   "nostro": false
+  },
+  {
+   "legal_id": "520022351",
+   "company": "נתיב קרן הפנסיה של פועלי ועובדי מפעלי משק ההסתדרות בע\"מ",
    "tracks": 3,
    "tracks_numbered": 3,
    "registry_tracks": 0,
