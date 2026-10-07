@@ -1,11 +1,11 @@
 {
  "totals": {
   "companies": 76,
-  "with_data": 23,
-  "tracks": 487,
+  "with_data": 24,
+  "tracks": 495,
   "registry_tracks": 1289,
-  "registry_found": 215,
-  "docs": 2953
+  "registry_found": 219,
+  "docs": 3091
  },
  "companies": [
   {
@@ -292,6 +292,19 @@
    "first_month": "2020-01",
    "last_month": "2026-06",
    "docs_returns": 84,
+   "nostro": false
+  },
+  {
+   "legal_id": "520028556",
+   "company": "החברה לניהול קרן ההשתלמות להנדסאים וטכנאים בע\"מ",
+   "tracks": 8,
+   "tracks_numbered": 7,
+   "registry_tracks": 4,
+   "registry_found": 4,
+   "registry_coverage": 100.0,
+   "first_month": "2015-09",
+   "last_month": "2026-06",
+   "docs_returns": 138,
    "nostro": false
   },
   {
