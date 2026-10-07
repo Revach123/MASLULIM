@@ -1,0 +1,78 @@
+{
+ "legal_id": "513026484",
+ "taken": "2026-10-07T17:54:14+00:00",
+ "pages": {
+  "https://www.fnx.co.il/savings/quarterly-yield-components-maslul-life/": {
+   "product": null,
+   "status": "browser:TimeoutError:Page.goto: Timeout 60000ms exceeded.",
+   "method": "requests",
+   "text_hash": null,
+   "text_head": "",
+   "items": []
+  },
+  "https://www.fnx.co.il/savings/quarterly-yield-components-ted-yud/": {
+   "product": null,
+   "status": "browser:TimeoutError:Page.goto: Timeout 60000ms exceeded.",
+   "method": "requests",
+   "text_hash": null,
+   "text_head": "",
+   "items": []
+  },
+  "https://www.fnx.co.il/gemel/gemel-about-the-company-2017/gemel-yield-components/": {
+   "product": "גמל",
+   "status": "browser:TimeoutError:Page.goto: Timeout 60000ms exceeded.",
+   "method": "requests",
+   "text_hash": null,
+   "text_head": "",
+   "items": []
+  },
+  "https://www.fnx.co.il/gemel/gemel-kitzva/gemel-namal-israel/gemel-namal-markivey-tsua/": {
+   "product": "גמל",
+   "status": "browser:TimeoutError:Page.goto: Timeout 60000ms exceeded.",
+   "method": "requests",
+   "text_hash": null,
+   "text_head": "",
+   "items": []
+  },
+  "https://www.fnx.co.il/gemel/gemel-kitzva/gemel-ashdod-port/namal-ashdod-tsua/": {
+   "product": "גמל",
+   "status": 502,
+   "method": "browser",
+   "text_hash": "1a37913906e4d90313c9b89ec6cbdd853e56911d",
+   "text_head": "502 Bad Gateway",
+   "items": []
+  },
+  "https://www.fnx.co.il/pension-savings/fnx-all-embracing-pension/mekifa-yield-components/": {
+   "product": "פנסיה",
+   "status": 502,
+   "method": "browser",
+   "text_hash": "1a37913906e4d90313c9b89ec6cbdd853e56911d",
+   "text_head": "502 Bad Gateway",
+   "items": []
+  },
+  "https://www.fnx.co.il/pension-savings/fnx-mashlima-pension/mashlima-yield-components/": {
+   "product": "פנסיה",
+   "status": 500,
+   "method": "browser",
+   "text_hash": "1bc8a7a912dab84f0515dd5429689c832935a681",
+   "text_head": "500 Internal Server Error openresty",
+   "items": []
+  },
+  "https://www.fnx.co.il/pension-savings/yesod-pension-fund/yesod-yield-components/": {
+   "product": "פנסיה",
+   "status": 500,
+   "method": "browser",
+   "text_hash": "1bc8a7a912dab84f0515dd5429689c832935a681",
+   "text_head": "500 Internal Server Error openresty",
+   "items": []
+  },
+  "https://www.fnx.co.il": {
+   "product": null,
+   "status": "browser:TimeoutError:Page.goto: Timeout 60000ms exceeded.",
+   "method": "requests",
+   "text_hash": null,
+   "text_head": "",
+   "items": []
+  }
+ }
+}

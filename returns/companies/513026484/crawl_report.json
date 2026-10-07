@@ -1,0 +1,31 @@
+{
+ "legal_id": "513026484",
+ "company": "הפניקס פנסיה וגמל בע\"מ",
+ "run": "2026-10-07T17:54:14+00:00",
+ "errors": [],
+ "seeds": {
+  "config": 0,
+  "discovered": 0,
+  "policy_snapshot": 0,
+  "policy_snapshot_docs": 21,
+  "search": 0,
+  "sitemap": 8
+ },
+ "imported_from_policy": 21,
+ "pages": 9,
+ "pages_failed": [
+  "https://www.fnx.co.il/savings/quarterly-yield-components-maslul-life/: browser:TimeoutError:Page.goto: Timeout 60000ms exceeded.",
+  "https://www.fnx.co.il/savings/quarterly-yield-components-ted-yud/: browser:TimeoutError:Page.goto: Timeout 60000ms exceeded.",
+  "https://www.fnx.co.il/gemel/gemel-about-the-company-2017/gemel-yield-components/: browser:TimeoutError:Page.goto: Timeout 60000ms exceeded.",
+  "https://www.fnx.co.il/gemel/gemel-kitzva/gemel-namal-israel/gemel-namal-markivey-tsua/: browser:TimeoutError:Page.goto: Timeout 60000ms exceeded.",
+  "https://www.fnx.co.il/gemel/gemel-kitzva/gemel-ashdod-port/namal-ashdod-tsua/: 502",
+  "https://www.fnx.co.il/pension-savings/fnx-all-embracing-pension/mekifa-yield-components/: 502",
+  "https://www.fnx.co.il/pension-savings/fnx-mashlima-pension/mashlima-yield-components/: 500",
+  "https://www.fnx.co.il/pension-savings/yesod-pension-fund/yesod-yield-components/: 500"
+ ],
+ "candidates": 21,
+ "docs": 21,
+ "new_docs": 0,
+ "index_size": 21,
+ "seconds": 1419
+}
