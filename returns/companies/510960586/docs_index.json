@@ -13,7 +13,7 @@
   "source_page": "https://gemel.huji.ac.il/%d7%93%d7%99%d7%95%d7%95%d7%97%d7%99%d7%9d/",
   "product": "גמל",
   "via": "cloud",
-  "parser_version": 1,
+  "parser_version": 3,
   "tracks": 1,
   "file_year": 2025
  },
@@ -31,7 +31,7 @@
   "source_page": "https://gemel.huji.ac.il/%d7%93%d7%99%d7%95%d7%95%d7%97%d7%99%d7%9d/",
   "product": "גמל",
   "via": "cloud",
-  "parser_version": 1,
+  "parser_version": 3,
   "tracks": 1,
   "file_year": 2026
  },
@@ -49,7 +49,7 @@
   "source_page": "https://gemel.huji.ac.il/%d7%93%d7%99%d7%95%d7%95%d7%97%d7%99%d7%9d/",
   "product": "גמל",
   "via": "cloud",
-  "parser_version": 1,
+  "parser_version": 3,
   "tracks": 1,
   "file_year": 2026
  },
@@ -67,7 +67,7 @@
   "source_page": "https://gemel.huji.ac.il/%d7%93%d7%99%d7%95%d7%95%d7%97%d7%99%d7%9d/",
   "product": "גמל",
   "via": "cloud",
-  "parser_version": 1,
+  "parser_version": 3,
   "tracks": 1,
   "file_year": 2025
  },
@@ -85,7 +85,7 @@
   "source_page": "https://gemel.huji.ac.il/%d7%93%d7%99%d7%95%d7%95%d7%97%d7%99%d7%9d/",
   "product": "גמל",
   "via": "cloud",
-  "parser_version": 1,
+  "parser_version": 3,
   "tracks": 1,
   "file_year": 2026
  },
@@ -103,7 +103,7 @@
   "source_page": "https://gemel.huji.ac.il/%d7%93%d7%99%d7%95%d7%95%d7%97%d7%99%d7%9d/",
   "product": "גמל",
   "via": "cloud",
-  "parser_version": 1,
+  "parser_version": 3,
   "tracks": 1,
   "file_year": 2026
  },
@@ -121,7 +121,7 @@
   "source_page": "https://gemel.huji.ac.il/%d7%93%d7%99%d7%95%d7%95%d7%97%d7%99%d7%9d/",
   "product": "גמל",
   "via": "cloud",
-  "parser_version": 1,
+  "parser_version": 3,
   "tracks": 1,
   "file_year": 2025
  },
@@ -139,7 +139,7 @@
   "source_page": "https://gemel.huji.ac.il/%d7%93%d7%99%d7%95%d7%95%d7%97%d7%99%d7%9d/",
   "product": "גמל",
   "via": "cloud",
-  "parser_version": 1,
+  "parser_version": 3,
   "tracks": 1,
   "file_year": 2026
  },
@@ -157,7 +157,7 @@
   "source_page": "https://gemel.huji.ac.il/%d7%93%d7%99%d7%95%d7%95%d7%97%d7%99%d7%9d/",
   "product": "גמל",
   "via": "cloud",
-  "parser_version": 1,
+  "parser_version": 3,
   "tracks": 1,
   "file_year": 2026
  },
@@ -175,7 +175,7 @@
   "source_page": "https://gemel.huji.ac.il/%d7%93%d7%99%d7%95%d7%95%d7%97%d7%99%d7%9d/",
   "product": "גמל",
   "via": "cloud",
-  "parser_version": 1,
+  "parser_version": 3,
   "tracks": 1,
   "file_year": 2025
  },
@@ -193,7 +193,7 @@
   "source_page": "https://gemel.huji.ac.il/%d7%93%d7%99%d7%95%d7%95%d7%97%d7%99%d7%9d/",
   "product": "גמל",
   "via": "cloud",
-  "parser_version": 1,
+  "parser_version": 3,
   "tracks": 1,
   "file_year": 2026
  },
@@ -211,7 +211,7 @@
   "source_page": "https://gemel.huji.ac.il/%d7%93%d7%99%d7%95%d7%95%d7%97%d7%99%d7%9d/",
   "product": "גמל",
   "via": "cloud",
-  "parser_version": 1,
+  "parser_version": 3,
   "tracks": 1,
   "file_year": 2026
  },
@@ -230,7 +230,8 @@
   "product": "גמל",
   "via": "cloud",
   "not_returns": true,
-  "parser_version": 1
+  "parser_version": 3,
+  "parse_error": "file missing"
  },
  "https://gemel.huji.ac.il/wp-content/uploads/2026/04/510960586_g9818_Yield126.xlsx": {
   "legal_id": "510960586",
@@ -247,7 +248,8 @@
   "product": "גמל",
   "via": "cloud",
   "not_returns": true,
-  "parser_version": 1
+  "parser_version": 3,
+  "parse_error": "file missing"
  },
  "https://gemel.huji.ac.il/wp-content/uploads/2026/07/510960586_g9818_Yield226.xlsx": {
   "legal_id": "510960586",
@@ -264,7 +266,8 @@
   "product": "גמל",
   "via": "cloud",
   "not_returns": true,
-  "parser_version": 1
+  "parser_version": 3,
+  "parse_error": "file missing"
  },
  "https://gemel.huji.ac.il/wp-content/uploads/2026/01/510960586_g9817_Yield425.xlsx": {
   "legal_id": "510960586",
@@ -280,7 +283,7 @@
   "source_page": "https://gemel.huji.ac.il/%d7%93%d7%99%d7%95%d7%95%d7%97%d7%99%d7%9d/",
   "product": "גמל",
   "via": "cloud",
-  "parser_version": 1,
+  "parser_version": 3,
   "tracks": 1,
   "file_year": 2025
  },
@@ -298,7 +301,7 @@
   "source_page": "https://gemel.huji.ac.il/%d7%93%d7%99%d7%95%d7%95%d7%97%d7%99%d7%9d/",
   "product": "גמל",
   "via": "cloud",
-  "parser_version": 1,
+  "parser_version": 3,
   "tracks": 1,
   "file_year": 2026
  },
@@ -316,7 +319,7 @@
   "source_page": "https://gemel.huji.ac.il/%d7%93%d7%99%d7%95%d7%95%d7%97%d7%99%d7%9d/",
   "product": "גמל",
   "via": "cloud",
-  "parser_version": 1,
+  "parser_version": 3,
   "tracks": 1,
   "file_year": 2026
  },
@@ -334,7 +337,7 @@
   "source_page": "https://gemel.huji.ac.il/%d7%93%d7%99%d7%95%d7%95%d7%97%d7%99%d7%9d/",
   "product": "גמל",
   "via": "cloud",
-  "parser_version": 1,
+  "parser_version": 3,
   "tracks": 1,
   "file_year": 2025
  },
@@ -352,7 +355,7 @@
   "source_page": "https://gemel.huji.ac.il/%d7%93%d7%99%d7%95%d7%95%d7%97%d7%99%d7%9d/",
   "product": "גמל",
   "via": "cloud",
-  "parser_version": 1,
+  "parser_version": 3,
   "tracks": 1,
   "file_year": 2026
  },
@@ -370,7 +373,7 @@
   "source_page": "https://gemel.huji.ac.il/%d7%93%d7%99%d7%95%d7%95%d7%97%d7%99%d7%9d/",
   "product": "גמל",
   "via": "cloud",
-  "parser_version": 1,
+  "parser_version": 3,
   "tracks": 1,
   "file_year": 2026
  },
@@ -388,7 +391,7 @@
   "source_page": "https://gemel.huji.ac.il/%d7%93%d7%99%d7%95%d7%95%d7%97%d7%99%d7%9d/",
   "product": "גמל",
   "via": "cloud",
-  "parser_version": 1,
+  "parser_version": 3,
   "tracks": 1,
   "file_year": 2025
  },
@@ -406,7 +409,7 @@
   "source_page": "https://gemel.huji.ac.il/%d7%93%d7%99%d7%95%d7%95%d7%97%d7%99%d7%9d/",
   "product": "גמל",
   "via": "cloud",
-  "parser_version": 1,
+  "parser_version": 3,
   "tracks": 1,
   "file_year": 2026
  },
@@ -424,7 +427,7 @@
   "source_page": "https://gemel.huji.ac.il/%d7%93%d7%99%d7%95%d7%95%d7%97%d7%99%d7%9d/",
   "product": "גמל",
   "via": "cloud",
-  "parser_version": 1,
+  "parser_version": 3,
   "tracks": 1,
   "file_year": 2026
  },
@@ -442,7 +445,7 @@
   "source_page": "https://gemel.huji.ac.il/%d7%93%d7%99%d7%95%d7%95%d7%97%d7%99%d7%9d/",
   "product": "גמל",
   "via": "cloud",
-  "parser_version": 1,
+  "parser_version": 3,
   "tracks": 1,
   "file_year": 2025
  },
@@ -460,7 +463,7 @@
   "source_page": "https://gemel.huji.ac.il/%d7%93%d7%99%d7%95%d7%95%d7%97%d7%99%d7%9d/",
   "product": "גמל",
   "via": "cloud",
-  "parser_version": 1,
+  "parser_version": 3,
   "tracks": 1,
   "file_year": 2026
  },
@@ -478,7 +481,7 @@
   "source_page": "https://gemel.huji.ac.il/%d7%93%d7%99%d7%95%d7%95%d7%97%d7%99%d7%9d/",
   "product": "גמל",
   "via": "cloud",
-  "parser_version": 1,
+  "parser_version": 3,
   "tracks": 1,
   "file_year": 2026
  },
@@ -496,7 +499,7 @@
   "source_page": "https://gemel.huji.ac.il/%d7%93%d7%99%d7%95%d7%95%d7%97%d7%99%d7%9d/",
   "product": "גמל",
   "via": "cloud",
-  "parser_version": 1,
+  "parser_version": 3,
   "tracks": 1,
   "file_year": 2025
  },
@@ -514,7 +517,7 @@
   "source_page": "https://gemel.huji.ac.il/%d7%93%d7%99%d7%95%d7%95%d7%97%d7%99%d7%9d/",
   "product": "גמל",
   "via": "cloud",
-  "parser_version": 1,
+  "parser_version": 3,
   "tracks": 1,
   "file_year": 2026
  },
@@ -532,7 +535,7 @@
   "source_page": "https://gemel.huji.ac.il/%d7%93%d7%99%d7%95%d7%95%d7%97%d7%99%d7%9d/",
   "product": "גמל",
   "via": "cloud",
-  "parser_version": 1,
+  "parser_version": 3,
   "tracks": 1,
   "file_year": 2026
  },
@@ -550,7 +553,7 @@
   "source_page": "https://gemel.huji.ac.il/%d7%93%d7%99%d7%95%d7%95%d7%97%d7%99%d7%9d/",
   "product": "גמל",
   "via": "cloud",
-  "parser_version": 1,
+  "parser_version": 3,
   "tracks": 1,
   "file_year": 2025
  },
@@ -568,7 +571,7 @@
   "source_page": "https://gemel.huji.ac.il/%d7%93%d7%99%d7%95%d7%95%d7%97%d7%99%d7%9d/",
   "product": "גמל",
   "via": "cloud",
-  "parser_version": 1,
+  "parser_version": 3,
   "tracks": 1,
   "file_year": 2025
  },
@@ -586,7 +589,7 @@
   "source_page": "https://gemel.huji.ac.il/%d7%93%d7%99%d7%95%d7%95%d7%97%d7%99%d7%9d/",
   "product": "גמל",
   "via": "cloud",
-  "parser_version": 1,
+  "parser_version": 3,
   "tracks": 1,
   "file_year": 2025
  },
@@ -604,7 +607,7 @@
   "source_page": "https://gemel.huji.ac.il/%d7%93%d7%99%d7%95%d7%95%d7%97%d7%99%d7%9d/",
   "product": "גמל",
   "via": "cloud",
-  "parser_version": 1,
+  "parser_version": 3,
   "tracks": 1,
   "file_year": 2025
  },
@@ -623,7 +626,8 @@
   "product": "גמל",
   "via": "cloud",
   "not_returns": true,
-  "parser_version": 1
+  "parser_version": 3,
+  "parse_error": "file missing"
  },
  "https://gemel.huji.ac.il/wp-content/uploads/2025/10/510960586_g9817_Yield325.xlsx": {
   "legal_id": "510960586",
@@ -639,7 +643,7 @@
   "source_page": "https://gemel.huji.ac.il/%d7%93%d7%99%d7%95%d7%95%d7%97%d7%99%d7%9d/",
   "product": "גמל",
   "via": "cloud",
-  "parser_version": 1,
+  "parser_version": 3,
   "tracks": 1,
   "file_year": 2025
  },
@@ -657,7 +661,7 @@
   "source_page": "https://gemel.huji.ac.il/%d7%93%d7%99%d7%95%d7%95%d7%97%d7%99%d7%9d/",
   "product": "גמל",
   "via": "cloud",
-  "parser_version": 1,
+  "parser_version": 3,
   "tracks": 1,
   "file_year": 2025
  },
@@ -675,7 +679,7 @@
   "source_page": "https://gemel.huji.ac.il/%d7%93%d7%99%d7%95%d7%95%d7%97%d7%99%d7%9d/",
   "product": "גמל",
   "via": "cloud",
-  "parser_version": 1,
+  "parser_version": 3,
   "tracks": 1,
   "file_year": 2025
  },
@@ -693,7 +697,7 @@
   "source_page": "https://gemel.huji.ac.il/%d7%93%d7%99%d7%95%d7%95%d7%97%d7%99%d7%9d/",
   "product": "גמל",
   "via": "cloud",
-  "parser_version": 1,
+  "parser_version": 3,
   "tracks": 1,
   "file_year": 2025
  },
@@ -711,7 +715,7 @@
   "source_page": "https://gemel.huji.ac.il/%d7%93%d7%99%d7%95%d7%95%d7%97%d7%99%d7%9d/",
   "product": "גמל",
   "via": "cloud",
-  "parser_version": 1,
+  "parser_version": 3,
   "tracks": 1,
   "file_year": 2025
  }

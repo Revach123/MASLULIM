@@ -13,7 +13,7 @@
   "source_page": "https://keren-kesem.co.il/yields-components-and-their-contribution-2/",
   "product": "גמל",
   "via": "cloud",
-  "parser_version": 1,
+  "parser_version": 3,
   "tracks": 1,
   "file_year": 2025
  },
@@ -31,7 +31,7 @@
   "source_page": "https://keren-kesem.co.il/yields-components-and-their-contribution-2/",
   "product": "גמל",
   "via": "cloud",
-  "parser_version": 1,
+  "parser_version": 3,
   "tracks": 1,
   "file_year": 2025
  },
@@ -49,7 +49,7 @@
   "source_page": "https://keren-kesem.co.il/yields-components-and-their-contribution-2/",
   "product": "גמל",
   "via": "cloud",
-  "parser_version": 1,
+  "parser_version": 3,
   "tracks": 1,
   "file_year": 2025
  },
@@ -67,7 +67,7 @@
   "source_page": "https://keren-kesem.co.il/yields-components-and-their-contribution-2/",
   "product": "גמל",
   "via": "cloud",
-  "parser_version": 1,
+  "parser_version": 3,
   "tracks": 1,
   "file_year": 2025
  },
@@ -85,7 +85,7 @@
   "source_page": "https://keren-kesem.co.il/yields-components-and-their-contribution-2/",
   "product": "גמל",
   "via": "cloud",
-  "parser_version": 1,
+  "parser_version": 3,
   "tracks": 1,
   "file_year": 2024
  },
@@ -103,7 +103,7 @@
   "source_page": "https://keren-kesem.co.il/yields-components-and-their-contribution-2/",
   "product": "גמל",
   "via": "cloud",
-  "parser_version": 1,
+  "parser_version": 3,
   "tracks": 1,
   "file_year": 2024
  },
@@ -121,7 +121,7 @@
   "source_page": "https://keren-kesem.co.il/yields-components-and-their-contribution-2/",
   "product": "גמל",
   "via": "cloud",
-  "parser_version": 1,
+  "parser_version": 3,
   "tracks": 1,
   "file_year": 2024
  },
@@ -139,7 +139,7 @@
   "source_page": "https://keren-kesem.co.il/yields-components-and-their-contribution-2/",
   "product": "גמל",
   "via": "cloud",
-  "parser_version": 1,
+  "parser_version": 3,
   "tracks": 1,
   "file_year": 2024
  },
@@ -157,7 +157,7 @@
   "source_page": "https://keren-kesem.co.il/yields-components-and-their-contribution-2/",
   "product": "גמל",
   "via": "cloud",
-  "parser_version": 1,
+  "parser_version": 3,
   "tracks": 1,
   "file_year": 2024
  },
@@ -175,7 +175,7 @@
   "source_page": "https://keren-kesem.co.il/yields-components-and-their-contribution-2/",
   "product": "גמל",
   "via": "cloud",
-  "parser_version": 1,
+  "parser_version": 3,
   "tracks": 1,
   "file_year": 2024
  },
@@ -193,7 +193,7 @@
   "source_page": "https://keren-kesem.co.il/yields-components-and-their-contribution-2/",
   "product": "גמל",
   "via": "cloud",
-  "parser_version": 1,
+  "parser_version": 3,
   "tracks": 1,
   "file_year": 2024
  },
@@ -211,7 +211,7 @@
   "source_page": "https://keren-kesem.co.il/yields-components-and-their-contribution-2/",
   "product": "גמל",
   "via": "cloud",
-  "parser_version": 1,
+  "parser_version": 3,
   "tracks": 1,
   "file_year": 2024
  },
@@ -229,7 +229,7 @@
   "source_page": "https://keren-kesem.co.il/yields-components-and-their-contribution-2/",
   "product": "גמל",
   "via": "cloud",
-  "parser_version": 1,
+  "parser_version": 3,
   "tracks": 1,
   "file_year": 2024
  },
@@ -247,7 +247,7 @@
   "source_page": "https://keren-kesem.co.il/yields-components-and-their-contribution-2/",
   "product": "גמל",
   "via": "cloud",
-  "parser_version": 1,
+  "parser_version": 3,
   "tracks": 1,
   "file_year": 2024
  },
@@ -265,7 +265,7 @@
   "source_page": "https://keren-kesem.co.il/yields-components-and-their-contribution-2/",
   "product": "גמל",
   "via": "cloud",
-  "parser_version": 1,
+  "parser_version": 3,
   "tracks": 1,
   "file_year": 2023
  },
@@ -283,7 +283,7 @@
   "source_page": "https://keren-kesem.co.il/yields-components-and-their-contribution-2/",
   "product": "גמל",
   "via": "cloud",
-  "parser_version": 1,
+  "parser_version": 3,
   "tracks": 1,
   "file_year": 2023
  },
@@ -302,7 +302,8 @@
   "product": "גמל",
   "via": "cloud",
   "not_returns": true,
-  "parser_version": 1
+  "parser_version": 3,
+  "parse_error": "file missing"
  },
  "https://keren-kesem.co.il/wp-content/uploads/2023/06/מרכיבי-תשואה-ותרומתם-מסלול-מניות-רבעון-1-2023.xlsx": {
   "legal_id": "520029620",
@@ -319,7 +320,8 @@
   "product": "גמל",
   "via": "cloud",
   "not_returns": true,
-  "parser_version": 1
+  "parser_version": 3,
+  "parse_error": "file missing"
  },
  "https://keren-kesem.co.il/wp-content/uploads/2024/01/מרכיבי-תשואה-ותרומתם-מסלול-כללי-רבעון-4-2023.xlsx": {
   "legal_id": "520029620",
@@ -335,7 +337,7 @@
   "source_page": "https://keren-kesem.co.il/yields-components-and-their-contribution-2/",
   "product": "גמל",
   "via": "cloud",
-  "parser_version": 1,
+  "parser_version": 3,
   "tracks": 1,
   "file_year": 2023
  },
@@ -353,7 +355,7 @@
   "source_page": "https://keren-kesem.co.il/yields-components-and-their-contribution-2/",
   "product": "גמל",
   "via": "cloud",
-  "parser_version": 1,
+  "parser_version": 3,
   "tracks": 1,
   "file_year": 2023
  },
@@ -371,7 +373,7 @@
   "source_page": "https://keren-kesem.co.il/yields-components-and-their-contribution-2/",
   "product": "גמל",
   "via": "cloud",
-  "parser_version": 1,
+  "parser_version": 3,
   "tracks": 1,
   "file_year": 2023
  },
@@ -389,7 +391,7 @@
   "source_page": "https://keren-kesem.co.il/yields-components-and-their-contribution-2/",
   "product": "גמל",
   "via": "cloud",
-  "parser_version": 1,
+  "parser_version": 3,
   "tracks": 1,
   "file_year": 2023
  },
@@ -407,7 +409,7 @@
   "source_page": "https://keren-kesem.co.il/yields-components-and-their-contribution-2/",
   "product": "גמל",
   "via": "cloud",
-  "parser_version": 1,
+  "parser_version": 3,
   "tracks": 1,
   "file_year": 2023
  },
@@ -425,7 +427,7 @@
   "source_page": "https://keren-kesem.co.il/yields-components-and-their-contribution-2/",
   "product": "גמל",
   "via": "cloud",
-  "parser_version": 1,
+  "parser_version": 3,
   "tracks": 1,
   "file_year": 2023
  },
@@ -443,7 +445,7 @@
   "source_page": "https://keren-kesem.co.il/yields-components-and-their-contribution-2/",
   "product": "גמל",
   "via": "cloud",
-  "parser_version": 1,
+  "parser_version": 3,
   "tracks": 1,
   "file_year": 2023
  },
@@ -461,7 +463,7 @@
   "source_page": "https://keren-kesem.co.il/yields-components-and-their-contribution-2/",
   "product": "גמל",
   "via": "cloud",
-  "parser_version": 1,
+  "parser_version": 3,
   "tracks": 1,
   "file_year": 2023
  },
@@ -480,7 +482,8 @@
   "product": "גמל",
   "via": "cloud",
   "not_returns": true,
-  "parser_version": 1
+  "parser_version": 3,
+  "parse_error": "file missing"
  },
  "https://keren-kesem.co.il/wp-content/uploads/2022/12/מרכיבי-תשואה-ותרומתם-מסלול-מניות-רבעון-3-2022.xlsx": {
   "legal_id": "520029620",
@@ -497,7 +500,8 @@
   "product": "גמל",
   "via": "cloud",
   "not_returns": true,
-  "parser_version": 1
+  "parser_version": 3,
+  "parse_error": "file missing"
  },
  "https://keren-kesem.co.il/wp-content/uploads/2022/09/מרכיבי-תשואה-ותרומתם-מסלול-מניות-רבעון-2-2022.xlsx": {
   "legal_id": "520029620",
@@ -514,7 +518,8 @@
   "product": "גמל",
   "via": "cloud",
   "not_returns": true,
-  "parser_version": 1
+  "parser_version": 3,
+  "parse_error": "file missing"
  },
  "https://keren-kesem.co.il/wp-content/uploads/2022/09/מרכיבי-תשואה-ותרומתם-מסלול-מניות-רבעון-1-2022.xlsx": {
   "legal_id": "520029620",
@@ -531,7 +536,8 @@
   "product": "גמל",
   "via": "cloud",
   "not_returns": true,
-  "parser_version": 1
+  "parser_version": 3,
+  "parse_error": "file missing"
  },
  "https://keren-kesem.co.il/wp-content/uploads/2023/03/מרכיבי-תשואה-ותרומתם-מסלול-כללי-רבעון-4-2022.xlsx": {
   "legal_id": "520029620",
@@ -547,7 +553,7 @@
   "source_page": "https://keren-kesem.co.il/yields-components-and-their-contribution-2/",
   "product": "גמל",
   "via": "cloud",
-  "parser_version": 1,
+  "parser_version": 3,
   "tracks": 1,
   "file_year": 2022
  },
@@ -565,7 +571,7 @@
   "source_page": "https://keren-kesem.co.il/yields-components-and-their-contribution-2/",
   "product": "גמל",
   "via": "cloud",
-  "parser_version": 1,
+  "parser_version": 3,
   "tracks": 1,
   "file_year": 2022
  },
@@ -583,7 +589,7 @@
   "source_page": "https://keren-kesem.co.il/yields-components-and-their-contribution-2/",
   "product": "גמל",
   "via": "cloud",
-  "parser_version": 1,
+  "parser_version": 3,
   "tracks": 1,
   "file_year": 2022
  },
@@ -601,7 +607,7 @@
   "source_page": "https://keren-kesem.co.il/yields-components-and-their-contribution-2/",
   "product": "גמל",
   "via": "cloud",
-  "parser_version": 1,
+  "parser_version": 3,
   "tracks": 1,
   "file_year": 2022
  },
@@ -619,7 +625,7 @@
   "source_page": "https://keren-kesem.co.il/yields-components-and-their-contribution-2/",
   "product": "גמל",
   "via": "cloud",
-  "parser_version": 1,
+  "parser_version": 3,
   "tracks": 1,
   "file_year": 2022
  },
@@ -637,7 +643,7 @@
   "source_page": "https://keren-kesem.co.il/yields-components-and-their-contribution-2/",
   "product": "גמל",
   "via": "cloud",
-  "parser_version": 1,
+  "parser_version": 3,
   "tracks": 1,
   "file_year": 2022
  },
@@ -655,7 +661,7 @@
   "source_page": "https://keren-kesem.co.il/yields-components-and-their-contribution-2/",
   "product": "גמל",
   "via": "cloud",
-  "parser_version": 1,
+  "parser_version": 3,
   "tracks": 1,
   "file_year": 2022
  },
@@ -673,7 +679,7 @@
   "source_page": "https://keren-kesem.co.il/yields-components-and-their-contribution-2/",
   "product": "גמל",
   "via": "cloud",
-  "parser_version": 1,
+  "parser_version": 3,
   "tracks": 1,
   "file_year": 2022
  },
@@ -692,7 +698,8 @@
   "product": "גמל",
   "via": "cloud",
   "not_returns": true,
-  "parser_version": 1
+  "parser_version": 3,
+  "parse_error": "file missing"
  },
  "https://keren-kesem.co.il//wp-content/TifseyKupa4/49_מרכיבי_תשואה_מניות_3.xls": {
   "legal_id": "520029620",
@@ -709,7 +716,8 @@
   "product": "גמל",
   "via": "cloud",
   "not_returns": true,
-  "parser_version": 1
+  "parser_version": 3,
+  "parse_error": "file missing"
  },
  "https://keren-kesem.co.il//wp-content/TifseyKupa4/49_מרכיבי_תשואה_ותרומתם-מסלול_מניות,רבעון_4_2021.xls": {
   "legal_id": "520029620",
@@ -726,7 +734,8 @@
   "product": "גמל",
   "via": "cloud",
   "not_returns": true,
-  "parser_version": 1
+  "parser_version": 3,
+  "parse_error": "file missing"
  },
  "https://keren-kesem.co.il//wp-content/TifseyKupa4/49_מרכיבי_תשואה_ותרומתם_מסלול_כללי_רבעון_2_2021.xls": {
   "legal_id": "520029620",
@@ -742,7 +751,7 @@
   "source_page": "https://keren-kesem.co.il/yields-components-and-their-contribution-2/",
   "product": "גמל",
   "via": "cloud",
-  "parser_version": 1,
+  "parser_version": 3,
   "tracks": 1,
   "file_year": 2021
  },
@@ -760,7 +769,7 @@
   "source_page": "https://keren-kesem.co.il/yields-components-and-their-contribution-2/",
   "product": "גמל",
   "via": "cloud",
-  "parser_version": 1,
+  "parser_version": 3,
   "tracks": 1,
   "file_year": 2021
  },
@@ -778,7 +787,7 @@
   "source_page": "https://keren-kesem.co.il/yields-components-and-their-contribution-2/",
   "product": "גמל",
   "via": "cloud",
-  "parser_version": 1,
+  "parser_version": 3,
   "tracks": 1,
   "file_year": 2021
  },
@@ -796,7 +805,7 @@
   "source_page": "https://keren-kesem.co.il/yields-components-and-their-contribution-2/",
   "product": "גמל",
   "via": "cloud",
-  "parser_version": 1,
+  "parser_version": 3,
   "tracks": 1,
   "file_year": 2021
  }

@@ -14,7 +14,8 @@
   "product": "גמל",
   "via": "cloud",
   "not_returns": true,
-  "parser_version": 1
+  "parser_version": 3,
+  "parse_error": "file missing"
  },
  "https://www.fnx.co.il/Documents/premiot_nesiot_yomiot.xls": {
   "legal_id": "515447035",
@@ -31,7 +32,8 @@
   "product": "גמל",
   "via": "cloud",
   "not_returns": true,
-  "parser_version": 1
+  "parser_version": 3,
+  "parse_error": "file missing"
  },
  "https://www.fnx.co.il/sites/docs/genery/DocLib9/annuity-factor.xls": {
   "legal_id": "515447035",
@@ -48,7 +50,8 @@
   "product": "גמל",
   "via": "cloud",
   "not_returns": true,
-  "parser_version": 1
+  "parser_version": 3,
+  "parse_error": "file missing"
  },
  "http://www.fnx.co.il/sites/docs/genery/nimleyisraeldocs/מרכיבי-תשואה-מרכזית-לפיצויים-רבעון2-26.xlsx": {
   "legal_id": "515447035",
@@ -64,7 +67,7 @@
   "source_page": "https://www.fnx.co.il/SPF/iframe-namal-markivei-tsuua.aspx",
   "product": null,
   "via": "cloud",
-  "parser_version": 1,
+  "parser_version": 3,
   "tracks": 11,
   "file_year": 2026
  },
@@ -82,7 +85,7 @@
   "source_page": "https://www.fnx.co.il/SPF/iframe-namal-markivei-tsuua.aspx",
   "product": null,
   "via": "cloud",
-  "parser_version": 1,
+  "parser_version": 3,
   "tracks": 11,
   "file_year": 2026
  },
@@ -100,7 +103,7 @@
   "source_page": "https://www.fnx.co.il/SPF/iframe-namal-markivei-tsuua.aspx",
   "product": null,
   "via": "cloud",
-  "parser_version": 1,
+  "parser_version": 3,
   "tracks": 11,
   "file_year": 2025
  },
@@ -118,7 +121,7 @@
   "source_page": "https://www.fnx.co.il/SPF/iframe-namal-markivei-tsuua.aspx",
   "product": null,
   "via": "cloud",
-  "parser_version": 1,
+  "parser_version": 3,
   "tracks": 11,
   "file_year": 2025
  },
@@ -136,7 +139,7 @@
   "source_page": "https://www.fnx.co.il/SPF/iframe-namal-markivei-tsuua.aspx",
   "product": null,
   "via": "cloud",
-  "parser_version": 1,
+  "parser_version": 3,
   "tracks": 11,
   "file_year": 2025
  },
@@ -154,7 +157,7 @@
   "source_page": "https://www.fnx.co.il/SPF/iframe-namal-markivei-tsuua.aspx",
   "product": null,
   "via": "cloud",
-  "parser_version": 1,
+  "parser_version": 3,
   "tracks": 11,
   "file_year": 2025
  },
@@ -172,7 +175,7 @@
   "source_page": "https://www.fnx.co.il/SPF/iframe-namal-markivei-tsuua.aspx",
   "product": null,
   "via": "cloud",
-  "parser_version": 1,
+  "parser_version": 3,
   "tracks": 11,
   "file_year": 2024
  },
@@ -190,7 +193,7 @@
   "source_page": "https://www.fnx.co.il/SPF/iframe-namal-markivei-tsuua.aspx",
   "product": null,
   "via": "cloud",
-  "parser_version": 1,
+  "parser_version": 3,
   "tracks": 11,
   "file_year": 2024
  },
@@ -208,7 +211,7 @@
   "source_page": "https://www.fnx.co.il/SPF/iframe-namal-markivei-tsuua.aspx",
   "product": null,
   "via": "cloud",
-  "parser_version": 1,
+  "parser_version": 3,
   "tracks": 11,
   "file_year": 2024
  },
@@ -226,7 +229,7 @@
   "source_page": "https://www.fnx.co.il/SPF/iframe-namal-markivei-tsuua.aspx",
   "product": null,
   "via": "cloud",
-  "parser_version": 1,
+  "parser_version": 3,
   "tracks": 11,
   "file_year": 2024
  }
