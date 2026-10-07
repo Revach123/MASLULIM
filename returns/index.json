@@ -1,13 +1,26 @@
 {
  "totals": {
   "companies": 76,
-  "with_data": 1,
-  "tracks": 1,
+  "with_data": 2,
+  "tracks": 4,
   "registry_tracks": 1289,
-  "registry_found": 0,
-  "docs": 6
+  "registry_found": 3,
+  "docs": 59
  },
  "companies": [
+  {
+   "legal_id": "510773922",
+   "company": "ארם גמולים - חברה לניהול קופות גמל בע''מ",
+   "tracks": 3,
+   "tracks_numbered": 3,
+   "registry_tracks": 3,
+   "registry_found": 3,
+   "registry_coverage": 100.0,
+   "first_month": "2022-01",
+   "last_month": "2026-06",
+   "docs_returns": 53,
+   "nostro": false
+  },
   {
    "legal_id": "511789190",
    "company": "\"עתודות\" - קרן פנסיה לשכירים ועצמאיים בע\"מ",
