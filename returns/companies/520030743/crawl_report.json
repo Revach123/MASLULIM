@@ -1,0 +1,25 @@
+{
+ "legal_id": "520030743",
+ "company": "החברה לניהול קרן השתלמות לשופטים בע\"מ",
+ "run": "2026-10-07T18:15:29+00:00",
+ "errors": [
+  "ttps://www.keren-shoftim.org.il/wp-content/uploads/2020/07/50_520028861_g1454_Yield120.xls -> 404",
+  "https://www.keren-shoftim.org.il/wp-content/uploads/2020/07/50_520028861_g292_Yield120.xls -> 404"
+ ],
+ "seeds": {
+  "config": 0,
+  "discovered": 0,
+  "policy_snapshot": 0,
+  "policy_snapshot_docs": 0,
+  "search": 0,
+  "sitemap": 1
+ },
+ "imported_from_policy": 0,
+ "pages": 13,
+ "pages_failed": [],
+ "candidates": 27,
+ "docs": 25,
+ "new_docs": 25,
+ "index_size": 25,
+ "seconds": 43
+}
