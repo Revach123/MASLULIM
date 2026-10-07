@@ -1,11 +1,11 @@
 {
  "totals": {
   "companies": 76,
-  "with_data": 37,
-  "tracks": 762,
+  "with_data": 38,
+  "tracks": 772,
   "registry_tracks": 1289,
-  "registry_found": 362,
-  "docs": 4503
+  "registry_found": 365,
+  "docs": 4687
  },
  "companies": [
   {
@@ -449,6 +449,19 @@
    "last_month": "2026-06",
    "docs_returns": 50,
    "nostro": true
+  },
+  {
+   "legal_id": "520042573",
+   "company": "עו\"ס - חברה לניהול קופות גמל בע\"מ",
+   "tracks": 10,
+   "tracks_numbered": 8,
+   "registry_tracks": 3,
+   "registry_found": 3,
+   "registry_coverage": 100.0,
+   "first_month": "2010-01",
+   "last_month": "2026-06",
+   "docs_returns": 184,
+   "nostro": false
   },
   {
    "legal_id": "520042615",
