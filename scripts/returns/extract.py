@@ -36,6 +36,15 @@ def norm_name(s):
     return " ".join(s.split())
 
 
+def display_name(s):
+    """שם לתצוגה: בלי קידומת החברה ("הכשרה חברה לביטוח - "), בלי "מספר קופה 62" ובלי קוד פנימי צמוד ("304ילין")."""
+    s = re.sub(r"\s*\(?\s*(מספר|מס['׳\"]?)\s*(ה?קופה|ה?מסלול|אוצר)\s*:?\s*\d+\s*\)?", " ", s or "")
+    if " - " in s and re.search(r"חברה|בע[\"״]?מ|ביטוח\s*$", s.split(" - ", 1)[0]):
+        s = s.split(" - ", 1)[1]
+    s = re.sub(r"^\d+(?=[א-ת])", "", s.strip())
+    return " ".join(s.split()) or None
+
+
 def _toks(s):
     return set(norm_name(s).split())
 
@@ -232,7 +241,7 @@ def build(lid: str, out: Path, index: dict, reg: Registry):
     tracks = {k: t for k, t in tracks.items() if t["m"] or t["ytd"]}
     for t in tracks.values():
         t.pop("_rank")
-        t["name"] = t["names"][-1] if t["names"] else None
+        t["name"] = display_name(t["names"][-1]) if t["names"] else None
         if t["track_no"]:
             t["registry_name"] = reg.by_co.get(lid, {}).get(t["track_no"]) or reg.names.get(t["track_no"])
             t["product"] = reg.domain.get(t["track_no"])
