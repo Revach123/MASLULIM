@@ -1,11 +1,11 @@
 {
  "totals": {
   "companies": 76,
-  "with_data": 22,
-  "tracks": 484,
+  "with_data": 23,
+  "tracks": 487,
   "registry_tracks": 1289,
-  "registry_found": 212,
-  "docs": 2935
+  "registry_found": 215,
+  "docs": 2953
  },
  "companies": [
   {
@@ -292,6 +292,19 @@
    "first_month": "2020-01",
    "last_month": "2026-06",
    "docs_returns": 84,
+   "nostro": false
+  },
+  {
+   "legal_id": "520028861",
+   "company": "החברה לניהול קרן השתלמות למשפטנים בע\"מ",
+   "tracks": 3,
+   "tracks_numbered": 3,
+   "registry_tracks": 3,
+   "registry_found": 3,
+   "registry_coverage": 100.0,
+   "first_month": "2025-01",
+   "last_month": "2026-06",
+   "docs_returns": 18,
    "nostro": false
   }
  ]
