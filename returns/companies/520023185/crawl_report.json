@@ -1,0 +1,31 @@
+{
+ "legal_id": "520023185",
+ "company": "הפניקס חברה לביטוח בע\"מ",
+ "run": "2026-10-07T18:09:12+00:00",
+ "errors": [
+  "https://www.fnx.co.il/SPF/iframe-namal-ashdod-tsua.aspx -> not_a_document",
+  "www.fnx.co.il/sites/docs/genery/ashdodport/מרכיבי_תשואה_מרכזית_לפיצויים-רבעון2-25_חנא.xlsx -> not_a_document",
+  "https://www.fnx.co.il/SPF/iframe-namal-ashdod-tsua.aspx?page=2 -> not_a_document"
+ ],
+ "seeds": {
+  "config": 0,
+  "discovered": 0,
+  "policy_snapshot": 0,
+  "policy_snapshot_docs": 0,
+  "search": 0,
+  "sitemap": 8
+ },
+ "imported_from_policy": 0,
+ "pages": 30,
+ "pages_failed": [
+  "https://www.fnx.co.il/savings/quarterly-yield-components-maslul-life/: 502",
+  "https://www.fnx.co.il/savings/quarterly-yield-components-ted-yud/: 502",
+  "https://www.fnx.co.il/gemel/gemel-about-the-company-2017/gemel-yield-components/: 502",
+  "https://www.fnx.co.il/gemel/gemel-kitzva/gemel-namal-israel/gemel-namal-markivey-tsua/: 500"
+ ],
+ "candidates": 40,
+ "docs": 37,
+ "new_docs": 37,
+ "index_size": 37,
+ "seconds": 1696
+}
