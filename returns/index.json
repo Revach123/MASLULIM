@@ -1,0 +1,25 @@
+{
+ "totals": {
+  "companies": 76,
+  "with_data": 1,
+  "tracks": 1,
+  "registry_tracks": 1289,
+  "registry_found": 0,
+  "docs": 6
+ },
+ "companies": [
+  {
+   "legal_id": "511789190",
+   "company": "\"עתודות\" - קרן פנסיה לשכירים ועצמאיים בע\"מ",
+   "tracks": 1,
+   "tracks_numbered": 1,
+   "registry_tracks": 0,
+   "registry_found": 0,
+   "registry_coverage": null,
+   "first_month": "2021-01",
+   "last_month": "2026-06",
+   "docs_returns": 6,
+   "nostro": false
+  }
+ ]
+}
