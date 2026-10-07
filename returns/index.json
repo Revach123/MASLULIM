@@ -1,11 +1,11 @@
 {
  "totals": {
   "companies": 76,
-  "with_data": 30,
-  "tracks": 617,
+  "with_data": 31,
+  "tracks": 620,
   "registry_tracks": 1289,
-  "registry_found": 282,
-  "docs": 3966
+  "registry_found": 284,
+  "docs": 3981
  },
  "companies": [
   {
@@ -396,6 +396,19 @@
    "first_month": "2021-01",
    "last_month": "2026-06",
    "docs_returns": 47,
+   "nostro": false
+  },
+  {
+   "legal_id": "520034968",
+   "company": "החברה המנהלת של קרן השתלמות של עובדי חברת החשמל לישראל בע\"מ",
+   "tracks": 3,
+   "tracks_numbered": 2,
+   "registry_tracks": 2,
+   "registry_found": 2,
+   "registry_coverage": 100.0,
+   "first_month": "2024-01",
+   "last_month": "2026-06",
+   "docs_returns": 15,
    "nostro": false
   }
  ]
