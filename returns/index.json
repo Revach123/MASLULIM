@@ -1,11 +1,11 @@
 {
  "totals": {
   "companies": 76,
-  "with_data": 43,
-  "tracks": 798,
+  "with_data": 44,
+  "tracks": 801,
   "registry_tracks": 1289,
   "registry_found": 382,
-  "docs": 5065
+  "docs": 5099
  },
  "companies": [
   {
@@ -331,6 +331,19 @@
    "first_month": "2022-01",
    "last_month": "2026-06",
    "docs_returns": 53,
+   "nostro": false
+  },
+  {
+   "legal_id": "520023094",
+   "company": "גילעד גימלאות לעובדים דתיים בע\"מ",
+   "tracks": 3,
+   "tracks_numbered": 1,
+   "registry_tracks": 0,
+   "registry_found": 0,
+   "registry_coverage": null,
+   "first_month": "2018-01",
+   "last_month": "2026-06",
+   "docs_returns": 34,
    "nostro": false
   },
   {
