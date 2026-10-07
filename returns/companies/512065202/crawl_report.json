@@ -1,0 +1,25 @@
+{
+ "legal_id": "512065202",
+ "company": "מיטב גמל ופנסיה בע\"מ",
+ "run": "2026-10-07T17:52:50+00:00",
+ "errors": [
+  "https://marketing-cms-c.meitav.co.il/media/3pan1pcq/11349124-הצטרפות-קרן-פנסיה-כללית.pdf -> ERR",
+  "lighthouse-cloud.com/kms/lh/archive/externalFiles/681c97e3-e112-4cb8-9260-00f5616ee75d.pdf -> not_a_document"
+ ],
+ "seeds": {
+  "config": 0,
+  "discovered": 0,
+  "policy_snapshot": 0,
+  "policy_snapshot_docs": 0,
+  "search": 0,
+  "sitemap": 7
+ },
+ "imported_from_policy": 0,
+ "pages": 30,
+ "pages_failed": [],
+ "candidates": 110,
+ "docs": 108,
+ "new_docs": 108,
+ "index_size": 108,
+ "seconds": 384
+}
