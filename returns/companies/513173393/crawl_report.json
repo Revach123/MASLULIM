@@ -1,0 +1,27 @@
+{
+ "legal_id": "513173393",
+ "company": "אלטשולר שחם גמל ופנסיה בע\"מ",
+ "run": "2026-10-07T18:03:37+00:00",
+ "errors": [],
+ "seeds": {
+  "config": 0,
+  "discovered": 0,
+  "policy_snapshot": 0,
+  "policy_snapshot_docs": 0,
+  "search": 0,
+  "sitemap": 0
+ },
+ "imported_from_policy": 0,
+ "pages": 30,
+ "pages_failed": [
+  "https://Digitalforms.as-invest.co.il/pension-express?utm_source=Website&utm_medium=JoinUsHeader: 403",
+  "https://digitalforms.as-invest.co.il/join-gemel-invest-rep/page0/0?utm_source=Website&utm_medium=JoinUsHeader: 403",
+  "https://Digitalforms.as-invest.co.il/pension-express?utm_source=Website&utm_medium=JoinUsFooter: 403",
+  "https://digitalforms.as-invest.co.il/join-gemel-invest-rep/page0/0?utm_source=Website&utm_medium=JoinUsFooter: 403"
+ ],
+ "candidates": 0,
+ "docs": 0,
+ "new_docs": 0,
+ "index_size": 0,
+ "seconds": 37
+}
