@@ -1,11 +1,11 @@
 {
  "totals": {
   "companies": 76,
-  "with_data": 36,
-  "tracks": 759,
+  "with_data": 37,
+  "tracks": 762,
   "registry_tracks": 1289,
   "registry_found": 362,
-  "docs": 4450
+  "docs": 4503
  },
  "companies": [
   {
@@ -474,6 +474,19 @@
    "first_month": "2021-01",
    "last_month": "2026-06",
    "docs_returns": 140,
+   "nostro": false
+  },
+  {
+   "legal_id": "570007476",
+   "company": "קרן ביטוח ופנסיה לפועלים חקלאים ובלתי מקצועיים בישראל אגודה שיתופית בע\"מ",
+   "tracks": 3,
+   "tracks_numbered": 3,
+   "registry_tracks": 1,
+   "registry_found": 0,
+   "registry_coverage": 0.0,
+   "first_month": "2022-01",
+   "last_month": "2026-06",
+   "docs_returns": 53,
    "nostro": false
   }
  ]
