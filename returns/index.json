@@ -1,11 +1,11 @@
 {
  "totals": {
   "companies": 76,
-  "with_data": 3,
-  "tracks": 5,
+  "with_data": 4,
+  "tracks": 11,
   "registry_tracks": 1289,
-  "registry_found": 4,
-  "docs": 81
+  "registry_found": 10,
+  "docs": 111
  },
  "companies": [
   {
@@ -32,6 +32,19 @@
    "first_month": "2021-01",
    "last_month": "2026-06",
    "docs_returns": 6,
+   "nostro": false
+  },
+  {
+   "legal_id": "512362914",
+   "company": "מחוג - מינהל גמל לעובדי חברת חשמל לישראל בע\"מ",
+   "tracks": 6,
+   "tracks_numbered": 6,
+   "registry_tracks": 7,
+   "registry_found": 6,
+   "registry_coverage": 85.7,
+   "first_month": "2025-01",
+   "last_month": "2026-06",
+   "docs_returns": 30,
    "nostro": false
   },
   {
