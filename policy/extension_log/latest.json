@@ -1,7 +1,7 @@
 {
  "extension_version": "2.52.0",
  "started": "2026-10-07T19:05:24.198Z",
- "updated": "2026-10-07T19:11:24.499Z",
+ "updated": "2026-10-07T19:14:24.497Z",
  "final": false,
  "stopped": false,
  "rules_from_github": true,
@@ -21,7 +21,7 @@
   "page_cache_days": 3
  },
  "total_sites": 14,
- "done_sites": 8,
+ "done_sites": 13,
  "new_docs": 0,
  "skipped_complete": [
   {
@@ -40,31 +40,10 @@
  "active": [
   {
    "name": "מנורה מבטחים פנסיה וגמל בע\"מ",
-   "page": "https://www.menoramivt.co.il/funds/pension-and-gemel/gemel-hishtalmut-list/menora-gemel/9791-fund",
-   "page_no": 63,
-   "pages": 119,
-   "step": "[3 במקביל] טוען עמוד"
-  },
-  {
-   "name": "עגור חברה לניהול קופות גמל וקרנות השתלמות בע\"מ",
-   "page": "https://kereni.co.il/%D7%9E%D7%93%D7%99%D7%A0%D7%99%D7%95%D7%AA-%D7%94%D7%A9%D7%A7%D7%A2%D7%94-%D7%95%D7%A0%D7%94%D7%9C%D7%99%D7%9D/",
-   "page_no": 1,
-   "pages": 1,
-   "step": "מוריד קובץ 77/84"
-  },
-  {
-   "name": "מנורה מבטחים והסתדרות המהנדסים ניהול קופות גמל בע\"מ",
-   "page": "https://www.menoramivt.co.il/funds/about-menora/engineers/omega-fund/omega-9802",
-   "page_no": 9,
-   "pages": 13,
-   "step": "טוען עמוד"
-  },
-  {
-   "name": "איילון חברה לביטוח בע\"מ",
-   "page": "https://www.ayalon-ins.co.il/about-us/about-ayalon/investments/",
-   "page_no": 8,
-   "pages": 12,
-   "step": "פותח אקורדיונים ואוסף קישורים"
+   "page": "https://www.menoramivt.co.il/funds/pension-and-gemel/gemel-hishtalmut-list/menroa-keren-hishtalmut/menroa-keren-hishtalmut-14676",
+   "page_no": 91,
+   "pages": 120,
+   "step": "[3 במקביל] מוריד קובץ 5/5"
   }
  ],
  "sites": [
@@ -21927,6 +21906,2542 @@
    "diag": [
     "קרנות השתלמות למור: links=64 files=54 clicked=0 captured=0 selected=26",
     "קרנות השתלמות למור: links=64 files=54 clicked=0 captured=0 selected=27"
+   ],
+   "new_files": []
+  },
+  {
+   "legal_id": "520024985",
+   "name": "עגור חברה לניהול קופות גמל וקרנות השתלמות בע\"מ",
+   "pages": [
+    {
+     "url": "https://kereni.co.il/%D7%9E%D7%93%D7%99%D7%A0%D7%99%D7%95%D7%AA-%D7%94%D7%A9%D7%A7%D7%A2%D7%94-%D7%95%D7%A0%D7%94%D7%9C%D7%99%D7%9D/",
+     "cache": "hit",
+     "links": 208,
+     "followed": [],
+     "files": 173,
+     "clicked": 0,
+     "captured": 0,
+     "selected": [
+      "https://kereni.co.il/wp-content/uploads/2024/01/מדיניות_מוצהרת_מסלול_כללי_2024-1.xls",
+      "https://kereni.co.il/wp-content/uploads/2024/01/עותק_של_עגור-_מדיניות_מוצהרת_2023_עיס_ומישור_שינויי_מיום_25.10.23.xls",
+      "https://kereni.co.il/wp-content/uploads/2024/01/עגור-_מדיניות_מוצהרת_2023_עיס_ומישור_שינויי_מיום_26.07.23.xls",
+      "https://kereni.co.il/wp-content/uploads/2024/01/עותק_של_עגור-_מדיניות_מוצהרת_2022_עיס_ומישור_מתוקן-9__1_.xls",
+      "https://kereni.co.il/wp-content/uploads/2024/01/עגור-_מדיניות_המלצה_למוצהרת_2023_עיס_ומישור1.xls",
+      "https://kereni.co.il/wp-content/uploads/2024/01/מדיניות_השקעה_מוצהרת_מעודכן_החל_מ-13.06.23___על_יסודי_2023.xls",
+      "https://kereni.co.il/wp-content/uploads/2024/01/מדניות_השקעה_מוצהרת_-_על_יסודי_2021.xlsx",
+      "https://kereni.co.il/wp-content/uploads/2024/01/מדיניות_השקעות_מוצהרת_2021_על_יסודי_כללי_-_מעודכן_נכון_ל_08.07.21.xlsx.xls",
+      "https://kereni.co.il/wp-content/uploads/2024/01/עגור_על_יסודי_כללי_מדיניות_מוצהרת_2020.xlsx",
+      "https://kereni.co.il/wp-content/uploads/2024/01/מדיניות_מוצהרת_2020_עגור_על_יסודי.xls",
+      "https://kereni.co.il/wp-content/uploads/2024/01/2019-policyAlYesodi.xls",
+      "https://kereni.co.il/wp-content/uploads/2024/01/7442.xls",
+      "https://kereni.co.il/wp-content/uploads/2024/01/7272.xls",
+      "https://kereni.co.il/wp-content/uploads/2024/01/6756.xls",
+      "https://kereni.co.il/wp-content/uploads/2024/01/מדיניות_מוצהרת_מסלולים_כשרים_2024-1.xls",
+      "https://kereni.co.il/wp-content/uploads/2024/01/עגור-_מדיניות_מוצהרת_2023_מסלולים_כשרים_שינויי_31.07.23.xls",
+      "https://kereni.co.il/wp-content/uploads/2024/01/מדיניות_השקעה_מוצהרת-_מסלולים_כשרים_2023.xls",
+      "https://kereni.co.il/wp-content/uploads/2024/01/עגור-_מדיניות_מוצהרת_2022_מסלולים_כשרים.xls",
+      "https://kereni.co.il/wp-content/uploads/2024/01/מדיניות_השקעות_מוצהרת_2021_על_יסודי_מסלול_כשר_-_מעודכן_נכון_ל_08.07.21.xlsx",
+      "https://kereni.co.il/wp-content/uploads/2024/01/מדניות_השקעה_מוצהרת_-_על_יסודי_הלכתי_2021.xls",
+      "https://kereni.co.il/wp-content/uploads/2024/01/מדיניות_מוצהרת_עגור_על-יסודי_כשר_עדכון_1_אפריל_2020.xlsx",
+      "https://kereni.co.il/wp-content/uploads/2024/01/מדיניות_מוצהרת_עגור_על_יסודי_מסלול_אגח.xlsx",
+      "https://kereni.co.il/wp-content/uploads/2024/01/2019-policyAlYesodiH.xls",
+      "https://kereni.co.il/wp-content/uploads/2024/01/7273.xls",
+      "https://kereni.co.il/wp-content/uploads/2024/01/6741.xls",
+      "https://kereni.co.il/wp-content/uploads/2024/01/מדיניות_מוצהרת_2024_מסלולי_אגח-1.xls",
+      "https://kereni.co.il/wp-content/uploads/2024/01/2023__מדיניות_השקעה_מוצהרת-_תיקי_אגח.xls",
+      "https://kereni.co.il/wp-content/uploads/2024/01/עותק_של_מדיניות_מוצהרת_ל2022_תיקי_אגח.xls",
+      "https://kereni.co.il/wp-content/uploads/2024/01/עגור-_מדניות_השקעה_מוצהרת_-_אגח_ללא_מניות_על_יסודי_2021.xlsx",
+      "https://kereni.co.il/wp-content/uploads/2024/01/מדיניות_מוצהרת_עגור_על_יסודי_מסלול_אגח-1.xlsx",
+      "https://kereni.co.il/wp-content/uploads/2024/01/2019-policyAlYesodiAgah.xlsx",
+      "https://kereni.co.il/wp-content/uploads/2024/01/7274.xls",
+      "https://kereni.co.il/wp-content/uploads/2024/01/6757.xls",
+      "https://kereni.co.il/wp-content/uploads/2026/01/עגור_2026_מסלולים_מישור.xls",
+      "https://kereni.co.il/wp-content/uploads/2025/03/עותק_של_עותק_של_עגור_מדיניות_מוצהרת_מסלול_כללי2025_הצעה_לשינויי_05.03.25.xls",
+      "https://kereni.co.il/wp-content/uploads/2025/01/עותק_של_עותק_של_עגור_מדיניות_מוצהרת_מסלול_כללי2025_הצעה.xls",
+      "https://kereni.co.il/wp-content/uploads/2024/01/מדיניות_מוצהרת_מסלול_כללי_2024-1-2.xls",
+      "https://kereni.co.il/wp-content/uploads/2024/01/עותק_של_עגור-_מדיניות_מוצהרת_2023_עיס_ומישור_שינויי_מיום_25.10.23-1.xls",
+      "https://kereni.co.il/wp-content/uploads/2024/01/עגור-_מדיניות_מוצהרת_2023_עיס_ומישור_שינויי_מיום_26.07.23-2.xls",
+      "https://kereni.co.il/wp-content/uploads/2024/01/מדיניות_השקעה_מוצהרת_מעודכן_החל_מ-13.06.23___מישור_2023.xls",
+      "https://kereni.co.il/wp-content/uploads/2024/01/עגור-_מדיניות_המלצה_למוצהרת_2023_עיס_ומישור1-1.xls",
+      "https://kereni.co.il/wp-content/uploads/2024/01/עותק_של_עגור-_מדיניות_מוצהרת_2022_עיס_ומישור_מתוקן-9__1_-1.xls",
+      "https://kereni.co.il/wp-content/uploads/2024/01/מדיניות_השקעות_מוצהרת_2021_מישור_כללי_-_מעודכן_נכון_ל_08.07.21.xlsx.xls",
+      "https://kereni.co.il/wp-content/uploads/2024/01/עגור-_מדיניות_מוצהרת_2020_מישור_.xls",
+      "https://kereni.co.il/wp-content/uploads/2024/01/מדיניות_2020_עגור_מישור.xls",
+      "https://kereni.co.il/wp-content/uploads/2024/01/2019-policyMishor.xls",
+      "https://kereni.co.il/wp-content/uploads/2024/01/7443.xls",
+      "https://kereni.co.il/wp-content/uploads/2024/01/7275.xls",
+      "https://kereni.co.il/wp-content/uploads/2024/01/6749.xls",
+      "https://kereni.co.il/wp-content/uploads/2024/01/מדניות_השקעה_מוצהרת_-_מישור_2021.xlsx",
+      "https://kereni.co.il/wp-content/uploads/2024/01/עגור-_מדיניות_מוצהרת_2020_מישור_-1.xls",
+      "https://kereni.co.il/wp-content/uploads/2024/01/מדיניות_2020_עגור_מישור-1.xls",
+      "https://kereni.co.il/wp-content/uploads/2024/01/2019-policyMishor-1.xls",
+      "https://kereni.co.il/wp-content/uploads/2024/01/7443-1.xls",
+      "https://kereni.co.il/wp-content/uploads/2024/01/7275-1.xls",
+      "https://kereni.co.il/wp-content/uploads/2024/01/6749-1.xls",
+      "https://kereni.co.il/wp-content/uploads/2026/01/עגור_מסלולים_כשר_מישור.xls",
+      "https://kereni.co.il/wp-content/uploads/2025/03/עותק_של_עותק_של_עגור_מדיניות_מוצהרת_מסלולים_כשרים_הצעה_למדיניות_2025_הצעה_לשינויי_03.03.25.xls",
+      "https://kereni.co.il/wp-content/uploads/2025/03/עותק_של_עותק_של_עגור_מדיניות_מוצהרת_מסלולים_כשרים_הצעה_למדיניות_2025__1_.xls",
+      "https://kereni.co.il/wp-content/uploads/2024/09/עגור_מדיניות_מוצהרת_מסלולים_כשרים_2024שינויי_23.09.24.xls",
+      "https://kereni.co.il/wp-content/uploads/2024/01/מדיניות_מוצהרת_מסלולים_כשרים_2024-1-1.xls",
+      "https://kereni.co.il/wp-content/uploads/2024/01/עגור-_מדיניות_מוצהרת_2023_מסלולים_כשרים_שינויי_31.07.23-1.xls",
+      "https://kereni.co.il/wp-content/uploads/2024/01/עגור-_מדיניות_מוצהרת_2022_מסלולים_כשרים-1.xls",
+      "https://kereni.co.il/wp-content/uploads/2024/01/מדיניות_השקעות_מוצהרת_2021_מישור_מסלול_כשר_-_מעודכן_נכון_ל_08.07.21.xlsx",
+      "https://kereni.co.il/wp-content/uploads/2024/01/מדניות_השקעה_מוצהרת_-_מישור_מסלול_הלכתי_2021.xls",
+      "https://kereni.co.il/wp-content/uploads/2024/01/עגור-_מישור_כשר_מדיניות_מוצהרת_2020_.xls",
+      "https://kereni.co.il/wp-content/uploads/2024/01/מדיניות_מוצהרת_2020_עגור_מישור_מסלול_הלכתי.xls",
+      "https://kereni.co.il/wp-content/uploads/2024/01/2019-policyMishorH.xls",
+      "https://kereni.co.il/wp-content/uploads/2024/01/7276.xls",
+      "https://kereni.co.il/wp-content/uploads/2024/01/6761.xls",
+      "https://kereni.co.il/wp-content/uploads/2026/01/עגור_מסלולי_אגח_מישור.xls",
+      "https://kereni.co.il/wp-content/uploads/2025/03/עותק_של_עותק_של_עותק_של_מדיניות_מוצהרת_2025_הצעה_מסלולי_אגח__2_.xls",
+      "https://kereni.co.il/wp-content/uploads/2024/01/מדיניות_מוצהרת_2024_מסלולי_אגח-1-1.xls",
+      "https://kereni.co.il/wp-content/uploads/2024/01/עותק_של_מדיניות_מוצהרת_ל2022_תיקי_אגח-1.xls",
+      "https://kereni.co.il/wp-content/uploads/2024/01/מדינות_השקעה_מוצהרת_-_מישור_מסלול_אגח_2021.xlsx",
+      "https://kereni.co.il/wp-content/uploads/2024/01/מדיניות_מוצהרת_עגור_מישור_מסלול_אגח.xlsx",
+      "https://kereni.co.il/wp-content/uploads/2024/01/2019-policyMishorAgah.xlsx",
+      "https://kereni.co.il/wp-content/uploads/2024/01/7277.xls",
+      "https://kereni.co.il/wp-content/uploads/2024/01/6759.xls",
+      "https://kereni.co.il/wp-content/uploads/2026/01/עגור_2026__על_יסודי.xls",
+      "https://kereni.co.il/wp-content/uploads/2026/01/עגור_מסלולים_כשר_על_יסודי.xls",
+      "https://kereni.co.il/wp-content/uploads/2026/01/עגור_מסלולי_אגח_על_יסודי.xls",
+      "https://kereni.co.il/wp-content/uploads/2024/01/מדיניות_השקעות_מוצהרת_2021_על_יסודי_כללי_-_מעודכן_נכון_ל_08.07.21.xlsx",
+      "https://kereni.co.il/wp-content/uploads/2024/01/מדיניות_השקעות_מוצהרת_2021_מישור_כללי_-_מעודכן_נכון_ל_08.07.21.xlsx"
+     ],
+     "unselected_files": [
+      {
+       "file": "https://kereni.co.il/wp-content/uploads/2024/01/על_יסודי-_מגבלת_עמלות_ניהול_חיצוני_2024__1_-1-1.xlsxhttps://kereni.co.il/wp-content/uploads/2024/01/על_יסודי-_מגבלת_עמלות_ניהול_חיצוני_2024__1_-1-1.xlsx",
+       "text": "מגבלת עמלות ניהול חיצוני 2024",
+       "ctx": "מגבלת עמלות ניהול חיצוני 2024"
+      },
+      {
+       "file": "https://kereni.co.il/wp-content/uploads/2024/01/על_יסודי-_מגבלת_עמלות_ניהול_חיצוני_2023.xlsx",
+       "text": "מגבלת עמלות ניהול חיצוני 2023",
+       "ctx": "מגבלת עמלות ניהול חיצוני 2023"
+      },
+      {
+       "file": "https://kereni.co.il/wp-content/uploads/2024/01/הצהרה_על_השקעות_אחראיות.pdf",
+       "text": "הצהרה על השקעות אחראיות",
+       "ctx": "הצהרה על השקעות אחראיות"
+      },
+      {
+       "file": "https://kereni.co.il/wp-content/uploads/2024/01/על_יסודי-_מגבלת_עמלות_ניהול_חיצוני_2024__1_-1-1.xlsxhttps://kereni.co.il/wp-content/uploads/2024/01/על_יסודי-_מגבלת_עמלות_ניהול_חיצוני_2024__1_-1-1.xlsx",
+       "text": "מגבלת עמלות ניהול חיצוני 2024",
+       "ctx": "מגבלת עמלות ניהול חיצוני 2024"
+      },
+      {
+       "file": "https://kereni.co.il/wp-content/uploads/2024/01/על_יסודי-_מגבלת_עמלות_ניהול_חיצוני_2023.xlsx",
+       "text": "מגבלת עמלות ניהול חיצוני 2023",
+       "ctx": "מגבלת עמלות ניהול חיצוני 2023"
+      },
+      {
+       "file": "https://kereni.co.il/wp-content/uploads/2024/01/הצהרה_על_השקעות_אחראיות.pdf",
+       "text": "הצהרה על השקעות אחראיות",
+       "ctx": "הצהרה על השקעות אחראיות"
+      },
+      {
+       "file": "https://kereni.co.il/wp-content/uploads/2026/01/עותק_של_מישור-_מגבלת_עמלות_ניהול_חיצוני_2026____4_.xlsx",
+       "text": "מגבלת עמלות ניהול חיצוני 2026",
+       "ctx": "מגבלת עמלות ניהול חיצוני 2026"
+      },
+      {
+       "file": "https://kereni.co.il/wp-content/uploads/2025/01/עותק_של_מישור-_מגבלת_עמלות_ניהול_חיצוני_2025__9_.xlsx",
+       "text": "מגבלת עמלות ניהול חיצוני 2025",
+       "ctx": "מגבלת עמלות ניהול חיצוני 2025"
+      },
+      {
+       "file": "https://kereni.co.il/wp-content/uploads/2024/01/מישור-_מגבלת_עמלות_ניהול_חיצוני_2024__9_.xlsx",
+       "text": "מגבלת עמלות ניהול חיצוני 2024",
+       "ctx": "מגבלת עמלות ניהול חיצוני 2024"
+      },
+      {
+       "file": "https://kereni.co.il/wp-content/uploads/2024/01/מישור-_מגבלת_עמלות_ניהול_חיצוני_2023.xlsx",
+       "text": "מגבלת עמלות ניהול חיצוני 2023",
+       "ctx": "מגבלת עמלות ניהול חיצוני 2023"
+      },
+      {
+       "file": "https://kereni.co.il/wp-content/uploads/2024/01/הצהרה_על_השקעות_אחראיות-1.pdf",
+       "text": "הצהרה על השקעות אחראיות",
+       "ctx": "הצהרה על השקעות אחראיות"
+      },
+      {
+       "file": "https://kereni.co.il/wp-content/uploads/2024/01/הצהרה_על_השקעות_אחראיות-2.pdf",
+       "text": "הצהרה על השקעות אחראיות",
+       "ctx": "הצהרה על השקעות אחראיות"
+      },
+      {
+       "file": "https://kereni.co.il/wp-content/uploads/2026/01/עותק_של_על_יסודי-_מגבלת_עמלות_ניהול_חיצוני_2026__1_.xlsx",
+       "text": "מגבלת עמלות ניהול חיצוני 2026",
+       "ctx": "מגבלת עמלות ניהול חיצוני 2026"
+      },
+      {
+       "file": "https://kereni.co.il/wp-content/uploads/2025/01/עותק_של_על_יסודי-_מגבלת_עמלות_ניהול_חיצוני_2025__1_.xlsx",
+       "text": "מגבלת עמלות ניהול חיצוני 2025",
+       "ctx": "מגבלת עמלות ניהול חיצוני 2025"
+      },
+      {
+       "file": "https://kereni.co.il/wp-content/uploads/2024/01/על_יסודי-_מגבלת_עמלות_ניהול_חיצוני_2024__1_-1-1.xlsxhttps://kereni.co.il/wp-content/uploads/2024/01/על_יסודי-_מגבלת_עמלות_ניהול_חיצוני_2024__1_-1-1.xlsx",
+       "text": "מגבלת עמלות ניהול חיצוני 2024",
+       "ctx": "מגבלת עמלות ניהול חיצוני 2024"
+      },
+      {
+       "file": "https://kereni.co.il/wp-content/uploads/2024/01/על_יסודי-_מגבלת_עמלות_ניהול_חיצוני_2023.xlsx",
+       "text": "מגבלת עמלות ניהול חיצוני 2023",
+       "ctx": "מגבלת עמלות ניהול חיצוני 2023"
+      },
+      {
+       "file": "https://kereni.co.il/wp-content/uploads/2024/01/הצהרה_על_השקעות_אחראיות.pdf",
+       "text": "הצהרה על השקעות אחראיות",
+       "ctx": "הצהרה על השקעות אחראיות"
+      }
+     ]
+    }
+   ],
+   "new_docs": 0,
+   "found": 173,
+   "selected": 84,
+   "had": 15,
+   "head_skip": 0,
+   "page_cache": 1,
+   "cache_hit": 1,
+   "old_skip": 15,
+   "mode": "map",
+   "errors": [
+    "עגור_2026_מסלולים_מישור.xls -> 418",
+    "עגור_מסלולי_אגח_מישור.xls -> 418",
+    "עגור_2026__על_יסודי.xls -> 418",
+    "עגור_מסלולי_אגח_על_יסודי.xls -> 418",
+    "עותק_של_עותק_של_עגור_מדיניות_מוצהרת_מסלול_כללי2025_הצעה_לשינ -> 418",
+    "עותק_של_עותק_של_עגור_מדיניות_מוצהרת_מסלול_כללי2025_הצעה.xls -> 418",
+    "עותק_של_עותק_של_עגור_מדיניות_מוצהרת_מסלולים_כשרים_הצעה_למדינ -> 418",
+    "עותק_של_עותק_של_עגור_מדיניות_מוצהרת_מסלולים_כשרים_הצעה_למדינ -> 418",
+    "עותק_של_עותק_של_עותק_של_מדיניות_מוצהרת_2025_הצעה_מסלולי_אגח_ -> 418",
+    "מדיניות_מוצהרת_מסלול_כללי_2024-1.xls -> 418",
+    "עותק_של_עגור-_מדיניות_מוצהרת_2023_עיס_ומישור_שינויי_מיום_25. -> 418",
+    "עגור-_מדיניות_מוצהרת_2023_עיס_ומישור_שינויי_מיום_26.07.23.xl -> 418",
+    "עותק_של_עגור-_מדיניות_מוצהרת_2022_עיס_ומישור_מתוקן-9__1_.xls -> 418",
+    "עגור-_מדיניות_המלצה_למוצהרת_2023_עיס_ומישור1.xls -> 418",
+    "מדיניות_השקעה_מוצהרת_מעודכן_החל_מ-13.06.23___על_יסודי_2023.x -> 418",
+    "מדיניות_השקעות_מוצהרת_2021_על_יסודי_כללי_-_מעודכן_נכון_ל_08. -> 418",
+    "מדיניות_מוצהרת_2020_עגור_על_יסודי.xls -> 418",
+    "2019-policyAlYesodi.xls -> 418",
+    "7442.xls -> 418",
+    "7272.xls -> 418",
+    "6756.xls -> 418",
+    "מדיניות_מוצהרת_מסלולים_כשרים_2024-1.xls -> 418",
+    "עגור-_מדיניות_מוצהרת_2023_מסלולים_כשרים_שינויי_31.07.23.xls -> 418",
+    "מדיניות_השקעה_מוצהרת-_מסלולים_כשרים_2023.xls -> 418",
+    "עגור-_מדיניות_מוצהרת_2022_מסלולים_כשרים.xls -> 418",
+    "מדניות_השקעה_מוצהרת_-_על_יסודי_הלכתי_2021.xls -> 418",
+    "2019-policyAlYesodiH.xls -> 418",
+    "7273.xls -> 418",
+    "6741.xls -> 418",
+    "מדיניות_מוצהרת_2024_מסלולי_אגח-1.xls -> 418",
+    "2023__מדיניות_השקעה_מוצהרת-_תיקי_אגח.xls -> 418",
+    "עותק_של_מדיניות_מוצהרת_ל2022_תיקי_אגח.xls -> 418",
+    "7274.xls -> 418",
+    "6757.xls -> 418",
+    "מדיניות_מוצהרת_מסלול_כללי_2024-1-2.xls -> 418",
+    "עותק_של_עגור-_מדיניות_מוצהרת_2023_עיס_ומישור_שינויי_מיום_25. -> 418",
+    "עגור-_מדיניות_מוצהרת_2023_עיס_ומישור_שינויי_מיום_26.07.23-2. -> 418",
+    "מדיניות_השקעה_מוצהרת_מעודכן_החל_מ-13.06.23___מישור_2023.xls -> 418",
+    "עגור-_מדיניות_המלצה_למוצהרת_2023_עיס_ומישור1-1.xls -> 418",
+    "עותק_של_עגור-_מדיניות_מוצהרת_2022_עיס_ומישור_מתוקן-9__1_-1.x -> 418",
+    "מדיניות_השקעות_מוצהרת_2021_מישור_כללי_-_מעודכן_נכון_ל_08.07. -> 418",
+    "עגור-_מדיניות_מוצהרת_2020_מישור_.xls -> 418",
+    "מדיניות_2020_עגור_מישור.xls -> 418",
+    "2019-policyMishor.xls -> 418",
+    "7443.xls -> 418",
+    "7275.xls -> 418",
+    "6749.xls -> 418",
+    "עגור-_מדיניות_מוצהרת_2020_מישור_-1.xls -> 418",
+    "מדיניות_2020_עגור_מישור-1.xls -> 418",
+    "2019-policyMishor-1.xls -> 418",
+    "7443-1.xls -> 418",
+    "7275-1.xls -> 418",
+    "6749-1.xls -> 418",
+    "עגור_מדיניות_מוצהרת_מסלולים_כשרים_2024שינויי_23.09.24.xls -> 418",
+    "מדיניות_מוצהרת_מסלולים_כשרים_2024-1-1.xls -> 418",
+    "עגור-_מדיניות_מוצהרת_2023_מסלולים_כשרים_שינויי_31.07.23-1.xl -> 418",
+    "עגור-_מדיניות_מוצהרת_2022_מסלולים_כשרים-1.xls -> 418",
+    "מדניות_השקעה_מוצהרת_-_מישור_מסלול_הלכתי_2021.xls -> 418",
+    "עגור-_מישור_כשר_מדיניות_מוצהרת_2020_.xls -> 418",
+    "מדיניות_מוצהרת_2020_עגור_מישור_מסלול_הלכתי.xls -> 418",
+    "2019-policyMishorH.xls -> 418",
+    "7276.xls -> 418",
+    "6761.xls -> 418",
+    "מדיניות_מוצהרת_2024_מסלולי_אגח-1-1.xls -> 418",
+    "עותק_של_מדיניות_מוצהרת_ל2022_תיקי_אגח-1.xls -> 418",
+    "7277.xls -> 418",
+    "6759.xls -> 418",
+    "מדיניות_השקעות_מוצהרת_2021_על_יסודי_כללי_-_מעודכן_נכון_ל_08. -> 404",
+    "מדיניות_השקעות_מוצהרת_2021_מישור_כללי_-_מעודכן_נכון_ל_08.07. -> 404"
+   ],
+   "diag": [
+    "עגור חברה לניהול ק: links=208 files=173 clicked=0 captured=0 selected=84"
+   ],
+   "new_files": []
+  },
+  {
+   "legal_id": "520030990",
+   "name": "החברה המנהלת של מינהל קרן ההשתלמות לפקידים עובדי המנהל והשירותים בע\"מ",
+   "pages": [
+    {
+     "url": "https://minhal.org/הרכב-נכסים/",
+     "cache": "hit",
+     "links": 94,
+     "followed": [
+      "https://minhal.org/%d7%94%d7%a8%d7%9b%d7%91-%d7%a0%d7%9b%d7%a1%d7%99%d7%9d/%d7%9e%d7%a1%d7%9c%d7%95%d7%9c-%d7%9e%d7%99%d7%a0%d7%94%d7%9c-%d7%9b%d7%9c%d7%9c%d7%99/",
+      "https://minhal.org/%d7%94%d7%a8%d7%9b%d7%91-%d7%a0%d7%9b%d7%a1%d7%99%d7%9d/%d7%9e%d7%a1%d7%9c%d7%95%d7%9c-%d7%90%d7%a9%d7%a8%d7%90%d7%99-%d7%95%d7%90%d7%92%d7%97/",
+      "https://minhal.org/%d7%94%d7%a8%d7%9b%d7%91-%d7%a0%d7%9b%d7%a1%d7%99%d7%9d/%d7%9e%d7%a1%d7%9c%d7%95%d7%9c-%d7%9e%d7%99%d7%a0%d7%94%d7%9c-%d7%9e%d7%a0%d7%99%d7%95%d7%aa/",
+      "https://minhal.org/%d7%94%d7%a8%d7%9b%d7%91-%d7%a0%d7%9b%d7%a1%d7%99%d7%9d/%d7%9e%d7%a1%d7%9c%d7%95%d7%9c-%d7%9e%d7%99%d7%a0%d7%94%d7%9c-%d7%94%d7%9c%d7%9b%d7%94/",
+      "https://minhal.org/%d7%94%d7%a8%d7%9b%d7%91-%d7%a0%d7%9b%d7%a1%d7%99%d7%9d/%d7%9e%d7%a1%d7%9c%d7%95%d7%9c-%d7%a2%d7%95%d7%a7%d7%91-%d7%9e%d7%93%d7%93-500-ps/"
+     ],
+     "files": 1,
+     "clicked": 0,
+     "captured": 0,
+     "selected": [],
+     "unselected_files": [
+      {
+       "file": "https://minhal.org/wp-content/uploads/2026/08/מדיניות-פרטיות.pdf",
+       "text": "מדיניות פרטיות",
+       "ctx": ""
+      }
+     ]
+    },
+    {
+     "url": "https://minhal.org/הרכב-נכסים/מסלול-עוקב-מדד-500-ps/",
+     "cache": "hit",
+     "links": 94,
+     "followed": [],
+     "files": 1,
+     "clicked": 0,
+     "captured": 0,
+     "selected": [],
+     "unselected_files": [
+      {
+       "file": "https://minhal.org/wp-content/uploads/2026/08/מדיניות-פרטיות.pdf",
+       "text": "מדיניות פרטיות",
+       "ctx": ""
+      }
+     ]
+    },
+    {
+     "url": "https://minhal.org/%d7%94%d7%a8%d7%9b%d7%91-%d7%a0%d7%9b%d7%a1%d7%99%d7%9d/%d7%9e%d7%a1%d7%9c%d7%95%d7%9c-%d7%9e%d7%99%d7%a0%d7%94%d7%9c-%d7%9b%d7%9c%d7%9c%d7%99/",
+     "cache": "hit",
+     "links": 94,
+     "followed": [],
+     "files": 1,
+     "clicked": 0,
+     "captured": 0,
+     "selected": [],
+     "unselected_files": [
+      {
+       "file": "https://minhal.org/wp-content/uploads/2026/08/מדיניות-פרטיות.pdf",
+       "text": "מדיניות פרטיות",
+       "ctx": ""
+      }
+     ]
+    },
+    {
+     "url": "https://minhal.org/%d7%94%d7%a8%d7%9b%d7%91-%d7%a0%d7%9b%d7%a1%d7%99%d7%9d/%d7%9e%d7%a1%d7%9c%d7%95%d7%9c-%d7%90%d7%a9%d7%a8%d7%90%d7%99-%d7%95%d7%90%d7%92%d7%97/",
+     "cache": "hit",
+     "links": 94,
+     "followed": [],
+     "files": 1,
+     "clicked": 0,
+     "captured": 0,
+     "selected": [],
+     "unselected_files": [
+      {
+       "file": "https://minhal.org/wp-content/uploads/2026/08/מדיניות-פרטיות.pdf",
+       "text": "מדיניות פרטיות",
+       "ctx": ""
+      }
+     ]
+    },
+    {
+     "url": "https://minhal.org/%d7%94%d7%a8%d7%9b%d7%91-%d7%a0%d7%9b%d7%a1%d7%99%d7%9d/%d7%9e%d7%a1%d7%9c%d7%95%d7%9c-%d7%9e%d7%99%d7%a0%d7%94%d7%9c-%d7%9e%d7%a0%d7%99%d7%95%d7%aa/",
+     "cache": "hit",
+     "links": 94,
+     "followed": [],
+     "files": 1,
+     "clicked": 0,
+     "captured": 0,
+     "selected": [],
+     "unselected_files": [
+      {
+       "file": "https://minhal.org/wp-content/uploads/2026/08/מדיניות-פרטיות.pdf",
+       "text": "מדיניות פרטיות",
+       "ctx": ""
+      }
+     ]
+    },
+    {
+     "url": "https://minhal.org/%d7%94%d7%a8%d7%9b%d7%91-%d7%a0%d7%9b%d7%a1%d7%99%d7%9d/%d7%9e%d7%a1%d7%9c%d7%95%d7%9c-%d7%9e%d7%99%d7%a0%d7%94%d7%9c-%d7%94%d7%9c%d7%9b%d7%94/",
+     "cache": "hit",
+     "links": 94,
+     "followed": [],
+     "files": 1,
+     "clicked": 0,
+     "captured": 0,
+     "selected": [],
+     "unselected_files": [
+      {
+       "file": "https://minhal.org/wp-content/uploads/2026/08/מדיניות-פרטיות.pdf",
+       "text": "מדיניות פרטיות",
+       "ctx": ""
+      }
+     ]
+    },
+    {
+     "url": "https://minhal.org/%d7%94%d7%a8%d7%9b%d7%91-%d7%a0%d7%9b%d7%a1%d7%99%d7%9d/%d7%9e%d7%a1%d7%9c%d7%95%d7%9c-%d7%a2%d7%95%d7%a7%d7%91-%d7%9e%d7%93%d7%93-500-ps/",
+     "cache": "hit",
+     "links": 94,
+     "followed": [],
+     "files": 1,
+     "clicked": 0,
+     "captured": 0,
+     "selected": [],
+     "unselected_files": [
+      {
+       "file": "https://minhal.org/wp-content/uploads/2026/08/מדיניות-פרטיות.pdf",
+       "text": "מדיניות פרטיות",
+       "ctx": ""
+      }
+     ]
+    }
+   ],
+   "new_docs": 0,
+   "found": 7,
+   "selected": 0,
+   "had": 0,
+   "head_skip": 0,
+   "page_cache": 7,
+   "cache_hit": 7,
+   "mode": "map",
+   "errors": [],
+   "diag": [
+    "החברה המנהלת של מי: wp-media 0 files",
+    "החברה המנהלת של מי: links=94 files=1 clicked=0 captured=0 selected=0",
+    "   ? מדיניות-פרטיות.pdf | מדיניות פרטיות | ",
+    "החברה המנהלת של מי: links=94 files=1 clicked=0 captured=0 selected=0",
+    "   ? מדיניות-פרטיות.pdf | מדיניות פרטיות | ",
+    "החברה המנהלת של מי: links=94 files=1 clicked=0 captured=0 selected=0",
+    "   ? מדיניות-פרטיות.pdf | מדיניות פרטיות | ",
+    "החברה המנהלת של מי: links=94 files=1 clicked=0 captured=0 selected=0",
+    "   ? מדיניות-פרטיות.pdf | מדיניות פרטיות | ",
+    "החברה המנהלת של מי: links=94 files=1 clicked=0 captured=0 selected=0",
+    "   ? מדיניות-פרטיות.pdf | מדיניות פרטיות | ",
+    "החברה המנהלת של מי: links=94 files=1 clicked=0 captured=0 selected=0",
+    "   ? מדיניות-פרטיות.pdf | מדיניות פרטיות | ",
+    "החברה המנהלת של מי: links=94 files=1 clicked=0 captured=0 selected=0",
+    "   ? מדיניות-פרטיות.pdf | מדיניות פרטיות | "
+   ],
+   "new_files": []
+  },
+  {
+   "legal_id": "520030677",
+   "name": "איילון חברה לביטוח בע\"מ",
+   "pages": [
+    {
+     "url": "https://www.ayalon-ins.co.il/about-us/about-ayalon/investments/policy/",
+     "cache": "expired",
+     "links": 144,
+     "followed": [
+      "https://www.ayalon-ins.co.il/about-us/about-ayalon/investments/publications/"
+     ],
+     "files": 0,
+     "clicked": 0,
+     "captured": 0,
+     "selected": [],
+     "unselected_files": []
+    },
+    {
+     "url": "https://www.ayalon-ins.co.il/savings/nispah/",
+     "cache": "expired",
+     "links": 413,
+     "followed": [
+      "https://www.ayalon-ins.co.il/career/finance-investments",
+      "https://www.ayalon-ins.co.il/about-us/about-ayalon/investments/",
+      "https://www.ayalon-ins.co.il/investments-provident",
+      "https://www.ayalon-ins.co.il/investments-directorate",
+      "https://www.ayalon-ins.co.il/investments-levelagreement"
+     ],
+     "files": 0,
+     "clicked": 0,
+     "captured": 0,
+     "selected": [],
+     "unselected_files": []
+    },
+    {
+     "url": "https://www.ayalon-ins.co.il/savings/nispah_prat/",
+     "cache": "expired",
+     "links": 413,
+     "followed": [],
+     "files": 0,
+     "clicked": 0,
+     "captured": 0,
+     "selected": [],
+     "unselected_files": []
+    },
+    {
+     "url": "https://www.ayalon-ins.co.il/investments",
+     "cache": "expired",
+     "links": 395,
+     "followed": [],
+     "files": 1,
+     "clicked": 0,
+     "captured": 0,
+     "selected": [],
+     "unselected_files": [
+      {
+       "file": "https://www.ayalon-ins.co.il/media/dtvlz32w/amitim_03_2026.pdf",
+       "text": "עקרונות נוהל העברת זכויות עמיתים שלא במזומן",
+       "ctx": ""
+      }
+     ]
+    },
+    {
+     "url": "https://www.ayalon-ins.co.il",
+     "cache": "hit",
+     "links": 88,
+     "followed": [
+      "https://www.ayalon-ins.co.il/insurances/car/having-policy"
+     ],
+     "files": 0,
+     "clicked": 0,
+     "captured": 0,
+     "selected": [],
+     "unselected_files": []
+    },
+    {
+     "url": "https://www.ayalon-ins.co.il/about-us/about-ayalon/investments/publications/",
+     "cache": "expired",
+     "links": 399,
+     "followed": [],
+     "files": 5,
+     "clicked": 0,
+     "captured": 0,
+     "selected": [],
+     "unselected_files": [
+      {
+       "file": "https://www.ayalon-ins.co.il/media/jqjekhjr/bakasha_hesder_pshara_nov_2025.pdf",
+       "text": "להורדה",
+       "ctx": ""
+      },
+      {
+       "file": "https://www.ayalon-ins.co.il/media/5uahnahv/hodaa_hagashat_hesder_nov_2025.pdf",
+       "text": "להורדה",
+       "ctx": ""
+      },
+      {
+       "file": "https://www.ayalon-ins.co.il/media/po0hzqzw/gilad_heker_apr_2026.pdf",
+       "text": "להורדה",
+       "ctx": ""
+      },
+      {
+       "file": "https://www.ayalon-ins.co.il/media/ycada1tc/br_yizugit_04_2026.pdf",
+       "text": "להורדה",
+       "ctx": ""
+      },
+      {
+       "file": "https://www.ayalon-ins.co.il/media/e0lgrfst/הודעה-על-אישור-הסדרי-פשרה.pdf",
+       "text": "להורדה",
+       "ctx": ""
+      }
+     ]
+    },
+    {
+     "url": "https://www.ayalon-ins.co.il/career/finance-investments",
+     "cache": "expired",
+     "links": 403,
+     "followed": [],
+     "files": 0,
+     "clicked": 0,
+     "captured": 0,
+     "selected": [],
+     "unselected_files": []
+    },
+    {
+     "url": "https://www.ayalon-ins.co.il/about-us/about-ayalon/investments/",
+     "cache": "expired",
+     "links": 144,
+     "followed": [],
+     "files": 0,
+     "clicked": 0,
+     "captured": 0,
+     "selected": [],
+     "unselected_files": []
+    },
+    {
+     "url": "https://www.ayalon-ins.co.il/investments-provident",
+     "cache": "hit",
+     "links": 84,
+     "followed": [
+      "https://www.ayalon-ins.co.il/he/about-provident-container/investments/"
+     ],
+     "files": 1,
+     "clicked": 0,
+     "captured": 0,
+     "selected": [],
+     "unselected_files": [
+      {
+       "file": "https://www.ayalon-ins.co.il/media/dtvlz32w/amitim_03_2026.pdf",
+       "text": "לצפייה לחצו כאן",
+       "ctx": ""
+      }
+     ]
+    },
+    {
+     "url": "https://www.ayalon-ins.co.il/investments-directorate",
+     "cache": "expired",
+     "links": 394,
+     "followed": [],
+     "files": 0,
+     "clicked": 0,
+     "captured": 0,
+     "selected": [],
+     "unselected_files": []
+    },
+    {
+     "url": "https://www.ayalon-ins.co.il/investments-levelagreement",
+     "cache": "expired",
+     "links": 394,
+     "followed": [],
+     "files": 1,
+     "clicked": 0,
+     "captured": 0,
+     "selected": [],
+     "unselected_files": [
+      {
+       "file": "https://www.ayalon-ins.co.il/media/02rh04e2/אמנת-השירות-גמל-2026.pdf",
+       "text": "לאמנת השירות לחצו כאן",
+       "ctx": ""
+      }
+     ]
+    },
+    {
+     "url": "https://www.ayalon-ins.co.il/insurances/car/having-policy",
+     "cache": "hit",
+     "links": 81,
+     "followed": [],
+     "files": 0,
+     "clicked": 0,
+     "captured": 0,
+     "selected": [],
+     "unselected_files": []
+    },
+    {
+     "url": "https://www.ayalon-ins.co.il/he/about-provident-container/investments/",
+     "cache": "expired",
+     "links": 150,
+     "followed": [],
+     "files": 0,
+     "clicked": 0,
+     "captured": 0,
+     "selected": [],
+     "unselected_files": []
+    }
+   ],
+   "new_docs": 0,
+   "found": 8,
+   "selected": 0,
+   "had": 0,
+   "head_skip": 0,
+   "cache_expired": 10,
+   "page_cache": 3,
+   "cache_hit": 3,
+   "errors": [],
+   "diag": [
+    "איילון חברה לביטוח: links=144 files=0 clicked=0 captured=0 selected=0",
+    "איילון חברה לביטוח: links=413 files=0 clicked=0 captured=0 selected=0",
+    "איילון חברה לביטוח: links=413 files=0 clicked=0 captured=0 selected=0",
+    "איילון חברה לביטוח: links=395 files=1 clicked=0 captured=0 selected=0",
+    "   ? amitim_03_2026.pdf | עקרונות נוהל העברת זכויות עמיתים שלא במז | ",
+    "איילון חברה לביטוח: links=88 files=0 clicked=0 captured=0 selected=0",
+    "איילון חברה לביטוח: links=399 files=5 clicked=0 captured=0 selected=0",
+    "   ? bakasha_hesder_pshara_nov_2025.pdf | להורדה | ",
+    "   ? hodaa_hagashat_hesder_nov_2025.pdf | להורדה | ",
+    "   ? gilad_heker_apr_2026.pdf | להורדה | ",
+    "   ? br_yizugit_04_2026.pdf | להורדה | ",
+    "   ? הודעה-על-אישור-הסדרי-פשרה.pdf | להורדה | ",
+    "איילון חברה לביטוח: links=403 files=0 clicked=0 captured=0 selected=0",
+    "איילון חברה לביטוח: links=144 files=0 clicked=0 captured=0 selected=0",
+    "איילון חברה לביטוח: links=84 files=1 clicked=0 captured=0 selected=0",
+    "   ? amitim_03_2026.pdf | לצפייה לחצו כאן | ",
+    "איילון חברה לביטוח: links=394 files=0 clicked=0 captured=0 selected=0",
+    "איילון חברה לביטוח: links=394 files=1 clicked=0 captured=0 selected=0",
+    "   ? אמנת-השירות-גמל-2026.pdf | לאמנת השירות לחצו כאן | ",
+    "איילון חברה לביטוח: links=81 files=0 clicked=0 captured=0 selected=0",
+    "איילון חברה לביטוח: links=150 files=0 clicked=0 captured=0 selected=0"
+   ],
+   "new_files": []
+  },
+  {
+   "legal_id": "520031824",
+   "name": "החברה המנהלת של רום קרן ההשתלמות לעובדי הרשויות המקומיות בע\"מ",
+   "pages": [
+    {
+     "url": "https://www.krm.co.il/?CategoryID=217&ArticleID=12",
+     "cache": "hit",
+     "links": 134,
+     "followed": [],
+     "files": 114,
+     "clicked": 0,
+     "captured": 0,
+     "selected": [
+      "https://www.krm.co.il/_Uploads/dbsAttachedFiles/investment-forecast-halaha-12.07.2026.pdf",
+      "https://www.krm.co.il/_Uploads/dbsAttachedFiles/investment-forecast-halaha-2026(1).pdf",
+      "https://www.krm.co.il/_Uploads/dbsAttachedFiles/investment-forecast-halaha-2025.pdf",
+      "https://www.krm.co.il/_Uploads/dbsAttachedFiles/investment-forecast-halaha-29.01.2024.pdf",
+      "https://www.krm.co.il/_Uploads/dbsAttachedFiles/investment-forecast-halaha-31.01.2023.pdf",
+      "https://www.krm.co.il/_Uploads/dbsAttachedFiles/investment-forecast-halaha-2022.pdf"
+     ],
+     "unselected_files": [
+      {
+       "file": "https://www.krm.co.il/_Uploads/dbsAttachedFiles/memune_rom_halaha_augest_2026.xlsx",
+       "text": "אוגוסט 2026",
+       "ctx": ""
+      },
+      {
+       "file": "https://www.krm.co.il/_Uploads/dbsAttachedFiles/memune_rom_halaha_july_2026.xlsx",
+       "text": "יולי 2026",
+       "ctx": ""
+      },
+      {
+       "file": "https://www.krm.co.il/_Uploads/dbsAttachedFiles/memune_rom_halaha_june_2026.xlsx",
+       "text": "יוני 2026",
+       "ctx": ""
+      },
+      {
+       "file": "https://www.krm.co.il/_Uploads/dbsAttachedFiles/memune_rom_halaha_may_2026.xlsx",
+       "text": "מאי 2026",
+       "ctx": ""
+      },
+      {
+       "file": "https://www.krm.co.il/_Uploads/dbsAttachedFiles/memune_rom_halaha_april_2026.xlsx",
+       "text": "אפריל 2026",
+       "ctx": ""
+      },
+      {
+       "file": "https://www.krm.co.il/_Uploads/dbsAttachedFiles/memune_rom_halaha_march_2026.xlsx",
+       "text": "מרץ 2026",
+       "ctx": ""
+      },
+      {
+       "file": "https://www.krm.co.il/_Uploads/dbsAttachedFiles/memune_rom_halaha_february_2026.xlsx",
+       "text": "פברואר 2026",
+       "ctx": ""
+      },
+      {
+       "file": "https://www.krm.co.il/_Uploads/dbsAttachedFiles/memune_rom_halaha_january_2026(1).xlsx",
+       "text": "ינואר 2026",
+       "ctx": ""
+      },
+      {
+       "file": "https://www.krm.co.il/_Uploads/dbsAttachedFiles/memune_rom_halaha_december_2025.xlsx",
+       "text": "דצמבר 2025",
+       "ctx": ""
+      },
+      {
+       "file": "https://www.krm.co.il/_Uploads/dbsAttachedFiles/memune_rom_halaha_november_2025.xlsx",
+       "text": "נובמבר 2025",
+       "ctx": ""
+      },
+      {
+       "file": "https://www.krm.co.il/_Uploads/dbsAttachedFiles/memune_rom_halaha_october_2025.xlsx",
+       "text": "אוקטובר 2025",
+       "ctx": ""
+      },
+      {
+       "file": "https://www.krm.co.il/_Uploads/dbsAttachedFiles/memune_rom_halaha_september_2025.xlsx",
+       "text": "ספטמבר 2025",
+       "ctx": ""
+      },
+      {
+       "file": "https://www.krm.co.il/_Uploads/dbsAttachedFiles/memune_rom_halaha_augest_2025.xlsx",
+       "text": "אוגוסט 2025",
+       "ctx": ""
+      },
+      {
+       "file": "https://www.krm.co.il/_Uploads/dbsAttachedFiles/memune_rom_halaha_july_2025.xlsx",
+       "text": "יולי 2025",
+       "ctx": ""
+      },
+      {
+       "file": "https://www.krm.co.il/_Uploads/dbsAttachedFiles/memune_rom_halaha_june_2025.xlsx",
+       "text": "יוני 2025",
+       "ctx": ""
+      },
+      {
+       "file": "https://www.krm.co.il/_Uploads/dbsAttachedFiles/memune_rom_halaha_may_2025.xlsx",
+       "text": "מאי 2025",
+       "ctx": ""
+      },
+      {
+       "file": "https://www.krm.co.il/_Uploads/dbsAttachedFiles/memune_rom_halaha_april_2025.xlsx",
+       "text": "אפריל 2025",
+       "ctx": ""
+      },
+      {
+       "file": "https://www.krm.co.il/_Uploads/dbsAttachedFiles/memune_rom_halaha_march_2025.xlsx",
+       "text": "מרץ 2025",
+       "ctx": ""
+      },
+      {
+       "file": "https://www.krm.co.il/_Uploads/dbsAttachedFiles/memune_rom_halaha_february_2025.xlsx",
+       "text": "פברואר 2025",
+       "ctx": ""
+      },
+      {
+       "file": "https://www.krm.co.il/_Uploads/dbsAttachedFiles/memune_rom_halaha_january_2025.xlsx",
+       "text": "ינואר 2025",
+       "ctx": ""
+      },
+      {
+       "file": "https://www.krm.co.il/_Uploads/dbsAttachedFiles/direct_expanses_halaha_december_2025.xlsx",
+       "text": "דצמבר 2025",
+       "ctx": ""
+      },
+      {
+       "file": "https://www.krm.co.il/_Uploads/dbsAttachedFiles/direct_expanses_halaha_december_2024.xlsx",
+       "text": "דצמבר 2024",
+       "ctx": ""
+      },
+      {
+       "file": "https://www.krm.co.il/_Uploads/dbsAttachedFiles/direct_expanses_halaha_december_2023(1).xlsx",
+       "text": "דצמבר 2023",
+       "ctx": ""
+      },
+      {
+       "file": "https://www.krm.co.il/_Uploads/dbsAttachedFiles/direct_expanses_halaha_december_2022.xlsx",
+       "text": "דצמבר 2022",
+       "ctx": ""
+      },
+      {
+       "file": "https://www.krm.co.il/_Uploads/dbsAttachedFiles/direct_expanses_halaha_december_2021.xlsx",
+       "text": "דצמבר 2021",
+       "ctx": ""
+      }
+     ]
+    },
+    {
+     "url": "https://www.krm.co.il/?CategoryID=217&ArticleID=25",
+     "cache": "hit",
+     "links": 69,
+     "followed": [],
+     "files": 49,
+     "clicked": 0,
+     "captured": 0,
+     "selected": [
+      "https://www.krm.co.il/_Uploads/dbsAttachedFiles/investment-forecast-s.p500-2026(2).pdf",
+      "https://www.krm.co.il/_Uploads/dbsAttachedFiles/investment-forecast-s.p500-2025.pdf",
+      "https://www.krm.co.il/_Uploads/dbsAttachedFiles/investment-forecast-s.p500.pdf"
+     ],
+     "unselected_files": [
+      {
+       "file": "https://www.krm.co.il/_Uploads/dbsAttachedFiles/memune_rom_s_p500_augest_2026.xlsx",
+       "text": "אוגוסט 2026",
+       "ctx": ""
+      },
+      {
+       "file": "https://www.krm.co.il/_Uploads/dbsAttachedFiles/memune_rom_s_p500_july_2026.xlsx",
+       "text": "יולי 2026",
+       "ctx": ""
+      },
+      {
+       "file": "https://www.krm.co.il/_Uploads/dbsAttachedFiles/memune_rom_s_p500_june_2026.xlsx",
+       "text": "יוני 2026",
+       "ctx": ""
+      },
+      {
+       "file": "https://www.krm.co.il/_Uploads/dbsAttachedFiles/memune_rom_s_p500_may_2026.xlsx",
+       "text": "מאי 2026",
+       "ctx": ""
+      },
+      {
+       "file": "https://www.krm.co.il/_Uploads/dbsAttachedFiles/memune_rom_s_p500_april_2026.xlsx",
+       "text": "אפריל 2026",
+       "ctx": ""
+      },
+      {
+       "file": "https://www.krm.co.il/_Uploads/dbsAttachedFiles/memune_rom_s_p500_march_2026.xlsx",
+       "text": "מרץ 2026",
+       "ctx": ""
+      },
+      {
+       "file": "https://www.krm.co.il/_Uploads/dbsAttachedFiles/memune_rom_s_p500_february_2026.xlsx",
+       "text": "פברואר 2026",
+       "ctx": ""
+      },
+      {
+       "file": "https://www.krm.co.il/_Uploads/dbsAttachedFiles/memune_rom_s_p500_january_2026.xlsx",
+       "text": "ינואר 2026",
+       "ctx": ""
+      },
+      {
+       "file": "https://www.krm.co.il/_Uploads/dbsAttachedFiles/memune_rom_s_p500_december_2025.xlsx",
+       "text": "דצמבר 2025",
+       "ctx": ""
+      },
+      {
+       "file": "https://www.krm.co.il/_Uploads/dbsAttachedFiles/memune_rom_s_p500_november_2025.xlsx",
+       "text": "נובמבר 2025",
+       "ctx": ""
+      },
+      {
+       "file": "https://www.krm.co.il/_Uploads/dbsAttachedFiles/memune_rom_s_p500_october_2025.xlsx",
+       "text": "אוקטובר 2025",
+       "ctx": ""
+      },
+      {
+       "file": "https://www.krm.co.il/_Uploads/dbsAttachedFiles/memune_rom_s_p500_september_2025.xlsx",
+       "text": "ספטמבר 2025",
+       "ctx": ""
+      },
+      {
+       "file": "https://www.krm.co.il/_Uploads/dbsAttachedFiles/memune_rom_s_p500_augest_2025.xlsx",
+       "text": "אוגוסט 2025",
+       "ctx": ""
+      },
+      {
+       "file": "https://www.krm.co.il/_Uploads/dbsAttachedFiles/memune_rom_s_p500_july_2025.xlsx",
+       "text": "יולי 2025",
+       "ctx": ""
+      },
+      {
+       "file": "https://www.krm.co.il/_Uploads/dbsAttachedFiles/memune_rom_s_p500_june_2025.xlsx",
+       "text": "יוני 2025",
+       "ctx": ""
+      },
+      {
+       "file": "https://www.krm.co.il/_Uploads/dbsAttachedFiles/memune_rom_s_p500_may_2025.xlsx",
+       "text": "מאי 2025",
+       "ctx": ""
+      },
+      {
+       "file": "https://www.krm.co.il/_Uploads/dbsAttachedFiles/memune_rom_s_p500_april_2025.xlsx",
+       "text": "אפריל 2025",
+       "ctx": ""
+      },
+      {
+       "file": "https://www.krm.co.il/_Uploads/dbsAttachedFiles/memune_rom_s_p500_march_2025.xlsx",
+       "text": "מרץ 2025",
+       "ctx": ""
+      },
+      {
+       "file": "https://www.krm.co.il/_Uploads/dbsAttachedFiles/memune_rom_s_p500_february_2025.xlsx",
+       "text": "פברואר 2025",
+       "ctx": ""
+      },
+      {
+       "file": "https://www.krm.co.il/_Uploads/dbsAttachedFiles/memune_rom_s_p500_january_2024.xlsx",
+       "text": "ינואר 2025",
+       "ctx": ""
+      },
+      {
+       "file": "https://www.krm.co.il/_Uploads/dbsAttachedFiles/direct_expanses_s_p500_december_2025.xlsx",
+       "text": "דצמבר 2025",
+       "ctx": ""
+      },
+      {
+       "file": "https://www.krm.co.il/_Uploads/dbsAttachedFiles/direct_expanses_s_p500_december_2024.xlsx",
+       "text": "דצמבר 2024",
+       "ctx": ""
+      },
+      {
+       "file": "https://www.krm.co.il/_Uploads/dbsAttachedFiles/truma_tsua_rom_s_p500_june_2026.xlsx",
+       "text": "יוני 2026",
+       "ctx": ""
+      },
+      {
+       "file": "https://www.krm.co.il/_Uploads/dbsAttachedFiles/truma_tsua_rom_s_p500_march_2026.xlsx",
+       "text": "מרץ 2026",
+       "ctx": ""
+      },
+      {
+       "file": "https://www.krm.co.il/_Uploads/dbsAttachedFiles/truma_tsua_rom_s_p500_december_2025.xlsx",
+       "text": "דצמבר 2025",
+       "ctx": ""
+      }
+     ]
+    },
+    {
+     "url": "https://www.krm.co.il/?CategoryID=217&ArticleID=3",
+     "cache": "hit",
+     "links": 246,
+     "followed": [],
+     "files": 225,
+     "clicked": 0,
+     "captured": 0,
+     "selected": [
+      "https://www.krm.co.il/_Uploads/dbsAttachedFiles/investment-forecast-ravid-2026(1).pdf",
+      "https://www.krm.co.il/_Uploads/dbsAttachedFiles/investment-forecast-ravid-08.2025.pdf",
+      "https://www.krm.co.il/_Uploads/dbsAttachedFiles/investment-forecast-ravid-2025.pdf",
+      "https://www.krm.co.il/_Uploads/dbsAttachedFiles/investment-forecast-ravid-15.08.2024.1.pdf",
+      "https://www.krm.co.il/_Uploads/dbsAttachedFiles/investment-forecast-ravid-29.01.2024.pdf",
+      "https://www.krm.co.il/_Uploads/dbsAttachedFiles/investment-forecast-ravid-31.01.2023.pdf",
+      "https://www.krm.co.il/_Uploads/dbsAttachedFiles/investment-forecast-ravid-2022.pdf"
+     ],
+     "unselected_files": [
+      {
+       "file": "https://www.krm.co.il/_Uploads/dbsAttachedFiles/memune_rom_ravid_augest_2026.xlsx",
+       "text": "אוגוסט 2026",
+       "ctx": ""
+      },
+      {
+       "file": "https://www.krm.co.il/_Uploads/dbsAttachedFiles/memune_rom_ravid_july_2026.xlsx",
+       "text": "יולי 2026",
+       "ctx": ""
+      },
+      {
+       "file": "https://www.krm.co.il/_Uploads/dbsAttachedFiles/memune_rom_ravid_june_2026.xlsx",
+       "text": "יוני 2026",
+       "ctx": ""
+      },
+      {
+       "file": "https://www.krm.co.il/_Uploads/dbsAttachedFiles/memune_rom_ravid_may_2026.xlsx",
+       "text": "מאי 2026",
+       "ctx": ""
+      },
+      {
+       "file": "https://www.krm.co.il/_Uploads/dbsAttachedFiles/memune_rom_ravid_april_2026.xlsx",
+       "text": "אפריל 2026",
+       "ctx": ""
+      },
+      {
+       "file": "https://www.krm.co.il/_Uploads/dbsAttachedFiles/memune_rom_ravid_march_2026.xlsx",
+       "text": "מרץ 2026",
+       "ctx": ""
+      },
+      {
+       "file": "https://www.krm.co.il/_Uploads/dbsAttachedFiles/memune_rom_ravid_february_2026.xlsx",
+       "text": "פברואר 2026",
+       "ctx": ""
+      },
+      {
+       "file": "https://www.krm.co.il/_Uploads/dbsAttachedFiles/memune_rom_ravid_january_2026.xlsx",
+       "text": "ינואר 2026",
+       "ctx": ""
+      },
+      {
+       "file": "https://www.krm.co.il/_Uploads/dbsAttachedFiles/memune_rom_ravid_december_2025.xlsx",
+       "text": "דצמבר 2025",
+       "ctx": ""
+      },
+      {
+       "file": "https://www.krm.co.il/_Uploads/dbsAttachedFiles/memune_rom_ravid_november_2025.xlsx",
+       "text": "נובמבר 2025",
+       "ctx": ""
+      },
+      {
+       "file": "https://www.krm.co.il/_Uploads/dbsAttachedFiles/memune_rom_ravid_october_2025.xlsx",
+       "text": "אוקטובר 2025",
+       "ctx": ""
+      },
+      {
+       "file": "https://www.krm.co.il/_Uploads/dbsAttachedFiles/memune_rom_ravid_september_2025.xlsx",
+       "text": "ספטמבר 2025",
+       "ctx": ""
+      },
+      {
+       "file": "https://www.krm.co.il/_Uploads/dbsAttachedFiles/memune_rom_ravid_augest_2025.xlsx",
+       "text": "אוגוסט 2025",
+       "ctx": ""
+      },
+      {
+       "file": "https://www.krm.co.il/_Uploads/dbsAttachedFiles/memune_rom_ravid_july_2025.xlsx",
+       "text": "יולי 2025",
+       "ctx": ""
+      },
+      {
+       "file": "https://www.krm.co.il/_Uploads/dbsAttachedFiles/memune_rom_ravid_june_2025.xlsx",
+       "text": "יוני 2025",
+       "ctx": ""
+      },
+      {
+       "file": "https://www.krm.co.il/_Uploads/dbsAttachedFiles/memune_rom_ravid_may_2025.xlsx",
+       "text": "מאי 2025",
+       "ctx": ""
+      },
+      {
+       "file": "https://www.krm.co.il/_Uploads/dbsAttachedFiles/memune_rom_ravid_april_2025.xlsx",
+       "text": "אפריל 2025",
+       "ctx": ""
+      },
+      {
+       "file": "https://www.krm.co.il/_Uploads/dbsAttachedFiles/memune_rom_ravid_march_2025.xlsx",
+       "text": "מרץ 2025",
+       "ctx": ""
+      },
+      {
+       "file": "https://www.krm.co.il/_Uploads/dbsAttachedFiles/memune_rom_ravid_february_2025(1).xlsx",
+       "text": "פברואר 2025",
+       "ctx": ""
+      },
+      {
+       "file": "https://www.krm.co.il/_Uploads/dbsAttachedFiles/memune_rom_ravid_january_2025.xlsx",
+       "text": "ינואר 2025",
+       "ctx": ""
+      },
+      {
+       "file": "https://www.krm.co.il/_Uploads/dbsAttachedFiles/direct_expanses_ravid_december_2025.xlsx",
+       "text": "דצמבר 2025",
+       "ctx": ""
+      },
+      {
+       "file": "https://www.krm.co.il/_Uploads/dbsAttachedFiles/direct_expanses_ravid_december_2024.xlsx",
+       "text": "דצמבר 2024",
+       "ctx": ""
+      },
+      {
+       "file": "https://www.krm.co.il/_Uploads/dbsAttachedFiles/direct_expanses_ravid_december_2023(1).xlsx",
+       "text": "דצמבר 2023",
+       "ctx": ""
+      },
+      {
+       "file": "https://www.krm.co.il/_Uploads/dbsAttachedFiles/direct_expanses_ravid_december_2022.xlsx",
+       "text": "דצמבר 2022",
+       "ctx": ""
+      },
+      {
+       "file": "https://www.krm.co.il/_Uploads/dbsAttachedFiles/direct_expanses_ravid_december_2021.xlsx",
+       "text": "דצמבר 2021",
+       "ctx": ""
+      }
+     ]
+    },
+    {
+     "url": "https://www.krm.co.il/?CategoryID=217&ArticleID=5",
+     "cache": "hit",
+     "links": 259,
+     "followed": [],
+     "files": 238,
+     "clicked": 0,
+     "captured": 0,
+     "selected": [
+      "https://www.krm.co.il/_Uploads/dbsAttachedFiles/investment-forecast-clasic-12.07.2026.pdf",
+      "https://www.krm.co.il/_Uploads/dbsAttachedFiles/investment-forecast-clasic-2026(1).pdf",
+      "https://www.krm.co.il/_Uploads/dbsAttachedFiles/investment-forecast-clssic-2025.xlsx",
+      "https://www.krm.co.il/_Uploads/dbsAttachedFiles/investment-forecast-clssic-29.01.2024.xlsx",
+      "https://www.krm.co.il/_Uploads/dbsAttachedFiles/investment-forecast-classic-12.10.2023.xlsx",
+      "https://www.krm.co.il/_Uploads/dbsAttachedFiles/investment-forecast-classic-31.01.2023.xlsx",
+      "https://www.krm.co.il/_Uploads/dbsAttachedFiles/investment-forecast-classic-27.01.2022.pdf"
+     ],
+     "unselected_files": [
+      {
+       "file": "https://www.krm.co.il/_Uploads/dbsAttachedFiles/memune_rom_clasi_augest_2026.xlsx",
+       "text": "אוגוסט 2026",
+       "ctx": ""
+      },
+      {
+       "file": "https://www.krm.co.il/_Uploads/dbsAttachedFiles/memune_rom_clasic_july_2026.xlsx",
+       "text": "יולי 2026",
+       "ctx": ""
+      },
+      {
+       "file": "https://www.krm.co.il/_Uploads/dbsAttachedFiles/memune_rom_clasic_june_2026.xlsx",
+       "text": "יוני 2026",
+       "ctx": ""
+      },
+      {
+       "file": "https://www.krm.co.il/_Uploads/dbsAttachedFiles/memune_rom_clasic_may_2026.xlsx",
+       "text": "מאי 2026",
+       "ctx": ""
+      },
+      {
+       "file": "https://www.krm.co.il/_Uploads/dbsAttachedFiles/memune_rom_clasic_april_2026.xlsx",
+       "text": "אפריל 2026",
+       "ctx": ""
+      },
+      {
+       "file": "https://www.krm.co.il/_Uploads/dbsAttachedFiles/memune_rom_clasic_march_2026.xlsx",
+       "text": "מרץ 2026",
+       "ctx": ""
+      },
+      {
+       "file": "https://www.krm.co.il/_Uploads/dbsAttachedFiles/memune_rom_clasic_february_2026.xlsx",
+       "text": "פברואר 2026",
+       "ctx": ""
+      },
+      {
+       "file": "https://www.krm.co.il/_Uploads/dbsAttachedFiles/memune_rom_clasic_january_2026.xlsx",
+       "text": "ינואר 2026",
+       "ctx": ""
+      },
+      {
+       "file": "https://www.krm.co.il/_Uploads/dbsAttachedFiles/memune_rom_clasi_december_2025.xlsx",
+       "text": "דצמבר 2025",
+       "ctx": ""
+      },
+      {
+       "file": "https://www.krm.co.il/_Uploads/dbsAttachedFiles/memune_rom_clasi_november_2025.xlsx",
+       "text": "נובמבר 2025",
+       "ctx": ""
+      },
+      {
+       "file": "https://www.krm.co.il/_Uploads/dbsAttachedFiles/memune_rom_clasic_october_2025.xlsx",
+       "text": "אוקטובר 2025",
+       "ctx": ""
+      },
+      {
+       "file": "https://www.krm.co.il/_Uploads/dbsAttachedFiles/memune_rom_clasi_september_2025.xlsx",
+       "text": "ספטמבר 2025",
+       "ctx": ""
+      },
+      {
+       "file": "https://www.krm.co.il/_Uploads/dbsAttachedFiles/memune_rom_clasi_augest_2025.xlsx",
+       "text": "אוגוסט 2025",
+       "ctx": ""
+      },
+      {
+       "file": "https://www.krm.co.il/_Uploads/dbsAttachedFiles/memune_rom_clasic_july_2025.xlsx",
+       "text": "יולי 2025",
+       "ctx": ""
+      },
+      {
+       "file": "https://www.krm.co.il/_Uploads/dbsAttachedFiles/memune_rom_clasic_june_2025.xlsx",
+       "text": "יוני 2025",
+       "ctx": ""
+      },
+      {
+       "file": "https://www.krm.co.il/_Uploads/dbsAttachedFiles/memune_rom_clasic_may_2025.xlsx",
+       "text": "מאי 2025",
+       "ctx": ""
+      },
+      {
+       "file": "https://www.krm.co.il/_Uploads/dbsAttachedFiles/memune_rom_clasic_april_2025.xlsx",
+       "text": "אפריל 2025",
+       "ctx": ""
+      },
+      {
+       "file": "https://www.krm.co.il/_Uploads/dbsAttachedFiles/memune_rom_clasic_march_2025.xlsx",
+       "text": "מרץ 2025",
+       "ctx": ""
+      },
+      {
+       "file": "https://www.krm.co.il/_Uploads/dbsAttachedFiles/memune_rom_clasic_february_2025.xlsx",
+       "text": "פברואר 2025",
+       "ctx": ""
+      },
+      {
+       "file": "https://www.krm.co.il/_Uploads/dbsAttachedFiles/memune_rom_clasic_january_2025.xlsx",
+       "text": "ינואר 2025",
+       "ctx": ""
+      },
+      {
+       "file": "https://www.krm.co.il/_Uploads/dbsAttachedFiles/direct_expanses_clasi_december_2025(1).xlsx",
+       "text": "דצמבר 2025",
+       "ctx": ""
+      },
+      {
+       "file": "https://www.krm.co.il/_Uploads/dbsAttachedFiles/direct_expanses_clasi_december_2024.xlsx",
+       "text": "דצמבר 2024",
+       "ctx": ""
+      },
+      {
+       "file": "https://www.krm.co.il/_Uploads/dbsAttachedFiles/direct_expanses_clasi_december_2023(1).xlsx",
+       "text": "דצמבר 2023",
+       "ctx": ""
+      },
+      {
+       "file": "https://www.krm.co.il/_Uploads/dbsAttachedFiles/direct_expanses_clasi_december_2022.xlsx",
+       "text": "דצמבר 2022",
+       "ctx": ""
+      },
+      {
+       "file": "https://www.krm.co.il/_Uploads/dbsAttachedFiles/direct_expanses_clasi_december_2021.xlsx",
+       "text": "דצמבר 2021",
+       "ctx": ""
+      }
+     ]
+    },
+    {
+     "url": "https://www.krm.co.il/?CategoryID=217&ArticleID=7",
+     "cache": "hit",
+     "links": 240,
+     "followed": [],
+     "files": 219,
+     "clicked": 0,
+     "captured": 0,
+     "selected": [
+      "https://www.krm.co.il/_Uploads/dbsAttachedFiles/investment-forecast-sapir-2026(1).pdf",
+      "https://www.krm.co.il/_Uploads/dbsAttachedFiles/investment-forecast-sapir-2025.pdf",
+      "https://www.krm.co.il/_Uploads/dbsAttachedFiles/investment-forecast-sapir-29.01.2024.pdf",
+      "https://www.krm.co.il/_Uploads/dbsAttachedFiles/investment-forecast-sapir-31.01.2023.pdf",
+      "https://www.krm.co.il/_Uploads/dbsAttachedFiles/investment-forecast-sapir-2022.pdf"
+     ],
+     "unselected_files": [
+      {
+       "file": "https://www.krm.co.il/_Uploads/dbsAttachedFiles/memune_rom_sapir_augest_2026.xlsx",
+       "text": "אוגוסט 2026",
+       "ctx": ""
+      },
+      {
+       "file": "https://www.krm.co.il/_Uploads/dbsAttachedFiles/memune_rom_sapir_july_2026.xlsx",
+       "text": "יולי 2026",
+       "ctx": ""
+      },
+      {
+       "file": "https://www.krm.co.il/_Uploads/dbsAttachedFiles/memune_rom_sapir_june_2026.xlsx",
+       "text": "יוני 2026",
+       "ctx": ""
+      },
+      {
+       "file": "https://www.krm.co.il/_Uploads/dbsAttachedFiles/memune_rom_sapir_mayl_2026.xlsx",
+       "text": "מאי 2026",
+       "ctx": ""
+      },
+      {
+       "file": "https://www.krm.co.il/_Uploads/dbsAttachedFiles/memune_rom_sapir_april_2026.xlsx",
+       "text": "אפריל 2026",
+       "ctx": ""
+      },
+      {
+       "file": "https://www.krm.co.il/_Uploads/dbsAttachedFiles/memune_rom_sapir_march_2026.xlsx",
+       "text": "מרץ 2026",
+       "ctx": ""
+      },
+      {
+       "file": "https://www.krm.co.il/_Uploads/dbsAttachedFiles/memune_rom_sapir_january_2026(1).xlsx",
+       "text": "פברואר 2026",
+       "ctx": ""
+      },
+      {
+       "file": "https://www.krm.co.il/_Uploads/dbsAttachedFiles/memune_rom_sapir_january_2026.xlsx",
+       "text": "ינואר 2026",
+       "ctx": ""
+      },
+      {
+       "file": "https://www.krm.co.il/_Uploads/dbsAttachedFiles/memune_rom_sapir_december_2025.xlsx",
+       "text": "דצמבר 2025",
+       "ctx": ""
+      },
+      {
+       "file": "https://www.krm.co.il/_Uploads/dbsAttachedFiles/memune_rom_sapir_november_2025.xlsx",
+       "text": "נובמבר 2025",
+       "ctx": ""
+      },
+      {
+       "file": "https://www.krm.co.il/_Uploads/dbsAttachedFiles/memune_rom_sapir_october_2025.xlsx",
+       "text": "אוקטובר 2025",
+       "ctx": ""
+      },
+      {
+       "file": "https://www.krm.co.il/_Uploads/dbsAttachedFiles/memune_rom_sapir_september_2025.xlsx",
+       "text": "ספטמבר 2025",
+       "ctx": ""
+      },
+      {
+       "file": "https://www.krm.co.il/_Uploads/dbsAttachedFiles/memune_rom_sapir_augest_2025.xlsx",
+       "text": "אוגוסט 2025",
+       "ctx": ""
+      },
+      {
+       "file": "https://www.krm.co.il/_Uploads/dbsAttachedFiles/memune_rom_sapir_july_2025.xlsx",
+       "text": "יולי 2025",
+       "ctx": ""
+      },
+      {
+       "file": "https://www.krm.co.il/_Uploads/dbsAttachedFiles/memune_rom_sapir_june_2025.xlsx",
+       "text": "יוני 2025",
+       "ctx": ""
+      },
+      {
+       "file": "https://www.krm.co.il/_Uploads/dbsAttachedFiles/memune_rom_sapir_may_2025.xlsx",
+       "text": "מאי 2025",
+       "ctx": ""
+      },
+      {
+       "file": "https://www.krm.co.il/_Uploads/dbsAttachedFiles/memune_rom_sapir_april_2025.xlsx",
+       "text": "אפריל 2025",
+       "ctx": ""
+      },
+      {
+       "file": "https://www.krm.co.il/_Uploads/dbsAttachedFiles/memune_rom_sapir_march_2025.xlsx",
+       "text": "מרץ 2025",
+       "ctx": ""
+      },
+      {
+       "file": "https://www.krm.co.il/_Uploads/dbsAttachedFiles/memune_rom_sapir_february_2025.xlsx",
+       "text": "פברואר 2025",
+       "ctx": ""
+      },
+      {
+       "file": "https://www.krm.co.il/_Uploads/dbsAttachedFiles/memune_rom_sapir_january_2025.xlsx",
+       "text": "ינואר 2025",
+       "ctx": ""
+      },
+      {
+       "file": "https://www.krm.co.il/_Uploads/dbsAttachedFiles/direct_expanses_sapir_december_2025.xlsx",
+       "text": "דצמבר 2025",
+       "ctx": ""
+      },
+      {
+       "file": "https://www.krm.co.il/_Uploads/dbsAttachedFiles/direct_expanses_sapir_december_2024.xlsx",
+       "text": "דצמבר 2024",
+       "ctx": ""
+      },
+      {
+       "file": "https://www.krm.co.il/_Uploads/dbsAttachedFiles/direct_expanses_sapir_december_2023(1).xlsx",
+       "text": "דצמבר 2023",
+       "ctx": ""
+      },
+      {
+       "file": "https://www.krm.co.il/_Uploads/dbsAttachedFiles/direct_expanses_sapir_december_2022.xlsx",
+       "text": "דצמבר 2022",
+       "ctx": ""
+      },
+      {
+       "file": "https://www.krm.co.il/_Uploads/dbsAttachedFiles/direct_expanses_sapir_december_2021.xlsx",
+       "text": "דצמבר 2021",
+       "ctx": ""
+      }
+     ]
+    }
+   ],
+   "new_docs": 0,
+   "found": 845,
+   "selected": 28,
+   "had": 28,
+   "head_skip": 0,
+   "page_cache": 5,
+   "cache_hit": 5,
+   "old_skip": 28,
+   "mode": "map",
+   "errors": [],
+   "diag": [
+    "החברה המנהלת של רו: links=134 files=114 clicked=0 captured=0 selected=6",
+    "החברה המנהלת של רו: links=69 files=49 clicked=0 captured=0 selected=3",
+    "החברה המנהלת של רו: links=246 files=225 clicked=0 captured=0 selected=7",
+    "החברה המנהלת של רו: links=259 files=238 clicked=0 captured=0 selected=7",
+    "החברה המנהלת של רו: links=240 files=219 clicked=0 captured=0 selected=5"
+   ],
+   "new_files": []
+  },
+  {
+   "legal_id": "520027715",
+   "name": "מנורה מבטחים והסתדרות המהנדסים ניהול קופות גמל בע\"מ",
+   "pages": [
+    {
+     "url": "https://www.menoramivt.co.il/funds/about-menora/engineers/omega-fund/omega-286",
+     "cache": "expired",
+     "links": 276,
+     "followed": [
+      "https://www.menoramivt.co.il/links/regulations-hishtalmut-omega"
+     ],
+     "files": 45,
+     "clicked": 0,
+     "captured": 0,
+     "selected": [
+      "https://cdn.menoramivt.co.il/public/docs/20260126/מדיניות-השקעה-לשנת-2026-מנורה-מבטחים-קרן-השתלמות-אומגה-כללי-286.xlsx",
+      "https://cdn.menoramivt.co.il/public/docs/20250122/מדיניות-השקעה-לשנת-2025-מנורה-מבטחים-קרן-השתלמות-אומגה-כללי-286.xlsx",
+      "https://cdn.menoramivt.co.il/public/docs/20240124/מדיניות-השקעה-לשנת-2024-אומגה-קרן-השתלמות-מסלול-כללי-286.xlsx",
+      "https://cdn.menoramivt.co.il/public/docs/20230620/מדיניות-השקעה-לשנת-2023-אומגה-קרן-השתלמות-מסלול-כללי-286.xlsx",
+      "https://cdn.menoramivt.co.il/public/docs/20220124/מדיניות-השקעה-לשנת-2022-אומגה-קרן-השתלמות-מסלול-כללי.xlsx",
+      "https://cdn.menoramivt.co.il/public/docs/20210919/מדיניות-השקעה-לשנת-2021-אומגה-קרן-השתלמות-מסלול-כללי---החל-מ-16.8.21.xlsx",
+      "https://cdn.menoramivt.co.il/public/docs/20210124/מדיניות-השקעה-לשנת-2021-אומגה-קרן-השתלמות-כללי.xlsx"
+     ],
+     "unselected_files": [
+      {
+       "file": "https://cdn.menoramivt.co.il/public/docs/20240331/esg-report-2021-22022.pdf",
+       "text": "(html)",
+       "ctx": ""
+      },
+      {
+       "file": "https://cdn.menoramivt.co.il/public/docs/20260323/g286a_425.pdf",
+       "text": "(html)",
+       "ctx": ""
+      },
+      {
+       "file": "https://cdn.menoramivt.co.il/public/docs/20250304/g286b_424.pdf",
+       "text": "(html)",
+       "ctx": ""
+      },
+      {
+       "file": "https://cdn.menoramivt.co.il/public/docs/20240331/g286a_423.pdf",
+       "text": "(html)",
+       "ctx": ""
+      },
+      {
+       "file": "https://cdn.menoramivt.co.il/public/docs/20230316/g286a_422.pdf",
+       "text": "(html)",
+       "ctx": ""
+      },
+      {
+       "file": "https://cdn.menoramivt.co.il/public/docs/20260420/צדדים-קשורים.אומגה-קרן-השתלמות.12.2025.xlsx",
+       "text": "(html)",
+       "ctx": ""
+      },
+      {
+       "file": "https://cdn.menoramivt.co.il/public/docs/20250624/צדדים-קשורים.אומגה-קרן-השתלמות.12.2024.xlsx",
+       "text": "(html)",
+       "ctx": ""
+      },
+      {
+       "file": "https://cdn.menoramivt.co.il/public/docs/20240401/צדדים-קשורים.אומגה-קרן-השתלמות.12.2023.xlsx",
+       "text": "(html)",
+       "ctx": ""
+      },
+      {
+       "file": "https://cdn.menoramivt.co.il/public/docs/20230323/צדדים-קשורים.אומגה-קרן-השתלמות.12.2022.xlsx",
+       "text": "(html)",
+       "ctx": ""
+      },
+      {
+       "file": "https://cdn.menoramivt.co.il/public/docs/20240404/520027715_g286_p423.xlsx",
+       "text": "(html)",
+       "ctx": ""
+      },
+      {
+       "file": "https://cdn.menoramivt.co.il/public/docs/20231207/520027715_g286_p323.xlsx",
+       "text": "(html)",
+       "ctx": ""
+      },
+      {
+       "file": "https://cdn.menoramivt.co.il/public/docs/20230829/520027715_g286_p223.xlsx",
+       "text": "(html)",
+       "ctx": ""
+      },
+      {
+       "file": "https://cdn.menoramivt.co.il/public/docs/20230601/520027715_g286_p123.xlsx",
+       "text": "(html)",
+       "ctx": ""
+      },
+      {
+       "file": "https://cdn.menoramivt.co.il/public/docs/20230517/520027715_g286_p422-(1).xlsx",
+       "text": "(html)",
+       "ctx": ""
+      },
+      {
+       "file": "https://cdn.menoramivt.co.il/public/docs/20230517/520027715_g286_p322-(1).xlsx",
+       "text": "(html)",
+       "ctx": ""
+      },
+      {
+       "file": "https://cdn.menoramivt.co.il/public/docs/20240408/520027715_g286_p222.xlsx",
+       "text": "(html)",
+       "ctx": ""
+      },
+      {
+       "file": "https://cdn.menoramivt.co.il/public/docs/20260914/דוח-חודשי-לאתר.286.08.2026.xlsx",
+       "text": "(html)",
+       "ctx": ""
+      },
+      {
+       "file": "https://cdn.menoramivt.co.il/public/docs/20260720/תרומת-אפיקי-השקעה-לתשואה-הכוללת---מנורה-מבטחים-קרן-השתלמות-אומגה-כללי.xlsx",
+       "text": "(html)",
+       "ctx": ""
+      },
+      {
+       "file": "https://cdn.menoramivt.co.il/public/docs/20260503/520027715_g286_yield126.xlsx",
+       "text": "(html)",
+       "ctx": ""
+      },
+      {
+       "file": "https://cdn.menoramivt.co.il/public/docs/20260202/520027715_g286_yield425.xlsx",
+       "text": "(html)",
+       "ctx": ""
+      },
+      {
+       "file": "https://cdn.menoramivt.co.il/public/docs/20251029/520027715_g286_yield325.xlsx",
+       "text": "(html)",
+       "ctx": ""
+      },
+      {
+       "file": "https://cdn.menoramivt.co.il/public/docs/20250728/520027715_g286_yield225.xlsx",
+       "text": "(html)",
+       "ctx": ""
+      },
+      {
+       "file": "https://cdn.menoramivt.co.il/public/docs/20250504/520027715_g286_yield125.xlsx",
+       "text": "(html)",
+       "ctx": ""
+      },
+      {
+       "file": "https://cdn.menoramivt.co.il/public/docs/20250319/520027715_g286_yield424.xlsx",
+       "text": "(html)",
+       "ctx": ""
+      },
+      {
+       "file": "https://cdn.menoramivt.co.il/public/docs/20241106/520027715_g286_yield324.xlsx",
+       "text": "(html)",
+       "ctx": ""
+      }
+     ]
+    },
+    {
+     "url": "https://www.menoramivt.co.il/funds/about-menora/engineers/omega-fund/omega-1445",
+     "cache": "expired",
+     "links": 227,
+     "followed": [],
+     "files": 1,
+     "clicked": 0,
+     "captured": 0,
+     "selected": [],
+     "unselected_files": [
+      {
+       "file": "https://cdn.menoramivt.co.il/public/docs/20240331/esg-report-2021-22022.pdf",
+       "text": "(html)",
+       "ctx": ""
+      }
+     ]
+    },
+    {
+     "url": "https://www.menoramivt.co.il/funds/about-menora/engineers/omega-fund/omega-1446",
+     "cache": "expired",
+     "links": 277,
+     "followed": [],
+     "files": 46,
+     "clicked": 0,
+     "captured": 0,
+     "selected": [
+      "https://cdn.menoramivt.co.il/public/docs/20260310/מדיניות-השקעה-לשנת-2026-מנורה-מבטחים-קרן-השתלמות-אומגה-מניות-1446.xlsx",
+      "https://cdn.menoramivt.co.il/public/docs/20250122/מדיניות-השקעה-לשנת-2025-מנורה-מבטחים-קרן-השתלמות-אומגה-מניות-1446.xlsx",
+      "https://cdn.menoramivt.co.il/public/docs/20240304/מדיניות-השקעה-לשנת-2024-אומגה-קרן-השתלמות-מסלול-מניות-1446.xlsx",
+      "https://cdn.menoramivt.co.il/public/docs/20240124/מדיניות-השקעה-לשנת-2024-אומגה-קרן-השתלמות-מסלול-מניות-1446.xlsx",
+      "https://cdn.menoramivt.co.il/public/docs/20230620/מדיניות-השקעה-לשנת-2023-אומגה-קרן-השתלמות-מסלול-מניות-1446.xlsx",
+      "https://cdn.menoramivt.co.il/public/docs/20220124/מדיניות-השקעה-לשנת-2022-אומגה-קרן-השתלמות-מסלול-מניות.xlsx",
+      "https://cdn.menoramivt.co.il/public/docs/20210124/מדיניות-השקעה-לשנת-2021-אומגה-קרן-השתלמות-מסלול-מניות.xlsx",
+      "https://cdn.menoramivt.co.il/public/docs/מדיניות-השקעה-לשנת-2020-אומגה-קרן-השתלמות-מסלול-מניות.xlsx"
+     ],
+     "unselected_files": [
+      {
+       "file": "https://cdn.menoramivt.co.il/public/docs/20240331/esg-report-2021-22022.pdf",
+       "text": "(html)",
+       "ctx": ""
+      },
+      {
+       "file": "https://cdn.menoramivt.co.il/public/docs/20260323/g286a_425.pdf",
+       "text": "(html)",
+       "ctx": ""
+      },
+      {
+       "file": "https://cdn.menoramivt.co.il/public/docs/20250304/g286b_424.pdf",
+       "text": "(html)",
+       "ctx": ""
+      },
+      {
+       "file": "https://cdn.menoramivt.co.il/public/docs/20240331/g286a_423.pdf",
+       "text": "(html)",
+       "ctx": ""
+      },
+      {
+       "file": "https://cdn.menoramivt.co.il/public/docs/20230316/g286a_422.pdf",
+       "text": "(html)",
+       "ctx": ""
+      },
+      {
+       "file": "https://cdn.menoramivt.co.il/public/docs/20260420/צדדים-קשורים.אומגה-קרן-השתלמות.12.2025.xlsx",
+       "text": "(html)",
+       "ctx": ""
+      },
+      {
+       "file": "https://cdn.menoramivt.co.il/public/docs/20250624/צדדים-קשורים.אומגה-קרן-השתלמות.12.2024.xlsx",
+       "text": "(html)",
+       "ctx": ""
+      },
+      {
+       "file": "https://cdn.menoramivt.co.il/public/docs/20240401/צדדים-קשורים.אומגה-קרן-השתלמות.12.2023.xlsx",
+       "text": "(html)",
+       "ctx": ""
+      },
+      {
+       "file": "https://cdn.menoramivt.co.il/public/docs/20230323/צדדים-קשורים.אומגה-קרן-השתלמות.12.2022.xlsx",
+       "text": "(html)",
+       "ctx": ""
+      },
+      {
+       "file": "https://cdn.menoramivt.co.il/public/docs/20240404/520027715_g1446_p423.xlsx",
+       "text": "(html)",
+       "ctx": ""
+      },
+      {
+       "file": "https://cdn.menoramivt.co.il/public/docs/20231207/520027715_g1446_p323.xlsx",
+       "text": "(html)",
+       "ctx": ""
+      },
+      {
+       "file": "https://cdn.menoramivt.co.il/public/docs/20230829/520027715_g1446_p223.xlsx",
+       "text": "(html)",
+       "ctx": ""
+      },
+      {
+       "file": "https://cdn.menoramivt.co.il/public/docs/20230601/520027715_g1446_p123.xlsx",
+       "text": "(html)",
+       "ctx": ""
+      },
+      {
+       "file": "https://cdn.menoramivt.co.il/public/docs/20230329/520027715_g1446_p422.xlsx",
+       "text": "(html)",
+       "ctx": ""
+      },
+      {
+       "file": "https://cdn.menoramivt.co.il/public/docs/20221204/520027715_g1446_p322.xlsx",
+       "text": "(html)",
+       "ctx": ""
+      },
+      {
+       "file": "https://cdn.menoramivt.co.il/public/docs/20240408/520027715_g1446_p222.xlsx",
+       "text": "(html)",
+       "ctx": ""
+      },
+      {
+       "file": "https://cdn.menoramivt.co.il/public/docs/20260914/דוח-חודשי-לאתר.1446.08.2026.xlsx",
+       "text": "(html)",
+       "ctx": ""
+      },
+      {
+       "file": "https://cdn.menoramivt.co.il/public/docs/20260720/תרומת-אפיקי-השקעה-לתשואה-הכוללת---מנורה-מבטחים-קרן-השתלמות-אומגה-מניות.xlsx",
+       "text": "(html)",
+       "ctx": ""
+      },
+      {
+       "file": "https://cdn.menoramivt.co.il/public/docs/20260503/520027715_g1446_yield126.xlsx",
+       "text": "(html)",
+       "ctx": ""
+      },
+      {
+       "file": "https://cdn.menoramivt.co.il/public/docs/20260202/520027715_g1446_yield425.xlsx",
+       "text": "(html)",
+       "ctx": ""
+      },
+      {
+       "file": "https://cdn.menoramivt.co.il/public/docs/20251029/520027715_g1446_yield325.xlsx",
+       "text": "(html)",
+       "ctx": ""
+      },
+      {
+       "file": "https://cdn.menoramivt.co.il/public/docs/20250728/520027715_g1446_yield225.xlsx",
+       "text": "(html)",
+       "ctx": ""
+      },
+      {
+       "file": "https://cdn.menoramivt.co.il/public/docs/20250504/520027715_g1446_yield125.xlsx",
+       "text": "(html)",
+       "ctx": ""
+      },
+      {
+       "file": "https://cdn.menoramivt.co.il/public/docs/20250319/520027715_g1446_yield424.xlsx",
+       "text": "(html)",
+       "ctx": ""
+      },
+      {
+       "file": "https://cdn.menoramivt.co.il/public/docs/20241106/520027715_g1446_yield324.xlsx",
+       "text": "(html)",
+       "ctx": ""
+      }
+     ]
+    },
+    {
+     "url": "https://www.menoramivt.co.il/funds/about-menora/engineers/omega-fund/omega-9803",
+     "cache": "expired",
+     "links": 277,
+     "followed": [],
+     "files": 46,
+     "clicked": 0,
+     "captured": 0,
+     "selected": [
+      "https://cdn.menoramivt.co.il/public/docs/20260126/מדיניות-השקעה-לשנת-2026-מנורה-מבטחים-קרן-השתלמות-אומגה-אשראי-ואגח-עם-מניות-(עד-25-אחוז-מניות)-9803.xlsx",
+      "https://cdn.menoramivt.co.il/public/docs/20250122/מדיניות-השקעה-לשנת-2025-מנורה-מבטחים-קרן-השתלמות-אומגה-אשראי-ואגח-עם-מניות-(עד-25-אחוז-מניות)-9803.xlsx",
+      "https://cdn.menoramivt.co.il/public/docs/20240630/מדיניות-השקעה-לשנת-2024-מנורה-מבטחים-קרן-השתלמות-אומגה-אשראי-ואגח-עם-מניות-(עד-25-אחוז-מניות)-9803.xlsx",
+      "https://cdn.menoramivt.co.il/public/docs/20240124/מדיניות-השקעה-לשנת-2024-אומגה-קרן-השתלמות-אגח-עד-25-מניות-9803.xlsx",
+      "https://cdn.menoramivt.co.il/public/docs/20230620/מדיניות-השקעה-לשנת-2023-אומגה-קרן-השתלמות-אגח-עד-25-מניות-9803.xlsx",
+      "https://cdn.menoramivt.co.il/public/docs/20220124/מדיניות-השקעה-לשנת-2022-אומגה-קרן-השתלמות-אגח-עד-25-אחוז-מניות.xlsx",
+      "https://cdn.menoramivt.co.il/public/docs/20210124/מדיניות-השקעה-לשנת-2021-אומגה-קרן-השתלמות-אגח-עד-25-אחוז-מניות.xlsx"
+     ],
+     "unselected_files": [
+      {
+       "file": "https://cdn.menoramivt.co.il/public/docs/20240331/esg-report-2021-22022.pdf",
+       "text": "(html)",
+       "ctx": ""
+      },
+      {
+       "file": "https://cdn.menoramivt.co.il/public/docs/20260323/g286a_425.pdf",
+       "text": "(html)",
+       "ctx": ""
+      },
+      {
+       "file": "https://cdn.menoramivt.co.il/public/docs/20250304/g286b_424.pdf",
+       "text": "(html)",
+       "ctx": ""
+      },
+      {
+       "file": "https://cdn.menoramivt.co.il/public/docs/20240331/g286a_423.pdf",
+       "text": "(html)",
+       "ctx": ""
+      },
+      {
+       "file": "https://cdn.menoramivt.co.il/public/docs/20230316/g286a_422.pdf",
+       "text": "(html)",
+       "ctx": ""
+      },
+      {
+       "file": "https://cdn.menoramivt.co.il/public/docs/20260420/צדדים-קשורים.אומגה-קרן-השתלמות.12.2025.xlsx",
+       "text": "(html)",
+       "ctx": ""
+      },
+      {
+       "file": "https://cdn.menoramivt.co.il/public/docs/20250624/צדדים-קשורים.אומגה-קרן-השתלמות.12.2024.xlsx",
+       "text": "(html)",
+       "ctx": ""
+      },
+      {
+       "file": "https://cdn.menoramivt.co.il/public/docs/20240401/צדדים-קשורים.אומגה-קרן-השתלמות.12.2023.xlsx",
+       "text": "(html)",
+       "ctx": ""
+      },
+      {
+       "file": "https://cdn.menoramivt.co.il/public/docs/20230323/צדדים-קשורים.אומגה-קרן-השתלמות.12.2022.xlsx",
+       "text": "(html)",
+       "ctx": ""
+      },
+      {
+       "file": "https://cdn.menoramivt.co.il/public/docs/20240404/520027715_g9803_p423.xlsx",
+       "text": "(html)",
+       "ctx": ""
+      },
+      {
+       "file": "https://cdn.menoramivt.co.il/public/docs/20231207/520027715_g9803_p323.xlsx",
+       "text": "(html)",
+       "ctx": ""
+      },
+      {
+       "file": "https://cdn.menoramivt.co.il/public/docs/20230829/520027715_g9803_p223.xlsx",
+       "text": "(html)",
+       "ctx": ""
+      },
+      {
+       "file": "https://cdn.menoramivt.co.il/public/docs/20230601/520027715_g9803_p123.xlsx",
+       "text": "(html)",
+       "ctx": ""
+      },
+      {
+       "file": "https://cdn.menoramivt.co.il/public/docs/20230329/520027715_g9803_p422.xlsx",
+       "text": "(html)",
+       "ctx": ""
+      },
+      {
+       "file": "https://cdn.menoramivt.co.il/public/docs/20221204/520027715_g9803_p322.xlsx",
+       "text": "(html)",
+       "ctx": ""
+      },
+      {
+       "file": "https://cdn.menoramivt.co.il/public/docs/20240408/520027715_g9803_p222.xlsx",
+       "text": "(html)",
+       "ctx": ""
+      },
+      {
+       "file": "https://cdn.menoramivt.co.il/public/docs/20260914/דוח-חודשי-לאתר.9803.08.2026.xlsx",
+       "text": "(html)",
+       "ctx": ""
+      },
+      {
+       "file": "https://cdn.menoramivt.co.il/public/docs/20260721/תרומת-אפיקי-השקעה-לתשואה-הכוללת---מנורה-מבטחים-קרן-השתלמות-אומגה-אשראי-ואגח-עם-מניות-עד-25-מניות.xlsx",
+       "text": "(html)",
+       "ctx": ""
+      },
+      {
+       "file": "https://cdn.menoramivt.co.il/public/docs/20260503/520027715_g9803_yield126.xlsx",
+       "text": "(html)",
+       "ctx": ""
+      },
+      {
+       "file": "https://cdn.menoramivt.co.il/public/docs/20260202/520027715_g9803_yield425.xlsx",
+       "text": "(html)",
+       "ctx": ""
+      },
+      {
+       "file": "https://cdn.menoramivt.co.il/public/docs/20251029/520027715_g9803_yield325.xlsx",
+       "text": "(html)",
+       "ctx": ""
+      },
+      {
+       "file": "https://cdn.menoramivt.co.il/public/docs/20250728/520027715_g9803_yield225.xlsx",
+       "text": "(html)",
+       "ctx": ""
+      },
+      {
+       "file": "https://cdn.menoramivt.co.il/public/docs/20250504/520027715_g9803_yield125.xlsx",
+       "text": "(html)",
+       "ctx": ""
+      },
+      {
+       "file": "https://cdn.menoramivt.co.il/public/docs/20250319/520027715_g9803_yield424.xlsx",
+       "text": "(html)",
+       "ctx": ""
+      },
+      {
+       "file": "https://cdn.menoramivt.co.il/public/docs/20241106/520027715_g9803_yield324.xlsx",
+       "text": "(html)",
+       "ctx": ""
+      }
+     ]
+    },
+    {
+     "url": "https://www.menoramivt.co.il/funds/about-menora/engineers/omega-fund/omega-14418",
+     "cache": "expired",
+     "links": 264,
+     "followed": [],
+     "files": 33,
+     "clicked": 0,
+     "captured": 0,
+     "selected": [
+      "https://cdn.menoramivt.co.il/public/docs/20260126/מדיניות-השקעה-לשנת-2026-מנורה-מבטחים-קרן-השתלמות-אומגה-עוקב-מדדי-מניות-14418.xlsx",
+      "https://cdn.menoramivt.co.il/public/docs/20250122/מדיניות-השקעה-לשנת-2025-מנורה-מבטחים-קרן-השתלמות-אומגה-עוקב-מדדי-מניות-14418.xlsx",
+      "https://cdn.menoramivt.co.il/public/docs/20240701/מדיניות-השקעה-לשנת-2024-מנורה-מבטחים-קרן-השתלמות-אומגה-עוקב-מדדי-מניות-14418.xlsx",
+      "https://cdn.menoramivt.co.il/public/docs/20240124/מדיניות-השקעה-לשנת-2024-אומגה-קרן-השתלמות-מסלול-פאסיבי---מדדי-מניות-14418.xlsx",
+      "https://cdn.menoramivt.co.il/public/docs/20230620/מדיניות-השקעה-לשנת-2023-אומגה-קרן-השתלמות-מסלול-פאסיבי---מדדי-מניות-14418.xlsx"
+     ],
+     "unselected_files": [
+      {
+       "file": "https://cdn.menoramivt.co.il/public/docs/20240331/esg-report-2021-22022.pdf",
+       "text": "(html)",
+       "ctx": ""
+      },
+      {
+       "file": "https://cdn.menoramivt.co.il/public/docs/20260323/g286a_425.pdf",
+       "text": "(html)",
+       "ctx": ""
+      },
+      {
+       "file": "https://cdn.menoramivt.co.il/public/docs/20250304/g286b_424.pdf",
+       "text": "(html)",
+       "ctx": ""
+      },
+      {
+       "file": "https://cdn.menoramivt.co.il/public/docs/20240331/g286a_423.pdf",
+       "text": "(html)",
+       "ctx": ""
+      },
+      {
+       "file": "https://cdn.menoramivt.co.il/public/docs/20260420/צדדים-קשורים.אומגה-קרן-השתלמות.12.2025.xlsx",
+       "text": "(html)",
+       "ctx": ""
+      },
+      {
+       "file": "https://cdn.menoramivt.co.il/public/docs/20250624/צדדים-קשורים.אומגה-קרן-השתלמות.12.2024.xlsx",
+       "text": "(html)",
+       "ctx": ""
+      },
+      {
+       "file": "https://cdn.menoramivt.co.il/public/docs/20240401/צדדים-קשורים.אומגה-קרן-השתלמות.12.2023.xlsx",
+       "text": "(html)",
+       "ctx": ""
+      },
+      {
+       "file": "https://cdn.menoramivt.co.il/public/docs/20230323/צדדים-קשורים.אומגה-קרן-השתלמות.12.2022.xlsx",
+       "text": "(html)",
+       "ctx": ""
+      },
+      {
+       "file": "https://cdn.menoramivt.co.il/public/docs/20240404/520027715_g14418_p423.xlsx",
+       "text": "(html)",
+       "ctx": ""
+      },
+      {
+       "file": "https://cdn.menoramivt.co.il/public/docs/20231207/520027715_g14418_p323.xlsx",
+       "text": "(html)",
+       "ctx": ""
+      },
+      {
+       "file": "https://cdn.menoramivt.co.il/public/docs/20230829/520027715_g14418_p223.xlsx",
+       "text": "(html)",
+       "ctx": ""
+      },
+      {
+       "file": "https://cdn.menoramivt.co.il/public/docs/20230601/520027715_g14418_p123.xlsx",
+       "text": "(html)",
+       "ctx": ""
+      },
+      {
+       "file": "https://cdn.menoramivt.co.il/public/docs/20260914/דוח-חודשי-לאתר.14418.08.2026.xlsx",
+       "text": "(html)",
+       "ctx": ""
+      },
+      {
+       "file": "https://cdn.menoramivt.co.il/public/docs/20260720/תרומת-אפיקי-השקעה-לתשואה-הכוללת---מנורה-מבטחים-קרן-השתלמות-אומגה-עוקב-מדדי-מניות.xlsx",
+       "text": "(html)",
+       "ctx": ""
+      },
+      {
+       "file": "https://cdn.menoramivt.co.il/public/docs/20260503/520027715_g14418_yield126.xlsx",
+       "text": "(html)",
+       "ctx": ""
+      },
+      {
+       "file": "https://cdn.menoramivt.co.il/public/docs/20260202/520027715_g14418_yield425.xlsx",
+       "text": "(html)",
+       "ctx": ""
+      },
+      {
+       "file": "https://cdn.menoramivt.co.il/public/docs/20251029/520027715_g14418_yield325.xlsx",
+       "text": "(html)",
+       "ctx": ""
+      },
+      {
+       "file": "https://cdn.menoramivt.co.il/public/docs/20250728/520027715_g14418_yield225.xlsx",
+       "text": "(html)",
+       "ctx": ""
+      },
+      {
+       "file": "https://cdn.menoramivt.co.il/public/docs/20250504/520027715_g14418_yield125.xlsx",
+       "text": "(html)",
+       "ctx": ""
+      },
+      {
+       "file": "https://cdn.menoramivt.co.il/public/docs/20250319/520027715_g14418_yield424.xlsx",
+       "text": "(html)",
+       "ctx": ""
+      },
+      {
+       "file": "https://cdn.menoramivt.co.il/public/docs/20241106/520027715_g14418_yield324.xlsx",
+       "text": "(html)",
+       "ctx": ""
+      },
+      {
+       "file": "https://cdn.menoramivt.co.il/public/docs/20240728/520027715_g14418_yield224.xlsx",
+       "text": "(html)",
+       "ctx": ""
+      },
+      {
+       "file": "https://cdn.menoramivt.co.il/public/docs/20240708/520027715_g14418_yield124.xlsx",
+       "text": "(html)",
+       "ctx": ""
+      },
+      {
+       "file": "https://cdn.menoramivt.co.il/public/docs/20240311/520027715_g14418_yield423.xlsx",
+       "text": "(html)",
+       "ctx": ""
+      },
+      {
+       "file": "https://cdn.menoramivt.co.il/public/docs/20231105/520027715_g14418_yield323.xlsx",
+       "text": "(html)",
+       "ctx": ""
+      }
+     ]
+    },
+    {
+     "url": "https://www.menoramivt.co.il/funds/about-menora/engineers/omega-fund/omega-15738",
+     "cache": "expired",
+     "links": 227,
+     "followed": [],
+     "files": 1,
+     "clicked": 0,
+     "captured": 0,
+     "selected": [],
+     "unselected_files": [
+      {
+       "file": "https://cdn.menoramivt.co.il/public/docs/20240331/esg-report-2021-22022.pdf",
+       "text": "(html)",
+       "ctx": ""
+      }
+     ]
+    },
+    {
+     "url": "https://www.menoramivt.co.il/funds/about-menora/engineers/omega-fund/omega-15739",
+     "cache": "expired",
+     "links": 227,
+     "followed": [],
+     "files": 1,
+     "clicked": 0,
+     "captured": 0,
+     "selected": [],
+     "unselected_files": [
+      {
+       "file": "https://cdn.menoramivt.co.il/public/docs/20240331/esg-report-2021-22022.pdf",
+       "text": "(html)",
+       "ctx": ""
+      }
+     ]
+    },
+    {
+     "url": "https://www.menoramivt.co.il/links/keren-hishtalmut/omega-fund",
+     "cache": "expired",
+     "links": 238,
+     "followed": [],
+     "files": 1,
+     "clicked": 0,
+     "captured": 0,
+     "selected": [],
+     "unselected_files": [
+      {
+       "file": "https://cdn.menoramivt.co.il/public/docs/20240331/esg-report-2021-22022.pdf",
+       "text": "(html)",
+       "ctx": ""
+      }
+     ]
+    },
+    {
+     "url": "https://www.menoramivt.co.il/funds/about-menora/engineers/omega-fund/omega-9802",
+     "cache": "expired",
+     "links": 267,
+     "followed": [],
+     "files": 34,
+     "clicked": 0,
+     "captured": 0,
+     "selected": [
+      "https://cdn.menoramivt.co.il/public/docs/20230620/מדיניות-השקעה-לשנת-2023-אומגה-קרן-השתלמות-אגח-עד-15-מניות-9802.xlsx",
+      "https://cdn.menoramivt.co.il/public/docs/20220124/מדיניות-השקעה-לשנת-2022-אומגה-קרן-השתלמות-אגח-עד-15-אחוז-מניות.xlsx",
+      "https://cdn.menoramivt.co.il/public/docs/20210124/מדיניות-השקעה-לשנת-2021-אומגה-קרן-השתלמות-אגח-עד-15-אחוז-מניות.xlsx",
+      "https://cdn.menoramivt.co.il/public/docs/מדיניות-השקעה-לשנת-2020-אומגה-קרן-השתלמות-אגח-עד-15-אחוז-מניות.xlsx",
+      "https://cdn.menoramivt.co.il/public/docs/אומגה-9802-מדיניות-השקעה-2019.xlsx"
+     ],
+     "unselected_files": [
+      {
+       "file": "https://cdn.menoramivt.co.il/public/docs/20240331/esg-report-2021-22022.pdf",
+       "text": "(html)",
+       "ctx": ""
+      },
+      {
+       "file": "https://cdn.menoramivt.co.il/public/docs/20240331/g286a_423.pdf",
+       "text": "(html)",
+       "ctx": ""
+      },
+      {
+       "file": "https://cdn.menoramivt.co.il/public/docs/20230316/g286a_422.pdf",
+       "text": "(html)",
+       "ctx": ""
+      },
+      {
+       "file": "https://cdn.menoramivt.co.il/public/docs/20220330/g286a_421.pdf",
+       "text": "(html)",
+       "ctx": ""
+      },
+      {
+       "file": "https://cdn.menoramivt.co.il/public/docs/20210321/אומגה-דוח-כספי-2020.pdf",
+       "text": "(html)",
+       "ctx": ""
+      },
+      {
+       "file": "https://cdn.menoramivt.co.il/public/docs/20240401/צדדים-קשורים.אומגה-קרן-השתלמות.12.2023.xlsx",
+       "text": "(html)",
+       "ctx": ""
+      },
+      {
+       "file": "https://cdn.menoramivt.co.il/public/docs/20220330/צדדים-קשורים.אומגה-קרן-השתלמות.12.2021.xlsx",
+       "text": "(html)",
+       "ctx": ""
+      },
+      {
+       "file": "https://cdn.menoramivt.co.il/public/docs/20210324/צדדים-קשורים.אומגה-קרן-השתלמות.12.2020.xlsx",
+       "text": "(html)",
+       "ctx": ""
+      },
+      {
+       "file": "https://cdn.menoramivt.co.il/public/docs/צדדים-קשורים.אומגה-קרן-השתלמות.12.2019.xlsx",
+       "text": "(html)",
+       "ctx": ""
+      },
+      {
+       "file": "https://cdn.menoramivt.co.il/public/docs/20240404/520027715_g9802_p423.xlsx",
+       "text": "(html)",
+       "ctx": ""
+      },
+      {
+       "file": "https://cdn.menoramivt.co.il/public/docs/20231207/520027715_g9802_p323.xlsx",
+       "text": "(html)",
+       "ctx": ""
+      },
+      {
+       "file": "https://cdn.menoramivt.co.il/public/docs/20230829/520027715_g9802_p223.xlsx",
+       "text": "(html)",
+       "ctx": ""
+      },
+      {
+       "file": "https://cdn.menoramivt.co.il/public/docs/20230601/520027715_g9802_p123.xlsx",
+       "text": "(html)",
+       "ctx": ""
+      },
+      {
+       "file": "https://cdn.menoramivt.co.il/public/docs/20240408/520027715_g9802_p422.xlsx",
+       "text": "(html)",
+       "ctx": ""
+      },
+      {
+       "file": "https://cdn.menoramivt.co.il/public/docs/20221204/520027715_g9802_p322.xlsx",
+       "text": "(html)",
+       "ctx": ""
+      },
+      {
+       "file": "https://cdn.menoramivt.co.il/public/docs/20220908/520027715_g9802_p222.xlsx",
+       "text": "(html)",
+       "ctx": ""
+      },
+      {
+       "file": "https://cdn.menoramivt.co.il/public/docs/20231105/דוח-חודשי-לאתר.9802.09.2023.xlsx",
+       "text": "(html)",
+       "ctx": ""
+      },
+      {
+       "file": "https://cdn.menoramivt.co.il/public/docs/20240311/520027715_g9802_yield423.xlsx",
+       "text": "(html)",
+       "ctx": ""
+      },
+      {
+       "file": "https://cdn.menoramivt.co.il/public/docs/20231105/520027715_g9802_yield323.xlsx",
+       "text": "(html)",
+       "ctx": ""
+      },
+      {
+       "file": "https://cdn.menoramivt.co.il/public/docs/20230801/520027715_g9802_yield223.xlsx",
+       "text": "(html)",
+       "ctx": ""
+      },
+      {
+       "file": "https://cdn.menoramivt.co.il/public/docs/20230508/520027715_g9802_yield123.xlsx",
+       "text": "(html)",
+       "ctx": ""
+      },
+      {
+       "file": "https://cdn.menoramivt.co.il/public/docs/20230126/520027715_g9802_yield422.xlsx",
+       "text": "(html)",
+       "ctx": ""
+      },
+      {
+       "file": "https://cdn.menoramivt.co.il/public/docs/20221107/520027715_g9802_yield322.xlsx",
+       "text": "(html)",
+       "ctx": ""
+      },
+      {
+       "file": "https://cdn.menoramivt.co.il/public/docs/20220725/520027715_g9802_yield222.xlsx",
+       "text": "(html)",
+       "ctx": ""
+      },
+      {
+       "file": "https://cdn.menoramivt.co.il/public/docs/20220512/520027715_g9802_yield122.xlsx",
+       "text": "(html)",
+       "ctx": ""
+      }
+     ]
+    },
+    {
+     "url": "https://www.menoramivt.co.il/funds/about-menora/engineers/omega-fund/417",
+     "cache": "expired",
+     "links": 277,
+     "followed": [],
+     "files": 46,
+     "clicked": 0,
+     "captured": 0,
+     "selected": [
+      "https://cdn.menoramivt.co.il/public/docs/20260126/מדיניות-השקעה-לשנת-2026-מנורה-מבטחים-קרן-השתלמות-אומגה-אשראי-ואגח-1445.xlsx",
+      "https://cdn.menoramivt.co.il/public/docs/20250122/מדיניות-השקעה-לשנת-2025-מנורה-מבטחים-קרן-השתלמות-אומגה-אשראי-ואגח-1445.xlsx",
+      "https://cdn.menoramivt.co.il/public/docs/20240630/מדיניות-השקעה-לשנת-2024-מנורה-מבטחים-קרן-השתלמות-אומגה-אשראי-ואגח-1445.xlsx",
+      "https://cdn.menoramivt.co.il/public/docs/20240124/מדיניות-השקעה-לשנת-2024-אומגה-קרן-השתלמות-מסלול-אגח-1445.xlsx",
+      "https://cdn.menoramivt.co.il/public/docs/20230620/מדיניות-השקעה-לשנת-2023-אומגה-קרן-השתלמות-מסלול-אגח-1445.xlsx",
+      "https://cdn.menoramivt.co.il/public/docs/20220124/מדיניות-השקעה-לשנת-2022-אומגה-קרן-השתלמות-מסלול-אגח.xlsx",
+      "https://cdn.menoramivt.co.il/public/docs/20210124/מדיניות-השקעה-לשנת-2021-אומגה-קרן-השתלמות-מסלול-אגח.xlsx"
+     ],
+     "unselected_files": [
+      {
+       "file": "https://cdn.menoramivt.co.il/public/docs/20240331/esg-report-2021-22022.pdf",
+       "text": "(html)",
+       "ctx": ""
+      },
+      {
+       "file": "https://cdn.menoramivt.co.il/public/docs/20260323/g286a_425.pdf",
+       "text": "(html)",
+       "ctx": ""
+      },
+      {
+       "file": "https://cdn.menoramivt.co.il/public/docs/20250304/g286b_424.pdf",
+       "text": "(html)",
+       "ctx": ""
+      },
+      {
+       "file": "https://cdn.menoramivt.co.il/public/docs/20240331/g286a_423.pdf",
+       "text": "(html)",
+       "ctx": ""
+      },
+      {
+       "file": "https://cdn.menoramivt.co.il/public/docs/20230316/g286a_422.pdf",
+       "text": "(html)",
+       "ctx": ""
+      },
+      {
+       "file": "https://cdn.menoramivt.co.il/public/docs/20260420/צדדים-קשורים.אומגה-קרן-השתלמות.12.2025.xlsx",
+       "text": "(html)",
+       "ctx": ""
+      },
+      {
+       "file": "https://cdn.menoramivt.co.il/public/docs/20250624/צדדים-קשורים.אומגה-קרן-השתלמות.12.2024.xlsx",
+       "text": "(html)",
+       "ctx": ""
+      },
+      {
+       "file": "https://cdn.menoramivt.co.il/public/docs/20240401/צדדים-קשורים.אומגה-קרן-השתלמות.12.2023.xlsx",
+       "text": "(html)",
+       "ctx": ""
+      },
+      {
+       "file": "https://cdn.menoramivt.co.il/public/docs/20230323/צדדים-קשורים.אומגה-קרן-השתלמות.12.2022.xlsx",
+       "text": "(html)",
+       "ctx": ""
+      },
+      {
+       "file": "https://cdn.menoramivt.co.il/public/docs/20240404/520027715_g1445_p423.xlsx",
+       "text": "(html)",
+       "ctx": ""
+      },
+      {
+       "file": "https://cdn.menoramivt.co.il/public/docs/20231207/520027715_g1445_p323.xlsx",
+       "text": "(html)",
+       "ctx": ""
+      },
+      {
+       "file": "https://cdn.menoramivt.co.il/public/docs/20230829/520027715_g1445_p223.xlsx",
+       "text": "(html)",
+       "ctx": ""
+      },
+      {
+       "file": "https://cdn.menoramivt.co.il/public/docs/20230601/520027715_g1445_p123.xlsx",
+       "text": "(html)",
+       "ctx": ""
+      },
+      {
+       "file": "https://cdn.menoramivt.co.il/public/docs/20230515/520027715_g1445_p422.xlsx",
+       "text": "(html)",
+       "ctx": ""
+      },
+      {
+       "file": "https://cdn.menoramivt.co.il/public/docs/20230515/520027715_g1445_p322.xlsx",
+       "text": "(html)",
+       "ctx": ""
+      },
+      {
+       "file": "https://cdn.menoramivt.co.il/public/docs/20240408/520027715_g1445_p222.xlsx",
+       "text": "(html)",
+       "ctx": ""
+      },
+      {
+       "file": "https://cdn.menoramivt.co.il/public/docs/20260914/דוח-חודשי-לאתר.1445.08.2026.xlsx",
+       "text": "(html)",
+       "ctx": ""
+      },
+      {
+       "file": "https://cdn.menoramivt.co.il/public/docs/20260720/תרומת-אפיקי-השקעה-לתשואה-הכוללת---מנורה-מבטחים-קרן-השתלמות-אומגה-אשראי-ואגח.xlsx",
+       "text": "(html)",
+       "ctx": ""
+      },
+      {
+       "file": "https://cdn.menoramivt.co.il/public/docs/20260503/520027715_g1445_yield126.xlsx",
+       "text": "(html)",
+       "ctx": ""
+      },
+      {
+       "file": "https://cdn.menoramivt.co.il/public/docs/20260202/520027715_g1445_yield425.xlsx",
+       "text": "(html)",
+       "ctx": ""
+      },
+      {
+       "file": "https://cdn.menoramivt.co.il/public/docs/20251029/520027715_g1445_yield325.xlsx",
+       "text": "(html)",
+       "ctx": ""
+      },
+      {
+       "file": "https://cdn.menoramivt.co.il/public/docs/20250728/520027715_g1445_yield225.xlsx",
+       "text": "(html)",
+       "ctx": ""
+      },
+      {
+       "file": "https://cdn.menoramivt.co.il/public/docs/20250504/520027715_g1445_yield125.xlsx",
+       "text": "(html)",
+       "ctx": ""
+      },
+      {
+       "file": "https://cdn.menoramivt.co.il/public/docs/20250319/520027715_g1445_yield424.xlsx",
+       "text": "(html)",
+       "ctx": ""
+      },
+      {
+       "file": "https://cdn.menoramivt.co.il/public/docs/20250204/520027715_g1445_yield424.xlsx",
+       "text": "(html)",
+       "ctx": ""
+      }
+     ]
+    },
+    {
+     "url": "https://www.menoramivt.co.il/funds/about-menora/engineers/omega-fund/about-menora.engineers.omega-fund.omega-15738",
+     "cache": "expired",
+     "links": 238,
+     "followed": [],
+     "files": 10,
+     "clicked": 0,
+     "captured": 0,
+     "selected": [
+      "https://cdn.menoramivt.co.il/public/docs/20260126/מדיניות-השקעה-לשנת-2026-מנורה-מבטחים-קרן-השתלמות-אומגה-מניות-סחיר-15738.xlsx",
+      "https://cdn.menoramivt.co.il/public/docs/20251201/מדיניות-השקעה-לשנת-2025-מנורה-מבטחים-קרן-השתלמות-אומגה-מניות-סחיר-15738-(1).xlsx"
+     ],
+     "unselected_files": [
+      {
+       "file": "https://cdn.menoramivt.co.il/public/docs/20240331/esg-report-2021-22022.pdf",
+       "text": "(html)",
+       "ctx": ""
+      },
+      {
+       "file": "https://cdn.menoramivt.co.il/public/docs/20260323/g286a_425.pdf",
+       "text": "(html)",
+       "ctx": ""
+      },
+      {
+       "file": "https://cdn.menoramivt.co.il/public/docs/20260420/צדדים-קשורים.אומגה-קרן-השתלמות.12.2025.xlsx",
+       "text": "(html)",
+       "ctx": ""
+      },
+      {
+       "file": "https://cdn.menoramivt.co.il/public/docs/20260914/דוח-חודשי-לאתר.15738.08.2026.xlsx",
+       "text": "(html)",
+       "ctx": ""
+      },
+      {
+       "file": "https://cdn.menoramivt.co.il/public/docs/20260720/תרומת-אפיקי-השקעה-לתשואה-הכוללת---מנורה-מבטחים-קרן-השתלמות-אומגה-מניות-סחיר.xlsx",
+       "text": "(html)",
+       "ctx": ""
+      },
+      {
+       "file": "https://cdn.menoramivt.co.il/public/docs/20260504/520027715_g15738_yield126.xlsx",
+       "text": "(html)",
+       "ctx": ""
+      },
+      {
+       "file": "https://cdn.menoramivt.co.il/public/docs/20260203/520027715_g15738_yield425.xlsx",
+       "text": "(html)",
+       "ctx": ""
+      },
+      {
+       "file": "https://www.menoramivt.co.il/funds/about-menora/engineers/omega-fund/520027715_g286_Yield322.xlsx",
+       "text": "(html)",
+       "ctx": ""
+      }
+     ]
+    },
+    {
+     "url": "https://www.menoramivt.co.il/funds/about-menora/engineers/omega-fund/omega-fund.omega-SP500",
+     "cache": "expired",
+     "links": 240,
+     "followed": [],
+     "files": 10,
+     "clicked": 0,
+     "captured": 0,
+     "selected": [
+      "https://cdn.menoramivt.co.il/public/docs/20260126/מדיניות-השקעה-לשנת-2026-מנורה-מבטחים-קרן-השתלמות-אומגה-עוקב-מדד-s&p-500-15739.xlsx",
+      "https://cdn.menoramivt.co.il/public/docs/20251201/מדיניות-השקעה-לשנת-2025-מנורה-מבטחים-קרן-השתלמות-אומגה-עוקב-מדד-s&p500-15739-(1).xlsx"
+     ],
+     "unselected_files": [
+      {
+       "file": "https://cdn.menoramivt.co.il/public/docs/20240331/esg-report-2021-22022.pdf",
+       "text": "(html)",
+       "ctx": ""
+      },
+      {
+       "file": "https://cdn.menoramivt.co.il/public/docs/20260323/g286a_425.pdf",
+       "text": "(html)",
+       "ctx": ""
+      },
+      {
+       "file": "https://cdn.menoramivt.co.il/public/docs/20260420/צדדים-קשורים.אומגה-קרן-השתלמות.12.2025.xlsx",
+       "text": "(html)",
+       "ctx": ""
+      },
+      {
+       "file": "https://cdn.menoramivt.co.il/public/docs/20260914/דוח-חודשי-לאתר.15739.08.2026.xlsx",
+       "text": "(html)",
+       "ctx": ""
+      },
+      {
+       "file": "https://cdn.menoramivt.co.il/public/docs/20260720/תרומת-אפיקי-השקעה-לתשואה-הכוללת---מנורה-מבטחים-קרן-השתלמות-אומגה-עוקב-מדד-s&p-500.xlsx",
+       "text": "(html)",
+       "ctx": ""
+      },
+      {
+       "file": "https://cdn.menoramivt.co.il/public/docs/20260504/520027715_g15739_yield126.xlsx",
+       "text": "(html)",
+       "ctx": ""
+      },
+      {
+       "file": "https://cdn.menoramivt.co.il/public/docs/20260203/520027715_g15739_yield425.xlsx",
+       "text": "(html)",
+       "ctx": ""
+      },
+      {
+       "file": "https://www.menoramivt.co.il/funds/about-menora/engineers/omega-fund/520027715_g286_Yield322.xlsx",
+       "text": "(html)",
+       "ctx": ""
+      }
+     ]
+    },
+    {
+     "url": "https://www.menoramivt.co.il/links/regulations-hishtalmut-omega",
+     "cache": "hit",
+     "links": 76,
+     "followed": [],
+     "files": 5,
+     "clicked": 0,
+     "captured": 0,
+     "selected": [],
+     "unselected_files": [
+      {
+       "file": "https://cdn.menoramivt.co.il/public/docs/20260511/תקנון-מנורה-מבטחים-השתלמות---מאי-2026.pdf",
+       "text": "לתקנון",
+       "ctx": "תקנון עדכני נכון לתאריך: 05.05.2026 לתקנון"
+      },
+      {
+       "file": "https://cdn.menoramivt.co.il/public/docs/20260511/טבלת-ריכוז-שינויים---מנורה-מבטחים-השתלמות---מאי-2026.pdf",
+       "text": "לקריאה",
+       "ctx": "ריכוז שינויים אחרונים בתקנון שינויים שבוצעו ב-12 החודשים שקדמו ליום 05.05.2026 לקריאה"
+      },
+      {
+       "file": "https://cdn.menoramivt.co.il/public/docs/20251201/תקנון-אומגה-286-בתוקף-מיום-30.9.2025.pdf",
+       "text": "לתקנון",
+       "ctx": "תקנון עדכני נכון לתאריך: 30.09.2025 לתקנון"
+      },
+      {
+       "file": "https://cdn.menoramivt.co.il/public/docs/20251201/שינויים-אומגה-קרן-השתלמות-30.9.25.pdf",
+       "text": "לקריאה",
+       "ctx": "ריכוז שינויים אחרונים בתקנון שינויים שבוצעו ב-12 החודשים שקדמו ליום 30.09.2025 לקריאה"
+      },
+      {
+       "file": "https://cdn.menoramivt.co.il/public/docs/20240331/esg-report-2021-22022.pdf",
+       "text": "(html)",
+       "ctx": ""
+      }
+     ]
+    }
+   ],
+   "new_docs": 0,
+   "found": 279,
+   "selected": 43,
+   "had": 43,
+   "head_skip": 0,
+   "cache_expired": 12,
+   "old_skip": 43,
+   "page_cache": 1,
+   "cache_hit": 1,
+   "mode": "map",
+   "errors": [],
+   "diag": [
+    "מנורה מבטחים והסתד: links=276 files=45 clicked=0 captured=0 selected=7",
+    "מנורה מבטחים והסתד: links=227 files=1 clicked=0 captured=0 selected=0",
+    "   ? esg-report-2021-22022.pdf | (html) | ",
+    "מנורה מבטחים והסתד: links=277 files=46 clicked=0 captured=0 selected=8",
+    "מנורה מבטחים והסתד: links=277 files=46 clicked=0 captured=0 selected=7",
+    "מנורה מבטחים והסתד: links=264 files=33 clicked=0 captured=0 selected=5",
+    "מנורה מבטחים והסתד: links=227 files=1 clicked=0 captured=0 selected=0",
+    "   ? esg-report-2021-22022.pdf | (html) | ",
+    "מנורה מבטחים והסתד: links=227 files=1 clicked=0 captured=0 selected=0",
+    "   ? esg-report-2021-22022.pdf | (html) | ",
+    "מנורה מבטחים והסתד: links=238 files=1 clicked=0 captured=0 selected=0",
+    "   ? esg-report-2021-22022.pdf | (html) | ",
+    "מנורה מבטחים והסתד: links=267 files=34 clicked=0 captured=0 selected=5",
+    "מנורה מבטחים והסתד: links=277 files=46 clicked=0 captured=0 selected=7",
+    "מנורה מבטחים והסתד: links=238 files=10 clicked=0 captured=0 selected=2",
+    "מנורה מבטחים והסתד: links=240 files=10 clicked=0 captured=0 selected=2",
+    "מנורה מבטחים והסתד: links=76 files=5 clicked=0 captured=0 selected=0",
+    "   ? תקנון-מנורה-מבטחים-השתלמות---מאי-2026.pdf | לתקנון | תקנון עדכני נכון לתאריך: 05.05.2026 לתקנון",
+    "   ? טבלת-ריכוז-שינויים---מנורה-מבטחים-השתלמות---מאי-2026.pdf | לקריאה | ריכוז שינויים אחרונים בתקנון שינויים שבוצעו ב-12 החודשים שקד",
+    "   ? תקנון-אומגה-286-בתוקף-מיום-30.9.2025.pdf | לתקנון | תקנון עדכני נכון לתאריך: 30.09.2025 לתקנון",
+    "   ? שינויים-אומגה-קרן-השתלמות-30.9.25.pdf | לקריאה | ריכוז שינויים אחרונים בתקנון שינויים שבוצעו ב-12 החודשים שקד",
+    "   ? esg-report-2021-22022.pdf | (html) | "
    ],
    "new_files": []
   }
