@@ -1,11 +1,11 @@
 {
  "totals": {
   "companies": 76,
-  "with_data": 34,
-  "tracks": 744,
+  "with_data": 35,
+  "tracks": 751,
   "registry_tracks": 1289,
-  "registry_found": 350,
-  "docs": 4175
+  "registry_found": 356,
+  "docs": 4315
  },
  "companies": [
   {
@@ -449,6 +449,19 @@
    "last_month": "2026-06",
    "docs_returns": 50,
    "nostro": true
+  },
+  {
+   "legal_id": "570002618",
+   "company": "תגמולים של עובדים בעירית ת\"א-יפו א.ש. בע\"מ",
+   "tracks": 7,
+   "tracks_numbered": 7,
+   "registry_tracks": 6,
+   "registry_found": 6,
+   "registry_coverage": 100.0,
+   "first_month": "2021-01",
+   "last_month": "2026-06",
+   "docs_returns": 140,
+   "nostro": false
   }
  ]
 }
