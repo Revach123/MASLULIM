@@ -1,11 +1,11 @@
 {
  "totals": {
   "companies": 76,
-  "with_data": 10,
-  "tracks": 96,
+  "with_data": 11,
+  "tracks": 140,
   "registry_tracks": 1289,
   "registry_found": 66,
-  "docs": 1070
+  "docs": 1149
  },
  "companies": [
   {
@@ -136,6 +136,19 @@
    "first_month": "2022-01",
    "last_month": "2026-06",
    "docs_returns": 343,
+   "nostro": false
+  },
+  {
+   "legal_id": "514767490",
+   "company": "סלייס גמל בע\"מ",
+   "tracks": 44,
+   "tracks_numbered": 39,
+   "registry_tracks": 4,
+   "registry_found": 0,
+   "registry_coverage": 0.0,
+   "first_month": "2023-01",
+   "last_month": "2024-03",
+   "docs_returns": 79,
    "nostro": false
   }
  ]
