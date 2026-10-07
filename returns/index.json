@@ -1,11 +1,11 @@
 {
  "totals": {
   "companies": 76,
-  "with_data": 4,
-  "tracks": 11,
+  "with_data": 5,
+  "tracks": 20,
   "registry_tracks": 1289,
-  "registry_found": 10,
-  "docs": 111
+  "registry_found": 19,
+  "docs": 147
  },
  "companies": [
   {
@@ -19,6 +19,19 @@
    "first_month": "2022-01",
    "last_month": "2026-06",
    "docs_returns": 53,
+   "nostro": false
+  },
+  {
+   "legal_id": "510960586",
+   "company": "חברת הגמל לעובדי האוניברסיטה העברית בע\"מ",
+   "tracks": 9,
+   "tracks_numbered": 9,
+   "registry_tracks": 10,
+   "registry_found": 9,
+   "registry_coverage": 90.0,
+   "first_month": "2025-01",
+   "last_month": "2026-06",
+   "docs_returns": 36,
    "nostro": false
   },
   {
