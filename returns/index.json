@@ -1,11 +1,11 @@
 {
  "totals": {
   "companies": 76,
-  "with_data": 15,
-  "tracks": 274,
+  "with_data": 16,
+  "tracks": 275,
   "registry_tracks": 1289,
-  "registry_found": 160,
-  "docs": 1823
+  "registry_found": 161,
+  "docs": 1824
  },
  "companies": [
   {
@@ -188,6 +188,19 @@
    "first_month": "2023-01",
    "last_month": "2024-03",
    "docs_returns": 79,
+   "nostro": false
+  },
+  {
+   "legal_id": "520005497",
+   "company": "החברה לניהול קופות התגמולים והפיצויים של עובדי בנק לאומי בע\"מ",
+   "tracks": 1,
+   "tracks_numbered": 1,
+   "registry_tracks": 1,
+   "registry_found": 1,
+   "registry_coverage": 100.0,
+   "first_month": "2025-01",
+   "last_month": "2025-12",
+   "docs_returns": 1,
    "nostro": false
   },
   {
