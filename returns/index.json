@@ -1,11 +1,11 @@
 {
  "totals": {
   "companies": 76,
-  "with_data": 8,
-  "tracks": 66,
+  "with_data": 9,
+  "tracks": 71,
   "registry_tracks": 1289,
-  "registry_found": 54,
-  "docs": 508
+  "registry_found": 56,
+  "docs": 630
  },
  "companies": [
   {
@@ -19,6 +19,19 @@
    "first_month": "2022-01",
    "last_month": "2026-06",
    "docs_returns": 53,
+   "nostro": false
+  },
+  {
+   "legal_id": "510930670",
+   "company": "יהב - פ.ר.ח. - חברה לניהול קופות גמל בע\"מ",
+   "tracks": 5,
+   "tracks_numbered": 4,
+   "registry_tracks": 2,
+   "registry_found": 2,
+   "registry_coverage": 100.0,
+   "first_month": "2015-09",
+   "last_month": "2026-06",
+   "docs_returns": 122,
    "nostro": false
   },
   {
