@@ -1,11 +1,11 @@
 {
  "totals": {
   "companies": 76,
-  "with_data": 29,
-  "tracks": 525,
+  "with_data": 30,
+  "tracks": 617,
   "registry_tracks": 1289,
-  "registry_found": 233,
-  "docs": 3327
+  "registry_found": 282,
+  "docs": 3966
  },
  "companies": [
   {
@@ -201,6 +201,19 @@
    "first_month": "2022-01",
    "last_month": "2026-06",
    "docs_returns": 343,
+   "nostro": false
+  },
+  {
+   "legal_id": "513621110",
+   "company": "אינפיניטי השתלמות, גמל ופנסיה בע\"מ",
+   "tracks": 92,
+   "tracks_numbered": 77,
+   "registry_tracks": 55,
+   "registry_found": 49,
+   "registry_coverage": 89.1,
+   "first_month": "2011-11",
+   "last_month": "2026-06",
+   "docs_returns": 639,
    "nostro": false
   },
   {
