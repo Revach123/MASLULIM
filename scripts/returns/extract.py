@@ -24,7 +24,8 @@ from scripts.returns.parse import parse_file, ASSET_ORDER
 ROOT = Path(__file__).resolve().parents[2]
 POL = ROOT / "policy"
 RET = ROOT / "returns"
-PARSER_VERSION = 2  # (v2: קורא xlsx גולמי כש-openpyxl נכשל, בלי "תחילת מידע טבלה" בשם)
+NAMED_RETURNS = re.compile(r"מרכיבי[-_ ]*(ה)?תשוא|תרומת[-_ ]*(ה)?אפיקי|yield_?\d|returnelements|תשואה[-_ ]*לפי[-_ ]*אפיק", re.I)
+PARSER_VERSION = 3  # (v3: PDF בלי טבלאות - שורות טקסט) (v2: קורא xlsx גולמי כש-openpyxl נכשל, בלי "תחילת מידע טבלה" בשם)
 
 
 def norm_name(s):
@@ -160,7 +161,8 @@ def parse_all(out: Path, index: dict, force=False):
         if not res["blocks"] and not res["nostro"]:
             # לא דוח מרכיבי תשואה (קובץ אחר באותו עמוד) - נשאר באינדקס (לא יורד שוב), הקובץ עצמו נמחק
             e.update(not_returns=True, parsed_sha=e["sha256"], parser_version=PARSER_VERSION)
-            f.unlink(missing_ok=True)
+            if not NAMED_RETURNS.search(url + " " + (e.get("link_text") or "")):
+                f.unlink(missing_ok=True)  # קובץ שהשם שלו אומר מרכיבי תשואה נשמר (פרסור מחדש כשהפרסר ישתפר)
             cache.unlink(missing_ok=True)
             continue
         e.pop("not_returns", None)
@@ -312,8 +314,8 @@ def main():
             continue
         index = json.loads(idx_path.read_text("utf-8"))
         n = parse_all(out, index, a.all)
-        for e in index.values():  # קבצים שנפסלו (לא מרכיבי תשואה) - גם אם חזרו ממיזוג עם הענף
-            if e.get("not_returns") and e.get("file"):
+        for u, e in index.items():  # קבצים שנפסלו (לא מרכיבי תשואה) - גם אם חזרו ממיזוג עם הענף
+            if e.get("not_returns") and e.get("file") and not NAMED_RETURNS.search(u + " " + (e.get("link_text") or "")):
                 (ROOT / e["file"]).unlink(missing_ok=True)
         idx_path.write_text(json.dumps(index, ensure_ascii=False, indent=1), "utf-8")
         data = build(lid, out, index, reg)

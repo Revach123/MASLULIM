@@ -232,7 +232,9 @@ def crawl_company(s, pw, lid, name, out, now, a):
             report["errors"].append("download budget reached - ממשיכים בריצה הבאה"); break
         url = d["href"]
         old = index.get(find_key(index, url))
-        if old and old.get("sha256") and pc.DOC_PATH.search(urlparse(url).path):
+        lost = bool(old) and old.get("not_returns") and not (ROOT / (old.get("file") or "-")).exists() \
+            and RETURNS_RX.search(unquote(url) + " " + (d.get("text") or ""))  # נמחק בטעות (PDF שלא פוענח) - מורידים שוב
+        if old and old.get("sha256") and pc.DOC_PATH.search(urlparse(url).path) and not lost:
             old["last_seen"] = now  # קובץ קבוע שכבר נאסף (או נבדק ונפסל) - לא מורידים שוב
             if pc.visible_text_better(old.get("link_text"), d.get("text")):
                 old["link_text"] = d.get("text")
@@ -256,7 +258,7 @@ def crawl_company(s, pw, lid, name, out, now, a):
         sha = hashlib.sha256(content).hexdigest()
         ukey = find_key(index, url)
         ent = index.get(ukey)
-        if ent is None or ent.get("sha256") != sha:
+        if ent is None or ent.get("sha256") != sha or not (ROOT / (ent.get("file") or "-")).exists():
             fname = re.sub(r"[^\w.\-]", "_", unquote(url.split("#download=")[-1] if "#download=" in url
                                                        else urlparse(url).path.rsplit("/", 1)[-1]))[:80]
             if not fname.lower().endswith(ext):

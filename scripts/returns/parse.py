@@ -419,6 +419,81 @@ def parse_nostro_table(rows, sheet=""):
     return res
 
 
+NUM_TOKEN = re.compile(r"\(?-?\d[\d,]*\.?\d*%?\)?-?")
+
+
+def _line_nums(line):
+    """'מניות 0.12% 5.3% -0.04% 5.1%' -> ('מניות', [0.12, 5.3, -0.04, 5.1]) ; מספר בסוף עם מינוס (RTL: '0.04-')"""
+    nums, words = [], []
+    for tok in line.split():
+        if NUM_TOKEN.fullmatch(tok) and re.search(r"\d", tok):
+            t = tok
+            if t.endswith("-") and not t.startswith("-"):
+                t = "-" + t[:-1]
+            v = num(t)
+            if v is not None:
+                nums.append(v)
+                continue
+        words.append(tok)
+    return " ".join(words), nums
+
+
+def parse_pdf_text(path: Path):
+    """PDF בלי טבלאות שזוהו: שורות טקסט. כותרת = שורה עם 2+ חודשים; כל שורת אפיק = שם + מספרים (זוג לכל חודש:
+    תרומה, שיעור - או רק תרומה). הכיוון (RTL) נבדק מול שורת הסה"כ: סכום האפיקים = הסה"כ."""
+    import pdfplumber
+    from scripts.policy.extract import _fix_rtl, _is_visual_rtl
+    blocks = []
+    with pdfplumber.open(path) as pdf:
+        for pn, pg in enumerate(pdf.pages, 1):
+            t = pg.extract_text() or ""
+            t = _fix_rtl(t) if _is_visual_rtl(t) else t
+            lines = [l.strip() for l in t.splitlines() if l.strip()]
+            heads = [i for i, l in enumerate(lines) if len(months_in(l)) >= 2 or (CONTRIB_RX.search(l) and months_in(l))]
+            if not heads:
+                continue
+            meta = _meta_from_rows([[l] for l in lines[:heads[0]]], 0, heads[0])
+            b = {**meta, "rows": [], "sheet": f"page{pn}"}
+            for n, hi in enumerate(heads):
+                ms = list(dict.fromkeys(months_in(lines[hi])))  # "תרומה ינואר | שיעור ינואר" - כל חודש פעם אחת
+                cum = bool(re.search(r"מצטבר|מתחילת", lines[hi] + " " + (lines[hi - 1] if hi else "")))
+                year = year_in(lines[hi]) or meta.get("year")
+                end = heads[n + 1] if n + 1 < len(heads) else len(lines)
+                recs = []
+                for l in lines[hi + 1:end]:
+                    label, nums = _line_nums(l)
+                    key = asset_of(label) if label else None
+                    if not key or not nums:
+                        continue
+                    if len(nums) == 2 * len(ms):
+                        recs.append((key, label, nums[0::2], nums[1::2]))
+                    elif len(nums) == len(ms):
+                        recs.append((key, label, nums, [None] * len(ms)))
+                if not recs:
+                    continue
+                order = list(range(len(ms)))
+                tot = next((r for r in recs if r[0] == "total"), None)
+                if tot:  # האם סדר המספרים הפוך לסדר החודשים (RTL)?
+                    def err(o):
+                        e = 0
+                        for j in range(len(ms)):
+                            sm = sum(r[2][o[j]] for r in recs if SECTION.get(r[0]) is None)
+                            e += abs(sm - tot[2][o[j]])
+                        return e
+                    if err(order[::-1]) < err(order) * 0.5:
+                        order = order[::-1]
+                for key, label, cs, ws in recs:
+                    for j, m in enumerate(ms):
+                        k = order[j]
+                        period = "ytd" if cum else "m"
+                        b["rows"].append({"period": period, "month": m, "year": year, "asset_key": key, "asset_label": label[:60], "kind": "c", "value": cs[k]})
+                        if ws[k] is not None:
+                            b["rows"].append({"period": period, "month": m, "year": year, "asset_key": key, "asset_label": label[:60], "kind": "w", "value": ws[k]})
+            if b["rows"]:
+                blocks.append(b)
+    return blocks
+
+
 FILE_NO = re.compile(r"(?<!\d)\d{9}_([gpib])(\d{3,6})_", re.I)
 FILE_PERIOD = re.compile(r"yield\s*([1-4])\s*-?\s*(\d{2})(?!\d)", re.I)
 
@@ -509,9 +584,13 @@ def parse_file(path, link_text=""):
                 b["track_no"], b["track_no_src"] = sheet.strip(), "sheet"
             b["rows"], b["scale"] = finalize(b)
             blocks.append(b)
-    # PDF: טבלה לכל עמוד - פרטי המסלול בטקסט העמוד (לא בטבלה)
+    # PDF: טבלה לכל עמוד - פרטי המסלול בטקסט העמוד (לא בטבלה); בלי טבלאות שזוהו - פרסור שורות הטקסט
     if path.suffix.lower() == ".pdf" and blocks:
         _pdf_meta(path, blocks)
+    if path.suffix.lower() == ".pdf" and not blocks:
+        for b in parse_pdf_text(path):
+            b["rows"], b["scale"] = finalize(b)
+            blocks.append(b)
     # בלוק בלי פרטי מסלול (גיליון "מצטבר", המשך בעמוד הבא ב-PDF) - שייך למסלול היחיד שזוהה בקובץ / לבלוק שלפניו
     ids = {(b["track_no"], b["track_name"]) for b in blocks if b["track_no"] or b["track_name"]}
     for i, b in enumerate(blocks):
