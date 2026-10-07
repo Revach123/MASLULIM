@@ -1,11 +1,11 @@
 {
  "totals": {
   "companies": 76,
-  "with_data": 21,
-  "tracks": 470,
+  "with_data": 22,
+  "tracks": 484,
   "registry_tracks": 1289,
-  "registry_found": 207,
-  "docs": 2851
+  "registry_found": 212,
+  "docs": 2935
  },
  "companies": [
   {
@@ -279,6 +279,19 @@
    "first_month": "2022-01",
    "last_month": "2026-06",
    "docs_returns": 53,
+   "nostro": false
+  },
+  {
+   "legal_id": "520027954",
+   "company": "החברה לניהול קרן השתלמות לאקדמאים במדעי החברה והרוח בע\"מ",
+   "tracks": 14,
+   "tracks_numbered": 5,
+   "registry_tracks": 5,
+   "registry_found": 5,
+   "registry_coverage": 100.0,
+   "first_month": "2020-01",
+   "last_month": "2026-06",
+   "docs_returns": 84,
    "nostro": false
   }
  ]
