@@ -1,11 +1,11 @@
 {
  "totals": {
   "companies": 76,
-  "with_data": 44,
-  "tracks": 801,
+  "with_data": 45,
+  "tracks": 812,
   "registry_tracks": 1289,
   "registry_found": 382,
-  "docs": 5099
+  "docs": 5109
  },
  "companies": [
   {
@@ -240,6 +240,19 @@
    "first_month": "2023-01",
    "last_month": "2024-03",
    "docs_returns": 79,
+   "nostro": false
+  },
+  {
+   "legal_id": "515447035",
+   "company": "הפניקס חח\"י קופה מרכזית לקצבה בע\"מ",
+   "tracks": 11,
+   "tracks_numbered": 11,
+   "registry_tracks": 0,
+   "registry_found": 0,
+   "registry_coverage": null,
+   "first_month": "2024-01",
+   "last_month": "2026-06",
+   "docs_returns": 10,
    "nostro": false
   },
   {
