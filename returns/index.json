@@ -1,11 +1,11 @@
 {
  "totals": {
   "companies": 76,
-  "with_data": 42,
-  "tracks": 787,
+  "with_data": 43,
+  "tracks": 798,
   "registry_tracks": 1289,
-  "registry_found": 377,
-  "docs": 4957
+  "registry_found": 382,
+  "docs": 5065
  },
  "companies": [
   {
@@ -422,6 +422,19 @@
    "first_month": "2021-01",
    "last_month": "2026-06",
    "docs_returns": 47,
+   "nostro": false
+  },
+  {
+   "legal_id": "520032269",
+   "company": "החברה לניהול קרן ההשתלמות לעובדי המדינה בע\"מ",
+   "tracks": 11,
+   "tracks_numbered": 6,
+   "registry_tracks": 6,
+   "registry_found": 5,
+   "registry_coverage": 83.3,
+   "first_month": "2017-01",
+   "last_month": "2026-03",
+   "docs_returns": 108,
    "nostro": false
   },
   {
