@@ -1,11 +1,11 @@
 {
  "totals": {
   "companies": 76,
-  "with_data": 2,
-  "tracks": 4,
+  "with_data": 3,
+  "tracks": 5,
   "registry_tracks": 1289,
-  "registry_found": 3,
-  "docs": 59
+  "registry_found": 4,
+  "docs": 81
  },
  "companies": [
   {
@@ -32,6 +32,19 @@
    "first_month": "2021-01",
    "last_month": "2026-06",
    "docs_returns": 6,
+   "nostro": false
+  },
+  {
+   "legal_id": "513452003",
+   "company": "חברה לניהול קופות גמל של העובדים בעיריית תל - אביב יפו בע\"מ",
+   "tracks": 1,
+   "tracks_numbered": 1,
+   "registry_tracks": 4,
+   "registry_found": 1,
+   "registry_coverage": 25.0,
+   "first_month": "2021-01",
+   "last_month": "2026-06",
+   "docs_returns": 22,
    "nostro": false
   }
  ]
