@@ -1,11 +1,11 @@
 {
  "totals": {
   "companies": 76,
-  "with_data": 5,
-  "tracks": 20,
+  "with_data": 6,
+  "tracks": 22,
   "registry_tracks": 1289,
   "registry_found": 19,
-  "docs": 147
+  "docs": 156
  },
  "companies": [
   {
@@ -32,6 +32,19 @@
    "first_month": "2025-01",
    "last_month": "2026-06",
    "docs_returns": 36,
+   "nostro": false
+  },
+  {
+   "legal_id": "511423048",
+   "company": "לעתיד חברה לניהול קרנות פנסיה בע\"מ",
+   "tracks": 2,
+   "tracks_numbered": 1,
+   "registry_tracks": 2,
+   "registry_found": 0,
+   "registry_coverage": 0.0,
+   "first_month": "2018-01",
+   "last_month": "2026-06",
+   "docs_returns": 9,
    "nostro": false
   },
   {
