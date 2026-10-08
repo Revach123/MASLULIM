@@ -1,14 +1,13 @@
 {
  "legal_id": "520004078",
  "company": "הראל חברה לביטוח בע\"מ",
- "run": "2026-10-08T13:48:15+00:00",
+ "run": "2026-10-08T19:54:15+00:00",
  "errors": [],
  "seeds": {
   "config": 0,
-  "discovered": 0,
+  "discovered": 4,
   "policy_snapshot": 4,
   "policy_snapshot_docs": 0,
-  "search": 0,
   "sitemap": 0
  },
  "imported_from_policy": 0,
@@ -20,5 +19,5 @@
  "docs": 27,
  "new_docs": 0,
  "index_size": 27,
- "seconds": 681
+ "seconds": 800
 }
