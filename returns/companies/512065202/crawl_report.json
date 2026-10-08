@@ -1,10 +1,8 @@
 {
  "legal_id": "512065202",
  "company": "מיטב גמל ופנסיה בע\"מ",
- "run": "2026-10-08T20:56:43+00:00",
- "errors": [
-  "download budget reached - ממשיכים בריצה הבאה"
- ],
+ "run": "2026-10-08T21:39:32+00:00",
+ "errors": [],
  "seeds": {
   "config": 1,
   "discovered": 0,
@@ -16,8 +14,8 @@
  "pages": 90,
  "pages_failed": [],
  "candidates": 316,
- "docs": 280,
- "new_docs": 280,
- "index_size": 388,
- "seconds": 2001
+ "docs": 316,
+ "new_docs": 36,
+ "index_size": 424,
+ "seconds": 1587
 }
