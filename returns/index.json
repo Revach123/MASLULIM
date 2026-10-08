@@ -2,9 +2,9 @@
  "totals": {
   "companies": 76,
   "with_data": 52,
-  "tracks": 933,
+  "tracks": 937,
   "registry_tracks": 1289,
-  "registry_found": 525,
+  "registry_found": 527,
   "docs": 6678
  },
  "companies": [
@@ -401,8 +401,8 @@
   {
    "legal_id": "520027715",
    "company": "מנורה מבטחים והסתדרות המהנדסים ניהול קופות גמל בע\"מ",
-   "tracks": 29,
-   "tracks_numbered": 14,
+   "tracks": 31,
+   "tracks_numbered": 12,
    "registry_tracks": 7,
    "registry_found": 4,
    "registry_coverage": 57.1,
@@ -557,11 +557,11 @@
   {
    "legal_id": "520042540",
    "company": "מנורה מבטחים ביטוח בע\"מ",
-   "tracks": 14,
-   "tracks_numbered": 14,
+   "tracks": 16,
+   "tracks_numbered": 16,
    "registry_tracks": 27,
-   "registry_found": 14,
-   "registry_coverage": 51.9,
+   "registry_found": 16,
+   "registry_coverage": 59.3,
    "first_month": "2017-01",
    "last_month": "2026-06",
    "docs_returns": 0,
