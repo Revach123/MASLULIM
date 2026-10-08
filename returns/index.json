@@ -1,11 +1,11 @@
 {
  "totals": {
   "companies": 76,
-  "with_data": 43,
-  "tracks": 753,
+  "with_data": 45,
+  "tracks": 755,
   "registry_tracks": 1289,
   "registry_found": 482,
-  "docs": 5823
+  "docs": 5859
  },
  "companies": [
   {
@@ -308,6 +308,19 @@
    "nostro": false
   },
   {
+   "legal_id": "520020447",
+   "company": "קרן הגמלאות של חברי אגד בע\"מ",
+   "tracks": 1,
+   "tracks_numbered": 1,
+   "registry_tracks": 0,
+   "registry_found": 0,
+   "registry_coverage": null,
+   "first_month": "2022-01",
+   "last_month": "2026-06",
+   "docs_returns": 89,
+   "nostro": false
+  },
+  {
    "legal_id": "520023094",
    "company": "גילעד גימלאות לעובדים דתיים בע\"מ",
    "tracks": 3,
@@ -526,6 +539,19 @@
    "first_month": "2017-01",
    "last_month": "2026-06",
    "docs_returns": 28,
+   "nostro": false
+  },
+  {
+   "legal_id": "570007476",
+   "company": "קרן ביטוח ופנסיה לפועלים חקלאים ובלתי מקצועיים בישראל אגודה שיתופית בע\"מ",
+   "tracks": 1,
+   "tracks_numbered": 1,
+   "registry_tracks": 1,
+   "registry_found": 0,
+   "registry_coverage": 0.0,
+   "first_month": "2022-01",
+   "last_month": "2026-06",
+   "docs_returns": 53,
    "nostro": false
   },
   {
