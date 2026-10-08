@@ -1,11 +1,11 @@
 {
  "totals": {
   "companies": 76,
-  "with_data": 49,
-  "tracks": 778,
+  "with_data": 50,
+  "tracks": 864,
   "registry_tracks": 1289,
-  "registry_found": 493,
-  "docs": 6069
+  "registry_found": 495,
+  "docs": 6320
  },
  "companies": [
   {
@@ -464,6 +464,19 @@
    "nostro": false
   },
   {
+   "legal_id": "520030693",
+   "company": "שיבולת - חברה לניהול קופות גמל בע\"מ",
+   "tracks": 86,
+   "tracks_numbered": 33,
+   "registry_tracks": 3,
+   "registry_found": 2,
+   "registry_coverage": 66.7,
+   "first_month": "2011-01",
+   "last_month": "2025-12",
+   "docs_returns": 251,
+   "nostro": false
+  },
+  {
    "legal_id": "520030743",
    "company": "החברה לניהול קרן השתלמות לשופטים בע\"מ",
    "tracks": 1,
@@ -700,6 +713,7 @@
   "520028861",
   "520029620",
   "520030677",
+  "520030693",
   "520030743",
   "520030941",
   "520031659",
