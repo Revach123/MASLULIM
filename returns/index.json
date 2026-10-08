@@ -2,10 +2,10 @@
  "totals": {
   "companies": 76,
   "with_data": 45,
-  "tracks": 755,
+  "tracks": 756,
   "registry_tracks": 1289,
   "registry_found": 482,
-  "docs": 5859
+  "docs": 5895
  },
  "companies": [
   {
@@ -297,14 +297,14 @@
   {
    "legal_id": "520019688",
    "company": "מבטחים מוסד לביטוח סוציאלי של העובדים בע\"מ",
-   "tracks": 1,
-   "tracks_numbered": 1,
+   "tracks": 2,
+   "tracks_numbered": 2,
    "registry_tracks": 1,
    "registry_found": 1,
    "registry_coverage": 100.0,
    "first_month": "2022-01",
    "last_month": "2026-06",
-   "docs_returns": 53,
+   "docs_returns": 89,
    "nostro": false
   },
   {
