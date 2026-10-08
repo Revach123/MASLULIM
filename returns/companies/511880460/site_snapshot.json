@@ -1,12 +1,12 @@
 {
  "legal_id": "511880460",
- "taken": "2026-10-07T17:54:34+00:00",
+ "taken": "2026-10-08T12:18:25+00:00",
  "pages": {
   "https://www.analyst.co.il/yield-comparison-calculator/": {
    "product": "גמל",
    "status": 200,
    "method": "browser",
-   "text_hash": "d56ba7fc9be1595dcbdecf6e5202395865ccf81a",
+   "text_hash": "6132479f324e7f75a839f1658e75df24f032ed92",
    "text_head": "מעסיקים סוכנים אזור אישי עמיתים אודות קופות גמל וקרנות השתלמות קרנות נאמנות ניהול תיקי השקעות צור קשר קריירה מרכז הידע חיפוש לאזור האישי ראשי > מחשבון תשואות – השוואה בין קרנות השתלמות וקופות גמל נבחרות מחשבון תשואות – השוואה בין קרנות השתלמות וקופות גמל נבחרות לפניכם מחשבון תרגום ערך כספי של תשואה לתקופות נבחרות והשוואה לקופות נבחרות (קרנות השתלמות / קופות גמל / קופות גמל להשקעה). בעזרת מחשבון זה, תוכלו לראות תרגום של תשואה לסכום וכל זה במסלול, בקופה ובתקופת זמן מסוימים לפי בחירתכם. בשונה ממחשבונים אחרים, המחשבון הזה מתממשק עם תשואות עבר אמיתיות ולא על הנחת תשואה. המחשבון יציג תשואה ברוטו ללא",
    "items": [
     {
@@ -130,6 +130,14 @@
      "internal": true
     },
     {
+     "text": "מהי קרן השתלמות?",
+     "href": "https://www.analyst.co.il/yield-comparison-calculator/",
+     "year": null,
+     "iframe": false,
+     "doc": false,
+     "internal": true
+    },
+    {
      "text": "מהי קרן השתלמות",
      "href": "https://www.analyst.co.il/articles/about-training-funds/",
      "year": null,
@@ -162,14 +170,6 @@
      "internal": true
     },
     {
-     "text": "חיפוש",
-     "href": "https://www.analyst.co.il/yield-comparison-calculator/",
-     "year": null,
-     "iframe": false,
-     "doc": false,
-     "internal": true
-    },
-    {
      "text": "העברת חשבון קרן השתלמות",
      "href": "https://www.analyst.co.il/transfer-training-funds/",
      "year": null,
@@ -183,6 +183,14 @@
      "year": null,
      "iframe": false,
      "doc": false,
+     "internal": true
+    },
+    {
+     "text": "הייתה בעיה בשליחה. יש לעיין בשדות למטה. איך נוכל לעזור? לקוח חדש, אני רוצה להצטרף לקוח קיים, אני רוצה לקבל שירות שם מלא(חובה) זהו שדה חובה. כתובת דוא\"ל(חובה) זהו שדה חובה. מספר נייד(חובה) זהו שדה חובה",
+     "href": "https://www.analyst.co.il/media/u0fl5prs/%D7%9E%D7%93%D7%99%D7%A0%D7%99%D7%95%D7%AA-%D7%A4%D7%A8%D7%98%D7%99%D7%95%D7%AA-1422.pdf",
+     "year": null,
+     "iframe": false,
+     "doc": true,
      "internal": true
     },
     {
@@ -210,19 +218,19 @@
      "internal": true
     },
     {
-     "text": "אנליסט קופות גמל בע\"מ",
-     "href": "https://www.analyst.co.il/head-of-public-application/",
+     "text": "בית השקעות אנליסט הינו מבתי ההשקעות הוותיקים והמנוסים בניהול השקעות בשוק ההון בישראל. 'אנליסט' נוסדה בשנת 1985, ומשנת 1994 היא חברה ציבורית שמניותיה נסחרות בבורסה לניירות ערך בתל-אביב, ניהול ההשקעות מ",
+     "href": "https://www.analyst.co.il/",
      "year": null,
      "iframe": false,
      "doc": false,
      "internal": true
     },
     {
-     "text": "איך נוכל לעזור? לקוח חדש, אני רוצה להצטרף לקוח קיים, אני רוצה לקבל שירות שם מלא(חובה) כתובת דוא\"ל(חובה) מספר נייד(חובה) נושא הפנייה(חובה) הצטרפות לקופת גמל להשקעה הצטרפות לקרן השתלמות הצטרפות לקופת גמ",
-     "href": "https://www.analyst.co.il/media/u0fl5prs/%D7%9E%D7%93%D7%99%D7%A0%D7%99%D7%95%D7%AA-%D7%A4%D7%A8%D7%98%D7%99%D7%95%D7%AA-1422.pdf",
+     "text": "אנליסט קופות גמל בע\"מ",
+     "href": "https://www.analyst.co.il/head-of-public-application/",
      "year": null,
      "iframe": false,
-     "doc": true,
+     "doc": false,
      "internal": true
     },
     {
@@ -267,7 +275,7 @@
     },
     {
      "text": "(iframe)",
-     "href": "https://www.google.com/recaptcha/api2/anchor?ar=1&k=6LeXx8spAAAAAOhAgvJ7_YyVQbF6U2MN4n-qr8jV&co=aHR0cHM6Ly93d3cuYW5hbHlzdC5jby5pbDo0NDM.&hl=iw&v=guXhH0v-XMxlzmbTwqkaT4i5&size=invisible&anchor-ms=20000&execute-ms=30000&cb=9v46qqqkrjm2",
+     "href": "https://www.google.com/recaptcha/api2/anchor?ar=1&k=6LeXx8spAAAAAOhAgvJ7_YyVQbF6U2MN4n-qr8jV&co=aHR0cHM6Ly93d3cuYW5hbHlzdC5jby5pbDo0NDM.&hl=iw&v=nY0xPItgwtlvjEjk2TqdwOQz&size=invisible&anchor-ms=20000&execute-ms=30000&cb=jr583bpi984t",
      "year": null,
      "iframe": true,
      "doc": false,
@@ -812,7 +820,7 @@
     },
     {
      "text": "(iframe)",
-     "href": "https://www.google.com/recaptcha/api2/anchor?ar=1&k=6LeXx8spAAAAAOhAgvJ7_YyVQbF6U2MN4n-qr8jV&co=aHR0cHM6Ly93d3cuYW5hbHlzdC5jby5pbDo0NDM.&hl=iw&v=guXhH0v-XMxlzmbTwqkaT4i5&size=invisible&anchor-ms=20000&execute-ms=30000&cb=k6sk3zws4xi3",
+     "href": "https://www.google.com/recaptcha/api2/anchor?ar=1&k=6LeXx8spAAAAAOhAgvJ7_YyVQbF6U2MN4n-qr8jV&co=aHR0cHM6Ly93d3cuYW5hbHlzdC5jby5pbDo0NDM.&hl=iw&v=nY0xPItgwtktOA7U0o-VsaLz&size=invisible&anchor-ms=20000&execute-ms=30000&ovv=CAB5am5W&cb=sjdi1m4di4di",
      "year": null,
      "iframe": true,
      "doc": false,
@@ -1229,7 +1237,7 @@
     },
     {
      "text": "(iframe)",
-     "href": "https://www.google.com/recaptcha/api2/anchor?ar=1&k=6LeXx8spAAAAAOhAgvJ7_YyVQbF6U2MN4n-qr8jV&co=aHR0cHM6Ly93d3cuYW5hbHlzdC5jby5pbDo0NDM.&hl=iw&v=guXhH0v-XMxlzmbTwqkaT4i5&size=invisible&anchor-ms=20000&execute-ms=30000&cb=gs29mucre8s8",
+     "href": "https://www.google.com/recaptcha/api2/anchor?ar=1&k=6LeXx8spAAAAAOhAgvJ7_YyVQbF6U2MN4n-qr8jV&co=aHR0cHM6Ly93d3cuYW5hbHlzdC5jby5pbDo0NDM.&hl=iw&v=nY0xPItgwtlvjEjk2TqdwOQz&size=invisible&anchor-ms=20000&execute-ms=30000&cb=hi8gg0jha02k",
      "year": null,
      "iframe": true,
      "doc": false,
@@ -1646,7 +1654,7 @@
     },
     {
      "text": "(iframe)",
-     "href": "https://www.google.com/recaptcha/api2/anchor?ar=1&k=6LeXx8spAAAAAOhAgvJ7_YyVQbF6U2MN4n-qr8jV&co=aHR0cHM6Ly93d3cuYW5hbHlzdC5jby5pbDo0NDM.&hl=iw&v=guXhH0v-XMxlzmbTwqkaT4i5&size=invisible&anchor-ms=20000&execute-ms=30000&cb=lo0t3mp1ilfz",
+     "href": "https://www.google.com/recaptcha/api2/anchor?ar=1&k=6LeXx8spAAAAAOhAgvJ7_YyVQbF6U2MN4n-qr8jV&co=aHR0cHM6Ly93d3cuYW5hbHlzdC5jby5pbDo0NDM.&hl=iw&v=nY0xPItgwtlvjEjk2TqdwOQz&size=invisible&anchor-ms=20000&execute-ms=30000&cb=nsvj8xx1iljl",
      "year": null,
      "iframe": true,
      "doc": false,
@@ -2063,7 +2071,7 @@
     },
     {
      "text": "(iframe)",
-     "href": "https://www.google.com/recaptcha/api2/anchor?ar=1&k=6LeXx8spAAAAAOhAgvJ7_YyVQbF6U2MN4n-qr8jV&co=aHR0cHM6Ly93d3cuYW5hbHlzdC5jby5pbDo0NDM.&hl=iw&v=guXhH0v-XMxlzmbTwqkaT4i5&size=invisible&anchor-ms=20000&execute-ms=30000&cb=jekfiwx7s9gm",
+     "href": "https://www.google.com/recaptcha/api2/anchor?ar=1&k=6LeXx8spAAAAAOhAgvJ7_YyVQbF6U2MN4n-qr8jV&co=aHR0cHM6Ly93d3cuYW5hbHlzdC5jby5pbDo0NDM.&hl=iw&v=nY0xPItgwtktOA7U0o-VsaLz&size=invisible&anchor-ms=20000&execute-ms=30000&ovv=CAB5am5W&cb=pr7k7rr4jtzd",
      "year": null,
      "iframe": true,
      "doc": false,
@@ -2480,7 +2488,7 @@
     },
     {
      "text": "(iframe)",
-     "href": "https://www.google.com/recaptcha/api2/anchor?ar=1&k=6LeXx8spAAAAAOhAgvJ7_YyVQbF6U2MN4n-qr8jV&co=aHR0cHM6Ly93d3cuYW5hbHlzdC5jby5pbDo0NDM.&hl=iw&v=guXhH0v-XMxlzmbTwqkaT4i5&size=invisible&anchor-ms=20000&execute-ms=30000&cb=wdbkra1yl7ld",
+     "href": "https://www.google.com/recaptcha/api2/anchor?ar=1&k=6LeXx8spAAAAAOhAgvJ7_YyVQbF6U2MN4n-qr8jV&co=aHR0cHM6Ly93d3cuYW5hbHlzdC5jby5pbDo0NDM.&hl=iw&v=nY0xPItgwtlvjEjk2TqdwOQz&size=invisible&anchor-ms=20000&execute-ms=30000&cb=c3ojzrot8oy1",
      "year": null,
      "iframe": true,
      "doc": false,
@@ -2897,7 +2905,7 @@
     },
     {
      "text": "(iframe)",
-     "href": "https://www.google.com/recaptcha/api2/anchor?ar=1&k=6LeXx8spAAAAAOhAgvJ7_YyVQbF6U2MN4n-qr8jV&co=aHR0cHM6Ly93d3cuYW5hbHlzdC5jby5pbDo0NDM.&hl=iw&v=guXhH0v-XMzwgr6KUGswGxeS&size=invisible&anchor-ms=20000&execute-ms=30000&ovv=CAB5am5W&cb=n2gihiiap4ms",
+     "href": "https://www.google.com/recaptcha/api2/anchor?ar=1&k=6LeXx8spAAAAAOhAgvJ7_YyVQbF6U2MN4n-qr8jV&co=aHR0cHM6Ly93d3cuYW5hbHlzdC5jby5pbDo0NDM.&hl=iw&v=nY0xPItgwtlvjEjk2TqdwOQz&size=invisible&anchor-ms=20000&execute-ms=30000&cb=7eawy7gf0eol",
      "year": null,
      "iframe": true,
      "doc": false,
@@ -3314,7 +3322,7 @@
     },
     {
      "text": "(iframe)",
-     "href": "https://www.google.com/recaptcha/api2/anchor?ar=1&k=6LeXx8spAAAAAOhAgvJ7_YyVQbF6U2MN4n-qr8jV&co=aHR0cHM6Ly93d3cuYW5hbHlzdC5jby5pbDo0NDM.&hl=iw&v=guXhH0v-XMxlzmbTwqkaT4i5&size=invisible&anchor-ms=20000&execute-ms=30000&cb=ar47cgzbyl8s",
+     "href": "https://www.google.com/recaptcha/api2/anchor?ar=1&k=6LeXx8spAAAAAOhAgvJ7_YyVQbF6U2MN4n-qr8jV&co=aHR0cHM6Ly93d3cuYW5hbHlzdC5jby5pbDo0NDM.&hl=iw&v=nY0xPItgwtlvjEjk2TqdwOQz&size=invisible&anchor-ms=20000&execute-ms=30000&cb=7s2ggh42ox0o",
      "year": null,
      "iframe": true,
      "doc": false,
@@ -3731,7 +3739,7 @@
     },
     {
      "text": "(iframe)",
-     "href": "https://www.google.com/recaptcha/api2/anchor?ar=1&k=6LeXx8spAAAAAOhAgvJ7_YyVQbF6U2MN4n-qr8jV&co=aHR0cHM6Ly93d3cuYW5hbHlzdC5jby5pbDo0NDM.&hl=iw&v=guXhH0v-XMxlzmbTwqkaT4i5&size=invisible&anchor-ms=20000&execute-ms=30000&cb=u7bkrlw9ndwv",
+     "href": "https://www.google.com/recaptcha/api2/anchor?ar=1&k=6LeXx8spAAAAAOhAgvJ7_YyVQbF6U2MN4n-qr8jV&co=aHR0cHM6Ly93d3cuYW5hbHlzdC5jby5pbDo0NDM.&hl=iw&v=nY0xPItgwtlvjEjk2TqdwOQz&size=invisible&anchor-ms=20000&execute-ms=30000&cb=jq01t5ujbgsh",
      "year": null,
      "iframe": true,
      "doc": false,
@@ -4148,7 +4156,7 @@
     },
     {
      "text": "(iframe)",
-     "href": "https://www.google.com/recaptcha/api2/anchor?ar=1&k=6LeXx8spAAAAAOhAgvJ7_YyVQbF6U2MN4n-qr8jV&co=aHR0cHM6Ly93d3cuYW5hbHlzdC5jby5pbDo0NDM.&hl=iw&v=guXhH0v-XMxlzmbTwqkaT4i5&size=invisible&anchor-ms=20000&execute-ms=30000&cb=kw8y37252ts7",
+     "href": "https://www.google.com/recaptcha/api2/anchor?ar=1&k=6LeXx8spAAAAAOhAgvJ7_YyVQbF6U2MN4n-qr8jV&co=aHR0cHM6Ly93d3cuYW5hbHlzdC5jby5pbDo0NDM.&hl=iw&v=nY0xPItgwtlvjEjk2TqdwOQz&size=invisible&anchor-ms=20000&execute-ms=30000&cb=ihwoxwur831z",
      "year": null,
      "iframe": true,
      "doc": false,
@@ -4541,7 +4549,7 @@
     },
     {
      "text": "(iframe)",
-     "href": "https://www.google.com/recaptcha/api2/anchor?ar=1&k=6LeXx8spAAAAAOhAgvJ7_YyVQbF6U2MN4n-qr8jV&co=aHR0cHM6Ly93d3cuYW5hbHlzdC5jby5pbDo0NDM.&hl=iw&v=guXhH0v-XMxlzmbTwqkaT4i5&size=invisible&anchor-ms=20000&execute-ms=30000&cb=bgg0ognwt8h",
+     "href": "https://www.google.com/recaptcha/api2/anchor?ar=1&k=6LeXx8spAAAAAOhAgvJ7_YyVQbF6U2MN4n-qr8jV&co=aHR0cHM6Ly93d3cuYW5hbHlzdC5jby5pbDo0NDM.&hl=iw&v=nY0xPItgwtktOA7U0o-VsaLz&size=invisible&anchor-ms=20000&execute-ms=30000&ovv=CAB5am5W&cb=qlabrmv4em2x",
      "year": null,
      "iframe": true,
      "doc": false,
@@ -4549,7 +4557,7 @@
     }
    ]
   },
-  "https://www.google.com/recaptcha/api2/anchor?ar=1&k=6LeXx8spAAAAAOhAgvJ7_YyVQbF6U2MN4n-qr8jV&co=aHR0cHM6Ly93d3cuYW5hbHlzdC5jby5pbDo0NDM.&hl=iw&v=guXhH0v-XMxlzmbTwqkaT4i5&size=invisible&anchor-ms=20000&execute-ms=30000&cb=9v46qqqkrjm2": {
+  "https://www.google.com/recaptcha/api2/anchor?ar=1&k=6LeXx8spAAAAAOhAgvJ7_YyVQbF6U2MN4n-qr8jV&co=aHR0cHM6Ly93d3cuYW5hbHlzdC5jby5pbDo0NDM.&hl=iw&v=nY0xPItgwtlvjEjk2TqdwOQz&size=invisible&anchor-ms=20000&execute-ms=30000&cb=jr583bpi984t": {
    "product": null,
    "status": 200,
    "method": "browser",
@@ -4557,7 +4565,7 @@
    "text_head": "מוגן באמצעות reCAPTCHA",
    "items": []
   },
-  "https://www.google.com/recaptcha/api2/anchor?ar=1&k=6LeXx8spAAAAAOhAgvJ7_YyVQbF6U2MN4n-qr8jV&co=aHR0cHM6Ly93d3cuYW5hbHlzdC5jby5pbDo0NDM.&hl=iw&v=guXhH0v-XMxlzmbTwqkaT4i5&size=invisible&anchor-ms=20000&execute-ms=30000&cb=k6sk3zws4xi3": {
+  "https://www.google.com/recaptcha/api2/anchor?ar=1&k=6LeXx8spAAAAAOhAgvJ7_YyVQbF6U2MN4n-qr8jV&co=aHR0cHM6Ly93d3cuYW5hbHlzdC5jby5pbDo0NDM.&hl=iw&v=nY0xPItgwtktOA7U0o-VsaLz&size=invisible&anchor-ms=20000&execute-ms=30000&ovv=CAB5am5W&cb=sjdi1m4di4di": {
    "product": null,
    "status": 200,
    "method": "browser",
@@ -4565,7 +4573,7 @@
    "text_head": "מוגן באמצעות reCAPTCHA",
    "items": []
   },
-  "https://www.google.com/recaptcha/api2/anchor?ar=1&k=6LeXx8spAAAAAOhAgvJ7_YyVQbF6U2MN4n-qr8jV&co=aHR0cHM6Ly93d3cuYW5hbHlzdC5jby5pbDo0NDM.&hl=iw&v=guXhH0v-XMxlzmbTwqkaT4i5&size=invisible&anchor-ms=20000&execute-ms=30000&cb=gs29mucre8s8": {
+  "https://www.google.com/recaptcha/api2/anchor?ar=1&k=6LeXx8spAAAAAOhAgvJ7_YyVQbF6U2MN4n-qr8jV&co=aHR0cHM6Ly93d3cuYW5hbHlzdC5jby5pbDo0NDM.&hl=iw&v=nY0xPItgwtlvjEjk2TqdwOQz&size=invisible&anchor-ms=20000&execute-ms=30000&cb=hi8gg0jha02k": {
    "product": null,
    "status": 200,
    "method": "browser",
@@ -4573,7 +4581,7 @@
    "text_head": "מוגן באמצעות reCAPTCHA",
    "items": []
   },
-  "https://www.google.com/recaptcha/api2/anchor?ar=1&k=6LeXx8spAAAAAOhAgvJ7_YyVQbF6U2MN4n-qr8jV&co=aHR0cHM6Ly93d3cuYW5hbHlzdC5jby5pbDo0NDM.&hl=iw&v=guXhH0v-XMxlzmbTwqkaT4i5&size=invisible&anchor-ms=20000&execute-ms=30000&cb=lo0t3mp1ilfz": {
+  "https://www.google.com/recaptcha/api2/anchor?ar=1&k=6LeXx8spAAAAAOhAgvJ7_YyVQbF6U2MN4n-qr8jV&co=aHR0cHM6Ly93d3cuYW5hbHlzdC5jby5pbDo0NDM.&hl=iw&v=nY0xPItgwtlvjEjk2TqdwOQz&size=invisible&anchor-ms=20000&execute-ms=30000&cb=nsvj8xx1iljl": {
    "product": null,
    "status": 200,
    "method": "browser",
@@ -4581,7 +4589,7 @@
    "text_head": "מוגן באמצעות reCAPTCHA",
    "items": []
   },
-  "https://www.google.com/recaptcha/api2/anchor?ar=1&k=6LeXx8spAAAAAOhAgvJ7_YyVQbF6U2MN4n-qr8jV&co=aHR0cHM6Ly93d3cuYW5hbHlzdC5jby5pbDo0NDM.&hl=iw&v=guXhH0v-XMxlzmbTwqkaT4i5&size=invisible&anchor-ms=20000&execute-ms=30000&cb=jekfiwx7s9gm": {
+  "https://www.google.com/recaptcha/api2/anchor?ar=1&k=6LeXx8spAAAAAOhAgvJ7_YyVQbF6U2MN4n-qr8jV&co=aHR0cHM6Ly93d3cuYW5hbHlzdC5jby5pbDo0NDM.&hl=iw&v=nY0xPItgwtktOA7U0o-VsaLz&size=invisible&anchor-ms=20000&execute-ms=30000&ovv=CAB5am5W&cb=pr7k7rr4jtzd": {
    "product": null,
    "status": 200,
    "method": "browser",
@@ -4589,7 +4597,7 @@
    "text_head": "מוגן באמצעות reCAPTCHA",
    "items": []
   },
-  "https://www.google.com/recaptcha/api2/anchor?ar=1&k=6LeXx8spAAAAAOhAgvJ7_YyVQbF6U2MN4n-qr8jV&co=aHR0cHM6Ly93d3cuYW5hbHlzdC5jby5pbDo0NDM.&hl=iw&v=guXhH0v-XMxlzmbTwqkaT4i5&size=invisible&anchor-ms=20000&execute-ms=30000&cb=wdbkra1yl7ld": {
+  "https://www.google.com/recaptcha/api2/anchor?ar=1&k=6LeXx8spAAAAAOhAgvJ7_YyVQbF6U2MN4n-qr8jV&co=aHR0cHM6Ly93d3cuYW5hbHlzdC5jby5pbDo0NDM.&hl=iw&v=nY0xPItgwtlvjEjk2TqdwOQz&size=invisible&anchor-ms=20000&execute-ms=30000&cb=c3ojzrot8oy1": {
    "product": null,
    "status": 200,
    "method": "browser",
@@ -4597,7 +4605,7 @@
    "text_head": "מוגן באמצעות reCAPTCHA",
    "items": []
   },
-  "https://www.google.com/recaptcha/api2/anchor?ar=1&k=6LeXx8spAAAAAOhAgvJ7_YyVQbF6U2MN4n-qr8jV&co=aHR0cHM6Ly93d3cuYW5hbHlzdC5jby5pbDo0NDM.&hl=iw&v=guXhH0v-XMzwgr6KUGswGxeS&size=invisible&anchor-ms=20000&execute-ms=30000&ovv=CAB5am5W&cb=n2gihiiap4ms": {
+  "https://www.google.com/recaptcha/api2/anchor?ar=1&k=6LeXx8spAAAAAOhAgvJ7_YyVQbF6U2MN4n-qr8jV&co=aHR0cHM6Ly93d3cuYW5hbHlzdC5jby5pbDo0NDM.&hl=iw&v=nY0xPItgwtlvjEjk2TqdwOQz&size=invisible&anchor-ms=20000&execute-ms=30000&cb=7eawy7gf0eol": {
    "product": null,
    "status": 200,
    "method": "browser",
@@ -4605,7 +4613,7 @@
    "text_head": "מוגן באמצעות reCAPTCHA",
    "items": []
   },
-  "https://www.google.com/recaptcha/api2/anchor?ar=1&k=6LeXx8spAAAAAOhAgvJ7_YyVQbF6U2MN4n-qr8jV&co=aHR0cHM6Ly93d3cuYW5hbHlzdC5jby5pbDo0NDM.&hl=iw&v=guXhH0v-XMxlzmbTwqkaT4i5&size=invisible&anchor-ms=20000&execute-ms=30000&cb=ar47cgzbyl8s": {
+  "https://www.google.com/recaptcha/api2/anchor?ar=1&k=6LeXx8spAAAAAOhAgvJ7_YyVQbF6U2MN4n-qr8jV&co=aHR0cHM6Ly93d3cuYW5hbHlzdC5jby5pbDo0NDM.&hl=iw&v=nY0xPItgwtlvjEjk2TqdwOQz&size=invisible&anchor-ms=20000&execute-ms=30000&cb=7s2ggh42ox0o": {
    "product": null,
    "status": 200,
    "method": "browser",
@@ -4613,7 +4621,7 @@
    "text_head": "מוגן באמצעות reCAPTCHA",
    "items": []
   },
-  "https://www.google.com/recaptcha/api2/anchor?ar=1&k=6LeXx8spAAAAAOhAgvJ7_YyVQbF6U2MN4n-qr8jV&co=aHR0cHM6Ly93d3cuYW5hbHlzdC5jby5pbDo0NDM.&hl=iw&v=guXhH0v-XMxlzmbTwqkaT4i5&size=invisible&anchor-ms=20000&execute-ms=30000&cb=u7bkrlw9ndwv": {
+  "https://www.google.com/recaptcha/api2/anchor?ar=1&k=6LeXx8spAAAAAOhAgvJ7_YyVQbF6U2MN4n-qr8jV&co=aHR0cHM6Ly93d3cuYW5hbHlzdC5jby5pbDo0NDM.&hl=iw&v=nY0xPItgwtlvjEjk2TqdwOQz&size=invisible&anchor-ms=20000&execute-ms=30000&cb=jq01t5ujbgsh": {
    "product": null,
    "status": 200,
    "method": "browser",
@@ -4621,7 +4629,7 @@
    "text_head": "מוגן באמצעות reCAPTCHA",
    "items": []
   },
-  "https://www.google.com/recaptcha/api2/anchor?ar=1&k=6LeXx8spAAAAAOhAgvJ7_YyVQbF6U2MN4n-qr8jV&co=aHR0cHM6Ly93d3cuYW5hbHlzdC5jby5pbDo0NDM.&hl=iw&v=guXhH0v-XMxlzmbTwqkaT4i5&size=invisible&anchor-ms=20000&execute-ms=30000&cb=kw8y37252ts7": {
+  "https://www.google.com/recaptcha/api2/anchor?ar=1&k=6LeXx8spAAAAAOhAgvJ7_YyVQbF6U2MN4n-qr8jV&co=aHR0cHM6Ly93d3cuYW5hbHlzdC5jby5pbDo0NDM.&hl=iw&v=nY0xPItgwtlvjEjk2TqdwOQz&size=invisible&anchor-ms=20000&execute-ms=30000&cb=ihwoxwur831z": {
    "product": null,
    "status": 200,
    "method": "browser",
@@ -4629,7 +4637,7 @@
    "text_head": "מוגן באמצעות reCAPTCHA",
    "items": []
   },
-  "https://www.google.com/recaptcha/api2/anchor?ar=1&k=6LeXx8spAAAAAOhAgvJ7_YyVQbF6U2MN4n-qr8jV&co=aHR0cHM6Ly93d3cuYW5hbHlzdC5jby5pbDo0NDM.&hl=iw&v=guXhH0v-XMxlzmbTwqkaT4i5&size=invisible&anchor-ms=20000&execute-ms=30000&cb=bgg0ognwt8h": {
+  "https://www.google.com/recaptcha/api2/anchor?ar=1&k=6LeXx8spAAAAAOhAgvJ7_YyVQbF6U2MN4n-qr8jV&co=aHR0cHM6Ly93d3cuYW5hbHlzdC5jby5pbDo0NDM.&hl=iw&v=nY0xPItgwtktOA7U0o-VsaLz&size=invisible&anchor-ms=20000&execute-ms=30000&ovv=CAB5am5W&cb=qlabrmv4em2x": {
    "product": null,
    "status": 200,
    "method": "browser",
@@ -7178,6 +7186,4621 @@
      "iframe": false,
      "doc": false,
      "internal": false
+    }
+   ]
+  },
+  "https://www.analyst.co.il/portfolio-management/": {
+   "product": "פנסיה+גמל+ביטוח",
+   "status": 200,
+   "method": "requests",
+   "text_hash": "8885409ffdb22aa60a2182a54b3854c7996bab16",
+   "text_head": "ניהול תיקי השקעות - ניהול תיקים ללקוחות פרטיים ומוסדיים מעסיקים סוכנים אזור אישי עמיתים אודות אודות אנליסט אודות ניהול תיקי השקעות אודות קרנות נאמנות אודות קופות גמל אודות נץ סוכנות לביטוח פנסיוני הודעות החברה קופות גמל וקרנות השתלמות קרן השתלמות קופות גמל קופת גמל להשקעה תוכנית חיסכון לכל ילד קופה מרכזית לפיצויים תיקון 190 טפסים שימושיים מחשבון חישוב שיעור עלות שנתית צפויה הפקדה לקופות במעמד עצמאי תקנונים קרנות נאמנות ממונה על פניות הציבור הצהרה בנושא ESG ניהול תיקי השקעות רמות סיכון מחלקת מחקר דסק עסקי טופס CRS הצהרה בנושא ESG צור קשר קריירה מרכז הידע אנליסט PLAY חדשות פיננסיות מילון מושגים ",
+   "items": [
+    {
+     "text": "מדיניות פרטיות",
+     "href": "https://www.analyst.co.il/wp-content/uploads/2026/08/%D7%9E%D7%93%D7%99%D7%A0%D7%99%D7%95%D7%AA-%D7%94%D7%92%D7%A0%D7%AA-%D7%94%D7%A4%D7%A8%D7%98%D7%99%D7%95%D7%AA-%D7%9E%D7%A2%D7%95%D7%93%D7%9B%D7%A0%D7%AA-2026-PDF.pdf",
+     "year": "2026",
+     "iframe": false,
+     "doc": true,
+     "internal": true
+    },
+    {
+     "text": "לפרטים נוספים בנושא רישיון אמריקאי",
+     "href": "https://www.analyst.co.il/wp-content/uploads/2026/10/ברושור-ארהב.pdf",
+     "year": "2026",
+     "iframe": false,
+     "doc": true,
+     "internal": true
+    },
+    {
+     "text": "תנאי שימוש",
+     "href": "https://www.analyst.co.il/wp-content/uploads/2025/08/%D7%AA%D7%A0%D7%90%D7%99-%D7%A9%D7%99%D7%9E%D7%95%D7%A9.pdf",
+     "year": "2025",
+     "iframe": false,
+     "doc": true,
+     "internal": true
+    },
+    {
+     "text": "תנאי שימוש",
+     "href": "https://www.analyst.co.il/wp-content/uploads/2025/08/תנאי-שימוש.pdf",
+     "year": "2025",
+     "iframe": false,
+     "doc": true,
+     "internal": true
+    },
+    {
+     "text": "דוח ממונה אזרחים ותיקים",
+     "href": "https://www.analyst.co.il/wp-content/uploads/2025/01/%D7%93%D7%95%D7%97-%D7%A9%D7%A0%D7%AA%D7%99-%D7%9C%D7%90%D7%95%D7%A6%D7%A8-%D7%9E%D7%9E%D7%95%D7%A0%D7%94-%D7%90%D7%96%D7%A8%D7%97%D7%99%D7%9D-%D7%95%D7%AA%D7%99%D7%A7%D7%99%D7%9D-2024.pdf",
+     "year": "2025",
+     "iframe": false,
+     "doc": true,
+     "internal": true
+    },
+    {
+     "text": "במדיניות הפרטיות",
+     "href": "https://www.analyst.co.il/media/u0fl5prs/%D7%9E%D7%93%D7%99%D7%A0%D7%99%D7%95%D7%AA-%D7%A4%D7%A8%D7%98%D7%99%D7%95%D7%AA-1422.pdf?v=082025",
+     "year": "2025",
+     "iframe": false,
+     "doc": true,
+     "internal": true
+    },
+    {
+     "text": "אמנת שירות אנליסט קופות גמל",
+     "href": "https://www.analyst.co.il/media/aytdfpks/%D7%90%D7%9E%D7%A8%D7%AA-%D7%A9%D7%99%D7%A8%D7%95%D7%AA-%D7%9C%D7%A7%D7%95%D7%97%D7%95%D7%AA-%D7%9E%D7%A8%D7%A5-2022.pdf",
+     "year": "2022",
+     "iframe": false,
+     "doc": true,
+     "internal": true
+    },
+    {
+     "text": "תיק השקעות מנוהל או השקעות אלטרנטיביות – מה עדיף?",
+     "href": "https://www.analyst.co.il/articles/protolio-managed-or-aliternative-investments/",
+     "year": null,
+     "iframe": false,
+     "doc": false,
+     "internal": true
+    },
+    {
+     "text": "קרן השתלמות",
+     "href": "https://www.analyst.co.il/funds-lobby/training-funds/",
+     "year": null,
+     "iframe": false,
+     "doc": false,
+     "internal": true
+    },
+    {
+     "text": "קופת גמל להשקעה",
+     "href": "https://www.analyst.co.il/funds-lobby/gemel-invest/",
+     "year": null,
+     "iframe": false,
+     "doc": false,
+     "internal": true
+    },
+    {
+     "text": "קופות גמל וקרנות השתלמות",
+     "href": "https://www.analyst.co.il/funds-lobby/",
+     "year": null,
+     "iframe": false,
+     "doc": false,
+     "internal": true
+    },
+    {
+     "text": "קופות גמל",
+     "href": "https://www.analyst.co.il/funds-lobby/provident-funds/",
+     "year": null,
+     "iframe": false,
+     "doc": false,
+     "internal": true
+    },
+    {
+     "text": "פתיחת חשבון קרן השתלמות להפקדות חדשות",
+     "href": "https://www.analyst.co.il/openning-training-funds/",
+     "year": null,
+     "iframe": false,
+     "doc": false,
+     "internal": true
+    },
+    {
+     "text": "פתיחת חשבון קופת גמל להפקדות חדשות",
+     "href": "https://www.analyst.co.il/join-provident-funds/",
+     "year": null,
+     "iframe": false,
+     "doc": false,
+     "internal": true
+    },
+    {
+     "text": "פתיחת חשבון חדש לקופת גמל להשקעה",
+     "href": "https://www.analyst.co.il/gemel-invest-join/",
+     "year": null,
+     "iframe": false,
+     "doc": false,
+     "internal": true
+    },
+    {
+     "text": "ניהול תיקי השקעות בחו\"ל – למי זה מתאים ומה היתרונות",
+     "href": "https://www.analyst.co.il/articles/portfolios-managements-aborad/",
+     "year": null,
+     "iframe": false,
+     "doc": false,
+     "internal": true
+    },
+    {
+     "text": "ניהול תיקי השקעות",
+     "href": "https://www.analyst.co.il/portfolio-management/",
+     "year": null,
+     "iframe": false,
+     "doc": false,
+     "internal": true
+    },
+    {
+     "text": "מסמכים ודוחות מנהליים",
+     "href": "https://www.analyst.co.il/investment-policy/",
+     "year": null,
+     "iframe": false,
+     "doc": false,
+     "internal": true
+    },
+    {
+     "text": "מנהלי תיקי השקעות",
+     "href": "https://www.analyst.co.il/portfolio-management/managers/",
+     "year": null,
+     "iframe": false,
+     "doc": false,
+     "internal": true
+    },
+    {
+     "text": "מחשבון תשואות – השוואה בין קרנות השתלמות וקופות גמל נבחרות",
+     "href": "https://www.analyst.co.il/yield-comparison-calculator/",
+     "year": null,
+     "iframe": false,
+     "doc": false,
+     "internal": true
+    },
+    {
+     "text": "מדריך לפתיחת תיק השקעות – מה צריך לדעת לפני שמתחילים",
+     "href": "https://www.analyst.co.il/articles/opening-an-investment-portfolio/",
+     "year": null,
+     "iframe": false,
+     "doc": false,
+     "internal": true
+    },
+    {
+     "text": "העברת חשבון קרן השתלמות",
+     "href": "https://www.analyst.co.il/transfer-training-funds/",
+     "year": null,
+     "iframe": false,
+     "doc": false,
+     "internal": true
+    },
+    {
+     "text": "העברת חשבון קופת גמל",
+     "href": "https://www.analyst.co.il/account-transfer-provident-funds/",
+     "year": null,
+     "iframe": false,
+     "doc": false,
+     "internal": true
+    },
+    {
+     "text": "דוחות כספיים",
+     "href": "https://www.analyst.co.il/financial-reports/",
+     "year": null,
+     "iframe": false,
+     "doc": false,
+     "internal": true
+    },
+    {
+     "text": "גילוי נאות",
+     "href": "https://www.analyst.co.il/proper-disclosure/",
+     "year": null,
+     "iframe": false,
+     "doc": false,
+     "internal": true
+    },
+    {
+     "text": "בתי השקעות",
+     "href": "https://www.analyst.co.il/",
+     "year": null,
+     "iframe": false,
+     "doc": false,
+     "internal": true
+    },
+    {
+     "text": "בית השקעות אנליסט הינו מבתי ההשקעות הוותיקים והמנוסים בניהול השקעות בשוק ההון בישראל. 'אנליסט' נוסדה בשנת 1985, ומשנת 1994 היא חברה ציבורית שמניותיה נסחרות בבורסה לניירות ערך בתל-אביב, ניהול ההשקעות מ",
+     "href": "https://www.analyst.co.il",
+     "year": null,
+     "iframe": false,
+     "doc": false,
+     "internal": true
+    },
+    {
+     "text": "אנליסט קופות גמל בע\"מ",
+     "href": "https://www.analyst.co.il/head-of-public-application/",
+     "year": null,
+     "iframe": false,
+     "doc": false,
+     "internal": true
+    },
+    {
+     "text": "אלוקציה בתיק השקעות – ההחלטה שמשפיעה על תיק ההשקעות שלכם",
+     "href": "https://www.analyst.co.il/articles/allocation/",
+     "year": null,
+     "iframe": false,
+     "doc": false,
+     "internal": true
+    },
+    {
+     "text": "איזה תיק השקעות מתאים לך?",
+     "href": "https://www.analyst.co.il/articles/types-of-investment-portfolios/",
+     "year": null,
+     "iframe": false,
+     "doc": false,
+     "internal": true
+    },
+    {
+     "text": "אודות קופות גמל",
+     "href": "https://www.analyst.co.il/about-us/provident/",
+     "year": null,
+     "iframe": false,
+     "doc": false,
+     "internal": true
+    },
+    {
+     "text": "אודות נץ סוכנות לביטוח פנסיוני",
+     "href": "https://www.analyst.co.il/about-us/about-netz-pensionary-insurance/",
+     "year": null,
+     "iframe": false,
+     "doc": false,
+     "internal": true
+    },
+    {
+     "text": "אודות ניהול תיקי השקעות",
+     "href": "https://www.analyst.co.il/about-us/portfolio-management/",
+     "year": null,
+     "iframe": false,
+     "doc": false,
+     "internal": true
+    },
+    {
+     "text": "",
+     "href": "https://api.whatsapp.com/send?text=https://www.analyst.co.il/articles/protolio-managed-or-aliternative-investments/",
+     "year": null,
+     "iframe": false,
+     "doc": false,
+     "internal": false
+    },
+    {
+     "text": "",
+     "href": "https://www.facebook.com/sharer/sharer.php?u=https://www.analyst.co.il/articles/protolio-managed-or-aliternative-investments/",
+     "year": null,
+     "iframe": false,
+     "doc": false,
+     "internal": false
+    },
+    {
+     "text": "",
+     "href": "https://www.linkedin.com/shareArticle?mini=true&url=https://www.analyst.co.il/articles/protolio-managed-or-aliternative-investments/",
+     "year": null,
+     "iframe": false,
+     "doc": false,
+     "internal": false
+    },
+    {
+     "text": "",
+     "href": "https://twitter.com/intent/tweet?url=https://www.analyst.co.il/articles/protolio-managed-or-aliternative-investments/",
+     "year": null,
+     "iframe": false,
+     "doc": false,
+     "internal": false
+    }
+   ]
+  },
+  "https://www.analyst.co.il/gemel-invest-join/": {
+   "product": "פנסיה+גמל+ביטוח",
+   "status": 200,
+   "method": "requests",
+   "text_hash": "c84724f80b3831c24d77c19b4865e2d6252f75bd",
+   "text_head": "פתיחת חשבון קופת גמל להשקעה להפקדות חדשות - אנליסט בית השקעות מעסיקים סוכנים אזור אישי עמיתים אודות אודות אנליסט אודות ניהול תיקי השקעות אודות קרנות נאמנות אודות קופות גמל אודות נץ סוכנות לביטוח פנסיוני הודעות החברה קופות גמל וקרנות השתלמות קרן השתלמות קופות גמל קופת גמל להשקעה תוכנית חיסכון לכל ילד קופה מרכזית לפיצויים תיקון 190 טפסים שימושיים מחשבון חישוב שיעור עלות שנתית צפויה הפקדה לקופות במעמד עצמאי תקנונים קרנות נאמנות ממונה על פניות הציבור הצהרה בנושא ESG ניהול תיקי השקעות רמות סיכון מחלקת מחקר דסק עסקי טופס CRS הצהרה בנושא ESG צור קשר קריירה מרכז הידע אנליסט PLAY חדשות פיננסיות מילון מ",
+   "items": [
+    {
+     "text": "מדיניות פרטיות",
+     "href": "https://www.analyst.co.il/wp-content/uploads/2026/08/%D7%9E%D7%93%D7%99%D7%A0%D7%99%D7%95%D7%AA-%D7%94%D7%92%D7%A0%D7%AA-%D7%94%D7%A4%D7%A8%D7%98%D7%99%D7%95%D7%AA-%D7%9E%D7%A2%D7%95%D7%93%D7%9B%D7%A0%D7%AA-2026-PDF.pdf",
+     "year": "2026",
+     "iframe": false,
+     "doc": true,
+     "internal": true
+    },
+    {
+     "text": "תנאי שימוש",
+     "href": "https://www.analyst.co.il/wp-content/uploads/2025/08/%D7%AA%D7%A0%D7%90%D7%99-%D7%A9%D7%99%D7%9E%D7%95%D7%A9.pdf",
+     "year": "2025",
+     "iframe": false,
+     "doc": true,
+     "internal": true
+    },
+    {
+     "text": "תנאי שימוש",
+     "href": "https://www.analyst.co.il/wp-content/uploads/2025/08/תנאי-שימוש.pdf",
+     "year": "2025",
+     "iframe": false,
+     "doc": true,
+     "internal": true
+    },
+    {
+     "text": "דוח ממונה אזרחים ותיקים",
+     "href": "https://www.analyst.co.il/wp-content/uploads/2025/01/%D7%93%D7%95%D7%97-%D7%A9%D7%A0%D7%AA%D7%99-%D7%9C%D7%90%D7%95%D7%A6%D7%A8-%D7%9E%D7%9E%D7%95%D7%A0%D7%94-%D7%90%D7%96%D7%A8%D7%97%D7%99%D7%9D-%D7%95%D7%AA%D7%99%D7%A7%D7%99%D7%9D-2024.pdf",
+     "year": "2025",
+     "iframe": false,
+     "doc": true,
+     "internal": true
+    },
+    {
+     "text": "בקשת הצטרפות לקופת גמל להשקעה",
+     "href": "https://www.analyst.co.il/wp-content/uploads/2025/06/1015.pdf",
+     "year": "2025",
+     "iframe": false,
+     "doc": true,
+     "internal": true
+    },
+    {
+     "text": "במדיניות הפרטיות",
+     "href": "https://www.analyst.co.il/media/u0fl5prs/%D7%9E%D7%93%D7%99%D7%A0%D7%99%D7%95%D7%AA-%D7%A4%D7%A8%D7%98%D7%99%D7%95%D7%AA-1422.pdf?v=082025",
+     "year": "2025",
+     "iframe": false,
+     "doc": true,
+     "internal": true
+    },
+    {
+     "text": "הסבר עבור מילוי טפסי הצטרפות – גמל להשקעה עמית קטין",
+     "href": "https://www.analyst.co.il/wp-content/uploads/2024/07/GEMEL-LEHASHKAA-KATIN.pdf",
+     "year": "2024",
+     "iframe": false,
+     "doc": true,
+     "internal": true
+    },
+    {
+     "text": "אמנת שירות אנליסט קופות גמל",
+     "href": "https://www.analyst.co.il/media/aytdfpks/%D7%90%D7%9E%D7%A8%D7%AA-%D7%A9%D7%99%D7%A8%D7%95%D7%AA-%D7%9C%D7%A7%D7%95%D7%97%D7%95%D7%AA-%D7%9E%D7%A8%D7%A5-2022.pdf",
+     "year": "2022",
+     "iframe": false,
+     "doc": true,
+     "internal": true
+    },
+    {
+     "text": "קרן השתלמות",
+     "href": "https://www.analyst.co.il/funds-lobby/training-funds/",
+     "year": null,
+     "iframe": false,
+     "doc": false,
+     "internal": true
+    },
+    {
+     "text": "קופת גמל להשקעה",
+     "href": "https://www.analyst.co.il/funds-lobby/gemel-invest/",
+     "year": null,
+     "iframe": false,
+     "doc": false,
+     "internal": true
+    },
+    {
+     "text": "קופות גמל וקרנות השתלמות",
+     "href": "https://www.analyst.co.il/funds-lobby/",
+     "year": null,
+     "iframe": false,
+     "doc": false,
+     "internal": true
+    },
+    {
+     "text": "קופות גמל",
+     "href": "https://www.analyst.co.il/funds-lobby/provident-funds/",
+     "year": null,
+     "iframe": false,
+     "doc": false,
+     "internal": true
+    },
+    {
+     "text": "פתיחת חשבון קרן השתלמות להפקדות חדשות",
+     "href": "https://www.analyst.co.il/openning-training-funds/",
+     "year": null,
+     "iframe": false,
+     "doc": false,
+     "internal": true
+    },
+    {
+     "text": "פתיחת חשבון קופת גמל להפקדות חדשות",
+     "href": "https://www.analyst.co.il/join-provident-funds/",
+     "year": null,
+     "iframe": false,
+     "doc": false,
+     "internal": true
+    },
+    {
+     "text": "ניהול תיקי השקעות",
+     "href": "https://www.analyst.co.il/portfolio-management/",
+     "year": null,
+     "iframe": false,
+     "doc": false,
+     "internal": true
+    },
+    {
+     "text": "מסמכים ודוחות מנהליים",
+     "href": "https://www.analyst.co.il/investment-policy/",
+     "year": null,
+     "iframe": false,
+     "doc": false,
+     "internal": true
+    },
+    {
+     "text": "מחשבון תשואות – השוואה בין קרנות השתלמות וקופות גמל נבחרות",
+     "href": "https://www.analyst.co.il/yield-comparison-calculator/",
+     "year": null,
+     "iframe": false,
+     "doc": false,
+     "internal": true
+    },
+    {
+     "text": "חיפוש",
+     "href": "https://www.analyst.co.il/gemel-invest-join/",
+     "year": null,
+     "iframe": false,
+     "doc": false,
+     "internal": true
+    },
+    {
+     "text": "העברת חשבון קרן השתלמות",
+     "href": "https://www.analyst.co.il/transfer-training-funds/",
+     "year": null,
+     "iframe": false,
+     "doc": false,
+     "internal": true
+    },
+    {
+     "text": "העברת חשבון קופת גמל",
+     "href": "https://www.analyst.co.il/account-transfer-provident-funds/",
+     "year": null,
+     "iframe": false,
+     "doc": false,
+     "internal": true
+    },
+    {
+     "text": "דוחות כספיים",
+     "href": "https://www.analyst.co.il/financial-reports/",
+     "year": null,
+     "iframe": false,
+     "doc": false,
+     "internal": true
+    },
+    {
+     "text": "גילוי נאות",
+     "href": "https://www.analyst.co.il/proper-disclosure/",
+     "year": null,
+     "iframe": false,
+     "doc": false,
+     "internal": true
+    },
+    {
+     "text": "בית השקעות אנליסט הינו מבתי ההשקעות הוותיקים והמנוסים בניהול השקעות בשוק ההון בישראל. 'אנליסט' נוסדה בשנת 1985, ומשנת 1994 היא חברה ציבורית שמניותיה נסחרות בבורסה לניירות ערך בתל-אביב, ניהול ההשקעות מ",
+     "href": "https://www.analyst.co.il",
+     "year": null,
+     "iframe": false,
+     "doc": false,
+     "internal": true
+    },
+    {
+     "text": "אנליסט קופות גמל בע\"מ",
+     "href": "https://www.analyst.co.il/head-of-public-application/",
+     "year": null,
+     "iframe": false,
+     "doc": false,
+     "internal": true
+    },
+    {
+     "text": "אודות קופות גמל",
+     "href": "https://www.analyst.co.il/about-us/provident/",
+     "year": null,
+     "iframe": false,
+     "doc": false,
+     "internal": true
+    },
+    {
+     "text": "אודות נץ סוכנות לביטוח פנסיוני",
+     "href": "https://www.analyst.co.il/about-us/about-netz-pensionary-insurance/",
+     "year": null,
+     "iframe": false,
+     "doc": false,
+     "internal": true
+    },
+    {
+     "text": "אודות ניהול תיקי השקעות",
+     "href": "https://www.analyst.co.il/about-us/portfolio-management/",
+     "year": null,
+     "iframe": false,
+     "doc": false,
+     "internal": true
+    }
+   ]
+  },
+  "https://www.analyst.co.il/openning-training-funds/": {
+   "product": "פנסיה+גמל+ביטוח",
+   "status": 200,
+   "method": "requests",
+   "text_hash": "9d1da25a5a7014b08e075c6e663f216a950d169a",
+   "text_head": "פתיחת חשבון קרן השתלמות להפקדות חדשות מעסיקים סוכנים אזור אישי עמיתים אודות אודות אנליסט אודות ניהול תיקי השקעות אודות קרנות נאמנות אודות קופות גמל אודות נץ סוכנות לביטוח פנסיוני הודעות החברה קופות גמל וקרנות השתלמות קרן השתלמות קופות גמל קופת גמל להשקעה תוכנית חיסכון לכל ילד קופה מרכזית לפיצויים תיקון 190 טפסים שימושיים מחשבון חישוב שיעור עלות שנתית צפויה הפקדה לקופות במעמד עצמאי תקנונים קרנות נאמנות ממונה על פניות הציבור הצהרה בנושא ESG ניהול תיקי השקעות רמות סיכון מחלקת מחקר דסק עסקי טופס CRS הצהרה בנושא ESG צור קשר קריירה מרכז הידע אנליסט PLAY חדשות פיננסיות מילון מושגים חיפוש לאזור האישי ",
+   "items": [
+    {
+     "text": "מדיניות פרטיות",
+     "href": "https://www.analyst.co.il/wp-content/uploads/2026/08/%D7%9E%D7%93%D7%99%D7%A0%D7%99%D7%95%D7%AA-%D7%94%D7%92%D7%A0%D7%AA-%D7%94%D7%A4%D7%A8%D7%98%D7%99%D7%95%D7%AA-%D7%9E%D7%A2%D7%95%D7%93%D7%9B%D7%A0%D7%AA-2026-PDF.pdf",
+     "year": "2026",
+     "iframe": false,
+     "doc": true,
+     "internal": true
+    },
+    {
+     "text": "בקשת הצטרפות לקרן השתלמות",
+     "href": "https://www.analyst.co.il/wp-content/uploads/2026/02/טופס-1084-קיט-הצטרפות-קהש-עצמאי-4.2.26.pdf",
+     "year": "2026",
+     "iframe": false,
+     "doc": true,
+     "internal": true
+    },
+    {
+     "text": "תנאי שימוש",
+     "href": "https://www.analyst.co.il/wp-content/uploads/2025/08/%D7%AA%D7%A0%D7%90%D7%99-%D7%A9%D7%99%D7%9E%D7%95%D7%A9.pdf",
+     "year": "2025",
+     "iframe": false,
+     "doc": true,
+     "internal": true
+    },
+    {
+     "text": "תנאי שימוש",
+     "href": "https://www.analyst.co.il/wp-content/uploads/2025/08/תנאי-שימוש.pdf",
+     "year": "2025",
+     "iframe": false,
+     "doc": true,
+     "internal": true
+    },
+    {
+     "text": "דוח ממונה אזרחים ותיקים",
+     "href": "https://www.analyst.co.il/wp-content/uploads/2025/01/%D7%93%D7%95%D7%97-%D7%A9%D7%A0%D7%AA%D7%99-%D7%9C%D7%90%D7%95%D7%A6%D7%A8-%D7%9E%D7%9E%D7%95%D7%A0%D7%94-%D7%90%D7%96%D7%A8%D7%97%D7%99%D7%9D-%D7%95%D7%AA%D7%99%D7%A7%D7%99%D7%9D-2024.pdf",
+     "year": "2025",
+     "iframe": false,
+     "doc": true,
+     "internal": true
+    },
+    {
+     "text": "בקשת הצטרפות לקרן השתלמות",
+     "href": "https://www.analyst.co.il/wp-content/uploads/2025/06/1034.pdf",
+     "year": "2025",
+     "iframe": false,
+     "doc": true,
+     "internal": true
+    },
+    {
+     "text": "במדיניות הפרטיות",
+     "href": "https://www.analyst.co.il/media/u0fl5prs/%D7%9E%D7%93%D7%99%D7%A0%D7%99%D7%95%D7%AA-%D7%A4%D7%A8%D7%98%D7%99%D7%95%D7%AA-1422.pdf?v=082025",
+     "year": "2025",
+     "iframe": false,
+     "doc": true,
+     "internal": true
+    },
+    {
+     "text": "אמנת שירות אנליסט קופות גמל",
+     "href": "https://www.analyst.co.il/media/aytdfpks/%D7%90%D7%9E%D7%A8%D7%AA-%D7%A9%D7%99%D7%A8%D7%95%D7%AA-%D7%9C%D7%A7%D7%95%D7%97%D7%95%D7%AA-%D7%9E%D7%A8%D7%A5-2022.pdf",
+     "year": "2022",
+     "iframe": false,
+     "doc": true,
+     "internal": true
+    },
+    {
+     "text": "קרן השתלמות",
+     "href": "https://www.analyst.co.il/funds-lobby/training-funds/",
+     "year": null,
+     "iframe": false,
+     "doc": false,
+     "internal": true
+    },
+    {
+     "text": "קרן השתלמות",
+     "href": "https://analyst.formally.co.il/InsDigital.aspx?ID=dd71ca30-5b6b-421d-a65a-6a6424e55196&Form=3715",
+     "year": null,
+     "iframe": false,
+     "doc": false,
+     "internal": false
+    },
+    {
+     "text": "קופת גמל להשקעה",
+     "href": "https://www.analyst.co.il/funds-lobby/gemel-invest/",
+     "year": null,
+     "iframe": false,
+     "doc": false,
+     "internal": true
+    },
+    {
+     "text": "קופות גמל וקרנות השתלמות",
+     "href": "https://www.analyst.co.il/funds-lobby/",
+     "year": null,
+     "iframe": false,
+     "doc": false,
+     "internal": true
+    },
+    {
+     "text": "קופות גמל",
+     "href": "https://www.analyst.co.il/funds-lobby/provident-funds/",
+     "year": null,
+     "iframe": false,
+     "doc": false,
+     "internal": true
+    },
+    {
+     "text": "פתיחת חשבון קופת גמל להפקדות חדשות",
+     "href": "https://www.analyst.co.il/join-provident-funds/",
+     "year": null,
+     "iframe": false,
+     "doc": false,
+     "internal": true
+    },
+    {
+     "text": "פתיחת חשבון חדש לקופת גמל להשקעה",
+     "href": "https://www.analyst.co.il/gemel-invest-join/",
+     "year": null,
+     "iframe": false,
+     "doc": false,
+     "internal": true
+    },
+    {
+     "text": "ניהול תיקי השקעות",
+     "href": "https://www.analyst.co.il/portfolio-management/",
+     "year": null,
+     "iframe": false,
+     "doc": false,
+     "internal": true
+    },
+    {
+     "text": "מסמכים ודוחות מנהליים",
+     "href": "https://www.analyst.co.il/investment-policy/",
+     "year": null,
+     "iframe": false,
+     "doc": false,
+     "internal": true
+    },
+    {
+     "text": "מידע לעמיתים",
+     "href": "https://www.analyst.co.il/openning-training-funds/",
+     "year": null,
+     "iframe": false,
+     "doc": false,
+     "internal": true
+    },
+    {
+     "text": "מחשבון תשואות – השוואה בין קרנות השתלמות וקופות גמל נבחרות",
+     "href": "https://www.analyst.co.il/yield-comparison-calculator/",
+     "year": null,
+     "iframe": false,
+     "doc": false,
+     "internal": true
+    },
+    {
+     "text": "העברת חשבון קרן השתלמות",
+     "href": "https://www.analyst.co.il/transfer-training-funds/",
+     "year": null,
+     "iframe": false,
+     "doc": false,
+     "internal": true
+    },
+    {
+     "text": "העברת חשבון קופת גמל",
+     "href": "https://www.analyst.co.il/account-transfer-provident-funds/",
+     "year": null,
+     "iframe": false,
+     "doc": false,
+     "internal": true
+    },
+    {
+     "text": "דוחות כספיים",
+     "href": "https://www.analyst.co.il/financial-reports/",
+     "year": null,
+     "iframe": false,
+     "doc": false,
+     "internal": true
+    },
+    {
+     "text": "גילוי נאות",
+     "href": "https://www.analyst.co.il/proper-disclosure/",
+     "year": null,
+     "iframe": false,
+     "doc": false,
+     "internal": true
+    },
+    {
+     "text": "בית השקעות אנליסט הינו מבתי ההשקעות הוותיקים והמנוסים בניהול השקעות בשוק ההון בישראל. 'אנליסט' נוסדה בשנת 1985, ומשנת 1994 היא חברה ציבורית שמניותיה נסחרות בבורסה לניירות ערך בתל-אביב, ניהול ההשקעות מ",
+     "href": "https://www.analyst.co.il",
+     "year": null,
+     "iframe": false,
+     "doc": false,
+     "internal": true
+    },
+    {
+     "text": "אנליסט קופות גמל בע\"מ",
+     "href": "https://www.analyst.co.il/head-of-public-application/",
+     "year": null,
+     "iframe": false,
+     "doc": false,
+     "internal": true
+    },
+    {
+     "text": "אודות קופות גמל",
+     "href": "https://www.analyst.co.il/about-us/provident/",
+     "year": null,
+     "iframe": false,
+     "doc": false,
+     "internal": true
+    },
+    {
+     "text": "אודות נץ סוכנות לביטוח פנסיוני",
+     "href": "https://www.analyst.co.il/about-us/about-netz-pensionary-insurance/",
+     "year": null,
+     "iframe": false,
+     "doc": false,
+     "internal": true
+    },
+    {
+     "text": "אודות ניהול תיקי השקעות",
+     "href": "https://www.analyst.co.il/about-us/portfolio-management/",
+     "year": null,
+     "iframe": false,
+     "doc": false,
+     "internal": true
+    }
+   ]
+  },
+  "https://www.analyst.co.il/transfer-training-funds/": {
+   "product": "פנסיה+גמל+ביטוח",
+   "status": 200,
+   "method": "requests",
+   "text_hash": "a5372f0ccb4525b2972650af6708a1acc8bf2efb",
+   "text_head": "העברת חשבון קרן השתלמות - אנליסט בית השקעות מעסיקים סוכנים אזור אישי עמיתים אודות אודות אנליסט אודות ניהול תיקי השקעות אודות קרנות נאמנות אודות קופות גמל אודות נץ סוכנות לביטוח פנסיוני הודעות החברה קופות גמל וקרנות השתלמות קרן השתלמות קופות גמל קופת גמל להשקעה תוכנית חיסכון לכל ילד קופה מרכזית לפיצויים תיקון 190 טפסים שימושיים מחשבון חישוב שיעור עלות שנתית צפויה הפקדה לקופות במעמד עצמאי תקנונים קרנות נאמנות ממונה על פניות הציבור הצהרה בנושא ESG ניהול תיקי השקעות רמות סיכון מחלקת מחקר דסק עסקי טופס CRS הצהרה בנושא ESG צור קשר קריירה מרכז הידע אנליסט PLAY חדשות פיננסיות מילון מושגים חיפוש לאזור ",
+   "items": [
+    {
+     "text": "מדיניות פרטיות",
+     "href": "https://www.analyst.co.il/wp-content/uploads/2026/08/%D7%9E%D7%93%D7%99%D7%A0%D7%99%D7%95%D7%AA-%D7%94%D7%92%D7%A0%D7%AA-%D7%94%D7%A4%D7%A8%D7%98%D7%99%D7%95%D7%AA-%D7%9E%D7%A2%D7%95%D7%93%D7%9B%D7%A0%D7%AA-2026-PDF.pdf",
+     "year": "2026",
+     "iframe": false,
+     "doc": true,
+     "internal": true
+    },
+    {
+     "text": "בקשת הצטרפות לקרן השתלמות",
+     "href": "https://www.analyst.co.il/wp-content/uploads/2026/02/טופס-1084-קיט-הצטרפות-קהש-עצמאי-4.2.26.pdf",
+     "year": "2026",
+     "iframe": false,
+     "doc": true,
+     "internal": true
+    },
+    {
+     "text": "בקשת הצטרפות לקרן השתלמות",
+     "href": "https://www.analyst.co.il/wp-content/uploads/2026/02/טופס-1034-קיט-הצטרפות-קרן-השתלמות-4.2.26.pdf",
+     "year": "2026",
+     "iframe": false,
+     "doc": true,
+     "internal": true
+    },
+    {
+     "text": "תנאי שימוש",
+     "href": "https://www.analyst.co.il/wp-content/uploads/2025/08/%D7%AA%D7%A0%D7%90%D7%99-%D7%A9%D7%99%D7%9E%D7%95%D7%A9.pdf",
+     "year": "2025",
+     "iframe": false,
+     "doc": true,
+     "internal": true
+    },
+    {
+     "text": "תנאי שימוש",
+     "href": "https://www.analyst.co.il/wp-content/uploads/2025/08/תנאי-שימוש.pdf",
+     "year": "2025",
+     "iframe": false,
+     "doc": true,
+     "internal": true
+    },
+    {
+     "text": "דוח ממונה אזרחים ותיקים",
+     "href": "https://www.analyst.co.il/wp-content/uploads/2025/01/%D7%93%D7%95%D7%97-%D7%A9%D7%A0%D7%AA%D7%99-%D7%9C%D7%90%D7%95%D7%A6%D7%A8-%D7%9E%D7%9E%D7%95%D7%A0%D7%94-%D7%90%D7%96%D7%A8%D7%97%D7%99%D7%9D-%D7%95%D7%AA%D7%99%D7%A7%D7%99%D7%9D-2024.pdf",
+     "year": "2025",
+     "iframe": false,
+     "doc": true,
+     "internal": true
+    },
+    {
+     "text": "במדיניות הפרטיות",
+     "href": "https://www.analyst.co.il/media/u0fl5prs/%D7%9E%D7%93%D7%99%D7%A0%D7%99%D7%95%D7%AA-%D7%A4%D7%A8%D7%98%D7%99%D7%95%D7%AA-1422.pdf?v=082025",
+     "year": "2025",
+     "iframe": false,
+     "doc": true,
+     "internal": true
+    },
+    {
+     "text": "בקשת העברה לקופת גמל/קרן השתלמות",
+     "href": "https://www.analyst.co.il/wp-content/uploads/2024/06/1032-העברה-פנימה.pdf",
+     "year": "2024",
+     "iframe": false,
+     "doc": true,
+     "internal": true
+    },
+    {
+     "text": "אמנת שירות אנליסט קופות גמל",
+     "href": "https://www.analyst.co.il/media/aytdfpks/%D7%90%D7%9E%D7%A8%D7%AA-%D7%A9%D7%99%D7%A8%D7%95%D7%AA-%D7%9C%D7%A7%D7%95%D7%97%D7%95%D7%AA-%D7%9E%D7%A8%D7%A5-2022.pdf",
+     "year": "2022",
+     "iframe": false,
+     "doc": true,
+     "internal": true
+    },
+    {
+     "text": "קרן השתלמות",
+     "href": "https://www.analyst.co.il/funds-lobby/training-funds/",
+     "year": null,
+     "iframe": false,
+     "doc": false,
+     "internal": true
+    },
+    {
+     "text": "קרן השתלמות",
+     "href": "https://analyst.formally.co.il/InsDigital.aspx?ID=dd71ca30-5b6b-421d-a65a-6a6424e55196&Form=3715",
+     "year": null,
+     "iframe": false,
+     "doc": false,
+     "internal": false
+    },
+    {
+     "text": "קופת גמל להשקעה",
+     "href": "https://www.analyst.co.il/funds-lobby/gemel-invest/",
+     "year": null,
+     "iframe": false,
+     "doc": false,
+     "internal": true
+    },
+    {
+     "text": "קופות גמל וקרנות השתלמות",
+     "href": "https://www.analyst.co.il/funds-lobby/",
+     "year": null,
+     "iframe": false,
+     "doc": false,
+     "internal": true
+    },
+    {
+     "text": "קופות גמל",
+     "href": "https://www.analyst.co.il/funds-lobby/provident-funds/",
+     "year": null,
+     "iframe": false,
+     "doc": false,
+     "internal": true
+    },
+    {
+     "text": "פתיחת חשבון קרן השתלמות להפקדות חדשות",
+     "href": "https://www.analyst.co.il/openning-training-funds/",
+     "year": null,
+     "iframe": false,
+     "doc": false,
+     "internal": true
+    },
+    {
+     "text": "פתיחת חשבון קופת גמל להפקדות חדשות",
+     "href": "https://www.analyst.co.il/join-provident-funds/",
+     "year": null,
+     "iframe": false,
+     "doc": false,
+     "internal": true
+    },
+    {
+     "text": "פתיחת חשבון חדש לקופת גמל להשקעה",
+     "href": "https://www.analyst.co.il/gemel-invest-join/",
+     "year": null,
+     "iframe": false,
+     "doc": false,
+     "internal": true
+    },
+    {
+     "text": "ניהול תיקי השקעות",
+     "href": "https://www.analyst.co.il/portfolio-management/",
+     "year": null,
+     "iframe": false,
+     "doc": false,
+     "internal": true
+    },
+    {
+     "text": "מסמכים ודוחות מנהליים",
+     "href": "https://www.analyst.co.il/investment-policy/",
+     "year": null,
+     "iframe": false,
+     "doc": false,
+     "internal": true
+    },
+    {
+     "text": "מידע לעמיתים",
+     "href": "https://www.analyst.co.il/transfer-training-funds/",
+     "year": null,
+     "iframe": false,
+     "doc": false,
+     "internal": true
+    },
+    {
+     "text": "מחשבון תשואות – השוואה בין קרנות השתלמות וקופות גמל נבחרות",
+     "href": "https://www.analyst.co.il/yield-comparison-calculator/",
+     "year": null,
+     "iframe": false,
+     "doc": false,
+     "internal": true
+    },
+    {
+     "text": "העברת חשבון קופת גמל",
+     "href": "https://www.analyst.co.il/account-transfer-provident-funds/",
+     "year": null,
+     "iframe": false,
+     "doc": false,
+     "internal": true
+    },
+    {
+     "text": "דוחות כספיים",
+     "href": "https://www.analyst.co.il/financial-reports/",
+     "year": null,
+     "iframe": false,
+     "doc": false,
+     "internal": true
+    },
+    {
+     "text": "גילוי נאות",
+     "href": "https://www.analyst.co.il/proper-disclosure/",
+     "year": null,
+     "iframe": false,
+     "doc": false,
+     "internal": true
+    },
+    {
+     "text": "בית השקעות אנליסט הינו מבתי ההשקעות הוותיקים והמנוסים בניהול השקעות בשוק ההון בישראל. 'אנליסט' נוסדה בשנת 1985, ומשנת 1994 היא חברה ציבורית שמניותיה נסחרות בבורסה לניירות ערך בתל-אביב, ניהול ההשקעות מ",
+     "href": "https://www.analyst.co.il",
+     "year": null,
+     "iframe": false,
+     "doc": false,
+     "internal": true
+    },
+    {
+     "text": "אנליסט קופות גמל בע\"מ",
+     "href": "https://www.analyst.co.il/head-of-public-application/",
+     "year": null,
+     "iframe": false,
+     "doc": false,
+     "internal": true
+    },
+    {
+     "text": "אודות קופות גמל",
+     "href": "https://www.analyst.co.il/about-us/provident/",
+     "year": null,
+     "iframe": false,
+     "doc": false,
+     "internal": true
+    },
+    {
+     "text": "אודות נץ סוכנות לביטוח פנסיוני",
+     "href": "https://www.analyst.co.il/about-us/about-netz-pensionary-insurance/",
+     "year": null,
+     "iframe": false,
+     "doc": false,
+     "internal": true
+    },
+    {
+     "text": "אודות ניהול תיקי השקעות",
+     "href": "https://www.analyst.co.il/about-us/portfolio-management/",
+     "year": null,
+     "iframe": false,
+     "doc": false,
+     "internal": true
+    }
+   ]
+  },
+  "https://www.analyst.co.il/join-provident-funds/": {
+   "product": "פנסיה+גמל+ביטוח",
+   "status": 200,
+   "method": "requests",
+   "text_hash": "8952fe435194ec501fad60bc63b00522f0846b73",
+   "text_head": "פתיחת חשבון קופת גמל/קרן השתלמות להפקדות - אנליסט בית השקעות מעסיקים סוכנים אזור אישי עמיתים אודות אודות אנליסט אודות ניהול תיקי השקעות אודות קרנות נאמנות אודות קופות גמל אודות נץ סוכנות לביטוח פנסיוני הודעות החברה קופות גמל וקרנות השתלמות קרן השתלמות קופות גמל קופת גמל להשקעה תוכנית חיסכון לכל ילד קופה מרכזית לפיצויים תיקון 190 טפסים שימושיים מחשבון חישוב שיעור עלות שנתית צפויה הפקדה לקופות במעמד עצמאי תקנונים קרנות נאמנות ממונה על פניות הציבור הצהרה בנושא ESG ניהול תיקי השקעות רמות סיכון מחלקת מחקר דסק עסקי טופס CRS הצהרה בנושא ESG צור קשר קריירה מרכז הידע אנליסט PLAY חדשות פיננסיות מילון מו",
+   "items": [
+    {
+     "text": "מדיניות פרטיות",
+     "href": "https://www.analyst.co.il/wp-content/uploads/2026/08/%D7%9E%D7%93%D7%99%D7%A0%D7%99%D7%95%D7%AA-%D7%94%D7%92%D7%A0%D7%AA-%D7%94%D7%A4%D7%A8%D7%98%D7%99%D7%95%D7%AA-%D7%9E%D7%A2%D7%95%D7%93%D7%9B%D7%A0%D7%AA-2026-PDF.pdf",
+     "year": "2026",
+     "iframe": false,
+     "doc": true,
+     "internal": true
+    },
+    {
+     "text": "טופס בקשת הצטרפות לקופת גמל",
+     "href": "https://www.analyst.co.il/wp-content/uploads/2026/02/טופס-1083-קיט-הצטרפות-קופת-גמל-עצמאי-4.2.26.pdf",
+     "year": "2026",
+     "iframe": false,
+     "doc": true,
+     "internal": true
+    },
+    {
+     "text": "בקשת הצטרפות לקופת גמל",
+     "href": "https://www.analyst.co.il/wp-content/uploads/2026/02/טופס-1033-קיט-הצטרפות-קופת-גמל-שכיר-4.2.26.pdf",
+     "year": "2026",
+     "iframe": false,
+     "doc": true,
+     "internal": true
+    },
+    {
+     "text": "תנאי שימוש",
+     "href": "https://www.analyst.co.il/wp-content/uploads/2025/08/%D7%AA%D7%A0%D7%90%D7%99-%D7%A9%D7%99%D7%9E%D7%95%D7%A9.pdf",
+     "year": "2025",
+     "iframe": false,
+     "doc": true,
+     "internal": true
+    },
+    {
+     "text": "תנאי שימוש",
+     "href": "https://www.analyst.co.il/wp-content/uploads/2025/08/תנאי-שימוש.pdf",
+     "year": "2025",
+     "iframe": false,
+     "doc": true,
+     "internal": true
+    },
+    {
+     "text": "דוח ממונה אזרחים ותיקים",
+     "href": "https://www.analyst.co.il/wp-content/uploads/2025/01/%D7%93%D7%95%D7%97-%D7%A9%D7%A0%D7%AA%D7%99-%D7%9C%D7%90%D7%95%D7%A6%D7%A8-%D7%9E%D7%9E%D7%95%D7%A0%D7%94-%D7%90%D7%96%D7%A8%D7%97%D7%99%D7%9D-%D7%95%D7%AA%D7%99%D7%A7%D7%99%D7%9D-2024.pdf",
+     "year": "2025",
+     "iframe": false,
+     "doc": true,
+     "internal": true
+    },
+    {
+     "text": "במדיניות הפרטיות",
+     "href": "https://www.analyst.co.il/media/u0fl5prs/%D7%9E%D7%93%D7%99%D7%A0%D7%99%D7%95%D7%AA-%D7%A4%D7%A8%D7%98%D7%99%D7%95%D7%AA-1422.pdf?v=082025",
+     "year": "2025",
+     "iframe": false,
+     "doc": true,
+     "internal": true
+    },
+    {
+     "text": "אמנת שירות אנליסט קופות גמל",
+     "href": "https://www.analyst.co.il/media/aytdfpks/%D7%90%D7%9E%D7%A8%D7%AA-%D7%A9%D7%99%D7%A8%D7%95%D7%AA-%D7%9C%D7%A7%D7%95%D7%97%D7%95%D7%AA-%D7%9E%D7%A8%D7%A5-2022.pdf",
+     "year": "2022",
+     "iframe": false,
+     "doc": true,
+     "internal": true
+    },
+    {
+     "text": "קרן השתלמות",
+     "href": "https://www.analyst.co.il/funds-lobby/training-funds/",
+     "year": null,
+     "iframe": false,
+     "doc": false,
+     "internal": true
+    },
+    {
+     "text": "קופת גמל להשקעה",
+     "href": "https://www.analyst.co.il/funds-lobby/gemel-invest/",
+     "year": null,
+     "iframe": false,
+     "doc": false,
+     "internal": true
+    },
+    {
+     "text": "קופת גמל",
+     "href": "https://analyst.formally.co.il/InsDigital.aspx?ID=dd71ca30-5b6b-421d-a65a-6a6424e55196&Form=3712",
+     "year": null,
+     "iframe": false,
+     "doc": false,
+     "internal": false
+    },
+    {
+     "text": "קופות גמל וקרנות השתלמות",
+     "href": "https://www.analyst.co.il/funds-lobby/",
+     "year": null,
+     "iframe": false,
+     "doc": false,
+     "internal": true
+    },
+    {
+     "text": "קופות גמל",
+     "href": "https://www.analyst.co.il/funds-lobby/provident-funds/",
+     "year": null,
+     "iframe": false,
+     "doc": false,
+     "internal": true
+    },
+    {
+     "text": "פתיחת חשבון קרן השתלמות להפקדות חדשות",
+     "href": "https://www.analyst.co.il/openning-training-funds/",
+     "year": null,
+     "iframe": false,
+     "doc": false,
+     "internal": true
+    },
+    {
+     "text": "פתיחת חשבון חדש לקופת גמל להשקעה",
+     "href": "https://www.analyst.co.il/gemel-invest-join/",
+     "year": null,
+     "iframe": false,
+     "doc": false,
+     "internal": true
+    },
+    {
+     "text": "ניהול תיקי השקעות",
+     "href": "https://www.analyst.co.il/portfolio-management/",
+     "year": null,
+     "iframe": false,
+     "doc": false,
+     "internal": true
+    },
+    {
+     "text": "מסמכים ודוחות מנהליים",
+     "href": "https://www.analyst.co.il/investment-policy/",
+     "year": null,
+     "iframe": false,
+     "doc": false,
+     "internal": true
+    },
+    {
+     "text": "מחשבון תשואות – השוואה בין קרנות השתלמות וקופות גמל נבחרות",
+     "href": "https://www.analyst.co.il/yield-comparison-calculator/",
+     "year": null,
+     "iframe": false,
+     "doc": false,
+     "internal": true
+    },
+    {
+     "text": "חיפוש",
+     "href": "https://www.analyst.co.il/join-provident-funds/",
+     "year": null,
+     "iframe": false,
+     "doc": false,
+     "internal": true
+    },
+    {
+     "text": "העברת חשבון קרן השתלמות",
+     "href": "https://www.analyst.co.il/transfer-training-funds/",
+     "year": null,
+     "iframe": false,
+     "doc": false,
+     "internal": true
+    },
+    {
+     "text": "העברת חשבון קופת גמל",
+     "href": "https://www.analyst.co.il/account-transfer-provident-funds/",
+     "year": null,
+     "iframe": false,
+     "doc": false,
+     "internal": true
+    },
+    {
+     "text": "דוחות כספיים",
+     "href": "https://www.analyst.co.il/financial-reports/",
+     "year": null,
+     "iframe": false,
+     "doc": false,
+     "internal": true
+    },
+    {
+     "text": "גילוי נאות",
+     "href": "https://www.analyst.co.il/proper-disclosure/",
+     "year": null,
+     "iframe": false,
+     "doc": false,
+     "internal": true
+    },
+    {
+     "text": "בית השקעות אנליסט הינו מבתי ההשקעות הוותיקים והמנוסים בניהול השקעות בשוק ההון בישראל. 'אנליסט' נוסדה בשנת 1985, ומשנת 1994 היא חברה ציבורית שמניותיה נסחרות בבורסה לניירות ערך בתל-אביב, ניהול ההשקעות מ",
+     "href": "https://www.analyst.co.il",
+     "year": null,
+     "iframe": false,
+     "doc": false,
+     "internal": true
+    },
+    {
+     "text": "אנליסט קופות גמל בע\"מ",
+     "href": "https://www.analyst.co.il/head-of-public-application/",
+     "year": null,
+     "iframe": false,
+     "doc": false,
+     "internal": true
+    },
+    {
+     "text": "אודות קופות גמל",
+     "href": "https://www.analyst.co.il/about-us/provident/",
+     "year": null,
+     "iframe": false,
+     "doc": false,
+     "internal": true
+    },
+    {
+     "text": "אודות נץ סוכנות לביטוח פנסיוני",
+     "href": "https://www.analyst.co.il/about-us/about-netz-pensionary-insurance/",
+     "year": null,
+     "iframe": false,
+     "doc": false,
+     "internal": true
+    },
+    {
+     "text": "אודות ניהול תיקי השקעות",
+     "href": "https://www.analyst.co.il/about-us/portfolio-management/",
+     "year": null,
+     "iframe": false,
+     "doc": false,
+     "internal": true
+    }
+   ]
+  },
+  "https://www.analyst.co.il/account-transfer-provident-funds/": {
+   "product": "פנסיה+גמל+ביטוח",
+   "status": 200,
+   "method": "requests",
+   "text_hash": "a5e2d1e77a130524eecad54a448f4d85ccc881f5",
+   "text_head": "העברת חשבון קופת גמל - אנליסט בית השקעות מעסיקים סוכנים אזור אישי עמיתים אודות אודות אנליסט אודות ניהול תיקי השקעות אודות קרנות נאמנות אודות קופות גמל אודות נץ סוכנות לביטוח פנסיוני הודעות החברה קופות גמל וקרנות השתלמות קרן השתלמות קופות גמל קופת גמל להשקעה תוכנית חיסכון לכל ילד קופה מרכזית לפיצויים תיקון 190 טפסים שימושיים מחשבון חישוב שיעור עלות שנתית צפויה הפקדה לקופות במעמד עצמאי תקנונים קרנות נאמנות ממונה על פניות הציבור הצהרה בנושא ESG ניהול תיקי השקעות רמות סיכון מחלקת מחקר דסק עסקי טופס CRS הצהרה בנושא ESG צור קשר קריירה מרכז הידע אנליסט PLAY חדשות פיננסיות מילון מושגים חיפוש לאזור האי",
+   "items": [
+    {
+     "text": "מדיניות פרטיות",
+     "href": "https://www.analyst.co.il/wp-content/uploads/2026/08/%D7%9E%D7%93%D7%99%D7%A0%D7%99%D7%95%D7%AA-%D7%94%D7%92%D7%A0%D7%AA-%D7%94%D7%A4%D7%A8%D7%98%D7%99%D7%95%D7%AA-%D7%9E%D7%A2%D7%95%D7%93%D7%9B%D7%A0%D7%AA-2026-PDF.pdf",
+     "year": "2026",
+     "iframe": false,
+     "doc": true,
+     "internal": true
+    },
+    {
+     "text": "בקשת הצטרפות לקופת גמל",
+     "href": "https://www.analyst.co.il/wp-content/uploads/2026/02/טופס-1083-קיט-הצטרפות-קופת-גמל-עצמאי-4.2.26.pdf",
+     "year": "2026",
+     "iframe": false,
+     "doc": true,
+     "internal": true
+    },
+    {
+     "text": "בקשת הצטרפות לקופת גמל",
+     "href": "https://www.analyst.co.il/wp-content/uploads/2026/02/טופס-1033-קיט-הצטרפות-קופת-גמל-שכיר-4.2.26.pdf",
+     "year": "2026",
+     "iframe": false,
+     "doc": true,
+     "internal": true
+    },
+    {
+     "text": "תנאי שימוש",
+     "href": "https://www.analyst.co.il/wp-content/uploads/2025/08/%D7%AA%D7%A0%D7%90%D7%99-%D7%A9%D7%99%D7%9E%D7%95%D7%A9.pdf",
+     "year": "2025",
+     "iframe": false,
+     "doc": true,
+     "internal": true
+    },
+    {
+     "text": "תנאי שימוש",
+     "href": "https://www.analyst.co.il/wp-content/uploads/2025/08/תנאי-שימוש.pdf",
+     "year": "2025",
+     "iframe": false,
+     "doc": true,
+     "internal": true
+    },
+    {
+     "text": "דוח ממונה אזרחים ותיקים",
+     "href": "https://www.analyst.co.il/wp-content/uploads/2025/01/%D7%93%D7%95%D7%97-%D7%A9%D7%A0%D7%AA%D7%99-%D7%9C%D7%90%D7%95%D7%A6%D7%A8-%D7%9E%D7%9E%D7%95%D7%A0%D7%94-%D7%90%D7%96%D7%A8%D7%97%D7%99%D7%9D-%D7%95%D7%AA%D7%99%D7%A7%D7%99%D7%9D-2024.pdf",
+     "year": "2025",
+     "iframe": false,
+     "doc": true,
+     "internal": true
+    },
+    {
+     "text": "במדיניות הפרטיות",
+     "href": "https://www.analyst.co.il/media/u0fl5prs/%D7%9E%D7%93%D7%99%D7%A0%D7%99%D7%95%D7%AA-%D7%A4%D7%A8%D7%98%D7%99%D7%95%D7%AA-1422.pdf?v=082025",
+     "year": "2025",
+     "iframe": false,
+     "doc": true,
+     "internal": true
+    },
+    {
+     "text": "בקשת העברה לקופת גמל/קרן השתלמות",
+     "href": "https://www.analyst.co.il/wp-content/uploads/2024/06/1032-העברה-פנימה.pdf",
+     "year": "2024",
+     "iframe": false,
+     "doc": true,
+     "internal": true
+    },
+    {
+     "text": "אמנת שירות אנליסט קופות גמל",
+     "href": "https://www.analyst.co.il/media/aytdfpks/%D7%90%D7%9E%D7%A8%D7%AA-%D7%A9%D7%99%D7%A8%D7%95%D7%AA-%D7%9C%D7%A7%D7%95%D7%97%D7%95%D7%AA-%D7%9E%D7%A8%D7%A5-2022.pdf",
+     "year": "2022",
+     "iframe": false,
+     "doc": true,
+     "internal": true
+    },
+    {
+     "text": "קרן השתלמות",
+     "href": "https://www.analyst.co.il/funds-lobby/training-funds/",
+     "year": null,
+     "iframe": false,
+     "doc": false,
+     "internal": true
+    },
+    {
+     "text": "קופת גמל להשקעה",
+     "href": "https://www.analyst.co.il/funds-lobby/gemel-invest/",
+     "year": null,
+     "iframe": false,
+     "doc": false,
+     "internal": true
+    },
+    {
+     "text": "קופת גמל",
+     "href": "https://analyst.formally.co.il/InsDigital.aspx?ID=dd71ca30-5b6b-421d-a65a-6a6424e55196&Form=3712",
+     "year": null,
+     "iframe": false,
+     "doc": false,
+     "internal": false
+    },
+    {
+     "text": "קופות גמל וקרנות השתלמות",
+     "href": "https://www.analyst.co.il/funds-lobby/",
+     "year": null,
+     "iframe": false,
+     "doc": false,
+     "internal": true
+    },
+    {
+     "text": "קופות גמל",
+     "href": "https://www.analyst.co.il/funds-lobby/provident-funds/",
+     "year": null,
+     "iframe": false,
+     "doc": false,
+     "internal": true
+    },
+    {
+     "text": "פתיחת חשבון קרן השתלמות להפקדות חדשות",
+     "href": "https://www.analyst.co.il/openning-training-funds/",
+     "year": null,
+     "iframe": false,
+     "doc": false,
+     "internal": true
+    },
+    {
+     "text": "פתיחת חשבון קופת גמל להפקדות חדשות",
+     "href": "https://www.analyst.co.il/join-provident-funds/",
+     "year": null,
+     "iframe": false,
+     "doc": false,
+     "internal": true
+    },
+    {
+     "text": "פתיחת חשבון חדש לקופת גמל להשקעה",
+     "href": "https://www.analyst.co.il/gemel-invest-join/",
+     "year": null,
+     "iframe": false,
+     "doc": false,
+     "internal": true
+    },
+    {
+     "text": "ניהול תיקי השקעות",
+     "href": "https://www.analyst.co.il/portfolio-management/",
+     "year": null,
+     "iframe": false,
+     "doc": false,
+     "internal": true
+    },
+    {
+     "text": "מסמכים ודוחות מנהליים",
+     "href": "https://www.analyst.co.il/investment-policy/",
+     "year": null,
+     "iframe": false,
+     "doc": false,
+     "internal": true
+    },
+    {
+     "text": "מחשבון תשואות – השוואה בין קרנות השתלמות וקופות גמל נבחרות",
+     "href": "https://www.analyst.co.il/yield-comparison-calculator/",
+     "year": null,
+     "iframe": false,
+     "doc": false,
+     "internal": true
+    },
+    {
+     "text": "חיפוש",
+     "href": "https://www.analyst.co.il/account-transfer-provident-funds/",
+     "year": null,
+     "iframe": false,
+     "doc": false,
+     "internal": true
+    },
+    {
+     "text": "העברת חשבון קרן השתלמות",
+     "href": "https://www.analyst.co.il/transfer-training-funds/",
+     "year": null,
+     "iframe": false,
+     "doc": false,
+     "internal": true
+    },
+    {
+     "text": "דוחות כספיים",
+     "href": "https://www.analyst.co.il/financial-reports/",
+     "year": null,
+     "iframe": false,
+     "doc": false,
+     "internal": true
+    },
+    {
+     "text": "גילוי נאות",
+     "href": "https://www.analyst.co.il/proper-disclosure/",
+     "year": null,
+     "iframe": false,
+     "doc": false,
+     "internal": true
+    },
+    {
+     "text": "בית השקעות אנליסט הינו מבתי ההשקעות הוותיקים והמנוסים בניהול השקעות בשוק ההון בישראל. 'אנליסט' נוסדה בשנת 1985, ומשנת 1994 היא חברה ציבורית שמניותיה נסחרות בבורסה לניירות ערך בתל-אביב, ניהול ההשקעות מ",
+     "href": "https://www.analyst.co.il",
+     "year": null,
+     "iframe": false,
+     "doc": false,
+     "internal": true
+    },
+    {
+     "text": "אנליסט קופות גמל בע\"מ",
+     "href": "https://www.analyst.co.il/head-of-public-application/",
+     "year": null,
+     "iframe": false,
+     "doc": false,
+     "internal": true
+    },
+    {
+     "text": "אודות קופות גמל",
+     "href": "https://www.analyst.co.il/about-us/provident/",
+     "year": null,
+     "iframe": false,
+     "doc": false,
+     "internal": true
+    },
+    {
+     "text": "אודות נץ סוכנות לביטוח פנסיוני",
+     "href": "https://www.analyst.co.il/about-us/about-netz-pensionary-insurance/",
+     "year": null,
+     "iframe": false,
+     "doc": false,
+     "internal": true
+    },
+    {
+     "text": "אודות ניהול תיקי השקעות",
+     "href": "https://www.analyst.co.il/about-us/portfolio-management/",
+     "year": null,
+     "iframe": false,
+     "doc": false,
+     "internal": true
+    }
+   ]
+  },
+  "https://www.analyst.co.il/investment-policy/": {
+   "product": "פנסיה+גמל+ביטוח",
+   "status": 200,
+   "method": "requests",
+   "text_hash": "34f72462c1460cf0e8b205347fb38f31f4983605",
+   "text_head": "מסמכים ודוחות מנהליים - מדיניות השקעות - אנליסט בית השקעות מעסיקים סוכנים אזור אישי עמיתים אודות אודות אנליסט אודות ניהול תיקי השקעות אודות קרנות נאמנות אודות קופות גמל אודות נץ סוכנות לביטוח פנסיוני הודעות החברה קופות גמל וקרנות השתלמות קרן השתלמות קופות גמל קופת גמל להשקעה תוכנית חיסכון לכל ילד קופה מרכזית לפיצויים תיקון 190 טפסים שימושיים מחשבון חישוב שיעור עלות שנתית צפויה הפקדה לקופות במעמד עצמאי תקנונים קרנות נאמנות ממונה על פניות הציבור הצהרה בנושא ESG ניהול תיקי השקעות רמות סיכון מחלקת מחקר דסק עסקי טופס CRS הצהרה בנושא ESG צור קשר קריירה מרכז הידע אנליסט PLAY חדשות פיננסיות מילון מושג",
+   "items": [
+    {
+     "text": "תגמול לסוכנים עבור קידום מכירות -אוקטובר 2026",
+     "href": "https://www.analyst.co.il/wp-content/uploads/2026/10/קבוצה-33.pdf",
+     "year": "2026",
+     "iframe": false,
+     "doc": true,
+     "internal": true
+    },
+    {
+     "text": "תגמול לסוכנים עבור קידום מכירות -אוקטובר 2026",
+     "href": "https://www.analyst.co.il/wp-content/uploads/2026/09/קבוצה-32-1.pdf",
+     "year": "2026",
+     "iframe": false,
+     "doc": true,
+     "internal": true
+    },
+    {
+     "text": "תגמול לסוכנים עבור קידום מכירות - ספטמבר 2026",
+     "href": "https://www.analyst.co.il/wp-content/uploads/2026/09/קבוצה-31.pdf",
+     "year": "2026",
+     "iframe": false,
+     "doc": true,
+     "internal": true
+    },
+    {
+     "text": "תגמול לסוכנים עבור קידום מכירות - ספטמבר 2026",
+     "href": "https://www.analyst.co.il/wp-content/uploads/2026/08/קבוצה-30.pdf",
+     "year": "2026",
+     "iframe": false,
+     "doc": true,
+     "internal": true
+    },
+    {
+     "text": "תגמול לסוכנים עבור קידום מכירות - מאי 2026",
+     "href": "https://www.analyst.co.il/wp-content/uploads/2026/07/קבוצה-26-נגיש.pdf",
+     "year": "2026",
+     "iframe": false,
+     "doc": true,
+     "internal": true
+    },
+    {
+     "text": "תגמול לסוכנים עבור קידום מכירות - מאי 2026",
+     "href": "https://www.analyst.co.il/wp-content/uploads/2026/05/קבוצה-1-נגיש.pdf",
+     "year": "2026",
+     "iframe": false,
+     "doc": true,
+     "internal": true
+    },
+    {
+     "text": "תגמול לסוכנים עבור קידום מכירות - מאי 2026",
+     "href": "https://www.analyst.co.il/wp-content/uploads/2026/05/קבוצה-2-נגיש.pdf",
+     "year": "2026",
+     "iframe": false,
+     "doc": true,
+     "internal": true
+    },
+    {
+     "text": "תגמול לסוכנים עבור קידום מכירות - מאי 2026",
+     "href": "https://www.analyst.co.il/wp-content/uploads/2026/05/קבוצה-3-נגיש.pdf",
+     "year": "2026",
+     "iframe": false,
+     "doc": true,
+     "internal": true
+    },
+    {
+     "text": "תגמול לסוכנים עבור קידום מכירות - מאי 2026",
+     "href": "https://www.analyst.co.il/wp-content/uploads/2026/05/קבוצה-4-נגיש.pdf",
+     "year": "2026",
+     "iframe": false,
+     "doc": true,
+     "internal": true
+    },
+    {
+     "text": "תגמול לסוכנים עבור קידום מכירות - מאי 2026",
+     "href": "https://www.analyst.co.il/wp-content/uploads/2026/05/קבוצה-5-נגיש.pdf",
+     "year": "2026",
+     "iframe": false,
+     "doc": true,
+     "internal": true
+    },
+    {
+     "text": "תגמול לסוכנים עבור קידום מכירות - מאי 2026",
+     "href": "https://www.analyst.co.il/wp-content/uploads/2026/05/קבוצה-6-נגיש.pdf",
+     "year": "2026",
+     "iframe": false,
+     "doc": true,
+     "internal": true
+    },
+    {
+     "text": "תגמול לסוכנים עבור קידום מכירות - מאי 2026",
+     "href": "https://www.analyst.co.il/wp-content/uploads/2026/05/קבוצה-7-נגיש.pdf",
+     "year": "2026",
+     "iframe": false,
+     "doc": true,
+     "internal": true
+    },
+    {
+     "text": "תגמול לסוכנים עבור קידום מכירות - מאי 2026",
+     "href": "https://www.analyst.co.il/wp-content/uploads/2026/05/קבוצה-8-נגיש.pdf",
+     "year": "2026",
+     "iframe": false,
+     "doc": true,
+     "internal": true
+    },
+    {
+     "text": "תגמול לסוכנים עבור קידום מכירות - מאי 2026",
+     "href": "https://www.analyst.co.il/wp-content/uploads/2026/05/קבוצה-9-נגיש.pdf",
+     "year": "2026",
+     "iframe": false,
+     "doc": true,
+     "internal": true
+    },
+    {
+     "text": "תגמול לסוכנים עבור קידום מכירות - מאי 2026",
+     "href": "https://www.analyst.co.il/wp-content/uploads/2026/05/קבוצה-10-נגיש.pdf",
+     "year": "2026",
+     "iframe": false,
+     "doc": true,
+     "internal": true
+    },
+    {
+     "text": "תגמול לסוכנים עבור קידום מכירות - מאי 2026",
+     "href": "https://www.analyst.co.il/wp-content/uploads/2026/05/קבוצה-11-נגיש.pdf",
+     "year": "2026",
+     "iframe": false,
+     "doc": true,
+     "internal": true
+    },
+    {
+     "text": "תגמול לסוכנים עבור קידום מכירות - מאי 2026",
+     "href": "https://www.analyst.co.il/wp-content/uploads/2026/05/קבוצה-12-נגיש.pdf",
+     "year": "2026",
+     "iframe": false,
+     "doc": true,
+     "internal": true
+    },
+    {
+     "text": "תגמול לסוכנים עבור קידום מכירות - מאי 2026",
+     "href": "https://www.analyst.co.il/wp-content/uploads/2026/05/קבוצה-13-נגיש.pdf",
+     "year": "2026",
+     "iframe": false,
+     "doc": true,
+     "internal": true
+    },
+    {
+     "text": "תגמול לסוכנים עבור קידום מכירות - מאי 2026",
+     "href": "https://www.analyst.co.il/wp-content/uploads/2026/05/קבוצה-14-נגיש.pdf",
+     "year": "2026",
+     "iframe": false,
+     "doc": true,
+     "internal": true
+    },
+    {
+     "text": "תגמול לסוכנים עבור קידום מכירות - מאי 2026",
+     "href": "https://www.analyst.co.il/wp-content/uploads/2026/05/קבוצה-15-נגיש.pdf",
+     "year": "2026",
+     "iframe": false,
+     "doc": true,
+     "internal": true
+    },
+    {
+     "text": "תגמול לסוכנים עבור קידום מכירות - מאי 2026",
+     "href": "https://www.analyst.co.il/wp-content/uploads/2026/05/קבוצה-16-נגיש.pdf",
+     "year": "2026",
+     "iframe": false,
+     "doc": true,
+     "internal": true
+    },
+    {
+     "text": "תגמול לסוכנים עבור קידום מכירות - מאי 2026",
+     "href": "https://www.analyst.co.il/wp-content/uploads/2026/05/קבוצה-17-נגיש.pdf",
+     "year": "2026",
+     "iframe": false,
+     "doc": true,
+     "internal": true
+    },
+    {
+     "text": "תגמול לסוכנים עבור קידום מכירות - מאי 2026",
+     "href": "https://www.analyst.co.il/wp-content/uploads/2026/05/קבוצה-18-נגיש.pdf",
+     "year": "2026",
+     "iframe": false,
+     "doc": true,
+     "internal": true
+    },
+    {
+     "text": "תגמול לסוכנים עבור קידום מכירות - מאי 2026",
+     "href": "https://www.analyst.co.il/wp-content/uploads/2026/05/קבוצה-19-נגיש.pdf",
+     "year": "2026",
+     "iframe": false,
+     "doc": true,
+     "internal": true
+    },
+    {
+     "text": "תגמול לסוכנים עבור קידום מכירות - מאי 2026",
+     "href": "https://www.analyst.co.il/wp-content/uploads/2026/05/קבוצה-20-נגיש.pdf",
+     "year": "2026",
+     "iframe": false,
+     "doc": true,
+     "internal": true
+    },
+    {
+     "text": "תגמול לסוכנים עבור קידום מכירות - מאי 2026",
+     "href": "https://www.analyst.co.il/wp-content/uploads/2026/05/קבוצה-21-נגיש.pdf",
+     "year": "2026",
+     "iframe": false,
+     "doc": true,
+     "internal": true
+    },
+    {
+     "text": "תגמול לסוכנים עבור קידום מכירות - מאי 2026",
+     "href": "https://www.analyst.co.il/wp-content/uploads/2026/05/קבוצה-22-נגיש.pdf",
+     "year": "2026",
+     "iframe": false,
+     "doc": true,
+     "internal": true
+    },
+    {
+     "text": "תגמול לסוכנים עבור קידום מכירות - מאי 2026",
+     "href": "https://www.analyst.co.il/wp-content/uploads/2026/05/קבוצה-23-נגיש.pdf",
+     "year": "2026",
+     "iframe": false,
+     "doc": true,
+     "internal": true
+    },
+    {
+     "text": "תגמול לסוכנים עבור קידום מכירות - מאי 2026",
+     "href": "https://www.analyst.co.il/wp-content/uploads/2026/05/קבוצה-24-נגיש.pdf",
+     "year": "2026",
+     "iframe": false,
+     "doc": true,
+     "internal": true
+    },
+    {
+     "text": "תגמול לסוכנים עבור קידום מכירות - מאי 2026",
+     "href": "https://www.analyst.co.il/wp-content/uploads/2026/05/קבוצה-25-נגיש.pdf",
+     "year": "2026",
+     "iframe": false,
+     "doc": true,
+     "internal": true
+    },
+    {
+     "text": "תגמול לסוכנים עבור קידום מכירות - יולי 2026",
+     "href": "https://www.analyst.co.il/wp-content/uploads/2026/08/קבוצה-27-1.pdf",
+     "year": "2026",
+     "iframe": false,
+     "doc": true,
+     "internal": true
+    },
+    {
+     "text": "תגמול לסוכנים עבור קידום מכירות - אוגוסט 2026",
+     "href": "https://www.analyst.co.il/wp-content/uploads/2026/08/קבוצה-29.pdf",
+     "year": "2026",
+     "iframe": false,
+     "doc": true,
+     "internal": true
+    },
+    {
+     "text": "תגמול לסוכנים עבור קידום מכירות - אוגוסט 2026",
+     "href": "https://www.analyst.co.il/wp-content/uploads/2026/09/קבוצה-28-מונגש-1.pdf",
+     "year": "2026",
+     "iframe": false,
+     "doc": true,
+     "internal": true
+    },
+    {
+     "text": "מדיניות פרטיות",
+     "href": "https://www.analyst.co.il/wp-content/uploads/2026/08/%D7%9E%D7%93%D7%99%D7%A0%D7%99%D7%95%D7%AA-%D7%94%D7%92%D7%A0%D7%AA-%D7%94%D7%A4%D7%A8%D7%98%D7%99%D7%95%D7%AA-%D7%9E%D7%A2%D7%95%D7%93%D7%9B%D7%A0%D7%AA-2026-PDF.pdf",
+     "year": "2026",
+     "iframe": false,
+     "doc": true,
+     "internal": true
+    },
+    {
+     "text": "מדיניות השקעה צפויה לשנת 2026, עדכון 28/09/2026, עדכון שיעור החשיפה הצפוי למניות בקופות: גמל מסלול לבני 50 ומטה, קופה מרכזית לפיצויים מסלול כללי, גמל לבני 50-60, גמל לבני 60 ומעלה, השתלמות כללי, גמל ל",
+     "href": "https://www.analyst.co.il/wp-content/uploads/2026/09/אנליסט-מדיניות-השקעה-2026-מונגש.pdf",
+     "year": "2026",
+     "iframe": false,
+     "doc": true,
+     "internal": true
+    },
+    {
+     "text": "מדיניות השקעה צפויה לשנת 2026, עדכון 23/03/2026, עדכון שיעור החשיפה הצפוי למט\"ח בקופות: גמל מניות, גמל להשקעה מניות, השתלמות מניות, גמל חיסכון לכל ילד סיכון גבוה. עדכון שיעור החשיפה הצפוי לאג\"ח ממשלתי",
+     "href": "https://www.analyst.co.il/wp-content/uploads/2026/03/אנליסט-מדיניות-השקעה-2026-PDFUA.pdf",
+     "year": "2026",
+     "iframe": false,
+     "doc": true,
+     "internal": true
+    },
+    {
+     "text": "מדיניות השקעה צפויה לשנת 2026, עדכון 18/05/2026, עדכון שיעור החשיפה הצפוי לאג\"ח ממשלתי בקופות: גמל עוקב מדד S&P500, השתלמות עוקב מדד S&P500, גמל להשקעה עוקב מדד S&P500",
+     "href": "https://www.analyst.co.il/wp-content/uploads/2026/05/אנליסט-מדיניות-השקעה-2026-PDFUA.pdf",
+     "year": "2026",
+     "iframe": false,
+     "doc": true,
+     "internal": true
+    },
+    {
+     "text": "מדיניות השקעה צפויה לשנת 2026, עדכון 09/02/2026, עדכון שיעור החשיפה הצפוי לאג\"ח ממשלתי ולמזומן בקופת: גמל מניות סחיר",
+     "href": "https://www.analyst.co.il/wp-content/uploads/2026/02/אנליסט-מדיניות-השקעה-2026-PDFUA.pdf",
+     "year": "2026",
+     "iframe": false,
+     "doc": true,
+     "internal": true
+    },
+    {
+     "text": "מדיניות השקעה צפויה לשנת 2026",
+     "href": "https://www.analyst.co.il/wp-content/uploads/2026/01/אנליסט-מדיניות-השקעה-2026-PDFUA.pdf",
+     "year": "2026",
+     "iframe": false,
+     "doc": true,
+     "internal": true
+    },
+    {
+     "text": "מגבלת עמלת ניהול חיצוני - 2026 (גרסה מונגשת)",
+     "href": "https://www.analyst.co.il/wp-content/uploads/2026/01/מגבלת-עמלת-ניהול-חיצוני-2026-מונגש.pdf",
+     "year": "2026",
+     "iframe": false,
+     "doc": true,
+     "internal": true
+    },
+    {
+     "text": "מגבלת עמלת ניהול חיצוני - 2026",
+     "href": "https://www.analyst.co.il/wp-content/uploads/2026/01/820-10885405389_flayer-amlat-hagbala.pdf",
+     "year": "2026",
+     "iframe": false,
+     "doc": true,
+     "internal": true
+    },
+    {
+     "text": "דו\"ח פומבי חוק שכר שווה לעובדת ולעובד",
+     "href": "https://www.analyst.co.il/wp-content/uploads/2026/06/דוח-שכר-שווה-2025.pdf",
+     "year": "2026",
+     "iframe": false,
+     "doc": true,
+     "internal": true
+    },
+    {
+     "text": "תנאי שימוש",
+     "href": "https://www.analyst.co.il/wp-content/uploads/2025/08/%D7%AA%D7%A0%D7%90%D7%99-%D7%A9%D7%99%D7%9E%D7%95%D7%A9.pdf",
+     "year": "2025",
+     "iframe": false,
+     "doc": true,
+     "internal": true
+    },
+    {
+     "text": "תנאי שימוש",
+     "href": "https://www.analyst.co.il/wp-content/uploads/2025/08/תנאי-שימוש.pdf",
+     "year": "2025",
+     "iframe": false,
+     "doc": true,
+     "internal": true
+    },
+    {
+     "text": "תגמול לסוכנים עבור קידום מכירות - נובמבר 2025",
+     "href": "https://www.analyst.co.il/wp-content/uploads/2025/11/פרסום-משולב-באתר-קבוצה.pdf",
+     "year": "2025",
+     "iframe": false,
+     "doc": true,
+     "internal": true
+    },
+    {
+     "text": "תגמול לסוכנים עבור קידום מכירות - נובמבר 2025",
+     "href": "https://www.analyst.co.il/wp-content/uploads/2025/11/פרסום-משולב-באתר-קבוצה-1-מונגש.pdf",
+     "year": "2025",
+     "iframe": false,
+     "doc": true,
+     "internal": true
+    },
+    {
+     "text": "תגמול לסוכנים עבור קידום מכירות - נובמבר 2025",
+     "href": "https://www.analyst.co.il/wp-content/uploads/2025/11/פרסום-משולב-באתר-קבוצה-2-מונגש.pdf",
+     "year": "2025",
+     "iframe": false,
+     "doc": true,
+     "internal": true
+    },
+    {
+     "text": "תגמול לסוכנים עבור קידום מכירות - נובמבר 2025",
+     "href": "https://www.analyst.co.il/wp-content/uploads/2025/11/פרסום-משולב-באתר-קבוצה-3-מונגש.pdf",
+     "year": "2025",
+     "iframe": false,
+     "doc": true,
+     "internal": true
+    },
+    {
+     "text": "תגמול לסוכנים עבור קידום מכירות - נובמבר 2025",
+     "href": "https://www.analyst.co.il/wp-content/uploads/2025/11/פרסום-משולב-באתר-קבוצה-4-מונגש.pdf",
+     "year": "2025",
+     "iframe": false,
+     "doc": true,
+     "internal": true
+    },
+    {
+     "text": "תגמול לסוכנים עבור קידום מכירות - נובמבר 2025",
+     "href": "https://www.analyst.co.il/wp-content/uploads/2025/11/פרסום-משולב-באתר-קבוצה-5-מונגש.pdf",
+     "year": "2025",
+     "iframe": false,
+     "doc": true,
+     "internal": true
+    },
+    {
+     "text": "תגמול לסוכנים עבור קידום מכירות - נובמבר 2025",
+     "href": "https://www.analyst.co.il/wp-content/uploads/2025/11/פרסום-משולב-באתר-קבוצה-6-מונגש.pdf",
+     "year": "2025",
+     "iframe": false,
+     "doc": true,
+     "internal": true
+    },
+    {
+     "text": "תגמול לסוכנים עבור קידום מכירות - נובמבר 2025",
+     "href": "https://www.analyst.co.il/wp-content/uploads/2025/11/פרסום-משולב-באתר-קבוצה-7-מונגש.pdf",
+     "year": "2025",
+     "iframe": false,
+     "doc": true,
+     "internal": true
+    },
+    {
+     "text": "תגמול לסוכנים עבור קידום מכירות - נובמבר 2025",
+     "href": "https://www.analyst.co.il/wp-content/uploads/2025/11/פרסום-משולב-באתר-קבוצה-8-מונגש.pdf",
+     "year": "2025",
+     "iframe": false,
+     "doc": true,
+     "internal": true
+    },
+    {
+     "text": "תגמול לסוכנים עבור קידום מכירות - נובמבר 2025",
+     "href": "https://www.analyst.co.il/wp-content/uploads/2025/11/פרסום-משולב-באתר-קבוצה-9-מונגש.pdf",
+     "year": "2025",
+     "iframe": false,
+     "doc": true,
+     "internal": true
+    },
+    {
+     "text": "תגמול לסוכנים עבור קידום מכירות - נובמבר 2025",
+     "href": "https://www.analyst.co.il/wp-content/uploads/2025/11/פרסום-משולב-באתר-קבוצה-10-מונגש.pdf",
+     "year": "2025",
+     "iframe": false,
+     "doc": true,
+     "internal": true
+    },
+    {
+     "text": "תגמול לסוכנים עבור קידום מכירות - נובמבר 2025",
+     "href": "https://www.analyst.co.il/wp-content/uploads/2025/11/פרסום-משולב-באתר-קבוצה-11-מונגש.pdf",
+     "year": "2025",
+     "iframe": false,
+     "doc": true,
+     "internal": true
+    },
+    {
+     "text": "תגמול לסוכנים עבור קידום מכירות - נובמבר 2025",
+     "href": "https://www.analyst.co.il/wp-content/uploads/2025/11/פרסום-משולב-באתר-קבוצה-12-מונגש.pdf",
+     "year": "2025",
+     "iframe": false,
+     "doc": true,
+     "internal": true
+    },
+    {
+     "text": "תגמול לסוכנים עבור קידום מכירות - נובמבר 2025",
+     "href": "https://www.analyst.co.il/wp-content/uploads/2025/11/פרסום-משולב-באתר-קבוצה-13-מונגש.pdf",
+     "year": "2025",
+     "iframe": false,
+     "doc": true,
+     "internal": true
+    },
+    {
+     "text": "פוליסת ביטוח",
+     "href": "https://www.analyst.co.il/wp-content/uploads/2025/12/פוליסה-קופות-גמל-אחריות-מקצועית-25-26.pdf",
+     "year": "2025",
+     "iframe": false,
+     "doc": true,
+     "internal": true
+    },
+    {
+     "text": "מדיניות השקעה צפויה לשנת 2025, עדכון 20/10/2025, עדכון שיעור חשיפה הצפוי למט\"ח בקופות: השתלמות מניות, גמל חיסכון לכל ילד סיכון גבוה, גמל מניות, גמל להשקעה מניות",
+     "href": "https://www.analyst.co.il/wp-content/uploads/2025/10/אנליסט-מדיניות-השקעה-2025.pdf",
+     "year": "2025",
+     "iframe": false,
+     "doc": true,
+     "internal": true
+    },
+    {
+     "text": "מדיניות השקעה צפויה לשנת 2025, עדכון 14/07/2025, עדכון שיעור חשיפה הצפוי למט\"ח בקופות: גמל לבני 50 ומטה, גמל לבני 50-60, השתלמות כללי, גמל להשקעה כללי, גמל חיסכון לכל ילד – סיכון בינוני. עדכון שיעור ה",
+     "href": "https://www.analyst.co.il/wp-content/uploads/2025/07/אנליסט-מדיניות-השקעה-2025.pdf",
+     "year": "2025",
+     "iframe": false,
+     "doc": true,
+     "internal": true
+    },
+    {
+     "text": "מדיניות השקעה צפויה לשנת 2025",
+     "href": "https://www.analyst.co.il/wp-content/uploads/2025/05/אנליסט-מדיניות-השקעה-2025_PDFUA.pdf",
+     "year": "2025",
+     "iframe": false,
+     "doc": true,
+     "internal": true
+    },
+    {
+     "text": "מגבלת עמלת ניהול חיצוני - 2025 (גרסה מונגשת)",
+     "href": "https://www.analyst.co.il/wp-content/uploads/2024/12/עמלת-ניהול-חיצוני-31.12.2024.pdf",
+     "year": "2025",
+     "iframe": false,
+     "doc": true,
+     "internal": true
+    },
+    {
+     "text": "מגבלת עמלת ניהול חיצוני - 2025",
+     "href": "https://www.analyst.co.il/wp-content/uploads/2025/01/820-8138096414-Broshur-Hotzaot-yeshirot_Atar_02.pdf",
+     "year": "2025",
+     "iframe": false,
+     "doc": true,
+     "internal": true
+    },
+    {
+     "text": "דוח ממונה אזרחים ותיקים",
+     "href": "https://www.analyst.co.il/wp-content/uploads/2025/01/%D7%93%D7%95%D7%97-%D7%A9%D7%A0%D7%AA%D7%99-%D7%9C%D7%90%D7%95%D7%A6%D7%A8-%D7%9E%D7%9E%D7%95%D7%A0%D7%94-%D7%90%D7%96%D7%A8%D7%97%D7%99%D7%9D-%D7%95%D7%AA%D7%99%D7%A7%D7%99%D7%9D-2024.pdf",
+     "year": "2025",
+     "iframe": false,
+     "doc": true,
+     "internal": true
+    },
+    {
+     "text": "במדיניות הפרטיות",
+     "href": "https://www.analyst.co.il/media/u0fl5prs/%D7%9E%D7%93%D7%99%D7%A0%D7%99%D7%95%D7%AA-%D7%A4%D7%A8%D7%98%D7%99%D7%95%D7%AA-1422.pdf?v=082025",
+     "year": "2025",
+     "iframe": false,
+     "doc": true,
+     "internal": true
+    },
+    {
+     "text": "אישור קיום ביטוח",
+     "href": "https://www.analyst.co.il/wp-content/uploads/2025/12/אישור-קיום-ביטוח-כללי-אנליסט-גמל.pdf",
+     "year": "2025",
+     "iframe": false,
+     "doc": true,
+     "internal": true
+    },
+    {
+     "text": "תוכנית המיזוגים (יולי 2024) קובץ להורדה קובץ להורדה",
+     "href": "https://www.analyst.co.il/analyst07-2024/",
+     "year": "2024",
+     "iframe": false,
+     "doc": true,
+     "internal": true
+    },
+    {
+     "text": "תגמול לסוכנים עבור קידום מכירות - נובמבר 2024",
+     "href": "https://www.analyst.co.il/wp-content/uploads/2025/11/פרסום-משולב-באתר-קבוצה-1-2024.pdf",
+     "year": "2024",
+     "iframe": false,
+     "doc": true,
+     "internal": true
+    },
+    {
+     "text": "תגמול לסוכנים עבור קידום מכירות - נובמבר 2024",
+     "href": "https://www.analyst.co.il/wp-content/uploads/2025/11/פרסום-משולב-באתר-קבוצה-2-2024.pdf",
+     "year": "2024",
+     "iframe": false,
+     "doc": true,
+     "internal": true
+    },
+    {
+     "text": "תגמול לסוכנים עבור קידום מכירות - נובמבר 2024",
+     "href": "https://www.analyst.co.il/wp-content/uploads/2025/11/פרסום-משולב-באתר-קבוצה-3-2024.pdf",
+     "year": "2024",
+     "iframe": false,
+     "doc": true,
+     "internal": true
+    },
+    {
+     "text": "תגמול לסוכנים עבור קידום מכירות - נובמבר 2024",
+     "href": "https://www.analyst.co.il/wp-content/uploads/2025/11/פרסום-משולב-באתר-קבוצה-4-2024.pdf",
+     "year": "2024",
+     "iframe": false,
+     "doc": true,
+     "internal": true
+    },
+    {
+     "text": "תגמול לסוכנים עבור קידום מכירות - נובמבר 2024",
+     "href": "https://www.analyst.co.il/wp-content/uploads/2025/11/פרסום-משולב-באתר-קבוצה-5-2024.pdf",
+     "year": "2024",
+     "iframe": false,
+     "doc": true,
+     "internal": true
+    },
+    {
+     "text": "תגמול לסוכנים עבור קידום מכירות - דצמבר 2024",
+     "href": "https://www.analyst.co.il/wp-content/uploads/2025/11/פרסום-משולב-באתר-מבצע-סוכנים-תיקים.docx",
+     "year": "2024",
+     "iframe": false,
+     "doc": true,
+     "internal": true
+    },
+    {
+     "text": "מדיניות תגמול מרץ 2024",
+     "href": "https://www.analyst.co.il/wp-content/uploads/2025/01/מדיניות-תגמול-מרץ-2024.pdf",
+     "year": "2024",
+     "iframe": false,
+     "doc": true,
+     "internal": true
+    },
+    {
+     "text": "מדיניות השקעה צפויה לשנת 2024, עדכון מיום 23/09/2024, עדכון שיעור החשיפה הצפוי באפיק השקעה אג\"ח ממשלתי בקופה של אנליסט גמל עוקב מדדי מניות",
+     "href": "https://www.analyst.co.il/wp-content/uploads/2024/09/קובץ-מלא-23.09.2024-1.pdf",
+     "year": "2024",
+     "iframe": false,
+     "doc": true,
+     "internal": true
+    },
+    {
+     "text": "מדיניות השקעה צפויה לשנת 2024, עדכון מיום 21/04/24, עדכון גבולות חשיפה לאגח ממשלתי ומזומנים בקופות הבאות: אנליסט גמל חול, אנליסט לבני 50 ומטה, אנליסט לבני 50-60, אנליסט לבני 60 ומעלה, אנליסט גמל להשקע",
+     "href": "https://www.analyst.co.il/media/x1kldusc/%D7%9E%D7%93%D7%99%D7%A0%D7%99%D7%95%D7%AA-%D7%94%D7%A9%D7%A7%D7%A2%D7%94-%D7%A6%D7%A4%D7%95%D7%99%D7%99%D7%94-%D7%9C%D7%A9%D7%A0%D7%AA-2024.pdf",
+     "year": "2024",
+     "iframe": false,
+     "doc": true,
+     "internal": true
+    },
+    {
+     "text": "מדיניות השקעה צפויה לשנת 2024, עדכון מיום 15/7/24, עדכון שיעורי החשיפה במסלולים גמל להשקעה עוקב מדדי מניות והשתלמות עוקב מדדי מניות",
+     "href": "https://www.analyst.co.il/wp-content/uploads/2024/07/הצהרת-מדיניות-צפויה-1.pdf",
+     "year": "2024",
+     "iframe": false,
+     "doc": true,
+     "internal": true
+    },
+    {
+     "text": "מדיניות השקעה צפויה לשנת 2024, עדכון מיום 13.02.24, עדכון מסלולי חשיפה בכל המסלולים",
+     "href": "https://www.analyst.co.il/media/zzcgcskv/%D7%9E%D7%93%D7%99%D7%A0%D7%99%D7%95%D7%AA-%D7%94%D7%A9%D7%A7%D7%A2%D7%94-%D7%A6%D7%A4%D7%95%D7%99%D7%99%D7%94-%D7%9C%D7%A9%D7%A0%D7%AA-2024-%D7%A2%D7%93%D7%9B%D7%95%D7%9F-%D7%9E-1302.pdf",
+     "year": "2024",
+     "iframe": false,
+     "doc": true,
+     "internal": true
+    },
+    {
+     "text": "מדיניות השקעה צפויה לשנת 2024, עדכון מיום 12/08/2024, עודכנו שיעורי חשיפה בקופות: אנליסט השתלמות אג\"ח ממשלות, אנליסט גמל אג\"ח ממשלות, אנליסט השתלמות אשראי ואג\"ח, אנליסט גמל להשקעה אשראי ואג\"ח",
+     "href": "https://www.analyst.co.il/wp-content/uploads/2024/09/קובץ-מלא-08.09.2024-1.pdf",
+     "year": "2024",
+     "iframe": false,
+     "doc": true,
+     "internal": true
+    },
+    {
+     "text": "מדיניות השקעה צפויה לשנת 2024, עדכון מיום 11/03/24, עדכון גבולות חשיפה במסלולים: אנליסט השתלמות מחקה מדד S&P500, אנליסט גמל מחקה מדד S&P500, אנליסט גמל להשקעה מחקה מדד S&P500, ואנליסט גמל מניות בחו\"ל",
+     "href": "https://www.analyst.co.il/media/5mwjvdvt/%D7%9E%D7%93%D7%99%D7%A0%D7%99%D7%95%D7%AA-%D7%94%D7%A9%D7%A7%D7%A2%D7%94-%D7%A6%D7%A4%D7%95%D7%99%D7%99%D7%94-%D7%9C%D7%A9%D7%A0%D7%AA-2024.pdf",
+     "year": "2024",
+     "iframe": false,
+     "doc": true,
+     "internal": true
+    },
+    {
+     "text": "מדיניות השקעה צפויה לשנת 2024, עדכון מיום 09/09/2024, עדכון מדדי הייחוס בקופות: אנליסט גמל - עוקב מדדים גמיש, אנליסט השתלמות עוקב מדדי מניות, אנליסט גמל עוקב מדדי מניות, אנליסט גמל להשקעה עוקב מדדי מנ",
+     "href": "https://www.analyst.co.il/wp-content/uploads/2024/09/קובץ-מלא-08.09.2024.pdf",
+     "year": "2024",
+     "iframe": false,
+     "doc": true,
+     "internal": true
+    },
+    {
+     "text": "מדיניות השקעה צפויה לשנת 2024, עדכון מיום 01/07/24, בעקבות כניסה לתוקף של חוזר מסלולי השקעה החדש",
+     "href": "https://www.analyst.co.il/wp-content/uploads/2024/07/מדיניות-השקעות-צפויה-01.07.24.pdf",
+     "year": "2024",
+     "iframe": false,
+     "doc": true,
+     "internal": true
+    },
+    {
+     "text": "מדיניות השקעה צפויה לשנת 2024, עדכון 01/10/2024, עדכון מדיניות ההשקעה של הקופה אנליסט גמל עוקב מדדים- גמיש",
+     "href": "https://www.analyst.co.il/wp-content/uploads/2024/10/קובץ-מלא-01.10.2024.pdf",
+     "year": "2024",
+     "iframe": false,
+     "doc": true,
+     "internal": true
+    },
+    {
+     "text": "מדיניות השקעה צפויה לשנת 2024",
+     "href": "https://www.analyst.co.il/media/qvzhjq2m/%D7%94%D7%A6%D7%94%D7%A8%D7%AA-%D7%9E%D7%93%D7%99%D7%A0%D7%99%D7%95%D7%AA-%D7%A6%D7%A4%D7%95%D7%99%D7%94-2024.pdf",
+     "year": "2024",
+     "iframe": false,
+     "doc": true,
+     "internal": true
+    },
+    {
+     "text": "מגבלת עמלת ניהול חיצוני - 2024 לאחר 1.7.24",
+     "href": "https://www.analyst.co.il/wp-content/uploads/2024/06/עמלת-ניהול-חיצוני-1.7.pdf",
+     "year": "2024",
+     "iframe": false,
+     "doc": true,
+     "internal": true
+    },
+    {
+     "text": "מגבלת עמלת ניהול חיצוני - 2024",
+     "href": "https://www.analyst.co.il/media/y3shqsf2/%D7%94%D7%95%D7%A6%D7%90%D7%94-%D7%9C%D7%93%D7%9E%D7%99-%D7%A0%D7%99%D7%94%D7%95%D7%9C-%D7%97%D7%99%D7%A6%D7%95%D7%A0%D7%99-%D7%9E%D7%A7%D7%A1%D7%99%D7%9E%D7%9C%D7%99-2024.xlsx",
+     "year": "2024",
+     "iframe": false,
+     "doc": true,
+     "internal": true
+    },
+    {
+     "text": "דוח שנתי ממונה אזרחים ותיקים 2024",
+     "href": "https://www.analyst.co.il/wp-content/uploads/2025/01/דוח-שנתי-לאוצר-ממונה-אזרחים-ותיקים-2024.pdf",
+     "year": "2024",
+     "iframe": false,
+     "doc": true,
+     "internal": true
+    },
+    {
+     "text": "תגמול לסוכנים עבור קידום מכירות - אוקטובר 2023",
+     "href": "https://www.analyst.co.il/media/acypddfc/%D7%A1%D7%95%D7%92-1-%D7%A4%D7%A8%D7%A1%D7%95%D7%9D-%D7%91%D7%90%D7%AA%D7%A8-%D7%9E%D7%A9%D7%95%D7%9C%D7%91-%D7%9E%D7%91%D7%A6%D7%A2-%D7%A1%D7%95%D7%A4%D7%A9%D7%A0%D7%94-2023-1.pdf",
+     "year": "2023",
+     "iframe": false,
+     "doc": true,
+     "internal": true
+    },
+    {
+     "text": "תגמול לסוכנים עבור קידום מכירות - אוקטובר 2023",
+     "href": "https://www.analyst.co.il/media/ewjjthwf/%D7%A1%D7%95%D7%92-2-%D7%A4%D7%A8%D7%A1%D7%95%D7%9D-%D7%91%D7%90%D7%AA%D7%A8-%D7%9E%D7%A9%D7%95%D7%9C%D7%91-%D7%9E%D7%91%D7%A6%D7%A2-%D7%A1%D7%95%D7%A4%D7%A9%D7%A0%D7%94-2023-2.pdf",
+     "year": "2023",
+     "iframe": false,
+     "doc": true,
+     "internal": true
+    },
+    {
+     "text": "תגמול לסוכנים עבור קידום מכירות - אוקטובר 2023",
+     "href": "https://www.analyst.co.il/media/jvpnx0zh/%D7%A1%D7%95%D7%92-3-%D7%A4%D7%A8%D7%A1%D7%95%D7%9D-%D7%91%D7%90%D7%AA%D7%A8-%D7%9E%D7%A9%D7%95%D7%9C%D7%91-%D7%9E%D7%91%D7%A6%D7%A2-%D7%A1%D7%95%D7%A4%D7%A9%D7%A0%D7%94-2023-1.pdf",
+     "year": "2023",
+     "iframe": false,
+     "doc": true,
+     "internal": true
+    },
+    {
+     "text": "תגמול לסוכנים עבור קידום מכירות - אוקטובר 2023",
+     "href": "https://www.analyst.co.il/media/cgfhq0gj/%D7%A1%D7%95%D7%92-4-%D7%A4%D7%A8%D7%A1%D7%95%D7%9D-%D7%91%D7%90%D7%AA%D7%A8-%D7%9E%D7%A9%D7%95%D7%9C%D7%91-%D7%9E%D7%91%D7%A6%D7%A2-%D7%A1%D7%95%D7%A4%D7%A9%D7%A0%D7%94-2023-2.pdf",
+     "year": "2023",
+     "iframe": false,
+     "doc": true,
+     "internal": true
+    },
+    {
+     "text": "תגמול לסוכנים עבור קידום מכירות",
+     "href": "https://www.analyst.co.il/media/am4b5cue/%D7%A4%D7%A8%D7%A1%D7%95%D7%9D-%D7%91%D7%90%D7%AA%D7%A8-%D7%9E%D7%A9%D7%95%D7%9C%D7%91-%D7%9E%D7%91%D7%A6%D7%A2-%D7%A7%D7%99%D7%A5-2023-%D7%94%D7%A1%D7%93%D7%A8.pdf",
+     "year": "2023",
+     "iframe": false,
+     "doc": true,
+     "internal": true
+    },
+    {
+     "text": "תגמול לסוכנים עבור קידום מכירות",
+     "href": "https://www.analyst.co.il/media/gftjl5s5/%D7%A4%D7%A8%D7%A1%D7%95%D7%9D-%D7%91%D7%90%D7%AA%D7%A8-%D7%9E%D7%A9%D7%95%D7%9C%D7%91-%D7%9E%D7%91%D7%A6%D7%A2-%D7%A7%D7%99%D7%A5-2023-%D7%91%D7%95%D7%93%D7%93.pdf",
+     "year": "2023",
+     "iframe": false,
+     "doc": true,
+     "internal": true
+    },
+    {
+     "text": "מדיניות תגמול מרץ 2023",
+     "href": "https://www.analyst.co.il/media/zjxht0lr/%D7%9E%D7%93%D7%99%D7%A0%D7%99%D7%95%D7%AA-%D7%AA%D7%92%D7%9E%D7%95%D7%9C.pdf",
+     "year": "2023",
+     "iframe": false,
+     "doc": true,
+     "internal": true
+    },
+    {
+     "text": "מדיניות השקעה צפוייה לשנת 2023, עדכון מיום 5.6.23, העלאת גבולות החשיפה למט\"ח במסלולים: אנליסט השתלמות כללי, אנליסט גמל בני 60 ומעלה, אנליסט גמל בני 50 ומטה, אנליסט גמל לבני 50-60, אנליסט פיצויים כללי,",
+     "href": "https://www.analyst.co.il/media/h2rdv2kp/%D7%9E%D7%93%D7%99%D7%A0%D7%99%D7%95%D7%AA-%D7%94%D7%A9%D7%A7%D7%A2%D7%94-%D7%A6%D7%A4%D7%95%D7%99%D7%94-%D7%9C%D7%A9%D7%A0%D7%AA-2023-%D7%9E%D7%A2%D7%95%D7%93%D7%9B%D7%9F-%D7%9C-0506.pdf",
+     "year": "2023",
+     "iframe": false,
+     "doc": true,
+     "internal": true
+    },
+    {
+     "text": "מדיניות השקעה צפוייה לשנת 2023, עדכון מיום 17.07.23, העלאת גבולות החשיפה לממשלתי במסלולים: אנליסט השתלמות כללי, אנליסט גמל בני 60 ומעלה, אנליסט גמל בני 50 ומטה, אנליסט גמל לבני 50-60, אנליסט פיצויים כ",
+     "href": "https://www.analyst.co.il/media/b10ilmhu/%D7%9E%D7%93%D7%99%D7%A0%D7%99%D7%95%D7%AA-%D7%94%D7%A9%D7%A7%D7%A2%D7%94-%D7%A6%D7%A4%D7%95%D7%99%D7%94-%D7%9C%D7%A9%D7%A0%D7%AA-2023-%D7%A2%D7%93%D7%9B%D7%95%D7%9F-%D7%9E%D7%99%D7%95%D7%9D-170723.pdf",
+     "year": "2023",
+     "iframe": false,
+     "doc": true,
+     "internal": true
+    },
+    {
+     "text": "מדיניות השקעה צפויה לשנת 2023",
+     "href": "https://www.analyst.co.il/media/110jbcnw/%D7%9E%D7%93%D7%99%D7%A0%D7%99%D7%95%D7%AA-%D7%94%D7%A9%D7%A7%D7%A2%D7%94-%D7%A6%D7%A4%D7%95%D7%99%D7%94-%D7%9C%D7%A9%D7%A0%D7%AA-2023.pdf",
+     "year": "2023",
+     "iframe": false,
+     "doc": true,
+     "internal": true
+    },
+    {
+     "text": "דוח שנתי ממונה אזרחים ותיקים 2023",
+     "href": "https://www.analyst.co.il/media/fwghz51b/%D7%93%D7%95%D7%97-%D7%A9%D7%A0%D7%AA%D7%99-%D7%9E%D7%9E%D7%95%D7%A0%D7%94-%D7%90%D7%96%D7%A8%D7%97%D7%99%D7%9D-%D7%95%D7%AA%D7%99%D7%A7%D7%99%D7%9D-2023.pdf",
+     "year": "2023",
+     "iframe": false,
+     "doc": true,
+     "internal": true
+    },
+    {
+     "text": "מדיניות תגמול מעודכנת מיום 27.2.2022",
+     "href": "https://www.analyst.co.il/media/icjdapf3/%D7%AA%D7%92%D7%9E%D7%95%D7%9C-1.pdf",
+     "year": "2022",
+     "iframe": false,
+     "doc": true,
+     "internal": true
+    },
+    {
+     "text": "מדיניות תגמול דצמבר 2022",
+     "href": "https://www.analyst.co.il/media/kkpn3hut/%D7%9E%D7%93%D7%99%D7%A0%D7%99%D7%95%D7%AA-%D7%AA%D7%92%D7%9E%D7%95%D7%9C-%D7%93%D7%A6%D7%9E%D7%91%D7%A8-2022.pdf",
+     "year": "2022",
+     "iframe": false,
+     "doc": true,
+     "internal": true
+    },
+    {
+     "text": "מדיניות השקעה צפוייה לשנת 2022",
+     "href": "https://www.analyst.co.il/media/5xeblnts/%D7%94%D7%A6%D7%94%D7%A8%D7%AA-%D7%9E%D7%93%D7%99%D7%A0%D7%99%D7%95%D7%AA-%D7%94%D7%A9%D7%A7%D7%A2%D7%94-%D7%A6%D7%A4%D7%95%D7%99%D7%94-2022-3-1.xlsx",
+     "year": "2022",
+     "iframe": false,
+     "doc": true,
+     "internal": true
+    },
+    {
+     "text": "מדיניות השקעה צפוייה ל-2022, עדכון מיום 28.09.22, הוספת 3 מסלולי השקעה חדשים- מחקי מדד S&P500",
+     "href": "https://www.analyst.co.il/media/nitpma4q/%D7%94%D7%A6%D7%94%D7%A8%D7%AA-%D7%9E%D7%93%D7%99%D7%A0%D7%99%D7%95%D7%AA-%D7%94%D7%A9%D7%A7%D7%A2%D7%94-%D7%A6%D7%A4%D7%95%D7%99%D7%94-2022-%D7%9E%D7%A2%D7%95%D7%93%D7%9B%D7%9F-%D7%9C%D7%90%D7%97%D7%A8-%D7%A2%D7%93%D7%9B%D7%95%D7%9F-%D7%9E%D7%A1%D7%9C%D7%95%D7%9C%D7%99%D7%9D-%D7%97%D7%93%D7%A9%D7%99%D7%9D.xlsx",
+     "year": "2022",
+     "iframe": false,
+     "doc": true,
+     "internal": true
+    },
+    {
+     "text": "הנחיות עבודה להעברת מסמכים החתומים בחתימה ממוחשבת 2022",
+     "href": "https://www.analyst.co.il/media/n3pcwlmd/%D7%A0%D7%95%D7%A1%D7%A3-1.pdf",
+     "year": "2022",
+     "iframe": false,
+     "doc": true,
+     "internal": true
+    },
+    {
+     "text": "דוח שנתי ממונה אזרחים ותיקים 2022",
+     "href": "https://www.analyst.co.il/media/3qmcu14a/%D7%93%D7%95%D7%97-%D7%A9%D7%A0%D7%AA%D7%99-%D7%9E%D7%9E%D7%95%D7%A0%D7%94-%D7%90%D7%96%D7%A8%D7%97%D7%99%D7%9D-%D7%95%D7%AA%D7%99%D7%A7%D7%99%D7%9D.pdf",
+     "year": "2022",
+     "iframe": false,
+     "doc": true,
+     "internal": true
+    },
+    {
+     "text": "אמנת שירות אנליסט קופות גמל",
+     "href": "https://www.analyst.co.il/media/aytdfpks/%D7%90%D7%9E%D7%A8%D7%AA-%D7%A9%D7%99%D7%A8%D7%95%D7%AA-%D7%9C%D7%A7%D7%95%D7%97%D7%95%D7%AA-%D7%9E%D7%A8%D7%A5-2022.pdf",
+     "year": "2022",
+     "iframe": false,
+     "doc": true,
+     "internal": true
+    },
+    {
+     "text": "מדיניות השקעה צפוייה לשנת 2021",
+     "href": "https://www.analyst.co.il/media/4sdb3js2/%D7%9E%D7%93%D7%99%D7%A0%D7%99%D7%95%D7%AA-%D7%94%D7%A9%D7%A7%D7%A2%D7%95%D7%AA-%D7%A6%D7%A4%D7%95%D7%99%D7%94-2021.xls",
+     "year": "2021",
+     "iframe": false,
+     "doc": true,
+     "internal": true
+    },
+    {
+     "text": "מדיניות השקעה צפוייה ל- 2021, עדכון מיום 12.04.21, שינוי גבולות החשיפה במסלולים: אנליסט גמל לבני 50 ומטה, אנליסט גמל לבני 50-60, אנליסט השתלמות כללי, אנליסט קופה מרכזית לפיצויים, אנליסט חיסכון לכל ילד",
+     "href": "https://www.analyst.co.il/media/ov0nldhx/%D7%9E%D7%93%D7%99%D7%A0%D7%99%D7%95%D7%AA-%D7%94%D7%A9%D7%A7%D7%A2%D7%94-%D7%A6%D7%A4%D7%95%D7%99%D7%94-2021-%D7%9C%D7%90%D7%AA%D7%A8-%D7%A2%D7%93%D7%9B%D7%95%D7%9F-%D7%9E%D7%99%D7%95%D7%9D-12_04_21-1.xls",
+     "year": "2021",
+     "iframe": false,
+     "doc": true,
+     "internal": true
+    },
+    {
+     "text": "הודעה בדבר השלמת מיזוג מסלולים - ינואר 2021",
+     "href": "https://www.analyst.co.il/media/ckeanzdt/%D7%94%D7%95%D7%93%D7%A2%D7%94-%D7%91%D7%93%D7%91%D7%A8-%D7%94%D7%A9%D7%9C%D7%9E%D7%AA-%D7%9E%D7%99%D7%96%D7%95%D7%92-%D7%9E%D7%A1%D7%9C%D7%95%D7%9C%D7%99%D7%9D-%D7%99%D7%A0%D7%95%D7%90%D7%A8-2021.pdf",
+     "year": "2021",
+     "iframe": false,
+     "doc": true,
+     "internal": true
+    },
+    {
+     "text": "מדיניות השקעות צפויה לשנת 2020, עדכון מיום 19.8.20 ,שינוי מדיניות במסלול חסכון לילד סיכון בינוני",
+     "href": "https://www.analyst.co.il/media/ljzplt4r/%D7%9E%D7%93%D7%99%D7%A0%D7%99%D7%95%D7%AA-%D7%94%D7%A9%D7%A7%D7%A2%D7%94-%D7%A6%D7%A4%D7%95%D7%99%D7%99%D7%94-%D7%9C-2020-%D7%A2%D7%93%D7%9B%D7%95%D7%9F-%D7%9E%D7%99%D7%95%D7%9D-190820-%D7%A9%D7%99%D7%A0%D7%95%D7%99-%D7%9E%D7%93%D7%99%D7%A0%D7%99%D7%95%D7%AA-%D7%91%D7%9E%D7%A1%D7%9C%D7%95%D7%9C-%D7%A1%D7%99%D7%9B%D7%95%D7%9F-%D7%91%D7%99%D7%A0%D7%95%D7%A0%D7%99.xls",
+     "year": "2020",
+     "iframe": false,
+     "doc": true,
+     "internal": true
+    },
+    {
+     "text": "מדיניות השקעות צפויה לשנת 2020, עדכון מיום 09.02.20 בתוקף החל מ 01.01.20,הוספת מדדי ייחוס באפיק מזומן ומטח",
+     "href": "https://www.analyst.co.il/media/bllpdneb/%D7%9E%D7%93%D7%99%D7%A0%D7%99%D7%95%D7%AA-%D7%94%D7%A9%D7%A7%D7%A2%D7%95%D7%AA-%D7%A6%D7%A4%D7%95%D7%99%D7%94-%D7%9C%D7%A9%D7%A0%D7%AA-2020%D7%A2%D7%93%D7%9B%D7%95%D7%9F-%D7%9E%D7%99%D7%95%D7%9D-090220-%D7%91%D7%AA%D7%95%D7%A7%D7%A3-%D7%94%D7%97%D7%9C-%D7%9E-010120-%D7%94%D7%95%D7%A1%D7%A4%D7%AA-%D7%9E%D7%93%D7%93%D7%99-%D7%99%D7%99%D7%97%D7%95%D7%A1-%D7%91%D7%90%D7%A4%D7%99%D7%A7-%D7%9E%D7%96%D7%95%D7%9E%D7%9F-%D7%95%D7%9E%D7%98%D7%97.xls",
+     "year": "2020",
+     "iframe": false,
+     "doc": true,
+     "internal": true
+    },
+    {
+     "text": "מדיניות השקעה צפוייה לשנת 2020",
+     "href": "https://www.analyst.co.il/media/eiqmwhyd/%D7%9E%D7%93%D7%99%D7%A0%D7%99%D7%95%D7%AA-%D7%94%D7%A9%D7%A7%D7%A2%D7%95%D7%AA-%D7%A6%D7%A4%D7%95%D7%99%D7%94-2020.xls",
+     "year": "2020",
+     "iframe": false,
+     "doc": true,
+     "internal": true
+    },
+    {
+     "text": "הודעה בדבר מיזוג מסלולים - 16/11/2020",
+     "href": "https://www.analyst.co.il/media/2htdrgu1/%D7%94%D7%95%D7%93%D7%A2%D7%94-%D7%91%D7%93%D7%91%D7%A8-%D7%9E%D7%99%D7%96%D7%95%D7%92-%D7%9E%D7%A1%D7%9C%D7%95%D7%9C%D7%99%D7%9D-16-11-2020.pdf",
+     "year": "2020",
+     "iframe": false,
+     "doc": true,
+     "internal": true
+    },
+    {
+     "text": "מדיניות תגמול מעודכנת מיום 22.5.2019",
+     "href": "https://www.analyst.co.il/media/syphbcex/%D7%AA%D7%92%D7%9E%D7%95%D7%9C-3.pdf",
+     "year": "2019",
+     "iframe": false,
+     "doc": true,
+     "internal": true
+    },
+    {
+     "text": "מדיניות תגמול מעודכנת מיום 15.12.2019",
+     "href": "https://www.analyst.co.il/media/y1yc1x0m/%D7%AA%D7%92%D7%9E%D7%95%D7%9C-2.pdf",
+     "year": "2019",
+     "iframe": false,
+     "doc": true,
+     "internal": true
+    },
+    {
+     "text": "מדיניות השקעה צפוייה לשנת 2019",
+     "href": "https://www.analyst.co.il/media/bfcbt5sq/%D7%9E%D7%93%D7%99%D7%A0%D7%99%D7%95%D7%AA-%D7%94%D7%A9%D7%A7%D7%A2%D7%95%D7%AA-%D7%A6%D7%A4%D7%95%D7%99%D7%94-2019.xlsx",
+     "year": "2019",
+     "iframe": false,
+     "doc": true,
+     "internal": true
+    },
+    {
+     "text": "מדיניות השקעה צפוייה ל-2019, עדכון מיום 25.11.2019, שינוי גבלות חשיפה במסלול אנליסט גמל לבני 50 ומטה",
+     "href": "https://www.analyst.co.il/media/cfaj3wwp/%D7%9E%D7%93%D7%99%D7%A0%D7%99%D7%95%D7%AA-%D7%94%D7%A9%D7%A7%D7%A2%D7%94-%D7%A6%D7%A4%D7%95%D7%99%D7%99%D7%94-%D7%9C-2019-%D7%A2%D7%93%D7%9B%D7%95%D7%9F-%D7%9E%D7%99%D7%95%D7%9D-25112019-%D7%A9%D7%99%D7%A0%D7%95%D7%99-%D7%9E%D7%92%D7%91%D7%9C%D7%95%D7%AA-%D7%97%D7%A9%D7%99%D7%A4%D7%94-%D7%91%D7%9E%D7%A1%D7%9C%D7%95%D7%9C-%D7%90%D7%A0%D7%9C%D7%99%D7%A1%D7%98-%D7%92%D7%9E%D7%9C-%D7%9C%D7%91%D7%A0%D7%99-50-%D7%95%D7%9E%D7%98%D7%94.xlsx",
+     "year": "2019",
+     "iframe": false,
+     "doc": true,
+     "internal": true
+    },
+    {
+     "text": "הודעה על השלמת מיזוג מסלולים בקופות אנליסט - 10/01/2016",
+     "href": "https://www.analyst.co.il/media/mhghi3sz/%D7%94%D7%95%D7%93%D7%A2%D7%94-%D7%A2%D7%9C-%D7%94%D7%A9%D7%9C%D7%9E%D7%AA-%D7%9E%D7%99%D7%96%D7%95%D7%92-%D7%9E%D7%A1%D7%9C%D7%95%D7%9C%D7%99%D7%9D-%D7%91%D7%A7%D7%95%D7%A4%D7%95%D7%AA-%D7%90%D7%A0%D7%9C%D7%99%D7%A1%D7%98-10-01-2016.pdf",
+     "year": "2016",
+     "iframe": false,
+     "doc": true,
+     "internal": true
+    },
+    {
+     "text": "הודעה על כוונת מיזוג מסלולים בקופות אנליסט - 15/11/2015 תיקון 3 לחוק קופות הגמל",
+     "href": "https://www.analyst.co.il/media/1f3knr2q/%D7%94%D7%95%D7%93%D7%A2%D7%94-%D7%A2%D7%9C-%D7%9B%D7%95%D7%95%D7%A0%D7%AA-%D7%9E%D7%99%D7%96%D7%95%D7%92-%D7%9E%D7%A1%D7%9C%D7%95%D7%9C%D7%99%D7%9D-%D7%91%D7%A7%D7%95%D7%A4%D7%95%D7%AA-%D7%90%D7%A0%D7%9C%D7%99%D7%A1%D7%98-15-11-2015.pdf",
+     "year": "2015",
+     "iframe": false,
+     "doc": true,
+     "internal": true
+    },
+    {
+     "text": "תכנית הפרדה מבנית",
+     "href": "https://www.analyst.co.il/media/arsmavxk/%D7%A0%D7%95%D7%A1%D7%A3-2.pdf",
+     "year": null,
+     "iframe": false,
+     "doc": true,
+     "internal": true
+    },
+    {
+     "text": "תגמול לסוכנים עבור קידום מכירות",
+     "href": "https://www.analyst.co.il/media/53gb4at1/%D7%AA%D7%92%D7%9E%D7%95%D7%9C-%D7%9C%D7%A1%D7%95%D7%9B%D7%9F-%D7%A2%D7%91%D7%95%D7%A8-%D7%A7%D7%99%D7%93%D7%95%D7%9D-%D7%9E%D7%9B%D7%99%D7%A8%D7%95%D7%AA.pdf",
+     "year": null,
+     "iframe": false,
+     "doc": true,
+     "internal": true
+    },
+    {
+     "text": "תגמול לסוכנים עבור קידום מכירות",
+     "href": "https://www.analyst.co.il/media/ydsewtr5/%D7%AA%D7%92%D7%9E%D7%95%D7%9C-%D7%9C%D7%A1%D7%95%D7%9B%D7%9F-%D7%A2%D7%91%D7%95%D7%A8-%D7%A7%D7%99%D7%93%D7%95%D7%9D-%D7%9E%D7%9B%D7%99%D7%A8%D7%95%D7%AA-%D7%A4%D7%A8%D7%A1%D7%95%D7%9D-%D7%91%D7%90%D7%99%D7%A0%D7%98%D7%A8%D7%A0%D7%98-%D7%A2%D7%93%D7%9B%D7%A0%D7%99-1.pdf",
+     "year": null,
+     "iframe": false,
+     "doc": true,
+     "internal": true
+    },
+    {
+     "text": "תגמול לסוכנים עבור קידום מכירות",
+     "href": "https://www.analyst.co.il/media/qaolzcif/%D7%AA%D7%92%D7%9E%D7%95%D7%9C-%D7%9C%D7%A1%D7%95%D7%9B%D7%9F-%D7%A2%D7%91%D7%95%D7%A8-%D7%A7%D7%99%D7%93%D7%95%D7%9D-%D7%9E%D7%9B%D7%99%D7%A8%D7%95%D7%AA-%D7%A4%D7%A8%D7%A1%D7%95%D7%9D-%D7%91%D7%90%D7%99%D7%A0%D7%98%D7%A8%D7%A0%D7%98-%D7%A2%D7%93%D7%9B%D7%A0%D7%99-1.pdf",
+     "year": null,
+     "iframe": false,
+     "doc": true,
+     "internal": true
+    },
+    {
+     "text": "תגמול לסוכנים עבור קידום מכירות",
+     "href": "https://www.analyst.co.il/media/e2pahuns/%D7%AA%D7%92%D7%9E%D7%95%D7%9C-%D7%9C%D7%A1%D7%95%D7%9B%D7%9F-%D7%A2%D7%91%D7%95%D7%A8-%D7%A7%D7%99%D7%93%D7%95%D7%9D-%D7%9E%D7%9B%D7%99%D7%A8%D7%95%D7%AA-%D7%A4%D7%A8%D7%A1%D7%95%D7%9D-%D7%91%D7%90%D7%99%D7%A0%D7%98%D7%A8%D7%A0%D7%98-%D7%A2%D7%93%D7%9B%D7%A0%D7%99-1-1.pdf",
+     "year": null,
+     "iframe": false,
+     "doc": true,
+     "internal": true
+    },
+    {
+     "text": "קרן השתלמות",
+     "href": "https://www.analyst.co.il/funds-lobby/training-funds/",
+     "year": null,
+     "iframe": false,
+     "doc": false,
+     "internal": true
+    },
+    {
+     "text": "קופת גמל להשקעה",
+     "href": "https://www.analyst.co.il/funds-lobby/gemel-invest/",
+     "year": null,
+     "iframe": false,
+     "doc": false,
+     "internal": true
+    },
+    {
+     "text": "קופות גמל וקרנות השתלמות",
+     "href": "https://www.analyst.co.il/funds-lobby/",
+     "year": null,
+     "iframe": false,
+     "doc": false,
+     "internal": true
+    },
+    {
+     "text": "קופות גמל",
+     "href": "https://www.analyst.co.il/funds-lobby/provident-funds/",
+     "year": null,
+     "iframe": false,
+     "doc": false,
+     "internal": true
+    },
+    {
+     "text": "פתיחת חשבון קרן השתלמות להפקדות חדשות",
+     "href": "https://www.analyst.co.il/openning-training-funds/",
+     "year": null,
+     "iframe": false,
+     "doc": false,
+     "internal": true
+    },
+    {
+     "text": "פתיחת חשבון קופת גמל להפקדות חדשות",
+     "href": "https://www.analyst.co.il/join-provident-funds/",
+     "year": null,
+     "iframe": false,
+     "doc": false,
+     "internal": true
+    },
+    {
+     "text": "פתיחת חשבון חדש לקופת גמל להשקעה",
+     "href": "https://www.analyst.co.il/gemel-invest-join/",
+     "year": null,
+     "iframe": false,
+     "doc": false,
+     "internal": true
+    },
+    {
+     "text": "ניהול תיקי השקעות",
+     "href": "https://www.analyst.co.il/portfolio-management/",
+     "year": null,
+     "iframe": false,
+     "doc": false,
+     "internal": true
+    },
+    {
+     "text": "מסמך עקרונות העברת זכויות עמיתים שלא במזומן",
+     "href": "https://www.analyst.co.il/media/ex5hiizd/%D7%A2%D7%A7%D7%A8%D7%95%D7%A0%D7%95%D7%AA-%D7%A0%D7%95%D7%94%D7%9C-%D7%94%D7%A2%D7%91%D7%A8%D7%AA-%D7%96%D7%9B%D7%95%D7%99%D7%95%D7%AA-%D7%A2%D7%9E%D7%99%D7%AA%D7%99%D7%9D-%D7%A9%D7%9C%D7%90-%D7%91%D7%9E%D7%96%D7%95%D7%9E%D7%9F.pdf",
+     "year": null,
+     "iframe": false,
+     "doc": true,
+     "internal": true
+    },
+    {
+     "text": "מידע לעמיתים",
+     "href": "https://www.analyst.co.il/investment-policy/",
+     "year": null,
+     "iframe": false,
+     "doc": false,
+     "internal": true
+    },
+    {
+     "text": "מחשבון תשואות – השוואה בין קרנות השתלמות וקופות גמל נבחרות",
+     "href": "https://www.analyst.co.il/yield-comparison-calculator/",
+     "year": null,
+     "iframe": false,
+     "doc": false,
+     "internal": true
+    },
+    {
+     "text": "העברת חשבון קרן השתלמות",
+     "href": "https://www.analyst.co.il/transfer-training-funds/",
+     "year": null,
+     "iframe": false,
+     "doc": false,
+     "internal": true
+    },
+    {
+     "text": "העברת חשבון קופת גמל",
+     "href": "https://www.analyst.co.il/account-transfer-provident-funds/",
+     "year": null,
+     "iframe": false,
+     "doc": false,
+     "internal": true
+    },
+    {
+     "text": "דוחות כספיים",
+     "href": "https://www.analyst.co.il/financial-reports/",
+     "year": null,
+     "iframe": false,
+     "doc": false,
+     "internal": true
+    },
+    {
+     "text": "דו\"ח תשואות משלים 2009",
+     "href": "https://www.analyst.co.il/media/1gqisbyk/%D7%93%D7%95%D7%97-%D7%AA%D7%A9%D7%95%D7%90%D7%95%D7%AA-%D7%9E%D7%A9%D7%9C%D7%99%D7%9D-%D7%A7%D7%95%D7%91%D7%A5-%D7%9C%D7%90%D7%AA%D7%A8.xls",
+     "year": null,
+     "iframe": false,
+     "doc": true,
+     "internal": true
+    },
+    {
+     "text": "דו\"ח תשואות יומיות 2008",
+     "href": "https://www.analyst.co.il/media/rfjhar22/%D7%AA%D7%A9%D7%95%D7%90%D7%95%D7%AA-%D7%99%D7%95%D7%9E%D7%99%D7%95%D7%AA-2008-%D7%A7%D7%95%D7%91%D7%A5-%D7%9C%D7%90%D7%AA%D7%A8.xls",
+     "year": null,
+     "iframe": false,
+     "doc": true,
+     "internal": true
+    },
+    {
+     "text": "גילוי נאות",
+     "href": "https://www.analyst.co.il/proper-disclosure/",
+     "year": null,
+     "iframe": false,
+     "doc": false,
+     "internal": true
+    },
+    {
+     "text": "בית השקעות אנליסט הינו מבתי ההשקעות הוותיקים והמנוסים בניהול השקעות בשוק ההון בישראל. 'אנליסט' נוסדה בשנת 1985, ומשנת 1994 היא חברה ציבורית שמניותיה נסחרות בבורסה לניירות ערך בתל-אביב, ניהול ההשקעות מ",
+     "href": "https://www.analyst.co.il",
+     "year": null,
+     "iframe": false,
+     "doc": false,
+     "internal": true
+    },
+    {
+     "text": "אנליסט קופות גמל בע\"מ",
+     "href": "https://www.analyst.co.il/head-of-public-application/",
+     "year": null,
+     "iframe": false,
+     "doc": false,
+     "internal": true
+    },
+    {
+     "text": "אמות מידה לאיכות הממשל התאגידי",
+     "href": "https://www.analyst.co.il/media/551kplmb/%D7%A0%D7%95%D7%A1%D7%A3-4.pdf",
+     "year": null,
+     "iframe": false,
+     "doc": true,
+     "internal": true
+    },
+    {
+     "text": "אודות קופות גמל",
+     "href": "https://www.analyst.co.il/about-us/provident/",
+     "year": null,
+     "iframe": false,
+     "doc": false,
+     "internal": true
+    },
+    {
+     "text": "אודות נץ סוכנות לביטוח פנסיוני",
+     "href": "https://www.analyst.co.il/about-us/about-netz-pensionary-insurance/",
+     "year": null,
+     "iframe": false,
+     "doc": false,
+     "internal": true
+    },
+    {
+     "text": "אודות ניהול תיקי השקעות",
+     "href": "https://www.analyst.co.il/about-us/portfolio-management/",
+     "year": null,
+     "iframe": false,
+     "doc": false,
+     "internal": true
+    }
+   ]
+  },
+  "https://www.analyst.co.il/head-of-public-application/": {
+   "product": "פנסיה+גמל+ביטוח",
+   "status": 200,
+   "method": "requests",
+   "text_hash": "65947b0c5d4f0bf70d499059e8829a981c7e8b4e",
+   "text_head": "ממונה על פניות הציבור- קופות גמל - אנליסט בית השקעות מעסיקים סוכנים אזור אישי עמיתים אודות אודות אנליסט אודות ניהול תיקי השקעות אודות קרנות נאמנות אודות קופות גמל אודות נץ סוכנות לביטוח פנסיוני הודעות החברה קופות גמל וקרנות השתלמות קרן השתלמות קופות גמל קופת גמל להשקעה תוכנית חיסכון לכל ילד קופה מרכזית לפיצויים תיקון 190 טפסים שימושיים מחשבון חישוב שיעור עלות שנתית צפויה הפקדה לקופות במעמד עצמאי תקנונים קרנות נאמנות ממונה על פניות הציבור הצהרה בנושא ESG ניהול תיקי השקעות רמות סיכון מחלקת מחקר דסק עסקי טופס CRS הצהרה בנושא ESG צור קשר קריירה מרכז הידע אנליסט PLAY חדשות פיננסיות מילון מושגים חיפ",
+   "items": [
+    {
+     "text": "מדיניות פרטיות",
+     "href": "https://www.analyst.co.il/wp-content/uploads/2026/08/%D7%9E%D7%93%D7%99%D7%A0%D7%99%D7%95%D7%AA-%D7%94%D7%92%D7%A0%D7%AA-%D7%94%D7%A4%D7%A8%D7%98%D7%99%D7%95%D7%AA-%D7%9E%D7%A2%D7%95%D7%93%D7%9B%D7%A0%D7%AA-2026-PDF.pdf",
+     "year": "2026",
+     "iframe": false,
+     "doc": true,
+     "internal": true
+    },
+    {
+     "text": "תנאי שימוש",
+     "href": "https://www.analyst.co.il/wp-content/uploads/2025/08/%D7%AA%D7%A0%D7%90%D7%99-%D7%A9%D7%99%D7%9E%D7%95%D7%A9.pdf",
+     "year": "2025",
+     "iframe": false,
+     "doc": true,
+     "internal": true
+    },
+    {
+     "text": "תנאי שימוש",
+     "href": "https://www.analyst.co.il/wp-content/uploads/2025/08/תנאי-שימוש.pdf",
+     "year": "2025",
+     "iframe": false,
+     "doc": true,
+     "internal": true
+    },
+    {
+     "text": "דוח ממונה אזרחים ותיקים",
+     "href": "https://www.analyst.co.il/wp-content/uploads/2025/01/%D7%93%D7%95%D7%97-%D7%A9%D7%A0%D7%AA%D7%99-%D7%9C%D7%90%D7%95%D7%A6%D7%A8-%D7%9E%D7%9E%D7%95%D7%A0%D7%94-%D7%90%D7%96%D7%A8%D7%97%D7%99%D7%9D-%D7%95%D7%AA%D7%99%D7%A7%D7%99%D7%9D-2024.pdf",
+     "year": "2025",
+     "iframe": false,
+     "doc": true,
+     "internal": true
+    },
+    {
+     "text": "במדיניות הפרטיות",
+     "href": "https://www.analyst.co.il/media/u0fl5prs/%D7%9E%D7%93%D7%99%D7%A0%D7%99%D7%95%D7%AA-%D7%A4%D7%A8%D7%98%D7%99%D7%95%D7%AA-1422.pdf?v=082025",
+     "year": "2025",
+     "iframe": false,
+     "doc": true,
+     "internal": true
+    },
+    {
+     "text": "אמנת שירות אנליסט קופות גמל",
+     "href": "https://www.analyst.co.il/media/aytdfpks/%D7%90%D7%9E%D7%A8%D7%AA-%D7%A9%D7%99%D7%A8%D7%95%D7%AA-%D7%9C%D7%A7%D7%95%D7%97%D7%95%D7%AA-%D7%9E%D7%A8%D7%A5-2022.pdf",
+     "year": "2022",
+     "iframe": false,
+     "doc": true,
+     "internal": true
+    },
+    {
+     "text": "קרן השתלמות",
+     "href": "https://www.analyst.co.il/funds-lobby/training-funds/",
+     "year": null,
+     "iframe": false,
+     "doc": false,
+     "internal": true
+    },
+    {
+     "text": "קופת גמל להשקעה",
+     "href": "https://www.analyst.co.il/funds-lobby/gemel-invest/",
+     "year": null,
+     "iframe": false,
+     "doc": false,
+     "internal": true
+    },
+    {
+     "text": "קופות גמל וקרנות השתלמות",
+     "href": "https://www.analyst.co.il/funds-lobby/",
+     "year": null,
+     "iframe": false,
+     "doc": false,
+     "internal": true
+    },
+    {
+     "text": "קופות גמל",
+     "href": "https://www.analyst.co.il/funds-lobby/provident-funds/",
+     "year": null,
+     "iframe": false,
+     "doc": false,
+     "internal": true
+    },
+    {
+     "text": "פתיחת חשבון קרן השתלמות להפקדות חדשות",
+     "href": "https://www.analyst.co.il/openning-training-funds/",
+     "year": null,
+     "iframe": false,
+     "doc": false,
+     "internal": true
+    },
+    {
+     "text": "פתיחת חשבון קופת גמל להפקדות חדשות",
+     "href": "https://www.analyst.co.il/join-provident-funds/",
+     "year": null,
+     "iframe": false,
+     "doc": false,
+     "internal": true
+    },
+    {
+     "text": "פתיחת חשבון חדש לקופת גמל להשקעה",
+     "href": "https://www.analyst.co.il/gemel-invest-join/",
+     "year": null,
+     "iframe": false,
+     "doc": false,
+     "internal": true
+    },
+    {
+     "text": "ניהול תיקי השקעות",
+     "href": "https://www.analyst.co.il/portfolio-management/",
+     "year": null,
+     "iframe": false,
+     "doc": false,
+     "internal": true
+    },
+    {
+     "text": "מסמכים ודוחות מנהליים",
+     "href": "https://www.analyst.co.il/investment-policy/",
+     "year": null,
+     "iframe": false,
+     "doc": false,
+     "internal": true
+    },
+    {
+     "text": "מידע לעמיתים",
+     "href": "https://www.analyst.co.il/head-of-public-application/",
+     "year": null,
+     "iframe": false,
+     "doc": false,
+     "internal": true
+    },
+    {
+     "text": "מחשבון תשואות – השוואה בין קרנות השתלמות וקופות גמל נבחרות",
+     "href": "https://www.analyst.co.il/yield-comparison-calculator/",
+     "year": null,
+     "iframe": false,
+     "doc": false,
+     "internal": true
+    },
+    {
+     "text": "העברת חשבון קרן השתלמות",
+     "href": "https://www.analyst.co.il/transfer-training-funds/",
+     "year": null,
+     "iframe": false,
+     "doc": false,
+     "internal": true
+    },
+    {
+     "text": "העברת חשבון קופת גמל",
+     "href": "https://www.analyst.co.il/account-transfer-provident-funds/",
+     "year": null,
+     "iframe": false,
+     "doc": false,
+     "internal": true
+    },
+    {
+     "text": "דוחות כספיים",
+     "href": "https://www.analyst.co.il/financial-reports/",
+     "year": null,
+     "iframe": false,
+     "doc": false,
+     "internal": true
+    },
+    {
+     "text": "גילוי נאות",
+     "href": "https://www.analyst.co.il/proper-disclosure/",
+     "year": null,
+     "iframe": false,
+     "doc": false,
+     "internal": true
+    },
+    {
+     "text": "בית השקעות אנליסט הינו מבתי ההשקעות הוותיקים והמנוסים בניהול השקעות בשוק ההון בישראל. 'אנליסט' נוסדה בשנת 1985, ומשנת 1994 היא חברה ציבורית שמניותיה נסחרות בבורסה לניירות ערך בתל-אביב, ניהול ההשקעות מ",
+     "href": "https://www.analyst.co.il",
+     "year": null,
+     "iframe": false,
+     "doc": false,
+     "internal": true
+    },
+    {
+     "text": "אודות קופות גמל",
+     "href": "https://www.analyst.co.il/about-us/provident/",
+     "year": null,
+     "iframe": false,
+     "doc": false,
+     "internal": true
+    },
+    {
+     "text": "אודות נץ סוכנות לביטוח פנסיוני",
+     "href": "https://www.analyst.co.il/about-us/about-netz-pensionary-insurance/",
+     "year": null,
+     "iframe": false,
+     "doc": false,
+     "internal": true
+    },
+    {
+     "text": "אודות ניהול תיקי השקעות",
+     "href": "https://www.analyst.co.il/about-us/portfolio-management/",
+     "year": null,
+     "iframe": false,
+     "doc": false,
+     "internal": true
+    }
+   ]
+  },
+  "https://www.analyst.co.il/": {
+   "product": "פנסיה+גמל+ביטוח",
+   "status": 200,
+   "method": "requests",
+   "text_hash": "a0dfd5dbe65ecdb196919a12c3189dacb137d444",
+   "text_head": "אנליסט בית השקעות | אנליסט זה לא מקצוע זו מומחיות מעסיקים סוכנים אזור אישי עמיתים אודות אודות אנליסט אודות ניהול תיקי השקעות אודות קרנות נאמנות אודות קופות גמל אודות נץ סוכנות לביטוח פנסיוני הודעות החברה קופות גמל וקרנות השתלמות קרן השתלמות קופות גמל קופת גמל להשקעה תוכנית חיסכון לכל ילד קופה מרכזית לפיצויים תיקון 190 טפסים שימושיים מחשבון חישוב שיעור עלות שנתית צפויה הפקדה לקופות במעמד עצמאי תקנונים קרנות נאמנות ממונה על פניות הציבור הצהרה בנושא ESG ניהול תיקי השקעות רמות סיכון מחלקת מחקר דסק עסקי טופס CRS הצהרה בנושא ESG צור קשר קריירה מרכז הידע אנליסט PLAY חדשות פיננסיות מילון מושגים חיפוש ",
+   "items": [
+    {
+     "text": "מדיניות פרטיות",
+     "href": "https://www.analyst.co.il/wp-content/uploads/2026/08/%D7%9E%D7%93%D7%99%D7%A0%D7%99%D7%95%D7%AA-%D7%94%D7%92%D7%A0%D7%AA-%D7%94%D7%A4%D7%A8%D7%98%D7%99%D7%95%D7%AA-%D7%9E%D7%A2%D7%95%D7%93%D7%9B%D7%A0%D7%AA-2026-PDF.pdf",
+     "year": "2026",
+     "iframe": false,
+     "doc": true,
+     "internal": true
+    },
+    {
+     "text": "תנאי שימוש",
+     "href": "https://www.analyst.co.il/wp-content/uploads/2025/08/%D7%AA%D7%A0%D7%90%D7%99-%D7%A9%D7%99%D7%9E%D7%95%D7%A9.pdf",
+     "year": "2025",
+     "iframe": false,
+     "doc": true,
+     "internal": true
+    },
+    {
+     "text": "תנאי שימוש",
+     "href": "https://www.analyst.co.il/wp-content/uploads/2025/08/תנאי-שימוש.pdf",
+     "year": "2025",
+     "iframe": false,
+     "doc": true,
+     "internal": true
+    },
+    {
+     "text": "דוח ממונה אזרחים ותיקים",
+     "href": "https://www.analyst.co.il/wp-content/uploads/2025/01/%D7%93%D7%95%D7%97-%D7%A9%D7%A0%D7%AA%D7%99-%D7%9C%D7%90%D7%95%D7%A6%D7%A8-%D7%9E%D7%9E%D7%95%D7%A0%D7%94-%D7%90%D7%96%D7%A8%D7%97%D7%99%D7%9D-%D7%95%D7%AA%D7%99%D7%A7%D7%99%D7%9D-2024.pdf",
+     "year": "2025",
+     "iframe": false,
+     "doc": true,
+     "internal": true
+    },
+    {
+     "text": "במדיניות הפרטיות",
+     "href": "https://www.analyst.co.il/media/u0fl5prs/%D7%9E%D7%93%D7%99%D7%A0%D7%99%D7%95%D7%AA-%D7%A4%D7%A8%D7%98%D7%99%D7%95%D7%AA-1422.pdf?v=082025",
+     "year": "2025",
+     "iframe": false,
+     "doc": true,
+     "internal": true
+    },
+    {
+     "text": "אמנת שירות אנליסט קופות גמל",
+     "href": "https://www.analyst.co.il/media/aytdfpks/%D7%90%D7%9E%D7%A8%D7%AA-%D7%A9%D7%99%D7%A8%D7%95%D7%AA-%D7%9C%D7%A7%D7%95%D7%97%D7%95%D7%AA-%D7%9E%D7%A8%D7%A5-2022.pdf",
+     "year": "2022",
+     "iframe": false,
+     "doc": true,
+     "internal": true
+    },
+    {
+     "text": "נץ סוכנות לביטוח פנסיוני (2021)",
+     "href": "https://www.analyst.co.il/about-us/about-netz-pensionary-insurance/",
+     "year": "2021",
+     "iframe": false,
+     "doc": false,
+     "internal": true
+    },
+    {
+     "text": "תקרת הפקדה לקרן השתלמות",
+     "href": "https://www.analyst.co.il/articles/deposit-amount/",
+     "year": null,
+     "iframe": false,
+     "doc": false,
+     "internal": true
+    },
+    {
+     "text": "קרן השתלמות",
+     "href": "https://www.analyst.co.il/funds-lobby/training-funds/",
+     "year": null,
+     "iframe": false,
+     "doc": false,
+     "internal": true
+    },
+    {
+     "text": "קופת גמל להשקעה",
+     "href": "https://www.analyst.co.il/funds-lobby/gemel-invest/",
+     "year": null,
+     "iframe": false,
+     "doc": false,
+     "internal": true
+    },
+    {
+     "text": "קופות גמל וקרנות השתלמות",
+     "href": "https://www.analyst.co.il/funds-lobby/",
+     "year": null,
+     "iframe": false,
+     "doc": false,
+     "internal": true
+    },
+    {
+     "text": "קופות גמל",
+     "href": "https://www.analyst.co.il/funds-lobby/provident-funds/",
+     "year": null,
+     "iframe": false,
+     "doc": false,
+     "internal": true
+    },
+    {
+     "text": "פתיחת חשבון קרן השתלמות להפקדות חדשות",
+     "href": "https://www.analyst.co.il/openning-training-funds/",
+     "year": null,
+     "iframe": false,
+     "doc": false,
+     "internal": true
+    },
+    {
+     "text": "פתיחת חשבון קופת גמל להפקדות חדשות",
+     "href": "https://www.analyst.co.il/join-provident-funds/",
+     "year": null,
+     "iframe": false,
+     "doc": false,
+     "internal": true
+    },
+    {
+     "text": "פתיחת חשבון חדש לקופת גמל להשקעה",
+     "href": "https://www.analyst.co.il/gemel-invest-join/",
+     "year": null,
+     "iframe": false,
+     "doc": false,
+     "internal": true
+    },
+    {
+     "text": "ניהול תיקי השקעות",
+     "href": "https://www.analyst.co.il/portfolio-management/",
+     "year": null,
+     "iframe": false,
+     "doc": false,
+     "internal": true
+    },
+    {
+     "text": "מסמכים ודוחות מנהליים",
+     "href": "https://www.analyst.co.il/investment-policy/",
+     "year": null,
+     "iframe": false,
+     "doc": false,
+     "internal": true
+    },
+    {
+     "text": "מידע לעמיתים",
+     "href": "https://www.analyst.co.il/",
+     "year": null,
+     "iframe": false,
+     "doc": false,
+     "internal": true
+    },
+    {
+     "text": "מחשבון תשואות – השוואה בין קרנות השתלמות וקופות גמל נבחרות",
+     "href": "https://www.analyst.co.il/yield-comparison-calculator/",
+     "year": null,
+     "iframe": false,
+     "doc": false,
+     "internal": true
+    },
+    {
+     "text": "מהי קרן השתלמות",
+     "href": "https://www.analyst.co.il/articles/about-training-funds/",
+     "year": null,
+     "iframe": false,
+     "doc": false,
+     "internal": true
+    },
+    {
+     "text": "מהי קופת גמל?",
+     "href": "https://www.analyst.co.il/articles/about-provident-funds/",
+     "year": null,
+     "iframe": false,
+     "doc": false,
+     "internal": true
+    },
+    {
+     "text": "העברת חשבון קרן השתלמות",
+     "href": "https://www.analyst.co.il/transfer-training-funds/",
+     "year": null,
+     "iframe": false,
+     "doc": false,
+     "internal": true
+    },
+    {
+     "text": "העברת חשבון קופת גמל",
+     "href": "https://www.analyst.co.il/account-transfer-provident-funds/",
+     "year": null,
+     "iframe": false,
+     "doc": false,
+     "internal": true
+    },
+    {
+     "text": "דוחות כספיים",
+     "href": "https://www.analyst.co.il/financial-reports/",
+     "year": null,
+     "iframe": false,
+     "doc": false,
+     "internal": true
+    },
+    {
+     "text": "גילוי נאות",
+     "href": "https://www.analyst.co.il/proper-disclosure/",
+     "year": null,
+     "iframe": false,
+     "doc": false,
+     "internal": true
+    },
+    {
+     "text": "בית השקעות אנליסט הינו מבתי ההשקעות הוותיקים והמנוסים בניהול השקעות בשוק ההון בישראל. 'אנליסט' נוסדה בשנת 1985, ומשנת 1994 היא חברה ציבורית שמניותיה נסחרות בבורסה לניירות ערך בתל-אביב, ניהול ההשקעות מ",
+     "href": "https://www.analyst.co.il",
+     "year": null,
+     "iframe": false,
+     "doc": false,
+     "internal": true
+    },
+    {
+     "text": "בדיקת יתרת קרן השתלמות",
+     "href": "https://www.analyst.co.il/articles/training-fund-balance-check/",
+     "year": null,
+     "iframe": false,
+     "doc": false,
+     "internal": true
+    },
+    {
+     "text": "אנליסט קופות גמל בע\"מ",
+     "href": "https://www.analyst.co.il/head-of-public-application/",
+     "year": null,
+     "iframe": false,
+     "doc": false,
+     "internal": true
+    },
+    {
+     "text": "אודות קופות גמל",
+     "href": "https://www.analyst.co.il/about-us/provident/",
+     "year": null,
+     "iframe": false,
+     "doc": false,
+     "internal": true
+    },
+    {
+     "text": "אודות ניהול תיקי השקעות",
+     "href": "https://www.analyst.co.il/about-us/portfolio-management/",
+     "year": null,
+     "iframe": false,
+     "doc": false,
+     "internal": true
+    },
+    {
+     "text": "",
+     "href": "https://api.whatsapp.com/send?text=https://www.analyst.co.il/articles/about-provident-funds/",
+     "year": null,
+     "iframe": false,
+     "doc": false,
+     "internal": false
+    },
+    {
+     "text": "",
+     "href": "https://www.facebook.com/sharer/sharer.php?u=https://www.analyst.co.il/articles/about-provident-funds/",
+     "year": null,
+     "iframe": false,
+     "doc": false,
+     "internal": false
+    },
+    {
+     "text": "",
+     "href": "https://www.linkedin.com/shareArticle?mini=true&url=https://www.analyst.co.il/articles/about-provident-funds/",
+     "year": null,
+     "iframe": false,
+     "doc": false,
+     "internal": false
+    },
+    {
+     "text": "",
+     "href": "https://twitter.com/intent/tweet?url=https://www.analyst.co.il/articles/about-provident-funds/",
+     "year": null,
+     "iframe": false,
+     "doc": false,
+     "internal": false
+    }
+   ]
+  },
+  "https://www.analyst.co.il/funds-lobby/provident-funds/fund-814/": {
+   "product": "פנסיה+גמל+ביטוח",
+   "status": 200,
+   "method": "requests",
+   "text_hash": "216b62d4ea935143b06f6c6d9db74dc995757590",
+   "text_head": "מסלול אנליסט גמל מניות - אנליסט בית השקעות מעסיקים סוכנים אזור אישי עמיתים אודות אודות אנליסט אודות ניהול תיקי השקעות אודות קרנות נאמנות אודות קופות גמל אודות נץ סוכנות לביטוח פנסיוני הודעות החברה קופות גמל וקרנות השתלמות קרן השתלמות קופות גמל קופת גמל להשקעה תוכנית חיסכון לכל ילד קופה מרכזית לפיצויים תיקון 190 טפסים שימושיים מחשבון חישוב שיעור עלות שנתית צפויה הפקדה לקופות במעמד עצמאי תקנונים קרנות נאמנות ממונה על פניות הציבור הצהרה בנושא ESG ניהול תיקי השקעות רמות סיכון מחלקת מחקר דסק עסקי טופס CRS הצהרה בנושא ESG צור קשר קריירה מרכז הידע אנליסט PLAY חדשות פיננסיות מילון מושגים חיפוש לאזור ה",
+   "items": [
+    {
+     "text": "מדיניות פרטיות",
+     "href": "https://www.analyst.co.il/wp-content/uploads/2026/08/%D7%9E%D7%93%D7%99%D7%A0%D7%99%D7%95%D7%AA-%D7%94%D7%92%D7%A0%D7%AA-%D7%94%D7%A4%D7%A8%D7%98%D7%99%D7%95%D7%AA-%D7%9E%D7%A2%D7%95%D7%93%D7%9B%D7%A0%D7%AA-2026-PDF.pdf",
+     "year": "2026",
+     "iframe": false,
+     "doc": true,
+     "internal": true
+    },
+    {
+     "text": "הצהרה בנושא ESG",
+     "href": "https://www.analyst.co.il/wp-content/uploads/2026/07/מדיניות-ESG-אנליסט-גמל-נקי-13.7.2026.pdf",
+     "year": "2026",
+     "iframe": false,
+     "doc": true,
+     "internal": true
+    },
+    {
+     "text": "אנליסט גמל מניות מדיניות צפויה 2026",
+     "href": "https://www.analyst.co.il/wp-content/uploads/2026/09/אנליסט-גמל-מניות-מונגש.pdf",
+     "year": "2026",
+     "iframe": false,
+     "doc": true,
+     "internal": true
+    },
+    {
+     "text": "תנאי שימוש",
+     "href": "https://www.analyst.co.il/wp-content/uploads/2025/08/%D7%AA%D7%A0%D7%90%D7%99-%D7%A9%D7%99%D7%9E%D7%95%D7%A9.pdf",
+     "year": "2025",
+     "iframe": false,
+     "doc": true,
+     "internal": true
+    },
+    {
+     "text": "תנאי שימוש",
+     "href": "https://www.analyst.co.il/wp-content/uploads/2025/08/תנאי-שימוש.pdf",
+     "year": "2025",
+     "iframe": false,
+     "doc": true,
+     "internal": true
+    },
+    {
+     "text": "דוח ממונה אזרחים ותיקים",
+     "href": "https://www.analyst.co.il/wp-content/uploads/2025/01/%D7%93%D7%95%D7%97-%D7%A9%D7%A0%D7%AA%D7%99-%D7%9C%D7%90%D7%95%D7%A6%D7%A8-%D7%9E%D7%9E%D7%95%D7%A0%D7%94-%D7%90%D7%96%D7%A8%D7%97%D7%99%D7%9D-%D7%95%D7%AA%D7%99%D7%A7%D7%99%D7%9D-2024.pdf",
+     "year": "2025",
+     "iframe": false,
+     "doc": true,
+     "internal": true
+    },
+    {
+     "text": "במדיניות הפרטיות",
+     "href": "https://www.analyst.co.il/media/u0fl5prs/%D7%9E%D7%93%D7%99%D7%A0%D7%99%D7%95%D7%AA-%D7%A4%D7%A8%D7%98%D7%99%D7%95%D7%AA-1422.pdf?v=082025",
+     "year": "2025",
+     "iframe": false,
+     "doc": true,
+     "internal": true
+    },
+    {
+     "text": "אמנת שירות אנליסט קופות גמל",
+     "href": "https://www.analyst.co.il/media/aytdfpks/%D7%90%D7%9E%D7%A8%D7%AA-%D7%A9%D7%99%D7%A8%D7%95%D7%AA-%D7%9C%D7%A7%D7%95%D7%97%D7%95%D7%AA-%D7%9E%D7%A8%D7%A5-2022.pdf",
+     "year": "2022",
+     "iframe": false,
+     "doc": true,
+     "internal": true
+    },
+    {
+     "text": "תשואות לפי אפיקים ודוחות חודשיים",
+     "href": "https://www.analyst.co.il/funds-lobby/provident-funds/fund-814/report/",
+     "year": null,
+     "iframe": false,
+     "doc": false,
+     "internal": true
+    },
+    {
+     "text": "קרן השתלמות",
+     "href": "https://www.analyst.co.il/funds-lobby/training-funds/",
+     "year": null,
+     "iframe": false,
+     "doc": false,
+     "internal": true
+    },
+    {
+     "text": "קופת גמל להשקעה",
+     "href": "https://www.analyst.co.il/funds-lobby/gemel-invest/",
+     "year": null,
+     "iframe": false,
+     "doc": false,
+     "internal": true
+    },
+    {
+     "text": "קופות גמל וקרנות השתלמות",
+     "href": "https://www.analyst.co.il/funds-lobby/",
+     "year": null,
+     "iframe": false,
+     "doc": false,
+     "internal": true
+    },
+    {
+     "text": "קופות גמל",
+     "href": "https://www.analyst.co.il/funds-lobby/provident-funds/",
+     "year": null,
+     "iframe": false,
+     "doc": false,
+     "internal": true
+    },
+    {
+     "text": "פתיחת חשבון קרן השתלמות להפקדות חדשות",
+     "href": "https://www.analyst.co.il/openning-training-funds/",
+     "year": null,
+     "iframe": false,
+     "doc": false,
+     "internal": true
+    },
+    {
+     "text": "פתיחת חשבון קופת גמל להפקדות חדשות",
+     "href": "https://www.analyst.co.il/join-provident-funds/",
+     "year": null,
+     "iframe": false,
+     "doc": false,
+     "internal": true
+    },
+    {
+     "text": "פתיחת חשבון חדש לקופת גמל להשקעה",
+     "href": "https://www.analyst.co.il/gemel-invest-join/",
+     "year": null,
+     "iframe": false,
+     "doc": false,
+     "internal": true
+    },
+    {
+     "text": "ניהול תיקי השקעות",
+     "href": "https://www.analyst.co.il/portfolio-management/",
+     "year": null,
+     "iframe": false,
+     "doc": false,
+     "internal": true
+    },
+    {
+     "text": "מסמכים ודוחות מנהליים",
+     "href": "https://www.analyst.co.il/investment-policy/",
+     "year": null,
+     "iframe": false,
+     "doc": false,
+     "internal": true
+    },
+    {
+     "text": "מחשבון תשואות – השוואה בין קרנות השתלמות וקופות גמל נבחרות",
+     "href": "https://www.analyst.co.il/yield-comparison-calculator/",
+     "year": null,
+     "iframe": false,
+     "doc": false,
+     "internal": true
+    },
+    {
+     "text": "חיפוש",
+     "href": "https://www.analyst.co.il/funds-lobby/provident-funds/fund-814/",
+     "year": null,
+     "iframe": false,
+     "doc": false,
+     "internal": true
+    },
+    {
+     "text": "העברת חשבון קרן השתלמות",
+     "href": "https://www.analyst.co.il/transfer-training-funds/",
+     "year": null,
+     "iframe": false,
+     "doc": false,
+     "internal": true
+    },
+    {
+     "text": "העברת חשבון קופת גמל",
+     "href": "https://www.analyst.co.il/account-transfer-provident-funds/",
+     "year": null,
+     "iframe": false,
+     "doc": false,
+     "internal": true
+    },
+    {
+     "text": "דוחות כספיים",
+     "href": "https://www.analyst.co.il/financial-reports/",
+     "year": null,
+     "iframe": false,
+     "doc": false,
+     "internal": true
+    },
+    {
+     "text": "גילוי נאות",
+     "href": "https://www.analyst.co.il/proper-disclosure/",
+     "year": null,
+     "iframe": false,
+     "doc": false,
+     "internal": true
+    },
+    {
+     "text": "בית השקעות אנליסט הינו מבתי ההשקעות הוותיקים והמנוסים בניהול השקעות בשוק ההון בישראל. 'אנליסט' נוסדה בשנת 1985, ומשנת 1994 היא חברה ציבורית שמניותיה נסחרות בבורסה לניירות ערך בתל-אביב, ניהול ההשקעות מ",
+     "href": "https://www.analyst.co.il",
+     "year": null,
+     "iframe": false,
+     "doc": false,
+     "internal": true
+    },
+    {
+     "text": "אנליסט קופות גמל בע\"מ",
+     "href": "https://www.analyst.co.il/head-of-public-application/",
+     "year": null,
+     "iframe": false,
+     "doc": false,
+     "internal": true
+    },
+    {
+     "text": "אודות קופות גמל",
+     "href": "https://www.analyst.co.il/about-us/provident/",
+     "year": null,
+     "iframe": false,
+     "doc": false,
+     "internal": true
+    },
+    {
+     "text": "אודות נץ סוכנות לביטוח פנסיוני",
+     "href": "https://www.analyst.co.il/about-us/about-netz-pensionary-insurance/",
+     "year": null,
+     "iframe": false,
+     "doc": false,
+     "internal": true
+    },
+    {
+     "text": "אודות ניהול תיקי השקעות",
+     "href": "https://www.analyst.co.il/about-us/portfolio-management/",
+     "year": null,
+     "iframe": false,
+     "doc": false,
+     "internal": true
+    }
+   ]
+  },
+  "https://www.analyst.co.il/funds-lobby/provident-funds/fund-817/": {
+   "product": "פנסיה+גמל+ביטוח",
+   "status": 200,
+   "method": "requests",
+   "text_hash": "2bb0808f2308ee3b1460899014c9263ec4baeaf7",
+   "text_head": "מסלול אנליסט גמל מניות סחיר - אנליסט בית השקעות מעסיקים סוכנים אזור אישי עמיתים אודות אודות אנליסט אודות ניהול תיקי השקעות אודות קרנות נאמנות אודות קופות גמל אודות נץ סוכנות לביטוח פנסיוני הודעות החברה קופות גמל וקרנות השתלמות קרן השתלמות קופות גמל קופת גמל להשקעה תוכנית חיסכון לכל ילד קופה מרכזית לפיצויים תיקון 190 טפסים שימושיים מחשבון חישוב שיעור עלות שנתית צפויה הפקדה לקופות במעמד עצמאי תקנונים קרנות נאמנות ממונה על פניות הציבור הצהרה בנושא ESG ניהול תיקי השקעות רמות סיכון מחלקת מחקר דסק עסקי טופס CRS הצהרה בנושא ESG צור קשר קריירה מרכז הידע אנליסט PLAY חדשות פיננסיות מילון מושגים חיפוש לא",
+   "items": [
+    {
+     "text": "מדיניות פרטיות",
+     "href": "https://www.analyst.co.il/wp-content/uploads/2026/08/%D7%9E%D7%93%D7%99%D7%A0%D7%99%D7%95%D7%AA-%D7%94%D7%92%D7%A0%D7%AA-%D7%94%D7%A4%D7%A8%D7%98%D7%99%D7%95%D7%AA-%D7%9E%D7%A2%D7%95%D7%93%D7%9B%D7%A0%D7%AA-2026-PDF.pdf",
+     "year": "2026",
+     "iframe": false,
+     "doc": true,
+     "internal": true
+    },
+    {
+     "text": "הצהרה בנושא ESG",
+     "href": "https://www.analyst.co.il/wp-content/uploads/2026/07/מדיניות-ESG-אנליסט-גמל-נקי-13.7.2026.pdf",
+     "year": "2026",
+     "iframe": false,
+     "doc": true,
+     "internal": true
+    },
+    {
+     "text": "אנליסט גמל מניות סחיר מדיניות צפויה 2026",
+     "href": "https://www.analyst.co.il/wp-content/uploads/2026/02/אנליסט-גמל-מניות-סחיר-PDFUA.pdf",
+     "year": "2026",
+     "iframe": false,
+     "doc": true,
+     "internal": true
+    },
+    {
+     "text": "תנאי שימוש",
+     "href": "https://www.analyst.co.il/wp-content/uploads/2025/08/%D7%AA%D7%A0%D7%90%D7%99-%D7%A9%D7%99%D7%9E%D7%95%D7%A9.pdf",
+     "year": "2025",
+     "iframe": false,
+     "doc": true,
+     "internal": true
+    },
+    {
+     "text": "תנאי שימוש",
+     "href": "https://www.analyst.co.il/wp-content/uploads/2025/08/תנאי-שימוש.pdf",
+     "year": "2025",
+     "iframe": false,
+     "doc": true,
+     "internal": true
+    },
+    {
+     "text": "דוח ממונה אזרחים ותיקים",
+     "href": "https://www.analyst.co.il/wp-content/uploads/2025/01/%D7%93%D7%95%D7%97-%D7%A9%D7%A0%D7%AA%D7%99-%D7%9C%D7%90%D7%95%D7%A6%D7%A8-%D7%9E%D7%9E%D7%95%D7%A0%D7%94-%D7%90%D7%96%D7%A8%D7%97%D7%99%D7%9D-%D7%95%D7%AA%D7%99%D7%A7%D7%99%D7%9D-2024.pdf",
+     "year": "2025",
+     "iframe": false,
+     "doc": true,
+     "internal": true
+    },
+    {
+     "text": "במדיניות הפרטיות",
+     "href": "https://www.analyst.co.il/media/u0fl5prs/%D7%9E%D7%93%D7%99%D7%A0%D7%99%D7%95%D7%AA-%D7%A4%D7%A8%D7%98%D7%99%D7%95%D7%AA-1422.pdf?v=082025",
+     "year": "2025",
+     "iframe": false,
+     "doc": true,
+     "internal": true
+    },
+    {
+     "text": "אמנת שירות אנליסט קופות גמל",
+     "href": "https://www.analyst.co.il/media/aytdfpks/%D7%90%D7%9E%D7%A8%D7%AA-%D7%A9%D7%99%D7%A8%D7%95%D7%AA-%D7%9C%D7%A7%D7%95%D7%97%D7%95%D7%AA-%D7%9E%D7%A8%D7%A5-2022.pdf",
+     "year": "2022",
+     "iframe": false,
+     "doc": true,
+     "internal": true
+    },
+    {
+     "text": "תשואות לפי אפיקים ודוחות חודשיים",
+     "href": "https://www.analyst.co.il/funds-lobby/provident-funds/fund-817/report/",
+     "year": null,
+     "iframe": false,
+     "doc": false,
+     "internal": true
+    },
+    {
+     "text": "קרן השתלמות",
+     "href": "https://www.analyst.co.il/funds-lobby/training-funds/",
+     "year": null,
+     "iframe": false,
+     "doc": false,
+     "internal": true
+    },
+    {
+     "text": "קופת גמל להשקעה",
+     "href": "https://www.analyst.co.il/funds-lobby/gemel-invest/",
+     "year": null,
+     "iframe": false,
+     "doc": false,
+     "internal": true
+    },
+    {
+     "text": "קופות גמל וקרנות השתלמות",
+     "href": "https://www.analyst.co.il/funds-lobby/",
+     "year": null,
+     "iframe": false,
+     "doc": false,
+     "internal": true
+    },
+    {
+     "text": "קופות גמל",
+     "href": "https://www.analyst.co.il/funds-lobby/provident-funds/",
+     "year": null,
+     "iframe": false,
+     "doc": false,
+     "internal": true
+    },
+    {
+     "text": "פתיחת חשבון קרן השתלמות להפקדות חדשות",
+     "href": "https://www.analyst.co.il/openning-training-funds/",
+     "year": null,
+     "iframe": false,
+     "doc": false,
+     "internal": true
+    },
+    {
+     "text": "פתיחת חשבון קופת גמל להפקדות חדשות",
+     "href": "https://www.analyst.co.il/join-provident-funds/",
+     "year": null,
+     "iframe": false,
+     "doc": false,
+     "internal": true
+    },
+    {
+     "text": "פתיחת חשבון חדש לקופת גמל להשקעה",
+     "href": "https://www.analyst.co.il/gemel-invest-join/",
+     "year": null,
+     "iframe": false,
+     "doc": false,
+     "internal": true
+    },
+    {
+     "text": "ניהול תיקי השקעות",
+     "href": "https://www.analyst.co.il/portfolio-management/",
+     "year": null,
+     "iframe": false,
+     "doc": false,
+     "internal": true
+    },
+    {
+     "text": "מסמכים ודוחות מנהליים",
+     "href": "https://www.analyst.co.il/investment-policy/",
+     "year": null,
+     "iframe": false,
+     "doc": false,
+     "internal": true
+    },
+    {
+     "text": "מחשבון תשואות – השוואה בין קרנות השתלמות וקופות גמל נבחרות",
+     "href": "https://www.analyst.co.il/yield-comparison-calculator/",
+     "year": null,
+     "iframe": false,
+     "doc": false,
+     "internal": true
+    },
+    {
+     "text": "חיפוש",
+     "href": "https://www.analyst.co.il/funds-lobby/provident-funds/fund-817/",
+     "year": null,
+     "iframe": false,
+     "doc": false,
+     "internal": true
+    },
+    {
+     "text": "העברת חשבון קרן השתלמות",
+     "href": "https://www.analyst.co.il/transfer-training-funds/",
+     "year": null,
+     "iframe": false,
+     "doc": false,
+     "internal": true
+    },
+    {
+     "text": "העברת חשבון קופת גמל",
+     "href": "https://www.analyst.co.il/account-transfer-provident-funds/",
+     "year": null,
+     "iframe": false,
+     "doc": false,
+     "internal": true
+    },
+    {
+     "text": "דוחות כספיים",
+     "href": "https://www.analyst.co.il/financial-reports/",
+     "year": null,
+     "iframe": false,
+     "doc": false,
+     "internal": true
+    },
+    {
+     "text": "גילוי נאות",
+     "href": "https://www.analyst.co.il/proper-disclosure/",
+     "year": null,
+     "iframe": false,
+     "doc": false,
+     "internal": true
+    },
+    {
+     "text": "בית השקעות אנליסט הינו מבתי ההשקעות הוותיקים והמנוסים בניהול השקעות בשוק ההון בישראל. 'אנליסט' נוסדה בשנת 1985, ומשנת 1994 היא חברה ציבורית שמניותיה נסחרות בבורסה לניירות ערך בתל-אביב, ניהול ההשקעות מ",
+     "href": "https://www.analyst.co.il",
+     "year": null,
+     "iframe": false,
+     "doc": false,
+     "internal": true
+    },
+    {
+     "text": "אנליסט קופות גמל בע\"מ",
+     "href": "https://www.analyst.co.il/head-of-public-application/",
+     "year": null,
+     "iframe": false,
+     "doc": false,
+     "internal": true
+    },
+    {
+     "text": "אודות קופות גמל",
+     "href": "https://www.analyst.co.il/about-us/provident/",
+     "year": null,
+     "iframe": false,
+     "doc": false,
+     "internal": true
+    },
+    {
+     "text": "אודות נץ סוכנות לביטוח פנסיוני",
+     "href": "https://www.analyst.co.il/about-us/about-netz-pensionary-insurance/",
+     "year": null,
+     "iframe": false,
+     "doc": false,
+     "internal": true
+    },
+    {
+     "text": "אודות ניהול תיקי השקעות",
+     "href": "https://www.analyst.co.il/about-us/portfolio-management/",
+     "year": null,
+     "iframe": false,
+     "doc": false,
+     "internal": true
+    }
+   ]
+  },
+  "https://www.analyst.co.il/funds-lobby/provident-funds/fund-813/": {
+   "product": "פנסיה+גמל+ביטוח",
+   "status": 200,
+   "method": "requests",
+   "text_hash": "a2459bb614138e275f8fec09cdb662eae8866ea2",
+   "text_head": "מסלול קופת גמל- אנליסט גמל אשראי ואג\"ח - אנליסט בית השקעות מעסיקים סוכנים אזור אישי עמיתים אודות אודות אנליסט אודות ניהול תיקי השקעות אודות קרנות נאמנות אודות קופות גמל אודות נץ סוכנות לביטוח פנסיוני הודעות החברה קופות גמל וקרנות השתלמות קרן השתלמות קופות גמל קופת גמל להשקעה תוכנית חיסכון לכל ילד קופה מרכזית לפיצויים תיקון 190 טפסים שימושיים מחשבון חישוב שיעור עלות שנתית צפויה הפקדה לקופות במעמד עצמאי תקנונים קרנות נאמנות ממונה על פניות הציבור הצהרה בנושא ESG ניהול תיקי השקעות רמות סיכון מחלקת מחקר דסק עסקי טופס CRS הצהרה בנושא ESG צור קשר קריירה מרכז הידע אנליסט PLAY חדשות פיננסיות מילון מושג",
+   "items": [
+    {
+     "text": "מדיניות פרטיות",
+     "href": "https://www.analyst.co.il/wp-content/uploads/2026/08/%D7%9E%D7%93%D7%99%D7%A0%D7%99%D7%95%D7%AA-%D7%94%D7%92%D7%A0%D7%AA-%D7%94%D7%A4%D7%A8%D7%98%D7%99%D7%95%D7%AA-%D7%9E%D7%A2%D7%95%D7%93%D7%9B%D7%A0%D7%AA-2026-PDF.pdf",
+     "year": "2026",
+     "iframe": false,
+     "doc": true,
+     "internal": true
+    },
+    {
+     "text": "הצהרה בנושא ESG",
+     "href": "https://www.analyst.co.il/wp-content/uploads/2026/07/מדיניות-ESG-אנליסט-גמל-נקי-13.7.2026.pdf",
+     "year": "2026",
+     "iframe": false,
+     "doc": true,
+     "internal": true
+    },
+    {
+     "text": "אנליסט גמל אשראי ואג\"ח מדיניות צפויה 2026",
+     "href": "https://www.analyst.co.il/wp-content/uploads/2026/01/אנליסט-גמל-אשראי-ואגח-PDFUA.pdf",
+     "year": "2026",
+     "iframe": false,
+     "doc": true,
+     "internal": true
+    },
+    {
+     "text": "תנאי שימוש",
+     "href": "https://www.analyst.co.il/wp-content/uploads/2025/08/%D7%AA%D7%A0%D7%90%D7%99-%D7%A9%D7%99%D7%9E%D7%95%D7%A9.pdf",
+     "year": "2025",
+     "iframe": false,
+     "doc": true,
+     "internal": true
+    },
+    {
+     "text": "תנאי שימוש",
+     "href": "https://www.analyst.co.il/wp-content/uploads/2025/08/תנאי-שימוש.pdf",
+     "year": "2025",
+     "iframe": false,
+     "doc": true,
+     "internal": true
+    },
+    {
+     "text": "דוח ממונה אזרחים ותיקים",
+     "href": "https://www.analyst.co.il/wp-content/uploads/2025/01/%D7%93%D7%95%D7%97-%D7%A9%D7%A0%D7%AA%D7%99-%D7%9C%D7%90%D7%95%D7%A6%D7%A8-%D7%9E%D7%9E%D7%95%D7%A0%D7%94-%D7%90%D7%96%D7%A8%D7%97%D7%99%D7%9D-%D7%95%D7%AA%D7%99%D7%A7%D7%99%D7%9D-2024.pdf",
+     "year": "2025",
+     "iframe": false,
+     "doc": true,
+     "internal": true
+    },
+    {
+     "text": "במדיניות הפרטיות",
+     "href": "https://www.analyst.co.il/media/u0fl5prs/%D7%9E%D7%93%D7%99%D7%A0%D7%99%D7%95%D7%AA-%D7%A4%D7%A8%D7%98%D7%99%D7%95%D7%AA-1422.pdf?v=082025",
+     "year": "2025",
+     "iframe": false,
+     "doc": true,
+     "internal": true
+    },
+    {
+     "text": "אמנת שירות אנליסט קופות גמל",
+     "href": "https://www.analyst.co.il/media/aytdfpks/%D7%90%D7%9E%D7%A8%D7%AA-%D7%A9%D7%99%D7%A8%D7%95%D7%AA-%D7%9C%D7%A7%D7%95%D7%97%D7%95%D7%AA-%D7%9E%D7%A8%D7%A5-2022.pdf",
+     "year": "2022",
+     "iframe": false,
+     "doc": true,
+     "internal": true
+    },
+    {
+     "text": "תשואות לפי אפיקים ודוחות חודשיים",
+     "href": "https://www.analyst.co.il/funds-lobby/provident-funds/fund-813/report/",
+     "year": null,
+     "iframe": false,
+     "doc": false,
+     "internal": true
+    },
+    {
+     "text": "קרן השתלמות",
+     "href": "https://www.analyst.co.il/funds-lobby/training-funds/",
+     "year": null,
+     "iframe": false,
+     "doc": false,
+     "internal": true
+    },
+    {
+     "text": "קופת גמל להשקעה",
+     "href": "https://www.analyst.co.il/funds-lobby/gemel-invest/",
+     "year": null,
+     "iframe": false,
+     "doc": false,
+     "internal": true
+    },
+    {
+     "text": "קופות גמל וקרנות השתלמות",
+     "href": "https://www.analyst.co.il/funds-lobby/",
+     "year": null,
+     "iframe": false,
+     "doc": false,
+     "internal": true
+    },
+    {
+     "text": "קופות גמל",
+     "href": "https://www.analyst.co.il/funds-lobby/provident-funds/",
+     "year": null,
+     "iframe": false,
+     "doc": false,
+     "internal": true
+    },
+    {
+     "text": "פתיחת חשבון קרן השתלמות להפקדות חדשות",
+     "href": "https://www.analyst.co.il/openning-training-funds/",
+     "year": null,
+     "iframe": false,
+     "doc": false,
+     "internal": true
+    },
+    {
+     "text": "פתיחת חשבון קופת גמל להפקדות חדשות",
+     "href": "https://www.analyst.co.il/join-provident-funds/",
+     "year": null,
+     "iframe": false,
+     "doc": false,
+     "internal": true
+    },
+    {
+     "text": "פתיחת חשבון חדש לקופת גמל להשקעה",
+     "href": "https://www.analyst.co.il/gemel-invest-join/",
+     "year": null,
+     "iframe": false,
+     "doc": false,
+     "internal": true
+    },
+    {
+     "text": "ניהול תיקי השקעות",
+     "href": "https://www.analyst.co.il/portfolio-management/",
+     "year": null,
+     "iframe": false,
+     "doc": false,
+     "internal": true
+    },
+    {
+     "text": "מסמכים ודוחות מנהליים",
+     "href": "https://www.analyst.co.il/investment-policy/",
+     "year": null,
+     "iframe": false,
+     "doc": false,
+     "internal": true
+    },
+    {
+     "text": "מחשבון תשואות – השוואה בין קרנות השתלמות וקופות גמל נבחרות",
+     "href": "https://www.analyst.co.il/yield-comparison-calculator/",
+     "year": null,
+     "iframe": false,
+     "doc": false,
+     "internal": true
+    },
+    {
+     "text": "לחצו כאן.",
+     "href": "https://www.analyst.co.il/funds-lobby/provident-funds/fund-8128/",
+     "year": null,
+     "iframe": false,
+     "doc": false,
+     "internal": true
+    },
+    {
+     "text": "חיפוש",
+     "href": "https://www.analyst.co.il/funds-lobby/provident-funds/fund-813/",
+     "year": null,
+     "iframe": false,
+     "doc": false,
+     "internal": true
+    },
+    {
+     "text": "העברת חשבון קרן השתלמות",
+     "href": "https://www.analyst.co.il/transfer-training-funds/",
+     "year": null,
+     "iframe": false,
+     "doc": false,
+     "internal": true
+    },
+    {
+     "text": "העברת חשבון קופת גמל",
+     "href": "https://www.analyst.co.il/account-transfer-provident-funds/",
+     "year": null,
+     "iframe": false,
+     "doc": false,
+     "internal": true
+    },
+    {
+     "text": "דוחות כספיים",
+     "href": "https://www.analyst.co.il/financial-reports/",
+     "year": null,
+     "iframe": false,
+     "doc": false,
+     "internal": true
+    },
+    {
+     "text": "גילוי נאות",
+     "href": "https://www.analyst.co.il/proper-disclosure/",
+     "year": null,
+     "iframe": false,
+     "doc": false,
+     "internal": true
+    },
+    {
+     "text": "בית השקעות אנליסט הינו מבתי ההשקעות הוותיקים והמנוסים בניהול השקעות בשוק ההון בישראל. 'אנליסט' נוסדה בשנת 1985, ומשנת 1994 היא חברה ציבורית שמניותיה נסחרות בבורסה לניירות ערך בתל-אביב, ניהול ההשקעות מ",
+     "href": "https://www.analyst.co.il",
+     "year": null,
+     "iframe": false,
+     "doc": false,
+     "internal": true
+    },
+    {
+     "text": "אנליסט קופות גמל בע\"מ",
+     "href": "https://www.analyst.co.il/head-of-public-application/",
+     "year": null,
+     "iframe": false,
+     "doc": false,
+     "internal": true
+    },
+    {
+     "text": "אודות קופות גמל",
+     "href": "https://www.analyst.co.il/about-us/provident/",
+     "year": null,
+     "iframe": false,
+     "doc": false,
+     "internal": true
+    },
+    {
+     "text": "אודות נץ סוכנות לביטוח פנסיוני",
+     "href": "https://www.analyst.co.il/about-us/about-netz-pensionary-insurance/",
+     "year": null,
+     "iframe": false,
+     "doc": false,
+     "internal": true
+    },
+    {
+     "text": "אודות ניהול תיקי השקעות",
+     "href": "https://www.analyst.co.il/about-us/portfolio-management/",
+     "year": null,
+     "iframe": false,
+     "doc": false,
+     "internal": true
+    }
+   ]
+  },
+  "https://www.analyst.co.il/funds-lobby/provident-funds/fund-815/": {
+   "product": "פנסיה+גמל+ביטוח",
+   "status": 200,
+   "method": "requests",
+   "text_hash": "c90c1e5031d9e8605767829b89c063306a4221a8",
+   "text_head": "מסלול אנליסט גמל כספי (שקלי) - קופות גמל - אנליסט בית השקעות מעסיקים סוכנים אזור אישי עמיתים אודות אודות אנליסט אודות ניהול תיקי השקעות אודות קרנות נאמנות אודות קופות גמל אודות נץ סוכנות לביטוח פנסיוני הודעות החברה קופות גמל וקרנות השתלמות קרן השתלמות קופות גמל קופת גמל להשקעה תוכנית חיסכון לכל ילד קופה מרכזית לפיצויים תיקון 190 טפסים שימושיים מחשבון חישוב שיעור עלות שנתית צפויה הפקדה לקופות במעמד עצמאי תקנונים קרנות נאמנות ממונה על פניות הציבור הצהרה בנושא ESG ניהול תיקי השקעות רמות סיכון מחלקת מחקר דסק עסקי טופס CRS הצהרה בנושא ESG צור קשר קריירה מרכז הידע אנליסט PLAY חדשות פיננסיות מילון מו",
+   "items": [
+    {
+     "text": "מדיניות פרטיות",
+     "href": "https://www.analyst.co.il/wp-content/uploads/2026/08/%D7%9E%D7%93%D7%99%D7%A0%D7%99%D7%95%D7%AA-%D7%94%D7%92%D7%A0%D7%AA-%D7%94%D7%A4%D7%A8%D7%98%D7%99%D7%95%D7%AA-%D7%9E%D7%A2%D7%95%D7%93%D7%9B%D7%A0%D7%AA-2026-PDF.pdf",
+     "year": "2026",
+     "iframe": false,
+     "doc": true,
+     "internal": true
+    },
+    {
+     "text": "הצהרה בנושא ESG",
+     "href": "https://www.analyst.co.il/wp-content/uploads/2026/07/מדיניות-ESG-אנליסט-גמל-נקי-13.7.2026.pdf",
+     "year": "2026",
+     "iframe": false,
+     "doc": true,
+     "internal": true
+    },
+    {
+     "text": "אנליסט גמל כספי (שקלי) מדיניות צפויה 2026",
+     "href": "https://www.analyst.co.il/wp-content/uploads/2026/01/אנליסט-גמל-כספי-שקלי-PDFUA.pdf",
+     "year": "2026",
+     "iframe": false,
+     "doc": true,
+     "internal": true
+    },
+    {
+     "text": "תנאי שימוש",
+     "href": "https://www.analyst.co.il/wp-content/uploads/2025/08/%D7%AA%D7%A0%D7%90%D7%99-%D7%A9%D7%99%D7%9E%D7%95%D7%A9.pdf",
+     "year": "2025",
+     "iframe": false,
+     "doc": true,
+     "internal": true
+    },
+    {
+     "text": "תנאי שימוש",
+     "href": "https://www.analyst.co.il/wp-content/uploads/2025/08/תנאי-שימוש.pdf",
+     "year": "2025",
+     "iframe": false,
+     "doc": true,
+     "internal": true
+    },
+    {
+     "text": "דוח ממונה אזרחים ותיקים",
+     "href": "https://www.analyst.co.il/wp-content/uploads/2025/01/%D7%93%D7%95%D7%97-%D7%A9%D7%A0%D7%AA%D7%99-%D7%9C%D7%90%D7%95%D7%A6%D7%A8-%D7%9E%D7%9E%D7%95%D7%A0%D7%94-%D7%90%D7%96%D7%A8%D7%97%D7%99%D7%9D-%D7%95%D7%AA%D7%99%D7%A7%D7%99%D7%9D-2024.pdf",
+     "year": "2025",
+     "iframe": false,
+     "doc": true,
+     "internal": true
+    },
+    {
+     "text": "במדיניות הפרטיות",
+     "href": "https://www.analyst.co.il/media/u0fl5prs/%D7%9E%D7%93%D7%99%D7%A0%D7%99%D7%95%D7%AA-%D7%A4%D7%A8%D7%98%D7%99%D7%95%D7%AA-1422.pdf?v=082025",
+     "year": "2025",
+     "iframe": false,
+     "doc": true,
+     "internal": true
+    },
+    {
+     "text": "אמנת שירות אנליסט קופות גמל",
+     "href": "https://www.analyst.co.il/media/aytdfpks/%D7%90%D7%9E%D7%A8%D7%AA-%D7%A9%D7%99%D7%A8%D7%95%D7%AA-%D7%9C%D7%A7%D7%95%D7%97%D7%95%D7%AA-%D7%9E%D7%A8%D7%A5-2022.pdf",
+     "year": "2022",
+     "iframe": false,
+     "doc": true,
+     "internal": true
+    },
+    {
+     "text": "תשואות לפי אפיקים ודוחות חודשיים",
+     "href": "https://www.analyst.co.il/funds-lobby/provident-funds/fund-815/report/",
+     "year": null,
+     "iframe": false,
+     "doc": false,
+     "internal": true
+    },
+    {
+     "text": "קרן השתלמות",
+     "href": "https://www.analyst.co.il/funds-lobby/training-funds/",
+     "year": null,
+     "iframe": false,
+     "doc": false,
+     "internal": true
+    },
+    {
+     "text": "קופת גמל להשקעה",
+     "href": "https://www.analyst.co.il/funds-lobby/gemel-invest/",
+     "year": null,
+     "iframe": false,
+     "doc": false,
+     "internal": true
+    },
+    {
+     "text": "קופות גמל וקרנות השתלמות",
+     "href": "https://www.analyst.co.il/funds-lobby/",
+     "year": null,
+     "iframe": false,
+     "doc": false,
+     "internal": true
+    },
+    {
+     "text": "קופות גמל",
+     "href": "https://www.analyst.co.il/funds-lobby/provident-funds/",
+     "year": null,
+     "iframe": false,
+     "doc": false,
+     "internal": true
+    },
+    {
+     "text": "פתיחת חשבון קרן השתלמות להפקדות חדשות",
+     "href": "https://www.analyst.co.il/openning-training-funds/",
+     "year": null,
+     "iframe": false,
+     "doc": false,
+     "internal": true
+    },
+    {
+     "text": "פתיחת חשבון קופת גמל להפקדות חדשות",
+     "href": "https://www.analyst.co.il/join-provident-funds/",
+     "year": null,
+     "iframe": false,
+     "doc": false,
+     "internal": true
+    },
+    {
+     "text": "פתיחת חשבון חדש לקופת גמל להשקעה",
+     "href": "https://www.analyst.co.il/gemel-invest-join/",
+     "year": null,
+     "iframe": false,
+     "doc": false,
+     "internal": true
+    },
+    {
+     "text": "ניהול תיקי השקעות",
+     "href": "https://www.analyst.co.il/portfolio-management/",
+     "year": null,
+     "iframe": false,
+     "doc": false,
+     "internal": true
+    },
+    {
+     "text": "מסמכים ודוחות מנהליים",
+     "href": "https://www.analyst.co.il/investment-policy/",
+     "year": null,
+     "iframe": false,
+     "doc": false,
+     "internal": true
+    },
+    {
+     "text": "מחשבון תשואות – השוואה בין קרנות השתלמות וקופות גמל נבחרות",
+     "href": "https://www.analyst.co.il/yield-comparison-calculator/",
+     "year": null,
+     "iframe": false,
+     "doc": false,
+     "internal": true
+    },
+    {
+     "text": "חיפוש",
+     "href": "https://www.analyst.co.il/funds-lobby/provident-funds/fund-815/",
+     "year": null,
+     "iframe": false,
+     "doc": false,
+     "internal": true
+    },
+    {
+     "text": "העברת חשבון קרן השתלמות",
+     "href": "https://www.analyst.co.il/transfer-training-funds/",
+     "year": null,
+     "iframe": false,
+     "doc": false,
+     "internal": true
+    },
+    {
+     "text": "העברת חשבון קופת גמל",
+     "href": "https://www.analyst.co.il/account-transfer-provident-funds/",
+     "year": null,
+     "iframe": false,
+     "doc": false,
+     "internal": true
+    },
+    {
+     "text": "דוחות כספיים",
+     "href": "https://www.analyst.co.il/financial-reports/",
+     "year": null,
+     "iframe": false,
+     "doc": false,
+     "internal": true
+    },
+    {
+     "text": "גילוי נאות",
+     "href": "https://www.analyst.co.il/proper-disclosure/",
+     "year": null,
+     "iframe": false,
+     "doc": false,
+     "internal": true
+    },
+    {
+     "text": "בית השקעות אנליסט הינו מבתי ההשקעות הוותיקים והמנוסים בניהול השקעות בשוק ההון בישראל. 'אנליסט' נוסדה בשנת 1985, ומשנת 1994 היא חברה ציבורית שמניותיה נסחרות בבורסה לניירות ערך בתל-אביב, ניהול ההשקעות מ",
+     "href": "https://www.analyst.co.il",
+     "year": null,
+     "iframe": false,
+     "doc": false,
+     "internal": true
+    },
+    {
+     "text": "אנליסט קופות גמל בע\"מ",
+     "href": "https://www.analyst.co.il/head-of-public-application/",
+     "year": null,
+     "iframe": false,
+     "doc": false,
+     "internal": true
+    },
+    {
+     "text": "אודות קופות גמל",
+     "href": "https://www.analyst.co.il/about-us/provident/",
+     "year": null,
+     "iframe": false,
+     "doc": false,
+     "internal": true
+    },
+    {
+     "text": "אודות נץ סוכנות לביטוח פנסיוני",
+     "href": "https://www.analyst.co.il/about-us/about-netz-pensionary-insurance/",
+     "year": null,
+     "iframe": false,
+     "doc": false,
+     "internal": true
+    },
+    {
+     "text": "אודות ניהול תיקי השקעות",
+     "href": "https://www.analyst.co.il/about-us/portfolio-management/",
+     "year": null,
+     "iframe": false,
+     "doc": false,
+     "internal": true
+    }
+   ]
+  },
+  "https://www.analyst.co.il/funds-lobby/provident-funds/fund-818/": {
+   "product": "פנסיה+גמל+ביטוח",
+   "status": 200,
+   "method": "requests",
+   "text_hash": "b1c8d1a99d88c1a9cf46a8ec8e79c1a537ec1e7f",
+   "text_head": "מסלול קופת גמל - אנליסט גמל משולב סחיר - אנליסט בית השקעות מעסיקים סוכנים אזור אישי עמיתים אודות אודות אנליסט אודות ניהול תיקי השקעות אודות קרנות נאמנות אודות קופות גמל אודות נץ סוכנות לביטוח פנסיוני הודעות החברה קופות גמל וקרנות השתלמות קרן השתלמות קופות גמל קופת גמל להשקעה תוכנית חיסכון לכל ילד קופה מרכזית לפיצויים תיקון 190 טפסים שימושיים מחשבון חישוב שיעור עלות שנתית צפויה הפקדה לקופות במעמד עצמאי תקנונים קרנות נאמנות ממונה על פניות הציבור הצהרה בנושא ESG ניהול תיקי השקעות רמות סיכון מחלקת מחקר דסק עסקי טופס CRS הצהרה בנושא ESG צור קשר קריירה מרכז הידע אנליסט PLAY חדשות פיננסיות מילון מושג",
+   "items": [
+    {
+     "text": "מדיניות פרטיות",
+     "href": "https://www.analyst.co.il/wp-content/uploads/2026/08/%D7%9E%D7%93%D7%99%D7%A0%D7%99%D7%95%D7%AA-%D7%94%D7%92%D7%A0%D7%AA-%D7%94%D7%A4%D7%A8%D7%98%D7%99%D7%95%D7%AA-%D7%9E%D7%A2%D7%95%D7%93%D7%9B%D7%A0%D7%AA-2026-PDF.pdf",
+     "year": "2026",
+     "iframe": false,
+     "doc": true,
+     "internal": true
+    },
+    {
+     "text": "הצהרה בנושא ESG",
+     "href": "https://www.analyst.co.il/wp-content/uploads/2026/07/מדיניות-ESG-אנליסט-גמל-נקי-13.7.2026.pdf",
+     "year": "2026",
+     "iframe": false,
+     "doc": true,
+     "internal": true
+    },
+    {
+     "text": "אנליסט גמל משולב סחיר מדיניות צפויה 2026",
+     "href": "https://www.analyst.co.il/wp-content/uploads/2026/01/אנליסט-גמל-משולב-סחיר-PDFUA.pdf",
+     "year": "2026",
+     "iframe": false,
+     "doc": true,
+     "internal": true
+    },
+    {
+     "text": "תנאי שימוש",
+     "href": "https://www.analyst.co.il/wp-content/uploads/2025/08/%D7%AA%D7%A0%D7%90%D7%99-%D7%A9%D7%99%D7%9E%D7%95%D7%A9.pdf",
+     "year": "2025",
+     "iframe": false,
+     "doc": true,
+     "internal": true
+    },
+    {
+     "text": "תנאי שימוש",
+     "href": "https://www.analyst.co.il/wp-content/uploads/2025/08/תנאי-שימוש.pdf",
+     "year": "2025",
+     "iframe": false,
+     "doc": true,
+     "internal": true
+    },
+    {
+     "text": "דוח ממונה אזרחים ותיקים",
+     "href": "https://www.analyst.co.il/wp-content/uploads/2025/01/%D7%93%D7%95%D7%97-%D7%A9%D7%A0%D7%AA%D7%99-%D7%9C%D7%90%D7%95%D7%A6%D7%A8-%D7%9E%D7%9E%D7%95%D7%A0%D7%94-%D7%90%D7%96%D7%A8%D7%97%D7%99%D7%9D-%D7%95%D7%AA%D7%99%D7%A7%D7%99%D7%9D-2024.pdf",
+     "year": "2025",
+     "iframe": false,
+     "doc": true,
+     "internal": true
+    },
+    {
+     "text": "במדיניות הפרטיות",
+     "href": "https://www.analyst.co.il/media/u0fl5prs/%D7%9E%D7%93%D7%99%D7%A0%D7%99%D7%95%D7%AA-%D7%A4%D7%A8%D7%98%D7%99%D7%95%D7%AA-1422.pdf?v=082025",
+     "year": "2025",
+     "iframe": false,
+     "doc": true,
+     "internal": true
+    },
+    {
+     "text": "אמנת שירות אנליסט קופות גמל",
+     "href": "https://www.analyst.co.il/media/aytdfpks/%D7%90%D7%9E%D7%A8%D7%AA-%D7%A9%D7%99%D7%A8%D7%95%D7%AA-%D7%9C%D7%A7%D7%95%D7%97%D7%95%D7%AA-%D7%9E%D7%A8%D7%A5-2022.pdf",
+     "year": "2022",
+     "iframe": false,
+     "doc": true,
+     "internal": true
+    },
+    {
+     "text": "תשואות לפי אפיקים ודוחות חודשיים",
+     "href": "https://www.analyst.co.il/funds-lobby/provident-funds/fund-818/report/",
+     "year": null,
+     "iframe": false,
+     "doc": false,
+     "internal": true
+    },
+    {
+     "text": "קרן השתלמות",
+     "href": "https://www.analyst.co.il/funds-lobby/training-funds/",
+     "year": null,
+     "iframe": false,
+     "doc": false,
+     "internal": true
+    },
+    {
+     "text": "קופת גמל להשקעה",
+     "href": "https://www.analyst.co.il/funds-lobby/gemel-invest/",
+     "year": null,
+     "iframe": false,
+     "doc": false,
+     "internal": true
+    },
+    {
+     "text": "קופות גמל וקרנות השתלמות",
+     "href": "https://www.analyst.co.il/funds-lobby/",
+     "year": null,
+     "iframe": false,
+     "doc": false,
+     "internal": true
+    },
+    {
+     "text": "קופות גמל",
+     "href": "https://www.analyst.co.il/funds-lobby/provident-funds/",
+     "year": null,
+     "iframe": false,
+     "doc": false,
+     "internal": true
+    },
+    {
+     "text": "פתיחת חשבון קרן השתלמות להפקדות חדשות",
+     "href": "https://www.analyst.co.il/openning-training-funds/",
+     "year": null,
+     "iframe": false,
+     "doc": false,
+     "internal": true
+    },
+    {
+     "text": "פתיחת חשבון קופת גמל להפקדות חדשות",
+     "href": "https://www.analyst.co.il/join-provident-funds/",
+     "year": null,
+     "iframe": false,
+     "doc": false,
+     "internal": true
+    },
+    {
+     "text": "פתיחת חשבון חדש לקופת גמל להשקעה",
+     "href": "https://www.analyst.co.il/gemel-invest-join/",
+     "year": null,
+     "iframe": false,
+     "doc": false,
+     "internal": true
+    },
+    {
+     "text": "ניהול תיקי השקעות",
+     "href": "https://www.analyst.co.il/portfolio-management/",
+     "year": null,
+     "iframe": false,
+     "doc": false,
+     "internal": true
+    },
+    {
+     "text": "מסמכים ודוחות מנהליים",
+     "href": "https://www.analyst.co.il/investment-policy/",
+     "year": null,
+     "iframe": false,
+     "doc": false,
+     "internal": true
+    },
+    {
+     "text": "מחשבון תשואות – השוואה בין קרנות השתלמות וקופות גמל נבחרות",
+     "href": "https://www.analyst.co.il/yield-comparison-calculator/",
+     "year": null,
+     "iframe": false,
+     "doc": false,
+     "internal": true
+    },
+    {
+     "text": "לחצו כאן",
+     "href": "https://www.analyst.co.il/funds-lobby/provident-funds/fund-14280/",
+     "year": null,
+     "iframe": false,
+     "doc": false,
+     "internal": true
+    },
+    {
+     "text": "חיפוש",
+     "href": "https://www.analyst.co.il/funds-lobby/provident-funds/fund-818/",
+     "year": null,
+     "iframe": false,
+     "doc": false,
+     "internal": true
+    },
+    {
+     "text": "העברת חשבון קרן השתלמות",
+     "href": "https://www.analyst.co.il/transfer-training-funds/",
+     "year": null,
+     "iframe": false,
+     "doc": false,
+     "internal": true
+    },
+    {
+     "text": "העברת חשבון קופת גמל",
+     "href": "https://www.analyst.co.il/account-transfer-provident-funds/",
+     "year": null,
+     "iframe": false,
+     "doc": false,
+     "internal": true
+    },
+    {
+     "text": "דוחות כספיים",
+     "href": "https://www.analyst.co.il/financial-reports/",
+     "year": null,
+     "iframe": false,
+     "doc": false,
+     "internal": true
+    },
+    {
+     "text": "גילוי נאות",
+     "href": "https://www.analyst.co.il/proper-disclosure/",
+     "year": null,
+     "iframe": false,
+     "doc": false,
+     "internal": true
+    },
+    {
+     "text": "בית השקעות אנליסט הינו מבתי ההשקעות הוותיקים והמנוסים בניהול השקעות בשוק ההון בישראל. 'אנליסט' נוסדה בשנת 1985, ומשנת 1994 היא חברה ציבורית שמניותיה נסחרות בבורסה לניירות ערך בתל-אביב, ניהול ההשקעות מ",
+     "href": "https://www.analyst.co.il",
+     "year": null,
+     "iframe": false,
+     "doc": false,
+     "internal": true
+    },
+    {
+     "text": "אנליסט קופות גמל בע\"מ",
+     "href": "https://www.analyst.co.il/head-of-public-application/",
+     "year": null,
+     "iframe": false,
+     "doc": false,
+     "internal": true
+    },
+    {
+     "text": "אודות קופות גמל",
+     "href": "https://www.analyst.co.il/about-us/provident/",
+     "year": null,
+     "iframe": false,
+     "doc": false,
+     "internal": true
+    },
+    {
+     "text": "אודות נץ סוכנות לביטוח פנסיוני",
+     "href": "https://www.analyst.co.il/about-us/about-netz-pensionary-insurance/",
+     "year": null,
+     "iframe": false,
+     "doc": false,
+     "internal": true
+    },
+    {
+     "text": "אודות ניהול תיקי השקעות",
+     "href": "https://www.analyst.co.il/about-us/portfolio-management/",
+     "year": null,
+     "iframe": false,
+     "doc": false,
+     "internal": true
+    }
+   ]
+  },
+  "https://www.analyst.co.il/funds-lobby/provident-funds/fund-1412/": {
+   "product": "פנסיה+גמל+ביטוח",
+   "status": 200,
+   "method": "requests",
+   "text_hash": "eebceeab5f89fb1ac596e27d32b813e474ad59c7",
+   "text_head": "מסלול קופת גמל - אנליסט גמל אג\"ח ממשלות - אנליסט בית השקעות מעסיקים סוכנים אזור אישי עמיתים אודות אודות אנליסט אודות ניהול תיקי השקעות אודות קרנות נאמנות אודות קופות גמל אודות נץ סוכנות לביטוח פנסיוני הודעות החברה קופות גמל וקרנות השתלמות קרן השתלמות קופות גמל קופת גמל להשקעה תוכנית חיסכון לכל ילד קופה מרכזית לפיצויים תיקון 190 טפסים שימושיים מחשבון חישוב שיעור עלות שנתית צפויה הפקדה לקופות במעמד עצמאי תקנונים קרנות נאמנות ממונה על פניות הציבור הצהרה בנושא ESG ניהול תיקי השקעות רמות סיכון מחלקת מחקר דסק עסקי טופס CRS הצהרה בנושא ESG צור קשר קריירה מרכז הידע אנליסט PLAY חדשות פיננסיות מילון מוש",
+   "items": [
+    {
+     "text": "מדיניות פרטיות",
+     "href": "https://www.analyst.co.il/wp-content/uploads/2026/08/%D7%9E%D7%93%D7%99%D7%A0%D7%99%D7%95%D7%AA-%D7%94%D7%92%D7%A0%D7%AA-%D7%94%D7%A4%D7%A8%D7%98%D7%99%D7%95%D7%AA-%D7%9E%D7%A2%D7%95%D7%93%D7%9B%D7%A0%D7%AA-2026-PDF.pdf",
+     "year": "2026",
+     "iframe": false,
+     "doc": true,
+     "internal": true
+    },
+    {
+     "text": "הצהרה בנושא ESG",
+     "href": "https://www.analyst.co.il/wp-content/uploads/2026/07/מדיניות-ESG-אנליסט-גמל-נקי-13.7.2026.pdf",
+     "year": "2026",
+     "iframe": false,
+     "doc": true,
+     "internal": true
+    },
+    {
+     "text": "אנליסט גמל אג\"ח ממשלות מדיניות צפויה 2026",
+     "href": "https://www.analyst.co.il/wp-content/uploads/2026/01/אנליסט-גמל-אגח-ממשלות-PDFUA.pdf",
+     "year": "2026",
+     "iframe": false,
+     "doc": true,
+     "internal": true
+    },
+    {
+     "text": "תנאי שימוש",
+     "href": "https://www.analyst.co.il/wp-content/uploads/2025/08/%D7%AA%D7%A0%D7%90%D7%99-%D7%A9%D7%99%D7%9E%D7%95%D7%A9.pdf",
+     "year": "2025",
+     "iframe": false,
+     "doc": true,
+     "internal": true
+    },
+    {
+     "text": "תנאי שימוש",
+     "href": "https://www.analyst.co.il/wp-content/uploads/2025/08/תנאי-שימוש.pdf",
+     "year": "2025",
+     "iframe": false,
+     "doc": true,
+     "internal": true
+    },
+    {
+     "text": "דוח ממונה אזרחים ותיקים",
+     "href": "https://www.analyst.co.il/wp-content/uploads/2025/01/%D7%93%D7%95%D7%97-%D7%A9%D7%A0%D7%AA%D7%99-%D7%9C%D7%90%D7%95%D7%A6%D7%A8-%D7%9E%D7%9E%D7%95%D7%A0%D7%94-%D7%90%D7%96%D7%A8%D7%97%D7%99%D7%9D-%D7%95%D7%AA%D7%99%D7%A7%D7%99%D7%9D-2024.pdf",
+     "year": "2025",
+     "iframe": false,
+     "doc": true,
+     "internal": true
+    },
+    {
+     "text": "במדיניות הפרטיות",
+     "href": "https://www.analyst.co.il/media/u0fl5prs/%D7%9E%D7%93%D7%99%D7%A0%D7%99%D7%95%D7%AA-%D7%A4%D7%A8%D7%98%D7%99%D7%95%D7%AA-1422.pdf?v=082025",
+     "year": "2025",
+     "iframe": false,
+     "doc": true,
+     "internal": true
+    },
+    {
+     "text": "אמנת שירות אנליסט קופות גמל",
+     "href": "https://www.analyst.co.il/media/aytdfpks/%D7%90%D7%9E%D7%A8%D7%AA-%D7%A9%D7%99%D7%A8%D7%95%D7%AA-%D7%9C%D7%A7%D7%95%D7%97%D7%95%D7%AA-%D7%9E%D7%A8%D7%A5-2022.pdf",
+     "year": "2022",
+     "iframe": false,
+     "doc": true,
+     "internal": true
+    },
+    {
+     "text": "תשואות לפי אפיקים ודוחות חודשיים",
+     "href": "https://www.analyst.co.il/funds-lobby/provident-funds/fund-1412/report/",
+     "year": null,
+     "iframe": false,
+     "doc": false,
+     "internal": true
+    },
+    {
+     "text": "קרן השתלמות",
+     "href": "https://www.analyst.co.il/funds-lobby/training-funds/",
+     "year": null,
+     "iframe": false,
+     "doc": false,
+     "internal": true
+    },
+    {
+     "text": "קופת גמל להשקעה",
+     "href": "https://www.analyst.co.il/funds-lobby/gemel-invest/",
+     "year": null,
+     "iframe": false,
+     "doc": false,
+     "internal": true
+    },
+    {
+     "text": "קופות גמל וקרנות השתלמות",
+     "href": "https://www.analyst.co.il/funds-lobby/",
+     "year": null,
+     "iframe": false,
+     "doc": false,
+     "internal": true
+    },
+    {
+     "text": "קופות גמל",
+     "href": "https://www.analyst.co.il/funds-lobby/provident-funds/",
+     "year": null,
+     "iframe": false,
+     "doc": false,
+     "internal": true
+    },
+    {
+     "text": "פתיחת חשבון קרן השתלמות להפקדות חדשות",
+     "href": "https://www.analyst.co.il/openning-training-funds/",
+     "year": null,
+     "iframe": false,
+     "doc": false,
+     "internal": true
+    },
+    {
+     "text": "פתיחת חשבון קופת גמל להפקדות חדשות",
+     "href": "https://www.analyst.co.il/join-provident-funds/",
+     "year": null,
+     "iframe": false,
+     "doc": false,
+     "internal": true
+    },
+    {
+     "text": "פתיחת חשבון חדש לקופת גמל להשקעה",
+     "href": "https://www.analyst.co.il/gemel-invest-join/",
+     "year": null,
+     "iframe": false,
+     "doc": false,
+     "internal": true
+    },
+    {
+     "text": "ניהול תיקי השקעות",
+     "href": "https://www.analyst.co.il/portfolio-management/",
+     "year": null,
+     "iframe": false,
+     "doc": false,
+     "internal": true
+    },
+    {
+     "text": "מסמכים ודוחות מנהליים",
+     "href": "https://www.analyst.co.il/investment-policy/",
+     "year": null,
+     "iframe": false,
+     "doc": false,
+     "internal": true
+    },
+    {
+     "text": "מחשבון תשואות – השוואה בין קרנות השתלמות וקופות גמל נבחרות",
+     "href": "https://www.analyst.co.il/yield-comparison-calculator/",
+     "year": null,
+     "iframe": false,
+     "doc": false,
+     "internal": true
+    },
+    {
+     "text": "חיפוש",
+     "href": "https://www.analyst.co.il/funds-lobby/provident-funds/fund-1412/",
+     "year": null,
+     "iframe": false,
+     "doc": false,
+     "internal": true
+    },
+    {
+     "text": "העברת חשבון קרן השתלמות",
+     "href": "https://www.analyst.co.il/transfer-training-funds/",
+     "year": null,
+     "iframe": false,
+     "doc": false,
+     "internal": true
+    },
+    {
+     "text": "העברת חשבון קופת גמל",
+     "href": "https://www.analyst.co.il/account-transfer-provident-funds/",
+     "year": null,
+     "iframe": false,
+     "doc": false,
+     "internal": true
+    },
+    {
+     "text": "דוחות כספיים",
+     "href": "https://www.analyst.co.il/financial-reports/",
+     "year": null,
+     "iframe": false,
+     "doc": false,
+     "internal": true
+    },
+    {
+     "text": "גילוי נאות",
+     "href": "https://www.analyst.co.il/proper-disclosure/",
+     "year": null,
+     "iframe": false,
+     "doc": false,
+     "internal": true
+    },
+    {
+     "text": "בית השקעות אנליסט הינו מבתי ההשקעות הוותיקים והמנוסים בניהול השקעות בשוק ההון בישראל. 'אנליסט' נוסדה בשנת 1985, ומשנת 1994 היא חברה ציבורית שמניותיה נסחרות בבורסה לניירות ערך בתל-אביב, ניהול ההשקעות מ",
+     "href": "https://www.analyst.co.il",
+     "year": null,
+     "iframe": false,
+     "doc": false,
+     "internal": true
+    },
+    {
+     "text": "אנליסט קופות גמל בע\"מ",
+     "href": "https://www.analyst.co.il/head-of-public-application/",
+     "year": null,
+     "iframe": false,
+     "doc": false,
+     "internal": true
+    },
+    {
+     "text": "אודות קופות גמל",
+     "href": "https://www.analyst.co.il/about-us/provident/",
+     "year": null,
+     "iframe": false,
+     "doc": false,
+     "internal": true
+    },
+    {
+     "text": "אודות נץ סוכנות לביטוח פנסיוני",
+     "href": "https://www.analyst.co.il/about-us/about-netz-pensionary-insurance/",
+     "year": null,
+     "iframe": false,
+     "doc": false,
+     "internal": true
+    },
+    {
+     "text": "אודות ניהול תיקי השקעות",
+     "href": "https://www.analyst.co.il/about-us/portfolio-management/",
+     "year": null,
+     "iframe": false,
+     "doc": false,
+     "internal": true
     }
    ]
   }
