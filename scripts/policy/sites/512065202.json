@@ -31,12 +31,45 @@
   {
    "product": "גמל",
    "url": "https://www.meitav.co.il/provident_pension/provident_fund_reports/"
+  },
+  {
+   "product": "גמל",
+   "url": "https://www.meitav.co.il/provident_pension/gemel/gemel_reports/"
+  },
+  {
+   "product": "גמל",
+   "url": "https://www.meitav.co.il/provident_pension/pension/pension-reports/"
+  },
+  {
+   "product": "גמל",
+   "url": "https://www.meitav.co.il/provident_pension/kupa_gemel_reports/"
+  },
+  {
+   "product": "גמל",
+   "url": "https://www.meitav.co.il/provident_pension/pension_reports/"
+  },
+  {
+   "product": "גמל",
+   "url": "https://www.meitav.co.il/provident_pension/kupa_gemel_invest_reports/"
+  },
+  {
+   "product": "גמל",
+   "url": "https://www.meitav.co.il/provident_pension/kids_reports/"
+  },
+  {
+   "product": "גמל",
+   "url": "https://www.meitav.co.il/provident_pension/keren_hishtalmut_report/"
+  },
+  {
+   "product": "גמל",
+   "url": "https://www.meitav.co.il/provident_pension/hishtalmut/hishtalmut_reports/"
   }
  ],
  "returns_click_texts": [
   "2025",
-  "2024"
+  "2024",
+  "2023"
  ],
- "returns_ctx": "provident_fund_reports",
+ "returns_ctx": "provident_pension/(provident_fund_reports|gemel/gemel_reports|pension/pension-reports|kupa_gemel_reports|pension_reports|kupa_gemel_invest_reports|kids_reports|keren_hishtalmut_report|hishtalmut/hishtalmut_reports)/?$",
  "returns_exclude": "meitav\\.co\\.il/media/|marketing-cms|lighthouse-cloud|uploadfiles/\\d+_\\d+_\\d+_\\d+_\\d+\\.xls$|_Q\\d+\\.xlsx$"
 }
