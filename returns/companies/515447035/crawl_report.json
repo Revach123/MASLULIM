@@ -1,27 +1,26 @@
 {
  "legal_id": "515447035",
  "company": "הפניקס חח\"י קופה מרכזית לקצבה בע\"מ",
- "run": "2026-10-08T12:28:07+00:00",
+ "run": "2026-10-08T13:47:04+00:00",
  "errors": [
-  "https://www.fnx.co.il/SPF/iframe-namal-markivei-tsuua.aspx -> not_a_document",
-  "https://www.fnx.co.il/SPF/iframe-namal-ashdod-tsua.aspx -> not_a_document",
-  "https://www.fnx.co.il/SPF/iframe-phoenix-all-embracing-pension-yield-components.aspx -> not_a_document"
+  "https://www.fnx.co.il/SPF/iframe-phoenix-all-embracing-pension-yield-components.aspx -> not_a_document",
+  "https://www.fnx.co.il/SPF/iframe-phoenix-general-pension-yield-components.aspx -> not_a_document"
  ],
  "seeds": {
   "config": 0,
-  "discovered": 6,
+  "discovered": 7,
   "policy_snapshot": 4,
   "policy_snapshot_docs": 0,
   "sitemap": 6
  },
  "imported_from_policy": 0,
- "pages": 15,
+ "pages": 12,
  "pages_failed": [
   "https://www.fnx.co.il/SPF/: 404"
  ],
- "candidates": 36,
- "docs": 33,
- "new_docs": 20,
- "index_size": 33,
- "seconds": 1611
+ "candidates": 22,
+ "docs": 20,
+ "new_docs": 7,
+ "index_size": 40,
+ "seconds": 1145
 }
