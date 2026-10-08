@@ -1,33 +1,28 @@
 {
  "legal_id": "520023185",
  "company": "הפניקס חברה לביטוח בע\"מ",
- "run": "2026-10-08T12:36:29+00:00",
+ "run": "2026-10-08T13:54:23+00:00",
  "errors": [
-  "https://www.fnx.co.il/SPF/iframe-namal-ashdod-tsua.aspx -> not_a_document",
   "https://www.fnx.co.il/SPF/iframe-phoenix-all-embracing-pension-yield-components.aspx -> not_a_document",
   "https://www.fnx.co.il/SPF/iframe-phoenix-general-pension-yield-components.aspx -> not_a_document",
   "https://www.fnx.co.il/SPF/iframe-basic-member-pension-fund-yield-components.aspx -> not_a_document",
-  "tps://digital-content.fnx.co.il/SPF/iframe-basic-member-pension-fund-yield-components.aspx -> not_a_document",
-  "https://www.fnx.co.il/SPF/iframe-namal-ashdod-tsua.aspx?page=2 -> not_a_document",
   "ttps://www.fnx.co.il/SPF/iframe-phoenix-all-embracing-pension-yield-components.aspx?page=2 -> not_a_document",
   "ttps://www.fnx.co.il/SPF/iframe-phoenix-all-embracing-pension-yield-components.aspx?page=1 -> not_a_document",
   "https://www.fnx.co.il/SPF/iframe-monthly-yield-components.aspx -> not_a_document"
  ],
  "seeds": {
   "config": 0,
-  "discovered": 10,
+  "discovered": 12,
   "policy_snapshot": 4,
   "policy_snapshot_docs": 0,
   "sitemap": 6
  },
  "imported_from_policy": 0,
- "pages": 21,
- "pages_failed": [
-  "https://www.fnx.co.il/SPF/: 404"
- ],
- "candidates": 79,
- "docs": 70,
- "new_docs": 33,
+ "pages": 12,
+ "pages_failed": [],
+ "candidates": 51,
+ "docs": 45,
+ "new_docs": 0,
  "index_size": 70,
- "seconds": 1532
+ "seconds": 1153
 }
