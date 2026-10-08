@@ -1,11 +1,11 @@
 {
  "totals": {
   "companies": 76,
-  "with_data": 45,
-  "tracks": 756,
+  "with_data": 46,
+  "tracks": 757,
   "registry_tracks": 1289,
   "registry_found": 482,
-  "docs": 5895
+  "docs": 5931
  },
  "companies": [
   {
@@ -310,6 +310,19 @@
   {
    "legal_id": "520020447",
    "company": "קרן הגמלאות של חברי אגד בע\"מ",
+   "tracks": 1,
+   "tracks_numbered": 1,
+   "registry_tracks": 0,
+   "registry_found": 0,
+   "registry_coverage": null,
+   "first_month": "2022-01",
+   "last_month": "2026-06",
+   "docs_returns": 89,
+   "nostro": false
+  },
+  {
+   "legal_id": "520020504",
+   "company": "קרן הגמלאות המרכזית של עובדי ההסתדרות בע\"מ",
    "tracks": 1,
    "tracks_numbered": 1,
    "registry_tracks": 0,
