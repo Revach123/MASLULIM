@@ -1,11 +1,11 @@
 {
  "totals": {
   "companies": 76,
-  "with_data": 55,
-  "tracks": 1203,
+  "with_data": 56,
+  "tracks": 1209,
   "registry_tracks": 1289,
-  "registry_found": 650,
-  "docs": 8312
+  "registry_found": 656,
+  "docs": 8324
  },
  "companies": [
   {
@@ -214,6 +214,19 @@
    "first_month": "2017-01",
    "last_month": "2026-06",
    "docs_returns": 67,
+   "nostro": false
+  },
+  {
+   "legal_id": "513173393",
+   "company": "אלטשולר שחם גמל ופנסיה בע\"מ",
+   "tracks": 6,
+   "tracks_numbered": 6,
+   "registry_tracks": 79,
+   "registry_found": 6,
+   "registry_coverage": 7.6,
+   "first_month": "2025-01",
+   "last_month": "2026-06",
+   "docs_returns": 12,
    "nostro": false
   },
   {
