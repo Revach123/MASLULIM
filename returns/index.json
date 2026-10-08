@@ -2,10 +2,10 @@
  "totals": {
   "companies": 76,
   "with_data": 53,
-  "tracks": 959,
+  "tracks": 1030,
   "registry_tracks": 1289,
-  "registry_found": 545,
-  "docs": 6894
+  "registry_found": 546,
+  "docs": 8185
  },
  "companies": [
   {
@@ -232,8 +232,8 @@
   {
    "legal_id": "513621110",
    "company": "אינפיניטי השתלמות, גמל ופנסיה בע\"מ",
-   "tracks": 85,
-   "tracks_numbered": 71,
+   "tracks": 104,
+   "tracks_numbered": 90,
    "registry_tracks": 55,
    "registry_found": 53,
    "registry_coverage": 96.4,
@@ -466,14 +466,14 @@
   {
    "legal_id": "520030198",
    "company": "ק.ה.ר - קרן השתלמות לרוקחים בע\"מ",
-   "tracks": 1,
-   "tracks_numbered": 1,
+   "tracks": 53,
+   "tracks_numbered": 21,
    "registry_tracks": 1,
-   "registry_found": 0,
-   "registry_coverage": 0.0,
-   "first_month": "2020-01",
+   "registry_found": 1,
+   "registry_coverage": 100.0,
+   "first_month": "2011-11",
    "last_month": "2026-06",
-   "docs_returns": 0,
+   "docs_returns": 1291,
    "nostro": false
   },
   {
@@ -751,6 +751,7 @@
   "520028812",
   "520028861",
   "520029620",
+  "520030198",
   "520030677",
   "520030693",
   "520030743",
