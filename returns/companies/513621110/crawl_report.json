@@ -1,7 +1,7 @@
 {
  "legal_id": "513621110",
  "company": "אינפיניטי השתלמות, גמל ופנסיה בע\"מ",
- "run": "2026-10-07T17:57:47+00:00",
+ "run": "2026-10-08T12:25:33+00:00",
  "errors": [
   "https://infinity.co.il/wp-content/uploads/2025/07/513621110_g1078_yield122_1.xlsx -> 404",
   "https://infinity.co.il/wp-content/uploads/2025/07/513621110_G1078_YIELD122.XLSX -> 404",
@@ -9,18 +9,19 @@
  ],
  "seeds": {
   "config": 0,
-  "discovered": 0,
-  "policy_snapshot": 0,
+  "discovered": 17,
+  "policy_snapshot": 4,
   "policy_snapshot_docs": 0,
-  "search": 0,
   "sitemap": 9
  },
  "imported_from_policy": 0,
- "pages": 30,
- "pages_failed": [],
+ "pages": 45,
+ "pages_failed": [
+  "https://infinity.co.il/category-services/: 404"
+ ],
  "candidates": 1386,
  "docs": 1383,
- "new_docs": 1383,
+ "new_docs": 27,
  "index_size": 1383,
- "seconds": 1066
+ "seconds": 1308
 }
