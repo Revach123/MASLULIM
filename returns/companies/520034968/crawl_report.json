@@ -1,22 +1,21 @@
 {
  "legal_id": "520034968",
  "company": "החברה המנהלת של קרן השתלמות של עובדי חברת החשמל לישראל בע\"מ",
- "run": "2026-10-07T18:17:18+00:00",
+ "run": "2026-10-08T12:53:17+00:00",
  "errors": [],
  "seeds": {
   "config": 0,
-  "discovered": 0,
-  "policy_snapshot": 0,
+  "discovered": 1,
+  "policy_snapshot": 2,
   "policy_snapshot_docs": 0,
-  "search": 0,
   "sitemap": 1
  },
  "imported_from_policy": 0,
- "pages": 10,
+ "pages": 12,
  "pages_failed": [],
  "candidates": 17,
  "docs": 17,
- "new_docs": 17,
+ "new_docs": 0,
  "index_size": 17,
- "seconds": 48
+ "seconds": 42
 }
