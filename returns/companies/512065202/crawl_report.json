@@ -1,10 +1,10 @@
 {
  "legal_id": "512065202",
  "company": "מיטב גמל ופנסיה בע\"מ",
- "run": "2026-10-08T21:39:32+00:00",
+ "run": "2026-10-08T22:20:12+00:00",
  "errors": [],
  "seeds": {
-  "config": 1,
+  "config": 9,
   "discovered": 0,
   "policy_snapshot": 0,
   "policy_snapshot_docs": 0,
@@ -12,10 +12,15 @@
  },
  "imported_from_policy": 0,
  "pages": 90,
- "pages_failed": [],
+ "pages_failed": [
+  "https://accounts.google.com/gsi/button?logo_alignment=center&shape=pill&size=large&text=continue_with&theme=outline&type=standard&width=120&client_id=990339570472-k6nqn1tpmitg8pui82bfaun3jrpmiuhs.apps.googleusercontent.com&iframe_id=gsi_851759_579919&as=3BS7vz9IatNYu%2BOTVTF3zQ&hl=he-IL: 400",
+  "https://accounts.google.com/gsi/button?logo_alignment=center&shape=pill&size=large&text=continue_with&theme=outline&type=standard&width=400px&client_id=990339570472-k6nqn1tpmitg8pui82bfaun3jrpmiuhs.apps.googleusercontent.com&iframe_id=gsi_851732_373593&as=MEJIBGDRBSuqzj6m6jLCag&hl=he-IL: 400",
+  "https://accounts.google.com/gsi/button?logo_alignment=center&shape=pill&size=large&text=continue_with&theme=outline&type=standard&width=120&client_id=990339570472-k6nqn1tpmitg8pui82bfaun3jrpmiuhs.apps.googleusercontent.com&iframe_id=gsi_91840_108042&as=jUAb06bErxCPxZeVaj9njQ&hl=he-IL: 400",
+  "https://accounts.google.com/gsi/button?logo_alignment=center&shape=pill&size=large&text=continue_with&theme=outline&type=standard&width=400px&client_id=990339570472-k6nqn1tpmitg8pui82bfaun3jrpmiuhs.apps.googleusercontent.com&iframe_id=gsi_91830_214850&as=jUAb06bErxCPxZeVaj9njQ&hl=he-IL: 400"
+ ],
  "candidates": 316,
  "docs": 316,
- "new_docs": 36,
+ "new_docs": 0,
  "index_size": 424,
- "seconds": 1587
+ "seconds": 1860
 }
