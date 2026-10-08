@@ -1,14 +1,13 @@
 {
  "legal_id": "520027954",
  "company": "החברה לניהול קרן השתלמות לאקדמאים במדעי החברה והרוח בע\"מ",
- "run": "2026-10-07T18:08:37+00:00",
+ "run": "2026-10-08T12:39:14+00:00",
  "errors": [],
  "seeds": {
   "config": 0,
-  "discovered": 0,
+  "discovered": 1,
   "policy_snapshot": 1,
   "policy_snapshot_docs": 84,
-  "search": 0,
   "sitemap": 1
  },
  "imported_from_policy": 0,
@@ -16,7 +15,7 @@
  "pages_failed": [],
  "candidates": 84,
  "docs": 84,
- "new_docs": 84,
+ "new_docs": 0,
  "index_size": 84,
- "seconds": 225
+ "seconds": 201
 }
