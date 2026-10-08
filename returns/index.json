@@ -1,11 +1,11 @@
 {
  "totals": {
   "companies": 76,
-  "with_data": 48,
-  "tracks": 760,
+  "with_data": 49,
+  "tracks": 777,
   "registry_tracks": 1289,
-  "registry_found": 482,
-  "docs": 6003
+  "registry_found": 494,
+  "docs": 6030
  },
  "companies": [
   {
@@ -266,6 +266,19 @@
    "first_month": "2024-01",
    "last_month": "2026-06",
    "docs_returns": 10,
+   "nostro": false
+  },
+  {
+   "legal_id": "520004078",
+   "company": "הראל חברה לביטוח בע\"מ",
+   "tracks": 17,
+   "tracks_numbered": 15,
+   "registry_tracks": 30,
+   "registry_found": 12,
+   "registry_coverage": 40.0,
+   "first_month": "2018-01",
+   "last_month": "2026-06",
+   "docs_returns": 27,
    "nostro": false
   },
   {
