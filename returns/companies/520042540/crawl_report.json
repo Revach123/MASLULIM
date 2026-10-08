@@ -1,0 +1,25 @@
+{
+ "legal_id": "520042540",
+ "company": "מנורה מבטחים ביטוח בע\"מ",
+ "run": "2026-10-08T12:52:30+00:00",
+ "errors": [],
+ "seeds": {
+  "config": 0,
+  "discovered": 0,
+  "policy_snapshot": 4,
+  "policy_snapshot_docs": 0,
+  "search": 0,
+  "sitemap": 2
+ },
+ "imported_from_policy": 0,
+ "pages": 45,
+ "pages_failed": [
+  "https://www.menoramivt.co.il/rep-list/about-insurance/participating-portfolio-info/: 404",
+  "https://www.menoramivt.co.il/funds/savings/top-finance/: 404"
+ ],
+ "candidates": 261,
+ "docs": 261,
+ "new_docs": 261,
+ "index_size": 261,
+ "seconds": 781
+}
