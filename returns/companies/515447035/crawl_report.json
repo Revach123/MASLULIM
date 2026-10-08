@@ -1,26 +1,27 @@
 {
  "legal_id": "515447035",
  "company": "הפניקס חח\"י קופה מרכזית לקצבה בע\"מ",
- "run": "2026-10-07T18:01:37+00:00",
- "errors": [],
+ "run": "2026-10-08T12:28:07+00:00",
+ "errors": [
+  "https://www.fnx.co.il/SPF/iframe-namal-markivei-tsuua.aspx -> not_a_document",
+  "https://www.fnx.co.il/SPF/iframe-namal-ashdod-tsua.aspx -> not_a_document",
+  "https://www.fnx.co.il/SPF/iframe-phoenix-all-embracing-pension-yield-components.aspx -> not_a_document"
+ ],
  "seeds": {
   "config": 0,
-  "discovered": 0,
-  "policy_snapshot": 0,
+  "discovered": 6,
+  "policy_snapshot": 4,
   "policy_snapshot_docs": 0,
-  "search": 0,
-  "sitemap": 8
+  "sitemap": 6
  },
  "imported_from_policy": 0,
- "pages": 9,
+ "pages": 15,
  "pages_failed": [
-  "https://www.fnx.co.il/savings/quarterly-yield-components-maslul-life/: browser:TimeoutError:Page.goto: Timeout 60000ms exceeded.",
-  "https://www.fnx.co.il/savings/quarterly-yield-components-ted-yud/: browser:TimeoutError:Page.goto: Timeout 60000ms exceeded.",
-  "https://www.fnx.co.il/gemel/gemel-about-the-company-2017/gemel-yield-components/: browser:TimeoutError:Page.goto: Timeout 60000ms exceeded."
+  "https://www.fnx.co.il/SPF/: 404"
  ],
- "candidates": 13,
- "docs": 13,
- "new_docs": 13,
- "index_size": 13,
- "seconds": 2039
+ "candidates": 36,
+ "docs": 33,
+ "new_docs": 20,
+ "index_size": 33,
+ "seconds": 1611
 }
