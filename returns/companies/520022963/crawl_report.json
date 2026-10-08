@@ -1,22 +1,21 @@
 {
  "legal_id": "520022963",
  "company": "קופת הפנסיה לעובדי הדסה בע\"מ",
- "run": "2026-10-07T18:07:43+00:00",
+ "run": "2026-10-08T12:34:23+00:00",
  "errors": [],
  "seeds": {
   "config": 0,
-  "discovered": 0,
+  "discovered": 3,
   "policy_snapshot": 0,
   "policy_snapshot_docs": 0,
-  "search": 0,
   "sitemap": 0
  },
  "imported_from_policy": 0,
- "pages": 30,
+ "pages": 45,
  "pages_failed": [],
- "candidates": 53,
- "docs": 53,
- "new_docs": 53,
- "index_size": 53,
- "seconds": 64
+ "candidates": 89,
+ "docs": 89,
+ "new_docs": 36,
+ "index_size": 89,
+ "seconds": 287
 }

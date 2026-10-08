@@ -1,11 +1,11 @@
 {
  "totals": {
   "companies": 76,
-  "with_data": 47,
-  "tracks": 758,
+  "with_data": 48,
+  "tracks": 759,
   "registry_tracks": 1289,
   "registry_found": 482,
-  "docs": 5967
+  "docs": 6003
  },
  "companies": [
   {
@@ -336,6 +336,19 @@
   {
    "legal_id": "520022351",
    "company": "נתיב קרן הפנסיה של פועלי ועובדי מפעלי משק ההסתדרות בע\"מ",
+   "tracks": 1,
+   "tracks_numbered": 1,
+   "registry_tracks": 0,
+   "registry_found": 0,
+   "registry_coverage": null,
+   "first_month": "2022-01",
+   "last_month": "2026-06",
+   "docs_returns": 89,
+   "nostro": false
+  },
+  {
+   "legal_id": "520022963",
+   "company": "קופת הפנסיה לעובדי הדסה בע\"מ",
    "tracks": 1,
    "tracks_numbered": 1,
    "registry_tracks": 0,
