@@ -54,5 +54,5 @@
  "returns_follow": "as-invest\\.co\\.il/interstedin/[^?#]*(מסלול|%D7%9E%D7%A1%D7%9C%D7%95%D7%9C)",
  "returns_max_pages": 90,
  "returns_crawl_budget": 2300,
- "returns_text": "^(דוח\\s+)?רבעון\\s*\\d+\\s*(לשנת\\s*)?\\d{4}\\s*$"
+ "returns_text": "^דוח\\s+רבעון\\s*\\d+\\s*(לשנת\\s*)?\\d{4}\\s*$"
 }

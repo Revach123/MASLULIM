@@ -215,11 +215,12 @@ def crawl_company(s, pw, lid, name, out, now, a):
                                     follow=follow, click_texts=cfg.get("returns_click_texts"))
         # עמודים שנמצאו ובהם קבצי מרכיבי תשואה - נשמרים כנקודת פתיחה לריצות הבאות (החיפוש לא תמיד זמין)
         good = [u for u, p in pages.items() if p.get("status") == 200 and any(
-            i.get("doc") and RETURNS_RX.search((i.get("text") or "") + " " + unquote(i["href"])) for i in p.get("items", []))
+            i.get("doc") and (RETURNS_RX.search((i.get("text") or "") + " " + unquote(i["href"]))
+                              or (cfg.get("returns_text") and re.search(cfg["returns_text"], i.get("text") or ""))) for i in p.get("items", []))
             or (p.get("status") == 200 and RETURNS_RX.search(unquote(u)))]
         doc_pages = [u for u in good if not RETURNS_RX.search(unquote(u))]
-        disc = {"home": home, "pages": list(dict.fromkeys(disc.get("pages", []) + good))[:60],
-                "doc_pages": list(dict.fromkeys(disc.get("doc_pages", []) + doc_pages))[:60]}
+        disc = {"home": home, "pages": list(dict.fromkeys(disc.get("pages", []) + good))[:160],
+                "doc_pages": list(dict.fromkeys(disc.get("doc_pages", []) + doc_pages))[:160]}
         disc_path.write_text(json.dumps(disc, ensure_ascii=False, indent=1), "utf-8")
         (out / "site_snapshot.json").write_text(json.dumps({"legal_id": lid, "taken": now, "pages": pages},
                                                            ensure_ascii=False, indent=1), "utf-8")

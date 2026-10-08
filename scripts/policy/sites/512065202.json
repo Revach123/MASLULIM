@@ -38,5 +38,5 @@
   "2024"
  ],
  "returns_ctx": "provident_fund_reports",
- "returns_exclude": "meitav\\.co\\.il/media/|marketing-cms|lighthouse-cloud"
+ "returns_exclude": "meitav\\.co\\.il/media/|marketing-cms|lighthouse-cloud|uploadfiles/\\d+_\\d+_\\d+_\\d+_\\d+\\.xls$|_Q\\d+\\.xlsx$"
 }
