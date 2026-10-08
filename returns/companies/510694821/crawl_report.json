@@ -1,7 +1,7 @@
 {
  "legal_id": "510694821",
  "company": "לאומי קמ\"פ בע\"מ",
- "run": "2026-10-08T12:18:31+00:00",
+ "run": "2026-10-08T13:39:40+00:00",
  "errors": [],
  "seeds": {
   "config": 0,
@@ -14,13 +14,12 @@
  "imported_from_policy": 0,
  "pages": 17,
  "pages_failed": [
-  "https://www.leumi.co.il/he/Articles/: 404",
   "https://www.leumi.co.il/he/pension-advising: 202",
   "https://www.leumi.co.il/he/pension-and-provident-funds: 202"
  ],
  "candidates": 1,
  "docs": 1,
- "new_docs": 1,
+ "new_docs": 0,
  "index_size": 1,
- "seconds": 318
+ "seconds": 308
 }
