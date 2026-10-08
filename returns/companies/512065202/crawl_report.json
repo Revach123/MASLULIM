@@ -1,26 +1,21 @@
 {
  "legal_id": "512065202",
  "company": "מיטב גמל ופנסיה בע\"מ",
- "run": "2026-10-08T13:39:28+00:00",
+ "run": "2026-10-08T20:17:45+00:00",
  "errors": [],
  "seeds": {
-  "config": 0,
+  "config": 1,
   "discovered": 0,
-  "policy_snapshot": 5,
+  "policy_snapshot": 0,
   "policy_snapshot_docs": 0,
-  "search": 0,
   "sitemap": 0
  },
  "imported_from_policy": 0,
  "pages": 90,
- "pages_failed": [
-  "https://www.meitav.co.il/companies-and-business-units/kupat-gemel/gemel-info/: 404",
-  "https://accounts.google.com/gsi/button?logo_alignment=center&shape=pill&size=large&text=continue_with&theme=outline&type=standard&width=120&client_id=990339570472-k6nqn1tpmitg8pui82bfaun3jrpmiuhs.apps.googleusercontent.com&iframe_id=gsi_876513_727493&as=QeJbgNteLqp8pZr7m3pfkg&hl=he-IL: 400",
-  "https://accounts.google.com/gsi/button?logo_alignment=center&shape=pill&size=large&text=continue_with&theme=outline&type=standard&width=400px&client_id=990339570472-k6nqn1tpmitg8pui82bfaun3jrpmiuhs.apps.googleusercontent.com&iframe_id=gsi_876484_631210&as=Y%2Ff%2BRFUkwFVpldbvSUUZcQ&hl=he-IL: 400"
- ],
+ "pages_failed": [],
  "candidates": 0,
  "docs": 0,
  "new_docs": 0,
  "index_size": 108,
- "seconds": 1599
+ "seconds": 1433
 }
