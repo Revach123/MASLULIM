@@ -1,14 +1,13 @@
 {
  "legal_id": "520042540",
  "company": "מנורה מבטחים ביטוח בע\"מ",
- "run": "2026-10-08T12:52:30+00:00",
+ "run": "2026-10-08T14:05:51+00:00",
  "errors": [],
  "seeds": {
   "config": 0,
-  "discovered": 0,
+  "discovered": 2,
   "policy_snapshot": 4,
   "policy_snapshot_docs": 0,
-  "search": 0,
   "sitemap": 2
  },
  "imported_from_policy": 0,
@@ -19,7 +18,7 @@
  ],
  "candidates": 261,
  "docs": 261,
- "new_docs": 261,
+ "new_docs": 0,
  "index_size": 261,
- "seconds": 781
+ "seconds": 614
 }
