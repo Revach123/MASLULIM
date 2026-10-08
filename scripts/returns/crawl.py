@@ -30,7 +30,7 @@ RET_ROOT = ROOT / "returns"
 
 # דוח מרכיבי תשואה: בטקסט הקישור, בשם הקובץ או בכתובת העמוד
 RETURNS_RX = re.compile(r"מרכיבי[-_ ]*(ה)?תשוא|תרומ(ת|ה)[-_ ]*(ה)?(אפיקי|לתשואה)|פירוט[-_ ]*תרומת|"
-                        r"yield_?\d|yield[-_]?(elements|components)|return[-_]?(elements|components)|merkivei|mrkivei|"
+                        r"yield_?\d|yield[-_]?(elements|components)|return[-_]?(elements|components)|merkivei|mrkivei|markiv\w*[-_ ]*t[sz]u?a|תרומת[-_ ]*מרכיבי|מרכיבי[-_ ]*השקעה|"
                         r"nostro[-_ ]*yield|תשוא(ה|ות)[-_ ]*לפי[-_ ]*אפיק|tesuah[-_ ]*lefi[-_ ]*afikim|tsua[-_ ]*lefi", re.I)
 # ("yield" לבד - כתבות "תשואות אג"ח" במיטב; "tsua" לבד - כל עמוד תשואות)
 # עמוד ניווט סביר בדרך לדוחות (ציון נמוך)
