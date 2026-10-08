@@ -2,10 +2,10 @@
  "totals": {
   "companies": 76,
   "with_data": 50,
-  "tracks": 864,
+  "tracks": 900,
   "registry_tracks": 1289,
-  "registry_found": 495,
-  "docs": 6320
+  "registry_found": 515,
+  "docs": 6366
  },
  "companies": [
   {
@@ -193,14 +193,14 @@
   {
    "legal_id": "513026484",
    "company": "הפניקס פנסיה וגמל בע\"מ",
-   "tracks": 82,
-   "tracks_numbered": 82,
+   "tracks": 102,
+   "tracks_numbered": 102,
    "registry_tracks": 91,
-   "registry_found": 73,
-   "registry_coverage": 80.2,
-   "first_month": "2021-01",
+   "registry_found": 77,
+   "registry_coverage": 84.6,
+   "first_month": "2017-01",
    "last_month": "2026-06",
-   "docs_returns": 21,
+   "docs_returns": 67,
    "nostro": false
   },
   {
@@ -388,11 +388,11 @@
   {
    "legal_id": "520023185",
    "company": "הפניקס חברה לביטוח בע\"מ",
-   "tracks": 9,
-   "tracks_numbered": 9,
+   "tracks": 25,
+   "tracks_numbered": 25,
    "registry_tracks": 58,
-   "registry_found": 1,
-   "registry_coverage": 1.7,
+   "registry_found": 17,
+   "registry_coverage": 29.3,
    "first_month": "2022-01",
    "last_month": "2026-06",
    "docs_returns": 34,
