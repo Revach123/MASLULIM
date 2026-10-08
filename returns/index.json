@@ -2,10 +2,10 @@
  "totals": {
   "companies": 76,
   "with_data": 53,
-  "tracks": 942,
+  "tracks": 959,
   "registry_tracks": 1289,
-  "registry_found": 529,
-  "docs": 6865
+  "registry_found": 545,
+  "docs": 6894
  },
  "companies": [
   {
@@ -388,14 +388,14 @@
   {
    "legal_id": "520023185",
    "company": "הפניקס חברה לביטוח בע\"מ",
-   "tracks": 25,
-   "tracks_numbered": 25,
+   "tracks": 42,
+   "tracks_numbered": 42,
    "registry_tracks": 58,
-   "registry_found": 17,
-   "registry_coverage": 29.3,
+   "registry_found": 33,
+   "registry_coverage": 56.9,
    "first_month": "2022-01",
    "last_month": "2026-06",
-   "docs_returns": 34,
+   "docs_returns": 63,
    "nostro": false
   },
   {
