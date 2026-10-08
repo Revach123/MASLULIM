@@ -25,7 +25,7 @@ ROOT = Path(__file__).resolve().parents[2]
 POL = ROOT / "policy"
 RET = ROOT / "returns"
 NAMED_RETURNS = re.compile(r"מרכיבי[-_ ]*(ה)?תשוא|תרומת[-_ ]*(ה)?אפיקי|yield_?\d|returnelements|תשואה[-_ ]*לפי[-_ ]*אפיק", re.I)
-PARSER_VERSION = 4  # (v4: בלי שורות "תא ריק"/"נתונים לחודש" בשם) (v3: PDF בלי טבלאות - שורות טקסט) (v2: קורא xlsx גולמי כש-openpyxl נכשל, בלי "תחילת מידע טבלה" בשם)
+PARSER_VERSION = 5  # (v5: תאריך אקסל בתא אינו מספר מסלול) (v4: בלי שורות "תא ריק"/"נתונים לחודש" בשם) (v3: PDF בלי טבלאות - שורות טקסט) (v2: קורא xlsx גולמי כש-openpyxl נכשל, בלי "תחילת מידע טבלה" בשם)
 
 
 def norm_name(s):

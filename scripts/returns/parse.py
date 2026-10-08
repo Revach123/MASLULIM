@@ -212,7 +212,9 @@ def _meta_from_rows(rows, lo, hi):
                 meta["track_no"], meta["track_no_src"] = m.group(1) or m.group(2), "label"
         if re.match(r"^(מס['׳\"]?|מספר|קוד|שם|שנת|דיווח|נכון|ליום|תאריך)\s", cells[0]) or TRACK_LABEL.match(line):
             continue
-        isno = lambda c: bool(re.fullmatch(r"\d{3,6}(\.0)?", c)) and not re.fullmatch(r"(19[89]\d|20[0-4]\d)(\.0)?", c)
+        # מספר מסלול בתא נפרד - לא שנה ולא תאריך אקסל סידורי (שיבולת 2011: "40544" = 31/1/2011)
+        isno = lambda c: bool(re.fullmatch(r"\d{3,6}(\.0)?", c)) and not re.fullmatch(r"(19[89]\d|20[0-4]\d)(\.0)?", c) \
+            and not 36500 <= float(c) <= 50000
         if len(cells) == 2 and isno(cells[1]) and num(cells[0]) is None:
             # "שם המסלול | 9940" - המספר בתא נפרד ליד השם (ילין: מס' אוצר; לפעמים בשורת שם החברה)
             meta.setdefault("cell_no", cells[1].split(".")[0])
