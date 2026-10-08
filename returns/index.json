@@ -1,11 +1,11 @@
 {
  "totals": {
   "companies": 76,
-  "with_data": 52,
-  "tracks": 937,
+  "with_data": 53,
+  "tracks": 938,
   "registry_tracks": 1289,
   "registry_found": 527,
-  "docs": 6678
+  "docs": 6767
  },
  "companies": [
   {
@@ -620,6 +620,19 @@
    "nostro": false
   },
   {
+   "legal_id": "570005850",
+   "company": "קרן הביטוח והפנסיה של פועלי בנין ועבודות ציבוריות אגודה שיתופית בע\"מ",
+   "tracks": 1,
+   "tracks_numbered": 1,
+   "registry_tracks": 1,
+   "registry_found": 0,
+   "registry_coverage": 0.0,
+   "first_month": "2022-01",
+   "last_month": "2026-06",
+   "docs_returns": 89,
+   "nostro": false
+  },
+  {
    "legal_id": "570005959",
    "company": "קופת\"ג של עובדי עירית חיפה",
    "tracks": 2,
@@ -753,6 +766,7 @@
   "520042607",
   "520042615",
   "570002618",
+  "570005850",
   "570005959",
   "570007476",
   "570009449",
