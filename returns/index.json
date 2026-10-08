@@ -2,10 +2,10 @@
  "totals": {
   "companies": 76,
   "with_data": 49,
-  "tracks": 780,
+  "tracks": 777,
   "registry_tracks": 1289,
   "registry_found": 494,
-  "docs": 6030
+  "docs": 6031
  },
  "companies": [
   {
@@ -284,14 +284,14 @@
   {
    "legal_id": "520004896",
    "company": "מגדל חברה לביטוח בע\"מ",
-   "tracks": 34,
-   "tracks_numbered": 34,
+   "tracks": 31,
+   "tracks_numbered": 31,
    "registry_tracks": 21,
    "registry_found": 19,
    "registry_coverage": 90.5,
    "first_month": "2022-01",
    "last_month": "2026-06",
-   "docs_returns": 401,
+   "docs_returns": 402,
    "nostro": false
   },
   {
