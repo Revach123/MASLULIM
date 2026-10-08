@@ -106,15 +106,15 @@ def import_from_policy(lid: str, index: dict, out: Path, now: str):
     return n
 
 
-def select_docs(pages: dict):
+def select_docs(pages: dict, ctx_rx=None):
     """-> {url: item}: קבצים שהם מרכיבי תשואה לפי הטקסט/השם, או כל גיליון/PDF בעמוד של מרכיבי תשואה (בלי קבצים אחרים)."""
     out = {}
     for page_url, p in pages.items():
-        ctx = bool(RETURNS_RX.search(unquote(page_url)))  # לא לפי טקסט העמוד: התפריט ("מרכיבי תשואה") מופיע בכל עמוד
+        ctx = bool(RETURNS_RX.search(unquote(page_url))) or bool(ctx_rx and ctx_rx.search(unquote(page_url)))  # לא לפי טקסט העמוד: התפריט ("מרכיבי תשואה") מופיע בכל עמוד
         for i in p.get("items", []):
             if not i.get("doc") and "network" not in (i.get("text") or "") and "xhr" not in (i.get("text") or ""):
                 continue
-            href, text = i["href"], i.get("text") or ""
+            href, text = i["href"].replace("\\", "/"), i.get("text") or ""  # מיטב: uploadfiles\\2_11_..xls
             blob = unquote(href) + " " + text
             ext = urlparse(href).path.lower().rsplit(".", 1)[-1] if "." in urlparse(href).path else ""
             strong = bool(RETURNS_RX.search(blob))
@@ -223,7 +223,7 @@ def crawl_company(s, pw, lid, name, out, now, a):
         disc_path.write_text(json.dumps(disc, ensure_ascii=False, indent=1), "utf-8")
         (out / "site_snapshot.json").write_text(json.dumps({"legal_id": lid, "taken": now, "pages": pages},
                                                            ensure_ascii=False, indent=1), "utf-8")
-    docs = select_docs(pages)
+    docs = select_docs(pages, re.compile(cfg["returns_ctx"]) if cfg.get("returns_ctx") else None)
     for d in snap_docs:  # קבצים שנראו בסריקת המדיניות
         docs.setdefault(unquote(d["href"]), d)
     for du in cfg.get("returns_docs", []):
