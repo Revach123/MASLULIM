@@ -1,25 +1,25 @@
 {
  "legal_id": "512065202",
  "company": "מיטב גמל ופנסיה בע\"מ",
- "run": "2026-10-07T17:52:50+00:00",
- "errors": [
-  "https://marketing-cms-c.meitav.co.il/media/3pan1pcq/11349124-הצטרפות-קרן-פנסיה-כללית.pdf -> ERR",
-  "lighthouse-cloud.com/kms/lh/archive/externalFiles/681c97e3-e112-4cb8-9260-00f5616ee75d.pdf -> not_a_document"
- ],
+ "run": "2026-10-08T12:19:23+00:00",
+ "errors": [],
  "seeds": {
   "config": 0,
-  "discovered": 0,
-  "policy_snapshot": 0,
+  "discovered": 14,
+  "policy_snapshot": 5,
   "policy_snapshot_docs": 0,
-  "search": 0,
-  "sitemap": 7
+  "sitemap": 0
  },
  "imported_from_policy": 0,
- "pages": 30,
- "pages_failed": [],
- "candidates": 110,
- "docs": 108,
- "new_docs": 108,
+ "pages": 90,
+ "pages_failed": [
+  "https://www.meitav.co.il/companies-and-business-units/kupat-gemel/gemel-info/: 404",
+  "https://accounts.google.com/gsi/button?logo_alignment=center&shape=pill&size=large&text=continue_with&theme=outline&type=standard&width=400px&client_id=990339570472-k6nqn1tpmitg8pui82bfaun3jrpmiuhs.apps.googleusercontent.com&iframe_id=gsi_378823_259360&as=xNigkBHGlwjRhfVoIjqxPw&hl=he-IL: 400",
+  "https://accounts.google.com/gsi/button?logo_alignment=center&shape=pill&size=large&text=continue_with&theme=outline&type=standard&width=400px&client_id=990339570472-k6nqn1tpmitg8pui82bfaun3jrpmiuhs.apps.googleusercontent.com&iframe_id=gsi_378805_670182&as=Eu2jc2xGSb9Apd9B5kpgWA&hl=he-IL: 400"
+ ],
+ "candidates": 0,
+ "docs": 0,
+ "new_docs": 0,
  "index_size": 108,
- "seconds": 384
+ "seconds": 1822
 }
