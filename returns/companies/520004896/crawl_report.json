@@ -1,11 +1,11 @@
 {
  "legal_id": "520004896",
  "company": "מגדל חברה לביטוח בע\"מ",
- "run": "2026-10-08T12:30:20+00:00",
+ "run": "2026-10-08T13:48:44+00:00",
  "errors": [],
  "seeds": {
   "config": 0,
-  "discovered": 4,
+  "discovered": 2,
   "policy_snapshot": 2,
   "policy_snapshot_docs": 0,
   "sitemap": 2
@@ -18,9 +18,9 @@
   "https://www.migdal.co.il/product-lobby/pension-fund-self-employed: 404",
   "http://my.migdal.co.il/mymigdal/onlinepurchase/retirementpensionsimulation: ERR"
  ],
- "candidates": 427,
- "docs": 427,
- "new_docs": 1,
+ "candidates": 447,
+ "docs": 447,
+ "new_docs": 2,
  "index_size": 402,
- "seconds": 822
+ "seconds": 743
 }
