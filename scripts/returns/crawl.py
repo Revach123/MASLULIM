@@ -203,10 +203,13 @@ def crawl_company(s, pw, lid, name, out, now, a):
         sitemap = pc.sitemap_policy_pages(s, home) if not cfg_pages else []
         report["seeds"]["sitemap"] = len(sitemap)
         extra = list(dict.fromkeys(seeds + searched + sitemap))
-        os.environ["POLICY_CRAWL_BUDGET"] = str(cfg.get("returns_crawl_budget") or 1500)
+        # אתר עם עמוד לכל מסלול (מנורה, ילין): אותם כללי מעבר (follow) ואותו היקף כמו בסריקת המדיניות
+        follow = cfg.get("returns_follow") or cfg.get("follow")
+        max_pages = int(cfg.get("returns_max_pages") or (cfg.get("max_pages") if follow else 0) or 45)
+        os.environ["POLICY_CRAWL_BUDGET"] = str(cfg.get("returns_crawl_budget") or (min(2200, cfg.get("crawl_budget") or 2200) if follow else 1500))
         os.environ["POLICY_PAGE_BUDGET"], os.environ["POLICY_DL_BUDGET"] = (str(x) for x in (cfg.get("returns_budget") or [90, 240]))
-        pages = ps.snapshot_company(s, pw, home, extra, products, max_pages=max(int(cfg.get("returns_max_pages") or 45), len(extra) + 15),
-                                    follow=cfg.get("returns_follow"), click_texts=cfg.get("returns_click_texts"))
+        pages = ps.snapshot_company(s, pw, home, extra, products, max_pages=max(max_pages, len(extra) + 15),
+                                    follow=follow, click_texts=cfg.get("returns_click_texts"))
         # עמודים שנמצאו ובהם קבצי מרכיבי תשואה - נשמרים כנקודת פתיחה לריצות הבאות (החיפוש לא תמיד זמין)
         good = [u for u, p in pages.items() if p.get("status") == 200 and any(
             i.get("doc") and RETURNS_RX.search((i.get("text") or "") + " " + unquote(i["href"])) for i in p.get("items", []))
