@@ -1,22 +1,26 @@
 {
  "legal_id": "520005497",
  "company": "החברה לניהול קופות התגמולים והפיצויים של עובדי בנק לאומי בע\"מ",
- "run": "2026-10-07T18:03:31+00:00",
+ "run": "2026-10-08T12:30:41+00:00",
  "errors": [],
  "seeds": {
   "config": 0,
   "discovered": 0,
-  "policy_snapshot": 0,
+  "policy_snapshot": 2,
   "policy_snapshot_docs": 1,
   "search": 0,
   "sitemap": 0
  },
  "imported_from_policy": 0,
- "pages": 13,
- "pages_failed": [],
+ "pages": 16,
+ "pages_failed": [
+  "https://www.leumi.co.il/he/Articles/: 404",
+  "https://www.leumi.co.il/he/pension-advising: 202",
+  "https://www.leumi.co.il/he/pension-and-provident-funds: 202"
+ ],
  "candidates": 1,
  "docs": 1,
- "new_docs": 1,
+ "new_docs": 0,
  "index_size": 1,
- "seconds": 193
+ "seconds": 362
 }
