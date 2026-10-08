@@ -1,18 +1,17 @@
 {
  "legal_id": "512267592",
  "company": "הראל פנסיה וגמל בע\"מ",
- "run": "2026-10-08T13:39:11+00:00",
+ "run": "2026-10-08T19:55:01+00:00",
  "errors": [],
  "seeds": {
   "config": 0,
-  "discovered": 0,
+  "discovered": 4,
   "policy_snapshot": 5,
   "policy_snapshot_docs": 0,
-  "search": 0,
   "sitemap": 0
  },
  "imported_from_policy": 0,
- "pages": 101,
+ "pages": 109,
  "pages_failed": [
   "https://www.harel-group.co.il/long-term-savings/severance/severance-packages/Pages/personal-profile-820/: 404",
   "https://www.harel-group.co.il/long-term-savings/severance/severance-packages/Pages/personal-profile-820/investment-policy.aspx: 404"
@@ -21,5 +20,5 @@
  "docs": 27,
  "new_docs": 0,
  "index_size": 27,
- "seconds": 790
+ "seconds": 839
 }
