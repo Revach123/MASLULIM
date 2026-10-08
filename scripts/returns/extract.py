@@ -25,7 +25,7 @@ ROOT = Path(__file__).resolve().parents[2]
 POL = ROOT / "policy"
 RET = ROOT / "returns"
 NAMED_RETURNS = re.compile(r"מרכיבי[-_ ]*(ה)?תשוא|תרומת[-_ ]*(ה)?אפיקי|yield_?\d|returnelements|תשואה[-_ ]*לפי[-_ ]*אפיק", re.I)
-PARSER_VERSION = 3  # (v3: PDF בלי טבלאות - שורות טקסט) (v2: קורא xlsx גולמי כש-openpyxl נכשל, בלי "תחילת מידע טבלה" בשם)
+PARSER_VERSION = 4  # (v4: בלי שורות "תא ריק"/"נתונים לחודש" בשם) (v3: PDF בלי טבלאות - שורות טקסט) (v2: קורא xlsx גולמי כש-openpyxl נכשל, בלי "תחילת מידע טבלה" בשם)
 
 
 def norm_name(s):
@@ -98,18 +98,20 @@ class Registry:
         return best if best and score >= 0.6 and not tie else None
 
     def resolve(self, lid, no, src, name):
-        if no and (no in self.by_co.get(lid, {}) or no in self.names):
+        """מספר מהקובץ שרשום בחברה -> הוא; התאמת סדרת התשואות ב-data.gov (verify) גוברת על כל השאר (מספר בסוגריים
+        שהוא קוד פנימי - אינפיניטי "(715)" = מסלול 1078); מספר קופה עם מסלול יחיד; התאמת שם; מספר שרשום רק בחברה אחרת."""
+        ym = self.yield_map.get(f"{lid}|{norm_name(name)}")
+        if ym:
+            return ym, "datagov_yield"
+        if no and no in self.by_co.get(lid, {}):
             return no, src
         if no and len(self.kupa.get(lid, {}).get(no, ())) == 1:  # מספר קופה עם מסלול יחיד
             return next(iter(self.kupa[lid][no])), f"{src}_kupa"
         nm = self.by_name(lid, name)
         if nm:
             return nm, "registry_name"
-        ym = self.yield_map.get(f"{lid}|{norm_name(name)}")
-        if ym:
-            return ym, "datagov_yield"
         if no:
-            return no, f"{src}_unverified"
+            return no, src if no in self.names else f"{src}_unverified"
         return None, None
 
 

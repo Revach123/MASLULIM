@@ -80,7 +80,10 @@ def main():
     by_id = defaultdict(list)
     for (dom, fid) in gov:
         by_id[fid].append(dom)
-    rows, gap_rows, ymap = [], [], {}
+    # המיפוי מצטבר: מסלול שזוהה בעבר לפי data.gov נשאר מזוהה (אחרת בריצה הבאה הוא חוזר למספר השגוי וחוזר חלילה)
+    mp = RET / "datagov_track_map.json"
+    ymap = json.loads(mp.read_text("utf-8")) if mp.exists() else {}
+    rows, gap_rows = [], []
     for p in sorted((RET / "companies").glob("*/tracks.json")):
         data = json.loads(p.read_text("utf-8"))
         lid = data["legal_id"]
@@ -108,7 +111,11 @@ def main():
                 if cands and cands[0][0] <= 0.03 and (len(cands) == 1 or cands[1][0] > max(0.08, 3 * cands[0][0]) or cands[1][1] == cands[0][1]):
                     found = cands[0]
                     if found[1] != no:
-                        ymap[f"{lid}|{norm_name(t.get('name') or '')}"] = found[1]
+                        for nm in t.get("names") or [t.get("name") or ""]:  # השמות כפי שבקבצים - המפתח של extract
+                            ymap[f"{lid}|{norm_name(nm)}"] = found[1]
+            if st == "mismatch" and t.get("track_no_src") == "datagov_yield" and not found:
+                for nm in t.get("names") or []:
+                    ymap.pop(f"{lid}|{norm_name(nm)}", None)
             row = {"legal_id": t.get("owner") or lid, "key": t["key"], "track_no": no, "track_no_src": t.get("track_no_src"), "track_name": t.get("name"),
                    "domain": dom, "status": st, "n": best and best["n"], "median_gap": best and best["median_gap"],
                    "max_gap": best and best["max_gap"], "months": len(ours),

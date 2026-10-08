@@ -183,7 +183,7 @@ def _meta_from_rows(rows, lo, hi):
             "report_date": None, "titles": []}
     for r in rows[lo:hi]:
         cells = [_clean(c) for c in r if _clean(c)]
-        cells = [c for c in cells if not re.match(r"^(לא קיים מידע נוסף|סוף הגיליון|הגעת לשדה|תא ללא תוכן|תחילת מידע|חזרה$|תאריך הפקה)", c)]
+        cells = [c for c in cells if not re.match(r"^(לא קיים מידע נוסף|סוף הגיליון|הגעת לשדה|תא ללא תוכן|תחילת מידע|חזרה$|תאריך הפקה|תא ריק|נתונים לחודש|דו\"?ח חודשי לתאריך)", c)]
         if not cells:
             continue
         line = " ".join(cells)
