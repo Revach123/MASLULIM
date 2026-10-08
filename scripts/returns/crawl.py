@@ -167,6 +167,8 @@ def crawl_company(s, pw, lid, name, out, now, a):
 
     disc_path = out / "discovered.json"
     disc = json.loads(disc_path.read_text("utf-8")) if disc_path.exists() else {}
+    # עמודים שנשמרו בריצה קודמת: רק עמוד שהכתובת שלו מרכיבי תשואה או שנמצאו בו קבצים (לא כתבות "yield" במיטב)
+    disc["pages"] = [u for u in disc.get("pages", []) if RETURNS_RX.search(unquote(u)) or u in disc.get("doc_pages", [])]
     cfg_pages = [p["url"] if isinstance(p, dict) else p for p in cfg.get("returns_pages", [])]
     products = {(p["url"] if isinstance(p, dict) else p): (p.get("product") if isinstance(p, dict) else None)
                 for p in cfg.get("returns_pages", [])}
@@ -206,15 +208,18 @@ def crawl_company(s, pw, lid, name, out, now, a):
         # אתר עם עמוד לכל מסלול (מנורה, ילין): אותם כללי מעבר (follow) ואותו היקף כמו בסריקת המדיניות
         follow = cfg.get("returns_follow") or cfg.get("follow")
         max_pages = int(cfg.get("returns_max_pages") or (cfg.get("max_pages") if follow else 0) or 45)
-        os.environ["POLICY_CRAWL_BUDGET"] = str(cfg.get("returns_crawl_budget") or (min(2200, cfg.get("crawl_budget") or 2200) if follow else 1500))
-        os.environ["POLICY_PAGE_BUDGET"], os.environ["POLICY_DL_BUDGET"] = (str(x) for x in (cfg.get("returns_budget") or [90, 240]))
+        # תקציבים: הצעד בענן נקטע אחרי 38 דק' ואז לא נשמר כלום - סריקת העמודים עד ~25 דק', ההורדות עד RETURNS_DL_BUDGET
+        os.environ["POLICY_CRAWL_BUDGET"] = str(cfg.get("returns_crawl_budget") or (1500 if follow else 1100))
+        os.environ["POLICY_PAGE_BUDGET"], os.environ["POLICY_DL_BUDGET"] = (str(x) for x in (cfg.get("returns_budget") or [45, 60]))
         pages = ps.snapshot_company(s, pw, home, extra, products, max_pages=max(max_pages, len(extra) + 15),
                                     follow=follow, click_texts=cfg.get("returns_click_texts"))
         # עמודים שנמצאו ובהם קבצי מרכיבי תשואה - נשמרים כנקודת פתיחה לריצות הבאות (החיפוש לא תמיד זמין)
         good = [u for u, p in pages.items() if p.get("status") == 200 and any(
             i.get("doc") and RETURNS_RX.search((i.get("text") or "") + " " + unquote(i["href"])) for i in p.get("items", []))
             or (p.get("status") == 200 and RETURNS_RX.search(unquote(u)))]
-        disc = {"home": home, "pages": list(dict.fromkeys(disc.get("pages", []) + good))[:60]}
+        doc_pages = [u for u in good if not RETURNS_RX.search(unquote(u))]
+        disc = {"home": home, "pages": list(dict.fromkeys(disc.get("pages", []) + good))[:60],
+                "doc_pages": list(dict.fromkeys(disc.get("doc_pages", []) + doc_pages))[:60]}
         disc_path.write_text(json.dumps(disc, ensure_ascii=False, indent=1), "utf-8")
         (out / "site_snapshot.json").write_text(json.dumps({"legal_id": lid, "taken": now, "pages": pages},
                                                            ensure_ascii=False, indent=1), "utf-8")
@@ -231,7 +236,7 @@ def crawl_company(s, pw, lid, name, out, now, a):
     report["candidates"] = len(docs)
     new = got = 0
     for key, d in docs.items():
-        if time.monotonic() - t0 > float(os.environ.get("RETURNS_DL_BUDGET", "2100")):
+        if time.monotonic() - t0 > float(os.environ.get("RETURNS_DL_BUDGET", "2000")):
             report["errors"].append("download budget reached - ממשיכים בריצה הבאה"); break
         url = d["href"]
         old = index.get(find_key(index, url))
@@ -281,6 +286,8 @@ def crawl_company(s, pw, lid, name, out, now, a):
                     "source_page": d.get("page"), "product": (pages.get(d.get("page")) or {}).get("product"), "via": "cloud"})
         index[ukey] = ent
         got += 1
+        if new and new % 25 == 0:  # שמירה בדרך - אם הצעד נקטע, מה שהורד כבר נשמר
+            idx_path.write_text(json.dumps(index, ensure_ascii=False, indent=1), "utf-8")
     report.update(docs=got, new_docs=new, index_size=len(index), seconds=round(time.monotonic() - t0))
     idx_path.write_text(json.dumps(index, ensure_ascii=False, indent=1), "utf-8")
     (out / "crawl_report.json").write_text(json.dumps(report, ensure_ascii=False, indent=1), "utf-8")

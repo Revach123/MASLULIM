@@ -21,5 +21,16 @@
   60,
   30
  ],
- "exclude": "מסלולי-הביטוח|פוליסות|ביטוח-מנהלים|משתתפות|hodshi|\\d{9}_[gp]\\d+"
+ "exclude": "מסלולי-הביטוח|פוליסות|ביטוח-מנהלים|משתתפות|hodshi|\\d{9}_[gp]\\d+",
+ "returns_pages": [
+  {
+   "product": null,
+   "url": "https://www.clalbit.co.il/aboutclalinsurance/generalreports/?txtTabId=1&txtReportsYearId={year}&txtCompanyId=3"
+  }
+ ],
+ "returns_budget": [
+  60,
+  30
+ ],
+ "returns_note": "כלל: אותו עמוד דוחות כמו המדיניות, בלי סינון סוג דוח - כל הדוחות של השנה; הקבצים <ח.פ.>_g<מספר>_Yield"
 }
