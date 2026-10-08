@@ -1,11 +1,11 @@
 {
  "totals": {
   "companies": 76,
-  "with_data": 42,
-  "tracks": 709,
+  "with_data": 43,
+  "tracks": 753,
   "registry_tracks": 1289,
-  "registry_found": 441,
-  "docs": 5796
+  "registry_found": 482,
+  "docs": 5823
  },
  "companies": [
   {
@@ -149,6 +149,19 @@
    "first_month": "2017-01",
    "last_month": "2026-06",
    "docs_returns": 467,
+   "nostro": false
+  },
+  {
+   "legal_id": "512267592",
+   "company": "הראל פנסיה וגמל בע\"מ",
+   "tracks": 44,
+   "tracks_numbered": 42,
+   "registry_tracks": 100,
+   "registry_found": 41,
+   "registry_coverage": 41.0,
+   "first_month": "2018-01",
+   "last_month": "2026-06",
+   "docs_returns": 27,
    "nostro": false
   },
   {
