@@ -1,0 +1,44 @@
+{
+ "started": "2026-10-09T10:52:49+00:00",
+ "sites": [
+  {
+   "legal_id": "514956465",
+   "name": "מור גמל ופנסיה בע\"מ",
+   "status": "ok",
+   "blocked": false,
+   "new_docs": 0,
+   "known_docs": 66,
+   "skipped": 2,
+   "meta_updates": 0,
+   "seconds": 131,
+   "new": [],
+   "log_tail": "[514956465] search (גמל,פנסיה): 0\n[514956465] sitemap policy pages: 1\n  /מוצרים/גמל-ופנסיה/מידע-כללי-ורגולציה/הצהרה-על-מדיניות-השקעה/\n[514956465] מור גמל ופנסיה בע\"מ: pages=40 docs=64 errs=1\n[crawl] new/changed docs this run: 2\n"
+  },
+  {
+   "legal_id": "517085874",
+   "name": "איילון קופות גמל בע\"מ",
+   "status": "ok",
+   "blocked": false,
+   "new_docs": 0,
+   "known_docs": 6,
+   "skipped": 0,
+   "meta_updates": 0,
+   "seconds": 2,
+   "new": [],
+   "log_tail": "[crawl] new/changed docs this run: 0\n"
+  },
+  {
+   "legal_id": "520030677",
+   "name": "איילון חברה לביטוח בע\"מ",
+   "status": "ok",
+   "blocked": false,
+   "new_docs": 0,
+   "known_docs": 1,
+   "skipped": 0,
+   "meta_updates": 0,
+   "seconds": 407,
+   "new": [],
+   "log_tail": "[520030677] search (ביטוח): 0\n[520030677] sitemap policy pages: 0\n[520030677] איילון חברה לביטוח בע\"מ: pages=7 docs=0 errs=0\n[crawl] new/changed docs this run: 0\n"
+  }
+ ]
+}
