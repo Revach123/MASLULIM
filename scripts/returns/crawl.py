@@ -62,7 +62,7 @@ def load_cfg(lid: str) -> dict:
     return json.loads(p.read_text("utf-8")) if p.exists() else {}
 
 
-def snapshot_seeds(lid: str):
+def snapshot_seeds(lid: str, text_rx=None):
     """עמודים וקבצים של מרכיבי תשואה שסריקת המדיניות כבר ראתה (קישורים בתפריט/בעמודי המדיניות)."""
     p = ROOT / "policy" / "companies" / lid / "site_snapshot" / f"{lid}.json"
     pages, docs = [], []
@@ -74,7 +74,7 @@ def snapshot_seeds(lid: str):
             pages.append(page_url)
         for it in pg.get("items", []):
             blob = (it.get("text") or "") + " " + unquote(it.get("href") or "")
-            if not RETURNS_RX.search(blob) or it.get("local"):
+            if not (RETURNS_RX.search(blob) or (text_rx and it.get("doc") and text_rx.search(it.get("text") or ""))) or it.get("local"):
                 continue
             (docs if it.get("doc") else pages).append(it["href"] if not it.get("doc") else {**it, "page": page_url})
     return list(dict.fromkeys(pages)), docs
@@ -172,7 +172,7 @@ def crawl_company(s, pw, lid, name, out, now, a):
     cfg_pages = [p["url"] if isinstance(p, dict) else p for p in cfg.get("returns_pages", [])]
     products = {(p["url"] if isinstance(p, dict) else p): (p.get("product") if isinstance(p, dict) else None)
                 for p in cfg.get("returns_pages", [])}
-    snap_pages, snap_docs = snapshot_seeds(lid)
+    snap_pages, snap_docs = snapshot_seeds(lid, re.compile(cfg["returns_text"]) if cfg.get("returns_text") else None)
     # עמודי המדיניות של החברה ועמוד האב שלהם - דוחות מרכיבי התשואה לרוב באותו אזור באתר (עמוד המסלול / "מידע לעמיתים")
     pol_pages = []
     for u in [x["url"] for x in cfg.get("pages", []) if "{year}" not in x.get("url", "")] if not cfg.get("returns_pages") else []:
@@ -193,6 +193,8 @@ def crawl_company(s, pw, lid, name, out, now, a):
         report["errors"].append("no_home")
     elif cfg.get("via") == "extension" and os.environ.get("RETURNS_FORCE_CLOUD") != "1" and not cfg.get("returns_cloud"):
         report["errors"].append("via_extension (נסרק מהמחשב הביתי)")
+        home = ""
+    if cfg.get("returns_snapshot_only"):  # קבצים מתמונת המצב של המדיניות בלבד (בלי סריקת דפדפן) - אלטשולר: הסריקה נחתכת ב-38 דקות
         home = ""
     pages = {}
     if home:
