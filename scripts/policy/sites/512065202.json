@@ -24,9 +24,8 @@
  "search": true,
  "rev": 5,
  "note": "2026-10-03: עמוד קופה מרכזית לפיצויים רבת מסלולים (נמצא בחיפוש) | 2026-10-08: דוחות לכל מסלול (אקורדיון) x שנה (צ'יפ) x רבעון: /provident_pension/provident_fund_reports/ (מהמשתמש) - seed ל-returns",
- "returns_follow": "meitav\\.co\\.il/(provident_pension|companies-and-business-units)/[^?#]+/$",
- "returns_max_pages": 90,
- "returns_crawl_budget": 2300,
+ "returns_max_pages": 9,
+ "returns_crawl_budget": 1100,
  "returns_pages": [
   {
    "product": "גמל",
@@ -34,47 +33,15 @@
   },
   {
    "product": "גמל",
-   "url": "https://www.meitav.co.il/provident_pension/gemel/gemel_reports/"
-  },
-  {
-   "product": "גמל",
-   "url": "https://www.meitav.co.il/provident_pension/pension/pension-reports/"
-  },
-  {
-   "product": "גמל",
-   "url": "https://www.meitav.co.il/provident_pension/kupa_gemel_reports/"
-  },
-  {
-   "product": "גמל",
-   "url": "https://www.meitav.co.il/provident_pension/pension_reports/"
-  },
-  {
-   "product": "גמל",
-   "url": "https://www.meitav.co.il/provident_pension/kupa_gemel_invest_reports/"
-  },
-  {
-   "product": "גמל",
-   "url": "https://www.meitav.co.il/provident_pension/kids_reports/"
-  },
-  {
-   "product": "גמל",
-   "url": "https://www.meitav.co.il/provident_pension/keren_hishtalmut_report/"
-  },
-  {
-   "product": "גמל",
-   "url": "https://www.meitav.co.il/provident_pension/hishtalmut/hishtalmut_reports/"
-  },
-  {
-   "product": "גמל",
    "url": "https://www.meitav.co.il/provident_pension/pension_report_articles/"
   },
   {
    "product": "גמל",
-   "url": "https://www.meitav.co.il/provident_pension/gemel_report_articles/"
+   "url": "https://www.meitav.co.il/provident_pension/gemel_reports/"
   },
   {
    "product": "גמל",
-   "url": "https://www.meitav.co.il/provident_pension/gemel_reports/"
+   "url": "https://www.meitav.co.il/provident_pension/gemel_report_articles/"
   },
   {
    "product": "גמל",
@@ -83,10 +50,6 @@
   {
    "product": "גמל",
    "url": "https://www.meitav.co.il/provident_pension/kids_report_articles/"
-  },
-  {
-   "product": "גמל",
-   "url": "https://www.meitav.co.il/provident_pension/provident_invest_report_articles/"
   },
   {
    "product": "גמל",
