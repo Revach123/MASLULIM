@@ -1,11 +1,14 @@
 name: Returns probe (report API calls)
 
 on:
+  push:
+    branches: ["claude/**"]
+    paths: ["returns/probe_urls.txt"]
   workflow_dispatch:
     inputs:
       urls:
-        description: "כתובות מופרדות ברווח"
-        required: true
+        description: "כתובות מופרדות ברווח (בלי קלט: returns/probe_urls.txt)"
+        required: false
 
 jobs:
   probe:
@@ -16,7 +19,9 @@ jobs:
       - uses: actions/setup-python@v5
         with:
           python-version: "3.12"
-      - run: |
+      - env:
+          URLS: ${{ inputs.urls }}
+        run: |
           pip install -q playwright
           python -m playwright install --with-deps chromium >/dev/null
-          POLICY_HEADED=1 xvfb-run -a python -m scripts.returns.probe_api ${{ inputs.urls }}
+          POLICY_HEADED=1 xvfb-run -a python -m scripts.returns.probe_api ${URLS:-$(cat returns/probe_urls.txt)}
