@@ -1,26 +1,22 @@
 {
  "legal_id": "520030990",
  "company": "החברה המנהלת של מינהל קרן ההשתלמות לפקידים עובדי המנהל והשירותים בע\"מ",
- "run": "2026-10-08T14:03:39+00:00",
- "errors": [],
+ "run": "2026-10-09T12:31:12+00:00",
+ "errors": [
+  "via_extension (נסרק מהמחשב הביתי)"
+ ],
  "seeds": {
   "config": 0,
   "discovered": 0,
   "policy_snapshot": 2,
-  "policy_snapshot_docs": 0,
-  "search": 0,
-  "sitemap": 0
+  "policy_snapshot_docs": 0
  },
  "imported_from_policy": 0,
- "pages": 3,
- "pages_failed": [
-  "https://minhal.org/הרכב-נכסים/: 403",
-  "https://minhal.org/הרכב-נכסים/מסלול-עוקב-מדד-500-ps/: 403",
-  "https://minhal.org: 403"
- ],
+ "pages": 0,
+ "pages_failed": [],
  "candidates": 0,
  "docs": 0,
  "new_docs": 0,
  "index_size": 0,
- "seconds": 39
+ "seconds": 0
 }
