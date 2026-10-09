@@ -1,22 +1,20 @@
 {
  "legal_id": "520042581",
  "company": "עמ\"י - חברה לניהול קופות גמל ענפיות בע\"מ",
- "run": "2026-10-08T14:07:09+00:00",
+ "run": "2026-10-09T02:23:03+00:00",
  "errors": [],
  "seeds": {
   "config": 0,
   "discovered": 0,
   "policy_snapshot": 2,
-  "policy_snapshot_docs": 0,
-  "search": 0,
-  "sitemap": 0
+  "policy_snapshot_docs": 298
  },
  "imported_from_policy": 0,
- "pages": 45,
+ "pages": 0,
  "pages_failed": [],
- "candidates": 0,
- "docs": 0,
- "new_docs": 0,
- "index_size": 0,
- "seconds": 94
+ "candidates": 297,
+ "docs": 297,
+ "new_docs": 297,
+ "index_size": 297,
+ "seconds": 195
 }
