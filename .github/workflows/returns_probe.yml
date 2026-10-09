@@ -1,0 +1,22 @@
+name: Returns probe (report API calls)
+
+on:
+  workflow_dispatch:
+    inputs:
+      urls:
+        description: "כתובות מופרדות ברווח"
+        required: true
+
+jobs:
+  probe:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: |
+          pip install -q playwright
+          python -m playwright install --with-deps chromium >/dev/null
+          POLICY_HEADED=1 xvfb-run -a python -m scripts.returns.probe_api ${{ inputs.urls }}
