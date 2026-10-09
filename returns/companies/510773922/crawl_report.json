@@ -1,14 +1,13 @@
 {
  "legal_id": "510773922",
  "company": "ארם גמולים - חברה לניהול קופות גמל בע''מ",
- "run": "2026-10-08T13:42:10+00:00",
+ "run": "2026-10-09T12:08:42+00:00",
  "errors": [],
  "seeds": {
   "config": 0,
-  "discovered": 0,
+  "discovered": 1,
   "policy_snapshot": 0,
   "policy_snapshot_docs": 0,
-  "search": 0,
   "sitemap": 0
  },
  "imported_from_policy": 0,
@@ -18,5 +17,5 @@
  "docs": 53,
  "new_docs": 0,
  "index_size": 53,
- "seconds": 23
+ "seconds": 13
 }
