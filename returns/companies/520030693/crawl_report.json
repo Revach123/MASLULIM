@@ -1,14 +1,17 @@
 {
  "legal_id": "520030693",
  "company": "שיבולת - חברה לניהול קופות גמל בע\"מ",
- "run": "2026-10-08T14:02:46+00:00",
- "errors": [],
+ "run": "2026-10-09T12:29:47+00:00",
+ "errors": [
+  "https://www.shibbolet.co.il/node/520030693_g372_Yield125.xlsx -> 404",
+  "https://www.shibbolet.co.il/node/520030693_g13188_Yield424.xlsx -> 404",
+  "shibbolet.co.il/node/_web_kdati_htdocs_shibbolet_info_gemel_520030693_g13188_Yield324.xlsx -> 404"
+ ],
  "seeds": {
   "config": 0,
-  "discovered": 0,
+  "discovered": 30,
   "policy_snapshot": 0,
   "policy_snapshot_docs": 258,
-  "search": 0,
   "sitemap": 0
  },
  "imported_from_policy": 0,
@@ -17,9 +20,9 @@
   "https://www.shibbolet.co.il/taxonomy/term/2 : 404",
   "https://www.shibbolet.co.il/taxonomy/term/3 : 404"
  ],
- "candidates": 258,
+ "candidates": 261,
  "docs": 258,
  "new_docs": 0,
  "index_size": 258,
- "seconds": 40
+ "seconds": 211
 }
