@@ -1,7 +1,7 @@
 {
  "legal_id": "513026484",
  "company": "הפניקס פנסיה וגמל בע\"מ",
- "run": "2026-10-08T13:39:59+00:00",
+ "run": "2026-10-09T12:08:45+00:00",
  "errors": [
   "https://www.fnx.co.il/SPF/iframe-monthly-yield-components.aspx -> not_a_document",
   "https://www.fnx.co.il/SPF/iframe-quarterly-yield-components-ted-yud.aspx -> not_a_document",
@@ -13,15 +13,15 @@
   "config": 0,
   "discovered": 11,
   "policy_snapshot": 7,
-  "policy_snapshot_docs": 21,
-  "sitemap": 6
+  "policy_snapshot_docs": 3,
+  "sitemap": 7
  },
  "imported_from_policy": 0,
  "pages": 11,
  "pages_failed": [],
- "candidates": 100,
- "docs": 95,
- "new_docs": 10,
+ "candidates": 82,
+ "docs": 77,
+ "new_docs": 25,
  "index_size": 95,
- "seconds": 1120
+ "seconds": 1344
 }
