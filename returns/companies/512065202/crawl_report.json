@@ -1,10 +1,8 @@
 {
  "legal_id": "512065202",
  "company": "מיטב גמל ופנסיה בע\"מ",
- "run": "2026-10-09T09:46:45+00:00",
- "errors": [
-  "download budget reached - ממשיכים בריצה הבאה"
- ],
+ "run": "2026-10-09T10:31:14+00:00",
+ "errors": [],
  "seeds": {
   "config": 7,
   "discovered": 0,
@@ -21,8 +19,8 @@
   "https://www.meitav.co.il/provident_pension/invest_report_articles/: 404"
  ],
  "candidates": 1503,
- "docs": 1375,
- "new_docs": 1059,
- "index_size": 1483,
- "seconds": 2000
+ "docs": 1503,
+ "new_docs": 128,
+ "index_size": 1611,
+ "seconds": 1158
 }
