@@ -1,25 +1,22 @@
 {
  "legal_id": "511789190",
  "company": "\"עתודות\" - קרן פנסיה לשכירים ועצמאיים בע\"מ",
- "run": "2026-10-08T13:39:27+00:00",
- "errors": [],
+ "run": "2026-10-09T12:10:42+00:00",
+ "errors": [
+  "via_extension (נסרק מהמחשב הביתי)"
+ ],
  "seeds": {
   "config": 0,
   "discovered": 0,
   "policy_snapshot": 1,
-  "policy_snapshot_docs": 0,
-  "search": 0,
-  "sitemap": 0
+  "policy_snapshot_docs": 0
  },
  "imported_from_policy": 0,
- "pages": 2,
- "pages_failed": [
-  "https://atudotvatika.co.il/%d7%a0%d7%aa%d7%95%d7%a0%d7%99-%d7%94%d7%a7%d7%a8%d7%9f/: 403",
-  "https://atudotvatika.co.il: 403"
- ],
+ "pages": 0,
+ "pages_failed": [],
  "candidates": 0,
  "docs": 0,
  "new_docs": 0,
  "index_size": 6,
- "seconds": 34
+ "seconds": 0
 }
