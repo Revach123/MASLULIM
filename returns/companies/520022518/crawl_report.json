@@ -1,26 +1,22 @@
 {
  "legal_id": "520022518",
  "company": "החברה לניהול קופת התגמולים והפנסיה של עובדי הסוכנות היהודית לארץ ישראל בע\"מ",
- "run": "2026-10-08T13:52:09+00:00",
- "errors": [],
+ "run": "2026-10-09T12:20:34+00:00",
+ "errors": [
+  "via_extension (נסרק מהמחשב הביתי)"
+ ],
  "seeds": {
   "config": 0,
   "discovered": 0,
   "policy_snapshot": 2,
-  "policy_snapshot_docs": 0,
-  "search": 0,
-  "sitemap": 0
+  "policy_snapshot_docs": 0
  },
  "imported_from_policy": 0,
- "pages": 3,
- "pages_failed": [
-  "https://www.jewishagency-kupa.org.il/sitemap/: 403",
-  "https://www.jewishagency-kupa.org.il/: 403",
-  "https://www.jewishagency-kupa.org.il: 403"
- ],
+ "pages": 0,
+ "pages_failed": [],
  "candidates": 0,
  "docs": 0,
  "new_docs": 0,
  "index_size": 0,
- "seconds": 37
+ "seconds": 0
 }
