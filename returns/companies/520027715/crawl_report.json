@@ -1,0 +1,32 @@
+{
+ "legal_id": "520027715",
+ "company": "מנורה מבטחים והסתדרות המהנדסים ניהול קופות גמל בע\"מ",
+ "run": "2026-10-08T13:55:10+00:00",
+ "errors": [
+  "/www.menoramivt.co.il/funds/about-menora/engineers/omega-fund/520027715_g286_Yield322.xlsx -> 404",
+  "www.menoramivt.co.il/funds/about-menora/engineers/omega-fund/520027715_g1446_Yield322.xlsx -> 404",
+  "www.menoramivt.co.il/funds/about-menora/engineers/omega-fund/520027715_g9803_Yield322.xlsx -> 404",
+  "www.menoramivt.co.il/funds/about-menora/engineers/omega-fund/520027715_g9802_Yield322.xlsx -> 404"
+ ],
+ "seeds": {
+  "config": 0,
+  "discovered": 2,
+  "policy_snapshot": 11,
+  "policy_snapshot_docs": 91,
+  "sitemap": 2
+ },
+ "imported_from_policy": 0,
+ "pages": 62,
+ "pages_failed": [
+  "https://www.menoramivt.co.il/funds/about-menora/engineers/omega-fund/: 404",
+  "https://www.menoramivt.co.il/funds/about-menora/engineers/omega-fund/omega-1445: 404",
+  "https://www.menoramivt.co.il/funds/about-menora/engineers/omega-fund/omega-15738: 404",
+  "https://www.menoramivt.co.il/funds/about-menora/engineers/omega-fund/omega-15739: 404",
+  "https://www.menoramivt.co.il/links/keren-hishtalmut/: 404"
+ ],
+ "candidates": 351,
+ "docs": 347,
+ "new_docs": 0,
+ "index_size": 347,
+ "seconds": 1006
+}

@@ -1,0 +1,135 @@
+name: Returns per-company
+
+# מרכיבי תשואה (פירוט תרומת אפיקי ההשקעה לתשואה) - איתור, הורדה ופרסור לכל חברה. ר' scripts/returns/README.md
+# כל חברה = ג'וב נפרד שכותב רק ל-returns/companies/<LegalId>/; הטבלאות המאוחדות (returns/*.csv) נבנות מחדש בכל commit.
+# schedule: כל החברות, כל יום אחרי סריקת המדיניות. push: רק שינוי ב-returns/run.json (הפעלה מבוקרת מענף עבודה:
+#   {"only": ["<LegalId>", ...] | "all", "mode": "crawl" | "parse", "force_cloud": true|false, "nonce": "..."}).
+on:
+  schedule:
+    - cron: "37 5 * * *"
+  workflow_dispatch:
+    inputs:
+      only:
+        description: "LegalId מופרדים ברווח (ריק = כולן)"
+        required: false
+      mode:
+        description: "crawl = סריקה + פרסור; parse = פרסור מחדש בלבד"
+        required: false
+        default: crawl
+  push:
+    branches: ["claude/**"]
+    paths: ["returns/run.json"]
+
+permissions:
+  contents: write
+
+jobs:
+  matrix:
+    runs-on: ubuntu-latest
+    outputs:
+      ids: ${{ steps.m.outputs.ids }}
+      mode: ${{ steps.m.outputs.mode }}
+      force: ${{ steps.m.outputs.force }}
+    steps:
+      - uses: actions/checkout@v4
+      - id: m
+        env:
+          ONLY: ${{ inputs.only }}
+          MODE: ${{ inputs.mode }}
+        run: |
+          python3 - <<'PY' >> "$GITHUB_OUTPUT"
+          import csv, json, os
+          from pathlib import Path
+          ids = sorted({r["LegalId"] for r in csv.DictReader(open("manifest.csv", encoding="utf-8-sig"))}
+                       | {p.stem for p in Path("scripts/policy/sites").glob("*.json")})
+          mode, force, only = os.environ.get("MODE") or "crawl", "", os.environ.get("ONLY", "").split()
+          if os.environ.get("GITHUB_EVENT_NAME") == "push" and Path("returns/run.json").exists():
+              run = json.loads(Path("returns/run.json").read_text("utf-8"))
+              only = [] if run.get("only") in (None, "all") else run["only"]
+              mode = run.get("mode") or "crawl"
+              force = "1" if run.get("force_cloud") else ""
+          if only:
+              ids = [i for i in ids if i in only]
+          print("ids=" + json.dumps(ids))
+          print("mode=" + mode)
+          print("force=" + force)
+          PY
+
+  company:
+    needs: matrix
+    if: needs.matrix.outputs.ids != '[]'
+    runs-on: ubuntu-latest
+    timeout-minutes: 80
+    strategy:
+      fail-fast: false
+      max-parallel: 24
+      matrix:
+        id: ${{ fromJson(needs.matrix.outputs.ids) }}
+    env:
+      ID: ${{ matrix.id }}
+      OUTD: returns/companies/${{ matrix.id }}
+    steps:
+      - name: Job start time
+        run: echo "JOB_T0=$(date +%s)" >> "$GITHUB_ENV"
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: |
+          pip install -q requests beautifulsoup4 pdfplumber openpyxl python-docx xlrd playwright
+          if [ "${{ needs.matrix.outputs.mode }}" != "parse" ]; then python -m playwright install --with-deps chromium >/dev/null; fi
+      - name: Crawl
+        if: needs.matrix.outputs.mode != 'parse'
+        continue-on-error: true
+        timeout-minutes: 38
+        env:
+          RETURNS_FORCE_CLOUD: ${{ needs.matrix.outputs.force }}
+        run: |
+          if [ "$(jq -r '.browser // "headless"' scripts/policy/sites/$ID.json 2>/dev/null)" = "headed" ]; then
+            POLICY_HEADED=1 xvfb-run -a python -m scripts.returns.crawl --only "$ID"
+          else
+            python -m scripts.returns.crawl --only "$ID"
+          fi
+      - name: Parse
+        continue-on-error: true
+        run: |
+          left=$(( 80*60 - ($(date +%s) - JOB_T0) - 420 ))
+          [ "$left" -lt 120 ] && left=120
+          RETURNS_PARSE_BUDGET=$left python -m scripts.returns.extract --only "$ID"
+      - name: Summary
+        if: always()
+        run: |
+          [ -f "$OUTD/crawl_report.json" ] && python3 -c "import json,sys; r=json.load(open('$OUTD/crawl_report.json')); print('**%s** %s pages=%s candidates=%s docs=%s new=%s imported=%s\n\n%s' % (r['legal_id'], r['company'], r.get('pages'), r.get('candidates'), r.get('docs'), r.get('new_docs'), r.get('imported_from_policy'), ' | '.join(r.get('errors', [])[:10])))" >> "$GITHUB_STEP_SUMMARY" || true
+      - name: Commit (retry, rebuild combined tables on latest head)
+        if: ${{ !cancelled() }}
+        run: |
+          git config user.name "github-actions"
+          git config user.email "actions@users.noreply.github.com"
+          B="${GITHUB_REF_NAME}"
+          [ -d "$OUTD" ] || { echo "no output"; exit 0; }
+          mkdir -p /tmp/out && cp -r "$OUTD" /tmp/out/$ID
+          for i in 1 2 3 4 5 6 7 8 9 10; do
+            git fetch -q origin "$B" && git reset -q --hard "origin/$B"
+            mkdir -p "$OUTD" && cp "$OUTD/docs_index.json" /tmp/head_idx.json 2>/dev/null || echo '{}' > /tmp/head_idx.json
+            cp -r /tmp/out/$ID/. "$OUTD"/
+            ADDED=$(python3 - "$OUTD/docs_index.json" <<'PY'
+          import json, os, sys
+          p = sys.argv[1]
+          cur = json.load(open(p, encoding="utf-8")) if os.path.exists(p) else {}
+          head = json.load(open("/tmp/head_idx.json", encoding="utf-8"))
+          n = 0
+          for k, v in head.items():
+              if k not in cur:
+                  v["parsed_sha"] = None; cur[k] = v; n += 1
+          json.dump(cur, open(p, "w", encoding="utf-8"), ensure_ascii=False, indent=1)
+          print(n)
+          PY
+            )
+            [ "${ADDED:-0}" != "0" ] && echo "kept $ADDED docs from head" && RETURNS_PARSE_BUDGET=300 python -m scripts.returns.extract --only "$ID"
+            python -m scripts.returns.combine
+            git add -A returns
+            if git diff --cached --quiet; then echo "nothing to commit"; break; fi
+            git commit -q -m "returns: $ID"
+            if git push -q origin "HEAD:$B"; then echo "pushed"; break; fi
+            sleep $((RANDOM % 20 + 5))
+          done

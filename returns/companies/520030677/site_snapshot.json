@@ -1,0 +1,62 @@
+{
+ "legal_id": "520030677",
+ "taken": "2026-10-08T14:01:16+00:00",
+ "pages": {
+  "https://www.ayalon-ins.co.il/about-us/about-ayalon/investments/policy/": {
+   "product": null,
+   "status": 403,
+   "method": "browser",
+   "text_hash": "5596a09d4c283a67338b4f017936f7adcc614ee2",
+   "text_head": "403 Forbidden Transaction ID: cf45e939115d6f6620030b2e9532704604e9caba5b24a9bebf1e491a95fca30e ",
+   "items": []
+  },
+  "https://www.ayalon-ins.co.il/about-us/about-ayalon/investments/": {
+   "product": null,
+   "status": 403,
+   "method": "browser",
+   "text_hash": "732dc8d5154bebccbf29c7063578474432f60b96",
+   "text_head": "403 Forbidden Transaction ID: cf45e939115d6f6620030b2e9532704639d4d4f63827016c9df06bc6ae5dc4b6 ",
+   "items": []
+  },
+  "https://www.ayalon-ins.co.il/savings/nispah/": {
+   "product": null,
+   "status": 403,
+   "method": "browser",
+   "text_hash": "f1a4c8edd9d3016fe70f9da2fc43728df44bd1d8",
+   "text_head": "403 Forbidden Transaction ID: 5e6687bd5a1e7469bcfcfc8db93c295d9dacc27fc4d550d9b0488b0832239d7a ",
+   "items": []
+  },
+  "https://www.ayalon-ins.co.il/savings/": {
+   "product": null,
+   "status": 403,
+   "method": "browser",
+   "text_hash": "323e362ad131a67547d653475dabb53be31c97ce",
+   "text_head": "403 Forbidden Transaction ID: 99a0ede8ad78e8b9f131e8ea40bc16bd1521c0d3e42921459f303b3554398c93 ",
+   "items": []
+  },
+  "https://www.ayalon-ins.co.il/savings/nispah_prat/": {
+   "product": null,
+   "status": 403,
+   "method": "browser",
+   "text_hash": "cffe6dc97d96043ef04590a3a52c739f17951de9",
+   "text_head": "403 Forbidden Transaction ID: cf45e939115d6f6620030b2e953270466c6232ad0de68fe918e88da7b07788fc ",
+   "items": []
+  },
+  "https://www.ayalon-ins.co.il/investments": {
+   "product": null,
+   "status": 403,
+   "method": "browser",
+   "text_hash": "384ccee1d949b91e0c7acc416d236525c5f7654f",
+   "text_head": "403 Forbidden Transaction ID: 5e6687bd5a1e7469bcfcfc8db93c295d978f984fb16ea4c7ee1aea7d4b283297 ",
+   "items": []
+  },
+  "https://www.ayalon-ins.co.il": {
+   "product": null,
+   "status": 403,
+   "method": "browser",
+   "text_hash": "188d0493861688c141bd356c1fe2452317835e7c",
+   "text_head": "403 Forbidden Transaction ID: 5e6687bd5a1e7469bcfcfc8db93c295d5dfa1e0729478959d428c51b682b131a ",
+   "items": []
+  }
+ }
+}

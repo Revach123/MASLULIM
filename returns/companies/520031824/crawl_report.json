@@ -1,0 +1,29 @@
+{
+ "legal_id": "520031824",
+ "company": "החברה המנהלת של רום קרן ההשתלמות לעובדי הרשויות המקומיות בע\"מ",
+ "run": "2026-10-08T14:04:30+00:00",
+ "errors": [],
+ "seeds": {
+  "config": 0,
+  "discovered": 0,
+  "policy_snapshot": 5,
+  "policy_snapshot_docs": 0,
+  "search": 0,
+  "sitemap": 0
+ },
+ "imported_from_policy": 0,
+ "pages": 6,
+ "pages_failed": [
+  "https://www.krm.co.il/?CategoryID=217&ArticleID=5: 403",
+  "https://www.krm.co.il/?CategoryID=217&ArticleID=3: 403",
+  "https://www.krm.co.il/?CategoryID=217&ArticleID=7: 403",
+  "https://www.krm.co.il/?CategoryID=217&ArticleID=12: 403",
+  "https://www.krm.co.il/?CategoryID=217: 403",
+  "https://www.krm.co.il: 403"
+ ],
+ "candidates": 0,
+ "docs": 0,
+ "new_docs": 0,
+ "index_size": 0,
+ "seconds": 52
+}

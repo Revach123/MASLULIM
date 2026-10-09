@@ -1,0 +1,23 @@
+{
+ "legal_id": "510806870",
+ "company": "רעות חברה לניהול קופות גמל בע\"מ",
+ "run": "2026-10-08T13:39:36+00:00",
+ "errors": [
+  "https://reut.net/wp-content/uploads/2025/08/רעות_מדיניות_פרטיות_לאתר_אינטרנט.pdf -> not_a_document"
+ ],
+ "seeds": {
+  "config": 0,
+  "discovered": 6,
+  "policy_snapshot": 0,
+  "policy_snapshot_docs": 0,
+  "sitemap": 6
+ },
+ "imported_from_policy": 0,
+ "pages": 19,
+ "pages_failed": [],
+ "candidates": 7,
+ "docs": 6,
+ "new_docs": 0,
+ "index_size": 6,
+ "seconds": 266
+}

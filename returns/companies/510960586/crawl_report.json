@@ -1,0 +1,25 @@
+{
+ "legal_id": "510960586",
+ "company": "חברת הגמל לעובדי האוניברסיטה העברית בע\"מ",
+ "run": "2026-10-08T13:39:13+00:00",
+ "errors": [],
+ "seeds": {
+  "config": 0,
+  "discovered": 0,
+  "policy_snapshot": 0,
+  "policy_snapshot_docs": 200,
+  "search": 0,
+  "sitemap": 0
+ },
+ "imported_from_policy": 0,
+ "pages": 45,
+ "pages_failed": [
+  "https://gemel.huji.ac.il/מצטרפים-וחוסכים-בקליק-אחד/: 404",
+  "https://gemel.huji.ac.il/forms/join.php: 404"
+ ],
+ "candidates": 40,
+ "docs": 40,
+ "new_docs": 0,
+ "index_size": 40,
+ "seconds": 109
+}

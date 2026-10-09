@@ -1,0 +1,23 @@
+{
+ "legal_id": "520042573",
+ "company": "עו\"ס - חברה לניהול קופות גמל בע\"מ",
+ "run": "2026-10-08T14:05:59+00:00",
+ "errors": [],
+ "seeds": {
+  "config": 0,
+  "discovered": 25,
+  "policy_snapshot": 3,
+  "policy_snapshot_docs": 239,
+  "sitemap": 25
+ },
+ "imported_from_policy": 0,
+ "pages": 45,
+ "pages_failed": [
+  "https://www.os-gml.co.il/%d7%94%d7%a9%d7%a7%d7%a2%d7%95%d7%aa/%d7%94%d7%a6%d7%91%d7%a2%d7%95%d7%aa-%d7%91%d7%90%d7%a1%d7%99%d7%a4%d7%95%d7%aa/: 404"
+ ],
+ "candidates": 242,
+ "docs": 242,
+ "new_docs": 0,
+ "index_size": 242,
+ "seconds": 298
+}

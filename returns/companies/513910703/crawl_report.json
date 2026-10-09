@@ -1,0 +1,26 @@
+{
+ "legal_id": "513910703",
+ "company": "איי. די. איי. חברה לביטוח בע\"מ",
+ "run": "2026-10-08T13:49:26+00:00",
+ "errors": [],
+ "seeds": {
+  "config": 0,
+  "discovered": 0,
+  "policy_snapshot": 2,
+  "policy_snapshot_docs": 0,
+  "search": 0,
+  "sitemap": 0
+ },
+ "imported_from_policy": 0,
+ "pages": 3,
+ "pages_failed": [
+  "https://www.555.co.il/about/hashkaot.html: browser:TimeoutError:Page.goto: Timeout 60000ms exceeded.",
+  "https://www.555.co.il/about/: browser:TimeoutError:Page.goto: Timeout 60000ms exceeded.",
+  "https://www.555.co.il: browser:TimeoutError:Page.goto: Timeout 60000ms exceeded."
+ ],
+ "candidates": 0,
+ "docs": 0,
+ "new_docs": 0,
+ "index_size": 0,
+ "seconds": 1494
+}

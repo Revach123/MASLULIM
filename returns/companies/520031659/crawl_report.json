@@ -1,0 +1,25 @@
+{
+ "legal_id": "520031659",
+ "company": "עוצ\"מ חברה לניהול קופות גמל והשתלמות בע\"מ",
+ "run": "2026-10-08T14:03:38+00:00",
+ "errors": [],
+ "seeds": {
+  "config": 0,
+  "discovered": 0,
+  "policy_snapshot": 1,
+  "policy_snapshot_docs": 0,
+  "search": 0,
+  "sitemap": 0
+ },
+ "imported_from_policy": 0,
+ "pages": 2,
+ "pages_failed": [
+  "https://keren.otzem-gemel.co.il/%d7%aa%d7%a9%d7%95%d7%90%d7%95%d7%aa-%d7%95%d7%93%d7%9e%d7%99-%d7%a0%d7%99%d7%94%d7%95%d7%9c/%d7%9e%d7%a8%d7%9b%d7%99%d7%91%d7%99-%d7%aa%d7%a9%d7%95%d7%90%d7%94/: 403",
+  "https://keren.otzem-gemel.co.il: 403"
+ ],
+ "candidates": 0,
+ "docs": 0,
+ "new_docs": 0,
+ "index_size": 0,
+ "seconds": 167
+}

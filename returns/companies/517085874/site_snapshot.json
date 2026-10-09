@@ -1,0 +1,22 @@
+{
+ "legal_id": "517085874",
+ "taken": "2026-10-08T13:46:55+00:00",
+ "pages": {
+  "https://www.ayalon-ins.co.il/": {
+   "product": null,
+   "status": 403,
+   "method": "browser",
+   "text_hash": "92b8a086ca7dea4b76ed8ab3f2a9f00fd9b025b9",
+   "text_head": "403 Forbidden Transaction ID: f860690c668499d7505b29ade664dee6eed6a6e6a66b120bb1007ffd51424552 ",
+   "items": []
+  },
+  "https://www.ayalon-ins.co.il": {
+   "product": null,
+   "status": 403,
+   "method": "browser",
+   "text_hash": "c9d2eda37da6b271b5a8011f0aaa17fd2ba797a4",
+   "text_head": "403 Forbidden Transaction ID: 13f9071e3e1142c68d76c95f5b4551bf8d007c8d27e924220188e73ac02d93a8 ",
+   "items": []
+  }
+ }
+}

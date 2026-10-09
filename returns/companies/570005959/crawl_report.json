@@ -1,0 +1,23 @@
+{
+ "legal_id": "570005959",
+ "company": "קופת\"ג של עובדי עירית חיפה",
+ "run": "2026-10-08T14:08:12+00:00",
+ "errors": [
+  "ttps://box2051.temp.domains/~ktagmuli/wp-content/uploads/2019/12/מרכיבי-תשואה-09.2019.xlsx -> ERR"
+ ],
+ "seeds": {
+  "config": 0,
+  "discovered": 1,
+  "policy_snapshot": 0,
+  "policy_snapshot_docs": 0,
+  "sitemap": 1
+ },
+ "imported_from_policy": 0,
+ "pages": 10,
+ "pages_failed": [],
+ "candidates": 32,
+ "docs": 31,
+ "new_docs": 0,
+ "index_size": 39,
+ "seconds": 43
+}

@@ -24,5 +24,8 @@
  "search": true,
  "rev": 6,
  "track_filter": "^(?!קרן חיסכון לצבא הקבע|עתידית|קופת גמל (ל)?משרתי)",
- "note": "2026-10-03: עמוד קופה מרכזית לפיצויים רבת מסלולים (נמצא בחיפוש)"
+ "note": "2026-10-03: עמוד קופה מרכזית לפיצויים רבת מסלולים (נמצא בחיפוש)",
+ "returns_follow": "harel-group\\.co\\.il/long-term-savings/(pension/funds|funding/plans|study-funds/plans|funding-saving/plans|severance/[^/]+/Pages)/[^?#]+$",
+ "returns_max_pages": 110,
+ "returns_crawl_budget": 2300
 }

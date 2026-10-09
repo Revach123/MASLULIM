@@ -38,5 +38,16 @@
  "docs": [
   "https://www.clalbit.co.il/media/nkpjarco/a4-1-002.pdf",
   "https://www.clalbit.co.il/media/y1iadydy/מניות-002.pdf"
- ]
+ ],
+ "returns_pages": [
+  {
+   "product": null,
+   "url": "https://www.clalbit.co.il/aboutclalinsurance/generalreports/?txtTabId=1&txtReportsYearId={year}&txtCompanyId=2"
+  }
+ ],
+ "returns_budget": [
+  60,
+  30
+ ],
+ "returns_note": "כלל: אותו עמוד דוחות כמו המדיניות, בלי סינון סוג דוח - כל הדוחות של השנה; הקבצים <ח.פ.>_g<מספר>_Yield"
 }

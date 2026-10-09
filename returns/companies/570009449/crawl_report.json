@@ -1,0 +1,24 @@
+{
+ "legal_id": "570009449",
+ "company": "עוצ\"מ - אגודה שיתופית לניהול קופות גמל בע\"מ",
+ "run": "2026-10-08T14:08:14+00:00",
+ "errors": [],
+ "seeds": {
+  "config": 0,
+  "discovered": 0,
+  "policy_snapshot": 0,
+  "policy_snapshot_docs": 0,
+  "search": 0,
+  "sitemap": 0
+ },
+ "imported_from_policy": 0,
+ "pages": 1,
+ "pages_failed": [
+  "https://www.otzem-gemel.co.il: 403"
+ ],
+ "candidates": 0,
+ "docs": 0,
+ "new_docs": 0,
+ "index_size": 0,
+ "seconds": 92
+}

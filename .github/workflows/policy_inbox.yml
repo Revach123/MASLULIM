@@ -32,12 +32,17 @@ jobs:
           B="${GITHUB_REF_NAME}"
           for i in 1 2 3 4 5 6; do
             git fetch -q origin "$B" && git reset -q --hard "origin/$B"
+            # מרכיבי תשואה מהמחשב הביתי (policy/inbox/<id>/returns/) -> returns/companies/<id>/ (scripts/returns)
+            RIDS=$(python -m scripts.returns.ingest)
+            echo "returns ingested: $RIDS"
+            for id in $RIDS; do RETURNS_PARSE_BUDGET=600 python -m scripts.returns.extract --only $id; done
+            [ -n "$RIDS" ] && python -m scripts.returns.combine
             IDS=$(python -m scripts.policy.ingest_inbox)
             echo "ingested: $IDS"
-            [ -z "$IDS" ] && break
+            [ -z "$IDS" ] && [ -z "$RIDS" ] && break
             for id in $IDS; do POLICY_OUT=policy/companies/$id python -m scripts.policy.extract; done
-            python -m scripts.policy.combine
-            git add -A policy
+            [ -n "$IDS" ] && python -m scripts.policy.combine
+            git add -A policy returns
             git diff --cached --quiet && break
             git commit -q -m "policy: ingest extension uploads ($IDS)"
             git push -q origin "HEAD:$B" && break
