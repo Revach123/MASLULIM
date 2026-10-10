@@ -108,6 +108,8 @@ def main():
         lid = data["legal_id"]
         it = data["assets"].index("total") if "total" in data["assets"] else None
         for t in data["tracks"]:
+            if t["key"].startswith("u:") and not t.get("track_no"):
+                continue  # בלוק שלא זוהה - לא נספר כמסלול
             ours = {ym: (v["c"][it] if it is not None and len(v["c"]) > it else None) for ym, v in t["m"].items()}
             ours = {k: v for k, v in ours.items() if v is not None}
             no = t.get("track_no")

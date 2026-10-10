@@ -65,6 +65,8 @@ def main():
         src_of = {k: (x[0], x[2]) for k, x in by_owner.get(lid, {}).items()}
         found = set()
         months_all = []
+        unidentified = sum(1 for t in data["tracks"] if t["key"].startswith("u:"))
+        data["tracks"] = [t for t in data["tracks"] if not t["key"].startswith("u:")]  # בלוק בלי זהות - לא מסלול (נשאר ב-tracks.json)
         for t in data["tracks"]:
             src_lid, assets = src_of[t["key"]]
             ix = {k: i for i, k in enumerate(assets)}
@@ -90,7 +92,7 @@ def main():
         last_m = max(months_all) if months_all else None
         row = {"legal_id": lid, "company": names.get(lid, lid), "pages": rep.get("pages"), "candidates": rep.get("candidates"),
                "docs_index": len(index), "docs_returns": docs_ok, "not_returns": sum(1 for e in index.values() if e.get("not_returns")),
-               "parse_errors": sum(1 for e in index.values() if e.get("parse_error")), "tracks": len(data["tracks"]),
+               "parse_errors": sum(1 for e in index.values() if e.get("parse_error")), "tracks": len(data["tracks"]), "unidentified_blocks": unidentified,
                "tracks_numbered": sum(1 for t in data["tracks"] if t.get("track_no")), "registry_tracks": len(regs),
                "registry_found": len(regs & found), "registry_coverage": round(100 * len(regs & found) / len(regs), 1) if regs else None,
                "first_month": min(months_all) if months_all else None, "last_month": last_m,
