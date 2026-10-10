@@ -440,6 +440,25 @@ def _line_nums(line):
     return " ".join(words), nums
 
 
+def valid_text_block(b, min_assets=6, tol=0.12):
+    """בלוק שנקרא משורות טקסט של PDF נשמר רק אם הוא נראה כמו דוח מרכיבי תשואה: לפחות min_assets אפיקים מזוהים, שורת סה"כ,
+    וסכום התרומות של האפיקים = הסה"כ ברוב החודשים. (בלי זה: טקסט חופשי עם מספרים - דוחות כספיים/רשימות נכסים של מיטב -
+    הפך ל'מסלולים' כמו "31 31" ו"חברה ציבורית שמניותיה רשומות למסחר".)"""
+    assets = {r["asset_key"] for r in b["rows"] if r["section"] == "asset" and not r["asset_key"].startswith("x:")}
+    if len(assets) < min_assets:
+        return False
+    tot = {(r["period"], r["month"]): r["contribution"] for r in b["rows"] if r["asset_key"] == "total" and r["contribution"] is not None}
+    sums = {}
+    for r in b["rows"]:
+        if r["section"] == "asset" and r["contribution"] is not None:
+            sums[(r["period"], r["month"])] = sums.get((r["period"], r["month"]), 0) + r["contribution"]
+    both = [k for k in tot if k in sums and not any(x.get("derived") for x in b["rows"] if (x["period"], x["month"]) == k and x["asset_key"] == "total")]
+    if not both:
+        return False
+    ok = sum(1 for k in both if abs(sums[k] - tot[k]) <= tol * max(abs(tot[k]), 0.5))
+    return ok >= 0.8 * len(both)
+
+
 def parse_pdf_text(path: Path):
     """PDF בלי טבלאות שזוהו: שורות טקסט. כותרת = שורה עם 2+ חודשים; כל שורת אפיק = שם + מספרים (זוג לכל חודש:
     תרומה, שיעור - או רק תרומה). הכיוון (RTL) נבדק מול שורת הסה"כ: סכום האפיקים = הסה"כ."""
@@ -592,7 +611,8 @@ def parse_file(path, link_text=""):
     if path.suffix.lower() == ".pdf" and not blocks:
         for b in parse_pdf_text(path):
             b["rows"], b["scale"] = finalize(b)
-            blocks.append(b)
+            if valid_text_block(b):
+                blocks.append(b)
     # בלוק בלי פרטי מסלול (גיליון "מצטבר", המשך בעמוד הבא ב-PDF) - שייך למסלול היחיד שזוהה בקובץ / לבלוק שלפניו
     ids = {(b["track_no"], b["track_name"]) for b in blocks if b["track_no"] or b["track_name"]}
     for i, b in enumerate(blocks):

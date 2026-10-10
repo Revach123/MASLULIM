@@ -1,6 +1,8 @@
 {
- "only": ["520042581"],
+ "only": [
+  "511880460"
+ ],
  "mode": "crawl",
- "force_cloud": true,
- "nonce": "run-14"
+ "force_cloud": false,
+ "nonce": "analyst-url-pattern"
 }

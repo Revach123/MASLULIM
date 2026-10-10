@@ -17,6 +17,8 @@ from urllib.parse import unquote
 ROOT = Path(__file__).resolve().parents[2]
 POL = ROOT / "policy"
 SITES = Path(__file__).with_name("sites")
+# Windows: עדיפות נמוכה לסריקה (BELOW_NORMAL) - המחשב נשאר רגיש למשתמש בזמן הריצה
+LOW_PRIORITY = 0x00004000 if os.name == "nt" else 0
 
 
 def known_shas():
@@ -57,7 +59,7 @@ def run_site(c, timeout_min, known, is_policy):
     env.setdefault("POLICY_OFFSCREEN", "1")  # חלון אמיתי (נחסם פחות מ-headless) אבל מחוץ למסך - לא מפריע למשתמש
     t0 = datetime.now(timezone.utc)
     try:
-        p = subprocess.run([sys.executable, "-m", "scripts.policy.crawl", "--only", lid], cwd=ROOT, env=env,
+        p = subprocess.run([sys.executable, "-m", "scripts.policy.crawl", "--only", lid], cwd=ROOT, env=env, creationflags=LOW_PRIORITY,
                            capture_output=True, text=True, encoding="utf-8", errors="replace", timeout=timeout_min * 60)
         log, code = (p.stdout + p.stderr)[-3000:], p.returncode
     except subprocess.TimeoutExpired as e:

@@ -19,7 +19,7 @@ from scripts.returns.extract import norm_name
 
 ROOT = Path(__file__).resolve().parents[2]
 RET = ROOT / "returns"
-OK_GAP, CHECK_GAP, MONTH_GAP = 0.06, 0.3, 0.15
+OK_GAP, CHECK_GAP, MONTH_GAP, CUM_OK = 0.06, 0.3, 0.15, 0.3
 
 
 def fetch_yields():
@@ -54,18 +54,37 @@ def fetch_yields():
     return out
 
 
+def chain(ys):
+    f = 1.0
+    for y in ys:
+        f *= 1 + y / 100.0
+    return (f - 1) * 100
+
+
 def compare(ours: dict, gov: dict):
     gaps = [(ym, v, gov[ym], abs(v - gov[ym])) for ym, v in ours.items() if ym in gov and v is not None]
     if not gaps:
         return None
     g = [x[3] for x in gaps]
-    return {"n": len(g), "median_gap": round(statistics.median(g), 4), "max_gap": round(max(g), 4), "gaps": gaps}
+    # תשואה מצטברת (שרשור) בכל שנה קלנדרית עם 6+ חודשים משותפים: הפרשי תזמון חודשיים (חיובי בחודש אחד ושלילי בבא)
+    # מתקזזים במצטבר, טעות אמיתית בערכים - לא
+    by_year = {}
+    for ym, a, b, _ in gaps:
+        by_year.setdefault(ym[:4], []).append((a, b))
+    cum = [abs(chain([a for a, _ in v]) - chain([b for _, b in v])) for v in by_year.values() if len(v) >= 6]
+    return {"n": len(g), "median_gap": round(statistics.median(g), 4), "max_gap": round(max(g), 4), "gaps": gaps,
+            "cum_gap": round(statistics.median(cum), 4) if cum else None, "cum_years": len(cum)}
 
 
 def status(c):
     if not c:
         return "no_data"
-    return "ok" if c["median_gap"] <= OK_GAP else "check" if c["median_gap"] <= CHECK_GAP else "mismatch"
+    if c["median_gap"] <= OK_GAP:
+        return "ok"
+    # פער חודשי בגלל תזמון בלבד: במצטבר השנתי התשואות זהות (עד CUM_OK נק' אחוז)
+    if c.get("cum_gap") is not None and c["cum_years"] >= 1 and c["cum_gap"] <= CUM_OK and c["median_gap"] <= 1.0:
+        return "ok_cum"
+    return "check" if c["median_gap"] <= CHECK_GAP else "mismatch"
 
 
 def main():
@@ -89,6 +108,8 @@ def main():
         lid = data["legal_id"]
         it = data["assets"].index("total") if "total" in data["assets"] else None
         for t in data["tracks"]:
+            if t["key"].startswith("u:") and not t.get("track_no"):
+                continue  # בלוק שלא זוהה - לא נספר כמסלול
             ours = {ym: (v["c"][it] if it is not None and len(v["c"]) > it else None) for ym, v in t["m"].items()}
             ours = {k: v for k, v in ours.items() if v is not None}
             no = t.get("track_no")
@@ -112,13 +133,16 @@ def main():
                     found = cands[0]
                     if found[1] != no:
                         for nm in t.get("names") or [t.get("name") or ""]:  # השמות כפי שבקבצים - המפתח של extract
-                            ymap[f"{lid}|{norm_name(nm)}"] = found[1]
+                            if norm_name(nm):
+                                ymap[f"{lid}|{norm_name(nm)}"] = found[1]
+                        if t["key"].startswith("u:"):  # בלי שם (PDF של ילין) - לפי מפתח הקובץ+גיליון
+                            ymap[f"{lid}|{t['key']}"] = found[1]
             if st == "mismatch" and t.get("track_no_src") == "datagov_yield" and not found:
                 for nm in t.get("names") or []:
                     ymap.pop(f"{lid}|{norm_name(nm)}", None)
             row = {"legal_id": t.get("owner") or lid, "key": t["key"], "track_no": no, "track_no_src": t.get("track_no_src"), "track_name": t.get("name"),
                    "domain": dom, "status": st, "n": best and best["n"], "median_gap": best and best["median_gap"],
-                   "max_gap": best and best["max_gap"], "months": len(ours),
+                   "max_gap": best and best["max_gap"], "cum_gap": best and best["cum_gap"], "cum_years": best and best["cum_years"], "months": len(ours),
                    "datagov_match": found and found[1], "datagov_match_gap": found and found[0]}
             rows.append(row)
             for ym, a, b, g in (best or {}).get("gaps", []):

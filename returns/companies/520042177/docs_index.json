@@ -870,6 +870,7 @@
   "product": "ביטוח",
   "via": "cloud",
   "not_returns": true,
-  "parser_version": 5
+  "parser_version": 5,
+  "pdf_parser_version": 2
  }
 }
