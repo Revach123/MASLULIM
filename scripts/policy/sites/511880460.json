@@ -10,5 +10,117 @@
  "search": true,
  "rev": 6,
  "home_source": "report_email:analyst.co.il",
- "track_from_link": "^(?:אנליסט\\s+)?(.+?)\\s+מדיניות\\s+צפויה"
+ "track_from_link": "^(?:אנליסט\\s+)?(.+?)\\s+מדיניות\\s+צפויה",
+ "returns_pages": [
+  {
+   "product": null,
+   "url": "https://www.analyst.co.il/funds-lobby/provident-funds/fund-118/report/"
+  },
+  {
+   "product": null,
+   "url": "https://www.analyst.co.il/funds-lobby/provident-funds/fund-962/report/"
+  },
+  {
+   "product": null,
+   "url": "https://www.analyst.co.il/funds-lobby/provident-funds/fund-963/report/"
+  },
+  {
+   "product": null,
+   "url": "https://www.analyst.co.il/funds-lobby/provident-funds/fund-972/report/"
+  },
+  {
+   "product": null,
+   "url": "https://www.analyst.co.il/funds-lobby/provident-funds/fund-973/report/"
+  },
+  {
+   "product": null,
+   "url": "https://www.analyst.co.il/funds-lobby/provident-funds/fund-1535/report/"
+  },
+  {
+   "product": null,
+   "url": "https://www.analyst.co.il/funds-lobby/provident-funds/fund-7834/report/"
+  },
+  {
+   "product": null,
+   "url": "https://www.analyst.co.il/funds-lobby/provident-funds/fund-7836/report/"
+  },
+  {
+   "product": null,
+   "url": "https://www.analyst.co.il/funds-lobby/provident-funds/fund-7837/report/"
+  },
+  {
+   "product": null,
+   "url": "https://www.analyst.co.il/funds-lobby/provident-funds/fund-7839/report/"
+  },
+  {
+   "product": null,
+   "url": "https://www.analyst.co.il/funds-lobby/provident-funds/fund-7842/report/"
+  },
+  {
+   "product": null,
+   "url": "https://www.analyst.co.il/funds-lobby/provident-funds/fund-7843/report/"
+  },
+  {
+   "product": null,
+   "url": "https://www.analyst.co.il/funds-lobby/provident-funds/fund-7986/report/"
+  },
+  {
+   "product": null,
+   "url": "https://www.analyst.co.il/funds-lobby/provident-funds/fund-8679/report/"
+  },
+  {
+   "product": null,
+   "url": "https://www.analyst.co.il/funds-lobby/provident-funds/fund-8779/report/"
+  },
+  {
+   "product": null,
+   "url": "https://www.analyst.co.il/funds-lobby/provident-funds/fund-11365/report/"
+  },
+  {
+   "product": null,
+   "url": "https://www.analyst.co.il/funds-lobby/provident-funds/fund-11366/report/"
+  },
+  {
+   "product": null,
+   "url": "https://www.analyst.co.il/funds-lobby/provident-funds/fund-11367/report/"
+  },
+  {
+   "product": null,
+   "url": "https://www.analyst.co.il/funds-lobby/provident-funds/fund-13853/report/"
+  },
+  {
+   "product": null,
+   "url": "https://www.analyst.co.il/funds-lobby/provident-funds/fund-13854/report/"
+  },
+  {
+   "product": null,
+   "url": "https://www.analyst.co.il/funds-lobby/provident-funds/fund-14279/report/"
+  },
+  {
+   "product": null,
+   "url": "https://www.analyst.co.il/funds-lobby/provident-funds/fund-15309/report/"
+  },
+  {
+   "product": null,
+   "url": "https://www.analyst.co.il/funds-lobby/provident-funds/fund-15310/report/"
+  },
+  {
+   "product": null,
+   "url": "https://www.analyst.co.il/funds-lobby/provident-funds/fund-15311/report/"
+  },
+  {
+   "product": null,
+   "url": "https://www.analyst.co.il/funds-lobby/provident-funds/fund-15312/report/"
+  },
+  {
+   "product": null,
+   "url": "https://www.analyst.co.il/funds-lobby/provident-funds/fund-16014/report/"
+  },
+  {
+   "product": null,
+   "url": "https://www.analyst.co.il/funds-lobby/provident-funds/fund-16015/report/"
+  }
+ ],
+ "returns_max_pages": 70,
+ "returns_note": "כתובת עמוד הדוחות נבנית ממספר המסלול: funds-lobby/provident-funds/fund-<מספר>/report/ - מנסים את כל מספרי הרישום, לא רק את אלה שמקושרים באתר"
 }

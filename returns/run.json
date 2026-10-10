@@ -1,13 +1,8 @@
 {
  "only": [
-  "513611509",
-  "512065202",
-  "512245812",
-  "520042540",
-  "520027715",
-  "520042177"
+  "511880460"
  ],
- "mode": "parse",
+ "mode": "crawl",
  "force_cloud": false,
- "nonce": "parse-pdf-v2"
+ "nonce": "analyst-url-pattern"
 }
