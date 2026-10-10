@@ -12,6 +12,7 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parents[2]
 SITES = ROOT / "scripts" / "policy" / "sites"
 RET = ROOT / "returns"
+LOW_PRIORITY = 0x00004000 if os.name == "nt" else 0  # Windows BELOW_NORMAL_PRIORITY_CLASS
 
 
 def main():
@@ -41,7 +42,7 @@ def main():
         env.setdefault("POLICY_HEADED", "1")
         env.setdefault("POLICY_OFFSCREEN", "1")
         try:
-            r = subprocess.run([sys.executable, "-m", "scripts.returns.crawl", "--only", lid], cwd=ROOT, env=env,
+            r = subprocess.run([sys.executable, "-m", "scripts.returns.crawl", "--only", lid], cwd=ROOT, env=env, creationflags=LOW_PRIORITY,
                                capture_output=True, text=True, encoding="utf-8", errors="replace", timeout=a.timeout_min * 60)
             print((r.stdout + r.stderr)[-600:], flush=True)
         except subprocess.TimeoutExpired:
