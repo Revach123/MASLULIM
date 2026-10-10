@@ -79,7 +79,7 @@ def main():
                                 "track_no_src": t.get("track_no_src"), "track_name": t.get("name"), "registry_name": t.get("registry_name"),
                                 "product": t.get("product"), "first_month": t.get("first"), "last_month": t.get("last"),
                                 "n_months": t.get("n_months"), "last_return": tot(last), "revisions": len(t.get("revisions") or []),
-                                "verify_status": v.get("status"), "verify_months": v.get("n"), "verify_median_gap": v.get("median_gap"),
+                                "verify_status": v.get("status"), "verify_months": v.get("n"), "verify_median_gap": v.get("median_gap"), "verify_cum_gap": v.get("cum_gap"),
                                 "docs": len({x["d"] for x in t["m"].values()})})
             for ym, val in t["m"].items():
                 st = ix.get("stocks")

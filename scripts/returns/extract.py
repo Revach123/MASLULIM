@@ -24,6 +24,9 @@ from scripts.returns.parse import parse_file, ASSET_ORDER
 ROOT = Path(__file__).resolve().parents[2]
 POL = ROOT / "policy"
 RET = ROOT / "returns"
+# כותרת דוח בתור שם מסלול = פריסה ישנה (2015, גל/שיבולת: "דוח רבעוני לתאריך 30/09/15 קבוצה: גל (408) ...") שהפרסר לא מפענח נכון
+# (מספר הקופה נלקח כמספר מסלול). עדיף בלי הנתון מאשר משויך למסלול שגוי
+JUNK_TITLE = re.compile(r"^\s*דו\"?ח\s+(רבעוני|חודשי|שנתי)?\s*(לתאריך|ל\s*-?\s*\d)", re.I)
 GENERIC_NAME = re.compile(r"(page|sheet|גיליון)\s*\d*|[\d\s.]+", re.I)
 NAMED_RETURNS = re.compile(r"מרכיבי[-_ ]*(ה)?תשוא|תרומת[-_ ]*(ה)?אפיקי|yield_?\d|returnelements|תשואה[-_ ]*לפי[-_ ]*אפיק", re.I)
 PDF_PARSER_VERSION = 2  # PDF בלבד - מעלים כשמשנים את פרסור ה-PDF (בלי פרסור מחדש של אלפי קבצי אקסל)
@@ -205,11 +208,15 @@ def build(lid: str, out: Path, index: dict, reg: Registry):
         did = e["sha256"][:12]
         cover = 0
         for b in res["blocks"]:
+            if JUNK_TITLE.match(b.get("track_name") or ""):
+                continue
             cover = max([cover] + [r["month"] or 0 for r in b["rows"] if r["period"] == "m"])
         docs[did] = {"url": url, "file": e["file"], "link_text": (e.get("link_text") or "")[:160], "first_seen": e.get("first_seen"),
                      "year": res.get("file_year"), "cover": cover, "product": e.get("product")}
         rank = (res.get("file_year") or 0, cover, e.get("first_seen") or "")
         for b in res["blocks"]:
+            if JUNK_TITLE.match(b.get("track_name") or ""):
+                continue
             raw_name = (b.get("track_name") or "").strip()
             # בלוק בלי זהות (PDF של ילין: "page1" / "2024 1 2 3 ..." בלי שם מסלול): אסור שיתמזג עם בלוקים אחרים תחת אותו מפתח
             # (n:page1 ערבב עשרות מסלולים) - מפתח לפי הקובץ והגיליון; אימות data.gov יכול לשייך לו מספר (verify)
