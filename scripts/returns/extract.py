@@ -244,6 +244,9 @@ def build(lid: str, out: Path, index: dict, reg: Registry):
                 if r.get("amount") is not None:
                     slot["amount"] = r["amount"]
             for (period, ym), v in per.items():
+                tot_c = v["c"].get("total")
+                if tot_c is not None and abs(tot_c) > (35 if period == "m" else 120):
+                    continue  # לא תשואה סבירה (100.0 = סכום משקלים שנקרא כתשואה) - לא נכנס לסדרה
                 bucket = t["m" if period == "m" else "ytd"]
                 rk = t["_rank"].get((period, ym))
                 old = bucket.get(ym)
