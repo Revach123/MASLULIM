@@ -2155,7 +2155,8 @@
   "product": "גמל",
   "via": "cloud",
   "not_returns": true,
-  "parser_version": 5
+  "parser_version": 5,
+  "parse_error": "file missing"
  },
  "https://www.meitav.co.il/Reports/uploadfiles\\2_11_6_880_Q226.pdf": {
   "legal_id": "512065202",
@@ -2172,7 +2173,8 @@
   "product": "גמל",
   "via": "cloud",
   "not_returns": true,
-  "parser_version": 5
+  "parser_version": 5,
+  "parse_error": "file missing"
  },
  "https://www.meitav.co.il/Reports/uploadfiles\\2_11_12_Q226.xlsx": {
   "legal_id": "512065202",
@@ -2207,7 +2209,9 @@
   "via": "cloud",
   "parser_version": 5,
   "tracks": 2,
-  "file_year": 2026
+  "file_year": 2026,
+  "not_returns": true,
+  "pdf_parser_version": 2
  },
  "https://www.meitav.co.il/Reports/uploadfiles\\2_11_1_289_Q126.xls": {
   "legal_id": "512065202",
@@ -2530,7 +2534,8 @@
   "product": "גמל",
   "via": "cloud",
   "not_returns": true,
-  "parser_version": 5
+  "parser_version": 5,
+  "parse_error": "file missing"
  },
  "https://www.meitav.co.il/Reports/uploadfiles\\2_11_6_880_Q126.pdf": {
   "legal_id": "512065202",
@@ -2547,7 +2552,8 @@
   "product": "גמל",
   "via": "cloud",
   "not_returns": true,
-  "parser_version": 5
+  "parser_version": 5,
+  "parse_error": "file missing"
  },
  "https://www.meitav.co.il/Reports/uploadfiles\\2_11_12_Q126 .xlsx": {
   "legal_id": "512065202",
@@ -2582,7 +2588,9 @@
   "via": "cloud",
   "parser_version": 5,
   "tracks": 1,
-  "file_year": 2026
+  "file_year": 2026,
+  "not_returns": true,
+  "pdf_parser_version": 2
  },
  "https://www.meitav.co.il/Reports/uploadfiles\\2_11_4_289_0226.xls": {
   "legal_id": "512065202",
@@ -5115,7 +5123,8 @@
   "product": "גמל",
   "via": "cloud",
   "not_returns": true,
-  "parser_version": 5
+  "parser_version": 5,
+  "parse_error": "file missing"
  },
  "https://www.meitav.co.il/Reports/uploadfiles\\2_11_7_880_YY25.pdf": {
   "legal_id": "512065202",
@@ -5133,7 +5142,9 @@
   "via": "cloud",
   "parser_version": 5,
   "tracks": 1,
-  "file_year": 2003
+  "file_year": 2003,
+  "not_returns": true,
+  "pdf_parser_version": 2
  },
  "https://www.meitav.co.il/Reports/uploadfiles\\2_11_7_1487_YY25.pdf": {
   "legal_id": "512065202",
@@ -5150,7 +5161,8 @@
   "product": "גמל",
   "via": "cloud",
   "not_returns": true,
-  "parser_version": 5
+  "parser_version": 5,
+  "parse_error": "file missing"
  },
  "https://www.meitav.co.il/Reports/uploadfiles\\2_11_2_289_YY24.xlsx": {
   "legal_id": "512065202",
@@ -5235,7 +5247,8 @@
   "product": "גמל",
   "via": "cloud",
   "not_returns": true,
-  "parser_version": 5
+  "parser_version": 5,
+  "parse_error": "file missing"
  },
  "https://www.meitav.co.il/Reports/uploadfiles\\2_11_7_880_YY24.pdf": {
   "legal_id": "512065202",
@@ -5253,7 +5266,9 @@
   "via": "cloud",
   "parser_version": 5,
   "tracks": 1,
-  "file_year": 2003
+  "file_year": 2003,
+  "not_returns": true,
+  "pdf_parser_version": 2
  },
  "https://www.meitav.co.il/Reports/uploadfiles\\2_11_7_1487_YY24.pdf": {
   "legal_id": "512065202",
@@ -5270,7 +5285,8 @@
   "product": "גמל",
   "via": "cloud",
   "not_returns": true,
-  "parser_version": 5
+  "parser_version": 5,
+  "parse_error": "file missing"
  },
  "https://www.meitav.co.il/Reports/uploadfiles\\2_11_1_554_Q224.xls": {
   "legal_id": "512065202",
@@ -5769,7 +5785,8 @@
   "product": "גמל",
   "via": "cloud",
   "not_returns": true,
-  "parser_version": 5
+  "parser_version": 5,
+  "parse_error": "file missing"
  },
  "https://www.meitav.co.il/Reports/uploadfiles\\2_11_7_880_YY23.pdf": {
   "legal_id": "512065202",
@@ -5786,7 +5803,8 @@
   "product": "גמל",
   "via": "cloud",
   "not_returns": true,
-  "parser_version": 5
+  "parser_version": 5,
+  "parse_error": "file missing"
  },
  "https://www.meitav.co.il/Reports/uploadfiles\\2_11_7_1487_YY23.pdf": {
   "legal_id": "512065202",
@@ -5803,7 +5821,8 @@
   "product": "גמל",
   "via": "cloud",
   "not_returns": true,
-  "parser_version": 5
+  "parser_version": 5,
+  "parse_error": "file missing"
  },
  "https://www.meitav.co.il/Reports/uploadfiles\\2_11_5_289_Q223.xlsx": {
   "legal_id": "512065202",
@@ -6772,7 +6791,8 @@
   "product": "גמל",
   "via": "cloud",
   "not_returns": true,
-  "parser_version": 5
+  "parser_version": 5,
+  "parse_error": "file missing"
  },
  "https://www.meitav.co.il/Reports/uploadfiles\\2_11_7_880_YY22.pdf": {
   "legal_id": "512065202",
@@ -6789,7 +6809,8 @@
   "product": "גמל",
   "via": "cloud",
   "not_returns": true,
-  "parser_version": 5
+  "parser_version": 5,
+  "parse_error": "file missing"
  },
  "https://www.meitav.co.il/Reports/uploadfiles\\2_11_7_1487_YY22.pdf": {
   "legal_id": "512065202",
@@ -6806,7 +6827,8 @@
   "product": "גמל",
   "via": "cloud",
   "not_returns": true,
-  "parser_version": 5
+  "parser_version": 5,
+  "parse_error": "file missing"
  },
  "https://www.meitav.co.il/Reports/uploadfiles\\2_11_2_289_YY21.xlsx": {
   "legal_id": "512065202",
@@ -6891,7 +6913,8 @@
   "product": "גמל",
   "via": "cloud",
   "not_returns": true,
-  "parser_version": 5
+  "parser_version": 5,
+  "parse_error": "file missing"
  },
  "https://www.meitav.co.il/Reports/uploadfiles\\2_11_7_880_YY21.pdf": {
   "legal_id": "512065202",
@@ -6908,7 +6931,8 @@
   "product": "גמל",
   "via": "cloud",
   "not_returns": true,
-  "parser_version": 5
+  "parser_version": 5,
+  "parse_error": "file missing"
  },
  "https://www.meitav.co.il/Reports/uploadfiles\\2_11_7_1487_YY21.pdf": {
   "legal_id": "512065202",
@@ -6925,7 +6949,8 @@
   "product": "גמל",
   "via": "cloud",
   "not_returns": true,
-  "parser_version": 5
+  "parser_version": 5,
+  "parse_error": "file missing"
  },
  "https://www.meitav.co.il/Reports/uploadfiles\\2_11_2_289_YY20.xls": {
   "legal_id": "512065202",
@@ -7010,7 +7035,8 @@
   "product": "גמל",
   "via": "cloud",
   "not_returns": true,
-  "parser_version": 5
+  "parser_version": 5,
+  "parse_error": "file missing"
  },
  "https://www.meitav.co.il/Reports/uploadfiles\\2_11_7_880_YY20.pdf": {
   "legal_id": "512065202",
@@ -7027,7 +7053,8 @@
   "product": "גמל",
   "via": "cloud",
   "not_returns": true,
-  "parser_version": 5
+  "parser_version": 5,
+  "parse_error": "file missing"
  },
  "https://www.meitav.co.il/Reports/uploadfiles\\2_11_7_1487_YY20.pdf": {
   "legal_id": "512065202",
@@ -7044,7 +7071,8 @@
   "product": "גמל",
   "via": "cloud",
   "not_returns": true,
-  "parser_version": 5
+  "parser_version": 5,
+  "parse_error": "file missing"
  },
  "https://www.meitav.co.il/Reports/uploadfiles\\2_11_1_2055_Q220.xls": {
   "legal_id": "512065202",
@@ -7132,7 +7160,9 @@
   "via": "cloud",
   "parser_version": 5,
   "tracks": 1,
-  "file_year": 2004
+  "file_year": 2004,
+  "not_returns": true,
+  "pdf_parser_version": 2
  },
  "https://www.meitav.co.il/Reports/uploadfiles\\2_11_7_880_YY19.pdf": {
   "legal_id": "512065202",
@@ -7149,7 +7179,8 @@
   "product": "גמל",
   "via": "cloud",
   "not_returns": true,
-  "parser_version": 5
+  "parser_version": 5,
+  "parse_error": "file missing"
  },
  "https://www.meitav.co.il/Reports/uploadfiles\\2_11_7_1487_YY19.pdf": {
   "legal_id": "512065202",
@@ -7166,7 +7197,8 @@
   "product": "גמל",
   "via": "cloud",
   "not_returns": true,
-  "parser_version": 5
+  "parser_version": 5,
+  "parse_error": "file missing"
  },
  "https://www.meitav.co.il/Reports/uploadfiles\\2_11_2_289_YY18.xls": {
   "legal_id": "512065202",
@@ -7218,7 +7250,9 @@
   "via": "cloud",
   "parser_version": 5,
   "tracks": 1,
-  "file_year": 2004
+  "file_year": 2004,
+  "not_returns": true,
+  "pdf_parser_version": 2
  },
  "https://www.meitav.co.il/Reports/uploadfiles\\2_11_7_880_YY18.pdf": {
   "legal_id": "512065202",
@@ -7235,7 +7269,8 @@
   "product": "גמל",
   "via": "cloud",
   "not_returns": true,
-  "parser_version": 5
+  "parser_version": 5,
+  "parse_error": "file missing"
  },
  "https://www.meitav.co.il/Reports/uploadfiles\\2_11_7_1487_YY18.pdf": {
   "legal_id": "512065202",
@@ -7252,6 +7287,7 @@
   "product": "גמל",
   "via": "cloud",
   "not_returns": true,
-  "parser_version": 5
+  "parser_version": 5,
+  "parse_error": "file missing"
  }
 }
