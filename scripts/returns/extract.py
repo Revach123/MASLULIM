@@ -24,7 +24,9 @@ from scripts.returns.parse import parse_file, ASSET_ORDER
 ROOT = Path(__file__).resolve().parents[2]
 POL = ROOT / "policy"
 RET = ROOT / "returns"
+GENERIC_NAME = re.compile(r"(page|sheet|גיליון)\s*\d*|[\d\s.]+", re.I)
 NAMED_RETURNS = re.compile(r"מרכיבי[-_ ]*(ה)?תשוא|תרומת[-_ ]*(ה)?אפיקי|yield_?\d|returnelements|תשואה[-_ ]*לפי[-_ ]*אפיק", re.I)
+PDF_PARSER_VERSION = 2  # PDF בלבד - מעלים כשמשנים את פרסור ה-PDF (בלי פרסור מחדש של אלפי קבצי אקסל)
 PARSER_VERSION = 5  # (v5: תאריך אקסל בתא אינו מספר מסלול) (v4: בלי שורות "תא ריק"/"נתונים לחודש" בשם) (v3: PDF בלי טבלאות - שורות טקסט) (v2: קורא xlsx גולמי כש-openpyxl נכשל, בלי "תחילת מידע טבלה" בשם)
 
 
@@ -97,10 +99,10 @@ class Registry:
                 tie = True
         return best if best and score >= 0.6 and not tie else None
 
-    def resolve(self, lid, no, src, name):
+    def resolve(self, lid, no, src, name, key=None):
         """מספר מהקובץ שרשום בחברה -> הוא; התאמת סדרת התשואות ב-data.gov (verify) גוברת על כל השאר (מספר בסוגריים
         שהוא קוד פנימי - אינפיניטי "(715)" = מסלול 1078); מספר קופה עם מסלול יחיד; התאמת שם; מספר שרשום רק בחברה אחרת."""
-        ym = self.yield_map.get(f"{lid}|{norm_name(name)}")
+        ym = (self.yield_map.get(f"{lid}|{key}") if key else None) or (self.yield_map.get(f"{lid}|{norm_name(name)}") if norm_name(name) else None)
         if ym:
             return ym, "datagov_yield"
         if no and no in self.by_co.get(lid, {}):
@@ -134,7 +136,10 @@ def parse_all(out: Path, index: dict, force=False):
     n = 0
     for url, e in index.items():
         cache = pdir / f"{e['sha256'][:12]}.json"
-        if not force and e.get("parsed_sha") == e["sha256"] and e.get("parser_version") == PARSER_VERSION and (cache.exists() or e.get("not_returns") or e.get("parse_error")):
+        is_pdf = e["file"].lower().endswith(".pdf")
+        if not force and e.get("parsed_sha") == e["sha256"] and e.get("parser_version") == PARSER_VERSION \
+                and (not is_pdf or e.get("pdf_parser_version") == PDF_PARSER_VERSION) \
+                and (cache.exists() or e.get("not_returns") or e.get("parse_error")):
             continue
         if time.monotonic() > stop_at:
             print("[returns.extract] parse budget reached - the next run continues", flush=True)
@@ -162,7 +167,7 @@ def parse_all(out: Path, index: dict, force=False):
         e.pop("parse_error", None)
         if not res["blocks"] and not res["nostro"]:
             # לא דוח מרכיבי תשואה (קובץ אחר באותו עמוד) - נשאר באינדקס (לא יורד שוב), הקובץ עצמו נמחק
-            e.update(not_returns=True, parsed_sha=e["sha256"], parser_version=PARSER_VERSION)
+            e.update(not_returns=True, parsed_sha=e["sha256"], parser_version=PARSER_VERSION, pdf_parser_version=PDF_PARSER_VERSION)
             if not NAMED_RETURNS.search(url + " " + (e.get("link_text") or "")):
                 f.unlink(missing_ok=True)  # קובץ שהשם שלו אומר מרכיבי תשואה נשמר (פרסור מחדש כשהפרסר ישתפר)
             cache.unlink(missing_ok=True)
@@ -174,7 +179,7 @@ def parse_all(out: Path, index: dict, force=False):
                                        for r in b["rows"]]} for b in res["blocks"]],
                 "nostro": res["nostro"]}
         cache.write_text(json.dumps(slim, ensure_ascii=False, separators=(",", ":")), "utf-8")
-        e.update(parsed_sha=e["sha256"], parser_version=PARSER_VERSION, tracks=len(res["blocks"]), file_year=res["file_year"])
+        e.update(parsed_sha=e["sha256"], parser_version=PARSER_VERSION, pdf_parser_version=PDF_PARSER_VERSION, tracks=len(res["blocks"]), file_year=res["file_year"])
         n += 1
         print(f"[returns.extract] {f.name}: blocks={len(res['blocks'])} nostro={len(res['nostro'])} year={res['file_year']}", flush=True)
     if can:
@@ -205,11 +210,16 @@ def build(lid: str, out: Path, index: dict, reg: Registry):
                      "year": res.get("file_year"), "cover": cover, "product": e.get("product")}
         rank = (res.get("file_year") or 0, cover, e.get("first_seen") or "")
         for b in res["blocks"]:
-            no, src = reg.resolve(lid, b.get("track_no"), b.get("track_no_src") or "file", b.get("track_name") or "")
-            key = no or "n:" + norm_name(b.get("track_name") or b.get("sheet") or "")
+            raw_name = (b.get("track_name") or "").strip()
+            # בלוק בלי זהות (PDF של ילין: "page1" / "2024 1 2 3 ..." בלי שם מסלול): אסור שיתמזג עם בלוקים אחרים תחת אותו מפתח
+            # (n:page1 ערבב עשרות מסלולים) - מפתח לפי הקובץ והגיליון; אימות data.gov יכול לשייך לו מספר (verify)
+            generic = not norm_name(raw_name) or bool(GENERIC_NAME.fullmatch(raw_name))
+            uid = f"u:{did}:{b.get('sheet') or ''}"
+            no, src = reg.resolve(lid, b.get("track_no"), b.get("track_no_src") or "file", "" if generic else raw_name, uid if generic else None)
+            key = no or (uid if generic else "n:" + norm_name(raw_name))
             t = tracks.setdefault(key, {"key": key, "track_no": no, "track_no_src": src, "name": None, "names": [],
                                         "m": {}, "ytd": {}, "revisions": [], "_rank": {}})
-            nm = (b.get("track_name") or "").strip()
+            nm = "" if generic else raw_name
             if nm and nm not in t["names"]:
                 t["names"].append(nm)
             if src and (t["track_no_src"] or "").endswith("_unverified") and not src.endswith("_unverified"):

@@ -112,7 +112,10 @@ def main():
                     found = cands[0]
                     if found[1] != no:
                         for nm in t.get("names") or [t.get("name") or ""]:  # השמות כפי שבקבצים - המפתח של extract
-                            ymap[f"{lid}|{norm_name(nm)}"] = found[1]
+                            if norm_name(nm):
+                                ymap[f"{lid}|{norm_name(nm)}"] = found[1]
+                        if t["key"].startswith("u:"):  # בלי שם (PDF של ילין) - לפי מפתח הקובץ+גיליון
+                            ymap[f"{lid}|{t['key']}"] = found[1]
             if st == "mismatch" and t.get("track_no_src") == "datagov_yield" and not found:
                 for nm in t.get("names") or []:
                     ymap.pop(f"{lid}|{norm_name(nm)}", None)
