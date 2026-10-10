@@ -1,14 +1,13 @@
 {
  "legal_id": "514767490",
  "company": "סלייס גמל בע\"מ",
- "run": "2026-10-08T13:46:15+00:00",
+ "run": "2026-10-10T11:31:59+00:00",
  "errors": [],
  "seeds": {
   "config": 0,
-  "discovered": 0,
+  "discovered": 1,
   "policy_snapshot": 0,
   "policy_snapshot_docs": 158,
-  "search": 0,
   "sitemap": 0
  },
  "imported_from_policy": 0,
@@ -18,5 +17,5 @@
  "docs": 79,
  "new_docs": 0,
  "index_size": 79,
- "seconds": 66
+ "seconds": 48
 }

@@ -1,17 +1,16 @@
 {
  "legal_id": "520042607",
  "company": "הנדסאים וטכנאים - חברה לניהול קופות גמל בע\"מ",
- "run": "2026-10-08T14:07:38+00:00",
+ "run": "2026-10-10T11:53:05+00:00",
  "errors": [
   "/www.gemel-handesaim.co.il/yields/spaw/uploads/201112_returnElements_handesaim_general.xls -> 404",
   "s://www.gemel-handesaim.co.il/yields/spaw/uploads/201112_returnElements_handesaim_agah.xls -> 404"
  ],
  "seeds": {
   "config": 0,
-  "discovered": 0,
+  "discovered": 4,
   "policy_snapshot": 2,
   "policy_snapshot_docs": 0,
-  "search": 0,
   "sitemap": 0
  },
  "imported_from_policy": 0,
@@ -23,5 +22,5 @@
  "docs": 346,
  "new_docs": 0,
  "index_size": 346,
- "seconds": 96
+ "seconds": 185
 }

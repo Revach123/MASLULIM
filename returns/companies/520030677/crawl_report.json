@@ -1,30 +1,22 @@
 {
  "legal_id": "520030677",
  "company": "איילון חברה לביטוח בע\"מ",
- "run": "2026-10-08T14:01:16+00:00",
- "errors": [],
+ "run": "2026-10-10T11:48:57+00:00",
+ "errors": [
+  "via_extension (נסרק מהמחשב הביתי)"
+ ],
  "seeds": {
   "config": 0,
   "discovered": 0,
   "policy_snapshot": 6,
-  "policy_snapshot_docs": 0,
-  "search": 0,
-  "sitemap": 0
+  "policy_snapshot_docs": 0
  },
  "imported_from_policy": 0,
- "pages": 7,
- "pages_failed": [
-  "https://www.ayalon-ins.co.il/about-us/about-ayalon/investments/policy/: 403",
-  "https://www.ayalon-ins.co.il/about-us/about-ayalon/investments/: 403",
-  "https://www.ayalon-ins.co.il/savings/nispah/: 403",
-  "https://www.ayalon-ins.co.il/savings/: 403",
-  "https://www.ayalon-ins.co.il/savings/nispah_prat/: 403",
-  "https://www.ayalon-ins.co.il/investments: 403",
-  "https://www.ayalon-ins.co.il: 403"
- ],
+ "pages": 0,
+ "pages_failed": [],
  "candidates": 0,
  "docs": 0,
  "new_docs": 0,
  "index_size": 0,
- "seconds": 64
+ "seconds": 0
 }

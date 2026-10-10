@@ -1,11 +1,11 @@
 {
  "totals": {
   "companies": 76,
-  "with_data": 54,
-  "tracks": 1086,
+  "with_data": 58,
+  "tracks": 1186,
   "registry_tracks": 1289,
-  "registry_found": 570,
-  "docs": 8256
+  "registry_found": 712,
+  "docs": 8670
  },
  "companies": [
   {
@@ -102,7 +102,7 @@
   {
    "legal_id": "511880460",
    "company": "אנליסט קופות גמל בע\"מ",
-   "tracks": 18,
+   "tracks": 17,
    "tracks_numbered": 10,
    "registry_tracks": 37,
    "registry_found": 10,
@@ -115,7 +115,7 @@
   {
    "legal_id": "512008335",
    "company": "קו הבריאות חברה לניהול קופות גמל בע\"מ",
-   "tracks": 9,
+   "tracks": 8,
    "tracks_numbered": 8,
    "registry_tracks": 3,
    "registry_found": 3,
@@ -123,6 +123,19 @@
    "first_month": "2013-06",
    "last_month": "2026-03",
    "docs_returns": 213,
+   "nostro": false
+  },
+  {
+   "legal_id": "512065202",
+   "company": "מיטב גמל ופנסיה בע\"מ",
+   "tracks": 30,
+   "tracks_numbered": 25,
+   "registry_tracks": 103,
+   "registry_found": 16,
+   "registry_coverage": 15.5,
+   "first_month": "2003-09",
+   "last_month": "2026-12",
+   "docs_returns": 48,
    "nostro": false
   },
   {
@@ -139,16 +152,29 @@
    "nostro": false
   },
   {
+   "legal_id": "512244146",
+   "company": "כלל פנסיה וגמל בע\"מ",
+   "tracks": 119,
+   "tracks_numbered": 87,
+   "registry_tracks": 84,
+   "registry_found": 80,
+   "registry_coverage": 95.2,
+   "first_month": "2022-01",
+   "last_month": "2026-06",
+   "docs_returns": 72,
+   "nostro": false
+  },
+  {
    "legal_id": "512245812",
    "company": "מנורה מבטחים פנסיה וגמל בע\"מ",
-   "tracks": 56,
-   "tracks_numbered": 36,
+   "tracks": 55,
+   "tracks_numbered": 39,
    "registry_tracks": 96,
-   "registry_found": 27,
-   "registry_coverage": 28.1,
+   "registry_found": 28,
+   "registry_coverage": 29.2,
    "first_month": "2017-01",
    "last_month": "2026-06",
-   "docs_returns": 467,
+   "docs_returns": 484,
    "nostro": false
   },
   {
@@ -193,14 +219,27 @@
   {
    "legal_id": "513026484",
    "company": "הפניקס פנסיה וגמל בע\"מ",
-   "tracks": 102,
-   "tracks_numbered": 102,
+   "tracks": 101,
+   "tracks_numbered": 101,
    "registry_tracks": 91,
-   "registry_found": 77,
-   "registry_coverage": 84.6,
+   "registry_found": 76,
+   "registry_coverage": 83.5,
    "first_month": "2017-01",
    "last_month": "2026-06",
    "docs_returns": 67,
+   "nostro": false
+  },
+  {
+   "legal_id": "513173393",
+   "company": "אלטשולר שחם גמל ופנסיה בע\"מ",
+   "tracks": 43,
+   "tracks_numbered": 43,
+   "registry_tracks": 79,
+   "registry_found": 43,
+   "registry_coverage": 54.4,
+   "first_month": "2025-01",
+   "last_month": "2026-06",
+   "docs_returns": 86,
    "nostro": false
   },
   {
@@ -232,8 +271,8 @@
   {
    "legal_id": "513621110",
    "company": "אינפיניטי השתלמות, גמל ופנסיה בע\"מ",
-   "tracks": 104,
-   "tracks_numbered": 90,
+   "tracks": 83,
+   "tracks_numbered": 72,
    "registry_tracks": 55,
    "registry_found": 53,
    "registry_coverage": 96.4,
@@ -245,8 +284,8 @@
   {
    "legal_id": "514767490",
    "company": "סלייס גמל בע\"מ",
-   "tracks": 44,
-   "tracks_numbered": 39,
+   "tracks": 42,
+   "tracks_numbered": 40,
    "registry_tracks": 4,
    "registry_found": 0,
    "registry_coverage": 0.0,
@@ -271,11 +310,11 @@
   {
    "legal_id": "520004078",
    "company": "הראל חברה לביטוח בע\"מ",
-   "tracks": 17,
-   "tracks_numbered": 15,
+   "tracks": 10,
+   "tracks_numbered": 8,
    "registry_tracks": 30,
-   "registry_found": 12,
-   "registry_coverage": 40.0,
+   "registry_found": 5,
+   "registry_coverage": 16.7,
    "first_month": "2018-01",
    "last_month": "2026-06",
    "docs_returns": 27,
@@ -401,7 +440,7 @@
   {
    "legal_id": "520024647",
    "company": "כלל חברה לביטוח בע\"מ",
-   "tracks": 32,
+   "tracks": 29,
    "tracks_numbered": 23,
    "registry_tracks": 25,
    "registry_found": 20,
@@ -414,8 +453,8 @@
   {
    "legal_id": "520027715",
    "company": "מנורה מבטחים והסתדרות המהנדסים ניהול קופות גמל בע\"מ",
-   "tracks": 31,
-   "tracks_numbered": 12,
+   "tracks": 29,
+   "tracks_numbered": 14,
    "registry_tracks": 7,
    "registry_found": 4,
    "registry_coverage": 57.1,
@@ -427,7 +466,7 @@
   {
    "legal_id": "520027954",
    "company": "החברה לניהול קרן השתלמות לאקדמאים במדעי החברה והרוח בע\"מ",
-   "tracks": 13,
+   "tracks": 10,
    "tracks_numbered": 5,
    "registry_tracks": 5,
    "registry_found": 5,
@@ -479,8 +518,8 @@
   {
    "legal_id": "520030198",
    "company": "ק.ה.ר - קרן השתלמות לרוקחים בע\"מ",
-   "tracks": 53,
-   "tracks_numbered": 21,
+   "tracks": 32,
+   "tracks_numbered": 11,
    "registry_tracks": 1,
    "registry_found": 1,
    "registry_coverage": 100.0,
@@ -492,11 +531,11 @@
   {
    "legal_id": "520030693",
    "company": "שיבולת - חברה לניהול קופות גמל בע\"מ",
-   "tracks": 86,
-   "tracks_numbered": 33,
+   "tracks": 57,
+   "tracks_numbered": 3,
    "registry_tracks": 3,
-   "registry_found": 2,
-   "registry_coverage": 66.7,
+   "registry_found": 3,
+   "registry_coverage": 100.0,
    "first_month": "2011-01",
    "last_month": "2025-12",
    "docs_returns": 251,
@@ -519,10 +558,10 @@
    "legal_id": "520030941",
    "company": "ק.ל.ע. - חברה לניהול קרן השתלמות לעובדים סוציאליים בע\"מ",
    "tracks": 5,
-   "tracks_numbered": 2,
+   "tracks_numbered": 3,
    "registry_tracks": 3,
-   "registry_found": 2,
-   "registry_coverage": 66.7,
+   "registry_found": 3,
+   "registry_coverage": 100.0,
    "first_month": "2021-01",
    "last_month": "2026-06",
    "docs_returns": 47,
@@ -570,7 +609,7 @@
   {
    "legal_id": "520042540",
    "company": "מנורה מבטחים ביטוח בע\"מ",
-   "tracks": 39,
+   "tracks": 35,
    "tracks_numbered": 24,
    "registry_tracks": 27,
    "registry_found": 20,
@@ -594,9 +633,22 @@
    "nostro": false
   },
   {
+   "legal_id": "520042581",
+   "company": "עמ\"י - חברה לניהול קופות גמל ענפיות בע\"מ",
+   "tracks": 8,
+   "tracks_numbered": 8,
+   "registry_tracks": 10,
+   "registry_found": 8,
+   "registry_coverage": 80.0,
+   "first_month": "2019-01",
+   "last_month": "2026-06",
+   "docs_returns": 191,
+   "nostro": false
+  },
+  {
    "legal_id": "520042607",
    "company": "הנדסאים וטכנאים - חברה לניהול קופות גמל בע\"מ",
-   "tracks": 29,
+   "tracks": 25,
    "tracks_numbered": 20,
    "registry_tracks": 8,
    "registry_found": 8,

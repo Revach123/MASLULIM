@@ -23,8 +23,54 @@
  ],
  "search": true,
  "rev": 5,
- "note": "2026-10-03: עמוד קופה מרכזית לפיצויים רבת מסלולים (נמצא בחיפוש)",
+ "note": "2026-10-03: עמוד קופה מרכזית לפיצויים רבת מסלולים (נמצא בחיפוש) | 2026-10-08: דוחות לכל מסלול (אקורדיון) x שנה (צ'יפ) x רבעון: /provident_pension/provident_fund_reports/ (מהמשתמש) - seed ל-returns",
  "returns_follow": "meitav\\.co\\.il/(provident_pension|companies-and-business-units)/[^?#]+/$",
  "returns_max_pages": 90,
- "returns_crawl_budget": 2300
+ "returns_crawl_budget": 2300,
+ "returns_pages": [
+  {
+   "product": "גמל",
+   "url": "https://www.meitav.co.il/provident_pension/provident_fund_reports/"
+  },
+  {
+   "product": "גמל",
+   "url": "https://www.meitav.co.il/provident_pension/gemel/gemel_reports/"
+  },
+  {
+   "product": "גמל",
+   "url": "https://www.meitav.co.il/provident_pension/pension/pension-reports/"
+  },
+  {
+   "product": "גמל",
+   "url": "https://www.meitav.co.il/provident_pension/kupa_gemel_reports/"
+  },
+  {
+   "product": "גמל",
+   "url": "https://www.meitav.co.il/provident_pension/pension_reports/"
+  },
+  {
+   "product": "גמל",
+   "url": "https://www.meitav.co.il/provident_pension/kupa_gemel_invest_reports/"
+  },
+  {
+   "product": "גמל",
+   "url": "https://www.meitav.co.il/provident_pension/kids_reports/"
+  },
+  {
+   "product": "גמל",
+   "url": "https://www.meitav.co.il/provident_pension/keren_hishtalmut_report/"
+  },
+  {
+   "product": "גמל",
+   "url": "https://www.meitav.co.il/provident_pension/hishtalmut/hishtalmut_reports/"
+  }
+ ],
+ "returns_click_texts": [
+  "רשימות נכסים רבעוניות",
+  "2025",
+  "2024",
+  "2023"
+ ],
+ "returns_ctx": "provident_pension/(provident_fund_reports|gemel/gemel_reports|pension/pension-reports|kupa_gemel_reports|pension_reports|kupa_gemel_invest_reports|kids_reports|keren_hishtalmut_report|hishtalmut/hishtalmut_reports)/?$",
+ "returns_exclude": "meitav\\.co\\.il/media/|marketing-cms|lighthouse-cloud|uploadfiles/\\d+_\\d+_\\d+_\\d+_\\d+\\.xls$|_Q\\d+\\.xlsx$"
 }

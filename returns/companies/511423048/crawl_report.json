@@ -1,14 +1,13 @@
 {
  "legal_id": "511423048",
  "company": "לעתיד חברה לניהול קרנות פנסיה בע\"מ",
- "run": "2026-10-08T13:39:25+00:00",
+ "run": "2026-10-10T11:24:54+00:00",
  "errors": [],
  "seeds": {
   "config": 0,
-  "discovered": 0,
+  "discovered": 1,
   "policy_snapshot": 4,
   "policy_snapshot_docs": 9,
-  "search": 0,
   "sitemap": 0
  },
  "imported_from_policy": 0,
@@ -18,5 +17,5 @@
  "docs": 9,
  "new_docs": 0,
  "index_size": 9,
- "seconds": 406
+ "seconds": 260
 }

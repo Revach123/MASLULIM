@@ -1,27 +1,22 @@
 {
  "legal_id": "510930654",
  "company": "יחד רופאים - חברה לניהול קופות גמל בע\"מ",
- "run": "2026-10-08T13:39:20+00:00",
- "errors": [],
+ "run": "2026-10-10T11:24:54+00:00",
+ "errors": [
+  "via_extension (נסרק מהמחשב הביתי)"
+ ],
  "seeds": {
   "config": 0,
   "discovered": 0,
   "policy_snapshot": 3,
-  "policy_snapshot_docs": 0,
-  "search": 0,
-  "sitemap": 0
+  "policy_snapshot_docs": 0
  },
  "imported_from_policy": 0,
- "pages": 4,
- "pages_failed": [
-  "https://www.krn-rofim.co.il/%d7%94%d7%a9%d7%a7%d7%a2%d7%95%d7%aa/%d7%a4%d7%a8%d7%a1%d7%95%d7%9d-%d7%9e%d7%a8%d7%9b%d7%99%d7%91%d7%99-%d7%aa%d7%a9%d7%95%d7%90%d7%94/: 403",
-  "https://www.krn-rofim.co.il/%D7%9E%D7%93%D7%99%D7%A0%D7%99%D7%95%D7%AA/%D7%9E%D7%93%D7%99%D7%A0%D7%99%D7%95%D7%AA-%D7%94%D7%A9%D7%A7%D7%A2%D7%94-%D7%A6%D7%A4%D7%95%D7%99%D7%94/: 403",
-  "https://www.krn-rofim.co.il/%D7%9E%D7%93%D7%99%D7%A0%D7%99%D7%95%D7%AA/: 403",
-  "https://www.krn-rofim.co.il: 403"
- ],
+ "pages": 0,
+ "pages_failed": [],
  "candidates": 0,
  "docs": 0,
  "new_docs": 0,
  "index_size": 0,
- "seconds": 299
+ "seconds": 0
 }

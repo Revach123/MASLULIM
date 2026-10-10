@@ -30,7 +30,7 @@ RET_ROOT = ROOT / "returns"
 
 # דוח מרכיבי תשואה: בטקסט הקישור, בשם הקובץ או בכתובת העמוד
 RETURNS_RX = re.compile(r"מרכיבי[-_ ]*(ה)?תשוא|תרומ(ת|ה)[-_ ]*(ה)?(אפיקי|לתשואה)|פירוט[-_ ]*תרומת|"
-                        r"yield_?\d|yield[-_]?(elements|components)|return[-_]?(elements|components)|merkivei|mrkivei|"
+                        r"yield_?\d|yield[-_]?(elements|components)|return[-_]?(elements|components)|merkivei|mrkivei|markiv\w*[-_ ]*t[sz]u?a|תרומת[-_ ]*מרכיבי|מרכיבי[-_ ]*השקעה|"
                         r"nostro[-_ ]*yield|תשוא(ה|ות)[-_ ]*לפי[-_ ]*אפיק|tesuah[-_ ]*lefi[-_ ]*afikim|tsua[-_ ]*lefi", re.I)
 # ("yield" לבד - כתבות "תשואות אג"ח" במיטב; "tsua" לבד - כל עמוד תשואות)
 # עמוד ניווט סביר בדרך לדוחות (ציון נמוך)
@@ -62,7 +62,7 @@ def load_cfg(lid: str) -> dict:
     return json.loads(p.read_text("utf-8")) if p.exists() else {}
 
 
-def snapshot_seeds(lid: str):
+def snapshot_seeds(lid: str, text_rx=None):
     """עמודים וקבצים של מרכיבי תשואה שסריקת המדיניות כבר ראתה (קישורים בתפריט/בעמודי המדיניות)."""
     p = ROOT / "policy" / "companies" / lid / "site_snapshot" / f"{lid}.json"
     pages, docs = [], []
@@ -74,7 +74,7 @@ def snapshot_seeds(lid: str):
             pages.append(page_url)
         for it in pg.get("items", []):
             blob = (it.get("text") or "") + " " + unquote(it.get("href") or "")
-            if not RETURNS_RX.search(blob) or it.get("local"):
+            if not (RETURNS_RX.search(blob) or (text_rx and it.get("doc") and text_rx.search(it.get("text") or ""))) or it.get("local"):
                 continue
             (docs if it.get("doc") else pages).append(it["href"] if not it.get("doc") else {**it, "page": page_url})
     return list(dict.fromkeys(pages)), docs
@@ -106,18 +106,18 @@ def import_from_policy(lid: str, index: dict, out: Path, now: str):
     return n
 
 
-def select_docs(pages: dict):
+def select_docs(pages: dict, ctx_rx=None, text_rx=None):
     """-> {url: item}: קבצים שהם מרכיבי תשואה לפי הטקסט/השם, או כל גיליון/PDF בעמוד של מרכיבי תשואה (בלי קבצים אחרים)."""
     out = {}
     for page_url, p in pages.items():
-        ctx = bool(RETURNS_RX.search(unquote(page_url)))  # לא לפי טקסט העמוד: התפריט ("מרכיבי תשואה") מופיע בכל עמוד
+        ctx = bool(RETURNS_RX.search(unquote(page_url))) or bool(ctx_rx and ctx_rx.search(unquote(page_url)))  # לא לפי טקסט העמוד: התפריט ("מרכיבי תשואה") מופיע בכל עמוד
         for i in p.get("items", []):
             if not i.get("doc") and "network" not in (i.get("text") or "") and "xhr" not in (i.get("text") or ""):
                 continue
-            href, text = i["href"], i.get("text") or ""
+            href, text = i["href"].replace("\\", "/"), i.get("text") or ""  # מיטב: uploadfiles\\2_11_..xls
             blob = unquote(href) + " " + text
             ext = urlparse(href).path.lower().rsplit(".", 1)[-1] if "." in urlparse(href).path else ""
-            strong = bool(RETURNS_RX.search(blob))
+            strong = bool(RETURNS_RX.search(blob)) or bool(text_rx and i.get("doc") and text_rx.search(text))  # returns_text: כיתוב הקישור (אלטשולר: "רבעון 2 לשנת 2026")
             if OTHER.search(blob) and not re.search(r"מרכיבי|תרומת|yield", blob, re.I):
                 continue
             if strong or (ctx and (ext in DOC_EXTS or i.get("local"))):
@@ -172,7 +172,7 @@ def crawl_company(s, pw, lid, name, out, now, a):
     cfg_pages = [p["url"] if isinstance(p, dict) else p for p in cfg.get("returns_pages", [])]
     products = {(p["url"] if isinstance(p, dict) else p): (p.get("product") if isinstance(p, dict) else None)
                 for p in cfg.get("returns_pages", [])}
-    snap_pages, snap_docs = snapshot_seeds(lid)
+    snap_pages, snap_docs = snapshot_seeds(lid, re.compile(cfg["returns_text"]) if cfg.get("returns_text") else None)
     # עמודי המדיניות של החברה ועמוד האב שלהם - דוחות מרכיבי התשואה לרוב באותו אזור באתר (עמוד המסלול / "מידע לעמיתים")
     pol_pages = []
     for u in [x["url"] for x in cfg.get("pages", []) if "{year}" not in x.get("url", "")] if not cfg.get("returns_pages") else []:
@@ -193,6 +193,8 @@ def crawl_company(s, pw, lid, name, out, now, a):
         report["errors"].append("no_home")
     elif cfg.get("via") == "extension" and os.environ.get("RETURNS_FORCE_CLOUD") != "1" and not cfg.get("returns_cloud"):
         report["errors"].append("via_extension (נסרק מהמחשב הביתי)")
+        home = ""
+    if cfg.get("returns_snapshot_only"):  # קבצים מתמונת המצב של המדיניות בלבד (בלי סריקת דפדפן) - אלטשולר: הסריקה נחתכת ב-38 דקות
         home = ""
     pages = {}
     if home:
@@ -215,15 +217,17 @@ def crawl_company(s, pw, lid, name, out, now, a):
                                     follow=follow, click_texts=cfg.get("returns_click_texts"))
         # עמודים שנמצאו ובהם קבצי מרכיבי תשואה - נשמרים כנקודת פתיחה לריצות הבאות (החיפוש לא תמיד זמין)
         good = [u for u, p in pages.items() if p.get("status") == 200 and any(
-            i.get("doc") and RETURNS_RX.search((i.get("text") or "") + " " + unquote(i["href"])) for i in p.get("items", []))
+            i.get("doc") and (RETURNS_RX.search((i.get("text") or "") + " " + unquote(i["href"]))
+                              or (cfg.get("returns_text") and re.search(cfg["returns_text"], i.get("text") or ""))) for i in p.get("items", []))
             or (p.get("status") == 200 and RETURNS_RX.search(unquote(u)))]
         doc_pages = [u for u in good if not RETURNS_RX.search(unquote(u))]
-        disc = {"home": home, "pages": list(dict.fromkeys(disc.get("pages", []) + good))[:60],
-                "doc_pages": list(dict.fromkeys(disc.get("doc_pages", []) + doc_pages))[:60]}
+        disc = {"home": home, "pages": list(dict.fromkeys(disc.get("pages", []) + good))[:160],
+                "doc_pages": list(dict.fromkeys(disc.get("doc_pages", []) + doc_pages))[:160]}
         disc_path.write_text(json.dumps(disc, ensure_ascii=False, indent=1), "utf-8")
         (out / "site_snapshot.json").write_text(json.dumps({"legal_id": lid, "taken": now, "pages": pages},
                                                            ensure_ascii=False, indent=1), "utf-8")
-    docs = select_docs(pages)
+    docs = select_docs(pages, re.compile(cfg["returns_ctx"]) if cfg.get("returns_ctx") else None,
+                       re.compile(cfg["returns_text"]) if cfg.get("returns_text") else None)
     for d in snap_docs:  # קבצים שנראו בסריקת המדיניות
         docs.setdefault(unquote(d["href"]), d)
     for du in cfg.get("returns_docs", []):
