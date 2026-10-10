@@ -1,11 +1,11 @@
 {
  "legal_id": "520023185",
  "company": "הפניקס חברה לביטוח בע\"מ",
- "taken": "2026-10-09T11:27:59+00:00",
+ "taken": "2026-10-10T10:39:10+00:00",
  "pages": {
   "https://www.fnx.co.il/SPF/iframe-the-expected-investment-policy-2026.aspx": {
    "product": "ביטוח",
-   "status": 200,
+   "status": 404,
    "method": "browser",
    "text_hash": "2cb455ed924ed141f9f352ae1b1e05e6fd8ac567",
    "text_head": "We apologize for the inconvenience... ...but your activity and behavior on this site made us think that you are a bot. Note: A number of things could be going on here. If you are attempting to access this site using an anonymous Private/Proxy network, please disable that and try accessing site again. Due to previously detected malicious behavior which originated from the network you're using, please request unblock to site. Incident ID: 2fb56665-db3u-4016-9777-6d62124a6361 Please solve this CAPTCHA to request unblock to the website You reached this page when trying to access https://digital-co",
@@ -112,8 +112,8 @@
    "product": "ביטוח",
    "status": 200,
    "method": "browser",
-   "text_hash": "ed46933a5e1e8a4f0b1da93bf69a2f0977972856",
-   "text_head": "We apologize for the inconvenience... ...but your activity and behavior on this site made us think that you are a bot. Note: A number of things could be going on here. If you are attempting to access this site using an anonymous Private/Proxy network, please disable that and try accessing site again. Due to previously detected malicious behavior which originated from the network you're using, please request unblock to site. Incident ID: 1e5f5c17-db3u-4b85-9838-c8c692477d6b Please solve this CAPTCHA to request unblock to the website You reached this page when trying to access https://digital-co",
+   "text_hash": "db611ed27872652adc51dcdddadf19335cfde903",
+   "text_head": "We apologize for the inconvenience... ...but your activity and behavior on this site made us think that you are a bot. Note: A number of things could be going on here. If you are attempting to access this site using an anonymous Private/Proxy network, please disable that and try accessing site again. Due to previously detected malicious behavior which originated from the network you're using, please request unblock to site. Incident ID: 26d81469-db3u-4d9e-bc8b-2247dd5c93ba Please solve this CAPTCHA to request unblock to the website You reached this page when trying to access https://digital-co",
    "items": [
     {
      "text": "‏‏מדיניות השקעה צפויה לשנת 2025",
@@ -173,7 +173,7 @@
     },
     {
      "text": "(iframe)",
-     "href": "https://newassets.hcaptcha.com/captcha/v1/e97a50d7ecb685043e82c9d7a6034c5c544521c1/static/hcaptcha.html",
+     "href": "https://newassets.hcaptcha.com/captcha/v1/73cc7444a905b542339bb26176648227595d0ab9/static/hcaptcha.html",
      "year": null,
      "iframe": true,
      "doc": false,
@@ -185,8 +185,8 @@
    "product": "ביטוח",
    "status": 200,
    "method": "browser",
-   "text_hash": "14718ba7e9ea89600211d3452368a745fcd12575",
-   "text_head": "We apologize for the inconvenience... ...but your activity and behavior on this site made us think that you are a bot. Note: A number of things could be going on here. If you are attempting to access this site using an anonymous Private/Proxy network, please disable that and try accessing site again. Due to previously detected malicious behavior which originated from the network you're using, please request unblock to site. Incident ID: 9e530c76-db3u-4f41-a594-7283ecfa73bf Please solve this CAPTCHA to request unblock to the website You reached this page when trying to access https://digital-co",
+   "text_hash": "d1b4ecc5ffca4cf8aaea5bea583fa4ce0097c48a",
+   "text_head": "We apologize for the inconvenience... ...but your activity and behavior on this site made us think that you are a bot. Note: A number of things could be going on here. If you are attempting to access this site using an anonymous Private/Proxy network, please disable that and try accessing site again. Due to previously detected malicious behavior which originated from the network you're using, please request unblock to site. Incident ID: 202a0189-db3u-4b5a-8edb-58fe91b05097 Please solve this CAPTCHA to request unblock to the website You reached this page when trying to access https://digital-co",
    "items": [
     {
      "text": "‏‏מדיניות השקעה צפויה לשנת 2024 - עדכון פברואר 2024",
@@ -298,8 +298,8 @@
    "product": "ביטוח",
    "status": 200,
    "method": "browser",
-   "text_hash": "3e5c13bb74f7ecfbf08e73176d5be6055caf19c9",
-   "text_head": "We apologize for the inconvenience... ...but your activity and behavior on this site made us think that you are a bot. Note: A number of things could be going on here. If you are attempting to access this site using an anonymous Private/Proxy network, please disable that and try accessing site again. Due to previously detected malicious behavior which originated from the network you're using, please request unblock to site. Incident ID: 573b6895-db3u-40a7-82dd-5e3822bb0089 Please solve this CAPTCHA to request unblock to the website You reached this page when trying to access https://digital-co",
+   "text_hash": "9b1f24e2c5fdbab94489d46934390faf246f5805",
+   "text_head": "We apologize for the inconvenience... ...but your activity and behavior on this site made us think that you are a bot. Note: A number of things could be going on here. If you are attempting to access this site using an anonymous Private/Proxy network, please disable that and try accessing site again. Due to previously detected malicious behavior which originated from the network you're using, please request unblock to site. Incident ID: d9430032-db3u-4035-a868-e82bd806dbcf Please solve this CAPTCHA to request unblock to the website You reached this page when trying to access https://digital-co",
    "items": [
     {
      "text": "‏‏מדיניות השקעה צפויה לשנת 2023 - גמל - עדכון נובמבר 2023",
@@ -449,10 +449,10 @@
   },
   "https://www.fnx.co.il/SPF/iframe-the-expected-investment-policy-2022.aspx": {
    "product": "ביטוח",
-   "status": 404,
+   "status": 200,
    "method": "browser",
-   "text_hash": "f4e8620cfc5bb64a9f30b0e13d69bd61c3b1f438",
-   "text_head": "We apologize for the inconvenience... ...but your activity and behavior on this site made us think that you are a bot. Note: A number of things could be going on here. If you are attempting to access this site using an anonymous Private/Proxy network, please disable that and try accessing site again. Due to previously detected malicious behavior which originated from the network you're using, please request unblock to site. Incident ID: 496811ce-db3u-4331-bf92-92e682ce45b3 Please solve this CAPTCHA to request unblock to the website You reached this page when trying to access https://digital-co",
+   "text_hash": "a3f3479cb34db6bd99eeb730bec20e1f7aefc7a3",
+   "text_head": "We apologize for the inconvenience... ...but your activity and behavior on this site made us think that you are a bot. Note: A number of things could be going on here. If you are attempting to access this site using an anonymous Private/Proxy network, please disable that and try accessing site again. Due to previously detected malicious behavior which originated from the network you're using, please request unblock to site. Incident ID: 70c43fe5-db3u-407e-80c4-30aff0022b36 Please solve this CAPTCHA to request unblock to the website You reached this page when trying to access https://digital-co",
    "items": [
     {
      "text": "מדיניות השקעה צפויה לשנת 2022 - עדכון פברואר 2022",
@@ -544,7 +544,7 @@
     },
     {
      "text": "(iframe)",
-     "href": "https://newassets.hcaptcha.com/captcha/v1/05219f0822161da4c4a6f3aed6bf6d6fae1ba8e1/static/hcaptcha.html",
+     "href": "https://newassets.hcaptcha.com/captcha/v1/e97a50d7ecb685043e82c9d7a6034c5c544521c1/static/hcaptcha.html",
      "year": null,
      "iframe": true,
      "doc": false,
@@ -556,8 +556,8 @@
    "product": "ביטוח",
    "status": 200,
    "method": "browser",
-   "text_hash": "fa57b5abb666157b532cd22a8462a6297dc9ab1a",
-   "text_head": "We apologize for the inconvenience... ...but your activity and behavior on this site made us think that you are a bot. Note: A number of things could be going on here. If you are attempting to access this site using an anonymous Private/Proxy network, please disable that and try accessing site again. Due to previously detected malicious behavior which originated from the network you're using, please request unblock to site. Incident ID: 1cb701be-db3u-46f3-88e9-44ae99d79d64 Please solve this CAPTCHA to request unblock to the website You reached this page when trying to access https://digital-co",
+   "text_hash": "5504d5b24d9cf9b21a24e416e50c89e5feb0d918",
+   "text_head": "We apologize for the inconvenience... ...but your activity and behavior on this site made us think that you are a bot. Note: A number of things could be going on here. If you are attempting to access this site using an anonymous Private/Proxy network, please disable that and try accessing site again. Due to previously detected malicious behavior which originated from the network you're using, please request unblock to site. Incident ID: be77f935-db3u-4222-a129-d4df0f23c3cc Please solve this CAPTCHA to request unblock to the website You reached this page when trying to access https://digital-co",
    "items": [
     {
      "text": "מדיניות השקעה צפויה לשנת 2021 - פנסיה - עדכון אפריל 2021",
@@ -685,8 +685,8 @@
    "product": "ביטוח",
    "status": 200,
    "method": "browser",
-   "text_hash": "d8fbf0437fcae086f2199217c400c566c89af01f",
-   "text_head": "We apologize for the inconvenience... ...but your activity and behavior on this site made us think that you are a bot. Note: A number of things could be going on here. If you are attempting to access this site using an anonymous Private/Proxy network, please disable that and try accessing site again. Due to previously detected malicious behavior which originated from the network you're using, please request unblock to site. Incident ID: 6632f0ed-db3u-431a-9bbd-4a77f4c92504 Please solve this CAPTCHA to request unblock to the website You reached this page when trying to access https://digital-co",
+   "text_hash": "c469ca62c496560c54b6c02cccffff03705e2742",
+   "text_head": "We apologize for the inconvenience... ...but your activity and behavior on this site made us think that you are a bot. Note: A number of things could be going on here. If you are attempting to access this site using an anonymous Private/Proxy network, please disable that and try accessing site again. Due to previously detected malicious behavior which originated from the network you're using, please request unblock to site. Incident ID: 01685a65-db3u-4cc4-b5e1-7da57aa22b4a Please solve this CAPTCHA to request unblock to the website You reached this page when trying to access https://digital-co",
    "items": [
     {
      "text": "מדיניות השקעה צפויה לשנת 2020 - פנסיה-עדכון ספטמבר 2020",
@@ -830,8 +830,8 @@
    "product": "ביטוח",
    "status": 200,
    "method": "browser",
-   "text_hash": "3cbfaf611437a8517699984fc68e5dcb93ded926",
-   "text_head": "We apologize for the inconvenience... ...but your activity and behavior on this site made us think that you are a bot. Note: A number of things could be going on here. If you are attempting to access this site using an anonymous Private/Proxy network, please disable that and try accessing site again. Due to previously detected malicious behavior which originated from the network you're using, please request unblock to site. Incident ID: c2a9c1fb-db3u-4ba1-b8cc-7422728aa567 Please solve this CAPTCHA to request unblock to the website You reached this page when trying to access https://digital-co",
+   "text_hash": "6a4366100d380124231ed51f25e43e1873a1419e",
+   "text_head": "We apologize for the inconvenience... ...but your activity and behavior on this site made us think that you are a bot. Note: A number of things could be going on here. If you are attempting to access this site using an anonymous Private/Proxy network, please disable that and try accessing site again. Due to previously detected malicious behavior which originated from the network you're using, please request unblock to site. Incident ID: 2df0397a-db3u-4028-9d12-c81e11908a93 Please solve this CAPTCHA to request unblock to the website You reached this page when trying to access https://digital-co",
    "items": [
     {
      "text": "מדיניות השקעה צפויה לשנת 2019 - גמל להשקעה (עדכון יולי 2019)",
