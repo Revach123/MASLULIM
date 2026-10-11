@@ -234,6 +234,12 @@ def _meta_from_rows(rows, lo, hi):
             if m and not re.search(r"%|S&P|ת\"א", t[max(0, m.start() - 6):m.start()]):
                 meta["track_no"], meta["track_no_src"] = m.group(1), "title"
                 break
+    if not meta["track_no"]:  # מור: כותרת "12535 מור השתלמות - כללי" - מספר המסלול בתחילת השם (לא שנה: 19xx/20xx)
+        for t in reversed(meta["titles"]):
+            m = re.match(r"^\s*(\d{4,6})\s+(?=[^\d\s%])", t)
+            if m and not re.fullmatch(r"(19|20)\d\d", m.group(1)):
+                meta["track_no"], meta["track_no_src"] = m.group(1), "title_lead"
+                break
     if not meta["track_no"] and meta.get("cell_no"):
         meta["track_no"], meta["track_no_src"] = meta["cell_no"], "title_cell"
     meta.pop("cell_no", None)
