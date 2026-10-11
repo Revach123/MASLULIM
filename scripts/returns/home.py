@@ -44,13 +44,28 @@ def main():
         env = dict(os.environ, RETURNS_OUT=str(work), RETURNS_FORCE_CLOUD="1")
         env.setdefault("POLICY_HEADED", "1")
         env.setdefault("POLICY_OFFSCREEN", "1")
-        try:
-            r = subprocess.run([sys.executable, "-m", "scripts.returns.crawl", "--only", lid], cwd=ROOT, env=env, creationflags=LOW_PRIORITY,
-                               capture_output=True, text=True, encoding="utf-8", errors="replace", timeout=a.timeout_min * 60)
-            print((r.stdout + r.stderr)[-600:], flush=True)
-        except subprocess.TimeoutExpired as e:  # הפלט החלקי - כדי לראות איפה הסריקה נתקעה
-            out = e.stdout.decode("utf-8", "replace") if isinstance(e.stdout, bytes) else (e.stdout or "")
-            print(f"[{lid}] timeout after {a.timeout_min} min\n{out[-1500:]}", flush=True)
+        env.setdefault("PYTHONUNBUFFERED", "1")  # הפלט החלקי בלוג גם כשהסריקה נהרגת בתקרה
+        log = work / "crawl.log"
+        # פלט לקובץ (לא pipe) וסיום עץ התהליכים בתקרה: subprocess.run(timeout, capture_output) נתקע ב-Windows אחרי kill כי Chrome (נכד)
+        # מחזיק את ה-pipe פתוח - הסריקה של עגור רצתה 41 דקות במקום 30
+        with open(log, "wb") as lf:
+            p = subprocess.Popen([sys.executable, "-m", "scripts.returns.crawl", "--only", lid], cwd=ROOT, env=env,
+                                 creationflags=LOW_PRIORITY, stdout=lf, stderr=subprocess.STDOUT)
+            timed_out = False
+            try:
+                p.wait(timeout=a.timeout_min * 60)
+            except subprocess.TimeoutExpired:
+                timed_out = True
+                if os.name == "nt":
+                    subprocess.run(["taskkill", "/F", "/T", "/PID", str(p.pid)], capture_output=True)
+                else:
+                    p.kill()
+                try:
+                    p.wait(timeout=30)
+                except subprocess.TimeoutExpired:
+                    pass
+        out = log.read_text("utf-8", errors="replace") if log.exists() else ""
+        print((f"[{lid}] timeout after {a.timeout_min} min (killed)\n" if timed_out else "") + out[-1500 if timed_out else -600:], flush=True)
         after = json.loads((work / "docs_index.json").read_text("utf-8")) if (work / "docs_index.json").exists() else {}
         n = 0
         for url, ent in after.items():
