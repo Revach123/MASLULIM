@@ -1,1 +1,36 @@
-{}
+{
+ "https://www.555.co.il/sites/default/files/Forms/NostroYield_B_513910703_222.xlsx": {
+  "legal_id": "513910703",
+  "first_seen": "2026-10-11T08:18:22+00:00",
+  "last_seen": "2026-10-11T08:18:22+00:00",
+  "file": "returns/companies/513910703/raw/b77447f0bfba_NostroYield_B_513910703_222.xlsx",
+  "sha256": "b77447f0bfba92584b7f36617fe284115d13b1ab725567e8a7ef9896f4f7e636",
+  "size": 40610,
+  "parsed_sha": "b77447f0bfba92584b7f36617fe284115d13b1ab725567e8a7ef9896f4f7e636",
+  "link_text": "לצפייה בדוח תרומת השקעות נוסטרו לתאריך 30.06.2022",
+  "source_page": "https://www.555.co.il/about/financial_reports/nostro/",
+  "via": "home",
+  "last_modified": "Mon, 29 Aug 2022 06:26:47 GMT",
+  "parser_version": 5,
+  "pdf_parser_version": 2,
+  "tracks": 0,
+  "file_year": 2022
+ },
+ "https://www.555.co.il/sites/default/files/General/NostroYield_B_513910703_422_New.xlsx": {
+  "legal_id": "513910703",
+  "first_seen": "2026-10-11T08:18:22+00:00",
+  "last_seen": "2026-10-11T08:18:22+00:00",
+  "file": "returns/companies/513910703/raw/cc2c451c74da_NostroYield_B_513910703_422_New.xlsx",
+  "sha256": "cc2c451c74da9a85d98332aca6876634687db40ad211a5a07983276ad019f662",
+  "size": 52515,
+  "parsed_sha": "cc2c451c74da9a85d98332aca6876634687db40ad211a5a07983276ad019f662",
+  "link_text": "לצפייה בדוח תרומת השקעות נוסטרו לתאריך 31.12.2022",
+  "source_page": "https://www.555.co.il/about/financial_reports/nostro/",
+  "via": "home",
+  "last_modified": "Tue, 04 Apr 2023 05:38:00 GMT",
+  "parser_version": 5,
+  "pdf_parser_version": 2,
+  "tracks": 0,
+  "file_year": 2022
+ }
+}

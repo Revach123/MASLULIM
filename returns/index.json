@@ -1,11 +1,11 @@
 {
  "totals": {
   "companies": 76,
-  "with_data": 58,
-  "tracks": 1248,
+  "with_data": 60,
+  "tracks": 1266,
   "registry_tracks": 1289,
-  "registry_found": 778,
-  "docs": 8788
+  "registry_found": 785,
+  "docs": 8882
  },
  "companies": [
   {
@@ -32,6 +32,19 @@
    "first_month": "2026-01",
    "last_month": "2026-06",
    "docs_returns": 6,
+   "nostro": false
+  },
+  {
+   "legal_id": "510930654",
+   "company": "יחד רופאים - חברה לניהול קופות גמל בע\"מ",
+   "tracks": 17,
+   "tracks_numbered": 7,
+   "registry_tracks": 7,
+   "registry_found": 7,
+   "registry_coverage": 100.0,
+   "first_month": "2021-01",
+   "last_month": "2026-06",
+   "docs_returns": 90,
    "nostro": false
   },
   {
@@ -282,6 +295,19 @@
    "nostro": false
   },
   {
+   "legal_id": "513910703",
+   "company": "איי. די. איי. חברה לביטוח בע\"מ",
+   "tracks": 0,
+   "tracks_numbered": 0,
+   "registry_tracks": 5,
+   "registry_found": 0,
+   "registry_coverage": 0.0,
+   "first_month": null,
+   "last_month": null,
+   "docs_returns": 2,
+   "nostro": true
+  },
+  {
    "legal_id": "514767490",
    "company": "סלייס גמל בע\"מ",
    "tracks": 42,
@@ -396,6 +422,19 @@
    "first_month": "2022-01",
    "last_month": "2026-06",
    "docs_returns": 89,
+   "nostro": false
+  },
+  {
+   "legal_id": "520022518",
+   "company": "החברה לניהול קופת התגמולים והפנסיה של עובדי הסוכנות היהודית לארץ ישראל בע\"מ",
+   "tracks": 1,
+   "tracks_numbered": 0,
+   "registry_tracks": 0,
+   "registry_found": 0,
+   "registry_coverage": null,
+   "first_month": "2019-01",
+   "last_month": "2020-12",
+   "docs_returns": 2,
    "nostro": false
   },
   {
