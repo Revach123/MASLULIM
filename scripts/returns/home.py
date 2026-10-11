@@ -73,6 +73,11 @@ def main():
             dst = ROOT / "policy" / "inbox" / lid / "returns" / "_discovered.json"
             dst.parent.mkdir(parents=True, exist_ok=True)
             shutil.copyfile(disc, dst)
+        snap = work / "site_snapshot.json"
+        if snap.exists() and snap.stat().st_size < 6_000_000:  # לאבחון: אילו עמודים נסרקו ומה היה בהם
+            dst = ROOT / "policy" / "inbox" / lid / "returns" / "_snapshot.json"
+            dst.parent.mkdir(parents=True, exist_ok=True)
+            shutil.copyfile(snap, dst)
         shutil.rmtree(work, ignore_errors=True)
         total += n
         print(f"[{lid}] returns new={n}", flush=True)

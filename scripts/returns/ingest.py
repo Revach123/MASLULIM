@@ -21,6 +21,10 @@ def main():
         if disc.exists():
             comp.mkdir(parents=True, exist_ok=True)
             shutil.move(str(disc), comp / "discovered.json")
+        snap = d / "_snapshot.json"  # תמונת מצב של הסריקה הביתית (עמודים וקישורים) - לאבחון איפה הדוחות באתר
+        if snap.exists():
+            comp.mkdir(parents=True, exist_ok=True)
+            shutil.move(str(snap), comp / "site_snapshot.json")
         for meta_p in sorted(d.glob("*.json")):
             f = meta_p.with_suffix("")
             if not f.exists():
