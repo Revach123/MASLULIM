@@ -1,7 +1,7 @@
 {
  "legal_id": "510142789",
  "company": "חברת ב'ת למ'ד דל'ת בע\"מ",
- "run": "2026-10-10T11:25:11+00:00",
+ "run": "2026-10-11T11:40:54+00:00",
  "errors": [],
  "seeds": {
   "config": 0,
@@ -12,13 +12,11 @@
   "sitemap": 0
  },
  "imported_from_policy": 0,
- "pages": 1,
- "pages_failed": [
-  "https://www.dbank.co.il: browser:TimeoutError:Page.goto: Timeout 60000ms exceeded."
- ],
+ "pages": 26,
+ "pages_failed": [],
  "candidates": 0,
  "docs": 0,
  "new_docs": 0,
  "index_size": 0,
- "seconds": 846
+ "seconds": 132
 }
