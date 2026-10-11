@@ -3,7 +3,7 @@
 רץ על ה-runner הביתי (Revach: .github/workflows/policy-home.yml) אחרי סריקת המדיניות. לכל אתר: scripts.returns.crawl לתיקייה
 זמנית (returns/_home/<LegalId>) שמתחילה מה-docs_index הקיים - קבצים שכבר נאספו לא נשלחים שוב. כל קובץ חדש נכתב ל-
 policy/inbox/<LegalId>/returns/ עם קובץ meta - נדחף יחד עם תיבת המדיניות, ונקלט ב-policy_inbox.yml (scripts.returns.ingest).
-הרצה: python -m scripts.returns.home [--only LEGAL_ID ...] [--timeout-min 50]
+הרצה: python -m scripts.returns.home [--only LEGAL_ID ...] [--timeout-min 75]
 """
 import argparse, json, os, shutil, subprocess, sys
 from datetime import datetime, timezone
@@ -18,7 +18,7 @@ LOW_PRIORITY = 0x00004000 if os.name == "nt" else 0  # Windows BELOW_NORMAL_PRIO
 def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--only", nargs="*")
-    ap.add_argument("--timeout-min", type=int, default=50)
+    ap.add_argument("--timeout-min", type=int, default=75)
     a = ap.parse_args()
     known = set()
     for p in (RET / "companies").glob("*/docs_index.json"):
@@ -44,6 +44,8 @@ def main():
         env = dict(os.environ, RETURNS_OUT=str(work), RETURNS_FORCE_CLOUD="1")
         env.setdefault("POLICY_HEADED", "1")
         env.setdefault("POLICY_OFFSCREEN", "1")
+        # תקציב ההורדות נמדד מתחילת הסריקה (ברירת מחדל 2000s) - כשסריקת העמודים לבדה לוקחת יותר (מור: 46 עמודי מסלול, 2600s) לא יורד כלום
+        env.setdefault("RETURNS_DL_BUDGET", str(max(2000, (a.timeout_min - 8) * 60)))
         env.setdefault("PYTHONUNBUFFERED", "1")  # הפלט החלקי בלוג גם כשהסריקה נהרגת בתקרה
         log = work / "crawl.log"
         # פלט לקובץ (לא pipe) וסיום עץ התהליכים בתקרה: subprocess.run(timeout, capture_output) נתקע ב-Windows אחרי kill כי Chrome (נכד)
