@@ -14,7 +14,7 @@
   "product": null,
   "via": "cloud",
   "not_returns": true,
-  "parser_version": 5,
+  "parser_version": 6,
   "parse_error": "file missing"
  },
  "https://ktagmulimhaifa.co.il/wp-content/uploads/2026/01/טבלת-תשואות-12.2025.pdf": {
@@ -32,7 +32,7 @@
   "product": null,
   "via": "cloud",
   "not_returns": true,
-  "parser_version": 5,
+  "parser_version": 6,
   "parse_error": "file missing"
  },
  "https://ktagmulimhaifa.co.il/wp-content/uploads/2025/01/טבלת-תשואות-12.2024.pdf": {
@@ -50,7 +50,7 @@
   "product": null,
   "via": "cloud",
   "not_returns": true,
-  "parser_version": 5,
+  "parser_version": 6,
   "parse_error": "file missing"
  },
  "https://ktagmulimhaifa.co.il/wp-content/uploads/2024/02/טבלת-תשואות-12.2023.pdf": {
@@ -68,7 +68,7 @@
   "product": null,
   "via": "cloud",
   "not_returns": true,
-  "parser_version": 5,
+  "parser_version": 6,
   "parse_error": "file missing"
  },
  "https://ktagmulimhaifa.co.il/wp-content/uploads/2023/01/טבלת-תשואות-12.2022.pdf": {
@@ -86,7 +86,7 @@
   "product": null,
   "via": "cloud",
   "not_returns": true,
-  "parser_version": 5,
+  "parser_version": 6,
   "parse_error": "file missing"
  },
  "https://ktagmulimhaifa.co.il/wp-content/uploads/2022/02/תשואות-2021-מעודכן-12.2021.pdf": {
@@ -104,7 +104,7 @@
   "product": null,
   "via": "cloud",
   "not_returns": true,
-  "parser_version": 5,
+  "parser_version": 6,
   "parse_error": "file missing"
  },
  "https://ktagmulimhaifa.co.il/wp-content/uploads/2021/01/תשואות-מסלולי-תלויי-גיל-שנת-2020-12.xlsx": {
@@ -122,7 +122,7 @@
   "product": null,
   "via": "cloud",
   "not_returns": true,
-  "parser_version": 5,
+  "parser_version": 6,
   "parse_error": "file missing"
  },
  "http://box2051.temp.domains/~ktagmuli/wp-content/uploads/2019/12/תשואות-מסלולי-תלויי-גיל-שנת-2019-3.xlsx": {
@@ -140,7 +140,7 @@
   "product": null,
   "via": "cloud",
   "not_returns": true,
-  "parser_version": 5,
+  "parser_version": 6,
   "parse_error": "file missing"
  },
  "https://ktagmulimhaifa.co.il/wp-content/uploads/2026/04/570005959_g7219_Yield126.xlsx": {
@@ -157,9 +157,10 @@
   "source_page": "https://ktagmulimhaifa.co.il/%d7%9e%d7%a8%d7%9b%d7%99%d7%91%d7%99-%d7%aa%d7%a9%d7%95%d7%90%d7%94/",
   "product": null,
   "via": "cloud",
-  "parser_version": 5,
+  "parser_version": 6,
   "tracks": 1,
-  "file_year": 2026
+  "file_year": 2026,
+  "pdf_parser_version": 2
  },
  "https://ktagmulimhaifa.co.il/wp-content/uploads/2026/07/מרכיבי-תשואה-.xlsx": {
   "legal_id": "570005959",
@@ -175,9 +176,10 @@
   "source_page": "https://ktagmulimhaifa.co.il/%d7%9e%d7%a8%d7%9b%d7%99%d7%91%d7%99-%d7%aa%d7%a9%d7%95%d7%90%d7%94/",
   "product": null,
   "via": "cloud",
-  "parser_version": 5,
+  "parser_version": 6,
   "tracks": 1,
-  "file_year": 2026
+  "file_year": 2026,
+  "pdf_parser_version": 2
  },
  "https://ktagmulimhaifa.co.il/wp-content/uploads/2025/10/570005959_g7219_Yield325.xlsx": {
   "legal_id": "570005959",
@@ -193,9 +195,10 @@
   "source_page": "https://ktagmulimhaifa.co.il/%d7%9e%d7%a8%d7%9b%d7%99%d7%91%d7%99-%d7%aa%d7%a9%d7%95%d7%90%d7%94/",
   "product": null,
   "via": "cloud",
-  "parser_version": 5,
+  "parser_version": 6,
   "tracks": 1,
-  "file_year": 2025
+  "file_year": 2025,
+  "pdf_parser_version": 2
  },
  "https://ktagmulimhaifa.co.il/wp-content/uploads/2025/04/570005959_g7219_Yield125.xlsx": {
   "legal_id": "570005959",
@@ -211,9 +214,10 @@
   "source_page": "https://ktagmulimhaifa.co.il/%d7%9e%d7%a8%d7%9b%d7%99%d7%91%d7%99-%d7%aa%d7%a9%d7%95%d7%90%d7%94/",
   "product": null,
   "via": "cloud",
-  "parser_version": 5,
+  "parser_version": 6,
   "tracks": 1,
-  "file_year": 2025
+  "file_year": 2025,
+  "pdf_parser_version": 2
  },
  "https://ktagmulimhaifa.co.il/wp-content/uploads/2025/08/מרכיבי-תשואה-.xlsx": {
   "legal_id": "570005959",
@@ -229,9 +233,10 @@
   "source_page": "https://ktagmulimhaifa.co.il/%d7%9e%d7%a8%d7%9b%d7%99%d7%91%d7%99-%d7%aa%d7%a9%d7%95%d7%90%d7%94/",
   "product": null,
   "via": "cloud",
-  "parser_version": 5,
+  "parser_version": 6,
   "tracks": 1,
-  "file_year": 2025
+  "file_year": 2025,
+  "pdf_parser_version": 2
  },
  "https://ktagmulimhaifa.co.il/wp-content/uploads/2026/01/570005959_g7219_Yield425.xlsx": {
   "legal_id": "570005959",
@@ -247,9 +252,10 @@
   "source_page": "https://ktagmulimhaifa.co.il/%d7%9e%d7%a8%d7%9b%d7%99%d7%91%d7%99-%d7%aa%d7%a9%d7%95%d7%90%d7%94/",
   "product": null,
   "via": "cloud",
-  "parser_version": 5,
+  "parser_version": 6,
   "tracks": 1,
-  "file_year": 2025
+  "file_year": 2025,
+  "pdf_parser_version": 2
  },
  "https://ktagmulimhaifa.co.il/wp-content/uploads/2025/03/570005959_g7219_Yield424.xlsx": {
   "legal_id": "570005959",
@@ -265,9 +271,10 @@
   "source_page": "https://ktagmulimhaifa.co.il/%d7%9e%d7%a8%d7%9b%d7%99%d7%91%d7%99-%d7%aa%d7%a9%d7%95%d7%90%d7%94/",
   "product": null,
   "via": "cloud",
-  "parser_version": 5,
+  "parser_version": 6,
   "tracks": 1,
-  "file_year": 2024
+  "file_year": 2024,
+  "pdf_parser_version": 2
  },
  "https://ktagmulimhaifa.co.il/wp-content/uploads/2024/12/570005959_g7219_Yield324.xlsx": {
   "legal_id": "570005959",
@@ -283,9 +290,10 @@
   "source_page": "https://ktagmulimhaifa.co.il/%d7%9e%d7%a8%d7%9b%d7%99%d7%91%d7%99-%d7%aa%d7%a9%d7%95%d7%90%d7%94/",
   "product": null,
   "via": "cloud",
-  "parser_version": 5,
+  "parser_version": 6,
   "tracks": 1,
-  "file_year": 2024
+  "file_year": 2024,
+  "pdf_parser_version": 2
  },
  "https://ktagmulimhaifa.co.il/wp-content/uploads/2024/07/570005959_g7219_Yield224.xlsx": {
   "legal_id": "570005959",
@@ -301,9 +309,10 @@
   "source_page": "https://ktagmulimhaifa.co.il/%d7%9e%d7%a8%d7%9b%d7%99%d7%91%d7%99-%d7%aa%d7%a9%d7%95%d7%90%d7%94/",
   "product": null,
   "via": "cloud",
-  "parser_version": 5,
+  "parser_version": 6,
   "tracks": 1,
-  "file_year": 2024
+  "file_year": 2024,
+  "pdf_parser_version": 2
  },
  "https://ktagmulimhaifa.co.il/wp-content/uploads/2024/04/דוח-מרכיבי-תשואה-2024.xlsx": {
   "legal_id": "570005959",
@@ -319,9 +328,10 @@
   "source_page": "https://ktagmulimhaifa.co.il/%d7%9e%d7%a8%d7%9b%d7%99%d7%91%d7%99-%d7%aa%d7%a9%d7%95%d7%90%d7%94/",
   "product": null,
   "via": "cloud",
-  "parser_version": 5,
+  "parser_version": 6,
   "tracks": 1,
-  "file_year": 2024
+  "file_year": 2024,
+  "pdf_parser_version": 2
  },
  "https://ktagmulimhaifa.co.il/wp-content/uploads/2024/03/מרכיבי-תשואה-רבעון-רביעי-2023.xlsx": {
   "legal_id": "570005959",
@@ -337,9 +347,10 @@
   "source_page": "https://ktagmulimhaifa.co.il/%d7%9e%d7%a8%d7%9b%d7%99%d7%91%d7%99-%d7%aa%d7%a9%d7%95%d7%90%d7%94/",
   "product": null,
   "via": "cloud",
-  "parser_version": 5,
+  "parser_version": 6,
   "tracks": 1,
-  "file_year": 2023
+  "file_year": 2023,
+  "pdf_parser_version": 2
  },
  "https://ktagmulimhaifa.co.il/wp-content/uploads/2023/10/570005959_g7219_Yield323.xlsx": {
   "legal_id": "570005959",
@@ -355,9 +366,10 @@
   "source_page": "https://ktagmulimhaifa.co.il/%d7%9e%d7%a8%d7%9b%d7%99%d7%91%d7%99-%d7%aa%d7%a9%d7%95%d7%90%d7%94/",
   "product": null,
   "via": "cloud",
-  "parser_version": 5,
+  "parser_version": 6,
   "tracks": 1,
-  "file_year": 2023
+  "file_year": 2023,
+  "pdf_parser_version": 2
  },
  "https://ktagmulimhaifa.co.il/wp-content/uploads/2023/05/570005959_g7219_Yield123.xlsx": {
   "legal_id": "570005959",
@@ -373,9 +385,10 @@
   "source_page": "https://ktagmulimhaifa.co.il/%d7%9e%d7%a8%d7%9b%d7%99%d7%91%d7%99-%d7%aa%d7%a9%d7%95%d7%90%d7%94/",
   "product": null,
   "via": "cloud",
-  "parser_version": 5,
+  "parser_version": 6,
   "tracks": 1,
-  "file_year": 2023
+  "file_year": 2023,
+  "pdf_parser_version": 2
  },
  "https://ktagmulimhaifa.co.il/wp-content/uploads/2023/08/מרכיבי-תשואה-.xlsx": {
   "legal_id": "570005959",
@@ -391,9 +404,10 @@
   "source_page": "https://ktagmulimhaifa.co.il/%d7%9e%d7%a8%d7%9b%d7%99%d7%91%d7%99-%d7%aa%d7%a9%d7%95%d7%90%d7%94/",
   "product": null,
   "via": "cloud",
-  "parser_version": 5,
+  "parser_version": 6,
   "tracks": 1,
-  "file_year": 2023
+  "file_year": 2023,
+  "pdf_parser_version": 2
  },
  "https://ktagmulimhaifa.co.il/wp-content/uploads/2022/12/מרכיבי-תשואה-ספטמבר-2022.xlsx": {
   "legal_id": "570005959",
@@ -409,9 +423,10 @@
   "source_page": "https://ktagmulimhaifa.co.il/%d7%9e%d7%a8%d7%9b%d7%99%d7%91%d7%99-%d7%aa%d7%a9%d7%95%d7%90%d7%94/",
   "product": null,
   "via": "cloud",
-  "parser_version": 5,
+  "parser_version": 6,
   "tracks": 1,
-  "file_year": 2022
+  "file_year": 2022,
+  "pdf_parser_version": 2
  },
  "https://ktagmulimhaifa.co.il/wp-content/uploads/2022/07/מרכיבי-תשואה-מרץ-2022.xlsx": {
   "legal_id": "570005959",
@@ -427,9 +442,10 @@
   "source_page": "https://ktagmulimhaifa.co.il/%d7%9e%d7%a8%d7%9b%d7%99%d7%91%d7%99-%d7%aa%d7%a9%d7%95%d7%90%d7%94/",
   "product": null,
   "via": "cloud",
-  "parser_version": 5,
+  "parser_version": 6,
   "tracks": 1,
-  "file_year": 2022
+  "file_year": 2022,
+  "pdf_parser_version": 2
  },
  "https://ktagmulimhaifa.co.il/wp-content/uploads/2022/07/570005959_g7219_Yield222.xlsx": {
   "legal_id": "570005959",
@@ -445,9 +461,10 @@
   "source_page": "https://ktagmulimhaifa.co.il/%d7%9e%d7%a8%d7%9b%d7%99%d7%91%d7%99-%d7%aa%d7%a9%d7%95%d7%90%d7%94/",
   "product": null,
   "via": "cloud",
-  "parser_version": 5,
+  "parser_version": 6,
   "tracks": 1,
-  "file_year": 2022
+  "file_year": 2022,
+  "pdf_parser_version": 2
  },
  "https://ktagmulimhaifa.co.il/wp-content/uploads/2023/01/570005959_g7219_Yield422-1.xlsx": {
   "legal_id": "570005959",
@@ -463,9 +480,10 @@
   "source_page": "https://ktagmulimhaifa.co.il/%d7%9e%d7%a8%d7%9b%d7%99%d7%91%d7%99-%d7%aa%d7%a9%d7%95%d7%90%d7%94/",
   "product": null,
   "via": "cloud",
-  "parser_version": 5,
+  "parser_version": 6,
   "tracks": 1,
-  "file_year": 2022
+  "file_year": 2022,
+  "pdf_parser_version": 2
  },
  "https://ktagmulimhaifa.co.il/wp-content/uploads/2021/10/מרכיבי-תשואה-ספטמבר-2021.xlsx": {
   "legal_id": "570005959",
@@ -481,9 +499,10 @@
   "source_page": "https://ktagmulimhaifa.co.il/%d7%9e%d7%a8%d7%9b%d7%99%d7%91%d7%99-%d7%aa%d7%a9%d7%95%d7%90%d7%94/",
   "product": null,
   "via": "cloud",
-  "parser_version": 5,
+  "parser_version": 6,
   "tracks": 1,
-  "file_year": 2021
+  "file_year": 2021,
+  "pdf_parser_version": 2
  },
  "https://ktagmulimhaifa.co.il/wp-content/uploads/2021/04/מרכיבי-תשואה-מרץ-2021.xlsx": {
   "legal_id": "570005959",
@@ -499,9 +518,10 @@
   "source_page": "https://ktagmulimhaifa.co.il/%d7%9e%d7%a8%d7%9b%d7%99%d7%91%d7%99-%d7%aa%d7%a9%d7%95%d7%90%d7%94/",
   "product": null,
   "via": "cloud",
-  "parser_version": 5,
+  "parser_version": 6,
   "tracks": 1,
-  "file_year": 2021
+  "file_year": 2021,
+  "pdf_parser_version": 2
  },
  "https://ktagmulimhaifa.co.il/wp-content/uploads/2021/07/מרכיבי-תשואה-רבעון-2-2021.xlsx": {
   "legal_id": "570005959",
@@ -517,9 +537,10 @@
   "source_page": "https://ktagmulimhaifa.co.il/%d7%9e%d7%a8%d7%9b%d7%99%d7%91%d7%99-%d7%aa%d7%a9%d7%95%d7%90%d7%94/",
   "product": null,
   "via": "cloud",
-  "parser_version": 5,
+  "parser_version": 6,
   "tracks": 1,
-  "file_year": 2021
+  "file_year": 2021,
+  "pdf_parser_version": 2
  },
  "https://ktagmulimhaifa.co.il/wp-content/uploads/2022/01/תשואה-לפי-אפיק-_20211231_v1_7219_8571.xlsx": {
   "legal_id": "570005959",
@@ -535,9 +556,10 @@
   "source_page": "https://ktagmulimhaifa.co.il/%d7%9e%d7%a8%d7%9b%d7%99%d7%91%d7%99-%d7%aa%d7%a9%d7%95%d7%90%d7%94/",
   "product": null,
   "via": "cloud",
-  "parser_version": 5,
+  "parser_version": 6,
   "tracks": 1,
-  "file_year": 2021
+  "file_year": 2021,
+  "pdf_parser_version": 2
  },
  "https://ktagmulimhaifa.co.il/wp-content/uploads/2020/10/מרכיבי-תשואה-רבעון-3.20.xlsx": {
   "legal_id": "570005959",
@@ -560,7 +582,8 @@
   "product": null,
   "via": "cloud",
   "not_returns": true,
-  "parser_version": 5
+  "parser_version": 6,
+  "pdf_parser_version": 2
  },
  "https://ktagmulimhaifa.co.il/wp-content/uploads/2020/04/מרכיבי-תשואה-מרץ-2020.xlsx": {
   "legal_id": "570005959",
@@ -583,7 +606,8 @@
   "product": null,
   "via": "cloud",
   "not_returns": true,
-  "parser_version": 5
+  "parser_version": 6,
+  "pdf_parser_version": 2
  },
  "https://ktagmulimhaifa.co.il/wp-content/uploads/2020/07/מרכיבי-תשואה-חודש-יוני-2020.xlsx": {
   "legal_id": "570005959",
@@ -599,9 +623,10 @@
   "source_page": "https://ktagmulimhaifa.co.il/%d7%9e%d7%a8%d7%9b%d7%99%d7%91%d7%99-%d7%aa%d7%a9%d7%95%d7%90%d7%94/",
   "product": null,
   "via": "cloud",
-  "parser_version": 5,
+  "parser_version": 6,
   "tracks": 1,
-  "file_year": 2020
+  "file_year": 2020,
+  "pdf_parser_version": 2
  },
  "https://ktagmulimhaifa.co.il/wp-content/uploads/2021/01/מרכיבי-תשואה-דצמבר-2020.xlsx": {
   "legal_id": "570005959",
@@ -617,9 +642,10 @@
   "source_page": "https://ktagmulimhaifa.co.il/%d7%9e%d7%a8%d7%9b%d7%99%d7%91%d7%99-%d7%aa%d7%a9%d7%95%d7%90%d7%94/",
   "product": null,
   "via": "cloud",
-  "parser_version": 5,
+  "parser_version": 6,
   "tracks": 1,
-  "file_year": 2020
+  "file_year": 2020,
+  "pdf_parser_version": 2
  },
  "https://ktagmulimhaifa.co.il/wp-content/uploads/2020/01/מרכיבי-תשואה-דצמבר-2019.xlsx": {
   "legal_id": "570005959",
@@ -642,7 +668,8 @@
   "product": null,
   "via": "cloud",
   "not_returns": true,
-  "parser_version": 5
+  "parser_version": 6,
+  "pdf_parser_version": 2
  },
  "https://ktagmulimhaifa.co.il/wp-content/uploads/2019/09/מרכיבי-תשואה-06.2019.xlsx": {
   "legal_id": "570005959",
@@ -658,9 +685,10 @@
   "source_page": "https://ktagmulimhaifa.co.il/%d7%9e%d7%a8%d7%9b%d7%99%d7%91%d7%99-%d7%aa%d7%a9%d7%95%d7%90%d7%94/",
   "product": null,
   "via": "cloud",
-  "parser_version": 5,
+  "parser_version": 6,
   "tracks": 1,
-  "file_year": 2019
+  "file_year": 2019,
+  "pdf_parser_version": 2
  },
  "https://ktagmulimhaifa.co.il/wp-content/uploads/2019/05/עותק-של-מרכיבי-תשואה-03.2019-1.xlsx": {
   "legal_id": "570005959",
@@ -676,9 +704,10 @@
   "source_page": "https://ktagmulimhaifa.co.il/%d7%9e%d7%a8%d7%9b%d7%99%d7%91%d7%99-%d7%aa%d7%a9%d7%95%d7%90%d7%94/",
   "product": null,
   "via": "cloud",
-  "parser_version": 5,
+  "parser_version": 6,
   "tracks": 1,
-  "file_year": 2019
+  "file_year": 2019,
+  "pdf_parser_version": 2
  },
  "https://ktagmulimhaifa.co.il/wp-content/uploads/2019/01/מרכיבי-תשואה-2018.xlsx": {
   "legal_id": "570005959",
@@ -694,9 +723,10 @@
   "source_page": "https://ktagmulimhaifa.co.il/%d7%9e%d7%a8%d7%9b%d7%99%d7%91%d7%99-%d7%aa%d7%a9%d7%95%d7%90%d7%94/",
   "product": null,
   "via": "cloud",
-  "parser_version": 5,
+  "parser_version": 6,
   "tracks": 1,
-  "file_year": 2018
+  "file_year": 2018,
+  "pdf_parser_version": 2
  },
  "https://ktagmulimhaifa.co.il/wp-content/uploads/2018/11/מרכיבי-תשואה-12.2017.xlsx": {
   "legal_id": "570005959",
@@ -712,8 +742,9 @@
   "source_page": "https://ktagmulimhaifa.co.il/%d7%9e%d7%a8%d7%9b%d7%99%d7%91%d7%99-%d7%aa%d7%a9%d7%95%d7%90%d7%94/",
   "product": null,
   "via": "cloud",
-  "parser_version": 5,
+  "parser_version": 6,
   "tracks": 1,
-  "file_year": 2017
+  "file_year": 2017,
+  "pdf_parser_version": 2
  }
 }

@@ -13,9 +13,10 @@
   "source_page": "https://www.as-invest.co.il/interstedin/pension/comprehensive-fund/אלטשולר-שחם-פנסיה-מקיפה-מסלול-לבני-50-עד-60/",
   "product": "פנסיה",
   "via": "cloud",
-  "parser_version": 5,
+  "parser_version": 6,
   "tracks": 1,
-  "file_year": 2026
+  "file_year": 2026,
+  "pdf_parser_version": 2
  },
  "https://www.as-invest.co.il/media/kumanaen/9758.xlsx": {
   "legal_id": "513173393",
@@ -31,9 +32,10 @@
   "source_page": "https://www.as-invest.co.il/interstedin/pension/comprehensive-fund/אלטשולר-שחם-פנסיה-מקיפה-מסלול-לבני-50-עד-60/",
   "product": "פנסיה",
   "via": "cloud",
-  "parser_version": 5,
+  "parser_version": 6,
   "tracks": 1,
-  "file_year": 2025
+  "file_year": 2025,
+  "pdf_parser_version": 2
  },
  "https://www.as-invest.co.il/media/5xcbzym4/513173393_p9758_p423.xlsx": {
   "legal_id": "513173393",
@@ -50,7 +52,8 @@
   "product": "פנסיה",
   "via": "cloud",
   "not_returns": true,
-  "parser_version": 5
+  "parser_version": 6,
+  "parse_error": "file missing"
  },
  "https://www.as-invest.co.il/media/23556/513173393_p9758_p323.xlsx": {
   "legal_id": "513173393",
@@ -67,7 +70,8 @@
   "product": "פנסיה",
   "via": "cloud",
   "not_returns": true,
-  "parser_version": 5
+  "parser_version": 6,
+  "parse_error": "file missing"
  },
  "https://www.as-invest.co.il/media/22229/513173393_p9758_p223.xlsx": {
   "legal_id": "513173393",
@@ -84,7 +88,8 @@
   "product": "פנסיה",
   "via": "cloud",
   "not_returns": true,
-  "parser_version": 5
+  "parser_version": 6,
+  "parse_error": "file missing"
  },
  "https://www.as-invest.co.il/media/21524/513173393_p9758_p0123.xlsx": {
   "legal_id": "513173393",
@@ -101,7 +106,8 @@
   "product": "פנסיה",
   "via": "cloud",
   "not_returns": true,
-  "parser_version": 5
+  "parser_version": 6,
+  "parse_error": "file missing"
  },
  "https://www.as-invest.co.il/media/21010/513173393_p9758_p0422.xlsx": {
   "legal_id": "513173393",
@@ -118,7 +124,8 @@
   "product": "פנסיה",
   "via": "cloud",
   "not_returns": true,
-  "parser_version": 5
+  "parser_version": 6,
+  "parse_error": "file missing"
  },
  "https://www.as-invest.co.il/media/19780/513173393_p9758_p322.xlsx": {
   "legal_id": "513173393",
@@ -135,7 +142,8 @@
   "product": "פנסיה",
   "via": "cloud",
   "not_returns": true,
-  "parser_version": 5
+  "parser_version": 6,
+  "parse_error": "file missing"
  },
  "https://www.as-invest.co.il/media/jxplhxtg/9757.xlsx": {
   "legal_id": "513173393",
@@ -151,9 +159,10 @@
   "source_page": "https://www.as-invest.co.il/interstedin/pension/comprehensive-fund/אלטשולר-שחם-פנסיה-מקיפה-מסלול-לבני-50-ומטה/",
   "product": "פנסיה",
   "via": "cloud",
-  "parser_version": 5,
+  "parser_version": 6,
   "tracks": 1,
-  "file_year": 2026
+  "file_year": 2026,
+  "pdf_parser_version": 2
  },
  "https://www.as-invest.co.il/media/itklsc5t/9757.xlsx": {
   "legal_id": "513173393",
@@ -169,9 +178,10 @@
   "source_page": "https://www.as-invest.co.il/interstedin/pension/comprehensive-fund/אלטשולר-שחם-פנסיה-מקיפה-מסלול-לבני-50-ומטה/",
   "product": "פנסיה",
   "via": "cloud",
-  "parser_version": 5,
+  "parser_version": 6,
   "tracks": 1,
-  "file_year": 2025
+  "file_year": 2025,
+  "pdf_parser_version": 2
  },
  "https://www.as-invest.co.il/media/ramgwuwl/513173393_p9757_p423.xlsx": {
   "legal_id": "513173393",
@@ -188,7 +198,8 @@
   "product": "פנסיה",
   "via": "cloud",
   "not_returns": true,
-  "parser_version": 5
+  "parser_version": 6,
+  "parse_error": "file missing"
  },
  "https://www.as-invest.co.il/media/23555/513173393_p9757_p323.xlsx": {
   "legal_id": "513173393",
@@ -205,7 +216,8 @@
   "product": "פנסיה",
   "via": "cloud",
   "not_returns": true,
-  "parser_version": 5
+  "parser_version": 6,
+  "parse_error": "file missing"
  },
  "https://www.as-invest.co.il/media/22230/513173393_p9757_p223.xlsx": {
   "legal_id": "513173393",
@@ -222,7 +234,8 @@
   "product": "פנסיה",
   "via": "cloud",
   "not_returns": true,
-  "parser_version": 5
+  "parser_version": 6,
+  "parse_error": "file missing"
  },
  "https://www.as-invest.co.il/media/21525/513173393_p9757_p0123.xlsx": {
   "legal_id": "513173393",
@@ -239,7 +252,8 @@
   "product": "פנסיה",
   "via": "cloud",
   "not_returns": true,
-  "parser_version": 5
+  "parser_version": 6,
+  "parse_error": "file missing"
  },
  "https://www.as-invest.co.il/media/21011/513173393_p9757_p0422.xlsx": {
   "legal_id": "513173393",
@@ -256,7 +270,8 @@
   "product": "פנסיה",
   "via": "cloud",
   "not_returns": true,
-  "parser_version": 5
+  "parser_version": 6,
+  "parse_error": "file missing"
  },
  "https://www.as-invest.co.il/media/19781/513173393_p9757_p322.xlsx": {
   "legal_id": "513173393",
@@ -273,7 +288,8 @@
   "product": "פנסיה",
   "via": "cloud",
   "not_returns": true,
-  "parser_version": 5
+  "parser_version": 6,
+  "parse_error": "file missing"
  },
  "https://www.as-invest.co.il/media/4pnnv4zg/9759.xlsx": {
   "legal_id": "513173393",
@@ -289,9 +305,10 @@
   "source_page": "https://www.as-invest.co.il/interstedin/pension/comprehensive-fund/אלטשולר-שחם-פנסיה-מקיפה-מסלול-לבני-60-ומעלה/",
   "product": "פנסיה",
   "via": "cloud",
-  "parser_version": 5,
+  "parser_version": 6,
   "tracks": 1,
-  "file_year": 2026
+  "file_year": 2026,
+  "pdf_parser_version": 2
  },
  "https://www.as-invest.co.il/media/hiwla2qs/9759.xlsx": {
   "legal_id": "513173393",
@@ -307,9 +324,10 @@
   "source_page": "https://www.as-invest.co.il/interstedin/pension/comprehensive-fund/אלטשולר-שחם-פנסיה-מקיפה-מסלול-לבני-60-ומעלה/",
   "product": "פנסיה",
   "via": "cloud",
-  "parser_version": 5,
+  "parser_version": 6,
   "tracks": 1,
-  "file_year": 2025
+  "file_year": 2025,
+  "pdf_parser_version": 2
  },
  "https://www.as-invest.co.il/media/arpdwll1/513173393_p9759_p423.xlsx": {
   "legal_id": "513173393",
@@ -326,7 +344,8 @@
   "product": "פנסיה",
   "via": "cloud",
   "not_returns": true,
-  "parser_version": 5
+  "parser_version": 6,
+  "parse_error": "file missing"
  },
  "https://www.as-invest.co.il/media/23557/513173393_p9759_p323.xlsx": {
   "legal_id": "513173393",
@@ -343,7 +362,8 @@
   "product": "פנסיה",
   "via": "cloud",
   "not_returns": true,
-  "parser_version": 5
+  "parser_version": 6,
+  "parse_error": "file missing"
  },
  "https://www.as-invest.co.il/media/22234/513173393_p9759_p223.xlsx": {
   "legal_id": "513173393",
@@ -360,7 +380,8 @@
   "product": "פנסיה",
   "via": "cloud",
   "not_returns": true,
-  "parser_version": 5
+  "parser_version": 6,
+  "parse_error": "file missing"
  },
  "https://www.as-invest.co.il/media/21529/513173393_p9759_p0123.xlsx": {
   "legal_id": "513173393",
@@ -377,7 +398,8 @@
   "product": "פנסיה",
   "via": "cloud",
   "not_returns": true,
-  "parser_version": 5
+  "parser_version": 6,
+  "parse_error": "file missing"
  },
  "https://www.as-invest.co.il/media/21015/513173393_p9759_p0422.xlsx": {
   "legal_id": "513173393",
@@ -394,7 +416,8 @@
   "product": "פנסיה",
   "via": "cloud",
   "not_returns": true,
-  "parser_version": 5
+  "parser_version": 6,
+  "parse_error": "file missing"
  },
  "https://www.as-invest.co.il/media/19779/513173393_p9759_p322.xlsx": {
   "legal_id": "513173393",
@@ -411,7 +434,8 @@
   "product": "פנסיה",
   "via": "cloud",
   "not_returns": true,
-  "parser_version": 5
+  "parser_version": 6,
+  "parse_error": "file missing"
  },
  "https://www.as-invest.co.il/media/a4rlniyw/9762.xlsx": {
   "legal_id": "513173393",
@@ -427,9 +451,10 @@
   "source_page": "https://www.as-invest.co.il/interstedin/pension/common-pension-fund/אלטשולר-שחם-פנסיה-כללית-מסלול-לבני-50-עד-60/",
   "product": "פנסיה",
   "via": "cloud",
-  "parser_version": 5,
+  "parser_version": 6,
   "tracks": 1,
-  "file_year": 2026
+  "file_year": 2026,
+  "pdf_parser_version": 2
  },
  "https://www.as-invest.co.il/media/vkqn3cyj/9762.xlsx": {
   "legal_id": "513173393",
@@ -445,9 +470,10 @@
   "source_page": "https://www.as-invest.co.il/interstedin/pension/common-pension-fund/אלטשולר-שחם-פנסיה-כללית-מסלול-לבני-50-עד-60/",
   "product": "פנסיה",
   "via": "cloud",
-  "parser_version": 5,
+  "parser_version": 6,
   "tracks": 1,
-  "file_year": 2025
+  "file_year": 2025,
+  "pdf_parser_version": 2
  },
  "https://www.as-invest.co.il/media/lg3lkxz1/513173393_p9762_p423.xlsx": {
   "legal_id": "513173393",
@@ -464,7 +490,8 @@
   "product": "פנסיה",
   "via": "cloud",
   "not_returns": true,
-  "parser_version": 5
+  "parser_version": 6,
+  "parse_error": "file missing"
  },
  "https://www.as-invest.co.il/media/23560/513173393_p9762_p323.xlsx": {
   "legal_id": "513173393",
@@ -481,7 +508,8 @@
   "product": "פנסיה",
   "via": "cloud",
   "not_returns": true,
-  "parser_version": 5
+  "parser_version": 6,
+  "parse_error": "file missing"
  },
  "https://www.as-invest.co.il/media/22239/513173393_p9762_p223.xlsx": {
   "legal_id": "513173393",
@@ -498,7 +526,8 @@
   "product": "פנסיה",
   "via": "cloud",
   "not_returns": true,
-  "parser_version": 5
+  "parser_version": 6,
+  "parse_error": "file missing"
  },
  "https://www.as-invest.co.il/media/21534/513173393_p9762_p0123.xlsx": {
   "legal_id": "513173393",
@@ -515,7 +544,8 @@
   "product": "פנסיה",
   "via": "cloud",
   "not_returns": true,
-  "parser_version": 5
+  "parser_version": 6,
+  "parse_error": "file missing"
  },
  "https://www.as-invest.co.il/media/21019/513173393_p9762_p0422.xlsx": {
   "legal_id": "513173393",
@@ -532,7 +562,8 @@
   "product": "פנסיה",
   "via": "cloud",
   "not_returns": true,
-  "parser_version": 5
+  "parser_version": 6,
+  "parse_error": "file missing"
  },
  "https://www.as-invest.co.il/media/19786/513173393_p9762_p322.xlsx": {
   "legal_id": "513173393",
@@ -549,7 +580,8 @@
   "product": "פנסיה",
   "via": "cloud",
   "not_returns": true,
-  "parser_version": 5
+  "parser_version": 6,
+  "parse_error": "file missing"
  },
  "https://www.as-invest.co.il/media/phslbiaw/9761.xlsx": {
   "legal_id": "513173393",
@@ -565,9 +597,10 @@
   "source_page": "https://www.as-invest.co.il/interstedin/pension/common-pension-fund/אלטשולר-שחם-פנסיה-כללית-מסלול-לבני-50-ומטה/",
   "product": "פנסיה",
   "via": "cloud",
-  "parser_version": 5,
+  "parser_version": 6,
   "tracks": 1,
-  "file_year": 2026
+  "file_year": 2026,
+  "pdf_parser_version": 2
  },
  "https://www.as-invest.co.il/media/3fpf4e5u/9761.xlsx": {
   "legal_id": "513173393",
@@ -583,9 +616,10 @@
   "source_page": "https://www.as-invest.co.il/interstedin/pension/common-pension-fund/אלטשולר-שחם-פנסיה-כללית-מסלול-לבני-50-ומטה/",
   "product": "פנסיה",
   "via": "cloud",
-  "parser_version": 5,
+  "parser_version": 6,
   "tracks": 1,
-  "file_year": 2025
+  "file_year": 2025,
+  "pdf_parser_version": 2
  },
  "https://www.as-invest.co.il/media/eghh02oj/513173393_p9761_p423.xlsx": {
   "legal_id": "513173393",
@@ -602,7 +636,8 @@
   "product": "פנסיה",
   "via": "cloud",
   "not_returns": true,
-  "parser_version": 5
+  "parser_version": 6,
+  "parse_error": "file missing"
  },
  "https://www.as-invest.co.il/media/23559/513173393_p9761_p323.xlsx": {
   "legal_id": "513173393",
@@ -619,7 +654,8 @@
   "product": "פנסיה",
   "via": "cloud",
   "not_returns": true,
-  "parser_version": 5
+  "parser_version": 6,
+  "parse_error": "file missing"
  },
  "https://www.as-invest.co.il/media/22240/513173393_p9761_p223.xlsx": {
   "legal_id": "513173393",
@@ -636,7 +672,8 @@
   "product": "פנסיה",
   "via": "cloud",
   "not_returns": true,
-  "parser_version": 5
+  "parser_version": 6,
+  "parse_error": "file missing"
  },
  "https://www.as-invest.co.il/media/21535/513173393_p9761_p0123.xlsx": {
   "legal_id": "513173393",
@@ -653,7 +690,8 @@
   "product": "פנסיה",
   "via": "cloud",
   "not_returns": true,
-  "parser_version": 5
+  "parser_version": 6,
+  "parse_error": "file missing"
  },
  "https://www.as-invest.co.il/media/21020/513173393_p9761_p0422.xlsx": {
   "legal_id": "513173393",
@@ -670,7 +708,8 @@
   "product": "פנסיה",
   "via": "cloud",
   "not_returns": true,
-  "parser_version": 5
+  "parser_version": 6,
+  "parse_error": "file missing"
  },
  "https://www.as-invest.co.il/media/19785/513173393_p9761_p322.xlsx": {
   "legal_id": "513173393",
@@ -687,7 +726,8 @@
   "product": "פנסיה",
   "via": "cloud",
   "not_returns": true,
-  "parser_version": 5
+  "parser_version": 6,
+  "parse_error": "file missing"
  },
  "https://www.as-invest.co.il/media/zoypxkdj/9763.xlsx": {
   "legal_id": "513173393",
@@ -703,9 +743,10 @@
   "source_page": "https://www.as-invest.co.il/interstedin/pension/common-pension-fund/אלטשולר-שחם-פנסיה-כללית-מסלול-לבני-60-ומעלה/",
   "product": "פנסיה",
   "via": "cloud",
-  "parser_version": 5,
+  "parser_version": 6,
   "tracks": 1,
-  "file_year": 2026
+  "file_year": 2026,
+  "pdf_parser_version": 2
  },
  "https://www.as-invest.co.il/media/3cbfyjan/9763.xlsx": {
   "legal_id": "513173393",
@@ -721,9 +762,10 @@
   "source_page": "https://www.as-invest.co.il/interstedin/pension/common-pension-fund/אלטשולר-שחם-פנסיה-כללית-מסלול-לבני-60-ומעלה/",
   "product": "פנסיה",
   "via": "cloud",
-  "parser_version": 5,
+  "parser_version": 6,
   "tracks": 1,
-  "file_year": 2025
+  "file_year": 2025,
+  "pdf_parser_version": 2
  },
  "https://www.as-invest.co.il/media/exvc1tt0/513173393_p9763_p423.xlsx": {
   "legal_id": "513173393",
@@ -740,7 +782,8 @@
   "product": "פנסיה",
   "via": "cloud",
   "not_returns": true,
-  "parser_version": 5
+  "parser_version": 6,
+  "parse_error": "file missing"
  },
  "https://www.as-invest.co.il/media/23561/513173393_p9763_p323.xlsx": {
   "legal_id": "513173393",
@@ -757,7 +800,8 @@
   "product": "פנסיה",
   "via": "cloud",
   "not_returns": true,
-  "parser_version": 5
+  "parser_version": 6,
+  "parse_error": "file missing"
  },
  "https://www.as-invest.co.il/media/22242/513173393_p9763_p223.xlsx": {
   "legal_id": "513173393",
@@ -774,7 +818,8 @@
   "product": "פנסיה",
   "via": "cloud",
   "not_returns": true,
-  "parser_version": 5
+  "parser_version": 6,
+  "parse_error": "file missing"
  },
  "https://www.as-invest.co.il/media/21537/513173393_p9763_p0123.xlsx": {
   "legal_id": "513173393",
@@ -791,7 +836,8 @@
   "product": "פנסיה",
   "via": "cloud",
   "not_returns": true,
-  "parser_version": 5
+  "parser_version": 6,
+  "parse_error": "file missing"
  },
  "https://www.as-invest.co.il/media/21022/513173393_p9763_p0422.xlsx": {
   "legal_id": "513173393",
@@ -808,7 +854,8 @@
   "product": "פנסיה",
   "via": "cloud",
   "not_returns": true,
-  "parser_version": 5
+  "parser_version": 6,
+  "parse_error": "file missing"
  },
  "https://www.as-invest.co.il/media/19787/513173393_p9763_p322.xlsx": {
   "legal_id": "513173393",
@@ -825,7 +872,8 @@
   "product": "פנסיה",
   "via": "cloud",
   "not_returns": true,
-  "parser_version": 5
+  "parser_version": 6,
+  "parse_error": "file missing"
  },
  "https://www.as-invest.co.il/media/cf5n0tql/1093.xlsx": {
   "legal_id": "513173393",
@@ -841,9 +889,10 @@
   "source_page": "https://www.as-invest.co.il/interstedin/%D7%A7%D7%A8%D7%A0%D7%95%D7%AA-%D7%94%D7%A9%D7%AA%D7%9C%D7%9E%D7%95%D7%AA/%D7%90%D7%9C%D7%98%D7%A9%D7%95%D7%9C%D7%A8-%D7%A9%D7%97%D7%9D-%D7%94%D7%A9%D7%AA%D7%9C%D7%9E%D7%95%D7%AA-%D7%9B%D7%9C%D7%9C%D7%99/",
   "product": null,
   "via": "cloud",
-  "parser_version": 5,
+  "parser_version": 6,
   "tracks": 1,
-  "file_year": 2026
+  "file_year": 2026,
+  "pdf_parser_version": 2
  },
  "https://www.as-invest.co.il/media/qrwhsmxl/1093.xlsx": {
   "legal_id": "513173393",
@@ -859,9 +908,10 @@
   "source_page": "https://www.as-invest.co.il/interstedin/%D7%A7%D7%A8%D7%A0%D7%95%D7%AA-%D7%94%D7%A9%D7%AA%D7%9C%D7%9E%D7%95%D7%AA/%D7%90%D7%9C%D7%98%D7%A9%D7%95%D7%9C%D7%A8-%D7%A9%D7%97%D7%9D-%D7%94%D7%A9%D7%AA%D7%9C%D7%9E%D7%95%D7%AA-%D7%9B%D7%9C%D7%9C%D7%99/",
   "product": null,
   "via": "cloud",
-  "parser_version": 5,
+  "parser_version": 6,
   "tracks": 1,
-  "file_year": 2025
+  "file_year": 2025,
+  "pdf_parser_version": 2
  },
  "https://www.as-invest.co.il/media/1dcpqdxc/1377.xlsx": {
   "legal_id": "513173393",
@@ -877,9 +927,10 @@
   "source_page": "https://www.as-invest.co.il/interstedin/%D7%A7%D7%A8%D7%A0%D7%95%D7%AA-%D7%94%D7%A9%D7%AA%D7%9C%D7%9E%D7%95%D7%AA/%D7%90%D7%9C%D7%98%D7%A9%D7%95%D7%9C%D7%A8-%D7%A9%D7%97%D7%9D-%D7%94%D7%A9%D7%AA%D7%9C%D7%9E%D7%95%D7%AA-%D7%9E%D7%A0%D7%99%D7%95%D7%AA/",
   "product": null,
   "via": "cloud",
-  "parser_version": 5,
+  "parser_version": 6,
   "tracks": 1,
-  "file_year": 2026
+  "file_year": 2026,
+  "pdf_parser_version": 2
  },
  "https://www.as-invest.co.il/media/w4kev2wy/1377.xlsx": {
   "legal_id": "513173393",
@@ -895,9 +946,10 @@
   "source_page": "https://www.as-invest.co.il/interstedin/%D7%A7%D7%A8%D7%A0%D7%95%D7%AA-%D7%94%D7%A9%D7%AA%D7%9C%D7%9E%D7%95%D7%AA/%D7%90%D7%9C%D7%98%D7%A9%D7%95%D7%9C%D7%A8-%D7%A9%D7%97%D7%9D-%D7%94%D7%A9%D7%AA%D7%9C%D7%9E%D7%95%D7%AA-%D7%9E%D7%A0%D7%99%D7%95%D7%AA/",
   "product": null,
   "via": "cloud",
-  "parser_version": 5,
+  "parser_version": 6,
   "tracks": 1,
-  "file_year": 2025
+  "file_year": 2025,
+  "pdf_parser_version": 2
  },
  "https://www.as-invest.co.il/media/3tbn05hk/0558.xlsx": {
   "legal_id": "513173393",
@@ -913,9 +965,10 @@
   "source_page": "https://www.as-invest.co.il/interstedin/קרנות-השתלמות/אלטשולר-שחם-השתלמות-אשראי-ואגח-עם-מניות-עד-25-מניות/",
   "product": null,
   "via": "cloud",
-  "parser_version": 5,
+  "parser_version": 6,
   "tracks": 1,
-  "file_year": 2026
+  "file_year": 2026,
+  "pdf_parser_version": 2
  },
  "https://www.as-invest.co.il/media/f0nhogww/0558.xlsx": {
   "legal_id": "513173393",
@@ -931,9 +984,10 @@
   "source_page": "https://www.as-invest.co.il/interstedin/קרנות-השתלמות/אלטשולר-שחם-השתלמות-אשראי-ואגח-עם-מניות-עד-25-מניות/",
   "product": null,
   "via": "cloud",
-  "parser_version": 5,
+  "parser_version": 6,
   "tracks": 1,
-  "file_year": 2025
+  "file_year": 2025,
+  "pdf_parser_version": 2
  },
  "https://www.as-invest.co.il/media/ov1bthtw/1378.xlsx": {
   "legal_id": "513173393",
@@ -949,9 +1003,10 @@
   "source_page": "https://www.as-invest.co.il/interstedin/קרנות-השתלמות/אלטשולר-שחם-השתלמות-אשראי-ואגח/",
   "product": null,
   "via": "cloud",
-  "parser_version": 5,
+  "parser_version": 6,
   "tracks": 1,
-  "file_year": 2026
+  "file_year": 2026,
+  "pdf_parser_version": 2
  },
  "https://www.as-invest.co.il/media/551dtexn/1378.xlsx": {
   "legal_id": "513173393",
@@ -967,9 +1022,10 @@
   "source_page": "https://www.as-invest.co.il/interstedin/קרנות-השתלמות/אלטשולר-שחם-השתלמות-אשראי-ואגח/",
   "product": null,
   "via": "cloud",
-  "parser_version": 5,
+  "parser_version": 6,
   "tracks": 1,
-  "file_year": 2025
+  "file_year": 2025,
+  "pdf_parser_version": 2
  },
  "https://www.as-invest.co.il/media/hqvkygjt/1399.xlsx": {
   "legal_id": "513173393",
@@ -985,9 +1041,10 @@
   "source_page": "https://www.as-invest.co.il/interstedin/%D7%A7%D7%A8%D7%A0%D7%95%D7%AA-%D7%94%D7%A9%D7%AA%D7%9C%D7%9E%D7%95%D7%AA/%D7%90%D7%9C%D7%98%D7%A9%D7%95%D7%9C%D7%A8-%D7%A9%D7%97%D7%9D-%D7%94%D7%A9%D7%AA%D7%9C%D7%9E%D7%95%D7%AA-%D7%90%D7%92%D7%97-%D7%9E%D7%9E%D7%A9%D7%9C%D7%95%D7%AA/",
   "product": null,
   "via": "cloud",
-  "parser_version": 5,
+  "parser_version": 6,
   "tracks": 1,
-  "file_year": 2026
+  "file_year": 2026,
+  "pdf_parser_version": 2
  },
  "https://www.as-invest.co.il/media/4xvbaksi/1399.xlsx": {
   "legal_id": "513173393",
@@ -1003,9 +1060,10 @@
   "source_page": "https://www.as-invest.co.il/interstedin/%D7%A7%D7%A8%D7%A0%D7%95%D7%AA-%D7%94%D7%A9%D7%AA%D7%9C%D7%9E%D7%95%D7%AA/%D7%90%D7%9C%D7%98%D7%A9%D7%95%D7%9C%D7%A8-%D7%A9%D7%97%D7%9D-%D7%94%D7%A9%D7%AA%D7%9C%D7%9E%D7%95%D7%AA-%D7%90%D7%92%D7%97-%D7%9E%D7%9E%D7%A9%D7%9C%D7%95%D7%AA/",
   "product": null,
   "via": "cloud",
-  "parser_version": 5,
+  "parser_version": 6,
   "tracks": 1,
-  "file_year": 2025
+  "file_year": 2025,
+  "pdf_parser_version": 2
  },
  "https://www.as-invest.co.il/media/ffsfhcmi/1398.xlsx": {
   "legal_id": "513173393",
@@ -1021,9 +1079,10 @@
   "source_page": "https://www.as-invest.co.il/interstedin/קרנות-השתלמות/אלטשולר-שחם-השתלמות-כספי-שקלי/",
   "product": null,
   "via": "cloud",
-  "parser_version": 5,
+  "parser_version": 6,
   "tracks": 1,
-  "file_year": 2026
+  "file_year": 2026,
+  "pdf_parser_version": 2
  },
  "https://www.as-invest.co.il/media/fnjbveee/1398.xlsx": {
   "legal_id": "513173393",
@@ -1039,9 +1098,10 @@
   "source_page": "https://www.as-invest.co.il/interstedin/קרנות-השתלמות/אלטשולר-שחם-השתלמות-כספי-שקלי/",
   "product": null,
   "via": "cloud",
-  "parser_version": 5,
+  "parser_version": 6,
   "tracks": 1,
-  "file_year": 2025
+  "file_year": 2025,
+  "pdf_parser_version": 2
  },
  "https://www.as-invest.co.il/media/t10fgm3t/1290.xlsx": {
   "legal_id": "513173393",
@@ -1057,9 +1117,10 @@
   "source_page": "https://www.as-invest.co.il/interstedin/%D7%A7%D7%A8%D7%A0%D7%95%D7%AA-%D7%94%D7%A9%D7%AA%D7%9C%D7%9E%D7%95%D7%AA/%D7%90%D7%9C%D7%98%D7%A9%D7%95%D7%9C%D7%A8-%D7%A9%D7%97%D7%9D-%D7%94%D7%A9%D7%AA%D7%9C%D7%9E%D7%95%D7%AA-%D7%9B%D7%9C%D7%9C%D7%99-%D7%91/",
   "product": null,
   "via": "cloud",
-  "parser_version": 5,
+  "parser_version": 6,
   "tracks": 1,
-  "file_year": 2026
+  "file_year": 2026,
+  "pdf_parser_version": 2
  },
  "https://www.as-invest.co.il/media/3czcwspt/1290.xlsx": {
   "legal_id": "513173393",
@@ -1075,9 +1136,10 @@
   "source_page": "https://www.as-invest.co.il/interstedin/%D7%A7%D7%A8%D7%A0%D7%95%D7%AA-%D7%94%D7%A9%D7%AA%D7%9C%D7%9E%D7%95%D7%AA/%D7%90%D7%9C%D7%98%D7%A9%D7%95%D7%9C%D7%A8-%D7%A9%D7%97%D7%9D-%D7%94%D7%A9%D7%AA%D7%9C%D7%9E%D7%95%D7%AA-%D7%9B%D7%9C%D7%9C%D7%99-%D7%91/",
   "product": null,
   "via": "cloud",
-  "parser_version": 5,
+  "parser_version": 6,
   "tracks": 1,
-  "file_year": 2025
+  "file_year": 2025,
+  "pdf_parser_version": 2
  },
  "https://www.as-invest.co.il/media/e4kjqp51/12256.xlsx": {
   "legal_id": "513173393",
@@ -1093,9 +1155,10 @@
   "source_page": "https://www.as-invest.co.il/interstedin/קרנות-השתלמות/אלטשולר-שחם-השתלמות-הלכה/",
   "product": null,
   "via": "cloud",
-  "parser_version": 5,
+  "parser_version": 6,
   "tracks": 1,
-  "file_year": 2026
+  "file_year": 2026,
+  "pdf_parser_version": 2
  },
  "https://www.as-invest.co.il/media/z3xhnx14/12256.xlsx": {
   "legal_id": "513173393",
@@ -1111,9 +1174,10 @@
   "source_page": "https://www.as-invest.co.il/interstedin/קרנות-השתלמות/אלטשולר-שחם-השתלמות-הלכה/",
   "product": null,
   "via": "cloud",
-  "parser_version": 5,
+  "parser_version": 6,
   "tracks": 1,
-  "file_year": 2025
+  "file_year": 2025,
+  "pdf_parser_version": 2
  },
  "https://www.as-invest.co.il/media/ldpgjgd3/14863.xlsx": {
   "legal_id": "513173393",
@@ -1129,9 +1193,10 @@
   "source_page": "https://www.as-invest.co.il/interstedin/קרנות-השתלמות/אלטשולר-שחם-השתלמות-עוקב-מדדי-מניות/",
   "product": null,
   "via": "cloud",
-  "parser_version": 5,
+  "parser_version": 6,
   "tracks": 1,
-  "file_year": 2026
+  "file_year": 2026,
+  "pdf_parser_version": 2
  },
  "https://www.as-invest.co.il/media/tv2hzuvl/14863.xlsx": {
   "legal_id": "513173393",
@@ -1147,9 +1212,10 @@
   "source_page": "https://www.as-invest.co.il/interstedin/קרנות-השתלמות/אלטשולר-שחם-השתלמות-עוקב-מדדי-מניות/",
   "product": null,
   "via": "cloud",
-  "parser_version": 5,
+  "parser_version": 6,
   "tracks": 1,
-  "file_year": 2025
+  "file_year": 2025,
+  "pdf_parser_version": 2
  },
  "https://www.as-invest.co.il/media/q33phkby/14862.xlsx": {
   "legal_id": "513173393",
@@ -1165,9 +1231,10 @@
   "source_page": "https://www.as-invest.co.il/interstedin/קרנות-השתלמות/אלטשולר-שחם-השתלמות-עוקב-מדד-sp-500/",
   "product": null,
   "via": "cloud",
-  "parser_version": 5,
+  "parser_version": 6,
   "tracks": 1,
-  "file_year": 2026
+  "file_year": 2026,
+  "pdf_parser_version": 2
  },
  "https://www.as-invest.co.il/media/cpjli1fp/14862.xlsx": {
   "legal_id": "513173393",
@@ -1183,9 +1250,10 @@
   "source_page": "https://www.as-invest.co.il/interstedin/קרנות-השתלמות/אלטשולר-שחם-השתלמות-עוקב-מדד-sp-500/",
   "product": null,
   "via": "cloud",
-  "parser_version": 5,
+  "parser_version": 6,
   "tracks": 1,
-  "file_year": 2025
+  "file_year": 2025,
+  "pdf_parser_version": 2
  },
  "https://www.as-invest.co.il/media/2axfhzqs/15028.xlsx": {
   "legal_id": "513173393",
@@ -1201,9 +1269,10 @@
   "source_page": "https://www.as-invest.co.il/interstedin/קרנות-השתלמות/אלטשולר-שחם-השתלמות-עוקב-מדדים-גמיש/",
   "product": null,
   "via": "cloud",
-  "parser_version": 5,
+  "parser_version": 6,
   "tracks": 1,
-  "file_year": 2026
+  "file_year": 2026,
+  "pdf_parser_version": 2
  },
  "https://www.as-invest.co.il/media/j5klifjd/15028.xlsx": {
   "legal_id": "513173393",
@@ -1219,9 +1288,10 @@
   "source_page": "https://www.as-invest.co.il/interstedin/קרנות-השתלמות/אלטשולר-שחם-השתלמות-עוקב-מדדים-גמיש/",
   "product": null,
   "via": "cloud",
-  "parser_version": 5,
+  "parser_version": 6,
   "tracks": 1,
-  "file_year": 2025
+  "file_year": 2025,
+  "pdf_parser_version": 2
  },
  "https://www.as-invest.co.il/media/xthn0xky/15458.xlsx": {
   "legal_id": "513173393",
@@ -1237,9 +1307,10 @@
   "source_page": "https://www.as-invest.co.il/interstedin/קרנות-השתלמות/אלטשולר-שחם-השתלמות-משולב-סחיר/",
   "product": null,
   "via": "cloud",
-  "parser_version": 5,
+  "parser_version": 6,
   "tracks": 1,
-  "file_year": 2026
+  "file_year": 2026,
+  "pdf_parser_version": 2
  },
  "https://www.as-invest.co.il/media/tteiwxu2/15458.xlsx": {
   "legal_id": "513173393",
@@ -1255,9 +1326,10 @@
   "source_page": "https://www.as-invest.co.il/interstedin/קרנות-השתלמות/אלטשולר-שחם-השתלמות-משולב-סחיר/",
   "product": null,
   "via": "cloud",
-  "parser_version": 5,
+  "parser_version": 6,
   "tracks": 1,
-  "file_year": 2025
+  "file_year": 2025,
+  "pdf_parser_version": 2
  },
  "https://www.as-invest.co.il/media/hptnfxfb/1094.xlsx": {
   "legal_id": "513173393",
@@ -1273,9 +1345,10 @@
   "source_page": "https://www.as-invest.co.il/interstedin/gemel/אלטשולר-שחם-פיצויים-כללי/",
   "product": null,
   "via": "cloud",
-  "parser_version": 5,
+  "parser_version": 6,
   "tracks": 1,
-  "file_year": 2026
+  "file_year": 2026,
+  "pdf_parser_version": 2
  },
  "https://www.as-invest.co.il/media/3lrnt2if/1094.xlsx": {
   "legal_id": "513173393",
@@ -1291,9 +1364,10 @@
   "source_page": "https://www.as-invest.co.il/interstedin/gemel/אלטשולר-שחם-פיצויים-כללי/",
   "product": null,
   "via": "cloud",
-  "parser_version": 5,
+  "parser_version": 6,
   "tracks": 1,
-  "file_year": 2025
+  "file_year": 2025,
+  "pdf_parser_version": 2
  },
  "https://www.as-invest.co.il/media/ykdlaqyf/2008.xlsx": {
   "legal_id": "513173393",
@@ -1309,9 +1383,10 @@
   "source_page": "https://www.as-invest.co.il/interstedin/gemel/אלטשולר-שחם-פיצויים-כספי-שקלי/",
   "product": null,
   "via": "cloud",
-  "parser_version": 5,
+  "parser_version": 6,
   "tracks": 1,
-  "file_year": 2026
+  "file_year": 2026,
+  "pdf_parser_version": 2
  },
  "https://www.as-invest.co.il/media/xevp5fzm/2008.xlsx": {
   "legal_id": "513173393",
@@ -1327,9 +1402,10 @@
   "source_page": "https://www.as-invest.co.il/interstedin/gemel/אלטשולר-שחם-פיצויים-כספי-שקלי/",
   "product": null,
   "via": "cloud",
-  "parser_version": 5,
+  "parser_version": 6,
   "tracks": 1,
-  "file_year": 2025
+  "file_year": 2025,
+  "pdf_parser_version": 2
  },
  "https://www.as-invest.co.il/media/s3iiyt1h/1417.xlsx": {
   "legal_id": "513173393",
@@ -1345,9 +1421,10 @@
   "source_page": "https://www.as-invest.co.il/interstedin/gemel/אלטשולר-שחם-פיצויים-אשראי-ואגח/",
   "product": null,
   "via": "cloud",
-  "parser_version": 5,
+  "parser_version": 6,
   "tracks": 1,
-  "file_year": 2026
+  "file_year": 2026,
+  "pdf_parser_version": 2
  },
  "https://www.as-invest.co.il/media/hsmpg3iu/1417.xlsx": {
   "legal_id": "513173393",
@@ -1363,9 +1440,10 @@
   "source_page": "https://www.as-invest.co.il/interstedin/gemel/אלטשולר-שחם-פיצויים-אשראי-ואגח/",
   "product": null,
   "via": "cloud",
-  "parser_version": 5,
+  "parser_version": 6,
   "tracks": 1,
-  "file_year": 2025
+  "file_year": 2025,
+  "pdf_parser_version": 2
  },
  "https://www.as-invest.co.il/media/bzjkccpw/0588.xlsx": {
   "legal_id": "513173393",
@@ -1381,9 +1459,10 @@
   "source_page": "https://www.as-invest.co.il/interstedin/gemel/אלטשולר-שחם-פיצויים-אשראי-ואגח-עד-25-מניות/",
   "product": null,
   "via": "cloud",
-  "parser_version": 5,
+  "parser_version": 6,
   "tracks": 1,
-  "file_year": 2026
+  "file_year": 2026,
+  "pdf_parser_version": 2
  },
  "https://www.as-invest.co.il/media/vd1hytgi/0588.xlsx": {
   "legal_id": "513173393",
@@ -1399,9 +1478,10 @@
   "source_page": "https://www.as-invest.co.il/interstedin/gemel/אלטשולר-שחם-פיצויים-אשראי-ואגח-עד-25-מניות/",
   "product": null,
   "via": "cloud",
-  "parser_version": 5,
+  "parser_version": 6,
   "tracks": 1,
-  "file_year": 2025
+  "file_year": 2025,
+  "pdf_parser_version": 2
  },
  "https://www.as-invest.co.il/media/unnnmjjf/1394.xlsx": {
   "legal_id": "513173393",
@@ -1417,9 +1497,10 @@
   "source_page": "https://www.as-invest.co.il/interstedin/gemel/אלטשולר-שחם-גמל-כספי-שקלי/",
   "product": null,
   "via": "cloud",
-  "parser_version": 5,
+  "parser_version": 6,
   "tracks": 1,
-  "file_year": 2026
+  "file_year": 2026,
+  "pdf_parser_version": 2
  },
  "https://www.as-invest.co.il/media/lbbl1ylt/1394.xlsx": {
   "legal_id": "513173393",
@@ -1435,9 +1516,10 @@
   "source_page": "https://www.as-invest.co.il/interstedin/gemel/אלטשולר-שחם-גמל-כספי-שקלי/",
   "product": null,
   "via": "cloud",
-  "parser_version": 5,
+  "parser_version": 6,
   "tracks": 1,
-  "file_year": 2025
+  "file_year": 2025,
+  "pdf_parser_version": 2
  },
  "https://www.as-invest.co.il/media/4gtbsvrm/1376.xlsx": {
   "legal_id": "513173393",
@@ -1453,9 +1535,10 @@
   "source_page": "https://www.as-invest.co.il/interstedin/gemel/אלטשולר-שחם-גמל-אשראי-ואגח/",
   "product": null,
   "via": "cloud",
-  "parser_version": 5,
+  "parser_version": 6,
   "tracks": 1,
-  "file_year": 2026
+  "file_year": 2026,
+  "pdf_parser_version": 2
  },
  "https://www.as-invest.co.il/media/bqpbllk0/1376.xlsx": {
   "legal_id": "513173393",
@@ -1471,9 +1554,10 @@
   "source_page": "https://www.as-invest.co.il/interstedin/gemel/אלטשולר-שחם-גמל-אשראי-ואגח/",
   "product": null,
   "via": "cloud",
-  "parser_version": 5,
+  "parser_version": 6,
   "tracks": 1,
-  "file_year": 2025
+  "file_year": 2025,
+  "pdf_parser_version": 2
  },
  "https://www.as-invest.co.il/media/4drhv330/1395.xlsx": {
   "legal_id": "513173393",
@@ -1489,9 +1573,10 @@
   "source_page": "https://www.as-invest.co.il/interstedin/gemel/אלטשולר-שחם-גמל-אגח-ממשלות/",
   "product": null,
   "via": "cloud",
-  "parser_version": 5,
+  "parser_version": 6,
   "tracks": 1,
-  "file_year": 2026
+  "file_year": 2026,
+  "pdf_parser_version": 2
  },
  "https://www.as-invest.co.il/media/oftptmch/1395.xlsx": {
   "legal_id": "513173393",
@@ -1507,9 +1592,10 @@
   "source_page": "https://www.as-invest.co.il/interstedin/gemel/אלטשולר-שחם-גמל-אגח-ממשלות/",
   "product": null,
   "via": "cloud",
-  "parser_version": 5,
+  "parser_version": 6,
   "tracks": 1,
-  "file_year": 2025
+  "file_year": 2025,
+  "pdf_parser_version": 2
  },
  "https://www.as-invest.co.il/media/s45nr2mx/1375.xlsx": {
   "legal_id": "513173393",
@@ -1525,9 +1611,10 @@
   "source_page": "https://www.as-invest.co.il/interstedin/gemel/אלטשולר-שחם-גמל-מניות/",
   "product": null,
   "via": "cloud",
-  "parser_version": 5,
+  "parser_version": 6,
   "tracks": 1,
-  "file_year": 2026
+  "file_year": 2026,
+  "pdf_parser_version": 2
  },
  "https://www.as-invest.co.il/media/5aohmno3/1375.xlsx": {
   "legal_id": "513173393",
@@ -1543,9 +1630,10 @@
   "source_page": "https://www.as-invest.co.il/interstedin/gemel/אלטשולר-שחם-גמל-מניות/",
   "product": null,
   "via": "cloud",
-  "parser_version": 5,
+  "parser_version": 6,
   "tracks": 1,
-  "file_year": 2025
+  "file_year": 2025,
+  "pdf_parser_version": 2
  },
  "https://www.as-invest.co.il/media/2vzipxxu/9952.xlsx": {
   "legal_id": "513173393",
@@ -1561,9 +1649,10 @@
   "source_page": "https://www.as-invest.co.il/interstedin/gemel/אלטשולר-שחם-גמל-לבני-60-ומעלה/",
   "product": null,
   "via": "cloud",
-  "parser_version": 5,
+  "parser_version": 6,
   "tracks": 1,
-  "file_year": 2026
+  "file_year": 2026,
+  "pdf_parser_version": 2
  },
  "https://www.as-invest.co.il/media/oe1d3xkj/9952.xlsx": {
   "legal_id": "513173393",
@@ -1579,9 +1668,10 @@
   "source_page": "https://www.as-invest.co.il/interstedin/gemel/אלטשולר-שחם-גמל-לבני-60-ומעלה/",
   "product": null,
   "via": "cloud",
-  "parser_version": 5,
+  "parser_version": 6,
   "tracks": 1,
-  "file_year": 2025
+  "file_year": 2025,
+  "pdf_parser_version": 2
  },
  "https://www.as-invest.co.il/media/y14n1kuh/9950.xlsx": {
   "legal_id": "513173393",
@@ -1597,9 +1687,10 @@
   "source_page": "https://www.as-invest.co.il/interstedin/gemel/אלטשולר-שחם-גמל-לבני-50-ומטה/",
   "product": null,
   "via": "cloud",
-  "parser_version": 5,
+  "parser_version": 6,
   "tracks": 1,
-  "file_year": 2026
+  "file_year": 2026,
+  "pdf_parser_version": 2
  },
  "https://www.as-invest.co.il/media/pjoboyfr/9950.xlsx": {
   "legal_id": "513173393",
@@ -1615,9 +1706,10 @@
   "source_page": "https://www.as-invest.co.il/interstedin/gemel/אלטשולר-שחם-גמל-לבני-50-ומטה/",
   "product": null,
   "via": "cloud",
-  "parser_version": 5,
+  "parser_version": 6,
   "tracks": 1,
-  "file_year": 2025
+  "file_year": 2025,
+  "pdf_parser_version": 2
  },
  "https://www.as-invest.co.il/media/jo0d1ub2/9951.xlsx": {
   "legal_id": "513173393",
@@ -1633,9 +1725,10 @@
   "source_page": "https://www.as-invest.co.il/interstedin/gemel/אלטשולר-שחם-גמל-לבני-50-עד-60/",
   "product": null,
   "via": "cloud",
-  "parser_version": 5,
+  "parser_version": 6,
   "tracks": 1,
-  "file_year": 2026
+  "file_year": 2026,
+  "pdf_parser_version": 2
  },
  "https://www.as-invest.co.il/media/rusfgfoz/9951.xlsx": {
   "legal_id": "513173393",
@@ -1651,9 +1744,10 @@
   "source_page": "https://www.as-invest.co.il/interstedin/gemel/אלטשולר-שחם-גמל-לבני-50-עד-60/",
   "product": null,
   "via": "cloud",
-  "parser_version": 5,
+  "parser_version": 6,
   "tracks": 1,
-  "file_year": 2025
+  "file_year": 2025,
+  "pdf_parser_version": 2
  },
  "https://www.as-invest.co.il/media/2xwdzdnc/989.xlsx": {
   "legal_id": "513173393",
@@ -1669,9 +1763,10 @@
   "source_page": "https://www.as-invest.co.il/interstedin/gemel/אלטשולר-שחם-גמל-עוקב-מדדי-מניות/",
   "product": null,
   "via": "cloud",
-  "parser_version": 5,
+  "parser_version": 6,
   "tracks": 1,
-  "file_year": 2026
+  "file_year": 2026,
+  "pdf_parser_version": 2
  },
  "https://www.as-invest.co.il/media/ei4d3na3/989.xlsx": {
   "legal_id": "513173393",
@@ -1687,9 +1782,10 @@
   "source_page": "https://www.as-invest.co.il/interstedin/gemel/אלטשולר-שחם-גמל-עוקב-מדדי-מניות/",
   "product": null,
   "via": "cloud",
-  "parser_version": 5,
+  "parser_version": 6,
   "tracks": 1,
-  "file_year": 2025
+  "file_year": 2025,
+  "pdf_parser_version": 2
  },
  "https://www.as-invest.co.il/media/bzqhqast/2017.xlsx": {
   "legal_id": "513173393",
@@ -1705,9 +1801,10 @@
   "source_page": "https://www.as-invest.co.il/interstedin/gemel/אלטשולר-שחם-גמל-הלכה/",
   "product": null,
   "via": "cloud",
-  "parser_version": 5,
+  "parser_version": 6,
   "tracks": 1,
-  "file_year": 2026
+  "file_year": 2026,
+  "pdf_parser_version": 2
  },
  "https://www.as-invest.co.il/media/bmwn1x2u/2017.xlsx": {
   "legal_id": "513173393",
@@ -1723,9 +1820,10 @@
   "source_page": "https://www.as-invest.co.il/interstedin/gemel/אלטשולר-שחם-גמל-הלכה/",
   "product": null,
   "via": "cloud",
-  "parser_version": 5,
+  "parser_version": 6,
   "tracks": 1,
-  "file_year": 2025
+  "file_year": 2025,
+  "pdf_parser_version": 2
  },
  "https://www.as-invest.co.il/media/bkqel0xx/9844.xlsx": {
   "legal_id": "513173393",
@@ -1741,9 +1839,10 @@
   "source_page": "https://www.as-invest.co.il/interstedin/gemel/אלטשולר-שחם-גמל-לעמיתי-חבר-לבני-50-ומטה/",
   "product": null,
   "via": "cloud",
-  "parser_version": 5,
+  "parser_version": 6,
   "tracks": 1,
-  "file_year": 2026
+  "file_year": 2026,
+  "pdf_parser_version": 2
  },
  "https://www.as-invest.co.il/media/30nbyuao/9844.xlsx": {
   "legal_id": "513173393",
@@ -1759,9 +1858,10 @@
   "source_page": "https://www.as-invest.co.il/interstedin/gemel/אלטשולר-שחם-גמל-לעמיתי-חבר-לבני-50-ומטה/",
   "product": null,
   "via": "cloud",
-  "parser_version": 5,
+  "parser_version": 6,
   "tracks": 1,
-  "file_year": 2025
+  "file_year": 2025,
+  "pdf_parser_version": 2
  },
  "https://www.as-invest.co.il/media/lc5dja2p/9845.xlsx": {
   "legal_id": "513173393",
@@ -1777,9 +1877,10 @@
   "source_page": "https://www.as-invest.co.il/interstedin/gemel/אלטשולר-שחם-גמל-לעמיתי-חבר-לבני-50-עד-60/",
   "product": null,
   "via": "cloud",
-  "parser_version": 5,
+  "parser_version": 6,
   "tracks": 1,
-  "file_year": 2026
+  "file_year": 2026,
+  "pdf_parser_version": 2
  },
  "https://www.as-invest.co.il/media/ttlnp0gu/9845.xlsx": {
   "legal_id": "513173393",
@@ -1795,9 +1896,10 @@
   "source_page": "https://www.as-invest.co.il/interstedin/gemel/אלטשולר-שחם-גמל-לעמיתי-חבר-לבני-50-עד-60/",
   "product": null,
   "via": "cloud",
-  "parser_version": 5,
+  "parser_version": 6,
   "tracks": 1,
-  "file_year": 2025
+  "file_year": 2025,
+  "pdf_parser_version": 2
  },
  "https://www.as-invest.co.il/media/2qqdjmec/9846.xlsx": {
   "legal_id": "513173393",
@@ -1813,9 +1915,10 @@
   "source_page": "https://www.as-invest.co.il/interstedin/gemel/אלטשולר-שחם-גמל-לעמיתי-חבר-לבני-60-ומעלה/",
   "product": null,
   "via": "cloud",
-  "parser_version": 5,
+  "parser_version": 6,
   "tracks": 1,
-  "file_year": 2026
+  "file_year": 2026,
+  "pdf_parser_version": 2
  },
  "https://www.as-invest.co.il/media/rdliprp3/9846.xlsx": {
   "legal_id": "513173393",
@@ -1831,9 +1934,10 @@
   "source_page": "https://www.as-invest.co.il/interstedin/gemel/אלטשולר-שחם-גמל-לעמיתי-חבר-לבני-60-ומעלה/",
   "product": null,
   "via": "cloud",
-  "parser_version": 5,
+  "parser_version": 6,
   "tracks": 1,
-  "file_year": 2025
+  "file_year": 2025,
+  "pdf_parser_version": 2
  },
  "https://www.as-invest.co.il/media/a1ppaop2/872.xlsx": {
   "legal_id": "513173393",
@@ -1849,9 +1953,10 @@
   "source_page": "https://www.as-invest.co.il/interstedin/gemel/אלטשולר-שחם-מרפא-קופה-מרכזית-לדמי-מחלה/",
   "product": null,
   "via": "cloud",
-  "parser_version": 5,
+  "parser_version": 6,
   "tracks": 1,
-  "file_year": 2026
+  "file_year": 2026,
+  "pdf_parser_version": 2
  },
  "https://www.as-invest.co.il/media/rishzwit/872.xlsx": {
   "legal_id": "513173393",
@@ -1867,9 +1972,10 @@
   "source_page": "https://www.as-invest.co.il/interstedin/gemel/אלטשולר-שחם-מרפא-קופה-מרכזית-לדמי-מחלה/",
   "product": null,
   "via": "cloud",
-  "parser_version": 5,
+  "parser_version": 6,
   "tracks": 1,
-  "file_year": 2025
+  "file_year": 2025,
+  "pdf_parser_version": 2
  },
  "https://www.as-invest.co.il/media/d4vm0pxx/1309.xlsx": {
   "legal_id": "513173393",
@@ -1885,9 +1991,10 @@
   "source_page": "https://www.as-invest.co.il/interstedin/gemel/אלטשולר-שחם-להשתתפות-בפנסיה-תקציבית-אגח/",
   "product": null,
   "via": "cloud",
-  "parser_version": 5,
+  "parser_version": 6,
   "tracks": 1,
-  "file_year": 2026
+  "file_year": 2026,
+  "pdf_parser_version": 2
  },
  "https://www.as-invest.co.il/media/2lqjw3fp/1309.xlsx": {
   "legal_id": "513173393",
@@ -1903,9 +2010,10 @@
   "source_page": "https://www.as-invest.co.il/interstedin/gemel/אלטשולר-שחם-להשתתפות-בפנסיה-תקציבית-אגח/",
   "product": null,
   "via": "cloud",
-  "parser_version": 5,
+  "parser_version": 6,
   "tracks": 1,
-  "file_year": 2025
+  "file_year": 2025,
+  "pdf_parser_version": 2
  },
  "https://www.as-invest.co.il/media/g1ebj42q/1912.xlsx": {
   "legal_id": "513173393",
@@ -1921,9 +2029,10 @@
   "source_page": "https://www.as-invest.co.il/interstedin/gemel/אלטשולר-שחם-להשתתפות-בפנסיה-תקציבית-כללי/",
   "product": null,
   "via": "cloud",
-  "parser_version": 5,
+  "parser_version": 6,
   "tracks": 1,
-  "file_year": 2026
+  "file_year": 2026,
+  "pdf_parser_version": 2
  },
  "https://www.as-invest.co.il/media/rkqfqvq2/1912.xlsx": {
   "legal_id": "513173393",
@@ -1939,9 +2048,10 @@
   "source_page": "https://www.as-invest.co.il/interstedin/gemel/אלטשולר-שחם-להשתתפות-בפנסיה-תקציבית-כללי/",
   "product": null,
   "via": "cloud",
-  "parser_version": 5,
+  "parser_version": 6,
   "tracks": 1,
-  "file_year": 2025
+  "file_year": 2025,
+  "pdf_parser_version": 2
  },
  "https://www.as-invest.co.il/media/3sodi2up/14353.xlsx": {
   "legal_id": "513173393",
@@ -1957,9 +2067,10 @@
   "source_page": "https://www.as-invest.co.il/interstedin/gemel/אלטשולר-שחם-גמל-משולב-סחיר/",
   "product": null,
   "via": "cloud",
-  "parser_version": 5,
+  "parser_version": 6,
   "tracks": 1,
-  "file_year": 2026
+  "file_year": 2026,
+  "pdf_parser_version": 2
  },
  "https://www.as-invest.co.il/media/0uippmf4/14353.xlsx": {
   "legal_id": "513173393",
@@ -1975,9 +2086,10 @@
   "source_page": "https://www.as-invest.co.il/interstedin/gemel/אלטשולר-שחם-גמל-משולב-סחיר/",
   "product": null,
   "via": "cloud",
-  "parser_version": 5,
+  "parser_version": 6,
   "tracks": 1,
-  "file_year": 2025
+  "file_year": 2025,
+  "pdf_parser_version": 2
  },
  "https://www.as-invest.co.il/media/wbrpylhe/14354.xlsx": {
   "legal_id": "513173393",
@@ -1993,9 +2105,10 @@
   "source_page": "https://www.as-invest.co.il/interstedin/gemel/אלטשולר-שחם-גמל-עוקב-מדדים-גמיש/",
   "product": null,
   "via": "cloud",
-  "parser_version": 5,
+  "parser_version": 6,
   "tracks": 1,
-  "file_year": 2026
+  "file_year": 2026,
+  "pdf_parser_version": 2
  },
  "https://www.as-invest.co.il/media/ecnizmiq/14354.xlsx": {
   "legal_id": "513173393",
@@ -2011,9 +2124,10 @@
   "source_page": "https://www.as-invest.co.il/interstedin/gemel/אלטשולר-שחם-גמל-עוקב-מדדים-גמיש/",
   "product": null,
   "via": "cloud",
-  "parser_version": 5,
+  "parser_version": 6,
   "tracks": 1,
-  "file_year": 2025
+  "file_year": 2025,
+  "pdf_parser_version": 2
  },
  "https://www.as-invest.co.il/media/iotftwfn/14234.xlsx": {
   "legal_id": "513173393",
@@ -2029,9 +2143,10 @@
   "source_page": "https://www.as-invest.co.il/interstedin/gemel/אלטשולר-שחם-גמל-לעמיתי-חבר-משולב-סחיר/",
   "product": null,
   "via": "cloud",
-  "parser_version": 5,
+  "parser_version": 6,
   "tracks": 1,
-  "file_year": 2026
+  "file_year": 2026,
+  "pdf_parser_version": 2
  },
  "https://www.as-invest.co.il/media/zsnj44zy/14234.xlsx": {
   "legal_id": "513173393",
@@ -2047,9 +2162,10 @@
   "source_page": "https://www.as-invest.co.il/interstedin/gemel/אלטשולר-שחם-גמל-לעמיתי-חבר-משולב-סחיר/",
   "product": null,
   "via": "cloud",
-  "parser_version": 5,
+  "parser_version": 6,
   "tracks": 1,
-  "file_year": 2025
+  "file_year": 2025,
+  "pdf_parser_version": 2
  },
  "https://www.as-invest.co.il/media/sv4fk3cv/14235.xlsx": {
   "legal_id": "513173393",
@@ -2065,9 +2181,10 @@
   "source_page": "https://www.as-invest.co.il/interstedin/gemel/אלטשולר-שחם-גמל-לעמיתי-חבר-עוקב-מדדים-גמיש/",
   "product": null,
   "via": "cloud",
-  "parser_version": 5,
+  "parser_version": 6,
   "tracks": 1,
-  "file_year": 2026
+  "file_year": 2026,
+  "pdf_parser_version": 2
  },
  "https://www.as-invest.co.il/media/btlbsoy2/14235.xlsx": {
   "legal_id": "513173393",
@@ -2083,9 +2200,10 @@
   "source_page": "https://www.as-invest.co.il/interstedin/gemel/אלטשולר-שחם-גמל-לעמיתי-חבר-עוקב-מדדים-גמיש/",
   "product": null,
   "via": "cloud",
-  "parser_version": 5,
+  "parser_version": 6,
   "tracks": 1,
-  "file_year": 2025
+  "file_year": 2025,
+  "pdf_parser_version": 2
  },
  "https://www.as-invest.co.il/media/3wefdp35/14858.xlsx": {
   "legal_id": "513173393",
@@ -2101,9 +2219,10 @@
   "source_page": "https://www.as-invest.co.il/interstedin/gemel/אלטשולר-שחם-גמל-עוקב-מדד-sp-500/",
   "product": null,
   "via": "cloud",
-  "parser_version": 5,
+  "parser_version": 6,
   "tracks": 1,
-  "file_year": 2026
+  "file_year": 2026,
+  "pdf_parser_version": 2
  },
  "https://www.as-invest.co.il/media/2o2ih3b3/14858.xlsx": {
   "legal_id": "513173393",
@@ -2119,9 +2238,10 @@
   "source_page": "https://www.as-invest.co.il/interstedin/gemel/אלטשולר-שחם-גמל-עוקב-מדד-sp-500/",
   "product": null,
   "via": "cloud",
-  "parser_version": 5,
+  "parser_version": 6,
   "tracks": 1,
-  "file_year": 2025
+  "file_year": 2025,
+  "pdf_parser_version": 2
  },
  "https://www.as-invest.co.il/media/vusmbu5p/15540.xlsx": {
   "legal_id": "513173393",
@@ -2137,9 +2257,10 @@
   "source_page": "https://www.as-invest.co.il/interstedin/gemel/אלטשולר-שחם-גמל-מניות-סחיר/",
   "product": null,
   "via": "cloud",
-  "parser_version": 5,
+  "parser_version": 6,
   "tracks": 1,
-  "file_year": 2026
+  "file_year": 2026,
+  "pdf_parser_version": 2
  },
  "https://www.as-invest.co.il/media/i2wlhmhq/15540.xlsx": {
   "legal_id": "513173393",
@@ -2155,8 +2276,9 @@
   "source_page": "https://www.as-invest.co.il/interstedin/gemel/אלטשולר-שחם-גמל-מניות-סחיר/",
   "product": null,
   "via": "cloud",
-  "parser_version": 5,
+  "parser_version": 6,
   "tracks": 1,
-  "file_year": 2025
+  "file_year": 2025,
+  "pdf_parser_version": 2
  }
 }

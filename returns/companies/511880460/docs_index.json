@@ -14,7 +14,7 @@
   "product": "גמל",
   "via": "cloud",
   "not_returns": true,
-  "parser_version": 5,
+  "parser_version": 6,
   "parse_error": "file missing"
  },
  "https://www.analyst.co.il/wp-content/uploads/2025/08/תנאי-שימוש.pdf": {
@@ -32,7 +32,7 @@
   "product": "גמל",
   "via": "cloud",
   "not_returns": true,
-  "parser_version": 5,
+  "parser_version": 6,
   "parse_error": "file missing"
  },
  "https://www.analyst.co.il/media/u0fl5prs/מדיניות-פרטיות-1422.pdf?v=082025": {
@@ -50,7 +50,7 @@
   "product": "גמל",
   "via": "cloud",
   "not_returns": true,
-  "parser_version": 5,
+  "parser_version": 6,
   "parse_error": "file missing"
  },
  "https://www.analyst.co.il/media/aytdfpks/אמרת-שירות-לקוחות-מרץ-2022.pdf": {
@@ -68,7 +68,7 @@
   "product": "גמל",
   "via": "cloud",
   "not_returns": true,
-  "parser_version": 5,
+  "parser_version": 6,
   "parse_error": "file missing"
  },
  "https://www.analyst.co.il/media/u0fl5prs/מדיניות-פרטיות-1422.pdf": {
@@ -86,7 +86,7 @@
   "product": "גמל",
   "via": "cloud",
   "parse_error": "file missing",
-  "parser_version": 5
+  "parser_version": 6
  },
  "https://www.analyst.co.il/wp-content/uploads/2026/07/511880460_g814_Yield226.xlsx": {
   "legal_id": "511880460",
@@ -102,9 +102,10 @@
   "source_page": "https://www.analyst.co.il/funds-lobby/provident-funds/fund-814/report/",
   "product": "גמל",
   "via": "cloud",
-  "parser_version": 5,
+  "parser_version": 6,
   "tracks": 1,
-  "file_year": 2026
+  "file_year": 2026,
+  "pdf_parser_version": 2
  },
  "https://www.analyst.co.il/wp-content/uploads/2026/01/511880460_g814_Yield425.xlsx": {
   "legal_id": "511880460",
@@ -120,9 +121,10 @@
   "source_page": "https://www.analyst.co.il/funds-lobby/provident-funds/fund-814/report/",
   "product": "גמל",
   "via": "cloud",
-  "parser_version": 5,
+  "parser_version": 6,
   "tracks": 1,
-  "file_year": 2025
+  "file_year": 2025,
+  "pdf_parser_version": 2
  },
  "https://www.analyst.co.il/wp-content/uploads/2025/01/511880460_g814_Yield424.xlsx": {
   "legal_id": "511880460",
@@ -138,9 +140,10 @@
   "source_page": "https://www.analyst.co.il/funds-lobby/provident-funds/fund-814/report/",
   "product": "גמל",
   "via": "cloud",
-  "parser_version": 5,
+  "parser_version": 6,
   "tracks": 1,
-  "file_year": 2024
+  "file_year": 2024,
+  "pdf_parser_version": 2
  },
  "https://www.analyst.co.il/media/p2zlhhgh/511880460_g814_yield423.xlsx": {
   "legal_id": "511880460",
@@ -156,9 +159,10 @@
   "source_page": "https://www.analyst.co.il/funds-lobby/provident-funds/fund-814/report/",
   "product": "גמל",
   "via": "cloud",
-  "parser_version": 5,
+  "parser_version": 6,
   "tracks": 1,
-  "file_year": 2023
+  "file_year": 2023,
+  "pdf_parser_version": 2
  },
  "https://www.analyst.co.il/media/2c0kg0jt/511880460_g814_yield422.xlsx": {
   "legal_id": "511880460",
@@ -174,9 +178,10 @@
   "source_page": "https://www.analyst.co.il/funds-lobby/provident-funds/fund-814/report/",
   "product": "גמל",
   "via": "cloud",
-  "parser_version": 5,
+  "parser_version": 6,
   "tracks": 1,
-  "file_year": 2022
+  "file_year": 2022,
+  "pdf_parser_version": 2
  },
  "https://www.analyst.co.il/media/le2pf35m/מרכיבי-תשואה-ינואר-עד-דצמבר-2021.xlsx": {
   "legal_id": "511880460",
@@ -192,9 +197,10 @@
   "source_page": "https://www.analyst.co.il/funds-lobby/provident-funds/fund-814/report/",
   "product": "גמל",
   "via": "cloud",
-  "parser_version": 5,
+  "parser_version": 6,
   "tracks": 1,
-  "file_year": 2021
+  "file_year": 2021,
+  "pdf_parser_version": 2
  },
  "https://www.analyst.co.il/media/mhfjauay/מרכיבי-תשואה-ינואר-עד-דצמבר-2020.xls": {
   "legal_id": "511880460",
@@ -210,9 +216,10 @@
   "source_page": "https://www.analyst.co.il/funds-lobby/provident-funds/fund-814/report/",
   "product": "גמל",
   "via": "cloud",
-  "parser_version": 5,
+  "parser_version": 6,
   "tracks": 1,
-  "file_year": 2020
+  "file_year": 2020,
+  "pdf_parser_version": 2
  },
  "https://www.analyst.co.il/media/yfrcrgbs/מרכיבי-תשואה-ינואר-עד-דצמבר-2019.xls": {
   "legal_id": "511880460",
@@ -228,9 +235,10 @@
   "source_page": "https://www.analyst.co.il/funds-lobby/provident-funds/fund-814/report/",
   "product": "גמל",
   "via": "cloud",
-  "parser_version": 5,
+  "parser_version": 6,
   "tracks": 1,
-  "file_year": 2019
+  "file_year": 2019,
+  "pdf_parser_version": 2
  },
  "https://www.analyst.co.il/wp-content/uploads/2026/07/511880460_g817_Yield226.xlsx": {
   "legal_id": "511880460",
@@ -246,9 +254,10 @@
   "source_page": "https://www.analyst.co.il/funds-lobby/provident-funds/fund-817/report/",
   "product": "גמל",
   "via": "cloud",
-  "parser_version": 5,
+  "parser_version": 6,
   "tracks": 1,
-  "file_year": 2026
+  "file_year": 2026,
+  "pdf_parser_version": 2
  },
  "https://www.analyst.co.il/wp-content/uploads/2026/01/511880460_g817_Yield425.xlsx": {
   "legal_id": "511880460",
@@ -264,9 +273,10 @@
   "source_page": "https://www.analyst.co.il/funds-lobby/provident-funds/fund-817/report/",
   "product": "גמל",
   "via": "cloud",
-  "parser_version": 5,
+  "parser_version": 6,
   "tracks": 1,
-  "file_year": 2025
+  "file_year": 2025,
+  "pdf_parser_version": 2
  },
  "https://www.analyst.co.il/wp-content/uploads/2025/01/511880460_g817_Yield424.xlsx": {
   "legal_id": "511880460",
@@ -282,9 +292,10 @@
   "source_page": "https://www.analyst.co.il/funds-lobby/provident-funds/fund-817/report/",
   "product": "גמל",
   "via": "cloud",
-  "parser_version": 5,
+  "parser_version": 6,
   "tracks": 1,
-  "file_year": 2024
+  "file_year": 2024,
+  "pdf_parser_version": 2
  },
  "https://www.analyst.co.il/media/g20e1r1t/511880460_g817_yield423.xlsx": {
   "legal_id": "511880460",
@@ -300,9 +311,10 @@
   "source_page": "https://www.analyst.co.il/funds-lobby/provident-funds/fund-817/report/",
   "product": "גמל",
   "via": "cloud",
-  "parser_version": 5,
+  "parser_version": 6,
   "tracks": 1,
-  "file_year": 2023
+  "file_year": 2023,
+  "pdf_parser_version": 2
  },
  "https://www.analyst.co.il/media/c4lcyy3a/511880460_g817_yield422.xlsx": {
   "legal_id": "511880460",
@@ -318,9 +330,10 @@
   "source_page": "https://www.analyst.co.il/funds-lobby/provident-funds/fund-817/report/",
   "product": "גמל",
   "via": "cloud",
-  "parser_version": 5,
+  "parser_version": 6,
   "tracks": 1,
-  "file_year": 2022
+  "file_year": 2022,
+  "pdf_parser_version": 2
  },
  "https://www.analyst.co.il/media/f4vpdcb4/מרכיבי-תשואה-ינואר-עד-דצמבר-2021.xlsx": {
   "legal_id": "511880460",
@@ -336,9 +349,10 @@
   "source_page": "https://www.analyst.co.il/funds-lobby/provident-funds/fund-817/report/",
   "product": "גמל",
   "via": "cloud",
-  "parser_version": 5,
+  "parser_version": 6,
   "tracks": 1,
-  "file_year": 2021
+  "file_year": 2021,
+  "pdf_parser_version": 2
  },
  "https://www.analyst.co.il/media/wd2fvxjs/מרכיבי-תשואה-ינואר-עד-דצמבר-2020.xls": {
   "legal_id": "511880460",
@@ -354,9 +368,10 @@
   "source_page": "https://www.analyst.co.il/funds-lobby/provident-funds/fund-817/report/",
   "product": "גמל",
   "via": "cloud",
-  "parser_version": 5,
+  "parser_version": 6,
   "tracks": 1,
-  "file_year": 2020
+  "file_year": 2020,
+  "pdf_parser_version": 2
  },
  "https://www.analyst.co.il/media/rgeb0rg0/מרכיבי-תשואה-ינואר-עד-דצמבר-2019.xls": {
   "legal_id": "511880460",
@@ -372,9 +387,10 @@
   "source_page": "https://www.analyst.co.il/funds-lobby/provident-funds/fund-817/report/",
   "product": "גמל",
   "via": "cloud",
-  "parser_version": 5,
+  "parser_version": 6,
   "tracks": 1,
-  "file_year": 2019
+  "file_year": 2019,
+  "pdf_parser_version": 2
  },
  "https://www.analyst.co.il/wp-content/uploads/2026/07/511880460_g813_Yield226.xlsx": {
   "legal_id": "511880460",
@@ -390,9 +406,10 @@
   "source_page": "https://www.analyst.co.il/funds-lobby/provident-funds/fund-813/report/",
   "product": "גמל",
   "via": "cloud",
-  "parser_version": 5,
+  "parser_version": 6,
   "tracks": 1,
-  "file_year": 2026
+  "file_year": 2026,
+  "pdf_parser_version": 2
  },
  "https://www.analyst.co.il/wp-content/uploads/2026/01/511880460_g813_Yield425.xlsx": {
   "legal_id": "511880460",
@@ -408,9 +425,10 @@
   "source_page": "https://www.analyst.co.il/funds-lobby/provident-funds/fund-813/report/",
   "product": "גמל",
   "via": "cloud",
-  "parser_version": 5,
+  "parser_version": 6,
   "tracks": 1,
-  "file_year": 2025
+  "file_year": 2025,
+  "pdf_parser_version": 2
  },
  "https://www.analyst.co.il/wp-content/uploads/2025/01/511880460_g813_Yield424.xlsx": {
   "legal_id": "511880460",
@@ -426,9 +444,10 @@
   "source_page": "https://www.analyst.co.il/funds-lobby/provident-funds/fund-813/report/",
   "product": "גמל",
   "via": "cloud",
-  "parser_version": 5,
+  "parser_version": 6,
   "tracks": 1,
-  "file_year": 2024
+  "file_year": 2024,
+  "pdf_parser_version": 2
  },
  "https://www.analyst.co.il/media/2hkdz5yh/511880460_g813_yield423.xlsx": {
   "legal_id": "511880460",
@@ -444,9 +463,10 @@
   "source_page": "https://www.analyst.co.il/funds-lobby/provident-funds/fund-813/report/",
   "product": "גמל",
   "via": "cloud",
-  "parser_version": 5,
+  "parser_version": 6,
   "tracks": 1,
-  "file_year": 2023
+  "file_year": 2023,
+  "pdf_parser_version": 2
  },
  "https://www.analyst.co.il/media/efsjowso/511880460_g813_yield422.xlsx": {
   "legal_id": "511880460",
@@ -462,9 +482,10 @@
   "source_page": "https://www.analyst.co.il/funds-lobby/provident-funds/fund-813/report/",
   "product": "גמל",
   "via": "cloud",
-  "parser_version": 5,
+  "parser_version": 6,
   "tracks": 1,
-  "file_year": 2022
+  "file_year": 2022,
+  "pdf_parser_version": 2
  },
  "https://www.analyst.co.il/media/myzk1ddk/מרכיבי-תשואה-ינואר-עד-דצמבר-2021.xlsx": {
   "legal_id": "511880460",
@@ -480,9 +501,10 @@
   "source_page": "https://www.analyst.co.il/funds-lobby/provident-funds/fund-813/report/",
   "product": "גמל",
   "via": "cloud",
-  "parser_version": 5,
+  "parser_version": 6,
   "tracks": 1,
-  "file_year": 2021
+  "file_year": 2021,
+  "pdf_parser_version": 2
  },
  "https://www.analyst.co.il/media/rb2hpu5f/מרכיבי-תשואה-ינואר-עד-דצמבר-2020.xls": {
   "legal_id": "511880460",
@@ -498,9 +520,10 @@
   "source_page": "https://www.analyst.co.il/funds-lobby/provident-funds/fund-813/report/",
   "product": "גמל",
   "via": "cloud",
-  "parser_version": 5,
+  "parser_version": 6,
   "tracks": 1,
-  "file_year": 2020
+  "file_year": 2020,
+  "pdf_parser_version": 2
  },
  "https://www.analyst.co.il/media/0i4jc0z4/מרכיבי-תשואה-ינואר-עד-דצמבר-2019.xls": {
   "legal_id": "511880460",
@@ -516,9 +539,10 @@
   "source_page": "https://www.analyst.co.il/funds-lobby/provident-funds/fund-813/report/",
   "product": "גמל",
   "via": "cloud",
-  "parser_version": 5,
+  "parser_version": 6,
   "tracks": 1,
-  "file_year": 2019
+  "file_year": 2019,
+  "pdf_parser_version": 2
  },
  "https://www.analyst.co.il/wp-content/uploads/2026/07/511880460_g815_Yield226.xlsx": {
   "legal_id": "511880460",
@@ -534,9 +558,10 @@
   "source_page": "https://www.analyst.co.il/funds-lobby/provident-funds/fund-815/report/",
   "product": "גמל",
   "via": "cloud",
-  "parser_version": 5,
+  "parser_version": 6,
   "tracks": 1,
-  "file_year": 2026
+  "file_year": 2026,
+  "pdf_parser_version": 2
  },
  "https://www.analyst.co.il/wp-content/uploads/2026/01/511880460_g815_Yield425.xlsx": {
   "legal_id": "511880460",
@@ -552,9 +577,10 @@
   "source_page": "https://www.analyst.co.il/funds-lobby/provident-funds/fund-815/report/",
   "product": "גמל",
   "via": "cloud",
-  "parser_version": 5,
+  "parser_version": 6,
   "tracks": 1,
-  "file_year": 2025
+  "file_year": 2025,
+  "pdf_parser_version": 2
  },
  "https://www.analyst.co.il/wp-content/uploads/2025/01/511880460_g815_Yield424.xlsx": {
   "legal_id": "511880460",
@@ -570,9 +596,10 @@
   "source_page": "https://www.analyst.co.il/funds-lobby/provident-funds/fund-815/report/",
   "product": "גמל",
   "via": "cloud",
-  "parser_version": 5,
+  "parser_version": 6,
   "tracks": 1,
-  "file_year": 2024
+  "file_year": 2024,
+  "pdf_parser_version": 2
  },
  "https://www.analyst.co.il/media/tdkfitq2/511880460_g815_yield423.xlsx": {
   "legal_id": "511880460",
@@ -588,9 +615,10 @@
   "source_page": "https://www.analyst.co.il/funds-lobby/provident-funds/fund-815/report/",
   "product": "גמל",
   "via": "cloud",
-  "parser_version": 5,
+  "parser_version": 6,
   "tracks": 1,
-  "file_year": 2023
+  "file_year": 2023,
+  "pdf_parser_version": 2
  },
  "https://www.analyst.co.il/media/q1jarobe/511880460_g815_yield422.xlsx": {
   "legal_id": "511880460",
@@ -606,9 +634,10 @@
   "source_page": "https://www.analyst.co.il/funds-lobby/provident-funds/fund-815/report/",
   "product": "גמל",
   "via": "cloud",
-  "parser_version": 5,
+  "parser_version": 6,
   "tracks": 1,
-  "file_year": 2022
+  "file_year": 2022,
+  "pdf_parser_version": 2
  },
  "https://www.analyst.co.il/media/2qspbgpj/מרכיבי-תשואה-ינואר-עד-דצמבר-2021.xlsx": {
   "legal_id": "511880460",
@@ -624,9 +653,10 @@
   "source_page": "https://www.analyst.co.il/funds-lobby/provident-funds/fund-815/report/",
   "product": "גמל",
   "via": "cloud",
-  "parser_version": 5,
+  "parser_version": 6,
   "tracks": 1,
-  "file_year": 2021
+  "file_year": 2021,
+  "pdf_parser_version": 2
  },
  "https://www.analyst.co.il/media/bqfnofv1/מרכיבי-תשואה-ינואר-עד-דצמבר-2020.xls": {
   "legal_id": "511880460",
@@ -642,9 +672,10 @@
   "source_page": "https://www.analyst.co.il/funds-lobby/provident-funds/fund-815/report/",
   "product": "גמל",
   "via": "cloud",
-  "parser_version": 5,
+  "parser_version": 6,
   "tracks": 1,
-  "file_year": 2020
+  "file_year": 2020,
+  "pdf_parser_version": 2
  },
  "https://www.analyst.co.il/media/zf3nfzq1/מרכיבי-תשואה-ינואר-עד-דצמבר-2019.xls": {
   "legal_id": "511880460",
@@ -660,9 +691,10 @@
   "source_page": "https://www.analyst.co.il/funds-lobby/provident-funds/fund-815/report/",
   "product": "גמל",
   "via": "cloud",
-  "parser_version": 5,
+  "parser_version": 6,
   "tracks": 1,
-  "file_year": 2019
+  "file_year": 2019,
+  "pdf_parser_version": 2
  },
  "https://www.analyst.co.il/wp-content/uploads/2026/07/511880460_g818_Yield226.xlsx": {
   "legal_id": "511880460",
@@ -678,9 +710,10 @@
   "source_page": "https://www.analyst.co.il/funds-lobby/provident-funds/fund-818/report/",
   "product": "גמל",
   "via": "cloud",
-  "parser_version": 5,
+  "parser_version": 6,
   "tracks": 1,
-  "file_year": 2026
+  "file_year": 2026,
+  "pdf_parser_version": 2
  },
  "https://www.analyst.co.il/wp-content/uploads/2026/01/511880460_g818_Yield425.xlsx": {
   "legal_id": "511880460",
@@ -696,9 +729,10 @@
   "source_page": "https://www.analyst.co.il/funds-lobby/provident-funds/fund-818/report/",
   "product": "גמל",
   "via": "cloud",
-  "parser_version": 5,
+  "parser_version": 6,
   "tracks": 1,
-  "file_year": 2025
+  "file_year": 2025,
+  "pdf_parser_version": 2
  },
  "https://www.analyst.co.il/wp-content/uploads/2025/01/511880460_g818_Yield424.xlsx": {
   "legal_id": "511880460",
@@ -714,9 +748,10 @@
   "source_page": "https://www.analyst.co.il/funds-lobby/provident-funds/fund-818/report/",
   "product": "גמל",
   "via": "cloud",
-  "parser_version": 5,
+  "parser_version": 6,
   "tracks": 1,
-  "file_year": 2024
+  "file_year": 2024,
+  "pdf_parser_version": 2
  },
  "https://www.analyst.co.il/media/3vdhqq2i/511880460_g818_yield423.xlsx": {
   "legal_id": "511880460",
@@ -732,9 +767,10 @@
   "source_page": "https://www.analyst.co.il/funds-lobby/provident-funds/fund-818/report/",
   "product": "גמל",
   "via": "cloud",
-  "parser_version": 5,
+  "parser_version": 6,
   "tracks": 1,
-  "file_year": 2023
+  "file_year": 2023,
+  "pdf_parser_version": 2
  },
  "https://www.analyst.co.il/media/eqec3iru/511880460_g818_yield422.xlsx": {
   "legal_id": "511880460",
@@ -750,9 +786,10 @@
   "source_page": "https://www.analyst.co.il/funds-lobby/provident-funds/fund-818/report/",
   "product": "גמל",
   "via": "cloud",
-  "parser_version": 5,
+  "parser_version": 6,
   "tracks": 1,
-  "file_year": 2022
+  "file_year": 2022,
+  "pdf_parser_version": 2
  },
  "https://www.analyst.co.il/media/tbjh5cjj/מרכיבי-תשואה-ינואר-עד-דצמבר-2021.xlsx": {
   "legal_id": "511880460",
@@ -768,9 +805,10 @@
   "source_page": "https://www.analyst.co.il/funds-lobby/provident-funds/fund-818/report/",
   "product": "גמל",
   "via": "cloud",
-  "parser_version": 5,
+  "parser_version": 6,
   "tracks": 1,
-  "file_year": 2021
+  "file_year": 2021,
+  "pdf_parser_version": 2
  },
  "https://www.analyst.co.il/media/4ytn0jw2/מרכיבי-תשואה-ינואר-עד-דצמבר-2020.xls": {
   "legal_id": "511880460",
@@ -786,9 +824,10 @@
   "source_page": "https://www.analyst.co.il/funds-lobby/provident-funds/fund-818/report/",
   "product": "גמל",
   "via": "cloud",
-  "parser_version": 5,
+  "parser_version": 6,
   "tracks": 1,
-  "file_year": 2020
+  "file_year": 2020,
+  "pdf_parser_version": 2
  },
  "https://www.analyst.co.il/media/xbujio4q/מרכיבי-תשואה-ינואר-עד-דצמבר-2019.xls": {
   "legal_id": "511880460",
@@ -804,9 +843,10 @@
   "source_page": "https://www.analyst.co.il/funds-lobby/provident-funds/fund-818/report/",
   "product": "גמל",
   "via": "cloud",
-  "parser_version": 5,
+  "parser_version": 6,
   "tracks": 1,
-  "file_year": 2019
+  "file_year": 2019,
+  "pdf_parser_version": 2
  },
  "https://www.analyst.co.il/wp-content/uploads/2026/07/511880460_g1412_Yield226.xlsx": {
   "legal_id": "511880460",
@@ -822,9 +862,10 @@
   "source_page": "https://www.analyst.co.il/funds-lobby/provident-funds/fund-1412/report/",
   "product": "גמל",
   "via": "cloud",
-  "parser_version": 5,
+  "parser_version": 6,
   "tracks": 1,
-  "file_year": 2026
+  "file_year": 2026,
+  "pdf_parser_version": 2
  },
  "https://www.analyst.co.il/wp-content/uploads/2026/01/511880460_g1412_Yield425.xlsx": {
   "legal_id": "511880460",
@@ -840,9 +881,10 @@
   "source_page": "https://www.analyst.co.il/funds-lobby/provident-funds/fund-1412/report/",
   "product": "גמל",
   "via": "cloud",
-  "parser_version": 5,
+  "parser_version": 6,
   "tracks": 1,
-  "file_year": 2025
+  "file_year": 2025,
+  "pdf_parser_version": 2
  },
  "https://www.analyst.co.il/wp-content/uploads/2025/01/511880460_g1412_Yield424.xlsx": {
   "legal_id": "511880460",
@@ -858,9 +900,10 @@
   "source_page": "https://www.analyst.co.il/funds-lobby/provident-funds/fund-1412/report/",
   "product": "גמל",
   "via": "cloud",
-  "parser_version": 5,
+  "parser_version": 6,
   "tracks": 1,
-  "file_year": 2024
+  "file_year": 2024,
+  "pdf_parser_version": 2
  },
  "https://www.analyst.co.il/media/jrklbdjr/511880460_g1412_yield423.xlsx": {
   "legal_id": "511880460",
@@ -876,9 +919,10 @@
   "source_page": "https://www.analyst.co.il/funds-lobby/provident-funds/fund-1412/report/",
   "product": "גמל",
   "via": "cloud",
-  "parser_version": 5,
+  "parser_version": 6,
   "tracks": 1,
-  "file_year": 2023
+  "file_year": 2023,
+  "pdf_parser_version": 2
  },
  "https://www.analyst.co.il/media/oqeh4z1q/511880460_g1412_yield422.xlsx": {
   "legal_id": "511880460",
@@ -894,9 +938,10 @@
   "source_page": "https://www.analyst.co.il/funds-lobby/provident-funds/fund-1412/report/",
   "product": "גמל",
   "via": "cloud",
-  "parser_version": 5,
+  "parser_version": 6,
   "tracks": 1,
-  "file_year": 2022
+  "file_year": 2022,
+  "pdf_parser_version": 2
  },
  "https://www.analyst.co.il/media/yvdd01wq/מרכיבי-תשואה-ינואר-עד-דצמבר-2021.xlsx": {
   "legal_id": "511880460",
@@ -912,9 +957,10 @@
   "source_page": "https://www.analyst.co.il/funds-lobby/provident-funds/fund-1412/report/",
   "product": "גמל",
   "via": "cloud",
-  "parser_version": 5,
+  "parser_version": 6,
   "tracks": 1,
-  "file_year": 2021
+  "file_year": 2021,
+  "pdf_parser_version": 2
  },
  "https://www.analyst.co.il/media/5xvlbbht/מרכיבי-תשואה-ינואר-עד-דצמבר-2020.xls": {
   "legal_id": "511880460",
@@ -930,9 +976,10 @@
   "source_page": "https://www.analyst.co.il/funds-lobby/provident-funds/fund-1412/report/",
   "product": "גמל",
   "via": "cloud",
-  "parser_version": 5,
+  "parser_version": 6,
   "tracks": 1,
-  "file_year": 2020
+  "file_year": 2020,
+  "pdf_parser_version": 2
  },
  "https://www.analyst.co.il/media/o0ucofwd/מרכיבי-תשואה-ינואר-עד-דצמבר-2019.xls": {
   "legal_id": "511880460",
@@ -948,9 +995,10 @@
   "source_page": "https://www.analyst.co.il/funds-lobby/provident-funds/fund-1412/report/",
   "product": "גמל",
   "via": "cloud",
-  "parser_version": 5,
+  "parser_version": 6,
   "tracks": 1,
-  "file_year": 2019
+  "file_year": 2019,
+  "pdf_parser_version": 2
  },
  "https://www.analyst.co.il/wp-content/uploads/2026/07/511880460_g9730_Yield226.xlsx": {
   "legal_id": "511880460",
@@ -966,9 +1014,10 @@
   "source_page": "https://www.analyst.co.il/funds-lobby/provident-funds/fund-9730/report/",
   "product": "גמל",
   "via": "cloud",
-  "parser_version": 5,
+  "parser_version": 6,
   "tracks": 1,
-  "file_year": 2026
+  "file_year": 2026,
+  "pdf_parser_version": 2
  },
  "https://www.analyst.co.il/wp-content/uploads/2026/01/511880460_g9730_Yield425.xlsx": {
   "legal_id": "511880460",
@@ -984,9 +1033,10 @@
   "source_page": "https://www.analyst.co.il/funds-lobby/provident-funds/fund-9730/report/",
   "product": "גמל",
   "via": "cloud",
-  "parser_version": 5,
+  "parser_version": 6,
   "tracks": 1,
-  "file_year": 2025
+  "file_year": 2025,
+  "pdf_parser_version": 2
  },
  "https://www.analyst.co.il/wp-content/uploads/2025/01/511880460_g9730_Yield424.xlsx": {
   "legal_id": "511880460",
@@ -1002,9 +1052,10 @@
   "source_page": "https://www.analyst.co.il/funds-lobby/provident-funds/fund-9730/report/",
   "product": "גמל",
   "via": "cloud",
-  "parser_version": 5,
+  "parser_version": 6,
   "tracks": 1,
-  "file_year": 2024
+  "file_year": 2024,
+  "pdf_parser_version": 2
  },
  "https://www.analyst.co.il/media/uzvbg513/511880460_g9730_yield423.xlsx": {
   "legal_id": "511880460",
@@ -1020,9 +1071,10 @@
   "source_page": "https://www.analyst.co.il/funds-lobby/provident-funds/fund-9730/report/",
   "product": "גמל",
   "via": "cloud",
-  "parser_version": 5,
+  "parser_version": 6,
   "tracks": 1,
-  "file_year": 2023
+  "file_year": 2023,
+  "pdf_parser_version": 2
  },
  "https://www.analyst.co.il/media/bx1hhzl1/511880460_g9730_yield422.xlsx": {
   "legal_id": "511880460",
@@ -1038,9 +1090,10 @@
   "source_page": "https://www.analyst.co.il/funds-lobby/provident-funds/fund-9730/report/",
   "product": "גמל",
   "via": "cloud",
-  "parser_version": 5,
+  "parser_version": 6,
   "tracks": 1,
-  "file_year": 2022
+  "file_year": 2022,
+  "pdf_parser_version": 2
  },
  "https://www.analyst.co.il/media/r2wlkwck/מרכיבי-תשואה-ינואר-עד-דצמבר-2021.xlsx": {
   "legal_id": "511880460",
@@ -1056,9 +1109,10 @@
   "source_page": "https://www.analyst.co.il/funds-lobby/provident-funds/fund-9730/report/",
   "product": "גמל",
   "via": "cloud",
-  "parser_version": 5,
+  "parser_version": 6,
   "tracks": 1,
-  "file_year": 2021
+  "file_year": 2021,
+  "pdf_parser_version": 2
  },
  "https://www.analyst.co.il/media/dzypjb2t/מרכיבי-תשואה-ינואר-עד-דצמבר-2020.xls": {
   "legal_id": "511880460",
@@ -1074,9 +1128,10 @@
   "source_page": "https://www.analyst.co.il/funds-lobby/provident-funds/fund-9730/report/",
   "product": "גמל",
   "via": "cloud",
-  "parser_version": 5,
+  "parser_version": 6,
   "tracks": 1,
-  "file_year": 2020
+  "file_year": 2020,
+  "pdf_parser_version": 2
  },
  "https://www.analyst.co.il/media/hh3jgbkj/מרכיבי-תשואה-ינואר-עד-דצמבר-2019.xls": {
   "legal_id": "511880460",
@@ -1092,9 +1147,10 @@
   "source_page": "https://www.analyst.co.il/funds-lobby/provident-funds/fund-9730/report/",
   "product": "גמל",
   "via": "cloud",
-  "parser_version": 5,
+  "parser_version": 6,
   "tracks": 1,
-  "file_year": 2019
+  "file_year": 2019,
+  "pdf_parser_version": 2
  },
  "https://www.analyst.co.il/wp-content/uploads/2026/07/511880460_g9731_Yield226.xlsx": {
   "legal_id": "511880460",
@@ -1110,9 +1166,10 @@
   "source_page": "https://www.analyst.co.il/funds-lobby/provident-funds/fund-9731/report/",
   "product": "גמל",
   "via": "cloud",
-  "parser_version": 5,
+  "parser_version": 6,
   "tracks": 1,
-  "file_year": 2026
+  "file_year": 2026,
+  "pdf_parser_version": 2
  },
  "https://www.analyst.co.il/wp-content/uploads/2026/01/511880460_g9731_Yield425.xlsx": {
   "legal_id": "511880460",
@@ -1128,9 +1185,10 @@
   "source_page": "https://www.analyst.co.il/funds-lobby/provident-funds/fund-9731/report/",
   "product": "גמל",
   "via": "cloud",
-  "parser_version": 5,
+  "parser_version": 6,
   "tracks": 1,
-  "file_year": 2025
+  "file_year": 2025,
+  "pdf_parser_version": 2
  },
  "https://www.analyst.co.il/wp-content/uploads/2025/01/511880460_g9731_Yield424.xlsx": {
   "legal_id": "511880460",
@@ -1146,9 +1204,10 @@
   "source_page": "https://www.analyst.co.il/funds-lobby/provident-funds/fund-9731/report/",
   "product": "גמל",
   "via": "cloud",
-  "parser_version": 5,
+  "parser_version": 6,
   "tracks": 1,
-  "file_year": 2024
+  "file_year": 2024,
+  "pdf_parser_version": 2
  },
  "https://www.analyst.co.il/media/2j5b5eqm/511880460_g9731_yield423.xlsx": {
   "legal_id": "511880460",
@@ -1164,9 +1223,10 @@
   "source_page": "https://www.analyst.co.il/funds-lobby/provident-funds/fund-9731/report/",
   "product": "גמל",
   "via": "cloud",
-  "parser_version": 5,
+  "parser_version": 6,
   "tracks": 1,
-  "file_year": 2023
+  "file_year": 2023,
+  "pdf_parser_version": 2
  },
  "https://www.analyst.co.il/media/k1idpuuk/511880460_g9731_yield422.xlsx": {
   "legal_id": "511880460",
@@ -1182,9 +1242,10 @@
   "source_page": "https://www.analyst.co.il/funds-lobby/provident-funds/fund-9731/report/",
   "product": "גמל",
   "via": "cloud",
-  "parser_version": 5,
+  "parser_version": 6,
   "tracks": 1,
-  "file_year": 2022
+  "file_year": 2022,
+  "pdf_parser_version": 2
  },
  "https://www.analyst.co.il/media/5xodhcby/מרכיבי-תשואה-ינואר-עד-דצמבר-2021.xlsx": {
   "legal_id": "511880460",
@@ -1200,9 +1261,10 @@
   "source_page": "https://www.analyst.co.il/funds-lobby/provident-funds/fund-9731/report/",
   "product": "גמל",
   "via": "cloud",
-  "parser_version": 5,
+  "parser_version": 6,
   "tracks": 1,
-  "file_year": 2021
+  "file_year": 2021,
+  "pdf_parser_version": 2
  },
  "https://www.analyst.co.il/media/5vqppsga/מרכיבי-תשואה-ינואר-עד-דצמבר-2020.xls": {
   "legal_id": "511880460",
@@ -1218,9 +1280,10 @@
   "source_page": "https://www.analyst.co.il/funds-lobby/provident-funds/fund-9731/report/",
   "product": "גמל",
   "via": "cloud",
-  "parser_version": 5,
+  "parser_version": 6,
   "tracks": 1,
-  "file_year": 2020
+  "file_year": 2020,
+  "pdf_parser_version": 2
  },
  "https://www.analyst.co.il/media/eaabm5bx/מרכיבי-תשואה-ינואר-עד-דצמבר-2019.xls": {
   "legal_id": "511880460",
@@ -1236,9 +1299,10 @@
   "source_page": "https://www.analyst.co.il/funds-lobby/provident-funds/fund-9731/report/",
   "product": "גמל",
   "via": "cloud",
-  "parser_version": 5,
+  "parser_version": 6,
   "tracks": 1,
-  "file_year": 2019
+  "file_year": 2019,
+  "pdf_parser_version": 2
  },
  "https://www.analyst.co.il/wp-content/uploads/2026/07/511880460_g9732_Yield226.xlsx": {
   "legal_id": "511880460",
@@ -1254,9 +1318,10 @@
   "source_page": "https://www.analyst.co.il/funds-lobby/provident-funds/fund-9732/report/",
   "product": "גמל",
   "via": "cloud",
-  "parser_version": 5,
+  "parser_version": 6,
   "tracks": 1,
-  "file_year": 2026
+  "file_year": 2026,
+  "pdf_parser_version": 2
  },
  "https://www.analyst.co.il/wp-content/uploads/2026/01/511880460_g9732_Yield425.xlsx": {
   "legal_id": "511880460",
@@ -1272,9 +1337,10 @@
   "source_page": "https://www.analyst.co.il/funds-lobby/provident-funds/fund-9732/report/",
   "product": "גמל",
   "via": "cloud",
-  "parser_version": 5,
+  "parser_version": 6,
   "tracks": 1,
-  "file_year": 2025
+  "file_year": 2025,
+  "pdf_parser_version": 2
  },
  "https://www.analyst.co.il/wp-content/uploads/2025/01/511880460_g9732_Yield424.xlsx": {
   "legal_id": "511880460",
@@ -1290,9 +1356,10 @@
   "source_page": "https://www.analyst.co.il/funds-lobby/provident-funds/fund-9732/report/",
   "product": "גמל",
   "via": "cloud",
-  "parser_version": 5,
+  "parser_version": 6,
   "tracks": 1,
-  "file_year": 2024
+  "file_year": 2024,
+  "pdf_parser_version": 2
  },
  "https://www.analyst.co.il/media/on3j1wxo/511880460_g9732_yield423.xlsx": {
   "legal_id": "511880460",
@@ -1308,9 +1375,10 @@
   "source_page": "https://www.analyst.co.il/funds-lobby/provident-funds/fund-9732/report/",
   "product": "גמל",
   "via": "cloud",
-  "parser_version": 5,
+  "parser_version": 6,
   "tracks": 1,
-  "file_year": 2023
+  "file_year": 2023,
+  "pdf_parser_version": 2
  },
  "https://www.analyst.co.il/media/103pnbkn/511880460_g9732_yield422.xlsx": {
   "legal_id": "511880460",
@@ -1326,9 +1394,10 @@
   "source_page": "https://www.analyst.co.il/funds-lobby/provident-funds/fund-9732/report/",
   "product": "גמל",
   "via": "cloud",
-  "parser_version": 5,
+  "parser_version": 6,
   "tracks": 1,
-  "file_year": 2022
+  "file_year": 2022,
+  "pdf_parser_version": 2
  },
  "https://www.analyst.co.il/media/bqoi421r/מרכיבי-תשואה-ינואר-עד-דצמבר-2021.xlsx": {
   "legal_id": "511880460",
@@ -1344,9 +1413,10 @@
   "source_page": "https://www.analyst.co.il/funds-lobby/provident-funds/fund-9732/report/",
   "product": "גמל",
   "via": "cloud",
-  "parser_version": 5,
+  "parser_version": 6,
   "tracks": 1,
-  "file_year": 2021
+  "file_year": 2021,
+  "pdf_parser_version": 2
  },
  "https://www.analyst.co.il/media/asfldg1c/מרכיבי-תשואה-ינואר-עד-דצמבר-2020.xls": {
   "legal_id": "511880460",
@@ -1362,9 +1432,10 @@
   "source_page": "https://www.analyst.co.il/funds-lobby/provident-funds/fund-9732/report/",
   "product": "גמל",
   "via": "cloud",
-  "parser_version": 5,
+  "parser_version": 6,
   "tracks": 1,
-  "file_year": 2020
+  "file_year": 2020,
+  "pdf_parser_version": 2
  },
  "https://www.analyst.co.il/media/vgycddqx/מרכיבי-תשואה-ינואר-עד-דצמבר-2019.xls": {
   "legal_id": "511880460",
@@ -1380,9 +1451,10 @@
   "source_page": "https://www.analyst.co.il/funds-lobby/provident-funds/fund-9732/report/",
   "product": "גמל",
   "via": "cloud",
-  "parser_version": 5,
+  "parser_version": 6,
   "tracks": 1,
-  "file_year": 2019
+  "file_year": 2019,
+  "pdf_parser_version": 2
  },
  "https://www.analyst.co.il/wp-content/uploads/2026/07/511880460_g13855_Yield226.xlsx": {
   "legal_id": "511880460",
@@ -1398,9 +1470,10 @@
   "source_page": "https://www.analyst.co.il/funds-lobby/provident-funds/fund-13855/report/",
   "product": "גמל",
   "via": "cloud",
-  "parser_version": 5,
+  "parser_version": 6,
   "tracks": 1,
-  "file_year": 2026
+  "file_year": 2026,
+  "pdf_parser_version": 2
  },
  "https://www.analyst.co.il/wp-content/uploads/2026/01/511880460_g13855_Yield425.xlsx": {
   "legal_id": "511880460",
@@ -1416,9 +1489,10 @@
   "source_page": "https://www.analyst.co.il/funds-lobby/provident-funds/fund-13855/report/",
   "product": "גמל",
   "via": "cloud",
-  "parser_version": 5,
+  "parser_version": 6,
   "tracks": 1,
-  "file_year": 2025
+  "file_year": 2025,
+  "pdf_parser_version": 2
  },
  "https://www.analyst.co.il/wp-content/uploads/2025/01/511880460_g13855_Yield424.xlsx": {
   "legal_id": "511880460",
@@ -1434,9 +1508,10 @@
   "source_page": "https://www.analyst.co.il/funds-lobby/provident-funds/fund-13855/report/",
   "product": "גמל",
   "via": "cloud",
-  "parser_version": 5,
+  "parser_version": 6,
   "tracks": 1,
-  "file_year": 2024
+  "file_year": 2024,
+  "pdf_parser_version": 2
  },
  "https://www.analyst.co.il/media/m0apsjgg/511880460_g13855_yield423.xlsx": {
   "legal_id": "511880460",
@@ -1452,9 +1527,10 @@
   "source_page": "https://www.analyst.co.il/funds-lobby/provident-funds/fund-13855/report/",
   "product": "גמל",
   "via": "cloud",
-  "parser_version": 5,
+  "parser_version": 6,
   "tracks": 1,
-  "file_year": 2023
+  "file_year": 2023,
+  "pdf_parser_version": 2
  },
  "https://www.analyst.co.il/media/qwbnrkg2/511880460_g13855_yield422.xlsx": {
   "legal_id": "511880460",
@@ -1470,9 +1546,10 @@
   "source_page": "https://www.analyst.co.il/funds-lobby/provident-funds/fund-13855/report/",
   "product": "גמל",
   "via": "cloud",
-  "parser_version": 5,
+  "parser_version": 6,
   "tracks": 1,
-  "file_year": 2022
+  "file_year": 2022,
+  "pdf_parser_version": 2
  },
  "https://www.analyst.co.il/wp-content/uploads/2026/07/511880460_g14279_Yield226.xlsx": {
   "legal_id": "511880460",
@@ -1488,7 +1565,7 @@
   "source_page": "https://www.analyst.co.il/funds-lobby/provident-funds/fund-14279/report/",
   "product": "גמל",
   "via": "cloud",
-  "parser_version": 5,
+  "parser_version": 6,
   "pdf_parser_version": 2,
   "tracks": 1,
   "file_year": 2026
@@ -1507,7 +1584,7 @@
   "source_page": "https://www.analyst.co.il/funds-lobby/provident-funds/fund-14279/report/",
   "product": "גמל",
   "via": "cloud",
-  "parser_version": 5,
+  "parser_version": 6,
   "pdf_parser_version": 2,
   "tracks": 1,
   "file_year": 2025
@@ -1526,7 +1603,7 @@
   "source_page": "https://www.analyst.co.il/funds-lobby/provident-funds/fund-14279/report/",
   "product": "גמל",
   "via": "cloud",
-  "parser_version": 5,
+  "parser_version": 6,
   "pdf_parser_version": 2,
   "tracks": 1,
   "file_year": 2024
@@ -1545,7 +1622,7 @@
   "source_page": "https://www.analyst.co.il/funds-lobby/provident-funds/fund-14279/report/",
   "product": "גמל",
   "via": "cloud",
-  "parser_version": 5,
+  "parser_version": 6,
   "pdf_parser_version": 2,
   "tracks": 1,
   "file_year": 2023

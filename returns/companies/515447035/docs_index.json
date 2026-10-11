@@ -14,7 +14,7 @@
   "product": "גמל",
   "via": "cloud",
   "not_returns": true,
-  "parser_version": 5,
+  "parser_version": 6,
   "parse_error": "file missing"
  },
  "https://www.fnx.co.il/Documents/premiot_nesiot_yomiot.xls": {
@@ -32,7 +32,7 @@
   "product": "גמל",
   "via": "cloud",
   "not_returns": true,
-  "parser_version": 5,
+  "parser_version": 6,
   "parse_error": "file missing"
  },
  "https://www.fnx.co.il/sites/docs/genery/DocLib9/annuity-factor.xls": {
@@ -50,7 +50,7 @@
   "product": "גמל",
   "via": "cloud",
   "not_returns": true,
-  "parser_version": 5,
+  "parser_version": 6,
   "parse_error": "file missing"
  },
  "http://www.fnx.co.il/sites/docs/genery/nimleyisraeldocs/מרכיבי-תשואה-מרכזית-לפיצויים-רבעון2-26.xlsx": {
@@ -67,9 +67,10 @@
   "source_page": "https://www.fnx.co.il/SPF/iframe-namal-markivei-tsuua.aspx",
   "product": null,
   "via": "cloud",
-  "parser_version": 5,
+  "parser_version": 6,
   "tracks": 11,
-  "file_year": 2026
+  "file_year": 2026,
+  "pdf_parser_version": 2
  },
  "http://www.fnx.co.il/sites/docs/genery/nimleyisraeldocs/מרכיבי-תשואה-מרכזית-לפיצויים-רבעון1-26.xlsx": {
   "legal_id": "515447035",
@@ -85,9 +86,10 @@
   "source_page": "https://www.fnx.co.il/SPF/iframe-namal-markivei-tsuua.aspx",
   "product": null,
   "via": "cloud",
-  "parser_version": 5,
+  "parser_version": 6,
   "tracks": 11,
-  "file_year": 2026
+  "file_year": 2026,
+  "pdf_parser_version": 2
  },
  "http://www.fnx.co.il/sites/docs/genery/nimleyisraeldocs/מרכיבי-תשואה-מרכזית-לפיצויים-רבעון4-25.xlsx": {
   "legal_id": "515447035",
@@ -103,9 +105,10 @@
   "source_page": "https://www.fnx.co.il/SPF/iframe-namal-markivei-tsuua.aspx",
   "product": null,
   "via": "cloud",
-  "parser_version": 5,
+  "parser_version": 6,
   "tracks": 11,
-  "file_year": 2025
+  "file_year": 2025,
+  "pdf_parser_version": 2
  },
  "http://www.fnx.co.il/sites/docs/genery/nimleyisraeldocs/מרכיבי_תשואה_מרכזית_לפיצויים-רבעון3-25-חני.xlsx": {
   "legal_id": "515447035",
@@ -121,9 +124,10 @@
   "source_page": "https://www.fnx.co.il/SPF/iframe-namal-markivei-tsuua.aspx",
   "product": null,
   "via": "cloud",
-  "parser_version": 5,
+  "parser_version": 6,
   "tracks": 11,
-  "file_year": 2025
+  "file_year": 2025,
+  "pdf_parser_version": 2
  },
  "http://www.fnx.co.il/sites/docs/genery/nimleyisraeldocs/מרכיבי_תשואה_מרכזית_לפיצויים-רבעון2-25_חני.xlsx": {
   "legal_id": "515447035",
@@ -139,9 +143,10 @@
   "source_page": "https://www.fnx.co.il/SPF/iframe-namal-markivei-tsuua.aspx",
   "product": null,
   "via": "cloud",
-  "parser_version": 5,
+  "parser_version": 6,
   "tracks": 11,
-  "file_year": 2025
+  "file_year": 2025,
+  "pdf_parser_version": 2
  },
  "http://www.fnx.co.il/sites/docs/genery/nimleyisraeldocs/מרכיבי-תשואה-מרכזית-לפיצויים-רבעון1-25-חני.xlsx": {
   "legal_id": "515447035",
@@ -157,9 +162,10 @@
   "source_page": "https://www.fnx.co.il/SPF/iframe-namal-markivei-tsuua.aspx",
   "product": null,
   "via": "cloud",
-  "parser_version": 5,
+  "parser_version": 6,
   "tracks": 11,
-  "file_year": 2025
+  "file_year": 2025,
+  "pdf_parser_version": 2
  },
  "http://www.fnx.co.il/sites/docs/genery/nimleyisraeldocs/מרכזית לפיצויים-מרכיבי-תשואה-חני-רבעון4-24.xlsx": {
   "legal_id": "515447035",
@@ -175,9 +181,10 @@
   "source_page": "https://www.fnx.co.il/SPF/iframe-namal-markivei-tsuua.aspx",
   "product": null,
   "via": "cloud",
-  "parser_version": 5,
+  "parser_version": 6,
   "tracks": 11,
-  "file_year": 2024
+  "file_year": 2024,
+  "pdf_parser_version": 2
  },
  "http://www.fnx.co.il/sites/docs/genery/nimleyisraeldocs/מרכיבי-תשואה-מרכזית-לפיצויים-רבעון3-24-חני.xls": {
   "legal_id": "515447035",
@@ -193,9 +200,10 @@
   "source_page": "https://www.fnx.co.il/SPF/iframe-namal-markivei-tsuua.aspx",
   "product": null,
   "via": "cloud",
-  "parser_version": 5,
+  "parser_version": 6,
   "tracks": 11,
-  "file_year": 2024
+  "file_year": 2024,
+  "pdf_parser_version": 2
  },
  "http://www.fnx.co.il/sites/docs/genery/nimleyisraeldocs/מרכיבי-תשואה-מרכזית-לפיצויים-רבעון2-24-חני.xls": {
   "legal_id": "515447035",
@@ -211,9 +219,10 @@
   "source_page": "https://www.fnx.co.il/SPF/iframe-namal-markivei-tsuua.aspx",
   "product": null,
   "via": "cloud",
-  "parser_version": 5,
+  "parser_version": 6,
   "tracks": 11,
-  "file_year": 2024
+  "file_year": 2024,
+  "pdf_parser_version": 2
  },
  "http://www.fnx.co.il/sites/docs/genery/nimleyisraeldocs/חני-מרכזית-לפיצויים-מרכיבי-תשואה-רבעון1-24.xls": {
   "legal_id": "515447035",
@@ -229,9 +238,10 @@
   "source_page": "https://www.fnx.co.il/SPF/iframe-namal-markivei-tsuua.aspx",
   "product": null,
   "via": "cloud",
-  "parser_version": 5,
+  "parser_version": 6,
   "tracks": 11,
-  "file_year": 2024
+  "file_year": 2024,
+  "pdf_parser_version": 2
  },
  "http://www.fnx.co.il/sites/docs/genery/ashdodport/מרכיבי-תשואה-מרכזית-לפיצויים-רבעון2-26.xlsx": {
   "legal_id": "515447035",
@@ -247,9 +257,10 @@
   "source_page": "https://www.fnx.co.il/SPF/iframe-namal-ashdod-tsua.aspx",
   "product": null,
   "via": "cloud",
-  "parser_version": 5,
+  "parser_version": 6,
   "tracks": 11,
-  "file_year": 2026
+  "file_year": 2026,
+  "pdf_parser_version": 2
  },
  "http://www.fnx.co.il/sites/docs/genery/ashdodport/מרכיבי-תשואה-מרכזית-לפיצויים-רבעון1-26.xlsx": {
   "legal_id": "515447035",
@@ -265,9 +276,10 @@
   "source_page": "https://www.fnx.co.il/SPF/iframe-namal-ashdod-tsua.aspx",
   "product": null,
   "via": "cloud",
-  "parser_version": 5,
+  "parser_version": 6,
   "tracks": 11,
-  "file_year": 2026
+  "file_year": 2026,
+  "pdf_parser_version": 2
  },
  "http://www.fnx.co.il/sites/docs/genery/ashdodport/מרכיבי-תשואה-מרכזית-לפיצויים-רבעון4-25.xlsx": {
   "legal_id": "515447035",
@@ -283,9 +295,10 @@
   "source_page": "https://www.fnx.co.il/SPF/iframe-namal-ashdod-tsua.aspx",
   "product": null,
   "via": "cloud",
-  "parser_version": 5,
+  "parser_version": 6,
   "tracks": 11,
-  "file_year": 2025
+  "file_year": 2025,
+  "pdf_parser_version": 2
  },
  "http://www.fnx.co.il/sites/docs/genery/ashdodport/מרכיבי_תשואה_מרכזית_לפיצויים-רבעון3-25-חנא.xlsx": {
   "legal_id": "515447035",
@@ -301,9 +314,10 @@
   "source_page": "https://www.fnx.co.il/SPF/iframe-namal-ashdod-tsua.aspx",
   "product": null,
   "via": "cloud",
-  "parser_version": 5,
+  "parser_version": 6,
   "tracks": 11,
-  "file_year": 2025
+  "file_year": 2025,
+  "pdf_parser_version": 2
  },
  "http://www.fnx.co.il/sites/docs/genery/ashdodport/מרכיבי_תשואה_מרכזית_לפיצויים-רבעון2-25_חנא.xlsx": {
   "legal_id": "515447035",
@@ -319,9 +333,10 @@
   "source_page": "https://www.fnx.co.il/SPF/iframe-namal-ashdod-tsua.aspx",
   "product": null,
   "via": "cloud",
-  "parser_version": 5,
+  "parser_version": 6,
   "tracks": 11,
-  "file_year": 2025
+  "file_year": 2025,
+  "pdf_parser_version": 2
  },
  "http://www.fnx.co.il/sites/docs/genery/ashdodport/מרכיבי-תשואה-מרכזית-לפיצויים-רבעון1-25-חנא.xlsx": {
   "legal_id": "515447035",
@@ -337,9 +352,10 @@
   "source_page": "https://www.fnx.co.il/SPF/iframe-namal-ashdod-tsua.aspx",
   "product": null,
   "via": "cloud",
-  "parser_version": 5,
+  "parser_version": 6,
   "tracks": 11,
-  "file_year": 2025
+  "file_year": 2025,
+  "pdf_parser_version": 2
  },
  "http://www.fnx.co.il/sites/docs/genery/ashdodport/מרכזית לפיצויים-מרכיבי-תשואה-חנא-רבעון4-24.xlsx": {
   "legal_id": "515447035",
@@ -355,9 +371,10 @@
   "source_page": "https://www.fnx.co.il/SPF/iframe-namal-ashdod-tsua.aspx",
   "product": null,
   "via": "cloud",
-  "parser_version": 5,
+  "parser_version": 6,
   "tracks": 11,
-  "file_year": 2024
+  "file_year": 2024,
+  "pdf_parser_version": 2
  },
  "http://www.fnx.co.il/sites/docs/genery/ashdodport/מרכיבי-תשואה-מרכזית-לפיצויים-רבעון3-24-חנא.xls": {
   "legal_id": "515447035",
@@ -373,9 +390,10 @@
   "source_page": "https://www.fnx.co.il/SPF/iframe-namal-ashdod-tsua.aspx",
   "product": null,
   "via": "cloud",
-  "parser_version": 5,
+  "parser_version": 6,
   "tracks": 11,
-  "file_year": 2024
+  "file_year": 2024,
+  "pdf_parser_version": 2
  },
  "http://www.fnx.co.il/sites/docs/genery/ashdodport/מרכיבי-תשואה-מרכזית-לפיצויים-רבעון2-24-חנא.xls": {
   "legal_id": "515447035",
@@ -391,9 +409,10 @@
   "source_page": "https://www.fnx.co.il/SPF/iframe-namal-ashdod-tsua.aspx",
   "product": null,
   "via": "cloud",
-  "parser_version": 5,
+  "parser_version": 6,
   "tracks": 11,
-  "file_year": 2024
+  "file_year": 2024,
+  "pdf_parser_version": 2
  },
  "http://www.fnx.co.il/sites/docs/genery/ashdodport/חנא-מרכזית-לפיצויים-מרכיבי-תשואה-רבעון1-24.xls": {
   "legal_id": "515447035",
@@ -409,9 +428,10 @@
   "source_page": "https://www.fnx.co.il/SPF/iframe-namal-ashdod-tsua.aspx",
   "product": null,
   "via": "cloud",
-  "parser_version": 5,
+  "parser_version": 6,
   "tracks": 11,
-  "file_year": 2024
+  "file_year": 2024,
+  "pdf_parser_version": 2
  },
  "http://www.fnx.co.il/sites/docs/genery/markivey_tsua_chodshit/markivey_tsua_makifa_01-03_26.xlsx": {
   "legal_id": "515447035",
@@ -427,9 +447,10 @@
   "source_page": "https://www.fnx.co.il/SPF/iframe-phoenix-all-embracing-pension-yield-components.aspx",
   "product": "פנסיה",
   "via": "cloud",
-  "parser_version": 5,
+  "parser_version": 6,
   "tracks": 17,
-  "file_year": 2026
+  "file_year": 2026,
+  "pdf_parser_version": 2
  },
  "http://www.fnx.co.il/sites/docs/genery/markivey_tsua_chodshit/markivey_tsua_makifa_01-06_26.xlsx": {
   "legal_id": "515447035",
@@ -445,9 +466,10 @@
   "source_page": "https://www.fnx.co.il/SPF/iframe-phoenix-all-embracing-pension-yield-components.aspx",
   "product": "פנסיה",
   "via": "cloud",
-  "parser_version": 5,
+  "parser_version": 6,
   "tracks": 17,
-  "file_year": 2026
+  "file_year": 2026,
+  "pdf_parser_version": 2
  },
  "http://www.fnx.co.il/sites/docs/genery/markivey_tsua_chodshit/markivey_tsua_makifa_01-09_25.xlsx": {
   "legal_id": "515447035",
@@ -463,9 +485,10 @@
   "source_page": "https://www.fnx.co.il/SPF/iframe-phoenix-all-embracing-pension-yield-components.aspx",
   "product": "פנסיה",
   "via": "cloud",
-  "parser_version": 5,
+  "parser_version": 6,
   "tracks": 17,
-  "file_year": 2025
+  "file_year": 2025,
+  "pdf_parser_version": 2
  },
  "http://www.fnx.co.il/sites/docs/genery/markivey_tsua_chodshit/markivey_tsua_makifa_01-03_25.xlsx": {
   "legal_id": "515447035",
@@ -481,9 +504,10 @@
   "source_page": "https://www.fnx.co.il/SPF/iframe-phoenix-all-embracing-pension-yield-components.aspx",
   "product": "פנסיה",
   "via": "cloud",
-  "parser_version": 5,
+  "parser_version": 6,
   "tracks": 17,
-  "file_year": 2025
+  "file_year": 2025,
+  "pdf_parser_version": 2
  },
  "http://www.fnx.co.il/sites/docs/genery/markivey_tsua_chodshit/markivey_tsua_makifa_01-06_25.xlsx": {
   "legal_id": "515447035",
@@ -499,9 +523,10 @@
   "source_page": "https://www.fnx.co.il/SPF/iframe-phoenix-all-embracing-pension-yield-components.aspx",
   "product": "פנסיה",
   "via": "cloud",
-  "parser_version": 5,
+  "parser_version": 6,
   "tracks": 17,
-  "file_year": 2025
+  "file_year": 2025,
+  "pdf_parser_version": 2
  },
  "http://www.fnx.co.il/sites/docs/genery/markivey_tsua_chodshit/markivey_tsua_makifa_01-12_25.xlsx": {
   "legal_id": "515447035",
@@ -517,9 +542,10 @@
   "source_page": "https://www.fnx.co.il/SPF/iframe-phoenix-all-embracing-pension-yield-components.aspx",
   "product": "פנסיה",
   "via": "cloud",
-  "parser_version": 5,
+  "parser_version": 6,
   "tracks": 17,
-  "file_year": 2025
+  "file_year": 2025,
+  "pdf_parser_version": 2
  },
  "http://www.fnx.co.il/sites/docs/genery/markivey_tsua_chodshit/markivey_tsua_makifa_01-09_24.xls": {
   "legal_id": "515447035",
@@ -535,9 +561,10 @@
   "source_page": "https://www.fnx.co.il/SPF/iframe-phoenix-all-embracing-pension-yield-components.aspx",
   "product": "פנסיה",
   "via": "cloud",
-  "parser_version": 5,
+  "parser_version": 6,
   "tracks": 21,
-  "file_year": 2024
+  "file_year": 2024,
+  "pdf_parser_version": 2
  },
  "http://www.fnx.co.il/sites/docs/genery/markivey_tsua_chodshit/markivey_tsua_makifa_01-03_24.xls": {
   "legal_id": "515447035",
@@ -553,9 +580,10 @@
   "source_page": "https://www.fnx.co.il/SPF/iframe-phoenix-all-embracing-pension-yield-components.aspx",
   "product": "פנסיה",
   "via": "cloud",
-  "parser_version": 5,
+  "parser_version": 6,
   "tracks": 18,
-  "file_year": 2024
+  "file_year": 2024,
+  "pdf_parser_version": 2
  },
  "http://www.fnx.co.il/sites/docs/genery/markivey_tsua_chodshit/markivey_tsua_makifa_01-06_24.xls": {
   "legal_id": "515447035",
@@ -571,9 +599,10 @@
   "source_page": "https://www.fnx.co.il/SPF/iframe-phoenix-all-embracing-pension-yield-components.aspx",
   "product": "פנסיה",
   "via": "cloud",
-  "parser_version": 5,
+  "parser_version": 6,
   "tracks": 18,
-  "file_year": 2024
+  "file_year": 2024,
+  "pdf_parser_version": 2
  },
  "http://www.fnx.co.il/sites/docs/genery/markivey_tsua_chodshit/markivey_tsua_makifa_01-12_24.xls": {
   "legal_id": "515447035",
@@ -589,9 +618,10 @@
   "source_page": "https://www.fnx.co.il/SPF/iframe-phoenix-all-embracing-pension-yield-components.aspx",
   "product": "פנסיה",
   "via": "cloud",
-  "parser_version": 5,
+  "parser_version": 6,
   "tracks": 21,
-  "file_year": 2024
+  "file_year": 2024,
+  "pdf_parser_version": 2
  },
  "http://www.fnx.co.il/sites/docs/genery/markivey_tsua_chodshit/markivey_tsua_mashlima_01-03_26.xlsx": {
   "legal_id": "515447035",
@@ -607,9 +637,10 @@
   "source_page": "https://www.fnx.co.il/SPF/iframe-phoenix-general-pension-yield-components.aspx",
   "product": "פנסיה",
   "via": "cloud",
-  "parser_version": 5,
+  "parser_version": 6,
   "tracks": 17,
-  "file_year": 2026
+  "file_year": 2026,
+  "pdf_parser_version": 2
  },
  "http://www.fnx.co.il/sites/docs/genery/markivey_tsua_chodshit/markivey_tsua_mashlima_01-06_26.xlsx": {
   "legal_id": "515447035",
@@ -625,9 +656,10 @@
   "source_page": "https://www.fnx.co.il/SPF/iframe-phoenix-general-pension-yield-components.aspx",
   "product": "פנסיה",
   "via": "cloud",
-  "parser_version": 5,
+  "parser_version": 6,
   "tracks": 17,
-  "file_year": 2026
+  "file_year": 2026,
+  "pdf_parser_version": 2
  },
  "http://www.fnx.co.il/sites/docs/genery/markivey_tsua_chodshit/markivey_tsua_mashlima_01-09_25.xlsx": {
   "legal_id": "515447035",
@@ -643,9 +675,10 @@
   "source_page": "https://www.fnx.co.il/SPF/iframe-phoenix-general-pension-yield-components.aspx",
   "product": "פנסיה",
   "via": "cloud",
-  "parser_version": 5,
+  "parser_version": 6,
   "tracks": 17,
-  "file_year": 2025
+  "file_year": 2025,
+  "pdf_parser_version": 2
  },
  "http://www.fnx.co.il/sites/docs/genery/markivey_tsua_chodshit/markivey_tsua_mashlima_01-03_25.xlsx": {
   "legal_id": "515447035",
@@ -661,9 +694,10 @@
   "source_page": "https://www.fnx.co.il/SPF/iframe-phoenix-general-pension-yield-components.aspx",
   "product": "פנסיה",
   "via": "cloud",
-  "parser_version": 5,
+  "parser_version": 6,
   "tracks": 17,
-  "file_year": 2025
+  "file_year": 2025,
+  "pdf_parser_version": 2
  },
  "http://www.fnx.co.il/sites/docs/genery/markivey_tsua_chodshit/markivey_tsua_mashlima_01-06_25.xlsx": {
   "legal_id": "515447035",
@@ -679,9 +713,10 @@
   "source_page": "https://www.fnx.co.il/SPF/iframe-phoenix-general-pension-yield-components.aspx",
   "product": "פנסיה",
   "via": "cloud",
-  "parser_version": 5,
+  "parser_version": 6,
   "tracks": 17,
-  "file_year": 2025
+  "file_year": 2025,
+  "pdf_parser_version": 2
  },
  "http://www.fnx.co.il/sites/docs/genery/markivey_tsua_chodshit/markivey_tsua_mashlima_01-12_25.xlsx": {
   "legal_id": "515447035",
@@ -697,9 +732,10 @@
   "source_page": "https://www.fnx.co.il/SPF/iframe-phoenix-general-pension-yield-components.aspx",
   "product": "פנסיה",
   "via": "cloud",
-  "parser_version": 5,
+  "parser_version": 6,
   "tracks": 17,
-  "file_year": 2025
+  "file_year": 2025,
+  "pdf_parser_version": 2
  },
  "http://www.fnx.co.il/sites/docs/genery/markivey_tsua_chodshit/markivey_tsua_mashlima_01-12_24.xls": {
   "legal_id": "515447035",
@@ -715,8 +751,9 @@
   "source_page": "https://www.fnx.co.il/SPF/iframe-phoenix-general-pension-yield-components.aspx",
   "product": "פנסיה",
   "via": "cloud",
-  "parser_version": 5,
+  "parser_version": 6,
   "tracks": 17,
-  "file_year": 2024
+  "file_year": 2024,
+  "pdf_parser_version": 2
  }
 }

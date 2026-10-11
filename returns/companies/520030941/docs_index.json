@@ -13,9 +13,10 @@
   "source_page": "https://www.krn-kela.co.il/%d7%94%d7%a9%d7%a7%d7%a2%d7%95%d7%aa/%d7%a4%d7%a8%d7%a1%d7%95%d7%9d-%d7%9e%d7%a8%d7%9b%d7%99%d7%91%d7%99-%d7%aa%d7%a9%d7%95%d7%90%d7%94/",
   "product": null,
   "via": "cloud",
-  "parser_version": 5,
+  "parser_version": 6,
   "tracks": 1,
-  "file_year": 2026
+  "file_year": 2026,
+  "pdf_parser_version": 2
  },
  "https://www.krn-kela.co.il/wp-content/uploads/2026/07/g1433_Yield226.xlsx": {
   "legal_id": "520030941",
@@ -31,9 +32,10 @@
   "source_page": "https://www.krn-kela.co.il/%d7%94%d7%a9%d7%a7%d7%a2%d7%95%d7%aa/%d7%a4%d7%a8%d7%a1%d7%95%d7%9d-%d7%9e%d7%a8%d7%9b%d7%99%d7%91%d7%99-%d7%aa%d7%a9%d7%95%d7%90%d7%94/",
   "product": null,
   "via": "cloud",
-  "parser_version": 5,
+  "parser_version": 6,
   "tracks": 1,
-  "file_year": 2026
+  "file_year": 2026,
+  "pdf_parser_version": 2
  },
  "https://www.krn-kela.co.il/wp-content/uploads/2026/07/g15482_Yield226.xlsx": {
   "legal_id": "520030941",
@@ -49,9 +51,10 @@
   "source_page": "https://www.krn-kela.co.il/%d7%94%d7%a9%d7%a7%d7%a2%d7%95%d7%aa/%d7%a4%d7%a8%d7%a1%d7%95%d7%9d-%d7%9e%d7%a8%d7%9b%d7%99%d7%91%d7%99-%d7%aa%d7%a9%d7%95%d7%90%d7%94/",
   "product": null,
   "via": "cloud",
-  "parser_version": 5,
+  "parser_version": 6,
   "tracks": 1,
-  "file_year": 2026
+  "file_year": 2026,
+  "pdf_parser_version": 2
  },
  "https://www.krn-kela.co.il/wp-content/uploads/2026/04/KL_g378_Yield126.xlsx": {
   "legal_id": "520030941",
@@ -67,9 +70,10 @@
   "source_page": "https://www.krn-kela.co.il/%d7%94%d7%a9%d7%a7%d7%a2%d7%95%d7%aa/%d7%a4%d7%a8%d7%a1%d7%95%d7%9d-%d7%9e%d7%a8%d7%9b%d7%99%d7%91%d7%99-%d7%aa%d7%a9%d7%95%d7%90%d7%94/",
   "product": null,
   "via": "cloud",
-  "parser_version": 5,
+  "parser_version": 6,
   "tracks": 1,
-  "file_year": 2026
+  "file_year": 2026,
+  "pdf_parser_version": 2
  },
  "https://www.krn-kela.co.il/wp-content/uploads/2026/04/KL_g1433_Yield126.xlsx": {
   "legal_id": "520030941",
@@ -85,9 +89,10 @@
   "source_page": "https://www.krn-kela.co.il/%d7%94%d7%a9%d7%a7%d7%a2%d7%95%d7%aa/%d7%a4%d7%a8%d7%a1%d7%95%d7%9d-%d7%9e%d7%a8%d7%9b%d7%99%d7%91%d7%99-%d7%aa%d7%a9%d7%95%d7%90%d7%94/",
   "product": null,
   "via": "cloud",
-  "parser_version": 5,
+  "parser_version": 6,
   "tracks": 1,
-  "file_year": 2026
+  "file_year": 2026,
+  "pdf_parser_version": 2
  },
  "https://www.krn-kela.co.il/wp-content/uploads/2026/04/KL_g15482_Yield126.xlsx": {
   "legal_id": "520030941",
@@ -103,9 +108,10 @@
   "source_page": "https://www.krn-kela.co.il/%d7%94%d7%a9%d7%a7%d7%a2%d7%95%d7%aa/%d7%a4%d7%a8%d7%a1%d7%95%d7%9d-%d7%9e%d7%a8%d7%9b%d7%99%d7%91%d7%99-%d7%aa%d7%a9%d7%95%d7%90%d7%94/",
   "product": null,
   "via": "cloud",
-  "parser_version": 5,
+  "parser_version": 6,
   "tracks": 1,
-  "file_year": 2026
+  "file_year": 2026,
+  "pdf_parser_version": 2
  },
  "https://www.krn-kela.co.il/wp-content/uploads/2026/08/regulation_5_5_2025_pdf.pdf": {
   "legal_id": "520030941",
@@ -122,7 +128,7 @@
   "product": null,
   "via": "cloud",
   "not_returns": true,
-  "parser_version": 5,
+  "parser_version": 6,
   "parse_error": "file missing"
  },
  "https://www.krn-kela.co.il/wp-content/uploads/2026/08/regulation_5_5_2025_pdf.pdf?pid=2543": {
@@ -140,7 +146,7 @@
   "product": null,
   "via": "cloud",
   "parse_error": "file missing",
-  "parser_version": 5
+  "parser_version": 6
  },
  "https://www.krn-kela.co.il/wp-content/uploads/2025/07/KL_g378_Yield225.xlsx": {
   "legal_id": "520030941",
@@ -156,9 +162,10 @@
   "source_page": "https://www.krn-kela.co.il/%d7%94%d7%a9%d7%a7%d7%a2%d7%95%d7%aa/%d7%a4%d7%a8%d7%a1%d7%95%d7%9d-%d7%9e%d7%a8%d7%9b%d7%99%d7%91%d7%99-%d7%aa%d7%a9%d7%95%d7%90%d7%94/",
   "product": null,
   "via": "cloud",
-  "parser_version": 5,
+  "parser_version": 6,
   "tracks": 1,
-  "file_year": 2025
+  "file_year": 2025,
+  "pdf_parser_version": 2
  },
  "https://www.krn-kela.co.il/wp-content/uploads/2025/07/KL_g1433_Yield225.xlsx": {
   "legal_id": "520030941",
@@ -174,9 +181,10 @@
   "source_page": "https://www.krn-kela.co.il/%d7%94%d7%a9%d7%a7%d7%a2%d7%95%d7%aa/%d7%a4%d7%a8%d7%a1%d7%95%d7%9d-%d7%9e%d7%a8%d7%9b%d7%99%d7%91%d7%99-%d7%aa%d7%a9%d7%95%d7%90%d7%94/",
   "product": null,
   "via": "cloud",
-  "parser_version": 5,
+  "parser_version": 6,
   "tracks": 1,
-  "file_year": 2025
+  "file_year": 2025,
+  "pdf_parser_version": 2
  },
  "https://www.krn-kela.co.il/wp-content/uploads/2025/07/KL_g15482_Yield225.xlsx": {
   "legal_id": "520030941",
@@ -192,9 +200,10 @@
   "source_page": "https://www.krn-kela.co.il/%d7%94%d7%a9%d7%a7%d7%a2%d7%95%d7%aa/%d7%a4%d7%a8%d7%a1%d7%95%d7%9d-%d7%9e%d7%a8%d7%9b%d7%99%d7%91%d7%99-%d7%aa%d7%a9%d7%95%d7%90%d7%94/",
   "product": null,
   "via": "cloud",
-  "parser_version": 5,
+  "parser_version": 6,
   "tracks": 1,
-  "file_year": 2025
+  "file_year": 2025,
+  "pdf_parser_version": 2
  },
  "https://www.krn-kela.co.il/wp-content/uploads/2025/10/KL_g378_Yield325.xlsx": {
   "legal_id": "520030941",
@@ -210,9 +219,10 @@
   "source_page": "https://www.krn-kela.co.il/%d7%94%d7%a9%d7%a7%d7%a2%d7%95%d7%aa/%d7%a4%d7%a8%d7%a1%d7%95%d7%9d-%d7%9e%d7%a8%d7%9b%d7%99%d7%91%d7%99-%d7%aa%d7%a9%d7%95%d7%90%d7%94/",
   "product": null,
   "via": "cloud",
-  "parser_version": 5,
+  "parser_version": 6,
   "tracks": 1,
-  "file_year": 2025
+  "file_year": 2025,
+  "pdf_parser_version": 2
  },
  "https://www.krn-kela.co.il/wp-content/uploads/2025/10/KL_g1433_Yield325.xlsx": {
   "legal_id": "520030941",
@@ -228,9 +238,10 @@
   "source_page": "https://www.krn-kela.co.il/%d7%94%d7%a9%d7%a7%d7%a2%d7%95%d7%aa/%d7%a4%d7%a8%d7%a1%d7%95%d7%9d-%d7%9e%d7%a8%d7%9b%d7%99%d7%91%d7%99-%d7%aa%d7%a9%d7%95%d7%90%d7%94/",
   "product": null,
   "via": "cloud",
-  "parser_version": 5,
+  "parser_version": 6,
   "tracks": 1,
-  "file_year": 2025
+  "file_year": 2025,
+  "pdf_parser_version": 2
  },
  "https://www.krn-kela.co.il/wp-content/uploads/2025/10/KL_g15482_Yield325.xlsx": {
   "legal_id": "520030941",
@@ -246,9 +257,10 @@
   "source_page": "https://www.krn-kela.co.il/%d7%94%d7%a9%d7%a7%d7%a2%d7%95%d7%aa/%d7%a4%d7%a8%d7%a1%d7%95%d7%9d-%d7%9e%d7%a8%d7%9b%d7%99%d7%91%d7%99-%d7%aa%d7%a9%d7%95%d7%90%d7%94/",
   "product": null,
   "via": "cloud",
-  "parser_version": 5,
+  "parser_version": 6,
   "tracks": 1,
-  "file_year": 2025
+  "file_year": 2025,
+  "pdf_parser_version": 2
  },
  "https://www.krn-kela.co.il/wp-content/uploads/2026/01/KL_g378_Yield425.xlsx": {
   "legal_id": "520030941",
@@ -264,9 +276,10 @@
   "source_page": "https://www.krn-kela.co.il/%d7%94%d7%a9%d7%a7%d7%a2%d7%95%d7%aa/%d7%a4%d7%a8%d7%a1%d7%95%d7%9d-%d7%9e%d7%a8%d7%9b%d7%99%d7%91%d7%99-%d7%aa%d7%a9%d7%95%d7%90%d7%94/",
   "product": null,
   "via": "cloud",
-  "parser_version": 5,
+  "parser_version": 6,
   "tracks": 1,
-  "file_year": 2025
+  "file_year": 2025,
+  "pdf_parser_version": 2
  },
  "https://www.krn-kela.co.il/wp-content/uploads/2026/01/KL_g1433_Yield425.xlsx": {
   "legal_id": "520030941",
@@ -282,9 +295,10 @@
   "source_page": "https://www.krn-kela.co.il/%d7%94%d7%a9%d7%a7%d7%a2%d7%95%d7%aa/%d7%a4%d7%a8%d7%a1%d7%95%d7%9d-%d7%9e%d7%a8%d7%9b%d7%99%d7%91%d7%99-%d7%aa%d7%a9%d7%95%d7%90%d7%94/",
   "product": null,
   "via": "cloud",
-  "parser_version": 5,
+  "parser_version": 6,
   "tracks": 1,
-  "file_year": 2025
+  "file_year": 2025,
+  "pdf_parser_version": 2
  },
  "https://www.krn-kela.co.il/wp-content/uploads/2026/01/KL_g15482_Yield425.xlsx": {
   "legal_id": "520030941",
@@ -300,9 +314,10 @@
   "source_page": "https://www.krn-kela.co.il/%d7%94%d7%a9%d7%a7%d7%a2%d7%95%d7%aa/%d7%a4%d7%a8%d7%a1%d7%95%d7%9d-%d7%9e%d7%a8%d7%9b%d7%99%d7%91%d7%99-%d7%aa%d7%a9%d7%95%d7%90%d7%94/",
   "product": null,
   "via": "cloud",
-  "parser_version": 5,
+  "parser_version": 6,
   "tracks": 1,
-  "file_year": 2025
+  "file_year": 2025,
+  "pdf_parser_version": 2
  },
  "https://www.krn-kela.co.il/wp-content/uploads/2025/04/KL_g378_Yield125.xlsx": {
   "legal_id": "520030941",
@@ -318,9 +333,10 @@
   "source_page": "https://www.krn-kela.co.il/%d7%94%d7%a9%d7%a7%d7%a2%d7%95%d7%aa/%d7%a4%d7%a8%d7%a1%d7%95%d7%9d-%d7%9e%d7%a8%d7%9b%d7%99%d7%91%d7%99-%d7%aa%d7%a9%d7%95%d7%90%d7%94/",
   "product": null,
   "via": "cloud",
-  "parser_version": 5,
+  "parser_version": 6,
   "tracks": 1,
-  "file_year": 2025
+  "file_year": 2025,
+  "pdf_parser_version": 2
  },
  "https://www.krn-kela.co.il/wp-content/uploads/2025/04/KL_g1433_Yield125.xlsx": {
   "legal_id": "520030941",
@@ -336,9 +352,10 @@
   "source_page": "https://www.krn-kela.co.il/%d7%94%d7%a9%d7%a7%d7%a2%d7%95%d7%aa/%d7%a4%d7%a8%d7%a1%d7%95%d7%9d-%d7%9e%d7%a8%d7%9b%d7%99%d7%91%d7%99-%d7%aa%d7%a9%d7%95%d7%90%d7%94/",
   "product": null,
   "via": "cloud",
-  "parser_version": 5,
+  "parser_version": 6,
   "tracks": 1,
-  "file_year": 2025
+  "file_year": 2025,
+  "pdf_parser_version": 2
  },
  "https://www.krn-kela.co.il/wp-content/uploads/2024/07/KL_g378_Yield224-1.xlsx": {
   "legal_id": "520030941",
@@ -354,9 +371,10 @@
   "source_page": "https://www.krn-kela.co.il/%d7%94%d7%a9%d7%a7%d7%a2%d7%95%d7%aa/%d7%a4%d7%a8%d7%a1%d7%95%d7%9d-%d7%9e%d7%a8%d7%9b%d7%99%d7%91%d7%99-%d7%aa%d7%a9%d7%95%d7%90%d7%94/",
   "product": null,
   "via": "cloud",
-  "parser_version": 5,
+  "parser_version": 6,
   "tracks": 1,
-  "file_year": 2024
+  "file_year": 2024,
+  "pdf_parser_version": 2
  },
  "https://www.krn-kela.co.il/wp-content/uploads/2024/07/KL_g1433_Yield224-1.xlsx": {
   "legal_id": "520030941",
@@ -372,9 +390,10 @@
   "source_page": "https://www.krn-kela.co.il/%d7%94%d7%a9%d7%a7%d7%a2%d7%95%d7%aa/%d7%a4%d7%a8%d7%a1%d7%95%d7%9d-%d7%9e%d7%a8%d7%9b%d7%99%d7%91%d7%99-%d7%aa%d7%a9%d7%95%d7%90%d7%94/",
   "product": null,
   "via": "cloud",
-  "parser_version": 5,
+  "parser_version": 6,
   "tracks": 1,
-  "file_year": 2024
+  "file_year": 2024,
+  "pdf_parser_version": 2
  },
  "https://www.krn-kela.co.il/wp-content/uploads/2024/10/KL_g378_Yield324.xlsx": {
   "legal_id": "520030941",
@@ -390,9 +409,10 @@
   "source_page": "https://www.krn-kela.co.il/%d7%94%d7%a9%d7%a7%d7%a2%d7%95%d7%aa/%d7%a4%d7%a8%d7%a1%d7%95%d7%9d-%d7%9e%d7%a8%d7%9b%d7%99%d7%91%d7%99-%d7%aa%d7%a9%d7%95%d7%90%d7%94/",
   "product": null,
   "via": "cloud",
-  "parser_version": 5,
+  "parser_version": 6,
   "tracks": 1,
-  "file_year": 2024
+  "file_year": 2024,
+  "pdf_parser_version": 2
  },
  "https://www.krn-kela.co.il/wp-content/uploads/2024/10/KL_g1433_Yield324.xlsx": {
   "legal_id": "520030941",
@@ -408,9 +428,10 @@
   "source_page": "https://www.krn-kela.co.il/%d7%94%d7%a9%d7%a7%d7%a2%d7%95%d7%aa/%d7%a4%d7%a8%d7%a1%d7%95%d7%9d-%d7%9e%d7%a8%d7%9b%d7%99%d7%91%d7%99-%d7%aa%d7%a9%d7%95%d7%90%d7%94/",
   "product": null,
   "via": "cloud",
-  "parser_version": 5,
+  "parser_version": 6,
   "tracks": 1,
-  "file_year": 2024
+  "file_year": 2024,
+  "pdf_parser_version": 2
  },
  "https://www.krn-kela.co.il/wp-content/uploads/2025/01/KL_g378_Yield424.xlsx": {
   "legal_id": "520030941",
@@ -426,9 +447,10 @@
   "source_page": "https://www.krn-kela.co.il/%d7%94%d7%a9%d7%a7%d7%a2%d7%95%d7%aa/%d7%a4%d7%a8%d7%a1%d7%95%d7%9d-%d7%9e%d7%a8%d7%9b%d7%99%d7%91%d7%99-%d7%aa%d7%a9%d7%95%d7%90%d7%94/",
   "product": null,
   "via": "cloud",
-  "parser_version": 5,
+  "parser_version": 6,
   "tracks": 1,
-  "file_year": 2024
+  "file_year": 2024,
+  "pdf_parser_version": 2
  },
  "https://www.krn-kela.co.il/wp-content/uploads/2025/01/KL_g1433_Yield424.xlsx": {
   "legal_id": "520030941",
@@ -444,9 +466,10 @@
   "source_page": "https://www.krn-kela.co.il/%d7%94%d7%a9%d7%a7%d7%a2%d7%95%d7%aa/%d7%a4%d7%a8%d7%a1%d7%95%d7%9d-%d7%9e%d7%a8%d7%9b%d7%99%d7%91%d7%99-%d7%aa%d7%a9%d7%95%d7%90%d7%94/",
   "product": null,
   "via": "cloud",
-  "parser_version": 5,
+  "parser_version": 6,
   "tracks": 1,
-  "file_year": 2024
+  "file_year": 2024,
+  "pdf_parser_version": 2
  },
  "https://www.krn-kela.co.il/wp-content/uploads/2024/04/KL_g378_Yield124.xlsx": {
   "legal_id": "520030941",
@@ -462,9 +485,10 @@
   "source_page": "https://www.krn-kela.co.il/%d7%94%d7%a9%d7%a7%d7%a2%d7%95%d7%aa/%d7%a4%d7%a8%d7%a1%d7%95%d7%9d-%d7%9e%d7%a8%d7%9b%d7%99%d7%91%d7%99-%d7%aa%d7%a9%d7%95%d7%90%d7%94/",
   "product": null,
   "via": "cloud",
-  "parser_version": 5,
+  "parser_version": 6,
   "tracks": 1,
-  "file_year": 2024
+  "file_year": 2024,
+  "pdf_parser_version": 2
  },
  "https://www.krn-kela.co.il/wp-content/uploads/2024/04/KL_g1433_Yield124.xlsx": {
   "legal_id": "520030941",
@@ -480,9 +504,10 @@
   "source_page": "https://www.krn-kela.co.il/%d7%94%d7%a9%d7%a7%d7%a2%d7%95%d7%aa/%d7%a4%d7%a8%d7%a1%d7%95%d7%9d-%d7%9e%d7%a8%d7%9b%d7%99%d7%91%d7%99-%d7%aa%d7%a9%d7%95%d7%90%d7%94/",
   "product": null,
   "via": "cloud",
-  "parser_version": 5,
+  "parser_version": 6,
   "tracks": 1,
-  "file_year": 2024
+  "file_year": 2024,
+  "pdf_parser_version": 2
  },
  "https://www.krn-kela.co.il/wp-content/uploads/2023/07/KL_g378_Yield223.xlsx": {
   "legal_id": "520030941",
@@ -498,9 +523,10 @@
   "source_page": "https://www.krn-kela.co.il/%d7%94%d7%a9%d7%a7%d7%a2%d7%95%d7%aa/%d7%a4%d7%a8%d7%a1%d7%95%d7%9d-%d7%9e%d7%a8%d7%9b%d7%99%d7%91%d7%99-%d7%aa%d7%a9%d7%95%d7%90%d7%94/",
   "product": null,
   "via": "cloud",
-  "parser_version": 5,
+  "parser_version": 6,
   "tracks": 1,
-  "file_year": 2023
+  "file_year": 2023,
+  "pdf_parser_version": 2
  },
  "https://www.krn-kela.co.il/wp-content/uploads/2023/07/KL_g1433_Yield223.xlsx": {
   "legal_id": "520030941",
@@ -516,9 +542,10 @@
   "source_page": "https://www.krn-kela.co.il/%d7%94%d7%a9%d7%a7%d7%a2%d7%95%d7%aa/%d7%a4%d7%a8%d7%a1%d7%95%d7%9d-%d7%9e%d7%a8%d7%9b%d7%99%d7%91%d7%99-%d7%aa%d7%a9%d7%95%d7%90%d7%94/",
   "product": null,
   "via": "cloud",
-  "parser_version": 5,
+  "parser_version": 6,
   "tracks": 1,
-  "file_year": 2023
+  "file_year": 2023,
+  "pdf_parser_version": 2
  },
  "https://www.krn-kela.co.il/wp-content/uploads/2023/10/KL_g378_Yield323.xlsx": {
   "legal_id": "520030941",
@@ -534,9 +561,10 @@
   "source_page": "https://www.krn-kela.co.il/%d7%94%d7%a9%d7%a7%d7%a2%d7%95%d7%aa/%d7%a4%d7%a8%d7%a1%d7%95%d7%9d-%d7%9e%d7%a8%d7%9b%d7%99%d7%91%d7%99-%d7%aa%d7%a9%d7%95%d7%90%d7%94/",
   "product": null,
   "via": "cloud",
-  "parser_version": 5,
+  "parser_version": 6,
   "tracks": 1,
-  "file_year": 2023
+  "file_year": 2023,
+  "pdf_parser_version": 2
  },
  "https://www.krn-kela.co.il/wp-content/uploads/2023/10/KL_g1433_Yield323.xlsx": {
   "legal_id": "520030941",
@@ -552,9 +580,10 @@
   "source_page": "https://www.krn-kela.co.il/%d7%94%d7%a9%d7%a7%d7%a2%d7%95%d7%aa/%d7%a4%d7%a8%d7%a1%d7%95%d7%9d-%d7%9e%d7%a8%d7%9b%d7%99%d7%91%d7%99-%d7%aa%d7%a9%d7%95%d7%90%d7%94/",
   "product": null,
   "via": "cloud",
-  "parser_version": 5,
+  "parser_version": 6,
   "tracks": 1,
-  "file_year": 2023
+  "file_year": 2023,
+  "pdf_parser_version": 2
  },
  "https://www.krn-kela.co.il/wp-content/uploads/2024/01/KL_g378_Yield423.xlsx": {
   "legal_id": "520030941",
@@ -570,9 +599,10 @@
   "source_page": "https://www.krn-kela.co.il/%d7%94%d7%a9%d7%a7%d7%a2%d7%95%d7%aa/%d7%a4%d7%a8%d7%a1%d7%95%d7%9d-%d7%9e%d7%a8%d7%9b%d7%99%d7%91%d7%99-%d7%aa%d7%a9%d7%95%d7%90%d7%94/",
   "product": null,
   "via": "cloud",
-  "parser_version": 5,
+  "parser_version": 6,
   "tracks": 1,
-  "file_year": 2023
+  "file_year": 2023,
+  "pdf_parser_version": 2
  },
  "https://www.krn-kela.co.il/wp-content/uploads/2024/01/KL_g1433_Yield423.xlsx": {
   "legal_id": "520030941",
@@ -588,9 +618,10 @@
   "source_page": "https://www.krn-kela.co.il/%d7%94%d7%a9%d7%a7%d7%a2%d7%95%d7%aa/%d7%a4%d7%a8%d7%a1%d7%95%d7%9d-%d7%9e%d7%a8%d7%9b%d7%99%d7%91%d7%99-%d7%aa%d7%a9%d7%95%d7%90%d7%94/",
   "product": null,
   "via": "cloud",
-  "parser_version": 5,
+  "parser_version": 6,
   "tracks": 1,
-  "file_year": 2023
+  "file_year": 2023,
+  "pdf_parser_version": 2
  },
  "https://www.krn-kela.co.il/wp-content/uploads/2023/04/KL_g378_Yield123.xlsx": {
   "legal_id": "520030941",
@@ -606,9 +637,10 @@
   "source_page": "https://www.krn-kela.co.il/%d7%94%d7%a9%d7%a7%d7%a2%d7%95%d7%aa/%d7%a4%d7%a8%d7%a1%d7%95%d7%9d-%d7%9e%d7%a8%d7%9b%d7%99%d7%91%d7%99-%d7%aa%d7%a9%d7%95%d7%90%d7%94/",
   "product": null,
   "via": "cloud",
-  "parser_version": 5,
+  "parser_version": 6,
   "tracks": 1,
-  "file_year": 2023
+  "file_year": 2023,
+  "pdf_parser_version": 2
  },
  "https://www.krn-kela.co.il/wp-content/uploads/2023/04/KL_g1433_Yield123.xlsx": {
   "legal_id": "520030941",
@@ -624,9 +656,10 @@
   "source_page": "https://www.krn-kela.co.il/%d7%94%d7%a9%d7%a7%d7%a2%d7%95%d7%aa/%d7%a4%d7%a8%d7%a1%d7%95%d7%9d-%d7%9e%d7%a8%d7%9b%d7%99%d7%91%d7%99-%d7%aa%d7%a9%d7%95%d7%90%d7%94/",
   "product": null,
   "via": "cloud",
-  "parser_version": 5,
+  "parser_version": 6,
   "tracks": 1,
-  "file_year": 2023
+  "file_year": 2023,
+  "pdf_parser_version": 2
  },
  "https://www.krn-kela.co.il/wp-content/uploads/2022/07/g378_Yield222.xlsx": {
   "legal_id": "520030941",
@@ -642,9 +675,10 @@
   "source_page": "https://www.krn-kela.co.il/%d7%94%d7%a9%d7%a7%d7%a2%d7%95%d7%aa/%d7%a4%d7%a8%d7%a1%d7%95%d7%9d-%d7%9e%d7%a8%d7%9b%d7%99%d7%91%d7%99-%d7%aa%d7%a9%d7%95%d7%90%d7%94/",
   "product": null,
   "via": "cloud",
-  "parser_version": 5,
+  "parser_version": 6,
   "tracks": 1,
-  "file_year": 2022
+  "file_year": 2022,
+  "pdf_parser_version": 2
  },
  "https://www.krn-kela.co.il/wp-content/uploads/2022/07/g1433_Yield222.xlsx": {
   "legal_id": "520030941",
@@ -660,9 +694,10 @@
   "source_page": "https://www.krn-kela.co.il/%d7%94%d7%a9%d7%a7%d7%a2%d7%95%d7%aa/%d7%a4%d7%a8%d7%a1%d7%95%d7%9d-%d7%9e%d7%a8%d7%9b%d7%99%d7%91%d7%99-%d7%aa%d7%a9%d7%95%d7%90%d7%94/",
   "product": null,
   "via": "cloud",
-  "parser_version": 5,
+  "parser_version": 6,
   "tracks": 1,
-  "file_year": 2022
+  "file_year": 2022,
+  "pdf_parser_version": 2
  },
  "https://www.krn-kela.co.il/wp-content/uploads/2022/10/מרכיבי_תשואה_g378_Yield322.xlsx": {
   "legal_id": "520030941",
@@ -678,9 +713,10 @@
   "source_page": "https://www.krn-kela.co.il/%d7%94%d7%a9%d7%a7%d7%a2%d7%95%d7%aa/%d7%a4%d7%a8%d7%a1%d7%95%d7%9d-%d7%9e%d7%a8%d7%9b%d7%99%d7%91%d7%99-%d7%aa%d7%a9%d7%95%d7%90%d7%94/",
   "product": null,
   "via": "cloud",
-  "parser_version": 5,
+  "parser_version": 6,
   "tracks": 1,
-  "file_year": 2022
+  "file_year": 2022,
+  "pdf_parser_version": 2
  },
  "https://www.krn-kela.co.il/wp-content/uploads/2022/10/מרכיבי_תשואה_g1433_Yield322.xlsx": {
   "legal_id": "520030941",
@@ -696,9 +732,10 @@
   "source_page": "https://www.krn-kela.co.il/%d7%94%d7%a9%d7%a7%d7%a2%d7%95%d7%aa/%d7%a4%d7%a8%d7%a1%d7%95%d7%9d-%d7%9e%d7%a8%d7%9b%d7%99%d7%91%d7%99-%d7%aa%d7%a9%d7%95%d7%90%d7%94/",
   "product": null,
   "via": "cloud",
-  "parser_version": 5,
+  "parser_version": 6,
   "tracks": 1,
-  "file_year": 2022
+  "file_year": 2022,
+  "pdf_parser_version": 2
  },
  "https://www.krn-kela.co.il/wp-content/uploads/2023/01/KL__g378_Yield422.xlsx": {
   "legal_id": "520030941",
@@ -714,9 +751,10 @@
   "source_page": "https://www.krn-kela.co.il/%d7%94%d7%a9%d7%a7%d7%a2%d7%95%d7%aa/%d7%a4%d7%a8%d7%a1%d7%95%d7%9d-%d7%9e%d7%a8%d7%9b%d7%99%d7%91%d7%99-%d7%aa%d7%a9%d7%95%d7%90%d7%94/",
   "product": null,
   "via": "cloud",
-  "parser_version": 5,
+  "parser_version": 6,
   "tracks": 1,
-  "file_year": 2022
+  "file_year": 2022,
+  "pdf_parser_version": 2
  },
  "https://www.krn-kela.co.il/wp-content/uploads/2023/01/KL__g1433_Yield422.xlsx": {
   "legal_id": "520030941",
@@ -732,9 +770,10 @@
   "source_page": "https://www.krn-kela.co.il/%d7%94%d7%a9%d7%a7%d7%a2%d7%95%d7%aa/%d7%a4%d7%a8%d7%a1%d7%95%d7%9d-%d7%9e%d7%a8%d7%9b%d7%99%d7%91%d7%99-%d7%aa%d7%a9%d7%95%d7%90%d7%94/",
   "product": null,
   "via": "cloud",
-  "parser_version": 5,
+  "parser_version": 6,
   "tracks": 1,
-  "file_year": 2022
+  "file_year": 2022,
+  "pdf_parser_version": 2
  },
  "https://www.krn-kela.co.il/wp-content/uploads/2022/04/KL_520030941_g378_Yield122.xlsx": {
   "legal_id": "520030941",
@@ -750,9 +789,10 @@
   "source_page": "https://www.krn-kela.co.il/%d7%94%d7%a9%d7%a7%d7%a2%d7%95%d7%aa/%d7%a4%d7%a8%d7%a1%d7%95%d7%9d-%d7%9e%d7%a8%d7%9b%d7%99%d7%91%d7%99-%d7%aa%d7%a9%d7%95%d7%90%d7%94/",
   "product": null,
   "via": "cloud",
-  "parser_version": 5,
+  "parser_version": 6,
   "tracks": 1,
-  "file_year": 2022
+  "file_year": 2022,
+  "pdf_parser_version": 2
  },
  "https://www.krn-kela.co.il/wp-content/uploads/2022/04/KL_520030941_g1433_Yield122.xlsx": {
   "legal_id": "520030941",
@@ -768,9 +808,10 @@
   "source_page": "https://www.krn-kela.co.il/%d7%94%d7%a9%d7%a7%d7%a2%d7%95%d7%aa/%d7%a4%d7%a8%d7%a1%d7%95%d7%9d-%d7%9e%d7%a8%d7%9b%d7%99%d7%91%d7%99-%d7%aa%d7%a9%d7%95%d7%90%d7%94/",
   "product": null,
   "via": "cloud",
-  "parser_version": 5,
+  "parser_version": 6,
   "tracks": 1,
-  "file_year": 2022
+  "file_year": 2022,
+  "pdf_parser_version": 2
  },
  "https://www.krn-kela.co.il/wp-content/uploads/2021/08/520030941_g378_Yield221.xlsx": {
   "legal_id": "520030941",
@@ -786,9 +827,10 @@
   "source_page": "https://www.krn-kela.co.il/%d7%94%d7%a9%d7%a7%d7%a2%d7%95%d7%aa/%d7%a4%d7%a8%d7%a1%d7%95%d7%9d-%d7%9e%d7%a8%d7%9b%d7%99%d7%91%d7%99-%d7%aa%d7%a9%d7%95%d7%90%d7%94/",
   "product": null,
   "via": "cloud",
-  "parser_version": 5,
+  "parser_version": 6,
   "tracks": 1,
-  "file_year": 2021
+  "file_year": 2021,
+  "pdf_parser_version": 2
  },
  "https://www.krn-kela.co.il/wp-content/uploads/2021/08/520030941_g1433_Yield221.xlsx": {
   "legal_id": "520030941",
@@ -804,9 +846,10 @@
   "source_page": "https://www.krn-kela.co.il/%d7%94%d7%a9%d7%a7%d7%a2%d7%95%d7%aa/%d7%a4%d7%a8%d7%a1%d7%95%d7%9d-%d7%9e%d7%a8%d7%9b%d7%99%d7%91%d7%99-%d7%aa%d7%a9%d7%95%d7%90%d7%94/",
   "product": null,
   "via": "cloud",
-  "parser_version": 5,
+  "parser_version": 6,
   "tracks": 1,
-  "file_year": 2021
+  "file_year": 2021,
+  "pdf_parser_version": 2
  },
  "https://www.krn-kela.co.il/wp-content/uploads/2021/10/520030941_g378_Yield321.xlsx": {
   "legal_id": "520030941",
@@ -822,9 +865,10 @@
   "source_page": "https://www.krn-kela.co.il/%d7%94%d7%a9%d7%a7%d7%a2%d7%95%d7%aa/%d7%a4%d7%a8%d7%a1%d7%95%d7%9d-%d7%9e%d7%a8%d7%9b%d7%99%d7%91%d7%99-%d7%aa%d7%a9%d7%95%d7%90%d7%94/",
   "product": null,
   "via": "cloud",
-  "parser_version": 5,
+  "parser_version": 6,
   "tracks": 1,
-  "file_year": 2021
+  "file_year": 2021,
+  "pdf_parser_version": 2
  },
  "https://www.krn-kela.co.il/wp-content/uploads/2021/10/520030941_g1433_Yield321.xlsx": {
   "legal_id": "520030941",
@@ -840,9 +884,10 @@
   "source_page": "https://www.krn-kela.co.il/%d7%94%d7%a9%d7%a7%d7%a2%d7%95%d7%aa/%d7%a4%d7%a8%d7%a1%d7%95%d7%9d-%d7%9e%d7%a8%d7%9b%d7%99%d7%91%d7%99-%d7%aa%d7%a9%d7%95%d7%90%d7%94/",
   "product": null,
   "via": "cloud",
-  "parser_version": 5,
+  "parser_version": 6,
   "tracks": 1,
-  "file_year": 2021
+  "file_year": 2021,
+  "pdf_parser_version": 2
  },
  "https://www.krn-kela.co.il/wp-content/uploads/2021/04/g378_Yield121.xlsx": {
   "legal_id": "520030941",
@@ -858,9 +903,10 @@
   "source_page": "https://www.krn-kela.co.il/%d7%94%d7%a9%d7%a7%d7%a2%d7%95%d7%aa/%d7%a4%d7%a8%d7%a1%d7%95%d7%9d-%d7%9e%d7%a8%d7%9b%d7%99%d7%91%d7%99-%d7%aa%d7%a9%d7%95%d7%90%d7%94/",
   "product": null,
   "via": "cloud",
-  "parser_version": 5,
+  "parser_version": 6,
   "tracks": 1,
-  "file_year": 2021
+  "file_year": 2021,
+  "pdf_parser_version": 2
  },
  "https://www.krn-kela.co.il/wp-content/uploads/2021/04/g1433_Yield121.xlsx": {
   "legal_id": "520030941",
@@ -876,8 +922,9 @@
   "source_page": "https://www.krn-kela.co.il/%d7%94%d7%a9%d7%a7%d7%a2%d7%95%d7%aa/%d7%a4%d7%a8%d7%a1%d7%95%d7%9d-%d7%9e%d7%a8%d7%9b%d7%99%d7%91%d7%99-%d7%aa%d7%a9%d7%95%d7%90%d7%94/",
   "product": null,
   "via": "cloud",
-  "parser_version": 5,
+  "parser_version": 6,
   "tracks": 1,
-  "file_year": 2021
+  "file_year": 2021,
+  "pdf_parser_version": 2
  }
 }
