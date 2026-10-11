@@ -29,6 +29,9 @@ def main():
         lid = c["legal_id"]
         if (a.only and lid not in a.only) or (not a.only and c.get("via") != "extension"):
             continue
+        if c.get("returns_skip_home") and not a.only:  # אתר שחסום גם בדפדפן הביתי (למשל ShieldSquare) - לא מבזבזים עליו 30 דקות בכל ריצה
+            print(f"[{lid}] skipped (returns_skip_home): {c['returns_skip_home']}", flush=True)
+            continue
         work = RET / "_home" / lid
         shutil.rmtree(work, ignore_errors=True)
         work.mkdir(parents=True)
@@ -45,8 +48,9 @@ def main():
             r = subprocess.run([sys.executable, "-m", "scripts.returns.crawl", "--only", lid], cwd=ROOT, env=env, creationflags=LOW_PRIORITY,
                                capture_output=True, text=True, encoding="utf-8", errors="replace", timeout=a.timeout_min * 60)
             print((r.stdout + r.stderr)[-600:], flush=True)
-        except subprocess.TimeoutExpired:
-            print(f"[{lid}] timeout", flush=True)
+        except subprocess.TimeoutExpired as e:  # הפלט החלקי - כדי לראות איפה הסריקה נתקעה
+            out = e.stdout.decode("utf-8", "replace") if isinstance(e.stdout, bytes) else (e.stdout or "")
+            print(f"[{lid}] timeout after {a.timeout_min} min\n{out[-1500:]}", flush=True)
         after = json.loads((work / "docs_index.json").read_text("utf-8")) if (work / "docs_index.json").exists() else {}
         n = 0
         for url, ent in after.items():

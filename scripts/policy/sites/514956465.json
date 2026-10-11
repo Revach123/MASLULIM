@@ -17,7 +17,38 @@
  "rev": 5,
  "via": "extension",
  "any_sheet": true,
- "returns_follow": "moreinvest\\.co\\.il/(מוצרים|%D7%9E%D7%95%D7%A6%D7%A8%D7%99%D7%9D)/[^?#]*(גמל|פנסיה|השתלמות|דוחות|תשואות|%D7%92%D7%9E%D7%9C|%D7%A4%D7%A0%D7%A1%D7%99%D7%94|%D7%93%D7%95%D7%97%D7%95%D7%AA)",
- "returns_max_pages": 80,
- "returns_cloud": false
+ "returns_follow": "moreinvest\\.co\\.il/(מוצרים|%D7%9E%D7%95%D7%A6%D7%A8%D7%99%D7%9D)/[^?#]*(רשימת-מסלולים|%D7%A8%D7%A9%D7%99%D7%9E%D7%AA-%D7%9E%D7%A1%D7%9C%D7%95%D7%9C%D7%99%D7%9D)[^?#]*/[^/?#]+/?$",
+ "returns_max_pages": 40,
+ "returns_cloud": false,
+ "returns_pages": [
+  {
+   "product": "גמל",
+   "url": "https://www.moreinvest.co.il/מוצרים/גמל-ופנסיה/קרנות-השתלמות/רשימת-מסלולים-רשימות-השתלמות/"
+  },
+  {
+   "product": "גמל",
+   "url": "https://www.moreinvest.co.il/מוצרים/גמל-ופנסיה/קרנות-השתלמות/"
+  },
+  {
+   "product": "גמל",
+   "url": "https://www.moreinvest.co.il/מוצרים/גמל-ופנסיה/קופות-גמל/"
+  },
+  {
+   "product": "גמל",
+   "url": "https://www.moreinvest.co.il/מוצרים/גמל-ופנסיה/קרנות-פנסיה/"
+  }
+ ],
+ "returns_crawl_budget": 1500,
+ "returns_click_texts": [
+  "מרכיבי תשואה",
+  "2026",
+  "2025",
+  "2024",
+  "2023",
+  "2022",
+  "2021",
+  "2020"
+ ],
+ "returns_text": "רבעון\\s*(ראשון|שני|שלישי|רביעי|[1-4])",
+ "note": "2026-10-11: returns - עמוד לכל מסלול תחת .../רשימת-מסלולים-.../<מסלול>/ עם סעיפים 'דו\"ח חודשי' / 'רשימת נכסים' / 'מרכיבי תשואה' ואז שנים ורבעונים (קבצי xls). seeds לפי תיאור המשתמש - לא נבדק (האתר חוסם ענן)"
 }
