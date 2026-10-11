@@ -588,8 +588,27 @@ def read_xlsx_raw(path: Path):
     return text, tables, names
 
 
+def _holdings_workbook(path):
+    """חוברת עם 15+ גיליונות שאין בה מילת "תרומה" בטקסטים - רשימת נכסים/דוח רבעוני מלא (מור: 34 גיליונות, 4MB, גיליון של 11MB),
+    לא מרכיבי תשואה. בדיקה מהירה של sharedStrings בלי לפתוח את החוברת (openpyxl על הקובץ הזה לוקח יותר מ-2 דקות)."""
+    if path.suffix.lower() not in (".xlsx", ".xlsm"):
+        return False
+    try:
+        import zipfile
+        with zipfile.ZipFile(path) as z:
+            names = z.namelist()
+            if sum(1 for n in names if n.startswith("xl/worksheets/sheet")) < 15 or "xl/sharedStrings.xml" not in names:
+                return False
+            ss = z.read("xl/sharedStrings.xml").decode("utf-8", "ignore")
+        return not (CONTRIB_RX.search(ss) or TITLE_RX.search(ss))
+    except Exception:
+        return False
+
+
 def parse_file(path, link_text=""):
     path = Path(path)
+    if _holdings_workbook(path):
+        return {"blocks": [], "nostro": [], "hints": {}, "file_year": None, "warnings": [], "is_returns": False}
     try:
         text, tables, names = read_doc(path)
     except Exception:
