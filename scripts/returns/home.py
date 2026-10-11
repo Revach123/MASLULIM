@@ -3,7 +3,7 @@
 רץ על ה-runner הביתי (Revach: .github/workflows/policy-home.yml) אחרי סריקת המדיניות. לכל אתר: scripts.returns.crawl לתיקייה
 זמנית (returns/_home/<LegalId>) שמתחילה מה-docs_index הקיים - קבצים שכבר נאספו לא נשלחים שוב. כל קובץ חדש נכתב ל-
 policy/inbox/<LegalId>/returns/ עם קובץ meta - נדחף יחד עם תיבת המדיניות, ונקלט ב-policy_inbox.yml (scripts.returns.ingest).
-הרצה: python -m scripts.returns.home [--only LEGAL_ID ...] [--timeout-min 30]
+הרצה: python -m scripts.returns.home [--only LEGAL_ID ...] [--timeout-min 50]
 """
 import argparse, json, os, shutil, subprocess, sys
 from datetime import datetime, timezone
@@ -18,7 +18,7 @@ LOW_PRIORITY = 0x00004000 if os.name == "nt" else 0  # Windows BELOW_NORMAL_PRIO
 def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--only", nargs="*")
-    ap.add_argument("--timeout-min", type=int, default=30)
+    ap.add_argument("--timeout-min", type=int, default=50)
     a = ap.parse_args()
     known = set()
     for p in (RET / "companies").glob("*/docs_index.json"):
