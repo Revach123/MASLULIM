@@ -2,10 +2,10 @@
  "totals": {
   "companies": 76,
   "with_data": 58,
-  "tracks": 1153,
+  "tracks": 1248,
   "registry_tracks": 1289,
-  "registry_found": 713,
-  "docs": 8668
+  "registry_found": 776,
+  "docs": 8788
  },
  "companies": [
   {
@@ -128,14 +128,14 @@
   {
    "legal_id": "512065202",
    "company": "מיטב גמל ופנסיה בע\"מ",
-   "tracks": 25,
-   "tracks_numbered": 25,
+   "tracks": 120,
+   "tracks_numbered": 111,
    "registry_tracks": 103,
-   "registry_found": 16,
-   "registry_coverage": 15.5,
+   "registry_found": 79,
+   "registry_coverage": 76.7,
    "first_month": "2020-01",
    "last_month": "2026-06",
-   "docs_returns": 42,
+   "docs_returns": 162,
    "nostro": false
   },
   {

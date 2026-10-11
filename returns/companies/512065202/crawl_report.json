@@ -1,28 +1,26 @@
 {
  "legal_id": "512065202",
  "company": "מיטב גמל ופנסיה בע\"מ",
- "run": "2026-10-10T11:24:54+00:00",
- "errors": [
-  "download budget reached - ממשיכים בריצה הבאה"
- ],
+ "run": "2026-10-11T09:00:22+00:00",
+ "errors": [],
  "seeds": {
-  "config": 9,
+  "config": 7,
   "discovered": 0,
   "policy_snapshot": 0,
   "policy_snapshot_docs": 0,
   "sitemap": 0
  },
  "imported_from_policy": 0,
- "pages": 90,
+ "pages": 22,
  "pages_failed": [
-  "https://accounts.google.com/gsi/button?logo_alignment=center&shape=pill&size=large&text=continue_with&theme=outline&type=standard&width=400px&client_id=990339570472-k6nqn1tpmitg8pui82bfaun3jrpmiuhs.apps.googleusercontent.com&iframe_id=gsi_495935_623437&as=oIa0oBU5SuNU2sOYe8hBSQ&hl=he-IL: 400",
-  "https://accounts.google.com/gsi/button?logo_alignment=center&shape=pill&size=large&text=continue_with&theme=outline&type=standard&width=400px&client_id=990339570472-k6nqn1tpmitg8pui82bfaun3jrpmiuhs.apps.googleusercontent.com&iframe_id=gsi_495914_113328&as=kHKqkSZT2YMbKEew%2Bfjrbw&hl=he-IL: 400",
-  "https://accounts.google.com/gsi/button?logo_alignment=center&shape=pill&size=large&text=continue_with&theme=outline&type=standard&width=400px&client_id=990339570472-k6nqn1tpmitg8pui82bfaun3jrpmiuhs.apps.googleusercontent.com&iframe_id=gsi_741220_136125&as=5fLMYf%2BJqIYJAOIkbFLVGQ&hl=he-IL: 400",
-  "https://accounts.google.com/gsi/button?logo_alignment=center&shape=pill&size=large&text=continue_with&theme=outline&type=standard&width=400px&client_id=990339570472-k6nqn1tpmitg8pui82bfaun3jrpmiuhs.apps.googleusercontent.com&iframe_id=gsi_741198_529924&as=563p%2BhCcScZeD8nY2osPTw&hl=he-IL: 400"
+  "https://www.meitav.co.il/provident_pension/gemel_report_articles/: 404",
+  "https://www.meitav.co.il/provident_pension/hishtalmut_report_articles/: 404",
+  "https://www.meitav.co.il/provident_pension/kids_report_articles/: 404",
+  "https://www.meitav.co.il/provident_pension/invest_report_articles/: 404"
  ],
- "candidates": 316,
- "docs": 0,
- "new_docs": 0,
- "index_size": 424,
- "seconds": 2057
+ "candidates": 1503,
+ "docs": 1503,
+ "new_docs": 1187,
+ "index_size": 1611,
+ "seconds": 1908
 }
