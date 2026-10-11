@@ -1,6 +1,8 @@
 """סיווג קרנות "חוץ" למניות/אג"ח - כל השכבות לפי סדר, משותף ל-main ול-validate_equity_exposure.
 
 1. מאגרים קבועים: אוניברסיטת ה-ETF של revach + חשיפת SEC (build_isin_fractions).
+1ב. הרישום האמריקאי של revach (us_registry_reference: רשימות SEC מסודרות, N-PORT, בלי הסקה משם) - קודם
+   לכל סיווג לפי שם; לא דורס את שכבה 1.
 2. השם בדוח (classify_from_report_names) והשם הרשמי במאגרים (classify_from_registry_names).
 3. שכבות רשת על מה שחסר: SEC N-PORT חי, Yahoo/Morningstar, FT (קרנות נאמנות זרות - פילוח נכסים /
    קטגוריית Morningstar), OpenFIGI (שם מלא / סוג נייר).
@@ -20,6 +22,7 @@ import re
 from collections import Counter
 from pathlib import Path
 
+from .us_registry_reference import fetch_us_registry, registry_fractions, registry_leveraged_isins
 from .foreign_etf_reference import (
     build_isin_fractions, classify_from_registry_names, classify_from_report_names, classify_via_openfigi_names,
     collect_unclassified_foreign_isins, fetch_etf_universe, fetch_sec_etf_exposure, fetch_us_security_names,
@@ -134,14 +137,39 @@ def _online_layers():
     return (("N-PORT חי", nport), ("Yahoo/Morningstar", yahoo), ("FT", ft), ("OpenFIGI", classify_via_openfigi_names))
 
 
+def _side(frac: dict[str, float]) -> str:
+    eq, bd = frac.get("equity") or 0.0, frac.get("bond") or 0.0
+    return "equity" if eq > bd and eq >= 0.5 else "bond" if bd > eq and bd >= 0.5 else "other"
+
+
+def _report_registry_vs_names(tag: str, reg_fractions: dict, by_report_name: dict, official_names: dict) -> None:
+    """מדד לשבירות הסיווג לפי שם: ISIN שהרישום (N-PORT) והסיווג לפי שם הדוח חלוקים עליו."""
+    both = [i for i in reg_fractions if i in by_report_name]
+    diff = [i for i in both if _side(reg_fractions[i]) != _side(by_report_name[i])]
+    print(f"[{tag}] רישום מול סיווג לפי שם הדוח: {len(both)} ISIN משותפים, {len(diff)} חלוקים"
+          + (": " + "; ".join(f"{i} ({official_names.get(i, '')[:28]}) רישום={_side(reg_fractions[i])} שם={_side(by_report_name[i])}"
+                              for i in sorted(diff)[:10]) if diff else ""))
+
+
 def build_foreign_fractions(source: list[dict], funds: list[dict], tag: str, cache_path: Path = CACHE_PATH):
     """-> (isin_fractions, etf_universe, sec_exposure, official_names)."""
     etf_universe = fetch_etf_universe()
     sec_exposure = fetch_sec_etf_exposure()
     official_names = official_fund_names(etf_universe, sec_exposure, fetch_us_security_names())
     isin_fractions = build_isin_fractions(etf_universe, sec_exposure)
-    strong = set(isin_fractions)  # אוניברסיטת ה-ETF / SEC - לא נדרסים ע"י סיווג הדוח
-    for isin, frac in classify_from_report_names(source).items():
+    # הרישום האמריקאי (רשימות SEC מסודרות) - לפני כל סיווג לפי שם; לא דורס את המאגרים של שכבה 1
+    registry = fetch_us_registry()
+    reg_fractions = registry_fractions(registry)
+    added = 0
+    for isin, frac in reg_fractions.items():
+        if isin not in isin_fractions:
+            isin_fractions[isin] = frac
+            added += 1
+    print(f"[{tag}] הרישום האמריקאי: {len(reg_fractions)} ISIN עם חשיפה, {added} חדשים מעבר לשכבה 1")
+    strong = set(isin_fractions)  # אוניברסיטת ה-ETF / SEC / הרישום - לא נדרסים ע"י סיווג הדוח
+    by_report_name = classify_from_report_names(source)
+    _report_registry_vs_names(tag, reg_fractions, by_report_name, official_names)
+    for isin, frac in by_report_name.items():
         isin_fractions.setdefault(isin, frac)
     missing = collect_unclassified_foreign_isins(funds, isin_fractions)
     for isin, frac in classify_from_registry_names(missing, official_names).items():
@@ -188,6 +216,7 @@ def build_foreign_fractions(source: list[dict], funds: list[dict], tag: str, cac
         if good in official_names:
             official_names.setdefault(bad, official_names[good])
     print(f"[{tag}] {len(repaired)} ISIN עם טעות בקידומת המדינה (ספרת ביקורת) - סווגו לפי המתוקן: {repaired}")
-    fixed = sanitize_fractions(isin_fractions, source)
+    fixed = sanitize_fractions(isin_fractions, source, leveraged_isins=registry_leveraged_isins(registry),
+                               registry_isins=set(reg_fractions))
     print(f"[{tag}] {len(fixed)} ISIN עם שבר מניות > 1 בקרן לא ממונפת - נורמלו: {fixed[:10]}")
     return isin_fractions, etf_universe, sec_exposure, official_names

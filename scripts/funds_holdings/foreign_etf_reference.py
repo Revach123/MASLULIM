@@ -484,11 +484,14 @@ _LEVERAGED_NAME = re.compile(r"ULTRA|\b[23]X\b|LEVERAG|\bBULL\b|DAILY\s+\d", re.
 MAX_UNLEVERED_EQUITY = 1.05
 
 
-def sanitize_fractions(isin_fractions: dict[str, dict[str, float]], source: list[dict]) -> list[str]:
+def sanitize_fractions(isin_fractions: dict[str, dict[str, float]], source: list[dict],
+                       leveraged_isins: set[str] | frozenset = frozenset(),
+                       registry_isins: set[str] | frozenset = frozenset()) -> list[str]:
     """שבר מניות מעל 1 בקרן לא ממונפת הוא שגיאת מקור (US4642867729, iShares MSCI South
     Korea: equity=13.07 משכבות ה-CI - 26% משקל מצטבר במסלולים, 11 נק' בכל מסלול
     "כללי" של מיטב). מנרמל: מניות ואג"ח מחולקים בסכומם (אג"ח שלילי נחשב 0) כך שמניות
-    <= 1. קרן ממונפת (לפי השם בדוח) נשארת כמו שהיא. מחזיר את ה-ISIN שתוקנו."""
+    <= 1. קרן ממונפת נשארת כמו שהיא: לפי הרישום האמריקאי (דגל N-CEN, leveraged_isins) כשה-ISIN מוכר
+    לו, ורק אחרת לפי שם הדוח (regex). מחזיר את ה-ISIN שתוקנו."""
     names: dict[str, str] = {}
     for rec in source:
         if rec.get("Category") in ("קרנות נאמנות", "קרנות סל"):
@@ -500,7 +503,9 @@ def sanitize_fractions(isin_fractions: dict[str, dict[str, float]], source: list
     fixed = []
     for isin, frac in isin_fractions.items():
         eq = frac.get("equity") or 0.0
-        if eq <= MAX_UNLEVERED_EQUITY or _LEVERAGED_NAME.search(names.get(isin, "")):
+        if eq <= MAX_UNLEVERED_EQUITY or isin in leveraged_isins:
+            continue
+        if isin not in registry_isins and _LEVERAGED_NAME.search(names.get(isin, "")):
             continue
         if frac.get("synth"):
             # מניות פיזיות + דרך סוואפ >= 100% (MAGS: 43% + 66%, אג"ח 53%): האג"ח הן בטוחה לסוואפ
