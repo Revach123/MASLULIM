@@ -1,7 +1,7 @@
 {
  "legal_id": "512245812",
  "company": "מנורה מבטחים פנסיה וגמל בע\"מ",
- "run": "2026-10-11T11:38:40+00:00",
+ "run": "2026-10-12T13:33:30+00:00",
  "errors": [
   "https://www.menoramivt.co.il/funds/512245812_g13874_Yield322.xlsx -> 404",
   "https://www.menoramivt.co.il/funds/512245812_g13873_Yield322.xlsx -> 404",
@@ -19,18 +19,17 @@
   "sion-and-gemel/gemel-hishtalmut-list/menroa-keren-hishtalmut/512245812_g1114_Yield322.xlsx -> 404",
   "ion-and-gemel/gemel-hishtalmut-list/menroa-keren-hishtalmut/512245812_g11409_Yield322.xlsx -> 404",
   "sion-and-gemel/gemel-hishtalmut-list/menroa-keren-hishtalmut/512245812_g9662_Yield322.xlsx -> 404",
-  "https://www.menoramivt.co.il/funds/pension-and-gemel/gemel/512245812_g9662_Yield322.xlsx -> 404",
-  "https://www.menoramivt.co.il/funds/512245812_g13946_Yield322.xlsx -> 404"
+  "https://www.menoramivt.co.il/funds/pension-and-gemel/gemel/512245812_g9662_Yield322.xlsx -> 404"
  ],
  "seeds": {
   "config": 0,
   "discovered": 17,
   "policy_snapshot": 85,
-  "policy_snapshot_docs": 547,
+  "policy_snapshot_docs": 528,
   "sitemap": 2
  },
  "imported_from_policy": 0,
- "pages": 37,
+ "pages": 36,
  "pages_failed": [
   "https://www.menoramivt.co.il/funds/: 404",
   "https://www.menoramivt.co.il/funds/pension-and-gemel/pension-plans/: 404",
@@ -40,9 +39,9 @@
   "https://www.menoramivt.co.il/list/pension-member-info/: 404",
   "https://www.menoramivt.co.il/funds/pension-and-gemel/gemel-hishtalmut-list/top-savings/: 404"
  ],
- "candidates": 730,
- "docs": 712,
+ "candidates": 711,
+ "docs": 694,
  "new_docs": 0,
  "index_size": 712,
- "seconds": 1565
+ "seconds": 1532
 }
