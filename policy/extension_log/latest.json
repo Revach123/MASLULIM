@@ -1,7 +1,7 @@
 {
  "extension_version": "2.52.0",
  "started": "2026-10-12T03:23:36.113Z",
- "updated": "2026-10-12T06:25:06.411Z",
+ "updated": "2026-10-12T06:28:06.410Z",
  "final": false,
  "stopped": false,
  "rules_from_github": true,
@@ -22,7 +22,7 @@
   "page_cache_days": 3
  },
  "total_sites": 14,
- "done_sites": 12,
+ "done_sites": 13,
  "new_docs": 0,
  "skipped_complete": [
   {
@@ -40,11 +40,11 @@
  ],
  "active": [
   {
-   "name": "החברה המנהלת של מינהל קרן ההשתלמות לפקידים עובדי המנהל והשירותים בע\"מ",
-   "page": "https://minhal.org/%d7%94%d7%a8%d7%9b%d7%91-%d7%a0%d7%9b%d7%a1%d7%99%d7%9d/%d7%9e%d7%a1%d7%9c%d7%95%d7%9c-%d7%9e%d7%99%d7%a0%d7%94%d7%9c-%d7%9e%d7%a0%d7%99%d7%95%d7%aa/",
-   "page_no": 5,
-   "pages": 7,
-   "step": "פותח אקורדיונים ואוסף קישורים"
+   "name": "החברה המנהלת של רום קרן ההשתלמות לעובדי הרשויות המקומיות בע\"מ",
+   "page": "https://www.krm.co.il/?CategoryID=217&ArticleID=5",
+   "page_no": 4,
+   "pages": 5,
+   "step": "לוחץ על כפתורי הורדה"
   }
  ],
  "sites": [
@@ -33195,6 +33195,172 @@
     "   ? אמנת-השירות-גמל-2026.pdf | לאמנת השירות לחצו כאן | ",
     "איילון חברה לביטוח: links=67 files=0 clicked=0 captured=0 selected=0",
     "איילון חברה לביטוח: links=66 files=0 clicked=0 captured=0 selected=0"
+   ],
+   "new_files": []
+  },
+  {
+   "legal_id": "520030990",
+   "name": "החברה המנהלת של מינהל קרן ההשתלמות לפקידים עובדי המנהל והשירותים בע\"מ",
+   "pages": [
+    {
+     "url": "https://minhal.org/הרכב-נכסים/",
+     "cache": "weekly-full",
+     "links": 268,
+     "followed": [
+      "https://minhal.org/%d7%94%d7%a8%d7%9b%d7%91-%d7%a0%d7%9b%d7%a1%d7%99%d7%9d/%d7%9e%d7%a1%d7%9c%d7%95%d7%9c-%d7%9e%d7%99%d7%a0%d7%94%d7%9c-%d7%9b%d7%9c%d7%9c%d7%99/",
+      "https://minhal.org/%d7%94%d7%a8%d7%9b%d7%91-%d7%a0%d7%9b%d7%a1%d7%99%d7%9d/%d7%9e%d7%a1%d7%9c%d7%95%d7%9c-%d7%90%d7%a9%d7%a8%d7%90%d7%99-%d7%95%d7%90%d7%92%d7%97/",
+      "https://minhal.org/%d7%94%d7%a8%d7%9b%d7%91-%d7%a0%d7%9b%d7%a1%d7%99%d7%9d/%d7%9e%d7%a1%d7%9c%d7%95%d7%9c-%d7%9e%d7%99%d7%a0%d7%94%d7%9c-%d7%9e%d7%a0%d7%99%d7%95%d7%aa/",
+      "https://minhal.org/%d7%94%d7%a8%d7%9b%d7%91-%d7%a0%d7%9b%d7%a1%d7%99%d7%9d/%d7%9e%d7%a1%d7%9c%d7%95%d7%9c-%d7%9e%d7%99%d7%a0%d7%94%d7%9c-%d7%94%d7%9c%d7%9b%d7%94/",
+      "https://minhal.org/%d7%94%d7%a8%d7%9b%d7%91-%d7%a0%d7%9b%d7%a1%d7%99%d7%9d/%d7%9e%d7%a1%d7%9c%d7%95%d7%9c-%d7%a2%d7%95%d7%a7%d7%91-%d7%9e%d7%93%d7%93-500-ps/"
+     ],
+     "files": 1,
+     "clicked": 0,
+     "captured": 0,
+     "selected": [],
+     "unselected_files": [
+      {
+       "file": "https://minhal.org/wp-content/uploads/2026/08/מדיניות-פרטיות.pdf",
+       "text": "מדיניות פרטיות",
+       "ctx": ""
+      }
+     ]
+    },
+    {
+     "url": "https://minhal.org/הרכב-נכסים/מסלול-עוקב-מדד-500-ps/",
+     "cache": "weekly-full",
+     "links": 268,
+     "followed": [],
+     "files": 1,
+     "clicked": 0,
+     "captured": 0,
+     "selected": [],
+     "unselected_files": [
+      {
+       "file": "https://minhal.org/wp-content/uploads/2026/08/מדיניות-פרטיות.pdf",
+       "text": "מדיניות פרטיות",
+       "ctx": ""
+      }
+     ]
+    },
+    {
+     "url": "https://minhal.org/%d7%94%d7%a8%d7%9b%d7%91-%d7%a0%d7%9b%d7%a1%d7%99%d7%9d/%d7%9e%d7%a1%d7%9c%d7%95%d7%9c-%d7%9e%d7%99%d7%a0%d7%94%d7%9c-%d7%9b%d7%9c%d7%9c%d7%99/",
+     "cache": "weekly-full",
+     "links": 268,
+     "followed": [],
+     "files": 1,
+     "clicked": 0,
+     "captured": 0,
+     "selected": [],
+     "unselected_files": [
+      {
+       "file": "https://minhal.org/wp-content/uploads/2026/08/מדיניות-פרטיות.pdf",
+       "text": "מדיניות פרטיות",
+       "ctx": ""
+      }
+     ]
+    },
+    {
+     "url": "https://minhal.org/%d7%94%d7%a8%d7%9b%d7%91-%d7%a0%d7%9b%d7%a1%d7%99%d7%9d/%d7%9e%d7%a1%d7%9c%d7%95%d7%9c-%d7%90%d7%a9%d7%a8%d7%90%d7%99-%d7%95%d7%90%d7%92%d7%97/",
+     "cache": "weekly-full",
+     "links": 268,
+     "followed": [],
+     "files": 1,
+     "clicked": 0,
+     "captured": 0,
+     "selected": [],
+     "unselected_files": [
+      {
+       "file": "https://minhal.org/wp-content/uploads/2026/08/מדיניות-פרטיות.pdf",
+       "text": "מדיניות פרטיות",
+       "ctx": ""
+      }
+     ]
+    },
+    {
+     "url": "https://minhal.org/%d7%94%d7%a8%d7%9b%d7%91-%d7%a0%d7%9b%d7%a1%d7%99%d7%9d/%d7%9e%d7%a1%d7%9c%d7%95%d7%9c-%d7%9e%d7%99%d7%a0%d7%94%d7%9c-%d7%9e%d7%a0%d7%99%d7%95%d7%aa/",
+     "cache": "weekly-full",
+     "links": 268,
+     "followed": [],
+     "files": 1,
+     "clicked": 0,
+     "captured": 0,
+     "selected": [],
+     "unselected_files": [
+      {
+       "file": "https://minhal.org/wp-content/uploads/2026/08/מדיניות-פרטיות.pdf",
+       "text": "מדיניות פרטיות",
+       "ctx": ""
+      }
+     ]
+    },
+    {
+     "url": "https://minhal.org/%d7%94%d7%a8%d7%9b%d7%91-%d7%a0%d7%9b%d7%a1%d7%99%d7%9d/%d7%9e%d7%a1%d7%9c%d7%95%d7%9c-%d7%9e%d7%99%d7%a0%d7%94%d7%9c-%d7%94%d7%9c%d7%9b%d7%94/",
+     "cache": "weekly-full",
+     "links": 268,
+     "followed": [],
+     "files": 1,
+     "clicked": 0,
+     "captured": 0,
+     "selected": [],
+     "unselected_files": [
+      {
+       "file": "https://minhal.org/wp-content/uploads/2026/08/מדיניות-פרטיות.pdf",
+       "text": "מדיניות פרטיות",
+       "ctx": ""
+      }
+     ]
+    },
+    {
+     "url": "https://minhal.org/%d7%94%d7%a8%d7%9b%d7%91-%d7%a0%d7%9b%d7%a1%d7%99%d7%9d/%d7%9e%d7%a1%d7%9c%d7%95%d7%9c-%d7%a2%d7%95%d7%a7%d7%91-%d7%9e%d7%93%d7%93-500-ps/",
+     "cache": "hit",
+     "links": 94,
+     "followed": [],
+     "files": 1,
+     "clicked": 0,
+     "captured": 0,
+     "selected": [],
+     "unselected_files": [
+      {
+       "file": "https://minhal.org/wp-content/uploads/2026/08/מדיניות-פרטיות.pdf",
+       "text": "מדיניות פרטיות",
+       "ctx": ""
+      }
+     ]
+    }
+   ],
+   "new_docs": 0,
+   "found": 7,
+   "selected": 0,
+   "had": 0,
+   "head_skip": 0,
+   "cache_weekly-full": 6,
+   "page_cache": 1,
+   "cache_hit": 1,
+   "mode": "map",
+   "errors": [
+    "https://minhal.org/הרכב-נכסים/: timeout 90s: pageCollectLinks -> light collect",
+    "https://minhal.org/הרכב-נכסים/מסלול-עוקב-מדד-500-ps/: timeout 90s: pageCollectLinks -> light collect",
+    "https://minhal.org/%d7%94%d7%a8%d7%9b%d7%91-%d7%a0%d7%9b%d7%a1%d7%99%d7%9d/%d7%9e%d7%a1%d7%9c%d7%95%d7%9c-%d7%9e%d7%99%d7%a0%d7%94%d7%9c-%d7%9b%d7%9c%d7%9c%d7%99/: timeout 90s: pageCollectLinks -> light collect",
+    "https://minhal.org/%d7%94%d7%a8%d7%9b%d7%91-%d7%a0%d7%9b%d7%a1%d7%99%d7%9d/%d7%9e%d7%a1%d7%9c%d7%95%d7%9c-%d7%90%d7%a9%d7%a8%d7%90%d7%99-%d7%95%d7%90%d7%92%d7%97/: timeout 90s: pageCollectLinks -> light collect",
+    "https://minhal.org/%d7%94%d7%a8%d7%9b%d7%91-%d7%a0%d7%9b%d7%a1%d7%99%d7%9d/%d7%9e%d7%a1%d7%9c%d7%95%d7%9c-%d7%9e%d7%99%d7%a0%d7%94%d7%9c-%d7%9e%d7%a0%d7%99%d7%95%d7%aa/: timeout 90s: pageCollectLinks -> light collect",
+    "https://minhal.org/%d7%94%d7%a8%d7%9b%d7%91-%d7%a0%d7%9b%d7%a1%d7%99%d7%9d/%d7%9e%d7%a1%d7%9c%d7%95%d7%9c-%d7%9e%d7%99%d7%a0%d7%94%d7%9c-%d7%94%d7%9c%d7%9b%d7%94/: timeout 90s: pageCollectLinks -> light collect"
+   ],
+   "diag": [
+    "החברה המנהלת של מי: wp-media 0 files",
+    "החברה המנהלת של מי: links=268 files=1 clicked=0 captured=0 selected=0",
+    "   ? מדיניות-פרטיות.pdf | מדיניות פרטיות | ",
+    "החברה המנהלת של מי: links=268 files=1 clicked=0 captured=0 selected=0",
+    "   ? מדיניות-פרטיות.pdf | מדיניות פרטיות | ",
+    "החברה המנהלת של מי: links=268 files=1 clicked=0 captured=0 selected=0",
+    "   ? מדיניות-פרטיות.pdf | מדיניות פרטיות | ",
+    "החברה המנהלת של מי: links=268 files=1 clicked=0 captured=0 selected=0",
+    "   ? מדיניות-פרטיות.pdf | מדיניות פרטיות | ",
+    "החברה המנהלת של מי: links=268 files=1 clicked=0 captured=0 selected=0",
+    "   ? מדיניות-פרטיות.pdf | מדיניות פרטיות | ",
+    "החברה המנהלת של מי: links=268 files=1 clicked=0 captured=0 selected=0",
+    "   ? מדיניות-פרטיות.pdf | מדיניות פרטיות | ",
+    "החברה המנהלת של מי: links=94 files=1 clicked=0 captured=0 selected=0",
+    "   ? מדיניות-פרטיות.pdf | מדיניות פרטיות | "
    ],
    "new_files": []
   }
