@@ -1,7 +1,7 @@
 {
  "extension_version": "2.52.0",
  "started": "2026-10-12T03:23:36.113Z",
- "updated": "2026-10-12T04:41:39.033Z",
+ "updated": "2026-10-12T04:44:38.281Z",
  "final": false,
  "stopped": false,
  "rules_from_github": true,
@@ -22,7 +22,7 @@
   "page_cache_days": 3
  },
  "total_sites": 14,
- "done_sites": 0,
+ "done_sites": 1,
  "new_docs": 0,
  "skipped_complete": [
   {
@@ -40,12 +40,21 @@
  ],
  "active": [
   {
-   "name": "יחד רופאים - חברה לניהול קופות גמל בע\"מ",
-   "page": "https://www.krn-rofim.co.il/%D7%9E%D7%93%D7%99%D7%A0%D7%99%D7%95%D7%AA/%D7%9E%D7%93%D7%99%D7%A0%D7%99%D7%95%D7%AA-%D7%94%D7%A9%D7%A7%D7%A2%D7%94-%D7%A6%D7%A4%D7%95%D7%99%D7%94/",
-   "page_no": 1,
-   "pages": 1,
-   "step": "לוחץ על כפתורי הורדה"
+   "name": "מנורה מבטחים פנסיה וגמל בע\"מ",
+   "page": "https://www.menoramivt.co.il/funds/insurers-complementary-pension-SP500",
+   "page_no": 3,
+   "pages": 115,
+   "step": "טוען עמוד"
   }
  ],
- "sites": []
+ "sites": [
+  {
+   "legal_id": "510930654",
+   "name": "יחד רופאים - חברה לניהול קופות גמל בע\"מ",
+   "new_docs": 0,
+   "errors": [
+    "timeout 1200s: site יחד רופאים - חברה לניהול קופות גמל בע\"מ"
+   ]
+  }
+ ]
 }
