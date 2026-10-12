@@ -1,13 +1,13 @@
 {
  "legal_id": "513910703",
  "company": "איי. די. איי. חברה לביטוח בע\"מ",
- "run": "2026-10-11T11:45:22+00:00",
+ "run": "2026-10-12T13:36:53+00:00",
  "errors": [
   "via_extension (נסרק מהמחשב הביתי)"
  ],
  "seeds": {
   "config": 0,
-  "discovered": 0,
+  "discovered": 1,
   "policy_snapshot": 2,
   "policy_snapshot_docs": 0
  },
@@ -17,6 +17,6 @@
  "candidates": 0,
  "docs": 0,
  "new_docs": 0,
- "index_size": 0,
+ "index_size": 2,
  "seconds": 0
 }
