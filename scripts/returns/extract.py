@@ -13,7 +13,7 @@
     policy/fund_names.csv - data.gov). לא נמצא - התאמת שם מול הרישום של אותה חברה; ואחרון: התאמת סדרת התשואות
     מול data.gov (returns/datagov_track_map.json, נבנה ב-verify).
 תקציב זמן: RETURNS_PARSE_BUDGET שניות (ברירת מחדל 1500); קובץ שנתקע > RETURNS_DOC_TIMEOUT (120) מדולג ומסומן.
-RETURNS_MAX_DOC_BYTES (ברירת מחדל 0 = בלי הגבלה): קובץ גדול מזה מדולג בלי להיכנס למטמון (נבדק שוב בכל ריצה) - קבצי אקסל
+RETURNS_MAX_DOC_BYTES (ברירת מחדל 0 = בלי הגבלה; חל על xlsx בלבד): קובץ גדול מזה מדולג בלי להיכנס למטמון (נבדק שוב בכל ריצה) - קבצי אקסל
   גדולים הפילו את ה-runner (shutdown signal) ואיבדו את כל הריצה, ו-SIGALRM לא עוצר זיכרון.
 """
 import argparse, csv, json, os, re, signal, time
@@ -155,7 +155,7 @@ def parse_all(out: Path, index: dict, force=False):
             e.update(parse_error="file missing", parsed_sha=e["sha256"], parser_version=PARSER_VERSION)
             continue
         size = f.stat().st_size
-        if max_bytes and size > max_bytes:
+        if max_bytes and f.suffix.lower() == ".xlsx" and size > max_bytes:
             # בכוונה בלי parsed_sha: לא נכנס למטמון, נבדק שוב בכל ריצה (אפשר להעלות את הסף ולפרסר)
             e["parse_error"] = f"skipped: {size} bytes > RETURNS_MAX_DOC_BYTES={max_bytes}"
             print(f"[returns.extract] {f.name}: skipped ({size} bytes > {max_bytes})", flush=True)
