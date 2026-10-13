@@ -68,6 +68,7 @@ jobs:
     env:
       ID: ${{ matrix.id }}
       OUTD: returns/companies/${{ matrix.id }}
+      RETURNS_MAX_DOC_BYTES: "2000000"
     steps:
       - name: Job start time
         run: echo "JOB_T0=$(date +%s)" >> "$GITHUB_ENV"
