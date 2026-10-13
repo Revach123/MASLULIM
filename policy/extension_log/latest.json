@@ -1,7 +1,7 @@
 {
  "extension_version": "2.52.0",
  "started": "2026-10-13T06:13:53.665Z",
- "updated": "2026-10-13T06:22:53.839Z",
+ "updated": "2026-10-13T06:25:53.847Z",
  "final": false,
  "stopped": false,
  "rules_from_github": true,
@@ -71,10 +71,10 @@
  "active": [
   {
    "name": "מנורה מבטחים פנסיה וגמל בע\"מ",
-   "page": "https://www.menoramivt.co.il/funds/pension-and-gemel/pension-plans/general-track",
-   "page_no": 103,
+   "page": "https://www.menoramivt.co.il/funds/pension-and-gemel/pension-plans/tradable-stocks-plan",
+   "page_no": 114,
    "pages": 120,
-   "step": "בודק אם העמוד השתנה"
+   "step": "פותח אקורדיונים ואוסף קישורים"
   }
  ],
  "sites": []
