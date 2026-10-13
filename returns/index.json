@@ -2,10 +2,10 @@
  "totals": {
   "companies": 76,
   "with_data": 61,
-  "tracks": 1334,
+  "tracks": 1338,
   "registry_tracks": 1289,
-  "registry_found": 841,
-  "docs": 9615
+  "registry_found": 842,
+  "docs": 9636
  },
  "companies": [
   {
@@ -492,14 +492,14 @@
   {
    "legal_id": "520024647",
    "company": "כלל חברה לביטוח בע\"מ",
-   "tracks": 29,
-   "tracks_numbered": 23,
+   "tracks": 33,
+   "tracks_numbered": 24,
    "registry_tracks": 25,
-   "registry_found": 20,
-   "registry_coverage": 80.0,
+   "registry_found": 21,
+   "registry_coverage": 84.0,
    "first_month": "2020-01",
-   "last_month": "2023-12",
-   "docs_returns": 18,
+   "last_month": "2026-09",
+   "docs_returns": 39,
    "nostro": true
   },
   {

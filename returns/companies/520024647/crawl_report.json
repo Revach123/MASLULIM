@@ -1,21 +1,21 @@
 {
  "legal_id": "520024647",
  "company": "כלל חברה לביטוח בע\"מ",
- "run": "2026-10-08T13:54:45+00:00",
+ "run": "2026-10-13T21:58:34+00:00",
  "errors": [],
  "seeds": {
   "config": 1,
-  "discovered": 0,
+  "discovered": 8,
   "policy_snapshot": 0,
   "policy_snapshot_docs": 0,
   "sitemap": 0
  },
  "imported_from_policy": 0,
- "pages": 12,
+ "pages": 16,
  "pages_failed": [],
- "candidates": 18,
- "docs": 18,
- "new_docs": 18,
- "index_size": 18,
- "seconds": 1172
+ "candidates": 32,
+ "docs": 32,
+ "new_docs": 22,
+ "index_size": 40,
+ "seconds": 1157
 }
