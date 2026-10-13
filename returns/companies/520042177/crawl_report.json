@@ -1,7 +1,7 @@
 {
  "legal_id": "520042177",
  "company": "הכשרה חברה לביטוח בע\"מ",
- "run": "2026-10-12T14:10:18+00:00",
+ "run": "2026-10-13T13:22:51+00:00",
  "errors": [],
  "seeds": {
   "config": 0,
@@ -11,15 +11,11 @@
   "sitemap": 0
  },
  "imported_from_policy": 0,
- "pages": 3,
- "pages_failed": [
-  "https://www.hcsra.co.il/insurances/investments-credit-realestate/investments/: 403",
-  "https://www.hcsra.co.il/insurances/investments-credit-realestate/: 403",
-  "https://www.hcsra.co.il: 403"
- ],
+ "pages": 14,
+ "pages_failed": [],
  "candidates": 51,
  "docs": 51,
  "new_docs": 0,
  "index_size": 51,
- "seconds": 216
+ "seconds": 154
 }
