@@ -151,6 +151,7 @@ def parse_all(out: Path, index: dict, force=False):
         if not f.exists():
             e.update(parse_error="file missing", parsed_sha=e["sha256"], parser_version=PARSER_VERSION)
             continue
+        print(f"[returns.extract] start {f.name} ({f.stat().st_size} bytes)", flush=True)
         try:
             if can:
                 signal.alarm(timeout)
