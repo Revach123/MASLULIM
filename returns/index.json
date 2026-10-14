@@ -1,11 +1,11 @@
 {
  "totals": {
   "companies": 76,
-  "with_data": 62,
-  "tracks": 1341,
+  "with_data": 63,
+  "tracks": 1348,
   "registry_tracks": 1291,
-  "registry_found": 845,
-  "docs": 9645
+  "registry_found": 849,
+  "docs": 9747
  },
  "companies": [
   {
@@ -786,6 +786,19 @@
    "first_month": "2022-01",
    "last_month": "2026-06",
    "docs_returns": 89,
+   "nostro": false
+  },
+  {
+   "legal_id": "570009449",
+   "company": "עוצ\"מ - אגודה שיתופית לניהול קופות גמל בע\"מ",
+   "tracks": 7,
+   "tracks_numbered": 4,
+   "registry_tracks": 4,
+   "registry_found": 4,
+   "registry_coverage": 100.0,
+   "first_month": "2020-01",
+   "last_month": "2026-06",
+   "docs_returns": 102,
    "nostro": false
   },
   {
