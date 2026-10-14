@@ -11,7 +11,7 @@ policy/inbox/<LegalId>/returns/ עם קובץ meta - נדחף יחד עם תיב
   --state FILE   קובץ JSON (מחוץ למאגר) עם זמן הניסיון האחרון לכל אתר: האתרים נסרקים לפי הסדר "הכי ישן קודם"
   --cycle-file F קובץ עם זמן סיום המחזור הקודם (returns-last-ok.txt): רק אתרים שלא נוסו מאז נסרקים - ריצה שנקטעה ממשיכה
                  מהאתרים שנשארו; כשכולם נוסו הריצה מסתיימת מיד (והמחזור מסומן כגמור ב-workflow)
-  --max-minutes  תקרת זמן כוללת: אחרי שעוברים אותה לא מתחילים אתר נוסף (היציאה תקינה; האתרים שנשארו - בריצה הבאה)
+  --max-minutes  תקרת זמן כוללת: אחרי שעוברים אותה לא מתחילים אתר נוסף; קוד יציאה 3 (המחזור לא נגמר - ה-workflow לא מסמן אותו כגמור), האתרים שנשארו - בריצה הבאה
 בלי הדגלים האלה ההתנהגות כמו קודם. עם --only הסינון לפי מחזור/מצב לא חל.
 """
 import argparse, json, os, shutil, subprocess, sys, tempfile, time
@@ -124,9 +124,11 @@ def main():
         cycle_ts = _read_ts(a.cycle_file) if a.cycle_file else None
         order = order_sites(order, state, cycle_ts)
         print(f"sites to crawl in this cycle: {len(order)} of {len(cfgs)}" + (f" (cycle since {cycle_ts})" if cycle_ts else ""), flush=True)
+    incomplete = False
     for lid in order:
         if a.max_minutes and time.monotonic() - t0 > a.max_minutes * 60:
             print(f"time budget {a.max_minutes} min reached - remaining sites next run", flush=True)
+            incomplete = True  # יציאה 3: ה-workflow לא מסמן את המחזור כגמור (נשארו אתרים)
             break
         work = RET / "_home" / lid
         shutil.rmtree(work, ignore_errors=True)
@@ -200,6 +202,8 @@ def main():
             state[lid] = _now_local()
             save_state(a.state, state)
     print(f"returns home: new files={total}")
+    if incomplete:
+        sys.exit(3)
 
 
 if __name__ == "__main__":
