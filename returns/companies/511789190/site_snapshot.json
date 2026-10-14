@@ -1,48 +1,22 @@
 {
  "legal_id": "511789190",
- "taken": "2026-10-11T15:51:53+00:00",
+ "taken": "2026-10-14T07:42:47+00:00",
  "pages": {
   "https://atudotvatika.co.il/%d7%a0%d7%aa%d7%95%d7%a0%d7%99-%d7%94%d7%a7%d7%a8%d7%9f/": {
    "product": null,
-   "status": 403,
-   "method": "browser",
-   "text_hash": "3aff970305f39bd7e9bab83ae54bf21c86a8f147",
-   "text_head": "atudotvatika.co.il ביצוע אימות אבטחה אתר זה משתמש בשירות אבטחה להגנה מפני בוטים זדוניים. דף זה מופיע בזמן שהאתר מוודא שאינך בוט. Ray ID: a48f09c80cad8cd1 ביצועים ואבטחה מבית Cloudflare פרטיות",
-   "items": [
-    {
-     "text": "(iframe)",
-     "href": "https://netfree.link/misc/go-payment.html?v=3",
-     "year": null,
-     "iframe": true,
-     "doc": false,
-     "internal": false
-    }
-   ]
-  },
-  "https://netfree.link/misc/go-payment.html?v=3": {
-   "product": null,
-   "status": 200,
-   "method": "browser",
+   "status": "browser:Error:Page.goto: net::ERR_NAME_NOT_RESOLVED at https://atudotvatika.co.il/%d7%a0%d7%aa%d7%95%d7%a0%d7%99-%d7%94%d7%a7%d7%a8%d7",
+   "method": "requests",
    "text_hash": null,
    "text_head": "",
    "items": []
   },
   "https://atudotvatika.co.il": {
    "product": null,
-   "status": 403,
-   "method": "browser",
-   "text_hash": "6c5a29e8a0c1b0e84cd5deec368d96cea8585999",
-   "text_head": "atudotvatika.co.il ביצוע אימות אבטחה אתר זה משתמש בשירות אבטחה להגנה מפני בוטים זדוניים. דף זה מופיע בזמן שהאתר מוודא שאינך בוט. Ray ID: a48f0bba5eb19384 ביצועים ואבטחה מבית Cloudflare פרטיות",
-   "items": [
-    {
-     "text": "(iframe)",
-     "href": "https://netfree.link/misc/go-payment.html?v=3",
-     "year": null,
-     "iframe": true,
-     "doc": false,
-     "internal": false
-    }
-   ]
+   "status": "browser:Error:Page.goto: net::ERR_NAME_NOT_RESOLVED at https://atudotvatika.co.il/",
+   "method": "requests",
+   "text_hash": null,
+   "text_head": "",
+   "items": []
   }
  }
 }
