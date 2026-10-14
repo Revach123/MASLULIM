@@ -1,11 +1,11 @@
 {
  "totals": {
   "companies": 76,
-  "with_data": 61,
-  "tracks": 1338,
+  "with_data": 62,
+  "tracks": 1341,
   "registry_tracks": 1291,
-  "registry_found": 842,
-  "docs": 9636
+  "registry_found": 845,
+  "docs": 9645
  },
  "companies": [
   {
@@ -617,6 +617,19 @@
    "first_month": "2021-01",
    "last_month": "2026-06",
    "docs_returns": 47,
+   "nostro": false
+  },
+  {
+   "legal_id": "520031824",
+   "company": "החברה המנהלת של רום קרן ההשתלמות לעובדי הרשויות המקומיות בע\"מ",
+   "tracks": 3,
+   "tracks_numbered": 3,
+   "registry_tracks": 5,
+   "registry_found": 3,
+   "registry_coverage": 60.0,
+   "first_month": "2018-01",
+   "last_month": "2019-03",
+   "docs_returns": 9,
    "nostro": false
   },
   {
