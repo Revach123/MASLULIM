@@ -8,11 +8,19 @@
 last_modified, via=home). יומן לכל אתר: policy/extension_log/home/<מועד>.json - להשוואה מול התוסף.
 
 הרצה: python -m scripts.policy.home_crawl [--only LEGAL_ID ...] [--timeout-min 40]
+      [--push] [--state FILE] [--cycle-file FILE] [--max-minutes N]
+
+המחשב הביתי נפתח לפרקים קצרים (חצי דקה עד חצי שעה), ולכן ריצה ארוכה על כל האתרים לא מסתיימת ומה שהורד אובד. אופציונלי (ראו
+scripts/home_sync.py): --push = דחיפה ל-origin/main אחרי כל אתר; --state = זמן הניסיון האחרון לכל אתר (הכי ישן קודם);
+--cycle-file = רק אתרים שלא נוסו מאז סוף המחזור הקודם (last-ok.txt); --max-minutes = תקרה כוללת, אחריה יציאה 3 (המחזור לא נגמר).
+בלי הדגלים וגם עם --only - ההתנהגות כמו קודם.
 """
-import argparse, json, os, re, shutil, subprocess, sys
+import argparse, json, os, re, shutil, subprocess, sys, time
 from datetime import datetime, timezone
 from pathlib import Path
 from urllib.parse import unquote
+
+from scripts import home_sync
 
 ROOT = Path(__file__).resolve().parents[2]
 POL = ROOT / "policy"
@@ -113,22 +121,51 @@ def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--only", nargs="*")
     ap.add_argument("--timeout-min", type=int, default=40)
+    ap.add_argument("--push", action="store_true", help="דחיפה מיידית אחרי כל אתר")
+    ap.add_argument("--state", help="קובץ JSON עם זמן הניסיון האחרון לכל אתר (הכי ישן קודם)")
+    ap.add_argument("--cycle-file", help="זמן סיום המחזור הקודם: רק אתרים שלא נוסו מאז נסרקים")
+    ap.add_argument("--max-minutes", type=int, default=0, help="תקרת זמן כוללת (0 = בלי תקרה)")
     a = ap.parse_args()
+    t0 = time.monotonic()
     started = datetime.now(timezone.utc)
     results = []
     known, is_policy = known_shas(), policy_filter()
-    for c in home_sites(a.only):
-        r = run_site(c, a.timeout_min, known, is_policy)
+    sites = {c["legal_id"]: c for c in home_sites(a.only)}
+    order = list(sites)
+    state = home_sync.load_state(a.state) if a.state else {}
+    if not a.only and (a.state or a.cycle_file):
+        cycle_ts = home_sync.read_ts(a.cycle_file) if a.cycle_file else None
+        order = home_sync.order_sites(order, state, cycle_ts)
+        print(f"sites to crawl in this cycle: {len(order)} of {len(sites)}" + (f" (cycle since {cycle_ts})" if cycle_ts else ""), flush=True)
+    logd = POL / "extension_log" / "home"
+    stamp = started.strftime("%Y-%m-%dT%H-%M-%S")
+    incomplete = False
+    for lid in order:
+        if a.max_minutes and time.monotonic() - t0 > a.max_minutes * 60:
+            print(f"time budget {a.max_minutes} min reached - remaining sites next run", flush=True)
+            incomplete = True  # יציאה 3: ה-workflow לא מסמן את המחזור כגמור (נשארו אתרים)
+            break
+        r = run_site(sites[lid], a.timeout_min, known, is_policy)
         results.append(r)
         print(f"[{r['legal_id']}] {r['name'][:30]}: {r['status']} new={r['new_docs']} skipped={r['skipped']}"
               f"{' BLOCKED' if r['blocked'] else ''} ({r['seconds']}s)", flush=True)
-    logd = POL / "extension_log" / "home"
+        if a.push or a.state:  # היומן נכתב אחרי כל אתר (מצטבר) כדי שיידחף ויישמר גם אם הריצה תיקטע
+            logd.mkdir(parents=True, exist_ok=True)
+            (logd / f"{stamp}.json").write_text(json.dumps({"started": started.isoformat(timespec="seconds"), "sites": results},
+                                                           ensure_ascii=False, indent=1), "utf-8")
+        if a.push:
+            home_sync.push_paths([f"policy/inbox/{lid}", f"policy/extension_log/home/{stamp}.json"],
+                                 f"policy inbox (home runner): {r['new_docs']} documents [{lid}]", label=lid)
+        if a.state and not a.only:  # גם אתר שפג זמנו נחשב כמנוסה במחזור (מה שהורד נשמר, וממחר ממשיכים מהאינדקס)
+            state[lid] = home_sync.now_local()
+            home_sync.save_state(a.state, state)
     logd.mkdir(parents=True, exist_ok=True)
-    stamp = started.strftime("%Y-%m-%dT%H-%M-%S")
     (logd / f"{stamp}.json").write_text(json.dumps({"started": started.isoformat(timespec="seconds"), "sites": results},
                                                    ensure_ascii=False, indent=1), "utf-8")
     print(f"sites={len(results)} new_docs={sum(r['new_docs'] for r in results)} "
           f"blocked={sum(r['blocked'] for r in results)}")
+    if incomplete:
+        sys.exit(3)
 
 
 if __name__ == "__main__":
