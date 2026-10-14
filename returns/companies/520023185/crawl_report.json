@@ -1,15 +1,13 @@
 {
  "legal_id": "520023185",
  "company": "הפניקס חברה לביטוח בע\"מ",
- "run": "2026-10-13T13:15:25+00:00",
+ "run": "2026-10-14T11:06:12+00:00",
  "errors": [
-  "//digital-content.fnx.co.il/SPF/iframe-phoenix-all-embracing-pension-yield-components.aspx -> not_a_document",
   "https://www.fnx.co.il/SPF/iframe-phoenix-all-embracing-pension-yield-components.aspx -> not_a_document",
   "https://www.fnx.co.il/SPF/iframe-phoenix-general-pension-yield-components.aspx -> not_a_document",
   "https://www.fnx.co.il/SPF/iframe-basic-member-pension-fund-yield-components.aspx -> not_a_document",
   "ttps://www.fnx.co.il/SPF/iframe-phoenix-all-embracing-pension-yield-components.aspx?page=2 -> not_a_document",
-  "ttps://www.fnx.co.il/SPF/iframe-phoenix-all-embracing-pension-yield-components.aspx?page=1 -> not_a_document",
-  "https://www.fnx.co.il/SPF/iframe-monthly-yield-components.aspx -> not_a_document"
+  "ttps://www.fnx.co.il/SPF/iframe-phoenix-all-embracing-pension-yield-components.aspx?page=1 -> not_a_document"
  ],
  "seeds": {
   "config": 0,
@@ -19,11 +17,11 @@
   "sitemap": 7
  },
  "imported_from_policy": 0,
- "pages": 13,
+ "pages": 11,
  "pages_failed": [],
- "candidates": 62,
- "docs": 55,
- "new_docs": 14,
+ "candidates": 36,
+ "docs": 31,
+ "new_docs": 0,
  "index_size": 80,
- "seconds": 1131
+ "seconds": 1116
 }
