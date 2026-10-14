@@ -68,6 +68,7 @@ jobs:
     env:
       ID: ${{ matrix.id }}
       OUTD: returns/companies/${{ matrix.id }}
+      RETURNS_MAX_DOC_BYTES: "1500000"  # xlsx בלבד; הגדול שפורסר תקין 845KB, הקובץ שהפיל את ה-runner 2.6MB
     steps:
       - name: Job start time
         run: echo "JOB_T0=$(date +%s)" >> "$GITHUB_ENV"
