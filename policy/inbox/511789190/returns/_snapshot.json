@@ -1,0 +1,22 @@
+{
+ "legal_id": "511789190",
+ "taken": "2026-10-14T07:42:47+00:00",
+ "pages": {
+  "https://atudotvatika.co.il/%d7%a0%d7%aa%d7%95%d7%a0%d7%99-%d7%94%d7%a7%d7%a8%d7%9f/": {
+   "product": null,
+   "status": "browser:Error:Page.goto: net::ERR_NAME_NOT_RESOLVED at https://atudotvatika.co.il/%d7%a0%d7%aa%d7%95%d7%a0%d7%99-%d7%94%d7%a7%d7%a8%d7",
+   "method": "requests",
+   "text_hash": null,
+   "text_head": "",
+   "items": []
+  },
+  "https://atudotvatika.co.il": {
+   "product": null,
+   "status": "browser:Error:Page.goto: net::ERR_NAME_NOT_RESOLVED at https://atudotvatika.co.il/",
+   "method": "requests",
+   "text_hash": null,
+   "text_head": "",
+   "items": []
+  }
+ }
+}
