@@ -1,7 +1,7 @@
 {
  "legal_id": "512065202",
  "company": "מיטב גמל ופנסיה בע\"מ",
- "run": "2026-10-13T12:59:34+00:00",
+ "run": "2026-10-14T10:52:25+00:00",
  "errors": [],
  "seeds": {
   "config": 7,
@@ -11,15 +11,16 @@
   "sitemap": 0
  },
  "imported_from_policy": 0,
- "pages": 6,
+ "pages": 22,
  "pages_failed": [
-  "https://www.meitav.co.il/provident_pension/gemel_report_articles/: browser:TimeoutError:Page.goto: Timeout 60000ms exceeded.",
-  "https://www.meitav.co.il/provident_pension/hishtalmut_report_articles/: browser:TimeoutError:Page.goto: Timeout 60000ms exceeded.",
-  "https://www.meitav.co.il/provident_pension/kids_report_articles/: 404"
+  "https://www.meitav.co.il/provident_pension/gemel_report_articles/: 404",
+  "https://www.meitav.co.il/provident_pension/hishtalmut_report_articles/: 404",
+  "https://www.meitav.co.il/provident_pension/kids_report_articles/: 404",
+  "https://www.meitav.co.il/provident_pension/invest_report_articles/: 404"
  ],
- "candidates": 1187,
- "docs": 1187,
+ "candidates": 1503,
+ "docs": 1503,
  "new_docs": 0,
  "index_size": 1611,
- "seconds": 1740
+ "seconds": 984
 }
