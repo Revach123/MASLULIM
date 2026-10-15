@@ -1,13 +1,13 @@
 {
  "legal_id": "570009449",
  "company": "עוצ\"מ - אגודה שיתופית לניהול קופות גמל בע\"מ",
- "run": "2026-10-14T11:18:34+00:00",
+ "run": "2026-10-15T10:47:08+00:00",
  "errors": [
   "via_extension (נסרק מהמחשב הביתי)"
  ],
  "seeds": {
   "config": 0,
-  "discovered": 0,
+  "discovered": 1,
   "policy_snapshot": 0,
   "policy_snapshot_docs": 0
  },
@@ -17,6 +17,6 @@
  "candidates": 0,
  "docs": 0,
  "new_docs": 0,
- "index_size": 0,
+ "index_size": 102,
  "seconds": 0
 }
