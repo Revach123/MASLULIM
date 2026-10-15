@@ -1,7 +1,7 @@
 {
  "extension_version": "2.52.0",
  "started": "2026-10-15T10:06:27.827Z",
- "updated": "2026-10-15T10:24:27.933Z",
+ "updated": "2026-10-15T10:27:27.937Z",
  "final": false,
  "stopped": false,
  "rules_from_github": true,
@@ -41,10 +41,10 @@
  "active": [
   {
    "name": "מנורה מבטחים פנסיה וגמל בע\"מ",
-   "page": "https://www.menoramivt.co.il/funds/pension-and-gemel/gemel-hishtalmut-list/compensation-funds/1374",
-   "page_no": 75,
+   "page": "https://www.menoramivt.co.il/funds/pension-and-gemel/pension-plans/entitled-retired-portfolio",
+   "page_no": 102,
    "pages": 120,
-   "step": "פותח אקורדיונים ואוסף קישורים"
+   "step": "בודק אם העמוד השתנה"
   }
  ],
  "sites": [
