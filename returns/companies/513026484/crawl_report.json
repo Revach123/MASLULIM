@@ -1,11 +1,12 @@
 {
  "legal_id": "513026484",
  "company": "הפניקס פנסיה וגמל בע\"מ",
- "run": "2026-10-14T10:52:11+00:00",
+ "run": "2026-10-15T10:20:42+00:00",
  "errors": [
   "https://www.fnx.co.il/SPF/iframe-monthly-yield-components.aspx -> not_a_document",
   "https://www.fnx.co.il/SPF/iframe-quarterly-yield-components-ted-yud.aspx -> not_a_document",
-  "https://www.fnx.co.il/SPF/iframe-yield-components.aspx -> not_a_document"
+  "https://www.fnx.co.il/SPF/iframe-yield-components.aspx -> not_a_document",
+  "//www.fnx.co.il/sites/docs/genery/markivey_tsua_chodshit/tsua_lefi_afik_tagmulim_q3_16.pdf -> 404"
  ],
  "seeds": {
   "config": 0,
@@ -18,8 +19,8 @@
  "pages": 9,
  "pages_failed": [],
  "candidates": 81,
- "docs": 78,
- "new_docs": 25,
+ "docs": 77,
+ "new_docs": 24,
  "index_size": 136,
- "seconds": 1147
+ "seconds": 1168
 }
