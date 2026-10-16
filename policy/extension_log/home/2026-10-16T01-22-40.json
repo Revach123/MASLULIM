@@ -130,6 +130,19 @@
    "seconds": 395,
    "new": [],
    "log_tail": "[520030677] search (ביטוח): 0\n[520030677] sitemap policy pages: 0\n[520030677] איילון חברה לביטוח בע\"מ: pages=6 docs=0 errs=0\n[crawl] new/changed docs this run: 0\n"
+  },
+  {
+   "legal_id": "520030990",
+   "name": "החברה המנהלת של מינהל קרן ההשתלמות לפקידים עובדי המנהל והשירותים בע\"מ",
+   "status": "ok",
+   "blocked": false,
+   "new_docs": 0,
+   "known_docs": 101,
+   "skipped": 112,
+   "meta_updates": 0,
+   "seconds": 117,
+   "new": [],
+   "log_tail": "[520030990] sitemap policy pages: 0\n[520030990] החברה המנהלת של מינהל קרן ההשתלמות לפקידים עובדי המנהל והשירותים בע\"מ: pages=12 docs=142 errs=1\n[crawl] new/changed docs this run: 112\n"
   }
  ]
 }
