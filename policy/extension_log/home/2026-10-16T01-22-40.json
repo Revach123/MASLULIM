@@ -143,6 +143,19 @@
    "seconds": 117,
    "new": [],
    "log_tail": "[520030990] sitemap policy pages: 0\n[520030990] החברה המנהלת של מינהל קרן ההשתלמות לפקידים עובדי המנהל והשירותים בע\"מ: pages=12 docs=142 errs=1\n[crawl] new/changed docs this run: 112\n"
+  },
+  {
+   "legal_id": "520031824",
+   "name": "החברה המנהלת של רום קרן ההשתלמות לעובדי הרשויות המקומיות בע\"מ",
+   "status": "ok",
+   "blocked": false,
+   "new_docs": 0,
+   "known_docs": 28,
+   "skipped": 475,
+   "meta_updates": 0,
+   "seconds": 503,
+   "new": [],
+   "log_tail": "[520031824] sitemap policy pages: 0\n[520031824] החברה המנהלת של רום קרן ההשתלמות לעובדי הרשויות המקומיות בע\"מ: pages=20 docs=500 errs=2\n[crawl] new/changed docs this run: 475\n"
   }
  ]
 }
