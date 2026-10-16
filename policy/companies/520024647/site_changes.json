@@ -1,1 +1,29 @@
-[]
+[
+ {
+  "kind": "new_item",
+  "page": "https://www.clalbit.co.il/aboutclalinsurance/generalreports/?txtTabId=1&txtReportsYearId=2021&txtCompanyId=2&txtReportTypeId=20",
+  "text": "קופות גמל מרכזיות לפיצויים",
+  "href": "https://www.clalbit.co.il/compensationfunds/",
+  "legal_id": "520024647",
+  "company": "כלל חברה לביטוח בע\"מ",
+  "detected": "2026-10-16T09:09:35+00:00"
+ },
+ {
+  "kind": "new_item",
+  "page": "https://www.clalbit.co.il/aboutclalinsurance/generalreports/?txtTabId=1&txtReportsYearId=2021&txtCompanyId=2&txtReportTypeId=20",
+  "text": "דוחות ואישורי מס",
+  "href": "https://www.clalbit.co.il/portfolio/personalreports/",
+  "legal_id": "520024647",
+  "company": "כלל חברה לביטוח בע\"מ",
+  "detected": "2026-10-16T09:09:35+00:00"
+ },
+ {
+  "kind": "new_item",
+  "page": "https://www.clalbit.co.il/aboutclalinsurance/generalreports/?txtTabId=1&txtReportsYearId=2021&txtCompanyId=2&txtReportTypeId=20",
+  "text": "בקשת הלוואה לקרן השתלמות",
+  "href": "https://www.clalbit.co.il/login/?ReturnUrl=%2fportfolio%2fprovidentfundloans%2f",
+  "legal_id": "520024647",
+  "company": "כלל חברה לביטוח בע\"מ",
+  "detected": "2026-10-16T09:09:35+00:00"
+ }
+]
