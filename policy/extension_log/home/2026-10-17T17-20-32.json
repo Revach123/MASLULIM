@@ -26,6 +26,19 @@
    "seconds": 194,
    "new": [],
    "log_tail": "[511789190] search (פנסיה): 0\n[511789190] sitemap policy pages: 0\n[511789190] \"עתודות\" - קרן פנסיה לשכירים ועצמאיים בע\"מ: pages=3 docs=0 errs=2\n[crawl] new/changed docs this run: 0\n"
+  },
+  {
+   "legal_id": "513910703",
+   "name": "איי. די. איי. חברה לביטוח בע\"מ",
+   "status": "ok",
+   "blocked": false,
+   "new_docs": 0,
+   "known_docs": 50,
+   "skipped": 0,
+   "meta_updates": 0,
+   "seconds": 334,
+   "new": [],
+   "log_tail": "[513910703] search (ביטוח): 0\n[513910703] sitemap policy pages: 2\n  https://www.555.co.il/about/idi/mediniut_hevratit.html\n  https://www.555.co.il/about/idi/mediniut_svivatit.html\n[513910703] איי. די. איי. חברה לביטוח בע\"מ: pages=24 docs=12 errs=0\n[crawl] new/changed docs this run: 0\n"
   }
  ]
 }
