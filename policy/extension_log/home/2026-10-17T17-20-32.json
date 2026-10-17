@@ -65,6 +65,19 @@
    "seconds": 2,
    "new": [],
    "log_tail": "[crawl] new/changed docs this run: 0\n"
+  },
+  {
+   "legal_id": "520022518",
+   "name": "החברה לניהול קופת התגמולים והפנסיה של עובדי הסוכנות היהודית לארץ ישראל בע\"מ",
+   "status": "ok",
+   "blocked": false,
+   "new_docs": 0,
+   "known_docs": 10,
+   "skipped": 4,
+   "meta_updates": 0,
+   "seconds": 142,
+   "new": [],
+   "log_tail": "[520022518] sitemap policy pages: 0\n[520022518] החברה לניהול קופת התגמולים והפנסיה של עובדי הסוכנות היהודית לארץ ישראל בע\"מ: pages=10 docs=4 errs=8\n[crawl] new/changed docs this run: 4\n"
   }
  ]
 }
