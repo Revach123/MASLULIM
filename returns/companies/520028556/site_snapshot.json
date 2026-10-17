@@ -1,6 +1,6 @@
 {
  "legal_id": "520028556",
- "taken": "2026-10-16T10:26:39+00:00",
+ "taken": "2026-10-17T10:01:17+00:00",
  "pages": {
   "https://www.kerentech.co.il/%d7%a0%d7%9b%d7%a1%d7%99-%d7%94%d7%a7%d7%95%d7%a4%d7%94/%d7%9e%d7%a8%d7%9b%d7%99%d7%91%d7%99-%d7%aa%d7%a9%d7%95%d7%90%d7%94/": {
    "product": null,
@@ -1360,6 +1360,14 @@
      "iframe": false,
      "doc": false,
      "internal": true
+    },
+    {
+     "text": "(iframe)",
+     "href": "https://www.google.com/recaptcha/api2/anchor?ar=1&k=6LdOi2McAAAAAEuo4OFuJKc0Llcau6luOYxBs2eP&co=aHR0cHM6Ly93d3cua2VyZW50ZWNoLmNvLmlsOjQ0Mw..&hl=iw&v=4EDjxXf4knsx6UBM1L2V6cv8&size=invisible&anchor-ms=20000&execute-ms=30000&cb=aw5idairoqrp",
+     "year": null,
+     "iframe": true,
+     "doc": false,
+     "internal": false
     }
    ]
   },
@@ -1652,7 +1660,7 @@
     },
     {
      "text": "(iframe)",
-     "href": "https://www.google.com/recaptcha/api2/anchor?ar=1&k=6LdOi2McAAAAAEuo4OFuJKc0Llcau6luOYxBs2eP&co=aHR0cHM6Ly93d3cua2VyZW50ZWNoLmNvLmlsOjQ0Mw..&hl=iw&v=nY0xPItgwtktOA7U0o-VsaLz&size=invisible&anchor-ms=20000&execute-ms=30000&ovv=CAB5am5W&cb=z8mi9ystryet",
+     "href": "https://www.google.com/recaptcha/api2/anchor?ar=1&k=6LdOi2McAAAAAEuo4OFuJKc0Llcau6luOYxBs2eP&co=aHR0cHM6Ly93d3cua2VyZW50ZWNoLmNvLmlsOjQ0Mw..&hl=iw&v=4EDjxXf4knsT8wRTp1lOoMFE&size=invisible&anchor-ms=20000&execute-ms=30000&ovv=CAB5am5W&cb=a20xqs8551h9",
      "year": null,
      "iframe": true,
      "doc": false,
@@ -1762,18 +1770,10 @@
      "iframe": false,
      "doc": false,
      "internal": true
-    },
-    {
-     "text": "(iframe)",
-     "href": "https://www.google.com/recaptcha/api2/anchor?ar=1&k=6LdOi2McAAAAAEuo4OFuJKc0Llcau6luOYxBs2eP&co=aHR0cHM6Ly93d3cua2VyZW50ZWNoLmNvLmlsOjQ0Mw..&hl=iw&v=4EDjxXf4knsx6UBM1L2V6cv8&size=invisible&anchor-ms=20000&execute-ms=30000&cb=y97zwg3tjwcd",
-     "year": null,
-     "iframe": true,
-     "doc": false,
-     "internal": false
     }
    ]
   },
-  "https://www.google.com/recaptcha/api2/anchor?ar=1&k=6LdOi2McAAAAAEuo4OFuJKc0Llcau6luOYxBs2eP&co=aHR0cHM6Ly93d3cua2VyZW50ZWNoLmNvLmlsOjQ0Mw..&hl=iw&v=nY0xPItgwtktOA7U0o-VsaLz&size=invisible&anchor-ms=20000&execute-ms=30000&ovv=CAB5am5W&cb=z8mi9ystryet": {
+  "https://www.google.com/recaptcha/api2/anchor?ar=1&k=6LdOi2McAAAAAEuo4OFuJKc0Llcau6luOYxBs2eP&co=aHR0cHM6Ly93d3cua2VyZW50ZWNoLmNvLmlsOjQ0Mw..&hl=iw&v=4EDjxXf4knsx6UBM1L2V6cv8&size=invisible&anchor-ms=20000&execute-ms=30000&cb=aw5idairoqrp": {
    "product": null,
    "status": 200,
    "method": "browser",
@@ -1781,7 +1781,7 @@
    "text_head": "מוגן באמצעות reCAPTCHA אנחנו משנים את התנאים וההגבלות של שירות reCAPTCHA . צריך לפעול בהתאם",
    "items": []
   },
-  "https://www.google.com/recaptcha/api2/anchor?ar=1&k=6LdOi2McAAAAAEuo4OFuJKc0Llcau6luOYxBs2eP&co=aHR0cHM6Ly93d3cua2VyZW50ZWNoLmNvLmlsOjQ0Mw..&hl=iw&v=4EDjxXf4knsx6UBM1L2V6cv8&size=invisible&anchor-ms=20000&execute-ms=30000&cb=y97zwg3tjwcd": {
+  "https://www.google.com/recaptcha/api2/anchor?ar=1&k=6LdOi2McAAAAAEuo4OFuJKc0Llcau6luOYxBs2eP&co=aHR0cHM6Ly93d3cua2VyZW50ZWNoLmNvLmlsOjQ0Mw..&hl=iw&v=4EDjxXf4knsT8wRTp1lOoMFE&size=invisible&anchor-ms=20000&execute-ms=30000&ovv=CAB5am5W&cb=a20xqs8551h9": {
    "product": null,
    "status": 200,
    "method": "browser",
