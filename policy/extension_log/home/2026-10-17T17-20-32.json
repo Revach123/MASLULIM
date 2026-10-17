@@ -78,6 +78,19 @@
    "seconds": 142,
    "new": [],
    "log_tail": "[520022518] sitemap policy pages: 0\n[520022518] החברה לניהול קופת התגמולים והפנסיה של עובדי הסוכנות היהודית לארץ ישראל בע\"מ: pages=10 docs=4 errs=8\n[crawl] new/changed docs this run: 4\n"
+  },
+  {
+   "legal_id": "520024985",
+   "name": "עגור חברה לניהול קופות גמל וקרנות השתלמות בע\"מ",
+   "status": "exit timeout",
+   "blocked": false,
+   "new_docs": 0,
+   "known_docs": 89,
+   "skipped": 0,
+   "meta_updates": 0,
+   "seconds": 1800,
+   "new": [],
+   "log_tail": "timeout after 30 min\n[520024985] sitemap policy pages: 1\n  https://kereni.co.il/%d7%9e%d7%93%d7%99%d7%a0%d7%99%d7%95%d7%aa-%d7%94%d7%a9%d7%a7%d7%a2%d7%94-%d7%95%d7%a0%d7%94%d7%9c%d7%99%d7%9d/\n"
   }
  ]
 }
