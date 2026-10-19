@@ -1,24 +1,8 @@
 {
  "legal_id": "520004896",
  "company": "מגדל חברה לביטוח בע\"מ",
- "run": "2026-10-18T10:03:19+00:00",
- "errors": [
-  "ng/siteview/_webMethods/packages/@0548432970/migdal-backend/520004896_b17011_Yield425.xlsx -> 401",
-  "er-ng/siteview/_webMethods/packages/@0548432970/migdal-backend/520004896_b76_Yield126.xlsx -> 401",
-  "-ng/siteview/_webMethods/packages/@0548432970/migdal-backend/520004896_b9604_Yield425.xlsx -> 401",
-  "-ng/siteview/_webMethods/packages/@0548432970/migdal-backend/520004896_b9729_Yield126.xlsx -> 401",
-  "-ng/siteview/_webMethods/packages/@0548432970/migdal-backend/520004896_b9604_Yield126.xlsx -> 401",
-  "-ng/siteview/_webMethods/packages/@0548432970/migdal-backend/520004896_b8659_Yield126.xlsx -> 401",
-  "ng/siteview/_webMethods/packages/@0548432970/migdal-backend/520004896_b17010_Yield126.xlsx -> 401",
-  "-ng/siteview/_webMethods/packages/@0548432970/migdal-backend/520004896_b1955_Yield126.xlsx -> 401",
-  "ng/siteview/_webMethods/packages/@0548432970/migdal-backend/520004896_b13625_yield225.xlsx -> 401",
-  "ng/siteview/_webMethods/packages/@0548432970/migdal-backend/520004896_b14925_Yield425.xlsx -> 401",
-  "ng/siteview/_webMethods/packages/@0548432970/migdal-backend/520004896_b14240_Yield126.xlsx -> 401",
-  "-ng/siteview/_webMethods/packages/@0548432970/migdal-backend/520004896_b8659_Yield425.xlsx -> 401",
-  "-ng/siteview/_webMethods/packages/@0548432970/migdal-backend/520004896_b9599_Yield126.xlsx -> 401",
-  "ng/siteview/_webMethods/packages/@0548432970/migdal-backend/520004896_b17012_Yield126.xlsx -> 401",
-  "r-ng/siteview/_webMethods/packages/@0548432970/migdal-backend/520004896_b185_Yield126.xlsx -> 401"
- ],
+ "run": "2026-10-19T11:24:37+00:00",
+ "errors": [],
  "seeds": {
   "config": 0,
   "discovered": 2,
@@ -29,12 +13,13 @@
  "imported_from_policy": 0,
  "pages": 45,
  "pages_failed": [
+  "https://www.migdal.co.il/regulations/: 404",
   "https://undefined/: browser:Error:Page.goto: net::ERR_NAME_NOT_RESOLVED at https://undefined/",
   "http://my.migdal.co.il/mymigdal/onlinepurchase/retirementpensionsimulation: ERR"
  ],
- "candidates": 486,
- "docs": 471,
+ "candidates": 421,
+ "docs": 421,
  "new_docs": 2,
  "index_size": 402,
- "seconds": 863
+ "seconds": 770
 }
