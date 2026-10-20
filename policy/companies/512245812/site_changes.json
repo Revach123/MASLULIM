@@ -1,21 +1,39 @@
 [
  {
   "kind": "new_item",
-  "page": "https://www.menoramivt.co.il/funds/insurers-complementary-pension-SP500",
-  "text": "לחץ להורדת קובץ PDF 2026 - 30.09",
-  "href": "https://cdn.menoramivt.co.il/public/docs/20261019/%D7%AA%D7%A8%D7%95%D7%9E%D7%AA-%D7%90%D7%A4%D7%99%D7%A7%D7%99-%D7%94%D7%A9%D7%A7%D7%A2%D7%94-%D7%9C%D7%AA%D7%A9%D7%95%D7%90%D7%94-%D7%94%D7%9B%D7%95%D7%9C%D7%9C%D7%AA---%D7%9E%D7%A0%D7%95%D7%A8%D7%94-%D7%9E%D7%91%D7%98%D7%97%D7%99%D7%9D-%D7%9E%D7%A9%D7%9C%D7%99%D7%9E%D7%94-%D7%A2%D7%95%D7%A7%D7%91-%D7%9E%D7%93%D7%93-s&p-500.xlsx",
+  "page": "https://www.menoramivt.co.il/funds/top-SP500",
+  "text": "2026 09.2026 מצטבר מתחילת שנה",
+  "href": "https://cdn.menoramivt.co.il/public/docs/20261019/תרומת-אפיקי-השקעה-לתשואה-הכוללת---מנורה-מבטחים-גמל-להשקעה-עוקב-מדד-s&p500.xlsx",
   "legal_id": "512245812",
   "company": "מנורה מבטחים פנסיה וגמל בע\"מ",
-  "detected": "2026-10-19T09:54:09+00:00"
+  "detected": "2026-10-20T09:23:52+00:00"
  },
  {
   "kind": "new_item",
-  "page": "https://www.menoramivt.co.il/funds/insurers-complementary-pension-SP500",
-  "text": "2026",
-  "href": "https://cdn.menoramivt.co.il/public/docs/20261019/תרומת-אפיקי-השקעה-לתשואה-הכוללת---מנורה-מבטחים-משלימה-עוקב-מדד-s&p-500.xlsx",
+  "page": "https://www.menoramivt.co.il/funds/Education-fund-SP500",
+  "text": "2026 09.2026 מצטבר מתחילת שנה",
+  "href": "https://cdn.menoramivt.co.il/public/docs/20261019/תרומת-אפיקי-השקעה-לתשואה-הכוללת---מנורה-מבטחים-השתלמות-עוקב-מדד-s&p500.xlsx",
   "legal_id": "512245812",
   "company": "מנורה מבטחים פנסיה וגמל בע\"מ",
-  "detected": "2026-10-19T09:54:09+00:00"
+  "detected": "2026-10-20T09:23:52+00:00"
+ },
+ {
+  "kind": "page_changed",
+  "page": "https://www.menoramivt.co.il/funds/insurers-complementary-pension-SP500",
+  "text": "טקסט העמוד השתנה (אותם קישורים)",
+  "href": "https://www.menoramivt.co.il/funds/insurers-complementary-pension-SP500",
+  "legal_id": "512245812",
+  "company": "מנורה מבטחים פנסיה וגמל בע\"מ",
+  "detected": "2026-10-20T09:23:52+00:00"
+ },
+ {
+  "kind": "new_item",
+  "page": "https://www.menoramivt.co.il/funds/Education-fund-halacha",
+  "text": "2026 09.2026 מצטבר מתחילת שנה",
+  "href": "https://cdn.menoramivt.co.il/public/docs/20261019/תרומת-אפיקי-השקעה-לתשואה-הכוללת---מנורה-מבטחים-השתלמות-הלכה.xlsx",
+  "legal_id": "512245812",
+  "company": "מנורה מבטחים פנסיה וגמל בע\"מ",
+  "detected": "2026-10-20T09:23:52+00:00"
  },
  {
   "kind": "page_changed",
@@ -24,115 +42,34 @@
   "href": "https://www.menoramivt.co.il/funds/gov-bonds-15342",
   "legal_id": "512245812",
   "company": "מנורה מבטחים פנסיה וגמל בע\"מ",
-  "detected": "2026-10-19T09:54:09+00:00"
+  "detected": "2026-10-20T09:23:52+00:00"
  },
  {
   "kind": "new_item",
-  "page": "https://www.menoramivt.co.il/funds/pension-and-gemel/pension-plans/tradble-stocks-plan-15748",
-  "text": "לחץ להורדת קובץ PDF 2026 - נכון לרבעון - 30.09 - -",
-  "href": "https://cdn.menoramivt.co.il/public/docs/20261019/%D7%AA%D7%A8%D7%95%D7%9E%D7%AA-%D7%90%D7%A4%D7%99%D7%A7%D7%99-%D7%94%D7%A9%D7%A7%D7%A2%D7%94-%D7%9C%D7%AA%D7%A9%D7%95%D7%90%D7%94-%D7%94%D7%9B%D7%95%D7%9C%D7%9C%D7%AA---%D7%9E%D7%A0%D7%95%D7%A8%D7%94-%D7%9E%D7%91%D7%98%D7%97%D7%99%D7%9D-%D7%9E%D7%A9%D7%9C%D7%99%D7%9E%D7%94-%D7%9E%D7%A0%D7%99%D7%95%D7%AA-%D7%A1%D7%97%D7%99%D7%A8.xlsx",
+  "page": "https://www.menoramivt.co.il/funds/stock-1364",
+  "text": "2026 09.2026 מצטבר מתחילת שנה",
+  "href": "https://cdn.menoramivt.co.il/public/docs/20261019/תרומת-אפיקי-השקעה-לתשואה-הכוללת---מנורה-מבטחים-תגמולים-ופיצויים-מניות.xlsx",
   "legal_id": "512245812",
   "company": "מנורה מבטחים פנסיה וגמל בע\"מ",
-  "detected": "2026-10-19T09:54:09+00:00"
+  "detected": "2026-10-20T09:23:52+00:00"
  },
  {
   "kind": "new_item",
-  "page": "https://www.menoramivt.co.il/funds/pension-and-gemel/pension-plans/tradble-stocks-plan-15748",
-  "text": "2026 נכון לרבעון 30.09",
-  "href": "https://cdn.menoramivt.co.il/public/docs/20261019/תרומת-אפיקי-השקעה-לתשואה-הכוללת---מנורה-מבטחים-משלימה-מניות-סחיר.xlsx",
+  "page": "https://www.menoramivt.co.il/funds/pension-and-gemel/gemel-hishtalmut-list/savings-for-children/kids-halacha",
+  "text": "2026 09.2026 מצטבר מתחילת שנה",
+  "href": "https://cdn.menoramivt.co.il/public/docs/20261019/תרומת-אפיקי-השקעה-לתשואה-הכוללת---חסכון-לכל-ילד-מסלול-הלכה.xlsx",
   "legal_id": "512245812",
   "company": "מנורה מבטחים פנסיה וגמל בע\"מ",
-  "detected": "2026-10-19T09:54:09+00:00"
+  "detected": "2026-10-20T09:23:52+00:00"
  },
  {
-  "kind": "new_item",
-  "page": "https://www.menoramivt.co.il/funds/pension-and-gemel/pension-plans/retire-track-2045",
-  "text": "לחץ להורדת קובץ PDF 2026 - 30.09",
-  "href": "https://cdn.menoramivt.co.il/public/docs/20261019/%D7%AA%D7%A8%D7%95%D7%9E%D7%AA-%D7%90%D7%A4%D7%99%D7%A7%D7%99-%D7%94%D7%A9%D7%A7%D7%A2%D7%94-%D7%9C%D7%AA%D7%A9%D7%95%D7%90%D7%94-%D7%94%D7%9B%D7%95%D7%9C%D7%9C%D7%AA---%D7%9E%D7%A0%D7%95%D7%A8%D7%94-%D7%9E%D7%91%D7%98%D7%97%D7%99%D7%9D-%D7%A4%D7%A0%D7%A1%D7%99%D7%94-%D7%99%D7%A2%D7%93-%D7%9C%D7%A4%D7%A8%D7%99%D7%A9%D7%94-2045.xlsx",
-  "legal_id": "512245812",
-  "company": "מנורה מבטחים פנסיה וגמל בע\"מ",
-  "detected": "2026-10-19T09:54:09+00:00"
- },
- {
-  "kind": "new_item",
-  "page": "https://www.menoramivt.co.il/funds/pension-and-gemel/pension-plans/retire-track-2045",
-  "text": "2026 30.09",
-  "href": "https://cdn.menoramivt.co.il/public/docs/20261019/תרומת-אפיקי-השקעה-לתשואה-הכוללת---מנורה-מבטחים-פנסיה-יעד-לפרישה-2045.xlsx",
-  "legal_id": "512245812",
-  "company": "מנורה מבטחים פנסיה וגמל בע\"מ",
-  "detected": "2026-10-19T09:54:09+00:00"
- },
- {
-  "kind": "new_item",
-  "page": "https://www.menoramivt.co.il/funds/pension-and-gemel/mashlima/mashlima-retire-track-2045",
-  "text": "לחץ להורדת קובץ PDF 2026 - 30.09",
-  "href": "https://cdn.menoramivt.co.il/public/docs/20261019/%D7%AA%D7%A8%D7%95%D7%9E%D7%AA-%D7%90%D7%A4%D7%99%D7%A7%D7%99-%D7%94%D7%A9%D7%A7%D7%A2%D7%94-%D7%9C%D7%AA%D7%A9%D7%95%D7%90%D7%94-%D7%94%D7%9B%D7%95%D7%9C%D7%9C%D7%AA---%D7%9E%D7%A0%D7%95%D7%A8%D7%94-%D7%9E%D7%91%D7%98%D7%97%D7%99%D7%9D-%D7%9E%D7%A9%D7%9C%D7%99%D7%9E%D7%94-%D7%99%D7%A2%D7%93-%D7%9C%D7%A4%D7%A8%D7%99%D7%A9%D7%94-2045.xlsx",
-  "legal_id": "512245812",
-  "company": "מנורה מבטחים פנסיה וגמל בע\"מ",
-  "detected": "2026-10-19T09:54:09+00:00"
- },
- {
-  "kind": "new_item",
-  "page": "https://www.menoramivt.co.il/funds/pension-and-gemel/mashlima/mashlima-retire-track-2045",
-  "text": "2026 30.09",
-  "href": "https://cdn.menoramivt.co.il/public/docs/20261019/תרומת-אפיקי-השקעה-לתשואה-הכוללת---מנורה-מבטחים-משלימה-יעד-לפרישה-2045.xlsx",
-  "legal_id": "512245812",
-  "company": "מנורה מבטחים פנסיה וגמל בע\"מ",
-  "detected": "2026-10-19T09:54:09+00:00"
- },
- {
-  "kind": "new_item",
-  "page": "https://www.menoramivt.co.il/funds/pension-and-gemel/pension-plans/menayot-14677",
-  "text": "לחץ להורדת קובץ PDF 2026 - 30.09",
-  "href": "https://cdn.menoramivt.co.il/public/docs/20261019/%D7%AA%D7%A8%D7%95%D7%9E%D7%AA-%D7%90%D7%A4%D7%99%D7%A7%D7%99-%D7%94%D7%A9%D7%A7%D7%A2%D7%94-%D7%9C%D7%AA%D7%A9%D7%95%D7%90%D7%94-%D7%94%D7%9B%D7%95%D7%9C%D7%9C%D7%AA---%D7%9E%D7%A0%D7%95%D7%A8%D7%94-%D7%9E%D7%91%D7%98%D7%97%D7%99%D7%9D-%D7%9E%D7%A9%D7%9C%D7%99%D7%9E%D7%94-%D7%9E%D7%A0%D7%99%D7%95%D7%AA.xlsx",
-  "legal_id": "512245812",
-  "company": "מנורה מבטחים פנסיה וגמל בע\"מ",
-  "detected": "2026-10-19T09:54:09+00:00"
- },
- {
-  "kind": "new_item",
-  "page": "https://www.menoramivt.co.il/funds/pension-and-gemel/pension-plans/menayot-14677",
-  "text": "2026 30.09",
-  "href": "https://cdn.menoramivt.co.il/public/docs/20261019/תרומת-אפיקי-השקעה-לתשואה-הכוללת---מנורה-מבטחים-משלימה-מניות.xlsx",
-  "legal_id": "512245812",
-  "company": "מנורה מבטחים פנסיה וגמל בע\"מ",
-  "detected": "2026-10-19T09:54:09+00:00"
- },
- {
-  "kind": "new_item",
+  "kind": "page_changed",
   "page": "https://www.menoramivt.co.il/funds/pension-and-gemel/mashlima/mashlima-stock-abroad-track",
-  "text": "לחץ להורדת קובץ PDF 2026 - 30.09",
-  "href": "https://cdn.menoramivt.co.il/public/docs/20261019/%D7%AA%D7%A8%D7%95%D7%9E%D7%AA-%D7%90%D7%A4%D7%99%D7%A7%D7%99-%D7%94%D7%A9%D7%A7%D7%A2%D7%94-%D7%9C%D7%AA%D7%A9%D7%95%D7%90%D7%94-%D7%94%D7%9B%D7%95%D7%9C%D7%9C%D7%AA---%D7%9E%D7%A0%D7%95%D7%A8%D7%94-%D7%9E%D7%91%D7%98%D7%97%D7%99%D7%9D-%D7%9E%D7%A9%D7%9C%D7%99%D7%9E%D7%94-%D7%A2%D7%95%D7%A7%D7%91-%D7%9E%D7%93%D7%93%D7%99-%D7%9E%D7%A0%D7%99%D7%95%D7%AA.xlsx",
+  "text": "טקסט העמוד השתנה (אותם קישורים)",
+  "href": "https://www.menoramivt.co.il/funds/pension-and-gemel/mashlima/mashlima-stock-abroad-track",
   "legal_id": "512245812",
   "company": "מנורה מבטחים פנסיה וגמל בע\"מ",
-  "detected": "2026-10-19T09:54:09+00:00"
- },
- {
-  "kind": "new_item",
-  "page": "https://www.menoramivt.co.il/funds/pension-and-gemel/mashlima/mashlima-stock-abroad-track",
-  "text": "2026 30.09",
-  "href": "https://cdn.menoramivt.co.il/public/docs/20261019/תרומת-אפיקי-השקעה-לתשואה-הכוללת---מנורה-מבטחים-משלימה-עוקב-מדדי-מניות.xlsx",
-  "legal_id": "512245812",
-  "company": "מנורה מבטחים פנסיה וגמל בע\"מ",
-  "detected": "2026-10-19T09:54:09+00:00"
- },
- {
-  "kind": "new_item",
-  "page": "https://www.menoramivt.co.il/funds/-pension-mashlima-14309",
-  "text": "לחץ להורדת קובץ PDF 2026 - 30.09",
-  "href": "https://cdn.menoramivt.co.il/public/docs/20261019/%D7%AA%D7%A8%D7%95%D7%9E%D7%AA-%D7%90%D7%A4%D7%99%D7%A7%D7%99-%D7%94%D7%A9%D7%A7%D7%A2%D7%94-%D7%9C%D7%AA%D7%A9%D7%95%D7%90%D7%94-%D7%94%D7%9B%D7%95%D7%9C%D7%9C%D7%AA---%D7%9E%D7%A0%D7%95%D7%A8%D7%94-%D7%9E%D7%91%D7%98%D7%97%D7%99%D7%9D-%D7%9E%D7%A9%D7%9C%D7%99%D7%9E%D7%94-%D7%A2%D7%95%D7%A7%D7%91-%D7%9E%D7%93%D7%93%D7%99%D7%9D---%D7%92%D7%9E%D7%99%D7%A9.xlsx",
-  "legal_id": "512245812",
-  "company": "מנורה מבטחים פנסיה וגמל בע\"מ",
-  "detected": "2026-10-19T09:54:09+00:00"
- },
- {
-  "kind": "new_item",
-  "page": "https://www.menoramivt.co.il/funds/-pension-mashlima-14309",
-  "text": "2026",
-  "href": "https://cdn.menoramivt.co.il/public/docs/20261019/תרומת-אפיקי-השקעה-לתשואה-הכוללת---מנורה-מבטחים-משלימה-עוקב-מדדים---גמיש.xlsx",
-  "legal_id": "512245812",
-  "company": "מנורה מבטחים פנסיה וגמל בע\"מ",
-  "detected": "2026-10-19T09:54:09+00:00"
+  "detected": "2026-10-20T09:23:52+00:00"
  },
  {
   "kind": "page_changed",
@@ -141,61 +78,169 @@
   "href": "https://www.menoramivt.co.il/list/pension-member-info/retirement-investment-tracks",
   "legal_id": "512245812",
   "company": "מנורה מבטחים פנסיה וגמל בע\"מ",
-  "detected": "2026-10-19T09:54:09+00:00"
+  "detected": "2026-10-20T09:23:52+00:00"
  },
  {
-  "kind": "page_changed",
+  "kind": "new_item",
   "page": "https://www.menoramivt.co.il/funds/pension-and-gemel/gemel-hishtalmut-list/top-savings/8675",
-  "text": "טקסט העמוד השתנה (אותם קישורים)",
-  "href": "https://www.menoramivt.co.il/funds/pension-and-gemel/gemel-hishtalmut-list/top-savings/8675",
+  "text": "2026 09.2026 מצטבר מתחילת שנה",
+  "href": "https://cdn.menoramivt.co.il/public/docs/20261019/תרומת-אפיקי-השקעה-לתשואה-הכוללת---מנורה-מבטחים-גמל-להשקעה-כללי.xlsx",
   "legal_id": "512245812",
   "company": "מנורה מבטחים פנסיה וגמל בע\"מ",
-  "detected": "2026-10-19T09:54:09+00:00"
+  "detected": "2026-10-20T09:23:52+00:00"
+ },
+ {
+  "kind": "new_item",
+  "page": "https://www.menoramivt.co.il/funds/pension-and-gemel/gemel-hishtalmut-list/top-savings/8678",
+  "text": "2026 09.2026 מצטבר מתחילת שנה",
+  "href": "https://cdn.menoramivt.co.il/public/docs/20261019/תרומת-אפיקי-השקעה-לתשואה-הכוללת---מנורה-מבטחים-גמל-להשקעה-אשראי-ואגח-עם-מניות-עד-25-מניות.xlsx",
+  "legal_id": "512245812",
+  "company": "מנורה מבטחים פנסיה וגמל בע\"מ",
+  "detected": "2026-10-20T09:23:52+00:00"
+ },
+ {
+  "kind": "new_item",
+  "page": "https://www.menoramivt.co.il/funds/pension-and-gemel/gemel-hishtalmut-list/top-savings/8683",
+  "text": "2026 09.2026 מצטבר מתחילת שנה",
+  "href": "https://cdn.menoramivt.co.il/public/docs/20261019/תרומת-אפיקי-השקעה-לתשואה-הכוללת---מנורה-מבטחים-גמל-להשקעה-עוקב-מדדי-מניות.xlsx",
+  "legal_id": "512245812",
+  "company": "מנורה מבטחים פנסיה וגמל בע\"מ",
+  "detected": "2026-10-20T09:23:52+00:00"
  },
  {
   "kind": "page_changed",
-  "page": "https://www.menoramivt.co.il/funds/pension-and-gemel/gemel-hishtalmut-list/top-savings/8683",
+  "page": "https://www.menoramivt.co.il/funds/pension-and-gemel/gemel-hishtalmut-list/top-savings/8684",
   "text": "טקסט העמוד השתנה (אותם קישורים)",
-  "href": "https://www.menoramivt.co.il/funds/pension-and-gemel/gemel-hishtalmut-list/top-savings/8683",
+  "href": "https://www.menoramivt.co.il/funds/pension-and-gemel/gemel-hishtalmut-list/top-savings/8684",
   "legal_id": "512245812",
   "company": "מנורה מבטחים פנסיה וגמל בע\"מ",
-  "detected": "2026-10-19T09:54:09+00:00"
+  "detected": "2026-10-20T09:23:52+00:00"
  },
  {
-  "kind": "text_changed",
-  "page": "https://www.menoramivt.co.il/funds/pension-and-gemel/gemel-hishtalmut-list/menroa-keren-hishtalmut/1114",
-  "text": "אתר זה משתמש בעוגיות (Cookies) לשיפור חווית הגלישה והתאמת תכנים. למידע נוסף ראה מדיניות הפרטיות -> מדיניות פרטיות",
-  "href": "https://www.menoramivt.co.il/general/privacy-policy",
+  "kind": "new_item",
+  "page": "https://www.menoramivt.co.il/funds/pension-and-gemel/gemel-hishtalmut-list/top-savings/8693",
+  "text": "2026 09.2026 מצטבר מתחילת שנה",
+  "href": "https://cdn.menoramivt.co.il/public/docs/20261019/תרומת-אפיקי-השקעה-לתשואה-הכוללת---מנורה-מבטחים-גמל-להשקעה-כספי-(שקלי).xlsx",
   "legal_id": "512245812",
   "company": "מנורה מבטחים פנסיה וגמל בע\"מ",
-  "detected": "2026-10-19T09:54:09+00:00"
+  "detected": "2026-10-20T09:23:52+00:00"
+ },
+ {
+  "kind": "new_item",
+  "page": "https://www.menoramivt.co.il/funds/pension-and-gemel/gemel-hishtalmut-list/top-savings/8716",
+  "text": "2026 09.2026 מצטבר מתחילת שנה",
+  "href": "https://cdn.menoramivt.co.il/public/docs/20261019/תרומת-אפיקי-השקעה-לתשואה-הכוללת---מנורה-מבטחים-גמל-להשקעה-הלכה.xlsx",
+  "legal_id": "512245812",
+  "company": "מנורה מבטחים פנסיה וגמל בע\"מ",
+  "detected": "2026-10-20T09:23:52+00:00"
+ },
+ {
+  "kind": "new_item",
+  "page": "https://www.menoramivt.co.il/funds/pension-and-gemel/gemel-hishtalmut-list/top-savings/13353",
+  "text": "2026 09.2026 מצטבר מתחילת שנה",
+  "href": "https://cdn.menoramivt.co.il/public/docs/20261019/תרומת-אפיקי-השקעה-לתשואה-הכוללת---מנורה-מבטחים-גמל-להשקעה-מניות-סחיר.xlsx",
+  "legal_id": "512245812",
+  "company": "מנורה מבטחים פנסיה וגמל בע\"מ",
+  "detected": "2026-10-20T09:23:52+00:00"
+ },
+ {
+  "kind": "new_item",
+  "page": "https://www.menoramivt.co.il/funds/pension-and-gemel/gemel-hishtalmut-list/top-savings/13354",
+  "text": "2026 09.2026 מצטבר מתחילת שנה",
+  "href": "https://cdn.menoramivt.co.il/public/docs/20261019/תרומת-אפיקי-השקעה-לתשואה-הכוללת---מנורה-מבטחים-גמל-להשקעה-אשראי-ואגח.xlsx",
+  "legal_id": "512245812",
+  "company": "מנורה מבטחים פנסיה וגמל בע\"מ",
+  "detected": "2026-10-20T09:23:52+00:00"
+ },
+ {
+  "kind": "new_item",
+  "page": "https://www.menoramivt.co.il/funds/pension-and-gemel/gemel-hishtalmut-list/top-savings/15465",
+  "text": "2026 09.2026 מצטבר מתחילת שנה",
+  "href": "https://cdn.menoramivt.co.il/public/docs/20261019/תרומת-אפיקי-השקעה-לתשואה-הכוללת---מנורה-מבטחים-גמל-להשקעה-משולב-סחיר.xlsx",
+  "legal_id": "512245812",
+  "company": "מנורה מבטחים פנסיה וגמל בע\"מ",
+  "detected": "2026-10-20T09:23:52+00:00"
  },
  {
   "kind": "new_item",
   "page": "https://www.menoramivt.co.il/funds/pension-and-gemel/gemel-hishtalmut-list/menroa-keren-hishtalmut/1114",
-  "text": "דלג לתוכן הדף ביטוחים חיסכון פנסיוני מנורה השקעות תביעות שירותים פעולות דברו איתנו | פורטלים ביטוחים ביטוח רכב ביטוח רכב לפי קילומטר ביטוח נהג חדש כיסוי לכל נהג ביטוח צד ג' לאופנוע ביטוח משאית ביטוח ר",
-  "href": "https://www.menoramivt.co.il/",
+  "text": "2026 09.2026 מצטבר מתחילת שנה",
+  "href": "https://cdn.menoramivt.co.il/public/docs/20261019/תרומת-אפיקי-השקעה-לתשואה-הכוללת---מנורה-מבטחים-השתלמות-כספי-(שקלי).xlsx",
   "legal_id": "512245812",
   "company": "מנורה מבטחים פנסיה וגמל בע\"מ",
-  "detected": "2026-10-19T09:54:09+00:00"
+  "detected": "2026-10-20T09:23:52+00:00"
  },
  {
   "kind": "text_changed",
-  "page": "https://www.menoramivt.co.il/funds/pension-and-gemel/gemel-hishtalmut-list/menroa-keren-hishtalmut/11409",
+  "page": "https://www.menoramivt.co.il/funds/pension-and-gemel/gemel-hishtalmut-list/menroa-keren-hishtalmut/1114",
   "text": "מדיניות פרטיות -> אתר זה משתמש בעוגיות (Cookies) לשיפור חווית הגלישה והתאמת תכנים. למידע נוסף ראה מדיניות הפרטיות",
   "href": "https://www.menoramivt.co.il/general/privacy-policy",
   "legal_id": "512245812",
   "company": "מנורה מבטחים פנסיה וגמל בע\"מ",
-  "detected": "2026-10-19T09:54:09+00:00"
+  "detected": "2026-10-20T09:23:52+00:00"
  },
  {
   "kind": "removed_item",
+  "page": "https://www.menoramivt.co.il/funds/pension-and-gemel/gemel-hishtalmut-list/menroa-keren-hishtalmut/1114",
+  "text": "דלג לתוכן הדף ביטוחים חיסכון פנסיוני מנורה השקעות תביעות שירותים פעולות דברו איתנו | פורטלים ביטוחים ביטוח רכב ביטוח רכב לפי קילומטר ביטוח נהג חדש כיסוי לכל נהג ביטוח צד ג' לאופנוע ביטוח משאית ביטוח ר",
+  "href": "https://www.menoramivt.co.il/",
+  "legal_id": "512245812",
+  "company": "מנורה מבטחים פנסיה וגמל בע\"מ",
+  "detected": "2026-10-20T09:23:52+00:00"
+ },
+ {
+  "kind": "text_changed",
+  "page": "https://www.menoramivt.co.il/funds/pension-and-gemel/gemel-hishtalmut-list/menroa-keren-hishtalmut/11409",
+  "text": "אתר זה משתמש בעוגיות (Cookies) לשיפור חווית הגלישה והתאמת תכנים. למידע נוסף ראה מדיניות הפרטיות -> מדיניות פרטיות",
+  "href": "https://www.menoramivt.co.il/general/privacy-policy",
+  "legal_id": "512245812",
+  "company": "מנורה מבטחים פנסיה וגמל בע\"מ",
+  "detected": "2026-10-20T09:23:52+00:00"
+ },
+ {
+  "kind": "new_item",
   "page": "https://www.menoramivt.co.il/funds/pension-and-gemel/gemel-hishtalmut-list/menroa-keren-hishtalmut/11409",
   "text": "דלג לתוכן הדף ביטוחים חיסכון פנסיוני מנורה השקעות תביעות שירותים פעולות דברו איתנו | פורטלים ביטוחים ביטוח רכב ביטוח רכב לפי קילומטר ביטוח נהג חדש כיסוי לכל נהג ביטוח צד ג' לאופנוע ביטוח משאית ביטוח ר",
   "href": "https://www.menoramivt.co.il/",
   "legal_id": "512245812",
   "company": "מנורה מבטחים פנסיה וגמל בע\"מ",
-  "detected": "2026-10-19T09:54:09+00:00"
+  "detected": "2026-10-20T09:23:52+00:00"
+ },
+ {
+  "kind": "new_item",
+  "page": "https://www.menoramivt.co.il/funds/pension-and-gemel/gemel-hishtalmut-list/menroa-keren-hishtalmut/9662",
+  "text": "2026 09.2026 מצטבר מתחילת שנה",
+  "href": "https://cdn.menoramivt.co.il/public/docs/20261019/תרומת-אפיקי-השקעה-לתשואה-הכוללת---מנורה-מבטחים-השתלמות-אשראי-ואגח-עם-מניות-עד-25-מניות.xlsx",
+  "legal_id": "512245812",
+  "company": "מנורה מבטחים פנסיה וגמל בע\"מ",
+  "detected": "2026-10-20T09:23:52+00:00"
+ },
+ {
+  "kind": "new_item",
+  "page": "https://www.menoramivt.co.il/funds/pension-and-gemel/gemel/provident-to-investment-14678",
+  "text": "2026 09.2026 מצטבר מתחילת שנה",
+  "href": "https://cdn.menoramivt.co.il/public/docs/20261019/תרומת-אפיקי-השקעה-לתשואה-הכוללת---מנורה-מבטחים-קופת-גמל-להשקעה-עוקב-מדדים-גמיש.xlsx",
+  "legal_id": "512245812",
+  "company": "מנורה מבטחים פנסיה וגמל בע\"מ",
+  "detected": "2026-10-20T09:23:52+00:00"
+ },
+ {
+  "kind": "new_item",
+  "page": "https://www.menoramivt.co.il/funds/pension-and-gemel/gemel/pension-and-gemel.gemel.provident-to-investment-15724",
+  "text": "2026 09.2026 מצטבר מתחילת שנה",
+  "href": "https://cdn.menoramivt.co.il/public/docs/20261019/תרומת-אפיקי-השקעה-לתשואה-הכוללת---מנורה-מבטחים-גמל-להשקעה-מסלול-מניות.xlsx",
+  "legal_id": "512245812",
+  "company": "מנורה מבטחים פנסיה וגמל בע\"מ",
+  "detected": "2026-10-20T09:23:52+00:00"
+ },
+ {
+  "kind": "new_item",
+  "page": "https://www.menoramivt.co.il/funds/gemel-SP500",
+  "text": "2026 09.2026 מצטבר מתחילת שנה",
+  "href": "https://cdn.menoramivt.co.il/public/docs/20261019/תרומת-אפיקי-השקעה-לתשואה-הכוללת---מנורה-מבטחים-תגמולים-ופיצויים-עוקב-מדד-s&p500.xlsx",
+  "legal_id": "512245812",
+  "company": "מנורה מבטחים פנסיה וגמל בע\"מ",
+  "detected": "2026-10-20T09:23:52+00:00"
  },
  {
   "kind": "page_changed",
@@ -204,7 +249,7 @@
   "href": "https://www.menoramivt.co.il/funds/gemel-kayamut-14351",
   "legal_id": "512245812",
   "company": "מנורה מבטחים פנסיה וגמל בע\"מ",
-  "detected": "2026-10-19T09:54:09+00:00"
+  "detected": "2026-10-20T09:23:52+00:00"
  },
  {
   "kind": "page_changed",
@@ -213,7 +258,7 @@
   "href": "https://www.menoramivt.co.il/funds/gemel-mor-14403",
   "legal_id": "512245812",
   "company": "מנורה מבטחים פנסיה וגמל בע\"מ",
-  "detected": "2026-10-19T09:54:09+00:00"
+  "detected": "2026-10-20T09:23:52+00:00"
  },
  {
   "kind": "page_changed",
@@ -222,7 +267,7 @@
   "href": "https://www.menoramivt.co.il/funds/gemel-mor-14404",
   "legal_id": "512245812",
   "company": "מנורה מבטחים פנסיה וגמל בע\"מ",
-  "detected": "2026-10-19T09:54:09+00:00"
+  "detected": "2026-10-20T09:23:52+00:00"
  },
  {
   "kind": "page_changed",
@@ -231,7 +276,7 @@
   "href": "https://www.menoramivt.co.il/funds/pension-and-gemel/gemel-hishtalmut-list/menora-gemel/1343-short-term",
   "legal_id": "512245812",
   "company": "מנורה מבטחים פנסיה וגמל בע\"מ",
-  "detected": "2026-10-19T09:54:09+00:00"
+  "detected": "2026-10-20T09:23:52+00:00"
  },
  {
   "kind": "page_changed",
@@ -240,7 +285,7 @@
   "href": "https://www.menoramivt.co.il/funds/pension-and-gemel/pension-plans/pension-plans-pension-plans-15673",
   "legal_id": "512245812",
   "company": "מנורה מבטחים פנסיה וגמל בע\"מ",
-  "detected": "2026-10-19T09:54:09+00:00"
+  "detected": "2026-10-20T09:23:52+00:00"
  },
  {
   "kind": "page_changed",
@@ -249,7 +294,7 @@
   "href": "https://www.menoramivt.co.il/pension/investment-routes-pension",
   "legal_id": "512245812",
   "company": "מנורה מבטחים פנסיה וגמל בע\"מ",
-  "detected": "2026-10-19T09:54:09+00:00"
+  "detected": "2026-10-20T09:23:52+00:00"
  },
  {
   "kind": "page_changed",
@@ -258,7 +303,7 @@
   "href": "https://www.menoramivt.co.il/links/pension-and-gemel/gemel-hishtalmut-list/menroa-keren-hishtalmut",
   "legal_id": "512245812",
   "company": "מנורה מבטחים פנסיה וגמל בע\"מ",
-  "detected": "2026-10-19T09:54:09+00:00"
+  "detected": "2026-10-20T09:23:52+00:00"
  },
  {
   "kind": "page_changed",
@@ -267,7 +312,7 @@
   "href": "https://www.menoramivt.co.il/links/pension-and-gemel/gemel-hishtalmut-list/list-top-savings",
   "legal_id": "512245812",
   "company": "מנורה מבטחים פנסיה וגמל בע\"מ",
-  "detected": "2026-10-19T09:54:09+00:00"
+  "detected": "2026-10-20T09:23:52+00:00"
  },
  {
   "kind": "page_changed",
@@ -276,7 +321,7 @@
   "href": "https://www.menoramivt.co.il/pension/menora-pension-mashlima",
   "legal_id": "512245812",
   "company": "מנורה מבטחים פנסיה וגמל בע\"מ",
-  "detected": "2026-10-19T09:54:09+00:00"
+  "detected": "2026-10-20T09:23:52+00:00"
  },
  {
   "kind": "page_changed",
@@ -285,7 +330,7 @@
   "href": "https://www.menoramivt.co.il/links/pension-and-gemel/pension-plans",
   "legal_id": "512245812",
   "company": "מנורה מבטחים פנסיה וגמל בע\"מ",
-  "detected": "2026-10-19T09:54:09+00:00"
+  "detected": "2026-10-20T09:23:52+00:00"
  },
  {
   "kind": "page_changed",
@@ -294,7 +339,7 @@
   "href": "https://www.menoramivt.co.il/pension/pension-index-fund",
   "legal_id": "512245812",
   "company": "מנורה מבטחים פנסיה וגמל בע\"מ",
-  "detected": "2026-10-19T09:54:09+00:00"
+  "detected": "2026-10-20T09:23:52+00:00"
  },
  {
   "kind": "page_changed",
@@ -303,7 +348,7 @@
   "href": "https://www.menoramivt.co.il/funds/pension-14277",
   "legal_id": "512245812",
   "company": "מנורה מבטחים פנסיה וגמל בע\"מ",
-  "detected": "2026-10-19T09:54:09+00:00"
+  "detected": "2026-10-20T09:23:52+00:00"
  },
  {
   "kind": "page_changed",
@@ -312,7 +357,7 @@
   "href": "https://www.menoramivt.co.il/funds/pension-14278",
   "legal_id": "512245812",
   "company": "מנורה מבטחים פנסיה וגמל בע\"מ",
-  "detected": "2026-10-19T09:54:09+00:00"
+  "detected": "2026-10-20T09:23:52+00:00"
  },
  {
   "kind": "page_changed",
@@ -321,7 +366,7 @@
   "href": "https://www.menoramivt.co.il/funds/Insurers-pension-SP500",
   "legal_id": "512245812",
   "company": "מנורה מבטחים פנסיה וגמל בע\"מ",
-  "detected": "2026-10-19T09:54:09+00:00"
+  "detected": "2026-10-20T09:23:52+00:00"
  },
  {
   "kind": "page_changed",
@@ -330,7 +375,7 @@
   "href": "https://www.menoramivt.co.il/funds/gemel-14271",
   "legal_id": "512245812",
   "company": "מנורה מבטחים פנסיה וגמל בע\"מ",
-  "detected": "2026-10-19T09:54:09+00:00"
+  "detected": "2026-10-20T09:23:52+00:00"
  },
  {
   "kind": "page_changed",
@@ -339,7 +384,7 @@
   "href": "https://www.menoramivt.co.il/funds/gemel-14272",
   "legal_id": "512245812",
   "company": "מנורה מבטחים פנסיה וגמל בע\"מ",
-  "detected": "2026-10-19T09:54:09+00:00"
+  "detected": "2026-10-20T09:23:52+00:00"
  },
  {
   "kind": "page_changed",
@@ -348,7 +393,7 @@
   "href": "https://www.menoramivt.co.il/funds/gemel-14679",
   "legal_id": "512245812",
   "company": "מנורה מבטחים פנסיה וגמל בע\"מ",
-  "detected": "2026-10-19T09:54:09+00:00"
+  "detected": "2026-10-20T09:23:52+00:00"
  },
  {
   "kind": "page_changed",
@@ -357,7 +402,7 @@
   "href": "https://www.menoramivt.co.il/funds/pension-and-gemel/pension-plans/stock-track",
   "legal_id": "512245812",
   "company": "מנורה מבטחים פנסיה וגמל בע\"מ",
-  "detected": "2026-10-19T09:54:09+00:00"
+  "detected": "2026-10-20T09:23:52+00:00"
  },
  {
   "kind": "page_changed",
@@ -366,7 +411,7 @@
   "href": "https://www.menoramivt.co.il/links/pension-and-gemel/gemel-hishtalmut-list/menora-gemel",
   "legal_id": "512245812",
   "company": "מנורה מבטחים פנסיה וגמל בע\"מ",
-  "detected": "2026-10-19T09:54:09+00:00"
+  "detected": "2026-10-20T09:23:52+00:00"
  },
  {
   "kind": "page_changed",
@@ -375,7 +420,7 @@
   "href": "https://www.menoramivt.co.il/funds/pension-and-gemel/gemel-hishtalmut-list/menora-gemel/1154",
   "legal_id": "512245812",
   "company": "מנורה מבטחים פנסיה וגמל בע\"מ",
-  "detected": "2026-10-19T09:54:09+00:00"
+  "detected": "2026-10-20T09:23:52+00:00"
  },
  {
   "kind": "page_changed",
@@ -384,7 +429,7 @@
   "href": "https://www.menoramivt.co.il/funds/pension-and-gemel/gemel-hishtalmut-list/menora-gemel/119",
   "legal_id": "512245812",
   "company": "מנורה מבטחים פנסיה וגמל בע\"מ",
-  "detected": "2026-10-19T09:54:09+00:00"
+  "detected": "2026-10-20T09:23:52+00:00"
  },
  {
   "kind": "page_changed",
@@ -393,6 +438,15 @@
   "href": "https://www.menoramivt.co.il/funds/pension-and-gemel/gemel-hishtalmut-list/menora-gemel/1294",
   "legal_id": "512245812",
   "company": "מנורה מבטחים פנסיה וגמל בע\"מ",
-  "detected": "2026-10-19T09:54:09+00:00"
+  "detected": "2026-10-20T09:23:52+00:00"
+ },
+ {
+  "kind": "new_page",
+  "page": "https://www.menoramivt.co.il/funds/pension-and-gemel/gemel-hishtalmut-list/menora-gemel/15421",
+  "text": "1 items",
+  "href": "https://www.menoramivt.co.il/funds/pension-and-gemel/gemel-hishtalmut-list/menora-gemel/15421",
+  "legal_id": "512245812",
+  "company": "מנורה מבטחים פנסיה וגמל בע\"מ",
+  "detected": "2026-10-20T09:23:52+00:00"
  }
 ]
