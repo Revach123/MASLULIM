@@ -1,7 +1,7 @@
 {
  "extension_version": "2.52.0",
  "started": "2026-10-20T17:21:29.666Z",
- "updated": "2026-10-20T18:18:30.070Z",
+ "updated": "2026-10-20T18:21:30.078Z",
  "final": false,
  "stopped": false,
  "rules_from_github": true,
@@ -41,10 +41,10 @@
  "active": [
   {
    "name": "איילון חברה לביטוח בע\"מ",
-   "page": "https://www.ayalon-ins.co.il/about-us/about-ayalon/investments/policy/",
-   "page_no": 1,
-   "pages": 5,
-   "step": "טוען עמוד"
+   "page": "https://www.ayalon-ins.co.il/about-us/about-ayalon/investments/",
+   "page_no": 8,
+   "pages": 12,
+   "step": "פותח אקורדיונים ואוסף קישורים"
   }
  ],
  "sites": [
