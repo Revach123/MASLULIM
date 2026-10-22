@@ -1,13 +1,13 @@
 {
  "legal_id": "520030990",
- "taken": "2026-10-21T12:32:17+00:00",
+ "taken": "2026-10-22T20:03:33+00:00",
  "pages": {
   "https://minhal.org/הרכב-נכסים/": {
-   "product": null,
+   "product": "גמל",
    "status": 200,
-   "method": "browser",
-   "text_hash": null,
-   "text_head": "",
+   "method": "requests",
+   "text_hash": "1d4cd845e273e3883ad8e33217c9fcca24a23a8a",
+   "text_head": "דו\"חות - קרן השתלמות לפקידים עובדי המינהל והשירותים דילוג לתוכן אודות הקרן אודות הקרן חברי דירקטוריון והנהלה בכירה נושאי משרה חברי ועדות תקנון הקרן תרשים המבנה מדיניות ונהלים אמנת שירות הוצאות ישירות בעד ניהול השקעות ממשק אינטרנטי מידע סטטיסטי תרשים בעלי שליטה + צדדים קשורים הצבעות באסיפות כלליות אזרחים ותיקים הצהרת נגישות דו\"חות כספיים נכסי הקרן התפלגות אפיקי השקעה העברת זכויות עמיתים שלא במזומן עסקאות עם צדדים קשורים רשימת נכסים רבעונית – מאוחד מסלולי השקעה מסלול מינהל כללי מסלול אשראי ואג\"ח מסלול מינהל מניות מסלול מינהל הלכה מסלול עוקב מדד 500 S&P טפסים שאלות ותשובות צור קשר אודות הקרן אודו",
    "items": [
     {
      "text": "מדיניות צפויה 2026 מסלול כללי",
@@ -20,14 +20,6 @@
     {
      "text": "מדיניות פרטיות",
      "href": "https://minhal.org/wp-content/uploads/2026/08/מדיניות-פרטיות.pdf",
-     "year": "2026",
-     "iframe": false,
-     "doc": true,
-     "internal": true
-    },
-    {
-     "text": "מדיניות פרטיות",
-     "href": "https://minhal.org/wp-content/uploads/2026/08/%D7%9E%D7%93%D7%99%D7%A0%D7%99%D7%95%D7%AA-%D7%A4%D7%A8%D7%98%D7%99%D7%95%D7%AA.pdf",
      "year": "2026",
      "iframe": false,
      "doc": true,
@@ -76,14 +68,6 @@
     {
      "text": "דוח לא",
      "href": "https://minhal.org/wp-content/uploads/2026/09/ממונה-ערכי-נכסים_20260730_v1_299_5151.xlsx",
-     "year": "2026",
-     "iframe": false,
-     "doc": true,
-     "internal": true
-    },
-    {
-     "text": "דוח לא",
-     "href": "https://minhal.org/wp-content/uploads/2026/09/%D7%9E%D7%9E%D7%95%D7%A0%D7%94-%D7%A2%D7%A8%D7%9B%D7%99-%D7%A0%D7%9B%D7%A1%D7%99%D7%9D_20260730_v1_299_5151.xlsx",
      "year": "2026",
      "iframe": false,
      "doc": true,
@@ -186,14 +170,6 @@
      "internal": true
     },
     {
-     "text": "דוח לאוצר 07.2025",
-     "href": "https://minhal.org/wp-content/uploads/2025/09/%D7%9E%D7%9E%D7%95%D7%A0%D7%94-%D7%A2%D7%A8%D7%9B%D7%99-%D7%A0%D7%9B%D7%A1%D7%99%D7%9D_20250731_v1_299_5151.xlsx",
-     "year": "2025",
-     "iframe": false,
-     "doc": true,
-     "internal": true
-    },
-    {
      "text": "דוח לאוצר 06.2025",
      "href": "https://minhal.org/wp-content/uploads/2025/08/ממונה-ערכי-נכסים_20250630_v1_299_5151.xlsx",
      "year": "2025",
@@ -202,8 +178,8 @@
      "internal": true
     },
     {
-     "text": "דוח לאוצר 06.2025",
-     "href": "https://minhal.org/wp-content/uploads/2025/08/%D7%9E%D7%9E%D7%95%D7%A0%D7%94-%D7%A2%D7%A8%D7%9B%D7%99-%D7%A0%D7%9B%D7%A1%D7%99%D7%9D_20250630_v1_299_5151.xlsx",
+     "text": "דוח לא",
+     "href": "https://minhal.org/wp-content/uploads/2025/03/%D7%9E%D7%9E%D7%95%D7%A0%D7%94-%D7%A2%D7%A8%D7%9B%D7%99-%D7%A0%D7%9B%D7%A1%D7%99%D7%9D_20250227_v1_299_5151.xlsx",
      "year": "2025",
      "iframe": false,
      "doc": true,
@@ -242,24 +218,8 @@
      "internal": true
     },
     {
-     "text": "03.2025",
-     "href": "https://minhal.org/wp-content/uploads/2025/05/%D7%9E%D7%9E%D7%95%D7%A0%D7%94-%D7%A2%D7%A8%D7%9B%D7%99-%D7%A0%D7%9B%D7%A1%D7%99%D7%9D_20250331_v1_299_5151.xlsx",
-     "year": "2025",
-     "iframe": false,
-     "doc": true,
-     "internal": true
-    },
-    {
      "text": "02.2025",
      "href": "https://minhal.org/wp-content/uploads/2025/03/ממונה-ערכי-נכסים_20250227_v1_299_5151.xlsx",
-     "year": "2025",
-     "iframe": false,
-     "doc": true,
-     "internal": true
-    },
-    {
-     "text": "02.2025",
-     "href": "https://minhal.org/wp-content/uploads/2025/03/%D7%9E%D7%9E%D7%95%D7%A0%D7%94-%D7%A2%D7%A8%D7%9B%D7%99-%D7%A0%D7%9B%D7%A1%D7%99%D7%9D_20250227_v1_299_5151.xlsx",
      "year": "2025",
      "iframe": false,
      "doc": true,
@@ -269,22 +229,6 @@
      "text": "*נבקש להדגיש כי שיעור הוצאות ניהול השקעות בשנת 2025 שהוצג בדוח השנתי לעמית כלל את הוצאות ניהול ההשקעות שנגבו בפועל מהעמיתים בשנת 2025 היו כדלהלן",
      "href": "https://minhal.org/wp-content/uploads/2026/03/תיקון.pdf",
      "year": "2025",
-     "iframe": false,
-     "doc": true,
-     "internal": true
-    },
-    {
-     "text": "*נבקש להדגיש כי שיעור הוצאות ניהול השקעות בשנת 2025 שהוצג בדוח השנתי לעמית כלל את הוצאות ניהול ההשקעות שנגבו בפועל מהעמיתים בשנת 2025 היו כדלהלן",
-     "href": "https://minhal.org/wp-content/uploads/2026/03/%D7%AA%D7%99%D7%A7%D7%95%D7%9F.pdf",
-     "year": "2025",
-     "iframe": false,
-     "doc": true,
-     "internal": true
-    },
-    {
-     "text": "שנת 2024 12",
-     "href": "https://minhal.org/wp-content/uploads/2025/02/%D7%93%D7%95%D7%97-%D7%9C%D7%90%D7%95%D7%A6%D7%A8-%D7%9B%D7%9C%D7%9C%D7%99-12.24.xlsx",
-     "year": "2024",
      "iframe": false,
      "doc": true,
      "internal": true
@@ -380,14 +324,6 @@
     {
      "text": "10.2024",
      "href": "https://minhal.org/wp-content/uploads/2024/12/דוח-לאוצר-מסלול-כללי-10.24.xlsx",
-     "year": "2024",
-     "iframe": false,
-     "doc": true,
-     "internal": true
-    },
-    {
-     "text": "10.2024",
-     "href": "https://minhal.org/wp-content/uploads/2024/12/%D7%93%D7%95%D7%97-%D7%9C%D7%90%D7%95%D7%A6%D7%A8-%D7%9E%D7%A1%D7%9C%D7%95%D7%9C-%D7%9B%D7%9C%D7%9C%D7%99-10.24.xlsx",
      "year": "2024",
      "iframe": false,
      "doc": true,
@@ -1008,48 +944,16 @@
      "iframe": false,
      "doc": false,
      "internal": true
-    },
-    {
-     "text": "© כל הזכויות שמורות - קרן ההשתלמות לפקידים עובדי המינהל והשירותים",
-     "href": "https://minhal.org/",
-     "year": null,
-     "iframe": false,
-     "doc": false,
-     "internal": true
-    },
-    {
-     "text": "(iframe)",
-     "href": "https://netfree.link/card/index.html",
-     "year": null,
-     "iframe": true,
-     "doc": false,
-     "internal": false
-    },
-    {
-     "text": "(iframe)",
-     "href": "https://netfree.link/misc/go-payment.html?v=3",
-     "year": null,
-     "iframe": true,
-     "doc": false,
-     "internal": false
     }
    ]
   },
   "https://minhal.org/הרכב-נכסים/מסלול-עוקב-מדד-500-ps/": {
-   "product": null,
+   "product": "גמל",
    "status": 200,
-   "method": "browser",
-   "text_hash": null,
-   "text_head": "",
+   "method": "requests",
+   "text_hash": "f56ebf484b5c6ea002f1a6f5a69c4039d0fe78c6",
+   "text_head": "מסלול עוקב מדד 500 S&P - קרן השתלמות לפקידים עובדי המינהל והשירותים דילוג לתוכן אודות הקרן אודות הקרן חברי דירקטוריון והנהלה בכירה נושאי משרה חברי ועדות תקנון הקרן תרשים המבנה מדיניות ונהלים אמנת שירות הוצאות ישירות בעד ניהול השקעות ממשק אינטרנטי מידע סטטיסטי תרשים בעלי שליטה + צדדים קשורים הצבעות באסיפות כלליות אזרחים ותיקים הצהרת נגישות דו\"חות כספיים נכסי הקרן התפלגות אפיקי השקעה העברת זכויות עמיתים שלא במזומן עסקאות עם צדדים קשורים רשימת נכסים רבעונית – מאוחד מסלולי השקעה מסלול מינהל כללי מסלול אשראי ואג\"ח מסלול מינהל מניות מסלול מינהל הלכה מסלול עוקב מדד 500 S&P טפסים שאלות ותשובות צור קשר",
    "items": [
-    {
-     "text": "שנת 2026 26",
-     "href": "https://minhal.org/wp-content/uploads/2026/03/dohot_ozar_SP500_mekutzar_0126.xls.xlsx",
-     "year": "2026",
-     "iframe": false,
-     "doc": true,
-     "internal": true
-    },
     {
      "text": "מדיניות צפויה 2026 מסלול P&S 500l",
      "href": "https://minhal.org/wp-content/uploads/2026/02/mediniyut_zfuya_sp5002026.xlsx.pdf",
@@ -1061,14 +965,6 @@
     {
      "text": "מדיניות פרטיות",
      "href": "https://minhal.org/wp-content/uploads/2026/08/מדיניות-פרטיות.pdf",
-     "year": "2026",
-     "iframe": false,
-     "doc": true,
-     "internal": true
-    },
-    {
-     "text": "מדיניות פרטיות",
-     "href": "https://minhal.org/wp-content/uploads/2026/08/%D7%9E%D7%93%D7%99%D7%A0%D7%99%D7%95%D7%AA-%D7%A4%D7%A8%D7%98%D7%99%D7%95%D7%AA.pdf",
      "year": "2026",
      "iframe": false,
      "doc": true,
@@ -1115,6 +1011,22 @@
      "internal": true
     },
     {
+     "text": "דוח לאוצר 12.20 25",
+     "href": "https://minhal.org/wp-content/uploads/2026/02/dohot_ozar_SP500_mekutzar_1225.xls.xlsx",
+     "year": "2026",
+     "iframe": false,
+     "doc": true,
+     "internal": true
+    },
+    {
+     "text": "דוח לאוצר 11.20 25",
+     "href": "https://minhal.org/wp-content/uploads/2026/01/dohot_ozar_SP500_mekutzar_1125.xls.xlsx",
+     "year": "2026",
+     "iframe": false,
+     "doc": true,
+     "internal": true
+    },
+    {
      "text": "דוח לאוצר 08.20",
      "href": "https://minhal.org/wp-content/uploads/2026/10/dohot_ozar_SP500_mekutzar_0826.xls.xlsx",
      "year": "2026",
@@ -1125,14 +1037,6 @@
     {
      "text": "דוח לאוצר 07.20",
      "href": "https://minhal.org/wp-content/uploads/2026/09/ממונה-ערכי-נכסים_20260730_v1_15378_8191.xlsx",
-     "year": "2026",
-     "iframe": false,
-     "doc": true,
-     "internal": true
-    },
-    {
-     "text": "דוח לאוצר 07.20",
-     "href": "https://minhal.org/wp-content/uploads/2026/09/%D7%9E%D7%9E%D7%95%D7%A0%D7%94-%D7%A2%D7%A8%D7%9B%D7%99-%D7%A0%D7%9B%D7%A1%D7%99%D7%9D_20260730_v1_15378_8191.xlsx",
      "year": "2026",
      "iframe": false,
      "doc": true,
@@ -1179,17 +1083,9 @@
      "internal": true
     },
     {
-     "text": "שנת 2025 25",
-     "href": "https://minhal.org/wp-content/uploads/2025/03/dohot_ozar_SP500_mekutzar_0125.xls.xlsx",
-     "year": "2025",
-     "iframe": false,
-     "doc": true,
-     "internal": true
-    },
-    {
-     "text": "שנת 2025 25",
-     "href": "https://minhal.org/wp-content/uploads/2025/03/%D7%9E%D7%9E%D7%95%D7%A0%D7%94-%D7%A2%D7%A8%D7%9B%D7%99-%D7%A0%D7%9B%D7%A1%D7%99%D7%9D_20250227_v1_15378_8191.xlsx",
-     "year": "2025",
+     "text": "דוח לאוצר 01.20",
+     "href": "https://minhal.org/wp-content/uploads/2026/03/dohot_ozar_SP500_mekutzar_0126.xls.xlsx",
+     "year": "2026",
      "iframe": false,
      "doc": true,
      "internal": true
@@ -1211,23 +1107,7 @@
      "internal": true
     },
     {
-     "text": "דוח לאוצר 12.2025",
-     "href": "https://minhal.org/wp-content/uploads/2026/02/dohot_ozar_SP500_mekutzar_1225.xls.xlsx",
-     "year": "2025",
-     "iframe": false,
-     "doc": true,
-     "internal": true
-    },
-    {
-     "text": "דוח לאוצר 11.2025",
-     "href": "https://minhal.org/wp-content/uploads/2026/01/dohot_ozar_SP500_mekutzar_1125.xls.xlsx",
-     "year": "2025",
-     "iframe": false,
-     "doc": true,
-     "internal": true
-    },
-    {
-     "text": "דוח לאוצר 10.2025",
+     "text": "דוח לאוצר 10.20 25",
      "href": "https://minhal.org/wp-content/uploads/2025/11/dohot_ozar_SP500_mekutzar_1025.xls.xlsx",
      "year": "2025",
      "iframe": false,
@@ -1235,7 +1115,7 @@
      "internal": true
     },
     {
-     "text": "דוח לאוצר 09.2025",
+     "text": "דוח לאוצר 09.20 25",
      "href": "https://minhal.org/wp-content/uploads/2025/11/dohot_ozar_SP500_mekutzar_0925.xls.xlsx",
      "year": "2025",
      "iframe": false,
@@ -1243,16 +1123,8 @@
      "internal": true
     },
     {
-     "text": "דוח לאוצר 08.2025",
+     "text": "דוח לאוצר 08.20 25",
      "href": "https://minhal.org/wp-content/uploads/2025/10/dohot_ozar_SP500_mekutzar_0825.xls.xlsx",
-     "year": "2025",
-     "iframe": false,
-     "doc": true,
-     "internal": true
-    },
-    {
-     "text": "דוח לאוצר 07.2025",
-     "href": "https://minhal.org/wp-content/uploads/2025/09/%D7%9E%D7%9E%D7%95%D7%A0%D7%94-%D7%A2%D7%A8%D7%9B%D7%99-%D7%A0%D7%9B%D7%A1%D7%99%D7%9D_20250731_v1_15378_8191.xlsx",
      "year": "2025",
      "iframe": false,
      "doc": true,
@@ -1261,14 +1133,6 @@
     {
      "text": "דוח לאוצר 07.20 25",
      "href": "https://minhal.org/wp-content/uploads/2025/09/ממונה-ערכי-נכסים_20250731_v1_15378_8191.xlsx",
-     "year": "2025",
-     "iframe": false,
-     "doc": true,
-     "internal": true
-    },
-    {
-     "text": "דוח לאוצר 06.2025",
-     "href": "https://minhal.org/wp-content/uploads/2025/08/%D7%9E%D7%9E%D7%95%D7%A0%D7%94-%D7%A2%D7%A8%D7%9B%D7%99-%D7%A0%D7%9B%D7%A1%D7%99%D7%9D_20250630_v1_15378_8191.xlsx",
      "year": "2025",
      "iframe": false,
      "doc": true,
@@ -1307,14 +1171,6 @@
      "internal": true
     },
     {
-     "text": "דוח לאוצר 03.20",
-     "href": "https://minhal.org/wp-content/uploads/2025/05/%D7%9E%D7%9E%D7%95%D7%A0%D7%94-%D7%A2%D7%A8%D7%9B%D7%99-%D7%A0%D7%9B%D7%A1%D7%99%D7%9D_20250331_v1_15378_8191.xlsx",
-     "year": "2025",
-     "iframe": false,
-     "doc": true,
-     "internal": true
-    },
-    {
      "text": "דוח לאוצר 02.20",
      "href": "https://minhal.org/wp-content/uploads/2025/03/ממונה-ערכי-נכסים_20250227_v1_15378_8191.xlsx",
      "year": "2025",
@@ -1331,8 +1187,8 @@
      "internal": true
     },
     {
-     "text": "*נבקש להדגיש כי שיעור הוצאות ניהול השקעות בשנת 2025 שהוצג בדוח השנתי לעמית כלל את הוצאות ניהול ההשקעות שנגבו בפועל מהעמיתים בשנת 2025 היו כדלהלן",
-     "href": "https://minhal.org/wp-content/uploads/2026/03/תיקון.pdf",
+     "text": "25",
+     "href": "https://minhal.org/wp-content/uploads/2025/03/dohot_ozar_SP500_mekutzar_0125.xls.xlsx",
      "year": "2025",
      "iframe": false,
      "doc": true,
@@ -1340,7 +1196,7 @@
     },
     {
      "text": "*נבקש להדגיש כי שיעור הוצאות ניהול השקעות בשנת 2025 שהוצג בדוח השנתי לעמית כלל את הוצאות ניהול ההשקעות שנגבו בפועל מהעמיתים בשנת 2025 היו כדלהלן",
-     "href": "https://minhal.org/wp-content/uploads/2026/03/%D7%AA%D7%99%D7%A7%D7%95%D7%9F.pdf",
+     "href": "https://minhal.org/wp-content/uploads/2026/03/תיקון.pdf",
      "year": "2025",
      "iframe": false,
      "doc": true,
@@ -1371,14 +1227,6 @@
      "internal": true
     },
     {
-     "text": "הוצאות ישירות כל המסלולים 2024",
-     "href": "https://minhal.org/wp-content/uploads/2025/08/%D7%94%D7%95%D7%A6%D7%90%D7%95%D7%AA-%D7%99%D7%A9%D7%99%D7%A8%D7%95%D7%AA-2024-%D7%9E%D7%A0%D7%94%D7%9C-.pdf",
-     "year": "2024",
-     "iframe": false,
-     "doc": true,
-     "internal": true
-    },
-    {
      "text": "הוצאות ישירות בעד ניהול השקעות – דצמבר 2024",
      "href": "https://minhal.org/wp-content/uploads/2025/07/hozaot_yeshirot_sp500_1224_.xls.xlsx",
      "year": "2024",
@@ -1403,14 +1251,6 @@
      "internal": true
     },
     {
-     "text": "דוח לאוצר 12.2024",
-     "href": "https://minhal.org/wp-content/uploads/2025/02/%D7%93%D7%95%D7%97-%D7%9C%D7%90%D7%95%D7%A6%D7%A8-%D7%A2%D7%95%D7%A7%D7%91-%D7%9E%D7%93%D7%93-12.24.xlsx",
-     "year": "2024",
-     "iframe": false,
-     "doc": true,
-     "internal": true
-    },
-    {
      "text": "דוח לאוצר 11.2024",
      "href": "https://minhal.org/wp-content/uploads/2025/01/dohot_ozar_SP500_mekutzar_1124.xls.xlsx",
      "year": "2024",
@@ -1421,14 +1261,6 @@
     {
      "text": "דוח לאוצר 10.2024",
      "href": "https://minhal.org/wp-content/uploads/2024/12/דוח-לאוצר-מסלול-SP-10.24.xlsx",
-     "year": "2024",
-     "iframe": false,
-     "doc": true,
-     "internal": true
-    },
-    {
-     "text": "דוח לאוצר 10.2024",
-     "href": "https://minhal.org/wp-content/uploads/2024/12/%D7%93%D7%95%D7%97-%D7%9C%D7%90%D7%95%D7%A6%D7%A8-%D7%9E%D7%A1%D7%9C%D7%95%D7%9C-SP-10.24.xlsx",
      "year": "2024",
      "iframe": false,
      "doc": true,
@@ -1505,48 +1337,8 @@
      "iframe": false,
      "doc": false,
      "internal": true
-    },
-    {
-     "text": "© כל הזכויות שמורות - קרן ההשתלמות לפקידים עובדי המינהל והשירותים",
-     "href": "https://minhal.org/",
-     "year": null,
-     "iframe": false,
-     "doc": false,
-     "internal": true
-    },
-    {
-     "text": "(iframe)",
-     "href": "https://netfree.link/card/index.html",
-     "year": null,
-     "iframe": true,
-     "doc": false,
-     "internal": false
-    },
-    {
-     "text": "(iframe)",
-     "href": "https://netfree.link/misc/go-payment.html?v=3",
-     "year": null,
-     "iframe": true,
-     "doc": false,
-     "internal": false
     }
    ]
-  },
-  "https://netfree.link/card/index.html": {
-   "product": null,
-   "status": 200,
-   "method": "browser",
-   "text_hash": "412297aff22b35d34e21276598a92c0fd55468ee",
-   "text_head": "שלח תמונה לבדיקה חוזרת דווח על תוכן לא ראוי בצע הקלטה שלח פניה לאיזור האישי רענן תמונות כלים שימושיים לפורום של נטפרי מדריכים הגדרות פנל אלמנטים חסומים שניות 31 כעת נבדקות התמונות שנשלחו לפני משתמש נכבד, אם פגשת בתמונה שנפתחה או נחסמה שלא בצדק, אנא דווח עליה כאן. משתמש נכבד שים לב: אין לדווח על תמונות שמופיע עליהן הכיתוב \"נשלח לבדיקה\". אלא רק במקרים של תמונות שלא חוזרות מבדיקה, תמונות שנתקעות בתהליך ההורדה וכדו'. משתמש נכבד, אם פגשת בתמונה שנפתחה או נחסמה שלא בצדק, אנא דווח עליה כאן. נבחרו 5 תמונות דווח לא הצלחת לסמן את התמונה? לחץ כאן ובחר אותה מתוך הרשימה. משתמש נכבד שים לב: אין לדווח על תמו",
-   "items": []
-  },
-  "https://netfree.link/misc/go-payment.html?v=3": {
-   "product": null,
-   "status": 200,
-   "method": "browser",
-   "text_hash": null,
-   "text_head": "",
-   "items": []
   },
   "https://minhal.org": {
    "product": "גמל",
@@ -1752,79 +1544,6 @@
     {
      "text": "הודעה לעמיתים על שינוי מבני של קופת הגמל",
      "href": "https://minhal.org/%d7%94%d7%95%d7%93%d7%a2%d7%94-%d7%9c%d7%a2%d7%9e%d7%99%d7%aa%d7%99%d7%9d-%d7%a2%d7%9c-%d7%a9%d7%99%d7%a0%d7%95%d7%99-%d7%9e%d7%91%d7%a0%d7%99-%d7%a9%d7%9c-%d7%a7%d7%95%d7%a4%d7%aa-%d7%94%d7%92%d7%9e/",
-     "year": null,
-     "iframe": false,
-     "doc": false,
-     "internal": true
-    },
-    {
-     "text": "דו\"חות כספיים",
-     "href": "https://minhal.org/%d7%93%d7%95%d7%97%d7%95%d7%aa/",
-     "year": null,
-     "iframe": false,
-     "doc": false,
-     "internal": true
-    },
-    {
-     "text": "© כל הזכויות שמורות - קרן ההשתלמות לפקידים עובדי המינהל והשירותים",
-     "href": "https://minhal.org",
-     "year": null,
-     "iframe": false,
-     "doc": false,
-     "internal": true
-    }
-   ]
-  },
-  "https://minhal.org/": {
-   "product": "גמל",
-   "status": 200,
-   "method": "requests",
-   "text_hash": "a18b8823308285395c7e6adb1d04e59c9b1dd065",
-   "text_head": "ראשי - קרן השתלמות לפקידים עובדי המינהל והשירותים דילוג לתוכן אודות הקרן אודות הקרן חברי דירקטוריון והנהלה בכירה נושאי משרה חברי ועדות תקנון הקרן תרשים המבנה מדיניות ונהלים אמנת שירות הוצאות ישירות בעד ניהול השקעות ממשק אינטרנטי מידע סטטיסטי תרשים בעלי שליטה + צדדים קשורים הצבעות באסיפות כלליות אזרחים ותיקים הצהרת נגישות דו\"חות כספיים נכסי הקרן התפלגות אפיקי השקעה העברת זכויות עמיתים שלא במזומן עסקאות עם צדדים קשורים רשימת נכסים רבעונית – מאוחד מסלולי השקעה מסלול מינהל כללי מסלול אשראי ואג\"ח מסלול מינהל מניות מסלול מינהל הלכה מסלול עוקב מדד 500 S&P טפסים שאלות ותשובות צור קשר אודות הקרן אודות ",
-   "items": [
-    {
-     "text": "מדיניות פרטיות",
-     "href": "https://minhal.org/wp-content/uploads/2026/08/מדיניות-פרטיות.pdf",
-     "year": "2026",
-     "iframe": false,
-     "doc": true,
-     "internal": true
-    },
-    {
-     "text": "במדיניות הפרטיות",
-     "href": "https://minhal.org/wp-content/uploads/2025/07/%D7%9E%D7%93%D7%99%D7%A0%D7%99%D7%95%D7%AA-%D7%A4%D7%A8%D7%98%D7%99%D7%95%D7%AA.pdf",
-     "year": "2025",
-     "iframe": false,
-     "doc": true,
-     "internal": true
-    },
-    {
-     "text": "הוראות לעניין חתימה ממוחשבת",
-     "href": "https://minhal.org/wp-content/uploads/2024/09/horahot_hatima__memuhshevet2019.pdf",
-     "year": "2024",
-     "iframe": false,
-     "doc": true,
-     "internal": true
-    },
-    {
-     "text": "נכסי הקרן",
-     "href": "https://minhal.org/%d7%a0%d7%9b%d7%a1%d7%99-%d7%94%d7%a7%d7%a8%d7%9f/",
-     "year": null,
-     "iframe": false,
-     "doc": false,
-     "internal": true
-    },
-    {
-     "text": "טפסים להורדה",
-     "href": "https://minhal.org/%d7%98%d7%a4%d7%a1%d7%99%d7%9d/",
-     "year": null,
-     "iframe": false,
-     "doc": true,
-     "internal": true
-    },
-    {
-     "text": "הוצאות ישירות בעד ניהול השקעות",
-     "href": "https://minhal.org/%d7%90%d7%95%d7%93%d7%95%d7%aa-%d7%94%d7%a7%d7%a8%d7%9f/%d7%94%d7%95%d7%a6%d7%90%d7%95%d7%aa-%d7%99%d7%a9%d7%99%d7%a8%d7%95%d7%aa-%d7%91%d7%a2%d7%93-%d7%a0%d7%99%d7%94%d7%95%d7%9c-%d7%94%d7%a9%d7%a7%d7%a2%d7%95%d7%aa/",
      "year": null,
      "iframe": false,
      "doc": false,
