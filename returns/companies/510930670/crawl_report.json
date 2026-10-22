@@ -1,13 +1,13 @@
 {
  "legal_id": "510930670",
  "company": "יהב - פ.ר.ח. - חברה לניהול קופות גמל בע\"מ",
- "run": "2026-10-21T10:38:05+00:00",
+ "run": "2026-10-22T10:40:02+00:00",
  "errors": [],
  "seeds": {
   "config": 0,
-  "discovered": 25,
+  "discovered": 26,
   "policy_snapshot": 3,
-  "policy_snapshot_docs": 174,
+  "policy_snapshot_docs": 176,
   "sitemap": 25
  },
  "imported_from_policy": 0,
@@ -15,7 +15,7 @@
  "pages_failed": [],
  "candidates": 176,
  "docs": 176,
- "new_docs": 2,
+ "new_docs": 0,
  "index_size": 176,
- "seconds": 290
+ "seconds": 345
 }
