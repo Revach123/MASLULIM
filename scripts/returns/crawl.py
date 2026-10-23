@@ -30,7 +30,7 @@ RET_ROOT = ROOT / "returns"
 
 # דוח מרכיבי תשואה: בטקסט הקישור, בשם הקובץ או בכתובת העמוד
 RETURNS_RX = re.compile(r"מרכיבי[-_ ]*(ה)?תשוא|תרומ(ת|ה)[-_ ]*(ה)?(אפיקי|לתשואה)|פירוט[-_ ]*תרומת|"
-                        r"yield_?\d|yield[-_]?(elements|components)|return[-_]?(elements|components)|merkivei|mrkivei|markiv\w*[-_ ]*t[sz]u?a|תרומת[-_ ]*מרכיבי|מרכיבי[-_ ]*השקעה|\d{8,9}_[gpi]\d*_(?:p|yield)\d{2,4}|"
+                        r"yield_?\d|yield[-_]?(elements|components)|return[-_]?(elements|components)|merkivei|mrkivei|markiv\w*[-_ ]*t[sz]u?a|תרומת[-_ ]*מרכיבי|מרכיבי[-_ ]*השקעה|\d{8,9}_[gpi]\d*_yield\d{2,4}|"
                         r"nostro[-_ ]*yield|תשוא(ה|ות)[-_ ]*לפי[-_ ]*אפיק|tesuah[-_ ]*lefi[-_ ]*afikim|tsua[-_ ]*lefi", re.I)
 # ("yield" לבד - כתבות "תשואות אג"ח" במיטב; "tsua" לבד - כל עמוד תשואות)
 # עמוד ניווט סביר בדרך לדוחות (ציון נמוך)
@@ -149,9 +149,9 @@ def gap_search(s, lid: str, home: str, name: str) -> dict:
     res = {"families": gap_families(lid), "queries": [], "urls": []}
     dom = pc.base_domain(home)
     for fam in res["families"]:
-        q = f"site:{dom} מרכיבי תשואה {fam}"
+        q = f"{pc._short_name(name)} מרכיבי תשואה {fam}"  # בלי site: (DuckDuckGo לא החזיר תוצאות ל-site: משרתי GitHub) - מסננים לפי דומיין
         try:
-            urls = [u for u in pc.web_search(s, q) if pc.base_domain(u) == dom]
+            urls = [u for u in pc.web_search(s, q, n=15) if pc.base_domain(u) == dom]
         except Exception as e:  # noqa: BLE001
             urls = []
             res["queries"].append({"q": q, "error": repr(e)[:80]})

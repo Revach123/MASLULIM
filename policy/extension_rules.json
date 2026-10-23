@@ -13,6 +13,6 @@
  "skip_complete_hours": 24,
  "_note_skip": "חברה עם מדיניות השנה לכל המסלולים (policy/extension_complete.json) מדולגת N שעות מאז הריצה המוצלחת האחרונה שלה. 0 = לא מדלגים.",
  "page_cache_days": 3,
- "returns_rx": "מרכיבי[-_ ]*(ה)?תשוא|תרומ(ת|ה)[-_ ]*(ה)?(אפיקי|לתשואה)|פירוט[-_ ]*תרומת|yield_?\\d|yield[-_]?(elements|components)|return[-_]?(elements|components)|merkivei|mrkivei|markiv\\w*[-_ ]*t[sz]u?a|תרומת[-_ ]*מרכיבי|מרכיבי[-_ ]*השקעה|\\d{8,9}_[gpi]\\d*_(?:p|yield)\\d{2,4}|nostro[-_ ]*yield|תשוא(ה|ות)[-_ ]*לפי[-_ ]*אפיק|tesuah[-_ ]*lefi[-_ ]*afikim|tsua[-_ ]*lefi",
+ "returns_rx": "מרכיבי[-_ ]*(ה)?תשוא|תרומ(ת|ה)[-_ ]*(ה)?(אפיקי|לתשואה)|פירוט[-_ ]*תרומת|yield_?\\d|yield[-_]?(elements|components)|return[-_]?(elements|components)|merkivei|mrkivei|markiv\\w*[-_ ]*t[sz]u?a|תרומת[-_ ]*מרכיבי|מרכיבי[-_ ]*השקעה|\\d{8,9}_[gpi]\\d*_yield\\d{2,4}|nostro[-_ ]*yield|תשוא(ה|ות)[-_ ]*לפי[-_ ]*אפיק|tesuah[-_ ]*lefi[-_ ]*afikim|tsua[-_ ]*lefi",
  "_note_returns": "returns_rx: קבצי מרכיבי תשואה לאתרי kind=returns (מוגדרים ב-extension_sites.json מ-returns_extension בהגדרות האתר); נשמרים ב-policy/inbox/<id>/returns/"
 }
