@@ -1,16 +1,22 @@
 {
  "legal_id": "520042615",
  "company": "מחר - חברה לניהול קופות גמל בע\"מ",
- "run": "2026-10-22T11:08:05+00:00",
+ "run": "2026-10-23T11:10:28+00:00",
  "errors": [],
  "seeds": {
   "config": 0,
   "discovered": 1,
   "policy_snapshot": 1,
   "policy_snapshot_docs": 0,
+  "gap_search": 0,
   "sitemap": 0
  },
  "imported_from_policy": 0,
+ "gap_search": {
+  "families": [],
+  "queries": [],
+  "urls": []
+ },
  "pages": 2,
  "pages_failed": [
   "https://acadmachar-gemel.co.il/%d7%a0%d7%99%d7%94%d7%95%d7%9c-%d7%94%d7%a9%d7%a7%d7%a2%d7%95%d7%aa/%d7%9e%d7%a8%d7%9b%d7%99%d7%91%d7%99-%d7%aa%d7%a9%d7%95%d7%90%d7%94/: 403",
@@ -20,5 +26,5 @@
  "docs": 0,
  "new_docs": 0,
  "index_size": 135,
- "seconds": 139
+ "seconds": 138
 }
