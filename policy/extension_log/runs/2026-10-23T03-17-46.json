@@ -1,0 +1,367 @@
+{
+ "extension_version": "2.52.0",
+ "started": "2026-10-23T02:49:58.159Z",
+ "updated": "2026-10-23T03:17:46.357Z",
+ "final": true,
+ "stopped": false,
+ "rules_from_github": true,
+ "rules": {
+  "doc_rx": "\\.(xlsx|xls|pdf|docx)(\\?|#|$)",
+  "policy_rx": "מ[-_ ]?דיניו?ת|מדינית[-_ ]*השקע|הצהר|policy|m[ae]dini?y?ut|hatzarat|expected|investment|inv[-_ ]*polic",
+  "noise_rx": "esg|אחראי|תגמול(?!ים)|tagmul(?!im)|פרטיות|privacy|תקנון|מבצע|גילוי[-_ ]נאות|מצגת|presentation|נוהל|העברת זכויות|הצבע|דוח[ -]כספי|רבעון",
+  "download_rx": "הורד|להורדה|download|אקסל|excel|xls",
+  "concurrency": 1,
+  "page_parallel": 1,
+  "settle_ms": 3000,
+  "capture_ms": 8000,
+  "max_download_clicks": 40,
+  "_note": "כללי משיכת המדיניות של התוסף - נקראים מ-GitHub בתחילת כל ריצה (שינוי כאן = תקף בריצה הבאה, בלי לעדכן את התוסף). ביטויים רגולריים (בלי /) ומספרים בלבד.",
+  "_note_load": "עומס על המחשב הביתי: אתר אחד ועמוד אחד בכל פעם (היה 4 אתרים x עד 3 עמודים). להחזיר מהירות: concurrency 2-4, page_parallel 2-3.",
+  "skip_complete_hours": 24,
+  "_note_skip": "חברה עם מדיניות השנה לכל המסלולים (policy/extension_complete.json) מדולגת N שעות מאז הריצה המוצלחת האחרונה שלה. 0 = לא מדלגים.",
+  "page_cache_days": 3
+ },
+ "total_sites": 2,
+ "done_sites": 2,
+ "new_docs": 0,
+ "skipped_complete": [
+  {
+   "legal_id": "510930654",
+   "name": "יחד רופאים - חברה לניהול קופות גמל בע\"מ",
+   "why": "registry 7/7",
+   "last_ok": "2026-10-22T19:07:13.977Z"
+  },
+  {
+   "legal_id": "511789190",
+   "name": "\"עתודות\" - קרן פנסיה לשכירים ועצמאיים בע\"מ",
+   "why": "tracks 2/2 (not in registry)",
+   "last_ok": ""
+  },
+  {
+   "legal_id": "512245812",
+   "name": "מנורה מבטחים פנסיה וגמל בע\"מ",
+   "why": "registry 94/94",
+   "last_ok": "2026-10-22T19:28:38.380Z"
+  },
+  {
+   "legal_id": "513173393",
+   "name": "אלטשולר שחם גמל ופנסיה בע\"מ",
+   "why": "registry 79/79",
+   "last_ok": "2026-10-22T19:52:59.619Z"
+  },
+  {
+   "legal_id": "513910703",
+   "name": "איי. די. איי. חברה לביטוח בע\"מ",
+   "why": "registry 5/5",
+   "last_ok": "2026-10-22T19:53:47.971Z"
+  },
+  {
+   "legal_id": "514956465",
+   "name": "מור גמל ופנסיה בע\"מ",
+   "why": "registry 81/81",
+   "last_ok": "2026-10-22T19:53:50.080Z"
+  },
+  {
+   "legal_id": "517085874",
+   "name": "איילון קופות גמל בע\"מ",
+   "why": "registry 40/40",
+   "last_ok": "2026-10-22T19:53:52.861Z"
+  },
+  {
+   "legal_id": "520024985",
+   "name": "עגור חברה לניהול קופות גמל וקרנות השתלמות בע\"מ",
+   "why": "registry 6/6",
+   "last_ok": "2026-10-22T19:58:47.623Z"
+  },
+  {
+   "legal_id": "520027251",
+   "name": "קרנות השתלמות למורים ולגננות - חברה מנהלת בע\"מ",
+   "why": "registry 6/6",
+   "last_ok": "2026-10-22T19:58:50.111Z"
+  },
+  {
+   "legal_id": "520027715",
+   "name": "מנורה מבטחים והסתדרות המהנדסים ניהול קופות גמל בע\"מ",
+   "why": "registry 7/7",
+   "last_ok": "2026-10-22T20:02:22.779Z"
+  },
+  {
+   "legal_id": "520028390",
+   "name": "קרנות השתלמות למורים תיכוניים, מורי סמינרים ומפקחים - חברה מנהלת בע\"מ",
+   "why": "registry 6/6",
+   "last_ok": "2026-10-22T20:02:25.079Z"
+  },
+  {
+   "legal_id": "520030990",
+   "name": "החברה המנהלת של מינהל קרן ההשתלמות לפקידים עובדי המנהל והשירותים בע\"מ",
+   "why": "registry 5/5",
+   "last_ok": "2026-10-22T20:02:58.452Z"
+  },
+  {
+   "legal_id": "520031824",
+   "name": "החברה המנהלת של רום קרן ההשתלמות לעובדי הרשויות המקומיות בע\"מ",
+   "why": "registry 5/5",
+   "last_ok": "2026-10-22T20:04:23.567Z"
+  },
+  {
+   "legal_id": "570009449",
+   "name": "עוצ\"מ - אגודה שיתופית לניהול קופות גמל בע\"מ",
+   "why": "registry 4/4",
+   "last_ok": ""
+  }
+ ],
+ "active": [],
+ "sites": [
+  {
+   "legal_id": "520022518",
+   "name": "החברה לניהול קופת התגמולים והפנסיה של עובדי הסוכנות היהודית לארץ ישראל בע\"מ",
+   "new_docs": 0,
+   "errors": [
+    "timeout 1200s: site החברה לניהול קופת התגמולים והפנסיה של עובדי הסוכנות היהודית לארץ ישראל בע\"מ"
+   ]
+  },
+  {
+   "legal_id": "520030677",
+   "name": "איילון חברה לביטוח בע\"מ",
+   "pages": [
+    {
+     "url": "https://www.ayalon-ins.co.il/about-us/about-ayalon/investments/policy/",
+     "cache": "hit",
+     "links": 69,
+     "followed": [
+      "https://www.ayalon-ins.co.il/about-us/about-ayalon/investments/publications/",
+      "https://www.ayalon-ins.co.il/career/finance-investments",
+      "https://www.ayalon-ins.co.il/about-us/about-ayalon/investments/",
+      "https://www.ayalon-ins.co.il/investments-provident",
+      "https://www.ayalon-ins.co.il/investments-directorate",
+      "https://www.ayalon-ins.co.il/investments-levelagreement"
+     ],
+     "files": 1,
+     "clicked": 0,
+     "captured": 0,
+     "selected": [],
+     "unselected_files": [
+      {
+       "file": "https://www.ayalon-ins.co.il/media/dtvlz32w/amitim_03_2026.pdf",
+       "text": "עקרונות נוהל העברת זכויות עמיתים שלא במזומן",
+       "ctx": ""
+      }
+     ]
+    },
+    {
+     "url": "https://www.ayalon-ins.co.il/savings/nispah/",
+     "cache": "hit",
+     "links": 76,
+     "followed": [],
+     "files": 0,
+     "clicked": 0,
+     "captured": 0,
+     "selected": [],
+     "unselected_files": []
+    },
+    {
+     "url": "https://www.ayalon-ins.co.il/savings/nispah_prat/",
+     "cache": "hit",
+     "links": 23,
+     "followed": [],
+     "files": 0,
+     "clicked": 0,
+     "captured": 0,
+     "selected": [],
+     "unselected_files": []
+    },
+    {
+     "url": "https://www.ayalon-ins.co.il/investments",
+     "cache": "hit",
+     "links": 69,
+     "followed": [],
+     "files": 1,
+     "clicked": 0,
+     "captured": 0,
+     "selected": [],
+     "unselected_files": [
+      {
+       "file": "https://www.ayalon-ins.co.il/media/dtvlz32w/amitim_03_2026.pdf",
+       "text": "עקרונות נוהל העברת זכויות עמיתים שלא במזומן",
+       "ctx": ""
+      }
+     ]
+    },
+    {
+     "url": "https://www.ayalon-ins.co.il",
+     "cache": "hit",
+     "links": 74,
+     "followed": [
+      "https://www.ayalon-ins.co.il/insurances/car/having-policy"
+     ],
+     "files": 0,
+     "clicked": 0,
+     "captured": 0,
+     "selected": [],
+     "unselected_files": []
+    },
+    {
+     "url": "https://www.ayalon-ins.co.il/about-us/about-ayalon/investments/publications/",
+     "cache": "hit",
+     "links": 71,
+     "followed": [],
+     "files": 5,
+     "clicked": 0,
+     "captured": 0,
+     "selected": [],
+     "unselected_files": [
+      {
+       "file": "https://www.ayalon-ins.co.il/media/jqjekhjr/bakasha_hesder_pshara_nov_2025.pdf",
+       "text": "להורדה",
+       "ctx": ""
+      },
+      {
+       "file": "https://www.ayalon-ins.co.il/media/5uahnahv/hodaa_hagashat_hesder_nov_2025.pdf",
+       "text": "להורדה",
+       "ctx": ""
+      },
+      {
+       "file": "https://www.ayalon-ins.co.il/media/po0hzqzw/gilad_heker_apr_2026.pdf",
+       "text": "להורדה",
+       "ctx": ""
+      },
+      {
+       "file": "https://www.ayalon-ins.co.il/media/ycada1tc/br_yizugit_04_2026.pdf",
+       "text": "להורדה",
+       "ctx": ""
+      },
+      {
+       "file": "https://www.ayalon-ins.co.il/media/e0lgrfst/הודעה-על-אישור-הסדרי-פשרה.pdf",
+       "text": "להורדה",
+       "ctx": ""
+      }
+     ]
+    },
+    {
+     "url": "https://www.ayalon-ins.co.il/career/finance-investments",
+     "cache": "hit",
+     "links": 68,
+     "followed": [],
+     "files": 0,
+     "clicked": 0,
+     "captured": 0,
+     "selected": [],
+     "unselected_files": []
+    },
+    {
+     "url": "https://www.ayalon-ins.co.il/about-us/about-ayalon/investments/",
+     "cache": "hit",
+     "links": 67,
+     "followed": [],
+     "files": 0,
+     "clicked": 0,
+     "captured": 0,
+     "selected": [],
+     "unselected_files": []
+    },
+    {
+     "url": "https://www.ayalon-ins.co.il/investments-provident",
+     "cache": "hit",
+     "links": 70,
+     "followed": [
+      "https://www.ayalon-ins.co.il/he/about-provident-container/investments/"
+     ],
+     "files": 1,
+     "clicked": 0,
+     "captured": 0,
+     "selected": [],
+     "unselected_files": [
+      {
+       "file": "https://www.ayalon-ins.co.il/media/dtvlz32w/amitim_03_2026.pdf",
+       "text": "לצפייה לחצו כאן",
+       "ctx": ""
+      }
+     ]
+    },
+    {
+     "url": "https://www.ayalon-ins.co.il/investments-directorate",
+     "cache": "hit",
+     "links": 67,
+     "followed": [],
+     "files": 0,
+     "clicked": 0,
+     "captured": 0,
+     "selected": [],
+     "unselected_files": []
+    },
+    {
+     "url": "https://www.ayalon-ins.co.il/investments-levelagreement",
+     "cache": "hit",
+     "links": 68,
+     "followed": [],
+     "files": 1,
+     "clicked": 0,
+     "captured": 0,
+     "selected": [],
+     "unselected_files": [
+      {
+       "file": "https://www.ayalon-ins.co.il/media/02rh04e2/אמנת-השירות-גמל-2026.pdf",
+       "text": "לאמנת השירות לחצו כאן",
+       "ctx": ""
+      }
+     ]
+    },
+    {
+     "url": "https://www.ayalon-ins.co.il/insurances/car/having-policy",
+     "cache": "hit",
+     "links": 67,
+     "followed": [],
+     "files": 0,
+     "clicked": 0,
+     "captured": 0,
+     "selected": [],
+     "unselected_files": []
+    },
+    {
+     "url": "https://www.ayalon-ins.co.il/he/about-provident-container/investments/",
+     "cache": "hit",
+     "links": 66,
+     "followed": [],
+     "files": 0,
+     "clicked": 0,
+     "captured": 0,
+     "selected": [],
+     "unselected_files": []
+    }
+   ],
+   "new_docs": 0,
+   "found": 9,
+   "selected": 0,
+   "had": 0,
+   "head_skip": 0,
+   "page_cache": 13,
+   "cache_hit": 13,
+   "errors": [],
+   "diag": [
+    "איילון חברה לביטוח: links=69 files=1 clicked=0 captured=0 selected=0",
+    "   ? amitim_03_2026.pdf | עקרונות נוהל העברת זכויות עמיתים שלא במז | ",
+    "איילון חברה לביטוח: links=76 files=0 clicked=0 captured=0 selected=0",
+    "איילון חברה לביטוח: links=23 files=0 clicked=0 captured=0 selected=0",
+    "איילון חברה לביטוח: links=69 files=1 clicked=0 captured=0 selected=0",
+    "   ? amitim_03_2026.pdf | עקרונות נוהל העברת זכויות עמיתים שלא במז | ",
+    "איילון חברה לביטוח: links=74 files=0 clicked=0 captured=0 selected=0",
+    "איילון חברה לביטוח: links=71 files=5 clicked=0 captured=0 selected=0",
+    "   ? bakasha_hesder_pshara_nov_2025.pdf | להורדה | ",
+    "   ? hodaa_hagashat_hesder_nov_2025.pdf | להורדה | ",
+    "   ? gilad_heker_apr_2026.pdf | להורדה | ",
+    "   ? br_yizugit_04_2026.pdf | להורדה | ",
+    "   ? הודעה-על-אישור-הסדרי-פשרה.pdf | להורדה | ",
+    "איילון חברה לביטוח: links=68 files=0 clicked=0 captured=0 selected=0",
+    "איילון חברה לביטוח: links=67 files=0 clicked=0 captured=0 selected=0",
+    "איילון חברה לביטוח: links=70 files=1 clicked=0 captured=0 selected=0",
+    "   ? amitim_03_2026.pdf | לצפייה לחצו כאן | ",
+    "איילון חברה לביטוח: links=67 files=0 clicked=0 captured=0 selected=0",
+    "איילון חברה לביטוח: links=68 files=1 clicked=0 captured=0 selected=0",
+    "   ? אמנת-השירות-גמל-2026.pdf | לאמנת השירות לחצו כאן | ",
+    "איילון חברה לביטוח: links=67 files=0 clicked=0 captured=0 selected=0",
+    "איילון חברה לביטוח: links=66 files=0 clicked=0 captured=0 selected=0"
+   ],
+   "new_files": []
+  }
+ ]
+}
