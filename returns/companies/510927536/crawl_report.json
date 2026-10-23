@@ -1,7 +1,7 @@
 {
  "legal_id": "510927536",
  "company": "יהב אחים ואחיות - חברה לניהול קופות גמל בע\"מ",
- "run": "2026-10-22T10:41:59+00:00",
+ "run": "2026-10-23T10:33:00+00:00",
  "errors": [],
  "seeds": {
   "config": 0,
@@ -9,9 +9,22 @@
   "policy_snapshot": 3,
   "policy_snapshot_docs": 0,
   "search": 0,
+  "gap_search": 0,
   "sitemap": 0
  },
  "imported_from_policy": 0,
+ "gap_search": {
+  "families": [
+   "השתלמות"
+  ],
+  "queries": [
+   {
+    "q": "יהב אחים ואחיות - חברה לניהול קופות גמל מרכיבי תשואה השתלמות",
+    "found": 0
+   }
+  ],
+  "urls": []
+ },
  "pages": 4,
  "pages_failed": [
   "https://www.k-aht.co.il/%d7%94%d7%a9%d7%a7%d7%a2%d7%95%d7%aa/%d7%a4%d7%a8%d7%a1%d7%95%d7%9d-%d7%9e%d7%a8%d7%9b%d7%99%d7%91%d7%99-%d7%aa%d7%a9%d7%95%d7%90%d7%94/: 403",
@@ -23,5 +36,5 @@
  "docs": 0,
  "new_docs": 0,
  "index_size": 0,
- "seconds": 299
+ "seconds": 321
 }
