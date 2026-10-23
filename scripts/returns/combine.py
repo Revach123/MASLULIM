@@ -123,6 +123,8 @@ def main():
     (RET / "index.json").write_text(json.dumps({"totals": tot, "companies": idx, "sources": sources}, ensure_ascii=False, indent=1), "utf-8")
     print(f"[returns.combine] companies={tot['companies']} with_data={tot['with_data']} tracks={tot['tracks']} "
           f"registry {tot['registry_found']}/{tot['registry_tracks']} docs={tot['docs']}")
+    from scripts.returns import gaps
+    gaps.main()
 
 
 if __name__ == "__main__":
