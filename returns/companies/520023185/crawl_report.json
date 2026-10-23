@@ -1,7 +1,7 @@
 {
  "legal_id": "520023185",
  "company": "הפניקס חברה לביטוח בע\"מ",
- "run": "2026-10-22T11:04:00+00:00",
+ "run": "2026-10-23T11:00:02+00:00",
  "errors": [
   "https://www.fnx.co.il/SPF/iframe-phoenix-all-embracing-pension-yield-components.aspx -> not_a_document",
   "https://www.fnx.co.il/SPF/iframe-phoenix-general-pension-yield-components.aspx -> not_a_document",
@@ -13,14 +13,27 @@
   "discovered": 12,
   "policy_snapshot": 4,
   "policy_snapshot_docs": 0,
+  "gap_search": 0,
   "sitemap": 7
  },
  "imported_from_policy": 0,
- "pages": 10,
+ "gap_search": {
+  "families": [
+   "ביטוח מסלולי השקעה"
+  ],
+  "queries": [
+   {
+    "q": "הפניקס חברה לביטוח מרכיבי תשואה ביטוח מסלולי השקעה",
+    "found": 0
+   }
+  ],
+  "urls": []
+ },
+ "pages": 9,
  "pages_failed": [],
  "candidates": 35,
  "docs": 31,
  "new_docs": 0,
  "index_size": 80,
- "seconds": 1200
+ "seconds": 1201
 }
