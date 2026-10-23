@@ -1,21 +1,34 @@
 {
  "legal_id": "510960586",
  "company": "חברת הגמל לעובדי האוניברסיטה העברית בע\"מ",
- "run": "2026-10-22T10:42:03+00:00",
+ "run": "2026-10-23T10:32:40+00:00",
  "errors": [],
  "seeds": {
   "config": 0,
   "discovered": 9,
   "policy_snapshot": 0,
   "policy_snapshot_docs": 180,
+  "gap_search": 0,
   "sitemap": 0
  },
  "imported_from_policy": 0,
+ "gap_search": {
+  "families": [
+   "קופת גמל"
+  ],
+  "queries": [
+   {
+    "q": "חברת הגמל לעובדי האוניברסיטה העברית מרכיבי תשואה קופת גמל",
+    "found": 0
+   }
+  ],
+  "urls": []
+ },
  "pages": 45,
  "pages_failed": [],
  "candidates": 36,
  "docs": 36,
  "new_docs": 0,
  "index_size": 46,
- "seconds": 226
+ "seconds": 223
 }
