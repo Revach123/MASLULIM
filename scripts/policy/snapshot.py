@@ -226,6 +226,19 @@ def signed_url_name(u):
         return None
 
 
+BOT_RX = re.compile(r"just a moment|checking your browser|verify(ing)? you are (a )?human|enable javascript and cookies|attention required|"
+                    r"made us think that you are a bot|request unblock|access denied|perfdrive|shieldsquare", re.I)
+
+
+def _bot_challenge(pg) -> bool:
+    """עמוד בדיקת-בוט: קצר מאוד ובו ניסוח אופייני (לא טקסט רגיל של אתר)."""
+    try:
+        t = pg.inner_text("body", timeout=3000)
+    except Exception:
+        return False
+    return len(t) < 1500 and bool(BOT_RX.search(t + " " + (pg.url or "")))
+
+
 def fetch_browser(pw, url, click_texts=None):
     """רינדור: רשת שקטה, פתיחת אקורדיונים/לשוניות, ולכידת בקשות רשת (JSON עם נתיבי קבצים, קבצים ישירים, iframes).
     -> (anchors, status, body_text)"""
@@ -279,6 +292,14 @@ def fetch_browser(pw, url, click_texts=None):
                     seen.add((f, "iframe")); anchors.append({"href": f, "text": "(iframe)"})
 
         pg.wait_for_timeout(2500)  # SPA/בדיקת בוט: תוכן שנטען אחרי networkidle
+        if _bot_challenge(pg):  # Cloudflare/Incapsula/ShieldSquare: ממתינים עד ~20 שנ' ואם לא נפתח - מוותרים על העמוד (בלי תקיעה של דקות)
+            for _ in range(8):
+                pg.wait_for_timeout(2500)
+                if not _bot_challenge(pg):
+                    break
+            else:
+                print(f"[snapshot] bot challenge, skipping: {url}", flush=True)
+                return None, 403, "bot_challenge"
         collect()
 
         def expand():

@@ -13,7 +13,7 @@
   4. מפת האתר (sitemap) + חיפוש "<שם החברה> מרכיבי תשואה" (DuckDuckGo) + דף הבית בעומק 2
 בנוסף: קבצי מרכיבי תשואה שסריקת המדיניות כבר הורידה (policy/companies/<id>/raw) נקלטים בלי הורדה מחדש.
 """
-import argparse, hashlib, json, os, re, shutil, time
+import argparse, csv, hashlib, json, os, re, shutil, time
 from datetime import datetime, timezone
 from pathlib import Path
 from urllib.parse import unquote, urlparse
@@ -30,7 +30,7 @@ RET_ROOT = ROOT / "returns"
 
 # דוח מרכיבי תשואה: בטקסט הקישור, בשם הקובץ או בכתובת העמוד
 RETURNS_RX = re.compile(r"מרכיבי[-_ ]*(ה)?תשוא|תרומ(ת|ה)[-_ ]*(ה)?(אפיקי|לתשואה)|פירוט[-_ ]*תרומת|"
-                        r"yield_?\d|yield[-_]?(elements|components)|return[-_]?(elements|components)|merkivei|mrkivei|markiv\w*[-_ ]*t[sz]u?a|תרומת[-_ ]*מרכיבי|מרכיבי[-_ ]*השקעה|"
+                        r"yield_?\d|yield[-_]?(elements|components)|return[-_]?(elements|components)|merkivei|mrkivei|markiv\w*[-_ ]*t[sz]u?a|תרומת[-_ ]*מרכיבי|מרכיבי[-_ ]*השקעה|\d{8,9}_[gpi]\d*_(?:p|yield)\d{2,4}|"
                         r"nostro[-_ ]*yield|תשוא(ה|ות)[-_ ]*לפי[-_ ]*אפיק|tesuah[-_ ]*lefi[-_ ]*afikim|tsua[-_ ]*lefi", re.I)
 # ("yield" לבד - כתבות "תשואות אג"ח" במיטב; "tsua" לבד - כל עמוד תשואות)
 # עמוד ניווט סביר בדרך לדוחות (ציון נמוך)
@@ -125,6 +125,44 @@ def select_docs(pages: dict, ctx_rx=None, text_rx=None):
     return out
 
 
+FAMILIES = [("גמל להשקעה", r"גמל להשקעה"), ("השתלמות", r"השתלמות"), ("חיסכון לכל ילד", r"חיסכון לילד|חסכון לכל ילד|חיסכון לכל ילד|חיסכון פלוס|לילד"),
+            ("פנסיה", r"פנסיה"), ("קופת גמל", r"גמל|תגמולים|פיצויים"), ("ביטוח מסלולי השקעה", r"ביטוח|אקסלנס")]
+
+
+def gap_families(lid: str) -> list:
+    """משפחות המסלולים שחסרות לחברה (מתוך returns/gaps.csv של הריצה הקודמת) - לפי מילות מפתח בשמות המסלולים החסרים."""
+    p = RET_ROOT / "gaps.csv"
+    if not p.exists():
+        return []
+    names = [r["track_name"] for r in csv.DictReader(open(p, encoding="utf-8-sig")) if r["legal_id"] == lid]
+    out = []
+    for fam, rx in FAMILIES:
+        n = sum(1 for t in names if re.search(rx, t))
+        if n >= 2 or (n and len(names) <= 3):
+            out.append(fam)
+    return out[:5] if names else []
+
+
+def gap_search(s, lid: str, home: str, name: str) -> dict:
+    """לכל משפחת מסלולים חסרה: חיפוש 'site:<אתר> מרכיבי תשואה <משפחה>' - העמודים שנמצאו נכנסים לסריקה ונשמרים ב-crawl_report (gap_search)
+    כדי שהריצה הבאה תתחיל מהם וכדי שיהיה רשום מה נחפש ומה נמצא."""
+    res = {"families": gap_families(lid), "queries": [], "urls": []}
+    dom = pc.base_domain(home)
+    for fam in res["families"]:
+        q = f"site:{dom} מרכיבי תשואה {fam}"
+        try:
+            urls = [u for u in pc.web_search(s, q) if pc.base_domain(u) == dom]
+        except Exception as e:  # noqa: BLE001
+            urls = []
+            res["queries"].append({"q": q, "error": repr(e)[:80]})
+            continue
+        res["queries"].append({"q": q, "found": len(urls)})
+        res["urls"] += urls
+        time.sleep(2)
+    res["urls"] = list(dict.fromkeys(res["urls"]))[:20]
+    return res
+
+
 def year_pages(urls):
     return pc.expand_templates(urls, first_year=2015)
 
@@ -204,9 +242,19 @@ def crawl_company(s, pw, lid, name, out, now, a):
             q = f"{pc._short_name(name)} מרכיבי תשואה"
             searched = [u for u in pc.web_search(s, q) if pc.base_domain(u) == pc.base_domain(home)]
             report["seeds"]["search"] = len(searched)
+        if cfg.get("returns_gap_search") is not False:  # חיפוש ממוקד לכל משפחת מסלולים שחסרה (גמל / השתלמות / פנסיה / חיסכון לילד...)
+            gs = gap_search(s, lid, home, name)
+            report["gap_search"] = gs
+            searched = list(dict.fromkeys(searched + gs["urls"]))
+            report["seeds"]["gap_search"] = len(gs["urls"])
         sitemap = pc.sitemap_policy_pages(s, home) if not cfg_pages else []
         report["seeds"]["sitemap"] = len(sitemap)
         extra = list(dict.fromkeys(seeds + searched + sitemap))
+        # אתרים גדולים (מנורה: ~100 עמודי מסלול, התקציב מספיק ל-38): עמודים שלא נסרקו בריצות קודמות קודם; כשכולם נסרקו - מתחילים סבב חדש
+        visited = set(disc.get("visited", []))
+        if not any(u not in visited for u in extra):
+            visited = set()
+        extra.sort(key=lambda u: u in visited)
         # אתר עם עמוד לכל מסלול (מנורה, ילין): אותם כללי מעבר (follow) ואותו היקף כמו בסריקת המדיניות
         follow = cfg.get("returns_follow") or cfg.get("follow")
         max_pages = int(cfg.get("returns_max_pages") or (cfg.get("max_pages") if follow else 0) or 45)
@@ -221,7 +269,8 @@ def crawl_company(s, pw, lid, name, out, now, a):
                               or (cfg.get("returns_text") and re.search(cfg["returns_text"], i.get("text") or ""))) for i in p.get("items", []))
             or (p.get("status") == 200 and RETURNS_RX.search(unquote(u)))]
         doc_pages = [u for u in good if not RETURNS_RX.search(unquote(u))]
-        disc = {"home": home, "pages": list(dict.fromkeys(disc.get("pages", []) + good))[:160],
+        done = [u for u, p in pages.items() if p.get("status") == 200]
+        disc = {"home": home, "visited": list(dict.fromkeys(list(visited) + done))[-700:], "pages": list(dict.fromkeys(disc.get("pages", []) + good))[:160],
                 "doc_pages": list(dict.fromkeys(disc.get("doc_pages", []) + doc_pages))[:160]}
         disc_path.write_text(json.dumps(disc, ensure_ascii=False, indent=1), "utf-8")
         (out / "site_snapshot.json").write_text(json.dumps({"legal_id": lid, "taken": now, "pages": pages},
@@ -238,6 +287,7 @@ def crawl_company(s, pw, lid, name, out, now, a):
     report["pages"] = len(pages)
     report["pages_failed"] = [f"{u}: {p['status']}" for u, p in pages.items() if p.get("status") != 200][:8]
     report["candidates"] = len(docs)
+    (out / "crawl_report.json").write_text(json.dumps(report, ensure_ascii=False, indent=1), "utf-8")  # נשמר לפני ההורדות - ריצה שנקטעת משאירה אבחון
     new = got = 0
     for key, d in docs.items():
         if time.monotonic() - t0 > float(os.environ.get("RETURNS_DL_BUDGET", "2000")):
@@ -290,7 +340,7 @@ def crawl_company(s, pw, lid, name, out, now, a):
                     "source_page": d.get("page"), "product": (pages.get(d.get("page")) or {}).get("product"), "via": "cloud"})
         index[ukey] = ent
         got += 1
-        if new and new % 25 == 0:  # שמירה בדרך - אם הצעד נקטע, מה שהורד כבר נשמר
+        if new and new % 5 == 0:  # שמירה בדרך - אם הצעד נקטע, מה שהורד כבר נשמר
             idx_path.write_text(json.dumps(index, ensure_ascii=False, indent=1), "utf-8")
     report.update(docs=got, new_docs=new, index_size=len(index), seconds=round(time.monotonic() - t0))
     idx_path.write_text(json.dumps(index, ensure_ascii=False, indent=1), "utf-8")

@@ -522,7 +522,7 @@ def parse_pdf_text(path: Path):
 
 
 FILE_NO = re.compile(r"(?<!\d)\d{9}_([gpib])(\d{3,6})_", re.I)
-FILE_PERIOD = re.compile(r"yield\s*([1-4])\s*-?\s*(\d{2})(?!\d)", re.I)
+FILE_PERIOD = re.compile(r"(?:yield|_p)\s*([1-4])\s*-?\s*(\d{2})(?!\d)", re.I)
 
 
 def file_hints(name: str, link_text: str = ""):

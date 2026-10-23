@@ -112,7 +112,7 @@ def main():
     for p in sorted(SITES.glob("*.json")):
         c = json.loads(p.read_text("utf-8"))
         lid = c["legal_id"]
-        if (a.only and lid not in a.only) or (not a.only and c.get("via") != "extension"):
+        if (a.only and lid not in a.only) or (not a.only and c.get("via") != "extension" and not c.get("returns_home")):
             continue
         if c.get("returns_skip_home") and not a.only:  # אתר שחסום גם בדפדפן הביתי (למשל ShieldSquare) - לא מבזבזים עליו 30 דקות בכל ריצה
             print(f"[{lid}] skipped (returns_skip_home): {c['returns_skip_home']}", flush=True)
@@ -143,7 +143,8 @@ def main():
         env.setdefault("POLICY_HEADED", "1")
         env.setdefault("POLICY_OFFSCREEN", "1")
         # תקציב ההורדות נמדד מתחילת הסריקה (ברירת מחדל 2000s) - כשסריקת העמודים לבדה לוקחת יותר (מור: 46 עמודי מסלול, 2600s) לא יורד כלום
-        env.setdefault("RETURNS_DL_BUDGET", str(max(2000, (a.timeout_min - 8) * 60)))
+        tmo = int(cfgs[lid].get("returns_home_timeout_min") or a.timeout_min)  # אתר גדול (מור: 50+ דקות) - תקרה משלו
+        env.setdefault("RETURNS_DL_BUDGET", str(max(2000, (tmo - 8) * 60)))
         env.setdefault("PYTHONUNBUFFERED", "1")  # הפלט החלקי בלוג גם כשהסריקה נהרגת בתקרה
         log = work / "crawl.log"
         # פלט לקובץ (לא pipe) וסיום עץ התהליכים בתקרה: subprocess.run(timeout, capture_output) נתקע ב-Windows אחרי kill כי Chrome (נכד)
@@ -153,7 +154,7 @@ def main():
                                  creationflags=LOW_PRIORITY, stdout=lf, stderr=subprocess.STDOUT)
             timed_out = False
             try:
-                p.wait(timeout=a.timeout_min * 60)
+                p.wait(timeout=tmo * 60)
             except subprocess.TimeoutExpired:
                 timed_out = True
                 if os.name == "nt":
@@ -165,7 +166,7 @@ def main():
                 except subprocess.TimeoutExpired:
                     pass
         out = log.read_text("utf-8", errors="replace") if log.exists() else ""
-        print((f"[{lid}] timeout after {a.timeout_min} min (killed)\n" if timed_out else "") + out[-1500 if timed_out else -600:], flush=True)
+        print((f"[{lid}] timeout after {tmo} min (killed)\n" if timed_out else "") + out[-1500 if timed_out else -600:], flush=True)
         after = json.loads((work / "docs_index.json").read_text("utf-8")) if (work / "docs_index.json").exists() else {}
         n = 0
         for url, ent in after.items():
