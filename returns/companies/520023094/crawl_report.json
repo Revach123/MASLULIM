@@ -1,21 +1,27 @@
 {
  "legal_id": "520023094",
  "company": "גילעד גימלאות לעובדים דתיים בע\"מ",
- "run": "2026-10-22T10:53:13+00:00",
+ "run": "2026-10-23T11:06:06+00:00",
  "errors": [],
  "seeds": {
   "config": 0,
   "discovered": 13,
   "policy_snapshot": 4,
   "policy_snapshot_docs": 0,
+  "gap_search": 0,
   "sitemap": 25
  },
  "imported_from_policy": 0,
+ "gap_search": {
+  "families": [],
+  "queries": [],
+  "urls": []
+ },
  "pages": 13,
  "pages_failed": [],
  "candidates": 35,
  "docs": 35,
  "new_docs": 0,
  "index_size": 35,
- "seconds": 1175
+ "seconds": 1117
 }
