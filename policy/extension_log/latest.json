@@ -1,8 +1,8 @@
 {
  "extension_version": "2.52.0",
  "started": "2026-10-23T07:18:01.072Z",
- "updated": "2026-10-23T07:21:01.244Z",
- "final": false,
+ "updated": "2026-10-23T07:23:41.667Z",
+ "final": true,
  "stopped": false,
  "rules_from_github": true,
  "rules": {
@@ -24,7 +24,7 @@
   "_note_returns": "returns_rx: קבצי מרכיבי תשואה לאתרי kind=returns (מוגדרים ב-extension_sites.json מ-returns_extension בהגדרות האתר); נשמרים ב-policy/inbox/<id>/returns/"
  },
  "total_sites": 3,
- "done_sites": 2,
+ "done_sites": 3,
  "new_docs": 0,
  "skipped_complete": [
   {
@@ -124,15 +124,7 @@
    "last_ok": ""
   }
  ],
- "active": [
-  {
-   "name": "איילון חברה לביטוח בע\"מ - מרכיבי תשואה",
-   "page": "https://www.ayalon-ins.co.il/savings",
-   "page_no": 8,
-   "pages": 17,
-   "step": "טוען עמוד"
-  }
- ],
+ "active": [],
  "sites": [
   {
    "legal_id": "520022518",
@@ -1836,6 +1828,435 @@
     "   ? אמנת-השירות-גמל-2026.pdf | לאמנת השירות לחצו כאן | ",
     "איילון חברה לביטוח: links=67 files=0 clicked=0 captured=0 selected=0",
     "איילון חברה לביטוח: links=66 files=0 clicked=0 captured=0 selected=0"
+   ],
+   "new_files": []
+  },
+  {
+   "legal_id": "520030677",
+   "name": "איילון חברה לביטוח בע\"מ - מרכיבי תשואה",
+   "pages": [
+    {
+     "url": "https://www.ayalon-ins.co.il/investments",
+     "cache": "hit",
+     "links": 69,
+     "followed": [
+      "https://www.ayalon-ins.co.il/savings/study-fund",
+      "https://www.ayalon-ins.co.il/savings/provident-fund-invest",
+      "https://www.ayalon-ins.co.il/savings/provident-fund",
+      "https://www.ayalon-ins.co.il/savings/pensionary",
+      "https://www.ayalon-ins.co.il/about-us/about-ayalon/investments/publications/",
+      "https://www.ayalon-ins.co.il/savings",
+      "https://www.ayalon-ins.co.il/savings/private",
+      "https://www.ayalon-ins.co.il/savings/investment-routes",
+      "https://www.ayalon-ins.co.il/career/finance-investments",
+      "https://www.ayalon-ins.co.il/about-us/about-ayalon/investments/",
+      "https://www.ayalon-ins.co.il/investments-provident",
+      "https://www.ayalon-ins.co.il/investments-directorate",
+      "https://www.ayalon-ins.co.il/investments-levelagreement"
+     ],
+     "files": 1,
+     "clicked": 0,
+     "captured": 0,
+     "selected": [],
+     "unselected_files": [
+      {
+       "file": "https://www.ayalon-ins.co.il/media/dtvlz32w/amitim_03_2026.pdf",
+       "text": "עקרונות נוהל העברת זכויות עמיתים שלא במזומן",
+       "ctx": ""
+      }
+     ]
+    },
+    {
+     "url": "https://www.ayalon-ins.co.il",
+     "cache": "hit",
+     "links": 74,
+     "followed": [],
+     "files": 0,
+     "clicked": 0,
+     "captured": 0,
+     "selected": [],
+     "unselected_files": []
+    },
+    {
+     "url": "https://www.ayalon-ins.co.il/savings/study-fund",
+     "cache": "hit",
+     "links": 96,
+     "followed": [
+      "https://www.ayalon-ins.co.il/savings/annual-cost-rate",
+      "https://www.ayalon-ins.co.il/articles/why-studyfund-is-profitable"
+     ],
+     "files": 4,
+     "clicked": 0,
+     "captured": 0,
+     "selected": [
+      "https://www.ayalon-ins.co.il/mediastorage/media/e3zbqdxk/הצהרת-מדיניות-השקעה-איילון-השתלמות-2026-סופי.xlsx"
+     ],
+     "unselected_files": [
+      {
+       "file": "https://www.ayalon-ins.co.il/mediastorage/media/3nydd2lo/טופס-הצטרפות-קרן-השתלמות-703-מהדורה-062026-1.pdf",
+       "text": "טופס הצטרפות לקרן השתלמות - 703 - מהדורה 06.2026",
+       "ctx": ""
+      },
+      {
+       "file": "https://www.ayalon-ins.co.il/mediastorage/media/zcaialwy/תקנון-קרן-השתלמות-15983-מהדורה-072026.pdf",
+       "text": "תקנון קרן השתלמות - 15983 - מהדורה 07.2026",
+       "ctx": ""
+      },
+      {
+       "file": "https://www.ayalon-ins.co.il/media/eqghchqh/איילון-השתלמות.pdf",
+       "text": "תעודת כשרות מסלולי השקעה לשנת 2026",
+       "ctx": ""
+      }
+     ]
+    },
+    {
+     "url": "https://www.ayalon-ins.co.il/savings/provident-fund-invest",
+     "cache": "hit",
+     "links": 38,
+     "followed": [],
+     "files": 8,
+     "clicked": 0,
+     "captured": 0,
+     "selected": [
+      "https://www.ayalon-ins.co.il/mediastorage/media/xd4hpdva/הצהרת-מדיניות-השקעה-איילון-גמל-להשקעה-2026-סופי.xlsx"
+     ],
+     "unselected_files": [
+      {
+       "file": "https://www.ayalon-ins.co.il/mediastorage/media/sn4mjoiz/טופס-הצטרפות-לקופת-גמל-להשקעה-102-מהדורה-062026-1.pdf",
+       "text": "טופס הצטרפות לקופת גמל להשקעה - 102 - מהדורה 06.2026",
+       "ctx": ""
+      },
+      {
+       "file": "https://www.ayalon-ins.co.il/media/qmqeukz4/טופס-הצטרפות-לקופת-גמל-להשקעה-קטין-105-מהדורה-062026.pdf",
+       "text": "טופס הצטרפות לקופת גמל להשקעה לקטין - 105 - מהדורה 06.2026",
+       "ctx": ""
+      },
+      {
+       "file": "https://www.ayalon-ins.co.il/media/0tlfzvqh/טופס-הצטרפות-לקופת-גמל-להשקעה-102-מהדורה-062026-2.pdf",
+       "text": "",
+       "ctx": ""
+      },
+      {
+       "file": "https://www.ayalon-ins.co.il/media/01ub3y4d/בקשת-העברת-כספים-לקופת-גמל-והשתלמות-901-מהדורה-062026.pdf",
+       "text": "בקשת העברת כספים לקופת גמל והשתלמות -",
+       "ctx": ""
+      },
+      {
+       "file": "https://www.ayalon-ins.co.il/media/01ub3y4d/בקשת-העברת-כספים-לקופת-גמל-והשתלמות-901-מהדורה-062026.pdf",
+       "text": "901",
+       "ctx": ""
+      },
+      {
+       "file": "https://www.ayalon-ins.co.il/mediastorage/media/k23nhvjs/תקנון-תקני-לקופת-גמל-להשקעה-15969-מהדורה-072026.pdf",
+       "text": "תקנון גמל להשקעה -  15969 - מהדורה 07.2026",
+       "ctx": ""
+      },
+      {
+       "file": "https://www.ayalon-ins.co.il/media/yhanbkfw/איילון-גמל-להשקעה.pdf",
+       "text": "תעודת כשרות מסלולי השקעה לשנת 2026",
+       "ctx": ""
+      }
+     ]
+    },
+    {
+     "url": "https://www.ayalon-ins.co.il/savings/provident-fund",
+     "cache": "hit",
+     "links": 98,
+     "followed": [],
+     "files": 4,
+     "clicked": 0,
+     "captured": 0,
+     "selected": [
+      "https://www.ayalon-ins.co.il/mediastorage/media/01yfqy15/הצהרת-מדיניות-השקעה-איילון-גמל-לחיסכון-2026-סופי.xlsx"
+     ],
+     "unselected_files": [
+      {
+       "file": "https://www.ayalon-ins.co.il/mediastorage/media/uunbejzs/טופס-הצטרפות-לקופת-גמל-לחיסכון-404-מהדורה-062026.pdf",
+       "text": "טופס הצטרפות קופת גמל לחיסכון - 404 - מהדורה 06.2026",
+       "ctx": ""
+      },
+      {
+       "file": "https://www.ayalon-ins.co.il/mediastorage/media/aifo2tct/תקנון-תקני-לקופת-גמל-לחיסכון-15942-מהדורה-072026.pdf",
+       "text": "תקנון גמל לחיסכון - 15942 - מהדורה 07.2026",
+       "ctx": ""
+      },
+      {
+       "file": "https://www.ayalon-ins.co.il/media/qicb3wzx/איילון-גמל.pdf",
+       "text": "תעודת כשרות מסלולי השקעה לשנת 2026",
+       "ctx": ""
+      }
+     ]
+    },
+    {
+     "url": "https://www.ayalon-ins.co.il/savings/pensionary",
+     "cache": "weekly-full",
+     "links": 416,
+     "followed": [],
+     "files": 0,
+     "clicked": 2,
+     "captured": 0,
+     "selected": [],
+     "unselected_files": []
+    },
+    {
+     "url": "https://www.ayalon-ins.co.il/about-us/about-ayalon/investments/publications/",
+     "cache": "hit",
+     "links": 71,
+     "followed": [],
+     "files": 5,
+     "clicked": 0,
+     "captured": 0,
+     "selected": [],
+     "unselected_files": [
+      {
+       "file": "https://www.ayalon-ins.co.il/media/jqjekhjr/bakasha_hesder_pshara_nov_2025.pdf",
+       "text": "להורדה",
+       "ctx": ""
+      },
+      {
+       "file": "https://www.ayalon-ins.co.il/media/5uahnahv/hodaa_hagashat_hesder_nov_2025.pdf",
+       "text": "להורדה",
+       "ctx": ""
+      },
+      {
+       "file": "https://www.ayalon-ins.co.il/media/po0hzqzw/gilad_heker_apr_2026.pdf",
+       "text": "להורדה",
+       "ctx": ""
+      },
+      {
+       "file": "https://www.ayalon-ins.co.il/media/ycada1tc/br_yizugit_04_2026.pdf",
+       "text": "להורדה",
+       "ctx": ""
+      },
+      {
+       "file": "https://www.ayalon-ins.co.il/media/e0lgrfst/הודעה-על-אישור-הסדרי-פשרה.pdf",
+       "text": "להורדה",
+       "ctx": ""
+      }
+     ]
+    },
+    {
+     "url": "https://www.ayalon-ins.co.il/savings",
+     "cache": "weekly-full",
+     "links": 413,
+     "followed": [],
+     "files": 0,
+     "clicked": 2,
+     "captured": 0,
+     "selected": [],
+     "unselected_files": []
+    },
+    {
+     "url": "https://www.ayalon-ins.co.il/savings/private",
+     "cache": "weekly-full",
+     "links": 428,
+     "followed": [],
+     "files": 6,
+     "clicked": 2,
+     "captured": 0,
+     "selected": [],
+     "unselected_files": [
+      {
+       "file": "https://www.ayalon-ins.co.il/media/aytldxc0/hi_1203_sep_2024.pdf",
+       "text": "תנאים כלליים לתכנית איילון יתרון פיננסי - נספח 1203 - מהדורה 1.2023",
+       "ctx": ""
+      },
+      {
+       "file": "https://www.ayalon-ins.co.il/media/1fqddd40/hi_1519_nov_2024.pdf",
+       "text": "נספח מסלולי השקעה פרט 1519 - מהדורה 09.2024",
+       "ctx": ""
+      },
+      {
+       "file": "https://www.ayalon-ins.co.il/media/w5lackbu/bh_1102_mar_2026.pdf",
+       "text": "טופס הצעה איילון יתרון פיננסי - 1102",
+       "ctx": ""
+      },
+      {
+       "file": "https://www.ayalon-ins.co.il/mediastorage/media/xgtlnv3d/bh_3513.pdf",
+       "text": "עדכון משלם זר - יתרון פיננסי - 3513",
+       "ctx": ""
+      },
+      {
+       "file": "https://www.ayalon-ins.co.il/media/swpp2gkv/bh_8118.pdf",
+       "text": "שאלון איש ציבור - 8118",
+       "ctx": ""
+      },
+      {
+       "file": "https://www.ayalon-ins.co.il/media/0ffm50ca/kosher_02_2026.pdf",
+       "text": "תעודת כשרות למסלולי השקעה לשנת 2026",
+       "ctx": ""
+      }
+     ]
+    },
+    {
+     "url": "https://www.ayalon-ins.co.il/savings/investment-routes",
+     "cache": "weekly-full",
+     "links": 404,
+     "followed": [],
+     "files": 0,
+     "clicked": 2,
+     "captured": 0,
+     "selected": [],
+     "unselected_files": []
+    },
+    {
+     "url": "https://www.ayalon-ins.co.il/career/finance-investments",
+     "cache": "hit",
+     "links": 68,
+     "followed": [],
+     "files": 0,
+     "clicked": 0,
+     "captured": 0,
+     "selected": [],
+     "unselected_files": []
+    },
+    {
+     "url": "https://www.ayalon-ins.co.il/about-us/about-ayalon/investments/",
+     "cache": "hit",
+     "links": 67,
+     "followed": [],
+     "files": 0,
+     "clicked": 0,
+     "captured": 0,
+     "selected": [],
+     "unselected_files": []
+    },
+    {
+     "url": "https://www.ayalon-ins.co.il/investments-provident",
+     "cache": "hit",
+     "links": 70,
+     "followed": [],
+     "files": 1,
+     "clicked": 0,
+     "captured": 0,
+     "selected": [],
+     "unselected_files": [
+      {
+       "file": "https://www.ayalon-ins.co.il/media/dtvlz32w/amitim_03_2026.pdf",
+       "text": "לצפייה לחצו כאן",
+       "ctx": ""
+      }
+     ]
+    },
+    {
+     "url": "https://www.ayalon-ins.co.il/investments-directorate",
+     "cache": "hit",
+     "links": 67,
+     "followed": [],
+     "files": 0,
+     "clicked": 0,
+     "captured": 0,
+     "selected": [],
+     "unselected_files": []
+    },
+    {
+     "url": "https://www.ayalon-ins.co.il/investments-levelagreement",
+     "cache": "hit",
+     "links": 68,
+     "followed": [],
+     "files": 1,
+     "clicked": 0,
+     "captured": 0,
+     "selected": [],
+     "unselected_files": [
+      {
+       "file": "https://www.ayalon-ins.co.il/media/02rh04e2/אמנת-השירות-גמל-2026.pdf",
+       "text": "לאמנת השירות לחצו כאן",
+       "ctx": ""
+      }
+     ]
+    },
+    {
+     "url": "https://www.ayalon-ins.co.il/savings/annual-cost-rate",
+     "cache": "none",
+     "links": 404,
+     "followed": [],
+     "files": 4,
+     "clicked": 2,
+     "captured": 0,
+     "selected": [],
+     "unselected_files": [
+      {
+       "file": "https://www.ayalon-ins.co.il/mediastorage/media/fmrlp2ug/סימולטור-לחישוב-עלות-שנתית-צפויה-גמל-להשקעה-82026.xlsx",
+       "text": "לחישוב שיעור העלות השנתית הצפויה בקופת גמל להשקעה",
+       "ctx": ""
+      },
+      {
+       "file": "https://www.ayalon-ins.co.il/media/zrid23m3/סימולטור-לחישוב-עלות-שנתית-צפויה-קופת-גמל-לחיסכון-82026.xlsx",
+       "text": "לחישוב שיעור העלות השנתית הצפויה בקופת גמל לחיסכון",
+       "ctx": ""
+      },
+      {
+       "file": "https://www.ayalon-ins.co.il/media/mb4l0m4g/סימולטור-לחישוב-עלות-שנתית-צפויה-קרן-השתלמות-82026.xlsx",
+       "text": "לחישוב שיעור העלות השנתית הצפויה בקרן השתלמות",
+       "ctx": ""
+      },
+      {
+       "file": "https://www.ayalon-ins.co.il/media/d41nxcxo/סימולטור-לחישוב-עלות-שנתית-צפויה-32026-2.xlsx",
+       "text": "לחישוב שיעור העלות השנתית הצפויה בביטוח חיים",
+       "ctx": ""
+      }
+     ]
+    },
+    {
+     "url": "https://www.ayalon-ins.co.il/articles/why-studyfund-is-profitable",
+     "cache": "none",
+     "links": 398,
+     "followed": [],
+     "files": 0,
+     "clicked": 2,
+     "captured": 0,
+     "selected": [],
+     "unselected_files": []
+    }
+   ],
+   "new_docs": 0,
+   "found": 34,
+   "selected": 3,
+   "had": 3,
+   "head_skip": 0,
+   "page_cache": 11,
+   "cache_hit": 11,
+   "old_skip": 3,
+   "cache_weekly-full": 4,
+   "cache_none": 2,
+   "errors": [],
+   "diag": [
+    "איילון חברה לביטוח: links=69 files=1 clicked=0 captured=0 selected=0",
+    "   ? amitim_03_2026.pdf | עקרונות נוהל העברת זכויות עמיתים שלא במז | ",
+    "איילון חברה לביטוח: links=74 files=0 clicked=0 captured=0 selected=0",
+    "איילון חברה לביטוח: links=96 files=4 clicked=0 captured=0 selected=1",
+    "איילון חברה לביטוח: links=38 files=8 clicked=0 captured=0 selected=1",
+    "איילון חברה לביטוח: links=98 files=4 clicked=0 captured=0 selected=1",
+    "איילון חברה לביטוח: links=416 files=0 clicked=2 captured=0 selected=0",
+    "איילון חברה לביטוח: links=71 files=5 clicked=0 captured=0 selected=0",
+    "   ? bakasha_hesder_pshara_nov_2025.pdf | להורדה | ",
+    "   ? hodaa_hagashat_hesder_nov_2025.pdf | להורדה | ",
+    "   ? gilad_heker_apr_2026.pdf | להורדה | ",
+    "   ? br_yizugit_04_2026.pdf | להורדה | ",
+    "   ? הודעה-על-אישור-הסדרי-פשרה.pdf | להורדה | ",
+    "איילון חברה לביטוח: links=413 files=0 clicked=2 captured=0 selected=0",
+    "איילון חברה לביטוח: links=428 files=6 clicked=2 captured=0 selected=0",
+    "   ? hi_1203_sep_2024.pdf | תנאים כלליים לתכנית איילון יתרון פיננסי  | ",
+    "   ? hi_1519_nov_2024.pdf | נספח מסלולי השקעה פרט 1519 - מהדורה 09.2 | ",
+    "   ? bh_1102_mar_2026.pdf | טופס הצעה איילון יתרון פיננסי - 1102 | ",
+    "   ? bh_3513.pdf | עדכון משלם זר - יתרון פיננסי - 3513 | ",
+    "   ? bh_8118.pdf | שאלון איש ציבור - 8118 | ",
+    "   ? kosher_02_2026.pdf | תעודת כשרות למסלולי השקעה לשנת 2026 | ",
+    "איילון חברה לביטוח: links=404 files=0 clicked=2 captured=0 selected=0",
+    "איילון חברה לביטוח: links=68 files=0 clicked=0 captured=0 selected=0",
+    "איילון חברה לביטוח: links=67 files=0 clicked=0 captured=0 selected=0",
+    "איילון חברה לביטוח: links=70 files=1 clicked=0 captured=0 selected=0",
+    "   ? amitim_03_2026.pdf | לצפייה לחצו כאן | ",
+    "איילון חברה לביטוח: links=67 files=0 clicked=0 captured=0 selected=0",
+    "איילון חברה לביטוח: links=68 files=1 clicked=0 captured=0 selected=0",
+    "   ? אמנת-השירות-גמל-2026.pdf | לאמנת השירות לחצו כאן | ",
+    "איילון חברה לביטוח: links=404 files=4 clicked=2 captured=0 selected=0",
+    "   ? סימולטור-לחישוב-עלות-שנתית-צפויה-גמל-להשקעה-82026.xlsx | לחישוב שיעור העלות השנתית הצפויה בקופת ג | ",
+    "   ? סימולטור-לחישוב-עלות-שנתית-צפויה-קופת-גמל-לחיסכון-82026.xlsx | לחישוב שיעור העלות השנתית הצפויה בקופת ג | ",
+    "   ? סימולטור-לחישוב-עלות-שנתית-צפויה-קרן-השתלמות-82026.xlsx | לחישוב שיעור העלות השנתית הצפויה בקרן הש | ",
+    "   ? סימולטור-לחישוב-עלות-שנתית-צפויה-32026-2.xlsx | לחישוב שיעור העלות השנתית הצפויה בביטוח  | ",
+    "איילון חברה לביטוח: links=398 files=0 clicked=2 captured=0 selected=0"
    ],
    "new_files": []
   }
