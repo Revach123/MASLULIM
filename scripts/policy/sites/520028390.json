@@ -64,5 +64,8 @@
    "^מורים תיכוניים - מסלול רגיל",
    "485"
   ]
- ]
+ ],
+ "returns_extension": true,
+ "returns_follow": "מרכיבי|תשוא|דוחות|דיווח|yield|returns|reports|קרן|השתלמות",
+ "returns_max_pages": 20
 }
