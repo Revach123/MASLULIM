@@ -1,21 +1,34 @@
 {
  "legal_id": "512244146",
  "company": "כלל פנסיה וגמל בע\"מ",
- "run": "2026-10-22T10:47:06+00:00",
+ "run": "2026-10-23T07:07:19+00:00",
  "errors": [],
  "seeds": {
   "config": 1,
-  "discovered": 9,
+  "discovered": 10,
   "policy_snapshot": 0,
   "policy_snapshot_docs": 0,
+  "gap_search": 0,
   "sitemap": 0
  },
  "imported_from_policy": 0,
- "pages": 31,
+ "gap_search": {
+  "families": [
+   "חיסכון לכל ילד"
+  ],
+  "queries": [
+   {
+    "q": "site:clalbit.co.il מרכיבי תשואה חיסכון לכל ילד",
+    "found": 0
+   }
+  ],
+  "urls": []
+ },
+ "pages": 16,
  "pages_failed": [],
- "candidates": 56,
- "docs": 56,
+ "candidates": 72,
+ "docs": 72,
  "new_docs": 0,
  "index_size": 72,
- "seconds": 1198
+ "seconds": 1168
 }
