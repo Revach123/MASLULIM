@@ -1,21 +1,39 @@
 {
  "legal_id": "514767490",
  "company": "סלייס גמל בע\"מ",
- "run": "2026-10-22T10:46:40+00:00",
+ "run": "2026-10-23T10:39:38+00:00",
  "errors": [],
  "seeds": {
   "config": 0,
   "discovered": 1,
   "policy_snapshot": 0,
   "policy_snapshot_docs": 158,
+  "gap_search": 0,
   "sitemap": 0
  },
  "imported_from_policy": 0,
+ "gap_search": {
+  "families": [
+   "השתלמות",
+   "קופת גמל"
+  ],
+  "queries": [
+   {
+    "q": "סלייס גמל מרכיבי תשואה השתלמות",
+    "found": 0
+   },
+   {
+    "q": "סלייס גמל מרכיבי תשואה קופת גמל",
+    "found": 0
+   }
+  ],
+  "urls": []
+ },
  "pages": 2,
  "pages_failed": [],
  "candidates": 79,
  "docs": 79,
  "new_docs": 0,
  "index_size": 79,
- "seconds": 43
+ "seconds": 95
 }
