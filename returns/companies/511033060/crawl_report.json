@@ -1,16 +1,22 @@
 {
  "legal_id": "511033060",
  "company": "קרן החסכון לצבא הקבע - חברה לניהול קופות גמל בע\"מ",
- "run": "2026-10-22T10:40:00+00:00",
+ "run": "2026-10-23T10:42:41+00:00",
  "errors": [],
  "seeds": {
   "config": 0,
   "discovered": 1,
   "policy_snapshot": 2,
   "policy_snapshot_docs": 9,
+  "gap_search": 0,
   "sitemap": 0
  },
  "imported_from_policy": 0,
+ "gap_search": {
+  "families": [],
+  "queries": [],
+  "urls": []
+ },
  "pages": 45,
  "pages_failed": [
   "https://www.harel-group.co.il/long-term-savings/study-funds/plans/regular-army/Pages/: 404"
@@ -19,5 +25,5 @@
  "docs": 9,
  "new_docs": 0,
  "index_size": 10,
- "seconds": 128
+ "seconds": 157
 }
