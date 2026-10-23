@@ -1,7 +1,7 @@
 {
  "legal_id": "512245812",
  "company": "מנורה מבטחים פנסיה וגמל בע\"מ",
- "run": "2026-10-23T07:07:18+00:00",
+ "run": "2026-10-23T07:47:40+00:00",
  "errors": [
   "download budget reached - ממשיכים בריצה הבאה"
  ],
@@ -9,7 +9,7 @@
   "config": 0,
   "discovered": 18,
   "policy_snapshot": 85,
-  "policy_snapshot_docs": 716,
+  "policy_snapshot_docs": 563,
   "gap_search": 0,
   "sitemap": 2
  },
@@ -23,36 +23,37 @@
   ],
   "queries": [
    {
-    "q": "site:menoramivt.co.il מרכיבי תשואה השתלמות",
+    "q": "מנורה מבטחים פנסיה וגמל מרכיבי תשואה השתלמות",
     "found": 0
    },
    {
-    "q": "site:menoramivt.co.il מרכיבי תשואה חיסכון לכל ילד",
+    "q": "מנורה מבטחים פנסיה וגמל מרכיבי תשואה חיסכון לכל ילד",
     "found": 0
    },
    {
-    "q": "site:menoramivt.co.il מרכיבי תשואה פנסיה",
+    "q": "מנורה מבטחים פנסיה וגמל מרכיבי תשואה פנסיה",
     "found": 0
    },
    {
-    "q": "site:menoramivt.co.il מרכיבי תשואה קופת גמל",
+    "q": "מנורה מבטחים פנסיה וגמל מרכיבי תשואה קופת גמל",
     "found": 0
    }
   ],
   "urls": []
  },
- "pages": 44,
+ "pages": 46,
  "pages_failed": [
   "https://www.menoramivt.co.il/funds/: 404",
   "https://www.menoramivt.co.il/funds/pension-and-gemel/pension-plans/: 404",
   "https://www.menoramivt.co.il/links/pension-and-gemel/: 404",
   "https://www.menoramivt.co.il/funds/pension-and-gemel/mashlima/: 404",
   "https://www.menoramivt.co.il/funds/pension-and-gemel/gemel-hishtalmut-list/savings-for-children/: 404",
-  "https://www.menoramivt.co.il/list/pension-member-info/: 404"
+  "https://www.menoramivt.co.il/list/pension-member-info/: 404",
+  "https://www.menoramivt.co.il/funds/pension-and-gemel/gemel-hishtalmut-list/menora-gemel/: 404"
  ],
- "candidates": 891,
+ "candidates": 806,
  "docs": 0,
  "new_docs": 0,
  "index_size": 782,
- "seconds": 2045
+ "seconds": 2074
 }
