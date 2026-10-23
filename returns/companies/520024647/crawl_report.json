@@ -1,21 +1,34 @@
 {
  "legal_id": "520024647",
  "company": "כלל חברה לביטוח בע\"מ",
- "run": "2026-10-22T10:55:22+00:00",
+ "run": "2026-10-23T10:56:34+00:00",
  "errors": [],
  "seeds": {
   "config": 1,
   "discovered": 12,
   "policy_snapshot": 0,
   "policy_snapshot_docs": 0,
+  "gap_search": 0,
   "sitemap": 0
  },
  "imported_from_policy": 0,
- "pages": 16,
+ "gap_search": {
+  "families": [
+   "ביטוח מסלולי השקעה"
+  ],
+  "queries": [
+   {
+    "q": "כלל חברה לביטוח מרכיבי תשואה ביטוח מסלולי השקעה",
+    "found": 0
+   }
+  ],
+  "urls": []
+ },
+ "pages": 12,
  "pages_failed": [],
- "candidates": 30,
- "docs": 30,
+ "candidates": 24,
+ "docs": 24,
  "new_docs": 0,
  "index_size": 40,
- "seconds": 1120
+ "seconds": 1177
 }
