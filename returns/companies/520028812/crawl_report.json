@@ -1,7 +1,7 @@
 {
  "legal_id": "520028812",
  "company": "החברה המנהלת של קרן הגמלאות של חברי \"דן\" בע\"מ",
- "run": "2026-10-22T10:59:52+00:00",
+ "run": "2026-10-23T10:57:22+00:00",
  "errors": [],
  "seeds": {
   "config": 0,
@@ -9,14 +9,20 @@
   "policy_snapshot": 0,
   "policy_snapshot_docs": 0,
   "search": 0,
+  "gap_search": 0,
   "sitemap": 0
  },
  "imported_from_policy": 0,
+ "gap_search": {
+  "families": [],
+  "queries": [],
+  "urls": []
+ },
  "pages": 3,
  "pages_failed": [],
  "candidates": 0,
  "docs": 0,
  "new_docs": 0,
  "index_size": 0,
- "seconds": 22
+ "seconds": 23
 }
