@@ -1,16 +1,49 @@
 {
  "legal_id": "512065202",
  "company": "מיטב גמל ופנסיה בע\"מ",
- "run": "2026-10-22T10:44:15+00:00",
+ "run": "2026-10-23T07:07:12+00:00",
  "errors": [],
  "seeds": {
   "config": 7,
   "discovered": 0,
   "policy_snapshot": 0,
   "policy_snapshot_docs": 0,
+  "gap_search": 0,
   "sitemap": 0
  },
  "imported_from_policy": 0,
+ "gap_search": {
+  "families": [
+   "גמל להשקעה",
+   "השתלמות",
+   "חיסכון לכל ילד",
+   "פנסיה",
+   "קופת גמל"
+  ],
+  "queries": [
+   {
+    "q": "site:meitav.co.il מרכיבי תשואה גמל להשקעה",
+    "found": 0
+   },
+   {
+    "q": "site:meitav.co.il מרכיבי תשואה השתלמות",
+    "found": 0
+   },
+   {
+    "q": "site:meitav.co.il מרכיבי תשואה חיסכון לכל ילד",
+    "found": 0
+   },
+   {
+    "q": "site:meitav.co.il מרכיבי תשואה פנסיה",
+    "found": 0
+   },
+   {
+    "q": "site:meitav.co.il מרכיבי תשואה קופת גמל",
+    "found": 0
+   }
+  ],
+  "urls": []
+ },
  "pages": 22,
  "pages_failed": [
   "https://www.meitav.co.il/provident_pension/gemel_report_articles/: 404",
@@ -18,9 +51,9 @@
   "https://www.meitav.co.il/provident_pension/kids_report_articles/: 404",
   "https://www.meitav.co.il/provident_pension/invest_report_articles/: 404"
  ],
- "candidates": 1503,
- "docs": 1503,
- "new_docs": 0,
- "index_size": 1611,
- "seconds": 992
+ "candidates": 1632,
+ "docs": 1632,
+ "new_docs": 129,
+ "index_size": 1740,
+ "seconds": 1249
 }
