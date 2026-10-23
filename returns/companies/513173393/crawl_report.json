@@ -1,11 +1,11 @@
 {
  "legal_id": "513173393",
  "company": "אלטשולר שחם גמל ופנסיה בע\"מ",
- "run": "2026-10-23T07:46:26+00:00",
+ "run": "2026-10-23T10:37:42+00:00",
  "errors": [],
  "seeds": {
   "config": 0,
-  "discovered": 12,
+  "discovered": 37,
   "policy_snapshot": 11,
   "policy_snapshot_docs": 106,
   "gap_search": 0,
@@ -29,7 +29,7 @@
   ],
   "urls": []
  },
- "pages": 114,
+ "pages": 121,
  "pages_failed": [
   "https://www.as-invest.co.il/interstedin/pension/common-pension-fund/: 404"
  ],
@@ -37,5 +37,5 @@
  "docs": 86,
  "new_docs": 0,
  "index_size": 308,
- "seconds": 1867
+ "seconds": 1859
 }
