@@ -1,7 +1,7 @@
 {
  "extension_version": "2.53.0",
  "started": "2026-10-23T08:34:26.140Z",
- "updated": "2026-10-23T09:04:26.250Z",
+ "updated": "2026-10-23T09:07:26.263Z",
  "final": false,
  "stopped": false,
  "rules_from_github": true,
@@ -24,7 +24,7 @@
   "_note_returns": "returns_rx: קבצי מרכיבי תשואה לאתרי kind=returns (מוגדרים ב-extension_sites.json מ-returns_extension בהגדרות האתר); נשמרים ב-policy/inbox/<id>/returns/"
  },
  "total_sites": 10,
- "done_sites": 8,
+ "done_sites": 9,
  "new_docs": 2,
  "skipped_complete": [
   {
@@ -114,10 +114,10 @@
  ],
  "active": [
   {
-   "name": "החברה המנהלת של מינהל קרן ההשתלמות לפקידים עובדי המנהל והשירותים בע\"מ - מרכיבי תשואה",
-   "page": "https://minhal.org/%d7%90%d7%95%d7%93%d7%95%d7%aa-%d7%94%d7%a7%d7%a8%d7%9f/%d7%90%d7%a1%d7%99%d7%a4%d7%95%d7%aa-%d7%9b%d7%9c%d7%9c%d7%99%d7%95%d7%aa/",
-   "page_no": 14,
-   "pages": 22,
+   "name": "החברה המנהלת של רום קרן ההשתלמות לעובדי הרשויות המקומיות בע\"מ - מרכיבי תשואה",
+   "page": "https://www.krm.co.il/?CategoryID=259",
+   "page_no": 17,
+   "pages": 18,
    "step": "פותח אקורדיונים ואוסף קישורים"
   }
  ],
@@ -5997,6 +5997,425 @@
     "   ? סימולטור-לחישוב-עלות-שנתית-צפויה-קרן-השתלמות-82026.xlsx | לחישוב שיעור העלות השנתית הצפויה בקרן הש | ",
     "   ? סימולטור-לחישוב-עלות-שנתית-צפויה-32026-2.xlsx | לחישוב שיעור העלות השנתית הצפויה בביטוח  | ",
     "איילון חברה לביטוח: links=84 files=0 clicked=0 captured=0 selected=0"
+   ],
+   "new_files": []
+  },
+  {
+   "legal_id": "520030990",
+   "name": "החברה המנהלת של מינהל קרן ההשתלמות לפקידים עובדי המנהל והשירותים בע\"מ - מרכיבי תשואה",
+   "pages": [
+    {
+     "url": "https://minhal.org/הרכב-נכסים/",
+     "cache": "hit",
+     "links": 226,
+     "followed": [
+      "https://minhal.org/%d7%90%d7%95%d7%93%d7%95%d7%aa-%d7%94%d7%a7%d7%a8%d7%9f/%d7%a4%d7%a0%d7%99%d7%95%d7%aa-%d7%94%d7%a6%d7%99%d7%91%d7%95%d7%a8/",
+      "https://minhal.org/%d7%90%d7%95%d7%93%d7%95%d7%aa-%d7%94%d7%a7%d7%a8%d7%9f/%d7%94%d7%95%d7%a6%d7%90%d7%95%d7%aa-%d7%99%d7%a9%d7%99%d7%a8%d7%95%d7%aa-%d7%91%d7%a2%d7%93-%d7%a0%d7%99%d7%94%d7%95%d7%9c-%d7%94%d7%a9%d7%a7%d7%a2%d7%95%d7%aa/",
+      "https://minhal.org/%d7%90%d7%95%d7%93%d7%95%d7%aa-%d7%94%d7%a7%d7%a8%d7%9f/%d7%94%d7%a6%d7%94%d7%a8%d7%aa-%d7%a0%d7%92%d7%99%d7%a9%d7%95%d7%aa/",
+      "https://minhal.org/%d7%a0%d7%9b%d7%a1%d7%99-%d7%94%d7%a7%d7%a8%d7%9f/%d7%94%d7%aa%d7%a4%d7%9c%d7%92%d7%95%d7%aa-%d7%90%d7%a4%d7%99%d7%a7%d7%99-%d7%94%d7%a9%d7%a7%d7%a2%d7%94/",
+      "https://minhal.org/%d7%a0%d7%9b%d7%a1%d7%99-%d7%94%d7%a7%d7%a8%d7%9f/",
+      "https://minhal.org/"
+     ],
+     "files": 133,
+     "clicked": 0,
+     "captured": 0,
+     "selected": [],
+     "unselected_files": [
+      {
+       "file": "https://minhal.org/wp-content/uploads/2026/08/מדיניות-פרטיות.pdf",
+       "text": "מדיניות פרטיות",
+       "ctx": ""
+      },
+      {
+       "file": "https://minhal.org/wp-content/uploads/2026/08/mediniyut_tagmul_2025.pdf",
+       "text": "mediniyut_tagmul_2025",
+       "ctx": "(wp-media)"
+      },
+      {
+       "file": "https://minhal.org/wp-content/uploads/2026/02/mediniyut_zfuya_titanyum2026.xlsx.pdf",
+       "text": "mediniyut_zfuya_titanyum2026.xlsx",
+       "ctx": "(wp-media)"
+      },
+      {
+       "file": "https://minhal.org/wp-content/uploads/2026/02/mediniyut_zfuya_sp5002026.xlsx.pdf",
+       "text": "mediniyut_zfuya_sp5002026.xlsx",
+       "ctx": "(wp-media)"
+      },
+      {
+       "file": "https://minhal.org/wp-content/uploads/2026/02/mediniyut_zfuya_klali2026.xlsx.pdf",
+       "text": "mediniyut_zfuya_klali2026.xlsx",
+       "ctx": "(wp-media)"
+      },
+      {
+       "file": "https://minhal.org/wp-content/uploads/2026/02/mediniyut_zfuya_alaha2026.xlsx.pdf",
+       "text": "mediniyut_zfuya_alaha2026.xlsx",
+       "ctx": "(wp-media)"
+      },
+      {
+       "file": "https://minhal.org/wp-content/uploads/2026/02/mediniyut_zfuya_agah2026.xlsx.pdf",
+       "text": "mediniyut_zfuya_agah2026.xlsx",
+       "ctx": "(wp-media)"
+      },
+      {
+       "file": "https://minhal.org/wp-content/uploads/2026/01/mediniyut_zfuya_sp5002026xlsx.pdf",
+       "text": "mediniyut_zfuya_sp5002026xlsx",
+       "ctx": "(wp-media)"
+      },
+      {
+       "file": "https://minhal.org/wp-content/uploads/2026/01/mediniyut_zfuya_agah2026xlsx.pdf",
+       "text": "mediniyut_zfuya_agah2026xlsx",
+       "ctx": "(wp-media)"
+      },
+      {
+       "file": "https://minhal.org/wp-content/uploads/2026/01/mediniyut_zfuya_alaha2026xlsx.pdf",
+       "text": "mediniyut_zfuya_alaha2026xlsx",
+       "ctx": "(wp-media)"
+      },
+      {
+       "file": "https://minhal.org/wp-content/uploads/2026/01/mediniyut_zfuya_klali2026xlsx.pdf",
+       "text": "mediniyut_zfuya_klali2026xlsx",
+       "ctx": "(wp-media)"
+      },
+      {
+       "file": "https://minhal.org/wp-content/uploads/2026/01/mediniyut_zfuya_titanyum2026xlsx.pdf",
+       "text": "mediniyut_zfuya_titanyum2026xlsx",
+       "ctx": "(wp-media)"
+      },
+      {
+       "file": "https://minhal.org/wp-content/uploads/2025/01/mediniyut_zfuya_sp5002025xlsx.pdf",
+       "text": "mediniyut_zfuya_sp5002025xlsx",
+       "ctx": "(wp-media)"
+      },
+      {
+       "file": "https://minhal.org/wp-content/uploads/2025/01/mediniyut_zfuya_alaha2025xlsx.pdf",
+       "text": "mediniyut_zfuya_alaha2025xlsx",
+       "ctx": "(wp-media)"
+      },
+      {
+       "file": "https://minhal.org/wp-content/uploads/2025/01/mediniyut_zfuya_titanyum2025xlsx.pdf",
+       "text": "mediniyut_zfuya_titanyum2025xlsx",
+       "ctx": "(wp-media)"
+      },
+      {
+       "file": "https://minhal.org/wp-content/uploads/2025/01/mediniyut_zfuya_agah2025xlsx.pdf",
+       "text": "mediniyut_zfuya_agah2025xlsx",
+       "ctx": "(wp-media)"
+      },
+      {
+       "file": "https://minhal.org/wp-content/uploads/2025/01/mediniyut_zfuya_klali2025xlsx.pdf",
+       "text": "mediniyut_zfuya_klali2025xlsx",
+       "ctx": "(wp-media)"
+      },
+      {
+       "file": "https://minhal.org/wp-content/uploads/2024/09/mediniyut_zfuya_sp5002024.xlsx",
+       "text": "mediniyut_zfuya_sp5002024.",
+       "ctx": "(wp-media)"
+      },
+      {
+       "file": "https://minhal.org/wp-content/uploads/2024/09/mediniyut_zfuya_alaha2024.xlsx",
+       "text": "mediniyut_zfuya_alaha2024",
+       "ctx": "(wp-media)"
+      },
+      {
+       "file": "https://minhal.org/wp-content/uploads/2024/09/mediniyut_zfuya_titanyum2024-1.xlsx",
+       "text": "mediniyut_zfuya_titanyum2024.",
+       "ctx": "(wp-media)"
+      },
+      {
+       "file": "https://minhal.org/wp-content/uploads/2024/09/mediniyut_zfuya_titanyum2024.xlsx",
+       "text": "mediniyut_zfuya_titanyum2024",
+       "ctx": "(wp-media)"
+      },
+      {
+       "file": "https://minhal.org/wp-content/uploads/2024/09/mediniyut_zfuya_klali2024.xlsx",
+       "text": "mediniyut_zfuya_klali2024.",
+       "ctx": "(wp-media)"
+      },
+      {
+       "file": "https://minhal.org/wp-content/uploads/2024/09/mediniyut_sherut2024.pdf",
+       "text": "מדיניות שירות לשנת 2024",
+       "ctx": "(wp-media)"
+      },
+      {
+       "file": "https://minhal.org/wp-content/uploads/2024/08/mediniyut_tagmul_nosei_misra2023.pdf",
+       "text": "מדיניות תגמול לשנת 2023 אושר ב31.08.2023",
+       "ctx": "(wp-media)"
+      },
+      {
+       "file": "https://minhal.org/wp-content/uploads/2024/07/mediniyut_zfuya_agah22-1.xlsx",
+       "text": "mediniyut_zfuya_agah22 (1)",
+       "ctx": "(wp-media)"
+      }
+     ]
+    },
+    {
+     "url": "https://minhal.org/הרכב-נכסים/מסלול-עוקב-מדד-500-ps/",
+     "cache": "hit",
+     "links": 94,
+     "followed": [],
+     "files": 1,
+     "clicked": 0,
+     "captured": 0,
+     "selected": [],
+     "unselected_files": [
+      {
+       "file": "https://minhal.org/wp-content/uploads/2026/08/מדיניות-פרטיות.pdf",
+       "text": "מדיניות פרטיות",
+       "ctx": ""
+      }
+     ]
+    },
+    {
+     "url": "https://minhal.org",
+     "cache": "none",
+     "links": 275,
+     "followed": [
+      "https://minhal.org/%d7%90%d7%95%d7%93%d7%95%d7%aa-%d7%94%d7%a7%d7%a8%d7%9f/",
+      "https://minhal.org/%d7%90%d7%95%d7%93%d7%95%d7%aa-%d7%94%d7%a7%d7%a8%d7%9f/%d7%97%d7%91%d7%a8%d7%99-%d7%93%d7%99%d7%a8%d7%a7%d7%98%d7%95%d7%a8%d7%99%d7%95%d7%9f-%d7%95%d7%94%d7%a0%d7%94%d7%9c%d7%94-%d7%91%d7%9b%d7%99%d7%a8%d7%94/",
+      "https://minhal.org/%d7%90%d7%95%d7%93%d7%95%d7%aa-%d7%94%d7%a7%d7%a8%d7%9f/%d7%a0%d7%95%d7%a9%d7%90%d7%99-%d7%9e%d7%a9%d7%a8%d7%94/",
+      "https://minhal.org/%d7%90%d7%95%d7%93%d7%95%d7%aa-%d7%94%d7%a7%d7%a8%d7%9f/%d7%97%d7%91%d7%a8%d7%99-%d7%95%d7%a2%d7%93%d7%95%d7%aa/",
+      "https://minhal.org/%d7%90%d7%95%d7%93%d7%95%d7%aa-%d7%94%d7%a7%d7%a8%d7%9f/%d7%90%d7%a1%d7%99%d7%a4%d7%95%d7%aa-%d7%9b%d7%9c%d7%9c%d7%99%d7%95%d7%aa/",
+      "https://minhal.org/%d7%90%d7%95%d7%93%d7%95%d7%aa-%d7%94%d7%a7%d7%a8%d7%9f/%d7%90%d7%9e%d7%a0%d7%aa-%d7%a9%d7%99%d7%a8%d7%95%d7%aa/",
+      "https://minhal.org/%d7%90%d7%95%d7%93%d7%95%d7%aa-%d7%94%d7%a7%d7%a8%d7%9f/%d7%9e%d7%9e%d7%a9%d7%a7-%d7%90%d7%99%d7%a0%d7%98%d7%a8%d7%a0%d7%98%d7%99/",
+      "https://minhal.org/%d7%90%d7%95%d7%93%d7%95%d7%aa-%d7%94%d7%a7%d7%a8%d7%9f/%d7%9e%d7%99%d7%93%d7%a2-%d7%a1%d7%98%d7%98%d7%99%d7%a1%d7%98%d7%99/",
+      "https://minhal.org/%d7%90%d7%95%d7%93%d7%95%d7%aa-%d7%94%d7%a7%d7%a8%d7%9f/%d7%aa%d7%a8%d7%a9%d7%99%d7%9d-%d7%91%d7%a2%d7%9c%d7%99-%d7%a9%d7%9c%d7%99%d7%98%d7%94-%d7%a6%d7%93%d7%93%d7%99%d7%9d-%d7%a7%d7%a9%d7%95%d7%a8%d7%99%d7%9d/",
+      "https://minhal.org/%d7%90%d7%95%d7%93%d7%95%d7%aa-%d7%94%d7%a7%d7%a8%d7%9f/%d7%90%d7%96%d7%a8%d7%97%d7%99%d7%9d-%d7%95%d7%aa%d7%99%d7%a7%d7%99%d7%9d/",
+      "https://minhal.org/%d7%93%d7%95%d7%97%d7%95%d7%aa/",
+      "https://minhal.org/%d7%a0%d7%9b%d7%a1%d7%99-%d7%94%d7%a7%d7%a8%d7%9f/%d7%a8%d7%a9%d7%99%d7%9e%d7%aa-%d7%a0%d7%9b%d7%a1%d7%99%d7%9d-%d7%a8%d7%91%d7%a2%d7%95%d7%a0%d7%99%d7%aa/",
+      "https://minhal.org/%d7%90%d7%95%d7%93%d7%95%d7%aa-%d7%94%d7%a7%d7%a8%d7%9f/%d7%94%d7%9c%d7%95%d7%95%d7%90%d7%95%d7%aa/"
+     ],
+     "files": 1,
+     "clicked": 0,
+     "captured": 0,
+     "selected": [],
+     "unselected_files": [
+      {
+       "file": "https://minhal.org/wp-content/uploads/2026/08/מדיניות-פרטיות.pdf",
+       "text": "מדיניות פרטיות",
+       "ctx": ""
+      }
+     ]
+    },
+    {
+     "url": "https://minhal.org/%d7%90%d7%95%d7%93%d7%95%d7%aa-%d7%94%d7%a7%d7%a8%d7%9f/%d7%a4%d7%a0%d7%99%d7%95%d7%aa-%d7%94%d7%a6%d7%99%d7%91%d7%95%d7%a8/",
+     "cache": "none",
+     "links": 0,
+     "followed": [],
+     "files": 0,
+     "clicked": 0,
+     "captured": 0,
+     "selected": [],
+     "unselected_files": []
+    },
+    {
+     "url": "https://minhal.org/%d7%90%d7%95%d7%93%d7%95%d7%aa-%d7%94%d7%a7%d7%a8%d7%9f/%d7%94%d7%95%d7%a6%d7%90%d7%95%d7%aa-%d7%99%d7%a9%d7%99%d7%a8%d7%95%d7%aa-%d7%91%d7%a2%d7%93-%d7%a0%d7%99%d7%94%d7%95%d7%9c-%d7%94%d7%a9%d7%a7%d7%a2%d7%95%d7%aa/",
+     "cache": "none",
+     "links": 268,
+     "followed": [],
+     "files": 1,
+     "clicked": 0,
+     "captured": 0,
+     "selected": [],
+     "unselected_files": [
+      {
+       "file": "https://minhal.org/wp-content/uploads/2026/08/מדיניות-פרטיות.pdf",
+       "text": "מדיניות פרטיות",
+       "ctx": ""
+      }
+     ]
+    },
+    {
+     "url": "https://minhal.org/%d7%90%d7%95%d7%93%d7%95%d7%aa-%d7%94%d7%a7%d7%a8%d7%9f/%d7%94%d7%a6%d7%94%d7%a8%d7%aa-%d7%a0%d7%92%d7%99%d7%a9%d7%95%d7%aa/",
+     "cache": "none",
+     "links": 268,
+     "followed": [],
+     "files": 1,
+     "clicked": 0,
+     "captured": 0,
+     "selected": [],
+     "unselected_files": [
+      {
+       "file": "https://minhal.org/wp-content/uploads/2026/08/מדיניות-פרטיות.pdf",
+       "text": "מדיניות פרטיות",
+       "ctx": ""
+      }
+     ]
+    },
+    {
+     "url": "https://minhal.org/%d7%a0%d7%9b%d7%a1%d7%99-%d7%94%d7%a7%d7%a8%d7%9f/%d7%94%d7%aa%d7%a4%d7%9c%d7%92%d7%95%d7%aa-%d7%90%d7%a4%d7%99%d7%a7%d7%99-%d7%94%d7%a9%d7%a7%d7%a2%d7%94/",
+     "cache": "none",
+     "links": 268,
+     "followed": [],
+     "files": 1,
+     "clicked": 0,
+     "captured": 0,
+     "selected": [],
+     "unselected_files": [
+      {
+       "file": "https://minhal.org/wp-content/uploads/2026/08/מדיניות-פרטיות.pdf",
+       "text": "מדיניות פרטיות",
+       "ctx": ""
+      }
+     ]
+    },
+    {
+     "url": "https://minhal.org/%d7%a0%d7%9b%d7%a1%d7%99-%d7%94%d7%a7%d7%a8%d7%9f/",
+     "cache": "none",
+     "links": 0,
+     "followed": [],
+     "files": 0,
+     "clicked": 0,
+     "captured": 0,
+     "selected": [],
+     "unselected_files": []
+    },
+    {
+     "url": "https://minhal.org/",
+     "cache": "hit",
+     "links": 232,
+     "followed": [],
+     "files": 1,
+     "clicked": 0,
+     "captured": 0,
+     "selected": [],
+     "unselected_files": [
+      {
+       "file": "https://minhal.org/wp-content/uploads/2026/08/מדיניות-פרטיות.pdf",
+       "text": "מדיניות פרטיות",
+       "ctx": ""
+      }
+     ]
+    },
+    {
+     "url": "https://minhal.org/%d7%90%d7%95%d7%93%d7%95%d7%aa-%d7%94%d7%a7%d7%a8%d7%9f/",
+     "cache": "none",
+     "links": 268,
+     "followed": [],
+     "files": 1,
+     "clicked": 0,
+     "captured": 0,
+     "selected": [],
+     "unselected_files": [
+      {
+       "file": "https://minhal.org/wp-content/uploads/2026/08/מדיניות-פרטיות.pdf",
+       "text": "מדיניות פרטיות",
+       "ctx": ""
+      }
+     ]
+    },
+    {
+     "url": "https://minhal.org/%d7%90%d7%95%d7%93%d7%95%d7%aa-%d7%94%d7%a7%d7%a8%d7%9f/%d7%97%d7%91%d7%a8%d7%99-%d7%93%d7%99%d7%a8%d7%a7%d7%98%d7%95%d7%a8%d7%99%d7%95%d7%9f-%d7%95%d7%94%d7%a0%d7%94%d7%9c%d7%94-%d7%91%d7%9b%d7%99%d7%a8%d7%94/",
+     "cache": "none",
+     "links": 0,
+     "followed": [],
+     "files": 0,
+     "clicked": 0,
+     "captured": 0,
+     "selected": [],
+     "unselected_files": []
+    },
+    {
+     "url": "https://minhal.org/%d7%90%d7%95%d7%93%d7%95%d7%aa-%d7%94%d7%a7%d7%a8%d7%9f/%d7%a0%d7%95%d7%a9%d7%90%d7%99-%d7%9e%d7%a9%d7%a8%d7%94/",
+     "cache": "none",
+     "links": 268,
+     "followed": [],
+     "files": 1,
+     "clicked": 0,
+     "captured": 0,
+     "selected": [],
+     "unselected_files": [
+      {
+       "file": "https://minhal.org/wp-content/uploads/2026/08/מדיניות-פרטיות.pdf",
+       "text": "מדיניות פרטיות",
+       "ctx": ""
+      }
+     ]
+    },
+    {
+     "url": "https://minhal.org/%d7%90%d7%95%d7%93%d7%95%d7%aa-%d7%94%d7%a7%d7%a8%d7%9f/%d7%97%d7%91%d7%a8%d7%99-%d7%95%d7%a2%d7%93%d7%95%d7%aa/",
+     "cache": "none",
+     "links": 268,
+     "followed": [],
+     "files": 1,
+     "clicked": 0,
+     "captured": 0,
+     "selected": [],
+     "unselected_files": [
+      {
+       "file": "https://minhal.org/wp-content/uploads/2026/08/מדיניות-פרטיות.pdf",
+       "text": "מדיניות פרטיות",
+       "ctx": ""
+      }
+     ]
+    },
+    {
+     "url": "https://minhal.org/%d7%90%d7%95%d7%93%d7%95%d7%aa-%d7%94%d7%a7%d7%a8%d7%9f/%d7%90%d7%a1%d7%99%d7%a4%d7%95%d7%aa-%d7%9b%d7%9c%d7%9c%d7%99%d7%95%d7%aa/",
+     "cache": "none",
+     "links": 268,
+     "followed": [],
+     "files": 1,
+     "clicked": 0,
+     "captured": 0,
+     "selected": [],
+     "unselected_files": [
+      {
+       "file": "https://minhal.org/wp-content/uploads/2026/08/מדיניות-פרטיות.pdf",
+       "text": "מדיניות פרטיות",
+       "ctx": ""
+      }
+     ]
+    }
+   ],
+   "new_docs": 0,
+   "found": 143,
+   "selected": 0,
+   "had": 0,
+   "head_skip": 0,
+   "page_cache": 3,
+   "cache_hit": 3,
+   "cache_none": 11,
+   "errors": [
+    "https://minhal.org/%d7%90%d7%95%d7%93%d7%95%d7%aa-%d7%94%d7%a7%d7%a8%d7%9f/%d7%94%d7%95%d7%a6%d7%90%d7%95%d7%aa-%d7%99%d7%a9%d7%99%d7%a8%d7%95%d7%aa-%d7%91%d7%a2%d7%93-%d7%a0%d7%99%d7%94%d7%95%d7%9c-%d7%94%d7%a9%d7%a7%d7%a2%d7%95%d7%aa/: timeout 90s: pageCollectLinks -> light collect",
+    "https://minhal.org/%d7%90%d7%95%d7%93%d7%95%d7%aa-%d7%94%d7%a7%d7%a8%d7%9f/%d7%94%d7%a6%d7%94%d7%a8%d7%aa-%d7%a0%d7%92%d7%99%d7%a9%d7%95%d7%aa/: timeout 90s: pageCollectLinks -> light collect",
+    "https://minhal.org/%d7%a0%d7%9b%d7%a1%d7%99-%d7%94%d7%a7%d7%a8%d7%9f/%d7%94%d7%aa%d7%a4%d7%9c%d7%92%d7%95%d7%aa-%d7%90%d7%a4%d7%99%d7%a7%d7%99-%d7%94%d7%a9%d7%a7%d7%a2%d7%94/: timeout 90s: pageCollectLinks -> light collect",
+    "https://minhal.org/%d7%90%d7%95%d7%93%d7%95%d7%aa-%d7%94%d7%a7%d7%a8%d7%9f/: timeout 90s: pageCollectLinks -> light collect",
+    "https://minhal.org/%d7%90%d7%95%d7%93%d7%95%d7%aa-%d7%94%d7%a7%d7%a8%d7%9f/%d7%a0%d7%95%d7%a9%d7%90%d7%99-%d7%9e%d7%a9%d7%a8%d7%94/: timeout 90s: pageCollectLinks -> light collect",
+    "https://minhal.org/%d7%90%d7%95%d7%93%d7%95%d7%aa-%d7%94%d7%a7%d7%a8%d7%9f/%d7%97%d7%91%d7%a8%d7%99-%d7%95%d7%a2%d7%93%d7%95%d7%aa/: timeout 90s: pageCollectLinks -> light collect",
+    "https://minhal.org/%d7%90%d7%95%d7%93%d7%95%d7%aa-%d7%94%d7%a7%d7%a8%d7%9f/%d7%90%d7%a1%d7%99%d7%a4%d7%95%d7%aa-%d7%9b%d7%9c%d7%9c%d7%99%d7%95%d7%aa/: timeout 90s: pageCollectLinks -> light collect",
+    "time budget 15m reached at page 15/22 - kept 0 files, next run resumes here"
+   ],
+   "diag": [
+    "החברה המנהלת של מי: wp-media 132 files",
+    "החברה המנהלת של מי: links=226 files=133 clicked=0 captured=0 selected=0",
+    "   ? מדיניות-פרטיות.pdf | מדיניות פרטיות | ",
+    "   ? mediniyut_tagmul_2025.pdf | mediniyut_tagmul_2025 | (wp-media)",
+    "   ? mediniyut_zfuya_titanyum2026.xlsx.pdf | mediniyut_zfuya_titanyum2026.xlsx | (wp-media)",
+    "   ? mediniyut_zfuya_sp5002026.xlsx.pdf | mediniyut_zfuya_sp5002026.xlsx | (wp-media)",
+    "   ? mediniyut_zfuya_klali2026.xlsx.pdf | mediniyut_zfuya_klali2026.xlsx | (wp-media)",
+    "   ? mediniyut_zfuya_alaha2026.xlsx.pdf | mediniyut_zfuya_alaha2026.xlsx | (wp-media)",
+    "החברה המנהלת של מי: links=94 files=1 clicked=0 captured=0 selected=0",
+    "   ? מדיניות-פרטיות.pdf | מדיניות פרטיות | ",
+    "החברה המנהלת של מי: links=275 files=1 clicked=0 captured=0 selected=0",
+    "   ? מדיניות-פרטיות.pdf | מדיניות פרטיות | ",
+    "החברה המנהלת של מי: links=0 files=0 clicked=0 captured=0 selected=0",
+    "החברה המנהלת של מי: links=268 files=1 clicked=0 captured=0 selected=0",
+    "   ? מדיניות-פרטיות.pdf | מדיניות פרטיות | ",
+    "החברה המנהלת של מי: links=268 files=1 clicked=0 captured=0 selected=0",
+    "   ? מדיניות-פרטיות.pdf | מדיניות פרטיות | ",
+    "החברה המנהלת של מי: links=268 files=1 clicked=0 captured=0 selected=0",
+    "   ? מדיניות-פרטיות.pdf | מדיניות פרטיות | ",
+    "החברה המנהלת של מי: links=0 files=0 clicked=0 captured=0 selected=0",
+    "החברה המנהלת של מי: links=232 files=1 clicked=0 captured=0 selected=0",
+    "   ? מדיניות-פרטיות.pdf | מדיניות פרטיות | ",
+    "החברה המנהלת של מי: links=268 files=1 clicked=0 captured=0 selected=0",
+    "   ? מדיניות-פרטיות.pdf | מדיניות פרטיות | ",
+    "החברה המנהלת של מי: links=0 files=0 clicked=0 captured=0 selected=0",
+    "החברה המנהלת של מי: links=268 files=1 clicked=0 captured=0 selected=0",
+    "   ? מדיניות-פרטיות.pdf | מדיניות פרטיות | ",
+    "החברה המנהלת של מי: links=268 files=1 clicked=0 captured=0 selected=0",
+    "   ? מדיניות-פרטיות.pdf | מדיניות פרטיות | ",
+    "החברה המנהלת של מי: links=268 files=1 clicked=0 captured=0 selected=0",
+    "   ? מדיניות-פרטיות.pdf | מדיניות פרטיות | "
    ],
    "new_files": []
   }
