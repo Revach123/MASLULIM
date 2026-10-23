@@ -1,215 +1,123 @@
 {
  "extension_version": "2.52.0",
- "updated": "2026-10-22T20:08:09.129Z",
- "final": true,
- "failed": true,
- "error": "TypeError: Failed to fetch\n    at gh (chrome-extension://flkekfhdbndcbcpdapomeffibojaeehl/github.js:19:23)\n    at commitFilesNow (chrome-extension://flkekfhdbndcbcpdapomeffibojaeehl/github.js:104:24)\n    at chrome-extension://flkekfhdbndcbcpdapomeffibojaeehl/github.js:92:38",
- "state": {
-  "active": [],
-  "done": 14,
-  "finished": [
-   {
-    "cache_hit": 1,
-    "docs": 0,
-    "errors": 5,
-    "firstError": "מדיניות_השקעה_צפויה_לשנת_2025_-_מסלול_כללי_קרן_השתלמות.pdf -> 418",
-    "found": 48,
-    "had": 19,
-    "head_skip": 0,
-    "mode": "map",
-    "name": "יחד רופאים - חברה לניהול קופות גמל בע\"מ",
-    "old_skip": 19,
-    "page_cache": 1,
-    "selected": 24
-   },
-   {
-    "cache_expired": 66,
-    "cache_hit": 54,
-    "docs": 0,
-    "errors": 1,
-    "firstError": "חיסכון-לילד-סיכון-מועט-מדיניות-השקעה-2018.xlsx -> 500",
-    "found": 4058,
-    "had": 851,
-    "head_skip": 0,
-    "mode": "map",
-    "name": "מנורה מבטחים פנסיה וגמל בע\"מ",
-    "old_skip": 851,
-    "page_cache": 54,
-    "selected": 852
-   },
-   {
-    "cache_changed": 79,
-    "cache_hit": 65,
-    "docs": 0,
-    "errors": 0,
-    "firstError": "",
-    "found": 9400,
-    "had": 771,
-    "head_skip": 0,
-    "mode": "map",
-    "name": "אלטשולר שחם גמל ופנסיה בע\"מ",
-    "old_skip": 771,
-    "page_cache": 65,
-    "selected": 771
-   },
-   {
-    "cache_hit": 2,
-    "docs": 0,
-    "errors": 2,
-    "firstError": "asefot11.3.20.pdf -> 418",
-    "found": 58,
-    "had": 50,
-    "head_skip": 0,
-    "mode": "map",
-    "name": "איי. די. איי. חברה לביטוח בע\"מ",
-    "old_skip": 50,
-    "page_cache": 2,
-    "selected": 52
-   },
-   {
-    "cache_hit": 1,
-    "docs": 0,
-    "errors": 0,
-    "firstError": "",
-    "found": 65,
-    "had": 64,
-    "head_skip": 0,
-    "mode": "map",
-    "name": "מור גמל ופנסיה בע\"מ",
-    "old_skip": 64,
-    "page_cache": 1,
-    "selected": 64
-   },
-   {
-    "cache_hit": 3,
-    "docs": 0,
-    "errors": 0,
-    "firstError": "",
-    "found": 16,
-    "had": 3,
-    "head_skip": 0,
-    "mode": "map",
-    "name": "איילון קופות גמל בע\"מ",
-    "old_skip": 3,
-    "page_cache": 3,
-    "selected": 3
-   },
-   {
-    "cache_hit": 10,
-    "cache_none": 4,
-    "docs": 0,
-    "errors": 28,
-    "firstError": "מדיניות-ואמנת-שירות-לקוחות-1.pdf -> 418",
-    "found": 675,
-    "had": 10,
-    "head_skip": 0,
-    "name": "החברה לניהול קופת התגמולים והפנסיה של עובדי הסוכנות היהודית לארץ ישראל בע\"מ",
-    "old_skip": 10,
-    "page_cache": 10,
-    "selected": 38
-   },
-   {
-    "cache_hit": 1,
-    "docs": 0,
-    "errors": 68,
-    "firstError": "עגור_2026_מסלולים_מישור.xls -> 418",
-    "found": 173,
-    "had": 16,
-    "head_skip": 0,
-    "mode": "map",
-    "name": "עגור חברה לניהול קופות גמל וקרנות השתלמות בע\"מ",
-    "old_skip": 16,
-    "page_cache": 1,
-    "selected": 84
-   },
-   {
-    "cache_hit": 2,
-    "docs": 0,
-    "errors": 0,
-    "firstError": "",
-    "found": 106,
-    "had": 53,
-    "head_skip": 0,
-    "mode": "map",
-    "name": "קרנות השתלמות למורים ולגננות - חברה מנהלת בע\"מ",
-    "old_skip": 53,
-    "page_cache": 2,
-    "selected": 53
-   },
-   {
-    "cache_expired": 12,
-    "cache_hit": 1,
-    "docs": 0,
-    "errors": 0,
-    "firstError": "",
-    "found": 286,
-    "had": 43,
-    "head_skip": 0,
-    "mode": "map",
-    "name": "מנורה מבטחים והסתדרות המהנדסים ניהול קופות גמל בע\"מ",
-    "old_skip": 43,
-    "page_cache": 1,
-    "selected": 43
-   },
-   {
-    "cache_hit": 2,
-    "docs": 0,
-    "errors": 0,
-    "firstError": "",
-    "found": 108,
-    "had": 53,
-    "head_skip": 0,
-    "mode": "map",
-    "name": "קרנות השתלמות למורים תיכוניים, מורי סמינרים ומפקחים - חברה מנהלת בע\"מ",
-    "old_skip": 53,
-    "page_cache": 2,
-    "selected": 53
-   },
-   {
-    "cache_hit": 13,
-    "docs": 0,
-    "errors": 0,
-    "firstError": "",
-    "found": 9,
-    "had": 0,
-    "head_skip": 0,
-    "name": "איילון חברה לביטוח בע\"מ",
-    "page_cache": 13,
-    "selected": 0
-   },
-   {
-    "cache_hit": 7,
-    "docs": 0,
-    "errors": 0,
-    "firstError": "",
-    "found": 7,
-    "had": 0,
-    "head_skip": 0,
-    "mode": "map",
-    "name": "החברה המנהלת של מינהל קרן ההשתלמות לפקידים עובדי המנהל והשירותים בע\"מ",
-    "page_cache": 7,
-    "selected": 0
-   },
-   {
-    "cache_changed": 5,
-    "docs": 0,
-    "errors": 0,
-    "firstError": "",
-    "found": 852,
-    "had": 28,
-    "head_skip": 0,
-    "mode": "map",
-    "name": "החברה המנהלת של רום קרן ההשתלמות לעובדי הרשויות המקומיות בע\"מ",
-    "old_skip": 28,
-    "selected": 28
-   }
-  ],
-  "newDocs": 0,
-  "phase": "מעלה לוג ל-GitHub",
-  "running": true,
-  "started": 1792695987855,
-  "stopping": false,
-  "total": 14,
-  "updated": 1792699464754
- }
+ "started": "2026-10-23T02:49:58.159Z",
+ "updated": "2026-10-23T03:17:35.229Z",
+ "final": false,
+ "stopped": false,
+ "rules_from_github": true,
+ "rules": {
+  "doc_rx": "\\.(xlsx|xls|pdf|docx)(\\?|#|$)",
+  "policy_rx": "מ[-_ ]?דיניו?ת|מדינית[-_ ]*השקע|הצהר|policy|m[ae]dini?y?ut|hatzarat|expected|investment|inv[-_ ]*polic",
+  "noise_rx": "esg|אחראי|תגמול(?!ים)|tagmul(?!im)|פרטיות|privacy|תקנון|מבצע|גילוי[-_ ]נאות|מצגת|presentation|נוהל|העברת זכויות|הצבע|דוח[ -]כספי|רבעון",
+  "download_rx": "הורד|להורדה|download|אקסל|excel|xls",
+  "concurrency": 1,
+  "page_parallel": 1,
+  "settle_ms": 3000,
+  "capture_ms": 8000,
+  "max_download_clicks": 40,
+  "_note": "כללי משיכת המדיניות של התוסף - נקראים מ-GitHub בתחילת כל ריצה (שינוי כאן = תקף בריצה הבאה, בלי לעדכן את התוסף). ביטויים רגולריים (בלי /) ומספרים בלבד.",
+  "_note_load": "עומס על המחשב הביתי: אתר אחד ועמוד אחד בכל פעם (היה 4 אתרים x עד 3 עמודים). להחזיר מהירות: concurrency 2-4, page_parallel 2-3.",
+  "skip_complete_hours": 24,
+  "_note_skip": "חברה עם מדיניות השנה לכל המסלולים (policy/extension_complete.json) מדולגת N שעות מאז הריצה המוצלחת האחרונה שלה. 0 = לא מדלגים.",
+  "page_cache_days": 3
+ },
+ "total_sites": 2,
+ "done_sites": 0,
+ "new_docs": 0,
+ "skipped_complete": [
+  {
+   "legal_id": "510930654",
+   "name": "יחד רופאים - חברה לניהול קופות גמל בע\"מ",
+   "why": "registry 7/7",
+   "last_ok": "2026-10-22T19:07:13.977Z"
+  },
+  {
+   "legal_id": "511789190",
+   "name": "\"עתודות\" - קרן פנסיה לשכירים ועצמאיים בע\"מ",
+   "why": "tracks 2/2 (not in registry)",
+   "last_ok": ""
+  },
+  {
+   "legal_id": "512245812",
+   "name": "מנורה מבטחים פנסיה וגמל בע\"מ",
+   "why": "registry 94/94",
+   "last_ok": "2026-10-22T19:28:38.380Z"
+  },
+  {
+   "legal_id": "513173393",
+   "name": "אלטשולר שחם גמל ופנסיה בע\"מ",
+   "why": "registry 79/79",
+   "last_ok": "2026-10-22T19:52:59.619Z"
+  },
+  {
+   "legal_id": "513910703",
+   "name": "איי. די. איי. חברה לביטוח בע\"מ",
+   "why": "registry 5/5",
+   "last_ok": "2026-10-22T19:53:47.971Z"
+  },
+  {
+   "legal_id": "514956465",
+   "name": "מור גמל ופנסיה בע\"מ",
+   "why": "registry 81/81",
+   "last_ok": "2026-10-22T19:53:50.080Z"
+  },
+  {
+   "legal_id": "517085874",
+   "name": "איילון קופות גמל בע\"מ",
+   "why": "registry 40/40",
+   "last_ok": "2026-10-22T19:53:52.861Z"
+  },
+  {
+   "legal_id": "520024985",
+   "name": "עגור חברה לניהול קופות גמל וקרנות השתלמות בע\"מ",
+   "why": "registry 6/6",
+   "last_ok": "2026-10-22T19:58:47.623Z"
+  },
+  {
+   "legal_id": "520027251",
+   "name": "קרנות השתלמות למורים ולגננות - חברה מנהלת בע\"מ",
+   "why": "registry 6/6",
+   "last_ok": "2026-10-22T19:58:50.111Z"
+  },
+  {
+   "legal_id": "520027715",
+   "name": "מנורה מבטחים והסתדרות המהנדסים ניהול קופות גמל בע\"מ",
+   "why": "registry 7/7",
+   "last_ok": "2026-10-22T20:02:22.779Z"
+  },
+  {
+   "legal_id": "520028390",
+   "name": "קרנות השתלמות למורים תיכוניים, מורי סמינרים ומפקחים - חברה מנהלת בע\"מ",
+   "why": "registry 6/6",
+   "last_ok": "2026-10-22T20:02:25.079Z"
+  },
+  {
+   "legal_id": "520030990",
+   "name": "החברה המנהלת של מינהל קרן ההשתלמות לפקידים עובדי המנהל והשירותים בע\"מ",
+   "why": "registry 5/5",
+   "last_ok": "2026-10-22T20:02:58.452Z"
+  },
+  {
+   "legal_id": "520031824",
+   "name": "החברה המנהלת של רום קרן ההשתלמות לעובדי הרשויות המקומיות בע\"מ",
+   "why": "registry 5/5",
+   "last_ok": "2026-10-22T20:04:23.567Z"
+  },
+  {
+   "legal_id": "570009449",
+   "name": "עוצ\"מ - אגודה שיתופית לניהול קופות גמל בע\"מ",
+   "why": "registry 4/4",
+   "last_ok": ""
+  }
+ ],
+ "active": [
+  {
+   "name": "החברה לניהול קופת התגמולים והפנסיה של עובדי הסוכנות היהודית לארץ ישראל בע\"מ",
+   "page": "https://www.jewishagency-kupa.org.il/",
+   "page_no": 2,
+   "pages": 10,
+   "step": "ממתין 15s (חסימת קצב) - קובץ 1/2"
+  }
+ ],
+ "sites": []
 }
