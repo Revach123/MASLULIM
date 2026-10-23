@@ -127,8 +127,8 @@ def download(s, url):
 
 
 # דוחות מרכיבי תשואה ("פירוט תרומת אפיקי ההשקעה לתשואה") - נאספים בנפרד (scripts/returns -> returns/), לא כמסמכי מדיניות
-RETURNS_DOC = re.compile(r"מרכיבי[-_ ]*(ה)?תשוא|תרומת[-_ ]*(ה)?אפיקי|(?<![a-z])yield\d|_yield|nostro[-_ ]*yield|markiv\w*[-_ ]*t[sz]u?a|תרומת[-_ ]*מרכיבי|מרכיבי[-_ ]*השקעה|\d{8,9}_[gpi]\d*_(?:p|yield)\d{2,4}", re.I)
-NOISE = re.compile(r"מרכיבי[-_ ]*(ה)?תשוא|תרומת[-_ ]*(ה)?אפיקי|(?<![a-z])yield\d|_yield|nostro[-_ ]*yield|\d{8,9}_[gpi]\d*_(?:p|yield)\d{2,4}|esg|אחראי|תגמול(?!ים)|tagmul(?!im)|פרטיות|privacy|תקנון|מבצע|גילוי[-_ ]נאות|דוח(ות)?[-_ ]כספי|מצגת|presentation|"
+RETURNS_DOC = re.compile(r"מרכיבי[-_ ]*(ה)?תשוא|תרומת[-_ ]*(ה)?אפיקי|(?<![a-z])yield\d|_yield|nostro[-_ ]*yield|markiv\w*[-_ ]*t[sz]u?a|תרומת[-_ ]*מרכיבי|מרכיבי[-_ ]*השקעה|\d{8,9}_[gpi]\d*_yield\d{2,4}", re.I)
+NOISE = re.compile(r"מרכיבי[-_ ]*(ה)?תשוא|תרומת[-_ ]*(ה)?אפיקי|(?<![a-z])yield\d|_yield|nostro[-_ ]*yield|\d{8,9}_[gpi]\d*_yield\d{2,4}|esg|אחראי|תגמול(?!ים)|tagmul(?!im)|פרטיות|privacy|תקנון|מבצע|גילוי[-_ ]נאות|דוח(ות)?[-_ ]כספי|מצגת|presentation|"
                    r"investor|equal|שכר[-_ ]שווה|פוליסה|annuity|premi|מנתחים|אמות[-_ ]מידה|ממשל[-_ ]*תאגיד", re.I)  # "ממשל" לבד חסם את "אג\"ח ממשלות"
 POLICY = re.compile(r"מדיניו?ת[-_ ]*(ה)?השקעה|מדיניות[-_ ]*(ה)?השקעות|מדיניות[-_ ]*מוצהרת|הצהרת[-_ ]*(מדיניות|השקעות)|"
                     r"הצהרה[-_ ]*על[-_ ]*מדיניות|מדיניות[-_ ]*צפויה|investment[-_ ]*polic|expected[-_ ]*investment|statement[-_ ]*investment|m[ae]dini?y?ut|inv[-_ ]*polic", re.I)
