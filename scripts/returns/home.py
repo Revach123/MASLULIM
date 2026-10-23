@@ -112,7 +112,7 @@ def main():
     for p in sorted(SITES.glob("*.json")):
         c = json.loads(p.read_text("utf-8"))
         lid = c["legal_id"]
-        if (a.only and lid not in a.only) or (not a.only and c.get("via") != "extension"):
+        if (a.only and lid not in a.only) or (not a.only and c.get("via") != "extension" and not c.get("returns_home")):
             continue
         if c.get("returns_skip_home") and not a.only:  # אתר שחסום גם בדפדפן הביתי (למשל ShieldSquare) - לא מבזבזים עליו 30 דקות בכל ריצה
             print(f"[{lid}] skipped (returns_skip_home): {c['returns_skip_home']}", flush=True)

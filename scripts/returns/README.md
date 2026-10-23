@@ -19,7 +19,7 @@
    (`scripts/policy/sites/<LegalId>.json`), `discovered.json`, קישורים מתמונת המצב של המדיניות, sitemap, חיפוש, דף הבית.
    קבצי מרכיבי תשואה שסריקת המדיניות הורידה בעבר נקלטים בלי הורדה (וסריקת המדיניות כבר לא בוחרת אותם - `RETURNS_DOC`).
    הגדרות אתר אופציונליות: `returns_pages` [{url, product}] (`{year}` מורחב), `returns_docs`, `returns_exclude`, `returns_follow`,
-   `returns_click_texts`, `returns_budget` [שניות לעמוד, שניות ללחיצות הורדה], `returns_max_pages`, `returns_cloud` (לסרוק מהענן
+   `returns_click_texts`, `returns_budget` [שניות לעמוד, שניות ללחיצות הורדה], `returns_max_pages`, `returns_home` (גם בסריקה הביתית, בנוסף לענן), `returns_cloud` (לסרוק מהענן
    גם אתר via=extension).
 2. `extract.py` + `parse.py` - פרסור לפי מבנה הגיליון (לא לפי חברה): שורת "אפיקי השקעה" עם עמודות "התרומה לתשואה <חודש>" /
    "שיעור מסך הנכסים <חודש>" (חודש בשם, כתאריך או כתאריך אקסל בשורה מעל), אפיקים מנורמלים למפתחות קבועים, שברים/אחוזים לפי שורת
