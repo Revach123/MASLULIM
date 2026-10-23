@@ -2,10 +2,10 @@
  "totals": {
   "companies": 76,
   "with_data": 64,
-  "tracks": 1364,
+  "tracks": 1365,
   "registry_tracks": 1291,
   "registry_found": 862,
-  "docs": 10095
+  "docs": 10102
  },
  "companies": [
   {
@@ -505,14 +505,14 @@
   {
    "legal_id": "520024985",
    "company": "עגור חברה לניהול קופות גמל וקרנות השתלמות בע\"מ",
-   "tracks": 12,
+   "tracks": 13,
    "tracks_numbered": 7,
    "registry_tracks": 6,
    "registry_found": 6,
    "registry_coverage": 100.0,
    "first_month": "2022-01",
    "last_month": "2026-06",
-   "docs_returns": 99,
+   "docs_returns": 106,
    "nostro": false
   },
   {
