@@ -149,9 +149,9 @@ def gap_search(s, lid: str, home: str, name: str) -> dict:
     res = {"families": gap_families(lid), "queries": [], "urls": []}
     dom = pc.base_domain(home)
     for fam in res["families"]:
-        q = f"site:{dom} מרכיבי תשואה {fam}"
+        q = f"{pc._short_name(name)} מרכיבי תשואה {fam}"  # בלי site: (DuckDuckGo לא החזיר תוצאות ל-site: משרתי GitHub) - מסננים לפי דומיין
         try:
-            urls = [u for u in pc.web_search(s, q) if pc.base_domain(u) == dom]
+            urls = [u for u in pc.web_search(s, q, n=15) if pc.base_domain(u) == dom]
         except Exception as e:  # noqa: BLE001
             urls = []
             res["queries"].append({"q": q, "error": repr(e)[:80]})
