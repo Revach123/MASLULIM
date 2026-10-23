@@ -1,25 +1,43 @@
 {
  "legal_id": "512237744",
  "company": "מגדל מקפת קרנות פנסיה וקופות גמל בע\"מ",
- "run": "2026-10-22T10:45:22+00:00",
+ "run": "2026-10-23T10:32:43+00:00",
  "errors": [],
  "seeds": {
   "config": 0,
   "discovered": 2,
   "policy_snapshot": 2,
   "policy_snapshot_docs": 0,
+  "gap_search": 0,
   "sitemap": 2
  },
  "imported_from_policy": 0,
+ "gap_search": {
+  "families": [
+   "השתלמות",
+   "קופת גמל"
+  ],
+  "queries": [
+   {
+    "q": "מגדל מקפת קרנות פנסיה וקופות גמל מרכיבי תשואה השתלמות",
+    "found": 0
+   },
+   {
+    "q": "מגדל מקפת קרנות פנסיה וקופות גמל מרכיבי תשואה קופת גמל",
+    "found": 0
+   }
+  ],
+  "urls": []
+ },
  "pages": 45,
  "pages_failed": [
   "https://www.migdal.co.il/regulations/: 404",
   "https://undefined/: browser:Error:Page.goto: net::ERR_NAME_NOT_RESOLVED at https://undefined/",
   "http://my.migdal.co.il/mymigdal/onlinepurchase/retirementpensionsimulation: ERR"
  ],
- "candidates": 427,
- "docs": 427,
- "new_docs": 0,
+ "candidates": 421,
+ "docs": 421,
+ "new_docs": 1,
  "index_size": 402,
- "seconds": 1032
+ "seconds": 555
 }
