@@ -1,7 +1,7 @@
 {
  "legal_id": "515977338",
  "company": "אקטיון בע\"מ",
- "run": "2026-10-22T10:53:16+00:00",
+ "run": "2026-10-23T10:54:31+00:00",
  "errors": [],
  "seeds": {
   "config": 0,
@@ -9,14 +9,32 @@
   "policy_snapshot": 0,
   "policy_snapshot_docs": 0,
   "search": 0,
+  "gap_search": 0,
   "sitemap": 0
  },
  "imported_from_policy": 0,
+ "gap_search": {
+  "families": [
+   "השתלמות",
+   "קופת גמל"
+  ],
+  "queries": [
+   {
+    "q": "אקטיון מרכיבי תשואה השתלמות",
+    "found": 0
+   },
+   {
+    "q": "אקטיון מרכיבי תשואה קופת גמל",
+    "found": 0
+   }
+  ],
+  "urls": []
+ },
  "pages": 10,
  "pages_failed": [],
  "candidates": 0,
  "docs": 0,
  "new_docs": 0,
  "index_size": 0,
- "seconds": 60
+ "seconds": 98
 }
