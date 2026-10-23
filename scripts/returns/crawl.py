@@ -13,7 +13,7 @@
   4. מפת האתר (sitemap) + חיפוש "<שם החברה> מרכיבי תשואה" (DuckDuckGo) + דף הבית בעומק 2
 בנוסף: קבצי מרכיבי תשואה שסריקת המדיניות כבר הורידה (policy/companies/<id>/raw) נקלטים בלי הורדה מחדש.
 """
-import argparse, hashlib, json, os, re, shutil, time
+import argparse, csv, hashlib, json, os, re, shutil, time
 from datetime import datetime, timezone
 from pathlib import Path
 from urllib.parse import unquote, urlparse
@@ -125,6 +125,44 @@ def select_docs(pages: dict, ctx_rx=None, text_rx=None):
     return out
 
 
+FAMILIES = [("גמל להשקעה", r"גמל להשקעה"), ("השתלמות", r"השתלמות"), ("חיסכון לכל ילד", r"חיסכון לילד|חסכון לכל ילד|חיסכון לכל ילד|חיסכון פלוס|לילד"),
+            ("פנסיה", r"פנסיה"), ("קופת גמל", r"גמל|תגמולים|פיצויים"), ("ביטוח מסלולי השקעה", r"ביטוח|אקסלנס")]
+
+
+def gap_families(lid: str) -> list:
+    """משפחות המסלולים שחסרות לחברה (מתוך returns/gaps.csv של הריצה הקודמת) - לפי מילות מפתח בשמות המסלולים החסרים."""
+    p = RET_ROOT / "gaps.csv"
+    if not p.exists():
+        return []
+    names = [r["track_name"] for r in csv.DictReader(open(p, encoding="utf-8-sig")) if r["legal_id"] == lid]
+    out = []
+    for fam, rx in FAMILIES:
+        n = sum(1 for t in names if re.search(rx, t))
+        if n >= 2 or (n and len(names) <= 3):
+            out.append(fam)
+    return out[:5] if names else []
+
+
+def gap_search(s, lid: str, home: str, name: str) -> dict:
+    """לכל משפחת מסלולים חסרה: חיפוש 'site:<אתר> מרכיבי תשואה <משפחה>' - העמודים שנמצאו נכנסים לסריקה ונשמרים ב-crawl_report (gap_search)
+    כדי שהריצה הבאה תתחיל מהם וכדי שיהיה רשום מה נחפש ומה נמצא."""
+    res = {"families": gap_families(lid), "queries": [], "urls": []}
+    dom = pc.base_domain(home)
+    for fam in res["families"]:
+        q = f"site:{dom} מרכיבי תשואה {fam}"
+        try:
+            urls = [u for u in pc.web_search(s, q) if pc.base_domain(u) == dom]
+        except Exception as e:  # noqa: BLE001
+            urls = []
+            res["queries"].append({"q": q, "error": repr(e)[:80]})
+            continue
+        res["queries"].append({"q": q, "found": len(urls)})
+        res["urls"] += urls
+        time.sleep(2)
+    res["urls"] = list(dict.fromkeys(res["urls"]))[:20]
+    return res
+
+
 def year_pages(urls):
     return pc.expand_templates(urls, first_year=2015)
 
@@ -204,6 +242,11 @@ def crawl_company(s, pw, lid, name, out, now, a):
             q = f"{pc._short_name(name)} מרכיבי תשואה"
             searched = [u for u in pc.web_search(s, q) if pc.base_domain(u) == pc.base_domain(home)]
             report["seeds"]["search"] = len(searched)
+        if cfg.get("returns_gap_search") is not False:  # חיפוש ממוקד לכל משפחת מסלולים שחסרה (גמל / השתלמות / פנסיה / חיסכון לילד...)
+            gs = gap_search(s, lid, home, name)
+            report["gap_search"] = gs
+            searched = list(dict.fromkeys(searched + gs["urls"]))
+            report["seeds"]["gap_search"] = len(gs["urls"])
         sitemap = pc.sitemap_policy_pages(s, home) if not cfg_pages else []
         report["seeds"]["sitemap"] = len(sitemap)
         extra = list(dict.fromkeys(seeds + searched + sitemap))
@@ -238,6 +281,7 @@ def crawl_company(s, pw, lid, name, out, now, a):
     report["pages"] = len(pages)
     report["pages_failed"] = [f"{u}: {p['status']}" for u, p in pages.items() if p.get("status") != 200][:8]
     report["candidates"] = len(docs)
+    (out / "crawl_report.json").write_text(json.dumps(report, ensure_ascii=False, indent=1), "utf-8")  # נשמר לפני ההורדות - ריצה שנקטעת משאירה אבחון
     new = got = 0
     for key, d in docs.items():
         if time.monotonic() - t0 > float(os.environ.get("RETURNS_DL_BUDGET", "2000")):
@@ -290,7 +334,7 @@ def crawl_company(s, pw, lid, name, out, now, a):
                     "source_page": d.get("page"), "product": (pages.get(d.get("page")) or {}).get("product"), "via": "cloud"})
         index[ukey] = ent
         got += 1
-        if new and new % 25 == 0:  # שמירה בדרך - אם הצעד נקטע, מה שהורד כבר נשמר
+        if new and new % 5 == 0:  # שמירה בדרך - אם הצעד נקטע, מה שהורד כבר נשמר
             idx_path.write_text(json.dumps(index, ensure_ascii=False, indent=1), "utf-8")
     report.update(docs=got, new_docs=new, index_size=len(index), seconds=round(time.monotonic() - t0))
     idx_path.write_text(json.dumps(index, ensure_ascii=False, indent=1), "utf-8")
