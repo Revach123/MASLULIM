@@ -290,7 +290,7 @@ def crawl_company(s, pw, lid, name, out, now, a):
     (out / "crawl_report.json").write_text(json.dumps(report, ensure_ascii=False, indent=1), "utf-8")  # נשמר לפני ההורדות - ריצה שנקטעת משאירה אבחון
     new = got = 0
     for key, d in docs.items():
-        if time.monotonic() - t0 > float(os.environ.get("RETURNS_DL_BUDGET", "2000")):
+        if time.monotonic() - t0 > float(cfg.get("returns_dl_budget") or os.environ.get("RETURNS_DL_BUDGET", "2000")):
             report["errors"].append("download budget reached - ממשיכים בריצה הבאה"); break
         url = d["href"]
         old = index.get(find_key(index, url))
