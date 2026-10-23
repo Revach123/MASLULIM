@@ -1,7 +1,7 @@
 {
  "legal_id": "510142789",
  "company": "חברת ב'ת למ'ד דל'ת בע\"מ",
- "run": "2026-10-22T10:44:34+00:00",
+ "run": "2026-10-23T10:35:58+00:00",
  "errors": [],
  "seeds": {
   "config": 0,
@@ -9,14 +9,20 @@
   "policy_snapshot": 0,
   "policy_snapshot_docs": 0,
   "search": 0,
+  "gap_search": 0,
   "sitemap": 0
  },
  "imported_from_policy": 0,
+ "gap_search": {
+  "families": [],
+  "queries": [],
+  "urls": []
+ },
  "pages": 26,
  "pages_failed": [],
  "candidates": 0,
  "docs": 0,
  "new_docs": 0,
  "index_size": 0,
- "seconds": 438
+ "seconds": 525
 }
