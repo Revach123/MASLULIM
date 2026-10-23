@@ -102,6 +102,12 @@ def main():
             ent = {k: cfg.get(k) for k in ("legal_id", "name", "home", "pages", "products", "click", "clicks", "any_sheet", "exclude", "settle_ms", "capture_ms", "download_rx", "follow_max", "follow_rx", "timeout_min", "download_delay_ms", "no_map", "per_track_pages", "wp_media_search")}
             ent["doc_pages"] = _doc_pages(cfg["legal_id"])
             ext.append(ent)
+            if cfg.get("returns_extension"):  # אתר שחוסם גם את המחשב הביתי (ShieldSquare/Cloudflare): התוסף מושך גם מרכיבי תשואה (kind=returns -> policy/inbox/<id>/returns/)
+                rp = [p["url"] if isinstance(p, dict) else p for p in cfg.get("returns_pages") or []]
+                ext.append({**ent, "kind": "returns", "skey": f"{cfg['legal_id']}:returns", "name": f"{ent['name']} - מרכיבי תשואה",
+                            "pages": [{"product": None, "url": u} for u in rp] or ent["pages"], "doc_pages": [], "no_map": True, "clicks": cfg.get("returns_clicks"), "click": None,
+                            "follow_rx": cfg.get("returns_follow") or ent.get("follow_rx"), "follow_max": cfg.get("returns_max_pages") or ent.get("follow_max") or 20,
+                            "returns_text": cfg.get("returns_text")})
     (POL / "extension_sites.json").write_text(json.dumps(ext, ensure_ascii=False, indent=1), "utf-8")
     print(f"[combine] companies={len(crawl)} docs={len(docs)} long={len(long_rows)} (history={n_all}) unparsed={len(unparsed)}")
     from . import timeline  # הנתונים האחרונים לכל מסלול + תאריך השינוי האחרון וסוגו (גדול/קטן)

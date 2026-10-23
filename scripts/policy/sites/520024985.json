@@ -95,5 +95,15 @@
    "^מישור - הלכה",
    "8395"
   ]
- ]
+ ],
+ "returns_extension": true,
+ "returns_pages": [
+  {
+   "product": "גמל",
+   "url": "https://kereni.co.il"
+  }
+ ],
+ "returns_follow": "מרכיבי|תשוא|דוחות|yield|reports|returns|קרן|מדיניות",
+ "returns_max_pages": 25,
+ "returns_skip_home": "Cloudflare: הסריקה הביתית נתקעת (עמוד אחד 65 דקות, 2026-10-23) - התוסף מושך (returns_extension)"
 }

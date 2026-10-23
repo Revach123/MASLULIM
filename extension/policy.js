@@ -28,10 +28,12 @@ let RULES = DEFAULT_RULES;
 let DOC_RX = new RegExp(DEFAULT_RULES.doc_rx, "i");
 let POLICY_RX = new RegExp(DEFAULT_RULES.policy_rx, "i");
 let NOISE_RX = new RegExp(DEFAULT_RULES.noise_rx, "i");
+let RETURNS_RX = null;  // מרכיבי תשואה (אתרי kind=returns): policy/extension_rules.json -> returns_rx
 
 function applyRules(r) {
   RULES = { ...DEFAULT_RULES, ...(r || {}) };
-  try { DOC_RX = new RegExp(RULES.doc_rx, "i"); POLICY_RX = new RegExp(RULES.policy_rx, "i"); NOISE_RX = new RegExp(RULES.noise_rx, "i"); }
+  try { DOC_RX = new RegExp(RULES.doc_rx, "i"); POLICY_RX = new RegExp(RULES.policy_rx, "i"); NOISE_RX = new RegExp(RULES.noise_rx, "i");
+        RETURNS_RX = RULES.returns_rx ? new RegExp(RULES.returns_rx, "i") : null; }
   catch (e) {  // ביטוי שבור בקובץ - חוזרים לברירות המחדל במקום להפיל את הריצה
     RULES = DEFAULT_RULES; DOC_RX = new RegExp(RULES.doc_rx, "i"); POLICY_RX = new RegExp(RULES.policy_rx, "i"); NOISE_RX = new RegExp(RULES.noise_rx, "i");
   }
@@ -365,7 +367,7 @@ async function runSite(site, cfg, seen, onProgress, windowId, meta = {}, flush =
   // (רום: follow לכתבות CategoryID=217 שנוסף אחרי שהאתר עבר למפה - לא רץ אף פעם)
   const cfgSig = [...(site.pages || []).map((p) => p.url), site.home || "", site.follow_rx || "", site.follow_max || 0, site.exclude || ""].join("|");
   let ch = 0; for (let i = 0; i < cfgSig.length; i++) ch = (ch * 31 + cfgSig.charCodeAt(i)) | 0;
-  let fullSt = (meta.__full = meta.__full || {})[site.legal_id];
+  let fullSt = (meta.__full = meta.__full || {})[site.skey || site.legal_id];
   if (fullSt && fullSt.cfg !== ch) fullSt = null;  // גם רשומה בלי חתימה (לפני 2.48) - סריקה מלאה אחת
   if (!site.__mapped && !site.__forceFull && !site.no_map && (site.doc_pages || []).length && fullSt) {
     // per_track_pages (מנורה/אלטשולר - עמוד לכל מסלול): גם עמודי הרשימה (seed), עם מעקב רק לעמודי מסלול שאינם במפה
@@ -401,8 +403,8 @@ async function runSite(site, cfg, seen, onProgress, windowId, meta = {}, flush =
   // נקודת ההמשך קשורה לרשימת העמודים - שינוי סדר/עמודים בהגדרות האתר = מתחילים מהתחלה (אינדקס ישן היה מדלג על העמודים הלא נכונים)
   const seedSig = [...(site.pages || []).map((p) => p.url), site.home || ""].join("|");
   let h = 0; for (let i = 0; i < seedSig.length; i++) h = (h * 31 + seedSig.charCodeAt(i)) | 0;
-  const resumeKey = `__resume:${site.legal_id}:${h}`;
-  for (const k of Object.keys(meta)) if (k.startsWith(`__resume:${site.legal_id}`) && k !== resumeKey) delete meta[k];
+  const resumeKey = `__resume:${site.skey || site.legal_id}:${h}`;
+  for (const k of Object.keys(meta)) if (k.startsWith(`__resume:${site.skey || site.legal_id}:`) && k !== resumeKey) delete meta[k];
   const startAt = Math.min(meta[resumeKey] || 0, Math.max(pages.length - 1, 0));
   const partial = { cut: false };
   let blockedFails = 0;
@@ -498,7 +500,11 @@ async function runSite(site, cfg, seen, onProgress, windowId, meta = {}, flush =
           }
         }
       }
-      const docs = links.filter((l) => (DOC_RX.test(l.href) || l.ctx === "(download)" || DOC_RX.test(l.text)) && !NOISE_RX.test(l.text + " " + l.href)
+      const isRet = site.kind === "returns";  // אתר "מרכיבי תשואה" (וירטואלי, נוצר ב-policy/combine.py): קבצים לפי returns_rx, לתיקיית returns/
+      const retRx = isRet && RETURNS_RX ? RETURNS_RX : null, retText = isRet && site.returns_text ? new RegExp(site.returns_text) : null;
+      const docs = isRet ? links.filter((l) => (DOC_RX.test(l.href) || l.ctx === "(download)" || DOC_RX.test(l.text))
+        && ((retRx && retRx.test(decodeURIComponent(l.href) + " " + (l.text || "") + " " + (l.ctx || ""))) || (retText && retText.test(l.text || ""))))
+      : links.filter((l) => (DOC_RX.test(l.href) || l.ctx === "(download)" || DOC_RX.test(l.text)) && !NOISE_RX.test(l.text + " " + l.href)
         && (POLICY_RX.test(decodeURIComponent(l.href) + " " + l.text + " " + l.ctx)
             // any_sheet (מור: 7_17_0_2026_9.xlsx): בעמוד שהוגדר ידנית גם גיליונות בלי מילות מדיניות בשם - לא PDF כלליים
             || (site.any_sheet && (site.pages || []).some((p) => p.url === pageUrl) && /\.(xlsx|xls)(\?|#|$)/i.test(l.href))));
@@ -566,11 +572,11 @@ async function runSite(site, cfg, seen, onProgress, windowId, meta = {}, flush =
         const fullName = decodeURIComponent(new URL(d.href).pathname.split("/").pop()).replace(/[^\w.\-֐-׿]/g, "_");
         const ext = (fullName.match(/\.[A-Za-z0-9]{2,5}$/) || [""])[0];
         const name = fullName.length <= 90 ? fullName : fullName.slice(0, 90 - ext.length) + ext;
-        const base = `policy/inbox/${site.legal_id}/${sha.slice(0, 12)}_${name}`;
+        const base = `policy/inbox/${site.legal_id}/${site.kind === "returns" ? "returns/" : ""}${sha.slice(0, 12)}_${name}`;
         files.push({ path: base, base64: got.base64 });
         files.push({ path: base + ".json", base64: utf8b64(JSON.stringify({
           legal_id: site.legal_id, url: d.href, link_text: d.text || d.ctx, source_page: pageUrl,
-          sha256: sha, fetched_at: new Date().toISOString(), last_modified: got.lm || "", via: "extension" }, null, 1)) });
+          sha256: sha, fetched_at: new Date().toISOString(), last_modified: got.lm || "", via: "extension", kind: site.kind || "policy" }, null, 1)) });
         seen[d.href] = sha; added[d.href] = sha; batchAdded[d.href] = sha;
         // העלאה במנות של 25 מסמכים תוך כדי האתר (מנורה/אלטשולר: מאות קבצים) - מחשב שנרדם / דפדפן שנסגר באמצע
         // מאבד לכל היותר מנה אחת, לא את כל האתר
@@ -616,7 +622,7 @@ async function runSite(site, cfg, seen, onProgress, windowId, meta = {}, flush =
   pageLog.sort((x, y) => pages.indexOf(x.url) - pages.indexOf(y.url));
   if (!partial.cut && !stopRequested) {
     delete meta[resumeKey];
-    if (!site.__mapped) meta.__full[site.legal_id] = { at: Date.now(), year: yr, cfg: ch };  // סריקה מלאה שהסתיימה -> מעכשיו לפי המפה
+    if (!site.__mapped) meta.__full[site.skey || site.legal_id] = { at: Date.now(), year: yr, cfg: ch };  // סריקה מלאה שהסתיימה -> מעכשיו לפי המפה
   }
   return { files, errors, diag, stats, pages: pageLog, added, rest: files.slice(flushed), restAdded: batchAdded };
 }
@@ -645,8 +651,8 @@ export async function runPolicy(cfg, setStatus) {
   const skipH = RULES.skip_complete_hours ?? 24;
   const skipped = [];
   const sites = allSites.filter((st) => {
-    const c = complete[st.legal_id];
-    const last = policySiteOk[st.legal_id] || 0;
+    const c = st.kind === "returns" ? null : complete[st.legal_id];  // מרכיבי תשואה: לא נספרים ב"מדיניות מלאה"
+    const last = policySiteOk[st.skey || st.legal_id] || 0;
     // אין רישום מקומי (ריצה ראשונה בגרסה) = מדלגים מיד; יש = רק בתוך skip_complete_hours מהריצה המוצלחת האחרונה
     if (skipH > 0 && c && c.complete && (!last || Date.now() - last < skipH * 36e5)) {
       skipped.push({ legal_id: st.legal_id, name: st.name, why: c.why, last_ok: last ? new Date(last).toISOString() : "" });
@@ -771,7 +777,7 @@ export async function runPolicy(cfg, setStatus) {
           progress[site.name] = p;
           await flushStatus();
         }, windowId, policyMeta, (batch, batchAdded) => commitSite(site, batch, batchAdded)), siteBudgetMs(site) + 5 * 60000, `site ${site.name}`);
-        policySiteOk[site.legal_id] = Date.now();  // האתר הסתיים (גם אם קובץ בודד נכשל - הצבעות 418 וכד')
+        policySiteOk[site.skey || site.legal_id] = Date.now();  // האתר הסתיים (גם אם קובץ בודד נכשל - הצבעות 418 וכד')
         await chrome.storage.local.set({ policySiteOk, policyMeta, policyPageCache: PAGE_CACHE });
         allFiles.push(...files);
         if (rest.length) commitSite(site, rest, restAdded);  // שמירה מיד בסוף כל אתר - ריצה שנתקעת/נסגרת לא מאבדת את מה שכבר הורד
