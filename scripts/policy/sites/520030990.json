@@ -72,5 +72,8 @@
    "zfuya_sp500",
    "מינהל מסלול עוקב מדד S&P 500"
   ]
- ]
+ ],
+ "returns_extension": true,
+ "returns_follow": "מרכיבי|תשוא|דוחות|דיווח|yield|returns|reports|קרן|השתלמות",
+ "returns_max_pages": 20
 }
