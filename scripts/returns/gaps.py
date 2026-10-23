@@ -29,6 +29,8 @@ def company_reason(row, cfg, rep, index):
     docs = int(row["docs_returns"] or 0)
     cands = int(row["candidates"] or 0)
     unid = int(row["unidentified_blocks"] or 0)
+    if cfg.get("returns_unpublished"):  # נבדק ידנית/בתוסף: החברה לא מפרסמת (עדיין) - התוסף/הסריקה ימשכו אוטומטית כשיופיעו
+        return ("not_published", cfg["returns_unpublished"], "אין פעולה - הסריקה האוטומטית תיקלוט כשיפורסמו")
     if cfg.get("returns_skip_home"):
         return ("blocked", "האתר חוסם גם את הדפדפן הביתי", "תוסף Chrome שמריץ סריקת מרכיבי תשואה, או קבצים ידניים ל-policy/inbox/<id>/returns/")
     if via_ext and docs == 0:
