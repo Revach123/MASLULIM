@@ -1,20 +1,41 @@
 {
  "legal_id": "513173393",
  "company": "אלטשולר שחם גמל ופנסיה בע\"מ",
- "run": "2026-10-23T07:07:16+00:00",
+ "run": "2026-10-23T07:46:26+00:00",
  "errors": [],
  "seeds": {
   "config": 0,
   "discovered": 12,
   "policy_snapshot": 11,
-  "policy_snapshot_docs": 366
+  "policy_snapshot_docs": 106,
+  "gap_search": 0,
+  "sitemap": 0
  },
  "imported_from_policy": 0,
- "pages": 0,
- "pages_failed": [],
- "candidates": 260,
- "docs": 260,
- "new_docs": 186,
+ "gap_search": {
+  "families": [
+   "חיסכון לכל ילד",
+   "פנסיה"
+  ],
+  "queries": [
+   {
+    "q": "אלטשולר שחם גמל ופנסיה מרכיבי תשואה חיסכון לכל ילד",
+    "found": 0
+   },
+   {
+    "q": "אלטשולר שחם גמל ופנסיה מרכיבי תשואה פנסיה",
+    "found": 0
+   }
+  ],
+  "urls": []
+ },
+ "pages": 114,
+ "pages_failed": [
+  "https://www.as-invest.co.il/interstedin/pension/common-pension-fund/: 404"
+ ],
+ "candidates": 86,
+ "docs": 86,
+ "new_docs": 0,
  "index_size": 308,
- "seconds": 67
+ "seconds": 1867
 }
