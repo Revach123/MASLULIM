@@ -1,6 +1,6 @@
 {
  "legal_id": "515447035",
- "taken": "2026-10-22T10:46:25+00:00",
+ "taken": "2026-10-23T10:41:52+00:00",
  "pages": {
   "https://www.fnx.co.il/pension-savings/fnx-all-embracing-pension/mekifa-yield-components/": {
    "product": "פנסיה",
@@ -2251,9 +2251,9 @@
   "https://www.fnx.co.il/SPF/iframe-phoenix-all-embracing-pension-yield-components.aspx": {
    "product": "פנסיה",
    "status": 200,
-   "method": "browser",
-   "text_hash": "9d54ea4afd4abeef023705c247bc93d4b2d55ffa",
-   "text_head": "We apologize for the inconvenience... ...but your activity and behavior on this site made us think that you are a bot. Note: A number of things could be going on here. If you are attempting to access this site using an anonymous Private/Proxy network, please disable that and try accessing site again. Due to previously detected malicious behavior which originated from the network you're using, please request unblock to site. Incident ID: a324acdc-db3u-4cf6-9753-66075881f0cc Please solve this CAPTCHA to request unblock to the website You reached this page when trying to access https://digital-co",
+   "method": "requests",
+   "text_hash": "aeca21d660f224dbdff6e3690889ad9905864e48",
+   "text_head": "iframe-yield-components - הפניקס iframe-yield-components iframe-yield-components ייתכן שאתה מנסה לגשת לאתר זה מדפדפן מאובטח בשרת. הפוך קבצי Script לזמינים וטען מחדש דף זה. מרכיבי התשואה ינואר - יוני 2026 ינואר - מרץ 2026 ינואר - דצמבר 2025 ינואר - ספטמבר 2025 ינואר - יוני 2025 ינואר - מרץ 2025 ינואר - דצמבר 2024 ינואר - ספטמבר 2024 ינואר - יוני 2024 ינואר - מרץ 2024 << | < הבא | 1 2 | הקודם > | >> הורדת טפסים למחשב הורדה הטפסים שנבחרו יורדו למחשב שלך כקובץ Zip מרכיבי התשואה הרבעונית הורדת טפסים למחשב הורדה הטפסים שנבחרו יורדו למחשב שלך כקובץ Zip",
    "items": [
     {
      "text": "ינואר - מרץ 2026",
@@ -2350,23 +2350,15 @@
      "iframe": false,
      "doc": false,
      "internal": true
-    },
-    {
-     "text": "(iframe)",
-     "href": "https://newassets.hcaptcha.com/captcha/v1/6fec84af30d156778671fc38c8901981eca61094/static/hcaptcha.html",
-     "year": null,
-     "iframe": true,
-     "doc": false,
-     "internal": false
     }
    ]
   },
   "https://www.fnx.co.il/SPF/iframe-phoenix-general-pension-yield-components.aspx": {
    "product": "פנסיה",
    "status": 200,
-   "method": "browser",
-   "text_hash": "ffb9c48c1fa5f93814599fc376ccd3b129ae2b89",
-   "text_head": "We apologize for the inconvenience... ...but your activity and behavior on this site made us think that you are a bot. Note: A number of things could be going on here. If you are attempting to access this site using an anonymous Private/Proxy network, please disable that and try accessing site again. Due to previously detected malicious behavior which originated from the network you're using, please request unblock to site. Incident ID: 023456db-db3u-4867-8a56-b36d80873aca Please solve this CAPTCHA to request unblock to the website You reached this page when trying to access https://digital-co",
+   "method": "requests",
+   "text_hash": "cc8c0b58a0d402e15c5341b4d559e08af7090aa4",
+   "text_head": "iframe-yield-components - הפניקס iframe-yield-components iframe-yield-components ייתכן שאתה מנסה לגשת לאתר זה מדפדפן מאובטח בשרת. הפוך קבצי Script לזמינים וטען מחדש דף זה. מרכיבי התשואה ינואר - יוני 2026 ינואר - מרץ 2026 ינואר - דצמבר 2025 ינואר - ספטמבר 2025 ינואר - יוני 2025 ינואר - מרץ 2025 ינואר - דצמבר 2024 << | < הבא | 1 | הקודם > | >> הורדת טפסים למחשב הורדה הטפסים שנבחרו יורדו למחשב שלך כקובץ Zip מרכיבי התשואה הרבעונית הורדת טפסים למחשב הורדה הטפסים שנבחרו יורדו למחשב שלך כקובץ Zip",
    "items": [
     {
      "text": "ינואר - מרץ 2026",
@@ -2431,14 +2423,6 @@
      "iframe": false,
      "doc": true,
      "internal": true
-    },
-    {
-     "text": "(iframe)",
-     "href": "https://newassets.hcaptcha.com/captcha/v1/6fec84af30d156778671fc38c8901981eca61094/static/hcaptcha.html",
-     "year": null,
-     "iframe": true,
-     "doc": false,
-     "internal": false
     }
    ]
   },
