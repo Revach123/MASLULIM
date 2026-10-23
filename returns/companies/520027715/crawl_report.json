@@ -1,7 +1,7 @@
 {
  "legal_id": "520027715",
  "company": "מנורה מבטחים והסתדרות המהנדסים ניהול קופות גמל בע\"מ",
- "run": "2026-10-22T11:00:24+00:00",
+ "run": "2026-10-23T10:55:32+00:00",
  "errors": [
   "/www.menoramivt.co.il/funds/about-menora/engineers/omega-fund/520027715_g286_Yield322.xlsx -> 404",
   "www.menoramivt.co.il/funds/about-menora/engineers/omega-fund/520027715_g1446_Yield322.xlsx -> 404",
@@ -13,10 +13,23 @@
   "discovered": 7,
   "policy_snapshot": 11,
   "policy_snapshot_docs": 95,
+  "gap_search": 0,
   "sitemap": 2
  },
  "imported_from_policy": 0,
- "pages": 69,
+ "gap_search": {
+  "families": [
+   "השתלמות"
+  ],
+  "queries": [
+   {
+    "q": "מנורה מבטחים והסתדרות המהנדסים ניהול קופות גמל מרכיבי תשואה השתלמות",
+    "found": 0
+   }
+  ],
+  "urls": []
+ },
+ "pages": 67,
  "pages_failed": [
   "https://www.menoramivt.co.il/funds/about-menora/engineers/omega-fund/: 404",
   "https://www.menoramivt.co.il/funds/about-menora/engineers/omega-fund/omega-1445: 404",
@@ -28,5 +41,5 @@
  "docs": 352,
  "new_docs": 0,
  "index_size": 352,
- "seconds": 962
+ "seconds": 971
 }
