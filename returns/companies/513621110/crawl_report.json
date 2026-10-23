@@ -1,7 +1,7 @@
 {
  "legal_id": "513621110",
  "company": "אינפיניטי השתלמות, גמל ופנסיה בע\"מ",
- "run": "2026-10-22T10:45:28+00:00",
+ "run": "2026-10-23T10:39:36+00:00",
  "errors": [
   "https://infinity.co.il/wp-content/uploads/2025/07/513621110_g1078_yield122_1.xlsx -> 404",
   "https://infinity.co.il/wp-content/uploads/2025/07/513621110_G1078_YIELD122.XLSX -> 404",
@@ -12,9 +12,22 @@
   "discovered": 17,
   "policy_snapshot": 4,
   "policy_snapshot_docs": 0,
+  "gap_search": 0,
   "sitemap": 9
  },
  "imported_from_policy": 0,
+ "gap_search": {
+  "families": [
+   "קופת גמל"
+  ],
+  "queries": [
+   {
+    "q": "אינפיניטי השתלמות, גמל ופנסיה מרכיבי תשואה קופת גמל",
+    "found": 0
+   }
+  ],
+  "urls": []
+ },
  "pages": 45,
  "pages_failed": [
   "https://infinity.co.il/category-services/: 404"
@@ -23,5 +36,5 @@
  "docs": 1383,
  "new_docs": 14,
  "index_size": 1383,
- "seconds": 1008
+ "seconds": 1005
 }
