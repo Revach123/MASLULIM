@@ -1,21 +1,39 @@
 {
  "legal_id": "570005850",
  "company": "קרן הביטוח והפנסיה של פועלי בנין ועבודות ציבוריות אגודה שיתופית בע\"מ",
- "run": "2026-10-22T11:12:49+00:00",
+ "run": "2026-10-23T11:04:20+00:00",
  "errors": [],
  "seeds": {
   "config": 0,
   "discovered": 5,
   "policy_snapshot": 0,
   "policy_snapshot_docs": 0,
+  "gap_search": 0,
   "sitemap": 0
  },
  "imported_from_policy": 0,
+ "gap_search": {
+  "families": [
+   "פנסיה",
+   "ביטוח מסלולי השקעה"
+  ],
+  "queries": [
+   {
+    "q": "קרן הביטוח והפנסיה של פועלי בנין ועבודות ציבוריות מרכיבי תשואה פנסיה",
+    "found": 0
+   },
+   {
+    "q": "קרן הביטוח והפנסיה של פועלי בנין ועבודות ציבוריות מרכיבי תשואה ביטוח מסלולי השקעה",
+    "found": 0
+   }
+  ],
+  "urls": []
+ },
  "pages": 45,
  "pages_failed": [],
  "candidates": 94,
  "docs": 94,
- "new_docs": 5,
+ "new_docs": 0,
  "index_size": 94,
- "seconds": 454
+ "seconds": 475
 }
