@@ -250,6 +250,11 @@ def crawl_company(s, pw, lid, name, out, now, a):
         sitemap = pc.sitemap_policy_pages(s, home) if not cfg_pages else []
         report["seeds"]["sitemap"] = len(sitemap)
         extra = list(dict.fromkeys(seeds + searched + sitemap))
+        # אתרים גדולים (מנורה: ~100 עמודי מסלול, התקציב מספיק ל-38): עמודים שלא נסרקו בריצות קודמות קודם; כשכולם נסרקו - מתחילים סבב חדש
+        visited = set(disc.get("visited", []))
+        if not any(u not in visited for u in extra):
+            visited = set()
+        extra.sort(key=lambda u: u in visited)
         # אתר עם עמוד לכל מסלול (מנורה, ילין): אותם כללי מעבר (follow) ואותו היקף כמו בסריקת המדיניות
         follow = cfg.get("returns_follow") or cfg.get("follow")
         max_pages = int(cfg.get("returns_max_pages") or (cfg.get("max_pages") if follow else 0) or 45)
@@ -264,7 +269,8 @@ def crawl_company(s, pw, lid, name, out, now, a):
                               or (cfg.get("returns_text") and re.search(cfg["returns_text"], i.get("text") or ""))) for i in p.get("items", []))
             or (p.get("status") == 200 and RETURNS_RX.search(unquote(u)))]
         doc_pages = [u for u in good if not RETURNS_RX.search(unquote(u))]
-        disc = {"home": home, "pages": list(dict.fromkeys(disc.get("pages", []) + good))[:160],
+        done = [u for u, p in pages.items() if p.get("status") == 200]
+        disc = {"home": home, "visited": list(dict.fromkeys(list(visited) + done))[-700:], "pages": list(dict.fromkeys(disc.get("pages", []) + good))[:160],
                 "doc_pages": list(dict.fromkeys(disc.get("doc_pages", []) + doc_pages))[:160]}
         disc_path.write_text(json.dumps(disc, ensure_ascii=False, indent=1), "utf-8")
         (out / "site_snapshot.json").write_text(json.dumps({"legal_id": lid, "taken": now, "pages": pages},
