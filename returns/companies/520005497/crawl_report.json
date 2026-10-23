@@ -1,16 +1,22 @@
 {
  "legal_id": "520005497",
  "company": "החברה לניהול קופות התגמולים והפיצויים של עובדי בנק לאומי בע\"מ",
- "run": "2026-10-22T10:49:19+00:00",
+ "run": "2026-10-23T10:45:13+00:00",
  "errors": [],
  "seeds": {
   "config": 0,
   "discovered": 1,
   "policy_snapshot": 2,
   "policy_snapshot_docs": 1,
+  "gap_search": 0,
   "sitemap": 0
  },
  "imported_from_policy": 0,
+ "gap_search": {
+  "families": [],
+  "queries": [],
+  "urls": []
+ },
  "pages": 15,
  "pages_failed": [
   "https://www.leumi.co.il/he/Articles/: 404"
@@ -19,5 +25,5 @@
  "docs": 1,
  "new_docs": 0,
  "index_size": 1,
- "seconds": 238
+ "seconds": 232
 }
