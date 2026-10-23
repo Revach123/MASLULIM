@@ -1,21 +1,27 @@
 {
  "legal_id": "520020447",
  "company": "קרן הגמלאות של חברי אגד בע\"מ",
- "run": "2026-10-22T10:49:39+00:00",
+ "run": "2026-10-23T10:46:20+00:00",
  "errors": [],
  "seeds": {
   "config": 0,
   "discovered": 5,
   "policy_snapshot": 0,
   "policy_snapshot_docs": 0,
+  "gap_search": 0,
   "sitemap": 0
  },
  "imported_from_policy": 0,
+ "gap_search": {
+  "families": [],
+  "queries": [],
+  "urls": []
+ },
  "pages": 45,
  "pages_failed": [],
  "candidates": 94,
  "docs": 94,
- "new_docs": 5,
+ "new_docs": 0,
  "index_size": 94,
- "seconds": 418
+ "seconds": 419
 }
