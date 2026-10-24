@@ -1,7 +1,7 @@
 {
  "legal_id": "520027954",
  "company": "החברה לניהול קרן השתלמות לאקדמאים במדעי החברה והרוח בע\"מ",
- "run": "2026-10-23T11:05:17+00:00",
+ "run": "2026-10-24T10:09:30+00:00",
  "errors": [],
  "seeds": {
   "config": 0,
@@ -17,15 +17,11 @@
   "queries": [],
   "urls": []
  },
- "pages": 28,
- "pages_failed": [
-  "https://www.academaim-krn.co.il/%d7%a0%d7%99%d7%94%d7%95%d7%9c-%d7%94%d7%a9%d7%a7%d7%a2%d7%95%d7%aa/%d7%aa%d7%a9%d7%95%d7%90%d7%95%d7%aa-%d7%95%d7%94%d7%a8%d7%9b%d7%91%d7%99-%d7%a0%d7%9b%d7%a1%d7%99%d7%9d/: browser:Error:Page.goto: net::ERR_CONNECTION_REFUSED at https://www.academaim-krn.co.il/%d7%a0%d7%99%d7%94%d7%95%d7%9c-%d7%94%d7%a9%d7",
-  "https://www.academaim-krn.co.il: browser:Error:Page.goto: net::ERR_CONNECTION_REFUSED at https://www.academaim-krn.co.il/",
-  "https://www.academaim-krn.co.il/%d7%a0%d7%99%d7%94%d7%95%d7%9c-%d7%94%d7%a9%d7%a7%d7%a2%d7%95%d7%aa/%d7%90%d7%95%d7%a4%d7%9f-%d7%a0%d7%99%d7%94%d7%95%d7%9c-%d7%94%d7%94%d7%a9%d7%a7%d7%a2%d7%95%d7%aa/: ERR"
- ],
+ "pages": 29,
+ "pages_failed": [],
  "candidates": 90,
  "docs": 90,
- "new_docs": 6,
+ "new_docs": 1,
  "index_size": 93,
- "seconds": 143
+ "seconds": 141
 }
