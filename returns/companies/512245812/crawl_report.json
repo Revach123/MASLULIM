@@ -1,7 +1,7 @@
 {
  "legal_id": "512245812",
  "company": "מנורה מבטחים פנסיה וגמל בע\"מ",
- "run": "2026-10-23T10:41:54+00:00",
+ "run": "2026-10-24T09:49:49+00:00",
  "errors": [
   "https://www.menoramivt.co.il/funds/512245812_g13874_Yield322.xlsx -> 404",
   "https://www.menoramivt.co.il/funds/512245812_g13873_Yield322.xlsx -> 404",
@@ -58,7 +58,7 @@
   ],
   "urls": []
  },
- "pages": 39,
+ "pages": 38,
  "pages_failed": [
   "https://www.menoramivt.co.il/funds/: 404",
   "https://www.menoramivt.co.il/funds/pension-and-gemel/pension-plans/: 404",
@@ -72,5 +72,5 @@
  "docs": 770,
  "new_docs": 0,
  "index_size": 843,
- "seconds": 1839
+ "seconds": 1798
 }
