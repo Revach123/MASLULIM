@@ -252,8 +252,9 @@ def crawl_company(s, pw, lid, name, out, now, a):
         extra = list(dict.fromkeys(seeds + searched + sitemap))
         # אתרים גדולים (מנורה: ~100 עמודי מסלול, התקציב מספיק ל-38): עמודים שלא נסרקו בריצות קודמות קודם; כשכולם נסרקו - מתחילים סבב חדש
         visited = set(disc.get("visited", []))
-        if not any(u not in visited for u in extra):
-            visited = set()
+        vsince = disc.get("visited_since") or now[:10]
+        if (datetime.fromisoformat(now[:10]) - datetime.fromisoformat(vsince)).days >= 10:  # סבב חדש כל 10 ימים - קבצי רבעון חדש מופיעים בעמודים שכבר נסרקו
+            visited, vsince = set(), now[:10]
         extra.sort(key=lambda u: u in visited)
         # אתר עם עמוד לכל מסלול (מנורה, ילין): אותם כללי מעבר (follow) ואותו היקף כמו בסריקת המדיניות
         follow = cfg.get("returns_follow") or cfg.get("follow")
@@ -261,6 +262,7 @@ def crawl_company(s, pw, lid, name, out, now, a):
         # תקציבים: הצעד בענן נקטע אחרי 38 דק' ואז לא נשמר כלום - סריקת העמודים עד ~25 דק', ההורדות עד RETURNS_DL_BUDGET
         os.environ["POLICY_CRAWL_BUDGET"] = str(cfg.get("returns_crawl_budget") or (1500 if follow else 1100))
         os.environ["POLICY_PAGE_BUDGET"], os.environ["POLICY_DL_BUDGET"] = (str(x) for x in (cfg.get("returns_budget") or [45, 60]))
+        ps.VISITED = {unquote(u) for u in visited}
         pages = ps.snapshot_company(s, pw, home, extra, products, max_pages=max(max_pages, len(extra) + 15),
                                     follow=follow, click_texts=cfg.get("returns_click_texts"))
         # עמודים שנמצאו ובהם קבצי מרכיבי תשואה - נשמרים כנקודת פתיחה לריצות הבאות (החיפוש לא תמיד זמין)
@@ -270,7 +272,7 @@ def crawl_company(s, pw, lid, name, out, now, a):
             or (p.get("status") == 200 and RETURNS_RX.search(unquote(u)))]
         doc_pages = [u for u in good if not RETURNS_RX.search(unquote(u))]
         done = [u for u, p in pages.items() if p.get("status") == 200]
-        disc = {"home": home, "visited": list(dict.fromkeys(list(visited) + done))[-700:], "pages": list(dict.fromkeys(disc.get("pages", []) + good))[:160],
+        disc = {"home": home, "visited_since": vsince, "visited": list(dict.fromkeys(list(visited) + done))[-700:], "pages": list(dict.fromkeys(disc.get("pages", []) + good))[:160],
                 "doc_pages": list(dict.fromkeys(disc.get("doc_pages", []) + doc_pages))[:160]}
         disc_path.write_text(json.dumps(disc, ensure_ascii=False, indent=1), "utf-8")
         (out / "site_snapshot.json").write_text(json.dumps({"legal_id": lid, "taken": now, "pages": pages},
