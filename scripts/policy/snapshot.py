@@ -226,6 +226,8 @@ def signed_url_name(u):
         return None
 
 
+VISITED = set()  # כתובות (unquote) שנסרקו בריצות קודמות - מוגדר ע"י scripts/returns/crawl
+
 BOT_RX = re.compile(r"just a moment|checking your browser|verify(ing)? you are (a )?human|enable javascript and cookies|attention required|"
                     r"made us think that you are a bot|request unblock|access denied|perfdrive|shieldsquare", re.I)
 
@@ -600,7 +602,8 @@ def snapshot_company(s, pw, home, extra, products=None, max_pages=15, depth_max=
                 if i.get("iframe"):
                     iframes.add(i["href"])
                 if frx and frx.search(unquote(i["href"])):
-                    heapq.heappush(q, (0, next(tick), i["href"], d + 1))
+                    # עמוד שכבר נסרק בריצה קודמת (VISITED, ממלא returns/crawl) - בסוף התור: אתר עם 100 עמודי מסלול מתקדם בכל ריצה
+                    heapq.heappush(q, (3 if unquote(i["href"]) in VISITED else 0, next(tick), i["href"], d + 1))
                 elif i.get("iframe") or (i["internal"] and (score(i["text"] + unquote(i["href"])) > 0
                                                             or PRODUCT_RX.search(i["text"] + unquote(i["href"])))):
                     heapq.heappush(q, (_prio(i["text"], i["href"]), next(tick), i["href"], d + 1))
