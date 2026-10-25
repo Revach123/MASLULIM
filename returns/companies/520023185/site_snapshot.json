@@ -1,12 +1,12 @@
 {
  "legal_id": "520023185",
- "taken": "2026-10-25T10:24:05+00:00",
+ "taken": "2026-10-25T21:37:05+00:00",
  "pages": {
   "https://www.fnx.co.il/SPF/": {
    "product": null,
    "status": 404,
    "method": "browser",
-   "text_hash": "9a51eba204ebdd7550c1a81ab1e05c49629e0c7a",
+   "text_hash": "70e9718c2cd41d244e614c0534f3cba7437af60f",
    "text_head": "דלג לתפריט עליון דלג לתוכן המרכזי דלג לרשימת הקישורים התחתונה שימוש בקבצי Cookies לידיעתך, באתר זה נעשה שימוש בטכנולוגיות איסוף מידע כגון Cookies לרבות על ידי צדדים שלישיים, כדי לספק לך חווית גלישה טובה וכן למטרות סטטיסטיקה, אפיון, שיווק ואבטחת מידע. המשך גלישתך באתר מהווה הסכמה לכך. למידע נוסף, ניתן לצפות במדיניות הפרטיות המעודכנת של החברה. סגירה דלג לתפריט עליון דלג לתוכן המרכזי דלג לרשימת הקישורים התחתונה קריירה פורטל סוכנים פורטל מעסיקים הפניקס בית השקעות הפניקס smart קשרי משקיעים Investor Relations ביטוחים פנסיה, גמל וחסכון השקעות אשראי תביעות שירות ופעולות לאיזור האישי העמוד שחיפשת לא נמ",
    "items": [
     {
@@ -139,7 +139,7 @@
     },
     {
      "text": "פרמיות יומיות ביטוח נסיעות לחו\"ל",
-     "href": "https://www.fnx.co.il/Documents/premiot_nesiot_yomiot.xls",
+     "href": "https://digital-content.fnx.co.il/Documents/premiot_nesiot_yomiot.xls",
      "year": null,
      "iframe": false,
      "doc": true,
@@ -163,7 +163,7 @@
     },
     {
      "text": "ניוד פוליסות מקדמי קצבה",
-     "href": "https://www.fnx.co.il/sites/docs/genery/DocLib9/annuity-factor.xls",
+     "href": "https://digital-content.fnx.co.il/sites/docs/genery/DocLib9/annuity-factor.xls",
      "year": null,
      "iframe": false,
      "doc": true,
@@ -363,6 +363,22 @@
     },
     {
      "text": "(iframe)",
+     "href": "https://netfree.link/card/index.html",
+     "year": null,
+     "iframe": true,
+     "doc": false,
+     "internal": false
+    },
+    {
+     "text": "(iframe)",
+     "href": "https://netfree.link/misc/go-payment.html?v=3",
+     "year": null,
+     "iframe": true,
+     "doc": false,
+     "internal": false
+    },
+    {
+     "text": "(iframe)",
      "href": "https://cdn.glassix.com/clients/widget-in-iframe.html?apiKey=90741d7a-0786-4763-a958-90082e8cb8df&snippetId=aCrcNNrXAG0gjuBLE4Ee",
      "year": null,
      "iframe": true,
@@ -375,7 +391,7 @@
    "product": "פנסיה",
    "status": 200,
    "method": "browser",
-   "text_hash": "59b2de46b882a25243376d0844778136b017c942",
+   "text_hash": "7a8330f470a8a796adf10a7c284279e5c1f428cf",
    "text_head": "דלג לתפריט עליון דלג לתוכן המרכזי דלג לרשימת הקישורים התחתונה שימוש בקבצי Cookies לידיעתך, באתר זה נעשה שימוש בטכנולוגיות איסוף מידע כגון Cookies לרבות על ידי צדדים שלישיים, כדי לספק לך חווית גלישה טובה וכן למטרות סטטיסטיקה, אפיון, שיווק ואבטחת מידע. המשך גלישתך באתר מהווה הסכמה לכך. למידע נוסף, ניתן לצפות במדיניות הפרטיות המעודכנת של החברה. סגירה דלג לתפריט עליון דלג לתוכן המרכזי דלג לרשימת הקישורים התחתונה קריירה פורטל סוכנים פורטל מעסיקים הפניקס בית השקעות הפניקס smart קשרי משקיעים Investor Relations ביטוחים פנסיה, גמל וחסכון השקעות אשראי תביעות שירות ופעולות לאיזור האישי דף הבית פנסיה פנסי",
    "items": [
     {
@@ -508,7 +524,7 @@
     },
     {
      "text": "פרמיות יומיות ביטוח נסיעות לחו\"ל",
-     "href": "https://www.fnx.co.il/Documents/premiot_nesiot_yomiot.xls",
+     "href": "https://digital-content.fnx.co.il/Documents/premiot_nesiot_yomiot.xls",
      "year": null,
      "iframe": false,
      "doc": true,
@@ -540,7 +556,7 @@
     },
     {
      "text": "ניוד פוליסות מקדמי קצבה",
-     "href": "https://www.fnx.co.il/sites/docs/genery/DocLib9/annuity-factor.xls",
+     "href": "https://digital-content.fnx.co.il/sites/docs/genery/DocLib9/annuity-factor.xls",
      "year": null,
      "iframe": false,
      "doc": true,
@@ -745,6 +761,22 @@
      "iframe": true,
      "doc": false,
      "internal": true
+    },
+    {
+     "text": "(iframe)",
+     "href": "https://netfree.link/card/index.html",
+     "year": null,
+     "iframe": true,
+     "doc": false,
+     "internal": false
+    },
+    {
+     "text": "(iframe)",
+     "href": "https://netfree.link/misc/go-payment.html?v=3",
+     "year": null,
+     "iframe": true,
+     "doc": false,
+     "internal": false
     }
    ]
   },
@@ -752,7 +784,7 @@
    "product": "פנסיה",
    "status": 200,
    "method": "browser",
-   "text_hash": "e2decbab5e4d8e98c9ad29d2df45674a9bcad57f",
+   "text_hash": "74474d170afc237febfacb9dc540412feebef2a4",
    "text_head": "דלג לתפריט עליון דלג לתוכן המרכזי דלג לרשימת הקישורים התחתונה שימוש בקבצי Cookies לידיעתך, באתר זה נעשה שימוש בטכנולוגיות איסוף מידע כגון Cookies לרבות על ידי צדדים שלישיים, כדי לספק לך חווית גלישה טובה וכן למטרות סטטיסטיקה, אפיון, שיווק ואבטחת מידע. המשך גלישתך באתר מהווה הסכמה לכך. למידע נוסף, ניתן לצפות במדיניות הפרטיות המעודכנת של החברה. סגירה דלג לתפריט עליון דלג לתוכן המרכזי דלג לרשימת הקישורים התחתונה קריירה פורטל סוכנים פורטל מעסיקים הפניקס בית השקעות הפניקס smart קשרי משקיעים Investor Relations ביטוחים פנסיה, גמל וחסכון השקעות אשראי תביעות שירות ופעולות לאיזור האישי דף הבית פנסיה פנסי",
    "items": [
     {
@@ -885,7 +917,7 @@
     },
     {
      "text": "פרמיות יומיות ביטוח נסיעות לחו\"ל",
-     "href": "https://www.fnx.co.il/Documents/premiot_nesiot_yomiot.xls",
+     "href": "https://digital-content.fnx.co.il/Documents/premiot_nesiot_yomiot.xls",
      "year": null,
      "iframe": false,
      "doc": true,
@@ -917,7 +949,7 @@
     },
     {
      "text": "ניוד פוליסות מקדמי קצבה",
-     "href": "https://www.fnx.co.il/sites/docs/genery/DocLib9/annuity-factor.xls",
+     "href": "https://digital-content.fnx.co.il/sites/docs/genery/DocLib9/annuity-factor.xls",
      "year": null,
      "iframe": false,
      "doc": true,
@@ -1122,6 +1154,22 @@
      "iframe": true,
      "doc": false,
      "internal": true
+    },
+    {
+     "text": "(iframe)",
+     "href": "https://netfree.link/card/index.html",
+     "year": null,
+     "iframe": true,
+     "doc": false,
+     "internal": false
+    },
+    {
+     "text": "(iframe)",
+     "href": "https://netfree.link/misc/go-payment.html?v=3",
+     "year": null,
+     "iframe": true,
+     "doc": false,
+     "internal": false
     }
    ]
   },
@@ -1129,7 +1177,7 @@
    "product": "פנסיה",
    "status": 200,
    "method": "browser",
-   "text_hash": "51d0d705c984e96ba27c03402c11f020862087b3",
+   "text_hash": "75b3650afab227233e42ae336a3d8ddc035c8b79",
    "text_head": "דלג לתפריט עליון דלג לתוכן המרכזי דלג לרשימת הקישורים התחתונה שימוש בקבצי Cookies לידיעתך, באתר זה נעשה שימוש בטכנולוגיות איסוף מידע כגון Cookies לרבות על ידי צדדים שלישיים, כדי לספק לך חווית גלישה טובה וכן למטרות סטטיסטיקה, אפיון, שיווק ואבטחת מידע. המשך גלישתך באתר מהווה הסכמה לכך. למידע נוסף, ניתן לצפות במדיניות הפרטיות המעודכנת של החברה. סגירה דלג לתפריט עליון דלג לתוכן המרכזי דלג לרשימת הקישורים התחתונה קריירה פורטל סוכנים פורטל מעסיקים הפניקס בית השקעות הפניקס smart קשרי משקיעים Investor Relations ביטוחים פנסיה, גמל וחסכון השקעות אשראי תביעות שירות ופעולות לאיזור האישי דף הבית פנסיה קרן ",
    "items": [
     {
@@ -1270,7 +1318,7 @@
     },
     {
      "text": "פרמיות יומיות ביטוח נסיעות לחו\"ל",
-     "href": "https://www.fnx.co.il/Documents/premiot_nesiot_yomiot.xls",
+     "href": "https://digital-content.fnx.co.il/Documents/premiot_nesiot_yomiot.xls",
      "year": null,
      "iframe": false,
      "doc": true,
@@ -1294,7 +1342,7 @@
     },
     {
      "text": "ניוד פוליסות מקדמי קצבה",
-     "href": "https://www.fnx.co.il/sites/docs/genery/DocLib9/annuity-factor.xls",
+     "href": "https://digital-content.fnx.co.il/sites/docs/genery/DocLib9/annuity-factor.xls",
      "year": null,
      "iframe": false,
      "doc": true,
@@ -1499,6 +1547,22 @@
      "iframe": true,
      "doc": false,
      "internal": true
+    },
+    {
+     "text": "(iframe)",
+     "href": "https://netfree.link/card/index.html",
+     "year": null,
+     "iframe": true,
+     "doc": false,
+     "internal": false
+    },
+    {
+     "text": "(iframe)",
+     "href": "https://netfree.link/misc/go-payment.html?v=3",
+     "year": null,
+     "iframe": true,
+     "doc": false,
+     "internal": false
     }
    ]
   },
@@ -1506,117 +1570,36 @@
    "product": "פנסיה",
    "status": 200,
    "method": "requests",
-   "text_hash": "aeca21d660f224dbdff6e3690889ad9905864e48",
-   "text_head": "iframe-yield-components - הפניקס iframe-yield-components iframe-yield-components ייתכן שאתה מנסה לגשת לאתר זה מדפדפן מאובטח בשרת. הפוך קבצי Script לזמינים וטען מחדש דף זה. מרכיבי התשואה ינואר - יוני 2026 ינואר - מרץ 2026 ינואר - דצמבר 2025 ינואר - ספטמבר 2025 ינואר - יוני 2025 ינואר - מרץ 2025 ינואר - דצמבר 2024 ינואר - ספטמבר 2024 ינואר - יוני 2024 ינואר - מרץ 2024 << | < הבא | 1 2 | הקודם > | >> הורדת טפסים למחשב הורדה הטפסים שנבחרו יורדו למחשב שלך כקובץ Zip מרכיבי התשואה הרבעונית הורדת טפסים למחשב הורדה הטפסים שנבחרו יורדו למחשב שלך כקובץ Zip",
-   "items": [
-    {
-     "text": "ינואר - מרץ 2026",
-     "href": "http://www.fnx.co.il/sites/docs/genery/markivey_tsua_chodshit/markivey_tsua_makifa_01-03_26.xlsx",
-     "year": "2026",
-     "iframe": false,
-     "doc": true,
-     "internal": true
-    },
-    {
-     "text": "ינואר - יוני 2026",
-     "href": "http://www.fnx.co.il/sites/docs/genery/markivey_tsua_chodshit/markivey_tsua_makifa_01-06_26.xlsx",
-     "year": "2026",
-     "iframe": false,
-     "doc": true,
-     "internal": true
-    },
-    {
-     "text": "ינואר - ספטמבר 2025",
-     "href": "http://www.fnx.co.il/sites/docs/genery/markivey_tsua_chodshit/markivey_tsua_makifa_01-09_25.xlsx",
-     "year": "2025",
-     "iframe": false,
-     "doc": true,
-     "internal": true
-    },
-    {
-     "text": "ינואר - מרץ 2025",
-     "href": "http://www.fnx.co.il/sites/docs/genery/markivey_tsua_chodshit/markivey_tsua_makifa_01-03_25.xlsx",
-     "year": "2025",
-     "iframe": false,
-     "doc": true,
-     "internal": true
-    },
-    {
-     "text": "ינואר - יוני 2025",
-     "href": "http://www.fnx.co.il/sites/docs/genery/markivey_tsua_chodshit/markivey_tsua_makifa_01-06_25.xlsx",
-     "year": "2025",
-     "iframe": false,
-     "doc": true,
-     "internal": true
-    },
-    {
-     "text": "ינואר - דצמבר 2025",
-     "href": "http://www.fnx.co.il/sites/docs/genery/markivey_tsua_chodshit/markivey_tsua_makifa_01-12_25.xlsx",
-     "year": "2025",
-     "iframe": false,
-     "doc": true,
-     "internal": true
-    },
-    {
-     "text": "ינואר - ספטמבר 2024",
-     "href": "http://www.fnx.co.il/sites/docs/genery/markivey_tsua_chodshit/markivey_tsua_makifa_01-09_24.xls",
-     "year": "2024",
-     "iframe": false,
-     "doc": true,
-     "internal": true
-    },
-    {
-     "text": "ינואר - מרץ 2024",
-     "href": "http://www.fnx.co.il/sites/docs/genery/markivey_tsua_chodshit/markivey_tsua_makifa_01-03_24.xls",
-     "year": "2024",
-     "iframe": false,
-     "doc": true,
-     "internal": true
-    },
-    {
-     "text": "ינואר - יוני 2024",
-     "href": "http://www.fnx.co.il/sites/docs/genery/markivey_tsua_chodshit/markivey_tsua_makifa_01-06_24.xls",
-     "year": "2024",
-     "iframe": false,
-     "doc": true,
-     "internal": true
-    },
-    {
-     "text": "ינואר - דצמבר 2024",
-     "href": "http://www.fnx.co.il/sites/docs/genery/markivey_tsua_chodshit/markivey_tsua_makifa_01-12_24.xls",
-     "year": "2024",
-     "iframe": false,
-     "doc": true,
-     "internal": true
-    },
-    {
-     "text": "מרכיבי התשואה הרבעונית הורדת טפסים למחשב הורדה הטפסים שנבחרו יורדו למחשב שלך כקובץ Zip הורדה",
-     "href": "https://www.fnx.co.il/SPF/iframe-phoenix-all-embracing-pension-yield-components.aspx",
-     "year": null,
-     "iframe": false,
-     "doc": true,
-     "internal": true
-    },
-    {
-     "text": "<<",
-     "href": "https://www.fnx.co.il/SPF/iframe-phoenix-all-embracing-pension-yield-components.aspx?page=2",
-     "year": null,
-     "iframe": false,
-     "doc": false,
-     "internal": true
-    }
-   ]
+   "text_hash": "0916fc8c268d26051e2daef9ce7f85620aecdd67",
+   "text_head": "Radware Captcha Page We apologize for the inconvenience... ...but your activity and behavior on this site made us think that you are a bot. Note: A number of things could be going on here. If you are attempting to access this site using an anonymous Private/Proxy network, please disable that and try accessing site again. Due to previously detected malicious behavior which originated from the network you're using, please request unblock to site. Incident ID: 5ab589d5-db3u-4103-accc-08d78bddfac1 Please solve this CAPTCHA to request unblock to the website You reached this page when trying to acce",
+   "items": []
   },
   "https://www.fnx.co.il/SPF/iframe-phoenix-general-pension-yield-components.aspx": {
    "product": "פנסיה",
    "status": 200,
-   "method": "requests",
-   "text_hash": "cc8c0b58a0d402e15c5341b4d559e08af7090aa4",
-   "text_head": "iframe-yield-components - הפניקס iframe-yield-components iframe-yield-components ייתכן שאתה מנסה לגשת לאתר זה מדפדפן מאובטח בשרת. הפוך קבצי Script לזמינים וטען מחדש דף זה. מרכיבי התשואה ינואר - יוני 2026 ינואר - מרץ 2026 ינואר - דצמבר 2025 ינואר - ספטמבר 2025 ינואר - יוני 2025 ינואר - מרץ 2025 ינואר - דצמבר 2024 << | < הבא | 1 | הקודם > | >> הורדת טפסים למחשב הורדה הטפסים שנבחרו יורדו למחשב שלך כקובץ Zip מרכיבי התשואה הרבעונית הורדת טפסים למחשב הורדה הטפסים שנבחרו יורדו למחשב שלך כקובץ Zip",
+   "method": "browser",
+   "text_hash": "a43cf9333c4115e64a5a61762b36ba648c022f3c",
+   "text_head": " מרכיבי התשואה ינואר - יוני 2026 ינואר - מרץ 2026 ינואר - דצמבר 2025 ינואר - ספטמבר 2025 ינואר - יוני 2025 ינואר - מרץ 2025 ינואר - דצמבר 2024 << | < הבא | 1 | הקודם > | >> נגישות ",
    "items": [
+    {
+     "text": "מרכיבי התשואה ינואר - יוני 2026 ינואר - מרץ 2026 ינואר - דצמבר 2025 ינואר - ספטמבר 2025 ינואר - יוני 2025 ינואר - מרץ 2025 ינואר - דצמבר 2024 << | < הבא | 1 | הקודם > | >> הורדה",
+     "href": "https://digital-content.fnx.co.il/SPF/iframe-phoenix-general-pension-yield-components.aspx",
+     "year": "2026",
+     "iframe": false,
+     "doc": true,
+     "internal": true
+    },
     {
      "text": "ינואר - מרץ 2026",
      "href": "http://www.fnx.co.il/sites/docs/genery/markivey_tsua_chodshit/markivey_tsua_mashlima_01-03_26.xlsx",
+     "year": "2026",
+     "iframe": false,
+     "doc": true,
+     "internal": true
+    },
+    {
+     "text": "ינואר - מרץ 2026",
+     "href": "https://www.fnx.co.il/sites/docs/genery/markivey_tsua_chodshit/markivey_tsua_mashlima_01-03_26.xlsx",
      "year": "2026",
      "iframe": false,
      "doc": true,
@@ -1631,8 +1614,24 @@
      "internal": true
     },
     {
+     "text": "ינואר - יוני 2026",
+     "href": "https://www.fnx.co.il/sites/docs/genery/markivey_tsua_chodshit/markivey_tsua_mashlima_01-06_26.xlsx",
+     "year": "2026",
+     "iframe": false,
+     "doc": true,
+     "internal": true
+    },
+    {
      "text": "ינואר - ספטמבר 2025",
      "href": "http://www.fnx.co.il/sites/docs/genery/markivey_tsua_chodshit/markivey_tsua_mashlima_01-09_25.xlsx",
+     "year": "2025",
+     "iframe": false,
+     "doc": true,
+     "internal": true
+    },
+    {
+     "text": "ינואר - ספטמבר 2025",
+     "href": "https://www.fnx.co.il/sites/docs/genery/markivey_tsua_chodshit/markivey_tsua_mashlima_01-09_25.xlsx",
      "year": "2025",
      "iframe": false,
      "doc": true,
@@ -1647,8 +1646,24 @@
      "internal": true
     },
     {
+     "text": "ינואר - מרץ 2025",
+     "href": "https://www.fnx.co.il/sites/docs/genery/markivey_tsua_chodshit/markivey_tsua_mashlima_01-03_25.xlsx",
+     "year": "2025",
+     "iframe": false,
+     "doc": true,
+     "internal": true
+    },
+    {
      "text": "ינואר - יוני 2025",
      "href": "http://www.fnx.co.il/sites/docs/genery/markivey_tsua_chodshit/markivey_tsua_mashlima_01-06_25.xlsx",
+     "year": "2025",
+     "iframe": false,
+     "doc": true,
+     "internal": true
+    },
+    {
+     "text": "ינואר - יוני 2025",
+     "href": "https://www.fnx.co.il/sites/docs/genery/markivey_tsua_chodshit/markivey_tsua_mashlima_01-06_25.xlsx",
      "year": "2025",
      "iframe": false,
      "doc": true,
@@ -1663,8 +1678,24 @@
      "internal": true
     },
     {
+     "text": "ינואר - דצמבר 2025",
+     "href": "https://www.fnx.co.il/sites/docs/genery/markivey_tsua_chodshit/markivey_tsua_mashlima_01-12_25.xlsx",
+     "year": "2025",
+     "iframe": false,
+     "doc": true,
+     "internal": true
+    },
+    {
      "text": "ינואר - דצמבר 2024",
      "href": "http://www.fnx.co.il/sites/docs/genery/markivey_tsua_chodshit/markivey_tsua_mashlima_01-12_24.xls",
+     "year": "2024",
+     "iframe": false,
+     "doc": true,
+     "internal": true
+    },
+    {
+     "text": "ינואר - דצמבר 2024",
+     "href": "https://www.fnx.co.il/sites/docs/genery/markivey_tsua_chodshit/markivey_tsua_mashlima_01-12_24.xls",
      "year": "2024",
      "iframe": false,
      "doc": true,
@@ -1677,6 +1708,30 @@
      "iframe": false,
      "doc": true,
      "internal": true
+    },
+    {
+     "text": "להורדת מודול נגישות חינם",
+     "href": "http://www.negishim.org/",
+     "year": null,
+     "iframe": false,
+     "doc": true,
+     "internal": false
+    },
+    {
+     "text": "(iframe)",
+     "href": "https://netfree.link/card/index.html",
+     "year": null,
+     "iframe": true,
+     "doc": false,
+     "internal": false
+    },
+    {
+     "text": "(iframe)",
+     "href": "https://netfree.link/misc/go-payment.html?v=3",
+     "year": null,
+     "iframe": true,
+     "doc": false,
+     "internal": false
     }
    ]
   },
@@ -1684,145 +1739,23 @@
    "product": "פנסיה",
    "status": 200,
    "method": "requests",
-   "text_hash": "003e52e7ff73f9c21c31dc92e47682dee62c1396",
-   "text_head": "iframe-yield-components - הפניקס iframe-yield-components iframe-yield-components ייתכן שאתה מנסה לגשת לאתר זה מדפדפן מאובטח בשרת. הפוך קבצי Script לזמינים וטען מחדש דף זה. מרכיבי התשואה ינואר - יוני 2026 ינואר - מרץ 2026 ינואר - דצמבר 2025 ינואר - ספטמבר 2025 ינואר - יוני 2025 ינואר - מרץ 2025 ינואר - דצמבר 2024 << | < הבא | 1 | הקודם > | >> הורדת טפסים למחשב הורדה הטפסים שנבחרו יורדו למחשב שלך כקובץ Zip מרכיבי תשואה רבעונית",
-   "items": [
-    {
-     "text": "מרכיבי התשואה ינואר - יוני 2026 ינואר - מרץ 2026 ינואר - דצמבר 2025 ינואר - ספטמבר 2025 ינואר - יוני 2025 ינואר - מרץ 2025 ינואר - דצמבר 2024 << | < הבא | 1 | הקודם > | >> הורדת טפסים למחשב הורדה הטפס הורדה",
-     "href": "https://www.fnx.co.il/SPF/iframe-basic-member-pension-fund-yield-components.aspx",
-     "year": "2026",
-     "iframe": false,
-     "doc": true,
-     "internal": true
-    },
-    {
-     "text": "ינואר - מרץ 2026",
-     "href": "http://www.fnx.co.il/sites/docs/genery/markivey_tsua_chodshit/markivey_tsua_yesod_01-03_26.xlsx",
-     "year": "2026",
-     "iframe": false,
-     "doc": true,
-     "internal": true
-    },
-    {
-     "text": "ינואר - יוני 2026",
-     "href": "http://www.fnx.co.il/sites/docs/genery/markivey_tsua_chodshit/מרכיבי-תשואוה-ותיקות-רבעון2-26.xlsx",
-     "year": "2026",
-     "iframe": false,
-     "doc": true,
-     "internal": true
-    },
-    {
-     "text": "ינואר - ספטמבר 2025",
-     "href": "http://www.fnx.co.il/sites/docs/genery/markivey_tsua_chodshit/markivey_tsua_yesod_01-09_25.xlsx",
-     "year": "2025",
-     "iframe": false,
-     "doc": true,
-     "internal": true
-    },
-    {
-     "text": "ינואר - מרץ 2025",
-     "href": "http://www.fnx.co.il/sites/docs/genery/markivey_tsua_chodshit/markivey_tsua_yesod_01-03_25.xlsx",
-     "year": "2025",
-     "iframe": false,
-     "doc": true,
-     "internal": true
-    },
-    {
-     "text": "ינואר - יוני 2025",
-     "href": "http://www.fnx.co.il/sites/docs/genery/markivey_tsua_chodshit/markivey_tsua_yesod_01-06_25.xlsx",
-     "year": "2025",
-     "iframe": false,
-     "doc": true,
-     "internal": true
-    },
-    {
-     "text": "ינואר - דצמבר 2025",
-     "href": "http://www.fnx.co.il/sites/docs/genery/markivey_tsua_chodshit/מרכיבי-תשואה-ותיקות-q4-25.xlsx",
-     "year": "2025",
-     "iframe": false,
-     "doc": true,
-     "internal": true
-    },
-    {
-     "text": "ינואר - דצמבר 2024",
-     "href": "http://www.fnx.co.il/sites/docs/genery/markivey_tsua_chodshit/markivey_tsua_yesod_01-12_24.xls",
-     "year": "2024",
-     "iframe": false,
-     "doc": true,
-     "internal": true
-    }
-   ]
+   "text_hash": "6f24781a727809d178e25a51da008ccd95bbb2a8",
+   "text_head": "Radware Captcha Page We apologize for the inconvenience... ...but your activity and behavior on this site made us think that you are a bot. Note: A number of things could be going on here. If you are attempting to access this site using an anonymous Private/Proxy network, please disable that and try accessing site again. Due to previously detected malicious behavior which originated from the network you're using, please request unblock to site. Incident ID: 81cf61ef-db3u-4ed2-8a1b-44465260a41d Please solve this CAPTCHA to request unblock to the website You reached this page when trying to acce",
+   "items": []
   },
   "https://www.fnx.co.il/SPF/iframe-phoenix-all-embracing-pension-yield-components.aspx?page=2": {
    "product": "פנסיה",
    "status": 200,
    "method": "requests",
-   "text_hash": "b7ad118cdcd3cc56cdc18092bf80bd5fb9694d55",
-   "text_head": "iframe עמוד 2 - yield iframe-yield-components iframe-yield-components ייתכן שאתה מנסה לגשת לאתר זה מדפדפן מאובטח בשרת. הפוך קבצי Script לזמינים וטען מחדש דף זה. מרכיבי התשואה ינואר - דצמבר 2023 ינואר - ספטמבר 2023 ינואר - יוני 2023 ינואר - מרץ 2023 << | < הבא | 1 2 | הקודם > | >> הורדת טפסים למחשב הורדה הטפסים שנבחרו יורדו למחשב שלך כקובץ Zip מרכיבי התשואה הרבעונית הורדת טפסים למחשב הורדה הטפסים שנבחרו יורדו למחשב שלך כקובץ Zip",
-   "items": [
-    {
-     "text": "ינואר - ספטמבר 2023",
-     "href": "http://www.fnx.co.il/sites/docs/genery/markivey_tsua_chodshit/markivey_tsua_makifa_01-09_23.xls",
-     "year": "2023",
-     "iframe": false,
-     "doc": true,
-     "internal": true
-    },
-    {
-     "text": "ינואר - מרץ 2023",
-     "href": "http://www.fnx.co.il/sites/docs/genery/markivey_tsua_chodshit/markivey_tsua_makifa_01-03_23.xls",
-     "year": "2023",
-     "iframe": false,
-     "doc": true,
-     "internal": true
-    },
-    {
-     "text": "ינואר - יוני 2023",
-     "href": "http://www.fnx.co.il/sites/docs/genery/markivey_tsua_chodshit/markivey_tsua_makifa_01-06_23.xls",
-     "year": "2023",
-     "iframe": false,
-     "doc": true,
-     "internal": true
-    },
-    {
-     "text": "ינואר - דצמבר 2023",
-     "href": "http://www.fnx.co.il/sites/docs/genery/markivey_tsua_chodshit/markivey_tsua_makifa_01-12_23.xls",
-     "year": "2023",
-     "iframe": false,
-     "doc": true,
-     "internal": true
-    },
-    {
-     "text": "מרכיבי התשואה הרבעונית הורדת טפסים למחשב הורדה הטפסים שנבחרו יורדו למחשב שלך כקובץ Zip הורדה",
-     "href": "https://www.fnx.co.il/SPF/iframe-phoenix-all-embracing-pension-yield-components.aspx?page=2",
-     "year": null,
-     "iframe": false,
-     "doc": true,
-     "internal": true
-    },
-    {
-     "text": ">>",
-     "href": "https://www.fnx.co.il/SPF/iframe-phoenix-all-embracing-pension-yield-components.aspx",
-     "year": null,
-     "iframe": false,
-     "doc": false,
-     "internal": true
-    },
-    {
-     "text": "1 2 1",
-     "href": "https://www.fnx.co.il/SPF/iframe-phoenix-all-embracing-pension-yield-components.aspx?page=1",
-     "year": null,
-     "iframe": false,
-     "doc": false,
-     "internal": true
-    }
-   ]
+   "text_hash": "b7d35cf3d1a1b79cfdabce56cba390b1026d3a48",
+   "text_head": "Radware Captcha Page We apologize for the inconvenience... ...but your activity and behavior on this site made us think that you are a bot. Note: A number of things could be going on here. If you are attempting to access this site using an anonymous Private/Proxy network, please disable that and try accessing site again. Due to previously detected malicious behavior which originated from the network you're using, please request unblock to site. Incident ID: 0da2e7af-db3u-4cf9-ab1b-eff709de12a2 Please solve this CAPTCHA to request unblock to the website You reached this page when trying to acce",
+   "items": []
   },
   "https://www.fnx.co.il/savings/quarterly-yield-components-maslul-life/": {
    "product": null,
    "status": 200,
    "method": "browser",
-   "text_hash": "cb63989f16a25c23c37b5d8a6df796bce23a628f",
+   "text_hash": "232773994ac43031fd810b13190b3d45feba79eb",
    "text_head": "דלג לתפריט עליון דלג לתוכן המרכזי דלג לרשימת הקישורים התחתונה שימוש בקבצי Cookies לידיעתך, באתר זה נעשה שימוש בטכנולוגיות איסוף מידע כגון Cookies לרבות על ידי צדדים שלישיים, כדי לספק לך חווית גלישה טובה וכן למטרות סטטיסטיקה, אפיון, שיווק ואבטחת מידע. המשך גלישתך באתר מהווה הסכמה לכך. למידע נוסף, ניתן לצפות במדיניות הפרטיות המעודכנת של החברה. סגירה דלג לתפריט עליון דלג לתוכן המרכזי דלג לרשימת הקישורים התחתונה קריירה פורטל סוכנים פורטל מעסיקים הפניקס בית השקעות הפניקס smart קשרי משקיעים Investor Relations ביטוחים פנסיה, גמל וחסכון השקעות אשראי תביעות שירות ופעולות לאיזור האישי דף הבית תוכניות חי",
    "items": [
     {
@@ -1955,7 +1888,7 @@
     },
     {
      "text": "פרמיות יומיות ביטוח נסיעות לחו\"ל",
-     "href": "https://www.fnx.co.il/Documents/premiot_nesiot_yomiot.xls",
+     "href": "https://digital-content.fnx.co.il/Documents/premiot_nesiot_yomiot.xls",
      "year": null,
      "iframe": false,
      "doc": true,
@@ -1979,7 +1912,7 @@
     },
     {
      "text": "ניוד פוליסות מקדמי קצבה",
-     "href": "https://www.fnx.co.il/sites/docs/genery/DocLib9/annuity-factor.xls",
+     "href": "https://digital-content.fnx.co.il/sites/docs/genery/DocLib9/annuity-factor.xls",
      "year": null,
      "iframe": false,
      "doc": true,
@@ -2184,6 +2117,22 @@
      "iframe": true,
      "doc": false,
      "internal": true
+    },
+    {
+     "text": "(iframe)",
+     "href": "https://netfree.link/card/index.html",
+     "year": null,
+     "iframe": true,
+     "doc": false,
+     "internal": false
+    },
+    {
+     "text": "(iframe)",
+     "href": "https://netfree.link/misc/go-payment.html?v=3",
+     "year": null,
+     "iframe": true,
+     "doc": false,
+     "internal": false
     }
    ]
   },
@@ -2191,7 +2140,7 @@
    "product": null,
    "status": 200,
    "method": "browser",
-   "text_hash": "c1123953559898502ba077cc33da2a2f8a1a8b18",
+   "text_hash": "39793906511b1eec172e9616b006d5c6ea6c0584",
    "text_head": "דלג לתפריט עליון דלג לתוכן המרכזי דלג לרשימת הקישורים התחתונה שימוש בקבצי Cookies לידיעתך, באתר זה נעשה שימוש בטכנולוגיות איסוף מידע כגון Cookies לרבות על ידי צדדים שלישיים, כדי לספק לך חווית גלישה טובה וכן למטרות סטטיסטיקה, אפיון, שיווק ואבטחת מידע. המשך גלישתך באתר מהווה הסכמה לכך. למידע נוסף, ניתן לצפות במדיניות הפרטיות המעודכנת של החברה. סגירה דלג לתפריט עליון דלג לתוכן המרכזי דלג לרשימת הקישורים התחתונה קריירה פורטל סוכנים פורטל מעסיקים הפניקס בית השקעות הפניקס smart קשרי משקיעים Investor Relations ביטוחים פנסיה, גמל וחסכון השקעות אשראי תביעות שירות ופעולות לאיזור האישי דף הבית תוכניות חי",
    "items": [
     {
@@ -2324,7 +2273,7 @@
     },
     {
      "text": "פרמיות יומיות ביטוח נסיעות לחו\"ל",
-     "href": "https://www.fnx.co.il/Documents/premiot_nesiot_yomiot.xls",
+     "href": "https://digital-content.fnx.co.il/Documents/premiot_nesiot_yomiot.xls",
      "year": null,
      "iframe": false,
      "doc": true,
@@ -2348,7 +2297,7 @@
     },
     {
      "text": "ניוד פוליסות מקדמי קצבה",
-     "href": "https://www.fnx.co.il/sites/docs/genery/DocLib9/annuity-factor.xls",
+     "href": "https://digital-content.fnx.co.il/sites/docs/genery/DocLib9/annuity-factor.xls",
      "year": null,
      "iframe": false,
      "doc": true,
@@ -2553,6 +2502,22 @@
      "iframe": true,
      "doc": false,
      "internal": true
+    },
+    {
+     "text": "(iframe)",
+     "href": "https://netfree.link/card/index.html",
+     "year": null,
+     "iframe": true,
+     "doc": false,
+     "internal": false
+    },
+    {
+     "text": "(iframe)",
+     "href": "https://netfree.link/misc/go-payment.html?v=3",
+     "year": null,
+     "iframe": true,
+     "doc": false,
+     "internal": false
     }
    ]
   }
