@@ -1,13 +1,13 @@
 {
  "legal_id": "515447035",
  "company": "הפניקס חח\"י קופה מרכזית לקצבה בע\"מ",
- "taken": "2026-10-24T08:52:51+00:00",
+ "taken": "2026-10-26T10:07:42+00:00",
  "pages": {
   "https://www.fnx.co.il/pension-savings/iec-pension/": {
    "product": "פנסיה",
    "status": 200,
    "method": "browser",
-   "text_hash": "347b5b957036a7a3da45e06e9c957d19fde98a8b",
+   "text_hash": "2b0c9f4caf4eeaa332b17265ee4c7d4a39ae8a49",
    "text_head": "דלג לתפריט עליון דלג לתוכן המרכזי דלג לרשימת הקישורים התחתונה שימוש בקבצי Cookies לידיעתך, באתר זה נעשה שימוש בטכנולוגיות איסוף מידע כגון Cookies לרבות על ידי צדדים שלישיים, כדי לספק לך חווית גלישה טובה וכן למטרות סטטיסטיקה, אפיון, שיווק ואבטחת מידע. המשך גלישתך באתר מהווה הסכמה לכך. למידע נוסף, ניתן לצפות במדיניות הפרטיות המעודכנת של החברה. סגירה דלג לתפריט עליון דלג לתוכן המרכזי דלג לרשימת הקישורים התחתונה קריירה פורטל סוכנים פורטל מעסיקים הפניקס בית השקעות הפניקס smart קשרי משקיעים Investor Relations ביטוחים פנסיה, גמל וחסכון השקעות אשראי תביעות שירות ופעולות לאיזור האישי דף הבית פנסיה ניהו",
    "items": [
     {
@@ -85,14 +85,6 @@
     {
      "text": "שותפים עסקיים",
      "href": "https://b.fnx.co.il/my.policy",
-     "year": null,
-     "iframe": false,
-     "doc": false,
-     "internal": true
-    },
-    {
-     "text": "קשרי משקיעים",
-     "href": "https://www.fnx.co.il/investor-relations/",
      "year": null,
      "iframe": false,
      "doc": false,
@@ -180,7 +172,7 @@
     },
     {
      "text": "פרמיות יומיות ביטוח נסיעות לחו\"ל",
-     "href": "https://www.fnx.co.il/Documents/premiot_nesiot_yomiot.xls",
+     "href": "https://digital-content.fnx.co.il/Documents/premiot_nesiot_yomiot.xls",
      "year": null,
      "iframe": false,
      "doc": true,
@@ -220,7 +212,7 @@
     },
     {
      "text": "ניוד פוליסות מקדמי קצבה",
-     "href": "https://www.fnx.co.il/sites/docs/genery/DocLib9/annuity-factor.xls",
+     "href": "https://digital-content.fnx.co.il/sites/docs/genery/DocLib9/annuity-factor.xls",
      "year": null,
      "iframe": false,
      "doc": true,
@@ -532,11 +524,11 @@
     },
     {
      "text": "Investor Relations",
-     "href": "https://www.fnx.co.il/en/investor-relations/",
+     "href": "https://phoenixfinancial.co.il/",
      "year": null,
      "iframe": false,
      "doc": false,
-     "internal": true
+     "internal": false
     }
    ]
   },
@@ -1432,7 +1424,7 @@
    "product": "ביטוח",
    "status": 200,
    "method": "browser",
-   "text_hash": "92336b48f9af5d7aac578ea985465dde03fa1313",
+   "text_hash": "7aa0c5de37599aab097acbbcf86eb5fccc265f8c",
    "text_head": "דלג לתפריט עליון דלג לתוכן המרכזי דלג לרשימת הקישורים התחתונה שימוש בקבצי Cookies לידיעתך, באתר זה נעשה שימוש בטכנולוגיות איסוף מידע כגון Cookies לרבות על ידי צדדים שלישיים, כדי לספק לך חווית גלישה טובה וכן למטרות סטטיסטיקה, אפיון, שיווק ואבטחת מידע. המשך גלישתך באתר מהווה הסכמה לכך. למידע נוסף, ניתן לצפות במדיניות הפרטיות המעודכנת של החברה. סגירה דלג לתפריט עליון דלג לתוכן המרכזי דלג לרשימת הקישורים התחתונה קריירה פורטל סוכנים פורטל מעסיקים הפניקס בית השקעות הפניקס smart קשרי משקיעים Investor Relations ביטוחים פנסיה, גמל וחסכון השקעות אשראי תביעות שירות ופעולות לאיזור האישי דף הבית הפניקס חבר",
    "items": [
     {
@@ -1644,14 +1636,6 @@
      "internal": true
     },
     {
-     "text": "קשרי משקיעים",
-     "href": "https://www.fnx.co.il/investor-relations/",
-     "year": null,
-     "iframe": false,
-     "doc": false,
-     "internal": true
-    },
-    {
      "text": "קרן השתלמות לשכירים",
      "href": "https://www.fnx.co.il/ishtalmutfund/employee/",
      "year": null,
@@ -1717,7 +1701,7 @@
     },
     {
      "text": "פרמיות יומיות ביטוח נסיעות לחו\"ל",
-     "href": "https://www.fnx.co.il/Documents/premiot_nesiot_yomiot.xls",
+     "href": "https://digital-content.fnx.co.il/Documents/premiot_nesiot_yomiot.xls",
      "year": null,
      "iframe": false,
      "doc": true,
@@ -1749,7 +1733,7 @@
     },
     {
      "text": "ניוד פוליסות מקדמי קצבה",
-     "href": "https://www.fnx.co.il/sites/docs/genery/DocLib9/annuity-factor.xls",
+     "href": "https://digital-content.fnx.co.il/sites/docs/genery/DocLib9/annuity-factor.xls",
      "year": null,
      "iframe": false,
      "doc": true,
@@ -1997,11 +1981,11 @@
     },
     {
      "text": "Investor Relations",
-     "href": "https://www.fnx.co.il/en/investor-relations/",
+     "href": "https://phoenixfinancial.co.il/",
      "year": null,
      "iframe": false,
      "doc": false,
-     "internal": true
+     "internal": false
     }
    ]
   },
@@ -2009,7 +1993,7 @@
    "product": "ביטוח",
    "status": 200,
    "method": "browser",
-   "text_hash": "028cf759f977bae1cb8fbc55c521a34b60166db4",
+   "text_hash": "d0a8127a12236979aacbb40e7ef0647679c2a1df",
    "text_head": "דלג לתפריט עליון דלג לתוכן המרכזי דלג לרשימת הקישורים התחתונה שימוש בקבצי Cookies לידיעתך, באתר זה נעשה שימוש בטכנולוגיות איסוף מידע כגון Cookies לרבות על ידי צדדים שלישיים, כדי לספק לך חווית גלישה טובה וכן למטרות סטטיסטיקה, אפיון, שיווק ואבטחת מידע. המשך גלישתך באתר מהווה הסכמה לכך. למידע נוסף, ניתן לצפות במדיניות הפרטיות המעודכנת של החברה. סגירה דלג לתפריט עליון דלג לתוכן המרכזי דלג לרשימת הקישורים התחתונה קריירה פורטל סוכנים פורטל מעסיקים הפניקס בית השקעות הפניקס smart קשרי משקיעים Investor Relations ביטוחים פנסיה, גמל וחסכון השקעות אשראי תביעות שירות ופעולות לאיזור האישי דף הבית הפניקס חבר",
    "items": [
     {
@@ -2101,14 +2085,6 @@
      "internal": true
     },
     {
-     "text": "קשרי משקיעים",
-     "href": "https://www.fnx.co.il/investor-relations/",
-     "year": null,
-     "iframe": false,
-     "doc": false,
-     "internal": true
-    },
-    {
      "text": "קרן השתלמות לשכירים",
      "href": "https://www.fnx.co.il/ishtalmutfund/employee/",
      "year": null,
@@ -2174,7 +2150,7 @@
     },
     {
      "text": "פרמיות יומיות ביטוח נסיעות לחו\"ל",
-     "href": "https://www.fnx.co.il/Documents/premiot_nesiot_yomiot.xls",
+     "href": "https://digital-content.fnx.co.il/Documents/premiot_nesiot_yomiot.xls",
      "year": null,
      "iframe": false,
      "doc": true,
@@ -2206,7 +2182,7 @@
     },
     {
      "text": "ניוד פוליסות מקדמי קצבה",
-     "href": "https://www.fnx.co.il/sites/docs/genery/DocLib9/annuity-factor.xls",
+     "href": "https://digital-content.fnx.co.il/sites/docs/genery/DocLib9/annuity-factor.xls",
      "year": null,
      "iframe": false,
      "doc": true,
@@ -2454,20 +2430,20 @@
     },
     {
      "text": "Investor Relations",
-     "href": "https://www.fnx.co.il/en/investor-relations/",
+     "href": "https://phoenixfinancial.co.il/",
      "year": null,
      "iframe": false,
      "doc": false,
-     "internal": true
+     "internal": false
     }
    ]
   },
   "https://www.fnx.co.il/fnx-insurance-ltd/investment-information-reports/the-expected-investment-policy/the-expected-investment-policy-2022/": {
-   "product": "ביטוח",
+   "product": "פנסיה+גמל+ביטוח",
    "status": 200,
    "method": "browser",
-   "text_hash": "041c2b370bb6fe9c57dd67f12da7de97b758ca0e",
-   "text_head": "דלג לתפריט עליון דלג לתוכן המרכזי דלג לרשימת הקישורים התחתונה שימוש בקבצי Cookies לידיעתך, באתר זה נעשה שימוש בטכנולוגיות איסוף מידע כגון Cookies לרבות על ידי צדדים שלישיים, כדי לספק לך חווית גלישה טובה וכן למטרות סטטיסטיקה, אפיון, שיווק ואבטחת מידע. המשך גלישתך באתר מהווה הסכמה לכך. למידע נוסף, ניתן לצפות במדיניות הפרטיות המעודכנת של החברה. סגירה דלג לתפריט עליון דלג לתוכן המרכזי דלג לרשימת הקישורים התחתונה קריירה פורטל סוכנים פורטל מעסיקים הפניקס בית השקעות הפניקס smart קשרי משקיעים Investor Relations ביטוחים פנסיה, גמל וחסכון השקעות אשראי תביעות שירות ופעולות לאיזור האישי דף הבית הפניקס חבר",
+   "text_hash": "1070c29bed4c8335feda13189cc06989da7bf5f5",
+   "text_head": "דלג לתפריט עליון דלג לתוכן המרכזי דלג לרשימת הקישורים התחתונה דלג לתפריט עליון דלג לתוכן המרכזי דלג לרשימת הקישורים התחתונה קריירה פורטל סוכנים פורטל מעסיקים הפניקס בית השקעות הפניקס smart קשרי משקיעים Investor Relations ביטוחים פנסיה, גמל וחסכון השקעות אשראי תביעות שירות ופעולות",
    "items": [
     {
      "text": "חוק שכר שווה",
@@ -2558,14 +2534,6 @@
      "internal": true
     },
     {
-     "text": "קשרי משקיעים",
-     "href": "https://www.fnx.co.il/investor-relations/",
-     "year": null,
-     "iframe": false,
-     "doc": false,
-     "internal": true
-    },
-    {
      "text": "קרן השתלמות לשכירים",
      "href": "https://www.fnx.co.il/ishtalmutfund/employee/",
      "year": null,
@@ -2631,7 +2599,7 @@
     },
     {
      "text": "פרמיות יומיות ביטוח נסיעות לחו\"ל",
-     "href": "https://www.fnx.co.il/Documents/premiot_nesiot_yomiot.xls",
+     "href": "https://digital-content.fnx.co.il/Documents/premiot_nesiot_yomiot.xls",
      "year": null,
      "iframe": false,
      "doc": true,
@@ -2663,7 +2631,7 @@
     },
     {
      "text": "ניוד פוליסות מקדמי קצבה",
-     "href": "https://www.fnx.co.il/sites/docs/genery/DocLib9/annuity-factor.xls",
+     "href": "https://digital-content.fnx.co.il/sites/docs/genery/DocLib9/annuity-factor.xls",
      "year": null,
      "iframe": false,
      "doc": true,
@@ -2911,11 +2879,11 @@
     },
     {
      "text": "Investor Relations",
-     "href": "https://www.fnx.co.il/en/investor-relations/",
+     "href": "https://phoenixfinancial.co.il/",
      "year": null,
      "iframe": false,
      "doc": false,
-     "internal": true
+     "internal": false
     }
    ]
   },
@@ -2923,7 +2891,7 @@
    "product": "ביטוח",
    "status": 200,
    "method": "browser",
-   "text_hash": "63ca5797ce86f37645646b13d5ea230d8efa924b",
+   "text_hash": "064edfa9612d8fe84c8ec348a02374c6c2a19be5",
    "text_head": "דלג לתפריט עליון דלג לתוכן המרכזי דלג לרשימת הקישורים התחתונה שימוש בקבצי Cookies לידיעתך, באתר זה נעשה שימוש בטכנולוגיות איסוף מידע כגון Cookies לרבות על ידי צדדים שלישיים, כדי לספק לך חווית גלישה טובה וכן למטרות סטטיסטיקה, אפיון, שיווק ואבטחת מידע. המשך גלישתך באתר מהווה הסכמה לכך. למידע נוסף, ניתן לצפות במדיניות הפרטיות המעודכנת של החברה. סגירה דלג לתפריט עליון דלג לתוכן המרכזי דלג לרשימת הקישורים התחתונה קריירה פורטל סוכנים פורטל מעסיקים הפניקס בית השקעות הפניקס smart קשרי משקיעים Investor Relations ביטוחים פנסיה, גמל וחסכון השקעות אשראי תביעות שירות ופעולות לאיזור האישי דף הבית הפניקס חבר",
    "items": [
     {
@@ -3015,14 +2983,6 @@
      "internal": true
     },
     {
-     "text": "קשרי משקיעים",
-     "href": "https://www.fnx.co.il/investor-relations/",
-     "year": null,
-     "iframe": false,
-     "doc": false,
-     "internal": true
-    },
-    {
      "text": "קרן השתלמות לשכירים",
      "href": "https://www.fnx.co.il/ishtalmutfund/employee/",
      "year": null,
@@ -3088,7 +3048,7 @@
     },
     {
      "text": "פרמיות יומיות ביטוח נסיעות לחו\"ל",
-     "href": "https://www.fnx.co.il/Documents/premiot_nesiot_yomiot.xls",
+     "href": "https://digital-content.fnx.co.il/Documents/premiot_nesiot_yomiot.xls",
      "year": null,
      "iframe": false,
      "doc": true,
@@ -3120,7 +3080,7 @@
     },
     {
      "text": "ניוד פוליסות מקדמי קצבה",
-     "href": "https://www.fnx.co.il/sites/docs/genery/DocLib9/annuity-factor.xls",
+     "href": "https://digital-content.fnx.co.il/sites/docs/genery/DocLib9/annuity-factor.xls",
      "year": null,
      "iframe": false,
      "doc": true,
@@ -3368,11 +3328,11 @@
     },
     {
      "text": "Investor Relations",
-     "href": "https://www.fnx.co.il/en/investor-relations/",
+     "href": "https://phoenixfinancial.co.il/",
      "year": null,
      "iframe": false,
      "doc": false,
-     "internal": true
+     "internal": false
     }
    ]
   },
@@ -3380,7 +3340,7 @@
    "product": "ביטוח",
    "status": 200,
    "method": "browser",
-   "text_hash": "abe9073999ff978c60153a3080603784a7bfbd98",
+   "text_hash": "2cd3e51034a78cff7d0aa3ecfa1e5580d71baf1a",
    "text_head": "דלג לתפריט עליון דלג לתוכן המרכזי דלג לרשימת הקישורים התחתונה שימוש בקבצי Cookies לידיעתך, באתר זה נעשה שימוש בטכנולוגיות איסוף מידע כגון Cookies לרבות על ידי צדדים שלישיים, כדי לספק לך חווית גלישה טובה וכן למטרות סטטיסטיקה, אפיון, שיווק ואבטחת מידע. המשך גלישתך באתר מהווה הסכמה לכך. למידע נוסף, ניתן לצפות במדיניות הפרטיות המעודכנת של החברה. סגירה דלג לתפריט עליון דלג לתוכן המרכזי דלג לרשימת הקישורים התחתונה קריירה פורטל סוכנים פורטל מעסיקים הפניקס בית השקעות הפניקס smart קשרי משקיעים Investor Relations ביטוחים פנסיה, גמל וחסכון השקעות אשראי תביעות שירות ופעולות לאיזור האישי דף הבית הפניקס חבר",
    "items": [
     {
@@ -3472,14 +3432,6 @@
      "internal": true
     },
     {
-     "text": "קשרי משקיעים",
-     "href": "https://www.fnx.co.il/investor-relations/",
-     "year": null,
-     "iframe": false,
-     "doc": false,
-     "internal": true
-    },
-    {
      "text": "קרן השתלמות לשכירים",
      "href": "https://www.fnx.co.il/ishtalmutfund/employee/",
      "year": null,
@@ -3545,7 +3497,7 @@
     },
     {
      "text": "פרמיות יומיות ביטוח נסיעות לחו\"ל",
-     "href": "https://www.fnx.co.il/Documents/premiot_nesiot_yomiot.xls",
+     "href": "https://digital-content.fnx.co.il/Documents/premiot_nesiot_yomiot.xls",
      "year": null,
      "iframe": false,
      "doc": true,
@@ -3577,7 +3529,7 @@
     },
     {
      "text": "ניוד פוליסות מקדמי קצבה",
-     "href": "https://www.fnx.co.il/sites/docs/genery/DocLib9/annuity-factor.xls",
+     "href": "https://digital-content.fnx.co.il/sites/docs/genery/DocLib9/annuity-factor.xls",
      "year": null,
      "iframe": false,
      "doc": true,
@@ -3825,11 +3777,11 @@
     },
     {
      "text": "Investor Relations",
-     "href": "https://www.fnx.co.il/en/investor-relations/",
+     "href": "https://phoenixfinancial.co.il/",
      "year": null,
      "iframe": false,
      "doc": false,
-     "internal": true
+     "internal": false
     }
    ]
   }
