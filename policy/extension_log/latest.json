@@ -1,7 +1,7 @@
 {
  "extension_version": "2.53.0",
  "started": "2026-10-26T10:49:26.504Z",
- "updated": "2026-10-26T11:31:26.610Z",
+ "updated": "2026-10-26T11:34:26.602Z",
  "final": false,
  "stopped": false,
  "rules_from_github": true,
@@ -24,7 +24,7 @@
   "_note_returns": "returns_rx: קבצי מרכיבי תשואה לאתרי kind=returns (מוגדרים ב-extension_sites.json מ-returns_extension בהגדרות האתר); נשמרים ב-policy/inbox/<id>/returns/"
  },
  "total_sites": 22,
- "done_sites": 10,
+ "done_sites": 13,
  "new_docs": 0,
  "skipped_complete": [
   {
@@ -42,11 +42,11 @@
  ],
  "active": [
   {
-   "name": "עגור חברה לניהול קופות גמל וקרנות השתלמות בע\"מ - מרכיבי תשואה",
-   "page": "https://kereni.co.il/%d7%aa%d7%a9%d7%95%d7%90%d7%94-%d7%a2%d7%9c-%d7%9e%d7%a8%d7%9b%d7%99%d7%91%d7%99%d7%94-%d7%93%d7%9e%d7%99-%d7%a0%d7%99%d7%94%d7%95%d7%9c-%d7%95%d7%94%d7%95%d7%a6%d7%90%d7%95%d7%aa-%d7%99%d7%a9%d7%99/",
-   "page_no": 6,
-   "pages": 7,
-   "step": "מוריד קובץ 90/94"
+   "name": "מנורה מבטחים והסתדרות המהנדסים ניהול קופות גמל בע\"מ",
+   "page": "https://www.menoramivt.co.il/funds/about-menora/engineers/omega-fund/omega-9803",
+   "page_no": 4,
+   "pages": 13,
+   "step": "בודק אם העמוד השתנה"
   }
  ],
  "sites": [
@@ -37877,6 +37877,1282 @@
    ],
    "diag": [
     "עגור חברה לניהול ק: links=208 files=173 clicked=0 captured=0 selected=84"
+   ],
+   "new_files": []
+  },
+  {
+   "legal_id": "520024985",
+   "name": "עגור חברה לניהול קופות גמל וקרנות השתלמות בע\"מ - מרכיבי תשואה",
+   "pages": [
+    {
+     "url": "https://kereni.co.il",
+     "cache": "expired",
+     "links": 123,
+     "followed": [
+      "https://kereni.co.il/%d7%93%d7%91%d7%a8%d7%99-%d7%99%d7%95%d7%a8-%d7%a7%d7%a8%d7%9f-%d7%94%d7%94%d7%a9%d7%aa%d7%9c%d7%9e%d7%95%d7%aa/",
+      "https://kereni.co.il/%d7%a7%d7%a8%d7%9f-%d7%94%d7%94%d7%a9%d7%aa%d7%9c%d7%9e%d7%95%d7%aa-%d7%9c%d7%a2%d7%95%d7%91%d7%93%d7%99-%d7%94%d7%95%d7%a8%d7%90%d7%94-%d7%a9%d7%9c-%d7%90%d7%a8%d7%92%d7%95%d7%9f-%d7%94%d7%9e%d7%95/",
+      "https://kereni.co.il/%d7%9e%d7%93%d7%99%d7%a0%d7%99%d7%95%d7%aa-%d7%94%d7%a9%d7%a7%d7%a2%d7%94-%d7%95%d7%a0%d7%94%d7%9c%d7%99%d7%9d/",
+      "https://kereni.co.il/%d7%93%d7%95%d7%97%d7%95%d7%aa-%d7%9b%d7%a1%d7%a4%d7%99%d7%99%d7%9d/",
+      "https://kereni.co.il/%d7%aa%d7%a9%d7%95%d7%90%d7%94-%d7%a2%d7%9c-%d7%9e%d7%a8%d7%9b%d7%99%d7%91%d7%99%d7%94-%d7%93%d7%9e%d7%99-%d7%a0%d7%99%d7%94%d7%95%d7%9c-%d7%95%d7%94%d7%95%d7%a6%d7%90%d7%95%d7%aa-%d7%99%d7%a9%d7%99/"
+     ],
+     "files": 0,
+     "clicked": 0,
+     "captured": 0,
+     "selected": [],
+     "unselected_files": []
+    },
+    {
+     "url": "https://kereni.co.il/%d7%93%d7%91%d7%a8%d7%99-%d7%99%d7%95%d7%a8-%d7%a7%d7%a8%d7%9f-%d7%94%d7%94%d7%a9%d7%aa%d7%9c%d7%9e%d7%95%d7%aa/",
+     "cache": "expired",
+     "links": 108,
+     "followed": [],
+     "files": 0,
+     "clicked": 0,
+     "captured": 0,
+     "selected": [],
+     "unselected_files": []
+    },
+    {
+     "url": "https://kereni.co.il/%d7%a7%d7%a8%d7%9f-%d7%94%d7%94%d7%a9%d7%aa%d7%9c%d7%9e%d7%95%d7%aa-%d7%9c%d7%a2%d7%95%d7%91%d7%93%d7%99-%d7%94%d7%95%d7%a8%d7%90%d7%94-%d7%a9%d7%9c-%d7%90%d7%a8%d7%92%d7%95%d7%9f-%d7%94%d7%9e%d7%95/",
+     "cache": "hit",
+     "links": 18,
+     "followed": [],
+     "files": 0,
+     "clicked": 0,
+     "captured": 0,
+     "selected": [],
+     "unselected_files": []
+    },
+    {
+     "url": "https://kereni.co.il/%d7%9e%d7%93%d7%99%d7%a0%d7%99%d7%95%d7%aa-%d7%94%d7%a9%d7%a7%d7%a2%d7%94-%d7%95%d7%a0%d7%94%d7%9c%d7%99%d7%9d/",
+     "cache": "hit",
+     "links": 208,
+     "followed": [
+      "https://kereni.co.il/%D7%9E%D7%93%D7%99%D7%A0%D7%99%D7%95%D7%AA-%D7%94%D7%A9%D7%A7%D7%A2%D7%94-%D7%95%D7%A0%D7%94%D7%9C%D7%99%D7%9D/"
+     ],
+     "files": 173,
+     "clicked": 0,
+     "captured": 0,
+     "selected": [],
+     "unselected_files": [
+      {
+       "file": "https://kereni.co.il/wp-content/uploads/2024/01/על_יסודי-_מגבלת_עמלות_ניהול_חיצוני_2024__1_-1-1.xlsxhttps://kereni.co.il/wp-content/uploads/2024/01/על_יסודי-_מגבלת_עמלות_ניהול_חיצוני_2024__1_-1-1.xlsx",
+       "text": "מגבלת עמלות ניהול חיצוני 2024",
+       "ctx": "מגבלת עמלות ניהול חיצוני 2024"
+      },
+      {
+       "file": "https://kereni.co.il/wp-content/uploads/2024/01/על_יסודי-_מגבלת_עמלות_ניהול_חיצוני_2023.xlsx",
+       "text": "מגבלת עמלות ניהול חיצוני 2023",
+       "ctx": "מגבלת עמלות ניהול חיצוני 2023"
+      },
+      {
+       "file": "https://kereni.co.il/wp-content/uploads/2024/01/מדיניות_מוצהרת_מסלול_כללי_2024-1.xls",
+       "text": "מדיניות השקעה מוצהרת- על יסודי 2024",
+       "ctx": "מדיניות השקעה מוצהרת- על יסודי 2024"
+      },
+      {
+       "file": "https://kereni.co.il/wp-content/uploads/2024/01/עותק_של_עגור-_מדיניות_מוצהרת_2023_עיס_ומישור_שינויי_מיום_25.10.23.xls",
+       "text": "מדיניות השקעה מוצהרת מעודכן החל מ-05.11.23 – על יסודי 2023",
+       "ctx": "מדיניות השקעה מוצהרת מעודכן החל מ-05.11.23 – על יסודי 2023"
+      },
+      {
+       "file": "https://kereni.co.il/wp-content/uploads/2024/01/עגור-_מדיניות_מוצהרת_2023_עיס_ומישור_שינויי_מיום_26.07.23.xls",
+       "text": "מדיניות השקעה מוצהרת מעודכן החל מ-31.07.23 – על יסודי 2023",
+       "ctx": "מדיניות השקעה מוצהרת מעודכן החל מ-31.07.23 – על יסודי 2023"
+      },
+      {
+       "file": "https://kereni.co.il/wp-content/uploads/2024/01/עותק_של_עגור-_מדיניות_מוצהרת_2022_עיס_ומישור_מתוקן-9__1_.xls",
+       "text": "מדיניות השקעה מוצהרת מעודכן החל מ-13.06.23 – על יסודי 2023",
+       "ctx": "מדיניות השקעה מוצהרת מעודכן החל מ-13.06.23 – על יסודי 2023"
+      },
+      {
+       "file": "https://kereni.co.il/wp-content/uploads/2024/01/עגור-_מדיניות_המלצה_למוצהרת_2023_עיס_ומישור1.xls",
+       "text": "מדיניות השקעה מוצהרת- על יסודי 2023",
+       "ctx": "מדיניות השקעה מוצהרת- על יסודי 2023"
+      },
+      {
+       "file": "https://kereni.co.il/wp-content/uploads/2024/01/מדיניות_השקעה_מוצהרת_מעודכן_החל_מ-13.06.23___על_יסודי_2023.xls",
+       "text": "מדיניות השקעה מוצהרת- על יסודי 2022",
+       "ctx": "מדיניות השקעה מוצהרת- על יסודי 2022"
+      },
+      {
+       "file": "https://kereni.co.il/wp-content/uploads/2024/01/מדניות_השקעה_מוצהרת_-_על_יסודי_2021.xlsx",
+       "text": "מדיניות השקעה מוצהרת מעודכן החל מ-8.7.2021 – על יסודי 2021",
+       "ctx": "מדיניות השקעה מוצהרת מעודכן החל מ-8.7.2021 – על יסודי 2021"
+      },
+      {
+       "file": "https://kereni.co.il/wp-content/uploads/2024/01/מדיניות_השקעות_מוצהרת_2021_על_יסודי_כללי_-_מעודכן_נכון_ל_08.07.21.xlsx.xls",
+       "text": "מדיניות השקעה מוצהרת- על יסודי 2021",
+       "ctx": "מדיניות השקעה מוצהרת- על יסודי 2021"
+      },
+      {
+       "file": "https://kereni.co.il/wp-content/uploads/2024/01/הצהרה_על_השקעות_אחראיות.pdf",
+       "text": "הצהרה על השקעות אחראיות",
+       "ctx": "הצהרה על השקעות אחראיות"
+      },
+      {
+       "file": "https://kereni.co.il/wp-content/uploads/2024/01/עגור_על_יסודי_כללי_מדיניות_מוצהרת_2020.xlsx",
+       "text": "מדיניות השקעה מוצהרת- על יסודי 2020 עודכן בדירקטוריון מיום 1.4.20",
+       "ctx": "מדיניות השקעה מוצהרת- על יסודי 2020 עודכן בדירקטוריון מיום 1.4.20"
+      },
+      {
+       "file": "https://kereni.co.il/wp-content/uploads/2024/01/מדיניות_מוצהרת_2020_עגור_על_יסודי.xls",
+       "text": "מדיניות השקעה מוצהרת- על יסודי 2020",
+       "ctx": "מדיניות השקעה מוצהרת- על יסודי 2020"
+      },
+      {
+       "file": "https://kereni.co.il/wp-content/uploads/2024/01/2019-policyAlYesodi.xls",
+       "text": "מדיניות השקעה מוצהרת- על יסודי 2019",
+       "ctx": "מדיניות השקעה מוצהרת- על יסודי 2019"
+      },
+      {
+       "file": "https://kereni.co.il/wp-content/uploads/2024/01/7442.xls",
+       "text": "מדיניות מוצהרת- על יסודי אושר בדירקטוריון מיום 25.4.18.",
+       "ctx": "מדיניות מוצהרת- על יסודי אושר בדירקטוריון מיום 25.4.18."
+      },
+      {
+       "file": "https://kereni.co.il/wp-content/uploads/2024/01/7272.xls",
+       "text": "מדיניות השקעה מוצהרת- על יסודי 2018",
+       "ctx": "מדיניות השקעה מוצהרת- על יסודי 2018"
+      },
+      {
+       "file": "https://kereni.co.il/wp-content/uploads/2024/01/6756.xls",
+       "text": "מדיניות השקעה מוצהרת – עיס – 2017 ביחס ל-2016.",
+       "ctx": "מדיניות השקעה מוצהרת – עיס – 2017 ביחס ל-2016."
+      },
+      {
+       "file": "https://kereni.co.il/wp-content/uploads/2024/01/מדיניות_מוצהרת_מסלולים_כשרים_2024-1.xls",
+       "text": "מדיניות השקעה מוצהרת- מסלולים כשרים 2024",
+       "ctx": "מדיניות השקעה מוצהרת- מסלולים כשרים 2024"
+      },
+      {
+       "file": "https://kereni.co.il/wp-content/uploads/2024/01/עגור-_מדיניות_מוצהרת_2023_מסלולים_כשרים_שינויי_31.07.23.xls",
+       "text": "מדיניות מוצהרת 2023 מסלולים כשרים שינוי מיום 31.07.23",
+       "ctx": "מדיניות מוצהרת 2023 מסלולים כשרים שינוי מיום 31.07.23"
+      },
+      {
+       "file": "https://kereni.co.il/wp-content/uploads/2024/01/מדיניות_השקעה_מוצהרת-_מסלולים_כשרים_2023.xls",
+       "text": "מדיניות השקעה מוצהרת- מסלולים כשרים 2023",
+       "ctx": "מדיניות השקעה מוצהרת- מסלולים כשרים 2023"
+      },
+      {
+       "file": "https://kereni.co.il/wp-content/uploads/2024/01/עגור-_מדיניות_מוצהרת_2022_מסלולים_כשרים.xls",
+       "text": "מדיניות השקעה מוצהרת- מסלולים כשרים 2022",
+       "ctx": "מדיניות השקעה מוצהרת- מסלולים כשרים 2022"
+      },
+      {
+       "file": "https://kereni.co.il/wp-content/uploads/2024/01/מדיניות_השקעות_מוצהרת_2021_על_יסודי_מסלול_כשר_-_מעודכן_נכון_ל_08.07.21.xlsx",
+       "text": "מדיניות השקעה מוצהרת מעודכן החל מ-8.7.2021 – על יסודי מסלול הלכתי 2021",
+       "ctx": "מדיניות השקעה מוצהרת מעודכן החל מ-8.7.2021 – על יסודי מסלול הלכתי 2021"
+      },
+      {
+       "file": "https://kereni.co.il/wp-content/uploads/2024/01/מדניות_השקעה_מוצהרת_-_על_יסודי_הלכתי_2021.xls",
+       "text": "מדיניות השקעה מוצהרת – על יסודי- מסלול הלכתי 2021",
+       "ctx": "מדיניות השקעה מוצהרת – על יסודי- מסלול הלכתי 2021"
+      },
+      {
+       "file": "https://kereni.co.il/wp-content/uploads/2024/01/מדיניות_מוצהרת_עגור_על-יסודי_כשר_עדכון_1_אפריל_2020.xlsx",
+       "text": "מדיניות השקעה מוצהרת- על יסודי מסלול הלכתי 2020 עודכן בדירקטוריון מיום 1.4.20",
+       "ctx": "מדיניות השקעה מוצהרת- על יסודי מסלול הלכתי 2020 עודכן בדירקטוריון מיום 1.4.20"
+      },
+      {
+       "file": "https://kereni.co.il/wp-content/uploads/2024/01/מדיניות_מוצהרת_עגור_על_יסודי_מסלול_אגח.xlsx",
+       "text": "מדיניות השקעה מוצהרת – על יסודי- מסלול הלכתי 2020",
+       "ctx": "מדיניות השקעה מוצהרת – על יסודי- מסלול הלכתי 2020"
+      }
+     ]
+    },
+    {
+     "url": "https://kereni.co.il/%d7%93%d7%95%d7%97%d7%95%d7%aa-%d7%9b%d7%a1%d7%a4%d7%99%d7%99%d7%9d/",
+     "cache": "hit",
+     "links": 162,
+     "followed": [],
+     "files": 126,
+     "clicked": 0,
+     "captured": 0,
+     "selected": [],
+     "unselected_files": [
+      {
+       "file": "https://kereni.co.il/wp-content/uploads/2025/11/G282A_425-1.pdf",
+       "text": "דוחות כספיים מישור לשנת תשפ”ה",
+       "ctx": "דוחות כספיים מישור לשנת תשפ”ה"
+      },
+      {
+       "file": "https://kereni.co.il/wp-content/uploads/2024/11/G282A_424-1.pdf",
+       "text": "דוחות כספיים מישור לשנת תשפ”ד",
+       "ctx": "דוחות כספיים מישור לשנת תשפ”ד"
+      },
+      {
+       "file": "https://kereni.co.il/wp-content/uploads/2024/02/G282A_423.pdf",
+       "text": "דוחות כספיים מישור לשנת תשפ”ג",
+       "ctx": "דוחות כספיים מישור לשנת תשפ”ג"
+      },
+      {
+       "file": "https://kereni.co.il/wp-content/uploads/2024/02/G282A_422-1.pdf",
+       "text": "דוחות כספיים מישור לשנת תשפ”ב",
+       "ctx": "דוחות כספיים מישור לשנת תשפ”ב"
+      },
+      {
+       "file": "https://kereni.co.il/wp-content/uploads/2024/02/G282A_421-1.pdf",
+       "text": "דוחות כספיים מישור לשנת תשפ”א",
+       "ctx": "דוחות כספיים מישור לשנת תשפ”א"
+      },
+      {
+       "file": "https://kereni.co.il/wp-content/uploads/2024/02/מישור_2020_1_2-1.pdf",
+       "text": "דוחות כספיים מישור לשנת תש”פ",
+       "ctx": "דוחות כספיים מישור לשנת תש”פ"
+      },
+      {
+       "file": "https://kereni.co.il/wp-content/uploads/2025/11/G482A_425.pdf",
+       "text": "דוחות כספיים על יסודי לשנת תשפ”ה",
+       "ctx": "דוחות כספיים על יסודי לשנת תשפ”ה"
+      },
+      {
+       "file": "https://kereni.co.il/wp-content/uploads/2024/11/G482A_424.pdf",
+       "text": "דוחות כספיים על יסודי לשנת תשפ”ד",
+       "ctx": "דוחות כספיים על יסודי לשנת תשפ”ד"
+      },
+      {
+       "file": "https://kereni.co.il/wp-content/uploads/2024/02/G482A_423.pdf",
+       "text": "דוחות כספיים על יסודי לשנת תשפ”ג",
+       "ctx": "דוחות כספיים על יסודי לשנת תשפ”ג"
+      },
+      {
+       "file": "https://kereni.co.il/wp-content/uploads/2024/02/G482A_422.pdf",
+       "text": "דוחות כספיים על יסודי לשנת תשפ”ב",
+       "ctx": "דוחות כספיים על יסודי לשנת תשפ”ב"
+      },
+      {
+       "file": "https://kereni.co.il/wp-content/uploads/2024/02/G482A_421.pdf",
+       "text": "דוחות כספיים על יסודי לשנת תשפ”א",
+       "ctx": "דוחות כספיים על יסודי לשנת תשפ”א"
+      },
+      {
+       "file": "https://kereni.co.il/wp-content/uploads/2024/02/עיס_2020_1_2.pdf",
+       "text": "דוחות כספיים על יסודי לשנת תש”פ",
+       "ctx": "דוחות כספיים על יסודי לשנת תש”פ"
+      },
+      {
+       "file": "https://kereni.co.il/wp-content/uploads/2025/11/520024985A_425.pdf",
+       "text": "דוחות כספיים עגור לשנת תשפ”ה",
+       "ctx": "דוחות כספיים עגור לשנת תשפ”ה"
+      },
+      {
+       "file": "https://kereni.co.il/wp-content/uploads/2024/11/520024985A_424.pdf",
+       "text": "דוחות כספיים עגור לשנת תשפ”ד",
+       "ctx": "דוחות כספיים עגור לשנת תשפ”ד"
+      },
+      {
+       "file": "https://kereni.co.il/wp-content/uploads/2024/02/520024985A_423.pdf",
+       "text": "דוחות כספיים עגור לשנת תשפ”ג",
+       "ctx": "דוחות כספיים עגור לשנת תשפ”ג"
+      },
+      {
+       "file": "https://kereni.co.il/wp-content/uploads/2024/02/520024985A_422.pdf",
+       "text": "דוחות כספיים עגור לשנת תשפ”ב",
+       "ctx": "דוחות כספיים עגור לשנת תשפ”ב"
+      },
+      {
+       "file": "https://kereni.co.il/wp-content/uploads/2024/02/520024985A_421.pdf",
+       "text": "דוחות כספיים עגור לשנת תשפ”א",
+       "ctx": "דוחות כספיים עגור לשנת תשפ”א"
+      },
+      {
+       "file": "https://kereni.co.il/wp-content/uploads/2024/02/עגור_2020_1_2.pdf",
+       "text": "דוחות כספיים עגור לשנת תש”פ",
+       "ctx": "דוחות כספיים עגור לשנת תש”פ"
+      },
+      {
+       "file": "https://kereni.co.il/wp-content/uploads/2026/07/520024985A_326.pdf",
+       "text": "דוחות כספיים עגור חברה מנהלת – רבעון 3 תשפ\"ו",
+       "ctx": "דוחות כספיים עגור חברה מנהלת – רבעון 3 תשפ\"ו"
+      },
+      {
+       "file": "https://kereni.co.il/wp-content/uploads/2026/04/520024985A_226.pdf",
+       "text": "דוחות כספיים עגור חברה מנהלת – רבעון 2 תשפ\"ו",
+       "ctx": "דוחות כספיים עגור חברה מנהלת – רבעון 2 תשפ\"ו"
+      },
+      {
+       "file": "https://kereni.co.il/wp-content/uploads/2026/01/520024985A_126.pdf",
+       "text": "דוחות כספיים עגור חברה מנהלת – רבעון 1 תשפ”ו",
+       "ctx": "דוחות כספיים עגור חברה מנהלת – רבעון 1 תשפ”ו"
+      },
+      {
+       "file": "https://kereni.co.il/wp-content/uploads/2025/07/520024985A_325.pdf",
+       "text": "דוחות כספיים עגור חברה מנהלת – רבעון 3 תשפ”ה",
+       "ctx": "דוחות כספיים עגור חברה מנהלת – רבעון 3 תשפ”ה"
+      },
+      {
+       "file": "https://kereni.co.il/wp-content/uploads/2025/04/520024985A_225.pdf",
+       "text": "דוחות כספיים עגור חברה מנהלת – רבעון 2 תשפ”ה",
+       "ctx": "דוחות כספיים עגור חברה מנהלת – רבעון 2 תשפ”ה"
+      },
+      {
+       "file": "https://kereni.co.il/wp-content/uploads/2025/01/520024985A_125.pdf",
+       "text": "דוחות כספיים עגור חברה מנהלת – רבעון 1 תשפ”ה",
+       "ctx": "דוחות כספיים עגור חברה מנהלת – רבעון 1 תשפ”ה"
+      },
+      {
+       "file": "https://kereni.co.il/wp-content/uploads/2024/07/520024985A_324.pdf",
+       "text": "דוחות כספיים עגור חברה מנהלת – רבעון 3 תשפ”ד",
+       "ctx": "דוחות כספיים עגור חברה מנהלת – רבעון 3 תשפ”ד"
+      }
+     ]
+    },
+    {
+     "url": "https://kereni.co.il/%d7%aa%d7%a9%d7%95%d7%90%d7%94-%d7%a2%d7%9c-%d7%9e%d7%a8%d7%9b%d7%99%d7%91%d7%99%d7%94-%d7%93%d7%9e%d7%99-%d7%a0%d7%99%d7%94%d7%95%d7%9c-%d7%95%d7%94%d7%95%d7%a6%d7%90%d7%95%d7%aa-%d7%99%d7%a9%d7%99/",
+     "cache": "hit",
+     "links": 400,
+     "followed": [],
+     "files": 387,
+     "clicked": 0,
+     "captured": 0,
+     "selected": [
+      "https://kereni.co.il/wp-content/uploads/2026/07/520024985_g282_Yield226.xlsx",
+      "https://kereni.co.il/wp-content/uploads/2026/05/520024985_g282_Yield126.xlsx",
+      "https://kereni.co.il/wp-content/uploads/2026/01/520024985_g282_Yield425.xlsx",
+      "https://kereni.co.il/wp-content/uploads/2025/10/520024985_g282_Yield325.xlsx",
+      "https://kereni.co.il/wp-content/uploads/2025/07/520024985_g282_Yield225.xlsx",
+      "https://kereni.co.il/wp-content/uploads/2025/04/520024985_g282_Yield125.xlsx",
+      "https://kereni.co.il/wp-content/uploads/2025/01/520024985_g282_Yield424.xlsx",
+      "https://kereni.co.il/wp-content/uploads/2024/11/520024985_g282_Yield324.xlsx",
+      "https://kereni.co.il/wp-content/uploads/2024/07/520024985_g282_Yield224.xlsx",
+      "https://kereni.co.il/wp-content/uploads/2024/04/520024985_g282_Yield124.xlsx",
+      "https://kereni.co.il/wp-content/uploads/2024/01/520024985_g282_Yield423.xlsx",
+      "https://kereni.co.il/wp-content/uploads/2024/01/520024985_g282_Yield323.xlsx",
+      "https://kereni.co.il/wp-content/uploads/2024/01/520024985_g282_Yield223.xlsx",
+      "https://kereni.co.il/wp-content/uploads/2024/01/520024985_g282_Yield123.xlsx",
+      "https://kereni.co.il/wp-content/uploads/2024/01/520024985_G282_Yield422-1.xlsx",
+      "https://kereni.co.il/wp-content/uploads/2024/01/711-1.xlsx",
+      "https://kereni.co.il/wp-content/uploads/2024/01/711.xlsx",
+      "https://kereni.co.il/wp-content/uploads/2024/01/520024985_G282_Yield122-1.xlsx",
+      "https://kereni.co.il/wp-content/uploads/2026/07/520024985_g8382ֹ_Yield226.xlsx",
+      "https://kereni.co.il/wp-content/uploads/2026/05/520024985_g8382_Yield126.xlsx",
+      "https://kereni.co.il/wp-content/uploads/2026/01/520024985_g8382_Yield425.xlsx",
+      "https://kereni.co.il/wp-content/uploads/2025/10/520024985_g8382_Yield325.xlsx",
+      "https://kereni.co.il/wp-content/uploads/2025/07/520024985_g8382_Yield225.xlsx",
+      "https://kereni.co.il/wp-content/uploads/2025/04/520024985_g8382_Yield125.xlsx",
+      "https://kereni.co.il/wp-content/uploads/2025/01/520024985_g8382_Yield424.xlsx",
+      "https://kereni.co.il/wp-content/uploads/2024/11/הרכב_נכסים__אפיקי_השקעות__דמי_ניהול__ותשואה_מצטברת_-_מישור_אשראי_ו_אג__ח10.2024.pdf",
+      "https://kereni.co.il/wp-content/uploads/2024/07/520024985_g8382_Yield224.xlsx",
+      "https://kereni.co.il/wp-content/uploads/2024/04/520024985_g8382_Yield124.xlsx",
+      "https://kereni.co.il/wp-content/uploads/2024/02/520024985_g8382_Yield423.xlsx",
+      "https://kereni.co.il/wp-content/uploads/2024/02/520024985_g8382_Yield323.xlsx",
+      "https://kereni.co.il/wp-content/uploads/2024/02/520024985_g8382_Yield223.xlsx",
+      "https://kereni.co.il/wp-content/uploads/2024/02/520024985_g8382_Yield123.xlsx",
+      "https://kereni.co.il/wp-content/uploads/2024/02/520024985_G8382ֹ_Yield422.xlsx",
+      "https://kereni.co.il/wp-content/uploads/2024/02/712.xlsx",
+      "https://kereni.co.il/wp-content/uploads/2024/02/712-1.xlsx",
+      "https://kereni.co.il/wp-content/uploads/2024/02/520024985_G8382ֹ_Yield122-1.xlsx",
+      "https://kereni.co.il/wp-content/uploads/2026/07/520024985_g8395_Yield226.xlsx",
+      "https://kereni.co.il/wp-content/uploads/2026/05/520024985_g8395_Yield126.xlsx",
+      "https://kereni.co.il/wp-content/uploads/2026/01/520024985_g8395_Yield425.xlsx",
+      "https://kereni.co.il/wp-content/uploads/2025/10/520024985_g8395_Yield325.xlsx",
+      "https://kereni.co.il/wp-content/uploads/2025/07/520024985_g8395_Yield225.xlsx",
+      "https://kereni.co.il/wp-content/uploads/2025/04/520024985_g8395_Yield125.xlsx",
+      "https://kereni.co.il/wp-content/uploads/2025/01/520024985_g8395_Yield424.xlsx",
+      "https://kereni.co.il/wp-content/uploads/2024/11/520024985_g8395_Yield324.xlsx",
+      "https://kereni.co.il/wp-content/uploads/2024/07/520024985_g8395_Yield224.xlsx",
+      "https://kereni.co.il/wp-content/uploads/2024/04/520024985_g8395_Yield124.xlsx",
+      "https://kereni.co.il/wp-content/uploads/2024/02/520024985_g8395_Yield423.xlsx",
+      "https://kereni.co.il/wp-content/uploads/2024/02/520024985_g8395_Yield323.xlsx",
+      "https://kereni.co.il/wp-content/uploads/2024/02/520024985_g8395_Yield223.xlsx",
+      "https://kereni.co.il/wp-content/uploads/2024/02/520024985_g8395_Yield123.xlsx",
+      "https://kereni.co.il/wp-content/uploads/2024/02/520024985_G8395_Yield422.xlsx",
+      "https://kereni.co.il/wp-content/uploads/2024/02/711.xlsx",
+      "https://kereni.co.il/wp-content/uploads/2024/02/711-1.xlsx",
+      "https://kereni.co.il/wp-content/uploads/2024/02/520024985_G8395_Yield122-1.xlsx",
+      "https://kereni.co.il/wp-content/uploads/2026/07/520024985_g0482_Yield226.xlsx",
+      "https://kereni.co.il/wp-content/uploads/2026/05/520024985_g0482_Yield126.xlsx",
+      "https://kereni.co.il/wp-content/uploads/2026/01/520024985_g0482_Yield425.xlsx",
+      "https://kereni.co.il/wp-content/uploads/2025/10/520024985_g0482_Yield325.xlsx",
+      "https://kereni.co.il/wp-content/uploads/2025/07/520024985_g0482_Yield225.xlsx",
+      "https://kereni.co.il/wp-content/uploads/2025/04/520024985_g0482_Yield125.xlsx",
+      "https://kereni.co.il/wp-content/uploads/2025/01/520024985_g0482_Yield424.xlsx",
+      "https://kereni.co.il/wp-content/uploads/2024/11/520024985_g0482_Yield324.xlsx",
+      "https://kereni.co.il/wp-content/uploads/2024/07/520024985_g0482_Yield224.xlsx",
+      "https://kereni.co.il/wp-content/uploads/2024/04/520024985_g482_Yield124.xlsx",
+      "https://kereni.co.il/wp-content/uploads/2024/02/520024985_g0482_Yield423.xlsx",
+      "https://kereni.co.il/wp-content/uploads/2024/02/520024985_g0482_Yield323.xlsx",
+      "https://kereni.co.il/wp-content/uploads/2024/02/520024985_g0482_Yield223.xlsx",
+      "https://kereni.co.il/wp-content/uploads/2024/02/520024985_g0482_Yield123.xlsx",
+      "https://kereni.co.il/wp-content/uploads/2024/02/520024985_G0482_Yield422.xlsx",
+      "https://kereni.co.il/wp-content/uploads/2024/02/701-1.xlsx",
+      "https://kereni.co.il/wp-content/uploads/2024/02/701.xlsx",
+      "https://kereni.co.il/wp-content/uploads/2024/02/520024985_G482_Yield122-1.xlsx",
+      "https://kereni.co.il/wp-content/uploads/2026/07/520024985_g8339_Yield226.xlsx",
+      "https://kereni.co.il/wp-content/uploads/2026/05/520024985_g8339_Yield126.xlsx",
+      "https://kereni.co.il/wp-content/uploads/2026/01/520024985_g8339_Yield425.xlsx",
+      "https://kereni.co.il/wp-content/uploads/2025/10/520024985_g8339_Yield325.xlsx",
+      "https://kereni.co.il/wp-content/uploads/2025/07/520024985_g8339_Yield225.xlsx",
+      "https://kereni.co.il/wp-content/uploads/2025/04/520024985_g8339_Yield125.xlsx",
+      "https://kereni.co.il/wp-content/uploads/2025/01/520024985_g8339_Yield424.xlsx",
+      "https://kereni.co.il/wp-content/uploads/2024/11/520024985_g8339_Yield324.xlsx",
+      "https://kereni.co.il/wp-content/uploads/2024/07/520024985_g8339_Yield224.xlsx",
+      "https://kereni.co.il/wp-content/uploads/2024/04/520024985_g8339_Yield124.xlsx",
+      "https://kereni.co.il/wp-content/uploads/2024/02/520024985_g8339_Yield423.xlsx",
+      "https://kereni.co.il/wp-content/uploads/2024/02/520024985_g8339_Yield323-1.xlsx",
+      "https://kereni.co.il/wp-content/uploads/2024/02/520024985_g8339_Yield223.xlsx",
+      "https://kereni.co.il/wp-content/uploads/2024/02/520024985_g8339_Yield123.xlsx",
+      "https://kereni.co.il/wp-content/uploads/2024/02/520024985_G8339_Yield422.xlsx",
+      "https://kereni.co.il/wp-content/uploads/2024/02/702.xlsx",
+      "https://kereni.co.il/wp-content/uploads/2024/02/702-1.xlsx",
+      "https://kereni.co.il/wp-content/uploads/2024/02/520024985_G8339_Yield122-1.xlsx",
+      "https://kereni.co.il/wp-content/uploads/2026/07/520024985_g8394_Yield226.xlsx",
+      "https://kereni.co.il/wp-content/uploads/2026/05/520024985_g8394_Yield126.xlsx",
+      "https://kereni.co.il/wp-content/uploads/2026/01/520024985_g8394_Yield425.xlsx",
+      "https://kereni.co.il/wp-content/uploads/2025/10/520024985_g8394_Yield325.xlsx"
+     ],
+     "unselected_files": [
+      {
+       "file": "https://kereni.co.il/wp-content/uploads/2024/01/דוח-תשואות-חוזר-הכרעה-פיצוי-עמיתים-יוני-2008-עד-דצמבר-2009-מישור.xls",
+       "text": "דוח-תשואות-חוזר-הכרעה-פיצוי-עמיתים-יוני-2008-עד-דצמבר-2009-מישור",
+       "ctx": "דוח-תשואות-חוזר-הכרעה-פיצוי-עמיתים-יוני-2008-עד-דצמבר-2009-מישור"
+      },
+      {
+       "file": "https://kereni.co.il/wp-content/uploads/2026/10/הרכב_נכסים__אפיקי_השקעות__דמי_ניהול__ותשואה_מצטברת_-_מישור_מסלול_כללי09.2026.pdf",
+       "text": "הרכב נכסים, אפיקי השקעות, דמי ניהול, ותשואה מצטברת – מישור כללי 09.2026",
+       "ctx": "הרכב נכסים, אפיקי השקעות, דמי ניהול, ותשואה מצטברת – מישור כללי 09.2026"
+      },
+      {
+       "file": "https://kereni.co.il/wp-content/uploads/2026/09/הרכב_נכסים__אפיקי_השקעות__דמי_ניהול__ותשואה_מצטברת_-_מישור_מסלול_כללי08.2026.pdf",
+       "text": "הרכב נכסים, אפיקי השקעות, דמי ניהול, ותשואה מצטברת – מישור כללי 08.2026",
+       "ctx": "הרכב נכסים, אפיקי השקעות, דמי ניהול, ותשואה מצטברת – מישור כללי 08.2026"
+      },
+      {
+       "file": "https://kereni.co.il/wp-content/uploads/2026/08/הרכב_נכסים__אפיקי_השקעות__דמי_ניהול__ותשואה_מצטברת_-_מישור_מסלול_כללי07.2026.pdf",
+       "text": "הרכב נכסים, אפיקי השקעות, דמי ניהול, ותשואה מצטברת – מישור כללי 07.2026",
+       "ctx": "הרכב נכסים, אפיקי השקעות, דמי ניהול, ותשואה מצטברת – מישור כללי 07.2026"
+      },
+      {
+       "file": "https://kereni.co.il/wp-content/uploads/2026/07/הרכב_נכסים__אפיקי_השקעות__דמי_ניהול__ותשואה_מצטברת_-_מישור_מסלול_כללי06.2026.pdf",
+       "text": "הרכב נכסים, אפיקי השקעות, דמי ניהול, ותשואה מצטברת – מישור כללי 06.2026",
+       "ctx": "הרכב נכסים, אפיקי השקעות, דמי ניהול, ותשואה מצטברת – מישור כללי 06.2026"
+      },
+      {
+       "file": "https://kereni.co.il/wp-content/uploads/2026/06/הרכב_נכסים__אפיקי_השקעות__דמי_ניהול__ותשואה_מצטברת_-_מישור_מסלול_כללי05.2026.pdf",
+       "text": "הרכב נכסים, אפיקי השקעות, דמי ניהול, ותשואה מצטברת – מישור כללי 05.2026",
+       "ctx": "הרכב נכסים, אפיקי השקעות, דמי ניהול, ותשואה מצטברת – מישור כללי 05.2026"
+      },
+      {
+       "file": "https://kereni.co.il/wp-content/uploads/2026/05/הרכב_נכסים__אפיקי_השקעות__דמי_ניהול__ותשואה_מצטברת_-_מישור04.2026.pdf",
+       "text": "הרכב נכסים, אפיקי השקעות, דמי ניהול, ותשואה מצטברת – מישור כללי 04.2026",
+       "ctx": "הרכב נכסים, אפיקי השקעות, דמי ניהול, ותשואה מצטברת – מישור כללי 04.2026"
+      },
+      {
+       "file": "https://kereni.co.il/wp-content/uploads/2026/04/הרכב_נכסים__אפיקי_השקעות__דמי_ניהול__ותשואה_מצטברת_-_מישור03.2026.pdf",
+       "text": "הרכב נכסים, אפיקי השקעות, דמי ניהול, ותשואה מצטברת – מישור כללי 03.2026",
+       "ctx": "הרכב נכסים, אפיקי השקעות, דמי ניהול, ותשואה מצטברת – מישור כללי 03.2026"
+      },
+      {
+       "file": "https://kereni.co.il/wp-content/uploads/2026/03/הרכב_נכסים__אפיקי_השקעות__דמי_ניהול__ותשואה_מצטברת_-_מישור02.2026.pdf",
+       "text": "הרכב נכסים, אפיקי השקעות, דמי ניהול, ותשואה מצטברת – מישור כללי 02.2026",
+       "ctx": "הרכב נכסים, אפיקי השקעות, דמי ניהול, ותשואה מצטברת – מישור כללי 02.2026"
+      },
+      {
+       "file": "https://kereni.co.il/wp-content/uploads/2026/02/הרכב_נכסים__אפיקי_השקעות__דמי_ניהול__ותשואה_מצטברת_-_מישור01.2026.pdf",
+       "text": "הרכב נכסים, אפיקי השקעות, דמי ניהול, ותשואה מצטברת – מישור כללי 01.2026",
+       "ctx": "הרכב נכסים, אפיקי השקעות, דמי ניהול, ותשואה מצטברת – מישור כללי 01.2026"
+      },
+      {
+       "file": "https://kereni.co.il/wp-content/uploads/2026/01/הרכב_נכסים__אפיקי_השקעות__דמי_ניהול__ותשואה_מצטברת_-_מישור12.2025.pdf",
+       "text": "הרכב נכסים, אפיקי השקעות, דמי ניהול, ותשואה מצטברת – מישור כללי 12.2025",
+       "ctx": "הרכב נכסים, אפיקי השקעות, דמי ניהול, ותשואה מצטברת – מישור כללי 12.2025"
+      },
+      {
+       "file": "https://kereni.co.il/wp-content/uploads/2025/12/הרכב_נכסים__אפיקי_השקעות__דמי_ניהול__ותשואה_מצטברת_-_מישור11.2025.pdf",
+       "text": "הרכב נכסים, אפיקי השקעות, דמי ניהול, ותשואה מצטברת – מישור כללי 11.2025",
+       "ctx": "הרכב נכסים, אפיקי השקעות, דמי ניהול, ותשואה מצטברת – מישור כללי 11.2025"
+      },
+      {
+       "file": "https://kereni.co.il/wp-content/uploads/2025/11/הרכב_נכסים__אפיקי_השקעות__דמי_ניהול__ותשואה_מצטברת_-_מישור10.2025.pdf",
+       "text": "הרכב נכסים, אפיקי השקעות, דמי ניהול, ותשואה מצטברת – מישור כללי 10.2025",
+       "ctx": "הרכב נכסים, אפיקי השקעות, דמי ניהול, ותשואה מצטברת – מישור כללי 10.2025"
+      },
+      {
+       "file": "https://kereni.co.il/wp-content/uploads/2025/10/הרכב_נכסים__אפיקי_השקעות__דמי_ניהול__ותשואה_מצטברת_-_מישור09.2025.pdf",
+       "text": "הרכב נכסים, אפיקי השקעות, דמי ניהול, ותשואה מצטברת – מישור כללי 09.2025",
+       "ctx": "הרכב נכסים, אפיקי השקעות, דמי ניהול, ותשואה מצטברת – מישור כללי 09.2025"
+      },
+      {
+       "file": "https://kereni.co.il/wp-content/uploads/2025/09/הרכב_נכסים__אפיקי_השקעות__דמי_ניהול__ותשואה_מצטברת_-_מישור08.2025-1.pdf",
+       "text": "הרכב נכסים, אפיקי השקעות, דמי ניהול, ותשואה מצטברת – מישור כללי 08.2025",
+       "ctx": "הרכב נכסים, אפיקי השקעות, דמי ניהול, ותשואה מצטברת – מישור כללי 08.2025"
+      },
+      {
+       "file": "https://kereni.co.il/wp-content/uploads/2025/08/הרכב_נכסים__אפיקי_השקעות__דמי_ניהול__ותשואה_מצטברת_-_מישור07.2025.pdf",
+       "text": "הרכב נכסים, אפיקי השקעות, דמי ניהול, ותשואה מצטברת – מישור כללי 07.2025",
+       "ctx": "הרכב נכסים, אפיקי השקעות, דמי ניהול, ותשואה מצטברת – מישור כללי 07.2025"
+      },
+      {
+       "file": "https://kereni.co.il/wp-content/uploads/2025/07/הרכב_נכסים__אפיקי_השקעות__דמי_ניהול__ותשואה_מצטברת_-_מישור06.2025.pdf",
+       "text": "הרכב נכסים, אפיקי השקעות, דמי ניהול, ותשואה מצטברת – מישור כללי 06.2025",
+       "ctx": "הרכב נכסים, אפיקי השקעות, דמי ניהול, ותשואה מצטברת – מישור כללי 06.2025"
+      },
+      {
+       "file": "https://kereni.co.il/wp-content/uploads/2025/06/הרכב_נכסים__אפיקי_השקעות__דמי_ניהול__ותשואה_מצטברת_-_מישור05.2025.pdf",
+       "text": "הרכב נכסים, אפיקי השקעות, דמי ניהול, ותשואה מצטברת – מישור כללי 05.2025",
+       "ctx": "הרכב נכסים, אפיקי השקעות, דמי ניהול, ותשואה מצטברת – מישור כללי 05.2025"
+      },
+      {
+       "file": "https://kereni.co.il/wp-content/uploads/2025/05/הרכב_נכסים__אפיקי_השקעות__דמי_ניהול__ותשואה_מצטברת_-_מישור04.2025.pdf",
+       "text": "הרכב נכסים, אפיקי השקעות, דמי ניהול, ותשואה מצטברת – מישור כללי 04.2025",
+       "ctx": "הרכב נכסים, אפיקי השקעות, דמי ניהול, ותשואה מצטברת – מישור כללי 04.2025"
+      },
+      {
+       "file": "https://kereni.co.il/wp-content/uploads/2025/03/הרכב_נכסים__אפיקי_השקעות__דמי_ניהול__ותשואה_מצטברת_-_מישור02.2025.pdf",
+       "text": "הרכב נכסים, אפיקי השקעות, דמי ניהול, ותשואה מצטברת – מישור כללי 02.2025",
+       "ctx": "הרכב נכסים, אפיקי השקעות, דמי ניהול, ותשואה מצטברת – מישור כללי 02.2025"
+      },
+      {
+       "file": "https://kereni.co.il/wp-content/uploads/2025/02/הרכב_נכסים_-_מורים_על_יסודיים_מישור_-_מסלול_רגיל_31.01.2025.pdf",
+       "text": "הרכב נכסים, אפיקי השקעות, דמי ניהול, ותשואה מצטברת – מישור כללי 01.2025",
+       "ctx": "הרכב נכסים, אפיקי השקעות, דמי ניהול, ותשואה מצטברת – מישור כללי 01.2025"
+      },
+      {
+       "file": "https://kereni.co.il/wp-content/uploads/2025/01/הרכב_נכסים__אפיקי_השקעות__דמי_ניהול__ותשואה_מצטברת_-_מישור12.2024.pdf",
+       "text": "הרכב נכסים, אפיקי השקעות, דמי ניהול, ותשואה מצטברת – מישור כללי 12.2024",
+       "ctx": "הרכב נכסים, אפיקי השקעות, דמי ניהול, ותשואה מצטברת – מישור כללי 12.2024"
+      },
+      {
+       "file": "https://kereni.co.il/wp-content/uploads/2024/12/הרכב_נכסים__אפיקי_השקעות__דמי_ניהול__ותשואה_מצטברת_-_מישור11.2024.pdf",
+       "text": "הרכב נכסים, אפיקי השקעות, דמי ניהול, ותשואה מצטברת – מישור כללי 11.2024",
+       "ctx": "הרכב נכסים, אפיקי השקעות, דמי ניהול, ותשואה מצטברת – מישור כללי 11.2024"
+      },
+      {
+       "file": "https://kereni.co.il/wp-content/uploads/2024/11/הרכב_נכסים__אפיקי_השקעות__דמי_ניהול__ותשואה_מצטברת_-_מישור10.2024.pdf",
+       "text": "הרכב נכסים, אפיקי השקעות, דמי ניהול, ותשואה מצטברת – מישור כללי 10.2024",
+       "ctx": "הרכב נכסים, אפיקי השקעות, דמי ניהול, ותשואה מצטברת – מישור כללי 10.2024"
+      },
+      {
+       "file": "https://kereni.co.il/wp-content/uploads/2024/11/הרכב_נכסים__אפיקי_השקעות__דמי_ניהול__ותשואה_מצטברת_-_מישור09.2024.pdf",
+       "text": "הרכב נכסים, אפיקי השקעות, דמי ניהול, ותשואה מצטברת – מישור כללי 09.2024",
+       "ctx": "הרכב נכסים, אפיקי השקעות, דמי ניהול, ותשואה מצטברת – מישור כללי 09.2024"
+      }
+     ]
+    },
+    {
+     "url": "https://kereni.co.il/%D7%9E%D7%93%D7%99%D7%A0%D7%99%D7%95%D7%AA-%D7%94%D7%A9%D7%A7%D7%A2%D7%94-%D7%95%D7%A0%D7%94%D7%9C%D7%99%D7%9D/",
+     "cache": "hit",
+     "links": 208,
+     "followed": [],
+     "files": 173,
+     "clicked": 0,
+     "captured": 0,
+     "selected": [],
+     "unselected_files": [
+      {
+       "file": "https://kereni.co.il/wp-content/uploads/2024/01/על_יסודי-_מגבלת_עמלות_ניהול_חיצוני_2024__1_-1-1.xlsxhttps://kereni.co.il/wp-content/uploads/2024/01/על_יסודי-_מגבלת_עמלות_ניהול_חיצוני_2024__1_-1-1.xlsx",
+       "text": "מגבלת עמלות ניהול חיצוני 2024",
+       "ctx": "מגבלת עמלות ניהול חיצוני 2024"
+      },
+      {
+       "file": "https://kereni.co.il/wp-content/uploads/2024/01/על_יסודי-_מגבלת_עמלות_ניהול_חיצוני_2023.xlsx",
+       "text": "מגבלת עמלות ניהול חיצוני 2023",
+       "ctx": "מגבלת עמלות ניהול חיצוני 2023"
+      },
+      {
+       "file": "https://kereni.co.il/wp-content/uploads/2024/01/מדיניות_מוצהרת_מסלול_כללי_2024-1.xls",
+       "text": "מדיניות השקעה מוצהרת- על יסודי 2024",
+       "ctx": "מדיניות השקעה מוצהרת- על יסודי 2024"
+      },
+      {
+       "file": "https://kereni.co.il/wp-content/uploads/2024/01/עותק_של_עגור-_מדיניות_מוצהרת_2023_עיס_ומישור_שינויי_מיום_25.10.23.xls",
+       "text": "מדיניות השקעה מוצהרת מעודכן החל מ-05.11.23 – על יסודי 2023",
+       "ctx": "מדיניות השקעה מוצהרת מעודכן החל מ-05.11.23 – על יסודי 2023"
+      },
+      {
+       "file": "https://kereni.co.il/wp-content/uploads/2024/01/עגור-_מדיניות_מוצהרת_2023_עיס_ומישור_שינויי_מיום_26.07.23.xls",
+       "text": "מדיניות השקעה מוצהרת מעודכן החל מ-31.07.23 – על יסודי 2023",
+       "ctx": "מדיניות השקעה מוצהרת מעודכן החל מ-31.07.23 – על יסודי 2023"
+      },
+      {
+       "file": "https://kereni.co.il/wp-content/uploads/2024/01/עותק_של_עגור-_מדיניות_מוצהרת_2022_עיס_ומישור_מתוקן-9__1_.xls",
+       "text": "מדיניות השקעה מוצהרת מעודכן החל מ-13.06.23 – על יסודי 2023",
+       "ctx": "מדיניות השקעה מוצהרת מעודכן החל מ-13.06.23 – על יסודי 2023"
+      },
+      {
+       "file": "https://kereni.co.il/wp-content/uploads/2024/01/עגור-_מדיניות_המלצה_למוצהרת_2023_עיס_ומישור1.xls",
+       "text": "מדיניות השקעה מוצהרת- על יסודי 2023",
+       "ctx": "מדיניות השקעה מוצהרת- על יסודי 2023"
+      },
+      {
+       "file": "https://kereni.co.il/wp-content/uploads/2024/01/מדיניות_השקעה_מוצהרת_מעודכן_החל_מ-13.06.23___על_יסודי_2023.xls",
+       "text": "מדיניות השקעה מוצהרת- על יסודי 2022",
+       "ctx": "מדיניות השקעה מוצהרת- על יסודי 2022"
+      },
+      {
+       "file": "https://kereni.co.il/wp-content/uploads/2024/01/מדניות_השקעה_מוצהרת_-_על_יסודי_2021.xlsx",
+       "text": "מדיניות השקעה מוצהרת מעודכן החל מ-8.7.2021 – על יסודי 2021",
+       "ctx": "מדיניות השקעה מוצהרת מעודכן החל מ-8.7.2021 – על יסודי 2021"
+      },
+      {
+       "file": "https://kereni.co.il/wp-content/uploads/2024/01/מדיניות_השקעות_מוצהרת_2021_על_יסודי_כללי_-_מעודכן_נכון_ל_08.07.21.xlsx.xls",
+       "text": "מדיניות השקעה מוצהרת- על יסודי 2021",
+       "ctx": "מדיניות השקעה מוצהרת- על יסודי 2021"
+      },
+      {
+       "file": "https://kereni.co.il/wp-content/uploads/2024/01/הצהרה_על_השקעות_אחראיות.pdf",
+       "text": "הצהרה על השקעות אחראיות",
+       "ctx": "הצהרה על השקעות אחראיות"
+      },
+      {
+       "file": "https://kereni.co.il/wp-content/uploads/2024/01/עגור_על_יסודי_כללי_מדיניות_מוצהרת_2020.xlsx",
+       "text": "מדיניות השקעה מוצהרת- על יסודי 2020 עודכן בדירקטוריון מיום 1.4.20",
+       "ctx": "מדיניות השקעה מוצהרת- על יסודי 2020 עודכן בדירקטוריון מיום 1.4.20"
+      },
+      {
+       "file": "https://kereni.co.il/wp-content/uploads/2024/01/מדיניות_מוצהרת_2020_עגור_על_יסודי.xls",
+       "text": "מדיניות השקעה מוצהרת- על יסודי 2020",
+       "ctx": "מדיניות השקעה מוצהרת- על יסודי 2020"
+      },
+      {
+       "file": "https://kereni.co.il/wp-content/uploads/2024/01/2019-policyAlYesodi.xls",
+       "text": "מדיניות השקעה מוצהרת- על יסודי 2019",
+       "ctx": "מדיניות השקעה מוצהרת- על יסודי 2019"
+      },
+      {
+       "file": "https://kereni.co.il/wp-content/uploads/2024/01/7442.xls",
+       "text": "מדיניות מוצהרת- על יסודי אושר בדירקטוריון מיום 25.4.18.",
+       "ctx": "מדיניות מוצהרת- על יסודי אושר בדירקטוריון מיום 25.4.18."
+      },
+      {
+       "file": "https://kereni.co.il/wp-content/uploads/2024/01/7272.xls",
+       "text": "מדיניות השקעה מוצהרת- על יסודי 2018",
+       "ctx": "מדיניות השקעה מוצהרת- על יסודי 2018"
+      },
+      {
+       "file": "https://kereni.co.il/wp-content/uploads/2024/01/6756.xls",
+       "text": "מדיניות השקעה מוצהרת – עיס – 2017 ביחס ל-2016.",
+       "ctx": "מדיניות השקעה מוצהרת – עיס – 2017 ביחס ל-2016."
+      },
+      {
+       "file": "https://kereni.co.il/wp-content/uploads/2024/01/מדיניות_מוצהרת_מסלולים_כשרים_2024-1.xls",
+       "text": "מדיניות השקעה מוצהרת- מסלולים כשרים 2024",
+       "ctx": "מדיניות השקעה מוצהרת- מסלולים כשרים 2024"
+      },
+      {
+       "file": "https://kereni.co.il/wp-content/uploads/2024/01/עגור-_מדיניות_מוצהרת_2023_מסלולים_כשרים_שינויי_31.07.23.xls",
+       "text": "מדיניות מוצהרת 2023 מסלולים כשרים שינוי מיום 31.07.23",
+       "ctx": "מדיניות מוצהרת 2023 מסלולים כשרים שינוי מיום 31.07.23"
+      },
+      {
+       "file": "https://kereni.co.il/wp-content/uploads/2024/01/מדיניות_השקעה_מוצהרת-_מסלולים_כשרים_2023.xls",
+       "text": "מדיניות השקעה מוצהרת- מסלולים כשרים 2023",
+       "ctx": "מדיניות השקעה מוצהרת- מסלולים כשרים 2023"
+      },
+      {
+       "file": "https://kereni.co.il/wp-content/uploads/2024/01/עגור-_מדיניות_מוצהרת_2022_מסלולים_כשרים.xls",
+       "text": "מדיניות השקעה מוצהרת- מסלולים כשרים 2022",
+       "ctx": "מדיניות השקעה מוצהרת- מסלולים כשרים 2022"
+      },
+      {
+       "file": "https://kereni.co.il/wp-content/uploads/2024/01/מדיניות_השקעות_מוצהרת_2021_על_יסודי_מסלול_כשר_-_מעודכן_נכון_ל_08.07.21.xlsx",
+       "text": "מדיניות השקעה מוצהרת מעודכן החל מ-8.7.2021 – על יסודי מסלול הלכתי 2021",
+       "ctx": "מדיניות השקעה מוצהרת מעודכן החל מ-8.7.2021 – על יסודי מסלול הלכתי 2021"
+      },
+      {
+       "file": "https://kereni.co.il/wp-content/uploads/2024/01/מדניות_השקעה_מוצהרת_-_על_יסודי_הלכתי_2021.xls",
+       "text": "מדיניות השקעה מוצהרת – על יסודי- מסלול הלכתי 2021",
+       "ctx": "מדיניות השקעה מוצהרת – על יסודי- מסלול הלכתי 2021"
+      },
+      {
+       "file": "https://kereni.co.il/wp-content/uploads/2024/01/מדיניות_מוצהרת_עגור_על-יסודי_כשר_עדכון_1_אפריל_2020.xlsx",
+       "text": "מדיניות השקעה מוצהרת- על יסודי מסלול הלכתי 2020 עודכן בדירקטוריון מיום 1.4.20",
+       "ctx": "מדיניות השקעה מוצהרת- על יסודי מסלול הלכתי 2020 עודכן בדירקטוריון מיום 1.4.20"
+      },
+      {
+       "file": "https://kereni.co.il/wp-content/uploads/2024/01/מדיניות_מוצהרת_עגור_על_יסודי_מסלול_אגח.xlsx",
+       "text": "מדיניות השקעה מוצהרת – על יסודי- מסלול הלכתי 2020",
+       "ctx": "מדיניות השקעה מוצהרת – על יסודי- מסלול הלכתי 2020"
+      }
+     ]
+    }
+   ],
+   "new_docs": 0,
+   "found": 859,
+   "selected": 94,
+   "had": 94,
+   "head_skip": 0,
+   "cache_expired": 2,
+   "page_cache": 5,
+   "cache_hit": 5,
+   "old_skip": 94,
+   "errors": [],
+   "diag": [
+    "עגור חברה לניהול ק: links=123 files=0 clicked=0 captured=0 selected=0",
+    "עגור חברה לניהול ק: links=108 files=0 clicked=0 captured=0 selected=0",
+    "עגור חברה לניהול ק: links=18 files=0 clicked=0 captured=0 selected=0",
+    "עגור חברה לניהול ק: links=208 files=173 clicked=0 captured=0 selected=0",
+    "   ? על_יסודי-_מגבלת_עמלות_ניהול_חיצוני_2024__1_-1-1.xlsx | מגבלת עמלות ניהול חיצוני 2024 | מגבלת עמלות ניהול חיצוני 2024",
+    "   ? על_יסודי-_מגבלת_עמלות_ניהול_חיצוני_2023.xlsx | מגבלת עמלות ניהול חיצוני 2023 | מגבלת עמלות ניהול חיצוני 2023",
+    "   ? מדיניות_מוצהרת_מסלול_כללי_2024-1.xls | מדיניות השקעה מוצהרת- על יסודי 2024 | מדיניות השקעה מוצהרת- על יסודי 2024",
+    "   ? עותק_של_עגור-_מדיניות_מוצהרת_2023_עיס_ומישור_שינויי_מיום_25. | מדיניות השקעה מוצהרת מעודכן החל מ-05.11. | מדיניות השקעה מוצהרת מעודכן החל מ-05.11.23 – על יסודי 2023",
+    "   ? עגור-_מדיניות_מוצהרת_2023_עיס_ומישור_שינויי_מיום_26.07.23.xl | מדיניות השקעה מוצהרת מעודכן החל מ-31.07. | מדיניות השקעה מוצהרת מעודכן החל מ-31.07.23 – על יסודי 2023",
+    "   ? עותק_של_עגור-_מדיניות_מוצהרת_2022_עיס_ומישור_מתוקן-9__1_.xls | מדיניות השקעה מוצהרת מעודכן החל מ-13.06. | מדיניות השקעה מוצהרת מעודכן החל מ-13.06.23 – על יסודי 2023",
+    "עגור חברה לניהול ק: links=162 files=126 clicked=0 captured=0 selected=0",
+    "   ? G282A_425-1.pdf | דוחות כספיים מישור לשנת תשפ”ה | דוחות כספיים מישור לשנת תשפ”ה",
+    "   ? G282A_424-1.pdf | דוחות כספיים מישור לשנת תשפ”ד | דוחות כספיים מישור לשנת תשפ”ד",
+    "   ? G282A_423.pdf | דוחות כספיים מישור לשנת תשפ”ג | דוחות כספיים מישור לשנת תשפ”ג",
+    "   ? G282A_422-1.pdf | דוחות כספיים מישור לשנת תשפ”ב | דוחות כספיים מישור לשנת תשפ”ב",
+    "   ? G282A_421-1.pdf | דוחות כספיים מישור לשנת תשפ”א | דוחות כספיים מישור לשנת תשפ”א",
+    "   ? מישור_2020_1_2-1.pdf | דוחות כספיים מישור לשנת תש”פ | דוחות כספיים מישור לשנת תש”פ",
+    "עגור חברה לניהול ק: links=400 files=387 clicked=0 captured=0 selected=94",
+    "עגור חברה לניהול ק: links=208 files=173 clicked=0 captured=0 selected=0",
+    "   ? על_יסודי-_מגבלת_עמלות_ניהול_חיצוני_2024__1_-1-1.xlsx | מגבלת עמלות ניהול חיצוני 2024 | מגבלת עמלות ניהול חיצוני 2024",
+    "   ? על_יסודי-_מגבלת_עמלות_ניהול_חיצוני_2023.xlsx | מגבלת עמלות ניהול חיצוני 2023 | מגבלת עמלות ניהול חיצוני 2023",
+    "   ? מדיניות_מוצהרת_מסלול_כללי_2024-1.xls | מדיניות השקעה מוצהרת- על יסודי 2024 | מדיניות השקעה מוצהרת- על יסודי 2024",
+    "   ? עותק_של_עגור-_מדיניות_מוצהרת_2023_עיס_ומישור_שינויי_מיום_25. | מדיניות השקעה מוצהרת מעודכן החל מ-05.11. | מדיניות השקעה מוצהרת מעודכן החל מ-05.11.23 – על יסודי 2023",
+    "   ? עגור-_מדיניות_מוצהרת_2023_עיס_ומישור_שינויי_מיום_26.07.23.xl | מדיניות השקעה מוצהרת מעודכן החל מ-31.07. | מדיניות השקעה מוצהרת מעודכן החל מ-31.07.23 – על יסודי 2023",
+    "   ? עותק_של_עגור-_מדיניות_מוצהרת_2022_עיס_ומישור_מתוקן-9__1_.xls | מדיניות השקעה מוצהרת מעודכן החל מ-13.06. | מדיניות השקעה מוצהרת מעודכן החל מ-13.06.23 – על יסודי 2023"
+   ],
+   "new_files": []
+  },
+  {
+   "legal_id": "520027251",
+   "name": "קרנות השתלמות למורים ולגננות - חברה מנהלת בע\"מ",
+   "pages": [
+    {
+     "url": "https://www.kranoth.org.il/%d7%9e%d7%93%d7%99%d7%a0%d7%99%d7%95%d7%aa-%d7%95%d7%a0%d7%94%d7%9c%d7%99%d7%9d-%d7%9e%d7%95%d7%a8%d7%99%d7%9d-%d7%95%d7%92%d7%92%d7%a0%d7%95%d7%aa/%d7%9e%d7%93%d7%99%d7%a0%d7%99%d7%95%d7%aa-%d7%94%d7%a9%d7%a7%d7%a2%d7%95%d7%aa-%d7%9e%d7%95%d7%a8%d7%99%d7%9d-%d7%95%d7%92%d7%a0%d7%a0%d7%95%d7%aa-%d7%9e%d7%a7%d7%95%d7%a8/",
+     "cache": "hit",
+     "links": 62,
+     "followed": [],
+     "files": 52,
+     "clicked": 0,
+     "captured": 0,
+     "selected": [
+      "https://kranoth.org.il/wp-content/uploads/2026/09/מדיניות_השקעות_צפויה_תשפז-מורים_וגננות_מקור-מסלול_כללי.xlsx",
+      "https://www.kranoth.org.il/wp-content/uploads/2026/06/מוג_מקור-מדיניות_השקעות_מרץ_2026.xlsx",
+      "https://www.kranoth.org.il/wp-content/uploads/2025/11/מדיניות_השקעות_צפויה_תשפו-מוג_מקור_אשראי_ואגח.xlsx",
+      "https://www.kranoth.org.il/wp-content/uploads/2024/12/מוג_מקור-מסלול_כללי-מדיניות_השקעות_תשפה_דצמבר_2024.xlsx",
+      "https://www.kranoth.org.il/wp-content/uploads/2024/11/מורים_וגננות_מקור_מסלול_כללי_מדיניות_השקעות_תשפה-1.xlsx",
+      "https://www.kranoth.org.il/wp-content/uploads/2024/01/מוג_מקור_כללי-מדיניות_השקעות_צפויה_25.12.23.xlsx",
+      "https://www.kranoth.org.il/wp-content/uploads/2024/01/מדיניות_השקעות_צפויה_תשפד-מוג_מקור-מסלול_כללי.xlsx",
+      "https://www.kranoth.org.il/wp-content/uploads/2023/01/מדיניות_השקעות_צפויה_מוג_מקור_תשפג-מסלול_כללי-עדכון_דצמבר_2022.xlsx",
+      "https://www.kranoth.org.il/wp-content/uploads/2022/10/מ_דיניות_השקעות_צפויה_תשפג_מוג_מקור_מסלול_כללי.xlsx",
+      "https://kranoth.org.il/wp-content/uploads/2026/09/מדיניות_השקעות_צפויה_תשפז-מורים_וגננות_מקור-מסלול_הלכה.xlsx",
+      "https://www.kranoth.org.il/wp-content/uploads/2026/06/מוג_מקור_הלכה-מדיניות_השקעות_מרץ_2026.xlsx",
+      "https://www.kranoth.org.il/wp-content/uploads/2025/10/מדיניות_השקעות_צפויה_תשפו-מוג_מקור_הלכתי.xlsx",
+      "https://www.kranoth.org.il/wp-content/uploads/2024/12/מוג_מקור-מסלול_הלכה-מדיניות_תשפה_דצמבר_2024.xlsx",
+      "https://www.kranoth.org.il/wp-content/uploads/2024/11/מורים_וגננות_מקור_מסלול_הלכה_מדיניות_השקעה_תשפה-1.xlsx",
+      "https://www.kranoth.org.il/wp-content/uploads/2024/01/מוג_מקור_הלכתי-מדיניות_השקעות_צפויה_25.12.23.xlsx",
+      "https://www.kranoth.org.il/wp-content/uploads/2023/08/מדיניות_השקעות_צפויה_תשפד-מוג_מקור-מסלול_הלכה.xlsx",
+      "https://www.kranoth.org.il/wp-content/uploads/2023/01/מדיניות_השקעות_צפויה_מוג_מקור_תשפג-מסלול_הלכה-עדכון_דצמבר_2022.xlsx",
+      "https://www.kranoth.org.il/wp-content/uploads/2022/10/מדיניות_השקעות_צפויה_תשפג_מוג_מקור_מסלול_הלכה.xlsx",
+      "https://kranoth.org.il/wp-content/uploads/2026/09/מדיניות_השקעות_צפויה_תשפז-מורים_וגננות_מקור-מסלול_אשראי_ואגח.xlsx",
+      "https://www.kranoth.org.il/wp-content/uploads/2026/07/מדיניות_השקעות_צפויה_תשפו-מוג_מקור_אשראי_ואגח.xlsx",
+      "https://www.kranoth.org.il/wp-content/uploads/2024/12/מוג_מקור-מסלול_אשראי_ואגח-מדיניות_תשפה_דצמבר_2024.xlsx",
+      "https://www.kranoth.org.il/wp-content/uploads/2024/11/מורים_וגננות_מקור_מסלול_אשראי_ואגח_מדיניות_השקעה_תשפה-1.xlsx",
+      "https://www.kranoth.org.il/wp-content/uploads/2024/01/מוג_מקור_אגח-מדיניות_השקעות_25.12.23.xlsx",
+      "https://www.kranoth.org.il/wp-content/uploads/2023/08/מדיניות_השקעות_צפויה_תשפד-מוג_מקוצר-מסלול_אגח.xlsx",
+      "https://www.kranoth.org.il/wp-content/uploads/2023/01/מדיניות_השקעות_צפויה_מוג_מקור_תשפג-מסלול_אגח-עדכון_דצמבר_2022.xlsx",
+      "https://www.kranoth.org.il/wp-content/uploads/2022/10/מדיניות_השקעות_צפויה_תשפג_מוג_מקור_מסלול_אגח.xlsx"
+     ],
+     "unselected_files": []
+    },
+    {
+     "url": "https://www.kranoth.org.il/%d7%9e%d7%93%d7%99%d7%a0%d7%99%d7%95%d7%aa-%d7%95%d7%a0%d7%94%d7%9c%d7%99%d7%9d-%d7%9e%d7%95%d7%a8%d7%99%d7%9d-%d7%95%d7%92%d7%92%d7%a0%d7%95%d7%aa/%d7%9e%d7%93%d7%99%d7%a0%d7%99%d7%95%d7%aa-%d7%94%d7%a9%d7%a7%d7%a2%d7%95%d7%aa-%d7%9e%d7%95%d7%a8%d7%99%d7%9d-%d7%95%d7%92%d7%a0%d7%a0%d7%95%d7%aa-%d7%a8%d7%92%d7%99%d7%9c/",
+     "cache": "hit",
+     "links": 64,
+     "followed": [],
+     "files": 54,
+     "clicked": 0,
+     "captured": 0,
+     "selected": [
+      "https://kranoth.org.il/wp-content/uploads/2026/09/מדיניות_השקעות_צפויה_תשפז-מורים_וגננות_מסלול_כללי.xlsx",
+      "https://www.kranoth.org.il/wp-content/uploads/2026/06/מוג_רגילה-מדיניות_השקעות_מרץ_2026.xlsx",
+      "https://www.kranoth.org.il/wp-content/uploads/2026/01/מדיניות_השקעות_צפויה_מורים_וגננות_תשפו_מונגש_עדכון_דצמבר_2025.xlsx",
+      "https://www.kranoth.org.il/wp-content/uploads/2025/11/מדיניות_השקעות_צפויה_תשפו-מוג_אשראי_ואגח.xlsx",
+      "https://www.kranoth.org.il/wp-content/uploads/2024/12/מורים_וגננות-מסלול_כללי-מדיניות_השקעות_תשפה_דצמבר_2024.xlsx",
+      "https://www.kranoth.org.il/wp-content/uploads/2024/11/מורים_וגננות_רגילה_מסלול_כללי_מדיניות_השקעות_תשפה-1.xlsx",
+      "https://www.kranoth.org.il/wp-content/uploads/2024/01/מוג_רגילה_כללי-מדיניות_השעות_צפויה_25.12.23.xlsx",
+      "https://www.kranoth.org.il/wp-content/uploads/2023/08/מדיניות_השקעות_צפויה_תשפד-מוג_רגילה-מסלול_כללי.xlsx",
+      "https://www.kranoth.org.il/wp-content/uploads/2023/01/מדיניות_השקעות_צפויה_מוג_רגילה_תשפג-מסלול_כללי-עדכון_דצמבר_2022.xlsx",
+      "https://www.kranoth.org.il/wp-content/uploads/2022/10/מדיניות_השקעות_צפויה_תשפג_מוג_רגילה_מסלול_כללי.xlsx",
+      "https://kranoth.org.il/wp-content/uploads/2026/09/מדיניות_השקעות_צפויה_תשפז-מורים_וגננות_מסלול_הלכה.xlsx",
+      "https://www.kranoth.org.il/wp-content/uploads/2026/06/מוג_רגילה_הלכה-מדיניות_הקשעות_מרץ_2026.xlsx",
+      "https://www.kranoth.org.il/wp-content/uploads/2025/10/מדיניות_השקעות_צפויה_תשפו-מוג_הלכתי.xlsx",
+      "https://www.kranoth.org.il/wp-content/uploads/2024/12/מוג_רגילה-מסלול_הלכה-מדיניות_תשפה_דצמבר_2024.xlsx",
+      "https://www.kranoth.org.il/wp-content/uploads/2024/11/מורים_וגננות_רגילה_מסלול_הלכה_מדיניות_השקעות_תשפה-1.xlsx",
+      "https://www.kranoth.org.il/wp-content/uploads/2024/01/מוג_רגילה_הלכה-מדיניות_השקעות_צפויה_25.12.23.xlsx",
+      "https://www.kranoth.org.il/wp-content/uploads/2023/08/מדיניות_השקעות_צפויה_תשפד-מוג_רגילה-מסלול_הלכה.xlsx",
+      "https://www.kranoth.org.il/wp-content/uploads/2023/01/מדיניות_השקעות_צפויה_מוג_רגילה_תשפג-מסלול_הלכה-עדכון_דצמבר_2022.xlsx",
+      "https://www.kranoth.org.il/wp-content/uploads/2022/10/מדיניות_השקעות_צפויה_תשפג_מוג_רגילה_מסלול_הלכה.xlsx",
+      "https://kranoth.org.il/wp-content/uploads/2026/09/מדיניות_השקעות_צפויה_תשפז-מורים_וגננות_מסלול_אשראי_ואגח.xlsx",
+      "https://www.kranoth.org.il/wp-content/uploads/2026/07/מדיניות_השקעות_צפויה_תשפו-מוג_אשראי_ואגח.xlsx",
+      "https://www.kranoth.org.il/wp-content/uploads/2024/12/מוג_רגילה-מסלול_אשראי_ואגח-מדיניות_תשפה_דצמבר_2024.xlsx",
+      "https://www.kranoth.org.il/wp-content/uploads/2024/11/מורים_וגננות_רגילה_מסלול_אשראי_ואגח_מדיניות_תשפה-1.xlsx",
+      "https://www.kranoth.org.il/wp-content/uploads/2024/01/מוג_רגילה_אגח-מדיניות_השקעות_צפויה_25.12.23.xlsx",
+      "https://www.kranoth.org.il/wp-content/uploads/2023/08/מדיניות_השקעות_צפויה_תשפד-מוג_רגילה-מסלול_אגח.xlsx",
+      "https://www.kranoth.org.il/wp-content/uploads/2023/01/מדיניות_השקעות_צפויה_מוג__רגילה_תשפג-מסלול_אגח-עדכון_דצמבר_2022.xlsx",
+      "https://www.kranoth.org.il/wp-content/uploads/2022/10/מדיניות_השקעות_צפויה_תשפג_מוג_רגילה_מסלול_אגח.xlsx"
+     ],
+     "unselected_files": []
+    }
+   ],
+   "new_docs": 0,
+   "found": 106,
+   "selected": 53,
+   "had": 53,
+   "head_skip": 0,
+   "page_cache": 2,
+   "cache_hit": 2,
+   "old_skip": 53,
+   "mode": "map",
+   "errors": [],
+   "diag": [
+    "קרנות השתלמות למור: links=62 files=52 clicked=0 captured=0 selected=26",
+    "קרנות השתלמות למור: links=64 files=54 clicked=0 captured=0 selected=27"
+   ],
+   "new_files": []
+  },
+  {
+   "legal_id": "520027251",
+   "name": "קרנות השתלמות למורים ולגננות - חברה מנהלת בע\"מ - מרכיבי תשואה",
+   "pages": [
+    {
+     "url": "https://www.kranoth.org.il/מדיניות-ותקנונים/מדיניות-השקעות-מורים-וגננות-רגיל/",
+     "cache": "hit",
+     "links": 64,
+     "followed": [
+      "https://www.kranoth.org.il/"
+     ],
+     "files": 54,
+     "clicked": 0,
+     "captured": 0,
+     "selected": [],
+     "unselected_files": [
+      {
+       "file": "https://kranoth.org.il/wp-content/uploads/2026/09/מדיניות_השקעות_צפויה_תשפז-מורים_וגננות_מסלול_כללי.xlsx",
+       "text": "קרן השתלמות למורים וגננות – מדיניות צפויה תשפ\"ז",
+       "ctx": ""
+      },
+      {
+       "file": "https://kranoth.org.il/wp-content/uploads/2026/09/מדיניות_השקעות_צפויה_תשפז-מורים_וגננות_מסלול_כללי.xlsx",
+       "text": "הורד",
+       "ctx": ""
+      },
+      {
+       "file": "https://www.kranoth.org.il/wp-content/uploads/2026/06/מוג_רגילה-מדיניות_השקעות_מרץ_2026.xlsx",
+       "text": "קרן השתלמות למורים וגננות – מדיניות צפויה תשפ\"ו – מרץ 2026",
+       "ctx": ""
+      },
+      {
+       "file": "https://www.kranoth.org.il/wp-content/uploads/2026/06/מוג_רגילה-מדיניות_השקעות_מרץ_2026.xlsx",
+       "text": "הורד",
+       "ctx": ""
+      },
+      {
+       "file": "https://www.kranoth.org.il/wp-content/uploads/2026/01/מדיניות_השקעות_צפויה_מורים_וגננות_תשפו_מונגש_עדכון_דצמבר_2025.xlsx",
+       "text": "קרן השתלמות למורים וגננות – מדיניות צפויה תשפ\"ו – דצמבר 2025",
+       "ctx": ""
+      },
+      {
+       "file": "https://www.kranoth.org.il/wp-content/uploads/2026/01/מדיניות_השקעות_צפויה_מורים_וגננות_תשפו_מונגש_עדכון_דצמבר_2025.xlsx",
+       "text": "הורד",
+       "ctx": ""
+      },
+      {
+       "file": "https://www.kranoth.org.il/wp-content/uploads/2025/11/מדיניות_השקעות_צפויה_תשפו-מוג_אשראי_ואגח.xlsx",
+       "text": "קרן השתלמות למורים וגננות – מדיניות צפויה תשפ\"ו",
+       "ctx": ""
+      },
+      {
+       "file": "https://www.kranoth.org.il/wp-content/uploads/2025/11/מדיניות_השקעות_צפויה_תשפו-מוג_אשראי_ואגח.xlsx",
+       "text": "הורד",
+       "ctx": ""
+      },
+      {
+       "file": "https://www.kranoth.org.il/wp-content/uploads/2024/12/מורים_וגננות-מסלול_כללי-מדיניות_השקעות_תשפה_דצמבר_2024.xlsx",
+       "text": "קרן השתלמות למורים וגננות – מדיניות צפויה תשפ\"ה – דצמבר 2024",
+       "ctx": ""
+      },
+      {
+       "file": "https://www.kranoth.org.il/wp-content/uploads/2024/12/מורים_וגננות-מסלול_כללי-מדיניות_השקעות_תשפה_דצמבר_2024.xlsx",
+       "text": "הורד",
+       "ctx": ""
+      },
+      {
+       "file": "https://www.kranoth.org.il/wp-content/uploads/2024/11/מורים_וגננות_רגילה_מסלול_כללי_מדיניות_השקעות_תשפה-1.xlsx",
+       "text": "קרן השתלמות למורים וגננות – מדיניות צפויה תשפ\"ה",
+       "ctx": ""
+      },
+      {
+       "file": "https://www.kranoth.org.il/wp-content/uploads/2024/11/מורים_וגננות_רגילה_מסלול_כללי_מדיניות_השקעות_תשפה-1.xlsx",
+       "text": "הורד",
+       "ctx": ""
+      },
+      {
+       "file": "https://www.kranoth.org.il/wp-content/uploads/2024/01/מוג_רגילה_כללי-מדיניות_השעות_צפויה_25.12.23.xlsx",
+       "text": "קרן השתלמות למורים וגננות – מדיניות צפויה תשפ\"ד – עידכון ביום 25.12.23",
+       "ctx": ""
+      },
+      {
+       "file": "https://www.kranoth.org.il/wp-content/uploads/2024/01/מוג_רגילה_כללי-מדיניות_השעות_צפויה_25.12.23.xlsx",
+       "text": "הורד",
+       "ctx": ""
+      },
+      {
+       "file": "https://www.kranoth.org.il/wp-content/uploads/2023/08/מדיניות_השקעות_צפויה_תשפד-מוג_רגילה-מסלול_כללי.xlsx",
+       "text": "קרן השתלמות למורים וגננות – מדיניות צפויה תשפ\"ד",
+       "ctx": ""
+      },
+      {
+       "file": "https://www.kranoth.org.il/wp-content/uploads/2023/08/מדיניות_השקעות_צפויה_תשפד-מוג_רגילה-מסלול_כללי.xlsx",
+       "text": "הורד",
+       "ctx": ""
+      },
+      {
+       "file": "https://www.kranoth.org.il/wp-content/uploads/2023/01/מדיניות_השקעות_צפויה_מוג_רגילה_תשפג-מסלול_כללי-עדכון_דצמבר_2022.xlsx",
+       "text": "קרן השתלמות למורים וגננות -עידכון מדיניות צפויה תשפ\"ג דצמבר 2022",
+       "ctx": ""
+      },
+      {
+       "file": "https://www.kranoth.org.il/wp-content/uploads/2023/01/מדיניות_השקעות_צפויה_מוג_רגילה_תשפג-מסלול_כללי-עדכון_דצמבר_2022.xlsx",
+       "text": "הורד",
+       "ctx": ""
+      },
+      {
+       "file": "https://www.kranoth.org.il/wp-content/uploads/2022/10/מדיניות_השקעות_צפויה_תשפג_מוג_רגילה_מסלול_כללי.xlsx",
+       "text": "קרן השתלמות למורים וגננות – מדיניות צפויה תשפ\"ג",
+       "ctx": ""
+      },
+      {
+       "file": "https://www.kranoth.org.il/wp-content/uploads/2022/10/מדיניות_השקעות_צפויה_תשפג_מוג_רגילה_מסלול_כללי.xlsx",
+       "text": "הורד",
+       "ctx": ""
+      },
+      {
+       "file": "https://kranoth.org.il/wp-content/uploads/2026/09/מדיניות_השקעות_צפויה_תשפז-מורים_וגננות_מסלול_הלכה.xlsx",
+       "text": "קרן השתלמות למורים וגננות הלכתי – מדיניות צפויה תשפ\"ז",
+       "ctx": ""
+      },
+      {
+       "file": "https://kranoth.org.il/wp-content/uploads/2026/09/מדיניות_השקעות_צפויה_תשפז-מורים_וגננות_מסלול_הלכה.xlsx",
+       "text": "הורד",
+       "ctx": ""
+      },
+      {
+       "file": "https://www.kranoth.org.il/wp-content/uploads/2026/06/מוג_רגילה_הלכה-מדיניות_הקשעות_מרץ_2026.xlsx",
+       "text": "קרן השתלמות למורים וגננות הלכתי – מדיניות צפויה תשפ\"ו – מרץ 2026",
+       "ctx": ""
+      },
+      {
+       "file": "https://www.kranoth.org.il/wp-content/uploads/2026/06/מוג_רגילה_הלכה-מדיניות_הקשעות_מרץ_2026.xlsx",
+       "text": "הורד",
+       "ctx": ""
+      },
+      {
+       "file": "https://www.kranoth.org.il/wp-content/uploads/2025/10/מדיניות_השקעות_צפויה_תשפו-מוג_הלכתי.xlsx",
+       "text": "קרן השתלמות למורים וגננות הלכתי – מדיניות צפויה תשפ\"ו",
+       "ctx": ""
+      }
+     ]
+    },
+    {
+     "url": "https://www.kranoth.org.il/מדיניות-ותקנונים/מדיניות-השקעות-מורים-וגננות-מקור/",
+     "cache": "hit",
+     "links": 62,
+     "followed": [],
+     "files": 52,
+     "clicked": 0,
+     "captured": 0,
+     "selected": [],
+     "unselected_files": [
+      {
+       "file": "https://kranoth.org.il/wp-content/uploads/2026/09/מדיניות_השקעות_צפויה_תשפז-מורים_וגננות_מקור-מסלול_כללי.xlsx",
+       "text": "קרן השתלמות למורים וגננות מקור – מדיניות צפויה תשפ\"ז",
+       "ctx": ""
+      },
+      {
+       "file": "https://kranoth.org.il/wp-content/uploads/2026/09/מדיניות_השקעות_צפויה_תשפז-מורים_וגננות_מקור-מסלול_כללי.xlsx",
+       "text": "הורד",
+       "ctx": ""
+      },
+      {
+       "file": "https://www.kranoth.org.il/wp-content/uploads/2026/06/מוג_מקור-מדיניות_השקעות_מרץ_2026.xlsx",
+       "text": "קרן השתלמות למורים וגננות מקור – מדיניות צפויה תשפ\"ו – מרץ 2026",
+       "ctx": ""
+      },
+      {
+       "file": "https://www.kranoth.org.il/wp-content/uploads/2026/06/מוג_מקור-מדיניות_השקעות_מרץ_2026.xlsx",
+       "text": "הורד",
+       "ctx": ""
+      },
+      {
+       "file": "https://www.kranoth.org.il/wp-content/uploads/2025/11/מדיניות_השקעות_צפויה_תשפו-מוג_מקור_אשראי_ואגח.xlsx",
+       "text": "קרן השתלמות למורים וגננות מקור – מדיניות צפויה תשפ\"ו",
+       "ctx": ""
+      },
+      {
+       "file": "https://www.kranoth.org.il/wp-content/uploads/2025/11/מדיניות_השקעות_צפויה_תשפו-מוג_מקור_אשראי_ואגח.xlsx",
+       "text": "הורד",
+       "ctx": ""
+      },
+      {
+       "file": "https://www.kranoth.org.il/wp-content/uploads/2024/12/מוג_מקור-מסלול_כללי-מדיניות_השקעות_תשפה_דצמבר_2024.xlsx",
+       "text": "קרן השתלמות למורים וגננות מקור – מדיניות צפויה תשפ\"ה – דצמבר 2024",
+       "ctx": ""
+      },
+      {
+       "file": "https://www.kranoth.org.il/wp-content/uploads/2024/12/מוג_מקור-מסלול_כללי-מדיניות_השקעות_תשפה_דצמבר_2024.xlsx",
+       "text": "הורד",
+       "ctx": ""
+      },
+      {
+       "file": "https://www.kranoth.org.il/wp-content/uploads/2024/11/מורים_וגננות_מקור_מסלול_כללי_מדיניות_השקעות_תשפה-1.xlsx",
+       "text": "קרן השתלמות למורים וגננות מקור – מדיניות צפויה תשפ\"ה",
+       "ctx": ""
+      },
+      {
+       "file": "https://www.kranoth.org.il/wp-content/uploads/2024/11/מורים_וגננות_מקור_מסלול_כללי_מדיניות_השקעות_תשפה-1.xlsx",
+       "text": "הורד",
+       "ctx": ""
+      },
+      {
+       "file": "https://www.kranoth.org.il/wp-content/uploads/2024/01/מוג_מקור_כללי-מדיניות_השקעות_צפויה_25.12.23.xlsx",
+       "text": "קרן השתלמות למורים וגננות מקור – מדיניות צפויה תשפ\"ד – עידכון ביום 25.12.23",
+       "ctx": ""
+      },
+      {
+       "file": "https://www.kranoth.org.il/wp-content/uploads/2024/01/מוג_מקור_כללי-מדיניות_השקעות_צפויה_25.12.23.xlsx",
+       "text": "הורד",
+       "ctx": ""
+      },
+      {
+       "file": "https://www.kranoth.org.il/wp-content/uploads/2024/01/מדיניות_השקעות_צפויה_תשפד-מוג_מקור-מסלול_כללי.xlsx",
+       "text": "קרן השתלמות למורים וגננות מקור – מדיניות צפויה תשפ\"ד",
+       "ctx": ""
+      },
+      {
+       "file": "https://www.kranoth.org.il/wp-content/uploads/2024/01/מדיניות_השקעות_צפויה_תשפד-מוג_מקור-מסלול_כללי.xlsx",
+       "text": "הורד",
+       "ctx": ""
+      },
+      {
+       "file": "https://www.kranoth.org.il/wp-content/uploads/2023/01/מדיניות_השקעות_צפויה_מוג_מקור_תשפג-מסלול_כללי-עדכון_דצמבר_2022.xlsx",
+       "text": "קרן השתלמות למורים וגננות מקור -עידכון מדיניות צפויה תשפ\"ג דצמבר 2022",
+       "ctx": ""
+      },
+      {
+       "file": "https://www.kranoth.org.il/wp-content/uploads/2023/01/מדיניות_השקעות_צפויה_מוג_מקור_תשפג-מסלול_כללי-עדכון_דצמבר_2022.xlsx",
+       "text": "הורד",
+       "ctx": ""
+      },
+      {
+       "file": "https://www.kranoth.org.il/wp-content/uploads/2022/10/מ_דיניות_השקעות_צפויה_תשפג_מוג_מקור_מסלול_כללי.xlsx",
+       "text": "קרן השתלמות למורים וגננות מקור – מדיניות צפויה תשפ\"ג",
+       "ctx": ""
+      },
+      {
+       "file": "https://www.kranoth.org.il/wp-content/uploads/2022/10/מ_דיניות_השקעות_צפויה_תשפג_מוג_מקור_מסלול_כללי.xlsx",
+       "text": "הורד",
+       "ctx": ""
+      },
+      {
+       "file": "https://kranoth.org.il/wp-content/uploads/2026/09/מדיניות_השקעות_צפויה_תשפז-מורים_וגננות_מקור-מסלול_הלכה.xlsx",
+       "text": "קרן השתלמות למורים וגננות מקור הלכתי – מדיניות צפויה תשפ\"ז",
+       "ctx": ""
+      },
+      {
+       "file": "https://kranoth.org.il/wp-content/uploads/2026/09/מדיניות_השקעות_צפויה_תשפז-מורים_וגננות_מקור-מסלול_הלכה.xlsx",
+       "text": "הורד",
+       "ctx": ""
+      },
+      {
+       "file": "https://www.kranoth.org.il/wp-content/uploads/2026/06/מוג_מקור_הלכה-מדיניות_השקעות_מרץ_2026.xlsx",
+       "text": "קרן השתלמות למורים וגננות מקור הלכתי – מדיניות צפויה תשפ\"ו – מרץ 2026",
+       "ctx": ""
+      },
+      {
+       "file": "https://www.kranoth.org.il/wp-content/uploads/2026/06/מוג_מקור_הלכה-מדיניות_השקעות_מרץ_2026.xlsx",
+       "text": "הורד",
+       "ctx": ""
+      },
+      {
+       "file": "https://www.kranoth.org.il/wp-content/uploads/2025/10/מדיניות_השקעות_צפויה_תשפו-מוג_מקור_הלכתי.xlsx",
+       "text": "קרן השתלמות למורים וגננות מקור הלכתי – מדיניות צפויה תשפ\"ו",
+       "ctx": ""
+      },
+      {
+       "file": "https://www.kranoth.org.il/wp-content/uploads/2025/10/מדיניות_השקעות_צפויה_תשפו-מוג_מקור_הלכתי.xlsx",
+       "text": "הורד",
+       "ctx": ""
+      },
+      {
+       "file": "https://www.kranoth.org.il/wp-content/uploads/2024/12/מוג_מקור-מסלול_הלכה-מדיניות_תשפה_דצמבר_2024.xlsx",
+       "text": "קרן השתלמות למורים וגננות מקור הלכתי – מדיניות צפויה תשפ\"ה – דצמבר 2024",
+       "ctx": ""
+      }
+     ]
+    },
+    {
+     "url": "https://www.kranoth.org.il/מדיניות-ותקנונים/מדיניות-השקעות-מורים-וגננות-מקוצר/",
+     "cache": "expired",
+     "links": 47,
+     "followed": [],
+     "files": 0,
+     "clicked": 0,
+     "captured": 0,
+     "selected": [],
+     "unselected_files": []
+    },
+    {
+     "url": "https://www.kranoth.org.il/מדיניות-ותקנונים/",
+     "cache": "hit",
+     "links": 21,
+     "followed": [],
+     "files": 2,
+     "clicked": 0,
+     "captured": 0,
+     "selected": [],
+     "unselected_files": [
+      {
+       "file": "https://www.kranoth.org.il/wp-content/uploads/2023/11/אמנת_שירות_לקוחות2022.pdf",
+       "text": "אמנת שירות",
+       "ctx": "אמנת שירות"
+      },
+      {
+       "file": "https://www.kranoth.org.il/wp-content/uploads/2025/08/קווים_מנחים_ואמות_מידה_ביחס_לאיכות_הממשל_התאגידי-1.pdf",
+       "text": "אמות מידה ביחס לאיכות הממשל התאגידי",
+       "ctx": "אמות מידה ביחס לאיכות הממשל התאגידי"
+      }
+     ]
+    },
+    {
+     "url": "https://www.kranoth.org.il",
+     "cache": "expired",
+     "links": 93,
+     "followed": [
+      "https://www.kranoth.org.il/%d7%99%d7%a6%d7%99%d7%90%d7%94-%d7%9c%d7%94%d7%a9%d7%aa%d7%9c%d7%9e%d7%95%d7%aa/%d7%97%d7%99%d7%a4%d7%95%d7%a9-%d7%9e%d7%95%d7%a1%d7%93/",
+      "https://www.kranoth.org.il/d7-9e-d7-99-d7-93-d7-a2-d7-9c-d7-a2-d7-9e-d7-99-d7-aa/%d7%94%d7%a1%d7%91%d7%a8-%d7%9c%d7%9e%d7%99%d7%9c%d7%95%d7%99-%d7%98%d7%95%d7%a4%d7%a1-%d7%9e%d7%99%d7%a0%d7%95%d7%99-%d7%9e%d7%95%d7%98%d7%91%d7%99%d7%9d-%d7%91%d7%a7%d7%a8%d7%9f-%d7%94%d7%a9%d7%aa/",
+      "https://www.kranoth.org.il/%d7%90%d7%a4%d7%a9%d7%a8-%d7%9c%d7%91%d7%93%d7%95%d7%a7-%d7%96%d7%9b%d7%90%d7%95%d7%aa-%d7%95%d7%9c%d7%94%d7%92%d7%99%d7%a9-%d7%91%d7%a7%d7%a9%d7%94-%d7%9c%d7%99%d7%a6%d7%99%d7%90%d7%94-%d7%9c%d7%a9/",
+      "https://www.kranoth.org.il/%d7%9c%d7%9e%d7%99%d7%93%d7%a2-%d7%a8%d7%90%d7%a9%d7%95%d7%a0%d7%99-%d7%91%d7%93%d7%91%d7%a8-%d7%94%d7%a1%d7%93%d7%a8-%d7%97%d7%9c%d7%95%d7%a7%d7%aa-%d7%a2%d7%95%d7%93%d7%a4%d7%99-%d7%94%d7%aa%d7%a9/"
+     ],
+     "files": 0,
+     "clicked": 0,
+     "captured": 0,
+     "selected": [],
+     "unselected_files": []
+    },
+    {
+     "url": "https://www.kranoth.org.il/",
+     "cache": "hit",
+     "links": 17,
+     "followed": [],
+     "files": 0,
+     "clicked": 0,
+     "captured": 0,
+     "selected": [],
+     "unselected_files": []
+    },
+    {
+     "url": "https://www.kranoth.org.il/%d7%99%d7%a6%d7%99%d7%90%d7%94-%d7%9c%d7%94%d7%a9%d7%aa%d7%9c%d7%9e%d7%95%d7%aa/%d7%97%d7%99%d7%a4%d7%95%d7%a9-%d7%9e%d7%95%d7%a1%d7%93/",
+     "cache": "expired",
+     "links": 48,
+     "followed": [
+      "https://www.kranoth.org.il/%d7%99%d7%a6%d7%99%d7%90%d7%94-%d7%9c%d7%94%d7%a9%d7%aa%d7%9c%d7%9e%d7%95%d7%aa/"
+     ],
+     "files": 0,
+     "clicked": 0,
+     "captured": 0,
+     "selected": [],
+     "unselected_files": []
+    },
+    {
+     "url": "https://www.kranoth.org.il/d7-9e-d7-99-d7-93-d7-a2-d7-9c-d7-a2-d7-9e-d7-99-d7-aa/%d7%94%d7%a1%d7%91%d7%a8-%d7%9c%d7%9e%d7%99%d7%9c%d7%95%d7%99-%d7%98%d7%95%d7%a4%d7%a1-%d7%9e%d7%99%d7%a0%d7%95%d7%99-%d7%9e%d7%95%d7%98%d7%91%d7%99%d7%9d-%d7%91%d7%a7%d7%a8%d7%9f-%d7%94%d7%a9%d7%aa/",
+     "cache": "expired",
+     "links": 48,
+     "followed": [],
+     "files": 0,
+     "clicked": 0,
+     "captured": 0,
+     "selected": [],
+     "unselected_files": []
+    },
+    {
+     "url": "https://www.kranoth.org.il/%d7%90%d7%a4%d7%a9%d7%a8-%d7%9c%d7%91%d7%93%d7%95%d7%a7-%d7%96%d7%9b%d7%90%d7%95%d7%aa-%d7%95%d7%9c%d7%94%d7%92%d7%99%d7%a9-%d7%91%d7%a7%d7%a9%d7%94-%d7%9c%d7%99%d7%a6%d7%99%d7%90%d7%94-%d7%9c%d7%a9/",
+     "cache": "expired",
+     "links": 55,
+     "followed": [],
+     "files": 0,
+     "clicked": 0,
+     "captured": 0,
+     "selected": [],
+     "unselected_files": []
+    },
+    {
+     "url": "https://www.kranoth.org.il/%d7%9c%d7%9e%d7%99%d7%93%d7%a2-%d7%a8%d7%90%d7%a9%d7%95%d7%a0%d7%99-%d7%91%d7%93%d7%91%d7%a8-%d7%94%d7%a1%d7%93%d7%a8-%d7%97%d7%9c%d7%95%d7%a7%d7%aa-%d7%a2%d7%95%d7%93%d7%a4%d7%99-%d7%94%d7%aa%d7%a9/",
+     "cache": "expired",
+     "links": 55,
+     "followed": [],
+     "files": 0,
+     "clicked": 0,
+     "captured": 0,
+     "selected": [],
+     "unselected_files": []
+    },
+    {
+     "url": "https://www.kranoth.org.il/%d7%99%d7%a6%d7%99%d7%90%d7%94-%d7%9c%d7%94%d7%a9%d7%aa%d7%9c%d7%9e%d7%95%d7%aa/",
+     "cache": "expired",
+     "links": 208,
+     "followed": [
+      "https://www.kranoth.org.il/contact/%d7%9e%d7%a9%d7%aa%d7%9c%d7%9d-%d7%9e%d7%95%d7%a2%d7%9e%d7%93-%d7%9c%d7%99%d7%a6%d7%99%d7%90%d7%94-%d7%9c%d7%a9%d7%a0%d7%aa-%d7%94%d7%a9%d7%aa%d7%9c%d7%9e%d7%95%d7%aa/"
+     ],
+     "files": 0,
+     "clicked": 0,
+     "captured": 0,
+     "selected": [],
+     "unselected_files": []
+    },
+    {
+     "url": "https://www.kranoth.org.il/contact/%d7%9e%d7%a9%d7%aa%d7%9c%d7%9d-%d7%9e%d7%95%d7%a2%d7%9e%d7%93-%d7%9c%d7%99%d7%a6%d7%99%d7%90%d7%94-%d7%9c%d7%a9%d7%a0%d7%aa-%d7%94%d7%a9%d7%aa%d7%9c%d7%9e%d7%95%d7%aa/",
+     "cache": "expired",
+     "links": 3,
+     "followed": [],
+     "files": 0,
+     "clicked": 0,
+     "captured": 0,
+     "selected": [],
+     "unselected_files": []
+    }
+   ],
+   "new_docs": 0,
+   "found": 108,
+   "selected": 0,
+   "had": 0,
+   "head_skip": 0,
+   "page_cache": 4,
+   "cache_hit": 4,
+   "cache_expired": 8,
+   "errors": [],
+   "diag": [
+    "קרנות השתלמות למור: links=64 files=54 clicked=0 captured=0 selected=0",
+    "   ? מדיניות_השקעות_צפויה_תשפז-מורים_וגננות_מסלול_כללי.xlsx | קרן השתלמות למורים וגננות – מדיניות צפוי | ",
+    "   ? מדיניות_השקעות_צפויה_תשפז-מורים_וגננות_מסלול_כללי.xlsx | הורד | ",
+    "   ? מוג_רגילה-מדיניות_השקעות_מרץ_2026.xlsx | קרן השתלמות למורים וגננות – מדיניות צפוי | ",
+    "   ? מוג_רגילה-מדיניות_השקעות_מרץ_2026.xlsx | הורד | ",
+    "   ? מדיניות_השקעות_צפויה_מורים_וגננות_תשפו_מונגש_עדכון_דצמבר_202 | קרן השתלמות למורים וגננות – מדיניות צפוי | ",
+    "   ? מדיניות_השקעות_צפויה_מורים_וגננות_תשפו_מונגש_עדכון_דצמבר_202 | הורד | ",
+    "קרנות השתלמות למור: links=62 files=52 clicked=0 captured=0 selected=0",
+    "   ? מדיניות_השקעות_צפויה_תשפז-מורים_וגננות_מקור-מסלול_כללי.xlsx | קרן השתלמות למורים וגננות מקור – מדיניות | ",
+    "   ? מדיניות_השקעות_צפויה_תשפז-מורים_וגננות_מקור-מסלול_כללי.xlsx | הורד | ",
+    "   ? מוג_מקור-מדיניות_השקעות_מרץ_2026.xlsx | קרן השתלמות למורים וגננות מקור – מדיניות | ",
+    "   ? מוג_מקור-מדיניות_השקעות_מרץ_2026.xlsx | הורד | ",
+    "   ? מדיניות_השקעות_צפויה_תשפו-מוג_מקור_אשראי_ואגח.xlsx | קרן השתלמות למורים וגננות מקור – מדיניות | ",
+    "   ? מדיניות_השקעות_צפויה_תשפו-מוג_מקור_אשראי_ואגח.xlsx | הורד | ",
+    "קרנות השתלמות למור: links=47 files=0 clicked=0 captured=0 selected=0",
+    "קרנות השתלמות למור: links=21 files=2 clicked=0 captured=0 selected=0",
+    "   ? אמנת_שירות_לקוחות2022.pdf | אמנת שירות | אמנת שירות",
+    "   ? קווים_מנחים_ואמות_מידה_ביחס_לאיכות_הממשל_התאגידי-1.pdf | אמות מידה ביחס לאיכות הממשל התאגידי | אמות מידה ביחס לאיכות הממשל התאגידי",
+    "קרנות השתלמות למור: links=93 files=0 clicked=0 captured=0 selected=0",
+    "קרנות השתלמות למור: links=17 files=0 clicked=0 captured=0 selected=0",
+    "קרנות השתלמות למור: links=48 files=0 clicked=0 captured=0 selected=0",
+    "קרנות השתלמות למור: links=48 files=0 clicked=0 captured=0 selected=0",
+    "קרנות השתלמות למור: links=55 files=0 clicked=0 captured=0 selected=0",
+    "קרנות השתלמות למור: links=55 files=0 clicked=0 captured=0 selected=0",
+    "קרנות השתלמות למור: links=208 files=0 clicked=0 captured=0 selected=0",
+    "קרנות השתלמות למור: links=3 files=0 clicked=0 captured=0 selected=0"
    ],
    "new_files": []
   }
