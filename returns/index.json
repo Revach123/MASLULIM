@@ -2,10 +2,10 @@
  "totals": {
   "companies": 76,
   "with_data": 64,
-  "tracks": 1439,
+  "tracks": 1444,
   "registry_tracks": 1294,
-  "registry_found": 923,
-  "docs": 11110
+  "registry_found": 928,
+  "docs": 11175
  },
  "companies": [
   {
@@ -323,14 +323,14 @@
   {
    "legal_id": "514956465",
    "company": "מור גמל ופנסיה בע\"מ",
-   "tracks": 95,
-   "tracks_numbered": 86,
+   "tracks": 100,
+   "tracks_numbered": 91,
    "registry_tracks": 81,
-   "registry_found": 71,
-   "registry_coverage": 87.7,
+   "registry_found": 76,
+   "registry_coverage": 93.8,
    "first_month": "2023-01",
    "last_month": "2026-12",
-   "docs_returns": 840,
+   "docs_returns": 905,
    "nostro": false
   },
   {
