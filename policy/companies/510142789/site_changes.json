@@ -6,52 +6,286 @@
   "href": "https://www.discountbank.co.il",
   "legal_id": "510142789",
   "company": "חברת ב'ת למ'ד דל'ת בע\"מ",
-  "detected": "2026-10-25T09:08:43+00:00"
+  "detected": "2026-10-26T10:14:14+00:00"
  },
  {
-  "kind": "page_changed",
-  "page": "https://www.discountbank.co.il/private/savings-investments/",
-  "text": "טקסט העמוד השתנה (אותם קישורים)",
-  "href": "https://www.discountbank.co.il/private/savings-investments/",
+  "kind": "new_item",
+  "page": "https://www.discountbank.co.il/private/savings-investments/pension-consulting/",
+  "text": "العربية",
+  "href": "https://www.discountbank.co.il/ar/private/deposits-and-savings/pension-consulting/",
   "legal_id": "510142789",
   "company": "חברת ב'ת למ'ד דל'ת בע\"מ",
-  "detected": "2026-10-25T09:08:43+00:00"
+  "detected": "2026-10-26T10:14:14+00:00"
  },
  {
-  "kind": "page_changed",
+  "kind": "removed_item",
   "page": "https://www.discountbank.co.il/private/savings-investments/pension-consulting/",
-  "text": "טקסט העמוד השתנה (אותם קישורים)",
+  "text": "العربية",
+  "href": "https://www.discountbank.co.il/ar/private/deposits-and-savings/pension-advice/",
+  "legal_id": "510142789",
+  "company": "חברת ב'ת למ'ד דל'ת בע\"מ",
+  "detected": "2026-10-26T10:14:14+00:00"
+ },
+ {
+  "kind": "removed_item",
+  "page": "https://www.discountbank.co.il/en/private/deposits-and-savings/pension-advice/",
+  "text": "العربية",
+  "href": "https://www.discountbank.co.il/ar/private/deposits-and-savings/pension-advice/",
+  "legal_id": "510142789",
+  "company": "חברת ב'ת למ'ד דל'ת בע\"מ",
+  "detected": "2026-10-26T10:14:14+00:00"
+ },
+ {
+  "kind": "removed_item",
+  "page": "https://www.discountbank.co.il/en/private/deposits-and-savings/pension-advice/",
+  "text": "עברית",
   "href": "https://www.discountbank.co.il/private/savings-investments/pension-consulting/",
   "legal_id": "510142789",
   "company": "חברת ב'ת למ'ד דל'ת בע\"מ",
-  "detected": "2026-10-25T09:08:43+00:00"
+  "detected": "2026-10-26T10:14:14+00:00"
  },
  {
-  "kind": "page_changed",
-  "page": "https://www.discountbank.co.il/private/savings-investments/pension-consulting/pension-consulting-contact/",
-  "text": "טקסט העמוד השתנה (אותם קישורים)",
-  "href": "https://www.discountbank.co.il/private/savings-investments/pension-consulting/pension-consulting-contact/",
+  "kind": "removed_item",
+  "page": "https://www.discountbank.co.il/en/private/deposits-and-savings/pension-advice/",
+  "text": "דלג לתוכן העמוד",
+  "href": "https://www.discountbank.co.il/en/private/deposits-and-savings/pension-advice/",
   "legal_id": "510142789",
   "company": "חברת ב'ת למ'ד דל'ת בע\"מ",
-  "detected": "2026-10-25T09:08:43+00:00"
+  "detected": "2026-10-26T10:14:14+00:00"
  },
  {
-  "kind": "page_changed",
+  "kind": "removed_item",
+  "page": "https://www.discountbank.co.il/en/private/deposits-and-savings/pension-advice/",
+  "text": "Русский",
+  "href": "https://www.discountbank.co.il/ru/private/deposits-and-savings/pension-advice/",
+  "legal_id": "510142789",
+  "company": "חברת ב'ת למ'ד דל'ת בע\"מ",
+  "detected": "2026-10-26T10:14:14+00:00"
+ },
+ {
+  "kind": "removed_item",
+  "page": "https://www.discountbank.co.il/en/private/deposits-and-savings/pension-advice/",
+  "text": "Privacy Policy",
+  "href": "https://www.discountbank.co.il/db/global/redirects/english/redirect?param=142",
+  "legal_id": "510142789",
+  "company": "חברת ב'ת למ'ד דל'ת בע\"מ",
+  "detected": "2026-10-26T10:14:14+00:00"
+ },
+ {
+  "kind": "removed_item",
+  "page": "https://www.discountbank.co.il/en/private/deposits-and-savings/pension-advice/",
+  "text": "IR",
+  "href": "https://investors.discountbank.co.il/",
+  "legal_id": "510142789",
+  "company": "חברת ב'ת למ'ד דל'ת בע\"מ",
+  "detected": "2026-10-26T10:14:14+00:00"
+ },
+ {
+  "kind": "removed_item",
+  "page": "https://www.discountbank.co.il/en/private/deposits-and-savings/pension-advice/",
+  "text": "ESG",
+  "href": "https://investors.discountbank.co.il/esg/",
+  "legal_id": "510142789",
+  "company": "חברת ב'ת למ'ד דל'ת בע\"מ",
+  "detected": "2026-10-26T10:14:14+00:00"
+ },
+ {
+  "kind": "removed_item",
+  "page": "https://www.discountbank.co.il/en/private/deposits-and-savings/pension-advice/",
+  "text": "About Us",
+  "href": "https://investors.discountbank.co.il/who-are-we/",
+  "legal_id": "510142789",
+  "company": "חברת ב'ת למ'ד דל'ת בע\"מ",
+  "detected": "2026-10-26T10:14:14+00:00"
+ },
+ {
+  "kind": "removed_item",
+  "page": "https://www.discountbank.co.il/ru/private/deposits-and-savings/pension-advice/",
+  "text": "العربية",
+  "href": "https://www.discountbank.co.il/ar/private/deposits-and-savings/pension-advice/",
+  "legal_id": "510142789",
+  "company": "חברת ב'ת למ'ד דל'ת בע\"מ",
+  "detected": "2026-10-26T10:14:14+00:00"
+ },
+ {
+  "kind": "removed_item",
+  "page": "https://www.discountbank.co.il/ru/private/deposits-and-savings/pension-advice/",
+  "text": "עברית",
+  "href": "https://www.discountbank.co.il/private/savings-investments/pension-consulting/",
+  "legal_id": "510142789",
+  "company": "חברת ב'ת למ'ד דל'ת בע\"מ",
+  "detected": "2026-10-26T10:14:14+00:00"
+ },
+ {
+  "kind": "removed_item",
+  "page": "https://www.discountbank.co.il/ru/private/deposits-and-savings/pension-advice/",
+  "text": "דלג לתוכן העמוד",
+  "href": "https://www.discountbank.co.il/ru/private/deposits-and-savings/pension-advice/",
+  "legal_id": "510142789",
+  "company": "חברת ב'ת למ'ד דל'ת בע\"מ",
+  "detected": "2026-10-26T10:14:14+00:00"
+ },
+ {
+  "kind": "removed_item",
+  "page": "https://www.discountbank.co.il/ru/private/deposits-and-savings/pension-advice/",
+  "text": "Investor Relations",
+  "href": "https://investors.discountbank.co.il/",
+  "legal_id": "510142789",
+  "company": "חברת ב'ת למ'ד דל'ת בע\"מ",
+  "detected": "2026-10-26T10:14:14+00:00"
+ },
+ {
+  "kind": "removed_item",
+  "page": "https://www.discountbank.co.il/ru/private/deposits-and-savings/pension-advice/",
+  "text": "English",
+  "href": "https://www.discountbank.co.il/en/private/deposits-and-savings/pension-advice/",
+  "legal_id": "510142789",
+  "company": "חברת ב'ת למ'ד דל'ת בע\"מ",
+  "detected": "2026-10-26T10:14:14+00:00"
+ },
+ {
+  "kind": "new_page",
+  "page": "https://www.discountbank.co.il/ar/private/deposits-and-savings/pension-consulting/",
+  "text": "0 items",
+  "href": "https://www.discountbank.co.il/ar/private/deposits-and-savings/pension-consulting/",
+  "legal_id": "510142789",
+  "company": "חברת ב'ת למ'ד דל'ת בע\"מ",
+  "detected": "2026-10-26T10:14:14+00:00"
+ },
+ {
+  "kind": "removed_item",
   "page": "https://www.discountbank.co.il/private/savings-investments/pension-consulting/pension-calculator/",
-  "text": "טקסט העמוד השתנה (אותם קישורים)",
-  "href": "https://www.discountbank.co.il/private/savings-investments/pension-consulting/pension-calculator/",
+  "text": "תקנון שירותי תשלום ד.פ.ס. סולושיינס בע\"מ",
+  "href": "https://www.discountbank.co.il/db/global/redirects/hebrew/redirect?param=949",
   "legal_id": "510142789",
   "company": "חברת ב'ת למ'ד דל'ת בע\"מ",
-  "detected": "2026-10-25T09:08:43+00:00"
+  "detected": "2026-10-26T10:14:14+00:00"
  },
  {
-  "kind": "page_changed",
-  "page": "https://www.discountbank.co.il/private/savings-investments/pension-consulting/pension-product/",
-  "text": "טקסט העמוד השתנה (אותם קישורים)",
+  "kind": "removed_item",
+  "page": "https://www.discountbank.co.il/private/savings-investments/pension-consulting/pension-calculator/",
+  "text": "פקדונות והשקעות",
+  "href": "https://www.discountbank.co.il/private/savings-investments/",
+  "legal_id": "510142789",
+  "company": "חברת ב'ת למ'ד דל'ת בע\"מ",
+  "detected": "2026-10-26T10:14:14+00:00"
+ },
+ {
+  "kind": "removed_item",
+  "page": "https://www.discountbank.co.il/private/savings-investments/pension-consulting/pension-calculator/",
+  "text": "מדיניות הפרטיות",
+  "href": "https://www.discountbank.co.il/db/global/redirects/hebrew/redirect?param=142",
+  "legal_id": "510142789",
+  "company": "חברת ב'ת למ'ד דל'ת בע\"מ",
+  "detected": "2026-10-26T10:14:14+00:00"
+ },
+ {
+  "kind": "removed_item",
+  "page": "https://www.discountbank.co.il/private/savings-investments/pension-consulting/pension-calculator/",
+  "text": "לסוגי המוצרים הפנסיונים",
   "href": "https://www.discountbank.co.il/private/savings-investments/pension-consulting/pension-product/",
   "legal_id": "510142789",
   "company": "חברת ב'ת למ'ד דל'ת בע\"מ",
-  "detected": "2026-10-25T09:08:43+00:00"
+  "detected": "2026-10-26T10:14:14+00:00"
+ },
+ {
+  "kind": "removed_item",
+  "page": "https://www.discountbank.co.il/private/savings-investments/pension-consulting/pension-calculator/",
+  "text": "יצירת קשר בנושא ייעוץ פנסיוני",
+  "href": "https://www.discountbank.co.il/private/savings-investments/pension-consulting/pension-consulting-contact/",
+  "legal_id": "510142789",
+  "company": "חברת ב'ת למ'ד דל'ת בע\"מ",
+  "detected": "2026-10-26T10:14:14+00:00"
+ },
+ {
+  "kind": "removed_item",
+  "page": "https://www.discountbank.co.il/private/savings-investments/pension-consulting/pension-calculator/",
+  "text": "ייעוץ פנסיוני",
+  "href": "https://www.discountbank.co.il/private/savings-investments/pension-consulting/",
+  "legal_id": "510142789",
+  "company": "חברת ב'ת למ'ד דל'ת בע\"מ",
+  "detected": "2026-10-26T10:14:14+00:00"
+ },
+ {
+  "kind": "removed_item",
+  "page": "https://www.discountbank.co.il/private/savings-investments/pension-consulting/pension-calculator/",
+  "text": "דלג לתוכן העמוד",
+  "href": "https://www.discountbank.co.il/private/savings-investments/pension-consulting/pension-calculator/",
+  "legal_id": "510142789",
+  "company": "חברת ב'ת למ'ד דל'ת בע\"מ",
+  "detected": "2026-10-26T10:14:14+00:00"
+ },
+ {
+  "kind": "removed_item",
+  "page": "https://www.discountbank.co.il/private/savings-investments/pension-consulting/pension-calculator/",
+  "text": "IR",
+  "href": "https://investors.discountbank.co.il/",
+  "legal_id": "510142789",
+  "company": "חברת ב'ת למ'ד דל'ת בע\"מ",
+  "detected": "2026-10-26T10:14:14+00:00"
+ },
+ {
+  "kind": "removed_item",
+  "page": "https://www.discountbank.co.il/private/savings-investments/pension-consulting/pension-product/",
+  "text": "תקנון שירותי תשלום ד.פ.ס. סולושיינס בע\"מ",
+  "href": "https://www.discountbank.co.il/db/global/redirects/hebrew/redirect?param=949",
+  "legal_id": "510142789",
+  "company": "חברת ב'ת למ'ד דל'ת בע\"מ",
+  "detected": "2026-10-26T10:14:14+00:00"
+ },
+ {
+  "kind": "removed_item",
+  "page": "https://www.discountbank.co.il/private/savings-investments/pension-consulting/pension-product/",
+  "text": "פקדונות והשקעות",
+  "href": "https://www.discountbank.co.il/private/savings-investments/",
+  "legal_id": "510142789",
+  "company": "חברת ב'ת למ'ד דל'ת בע\"מ",
+  "detected": "2026-10-26T10:14:14+00:00"
+ },
+ {
+  "kind": "removed_item",
+  "page": "https://www.discountbank.co.il/private/savings-investments/pension-consulting/pension-product/",
+  "text": "מדיניות הפרטיות של דיסקונט",
+  "href": "https://www.discountbank.co.il/db/global/redirects/hebrew/redirect?param=142",
+  "legal_id": "510142789",
+  "company": "חברת ב'ת למ'ד דל'ת בע\"מ",
+  "detected": "2026-10-26T10:14:14+00:00"
+ },
+ {
+  "kind": "removed_item",
+  "page": "https://www.discountbank.co.il/private/savings-investments/pension-consulting/pension-product/",
+  "text": "למחשבון פנסיה",
+  "href": "https://www.discountbank.co.il/private/savings-investments/pension-consulting/pension-calculator/",
+  "legal_id": "510142789",
+  "company": "חברת ב'ת למ'ד דל'ת בע\"מ",
+  "detected": "2026-10-26T10:14:14+00:00"
+ },
+ {
+  "kind": "removed_item",
+  "page": "https://www.discountbank.co.il/private/savings-investments/pension-consulting/pension-product/",
+  "text": "ייעוץ פנסיוני",
+  "href": "https://www.discountbank.co.il/private/savings-investments/pension-consulting/",
+  "legal_id": "510142789",
+  "company": "חברת ב'ת למ'ד דל'ת בע\"מ",
+  "detected": "2026-10-26T10:14:14+00:00"
+ },
+ {
+  "kind": "removed_item",
+  "page": "https://www.discountbank.co.il/private/savings-investments/pension-consulting/pension-product/",
+  "text": "דלג לתוכן העמוד",
+  "href": "https://www.discountbank.co.il/private/savings-investments/pension-consulting/pension-product/",
+  "legal_id": "510142789",
+  "company": "חברת ב'ת למ'ד דל'ת בע\"מ",
+  "detected": "2026-10-26T10:14:14+00:00"
+ },
+ {
+  "kind": "removed_item",
+  "page": "https://www.discountbank.co.il/private/savings-investments/pension-consulting/pension-product/",
+  "text": "IR",
+  "href": "https://investors.discountbank.co.il/",
+  "legal_id": "510142789",
+  "company": "חברת ב'ת למ'ד דל'ת בע\"מ",
+  "detected": "2026-10-26T10:14:14+00:00"
  },
  {
   "kind": "page_changed",
@@ -60,6 +294,6 @@
   "href": "https://www.discountbank.co.il/private/legal-and-terms/cancelled-check-policy/",
   "legal_id": "510142789",
   "company": "חברת ב'ת למ'ד דל'ת בע\"מ",
-  "detected": "2026-10-25T09:08:43+00:00"
+  "detected": "2026-10-26T10:14:14+00:00"
  }
 ]
