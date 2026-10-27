@@ -1,20 +1,19 @@
 {
  "legal_id": "520027715",
  "company": "מנורה מבטחים והסתדרות המהנדסים ניהול קופות גמל בע\"מ",
- "run": "2026-10-26T11:54:24+00:00",
+ "run": "2026-10-27T11:20:33+00:00",
  "errors": [
-  "/www.menoramivt.co.il/funds/about-menora/engineers/omega-fund/520027715_g286_Yield322.xlsx -> 404",
-  "www.menoramivt.co.il/funds/about-menora/engineers/omega-fund/520027715_g1446_Yield322.xlsx -> 404",
-  "www.menoramivt.co.il/funds/about-menora/engineers/omega-fund/520027715_g9803_Yield322.xlsx -> 404",
-  "www.menoramivt.co.il/funds/about-menora/engineers/omega-fund/520027715_g9802_Yield322.xlsx -> 404"
+  "/www.menoramivt.co.il/funds/about-menora/engineers/omega-fund/520027715_g286_Yield322.xlsx -> 403",
+  "www.menoramivt.co.il/funds/about-menora/engineers/omega-fund/520027715_g1446_Yield322.xlsx -> 403",
+  "www.menoramivt.co.il/funds/about-menora/engineers/omega-fund/520027715_g9803_Yield322.xlsx -> 403"
  ],
  "seeds": {
   "config": 0,
   "discovered": 7,
   "policy_snapshot": 11,
-  "policy_snapshot_docs": 95,
+  "policy_snapshot_docs": 83,
   "gap_search": 0,
-  "sitemap": 2
+  "sitemap": 0
  },
  "imported_from_policy": 0,
  "gap_search": {
@@ -29,17 +28,20 @@
   ],
   "urls": []
  },
- "pages": 67,
+ "pages": 14,
  "pages_failed": [
-  "https://www.menoramivt.co.il/funds/about-menora/engineers/omega-fund/: 404",
-  "https://www.menoramivt.co.il/funds/about-menora/engineers/omega-fund/omega-1445: 404",
-  "https://www.menoramivt.co.il/funds/about-menora/engineers/omega-fund/omega-15738: 404",
-  "https://www.menoramivt.co.il/funds/about-menora/engineers/omega-fund/omega-15739: 404",
-  "https://www.menoramivt.co.il/links/keren-hishtalmut/: 404"
+  "https://www.menoramivt.co.il/funds/about-menora/engineers/omega-fund/: 403",
+  "https://www.menoramivt.co.il/funds/about-menora/engineers/omega-fund/omega-1445: 403",
+  "https://www.menoramivt.co.il/funds/about-menora/engineers/omega-fund/omega-15738: 403",
+  "https://www.menoramivt.co.il/funds/about-menora/engineers/omega-fund/omega-15739: 403",
+  "https://www.menoramivt.co.il/links/keren-hishtalmut/: 403",
+  "https://www.menoramivt.co.il/rep-list/about-insurance/participating-portfolio-info/yield-elements-from-17: 403",
+  "https://www.menoramivt.co.il/rep-list/yield-elements-til-16: 403",
+  "https://www.menoramivt.co.il/funds/about-menora/engineers/omega-fund/omega-286: 403"
  ],
- "candidates": 356,
- "docs": 352,
+ "candidates": 82,
+ "docs": 79,
  "new_docs": 0,
  "index_size": 352,
- "seconds": 979
+ "seconds": 109
 }
