@@ -1,7 +1,7 @@
 {
  "legal_id": "520022351",
  "company": "נתיב קרן הפנסיה של פועלי ועובדי מפעלי משק ההסתדרות בע\"מ",
- "run": "2026-10-26T11:46:46+00:00",
+ "run": "2026-10-27T11:15:09+00:00",
  "errors": [],
  "seeds": {
   "config": 0,
@@ -17,11 +17,18 @@
   "queries": [],
   "urls": []
  },
- "pages": 45,
- "pages_failed": [],
- "candidates": 94,
- "docs": 94,
+ "pages": 12,
+ "pages_failed": [
+  "https://amitim.com/keren/fund_assets_provident_fund_insurers/: 403",
+  "https://amitim.com/keren/fund_assets_makefet_pension_fund/: 403",
+  "https://amitim.com/keren/fund_assets_makefet_provident_fund/: 403",
+  "https://amitim.com/keren/fund_assets_farmers_pension_fund/: 403",
+  "https://amitim.com/keren/fund_assets_farmers_provident_fund/: 403",
+  "https://www.amitim.com: 403"
+ ],
+ "candidates": 0,
+ "docs": 0,
  "new_docs": 0,
  "index_size": 94,
- "seconds": 427
+ "seconds": 186
 }
