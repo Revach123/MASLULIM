@@ -1,6 +1,6 @@
 {
  "legal_id": "510142789",
- "taken": "2026-10-26T11:34:59+00:00",
+ "taken": "2026-10-27T11:00:04+00:00",
  "pages": {
   "https://www.discountbank.co.il": {
    "product": null,
@@ -172,7 +172,7 @@
     },
     {
      "text": "(iframe)",
-     "href": "https://www.google.com/recaptcha/api2/anchor?ar=1&k=6LfjgAIpAAAAAJZy57vghR84M7zjCobrbDuiBVT-&co=aHR0cHM6Ly93d3cuZGlzY291bnRiYW5rLmNvLmlsOjQ0Mw..&hl=iw&v=NhfdZHzre16wrc2m6BxEdu7J&size=invisible&anchor-ms=20000&execute-ms=30000&cb=omq3605edq3t",
+     "href": "https://www.google.com/recaptcha/api2/anchor?ar=1&k=6LfjgAIpAAAAAJZy57vghR84M7zjCobrbDuiBVT-&co=aHR0cHM6Ly93d3cuZGlzY291bnRiYW5rLmNvLmlsOjQ0Mw..&hl=iw&v=NhfdZHzre16wrc2m6BxEdu7J&size=invisible&anchor-ms=20000&execute-ms=30000&cb=hv9py8pc6uhj",
      "year": null,
      "iframe": true,
      "doc": false,
@@ -180,7 +180,7 @@
     }
    ]
   },
-  "https://www.google.com/recaptcha/api2/anchor?ar=1&k=6LfjgAIpAAAAAJZy57vghR84M7zjCobrbDuiBVT-&co=aHR0cHM6Ly93d3cuZGlzY291bnRiYW5rLmNvLmlsOjQ0Mw..&hl=iw&v=NhfdZHzre16wrc2m6BxEdu7J&size=invisible&anchor-ms=20000&execute-ms=30000&cb=omq3605edq3t": {
+  "https://www.google.com/recaptcha/api2/anchor?ar=1&k=6LfjgAIpAAAAAJZy57vghR84M7zjCobrbDuiBVT-&co=aHR0cHM6Ly93d3cuZGlzY291bnRiYW5rLmNvLmlsOjQ0Mw..&hl=iw&v=NhfdZHzre16wrc2m6BxEdu7J&size=invisible&anchor-ms=20000&execute-ms=30000&cb=hv9py8pc6uhj": {
    "product": null,
    "status": 200,
    "method": "browser",
@@ -273,7 +273,7 @@
    "product": null,
    "status": 200,
    "method": "browser",
-   "text_hash": "b80f34225854ad4185f3e3dc66fe81546f2db03c",
+   "text_hash": "bf450384c7f116a651df90fb6526e41c1ed5d336",
    "text_head": "דלג לתוכן העמוד דלג לתפריט אתר דלג לקישורים תחתונים כניסה לחשבונך לידיעתך: באתר זה נעשה שימוש בקבצי Cookies וכלים דומים כדי לספק לך חווית גלישה טובה ותכנים מותאמים אישית, בין היתר על בסיס מידע הקיים אודותיך במאגרי הבנק. למידע נוסף הבנתי עברית תפריט ראשי סגירה פתיחת חשבון כניסה לחשבון פרטיים פתיחת חשבון הלוואות משכנתא פקדונות והשקעות פקדונות ללקוחות כל הבנקים מוצרי שוק הכסף כרטיסי אשראי מידע כללי קבוצת דיסקונט D-Blog | כסף בשפה שלך עסקים קווי העסקים שלנו שירות לעסקים עסקים בדיגיטל בנקאות פרטית אודות בנקאות פרטית חווית שירות שירותים בנקאיים מקצועיות בשוק ההון ניהול העושר הארנק הירוק איך אפשר לעז",
    "items": [
     {
@@ -327,28 +327,45 @@
    ]
   },
   "https://www.discountbank.co.il/lp/smart_future/?fireglass_rsn=true": {
-   "product": null,
-   "status": 200,
-   "method": "requests",
-   "text_hash": "e0659957001dd8e0966a8a3826bf48c4823007c4",
-   "text_head": "Please enable JavaScript to view the page content. Your support ID is: 9152645329248657262.",
-   "items": []
-  },
-  "https://www.discountbank.co.il/private/savings-investments/pension-consulting/": {
    "product": "פנסיה",
    "status": 200,
-   "method": "browser",
-   "text_hash": "16c64a76bb41d96fa26482105e27f057b3f91424",
-   "text_head": "דלג לתוכן העמוד דלג לתפריט אתר דלג לקישורים תחתונים כניסה לחשבונך לידיעתך: באתר זה נעשה שימוש בקבצי Cookies וכלים דומים כדי לספק לך חווית גלישה טובה ותכנים מותאמים אישית, בין היתר על בסיס מידע הקיים אודותיך במאגרי הבנק. למידע נוסף הבנתי עברית תפריט ראשי תפריט פרטיים עסקים בנקאות פרטית אפשר לעזור? פתיחת חשבון כניסה לחשבון דיסקונט פרטיים פקדונות והשקעות ייעוץ פנסיוני ייעוץ פנסיוני סקרים מגלים שרוב הישראלים לא מודעים לתוכניות הפנסיוניות שלהם למרות שהתיק הפנסיוני הוא נכס יקר ערך כמעט כמו דירה הבנק מעניק ייעוץ אובייקטיבי ומקצועי כך תקבלו את התוכניות הנכונות ביותר עבורכם. לשירות Smart Future למחשבון",
+   "method": "requests",
+   "text_hash": "b4160498176f23d0a6c4bbb3d4dd21ab8be3e4b7",
+   "text_head": "עוזר לתכנן את הפנסיה כבר מהיום Smart Future | דיסקונט דלג לתוכן העמוד דלג לתפריט אתר דלג לקישורים תחתונים כניסה לחשבונך דלג לתוכן העמוד דלג לתפריט אתר דלג לקישורים תחתונים כניסה לחשבונך לידיעתך: באתר זה נעשה שימוש בקבצי Cookies וכלים דומים כדי לספק לך חווית גלישה טובה ותכנים מותאמים אישית, בין היתר על בסיס מידע הקיים אודותיך במאגרי הבנק. למידע נוסף הבנתי דיסקונט SMART FUTURE חשוב לנו שתהיה לך חוויה מדהימה למה שלא נמשיך באפליקציה? כניסה קלה וחוויה מותאמת מגוון פעולות ומידע שרלוונטי לך כניסה קלה עם טביעת אצבע כניסה קלה וחוויה מותאמת מגוון פעולות ומידע שרלוונטי לך לאפליקציה המשך באתר יודעים כמה כ",
    "items": [
     {
-     "text": "קבוצת דיסקונט מפרסמת את הדוחות הכספיים לרבעון השני של 2026 לצפייה בדו\"חות הכספיים לצפייה בדו\"חות הכספיים",
-     "href": "https://www.discountbank.co.il/private/discount-group/financial-statements/",
-     "year": "2026",
+     "text": "לתיאום פגישת ייעוץ פנסיוני אצל המומחים שלנו >",
+     "href": "https://www.discountbank.co.il/private/savings-investments/pension-consulting/pension-consulting-contact/",
+     "year": null,
      "iframe": false,
      "doc": false,
      "internal": true
     },
+    {
+     "text": "לתיאום פגישת ייעוץ פנסיוני",
+     "href": "https://www.discountbank.co.il/lp/smart_future/?fireglass_rsn=true",
+     "year": null,
+     "iframe": false,
+     "doc": false,
+     "internal": true
+    },
+    {
+     "text": "להצטרפות לשירות באפליקציית דיסקונט",
+     "href": "https://links.private.discountbank.co.il/UR6w/MyPension",
+     "year": null,
+     "iframe": false,
+     "doc": false,
+     "internal": true
+    }
+   ]
+  },
+  "https://www.discountbank.co.il/private/savings-investments/pension-consulting/": {
+   "product": "פנסיה",
+   "status": 200,
+   "method": "requests",
+   "text_hash": "1b9c644a92a571b7614f689392c593028756767a",
+   "text_head": "ייעוץ פנסיוני אובייקטיבי ומקצועי לעצמאים ושכירים | דיסקונט דלג לתוכן העמוד דלג לתפריט אתר דלג לקישורים תחתונים כניסה לחשבונך דלג לתוכן העמוד דלג לתפריט אתר דלג לקישורים תחתונים כניסה לחשבונך לידיעתך: באתר זה נעשה שימוש בקבצי Cookies וכלים דומים כדי לספק לך חווית גלישה טובה ותכנים מותאמים אישית, בין היתר על בסיס מידע הקיים אודותיך במאגרי הבנק. למידע נוסף הבנתי עברית עברית English Français Русский العربية תפריט ראשי תפריט פרטיים עסקים בנקאות פרטית אפשר לעזור? ✕ חיפושים נפוצים באתר פתיחת חשבון המרת מט\"ח צפון ירוק הארנק הירוק Smart Future הלוואות המפתח שלך למבצעים והנחות פקדונות מומלצים כרטיסי אשר",
+   "items": [
     {
      "text": "العربية",
      "href": "https://www.discountbank.co.il/ar/private/deposits-and-savings/pension-consulting/",
@@ -414,6 +431,14 @@
      "internal": true
     },
     {
+     "text": "דוחות כספיים",
+     "href": "https://www.discountbank.co.il/private/discount-group/financial-statements/",
+     "year": null,
+     "iframe": false,
+     "doc": false,
+     "internal": true
+    },
+    {
      "text": "Русский",
      "href": "https://www.discountbank.co.il/ru/private/deposits-and-savings/pension-advice/",
      "year": null,
@@ -428,40 +453,16 @@
      "iframe": false,
      "doc": false,
      "internal": true
-    },
-    {
-     "text": "(iframe)",
-     "href": "https://www.google.com/recaptcha/api2/anchor?ar=1&k=6LfjgAIpAAAAAJZy57vghR84M7zjCobrbDuiBVT-&co=aHR0cHM6Ly93d3cuZGlzY291bnRiYW5rLmNvLmlsOjQ0Mw..&hl=iw&v=NhfdZHzre16wrc2m6BxEdu7J&size=invisible&anchor-ms=20000&execute-ms=30000&cb=otolohjf5557",
-     "year": null,
-     "iframe": true,
-     "doc": false,
-     "internal": false
     }
    ]
-  },
-  "https://www.google.com/recaptcha/api2/anchor?ar=1&k=6LfjgAIpAAAAAJZy57vghR84M7zjCobrbDuiBVT-&co=aHR0cHM6Ly93d3cuZGlzY291bnRiYW5rLmNvLmlsOjQ0Mw..&hl=iw&v=NhfdZHzre16wrc2m6BxEdu7J&size=invisible&anchor-ms=20000&execute-ms=30000&cb=otolohjf5557": {
-   "product": null,
-   "status": 200,
-   "method": "browser",
-   "text_hash": "1468e23e963b54369792ed9c663473d383beb25e",
-   "text_head": "מוגן באמצעות reCAPTCHA",
-   "items": []
   },
   "https://www.discountbank.co.il/private/savings-investments/economic-reviews/": {
    "product": null,
    "status": 200,
-   "method": "browser",
-   "text_hash": "53272ff4877cb46d3c541418feadab510e159719",
-   "text_head": "דלג לתוכן העמוד דלג לתפריט אתר דלג לקישורים תחתונים כניסה לחשבונך לידיעתך: באתר זה נעשה שימוש בקבצי Cookies וכלים דומים כדי לספק לך חווית גלישה טובה ותכנים מותאמים אישית, בין היתר על בסיס מידע הקיים אודותיך במאגרי הבנק. למידע נוסף הבנתי עברית עברית English Français Русский العربية תפריט ראשי סגירה פתיחת חשבון כניסה לחשבון פרטיים פתיחת חשבון הלוואות משכנתא פקדונות והשקעות פקדונות ללקוחות כל הבנקים מוצרי שוק הכסף כרטיסי אשראי מידע כללי קבוצת דיסקונט D-Blog | כסף בשפה שלך עסקים קווי העסקים שלנו שירות לעסקים עסקים בדיגיטל בנקאות פרטית אודות בנקאות פרטית חווית שירות שירותים בנקאיים מקצועיות בשוק הה",
+   "method": "requests",
+   "text_hash": "8dcff74ffc9ef2d55a33eed13c10ee1abbdbeb85",
+   "text_head": "סקירה כלכלית של הכלכלנית הראשית | דיסקונט דלג לתוכן העמוד דלג לתפריט אתר דלג לקישורים תחתונים כניסה לחשבונך דלג לתוכן העמוד דלג לתפריט אתר דלג לקישורים תחתונים כניסה לחשבונך לידיעתך: באתר זה נעשה שימוש בקבצי Cookies וכלים דומים כדי לספק לך חווית גלישה טובה ותכנים מותאמים אישית, בין היתר על בסיס מידע הקיים אודותיך במאגרי הבנק. למידע נוסף הבנתי עברית עברית English Français Русский العربية תפריט ראשי תפריט פרטיים עסקים בנקאות פרטית אפשר לעזור? ✕ חיפושים נפוצים באתר פתיחת חשבון המרת מט\"ח צפון ירוק הארנק הירוק Smart Future הלוואות המפתח שלך למבצעים והנחות פקדונות מומלצים כרטיסי אשראי שעות פעילות נמ",
    "items": [
-    {
-     "text": "קבוצת דיסקונט מפרסמת את הדוחות הכספיים לרבעון השני של 2026 לצפייה בדו\"חות הכספיים לצפייה בדו\"חות הכספיים",
-     "href": "https://www.discountbank.co.il/private/discount-group/financial-statements/",
-     "year": "2026",
-     "iframe": false,
-     "doc": false,
-     "internal": true
-    },
     {
      "text": "לסקירה המלאה לחצו כאן",
      "href": "https://www.discountbank.co.il/media/i2bjwkqk/abrood_102026.pdf",
@@ -471,16 +472,8 @@
      "internal": true
     },
     {
-     "text": "דו\"ח ועדת השקעות סקירה מבית תפנית",
-     "href": "https://www.discountbank.co.il/media/btqkjpzy/וhashkahot_-19102026.pdf",
-     "year": "2026",
-     "iframe": false,
-     "doc": true,
-     "internal": true
-    },
-    {
      "text": "דו\"ח ועדת השקעות",
-     "href": "https://www.discountbank.co.il/media/btqkjpzy/%D7%95hashkahot_-19102026.pdf",
+     "href": "https://www.discountbank.co.il/media/btqkjpzy/וhashkahot_-19102026.pdf",
      "year": "2026",
      "iframe": false,
      "doc": true,
@@ -512,7 +505,7 @@
     },
     {
      "text": "ממד פברואר 2025",
-     "href": "https://www.discountbank.co.il/media/jtcha0xy/%D7%9E%D7%93%D7%93-%D7%A4%D7%91%D7%A8%D7%95%D7%90%D7%A8-2025.pdf",
+     "href": "https://www.discountbank.co.il/media/jtcha0xy/מדד-פברואר-2025.pdf",
      "year": "2025",
      "iframe": false,
      "doc": true,
@@ -583,14 +576,6 @@
      "internal": true
     },
     {
-     "text": "16.03.2025 האינפלציה מתמתנת, אולם בנק ישראל ימתין עם הורדת ריבית מדד המחירים לצרכן לחודש פברואר הפתיע ונותר ללא שינוי, לעומת צפי לעליה של 0.3%, והאינפלציה השנתית האטה מ-3.8% ל-3.4%, אינפלציית הליבה הת",
-     "href": "https://www.discountbank.co.il/media/jtcha0xy/מדד-פברואר-2025.pdf",
-     "year": "2025",
-     "iframe": false,
-     "doc": true,
-     "internal": true
-    },
-    {
      "text": "08.05.2025 הפד לא מספק רמזים לגבי מועד הפחתת הריבית הפד ממשיך להאמין שמצב הכלכלה וסביבת הריבית הנוכחית מאפשרים לו להמתין ולבחון את השפעות מדיניות הממשל על הכלכלה. להערכת הנגיד, הכלכלה נמצאת במצב טוב א",
      "href": "https://www.discountbank.co.il/media/d4cenjzj/ped-525.pdf",
      "year": "2025",
@@ -616,14 +601,6 @@
     },
     {
      "text": "לחצו כאן לסקירה המלאה",
-     "href": "https://www.discountbank.co.il/media/qlknj1ho/%D7%9E%D7%93%D7%93-%D7%90%D7%95%D7%A7%D7%98%D7%95%D7%91%D7%A8-2024-%D7%95%D7%94%D7%A6%D7%9E%D7%99%D7%97%D7%94-%D7%91%D7%A8%D7%91%D7%A2%D7%95%D7%9F-%D7%94%D7%A9%D7%9C%D7%99%D7%A9%D7%99.pdf",
-     "year": "2024",
-     "iframe": false,
-     "doc": true,
-     "internal": true
-    },
-    {
-     "text": "18.11.2024 הצמיחה מהירה והאינפלציה עדיין מעל היעד • כפי שצפינו, רשם התוצר ברבעון השלישי של 2024 צמיחה בשיעור שנתי של 3.8%, והתוצר העסקי - 5.4%, תוך זינוק בהשקעות, המשך גידול מהיר בצריכה הפרטית, גידול",
      "href": "https://www.discountbank.co.il/media/qlknj1ho/מדד-אוקטובר-2024-והצמיחה-ברבעון-השלישי.pdf",
      "year": "2024",
      "iframe": false,
@@ -1591,6 +1568,14 @@
      "internal": true
     },
     {
+     "text": "דוחות כספיים",
+     "href": "https://www.discountbank.co.il/private/discount-group/financial-statements/",
+     "year": null,
+     "iframe": false,
+     "doc": false,
+     "internal": true
+    },
+    {
      "text": "איתור כספים פנסיוניים",
      "href": "https://www.discountbank.co.il/private/savings-investments/pension-consulting/",
      "year": null,
@@ -1684,18 +1669,10 @@
   "https://www.discountbank.co.il/private/savings-investments/hisachon-lekol-yeled/": {
    "product": null,
    "status": 200,
-   "method": "browser",
-   "text_hash": "06e614e79579f946ed6c96a1736eef5a778a784b",
-   "text_head": "דלג לתוכן העמוד דלג לתפריט אתר דלג לקישורים תחתונים כניסה לחשבונך לידיעתך: באתר זה נעשה שימוש בקבצי Cookies וכלים דומים כדי לספק לך חווית גלישה טובה ותכנים מותאמים אישית, בין היתר על בסיס מידע הקיים אודותיך במאגרי הבנק. למידע נוסף הבנתי עברית תפריט ראשי סגירה פתיחת חשבון כניסה לחשבון פרטיים פתיחת חשבון הלוואות משכנתא פקדונות והשקעות פקדונות ללקוחות כל הבנקים מוצרי שוק הכסף כרטיסי אשראי מידע כללי קבוצת דיסקונט D-Blog | כסף בשפה שלך עסקים קווי העסקים שלנו שירות לעסקים עסקים בדיגיטל בנקאות פרטית אודות בנקאות פרטית חווית שירות שירותים בנקאיים מקצועיות בשוק ההון ניהול העושר הארנק הירוק איך אפשר לעז",
+   "method": "requests",
+   "text_hash": "9452ecbb0596eeeaba3cc8e7281c0c033b88fe07",
+   "text_head": "חיסכון לכל ילד | דיסקונט דלג לתוכן העמוד דלג לתפריט אתר דלג לקישורים תחתונים כניסה לחשבונך דלג לתוכן העמוד דלג לתפריט אתר דלג לקישורים תחתונים כניסה לחשבונך לידיעתך: באתר זה נעשה שימוש בקבצי Cookies וכלים דומים כדי לספק לך חווית גלישה טובה ותכנים מותאמים אישית, בין היתר על בסיס מידע הקיים אודותיך במאגרי הבנק. למידע נוסף הבנתי עברית עברית English Français Русский العربية תפריט ראשי תפריט פרטיים עסקים בנקאות פרטית אפשר לעזור? ✕ חיפושים נפוצים באתר פתיחת חשבון המרת מט\"ח צפון ירוק הארנק הירוק Smart Future הלוואות המפתח שלך למבצעים והנחות פקדונות מומלצים כרטיסי אשראי שעות פעילות נמצאו 0 תוצאות עבור",
    "items": [
-    {
-     "text": "קבוצת דיסקונט מפרסמת את הדוחות הכספיים לרבעון השני של 2026 לצפייה בדו\"חות הכספיים לצפייה בדו\"חות הכספיים",
-     "href": "https://www.discountbank.co.il/private/discount-group/financial-statements/",
-     "year": "2026",
-     "iframe": false,
-     "doc": false,
-     "internal": true
-    },
     {
      "text": "תוכניות החיסכון",
      "href": "https://www.discountbank.co.il/private/savings-investments/deposits-savings/",
@@ -1761,6 +1738,14 @@
      "internal": true
     },
     {
+     "text": "דוחות כספיים",
+     "href": "https://www.discountbank.co.il/private/discount-group/financial-statements/",
+     "year": null,
+     "iframe": false,
+     "doc": false,
+     "internal": true
+    },
+    {
      "text": "איתור כספים פנסיוניים",
      "href": "https://www.discountbank.co.il/private/savings-investments/pension-consulting/",
      "year": null,
@@ -1773,29 +1758,13 @@
   "https://www.discountbank.co.il/private/savings-investments/capital-market/": {
    "product": null,
    "status": 200,
-   "method": "browser",
-   "text_hash": "c08da50bfee6b237584fce69d7930d9b78e9552a",
-   "text_head": "דלג לתוכן העמוד דלג לתפריט אתר דלג לקישורים תחתונים כניסה לחשבונך לידיעתך: באתר זה נעשה שימוש בקבצי Cookies וכלים דומים כדי לספק לך חווית גלישה טובה ותכנים מותאמים אישית, בין היתר על בסיס מידע הקיים אודותיך במאגרי הבנק. למידע נוסף הבנתי עברית תפריט ראשי סגירה פתיחת חשבון כניסה לחשבון פרטיים פתיחת חשבון הלוואות משכנתא פקדונות והשקעות פקדונות ללקוחות כל הבנקים מוצרי שוק הכסף כרטיסי אשראי מידע כללי קבוצת דיסקונט D-Blog | כסף בשפה שלך עסקים קווי העסקים שלנו שירות לעסקים עסקים בדיגיטל בנקאות פרטית אודות בנקאות פרטית חווית שירות שירותים בנקאיים מקצועיות בשוק ההון ניהול העושר הארנק הירוק איך אפשר לעז",
+   "method": "requests",
+   "text_hash": "d28760bfddf09ddb1a3d8016a61bdf8584f2b565",
+   "text_head": "שוק ההון | דיסקונט דלג לתוכן העמוד דלג לתפריט אתר דלג לקישורים תחתונים כניסה לחשבונך דלג לתוכן העמוד דלג לתפריט אתר דלג לקישורים תחתונים כניסה לחשבונך לידיעתך: באתר זה נעשה שימוש בקבצי Cookies וכלים דומים כדי לספק לך חווית גלישה טובה ותכנים מותאמים אישית, בין היתר על בסיס מידע הקיים אודותיך במאגרי הבנק. למידע נוסף הבנתי עברית עברית English Français Русский العربية תפריט ראשי תפריט פרטיים עסקים בנקאות פרטית אפשר לעזור? ✕ חיפושים נפוצים באתר פתיחת חשבון המרת מט\"ח צפון ירוק הארנק הירוק Smart Future הלוואות המפתח שלך למבצעים והנחות פקדונות מומלצים כרטיסי אשראי שעות פעילות נמצאו 0 תוצאות עבור לכל ה",
    "items": [
     {
-     "text": "קבוצת דיסקונט מפרסמת את הדוחות הכספיים לרבעון השני של 2026 לצפייה בדו\"חות הכספיים לצפייה בדו\"חות הכספיים",
-     "href": "https://www.discountbank.co.il/private/discount-group/financial-statements/",
-     "year": "2026",
-     "iframe": false,
-     "doc": false,
-     "internal": true
-    },
-    {
-     "text": "דו\"ח ועדת השקעות למידע בנושא היתר לפי סעיף 49א",
-     "href": "https://www.discountbank.co.il/media/btqkjpzy/וhashkahot_-19102026.pdf",
-     "year": "2026",
-     "iframe": false,
-     "doc": true,
-     "internal": true
-    },
-    {
      "text": "דו\"ח ועדת השקעות",
-     "href": "https://www.discountbank.co.il/media/btqkjpzy/%D7%95hashkahot_-19102026.pdf",
+     "href": "https://www.discountbank.co.il/media/btqkjpzy/וhashkahot_-19102026.pdf",
      "year": "2026",
      "iframe": false,
      "doc": true,
@@ -1906,6 +1875,14 @@
      "internal": true
     },
     {
+     "text": "דוחות כספיים",
+     "href": "https://www.discountbank.co.il/private/discount-group/financial-statements/",
+     "year": null,
+     "iframe": false,
+     "doc": false,
+     "internal": true
+    },
+    {
      "text": "איתור כספים פנסיוניים",
      "href": "https://www.discountbank.co.il/private/savings-investments/pension-consulting/",
      "year": null,
@@ -1931,7 +1908,7 @@
      "internal": true
     },
     {
-     "text": "אישור ניכוי מס לשנת 2025 מיסוי תוכניות חיסכון ופקדונות מיסוי ניירות ערך ניכוי מס לתושבי חוץ",
+     "text": "אישור ניכוי מס לשנת 2025 אישור ניכוי מס לשנת 2025 מיסוי תוכניות חיסכון ופקדונות מיסוי ניירות ערך ניכוי מס לתושבי חוץ",
      "href": "https://www.discountbank.co.il/private/savings-investments/securities-taxation/",
      "year": "2025",
      "iframe": false,
@@ -1976,8 +1953,8 @@
    "product": null,
    "status": 200,
    "method": "browser",
-   "text_hash": "779c8cc69dee1eec4136ae9fa8d56e70df7802f6",
-   "text_head": "דלג לתוכן העמוד דלג לתפריט אתר דלג לקישורים תחתונים כניסה לחשבונך לידיעתך: באתר זה נעשה שימוש בקבצי Cookies וכלים דומים כדי לספק לך חווית גלישה טובה ותכנים מותאמים אישית, בין היתר על בסיס מידע הקיים אודותיך במאגרי הבנק. למידע נוסף הבנתי עברית תפריט ראשי תפריט פרטיים עסקים בנקאות פרטית אפשר לעזור? פתיחת חשבון כניסה לחשבון דיסקונט פרטיים פקדונות והשקעות השכלה פיננסית בנושא פקדונות וחסכונות השכלה פיננסית בנושא פקדונות וחסכונות איך יוצאים מהמינוס הלוואות פקדונות וחסכונות איך יוצאים מהמינוס? על פי סקרים שנערכו בשנים האחרונות, כמחצית מהמשפחות בישראל נמצאות במינוס כרוני. מינוס כרוני בחשבון הבנק נוצר ",
+   "text_hash": "ceeb0179d70328cf0de516444ec74838ab366542",
+   "text_head": "דלג לתוכן העמוד דלג לתפריט אתר דלג לקישורים תחתונים כניסה לחשבונך לידיעתך: באתר זה נעשה שימוש בקבצי Cookies וכלים דומים כדי לספק לך חווית גלישה טובה ותכנים מותאמים אישית, בין היתר על בסיס מידע הקיים אודותיך במאגרי הבנק. למידע נוסף הבנתי עברית תפריט ראשי סגירה פתיחת חשבון כניסה לחשבון פרטיים פתיחת חשבון הלוואות משכנתא פקדונות והשקעות פקדונות ללקוחות כל הבנקים מוצרי שוק הכסף כרטיסי אשראי מידע כללי קבוצת דיסקונט D-Blog | כסף בשפה שלך עסקים קווי העסקים שלנו שירות לעסקים עסקים בדיגיטל בנקאות פרטית אודות בנקאות פרטית חווית שירות שירותים בנקאיים מקצועיות בשוק ההון ניהול העושר הארנק הירוק איך אפשר לעז",
    "items": [
     {
      "text": "קבוצת דיסקונט מפרסמת את הדוחות הכספיים לרבעון השני של 2026 לצפייה בדו\"חות הכספיים לצפייה בדו\"חות הכספיים",
@@ -2014,14 +1991,6 @@
     {
      "text": "דלג לתוכן העמוד",
      "href": "https://www.discountbank.co.il/private/savings-investments/financial-budget/",
-     "year": null,
-     "iframe": false,
-     "doc": false,
-     "internal": true
-    },
-    {
-     "text": "דלג לתוכן העמוד",
-     "href": "https://www.discountbank.co.il/private/savings-investments/financial-budget/family-budget-loans/",
      "year": null,
      "iframe": false,
      "doc": false,
@@ -2105,9 +2074,9 @@
   "https://www.discountbank.co.il/private/savings-investments/deposits-savings/deposits-without-account/palal-form-fixed-interest-six-months/": {
    "product": null,
    "status": 200,
-   "method": "browser",
-   "text_hash": "f5d156e94477b871d2e9bb16193b8a00f84b2048",
-   "text_head": "דלג לתוכן העמוד דלג לתפריט אתר דלג לקישורים תחתונים כניסה לחשבונך לידיעתך: באתר זה נעשה שימוש בקבצי Cookies וכלים דומים כדי לספק לך חווית גלישה טובה ותכנים מותאמים אישית, בין היתר על בסיס מידע הקיים אודותיך במאגרי הבנק. למידע נוסף הבנתי צרו איתי קשר הפקדה לפיקדון ללקוחות כל הבנקים פתיחת פיקדון כספי במערכת סגורה, בה הכספים יועברו מחשבון הלקוח בבנק המעביר ובתום תקופת הפיקדון יחזרו לחשבון ממנו התקבלו. תוקף הצעת הריבית לפיקדון שנבחר הינו 3 ימי עסקים מתאריך הגשת הבקשה ובכפוף להעברת הכספים על ידך (כולל השלמת מסמכים ככל ויידרש) ולקבלתם בבנק בטווח הימים כאמור. זהות בעלי הפיקדון וזהות בעלי החשבון המקור",
+   "method": "requests",
+   "text_hash": "84714d3e451b068d99ed8e86e204844312d94a15",
+   "text_head": "פיקדון יחיד ל-6 חודשים בריבית קבועה ללקוחות כל הבנקים | דיסקונט דלג לתוכן העמוד דלג לתפריט אתר דלג לקישורים תחתונים כניסה לחשבונך דלג לתוכן העמוד דלג לתפריט אתר דלג לקישורים תחתונים כניסה לחשבונך לידיעתך: באתר זה נעשה שימוש בקבצי Cookies וכלים דומים כדי לספק לך חווית גלישה טובה ותכנים מותאמים אישית, בין היתר על בסיס מידע הקיים אודותיך במאגרי הבנק. למידע נוסף הבנתי צרו איתי קשר חשוב לנו שתהיה לך חוויה מדהימה למה שלא נמשיך באפליקציה? כניסה קלה וחוויה מותאמת מגוון פעולות ומידע שרלוונטי לך כניסה קלה עם טביעת אצבע כניסה קלה וחוויה מותאמת מגוון פעולות ומידע שרלוונטי לך לאפליקציה המשך באתר הפקדה לפיק",
    "items": [
     {
      "text": "ערוצי התקשורת",
@@ -2166,14 +2135,6 @@
      "internal": true
     },
     {
-     "text": "(iframe)",
-     "href": "https://www.google.com/recaptcha/api2/anchor?ar=1&k=6LfjgAIpAAAAAJZy57vghR84M7zjCobrbDuiBVT-&co=aHR0cHM6Ly93d3cuZGlzY291bnRiYW5rLmNvLmlsOjQ0Mw..&hl=iw&v=NhfdZHzre16wrc2m6BxEdu7J&size=invisible&anchor-ms=20000&execute-ms=30000&cb=ofvsn12f9v5",
-     "year": null,
-     "iframe": true,
-     "doc": false,
-     "internal": false
-    },
-    {
      "text": "\"הצהרת איש-ציבור\"",
      "href": "https://www.discountbank.co.il/media/t4rd2ofq/bublic_nagish.pdf",
      "year": null,
@@ -2186,9 +2147,9 @@
   "https://www.discountbank.co.il/private/savings-investments/deposits-savings/deposits-without-account/palal-form-fixed-interest-year/": {
    "product": null,
    "status": 200,
-   "method": "browser",
-   "text_hash": "035da7cf7b6a34b77d3481a48b2622386cf3549a",
-   "text_head": "דלג לתוכן העמוד דלג לתפריט אתר דלג לקישורים תחתונים כניסה לחשבונך לידיעתך: באתר זה נעשה שימוש בקבצי Cookies וכלים דומים כדי לספק לך חווית גלישה טובה ותכנים מותאמים אישית, בין היתר על בסיס מידע הקיים אודותיך במאגרי הבנק. למידע נוסף הבנתי צרו איתי קשר הפקדה לפיקדון ללקוחות כל הבנקים פתיחת פיקדון כספי במערכת סגורה, בה הכספים יועברו מחשבון הלקוח בבנק המעביר ובתום תקופת הפיקדון יחזרו לחשבון ממנו התקבלו. תוקף הצעת הריבית לפיקדון שנבחר הינו 3 ימי עסקים מתאריך הגשת הבקשה ובכפוף להעברת הכספים על ידך (כולל השלמת מסמכים ככל ויידרש) ולקבלתם בבנק בטווח הימים כאמור. זהות בעלי הפיקדון וזהות בעלי החשבון המקור",
+   "method": "requests",
+   "text_hash": "e0118b22b1e972c4bc470487ee41b1c1ad39ca62",
+   "text_head": "פיקדון יחיד לשנה קבועה בריבית קבועה ללקוחות כל הבנקים | דיסקונט דלג לתוכן העמוד דלג לתפריט אתר דלג לקישורים תחתונים כניסה לחשבונך דלג לתוכן העמוד דלג לתפריט אתר דלג לקישורים תחתונים כניסה לחשבונך לידיעתך: באתר זה נעשה שימוש בקבצי Cookies וכלים דומים כדי לספק לך חווית גלישה טובה ותכנים מותאמים אישית, בין היתר על בסיס מידע הקיים אודותיך במאגרי הבנק. למידע נוסף הבנתי צרו איתי קשר חשוב לנו שתהיה לך חוויה מדהימה למה שלא נמשיך באפליקציה? כניסה קלה וחוויה מותאמת מגוון פעולות ומידע שרלוונטי לך כניסה קלה עם טביעת אצבע כניסה קלה וחוויה מותאמת מגוון פעולות ומידע שרלוונטי לך לאפליקציה המשך באתר הפקדה לפיק",
    "items": [
     {
      "text": "ערוצי התקשורת",
@@ -2247,14 +2208,6 @@
      "internal": true
     },
     {
-     "text": "(iframe)",
-     "href": "https://www.google.com/recaptcha/api2/anchor?ar=1&k=6LfjgAIpAAAAAJZy57vghR84M7zjCobrbDuiBVT-&co=aHR0cHM6Ly93d3cuZGlzY291bnRiYW5rLmNvLmlsOjQ0Mw..&hl=iw&v=NhfdZHzre16wrc2m6BxEdu7J&size=invisible&anchor-ms=20000&execute-ms=30000&cb=55dy417dxutp",
-     "year": null,
-     "iframe": true,
-     "doc": false,
-     "internal": false
-    },
-    {
      "text": "\"הצהרת איש-ציבור\"",
      "href": "https://www.discountbank.co.il/media/t4rd2ofq/bublic_nagish.pdf",
      "year": null,
@@ -2267,9 +2220,9 @@
   "https://www.discountbank.co.il/private/savings-investments/deposits-savings/deposits-without-account/palal-form-variable-interest-year/": {
    "product": null,
    "status": 200,
-   "method": "browser",
-   "text_hash": "3caf0685db3a878bfc53c68522cac013c40cafd4",
-   "text_head": "דלג לתוכן העמוד דלג לתפריט אתר דלג לקישורים תחתונים כניסה לחשבונך לידיעתך: באתר זה נעשה שימוש בקבצי Cookies וכלים דומים כדי לספק לך חווית גלישה טובה ותכנים מותאמים אישית, בין היתר על בסיס מידע הקיים אודותיך במאגרי הבנק. למידע נוסף הבנתי צרו איתי קשר הפקדה לפיקדון ללקוחות כל הבנקים פתיחת פיקדון כספי במערכת סגורה, בה הכספים יועברו מחשבון הלקוח בבנק המעביר ובתום תקופת הפיקדון יחזרו לחשבון ממנו התקבלו. תוקף הצעת הריבית לפיקדון שנבחר הינו 3 ימי עסקים מתאריך הגשת הבקשה ובכפוף להעברת הכספים על ידך (כולל השלמת מסמכים ככל ויידרש) ולקבלתם בבנק בטווח הימים כאמור. זהות בעלי הפיקדון וזהות בעלי החשבון המקור",
+   "method": "requests",
+   "text_hash": "8c0f268523f901186914b7b4dd77337ad6ffb417",
+   "text_head": "פיקדון יחיד לשנה קבועה בריבית משתנה ללקוחות כל הבנקים | דיסקונט דלג לתוכן העמוד דלג לתפריט אתר דלג לקישורים תחתונים כניסה לחשבונך דלג לתוכן העמוד דלג לתפריט אתר דלג לקישורים תחתונים כניסה לחשבונך לידיעתך: באתר זה נעשה שימוש בקבצי Cookies וכלים דומים כדי לספק לך חווית גלישה טובה ותכנים מותאמים אישית, בין היתר על בסיס מידע הקיים אודותיך במאגרי הבנק. למידע נוסף הבנתי צרו איתי קשר חשוב לנו שתהיה לך חוויה מדהימה למה שלא נמשיך באפליקציה? כניסה קלה וחוויה מותאמת מגוון פעולות ומידע שרלוונטי לך כניסה קלה עם טביעת אצבע כניסה קלה וחוויה מותאמת מגוון פעולות ומידע שרלוונטי לך לאפליקציה המשך באתר הפקדה לפיק",
    "items": [
     {
      "text": "ערוצי התקשורת",
@@ -2328,14 +2281,6 @@
      "internal": true
     },
     {
-     "text": "(iframe)",
-     "href": "https://www.google.com/recaptcha/api2/anchor?ar=1&k=6LfjgAIpAAAAAJZy57vghR84M7zjCobrbDuiBVT-&co=aHR0cHM6Ly93d3cuZGlzY291bnRiYW5rLmNvLmlsOjQ0Mw..&hl=iw&v=NhfdZHzre16wrc2m6BxEdu7J&size=invisible&anchor-ms=20000&execute-ms=30000&cb=1d0jdotp7iqn",
-     "year": null,
-     "iframe": true,
-     "doc": false,
-     "internal": false
-    },
-    {
      "text": "\"הצהרת איש-ציבור\"",
      "href": "https://www.discountbank.co.il/media/t4rd2ofq/bublic_nagish.pdf",
      "year": null,
@@ -2362,29 +2307,218 @@
     }
    ]
   },
+  "https://links.private.discountbank.co.il/UR6w/MyPension": {
+   "product": "פנסיה",
+   "status": 200,
+   "method": "requests",
+   "text_hash": "44fabe16bff687e345d8ca8ce6e9a4ff0c33b421",
+   "text_head": "שירות Smart Future מחכה לך באפליקציה | דיסקונט דלג לתוכן העמוד דלג לתפריט אתר דלג לקישורים תחתונים כניסה לחשבונך דלג לתוכן העמוד דלג לתפריט אתר דלג לקישורים תחתונים כניסה לחשבונך לידיעתך: באתר זה נעשה שימוש בקבצי Cookies וכלים דומים כדי לספק לך חווית גלישה טובה ותכנים מותאמים אישית, בין היתר על בסיס מידע הקיים אודותיך במאגרי הבנק. למידע נוסף הבנתי חשוב לנו שתהיה לך חוויה מדהימה למה שלא נמשיך באפליקציה? כניסה קלה וחוויה מותאמת מגוון פעולות ומידע שרלוונטי לך כניסה קלה עם טביעת אצבע כניסה קלה וחוויה מותאמת מגוון פעולות ומידע שרלוונטי לך לאפליקציה המשך באתר Smart Future מחכה לך באפליקציית דיסקונט ",
+   "items": [
+    {
+     "text": "דלג לתוכן העמוד",
+     "href": "https://links.private.discountbank.co.il/UR6w/MyPension",
+     "year": null,
+     "iframe": false,
+     "doc": false,
+     "internal": true
+    }
+   ]
+  },
+  "https://www.discountbank.co.il/private/savings-investments/pension-consulting/pension-consulting-contact/": {
+   "product": "פנסיה",
+   "status": 200,
+   "method": "browser",
+   "text_hash": "51172a0d098afd966f4abf6abbb64f296cd70d0d",
+   "text_head": "דלג לתוכן העמוד דלג לתפריט אתר דלג לקישורים תחתונים כניסה לחשבונך לידיעתך: באתר זה נעשה שימוש בקבצי Cookies וכלים דומים כדי לספק לך חווית גלישה טובה ותכנים מותאמים אישית, בין היתר על בסיס מידע הקיים אודותיך במאגרי הבנק. למידע נוסף הבנתי עברית תפריט ראשי סגירה פתיחת חשבון כניסה לחשבון פרטיים פתיחת חשבון הלוואות משכנתא פקדונות והשקעות פקדונות ללקוחות כל הבנקים מוצרי שוק הכסף כרטיסי אשראי מידע כללי קבוצת דיסקונט D-Blog | כסף בשפה שלך עסקים קווי העסקים שלנו שירות לעסקים עסקים בדיגיטל בנקאות פרטית אודות בנקאות פרטית חווית שירות שירותים בנקאיים מקצועיות בשוק ההון ניהול העושר הארנק הירוק איך אפשר לעז",
+   "items": [
+    {
+     "text": "קבוצת דיסקונט מפרסמת את הדוחות הכספיים לרבעון השני של 2026 לצפייה בדו\"חות הכספיים לצפייה בדו\"חות הכספיים",
+     "href": "https://www.discountbank.co.il/private/discount-group/financial-statements/",
+     "year": "2026",
+     "iframe": false,
+     "doc": false,
+     "internal": true
+    },
+    {
+     "text": "פקדונות ללקוחות כל הבנקים",
+     "href": "https://www.discountbank.co.il/private/savings-investments/deposits-savings/deposits-without-account/",
+     "year": null,
+     "iframe": false,
+     "doc": false,
+     "internal": true
+    },
+    {
+     "text": "פקדונות והשקעות",
+     "href": "https://www.discountbank.co.il/private/savings-investments/",
+     "year": null,
+     "iframe": false,
+     "doc": false,
+     "internal": true
+    },
+    {
+     "text": "מוצרי שוק הכסף",
+     "href": "https://www.discountbank.co.il/private/savings-investments/savings-interest/",
+     "year": null,
+     "iframe": false,
+     "doc": false,
+     "internal": true
+    },
+    {
+     "text": "ייעוץ פנסיוני",
+     "href": "https://www.discountbank.co.il/private/savings-investments/pension-consulting/",
+     "year": null,
+     "iframe": false,
+     "doc": false,
+     "internal": true
+    },
+    {
+     "text": "דלג לתוכן העמוד",
+     "href": "https://www.discountbank.co.il/private/savings-investments/pension-consulting/pension-consulting-contact/",
+     "year": null,
+     "iframe": false,
+     "doc": false,
+     "internal": true
+    },
+    {
+     "text": "(iframe)",
+     "href": "https://www.google.com/recaptcha/api2/anchor?ar=1&k=6LfjgAIpAAAAAJZy57vghR84M7zjCobrbDuiBVT-&co=aHR0cHM6Ly93d3cuZGlzY291bnRiYW5rLmNvLmlsOjQ0Mw..&hl=iw&v=NhfdZHzre166o-vFZrWsq3yu&size=invisible&anchor-ms=20000&execute-ms=30000&ovv=CADq00gF&cb=2tw38u3mi0k7",
+     "year": null,
+     "iframe": true,
+     "doc": false,
+     "internal": false
+    }
+   ]
+  },
   "https://www.discountbank.co.il/en/private/deposits-and-savings/pension-advice/": {
    "product": "פנסיה",
    "status": 200,
    "method": "requests",
-   "text_hash": "b47285debf9d99a3066180880e89248c4e2f7e43",
-   "text_head": "Please enable JavaScript to view the page content. Your support ID is: 9152645329252034558.",
-   "items": []
+   "text_hash": "a9376d8cc49b4abf0987abc9acd71cda2110ddcc",
+   "text_head": "Pension Advice | Discount דלג לתוכן העמוד דלג לתפריט אתר דלג לקישורים תחתונים כניסה לחשבונך דלג לתוכן העמוד דלג לתפריט אתר דלג לקישורים תחתונים כניסה לחשבונך This website uses cookies and similar tools to improve your browsing experience and personalize content. This includes data about you in the Bank's databases. For more information, For more information Accept English English עברית Français Русский العربية תפריט ראשי Menu Personal Banking Business Banking Private Banking About Us ✕ Common searches on the site Loans Mortgage Deposits Credit Card Discount App Found 0 results for For all resu",
+   "items": [
+    {
+     "text": "العربية",
+     "href": "https://www.discountbank.co.il/ar/private/deposits-and-savings/pension-consulting/",
+     "year": null,
+     "iframe": false,
+     "doc": false,
+     "internal": true
+    },
+    {
+     "text": "עברית",
+     "href": "https://www.discountbank.co.il/private/savings-investments/pension-consulting/",
+     "year": null,
+     "iframe": false,
+     "doc": false,
+     "internal": true
+    },
+    {
+     "text": "דלג לתוכן העמוד",
+     "href": "https://www.discountbank.co.il/en/private/deposits-and-savings/pension-advice/",
+     "year": null,
+     "iframe": false,
+     "doc": false,
+     "internal": true
+    },
+    {
+     "text": "Русский",
+     "href": "https://www.discountbank.co.il/ru/private/deposits-and-savings/pension-advice/",
+     "year": null,
+     "iframe": false,
+     "doc": false,
+     "internal": true
+    }
+   ]
   },
   "https://www.discountbank.co.il/ru/private/deposits-and-savings/pension-advice/": {
    "product": "פנסיה",
    "status": 200,
    "method": "requests",
-   "text_hash": "84889c42e8f5f89197f1bb4b76026a76cf9f2422",
-   "text_head": "Please enable JavaScript to view the page content. Your support ID is: 9152645329252035234.",
-   "items": []
+   "text_hash": "38105460e3e592e84eeb82ccb458e5543a903680",
+   "text_head": "Фондовый рынок | Discount דלג לתוכן העמוד דלג לתפריט אתר דלג לקישורים תחתונים כניסה לחשבונך דלג לתוכן העמוד דלג לתפריט אתר דלג לקישורים תחתונים כניסה לחשבונך Этот сайт использует файлы cookie и аналогичные технологии, чтобы обеспечить максимальное удобство при просмотре и персонализированный контент, основываясь, помимо прочего, на информации о вас, имеющейся в базах данных банка. Узнать больше Принять Русский עברית English العربية Français Русский תפריט ראשי меню Персональное обслуживание Бизнес банкинг Личный банк ✕ Общие поиски на сайте Кредиты Ипотечное кредитование Вклады и сбережения Кре",
+   "items": [
+    {
+     "text": "العربية",
+     "href": "https://www.discountbank.co.il/ar/private/deposits-and-savings/pension-consulting/",
+     "year": null,
+     "iframe": false,
+     "doc": false,
+     "internal": true
+    },
+    {
+     "text": "עברית",
+     "href": "https://www.discountbank.co.il/private/savings-investments/pension-consulting/",
+     "year": null,
+     "iframe": false,
+     "doc": false,
+     "internal": true
+    },
+    {
+     "text": "דלג לתוכן העמוד",
+     "href": "https://www.discountbank.co.il/ru/private/deposits-and-savings/pension-advice/",
+     "year": null,
+     "iframe": false,
+     "doc": false,
+     "internal": true
+    },
+    {
+     "text": "English",
+     "href": "https://www.discountbank.co.il/en/private/deposits-and-savings/pension-advice/",
+     "year": null,
+     "iframe": false,
+     "doc": false,
+     "internal": true
+    }
+   ]
   },
   "https://www.discountbank.co.il/ar/private/deposits-and-savings/pension-consulting/": {
    "product": "פנסיה",
    "status": 200,
    "method": "requests",
-   "text_hash": "618a5c1dd2d30b763b5032b0298ff00b11d87ccc",
-   "text_head": "Please enable JavaScript to view the page content. Your support ID is: 9152645329252036014.",
-   "items": []
+   "text_hash": "87d2a36e8d937f61ae2ded6136004771f96db31f",
+   "text_head": "استشارة التقاعد | Discount דלג לתוכן העמוד דלג לתפריט אתר דלג לקישורים תחתונים כניסה לחשבונך דלג לתוכן העמוד דלג לתפריט אתר דלג לקישורים תחתונים כניסה לחשבונך يستخدم هذا الموقع ملفات تعريف الارتباط (Cookies) وأدوات مماثلة لتزويدك بتجربة تصفّح جيدة ومحتوى مخصّص شخصيًا، من بين أشياء أخرى بناءً على المعلومات المتوفرة عنك في قواعد بيانات البنك. لمعلومات إضافية يوافق العربية العربية English עברית Français Русский תפריט ראשי قائمة لأفراد التجاريون الخدمات المصرفية الخاصة هل يمكنني المساعدة؟ ✕ عمليات البحث الشائعة على الموقع القروض التمويل العقاري الودائع والمدخرات التسهيلات الائتمانية برنامج Found 0",
+   "items": [
+    {
+     "text": "للاطلاع على ميثاق خدمة الاستشارات التقاعدية",
+     "href": "https://www.discountbank.co.il/media/ldxoqecy/service_level_agreement_311218.pdf",
+     "year": null,
+     "iframe": false,
+     "doc": true,
+     "internal": true
+    },
+    {
+     "text": "עברית",
+     "href": "https://www.discountbank.co.il/private/savings-investments/pension-consulting/",
+     "year": null,
+     "iframe": false,
+     "doc": false,
+     "internal": true
+    },
+    {
+     "text": "דלג לתוכן העמוד",
+     "href": "https://www.discountbank.co.il/ar/private/deposits-and-savings/pension-consulting/",
+     "year": null,
+     "iframe": false,
+     "doc": false,
+     "internal": true
+    },
+    {
+     "text": "Русский",
+     "href": "https://www.discountbank.co.il/ru/private/deposits-and-savings/pension-advice/",
+     "year": null,
+     "iframe": false,
+     "doc": false,
+     "internal": true
+    },
+    {
+     "text": "English",
+     "href": "https://www.discountbank.co.il/en/private/deposits-and-savings/pension-advice/",
+     "year": null,
+     "iframe": false,
+     "doc": false,
+     "internal": true
+    }
+   ]
   },
   "https://www.discountbank.co.il/private/savings-investments/pension-consulting/pension-calculator/": {
    "product": "פנסיה",
@@ -2463,7 +2597,7 @@
    "product": "פנסיה",
    "status": 200,
    "method": "browser",
-   "text_hash": "cb27b4a9b376004bcab53e3d539ca3bab1ce79c9",
+   "text_hash": "03b47bbd0a54e80f8fb5046c42adcd7fdd70e2c9",
    "text_head": "דלג לתוכן העמוד דלג לתפריט אתר דלג לקישורים תחתונים כניסה לחשבונך לידיעתך: באתר זה נעשה שימוש בקבצי Cookies וכלים דומים כדי לספק לך חווית גלישה טובה ותכנים מותאמים אישית, בין היתר על בסיס מידע הקיים אודותיך במאגרי הבנק. למידע נוסף הבנתי עברית תפריט ראשי סגירה פתיחת חשבון כניסה לחשבון פרטיים פתיחת חשבון הלוואות משכנתא פקדונות והשקעות פקדונות ללקוחות כל הבנקים מוצרי שוק הכסף כרטיסי אשראי מידע כללי קבוצת דיסקונט D-Blog | כסף בשפה שלך עסקים קווי העסקים שלנו שירות לעסקים עסקים בדיגיטל בנקאות פרטית אודות בנקאות פרטית חווית שירות שירותים בנקאיים מקצועיות בשוק ההון ניהול העושר הארנק הירוק איך אפשר לעז",
    "items": [
     {
@@ -2477,14 +2611,6 @@
     {
      "text": "العربية",
      "href": "https://www.discountbank.co.il/ar/private/deposits-and-savings/pension-consulting/pension-product/",
-     "year": null,
-     "iframe": false,
-     "doc": false,
-     "internal": true
-    },
-    {
-     "text": "العربية",
-     "href": "https://www.discountbank.co.il/ar/private/deposits-and-savings/pension-consulting/pension-product/%D8%B5%D9%86%D8%AF%D9%88%D9%82-%D8%A7%D9%84%D8%A7%D8%AF%D8%AE%D8%A7%D8%B1/",
      "year": null,
      "iframe": false,
      "doc": false,
@@ -2539,16 +2665,8 @@
      "internal": true
     },
     {
-     "text": "דלג לתוכן העמוד",
-     "href": "https://www.discountbank.co.il/private/savings-investments/pension-consulting/pension-product/gemel/",
-     "year": null,
-     "iframe": false,
-     "doc": false,
-     "internal": true
-    },
-    {
      "text": "(iframe)",
-     "href": "https://www.google.com/recaptcha/api2/anchor?ar=1&k=6LfjgAIpAAAAAJZy57vghR84M7zjCobrbDuiBVT-&co=aHR0cHM6Ly93d3cuZGlzY291bnRiYW5rLmNvLmlsOjQ0Mw..&hl=iw&v=NhfdZHzre16wrc2m6BxEdu7J&size=invisible&anchor-ms=20000&execute-ms=30000&cb=4u0vvr978roc",
+     "href": "https://www.google.com/recaptcha/api2/anchor?ar=1&k=6LfjgAIpAAAAAJZy57vghR84M7zjCobrbDuiBVT-&co=aHR0cHM6Ly93d3cuZGlzY291bnRiYW5rLmNvLmlsOjQ0Mw..&hl=iw&v=NhfdZHzre16wrc2m6BxEdu7J&size=invisible&anchor-ms=20000&execute-ms=30000&cb=dftk39ulw3yc",
      "year": null,
      "iframe": true,
      "doc": false,
@@ -2560,9 +2678,2746 @@
    "product": null,
    "status": 200,
    "method": "requests",
-   "text_hash": "de019be90fdeea713585f70361d38151e4e6c0e3",
-   "text_head": "Please enable JavaScript to view the page content. Your support ID is: 9152645329252728862.",
-   "items": []
+   "text_hash": "021e95ab28ebb0272b24f464eb6a4e2b7a638405",
+   "text_head": "דו\"חות כספיים – איתור דו\"ח לפי שנה ורבעון | דיסקונט דלג לתוכן העמוד דלג לתפריט אתר דלג לקישורים תחתונים כניסה לחשבונך דלג לתוכן העמוד דלג לתפריט אתר דלג לקישורים תחתונים כניסה לחשבונך לידיעתך: באתר זה נעשה שימוש בקבצי Cookies וכלים דומים כדי לספק לך חווית גלישה טובה ותכנים מותאמים אישית, בין היתר על בסיס מידע הקיים אודותיך במאגרי הבנק. למידע נוסף הבנתי עברית עברית English Français Русский العربية תפריט ראשי תפריט פרטיים עסקים בנקאות פרטית אפשר לעזור? ✕ חיפושים נפוצים באתר פתיחת חשבון המרת מט\"ח צפון ירוק הארנק הירוק Smart Future הלוואות המפתח שלך למבצעים והנחות פקדונות מומלצים כרטיסי אשראי שעות",
+   "items": [
+    {
+     "text": "חוות דעת אקטוארית",
+     "href": "https://www.discountbank.co.il/media/jrhhaszl/actuar_q22026_heb.pdf",
+     "year": "2026",
+     "iframe": false,
+     "doc": true,
+     "internal": true
+    },
+    {
+     "text": "חוות דעת אקטוארית",
+     "href": "https://www.discountbank.co.il/media/bjrn53dq/actuar_q12026_heb.pdf",
+     "year": "2026",
+     "iframe": false,
+     "doc": true,
+     "internal": true
+    },
+    {
+     "text": "הודעה לעיתונות",
+     "href": "https://www.discountbank.co.il/media/biwopbkd/press-q2-2026-138.pdf",
+     "year": "2026",
+     "iframe": false,
+     "doc": true,
+     "internal": true
+    },
+    {
+     "text": "דו\"חות כספיים",
+     "href": "https://www.discountbank.co.il/media/4bzlaetg/q2-2026.pdf",
+     "year": "2026",
+     "iframe": false,
+     "doc": true,
+     "internal": true
+    },
+    {
+     "text": "דו\"חות כספיים",
+     "href": "https://www.discountbank.co.il/media/olwhwvyg/q12026_heb.pdf",
+     "year": "2026",
+     "iframe": false,
+     "doc": true,
+     "internal": true
+    },
+    {
+     "text": "גילויים פיקוחיים נוספים",
+     "href": "https://www.discountbank.co.il/media/gdoi33zt/giluyim_q22026_heb.pdf",
+     "year": "2026",
+     "iframe": false,
+     "doc": true,
+     "internal": true
+    },
+    {
+     "text": "גילויים פיקוחיים נוספים",
+     "href": "https://www.discountbank.co.il/media/q4qdlqwb/giluyim_q12026_heb.pdf",
+     "year": "2026",
+     "iframe": false,
+     "doc": true,
+     "internal": true
+    },
+    {
+     "text": "גילוי לפי נדבך 3 של באזל ומידע נוסף על סיכונים",
+     "href": "https://www.discountbank.co.il/media/ruyhnhv5/risks_q22026_heb.pdf",
+     "year": "2026",
+     "iframe": false,
+     "doc": true,
+     "internal": true
+    },
+    {
+     "text": "גילוי לפי נדבך 3 של באזל ומידע נוסף על סיכונים",
+     "href": "https://www.discountbank.co.il/media/l41fedrw/risks_q12026_heb.pdf",
+     "year": "2026",
+     "iframe": false,
+     "doc": true,
+     "internal": true
+    },
+    {
+     "text": "שאלון ממשל תאגידי",
+     "href": "https://www.discountbank.co.il/media/ifbbvhhc/corporate_governance_2025_heb.pdf",
+     "year": "2025",
+     "iframe": false,
+     "doc": true,
+     "internal": true
+    },
+    {
+     "text": "חוות דעת אקטוארית",
+     "href": "https://www.discountbank.co.il/media/bs2cw2vd/actuar_q42025_heb.pdf",
+     "year": "2025",
+     "iframe": false,
+     "doc": true,
+     "internal": true
+    },
+    {
+     "text": "חוות דעת אקטוארית",
+     "href": "https://www.discountbank.co.il/media/ubmjzch2/actuar_q32025_heb.pdf",
+     "year": "2025",
+     "iframe": false,
+     "doc": true,
+     "internal": true
+    },
+    {
+     "text": "חוות דעת אקטוארית",
+     "href": "https://www.discountbank.co.il/media/wpjjhu2x/actuar_q22025_heb.pdf",
+     "year": "2025",
+     "iframe": false,
+     "doc": true,
+     "internal": true
+    },
+    {
+     "text": "חוות דעת אקטוארית",
+     "href": "https://www.discountbank.co.il/media/dxklinyx/actuarandotherq12025.pdf",
+     "year": "2025",
+     "iframe": false,
+     "doc": true,
+     "internal": true
+    },
+    {
+     "text": "הודעה לעיתונות",
+     "href": "https://www.discountbank.co.il/media/lvudvpgk/nagish-_press-q3-2025_announcement.pdf",
+     "year": "2025",
+     "iframe": false,
+     "doc": true,
+     "internal": true
+    },
+    {
+     "text": "הודעה לעיתונות",
+     "href": "https://www.discountbank.co.il/media/gdvhoprg/press_financial_statements_-q2-2025.pdf",
+     "year": "2025",
+     "iframe": false,
+     "doc": true,
+     "internal": true
+    },
+    {
+     "text": "הודעה לעיתונות",
+     "href": "https://www.discountbank.co.il/media/wkqjbheb/nagish_financial-_statement_-q1-2025.pdf",
+     "year": "2025",
+     "iframe": false,
+     "doc": true,
+     "internal": true
+    },
+    {
+     "text": "דוחות כספיים",
+     "href": "https://www.discountbank.co.il/media/h2rfw5g2/q42025_heb.pdf",
+     "year": "2025",
+     "iframe": false,
+     "doc": true,
+     "internal": true
+    },
+    {
+     "text": "דוח תקופתי לשנת 2025",
+     "href": "https://www.discountbank.co.il/media/wnbbybkk/periodic_report_2025_heb.pdf",
+     "year": "2025",
+     "iframe": false,
+     "doc": true,
+     "internal": true
+    },
+    {
+     "text": "דו\"חות כספיים",
+     "href": "https://www.discountbank.co.il/media/3wyhmj0s/financial-report_q32025_heb.pdf",
+     "year": "2025",
+     "iframe": false,
+     "doc": true,
+     "internal": true
+    },
+    {
+     "text": "דו\"חות כספיים",
+     "href": "https://www.discountbank.co.il/media/j42jphbf/discount_q22025_heb.pdf",
+     "year": "2025",
+     "iframe": false,
+     "doc": true,
+     "internal": true
+    },
+    {
+     "text": "דו\"חות כספיים",
+     "href": "https://www.discountbank.co.il/media/fm3ffhlo/discountq12025.pdf",
+     "year": "2025",
+     "iframe": false,
+     "doc": true,
+     "internal": true
+    },
+    {
+     "text": "גילויים פיקוחיים נוספים - מעודכן (9.9.2025)",
+     "href": "https://www.discountbank.co.il/media/nxch2o5e/giluyim_q22025_heb_updated.pdf",
+     "year": "2025",
+     "iframe": false,
+     "doc": true,
+     "internal": true
+    },
+    {
+     "text": "גילויים פיקוחיים נוספים",
+     "href": "https://www.discountbank.co.il/media/hd4prlaz/giluyim_q42025_heb.pdf",
+     "year": "2025",
+     "iframe": false,
+     "doc": true,
+     "internal": true
+    },
+    {
+     "text": "גילויים פיקוחיים נוספים",
+     "href": "https://www.discountbank.co.il/media/eg0bfcwb/giluyim_q32025_heb.pdf",
+     "year": "2025",
+     "iframe": false,
+     "doc": true,
+     "internal": true
+    },
+    {
+     "text": "גילויים פיקוחיים נוספים",
+     "href": "https://www.discountbank.co.il/media/tpshailn/giluyim_q22025_heb.pdf",
+     "year": "2025",
+     "iframe": false,
+     "doc": true,
+     "internal": true
+    },
+    {
+     "text": "גילוי לפי נדבך 3 של באזל ומידע נוסף על סיכונים",
+     "href": "https://www.discountbank.co.il/media/owabbke1/risks_q42025_heb.pdf",
+     "year": "2025",
+     "iframe": false,
+     "doc": true,
+     "internal": true
+    },
+    {
+     "text": "גילוי לפי נדבך 3 של באזל ומידע נוסף על סיכונים",
+     "href": "https://www.discountbank.co.il/media/wu3ls2bz/risks_q32025_heb.pdf",
+     "year": "2025",
+     "iframe": false,
+     "doc": true,
+     "internal": true
+    },
+    {
+     "text": "גילוי לפי נדבך 3 של באזל ומידע נוסף על סיכונים",
+     "href": "https://www.discountbank.co.il/media/gqglbt4e/risks_q22025_heb1.pdf",
+     "year": "2025",
+     "iframe": false,
+     "doc": true,
+     "internal": true
+    },
+    {
+     "text": "גילוי לפי נדבך 3 של באזל ומידע נוסף על סיכונים",
+     "href": "https://www.discountbank.co.il/media/3kniedwk/risks_q12025_heb.pdf",
+     "year": "2025",
+     "iframe": false,
+     "doc": true,
+     "internal": true
+    },
+    {
+     "text": "שאלון ממשל תאגידי",
+     "href": "https://www.discountbank.co.il/media/lzkbnaqh/corporate_gov_q42024_heb.pdf",
+     "year": "2024",
+     "iframe": false,
+     "doc": true,
+     "internal": true
+    },
+    {
+     "text": "חוות דעת אקטוארית",
+     "href": "https://www.discountbank.co.il/media/rlbhqplq/actuar_q32024_heb.pdf",
+     "year": "2024",
+     "iframe": false,
+     "doc": true,
+     "internal": true
+    },
+    {
+     "text": "חוות דעת אקטוארית",
+     "href": "https://www.discountbank.co.il/media/qj4jd0cn/actuar_heb_q22024.pdf",
+     "year": "2024",
+     "iframe": false,
+     "doc": true,
+     "internal": true
+    },
+    {
+     "text": "חוות דעת אקטוארית",
+     "href": "https://www.discountbank.co.il/media/2w1lscyk/actuar_heb_q12024.pdf",
+     "year": "2024",
+     "iframe": false,
+     "doc": true,
+     "internal": true
+    },
+    {
+     "text": "הודעה לעיתונות",
+     "href": "https://www.discountbank.co.il/media/yxbm3rwh/nagish-דוחות-כספיים-שנתיים-2024-113.pdf",
+     "year": "2024",
+     "iframe": false,
+     "doc": true,
+     "internal": true
+    },
+    {
+     "text": "הודעה לעיתונות",
+     "href": "https://www.discountbank.co.il/media/10fmer0w/press_report_2024_q3_nagish.pdf",
+     "year": "2024",
+     "iframe": false,
+     "doc": true,
+     "internal": true
+    },
+    {
+     "text": "הודעה לעיתונות",
+     "href": "https://www.discountbank.co.il/media/3hsefbp2/press_release_q12024_nagish.pdf",
+     "year": "2024",
+     "iframe": false,
+     "doc": true,
+     "internal": true
+    },
+    {
+     "text": "דוח תקופתי לשנת 2024",
+     "href": "https://www.discountbank.co.il/media/3rlbeqhh/periodic_report_2024_heb.pdf",
+     "year": "2024",
+     "iframe": false,
+     "doc": true,
+     "internal": true
+    },
+    {
+     "text": "דו\"חות כספיים",
+     "href": "https://www.discountbank.co.il/media/u5pikflz/q32024_heb_nagish.pdf",
+     "year": "2024",
+     "iframe": false,
+     "doc": true,
+     "internal": true
+    },
+    {
+     "text": "דו\"חות כספיים",
+     "href": "https://www.discountbank.co.il/media/nbmfguca/q12024_heb.pdf",
+     "year": "2024",
+     "iframe": false,
+     "doc": true,
+     "internal": true
+    },
+    {
+     "text": "דו\"חות כספיים",
+     "href": "https://www.discountbank.co.il/media/pexb5slm/q12024_heb.pdf",
+     "year": "2024",
+     "iframe": false,
+     "doc": true,
+     "internal": true
+    },
+    {
+     "text": "דו\"חות כספיים",
+     "href": "https://www.discountbank.co.il/media/kool2uli/110012024.pdf",
+     "year": "2024",
+     "iframe": false,
+     "doc": true,
+     "internal": true
+    },
+    {
+     "text": "גילויים פיקוחיים נוספים - מעודכן",
+     "href": "https://www.discountbank.co.il/media/22pbubnd/giluyim1_q22024_heb.pdf",
+     "year": "2024",
+     "iframe": false,
+     "doc": true,
+     "internal": true
+    },
+    {
+     "text": "גילויים פיקוחיים נוספים",
+     "href": "https://www.discountbank.co.il/media/dkahdu40/giluyim_q42024_heb.pdf",
+     "year": "2024",
+     "iframe": false,
+     "doc": true,
+     "internal": true
+    },
+    {
+     "text": "גילויים פיקוחיים נוספים",
+     "href": "https://www.discountbank.co.il/media/vmahvnge/giluyim_q32024_heb.pdf",
+     "year": "2024",
+     "iframe": false,
+     "doc": true,
+     "internal": true
+    },
+    {
+     "text": "גילויים פיקוחיים נוספים",
+     "href": "https://www.discountbank.co.il/media/daea2y2n/giluyim_q22024_heb.pdf",
+     "year": "2024",
+     "iframe": false,
+     "doc": true,
+     "internal": true
+    },
+    {
+     "text": "גילויים פיקוחיים נוספים",
+     "href": "https://www.discountbank.co.il/media/ccshuowu/giluyim_q12024_heb.pdf",
+     "year": "2024",
+     "iframe": false,
+     "doc": true,
+     "internal": true
+    },
+    {
+     "text": "גילוי לפי נדבך 3 של באזל ומידע נוסף על סיכונים",
+     "href": "https://www.discountbank.co.il/media/wpfn23rs/risks_q42024_heb.pdf",
+     "year": "2024",
+     "iframe": false,
+     "doc": true,
+     "internal": true
+    },
+    {
+     "text": "גילוי לפי נדבך 3 של באזל ומידע נוסף על סיכונים",
+     "href": "https://www.discountbank.co.il/media/nfgdtieo/risks_q32024_heb.pdf",
+     "year": "2024",
+     "iframe": false,
+     "doc": true,
+     "internal": true
+    },
+    {
+     "text": "גילוי לפי נדבך 3 של באזל ומידע נוסף על סיכונים",
+     "href": "https://www.discountbank.co.il/media/o2bnm3x3/risks_q22024_heb.pdf",
+     "year": "2024",
+     "iframe": false,
+     "doc": true,
+     "internal": true
+    },
+    {
+     "text": "גילוי לפי נדבך 3 של באזל ומידע נוסף על סיכונים",
+     "href": "https://www.discountbank.co.il/media/ywid233g/risks_q12024_heb.pdf",
+     "year": "2024",
+     "iframe": false,
+     "doc": true,
+     "internal": true
+    },
+    {
+     "text": "שאלון ממשל תאגידי",
+     "href": "https://www.discountbank.co.il/media/4pof5srf/corporate_governance_2023_heb.pdf",
+     "year": "2023",
+     "iframe": false,
+     "doc": true,
+     "internal": true
+    },
+    {
+     "text": "נתונים כספיים",
+     "href": "https://www.discountbank.co.il/media/cy3nfc4s/financial_data_q4-2023.xlsx",
+     "year": "2023",
+     "iframe": false,
+     "doc": true,
+     "internal": true
+    },
+    {
+     "text": "חוות דעת אקטוארית",
+     "href": "https://www.discountbank.co.il/media/rpvml5n2/actuar_heb_2023.pdf",
+     "year": "2023",
+     "iframe": false,
+     "doc": true,
+     "internal": true
+    },
+    {
+     "text": "הודעה לעיתונות",
+     "href": "https://www.discountbank.co.il/media/lkqlaqrb/q3_2023_press_release.pdf",
+     "year": "2023",
+     "iframe": false,
+     "doc": true,
+     "internal": true
+    },
+    {
+     "text": "הודעה לעיתונות",
+     "href": "https://www.discountbank.co.il/media/1lhnp5tn/press_release_q2_2023.pdf",
+     "year": "2023",
+     "iframe": false,
+     "doc": true,
+     "internal": true
+    },
+    {
+     "text": "הודעה לעיתונות",
+     "href": "https://www.discountbank.co.il/media/konlfdqv/q1_2023_press_release_nagish-1.pdf",
+     "year": "2023",
+     "iframe": false,
+     "doc": true,
+     "internal": true
+    },
+    {
+     "text": "דוחות כספיים",
+     "href": "https://www.discountbank.co.il/media/xcolbw3d/q42023_heb.pdf",
+     "year": "2023",
+     "iframe": false,
+     "doc": true,
+     "internal": true
+    },
+    {
+     "text": "דוח תקופתי לשנת 2023",
+     "href": "https://www.discountbank.co.il/media/1kwdw4bd/periodic_report_2023_heb.pdf",
+     "year": "2023",
+     "iframe": false,
+     "doc": true,
+     "internal": true
+    },
+    {
+     "text": "דו\"חות כספיים",
+     "href": "https://www.discountbank.co.il/media/2k5jir3p/110012023.pdf",
+     "year": "2023",
+     "iframe": false,
+     "doc": true,
+     "internal": true
+    },
+    {
+     "text": "גילויים פיקוחיים נוספים",
+     "href": "https://www.discountbank.co.il/media/fhsoa12i/giluyim_q42023_heb.pdf",
+     "year": "2023",
+     "iframe": false,
+     "doc": true,
+     "internal": true
+    },
+    {
+     "text": "גילויים פיקוחיים נוספים",
+     "href": "https://www.discountbank.co.il/media/i1nj5bmp/giluyim_q32023_heb.pdf",
+     "year": "2023",
+     "iframe": false,
+     "doc": true,
+     "internal": true
+    },
+    {
+     "text": "גילויים פיקוחיים נוספים",
+     "href": "https://www.discountbank.co.il/media/3eybzzbl/giluyim_q22023_heb.pdf",
+     "year": "2023",
+     "iframe": false,
+     "doc": true,
+     "internal": true
+    },
+    {
+     "text": "גילויים פיקוחיים נוספים",
+     "href": "https://www.discountbank.co.il/media/gyui11i1/giluyim_q12023_heb.pdf",
+     "year": "2023",
+     "iframe": false,
+     "doc": true,
+     "internal": true
+    },
+    {
+     "text": "גילוי לפי נדבך 3 של באזל ומידע נוסף על סיכונים",
+     "href": "https://www.discountbank.co.il/media/lmhhj1gz/risks_q42023_heb.pdf",
+     "year": "2023",
+     "iframe": false,
+     "doc": true,
+     "internal": true
+    },
+    {
+     "text": "גילוי לפי נדבך 3 של באזל ומידע נוסף על סיכונים",
+     "href": "https://www.discountbank.co.il/media/xpbjk1ib/risks_q32023_heb.pdf",
+     "year": "2023",
+     "iframe": false,
+     "doc": true,
+     "internal": true
+    },
+    {
+     "text": "גילוי לפי נדבך 3 של באזל ומידע נוסף על סיכונים",
+     "href": "https://www.discountbank.co.il/media/fyubg5xf/risks_q22023_heb.pdf",
+     "year": "2023",
+     "iframe": false,
+     "doc": true,
+     "internal": true
+    },
+    {
+     "text": "גילוי לפי נדבך 3 של באזל ומידע נוסף על סיכונים",
+     "href": "https://www.discountbank.co.il/media/czefd3d1/risks_q12023_heb.pdf",
+     "year": "2023",
+     "iframe": false,
+     "doc": true,
+     "internal": true
+    },
+    {
+     "text": "חוות דעת אקטוארית",
+     "href": "https://www.discountbank.co.il/media/awyd2f1g/actuarq3_2022.pdf",
+     "year": "2022",
+     "iframe": false,
+     "doc": true,
+     "internal": true
+    },
+    {
+     "text": "חוות דעת אקטוארית",
+     "href": "https://www.discountbank.co.il/media/shcd3ruy/actuar_heb_q22022.pdf",
+     "year": "2022",
+     "iframe": false,
+     "doc": true,
+     "internal": true
+    },
+    {
+     "text": "חוות דעת אקטוארית",
+     "href": "https://www.discountbank.co.il/media/gcapdtd2/actuarq1_2022.pdf",
+     "year": "2022",
+     "iframe": false,
+     "doc": true,
+     "internal": true
+    },
+    {
+     "text": "חוות דעת אקטוארית",
+     "href": "https://www.discountbank.co.il/media/xazhqz5x/actuar_q420221.pdf",
+     "year": "2022",
+     "iframe": false,
+     "doc": true,
+     "internal": true
+    },
+    {
+     "text": "הודעה לעתונות",
+     "href": "https://www.discountbank.co.il/media/fj4juoiy/press_q3_2022_nagish.pdf",
+     "year": "2022",
+     "iframe": false,
+     "doc": true,
+     "internal": true
+    },
+    {
+     "text": "הודעה לעתונות",
+     "href": "https://www.discountbank.co.il/media/pxcfoxlb/press_q2_2022.pdf",
+     "year": "2022",
+     "iframe": false,
+     "doc": true,
+     "internal": true
+    },
+    {
+     "text": "הודעה לעיתונות",
+     "href": "https://www.discountbank.co.il/media/htfl1xwg/press_q1_2022_web.pdf",
+     "year": "2022",
+     "iframe": false,
+     "doc": true,
+     "internal": true
+    },
+    {
+     "text": "דוח תקופתי לשנת 2022",
+     "href": "https://www.discountbank.co.il/media/3gii45bm/periodic_report_2022_heb.pdf",
+     "year": "2022",
+     "iframe": false,
+     "doc": true,
+     "internal": true
+    },
+    {
+     "text": "דו\"חות כספיים",
+     "href": "https://www.discountbank.co.il/media/e5pj3phw/110012022.pdf",
+     "year": "2022",
+     "iframe": false,
+     "doc": true,
+     "internal": true
+    },
+    {
+     "text": "גילויים פיקוחיים נוספים",
+     "href": "https://www.discountbank.co.il/media/pmvbb5mn/giluyim_heb_q32022.pdf",
+     "year": "2022",
+     "iframe": false,
+     "doc": true,
+     "internal": true
+    },
+    {
+     "text": "גילויים פיקוחיים נוספים",
+     "href": "https://www.discountbank.co.il/media/lnnfzkpn/giluyim_heb_q22022.pdf",
+     "year": "2022",
+     "iframe": false,
+     "doc": true,
+     "internal": true
+    },
+    {
+     "text": "גילויים פיקוחיים נוספים",
+     "href": "https://www.discountbank.co.il/media/vadjkfvf/giluyim_heb_q22022.pdf",
+     "year": "2022",
+     "iframe": false,
+     "doc": true,
+     "internal": true
+    },
+    {
+     "text": "גילוי לפי נדבך 3 של באזל ומידע נוסף על סיכונים",
+     "href": "https://www.discountbank.co.il/media/wo0k4q4o/risks_heb_q32022.pdf",
+     "year": "2022",
+     "iframe": false,
+     "doc": true,
+     "internal": true
+    },
+    {
+     "text": "גילוי לפי נדבך 3 של באזל ומידע נוסף על סיכונים",
+     "href": "https://www.discountbank.co.il/media/a0bat2r4/risks_heb_q22022.pdf",
+     "year": "2022",
+     "iframe": false,
+     "doc": true,
+     "internal": true
+    },
+    {
+     "text": "גילוי לפי נדבך 3 של באזל ומידע נוסף על סיכונים",
+     "href": "https://www.discountbank.co.il/media/oouhviwf/risks_heb_q12022.pdf",
+     "year": "2022",
+     "iframe": false,
+     "doc": true,
+     "internal": true
+    },
+    {
+     "text": "גילוי לפי נדבך 3 של באזל ומידע נוסף על סיכונים",
+     "href": "https://www.discountbank.co.il/media/iooe3ufd/risks_heb_q12022.pdf",
+     "year": "2022",
+     "iframe": false,
+     "doc": true,
+     "internal": true
+    },
+    {
+     "text": "שאלון ממשל תאגידי",
+     "href": "https://www.discountbank.co.il/media/el1n4tkn/corporate_gov_q42021.pdf",
+     "year": "2021",
+     "iframe": false,
+     "doc": true,
+     "internal": true
+    },
+    {
+     "text": "חוות דעת אקטוארית",
+     "href": "https://www.discountbank.co.il/media/221e4trr/actuarq32021_heb.pdf",
+     "year": "2021",
+     "iframe": false,
+     "doc": true,
+     "internal": true
+    },
+    {
+     "text": "חוות דעת אקטוארית",
+     "href": "https://www.discountbank.co.il/media/vcqds1j1/actuarq2_2021.pdf",
+     "year": "2021",
+     "iframe": false,
+     "doc": true,
+     "internal": true
+    },
+    {
+     "text": "חוות דעת אקטוארית",
+     "href": "https://www.discountbank.co.il/media/1rmflnnq/actuarq1_2021_n.pdf",
+     "year": "2021",
+     "iframe": false,
+     "doc": true,
+     "internal": true
+    },
+    {
+     "text": "הודעה לעיתונות",
+     "href": "https://www.discountbank.co.il/media/xhoarnie/q4_2021_web.pdf",
+     "year": "2021",
+     "iframe": false,
+     "doc": true,
+     "internal": true
+    },
+    {
+     "text": "הודעה לעיתונות",
+     "href": "https://www.discountbank.co.il/media/p0ud3p4v/press_q3_2021.pdf",
+     "year": "2021",
+     "iframe": false,
+     "doc": true,
+     "internal": true
+    },
+    {
+     "text": "הודעה לעיתונות",
+     "href": "https://www.discountbank.co.il/media/urwlqqvl/press_q2_2021-old.pdf",
+     "year": "2021",
+     "iframe": false,
+     "doc": true,
+     "internal": true
+    },
+    {
+     "text": "הודעה לעיתונות",
+     "href": "https://www.discountbank.co.il/media/jgcglo5p/press_q1_2021-old.pdf",
+     "year": "2021",
+     "iframe": false,
+     "doc": true,
+     "internal": true
+    },
+    {
+     "text": "דוח תקופתי לשנת 2021",
+     "href": "https://www.discountbank.co.il/media/x2ipyxnp/tkufati.pdf",
+     "year": "2021",
+     "iframe": false,
+     "doc": true,
+     "internal": true
+    },
+    {
+     "text": "דו\"חות כספיים",
+     "href": "https://www.discountbank.co.il/media/urubxsvr/110012021.pdf",
+     "year": "2021",
+     "iframe": false,
+     "doc": true,
+     "internal": true
+    },
+    {
+     "text": "גילויים פיקוחיים נוספים-מעודכן ||",
+     "href": "https://www.discountbank.co.il/media/0ymbdzje/extra_supervision_discoveries_q3_2021_2.pdf",
+     "year": "2021",
+     "iframe": false,
+     "doc": true,
+     "internal": true
+    },
+    {
+     "text": "גילויים פיקוחיים נוספים-מעודכן",
+     "href": "https://www.discountbank.co.il/media/4axd1h5o/giluyim_q3_2021_heb.pdf",
+     "year": "2021",
+     "iframe": false,
+     "doc": true,
+     "internal": true
+    },
+    {
+     "text": "גילויים פיקוחיים נוספים",
+     "href": "https://www.discountbank.co.il/media/douen2rc/giluyimq42021.pdf",
+     "year": "2021",
+     "iframe": false,
+     "doc": true,
+     "internal": true
+    },
+    {
+     "text": "גילויים פיקוחיים נוספים",
+     "href": "https://www.discountbank.co.il/media/xllla5kf/extra_supervision_discoveries_q3_2021.pdf",
+     "year": "2021",
+     "iframe": false,
+     "doc": true,
+     "internal": true
+    },
+    {
+     "text": "גילויים פיקוחיים נוספים",
+     "href": "https://www.discountbank.co.il/media/dq0j3dns/extra_supervision_discoveries_q2_2021.pdf",
+     "year": "2021",
+     "iframe": false,
+     "doc": true,
+     "internal": true
+    },
+    {
+     "text": "גילויים פיקוחיים נוספים",
+     "href": "https://www.discountbank.co.il/media/0ssm3a40/extra_supervision_discoveries_q1_2021_n.pdf",
+     "year": "2021",
+     "iframe": false,
+     "doc": true,
+     "internal": true
+    },
+    {
+     "text": "גילוי לפי נדבך 3 של באזל ומידע נוסף על סיכונים",
+     "href": "https://www.discountbank.co.il/media/2rrlaiv0/2021_q4_risks.pdf",
+     "year": "2021",
+     "iframe": false,
+     "doc": true,
+     "internal": true
+    },
+    {
+     "text": "גילוי לפי נדבך 3 של באזל ומידע נוסף על סיכונים",
+     "href": "https://www.discountbank.co.il/media/puuojwc1/risks_heb_q32021.pdf",
+     "year": "2021",
+     "iframe": false,
+     "doc": true,
+     "internal": true
+    },
+    {
+     "text": "גילוי לפי נדבך 3 של באזל ומידע נוסף על סיכונים",
+     "href": "https://www.discountbank.co.il/media/edmgahr5/risksq22021.pdf",
+     "year": "2021",
+     "iframe": false,
+     "doc": true,
+     "internal": true
+    },
+    {
+     "text": "ממשל תאגידי",
+     "href": "https://www.discountbank.co.il/media/ywhbcygc/corporate_governance2020.pdf",
+     "year": "2020",
+     "iframe": false,
+     "doc": true,
+     "internal": true
+    },
+    {
+     "text": "חוות דעת אקטוארית",
+     "href": "https://www.discountbank.co.il/media/ulgd1b1z/actuar_2020.pdf",
+     "year": "2020",
+     "iframe": false,
+     "doc": true,
+     "internal": true
+    },
+    {
+     "text": "חוות דעת אקטוארית",
+     "href": "https://www.discountbank.co.il/media/curhdpfe/actuar092020_heb.pdf",
+     "year": "2020",
+     "iframe": false,
+     "doc": true,
+     "internal": true
+    },
+    {
+     "text": "חוות דעת אקטוארית",
+     "href": "https://www.discountbank.co.il/media/qzwjb30x/actuarq2_2020.pdf",
+     "year": "2020",
+     "iframe": false,
+     "doc": true,
+     "internal": true
+    },
+    {
+     "text": "חוות דעת אקטוארית",
+     "href": "https://www.discountbank.co.il/media/kgdpp4io/actuarq12020.pdf",
+     "year": "2020",
+     "iframe": false,
+     "doc": true,
+     "internal": true
+    },
+    {
+     "text": "הודעה לעיתונות",
+     "href": "https://www.discountbank.co.il/media/fc1l0oid/press_q4_2020_2-old.pdf",
+     "year": "2020",
+     "iframe": false,
+     "doc": true,
+     "internal": true
+    },
+    {
+     "text": "הודעה לעיתונות",
+     "href": "https://www.discountbank.co.il/media/aa2dropk/press_q3_2020-old.pdf",
+     "year": "2020",
+     "iframe": false,
+     "doc": true,
+     "internal": true
+    },
+    {
+     "text": "הודעה לעיתונות",
+     "href": "https://www.discountbank.co.il/media/dfwjzn0o/press_q2_2020_mungash-old-1.pdf",
+     "year": "2020",
+     "iframe": false,
+     "doc": true,
+     "internal": true
+    },
+    {
+     "text": "הודעה לעיתונות",
+     "href": "https://www.discountbank.co.il/media/ypelvjti/q1_2020_press_nagish-old.pdf",
+     "year": "2020",
+     "iframe": false,
+     "doc": true,
+     "internal": true
+    },
+    {
+     "text": "דוח תקופתי",
+     "href": "https://www.discountbank.co.il/media/5fkd1arv/periodic_report_new_2020-4-pdf.pdf",
+     "year": "2020",
+     "iframe": false,
+     "doc": true,
+     "internal": true
+    },
+    {
+     "text": "גילויים פיקוחיים נוספים-מעודכן",
+     "href": "https://www.discountbank.co.il/media/0zznthzp/additional_regulatory_updated2020.pdf",
+     "year": "2020",
+     "iframe": false,
+     "doc": true,
+     "internal": true
+    },
+    {
+     "text": "גילויים פיקוחיים נוספים",
+     "href": "https://www.discountbank.co.il/media/aboeaogv/additional_regulatory_disclosures_2020.pdf",
+     "year": "2020",
+     "iframe": false,
+     "doc": true,
+     "internal": true
+    },
+    {
+     "text": "גילויים פיקוחיים נוספים",
+     "href": "https://www.discountbank.co.il/media/nmap2cur/extra_supervision_discoveries_q3_2020.pdf",
+     "year": "2020",
+     "iframe": false,
+     "doc": true,
+     "internal": true
+    },
+    {
+     "text": "גילויים פיקוחיים נוספים",
+     "href": "https://www.discountbank.co.il/media/zbzjmjoc/extra_supervision_discoveries_q2_2020.pdf",
+     "year": "2020",
+     "iframe": false,
+     "doc": true,
+     "internal": true
+    },
+    {
+     "text": "גילויים פיקוחיים נוספים",
+     "href": "https://www.discountbank.co.il/media/erjjeoof/extra_supervision_discoveries_q1_2020.pdf",
+     "year": "2020",
+     "iframe": false,
+     "doc": true,
+     "internal": true
+    },
+    {
+     "text": "גילוי לפי נדבך 3 של באזל ומידע נוסף על סיכונים",
+     "href": "https://www.discountbank.co.il/media/wwrf1zyh/2020risks.pdf",
+     "year": "2020",
+     "iframe": false,
+     "doc": true,
+     "internal": true
+    },
+    {
+     "text": "גילוי לפי נדבך 3 של באזל ומידע נוסף על סיכונים",
+     "href": "https://www.discountbank.co.il/media/r3gf3cp5/q32020risks.pdf",
+     "year": "2020",
+     "iframe": false,
+     "doc": true,
+     "internal": true
+    },
+    {
+     "text": "גילוי לפי נדבך 3 של באזל ומידע נוסף על סיכונים",
+     "href": "https://www.discountbank.co.il/media/0wwkgi4g/q22020risks.pdf",
+     "year": "2020",
+     "iframe": false,
+     "doc": true,
+     "internal": true
+    },
+    {
+     "text": "גילוי לפי נדבך 3 של באזל ומידע נוסף על סיכונים",
+     "href": "https://www.discountbank.co.il/media/3wjjuh0y/giluy_bazzel_q1_2020n.pdf",
+     "year": "2020",
+     "iframe": false,
+     "doc": true,
+     "internal": true
+    },
+    {
+     "text": "ממשל תאגידי",
+     "href": "https://www.discountbank.co.il/media/mplf3j4z/corporate_governance_2019s.pdf",
+     "year": "2019",
+     "iframe": false,
+     "doc": true,
+     "internal": true
+    },
+    {
+     "text": "חוות דעת אקטוארית",
+     "href": "https://www.discountbank.co.il/media/0pjnipzc/actuar2019s.pdf",
+     "year": "2019",
+     "iframe": false,
+     "doc": true,
+     "internal": true
+    },
+    {
+     "text": "חוות דעת אקטוארית",
+     "href": "https://www.discountbank.co.il/media/ltndo0rc/actuarq3_2019.pdf",
+     "year": "2019",
+     "iframe": false,
+     "doc": true,
+     "internal": true
+    },
+    {
+     "text": "חוות דעת אקטוארית",
+     "href": "https://www.discountbank.co.il/media/k5ahosbf/actuarq2_2019h.pdf",
+     "year": "2019",
+     "iframe": false,
+     "doc": true,
+     "internal": true
+    },
+    {
+     "text": "חוות דעת אקטוארית",
+     "href": "https://www.discountbank.co.il/media/hxtft4og/actuarq12019.pdf",
+     "year": "2019",
+     "iframe": false,
+     "doc": true,
+     "internal": true
+    },
+    {
+     "text": "הודעה לעיתונות",
+     "href": "https://www.discountbank.co.il/media/e2onaxqx/press_q4_2019s-old-old.pdf",
+     "year": "2019",
+     "iframe": false,
+     "doc": true,
+     "internal": true
+    },
+    {
+     "text": "הודעה לעיתונות",
+     "href": "https://www.discountbank.co.il/media/mdqhtm3d/press_q3_2019-old.pdf",
+     "year": "2019",
+     "iframe": false,
+     "doc": true,
+     "internal": true
+    },
+    {
+     "text": "הודעה לעיתונות",
+     "href": "https://www.discountbank.co.il/media/nhsh0kfz/press_q2_2019.pdf",
+     "year": "2019",
+     "iframe": false,
+     "doc": true,
+     "internal": true
+    },
+    {
+     "text": "הודעה לעיתונות",
+     "href": "https://www.discountbank.co.il/media/jp2brt3j/press_q1_2019.pdf",
+     "year": "2019",
+     "iframe": false,
+     "doc": true,
+     "internal": true
+    },
+    {
+     "text": "דו\"ח תקופתי",
+     "href": "https://www.discountbank.co.il/media/umrflw2h/tkufati2019.pdf",
+     "year": "2019",
+     "iframe": false,
+     "doc": true,
+     "internal": true
+    },
+    {
+     "text": "גילויים פיקוחיים נוספים-מעודכן",
+     "href": "https://www.discountbank.co.il/media/yjtjo3ny/extra_supervision_discoveries_q3_2019-update.pdf",
+     "year": "2019",
+     "iframe": false,
+     "doc": true,
+     "internal": true
+    },
+    {
+     "text": "גילויים פיקוחיים נוספים-מעודכן",
+     "href": "https://www.discountbank.co.il/media/pm0nmw5r/extra_supervision_discoveries_q2_2019-update.pdf",
+     "year": "2019",
+     "iframe": false,
+     "doc": true,
+     "internal": true
+    },
+    {
+     "text": "גילויים פיקוחיים נוספים",
+     "href": "https://www.discountbank.co.il/media/i4rd0la5/extra_supervision_discoveries_2019s.pdf",
+     "year": "2019",
+     "iframe": false,
+     "doc": true,
+     "internal": true
+    },
+    {
+     "text": "גילויים פיקוחיים נוספים",
+     "href": "https://www.discountbank.co.il/media/jofp01ci/extra_supervision_discoveries_q3_2019.pdf",
+     "year": "2019",
+     "iframe": false,
+     "doc": true,
+     "internal": true
+    },
+    {
+     "text": "גילויים פיקוחיים נוספים",
+     "href": "https://www.discountbank.co.il/media/fajlkjrk/extra_supervision_discoveries_q1_2019.pdf",
+     "year": "2019",
+     "iframe": false,
+     "doc": true,
+     "internal": true
+    },
+    {
+     "text": "גילוי לפי נדבך 3 של באזל ומידע נוסף על סיכונים",
+     "href": "https://www.discountbank.co.il/media/5qmhino0/giluy_bazzel_q4_2019_2.pdf",
+     "year": "2019",
+     "iframe": false,
+     "doc": true,
+     "internal": true
+    },
+    {
+     "text": "גילוי לפי נדבך 3 של באזל ומידע נוסף על סיכונים",
+     "href": "https://www.discountbank.co.il/media/pxdbhfqb/giluy_bazzel_q3_2019.pdf",
+     "year": "2019",
+     "iframe": false,
+     "doc": true,
+     "internal": true
+    },
+    {
+     "text": "גילוי לפי נדבך 3 של באזל ומידע נוסף על סיכונים",
+     "href": "https://www.discountbank.co.il/media/jvsjoveq/giluy_bazzel_q2_2019.pdf",
+     "year": "2019",
+     "iframe": false,
+     "doc": true,
+     "internal": true
+    },
+    {
+     "text": "גילוי לפי נדבך 3 של באזל ומידע נוסף על סיכונים",
+     "href": "https://www.discountbank.co.il/media/z2rdiibw/giluy_bazzel_q1_2019.pdf",
+     "year": "2019",
+     "iframe": false,
+     "doc": true,
+     "internal": true
+    },
+    {
+     "text": "נתונים כספיים",
+     "href": "https://www.discountbank.co.il/media/bwhea4oo/110012014.xlsx",
+     "year": "2014",
+     "iframe": false,
+     "doc": true,
+     "internal": true
+    },
+    {
+     "text": "נתונים כספיים",
+     "href": "https://www.discountbank.co.il/media/er5jhwbd/110012013-1.xlsx",
+     "year": "2013",
+     "iframe": false,
+     "doc": true,
+     "internal": true
+    },
+    {
+     "text": "נתונים כספיים",
+     "href": "https://www.discountbank.co.il/media/2rlhot4s/110012012.xlsx",
+     "year": "2012",
+     "iframe": false,
+     "doc": true,
+     "internal": true
+    },
+    {
+     "text": "נתונים כספיים",
+     "href": "https://www.discountbank.co.il/media/1wdlgvuc/110012011.xlsx",
+     "year": "2011",
+     "iframe": false,
+     "doc": true,
+     "internal": true
+    },
+    {
+     "text": "פקדונות ללקוחות כל הבנקים",
+     "href": "https://www.discountbank.co.il/private/savings-investments/deposits-savings/deposits-without-account/",
+     "year": null,
+     "iframe": false,
+     "doc": false,
+     "internal": true
+    },
+    {
+     "text": "פקדונות והשקעות",
+     "href": "https://www.discountbank.co.il/private/savings-investments/",
+     "year": null,
+     "iframe": false,
+     "doc": false,
+     "internal": true
+    },
+    {
+     "text": "נתונים כספיים",
+     "href": "https://www.discountbank.co.il/media/nsfeunkj/110012612.xlsx",
+     "year": null,
+     "iframe": false,
+     "doc": true,
+     "internal": true
+    },
+    {
+     "text": "נתונים כספיים",
+     "href": "https://www.discountbank.co.il/media/xt1hyhr4/110012611.xlsx",
+     "year": null,
+     "iframe": false,
+     "doc": true,
+     "internal": true
+    },
+    {
+     "text": "נתונים כספיים",
+     "href": "https://www.discountbank.co.il/media/fj3d5bh3/1100112514.xlsx",
+     "year": null,
+     "iframe": false,
+     "doc": true,
+     "internal": true
+    },
+    {
+     "text": "נתונים כספיים",
+     "href": "https://www.discountbank.co.il/media/csbhayjv/110012513.xlsx",
+     "year": null,
+     "iframe": false,
+     "doc": true,
+     "internal": true
+    },
+    {
+     "text": "נתונים כספיים",
+     "href": "https://www.discountbank.co.il/media/jvjl2idg/110012512.xlsx",
+     "year": null,
+     "iframe": false,
+     "doc": true,
+     "internal": true
+    },
+    {
+     "text": "נתונים כספיים",
+     "href": "https://www.discountbank.co.il/media/u04jv1by/110012511.xlsx",
+     "year": null,
+     "iframe": false,
+     "doc": true,
+     "internal": true
+    },
+    {
+     "text": "נתונים כספיים",
+     "href": "https://www.discountbank.co.il/media/qs4b0vh5/110012414.xlsx",
+     "year": null,
+     "iframe": false,
+     "doc": true,
+     "internal": true
+    },
+    {
+     "text": "נתונים כספיים",
+     "href": "https://www.discountbank.co.il/media/pwpbffaw/110012413.xlsx",
+     "year": null,
+     "iframe": false,
+     "doc": true,
+     "internal": true
+    },
+    {
+     "text": "נתונים כספיים",
+     "href": "https://www.discountbank.co.il/media/yzblx31z/110012412.xlsx",
+     "year": null,
+     "iframe": false,
+     "doc": true,
+     "internal": true
+    },
+    {
+     "text": "נתונים כספיים",
+     "href": "https://www.discountbank.co.il/media/4hihnr33/110012411.xlsx",
+     "year": null,
+     "iframe": false,
+     "doc": true,
+     "internal": true
+    },
+    {
+     "text": "נתונים כספיים",
+     "href": "https://www.discountbank.co.il/media/nlhdtpst/110012313.xlsx",
+     "year": null,
+     "iframe": false,
+     "doc": true,
+     "internal": true
+    },
+    {
+     "text": "נתונים כספיים",
+     "href": "https://www.discountbank.co.il/media/nueobfks/110012312.xlsx",
+     "year": null,
+     "iframe": false,
+     "doc": true,
+     "internal": true
+    },
+    {
+     "text": "נתונים כספיים",
+     "href": "https://www.discountbank.co.il/media/v3gflkhd/110012311.xlsx",
+     "year": null,
+     "iframe": false,
+     "doc": true,
+     "internal": true
+    },
+    {
+     "text": "נתונים כספיים",
+     "href": "https://www.discountbank.co.il/media/bhyeckde/נתונים-כספיים.xlsx",
+     "year": null,
+     "iframe": false,
+     "doc": true,
+     "internal": true
+    },
+    {
+     "text": "נתונים כספיים",
+     "href": "https://www.discountbank.co.il/media/j1fbxg01/110012213.xlsx",
+     "year": null,
+     "iframe": false,
+     "doc": true,
+     "internal": true
+    },
+    {
+     "text": "נתונים כספיים",
+     "href": "https://www.discountbank.co.il/media/0smf3fsp/110012212.xlsx",
+     "year": null,
+     "iframe": false,
+     "doc": true,
+     "internal": true
+    },
+    {
+     "text": "נתונים כספיים",
+     "href": "https://www.discountbank.co.il/media/ou2bd3pm/110012211.xlsx",
+     "year": null,
+     "iframe": false,
+     "doc": true,
+     "internal": true
+    },
+    {
+     "text": "נתונים כספיים",
+     "href": "https://www.discountbank.co.il/media/hrhpt4en/110012114.xlsx",
+     "year": null,
+     "iframe": false,
+     "doc": true,
+     "internal": true
+    },
+    {
+     "text": "נתונים כספיים",
+     "href": "https://www.discountbank.co.il/media/dphh0agz/110012113-1.xlsx",
+     "year": null,
+     "iframe": false,
+     "doc": true,
+     "internal": true
+    },
+    {
+     "text": "נתונים כספיים",
+     "href": "https://www.discountbank.co.il/media/rorpomcz/110012112.xlsx",
+     "year": null,
+     "iframe": false,
+     "doc": true,
+     "internal": true
+    },
+    {
+     "text": "נתונים כספיים",
+     "href": "https://www.discountbank.co.il/media/jluhla2k/110012111.xlsx",
+     "year": null,
+     "iframe": false,
+     "doc": true,
+     "internal": true
+    },
+    {
+     "text": "נתונים כספיים",
+     "href": "https://www.discountbank.co.il/media/lpkfouqj/110011914.xlsx",
+     "year": null,
+     "iframe": false,
+     "doc": true,
+     "internal": true
+    },
+    {
+     "text": "נתונים כספיים",
+     "href": "https://www.discountbank.co.il/media/0dtevrsl/110011913.xlsx",
+     "year": null,
+     "iframe": false,
+     "doc": true,
+     "internal": true
+    },
+    {
+     "text": "נתונים כספיים",
+     "href": "https://www.discountbank.co.il/media/qpqdalex/110011912.xlsx",
+     "year": null,
+     "iframe": false,
+     "doc": true,
+     "internal": true
+    },
+    {
+     "text": "נתונים כספיים",
+     "href": "https://www.discountbank.co.il/media/nujhcotg/110011911.xlsx",
+     "year": null,
+     "iframe": false,
+     "doc": true,
+     "internal": true
+    },
+    {
+     "text": "נתונים כספיים",
+     "href": "https://www.discountbank.co.il/media/fb0bmafa/נתונים-כספיים.xlsx",
+     "year": null,
+     "iframe": false,
+     "doc": true,
+     "internal": true
+    },
+    {
+     "text": "נתונים כספיים",
+     "href": "https://www.discountbank.co.il/media/efhfglfq/נתונים-כספיים.xlsx",
+     "year": null,
+     "iframe": false,
+     "doc": true,
+     "internal": true
+    },
+    {
+     "text": "נתונים כספיים",
+     "href": "https://www.discountbank.co.il/media/kghltvf4/נתונים-כספיים.xlsx",
+     "year": null,
+     "iframe": false,
+     "doc": true,
+     "internal": true
+    },
+    {
+     "text": "נתונים כספיים",
+     "href": "https://www.discountbank.co.il/media/1mxjovxq/נתונים-כספיים.xlsx",
+     "year": null,
+     "iframe": false,
+     "doc": true,
+     "internal": true
+    },
+    {
+     "text": "נתונים כספיים",
+     "href": "https://www.discountbank.co.il/media/tmnnzti4/נתונים-כספיים.xlsx",
+     "year": null,
+     "iframe": false,
+     "doc": true,
+     "internal": true
+    },
+    {
+     "text": "נתונים כספיים",
+     "href": "https://www.discountbank.co.il/media/tjxdfqsz/נתונים-כספיים.xlsx",
+     "year": null,
+     "iframe": false,
+     "doc": true,
+     "internal": true
+    },
+    {
+     "text": "נתונים כספיים",
+     "href": "https://www.discountbank.co.il/media/wfxo0bxw/נתונים-כספיים.xlsx",
+     "year": null,
+     "iframe": false,
+     "doc": true,
+     "internal": true
+    },
+    {
+     "text": "נתונים כספיים",
+     "href": "https://www.discountbank.co.il/media/0s5cegao/נתונים-כספיים.xlsx",
+     "year": null,
+     "iframe": false,
+     "doc": true,
+     "internal": true
+    },
+    {
+     "text": "נתונים כספיים",
+     "href": "https://www.discountbank.co.il/media/qf1fxed1/נתונים-כספיים.xlsx",
+     "year": null,
+     "iframe": false,
+     "doc": true,
+     "internal": true
+    },
+    {
+     "text": "נתונים כספיים",
+     "href": "https://www.discountbank.co.il/media/ubkbod3z/נתונים-כספיים.xlsx",
+     "year": null,
+     "iframe": false,
+     "doc": true,
+     "internal": true
+    },
+    {
+     "text": "נתונים כספיים",
+     "href": "https://www.discountbank.co.il/media/xzghhbfd/נתונים-כספיים.xls",
+     "year": null,
+     "iframe": false,
+     "doc": true,
+     "internal": true
+    },
+    {
+     "text": "נתונים כספיים",
+     "href": "https://www.discountbank.co.il/media/ibrfbtdk/נתונים-כספיים.xls",
+     "year": null,
+     "iframe": false,
+     "doc": true,
+     "internal": true
+    },
+    {
+     "text": "נתונים כספיים",
+     "href": "https://www.discountbank.co.il/media/5qffypco/נתונים-כספיים.xlsx",
+     "year": null,
+     "iframe": false,
+     "doc": true,
+     "internal": true
+    },
+    {
+     "text": "נתונים כספיים",
+     "href": "https://www.discountbank.co.il/media/oiumzmgk/נתונים-כספיים.xls",
+     "year": null,
+     "iframe": false,
+     "doc": true,
+     "internal": true
+    },
+    {
+     "text": "נתונים כספיים",
+     "href": "https://www.discountbank.co.il/media/ayrhm05w/נתונים-כספיים.xls",
+     "year": null,
+     "iframe": false,
+     "doc": true,
+     "internal": true
+    },
+    {
+     "text": "נתונים כספיים",
+     "href": "https://www.discountbank.co.il/media/pcdlxhs0/נתונים-כספיים.xls",
+     "year": null,
+     "iframe": false,
+     "doc": true,
+     "internal": true
+    },
+    {
+     "text": "נתונים כספיים",
+     "href": "https://www.discountbank.co.il/media/zz1begap/נתונים-כספיים.xls",
+     "year": null,
+     "iframe": false,
+     "doc": true,
+     "internal": true
+    },
+    {
+     "text": "נתונים כספיים",
+     "href": "https://www.discountbank.co.il/media/0eubhq1x/נתונים-כספיים.xlsx",
+     "year": null,
+     "iframe": false,
+     "doc": true,
+     "internal": true
+    },
+    {
+     "text": "נתונים כספיים",
+     "href": "https://www.discountbank.co.il/media/ilwdaur0/נתונים-כספיים.xls",
+     "year": null,
+     "iframe": false,
+     "doc": true,
+     "internal": true
+    },
+    {
+     "text": "נתונים כספיים",
+     "href": "https://www.discountbank.co.il/media/z5bjvqri/נתונים-כספיים.xls",
+     "year": null,
+     "iframe": false,
+     "doc": true,
+     "internal": true
+    },
+    {
+     "text": "נתונים כספיים",
+     "href": "https://www.discountbank.co.il/media/sywdxz1x/גליון-עבודה-נתונים-כספיים.xls",
+     "year": null,
+     "iframe": false,
+     "doc": true,
+     "internal": true
+    },
+    {
+     "text": "נתונים כספיים",
+     "href": "https://www.discountbank.co.il/media/vz2n4n11/גליון-עבודה-נתונים-כספיים.xls",
+     "year": null,
+     "iframe": false,
+     "doc": true,
+     "internal": true
+    },
+    {
+     "text": "נתונים כספיים",
+     "href": "https://www.discountbank.co.il/media/4b3pskuk/גליון-עבודה-נתונים-כספיים.xls",
+     "year": null,
+     "iframe": false,
+     "doc": true,
+     "internal": true
+    },
+    {
+     "text": "נתונים כספיים",
+     "href": "https://www.discountbank.co.il/media/la0pzwuw/גליון-עבודה-נתונים-כספיים.xls",
+     "year": null,
+     "iframe": false,
+     "doc": true,
+     "internal": true
+    },
+    {
+     "text": "מסמך עקרונות לביזור גרעין שליטה בבנק",
+     "href": "https://www.discountbank.co.il/media/5jafg2kf/מסמך-עקרונות-לביזור-גרעין-שליטה-בבנק.pdf",
+     "year": null,
+     "iframe": false,
+     "doc": true,
+     "internal": true
+    },
+    {
+     "text": "ממשל תאגידי",
+     "href": "https://www.discountbank.co.il/media/1o3fcorx/ממשל-תאגידי.pdf",
+     "year": null,
+     "iframe": false,
+     "doc": true,
+     "internal": true
+    },
+    {
+     "text": "ממשל תאגידי",
+     "href": "https://www.discountbank.co.il/media/ffweoi1a/ממשל-תאגידי.pdf",
+     "year": null,
+     "iframe": false,
+     "doc": true,
+     "internal": true
+    },
+    {
+     "text": "ממשל תאגידי",
+     "href": "https://www.discountbank.co.il/media/jvmb3bwr/ממשל-תאגידי.pdf",
+     "year": null,
+     "iframe": false,
+     "doc": true,
+     "internal": true
+    },
+    {
+     "text": "ממשל תאגידי",
+     "href": "https://www.discountbank.co.il/media/iv2f3sge/ממשל-תאגידי.pdf",
+     "year": null,
+     "iframe": false,
+     "doc": true,
+     "internal": true
+    },
+    {
+     "text": "מוצרי שוק הכסף",
+     "href": "https://www.discountbank.co.il/private/savings-investments/savings-interest/",
+     "year": null,
+     "iframe": false,
+     "doc": false,
+     "internal": true
+    },
+    {
+     "text": "חוות דעת אקטוארית",
+     "href": "https://www.discountbank.co.il/media/rcfjbsda/actuar_q424_heb.pdf",
+     "year": null,
+     "iframe": false,
+     "doc": true,
+     "internal": true
+    },
+    {
+     "text": "חוות דעת אקטוארית",
+     "href": "https://www.discountbank.co.il/media/umpj3u24/actuar_q323_heb.pdf",
+     "year": null,
+     "iframe": false,
+     "doc": true,
+     "internal": true
+    },
+    {
+     "text": "חוות דעת אקטוארית",
+     "href": "https://www.discountbank.co.il/media/zx2bq4pk/actuar_q223_heb.pdf",
+     "year": null,
+     "iframe": false,
+     "doc": true,
+     "internal": true
+    },
+    {
+     "text": "חוות דעת אקטוארית",
+     "href": "https://www.discountbank.co.il/media/gdhkicoo/actuar_q123_heb.pdf",
+     "year": null,
+     "iframe": false,
+     "doc": true,
+     "internal": true
+    },
+    {
+     "text": "חוות דעת אקטוארית",
+     "href": "https://www.discountbank.co.il/media/ryikv2w0/חוות-דעת.pdf",
+     "year": null,
+     "iframe": false,
+     "doc": true,
+     "internal": true
+    },
+    {
+     "text": "חוות דעת",
+     "href": "https://www.discountbank.co.il/media/1uybiyxd/חוות-דעת.pdf",
+     "year": null,
+     "iframe": false,
+     "doc": true,
+     "internal": true
+    },
+    {
+     "text": "חוות דעת",
+     "href": "https://www.discountbank.co.il/media/itdc5pam/חוות-דעת.pdf",
+     "year": null,
+     "iframe": false,
+     "doc": true,
+     "internal": true
+    },
+    {
+     "text": "חוות דעת",
+     "href": "https://www.discountbank.co.il/media/3lrfx3v5/חוות-דעת.pdf",
+     "year": null,
+     "iframe": false,
+     "doc": true,
+     "internal": true
+    },
+    {
+     "text": "חוות דעת",
+     "href": "https://www.discountbank.co.il/media/22yh0ned/חוות-דעת.pdf",
+     "year": null,
+     "iframe": false,
+     "doc": true,
+     "internal": true
+    },
+    {
+     "text": "חוות דעת",
+     "href": "https://www.discountbank.co.il/media/dmppg5iu/חוות-דעת.pdf",
+     "year": null,
+     "iframe": false,
+     "doc": true,
+     "internal": true
+    },
+    {
+     "text": "חוות דעת",
+     "href": "https://www.discountbank.co.il/media/k4gp5vcb/חוות-דעת.pdf",
+     "year": null,
+     "iframe": false,
+     "doc": true,
+     "internal": true
+    },
+    {
+     "text": "חוות דעת",
+     "href": "https://www.discountbank.co.il/media/gote0anq/חוות-דעת.pdf",
+     "year": null,
+     "iframe": false,
+     "doc": true,
+     "internal": true
+    },
+    {
+     "text": "חוות דעת",
+     "href": "https://www.discountbank.co.il/media/ptgbhrth/חוות-דעת.pdf",
+     "year": null,
+     "iframe": false,
+     "doc": true,
+     "internal": true
+    },
+    {
+     "text": "חוות דעת",
+     "href": "https://www.discountbank.co.il/media/lkvfq4ph/חוות-דעת.pdf",
+     "year": null,
+     "iframe": false,
+     "doc": true,
+     "internal": true
+    },
+    {
+     "text": "חוות דעת",
+     "href": "https://www.discountbank.co.il/media/4ctggezm/חוות-דעת.pdf",
+     "year": null,
+     "iframe": false,
+     "doc": true,
+     "internal": true
+    },
+    {
+     "text": "חוות דעת",
+     "href": "https://www.discountbank.co.il/media/cleb02do/חוות-דעת.pdf",
+     "year": null,
+     "iframe": false,
+     "doc": true,
+     "internal": true
+    },
+    {
+     "text": "חוות דעת",
+     "href": "https://www.discountbank.co.il/media/dq2lqr5g/חוות-דעת.pdf",
+     "year": null,
+     "iframe": false,
+     "doc": true,
+     "internal": true
+    },
+    {
+     "text": "חוות דעת",
+     "href": "https://www.discountbank.co.il/media/hvbogojg/חוות-דעת.pdf",
+     "year": null,
+     "iframe": false,
+     "doc": true,
+     "internal": true
+    },
+    {
+     "text": "חוות דעת",
+     "href": "https://www.discountbank.co.il/media/j23ncpgk/חוות-דעת.pdf",
+     "year": null,
+     "iframe": false,
+     "doc": true,
+     "internal": true
+    },
+    {
+     "text": "חוות דעת",
+     "href": "https://www.discountbank.co.il/media/5gxl0n4t/חוות-דעת.pdf",
+     "year": null,
+     "iframe": false,
+     "doc": true,
+     "internal": true
+    },
+    {
+     "text": "חוות דעת",
+     "href": "https://www.discountbank.co.il/media/hbxpdoq1/חוות-דעת.pdf",
+     "year": null,
+     "iframe": false,
+     "doc": true,
+     "internal": true
+    },
+    {
+     "text": "חוות דעת",
+     "href": "https://www.discountbank.co.il/media/o1npfkel/חוות-דעת.pdf",
+     "year": null,
+     "iframe": false,
+     "doc": true,
+     "internal": true
+    },
+    {
+     "text": "חוות דעת",
+     "href": "https://www.discountbank.co.il/media/tdsaz20m/חוות-דעת.pdf",
+     "year": null,
+     "iframe": false,
+     "doc": true,
+     "internal": true
+    },
+    {
+     "text": "חוות דעת",
+     "href": "https://www.discountbank.co.il/media/mdohmhs3/חוות-דעת.pdf",
+     "year": null,
+     "iframe": false,
+     "doc": true,
+     "internal": true
+    },
+    {
+     "text": "חוות דעת",
+     "href": "https://www.discountbank.co.il/media/ztgkudh3/חוות-דעת-אקטוארית.pdf",
+     "year": null,
+     "iframe": false,
+     "doc": true,
+     "internal": true
+    },
+    {
+     "text": "חוות דעת",
+     "href": "https://www.discountbank.co.il/media/0i0fme5o/חוות-דעת-אקטוארית.pdf",
+     "year": null,
+     "iframe": false,
+     "doc": true,
+     "internal": true
+    },
+    {
+     "text": "חוות דעת",
+     "href": "https://www.discountbank.co.il/media/ygbbr0yz/חוות-דעת-אקטוארית.pdf",
+     "year": null,
+     "iframe": false,
+     "doc": true,
+     "internal": true
+    },
+    {
+     "text": "חוות דעת",
+     "href": "https://www.discountbank.co.il/media/apshr4v2/חוות-דעת-אקטוארית.pdf",
+     "year": null,
+     "iframe": false,
+     "doc": true,
+     "internal": true
+    },
+    {
+     "text": "הודעה לעתונות",
+     "href": "https://www.discountbank.co.il/media/341hpf2e/הודעת-לעיתונות.pdf",
+     "year": null,
+     "iframe": false,
+     "doc": true,
+     "internal": true
+    },
+    {
+     "text": "הודעה לעיתונות",
+     "href": "https://www.discountbank.co.il/media/5v3dyubi/press_financial_statements_q126.pdf",
+     "year": null,
+     "iframe": false,
+     "doc": true,
+     "internal": true
+    },
+    {
+     "text": "הודעה לעיתונות",
+     "href": "https://www.discountbank.co.il/media/514gxtk5/press_release_q425.pdf",
+     "year": null,
+     "iframe": false,
+     "doc": true,
+     "internal": true
+    },
+    {
+     "text": "הודעה לעיתונות",
+     "href": "https://www.discountbank.co.il/media/ev3phjb0/press_release_q124_nagish.pdf",
+     "year": null,
+     "iframe": false,
+     "doc": true,
+     "internal": true
+    },
+    {
+     "text": "הודעה לעיתונות",
+     "href": "https://www.discountbank.co.il/media/qzledaxv/press_release_q423_nagish.pdf",
+     "year": null,
+     "iframe": false,
+     "doc": true,
+     "internal": true
+    },
+    {
+     "text": "הודעה לעיתונות",
+     "href": "https://www.discountbank.co.il/media/g31pq0y3/הודעה-לעיתונות.pdf",
+     "year": null,
+     "iframe": false,
+     "doc": true,
+     "internal": true
+    },
+    {
+     "text": "הודעה לעיתונות",
+     "href": "https://www.discountbank.co.il/media/zwnl31hs/הודעה-לעיתונות.pdf",
+     "year": null,
+     "iframe": false,
+     "doc": true,
+     "internal": true
+    },
+    {
+     "text": "הודעה לעיתונות",
+     "href": "https://www.discountbank.co.il/media/oyqjra4v/הודעה-לעיתונות.pdf",
+     "year": null,
+     "iframe": false,
+     "doc": true,
+     "internal": true
+    },
+    {
+     "text": "הודעה לעיתונות",
+     "href": "https://www.discountbank.co.il/media/4hvpb0yq/הודעה-לעיתונות.pdf",
+     "year": null,
+     "iframe": false,
+     "doc": true,
+     "internal": true
+    },
+    {
+     "text": "הודעה לעיתונות",
+     "href": "https://www.discountbank.co.il/media/bzpnzlwo/הודעה-לעיתונות.pdf",
+     "year": null,
+     "iframe": false,
+     "doc": true,
+     "internal": true
+    },
+    {
+     "text": "הודעה לעיתונות",
+     "href": "https://www.discountbank.co.il/media/v4poafgq/הודעה-לעיתונות.pdf",
+     "year": null,
+     "iframe": false,
+     "doc": true,
+     "internal": true
+    },
+    {
+     "text": "הודעה לעיתונות",
+     "href": "https://www.discountbank.co.il/media/jbdbjqq4/הודעה-לעיתונות.pdf",
+     "year": null,
+     "iframe": false,
+     "doc": true,
+     "internal": true
+    },
+    {
+     "text": "הודעה לעיתונות",
+     "href": "https://www.discountbank.co.il/media/feeismnn/הודעה-לעיתונות.pdf",
+     "year": null,
+     "iframe": false,
+     "doc": true,
+     "internal": true
+    },
+    {
+     "text": "הודעה לעיתונות",
+     "href": "https://www.discountbank.co.il/media/n1kdrvi4/הודעה-לעיתונות.pdf",
+     "year": null,
+     "iframe": false,
+     "doc": true,
+     "internal": true
+    },
+    {
+     "text": "הודעה לעיתונות",
+     "href": "https://www.discountbank.co.il/media/avqj2wlx/הודעה-לעיתונות.pdf",
+     "year": null,
+     "iframe": false,
+     "doc": true,
+     "internal": true
+    },
+    {
+     "text": "הודעה לעיתונות",
+     "href": "https://www.discountbank.co.il/media/3b1c4l4y/הודעה-לעיתונות.pdf",
+     "year": null,
+     "iframe": false,
+     "doc": true,
+     "internal": true
+    },
+    {
+     "text": "הודעה לעיתונות",
+     "href": "https://www.discountbank.co.il/media/vh3julgl/הודעה-לעיתונות.pdf",
+     "year": null,
+     "iframe": false,
+     "doc": true,
+     "internal": true
+    },
+    {
+     "text": "הודעה לעיתונות",
+     "href": "https://www.discountbank.co.il/media/jj2dcpdo/הודעה-לעיתונות.pdf",
+     "year": null,
+     "iframe": false,
+     "doc": true,
+     "internal": true
+    },
+    {
+     "text": "הודעה לעיתונות",
+     "href": "https://www.discountbank.co.il/media/h2pabddy/הודעה-לעיתונות.pdf",
+     "year": null,
+     "iframe": false,
+     "doc": true,
+     "internal": true
+    },
+    {
+     "text": "הודעה לעיתונות",
+     "href": "https://www.discountbank.co.il/media/vozfdzof/חוות-דעת.pdf",
+     "year": null,
+     "iframe": false,
+     "doc": true,
+     "internal": true
+    },
+    {
+     "text": "הודעה לעיתונות",
+     "href": "https://www.discountbank.co.il/media/5lsf31am/הודעה-לעיתונות.pdf",
+     "year": null,
+     "iframe": false,
+     "doc": true,
+     "internal": true
+    },
+    {
+     "text": "הודעה לעיתונות",
+     "href": "https://www.discountbank.co.il/media/wz1c3ypp/הודעה-לעיתונות.pdf",
+     "year": null,
+     "iframe": false,
+     "doc": true,
+     "internal": true
+    },
+    {
+     "text": "הודעה לעיתונות",
+     "href": "https://www.discountbank.co.il/media/cyjiv1cd/הודעה-לעיתונות.pdf",
+     "year": null,
+     "iframe": false,
+     "doc": true,
+     "internal": true
+    },
+    {
+     "text": "הודעה לעיתונות",
+     "href": "https://www.discountbank.co.il/media/nb5fvuwq/הודעה-לעיתונות.pdf",
+     "year": null,
+     "iframe": false,
+     "doc": true,
+     "internal": true
+    },
+    {
+     "text": "הודעה לעיתונות",
+     "href": "https://www.discountbank.co.il/media/0w1dn3qc/הודעה-לעיתונות.pdf",
+     "year": null,
+     "iframe": false,
+     "doc": true,
+     "internal": true
+    },
+    {
+     "text": "הודעה לעיתונות",
+     "href": "https://www.discountbank.co.il/media/cxvb3yrf/הודעה-לעיתונות.pdf",
+     "year": null,
+     "iframe": false,
+     "doc": true,
+     "internal": true
+    },
+    {
+     "text": "הודעה לעיתונות",
+     "href": "https://www.discountbank.co.il/media/xz4nu1ad/הודעת-לעיתונות.pdf",
+     "year": null,
+     "iframe": false,
+     "doc": true,
+     "internal": true
+    },
+    {
+     "text": "הודעה לעיתונות",
+     "href": "https://www.discountbank.co.il/media/qsynggfs/הודעה-לעיתונות.pdf",
+     "year": null,
+     "iframe": false,
+     "doc": true,
+     "internal": true
+    },
+    {
+     "text": "הודעה לעיתונות",
+     "href": "https://www.discountbank.co.il/media/i2rlwczq/הודעה-לעיתונות.pdf",
+     "year": null,
+     "iframe": false,
+     "doc": true,
+     "internal": true
+    },
+    {
+     "text": "הדוחות הכספיים",
+     "href": "https://www.discountbank.co.il/media/vlfekeld/הדוחות-הכספיים.pdf",
+     "year": null,
+     "iframe": false,
+     "doc": true,
+     "internal": true
+    },
+    {
+     "text": "הדוחות הכספיים",
+     "href": "https://www.discountbank.co.il/media/inzhxqbx/הדוחות-הכספיים.pdf",
+     "year": null,
+     "iframe": false,
+     "doc": true,
+     "internal": true
+    },
+    {
+     "text": "הדוחות הכספיים",
+     "href": "https://www.discountbank.co.il/media/fonffktc/הדוחות-הכספיים.pdf",
+     "year": null,
+     "iframe": false,
+     "doc": true,
+     "internal": true
+    },
+    {
+     "text": "הדוחות הכספיים",
+     "href": "https://www.discountbank.co.il/media/b3ajbpfo/הדוחות-הכספיים.pdf",
+     "year": null,
+     "iframe": false,
+     "doc": true,
+     "internal": true
+    },
+    {
+     "text": "הדוחות הכספיים",
+     "href": "https://www.discountbank.co.il/media/wvro3xkb/הדוחות-הכספיים.pdf",
+     "year": null,
+     "iframe": false,
+     "doc": true,
+     "internal": true
+    },
+    {
+     "text": "הדוחות הכספיים",
+     "href": "https://www.discountbank.co.il/media/3fwdftbn/הדוחות-הכספיים.pdf",
+     "year": null,
+     "iframe": false,
+     "doc": true,
+     "internal": true
+    },
+    {
+     "text": "הדוחות הכספיים",
+     "href": "https://www.discountbank.co.il/media/1xkofuub/הדוחות-הכספיים.pdf",
+     "year": null,
+     "iframe": false,
+     "doc": true,
+     "internal": true
+    },
+    {
+     "text": "הדוחות הכספיים",
+     "href": "https://www.discountbank.co.il/media/eblpsjye/הדוחות-הכספיים.pdf",
+     "year": null,
+     "iframe": false,
+     "doc": true,
+     "internal": true
+    },
+    {
+     "text": "הדוחות הכספיים",
+     "href": "https://www.discountbank.co.il/media/zlnnyvme/הדוחות-הכספיים.pdf",
+     "year": null,
+     "iframe": false,
+     "doc": true,
+     "internal": true
+    },
+    {
+     "text": "הדוחות הכספיים",
+     "href": "https://www.discountbank.co.il/media/v2tpuhjz/הדוחות-הכספיים.pdf",
+     "year": null,
+     "iframe": false,
+     "doc": true,
+     "internal": true
+    },
+    {
+     "text": "הדוחות הכספיים",
+     "href": "https://www.discountbank.co.il/media/0utk3ywc/הדוחות-הכספיים.pdf",
+     "year": null,
+     "iframe": false,
+     "doc": true,
+     "internal": true
+    },
+    {
+     "text": "הדוחות הכספיים",
+     "href": "https://www.discountbank.co.il/media/mlcpp4pq/הדוחות-הכספיים.pdf",
+     "year": null,
+     "iframe": false,
+     "doc": true,
+     "internal": true
+    },
+    {
+     "text": "הדוחות הכספיים",
+     "href": "https://www.discountbank.co.il/media/q1ecxzun/הדוחות-הכספיים.pdf",
+     "year": null,
+     "iframe": false,
+     "doc": true,
+     "internal": true
+    },
+    {
+     "text": "הדוחות הכספיים",
+     "href": "https://www.discountbank.co.il/media/loonh1wm/הדוחות-הכספיים.pdf",
+     "year": null,
+     "iframe": false,
+     "doc": true,
+     "internal": true
+    },
+    {
+     "text": "הדוחות הכספיים",
+     "href": "https://www.discountbank.co.il/media/gjygeewk/הדוחות-הכספיים.pdf",
+     "year": null,
+     "iframe": false,
+     "doc": true,
+     "internal": true
+    },
+    {
+     "text": "הדוחות הכספיים",
+     "href": "https://www.discountbank.co.il/media/nsgbodo1/הדוחות-הכספיים.pdf",
+     "year": null,
+     "iframe": false,
+     "doc": true,
+     "internal": true
+    },
+    {
+     "text": "הדוחות הכספיים",
+     "href": "https://www.discountbank.co.il/media/c0fhjgrn/הדוחות-הכספיים.pdf",
+     "year": null,
+     "iframe": false,
+     "doc": true,
+     "internal": true
+    },
+    {
+     "text": "הדוחות הכספיים",
+     "href": "https://www.discountbank.co.il/media/yhda0zp0/הדוחות-הכספיים.pdf",
+     "year": null,
+     "iframe": false,
+     "doc": true,
+     "internal": true
+    },
+    {
+     "text": "הדוחות הכספיים",
+     "href": "https://www.discountbank.co.il/media/510ant2v/הדוחות-הכספיים.pdf",
+     "year": null,
+     "iframe": false,
+     "doc": true,
+     "internal": true
+    },
+    {
+     "text": "הדוחות הכספיים",
+     "href": "https://www.discountbank.co.il/media/3pdjjdax/הדוחות-הכספיים.pdf",
+     "year": null,
+     "iframe": false,
+     "doc": true,
+     "internal": true
+    },
+    {
+     "text": "הדוחות הכספיים",
+     "href": "https://www.discountbank.co.il/media/2mmnusbv/הדוחות-הכספיים.pdf",
+     "year": null,
+     "iframe": false,
+     "doc": true,
+     "internal": true
+    },
+    {
+     "text": "הדוחות הכספיים",
+     "href": "https://www.discountbank.co.il/media/w2sfhpur/דוחות-כספיים.pdf",
+     "year": null,
+     "iframe": false,
+     "doc": true,
+     "internal": true
+    },
+    {
+     "text": "הדוחות הכספיים",
+     "href": "https://www.discountbank.co.il/media/an5b52hg/דוחות-כספיים.pdf",
+     "year": null,
+     "iframe": false,
+     "doc": true,
+     "internal": true
+    },
+    {
+     "text": "הדוחות הכספיים",
+     "href": "https://www.discountbank.co.il/media/gt4j20y4/הדוחות-הכספיים.pdf",
+     "year": null,
+     "iframe": false,
+     "doc": true,
+     "internal": true
+    },
+    {
+     "text": "דוחות כספיים",
+     "href": "https://www.discountbank.co.il/media/2oua2v2m/110012424.pdf",
+     "year": null,
+     "iframe": false,
+     "doc": true,
+     "internal": true
+    },
+    {
+     "text": "דוחות כספיים",
+     "href": "https://www.discountbank.co.il/private/discount-group/financial-statements/",
+     "year": null,
+     "iframe": false,
+     "doc": false,
+     "internal": true
+    },
+    {
+     "text": "דו\"חות כספיים",
+     "href": "https://www.discountbank.co.il/media/jcpdgnwx/110012323.pdf",
+     "year": null,
+     "iframe": false,
+     "doc": true,
+     "internal": true
+    },
+    {
+     "text": "דו\"חות כספיים",
+     "href": "https://www.discountbank.co.il/media/jupdc5ue/110012322.pdf",
+     "year": null,
+     "iframe": false,
+     "doc": true,
+     "internal": true
+    },
+    {
+     "text": "דו\"חות כספיים",
+     "href": "https://www.discountbank.co.il/media/cmijcnsa/110012321.pdf",
+     "year": null,
+     "iframe": false,
+     "doc": true,
+     "internal": true
+    },
+    {
+     "text": "דו\"חות כספיים",
+     "href": "https://www.discountbank.co.il/media/15kjrkaj/הדוחות-הכספיים.pdf",
+     "year": null,
+     "iframe": false,
+     "doc": true,
+     "internal": true
+    },
+    {
+     "text": "דו\"חות כספיים",
+     "href": "https://www.discountbank.co.il/media/0mhbsgcd/110012223-1.pdf",
+     "year": null,
+     "iframe": false,
+     "doc": true,
+     "internal": true
+    },
+    {
+     "text": "דו\"חות כספיים",
+     "href": "https://www.discountbank.co.il/media/ejijk0y5/110012222.pdf",
+     "year": null,
+     "iframe": false,
+     "doc": true,
+     "internal": true
+    },
+    {
+     "text": "דו\"חות כספיים",
+     "href": "https://www.discountbank.co.il/media/ajrjufou/110012221.pdf",
+     "year": null,
+     "iframe": false,
+     "doc": true,
+     "internal": true
+    },
+    {
+     "text": "דו\"חות כספיים",
+     "href": "https://www.discountbank.co.il/media/5gzdv1hz/110012124.pdf",
+     "year": null,
+     "iframe": false,
+     "doc": true,
+     "internal": true
+    },
+    {
+     "text": "דו\"חות כספיים",
+     "href": "https://www.discountbank.co.il/media/m2gbppx5/110012123-1.pdf",
+     "year": null,
+     "iframe": false,
+     "doc": true,
+     "internal": true
+    },
+    {
+     "text": "דו\"חות כספיים",
+     "href": "https://www.discountbank.co.il/media/aokozg5u/110012122.pdf",
+     "year": null,
+     "iframe": false,
+     "doc": true,
+     "internal": true
+    },
+    {
+     "text": "דו\"חות כספיים",
+     "href": "https://www.discountbank.co.il/media/eyshwlv3/110012121.pdf",
+     "year": null,
+     "iframe": false,
+     "doc": true,
+     "internal": true
+    },
+    {
+     "text": "דו\"חות כספיים",
+     "href": "https://www.discountbank.co.il/media/j0smk04x/110011924-1.pdf",
+     "year": null,
+     "iframe": false,
+     "doc": true,
+     "internal": true
+    },
+    {
+     "text": "דו\"חות כספיים",
+     "href": "https://www.discountbank.co.il/media/evnadnw4/110011923.pdf",
+     "year": null,
+     "iframe": false,
+     "doc": true,
+     "internal": true
+    },
+    {
+     "text": "דו\"חות כספיים",
+     "href": "https://www.discountbank.co.il/media/uluhqdkh/110011922.pdf",
+     "year": null,
+     "iframe": false,
+     "doc": true,
+     "internal": true
+    },
+    {
+     "text": "דו\"חות כספיים",
+     "href": "https://www.discountbank.co.il/media/kkrds1ga/110011921.pdf",
+     "year": null,
+     "iframe": false,
+     "doc": true,
+     "internal": true
+    },
+    {
+     "text": "דו\"ח תקופתי",
+     "href": "https://www.discountbank.co.il/media/ysubbsdw/דוח-תקופתי.pdf",
+     "year": null,
+     "iframe": false,
+     "doc": true,
+     "internal": true
+    },
+    {
+     "text": "דו\"ח תקופתי",
+     "href": "https://www.discountbank.co.il/media/0p4k4vj5/דוח-תקופתי.pdf",
+     "year": null,
+     "iframe": false,
+     "doc": true,
+     "internal": true
+    },
+    {
+     "text": "דו\"ח תקופתי",
+     "href": "https://www.discountbank.co.il/media/v24e3mat/דוח-תקופתי.pdf",
+     "year": null,
+     "iframe": false,
+     "doc": true,
+     "internal": true
+    },
+    {
+     "text": "דו\"ח תקופתי",
+     "href": "https://www.discountbank.co.il/media/l20bb1fj/דוח-תקופתי.pdf",
+     "year": null,
+     "iframe": false,
+     "doc": true,
+     "internal": true
+    },
+    {
+     "text": "גילויים פיקוחיים נוספים",
+     "href": "https://www.discountbank.co.il/media/afhlvecv/גילויים-פיקוחיים-נוספים.pdf",
+     "year": null,
+     "iframe": false,
+     "doc": true,
+     "internal": true
+    },
+    {
+     "text": "גילויים פיקוחיים נוספים",
+     "href": "https://www.discountbank.co.il/media/p5do5w0j/giluyimq122_n.pdf",
+     "year": null,
+     "iframe": false,
+     "doc": true,
+     "internal": true
+    },
+    {
+     "text": "גילויים פיקוחיים נוספים",
+     "href": "https://www.discountbank.co.il/media/3j3nv03d/גילויים-פיקוחיים-נוספים.pdf",
+     "year": null,
+     "iframe": false,
+     "doc": true,
+     "internal": true
+    },
+    {
+     "text": "גילויים פיקוחיים נוספים",
+     "href": "https://www.discountbank.co.il/media/di5e0sak/גילויים-פיקוחיים-נוספים.pdf",
+     "year": null,
+     "iframe": false,
+     "doc": true,
+     "internal": true
+    },
+    {
+     "text": "גילויים פיקוחיים נוספים",
+     "href": "https://www.discountbank.co.il/media/afsbx4zk/גילויים-פיקוחיים-נוספים.pdf",
+     "year": null,
+     "iframe": false,
+     "doc": true,
+     "internal": true
+    },
+    {
+     "text": "גילויים פיקוחיים נוספים",
+     "href": "https://www.discountbank.co.il/media/tobjj3x5/גילויים-פיקוחיים-נוספים.pdf",
+     "year": null,
+     "iframe": false,
+     "doc": true,
+     "internal": true
+    },
+    {
+     "text": "גילויים פיקוחיים נוספים",
+     "href": "https://www.discountbank.co.il/media/h0vhdxpu/גילויים-פיקוחיים-נוספים.pdf",
+     "year": null,
+     "iframe": false,
+     "doc": true,
+     "internal": true
+    },
+    {
+     "text": "גילויים פיקוחיים נוספים",
+     "href": "https://www.discountbank.co.il/media/pqkhgz00/גילויים-פיקוחיים-נוספים.pdf",
+     "year": null,
+     "iframe": false,
+     "doc": true,
+     "internal": true
+    },
+    {
+     "text": "גילויים פיקוחיים נוספים",
+     "href": "https://www.discountbank.co.il/media/rx1lmeph/גילויים-פיקוחיים-נוספים.pdf",
+     "year": null,
+     "iframe": false,
+     "doc": true,
+     "internal": true
+    },
+    {
+     "text": "גילויים פיקוחיים נוספים",
+     "href": "https://www.discountbank.co.il/media/ghogbvfu/גילויים-פיקוחיים-נוספים.pdf",
+     "year": null,
+     "iframe": false,
+     "doc": true,
+     "internal": true
+    },
+    {
+     "text": "גילויים פיקוחיים נוספים",
+     "href": "https://www.discountbank.co.il/media/ez2hm1it/גילויים-פיקוחיים-נוספים.pdf",
+     "year": null,
+     "iframe": false,
+     "doc": true,
+     "internal": true
+    },
+    {
+     "text": "גילויים פיקוחיים נוספים",
+     "href": "https://www.discountbank.co.il/media/1genztve/גילויים-פיקוחיים-נוספים.pdf",
+     "year": null,
+     "iframe": false,
+     "doc": true,
+     "internal": true
+    },
+    {
+     "text": "גילויים פיקוחיים נוספים",
+     "href": "https://www.discountbank.co.il/media/rgwgsmbk/גילויים-פיקוחיים-נוספים.pdf",
+     "year": null,
+     "iframe": false,
+     "doc": true,
+     "internal": true
+    },
+    {
+     "text": "גילויים פיקוחיים נוספים",
+     "href": "https://www.discountbank.co.il/media/4o1ot0op/גילויים-פיקוחיים-נוספים.pdf",
+     "year": null,
+     "iframe": false,
+     "doc": true,
+     "internal": true
+    },
+    {
+     "text": "גילויים פיקוחיים נוספים",
+     "href": "https://www.discountbank.co.il/media/55qdc4mr/גילויים-פיקוחיים-נוספים.pdf",
+     "year": null,
+     "iframe": false,
+     "doc": true,
+     "internal": true
+    },
+    {
+     "text": "גילוי נוסף לפי נדבך 3 של באזל",
+     "href": "https://www.discountbank.co.il/media/uxsbpkpg/גילוי-נוסף-לפי-נדבך-3-של-באזל.pdf",
+     "year": null,
+     "iframe": false,
+     "doc": true,
+     "internal": true
+    },
+    {
+     "text": "גילוי נוסף לפי נדבך 3 של באזל",
+     "href": "https://www.discountbank.co.il/media/4r3l1b2k/גילוי-נוסף-לפי-נדבך-3-של-באזל.pdf",
+     "year": null,
+     "iframe": false,
+     "doc": true,
+     "internal": true
+    },
+    {
+     "text": "גילוי נוסף לפי נדבך 3 של באזל",
+     "href": "https://www.discountbank.co.il/media/phugmt1c/גילוי-נוסף-לפי-נדבך-3-של-באזל.pdf",
+     "year": null,
+     "iframe": false,
+     "doc": true,
+     "internal": true
+    },
+    {
+     "text": "גילוי נוסף לפי נדבך 3 של באזל",
+     "href": "https://www.discountbank.co.il/media/hrblhsgu/גילוי-נוסף-לפי-נדבך-3-של-באזל.pdf",
+     "year": null,
+     "iframe": false,
+     "doc": true,
+     "internal": true
+    },
+    {
+     "text": "גילוי נוסף לפי נדבך 3 של באזל",
+     "href": "https://www.discountbank.co.il/media/ovjh1lsh/גילוי-נוסף-לפי-נדבך-3-של-באזל.pdf",
+     "year": null,
+     "iframe": false,
+     "doc": true,
+     "internal": true
+    },
+    {
+     "text": "גילוי נוסף לפי נדבך 3 של באזל",
+     "href": "https://www.discountbank.co.il/media/pmjdykt1/גילוי-נוסף-לפי-נדבך-3-של-באזל.pdf",
+     "year": null,
+     "iframe": false,
+     "doc": true,
+     "internal": true
+    },
+    {
+     "text": "גילוי נוסף לפי נדבך 3 של באזל",
+     "href": "https://www.discountbank.co.il/media/o2tnphvc/גילוי-נוסף-לפי-נדבך-3-של-באזל.pdf",
+     "year": null,
+     "iframe": false,
+     "doc": true,
+     "internal": true
+    },
+    {
+     "text": "גילוי נוסף לפי נדבך 3 של באזל",
+     "href": "https://www.discountbank.co.il/media/juxbg3cv/גילוי-נוסף-לפי-נדבך-3-של-באזל.pdf",
+     "year": null,
+     "iframe": false,
+     "doc": true,
+     "internal": true
+    },
+    {
+     "text": "גילוי לפי נדבך 3 של באזל ומידע נוסף על סיכונים",
+     "href": "https://www.discountbank.co.il/media/rjxjxvmt/גילוי-לפי-נדבך-3-באזל.pdf",
+     "year": null,
+     "iframe": false,
+     "doc": true,
+     "internal": true
+    },
+    {
+     "text": "גילוי לפי נדבך 3 של באזל ומידע נוסף על סיכונים",
+     "href": "https://www.discountbank.co.il/media/k25m4425/גילוי-לפי-נדבך-3-של-באזל-ומידע-נוסף-על-סיכונים.pdf",
+     "year": null,
+     "iframe": false,
+     "doc": true,
+     "internal": true
+    },
+    {
+     "text": "גילוי לפי נדבך 3 של באזל ומידע נוסף על סיכונים",
+     "href": "https://www.discountbank.co.il/media/n3bmy12k/גילוי-לפי-נדבך-3-של-באזל-ומידע-נוסף-על-סיכונים.pdf",
+     "year": null,
+     "iframe": false,
+     "doc": true,
+     "internal": true
+    },
+    {
+     "text": "גילוי לפי נדבך 3 של באזל ומידע נוסף על סיכונים",
+     "href": "https://www.discountbank.co.il/media/14fni2z1/גילוי-לפי-נדבך-3-של-באזל-ומידע-נוסף-על-סיכונים.pdf",
+     "year": null,
+     "iframe": false,
+     "doc": true,
+     "internal": true
+    },
+    {
+     "text": "גילוי לפי נדבך 3 של באזל ומידע נוסף על סיכונים",
+     "href": "https://www.discountbank.co.il/media/o1ugcfmq/גילוי-לפי-נדבך-3-של-באזל-ומידע-נוסף-על-סיכונים.pdf",
+     "year": null,
+     "iframe": false,
+     "doc": true,
+     "internal": true
+    },
+    {
+     "text": "גילוי לפי נדבך 3 של באזל ומידע נוסף על סיכונים",
+     "href": "https://www.discountbank.co.il/media/xwtb04nv/גילוי-לפי-נדבך-3-של-באזל-ומידע-נוסף-על-סיכונים.pdf",
+     "year": null,
+     "iframe": false,
+     "doc": true,
+     "internal": true
+    },
+    {
+     "text": "גילוי לפי נדבך 3 של באזל ומידע נוסף על סיכונים",
+     "href": "https://www.discountbank.co.il/media/jfslngwo/גילוי-לפי-נדבך-3-של-באזל-ומידע-נוסף-על-סיכונים.pdf",
+     "year": null,
+     "iframe": false,
+     "doc": true,
+     "internal": true
+    },
+    {
+     "text": "גילוי לפי נדבך 3 של באזל ומידע נוסף על סיכונים",
+     "href": "https://www.discountbank.co.il/media/le4fubzu/גילוי-לפי-נדבך-3-של-באזל-ומידע-נוסף-על-סיכונים.pdf",
+     "year": null,
+     "iframe": false,
+     "doc": true,
+     "internal": true
+    },
+    {
+     "text": "גילוי לפי נדבך 3 של באזל ומידע נוסף על סיכונים",
+     "href": "https://www.discountbank.co.il/media/goxktj10/גילוי-לפי-נדבך-3-של-באזל-ומידע-נוסף-על-סיכונים.pdf",
+     "year": null,
+     "iframe": false,
+     "doc": true,
+     "internal": true
+    },
+    {
+     "text": "גילוי לפי נדבך 3 של באזל ומידע נוסף על סיכונים",
+     "href": "https://www.discountbank.co.il/media/cazpe3zc/גילוי-לפי-נדבך-3-של-באזל-ומידע-נוסף-על-סיכונים.pdf",
+     "year": null,
+     "iframe": false,
+     "doc": true,
+     "internal": true
+    },
+    {
+     "text": "גילוי לפי נדבך 3 של באזל ומידע נוסף על סיכונים",
+     "href": "https://www.discountbank.co.il/media/vuka1pxg/גילוי-לפי-נדבך-3-של-באזל-ומידע-נוסף-על-סיכונים.pdf",
+     "year": null,
+     "iframe": false,
+     "doc": true,
+     "internal": true
+    },
+    {
+     "text": "גילוי לפי נדבך 3 של באזל ומידע נוסף על סיכונים",
+     "href": "https://www.discountbank.co.il/media/1fhnvtxf/גילוי-לפי-נדבך-3-של-באזל-ומידע-נוסף-על-סיכונים.pdf",
+     "year": null,
+     "iframe": false,
+     "doc": true,
+     "internal": true
+    },
+    {
+     "text": "גילוי לפי נדבך 3 של באזל ומידע נוסף על סיכונים",
+     "href": "https://www.discountbank.co.il/media/b2tfuv2t/גילוי-לפי-נדבך-3-של-באזל-ומידע-נוסף-על-סיכונים.pdf",
+     "year": null,
+     "iframe": false,
+     "doc": true,
+     "internal": true
+    },
+    {
+     "text": "גילוי לפי נדבך 3 של באזל ומידע נוסף על סיכונים",
+     "href": "https://www.discountbank.co.il/media/gbcbmrjh/גילוי-לפי-נדבך-3-של-באזל-ומידע-נוסף-על-סיכונים.pdf",
+     "year": null,
+     "iframe": false,
+     "doc": true,
+     "internal": true
+    },
+    {
+     "text": "איתור כספים פנסיוניים",
+     "href": "https://www.discountbank.co.il/private/savings-investments/pension-consulting/",
+     "year": null,
+     "iframe": false,
+     "doc": false,
+     "internal": true
+    }
+   ]
   }
  }
 }
