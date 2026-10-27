@@ -1,6 +1,6 @@
 {
  "legal_id": "512245812",
- "taken": "2026-10-26T11:34:41+00:00",
+ "taken": "2026-10-27T11:00:17+00:00",
  "pages": {
   "https://www.menoramivt.co.il/funds/": {
    "product": "פנסיה+ביטוח",
@@ -2942,7 +2942,7 @@
    "product": "פנסיה+גמל+ביטוח",
    "status": 200,
    "method": "browser",
-   "text_hash": "4e4926e7fe5c05d7146c4cf7a9f9f91f0a196725",
+   "text_hash": "c1fc213ba38baf3464c15ecf9d6a42eaf542d6fa",
    "text_head": "דלג לתוכן הדף ביטוחיםחיסכון פנסיונימנורה השקעותתביעותשירותיםפעולותדברו איתנו|פורטלים קרן פנסיה פנסיה מקיפה פנסיה משלימה פנסיה לעצמאים זכאות לפנסיה ללא טופס צ'ק אפ דיגיטלי קופת גמל קופת גמל חיסכון והשקעה קופת גמל לחיסכון קופת גמל להשקעה ביטוח מנהלים ביטוח מנהלים סטטוס מנהלים ועצמאים פוליסת TOP לעתיד קרנות השתלמות קרן השתלמות קרן השתלמות לשכירים קרן השתלמות לעצמאים קרן השתלמות אומגה פרישה מרכז הפרישה של מנורה היערכות מוקדמת לפרישה תכנון פרישה אישי פרישה דיגיטלית מסלולי השקעות בפרישה שאלות ותשובות פעולות מהירות לחסכונות שלי עדכון פרטים אישיים שליחת מסמכים הגשת תביעה צ'ק אפ דיגיטלי כניסה לאזור האי",
    "items": [
     {
@@ -5063,8 +5063,8 @@
    "product": "פנסיה+גמל+ביטוח",
    "status": 200,
    "method": "browser",
-   "text_hash": "cd272cfb088929a780ffc345f33a4581c4ddc3b4",
-   "text_head": "דלג לתוכן הדף ביטוחיםחיסכון פנסיונימנורה השקעותתביעותשירותיםפעולותדברו איתנו|פורטלים פורטל סוכנים פורטל מעסיקים מערכת מ.מ.ש קשרי משקיעים Investor Relations מוסכי הסדר כניסה לאזור האישי דף הבית> קופת גמל חיסכון והשקעה> קופת גמל להשקעה> מנורה מבטחים גמל להשקעה - מסלולי השקעה> מסלול עוקב מדד S&P 500 מסלול עוקב מדד S&P 500 קוד אוצר: 512245812-00000000008674-13874-000 נכסי המסלול, יעקבו באמצעות מכשירים עוקבי מדד ונגזרים (לרבות חוזים עתידיים, אופציות וכתבי אופציות) ובשיעור חשיפה שלא יעלה על 100% מנכסי המסלול, אחר מדד 500 S&P. בשיעור חשיפה שלא יעלה 100% מנכסי המסלול. נכסי המסלול העוקבים אחר המדד יהיו",
+   "text_hash": "849d0425cfc79536a342ca60d389080f8d564efa",
+   "text_head": "דלג לתוכן הדף ביטוחיםחיסכון פנסיונימנורה השקעותתביעותשירותיםפעולותדברו איתנו|פורטלים פורטל סוכנים פורטל מעסיקים מערכת מ.מ.ש קשרי משקיעים Investor Relations מוסכי הסדר כניסה לאזור האישי דף הבית> קופת גמל חיסכון והשקעה> קופת גמל להשקעה> מנורה מבטחים גמל להשקעה - מסלולי השקעה> מסלול עוקב מדד S&P 500 היי👋 רק רצינו לעדכן שמהיום ניתן לקבל שירות גם ב-WhatsApp במספר 054-7108187 להתחלת שיחה מעדיפים להמשיך לדבר איתנו כאן? בשמחה! עם מי יש לנו הכבוד? 😊 (אנא הקלידו שם מלא) מעדיפים להמשיך לדבר איתנו כאן? בשמחה!$br עם מי יש לנו הכבוד? 😊 (אנא הקלידו שם מלא) מסלול עוקב מדד S&P 500 קוד אוצר: 512245812-000000000",
    "items": [
     {
      "text": "תעודת כשרות - בית יוסף",
@@ -5797,55 +5797,111 @@
    ]
   },
   "https://www.menoramivt.co.il/funds/Education-fund-SP500": {
+   "product": null,
+   "status": 200,
+   "method": "requests",
+   "text_hash": "54a0a18cea46a653f8653c31fd8010e54ab1203f",
+   "text_head": "Radware Captcha Page We apologize for the inconvenience... ...but your activity and behavior on this site made us think that you are a bot. Note: A number of things could be going on here. If you are attempting to access this site using an anonymous Private/Proxy network, please disable that and try accessing site again. Due to previously detected malicious behavior which originated from the network you're using, please request unblock to site. Incident ID: 7b4b7e49-dcyu-4dd6-9e0e-9a41d6a8a227 Please solve this CAPTCHA to request unblock to the website You reached this page when trying to acce",
+   "items": []
+  },
+  "https://www.menoramivt.co.il/funds/insurers-complementary-pension-SP500": {
+   "product": "פנסיה",
+   "status": 200,
+   "method": "requests",
+   "text_hash": "85df0d3cb52a8ea84eba0a74f4db830d0de14d9e",
+   "text_head": "Radware Captcha Page We apologize for the inconvenience... ...but your activity and behavior on this site made us think that you are a bot. Note: A number of things could be going on here. If you are attempting to access this site using an anonymous Private/Proxy network, please disable that and try accessing site again. Due to previously detected malicious behavior which originated from the network you're using, please request unblock to site. Incident ID: 2960f2e1-dcyu-4820-8d0c-a0312a8f12b4 Please solve this CAPTCHA to request unblock to the website You reached this page when trying to acce",
+   "items": []
+  },
+  "https://www.menoramivt.co.il/funds/Education-fund-halacha": {
+   "product": null,
+   "status": 200,
+   "method": "requests",
+   "text_hash": "8716e6e7e43e8b217e19cc61e411d55747280d6e",
+   "text_head": "Radware Captcha Page We apologize for the inconvenience... ...but your activity and behavior on this site made us think that you are a bot. Note: A number of things could be going on here. If you are attempting to access this site using an anonymous Private/Proxy network, please disable that and try accessing site again. Due to previously detected malicious behavior which originated from the network you're using, please request unblock to site. Incident ID: 16ea6c6b-dcyu-493a-9526-d5a1e828dc19 Please solve this CAPTCHA to request unblock to the website You reached this page when trying to acce",
+   "items": []
+  },
+  "https://www.menoramivt.co.il/funds/gov-bonds-15342": {
+   "product": null,
+   "status": 200,
+   "method": "requests",
+   "text_hash": "c2bdc4b292daa5d61b67cb340371df57162e71a3",
+   "text_head": "Radware Captcha Page We apologize for the inconvenience... ...but your activity and behavior on this site made us think that you are a bot. Note: A number of things could be going on here. If you are attempting to access this site using an anonymous Private/Proxy network, please disable that and try accessing site again. Due to previously detected malicious behavior which originated from the network you're using, please request unblock to site. Incident ID: 1b3c2595-dcyu-4a9e-8943-c5c98a09edfa Please solve this CAPTCHA to request unblock to the website You reached this page when trying to acce",
+   "items": []
+  },
+  "https://www.menoramivt.co.il/funds/stock-1364": {
+   "product": null,
+   "status": 200,
+   "method": "requests",
+   "text_hash": "d75f5d2e2cc47138309a45d416f3249693730df1",
+   "text_head": "Radware Captcha Page We apologize for the inconvenience... ...but your activity and behavior on this site made us think that you are a bot. Note: A number of things could be going on here. If you are attempting to access this site using an anonymous Private/Proxy network, please disable that and try accessing site again. Due to previously detected malicious behavior which originated from the network you're using, please request unblock to site. Incident ID: 26d845ef-dcyu-4c8f-9416-d6a94993d3d6 Please solve this CAPTCHA to request unblock to the website You reached this page when trying to acce",
+   "items": []
+  },
+  "https://www.menoramivt.co.il/funds/pension-and-gemel/pension-plans/tradble-stocks-plan-15748": {
+   "product": "פנסיה+גמל",
+   "status": 200,
+   "method": "requests",
+   "text_hash": "9d22c495f34917b1c4c3e75a13821cee40fa9223",
+   "text_head": "Radware Captcha Page We apologize for the inconvenience... ...but your activity and behavior on this site made us think that you are a bot. Note: A number of things could be going on here. If you are attempting to access this site using an anonymous Private/Proxy network, please disable that and try accessing site again. Due to previously detected malicious behavior which originated from the network you're using, please request unblock to site. Incident ID: f7db6dea-dcyu-470e-b51d-3391d867aa66 Please solve this CAPTCHA to request unblock to the website You reached this page when trying to acce",
+   "items": []
+  },
+  "https://www.menoramivt.co.il/funds/pension-and-gemel/pension-plans/retire-track-2045": {
    "product": "פנסיה+גמל+ביטוח",
    "status": 200,
    "method": "browser",
-   "text_hash": "c897e22408a56fe04e4ebeb60c7d11218d559d19",
-   "text_head": "דלג לתוכן הדף ביטוחיםחיסכון פנסיונימנורה השקעותתביעותשירותיםפעולותדברו איתנו|פורטלים פורטל סוכנים פורטל מעסיקים מערכת מ.מ.ש קשרי משקיעים Investor Relations מוסכי הסדר כניסה לאזור האישי דף הבית> קרן השתלמות> מסלולי קרן השתלמות> מסלול עוקב מדד S&P 500 היי👋 רק רצינו לעדכן שמהיום ניתן לקבל שירות גם ב-WhatsApp במספר 054-7108187 להתחלת שיחה מעדיפים להמשיך לדבר איתנו כאן? בשמחה! עם מי יש לנו הכבוד? 😊 (אנא הקלידו שם מלא) מעדיפים להמשיך לדבר איתנו כאן? בשמחה!$br עם מי יש לנו הכבוד? 😊 (אנא הקלידו שם מלא) מסלול עוקב מדד S&P 500 קוד אוצר: 512245812-00000000000828-13873-000 נכסי המסלול, יעקבו באמצעות מכשיר",
+   "text_hash": "a95da218b4deffb2aea8f82c9d198c6d12ef10e7",
+   "text_head": "דלג לתוכן הדף ביטוחיםחיסכון פנסיונימנורה השקעותתביעותשירותיםפעולותדברו איתנו|פורטלים פורטל סוכנים פורטל מעסיקים מערכת מ.מ.ש קשרי משקיעים Investor Relations מוסכי הסדר כניסה לאזור האישי דף הבית> קרן פנסיה מקיפה> מסלולי השקעה פנסיה> מנורה מבטחים פנסיה (לשעבר מבטחים החדשה)> מסלול יעד לפרישה 2045 מסלול יעד לפרישה 2045 קוד אוצר: 512245812-00000000000168-2016-000 תשעה מסלולי השקעה אשר הנכסים המנוהלים בהם יושקעו בהתבסס על ההנחה כי הם מיועדים להמרה לפנסיה לפי הוראות פרק ז' לתקנון, במהלך השנה הנקובה בשם המסלול (יעד לפרישה 2025 עד יעד לפרישה 2065). המסלולים ינוהלו בצורה כזו, כך שככל וזמן הפרישה יתקרב תק",
    "items": [
     {
-     "text": "תעודת כשרות - בד\"צ",
-     "href": "https://cdn.menoramivt.co.il/public/docs/20260420/%D7%91%D7%93%D7%A6-%D7%9E%D7%95%D7%A0%D7%92%D7%A9--%D7%9E%D7%A0%D7%95%D7%A8%D7%94-%D7%94%D7%A9%D7%AA%D7%9C%D7%9E%D7%95%D7%AA.pdf",
+     "text": "לחץ להורדת קובץ PDF 2026 - 31.03",
+     "href": "https://cdn.menoramivt.co.il/public/docs/20260503/%D7%AA%D7%A8%D7%95%D7%9E%D7%AA-%D7%90%D7%A4%D7%99%D7%A7%D7%99-%D7%94%D7%A9%D7%A7%D7%A2%D7%94-%D7%9C%D7%AA%D7%A9%D7%95%D7%90%D7%94-%D7%94%D7%9B%D7%95%D7%9C%D7%9C%D7%AA---%D7%9E%D7%A0%D7%95%D7%A8%D7%94-%D7%9E%D7%91%D7%98%D7%97%D7%99%D7%9D-%D7%A4%D7%A0%D7%A1%D7%99%D7%94-%D7%99%D7%A2%D7%93-%D7%9C%D7%A4%D7%A8%D7%99%D7%A9%D7%94-2045.xlsx",
      "year": "2026",
      "iframe": false,
      "doc": true,
      "internal": true
     },
     {
-     "text": "תעודת כשרות - בד\"צ",
-     "href": "https://cdn.menoramivt.co.il/public/docs/20260420/בדצ-מונגש--מנורה-השתלמות.pdf",
+     "text": "לחץ להורדת קובץ PDF 2026 - 30.09",
+     "href": "https://cdn.menoramivt.co.il/public/docs/20261019/%D7%AA%D7%A8%D7%95%D7%9E%D7%AA-%D7%90%D7%A4%D7%99%D7%A7%D7%99-%D7%94%D7%A9%D7%A7%D7%A2%D7%94-%D7%9C%D7%AA%D7%A9%D7%95%D7%90%D7%94-%D7%94%D7%9B%D7%95%D7%9C%D7%9C%D7%AA---%D7%9E%D7%A0%D7%95%D7%A8%D7%94-%D7%9E%D7%91%D7%98%D7%97%D7%99%D7%9D-%D7%A4%D7%A0%D7%A1%D7%99%D7%94-%D7%99%D7%A2%D7%93-%D7%9C%D7%A4%D7%A8%D7%99%D7%A9%D7%94-2045.xlsx",
      "year": "2026",
      "iframe": false,
      "doc": true,
      "internal": true
     },
     {
-     "text": "2026 09.2026 מצטבר מתחילת שנה",
-     "href": "https://cdn.menoramivt.co.il/public/docs/20261019/תרומת-אפיקי-השקעה-לתשואה-הכוללת---מנורה-מבטחים-השתלמות-עוקב-מדד-s&p500.xlsx",
+     "text": "לחץ להורדת קובץ PDF 2026 - 30.06",
+     "href": "https://cdn.menoramivt.co.il/public/docs/20260719/%D7%AA%D7%A8%D7%95%D7%9E%D7%AA-%D7%90%D7%A4%D7%99%D7%A7%D7%99-%D7%94%D7%A9%D7%A7%D7%A2%D7%94-%D7%9C%D7%AA%D7%A9%D7%95%D7%90%D7%94-%D7%94%D7%9B%D7%95%D7%9C%D7%9C%D7%AA---%D7%9E%D7%A0%D7%95%D7%A8%D7%94-%D7%9E%D7%91%D7%98%D7%97%D7%99%D7%9D-%D7%A4%D7%A0%D7%A1%D7%99%D7%94-%D7%99%D7%A2%D7%93-%D7%9C%D7%A4%D7%A8%D7%99%D7%A9%D7%94-2045.xlsx",
      "year": "2026",
      "iframe": false,
      "doc": true,
      "internal": true
     },
     {
-     "text": "2026 09.2026 12 חודשים אחרונים",
-     "href": "https://cdn.menoramivt.co.il/public/docs/20261015/דוח-חודשי-לאתר.13873.09.2026.xlsx",
+     "text": "לחץ להורדת קובץ PDF 2026 -",
+     "href": "https://cdn.menoramivt.co.il/public/docs/20260130/%D7%9E%D7%93%D7%99%D7%A0%D7%99%D7%95%D7%AA-%D7%94%D7%A9%D7%A7%D7%A2%D7%94-%D7%9C%D7%A9%D7%A0%D7%AA-2026-%D7%9E%D7%A0%D7%95%D7%A8%D7%94-%D7%9E%D7%91%D7%98%D7%97%D7%99%D7%9D-%D7%A4%D7%A0%D7%A1%D7%99%D7%94-%D7%99%D7%A2%D7%93-%D7%9C%D7%A4%D7%A8%D7%99%D7%A9%D7%94-2045-2016.xlsx",
      "year": "2026",
      "iframe": false,
      "doc": true,
      "internal": true
     },
     {
-     "text": "2026 06.2026 מצטבר מתחילת שנה",
-     "href": "https://cdn.menoramivt.co.il/public/docs/20260720/תרומת-אפיקי-השקעה-לתשואה-הכוללת---מנורה-מבטחים-השתלמות-עוקב-מדד-s&p500.xlsx",
+     "text": "2026 31.03",
+     "href": "https://cdn.menoramivt.co.il/public/docs/20260503/תרומת-אפיקי-השקעה-לתשואה-הכוללת---מנורה-מבטחים-פנסיה-יעד-לפרישה-2045.xlsx",
      "year": "2026",
      "iframe": false,
      "doc": true,
      "internal": true
     },
     {
-     "text": "2026 03.2026 מצטבר מתחילת שנה",
-     "href": "https://cdn.menoramivt.co.il/public/docs/20260503/512245812_g13873_yield126.xlsx",
+     "text": "2026 30.09",
+     "href": "https://cdn.menoramivt.co.il/public/docs/20261019/תרומת-אפיקי-השקעה-לתשואה-הכוללת---מנורה-מבטחים-פנסיה-יעד-לפרישה-2045.xlsx",
+     "year": "2026",
+     "iframe": false,
+     "doc": true,
+     "internal": true
+    },
+    {
+     "text": "2026 30.06",
+     "href": "https://cdn.menoramivt.co.il/public/docs/20260719/תרומת-אפיקי-השקעה-לתשואה-הכוללת---מנורה-מבטחים-פנסיה-יעד-לפרישה-2045.xlsx",
      "year": "2026",
      "iframe": false,
      "doc": true,
@@ -5853,55 +5909,79 @@
     },
     {
      "text": "2026",
-     "href": "https://cdn.menoramivt.co.il/public/docs/20260126/מדיניות-השקעה-לשנת-2026-מנורה-מבטחים-השתלמות-עוקב-מדד-s&p-500-13873.xlsx",
+     "href": "https://cdn.menoramivt.co.il/public/docs/20260130/מדיניות-השקעה-לשנת-2026-מנורה-מבטחים-פנסיה-יעד-לפרישה-2045-2016.xlsx",
      "year": "2026",
      "iframe": false,
      "doc": true,
      "internal": true
     },
     {
-     "text": "2025 31.12.2025",
-     "href": "https://cdn.menoramivt.co.il/public/docs/20260324/g828a_425.pdf",
+     "text": "לחץ להורדת קובץ PDF 2025 - 31.12",
+     "href": "https://cdn.menoramivt.co.il/public/docs/20260202/%D7%AA%D7%A8%D7%95%D7%9E%D7%AA-%D7%90%D7%A4%D7%99%D7%A7%D7%99-%D7%94%D7%A9%D7%A7%D7%A2%D7%94-%D7%9C%D7%AA%D7%A9%D7%95%D7%90%D7%94-%D7%94%D7%9B%D7%95%D7%9C%D7%9C%D7%AA---%D7%9E%D7%A0%D7%95%D7%A8%D7%94-%D7%9E%D7%91%D7%98%D7%97%D7%99%D7%9D-%D7%A4%D7%A0%D7%A1%D7%99%D7%94-%D7%99%D7%A2%D7%93-%D7%9C%D7%A4%D7%A8%D7%99%D7%A9%D7%94-2045.xlsx",
      "year": "2025",
      "iframe": false,
      "doc": true,
      "internal": true
     },
     {
-     "text": "2025 31.12.2025",
-     "href": "https://cdn.menoramivt.co.il/public/docs/20260421/צדדים-קשורים.מנורה-מבטחים-השתלמות.12.2025.xlsx",
+     "text": "לחץ להורדת קובץ PDF 2025 - 31.03",
+     "href": "https://cdn.menoramivt.co.il/public/docs/20250504/%D7%AA%D7%A8%D7%95%D7%9E%D7%AA-%D7%90%D7%A4%D7%99%D7%A7%D7%99-%D7%94%D7%A9%D7%A7%D7%A2%D7%94-%D7%9C%D7%AA%D7%A9%D7%95%D7%90%D7%94-%D7%94%D7%9B%D7%95%D7%9C%D7%9C%D7%AA---%D7%9E%D7%A0%D7%95%D7%A8%D7%94-%D7%9E%D7%91%D7%98%D7%97%D7%99%D7%9D-%D7%A4%D7%A0%D7%A1%D7%99%D7%94-%D7%99%D7%A2%D7%93-%D7%9C%D7%A4%D7%A8%D7%99%D7%A9%D7%94-2045.xlsx",
      "year": "2025",
      "iframe": false,
      "doc": true,
      "internal": true
     },
     {
-     "text": "2025 12.2025 מצטבר מתחילת שנה",
-     "href": "https://cdn.menoramivt.co.il/public/docs/20260202/512245812_g13873_yield425.xlsx",
+     "text": "לחץ להורדת קובץ PDF 2025 - 30.09",
+     "href": "https://cdn.menoramivt.co.il/public/docs/20251030/%D7%AA%D7%A8%D7%95%D7%9E%D7%AA-%D7%90%D7%A4%D7%99%D7%A7%D7%99-%D7%94%D7%A9%D7%A7%D7%A2%D7%94-%D7%9C%D7%AA%D7%A9%D7%95%D7%90%D7%94-%D7%94%D7%9B%D7%95%D7%9C%D7%9C%D7%AA---%D7%9E%D7%A0%D7%95%D7%A8%D7%94-%D7%9E%D7%91%D7%98%D7%97%D7%99%D7%9D-%D7%A4%D7%A0%D7%A1%D7%99%D7%94-%D7%99%D7%A2%D7%93-%D7%9C%D7%A4%D7%A8%D7%99%D7%A9%D7%94-2045.xlsx",
      "year": "2025",
      "iframe": false,
      "doc": true,
      "internal": true
     },
     {
-     "text": "2025 09.2025 מצטבר מתחילת שנה",
-     "href": "https://cdn.menoramivt.co.il/public/docs/20251029/512245812_g13873_yield325.xlsx",
+     "text": "לחץ להורדת קובץ PDF 2025 - 30.06",
+     "href": "https://cdn.menoramivt.co.il/public/docs/20250728/%D7%AA%D7%A8%D7%95%D7%9E%D7%AA-%D7%90%D7%A4%D7%99%D7%A7%D7%99-%D7%94%D7%A9%D7%A7%D7%A2%D7%94-%D7%9C%D7%AA%D7%A9%D7%95%D7%90%D7%94-%D7%94%D7%9B%D7%95%D7%9C%D7%9C%D7%AA---%D7%9E%D7%A0%D7%95%D7%A8%D7%94-%D7%9E%D7%91%D7%98%D7%97%D7%99%D7%9D-%D7%A4%D7%A0%D7%A1%D7%99%D7%94-%D7%99%D7%A2%D7%93-%D7%9C%D7%A4%D7%A8%D7%99%D7%A9%D7%94-2045.xlsx",
      "year": "2025",
      "iframe": false,
      "doc": true,
      "internal": true
     },
     {
-     "text": "2025 06.2025 מצטבר מתחילת שנה",
-     "href": "https://cdn.menoramivt.co.il/public/docs/20250728/512245812_g13873_yield225.xlsx",
+     "text": "לחץ להורדת קובץ PDF 2025 -",
+     "href": "https://cdn.menoramivt.co.il/public/docs/20250122/%D7%9E%D7%93%D7%99%D7%A0%D7%99%D7%95%D7%AA-%D7%94%D7%A9%D7%A7%D7%A2%D7%94-%D7%9C%D7%A9%D7%A0%D7%AA-2025-%D7%9E%D7%A0%D7%95%D7%A8%D7%94-%D7%9E%D7%91%D7%98%D7%97%D7%99%D7%9D-%D7%A4%D7%A0%D7%A1%D7%99%D7%94-%D7%99%D7%A2%D7%93-%D7%9C%D7%A4%D7%A8%D7%99%D7%A9%D7%94-2045-2016.xlsx",
      "year": "2025",
      "iframe": false,
      "doc": true,
      "internal": true
     },
     {
-     "text": "2025 03.2025 מצטבר מתחילת שנה",
-     "href": "https://cdn.menoramivt.co.il/public/docs/20250504/512245812_g13873_yield125.xlsx",
+     "text": "2025 31.12",
+     "href": "https://cdn.menoramivt.co.il/public/docs/20260202/תרומת-אפיקי-השקעה-לתשואה-הכוללת---מנורה-מבטחים-פנסיה-יעד-לפרישה-2045.xlsx",
+     "year": "2025",
+     "iframe": false,
+     "doc": true,
+     "internal": true
+    },
+    {
+     "text": "2025 31.03",
+     "href": "https://cdn.menoramivt.co.il/public/docs/20250504/תרומת-אפיקי-השקעה-לתשואה-הכוללת---מנורה-מבטחים-פנסיה-יעד-לפרישה-2045.xlsx",
+     "year": "2025",
+     "iframe": false,
+     "doc": true,
+     "internal": true
+    },
+    {
+     "text": "2025 30.09",
+     "href": "https://cdn.menoramivt.co.il/public/docs/20251030/תרומת-אפיקי-השקעה-לתשואה-הכוללת---מנורה-מבטחים-פנסיה-יעד-לפרישה-2045.xlsx",
+     "year": "2025",
+     "iframe": false,
+     "doc": true,
+     "internal": true
+    },
+    {
+     "text": "2025 30.06",
+     "href": "https://cdn.menoramivt.co.il/public/docs/20250728/תרומת-אפיקי-השקעה-לתשואה-הכוללת---מנורה-מבטחים-פנסיה-יעד-לפרישה-2045.xlsx",
      "year": "2025",
      "iframe": false,
      "doc": true,
@@ -5909,15 +5989,63 @@
     },
     {
      "text": "2025",
-     "href": "https://cdn.menoramivt.co.il/public/docs/20250123/מדיניות-השקעה-לשנת-2025-מנורה-מבטחים-השתלמות-עוקב-מדד-s&p-500-13873.xlsx",
+     "href": "https://cdn.menoramivt.co.il/public/docs/20250122/מדיניות-השקעה-לשנת-2025-מנורה-מבטחים-פנסיה-יעד-לפרישה-2045-2016.xlsx",
      "year": "2025",
      "iframe": false,
      "doc": true,
      "internal": true
     },
     {
+     "text": "לחץ להורדת קובץ PDF 2024 - עד תאריך 30.06.2024",
+     "href": "https://cdn.menoramivt.co.il/public/docs/20240303/%D7%9E%D7%93%D7%99%D7%A0%D7%99%D7%95%D7%AA-%D7%94%D7%A9%D7%A7%D7%A2%D7%94-%D7%9C%D7%A9%D7%A0%D7%AA-2024-%D7%9E%D7%A0%D7%95%D7%A8%D7%94-%D7%9E%D7%91%D7%98%D7%97%D7%99%D7%9D-%D7%A4%D7%A0%D7%A1%D7%99%D7%94-%D7%9E%D7%A1%D7%9C%D7%95%D7%9C-%D7%99%D7%A2%D7%93-%D7%9C%D7%A4%D7%A8%D7%99%D7%A9%D7%94-2045-2016.xlsx",
+     "year": "2024",
+     "iframe": false,
+     "doc": true,
+     "internal": true
+    },
+    {
+     "text": "לחץ להורדת קובץ PDF 2024 - החל מתאריך 01.07.2024",
+     "href": "https://cdn.menoramivt.co.il/public/docs/20240630/%D7%9E%D7%93%D7%99%D7%A0%D7%99%D7%95%D7%AA-%D7%94%D7%A9%D7%A7%D7%A2%D7%94-%D7%9C%D7%A9%D7%A0%D7%AA-2024-%D7%9E%D7%A0%D7%95%D7%A8%D7%94-%D7%9E%D7%91%D7%98%D7%97%D7%99%D7%9D-%D7%A4%D7%A0%D7%A1%D7%99%D7%94-%D7%99%D7%A2%D7%93-%D7%9C%D7%A4%D7%A8%D7%99%D7%A9%D7%94-2045-2016.xlsx",
+     "year": "2024",
+     "iframe": false,
+     "doc": true,
+     "internal": true
+    },
+    {
+     "text": "לחץ להורדת קובץ PDF 2024 - 31.12",
+     "href": "https://cdn.menoramivt.co.il/public/docs/20250203/%D7%AA%D7%A8%D7%95%D7%9E%D7%AA-%D7%90%D7%A4%D7%99%D7%A7%D7%99-%D7%94%D7%A9%D7%A7%D7%A2%D7%94-%D7%9C%D7%AA%D7%A9%D7%95%D7%90%D7%94-%D7%94%D7%9B%D7%95%D7%9C%D7%9C%D7%AA---%D7%9E%D7%A0%D7%95%D7%A8%D7%94-%D7%9E%D7%91%D7%98%D7%97%D7%99%D7%9D-%D7%A4%D7%A0%D7%A1%D7%99%D7%94-%D7%99%D7%A2%D7%93-%D7%9C%D7%A4%D7%A8%D7%99%D7%A9%D7%94-2045.xlsx",
+     "year": "2024",
+     "iframe": false,
+     "doc": true,
+     "internal": true
+    },
+    {
+     "text": "לחץ להורדת קובץ PDF 2024 - 31.03",
+     "href": "https://cdn.menoramivt.co.il/public/docs/20240519/%D7%AA%D7%A8%D7%95%D7%9E%D7%AA-%D7%90%D7%A4%D7%99%D7%A7%D7%99-%D7%94%D7%A9%D7%A7%D7%A2%D7%94-%D7%9C%D7%AA%D7%A9%D7%95%D7%90%D7%94-%D7%94%D7%9B%D7%95%D7%9C%D7%9C%D7%AA-%D7%9E%D7%A0%D7%95%D7%A8%D7%94-%D7%9E%D7%91%D7%98%D7%97%D7%99%D7%9D-%D7%A4%D7%A0%D7%A1%D7%99%D7%94---%D7%9E%D7%A1%D7%9C%D7%95%D7%9C-%D7%99%D7%A2%D7%93-%D7%9C%D7%A4%D7%A8%D7%99%D7%A9%D7%94-2045.xlsx",
+     "year": "2024",
+     "iframe": false,
+     "doc": true,
+     "internal": true
+    },
+    {
+     "text": "לחץ להורדת קובץ PDF 2024 - 30.09",
+     "href": "https://cdn.menoramivt.co.il/public/docs/20241106/%D7%AA%D7%A8%D7%95%D7%9E%D7%AA-%D7%90%D7%A4%D7%99%D7%A7%D7%99-%D7%94%D7%A9%D7%A7%D7%A2%D7%94-%D7%9C%D7%AA%D7%A9%D7%95%D7%90%D7%94-%D7%94%D7%9B%D7%95%D7%9C%D7%9C%D7%AA---%D7%9E%D7%A0%D7%95%D7%A8%D7%94-%D7%9E%D7%91%D7%98%D7%97%D7%99%D7%9D-%D7%A4%D7%A0%D7%A1%D7%99%D7%94-%D7%99%D7%A2%D7%93-%D7%9C%D7%A4%D7%A8%D7%99%D7%A9%D7%94-2045.xlsx",
+     "year": "2024",
+     "iframe": false,
+     "doc": true,
+     "internal": true
+    },
+    {
+     "text": "לחץ להורדת קובץ PDF 2024 - 30.06",
+     "href": "https://cdn.menoramivt.co.il/public/docs/20240729/%D7%AA%D7%A8%D7%95%D7%9E%D7%AA-%D7%90%D7%A4%D7%99%D7%A7%D7%99-%D7%94%D7%A9%D7%A7%D7%A2%D7%94-%D7%9C%D7%AA%D7%A9%D7%95%D7%90%D7%94-%D7%94%D7%9B%D7%95%D7%9C%D7%9C%D7%AA---%D7%9E%D7%A0%D7%95%D7%A8%D7%94-%D7%9E%D7%91%D7%98%D7%97%D7%99%D7%9D-%D7%A4%D7%A0%D7%A1%D7%99%D7%94-%D7%99%D7%A2%D7%93-%D7%9C%D7%A4%D7%A8%D7%99%D7%A9%D7%94-2045.xlsx",
+     "year": "2024",
+     "iframe": false,
+     "doc": true,
+     "internal": true
+    },
+    {
      "text": "2024 עד תאריך 30.06.2024",
-     "href": "https://cdn.menoramivt.co.il/public/docs/20240125/מדיניות-השקעה-לשנת-2024-מנורה-מבטחים-השתלמות-מחקה-מדד-s&p-500-13873.xlsx",
+     "href": "https://cdn.menoramivt.co.il/public/docs/20240303/מדיניות-השקעה-לשנת-2024-מנורה-מבטחים-פנסיה-מסלול-יעד-לפרישה-2045-2016.xlsx",
      "year": "2024",
      "iframe": false,
      "doc": true,
@@ -5925,63 +6053,39 @@
     },
     {
      "text": "2024 החל מתאריך 01.07.2024",
-     "href": "https://cdn.menoramivt.co.il/public/docs/20240630/מדיניות-השקעה-לשנת-2024-מנורה-מבטחים-השתלמות-עוקב-מדד-s&p-500-13873.xlsx",
+     "href": "https://cdn.menoramivt.co.il/public/docs/20240630/מדיניות-השקעה-לשנת-2024-מנורה-מבטחים-פנסיה-יעד-לפרישה-2045-2016.xlsx",
      "year": "2024",
      "iframe": false,
      "doc": true,
      "internal": true
     },
     {
-     "text": "2024 31.12.2024",
-     "href": "https://cdn.menoramivt.co.il/public/docs/20250316/g828a_424.pdf",
+     "text": "2024 31.12",
+     "href": "https://cdn.menoramivt.co.il/public/docs/20250203/תרומת-אפיקי-השקעה-לתשואה-הכוללת---מנורה-מבטחים-פנסיה-יעד-לפרישה-2045.xlsx",
      "year": "2024",
      "iframe": false,
      "doc": true,
      "internal": true
     },
     {
-     "text": "2024 31.12.2024",
-     "href": "https://cdn.menoramivt.co.il/public/docs/20260421/צדדים-קשורים.מנורה-מבטחים-השתלמות.12.2024.xlsx",
+     "text": "2024 31.03",
+     "href": "https://cdn.menoramivt.co.il/public/docs/20240519/תרומת-אפיקי-השקעה-לתשואה-הכוללת-מנורה-מבטחים-פנסיה---מסלול-יעד-לפרישה-2045.xlsx",
      "year": "2024",
      "iframe": false,
      "doc": true,
      "internal": true
     },
     {
-     "text": "2024 12.2024 מצטבר מתחילת שנה",
-     "href": "https://cdn.menoramivt.co.il/public/docs/20250319/512245812_g13873_yield424.xlsx",
+     "text": "2024 30.09",
+     "href": "https://cdn.menoramivt.co.il/public/docs/20241106/תרומת-אפיקי-השקעה-לתשואה-הכוללת---מנורה-מבטחים-פנסיה-יעד-לפרישה-2045.xlsx",
      "year": "2024",
      "iframe": false,
      "doc": true,
      "internal": true
     },
     {
-     "text": "2024 12.2024 מצטבר מתחילת שנה",
-     "href": "https://cdn.menoramivt.co.il/public/docs/20250204/512245812_g13873_yield424.xlsx",
-     "year": "2024",
-     "iframe": false,
-     "doc": true,
-     "internal": true
-    },
-    {
-     "text": "2024 09.2024 מצטבר מתחילת שנה",
-     "href": "https://cdn.menoramivt.co.il/public/docs/20241106/512245812_g13873_yield324.xlsx",
-     "year": "2024",
-     "iframe": false,
-     "doc": true,
-     "internal": true
-    },
-    {
-     "text": "2024 06.2024 מצטבר מתחילת שנה",
-     "href": "https://cdn.menoramivt.co.il/public/docs/20240728/512245812_g13873_yield224.xlsx",
-     "year": "2024",
-     "iframe": false,
-     "doc": true,
-     "internal": true
-    },
-    {
-     "text": "2024 03.2024 מצטבר מתחילת שנה",
-     "href": "https://cdn.menoramivt.co.il/public/docs/20240708/512245812_g13873_yield124.xlsx",
+     "text": "2024 30.06",
+     "href": "https://cdn.menoramivt.co.il/public/docs/20240729/תרומת-אפיקי-השקעה-לתשואה-הכוללת---מנורה-מבטחים-פנסיה-יעד-לפרישה-2045.xlsx",
      "year": "2024",
      "iframe": false,
      "doc": true,
@@ -5996,80 +6100,56 @@
      "internal": true
     },
     {
-     "text": "2023 31.12.2023 04.04.2024",
-     "href": "https://cdn.menoramivt.co.il/public/docs/20240404/512245812_g13873_p423.xlsx",
+     "text": "לחץ להורדת קובץ PDF שנה 2023 - תאריך דוח - 31/12/2023 - תאריך פרסום הדוח (עבור רשימת נכסים רבעונית) - 04/04/2024",
+     "href": "https://cdn.menoramivt.co.il/public/docs/20240404/512245812_p2016_p423.xlsx",
      "year": "2023",
      "iframe": false,
      "doc": true,
      "internal": true
     },
     {
-     "text": "2023 31.12.2023",
-     "href": "https://cdn.menoramivt.co.il/public/docs/20240331/g828a_423.pdf",
+     "text": "לחץ להורדת קובץ PDF שנה 2023 - תאריך דוח - 31/03/2023 - תאריך פרסום הדוח (עבור רשימת נכסים רבעונית) - 01/06/2023",
+     "href": "https://cdn.menoramivt.co.il/public/docs/20230601/512245812_p2016_p123.xlsx",
      "year": "2023",
      "iframe": false,
      "doc": true,
      "internal": true
     },
     {
-     "text": "2023 31.12.2023",
-     "href": "https://cdn.menoramivt.co.il/public/docs/20240401/צדדים-קשורים.מנורה-מבטחים-השתלמות.12.2023.xlsx",
+     "text": "לחץ להורדת קובץ PDF שנה 2023 - תאריך דוח - 30/09/2023 - תאריך פרסום הדוח (עבור רשימת נכסים רבעונית) - 04/12/2023",
+     "href": "https://cdn.menoramivt.co.il/public/docs/20231204/512245812_p2016_p323.xlsx",
      "year": "2023",
      "iframe": false,
      "doc": true,
      "internal": true
     },
     {
-     "text": "2023 31.03.2023 01.06.2023",
-     "href": "https://cdn.menoramivt.co.il/public/docs/20230601/512245812_g13873_p123.xlsx",
+     "text": "לחץ להורדת קובץ PDF שנה 2023 - תאריך דוח - 30/06/2023 - תאריך פרסום הדוח (עבור רשימת נכסים רבעונית) - 05/09/2023",
+     "href": "https://cdn.menoramivt.co.il/public/docs/20230905/512245812_p2016_p223.xlsx",
      "year": "2023",
      "iframe": false,
      "doc": true,
      "internal": true
     },
     {
-     "text": "2023 30.09.2023 07.12.2023",
-     "href": "https://cdn.menoramivt.co.il/public/docs/20231207/512245812_g13873_p323.xlsx",
+     "text": "לחץ להורדת קובץ PDF 2023 - 31.12",
+     "href": "https://cdn.menoramivt.co.il/public/docs/20240320/%D7%AA%D7%A8%D7%95%D7%9E%D7%AA-%D7%90%D7%A4%D7%99%D7%A7%D7%99-%D7%94%D7%A9%D7%A7%D7%A2%D7%94-%D7%9C%D7%AA%D7%A9%D7%95%D7%90%D7%94-%D7%94%D7%9B%D7%95%D7%9C%D7%9C%D7%AA-%D7%9E%D7%A0%D7%95%D7%A8%D7%94-%D7%9E%D7%91%D7%98%D7%97%D7%99%D7%9D-%D7%A4%D7%A0%D7%A1%D7%99%D7%94--%D7%99%D7%A2%D7%93-2045.xlsx",
      "year": "2023",
      "iframe": false,
      "doc": true,
      "internal": true
     },
     {
-     "text": "2023 30.06.2023 29.08.2023",
-     "href": "https://cdn.menoramivt.co.il/public/docs/20230829/512245812_g13873_p223.xlsx",
+     "text": "לחץ להורדת קובץ PDF 2023 -",
+     "href": "https://cdn.menoramivt.co.il/public/docs/20230620/%D7%9E%D7%93%D7%99%D7%A0%D7%99%D7%95%D7%AA-%D7%94%D7%A9%D7%A7%D7%A2%D7%94-%D7%9C%D7%A9%D7%A0%D7%AA-2023-%D7%9E%D7%91%D7%98%D7%97%D7%99%D7%9D-%D7%94%D7%97%D7%93%D7%A9%D7%94---%D7%9E%D7%A1%D7%9C%D7%95%D7%9C-%D7%99%D7%A2%D7%93-%D7%9C%D7%A4%D7%A8%D7%99%D7%A9%D7%94-2045-2016.xlsx",
      "year": "2023",
      "iframe": false,
      "doc": true,
      "internal": true
     },
     {
-     "text": "2023 12.2023 מצטבר מתחילת שנה",
-     "href": "https://cdn.menoramivt.co.il/public/docs/20240311/512245812_g13873_yield423.xlsx",
-     "year": "2023",
-     "iframe": false,
-     "doc": true,
-     "internal": true
-    },
-    {
-     "text": "2023 09.2023 מצטבר מתחילת שנה",
-     "href": "https://cdn.menoramivt.co.il/public/docs/20231105/512245812_g13873_yield323.xlsx",
-     "year": "2023",
-     "iframe": false,
-     "doc": true,
-     "internal": true
-    },
-    {
-     "text": "2023 06.2023 מצטבר מתחילת שנה",
-     "href": "https://cdn.menoramivt.co.il/public/docs/20230801/512245812_g13873_yield223.xlsx",
-     "year": "2023",
-     "iframe": false,
-     "doc": true,
-     "internal": true
-    },
-    {
-     "text": "2023 03.2023 מצטבר מתחילת שנה",
-     "href": "https://cdn.menoramivt.co.il/public/docs/20230508/512245812_g13873_yield123.xlsx",
+     "text": "2023 31.12",
+     "href": "https://cdn.menoramivt.co.il/public/docs/20240320/תרומת-אפיקי-השקעה-לתשואה-הכוללת-מנורה-מבטחים-פנסיה--יעד-2045.xlsx",
      "year": "2023",
      "iframe": false,
      "doc": true,
@@ -6077,79 +6157,39 @@
     },
     {
      "text": "2023",
-     "href": "https://cdn.menoramivt.co.il/public/docs/20230622/מדיניות-השקעה-לשנת-2023-מנורה-מבטחים-השתלמות-מחקה-מדד-s&p-500-13873.xlsx",
+     "href": "https://cdn.menoramivt.co.il/public/docs/20230620/מדיניות-השקעה-לשנת-2023-מבטחים-החדשה---מסלול-יעד-לפרישה-2045-2016.xlsx",
      "year": "2023",
      "iframe": false,
      "doc": true,
      "internal": true
     },
     {
-     "text": "2022 31.12.2022 29.03.2023",
-     "href": "https://cdn.menoramivt.co.il/public/docs/20230329/512245812_g13873_p422.xlsx",
+     "text": "לחץ להורדת קובץ PDF שנה 2022 - תאריך דוח - 31/12/2022 - תאריך פרסום הדוח (עבור רשימת נכסים רבעונית) - 28/03/2023",
+     "href": "https://cdn.menoramivt.co.il/public/docs/20230514/512245812_p2016_p422-(1).xlsx",
      "year": "2022",
      "iframe": false,
      "doc": true,
      "internal": true
     },
     {
-     "text": "2022 31.12.2022",
-     "href": "https://cdn.menoramivt.co.il/public/docs/20230416/g828a_422.pdf",
+     "text": "לחץ להורדת קובץ PDF שנה 2022 - תאריך דוח - 30/09/2022 - תאריך פרסום הדוח (עבור רשימת נכסים רבעונית) - 06/12/2022",
+     "href": "https://cdn.menoramivt.co.il/public/docs/20230514/512245812_p2016_p322-(1).xlsx",
      "year": "2022",
      "iframe": false,
      "doc": true,
      "internal": true
     },
     {
-     "text": "2022 31.12.2022",
-     "href": "https://cdn.menoramivt.co.il/public/docs/20230323/צדדים-קשורים.מנורה-מבטחים-השתלמות.12.2022.xlsx",
+     "text": "לחץ להורדת קובץ PDF שנה 2022 - תאריך דוח - 30/06/2022 - תאריך פרסום הדוח (עבור רשימת נכסים רבעונית) - 06/09/2022",
+     "href": "https://cdn.menoramivt.co.il/public/docs/20240408/512245812_p2016_p222.xlsx",
      "year": "2022",
      "iframe": false,
      "doc": true,
      "internal": true
     },
     {
-     "text": "2022 30.09.2022 04.12.2022",
-     "href": "https://cdn.menoramivt.co.il/public/docs/20221204/512245812_g13873_p322.xlsx",
-     "year": "2022",
-     "iframe": false,
-     "doc": true,
-     "internal": true
-    },
-    {
-     "text": "2022 30.06.2022 08.09.2022",
-     "href": "https://cdn.menoramivt.co.il/public/docs/20240408/512245812_g13873_p222.xlsx",
-     "year": "2022",
-     "iframe": false,
-     "doc": true,
-     "internal": true
-    },
-    {
-     "text": "2022 12.2022 מצטבר מתחילת שנה",
-     "href": "https://cdn.menoramivt.co.il/public/docs/20230126/512245812_g13873_yield422.xlsx",
-     "year": "2022",
-     "iframe": false,
-     "doc": true,
-     "internal": true
-    },
-    {
-     "text": "2022 09.2022 מצטבר מתחילת שנה",
-     "href": "https://cdn.menoramivt.co.il/public/docs/20221107/512245812_g13873_yield322.xlsx",
-     "year": "2022",
-     "iframe": false,
-     "doc": true,
-     "internal": true
-    },
-    {
-     "text": "2022 06.2022 מצטבר מתחילת שנה",
-     "href": "https://cdn.menoramivt.co.il/public/docs/20220725/512245812_g13873_yield222.xlsx",
-     "year": "2022",
-     "iframe": false,
-     "doc": true,
-     "internal": true
-    },
-    {
-     "text": "2022 03.2022 מצטבר מתחילת שנה",
-     "href": "https://cdn.menoramivt.co.il/public/docs/20220512/512245812_g13873_yield122.xlsx",
+     "text": "לחץ להורדת קובץ PDF 2022 -",
+     "href": "https://cdn.menoramivt.co.il/public/docs/20220125/%D7%9E%D7%93%D7%99%D7%A0%D7%99%D7%95%D7%AA-%D7%94%D7%A9%D7%A7%D7%A2%D7%94-%D7%9C%D7%A9%D7%A0%D7%AA-2022-%D7%9E%D7%91%D7%98%D7%97%D7%99%D7%9D-%D7%94%D7%97%D7%93%D7%A9%D7%94---%D7%9E%D7%A1%D7%9C%D7%95%D7%9C-%D7%99%D7%A2%D7%93-%D7%9C%D7%A4%D7%A8%D7%99%D7%A9%D7%94-2045.xlsx",
      "year": "2022",
      "iframe": false,
      "doc": true,
@@ -6157,8 +6197,64 @@
     },
     {
      "text": "2022",
-     "href": "https://cdn.menoramivt.co.il/public/docs/20220511/מדיניות-השקעה-לשנת-2022-מנורה-מבטחים-השתלמות-מחקה-מדד-s&p-500.xlsx",
+     "href": "https://cdn.menoramivt.co.il/public/docs/20220125/מדיניות-השקעה-לשנת-2022-מבטחים-החדשה---מסלול-יעד-לפרישה-2045.xlsx",
      "year": "2022",
+     "iframe": false,
+     "doc": true,
+     "internal": true
+    },
+    {
+     "text": "לחץ להורדת קובץ PDF 2021 -",
+     "href": "https://cdn.menoramivt.co.il/public/docs/20210125/%D7%9E%D7%93%D7%99%D7%A0%D7%99%D7%95%D7%AA-%D7%94%D7%A9%D7%A7%D7%A2%D7%94-%D7%9C%D7%A9%D7%A0%D7%AA-2021-%D7%9E%D7%91%D7%98%D7%97%D7%99%D7%9D-%D7%94%D7%97%D7%93%D7%A9%D7%94---%D7%9E%D7%A1%D7%9C%D7%95%D7%9C-%D7%99%D7%A2%D7%93-%D7%9C%D7%A4%D7%A8%D7%99%D7%A9%D7%94-2045.xlsx",
+     "year": "2021",
+     "iframe": false,
+     "doc": true,
+     "internal": true
+    },
+    {
+     "text": "2021",
+     "href": "https://cdn.menoramivt.co.il/public/docs/20210125/מדיניות-השקעה-לשנת-2021-מבטחים-החדשה---מסלול-יעד-לפרישה-2045.xlsx",
+     "year": "2021",
+     "iframe": false,
+     "doc": true,
+     "internal": true
+    },
+    {
+     "text": "לחץ להורדת קובץ PDF 2020 -",
+     "href": "https://cdn.menoramivt.co.il/public/docs/%D7%9E%D7%93%D7%99%D7%A0%D7%99%D7%95%D7%AA-%D7%94%D7%A9%D7%A7%D7%A2%D7%94-%D7%9C%D7%A9%D7%A0%D7%AA-2020-%D7%9E%D7%A0%D7%95%D7%A8%D7%94-%D7%9E%D7%91%D7%98%D7%97%D7%99%D7%9D-%D7%A4%D7%A0%D7%A1%D7%99%D7%94---%D7%9E%D7%A1%D7%9C%D7%95%D7%9C-%D7%99%D7%A2%D7%93-%D7%9C%D7%A4%D7%A8%D7%99%D7%A9%D7%94-2045.xlsx",
+     "year": "2020",
+     "iframe": false,
+     "doc": true,
+     "internal": true
+    },
+    {
+     "text": "לחץ להורדת קובץ PDF 2019 -",
+     "href": "https://cdn.menoramivt.co.il/public/docs/%D7%9E%D7%A1%D7%9C%D7%95%D7%9C-%D7%99%D7%A2%D7%93-%D7%9C%D7%A4%D7%A8%D7%99%D7%A9%D7%94-2045-%D7%9E%D7%93%D7%99%D7%A0%D7%99%D7%95%D7%AA-%D7%94%D7%A9%D7%A7%D7%A2%D7%94-2019.xlsx",
+     "year": "2019",
+     "iframe": false,
+     "doc": true,
+     "internal": true
+    },
+    {
+     "text": "לחץ להורדת קובץ PDF 2018 -",
+     "href": "https://cdn.menoramivt.co.il/public/docs/%D7%9E%D7%A1%D7%9C%D7%95%D7%9C-%D7%99%D7%A2%D7%93-%D7%9C%D7%A4%D7%A8%D7%99%D7%A9%D7%94-2045-%D7%9E%D7%93%D7%99%D7%A0%D7%99%D7%95%D7%AA-%D7%94%D7%A9%D7%A7%D7%A2%D7%94-2018.xlsx",
+     "year": "2018",
+     "iframe": false,
+     "doc": true,
+     "internal": true
+    },
+    {
+     "text": "לחץ להורדת קובץ PDF 2017 -",
+     "href": "https://cdn.menoramivt.co.il/public/docs/%D7%9E%D7%A1%D7%9C%D7%95%D7%9C-%D7%99%D7%A2%D7%93-%D7%9C%D7%A4%D7%A8%D7%99%D7%A9%D7%94-2045-%D7%9E%D7%93%D7%99%D7%A0%D7%99%D7%95%D7%AA-%D7%94%D7%A9%D7%A7%D7%A2%D7%94-2017.xlsx",
+     "year": "2017",
+     "iframe": false,
+     "doc": true,
+     "internal": true
+    },
+    {
+     "text": "לחץ להורדת קובץ PDF 2016 -",
+     "href": "https://cdn.menoramivt.co.il/public/docs/%D7%9E%D7%A1%D7%9C%D7%95%D7%9C-%D7%99%D7%A2%D7%93-%D7%9C%D7%A4%D7%A8%D7%99%D7%A9%D7%94-2045-%D7%9E%D7%93%D7%99%D7%A0%D7%99%D7%95%D7%AA-%D7%94%D7%A9%D7%A7%D7%A2%D7%94-2016.xlsx",
+     "year": "2016",
      "iframe": false,
      "doc": true,
      "internal": true
@@ -6396,8 +6492,24 @@
      "internal": true
     },
     {
+     "text": "מסלולי השקעה פנסיה",
+     "href": "https://www.menoramivt.co.il/pension/investment-routes-pension",
+     "year": null,
+     "iframe": false,
+     "doc": false,
+     "internal": true
+    },
+    {
      "text": "מסלולי השקעה בקרן ההשתלמות",
      "href": "https://www.menoramivt.co.il/links/pension-and-gemel/gemel-hishtalmut-list/menroa-keren-hishtalmut",
+     "year": null,
+     "iframe": false,
+     "doc": false,
+     "internal": true
+    },
+    {
+     "text": "מנורה מבטחים פנסיה (לשעבר מבטחים החדשה)",
+     "href": "https://www.menoramivt.co.il/links/pension-and-gemel/pension-plans",
      "year": null,
      "iframe": false,
      "doc": false,
@@ -6412,8 +6524,24 @@
      "internal": true
     },
     {
-     "text": "לחצו כאן",
-     "href": "https://www.menoramivt.co.il/rep-list/lobby-returns-gemel-hishtalmut",
+     "text": "לתרשים צדדים קשורים",
+     "href": "https://www.menoramivt.co.il/general/pension-and-gemel/pension-management-board/pension-structure",
+     "year": null,
+     "iframe": false,
+     "doc": false,
+     "internal": true
+    },
+    {
+     "text": "לצפייה בסך נכסים, דמי ניהול ועמלות. לצפייה בסך נכסים, דמי ניהול ועמלות",
+     "href": "https://www.menoramivt.co.il/general/investments-management-fee",
+     "year": null,
+     "iframe": false,
+     "doc": false,
+     "internal": true
+    },
+    {
+     "text": "למידע בדבר מסגרת כללית של הערכות החברה בטיפול בחובות בעייתיים",
+     "href": "https://www.menoramivt.co.il/general/pension-and-gemel/pension-procedures/more-procedures/engineers-problematic-debts",
      "year": null,
      "iframe": false,
      "doc": false,
@@ -6421,23 +6549,23 @@
     },
     {
      "text": "לחצו כאן",
-     "href": "https://www.menoramivt.co.il/rep-list/hishtalmut-direct-outcome",
+     "href": "https://www.menoramivt.co.il/rep-list/lobbi-pension-returns",
      "year": null,
      "iframe": false,
      "doc": false,
      "internal": true
     },
     {
-     "text": "לחץ להורדת קובץ PDF תקנון הקופה -",
-     "href": "https://www.menoramivt.co.il/links/regulations-hishtalmut-omega",
+     "text": "לחצו כאן",
+     "href": "https://www.menoramivt.co.il/rep-list/pension-direct-outcome",
      "year": null,
      "iframe": false,
-     "doc": true,
+     "doc": false,
      "internal": true
     },
     {
-     "text": "חיסכון פנסיוני",
-     "href": "https://www.menoramivt.co.il/funds/Education-fund-SP500",
+     "text": "לחץ כאן",
+     "href": "https://www.menoramivt.co.il/funds/pension-and-gemel/sum-assets-management-fee/pos-assets-list",
      "year": null,
      "iframe": false,
      "doc": false,
@@ -6492,141 +6620,109 @@
      "internal": true
     },
     {
-     "text": "בקשת הלוואה מקרן השתלמות",
-     "href": "https://www.menoramivt.co.il/customer-login/?target=fund-loan",
+     "text": "דלג לתוכן הדף",
+     "href": "https://www.menoramivt.co.il/funds/pension-and-gemel/pension-plans/retire-track-2045",
      "year": null,
      "iframe": false,
      "doc": false,
      "internal": true
     },
     {
-     "text": "(html)",
-     "href": "https://www.menoramivt.co.il/funds/512245812_g13873_Yield322.xlsx",
+     "text": "דיווחים ופרסומים",
+     "href": "https://www.menoramivt.co.il/rep-list/about-menora/pension-and-gemel/reports-publishs",
      "year": null,
      "iframe": false,
-     "doc": true,
+     "doc": false,
+     "internal": true
+    },
+    {
+     "text": "בקשת הלוואה מקרן השתלמות",
+     "href": "https://www.menoramivt.co.il/customer-login/?target=fund-loan",
+     "year": null,
+     "iframe": false,
+     "doc": false,
      "internal": true
     }
    ]
-  },
-  "https://www.menoramivt.co.il/funds/insurers-complementary-pension-SP500": {
-   "product": "פנסיה",
-   "status": 200,
-   "method": "requests",
-   "text_hash": "5e3b186dee67396a6a059bdf61c677599ca67ff6",
-   "text_head": "Radware Captcha Page We apologize for the inconvenience... ...but your activity and behavior on this site made us think that you are a bot. Note: A number of things could be going on here. If you are attempting to access this site using an anonymous Private/Proxy network, please disable that and try accessing site again. Due to previously detected malicious behavior which originated from the network you're using, please request unblock to site. Incident ID: 95c63182-dcyu-49ed-a3fb-aaec9bfa9caf Please solve this CAPTCHA to request unblock to the website You reached this page when trying to acce",
-   "items": []
-  },
-  "https://www.menoramivt.co.il/funds/Education-fund-halacha": {
-   "product": null,
-   "status": 200,
-   "method": "requests",
-   "text_hash": "9de279bc3b18fccb4376bae2f500e94f8da707a0",
-   "text_head": "Radware Captcha Page We apologize for the inconvenience... ...but your activity and behavior on this site made us think that you are a bot. Note: A number of things could be going on here. If you are attempting to access this site using an anonymous Private/Proxy network, please disable that and try accessing site again. Due to previously detected malicious behavior which originated from the network you're using, please request unblock to site. Incident ID: 426c4256-dcyu-48f7-ab4d-b22764c32530 Please solve this CAPTCHA to request unblock to the website You reached this page when trying to acce",
-   "items": []
-  },
-  "https://www.menoramivt.co.il/funds/gov-bonds-15342": {
-   "product": null,
-   "status": 200,
-   "method": "requests",
-   "text_hash": "dffb1f425bdf7dd0eb16f994c421ef2d3023a0af",
-   "text_head": "Radware Captcha Page We apologize for the inconvenience... ...but your activity and behavior on this site made us think that you are a bot. Note: A number of things could be going on here. If you are attempting to access this site using an anonymous Private/Proxy network, please disable that and try accessing site again. Due to previously detected malicious behavior which originated from the network you're using, please request unblock to site. Incident ID: 8587de89-dcyu-4c95-a25f-263bcd1743c7 Please solve this CAPTCHA to request unblock to the website You reached this page when trying to acce",
-   "items": []
-  },
-  "https://www.menoramivt.co.il/funds/stock-1364": {
-   "product": null,
-   "status": 200,
-   "method": "requests",
-   "text_hash": "fe40759375a5b782d1ceacc36b3b48dd8e211489",
-   "text_head": "Radware Captcha Page We apologize for the inconvenience... ...but your activity and behavior on this site made us think that you are a bot. Note: A number of things could be going on here. If you are attempting to access this site using an anonymous Private/Proxy network, please disable that and try accessing site again. Due to previously detected malicious behavior which originated from the network you're using, please request unblock to site. Incident ID: d694f9a3-dcyu-4fda-870f-3243026032c7 Please solve this CAPTCHA to request unblock to the website You reached this page when trying to acce",
-   "items": []
-  },
-  "https://www.menoramivt.co.il/funds/pension-and-gemel/pension-plans/tradble-stocks-plan-15748": {
-   "product": "פנסיה+גמל",
-   "status": 200,
-   "method": "requests",
-   "text_hash": "458a05a5629d71b134ce82d9feaca34030f91957",
-   "text_head": "Radware Captcha Page We apologize for the inconvenience... ...but your activity and behavior on this site made us think that you are a bot. Note: A number of things could be going on here. If you are attempting to access this site using an anonymous Private/Proxy network, please disable that and try accessing site again. Due to previously detected malicious behavior which originated from the network you're using, please request unblock to site. Incident ID: 890cee34-dcyu-4789-b221-003b5bae8a24 Please solve this CAPTCHA to request unblock to the website You reached this page when trying to acce",
-   "items": []
-  },
-  "https://www.menoramivt.co.il/funds/pension-and-gemel/pension-plans/retire-track-2045": {
-   "product": "פנסיה+גמל",
-   "status": 200,
-   "method": "requests",
-   "text_hash": "23c6ad28df81d3695318edda8415dfd443d5b3d0",
-   "text_head": "Radware Captcha Page We apologize for the inconvenience... ...but your activity and behavior on this site made us think that you are a bot. Note: A number of things could be going on here. If you are attempting to access this site using an anonymous Private/Proxy network, please disable that and try accessing site again. Due to previously detected malicious behavior which originated from the network you're using, please request unblock to site. Incident ID: 94565959-dcyu-402b-a834-379901d7793e Please solve this CAPTCHA to request unblock to the website You reached this page when trying to acce",
-   "items": []
   },
   "https://www.menoramivt.co.il/funds/pension-and-gemel/mashlima/mashlima-retire-track-2045": {
    "product": "פנסיה+גמל",
    "status": 200,
    "method": "requests",
-   "text_hash": "5a3cc9474c7baba9957553f992229c4c8f4237a3",
-   "text_head": "Radware Captcha Page We apologize for the inconvenience... ...but your activity and behavior on this site made us think that you are a bot. Note: A number of things could be going on here. If you are attempting to access this site using an anonymous Private/Proxy network, please disable that and try accessing site again. Due to previously detected malicious behavior which originated from the network you're using, please request unblock to site. Incident ID: b95c3685-dcyu-4724-9c7d-3532bdf3646d Please solve this CAPTCHA to request unblock to the website You reached this page when trying to acce",
+   "text_hash": "9c4bda7516b8fe32c00de4291ae4617227e5b2f9",
+   "text_head": "Radware Captcha Page We apologize for the inconvenience... ...but your activity and behavior on this site made us think that you are a bot. Note: A number of things could be going on here. If you are attempting to access this site using an anonymous Private/Proxy network, please disable that and try accessing site again. Due to previously detected malicious behavior which originated from the network you're using, please request unblock to site. Incident ID: 42e75454-dcyu-4fed-9906-ce5442ac2af8 Please solve this CAPTCHA to request unblock to the website You reached this page when trying to acce",
    "items": []
   },
   "https://www.menoramivt.co.il/funds/pension-and-gemel/gemel-hishtalmut-list/savings-for-children/kids-halacha": {
    "product": "פנסיה+גמל",
    "status": 200,
    "method": "requests",
-   "text_hash": "0ed015e6156afd064030b0f9261e0bff6ade8582",
-   "text_head": "Radware Captcha Page We apologize for the inconvenience... ...but your activity and behavior on this site made us think that you are a bot. Note: A number of things could be going on here. If you are attempting to access this site using an anonymous Private/Proxy network, please disable that and try accessing site again. Due to previously detected malicious behavior which originated from the network you're using, please request unblock to site. Incident ID: 61c94f31-dcyu-4ece-8a06-b44b47877899 Please solve this CAPTCHA to request unblock to the website You reached this page when trying to acce",
+   "text_hash": "6c59eccf340db993cfad82b96280f81eaea97634",
+   "text_head": "Radware Captcha Page We apologize for the inconvenience... ...but your activity and behavior on this site made us think that you are a bot. Note: A number of things could be going on here. If you are attempting to access this site using an anonymous Private/Proxy network, please disable that and try accessing site again. Due to previously detected malicious behavior which originated from the network you're using, please request unblock to site. Incident ID: 9c9d3613-dcyu-4a16-a9ba-cf7674a4aa79 Please solve this CAPTCHA to request unblock to the website You reached this page when trying to acce",
    "items": []
   },
   "https://www.menoramivt.co.il/funds/pension-and-gemel/pension-plans/menayot-14677": {
    "product": "פנסיה+גמל",
    "status": 200,
    "method": "requests",
-   "text_hash": "119a0d08cd5b7e61ba5747156a773f77e49d30ee",
-   "text_head": "Radware Captcha Page We apologize for the inconvenience... ...but your activity and behavior on this site made us think that you are a bot. Note: A number of things could be going on here. If you are attempting to access this site using an anonymous Private/Proxy network, please disable that and try accessing site again. Due to previously detected malicious behavior which originated from the network you're using, please request unblock to site. Incident ID: 58a2c360-dcyu-4ebd-8a3d-17d001cdf7b9 Please solve this CAPTCHA to request unblock to the website You reached this page when trying to acce",
+   "text_hash": "c444cb43c349417e6a528eda92ce31493b02cb6d",
+   "text_head": "Radware Captcha Page We apologize for the inconvenience... ...but your activity and behavior on this site made us think that you are a bot. Note: A number of things could be going on here. If you are attempting to access this site using an anonymous Private/Proxy network, please disable that and try accessing site again. Due to previously detected malicious behavior which originated from the network you're using, please request unblock to site. Incident ID: 7389a001-dcyu-4ffc-90a7-3d89bac79e1c Please solve this CAPTCHA to request unblock to the website You reached this page when trying to acce",
    "items": []
   },
   "https://www.menoramivt.co.il/funds/pension-and-gemel/mashlima/mashlima-stock-abroad-track": {
    "product": "פנסיה+גמל",
    "status": 200,
    "method": "requests",
-   "text_hash": "695f7600758be79d14e61c5a13cc446dfbe8d56c",
-   "text_head": "Radware Captcha Page We apologize for the inconvenience... ...but your activity and behavior on this site made us think that you are a bot. Note: A number of things could be going on here. If you are attempting to access this site using an anonymous Private/Proxy network, please disable that and try accessing site again. Due to previously detected malicious behavior which originated from the network you're using, please request unblock to site. Incident ID: 68f93304-dcyu-444b-b01d-1d12e6ff3046 Please solve this CAPTCHA to request unblock to the website You reached this page when trying to acce",
+   "text_hash": "248c6e47ac44cf72eaf02c611a2e9834e5827758",
+   "text_head": "Radware Captcha Page We apologize for the inconvenience... ...but your activity and behavior on this site made us think that you are a bot. Note: A number of things could be going on here. If you are attempting to access this site using an anonymous Private/Proxy network, please disable that and try accessing site again. Due to previously detected malicious behavior which originated from the network you're using, please request unblock to site. Incident ID: c52caee0-dcyu-44f3-8596-e876cbf3043d Please solve this CAPTCHA to request unblock to the website You reached this page when trying to acce",
    "items": []
   },
   "https://www.menoramivt.co.il/funds/-pension-mashlima-14309": {
    "product": "פנסיה",
    "status": 200,
    "method": "requests",
-   "text_hash": "867589057684ac346643e6e2f892aa36a295f9e2",
-   "text_head": "Radware Captcha Page We apologize for the inconvenience... ...but your activity and behavior on this site made us think that you are a bot. Note: A number of things could be going on here. If you are attempting to access this site using an anonymous Private/Proxy network, please disable that and try accessing site again. Due to previously detected malicious behavior which originated from the network you're using, please request unblock to site. Incident ID: bf6a6629-dcyu-4efa-b750-46141f2a9bba Please solve this CAPTCHA to request unblock to the website You reached this page when trying to acce",
+   "text_hash": "a78192507fd6d85f8d6df02d2cecfc53a4efb45b",
+   "text_head": "Radware Captcha Page We apologize for the inconvenience... ...but your activity and behavior on this site made us think that you are a bot. Note: A number of things could be going on here. If you are attempting to access this site using an anonymous Private/Proxy network, please disable that and try accessing site again. Due to previously detected malicious behavior which originated from the network you're using, please request unblock to site. Incident ID: 127e13a0-dcyu-4766-896d-c4c3cf3c2d3f Please solve this CAPTCHA to request unblock to the website You reached this page when trying to acce",
    "items": []
   },
   "https://www.menoramivt.co.il/funds/pension-and-gemel/gemel-hishtalmut-list/top-savings/8675": {
    "product": "פנסיה+גמל",
    "status": 200,
    "method": "requests",
-   "text_hash": "74b3f5f9c8061230e702df315018bf66a1f20863",
-   "text_head": "Radware Captcha Page We apologize for the inconvenience... ...but your activity and behavior on this site made us think that you are a bot. Note: A number of things could be going on here. If you are attempting to access this site using an anonymous Private/Proxy network, please disable that and try accessing site again. Due to previously detected malicious behavior which originated from the network you're using, please request unblock to site. Incident ID: 3dfb78e7-dcyu-4e7a-a3da-03622ca15a31 Please solve this CAPTCHA to request unblock to the website You reached this page when trying to acce",
+   "text_hash": "a73fd0195673ad5cf841f97d86b9566aa658b007",
+   "text_head": "Radware Captcha Page We apologize for the inconvenience... ...but your activity and behavior on this site made us think that you are a bot. Note: A number of things could be going on here. If you are attempting to access this site using an anonymous Private/Proxy network, please disable that and try accessing site again. Due to previously detected malicious behavior which originated from the network you're using, please request unblock to site. Incident ID: 0d95da1e-dcyu-47d6-a23a-b92eecdb9034 Please solve this CAPTCHA to request unblock to the website You reached this page when trying to acce",
    "items": []
   },
   "https://www.menoramivt.co.il/funds/pension-and-gemel/gemel-hishtalmut-list/top-savings/8678": {
    "product": "פנסיה+גמל",
    "status": 200,
    "method": "requests",
-   "text_hash": "8337bba87db9c7ceebdd9078f84e1e3748e4ec5f",
-   "text_head": "Radware Captcha Page We apologize for the inconvenience... ...but your activity and behavior on this site made us think that you are a bot. Note: A number of things could be going on here. If you are attempting to access this site using an anonymous Private/Proxy network, please disable that and try accessing site again. Due to previously detected malicious behavior which originated from the network you're using, please request unblock to site. Incident ID: de44dd76-dcyu-4174-a7be-acc36f0437b9 Please solve this CAPTCHA to request unblock to the website You reached this page when trying to acce",
+   "text_hash": "ab26aef9881aa739d9463229e28c6c8448e1373f",
+   "text_head": "Radware Captcha Page We apologize for the inconvenience... ...but your activity and behavior on this site made us think that you are a bot. Note: A number of things could be going on here. If you are attempting to access this site using an anonymous Private/Proxy network, please disable that and try accessing site again. Due to previously detected malicious behavior which originated from the network you're using, please request unblock to site. Incident ID: fa4ec396-dcyu-49bb-ad60-dc52970084b6 Please solve this CAPTCHA to request unblock to the website You reached this page when trying to acce",
    "items": []
   },
   "https://www.menoramivt.co.il/funds/pension-and-gemel/gemel-hishtalmut-list/top-savings/8683": {
    "product": "פנסיה+גמל",
    "status": 200,
    "method": "requests",
-   "text_hash": "34a72880b8c3417b3108269077a2798d0d95204d",
-   "text_head": "Radware Captcha Page We apologize for the inconvenience... ...but your activity and behavior on this site made us think that you are a bot. Note: A number of things could be going on here. If you are attempting to access this site using an anonymous Private/Proxy network, please disable that and try accessing site again. Due to previously detected malicious behavior which originated from the network you're using, please request unblock to site. Incident ID: efc95d70-dcyu-40cb-bd5e-d16682c43de1 Please solve this CAPTCHA to request unblock to the website You reached this page when trying to acce",
+   "text_hash": "c4ac1c39923e57613e1e88fb2ff3a8db4a2e06eb",
+   "text_head": "Radware Captcha Page We apologize for the inconvenience... ...but your activity and behavior on this site made us think that you are a bot. Note: A number of things could be going on here. If you are attempting to access this site using an anonymous Private/Proxy network, please disable that and try accessing site again. Due to previously detected malicious behavior which originated from the network you're using, please request unblock to site. Incident ID: 3a3d31df-dcyu-4de9-b42e-1c2974e741e7 Please solve this CAPTCHA to request unblock to the website You reached this page when trying to acce",
    "items": []
   },
   "https://www.menoramivt.co.il/funds/gemel-SP500": {
    "product": "גמל",
    "status": 200,
    "method": "requests",
-   "text_hash": "a44b912a9258bcf332f1f1a05437cee4738e5a9a",
-   "text_head": "Radware Captcha Page We apologize for the inconvenience... ...but your activity and behavior on this site made us think that you are a bot. Note: A number of things could be going on here. If you are attempting to access this site using an anonymous Private/Proxy network, please disable that and try accessing site again. Due to previously detected malicious behavior which originated from the network you're using, please request unblock to site. Incident ID: 60a27c96-dcyu-4678-a13d-74776cebe8aa Please solve this CAPTCHA to request unblock to the website You reached this page when trying to acce",
+   "text_hash": "899359cbb1034d7ad344e8c56f3a4955a2b6a2bf",
+   "text_head": "Radware Captcha Page We apologize for the inconvenience... ...but your activity and behavior on this site made us think that you are a bot. Note: A number of things could be going on here. If you are attempting to access this site using an anonymous Private/Proxy network, please disable that and try accessing site again. Due to previously detected malicious behavior which originated from the network you're using, please request unblock to site. Incident ID: 2c8931b2-dcyu-478f-b4dd-9ffec7a811d7 Please solve this CAPTCHA to request unblock to the website You reached this page when trying to acce",
+   "items": []
+  },
+  "https://www.menoramivt.co.il/funds/gemel-kayamut-14351": {
+   "product": "גמל",
+   "status": 200,
+   "method": "requests",
+   "text_hash": "863235e0c0e79d718e3e32ed1fda68e9314ac76f",
+   "text_head": "Radware Captcha Page We apologize for the inconvenience... ...but your activity and behavior on this site made us think that you are a bot. Note: A number of things could be going on here. If you are attempting to access this site using an anonymous Private/Proxy network, please disable that and try accessing site again. Due to previously detected malicious behavior which originated from the network you're using, please request unblock to site. Incident ID: 81ea548e-dcyu-4c87-a121-2b1875b29cbf Please solve this CAPTCHA to request unblock to the website You reached this page when trying to acce",
    "items": []
   }
  }

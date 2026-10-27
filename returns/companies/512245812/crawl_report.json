@@ -1,7 +1,7 @@
 {
  "legal_id": "512245812",
  "company": "מנורה מבטחים פנסיה וגמל בע\"מ",
- "run": "2026-10-26T11:34:41+00:00",
+ "run": "2026-10-27T11:00:17+00:00",
  "errors": [
   "https://www.menoramivt.co.il/funds/512245812_g13874_Yield322.xlsx -> 404",
   "https://www.menoramivt.co.il/funds/512245812_g13873_Yield322.xlsx -> 404",
@@ -39,7 +39,7 @@
   ],
   "urls": []
  },
- "pages": 26,
+ "pages": 27,
  "pages_failed": [
   "https://www.menoramivt.co.il/funds/: 404",
   "https://www.menoramivt.co.il/funds/pension-and-gemel/pension-plans/: 404",
@@ -49,9 +49,9 @@
   "https://www.menoramivt.co.il/list/pension-member-info/: 404",
   "https://www.menoramivt.co.il/funds/pension-and-gemel/gemel-hishtalmut-list/menora-gemel/: 404"
  ],
- "candidates": 368,
- "docs": 364,
+ "candidates": 380,
+ "docs": 376,
  "new_docs": 0,
  "index_size": 1627,
- "seconds": 1736
+ "seconds": 1799
 }
