@@ -23,6 +23,86 @@
   {
    "product": "גמל",
    "url": "https://www.analyst.co.il/funds-lobby/training-funds/"
+  },
+  {
+   "product": "גמל",
+   "url": "https://www.analyst.co.il/funds-lobby/training-funds/fund-13853/report/"
+  },
+  {
+   "product": "גמל",
+   "url": "https://www.analyst.co.il/funds-lobby/training-funds/fund-15311/report/"
+  },
+  {
+   "product": "גמל",
+   "url": "https://www.analyst.co.il/funds-lobby/training-funds/fund-15312/report/"
+  },
+  {
+   "product": "גמל",
+   "url": "https://www.analyst.co.il/funds-lobby/training-funds/fund-1535/report/"
+  },
+  {
+   "product": "גמל",
+   "url": "https://www.analyst.co.il/funds-lobby/training-funds/fund-8129/report/"
+  },
+  {
+   "product": "גמל",
+   "url": "https://www.analyst.co.il/funds-lobby/training-funds/fund-8679/report/"
+  },
+  {
+   "product": "גמל",
+   "url": "https://www.analyst.co.il/funds-lobby/training-funds/fund-8779/report/"
+  },
+  {
+   "product": "גמל",
+   "url": "https://www.analyst.co.il/funds-lobby/training-funds/fund-962/report/"
+  },
+  {
+   "product": "גמל",
+   "url": "https://www.analyst.co.il/funds-lobby/training-funds/fund-963/report/"
+  },
+  {
+   "product": "גמל",
+   "url": "https://www.analyst.co.il/funds-lobby/training-funds/fund-972/report/"
+  },
+  {
+   "product": "גמל",
+   "url": "https://www.analyst.co.il/funds-lobby/training-funds/fund-973/report/"
+  },
+  {
+   "product": "גמל",
+   "url": "https://www.analyst.co.il/funds-lobby/gemel-invest/fund-13854/report/"
+  },
+  {
+   "product": "גמל",
+   "url": "https://www.analyst.co.il/funds-lobby/gemel-invest/fund-15309/report/"
+  },
+  {
+   "product": "גמל",
+   "url": "https://www.analyst.co.il/funds-lobby/gemel-invest/fund-7834/report/"
+  },
+  {
+   "product": "גמל",
+   "url": "https://www.analyst.co.il/funds-lobby/gemel-invest/fund-7836/report/"
+  },
+  {
+   "product": "גמל",
+   "url": "https://www.analyst.co.il/funds-lobby/gemel-invest/fund-7837/report/"
+  },
+  {
+   "product": "גמל",
+   "url": "https://www.analyst.co.il/funds-lobby/gemel-invest/fund-7839/report/"
+  },
+  {
+   "product": "גמל",
+   "url": "https://www.analyst.co.il/funds-lobby/gemel-invest/fund-7842/report/"
+  },
+  {
+   "product": "גמל",
+   "url": "https://www.analyst.co.il/funds-lobby/gemel-invest/fund-7843/report/"
+  },
+  {
+   "product": "גמל",
+   "url": "https://www.analyst.co.il/funds-lobby/gemel-invest/fund-7986/report/"
   }
  ],
  "returns_follow": "analyst\\.co\\.il/funds-lobby/(provident-funds|training-funds|gemel-invest)/fund-\\d+/(report/?)?$",
@@ -33,5 +113,5 @@
   20
  ],
  "returns_crawl_budget": 1700,
- "returns_note": "2026-10-27: עמודי דוחות לכל קרן: funds-lobby/<provident-funds|gemel-invest|training-funds>/fund-<מספר>/report/ (קבצי <ח.פ.>_g<מספר>_Yield<q><yy>.xlsx); הרישום 37 מסלולים, נמצאו 11 (רק provident-funds נסרק)"
+ "returns_note": "2026-10-27: עמודי דוחות לכל קרן: funds-lobby/<provident-funds|gemel-invest|training-funds>/fund-<מספר>/report/ (קבצי <ח.פ.>_g<מספר>_Yield<q><yy>.xlsx); הרישום 37 מסלולים, נמצאו 11 (רק provident-funds נסרק) | 2026-10-27: בעמודי הקרן של training-funds/gemel-invest אין קישור ל-/report/ (נבדק בתמונת המצב) - נוספו כתובות /report/ ישירות (20)"
 }
