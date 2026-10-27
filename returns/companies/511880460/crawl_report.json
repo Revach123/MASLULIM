@@ -1,11 +1,11 @@
 {
  "legal_id": "511880460",
  "company": "אנליסט קופות גמל בע\"מ",
- "run": "2026-10-27T12:35:44+00:00",
+ "run": "2026-10-27T20:06:13+00:00",
  "errors": [],
  "seeds": {
-  "config": 3,
-  "discovered": 11,
+  "config": 23,
+  "discovered": 16,
   "policy_snapshot": 10,
   "policy_snapshot_docs": 0,
   "gap_search": 0,
@@ -39,11 +39,14 @@
   ],
   "urls": []
  },
- "pages": 80,
- "pages_failed": [],
- "candidates": 306,
- "docs": 306,
- "new_docs": 220,
- "index_size": 317,
- "seconds": 1577
+ "pages": 50,
+ "pages_failed": [
+  "https://www.analyst.co.il/funds-lobby/training-funds/fund-15312/report/: 404",
+  "https://www.analyst.co.il/funds-lobby/gemel-invest/fund-15309/report/: 404"
+ ],
+ "candidates": 648,
+ "docs": 648,
+ "new_docs": 342,
+ "index_size": 659,
+ "seconds": 1865
 }
