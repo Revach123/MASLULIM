@@ -1,9 +1,8 @@
 {
  "legal_id": "520023185",
  "company": "הפניקס חברה לביטוח בע\"מ",
- "run": "2026-10-26T11:50:44+00:00",
+ "run": "2026-10-27T11:17:39+00:00",
  "errors": [
-  "//digital-content.fnx.co.il/SPF/iframe-phoenix-all-embracing-pension-yield-components.aspx -> not_a_document",
   "https://www.fnx.co.il/SPF/iframe-phoenix-all-embracing-pension-yield-components.aspx -> not_a_document",
   "https://www.fnx.co.il/SPF/iframe-phoenix-general-pension-yield-components.aspx -> not_a_document",
   "https://www.fnx.co.il/SPF/iframe-basic-member-pension-fund-yield-components.aspx -> not_a_document",
@@ -30,13 +29,13 @@
   ],
   "urls": []
  },
- "pages": 11,
+ "pages": 10,
  "pages_failed": [
   "https://www.fnx.co.il/SPF/: 404"
  ],
- "candidates": 46,
- "docs": 41,
- "new_docs": 2,
+ "candidates": 35,
+ "docs": 31,
+ "new_docs": 0,
  "index_size": 82,
- "seconds": 1307
+ "seconds": 1181
 }
