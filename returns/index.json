@@ -2,10 +2,10 @@
  "totals": {
   "companies": 76,
   "with_data": 64,
-  "tracks": 1444,
+  "tracks": 1452,
   "registry_tracks": 1294,
-  "registry_found": 928,
-  "docs": 11197
+  "registry_found": 930,
+  "docs": 11222
  },
  "companies": [
   {
@@ -115,14 +115,14 @@
   {
    "legal_id": "511880460",
    "company": "אנליסט קופות גמל בע\"מ",
-   "tracks": 18,
-   "tracks_numbered": 11,
+   "tracks": 26,
+   "tracks_numbered": 15,
    "registry_tracks": 37,
-   "registry_found": 11,
-   "registry_coverage": 29.7,
+   "registry_found": 13,
+   "registry_coverage": 35.1,
    "first_month": "2019-01",
    "last_month": "2026-09",
-   "docs_returns": 92,
+   "docs_returns": 117,
    "nostro": false
   },
   {
