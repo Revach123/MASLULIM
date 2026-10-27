@@ -10,5 +10,28 @@
  "search": true,
  "rev": 6,
  "home_source": "report_email:analyst.co.il",
- "track_from_link": "^(?:אנליסט\\s+)?(.+?)\\s+מדיניות\\s+צפויה"
+ "track_from_link": "^(?:אנליסט\\s+)?(.+?)\\s+מדיניות\\s+צפויה",
+ "returns_pages": [
+  {
+   "product": "גמל",
+   "url": "https://www.analyst.co.il/funds-lobby/provident-funds/"
+  },
+  {
+   "product": "גמל",
+   "url": "https://www.analyst.co.il/funds-lobby/gemel-invest/"
+  },
+  {
+   "product": "גמל",
+   "url": "https://www.analyst.co.il/funds-lobby/training-funds/"
+  }
+ ],
+ "returns_follow": "analyst\\.co\\.il/funds-lobby/(provident-funds|training-funds|gemel-invest)/fund-\\d+/(report/?)?$",
+ "returns_ctx": "/fund-\\d+/report/?$",
+ "returns_max_pages": 80,
+ "returns_budget": [
+  15,
+  20
+ ],
+ "returns_crawl_budget": 1700,
+ "returns_note": "2026-10-27: עמודי דוחות לכל קרן: funds-lobby/<provident-funds|gemel-invest|training-funds>/fund-<מספר>/report/ (קבצי <ח.פ.>_g<מספר>_Yield<q><yy>.xlsx); הרישום 37 מסלולים, נמצאו 11 (רק provident-funds נסרק)"
 }
