@@ -103,6 +103,50 @@
   {
    "product": "גמל",
    "url": "https://www.analyst.co.il/funds-lobby/gemel-invest/fund-7986/report/"
+  },
+  {
+   "product": "גמל",
+   "url": "https://www.analyst.co.il/funds-lobby/training-funds/fund-16014/report/"
+  },
+  {
+   "product": "גמל",
+   "url": "https://www.analyst.co.il/funds-lobby/gemel-invest/fund-16015/report/"
+  },
+  {
+   "product": "גמל",
+   "url": "https://www.analyst.co.il/funds-lobby/provident-funds/fund-16015/report/"
+  },
+  {
+   "product": "גמל",
+   "url": "https://www.analyst.co.il/funds-lobby/provident-funds/fund-16014/report/"
+  },
+  {
+   "product": "גמל",
+   "url": "https://www.analyst.co.il/funds-lobby/provident-funds/fund-118/report/"
+  },
+  {
+   "product": "גמל",
+   "url": "https://www.analyst.co.il/funds-lobby/provident-funds/fund-11365/report/"
+  },
+  {
+   "product": "גמל",
+   "url": "https://www.analyst.co.il/funds-lobby/provident-funds/fund-11366/report/"
+  },
+  {
+   "product": "גמל",
+   "url": "https://www.analyst.co.il/funds-lobby/provident-funds/fund-11367/report/"
+  },
+  {
+   "product": "גמל",
+   "url": "https://www.analyst.co.il/funds-lobby/gemel-invest/fund-11365/report/"
+  },
+  {
+   "product": "גמל",
+   "url": "https://www.analyst.co.il/funds-lobby/gemel-invest/fund-11366/report/"
+  },
+  {
+   "product": "גמל",
+   "url": "https://www.analyst.co.il/funds-lobby/gemel-invest/fund-11367/report/"
   }
  ],
  "returns_follow": "analyst\\.co\\.il/funds-lobby/(provident-funds|training-funds|gemel-invest)/fund-\\d+/(report/?)?$",
@@ -113,5 +157,5 @@
   20
  ],
  "returns_crawl_budget": 1700,
- "returns_note": "2026-10-27: עמודי דוחות לכל קרן: funds-lobby/<provident-funds|gemel-invest|training-funds>/fund-<מספר>/report/ (קבצי <ח.פ.>_g<מספר>_Yield<q><yy>.xlsx); הרישום 37 מסלולים, נמצאו 11 (רק provident-funds נסרק) | 2026-10-27: בעמודי הקרן של training-funds/gemel-invest אין קישור ל-/report/ (נבדק בתמונת המצב) - נוספו כתובות /report/ ישירות (20)"
+ "returns_note": "2026-10-27: עמודי דוחות לכל קרן: funds-lobby/<provident-funds|gemel-invest|training-funds>/fund-<מספר>/report/ (קבצי <ח.פ.>_g<מספר>_Yield<q><yy>.xlsx); הרישום 37 מסלולים, נמצאו 11 (רק provident-funds נסרק) | 2026-10-27: בעמודי הקרן של training-funds/gemel-invest אין קישור ל-/report/ (נבדק בתמונת המצב) - נוספו כתובות /report/ ישירות (20) | 2026-10-28: נוספו ניחושי /report/ למסלולים 16014/16015/118/11365-7 (עמוד שלא קיים = 404, מתעלמים)"
 }
