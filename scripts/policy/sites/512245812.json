@@ -322,5 +322,20 @@
   20
  ],
  "returns_crawl_budget": 1650,
- "returns_dl_budget": 2150
+ "returns_dl_budget": 2150,
+ "returns_pages": [
+  {
+   "product": "פנסיה",
+   "url": "https://www.menoramivt.co.il/links/pension/investment-routes-pension"
+  },
+  {
+   "product": "פנסיה",
+   "url": "https://www.menoramivt.co.il/funds/pension-and-gemel/pension-plans/halacha-track"
+  },
+  {
+   "product": "פנסיה",
+   "url": "https://www.menoramivt.co.il/links/pension-and-gemel/mashlima"
+  }
+ ],
+ "returns_note": "2026-10-28: 'מנורה מבטחים פנסיה' 6/18 - נוספו seed של רשימת מסלולי הפנסיה (links/pension/investment-routes-pension) ועמוד מסלול הלכה (נמצאו בחיפוש web)"
 }
