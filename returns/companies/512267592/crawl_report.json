@@ -1,12 +1,12 @@
 {
  "legal_id": "512267592",
  "company": "הראל פנסיה וגמל בע\"מ",
- "run": "2026-10-28T11:40:12+00:00",
+ "run": "2026-10-28T16:17:26+00:00",
  "errors": [],
  "seeds": {
-  "config": 0,
+  "config": 3,
   "discovered": 4,
-  "policy_snapshot": 5,
+  "policy_snapshot": 0,
   "policy_snapshot_docs": 0,
   "gap_search": 0,
   "sitemap": 0
@@ -39,14 +39,16 @@
   ],
   "urls": []
  },
- "pages": 109,
+ "pages": 102,
  "pages_failed": [
-  "https://www.harel-group.co.il/long-term-savings/severance/severance-packages/Pages/personal-profile-820/: 404",
-  "https://www.harel-group.co.il/long-term-savings/severance/severance-packages/Pages/personal-profile-820/investment-policy.aspx: 404"
+  "https://www.harel-group.co.il/long-term-savings/funding-saving/investment-routes/Pages/stocks/yield-components.aspx: 404",
+  "https://www.harel-group.co.il/long-term-savings/severance/severance-packages/Pages/dekel-for-sick-leave--857/yield-components.aspx: 404",
+  "https://www.harel-group.co.il/long-term-savings/funding-saving/investment-routes/pages/stocks/yield-components.aspx: 404",
+  "https://www.harel-group.co.il/long-term-savings/severance/severance-packages/pages/dekel-for-sick-leave--857/yield-components.aspx: 404"
  ],
- "candidates": 27,
- "docs": 27,
- "new_docs": 0,
- "index_size": 32,
- "seconds": 865
+ "candidates": 50,
+ "docs": 50,
+ "new_docs": 23,
+ "index_size": 55,
+ "seconds": 676
 }
