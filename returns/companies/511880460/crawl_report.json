@@ -1,10 +1,10 @@
 {
  "legal_id": "511880460",
  "company": "אנליסט קופות גמל בע\"מ",
- "run": "2026-10-27T21:26:05+00:00",
+ "run": "2026-10-28T09:37:23+00:00",
  "errors": [],
  "seeds": {
-  "config": 23,
+  "config": 34,
   "discovered": 33,
   "policy_snapshot": 10,
   "policy_snapshot_docs": 0,
@@ -39,14 +39,20 @@
   ],
   "urls": []
  },
- "pages": 52,
+ "pages": 80,
  "pages_failed": [
   "https://www.analyst.co.il/funds-lobby/training-funds/fund-15312/report/: 404",
-  "https://www.analyst.co.il/funds-lobby/gemel-invest/fund-15309/report/: 404"
+  "https://www.analyst.co.il/funds-lobby/gemel-invest/fund-15309/report/: 404",
+  "https://www.analyst.co.il/funds-lobby/training-funds/fund-16014/report/: 404",
+  "https://www.analyst.co.il/funds-lobby/gemel-invest/fund-16015/report/: 404",
+  "https://www.analyst.co.il/funds-lobby/provident-funds/fund-16015/report/: 404",
+  "https://www.analyst.co.il/funds-lobby/provident-funds/fund-16014/report/: 404",
+  "https://www.analyst.co.il/funds-lobby/provident-funds/fund-118/report/: 404",
+  "https://www.analyst.co.il/funds-lobby/provident-funds/fund-11365/report/: 404"
  ],
  "candidates": 648,
  "docs": 648,
  "new_docs": 0,
  "index_size": 659,
- "seconds": 1799
+ "seconds": 1116
 }
