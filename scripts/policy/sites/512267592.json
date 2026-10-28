@@ -25,7 +25,27 @@
  "rev": 6,
  "track_filter": "^(?!קרן חיסכון לצבא הקבע|עתידית|קופת גמל (ל)?משרתי)",
  "note": "2026-10-03: עמוד קופה מרכזית לפיצויים רבת מסלולים (נמצא בחיפוש)",
- "returns_follow": "harel-group\\.co\\.il/long-term-savings/(pension/funds|funding/plans|study-funds/plans|funding-saving/plans|severance/[^/]+/Pages)/[^?#]+$",
+ "returns_follow": "harel-group\\.co\\.il/long-term-savings/(pension/funds|funding/plans|study-funds/plans|funding-saving/plans|severance/[^/]+/Pages)/[^?#]+$|harel-group\\.co\\.il/[^?#]*/yield-components[^?#/]*\\.aspx$",
  "returns_max_pages": 110,
- "returns_crawl_budget": 2300
+ "returns_crawl_budget": 2300,
+ "returns_pages": [
+  {
+   "product": "גמל",
+   "url": "https://www.harel-group.co.il/long-term-savings/funding-saving/investment-routes/Pages/stocks/yield-components.aspx"
+  },
+  {
+   "product": "גמל",
+   "url": "https://www.harel-group.co.il/about/harel-group/harel/investor-relations/Pages/yield-components-new.aspx"
+  },
+  {
+   "product": "גמל",
+   "url": "https://www.harel-group.co.il/long-term-savings/severance/severance-packages/Pages/dekel-for-sick-leave--857/yield-components.aspx"
+  }
+ ],
+ "returns_ctx": "/yield-components[^/?#]*\\.aspx",
+ "returns_budget": [
+  15,
+  20
+ ],
+ "returns_note": "2026-10-28: דפי 'מרכיבי תשואה' ייעודיים: .../Pages/<מסלול>/yield-components.aspx (נמצא בחיפוש web: stocks/yield-components.aspx, investor-relations/Pages/yield-components-new.aspx, severance-packages/Pages/dekel-for-sick-leave--857/yield-components.aspx) - נוספו כ-seed + follow + ctx"
 }
