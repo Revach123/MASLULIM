@@ -1,7 +1,7 @@
 {
  "extension_version": "2.53.0",
  "started": "2026-10-29T18:19:25.386Z",
- "updated": "2026-10-29T19:05:48.794Z",
+ "updated": "2026-10-29T19:08:55.574Z",
  "final": false,
  "stopped": false,
  "rules_from_github": true,
@@ -24,7 +24,7 @@
   "_note_returns": "returns_rx: קבצי מרכיבי תשואה לאתרי kind=returns (מוגדרים ב-extension_sites.json מ-returns_extension בהגדרות האתר); נשמרים ב-policy/inbox/<id>/returns/"
  },
  "total_sites": 22,
- "done_sites": 4,
+ "done_sites": 7,
  "new_docs": 0,
  "skipped_complete": [
   {
@@ -42,10 +42,10 @@
  ],
  "active": [
   {
-   "name": "איי. די. איי. חברה לביטוח בע\"מ - מרכיבי תשואה",
-   "page": "https://www.555.co.il/financial_reports/report_31_12_23.html",
-   "page_no": 22,
-   "pages": 22,
+   "name": "איילון קופות גמל בע\"מ - מרכיבי תשואה",
+   "page": "https://www.ayalon-ins.co.il/savings/business-loans",
+   "page_no": 11,
+   "pages": 29,
    "step": "טוען עמוד"
   }
  ],
@@ -33829,6 +33829,1504 @@
    "diag": [
     "איי. די. איי. חברה: links=54 files=43 clicked=0 captured=0 selected=43",
     "איי. די. איי. חברה: links=26 files=15 clicked=0 captured=0 selected=9"
+   ],
+   "new_files": []
+  },
+  {
+   "legal_id": "513910703",
+   "name": "איי. די. איי. חברה לביטוח בע\"מ - מרכיבי תשואה",
+   "pages": [
+    {
+     "url": "https://www.555.co.il/about/hashkaot.html",
+     "cache": "hit",
+     "links": 26,
+     "followed": [
+      "https://www.555.co.il/about/"
+     ],
+     "files": 15,
+     "clicked": 0,
+     "captured": 0,
+     "selected": [],
+     "unselected_files": [
+      {
+       "file": "https://www.555.co.il/sites/default/files/Forms/medidyut2026.xlsx",
+       "text": "לצפייה",
+       "ctx": "2026 2025 2024 2023 2022 2021 2020 אמות מידה 2026 הצהרה מראש של גוף מוסדי על מדיניות ההשקעה שלו לצפי"
+      },
+      {
+       "file": "https://www.555.co.il/sites/default/files/Forms/ESG 2026_announcement.pdf",
+       "text": "לצפייה",
+       "ctx": "2026 2025 2024 2023 2022 2021 2020 אמות מידה 2026 הצהרה מראש של גוף מוסדי על מדיניות ההשקעה שלו לצפי"
+      },
+      {
+       "file": "https://www.555.co.il/sites/default/files/Forms/medidyut2025.xlsx",
+       "text": "לצפייה",
+       "ctx": "2026 2025 2024 2023 2022 2021 2020 אמות מידה 2026 הצהרה מראש של גוף מוסדי על מדיניות ההשקעה שלו לצפי"
+      },
+      {
+       "file": "https://www.555.co.il/sites/default/files/Forms/invest_policy_ESG_2025.pdf",
+       "text": "לצפייה",
+       "ctx": "2026 2025 2024 2023 2022 2021 2020 אמות מידה 2026 הצהרה מראש של גוף מוסדי על מדיניות ההשקעה שלו לצפי"
+      },
+      {
+       "file": "https://www.555.co.il/sites/default/files/General/medinyut_7.2024.xlsx",
+       "text": "לצפייה",
+       "ctx": "2026 2025 2024 2023 2022 2021 2020 אמות מידה 2026 הצהרה מראש של גוף מוסדי על מדיניות ההשקעה שלו לצפי"
+      },
+      {
+       "file": "https://www.555.co.il/sites/default/files/General/medinyut_new_2024.xlsx",
+       "text": "לצפייה",
+       "ctx": "2026 2025 2024 2023 2022 2021 2020 אמות מידה 2026 הצהרה מראש של גוף מוסדי על מדיניות ההשקעה שלו לצפי"
+      },
+      {
+       "file": "https://www.555.co.il/sites/default/files/General/invest_policy_ESG_2024_New.pdf.pdf",
+       "text": "לצפייה",
+       "ctx": "2026 2025 2024 2023 2022 2021 2020 אמות מידה 2026 הצהרה מראש של גוף מוסדי על מדיניות ההשקעה שלו לצפי"
+      },
+      {
+       "file": "https://www.555.co.il/sites/default/files/General/medidyut2023.xlsx",
+       "text": "לצפייה",
+       "ctx": "2026 2025 2024 2023 2022 2021 2020 אמות מידה 2026 הצהרה מראש של גוף מוסדי על מדיניות ההשקעה שלו לצפי"
+      },
+      {
+       "file": "https://www.555.co.il/sites/default/files/General/invest_policy_ESG_2023.pdf",
+       "text": "לצפייה",
+       "ctx": "2026 2025 2024 2023 2022 2021 2020 אמות מידה 2026 הצהרה מראש של גוף מוסדי על מדיניות ההשקעה שלו לצפי"
+      },
+      {
+       "file": "https://www.555.co.il/sites/default/files/Forms/medidyut2022_0.xlsx",
+       "text": "לצפייה",
+       "ctx": "2026 2025 2024 2023 2022 2021 2020 אמות מידה 2026 הצהרה מראש של גוף מוסדי על מדיניות ההשקעה שלו לצפי"
+      },
+      {
+       "file": "https://www.555.co.il/sites/default/files/Forms/integrating_esg_principles_investment_policies.pdf",
+       "text": "לצפייה",
+       "ctx": "2026 2025 2024 2023 2022 2021 2020 אמות מידה 2026 הצהרה מראש של גוף מוסדי על מדיניות ההשקעה שלו לצפי"
+      },
+      {
+       "file": "https://www.555.co.il/sites/default/files/General/medidyut2021.xlsx",
+       "text": "לצפייה",
+       "ctx": "2026 2025 2024 2023 2022 2021 2020 אמות מידה 2026 הצהרה מראש של גוף מוסדי על מדיניות ההשקעה שלו לצפי"
+      },
+      {
+       "file": "https://www.555.co.il/sites/default/files/Forms/medinyut2020.xlsx",
+       "text": "לצפייה",
+       "ctx": "2026 2025 2024 2023 2022 2021 2020 אמות מידה 2026 הצהרה מראש של גוף מוסדי על מדיניות ההשקעה שלו לצפי"
+      },
+      {
+       "file": "https://www.555.co.il/sites/default/files/Forms/Corporate governance standards 2026.pdf",
+       "text": "לצפייה",
+       "ctx": "2026 2025 2024 2023 2022 2021 2020 אמות מידה 2026 הצהרה מראש של גוף מוסדי על מדיניות ההשקעה שלו לצפי"
+      },
+      {
+       "file": "https://www.555.co.il/sites/default/files/General/invest_policy_ESG_2024_New.pdf",
+       "text": "(html)",
+       "ctx": ""
+      }
+     ]
+    },
+    {
+     "url": "https://www.555.co.il",
+     "cache": "expired",
+     "links": 186,
+     "followed": [
+      "https://www.555.co.il/webapp/clientlogin/login.html?service=onlineform&action=3"
+     ],
+     "files": 0,
+     "clicked": 0,
+     "captured": 0,
+     "selected": [],
+     "unselected_files": []
+    },
+    {
+     "url": "https://www.555.co.il/about/",
+     "cache": "hit",
+     "links": 29,
+     "followed": [
+      "https://www.555.co.il/about/financial_reports/",
+      "https://www.555.co.il/about/financial_reports/monthly_Reports.html",
+      "https://www.555.co.il/about/financial_reports/sides.html",
+      "https://www.555.co.il/about/financial_reports/investments_baskets/investments_baskets_single.html",
+      "https://www.555.co.il/about/financial_reports/tsua.html",
+      "https://www.555.co.il/about/financial_reports/nostro/",
+      "https://www.555.co.il/about/financial_reports/direct_expense.html",
+      "https://www.555.co.il/about/financial_reports/piraon.html",
+      "https://www.555.co.il/about/financial_reports/participating_portfolio.html"
+     ],
+     "files": 3,
+     "clicked": 0,
+     "captured": 0,
+     "selected": [],
+     "unselected_files": [
+      {
+       "file": "https://www.555.co.il/sites/default/files/Forms/tsuot-Savings.xlsx",
+       "text": "תשואות והרכב נכסים",
+       "ctx": "תשואות והרכב נכסים"
+      },
+      {
+       "file": "https://www.555.co.il/sites/default/files/Forms/tsuot50_Savings.pdf",
+       "text": "תשואות מסלול לבני 50 ומטה",
+       "ctx": "תשואות מסלול לבני 50 ומטה"
+      },
+      {
+       "file": "https://www.555.co.il/sites/default/files/Forms/services-to-the-elderly-new-announcement-2025.pdf",
+       "text": "דוח ממונה אזרחים ותיקים",
+       "ctx": "דוח ממונה אזרחים ותיקים"
+      }
+     ]
+    },
+    {
+     "url": "https://www.555.co.il/webapp/clientlogin/login.html?service=onlineform&action=3",
+     "cache": "expired",
+     "links": 1,
+     "followed": [],
+     "files": 0,
+     "clicked": 0,
+     "captured": 0,
+     "selected": [],
+     "unselected_files": []
+    },
+    {
+     "url": "https://www.555.co.il/about/financial_reports/",
+     "cache": "hit",
+     "links": 145,
+     "followed": [
+      "https://www.555.co.il/financial_reports/report_31_12_25.html",
+      "https://www.555.co.il/financial_reports/report_30_09_25.html",
+      "https://www.555.co.il/financial_reports/report_30_06_25.html",
+      "https://www.555.co.il/financial_reports/report_31_03_25.html",
+      "https://www.555.co.il/financial_reports/report_31_12_24.html",
+      "https://www.555.co.il/financial_reports/report_30_09_24.html",
+      "https://www.555.co.il/financial_reports/report_30_06_24.html",
+      "https://www.555.co.il/financial_reports/report_31_03_24.html",
+      "https://www.555.co.il/financial_reports/report_31_12_23.html"
+     ],
+     "files": 95,
+     "clicked": 0,
+     "captured": 0,
+     "selected": [],
+     "unselected_files": [
+      {
+       "file": "https://www.555.co.il/sites/default/files/Forms/DIRIN226-Q2-2026-announcement-compressed.pdf",
+       "text": "דוח כספי Q2 - איי.די.איי ביטוח",
+       "ctx": "דוח כספי Q2 - איי.די.איי ביטוח"
+      },
+      {
+       "file": "https://www.555.co.il/sites/default/files/Forms/Investor-presentation-2026-Q2-announcement-compressed.pdf",
+       "text": "מצגת משקיעים Q2",
+       "ctx": "מצגת משקיעים Q2"
+      },
+      {
+       "file": "https://www.555.co.il/sites/default/files/Forms/שיחת משקיעים רבעון 2 שנת 2026_0_0_0.pdf",
+       "text": "לתמלול שיחת משקיעים",
+       "ctx": "לתמלול שיחת משקיעים"
+      },
+      {
+       "file": "https://www.555.co.il/sites/default/files/Forms/DIRIN126_isa_announcement.pdf",
+       "text": "דוח כספי Q1 - איי.די.איי ביטוח",
+       "ctx": "דוח כספי Q1 - איי.די.איי ביטוח"
+      },
+      {
+       "file": "https://www.555.co.il/sites/default/files/Forms/HANPAKOT126_isa.pdf",
+       "text": "דוח כספי Q1 - איי.די.איי הנפקות",
+       "ctx": "דוח כספי Q1 - איי.די.איי הנפקות"
+      },
+      {
+       "file": "https://www.555.co.il/sites/default/files/Forms/Investor-presentation-2026-Q1-announcement_0.pdf",
+       "text": "מצגת משקיעים - Q1",
+       "ctx": "מצגת משקיעים - Q1"
+      },
+      {
+       "file": "https://www.555.co.il/sites/default/files/General/DIRIN425_announcement-compressed_0.pdf",
+       "text": "דוח כספי שנתי - איי.די.איי ביטוח",
+       "ctx": "דוח כספי שנתי - איי.די.איי ביטוח"
+      },
+      {
+       "file": "https://www.555.co.il/sites/default/files/Forms/HANPAKOT425_isa.pdf",
+       "text": "דוח כספי שנתי - איי.די.איי הנפקות",
+       "ctx": "דוח כספי שנתי - איי.די.איי הנפקות"
+      },
+      {
+       "file": "https://www.555.co.il/sites/default/files/General/IDI-Investor-Presentation-425-announcement-compressed.pdf",
+       "text": "מצגת משקיעים Q4",
+       "ctx": "מצגת משקיעים Q4"
+      },
+      {
+       "file": "https://www.555.co.il/sites/default/files/Forms/שיחת משקיעים רבעון 4 ושנתי 2025.docx_0_0.pdf",
+       "text": "לתמלול שיחת משקיעים",
+       "ctx": "לתמלול שיחת משקיעים"
+      },
+      {
+       "file": "https://www.555.co.il/sites/default/files/Forms/DIRIN325_announcement.pdf",
+       "text": "דוח כספי Q3 - איי.די.איי ביטוח",
+       "ctx": "דוח כספי Q3 - איי.די.איי ביטוח"
+      },
+      {
+       "file": "https://www.555.co.il/sites/default/files/Forms/HANPAKOT_325_announcement.pdf",
+       "text": "דוח כספי Q3 - איי.די.איי הנפקות",
+       "ctx": "דוח כספי Q3 - איי.די.איי הנפקות"
+      },
+      {
+       "file": "https://www.555.co.il/sites/default/files/Forms/IDI_Investor_Presentation_325.pdf",
+       "text": "מצגת משקיעים Q3",
+       "ctx": "מצגת משקיעים Q3"
+      },
+      {
+       "file": "https://www.555.co.il/sites/default/files/Forms/שיחת משקיעים רבעון 3 שנת 2025_0_0_0.pdf",
+       "text": "לתמלול שיחת משקיעים",
+       "ctx": "לתמלול שיחת משקיעים"
+      },
+      {
+       "file": "https://www.555.co.il/sites/default/files/Forms/finnantial_report_q2_2025_bituh_mungash_0.pdf",
+       "text": "דוח כספי Q2 - איי.די.איי ביטוח",
+       "ctx": "דוח כספי Q2 - איי.די.איי ביטוח"
+      },
+      {
+       "file": "https://www.555.co.il/sites/default/files/Forms/finnantial_report_q2_2025_hanpakot.pdf",
+       "text": "דוח כספי Q2 - איי.די.איי הנפקות",
+       "ctx": "דוח כספי Q2 - איי.די.איי הנפקות"
+      },
+      {
+       "file": "https://www.555.co.il/sites/default/files/Forms/Investor_Presentation_2_2025_mungash.pdf",
+       "text": "מצגת משקיעים Q2",
+       "ctx": "מצגת משקיעים Q2"
+      },
+      {
+       "file": "https://www.555.co.il/sites/default/files/Forms/שיחת משקיעים רבעון 2 שנת 2025.docx_announcement_0.pdf",
+       "text": "לתמלול שיחת משקיעים",
+       "ctx": "לתמלול שיחת משקיעים"
+      },
+      {
+       "file": "https://www.555.co.il/sites/default/files/Forms/finnantial_report_q1_2025_bituh_mungash.pdf",
+       "text": "דוח כספי Q1 - איי.די.איי ביטוח",
+       "ctx": "דוח כספי Q1 - איי.די.איי ביטוח"
+      },
+      {
+       "file": "https://www.555.co.il/sites/default/files/Forms/q1_financial_report_2025_hanpkot.pdf",
+       "text": "דוח כספי Q1 - איי.די.איי הנפקות",
+       "ctx": "דוח כספי Q1 - איי.די.איי הנפקות"
+      },
+      {
+       "file": "https://www.555.co.il/sites/default/files/Forms/Investor_Presentation_1_2025_mungash.pdf",
+       "text": "מצגת משקיעים Q1",
+       "ctx": "מצגת משקיעים Q1"
+      },
+      {
+       "file": "https://www.555.co.il/sites/default/files/Forms/שיחת משקיעים רבעון 1 שנת 2025.docx_announcement_0.pdf",
+       "text": "לתמלול שיחת משקיעים",
+       "ctx": "לתמלול שיחת משקיעים"
+      },
+      {
+       "file": "https://www.555.co.il/sites/default/files/Forms/annual_report_Mungash_IDI_2024.pdf.pdf",
+       "text": "דוח כספי שנתי - איי.די.איי ביטוח",
+       "ctx": "דוח כספי שנתי - איי.די.איי ביטוח"
+      },
+      {
+       "file": "https://www.555.co.il/sites/default/files/Forms/annual_report_Mungash_Hanpakot_2024.pdf.pdf",
+       "text": "דוח כספי שנתי - איי.די.איי ביטוח",
+       "ctx": "דוח כספי שנתי - איי.די.איי ביטוח"
+      },
+      {
+       "file": "https://www.555.co.il/sites/default/files/General/Investor_Presentation_2024.pdf",
+       "text": "מצגת משקיעים Q4",
+       "ctx": "מצגת משקיעים Q4"
+      }
+     ]
+    },
+    {
+     "url": "https://www.555.co.il/about/financial_reports/monthly_Reports.html",
+     "cache": "changed",
+     "links": 215,
+     "followed": [],
+     "files": 58,
+     "clicked": 0,
+     "captured": 0,
+     "selected": [],
+     "unselected_files": [
+      {
+       "file": "https://www.555.co.il/sites/default/files/Forms/sep2026.xlsx",
+       "text": "דוח חודשי ספטמבר 2026",
+       "ctx": "2026 2025 2024 2023 2022 2026 דוח חודשי ספטמבר 2026 דוח חודשי אוגוסט 2026 דוח חודשי יולי 2026 דוח חו"
+      },
+      {
+       "file": "https://www.555.co.il/sites/default/files/Forms/aug2026.xlsx",
+       "text": "דוח חודשי אוגוסט 2026",
+       "ctx": "2026 2025 2024 2023 2022 2026 דוח חודשי ספטמבר 2026 דוח חודשי אוגוסט 2026 דוח חודשי יולי 2026 דוח חו"
+      },
+      {
+       "file": "https://www.555.co.il/sites/default/files/Forms/July2026.xlsx",
+       "text": "דוח חודשי יולי 2026",
+       "ctx": "2026 2025 2024 2023 2022 2026 דוח חודשי ספטמבר 2026 דוח חודשי אוגוסט 2026 דוח חודשי יולי 2026 דוח חו"
+      },
+      {
+       "file": "https://www.555.co.il/sites/default/files/Forms/June2026.xlsx",
+       "text": "דוח חודשי יוני 2026",
+       "ctx": "2026 2025 2024 2023 2022 2026 דוח חודשי ספטמבר 2026 דוח חודשי אוגוסט 2026 דוח חודשי יולי 2026 דוח חו"
+      },
+      {
+       "file": "https://www.555.co.il/sites/default/files/Forms/may2026.xlsx",
+       "text": "דוח חודשי מאי 2026",
+       "ctx": "2026 2025 2024 2023 2022 2026 דוח חודשי ספטמבר 2026 דוח חודשי אוגוסט 2026 דוח חודשי יולי 2026 דוח חו"
+      },
+      {
+       "file": "https://www.555.co.il/sites/default/files/Forms/apr2026.xlsx",
+       "text": "דוח חודשי אפריל 2026",
+       "ctx": "2026 2025 2024 2023 2022 2026 דוח חודשי ספטמבר 2026 דוח חודשי אוגוסט 2026 דוח חודשי יולי 2026 דוח חו"
+      },
+      {
+       "file": "https://www.555.co.il/sites/default/files/Forms/march2026.xlsx",
+       "text": "דוח חודשי מרץ 2026",
+       "ctx": "2026 2025 2024 2023 2022 2026 דוח חודשי ספטמבר 2026 דוח חודשי אוגוסט 2026 דוח חודשי יולי 2026 דוח חו"
+      },
+      {
+       "file": "https://www.555.co.il/sites/default/files/Forms/feb2026.xlsx",
+       "text": "דוח חודשי פברואר 2026",
+       "ctx": "2026 2025 2024 2023 2022 2026 דוח חודשי ספטמבר 2026 דוח חודשי אוגוסט 2026 דוח חודשי יולי 2026 דוח חו"
+      },
+      {
+       "file": "https://www.555.co.il/sites/default/files/Forms/january2026.xlsx",
+       "text": "דוח חודשי ינואר 2026",
+       "ctx": "2026 2025 2024 2023 2022 2026 דוח חודשי ספטמבר 2026 דוח חודשי אוגוסט 2026 דוח חודשי יולי 2026 דוח חו"
+      },
+      {
+       "file": "https://www.555.co.il/sites/default/files/Forms/dec2025.xlsx",
+       "text": "דוח חודשי דצמבר 2025",
+       "ctx": "2026 2025 2024 2023 2022 2026 דוח חודשי ספטמבר 2026 דוח חודשי אוגוסט 2026 דוח חודשי יולי 2026 דוח חו"
+      },
+      {
+       "file": "https://www.555.co.il/sites/default/files/Forms/november2025.xlsx",
+       "text": "דוח חודשי נובמבר 2025",
+       "ctx": "2026 2025 2024 2023 2022 2026 דוח חודשי ספטמבר 2026 דוח חודשי אוגוסט 2026 דוח חודשי יולי 2026 דוח חו"
+      },
+      {
+       "file": "https://www.555.co.il/sites/default/files/Forms/oct2025.xlsx",
+       "text": "דוח חודשי אוקטובר 2025",
+       "ctx": "2026 2025 2024 2023 2022 2026 דוח חודשי ספטמבר 2026 דוח חודשי אוגוסט 2026 דוח חודשי יולי 2026 דוח חו"
+      },
+      {
+       "file": "https://www.555.co.il/sites/default/files/Forms/sep2025.xlsx",
+       "text": "דוח חודשי ספטמבר 2025",
+       "ctx": "2026 2025 2024 2023 2022 2026 דוח חודשי ספטמבר 2026 דוח חודשי אוגוסט 2026 דוח חודשי יולי 2026 דוח חו"
+      },
+      {
+       "file": "https://www.555.co.il/sites/default/files/Forms/August_2025.xlsx",
+       "text": "דוח חודשי אוגוסט 2025",
+       "ctx": "2026 2025 2024 2023 2022 2026 דוח חודשי ספטמבר 2026 דוח חודשי אוגוסט 2026 דוח חודשי יולי 2026 דוח חו"
+      },
+      {
+       "file": "https://www.555.co.il/sites/default/files/Forms/july2025.xlsx",
+       "text": "דוח חודשי יולי 2025",
+       "ctx": "2026 2025 2024 2023 2022 2026 דוח חודשי ספטמבר 2026 דוח חודשי אוגוסט 2026 דוח חודשי יולי 2026 דוח חו"
+      },
+      {
+       "file": "https://www.555.co.il/sites/default/files/General/june2025.xlsx",
+       "text": "דוח חודשי יוני 2025",
+       "ctx": "2026 2025 2024 2023 2022 2026 דוח חודשי ספטמבר 2026 דוח חודשי אוגוסט 2026 דוח חודשי יולי 2026 דוח חו"
+      },
+      {
+       "file": "https://www.555.co.il/sites/default/files/Forms/may2025.xlsx",
+       "text": "דוח חודשי מאי 2025",
+       "ctx": "2026 2025 2024 2023 2022 2026 דוח חודשי ספטמבר 2026 דוח חודשי אוגוסט 2026 דוח חודשי יולי 2026 דוח חו"
+      },
+      {
+       "file": "https://www.555.co.il/sites/default/files/Forms/april2025_0.xlsx",
+       "text": "דוח חודשי אפריל 2025",
+       "ctx": "2026 2025 2024 2023 2022 2026 דוח חודשי ספטמבר 2026 דוח חודשי אוגוסט 2026 דוח חודשי יולי 2026 דוח חו"
+      },
+      {
+       "file": "https://www.555.co.il/sites/default/files/Forms/march2025.xlsx",
+       "text": "דוח חודשי מרץ 2025",
+       "ctx": "2026 2025 2024 2023 2022 2026 דוח חודשי ספטמבר 2026 דוח חודשי אוגוסט 2026 דוח חודשי יולי 2026 דוח חו"
+      },
+      {
+       "file": "https://www.555.co.il/sites/default/files/Forms/february2025.xlsx",
+       "text": "דוח חודשי פברואר 2025",
+       "ctx": "2026 2025 2024 2023 2022 2026 דוח חודשי ספטמבר 2026 דוח חודשי אוגוסט 2026 דוח חודשי יולי 2026 דוח חו"
+      },
+      {
+       "file": "https://www.555.co.il/sites/default/files/Forms/january2025_0.xlsx",
+       "text": "דוח חודשי ינואר 2025",
+       "ctx": "2026 2025 2024 2023 2022 2026 דוח חודשי ספטמבר 2026 דוח חודשי אוגוסט 2026 דוח חודשי יולי 2026 דוח חו"
+      },
+      {
+       "file": "https://www.555.co.il/sites/default/files/Forms/december_2024.xlsx",
+       "text": "דוח חודשי דצמבר 2024",
+       "ctx": "2026 2025 2024 2023 2022 2026 דוח חודשי ספטמבר 2026 דוח חודשי אוגוסט 2026 דוח חודשי יולי 2026 דוח חו"
+      },
+      {
+       "file": "https://www.555.co.il/sites/default/files/Forms/november_2024_0.xlsx",
+       "text": "דוח חודשי נובמבר 2024",
+       "ctx": "2026 2025 2024 2023 2022 2026 דוח חודשי ספטמבר 2026 דוח חודשי אוגוסט 2026 דוח חודשי יולי 2026 דוח חו"
+      },
+      {
+       "file": "https://www.555.co.il/sites/default/files/Forms/october_2024.xlsx",
+       "text": "דוח חודשי אוקטובר 2024",
+       "ctx": "2026 2025 2024 2023 2022 2026 דוח חודשי ספטמבר 2026 דוח חודשי אוגוסט 2026 דוח חודשי יולי 2026 דוח חו"
+      },
+      {
+       "file": "https://www.555.co.il/sites/default/files/Forms/September_2024_0.xlsx",
+       "text": "דוח חודשי ספטמבר 2024",
+       "ctx": "2026 2025 2024 2023 2022 2026 דוח חודשי ספטמבר 2026 דוח חודשי אוגוסט 2026 דוח חודשי יולי 2026 דוח חו"
+      }
+     ]
+    },
+    {
+     "url": "https://www.555.co.il/about/financial_reports/sides.html",
+     "cache": "hit",
+     "links": 33,
+     "followed": [],
+     "files": 6,
+     "clicked": 0,
+     "captured": 0,
+     "selected": [],
+     "unselected_files": [
+      {
+       "file": "https://www.555.co.il/sites/default/files/Forms/kshurim2025.xlsx",
+       "text": "להורדה",
+       "ctx": "2025 2024 2023 2022 2021 2020 עסקאות והשקעות בצדדים קשורים לשנת 2025 דוח צדדים קשורים 31/12/25 להורד"
+      },
+      {
+       "file": "https://www.555.co.il/sites/default/files/Forms/kshurim2024.xlsx",
+       "text": "להורדה",
+       "ctx": "2025 2024 2023 2022 2021 2020 עסקאות והשקעות בצדדים קשורים לשנת 2025 דוח צדדים קשורים 31/12/25 להורד"
+      },
+      {
+       "file": "https://www.555.co.il/sites/default/files/General/kshurim2023.xlsx",
+       "text": "להורדה",
+       "ctx": "2025 2024 2023 2022 2021 2020 עסקאות והשקעות בצדדים קשורים לשנת 2025 דוח צדדים קשורים 31/12/25 להורד"
+      },
+      {
+       "file": "https://www.555.co.il/sites/default/files/General/kshurim2022.xlsx",
+       "text": "להורדה",
+       "ctx": "2025 2024 2023 2022 2021 2020 עסקאות והשקעות בצדדים קשורים לשנת 2025 דוח צדדים קשורים 31/12/25 להורד"
+      },
+      {
+       "file": "https://www.555.co.il/sites/default/files/Forms/kshurim2021.xlsx",
+       "text": "להורדה",
+       "ctx": "2025 2024 2023 2022 2021 2020 עסקאות והשקעות בצדדים קשורים לשנת 2025 דוח צדדים קשורים 31/12/25 להורד"
+      },
+      {
+       "file": "https://www.555.co.il/sites/default/files/Forms/kshurim2020.xlsx",
+       "text": "להורדה",
+       "ctx": "2025 2024 2023 2022 2021 2020 עסקאות והשקעות בצדדים קשורים לשנת 2025 דוח צדדים קשורים 31/12/25 להורד"
+      }
+     ]
+    },
+    {
+     "url": "https://www.555.co.il/about/financial_reports/investments_baskets/investments_baskets_single.html",
+     "cache": "hit",
+     "links": 76,
+     "followed": [],
+     "files": 50,
+     "clicked": 0,
+     "captured": 0,
+     "selected": [],
+     "unselected_files": [
+      {
+       "file": "https://www.555.co.il/sites/default/files/Forms/עותק של 513910703_in_p_0226_0.xlsx",
+       "text": "לצפייה",
+       "ctx": "2026 2025 2024 2023 2022 פירוט נכסים ברמת הנכס הבודד 2026 רבעון 2 לצפייה רבעון 1 לצפייה פירוט נכסים "
+      },
+      {
+       "file": "https://www.555.co.il/sites/default/files/Forms/513910703_in_p_0126_0.xlsx",
+       "text": "לצפייה",
+       "ctx": "2026 2025 2024 2023 2022 פירוט נכסים ברמת הנכס הבודד 2026 רבעון 2 לצפייה רבעון 1 לצפייה פירוט נכסים "
+      },
+      {
+       "file": "https://www.555.co.il/sites/default/files/Forms/513910703_in_p_0425.xlsx",
+       "text": "לצפייה",
+       "ctx": "2026 2025 2024 2023 2022 פירוט נכסים ברמת הנכס הבודד 2026 רבעון 2 לצפייה רבעון 1 לצפייה פירוט נכסים "
+      },
+      {
+       "file": "https://www.555.co.il/sites/default/files/Forms/513910703_in_p_0325.xlsx",
+       "text": "לצפייה",
+       "ctx": "2026 2025 2024 2023 2022 פירוט נכסים ברמת הנכס הבודד 2026 רבעון 2 לצפייה רבעון 1 לצפייה פירוט נכסים "
+      },
+      {
+       "file": "https://www.555.co.il/sites/default/files/Forms/513910703_in_p_0225_1.xlsx",
+       "text": "לצפייה",
+       "ctx": "2026 2025 2024 2023 2022 פירוט נכסים ברמת הנכס הבודד 2026 רבעון 2 לצפייה רבעון 1 לצפייה פירוט נכסים "
+      },
+      {
+       "file": "https://www.555.co.il/sites/default/files/Forms/513910703_in_p_0125.xlsx",
+       "text": "לצפייה",
+       "ctx": "2026 2025 2024 2023 2022 פירוט נכסים ברמת הנכס הבודד 2026 רבעון 2 לצפייה רבעון 1 לצפייה פירוט נכסים "
+      },
+      {
+       "file": "https://www.555.co.il/sites/default/files/Forms/513910703_in_p_0424.xlsx",
+       "text": "לצפייה",
+       "ctx": "2026 2025 2024 2023 2022 פירוט נכסים ברמת הנכס הבודד 2026 רבעון 2 לצפייה רבעון 1 לצפייה פירוט נכסים "
+      },
+      {
+       "file": "https://www.555.co.il/sites/default/files/Forms/513910703_in_p_0324_2.xlsx",
+       "text": "לצפייה",
+       "ctx": "2026 2025 2024 2023 2022 פירוט נכסים ברמת הנכס הבודד 2026 רבעון 2 לצפייה רבעון 1 לצפייה פירוט נכסים "
+      },
+      {
+       "file": "https://www.555.co.il/sites/default/files/Forms/513910703_in_p_0324.xlsx",
+       "text": "לצפייה",
+       "ctx": "2026 2025 2024 2023 2022 פירוט נכסים ברמת הנכס הבודד 2026 רבעון 2 לצפייה רבעון 1 לצפייה פירוט נכסים "
+      },
+      {
+       "file": "https://www.555.co.il/sites/default/files/Forms/513910703_in_p_0124_0.xlsx",
+       "text": "לצפייה",
+       "ctx": "2026 2025 2024 2023 2022 פירוט נכסים ברמת הנכס הבודד 2026 רבעון 2 לצפייה רבעון 1 לצפייה פירוט נכסים "
+      },
+      {
+       "file": "https://www.555.co.il/sites/default/files/General/513910703_b1_P423.xlsx",
+       "text": "לצפייה",
+       "ctx": "2026 2025 2024 2023 2022 פירוט נכסים ברמת הנכס הבודד 2026 רבעון 2 לצפייה רבעון 1 לצפייה פירוט נכסים "
+      },
+      {
+       "file": "https://www.555.co.il/sites/default/files/General/513910703_b98_P423.xlsx",
+       "text": "לצפייה",
+       "ctx": "2026 2025 2024 2023 2022 פירוט נכסים ברמת הנכס הבודד 2026 רבעון 2 לצפייה רבעון 1 לצפייה פירוט נכסים "
+      },
+      {
+       "file": "https://www.555.co.il/sites/default/files/General/513910703_b108_P423.xlsx",
+       "text": "לצפייה",
+       "ctx": "2026 2025 2024 2023 2022 פירוט נכסים ברמת הנכס הבודד 2026 רבעון 2 לצפייה רבעון 1 לצפייה פירוט נכסים "
+      },
+      {
+       "file": "https://www.555.co.il/sites/default/files/General/513910703_b12895_P423.xlsx",
+       "text": "לצפייה",
+       "ctx": "2026 2025 2024 2023 2022 פירוט נכסים ברמת הנכס הבודד 2026 רבעון 2 לצפייה רבעון 1 לצפייה פירוט נכסים "
+      },
+      {
+       "file": "https://www.555.co.il/sites/default/files/General/513910703_bsum_P423.xlsx",
+       "text": "לצפייה",
+       "ctx": "2026 2025 2024 2023 2022 פירוט נכסים ברמת הנכס הבודד 2026 רבעון 2 לצפייה רבעון 1 לצפייה פירוט נכסים "
+      },
+      {
+       "file": "https://www.555.co.il/sites/default/files/General/513910703_b1_P323.xlsx",
+       "text": "לצפייה",
+       "ctx": "2026 2025 2024 2023 2022 פירוט נכסים ברמת הנכס הבודד 2026 רבעון 2 לצפייה רבעון 1 לצפייה פירוט נכסים "
+      },
+      {
+       "file": "https://www.555.co.il/sites/default/files/General/513910703_b98_P323.xlsx",
+       "text": "לצפייה",
+       "ctx": "2026 2025 2024 2023 2022 פירוט נכסים ברמת הנכס הבודד 2026 רבעון 2 לצפייה רבעון 1 לצפייה פירוט נכסים "
+      },
+      {
+       "file": "https://www.555.co.il/sites/default/files/General/513910703_b108_P323.xlsx",
+       "text": "לצפייה",
+       "ctx": "2026 2025 2024 2023 2022 פירוט נכסים ברמת הנכס הבודד 2026 רבעון 2 לצפייה רבעון 1 לצפייה פירוט נכסים "
+      },
+      {
+       "file": "https://www.555.co.il/sites/default/files/General/513910703_b12895_P323.xlsx",
+       "text": "לצפייה",
+       "ctx": "2026 2025 2024 2023 2022 פירוט נכסים ברמת הנכס הבודד 2026 רבעון 2 לצפייה רבעון 1 לצפייה פירוט נכסים "
+      },
+      {
+       "file": "https://www.555.co.il/sites/default/files/General/513910703_bsum_P323.xlsx",
+       "text": "לצפייה",
+       "ctx": "2026 2025 2024 2023 2022 פירוט נכסים ברמת הנכס הבודד 2026 רבעון 2 לצפייה רבעון 1 לצפייה פירוט נכסים "
+      },
+      {
+       "file": "https://www.555.co.il/sites/default/files/General/513910703_b1_P223.xlsx",
+       "text": "לצפייה",
+       "ctx": "2026 2025 2024 2023 2022 פירוט נכסים ברמת הנכס הבודד 2026 רבעון 2 לצפייה רבעון 1 לצפייה פירוט נכסים "
+      },
+      {
+       "file": "https://www.555.co.il/sites/default/files/General/513910703_b98_P223.xlsx",
+       "text": "לצפייה",
+       "ctx": "2026 2025 2024 2023 2022 פירוט נכסים ברמת הנכס הבודד 2026 רבעון 2 לצפייה רבעון 1 לצפייה פירוט נכסים "
+      },
+      {
+       "file": "https://www.555.co.il/sites/default/files/General/513910703_b108_P223.xlsx",
+       "text": "לצפייה",
+       "ctx": "2026 2025 2024 2023 2022 פירוט נכסים ברמת הנכס הבודד 2026 רבעון 2 לצפייה רבעון 1 לצפייה פירוט נכסים "
+      },
+      {
+       "file": "https://www.555.co.il/sites/default/files/General/513910703_b12895_P223.xlsx",
+       "text": "לצפייה",
+       "ctx": "2026 2025 2024 2023 2022 פירוט נכסים ברמת הנכס הבודד 2026 רבעון 2 לצפייה רבעון 1 לצפייה פירוט נכסים "
+      },
+      {
+       "file": "https://www.555.co.il/sites/default/files/General/513910703_bsum_P223.xlsx",
+       "text": "לצפייה",
+       "ctx": "2026 2025 2024 2023 2022 פירוט נכסים ברמת הנכס הבודד 2026 רבעון 2 לצפייה רבעון 1 לצפייה פירוט נכסים "
+      }
+     ]
+    },
+    {
+     "url": "https://www.555.co.il/about/financial_reports/tsua.html",
+     "cache": "changed",
+     "links": 186,
+     "followed": [],
+     "files": 27,
+     "clicked": 0,
+     "captured": 0,
+     "selected": [],
+     "unselected_files": [
+      {
+       "file": "https://www.555.co.il/sites/default/files/Forms/tsuaa_30.09.26.xlsx",
+       "text": "לצפייה בדוח המעודכן לרבעון 3 - 2026",
+       "ctx": "2026 2025 2024 2023 2022 2021 2020 2026 לצפייה בדוח המעודכן לרבעון 3 - 2026 לצפייה בדוח המעודכן לרבע"
+      },
+      {
+       "file": "https://www.555.co.il/sites/default/files/Forms/tsuaa30.06.26.xlsx",
+       "text": "לצפייה בדוח המעודכן לרבעון 2 - 2026",
+       "ctx": "2026 2025 2024 2023 2022 2021 2020 2026 לצפייה בדוח המעודכן לרבעון 3 - 2026 לצפייה בדוח המעודכן לרבע"
+      },
+      {
+       "file": "https://www.555.co.il/sites/default/files/Forms/tsuaa_31.03.26.xlsx",
+       "text": "לצפייה בדוח המעודכן לרבעון 1 - 2026",
+       "ctx": "2026 2025 2024 2023 2022 2021 2020 2026 לצפייה בדוח המעודכן לרבעון 3 - 2026 לצפייה בדוח המעודכן לרבע"
+      },
+      {
+       "file": "https://www.555.co.il/sites/default/files/Forms/tsuaa_31.12.25.xlsx",
+       "text": "לצפייה בדוח המעודכן לרבעון 4 - 2025",
+       "ctx": "2026 2025 2024 2023 2022 2021 2020 2026 לצפייה בדוח המעודכן לרבעון 3 - 2026 לצפייה בדוח המעודכן לרבע"
+      },
+      {
+       "file": "https://www.555.co.il/sites/default/files/Forms/tsuaa_30.09.25.xlsx",
+       "text": "לצפייה בדוח המעודכן לרבעון 3 - 2025",
+       "ctx": "2026 2025 2024 2023 2022 2021 2020 2026 לצפייה בדוח המעודכן לרבעון 3 - 2026 לצפייה בדוח המעודכן לרבע"
+      },
+      {
+       "file": "https://www.555.co.il/sites/default/files/General/tsuaa_30.06.25.xlsx",
+       "text": "לצפייה בדוח המעודכן לרבעון 2 - 2025",
+       "ctx": "2026 2025 2024 2023 2022 2021 2020 2026 לצפייה בדוח המעודכן לרבעון 3 - 2026 לצפייה בדוח המעודכן לרבע"
+      },
+      {
+       "file": "https://www.555.co.il/sites/default/files/Forms/tsuaa_31.03.25.xlsx",
+       "text": "לצפייה בדוח המעודכן לרבעון 1 - 2025",
+       "ctx": "2026 2025 2024 2023 2022 2021 2020 2026 לצפייה בדוח המעודכן לרבעון 3 - 2026 לצפייה בדוח המעודכן לרבע"
+      },
+      {
+       "file": "https://www.555.co.il/sites/default/files/Forms/tsuaa_31.12.2024.xlsx",
+       "text": "לצפייה בדוח המעודכן לרבעון 4 - 2024",
+       "ctx": "2026 2025 2024 2023 2022 2021 2020 2026 לצפייה בדוח המעודכן לרבעון 3 - 2026 לצפייה בדוח המעודכן לרבע"
+      },
+      {
+       "file": "https://www.555.co.il/sites/default/files/Forms/tsuaa_30.09.24.xlsx",
+       "text": "לצפייה בדוח המעודכן לרבעון 3 - 2024",
+       "ctx": "2026 2025 2024 2023 2022 2021 2020 2026 לצפייה בדוח המעודכן לרבעון 3 - 2026 לצפייה בדוח המעודכן לרבע"
+      },
+      {
+       "file": "https://www.555.co.il/sites/default/files/Forms/tsuaa_30.06.24.xlsx",
+       "text": "לצפייה בדוח המעודכן לרבעון 2 - 2024",
+       "ctx": "2026 2025 2024 2023 2022 2021 2020 2026 לצפייה בדוח המעודכן לרבעון 3 - 2026 לצפייה בדוח המעודכן לרבע"
+      },
+      {
+       "file": "https://www.555.co.il/sites/default/files/General/tsuaa_31.03.24.xlsx",
+       "text": "לצפייה בדוח המעודכן לרבעון 1 - 2024",
+       "ctx": "2026 2025 2024 2023 2022 2021 2020 2026 לצפייה בדוח המעודכן לרבעון 3 - 2026 לצפייה בדוח המעודכן לרבע"
+      },
+      {
+       "file": "https://www.555.co.il/sites/default/files/General/tsuaa31.12.2023.xlsx",
+       "text": "לצפייה בדוח המעודכן לרבעון 4 - 2023",
+       "ctx": "2026 2025 2024 2023 2022 2021 2020 2026 לצפייה בדוח המעודכן לרבעון 3 - 2026 לצפייה בדוח המעודכן לרבע"
+      },
+      {
+       "file": "https://www.555.co.il/sites/default/files/General/tsuaa30.09.23.xlsx",
+       "text": "לצפייה בדוח המעודכן לרבעון 3 - 2023",
+       "ctx": "2026 2025 2024 2023 2022 2021 2020 2026 לצפייה בדוח המעודכן לרבעון 3 - 2026 לצפייה בדוח המעודכן לרבע"
+      },
+      {
+       "file": "https://www.555.co.il/sites/default/files/General/tsuaa30.6.2023_New.xlsx",
+       "text": "לצפייה בדוח המעודכן לרבעון 2 - 2023",
+       "ctx": "2026 2025 2024 2023 2022 2021 2020 2026 לצפייה בדוח המעודכן לרבעון 3 - 2026 לצפייה בדוח המעודכן לרבע"
+      },
+      {
+       "file": "https://www.555.co.il/sites/default/files/General/tsuaa31.03.2023.xlsx",
+       "text": "לצפייה בדוח המעודכן לרבעון 1 - 2023",
+       "ctx": "2026 2025 2024 2023 2022 2021 2020 2026 לצפייה בדוח המעודכן לרבעון 3 - 2026 לצפייה בדוח המעודכן לרבע"
+      },
+      {
+       "file": "https://www.555.co.il/sites/default/files/General/tsuaa31.12.2022_1.xlsx",
+       "text": "לצפייה בדוח המעודכן לרבעון 4 - 2022",
+       "ctx": "2026 2025 2024 2023 2022 2021 2020 2026 לצפייה בדוח המעודכן לרבעון 3 - 2026 לצפייה בדוח המעודכן לרבע"
+      },
+      {
+       "file": "https://www.555.co.il/sites/default/files/Forms/tsuaa30.09.2022.xlsx",
+       "text": "לצפייה בדוח המעודכן לרבעון 3 - 2022",
+       "ctx": "2026 2025 2024 2023 2022 2021 2020 2026 לצפייה בדוח המעודכן לרבעון 3 - 2026 לצפייה בדוח המעודכן לרבע"
+      },
+      {
+       "file": "https://www.555.co.il/sites/default/files/Forms/tsuaa30.06.22.xlsx",
+       "text": "לצפייה בדוח המעודכן לרבעון 2 - 2022",
+       "ctx": "2026 2025 2024 2023 2022 2021 2020 2026 לצפייה בדוח המעודכן לרבעון 3 - 2026 לצפייה בדוח המעודכן לרבע"
+      },
+      {
+       "file": "https://www.555.co.il/sites/default/files/Forms/tsuaa31.03.2022.xlsx",
+       "text": "לצפייה בדוח המעודכן לרבעון 1 - 2022",
+       "ctx": "2026 2025 2024 2023 2022 2021 2020 2026 לצפייה בדוח המעודכן לרבעון 3 - 2026 לצפייה בדוח המעודכן לרבע"
+      },
+      {
+       "file": "https://www.555.co.il/sites/default/files/Forms/tsuaa31.12.2021.xlsx",
+       "text": "לצפייה בדוח המעודכן לרבעון 4 - 2021",
+       "ctx": "2026 2025 2024 2023 2022 2021 2020 2026 לצפייה בדוח המעודכן לרבעון 3 - 2026 לצפייה בדוח המעודכן לרבע"
+      },
+      {
+       "file": "https://www.555.co.il/sites/default/files/Forms/tsuaa30.09.21_2.xlsx",
+       "text": "לצפייה בדוח המעודכן לרבעון 3 - 2021",
+       "ctx": "2026 2025 2024 2023 2022 2021 2020 2026 לצפייה בדוח המעודכן לרבעון 3 - 2026 לצפייה בדוח המעודכן לרבע"
+      },
+      {
+       "file": "https://www.555.co.il/sites/default/files/Forms/tsuaa30.06.21.xlsx",
+       "text": "לצפייה בדוח המעודכן לרבעון 2 - 2021",
+       "ctx": "2026 2025 2024 2023 2022 2021 2020 2026 לצפייה בדוח המעודכן לרבעון 3 - 2026 לצפייה בדוח המעודכן לרבע"
+      },
+      {
+       "file": "https://www.555.co.il/sites/default/files/business/tsuaa31.03.21.xlsx",
+       "text": "לצפייה בדוח המעודכן לרבעון 1 - 2021",
+       "ctx": "2026 2025 2024 2023 2022 2021 2020 2026 לצפייה בדוח המעודכן לרבעון 3 - 2026 לצפייה בדוח המעודכן לרבע"
+      },
+      {
+       "file": "https://www.555.co.il/sites/default/files/Forms/tsuaa31.12.2020.xlsx",
+       "text": "לצפייה בדוח המעודכן לרבעון 4 - 2020",
+       "ctx": "2026 2025 2024 2023 2022 2021 2020 2026 לצפייה בדוח המעודכן לרבעון 3 - 2026 לצפייה בדוח המעודכן לרבע"
+      },
+      {
+       "file": "https://www.555.co.il/sites/default/files/Forms/tsua30.09.20.xlsx",
+       "text": "לצפייה בדוח המעודכן לרבעון 3 - 2020",
+       "ctx": "2026 2025 2024 2023 2022 2021 2020 2026 לצפייה בדוח המעודכן לרבעון 3 - 2026 לצפייה בדוח המעודכן לרבע"
+      }
+     ]
+    },
+    {
+     "url": "https://www.555.co.il/about/financial_reports/nostro/",
+     "cache": "hit",
+     "links": 54,
+     "followed": [],
+     "files": 26,
+     "clicked": 0,
+     "captured": 0,
+     "selected": [
+      "https://www.555.co.il/sites/default/files/General/NostroYield_B_513910703_422_New.xlsx",
+      "https://www.555.co.il/sites/default/files/Forms/NostroYield_B_513910703_222.xlsx"
+     ],
+     "unselected_files": [
+      {
+       "file": "https://www.555.co.il/sites/default/files/Forms/nostro30.06.2026.xlsx",
+       "text": "לצפייה בדוח תרומות השקעות נוסטרו לתאריך 30.06.2026",
+       "ctx": "2026 2025 2024 2023 2022 2021 2020 2026 לצפייה בדוח תרומות השקעות נוסטרו לתאריך 30.06.2026 לצפייה בד"
+      },
+      {
+       "file": "https://www.555.co.il/sites/default/files/Forms/nostro31.03.2026.xlsx",
+       "text": "לצפייה בדוח תרומות השקעות נוסטרו לתאריך 31.03.2026",
+       "ctx": "2026 2025 2024 2023 2022 2021 2020 2026 לצפייה בדוח תרומות השקעות נוסטרו לתאריך 30.06.2026 לצפייה בד"
+      },
+      {
+       "file": "https://www.555.co.il/sites/default/files/Forms/nostro31.12.2025.xlsx",
+       "text": "לצפייה בדוח תרומות השקעות נוסטרו לתאריך 31.12.2025",
+       "ctx": "2026 2025 2024 2023 2022 2021 2020 2026 לצפייה בדוח תרומות השקעות נוסטרו לתאריך 30.06.2026 לצפייה בד"
+      },
+      {
+       "file": "https://www.555.co.il/sites/default/files/Forms/nostro30.09.2025.xlsx",
+       "text": "לצפייה בדוח תרומות השקעות נוסטרו לתאריך 30.09.2025",
+       "ctx": "2026 2025 2024 2023 2022 2021 2020 2026 לצפייה בדוח תרומות השקעות נוסטרו לתאריך 30.06.2026 לצפייה בד"
+      },
+      {
+       "file": "https://www.555.co.il/sites/default/files/Forms/nostro30.06.2025.xlsx",
+       "text": "לצפייה בדוח תרומות השקעות נוסטרו לתאריך 30.06.2025",
+       "ctx": "2026 2025 2024 2023 2022 2021 2020 2026 לצפייה בדוח תרומות השקעות נוסטרו לתאריך 30.06.2026 לצפייה בד"
+      },
+      {
+       "file": "https://www.555.co.il/sites/default/files/Forms/nostro31.03.2025.xlsx",
+       "text": "לצפייה בדוח תרומות השקעות נוסטרו לתאריך 31.03.2025",
+       "ctx": "2026 2025 2024 2023 2022 2021 2020 2026 לצפייה בדוח תרומות השקעות נוסטרו לתאריך 30.06.2026 לצפייה בד"
+      },
+      {
+       "file": "https://www.555.co.il/sites/default/files/Forms/nostro31.12.2024.xlsx",
+       "text": "לצפייה בדוח תרומות השקעות נוסטרו לתאריך 31.12.2024",
+       "ctx": "2026 2025 2024 2023 2022 2021 2020 2026 לצפייה בדוח תרומות השקעות נוסטרו לתאריך 30.06.2026 לצפייה בד"
+      },
+      {
+       "file": "https://www.555.co.il/sites/default/files/Forms/nostro30.09.2024.xlsx",
+       "text": "לצפייה בדוח תרומות השקעות נוסטרו לתאריך 30.09.2024",
+       "ctx": "2026 2025 2024 2023 2022 2021 2020 2026 לצפייה בדוח תרומות השקעות נוסטרו לתאריך 30.06.2026 לצפייה בד"
+      },
+      {
+       "file": "https://www.555.co.il/sites/default/files/General/nostro30.06.2024.xlsx",
+       "text": "לצפייה בדוח תרומות השקעות נוסטרו לתאריך 30.06.2024",
+       "ctx": "2026 2025 2024 2023 2022 2021 2020 2026 לצפייה בדוח תרומות השקעות נוסטרו לתאריך 30.06.2026 לצפייה בד"
+      },
+      {
+       "file": "https://www.555.co.il/sites/default/files/General/nostro31.03.24.xlsx",
+       "text": "לצפייה בדוח תרומות השקעות נוסטרו לתאריך 31.03.2024",
+       "ctx": "2026 2025 2024 2023 2022 2021 2020 2026 לצפייה בדוח תרומות השקעות נוסטרו לתאריך 30.06.2026 לצפייה בד"
+      },
+      {
+       "file": "https://www.555.co.il/sites/default/files/General/nostro31.12.2023_0.xlsx",
+       "text": "לצפייה בדוח תרומת השקעות נוסטרו לתאריך 31.12.2023",
+       "ctx": "2026 2025 2024 2023 2022 2021 2020 2026 לצפייה בדוח תרומות השקעות נוסטרו לתאריך 30.06.2026 לצפייה בד"
+      },
+      {
+       "file": "https://www.555.co.il/sites/default/files/General/nostro30.09.23.xlsx",
+       "text": "לצפייה בדוח תרומת השקעות נוסטרו לתאריך 30.09.2023",
+       "ctx": "2026 2025 2024 2023 2022 2021 2020 2026 לצפייה בדוח תרומות השקעות נוסטרו לתאריך 30.06.2026 לצפייה בד"
+      },
+      {
+       "file": "https://www.555.co.il/sites/default/files/General/nostro30.6.2023_0.xlsx",
+       "text": "לצפייה בדוח תרומת השקעות נוסטרו לתאריך 30.06.2023",
+       "ctx": "2026 2025 2024 2023 2022 2021 2020 2026 לצפייה בדוח תרומות השקעות נוסטרו לתאריך 30.06.2026 לצפייה בד"
+      },
+      {
+       "file": "https://www.555.co.il/sites/default/files/General/nostro31.03.23.xlsx",
+       "text": "לצפייה בדוח תרומת השקעות נוסטרו לתאריך 31.03.2023",
+       "ctx": "2026 2025 2024 2023 2022 2021 2020 2026 לצפייה בדוח תרומות השקעות נוסטרו לתאריך 30.06.2026 לצפייה בד"
+      },
+      {
+       "file": "https://www.555.co.il/sites/default/files/Forms/nostro30.09.22.xlsx",
+       "text": "לצפייה בדוח תרומת השקעות נוסטרו לתאריך 30.09.2022",
+       "ctx": "2026 2025 2024 2023 2022 2021 2020 2026 לצפייה בדוח תרומות השקעות נוסטרו לתאריך 30.06.2026 לצפייה בד"
+      },
+      {
+       "file": "https://www.555.co.il/sites/default/files/Forms/nostro31.03.22.xlsx",
+       "text": "לצפייה בדוח תרומת השקעות נוסטרו לתאריך 31.03.2022",
+       "ctx": "2026 2025 2024 2023 2022 2021 2020 2026 לצפייה בדוח תרומות השקעות נוסטרו לתאריך 30.06.2026 לצפייה בד"
+      },
+      {
+       "file": "https://www.555.co.il/sites/default/files/Forms/nostro31.12.21.xlsx",
+       "text": "לצפייה בדוח תרומת השקעות נוסטרו לתאריך 31.12.2021",
+       "ctx": "2026 2025 2024 2023 2022 2021 2020 2026 לצפייה בדוח תרומות השקעות נוסטרו לתאריך 30.06.2026 לצפייה בד"
+      },
+      {
+       "file": "https://www.555.co.il/sites/default/files/Forms/nostro30.9.2021.xlsx",
+       "text": "לצפייה בדוח תרומת השקעות נוסטרו לתאריך 30.09.2021",
+       "ctx": "2026 2025 2024 2023 2022 2021 2020 2026 לצפייה בדוח תרומות השקעות נוסטרו לתאריך 30.06.2026 לצפייה בד"
+      },
+      {
+       "file": "https://www.555.co.il/sites/default/files/business/nostro30.6.2020.xlsx",
+       "text": "לצפייה בדוח תרומת השקעות נוסטרו לתאריך 30.06.2021",
+       "ctx": "2026 2025 2024 2023 2022 2021 2020 2026 לצפייה בדוח תרומות השקעות נוסטרו לתאריך 30.06.2026 לצפייה בד"
+      },
+      {
+       "file": "https://www.555.co.il/sites/default/files/Forms/nostro31.3.2021.xlsx",
+       "text": "לצפייה בדוח תרומת השקעות נוסטרו לתאריך 31.03.2021",
+       "ctx": "2026 2025 2024 2023 2022 2021 2020 2026 לצפייה בדוח תרומות השקעות נוסטרו לתאריך 30.06.2026 לצפייה בד"
+      },
+      {
+       "file": "https://www.555.co.il/sites/default/files/Forms/nostro31.12.20.xlsx",
+       "text": "לצפייה בדוח תרומת השקעות נוסטרו לתאריך 31.12.2020",
+       "ctx": "2026 2025 2024 2023 2022 2021 2020 2026 לצפייה בדוח תרומות השקעות נוסטרו לתאריך 30.06.2026 לצפייה בד"
+      },
+      {
+       "file": "https://www.555.co.il/sites/default/files/General/nostro30.9.2020.xlsx",
+       "text": "לצפייה בדוח תרומת השקעות נוסטרו לתאריך 30.09.2020",
+       "ctx": "2026 2025 2024 2023 2022 2021 2020 2026 לצפייה בדוח תרומות השקעות נוסטרו לתאריך 30.06.2026 לצפייה בד"
+      },
+      {
+       "file": "https://www.555.co.il/sites/default/files/Forms/nostro_30.06.20.xlsx",
+       "text": "לצפייה בדוח תרומת השקעות נוסטרו לתאריך 30.06.2020",
+       "ctx": "2026 2025 2024 2023 2022 2021 2020 2026 לצפייה בדוח תרומות השקעות נוסטרו לתאריך 30.06.2026 לצפייה בד"
+      },
+      {
+       "file": "https://www.555.co.il/sites/default/files/Forms/nostro31.3.20.xlsx",
+       "text": "לצפייה בדוח תרומת השקעות נוסטרו לתאריך 31.03.2020",
+       "ctx": "2026 2025 2024 2023 2022 2021 2020 2026 לצפייה בדוח תרומות השקעות נוסטרו לתאריך 30.06.2026 לצפייה בד"
+      }
+     ]
+    },
+    {
+     "url": "https://www.555.co.il/about/financial_reports/direct_expense.html",
+     "cache": "hit",
+     "links": 40,
+     "followed": [],
+     "files": 12,
+     "clicked": 0,
+     "captured": 0,
+     "selected": [],
+     "unselected_files": [
+      {
+       "file": "https://www.555.co.il/sites/default/files/Forms/External management fee limit for 2026.pdf",
+       "text": "לצפייה",
+       "ctx": "2026 2025 2024 2023 2022 2021 2020 2026 הוצאות ישירות - מגבלת עמלת ניהול חיצוני לצפייה 2025 דיווח לצ"
+      },
+      {
+       "file": "https://www.555.co.il/sites/default/files/Forms/direct_expense_311225.xlsx",
+       "text": "לצפייה",
+       "ctx": "2026 2025 2024 2023 2022 2021 2020 2026 הוצאות ישירות - מגבלת עמלת ניהול חיצוני לצפייה 2025 דיווח לצ"
+      },
+      {
+       "file": "https://www.555.co.il/sites/default/files/Forms/Migbalat_Nihul_2025_New.pdf.pdf",
+       "text": "לצפייה",
+       "ctx": "2026 2025 2024 2023 2022 2021 2020 2026 הוצאות ישירות - מגבלת עמלת ניהול חיצוני לצפייה 2025 דיווח לצ"
+      },
+      {
+       "file": "https://www.555.co.il/sites/default/files/Forms/direct_expense_311224_0.xlsx",
+       "text": "לצפייה",
+       "ctx": "2026 2025 2024 2023 2022 2021 2020 2026 הוצאות ישירות - מגבלת עמלת ניהול חיצוני לצפייה 2025 דיווח לצ"
+      },
+      {
+       "file": "https://www.555.co.il/sites/default/files/Forms/Migbalat_Nihul_2024_New.pdf.pdf",
+       "text": "לצפייה",
+       "ctx": "2026 2025 2024 2023 2022 2021 2020 2026 הוצאות ישירות - מגבלת עמלת ניהול חיצוני לצפייה 2025 דיווח לצ"
+      },
+      {
+       "file": "https://www.555.co.il/sites/default/files/General/direct_expense_311223_New_0.xlsx",
+       "text": "לצפייה",
+       "ctx": "2026 2025 2024 2023 2022 2021 2020 2026 הוצאות ישירות - מגבלת עמלת ניהול חיצוני לצפייה 2025 דיווח לצ"
+      },
+      {
+       "file": "https://www.555.co.il/sites/default/files/General/Migbalat_Nihul_2023_1.pdf",
+       "text": "לצפייה",
+       "ctx": "2026 2025 2024 2023 2022 2021 2020 2026 הוצאות ישירות - מגבלת עמלת ניהול חיצוני לצפייה 2025 דיווח לצ"
+      },
+      {
+       "file": "https://www.555.co.il/sites/default/files/General/direct_expense_311222.xlsx",
+       "text": "לצפייה",
+       "ctx": "2026 2025 2024 2023 2022 2021 2020 2026 הוצאות ישירות - מגבלת עמלת ניהול חיצוני לצפייה 2025 דיווח לצ"
+      },
+      {
+       "file": "https://www.555.co.il/sites/default/files/Forms/direct_expense_311221.xlsx",
+       "text": "לצפייה",
+       "ctx": "2026 2025 2024 2023 2022 2021 2020 2026 הוצאות ישירות - מגבלת עמלת ניהול חיצוני לצפייה 2025 דיווח לצ"
+      },
+      {
+       "file": "https://www.555.co.il/sites/default/files/Forms/direct_expense_311220.xlsx",
+       "text": "לצפייה",
+       "ctx": "2026 2025 2024 2023 2022 2021 2020 2026 הוצאות ישירות - מגבלת עמלת ניהול חיצוני לצפייה 2025 דיווח לצ"
+      },
+      {
+       "file": "https://www.555.co.il/sites/default/files/Forms/Migbalat_Nihul_2025_New.pdf",
+       "text": "(html)",
+       "ctx": ""
+      },
+      {
+       "file": "https://www.555.co.il/sites/default/files/Forms/Migbalat_Nihul_2024_New.pdf",
+       "text": "(html)",
+       "ctx": ""
+      }
+     ]
+    },
+    {
+     "url": "https://www.555.co.il/about/financial_reports/piraon.html",
+     "cache": "hit",
+     "links": 34,
+     "followed": [],
+     "files": 12,
+     "clicked": 0,
+     "captured": 0,
+     "selected": [],
+     "unselected_files": [
+      {
+       "file": "https://www.555.co.il/sites/default/files/Forms/דוח_יחס_כושר_פירעון_12.2025_להעלאה_לאתר_announcement.pdf",
+       "text": "לצפייה",
+       "ctx": "דו\"ח יחס כושר פירעון כלכלי דו\"ח יחס כושר פירעון כלכלי דוח יחס כושר פירעון כלכלי - לתאריך 31.12.2025 "
+      },
+      {
+       "file": "https://www.555.co.il/sites/default/files/Forms/דוח יחס כושר פירעון 06.2025_announcement_0.pdf",
+       "text": "לצפייה",
+       "ctx": "דו\"ח יחס כושר פירעון כלכלי דו\"ח יחס כושר פירעון כלכלי דוח יחס כושר פירעון כלכלי - לתאריך 31.12.2025 "
+      },
+      {
+       "file": "https://www.555.co.il/sites/default/files/Forms/piraon_31_12_2024_Mungash.pdf",
+       "text": "לצפייה",
+       "ctx": "דו\"ח יחס כושר פירעון כלכלי דו\"ח יחס כושר פירעון כלכלי דוח יחס כושר פירעון כלכלי - לתאריך 31.12.2025 "
+      },
+      {
+       "file": "https://www.555.co.il/sites/default/files/Forms/piraon_30_06_2024.pdf",
+       "text": "לצפייה",
+       "ctx": "דו\"ח יחס כושר פירעון כלכלי דו\"ח יחס כושר פירעון כלכלי דוח יחס כושר פירעון כלכלי - לתאריך 31.12.2025 "
+      },
+      {
+       "file": "https://www.555.co.il/sites/default/files/Forms/piraon_31_12_2023.pdf",
+       "text": "לצפייה",
+       "ctx": "דו\"ח יחס כושר פירעון כלכלי דו\"ח יחס כושר פירעון כלכלי דוח יחס כושר פירעון כלכלי - לתאריך 31.12.2025 "
+      },
+      {
+       "file": "https://www.555.co.il/sites/default/files/General/piraon_30_06_2023.pdf",
+       "text": "לצפייה",
+       "ctx": "דו\"ח יחס כושר פירעון כלכלי דו\"ח יחס כושר פירעון כלכלי דוח יחס כושר פירעון כלכלי - לתאריך 31.12.2025 "
+      },
+      {
+       "file": "https://www.555.co.il/sites/default/files/General/piraon_31_12_2022.pdf",
+       "text": "לצפייה",
+       "ctx": "דו\"ח יחס כושר פירעון כלכלי דו\"ח יחס כושר פירעון כלכלי דוח יחס כושר פירעון כלכלי - לתאריך 31.12.2025 "
+      },
+      {
+       "file": "https://www.555.co.il/sites/default/files/Forms/piraon_30_06_2022_0.pdf",
+       "text": "לצפייה",
+       "ctx": "דו\"ח יחס כושר פירעון כלכלי דו\"ח יחס כושר פירעון כלכלי דוח יחס כושר פירעון כלכלי - לתאריך 31.12.2025 "
+      },
+      {
+       "file": "https://www.555.co.il/sites/default/files/General/piraon_31_12_2021.pdf",
+       "text": "לצפייה",
+       "ctx": "דו\"ח יחס כושר פירעון כלכלי דו\"ח יחס כושר פירעון כלכלי דוח יחס כושר פירעון כלכלי - לתאריך 31.12.2025 "
+      },
+      {
+       "file": "https://www.555.co.il/sites/default/files/business/דוח_isa_1.pdf",
+       "text": "לצפייה",
+       "ctx": "דו\"ח יחס כושר פירעון כלכלי דו\"ח יחס כושר פירעון כלכלי דוח יחס כושר פירעון כלכלי - לתאריך 31.12.2025 "
+      },
+      {
+       "file": "https://www.555.co.il/sites/default/files/Forms/piraon_31.12.17.pdf",
+       "text": "לצפייה",
+       "ctx": "דו\"ח יחס כושר פירעון כלכלי דו\"ח יחס כושר פירעון כלכלי דוח יחס כושר פירעון כלכלי - לתאריך 31.12.2025 "
+      },
+      {
+       "file": "https://www.555.co.il/sites/default/files/Forms/piraon_31.12.18.pdf",
+       "text": "לצפייה",
+       "ctx": "דו\"ח יחס כושר פירעון כלכלי דו\"ח יחס כושר פירעון כלכלי דוח יחס כושר פירעון כלכלי - לתאריך 31.12.2025 "
+      }
+     ]
+    },
+    {
+     "url": "https://www.555.co.il/about/financial_reports/participating_portfolio.html",
+     "cache": "hit",
+     "links": 35,
+     "followed": [],
+     "files": 7,
+     "clicked": 0,
+     "captured": 0,
+     "selected": [],
+     "unselected_files": [
+      {
+       "file": "https://www.555.co.il/sites/default/files/Forms/information_management fee_2025.xlsx",
+       "text": "מידע תשואות ודמי ניהול 2025",
+       "ctx": "2025 2024 2023 2022 2021 2020 2019 2025 מידע תשואות ודמי ניהול 2025 2024 מידע תשואות ודמי ניהול 2024"
+      },
+      {
+       "file": "https://www.555.co.il/sites/default/files/Forms/information_management fee_2024_New.xlsx",
+       "text": "מידע תשואות ודמי ניהול 2024",
+       "ctx": "2025 2024 2023 2022 2021 2020 2019 2025 מידע תשואות ודמי ניהול 2025 2024 מידע תשואות ודמי ניהול 2024"
+      },
+      {
+       "file": "https://www.555.co.il/sites/default/files/General/tsuaa_2023_5.xlsx",
+       "text": "מידע תשואות ודמי ניהול 2023",
+       "ctx": "2025 2024 2023 2022 2021 2020 2019 2025 מידע תשואות ודמי ניהול 2025 2024 מידע תשואות ודמי ניהול 2024"
+      },
+      {
+       "file": "https://www.555.co.il/sites/default/files/General/tsuaa_2022_5.xlsx",
+       "text": "מידע תשואות ודמי ניהול 2022",
+       "ctx": "2025 2024 2023 2022 2021 2020 2019 2025 מידע תשואות ודמי ניהול 2025 2024 מידע תשואות ודמי ניהול 2024"
+      },
+      {
+       "file": "https://www.555.co.il/sites/default/files/Forms/מידע תשואות ודמי ניהול  2021_0_0.xlsx",
+       "text": "מידע תשואות ודמי ניהול 2021",
+       "ctx": "2025 2024 2023 2022 2021 2020 2019 2025 מידע תשואות ודמי ניהול 2025 2024 מידע תשואות ודמי ניהול 2024"
+      },
+      {
+       "file": "https://www.555.co.il/sites/default/files/Forms/tsuot_info2020.xlsx",
+       "text": "מידע תשואות ודמי ניהול 2020",
+       "ctx": "2025 2024 2023 2022 2021 2020 2019 2025 מידע תשואות ודמי ניהול 2025 2024 מידע תשואות ודמי ניהול 2024"
+      },
+      {
+       "file": "https://www.555.co.il/sites/default/files/Forms/tsuot_info2019.xlsx",
+       "text": "מידע תשואות ודמי ניהול 2019",
+       "ctx": "2025 2024 2023 2022 2021 2020 2019 2025 מידע תשואות ודמי ניהול 2025 2024 מידע תשואות ודמי ניהול 2024"
+      }
+     ]
+    },
+    {
+     "url": "https://www.555.co.il/financial_reports/report_31_12_25.html",
+     "cache": "expired",
+     "links": 152,
+     "followed": [],
+     "files": 0,
+     "clicked": 0,
+     "captured": 0,
+     "selected": [],
+     "unselected_files": []
+    },
+    {
+     "url": "https://www.555.co.il/financial_reports/report_30_09_25.html",
+     "cache": "expired",
+     "links": 152,
+     "followed": [],
+     "files": 0,
+     "clicked": 0,
+     "captured": 0,
+     "selected": [],
+     "unselected_files": []
+    },
+    {
+     "url": "https://www.555.co.il/financial_reports/report_30_06_25.html",
+     "cache": "expired",
+     "links": 152,
+     "followed": [],
+     "files": 0,
+     "clicked": 0,
+     "captured": 0,
+     "selected": [],
+     "unselected_files": []
+    },
+    {
+     "url": "https://www.555.co.il/financial_reports/report_31_03_25.html",
+     "cache": "expired",
+     "links": 152,
+     "followed": [],
+     "files": 0,
+     "clicked": 0,
+     "captured": 0,
+     "selected": [],
+     "unselected_files": []
+    },
+    {
+     "url": "https://www.555.co.il/financial_reports/report_31_12_24.html",
+     "cache": "expired",
+     "links": 152,
+     "followed": [],
+     "files": 0,
+     "clicked": 0,
+     "captured": 0,
+     "selected": [],
+     "unselected_files": []
+    },
+    {
+     "url": "https://www.555.co.il/financial_reports/report_30_09_24.html",
+     "cache": "expired",
+     "links": 152,
+     "followed": [],
+     "files": 0,
+     "clicked": 0,
+     "captured": 0,
+     "selected": [],
+     "unselected_files": []
+    },
+    {
+     "url": "https://www.555.co.il/financial_reports/report_30_06_24.html",
+     "cache": "expired",
+     "links": 152,
+     "followed": [],
+     "files": 0,
+     "clicked": 0,
+     "captured": 0,
+     "selected": [],
+     "unselected_files": []
+    },
+    {
+     "url": "https://www.555.co.il/financial_reports/report_31_03_24.html",
+     "cache": "expired",
+     "links": 152,
+     "followed": [],
+     "files": 0,
+     "clicked": 0,
+     "captured": 0,
+     "selected": [],
+     "unselected_files": []
+    }
+   ],
+   "new_docs": 0,
+   "found": 311,
+   "selected": 2,
+   "had": 2,
+   "head_skip": 0,
+   "page_cache": 9,
+   "cache_hit": 9,
+   "cache_expired": 11,
+   "cache_changed": 2,
+   "old_skip": 2,
+   "errors": [
+    "https://www.555.co.il/financial_reports/report_31_12_23.html: Frame with ID 0 is showing error page -> light collect",
+    "https://www.555.co.il/financial_reports/report_31_12_23.html: Frame with ID 0 is showing error page"
+   ],
+   "diag": [
+    "איי. די. איי. חברה: links=26 files=15 clicked=0 captured=0 selected=0",
+    "   ? medidyut2026.xlsx | לצפייה | 2026 2025 2024 2023 2022 2021 2020 אמות מידה 2026 הצהרה מראש",
+    "   ? ESG 2026_announcement.pdf | לצפייה | 2026 2025 2024 2023 2022 2021 2020 אמות מידה 2026 הצהרה מראש",
+    "   ? medidyut2025.xlsx | לצפייה | 2026 2025 2024 2023 2022 2021 2020 אמות מידה 2026 הצהרה מראש",
+    "   ? invest_policy_ESG_2025.pdf | לצפייה | 2026 2025 2024 2023 2022 2021 2020 אמות מידה 2026 הצהרה מראש",
+    "   ? medinyut_7.2024.xlsx | לצפייה | 2026 2025 2024 2023 2022 2021 2020 אמות מידה 2026 הצהרה מראש",
+    "   ? medinyut_new_2024.xlsx | לצפייה | 2026 2025 2024 2023 2022 2021 2020 אמות מידה 2026 הצהרה מראש",
+    "איי. די. איי. חברה: links=186 files=0 clicked=0 captured=0 selected=0",
+    "איי. די. איי. חברה: links=29 files=3 clicked=0 captured=0 selected=0",
+    "   ? tsuot-Savings.xlsx | תשואות והרכב נכסים | תשואות והרכב נכסים",
+    "   ? tsuot50_Savings.pdf | תשואות מסלול לבני 50 ומטה | תשואות מסלול לבני 50 ומטה",
+    "   ? services-to-the-elderly-new-announcement-2025.pdf | דוח ממונה אזרחים ותיקים | דוח ממונה אזרחים ותיקים",
+    "איי. די. איי. חברה: links=1 files=0 clicked=0 captured=0 selected=0",
+    "איי. די. איי. חברה: links=145 files=95 clicked=0 captured=0 selected=0",
+    "   ? DIRIN226-Q2-2026-announcement-compressed.pdf | דוח כספי Q2 - איי.די.איי ביטוח | דוח כספי Q2 - איי.די.איי ביטוח",
+    "   ? Investor-presentation-2026-Q2-announcement-compressed.pdf | מצגת משקיעים Q2 | מצגת משקיעים Q2",
+    "   ? שיחת משקיעים רבעון 2 שנת 2026_0_0_0.pdf | לתמלול שיחת משקיעים | לתמלול שיחת משקיעים",
+    "   ? DIRIN126_isa_announcement.pdf | דוח כספי Q1 - איי.די.איי ביטוח | דוח כספי Q1 - איי.די.איי ביטוח",
+    "   ? HANPAKOT126_isa.pdf | דוח כספי Q1 - איי.די.איי הנפקות | דוח כספי Q1 - איי.די.איי הנפקות",
+    "   ? Investor-presentation-2026-Q1-announcement_0.pdf | מצגת משקיעים - Q1 | מצגת משקיעים - Q1",
+    "איי. די. איי. חברה: links=215 files=58 clicked=0 captured=0 selected=0",
+    "   ? sep2026.xlsx | דוח חודשי ספטמבר 2026 | 2026 2025 2024 2023 2022 2026 דוח חודשי ספטמבר 2026 דוח חודש",
+    "   ? aug2026.xlsx | דוח חודשי אוגוסט 2026 | 2026 2025 2024 2023 2022 2026 דוח חודשי ספטמבר 2026 דוח חודש",
+    "   ? July2026.xlsx | דוח חודשי יולי 2026 | 2026 2025 2024 2023 2022 2026 דוח חודשי ספטמבר 2026 דוח חודש",
+    "   ? June2026.xlsx | דוח חודשי יוני 2026 | 2026 2025 2024 2023 2022 2026 דוח חודשי ספטמבר 2026 דוח חודש",
+    "   ? may2026.xlsx | דוח חודשי מאי 2026 | 2026 2025 2024 2023 2022 2026 דוח חודשי ספטמבר 2026 דוח חודש",
+    "   ? apr2026.xlsx | דוח חודשי אפריל 2026 | 2026 2025 2024 2023 2022 2026 דוח חודשי ספטמבר 2026 דוח חודש",
+    "איי. די. איי. חברה: links=33 files=6 clicked=0 captured=0 selected=0",
+    "   ? kshurim2025.xlsx | להורדה | 2025 2024 2023 2022 2021 2020 עסקאות והשקעות בצדדים קשורים ל",
+    "   ? kshurim2024.xlsx | להורדה | 2025 2024 2023 2022 2021 2020 עסקאות והשקעות בצדדים קשורים ל",
+    "   ? kshurim2023.xlsx | להורדה | 2025 2024 2023 2022 2021 2020 עסקאות והשקעות בצדדים קשורים ל",
+    "   ? kshurim2022.xlsx | להורדה | 2025 2024 2023 2022 2021 2020 עסקאות והשקעות בצדדים קשורים ל",
+    "   ? kshurim2021.xlsx | להורדה | 2025 2024 2023 2022 2021 2020 עסקאות והשקעות בצדדים קשורים ל",
+    "   ? kshurim2020.xlsx | להורדה | 2025 2024 2023 2022 2021 2020 עסקאות והשקעות בצדדים קשורים ל",
+    "איי. די. איי. חברה: links=76 files=50 clicked=0 captured=0 selected=0",
+    "   ? עותק של 513910703_in_p_0226_0.xlsx | לצפייה | 2026 2025 2024 2023 2022 פירוט נכסים ברמת הנכס הבודד 2026 רב",
+    "   ? 513910703_in_p_0126_0.xlsx | לצפייה | 2026 2025 2024 2023 2022 פירוט נכסים ברמת הנכס הבודד 2026 רב",
+    "   ? 513910703_in_p_0425.xlsx | לצפייה | 2026 2025 2024 2023 2022 פירוט נכסים ברמת הנכס הבודד 2026 רב",
+    "   ? 513910703_in_p_0325.xlsx | לצפייה | 2026 2025 2024 2023 2022 פירוט נכסים ברמת הנכס הבודד 2026 רב",
+    "   ? 513910703_in_p_0225_1.xlsx | לצפייה | 2026 2025 2024 2023 2022 פירוט נכסים ברמת הנכס הבודד 2026 רב",
+    "   ? 513910703_in_p_0125.xlsx | לצפייה | 2026 2025 2024 2023 2022 פירוט נכסים ברמת הנכס הבודד 2026 רב",
+    "איי. די. איי. חברה: links=186 files=27 clicked=0 captured=0 selected=0",
+    "   ? tsuaa_30.09.26.xlsx | לצפייה בדוח המעודכן לרבעון 3 - 2026 | 2026 2025 2024 2023 2022 2021 2020 2026 לצפייה בדוח המעודכן ",
+    "   ? tsuaa30.06.26.xlsx | לצפייה בדוח המעודכן לרבעון 2 - 2026 | 2026 2025 2024 2023 2022 2021 2020 2026 לצפייה בדוח המעודכן ",
+    "   ? tsuaa_31.03.26.xlsx | לצפייה בדוח המעודכן לרבעון 1 - 2026 | 2026 2025 2024 2023 2022 2021 2020 2026 לצפייה בדוח המעודכן ",
+    "   ? tsuaa_31.12.25.xlsx | לצפייה בדוח המעודכן לרבעון 4 - 2025 | 2026 2025 2024 2023 2022 2021 2020 2026 לצפייה בדוח המעודכן ",
+    "   ? tsuaa_30.09.25.xlsx | לצפייה בדוח המעודכן לרבעון 3 - 2025 | 2026 2025 2024 2023 2022 2021 2020 2026 לצפייה בדוח המעודכן ",
+    "   ? tsuaa_30.06.25.xlsx | לצפייה בדוח המעודכן לרבעון 2 - 2025 | 2026 2025 2024 2023 2022 2021 2020 2026 לצפייה בדוח המעודכן ",
+    "איי. די. איי. חברה: links=54 files=26 clicked=0 captured=0 selected=2",
+    "איי. די. איי. חברה: links=40 files=12 clicked=0 captured=0 selected=0",
+    "   ? External management fee limit for 2026.pdf | לצפייה | 2026 2025 2024 2023 2022 2021 2020 2026 הוצאות ישירות - מגבל",
+    "   ? direct_expense_311225.xlsx | לצפייה | 2026 2025 2024 2023 2022 2021 2020 2026 הוצאות ישירות - מגבל",
+    "   ? Migbalat_Nihul_2025_New.pdf.pdf | לצפייה | 2026 2025 2024 2023 2022 2021 2020 2026 הוצאות ישירות - מגבל",
+    "   ? direct_expense_311224_0.xlsx | לצפייה | 2026 2025 2024 2023 2022 2021 2020 2026 הוצאות ישירות - מגבל",
+    "   ? Migbalat_Nihul_2024_New.pdf.pdf | לצפייה | 2026 2025 2024 2023 2022 2021 2020 2026 הוצאות ישירות - מגבל",
+    "   ? direct_expense_311223_New_0.xlsx | לצפייה | 2026 2025 2024 2023 2022 2021 2020 2026 הוצאות ישירות - מגבל",
+    "איי. די. איי. חברה: links=34 files=12 clicked=0 captured=0 selected=0",
+    "   ? דוח_יחס_כושר_פירעון_12.2025_להעלאה_לאתר_announcement.pdf | לצפייה | דו\"ח יחס כושר פירעון כלכלי דו\"ח יחס כושר פירעון כלכלי דוח יח",
+    "   ? דוח יחס כושר פירעון 06.2025_announcement_0.pdf | לצפייה | דו\"ח יחס כושר פירעון כלכלי דו\"ח יחס כושר פירעון כלכלי דוח יח",
+    "   ? piraon_31_12_2024_Mungash.pdf | לצפייה | דו\"ח יחס כושר פירעון כלכלי דו\"ח יחס כושר פירעון כלכלי דוח יח",
+    "   ? piraon_30_06_2024.pdf | לצפייה | דו\"ח יחס כושר פירעון כלכלי דו\"ח יחס כושר פירעון כלכלי דוח יח",
+    "   ? piraon_31_12_2023.pdf | לצפייה | דו\"ח יחס כושר פירעון כלכלי דו\"ח יחס כושר פירעון כלכלי דוח יח",
+    "   ? piraon_30_06_2023.pdf | לצפייה | דו\"ח יחס כושר פירעון כלכלי דו\"ח יחס כושר פירעון כלכלי דוח יח",
+    "איי. די. איי. חברה: links=35 files=7 clicked=0 captured=0 selected=0",
+    "   ? information_management fee_2025.xlsx | מידע תשואות ודמי ניהול 2025 | 2025 2024 2023 2022 2021 2020 2019 2025 מידע תשואות ודמי ניה",
+    "   ? information_management fee_2024_New.xlsx | מידע תשואות ודמי ניהול 2024 | 2025 2024 2023 2022 2021 2020 2019 2025 מידע תשואות ודמי ניה",
+    "   ? tsuaa_2023_5.xlsx | מידע תשואות ודמי ניהול 2023 | 2025 2024 2023 2022 2021 2020 2019 2025 מידע תשואות ודמי ניה",
+    "   ? tsuaa_2022_5.xlsx | מידע תשואות ודמי ניהול 2022 | 2025 2024 2023 2022 2021 2020 2019 2025 מידע תשואות ודמי ניה",
+    "   ? מידע תשואות ודמי ניהול  2021_0_0.xlsx | מידע תשואות ודמי ניהול 2021 | 2025 2024 2023 2022 2021 2020 2019 2025 מידע תשואות ודמי ניה",
+    "   ? tsuot_info2020.xlsx | מידע תשואות ודמי ניהול 2020 | 2025 2024 2023 2022 2021 2020 2019 2025 מידע תשואות ודמי ניה",
+    "איי. די. איי. חברה: links=152 files=0 clicked=0 captured=0 selected=0",
+    "איי. די. איי. חברה: links=152 files=0 clicked=0 captured=0 selected=0",
+    "איי. די. איי. חברה: links=152 files=0 clicked=0 captured=0 selected=0",
+    "איי. די. איי. חברה: links=152 files=0 clicked=0 captured=0 selected=0",
+    "איי. די. איי. חברה: links=152 files=0 clicked=0 captured=0 selected=0",
+    "איי. די. איי. חברה: links=152 files=0 clicked=0 captured=0 selected=0",
+    "איי. די. איי. חברה: links=152 files=0 clicked=0 captured=0 selected=0",
+    "איי. די. איי. חברה: links=152 files=0 clicked=0 captured=0 selected=0"
+   ],
+   "new_files": []
+  },
+  {
+   "legal_id": "514956465",
+   "name": "מור גמל ופנסיה בע\"מ",
+   "pages": [
+    {
+     "url": "https://www.moreinvest.co.il/מוצרים/גמל-ופנסיה/מידע-כללי-ורגולציה/הצהרה-על-מדיניות-השקעה/",
+     "cache": "hit",
+     "links": 185,
+     "followed": [],
+     "files": 67,
+     "clicked": 0,
+     "captured": 0,
+     "selected": [
+      "https://www.moreinvest.co.il/media/sotneahb/7_17_0_2026_19.xlsx",
+      "https://www.moreinvest.co.il/media/l1th0dl1/7_17_0_2026_17.xlsx",
+      "https://www.moreinvest.co.il/media/55shqout/7_17_0_2026_9.xlsx",
+      "https://www.moreinvest.co.il/media/hl3poaro/7_17_0_2026_8.xlsx",
+      "https://www.moreinvest.co.il/media/wjcjuj3r/7_17_0_2026_7.xlsx",
+      "https://www.moreinvest.co.il/media/3wkdgup0/7_17_0_2026_6.xlsx",
+      "https://www.moreinvest.co.il/media/rljmh5o1/7_17_0_2026_5.xlsx",
+      "https://www.moreinvest.co.il/media/zqspbph2/7_17_0_2026_3.xlsx",
+      "https://www.moreinvest.co.il/media/b45a0eji/7_17_0_2026_2.xlsx",
+      "https://www.moreinvest.co.il/media/glnpmnvi/7_17_0_2026_1.xlsx",
+      "https://www.moreinvest.co.il/media/1yojvny4/7_17_0_2025_7.xlsx",
+      "https://www.moreinvest.co.il/media/wqzn5mk4/7_17_0_2025_6.xlsx",
+      "https://www.moreinvest.co.il/media/zlyd4snr/7_17_0_2025_5.xlsx",
+      "https://www.moreinvest.co.il/media/tw1ighpk/7_17_0_2025_4.xlsx",
+      "https://www.moreinvest.co.il/media/4xdg5nuf/7_17_0_2025_3.xlsx",
+      "https://www.moreinvest.co.il/media/qwdfgqiy/7_17_0_2025_2.xlsx",
+      "https://www.moreinvest.co.il/media/hjjbahea/7_17_0_2025_1.xlsx",
+      "https://www.moreinvest.co.il/media/gwmnaf4s/7_17_0_2024_18.xlsx",
+      "https://www.moreinvest.co.il/media/0t0jlqbb/7_17_0_2024_17.xlsx",
+      "https://www.moreinvest.co.il/media/phaignve/7_17_0_2024_15.xlsx",
+      "https://www.moreinvest.co.il/media/d2xeshfs/7_17_0_2024_12.xlsx",
+      "https://www.moreinvest.co.il/media/imdeebkp/7_17_0_2024_7.xlsx",
+      "https://www.moreinvest.co.il/media/uvebxth0/7_17_0_2024_4.xlsx",
+      "https://www.moreinvest.co.il/media/p2oo1pxj/7_17_0_2024_3.xlsx",
+      "https://www.moreinvest.co.il/media/qdbjyg2a/7_17_0_2024_2.xlsx",
+      "https://www.moreinvest.co.il/media/mrgh2wvs/7_17_0_2024_1.xlsx",
+      "https://www.moreinvest.co.il/media/ilepzxwv/7_17_0_2023_17.xlsx",
+      "https://www.moreinvest.co.il/media/kbvfzu3g/7_17_0_2023_16.xlsx",
+      "https://www.moreinvest.co.il/media/vomljbho/7_17_0_2023_12.xlsx",
+      "https://www.moreinvest.co.il/media/0vbbajmi/7_17_0_2023_11.xlsx",
+      "https://www.moreinvest.co.il/media/tdopjyvp/7_17_0_2023_10.xlsx",
+      "https://www.moreinvest.co.il/media/spupr0tm/7_17_0_2023_8.xlsx",
+      "https://www.moreinvest.co.il/media/tb4nyg2s/7_17_0_2023_7.xlsx",
+      "https://www.moreinvest.co.il/media/cacduzpn/7_17_0_2023_3.xlsx",
+      "https://www.moreinvest.co.il/media/x01p4gjm/7_17_0_2023_2.xlsx",
+      "https://www.moreinvest.co.il/media/kccnh4lz/7_17_0_2023_1.xlsx",
+      "https://www.moreinvest.co.il/media/rcam0s2i/7_18_0_2026_19.xlsx",
+      "https://www.moreinvest.co.il/media/ikqdjsng/7_18_0_2026_17.xlsx",
+      "https://www.moreinvest.co.il/media/lnbfp15e/7_18_0_2026_9.xlsx",
+      "https://www.moreinvest.co.il/media/hlcek2g5/7_18_0_2026_8.xlsx",
+      "https://www.moreinvest.co.il/media/y31nvjak/7_18_0_2026_7.xlsx",
+      "https://www.moreinvest.co.il/media/x4dfm4rj/7_18_0_2026_6.xlsx",
+      "https://www.moreinvest.co.il/media/h4ggfxuj/7_18_0_2026_5.xlsx",
+      "https://www.moreinvest.co.il/media/p4lbc04n/7_18_0_2026_3.xlsx",
+      "https://www.moreinvest.co.il/media/a5xhlwym/7_18_0_2026_2.xlsx",
+      "https://www.moreinvest.co.il/media/fqpbaka0/7_18_0_2026_1.xlsx",
+      "https://www.moreinvest.co.il/media/c2hbdvmq/7_18_0_2025_9.xlsx",
+      "https://www.moreinvest.co.il/media/1dzb1lbe/7_18_0_2025_7.xlsx",
+      "https://www.moreinvest.co.il/media/rokf2lpt/7_18_0_2025_6.xlsx",
+      "https://www.moreinvest.co.il/media/oq3e4vtt/7_18_0_2025_5.xlsx",
+      "https://www.moreinvest.co.il/media/0sqdjfpy/7_18_0_2025_4.xlsx",
+      "https://www.moreinvest.co.il/media/g1fhfbo3/7_18_0_2025_3.xlsx",
+      "https://www.moreinvest.co.il/media/vwaffzyq/7_18_0_2025_2.xlsx",
+      "https://www.moreinvest.co.il/media/fvonuovu/7_18_0_2025_1.xlsx",
+      "https://www.moreinvest.co.il/media/qknldjvr/7_18_0_2024_12.xlsx",
+      "https://www.moreinvest.co.il/media/to1mf2av/7_18_0_2024_7.xls",
+      "https://www.moreinvest.co.il/media/uqxjac4y/7_18_0_2024_1.xlsx",
+      "https://www.moreinvest.co.il/media/22tjxxea/7_18_0_2023_17.xls",
+      "https://www.moreinvest.co.il/media/njyh0h20/7_18_0_2023_12.xls",
+      "https://www.moreinvest.co.il/media/bkykwbzy/7_18_0_2023_7.xls",
+      "https://www.moreinvest.co.il/media/seulfcst/7_18_0_2023_3.xls",
+      "https://www.moreinvest.co.il/media/sokpsg1b/7_18_0_2023_1.xls",
+      "https://www.moreinvest.co.il/media/xifbcs2l/7_21_0_2026_14.xlsx",
+      "https://www.moreinvest.co.il/media/qjsb4gri/7_21_0_2025_14.xlsx",
+      "https://www.moreinvest.co.il/media/uywn0chp/7_21_0_2024_14.xlsx",
+      "https://www.moreinvest.co.il/media/iohlp1t5/7_21_0_2023_14.xlsx"
+     ],
+     "unselected_files": [
+      {
+       "file": "https://www.moreinvest.co.il/media/uhhlihpv/esg-מור-בית-השקעות-_-ינואר-2023-copy-1.pdf",
+       "text": "שילוב שיקולי ESG במדיניות ההשקעה",
+       "ctx": "שילוב שיקולי ESG במדיניות ההשקעה"
+      }
+     ]
+    }
+   ],
+   "new_docs": 0,
+   "found": 67,
+   "selected": 66,
+   "had": 66,
+   "head_skip": 0,
+   "page_cache": 1,
+   "cache_hit": 1,
+   "old_skip": 66,
+   "mode": "map",
+   "errors": [],
+   "diag": [
+    "מור גמל ופנסיה בע\": links=185 files=67 clicked=0 captured=0 selected=66"
+   ],
+   "new_files": []
+  },
+  {
+   "legal_id": "517085874",
+   "name": "איילון קופות גמל בע\"מ",
+   "pages": [
+    {
+     "url": "https://www.ayalon-ins.co.il/savings/provident-fund",
+     "cache": "hit",
+     "links": 100,
+     "followed": [],
+     "files": 4,
+     "clicked": 0,
+     "captured": 0,
+     "selected": [
+      "https://www.ayalon-ins.co.il/mediastorage/media/01yfqy15/הצהרת-מדיניות-השקעה-איילון-גמל-לחיסכון-2026-סופי.xlsx"
+     ],
+     "unselected_files": [
+      {
+       "file": "https://www.ayalon-ins.co.il/mediastorage/media/uunbejzs/טופס-הצטרפות-לקופת-גמל-לחיסכון-404-מהדורה-062026.pdf",
+       "text": "טופס הצטרפות קופת גמל לחיסכון - 404 - מהדורה 06.2026",
+       "ctx": ""
+      },
+      {
+       "file": "https://www.ayalon-ins.co.il/mediastorage/media/aifo2tct/תקנון-תקני-לקופת-גמל-לחיסכון-15942-מהדורה-072026.pdf",
+       "text": "תקנון גמל לחיסכון - 15942 - מהדורה 07.2026",
+       "ctx": ""
+      },
+      {
+       "file": "https://www.ayalon-ins.co.il/media/qicb3wzx/איילון-גמל.pdf",
+       "text": "תעודת כשרות מסלולי השקעה לשנת 2026",
+       "ctx": ""
+      }
+     ]
+    },
+    {
+     "url": "https://www.ayalon-ins.co.il/savings/provident-fund-invest",
+     "cache": "hit",
+     "links": 38,
+     "followed": [],
+     "files": 8,
+     "clicked": 0,
+     "captured": 0,
+     "selected": [
+      "https://www.ayalon-ins.co.il/mediastorage/media/xd4hpdva/הצהרת-מדיניות-השקעה-איילון-גמל-להשקעה-2026-סופי.xlsx"
+     ],
+     "unselected_files": [
+      {
+       "file": "https://www.ayalon-ins.co.il/mediastorage/media/sn4mjoiz/טופס-הצטרפות-לקופת-גמל-להשקעה-102-מהדורה-062026-1.pdf",
+       "text": "טופס הצטרפות לקופת גמל להשקעה - 102 - מהדורה 06.2026",
+       "ctx": ""
+      },
+      {
+       "file": "https://www.ayalon-ins.co.il/media/qmqeukz4/טופס-הצטרפות-לקופת-גמל-להשקעה-קטין-105-מהדורה-062026.pdf",
+       "text": "טופס הצטרפות לקופת גמל להשקעה לקטין - 105 - מהדורה 06.2026",
+       "ctx": ""
+      },
+      {
+       "file": "https://www.ayalon-ins.co.il/media/0tlfzvqh/טופס-הצטרפות-לקופת-גמל-להשקעה-102-מהדורה-062026-2.pdf",
+       "text": "",
+       "ctx": ""
+      },
+      {
+       "file": "https://www.ayalon-ins.co.il/media/01ub3y4d/בקשת-העברת-כספים-לקופת-גמל-והשתלמות-901-מהדורה-062026.pdf",
+       "text": "בקשת העברת כספים לקופת גמל והשתלמות -",
+       "ctx": ""
+      },
+      {
+       "file": "https://www.ayalon-ins.co.il/media/01ub3y4d/בקשת-העברת-כספים-לקופת-גמל-והשתלמות-901-מהדורה-062026.pdf",
+       "text": "901",
+       "ctx": ""
+      },
+      {
+       "file": "https://www.ayalon-ins.co.il/mediastorage/media/k23nhvjs/תקנון-תקני-לקופת-גמל-להשקעה-15969-מהדורה-072026.pdf",
+       "text": "תקנון גמל להשקעה -  15969 - מהדורה 07.2026",
+       "ctx": ""
+      },
+      {
+       "file": "https://www.ayalon-ins.co.il/media/yhanbkfw/איילון-גמל-להשקעה.pdf",
+       "text": "תעודת כשרות מסלולי השקעה לשנת 2026",
+       "ctx": ""
+      }
+     ]
+    },
+    {
+     "url": "https://www.ayalon-ins.co.il/savings/study-fund",
+     "cache": "hit",
+     "links": 38,
+     "followed": [],
+     "files": 4,
+     "clicked": 0,
+     "captured": 0,
+     "selected": [
+      "https://www.ayalon-ins.co.il/mediastorage/media/e3zbqdxk/הצהרת-מדיניות-השקעה-איילון-השתלמות-2026-סופי.xlsx"
+     ],
+     "unselected_files": [
+      {
+       "file": "https://www.ayalon-ins.co.il/mediastorage/media/3nydd2lo/טופס-הצטרפות-קרן-השתלמות-703-מהדורה-062026-1.pdf",
+       "text": "טופס הצטרפות לקרן השתלמות - 703 - מהדורה 06.2026",
+       "ctx": ""
+      },
+      {
+       "file": "https://www.ayalon-ins.co.il/mediastorage/media/zcaialwy/תקנון-קרן-השתלמות-15983-מהדורה-072026.pdf",
+       "text": "תקנון קרן השתלמות - 15983 - מהדורה 07.2026",
+       "ctx": ""
+      },
+      {
+       "file": "https://www.ayalon-ins.co.il/media/eqghchqh/איילון-השתלמות.pdf",
+       "text": "תעודת כשרות מסלולי השקעה לשנת 2026",
+       "ctx": ""
+      }
+     ]
+    }
+   ],
+   "new_docs": 0,
+   "found": 16,
+   "selected": 3,
+   "had": 3,
+   "head_skip": 0,
+   "page_cache": 3,
+   "cache_hit": 3,
+   "old_skip": 3,
+   "mode": "map",
+   "errors": [],
+   "diag": [
+    "איילון קופות גמל ב: links=100 files=4 clicked=0 captured=0 selected=1",
+    "איילון קופות גמל ב: links=38 files=8 clicked=0 captured=0 selected=1",
+    "איילון קופות גמל ב: links=38 files=4 clicked=0 captured=0 selected=1"
    ],
    "new_files": []
   }
