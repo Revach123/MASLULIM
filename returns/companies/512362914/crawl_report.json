@@ -1,11 +1,11 @@
 {
  "legal_id": "512362914",
  "company": "מחוג - מינהל גמל לעובדי חברת חשמל לישראל בע\"מ",
- "run": "2026-10-28T11:44:24+00:00",
+ "run": "2026-10-29T11:49:16+00:00",
  "errors": [],
  "seeds": {
   "config": 0,
-  "discovered": 1,
+  "discovered": 2,
   "policy_snapshot": 1,
   "policy_snapshot_docs": 0,
   "gap_search": 0,
@@ -21,7 +21,7 @@
  "pages_failed": [],
  "candidates": 37,
  "docs": 37,
- "new_docs": 7,
+ "new_docs": 0,
  "index_size": 37,
- "seconds": 32
+ "seconds": 56
 }
