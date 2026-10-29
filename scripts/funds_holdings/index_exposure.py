@@ -224,7 +224,8 @@ _COUNTRY_ALIASES = {"טאיון": "טייוואן", "דרום קוראה": "דר
 
 
 def normalize_name(text) -> str:
-    s = re.sub(r"\s+", " ", str(text or "")).strip()
+    s = re.sub(r"[®™©℠]", "", str(text or ""))  # "State Street® SPDR® S&P® 500" - הסימן המסחרי שובר את הזיהוי של S&P 500
+    s = re.sub(r"\s+", " ", s).strip()
     s = _SUFFIX.sub("", s).strip(" -")
     return _TICKER_PREFIX.sub("", s) or s
 
