@@ -1,7 +1,7 @@
 {
  "extension_version": "2.53.0",
  "started": "2026-10-29T18:19:25.386Z",
- "updated": "2026-10-29T18:58:55.580Z",
+ "updated": "2026-10-29T19:01:55.583Z",
  "final": false,
  "stopped": false,
  "rules_from_github": true,
@@ -24,7 +24,7 @@
   "_note_returns": "returns_rx: קבצי מרכיבי תשואה לאתרי kind=returns (מוגדרים ב-extension_sites.json מ-returns_extension בהגדרות האתר); נשמרים ב-policy/inbox/<id>/returns/"
  },
  "total_sites": 22,
- "done_sites": 3,
+ "done_sites": 4,
  "new_docs": 0,
  "skipped_complete": [
   {
@@ -42,11 +42,11 @@
  ],
  "active": [
   {
-   "name": "איי. די. איי. חברה לביטוח בע\"מ",
-   "page": "https://www.555.co.il/about/financial_reports/votes.html",
-   "page_no": 1,
-   "pages": 2,
-   "step": "בודק אם העמוד השתנה"
+   "name": "איי. די. איי. חברה לביטוח בע\"מ - מרכיבי תשואה",
+   "page": "https://www.555.co.il/financial_reports/report_31_12_24.html",
+   "page_no": 18,
+   "pages": 22,
+   "step": "פותח אקורדיונים ואוסף קישורים"
   }
  ],
  "sites": [
@@ -33698,6 +33698,137 @@
     "   ? קופת-גמל-דוח-כספי-2013.pdf | דו\"ח כספי ליום 31.12.2013 | עברית - HE פתח חיפוש אזור אישי סוכנים מעסיקים מתפעלים Toggle",
     "   ? קופת-גמל-דוח-כספי-2013.pdf |  | עברית - HE פתח חיפוש אזור אישי סוכנים מעסיקים מתפעלים Toggle",
     "   ? קופת-גמל-סקירת-הנהלה-2013.pdf | סקירת הנהלה ליום 31.12.2013 | עברית - HE פתח חיפוש אזור אישי סוכנים מעסיקים מתפעלים Toggle"
+   ],
+   "new_files": []
+  },
+  {
+   "legal_id": "513910703",
+   "name": "איי. די. איי. חברה לביטוח בע\"מ",
+   "pages": [
+    {
+     "url": "https://www.555.co.il/about/financial_reports/votes.html",
+     "cache": "hit",
+     "links": 54,
+     "followed": [],
+     "files": 43,
+     "clicked": 0,
+     "captured": 0,
+     "selected": [
+      "https://www.555.co.il/sites/default/files/Forms/Voting Policy 2026.pdf",
+      "https://www.555.co.il/sites/default/files/Forms/Mediniut_Hatzbaa_2025_New.pdf",
+      "https://www.555.co.il/sites/default/files/General/mediniut_hatzbaa_Mungash_2024.pdf",
+      "https://www.555.co.il/sites/default/files/General/mediniut_atzbaa_2023.pdf",
+      "https://www.555.co.il/sites/default/files/General/mediniut_atzbaa_Emda_2023.pdf",
+      "https://www.555.co.il/sites/default/files/General/2026-General-Meeting-Voting-Policy-Excel-file.xlsx",
+      "https://www.555.co.il/sites/default/files/Forms/assefot_01.01-31.12.25.xlsx",
+      "https://www.555.co.il/sites/default/files/Forms/assefot_2024_final.xlsx",
+      "https://www.555.co.il/sites/default/files/Forms/2023.xlsx",
+      "https://www.555.co.il/sites/default/files/General/asefot10.5.2023.pdf",
+      "https://www.555.co.il/sites/default/files/General/asefot28.12.2022.pdf",
+      "https://www.555.co.il/sites/default/files/Forms/asefot14.12.2022.pdf",
+      "https://www.555.co.il/sites/default/files/Forms/asefot28.09.2022.pdf",
+      "https://www.555.co.il/sites/default/files/General/asefot14.08.2022.pdf",
+      "https://www.555.co.il/sites/default/files/Forms/asefot14.04.2022_0.pdf",
+      "https://www.555.co.il/sites/default/files/Forms/asefot02.03.2022.pdf",
+      "https://www.555.co.il/sites/default/files/Forms/asefot03.01.2022.pdf",
+      "https://www.555.co.il/sites/default/files/Forms/asefot08.12.2021.pdf",
+      "https://www.555.co.il/sites/default/files/Forms/asefot13.10.2021.pdf",
+      "https://www.555.co.il/sites/default/files/Forms/asefot28.07.2021.pdf",
+      "https://www.555.co.il/sites/default/files/Forms/asefot02.06.2021.pdf",
+      "https://www.555.co.il/sites/default/files/business/asefot05.05.2021.pdf",
+      "https://www.555.co.il/sites/default/files/Forms/asefot15.03.2021.pdf",
+      "https://www.555.co.il/sites/default/files/Forms/asefot07.02.2021_0.pdf",
+      "https://www.555.co.il/sites/default/files/General/asefot24.01.2021.pdf",
+      "https://www.555.co.il/sites/default/files/General/asefot31.12.2020_0.pdf",
+      "https://www.555.co.il/sites/default/files/Forms/asefot_12.11.20.pdf",
+      "https://www.555.co.il/sites/default/files/General/assefot_30_07_2026_accessible.pdf",
+      "https://www.555.co.il/sites/default/files/General/IDI-Insurance-Notice-of-Special-Annual-Meeting-May-2026_Mungash.pdf",
+      "https://www.555.co.il/sites/default/files/General/איידיאיי ביטוח- מודעה לאסיפה כללית 8.1.2026(11945887.3).pdf",
+      "https://www.555.co.il/sites/default/files/Forms/asefot_22.6.2025.pdf",
+      "https://www.555.co.il/sites/default/files/General/asefot_7_4_2024.pdf",
+      "https://www.555.co.il/sites/default/files/General/asefot_17_12_2023.pdf",
+      "https://www.555.co.il/sites/default/files/General/asefot29.6.2023.pdf",
+      "https://www.555.co.il/sites/default/files/Forms/kinus_asefa30.03.23.pdf",
+      "https://www.555.co.il/sites/default/files/Forms/kinus_asefa3.4.23.pdf",
+      "https://www.555.co.il/sites/default/files/General/kinusasefa_2.2.2023.pdf",
+      "https://www.555.co.il/sites/default/files/Forms/kinus_asefa_26_1_23_0.pdf",
+      "https://www.555.co.il/sites/default/files/Forms/asefot2_10_2022.pdf",
+      "https://www.555.co.il/sites/default/files/Forms/kinusasefa1.5.2022.pdf",
+      "https://www.555.co.il/sites/default/files/General/kinusasefa17.12.20_0.pdf",
+      "https://www.555.co.il/sites/default/files/Forms/kinusasefot_4.5.20.pdf",
+      "https://www.555.co.il/sites/default/files/Forms/asefot11.3.20.pdf"
+     ],
+     "unselected_files": []
+    },
+    {
+     "url": "https://www.555.co.il/about/hashkaot.html",
+     "cache": "hit",
+     "links": 26,
+     "followed": [],
+     "files": 15,
+     "clicked": 0,
+     "captured": 0,
+     "selected": [
+      "https://www.555.co.il/sites/default/files/Forms/medidyut2026.xlsx",
+      "https://www.555.co.il/sites/default/files/Forms/medidyut2025.xlsx",
+      "https://www.555.co.il/sites/default/files/General/medinyut_7.2024.xlsx",
+      "https://www.555.co.il/sites/default/files/General/medinyut_new_2024.xlsx",
+      "https://www.555.co.il/sites/default/files/General/medidyut2023.xlsx",
+      "https://www.555.co.il/sites/default/files/Forms/medidyut2022_0.xlsx",
+      "https://www.555.co.il/sites/default/files/General/medidyut2021.xlsx",
+      "https://www.555.co.il/sites/default/files/Forms/medinyut2020.xlsx",
+      "https://www.555.co.il/sites/default/files/Forms/Corporate governance standards 2026.pdf"
+     ],
+     "unselected_files": [
+      {
+       "file": "https://www.555.co.il/sites/default/files/Forms/ESG 2026_announcement.pdf",
+       "text": "לצפייה",
+       "ctx": "2026 2025 2024 2023 2022 2021 2020 אמות מידה 2026 הצהרה מראש של גוף מוסדי על מדיניות ההשקעה שלו לצפי"
+      },
+      {
+       "file": "https://www.555.co.il/sites/default/files/Forms/invest_policy_ESG_2025.pdf",
+       "text": "לצפייה",
+       "ctx": "2026 2025 2024 2023 2022 2021 2020 אמות מידה 2026 הצהרה מראש של גוף מוסדי על מדיניות ההשקעה שלו לצפי"
+      },
+      {
+       "file": "https://www.555.co.il/sites/default/files/General/invest_policy_ESG_2024_New.pdf.pdf",
+       "text": "לצפייה",
+       "ctx": "2026 2025 2024 2023 2022 2021 2020 אמות מידה 2026 הצהרה מראש של גוף מוסדי על מדיניות ההשקעה שלו לצפי"
+      },
+      {
+       "file": "https://www.555.co.il/sites/default/files/General/invest_policy_ESG_2023.pdf",
+       "text": "לצפייה",
+       "ctx": "2026 2025 2024 2023 2022 2021 2020 אמות מידה 2026 הצהרה מראש של גוף מוסדי על מדיניות ההשקעה שלו לצפי"
+      },
+      {
+       "file": "https://www.555.co.il/sites/default/files/Forms/integrating_esg_principles_investment_policies.pdf",
+       "text": "לצפייה",
+       "ctx": "2026 2025 2024 2023 2022 2021 2020 אמות מידה 2026 הצהרה מראש של גוף מוסדי על מדיניות ההשקעה שלו לצפי"
+      },
+      {
+       "file": "https://www.555.co.il/sites/default/files/General/invest_policy_ESG_2024_New.pdf",
+       "text": "(html)",
+       "ctx": ""
+      }
+     ]
+    }
+   ],
+   "new_docs": 0,
+   "found": 58,
+   "selected": 52,
+   "had": 50,
+   "head_skip": 0,
+   "page_cache": 2,
+   "cache_hit": 2,
+   "old_skip": 50,
+   "mode": "map",
+   "errors": [
+    "asefot11.3.20.pdf -> 418",
+    "Corporate governance standards 2026.pdf -> 418"
+   ],
+   "diag": [
+    "איי. די. איי. חברה: links=54 files=43 clicked=0 captured=0 selected=43",
+    "איי. די. איי. חברה: links=26 files=15 clicked=0 captured=0 selected=9"
    ],
    "new_files": []
   }
