@@ -1,7 +1,7 @@
 {
  "legal_id": "512065202",
  "company": "מיטב גמל ופנסיה בע\"מ",
- "run": "2026-10-29T11:47:09+00:00",
+ "run": "2026-10-30T11:39:56+00:00",
  "errors": [],
  "seeds": {
   "config": 7,
@@ -46,14 +46,14 @@
  },
  "pages": 22,
  "pages_failed": [
-  "https://www.meitav.co.il/provident_pension/gemel_report_articles/: 404",
-  "https://www.meitav.co.il/provident_pension/hishtalmut_report_articles/: 404",
-  "https://www.meitav.co.il/provident_pension/kids_report_articles/: 404",
-  "https://www.meitav.co.il/provident_pension/invest_report_articles/: 404"
+  "https://www.meitav.co.il/provident_pension/gemel_report_articles/: browser:Error:Page.goto: net::ERR_CONNECTION_RESET at https://www.meitav.co.il/provident_pension/gemel_report_articles/",
+  "https://www.meitav.co.il/provident_pension/hishtalmut_report_articles/: browser:Error:Page.goto: net::ERR_CONNECTION_RESET at https://www.meitav.co.il/provident_pension/hishtalmut_report_articles/",
+  "https://www.meitav.co.il/provident_pension/kids_report_articles/: browser:Error:Page.goto: net::ERR_CONNECTION_RESET at https://www.meitav.co.il/provident_pension/kids_report_articles/",
+  "https://www.meitav.co.il/provident_pension/invest_report_articles/: browser:Error:Page.goto: net::ERR_CONNECTION_RESET at https://www.meitav.co.il/provident_pension/invest_report_articles/"
  ],
  "candidates": 1637,
  "docs": 1637,
  "new_docs": 0,
  "index_size": 1745,
- "seconds": 1099
+ "seconds": 139
 }
