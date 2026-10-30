@@ -1,7 +1,7 @@
 {
  "legal_id": "513621110",
  "company": "אינפיניטי השתלמות, גמל ופנסיה בע\"מ",
- "run": "2026-10-29T11:53:58+00:00",
+ "run": "2026-10-30T11:46:15+00:00",
  "errors": [
   "https://infinity.co.il/wp-content/uploads/2025/07/513621110_g1078_yield122_1.xlsx -> 404",
   "https://infinity.co.il/wp-content/uploads/2025/07/513621110_G1078_YIELD122.XLSX -> 404",
@@ -32,9 +32,9 @@
  "pages_failed": [
   "https://infinity.co.il/category-services/: 404"
  ],
- "candidates": 1387,
- "docs": 1384,
- "new_docs": 14,
- "index_size": 1384,
- "seconds": 950
+ "candidates": 1442,
+ "docs": 1439,
+ "new_docs": 69,
+ "index_size": 1439,
+ "seconds": 980
 }
