@@ -1,7 +1,7 @@
 {
  "legal_id": "515447035",
  "company": "הפניקס חח\"י קופה מרכזית לקצבה בע\"מ",
- "taken": "2026-10-29T10:57:07+00:00",
+ "taken": "2026-10-30T11:17:26+00:00",
  "pages": {
   "https://www.fnx.co.il/pension-savings/iec-pension/": {
    "product": "פנסיה",
@@ -1165,21 +1165,13 @@
   "https://www.fnx.co.il/SPF/iframe-the-expected-investment-policy-2020.aspx": {
    "product": "פנסיה",
    "status": 200,
-   "method": "browser",
-   "text_hash": "95721f8d62c889d3ff02522b6af4aa2f6d33d65c",
-   "text_head": " ביטוח מדיניות השקעה צפויה לשנת 2020 מדיניות השקעה צפויה לשנת 2020 - עדכון יוני מדיניות השקעה צפויה לשנת 2020 - ביטוח-עדכון ספטמבר 2020 מדיניות השקעה צפויה לשנת 2020 - אקסלנס אינווסט פנסיה מדיניות השקעה צפויה לשנת 2020 - פנסיה-עדכון ספטמבר 2020 מדיניות ההשקעה הצפויה לשנת 2020 - עדכון יוני מדיניות השקעה צפויה לשנת 2020 גמל מדיניות השקעה צפויה לשנת 2020 - גמל-עדכון אוקטובר 2020 מדיניות השקעה צפויה לשנת 2020 - גמל להשקעה - עדכון יוני מדיניות השקעה צפויה לשנת 2020 - חיסכון לכל ילד - עדכון יוני מדיניות השקעה צפויה לשנת 2020 - עדכון יוני מדיניות השקעה צפויה לשנת 2020 מדיניות השקעה צפויה לשנת 2020 - ",
+   "method": "requests",
+   "text_hash": "f8df5bb9d71388928379bcff93eaa0140e855274",
+   "text_head": "iframe-the-expected-investment-policy-2020 - הפניקס iframe-the-expected-investment-policy-2020 iframe-the-expected-investment-policy-2020 ייתכן שאתה מנסה לגשת לאתר זה מדפדפן מאובטח בשרת. הפוך קבצי Script לזמינים וטען מחדש דף זה. ביטוח מדיניות השקעה צפויה לשנת 2020 מדיניות השקעה צפויה לשנת 2020 - עדכון יוני מדיניות השקעה צפויה לשנת 2020 - ביטוח-עדכון ספטמבר 2020 מדיניות השקעה צפויה לשנת 2020 - אקסלנס אינווסט פנסיה מדיניות השקעה צפויה לשנת 2020 - פנסיה-עדכון ספטמבר 2020 מדיניות ההשקעה הצפויה לשנת 2020 - עדכון יוני מדיניות השקעה צפויה לשנת 2020 גמל מדיניות השקעה צפויה לשנת 2020 - גמל-עדכון אוקטוב",
    "items": [
     {
      "text": "מדיניות השקעה צפויה לשנת 2020 - פנסיה-עדכון ספטמבר 2020",
      "href": "http://www.fnx.co.il/sites/docs/genery/mediniut_ashkaa_tzfuia/מדיניות השקעה צפויה לשנת 2020 - פנסיה-עדכון ספטמבר 2020.xls",
-     "year": "2020",
-     "iframe": false,
-     "doc": true,
-     "internal": true
-    },
-    {
-     "text": "מדיניות השקעה צפויה לשנת 2020 - פנסיה-עדכון ספטמבר 2020",
-     "href": "https://www.fnx.co.il/sites/docs/genery/mediniut_ashkaa_tzfuia/%D7%9E%D7%93%D7%99%D7%A0%D7%99%D7%95%D7%AA%20%D7%94%D7%A9%D7%A7%D7%A2%D7%94%20%D7%A6%D7%A4%D7%95%D7%99%D7%94%20%D7%9C%D7%A9%D7%A0%D7%AA%202020%20-%20%D7%A4%D7%A0%D7%A1%D7%99%D7%94-%D7%A2%D7%93%D7%9B%D7%95%D7%9F%20%D7%A1%D7%A4%D7%98%D7%9E%D7%91%D7%A8%202020.xls",
      "year": "2020",
      "iframe": false,
      "doc": true,
@@ -1202,32 +1194,8 @@
      "internal": true
     },
     {
-     "text": "מדיניות השקעה צפויה לשנת 2020 - עדכון יוני",
-     "href": "https://www.fnx.co.il/sites/docs/genery/mediniut_ashkaa_tzfuia/bituach2020_update06.xls",
-     "year": "2020",
-     "iframe": false,
-     "doc": true,
-     "internal": true
-    },
-    {
-     "text": "מדיניות השקעה צפויה לשנת 2020 - עדכון יוני",
-     "href": "https://www.fnx.co.il/sites/docs/genery/mediniut_ashkaa_tzfuia/gemel2020_update06.xls",
-     "year": "2020",
-     "iframe": false,
-     "doc": true,
-     "internal": true
-    },
-    {
      "text": "מדיניות השקעה צפויה לשנת 2020 - חיסכון לכל ילד - עדכון יוני",
      "href": "http://www.fnx.co.il/sites/docs/genery/mediniut_ashkaa_tzfuia/gemelpolicyghild_2020_update06.xls",
-     "year": "2020",
-     "iframe": false,
-     "doc": true,
-     "internal": true
-    },
-    {
-     "text": "מדיניות השקעה צפויה לשנת 2020 - חיסכון לכל ילד - עדכון יוני",
-     "href": "https://www.fnx.co.il/sites/docs/genery/mediniut_ashkaa_tzfuia/gemelpolicyghild_2020_update06.xls",
      "year": "2020",
      "iframe": false,
      "doc": true,
@@ -1242,24 +1210,8 @@
      "internal": true
     },
     {
-     "text": "מדיניות השקעה צפויה לשנת 2020 - גמל-עדכון אוקטובר 2020",
-     "href": "https://www.fnx.co.il/sites/docs/genery/mediniut_ashkaa_tzfuia/mediniut_ashkaa_tzfuia_gemel_01.10.2020.xls",
-     "year": "2020",
-     "iframe": false,
-     "doc": true,
-     "internal": true
-    },
-    {
      "text": "מדיניות השקעה צפויה לשנת 2020 - גמל להשקעה - עדכון יוני",
      "href": "http://www.fnx.co.il/sites/docs/genery/mediniut_ashkaa_tzfuia/gemelashkaa2020_update0620.xls",
-     "year": "2020",
-     "iframe": false,
-     "doc": true,
-     "internal": true
-    },
-    {
-     "text": "מדיניות השקעה צפויה לשנת 2020 - גמל להשקעה - עדכון יוני",
-     "href": "https://www.fnx.co.il/sites/docs/genery/mediniut_ashkaa_tzfuia/gemelashkaa2020_update0620.xls",
      "year": "2020",
      "iframe": false,
      "doc": true,
@@ -1274,24 +1226,8 @@
      "internal": true
     },
     {
-     "text": "מדיניות השקעה צפויה לשנת 2020 - גמל להשקעה (עדכון אפריל 2020)",
-     "href": "https://www.fnx.co.il/sites/docs/genery/mediniut_ashkaa_tzfuia/gemelashkaa2020_update0420.xls",
-     "year": "2020",
-     "iframe": false,
-     "doc": true,
-     "internal": true
-    },
-    {
      "text": "מדיניות השקעה צפויה לשנת 2020 - גמל להשקעה",
      "href": "http://www.fnx.co.il/sites/docs/genery/mediniut_ashkaa_tzfuia/gemelashkaa2020.xls",
-     "year": "2020",
-     "iframe": false,
-     "doc": true,
-     "internal": true
-    },
-    {
-     "text": "מדיניות השקעה צפויה לשנת 2020 - גמל להשקעה",
-     "href": "https://www.fnx.co.il/sites/docs/genery/mediniut_ashkaa_tzfuia/gemelashkaa2020.xls",
      "year": "2020",
      "iframe": false,
      "doc": true,
@@ -1306,14 +1242,6 @@
      "internal": true
     },
     {
-     "text": "מדיניות השקעה צפויה לשנת 2020 - ביטוח-עדכון ספטמבר 2020",
-     "href": "https://www.fnx.co.il/sites/docs/genery/mediniut_ashkaa_tzfuia/%D7%9E%D7%93%D7%99%D7%A0%D7%99%D7%95%D7%AA%20%D7%94%D7%A9%D7%A7%D7%A2%D7%94%20%D7%A6%D7%A4%D7%95%D7%99%D7%94%20%D7%9C%D7%A9%D7%A0%D7%AA%202020%20-%20%20%D7%91%D7%99%D7%98%D7%95%D7%97-%D7%A2%D7%93%D7%9B%D7%95%D7%9F%20%D7%A1%D7%A4%D7%98%D7%9E%D7%91%D7%A8%202020.xls",
-     "year": "2020",
-     "iframe": false,
-     "doc": true,
-     "internal": true
-    },
-    {
      "text": "מדיניות השקעה צפויה לשנת 2020 - אקסלנס אינווסט",
      "href": "http://www.fnx.co.il/sites/docs/genery/mediniut_ashkaa_tzfuia/xnesinvest2020.xls",
      "year": "2020",
@@ -1322,24 +1250,8 @@
      "internal": true
     },
     {
-     "text": "מדיניות השקעה צפויה לשנת 2020 - אקסלנס אינווסט",
-     "href": "https://www.fnx.co.il/sites/docs/genery/mediniut_ashkaa_tzfuia/xnesinvest2020.xls",
-     "year": "2020",
-     "iframe": false,
-     "doc": true,
-     "internal": true
-    },
-    {
      "text": "מדיניות השקעה צפויה לשנת 2020 - אקסלנס - חיסכון לכל ילד",
      "href": "http://www.fnx.co.il/sites/docs/genery/mediniut_ashkaa_tzfuia/gemelpolicychild_2020.xls",
-     "year": "2020",
-     "iframe": false,
-     "doc": true,
-     "internal": true
-    },
-    {
-     "text": "מדיניות השקעה צפויה לשנת 2020 - אקסלנס - חיסכון לכל ילד",
-     "href": "https://www.fnx.co.il/sites/docs/genery/mediniut_ashkaa_tzfuia/gemelpolicychild_2020.xls",
      "year": "2020",
      "iframe": false,
      "doc": true,
@@ -1370,40 +1282,8 @@
      "internal": true
     },
     {
-     "text": "מדיניות השקעה צפויה לשנת 2020",
-     "href": "https://www.fnx.co.il/sites/docs/genery/mediniut_ashkaa_tzfuia/bituach2020.xls",
-     "year": "2020",
-     "iframe": false,
-     "doc": true,
-     "internal": true
-    },
-    {
-     "text": "מדיניות השקעה צפויה לשנת 2020",
-     "href": "https://www.fnx.co.il/sites/docs/genery/mediniut_ashkaa_tzfuia/pension2020.xls",
-     "year": "2020",
-     "iframe": false,
-     "doc": true,
-     "internal": true
-    },
-    {
-     "text": "מדיניות השקעה צפויה לשנת 2020",
-     "href": "https://www.fnx.co.il/sites/docs/genery/mediniut_ashkaa_tzfuia/gemel2020.xls",
-     "year": "2020",
-     "iframe": false,
-     "doc": true,
-     "internal": true
-    },
-    {
      "text": "מדיניות ההשקעה הצפויה לשנת 2020 - עדכון יוני",
      "href": "http://www.fnx.co.il/sites/docs/genery/mediniut_ashkaa_tzfuia/pension2020_update06.xls",
-     "year": "2020",
-     "iframe": false,
-     "doc": true,
-     "internal": true
-    },
-    {
-     "text": "מדיניות ההשקעה הצפויה לשנת 2020 - עדכון יוני",
-     "href": "https://www.fnx.co.il/sites/docs/genery/mediniut_ashkaa_tzfuia/pension2020_update06.xls",
      "year": "2020",
      "iframe": false,
      "doc": true,
@@ -1416,22 +1296,6 @@
      "iframe": false,
      "doc": true,
      "internal": true
-    },
-    {
-     "text": "השקעות אחראיות",
-     "href": "https://www.fnx.co.il/sites/docs/genery/mediniut_ashkaa_tzfuia/hashkaotachraiot2020.pdf",
-     "year": "2020",
-     "iframe": false,
-     "doc": true,
-     "internal": true
-    },
-    {
-     "text": "להורדת מודול נגישות חינם",
-     "href": "http://www.negishim.org/",
-     "year": null,
-     "iframe": false,
-     "doc": true,
-     "internal": false
     }
    ]
   },
