@@ -1,11 +1,11 @@
 {
  "legal_id": "512244146",
  "company": "כלל פנסיה וגמל בע\"מ",
- "run": "2026-10-30T11:39:33+00:00",
+ "run": "2026-10-31T11:15:00+00:00",
  "errors": [],
  "seeds": {
   "config": 1,
-  "discovered": 11,
+  "discovered": 12,
   "policy_snapshot": 0,
   "policy_snapshot_docs": 0,
   "gap_search": 0,
@@ -26,9 +26,9 @@
  },
  "pages": 16,
  "pages_failed": [],
- "candidates": 76,
- "docs": 76,
- "new_docs": 4,
+ "candidates": 44,
+ "docs": 44,
+ "new_docs": 0,
  "index_size": 76,
- "seconds": 1135
+ "seconds": 1127
 }
