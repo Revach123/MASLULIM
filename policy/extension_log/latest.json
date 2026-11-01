@@ -1,7 +1,7 @@
 {
  "extension_version": "2.53.0",
  "started": "2026-11-01T22:04:24.247Z",
- "updated": "2026-11-01T22:10:24.459Z",
+ "updated": "2026-11-01T22:13:24.468Z",
  "final": false,
  "stopped": false,
  "rules_from_github": true,
@@ -79,10 +79,10 @@
  "active": [
   {
    "name": "איילון קופות גמל בע\"מ - מרכיבי תשואה",
-   "page": "https://www.ayalon-ins.co.il/savings",
-   "page_no": 14,
+   "page": "https://www.ayalon-ins.co.il/savings/app",
+   "page_no": 19,
    "pages": 29,
-   "step": "פותח אקורדיונים ואוסף קישורים"
+   "step": "טוען עמוד"
   }
  ],
  "sites": [
