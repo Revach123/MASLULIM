@@ -1,7 +1,7 @@
 {
  "legal_id": "520004896",
  "company": "מגדל חברה לביטוח בע\"מ",
- "run": "2026-10-31T11:26:06+00:00",
+ "run": "2026-11-01T12:14:53+00:00",
  "errors": [],
  "seeds": {
   "config": 0,
@@ -23,9 +23,9 @@
   "https://undefined/: browser:Error:Page.goto: net::ERR_NAME_NOT_RESOLVED at https://undefined/",
   "http://my.migdal.co.il/mymigdal/onlinepurchase/retirementpensionsimulation: ERR"
  ],
- "candidates": 499,
- "docs": 499,
+ "candidates": 530,
+ "docs": 530,
  "new_docs": 1,
  "index_size": 487,
- "seconds": 831
+ "seconds": 918
 }
