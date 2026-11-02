@@ -766,5 +766,35 @@
   "via": "extension",
   "last_modified": "Thu, 29 Feb 2024 12:51:12 GMT",
   "parser_version": 23
+ },
+ "https://www.555.co.il/sites/default/files/Forms/asefot11.3.20.pdf": {
+  "legal_id": "513910703",
+  "first_seen": "2026-11-02T22:55:31.403Z",
+  "last_seen": "2026-11-02T22:55:31.403Z",
+  "file": "policy/companies/513910703/raw/513910703/252d69f45e77_asefot11.3.20.pdf",
+  "sha256": "252d69f45e779514666d37cd46cd99f2c89480f5dbd186d121610020087f5bbe",
+  "size": 107422,
+  "parsed_sha": "252d69f45e779514666d37cd46cd99f2c89480f5dbd186d121610020087f5bbe",
+  "history": [],
+  "link_text": "לצפייה",
+  "source_page": "https://www.555.co.il/about/financial_reports/votes.html",
+  "via": "extension",
+  "last_modified": "Mon, 25 Jan 2021 12:39:48 GMT",
+  "parser_version": 23
+ },
+ "https://www.555.co.il/sites/default/files/Forms/Corporate governance standards 2026.pdf": {
+  "legal_id": "513910703",
+  "first_seen": "2026-11-02T22:55:32.089Z",
+  "last_seen": "2026-11-02T22:55:32.089Z",
+  "file": "policy/companies/513910703/raw/513910703/47f329d5e4bf_Corporate_governance_standards_2026.pdf",
+  "sha256": "47f329d5e4bf151e769fe90e946c3809a23f80529fe6ba615b074efd19c3f268",
+  "size": 154644,
+  "parsed_sha": "47f329d5e4bf151e769fe90e946c3809a23f80529fe6ba615b074efd19c3f268",
+  "history": [],
+  "link_text": "לצפייה",
+  "source_page": "https://www.555.co.il/about/hashkaot.html",
+  "via": "extension",
+  "last_modified": "Sun, 28 Dec 2025 11:52:08 GMT",
+  "parser_version": 23
  }
 }
