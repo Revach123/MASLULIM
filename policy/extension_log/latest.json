@@ -1,7 +1,7 @@
 {
  "extension_version": "2.53.0",
  "started": "2026-11-02T22:49:23.984Z",
- "updated": "2026-11-02T22:49:55.561Z",
+ "updated": "2026-11-02T22:52:24.094Z",
  "final": false,
  "stopped": false,
  "rules_from_github": true,
@@ -40,7 +40,15 @@
    "last_ok": ""
   }
  ],
- "active": [],
+ "active": [
+  {
+   "name": "מנורה מבטחים פנסיה וגמל בע\"מ",
+   "page": "https://www.menoramivt.co.il/funds/pension-and-gemel/gemel-hishtalmut-list/compensation-funds/1145",
+   "page_no": 74,
+   "pages": 120,
+   "step": "בודק אם העמוד השתנה"
+  }
+ ],
  "sites": [
   {
    "legal_id": "510930654",
