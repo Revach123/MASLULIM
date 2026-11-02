@@ -1,7 +1,7 @@
 {
  "extension_version": "2.53.0",
  "started": "2026-11-02T22:49:23.984Z",
- "updated": "2026-11-02T22:59:17.344Z",
+ "updated": "2026-11-02T23:01:24.101Z",
  "final": false,
  "stopped": false,
  "rules_from_github": true,
@@ -40,7 +40,15 @@
    "last_ok": ""
   }
  ],
- "active": [],
+ "active": [
+  {
+   "name": "עגור חברה לניהול קופות גמל וקרנות השתלמות בע\"מ",
+   "page": "https://kereni.co.il/%D7%9E%D7%93%D7%99%D7%A0%D7%99%D7%95%D7%AA-%D7%94%D7%A9%D7%A7%D7%A2%D7%94-%D7%95%D7%A0%D7%94%D7%9C%D7%99%D7%9D/",
+   "page_no": 1,
+   "pages": 1,
+   "step": "מוריד קובץ 47/84"
+  }
+ ],
  "sites": [
   {
    "legal_id": "510930654",
