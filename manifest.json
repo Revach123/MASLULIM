@@ -9734,6 +9734,39 @@
       "year": 2026,
       "quarter": 3,
       "path": "reports/2026Q3/513621110_pn_0326.zip"
+    },
+    "3253216": {
+      "DocumentId": "3253216",
+      "LegalId": "511033060",
+      "ParentCorpName": "קרן החסכון לצבא הקבע - חברה לניהול קופות גמל בע\"מ",
+      "SystemName": "גמל",
+      "ReportPeriodDesc": "2026 רבעון 2",
+      "StatusDate": "2026-11-03T14:31:12+02:00",
+      "year": 2026,
+      "quarter": 2,
+      "path": "reports/2026Q2/511033060_gm_0226_3253216.xlsx"
+    },
+    "3253640": {
+      "DocumentId": "3253640",
+      "LegalId": "513621110",
+      "ParentCorpName": "אינפיניטי השתלמות, גמל ופנסיה בע\"מ",
+      "SystemName": "גמל",
+      "ReportPeriodDesc": "2026 רבעון 3",
+      "StatusDate": "2026-11-03T16:20:24+02:00",
+      "year": 2026,
+      "quarter": 3,
+      "path": "reports/2026Q3/513621110_gm_0326.xlsx"
+    },
+    "3253775": {
+      "DocumentId": "3253775",
+      "LegalId": "513621110",
+      "ParentCorpName": "אינפיניטי השתלמות, גמל ופנסיה בע\"מ",
+      "SystemName": "פנסיה",
+      "ReportPeriodDesc": "2026 רבעון 3",
+      "StatusDate": "2026-11-03T17:31:00+02:00",
+      "year": 2026,
+      "quarter": 3,
+      "path": "reports/2026Q3/513621110_pn_0326.xlsx"
     }
   },
   "backfill": {
