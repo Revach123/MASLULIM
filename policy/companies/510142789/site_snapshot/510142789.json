@@ -1,14 +1,14 @@
 {
  "legal_id": "510142789",
  "company": "חברת ב'ת למ'ד דל'ת בע\"מ",
- "taken": "2026-11-02T12:18:14+00:00",
+ "taken": "2026-11-04T12:04:30+00:00",
  "pages": {
   "https://www.discountbank.co.il": {
    "product": null,
    "status": 200,
-   "method": "requests",
-   "text_hash": "9bd911c64fedfccda84793ffdb656befe1b2d1f5",
-   "text_head": "בנק דיסקונט לישראל | דיסקונט דלג לתוכן העמוד דלג לתפריט אתר דלג לקישורים תחתונים כניסה לחשבונך דלג לתוכן העמוד דלג לתפריט אתר דלג לקישורים תחתונים כניסה לחשבונך לידיעתך: באתר זה נעשה שימוש בקבצי Cookies וכלים דומים כדי לספק לך חווית גלישה טובה ותכנים מותאמים אישית, בין היתר על בסיס מידע הקיים אודותיך במאגרי הבנק. למידע נוסף הבנתי חדש! הפקדת צ'קים דחויים באפליקציה למידע נוסף > בנק דיסקונט לישראל עברית עברית English Français Русский العربية תפריט ראשי תפריט פרטיים עסקים בנקאות פרטית אפשר לעזור? ✕ חיפושים נפוצים באתר פתיחת חשבון המרת מט\"ח צפון ירוק הארנק הירוק Smart Future הלוואות המפתח שלך למבצע",
+   "method": "browser",
+   "text_hash": null,
+   "text_head": "",
    "items": [
     {
      "text": "חוק שכר שווה לשנת 2025",
@@ -29,14 +29,6 @@
     {
      "text": "פקדונות והשקעות",
      "href": "https://www.discountbank.co.il/private/savings-investments/",
-     "year": null,
-     "iframe": false,
-     "doc": false,
-     "internal": true
-    },
-    {
-     "text": "מתכננים היום. נהנים בפנסיה! >",
-     "href": "https://www.discountbank.co.il/lp/smart_future/?fireglass_rsn=true",
      "year": null,
      "iframe": false,
      "doc": false,
@@ -80,91 +72,9 @@
    "product": null,
    "status": 200,
    "method": "requests",
-   "text_hash": "24eb925eb265d3b34fc083e61ce7b6bd13a7f43b",
-   "text_head": "פקדונות והשקעות: מערך שירותי ייעוץ מקצועי ומיומן | דיסקונט דלג לתוכן העמוד דלג לתפריט אתר דלג לקישורים תחתונים כניסה לחשבונך דלג לתוכן העמוד דלג לתפריט אתר דלג לקישורים תחתונים כניסה לחשבונך לידיעתך: באתר זה נעשה שימוש בקבצי Cookies וכלים דומים כדי לספק לך חווית גלישה טובה ותכנים מותאמים אישית, בין היתר על בסיס מידע הקיים אודותיך במאגרי הבנק. למידע נוסף הבנתי עברית עברית English Français Русский العربية תפריט ראשי תפריט פרטיים עסקים בנקאות פרטית אפשר לעזור? ✕ חיפושים נפוצים באתר פתיחת חשבון המרת מט\"ח צפון ירוק הארנק הירוק Smart Future הלוואות המפתח שלך למבצעים והנחות פקדונות מומלצים כרטיסי אשר",
-   "items": [
-    {
-     "text": "תקנון שירותי תשלום ד.פ.ס. סולושיינס בע\"מ",
-     "href": "https://www.discountbank.co.il/db/global/redirects/hebrew/redirect?param=949",
-     "year": null,
-     "iframe": false,
-     "doc": false,
-     "internal": true
-    },
-    {
-     "text": "פקדונות והשקעות",
-     "href": "https://www.discountbank.co.il/private/savings-investments/",
-     "year": null,
-     "iframe": false,
-     "doc": false,
-     "internal": true
-    },
-    {
-     "text": "ספרו לי עוד",
-     "href": "https://www.discountbank.co.il/private/savings-investments/pension-consulting/",
-     "year": null,
-     "iframe": false,
-     "doc": false,
-     "internal": true
-    },
-    {
-     "text": "מדיניות הפרטיות של דיסקונט",
-     "href": "https://www.discountbank.co.il/db/global/redirects/hebrew/redirect?param=142",
-     "year": null,
-     "iframe": false,
-     "doc": false,
-     "internal": true
-    },
-    {
-     "text": "IR",
-     "href": "https://investors.discountbank.co.il/",
-     "year": null,
-     "iframe": false,
-     "doc": false,
-     "internal": true
-    }
-   ]
-  },
-  "https://www.discountbank.co.il/lp/smart_future/?fireglass_rsn=true": {
-   "product": "פנסיה",
-   "status": 200,
-   "method": "requests",
-   "text_hash": "b4160498176f23d0a6c4bbb3d4dd21ab8be3e4b7",
-   "text_head": "עוזר לתכנן את הפנסיה כבר מהיום Smart Future | דיסקונט דלג לתוכן העמוד דלג לתפריט אתר דלג לקישורים תחתונים כניסה לחשבונך דלג לתוכן העמוד דלג לתפריט אתר דלג לקישורים תחתונים כניסה לחשבונך לידיעתך: באתר זה נעשה שימוש בקבצי Cookies וכלים דומים כדי לספק לך חווית גלישה טובה ותכנים מותאמים אישית, בין היתר על בסיס מידע הקיים אודותיך במאגרי הבנק. למידע נוסף הבנתי דיסקונט SMART FUTURE חשוב לנו שתהיה לך חוויה מדהימה למה שלא נמשיך באפליקציה? כניסה קלה וחוויה מותאמת מגוון פעולות ומידע שרלוונטי לך כניסה קלה עם טביעת אצבע כניסה קלה וחוויה מותאמת מגוון פעולות ומידע שרלוונטי לך לאפליקציה המשך באתר יודעים כמה כ",
-   "items": [
-    {
-     "text": "מדיניות הפרטיות של דיסקונט",
-     "href": "https://www.discountbank.co.il/db/global/redirects/hebrew/redirect?param=142",
-     "year": null,
-     "iframe": false,
-     "doc": false,
-     "internal": true
-    },
-    {
-     "text": "לתיאום פגישת ייעוץ פנסיוני אצל המומחים שלנו >",
-     "href": "https://www.discountbank.co.il/private/savings-investments/pension-consulting/pension-consulting-contact/",
-     "year": null,
-     "iframe": false,
-     "doc": false,
-     "internal": true
-    },
-    {
-     "text": "לתיאום פגישת ייעוץ פנסיוני",
-     "href": "https://www.discountbank.co.il/lp/smart_future/?fireglass_rsn=true",
-     "year": null,
-     "iframe": false,
-     "doc": false,
-     "internal": true
-    },
-    {
-     "text": "להצטרפות לשירות באפליקציית דיסקונט",
-     "href": "https://links.private.discountbank.co.il/UR6w/MyPension",
-     "year": null,
-     "iframe": false,
-     "doc": false,
-     "internal": true
-    }
-   ]
+   "text_hash": "08a5f1afc4fdbef52ace04a928d120f806c7b33e",
+   "text_head": "Please enable JavaScript to view the page content. Your support ID is: 9152645332889981026.",
+   "items": []
   },
   "https://investors.discountbank.co.il/": {
    "product": null,
@@ -323,172 +233,9 @@
    "product": "פנסיה",
    "status": 200,
    "method": "requests",
-   "text_hash": "1b9c644a92a571b7614f689392c593028756767a",
-   "text_head": "ייעוץ פנסיוני אובייקטיבי ומקצועי לעצמאים ושכירים | דיסקונט דלג לתוכן העמוד דלג לתפריט אתר דלג לקישורים תחתונים כניסה לחשבונך דלג לתוכן העמוד דלג לתפריט אתר דלג לקישורים תחתונים כניסה לחשבונך לידיעתך: באתר זה נעשה שימוש בקבצי Cookies וכלים דומים כדי לספק לך חווית גלישה טובה ותכנים מותאמים אישית, בין היתר על בסיס מידע הקיים אודותיך במאגרי הבנק. למידע נוסף הבנתי עברית עברית English Français Русский العربية תפריט ראשי תפריט פרטיים עסקים בנקאות פרטית אפשר לעזור? ✕ חיפושים נפוצים באתר פתיחת חשבון המרת מט\"ח צפון ירוק הארנק הירוק Smart Future הלוואות המפתח שלך למבצעים והנחות פקדונות מומלצים כרטיסי אשר",
-   "items": [
-    {
-     "text": "العربية",
-     "href": "https://www.discountbank.co.il/ar/private/deposits-and-savings/pension-consulting/",
-     "year": null,
-     "iframe": false,
-     "doc": false,
-     "internal": true
-    },
-    {
-     "text": "תקנון שירותי תשלום ד.פ.ס. סולושיינס בע\"מ",
-     "href": "https://www.discountbank.co.il/db/global/redirects/hebrew/redirect?param=949",
-     "year": null,
-     "iframe": false,
-     "doc": false,
-     "internal": true
-    },
-    {
-     "text": "פקדונות והשקעות",
-     "href": "https://www.discountbank.co.il/private/savings-investments/",
-     "year": null,
-     "iframe": false,
-     "doc": false,
-     "internal": true
-    },
-    {
-     "text": "מוצרים פנסיונים",
-     "href": "https://www.discountbank.co.il/private/savings-investments/pension-consulting/pension-product/",
-     "year": null,
-     "iframe": false,
-     "doc": false,
-     "internal": true
-    },
-    {
-     "text": "מדיניות הפרטיות של דיסקונט",
-     "href": "https://www.discountbank.co.il/db/global/redirects/hebrew/redirect?param=142",
-     "year": null,
-     "iframe": false,
-     "doc": false,
-     "internal": true
-    },
-    {
-     "text": "לקריאת אמנת שירות ייעוץ פנסיוני",
-     "href": "https://www.discountbank.co.il/media/ldxoqecy/service_level_agreement_311218.pdf",
-     "year": null,
-     "iframe": false,
-     "doc": true,
-     "internal": true
-    },
-    {
-     "text": "למחשבון פנסיה",
-     "href": "https://www.discountbank.co.il/private/savings-investments/pension-consulting/pension-calculator/",
-     "year": null,
-     "iframe": false,
-     "doc": false,
-     "internal": true
-    },
-    {
-     "text": "דלג לתוכן העמוד",
-     "href": "https://www.discountbank.co.il/private/savings-investments/pension-consulting/",
-     "year": null,
-     "iframe": false,
-     "doc": false,
-     "internal": true
-    },
-    {
-     "text": "Русский",
-     "href": "https://www.discountbank.co.il/ru/private/deposits-and-savings/pension-advice/",
-     "year": null,
-     "iframe": false,
-     "doc": false,
-     "internal": true
-    },
-    {
-     "text": "IR",
-     "href": "https://investors.discountbank.co.il/",
-     "year": null,
-     "iframe": false,
-     "doc": false,
-     "internal": true
-    },
-    {
-     "text": "English",
-     "href": "https://www.discountbank.co.il/en/private/deposits-and-savings/pension-advice/",
-     "year": null,
-     "iframe": false,
-     "doc": false,
-     "internal": true
-    }
-   ]
-  },
-  "https://links.private.discountbank.co.il/UR6w/MyPension": {
-   "product": "פנסיה",
-   "status": 200,
-   "method": "requests",
-   "text_hash": "44fabe16bff687e345d8ca8ce6e9a4ff0c33b421",
-   "text_head": "שירות Smart Future מחכה לך באפליקציה | דיסקונט דלג לתוכן העמוד דלג לתפריט אתר דלג לקישורים תחתונים כניסה לחשבונך דלג לתוכן העמוד דלג לתפריט אתר דלג לקישורים תחתונים כניסה לחשבונך לידיעתך: באתר זה נעשה שימוש בקבצי Cookies וכלים דומים כדי לספק לך חווית גלישה טובה ותכנים מותאמים אישית, בין היתר על בסיס מידע הקיים אודותיך במאגרי הבנק. למידע נוסף הבנתי חשוב לנו שתהיה לך חוויה מדהימה למה שלא נמשיך באפליקציה? כניסה קלה וחוויה מותאמת מגוון פעולות ומידע שרלוונטי לך כניסה קלה עם טביעת אצבע כניסה קלה וחוויה מותאמת מגוון פעולות ומידע שרלוונטי לך לאפליקציה המשך באתר Smart Future מחכה לך באפליקציית דיסקונט ",
-   "items": [
-    {
-     "text": "דלג לתוכן העמוד",
-     "href": "https://links.private.discountbank.co.il/UR6w/MyPension",
-     "year": null,
-     "iframe": false,
-     "doc": false,
-     "internal": true
-    }
-   ]
-  },
-  "https://www.discountbank.co.il/private/savings-investments/pension-consulting/pension-consulting-contact/": {
-   "product": "פנסיה",
-   "status": 200,
-   "method": "requests",
-   "text_hash": "4d31149f9b92a023cb7f3ca4239e86dd589eec76",
-   "text_head": "יצירת קשר בנושא ייעוץ פנסיוני | דיסקונט דלג לתוכן העמוד דלג לתפריט אתר דלג לקישורים תחתונים כניסה לחשבונך דלג לתוכן העמוד דלג לתפריט אתר דלג לקישורים תחתונים כניסה לחשבונך לידיעתך: באתר זה נעשה שימוש בקבצי Cookies וכלים דומים כדי לספק לך חווית גלישה טובה ותכנים מותאמים אישית, בין היתר על בסיס מידע הקיים אודותיך במאגרי הבנק. למידע נוסף הבנתי עברית עברית English Français Русский العربية תפריט ראשי תפריט פרטיים עסקים בנקאות פרטית אפשר לעזור? ✕ חיפושים נפוצים באתר פתיחת חשבון המרת מט\"ח צפון ירוק הארנק הירוק Smart Future הלוואות המפתח שלך למבצעים והנחות פקדונות מומלצים כרטיסי אשראי שעות פעילות נמצא",
-   "items": [
-    {
-     "text": "תקנון שירותי תשלום ד.פ.ס. סולושיינס בע\"מ",
-     "href": "https://www.discountbank.co.il/db/global/redirects/hebrew/redirect?param=949",
-     "year": null,
-     "iframe": false,
-     "doc": false,
-     "internal": true
-    },
-    {
-     "text": "פקדונות והשקעות",
-     "href": "https://www.discountbank.co.il/private/savings-investments/",
-     "year": null,
-     "iframe": false,
-     "doc": false,
-     "internal": true
-    },
-    {
-     "text": "מדיניות הפרטיות של דיסקונט",
-     "href": "https://www.discountbank.co.il/db/global/redirects/hebrew/redirect?param=142",
-     "year": null,
-     "iframe": false,
-     "doc": false,
-     "internal": true
-    },
-    {
-     "text": "ייעוץ פנסיוני",
-     "href": "https://www.discountbank.co.il/private/savings-investments/pension-consulting/",
-     "year": null,
-     "iframe": false,
-     "doc": false,
-     "internal": true
-    },
-    {
-     "text": "דלג לתוכן העמוד",
-     "href": "https://www.discountbank.co.il/private/savings-investments/pension-consulting/pension-consulting-contact/",
-     "year": null,
-     "iframe": false,
-     "doc": false,
-     "internal": true
-    },
-    {
-     "text": "IR",
-     "href": "https://investors.discountbank.co.il/",
-     "year": null,
-     "iframe": false,
-     "doc": false,
-     "internal": true
-    }
-   ]
+   "text_hash": "13951d481155a5c7ba47d9bd0ca5a40060432442",
+   "text_head": "Please enable JavaScript to view the page content. Your support ID is: 9152645332890007650.",
+   "items": []
   },
   "https://investors.discountbank.co.il/who-are-we/": {
    "product": null,
@@ -639,12 +386,20 @@
    "product": null,
    "status": 200,
    "method": "requests",
-   "text_hash": "d8d733f0c6479f82bcc311127717f5486940a3be",
+   "text_hash": "b5edcd983eaaffee83fb0b34009dc8f1c3b9d6de",
    "text_head": "Regulatory Filings | IR דלג לתוכן העמוד דלג לתפריט אתר דלג לקישורים תחתונים כניסה לחשבונך דלג לתוכן העמוד דלג לתפריט אתר דלג לקישורים תחתונים כניסה לחשבונך This website uses cookies and similar tools to improve your browsing experience and personalize content. This includes data about you in the Bank's databases. For more information, For more information Accept About Us Regulatory Filings Financial Reports ESG Credit Ratings Terms of Use Contact Us Regulatory Filings About Us Regulatory Filings Financial Reports ESG Credit Ratings Terms of Use Contact Us IR Regulatory Filings Regulatory Infor",
    "items": [
     {
      "text": "The Competition Commissioner Decision Regarding the Purchase of CAL by Union Investments and Harel Insurance",
      "href": "https://investors.discountbank.co.il/media/o2hhd5c0/immediate-report-t053-accessible-2026-01-087558-eng-23-09-2026-cal-decision.pdf",
+     "year": "2026",
+     "iframe": false,
+     "doc": true,
+     "internal": true
+    },
+    {
+     "text": "Termination of Agreement to Sell CAL to Union Investments and Harel Insurance",
+     "href": "https://investors.discountbank.co.il/media/zxkgrgel/immediate-report-t053-accessible-2026-01-098153-eng-02-11-2026.pdf",
      "year": "2026",
      "iframe": false,
      "doc": true,
@@ -4417,361 +4172,28 @@
     }
    ]
   },
-  "https://www.discountbank.co.il/en/private/deposits-and-savings/pension-advice/": {
-   "product": "פנסיה",
-   "status": 200,
-   "method": "requests",
-   "text_hash": "a9376d8cc49b4abf0987abc9acd71cda2110ddcc",
-   "text_head": "Pension Advice | Discount דלג לתוכן העמוד דלג לתפריט אתר דלג לקישורים תחתונים כניסה לחשבונך דלג לתוכן העמוד דלג לתפריט אתר דלג לקישורים תחתונים כניסה לחשבונך This website uses cookies and similar tools to improve your browsing experience and personalize content. This includes data about you in the Bank's databases. For more information, For more information Accept English English עברית Français Русский العربية תפריט ראשי Menu Personal Banking Business Banking Private Banking About Us ✕ Common searches on the site Loans Mortgage Deposits Credit Card Discount App Found 0 results for For all resu",
-   "items": [
-    {
-     "text": "العربية",
-     "href": "https://www.discountbank.co.il/ar/private/deposits-and-savings/pension-consulting/",
-     "year": null,
-     "iframe": false,
-     "doc": false,
-     "internal": true
-    },
-    {
-     "text": "עברית",
-     "href": "https://www.discountbank.co.il/private/savings-investments/pension-consulting/",
-     "year": null,
-     "iframe": false,
-     "doc": false,
-     "internal": true
-    },
-    {
-     "text": "דלג לתוכן העמוד",
-     "href": "https://www.discountbank.co.il/en/private/deposits-and-savings/pension-advice/",
-     "year": null,
-     "iframe": false,
-     "doc": false,
-     "internal": true
-    },
-    {
-     "text": "Русский",
-     "href": "https://www.discountbank.co.il/ru/private/deposits-and-savings/pension-advice/",
-     "year": null,
-     "iframe": false,
-     "doc": false,
-     "internal": true
-    },
-    {
-     "text": "Privacy Policy",
-     "href": "https://www.discountbank.co.il/db/global/redirects/english/redirect?param=142",
-     "year": null,
-     "iframe": false,
-     "doc": false,
-     "internal": true
-    },
-    {
-     "text": "IR",
-     "href": "https://investors.discountbank.co.il/",
-     "year": null,
-     "iframe": false,
-     "doc": false,
-     "internal": true
-    },
-    {
-     "text": "ESG",
-     "href": "https://investors.discountbank.co.il/esg/",
-     "year": null,
-     "iframe": false,
-     "doc": false,
-     "internal": true
-    },
-    {
-     "text": "About Us",
-     "href": "https://investors.discountbank.co.il/who-are-we/",
-     "year": null,
-     "iframe": false,
-     "doc": false,
-     "internal": true
-    }
-   ]
-  },
-  "https://www.discountbank.co.il/ru/private/deposits-and-savings/pension-advice/": {
-   "product": "פנסיה",
-   "status": 200,
-   "method": "requests",
-   "text_hash": "38105460e3e592e84eeb82ccb458e5543a903680",
-   "text_head": "Фондовый рынок | Discount דלג לתוכן העמוד דלג לתפריט אתר דלג לקישורים תחתונים כניסה לחשבונך דלג לתוכן העמוד דלג לתפריט אתר דלג לקישורים תחתונים כניסה לחשבונך Этот сайт использует файлы cookie и аналогичные технологии, чтобы обеспечить максимальное удобство при просмотре и персонализированный контент, основываясь, помимо прочего, на информации о вас, имеющейся в базах данных банка. Узнать больше Принять Русский עברית English العربية Français Русский תפריט ראשי меню Персональное обслуживание Бизнес банкинг Личный банк ✕ Общие поиски на сайте Кредиты Ипотечное кредитование Вклады и сбережения Кре",
-   "items": [
-    {
-     "text": "العربية",
-     "href": "https://www.discountbank.co.il/ar/private/deposits-and-savings/pension-consulting/",
-     "year": null,
-     "iframe": false,
-     "doc": false,
-     "internal": true
-    },
-    {
-     "text": "עברית",
-     "href": "https://www.discountbank.co.il/private/savings-investments/pension-consulting/",
-     "year": null,
-     "iframe": false,
-     "doc": false,
-     "internal": true
-    },
-    {
-     "text": "דלג לתוכן העמוד",
-     "href": "https://www.discountbank.co.il/ru/private/deposits-and-savings/pension-advice/",
-     "year": null,
-     "iframe": false,
-     "doc": false,
-     "internal": true
-    },
-    {
-     "text": "Investor Relations",
-     "href": "https://investors.discountbank.co.il/",
-     "year": null,
-     "iframe": false,
-     "doc": false,
-     "internal": true
-    },
-    {
-     "text": "English",
-     "href": "https://www.discountbank.co.il/en/private/deposits-and-savings/pension-advice/",
-     "year": null,
-     "iframe": false,
-     "doc": false,
-     "internal": true
-    }
-   ]
-  },
-  "https://www.discountbank.co.il/ar/private/deposits-and-savings/pension-consulting/": {
-   "product": "פנסיה",
-   "status": 200,
-   "method": "requests",
-   "text_hash": "87d2a36e8d937f61ae2ded6136004771f96db31f",
-   "text_head": "استشارة التقاعد | Discount דלג לתוכן העמוד דלג לתפריט אתר דלג לקישורים תחתונים כניסה לחשבונך דלג לתוכן העמוד דלג לתפריט אתר דלג לקישורים תחתונים כניסה לחשבונך يستخدم هذا الموقع ملفات تعريف الارتباط (Cookies) وأدوات مماثلة لتزويدك بتجربة تصفّح جيدة ومحتوى مخصّص شخصيًا، من بين أشياء أخرى بناءً على المعلومات المتوفرة عنك في قواعد بيانات البنك. لمعلومات إضافية يوافق العربية العربية English עברית Français Русский תפריט ראשי قائمة لأفراد التجاريون الخدمات المصرفية الخاصة هل يمكنني المساعدة؟ ✕ عمليات البحث الشائعة على الموقع القروض التمويل العقاري الودائع والمدخرات التسهيلات الائتمانية برنامج Found 0",
-   "items": [
-    {
-     "text": "للاطلاع على ميثاق خدمة الاستشارات التقاعدية",
-     "href": "https://www.discountbank.co.il/media/ldxoqecy/service_level_agreement_311218.pdf",
-     "year": null,
-     "iframe": false,
-     "doc": true,
-     "internal": true
-    },
-    {
-     "text": "علاقات المستثمر",
-     "href": "https://investors.discountbank.co.il/",
-     "year": null,
-     "iframe": false,
-     "doc": false,
-     "internal": true
-    },
-    {
-     "text": "עברית",
-     "href": "https://www.discountbank.co.il/private/savings-investments/pension-consulting/",
-     "year": null,
-     "iframe": false,
-     "doc": false,
-     "internal": true
-    },
-    {
-     "text": "דלג לתוכן העמוד",
-     "href": "https://www.discountbank.co.il/ar/private/deposits-and-savings/pension-consulting/",
-     "year": null,
-     "iframe": false,
-     "doc": false,
-     "internal": true
-    },
-    {
-     "text": "Русский",
-     "href": "https://www.discountbank.co.il/ru/private/deposits-and-savings/pension-advice/",
-     "year": null,
-     "iframe": false,
-     "doc": false,
-     "internal": true
-    },
-    {
-     "text": "English",
-     "href": "https://www.discountbank.co.il/en/private/deposits-and-savings/pension-advice/",
-     "year": null,
-     "iframe": false,
-     "doc": false,
-     "internal": true
-    },
-    {
-     "text": "Discount’s Privacy Policy.",
-     "href": "https://www.discountbank.co.il/db/global/redirects/english/redirect?param=142",
-     "year": null,
-     "iframe": false,
-     "doc": false,
-     "internal": true
-    }
-   ]
-  },
-  "https://www.discountbank.co.il/private/savings-investments/pension-consulting/pension-calculator/": {
-   "product": "פנסיה",
-   "status": 200,
-   "method": "requests",
-   "text_hash": "e60adf9d4431869a01574d9d4ee09ed65e5f969c",
-   "text_head": "מחשבון פנסיה: תכנון פנסיוני לעתיד בטוח | דיסקונט דלג לתוכן העמוד דלג לתפריט אתר דלג לקישורים תחתונים כניסה לחשבונך דלג לתוכן העמוד דלג לתפריט אתר דלג לקישורים תחתונים כניסה לחשבונך לידיעתך: באתר זה נעשה שימוש בקבצי Cookies וכלים דומים כדי לספק לך חווית גלישה טובה ותכנים מותאמים אישית, בין היתר על בסיס מידע הקיים אודותיך במאגרי הבנק. למידע נוסף הבנתי עברית עברית English Français Русский العربية תפריט ראשי תפריט פרטיים עסקים בנקאות פרטית אפשר לעזור? ✕ חיפושים נפוצים באתר פתיחת חשבון המרת מט\"ח צפון ירוק הארנק הירוק Smart Future הלוואות המפתח שלך למבצעים והנחות פקדונות מומלצים כרטיסי אשראי שעות פע",
-   "items": [
-    {
-     "text": "תקנון שירותי תשלום ד.פ.ס. סולושיינס בע\"מ",
-     "href": "https://www.discountbank.co.il/db/global/redirects/hebrew/redirect?param=949",
-     "year": null,
-     "iframe": false,
-     "doc": false,
-     "internal": true
-    },
-    {
-     "text": "פקדונות והשקעות",
-     "href": "https://www.discountbank.co.il/private/savings-investments/",
-     "year": null,
-     "iframe": false,
-     "doc": false,
-     "internal": true
-    },
-    {
-     "text": "מדיניות הפרטיות",
-     "href": "https://www.discountbank.co.il/db/global/redirects/hebrew/redirect?param=142",
-     "year": null,
-     "iframe": false,
-     "doc": false,
-     "internal": true
-    },
-    {
-     "text": "לסוגי המוצרים הפנסיונים",
-     "href": "https://www.discountbank.co.il/private/savings-investments/pension-consulting/pension-product/",
-     "year": null,
-     "iframe": false,
-     "doc": false,
-     "internal": true
-    },
-    {
-     "text": "יצירת קשר בנושא ייעוץ פנסיוני",
-     "href": "https://www.discountbank.co.il/private/savings-investments/pension-consulting/pension-consulting-contact/",
-     "year": null,
-     "iframe": false,
-     "doc": false,
-     "internal": true
-    },
-    {
-     "text": "ייעוץ פנסיוני",
-     "href": "https://www.discountbank.co.il/private/savings-investments/pension-consulting/",
-     "year": null,
-     "iframe": false,
-     "doc": false,
-     "internal": true
-    },
-    {
-     "text": "דלג לתוכן העמוד",
-     "href": "https://www.discountbank.co.il/private/savings-investments/pension-consulting/pension-calculator/",
-     "year": null,
-     "iframe": false,
-     "doc": false,
-     "internal": true
-    },
-    {
-     "text": "IR",
-     "href": "https://investors.discountbank.co.il/",
-     "year": null,
-     "iframe": false,
-     "doc": false,
-     "internal": true
-    }
-   ]
-  },
-  "https://www.discountbank.co.il/private/savings-investments/pension-consulting/pension-product/": {
-   "product": "פנסיה",
-   "status": 200,
-   "method": "requests",
-   "text_hash": "483ea9887b7878605bdaa119c0d18f3f9f95c456",
-   "text_head": "מוצרים פנסיוניים - מבטיחים היום את המחר | דיסקונט דלג לתוכן העמוד דלג לתפריט אתר דלג לקישורים תחתונים כניסה לחשבונך דלג לתוכן העמוד דלג לתפריט אתר דלג לקישורים תחתונים כניסה לחשבונך לידיעתך: באתר זה נעשה שימוש בקבצי Cookies וכלים דומים כדי לספק לך חווית גלישה טובה ותכנים מותאמים אישית, בין היתר על בסיס מידע הקיים אודותיך במאגרי הבנק. למידע נוסף הבנתי עברית עברית English Français Русский العربية תפריט ראשי תפריט פרטיים עסקים בנקאות פרטית אפשר לעזור? ✕ חיפושים נפוצים באתר פתיחת חשבון המרת מט\"ח צפון ירוק הארנק הירוק Smart Future הלוואות המפתח שלך למבצעים והנחות פקדונות מומלצים כרטיסי אשראי שעות פ",
-   "items": [
-    {
-     "text": "العربية",
-     "href": "https://www.discountbank.co.il/ar/private/deposits-and-savings/pension-consulting/pension-product/",
-     "year": null,
-     "iframe": false,
-     "doc": false,
-     "internal": true
-    },
-    {
-     "text": "תקנון שירותי תשלום ד.פ.ס. סולושיינס בע\"מ",
-     "href": "https://www.discountbank.co.il/db/global/redirects/hebrew/redirect?param=949",
-     "year": null,
-     "iframe": false,
-     "doc": false,
-     "internal": true
-    },
-    {
-     "text": "פקדונות והשקעות",
-     "href": "https://www.discountbank.co.il/private/savings-investments/",
-     "year": null,
-     "iframe": false,
-     "doc": false,
-     "internal": true
-    },
-    {
-     "text": "מדיניות הפרטיות של דיסקונט",
-     "href": "https://www.discountbank.co.il/db/global/redirects/hebrew/redirect?param=142",
-     "year": null,
-     "iframe": false,
-     "doc": false,
-     "internal": true
-    },
-    {
-     "text": "למחשבון פנסיה",
-     "href": "https://www.discountbank.co.il/private/savings-investments/pension-consulting/pension-calculator/",
-     "year": null,
-     "iframe": false,
-     "doc": false,
-     "internal": true
-    },
-    {
-     "text": "ייעוץ פנסיוני",
-     "href": "https://www.discountbank.co.il/private/savings-investments/pension-consulting/",
-     "year": null,
-     "iframe": false,
-     "doc": false,
-     "internal": true
-    },
-    {
-     "text": "דלג לתוכן העמוד",
-     "href": "https://www.discountbank.co.il/private/savings-investments/pension-consulting/pension-product/",
-     "year": null,
-     "iframe": false,
-     "doc": false,
-     "internal": true
-    },
-    {
-     "text": "IR",
-     "href": "https://investors.discountbank.co.il/",
-     "year": null,
-     "iframe": false,
-     "doc": false,
-     "internal": true
-    }
-   ]
-  },
   "https://www.discountbank.co.il/db/global/redirects/hebrew/redirect?param=142": {
    "product": null,
    "status": 200,
    "method": "requests",
-   "text_hash": null,
-   "text_head": "",
+   "text_hash": "f2b3e855eeb8269acc81f724c059d5248ad6defc",
+   "text_head": "Please enable JavaScript to view the page content. Your support ID is: 7398207237606001107.",
    "items": []
   },
   "https://www.discountbank.co.il/db/global/redirects/hebrew/redirect?param=949": {
    "product": null,
    "status": 200,
    "method": "requests",
-   "text_hash": null,
-   "text_head": "",
+   "text_hash": "cbfa795ac036bab40d1c3c561d2d47735b7bb3ed",
+   "text_head": "Please enable JavaScript to view the page content. Your support ID is: 7398207237606002355.",
    "items": []
   },
   "https://www.discountbank.co.il/private/legal-and-terms/cancelled-check-policy/": {
    "product": null,
    "status": 200,
-   "method": "requests",
-   "text_hash": "d2bd79cdf1e663b792f1cb6b94673b34f6631ebc",
-   "text_head": "ביטולי שיקים ושיקים מסורבים - בנק דיסקונט | דיסקונט דלג לתוכן העמוד דלג לתפריט אתר דלג לקישורים תחתונים כניסה לחשבונך דלג לתוכן העמוד דלג לתפריט אתר דלג לקישורים תחתונים כניסה לחשבונך לידיעתך: באתר זה נעשה שימוש בקבצי Cookies וכלים דומים כדי לספק לך חווית גלישה טובה ותכנים מותאמים אישית, בין היתר על בסיס מידע הקיים אודותיך במאגרי הבנק. למידע נוסף הבנתי עברית עברית English Français Русский العربية תפריט ראשי תפריט פרטיים עסקים בנקאות פרטית אפשר לעזור? ✕ חיפושים נפוצים באתר פתיחת חשבון המרת מט\"ח צפון ירוק הארנק הירוק Smart Future הלוואות המפתח שלך למבצעים והנחות פקדונות מומלצים כרטיסי אשראי שעות",
+   "method": "browser",
+   "text_hash": "eb5d69035703210a3dda1debe6a27ee645e07d79",
+   "text_head": "דלג לתוכן העמוד דלג לתפריט אתר דלג לקישורים תחתונים כניסה לחשבונך לידיעתך: באתר זה נעשה שימוש בקבצי Cookies וכלים דומים כדי לספק לך חווית גלישה טובה ותכנים מותאמים אישית, בין היתר על בסיס מידע הקיים אודותיך במאגרי הבנק. למידע נוסף הבנתי עברית תפריט ראשי סגירה פתיחת חשבון כניסה לחשבון פרטיים פתיחת חשבון הלוואות משכנתא פקדונות והשקעות פקדונות ללקוחות כל הבנקים מוצרי שוק הכסף כרטיסי אשראי מידע כללי קבוצת דיסקונט D-Blog | כסף בשפה שלך עסקים קווי העסקים שלנו שירות לעסקים עסקים בדיגיטל בנקאות פרטית אודות בנקאות פרטית חווית שירות שירותים בנקאיים מקצועיות בשוק ההון ניהול העושר הארנק הירוק איך אפשר לעז",
    "items": [
     {
      "text": "תקנון שירותי תשלום ד.פ.ס. סולושיינס בע\"מ",
@@ -4827,8 +4249,8 @@
    "product": null,
    "status": 200,
    "method": "requests",
-   "text_hash": null,
-   "text_head": "",
+   "text_hash": "67b2ed09ec1eb25d05b5efd15cf95e0617c117a3",
+   "text_head": "Please enable JavaScript to view the page content. Your support ID is: 7398207237606083475.",
    "items": []
   }
  }
