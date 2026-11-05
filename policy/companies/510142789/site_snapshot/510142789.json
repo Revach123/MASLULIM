@@ -1,7 +1,7 @@
 {
  "legal_id": "510142789",
  "company": "חברת ב'ת למ'ד דל'ת בע\"מ",
- "taken": "2026-11-04T12:04:30+00:00",
+ "taken": "2026-11-05T12:38:12+00:00",
  "pages": {
   "https://www.discountbank.co.il": {
    "product": null,
@@ -72,8 +72,8 @@
    "product": null,
    "status": 200,
    "method": "requests",
-   "text_hash": "08a5f1afc4fdbef52ace04a928d120f806c7b33e",
-   "text_head": "Please enable JavaScript to view the page content. Your support ID is: 9152645332889981026.",
+   "text_hash": "223d8466df21287b41e0b561b8df90df97b7fc41",
+   "text_head": "Please enable JavaScript to view the page content. Your support ID is: 9152645333381565262.",
    "items": []
   },
   "https://investors.discountbank.co.il/": {
@@ -233,8 +233,8 @@
    "product": "פנסיה",
    "status": 200,
    "method": "requests",
-   "text_hash": "13951d481155a5c7ba47d9bd0ca5a40060432442",
-   "text_head": "Please enable JavaScript to view the page content. Your support ID is: 9152645332890007650.",
+   "text_hash": "6330c22109020fdeae180a10060ac836800ffd57",
+   "text_head": "Please enable JavaScript to view the page content. Your support ID is: 9152645333381602806.",
    "items": []
   },
   "https://investors.discountbank.co.il/who-are-we/": {
@@ -2410,7 +2410,7 @@
      "internal": true
     },
     {
-     "text": "IR",
+     "text": "Go to HomePage Investor Relations of Israel Bank Discount",
      "href": "https://investors.discountbank.co.il/",
      "year": null,
      "iframe": false,
@@ -2829,7 +2829,7 @@
      "internal": true
     },
     {
-     "text": "IR",
+     "text": "Go to HomePage Investor Relations of Israel Bank Discount",
      "href": "https://investors.discountbank.co.il/",
      "year": null,
      "iframe": false,
@@ -2904,7 +2904,7 @@
   },
   "https://investors.discountbank.co.il/esg/esg-reports/": {
    "product": null,
-   "status": 200,
+   "status": "browser:TimeoutError:Page.goto: Timeout 60000ms exceeded.",
    "method": "requests",
    "text_hash": "6c45b226d5d03b7743b495c91ecfe8439d5dc88c",
    "text_head": "ESG Reports | IR דלג לתוכן העמוד דלג לתפריט אתר דלג לקישורים תחתונים כניסה לחשבונך דלג לתוכן העמוד דלג לתפריט אתר דלג לקישורים תחתונים כניסה לחשבונך This website uses cookies and similar tools to improve your browsing experience and personalize content. This includes data about you in the Bank's databases. For more information, For more information Accept About Us Regulatory Filings Financial Reports ESG Credit Ratings Terms of Use Contact Us ESG About Us Regulatory Filings Financial Reports ESG Credit Ratings Terms of Use Contact Us IR ESG ESG Reports ESG Reports The Environmental, Social and",
@@ -3475,7 +3475,7 @@
   },
   "https://investors.discountbank.co.il/term-of-use/privacy-policy/": {
    "product": null,
-   "status": 200,
+   "status": "browser:TimeoutError:Page.goto: Timeout 60000ms exceeded.",
    "method": "browser",
    "text_hash": "1ec3c86ea47ac02e3edc810ca4d870d17f098153",
    "text_head": "דלג לתוכן העמוד דלג לתפריט אתר דלג לקישורים תחתונים כניסה לחשבונך About Us Regulatory Filings Financial Reports ESG Credit Ratings Terms of Use Contact Us IR Terms of Use Bank Liability and Data Security Bank Liability and Data Security The website as a whole, the website pages and all information therein, the software underlying the website, information and material accessed through the website are all are presented and available to you as-is as of the date of this agreement. You are entirely responsible for the use of the website and the information, and you are solely responsible for any de",
@@ -3774,9 +3774,9 @@
   "https://investors.discountbank.co.il/site-map/": {
    "product": null,
    "status": 200,
-   "method": "requests",
-   "text_hash": "fe758c9c690b851f5c523a07cb65226ce50f3ba7",
-   "text_head": "Site Map Site Map IR About Us Board of Directors Members of the Management Regulatory Filings Regulatory Filings 2022 Regulatory Filings 2023 Regulatory Filings 2024 Regulatory Filings 2025 ESG ESG Reports ESG strategy Promoting Green Future Community Strategic Projects Employees Volunteering Financial Education Financial Statements public-relations 2025 Earnings Releases 2024 Earnings Releases 2023 Earnings Releases 2022 Earnings Releases 2021 Earnings Releases 2026 Earnings Releases Conference_call_audio_files 2026 Conference call Audios 2025 Conference call Audios 2024 Conference call Audio",
+   "method": "browser",
+   "text_hash": "c2736f45d99466ac79bd23617c269abea1bf3e12",
+   "text_head": "Site Map IR About Us Board of Directors Members of the Management Regulatory Filings Regulatory Filings 2022 Regulatory Filings 2023 Regulatory Filings 2024 Regulatory Filings 2025 ESG ESG Reports ESG strategy Promoting Green Future Community Strategic Projects Employees Volunteering Financial Education Financial Statements public-relations 2025 Earnings Releases 2024 Earnings Releases 2023 Earnings Releases 2022 Earnings Releases 2021 Earnings Releases 2026 Earnings Releases Conference_call_audio_files 2026 Conference call Audios 2025 Conference call Audios 2024 Conference call Audios 2023 Co",
    "items": [
     {
      "text": "2026 Presentations",
@@ -4174,7 +4174,7 @@
   },
   "https://www.discountbank.co.il/db/global/redirects/hebrew/redirect?param=142": {
    "product": null,
-   "status": 200,
+   "status": "ERR",
    "method": "requests",
    "text_hash": "f2b3e855eeb8269acc81f724c059d5248ad6defc",
    "text_head": "Please enable JavaScript to view the page content. Your support ID is: 7398207237606001107.",
@@ -4182,7 +4182,7 @@
   },
   "https://www.discountbank.co.il/db/global/redirects/hebrew/redirect?param=949": {
    "product": null,
-   "status": 200,
+   "status": "ERR",
    "method": "requests",
    "text_hash": "cbfa795ac036bab40d1c3c561d2d47735b7bb3ed",
    "text_head": "Please enable JavaScript to view the page content. Your support ID is: 7398207237606002355.",
@@ -4190,7 +4190,7 @@
   },
   "https://www.discountbank.co.il/private/legal-and-terms/cancelled-check-policy/": {
    "product": null,
-   "status": 200,
+   "status": "browser:TimeoutError:Page.goto: Timeout 60000ms exceeded.",
    "method": "browser",
    "text_hash": "eb5d69035703210a3dda1debe6a27ee645e07d79",
    "text_head": "דלג לתוכן העמוד דלג לתפריט אתר דלג לקישורים תחתונים כניסה לחשבונך לידיעתך: באתר זה נעשה שימוש בקבצי Cookies וכלים דומים כדי לספק לך חווית גלישה טובה ותכנים מותאמים אישית, בין היתר על בסיס מידע הקיים אודותיך במאגרי הבנק. למידע נוסף הבנתי עברית תפריט ראשי סגירה פתיחת חשבון כניסה לחשבון פרטיים פתיחת חשבון הלוואות משכנתא פקדונות והשקעות פקדונות ללקוחות כל הבנקים מוצרי שוק הכסף כרטיסי אשראי מידע כללי קבוצת דיסקונט D-Blog | כסף בשפה שלך עסקים קווי העסקים שלנו שירות לעסקים עסקים בדיגיטל בנקאות פרטית אודות בנקאות פרטית חווית שירות שירותים בנקאיים מקצועיות בשוק ההון ניהול העושר הארנק הירוק איך אפשר לעז",
@@ -4244,14 +4244,6 @@
      "internal": true
     }
    ]
-  },
-  "https://www.discountbank.co.il/db/global/redirects/english/redirect?param=142": {
-   "product": null,
-   "status": 200,
-   "method": "requests",
-   "text_hash": "67b2ed09ec1eb25d05b5efd15cf95e0617c117a3",
-   "text_head": "Please enable JavaScript to view the page content. Your support ID is: 7398207237606083475.",
-   "items": []
   }
  }
 }
