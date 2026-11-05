@@ -1,7 +1,7 @@
 {
  "legal_id": "520023094",
  "company": "גילעד גימלאות לעובדים דתיים בע\"מ",
- "run": "2026-11-04T13:33:26+00:00",
+ "run": "2026-11-05T14:38:22+00:00",
  "errors": [],
  "seeds": {
   "config": 0,
@@ -18,12 +18,10 @@
   "urls": []
  },
  "pages": 13,
- "pages_failed": [
-  "https://www.gilad-pension.co.il/category/: 404"
- ],
+ "pages_failed": [],
  "candidates": 35,
  "docs": 35,
  "new_docs": 0,
  "index_size": 35,
- "seconds": 1156
+ "seconds": 1189
 }
