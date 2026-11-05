@@ -1,13 +1,13 @@
 {
  "legal_id": "520042177",
  "company": "הכשרה חברה לביטוח בע\"מ",
- "run": "2026-11-04T13:44:03+00:00",
+ "run": "2026-11-05T14:00:17+00:00",
  "errors": [],
  "seeds": {
   "config": 0,
   "discovered": 2,
   "policy_snapshot": 2,
-  "policy_snapshot_docs": 51,
+  "policy_snapshot_docs": 52,
   "gap_search": 0,
   "sitemap": 0
  },
@@ -17,11 +17,11 @@
   "queries": [],
   "urls": []
  },
- "pages": 14,
+ "pages": 13,
  "pages_failed": [],
  "candidates": 52,
  "docs": 52,
  "new_docs": 0,
  "index_size": 52,
- "seconds": 178
+ "seconds": 143
 }
