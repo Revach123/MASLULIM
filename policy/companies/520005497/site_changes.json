@@ -1,938 +1,641 @@
 [
  {
-  "kind": "new_item",
+  "kind": "fetch_failed",
   "page": "https://www.leumi.co.il/he/Articles/40446",
-  "text": "(iframe)",
-  "href": "https://4694204.fls.doubleclick.net/activityi;src=4694204;type=invmedia;cat=uczoryjr;rcb=13;ord=8161675405535;npa=0;auiddc=2886062.1793793808;gdid=dYWJhMj;uaa=x86;uab=64;uafvl=Not%253AA-Brand%3B8.0.0.0%7CChromium%3B156.0.8078.4;uamb=0;uam=;uap=Linux;uapv=;uaw=0;pscdl=noapi;frm=0;_tu=KFA;gtm=45fe6b21v9181662105z871741711za20gzb71741711zd71741711xeaxf1;gcs=G111;gcd=13v3v3v3v5l1;dma=0;dc_fmt=2;tag_exp=115616986~115938465~115938468~118897920~118897930~120213116~120385422~120412528~120420414~120469145~120469153~121191155~121246026~121246034~123691370~123692834~123814183~123814946;epver=2;ref=https%3A%2F%2Fwww.leumi.co.il%2Fhe%2FArticles%2F40446;dc_random=1793793808_W8hnzc0d7rOwKFclY4ufkdrarv-X2H44AQ;_dc_test=1;~oref=https%3A%2F%2Fwww.leumi.co.il%2Fhe%2FArticles%2F40446",
+  "text": "browser:Error:Page.eval_on_selector_all: Execution context was destroyed, most likely because of a navigation",
+  "href": "https://www.leumi.co.il/he/Articles/40446",
   "legal_id": "520005497",
   "company": "החברה לניהול קופות התגמולים והפיצויים של עובדי בנק לאומי בע\"מ",
-  "detected": "2026-11-04T12:03:22+00:00"
+  "detected": "2026-11-05T12:22:11+00:00"
  },
  {
   "kind": "new_item",
-  "page": "https://www.leumi.co.il/he/Articles/40446",
-  "text": "(iframe)",
-  "href": "https://8083177.fls.doubleclick.net/activityi;src=8083177;type=remar0;cat=leumi002;rcb=10;ord=9034726202144;npa=0;auiddc=2886062.1793793808;gdid=dYWJhMj;uaa=x86;uab=64;uafvl=Not%253AA-Brand%3B8.0.0.0%7CChromium%3B156.0.8078.4;uamb=0;uam=;uap=Linux;uapv=;uaw=0;pscdl=noapi;frm=0;_tu=KFA;gtm=45fe6b21v9189583035z871741711za20gzb71741711zd71741711xeaxf1;gcs=G111;gcd=13v3v3v3v5l1;dma=0;dc_fmt=2;tag_exp=115938465~115938469~118012009~118897920~118897930~120213116~120385423~120412528~120420414~120469145~120469153~121191155~121246026~121246034~123691370~123814946;epver=2;ref=https%3A%2F%2Fwww.leumi.co.il%2Fhe%2FArticles%2F40446;dc_random=1793793808_mzg5oyzzxVMcQK_oSlh1HMRgP-4m-YrQJg;_dc_test=1;~oref=https%3A%2F%2Fwww.leumi.co.il%2Fhe%2FArticles%2F40446",
-  "legal_id": "520005497",
-  "company": "החברה לניהול קופות התגמולים והפיצויים של עובדי בנק לאומי בע\"מ",
-  "detected": "2026-11-04T12:03:22+00:00"
- },
- {
-  "kind": "removed_item",
-  "page": "https://www.leumi.co.il/he/Articles/40446",
-  "text": "(iframe)",
-  "href": "https://8083177.fls.doubleclick.net/activityi;src=8083177;type=remar0;cat=leumi002;rcb=3;ord=6984456309324;npa=0;auiddc=202772773.1793707605;gdid=dYWJhMj;uaa=x86;uab=64;uafvl=Not%253AA-Brand%3B8.0.0.0%7CChromium%3B156.0.8078.4;uamb=0;uam=;uap=Linux;uapv=;uaw=0;pscdl=noapi;frm=0;_tu=KFA;gtm=45fe6au1v9189583035z871741711za20gzb71741711zd71741711xeaxf1;gcs=G111;gcd=13v3v3v3v5l1;dma=0;dc_fmt=2;tag_exp=115938465~115938469~118897920~118897930~120213116~120385423~120469145~120469153~121246026~121246034~123691370;epver=2;dc_random=1793707605_HhsRy6j_NE5TpLZHXxYuM5QWx6-TRZPNuw;_dc_test=1;~oref=https%3A%2F%2Fwww.leumi.co.il%2Fhe%2FArticles%2F40446",
-  "legal_id": "520005497",
-  "company": "החברה לניהול קופות התגמולים והפיצויים של עובדי בנק לאומי בע\"מ",
-  "detected": "2026-11-04T12:03:22+00:00"
- },
- {
-  "kind": "removed_item",
-  "page": "https://www.leumi.co.il/he/Articles/40446",
-  "text": "(iframe)",
-  "href": "https://4694204.fls.doubleclick.net/activityi;src=4694204;type=invmedia;cat=uczoryjr;rcb=0;ord=9259001361173;npa=0;auiddc=202772773.1793707605;gdid=dYWJhMj;uaa=x86;uab=64;uafvl=Not%253AA-Brand%3B8.0.0.0%7CChromium%3B156.0.8078.4;uamb=0;uam=;uap=Linux;uapv=;uaw=0;pscdl=noapi;frm=0;_tu=KFA;gtm=45fe6au1v9181662105z871741711za20gzb71741711zd71741711xeaxf1;gcs=G111;gcd=13v3v3v3v5l1;dma=0;dc_fmt=2;tag_exp=115938465~115938469~118897920~118897930~120213116~120385423~120469145~120469153~121246026~121246034~123691370~123692835~123814944;epver=2;dc_random=1793707605_-vIHqQfSqAuI9uBp3C-yFDYl5F5S0ardfw;_dc_test=1;~oref=https%3A%2F%2Fwww.leumi.co.il%2Fhe%2FArticles%2F40446",
-  "legal_id": "520005497",
-  "company": "החברה לניהול קופות התגמולים והפיצויים של עובדי בנק לאומי בע\"מ",
-  "detected": "2026-11-04T12:03:22+00:00"
- },
- {
-  "kind": "removed_item",
-  "page": "https://www.leumi.co.il/he/Articles/40446",
-  "text": "פברואר",
-  "href": "https://bl-drupal-p-s3-01.s3.eu-west-1.amazonaws.com/leumi-hebrew/s3fs-public/03-2025/Monthly_report_%20finanace_feb_25_acc.xlsx",
-  "legal_id": "520005497",
-  "company": "החברה לניהול קופות התגמולים והפיצויים של עובדי בנק לאומי בע\"מ",
-  "detected": "2026-11-04T12:03:22+00:00"
- },
- {
-  "kind": "removed_item",
-  "page": "https://www.leumi.co.il/he/Articles/40446",
-  "text": "28.02.2025",
-  "href": "https://bl-drupal-p-s3-01.s3.eu-west-1.amazonaws.com/leumi-hebrew/s3fs-public/03-2025/Investment_28.02.2025_acc.xlsx",
-  "legal_id": "520005497",
-  "company": "החברה לניהול קופות התגמולים והפיצויים של עובדי בנק לאומי בע\"מ",
-  "detected": "2026-11-04T12:03:22+00:00"
- },
- {
-  "kind": "removed_item",
-  "page": "https://www.leumi.co.il/he/Articles/40446",
-  "text": "לרשימת הנכסים ליום 31.12.2024",
-  "href": "https://bl-drupal-p-s3-01.s3.eu-west-1.amazonaws.com/leumi-hebrew/s3fs-public/newsite/kupot%20hagemel%20%20vhatgmulim/Assets_list_31122024.pdf",
-  "legal_id": "520005497",
-  "company": "החברה לניהול קופות התגמולים והפיצויים של עובדי בנק לאומי בע\"מ",
-  "detected": "2026-11-04T12:03:22+00:00"
- },
- {
-  "kind": "removed_item",
-  "page": "https://www.leumi.co.il/he/Articles/40446",
-  "text": "דין וחשבון ליום 31.12.2024",
-  "href": "https://bl-drupal-p-s3-01.s3.eu-west-1.amazonaws.com/leumi-hebrew/s3fs-public/newsite/kupot%20hagemel%20%20vhatgmulim/Report_31.12.2024.pdf",
-  "legal_id": "520005497",
-  "company": "החברה לניהול קופות התגמולים והפיצויים של עובדי בנק לאומי בע\"מ",
-  "detected": "2026-11-04T12:03:22+00:00"
- },
- {
-  "kind": "removed_item",
-  "page": "https://www.leumi.co.il/he/Articles/40446",
-  "text": "ינואר",
-  "href": "https://www.leumi.co.il/leumi-hebrew/s3fs-public/complex_link_file/02-25/Monthly_report_ finanace_jan_25_acc_20190.xlsx",
-  "legal_id": "520005497",
-  "company": "החברה לניהול קופות התגמולים והפיצויים של עובדי בנק לאומי בע\"מ",
-  "detected": "2026-11-04T12:03:22+00:00"
- },
- {
-  "kind": "new_page",
   "page": "https://www.leumi.co.il",
-  "text": "15 items",
-  "href": "https://www.leumi.co.il",
+  "text": "(iframe)",
+  "href": "https://8083177.fls.doubleclick.net/activityi;src=8083177;type=remar0;cat=leumi002;rcb=14;ord=7622553152599;npa=0;auiddc=1331134858.1793881342;gdid=dYWJhMj;uaa=x86;uab=64;uafvl=Not%253AA-Brand%3B8.0.0.0%7CChromium%3B156.0.8078.4;uamb=0;uam=;uap=Linux;uapv=;uaw=0;pscdl=noapi;frm=0;_tu=KFA;gtm=45fe6b31v9189583035z871741711za20gzb71741711zd71741711xeaxf1;gcs=G111;gcd=13v3v3v3v5l1;dma=0;dc_fmt=2;tag_exp=115616986~115938465~115938468~118897920~118897930~120213116~120385423~120412526~120420416~120469145~120469153~121191155~121246026~121246034~123814185~123820800;epver=2;ref=https%3A%2F%2Fwww.leumi.co.il%2F;dc_random=1793881342_nIlxFc2_7ZGAYgBWkesttEwoGMrjxHL7Kw;_dc_test=1;~oref=https%3A%2F%2Fwww.leumi.co.il%2Fhe",
   "legal_id": "520005497",
   "company": "החברה לניהול קופות התגמולים והפיצויים של עובדי בנק לאומי בע\"מ",
-  "detected": "2026-11-04T12:03:22+00:00"
+  "detected": "2026-11-05T12:22:11+00:00"
  },
  {
-  "kind": "new_page",
-  "page": "https://www.bankleumi.co.il/Rates/CapitalMarket/CapitalMarketIfr/rates.html?w=1385&h=1000",
-  "text": "0 items",
-  "href": "https://www.bankleumi.co.il/Rates/CapitalMarket/CapitalMarketIfr/rates.html?w=1385&h=1000",
+  "kind": "new_item",
+  "page": "https://www.leumi.co.il",
+  "text": "(iframe)",
+  "href": "https://4694204.fls.doubleclick.net/activityi;src=4694204;type=invmedia;cat=uczoryjr;rcb=10;ord=337565167962;npa=0;auiddc=1331134858.1793881342;gdid=dYWJhMj;uaa=x86;uab=64;uafvl=Not%253AA-Brand%3B8.0.0.0%7CChromium%3B156.0.8078.4;uamb=0;uam=;uap=Linux;uapv=;uaw=0;pscdl=noapi;frm=0;_tu=KFA;gtm=45fe6b31v9181662105z871741711za20gzb71741711zd71741711xeaxf1;gcs=G111;gcd=13v3v3v3v5l1;dma=0;dc_fmt=2;tag_exp=115938465~115938468~118897920~118897930~120213116~120385422~120412528~120420414~120469145~120469153~121191155~121246026~121246034~123814183~123820800;epver=2;ref=https%3A%2F%2Fwww.leumi.co.il%2F;dc_random=1793881343_gWyfL23M4ODExYEBJ3bSSDOCA4T_HrhRTQ;_dc_test=1;~oref=https%3A%2F%2Fwww.leumi.co.il%2Fhe",
   "legal_id": "520005497",
   "company": "החברה לניהול קופות התגמולים והפיצויים של עובדי בנק לאומי בע\"מ",
-  "detected": "2026-11-04T12:03:22+00:00"
+  "detected": "2026-11-05T12:22:11+00:00"
  },
  {
-  "kind": "new_page",
-  "page": "https://www.bankleumi.co.il/Rates/CapitalMarket/CapitalMarketIfr/shaarim.html?w=1385&h=1000",
-  "text": "0 items",
-  "href": "https://www.bankleumi.co.il/Rates/CapitalMarket/CapitalMarketIfr/shaarim.html?w=1385&h=1000",
-  "legal_id": "520005497",
-  "company": "החברה לניהול קופות התגמולים והפיצויים של עובדי בנק לאומי בע\"מ",
-  "detected": "2026-11-04T12:03:22+00:00"
- },
- {
-  "kind": "new_page",
-  "page": "https://4694204.fls.doubleclick.net/activityi;src=4694204;type=invmedia;cat=uczoryjr;rcb=10;ord=7879648462600;npa=0;auiddc=1663197212.1793793878;gdid=dYWJhMj;uaa=x86;uab=64;uafvl=Not%253AA-Brand%3B8.0.0.0%7CChromium%3B156.0.8078.4;uamb=0;uam=;uap=Linux;uapv=;uaw=0;pscdl=noapi;frm=0;_tu=KFA;gtm=45fe6b21v9181662105z871741711za20gzb71741711zd71741711xeaxf1;gcs=G111;gcd=13v3v3v3v5l1;dma=0;dc_fmt=2;tag_exp=115616985~115938465~115938469~118897920~118897930~120213116~120385422~120412528~120420416~120469145~120469153~121191155~121246026~121246034~123691370~123814944;epver=2;dc_random=1793793936_6osZ3HlX6o2mw2jZHmWEy-iMYU6pTqaNng;_dc_test=1;~oref=https%3A%2F%2Fwww.leumi.co.il%2Fhe",
-  "text": "0 items",
+  "kind": "removed_item",
+  "page": "https://www.leumi.co.il",
+  "text": "(iframe)",
   "href": "https://4694204.fls.doubleclick.net/activityi;src=4694204;type=invmedia;cat=uczoryjr;rcb=10;ord=7879648462600;npa=0;auiddc=1663197212.1793793878;gdid=dYWJhMj;uaa=x86;uab=64;uafvl=Not%253AA-Brand%3B8.0.0.0%7CChromium%3B156.0.8078.4;uamb=0;uam=;uap=Linux;uapv=;uaw=0;pscdl=noapi;frm=0;_tu=KFA;gtm=45fe6b21v9181662105z871741711za20gzb71741711zd71741711xeaxf1;gcs=G111;gcd=13v3v3v3v5l1;dma=0;dc_fmt=2;tag_exp=115616985~115938465~115938469~118897920~118897930~120213116~120385422~120412528~120420416~120469145~120469153~121191155~121246026~121246034~123691370~123814944;epver=2;dc_random=1793793936_6osZ3HlX6o2mw2jZHmWEy-iMYU6pTqaNng;_dc_test=1;~oref=https%3A%2F%2Fwww.leumi.co.il%2Fhe",
   "legal_id": "520005497",
   "company": "החברה לניהול קופות התגמולים והפיצויים של עובדי בנק לאומי בע\"מ",
-  "detected": "2026-11-04T12:03:22+00:00"
+  "detected": "2026-11-05T12:22:11+00:00"
  },
  {
-  "kind": "new_page",
-  "page": "https://8083177.fls.doubleclick.net/activityi;src=8083177;type=remar0;cat=leumi002;rcb=17;ord=4344016441110;npa=0;auiddc=1663197212.1793793878;gdid=dYWJhMj;uaa=x86;uab=64;uafvl=Not%253AA-Brand%3B8.0.0.0%7CChromium%3B156.0.8078.4;uamb=0;uam=;uap=Linux;uapv=;uaw=0;pscdl=noapi;frm=0;_tu=KFA;gtm=45fe6b21v9189583035z871741711za20gzb71741711zd71741711xeaxf1;gcs=G111;gcd=13v3v3v3v5l1;dma=0;dc_fmt=2;tag_exp=115616986~115938465~115938468~118897920~118897930~120213116~120385423~120412526~120420416~120469145~120469153~121191155~121246026~121246034~123691370~123814944;epver=2;dc_random=1793793936_mac04LdKssMGrjaeolIqO7yqgnDWzn35Qg;_dc_test=1;~oref=https%3A%2F%2Fwww.leumi.co.il%2Fhe",
-  "text": "0 items",
+  "kind": "removed_item",
+  "page": "https://www.leumi.co.il",
+  "text": "(iframe)",
   "href": "https://8083177.fls.doubleclick.net/activityi;src=8083177;type=remar0;cat=leumi002;rcb=17;ord=4344016441110;npa=0;auiddc=1663197212.1793793878;gdid=dYWJhMj;uaa=x86;uab=64;uafvl=Not%253AA-Brand%3B8.0.0.0%7CChromium%3B156.0.8078.4;uamb=0;uam=;uap=Linux;uapv=;uaw=0;pscdl=noapi;frm=0;_tu=KFA;gtm=45fe6b21v9189583035z871741711za20gzb71741711zd71741711xeaxf1;gcs=G111;gcd=13v3v3v3v5l1;dma=0;dc_fmt=2;tag_exp=115616986~115938465~115938468~118897920~118897930~120213116~120385423~120412526~120420416~120469145~120469153~121191155~121246026~121246034~123691370~123814944;epver=2;dc_random=1793793936_mac04LdKssMGrjaeolIqO7yqgnDWzn35Qg;_dc_test=1;~oref=https%3A%2F%2Fwww.leumi.co.il%2Fhe",
   "legal_id": "520005497",
   "company": "החברה לניהול קופות התגמולים והפיצויים של עובדי בנק לאומי בע\"מ",
-  "detected": "2026-11-04T12:03:22+00:00"
+  "detected": "2026-11-05T12:22:11+00:00"
  },
  {
-  "kind": "new_page",
-  "page": "https://4694204.fls.doubleclick.net/activityi;src=4694204;type=invmedia;cat=uczoryjr;rcb=1;ord=9205093175217;npa=0;auiddc=1663197212.1793793878;gdid=dYWJhMj;uaa=x86;uab=64;uafvl=Not%253AA-Brand%3B8.0.0.0%7CChromium%3B156.0.8078.4;uamb=0;uam=;uap=Linux;uapv=;uaw=0;pscdl=noapi;frm=0;_tu=KFA;gtm=45fe6b21v9181662105z871741711za20gzb71741711zd71741711xeaxf1;gcs=G111;gcd=13v3v3v3v5l1;dma=0;dc_fmt=2;tag_exp=115938466~115938468~118897920~118897930~120213116~120385422~120412528~120420414~120469145~120469153~121191155~121246026~121246034~123691370~123692836~123814183~123814946;epver=2;ref=https%3A%2F%2Fwww.leumi.co.il%2F;dc_random=1793793946_1exKz3pJgkcsYAwsElUcgdRxri40yDOS7A;_dc_test=1;~oref=https%3A%2F%2Fwww.leumi.co.il%2Fhe",
-  "text": "0 items",
+  "kind": "removed_item",
+  "page": "https://www.leumi.co.il",
+  "text": "(iframe)",
   "href": "https://4694204.fls.doubleclick.net/activityi;src=4694204;type=invmedia;cat=uczoryjr;rcb=1;ord=9205093175217;npa=0;auiddc=1663197212.1793793878;gdid=dYWJhMj;uaa=x86;uab=64;uafvl=Not%253AA-Brand%3B8.0.0.0%7CChromium%3B156.0.8078.4;uamb=0;uam=;uap=Linux;uapv=;uaw=0;pscdl=noapi;frm=0;_tu=KFA;gtm=45fe6b21v9181662105z871741711za20gzb71741711zd71741711xeaxf1;gcs=G111;gcd=13v3v3v3v5l1;dma=0;dc_fmt=2;tag_exp=115938466~115938468~118897920~118897930~120213116~120385422~120412528~120420414~120469145~120469153~121191155~121246026~121246034~123691370~123692836~123814183~123814946;epver=2;ref=https%3A%2F%2Fwww.leumi.co.il%2F;dc_random=1793793946_1exKz3pJgkcsYAwsElUcgdRxri40yDOS7A;_dc_test=1;~oref=https%3A%2F%2Fwww.leumi.co.il%2Fhe",
   "legal_id": "520005497",
   "company": "החברה לניהול קופות התגמולים והפיצויים של עובדי בנק לאומי בע\"מ",
-  "detected": "2026-11-04T12:03:22+00:00"
+  "detected": "2026-11-05T12:22:11+00:00"
  },
  {
-  "kind": "new_page",
-  "page": "https://8083177.fls.doubleclick.net/activityi;src=8083177;type=remar0;cat=leumi002;rcb=13;ord=4654082638219;npa=0;auiddc=1663197212.1793793878;gdid=dYWJhMj;uaa=x86;uab=64;uafvl=Not%253AA-Brand%3B8.0.0.0%7CChromium%3B156.0.8078.4;uamb=0;uam=;uap=Linux;uapv=;uaw=0;pscdl=noapi;frm=0;_tu=KFA;gtm=45fe6b21v9189583035z871741711za20gzb71741711zd71741711xeaxf1;gcs=G111;gcd=13v3v3v3v5l1;dma=0;dc_fmt=2;tag_exp=115616986~115938466~115938468~118897920~118897930~120213116~120385423~120412526~120420414~120469145~120469153~121191155~121246026~121246034~123691370~123785232~123814944;epver=2;ref=https%3A%2F%2Fwww.leumi.co.il%2F;dc_random=1793793946_-GNoN20v6dsme0nQDONczcuVNiLHIDkjEQ;_dc_test=1;~oref=https%3A%2F%2Fwww.leumi.co.il%2Fhe",
-  "text": "0 items",
+  "kind": "removed_item",
+  "page": "https://www.leumi.co.il",
+  "text": "(iframe)",
   "href": "https://8083177.fls.doubleclick.net/activityi;src=8083177;type=remar0;cat=leumi002;rcb=13;ord=4654082638219;npa=0;auiddc=1663197212.1793793878;gdid=dYWJhMj;uaa=x86;uab=64;uafvl=Not%253AA-Brand%3B8.0.0.0%7CChromium%3B156.0.8078.4;uamb=0;uam=;uap=Linux;uapv=;uaw=0;pscdl=noapi;frm=0;_tu=KFA;gtm=45fe6b21v9189583035z871741711za20gzb71741711zd71741711xeaxf1;gcs=G111;gcd=13v3v3v3v5l1;dma=0;dc_fmt=2;tag_exp=115616986~115938466~115938468~118897920~118897930~120213116~120385423~120412526~120420414~120469145~120469153~121191155~121246026~121246034~123691370~123785232~123814944;epver=2;ref=https%3A%2F%2Fwww.leumi.co.il%2F;dc_random=1793793946_-GNoN20v6dsme0nQDONczcuVNiLHIDkjEQ;_dc_test=1;~oref=https%3A%2F%2Fwww.leumi.co.il%2Fhe",
   "legal_id": "520005497",
   "company": "החברה לניהול קופות התגמולים והפיצויים של עובדי בנק לאומי בע\"מ",
-  "detected": "2026-11-04T12:03:22+00:00"
+  "detected": "2026-11-05T12:22:11+00:00"
  },
  {
-  "kind": "fetch_failed",
-  "page": "https://www.leumi.co.il/he/pension-advising",
-  "text": "202",
-  "href": "https://www.leumi.co.il/he/pension-advising",
+  "kind": "page_changed",
+  "page": "https://www.bankleumi.co.il/Rates/CapitalMarket/CapitalMarketIfr/rates.html?w=1385&h=1000",
+  "text": "טקסט העמוד השתנה (אותם קישורים)",
+  "href": "https://www.bankleumi.co.il/Rates/CapitalMarket/CapitalMarketIfr/rates.html?w=1385&h=1000",
   "legal_id": "520005497",
   "company": "החברה לניהול קופות התגמולים והפיצויים של עובדי בנק לאומי בע\"מ",
-  "detected": "2026-11-04T12:03:22+00:00"
+  "detected": "2026-11-05T12:22:11+00:00"
  },
  {
-  "kind": "new_item",
-  "page": "https://www.leumi.co.il/he/about-leumi/Investor-Relations/Press-Releases",
-  "text": "(iframe)",
-  "href": "https://4694204.fls.doubleclick.net/activityi;src=4694204;type=invmedia;cat=uczoryjr;rcb=4;ord=4151415439508;npa=0;auiddc=1217655793.1793793996;gdid=dYWJhMj;uaa=x86;uab=64;uafvl=Not%253AA-Brand%3B8.0.0.0%7CChromium%3B156.0.8078.4;uamb=0;uam=;uap=Linux;uapv=;uaw=0;pscdl=noapi;frm=0;_tu=KFA;gtm=45fe6b21v9181662105z871741711za20gzb71741711zd71741711xeaxf1;gcs=G111;gcd=13v3v3v3v5l1;dma=0;dc_fmt=2;tag_exp=115938465~115938469~118897920~118897930~120213116~120385423~120412526~120420414~120469145~120469153~121191155~121246026~121246034~123691370~123814944;epver=2;ref=https%3A%2F%2Fwww.leumi.co.il%2Fhe%2Fabout-leumi%2FInvestor-Relations%2FPress-Releases;dc_random=1793793997_jpYbhyJFBrc9RFSjafndW8Uk9s3USkfIQA;_dc_test=1;~oref=https%3A%2F%2Fwww.leumi.co.il%2Fhe%2Fabout-leumi%2FInvestor-Relations%2FPress-Releases",
+  "kind": "page_changed",
+  "page": "https://www.bankleumi.co.il/Rates/CapitalMarket/CapitalMarketIfr/shaarim.html?w=1385&h=1000",
+  "text": "טקסט העמוד השתנה (אותם קישורים)",
+  "href": "https://www.bankleumi.co.il/Rates/CapitalMarket/CapitalMarketIfr/shaarim.html?w=1385&h=1000",
   "legal_id": "520005497",
   "company": "החברה לניהול קופות התגמולים והפיצויים של עובדי בנק לאומי בע\"מ",
-  "detected": "2026-11-04T12:03:22+00:00"
- },
- {
-  "kind": "new_item",
-  "page": "https://www.leumi.co.il/he/about-leumi/Investor-Relations/Press-Releases",
-  "text": "(iframe)",
-  "href": "https://8083177.fls.doubleclick.net/activityi;src=8083177;type=remar0;cat=leumi002;rcb=4;ord=6010605425696;npa=0;auiddc=1217655793.1793793996;gdid=dYWJhMj;uaa=x86;uab=64;uafvl=Not%253AA-Brand%3B8.0.0.0%7CChromium%3B156.0.8078.4;uamb=0;uam=;uap=Linux;uapv=;uaw=0;pscdl=noapi;frm=0;_tu=KFA;gtm=45fe6b21v9189583035z871741711za20gzb71741711zd71741711xeaxf1;gcs=G111;gcd=13v3v3v3v5l1;dma=0;dc_fmt=2;tag_exp=115938465~115938469~118897920~118897930~120213116~120385422~120412526~120420414~120469145~120469153~121191155~121246026~121246034~123691370~123692835~123814184~123814946;epver=2;ref=https%3A%2F%2Fwww.leumi.co.il%2Fhe%2Fabout-leumi%2FInvestor-Relations%2FPress-Releases;dc_random=1793793997_rbUSYWiXNO3U3qXEyqJlNTtRA51QsyBnhA;_dc_test=1;~oref=https%3A%2F%2Fwww.leumi.co.il%2Fhe%2Fabout-leumi%2FInvestor-Relations%2FPress-Releases",
-  "legal_id": "520005497",
-  "company": "החברה לניהול קופות התגמולים והפיצויים של עובדי בנק לאומי בע\"מ",
-  "detected": "2026-11-04T12:03:22+00:00"
- },
- {
-  "kind": "text_changed",
-  "page": "https://www.leumi.co.il/he/about-leumi/Investor-Relations/Press-Releases",
-  "text": "ESG בחירת שפה דברו איתנו נגישות ESG ESG -> ESG",
-  "href": "https://www.leumi.co.il/he/Investor-Relations/ESG",
-  "legal_id": "520005497",
-  "company": "החברה לניהול קופות התגמולים והפיצויים של עובדי בנק לאומי בע\"מ",
-  "detected": "2026-11-04T12:03:22+00:00"
- },
- {
-  "kind": "new_item",
-  "page": "https://www.leumi.co.il/he/about-leumi/Investor-Relations/Press-Releases",
-  "text": "(iframe)",
-  "href": "https://cache.bankleumi.co.il/adrum-xd.686372e97eae8d992d3f1df53d051927.html",
-  "legal_id": "520005497",
-  "company": "החברה לניהול קופות התגמולים והפיצויים של עובדי בנק לאומי בע\"מ",
-  "detected": "2026-11-04T12:03:22+00:00"
+  "detected": "2026-11-05T12:22:11+00:00"
  },
  {
   "kind": "new_page",
-  "page": "https://4694204.fls.doubleclick.net/activityi;src=4694204;type=invmedia;cat=uczoryjr;rcb=4;ord=4151415439508;npa=0;auiddc=1217655793.1793793996;gdid=dYWJhMj;uaa=x86;uab=64;uafvl=Not%253AA-Brand%3B8.0.0.0%7CChromium%3B156.0.8078.4;uamb=0;uam=;uap=Linux;uapv=;uaw=0;pscdl=noapi;frm=0;_tu=KFA;gtm=45fe6b21v9181662105z871741711za20gzb71741711zd71741711xeaxf1;gcs=G111;gcd=13v3v3v3v5l1;dma=0;dc_fmt=2;tag_exp=115938465~115938469~118897920~118897930~120213116~120385423~120412526~120420414~120469145~120469153~121191155~121246026~121246034~123691370~123814944;epver=2;ref=https%3A%2F%2Fwww.leumi.co.il%2Fhe%2Fabout-leumi%2FInvestor-Relations%2FPress-Releases;dc_random=1793793997_jpYbhyJFBrc9RFSjafndW8Uk9s3USkfIQA;_dc_test=1;~oref=https%3A%2F%2Fwww.leumi.co.il%2Fhe%2Fabout-leumi%2FInvestor-Relations%2FPress-Releases",
+  "page": "https://8083177.fls.doubleclick.net/activityi;src=8083177;type=remar0;cat=leumi002;rcb=14;ord=7622553152599;npa=0;auiddc=1331134858.1793881342;gdid=dYWJhMj;uaa=x86;uab=64;uafvl=Not%253AA-Brand%3B8.0.0.0%7CChromium%3B156.0.8078.4;uamb=0;uam=;uap=Linux;uapv=;uaw=0;pscdl=noapi;frm=0;_tu=KFA;gtm=45fe6b31v9189583035z871741711za20gzb71741711zd71741711xeaxf1;gcs=G111;gcd=13v3v3v3v5l1;dma=0;dc_fmt=2;tag_exp=115616986~115938465~115938468~118897920~118897930~120213116~120385423~120412526~120420416~120469145~120469153~121191155~121246026~121246034~123814185~123820800;epver=2;ref=https%3A%2F%2Fwww.leumi.co.il%2F;dc_random=1793881342_nIlxFc2_7ZGAYgBWkesttEwoGMrjxHL7Kw;_dc_test=1;~oref=https%3A%2F%2Fwww.leumi.co.il%2Fhe",
   "text": "0 items",
-  "href": "https://4694204.fls.doubleclick.net/activityi;src=4694204;type=invmedia;cat=uczoryjr;rcb=4;ord=4151415439508;npa=0;auiddc=1217655793.1793793996;gdid=dYWJhMj;uaa=x86;uab=64;uafvl=Not%253AA-Brand%3B8.0.0.0%7CChromium%3B156.0.8078.4;uamb=0;uam=;uap=Linux;uapv=;uaw=0;pscdl=noapi;frm=0;_tu=KFA;gtm=45fe6b21v9181662105z871741711za20gzb71741711zd71741711xeaxf1;gcs=G111;gcd=13v3v3v3v5l1;dma=0;dc_fmt=2;tag_exp=115938465~115938469~118897920~118897930~120213116~120385423~120412526~120420414~120469145~120469153~121191155~121246026~121246034~123691370~123814944;epver=2;ref=https%3A%2F%2Fwww.leumi.co.il%2Fhe%2Fabout-leumi%2FInvestor-Relations%2FPress-Releases;dc_random=1793793997_jpYbhyJFBrc9RFSjafndW8Uk9s3USkfIQA;_dc_test=1;~oref=https%3A%2F%2Fwww.leumi.co.il%2Fhe%2Fabout-leumi%2FInvestor-Relations%2FPress-Releases",
+  "href": "https://8083177.fls.doubleclick.net/activityi;src=8083177;type=remar0;cat=leumi002;rcb=14;ord=7622553152599;npa=0;auiddc=1331134858.1793881342;gdid=dYWJhMj;uaa=x86;uab=64;uafvl=Not%253AA-Brand%3B8.0.0.0%7CChromium%3B156.0.8078.4;uamb=0;uam=;uap=Linux;uapv=;uaw=0;pscdl=noapi;frm=0;_tu=KFA;gtm=45fe6b31v9189583035z871741711za20gzb71741711zd71741711xeaxf1;gcs=G111;gcd=13v3v3v3v5l1;dma=0;dc_fmt=2;tag_exp=115616986~115938465~115938468~118897920~118897930~120213116~120385423~120412526~120420416~120469145~120469153~121191155~121246026~121246034~123814185~123820800;epver=2;ref=https%3A%2F%2Fwww.leumi.co.il%2F;dc_random=1793881342_nIlxFc2_7ZGAYgBWkesttEwoGMrjxHL7Kw;_dc_test=1;~oref=https%3A%2F%2Fwww.leumi.co.il%2Fhe",
   "legal_id": "520005497",
   "company": "החברה לניהול קופות התגמולים והפיצויים של עובדי בנק לאומי בע\"מ",
-  "detected": "2026-11-04T12:03:22+00:00"
+  "detected": "2026-11-05T12:22:11+00:00"
  },
  {
   "kind": "new_page",
-  "page": "https://8083177.fls.doubleclick.net/activityi;src=8083177;type=remar0;cat=leumi002;rcb=4;ord=6010605425696;npa=0;auiddc=1217655793.1793793996;gdid=dYWJhMj;uaa=x86;uab=64;uafvl=Not%253AA-Brand%3B8.0.0.0%7CChromium%3B156.0.8078.4;uamb=0;uam=;uap=Linux;uapv=;uaw=0;pscdl=noapi;frm=0;_tu=KFA;gtm=45fe6b21v9189583035z871741711za20gzb71741711zd71741711xeaxf1;gcs=G111;gcd=13v3v3v3v5l1;dma=0;dc_fmt=2;tag_exp=115938465~115938469~118897920~118897930~120213116~120385422~120412526~120420414~120469145~120469153~121191155~121246026~121246034~123691370~123692835~123814184~123814946;epver=2;ref=https%3A%2F%2Fwww.leumi.co.il%2Fhe%2Fabout-leumi%2FInvestor-Relations%2FPress-Releases;dc_random=1793793997_rbUSYWiXNO3U3qXEyqJlNTtRA51QsyBnhA;_dc_test=1;~oref=https%3A%2F%2Fwww.leumi.co.il%2Fhe%2Fabout-leumi%2FInvestor-Relations%2FPress-Releases",
+  "page": "https://4694204.fls.doubleclick.net/activityi;src=4694204;type=invmedia;cat=uczoryjr;rcb=10;ord=337565167962;npa=0;auiddc=1331134858.1793881342;gdid=dYWJhMj;uaa=x86;uab=64;uafvl=Not%253AA-Brand%3B8.0.0.0%7CChromium%3B156.0.8078.4;uamb=0;uam=;uap=Linux;uapv=;uaw=0;pscdl=noapi;frm=0;_tu=KFA;gtm=45fe6b31v9181662105z871741711za20gzb71741711zd71741711xeaxf1;gcs=G111;gcd=13v3v3v3v5l1;dma=0;dc_fmt=2;tag_exp=115938465~115938468~118897920~118897930~120213116~120385422~120412528~120420414~120469145~120469153~121191155~121246026~121246034~123814183~123820800;epver=2;ref=https%3A%2F%2Fwww.leumi.co.il%2F;dc_random=1793881343_gWyfL23M4ODExYEBJ3bSSDOCA4T_HrhRTQ;_dc_test=1;~oref=https%3A%2F%2Fwww.leumi.co.il%2Fhe",
   "text": "0 items",
-  "href": "https://8083177.fls.doubleclick.net/activityi;src=8083177;type=remar0;cat=leumi002;rcb=4;ord=6010605425696;npa=0;auiddc=1217655793.1793793996;gdid=dYWJhMj;uaa=x86;uab=64;uafvl=Not%253AA-Brand%3B8.0.0.0%7CChromium%3B156.0.8078.4;uamb=0;uam=;uap=Linux;uapv=;uaw=0;pscdl=noapi;frm=0;_tu=KFA;gtm=45fe6b21v9189583035z871741711za20gzb71741711zd71741711xeaxf1;gcs=G111;gcd=13v3v3v3v5l1;dma=0;dc_fmt=2;tag_exp=115938465~115938469~118897920~118897930~120213116~120385422~120412526~120420414~120469145~120469153~121191155~121246026~121246034~123691370~123692835~123814184~123814946;epver=2;ref=https%3A%2F%2Fwww.leumi.co.il%2Fhe%2Fabout-leumi%2FInvestor-Relations%2FPress-Releases;dc_random=1793793997_rbUSYWiXNO3U3qXEyqJlNTtRA51QsyBnhA;_dc_test=1;~oref=https%3A%2F%2Fwww.leumi.co.il%2Fhe%2Fabout-leumi%2FInvestor-Relations%2FPress-Releases",
+  "href": "https://4694204.fls.doubleclick.net/activityi;src=4694204;type=invmedia;cat=uczoryjr;rcb=10;ord=337565167962;npa=0;auiddc=1331134858.1793881342;gdid=dYWJhMj;uaa=x86;uab=64;uafvl=Not%253AA-Brand%3B8.0.0.0%7CChromium%3B156.0.8078.4;uamb=0;uam=;uap=Linux;uapv=;uaw=0;pscdl=noapi;frm=0;_tu=KFA;gtm=45fe6b31v9181662105z871741711za20gzb71741711zd71741711xeaxf1;gcs=G111;gcd=13v3v3v3v5l1;dma=0;dc_fmt=2;tag_exp=115938465~115938468~118897920~118897930~120213116~120385422~120412528~120420414~120469145~120469153~121191155~121246026~121246034~123814183~123820800;epver=2;ref=https%3A%2F%2Fwww.leumi.co.il%2F;dc_random=1793881343_gWyfL23M4ODExYEBJ3bSSDOCA4T_HrhRTQ;_dc_test=1;~oref=https%3A%2F%2Fwww.leumi.co.il%2Fhe",
   "legal_id": "520005497",
   "company": "החברה לניהול קופות התגמולים והפיצויים של עובדי בנק לאומי בע\"מ",
-  "detected": "2026-11-04T12:03:22+00:00"
- },
- {
-  "kind": "new_item",
-  "page": "https://www.leumi.co.il/he/Investor-Relations",
-  "text": "הודעה לעיתונות",
-  "href": "https://www.leumi.co.il/leumi-hebrew/s3fs-public/newsite/financialstatement/26/q2/heb/PR_Q2_2026_%20Acc.pdf",
-  "legal_id": "520005497",
-  "company": "החברה לניהול קופות התגמולים והפיצויים של עובדי בנק לאומי בע\"מ",
-  "detected": "2026-11-04T12:03:22+00:00"
+  "detected": "2026-11-05T12:22:11+00:00"
  },
  {
   "kind": "new_item",
   "page": "https://www.leumi.co.il/he/Investor-Relations",
   "text": "(iframe)",
-  "href": "https://4694204.fls.doubleclick.net/activityi;src=4694204;type=invmedia;cat=uczoryjr;rcb=18;ord=4490323451763;npa=0;auiddc=1982364652.1793794025;gdid=dYWJhMj;uaa=x86;uab=64;uafvl=Not%253AA-Brand%3B8.0.0.0%7CChromium%3B156.0.8078.4;uamb=0;uam=;uap=Linux;uapv=;uaw=0;pscdl=noapi;frm=0;_tu=KFA;gtm=45fe6b21v9181662105z871741711za20gzb71741711zd71741711xeaxf1;gcs=G111;gcd=13v3v3v3v5l1;dma=0;dc_fmt=2;tag_exp=115938466~115938468~117776796~118897920~118897930~119381664~119404697~120213116~120385422~120412528~120420416~120469145~120469153~121191155~121246026~121246034~123691370~123814946;epver=2;dc_random=1793794084_mtyMG5y7_yqC9gIdNlRL0GMVBsabFHN6xg;_dc_test=1;~oref=https%3A%2F%2Fwww.leumi.co.il%2Fhe%2FInvestor-Relations",
+  "href": "https://4694204.fls.doubleclick.net/activityi;src=4694204;type=invmedia;cat=uczoryjr;rcb=17;ord=7590152411183;npa=0;auiddc=269622266.1793881384;gdid=dYWJhMj;uaa=x86;uab=64;uafvl=Not%253AA-Brand%3B8.0.0.0%7CChromium%3B156.0.8078.4;uamb=0;uam=;uap=Linux;uapv=;uaw=0;pscdl=noapi;frm=0;_tu=KFA;gtm=45fe6b31v9181662105z871741711za20gzb71741711zd71741711xeaxf1;gcs=G111;gcd=13v3v3v3v5l1;dma=0;dc_fmt=2;tag_exp=115938465~115938468~118131809~118897920~118897930~120213116~120385423~120412526~120420416~120469145~120469153~121191153~121246026~121246034~123814185;epver=2;ref=https%3A%2F%2Fwww.leumi.co.il%2Fhe%2FInvestor-Relations;dc_random=1793881384_PusqDeNN-TuM1QKXLFKenY4WuI0ZtyNGyw;_dc_test=1;~oref=https%3A%2F%2Fwww.leumi.co.il%2Fhe%2FInvestor-Relations",
   "legal_id": "520005497",
   "company": "החברה לניהול קופות התגמולים והפיצויים של עובדי בנק לאומי בע\"מ",
-  "detected": "2026-11-04T12:03:22+00:00"
+  "detected": "2026-11-05T12:22:11+00:00"
  },
  {
   "kind": "new_item",
   "page": "https://www.leumi.co.il/he/Investor-Relations",
   "text": "(iframe)",
-  "href": "https://8083177.fls.doubleclick.net/activityi;src=8083177;type=remar0;cat=leumi002;rcb=2;ord=9711997100806;npa=0;auiddc=1982364652.1793794025;gdid=dYWJhMj;uaa=x86;uab=64;uafvl=Not%253AA-Brand%3B8.0.0.0%7CChromium%3B156.0.8078.4;uamb=0;uam=;uap=Linux;uapv=;uaw=0;pscdl=noapi;frm=0;_tu=KFA;gtm=45fe6b21v9189583035z871741711za20gzb71741711zd71741711xeaxf1;gcs=G111;gcd=13v3v3v3v5l1;dma=0;dc_fmt=2;tag_exp=115938466~115938468~117776796~118897920~118897930~119381664~120213116~120385422~120412528~120420414~120469145~120469153~121191155~121246026~121246034~123691370~123692836~123814944;epver=2;dc_random=1793794084_KJ9ckO5oi2chywmr_OzsYB-ydJSYaXNWdQ;_dc_test=1;~oref=https%3A%2F%2Fwww.leumi.co.il%2Fhe%2FInvestor-Relations",
+  "href": "https://8083177.fls.doubleclick.net/activityi;src=8083177;type=remar0;cat=leumi002;rcb=2;ord=2131682768135;npa=0;auiddc=269622266.1793881384;gdid=dYWJhMj;uaa=x86;uab=64;uafvl=Not%253AA-Brand%3B8.0.0.0%7CChromium%3B156.0.8078.4;uamb=0;uam=;uap=Linux;uapv=;uaw=0;pscdl=noapi;frm=0;_tu=KFA;gtm=45fe6b31v9189583035z871741711za20gzb71741711zd71741711xeaxf1;gcs=G111;gcd=13v3v3v3v5l1;dma=0;dc_fmt=2;tag_exp=115938465~115938468~118131809~118897920~118897930~120213116~120385423~120412528~120420416~120469145~120469153~121191153~121246026~121246034~123814183~123820801;epver=2;ref=https%3A%2F%2Fwww.leumi.co.il%2Fhe%2FInvestor-Relations;dc_random=1793881384_CREL00HdZx2RC8RkZJZmfN0QlzQkWvVlVA;_dc_test=1;~oref=https%3A%2F%2Fwww.leumi.co.il%2Fhe%2FInvestor-Relations",
   "legal_id": "520005497",
   "company": "החברה לניהול קופות התגמולים והפיצויים של עובדי בנק לאומי בע\"מ",
-  "detected": "2026-11-04T12:03:22+00:00"
- },
- {
-  "kind": "new_item",
-  "page": "https://www.leumi.co.il/he/Investor-Relations",
-  "text": "ראו את מדיניות הפרטיות המעודכנת של הבנק",
-  "href": "https://www.leumi.co.il/he/privacy_policy",
-  "legal_id": "520005497",
-  "company": "החברה לניהול קופות התגמולים והפיצויים של עובדי בנק לאומי בע\"מ",
-  "detected": "2026-11-04T12:03:22+00:00"
- },
- {
-  "kind": "new_item",
-  "page": "https://www.leumi.co.il/he/Investor-Relations",
-  "text": "מדיניות הפרטיות",
-  "href": "https://www.leumi.co.il/he/Articles/privacy_policy",
-  "legal_id": "520005497",
-  "company": "החברה לניהול קופות התגמולים והפיצויים של עובדי בנק לאומי בע\"מ",
-  "detected": "2026-11-04T12:03:22+00:00"
- },
- {
-  "kind": "new_item",
-  "page": "https://www.leumi.co.il/he/Investor-Relations",
-  "text": "הודעה לעיתונות",
-  "href": "https://www.leumi.co.il/he/Acc.pdf",
-  "legal_id": "520005497",
-  "company": "החברה לניהול קופות התגמולים והפיצויים של עובדי בנק לאומי בע\"מ",
-  "detected": "2026-11-04T12:03:22+00:00"
- },
- {
-  "kind": "text_changed",
-  "page": "https://www.leumi.co.il/he/Investor-Relations",
-  "text": "ESG בחירת שפה דברו איתנו נגישות ESG ESG -> ESG",
-  "href": "https://www.leumi.co.il/he/Investor-Relations/ESG",
-  "legal_id": "520005497",
-  "company": "החברה לניהול קופות התגמולים והפיצויים של עובדי בנק לאומי בע\"מ",
-  "detected": "2026-11-04T12:03:22+00:00"
- },
- {
-  "kind": "new_item",
-  "page": "https://www.leumi.co.il/he/Investor-Relations",
-  "text": "(iframe)",
-  "href": "https://cache.bankleumi.co.il/adrum-xd.686372e97eae8d992d3f1df53d051927.html",
-  "legal_id": "520005497",
-  "company": "החברה לניהול קופות התגמולים והפיצויים של עובדי בנק לאומי בע\"מ",
-  "detected": "2026-11-04T12:03:22+00:00"
+  "detected": "2026-11-05T12:22:11+00:00"
  },
  {
   "kind": "removed_item",
   "page": "https://www.leumi.co.il/he/Investor-Relations",
-  "text": "הודעה לעיתונות",
-  "href": "https://www.leumi.co.il/leumi-hebrew/s3fs-public/newsite/financialstatement/26/q2/heb/PR_Q2_2026_ Acc.pdf",
-  "legal_id": "520005497",
-  "company": "החברה לניהול קופות התגמולים והפיצויים של עובדי בנק לאומי בע\"מ",
-  "detected": "2026-11-04T12:03:22+00:00"
- },
- {
-  "kind": "new_page",
-  "page": "https://4694204.fls.doubleclick.net/activityi;src=4694204;type=invmedia;cat=uczoryjr;rcb=18;ord=4490323451763;npa=0;auiddc=1982364652.1793794025;gdid=dYWJhMj;uaa=x86;uab=64;uafvl=Not%253AA-Brand%3B8.0.0.0%7CChromium%3B156.0.8078.4;uamb=0;uam=;uap=Linux;uapv=;uaw=0;pscdl=noapi;frm=0;_tu=KFA;gtm=45fe6b21v9181662105z871741711za20gzb71741711zd71741711xeaxf1;gcs=G111;gcd=13v3v3v3v5l1;dma=0;dc_fmt=2;tag_exp=115938466~115938468~117776796~118897920~118897930~119381664~119404697~120213116~120385422~120412528~120420416~120469145~120469153~121191155~121246026~121246034~123691370~123814946;epver=2;dc_random=1793794084_mtyMG5y7_yqC9gIdNlRL0GMVBsabFHN6xg;_dc_test=1;~oref=https%3A%2F%2Fwww.leumi.co.il%2Fhe%2FInvestor-Relations",
-  "text": "0 items",
+  "text": "(iframe)",
   "href": "https://4694204.fls.doubleclick.net/activityi;src=4694204;type=invmedia;cat=uczoryjr;rcb=18;ord=4490323451763;npa=0;auiddc=1982364652.1793794025;gdid=dYWJhMj;uaa=x86;uab=64;uafvl=Not%253AA-Brand%3B8.0.0.0%7CChromium%3B156.0.8078.4;uamb=0;uam=;uap=Linux;uapv=;uaw=0;pscdl=noapi;frm=0;_tu=KFA;gtm=45fe6b21v9181662105z871741711za20gzb71741711zd71741711xeaxf1;gcs=G111;gcd=13v3v3v3v5l1;dma=0;dc_fmt=2;tag_exp=115938466~115938468~117776796~118897920~118897930~119381664~119404697~120213116~120385422~120412528~120420416~120469145~120469153~121191155~121246026~121246034~123691370~123814946;epver=2;dc_random=1793794084_mtyMG5y7_yqC9gIdNlRL0GMVBsabFHN6xg;_dc_test=1;~oref=https%3A%2F%2Fwww.leumi.co.il%2Fhe%2FInvestor-Relations",
   "legal_id": "520005497",
   "company": "החברה לניהול קופות התגמולים והפיצויים של עובדי בנק לאומי בע\"מ",
-  "detected": "2026-11-04T12:03:22+00:00"
+  "detected": "2026-11-05T12:22:11+00:00"
  },
  {
-  "kind": "new_page",
-  "page": "https://8083177.fls.doubleclick.net/activityi;src=8083177;type=remar0;cat=leumi002;rcb=2;ord=9711997100806;npa=0;auiddc=1982364652.1793794025;gdid=dYWJhMj;uaa=x86;uab=64;uafvl=Not%253AA-Brand%3B8.0.0.0%7CChromium%3B156.0.8078.4;uamb=0;uam=;uap=Linux;uapv=;uaw=0;pscdl=noapi;frm=0;_tu=KFA;gtm=45fe6b21v9189583035z871741711za20gzb71741711zd71741711xeaxf1;gcs=G111;gcd=13v3v3v3v5l1;dma=0;dc_fmt=2;tag_exp=115938466~115938468~117776796~118897920~118897930~119381664~120213116~120385422~120412528~120420414~120469145~120469153~121191155~121246026~121246034~123691370~123692836~123814944;epver=2;dc_random=1793794084_KJ9ckO5oi2chywmr_OzsYB-ydJSYaXNWdQ;_dc_test=1;~oref=https%3A%2F%2Fwww.leumi.co.il%2Fhe%2FInvestor-Relations",
-  "text": "0 items",
+  "kind": "removed_item",
+  "page": "https://www.leumi.co.il/he/Investor-Relations",
+  "text": "(iframe)",
   "href": "https://8083177.fls.doubleclick.net/activityi;src=8083177;type=remar0;cat=leumi002;rcb=2;ord=9711997100806;npa=0;auiddc=1982364652.1793794025;gdid=dYWJhMj;uaa=x86;uab=64;uafvl=Not%253AA-Brand%3B8.0.0.0%7CChromium%3B156.0.8078.4;uamb=0;uam=;uap=Linux;uapv=;uaw=0;pscdl=noapi;frm=0;_tu=KFA;gtm=45fe6b21v9189583035z871741711za20gzb71741711zd71741711xeaxf1;gcs=G111;gcd=13v3v3v3v5l1;dma=0;dc_fmt=2;tag_exp=115938466~115938468~117776796~118897920~118897930~119381664~120213116~120385422~120412528~120420414~120469145~120469153~121191155~121246026~121246034~123691370~123692836~123814944;epver=2;dc_random=1793794084_KJ9ckO5oi2chywmr_OzsYB-ydJSYaXNWdQ;_dc_test=1;~oref=https%3A%2F%2Fwww.leumi.co.il%2Fhe%2FInvestor-Relations",
   "legal_id": "520005497",
   "company": "החברה לניהול קופות התגמולים והפיצויים של עובדי בנק לאומי בע\"מ",
-  "detected": "2026-11-04T12:03:22+00:00"
+  "detected": "2026-11-05T12:22:11+00:00"
  },
  {
-  "kind": "fetch_failed",
-  "page": "https://www.leumi.co.il/he/pension-and-provident-funds",
-  "text": "202",
-  "href": "https://www.leumi.co.il/he/pension-and-provident-funds",
+  "kind": "new_page",
+  "page": "https://4694204.fls.doubleclick.net/activityi;src=4694204;type=invmedia;cat=uczoryjr;rcb=17;ord=7590152411183;npa=0;auiddc=269622266.1793881384;gdid=dYWJhMj;uaa=x86;uab=64;uafvl=Not%253AA-Brand%3B8.0.0.0%7CChromium%3B156.0.8078.4;uamb=0;uam=;uap=Linux;uapv=;uaw=0;pscdl=noapi;frm=0;_tu=KFA;gtm=45fe6b31v9181662105z871741711za20gzb71741711zd71741711xeaxf1;gcs=G111;gcd=13v3v3v3v5l1;dma=0;dc_fmt=2;tag_exp=115938465~115938468~118131809~118897920~118897930~120213116~120385423~120412526~120420416~120469145~120469153~121191153~121246026~121246034~123814185;epver=2;ref=https%3A%2F%2Fwww.leumi.co.il%2Fhe%2FInvestor-Relations;dc_random=1793881384_PusqDeNN-TuM1QKXLFKenY4WuI0ZtyNGyw;_dc_test=1;~oref=https%3A%2F%2Fwww.leumi.co.il%2Fhe%2FInvestor-Relations",
+  "text": "0 items",
+  "href": "https://4694204.fls.doubleclick.net/activityi;src=4694204;type=invmedia;cat=uczoryjr;rcb=17;ord=7590152411183;npa=0;auiddc=269622266.1793881384;gdid=dYWJhMj;uaa=x86;uab=64;uafvl=Not%253AA-Brand%3B8.0.0.0%7CChromium%3B156.0.8078.4;uamb=0;uam=;uap=Linux;uapv=;uaw=0;pscdl=noapi;frm=0;_tu=KFA;gtm=45fe6b31v9181662105z871741711za20gzb71741711zd71741711xeaxf1;gcs=G111;gcd=13v3v3v3v5l1;dma=0;dc_fmt=2;tag_exp=115938465~115938468~118131809~118897920~118897930~120213116~120385423~120412526~120420416~120469145~120469153~121191153~121246026~121246034~123814185;epver=2;ref=https%3A%2F%2Fwww.leumi.co.il%2Fhe%2FInvestor-Relations;dc_random=1793881384_PusqDeNN-TuM1QKXLFKenY4WuI0ZtyNGyw;_dc_test=1;~oref=https%3A%2F%2Fwww.leumi.co.il%2Fhe%2FInvestor-Relations",
   "legal_id": "520005497",
   "company": "החברה לניהול קופות התגמולים והפיצויים של עובדי בנק לאומי בע\"מ",
-  "detected": "2026-11-04T12:03:22+00:00"
+  "detected": "2026-11-05T12:22:11+00:00"
+ },
+ {
+  "kind": "new_page",
+  "page": "https://8083177.fls.doubleclick.net/activityi;src=8083177;type=remar0;cat=leumi002;rcb=2;ord=2131682768135;npa=0;auiddc=269622266.1793881384;gdid=dYWJhMj;uaa=x86;uab=64;uafvl=Not%253AA-Brand%3B8.0.0.0%7CChromium%3B156.0.8078.4;uamb=0;uam=;uap=Linux;uapv=;uaw=0;pscdl=noapi;frm=0;_tu=KFA;gtm=45fe6b31v9189583035z871741711za20gzb71741711zd71741711xeaxf1;gcs=G111;gcd=13v3v3v3v5l1;dma=0;dc_fmt=2;tag_exp=115938465~115938468~118131809~118897920~118897930~120213116~120385423~120412528~120420416~120469145~120469153~121191153~121246026~121246034~123814183~123820801;epver=2;ref=https%3A%2F%2Fwww.leumi.co.il%2Fhe%2FInvestor-Relations;dc_random=1793881384_CREL00HdZx2RC8RkZJZmfN0QlzQkWvVlVA;_dc_test=1;~oref=https%3A%2F%2Fwww.leumi.co.il%2Fhe%2FInvestor-Relations",
+  "text": "0 items",
+  "href": "https://8083177.fls.doubleclick.net/activityi;src=8083177;type=remar0;cat=leumi002;rcb=2;ord=2131682768135;npa=0;auiddc=269622266.1793881384;gdid=dYWJhMj;uaa=x86;uab=64;uafvl=Not%253AA-Brand%3B8.0.0.0%7CChromium%3B156.0.8078.4;uamb=0;uam=;uap=Linux;uapv=;uaw=0;pscdl=noapi;frm=0;_tu=KFA;gtm=45fe6b31v9189583035z871741711za20gzb71741711zd71741711xeaxf1;gcs=G111;gcd=13v3v3v3v5l1;dma=0;dc_fmt=2;tag_exp=115938465~115938468~118131809~118897920~118897930~120213116~120385423~120412528~120420416~120469145~120469153~121191153~121246026~121246034~123814183~123820801;epver=2;ref=https%3A%2F%2Fwww.leumi.co.il%2Fhe%2FInvestor-Relations;dc_random=1793881384_CREL00HdZx2RC8RkZJZmfN0QlzQkWvVlVA;_dc_test=1;~oref=https%3A%2F%2Fwww.leumi.co.il%2Fhe%2FInvestor-Relations",
+  "legal_id": "520005497",
+  "company": "החברה לניהול קופות התגמולים והפיצויים של עובדי בנק לאומי בע\"מ",
+  "detected": "2026-11-05T12:22:11+00:00"
  },
  {
   "kind": "new_item",
+  "page": "https://www.leumi.co.il/he/about-leumi/Investor-Relations/Press-Releases",
+  "text": "(iframe)",
+  "href": "https://4694204.fls.doubleclick.net/activityi;src=4694204;type=invmedia;cat=uczoryjr;rcb=12;ord=5961108578705;npa=0;auiddc=1744845370.1793881407;gdid=dYWJhMj;uaa=x86;uab=64;uafvl=Not%253AA-Brand%3B8.0.0.0%7CChromium%3B156.0.8078.4;uamb=0;uam=;uap=Linux;uapv=;uaw=0;pscdl=noapi;frm=0;_tu=KFA;gtm=45fe6b31v9181662105z871741711za20gzb71741711zd71741711xeaxf1;gcs=G111;gcd=13v3v3v3v5l1;dma=0;dc_fmt=2;tag_exp=115938466~115938468~118131808~118897920~118897930~120213116~120385423~120412528~120420414~120469145~120469153~121191155~121246026~121246034~123814183~123820800;epver=2;ref=https%3A%2F%2Fwww.leumi.co.il%2Fhe%2Fabout-leumi%2FInvestor-Relations%2FPress-Releases;dc_random=1793881407_Ra1SS2rlu1UzFpQV2fbCTTfATcNvjy4Maw;_dc_test=1;~oref=https%3A%2F%2Fwww.leumi.co.il%2Fhe%2Fabout-leumi%2FInvestor-Relations%2FPress-Releases",
+  "legal_id": "520005497",
+  "company": "החברה לניהול קופות התגמולים והפיצויים של עובדי בנק לאומי בע\"מ",
+  "detected": "2026-11-05T12:22:11+00:00"
+ },
+ {
+  "kind": "new_item",
+  "page": "https://www.leumi.co.il/he/about-leumi/Investor-Relations/Press-Releases",
+  "text": "(iframe)",
+  "href": "https://8083177.fls.doubleclick.net/activityi;src=8083177;type=remar0;cat=leumi002;rcb=3;ord=3066681141526;npa=0;auiddc=1744845370.1793881407;gdid=dYWJhMj;uaa=x86;uab=64;uafvl=Not%253AA-Brand%3B8.0.0.0%7CChromium%3B156.0.8078.4;uamb=0;uam=;uap=Linux;uapv=;uaw=0;pscdl=noapi;frm=0;_tu=KFA;gtm=45fe6b31v9189583035z871741711za20gzb71741711zd71741711xeaxf1;gcs=G111;gcd=13v3v3v3v5l1;dma=0;dc_fmt=2;tag_exp=115616985~115938466~115938469~118131808~118897920~118897930~120213116~120385422~120412526~120420414~120469145~120469153~121191155~121246026~121246034~123814183;epver=2;ref=https%3A%2F%2Fwww.leumi.co.il%2Fhe%2Fabout-leumi%2FInvestor-Relations%2FPress-Releases;dc_random=1793881407_X4DRJuWZOWPlAvazGkGqZY2tP5GPgbIp9w;_dc_test=1;~oref=https%3A%2F%2Fwww.leumi.co.il%2Fhe%2Fabout-leumi%2FInvestor-Relations%2FPress-Releases",
+  "legal_id": "520005497",
+  "company": "החברה לניהול קופות התגמולים והפיצויים של עובדי בנק לאומי בע\"מ",
+  "detected": "2026-11-05T12:22:11+00:00"
+ },
+ {
+  "kind": "removed_item",
+  "page": "https://www.leumi.co.il/he/about-leumi/Investor-Relations/Press-Releases",
+  "text": "(iframe)",
+  "href": "https://4694204.fls.doubleclick.net/activityi;src=4694204;type=invmedia;cat=uczoryjr;rcb=4;ord=4151415439508;npa=0;auiddc=1217655793.1793793996;gdid=dYWJhMj;uaa=x86;uab=64;uafvl=Not%253AA-Brand%3B8.0.0.0%7CChromium%3B156.0.8078.4;uamb=0;uam=;uap=Linux;uapv=;uaw=0;pscdl=noapi;frm=0;_tu=KFA;gtm=45fe6b21v9181662105z871741711za20gzb71741711zd71741711xeaxf1;gcs=G111;gcd=13v3v3v3v5l1;dma=0;dc_fmt=2;tag_exp=115938465~115938469~118897920~118897930~120213116~120385423~120412526~120420414~120469145~120469153~121191155~121246026~121246034~123691370~123814944;epver=2;ref=https%3A%2F%2Fwww.leumi.co.il%2Fhe%2Fabout-leumi%2FInvestor-Relations%2FPress-Releases;dc_random=1793793997_jpYbhyJFBrc9RFSjafndW8Uk9s3USkfIQA;_dc_test=1;~oref=https%3A%2F%2Fwww.leumi.co.il%2Fhe%2Fabout-leumi%2FInvestor-Relations%2FPress-Releases",
+  "legal_id": "520005497",
+  "company": "החברה לניהול קופות התגמולים והפיצויים של עובדי בנק לאומי בע\"מ",
+  "detected": "2026-11-05T12:22:11+00:00"
+ },
+ {
+  "kind": "removed_item",
+  "page": "https://www.leumi.co.il/he/about-leumi/Investor-Relations/Press-Releases",
+  "text": "(iframe)",
+  "href": "https://8083177.fls.doubleclick.net/activityi;src=8083177;type=remar0;cat=leumi002;rcb=4;ord=6010605425696;npa=0;auiddc=1217655793.1793793996;gdid=dYWJhMj;uaa=x86;uab=64;uafvl=Not%253AA-Brand%3B8.0.0.0%7CChromium%3B156.0.8078.4;uamb=0;uam=;uap=Linux;uapv=;uaw=0;pscdl=noapi;frm=0;_tu=KFA;gtm=45fe6b21v9189583035z871741711za20gzb71741711zd71741711xeaxf1;gcs=G111;gcd=13v3v3v3v5l1;dma=0;dc_fmt=2;tag_exp=115938465~115938469~118897920~118897930~120213116~120385422~120412526~120420414~120469145~120469153~121191155~121246026~121246034~123691370~123692835~123814184~123814946;epver=2;ref=https%3A%2F%2Fwww.leumi.co.il%2Fhe%2Fabout-leumi%2FInvestor-Relations%2FPress-Releases;dc_random=1793793997_rbUSYWiXNO3U3qXEyqJlNTtRA51QsyBnhA;_dc_test=1;~oref=https%3A%2F%2Fwww.leumi.co.il%2Fhe%2Fabout-leumi%2FInvestor-Relations%2FPress-Releases",
+  "legal_id": "520005497",
+  "company": "החברה לניהול קופות התגמולים והפיצויים של עובדי בנק לאומי בע\"מ",
+  "detected": "2026-11-05T12:22:11+00:00"
+ },
+ {
+  "kind": "new_page",
+  "page": "https://4694204.fls.doubleclick.net/activityi;src=4694204;type=invmedia;cat=uczoryjr;rcb=12;ord=5961108578705;npa=0;auiddc=1744845370.1793881407;gdid=dYWJhMj;uaa=x86;uab=64;uafvl=Not%253AA-Brand%3B8.0.0.0%7CChromium%3B156.0.8078.4;uamb=0;uam=;uap=Linux;uapv=;uaw=0;pscdl=noapi;frm=0;_tu=KFA;gtm=45fe6b31v9181662105z871741711za20gzb71741711zd71741711xeaxf1;gcs=G111;gcd=13v3v3v3v5l1;dma=0;dc_fmt=2;tag_exp=115938466~115938468~118131808~118897920~118897930~120213116~120385423~120412528~120420414~120469145~120469153~121191155~121246026~121246034~123814183~123820800;epver=2;ref=https%3A%2F%2Fwww.leumi.co.il%2Fhe%2Fabout-leumi%2FInvestor-Relations%2FPress-Releases;dc_random=1793881407_Ra1SS2rlu1UzFpQV2fbCTTfATcNvjy4Maw;_dc_test=1;~oref=https%3A%2F%2Fwww.leumi.co.il%2Fhe%2Fabout-leumi%2FInvestor-Relations%2FPress-Releases",
+  "text": "0 items",
+  "href": "https://4694204.fls.doubleclick.net/activityi;src=4694204;type=invmedia;cat=uczoryjr;rcb=12;ord=5961108578705;npa=0;auiddc=1744845370.1793881407;gdid=dYWJhMj;uaa=x86;uab=64;uafvl=Not%253AA-Brand%3B8.0.0.0%7CChromium%3B156.0.8078.4;uamb=0;uam=;uap=Linux;uapv=;uaw=0;pscdl=noapi;frm=0;_tu=KFA;gtm=45fe6b31v9181662105z871741711za20gzb71741711zd71741711xeaxf1;gcs=G111;gcd=13v3v3v3v5l1;dma=0;dc_fmt=2;tag_exp=115938466~115938468~118131808~118897920~118897930~120213116~120385423~120412528~120420414~120469145~120469153~121191155~121246026~121246034~123814183~123820800;epver=2;ref=https%3A%2F%2Fwww.leumi.co.il%2Fhe%2Fabout-leumi%2FInvestor-Relations%2FPress-Releases;dc_random=1793881407_Ra1SS2rlu1UzFpQV2fbCTTfATcNvjy4Maw;_dc_test=1;~oref=https%3A%2F%2Fwww.leumi.co.il%2Fhe%2Fabout-leumi%2FInvestor-Relations%2FPress-Releases",
+  "legal_id": "520005497",
+  "company": "החברה לניהול קופות התגמולים והפיצויים של עובדי בנק לאומי בע\"מ",
+  "detected": "2026-11-05T12:22:11+00:00"
+ },
+ {
+  "kind": "new_page",
+  "page": "https://8083177.fls.doubleclick.net/activityi;src=8083177;type=remar0;cat=leumi002;rcb=3;ord=3066681141526;npa=0;auiddc=1744845370.1793881407;gdid=dYWJhMj;uaa=x86;uab=64;uafvl=Not%253AA-Brand%3B8.0.0.0%7CChromium%3B156.0.8078.4;uamb=0;uam=;uap=Linux;uapv=;uaw=0;pscdl=noapi;frm=0;_tu=KFA;gtm=45fe6b31v9189583035z871741711za20gzb71741711zd71741711xeaxf1;gcs=G111;gcd=13v3v3v3v5l1;dma=0;dc_fmt=2;tag_exp=115616985~115938466~115938469~118131808~118897920~118897930~120213116~120385422~120412526~120420414~120469145~120469153~121191155~121246026~121246034~123814183;epver=2;ref=https%3A%2F%2Fwww.leumi.co.il%2Fhe%2Fabout-leumi%2FInvestor-Relations%2FPress-Releases;dc_random=1793881407_X4DRJuWZOWPlAvazGkGqZY2tP5GPgbIp9w;_dc_test=1;~oref=https%3A%2F%2Fwww.leumi.co.il%2Fhe%2Fabout-leumi%2FInvestor-Relations%2FPress-Releases",
+  "text": "0 items",
+  "href": "https://8083177.fls.doubleclick.net/activityi;src=8083177;type=remar0;cat=leumi002;rcb=3;ord=3066681141526;npa=0;auiddc=1744845370.1793881407;gdid=dYWJhMj;uaa=x86;uab=64;uafvl=Not%253AA-Brand%3B8.0.0.0%7CChromium%3B156.0.8078.4;uamb=0;uam=;uap=Linux;uapv=;uaw=0;pscdl=noapi;frm=0;_tu=KFA;gtm=45fe6b31v9189583035z871741711za20gzb71741711zd71741711xeaxf1;gcs=G111;gcd=13v3v3v3v5l1;dma=0;dc_fmt=2;tag_exp=115616985~115938466~115938469~118131808~118897920~118897930~120213116~120385422~120412526~120420414~120469145~120469153~121191155~121246026~121246034~123814183;epver=2;ref=https%3A%2F%2Fwww.leumi.co.il%2Fhe%2Fabout-leumi%2FInvestor-Relations%2FPress-Releases;dc_random=1793881407_X4DRJuWZOWPlAvazGkGqZY2tP5GPgbIp9w;_dc_test=1;~oref=https%3A%2F%2Fwww.leumi.co.il%2Fhe%2Fabout-leumi%2FInvestor-Relations%2FPress-Releases",
+  "legal_id": "520005497",
+  "company": "החברה לניהול קופות התגמולים והפיצויים של עובדי בנק לאומי בע\"מ",
+  "detected": "2026-11-05T12:22:11+00:00"
+ },
+ {
+  "kind": "new_item",
+  "page": "https://www.leumi.co.il/he/Investor-Relations/about-leumi",
+  "text": "(iframe)",
+  "href": "https://4694204.fls.doubleclick.net/activityi;src=4694204;type=invmedia;cat=uczoryjr;rcb=17;ord=7801564524874;npa=0;auiddc=1296969240.1793881435;gdid=dYWJhMj;uaa=x86;uab=64;uafvl=Not%253AA-Brand%3B8.0.0.0%7CChromium%3B156.0.8078.4;uamb=0;uam=;uap=Linux;uapv=;uaw=0;pscdl=noapi;frm=0;_tu=KFA;gtm=45fe6b31v9181662105z871741711za20gzb71741711zd71741711xeaxf1;gcs=G111;gcd=13v3v3v3v5l1;dma=0;dc_fmt=2;tag_exp=115938466~115938468~118897920~118897930~120213116~120385422~120412526~120420414~120469145~120469153~121191153~121246026~121246034~123814185~123820802;epver=2;ref=https%3A%2F%2Fwww.leumi.co.il%2Fhe%2FInvestor-Relations%2Fabout-leumi;dc_random=1793881434_55pVcm7k4HqEwhXdSzbL2AijiUdVQcZEyg;_dc_test=1;~oref=https%3A%2F%2Fwww.leumi.co.il%2Fhe%2FInvestor-Relations%2Fabout-leumi",
+  "legal_id": "520005497",
+  "company": "החברה לניהול קופות התגמולים והפיצויים של עובדי בנק לאומי בע\"מ",
+  "detected": "2026-11-05T12:22:11+00:00"
+ },
+ {
+  "kind": "new_item",
+  "page": "https://www.leumi.co.il/he/Investor-Relations/about-leumi",
+  "text": "(iframe)",
+  "href": "https://8083177.fls.doubleclick.net/activityi;src=8083177;type=remar0;cat=leumi002;rcb=18;ord=1690635996523;npa=0;auiddc=1296969240.1793881435;gdid=dYWJhMj;uaa=x86;uab=64;uafvl=Not%253AA-Brand%3B8.0.0.0%7CChromium%3B156.0.8078.4;uamb=0;uam=;uap=Linux;uapv=;uaw=0;pscdl=noapi;frm=0;_tu=KFA;gtm=45fe6b31v9189583035z871741711za20gzb71741711zd71741711xeaxf1;gcs=G111;gcd=13v3v3v3v5l1;dma=0;dc_fmt=2;tag_exp=115938466~115938469~118897920~118897930~120213116~120385423~120412528~120420414~120469145~120469153~121191153~121246026~121246034~123814183;epver=2;ref=https%3A%2F%2Fwww.leumi.co.il%2Fhe%2FInvestor-Relations%2Fabout-leumi;dc_random=1793881435_41KUe8Bbvj20UnCK2jF4lyaurZsMkXmoFQ;_dc_test=1;~oref=https%3A%2F%2Fwww.leumi.co.il%2Fhe%2FInvestor-Relations%2Fabout-leumi",
+  "legal_id": "520005497",
+  "company": "החברה לניהול קופות התגמולים והפיצויים של עובדי בנק לאומי בע\"מ",
+  "detected": "2026-11-05T12:22:11+00:00"
+ },
+ {
+  "kind": "removed_item",
   "page": "https://www.leumi.co.il/he/Investor-Relations/about-leumi",
   "text": "(iframe)",
   "href": "https://4694204.fls.doubleclick.net/activityi;src=4694204;type=invmedia;cat=uczoryjr;rcb=18;ord=2527950078548;npa=0;auiddc=1899914827.1793794111;gdid=dYWJhMj;uaa=x86;uab=64;uafvl=Not%253AA-Brand%3B8.0.0.0%7CChromium%3B156.0.8078.4;uamb=0;uam=;uap=Linux;uapv=;uaw=0;pscdl=noapi;frm=0;_tu=KFA;gtm=45fe6b21v9181662105z871741711za20gzb71741711zd71741711xeaxf1;gcs=G111;gcd=13v3v3v3v5l1;dma=0;dc_fmt=2;tag_exp=115938465~115938469~117776795~118012009~118897920~118897930~120213116~120385423~120412528~120420414~120469145~120469153~121191155~121246026~121246034~123691370~123692835~123814184~123814944;epver=2;dc_random=1793794170_WrD9PvhfttmGyqmzz9vxM2cxQ6acSUd7uQ;_dc_test=1;~oref=https%3A%2F%2Fwww.leumi.co.il%2Fhe%2FInvestor-Relations%2Fabout-leumi",
   "legal_id": "520005497",
   "company": "החברה לניהול קופות התגמולים והפיצויים של עובדי בנק לאומי בע\"מ",
-  "detected": "2026-11-04T12:03:22+00:00"
+  "detected": "2026-11-05T12:22:11+00:00"
  },
  {
-  "kind": "new_item",
+  "kind": "removed_item",
   "page": "https://www.leumi.co.il/he/Investor-Relations/about-leumi",
   "text": "(iframe)",
   "href": "https://8083177.fls.doubleclick.net/activityi;src=8083177;type=remar0;cat=leumi002;rcb=8;ord=2731944600961;npa=0;auiddc=1899914827.1793794111;gdid=dYWJhMj;uaa=x86;uab=64;uafvl=Not%253AA-Brand%3B8.0.0.0%7CChromium%3B156.0.8078.4;uamb=0;uam=;uap=Linux;uapv=;uaw=0;pscdl=noapi;frm=0;_tu=KFA;gtm=45fe6b21v9189583035z871741711za20gzb71741711zd71741711xeaxf1;gcs=G111;gcd=13v3v3v3v5l1;dma=0;dc_fmt=2;tag_exp=115938465~115938469~117776795~118897920~118897930~120213116~120385423~120412528~120420414~120469145~120469153~121191155~121246026~121246034~123691370~123814946;epver=2;dc_random=1793794170_6aqUFpTmQdEnAldoiPOXGKnDH7zEATo7Cg;_dc_test=1;~oref=https%3A%2F%2Fwww.leumi.co.il%2Fhe%2FInvestor-Relations%2Fabout-leumi",
   "legal_id": "520005497",
   "company": "החברה לניהול קופות התגמולים והפיצויים של עובדי בנק לאומי בע\"מ",
-  "detected": "2026-11-04T12:03:22+00:00"
- },
- {
-  "kind": "text_changed",
-  "page": "https://www.leumi.co.il/he/Investor-Relations/about-leumi",
-  "text": "ESG בחירת שפה דברו איתנו נגישות ESG ESG -> ESG",
-  "href": "https://www.leumi.co.il/he/Investor-Relations/ESG",
-  "legal_id": "520005497",
-  "company": "החברה לניהול קופות התגמולים והפיצויים של עובדי בנק לאומי בע\"מ",
-  "detected": "2026-11-04T12:03:22+00:00"
- },
- {
-  "kind": "removed_item",
-  "page": "https://www.leumi.co.il/he/Investor-Relations/about-leumi",
-  "text": "(iframe)",
-  "href": "https://8083177.fls.doubleclick.net/activityi;src=8083177;type=remar0;cat=leumi002;rcb=13;ord=3109598435955;npa=0;auiddc=1561981800.1793707678;gdid=dYWJhMj;uaa=x86;uab=64;uafvl=Not%253AA-Brand%3B8.0.0.0%7CChromium%3B156.0.8078.4;uamb=0;uam=;uap=Linux;uapv=;uaw=0;pscdl=noapi;frm=0;_tu=KFA;gtm=45fe6au1h1v9189583035z871741711za20gzb71741711zd71741711xeaxf1;gcs=G111;gcd=13v3v3v3v5l1;dma=0;dc_fmt=2;tag_exp=115616986~115938465~115938468~118897920~118897930~119404696~120213116~120385422~120469145~120469153~121246026~121246034~123691370~123814184;epver=2;dc_random=1793707678_qoVcFc_UgJuml02S2-7nRFdypG1y5e5MrQ;_dc_test=1;~oref=https%3A%2F%2Fwww.leumi.co.il%2Fhe%2FInvestor-Relations%2Fabout-leumi",
-  "legal_id": "520005497",
-  "company": "החברה לניהול קופות התגמולים והפיצויים של עובדי בנק לאומי בע\"מ",
-  "detected": "2026-11-04T12:03:22+00:00"
- },
- {
-  "kind": "removed_item",
-  "page": "https://www.leumi.co.il/he/Investor-Relations/about-leumi",
-  "text": "(iframe)",
-  "href": "https://4694204.fls.doubleclick.net/activityi;src=4694204;type=invmedia;cat=uczoryjr;rcb=5;ord=2567619829804;npa=0;auiddc=1561981800.1793707678;gdid=dYWJhMj;uaa=x86;uab=64;uafvl=Not%253AA-Brand%3B8.0.0.0%7CChromium%3B156.0.8078.4;uamb=0;uam=;uap=Linux;uapv=;uaw=0;pscdl=noapi;frm=0;_tu=KFA;gtm=45fe6au1h1v9181662105z871741711za20gzb71741711zd71741711xeaxf1;gcs=G111;gcd=13v3v3v3v5l1;dma=0;dc_fmt=2;tag_exp=115616986~115938465~115938469~118897920~118897930~120213116~120385423~120469145~120469153~121246026~121246034~123691370~123814183;epver=2;dc_random=1793707678_TQa07tfBwysenCwfjpkMvY5a63GW95ESxw;_dc_test=1;~oref=https%3A%2F%2Fwww.leumi.co.il%2Fhe%2FInvestor-Relations%2Fabout-leumi",
-  "legal_id": "520005497",
-  "company": "החברה לניהול קופות התגמולים והפיצויים של עובדי בנק לאומי בע\"מ",
-  "detected": "2026-11-04T12:03:22+00:00"
+  "detected": "2026-11-05T12:22:11+00:00"
  },
  {
   "kind": "new_item",
+  "page": "https://www.leumi.co.il/he/Investor-Relations/Subsidiaries-and-affiliates",
+  "text": "(iframe)",
+  "href": "https://4694204.fls.doubleclick.net/activityi;src=4694204;type=invmedia;cat=uczoryjr;rcb=14;ord=303905460650;npa=0;auiddc=277033006.1793881485;gdid=dYWJhMj;uaa=x86;uab=64;uafvl=Not%253AA-Brand%3B8.0.0.0%7CChromium%3B156.0.8078.4;uamb=0;uam=;uap=Linux;uapv=;uaw=0;pscdl=noapi;frm=0;_tu=KFA;gtm=45fe6b31v9181662105z871741711za20gzb71741711zd71741711xeaxf1;gcs=G111;gcd=13v3v3v3v5l1;dma=0;dc_fmt=2;tag_exp=115938465~115938469~117776796~118897920~118897930~120213116~120385423~120412528~120420416~120469145~120469153~121191153~121246026~121246034~123814183;epver=2;ref=https%3A%2F%2Fwww.leumi.co.il%2Fhe%2FInvestor-Relations%2FSubsidiaries-and-affiliates;dc_random=1793881485_-ewxNc_PumJdFijE-a8-VOsjikYmQ9XhEw;_dc_test=1;~oref=https%3A%2F%2Fwww.leumi.co.il%2Fhe%2FInvestor-Relations%2FSubsidiaries-and-affiliates",
+  "legal_id": "520005497",
+  "company": "החברה לניהול קופות התגמולים והפיצויים של עובדי בנק לאומי בע\"מ",
+  "detected": "2026-11-05T12:22:11+00:00"
+ },
+ {
+  "kind": "new_item",
+  "page": "https://www.leumi.co.il/he/Investor-Relations/Subsidiaries-and-affiliates",
+  "text": "(iframe)",
+  "href": "https://8083177.fls.doubleclick.net/activityi;src=8083177;type=remar0;cat=leumi002;rcb=4;ord=2972914690790;npa=0;auiddc=277033006.1793881485;gdid=dYWJhMj;uaa=x86;uab=64;uafvl=Not%253AA-Brand%3B8.0.0.0%7CChromium%3B156.0.8078.4;uamb=0;uam=;uap=Linux;uapv=;uaw=0;pscdl=noapi;frm=0;_tu=KFA;gtm=45fe6b31v9189583035z871741711za20gzb71741711zd71741711xeaxf1;gcs=G111;gcd=13v3v3v3v5l1;dma=0;dc_fmt=2;tag_exp=115938465~115938468~117776796~118897920~118897930~120213116~120385423~120412526~120420416~120469145~120469153~121191153~121246026~121246034~123814183~123814944~123820800;epver=2;ref=https%3A%2F%2Fwww.leumi.co.il%2Fhe%2FInvestor-Relations%2FSubsidiaries-and-affiliates;dc_random=1793881485_Gq7N7VD7xKpYwvZ25KaUCBFrIEu3xPImcw;_dc_test=1;~oref=https%3A%2F%2Fwww.leumi.co.il%2Fhe%2FInvestor-Relations%2FSubsidiaries-and-affiliates",
+  "legal_id": "520005497",
+  "company": "החברה לניהול קופות התגמולים והפיצויים של עובדי בנק לאומי בע\"מ",
+  "detected": "2026-11-05T12:22:11+00:00"
+ },
+ {
+  "kind": "removed_item",
   "page": "https://www.leumi.co.il/he/Investor-Relations/Subsidiaries-and-affiliates",
   "text": "(iframe)",
   "href": "https://8083177.fls.doubleclick.net/activityi;src=8083177;type=remar0;cat=leumi002;rcb=16;ord=3218421739413;npa=0;auiddc=169136664.1793794187;gdid=dYWJhMj;uaa=x86;uab=64;uafvl=Not%253AA-Brand%3B8.0.0.0%7CChromium%3B156.0.8078.4;uamb=0;uam=;uap=Linux;uapv=;uaw=0;pscdl=noapi;frm=0;_tu=KFA;gtm=45fe6b21v9189583035z871741711za20gzb71741711zd71741711xeaxf1;gcs=G111;gcd=13v3v3v3v5l1;dma=0;dc_fmt=2;tag_exp=115616985~115938465~115938469~118897920~118897930~120213116~120385423~120412528~120420416~120469145~120469153~121191155~121246026~121246034~123691370~123814944;epver=2;ref=https%3A%2F%2Fwww.leumi.co.il%2Fhe%2FInvestor-Relations%2FSubsidiaries-and-affiliates;dc_random=1793794187_FNWP5mhWZ-OeeNkbDzMMp0eIkr1ZvsHOdA;_dc_test=1;~oref=https%3A%2F%2Fwww.leumi.co.il%2Fhe%2FInvestor-Relations%2FSubsidiaries-and-affiliates",
   "legal_id": "520005497",
   "company": "החברה לניהול קופות התגמולים והפיצויים של עובדי בנק לאומי בע\"מ",
-  "detected": "2026-11-04T12:03:22+00:00"
+  "detected": "2026-11-05T12:22:11+00:00"
  },
  {
-  "kind": "new_item",
+  "kind": "removed_item",
   "page": "https://www.leumi.co.il/he/Investor-Relations/Subsidiaries-and-affiliates",
   "text": "(iframe)",
   "href": "https://4694204.fls.doubleclick.net/activityi;src=4694204;type=invmedia;cat=uczoryjr;rcb=5;ord=7160985573227;npa=0;auiddc=169136664.1793794187;gdid=dYWJhMj;uaa=x86;uab=64;uafvl=Not%253AA-Brand%3B8.0.0.0%7CChromium%3B156.0.8078.4;uamb=0;uam=;uap=Linux;uapv=;uaw=0;pscdl=noapi;frm=0;_tu=KFA;gtm=45fe6b21v9181662105z871741711za20gzb71741711zd71741711xeaxf1;gcs=G111;gcd=13v3v3v3v5l1;dma=0;dc_fmt=2;tag_exp=115616986~115938465~115938468~118897920~118897930~120213116~120385422~120412526~120420414~120469145~120469153~121191155~121246026~121246034~123691370~123692834~123814944;epver=2;ref=https%3A%2F%2Fwww.leumi.co.il%2Fhe%2FInvestor-Relations%2FSubsidiaries-and-affiliates;dc_random=1793794187_m0AK7_6YcYJdBW-ZRx4hSpOTEiXxzauu4Q;_dc_test=1;~oref=https%3A%2F%2Fwww.leumi.co.il%2Fhe%2FInvestor-Relations%2FSubsidiaries-and-affiliates",
   "legal_id": "520005497",
   "company": "החברה לניהול קופות התגמולים והפיצויים של עובדי בנק לאומי בע\"מ",
-  "detected": "2026-11-04T12:03:22+00:00"
- },
- {
-  "kind": "text_changed",
-  "page": "https://www.leumi.co.il/he/Investor-Relations/Subsidiaries-and-affiliates",
-  "text": "ESG בחירת שפה דברו איתנו נגישות ESG ESG -> ESG",
-  "href": "https://www.leumi.co.il/he/Investor-Relations/ESG",
-  "legal_id": "520005497",
-  "company": "החברה לניהול קופות התגמולים והפיצויים של עובדי בנק לאומי בע\"מ",
-  "detected": "2026-11-04T12:03:22+00:00"
- },
- {
-  "kind": "removed_item",
-  "page": "https://www.leumi.co.il/he/Investor-Relations/Subsidiaries-and-affiliates",
-  "text": "(iframe)",
-  "href": "https://8083177.fls.doubleclick.net/activityi;src=8083177;type=remar0;cat=leumi002;rcb=12;ord=5912589939622;npa=0;auiddc=1106404948.1793707728;gdid=dYWJhMj;uaa=x86;uab=64;uafvl=Not%253AA-Brand%3B8.0.0.0%7CChromium%3B156.0.8078.4;uamb=0;uam=;uap=Linux;uapv=;uaw=0;pscdl=noapi;frm=0;_tu=KFA;gtm=45fe6au1v9189583035z871741711za20gzb71741711zd71741711xeaxf1;gcs=G111;gcd=13v3v3v3v5l1;dma=0;dc_fmt=2;tag_exp=115938465~115938469~118131808~118897920~118897930~119404697~120213116~120385423~120412526~120469145~120469153~121191153~121246026~121246034~123691370~123692834~123814945;epver=2;dc_random=1793707728_kS6GYMWILkqsIFSR_cIQHrYjU1NXPuaqSg;_dc_test=1;~oref=https%3A%2F%2Fwww.leumi.co.il%2Fhe%2FInvestor-Relations%2FSubsidiaries-and-affiliates",
-  "legal_id": "520005497",
-  "company": "החברה לניהול קופות התגמולים והפיצויים של עובדי בנק לאומי בע\"מ",
-  "detected": "2026-11-04T12:03:22+00:00"
- },
- {
-  "kind": "removed_item",
-  "page": "https://www.leumi.co.il/he/Investor-Relations/Subsidiaries-and-affiliates",
-  "text": "(iframe)",
-  "href": "https://4694204.fls.doubleclick.net/activityi;src=4694204;type=invmedia;cat=uczoryjr;rcb=11;ord=5579619612225;npa=0;auiddc=1106404948.1793707728;gdid=dYWJhMj;uaa=x86;uab=64;uafvl=Not%253AA-Brand%3B8.0.0.0%7CChromium%3B156.0.8078.4;uamb=0;uam=;uap=Linux;uapv=;uaw=0;pscdl=noapi;frm=0;_tu=KFA;gtm=45fe6au1v9181662105z871741711za20gzb71741711zd71741711xeaxf1;gcs=G111;gcd=13v3v3v3v5l1;dma=0;dc_fmt=2;tag_exp=115616986~115938465~115938468~118131808~118897920~118897930~120213116~120385423~120469145~120469153~121191153~121246026~121246034~123691370~123814946;epver=2;dc_random=1793707728_cpA6iJjjLQQgoqkCMgXBbJ3vLKRrA1I5Sw;_dc_test=1;~oref=https%3A%2F%2Fwww.leumi.co.il%2Fhe%2FInvestor-Relations%2FSubsidiaries-and-affiliates",
-  "legal_id": "520005497",
-  "company": "החברה לניהול קופות התגמולים והפיצויים של עובדי בנק לאומי בע\"מ",
-  "detected": "2026-11-04T12:03:22+00:00"
+  "detected": "2026-11-05T12:22:11+00:00"
  },
  {
   "kind": "new_item",
+  "page": "https://www.leumi.co.il/he/Investor-Relations/Vision-and-Values",
+  "text": "(iframe)",
+  "href": "https://4694204.fls.doubleclick.net/activityi;src=4694204;type=invmedia;cat=uczoryjr;rcb=11;ord=5413532060658;npa=0;auiddc=1806934575.1793881499;gdid=dYWJhMj;uaa=x86;uab=64;uafvl=Not%253AA-Brand%3B8.0.0.0%7CChromium%3B156.0.8078.4;uamb=0;uam=;uap=Linux;uapv=;uaw=0;pscdl=noapi;frm=0;_tu=KFA;gtm=45fe6b31v9181662105z871741711za20gzb71741711zd71741711xeaxf1;gcs=G111;gcd=13v3v3v3v5l1;dma=0;dc_fmt=2;tag_exp=115938465~115938468~117776796~118897920~118897930~120213116~120385422~120412528~120420414~120469145~120469153~121191155~121246026~121246034~123814185;epver=2;ref=https%3A%2F%2Fwww.leumi.co.il%2Fhe%2FInvestor-Relations%2FVision-and-Values;dc_random=1793881499_oglMgLLEw32GkAi0PsX7C1KfdCWmLPrXog;_dc_test=1;~oref=https%3A%2F%2Fwww.leumi.co.il%2Fhe%2FInvestor-Relations%2FVision-and-Values",
+  "legal_id": "520005497",
+  "company": "החברה לניהול קופות התגמולים והפיצויים של עובדי בנק לאומי בע\"מ",
+  "detected": "2026-11-05T12:22:11+00:00"
+ },
+ {
+  "kind": "new_item",
+  "page": "https://www.leumi.co.il/he/Investor-Relations/Vision-and-Values",
+  "text": "(iframe)",
+  "href": "https://8083177.fls.doubleclick.net/activityi;src=8083177;type=remar0;cat=leumi002;rcb=9;ord=8367300101092;npa=0;auiddc=1806934575.1793881499;gdid=dYWJhMj;uaa=x86;uab=64;uafvl=Not%253AA-Brand%3B8.0.0.0%7CChromium%3B156.0.8078.4;uamb=0;uam=;uap=Linux;uapv=;uaw=0;pscdl=noapi;frm=0;_tu=KFA;gtm=45fe6b31v9189583035z871741711za20gzb71741711zd71741711xeaxf1;gcs=G111;gcd=13v3v3v3v5l1;dma=0;dc_fmt=2;tag_exp=115616985~115938465~115938468~117776796~118897920~118897930~120213116~120385423~120412526~120420414~120469145~120469153~121191155~121246026~121246034~123814185;epver=2;ref=https%3A%2F%2Fwww.leumi.co.il%2Fhe%2FInvestor-Relations%2FVision-and-Values;dc_random=1793881499_On2IrGdg_b6JkumY5ip6BSLwSPcjc4lIlw;_dc_test=1;~oref=https%3A%2F%2Fwww.leumi.co.il%2Fhe%2FInvestor-Relations%2FVision-and-Values",
+  "legal_id": "520005497",
+  "company": "החברה לניהול קופות התגמולים והפיצויים של עובדי בנק לאומי בע\"מ",
+  "detected": "2026-11-05T12:22:11+00:00"
+ },
+ {
+  "kind": "removed_item",
   "page": "https://www.leumi.co.il/he/Investor-Relations/Vision-and-Values",
   "text": "(iframe)",
   "href": "https://4694204.fls.doubleclick.net/activityi;src=4694204;type=invmedia;cat=uczoryjr;rcb=18;ord=2382669271018;npa=0;auiddc=428227555.1793794201;gdid=dYWJhMj;uaa=x86;uab=64;uafvl=Not%253AA-Brand%3B8.0.0.0%7CChromium%3B156.0.8078.4;uamb=0;uam=;uap=Linux;uapv=;uaw=0;pscdl=noapi;frm=0;_tu=KFA;gtm=45fe6b21v9181662105z871741711za20gzb71741711zd71741711xeaxf1;gcs=G111;gcd=13v3v3v3v5l1;dma=0;dc_fmt=2;tag_exp=115938465~115938468~117776796~118131808~118897920~118897930~120213116~120385422~120412528~120420416~120469145~120469153~121191153~121246026~121246034~123691370~123814184~123814946;epver=2;ref=https%3A%2F%2Fwww.leumi.co.il%2Fhe%2FInvestor-Relations%2FVision-and-Values;dc_random=1793794201_PUEhn8vTcQjkOwRGNJhdgkiOeYXXBbQW7g;_dc_test=1;~oref=https%3A%2F%2Fwww.leumi.co.il%2Fhe%2FInvestor-Relations%2FVision-and-Values",
   "legal_id": "520005497",
   "company": "החברה לניהול קופות התגמולים והפיצויים של עובדי בנק לאומי בע\"מ",
-  "detected": "2026-11-04T12:03:22+00:00"
+  "detected": "2026-11-05T12:22:11+00:00"
  },
  {
-  "kind": "new_item",
+  "kind": "removed_item",
   "page": "https://www.leumi.co.il/he/Investor-Relations/Vision-and-Values",
   "text": "(iframe)",
   "href": "https://8083177.fls.doubleclick.net/activityi;src=8083177;type=remar0;cat=leumi002;rcb=3;ord=457091661146;npa=0;auiddc=428227555.1793794201;gdid=dYWJhMj;uaa=x86;uab=64;uafvl=Not%253AA-Brand%3B8.0.0.0%7CChromium%3B156.0.8078.4;uamb=0;uam=;uap=Linux;uapv=;uaw=0;pscdl=noapi;frm=0;_tu=KFA;gtm=45fe6b21v9189583035z871741711za20gzb71741711zd71741711xeaxf1;gcs=G111;gcd=13v3v3v3v5l1;dma=0;dc_fmt=2;tag_exp=115938465~115938469~117776796~118131808~118897920~118897930~120213116~120385422~120412528~120420414~120469145~120469153~121191153~121246026~121246034~123691370~123692836~123814944;epver=2;ref=https%3A%2F%2Fwww.leumi.co.il%2Fhe%2FInvestor-Relations%2FVision-and-Values;dc_random=1793794201_UHFfio1RgojXs0Y0LfHUimF9JC7eqR5GRA;_dc_test=1;~oref=https%3A%2F%2Fwww.leumi.co.il%2Fhe%2FInvestor-Relations%2FVision-and-Values",
   "legal_id": "520005497",
   "company": "החברה לניהול קופות התגמולים והפיצויים של עובדי בנק לאומי בע\"מ",
-  "detected": "2026-11-04T12:03:22+00:00"
- },
- {
-  "kind": "new_item",
-  "page": "https://www.leumi.co.il/he/Investor-Relations/Vision-and-Values",
-  "text": "(iframe)",
-  "href": "https://cache.bankleumi.co.il/adrum-xd.686372e97eae8d992d3f1df53d051927.html",
-  "legal_id": "520005497",
-  "company": "החברה לניהול קופות התגמולים והפיצויים של עובדי בנק לאומי בע\"מ",
-  "detected": "2026-11-04T12:03:22+00:00"
+  "detected": "2026-11-05T12:22:11+00:00"
  },
  {
   "kind": "new_item",
   "page": "https://www.leumi.co.il/he/about-leumi/Investor-Relations/Financial_Statements",
-  "text": "הודעה לעיתונות",
-  "href": "https://www.leumi.co.il/leumi-hebrew/s3fs-public/newsite/financialstatement/26/q2/heb/PR_Q2_2026_%20Acc.pdf",
+  "text": "(iframe)",
+  "href": "https://8083177.fls.doubleclick.net/activityi;src=8083177;type=remar0;cat=leumi002;rcb=12;ord=1881252636660;npa=0;auiddc=230841744.1793881523;gdid=dYWJhMj;uaa=x86;uab=64;uafvl=Not%253AA-Brand%3B8.0.0.0%7CChromium%3B156.0.8078.4;uamb=0;uam=;uap=Linux;uapv=;uaw=0;pscdl=noapi;frm=0;_tu=KFA;gtm=45fe6b31v9189583035z871741711za20gzb71741711zd71741711xeaxf1;gcs=G111;gcd=13v3v3v3v5l1;dma=0;dc_fmt=2;tag_exp=115616986~115938465~115938468~118897920~118897930~120213116~120385423~120412526~120420416~120469145~120469153~121191153~121246026~121246034~123814183;epver=2;ref=https%3A%2F%2Fwww.leumi.co.il%2Fhe%2Fabout-leumi%2FInvestor-Relations%2FFinancial_Statements;dc_random=1793881523_E60X24Y9Q7UGuFAbDzn1PL6AR0KnrT-qOA;_dc_test=1;~oref=https%3A%2F%2Fwww.leumi.co.il%2Fhe%2Fabout-leumi%2FInvestor-Relations%2FFinancial_Statements",
   "legal_id": "520005497",
   "company": "החברה לניהול קופות התגמולים והפיצויים של עובדי בנק לאומי בע\"מ",
-  "detected": "2026-11-04T12:03:22+00:00"
+  "detected": "2026-11-05T12:22:11+00:00"
  },
  {
   "kind": "new_item",
+  "page": "https://www.leumi.co.il/he/about-leumi/Investor-Relations/Financial_Statements",
+  "text": "(iframe)",
+  "href": "https://4694204.fls.doubleclick.net/activityi;src=4694204;type=invmedia;cat=uczoryjr;rcb=6;ord=3665717147735;npa=0;auiddc=230841744.1793881523;gdid=dYWJhMj;uaa=x86;uab=64;uafvl=Not%253AA-Brand%3B8.0.0.0%7CChromium%3B156.0.8078.4;uamb=0;uam=;uap=Linux;uapv=;uaw=0;pscdl=noapi;frm=0;_tu=KFA;gtm=45fe6b31v9181662105z871741711za20gzb71741711zd71741711xeaxf1;gcs=G111;gcd=13v3v3v3v5l1;dma=0;dc_fmt=2;tag_exp=115616985~115938465~115938468~118897920~118897930~119793974~120213116~120385423~120412528~120420416~120469145~120469153~121191153~121246026~121246034~123814183;epver=2;ref=https%3A%2F%2Fwww.leumi.co.il%2Fhe%2Fabout-leumi%2FInvestor-Relations%2FFinancial_Statements;dc_random=1793881523_JLRqOuWy5s5pPu5IemA-eSkjAMloSuX-Ow;_dc_test=1;~oref=https%3A%2F%2Fwww.leumi.co.il%2Fhe%2Fabout-leumi%2FInvestor-Relations%2FFinancial_Statements",
+  "legal_id": "520005497",
+  "company": "החברה לניהול קופות התגמולים והפיצויים של עובדי בנק לאומי בע\"מ",
+  "detected": "2026-11-05T12:22:11+00:00"
+ },
+ {
+  "kind": "removed_item",
   "page": "https://www.leumi.co.il/he/about-leumi/Investor-Relations/Financial_Statements",
   "text": "(iframe)",
   "href": "https://4694204.fls.doubleclick.net/activityi;src=4694204;type=invmedia;cat=uczoryjr;rcb=13;ord=5768123236517;npa=0;auiddc=39517717.1793794225;gdid=dYWJhMj;uaa=x86;uab=64;uafvl=Not%253AA-Brand%3B8.0.0.0%7CChromium%3B156.0.8078.4;uamb=0;uam=;uap=Linux;uapv=;uaw=0;pscdl=noapi;frm=0;_tu=KFA;gtm=45fe6b21v9181662105z871741711za20gzb71741711zd71741711xeaxf1;gcs=G111;gcd=13v3v3v3v5l1;dma=0;dc_fmt=2;tag_exp=115616986~115938466~115938468~117776796~118897920~118897930~120213116~120385422~120412526~120420416~120469145~120469153~121191155~121246026~121246034~123691370~123814944;epver=2;ref=https%3A%2F%2Fwww.leumi.co.il%2Fhe%2Fabout-leumi%2FInvestor-Relations%2FFinancial_Statements;dc_random=1793794225_X7oq5VmNKVHmJNgNhPRkVoHT6Gyb2Ats-w;_dc_test=1;~oref=https%3A%2F%2Fwww.leumi.co.il%2Fhe%2Fabout-leumi%2FInvestor-Relations%2FFinancial_Statements",
   "legal_id": "520005497",
   "company": "החברה לניהול קופות התגמולים והפיצויים של עובדי בנק לאומי בע\"מ",
-  "detected": "2026-11-04T12:03:22+00:00"
+  "detected": "2026-11-05T12:22:11+00:00"
  },
  {
-  "kind": "new_item",
+  "kind": "removed_item",
   "page": "https://www.leumi.co.il/he/about-leumi/Investor-Relations/Financial_Statements",
   "text": "(iframe)",
   "href": "https://8083177.fls.doubleclick.net/activityi;src=8083177;type=remar0;cat=leumi002;rcb=7;ord=742300302755;npa=0;auiddc=39517717.1793794225;gdid=dYWJhMj;uaa=x86;uab=64;uafvl=Not%253AA-Brand%3B8.0.0.0%7CChromium%3B156.0.8078.4;uamb=0;uam=;uap=Linux;uapv=;uaw=0;pscdl=noapi;frm=0;_tu=KFA;gtm=45fe6b21v9189583035z871741711za20gzb71741711zd71741711xeaxf1;gcs=G111;gcd=13v3v3v3v5l1;dma=0;dc_fmt=2;tag_exp=115938466~115938468~117776796~118897920~118897930~120213116~120385423~120412526~120420414~120469145~120469153~121191155~121246026~121246034~123691370~123814946;epver=2;ref=https%3A%2F%2Fwww.leumi.co.il%2Fhe%2Fabout-leumi%2FInvestor-Relations%2FFinancial_Statements;dc_random=1793794226_ApysUrg1BYbGvq17qQb_bd1LyElHhKeFsA;_dc_test=1;~oref=https%3A%2F%2Fwww.leumi.co.il%2Fhe%2Fabout-leumi%2FInvestor-Relations%2FFinancial_Statements",
   "legal_id": "520005497",
   "company": "החברה לניהול קופות התגמולים והפיצויים של עובדי בנק לאומי בע\"מ",
-  "detected": "2026-11-04T12:03:22+00:00"
+  "detected": "2026-11-05T12:22:11+00:00"
  },
  {
   "kind": "new_item",
-  "page": "https://www.leumi.co.il/he/about-leumi/Investor-Relations/Financial_Statements",
-  "text": "הודעה לעיתונות",
-  "href": "https://www.leumi.co.il/he/about-leumi/Investor-Relations/Acc.pdf",
-  "legal_id": "520005497",
-  "company": "החברה לניהול קופות התגמולים והפיצויים של עובדי בנק לאומי בע\"מ",
-  "detected": "2026-11-04T12:03:22+00:00"
- },
- {
-  "kind": "text_changed",
-  "page": "https://www.leumi.co.il/he/about-leumi/Investor-Relations/Financial_Statements",
-  "text": "ESG בחירת שפה דברו איתנו נגישות ESG ESG -> ESG",
-  "href": "https://www.leumi.co.il/he/Investor-Relations/ESG",
-  "legal_id": "520005497",
-  "company": "החברה לניהול קופות התגמולים והפיצויים של עובדי בנק לאומי בע\"מ",
-  "detected": "2026-11-04T12:03:22+00:00"
- },
- {
-  "kind": "new_item",
-  "page": "https://www.leumi.co.il/he/about-leumi/Investor-Relations/Financial_Statements",
+  "page": "https://www.leumi.co.il/he/about-leumi/Investor-Relations/Credit_Rating",
   "text": "(iframe)",
-  "href": "https://cache.bankleumi.co.il/adrum-xd.686372e97eae8d992d3f1df53d051927.html",
+  "href": "https://4694204.fls.doubleclick.net/activityi;src=4694204;type=invmedia;cat=uczoryjr;rcb=8;ord=5921915174006;npa=0;auiddc=882114366.1793881537;gdid=dYWJhMj;uaa=x86;uab=64;uafvl=Not%253AA-Brand%3B8.0.0.0%7CChromium%3B156.0.8078.4;uamb=0;uam=;uap=Linux;uapv=;uaw=0;pscdl=noapi;frm=0;_tu=KFA;gtm=45fe6b31v9181662105z871741711za20gzb71741711zd71741711xeaxf1;gcs=G111;gcd=13v3v3v3v5l1;dma=0;dc_fmt=2;tag_exp=115616986~115938466~115938468~117776796~118897920~118897930~120213116~120385423~120412528~120420416~120469145~120469153~121191153~121246026~121246034~123814185;epver=2;ref=https%3A%2F%2Fwww.leumi.co.il%2Fhe%2Fabout-leumi%2FInvestor-Relations%2FCredit_Rating;dc_random=1793881537_j_IYchcz1FLjdPF8C86cVNQydEofn6CKJg;_dc_test=1;~oref=https%3A%2F%2Fwww.leumi.co.il%2Fhe%2Fabout-leumi%2FInvestor-Relations%2FCredit_Rating",
   "legal_id": "520005497",
   "company": "החברה לניהול קופות התגמולים והפיצויים של עובדי בנק לאומי בע\"מ",
-  "detected": "2026-11-04T12:03:22+00:00"
+  "detected": "2026-11-05T12:22:11+00:00"
+ },
+ {
+  "kind": "new_item",
+  "page": "https://www.leumi.co.il/he/about-leumi/Investor-Relations/Credit_Rating",
+  "text": "(iframe)",
+  "href": "https://8083177.fls.doubleclick.net/activityi;src=8083177;type=remar0;cat=leumi002;rcb=12;ord=6021890982142;npa=0;auiddc=882114366.1793881537;gdid=dYWJhMj;uaa=x86;uab=64;uafvl=Not%253AA-Brand%3B8.0.0.0%7CChromium%3B156.0.8078.4;uamb=0;uam=;uap=Linux;uapv=;uaw=0;pscdl=noapi;frm=0;_tu=KFA;gtm=45fe6b31v9189583035z871741711za20gzb71741711zd71741711xeaxf1;gcs=G111;gcd=13v3v3v3v5l1;dma=0;dc_fmt=2;tag_exp=115616985~115938466~115938469~117776796~118897920~118897930~120213116~120385422~120412526~120420414~120469145~120469153~121191153~121246026~121246034~123814183;epver=2;ref=https%3A%2F%2Fwww.leumi.co.il%2Fhe%2Fabout-leumi%2FInvestor-Relations%2FCredit_Rating;dc_random=1793881537_INSO9LNTCk0tk0LXR-pZJmIDLYkQOy9JKg;_dc_test=1;~oref=https%3A%2F%2Fwww.leumi.co.il%2Fhe%2Fabout-leumi%2FInvestor-Relations%2FCredit_Rating",
+  "legal_id": "520005497",
+  "company": "החברה לניהול קופות התגמולים והפיצויים של עובדי בנק לאומי בע\"מ",
+  "detected": "2026-11-05T12:22:11+00:00"
  },
  {
   "kind": "removed_item",
-  "page": "https://www.leumi.co.il/he/about-leumi/Investor-Relations/Financial_Statements",
-  "text": "הודעה לעיתונות",
-  "href": "https://www.leumi.co.il/leumi-hebrew/s3fs-public/newsite/financialstatement/26/q2/heb/PR_Q2_2026_ Acc.pdf",
-  "legal_id": "520005497",
-  "company": "החברה לניהול קופות התגמולים והפיצויים של עובדי בנק לאומי בע\"מ",
-  "detected": "2026-11-04T12:03:22+00:00"
- },
- {
-  "kind": "new_item",
   "page": "https://www.leumi.co.il/he/about-leumi/Investor-Relations/Credit_Rating",
   "text": "(iframe)",
   "href": "https://4694204.fls.doubleclick.net/activityi;src=4694204;type=invmedia;cat=uczoryjr;rcb=11;ord=8558256082510;npa=0;auiddc=1852023899.1793794240;gdid=dYWJhMj;uaa=x86;uab=64;uafvl=Not%253AA-Brand%3B8.0.0.0%7CChromium%3B156.0.8078.4;uamb=0;uam=;uap=Linux;uapv=;uaw=0;pscdl=noapi;frm=0;_tu=KFA;gtm=45fe6b21h1v9181662105z871741711za20gzb71741711zd71741711xeaxf1;gcs=G111;gcd=13v3v3v3v5l1;dma=0;dc_fmt=2;tag_exp=115938466~115938469~118897920~118897930~120213116~120385423~120412526~120420414~120469145~120469153~121191153~121246026~121246034~123691370~123692834~123814946;epver=2;ref=https%3A%2F%2Fwww.leumi.co.il%2Fhe%2Fabout-leumi%2FInvestor-Relations%2FCredit_Rating;dc_random=1793794240_ggjIADK2cQ1yad6xt8SLXyFiK5QP60BC5Q;_dc_test=1;~oref=https%3A%2F%2Fwww.leumi.co.il%2Fhe%2Fabout-leumi%2FInvestor-Relations%2FCredit_Rating",
   "legal_id": "520005497",
   "company": "החברה לניהול קופות התגמולים והפיצויים של עובדי בנק לאומי בע\"מ",
-  "detected": "2026-11-04T12:03:22+00:00"
+  "detected": "2026-11-05T12:22:11+00:00"
  },
  {
-  "kind": "new_item",
+  "kind": "removed_item",
   "page": "https://www.leumi.co.il/he/about-leumi/Investor-Relations/Credit_Rating",
   "text": "(iframe)",
   "href": "https://8083177.fls.doubleclick.net/activityi;src=8083177;type=remar0;cat=leumi002;rcb=8;ord=8124561237200;npa=0;auiddc=1852023899.1793794240;gdid=dYWJhMj;uaa=x86;uab=64;uafvl=Not%253AA-Brand%3B8.0.0.0%7CChromium%3B156.0.8078.4;uamb=0;uam=;uap=Linux;uapv=;uaw=0;pscdl=noapi;frm=0;_tu=KFA;gtm=45fe6b21h1v9189583035z871741711za20gzb71741711zd71741711xeaxf1;gcs=G111;gcd=13v3v3v3v5l1;dma=0;dc_fmt=2;tag_exp=115938466~115938469~118897920~118897930~120213116~120385422~120412526~120420416~120469145~120469153~121191153~121246026~121246034~123691370~123692835~123814946;epver=2;ref=https%3A%2F%2Fwww.leumi.co.il%2Fhe%2Fabout-leumi%2FInvestor-Relations%2FCredit_Rating;dc_random=1793794240_6Bi4smW3c9HcQGVtXYfxgQkE5DQpbugNiw;_dc_test=1;~oref=https%3A%2F%2Fwww.leumi.co.il%2Fhe%2Fabout-leumi%2FInvestor-Relations%2FCredit_Rating",
   "legal_id": "520005497",
   "company": "החברה לניהול קופות התגמולים והפיצויים של עובדי בנק לאומי בע\"מ",
-  "detected": "2026-11-04T12:03:22+00:00"
- },
- {
-  "kind": "text_changed",
-  "page": "https://www.leumi.co.il/he/about-leumi/Investor-Relations/Credit_Rating",
-  "text": "ESG בחירת שפה דברו איתנו נגישות ESG ESG -> ESG",
-  "href": "https://www.leumi.co.il/he/Investor-Relations/ESG",
-  "legal_id": "520005497",
-  "company": "החברה לניהול קופות התגמולים והפיצויים של עובדי בנק לאומי בע\"מ",
-  "detected": "2026-11-04T12:03:22+00:00"
- },
- {
-  "kind": "removed_item",
-  "page": "https://www.leumi.co.il/he/about-leumi/Investor-Relations/Credit_Rating",
-  "text": "(iframe)",
-  "href": "https://4694204.fls.doubleclick.net/activityi;src=4694204;type=invmedia;cat=uczoryjr;rcb=13;ord=4533955490664;npa=0;auiddc=352236726.1793707742;gdid=dYWJhMj;uaa=x86;uab=64;uafvl=Not%253AA-Brand%3B8.0.0.0%7CChromium%3B156.0.8078.4;uamb=0;uam=;uap=Linux;uapv=;uaw=0;pscdl=noapi;frm=0;_tu=KFA;gtm=45fe6au1v9181662105z871741711za20gzb71741711zd71741711xeaxf1;gcs=G111;gcd=13v3v3v3v5l1;dma=0;dc_fmt=2;tag_exp=115616986~115938465~115938469~118897920~118897930~120213116~120385422~120469145~120469153~121246026~121246034~123691370~123692836;epver=2;ref=https%3A%2F%2Fwww.leumi.co.il%2Fhe%2Fabout-leumi%2FInvestor-Relations%2FCredit_Rating;dc_random=1793707742_rOgCV-KfYqdiW_EA7HIvwOxm9ndFw3Y44w;_dc_test=1;~oref=https%3A%2F%2Fwww.leumi.co.il%2Fhe%2Fabout-leumi%2FInvestor-Relations%2FCredit_Rating",
-  "legal_id": "520005497",
-  "company": "החברה לניהול קופות התגמולים והפיצויים של עובדי בנק לאומי בע\"מ",
-  "detected": "2026-11-04T12:03:22+00:00"
- },
- {
-  "kind": "removed_item",
-  "page": "https://www.leumi.co.il/he/about-leumi/Investor-Relations/Credit_Rating",
-  "text": "(iframe)",
-  "href": "https://8083177.fls.doubleclick.net/activityi;src=8083177;type=remar0;cat=leumi002;rcb=18;ord=3612811553278;npa=0;auiddc=352236726.1793707742;gdid=dYWJhMj;uaa=x86;uab=64;uafvl=Not%253AA-Brand%3B8.0.0.0%7CChromium%3B156.0.8078.4;uamb=0;uam=;uap=Linux;uapv=;uaw=0;pscdl=noapi;frm=0;_tu=KFA;gtm=45fe6au1v9189583035z871741711za20gzb71741711zd71741711xeaxf1;gcs=G111;gcd=13v3v3v3v5l1;dma=0;dc_fmt=2;tag_exp=115938465~115938468~118897920~118897930~120213116~120385422~120412527~120420414~120469145~120469153~121246026~121246034~123691370~123814184;epver=2;ref=https%3A%2F%2Fwww.leumi.co.il%2Fhe%2Fabout-leumi%2FInvestor-Relations%2FCredit_Rating;dc_random=1793707742_73WbBK9-hXLBYljNTnQJRryNRP7ZLB_a9g;_dc_test=1;~oref=https%3A%2F%2Fwww.leumi.co.il%2Fhe%2Fabout-leumi%2FInvestor-Relations%2FCredit_Rating",
-  "legal_id": "520005497",
-  "company": "החברה לניהול קופות התגמולים והפיצויים של עובדי בנק לאומי בע\"מ",
-  "detected": "2026-11-04T12:03:22+00:00"
+  "detected": "2026-11-05T12:22:11+00:00"
  },
  {
   "kind": "new_item",
+  "page": "https://www.leumi.co.il/he/Investor-Relations/Financial-Targets",
+  "text": "(iframe)",
+  "href": "https://4694204.fls.doubleclick.net/activityi;src=4694204;type=invmedia;cat=uczoryjr;rcb=18;ord=4860925800661;npa=0;auiddc=142197166.1793881551;gdid=dYWJhMj;uaa=x86;uab=64;uafvl=Not%253AA-Brand%3B8.0.0.0%7CChromium%3B156.0.8078.4;uamb=0;uam=;uap=Linux;uapv=;uaw=0;pscdl=noapi;frm=0;_tu=KFA;gtm=45fe6b31v9181662105z871741711za20gzb71741711zd71741711xeaxf1;gcs=G111;gcd=13v3v3v3v5l1;dma=0;dc_fmt=2;tag_exp=115938465~115938468~118897920~118897930~119860442~120213116~120385422~120412526~120420414~120469145~120469153~121191155~121246026~121246034~123814185;epver=2;ref=https%3A%2F%2Fwww.leumi.co.il%2Fhe%2FInvestor-Relations%2FFinancial-Targets;dc_random=1793881551_470V79-cwiA9eqiySTBiNSrliYTwWTHDDw;_dc_test=1;~oref=https%3A%2F%2Fwww.leumi.co.il%2Fhe%2FInvestor-Relations%2FFinancial-Targets",
+  "legal_id": "520005497",
+  "company": "החברה לניהול קופות התגמולים והפיצויים של עובדי בנק לאומי בע\"מ",
+  "detected": "2026-11-05T12:22:11+00:00"
+ },
+ {
+  "kind": "new_item",
+  "page": "https://www.leumi.co.il/he/Investor-Relations/Financial-Targets",
+  "text": "(iframe)",
+  "href": "https://8083177.fls.doubleclick.net/activityi;src=8083177;type=remar0;cat=leumi002;rcb=15;ord=7484938053900;npa=0;auiddc=142197166.1793881551;gdid=dYWJhMj;uaa=x86;uab=64;uafvl=Not%253AA-Brand%3B8.0.0.0%7CChromium%3B156.0.8078.4;uamb=0;uam=;uap=Linux;uapv=;uaw=0;pscdl=noapi;frm=0;_tu=KFA;gtm=45fe6b31v9189583035z871741711za20gzb71741711zd71741711xeaxf1;gcs=G111;gcd=13v3v3v3v5l1;dma=0;dc_fmt=2;tag_exp=115616985~115938465~115938468~118897920~118897930~119860442~120213116~120385422~120412528~120420414~120469145~120469153~121191155~121246026~121246034~123814185;epver=2;ref=https%3A%2F%2Fwww.leumi.co.il%2Fhe%2FInvestor-Relations%2FFinancial-Targets;dc_random=1793881551_Bzbc1Nrw5MtG_xQ11lshw2UhuyF0DWLxgQ;_dc_test=1;~oref=https%3A%2F%2Fwww.leumi.co.il%2Fhe%2FInvestor-Relations%2FFinancial-Targets",
+  "legal_id": "520005497",
+  "company": "החברה לניהול קופות התגמולים והפיצויים של עובדי בנק לאומי בע\"מ",
+  "detected": "2026-11-05T12:22:11+00:00"
+ },
+ {
+  "kind": "removed_item",
   "page": "https://www.leumi.co.il/he/Investor-Relations/Financial-Targets",
   "text": "(iframe)",
   "href": "https://8083177.fls.doubleclick.net/activityi;src=8083177;type=remar0;cat=leumi002;rcb=3;ord=4917936725472;npa=0;auiddc=1386236228.1793794254;gdid=dYWJhMj;uaa=x86;uab=64;uafvl=Not%253AA-Brand%3B8.0.0.0%7CChromium%3B156.0.8078.4;uamb=0;uam=;uap=Linux;uapv=;uaw=0;pscdl=noapi;frm=0;_tu=KFA;gtm=45fe6b21v9189583035z871741711za20gzb71741711zd71741711xeaxf1;gcs=G111;gcd=13v3v3v3v5l1;dma=0;dc_fmt=2;tag_exp=115616986~115938466~115938468~117776796~118897920~118897930~120213116~120385422~120412528~120420414~120469145~120469153~121191155~121246026~121246034~123691370~123692835~123814946;epver=2;ref=https%3A%2F%2Fwww.leumi.co.il%2Fhe%2FInvestor-Relations%2FFinancial-Targets;dc_random=1793794254_FRwmW5gdRJ3bfiGBWypS3OECutOEiQRVrg;_dc_test=1;~oref=https%3A%2F%2Fwww.leumi.co.il%2Fhe%2FInvestor-Relations%2FFinancial-Targets",
   "legal_id": "520005497",
   "company": "החברה לניהול קופות התגמולים והפיצויים של עובדי בנק לאומי בע\"מ",
-  "detected": "2026-11-04T12:03:22+00:00"
+  "detected": "2026-11-05T12:22:11+00:00"
  },
  {
-  "kind": "new_item",
+  "kind": "removed_item",
   "page": "https://www.leumi.co.il/he/Investor-Relations/Financial-Targets",
   "text": "(iframe)",
   "href": "https://4694204.fls.doubleclick.net/activityi;src=4694204;type=invmedia;cat=uczoryjr;rcb=12;ord=4392090137703;npa=0;auiddc=1386236228.1793794254;gdid=dYWJhMj;uaa=x86;uab=64;uafvl=Not%253AA-Brand%3B8.0.0.0%7CChromium%3B156.0.8078.4;uamb=0;uam=;uap=Linux;uapv=;uaw=0;pscdl=noapi;frm=0;_tu=KFA;gtm=45fe6b21v9181662105z871741711za20gzb71741711zd71741711xeaxf1;gcs=G111;gcd=13v3v3v3v5l1;dma=0;dc_fmt=2;tag_exp=115938466~115938468~117776796~118897920~118897930~120213116~120385422~120412528~120420414~120469145~120469153~121191155~121246026~121246034~123691370~123814944;epver=2;ref=https%3A%2F%2Fwww.leumi.co.il%2Fhe%2FInvestor-Relations%2FFinancial-Targets;dc_random=1793794254_C0TTxRr__-SiBv8qUqDWTUi1BiaSQ1Wa7g;_dc_test=1;~oref=https%3A%2F%2Fwww.leumi.co.il%2Fhe%2FInvestor-Relations%2FFinancial-Targets",
   "legal_id": "520005497",
   "company": "החברה לניהול קופות התגמולים והפיצויים של עובדי בנק לאומי בע\"מ",
-  "detected": "2026-11-04T12:03:22+00:00"
- },
- {
-  "kind": "text_changed",
-  "page": "https://www.leumi.co.il/he/Investor-Relations/Financial-Targets",
-  "text": "ESG בחירת שפה דברו איתנו נגישות ESG ESG -> ESG",
-  "href": "https://www.leumi.co.il/he/Investor-Relations/ESG",
-  "legal_id": "520005497",
-  "company": "החברה לניהול קופות התגמולים והפיצויים של עובדי בנק לאומי בע\"מ",
-  "detected": "2026-11-04T12:03:22+00:00"
- },
- {
-  "kind": "removed_item",
-  "page": "https://www.leumi.co.il/he/Investor-Relations/Financial-Targets",
-  "text": "(iframe)",
-  "href": "https://4694204.fls.doubleclick.net/activityi;src=4694204;type=invmedia;cat=uczoryjr;rcb=18;ord=4560663775115;npa=0;auiddc=1325148249.1793707774;gdid=dYWJhMj;uaa=x86;uab=64;uafvl=Not%253AA-Brand%3B8.0.0.0%7CChromium%3B156.0.8078.4;uamb=0;uam=;uap=Linux;uapv=;uaw=0;pscdl=noapi;frm=0;_tu=KFA;gtm=45fe6au1v9181662105z871741711za20gzb71741711zd71741711xeaxf1;gcs=G111;gcd=13v3v3v3v5l1;dma=0;dc_fmt=2;tag_exp=115938466~115938469~118897920~118897930~120213116~120385423~120412527~120469145~120469153~121246026~121246034~121399758~123691370~123814944;epver=2;dc_random=1793707774_Aa3mDkm1WauvSAlaH8cEoZVHgi4LRR6hJQ;_dc_test=1;~oref=https%3A%2F%2Fwww.leumi.co.il%2Fhe%2FInvestor-Relations%2FFinancial-Targets",
-  "legal_id": "520005497",
-  "company": "החברה לניהול קופות התגמולים והפיצויים של עובדי בנק לאומי בע\"מ",
-  "detected": "2026-11-04T12:03:22+00:00"
- },
- {
-  "kind": "removed_item",
-  "page": "https://www.leumi.co.il/he/Investor-Relations/Financial-Targets",
-  "text": "(iframe)",
-  "href": "https://8083177.fls.doubleclick.net/activityi;src=8083177;type=remar0;cat=leumi002;rcb=17;ord=1923188212700;npa=0;auiddc=1325148249.1793707774;gdid=dYWJhMj;uaa=x86;uab=64;uafvl=Not%253AA-Brand%3B8.0.0.0%7CChromium%3B156.0.8078.4;uamb=0;uam=;uap=Linux;uapv=;uaw=0;pscdl=noapi;frm=0;_tu=KFA;gtm=45fe6au1v9189583035z871741711za20gzb71741711zd71741711xeaxf1;gcs=G111;gcd=13v3v3v3v5l1;dma=0;dc_fmt=2;tag_exp=115938466~115938469~118897920~118897930~120213116~120385423~120412527~120469145~120469153~121246026~121246034~121399758~123691370;epver=2;dc_random=1793707774_QR2VXTi1CLqugolcSECFJQbzRHY3ayz4JA;_dc_test=1;~oref=https%3A%2F%2Fwww.leumi.co.il%2Fhe%2FInvestor-Relations%2FFinancial-Targets",
-  "legal_id": "520005497",
-  "company": "החברה לניהול קופות התגמולים והפיצויים של עובדי בנק לאומי בע\"מ",
-  "detected": "2026-11-04T12:03:22+00:00"
+  "detected": "2026-11-05T12:22:11+00:00"
  },
  {
   "kind": "new_item",
+  "page": "https://www.leumi.co.il/he/Investor-Relations/Analyst-Coverage",
+  "text": "(iframe)",
+  "href": "https://8083177.fls.doubleclick.net/activityi;src=8083177;type=remar0;cat=leumi002;rcb=3;ord=5270421409250;npa=0;auiddc=1595660164.1793881565;gdid=dYWJhMj;uaa=x86;uab=64;uafvl=Not%253AA-Brand%3B8.0.0.0%7CChromium%3B156.0.8078.4;uamb=0;uam=;uap=Linux;uapv=;uaw=0;pscdl=noapi;frm=0;_tu=KFA;gtm=45fe6b31v9189583035z871741711za20gzb71741711zd71741711xeaxf1;gcs=G111;gcd=13v3v3v3v5l1;dma=0;dc_fmt=2;tag_exp=115938466~115938468~118131810~118897920~118897930~120213116~120385423~120412526~120420414~120469145~120469153~121191155~121246026~121246034~123814185;epver=2;ref=https%3A%2F%2Fwww.leumi.co.il%2Fhe%2FInvestor-Relations%2FAnalyst-Coverage;dc_random=1793881565_x-ngQod6w_fsUgBjXuKJCovpRI1UHh9Igg;_dc_test=1;~oref=https%3A%2F%2Fwww.leumi.co.il%2Fhe%2FInvestor-Relations%2FAnalyst-Coverage",
+  "legal_id": "520005497",
+  "company": "החברה לניהול קופות התגמולים והפיצויים של עובדי בנק לאומי בע\"מ",
+  "detected": "2026-11-05T12:22:11+00:00"
+ },
+ {
+  "kind": "new_item",
+  "page": "https://www.leumi.co.il/he/Investor-Relations/Analyst-Coverage",
+  "text": "(iframe)",
+  "href": "https://4694204.fls.doubleclick.net/activityi;src=4694204;type=invmedia;cat=uczoryjr;rcb=13;ord=5763960183895;npa=0;auiddc=1595660164.1793881565;gdid=dYWJhMj;uaa=x86;uab=64;uafvl=Not%253AA-Brand%3B8.0.0.0%7CChromium%3B156.0.8078.4;uamb=0;uam=;uap=Linux;uapv=;uaw=0;pscdl=noapi;frm=0;_tu=KFA;gtm=45fe6b31v9181662105z871741711za20gzb71741711zd71741711xeaxf1;gcs=G111;gcd=13v3v3v3v5l1;dma=0;dc_fmt=2;tag_exp=115938466~115938469~118131810~118897920~118897930~120213116~120385423~120412528~120420416~120469145~120469153~121191155~121246026~121246034~123814183;epver=2;ref=https%3A%2F%2Fwww.leumi.co.il%2Fhe%2FInvestor-Relations%2FAnalyst-Coverage;dc_random=1793881565_lOIOUI9-WM2HGZdtlYn7cwRmjHutGwpBTA;_dc_test=1;~oref=https%3A%2F%2Fwww.leumi.co.il%2Fhe%2FInvestor-Relations%2FAnalyst-Coverage",
+  "legal_id": "520005497",
+  "company": "החברה לניהול קופות התגמולים והפיצויים של עובדי בנק לאומי בע\"מ",
+  "detected": "2026-11-05T12:22:11+00:00"
+ },
+ {
+  "kind": "removed_item",
   "page": "https://www.leumi.co.il/he/Investor-Relations/Analyst-Coverage",
   "text": "(iframe)",
   "href": "https://8083177.fls.doubleclick.net/activityi;src=8083177;type=remar0;cat=leumi002;rcb=14;ord=2427561683531;npa=0;auiddc=869335661.1793794268;gdid=dYWJhMj;uaa=x86;uab=64;uafvl=Not%253AA-Brand%3B8.0.0.0%7CChromium%3B156.0.8078.4;uamb=0;uam=;uap=Linux;uapv=;uaw=0;pscdl=noapi;frm=0;_tu=KFA;gtm=45fe6b21h1v9189583035z871741711za20gzb71741711zd71741711xeaxf1;gcs=G111;gcd=13v3v3v3v5l1;dma=0;dc_fmt=2;tag_exp=115938465~115938469~118897920~118897930~120213116~120385423~120412526~120420414~120469145~120469153~121191155~121246026~121246034~123691370~123814944;epver=2;ref=https%3A%2F%2Fwww.leumi.co.il%2Fhe%2FInvestor-Relations%2FAnalyst-Coverage;dc_random=1793794268_-VAcVY9uX1pCXp3Cno6_YhEIOeuNJm4F1Q;_dc_test=1;~oref=https%3A%2F%2Fwww.leumi.co.il%2Fhe%2FInvestor-Relations%2FAnalyst-Coverage",
   "legal_id": "520005497",
   "company": "החברה לניהול קופות התגמולים והפיצויים של עובדי בנק לאומי בע\"מ",
-  "detected": "2026-11-04T12:03:22+00:00"
+  "detected": "2026-11-05T12:22:11+00:00"
  },
  {
-  "kind": "new_item",
+  "kind": "removed_item",
   "page": "https://www.leumi.co.il/he/Investor-Relations/Analyst-Coverage",
   "text": "(iframe)",
   "href": "https://4694204.fls.doubleclick.net/activityi;src=4694204;type=invmedia;cat=uczoryjr;rcb=12;ord=4759144529482;npa=0;auiddc=869335661.1793794268;gdid=dYWJhMj;uaa=x86;uab=64;uafvl=Not%253AA-Brand%3B8.0.0.0%7CChromium%3B156.0.8078.4;uamb=0;uam=;uap=Linux;uapv=;uaw=0;pscdl=noapi;frm=0;_tu=KFA;gtm=45fe6b21h1v9181662105z871741711za20gzb71741711zd71741711xeaxf1;gcs=G111;gcd=13v3v3v3v5l1;dma=0;dc_fmt=2;tag_exp=115938465~115938469~118012007~118897920~118897930~120213116~120385422~120412526~120420414~120469145~120469153~121191155~121246026~121246034~123691370~123692834~123814184~123814946;epver=2;ref=https%3A%2F%2Fwww.leumi.co.il%2Fhe%2FInvestor-Relations%2FAnalyst-Coverage;dc_random=1793794268_rsoDAxvjMmR-NFL6L8LjhdcovurFjA5nug;_dc_test=1;~oref=https%3A%2F%2Fwww.leumi.co.il%2Fhe%2FInvestor-Relations%2FAnalyst-Coverage",
   "legal_id": "520005497",
   "company": "החברה לניהול קופות התגמולים והפיצויים של עובדי בנק לאומי בע\"מ",
-  "detected": "2026-11-04T12:03:22+00:00"
+  "detected": "2026-11-05T12:22:11+00:00"
  },
  {
-  "kind": "text_changed",
-  "page": "https://www.leumi.co.il/he/Investor-Relations/Analyst-Coverage",
-  "text": "ESG בחירת שפה דברו איתנו נגישות ESG ESG -> ESG",
-  "href": "https://www.leumi.co.il/he/Investor-Relations/ESG",
+  "kind": "new_item",
+  "page": "https://www.leumi.co.il/he/Investor-Relations/ESG",
+  "text": "(iframe)",
+  "href": "https://4694204.fls.doubleclick.net/activityi;src=4694204;type=invmedia;cat=uczoryjr;rcb=4;ord=7070473162396;npa=0;auiddc=632599206.1793881579;gdid=dYWJhMj;uaa=x86;uab=64;uafvl=Not%253AA-Brand%3B8.0.0.0%7CChromium%3B156.0.8078.4;uamb=0;uam=;uap=Linux;uapv=;uaw=0;pscdl=noapi;frm=0;_tu=KFA;gtm=45fe6b40h2v9181662105z871741711za20gzb71741711zd71741711xeaxf1;gcs=G111;gcd=13v3v3v3v5l1;dma=0;dc_fmt=2;tag_exp=115938466~115938468~118897920~118897930~120213116~120385423~120412526~120420416~120469145~120469153~121191155~121246026~121246034~123814185;epver=2;ref=https%3A%2F%2Fwww.leumi.co.il%2Fhe%2FInvestor-Relations%2FESG;dc_random=1793881579_fdWS7cvSxGEeYFUq7psp0pPGstzoHb_3gA;_dc_test=1;~oref=https%3A%2F%2Fwww.leumi.co.il%2Fhe%2FInvestor-Relations%2FESG",
   "legal_id": "520005497",
   "company": "החברה לניהול קופות התגמולים והפיצויים של עובדי בנק לאומי בע\"מ",
-  "detected": "2026-11-04T12:03:22+00:00"
+  "detected": "2026-11-05T12:22:11+00:00"
+ },
+ {
+  "kind": "new_item",
+  "page": "https://www.leumi.co.il/he/Investor-Relations/ESG",
+  "text": "(iframe)",
+  "href": "https://8083177.fls.doubleclick.net/activityi;src=8083177;type=remar0;cat=leumi002;rcb=11;ord=1279211397433;npa=0;auiddc=632599206.1793881579;gdid=dYWJhMj;uaa=x86;uab=64;uafvl=Not%253AA-Brand%3B8.0.0.0%7CChromium%3B156.0.8078.4;uamb=0;uam=;uap=Linux;uapv=;uaw=0;pscdl=noapi;frm=0;_tu=KFA;gtm=45fe6b40h2v9189583035z871741711za20gzb71741711zd71741711xeaxf1;gcs=G111;gcd=13v3v3v3v5l1;dma=0;dc_fmt=2;tag_exp=115938466~115938468~118897920~118897930~120213116~120385423~120412528~120420414~120469145~120469153~121191155~121246026~121246034~123814183~123820801;epver=2;ref=https%3A%2F%2Fwww.leumi.co.il%2Fhe%2FInvestor-Relations%2FESG;dc_random=1793881579_CflXJUhX-5Eaivb32IYzb76PDqgJEbky3g;_dc_test=1;~oref=https%3A%2F%2Fwww.leumi.co.il%2Fhe%2FInvestor-Relations%2FESG",
+  "legal_id": "520005497",
+  "company": "החברה לניהול קופות התגמולים והפיצויים של עובדי בנק לאומי בע\"מ",
+  "detected": "2026-11-05T12:22:11+00:00"
  },
  {
   "kind": "removed_item",
-  "page": "https://www.leumi.co.il/he/Investor-Relations/Analyst-Coverage",
-  "text": "(iframe)",
-  "href": "https://4694204.fls.doubleclick.net/activityi;src=4694204;type=invmedia;cat=uczoryjr;rcb=17;ord=8734756817767;npa=0;auiddc=1121769898.1793707806;gdid=dYWJhMj;uaa=x86;uab=64;uafvl=Not%253AA-Brand%3B8.0.0.0%7CChromium%3B156.0.8078.4;uamb=0;uam=;uap=Linux;uapv=;uaw=0;pscdl=noapi;frm=0;_tu=KFA;gtm=45fe6au1v9181662105z871741711za20gzb71741711zd71741711xeaxf1;gcs=G111;gcd=13v3v3v3v5l1;dma=0;dc_fmt=2;tag_exp=115616985~115938466~115938469~117776796~118897920~118897930~120213116~120385423~120469145~120469153~121246026~121246034~123691370;epver=2;dc_random=1793707806_0ZmU89SoMDbgDJZLSNorH5lMBSRkBTHYqw;_dc_test=1;~oref=https%3A%2F%2Fwww.leumi.co.il%2Fhe%2FInvestor-Relations%2FAnalyst-Coverage",
-  "legal_id": "520005497",
-  "company": "החברה לניהול קופות התגמולים והפיצויים של עובדי בנק לאומי בע\"מ",
-  "detected": "2026-11-04T12:03:22+00:00"
- },
- {
-  "kind": "removed_item",
-  "page": "https://www.leumi.co.il/he/Investor-Relations/Analyst-Coverage",
-  "text": "(iframe)",
-  "href": "https://8083177.fls.doubleclick.net/activityi;src=8083177;type=remar0;cat=leumi002;rcb=14;ord=8426357640662;npa=0;auiddc=1121769898.1793707806;gdid=dYWJhMj;uaa=x86;uab=64;uafvl=Not%253AA-Brand%3B8.0.0.0%7CChromium%3B156.0.8078.4;uamb=0;uam=;uap=Linux;uapv=;uaw=0;pscdl=noapi;frm=0;_tu=KFA;gtm=45fe6au1v9189583035z871741711za20gzb71741711zd71741711xeaxf1;gcs=G111;gcd=13v3v3v3v5l1;dma=0;dc_fmt=2;tag_exp=115938466~115938468~117776796~118897920~118897930~120213116~120385422~120469145~120469153~121246026~121246034~123691370~123814944;epver=2;dc_random=1793707806_9Cg_-Oy2cQw14bKXhMt-cEpdMJbVKKKczg;_dc_test=1;~oref=https%3A%2F%2Fwww.leumi.co.il%2Fhe%2FInvestor-Relations%2FAnalyst-Coverage",
-  "legal_id": "520005497",
-  "company": "החברה לניהול קופות התגמולים והפיצויים של עובדי בנק לאומי בע\"מ",
-  "detected": "2026-11-04T12:03:22+00:00"
- },
- {
-  "kind": "new_item",
-  "page": "https://www.leumi.co.il/he/Investor-Relations/ESG",
-  "text": "Leumi ESG Report 2025",
-  "href": "https://www.leumi.co.il/leumi-hebrew/s3fs-public/newsite/financialstatement/25/heb/04-25/%D7%9C%D7%90%D7%95%D7%9E%D7%99%20-%20%D7%93%D7%95%D7%97%20ESG%20-%20TCFD%20-%20TNFD%20-%20ISSB%20%D7%9E%D7%90%D7%95%D7%97%D7%93%20-%202025.pdf",
-  "legal_id": "520005497",
-  "company": "החברה לניהול קופות התגמולים והפיצויים של עובדי בנק לאומי בע\"מ",
-  "detected": "2026-11-04T12:03:22+00:00"
- },
- {
-  "kind": "new_item",
-  "page": "https://www.leumi.co.il/he/Investor-Relations/ESG",
-  "text": "Leumi ESG Report 2025",
-  "href": "https://www.leumi.co.il/he/Investor-Relations/2025.pdf",
-  "legal_id": "520005497",
-  "company": "החברה לניהול קופות התגמולים והפיצויים של עובדי בנק לאומי בע\"מ",
-  "detected": "2026-11-04T12:03:22+00:00"
- },
- {
-  "kind": "new_item",
-  "page": "https://www.leumi.co.il/he/Investor-Relations/ESG",
-  "text": "ESG 2025 - Investors highlights",
-  "href": "https://www.leumi.co.il/leumi-hebrew/s3fs-public/newsite/financialstatement/25/heb/03-2025/ESG%20Report%202025%20%20Investors%20Highlights.pdf",
-  "legal_id": "520005497",
-  "company": "החברה לניהול קופות התגמולים והפיצויים של עובדי בנק לאומי בע\"מ",
-  "detected": "2026-11-04T12:03:22+00:00"
- },
- {
-  "kind": "new_item",
-  "page": "https://www.leumi.co.il/he/Investor-Relations/ESG",
-  "text": "ESG 2025 - Investors highlights",
-  "href": "https://www.leumi.co.il/he/Investor-Relations/Highlights.pdf",
-  "legal_id": "520005497",
-  "company": "החברה לניהול קופות התגמולים והפיצויים של עובדי בנק לאומי בע\"מ",
-  "detected": "2026-11-04T12:03:22+00:00"
- },
- {
-  "kind": "new_item",
   "page": "https://www.leumi.co.il/he/Investor-Relations/ESG",
   "text": "(iframe)",
   "href": "https://8083177.fls.doubleclick.net/activityi;src=8083177;type=remar0;cat=leumi002;rcb=15;ord=2747834336300;npa=0;auiddc=1478664333.1793794282;gdid=dYWJhMj;uaa=x86;uab=64;uafvl=Not%253AA-Brand%3B8.0.0.0%7CChromium%3B156.0.8078.4;uamb=0;uam=;uap=Linux;uapv=;uaw=0;pscdl=noapi;frm=0;_tu=KFA;gtm=45fe6b21v9189583035z871741711za20gzb71741711zd71741711xeaxf1;gcs=G111;gcd=13v3v3v3v5l1;dma=0;dc_fmt=2;tag_exp=115938466~115938468~118012008~118897920~118897930~119381663~120213116~120385423~120412528~120420414~120469145~120469153~121191155~121246026~121246034~123691370~123692836~123814185~123814944;epver=2;ref=https%3A%2F%2Fwww.leumi.co.il%2Fhe%2FInvestor-Relations%2FESG;dc_random=1793794282_-27OWADgyN9t1q-eByczXWyS7IFNIbQDZw;_dc_test=1;~oref=https%3A%2F%2Fwww.leumi.co.il%2Fhe%2FInvestor-Relations%2FESG",
   "legal_id": "520005497",
   "company": "החברה לניהול קופות התגמולים והפיצויים של עובדי בנק לאומי בע\"מ",
-  "detected": "2026-11-04T12:03:22+00:00"
+  "detected": "2026-11-05T12:22:11+00:00"
  },
  {
-  "kind": "new_item",
+  "kind": "removed_item",
   "page": "https://www.leumi.co.il/he/Investor-Relations/ESG",
   "text": "(iframe)",
   "href": "https://4694204.fls.doubleclick.net/activityi;src=4694204;type=invmedia;cat=uczoryjr;rcb=0;ord=6044457899297;npa=0;auiddc=1478664333.1793794282;gdid=dYWJhMj;uaa=x86;uab=64;uafvl=Not%253AA-Brand%3B8.0.0.0%7CChromium%3B156.0.8078.4;uamb=0;uam=;uap=Linux;uapv=;uaw=0;pscdl=noapi;frm=0;_tu=KFA;gtm=45fe6b21v9181662105z871741711za20gzb71741711zd71741711xeaxf1;gcs=G111;gcd=13v3v3v3v5l1;dma=0;dc_fmt=2;tag_exp=115938466~115938469~118897920~118897930~119381663~120213116~120385422~120412528~120420414~120469145~120469153~121191155~121246026~121246034~123691370~123814944;epver=2;ref=https%3A%2F%2Fwww.leumi.co.il%2Fhe%2FInvestor-Relations%2FESG;dc_random=1793794282_vvp8-ftpvhcnPq4xZvb2JMJXhslPK9vOtA;_dc_test=1;~oref=https%3A%2F%2Fwww.leumi.co.il%2Fhe%2FInvestor-Relations%2FESG",
   "legal_id": "520005497",
   "company": "החברה לניהול קופות התגמולים והפיצויים של עובדי בנק לאומי בע\"מ",
-  "detected": "2026-11-04T12:03:22+00:00"
- },
- {
-  "kind": "new_item",
-  "page": "https://www.leumi.co.il/he/Investor-Relations/ESG",
-  "text": "ראו את מדיניות הפרטיות המעודכנת של הבנק",
-  "href": "https://www.leumi.co.il/he/privacy_policy",
-  "legal_id": "520005497",
-  "company": "החברה לניהול קופות התגמולים והפיצויים של עובדי בנק לאומי בע\"מ",
-  "detected": "2026-11-04T12:03:22+00:00"
- },
- {
-  "kind": "new_item",
-  "page": "https://www.leumi.co.il/he/Investor-Relations/ESG",
-  "text": "מדיניות הפרטיות",
-  "href": "https://www.leumi.co.il/he/Articles/privacy_policy",
-  "legal_id": "520005497",
-  "company": "החברה לניהול קופות התגמולים והפיצויים של עובדי בנק לאומי בע\"מ",
-  "detected": "2026-11-04T12:03:22+00:00"
- },
- {
-  "kind": "new_item",
-  "page": "https://www.leumi.co.il/he/Investor-Relations/ESG",
-  "text": "(iframe)",
-  "href": "https://cache.bankleumi.co.il/adrum-xd.686372e97eae8d992d3f1df53d051927.html",
-  "legal_id": "520005497",
-  "company": "החברה לניהול קופות התגמולים והפיצויים של עובדי בנק לאומי בע\"מ",
-  "detected": "2026-11-04T12:03:22+00:00"
- },
- {
-  "kind": "removed_item",
-  "page": "https://www.leumi.co.il/he/Investor-Relations/ESG",
-  "text": "Leumi ESG Report 2025",
-  "href": "https://www.leumi.co.il/leumi-hebrew/s3fs-public/newsite/financialstatement/25/heb/04-25/לאומי - דוח ESG - TCFD - TNFD - ISSB מאוחד - 2025.pdf",
-  "legal_id": "520005497",
-  "company": "החברה לניהול קופות התגמולים והפיצויים של עובדי בנק לאומי בע\"מ",
-  "detected": "2026-11-04T12:03:22+00:00"
- },
- {
-  "kind": "removed_item",
-  "page": "https://www.leumi.co.il/he/Investor-Relations/ESG",
-  "text": "ESG 2025 - Investors highlights",
-  "href": "https://www.leumi.co.il/leumi-hebrew/s3fs-public/newsite/financialstatement/25/heb/03-2025/ESG Report 2025  Investors Highlights.pdf",
-  "legal_id": "520005497",
-  "company": "החברה לניהול קופות התגמולים והפיצויים של עובדי בנק לאומי בע\"מ",
-  "detected": "2026-11-04T12:03:22+00:00"
+  "detected": "2026-11-05T12:22:11+00:00"
  },
  {
   "kind": "new_item",
   "page": "https://www.leumi.co.il/en/Investor-Relations",
-  "text": "Press Release",
-  "href": "https://www.leumi.co.il/leumi-hebrew/s3fs-public/newsite/financialstatement/26/q2/en/PR_Q2_2026_2%20Acc.pdf",
+  "text": "(iframe)",
+  "href": "https://4694204.fls.doubleclick.net/activityi;src=4694204;type=invmedia;cat=uczoryjr;rcb=12;ord=7661834706080;npa=0;auiddc=45636561.1793881597;gdid=dYWJhMj;uaa=x86;uab=64;uafvl=Not%253AA-Brand%3B8.0.0.0%7CChromium%3B156.0.8078.4;uamb=0;uam=;uap=Linux;uapv=;uaw=0;pscdl=noapi;frm=0;_tu=KFA;gtm=45fe6b31v9181662105z871741711za20gzb71741711zd71741711xeaxf1;gcs=G111;gcd=13v3v3v3v5l1;dma=0;dc_fmt=2;tag_exp=115938465~115938468~117776795~118897920~118897930~120213116~120385423~120412526~120420414~120469145~120469153~121191153~121246026~121246034~123814185~123820802;epver=2;ref=https%3A%2F%2Fwww.leumi.co.il%2Fen%2FInvestor-Relations;dc_random=1793881597_IYM2qv1GjlOvg5sVWL8J6SKlPweg-qyPVA;_dc_test=1;~oref=https%3A%2F%2Fwww.leumi.co.il%2Fen%2FInvestor-Relations",
   "legal_id": "520005497",
   "company": "החברה לניהול קופות התגמולים והפיצויים של עובדי בנק לאומי בע\"מ",
-  "detected": "2026-11-04T12:03:22+00:00"
+  "detected": "2026-11-05T12:22:11+00:00"
  },
  {
   "kind": "new_item",
+  "page": "https://www.leumi.co.il/en/Investor-Relations",
+  "text": "(iframe)",
+  "href": "https://8083177.fls.doubleclick.net/activityi;src=8083177;type=remar0;cat=leumi002;rcb=8;ord=2584630871513;npa=0;auiddc=45636561.1793881597;gdid=dYWJhMj;uaa=x86;uab=64;uafvl=Not%253AA-Brand%3B8.0.0.0%7CChromium%3B156.0.8078.4;uamb=0;uam=;uap=Linux;uapv=;uaw=0;pscdl=noapi;frm=0;_tu=KFA;gtm=45fe6b31v9189583035z871741711za20gzb71741711zd71741711xeaxf1;gcs=G111;gcd=13v3v3v3v5l1;dma=0;dc_fmt=2;tag_exp=115938465~115938469~117776795~118897920~118897930~120213116~120385422~120412528~120420416~120469145~120469153~121191153~121246026~121246034~123814185;epver=2;ref=https%3A%2F%2Fwww.leumi.co.il%2Fen%2FInvestor-Relations;dc_random=1793881597_lihWygME36gZYOdSNwVHKjVKbeedP2uSzA;_dc_test=1;~oref=https%3A%2F%2Fwww.leumi.co.il%2Fen%2FInvestor-Relations",
+  "legal_id": "520005497",
+  "company": "החברה לניהול קופות התגמולים והפיצויים של עובדי בנק לאומי בע\"מ",
+  "detected": "2026-11-05T12:22:11+00:00"
+ },
+ {
+  "kind": "removed_item",
   "page": "https://www.leumi.co.il/en/Investor-Relations",
   "text": "(iframe)",
   "href": "https://4694204.fls.doubleclick.net/activityi;src=4694204;type=invmedia;cat=uczoryjr;rcb=12;ord=4815620435447;npa=0;auiddc=1059161605.1793794319;gdid=dYWJhMj;uaa=x86;uab=64;uafvl=Not%253AA-Brand%3B8.0.0.0%7CChromium%3B156.0.8078.4;uamb=0;uam=;uap=Linux;uapv=;uaw=0;pscdl=noapi;frm=0;_tu=KFA;gtm=45fe6b21h1v9181662105z871741711za20gzb71741711zd71741711xeaxf1;gcs=G111;gcd=13v3v3v3v5l1;dma=0;dc_fmt=2;tag_exp=115938466~115938469~117227716~118897920~118897930~120213116~120385422~120412526~120420416~120469145~120469153~121191155~121246026~121246034~123691370~123692834~123814944;epver=2;ref=https%3A%2F%2Fwww.leumi.co.il%2Fen%2FInvestor-Relations;dc_random=1793794319_-MOqD8VDVz546JctBljPeneVKlNn4rsX1A;_dc_test=1;~oref=https%3A%2F%2Fwww.leumi.co.il%2Fen%2FInvestor-Relations",
   "legal_id": "520005497",
   "company": "החברה לניהול קופות התגמולים והפיצויים של עובדי בנק לאומי בע\"מ",
-  "detected": "2026-11-04T12:03:22+00:00"
+  "detected": "2026-11-05T12:22:11+00:00"
  },
  {
-  "kind": "new_item",
+  "kind": "removed_item",
   "page": "https://www.leumi.co.il/en/Investor-Relations",
   "text": "(iframe)",
   "href": "https://8083177.fls.doubleclick.net/activityi;src=8083177;type=remar0;cat=leumi002;rcb=6;ord=1640126222762;npa=0;auiddc=1059161605.1793794319;gdid=dYWJhMj;uaa=x86;uab=64;uafvl=Not%253AA-Brand%3B8.0.0.0%7CChromium%3B156.0.8078.4;uamb=0;uam=;uap=Linux;uapv=;uaw=0;pscdl=noapi;frm=0;_tu=KFA;gtm=45fe6b21h1v9189583035z871741711za20gzb71741711zd71741711xeaxf1;gcs=G111;gcd=13v3v3v3v5l1;dma=0;dc_fmt=2;tag_exp=115938466~115938468~117227716~118897920~118897930~120213116~120385423~120412528~120420416~120469145~120469153~121191155~121246026~121246034~123691370~123814184~123814944;epver=2;ref=https%3A%2F%2Fwww.leumi.co.il%2Fen%2FInvestor-Relations;dc_random=1793794319_6GrHRp38Ih5lf-Mk5aXLazMvkVNHw6FUnA;_dc_test=1;~oref=https%3A%2F%2Fwww.leumi.co.il%2Fen%2FInvestor-Relations",
   "legal_id": "520005497",
   "company": "החברה לניהול קופות התגמולים והפיצויים של עובדי בנק לאומי בע\"מ",
-  "detected": "2026-11-04T12:03:22+00:00"
+  "detected": "2026-11-05T12:22:11+00:00"
  },
  {
   "kind": "new_item",
-  "page": "https://www.leumi.co.il/en/Investor-Relations",
-  "text": "privacy policy.",
-  "href": "https://www.leumi.co.il/en/privacy-policy",
-  "legal_id": "520005497",
-  "company": "החברה לניהול קופות התגמולים והפיצויים של עובדי בנק לאומי בע\"מ",
-  "detected": "2026-11-04T12:03:22+00:00"
- },
- {
-  "kind": "new_item",
-  "page": "https://www.leumi.co.il/en/Investor-Relations",
-  "text": "Press Release",
-  "href": "https://www.leumi.co.il/en/Acc.pdf",
-  "legal_id": "520005497",
-  "company": "החברה לניהול קופות התגמולים והפיצויים של עובדי בנק לאומי בע\"מ",
-  "detected": "2026-11-04T12:03:22+00:00"
- },
- {
-  "kind": "new_item",
-  "page": "https://www.leumi.co.il/en/Investor-Relations",
-  "text": "Press Release",
-  "href": "https://www.leumi.co.il/en/file.pdf",
-  "legal_id": "520005497",
-  "company": "החברה לניהול קופות התגמולים והפיצויים של עובדי בנק לאומי בע\"מ",
-  "detected": "2026-11-04T12:03:22+00:00"
- },
- {
-  "kind": "new_item",
-  "page": "https://www.leumi.co.il/en/Investor-Relations",
-  "text": "Click here to learn more about our Privacy Policy.",
-  "href": "https://www.leumi.co.il/he/Articles/privacy_policy",
-  "legal_id": "520005497",
-  "company": "החברה לניהול קופות התגמולים והפיצויים של עובדי בנק לאומי בע\"מ",
-  "detected": "2026-11-04T12:03:22+00:00"
- },
- {
-  "kind": "new_item",
-  "page": "https://www.leumi.co.il/en/Investor-Relations",
+  "page": "https://www.leumi.co.il/he/about-leumi/Investor-Relations/Financial_Statements/Financial-Statements-Archive",
   "text": "(iframe)",
-  "href": "https://cache.bankleumi.co.il/adrum-xd.686372e97eae8d992d3f1df53d051927.html",
+  "href": "https://8083177.fls.doubleclick.net/activityi;src=8083177;type=remar0;cat=leumi002;rcb=14;ord=2613415958366;npa=0;auiddc=615312106.1793881613;gdid=dYWJhMj;uaa=x86;uab=64;uafvl=Not%253AA-Brand%3B8.0.0.0%7CChromium%3B156.0.8078.4;uamb=0;uam=;uap=Linux;uapv=;uaw=0;pscdl=noapi;frm=0;_tu=KFA;gtm=45fe6b31v9189583035z871741711za20gzb71741711zd71741711xeaxf1;gcs=G111;gcd=13v3v3v3v5l1;dma=0;dc_fmt=2;tag_exp=115616985~115938466~115938468~118131808~118897920~118897930~120213116~120385422~120412528~120420416~120469145~120469153~121191155~121246026~121246034~123814183;epver=2;ref=https%3A%2F%2Fwww.leumi.co.il%2Fhe%2Fabout-leumi%2FInvestor-Relations%2FFinancial_Statements%2FFinancial-Statements-Archive;dc_random=1793881613_pPGthXdIVE2QkxyKstQWki51JdoJpQzdqw;_dc_test=1;~oref=https%3A%2F%2Fwww.leumi.co.il%2Fhe%2Fabout-leumi%2FInvestor-Relations%2FFinancial_Statements%2FFinancial-Statements-Archive",
   "legal_id": "520005497",
   "company": "החברה לניהול קופות התגמולים והפיצויים של עובדי בנק לאומי בע\"מ",
-  "detected": "2026-11-04T12:03:22+00:00"
+  "detected": "2026-11-05T12:22:11+00:00"
+ },
+ {
+  "kind": "new_item",
+  "page": "https://www.leumi.co.il/he/about-leumi/Investor-Relations/Financial_Statements/Financial-Statements-Archive",
+  "text": "(iframe)",
+  "href": "https://4694204.fls.doubleclick.net/activityi;src=4694204;type=invmedia;cat=uczoryjr;rcb=18;ord=7295551960650;npa=0;auiddc=615312106.1793881613;gdid=dYWJhMj;uaa=x86;uab=64;uafvl=Not%253AA-Brand%3B8.0.0.0%7CChromium%3B156.0.8078.4;uamb=0;uam=;uap=Linux;uapv=;uaw=0;pscdl=noapi;frm=0;_tu=KFA;gtm=45fe6b31v9181662105z871741711za20gzb71741711zd71741711xeaxf1;gcs=G111;gcd=13v3v3v3v5l1;dma=0;dc_fmt=2;tag_exp=115938466~115938468~118131808~118897920~118897930~120213116~120385422~120412528~120420416~120469145~120469153~121191155~121246026~121246034~123814185~123820801;epver=2;ref=https%3A%2F%2Fwww.leumi.co.il%2Fhe%2Fabout-leumi%2FInvestor-Relations%2FFinancial_Statements%2FFinancial-Statements-Archive;dc_random=1793881613_xoqOPBWvJBOtaGqoXsImuzJd57t8lFOGdw;_dc_test=1;~oref=https%3A%2F%2Fwww.leumi.co.il%2Fhe%2Fabout-leumi%2FInvestor-Relations%2FFinancial_Statements%2FFinancial-Statements-Archive",
+  "legal_id": "520005497",
+  "company": "החברה לניהול קופות התגמולים והפיצויים של עובדי בנק לאומי בע\"מ",
+  "detected": "2026-11-05T12:22:11+00:00"
  },
  {
   "kind": "removed_item",
-  "page": "https://www.leumi.co.il/en/Investor-Relations",
-  "text": "Press Release",
-  "href": "https://www.leumi.co.il/leumi-hebrew/s3fs-public/newsite/financialstatement/26/q2/en/PR_Q2_2026_2 Acc.pdf",
-  "legal_id": "520005497",
-  "company": "החברה לניהול קופות התגמולים והפיצויים של עובדי בנק לאומי בע\"מ",
-  "detected": "2026-11-04T12:03:22+00:00"
- },
- {
-  "kind": "fetch_failed",
-  "page": "https://www.leumi.co.il/he/node/2551",
-  "text": "202",
-  "href": "https://www.leumi.co.il/he/node/2551",
-  "legal_id": "520005497",
-  "company": "החברה לניהול קופות התגמולים והפיצויים של עובדי בנק לאומי בע\"מ",
-  "detected": "2026-11-04T12:03:22+00:00"
- },
- {
-  "kind": "new_item",
-  "page": "https://www.leumi.co.il/he/Investor-Relations/Press-Releas/2024-02-ESG-strategy",
-  "text": "(iframe)",
-  "href": "https://4694204.fls.doubleclick.net/activityi;src=4694204;type=invmedia;cat=uczoryjr;rcb=18;ord=8862616640809;npa=0;auiddc=1323555893.1793794353;gdid=dYWJhMj;uaa=x86;uab=64;uafvl=Not%253AA-Brand%3B8.0.0.0%7CChromium%3B156.0.8078.4;uamb=0;uam=;uap=Linux;uapv=;uaw=0;pscdl=noapi;frm=0;_tu=KFA;gtm=45fe6b21v9181662105z871741711za20gzb71741711zd71741711xeaxf1;gcs=G111;gcd=13v3v3v3v5l1;dma=0;dc_fmt=2;tag_exp=115938466~115938469~118897920~118897930~120213116~120385423~120412528~120420414~120469145~120469153~121191153~121246026~121246034~123691370~123692835~123814944;epver=2;ref=https%3A%2F%2Fwww.leumi.co.il%2Fhe%2FInvestor-Relations%2FPress-Releas%2F2024-02-ESG-strategy;dc_random=1793794354_7x79ssZ8iFtFRtowco6JyO5JL-OuKDV_mw;_dc_test=1;~oref=https%3A%2F%2Fwww.leumi.co.il%2Fhe%2FInvestor-Relations%2FPress-Releas%2F2024-02-ESG-strategy",
-  "legal_id": "520005497",
-  "company": "החברה לניהול קופות התגמולים והפיצויים של עובדי בנק לאומי בע\"מ",
-  "detected": "2026-11-04T12:03:22+00:00"
- },
- {
-  "kind": "new_item",
-  "page": "https://www.leumi.co.il/he/Investor-Relations/Press-Releas/2024-02-ESG-strategy",
-  "text": "(iframe)",
-  "href": "https://8083177.fls.doubleclick.net/activityi;src=8083177;type=remar0;cat=leumi002;rcb=5;ord=9578027305263;npa=0;auiddc=1323555893.1793794353;gdid=dYWJhMj;uaa=x86;uab=64;uafvl=Not%253AA-Brand%3B8.0.0.0%7CChromium%3B156.0.8078.4;uamb=0;uam=;uap=Linux;uapv=;uaw=0;pscdl=noapi;frm=0;_tu=KFA;gtm=45fe6b21v9189583035z871741711za20gzb71741711zd71741711xeaxf1;gcs=G111;gcd=13v3v3v3v5l1;dma=0;dc_fmt=2;tag_exp=115616985~115938466~115938469~118897920~118897930~120213116~120385422~120412528~120420414~120469145~120469153~121191153~121246026~121246034~123691370~123814946;epver=2;ref=https%3A%2F%2Fwww.leumi.co.il%2Fhe%2FInvestor-Relations%2FPress-Releas%2F2024-02-ESG-strategy;dc_random=1793794354_d9AflnyU9h0aVemfGDwaINCruCB6n_LGQg;_dc_test=1;~oref=https%3A%2F%2Fwww.leumi.co.il%2Fhe%2FInvestor-Relations%2FPress-Releas%2F2024-02-ESG-strategy",
-  "legal_id": "520005497",
-  "company": "החברה לניהול קופות התגמולים והפיצויים של עובדי בנק לאומי בע\"מ",
-  "detected": "2026-11-04T12:03:22+00:00"
- },
- {
-  "kind": "text_changed",
-  "page": "https://www.leumi.co.il/he/Investor-Relations/Press-Releas/2024-02-ESG-strategy",
-  "text": "ESG בחירת שפה דברו איתנו נגישות ESG ESG -> ESG",
-  "href": "https://www.leumi.co.il/he/Investor-Relations/ESG",
-  "legal_id": "520005497",
-  "company": "החברה לניהול קופות התגמולים והפיצויים של עובדי בנק לאומי בע\"מ",
-  "detected": "2026-11-04T12:03:22+00:00"
- },
- {
-  "kind": "removed_item",
-  "page": "https://www.leumi.co.il/he/Investor-Relations/Press-Releas/2024-02-ESG-strategy",
-  "text": "(iframe)",
-  "href": "https://8083177.fls.doubleclick.net/activityi;src=8083177;type=remar0;cat=leumi002;rcb=8;ord=7268692651858;npa=0;auiddc=145731930.1793707839;gdid=dYWJhMj;uaa=x86;uab=64;uafvl=Not%253AA-Brand%3B8.0.0.0%7CChromium%3B156.0.8078.4;uamb=0;uam=;uap=Linux;uapv=;uaw=0;pscdl=noapi;frm=0;_tu=KFA;gtm=45fe6au1v9189583035z871741711za20gzb71741711zd71741711xeaxf1;gcs=G111;gcd=13v3v3v3v5l1;dma=0;dc_fmt=2;tag_exp=115938465~115938469~118897920~118897930~120213116~120385422~120469145~120469153~121246026~121246034~123691370~123814184;epver=2;dc_random=1793707839_XrpwEtrRsdyLRFfvtW1UfnhCOvIeEj0WQw;_dc_test=1;~oref=https%3A%2F%2Fwww.leumi.co.il%2Fhe%2FInvestor-Relations%2FPress-Releas%2F2024-02-ESG-strategy",
-  "legal_id": "520005497",
-  "company": "החברה לניהול קופות התגמולים והפיצויים של עובדי בנק לאומי בע\"מ",
-  "detected": "2026-11-04T12:03:22+00:00"
- },
- {
-  "kind": "removed_item",
-  "page": "https://www.leumi.co.il/he/Investor-Relations/Press-Releas/2024-02-ESG-strategy",
-  "text": "(iframe)",
-  "href": "https://4694204.fls.doubleclick.net/activityi;src=4694204;type=invmedia;cat=uczoryjr;rcb=7;ord=1264267957107;npa=0;auiddc=145731930.1793707839;gdid=dYWJhMj;uaa=x86;uab=64;uafvl=Not%253AA-Brand%3B8.0.0.0%7CChromium%3B156.0.8078.4;uamb=0;uam=;uap=Linux;uapv=;uaw=0;pscdl=noapi;frm=0;_tu=KFA;gtm=45fe6au1v9181662105z871741711za20gzb71741711zd71741711xeaxf1;gcs=G111;gcd=13v3v3v3v5l1;dma=0;dc_fmt=2;tag_exp=115938465~115938468~118897920~118897930~120213116~120385423~120469145~120469153~121246026~121246034~123691370;epver=2;dc_random=1793707839_AIBWbfGPxge9shqqST4GlU8mSgpNzx0LWg;_dc_test=1;~oref=https%3A%2F%2Fwww.leumi.co.il%2Fhe%2FInvestor-Relations%2FPress-Releas%2F2024-02-ESG-strategy",
-  "legal_id": "520005497",
-  "company": "החברה לניהול קופות התגמולים והפיצויים של עובדי בנק לאומי בע\"מ",
-  "detected": "2026-11-04T12:03:22+00:00"
- },
- {
-  "kind": "new_item",
   "page": "https://www.leumi.co.il/he/about-leumi/Investor-Relations/Financial_Statements/Financial-Statements-Archive",
   "text": "(iframe)",
   "href": "https://8083177.fls.doubleclick.net/activityi;src=8083177;type=remar0;cat=leumi002;rcb=6;ord=3293349513450;npa=0;auiddc=615453626.1793794385;gdid=dYWJhMj;uaa=x86;uab=64;uafvl=Not%253AA-Brand%3B8.0.0.0%7CChromium%3B156.0.8078.4;uamb=0;uam=;uap=Linux;uapv=;uaw=0;pscdl=noapi;frm=0;_tu=KFA;gtm=45fe6b21v9189583035z871741711za20gzb71741711zd71741711xeaxf1;gcs=G111;gcd=13v3v3v3v5l1;dma=0;dc_fmt=2;tag_exp=115616985~115938465~115938469~117776796~118897920~118897930~120213116~120385422~120412528~120420414~120469145~120469153~121191153~121246026~121246034~123322201~123691370~123814946;epver=2;ref=https%3A%2F%2Fwww.leumi.co.il%2Fhe%2Fabout-leumi%2FInvestor-Relations%2FFinancial_Statements%2FFinancial-Statements-Archive;dc_random=1793794386_DYqqtGLnRwoL09EYheKYw8loKLx7SlZ-Mg;_dc_test=1;~oref=https%3A%2F%2Fwww.leumi.co.il%2Fhe%2Fabout-leumi%2FInvestor-Relations%2FFinancial_Statements%2FFinancial-Statements-Archive",
   "legal_id": "520005497",
   "company": "החברה לניהול קופות התגמולים והפיצויים של עובדי בנק לאומי בע\"מ",
-  "detected": "2026-11-04T12:03:22+00:00"
+  "detected": "2026-11-05T12:22:11+00:00"
  },
  {
-  "kind": "new_item",
+  "kind": "removed_item",
   "page": "https://www.leumi.co.il/he/about-leumi/Investor-Relations/Financial_Statements/Financial-Statements-Archive",
   "text": "(iframe)",
   "href": "https://4694204.fls.doubleclick.net/activityi;src=4694204;type=invmedia;cat=uczoryjr;rcb=15;ord=8551570993499;npa=0;auiddc=615453626.1793794385;gdid=dYWJhMj;uaa=x86;uab=64;uafvl=Not%253AA-Brand%3B8.0.0.0%7CChromium%3B156.0.8078.4;uamb=0;uam=;uap=Linux;uapv=;uaw=0;pscdl=noapi;frm=0;_tu=KFA;gtm=45fe6b21v9181662105z871741711za20gzb71741711zd71741711xeaxf1;gcs=G111;gcd=13v3v3v3v5l1;dma=0;dc_fmt=2;tag_exp=115616985~115938465~115938469~117776796~118897920~118897930~120213116~120385423~120412528~120420416~120469145~120469153~121191153~121246026~121246034~123322201~123691370~123814944;epver=2;ref=https%3A%2F%2Fwww.leumi.co.il%2Fhe%2Fabout-leumi%2FInvestor-Relations%2FFinancial_Statements%2FFinancial-Statements-Archive;dc_random=1793794386_MVI8F9-zDKc9-vaGPNBYmj7On4SfvtoTYQ;_dc_test=1;~oref=https%3A%2F%2Fwww.leumi.co.il%2Fhe%2Fabout-leumi%2FInvestor-Relations%2FFinancial_Statements%2FFinancial-Statements-Archive",
   "legal_id": "520005497",
   "company": "החברה לניהול קופות התגמולים והפיצויים של עובדי בנק לאומי בע\"מ",
-  "detected": "2026-11-04T12:03:22+00:00"
- },
- {
-  "kind": "removed_item",
-  "page": "https://www.leumi.co.il/he/about-leumi/Investor-Relations/Financial_Statements/Financial-Statements-Archive",
-  "text": "(iframe)",
-  "href": "https://4694204.fls.doubleclick.net/activityi;src=4694204;type=invmedia;cat=uczoryjr;rcb=2;ord=6866968555769;npa=0;auiddc=1064246107.1793707871;gdid=dYWJhMj;uaa=x86;uab=64;uafvl=Not%253AA-Brand%3B8.0.0.0%7CChromium%3B156.0.8078.4;uamb=0;uam=;uap=Linux;uapv=;uaw=0;pscdl=noapi;frm=0;_tu=KFA;gtm=45fe6au1v9181662105z871741711za20gzb71741711zd71741711xeaxf1;gcs=G111;gcd=13v3v3v3v5l1;dma=0;dc_fmt=2;tag_exp=115938466~115938468~118897920~118897930~120213116~120385422~120469145~120469153~121246026~121246034~123691370~123814185;epver=2;ref=https%3A%2F%2Fwww.leumi.co.il%2Fhe%2Fabout-leumi%2FInvestor-Relations%2FFinancial_Statements%2FFinancial-Statements-Archive;dc_random=1793707871_7XOplm013B3v1VwA8AXYQMTALJTXoPyHrQ;_dc_test=1;~oref=https%3A%2F%2Fwww.leumi.co.il%2Fhe%2Fabout-leumi%2FInvestor-Relations%2FFinancial_Statements%2FFinancial-Statements-Archive",
-  "legal_id": "520005497",
-  "company": "החברה לניהול קופות התגמולים והפיצויים של עובדי בנק לאומי בע\"מ",
-  "detected": "2026-11-04T12:03:22+00:00"
- },
- {
-  "kind": "removed_item",
-  "page": "https://www.leumi.co.il/he/about-leumi/Investor-Relations/Financial_Statements/Financial-Statements-Archive",
-  "text": "(iframe)",
-  "href": "https://8083177.fls.doubleclick.net/activityi;src=8083177;type=remar0;cat=leumi002;rcb=13;ord=2830710201858;npa=0;auiddc=1064246107.1793707871;gdid=dYWJhMj;uaa=x86;uab=64;uafvl=Not%253AA-Brand%3B8.0.0.0%7CChromium%3B156.0.8078.4;uamb=0;uam=;uap=Linux;uapv=;uaw=0;pscdl=noapi;frm=0;_tu=KFA;gtm=45fe6au1v9189583035z871741711za20gzb71741711zd71741711xeaxf1;gcs=G111;gcd=13v3v3v3v5l1;dma=0;dc_fmt=2;tag_exp=115938466~115938468~118897920~118897930~120213116~120385423~120420414~120469145~120469153~121246026~121246034~123691370;epver=2;ref=https%3A%2F%2Fwww.leumi.co.il%2Fhe%2Fabout-leumi%2FInvestor-Relations%2FFinancial_Statements%2FFinancial-Statements-Archive;dc_random=1793707871_0r-kX3A0lcTwQwptVXm-JUYEjnySrG2_Mw;_dc_test=1;~oref=https%3A%2F%2Fwww.leumi.co.il%2Fhe%2Fabout-leumi%2FInvestor-Relations%2FFinancial_Statements%2FFinancial-Statements-Archive",
-  "legal_id": "520005497",
-  "company": "החברה לניהול קופות התגמולים והפיצויים של עובדי בנק לאומי בע\"מ",
-  "detected": "2026-11-04T12:03:22+00:00"
+  "detected": "2026-11-05T12:22:11+00:00"
  },
  {
   "kind": "new_item",
+  "page": "https://www.leumi.co.il/he/Investor-Relations/Press-Releas/2024-02-ESG-strategy",
+  "text": "(iframe)",
+  "href": "https://4694204.fls.doubleclick.net/activityi;src=4694204;type=invmedia;cat=uczoryjr;rcb=7;ord=8414410006195;npa=0;auiddc=851930419.1793881627;gdid=dYWJhMj;uaa=x86;uab=64;uafvl=Not%253AA-Brand%3B8.0.0.0%7CChromium%3B156.0.8078.4;uamb=0;uam=;uap=Linux;uapv=;uaw=0;pscdl=noapi;frm=0;_tu=KFA;gtm=45fe6b31v9181662105z871741711za20gzb71741711zd71741711xeaxf1;gcs=G111;gcd=13v3v3v3v5l1;dma=0;dc_fmt=2;tag_exp=115938465~115938468~117628656~118897920~118897930~120213116~120385423~120412528~120420416~120469145~120469153~121191155~121246026~121246034~123814183;epver=2;ref=https%3A%2F%2Fwww.leumi.co.il%2Fhe%2FInvestor-Relations%2FPress-Releas%2F2024-02-ESG-strategy;dc_random=1793881627_xT7VENH5cxiVikMpzXOmZyJ8AoxQpIK5bA;_dc_test=1;~oref=https%3A%2F%2Fwww.leumi.co.il%2Fhe%2FInvestor-Relations%2FPress-Releas%2F2024-02-ESG-strategy",
+  "legal_id": "520005497",
+  "company": "החברה לניהול קופות התגמולים והפיצויים של עובדי בנק לאומי בע\"מ",
+  "detected": "2026-11-05T12:22:11+00:00"
+ },
+ {
+  "kind": "new_item",
+  "page": "https://www.leumi.co.il/he/Investor-Relations/Press-Releas/2024-02-ESG-strategy",
+  "text": "(iframe)",
+  "href": "https://8083177.fls.doubleclick.net/activityi;src=8083177;type=remar0;cat=leumi002;rcb=2;ord=6847429660882;npa=0;auiddc=851930419.1793881627;gdid=dYWJhMj;uaa=x86;uab=64;uafvl=Not%253AA-Brand%3B8.0.0.0%7CChromium%3B156.0.8078.4;uamb=0;uam=;uap=Linux;uapv=;uaw=0;pscdl=noapi;frm=0;_tu=KFA;gtm=45fe6b31v9189583035z871741711za20gzb71741711zd71741711xeaxf1;gcs=G111;gcd=13v3v3v3v5l1;dma=0;dc_fmt=2;tag_exp=115616986~115938465~115938468~117628656~118897920~118897930~120213116~120385422~120412526~120420414~120469145~120469153~121191155~121246026~121246034~123630400~123814185~123820801;epver=2;ref=https%3A%2F%2Fwww.leumi.co.il%2Fhe%2FInvestor-Relations%2FPress-Releas%2F2024-02-ESG-strategy;dc_random=1793881627_t2t6PpSKOi9BR3KHy5FE-a1oGvN9cPowlA;_dc_test=1;~oref=https%3A%2F%2Fwww.leumi.co.il%2Fhe%2FInvestor-Relations%2FPress-Releas%2F2024-02-ESG-strategy",
+  "legal_id": "520005497",
+  "company": "החברה לניהול קופות התגמולים והפיצויים של עובדי בנק לאומי בע\"מ",
+  "detected": "2026-11-05T12:22:11+00:00"
+ },
+ {
+  "kind": "removed_item",
+  "page": "https://www.leumi.co.il/he/Investor-Relations/Press-Releas/2024-02-ESG-strategy",
+  "text": "(iframe)",
+  "href": "https://4694204.fls.doubleclick.net/activityi;src=4694204;type=invmedia;cat=uczoryjr;rcb=18;ord=8862616640809;npa=0;auiddc=1323555893.1793794353;gdid=dYWJhMj;uaa=x86;uab=64;uafvl=Not%253AA-Brand%3B8.0.0.0%7CChromium%3B156.0.8078.4;uamb=0;uam=;uap=Linux;uapv=;uaw=0;pscdl=noapi;frm=0;_tu=KFA;gtm=45fe6b21v9181662105z871741711za20gzb71741711zd71741711xeaxf1;gcs=G111;gcd=13v3v3v3v5l1;dma=0;dc_fmt=2;tag_exp=115938466~115938469~118897920~118897930~120213116~120385423~120412528~120420414~120469145~120469153~121191153~121246026~121246034~123691370~123692835~123814944;epver=2;ref=https%3A%2F%2Fwww.leumi.co.il%2Fhe%2FInvestor-Relations%2FPress-Releas%2F2024-02-ESG-strategy;dc_random=1793794354_7x79ssZ8iFtFRtowco6JyO5JL-OuKDV_mw;_dc_test=1;~oref=https%3A%2F%2Fwww.leumi.co.il%2Fhe%2FInvestor-Relations%2FPress-Releas%2F2024-02-ESG-strategy",
+  "legal_id": "520005497",
+  "company": "החברה לניהול קופות התגמולים והפיצויים של עובדי בנק לאומי בע\"מ",
+  "detected": "2026-11-05T12:22:11+00:00"
+ },
+ {
+  "kind": "removed_item",
+  "page": "https://www.leumi.co.il/he/Investor-Relations/Press-Releas/2024-02-ESG-strategy",
+  "text": "(iframe)",
+  "href": "https://8083177.fls.doubleclick.net/activityi;src=8083177;type=remar0;cat=leumi002;rcb=5;ord=9578027305263;npa=0;auiddc=1323555893.1793794353;gdid=dYWJhMj;uaa=x86;uab=64;uafvl=Not%253AA-Brand%3B8.0.0.0%7CChromium%3B156.0.8078.4;uamb=0;uam=;uap=Linux;uapv=;uaw=0;pscdl=noapi;frm=0;_tu=KFA;gtm=45fe6b21v9189583035z871741711za20gzb71741711zd71741711xeaxf1;gcs=G111;gcd=13v3v3v3v5l1;dma=0;dc_fmt=2;tag_exp=115616985~115938466~115938469~118897920~118897930~120213116~120385422~120412528~120420414~120469145~120469153~121191153~121246026~121246034~123691370~123814946;epver=2;ref=https%3A%2F%2Fwww.leumi.co.il%2Fhe%2FInvestor-Relations%2FPress-Releas%2F2024-02-ESG-strategy;dc_random=1793794354_d9AflnyU9h0aVemfGDwaINCruCB6n_LGQg;_dc_test=1;~oref=https%3A%2F%2Fwww.leumi.co.il%2Fhe%2FInvestor-Relations%2FPress-Releas%2F2024-02-ESG-strategy",
+  "legal_id": "520005497",
+  "company": "החברה לניהול קופות התגמולים והפיצויים של עובדי בנק לאומי בע\"מ",
+  "detected": "2026-11-05T12:22:11+00:00"
+ },
+ {
+  "kind": "new_item",
+  "page": "https://www.leumi.co.il/he/privacy_policy",
+  "text": "(iframe)",
+  "href": "https://8083177.fls.doubleclick.net/activityi;src=8083177;type=remar0;cat=leumi002;rcb=6;ord=304778673054;npa=0;auiddc=1368818851.1793881641;gdid=dYWJhMj;uaa=x86;uab=64;uafvl=Not%253AA-Brand%3B8.0.0.0%7CChromium%3B156.0.8078.4;uamb=0;uam=;uap=Linux;uapv=;uaw=0;pscdl=noapi;frm=0;_tu=KFA;gtm=45fe6b40h2v9189583035z871741711za20gzb71741711zd71741711xeaxf1;gcs=G111;gcd=13v3v3v3v5l1;dma=0;dc_fmt=2;tag_exp=115938465~115938469~118897920~118897930~120213116~120385422~120412526~120420414~120469145~120469153~121191153~121246026~121246034~123814185~123820800;epver=2;ref=https%3A%2F%2Fwww.leumi.co.il%2Fhe%2Fprivacy_policy;dc_random=1793881641_1LctalFX6K0uoldyPjr1Wz9s5lkyyANK9Q;_dc_test=1;~oref=https%3A%2F%2Fwww.leumi.co.il%2Fhe%2FArticles%2Fprivacy_policy",
+  "legal_id": "520005497",
+  "company": "החברה לניהול קופות התגמולים והפיצויים של עובדי בנק לאומי בע\"מ",
+  "detected": "2026-11-05T12:22:11+00:00"
+ },
+ {
+  "kind": "new_item",
+  "page": "https://www.leumi.co.il/he/privacy_policy",
+  "text": "(iframe)",
+  "href": "https://4694204.fls.doubleclick.net/activityi;src=4694204;type=invmedia;cat=uczoryjr;rcb=9;ord=1456835055555;npa=0;auiddc=1368818851.1793881641;gdid=dYWJhMj;uaa=x86;uab=64;uafvl=Not%253AA-Brand%3B8.0.0.0%7CChromium%3B156.0.8078.4;uamb=0;uam=;uap=Linux;uapv=;uaw=0;pscdl=noapi;frm=0;_tu=KFA;gtm=45fe6b40h2v9181662105z871741711za20gzb71741711zd71741711xeaxf1;gcs=G111;gcd=13v3v3v3v5l1;dma=0;dc_fmt=2;tag_exp=115616986~115938465~115938469~118897920~118897930~120213116~120385422~120412528~120420416~120469145~120469153~121191153~121246026~121246034~123814183~123820800;epver=2;ref=https%3A%2F%2Fwww.leumi.co.il%2Fhe%2Fprivacy_policy;dc_random=1793881641_fQjv9JmfaXJY2Xkb5lRVpHv4e5UwFckZhA;_dc_test=1;~oref=https%3A%2F%2Fwww.leumi.co.il%2Fhe%2FArticles%2Fprivacy_policy",
+  "legal_id": "520005497",
+  "company": "החברה לניהול קופות התגמולים והפיצויים של עובדי בנק לאומי בע\"מ",
+  "detected": "2026-11-05T12:22:11+00:00"
+ },
+ {
+  "kind": "removed_item",
   "page": "https://www.leumi.co.il/he/privacy_policy",
   "text": "(iframe)",
   "href": "https://4694204.fls.doubleclick.net/activityi;src=4694204;type=invmedia;cat=uczoryjr;rcb=3;ord=2658298010704;npa=0;auiddc=1148841879.1793794419;gdid=dYWJhMj;uaa=x86;uab=64;uafvl=Not%253AA-Brand%3B8.0.0.0%7CChromium%3B156.0.8078.4;uamb=0;uam=;uap=Linux;uapv=;uaw=0;pscdl=noapi;frm=0;_tu=KFA;gtm=45fe6b21v9181662105z871741711za20gzb71741711zd71741711xeaxf1;gcs=G111;gcd=13v3v3v3v5l1;dma=0;dc_fmt=2;tag_exp=115616985~115938465~115938468~117628655~118897920~118897930~120213116~120385422~120412526~120420416~120469145~120469153~121191153~121246026~121246034~121399757~123691370~123814944;epver=2;ref=https%3A%2F%2Fwww.leumi.co.il%2Fhe%2Fprivacy_policy;dc_random=1793794419_gRsrtnpEexXlfFdwoLzPde30fuCUBbK_5w;_dc_test=1;~oref=https%3A%2F%2Fwww.leumi.co.il%2Fhe%2FArticles%2Fprivacy_policy",
   "legal_id": "520005497",
   "company": "החברה לניהול קופות התגמולים והפיצויים של עובדי בנק לאומי בע\"מ",
-  "detected": "2026-11-04T12:03:22+00:00"
+  "detected": "2026-11-05T12:22:11+00:00"
  },
  {
-  "kind": "new_item",
+  "kind": "removed_item",
   "page": "https://www.leumi.co.il/he/privacy_policy",
   "text": "(iframe)",
   "href": "https://8083177.fls.doubleclick.net/activityi;src=8083177;type=remar0;cat=leumi002;rcb=12;ord=1331994390681;npa=0;auiddc=1148841879.1793794419;gdid=dYWJhMj;uaa=x86;uab=64;uafvl=Not%253AA-Brand%3B8.0.0.0%7CChromium%3B156.0.8078.4;uamb=0;uam=;uap=Linux;uapv=;uaw=0;pscdl=noapi;frm=0;_tu=KFA;gtm=45fe6b21v9189583035z871741711za20gzb71741711zd71741711xeaxf1;gcs=G111;gcd=13v3v3v3v5l1;dma=0;dc_fmt=2;tag_exp=115616986~115938465~115938468~117628655~118897920~118897930~120213116~120385423~120412528~120420414~120469145~120469153~121191153~121246026~121246034~121399757~123691370~123692835~123814944;epver=2;ref=https%3A%2F%2Fwww.leumi.co.il%2Fhe%2Fprivacy_policy;dc_random=1793794419_J6REuOuOfEQB1-j5w5DKnHS7tBgoHc0PLA;_dc_test=1;~oref=https%3A%2F%2Fwww.leumi.co.il%2Fhe%2FArticles%2Fprivacy_policy",
   "legal_id": "520005497",
   "company": "החברה לניהול קופות התגמולים והפיצויים של עובדי בנק לאומי בע\"מ",
-  "detected": "2026-11-04T12:03:22+00:00"
- },
- {
-  "kind": "removed_item",
-  "page": "https://www.leumi.co.il/he/privacy_policy",
-  "text": "(iframe)",
-  "href": "https://4694204.fls.doubleclick.net/activityi;src=4694204;type=invmedia;cat=uczoryjr;rcb=10;ord=3616239837466;npa=0;auiddc=1554606618.1793707904;gdid=dYWJhMj;uaa=x86;uab=64;uafvl=Not%253AA-Brand%3B8.0.0.0%7CChromium%3B156.0.8078.4;uamb=0;uam=;uap=Linux;uapv=;uaw=0;pscdl=noapi;frm=0;_tu=KFA;gtm=45fe6au1v9181662105z871741711za20gzb71741711zd71741711xeaxf1;gcs=G111;gcd=13v3v3v3v5l1;dma=0;dc_fmt=2;tag_exp=115938466~115938468~118897920~118897930~119863601~120213116~120385422~120469145~120469153~121191155~121246026~121246034~123691370;epver=2;ref=https%3A%2F%2Fwww.leumi.co.il%2Fhe%2Fprivacy_policy;dc_random=1793707904_RUE1Kq0Z1BFehNM-CEHKFfYN2X4MHyWtzw;_dc_test=1;~oref=https%3A%2F%2Fwww.leumi.co.il%2Fhe%2FArticles%2Fprivacy_policy",
-  "legal_id": "520005497",
-  "company": "החברה לניהול קופות התגמולים והפיצויים של עובדי בנק לאומי בע\"מ",
-  "detected": "2026-11-04T12:03:22+00:00"
- },
- {
-  "kind": "removed_item",
-  "page": "https://www.leumi.co.il/he/privacy_policy",
-  "text": "(iframe)",
-  "href": "https://8083177.fls.doubleclick.net/activityi;src=8083177;type=remar0;cat=leumi002;rcb=3;ord=4344508736552;npa=0;auiddc=1554606618.1793707904;gdid=dYWJhMj;uaa=x86;uab=64;uafvl=Not%253AA-Brand%3B8.0.0.0%7CChromium%3B156.0.8078.4;uamb=0;uam=;uap=Linux;uapv=;uaw=0;pscdl=noapi;frm=0;_tu=KFA;gtm=45fe6au1v9189583035z871741711za20gzb71741711zd71741711xeaxf1;gcs=G111;gcd=13v3v3v3v5l1;dma=0;dc_fmt=2;tag_exp=115616986~115938466~115938469~118897920~118897930~119863601~120213116~120385422~120412528~120469145~120469153~121191155~121246026~121246034~123691370~123692834~123814184;epver=2;ref=https%3A%2F%2Fwww.leumi.co.il%2Fhe%2Fprivacy_policy;dc_random=1793707904_zFPV_pQzX7zT7oGwNR6oylcVy385zcf0iw;_dc_test=1;~oref=https%3A%2F%2Fwww.leumi.co.il%2Fhe%2FArticles%2Fprivacy_policy",
-  "legal_id": "520005497",
-  "company": "החברה לניהול קופות התגמולים והפיצויים של עובדי בנק לאומי בע\"מ",
-  "detected": "2026-11-04T12:03:22+00:00"
+  "detected": "2026-11-05T12:22:11+00:00"
  }
 ]
