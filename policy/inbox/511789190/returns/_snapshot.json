@@ -1,0 +1,48 @@
+{
+ "legal_id": "511789190",
+ "taken": "2026-11-06T03:51:45+00:00",
+ "pages": {
+  "https://atudotvatika.co.il/%d7%a0%d7%aa%d7%95%d7%a0%d7%99-%d7%94%d7%a7%d7%a8%d7%9f/": {
+   "product": null,
+   "status": 403,
+   "method": "browser",
+   "text_hash": "a83c99057afddad109a9840f2863a2f705cc3e08",
+   "text_head": "atudotvatika.co.il ביצוע אימות אבטחה אתר זה משתמש בשירות אבטחה להגנה מפני בוטים זדוניים. דף זה מופיע בזמן שהאתר מוודא שאינך בוט. Ray ID: a56126cf08cde301 ביצועים ואבטחה מבית Cloudflare פרטיות",
+   "items": [
+    {
+     "text": "(iframe)",
+     "href": "https://netfree.link/misc/go-payment.html?v=3",
+     "year": null,
+     "iframe": true,
+     "doc": false,
+     "internal": false
+    }
+   ]
+  },
+  "https://netfree.link/misc/go-payment.html?v=3": {
+   "product": null,
+   "status": 200,
+   "method": "browser",
+   "text_hash": null,
+   "text_head": "",
+   "items": []
+  },
+  "https://atudotvatika.co.il": {
+   "product": null,
+   "status": 403,
+   "method": "browser",
+   "text_hash": "5a81702bede317b9b5d25809472f83af27785826",
+   "text_head": "atudotvatika.co.il ביצוע אימות אבטחה אתר זה משתמש בשירות אבטחה להגנה מפני בוטים זדוניים. דף זה מופיע בזמן שהאתר מוודא שאינך בוט. Ray ID: a56128c2cddbda54 ביצועים ואבטחה מבית Cloudflare פרטיות",
+   "items": [
+    {
+     "text": "(iframe)",
+     "href": "https://netfree.link/misc/go-payment.html?v=3",
+     "year": null,
+     "iframe": true,
+     "doc": false,
+     "internal": false
+    }
+   ]
+  }
+ }
+}
