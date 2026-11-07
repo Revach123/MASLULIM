@@ -1,7 +1,7 @@
 {
  "legal_id": "513026484",
  "company": "הפניקס פנסיה וגמל בע\"מ",
- "run": "2026-11-06T13:16:19+00:00",
+ "run": "2026-11-07T11:59:48+00:00",
  "errors": [
   "https://www.fnx.co.il/SPF/iframe-monthly-yield-components.aspx -> not_a_document",
   "https://www.fnx.co.il/SPF/iframe-quarterly-yield-components-ted-yud.aspx -> not_a_document"
@@ -38,7 +38,7 @@
  ],
  "candidates": 61,
  "docs": 59,
- "new_docs": 15,
+ "new_docs": 14,
  "index_size": 151,
- "seconds": 1180
+ "seconds": 1199
 }
