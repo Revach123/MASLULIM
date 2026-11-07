@@ -1,9 +1,10 @@
 {
  "legal_id": "515447035",
  "company": "הפניקס חח\"י קופה מרכזית לקצבה בע\"מ",
- "run": "2026-11-06T13:38:38+00:00",
+ "run": "2026-11-07T12:08:57+00:00",
  "errors": [
-  "https://www.fnx.co.il/SPF/iframe-basic-member-pension-fund-yield-components.aspx -> not_a_document"
+  "https://www.fnx.co.il/SPF/iframe-phoenix-all-embracing-pension-yield-components.aspx -> not_a_document",
+  "https://www.fnx.co.il/SPF/iframe-phoenix-general-pension-yield-components.aspx -> not_a_document"
  ],
  "seeds": {
   "config": 0,
@@ -19,13 +20,13 @@
   "queries": [],
   "urls": []
  },
- "pages": 11,
+ "pages": 9,
  "pages_failed": [
   "https://www.fnx.co.il/SPF/: 404"
  ],
- "candidates": 11,
- "docs": 10,
+ "candidates": 23,
+ "docs": 21,
  "new_docs": 0,
  "index_size": 68,
- "seconds": 1245
+ "seconds": 1153
 }
