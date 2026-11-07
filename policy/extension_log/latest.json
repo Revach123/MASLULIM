@@ -1,7 +1,7 @@
 {
  "extension_version": "2.53.0",
  "started": "2026-11-07T16:37:18.265Z",
- "updated": "2026-11-07T16:49:18.368Z",
+ "updated": "2026-11-07T16:52:18.380Z",
  "final": false,
  "stopped": false,
  "rules_from_github": true,
@@ -24,7 +24,7 @@
   "_note_returns": "returns_rx: קבצי מרכיבי תשואה לאתרי kind=returns (מוגדרים ב-extension_sites.json מ-returns_extension בהגדרות האתר); נשמרים ב-policy/inbox/<id>/returns/"
  },
  "total_sites": 21,
- "done_sites": 5,
+ "done_sites": 6,
  "new_docs": 0,
  "skipped_complete": [
   {
@@ -48,11 +48,11 @@
  ],
  "active": [
   {
-   "name": "איילון קופות גמל בע\"מ",
-   "page": "https://www.ayalon-ins.co.il/savings/provident-fund-invest",
-   "page_no": 2,
-   "pages": 3,
-   "step": "לוחץ על כפתורי הורדה"
+   "name": "איילון קופות גמל בע\"מ - מרכיבי תשואה",
+   "page": "https://www.ayalon-ins.co.il/investment-structure",
+   "page_no": 25,
+   "pages": 29,
+   "step": "טוען עמוד"
   }
  ],
  "sites": [
@@ -35177,6 +35177,134 @@
    "errors": [],
    "diag": [
     "מור גמל ופנסיה בע\": links=185 files=67 clicked=0 captured=0 selected=66"
+   ],
+   "new_files": []
+  },
+  {
+   "legal_id": "517085874",
+   "name": "איילון קופות גמל בע\"מ",
+   "pages": [
+    {
+     "url": "https://www.ayalon-ins.co.il/savings/provident-fund",
+     "cache": "expired",
+     "links": 422,
+     "followed": [],
+     "files": 4,
+     "clicked": 2,
+     "captured": 0,
+     "selected": [
+      "https://www.ayalon-ins.co.il/mediastorage/media/01yfqy15/הצהרת-מדיניות-השקעה-איילון-גמל-לחיסכון-2026-סופי.xlsx"
+     ],
+     "unselected_files": [
+      {
+       "file": "https://www.ayalon-ins.co.il/mediastorage/media/uunbejzs/טופס-הצטרפות-לקופת-גמל-לחיסכון-404-מהדורה-062026.pdf",
+       "text": "טופס הצטרפות קופת גמל לחיסכון - 404 - מהדורה 06.2026",
+       "ctx": ""
+      },
+      {
+       "file": "https://www.ayalon-ins.co.il/mediastorage/media/aifo2tct/תקנון-תקני-לקופת-גמל-לחיסכון-15942-מהדורה-072026.pdf",
+       "text": "תקנון גמל לחיסכון - 15942 - מהדורה 07.2026",
+       "ctx": ""
+      },
+      {
+       "file": "https://www.ayalon-ins.co.il/media/qicb3wzx/איילון-גמל.pdf",
+       "text": "תעודת כשרות מסלולי השקעה לשנת 2026",
+       "ctx": ""
+      }
+     ]
+    },
+    {
+     "url": "https://www.ayalon-ins.co.il/savings/provident-fund-invest",
+     "cache": "expired",
+     "links": 418,
+     "followed": [],
+     "files": 8,
+     "clicked": 2,
+     "captured": 0,
+     "selected": [
+      "https://www.ayalon-ins.co.il/mediastorage/media/xd4hpdva/הצהרת-מדיניות-השקעה-איילון-גמל-להשקעה-2026-סופי.xlsx"
+     ],
+     "unselected_files": [
+      {
+       "file": "https://www.ayalon-ins.co.il/mediastorage/media/sn4mjoiz/טופס-הצטרפות-לקופת-גמל-להשקעה-102-מהדורה-062026-1.pdf",
+       "text": "טופס הצטרפות לקופת גמל להשקעה - 102 - מהדורה 06.2026",
+       "ctx": ""
+      },
+      {
+       "file": "https://www.ayalon-ins.co.il/media/qmqeukz4/טופס-הצטרפות-לקופת-גמל-להשקעה-קטין-105-מהדורה-062026.pdf",
+       "text": "טופס הצטרפות לקופת גמל להשקעה לקטין - 105 - מהדורה 06.2026",
+       "ctx": ""
+      },
+      {
+       "file": "https://www.ayalon-ins.co.il/media/0tlfzvqh/טופס-הצטרפות-לקופת-גמל-להשקעה-102-מהדורה-062026-2.pdf",
+       "text": "",
+       "ctx": ""
+      },
+      {
+       "file": "https://www.ayalon-ins.co.il/media/01ub3y4d/בקשת-העברת-כספים-לקופת-גמל-והשתלמות-901-מהדורה-062026.pdf",
+       "text": "בקשת העברת כספים לקופת גמל והשתלמות -",
+       "ctx": ""
+      },
+      {
+       "file": "https://www.ayalon-ins.co.il/media/01ub3y4d/בקשת-העברת-כספים-לקופת-גמל-והשתלמות-901-מהדורה-062026.pdf",
+       "text": "901",
+       "ctx": ""
+      },
+      {
+       "file": "https://www.ayalon-ins.co.il/mediastorage/media/k23nhvjs/תקנון-תקני-לקופת-גמל-להשקעה-15969-מהדורה-072026.pdf",
+       "text": "תקנון גמל להשקעה -  15969 - מהדורה 07.2026",
+       "ctx": ""
+      },
+      {
+       "file": "https://www.ayalon-ins.co.il/media/yhanbkfw/איילון-גמל-להשקעה.pdf",
+       "text": "תעודת כשרות מסלולי השקעה לשנת 2026",
+       "ctx": ""
+      }
+     ]
+    },
+    {
+     "url": "https://www.ayalon-ins.co.il/savings/study-fund",
+     "cache": "expired",
+     "links": 418,
+     "followed": [],
+     "files": 4,
+     "clicked": 2,
+     "captured": 0,
+     "selected": [
+      "https://www.ayalon-ins.co.il/mediastorage/media/e3zbqdxk/הצהרת-מדיניות-השקעה-איילון-השתלמות-2026-סופי.xlsx"
+     ],
+     "unselected_files": [
+      {
+       "file": "https://www.ayalon-ins.co.il/mediastorage/media/3nydd2lo/טופס-הצטרפות-קרן-השתלמות-703-מהדורה-062026-1.pdf",
+       "text": "טופס הצטרפות לקרן השתלמות - 703 - מהדורה 06.2026",
+       "ctx": ""
+      },
+      {
+       "file": "https://www.ayalon-ins.co.il/mediastorage/media/zcaialwy/תקנון-קרן-השתלמות-15983-מהדורה-072026.pdf",
+       "text": "תקנון קרן השתלמות - 15983 - מהדורה 07.2026",
+       "ctx": ""
+      },
+      {
+       "file": "https://www.ayalon-ins.co.il/media/eqghchqh/איילון-השתלמות.pdf",
+       "text": "תעודת כשרות מסלולי השקעה לשנת 2026",
+       "ctx": ""
+      }
+     ]
+    }
+   ],
+   "new_docs": 0,
+   "found": 16,
+   "selected": 3,
+   "had": 3,
+   "head_skip": 0,
+   "cache_expired": 3,
+   "old_skip": 3,
+   "mode": "map",
+   "errors": [],
+   "diag": [
+    "איילון קופות גמל ב: links=422 files=4 clicked=2 captured=0 selected=1",
+    "איילון קופות גמל ב: links=418 files=8 clicked=2 captured=0 selected=1",
+    "איילון קופות גמל ב: links=418 files=4 clicked=2 captured=0 selected=1"
    ],
    "new_files": []
   }
