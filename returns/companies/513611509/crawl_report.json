@@ -1,7 +1,7 @@
 {
  "legal_id": "513611509",
  "company": "ילין לפידות ניהול קופות גמל בע\"מ",
- "run": "2026-11-07T12:01:36+00:00",
+ "run": "2026-11-08T12:16:55+00:00",
  "errors": [
   "https://www.yl-invest.co.il/duplicated-1760593330/uploads/n/1770207446.9770.pdf -> not_a_document",
   "https://www.yl-invest.co.il/duplicated-1760593330/uploads/n/1793870023.9168.pdf -> not_a_document",
@@ -96,7 +96,7 @@
   "config": 0,
   "discovered": 32,
   "policy_snapshot": 27,
-  "policy_snapshot_docs": 514,
+  "policy_snapshot_docs": 553,
   "gap_search": 0,
   "sitemap": 0
  },
@@ -124,5 +124,5 @@
  "docs": 384,
  "new_docs": 0,
  "index_size": 384,
- "seconds": 1071
+ "seconds": 1075
 }
