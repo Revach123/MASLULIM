@@ -1,22 +1,14 @@
 {
  "legal_id": "510142789",
- "taken": "2026-11-07T11:59:28+00:00",
+ "taken": "2026-11-08T12:13:42+00:00",
  "pages": {
   "https://www.discountbank.co.il": {
    "product": null,
    "status": 200,
-   "method": "browser",
-   "text_hash": null,
-   "text_head": "",
+   "method": "requests",
+   "text_hash": "87b08bbe128cfa5a6cfabc248aae98f1f2d43004",
+   "text_head": "בנק דיסקונט לישראל | דיסקונט דלג לתוכן העמוד דלג לתפריט אתר דלג לקישורים תחתונים כניסה לחשבונך דלג לתוכן העמוד דלג לתפריט אתר דלג לקישורים תחתונים כניסה לחשבונך לידיעתך: באתר זה נעשה שימוש בקבצי Cookies וכלים דומים כדי לספק לך חווית גלישה טובה ותכנים מותאמים אישית, בין היתר על בסיס מידע הקיים אודותיך במאגרי הבנק. למידע נוסף הבנתי חדש! הפקדת צ'קים דחויים באפליקציה למידע נוסף > בנק דיסקונט לישראל עברית עברית English Français Русский العربية תפריט ראשי תפריט פרטיים עסקים בנקאות פרטית אפשר לעזור? ✕ חיפושים נפוצים באתר פתיחת חשבון המרת מט\"ח צפון ירוק הארנק הירוק Smart Future הלוואות המפתח שלך למבצע",
    "items": [
-    {
-     "text": "קבוצת דיסקונט מפרסמת את הדוחות הכספיים לרבעון השני של 2026 לצפייה בדו\"חות הכספיים לצפייה בדו\"חות הכספיים",
-     "href": "https://www.discountbank.co.il/private/discount-group/financial-statements/",
-     "year": "2026",
-     "iframe": false,
-     "doc": false,
-     "internal": true
-    },
     {
      "text": "חוק שכר שווה לשנת 2025",
      "href": "https://www.discountbank.co.il/media/cuadbdij/equal_pay_law_discountbank_2025.pdf",
@@ -50,6 +42,14 @@
      "internal": true
     },
     {
+     "text": "דוחות כספיים",
+     "href": "https://www.discountbank.co.il/private/discount-group/financial-statements/",
+     "year": null,
+     "iframe": false,
+     "doc": false,
+     "internal": true
+    },
+    {
      "text": "איתור כספים פנסיוניים",
      "href": "https://www.discountbank.co.il/private/savings-investments/pension-consulting/",
      "year": null,
@@ -63,8 +63,8 @@
    "product": null,
    "status": 200,
    "method": "browser",
-   "text_hash": "4ccd410b49e616eb698d491b3abd4cd21bff0d11",
-   "text_head": "דלג לתוכן העמוד דלג לתפריט אתר דלג לקישורים תחתונים כניסה לחשבונך לידיעתך: באתר זה נעשה שימוש בקבצי Cookies וכלים דומים כדי לספק לך חווית גלישה טובה ותכנים מותאמים אישית, בין היתר על בסיס מידע הקיים אודותיך במאגרי הבנק. למידע נוסף הבנתי עברית תפריט ראשי תפריט פרטיים עסקים בנקאות פרטית אפשר לעזור? פתיחת חשבון כניסה לחשבון דיסקונט פרטיים פקדונות והשקעות פקדונות והשקעות חיסכון והשקעה, בין אם להגשמת חלום ובין אם להבטיח רמת חיים טובה או שמירה על רמת המחייה גם בפרישה, דורשים חשיבה ותכנון. כדאי לדעת לנהל את הכסף שלנו בצורה חכמה יותר ולאורך זמן.בדיוק בשביל זה אנחנו כאן. סקירות כלכליות למוצרי שוק הכסף ",
+   "text_hash": "b251e61f4be2f6172582a9d0c7c27b1db8b401c9",
+   "text_head": "דלג לתוכן העמוד דלג לתפריט אתר דלג לקישורים תחתונים כניסה לחשבונך לידיעתך: באתר זה נעשה שימוש בקבצי Cookies וכלים דומים כדי לספק לך חווית גלישה טובה ותכנים מותאמים אישית, בין היתר על בסיס מידע הקיים אודותיך במאגרי הבנק. למידע נוסף הבנתי עברית תפריט ראשי סגירה פתיחת חשבון כניסה לחשבון פרטיים פתיחת חשבון הלוואות משכנתא פקדונות והשקעות פקדונות ללקוחות כל הבנקים מוצרי שוק הכסף כרטיסי אשראי מידע כללי קבוצת דיסקונט D-Blog | כסף בשפה שלך עסקים קווי העסקים שלנו שירות לעסקים עסקים בדיגיטל בנקאות פרטית בנקאות פרטית בדיסקונט חווית שירות שירותים בנקאיים מקצועיות בשוק ההון ניהול העושר הארנק הירוק איך אפשר ",
    "items": [
     {
      "text": "קבוצת דיסקונט מפרסמת את הדוחות הכספיים לרבעון השני של 2026 לצפייה בדו\"חות הכספיים לצפייה בדו\"חות הכספיים",
@@ -161,15 +161,31 @@
      "iframe": false,
      "doc": false,
      "internal": true
+    },
+    {
+     "text": "(iframe)",
+     "href": "https://www.google.com/recaptcha/api2/anchor?ar=1&k=6LfjgAIpAAAAAJZy57vghR84M7zjCobrbDuiBVT-&co=aHR0cHM6Ly93d3cuZGlzY291bnRiYW5rLmNvLmlsOjQ0Mw..&hl=iw&v=bSuJ2xBC8cFy7pM4Z3Hu9boH&size=invisible&anchor-ms=20000&execute-ms=30000&cb=rfr2kzu978nv",
+     "year": null,
+     "iframe": true,
+     "doc": false,
+     "internal": false
     }
    ]
+  },
+  "https://www.google.com/recaptcha/api2/anchor?ar=1&k=6LfjgAIpAAAAAJZy57vghR84M7zjCobrbDuiBVT-&co=aHR0cHM6Ly93d3cuZGlzY291bnRiYW5rLmNvLmlsOjQ0Mw..&hl=iw&v=bSuJ2xBC8cFy7pM4Z3Hu9boH&size=invisible&anchor-ms=20000&execute-ms=30000&cb=rfr2kzu978nv": {
+   "product": null,
+   "status": 200,
+   "method": "browser",
+   "text_hash": "1468e23e963b54369792ed9c663473d383beb25e",
+   "text_head": "מוגן באמצעות reCAPTCHA",
+   "items": []
   },
   "https://www.discountbank.co.il/private/savings-investments/deposits-savings/deposits-without-account/": {
    "product": null,
    "status": 200,
    "method": "browser",
-   "text_hash": "3ff6f27cc2ef20bd224dbbfa1c9e54b7d208a117",
-   "text_head": "דלג לתוכן העמוד דלג לתפריט אתר דלג לקישורים תחתונים כניסה לחשבונך לידיעתך: באתר זה נעשה שימוש בקבצי Cookies וכלים דומים כדי לספק לך חווית גלישה טובה ותכנים מותאמים אישית, בין היתר על בסיס מידע הקיים אודותיך במאגרי הבנק. למידע נוסף הבנתי עברית תפריט ראשי תפריט פרטיים עסקים בנקאות פרטית אפשר לעזור? פתיחת חשבון כניסה לחשבון דיסקונט פרטיים פקדונות והשקעות פקדונות פקדונות ללקוחות כל הבנקים פקדונות ללקוחות כל הבנקים לקוחות כל הבנקים (שאינם מנהלים חשבון עו\"ש בדיסקונט) יכולים לפתוח פיקדון בדיסקונט במערכת סגורה בקלות ובמהירות. בתום תקופת הפיקדון כספי הפיקדון יחזרו לחשבון ממנו התקבלו. ללקוחות דיסקונט אז",
+   "text_hash": "08110cb13013dec32c8b29570acf67ca4440d3ae",
+   "text_head": "דלג לתוכן העמוד דלג לתפריט אתר דלג לקישורים תחתונים כניסה לחשבונך לידיעתך: באתר זה נעשה שימוש בקבצי Cookies וכלים דומים כדי לספק לך חווית גלישה טובה ותכנים מותאמים אישית, בין היתר על בסיס מידע הקיים אודותיך במאגרי הבנק. למידע נוסף הבנתי עברית תפריט ראשי סגירה פתיחת חשבון כניסה לחשבון פרטיים פתיחת חשבון הלוואות משכנתא פקדונות והשקעות פקדונות ללקוחות כל הבנקים מוצרי שוק הכסף כרטיסי אשראי מידע כללי קבוצת דיסקונט D-Blog | כסף בשפה שלך עסקים קווי העסקים שלנו שירות לעסקים עסקים בדיגיטל בנקאות פרטית בנקאות פרטית בדיסקונט חווית שירות שירותים בנקאיים מקצועיות בשוק ההון ניהול העושר הארנק הירוק איך אפשר ",
    "items": [
     {
      "text": "קבוצת דיסקונט מפרסמת את הדוחות הכספיים לרבעון השני של 2026 לצפייה בדו\"חות הכספיים לצפייה בדו\"חות הכספיים",
@@ -249,7 +265,7 @@
    "product": null,
    "status": 200,
    "method": "browser",
-   "text_hash": "2cae71172aae349e0fe0b8ec2a6ed0cfb9f0f5ff",
+   "text_hash": "3f5427a4cabef9c90f7615c26a2e6be3ced2b051",
    "text_head": "דלג לתוכן העמוד דלג לתפריט אתר דלג לקישורים תחתונים כניסה לחשבונך לידיעתך: באתר זה נעשה שימוש בקבצי Cookies וכלים דומים כדי לספק לך חווית גלישה טובה ותכנים מותאמים אישית, בין היתר על בסיס מידע הקיים אודותיך במאגרי הבנק. למידע נוסף הבנתי עברית תפריט ראשי סגירה פתיחת חשבון כניסה לחשבון פרטיים פתיחת חשבון הלוואות משכנתא פקדונות והשקעות פקדונות ללקוחות כל הבנקים מוצרי שוק הכסף כרטיסי אשראי מידע כללי קבוצת דיסקונט D-Blog | כסף בשפה שלך עסקים קווי העסקים שלנו שירות לעסקים עסקים בדיגיטל בנקאות פרטית בנקאות פרטית בדיסקונט חווית שירות שירותים בנקאיים מקצועיות בשוק ההון ניהול העושר הארנק הירוק איך אפשר ",
    "items": [
     {
@@ -305,18 +321,10 @@
   "https://www.discountbank.co.il/private/savings-investments/pension-consulting/": {
    "product": "פנסיה",
    "status": 200,
-   "method": "browser",
-   "text_hash": "ef2029ea7718ffb8a69eaba35c61a77064a27c74",
-   "text_head": "דלג לתוכן העמוד דלג לתפריט אתר דלג לקישורים תחתונים כניסה לחשבונך לידיעתך: באתר זה נעשה שימוש בקבצי Cookies וכלים דומים כדי לספק לך חווית גלישה טובה ותכנים מותאמים אישית, בין היתר על בסיס מידע הקיים אודותיך במאגרי הבנק. למידע נוסף הבנתי עברית תפריט ראשי סגירה פתיחת חשבון כניסה לחשבון פרטיים פתיחת חשבון הלוואות משכנתא פקדונות והשקעות פקדונות ללקוחות כל הבנקים מוצרי שוק הכסף כרטיסי אשראי מידע כללי קבוצת דיסקונט D-Blog | כסף בשפה שלך עסקים קווי העסקים שלנו שירות לעסקים עסקים בדיגיטל בנקאות פרטית בנקאות פרטית בדיסקונט חווית שירות שירותים בנקאיים מקצועיות בשוק ההון ניהול העושר הארנק הירוק איך אפשר ",
+   "method": "requests",
+   "text_hash": "a0bfbabbe3c72d94f10a2b21f8b3a5531c56d4f1",
+   "text_head": "ייעוץ פנסיוני אובייקטיבי ומקצועי לעצמאים ושכירים | דיסקונט דלג לתוכן העמוד דלג לתפריט אתר דלג לקישורים תחתונים כניסה לחשבונך דלג לתוכן העמוד דלג לתפריט אתר דלג לקישורים תחתונים כניסה לחשבונך לידיעתך: באתר זה נעשה שימוש בקבצי Cookies וכלים דומים כדי לספק לך חווית גלישה טובה ותכנים מותאמים אישית, בין היתר על בסיס מידע הקיים אודותיך במאגרי הבנק. למידע נוסף הבנתי עברית עברית English Français Русский العربية תפריט ראשי תפריט פרטיים עסקים בנקאות פרטית אפשר לעזור? ✕ חיפושים נפוצים באתר פתיחת חשבון המרת מט\"ח צפון ירוק הארנק הירוק Smart Future הלוואות המפתח שלך למבצעים והנחות פקדונות מומלצים כרטיסי אשר",
    "items": [
-    {
-     "text": "קבוצת דיסקונט מפרסמת את הדוחות הכספיים לרבעון השני של 2026 לצפייה בדו\"חות הכספיים לצפייה בדו\"חות הכספיים",
-     "href": "https://www.discountbank.co.il/private/discount-group/financial-statements/",
-     "year": "2026",
-     "iframe": false,
-     "doc": false,
-     "internal": true
-    },
     {
      "text": "العربية",
      "href": "https://www.discountbank.co.il/ar/private/deposits-and-savings/pension-consulting/",
@@ -382,6 +390,14 @@
      "internal": true
     },
     {
+     "text": "דוחות כספיים",
+     "href": "https://www.discountbank.co.il/private/discount-group/financial-statements/",
+     "year": null,
+     "iframe": false,
+     "doc": false,
+     "internal": true
+    },
+    {
      "text": "Русский",
      "href": "https://www.discountbank.co.il/ru/private/deposits-and-savings/pension-advice/",
      "year": null,
@@ -396,24 +412,8 @@
      "iframe": false,
      "doc": false,
      "internal": true
-    },
-    {
-     "text": "(iframe)",
-     "href": "https://www.google.com/recaptcha/api2/anchor?ar=1&k=6LfjgAIpAAAAAJZy57vghR84M7zjCobrbDuiBVT-&co=aHR0cHM6Ly93d3cuZGlzY291bnRiYW5rLmNvLmlsOjQ0Mw..&hl=iw&v=bSuJ2xBC8cFy7pM4Z3Hu9boH&size=invisible&anchor-ms=20000&execute-ms=30000&cb=b1sel9mcwu4k",
-     "year": null,
-     "iframe": true,
-     "doc": false,
-     "internal": false
     }
    ]
-  },
-  "https://www.google.com/recaptcha/api2/anchor?ar=1&k=6LfjgAIpAAAAAJZy57vghR84M7zjCobrbDuiBVT-&co=aHR0cHM6Ly93d3cuZGlzY291bnRiYW5rLmNvLmlsOjQ0Mw..&hl=iw&v=bSuJ2xBC8cFy7pM4Z3Hu9boH&size=invisible&anchor-ms=20000&execute-ms=30000&cb=b1sel9mcwu4k": {
-   "product": null,
-   "status": 200,
-   "method": "browser",
-   "text_hash": "1468e23e963b54369792ed9c663473d383beb25e",
-   "text_head": "מוגן באמצעות reCAPTCHA",
-   "items": []
   },
   "https://www.discountbank.co.il/private/savings-investments/economic-reviews/": {
    "product": null,
@@ -2041,9 +2041,9 @@
   "https://www.discountbank.co.il/private/savings-investments/deposits-savings/deposits-without-account/palal-form-fixed-interest-six-months/": {
    "product": null,
    "status": 200,
-   "method": "browser",
-   "text_hash": "f5d156e94477b871d2e9bb16193b8a00f84b2048",
-   "text_head": "דלג לתוכן העמוד דלג לתפריט אתר דלג לקישורים תחתונים כניסה לחשבונך לידיעתך: באתר זה נעשה שימוש בקבצי Cookies וכלים דומים כדי לספק לך חווית גלישה טובה ותכנים מותאמים אישית, בין היתר על בסיס מידע הקיים אודותיך במאגרי הבנק. למידע נוסף הבנתי צרו איתי קשר הפקדה לפיקדון ללקוחות כל הבנקים פתיחת פיקדון כספי במערכת סגורה, בה הכספים יועברו מחשבון הלקוח בבנק המעביר ובתום תקופת הפיקדון יחזרו לחשבון ממנו התקבלו. תוקף הצעת הריבית לפיקדון שנבחר הינו 3 ימי עסקים מתאריך הגשת הבקשה ובכפוף להעברת הכספים על ידך (כולל השלמת מסמכים ככל ויידרש) ולקבלתם בבנק בטווח הימים כאמור. זהות בעלי הפיקדון וזהות בעלי החשבון המקור",
+   "method": "requests",
+   "text_hash": "2386bb01abf59168892bb932b97a0444835cd515",
+   "text_head": "פיקדון יחיד ל-6 חודשים בריבית קבועה ללקוחות כל הבנקים | דיסקונט דלג לתוכן העמוד דלג לתפריט אתר דלג לקישורים תחתונים כניסה לחשבונך דלג לתוכן העמוד דלג לתפריט אתר דלג לקישורים תחתונים כניסה לחשבונך לידיעתך: באתר זה נעשה שימוש בקבצי Cookies וכלים דומים כדי לספק לך חווית גלישה טובה ותכנים מותאמים אישית, בין היתר על בסיס מידע הקיים אודותיך במאגרי הבנק. למידע נוסף הבנתי צרו איתי קשר חשוב לנו שתהיה לך חוויה מדהימה למה שלא נמשיך באפליקציה? כניסה קלה וחוויה מותאמת מגוון פעולות ומידע שרלוונטי לך כניסה קלה עם טביעת אצבע כניסה קלה וחוויה מותאמת מגוון פעולות ומידע שרלוונטי לך לאפליקציה המשך באתר הפקדה לפיק",
    "items": [
     {
      "text": "ערוצי התקשורת",
@@ -2102,14 +2102,6 @@
      "internal": true
     },
     {
-     "text": "(iframe)",
-     "href": "https://www.google.com/recaptcha/api2/anchor?ar=1&k=6LfjgAIpAAAAAJZy57vghR84M7zjCobrbDuiBVT-&co=aHR0cHM6Ly93d3cuZGlzY291bnRiYW5rLmNvLmlsOjQ0Mw..&hl=iw&v=bSuJ2xBC8cFy7pM4Z3Hu9boH&size=invisible&anchor-ms=20000&execute-ms=30000&cb=i5rviyvruszo",
-     "year": null,
-     "iframe": true,
-     "doc": false,
-     "internal": false
-    },
-    {
      "text": "\"הצהרת איש-ציבור\"",
      "href": "https://www.discountbank.co.il/media/t4rd2ofq/bublic_nagish.pdf",
      "year": null,
@@ -2122,9 +2114,9 @@
   "https://www.discountbank.co.il/private/savings-investments/deposits-savings/deposits-without-account/palal-form-fixed-interest-year/": {
    "product": null,
    "status": 200,
-   "method": "browser",
-   "text_hash": "035da7cf7b6a34b77d3481a48b2622386cf3549a",
-   "text_head": "דלג לתוכן העמוד דלג לתפריט אתר דלג לקישורים תחתונים כניסה לחשבונך לידיעתך: באתר זה נעשה שימוש בקבצי Cookies וכלים דומים כדי לספק לך חווית גלישה טובה ותכנים מותאמים אישית, בין היתר על בסיס מידע הקיים אודותיך במאגרי הבנק. למידע נוסף הבנתי צרו איתי קשר הפקדה לפיקדון ללקוחות כל הבנקים פתיחת פיקדון כספי במערכת סגורה, בה הכספים יועברו מחשבון הלקוח בבנק המעביר ובתום תקופת הפיקדון יחזרו לחשבון ממנו התקבלו. תוקף הצעת הריבית לפיקדון שנבחר הינו 3 ימי עסקים מתאריך הגשת הבקשה ובכפוף להעברת הכספים על ידך (כולל השלמת מסמכים ככל ויידרש) ולקבלתם בבנק בטווח הימים כאמור. זהות בעלי הפיקדון וזהות בעלי החשבון המקור",
+   "method": "requests",
+   "text_hash": "f42c315fcf87f1cbd6e3870c64cc0ae89cfb988a",
+   "text_head": "פיקדון יחיד לשנה קבועה בריבית קבועה ללקוחות כל הבנקים | דיסקונט דלג לתוכן העמוד דלג לתפריט אתר דלג לקישורים תחתונים כניסה לחשבונך דלג לתוכן העמוד דלג לתפריט אתר דלג לקישורים תחתונים כניסה לחשבונך לידיעתך: באתר זה נעשה שימוש בקבצי Cookies וכלים דומים כדי לספק לך חווית גלישה טובה ותכנים מותאמים אישית, בין היתר על בסיס מידע הקיים אודותיך במאגרי הבנק. למידע נוסף הבנתי צרו איתי קשר חשוב לנו שתהיה לך חוויה מדהימה למה שלא נמשיך באפליקציה? כניסה קלה וחוויה מותאמת מגוון פעולות ומידע שרלוונטי לך כניסה קלה עם טביעת אצבע כניסה קלה וחוויה מותאמת מגוון פעולות ומידע שרלוונטי לך לאפליקציה המשך באתר הפקדה לפיק",
    "items": [
     {
      "text": "ערוצי התקשורת",
@@ -2181,14 +2173,6 @@
      "iframe": false,
      "doc": false,
      "internal": true
-    },
-    {
-     "text": "(iframe)",
-     "href": "https://www.google.com/recaptcha/api2/anchor?ar=1&k=6LfjgAIpAAAAAJZy57vghR84M7zjCobrbDuiBVT-&co=aHR0cHM6Ly93d3cuZGlzY291bnRiYW5rLmNvLmlsOjQ0Mw..&hl=iw&v=bSuJ2xBC8cFy7pM4Z3Hu9boH&size=invisible&anchor-ms=20000&execute-ms=30000&cb=qabjx2l1xb21",
-     "year": null,
-     "iframe": true,
-     "doc": false,
-     "internal": false
     },
     {
      "text": "\"הצהרת איש-ציבור\"",
@@ -2575,7 +2559,7 @@
     },
     {
      "text": "(iframe)",
-     "href": "https://www.google.com/recaptcha/api2/anchor?ar=1&k=6LfjgAIpAAAAAJZy57vghR84M7zjCobrbDuiBVT-&co=aHR0cHM6Ly93d3cuZGlzY291bnRiYW5rLmNvLmlsOjQ0Mw..&hl=iw&v=bSuJ2xBC8cFy7pM4Z3Hu9boH&size=invisible&anchor-ms=20000&execute-ms=30000&cb=9eo3epnxkaar",
+     "href": "https://www.google.com/recaptcha/api2/anchor?ar=1&k=6LfjgAIpAAAAAJZy57vghR84M7zjCobrbDuiBVT-&co=aHR0cHM6Ly93d3cuZGlzY291bnRiYW5rLmNvLmlsOjQ0Mw..&hl=iw&v=bSuJ2xBC8cFy7pM4Z3Hu9boH&size=invisible&anchor-ms=20000&execute-ms=30000&cb=lphgcld6zzfc",
      "year": null,
      "iframe": true,
      "doc": false,
