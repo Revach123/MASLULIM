@@ -1,11 +1,20 @@
 [
  {
-  "kind": "page_changed",
-  "page": "https://www.harel-group.co.il/long-term-savings/information/self-employed-pension-saving",
-  "text": "טקסט העמוד השתנה (אותם קישורים)",
-  "href": "https://www.harel-group.co.il/long-term-savings/information/self-employed-pension-saving",
+  "kind": "new_item",
+  "page": "https://www.harel-group.co.il/long-term-savings/pension/information/guide-to-pension-fund-for-self-employed",
+  "text": "תקרות הפקדה בקופות הגמל ובקרנות השתלמות 2026",
+  "href": "https://media.harel-group.co.il/media/swxlbnec/תקרות-הפקדה-בקופות-הגמל-ובקרנות-השתלמות-2026.pdf",
   "legal_id": "520004078",
   "company": "הראל חברה לביטוח בע\"מ",
-  "detected": "2026-11-08T11:24:36+00:00"
+  "detected": "2026-11-09T12:57:04+00:00"
+ },
+ {
+  "kind": "removed_item",
+  "page": "https://www.harel-group.co.il/long-term-savings/pension/information/guide-to-pension-fund-for-self-employed",
+  "text": "תקרות הפקדה בקופות הגמל ובקרנות השתלמות 2026",
+  "href": "https://media.harel-group.co.il/media/swxlbnec/תקרות-הפקדה-בקופות-גמל-ובקרנות-השתלמות.pdf",
+  "legal_id": "520004078",
+  "company": "הראל חברה לביטוח בע\"מ",
+  "detected": "2026-11-09T12:57:04+00:00"
  }
 ]
