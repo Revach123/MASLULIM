@@ -1,7 +1,7 @@
 {
  "legal_id": "512237744",
  "company": "מגדל מקפת קרנות פנסיה וקופות גמל בע\"מ",
- "run": "2026-11-09T14:23:27+00:00",
+ "run": "2026-11-10T13:48:40+00:00",
  "errors": [],
  "seeds": {
   "config": 0,
@@ -35,9 +35,9 @@
   "https://undefined/: browser:Error:Page.goto: net::ERR_NAME_NOT_RESOLVED at https://undefined/",
   "http://my.migdal.co.il/mymigdal/onlinepurchase/retirementpensionsimulation: ERR"
  ],
- "candidates": 495,
- "docs": 495,
- "new_docs": 0,
+ "candidates": 502,
+ "docs": 502,
+ "new_docs": 1,
  "index_size": 509,
- "seconds": 985
+ "seconds": 1142
 }
