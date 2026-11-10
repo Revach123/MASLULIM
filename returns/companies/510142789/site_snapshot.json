@@ -1,14 +1,22 @@
 {
  "legal_id": "510142789",
- "taken": "2026-11-09T14:22:23+00:00",
+ "taken": "2026-11-10T13:48:44+00:00",
  "pages": {
   "https://www.discountbank.co.il": {
    "product": null,
    "status": 200,
-   "method": "requests",
-   "text_hash": "87b08bbe128cfa5a6cfabc248aae98f1f2d43004",
-   "text_head": "בנק דיסקונט לישראל | דיסקונט דלג לתוכן העמוד דלג לתפריט אתר דלג לקישורים תחתונים כניסה לחשבונך דלג לתוכן העמוד דלג לתפריט אתר דלג לקישורים תחתונים כניסה לחשבונך לידיעתך: באתר זה נעשה שימוש בקבצי Cookies וכלים דומים כדי לספק לך חווית גלישה טובה ותכנים מותאמים אישית, בין היתר על בסיס מידע הקיים אודותיך במאגרי הבנק. למידע נוסף הבנתי חדש! הפקדת צ'קים דחויים באפליקציה למידע נוסף > בנק דיסקונט לישראל עברית עברית English Français Русский العربية תפריט ראשי תפריט פרטיים עסקים בנקאות פרטית אפשר לעזור? ✕ חיפושים נפוצים באתר פתיחת חשבון המרת מט\"ח צפון ירוק הארנק הירוק Smart Future הלוואות המפתח שלך למבצע",
+   "method": "browser",
+   "text_hash": null,
+   "text_head": "",
    "items": [
+    {
+     "text": "קבוצת דיסקונט מפרסמת את הדוחות הכספיים לרבעון השני של 2026 לצפייה בדו\"חות הכספיים לצפייה בדו\"חות הכספיים",
+     "href": "https://www.discountbank.co.il/private/discount-group/financial-statements/",
+     "year": "2026",
+     "iframe": false,
+     "doc": false,
+     "internal": true
+    },
     {
      "text": "חוק שכר שווה לשנת 2025",
      "href": "https://www.discountbank.co.il/media/cuadbdij/equal_pay_law_discountbank_2025.pdf",
@@ -42,14 +50,6 @@
      "internal": true
     },
     {
-     "text": "דוחות כספיים",
-     "href": "https://www.discountbank.co.il/private/discount-group/financial-statements/",
-     "year": null,
-     "iframe": false,
-     "doc": false,
-     "internal": true
-    },
-    {
      "text": "איתור כספים פנסיוניים",
      "href": "https://www.discountbank.co.il/private/savings-investments/pension-consulting/",
      "year": null,
@@ -63,7 +63,7 @@
    "product": null,
    "status": 200,
    "method": "browser",
-   "text_hash": "b251e61f4be2f6172582a9d0c7c27b1db8b401c9",
+   "text_hash": "2b4607c3726a1df2034b3dd3009ebc66bc0cc766",
    "text_head": "דלג לתוכן העמוד דלג לתפריט אתר דלג לקישורים תחתונים כניסה לחשבונך לידיעתך: באתר זה נעשה שימוש בקבצי Cookies וכלים דומים כדי לספק לך חווית גלישה טובה ותכנים מותאמים אישית, בין היתר על בסיס מידע הקיים אודותיך במאגרי הבנק. למידע נוסף הבנתי עברית תפריט ראשי סגירה פתיחת חשבון כניסה לחשבון פרטיים פתיחת חשבון הלוואות משכנתא פקדונות והשקעות פקדונות ללקוחות כל הבנקים מוצרי שוק הכסף כרטיסי אשראי מידע כללי קבוצת דיסקונט D-Blog | כסף בשפה שלך עסקים קווי העסקים שלנו שירות לעסקים עסקים בדיגיטל בנקאות פרטית בנקאות פרטית בדיסקונט חווית שירות שירותים בנקאיים מקצועיות בשוק ההון ניהול העושר הארנק הירוק איך אפשר ",
    "items": [
     {
@@ -164,7 +164,7 @@
     },
     {
      "text": "(iframe)",
-     "href": "https://www.google.com/recaptcha/api2/anchor?ar=1&k=6LfjgAIpAAAAAJZy57vghR84M7zjCobrbDuiBVT-&co=aHR0cHM6Ly93d3cuZGlzY291bnRiYW5rLmNvLmlsOjQ0Mw..&hl=iw&v=eiVW-J8HuKsDxSGNYMZ-9XFQ&size=invisible&anchor-ms=20000&execute-ms=30000&ovv=CADq00gF&cb=ljei0si5tkxx",
+     "href": "https://www.google.com/recaptcha/api2/anchor?ar=1&k=6LfjgAIpAAAAAJZy57vghR84M7zjCobrbDuiBVT-&co=aHR0cHM6Ly93d3cuZGlzY291bnRiYW5rLmNvLmlsOjQ0Mw..&hl=iw&v=0lEGiwO4Qwx5R9ArxUy0mBpf&size=invisible&anchor-ms=20000&execute-ms=30000&ovv=CADq00gF&cb=wllngnqoocqw",
      "year": null,
      "iframe": true,
      "doc": false,
@@ -172,7 +172,7 @@
     }
    ]
   },
-  "https://www.google.com/recaptcha/api2/anchor?ar=1&k=6LfjgAIpAAAAAJZy57vghR84M7zjCobrbDuiBVT-&co=aHR0cHM6Ly93d3cuZGlzY291bnRiYW5rLmNvLmlsOjQ0Mw..&hl=iw&v=eiVW-J8HuKsDxSGNYMZ-9XFQ&size=invisible&anchor-ms=20000&execute-ms=30000&ovv=CADq00gF&cb=ljei0si5tkxx": {
+  "https://www.google.com/recaptcha/api2/anchor?ar=1&k=6LfjgAIpAAAAAJZy57vghR84M7zjCobrbDuiBVT-&co=aHR0cHM6Ly93d3cuZGlzY291bnRiYW5rLmNvLmlsOjQ0Mw..&hl=iw&v=0lEGiwO4Qwx5R9ArxUy0mBpf&size=invisible&anchor-ms=20000&execute-ms=30000&ovv=CADq00gF&cb=wllngnqoocqw": {
    "product": null,
    "status": 200,
    "method": "browser",
@@ -265,7 +265,7 @@
    "product": null,
    "status": 200,
    "method": "browser",
-   "text_hash": "c61dd04e6167f81f07a8a16f3464246c61235b3a",
+   "text_hash": "915ca1d8445b801778211ec2ba8eab567afd065c",
    "text_head": "דלג לתוכן העמוד דלג לתפריט אתר דלג לקישורים תחתונים כניסה לחשבונך לידיעתך: באתר זה נעשה שימוש בקבצי Cookies וכלים דומים כדי לספק לך חווית גלישה טובה ותכנים מותאמים אישית, בין היתר על בסיס מידע הקיים אודותיך במאגרי הבנק. למידע נוסף הבנתי עברית תפריט ראשי סגירה פתיחת חשבון כניסה לחשבון פרטיים פתיחת חשבון הלוואות משכנתא פקדונות והשקעות פקדונות ללקוחות כל הבנקים מוצרי שוק הכסף כרטיסי אשראי מידע כללי קבוצת דיסקונט D-Blog | כסף בשפה שלך עסקים קווי העסקים שלנו שירות לעסקים עסקים בדיגיטל בנקאות פרטית בנקאות פרטית בדיסקונט חווית שירות שירותים בנקאיים מקצועיות בשוק ההון ניהול העושר הארנק הירוק איך אפשר ",
    "items": [
     {
@@ -2559,7 +2559,7 @@
     },
     {
      "text": "(iframe)",
-     "href": "https://www.google.com/recaptcha/api2/anchor?ar=1&k=6LfjgAIpAAAAAJZy57vghR84M7zjCobrbDuiBVT-&co=aHR0cHM6Ly93d3cuZGlzY291bnRiYW5rLmNvLmlsOjQ0Mw..&hl=iw&v=eiVW-J8HuKsDxSGNYMZ-9XFQ&size=invisible&anchor-ms=20000&execute-ms=30000&ovv=CADq00gF&cb=vtg5uoukq4mu",
+     "href": "https://www.google.com/recaptcha/api2/anchor?ar=1&k=6LfjgAIpAAAAAJZy57vghR84M7zjCobrbDuiBVT-&co=aHR0cHM6Ly93d3cuZGlzY291bnRiYW5rLmNvLmlsOjQ0Mw..&hl=iw&v=0lEGiwO4Qwx5R9ArxUy0mBpf&size=invisible&anchor-ms=20000&execute-ms=30000&ovv=CADq00gF&cb=6njkrn7f4r4g",
      "year": null,
      "iframe": true,
      "doc": false,
