@@ -1,13 +1,13 @@
 {
  "legal_id": "515447035",
  "company": "הפניקס חח\"י קופה מרכזית לקצבה בע\"מ",
- "taken": "2026-11-11T11:57:22+00:00",
+ "taken": "2026-11-12T12:33:19+00:00",
  "pages": {
   "https://www.fnx.co.il/pension-savings/iec-pension/": {
    "product": "פנסיה",
    "status": 200,
    "method": "browser",
-   "text_hash": "2b0c9f4caf4eeaa332b17265ee4c7d4a39ae8a49",
+   "text_hash": "bf9cd2c7e55dcbdf3f79e59fc161dc70ab9c077c",
    "text_head": "דלג לתפריט עליון דלג לתוכן המרכזי דלג לרשימת הקישורים התחתונה שימוש בקבצי Cookies לידיעתך, באתר זה נעשה שימוש בטכנולוגיות איסוף מידע כגון Cookies לרבות על ידי צדדים שלישיים, כדי לספק לך חווית גלישה טובה וכן למטרות סטטיסטיקה, אפיון, שיווק ואבטחת מידע. המשך גלישתך באתר מהווה הסכמה לכך. למידע נוסף, ניתן לצפות במדיניות הפרטיות המעודכנת של החברה. סגירה דלג לתפריט עליון דלג לתוכן המרכזי דלג לרשימת הקישורים התחתונה קריירה פורטל סוכנים פורטל מעסיקים הפניקס בית השקעות הפניקס smart קשרי משקיעים Investor Relations ביטוחים פנסיה, גמל וחסכון השקעות אשראי תביעות שירות ופעולות לאיזור האישי דף הבית פנסיה ניהו",
    "items": [
     {
@@ -500,7 +500,7 @@
     },
     {
      "text": "אקסלנס טרייד",
-     "href": "https://www.fnx.co.il/trading/",
+     "href": "https://www.fnx.co.il/trade/",
      "year": null,
      "iframe": false,
      "doc": true,
@@ -535,13 +535,21 @@
   "https://www.fnx.co.il/SPF/iframe-the-expected-investment-policy-2026.aspx": {
    "product": "פנסיה",
    "status": 200,
-   "method": "requests",
-   "text_hash": "7f30937fac1b84b861a1469d59497c17b114cbe3",
-   "text_head": "מדיניות השקעה צפויה 2026 - הפניקס מדיניות השקעה צפויה 2026 מדיניות השקעה צפויה 2026 ייתכן שאתה מנסה לגשת לאתר זה מדפדפן מאובטח בשרת. הפוך קבצי Script לזמינים וטען מחדש דף זה. ביטוח מדיניות השקעה צפויה לשנת 2026 - ביטוח - עדכון מדיניות בלאקרוק מסלול מניות - עדכון יולי 2026 מדיניות השקעה צפויה לשנת 2026 - ביטוח - עדכון מדיניות מטח במסלול מניות, קרן י, כללי 1 - עדכון מאי 2026 מדיניות השקעה צפויה לשנת 2026 << | < הבא | 1 | הקודם > | >> הורדת טפסים למחשב הורדה הטפסים שנבחרו יורדו למחשב שלך כקובץ Zip פנסיה מדיניות השקעה צפויה לשנת 2026 - פנסיה - עדכון מדיניות פנסיה מקיפה עוקב s&p500 - עדכון אוגוסט 2",
+   "method": "browser",
+   "text_hash": "2ac3b25e29e98e8daf39379326d07764bb0259b0",
+   "text_head": " ביטוח מדיניות השקעה צפויה לשנת 2026 - ביטוח - עדכון מדיניות בלאקרוק מסלול מניות - עדכון יולי 2026 מדיניות השקעה צפויה לשנת 2026 - ביטוח - עדכון מדיניות מטח במסלול מניות, קרן י, כללי 1 - עדכון מאי 2026 מדיניות השקעה צפויה לשנת 2026 << | < הבא | 1 | הקודם > | >> פנסיה מדיניות השקעה צפויה לשנת 2026 - פנסיה - עדכון מדיניות פנסיה מקיפה עוקב s&p500 - עדכון אוגוסט 2026 מדיניות השקעה צפויה לשנת 2026 - פנסיה - עדכון מדיניות מטח במסלול 50 ומטה - עדכון מאי 2026 מדיניות השקעה צפויה לשנת 2026 << | < הבא | 1 | הקודם > | >> גמל מדיניות השקעה צפויה לשנת 2026 - גמל והשתלמות - עדכון מדיניות מטח במסלול גמל 50 ו",
    "items": [
     {
      "text": "מדיניות השקעה צפויה לשנת 2026 - פנסיה - עדכון מדיניות פנסיה מקיפה עוקב s&p500 - עדכון אוגוסט 2026",
      "href": "http://www.fnx.co.il/sites/docs/genery/mediniut_ashkaa_tzfuia/pension-expected-investment-policy-update082026.xlsx",
+     "year": "2026",
+     "iframe": false,
+     "doc": true,
+     "internal": true
+    },
+    {
+     "text": "מדיניות השקעה צפויה לשנת 2026 - פנסיה - עדכון מדיניות פנסיה מקיפה עוקב s&p500 - עדכון אוגוסט 2026",
+     "href": "https://www.fnx.co.il/sites/docs/genery/mediniut_ashkaa_tzfuia/pension-expected-investment-policy-update082026.xlsx",
      "year": "2026",
      "iframe": false,
      "doc": true,
@@ -556,8 +564,24 @@
      "internal": true
     },
     {
+     "text": "מדיניות השקעה צפויה לשנת 2026 - פנסיה - עדכון מדיניות מטח במסלול 50 ומטה - עדכון מאי 2026",
+     "href": "https://www.fnx.co.il/sites/docs/genery/mediniut_ashkaa_tzfuia/pension-expected-investment-policy-update052026.xlsx",
+     "year": "2026",
+     "iframe": false,
+     "doc": true,
+     "internal": true
+    },
+    {
      "text": "מדיניות השקעה צפויה לשנת 2026 - עדכון פברואר 2026",
      "href": "http://www.fnx.co.il/sites/docs/genery/mediniut_ashkaa_tzfuia/gemelishtalmut-expected-investment-policy-2026-update0226.xls",
+     "year": "2026",
+     "iframe": false,
+     "doc": true,
+     "internal": true
+    },
+    {
+     "text": "מדיניות השקעה צפויה לשנת 2026 - עדכון פברואר 2026",
+     "href": "https://www.fnx.co.il/sites/docs/genery/mediniut_ashkaa_tzfuia/gemelishtalmut-expected-investment-policy-2026-update0226.xls",
      "year": "2026",
      "iframe": false,
      "doc": true,
@@ -572,6 +596,14 @@
      "internal": true
     },
     {
+     "text": "מדיניות השקעה צפויה לשנת 2026 - גמל והשתלמות - עדכון מדיניות מטח במסלול גמל 50 ומטה, השתלמות כללי - עדכון מאי 2026",
+     "href": "https://www.fnx.co.il/sites/docs/genery/mediniut_ashkaa_tzfuia/gemelishtalmut-expected-investment-policy-2026-update0526.xls",
+     "year": "2026",
+     "iframe": false,
+     "doc": true,
+     "internal": true
+    },
+    {
      "text": "מדיניות השקעה צפויה לשנת 2026 - ביטוח - עדכון מדיניות מטח במסלול מניות, קרן י, כללי 1 - עדכון מאי 2026",
      "href": "http://www.fnx.co.il/sites/docs/genery/mediniut_ashkaa_tzfuia/bituach-expected-investment-policy-update052026.xlsx",
      "year": "2026",
@@ -580,8 +612,24 @@
      "internal": true
     },
     {
+     "text": "מדיניות השקעה צפויה לשנת 2026 - ביטוח - עדכון מדיניות מטח במסלול מניות, קרן י, כללי 1 - עדכון מאי 2026",
+     "href": "https://www.fnx.co.il/sites/docs/genery/mediniut_ashkaa_tzfuia/bituach-expected-investment-policy-update052026.xlsx",
+     "year": "2026",
+     "iframe": false,
+     "doc": true,
+     "internal": true
+    },
+    {
      "text": "מדיניות השקעה צפויה לשנת 2026 - ביטוח - עדכון מדיניות בלאקרוק מסלול מניות - עדכון יולי 2026",
      "href": "http://www.fnx.co.il/sites/docs/genery/mediniut_ashkaa_tzfuia/bituach-expected-investment-policy-update072026.xlsx",
+     "year": "2026",
+     "iframe": false,
+     "doc": true,
+     "internal": true
+    },
+    {
+     "text": "מדיניות השקעה צפויה לשנת 2026 - ביטוח - עדכון מדיניות בלאקרוק מסלול מניות - עדכון יולי 2026",
+     "href": "https://www.fnx.co.il/sites/docs/genery/mediniut_ashkaa_tzfuia/bituach-expected-investment-policy-update072026.xlsx",
      "year": "2026",
      "iframe": false,
      "doc": true,
@@ -612,8 +660,40 @@
      "internal": true
     },
     {
+     "text": "מדיניות השקעה צפויה לשנת 2026",
+     "href": "https://www.fnx.co.il/sites/docs/genery/mediniut_ashkaa_tzfuia/bituach-expected-investment-policy-2026.xlsx",
+     "year": "2026",
+     "iframe": false,
+     "doc": true,
+     "internal": true
+    },
+    {
+     "text": "מדיניות השקעה צפויה לשנת 2026",
+     "href": "https://www.fnx.co.il/sites/docs/genery/mediniut_ashkaa_tzfuia/pension-expected-investment-policy-2026.xlsx",
+     "year": "2026",
+     "iframe": false,
+     "doc": true,
+     "internal": true
+    },
+    {
+     "text": "מדיניות השקעה צפויה לשנת 2026",
+     "href": "https://www.fnx.co.il/sites/docs/genery/mediniut_ashkaa_tzfuia/gemelishtalmut-expected-investment-policy-2026.xls",
+     "year": "2026",
+     "iframe": false,
+     "doc": true,
+     "internal": true
+    },
+    {
      "text": "השקעות אחראיות השקעות אחראיות 2026 << | < הבא | 1 | הקודם > | >> הורדת טפסים למחשב הורדה הטפסים שנבחרו יורדו למחשב שלך כקובץ Zip הורדה",
      "href": "https://www.fnx.co.il/SPF/iframe-the-expected-investment-policy-2026.aspx",
+     "year": "2026",
+     "iframe": false,
+     "doc": true,
+     "internal": true
+    },
+    {
+     "text": "השקעות אחראיות השקעות אחראיות 2026 << | < הבא | 1 | הקודם > | >> הורדה",
+     "href": "https://digital-content.fnx.co.il/SPF/iframe-the-expected-investment-policy-2026.aspx",
      "year": "2026",
      "iframe": false,
      "doc": true,
@@ -626,6 +706,22 @@
      "iframe": false,
      "doc": true,
      "internal": true
+    },
+    {
+     "text": "השקעות אחראיות 2026",
+     "href": "https://www.fnx.co.il/sites/docs/genery/mediniut_ashkaa_tzfuia/responsible-investments-2026-he.pdf",
+     "year": "2026",
+     "iframe": false,
+     "doc": true,
+     "internal": true
+    },
+    {
+     "text": "להורדת מודול נגישות חינם",
+     "href": "http://www.negishim.org/",
+     "year": null,
+     "iframe": false,
+     "doc": true,
+     "internal": false
     }
    ]
   },
@@ -1424,7 +1520,7 @@
    "product": "ביטוח",
    "status": 200,
    "method": "browser",
-   "text_hash": "7aa0c5de37599aab097acbbcf86eb5fccc265f8c",
+   "text_hash": "9215509ea5d881b9dd69389a9853d9b3438f0394",
    "text_head": "דלג לתפריט עליון דלג לתוכן המרכזי דלג לרשימת הקישורים התחתונה שימוש בקבצי Cookies לידיעתך, באתר זה נעשה שימוש בטכנולוגיות איסוף מידע כגון Cookies לרבות על ידי צדדים שלישיים, כדי לספק לך חווית גלישה טובה וכן למטרות סטטיסטיקה, אפיון, שיווק ואבטחת מידע. המשך גלישתך באתר מהווה הסכמה לכך. למידע נוסף, ניתן לצפות במדיניות הפרטיות המעודכנת של החברה. סגירה דלג לתפריט עליון דלג לתוכן המרכזי דלג לרשימת הקישורים התחתונה קריירה פורטל סוכנים פורטל מעסיקים הפניקס בית השקעות הפניקס smart קשרי משקיעים Investor Relations ביטוחים פנסיה, גמל וחסכון השקעות אשראי תביעות שירות ופעולות לאיזור האישי דף הבית הפניקס חבר",
    "items": [
     {
@@ -1957,7 +2053,7 @@
     },
     {
      "text": "אקסלנס טרייד",
-     "href": "https://www.fnx.co.il/trading/",
+     "href": "https://www.fnx.co.il/trade/",
      "year": null,
      "iframe": false,
      "doc": true,
@@ -1993,7 +2089,7 @@
    "product": "ביטוח",
    "status": 200,
    "method": "browser",
-   "text_hash": "d0a8127a12236979aacbb40e7ef0647679c2a1df",
+   "text_hash": "25d8be33be494514876a646bfa66f0d1becb57a9",
    "text_head": "דלג לתפריט עליון דלג לתוכן המרכזי דלג לרשימת הקישורים התחתונה שימוש בקבצי Cookies לידיעתך, באתר זה נעשה שימוש בטכנולוגיות איסוף מידע כגון Cookies לרבות על ידי צדדים שלישיים, כדי לספק לך חווית גלישה טובה וכן למטרות סטטיסטיקה, אפיון, שיווק ואבטחת מידע. המשך גלישתך באתר מהווה הסכמה לכך. למידע נוסף, ניתן לצפות במדיניות הפרטיות המעודכנת של החברה. סגירה דלג לתפריט עליון דלג לתוכן המרכזי דלג לרשימת הקישורים התחתונה קריירה פורטל סוכנים פורטל מעסיקים הפניקס בית השקעות הפניקס smart קשרי משקיעים Investor Relations ביטוחים פנסיה, גמל וחסכון השקעות אשראי תביעות שירות ופעולות לאיזור האישי דף הבית הפניקס חבר",
    "items": [
     {
@@ -2406,7 +2502,7 @@
     },
     {
      "text": "אקסלנס טרייד",
-     "href": "https://www.fnx.co.il/trading/",
+     "href": "https://www.fnx.co.il/trade/",
      "year": null,
      "iframe": false,
      "doc": true,
@@ -2442,7 +2538,7 @@
    "product": "ביטוח",
    "status": 200,
    "method": "browser",
-   "text_hash": "4e5ec093e3eded9ff45d7435f8dd6b61610a9a42",
+   "text_hash": "6c2efb909189b72f693ddf8fa94ae7e6825c936a",
    "text_head": "דלג לתפריט עליון דלג לתוכן המרכזי דלג לרשימת הקישורים התחתונה שימוש בקבצי Cookies לידיעתך, באתר זה נעשה שימוש בטכנולוגיות איסוף מידע כגון Cookies לרבות על ידי צדדים שלישיים, כדי לספק לך חווית גלישה טובה וכן למטרות סטטיסטיקה, אפיון, שיווק ואבטחת מידע. המשך גלישתך באתר מהווה הסכמה לכך. למידע נוסף, ניתן לצפות במדיניות הפרטיות המעודכנת של החברה. סגירה דלג לתפריט עליון דלג לתוכן המרכזי דלג לרשימת הקישורים התחתונה קריירה פורטל סוכנים פורטל מעסיקים הפניקס בית השקעות הפניקס smart קשרי משקיעים Investor Relations ביטוחים פנסיה, גמל וחסכון השקעות אשראי תביעות שירות ופעולות לאיזור האישי דף הבית הפניקס חבר",
    "items": [
     {
@@ -2855,7 +2951,7 @@
     },
     {
      "text": "אקסלנס טרייד",
-     "href": "https://www.fnx.co.il/trading/",
+     "href": "https://www.fnx.co.il/trade/",
      "year": null,
      "iframe": false,
      "doc": true,
@@ -2891,7 +2987,7 @@
    "product": "ביטוח",
    "status": 200,
    "method": "browser",
-   "text_hash": "064edfa9612d8fe84c8ec348a02374c6c2a19be5",
+   "text_hash": "e4ef5a012b8dd8ba2c69fb9718a11f0ce50b5549",
    "text_head": "דלג לתפריט עליון דלג לתוכן המרכזי דלג לרשימת הקישורים התחתונה שימוש בקבצי Cookies לידיעתך, באתר זה נעשה שימוש בטכנולוגיות איסוף מידע כגון Cookies לרבות על ידי צדדים שלישיים, כדי לספק לך חווית גלישה טובה וכן למטרות סטטיסטיקה, אפיון, שיווק ואבטחת מידע. המשך גלישתך באתר מהווה הסכמה לכך. למידע נוסף, ניתן לצפות במדיניות הפרטיות המעודכנת של החברה. סגירה דלג לתפריט עליון דלג לתוכן המרכזי דלג לרשימת הקישורים התחתונה קריירה פורטל סוכנים פורטל מעסיקים הפניקס בית השקעות הפניקס smart קשרי משקיעים Investor Relations ביטוחים פנסיה, גמל וחסכון השקעות אשראי תביעות שירות ופעולות לאיזור האישי דף הבית הפניקס חבר",
    "items": [
     {
@@ -3304,7 +3400,7 @@
     },
     {
      "text": "אקסלנס טרייד",
-     "href": "https://www.fnx.co.il/trading/",
+     "href": "https://www.fnx.co.il/trade/",
      "year": null,
      "iframe": false,
      "doc": true,
@@ -3340,7 +3436,7 @@
    "product": "ביטוח",
    "status": 200,
    "method": "browser",
-   "text_hash": "2cd3e51034a78cff7d0aa3ecfa1e5580d71baf1a",
+   "text_hash": "32bb20ba98f26bcfb12a53aae961ebd16b4f60af",
    "text_head": "דלג לתפריט עליון דלג לתוכן המרכזי דלג לרשימת הקישורים התחתונה שימוש בקבצי Cookies לידיעתך, באתר זה נעשה שימוש בטכנולוגיות איסוף מידע כגון Cookies לרבות על ידי צדדים שלישיים, כדי לספק לך חווית גלישה טובה וכן למטרות סטטיסטיקה, אפיון, שיווק ואבטחת מידע. המשך גלישתך באתר מהווה הסכמה לכך. למידע נוסף, ניתן לצפות במדיניות הפרטיות המעודכנת של החברה. סגירה דלג לתפריט עליון דלג לתוכן המרכזי דלג לרשימת הקישורים התחתונה קריירה פורטל סוכנים פורטל מעסיקים הפניקס בית השקעות הפניקס smart קשרי משקיעים Investor Relations ביטוחים פנסיה, גמל וחסכון השקעות אשראי תביעות שירות ופעולות לאיזור האישי דף הבית הפניקס חבר",
    "items": [
     {
@@ -3753,7 +3849,7 @@
     },
     {
      "text": "אקסלנס טרייד",
-     "href": "https://www.fnx.co.il/trading/",
+     "href": "https://www.fnx.co.il/trade/",
      "year": null,
      "iframe": false,
      "doc": true,
