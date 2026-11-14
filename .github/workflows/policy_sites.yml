@@ -67,6 +67,7 @@ jobs:
     timeout-minutes: 55
     strategy:
       fail-fast: false
+      max-parallel: 8   # לא לתפוס את כל הריצות המקבילות בחשבון (20 לכולו)
       matrix:
         id: ${{ fromJson(needs.matrix.outputs.ids) }}
     env:
@@ -144,6 +145,8 @@ jobs:
             POLICY_OUT= python -m scripts.policy.combine
             git add policy
             if git diff --cached --quiet; then echo "nothing to commit"; break; fi
+            # רק נתוני ריצה של הסריקה (זמן ריצה, last_seen, דפים שנסרקו...) - בלי commit
+            if ! python3 scripts/ci_real_changes.py; then git reset -q --hard "origin/$B"; break; fi
             git commit -q -m "policy: $ID"
             if git push -q origin "HEAD:$B"; then echo "pushed"; break; fi
             sleep $((RANDOM % 15 + 5))
