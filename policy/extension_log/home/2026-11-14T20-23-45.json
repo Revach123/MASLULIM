@@ -1,0 +1,18 @@
+{
+ "started": "2026-11-14T20:23:45+00:00",
+ "sites": [
+  {
+   "legal_id": "520030990",
+   "name": "החברה המנהלת של מינהל קרן ההשתלמות לפקידים עובדי המנהל והשירותים בע\"מ",
+   "status": "ok",
+   "blocked": false,
+   "new_docs": 0,
+   "known_docs": 101,
+   "skipped": 114,
+   "meta_updates": 0,
+   "seconds": 139,
+   "new": [],
+   "log_tail": "[520030990] sitemap policy pages: 0\n[520030990] החברה המנהלת של מינהל קרן ההשתלמות לפקידים עובדי המנהל והשירותים בע\"מ: pages=12 docs=144 errs=1\n[crawl] new/changed docs this run: 114\n"
+  }
+ ]
+}
