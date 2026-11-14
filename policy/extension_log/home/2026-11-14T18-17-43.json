@@ -1,0 +1,18 @@
+{
+ "started": "2026-11-14T18:17:43+00:00",
+ "sites": [
+  {
+   "legal_id": "520030677",
+   "name": "איילון חברה לביטוח בע\"מ",
+   "status": "ok",
+   "blocked": false,
+   "new_docs": 0,
+   "known_docs": 1,
+   "skipped": 0,
+   "meta_updates": 0,
+   "seconds": 484,
+   "new": [],
+   "log_tail": "llenge, skipping: https://www.ayalon-ins.co.il/savings/nispah_prat/\n[snapshot] bot challenge, skipping: https://www.ayalon-ins.co.il/investments\n[snapshot] bot challenge, skipping: http://validate.perfdrive.com/9173f36d92939444046c6ccf70c6d670/?ssa=5548d313-ddbc-471b-a70f-de4eca6f861a&ssb=13961266074&ssc=https%3A%2F%2Fwww.ayalon-ins.co.il%2F&ssi=c903ee3e-bpnz-4d0d-a661-ed5bf636dfbf&ssk=support@shieldsquare.com&ssm=39715686658279615107151547995723&ssn=e97cf0950906aedf7572a92d79e20e1273b6c3e6f888-1db8-4974-b317fa&sso=7f1f7e4b-825d588975f3cc62d3af57e4c51e2ee614feb079204ff60f&ssp=71412409831794692818179468026192652&ssq=45514668029338979603880293611033538411879&ssr=MzEuMTU0LjI3LjEzMA==&sst=Mozilla/5.0%20(X11;%20Linux%20x86_64)%20AppleWebKit/537.36%20(KHTML,%20like%20Gecko)%20Chrome/124%20Safari/537.36&ssu=&ssv=&ssw=&ssx=eyJfX3V6bWYiOiI3ZjkwMDBjM2U2Zjg4OC0xZGI4LTQ5NzQtYmU0Yi04MjVkNTg4OTc1ZjMxLTE3OTQ2ODAyOTM0ODAwLTAwNTYyMWJlZTkxNmZhMWI1N2MxMCIsInJkIjoiYXlhbG9uLWlucy5jby5pbCIsInV6bXgiOiI3ZmMwMDBhNWUyZDcyZS1kN2Q3LTQ3NDctYmMzNy1iZTJjZGI1NjUwYTUxLTE3OTQ2ODAyOTM0ODAwLTAwZDRlMzdlYTgxYjJjZDM0MTUxMCJ9\n[520030677] איילון חברה לביטוח בע\"מ: pages=5 docs=0 errs=0\n[crawl] new/changed docs this run: 0\n"
+  }
+ ]
+}
