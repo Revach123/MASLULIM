@@ -8,8 +8,8 @@ jobs:
     runs-on: ubuntu-latest
     timeout-minutes: 15
     steps:
-      - uses: actions/checkout@v4
-      - uses: actions/setup-python@v5
+      - uses: actions/checkout@v5
+      - uses: actions/setup-python@v6
         with:
           python-version: "3.12"
       - name: Install
@@ -22,7 +22,7 @@ jobs:
       - name: headful (xvfb)
         continue-on-error: true
         run: xvfb-run -a python scripts/cma/probe.py headful
-      - uses: actions/upload-artifact@v4
+      - uses: actions/upload-artifact@v6
         if: always()
         with:
           name: probe_out

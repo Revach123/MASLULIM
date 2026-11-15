@@ -31,7 +31,7 @@ jobs:
       mode: ${{ steps.m.outputs.mode }}
       force: ${{ steps.m.outputs.force }}
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v5
       - id: m
         env:
           ONLY: ${{ inputs.only }}
@@ -72,8 +72,8 @@ jobs:
     steps:
       - name: Job start time
         run: echo "JOB_T0=$(date +%s)" >> "$GITHUB_ENV"
-      - uses: actions/checkout@v4
-      - uses: actions/setup-python@v5
+      - uses: actions/checkout@v5
+      - uses: actions/setup-python@v6
         with:
           python-version: "3.12"
       - run: |
