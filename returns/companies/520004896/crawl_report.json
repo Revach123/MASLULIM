@@ -1,7 +1,7 @@
 {
  "legal_id": "520004896",
  "company": "מגדל חברה לביטוח בע\"מ",
- "run": "2026-11-14T12:43:09+00:00",
+ "run": "2026-11-15T13:37:25+00:00",
  "errors": [],
  "seeds": {
   "config": 0,
@@ -21,11 +21,14 @@
  "pages_failed": [
   "https://www.migdal.co.il/regulations/: 404",
   "https://undefined/: browser:Error:Page.goto: net::ERR_NAME_NOT_RESOLVED at https://undefined/",
-  "http://my.migdal.co.il/mymigdal/onlinepurchase/retirementpensionsimulation: ERR"
+  "https://www.migdal.co.il/regulations/investors-relations-social-invesments: ERR",
+  "http://my.migdal.co.il/mymigdal/onlinepurchase/retirementpensionsimulation: ERR",
+  "https://www.migdal.co.il/regulations/taxation-pension: ERR",
+  "https://my.migdal.co.il/life-insurance/supplementary-to-pension: ERR"
  ],
- "candidates": 502,
- "docs": 502,
- "new_docs": 2,
+ "candidates": 508,
+ "docs": 508,
+ "new_docs": 1,
  "index_size": 509,
- "seconds": 519
+ "seconds": 718
 }
