@@ -331,11 +331,17 @@ def crawl_company(s, pw, lid, name, out, now, a):
             p.parent.mkdir(parents=True, exist_ok=True)
             p.write_bytes(content)
             prev = ent or {}
+            # history = גרסאות *קודמות* שונות בלבד: אותה גרסה (אותו sha, למשל קובץ שהורד שוב כי לא נמצא בנתיב)
+            # לא נוספת שוב, וכפילויות מריצות קודמות מנוקות (בעבר הרשימה גדלה בכל ריצה בלי שינוי)
+            hist, seen_sha = [], {sha}
+            for h in prev.get("history", []) + ([{"sha256": prev["sha256"], "file": prev.get("file"), "last_seen": prev.get("last_seen")}]
+                                                 if prev.get("sha256") else []):
+                if h.get("sha256") and h["sha256"] not in seen_sha:
+                    seen_sha.add(h["sha256"]); hist.append(h)
             ent = {"legal_id": lid, "first_seen": prev.get("first_seen", now), "file": os.path.relpath(p, ROOT),
-                   "parsed_sha": None, "history": prev.get("history", [])}
-            if prev.get("sha256"):
-                ent["history"].append({"sha256": prev["sha256"], "file": prev.get("file"), "last_seen": prev.get("last_seen")})
-            new += 1
+                   "parsed_sha": None if prev.get("sha256") != sha else prev.get("parsed_sha"), "history": hist}
+            if prev.get("sha256") != sha:
+                new += 1
         if lm:
             ent["last_modified"] = lm
         ent.update({"sha256": sha, "size": len(content), "last_seen": now, "link_text": d.get("text"),
