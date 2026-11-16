@@ -6,15 +6,24 @@
   "href": "https://www.discountbank.co.il",
   "legal_id": "510142789",
   "company": "חברת ב'ת למ'ד דל'ת בע\"מ",
-  "detected": "2026-11-15T11:58:00+00:00"
+  "detected": "2026-11-16T12:41:44+00:00"
  },
  {
   "kind": "text_changed",
   "page": "https://investors.discountbank.co.il/term-of-use/privacy-policy/",
-  "text": "IR -> Go to HomePage Investor Relations of Israel Bank Discount",
+  "text": "Go to HomePage Investor Relations of Israel Bank Discount -> IR",
   "href": "https://investors.discountbank.co.il/",
   "legal_id": "510142789",
   "company": "חברת ב'ת למ'ד דל'ת בע\"מ",
-  "detected": "2026-11-15T11:58:00+00:00"
+  "detected": "2026-11-16T12:41:44+00:00"
+ },
+ {
+  "kind": "page_changed",
+  "page": "https://www.discountbank.co.il/ar/private/deposits-and-savings/pension-consulting/",
+  "text": "טקסט העמוד השתנה (אותם קישורים)",
+  "href": "https://www.discountbank.co.il/ar/private/deposits-and-savings/pension-consulting/",
+  "legal_id": "510142789",
+  "company": "חברת ב'ת למ'ד דל'ת בע\"מ",
+  "detected": "2026-11-16T12:41:44+00:00"
  }
 ]
