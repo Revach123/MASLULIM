@@ -6,6 +6,42 @@
   "href": "https://www.clalbit.co.il/aboutclalinsurance/generalreports/?txtTabId=1&txtReportsYearId=2024&txtCompanyId=3&txtReportTypeId=20",
   "legal_id": "520024647",
   "company": "כלל חברה לביטוח בע\"מ",
-  "detected": "2026-11-16T13:32:45+00:00"
+  "detected": "2026-11-17T13:58:29+00:00"
+ },
+ {
+  "kind": "new_item",
+  "page": "https://www.clalbit.co.il/finances/",
+  "text": "לקריאת הסקירה המלאה",
+  "href": "https://www.clalbit.co.il/media/mokja5ys/13-2737-skira-calcalit_oct_סקירה-כלכלית-אמיר-ארגמן-1026-26.pdf",
+  "legal_id": "520024647",
+  "company": "כלל חברה לביטוח בע\"מ",
+  "detected": "2026-11-17T13:58:29+00:00"
+ },
+ {
+  "kind": "new_item",
+  "page": "https://www.clalbit.co.il/finances/",
+  "text": "לקריאה",
+  "href": "https://www.clalbit.co.il/media/cvcm2yyz/13-2737-macro_oct_26-נתוני-שווקים-עידו-ברמן-1026.pdf",
+  "legal_id": "520024647",
+  "company": "כלל חברה לביטוח בע\"מ",
+  "detected": "2026-11-17T13:58:29+00:00"
+ },
+ {
+  "kind": "removed_item",
+  "page": "https://www.clalbit.co.il/finances/",
+  "text": "לקריאת הסקירה המלאה",
+  "href": "https://www.clalbit.co.il/media/abfko4du/13-2737-skira-calcalit_sep_26-סקירה-כלכלית-אמיר-ארגמן-0926.pdf",
+  "legal_id": "520024647",
+  "company": "כלל חברה לביטוח בע\"מ",
+  "detected": "2026-11-17T13:58:29+00:00"
+ },
+ {
+  "kind": "removed_item",
+  "page": "https://www.clalbit.co.il/finances/",
+  "text": "לקריאה",
+  "href": "https://www.clalbit.co.il/media/5isifeat/13-2737-macro_sep_26-נתוני-שווקים-עידו-ברמן-0926.pdf",
+  "legal_id": "520024647",
+  "company": "כלל חברה לביטוח בע\"מ",
+  "detected": "2026-11-17T13:58:29+00:00"
  }
 ]
