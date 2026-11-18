@@ -1,6 +1,6 @@
 {
  "legal_id": "520023185",
- "taken": "2026-11-18T05:03:42+00:00",
+ "taken": "2026-11-18T21:57:26+00:00",
  "pages": {
   "https://www.fnx.co.il/SPF/": {
    "product": null,
@@ -1538,20 +1538,28 @@
    "product": "פנסיה",
    "status": 200,
    "method": "requests",
-   "text_hash": "3d481b011c2eabe24517f345f89a4f56312ad33f",
-   "text_head": "Radware Captcha Page We apologize for the inconvenience... ...but your activity and behavior on this site made us think that you are a bot. Note: A number of things could be going on here. If you are attempting to access this site using an anonymous Private/Proxy network, please disable that and try accessing site again. Due to previously detected malicious behavior which originated from the network you're using, please request unblock to site. Incident ID: 69383173-db3u-4666-b0aa-36cd0d8fce1a Please solve this CAPTCHA to request unblock to the website You reached this page when trying to acce",
+   "text_hash": "3f753fd4640c4614cf7356c455d09931ef12939a",
+   "text_head": "Radware Captcha Page We apologize for the inconvenience... ...but your activity and behavior on this site made us think that you are a bot. Note: A number of things could be going on here. If you are attempting to access this site using an anonymous Private/Proxy network, please disable that and try accessing site again. Due to previously detected malicious behavior which originated from the network you're using, please request unblock to site. Incident ID: 82ed9ca0-db3u-463d-b59d-febc0627c85f Please solve this CAPTCHA to request unblock to the website You reached this page when trying to acce",
    "items": []
   },
   "https://www.fnx.co.il/SPF/iframe-phoenix-general-pension-yield-components.aspx": {
    "product": "פנסיה",
    "status": 200,
-   "method": "requests",
-   "text_hash": "80626265ef0e11de1cf13c8ff1ad0cd6d5a84a91",
-   "text_head": "iframe-yield-components - הפניקס iframe-yield-components iframe-yield-components ייתכן שאתה מנסה לגשת לאתר זה מדפדפן מאובטח בשרת. הפוך קבצי Script לזמינים וטען מחדש דף זה. מרכיבי התשואה ינואר - ספטמבר 2026 ינואר - יוני 2026 ינואר - מרץ 2026 ינואר - דצמבר 2025 ינואר - ספטמבר 2025 ינואר - יוני 2025 ינואר - מרץ 2025 ינואר - דצמבר 2024 << | < הבא | 1 | הקודם > | >> הורדת טפסים למחשב הורדה הטפסים שנבחרו יורדו למחשב שלך כקובץ Zip מרכיבי התשואה הרבעונית הורדת טפסים למחשב הורדה הטפסים שנבחרו יורדו למחשב שלך כקובץ Zip",
+   "method": "browser",
+   "text_hash": "e19d439704c0a8ffd329f7af1f18b1c0d148ae26",
+   "text_head": " מרכיבי התשואה ינואר - ספטמבר 2026 ינואר - יוני 2026 ינואר - מרץ 2026 ינואר - דצמבר 2025 ינואר - ספטמבר 2025 ינואר - יוני 2025 ינואר - מרץ 2025 ינואר - דצמבר 2024 << | < הבא | 1 | הקודם > | >> נגישות ",
    "items": [
     {
+     "text": "מרכיבי התשואה ינואר - ספטמבר 2026 ינואר - יוני 2026 ינואר - מרץ 2026 ינואר - דצמבר 2025 ינואר - ספטמבר 2025 ינואר - יוני 2025 ינואר - מרץ 2025 ינואר - דצמבר 2024 << | < הבא | 1 | הקודם > | >> הורדה",
+     "href": "https://digital-content.fnx.co.il/SPF/iframe-phoenix-general-pension-yield-components.aspx",
+     "year": "2026",
+     "iframe": false,
+     "doc": true,
+     "internal": true
+    },
+    {
      "text": "ינואר - ספטמבר 2026",
-     "href": "http://www.fnx.co.il/sites/docs/genery/markivey_tsua_chodshit/markivey_tsua_mashlima_01-09_26.xlsx",
+     "href": "https://www.fnx.co.il/sites/docs/genery/markivey_tsua_chodshit/markivey_tsua_mashlima_01-09_26.xlsx",
      "year": "2026",
      "iframe": false,
      "doc": true,
@@ -1559,7 +1567,7 @@
     },
     {
      "text": "ינואר - מרץ 2026",
-     "href": "http://www.fnx.co.il/sites/docs/genery/markivey_tsua_chodshit/markivey_tsua_mashlima_01-03_26.xlsx",
+     "href": "https://www.fnx.co.il/sites/docs/genery/markivey_tsua_chodshit/markivey_tsua_mashlima_01-03_26.xlsx",
      "year": "2026",
      "iframe": false,
      "doc": true,
@@ -1567,7 +1575,7 @@
     },
     {
      "text": "ינואר - יוני 2026",
-     "href": "http://www.fnx.co.il/sites/docs/genery/markivey_tsua_chodshit/markivey_tsua_mashlima_01-06_26.xlsx",
+     "href": "https://www.fnx.co.il/sites/docs/genery/markivey_tsua_chodshit/markivey_tsua_mashlima_01-06_26.xlsx",
      "year": "2026",
      "iframe": false,
      "doc": true,
@@ -1575,7 +1583,7 @@
     },
     {
      "text": "ינואר - ספטמבר 2025",
-     "href": "http://www.fnx.co.il/sites/docs/genery/markivey_tsua_chodshit/markivey_tsua_mashlima_01-09_25.xlsx",
+     "href": "https://www.fnx.co.il/sites/docs/genery/markivey_tsua_chodshit/markivey_tsua_mashlima_01-09_25.xlsx",
      "year": "2025",
      "iframe": false,
      "doc": true,
@@ -1583,7 +1591,7 @@
     },
     {
      "text": "ינואר - מרץ 2025",
-     "href": "http://www.fnx.co.il/sites/docs/genery/markivey_tsua_chodshit/markivey_tsua_mashlima_01-03_25.xlsx",
+     "href": "https://www.fnx.co.il/sites/docs/genery/markivey_tsua_chodshit/markivey_tsua_mashlima_01-03_25.xlsx",
      "year": "2025",
      "iframe": false,
      "doc": true,
@@ -1591,7 +1599,7 @@
     },
     {
      "text": "ינואר - יוני 2025",
-     "href": "http://www.fnx.co.il/sites/docs/genery/markivey_tsua_chodshit/markivey_tsua_mashlima_01-06_25.xlsx",
+     "href": "https://www.fnx.co.il/sites/docs/genery/markivey_tsua_chodshit/markivey_tsua_mashlima_01-06_25.xlsx",
      "year": "2025",
      "iframe": false,
      "doc": true,
@@ -1599,7 +1607,7 @@
     },
     {
      "text": "ינואר - דצמבר 2025",
-     "href": "http://www.fnx.co.il/sites/docs/genery/markivey_tsua_chodshit/markivey_tsua_mashlima_01-12_25.xlsx",
+     "href": "https://www.fnx.co.il/sites/docs/genery/markivey_tsua_chodshit/markivey_tsua_mashlima_01-12_25.xlsx",
      "year": "2025",
      "iframe": false,
      "doc": true,
@@ -1607,19 +1615,27 @@
     },
     {
      "text": "ינואר - דצמבר 2024",
-     "href": "http://www.fnx.co.il/sites/docs/genery/markivey_tsua_chodshit/markivey_tsua_mashlima_01-12_24.xls",
+     "href": "https://www.fnx.co.il/sites/docs/genery/markivey_tsua_chodshit/markivey_tsua_mashlima_01-12_24.xls",
      "year": "2024",
      "iframe": false,
      "doc": true,
      "internal": true
     },
     {
-     "text": "מרכיבי התשואה הרבעונית הורדת טפסים למחשב הורדה הטפסים שנבחרו יורדו למחשב שלך כקובץ Zip הורדה",
-     "href": "https://www.fnx.co.il/SPF/iframe-phoenix-general-pension-yield-components.aspx",
+     "text": "להורדת מודול נגישות חינם",
+     "href": "http://www.negishim.org/",
      "year": null,
      "iframe": false,
      "doc": true,
-     "internal": true
+     "internal": false
+    },
+    {
+     "text": "(iframe)",
+     "href": "https://netfree.link/misc/go-payment.html?v=3",
+     "year": null,
+     "iframe": true,
+     "doc": false,
+     "internal": false
     }
    ]
   },
@@ -1627,16 +1643,16 @@
    "product": "פנסיה",
    "status": 200,
    "method": "requests",
-   "text_hash": "6b223432c5548066b4731453f1d1367d2962dade",
-   "text_head": "Radware Captcha Page We apologize for the inconvenience... ...but your activity and behavior on this site made us think that you are a bot. Note: A number of things could be going on here. If you are attempting to access this site using an anonymous Private/Proxy network, please disable that and try accessing site again. Due to previously detected malicious behavior which originated from the network you're using, please request unblock to site. Incident ID: 91cc0ba0-db3u-4383-8b60-f80dbca15d5a Please solve this CAPTCHA to request unblock to the website You reached this page when trying to acce",
+   "text_hash": "94b90bbb701d61aa4ab784ac8709f57ff9ddb28a",
+   "text_head": "Radware Captcha Page We apologize for the inconvenience... ...but your activity and behavior on this site made us think that you are a bot. Note: A number of things could be going on here. If you are attempting to access this site using an anonymous Private/Proxy network, please disable that and try accessing site again. Due to previously detected malicious behavior which originated from the network you're using, please request unblock to site. Incident ID: bcad97bf-db3u-4431-a06b-671296f83dd9 Please solve this CAPTCHA to request unblock to the website You reached this page when trying to acce",
    "items": []
   },
   "https://www.fnx.co.il/SPF/iframe-phoenix-all-embracing-pension-yield-components.aspx?page=2": {
    "product": "פנסיה",
    "status": 200,
    "method": "requests",
-   "text_hash": "f5f10c331900b9069820843fe33852a183dc0276",
-   "text_head": "Radware Captcha Page We apologize for the inconvenience... ...but your activity and behavior on this site made us think that you are a bot. Note: A number of things could be going on here. If you are attempting to access this site using an anonymous Private/Proxy network, please disable that and try accessing site again. Due to previously detected malicious behavior which originated from the network you're using, please request unblock to site. Incident ID: 2a8e5664-db3u-46f8-aa6c-cc136f78c673 Please solve this CAPTCHA to request unblock to the website You reached this page when trying to acce",
+   "text_hash": "4e63d27f6c74b814ce6f5850989f4dbb3df625a2",
+   "text_head": "Radware Captcha Page We apologize for the inconvenience... ...but your activity and behavior on this site made us think that you are a bot. Note: A number of things could be going on here. If you are attempting to access this site using an anonymous Private/Proxy network, please disable that and try accessing site again. Due to previously detected malicious behavior which originated from the network you're using, please request unblock to site. Incident ID: cc59bbe3-db3u-40d0-9d62-269e5bd99f5c Please solve this CAPTCHA to request unblock to the website You reached this page when trying to acce",
    "items": []
   },
   "https://www.fnx.co.il/savings/quarterly-yield-components-maslul-life/": {
