@@ -1,8 +1,8 @@
 {
  "extension_version": "2.53.0",
  "started": "2026-11-20T13:57:50.787Z",
- "updated": "2026-11-20T14:06:51.256Z",
- "final": false,
+ "updated": "2026-11-20T14:07:00.143Z",
+ "final": true,
  "stopped": false,
  "rules_from_github": true,
  "rules": {
@@ -24,7 +24,7 @@
   "_note_returns": "returns_rx: קבצי מרכיבי תשואה לאתרי kind=returns (מוגדרים ב-extension_sites.json מ-returns_extension בהגדרות האתר); נשמרים ב-policy/inbox/<id>/returns/"
  },
  "total_sites": 10,
- "done_sites": 9,
+ "done_sites": 10,
  "new_docs": 0,
  "skipped_complete": [
   {
@@ -112,15 +112,7 @@
    "last_ok": ""
   }
  ],
- "active": [
-  {
-   "name": "החברה המנהלת של רום קרן ההשתלמות לעובדי הרשויות המקומיות בע\"מ - מרכיבי תשואה",
-   "page": "https://www.krm.co.il/?pg=GetFile&CategoryID=258&ArticleID=170&ID=3284",
-   "page_no": 12,
-   "pages": 12,
-   "step": "טוען עמוד"
-  }
- ],
+ "active": [],
  "sites": [
   {
    "legal_id": "513910703",
@@ -5234,6 +5226,177 @@
     "   ? מדיניות-פרטיות.pdf | מדיניות פרטיות | ",
     "החברה המנהלת של מי: links=242 files=1 clicked=0 captured=0 selected=0",
     "   ? מדיניות-פרטיות.pdf | מדיניות פרטיות | "
+   ],
+   "new_files": []
+  },
+  {
+   "legal_id": "520031824",
+   "name": "החברה המנהלת של רום קרן ההשתלמות לעובדי הרשויות המקומיות בע\"מ - מרכיבי תשואה",
+   "pages": [
+    {
+     "url": "https://www.krm.co.il/?CategoryID=217&ArticleID=5",
+     "cache": "sig-mismatch",
+     "links": 0,
+     "followed": [],
+     "files": 0,
+     "clicked": 0,
+     "captured": 0,
+     "selected": [],
+     "unselected_files": []
+    },
+    {
+     "url": "https://www.krm.co.il/?CategoryID=217&ArticleID=3",
+     "cache": "sig-mismatch",
+     "links": 0,
+     "followed": [],
+     "files": 0,
+     "clicked": 0,
+     "captured": 0,
+     "selected": [],
+     "unselected_files": []
+    },
+    {
+     "url": "https://www.krm.co.il/?CategoryID=217&ArticleID=7",
+     "cache": "sig-mismatch",
+     "links": 0,
+     "followed": [],
+     "files": 0,
+     "clicked": 0,
+     "captured": 0,
+     "selected": [],
+     "unselected_files": []
+    },
+    {
+     "url": "https://www.krm.co.il/?CategoryID=217&ArticleID=12",
+     "cache": "sig-mismatch",
+     "links": 0,
+     "followed": [],
+     "files": 0,
+     "clicked": 0,
+     "captured": 0,
+     "selected": [],
+     "unselected_files": []
+    },
+    {
+     "url": "https://www.krm.co.il/?CategoryID=217",
+     "cache": "hit",
+     "links": 12,
+     "followed": [
+      "https://www.krm.co.il/?CategoryID=231",
+      "https://www.krm.co.il/?CategoryID=258",
+      "https://www.krm.co.il/?CategoryID=262",
+      "https://www.krm.co.il/?CategoryID=216",
+      "https://www.krm.co.il/?CategoryID=217&ArticleID=14"
+     ],
+     "files": 0,
+     "clicked": 0,
+     "captured": 0,
+     "selected": [],
+     "unselected_files": []
+    },
+    {
+     "url": "https://www.krm.co.il",
+     "cache": "hit",
+     "links": 10,
+     "followed": [],
+     "files": 0,
+     "clicked": 0,
+     "captured": 0,
+     "selected": [],
+     "unselected_files": []
+    },
+    {
+     "url": "https://www.krm.co.il/?CategoryID=231",
+     "cache": "hit",
+     "links": 13,
+     "followed": [],
+     "files": 0,
+     "clicked": 0,
+     "captured": 0,
+     "selected": [],
+     "unselected_files": []
+    },
+    {
+     "url": "https://www.krm.co.il/?CategoryID=258",
+     "cache": "hit",
+     "links": 15,
+     "followed": [
+      "https://www.krm.co.il/?pg=GetFile&CategoryID=258&ArticleID=170&ID=3284"
+     ],
+     "files": 0,
+     "clicked": 0,
+     "captured": 0,
+     "selected": [],
+     "unselected_files": []
+    },
+    {
+     "url": "https://www.krm.co.il/?CategoryID=262",
+     "cache": "sig-mismatch",
+     "links": 0,
+     "followed": [],
+     "files": 0,
+     "clicked": 0,
+     "captured": 0,
+     "selected": [],
+     "unselected_files": []
+    },
+    {
+     "url": "https://www.krm.co.il/?CategoryID=216",
+     "cache": "sig-mismatch",
+     "links": 0,
+     "followed": [],
+     "files": 0,
+     "clicked": 0,
+     "captured": 0,
+     "selected": [],
+     "unselected_files": []
+    },
+    {
+     "url": "https://www.krm.co.il/?CategoryID=217&ArticleID=14",
+     "cache": "hit",
+     "links": 11,
+     "followed": [],
+     "files": 0,
+     "clicked": 0,
+     "captured": 0,
+     "selected": [],
+     "unselected_files": []
+    },
+    {
+     "url": "https://www.krm.co.il/?pg=GetFile&CategoryID=258&ArticleID=170&ID=3284",
+     "cache": "none",
+     "links": 0,
+     "followed": [],
+     "files": 0,
+     "clicked": 0,
+     "captured": 0,
+     "selected": [],
+     "unselected_files": []
+    }
+   ],
+   "new_docs": 0,
+   "found": 0,
+   "selected": 0,
+   "had": 0,
+   "head_skip": 0,
+   "cache_sig-mismatch": 6,
+   "page_cache": 5,
+   "cache_hit": 5,
+   "cache_none": 1,
+   "errors": [],
+   "diag": [
+    "החברה המנהלת של רו: links=0 files=0 clicked=0 captured=0 selected=0",
+    "החברה המנהלת של רו: links=0 files=0 clicked=0 captured=0 selected=0",
+    "החברה המנהלת של רו: links=0 files=0 clicked=0 captured=0 selected=0",
+    "החברה המנהלת של רו: links=0 files=0 clicked=0 captured=0 selected=0",
+    "החברה המנהלת של רו: links=12 files=0 clicked=0 captured=0 selected=0",
+    "החברה המנהלת של רו: links=10 files=0 clicked=0 captured=0 selected=0",
+    "החברה המנהלת של רו: links=13 files=0 clicked=0 captured=0 selected=0",
+    "החברה המנהלת של רו: links=15 files=0 clicked=0 captured=0 selected=0",
+    "החברה המנהלת של רו: links=0 files=0 clicked=0 captured=0 selected=0",
+    "החברה המנהלת של רו: links=0 files=0 clicked=0 captured=0 selected=0",
+    "החברה המנהלת של רו: links=11 files=0 clicked=0 captured=0 selected=0",
+    "החברה המנהלת של רו: links=0 files=0 clicked=0 captured=0 selected=0"
    ],
    "new_files": []
   }
