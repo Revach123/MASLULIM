@@ -1,6 +1,6 @@
 {
  "legal_id": "512237744",
- "taken": "2026-11-19T14:54:24+00:00",
+ "taken": "2026-11-20T14:40:24+00:00",
  "pages": {
   "https://www.migdal.co.il/regulations/": {
    "product": null,
@@ -220,11 +220,11 @@
    ]
   },
   "https://www.migdal.co.il/regulations/makefet-yield-components": {
-   "product": "פנסיה",
+   "product": "פנסיה+ביטוח",
    "status": 200,
    "method": "browser",
-   "text_hash": "7ef83dbfabb76ba80f6bff511f69f32d356d3bbd",
-   "text_head": "אתר זה עושה שימוש בטכנולוגיות איסוף מידע כגון עוגיות (Cookies), לרבות על ידי צדדים שלישיים, כדי לספק לך חווית גלישה טובה יותר, וכן לניתוח השימוש ולצרכי פרסום מותאם. המשך הגלישה מהווה את הסכמתך לשימוש זה. למידע נוסף, יש לעיין במדיניות הפרטיות המעודכנת לדלג לתוכן הראשי חיסכון אישי והשקעות חיסכון פנסיוני ביטוחים תביעות שירותים פעולות כניסה לפורטלים עברית מגדל שלי דף הבית מרכיבי תשואה מגדל מקפת - מרכיבי תשואה ​ ​ קופות גמל מצטבר - רבעוני מגדל מקפת אישית מגדל מקפת משלימה פירוט מרכיבי תשואה רבעון שלישי 2026 מגדל השתלמות- מסלול כללי להורדה מגדל השתלמות- מסלול מניות להורדה מגדל השתלמות- מסלול אג\"ח ממש",
+   "text_hash": "400c5c241c99d4ebbd80ce3aed3909a88c8cc734",
+   "text_head": "דלג לתוכן login / registration English About About Investors Investors Leadership Leadership Vision and Strategy Vision and Strategy Migdal Group Insurance & Finance Welcome to Migdal Migdal, the leading insurance, pension and financial group in Israel, sees itself as having a major role in the building of a humane, healthy and stable society. As a leading Israeli company for the last 91 years, our work has always been to manage our customers’ money responsibly and provide economic security for about 2.5 million customers, who have entrusted us with their insurance funds, pension savings and l",
    "items": [
     {
      "text": "makefet-budgetary-fund-311222.xlsx",
@@ -232,22 +232,6 @@
      "year": "2020",
      "iframe": false,
      "doc": true,
-     "internal": true
-    },
-    {
-     "text": "קרן פנסיה משלימה",
-     "href": "https://www.migdal.co.il/product-lobby/upplementary-pension-fund",
-     "year": null,
-     "iframe": false,
-     "doc": false,
-     "internal": true
-    },
-    {
-     "text": "קרן פנסיה אישית",
-     "href": "https://www.migdal.co.il/product-lobby/pensionary-savings",
-     "year": null,
-     "iframe": false,
-     "doc": false,
      "internal": true
     },
     {
@@ -284,7 +268,7 @@
     },
     {
      "text": "קופת גמל להשקעה",
-     "href": "https://www.migdal.co.il/product-lobby/personal-savings",
+     "href": "https://www.migdal.co.il/product-lobby/provident-fund-for-investment",
      "year": null,
      "iframe": false,
      "doc": false,
@@ -292,7 +276,7 @@
     },
     {
      "text": "קופת גמל להשקעה",
-     "href": "https://www.migdal.co.il/product-lobby/provident-fund-for-investment",
+     "href": "https://www.migdal.co.il/product-lobby/personal-savings",
      "year": null,
      "iframe": false,
      "doc": false,
@@ -315,8 +299,32 @@
      "internal": true
     },
     {
+     "text": "פנסיה משלימה",
+     "href": "https://www.migdal.co.il/product-lobby/upplementary-pension-fund",
+     "year": null,
+     "iframe": false,
+     "doc": false,
+     "internal": true
+    },
+    {
+     "text": "פנסיה אישית",
+     "href": "https://www.migdal.co.il/product-lobby/pensionary-savings",
+     "year": null,
+     "iframe": false,
+     "doc": false,
+     "internal": true
+    },
+    {
      "text": "פדיון פנסיה",
      "href": "https://my.migdal.co.il/mymigdal/process/pensionredemption",
+     "year": null,
+     "iframe": false,
+     "doc": false,
+     "internal": true
+    },
+    {
+     "text": "מנהלים לשכירים",
+     "href": "https://www.migdal.co.il/product-lobby/personal-pension-complementary",
      "year": null,
      "iframe": false,
      "doc": false,
@@ -345,207 +353,6 @@
      "iframe": false,
      "doc": false,
      "internal": true
-    },
-    {
-     "text": "מגדל לתגמולים ולפיצויים- עוקב מדדי מניות להורדה להורדה להורדה",
-     "href": "https://download-files.wixmp.com/ugd/571a7f_65e0b4d026c84b5eab425007dbb87645.xlsx?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJvYmoiOltbeyJwYXRoIjoiL3VnZC81NzFhN2ZfNjVlMGI0ZDAyNmM4NGI1ZWFiNDI1MDA3ZGJiODc2NDUueGxzeCJ9XV0sImRpcyI6eyJmaWxlbmFtZSI6IjUxMjIzNzc0NF9nMTUwNTVfWWllbGQ0MjUueGxzeCIsInR5cGUiOiJhdHRhY2htZW50In0sImF1ZCI6WyJ1cm46c2VydmljZTpmaWxlLmRvd25sb2FkIl0sImV4cCI6MTc5NTEzNjM3NywianRpIjoiMTc0MzZlM2QtYTMyMS00ZWY4LTk2MTUtYWU5YjQwNTY0YjE1IiwiaWF0IjoxNzk1MTAwMzc3LCJpc3MiOiJ1cm46YXBwOmU2NjYzMGU3MTRmMDQ5MGFhZWExZjE0OWIzYjY5ZTMyIiwic3ViIjoidXJuOmFwcDplNjY2MzBlNzE0ZjA0OTBhYWVhMWYxNDliM2I2OWUzMiJ9.JN7kU28esmD_Mn51ihvBfIiaQZz1Mj29H1HyDWBdiK4",
-     "year": null,
-     "iframe": false,
-     "doc": true,
-     "internal": false
-    },
-    {
-     "text": "מגדל לתגמולים ולפיצויים- מסלול לבני 60 ומעלה להורדה להורדה להורדה",
-     "href": "https://download-files.wixmp.com/ugd/571a7f_1469e84976564c1786ace4aae28b3f3d.xlsx?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJvYmoiOltbeyJwYXRoIjoiL3VnZC81NzFhN2ZfMTQ2OWU4NDk3NjU2NGMxNzg2YWNlNGFhZTI4YjNmM2QueGxzeCJ9XV0sImRpcyI6eyJmaWxlbmFtZSI6IjUxMjIzNzc0NF9nOTc4MV9ZaWVsZDQyNS54bHN4IiwidHlwZSI6ImF0dGFjaG1lbnQifSwiYXVkIjpbInVybjpzZXJ2aWNlOmZpbGUuZG93bmxvYWQiXSwiZXhwIjoxNzk1MTM2Mzc1LCJqdGkiOiJlYjY0MDk1Ny02YTkxLTRkNDUtOTNiNi02NDZkMDk0Yzk0ZWYiLCJpYXQiOjE3OTUxMDAzNzUsImlzcyI6InVybjphcHA6ZTY2NjMwZTcxNGYwNDkwYWFlYTFmMTQ5YjNiNjllMzIiLCJzdWIiOiJ1cm46YXBwOmU2NjYzMGU3MTRmMDQ5MGFhZWExZjE0OWIzYjY5ZTMyIn0.K3nMnyjYt6CNhj0YWZM1A_a3QUVkdtRShQoqdMM4UHk",
-     "year": null,
-     "iframe": false,
-     "doc": true,
-     "internal": false
-    },
-    {
-     "text": "מגדל לתגמולים ולפיצויים- מסלול לבני 50 עד 60 להורדה להורדה להורדה",
-     "href": "https://download-files.wixmp.com/ugd/ebf348_f018471ea2e54384910f0e8b95b3d140.xlsx?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJvYmoiOltbeyJwYXRoIjoiL3VnZC9lYmYzNDhfZjAxODQ3MWVhMmU1NDM4NDkxMGYwZThiOTViM2QxNDAueGxzeCJ9XV0sImRpcyI6eyJmaWxlbmFtZSI6IjUxMjIzNzc0NF9nOTc4MF9ZaWVsZDEyNi54bHN4IiwidHlwZSI6ImF0dGFjaG1lbnQifSwiYXVkIjpbInVybjpzZXJ2aWNlOmZpbGUuZG93bmxvYWQiXSwiZXhwIjoxNzk1MTM2MzcwLCJqdGkiOiJlMGY0NjAzMC0yMGJkLTQ1NDMtYjFiZS1jZjMxZWJlMWNhMGIiLCJpYXQiOjE3OTUxMDAzNzAsImlzcyI6InVybjphcHA6ZTY2NjMwZTcxNGYwNDkwYWFlYTFmMTQ5YjNiNjllMzIiLCJzdWIiOiJ1cm46YXBwOmU2NjYzMGU3MTRmMDQ5MGFhZWExZjE0OWIzYjY5ZTMyIn0.DGDja7piPEupBHnvroPd8cH9HAghn6sjAvmB77dSW1c",
-     "year": null,
-     "iframe": false,
-     "doc": true,
-     "internal": false
-    },
-    {
-     "text": "מגדל לתגמולים ולפיצויים- מסלול אשראי ואג\"ח להורדה להורדה להורדה",
-     "href": "https://download-files.wixmp.com/ugd/571a7f_02c4efbc15fd4a03bf57df762e559ce2.xlsx?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJvYmoiOltbeyJwYXRoIjoiL3VnZC81NzFhN2ZfMDJjNGVmYmMxNWZkNGEwM2JmNTdkZjc2MmU1NTljZTIueGxzeCJ9XV0sImRpcyI6eyJmaWxlbmFtZSI6IjUxMjIzNzc0NF9nODAxMl9ZaWVsZDQyNS54bHN4IiwidHlwZSI6ImF0dGFjaG1lbnQifSwiYXVkIjpbInVybjpzZXJ2aWNlOmZpbGUuZG93bmxvYWQiXSwiZXhwIjoxNzk1MTM2Mzc3LCJqdGkiOiJiY2FkZjY5NS1iNGY1LTQwZDUtYjNkZS0zMDNhNGEyZTBjMDQiLCJpYXQiOjE3OTUxMDAzNzcsImlzcyI6InVybjphcHA6ZTY2NjMwZTcxNGYwNDkwYWFlYTFmMTQ5YjNiNjllMzIiLCJzdWIiOiJ1cm46YXBwOmU2NjYzMGU3MTRmMDQ5MGFhZWExZjE0OWIzYjY5ZTMyIn0.AfMcfZjBGRgo1sD_Kvh-ivFIMAOpXYmimZvxULC30gE",
-     "year": null,
-     "iframe": false,
-     "doc": true,
-     "internal": false
-    },
-    {
-     "text": "מגדל לתגמולים ולפיצויים- מסלול אג\"ח ממשלות להורדה להורדה להורדה",
-     "href": "https://download-files.wixmp.com/ugd/ebf348_c46c1d20f80847d59d89a29efc120f88.xlsx?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJvYmoiOltbeyJwYXRoIjoiL3VnZC9lYmYzNDhfYzQ2YzFkMjBmODA4NDdkNTlkODlhMjllZmMxMjBmODgueGxzeCJ9XV0sImRpcyI6eyJmaWxlbmFtZSI6IjUxMjIzNzc0NF9nODU5X1lpZWxkMTI2Lnhsc3giLCJ0eXBlIjoiYXR0YWNobWVudCJ9LCJhdWQiOlsidXJuOnNlcnZpY2U6ZmlsZS5kb3dubG9hZCJdLCJleHAiOjE3OTUxMzYzNzMsImp0aSI6IjVkNTJmODUxLWVmNGYtNGQ0Ny05NDI5LTBkYzNhZDI1YWEyYiIsImlhdCI6MTc5NTEwMDM3MywiaXNzIjoidXJuOmFwcDplNjY2MzBlNzE0ZjA0OTBhYWVhMWYxNDliM2I2OWUzMiIsInN1YiI6InVybjphcHA6ZTY2NjMwZTcxNGYwNDkwYWFlYTFmMTQ5YjNiNjllMzIifQ.ykeGUmBKjIb_Oez_v-ucQRZSUev4j65ZYn2cTtKaSao",
-     "year": null,
-     "iframe": false,
-     "doc": true,
-     "internal": false
-    },
-    {
-     "text": "מגדל לתגמולים ולפיצויים - מסלול מניות סחיר להורדה להורדה להורדה",
-     "href": "https://download-files.wixmp.com/ugd/ebf348_a00f607408d44928b0dea709c8d0a93b.xlsx?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJvYmoiOltbeyJwYXRoIjoiL3VnZC9lYmYzNDhfYTAwZjYwNzQwOGQ0NDkyOGIwZGVhNzA5YzhkMGE5M2IueGxzeCJ9XV0sImRpcyI6eyJmaWxlbmFtZSI6IjUxMjIzNzc0NF9nMTU0NTNfWWllbGQxMjYueGxzeCIsInR5cGUiOiJhdHRhY2htZW50In0sImF1ZCI6WyJ1cm46c2VydmljZTpmaWxlLmRvd25sb2FkIl0sImV4cCI6MTc5NTEzNjM3MCwianRpIjoiZDM2NTEwMGEtZmY2OS00Y2E4LWExNGQtMGZhOWEzNDgyMTU1IiwiaWF0IjoxNzk1MTAwMzcwLCJpc3MiOiJ1cm46YXBwOmU2NjYzMGU3MTRmMDQ5MGFhZWExZjE0OWIzYjY5ZTMyIiwic3ViIjoidXJuOmFwcDplNjY2MzBlNzE0ZjA0OTBhYWVhMWYxNDliM2I2OWUzMiJ9.bcKybiEg2ImMwcSSZq052CkmeS_uzVwprOi1Il08nlc",
-     "year": null,
-     "iframe": false,
-     "doc": true,
-     "internal": false
-    },
-    {
-     "text": "מגדל חסכון לילד- מסלול חוסכים המעדיפים סיכון מוגבר להורדה להורדה להורדה",
-     "href": "https://download-files.wixmp.com/ugd/571a7f_66748c7e756b4ca0bb306e9eabb66c1f.xlsx?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJvYmoiOltbeyJwYXRoIjoiL3VnZC81NzFhN2ZfNjY3NDhjN2U3NTZiNGNhMGJiMzA2ZTllYWJiNjZjMWYueGxzeCJ9XV0sImRpcyI6eyJmaWxlbmFtZSI6IjUxMjIzNzc0NF9nOTg5OF9ZaWVsZDQyNS54bHN4IiwidHlwZSI6ImF0dGFjaG1lbnQifSwiYXVkIjpbInVybjpzZXJ2aWNlOmZpbGUuZG93bmxvYWQiXSwiZXhwIjoxNzk1MTM2Mzc1LCJqdGkiOiI0ZDU3NzU1Zi03YTNjLTRkYmEtODg5Mi1iN2IwMWU2Mzc0M2YiLCJpYXQiOjE3OTUxMDAzNzUsImlzcyI6InVybjphcHA6ZTY2NjMwZTcxNGYwNDkwYWFlYTFmMTQ5YjNiNjllMzIiLCJzdWIiOiJ1cm46YXBwOmU2NjYzMGU3MTRmMDQ5MGFhZWExZjE0OWIzYjY5ZTMyIn0.BSzjENljZK4s9mcs4N9akFBsKNm36dOcHV4LHZXqr54",
-     "year": null,
-     "iframe": false,
-     "doc": true,
-     "internal": false
-    },
-    {
-     "text": "מגדל חסכון לילד- מסלול חוסכים המעדיפים סיכון בינוני להורדה להורדה להורדה",
-     "href": "https://download-files.wixmp.com/ugd/571a7f_534d6f62b8cb476cba920a307d23e5e9.xlsx?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJvYmoiOltbeyJwYXRoIjoiL3VnZC81NzFhN2ZfNTM0ZDZmNjJiOGNiNDc2Y2JhOTIwYTMwN2QyM2U1ZTkueGxzeCJ9XV0sImRpcyI6eyJmaWxlbmFtZSI6IjUxMjIzNzc0NF9nOTg5N19ZaWVsZDQyNS54bHN4IiwidHlwZSI6ImF0dGFjaG1lbnQifSwiYXVkIjpbInVybjpzZXJ2aWNlOmZpbGUuZG93bmxvYWQiXSwiZXhwIjoxNzk1MTM2Mzc0LCJqdGkiOiJiZjJkMWNiNS1kZWM4LTQ3YjQtOTYyMy1hOWQ0NzVkYzNmMGMiLCJpYXQiOjE3OTUxMDAzNzQsImlzcyI6InVybjphcHA6ZTY2NjMwZTcxNGYwNDkwYWFlYTFmMTQ5YjNiNjllMzIiLCJzdWIiOiJ1cm46YXBwOmU2NjYzMGU3MTRmMDQ5MGFhZWExZjE0OWIzYjY5ZTMyIn0.FLJxqEczAV407MRRJj6sytTZfUYCyf49bVOWCiytS6I",
-     "year": null,
-     "iframe": false,
-     "doc": true,
-     "internal": false
-    },
-    {
-     "text": "מגדל חיסכון לילד סיכון מועט להורדה להורדה להורדה",
-     "href": "https://download-files.wixmp.com/ugd/5adfdb_95d78e4545674122b1434dd7e3ff6c9b.xlsx?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJvYmoiOltbeyJwYXRoIjoiL3VnZC81YWRmZGJfOTVkNzhlNDU0NTY3NDEyMmIxNDM0ZGQ3ZTNmZjZjOWIueGxzeCJ9XV0sImRpcyI6eyJmaWxlbmFtZSI6Im1pZ2RhbC1tYWtlZmV0LXNhdmluZy1wbGFuLWZvci1jaGlsZHJlbi1sb3ctcmlzay10cmFjay0zMTEyMjIueGxzeCIsInR5cGUiOiJhdHRhY2htZW50In0sImF1ZCI6WyJ1cm46c2VydmljZTpmaWxlLmRvd25sb2FkIl0sImV4cCI6MTc5NTEzNjM4MywianRpIjoiMTFhNDgwZjItMTUxZi00MjMwLWExZmYtOWU1NTZlNDFhOTA0IiwiaWF0IjoxNzk1MTAwMzgzLCJpc3MiOiJ1cm46YXBwOmU2NjYzMGU3MTRmMDQ5MGFhZWExZjE0OWIzYjY5ZTMyIiwic3ViIjoidXJuOmFwcDplNjY2MzBlNzE0ZjA0OTBhYWVhMWYxNDliM2I2OWUzMiJ9.QSdgMpu6_WK1QIYED4eGTi907QnxDOzCpJPiqtEEM1w",
-     "year": null,
-     "iframe": false,
-     "doc": true,
-     "internal": false
-    },
-    {
-     "text": "מגדל חיסכון לילד סיכון מוגבר להורדה להורדה להורדה",
-     "href": "https://download-files.wixmp.com/ugd/5adfdb_06e431b129154e1fbfbe5d5a7db5e567.xlsx?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJvYmoiOltbeyJwYXRoIjoiL3VnZC81YWRmZGJfMDZlNDMxYjEyOTE1NGUxZmJmYmU1ZDVhN2RiNWU1NjcueGxzeCJ9XV0sImRpcyI6eyJmaWxlbmFtZSI6Im1pZ2RhbC1tYWtlZmV0LXNhdmluZy1wbGFuLWZvci1jaGlsZHJlbi1oaWdoLXJpc2stdHJhY2stMzExMjIueGxzeCIsInR5cGUiOiJhdHRhY2htZW50In0sImF1ZCI6WyJ1cm46c2VydmljZTpmaWxlLmRvd25sb2FkIl0sImV4cCI6MTc5NTEzNjM4NSwianRpIjoiM2YyZWQ2NmMtMjlkZS00M2FmLTliNWMtOGNiMDg0YzY5MWE5IiwiaWF0IjoxNzk1MTAwMzg1LCJpc3MiOiJ1cm46YXBwOmU2NjYzMGU3MTRmMDQ5MGFhZWExZjE0OWIzYjY5ZTMyIiwic3ViIjoidXJuOmFwcDplNjY2MzBlNzE0ZjA0OTBhYWVhMWYxNDliM2I2OWUzMiJ9.QAL7Ghf0gViTpqdBpPVgx5p3GkGUByhDOfcpK8oumTU",
-     "year": null,
-     "iframe": false,
-     "doc": true,
-     "internal": false
-    },
-    {
-     "text": "מגדל חיסכון לילד סיכון בינוני להורדה להורדה להורדה",
-     "href": "https://download-files.wixmp.com/ugd/5adfdb_12cbe14bf86c4edcbfd70158149413e0.xlsx?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJvYmoiOltbeyJwYXRoIjoiL3VnZC81YWRmZGJfMTJjYmUxNGJmODZjNGVkY2JmZDcwMTU4MTQ5NDEzZTAueGxzeCJ9XV0sImRpcyI6eyJmaWxlbmFtZSI6Im1pZ2RhbC1tYWtlZmV0LXNhdmluZy1wbGFuLWZvci1jaGlsZHJlbi1tZWRpdW0tcmlzay10cmFjay0zMTEueGxzeCIsInR5cGUiOiJhdHRhY2htZW50In0sImF1ZCI6WyJ1cm46c2VydmljZTpmaWxlLmRvd25sb2FkIl0sImV4cCI6MTc5NTEzNjM4NCwianRpIjoiMGVkYjM4NGYtNDVkYS00M2Q3LThkNjYtYzhjMWUwOGE1YTVjIiwiaWF0IjoxNzk1MTAwMzg0LCJpc3MiOiJ1cm46YXBwOmU2NjYzMGU3MTRmMDQ5MGFhZWExZjE0OWIzYjY5ZTMyIiwic3ViIjoidXJuOmFwcDplNjY2MzBlNzE0ZjA0OTBhYWVhMWYxNDliM2I2OWUzMiJ9.TDcE6NKNj87z-CbEpCzfL2rU7KMinb9UtLpR1ajue3U",
-     "year": null,
-     "iframe": false,
-     "doc": true,
-     "internal": false
-    },
-    {
-     "text": "מגדל חיסכון לילד הלכתי להורדה להורדה להורדה",
-     "href": "https://download-files.wixmp.com/ugd/5adfdb_98e4a419e78442ccb96a8e28db092ae9.xlsx?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJvYmoiOltbeyJwYXRoIjoiL3VnZC81YWRmZGJfOThlNGE0MTllNzg0NDJjY2I5NmE4ZTI4ZGIwOTJhZTkueGxzeCJ9XV0sImRpcyI6eyJmaWxlbmFtZSI6Im1pZ2RhbC1tYWtlZmV0LXNhdmluZy1wbGFuLWZvci1jaGlsZHJlbi1rb3NoZXItdHJhY2stMzExMjIyLnhsc3giLCJ0eXBlIjoiYXR0YWNobWVudCJ9LCJhdWQiOlsidXJuOnNlcnZpY2U6ZmlsZS5kb3dubG9hZCJdLCJleHAiOjE3OTUxMzYzODIsImp0aSI6IjIxNmVjNjBhLWNlZTMtNGMyMC04MzY3LTA5NTc0OWExM2UyMSIsImlhdCI6MTc5NTEwMDM4MiwiaXNzIjoidXJuOmFwcDplNjY2MzBlNzE0ZjA0OTBhYWVhMWYxNDliM2I2OWUzMiIsInN1YiI6InVybjphcHA6ZTY2NjMwZTcxNGYwNDkwYWFlYTFmMTQ5YjNiNjllMzIifQ.trzWvTJr8aXwBfF0_l6b5ZugxTxXO4_B85cmnsn8bPY",
-     "year": null,
-     "iframe": false,
-     "doc": true,
-     "internal": false
-    },
-    {
-     "text": "מגדל השתלמות- מסלול מניות להורדה להורדה להורדה",
-     "href": "https://download-files.wixmp.com/ugd/571a7f_330fe6bebe2e4b9ba0cf4018eba4cda8.xlsx?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJvYmoiOltbeyJwYXRoIjoiL3VnZC81NzFhN2ZfMzMwZmU2YmViZTJlNGI5YmEwY2Y0MDE4ZWJhNGNkYTgueGxzeCJ9XV0sImRpcyI6eyJmaWxlbmFtZSI6IjUxMjIzNzc0NF9nODY5X1lpZWxkMzI2Lnhsc3giLCJ0eXBlIjoiYXR0YWNobWVudCJ9LCJhdWQiOlsidXJuOnNlcnZpY2U6ZmlsZS5kb3dubG9hZCJdLCJleHAiOjE3OTUxMzYzNjIsImp0aSI6IjI0YmZjN2UzLWU2YjYtNDY5Ni1iZjQwLTg1YzA0MGQyOWRjMyIsImlhdCI6MTc5NTEwMDM2MiwiaXNzIjoidXJuOmFwcDplNjY2MzBlNzE0ZjA0OTBhYWVhMWYxNDliM2I2OWUzMiIsInN1YiI6InVybjphcHA6ZTY2NjMwZTcxNGYwNDkwYWFlYTFmMTQ5YjNiNjllMzIifQ.aPNYbi_e15yaAh5AGsnJGuF9Z8eoLneg7R3GUh3Wpo4",
-     "year": null,
-     "iframe": false,
-     "doc": true,
-     "internal": false
-    },
-    {
-     "text": "מגדל השתלמות- מסלול כספי (שקלי) להורדה להורדה להורדה",
-     "href": "https://download-files.wixmp.com/ugd/571a7f_88b098d5809249549dfb1de4bc42dd63.xlsx?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJvYmoiOltbeyJwYXRoIjoiL3VnZC81NzFhN2ZfODhiMDk4ZDU4MDkyNDk1NDlkZmIxZGU0YmM0MmRkNjMueGxzeCJ9XV0sImRpcyI6eyJmaWxlbmFtZSI6IjUxMjIzNzc0NF9nODY0X1lpZWxkMzI2Lnhsc3giLCJ0eXBlIjoiYXR0YWNobWVudCJ9LCJhdWQiOlsidXJuOnNlcnZpY2U6ZmlsZS5kb3dubG9hZCJdLCJleHAiOjE3OTUxMzYzNjMsImp0aSI6IjY2NGNlYmU0LTU0YjctNGIxZC04ZTRkLWI3ZTVhZWRkMmRlYSIsImlhdCI6MTc5NTEwMDM2MywiaXNzIjoidXJuOmFwcDplNjY2MzBlNzE0ZjA0OTBhYWVhMWYxNDliM2I2OWUzMiIsInN1YiI6InVybjphcHA6ZTY2NjMwZTcxNGYwNDkwYWFlYTFmMTQ5YjNiNjllMzIifQ.pv8fkFveo_ByNpncTNbqN7BxE1qjD8AxO7FhYVWjGPE",
-     "year": null,
-     "iframe": false,
-     "doc": true,
-     "internal": false
-    },
-    {
-     "text": "מגדל השתלמות- מסלול כספי (שקלי) להורדה להורדה להורדה",
-     "href": "https://download-files.wixmp.com/ugd/ebf348_f77408f3c2d6479fa9c3a0df80d0cf17.xlsx?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJvYmoiOltbeyJwYXRoIjoiL3VnZC9lYmYzNDhfZjc3NDA4ZjNjMmQ2NDc5ZmE5YzNhMGRmODBkMGNmMTcueGxzeCJ9XV0sImRpcyI6eyJmaWxlbmFtZSI6IjUxMjIzNzc0NF9nODY0X1lpZWxkMTI2Lnhsc3giLCJ0eXBlIjoiYXR0YWNobWVudCJ9LCJhdWQiOlsidXJuOnNlcnZpY2U6ZmlsZS5kb3dubG9hZCJdLCJleHAiOjE3OTUxMzYzNzIsImp0aSI6IjdkMTNiZGQ5LTQ5MGQtNGRiNi1iMzZmLTJlZDY5NTAyYjIwMSIsImlhdCI6MTc5NTEwMDM3MiwiaXNzIjoidXJuOmFwcDplNjY2MzBlNzE0ZjA0OTBhYWVhMWYxNDliM2I2OWUzMiIsInN1YiI6InVybjphcHA6ZTY2NjMwZTcxNGYwNDkwYWFlYTFmMTQ5YjNiNjllMzIifQ.oT1lje-3u9FcMrCHYVbSh7Q-GnHAxpJRlcG6pkKAPS0",
-     "year": null,
-     "iframe": false,
-     "doc": true,
-     "internal": false
-    },
-    {
-     "text": "מגדל השתלמות- מסלול כללי להורדה להורדה להורדה",
-     "href": "https://download-files.wixmp.com/ugd/571a7f_b3be53a2af574f44a6ca170bb0f945fc.xlsx?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJvYmoiOltbeyJwYXRoIjoiL3VnZC81NzFhN2ZfYjNiZTUzYTJhZjU3NGY0NGE2Y2ExNzBiYjBmOTQ1ZmMueGxzeCJ9XV0sImRpcyI6eyJmaWxlbmFtZSI6IjUxMjIzNzc0NF9nNTc5X1lpZWxkMzI2Lnhsc3giLCJ0eXBlIjoiYXR0YWNobWVudCJ9LCJhdWQiOlsidXJuOnNlcnZpY2U6ZmlsZS5kb3dubG9hZCJdLCJleHAiOjE3OTUxMzYzNjEsImp0aSI6ImNkNGQ1ODUzLWQ1ZGQtNGQ2Ny04MzVmLWVkZTlmYTliODY2ZCIsImlhdCI6MTc5NTEwMDM2MSwiaXNzIjoidXJuOmFwcDplNjY2MzBlNzE0ZjA0OTBhYWVhMWYxNDliM2I2OWUzMiIsInN1YiI6InVybjphcHA6ZTY2NjMwZTcxNGYwNDkwYWFlYTFmMTQ5YjNiNjllMzIifQ.Ri7k9ABomXFCCg7bo4m2nWMHG_nv9JPG58gEqkgw73I",
-     "year": null,
-     "iframe": false,
-     "doc": true,
-     "internal": false
-    },
-    {
-     "text": "מגדל השתלמות- מסלול כללי להורדה להורדה להורדה",
-     "href": "https://download-files.wixmp.com/ugd/ebf348_53b6a75b273349469c86f03edabad580.xlsx?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJvYmoiOltbeyJwYXRoIjoiL3VnZC9lYmYzNDhfNTNiNmE3NWIyNzMzNDk0NjljODZmMDNlZGFiYWQ1ODAueGxzeCJ9XV0sImRpcyI6eyJmaWxlbmFtZSI6IjUxMjIzNzc0NF9nNTc5X1lpZWxkMTI2Lnhsc3giLCJ0eXBlIjoiYXR0YWNobWVudCJ9LCJhdWQiOlsidXJuOnNlcnZpY2U6ZmlsZS5kb3dubG9hZCJdLCJleHAiOjE3OTUxMzYzNzEsImp0aSI6ImNlNjM1NzllLWJiMDAtNGFmOS05MzljLWIxOWIwMzkxYThiYyIsImlhdCI6MTc5NTEwMDM3MSwiaXNzIjoidXJuOmFwcDplNjY2MzBlNzE0ZjA0OTBhYWVhMWYxNDliM2I2OWUzMiIsInN1YiI6InVybjphcHA6ZTY2NjMwZTcxNGYwNDkwYWFlYTFmMTQ5YjNiNjllMzIifQ.tJNQGsf2cd1oZGAeYNM9LBNubEu7yXU2or2bZJeV4ig",
-     "year": null,
-     "iframe": false,
-     "doc": true,
-     "internal": false
-    },
-    {
-     "text": "מגדל השתלמות- מסלול הלכה להורדה להורדה להורדה",
-     "href": "https://download-files.wixmp.com/ugd/571a7f_18308a1f97ea434588477a1c9be6a415.xlsx?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJvYmoiOltbeyJwYXRoIjoiL3VnZC81NzFhN2ZfMTgzMDhhMWY5N2VhNDM0NTg4NDc3YTFjOWJlNmE0MTUueGxzeCJ9XV0sImRpcyI6eyJmaWxlbmFtZSI6IjUxMjIzNzc0NF9nMjA0OF9ZaWVsZDMyNi54bHN4IiwidHlwZSI6ImF0dGFjaG1lbnQifSwiYXVkIjpbInVybjpzZXJ2aWNlOmZpbGUuZG93bmxvYWQiXSwiZXhwIjoxNzk1MTM2MzY1LCJqdGkiOiJkMmUxNWFjZi0yZGE4LTRmYjEtOWQwNi03YWI1Nzg1ODYyNGUiLCJpYXQiOjE3OTUxMDAzNjUsImlzcyI6InVybjphcHA6ZTY2NjMwZTcxNGYwNDkwYWFlYTFmMTQ5YjNiNjllMzIiLCJzdWIiOiJ1cm46YXBwOmU2NjYzMGU3MTRmMDQ5MGFhZWExZjE0OWIzYjY5ZTMyIn0.W06EHfeBFBzYxMUa3L_r7l4FPypDM29npuybR4cS31s",
-     "year": null,
-     "iframe": false,
-     "doc": true,
-     "internal": false
-    },
-    {
-     "text": "מגדל השתלמות- מסלול אשראי ואג\"ח להורדה להורדה להורדה",
-     "href": "https://download-files.wixmp.com/ugd/571a7f_a6385b1abaaf4827b2400fbe096393cd.xlsx?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJvYmoiOltbeyJwYXRoIjoiL3VnZC81NzFhN2ZfYTYzODViMWFiYWFmNDgyN2IyNDAwZmJlMDk2MzkzY2QueGxzeCJ9XV0sImRpcyI6eyJmaWxlbmFtZSI6IjUxMjIzNzc0NF9nMTk5X1lpZWxkMzI2Lnhsc3giLCJ0eXBlIjoiYXR0YWNobWVudCJ9LCJhdWQiOlsidXJuOnNlcnZpY2U6ZmlsZS5kb3dubG9hZCJdLCJleHAiOjE3OTUxMzYzNjQsImp0aSI6IjAwMzNhY2U1LTgxOTUtNDgyMi1hMmYyLWY1M2QzN2NlOTA3MiIsImlhdCI6MTc5NTEwMDM2NCwiaXNzIjoidXJuOmFwcDplNjY2MzBlNzE0ZjA0OTBhYWVhMWYxNDliM2I2OWUzMiIsInN1YiI6InVybjphcHA6ZTY2NjMwZTcxNGYwNDkwYWFlYTFmMTQ5YjNiNjllMzIifQ.Ce9lVku2PDOXR1QZEJNdtQMtHXtMwzpaXcmLe3eMD_c",
-     "year": null,
-     "iframe": false,
-     "doc": true,
-     "internal": false
-    },
-    {
-     "text": "מגדל השתלמות- מסלול אג\"ח ממשלות להורדה להורדה להורדה",
-     "href": "https://download-files.wixmp.com/ugd/571a7f_07cf33eeddde4e4d9848dfdec01d7619.xlsx?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJvYmoiOltbeyJwYXRoIjoiL3VnZC81NzFhN2ZfMDdjZjMzZWVkZGRlNGU0ZDk4NDhkZmRlYzAxZDc2MTkueGxzeCJ9XV0sImRpcyI6eyJmaWxlbmFtZSI6IjUxMjIzNzc0NF9nODY1X1lpZWxkMzI2Lnhsc3giLCJ0eXBlIjoiYXR0YWNobWVudCJ9LCJhdWQiOlsidXJuOnNlcnZpY2U6ZmlsZS5kb3dubG9hZCJdLCJleHAiOjE3OTUxMzYzNjMsImp0aSI6ImIyMmZiYjljLTBmZWEtNDA0OC04ODk4LTcxMjAzMmVjODQ4YiIsImlhdCI6MTc5NTEwMDM2MywiaXNzIjoidXJuOmFwcDplNjY2MzBlNzE0ZjA0OTBhYWVhMWYxNDliM2I2OWUzMiIsInN1YiI6InVybjphcHA6ZTY2NjMwZTcxNGYwNDkwYWFlYTFmMTQ5YjNiNjllMzIifQ.XR3VmcYb86cYtplHb2bdPvN9uY8Rx4DVg2-t-rA-FbE",
-     "year": null,
-     "iframe": false,
-     "doc": true,
-     "internal": false
-    },
-    {
-     "text": "מגדל גמל להשקעה- מסלול הלכה להורדה להורדה להורדה",
-     "href": "https://download-files.wixmp.com/ugd/ebf348_b0e06663f7ad4072907799c797eb7a6f.xlsx?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJvYmoiOltbeyJwYXRoIjoiL3VnZC9lYmYzNDhfYjBlMDY2NjNmN2FkNDA3MjkwNzc5OWM3OTdlYjdhNmYueGxzeCJ9XV0sImRpcyI6eyJmaWxlbmFtZSI6IjUxMjIzNzc0NF9nNzkzN19ZaWVsZDEyNi54bHN4IiwidHlwZSI6ImF0dGFjaG1lbnQifSwiYXVkIjpbInVybjpzZXJ2aWNlOmZpbGUuZG93bmxvYWQiXSwiZXhwIjoxNzk1MTM2MzczLCJqdGkiOiJmN2EyNWNmNS1mMGMxLTQyMjItODdmYi1jNmYxZGY0NzkwODciLCJpYXQiOjE3OTUxMDAzNzMsImlzcyI6InVybjphcHA6ZTY2NjMwZTcxNGYwNDkwYWFlYTFmMTQ5YjNiNjllMzIiLCJzdWIiOiJ1cm46YXBwOmU2NjYzMGU3MTRmMDQ5MGFhZWExZjE0OWIzYjY5ZTMyIn0.k8EzR8ZWAklTD_1pSI4C5sJ_bEvBDw9VMQJvpcY-mWw",
-     "year": null,
-     "iframe": false,
-     "doc": true,
-     "internal": false
-    },
-    {
-     "text": "מגדל גמל להשקעה- מסלול אשראי ואג\"ח להורדה להורדה להורדה",
-     "href": "https://download-files.wixmp.com/ugd/571a7f_e1ada9f248394604b7505b2b4d008a42.xlsx?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJvYmoiOltbeyJwYXRoIjoiL3VnZC81NzFhN2ZfZTFhZGE5ZjI0ODM5NDYwNGI3NTA1YjJiNGQwMDhhNDIueGxzeCJ9XV0sImRpcyI6eyJmaWxlbmFtZSI6IjUxMjIzNzc0NF9nMTQ5NDRfWWllbGQ0MjUueGxzeCIsInR5cGUiOiJhdHRhY2htZW50In0sImF1ZCI6WyJ1cm46c2VydmljZTpmaWxlLmRvd25sb2FkIl0sImV4cCI6MTc5NTEzNjM3NiwianRpIjoiZDRkMGY1NjktNThkZC00NTA3LTkwMzAtNDJiZjk3YmFiYzU1IiwiaWF0IjoxNzk1MTAwMzc2LCJpc3MiOiJ1cm46YXBwOmU2NjYzMGU3MTRmMDQ5MGFhZWExZjE0OWIzYjY5ZTMyIiwic3ViIjoidXJuOmFwcDplNjY2MzBlNzE0ZjA0OTBhYWVhMWYxNDliM2I2OWUzMiJ9.ZAPD2Zoio9hAFeQRWrPm3PY8MsFehICKqJt7uHWdeBA",
-     "year": null,
-     "iframe": false,
-     "doc": true,
-     "internal": false
-    },
-    {
-     "text": "מגדל גמל להשקעה אג\"ח עד 10% מניות להורדה להורדה להורדה migdal-gemel-investment-fund-bonds-track-up-to-10-share-311222.xlsx",
-     "href": "https://www.migdal.co.il/regulations/makefet-yield-components",
-     "year": null,
-     "iframe": false,
-     "doc": true,
-     "internal": true,
-     "local": "/home/runner/work/_temp/policy_dl/9760330562_migdal-gemel-investment-fund-bonds-track-up-to-10-share-311222.xlsx"
-    },
-    {
-     "text": "מגדל גמל להשקעה אג\"ח עד 10% מניות להורדה להורדה להורדה",
-     "href": "https://download-files.wixmp.com/ugd/5adfdb_6a23088ab2c3401d8e6fb22082f634e1.xlsx?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJvYmoiOltbeyJwYXRoIjoiL3VnZC81YWRmZGJfNmEyMzA4OGFiMmMzNDAxZDhlNmZiMjIwODJmNjM0ZTEueGxzeCJ9XV0sImRpcyI6eyJmaWxlbmFtZSI6Im1pZ2RhbC1nZW1lbC1pbnZlc3RtZW50LWZ1bmQtYm9uZHMtdHJhY2stdXAtdG8tMTAtc2hhcmUtMzExMjIyLnhsc3giLCJ0eXBlIjoiYXR0YWNobWVudCJ9LCJhdWQiOlsidXJuOnNlcnZpY2U6ZmlsZS5kb3dubG9hZCJdLCJleHAiOjE3OTUxMzYzODYsImp0aSI6ImNmOGUyMThiLThkOWYtNDJhYi1iNjBiLWQ0NmE3YjM1YmM5ZCIsImlhdCI6MTc5NTEwMDM4NiwiaXNzIjoidXJuOmFwcDplNjY2MzBlNzE0ZjA0OTBhYWVhMWYxNDliM2I2OWUzMiIsInN1YiI6InVybjphcHA6ZTY2NjMwZTcxNGYwNDkwYWFlYTFmMTQ5YjNiNjllMzIifQ.sbRrXUSBBbIG20DfA-7mAbA63cvvn2Dd2_DzKTq67xk",
-     "year": null,
-     "iframe": false,
-     "doc": true,
-     "internal": false
-    },
-    {
-     "text": "מגדל גמל להשקעה - מחקה מדד S&P500 להורדה להורדה להורדה",
-     "href": "https://download-files.wixmp.com/ugd/5adfdb_5c3e703bc20e4bd2a66c6f095f518f44.xlsx?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJvYmoiOltbeyJwYXRoIjoiL3VnZC81YWRmZGJfNWMzZTcwM2JjMjBlNGJkMmE2NmM2ZjA5NWY1MThmNDQueGxzeCJ9XV0sImRpcyI6eyJmaWxlbmFtZSI6Im1pZ2RhbC1nZW1lbC1pbnZlc3RtZW50LWZ1bmQtdHJhY2tpbmctaW5kZXgtc3AtNTAwLTMxMTIyMi54bHN4IiwidHlwZSI6ImF0dGFjaG1lbnQifSwiYXVkIjpbInVybjpzZXJ2aWNlOmZpbGUuZG93bmxvYWQiXSwiZXhwIjoxNzk1MTM2Mzg1LCJqdGkiOiI0NWY5NTZmNy0yMmY0LTQ5MGUtYWM0OS1kODEzOTNhOGU4NTAiLCJpYXQiOjE3OTUxMDAzODUsImlzcyI6InVybjphcHA6ZTY2NjMwZTcxNGYwNDkwYWFlYTFmMTQ5YjNiNjllMzIiLCJzdWIiOiJ1cm46YXBwOmU2NjYzMGU3MTRmMDQ5MGFhZWExZjE0OWIzYjY5ZTMyIn0.1BF7RpfHRT1uKzbu1ffDAgRq_dtasbG645RctRpt5Zo",
-     "year": null,
-     "iframe": false,
-     "doc": true,
-     "internal": false
     },
     {
      "text": "להורדת אפליקציית מגדל",
@@ -613,27 +420,11 @@
     },
     {
      "text": "בית השקעות מגדל שוקי הון",
-     "href": "https://www.msh.co.il",
-     "year": null,
-     "iframe": false,
-     "doc": false,
-     "internal": false
-    },
-    {
-     "text": "בית השקעות מגדל שוקי הון",
      "href": "https://www.msh.co.il/",
      "year": null,
      "iframe": false,
      "doc": false,
      "internal": false
-    },
-    {
-     "text": "ביטוח מנהלים לשכירים",
-     "href": "https://www.migdal.co.il/product-lobby/personal-pension-complementary",
-     "year": null,
-     "iframe": false,
-     "doc": false,
-     "internal": true
     },
     {
      "text": "איחוד חשבונות קרנות פנסיה",
@@ -4009,25 +3800,9 @@
    "product": "פנסיה",
    "status": 200,
    "method": "browser",
-   "text_hash": "5dd485aa207a84f11e43b96b838e7400310302cb",
+   "text_hash": "981fbeb0ca4cea5fecd88b1c82cbec015593240a",
    "text_head": "אתר זה עושה שימוש בטכנולוגיות איסוף מידע כגון עוגיות (Cookies), לרבות על ידי צדדים שלישיים, כדי לספק לך חווית גלישה טובה יותר, וכן לניתוח השימוש ולצרכי פרסום מותאם. המשך הגלישה מהווה את הסכמתך לשימוש זה. למידע נוסף, יש לעיין במדיניות הפרטיות המעודכנת לדלג לתוכן הראשי חיסכון אישי והשקעות חיסכון פנסיוני ביטוחים תביעות שירותים פעולות כניסה לפורטלים עברית מגדל שלי דף הבית מגדל - מרכיבי תשואה מרכיבי תשואה ​ דיווח לציבור בגין פירוט מרכיבי תשואות מרכיבי תשואה מצטבר 2026 - נכון לתאריך 30.09.2026 (ת.עדכון 03.11.2026) מגדל משתתף ברווחים - קרן ח להורדה מגדל משתתף ברווחים - קרן ט להורדה מגדל משתתף ברווחים",
    "items": [
-    {
-     "text": "קרן פנסיה משלימה",
-     "href": "https://www.migdal.co.il/product-lobby/upplementary-pension-fund",
-     "year": null,
-     "iframe": false,
-     "doc": false,
-     "internal": true
-    },
-    {
-     "text": "קרן פנסיה אישית",
-     "href": "https://www.migdal.co.il/product-lobby/pensionary-savings",
-     "year": null,
-     "iframe": false,
-     "doc": false,
-     "internal": true
-    },
     {
      "text": "קרן השתלמות",
      "href": "https://www.migdal.co.il/product-lobby/employees-or-self-employed",
@@ -4062,7 +3837,7 @@
     },
     {
      "text": "קופת גמל להשקעה",
-     "href": "https://www.migdal.co.il/product-lobby/personal-savings",
+     "href": "https://www.migdal.co.il/product-lobby/provident-fund-for-investment",
      "year": null,
      "iframe": false,
      "doc": false,
@@ -4070,7 +3845,7 @@
     },
     {
      "text": "קופת גמל להשקעה",
-     "href": "https://www.migdal.co.il/product-lobby/provident-fund-for-investment",
+     "href": "https://www.migdal.co.il/product-lobby/personal-savings",
      "year": null,
      "iframe": false,
      "doc": false,
@@ -4093,8 +3868,32 @@
      "internal": true
     },
     {
+     "text": "פנסיה משלימה",
+     "href": "https://www.migdal.co.il/product-lobby/upplementary-pension-fund",
+     "year": null,
+     "iframe": false,
+     "doc": false,
+     "internal": true
+    },
+    {
+     "text": "פנסיה אישית",
+     "href": "https://www.migdal.co.il/product-lobby/pensionary-savings",
+     "year": null,
+     "iframe": false,
+     "doc": false,
+     "internal": true
+    },
+    {
      "text": "פדיון פנסיה",
      "href": "https://my.migdal.co.il/mymigdal/process/pensionredemption",
+     "year": null,
+     "iframe": false,
+     "doc": false,
+     "internal": true
+    },
+    {
+     "text": "מנהלים לשכירים",
+     "href": "https://www.migdal.co.il/product-lobby/personal-pension-complementary",
      "year": null,
      "iframe": false,
      "doc": false,
@@ -4125,24 +3924,17 @@
      "internal": true
     },
     {
-     "text": "מגדל-מסלול השקעה לפי הכשר הלכתי להורדה להורדה להורדה",
-     "href": "https://download-files.wixmp.com/ugd/571a7f_4bf844a739534aab91e34e97147e6f14.xlsx?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJvYmoiOltbeyJwYXRoIjoiL3VnZC81NzFhN2ZfNGJmODQ0YTczOTUzNGFhYjkxZTM0ZTk3MTQ3ZTZmMTQueGxzeCJ9XV0sImRpcyI6eyJmaWxlbmFtZSI6IjUyMDAwNDg5Nl9iMTg1X1lpZWxkNDI1Lnhsc3giLCJ0eXBlIjoiYXR0YWNobWVudCJ9LCJhdWQiOlsidXJuOnNlcnZpY2U6ZmlsZS5kb3dubG9hZCJdLCJleHAiOjE3OTUxMzY1MjksImp0aSI6IjkwNWE5MzBkLTllODMtNDY0ZC1hY2FlLWFmOWQ4MDhkMzA5MiIsImlhdCI6MTc5NTEwMDUyOSwiaXNzIjoidXJuOmFwcDplNjY2MzBlNzE0ZjA0OTBhYWVhMWYxNDliM2I2OWUzMiIsInN1YiI6InVybjphcHA6ZTY2NjMwZTcxNGYwNDkwYWFlYTFmMTQ5YjNiNjllMzIifQ.fhS3YiBDsVneEzQzLYzQFVQSdJe3sMbmcraWdxxyNeA",
+     "text": "מגדל-מנייתי להורדה להורדה להורדה 520004896_b76_Yield326.xlsx",
+     "href": "https://www.migdal.co.il/regulations/migdal-investments-yield-components",
      "year": null,
      "iframe": false,
      "doc": true,
-     "internal": false
+     "internal": true,
+     "local": "/home/runner/work/_temp/policy_dl/4327365004_520004896_b76_Yield326.xlsx"
     },
     {
      "text": "מגדל-מנייתי להורדה להורדה להורדה",
-     "href": "https://download-files.wixmp.com/ugd/571a7f_ff17708c5a114542a606de5f1fdf9dda.xlsx?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJvYmoiOltbeyJwYXRoIjoiL3VnZC81NzFhN2ZfZmYxNzcwOGM1YTExNDU0MmE2MDZkZTVmMWZkZjlkZGEueGxzeCJ9XV0sImRpcyI6eyJmaWxlbmFtZSI6IjUyMDAwNDg5Nl9iNzZfWWllbGQzMjYueGxzeCIsInR5cGUiOiJhdHRhY2htZW50In0sImF1ZCI6WyJ1cm46c2VydmljZTpmaWxlLmRvd25sb2FkIl0sImV4cCI6MTc5NTEzNjUyOCwianRpIjoiMDQyNzg0ZGItYjFiYS00ZTUwLTg0ZGUtNWI5Y2RjNTU2MDI1IiwiaWF0IjoxNzk1MTAwNTI4LCJpc3MiOiJ1cm46YXBwOmU2NjYzMGU3MTRmMDQ5MGFhZWExZjE0OWIzYjY5ZTMyIiwic3ViIjoidXJuOmFwcDplNjY2MzBlNzE0ZjA0OTBhYWVhMWYxNDliM2I2OWUzMiJ9.nki_HXI_BM43bbajLIHNQcmLOblVDskN-7DDPWoBg3Y",
-     "year": null,
-     "iframe": false,
-     "doc": true,
-     "internal": false
-    },
-    {
-     "text": "מגדל- מנוהל ע\"י מגדל שוקי הון- מסלול מחקה מדד S&P 500 להורדה להורדה להורדה",
-     "href": "https://download-files.wixmp.com/ugd/571a7f_fa9dcb22a04a481cb627a9bf94f0d3ce.xlsx?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJvYmoiOltbeyJwYXRoIjoiL3VnZC81NzFhN2ZfZmE5ZGNiMjJhMDRhNDgxY2I2MjdhOWJmOTRmMGQzY2UueGxzeCJ9XV0sImRpcyI6eyJmaWxlbmFtZSI6IjUyMDAwNDg5Nl9iMTUwNjJfWWllbGQ0MjUueGxzeCIsInR5cGUiOiJhdHRhY2htZW50In0sImF1ZCI6WyJ1cm46c2VydmljZTpmaWxlLmRvd25sb2FkIl0sImV4cCI6MTc5NTEzNjUzMiwianRpIjoiYThjYTE0YmMtZTdmZi00NjQyLTk0MmItOGY1MDc2MzI3YmFhIiwiaWF0IjoxNzk1MTAwNTMyLCJpc3MiOiJ1cm46YXBwOmU2NjYzMGU3MTRmMDQ5MGFhZWExZjE0OWIzYjY5ZTMyIiwic3ViIjoidXJuOmFwcDplNjY2MzBlNzE0ZjA0OTBhYWVhMWYxNDliM2I2OWUzMiJ9.ktQsywRtdkmU8Jw1pjN5UgeGkvA_0haYBYR88mNATe4",
+     "href": "https://download-files.wixmp.com/ugd/571a7f_ff17708c5a114542a606de5f1fdf9dda.xlsx?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJvYmoiOltbeyJwYXRoIjoiL3VnZC81NzFhN2ZfZmYxNzcwOGM1YTExNDU0MmE2MDZkZTVmMWZkZjlkZGEueGxzeCJ9XV0sImRpcyI6eyJmaWxlbmFtZSI6IjUyMDAwNDg5Nl9iNzZfWWllbGQzMjYueGxzeCIsInR5cGUiOiJhdHRhY2htZW50In0sImF1ZCI6WyJ1cm46c2VydmljZTpmaWxlLmRvd25sb2FkIl0sImV4cCI6MTc5NTIyMTkzOCwianRpIjoiNjRmMTJkOWEtMjM4YS00OTk1LWJiNDktMmIzNmY0MWYyOTM2IiwiaWF0IjoxNzk1MTg1OTM4LCJpc3MiOiJ1cm46YXBwOmU2NjYzMGU3MTRmMDQ5MGFhZWExZjE0OWIzYjY5ZTMyIiwic3ViIjoidXJuOmFwcDplNjY2MzBlNzE0ZjA0OTBhYWVhMWYxNDliM2I2OWUzMiJ9.OOxzO4en-_oPhMqeJ2zvRt7u7vghwjf4GHTElLOYTl0",
      "year": null,
      "iframe": false,
      "doc": true,
@@ -4150,7 +3942,7 @@
     },
     {
      "text": "מגדל- אג\"ח ממשלת ישראל להורדה להורדה להורדה",
-     "href": "https://download-files.wixmp.com/ugd/571a7f_7be5d0c1699646f9a5973f3159997269.xlsx?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJvYmoiOltbeyJwYXRoIjoiL3VnZC81NzFhN2ZfN2JlNWQwYzE2OTk2NDZmOWE1OTczZjMxNTk5OTcyNjkueGxzeCJ9XV0sImRpcyI6eyJmaWxlbmFtZSI6IjUyMDAwNDg5Nl9iNjhfWWllbGQzMjYueGxzeCIsInR5cGUiOiJhdHRhY2htZW50In0sImF1ZCI6WyJ1cm46c2VydmljZTpmaWxlLmRvd25sb2FkIl0sImV4cCI6MTc5NTEzNjUyOCwianRpIjoiMDRlZGIzNmYtYmNlYi00MTcxLWJjNGYtMjZkNWZmMWU3ZWUwIiwiaWF0IjoxNzk1MTAwNTI4LCJpc3MiOiJ1cm46YXBwOmU2NjYzMGU3MTRmMDQ5MGFhZWExZjE0OWIzYjY5ZTMyIiwic3ViIjoidXJuOmFwcDplNjY2MzBlNzE0ZjA0OTBhYWVhMWYxNDliM2I2OWUzMiJ9.eebkhxHytlCKDxceOiDvxuu5-MWngPAeFyxZQXpAsBA",
+     "href": "https://download-files.wixmp.com/ugd/571a7f_7be5d0c1699646f9a5973f3159997269.xlsx?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJvYmoiOltbeyJwYXRoIjoiL3VnZC81NzFhN2ZfN2JlNWQwYzE2OTk2NDZmOWE1OTczZjMxNTk5OTcyNjkueGxzeCJ9XV0sImRpcyI6eyJmaWxlbmFtZSI6IjUyMDAwNDg5Nl9iNjhfWWllbGQzMjYueGxzeCIsInR5cGUiOiJhdHRhY2htZW50In0sImF1ZCI6WyJ1cm46c2VydmljZTpmaWxlLmRvd25sb2FkIl0sImV4cCI6MTc5NTIyMTkzNywianRpIjoiNGFjMWRiZjUtNzMzNS00YjQ4LTgxMjItMjRkNWYzOGIwZjhlIiwiaWF0IjoxNzk1MTg1OTM3LCJpc3MiOiJ1cm46YXBwOmU2NjYzMGU3MTRmMDQ5MGFhZWExZjE0OWIzYjY5ZTMyIiwic3ViIjoidXJuOmFwcDplNjY2MzBlNzE0ZjA0OTBhYWVhMWYxNDliM2I2OWUzMiJ9.u6EC-tZVOuDbrnINVklb84KRINzkIKpiEK907P87dYw",
      "year": null,
      "iframe": false,
      "doc": true,
@@ -4158,7 +3950,7 @@
     },
     {
      "text": "מגדל משתתף קרן י החדשה להורדה להורדה להורדה",
-     "href": "https://download-files.wixmp.com/ugd/571a7f_f0e2454569a048bd8bae58f3815a7f58.xlsx?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJvYmoiOltbeyJwYXRoIjoiL3VnZC81NzFhN2ZfZjBlMjQ1NDU2OWEwNDhiZDhiYWU1OGYzODE1YTdmNTgueGxzeCJ9XV0sImRpcyI6eyJmaWxlbmFtZSI6IjUyMDAwNDg5Nl9iMTcwMTNfWWllbGQzMjYueGxzeCIsInR5cGUiOiJhdHRhY2htZW50In0sImF1ZCI6WyJ1cm46c2VydmljZTpmaWxlLmRvd25sb2FkIl0sImV4cCI6MTc5NTEzNjUyNywianRpIjoiNWM5MThjOTItN2ZiZS00YmY3LWFkMDQtODU1MjAzYWIxZGI4IiwiaWF0IjoxNzk1MTAwNTI3LCJpc3MiOiJ1cm46YXBwOmU2NjYzMGU3MTRmMDQ5MGFhZWExZjE0OWIzYjY5ZTMyIiwic3ViIjoidXJuOmFwcDplNjY2MzBlNzE0ZjA0OTBhYWVhMWYxNDliM2I2OWUzMiJ9.2-rWRU3wW6Tj43iaaHw1iAzWJIMcJ8dnieyORgtZwHU",
+     "href": "https://download-files.wixmp.com/ugd/571a7f_f0e2454569a048bd8bae58f3815a7f58.xlsx?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJvYmoiOltbeyJwYXRoIjoiL3VnZC81NzFhN2ZfZjBlMjQ1NDU2OWEwNDhiZDhiYWU1OGYzODE1YTdmNTgueGxzeCJ9XV0sImRpcyI6eyJmaWxlbmFtZSI6IjUyMDAwNDg5Nl9iMTcwMTNfWWllbGQzMjYueGxzeCIsInR5cGUiOiJhdHRhY2htZW50In0sImF1ZCI6WyJ1cm46c2VydmljZTpmaWxlLmRvd25sb2FkIl0sImV4cCI6MTc5NTIyMTkzNiwianRpIjoiMDQzZjdkMDAtOGNlYi00MjIwLTlmYTgtZjViNzRhNTczZjQ1IiwiaWF0IjoxNzk1MTg1OTM2LCJpc3MiOiJ1cm46YXBwOmU2NjYzMGU3MTRmMDQ5MGFhZWExZjE0OWIzYjY5ZTMyIiwic3ViIjoidXJuOmFwcDplNjY2MzBlNzE0ZjA0OTBhYWVhMWYxNDliM2I2OWUzMiJ9.2cGA6EYakhhyCZZNhdcJHB6epuKYh2-2pHqt6t3N6CY",
      "year": null,
      "iframe": false,
      "doc": true,
@@ -4166,7 +3958,7 @@
     },
     {
      "text": "מגדל משתתף ברווחים - קרן י להורדה להורדה להורדה",
-     "href": "https://download-files.wixmp.com/ugd/571a7f_25310fb340dd40fc89e184ca1c593acc.xlsx?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJvYmoiOltbeyJwYXRoIjoiL3VnZC81NzFhN2ZfMjUzMTBmYjM0MGRkNDBmYzg5ZTE4NGNhMWM1OTNhY2MueGxzeCJ9XV0sImRpcyI6eyJmaWxlbmFtZSI6IjUyMDAwNDg5Nl9iMTcwMTJfWWllbGQzMjYueGxzeCIsInR5cGUiOiJhdHRhY2htZW50In0sImF1ZCI6WyJ1cm46c2VydmljZTpmaWxlLmRvd25sb2FkIl0sImV4cCI6MTc5NTEzNjUyNiwianRpIjoiOGMwOTNjZTQtZjU0Mi00OGI1LThlMjgtNGQwZmQxZDAzMTllIiwiaWF0IjoxNzk1MTAwNTI2LCJpc3MiOiJ1cm46YXBwOmU2NjYzMGU3MTRmMDQ5MGFhZWExZjE0OWIzYjY5ZTMyIiwic3ViIjoidXJuOmFwcDplNjY2MzBlNzE0ZjA0OTBhYWVhMWYxNDliM2I2OWUzMiJ9.U4kDn0Ia0o8Ub3f-MFHdHGanCXFqoQUyDSZVSroDrJ0",
+     "href": "https://download-files.wixmp.com/ugd/571a7f_25310fb340dd40fc89e184ca1c593acc.xlsx?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJvYmoiOltbeyJwYXRoIjoiL3VnZC81NzFhN2ZfMjUzMTBmYjM0MGRkNDBmYzg5ZTE4NGNhMWM1OTNhY2MueGxzeCJ9XV0sImRpcyI6eyJmaWxlbmFtZSI6IjUyMDAwNDg5Nl9iMTcwMTJfWWllbGQzMjYueGxzeCIsInR5cGUiOiJhdHRhY2htZW50In0sImF1ZCI6WyJ1cm46c2VydmljZTpmaWxlLmRvd25sb2FkIl0sImV4cCI6MTc5NTIyMTkzNiwianRpIjoiZmViZWY4MjgtMjAxYi00OTQxLWE4M2QtNWQxYzc3N2Y0OGMxIiwiaWF0IjoxNzk1MTg1OTM2LCJpc3MiOiJ1cm46YXBwOmU2NjYzMGU3MTRmMDQ5MGFhZWExZjE0OWIzYjY5ZTMyIiwic3ViIjoidXJuOmFwcDplNjY2MzBlNzE0ZjA0OTBhYWVhMWYxNDliM2I2OWUzMiJ9.pOFh6JneWiMuW4yGG0fDIAD9MJTCDqcCEBaIiCIeZOY",
      "year": null,
      "iframe": false,
      "doc": true,
@@ -4174,7 +3966,7 @@
     },
     {
      "text": "מגדל משתתף ברווחים - קרן ט להורדה להורדה להורדה",
-     "href": "https://download-files.wixmp.com/ugd/571a7f_8046bef1af3e421d9ed9534f0fc363a7.xlsx?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJvYmoiOltbeyJwYXRoIjoiL3VnZC81NzFhN2ZfODA0NmJlZjFhZjNlNDIxZDllZDk1MzRmMGZjMzYzYTcueGxzeCJ9XV0sImRpcyI6eyJmaWxlbmFtZSI6IjUyMDAwNDg5Nl9iMTcwMTFfWWllbGQzMjYueGxzeCIsInR5cGUiOiJhdHRhY2htZW50In0sImF1ZCI6WyJ1cm46c2VydmljZTpmaWxlLmRvd25sb2FkIl0sImV4cCI6MTc5NTEzNjUyNSwianRpIjoiNWFiYjg0N2UtZTBmZC00Y2EzLWJlNmQtMTZhYTE1ZjJjNGE3IiwiaWF0IjoxNzk1MTAwNTI1LCJpc3MiOiJ1cm46YXBwOmU2NjYzMGU3MTRmMDQ5MGFhZWExZjE0OWIzYjY5ZTMyIiwic3ViIjoidXJuOmFwcDplNjY2MzBlNzE0ZjA0OTBhYWVhMWYxNDliM2I2OWUzMiJ9.r4RWCyiCqq_7NylSGnFGQo_labsC99m3IfCvsQzlwyY",
+     "href": "https://download-files.wixmp.com/ugd/571a7f_8046bef1af3e421d9ed9534f0fc363a7.xlsx?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJvYmoiOltbeyJwYXRoIjoiL3VnZC81NzFhN2ZfODA0NmJlZjFhZjNlNDIxZDllZDk1MzRmMGZjMzYzYTcueGxzeCJ9XV0sImRpcyI6eyJmaWxlbmFtZSI6IjUyMDAwNDg5Nl9iMTcwMTFfWWllbGQzMjYueGxzeCIsInR5cGUiOiJhdHRhY2htZW50In0sImF1ZCI6WyJ1cm46c2VydmljZTpmaWxlLmRvd25sb2FkIl0sImV4cCI6MTc5NTIyMTkzNSwianRpIjoiMWI1MTI4NzUtOWExYi00NzI1LWJmNmUtYWE3MjEyYjIxZThlIiwiaWF0IjoxNzk1MTg1OTM1LCJpc3MiOiJ1cm46YXBwOmU2NjYzMGU3MTRmMDQ5MGFhZWExZjE0OWIzYjY5ZTMyIiwic3ViIjoidXJuOmFwcDplNjY2MzBlNzE0ZjA0OTBhYWVhMWYxNDliM2I2OWUzMiJ9.5Ggt_muZUtcJYzYu7uJbOFJVQUWl7STz9-cLagjw4KM",
      "year": null,
      "iframe": false,
      "doc": true,
@@ -4182,48 +3974,7 @@
     },
     {
      "text": "מגדל משתתף ברווחים - קרן ח להורדה להורדה להורדה",
-     "href": "https://download-files.wixmp.com/ugd/571a7f_dc844d2d040e4020a8e23840cb10277f.xlsx?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJvYmoiOltbeyJwYXRoIjoiL3VnZC81NzFhN2ZfZGM4NDRkMmQwNDBlNDAyMGE4ZTIzODQwY2IxMDI3N2YueGxzeCJ9XV0sImRpcyI6eyJmaWxlbmFtZSI6IjUyMDAwNDg5Nl9iMTcwMTBfWWllbGQzMjYueGxzeCIsInR5cGUiOiJhdHRhY2htZW50In0sImF1ZCI6WyJ1cm46c2VydmljZTpmaWxlLmRvd25sb2FkIl0sImV4cCI6MTc5NTEzNjUyNSwianRpIjoiNGM1NDIwZTQtMGM2Mi00MTMxLWI0YjItNzc0Nzg4NzljYWFlIiwiaWF0IjoxNzk1MTAwNTI1LCJpc3MiOiJ1cm46YXBwOmU2NjYzMGU3MTRmMDQ5MGFhZWExZjE0OWIzYjY5ZTMyIiwic3ViIjoidXJuOmFwcDplNjY2MzBlNzE0ZjA0OTBhYWVhMWYxNDliM2I2OWUzMiJ9.O6-hOCmkYHTEqkgOs-11WACwtPKzNucxPRrLy_S7a80",
-     "year": null,
-     "iframe": false,
-     "doc": true,
-     "internal": false
-    },
-    {
-     "text": "מגדל מסלול שקלי טווח קצר להורדה להורדה להורדה",
-     "href": "https://download-files.wixmp.com/ugd/571a7f_2579794806ea46808267edc1783ea49c.xlsx?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJvYmoiOltbeyJwYXRoIjoiL3VnZC81NzFhN2ZfMjU3OTc5NDgwNmVhNDY4MDgyNjdlZGMxNzgzZWE0OWMueGxzeCJ9XV0sImRpcyI6eyJmaWxlbmFtZSI6IjUyMDAwNDg5Nl9iMTk1NV9ZaWVsZDQyNS54bHN4IiwidHlwZSI6ImF0dGFjaG1lbnQifSwiYXVkIjpbInVybjpzZXJ2aWNlOmZpbGUuZG93bmxvYWQiXSwiZXhwIjoxNzk1MTM2NTMxLCJqdGkiOiIxODU4OWRiOS1lMjVmLTQ1NWQtOTRjOC0zMmQxY2FjZDFmNWYiLCJpYXQiOjE3OTUxMDA1MzEsImlzcyI6InVybjphcHA6ZTY2NjMwZTcxNGYwNDkwYWFlYTFmMTQ5YjNiNjllMzIiLCJzdWIiOiJ1cm46YXBwOmU2NjYzMGU3MTRmMDQ5MGFhZWExZjE0OWIzYjY5ZTMyIn0.nBY-IZWtwfXj8xXUTa84-HNJGY4mdrSBkPT9V6Ys7R0",
-     "year": null,
-     "iframe": false,
-     "doc": true,
-     "internal": false
-    },
-    {
-     "text": "מגדל מסלול עוקב מדדים - גמיש להורדה להורדה להורדה",
-     "href": "https://download-files.wixmp.com/ugd/571a7f_c498c555d50543e1a840ec191931666d.xlsx?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJvYmoiOltbeyJwYXRoIjoiL3VnZC81NzFhN2ZfYzQ5OGM1NTVkNTA1NDNlMWE4NDBlYzE5MTkzMTY2NmQueGxzeCJ9XV0sImRpcyI6eyJmaWxlbmFtZSI6IjUyMDAwNDg5Nl9iMTQyNDBfWWllbGQ0MjUueGxzeCIsInR5cGUiOiJhdHRhY2htZW50In0sImF1ZCI6WyJ1cm46c2VydmljZTpmaWxlLmRvd25sb2FkIl0sImV4cCI6MTc5NTEzNjUzMSwianRpIjoiNmViODFlYmYtZjU3Ni00NGIyLWIzMGQtYmY3MjJiNzkzNmZjIiwiaWF0IjoxNzk1MTAwNTMxLCJpc3MiOiJ1cm46YXBwOmU2NjYzMGU3MTRmMDQ5MGFhZWExZjE0OWIzYjY5ZTMyIiwic3ViIjoidXJuOmFwcDplNjY2MzBlNzE0ZjA0OTBhYWVhMWYxNDliM2I2OWUzMiJ9.RN5R2-mo6dB4eYxqNq8xBmt8c3m_gneiHAWQt9NyV2w",
-     "year": null,
-     "iframe": false,
-     "doc": true,
-     "internal": false
-    },
-    {
-     "text": "מגדל מסלול לבני 60 ומעלה להורדה להורדה להורדה",
-     "href": "https://download-files.wixmp.com/ugd/571a7f_7f2f9f03cf7140809a48a108f6de2d5e.xlsx?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJvYmoiOltbeyJwYXRoIjoiL3VnZC81NzFhN2ZfN2YyZjlmMDNjZjcxNDA4MDlhNDhhMTA4ZjZkZTJkNWUueGxzeCJ9XV0sImRpcyI6eyJmaWxlbmFtZSI6IjUyMDAwNDg5Nl9iOTcyOV9ZaWVsZDQyNS54bHN4IiwidHlwZSI6ImF0dGFjaG1lbnQifSwiYXVkIjpbInVybjpzZXJ2aWNlOmZpbGUuZG93bmxvYWQiXSwiZXhwIjoxNzk1MTM2NTMwLCJqdGkiOiI4YTVkMjgxNS05OTRjLTRjZWQtYTBjZC1hMzZlZmEzYzNhZGIiLCJpYXQiOjE3OTUxMDA1MzAsImlzcyI6InVybjphcHA6ZTY2NjMwZTcxNGYwNDkwYWFlYTFmMTQ5YjNiNjllMzIiLCJzdWIiOiJ1cm46YXBwOmU2NjYzMGU3MTRmMDQ5MGFhZWExZjE0OWIzYjY5ZTMyIn0.wkUijBAROtLsjY-15_aOxSZcwIRFGYkpPD_V4ft8nFU",
-     "year": null,
-     "iframe": false,
-     "doc": true,
-     "internal": false
-    },
-    {
-     "text": "מגדל מסלול לבני 50 ומטה להורדה להורדה להורדה 520004896_b9599_Yield425.xlsx",
-     "href": "https://www.migdal.co.il/regulations/migdal-investments-yield-components",
-     "year": null,
-     "iframe": false,
-     "doc": true,
-     "internal": true,
-     "local": "/home/runner/work/_temp/policy_dl/1646506535_520004896_b9599_Yield425.xlsx"
-    },
-    {
-     "text": "מגדל מסלול לבני 50 ומטה להורדה להורדה להורדה",
-     "href": "https://download-files.wixmp.com/ugd/571a7f_7d03b5a33a554888bf716d43aeeac0dc.xlsx?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJvYmoiOltbeyJwYXRoIjoiL3VnZC81NzFhN2ZfN2QwM2I1YTMzYTU1NDg4OGJmNzE2ZDQzYWVlYWMwZGMueGxzeCJ9XV0sImRpcyI6eyJmaWxlbmFtZSI6IjUyMDAwNDg5Nl9iOTU5OV9ZaWVsZDQyNS54bHN4IiwidHlwZSI6ImF0dGFjaG1lbnQifSwiYXVkIjpbInVybjpzZXJ2aWNlOmZpbGUuZG93bmxvYWQiXSwiZXhwIjoxNzk1MTM2NTMzLCJqdGkiOiJiMTRiYjNkYS1iOTcxLTQ5ZGItOTYzMy03MDYzMTlhYWU0OWIiLCJpYXQiOjE3OTUxMDA1MzMsImlzcyI6InVybjphcHA6ZTY2NjMwZTcxNGYwNDkwYWFlYTFmMTQ5YjNiNjllMzIiLCJzdWIiOiJ1cm46YXBwOmU2NjYzMGU3MTRmMDQ5MGFhZWExZjE0OWIzYjY5ZTMyIn0.rSfB7X-vEEQKFdyoOXC6bvrLjsW_dJpbhjroQ5byH68",
+     "href": "https://download-files.wixmp.com/ugd/571a7f_dc844d2d040e4020a8e23840cb10277f.xlsx?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJvYmoiOltbeyJwYXRoIjoiL3VnZC81NzFhN2ZfZGM4NDRkMmQwNDBlNDAyMGE4ZTIzODQwY2IxMDI3N2YueGxzeCJ9XV0sImRpcyI6eyJmaWxlbmFtZSI6IjUyMDAwNDg5Nl9iMTcwMTBfWWllbGQzMjYueGxzeCIsInR5cGUiOiJhdHRhY2htZW50In0sImF1ZCI6WyJ1cm46c2VydmljZTpmaWxlLmRvd25sb2FkIl0sImV4cCI6MTc5NTIyMTkzNCwianRpIjoiNTYwNzJkNmMtMzI3Mi00NjVmLWE4NTYtMGMzYTI1YjFkODIwIiwiaWF0IjoxNzk1MTg1OTM0LCJpc3MiOiJ1cm46YXBwOmU2NjYzMGU3MTRmMDQ5MGFhZWExZjE0OWIzYjY5ZTMyIiwic3ViIjoidXJuOmFwcDplNjY2MzBlNzE0ZjA0OTBhYWVhMWYxNDliM2I2OWUzMiJ9.Y_9jsAFoAEX4T0hi5RIWp7yz-bpSWRbzUmtDq2AmPug",
      "year": null,
      "iframe": false,
      "doc": true,
@@ -4295,27 +4046,11 @@
     },
     {
      "text": "בית השקעות מגדל שוקי הון",
-     "href": "https://www.msh.co.il",
-     "year": null,
-     "iframe": false,
-     "doc": false,
-     "internal": false
-    },
-    {
-     "text": "בית השקעות מגדל שוקי הון",
      "href": "https://www.msh.co.il/",
      "year": null,
      "iframe": false,
      "doc": false,
      "internal": false
-    },
-    {
-     "text": "ביטוח מנהלים לשכירים",
-     "href": "https://www.migdal.co.il/product-lobby/personal-pension-complementary",
-     "year": null,
-     "iframe": false,
-     "doc": false,
-     "internal": true
     },
     {
      "text": "איחוד חשבונות קרנות פנסיה",
@@ -4543,7 +4278,7 @@
     },
     {
      "text": "520004896_b17010_Yield326.xlsx",
-     "href": "https://download-files.wixmp.com/ugd/571a7f_dc844d2d040e4020a8e23840cb10277f.xlsx?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJvYmoiOltbeyJwYXRoIjoiL3VnZC81NzFhN2ZfZGM4NDRkMmQwNDBlNDAyMGE4ZTIzODQwY2IxMDI3N2YueGxzeCJ9XV0sImRpcyI6eyJmaWxlbmFtZSI6IjUyMDAwNDg5Nl9iMTcwMTBfWWllbGQzMjYueGxzeCIsInR5cGUiOiJhdHRhY2htZW50In0sImF1ZCI6WyJ1cm46c2VydmljZTpmaWxlLmRvd25sb2FkIl0sImV4cCI6MTc5NTEzNjQ3MSwianRpIjoiMjE0OWEzYzQtM2JhMy00ODdjLWI1MGMtMjE2MTI3YWQzNzE3IiwiaWF0IjoxNzk1MTAwNDcxLCJpc3MiOiJ1cm46YXBwOmU2NjYzMGU3MTRmMDQ5MGFhZWExZjE0OWIzYjY5ZTMyIiwic3ViIjoidXJuOmFwcDplNjY2MzBlNzE0ZjA0OTBhYWVhMWYxNDliM2I2OWUzMiJ9.UTREwBaHMixgP-XUxwzZFjHg7BTm83QfNHldqGsX1lE",
+     "href": "https://download-files.wixmp.com/ugd/571a7f_dc844d2d040e4020a8e23840cb10277f.xlsx?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJvYmoiOltbeyJwYXRoIjoiL3VnZC81NzFhN2ZfZGM4NDRkMmQwNDBlNDAyMGE4ZTIzODQwY2IxMDI3N2YueGxzeCJ9XV0sImRpcyI6eyJmaWxlbmFtZSI6IjUyMDAwNDg5Nl9iMTcwMTBfWWllbGQzMjYueGxzeCIsInR5cGUiOiJhdHRhY2htZW50In0sImF1ZCI6WyJ1cm46c2VydmljZTpmaWxlLmRvd25sb2FkIl0sImV4cCI6MTc5NTIyMTg4MCwianRpIjoiOGQyMmU2ZjQtMTZhMi00YmQ2LWI3ZmMtOGJkODQ3MDQ0NDg0IiwiaWF0IjoxNzk1MTg1ODgwLCJpc3MiOiJ1cm46YXBwOmU2NjYzMGU3MTRmMDQ5MGFhZWExZjE0OWIzYjY5ZTMyIiwic3ViIjoidXJuOmFwcDplNjY2MzBlNzE0ZjA0OTBhYWVhMWYxNDliM2I2OWUzMiJ9.R5OdqxNMJBhVPPPLoblCf7JWFG8Jnsu_WsowLj0jSdo",
      "year": null,
      "iframe": false,
      "doc": true,
@@ -4707,12 +4442,28 @@
    "product": "פנסיה",
    "status": 200,
    "method": "browser",
-   "text_hash": "ea21ad68d0605589eee4bd007f42acb39ac989f6",
+   "text_hash": "c92676b9159cefa1cf3a6d5b15b32b1dd278065e",
    "text_head": "אתר זה עושה שימוש בטכנולוגיות איסוף מידע כגון עוגיות (Cookies), לרבות על ידי צדדים שלישיים, כדי לספק לך חווית גלישה טובה יותר, וכן לניתוח השימוש ולצרכי פרסום מותאם. המשך הגלישה מהווה את הסכמתך לשימוש זה. למידע נוסף, יש לעיין במדיניות הפרטיות המעודכנת לדלג לתוכן הראשי חיסכון אישי והשקעות חיסכון פנסיוני ביטוחים תביעות שירותים פעולות כניסה לפורטלים עברית מגדל שלי דף הבית הצהרה מראש על מדיניות השקעה צפויה הצהרה מראש על מדיניות השקעה צפויה-מקפת ​ ​ קופות גמל והשתלמות הצהרה מראש על מדיניות השקעה צפויה - מגדל השתלמות - לשנת 2026 (אוגוסט 2026) להורדה הצהרה מראש על מדיניות השקעה צפויה - מקפת - לשנת 202",
    "items": [
     {
      "text": "הצהרה מראש על מדיניות השקעה צפויה -מגדל גמל להשקעה - לשנת 2026 (אוגוסט 2026) להורדה להורדה להורדה",
-     "href": "https://download-files.wixmp.com/ugd/571a7f_0590038b88524b0c89ba33a90da60b6f.xlsx?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJvYmoiOltbeyJwYXRoIjoiL3VnZC81NzFhN2ZfMDU5MDAzOGI4ODUyNGIwYzg5YmEzM2E5MGRhNjBiNmYueGxzeCJ9XV0sImRpcyI6eyJmaWxlbmFtZSI6IkhhdHphcmF0IG1pZ2RhbCBHZW1lbCBMZWhhc2hrYWEgQVVHIDIwMjZfViAtIEFDQy54bHN4IiwidHlwZSI6ImF0dGFjaG1lbnQifSwiYXVkIjpbInVybjpzZXJ2aWNlOmZpbGUuZG93bmxvYWQiXSwiZXhwIjoxNzk1MTM2Njc5LCJqdGkiOiI2NmZhZmJjOS01YWU2LTRlZDEtODA3OS1iMzc1MzQwOTgwYTIiLCJpYXQiOjE3OTUxMDA2NzksImlzcyI6InVybjphcHA6ZTY2NjMwZTcxNGYwNDkwYWFlYTFmMTQ5YjNiNjllMzIiLCJzdWIiOiJ1cm46YXBwOmU2NjYzMGU3MTRmMDQ5MGFhZWExZjE0OWIzYjY5ZTMyIn0.St3GHb_po2Je9sKQT_cgCoRwhjlQN-nFEyW8XXC5Umc",
+     "href": "https://download-files.wixmp.com/ugd/571a7f_0590038b88524b0c89ba33a90da60b6f.xlsx?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJvYmoiOltbeyJwYXRoIjoiL3VnZC81NzFhN2ZfMDU5MDAzOGI4ODUyNGIwYzg5YmEzM2E5MGRhNjBiNmYueGxzeCJ9XV0sImRpcyI6eyJmaWxlbmFtZSI6IkhhdHphcmF0IG1pZ2RhbCBHZW1lbCBMZWhhc2hrYWEgQVVHIDIwMjZfViAtIEFDQy54bHN4IiwidHlwZSI6ImF0dGFjaG1lbnQifSwiYXVkIjpbInVybjpzZXJ2aWNlOmZpbGUuZG93bmxvYWQiXSwiZXhwIjoxNzk1MjIyMTExLCJqdGkiOiIxNDJmNThhZS02NTA1LTQwNWQtYTdmNy0yMjgzMzMwOWJkMTAiLCJpYXQiOjE3OTUxODYxMTEsImlzcyI6InVybjphcHA6ZTY2NjMwZTcxNGYwNDkwYWFlYTFmMTQ5YjNiNjllMzIiLCJzdWIiOiJ1cm46YXBwOmU2NjYzMGU3MTRmMDQ5MGFhZWExZjE0OWIzYjY5ZTMyIn0.BJ1eKOZI81glcHvpGKzjykj0oOTh5nYYbYgCFiAmkzM",
+     "year": "2026",
+     "iframe": false,
+     "doc": true,
+     "internal": false
+    },
+    {
+     "text": "הצהרה מראש על מדיניות השקעה צפויה - מקפת - לשנת 2026 (ינואר 2026) להורדה להורדה להורדה",
+     "href": "https://download-files.wixmp.com/ugd/571a7f_45531cec9a864d5aada46290ecdbfde4.xlsx?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJvYmoiOltbeyJwYXRoIjoiL3VnZC81NzFhN2ZfNDU1MzFjZWM5YTg2NGQ1YWFkYTQ2MjkwZWNkYmZkZTQueGxzeCJ9XV0sImRpcyI6eyJmaWxlbmFtZSI6IkhhdHphcmF0IE1pZ2RhbCBNYWtlZmV0IFBlbnNpb24gamFuIDIwMjZfUC54bHN4IiwidHlwZSI6ImF0dGFjaG1lbnQifSwiYXVkIjpbInVybjpzZXJ2aWNlOmZpbGUuZG93bmxvYWQiXSwiZXhwIjoxNzk1MjIyMTE0LCJqdGkiOiJhMjNiMTgxMC02ZTgxLTQ4MTctOTIwYy1hMzUwYTFkNTYwZDYiLCJpYXQiOjE3OTUxODYxMTQsImlzcyI6InVybjphcHA6ZTY2NjMwZTcxNGYwNDkwYWFlYTFmMTQ5YjNiNjllMzIiLCJzdWIiOiJ1cm46YXBwOmU2NjYzMGU3MTRmMDQ5MGFhZWExZjE0OWIzYjY5ZTMyIn0.4P7EOx8m4W4P0_oDQ1tHsoC_aAxTVGd1axYw8bqMEuM",
+     "year": "2026",
+     "iframe": false,
+     "doc": true,
+     "internal": false
+    },
+    {
+     "text": "הצהרה מראש על מדיניות השקעה צפויה - מקפת - לשנת 2026 (ינואר 2026) להורדה להורדה להורדה",
+     "href": "https://download-files.wixmp.com/ugd/ebf348_561c9883dc174aac8e0888d2bfa00e55.xlsx?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJvYmoiOltbeyJwYXRoIjoiL3VnZC9lYmYzNDhfNTYxYzk4ODNkYzE3NGFhYzhlMDg4OGQyYmZhMDBlNTUueGxzeCJ9XV0sImRpcyI6eyJmaWxlbmFtZSI6IkhhdHphcmF0IE1pZ2RhbCBNYWtlZmV0IFBlbnNpb24gTWFyIDIwMjZfUC54bHN4IiwidHlwZSI6ImF0dGFjaG1lbnQifSwiYXVkIjpbInVybjpzZXJ2aWNlOmZpbGUuZG93bmxvYWQiXSwiZXhwIjoxNzk1MjIyMTE0LCJqdGkiOiJkYmQ3YTZkNi1mYzkxLTQ2NzctOTQyMS01OTFkNWE5NmYxNzMiLCJpYXQiOjE3OTUxODYxMTQsImlzcyI6InVybjphcHA6ZTY2NjMwZTcxNGYwNDkwYWFlYTFmMTQ5YjNiNjllMzIiLCJzdWIiOiJ1cm46YXBwOmU2NjYzMGU3MTRmMDQ5MGFhZWExZjE0OWIzYjY5ZTMyIn0.h1nBvbtGeNe0Pr17cWdE2FfXzBgEFH5LvA4iI5d3Jjw",
      "year": "2026",
      "iframe": false,
      "doc": true,
@@ -4720,7 +4471,7 @@
     },
     {
      "text": "הצהרה מראש על מדיניות השקעה צפויה - מקפת - לשנת 2026 (יולי 2026) להורדה להורדה להורדה",
-     "href": "https://download-files.wixmp.com/ugd/ebf348_d096631b9be5447aab4599fa915c73bc.xlsx?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJvYmoiOltbeyJwYXRoIjoiL3VnZC9lYmYzNDhfZDA5NjYzMWI5YmU1NDQ3YWFiNDU5OWZhOTE1YzczYmMueGxzeCJ9XV0sImRpcyI6eyJmaWxlbmFtZSI6IkhhdHphcmF0IE1pZ2RhbCBNYWtlZmV0IFBlbnNpb24gSlVMIDIwMjZfUCAtIEFDQy54bHN4IiwidHlwZSI6ImF0dGFjaG1lbnQifSwiYXVkIjpbInVybjpzZXJ2aWNlOmZpbGUuZG93bmxvYWQiXSwiZXhwIjoxNzk1MTM2NjgwLCJqdGkiOiIzMjI0ODk4MS1lNmFlLTQ4MDktYjRkMi05Y2Y3MjQ5MTIxYTIiLCJpYXQiOjE3OTUxMDA2ODAsImlzcyI6InVybjphcHA6ZTY2NjMwZTcxNGYwNDkwYWFlYTFmMTQ5YjNiNjllMzIiLCJzdWIiOiJ1cm46YXBwOmU2NjYzMGU3MTRmMDQ5MGFhZWExZjE0OWIzYjY5ZTMyIn0.VZy4g5eU72pFz424-W7MxFCKrAcYoJZO87_Rp1ARHoo",
+     "href": "https://download-files.wixmp.com/ugd/ebf348_d096631b9be5447aab4599fa915c73bc.xlsx?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJvYmoiOltbeyJwYXRoIjoiL3VnZC9lYmYzNDhfZDA5NjYzMWI5YmU1NDQ3YWFiNDU5OWZhOTE1YzczYmMueGxzeCJ9XV0sImRpcyI6eyJmaWxlbmFtZSI6IkhhdHphcmF0IE1pZ2RhbCBNYWtlZmV0IFBlbnNpb24gSlVMIDIwMjZfUCAtIEFDQy54bHN4IiwidHlwZSI6ImF0dGFjaG1lbnQifSwiYXVkIjpbInVybjpzZXJ2aWNlOmZpbGUuZG93bmxvYWQiXSwiZXhwIjoxNzk1MjIyMTEyLCJqdGkiOiJjYWE0ZjJhYi1iYjkzLTQ5ZTgtYTQ3Ni1kYTAzZWNmNTliZTEiLCJpYXQiOjE3OTUxODYxMTIsImlzcyI6InVybjphcHA6ZTY2NjMwZTcxNGYwNDkwYWFlYTFmMTQ5YjNiNjllMzIiLCJzdWIiOiJ1cm46YXBwOmU2NjYzMGU3MTRmMDQ5MGFhZWExZjE0OWIzYjY5ZTMyIn0.pPixR0BHa-Ip5Gf-9jZwAcEowBYB_-uRmFX9K28R0Y8",
      "year": "2026",
      "iframe": false,
      "doc": true,
@@ -4728,7 +4479,15 @@
     },
     {
      "text": "הצהרה מראש על מדיניות השקעה צפויה - מקפת - לשנת 2026 (אוגוסט 2026) להורדה להורדה להורדה",
-     "href": "https://download-files.wixmp.com/ugd/571a7f_9750569da81a434ca9d8c5a213a9960c.xlsx?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJvYmoiOltbeyJwYXRoIjoiL3VnZC81NzFhN2ZfOTc1MDU2OWRhODFhNDM0Y2E5ZDhjNWEyMTNhOTk2MGMueGxzeCJ9XV0sImRpcyI6eyJmaWxlbmFtZSI6IkhhdHphcmF0IE1pZ2RhbCBNYWtlZmV0IFBlbnNpb24gQVVHIDIwMjZfViAtIEFDQy54bHN4IiwidHlwZSI6ImF0dGFjaG1lbnQifSwiYXVkIjpbInVybjpzZXJ2aWNlOmZpbGUuZG93bmxvYWQiXSwiZXhwIjoxNzk1MTM2Njc4LCJqdGkiOiJlNjdmYmJlNy05NmJjLTQzZDgtYjgxMy1iZThiY2ViZWFkNjAiLCJpYXQiOjE3OTUxMDA2NzgsImlzcyI6InVybjphcHA6ZTY2NjMwZTcxNGYwNDkwYWFlYTFmMTQ5YjNiNjllMzIiLCJzdWIiOiJ1cm46YXBwOmU2NjYzMGU3MTRmMDQ5MGFhZWExZjE0OWIzYjY5ZTMyIn0.TbI6_6lU8P4Do8cVrlm0wip5Rxaz97VI2C_kjh1jBnM",
+     "href": "https://download-files.wixmp.com/ugd/571a7f_9750569da81a434ca9d8c5a213a9960c.xlsx?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJvYmoiOltbeyJwYXRoIjoiL3VnZC81NzFhN2ZfOTc1MDU2OWRhODFhNDM0Y2E5ZDhjNWEyMTNhOTk2MGMueGxzeCJ9XV0sImRpcyI6eyJmaWxlbmFtZSI6IkhhdHphcmF0IE1pZ2RhbCBNYWtlZmV0IFBlbnNpb24gQVVHIDIwMjZfViAtIEFDQy54bHN4IiwidHlwZSI6ImF0dGFjaG1lbnQifSwiYXVkIjpbInVybjpzZXJ2aWNlOmZpbGUuZG93bmxvYWQiXSwiZXhwIjoxNzk1MjIyMTEwLCJqdGkiOiIzOTA5ZjY2MC01NGM5LTRiNWEtYmYxZC1iNGI0ODNhYzY3MTIiLCJpYXQiOjE3OTUxODYxMTAsImlzcyI6InVybjphcHA6ZTY2NjMwZTcxNGYwNDkwYWFlYTFmMTQ5YjNiNjllMzIiLCJzdWIiOiJ1cm46YXBwOmU2NjYzMGU3MTRmMDQ5MGFhZWExZjE0OWIzYjY5ZTMyIn0.p7N4pQB6Bv4ZJgfL1ZU-eBwQ8GFEyZW7xUFtRbDZ_jE",
+     "year": "2026",
+     "iframe": false,
+     "doc": true,
+     "internal": false
+    },
+    {
+     "text": "הצהרה מראש על מדיניות השקעה צפויה - מקפת - לשנת 2026 (אוגוסט 2026) להורדה להורדה להורדה",
+     "href": "https://download-files.wixmp.com/ugd/571a7f_9750569da81a434ca9d8c5a213a9960c.xlsx?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJvYmoiOltbeyJwYXRoIjoiL3VnZC81NzFhN2ZfOTc1MDU2OWRhODFhNDM0Y2E5ZDhjNWEyMTNhOTk2MGMueGxzeCJ9XV0sImRpcyI6eyJmaWxlbmFtZSI6IkhhdHphcmF0IE1pZ2RhbCBNYWtlZmV0IFBlbnNpb24gQVVHIDIwMjZfViAtIEFDQy54bHN4IiwidHlwZSI6ImF0dGFjaG1lbnQifSwiYXVkIjpbInVybjpzZXJ2aWNlOmZpbGUuZG93bmxvYWQiXSwiZXhwIjoxNzk1MjIyMTEzLCJqdGkiOiJjOWM1ODY3My1hYTU5LTQ3MTMtYjNiZi1iYTJkOGE5M2ZmMWQiLCJpYXQiOjE3OTUxODYxMTMsImlzcyI6InVybjphcHA6ZTY2NjMwZTcxNGYwNDkwYWFlYTFmMTQ5YjNiNjllMzIiLCJzdWIiOiJ1cm46YXBwOmU2NjYzMGU3MTRmMDQ5MGFhZWExZjE0OWIzYjY5ZTMyIn0.f7s9hcYUfK3FShg8nCkcJexsK6fzh24_I6lG74Yb4CQ",
      "year": "2026",
      "iframe": false,
      "doc": true,
@@ -4736,24 +4495,15 @@
     },
     {
      "text": "הצהרה מראש על מדיניות השקעה צפויה - מגדל תגמולים - לשנת 2026 (אוגוסט 2026) להורדה להורדה להורדה",
-     "href": "https://download-files.wixmp.com/ugd/571a7f_9a9b356fb1384e13933c580b5a135c29.xlsx?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJvYmoiOltbeyJwYXRoIjoiL3VnZC81NzFhN2ZfOWE5YjM1NmZiMTM4NGUxMzkzM2M1ODBiNWExMzVjMjkueGxzeCJ9XV0sImRpcyI6eyJmaWxlbmFtZSI6IkhhdHphcmF0IE1pZ2RhbCBUYWdtdWxpbSBBVUcgMjAyNl9WIC0gQUNDLnhsc3giLCJ0eXBlIjoiYXR0YWNobWVudCJ9LCJhdWQiOlsidXJuOnNlcnZpY2U6ZmlsZS5kb3dubG9hZCJdLCJleHAiOjE3OTUxMzY2ODAsImp0aSI6Ijc2MzQ3OTgyLWIxOTgtNDlmOC1iNzljLTk4ZWU1Y2JlMGRiOCIsImlhdCI6MTc5NTEwMDY4MCwiaXNzIjoidXJuOmFwcDplNjY2MzBlNzE0ZjA0OTBhYWVhMWYxNDliM2I2OWUzMiIsInN1YiI6InVybjphcHA6ZTY2NjMwZTcxNGYwNDkwYWFlYTFmMTQ5YjNiNjllMzIifQ.v4bfyl1ysfuvhiAA-AC4FnCYw55PI3SdXJvsl3R2OpM",
+     "href": "https://download-files.wixmp.com/ugd/571a7f_9a9b356fb1384e13933c580b5a135c29.xlsx?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJvYmoiOltbeyJwYXRoIjoiL3VnZC81NzFhN2ZfOWE5YjM1NmZiMTM4NGUxMzkzM2M1ODBiNWExMzVjMjkueGxzeCJ9XV0sImRpcyI6eyJmaWxlbmFtZSI6IkhhdHphcmF0IE1pZ2RhbCBUYWdtdWxpbSBBVUcgMjAyNl9WIC0gQUNDLnhsc3giLCJ0eXBlIjoiYXR0YWNobWVudCJ9LCJhdWQiOlsidXJuOnNlcnZpY2U6ZmlsZS5kb3dubG9hZCJdLCJleHAiOjE3OTUyMjIxMTEsImp0aSI6IjUyNzExZGYwLTAyZjUtNDNjYi04YTY4LWJjZDk5NmU4Mzg3MiIsImlhdCI6MTc5NTE4NjExMSwiaXNzIjoidXJuOmFwcDplNjY2MzBlNzE0ZjA0OTBhYWVhMWYxNDliM2I2OWUzMiIsInN1YiI6InVybjphcHA6ZTY2NjMwZTcxNGYwNDkwYWFlYTFmMTQ5YjNiNjllMzIifQ.0sElEf58z4ytPbKj62vqq436Le9vYoQhb2yQDt0ogyg",
      "year": "2026",
      "iframe": false,
      "doc": true,
      "internal": false
     },
     {
-     "text": "הצהרה מראש על מדיניות השקעה צפויה - מגדל השתלמות - לשנת 2026 (יולי 2026) להורדה להורדה להורדה Hatzarat Migdal Hishtalmut JUL 2026_P - ACC.xlsx",
-     "href": "https://www.migdal.co.il/regulations/makefet-investment-policy",
-     "year": "2026",
-     "iframe": false,
-     "doc": true,
-     "internal": true,
-     "local": "/home/runner/work/_temp/policy_dl/2514398143_Hatzarat Migdal Hishtalmut JUL 2026_P - ACC.xlsx"
-    },
-    {
      "text": "הצהרה מראש על מדיניות השקעה צפויה - מגדל השתלמות - לשנת 2026 (יולי 2026) להורדה להורדה להורדה",
-     "href": "https://download-files.wixmp.com/ugd/ebf348_dcc6cb4e1e554249b4dab1623d2fc9ec.xlsx?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJvYmoiOltbeyJwYXRoIjoiL3VnZC9lYmYzNDhfZGNjNmNiNGUxZTU1NDI0OWI0ZGFiMTYyM2QyZmM5ZWMueGxzeCJ9XV0sImRpcyI6eyJmaWxlbmFtZSI6IkhhdHphcmF0IE1pZ2RhbCBIaXNodGFsbXV0IEpVTCAyMDI2X1AgLSBBQ0MueGxzeCIsInR5cGUiOiJhdHRhY2htZW50In0sImF1ZCI6WyJ1cm46c2VydmljZTpmaWxlLmRvd25sb2FkIl0sImV4cCI6MTc5NTEzNjY4MSwianRpIjoiOTljZmI1N2YtN2Y2Mi00Y2IwLTgzNjQtZDViNTE3MzY5M2YwIiwiaWF0IjoxNzk1MTAwNjgxLCJpc3MiOiJ1cm46YXBwOmU2NjYzMGU3MTRmMDQ5MGFhZWExZjE0OWIzYjY5ZTMyIiwic3ViIjoidXJuOmFwcDplNjY2MzBlNzE0ZjA0OTBhYWVhMWYxNDliM2I2OWUzMiJ9.DmfSyqVHFD2W9crJ8iZFwg6L_uAmJthxZuAgWC8tZeI",
+     "href": "https://download-files.wixmp.com/ugd/ebf348_dcc6cb4e1e554249b4dab1623d2fc9ec.xlsx?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJvYmoiOltbeyJwYXRoIjoiL3VnZC9lYmYzNDhfZGNjNmNiNGUxZTU1NDI0OWI0ZGFiMTYyM2QyZmM5ZWMueGxzeCJ9XV0sImRpcyI6eyJmaWxlbmFtZSI6IkhhdHphcmF0IE1pZ2RhbCBIaXNodGFsbXV0IEpVTCAyMDI2X1AgLSBBQ0MueGxzeCIsInR5cGUiOiJhdHRhY2htZW50In0sImF1ZCI6WyJ1cm46c2VydmljZTpmaWxlLmRvd25sb2FkIl0sImV4cCI6MTc5NTIyMjExMiwianRpIjoiOWIzM2IxMjgtYjZmMC00ZWZiLWFjZjUtNDAzMWZkZTk0YmU3IiwiaWF0IjoxNzk1MTg2MTEyLCJpc3MiOiJ1cm46YXBwOmU2NjYzMGU3MTRmMDQ5MGFhZWExZjE0OWIzYjY5ZTMyIiwic3ViIjoidXJuOmFwcDplNjY2MzBlNzE0ZjA0OTBhYWVhMWYxNDliM2I2OWUzMiJ9.SA-Dt7rlefx1nCwqaNvzd8tw4tJjVbC2OD3yzvO8epk",
      "year": "2026",
      "iframe": false,
      "doc": true,
@@ -4761,7 +4511,15 @@
     },
     {
      "text": "הצהרה מראש על מדיניות השקעה צפויה - מגדל השתלמות - לשנת 2026 (אוגוסט 2026) להורדה להורדה להורדה",
-     "href": "https://download-files.wixmp.com/ugd/571a7f_8328e117254642f6a747d82e4611c4da.xlsx?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJvYmoiOltbeyJwYXRoIjoiL3VnZC81NzFhN2ZfODMyOGUxMTcyNTQ2NDJmNmE3NDdkODJlNDYxMWM0ZGEueGxzeCJ9XV0sImRpcyI6eyJmaWxlbmFtZSI6IkhhdHphcmF0IE1pZ2RhbCBIaXNodGFsbXV0IEFVRyAyMDI2X1YgLSBBQ0MueGxzeCIsInR5cGUiOiJhdHRhY2htZW50In0sImF1ZCI6WyJ1cm46c2VydmljZTpmaWxlLmRvd25sb2FkIl0sImV4cCI6MTc5NTEzNjY3NywianRpIjoiY2RjMzk2NjYtYTFkZC00YTA2LTg3MGQtYTZjOGY3YjI4MzYyIiwiaWF0IjoxNzk1MTAwNjc3LCJpc3MiOiJ1cm46YXBwOmU2NjYzMGU3MTRmMDQ5MGFhZWExZjE0OWIzYjY5ZTMyIiwic3ViIjoidXJuOmFwcDplNjY2MzBlNzE0ZjA0OTBhYWVhMWYxNDliM2I2OWUzMiJ9.-5-TT8DGQB3l84efi6Lcx0w87ANlficJgnTMe0vBXBE",
+     "href": "https://download-files.wixmp.com/ugd/571a7f_8328e117254642f6a747d82e4611c4da.xlsx?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJvYmoiOltbeyJwYXRoIjoiL3VnZC81NzFhN2ZfODMyOGUxMTcyNTQ2NDJmNmE3NDdkODJlNDYxMWM0ZGEueGxzeCJ9XV0sImRpcyI6eyJmaWxlbmFtZSI6IkhhdHphcmF0IE1pZ2RhbCBIaXNodGFsbXV0IEFVRyAyMDI2X1YgLSBBQ0MueGxzeCIsInR5cGUiOiJhdHRhY2htZW50In0sImF1ZCI6WyJ1cm46c2VydmljZTpmaWxlLmRvd25sb2FkIl0sImV4cCI6MTc5NTIyMjEwOSwianRpIjoiYjg4YWJjZTctYzE2MC00NWJmLWE3MGMtNmQ4ODA2OWY2OGRjIiwiaWF0IjoxNzk1MTg2MTA5LCJpc3MiOiJ1cm46YXBwOmU2NjYzMGU3MTRmMDQ5MGFhZWExZjE0OWIzYjY5ZTMyIiwic3ViIjoidXJuOmFwcDplNjY2MzBlNzE0ZjA0OTBhYWVhMWYxNDliM2I2OWUzMiJ9.wTQVo40V6SxEuJ48bKWu7ZKfhBxgf7aJwuyNpUud5OI",
+     "year": "2026",
+     "iframe": false,
+     "doc": true,
+     "internal": false
+    },
+    {
+     "text": "הצהרה מראש על מדיניות השקעה צפויה - יוזמה - לשנת 2026 (ינואר 2026) להורדה להורדה להורדה",
+     "href": "https://download-files.wixmp.com/ugd/571a7f_68cc7eba35f4472f9db9deb3f56096e9.xlsx?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJvYmoiOltbeyJwYXRoIjoiL3VnZC81NzFhN2ZfNjhjYzdlYmEzNWY0NDcyZjlkYjlkZWIzZjU2MDk2ZTkueGxzeCJ9XV0sImRpcyI6eyJmaWxlbmFtZSI6IkhhdHphcmF0IFlvem1hIEphbiAyMDI2X1AueGxzeCIsInR5cGUiOiJhdHRhY2htZW50In0sImF1ZCI6WyJ1cm46c2VydmljZTpmaWxlLmRvd25sb2FkIl0sImV4cCI6MTc5NTIyMjExNSwianRpIjoiMzI4ZjM1ZTctN2JiMi00YmYxLWI4YjYtMjdlZTAzYmY3MTJlIiwiaWF0IjoxNzk1MTg2MTE1LCJpc3MiOiJ1cm46YXBwOmU2NjYzMGU3MTRmMDQ5MGFhZWExZjE0OWIzYjY5ZTMyIiwic3ViIjoidXJuOmFwcDplNjY2MzBlNzE0ZjA0OTBhYWVhMWYxNDliM2I2OWUzMiJ9.d5bpTDRRq1POWnqadWlhgiTn6D7oRH43TpcMxLMVNP8",
      "year": "2026",
      "iframe": false,
      "doc": true,
@@ -4977,7 +4735,7 @@
     },
     {
      "text": "Hatzarat Migdal Hishtalmut AUG 2026_V - ACC.xlsx",
-     "href": "https://download-files.wixmp.com/ugd/571a7f_8328e117254642f6a747d82e4611c4da.xlsx?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJvYmoiOltbeyJwYXRoIjoiL3VnZC81NzFhN2ZfODMyOGUxMTcyNTQ2NDJmNmE3NDdkODJlNDYxMWM0ZGEueGxzeCJ9XV0sImRpcyI6eyJmaWxlbmFtZSI6IkhhdHphcmF0IE1pZ2RhbCBIaXNodGFsbXV0IEFVRyAyMDI2X1YgLSBBQ0MueGxzeCIsInR5cGUiOiJhdHRhY2htZW50In0sImF1ZCI6WyJ1cm46c2VydmljZTpmaWxlLmRvd25sb2FkIl0sImV4cCI6MTc5NTEzNjYyNCwianRpIjoiNTQ0ZWVkYWMtMjAwMy00NWY2LTgwMzUtNTgzMWQ0NTVhYzdiIiwiaWF0IjoxNzk1MTAwNjI0LCJpc3MiOiJ1cm46YXBwOmU2NjYzMGU3MTRmMDQ5MGFhZWExZjE0OWIzYjY5ZTMyIiwic3ViIjoidXJuOmFwcDplNjY2MzBlNzE0ZjA0OTBhYWVhMWYxNDliM2I2OWUzMiJ9.8kI9kfQCtdocyJzFpWg-FasP8lMGaLZEDPpmtNG2yng",
+     "href": "https://download-files.wixmp.com/ugd/571a7f_8328e117254642f6a747d82e4611c4da.xlsx?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJvYmoiOltbeyJwYXRoIjoiL3VnZC81NzFhN2ZfODMyOGUxMTcyNTQ2NDJmNmE3NDdkODJlNDYxMWM0ZGEueGxzeCJ9XV0sImRpcyI6eyJmaWxlbmFtZSI6IkhhdHphcmF0IE1pZ2RhbCBIaXNodGFsbXV0IEFVRyAyMDI2X1YgLSBBQ0MueGxzeCIsInR5cGUiOiJhdHRhY2htZW50In0sImF1ZCI6WyJ1cm46c2VydmljZTpmaWxlLmRvd25sb2FkIl0sImV4cCI6MTc5NTIyMjA1NCwianRpIjoiZmFhY2QwYzMtNWI2Yi00NDMxLThmODUtMzI4MzcyYzg5Mzk0IiwiaWF0IjoxNzk1MTg2MDU0LCJpc3MiOiJ1cm46YXBwOmU2NjYzMGU3MTRmMDQ5MGFhZWExZjE0OWIzYjY5ZTMyIiwic3ViIjoidXJuOmFwcDplNjY2MzBlNzE0ZjA0OTBhYWVhMWYxNDliM2I2OWUzMiJ9.wl2gHzhuGTW56QzPMvlf3huZtXXOAmxMIkDENt60ZT8",
      "year": "2026",
      "iframe": false,
      "doc": true,
@@ -5592,6 +5350,31 @@
      "internal": true
     },
     {
+     "text": "הצהרה מראש על מדיניות השקעה צפויה לשנת 2020 (ינואר 2020) מיום 30.01.2020 להורדה להורדה להורדה",
+     "href": "https://download-files.wixmp.com/ugd/5adfdb_b0be41a52d0f495591552cf82c807574.xls?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJvYmoiOltbeyJwYXRoIjoiL3VnZC81YWRmZGJfYjBiZTQxYTUyZDBmNDk1NTkxNTUyY2Y4MmM4MDc1NzQueGxzIn1dXSwiZGlzIjp7ImZpbGVuYW1lIjoiaW52ZXN0bWVudF9wb2xpY3lfbWFrZWZldDAxMjAyMC54bHMiLCJ0eXBlIjoiYXR0YWNobWVudCJ9LCJhdWQiOlsidXJuOnNlcnZpY2U6ZmlsZS5kb3dubG9hZCJdLCJleHAiOjE3OTUyMjIxMTYsImp0aSI6IjBkYTBlMGNkLTQxN2MtNDNmYy1hMmZhLWRmMGNlNzIxZTc2NSIsImlhdCI6MTc5NTE4NjExNiwiaXNzIjoidXJuOmFwcDplNjY2MzBlNzE0ZjA0OTBhYWVhMWYxNDliM2I2OWUzMiIsInN1YiI6InVybjphcHA6ZTY2NjMwZTcxNGYwNDkwYWFlYTFmMTQ5YjNiNjllMzIifQ.g34LYACsnX4EeP6EzoNwPa6TPMZxeRJMNgJApU43uuU",
+     "year": "2020",
+     "iframe": false,
+     "doc": true,
+     "internal": false
+    },
+    {
+     "text": "הצהרה מראש על מדיניות השקעה צפויה לשנת 2020 (אפריל 2020) מיום 13.04.2020 להורדה להורדה להורדה hatzhara_makefet.xls",
+     "href": "https://www.migdal.co.il/regulations/makefet-investment-policy",
+     "year": "2020",
+     "iframe": false,
+     "doc": true,
+     "internal": true,
+     "local": "/home/runner/work/_temp/policy_dl/1317238412_hatzhara_makefet.xls"
+    },
+    {
+     "text": "הצהרה מראש על מדיניות השקעה צפויה לשנת 2020 (אפריל 2020) מיום 13.04.2020 להורדה להורדה להורדה",
+     "href": "https://download-files.wixmp.com/ugd/5adfdb_a965ef6d1c834483a03eb6127a9a35e0.xls?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJvYmoiOltbeyJwYXRoIjoiL3VnZC81YWRmZGJfYTk2NWVmNmQxYzgzNDQ4M2EwM2ViNjEyN2E5YTM1ZTAueGxzIn1dXSwiZGlzIjp7ImZpbGVuYW1lIjoiaGF0emhhcmFfbWFrZWZldC54bHMiLCJ0eXBlIjoiYXR0YWNobWVudCJ9LCJhdWQiOlsidXJuOnNlcnZpY2U6ZmlsZS5kb3dubG9hZCJdLCJleHAiOjE3OTUyMjIxMTYsImp0aSI6ImE1ZmE3YWJlLTQ0OGQtNDI2Mi1hZmJiLTRjOWI2YTAzYTVjMCIsImlhdCI6MTc5NTE4NjExNiwiaXNzIjoidXJuOmFwcDplNjY2MzBlNzE0ZjA0OTBhYWVhMWYxNDliM2I2OWUzMiIsInN1YiI6InVybjphcHA6ZTY2NjMwZTcxNGYwNDkwYWFlYTFmMTQ5YjNiNjllMzIifQ.G7k85MifM5yUrfQHQE-qyRtJr2UHFz1nrQ0SLWS6544",
+     "year": "2020",
+     "iframe": false,
+     "doc": true,
+     "internal": false
+    },
+    {
      "text": "mediniut_hashkaa_tagmulim012020.xls",
      "href": "https://www.migdal.co.il/_files/ugd/5adfdb_ee89a5db4ad24fffbed6e158e5cf6cfa.xls",
      "year": "2020",
@@ -5640,22 +5423,6 @@
      "internal": true
     },
     {
-     "text": "קרן פנסיה משלימה",
-     "href": "https://www.migdal.co.il/product-lobby/upplementary-pension-fund",
-     "year": null,
-     "iframe": false,
-     "doc": false,
-     "internal": true
-    },
-    {
-     "text": "קרן פנסיה אישית",
-     "href": "https://www.migdal.co.il/product-lobby/pensionary-savings",
-     "year": null,
-     "iframe": false,
-     "doc": false,
-     "internal": true
-    },
-    {
      "text": "קרן השתלמות",
      "href": "https://www.migdal.co.il/product-lobby/employees-or-self-employed",
      "year": null,
@@ -5689,7 +5456,7 @@
     },
     {
      "text": "קופת גמל להשקעה",
-     "href": "https://www.migdal.co.il/product-lobby/personal-savings",
+     "href": "https://www.migdal.co.il/product-lobby/provident-fund-for-investment",
      "year": null,
      "iframe": false,
      "doc": false,
@@ -5697,7 +5464,7 @@
     },
     {
      "text": "קופת גמל להשקעה",
-     "href": "https://www.migdal.co.il/product-lobby/provident-fund-for-investment",
+     "href": "https://www.migdal.co.il/product-lobby/personal-savings",
      "year": null,
      "iframe": false,
      "doc": false,
@@ -5720,8 +5487,32 @@
      "internal": true
     },
     {
+     "text": "פנסיה משלימה",
+     "href": "https://www.migdal.co.il/product-lobby/upplementary-pension-fund",
+     "year": null,
+     "iframe": false,
+     "doc": false,
+     "internal": true
+    },
+    {
+     "text": "פנסיה אישית",
+     "href": "https://www.migdal.co.il/product-lobby/pensionary-savings",
+     "year": null,
+     "iframe": false,
+     "doc": false,
+     "internal": true
+    },
+    {
      "text": "פדיון פנסיה",
      "href": "https://my.migdal.co.il/mymigdal/process/pensionredemption",
+     "year": null,
+     "iframe": false,
+     "doc": false,
+     "internal": true
+    },
+    {
+     "text": "מנהלים לשכירים",
+     "href": "https://www.migdal.co.il/product-lobby/personal-pension-complementary",
      "year": null,
      "iframe": false,
      "doc": false,
@@ -5817,27 +5608,11 @@
     },
     {
      "text": "בית השקעות מגדל שוקי הון",
-     "href": "https://www.msh.co.il",
-     "year": null,
-     "iframe": false,
-     "doc": false,
-     "internal": false
-    },
-    {
-     "text": "בית השקעות מגדל שוקי הון",
      "href": "https://www.msh.co.il/",
      "year": null,
      "iframe": false,
      "doc": false,
      "internal": false
-    },
-    {
-     "text": "ביטוח מנהלים לשכירים",
-     "href": "https://www.migdal.co.il/product-lobby/personal-pension-complementary",
-     "year": null,
-     "iframe": false,
-     "doc": false,
-     "internal": true
     },
     {
      "text": "איחוד חשבונות קרנות פנסיה",
@@ -7405,7 +7180,7 @@
    "product": "פנסיה+גמל+ביטוח",
    "status": 200,
    "method": "requests",
-   "text_hash": "b005f57822a8f024219940cf439f3cfb002ce393",
+   "text_hash": "81c3c116da61d9430898f69318a17dd7762246b0",
    "text_head": "קופת גמל לעצמאיים של מגדל top of page Close פתח תפריט ניווט כניסה למגדל שלי - Close חסכון אישי והשקעות חסכון פנסיוני ביטוחים תביעות שירותים פעולות אני רוצה לקבל הצעה אונליין ביטוח רכב חסכון פנסיוני ביטח דירה ביטוח נסיעות לחו\"ל התנתקות עברית Close עברית English Close Menu Close חיסכון אישי והשקעות ​ ​ חיסכון פנסיוני ​ ​ ביטוחים ​ ​ תביעות ​ ​ שירותים ​ ​ פעולות ​ ​ Menu Close כניסה לפורטלים מעסיקים ועסקים מפתחים- בנקאות פתוחה סוכנים מגדל CONNECT קשרי משקיעים מעסיקים ועסקים מפתחים- בנקאות פתוחה סוכנים מגדל CONNECT קשרי משקיעים Menu Close עברית English עברית English עברית Menu Close English עברית",
    "items": [
     {
@@ -7505,6 +7280,14 @@
      "internal": true
     },
     {
+     "text": "טיפים לבחירת קרן פנסיה",
+     "href": "https://www.migdal.co.il/articles/choosing-a-pension-fund-tips",
+     "year": null,
+     "iframe": false,
+     "doc": false,
+     "internal": true
+    },
+    {
      "text": "חישוב תשואות מסלולי השקעה",
      "href": "https://my.migdal.co.il/pensionary-savings/life-insurance/investment-tracks-yields",
      "year": null,
@@ -7515,6 +7298,14 @@
     {
      "text": "חישוב עלות שנתית צפויה בשל דמי ניהול והוצאות ישירות",
      "href": "https://my.migdal.co.il/pension-funds/support/operating-fees",
+     "year": null,
+     "iframe": false,
+     "doc": false,
+     "internal": true
+    },
+    {
+     "text": "התקבלת לעבודה? אלו הן הזכויות הפנסיוניות שלך",
+     "href": "https://www.migdal.co.il/articles/employees-pension-rights",
      "year": null,
      "iframe": false,
      "doc": false,
@@ -7547,6 +7338,14 @@
     {
      "text": "איחוד חשבונות קרנות פנסיה",
      "href": "https://my.migdal.co.il/makefet/pension-funds-consolidation?_gl=1*8jbvub*_gcl_au*OTIzNDY2MTE0LjE3NTA5MTgwNTQ.*_ga*MjAzMTMwMTg2Ni4xNzUwOTE4MDUw*_ga_PK7X7KDXKV*czE3NTA5MTgwNTEkbzEkZzEkdDE3NTA5MjE2MTckajEyJGwwJGgw",
+     "year": null,
+     "iframe": false,
+     "doc": false,
+     "internal": true
+    },
+    {
+     "text": "5 טיפים מנצחים למצטרפים חדשים לקרן פנסיה",
+     "href": "https://www.migdal.co.il/articles/tips-for-beginners-1",
      "year": null,
      "iframe": false,
      "doc": false,
@@ -7924,7 +7723,7 @@
    "product": "פנסיה+גמל+ביטוח",
    "status": 200,
    "method": "requests",
-   "text_hash": "39bd300229ffe4e8930e47572961084a9bc649fd",
+   "text_hash": "f506749abcb48fc63269f18e0dd4307f33c16da5",
    "text_head": "קופת גמל למעסיקים של מגדל top of page Close פתח תפריט ניווט כניסה למגדל שלי - Close חסכון אישי והשקעות חסכון פנסיוני ביטוחים תביעות שירותים פעולות אני רוצה לקבל הצעה אונליין ביטוח רכב חסכון פנסיוני ביטח דירה ביטוח נסיעות לחו\"ל התנתקות עברית Close עברית English Close Menu Close חיסכון אישי והשקעות ​ ​ חיסכון פנסיוני ​ ​ ביטוחים ​ ​ תביעות ​ ​ שירותים ​ ​ פעולות ​ ​ Menu Close כניסה לפורטלים מעסיקים ועסקים מפתחים- בנקאות פתוחה סוכנים מגדל CONNECT קשרי משקיעים מעסיקים ועסקים מפתחים- בנקאות פתוחה סוכנים מגדל CONNECT קשרי משקיעים Menu Close עברית English עברית English עברית Menu Close English עברית",
    "items": [
     {
@@ -8032,6 +7831,14 @@
      "internal": true
     },
     {
+     "text": "טיפים לבחירת קרן פנסיה",
+     "href": "https://www.migdal.co.il/articles/choosing-a-pension-fund-tips",
+     "year": null,
+     "iframe": false,
+     "doc": false,
+     "internal": true
+    },
+    {
      "text": "חישוב תשואות מסלולי השקעה",
      "href": "https://my.migdal.co.il/pensionary-savings/life-insurance/investment-tracks-yields",
      "year": null,
@@ -8042,6 +7849,14 @@
     {
      "text": "חישוב עלות שנתית צפויה בשל דמי ניהול והוצאות ישירות",
      "href": "https://my.migdal.co.il/pension-funds/support/operating-fees",
+     "year": null,
+     "iframe": false,
+     "doc": false,
+     "internal": true
+    },
+    {
+     "text": "התקבלת לעבודה? אלו הן הזכויות הפנסיוניות שלך",
+     "href": "https://www.migdal.co.il/articles/employees-pension-rights",
      "year": null,
      "iframe": false,
      "doc": false,
@@ -8074,6 +7889,14 @@
     {
      "text": "איחוד חשבונות קרנות פנסיה",
      "href": "https://my.migdal.co.il/makefet/pension-funds-consolidation?_gl=1*8jbvub*_gcl_au*OTIzNDY2MTE0LjE3NTA5MTgwNTQ.*_ga*MjAzMTMwMTg2Ni4xNzUwOTE4MDUw*_ga_PK7X7KDXKV*czE3NTA5MTgwNTEkbzEkZzEkdDE3NTA5MjE2MTckajEyJGwwJGgw",
+     "year": null,
+     "iframe": false,
+     "doc": false,
+     "internal": true
+    },
+    {
+     "text": "5 טיפים מנצחים למצטרפים חדשים לקרן פנסיה",
+     "href": "https://www.migdal.co.il/articles/tips-for-beginners-1",
      "year": null,
      "iframe": false,
      "doc": false,
@@ -8833,149 +8656,20 @@
    ]
   },
   "https://www.migdal.co.il/regulations/provident-funds-funds-transfer": {
-   "product": "פנסיה+גמל+ביטוח",
-   "status": 200,
+   "product": null,
+   "status": "ERR",
    "method": "requests",
-   "text_hash": "6786d087af745610781fffc22a99f6ab96fe7cdc",
-   "text_head": "מדריך להעברת כספים בין קופות גמל - מגדל top of page Close פתח תפריט ניווט כניסה למגדל שלי - Close חסכון אישי והשקעות חסכון פנסיוני ביטוחים תביעות שירותים פעולות אני רוצה לקבל הצעה אונליין ביטוח רכב חסכון פנסיוני ביטח דירה ביטוח נסיעות לחו\"ל התנתקות עברית Close עברית English Close Menu Close חיסכון אישי והשקעות ​ ​ חיסכון פנסיוני ​ ​ ביטוחים ​ ​ תביעות ​ ​ שירותים ​ ​ פעולות ​ ​ Menu Close כניסה לפורטלים מעסיקים ועסקים מפתחים- בנקאות פתוחה סוכנים מגדל CONNECT קשרי משקיעים מעסיקים ועסקים מפתחים- בנקאות פתוחה סוכנים מגדל CONNECT קשרי משקיעים Menu Close עברית English עברית English עברית Menu Close",
-   "items": [
-    {
-     "text": "קרן פנסיה משלימה",
-     "href": "https://www.migdal.co.il/product-lobby/upplementary-pension-fund",
-     "year": null,
-     "iframe": false,
-     "doc": false,
-     "internal": true
-    },
-    {
-     "text": "קרן פנסיה אישית",
-     "href": "https://www.migdal.co.il/product-lobby/pensionary-savings",
-     "year": null,
-     "iframe": false,
-     "doc": false,
-     "internal": true
-    },
-    {
-     "text": "קרן השתלמות",
-     "href": "https://www.migdal.co.il/product-lobby/employees-or-self-employed",
-     "year": null,
-     "iframe": false,
-     "doc": false,
-     "internal": true
-    },
-    {
-     "text": "קופת גמל לשכירים",
-     "href": "https://www.migdal.co.il/product-lobby/provident-funds",
-     "year": null,
-     "iframe": false,
-     "doc": false,
-     "internal": true
-    },
-    {
-     "text": "קופת גמל לעצמאים",
-     "href": "https://www.migdal.co.il/product-lobby/independent",
-     "year": null,
-     "iframe": false,
-     "doc": false,
-     "internal": true
-    },
-    {
-     "text": "קופת גמל למעסיקים",
-     "href": "https://www.migdal.co.il/product-lobby/employers",
-     "year": null,
-     "iframe": false,
-     "doc": false,
-     "internal": true
-    },
-    {
-     "text": "קופת גמל להשקעה",
-     "href": "https://www.migdal.co.il/product-lobby/personal-savings",
-     "year": null,
-     "iframe": false,
-     "doc": false,
-     "internal": true
-    },
-    {
-     "text": "לבדיקת ניוד הכספים בין סוגי המוצרים ובכפוף לכללים לחץ כאן>",
-     "href": "https://my.migdal.co.il/media/27577/6793-moving-provident-funds.pdf",
-     "year": null,
-     "iframe": false,
-     "doc": true,
-     "internal": true
-    },
-    {
-     "text": "טופס הודעת ביטול",
-     "href": "https://my.migdal.co.il/media/27432/55.pdf",
-     "year": null,
-     "iframe": false,
-     "doc": true,
-     "internal": true
-    },
-    {
-     "text": "חישוב עלות שנתית צפויה בשל דמי ניהול והוצאות ישירות",
-     "href": "https://my.migdal.co.il/pension-funds/support/operating-fees",
-     "year": null,
-     "iframe": false,
-     "doc": false,
-     "internal": true
-    },
-    {
-     "text": "המדריך המלא להתמצאות בדוחות התקופתיים",
-     "href": "https://my.migdal.co.il/support/quarterly-report-guide",
-     "year": null,
-     "iframe": false,
-     "doc": false,
-     "internal": true
-    },
-    {
-     "text": "בית השקעות מגדל שוקי הון",
-     "href": "https://www.msh.co.il",
-     "year": null,
-     "iframe": false,
-     "doc": false,
-     "internal": false
-    },
-    {
-     "text": "ביטוח מנהלים לשכירים",
-     "href": "https://www.migdal.co.il/product-lobby/personal-pension-complementary",
-     "year": null,
-     "iframe": false,
-     "doc": false,
-     "internal": true
-    },
-    {
-     "text": "איחוד חשבונות קרנות פנסיה",
-     "href": "https://my.migdal.co.il/makefet/pension-funds-consolidation?_gl=1*8jbvub*_gcl_au*OTIzNDY2MTE0LjE3NTA5MTgwNTQ.*_ga*MjAzMTMwMTg2Ni4xNzUwOTE4MDUw*_ga_PK7X7KDXKV*czE3NTA5MTgwNTEkbzEkZzEkdDE3NTA5MjE2MTckajEyJGwwJGgw",
-     "year": null,
-     "iframe": false,
-     "doc": false,
-     "internal": true
-    }
-   ]
+   "text_hash": null,
+   "text_head": "",
+   "items": []
   },
   "https://www.migdal.co.il/regulations/investment-routes-and-returns": {
-   "product": "פנסיה+ביטוח",
+   "product": "פנסיה",
    "status": 200,
    "method": "browser",
-   "text_hash": "400c5c241c99d4ebbd80ce3aed3909a88c8cc734",
-   "text_head": "דלג לתוכן login / registration English About About Investors Investors Leadership Leadership Vision and Strategy Vision and Strategy Migdal Group Insurance & Finance Welcome to Migdal Migdal, the leading insurance, pension and financial group in Israel, sees itself as having a major role in the building of a humane, healthy and stable society. As a leading Israeli company for the last 91 years, our work has always been to manage our customers’ money responsibly and provide economic security for about 2.5 million customers, who have entrusted us with their insurance funds, pension savings and l",
+   "text_hash": "1d8a4bd4d861fd31071630ea7a6b85d869d2c2c6",
+   "text_head": "אתר זה עושה שימוש בטכנולוגיות איסוף מידע כגון עוגיות (Cookies), לרבות על ידי צדדים שלישיים, כדי לספק לך חווית גלישה טובה יותר, וכן לניתוח השימוש ולצרכי פרסום מותאם. המשך הגלישה מהווה את הסכמתך לשימוש זה. למידע נוסף, יש לעיין במדיניות הפרטיות המעודכנת לדלג לתוכן הראשי חיסכון אישי והשקעות חיסכון פנסיוני ביטוחים תביעות שירותים פעולות כניסה לפורטלים עברית מגדל שלי דף הבית מסלולי ההשקעה ותשואות מסלולי ההשקעה ותשואות ​ ​ פירוט מסלולי ההשקעה לחיסכון והרכבי הנכסים של מגדל מגדל מנוהל ע\"י מגדל שוקי הון - מסלול עוקב מדדי מניות להורדה מגדל מנוהל ע\"י מגדל שוקי הון - מסלול עוקב מדד s&p 500 להורדה מגדל מסלול",
    "items": [
-    {
-     "text": "קרן פנסיה משלימה",
-     "href": "https://www.migdal.co.il/product-lobby/upplementary-pension-fund",
-     "year": null,
-     "iframe": false,
-     "doc": false,
-     "internal": true
-    },
-    {
-     "text": "קרן פנסיה אישית",
-     "href": "https://www.migdal.co.il/product-lobby/pensionary-savings",
-     "year": null,
-     "iframe": false,
-     "doc": false,
-     "internal": true
-    },
     {
      "text": "קרן השתלמות",
      "href": "https://www.migdal.co.il/product-lobby/employees-or-self-employed",
@@ -9003,14 +8697,6 @@
     {
      "text": "קופת גמל למעסיקים",
      "href": "https://www.migdal.co.il/product-lobby/employers",
-     "year": null,
-     "iframe": false,
-     "doc": false,
-     "internal": true
-    },
-    {
-     "text": "קופת גמל להשקעה",
-     "href": "https://www.migdal.co.il/product-lobby/personal-savings",
      "year": null,
      "iframe": false,
      "doc": false,
@@ -9019,6 +8705,14 @@
     {
      "text": "קופת גמל להשקעה",
      "href": "https://www.migdal.co.il/product-lobby/provident-fund-for-investment",
+     "year": null,
+     "iframe": false,
+     "doc": false,
+     "internal": true
+    },
+    {
+     "text": "קופת גמל להשקעה",
+     "href": "https://www.migdal.co.il/product-lobby/personal-savings",
      "year": null,
      "iframe": false,
      "doc": false,
@@ -9041,8 +8735,40 @@
      "internal": true
     },
     {
+     "text": "פנסיה משלימה",
+     "href": "https://www.migdal.co.il/product-lobby/upplementary-pension-fund",
+     "year": null,
+     "iframe": false,
+     "doc": false,
+     "internal": true
+    },
+    {
+     "text": "פנסיה אישית",
+     "href": "https://www.migdal.co.il/product-lobby/pensionary-savings",
+     "year": null,
+     "iframe": false,
+     "doc": false,
+     "internal": true
+    },
+    {
      "text": "פדיון פנסיה",
      "href": "https://my.migdal.co.il/mymigdal/process/pensionredemption",
+     "year": null,
+     "iframe": false,
+     "doc": false,
+     "internal": true
+    },
+    {
+     "text": "מסלול מניות להורדה להורדה להורדה",
+     "href": "https://download-files.wixmp.com/ugd/571a7f_f50688b6a9a84de68f09293d6c98b851.pdf?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJvYmoiOltbeyJwYXRoIjoiL3VnZC81NzFhN2ZfZjUwNjg4YjZhOWE4NGRlNjhmMDkyOTNkNmM5OGI4NTEucGRmIn1dXSwiZGlzIjp7ImZpbGVuYW1lIjoiTWlnZGFsIEVxdWl0eS5wZGYiLCJ0eXBlIjoiYXR0YWNobWVudCJ9LCJhdWQiOlsidXJuOnNlcnZpY2U6ZmlsZS5kb3dubG9hZCJdLCJleHAiOjE3OTUyMjIzMTksImp0aSI6ImQwOWZkZjEwLTkwMTgtNDM0NS05MjI2LTJlYTUwNTJhN2ZjOSIsImlhdCI6MTc5NTE4NjMxOSwiaXNzIjoidXJuOmFwcDplNjY2MzBlNzE0ZjA0OTBhYWVhMWYxNDliM2I2OWUzMiIsInN1YiI6InVybjphcHA6ZTY2NjMwZTcxNGYwNDkwYWFlYTFmMTQ5YjNiNjllMzIifQ.73HFojTddq9wmX_FacdsahK44vUKWNEQ5SLMjmpJjwY",
+     "year": null,
+     "iframe": false,
+     "doc": true,
+     "internal": false
+    },
+    {
+     "text": "מנהלים לשכירים",
+     "href": "https://www.migdal.co.il/product-lobby/personal-pension-complementary",
      "year": null,
      "iframe": false,
      "doc": false,
@@ -9071,6 +8797,55 @@
      "iframe": false,
      "doc": false,
      "internal": true
+    },
+    {
+     "text": "מגדל מסלול עוקב מדדים - גמיש להורדה להורדה להורדה Migdal Flexible Tracking Indices.pdf",
+     "href": "https://www.migdal.co.il/regulations/investment-routes-and-returns",
+     "year": null,
+     "iframe": false,
+     "doc": true,
+     "internal": true,
+     "local": "/home/runner/work/_temp/policy_dl/9965447912_Migdal Flexible Tracking Indices.pdf"
+    },
+    {
+     "text": "מגדל מסלול עוקב מדדים - גמיש להורדה להורדה להורדה",
+     "href": "https://download-files.wixmp.com/ugd/571a7f_b73f0a0ff3524687b64583771e3ed767.pdf?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJvYmoiOltbeyJwYXRoIjoiL3VnZC81NzFhN2ZfYjczZjBhMGZmMzUyNDY4N2I2NDU4Mzc3MWUzZWQ3NjcucGRmIn1dXSwiZGlzIjp7ImZpbGVuYW1lIjoiTWlnZGFsIEZsZXhpYmxlIFRyYWNraW5nIEluZGljZXMucGRmIiwidHlwZSI6ImF0dGFjaG1lbnQifSwiYXVkIjpbInVybjpzZXJ2aWNlOmZpbGUuZG93bmxvYWQiXSwiZXhwIjoxNzk1MjIyMzIwLCJqdGkiOiI2ZTJkMGNmZS1hOGY1LTRjYzItYTY4NC00NjFlY2JmOGYxNzQiLCJpYXQiOjE3OTUxODYzMjAsImlzcyI6InVybjphcHA6ZTY2NjMwZTcxNGYwNDkwYWFlYTFmMTQ5YjNiNjllMzIiLCJzdWIiOiJ1cm46YXBwOmU2NjYzMGU3MTRmMDQ5MGFhZWExZjE0OWIzYjY5ZTMyIn0.0fNKtntzq5vJ3bj4gwhlqGFu2Zzrxf8F4cIOXtHjIs0",
+     "year": null,
+     "iframe": false,
+     "doc": true,
+     "internal": false
+    },
+    {
+     "text": "מגדל מסלול עוקב מדדי אג\"ח להורדה להורדה להורדה",
+     "href": "https://download-files.wixmp.com/ugd/571a7f_aa28d5f698c14069a27c7cd7e33a1a1b.pdf?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJvYmoiOltbeyJwYXRoIjoiL3VnZC81NzFhN2ZfYWEyOGQ1ZjY5OGMxNDA2OWEyN2M3Y2Q3ZTMzYTFhMWIucGRmIn1dXSwiZGlzIjp7ImZpbGVuYW1lIjoiTWlnZGFsIEJvbmQgSW5kaWNlcyBUcmFja2luZy5wZGYiLCJ0eXBlIjoiYXR0YWNobWVudCJ9LCJhdWQiOlsidXJuOnNlcnZpY2U6ZmlsZS5kb3dubG9hZCJdLCJleHAiOjE3OTUyMjIzMTgsImp0aSI6Ijk0ZGVhNGRjLTAxYTUtNGNjOS1hZDBhLWQ2OTkwZmQ5ZjgyZCIsImlhdCI6MTc5NTE4NjMxOCwiaXNzIjoidXJuOmFwcDplNjY2MzBlNzE0ZjA0OTBhYWVhMWYxNDliM2I2OWUzMiIsInN1YiI6InVybjphcHA6ZTY2NjMwZTcxNGYwNDkwYWFlYTFmMTQ5YjNiNjllMzIifQ.H0rtEoZ1FtcuRC22T_I89eKZjZVHXs8amQglBoK-uFQ",
+     "year": null,
+     "iframe": false,
+     "doc": true,
+     "internal": false
+    },
+    {
+     "text": "מגדל מסלול אג\"ח ממשלות להורדה להורדה להורדה",
+     "href": "https://download-files.wixmp.com/ugd/571a7f_0dff6f7d00e24c7da3b5c83674b8a4b5.pdf?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJvYmoiOltbeyJwYXRoIjoiL3VnZC81NzFhN2ZfMGRmZjZmN2QwMGUyNGM3ZGEzYjVjODM2NzRiOGE0YjUucGRmIn1dXSwiZGlzIjp7ImZpbGVuYW1lIjoiTWlnZGFsIEdvdmVybm1lbnQgRml4ZWQgSW5jb21lLnBkZiIsInR5cGUiOiJhdHRhY2htZW50In0sImF1ZCI6WyJ1cm46c2VydmljZTpmaWxlLmRvd25sb2FkIl0sImV4cCI6MTc5NTIyMjMxOCwianRpIjoiOTU4OTU4NGYtOTExOS00NzFkLWFlYWItMGIzODhmNTgxNTljIiwiaWF0IjoxNzk1MTg2MzE4LCJpc3MiOiJ1cm46YXBwOmU2NjYzMGU3MTRmMDQ5MGFhZWExZjE0OWIzYjY5ZTMyIiwic3ViIjoidXJuOmFwcDplNjY2MzBlNzE0ZjA0OTBhYWVhMWYxNDliM2I2OWUzMiJ9.3ltSPvkctfXxnpo5K-XCrl9KWv918gWDBPv64_1ocvw",
+     "year": null,
+     "iframe": false,
+     "doc": true,
+     "internal": false
+    },
+    {
+     "text": "מגדל מנוהל ע\"י מגדל שוקי הון - מסלול עוקב מדדי מניות להורדה להורדה להורדה",
+     "href": "https://download-files.wixmp.com/ugd/571a7f_110a9b62ae12483cb73d21fc709eb8ec.pdf?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJvYmoiOltbeyJwYXRoIjoiL3VnZC81NzFhN2ZfMTEwYTliNjJhZTEyNDgzY2I3M2QyMWZjNzA5ZWI4ZWMucGRmIn1dXSwiZGlzIjp7ImZpbGVuYW1lIjoiTWlnZGFsIE1hbmFnZWQgYnkgTWlnZGFsIENhcGl0YWwgTWFya2V0cyAtIFRyYWNraW5nIEVxdWl0eSBJbmRpY2VzLnBkZiIsInR5cGUiOiJhdHRhY2htZW50In0sImF1ZCI6WyJ1cm46c2VydmljZTpmaWxlLmRvd25sb2FkIl0sImV4cCI6MTc5NTIyMjMxNiwianRpIjoiNTIxYzk0MTUtZWZkNy00NWI3LTg1YWMtZDc5ODJiNTUyMTVmIiwiaWF0IjoxNzk1MTg2MzE2LCJpc3MiOiJ1cm46YXBwOmU2NjYzMGU3MTRmMDQ5MGFhZWExZjE0OWIzYjY5ZTMyIiwic3ViIjoidXJuOmFwcDplNjY2MzBlNzE0ZjA0OTBhYWVhMWYxNDliM2I2OWUzMiJ9.ITGkcFYYSF-TRU9ccaCZkJGPZLO6aEToEf_1pJJ_A24",
+     "year": null,
+     "iframe": false,
+     "doc": true,
+     "internal": false
+    },
+    {
+     "text": "מגדל מנוהל ע\"י מגדל שוקי הון - מסלול עוקב מדד s&p 500 להורדה להורדה להורדה",
+     "href": "https://download-files.wixmp.com/ugd/571a7f_044b026d56be4db3af3c5129f672a48b.pdf?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJvYmoiOltbeyJwYXRoIjoiL3VnZC81NzFhN2ZfMDQ0YjAyNmQ1NmJlNGRiM2FmM2M1MTI5ZjY3MmE0OGIucGRmIn1dXSwiZGlzIjp7ImZpbGVuYW1lIjoiTWlnZGFsIE1hbmFnZWQgYnkgTWlnZGFsIENhcGl0YWwgTWFya2V0cyAtIFRyYWNraW5nIEluZGV4IFNQNTAwLnBkZiIsInR5cGUiOiJhdHRhY2htZW50In0sImF1ZCI6WyJ1cm46c2VydmljZTpmaWxlLmRvd25sb2FkIl0sImV4cCI6MTc5NTIyMjMxNywianRpIjoiZmU1MjVlOGEtYTJhMi00MWZlLTlmNzEtNTczNDYzYmVmYWNiIiwiaWF0IjoxNzk1MTg2MzE3LCJpc3MiOiJ1cm46YXBwOmU2NjYzMGU3MTRmMDQ5MGFhZWExZjE0OWIzYjY5ZTMyIiwic3ViIjoidXJuOmFwcDplNjY2MzBlNzE0ZjA0OTBhYWVhMWYxNDliM2I2OWUzMiJ9.iHhF6tl8DXOXD538w4A1grubYYjn-wzX68N1kJyBpf0",
+     "year": null,
+     "iframe": false,
+     "doc": true,
+     "internal": false
     },
     {
      "text": "להורדת אפליקציית מגדל",
@@ -9138,27 +8913,11 @@
     },
     {
      "text": "בית השקעות מגדל שוקי הון",
-     "href": "https://www.msh.co.il",
-     "year": null,
-     "iframe": false,
-     "doc": false,
-     "internal": false
-    },
-    {
-     "text": "בית השקעות מגדל שוקי הון",
      "href": "https://www.msh.co.il/",
      "year": null,
      "iframe": false,
      "doc": false,
      "internal": false
-    },
-    {
-     "text": "ביטוח מנהלים לשכירים",
-     "href": "https://www.migdal.co.il/product-lobby/personal-pension-complementary",
-     "year": null,
-     "iframe": false,
-     "doc": false,
-     "internal": true
     },
     {
      "text": "איחוד חשבונות קרנות פנסיה",
@@ -9202,7 +8961,7 @@
     },
     {
      "text": "Migdal Managed by Migdal Capital Markets - Tracking Equity Indices.pdf",
-     "href": "https://download-files.wixmp.com/ugd/571a7f_110a9b62ae12483cb73d21fc709eb8ec.pdf?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJvYmoiOltbeyJwYXRoIjoiL3VnZC81NzFhN2ZfMTEwYTliNjJhZTEyNDgzY2I3M2QyMWZjNzA5ZWI4ZWMucGRmIn1dXSwiZGlzIjp7ImZpbGVuYW1lIjoiTWlnZGFsIE1hbmFnZWQgYnkgTWlnZGFsIENhcGl0YWwgTWFya2V0cyAtIFRyYWNraW5nIEVxdWl0eSBJbmRpY2VzLnBkZiIsInR5cGUiOiJhdHRhY2htZW50In0sImF1ZCI6WyJ1cm46c2VydmljZTpmaWxlLmRvd25sb2FkIl0sImV4cCI6MTc5NTEzNjc5NywianRpIjoiNmUyMTFhZmEtZmYxOS00ZDk3LWI0NzQtNzhiZmEzNjA0NzFkIiwiaWF0IjoxNzk1MTAwNzk3LCJpc3MiOiJ1cm46YXBwOmU2NjYzMGU3MTRmMDQ5MGFhZWExZjE0OWIzYjY5ZTMyIiwic3ViIjoidXJuOmFwcDplNjY2MzBlNzE0ZjA0OTBhYWVhMWYxNDliM2I2OWUzMiJ9.GZa-Fen75bMQZcZHSYY_Ki3PWvKNXCKmRf-bQGOmki4",
+     "href": "https://download-files.wixmp.com/ugd/571a7f_110a9b62ae12483cb73d21fc709eb8ec.pdf?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJvYmoiOltbeyJwYXRoIjoiL3VnZC81NzFhN2ZfMTEwYTliNjJhZTEyNDgzY2I3M2QyMWZjNzA5ZWI4ZWMucGRmIn1dXSwiZGlzIjp7ImZpbGVuYW1lIjoiTWlnZGFsIE1hbmFnZWQgYnkgTWlnZGFsIENhcGl0YWwgTWFya2V0cyAtIFRyYWNraW5nIEVxdWl0eSBJbmRpY2VzLnBkZiIsInR5cGUiOiJhdHRhY2htZW50In0sImF1ZCI6WyJ1cm46c2VydmljZTpmaWxlLmRvd25sb2FkIl0sImV4cCI6MTc5NTIyMjI2MiwianRpIjoiNGE3NDI3MDktZGVjMi00Y2Y4LThlNTItOWE4NTc4M2QzMDNjIiwiaWF0IjoxNzk1MTg2MjYyLCJpc3MiOiJ1cm46YXBwOmU2NjYzMGU3MTRmMDQ5MGFhZWExZjE0OWIzYjY5ZTMyIiwic3ViIjoidXJuOmFwcDplNjY2MzBlNzE0ZjA0OTBhYWVhMWYxNDliM2I2OWUzMiJ9.eEGS1gxkL9_J841qugl6ANWeBZ7fRZEIcSEHQNkvvoM",
      "year": null,
      "iframe": false,
      "doc": true,
@@ -9291,109 +9050,12 @@
    ]
   },
   "https://my.migdal.co.il/pensionary-savings/advanced-study-funds/taxation-advanced-study-funds": {
-   "product": "פנסיה+גמל+ביטוח",
-   "status": 200,
+   "product": "פנסיה",
+   "status": "ERR",
    "method": "requests",
-   "text_hash": "d232cd55f015efcc794d19328b415fc83037bf5f",
-   "text_head": "מס על קרן השתלמות - כמה כסף משלמים על משיכת קרן השתלמות - מגדל top of page Close פתח תפריט ניווט כניסה למגדל שלי - Close חסכון אישי והשקעות חסכון פנסיוני ביטוחים תביעות שירותים פעולות אני רוצה לקבל הצעה אונליין ביטוח רכב חסכון פנסיוני ביטח דירה ביטוח נסיעות לחו\"ל התנתקות עברית Close עברית English Close Menu Close חיסכון אישי והשקעות ​ ​ חיסכון פנסיוני ​ ​ ביטוחים ​ ​ תביעות ​ ​ שירותים ​ ​ פעולות ​ ​ Menu Close כניסה לפורטלים מעסיקים ועסקים מפתחים- בנקאות פתוחה סוכנים מגדל CONNECT קשרי משקיעים מעסיקים ועסקים מפתחים- בנקאות פתוחה סוכנים מגדל CONNECT קשרי משקיעים Menu Close עברית English עברית E",
-   "items": [
-    {
-     "text": "קרן פנסיה משלימה",
-     "href": "https://www.migdal.co.il/product-lobby/upplementary-pension-fund",
-     "year": null,
-     "iframe": false,
-     "doc": false,
-     "internal": true
-    },
-    {
-     "text": "קרן פנסיה אישית",
-     "href": "https://www.migdal.co.il/product-lobby/pensionary-savings",
-     "year": null,
-     "iframe": false,
-     "doc": false,
-     "internal": true
-    },
-    {
-     "text": "קופת גמל לשכירים",
-     "href": "https://www.migdal.co.il/product-lobby/provident-funds",
-     "year": null,
-     "iframe": false,
-     "doc": false,
-     "internal": true
-    },
-    {
-     "text": "קופת גמל לעצמאים",
-     "href": "https://www.migdal.co.il/product-lobby/independent",
-     "year": null,
-     "iframe": false,
-     "doc": false,
-     "internal": true
-    },
-    {
-     "text": "קופת גמל למעסיקים",
-     "href": "https://www.migdal.co.il/product-lobby/employers",
-     "year": null,
-     "iframe": false,
-     "doc": false,
-     "internal": true
-    },
-    {
-     "text": "קופת גמל להשקעה",
-     "href": "https://www.migdal.co.il/product-lobby/personal-savings",
-     "year": null,
-     "iframe": false,
-     "doc": false,
-     "internal": true
-    },
-    {
-     "text": "למידע נוסף על קרנות השתלמות >",
-     "href": "https://www.migdal.co.il/product-lobby/employees-or-self-employed",
-     "year": null,
-     "iframe": false,
-     "doc": false,
-     "internal": true
-    },
-    {
-     "text": "חישוב עלות שנתית צפויה בשל דמי ניהול והוצאות ישירות",
-     "href": "https://my.migdal.co.il/pension-funds/support/operating-fees",
-     "year": null,
-     "iframe": false,
-     "doc": false,
-     "internal": true
-    },
-    {
-     "text": "המדריך המלא להתמצאות בדוחות התקופתיים",
-     "href": "https://my.migdal.co.il/support/quarterly-report-guide",
-     "year": null,
-     "iframe": false,
-     "doc": false,
-     "internal": true
-    },
-    {
-     "text": "בית השקעות מגדל שוקי הון",
-     "href": "https://www.msh.co.il",
-     "year": null,
-     "iframe": false,
-     "doc": false,
-     "internal": false
-    },
-    {
-     "text": "ביטוח מנהלים לשכירים",
-     "href": "https://www.migdal.co.il/product-lobby/personal-pension-complementary",
-     "year": null,
-     "iframe": false,
-     "doc": false,
-     "internal": true
-    },
-    {
-     "text": "איחוד חשבונות קרנות פנסיה",
-     "href": "https://my.migdal.co.il/makefet/pension-funds-consolidation?_gl=1*8jbvub*_gcl_au*OTIzNDY2MTE0LjE3NTA5MTgwNTQ.*_ga*MjAzMTMwMTg2Ni4xNzUwOTE4MDUw*_ga_PK7X7KDXKV*czE3NTA5MTgwNTEkbzEkZzEkdDE3NTA5MjE2MTckajEyJGwwJGgw",
-     "year": null,
-     "iframe": false,
-     "doc": false,
-     "internal": true
-    }
-   ]
+   "text_hash": null,
+   "text_head": "",
+   "items": []
   },
   "http://my.migdal.co.il/mymigdal/onlinepurchase/retirementpensionsimulation": {
    "product": "פנסיה",
@@ -9404,230 +9066,20 @@
    "items": []
   },
   "https://www.migdal.co.il/regulations/taxation-pension": {
-   "product": "פנסיה+ביטוח",
-   "status": 200,
+   "product": "פנסיה",
+   "status": "ERR",
    "method": "requests",
-   "text_hash": "21bc31841b4b32df4632f047fffbc601dc235592",
-   "text_head": "כמה מס משלמים על משיכת כספי פנסיה - מגדל top of page Close פתח תפריט ניווט כניסה למגדל שלי - Close חסכון אישי והשקעות חסכון פנסיוני ביטוחים תביעות שירותים פעולות אני רוצה לקבל הצעה אונליין ביטוח רכב חסכון פנסיוני ביטח דירה ביטוח נסיעות לחו\"ל התנתקות עברית Close עברית English Close Menu Close חיסכון אישי והשקעות ​ ​ חיסכון פנסיוני ​ ​ ביטוחים ​ ​ תביעות ​ ​ שירותים ​ ​ פעולות ​ ​ Menu Close כניסה לפורטלים מעסיקים ועסקים מפתחים- בנקאות פתוחה סוכנים מגדל CONNECT קשרי משקיעים מעסיקים ועסקים מפתחים- בנקאות פתוחה סוכנים מגדל CONNECT קשרי משקיעים Menu Close עברית English עברית English עברית Menu Clos",
-   "items": [
-    {
-     "text": "קרן פנסיה משלימה",
-     "href": "https://www.migdal.co.il/product-lobby/upplementary-pension-fund",
-     "year": null,
-     "iframe": false,
-     "doc": false,
-     "internal": true
-    },
-    {
-     "text": "קרן פנסיה אישית",
-     "href": "https://www.migdal.co.il/product-lobby/pensionary-savings",
-     "year": null,
-     "iframe": false,
-     "doc": false,
-     "internal": true
-    },
-    {
-     "text": "קרן השתלמות",
-     "href": "https://www.migdal.co.il/product-lobby/employees-or-self-employed",
-     "year": null,
-     "iframe": false,
-     "doc": false,
-     "internal": true
-    },
-    {
-     "text": "קופת גמל לשכירים",
-     "href": "https://www.migdal.co.il/product-lobby/provident-funds",
-     "year": null,
-     "iframe": false,
-     "doc": false,
-     "internal": true
-    },
-    {
-     "text": "קופת גמל לעצמאים",
-     "href": "https://www.migdal.co.il/product-lobby/independent",
-     "year": null,
-     "iframe": false,
-     "doc": false,
-     "internal": true
-    },
-    {
-     "text": "קופת גמל למעסיקים",
-     "href": "https://www.migdal.co.il/product-lobby/employers",
-     "year": null,
-     "iframe": false,
-     "doc": false,
-     "internal": true
-    },
-    {
-     "text": "קופת גמל להשקעה",
-     "href": "https://www.migdal.co.il/product-lobby/personal-savings",
-     "year": null,
-     "iframe": false,
-     "doc": false,
-     "internal": true
-    },
-    {
-     "text": "לטופס הצהרת עמית / מבקש- משיכת כספי פיצויים בלבד>",
-     "href": "https://front.migdal.co.il//UsefulForms/api/GetFile?letterId=1691&itemType=%D7%9E%D7%A1%D7%9E%D7%9A&_gl=1*1tuvnlz*_gcl_au*MTc5NzgxNjM5Ny4xNzc5MTEyMDYy*_ga*MTg0NDY3NzM5NS4xNzc5MTEyMDYz*_ga_PK7X7KDXKV*czE3NzkxMTIwNjUkbzEkZzEkdDE3NzkxMTI1NDckajYwJGwwJGgw",
-     "year": null,
-     "iframe": false,
-     "doc": false,
-     "internal": true
-    },
-    {
-     "text": "חישוב עלות שנתית צפויה בשל דמי ניהול והוצאות ישירות",
-     "href": "https://my.migdal.co.il/pension-funds/support/operating-fees",
-     "year": null,
-     "iframe": false,
-     "doc": false,
-     "internal": true
-    },
-    {
-     "text": "המדריך המלא להתמצאות בדוחות התקופתיים",
-     "href": "https://my.migdal.co.il/support/quarterly-report-guide",
-     "year": null,
-     "iframe": false,
-     "doc": false,
-     "internal": true
-    },
-    {
-     "text": "בית השקעות מגדל שוקי הון",
-     "href": "https://www.msh.co.il",
-     "year": null,
-     "iframe": false,
-     "doc": false,
-     "internal": false
-    },
-    {
-     "text": "ביטוח מנהלים לשכירים",
-     "href": "https://www.migdal.co.il/product-lobby/personal-pension-complementary",
-     "year": null,
-     "iframe": false,
-     "doc": false,
-     "internal": true
-    },
-    {
-     "text": "איחוד חשבונות קרנות פנסיה",
-     "href": "https://my.migdal.co.il/makefet/pension-funds-consolidation?_gl=1*8jbvub*_gcl_au*OTIzNDY2MTE0LjE3NTA5MTgwNTQ.*_ga*MjAzMTMwMTg2Ni4xNzUwOTE4MDUw*_ga_PK7X7KDXKV*czE3NTA5MTgwNTEkbzEkZzEkdDE3NTA5MjE2MTckajEyJGwwJGgw",
-     "year": null,
-     "iframe": false,
-     "doc": false,
-     "internal": true
-    }
-   ]
+   "text_hash": null,
+   "text_head": "",
+   "items": []
   },
   "https://my.migdal.co.il/life-insurance/supplementary-to-pension": {
    "product": "פנסיה+ביטוח",
-   "status": 200,
+   "status": "ERR",
    "method": "requests",
-   "text_hash": "68a3ff5e5745c8e974683e6d9daa87e042a42f90",
-   "text_head": "מהו ביטוח חיים משלים לפנסיה | מגדל top of page Close פתח תפריט ניווט כניסה למגדל שלי - Close חסכון אישי והשקעות חסכון פנסיוני ביטוחים תביעות שירותים פעולות אני רוצה לקבל הצעה אונליין ביטוח רכב חסכון פנסיוני ביטח דירה ביטוח נסיעות לחו\"ל התנתקות עברית Close עברית English Close Menu Close חיסכון אישי והשקעות ​ ​ חיסכון פנסיוני ​ ​ ביטוחים ​ ​ תביעות ​ ​ שירותים ​ ​ פעולות ​ ​ Menu Close כניסה לפורטלים מעסיקים ועסקים מפתחים- בנקאות פתוחה סוכנים מגדל CONNECT קשרי משקיעים מעסיקים ועסקים מפתחים- בנקאות פתוחה סוכנים מגדל CONNECT קשרי משקיעים Menu Close עברית English עברית English עברית Menu Close Engl",
-   "items": [
-    {
-     "text": "קרן פנסיה משלימה",
-     "href": "https://www.migdal.co.il/product-lobby/upplementary-pension-fund",
-     "year": null,
-     "iframe": false,
-     "doc": false,
-     "internal": true
-    },
-    {
-     "text": "קרן פנסיה אישית",
-     "href": "https://www.migdal.co.il/product-lobby/pensionary-savings",
-     "year": null,
-     "iframe": false,
-     "doc": false,
-     "internal": true
-    },
-    {
-     "text": "קרן השתלמות",
-     "href": "https://www.migdal.co.il/product-lobby/employees-or-self-employed",
-     "year": null,
-     "iframe": false,
-     "doc": false,
-     "internal": true
-    },
-    {
-     "text": "קופת גמל לשכירים",
-     "href": "https://www.migdal.co.il/product-lobby/provident-funds",
-     "year": null,
-     "iframe": false,
-     "doc": false,
-     "internal": true
-    },
-    {
-     "text": "קופת גמל לעצמאים",
-     "href": "https://www.migdal.co.il/product-lobby/independent",
-     "year": null,
-     "iframe": false,
-     "doc": false,
-     "internal": true
-    },
-    {
-     "text": "קופת גמל למעסיקים",
-     "href": "https://www.migdal.co.il/product-lobby/employers",
-     "year": null,
-     "iframe": false,
-     "doc": false,
-     "internal": true
-    },
-    {
-     "text": "קופת גמל להשקעה",
-     "href": "https://www.migdal.co.il/product-lobby/personal-savings",
-     "year": null,
-     "iframe": false,
-     "doc": false,
-     "internal": true
-    },
-    {
-     "text": "מגדל משלים לפנסיה - מוצר השנה בענף חיסכון ארוך טווח",
-     "href": "https://www.migdal.co.il/articles/supplementary-to-pension",
-     "year": null,
-     "iframe": false,
-     "doc": false,
-     "internal": true
-    },
-    {
-     "text": "חישוב עלות שנתית צפויה בשל דמי ניהול והוצאות ישירות",
-     "href": "https://my.migdal.co.il/pension-funds/support/operating-fees",
-     "year": null,
-     "iframe": false,
-     "doc": false,
-     "internal": true
-    },
-    {
-     "text": "המדריך המלא להתמצאות בדוחות התקופתיים",
-     "href": "https://my.migdal.co.il/support/quarterly-report-guide",
-     "year": null,
-     "iframe": false,
-     "doc": false,
-     "internal": true
-    },
-    {
-     "text": "בית השקעות מגדל שוקי הון",
-     "href": "https://www.msh.co.il",
-     "year": null,
-     "iframe": false,
-     "doc": false,
-     "internal": false
-    },
-    {
-     "text": "ביטוח מנהלים לשכירים",
-     "href": "https://www.migdal.co.il/product-lobby/personal-pension-complementary",
-     "year": null,
-     "iframe": false,
-     "doc": false,
-     "internal": true
-    },
-    {
-     "text": "איחוד חשבונות קרנות פנסיה",
-     "href": "https://my.migdal.co.il/makefet/pension-funds-consolidation?_gl=1*8jbvub*_gcl_au*OTIzNDY2MTE0LjE3NTA5MTgwNTQ.*_ga*MjAzMTMwMTg2Ni4xNzUwOTE4MDUw*_ga_PK7X7KDXKV*czE3NTA5MTgwNTEkbzEkZzEkdDE3NTA5MjE2MTckajEyJGwwJGgw",
-     "year": null,
-     "iframe": false,
-     "doc": false,
-     "internal": true
-    }
-   ]
+   "text_hash": null,
+   "text_head": "",
+   "items": []
   },
   "https://www.migdal.co.il/regulations/investment-routes-and-returns?_gl=1*1x0gdsr*_gcl_au*MTQ5Mzg1NDEzOS4xNzgzNTgyNDU1LjgxMTA0MjkwNi4xNzg0NzA5NTc2LjE3ODQ3MDk1ODAuMTgyMDM5NzcyMi4xNzg0NzA5NTc2LjE3ODQ3MDk1ODA.*_ga*MTMyMjE5MzA3NC4xNzgzNTgyNDU2*_ga_PK7X7KDXKV*czE3ODc0NzI3MjUkbzE3JGcxJHQxNzg3NDcyNzgwJGo1JGwwJGgw": {
    "product": "פנסיה",
@@ -9637,22 +9089,6 @@
    "text_head": "אתר זה עושה שימוש בטכנולוגיות איסוף מידע כגון עוגיות (Cookies), לרבות על ידי צדדים שלישיים, כדי לספק לך חווית גלישה טובה יותר, וכן לניתוח השימוש ולצרכי פרסום מותאם. המשך הגלישה מהווה את הסכמתך לשימוש זה. למידע נוסף, יש לעיין במדיניות הפרטיות המעודכנת לדלג לתוכן הראשי חיסכון אישי והשקעות חיסכון פנסיוני ביטוחים תביעות שירותים פעולות כניסה לפורטלים עברית מגדל שלי דף הבית מסלולי ההשקעה ותשואות מסלולי ההשקעה ותשואות ​ ​ פירוט מסלולי ההשקעה לחיסכון והרכבי הנכסים של מגדל מגדל מנוהל ע\"י מגדל שוקי הון - מסלול עוקב מדדי מניות להורדה מגדל מנוהל ע\"י מגדל שוקי הון - מסלול עוקב מדד s&p 500 להורדה מגדל מסלול",
    "items": [
     {
-     "text": "קרן פנסיה משלימה",
-     "href": "https://www.migdal.co.il/product-lobby/upplementary-pension-fund",
-     "year": null,
-     "iframe": false,
-     "doc": false,
-     "internal": true
-    },
-    {
-     "text": "קרן פנסיה אישית",
-     "href": "https://www.migdal.co.il/product-lobby/pensionary-savings",
-     "year": null,
-     "iframe": false,
-     "doc": false,
-     "internal": true
-    },
-    {
      "text": "קרן השתלמות",
      "href": "https://www.migdal.co.il/product-lobby/employees-or-self-employed",
      "year": null,
@@ -9686,7 +9122,7 @@
     },
     {
      "text": "קופת גמל להשקעה",
-     "href": "https://www.migdal.co.il/product-lobby/personal-savings",
+     "href": "https://www.migdal.co.il/product-lobby/provident-fund-for-investment",
      "year": null,
      "iframe": false,
      "doc": false,
@@ -9694,7 +9130,7 @@
     },
     {
      "text": "קופת גמל להשקעה",
-     "href": "https://www.migdal.co.il/product-lobby/provident-fund-for-investment",
+     "href": "https://www.migdal.co.il/product-lobby/personal-savings",
      "year": null,
      "iframe": false,
      "doc": false,
@@ -9717,6 +9153,22 @@
      "internal": true
     },
     {
+     "text": "פנסיה משלימה",
+     "href": "https://www.migdal.co.il/product-lobby/upplementary-pension-fund",
+     "year": null,
+     "iframe": false,
+     "doc": false,
+     "internal": true
+    },
+    {
+     "text": "פנסיה אישית",
+     "href": "https://www.migdal.co.il/product-lobby/pensionary-savings",
+     "year": null,
+     "iframe": false,
+     "doc": false,
+     "internal": true
+    },
+    {
      "text": "פדיון פנסיה",
      "href": "https://my.migdal.co.il/mymigdal/process/pensionredemption",
      "year": null,
@@ -9726,11 +9178,19 @@
     },
     {
      "text": "מסלול מניות להורדה להורדה להורדה",
-     "href": "https://download-files.wixmp.com/ugd/571a7f_f50688b6a9a84de68f09293d6c98b851.pdf?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJvYmoiOltbeyJwYXRoIjoiL3VnZC81NzFhN2ZfZjUwNjg4YjZhOWE4NGRlNjhmMDkyOTNkNmM5OGI4NTEucGRmIn1dXSwiZGlzIjp7ImZpbGVuYW1lIjoiTWlnZGFsIEVxdWl0eS5wZGYiLCJ0eXBlIjoiYXR0YWNobWVudCJ9LCJhdWQiOlsidXJuOnNlcnZpY2U6ZmlsZS5kb3dubG9hZCJdLCJleHAiOjE3OTUxMzcwMDMsImp0aSI6Ijg0NTU2NmY3LTQ4OGEtNDQ2Mi04NWNjLTFmODk4YmZiNDVhNCIsImlhdCI6MTc5NTEwMTAwMywiaXNzIjoidXJuOmFwcDplNjY2MzBlNzE0ZjA0OTBhYWVhMWYxNDliM2I2OWUzMiIsInN1YiI6InVybjphcHA6ZTY2NjMwZTcxNGYwNDkwYWFlYTFmMTQ5YjNiNjllMzIifQ.ToTaaMcIfVwSDrbBxCdFUuxK4yyO_5Ls28FZgbO1908",
+     "href": "https://download-files.wixmp.com/ugd/571a7f_f50688b6a9a84de68f09293d6c98b851.pdf?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJvYmoiOltbeyJwYXRoIjoiL3VnZC81NzFhN2ZfZjUwNjg4YjZhOWE4NGRlNjhmMDkyOTNkNmM5OGI4NTEucGRmIn1dXSwiZGlzIjp7ImZpbGVuYW1lIjoiTWlnZGFsIEVxdWl0eS5wZGYiLCJ0eXBlIjoiYXR0YWNobWVudCJ9LCJhdWQiOlsidXJuOnNlcnZpY2U6ZmlsZS5kb3dubG9hZCJdLCJleHAiOjE3OTUyMjI1OTAsImp0aSI6IjVlNThhOTI5LTdlZTItNDY4Yy1iZGU5LWY4M2U3NGFlZGQxOCIsImlhdCI6MTc5NTE4NjU5MCwiaXNzIjoidXJuOmFwcDplNjY2MzBlNzE0ZjA0OTBhYWVhMWYxNDliM2I2OWUzMiIsInN1YiI6InVybjphcHA6ZTY2NjMwZTcxNGYwNDkwYWFlYTFmMTQ5YjNiNjllMzIifQ.EK3vhUXxmkDlsUbL3qZWvYsc7ICOBMP11sclKGrv2BE",
      "year": null,
      "iframe": false,
      "doc": true,
      "internal": false
+    },
+    {
+     "text": "מנהלים לשכירים",
+     "href": "https://www.migdal.co.il/product-lobby/personal-pension-complementary",
+     "year": null,
+     "iframe": false,
+     "doc": false,
+     "internal": true
     },
     {
      "text": "מחשבון תשואת מסלולי השקעה",
@@ -9763,11 +9223,11 @@
      "iframe": false,
      "doc": true,
      "internal": true,
-     "local": "/home/runner/work/_temp/policy_dl/6888739536_Migdal Flexible Tracking Indices.pdf"
+     "local": "/home/runner/work/_temp/policy_dl/6527446588_Migdal Flexible Tracking Indices.pdf"
     },
     {
      "text": "מגדל מסלול עוקב מדדים - גמיש להורדה להורדה להורדה",
-     "href": "https://download-files.wixmp.com/ugd/571a7f_b73f0a0ff3524687b64583771e3ed767.pdf?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJvYmoiOltbeyJwYXRoIjoiL3VnZC81NzFhN2ZfYjczZjBhMGZmMzUyNDY4N2I2NDU4Mzc3MWUzZWQ3NjcucGRmIn1dXSwiZGlzIjp7ImZpbGVuYW1lIjoiTWlnZGFsIEZsZXhpYmxlIFRyYWNraW5nIEluZGljZXMucGRmIiwidHlwZSI6ImF0dGFjaG1lbnQifSwiYXVkIjpbInVybjpzZXJ2aWNlOmZpbGUuZG93bmxvYWQiXSwiZXhwIjoxNzk1MTM3MDA0LCJqdGkiOiIzOGI5YTEyZC1iNTM0LTRiNzItODgxOS1iZmYzNmNmMmZiMWEiLCJpYXQiOjE3OTUxMDEwMDQsImlzcyI6InVybjphcHA6ZTY2NjMwZTcxNGYwNDkwYWFlYTFmMTQ5YjNiNjllMzIiLCJzdWIiOiJ1cm46YXBwOmU2NjYzMGU3MTRmMDQ5MGFhZWExZjE0OWIzYjY5ZTMyIn0.Wv795hBpfz6oFrxc03-OSTDV5AmXfBBp2Xu1uOidfu0",
+     "href": "https://download-files.wixmp.com/ugd/571a7f_b73f0a0ff3524687b64583771e3ed767.pdf?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJvYmoiOltbeyJwYXRoIjoiL3VnZC81NzFhN2ZfYjczZjBhMGZmMzUyNDY4N2I2NDU4Mzc3MWUzZWQ3NjcucGRmIn1dXSwiZGlzIjp7ImZpbGVuYW1lIjoiTWlnZGFsIEZsZXhpYmxlIFRyYWNraW5nIEluZGljZXMucGRmIiwidHlwZSI6ImF0dGFjaG1lbnQifSwiYXVkIjpbInVybjpzZXJ2aWNlOmZpbGUuZG93bmxvYWQiXSwiZXhwIjoxNzk1MjIyNTkxLCJqdGkiOiIyZDMzZjU4Ny1jMThjLTQzODgtYTg2OC02NzA3ZGNhNGQyMmQiLCJpYXQiOjE3OTUxODY1OTEsImlzcyI6InVybjphcHA6ZTY2NjMwZTcxNGYwNDkwYWFlYTFmMTQ5YjNiNjllMzIiLCJzdWIiOiJ1cm46YXBwOmU2NjYzMGU3MTRmMDQ5MGFhZWExZjE0OWIzYjY5ZTMyIn0.mwrrSFACAKtMGsG_s3B2JqH-TcuGUaS3Nt4jPURKxNU",
      "year": null,
      "iframe": false,
      "doc": true,
@@ -9775,7 +9235,7 @@
     },
     {
      "text": "מגדל מסלול עוקב מדדי אג\"ח להורדה להורדה להורדה",
-     "href": "https://download-files.wixmp.com/ugd/571a7f_aa28d5f698c14069a27c7cd7e33a1a1b.pdf?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJvYmoiOltbeyJwYXRoIjoiL3VnZC81NzFhN2ZfYWEyOGQ1ZjY5OGMxNDA2OWEyN2M3Y2Q3ZTMzYTFhMWIucGRmIn1dXSwiZGlzIjp7ImZpbGVuYW1lIjoiTWlnZGFsIEJvbmQgSW5kaWNlcyBUcmFja2luZy5wZGYiLCJ0eXBlIjoiYXR0YWNobWVudCJ9LCJhdWQiOlsidXJuOnNlcnZpY2U6ZmlsZS5kb3dubG9hZCJdLCJleHAiOjE3OTUxMzcwMDMsImp0aSI6IjE5NGI4OGIxLWM1NTAtNGZhMC05ODE5LThlNjg5MTY0NWRjYiIsImlhdCI6MTc5NTEwMTAwMywiaXNzIjoidXJuOmFwcDplNjY2MzBlNzE0ZjA0OTBhYWVhMWYxNDliM2I2OWUzMiIsInN1YiI6InVybjphcHA6ZTY2NjMwZTcxNGYwNDkwYWFlYTFmMTQ5YjNiNjllMzIifQ.ugCpmc1IawVrF0xsyNc-BEq3BYBVKCp0z0YOHM-kYvs",
+     "href": "https://download-files.wixmp.com/ugd/571a7f_aa28d5f698c14069a27c7cd7e33a1a1b.pdf?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJvYmoiOltbeyJwYXRoIjoiL3VnZC81NzFhN2ZfYWEyOGQ1ZjY5OGMxNDA2OWEyN2M3Y2Q3ZTMzYTFhMWIucGRmIn1dXSwiZGlzIjp7ImZpbGVuYW1lIjoiTWlnZGFsIEJvbmQgSW5kaWNlcyBUcmFja2luZy5wZGYiLCJ0eXBlIjoiYXR0YWNobWVudCJ9LCJhdWQiOlsidXJuOnNlcnZpY2U6ZmlsZS5kb3dubG9hZCJdLCJleHAiOjE3OTUyMjI1OTAsImp0aSI6IjhhMzUyOTdmLTNmMjUtNGNlMS04MmYyLTIxZjFkMzUyZmU4OCIsImlhdCI6MTc5NTE4NjU5MCwiaXNzIjoidXJuOmFwcDplNjY2MzBlNzE0ZjA0OTBhYWVhMWYxNDliM2I2OWUzMiIsInN1YiI6InVybjphcHA6ZTY2NjMwZTcxNGYwNDkwYWFlYTFmMTQ5YjNiNjllMzIifQ.XtRm74sywFm9lrZofBG8wzm9obcqZZiQBLKCAYTZY7s",
      "year": null,
      "iframe": false,
      "doc": true,
@@ -9783,7 +9243,7 @@
     },
     {
      "text": "מגדל מסלול אג\"ח ממשלות להורדה להורדה להורדה",
-     "href": "https://download-files.wixmp.com/ugd/571a7f_0dff6f7d00e24c7da3b5c83674b8a4b5.pdf?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJvYmoiOltbeyJwYXRoIjoiL3VnZC81NzFhN2ZfMGRmZjZmN2QwMGUyNGM3ZGEzYjVjODM2NzRiOGE0YjUucGRmIn1dXSwiZGlzIjp7ImZpbGVuYW1lIjoiTWlnZGFsIEdvdmVybm1lbnQgRml4ZWQgSW5jb21lLnBkZiIsInR5cGUiOiJhdHRhY2htZW50In0sImF1ZCI6WyJ1cm46c2VydmljZTpmaWxlLmRvd25sb2FkIl0sImV4cCI6MTc5NTEzNzAwMiwianRpIjoiOTA2YTRiODMtYWE0YS00NWRiLTg3YzUtYWM1YjI3MGMzNGE5IiwiaWF0IjoxNzk1MTAxMDAyLCJpc3MiOiJ1cm46YXBwOmU2NjYzMGU3MTRmMDQ5MGFhZWExZjE0OWIzYjY5ZTMyIiwic3ViIjoidXJuOmFwcDplNjY2MzBlNzE0ZjA0OTBhYWVhMWYxNDliM2I2OWUzMiJ9.wGFfNHzr9IESZZ-TsmUstVFecPP19kMQgB4h43bIThY",
+     "href": "https://download-files.wixmp.com/ugd/571a7f_0dff6f7d00e24c7da3b5c83674b8a4b5.pdf?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJvYmoiOltbeyJwYXRoIjoiL3VnZC81NzFhN2ZfMGRmZjZmN2QwMGUyNGM3ZGEzYjVjODM2NzRiOGE0YjUucGRmIn1dXSwiZGlzIjp7ImZpbGVuYW1lIjoiTWlnZGFsIEdvdmVybm1lbnQgRml4ZWQgSW5jb21lLnBkZiIsInR5cGUiOiJhdHRhY2htZW50In0sImF1ZCI6WyJ1cm46c2VydmljZTpmaWxlLmRvd25sb2FkIl0sImV4cCI6MTc5NTIyMjU4OSwianRpIjoiZTBmOTNhNjUtYWQ5NC00ODI4LTg2ZDAtYWNhNzVjY2U2MzI2IiwiaWF0IjoxNzk1MTg2NTg5LCJpc3MiOiJ1cm46YXBwOmU2NjYzMGU3MTRmMDQ5MGFhZWExZjE0OWIzYjY5ZTMyIiwic3ViIjoidXJuOmFwcDplNjY2MzBlNzE0ZjA0OTBhYWVhMWYxNDliM2I2OWUzMiJ9.DpgMZvtQDXUv1qC_1SZNaDzc1Js08-lqL3Ugq40Aft8",
      "year": null,
      "iframe": false,
      "doc": true,
@@ -9791,7 +9251,7 @@
     },
     {
      "text": "מגדל מנוהל ע\"י מגדל שוקי הון - מסלול עוקב מדדי מניות להורדה להורדה להורדה",
-     "href": "https://download-files.wixmp.com/ugd/571a7f_110a9b62ae12483cb73d21fc709eb8ec.pdf?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJvYmoiOltbeyJwYXRoIjoiL3VnZC81NzFhN2ZfMTEwYTliNjJhZTEyNDgzY2I3M2QyMWZjNzA5ZWI4ZWMucGRmIn1dXSwiZGlzIjp7ImZpbGVuYW1lIjoiTWlnZGFsIE1hbmFnZWQgYnkgTWlnZGFsIENhcGl0YWwgTWFya2V0cyAtIFRyYWNraW5nIEVxdWl0eSBJbmRpY2VzLnBkZiIsInR5cGUiOiJhdHRhY2htZW50In0sImF1ZCI6WyJ1cm46c2VydmljZTpmaWxlLmRvd25sb2FkIl0sImV4cCI6MTc5NTEzNzAwMCwianRpIjoiZDk0Yjg3NjctODFmOS00ZGQyLWEyZGEtZmYxOTQ5OGEwOGNhIiwiaWF0IjoxNzk1MTAxMDAwLCJpc3MiOiJ1cm46YXBwOmU2NjYzMGU3MTRmMDQ5MGFhZWExZjE0OWIzYjY5ZTMyIiwic3ViIjoidXJuOmFwcDplNjY2MzBlNzE0ZjA0OTBhYWVhMWYxNDliM2I2OWUzMiJ9.K5Wu71qPZuAv6AE90sefX6sRaa2bNY3V86CEa0t6cRo",
+     "href": "https://download-files.wixmp.com/ugd/571a7f_110a9b62ae12483cb73d21fc709eb8ec.pdf?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJvYmoiOltbeyJwYXRoIjoiL3VnZC81NzFhN2ZfMTEwYTliNjJhZTEyNDgzY2I3M2QyMWZjNzA5ZWI4ZWMucGRmIn1dXSwiZGlzIjp7ImZpbGVuYW1lIjoiTWlnZGFsIE1hbmFnZWQgYnkgTWlnZGFsIENhcGl0YWwgTWFya2V0cyAtIFRyYWNraW5nIEVxdWl0eSBJbmRpY2VzLnBkZiIsInR5cGUiOiJhdHRhY2htZW50In0sImF1ZCI6WyJ1cm46c2VydmljZTpmaWxlLmRvd25sb2FkIl0sImV4cCI6MTc5NTIyMjU4NywianRpIjoiMTJiN2ZjZTYtNzQzMi00MWZjLWI1YWMtMTM5MmJhZTMzMDI0IiwiaWF0IjoxNzk1MTg2NTg3LCJpc3MiOiJ1cm46YXBwOmU2NjYzMGU3MTRmMDQ5MGFhZWExZjE0OWIzYjY5ZTMyIiwic3ViIjoidXJuOmFwcDplNjY2MzBlNzE0ZjA0OTBhYWVhMWYxNDliM2I2OWUzMiJ9._KBudmx6swCtYoaQVQqj1L1ZuUQI5nXSHTSvG1Mi1QE",
      "year": null,
      "iframe": false,
      "doc": true,
@@ -9799,7 +9259,7 @@
     },
     {
      "text": "מגדל מנוהל ע\"י מגדל שוקי הון - מסלול עוקב מדד s&p 500 להורדה להורדה להורדה",
-     "href": "https://download-files.wixmp.com/ugd/571a7f_044b026d56be4db3af3c5129f672a48b.pdf?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJvYmoiOltbeyJwYXRoIjoiL3VnZC81NzFhN2ZfMDQ0YjAyNmQ1NmJlNGRiM2FmM2M1MTI5ZjY3MmE0OGIucGRmIn1dXSwiZGlzIjp7ImZpbGVuYW1lIjoiTWlnZGFsIE1hbmFnZWQgYnkgTWlnZGFsIENhcGl0YWwgTWFya2V0cyAtIFRyYWNraW5nIEluZGV4IFNQNTAwLnBkZiIsInR5cGUiOiJhdHRhY2htZW50In0sImF1ZCI6WyJ1cm46c2VydmljZTpmaWxlLmRvd25sb2FkIl0sImV4cCI6MTc5NTEzNzAwMSwianRpIjoiYmEyOTllYjItNTQ1ZC00MjU4LTlmMzQtNzc3NTdjMGQ2YzY0IiwiaWF0IjoxNzk1MTAxMDAxLCJpc3MiOiJ1cm46YXBwOmU2NjYzMGU3MTRmMDQ5MGFhZWExZjE0OWIzYjY5ZTMyIiwic3ViIjoidXJuOmFwcDplNjY2MzBlNzE0ZjA0OTBhYWVhMWYxNDliM2I2OWUzMiJ9.z45jSKWPDnAxAdH7GM2nBS8ZL0U6ElA5KYC1nfX69bA",
+     "href": "https://download-files.wixmp.com/ugd/571a7f_044b026d56be4db3af3c5129f672a48b.pdf?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJvYmoiOltbeyJwYXRoIjoiL3VnZC81NzFhN2ZfMDQ0YjAyNmQ1NmJlNGRiM2FmM2M1MTI5ZjY3MmE0OGIucGRmIn1dXSwiZGlzIjp7ImZpbGVuYW1lIjoiTWlnZGFsIE1hbmFnZWQgYnkgTWlnZGFsIENhcGl0YWwgTWFya2V0cyAtIFRyYWNraW5nIEluZGV4IFNQNTAwLnBkZiIsInR5cGUiOiJhdHRhY2htZW50In0sImF1ZCI6WyJ1cm46c2VydmljZTpmaWxlLmRvd25sb2FkIl0sImV4cCI6MTc5NTIyMjU4OCwianRpIjoiNzU2Y2I5MTEtOGVlOC00MTAwLTg4MjAtODU2OTk5NGZkNzlkIiwiaWF0IjoxNzk1MTg2NTg4LCJpc3MiOiJ1cm46YXBwOmU2NjYzMGU3MTRmMDQ5MGFhZWExZjE0OWIzYjY5ZTMyIiwic3ViIjoidXJuOmFwcDplNjY2MzBlNzE0ZjA0OTBhYWVhMWYxNDliM2I2OWUzMiJ9.j8ra23zC5A5zGDj3jjue9UTMAgXWgelMGi8e7vb5a_s",
      "year": null,
      "iframe": false,
      "doc": true,
@@ -9871,27 +9331,11 @@
     },
     {
      "text": "בית השקעות מגדל שוקי הון",
-     "href": "https://www.msh.co.il",
-     "year": null,
-     "iframe": false,
-     "doc": false,
-     "internal": false
-    },
-    {
-     "text": "בית השקעות מגדל שוקי הון",
      "href": "https://www.msh.co.il/",
      "year": null,
      "iframe": false,
      "doc": false,
      "internal": false
-    },
-    {
-     "text": "ביטוח מנהלים לשכירים",
-     "href": "https://www.migdal.co.il/product-lobby/personal-pension-complementary",
-     "year": null,
-     "iframe": false,
-     "doc": false,
-     "internal": true
     },
     {
      "text": "איחוד חשבונות קרנות פנסיה",
@@ -9935,7 +9379,7 @@
     },
     {
      "text": "Migdal Managed by Migdal Capital Markets - Tracking Equity Indices.pdf",
-     "href": "https://download-files.wixmp.com/ugd/571a7f_110a9b62ae12483cb73d21fc709eb8ec.pdf?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJvYmoiOltbeyJwYXRoIjoiL3VnZC81NzFhN2ZfMTEwYTliNjJhZTEyNDgzY2I3M2QyMWZjNzA5ZWI4ZWMucGRmIn1dXSwiZGlzIjp7ImZpbGVuYW1lIjoiTWlnZGFsIE1hbmFnZWQgYnkgTWlnZGFsIENhcGl0YWwgTWFya2V0cyAtIFRyYWNraW5nIEVxdWl0eSBJbmRpY2VzLnBkZiIsInR5cGUiOiJhdHRhY2htZW50In0sImF1ZCI6WyJ1cm46c2VydmljZTpmaWxlLmRvd25sb2FkIl0sImV4cCI6MTc5NTEzNjk0OSwianRpIjoiOGYyYjdmMzUtZDJjZC00NTkxLWEyY2MtMzZhOGYzOGRjYWFlIiwiaWF0IjoxNzk1MTAwOTQ5LCJpc3MiOiJ1cm46YXBwOmU2NjYzMGU3MTRmMDQ5MGFhZWExZjE0OWIzYjY5ZTMyIiwic3ViIjoidXJuOmFwcDplNjY2MzBlNzE0ZjA0OTBhYWVhMWYxNDliM2I2OWUzMiJ9.lKA8tawotoV2W7hEeSbPj7o4HLkhWa77Qx3z5TQwuUI",
+     "href": "https://download-files.wixmp.com/ugd/571a7f_110a9b62ae12483cb73d21fc709eb8ec.pdf?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJvYmoiOltbeyJwYXRoIjoiL3VnZC81NzFhN2ZfMTEwYTliNjJhZTEyNDgzY2I3M2QyMWZjNzA5ZWI4ZWMucGRmIn1dXSwiZGlzIjp7ImZpbGVuYW1lIjoiTWlnZGFsIE1hbmFnZWQgYnkgTWlnZGFsIENhcGl0YWwgTWFya2V0cyAtIFRyYWNraW5nIEVxdWl0eSBJbmRpY2VzLnBkZiIsInR5cGUiOiJhdHRhY2htZW50In0sImF1ZCI6WyJ1cm46c2VydmljZTpmaWxlLmRvd25sb2FkIl0sImV4cCI6MTc5NTIyMjUzNCwianRpIjoiY2ZlNTM0MWYtODM4Zi00Zjk0LWEwMDMtM2Y1YmZlNGQ2NGM2IiwiaWF0IjoxNzk1MTg2NTM0LCJpc3MiOiJ1cm46YXBwOmU2NjYzMGU3MTRmMDQ5MGFhZWExZjE0OWIzYjY5ZTMyIiwic3ViIjoidXJuOmFwcDplNjY2MzBlNzE0ZjA0OTBhYWVhMWYxNDliM2I2OWUzMiJ9.spLmlvJQkQC8SaHEmMaL-lBfamj3_9-ivFA3xlqg4Q4",
      "year": null,
      "iframe": false,
      "doc": true,
