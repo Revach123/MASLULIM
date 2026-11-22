@@ -156,6 +156,18 @@
   "doc_file": "policy/companies/513026484/raw/513026484/d7279819ccd6_gemelgeneral2019_update0719.xls"
  },
  {
+  "track_name": "0 05",
+  "snippet": " |  | החשיפה לא תעלה על 15% מנכסי המסלול]. חשיפה לנכסים כאמור לעיל תושג הן באמצעות | 0.05 | IBOXX HY",
+  "confidence": "table",
+  "bonds_min": 15.0,
+  "bonds_max": 15.0,
+  "foreign_min": 15.0,
+  "foreign_max": 15.0,
+  "legal_id": "513026484",
+  "url": "https://www.fnx.co.il/sites/docs/genery/mediniut_ashkaa_tzfuia/gemelashkaa2020.xls",
+  "doc_file": "policy/companies/513026484/raw/513026484/29fd4fe237dd_gemelashkaa2020.xls"
+ },
+ {
   "track_name": "0 06",
   "snippet": " | אקסלנס גמל להשקעה אג\"ח עד 15% מניות - 7906 | על 120% מנכסי המסלול. חשיפה למניות תהיה בשיעור שלא יעלה על15%  [ובכל אופן | 0.06 | תל בונד 50",
   "confidence": "table",
@@ -192,6 +204,18 @@
   "doc_file": "policy/companies/513026484/raw/513026484/d7279819ccd6_gemelgeneral2019_update0719.xls"
  },
  {
+  "track_name": "0 06",
+  "snippet": " | אקסלנס גמל להשקעה אג\"ח עד 15% מניות - 7906 | על 120% מנכסי המסלול. חשיפה למניות תהיה בשיעור שלא יעלה על15%  [ובכל אופן | 0.06 | תל בונד 50",
+  "confidence": "table",
+  "bonds_min": null,
+  "bonds_max": 15.0,
+  "foreign_min": null,
+  "foreign_max": 15.0,
+  "legal_id": "513026484",
+  "url": "https://www.fnx.co.il/sites/docs/genery/mediniut_ashkaa_tzfuia/gemelashkaa2020.xls",
+  "doc_file": "policy/companies/513026484/raw/513026484/29fd4fe237dd_gemelashkaa2020.xls"
+ },
+ {
   "track_name": "0 07",
   "snippet": " |  | ולא יעלה על 120% מנכסי המסלול. חשיפה לנכסים כאמור תושג באמצעות השקעה במישרין, | 0.07 | תל בונד 50",
   "confidence": "table",
@@ -226,6 +250,18 @@
   "legal_id": "513026484",
   "url": "https://www.fnx.co.il/sites/docs/genery/mediniut_ashkaa_tzfuia/gemelgeneral2019_update0719.xls",
   "doc_file": "policy/companies/513026484/raw/513026484/d7279819ccd6_gemelgeneral2019_update0719.xls"
+ },
+ {
+  "track_name": "0 07",
+  "snippet": " |  | ולא יעלה על 120% מנכסי המסלול. חשיפה לנכסים כאמור תושג באמצעות השקעה במישרין, | 0.07 | תל בונד 50",
+  "confidence": "table",
+  "bonds_min": null,
+  "bonds_max": 120.0,
+  "foreign_min": null,
+  "foreign_max": 120.0,
+  "legal_id": "513026484",
+  "url": "https://www.fnx.co.il/sites/docs/genery/mediniut_ashkaa_tzfuia/gemelashkaa2020.xls",
+  "doc_file": "policy/companies/513026484/raw/513026484/29fd4fe237dd_gemelashkaa2020.xls"
  },
  {
   "track_name": "0 08639999999999999",
@@ -372,6 +408,18 @@
   "doc_file": "policy/companies/513026484/raw/513026484/c23f9fa3358c_policychild_2019.xls"
  },
  {
+  "track_name": "0 1",
+  "snippet": " |  | או אג\"ח של ממשלות אחרות. חשיפה לנכסי אג\"ח תהיה בשיעור שלא יפחת מ-75% ולא יעלה | 0.1 | תל בונד 60",
+  "confidence": "table",
+  "bonds_min": 75.0,
+  "bonds_max": 75.0,
+  "foreign_min": 75.0,
+  "foreign_max": 75.0,
+  "legal_id": "513026484",
+  "url": "https://www.fnx.co.il/sites/docs/genery/mediniut_ashkaa_tzfuia/gemelashkaa2020.xls",
+  "doc_file": "policy/companies/513026484/raw/513026484/29fd4fe237dd_gemelashkaa2020.xls"
+ },
+ {
   "track_name": "0 11",
   "snippet": " |  | נכסי המסלול, בשיעור שלא יפחת מ-75% ולא יעלה על 100%, יושקעו במדדי מניות | 0.11 | STOXX600",
   "confidence": "table",
@@ -429,6 +477,42 @@
   "foreign_max": 100.0,
   "legal_id": "513026484",
   "url": "http://www.fnx.co.il/sites/docs/genery/mediniut_ashkaa_tzfuia/gemelpolicychild_2020.xls",
+  "doc_file": "policy/companies/513026484/raw/513026484/1f3637f67f11_gemelpolicychild_2020.xls"
+ },
+ {
+  "track_name": "0 13",
+  "snippet": " |  | נכסי המסלול, בשיעור שלא יפחת מ-75% ולא יעלה על 100%, יושקעו במדדי מניות. [העונים על | 0.13 | STOXX600",
+  "confidence": "table",
+  "bonds_min": null,
+  "bonds_max": 100.0,
+  "foreign_min": null,
+  "foreign_max": 100.0,
+  "legal_id": "513026484",
+  "url": "https://www.fnx.co.il/sites/docs/genery/mediniut_ashkaa_tzfuia/gemelpolicyghild_2020_update06.xls",
+  "doc_file": "policy/companies/513026484/raw/513026484/a921f3507ae0_gemelpolicyghild_2020_update06.xls"
+ },
+ {
+  "track_name": "0 13",
+  "snippet": " |  | נכסי המסלול, בשיעור שלא יפחת מ-75% ולא יעלה על 100%, יושקעו במדדי מניות. [העונים | 0.13 | STOXX600",
+  "confidence": "table",
+  "bonds_min": null,
+  "bonds_max": 100.0,
+  "foreign_min": null,
+  "foreign_max": 100.0,
+  "legal_id": "513026484",
+  "url": "https://www.fnx.co.il/sites/docs/genery/mediniut_ashkaa_tzfuia/gemelashkaa2020.xls",
+  "doc_file": "policy/companies/513026484/raw/513026484/29fd4fe237dd_gemelashkaa2020.xls"
+ },
+ {
+  "track_name": "0 13",
+  "snippet": " |  | נכסי המסלול, בשיעור שלא יפחת מ-75% ולא יעלה על 100%, יושקעו במדדי מניות. [העונים על | 0.13 | STOXX600",
+  "confidence": "table",
+  "bonds_min": null,
+  "bonds_max": 100.0,
+  "foreign_min": null,
+  "foreign_max": 100.0,
+  "legal_id": "513026484",
+  "url": "https://www.fnx.co.il/sites/docs/genery/mediniut_ashkaa_tzfuia/gemelpolicychild_2020.xls",
   "doc_file": "policy/companies/513026484/raw/513026484/1f3637f67f11_gemelpolicychild_2020.xls"
  },
  {
@@ -574,6 +658,30 @@
   "legal_id": "513026484",
   "url": "https://www.fnx.co.il/sites/docs/genery/mediniut_ashkaa_tzfuia/policychild_2019_update0719.xls",
   "doc_file": "policy/companies/513026484/raw/513026484/31b74032a16e_policychild_2019_update0719.xls"
+ },
+ {
+  "track_name": "0 15",
+  "snippet": " |  | מסחריים, הלוואות שאינן סחירות, אג\"ח להמרה ופקדונות, בשיעור חשיפה שלא יפחת מ-75% | 0.15 | תל בונד 60",
+  "confidence": "table",
+  "bonds_min": 75.0,
+  "bonds_max": 75.0,
+  "foreign_min": 75.0,
+  "foreign_max": 75.0,
+  "legal_id": "513026484",
+  "url": "https://www.fnx.co.il/sites/docs/genery/mediniut_ashkaa_tzfuia/gemelpolicyghild_2020_update06.xls",
+  "doc_file": "policy/companies/513026484/raw/513026484/a921f3507ae0_gemelpolicyghild_2020_update06.xls"
+ },
+ {
+  "track_name": "0 15",
+  "snippet": " |  | מסחריים, הלוואות שאינן סחירות, אג\"ח להמרה ופקדונות, בשיעור חשיפה שלא יפחת מ-75% | 0.15 | תל בונד 60",
+  "confidence": "table",
+  "bonds_min": 75.0,
+  "bonds_max": 75.0,
+  "foreign_min": 75.0,
+  "foreign_max": 75.0,
+  "legal_id": "513026484",
+  "url": "https://www.fnx.co.il/sites/docs/genery/mediniut_ashkaa_tzfuia/gemelpolicychild_2020.xls",
+  "doc_file": "policy/companies/513026484/raw/513026484/1f3637f67f11_gemelpolicychild_2020.xls"
  },
  {
   "track_name": "0 16",
@@ -6422,6 +6530,42 @@
   "legal_id": "513026484",
   "url": "https://www.fnx.co.il/sites/docs/genery/mediniut_ashkaa_tzfuia/gemel2019.xls",
   "doc_file": "policy/companies/513026484/raw/513026484/e353e49ff159_gemel2019.xls"
+ },
+ {
+  "track_name": "8766 0",
+  "snippet": " | 8766.0 | יתרת הנכסים, למעט שיעור מהנכסים אשר יושקע במזומנים לצורך | 0.03 | Capital Securities & Financial Hybrids",
+  "confidence": "table",
+  "equity_min": 876.0,
+  "equity_max": 876.0,
+  "bonds_min": 876.0,
+  "bonds_max": 876.0,
+  "legal_id": "513026484",
+  "url": "https://www.fnx.co.il/sites/docs/genery/mediniut_ashkaa_tzfuia/gemel2020_update06.xls",
+  "doc_file": "policy/companies/513026484/raw/513026484/9a8c9561dc51_gemel2020_update06.xls"
+ },
+ {
+  "track_name": "8766 0",
+  "snippet": " | 8766.0 | יתרת הנכסים, למעט שיעור מהנכסים אשר יושקע במזומנים לצורך | 0.03 | Capital Securities & Financial Hybrids",
+  "confidence": "table",
+  "equity_min": 876.0,
+  "equity_max": 876.0,
+  "bonds_min": 876.0,
+  "bonds_max": 876.0,
+  "legal_id": "513026484",
+  "url": "https://www.fnx.co.il/sites/docs/genery/mediniut_ashkaa_tzfuia/mediniut_ashkaa_tzfuia_gemel_01.10.2020.xls",
+  "doc_file": "policy/companies/513026484/raw/513026484/1a0f084dcc33_mediniut_ashkaa_tzfuia_gemel_01.10.2020.xls"
+ },
+ {
+  "track_name": "8766 0",
+  "snippet": " | 8766.0 | יתרת הנכסים, למעט שיעור מהנכסים אשר יושקע במזומנים לצורך | 0.03 | Capital Securities & Financial Hybrids",
+  "confidence": "table",
+  "equity_min": 876.0,
+  "equity_max": 876.0,
+  "bonds_min": 876.0,
+  "bonds_max": 876.0,
+  "legal_id": "513026484",
+  "url": "https://www.fnx.co.il/sites/docs/genery/mediniut_ashkaa_tzfuia/gemel2020.xls",
+  "doc_file": "policy/companies/513026484/raw/513026484/2de01efeedd8_gemel2020.xls"
  },
  {
   "track_name": "8920620 429",
@@ -90218,6 +90362,18 @@
   "doc_file": "policy/companies/513026484/raw/513026484/a921f3507ae0_gemelpolicyghild_2020_update06.xls"
  },
  {
+  "track_name": "אקסלנס גמל חיסכון לילד סיכון מועט *** 11310",
+  "snippet": " | אקסלנס גמל חיסכון לילד-סיכון מועט(***) - 11310 | ולא יעלה על 120% מנכסי המסלול. חשיפה לנכסים כאמור תושג באמצעות השקעה במישרין, | 0.07 | תל בונד 50",
+  "confidence": "table",
+  "bonds_min": null,
+  "bonds_max": 120.0,
+  "foreign_min": null,
+  "foreign_max": 120.0,
+  "legal_id": "513026484",
+  "url": "https://www.fnx.co.il/sites/docs/genery/mediniut_ashkaa_tzfuia/gemelpolicyghild_2020_update06.xls",
+  "doc_file": "policy/companies/513026484/raw/513026484/a921f3507ae0_gemelpolicyghild_2020_update06.xls"
+ },
+ {
   "track_name": "אקסלנס גמל חיסכון לילד סיכון מועט 11310",
   "snippet": " | אקסלנס גמל חיסכון לילד-סיכון מועט - 11310 | ולא יעלה על 120% מנכסי המסלול. חשיפה לנכסים כאמור תושג באמצעות השקעה במישרין, | 0.07 | תל בונד 50",
   "confidence": "table",
@@ -90252,6 +90408,18 @@
   "legal_id": "513026484",
   "url": "https://www.fnx.co.il/sites/docs/genery/mediniut_ashkaa_tzfuia/policychild_2019.xls",
   "doc_file": "policy/companies/513026484/raw/513026484/c23f9fa3358c_policychild_2019.xls"
+ },
+ {
+  "track_name": "אקסלנס גמל חיסכון לילד סיכון מועט 11310",
+  "snippet": " | אקסלנס גמל חיסכון לילד-סיכון מועט - 11310 | ולא יעלה על 120% מנכסי המסלול. חשיפה לנכסים כאמור תושג באמצעות השקעה במישרין, | 0.07 | תל בונד 50",
+  "confidence": "table",
+  "bonds_min": null,
+  "bonds_max": 120.0,
+  "foreign_min": null,
+  "foreign_max": 120.0,
+  "legal_id": "513026484",
+  "url": "https://www.fnx.co.il/sites/docs/genery/mediniut_ashkaa_tzfuia/gemelpolicychild_2020.xls",
+  "doc_file": "policy/companies/513026484/raw/513026484/1f3637f67f11_gemelpolicychild_2020.xls"
  },
  {
   "track_name": "אקסלנס גמל חיסכון לילד סיכון מועט* 11310",
@@ -90312,6 +90480,18 @@
   "legal_id": "513026484",
   "url": "https://www.fnx.co.il/sites/docs/genery/mediniut_ashkaa_tzfuia/gemelgeneral2019.xls",
   "doc_file": "policy/companies/513026484/raw/513026484/a4e76debf7c8_gemelgeneral2019.xls"
+ },
+ {
+  "track_name": "אקסלנס גמל להשקעה אג ח ללא מניות 7905",
+  "snippet": " | אקסלנס גמל להשקעה אג\"ח ללא מניות - 7905 | מסחריים, הלוואות שאינן סחירות, אג\"ח להמרה ופקדונות, בשיעור חשיפה שלא יפחת מ-75% | 0.15 | תל בונד 60",
+  "confidence": "table",
+  "bonds_min": 75.0,
+  "bonds_max": 75.0,
+  "foreign_min": 75.0,
+  "foreign_max": 75.0,
+  "legal_id": "513026484",
+  "url": "https://www.fnx.co.il/sites/docs/genery/mediniut_ashkaa_tzfuia/gemelashkaa2020.xls",
+  "doc_file": "policy/companies/513026484/raw/513026484/29fd4fe237dd_gemelashkaa2020.xls"
  },
  {
   "track_name": "אקסלנס גמל להשקעה אג ח ללא מניות* 7905",
@@ -90470,6 +90650,42 @@
   "doc_file": "policy/companies/513026484/raw/513026484/e353e49ff159_gemel2019.xls"
  },
  {
+  "track_name": "אקסלנס מרכזית לפיצויים מחקה מדדי מניות 804",
+  "snippet": " | אקסלנס מרכזית לפיצויים מחקה מדדי מניות - 804 | תרת הנכסים, למעט שיעור מהנכסים אשר יושקע במזומנים לצורך | 0.05 | TPX",
+  "confidence": "table",
+  "equity_min": 804.0,
+  "equity_max": 804.0,
+  "bonds_min": 804.0,
+  "bonds_max": 804.0,
+  "legal_id": "513026484",
+  "url": "https://www.fnx.co.il/sites/docs/genery/mediniut_ashkaa_tzfuia/gemel2020_update06.xls",
+  "doc_file": "policy/companies/513026484/raw/513026484/9a8c9561dc51_gemel2020_update06.xls"
+ },
+ {
+  "track_name": "אקסלנס מרכזית לפיצויים מחקה מדדי מניות 804",
+  "snippet": " | אקסלנס מרכזית לפיצויים מחקה מדדי מניות - 804 | תרת הנכסים, למעט שיעור מהנכסים אשר יושקע במזומנים לצורך | 0.05 | TPX",
+  "confidence": "table",
+  "equity_min": 804.0,
+  "equity_max": 804.0,
+  "bonds_min": 804.0,
+  "bonds_max": 804.0,
+  "legal_id": "513026484",
+  "url": "https://www.fnx.co.il/sites/docs/genery/mediniut_ashkaa_tzfuia/mediniut_ashkaa_tzfuia_gemel_01.10.2020.xls",
+  "doc_file": "policy/companies/513026484/raw/513026484/1a0f084dcc33_mediniut_ashkaa_tzfuia_gemel_01.10.2020.xls"
+ },
+ {
+  "track_name": "אקסלנס מרכזית לפיצויים מחקה מדדי מניות 804",
+  "snippet": " | אקסלנס מרכזית לפיצויים מחקה מדדי מניות - 804 | תרת הנכסים, למעט שיעור מהנכסים אשר יושקע במזומנים לצורך | 0.05 | TPX",
+  "confidence": "table",
+  "equity_min": 804.0,
+  "equity_max": 804.0,
+  "bonds_min": 804.0,
+  "bonds_max": 804.0,
+  "legal_id": "513026484",
+  "url": "https://www.fnx.co.il/sites/docs/genery/mediniut_ashkaa_tzfuia/gemel2020.xls",
+  "doc_file": "policy/companies/513026484/raw/513026484/2de01efeedd8_gemel2020.xls"
+ },
+ {
   "track_name": "אקסלנס מרכזית לפיצויים צמוד מדד 806",
   "snippet": " | אקסלנס מרכזית לפיצויים צמוד מדד - 806 | במסלול זה יושקעו לא פחות מ-75% מנכסי המסלול באפיקים צמודי מדד. יתרת נכסי המסלול | 0.13 | תל בונד כללי",
   "confidence": "table",
@@ -90554,6 +90770,42 @@
   "doc_file": "policy/companies/513026484/raw/513026484/e353e49ff159_gemel2019.xls"
  },
  {
+  "track_name": "אקסלנס מרכזית לפיצויים צמוד מדד 806",
+  "snippet": " | אקסלנס מרכזית לפיצויים צמוד מדד - 806 | במסלול זה יושקעו לא פחות מ-75% מנכסי המסלול באפיקים צמודי מדד. יתרת נכסי המסלול | 0.13 | תל בונד כללי",
+  "confidence": "table",
+  "equity_min": 806.0,
+  "equity_max": 806.0,
+  "bonds_min": 806.0,
+  "bonds_max": 806.0,
+  "legal_id": "513026484",
+  "url": "https://www.fnx.co.il/sites/docs/genery/mediniut_ashkaa_tzfuia/gemel2020_update06.xls",
+  "doc_file": "policy/companies/513026484/raw/513026484/9a8c9561dc51_gemel2020_update06.xls"
+ },
+ {
+  "track_name": "אקסלנס מרכזית לפיצויים צמוד מדד 806",
+  "snippet": " | אקסלנס מרכזית לפיצויים צמוד מדד - 806 | במסלול זה יושקעו לא פחות מ-75% מנכסי המסלול באפיקים צמודי מדד. יתרת נכסי המסלול | 0.13 | תל בונד כללי",
+  "confidence": "table",
+  "equity_min": 806.0,
+  "equity_max": 806.0,
+  "bonds_min": 806.0,
+  "bonds_max": 806.0,
+  "legal_id": "513026484",
+  "url": "https://www.fnx.co.il/sites/docs/genery/mediniut_ashkaa_tzfuia/mediniut_ashkaa_tzfuia_gemel_01.10.2020.xls",
+  "doc_file": "policy/companies/513026484/raw/513026484/1a0f084dcc33_mediniut_ashkaa_tzfuia_gemel_01.10.2020.xls"
+ },
+ {
+  "track_name": "אקסלנס מרכזית לפיצויים צמוד מדד 806",
+  "snippet": " | אקסלנס מרכזית לפיצויים צמוד מדד - 806 | במסלול זה יושקעו לא פחות מ-75% מנכסי המסלול באפיקים צמודי מדד. יתרת נכסי המסלול | 0.13 | תל בונד כללי",
+  "confidence": "table",
+  "equity_min": 806.0,
+  "equity_max": 806.0,
+  "bonds_min": 806.0,
+  "bonds_max": 806.0,
+  "legal_id": "513026484",
+  "url": "https://www.fnx.co.il/sites/docs/genery/mediniut_ashkaa_tzfuia/gemel2020.xls",
+  "doc_file": "policy/companies/513026484/raw/513026484/2de01efeedd8_gemel2020.xls"
+ },
+ {
   "track_name": "אקסלנס מרכזית לפיצויים צמוד מדד*** 806",
   "snippet": " | אקסלנס מרכזית לפיצויים צמוד מדד*** - 806 | במסלול זה יושקעו לא פחות מ-75% מנכסי המסלול באפיקים צמודי מדד. יתרת נכסי המסלול | 0.13 | תל בונד כללי",
   "confidence": "table",
@@ -90734,6 +90986,42 @@
   "doc_file": "policy/companies/513026484/raw/513026484/e353e49ff159_gemel2019.xls"
  },
  {
+  "track_name": "אקסלנס מרכזית לפיצויים שקלי 801",
+  "snippet": " | אקסלנס מרכזית לפיצויים שקלי - 801 | נכסי המסלול שלא יושקעו בנכסים שקליים, ככל שישנה, תושקע על פי שיקול דעת החברה | 0.1 | מדד תל בונד שקלי",
+  "confidence": "table",
+  "equity_min": 801.0,
+  "equity_max": 801.0,
+  "bonds_min": 801.0,
+  "bonds_max": 801.0,
+  "legal_id": "513026484",
+  "url": "https://www.fnx.co.il/sites/docs/genery/mediniut_ashkaa_tzfuia/gemel2020_update06.xls",
+  "doc_file": "policy/companies/513026484/raw/513026484/9a8c9561dc51_gemel2020_update06.xls"
+ },
+ {
+  "track_name": "אקסלנס מרכזית לפיצויים שקלי 801",
+  "snippet": " | אקסלנס מרכזית לפיצויים שקלי - 801 | נכסי המסלול שלא יושקעו בנכסים שקליים, ככל שישנה, תושקע על פי שיקול דעת החברה | 0.1 | מדד תל בונד שקלי",
+  "confidence": "table",
+  "equity_min": 801.0,
+  "equity_max": 801.0,
+  "bonds_min": 801.0,
+  "bonds_max": 801.0,
+  "legal_id": "513026484",
+  "url": "https://www.fnx.co.il/sites/docs/genery/mediniut_ashkaa_tzfuia/mediniut_ashkaa_tzfuia_gemel_01.10.2020.xls",
+  "doc_file": "policy/companies/513026484/raw/513026484/1a0f084dcc33_mediniut_ashkaa_tzfuia_gemel_01.10.2020.xls"
+ },
+ {
+  "track_name": "אקסלנס מרכזית לפיצויים שקלי 801",
+  "snippet": " | אקסלנס מרכזית לפיצויים שקלי - 801 | נכסי המסלול שלא יושקעו בנכסים שקליים, ככל שישנה, תושקע על פי שיקול דעת החברה | 0.1 | מדד תל בונד שקלי",
+  "confidence": "table",
+  "equity_min": 801.0,
+  "equity_max": 801.0,
+  "bonds_min": 801.0,
+  "bonds_max": 801.0,
+  "legal_id": "513026484",
+  "url": "https://www.fnx.co.il/sites/docs/genery/mediniut_ashkaa_tzfuia/gemel2020.xls",
+  "doc_file": "policy/companies/513026484/raw/513026484/2de01efeedd8_gemel2020.xls"
+ },
+ {
   "track_name": "אקסלנס מרכזית לפיצויים שקלי קצר 9475",
   "snippet": " | אקסלנס מרכזית לפיצויים שקלי קצר - 9475 | משוקלל עד שנתיים. יתרת נכסי המסלול שלא יושקעו בנכסים שקליים, ככל שישנה, תושקע | 0.1 | מדד תל בונד שקלי",
   "confidence": "table",
@@ -90864,6 +91152,42 @@
   "legal_id": "513026484",
   "url": "https://www.fnx.co.il/sites/docs/genery/mediniut_ashkaa_tzfuia/gemel2019.xls",
   "doc_file": "policy/companies/513026484/raw/513026484/e353e49ff159_gemel2019.xls"
+ },
+ {
+  "track_name": "אקסלנס מרכזית לפיצויים שקלי קצר 9475",
+  "snippet": " | אקסלנס מרכזית לפיצויים שקלי קצר - 9475 | משוקלל עד שנתיים. יתרת נכסי המסלול שלא יושקעו בנכסים שקליים, ככל שישנה, תושקע | 0.1 | מדד תל בונד שקלי",
+  "confidence": "table",
+  "equity_min": 947.0,
+  "equity_max": 947.0,
+  "bonds_min": 947.0,
+  "bonds_max": 947.0,
+  "legal_id": "513026484",
+  "url": "https://www.fnx.co.il/sites/docs/genery/mediniut_ashkaa_tzfuia/gemel2020_update06.xls",
+  "doc_file": "policy/companies/513026484/raw/513026484/9a8c9561dc51_gemel2020_update06.xls"
+ },
+ {
+  "track_name": "אקסלנס מרכזית לפיצויים שקלי קצר 9475",
+  "snippet": " | אקסלנס מרכזית לפיצויים שקלי קצר - 9475 | משוקלל עד שנתיים. יתרת נכסי המסלול שלא יושקעו בנכסים שקליים, ככל שישנה, תושקע | 0.1 | מדד תל בונד שקלי",
+  "confidence": "table",
+  "equity_min": 947.0,
+  "equity_max": 947.0,
+  "bonds_min": 947.0,
+  "bonds_max": 947.0,
+  "legal_id": "513026484",
+  "url": "https://www.fnx.co.il/sites/docs/genery/mediniut_ashkaa_tzfuia/mediniut_ashkaa_tzfuia_gemel_01.10.2020.xls",
+  "doc_file": "policy/companies/513026484/raw/513026484/1a0f084dcc33_mediniut_ashkaa_tzfuia_gemel_01.10.2020.xls"
+ },
+ {
+  "track_name": "אקסלנס מרכזית לפיצויים שקלי קצר 9475",
+  "snippet": " | אקסלנס מרכזית לפיצויים שקלי קצר - 9475 | משוקלל עד שנתיים. יתרת נכסי המסלול שלא יושקעו בנכסים שקליים, ככל שישנה, תושקע | 0.1 | מדד תל בונד שקלי",
+  "confidence": "table",
+  "equity_min": 947.0,
+  "equity_max": 947.0,
+  "bonds_min": 947.0,
+  "bonds_max": 947.0,
+  "legal_id": "513026484",
+  "url": "https://www.fnx.co.il/sites/docs/genery/mediniut_ashkaa_tzfuia/gemel2020.xls",
+  "doc_file": "policy/companies/513026484/raw/513026484/2de01efeedd8_gemel2020.xls"
  },
  {
   "track_name": "ארפורט אג5",
@@ -112578,6 +112902,30 @@
   "doc_file": "policy/companies/513026484/raw/513026484/1f3637f67f11_gemelpolicychild_2020.xls"
  },
  {
+  "track_name": "התנאים המנויים בסעיף6 ו לפרק 4 בחלק 2 בשער 5 לקודקס הרגולציה של רשות שוק ההון ביטוח וחיסכון שעניינו כללי השקעה",
+  "snippet": " |  | התנאים המנויים בסעיף6(ו) לפרק 4 בחלק 2 בשער 5 לקודקס הרגולציה של רשות שוק ההון, ביטוח וחיסכון שעניינו כללי השקעה] | 0.06 | MSCI EM",
+  "confidence": "table",
+  "bonds_min": 6.0,
+  "bonds_max": 6.0,
+  "foreign_min": 6.0,
+  "foreign_max": 6.0,
+  "legal_id": "513026484",
+  "url": "https://www.fnx.co.il/sites/docs/genery/mediniut_ashkaa_tzfuia/gemelpolicyghild_2020_update06.xls",
+  "doc_file": "policy/companies/513026484/raw/513026484/a921f3507ae0_gemelpolicyghild_2020_update06.xls"
+ },
+ {
+  "track_name": "התנאים המנויים בסעיף6 ו לפרק 4 בחלק 2 בשער 5 לקודקס הרגולציה של רשות שוק ההון ביטוח וחיסכון שעניינו כללי השקעה",
+  "snippet": " |  | התנאים המנויים בסעיף6(ו) לפרק 4 בחלק 2 בשער 5 לקודקס הרגולציה של רשות שוק ההון, ביטוח וחיסכון שעניינו כללי השקעה] | 0.06 | MSCI EM",
+  "confidence": "table",
+  "bonds_min": 6.0,
+  "bonds_max": 6.0,
+  "foreign_min": 6.0,
+  "foreign_max": 6.0,
+  "legal_id": "513026484",
+  "url": "https://www.fnx.co.il/sites/docs/genery/mediniut_ashkaa_tzfuia/gemelpolicychild_2020.xls",
+  "doc_file": "policy/companies/513026484/raw/513026484/1f3637f67f11_gemelpolicychild_2020.xls"
+ },
+ {
   "track_name": "והעברות כספים תושקע במדדים שונים העונים על התנאים המנויים בסעיף 6 לחוזר גופים",
   "snippet": " |  | והעברות כספים, תושקע במדדים שונים [העונים על התנאים המנויים בסעיף 6 לחוזר גופים | 0.39 | תל אביב 125",
   "confidence": "table",
@@ -112708,6 +113056,42 @@
   "legal_id": "513026484",
   "url": "https://www.fnx.co.il/sites/docs/genery/mediniut_ashkaa_tzfuia/policychild_2019.xls",
   "doc_file": "policy/companies/513026484/raw/513026484/c23f9fa3358c_policychild_2019.xls"
+ },
+ {
+  "track_name": "והעברות כספים תושקע במדדים שונים העונים על התנאים המנויים בסעיף 6 לחוזר גופים",
+  "snippet": " |  | והעברות כספים, תושקע במדדים שונים [העונים על התנאים המנויים בסעיף 6 לחוזר גופים | 0.39 | תל אביב 125",
+  "confidence": "table",
+  "bonds_min": 6.0,
+  "bonds_max": 6.0,
+  "foreign_min": 6.0,
+  "foreign_max": 6.0,
+  "legal_id": "513026484",
+  "url": "https://www.fnx.co.il/sites/docs/genery/mediniut_ashkaa_tzfuia/gemelpolicyghild_2020_update06.xls",
+  "doc_file": "policy/companies/513026484/raw/513026484/a921f3507ae0_gemelpolicyghild_2020_update06.xls"
+ },
+ {
+  "track_name": "והעברות כספים תושקע במדדים שונים העונים על התנאים המנויים בסעיף 6 לחוזר גופים",
+  "snippet": " |  | והעברות כספים, תושקע במדדים שונים [העונים על התנאים המנויים בסעיף 6 לחוזר גופים | 0.02 | ת\"א SME60",
+  "confidence": "table",
+  "bonds_min": 6.0,
+  "bonds_max": 6.0,
+  "foreign_min": 6.0,
+  "foreign_max": 6.0,
+  "legal_id": "513026484",
+  "url": "https://www.fnx.co.il/sites/docs/genery/mediniut_ashkaa_tzfuia/gemelashkaa2020.xls",
+  "doc_file": "policy/companies/513026484/raw/513026484/29fd4fe237dd_gemelashkaa2020.xls"
+ },
+ {
+  "track_name": "והעברות כספים תושקע במדדים שונים העונים על התנאים המנויים בסעיף 6 לחוזר גופים",
+  "snippet": " |  | והעברות כספים, תושקע במדדים שונים [העונים על התנאים המנויים בסעיף 6 לחוזר גופים | 0.39 | תל אביב 125",
+  "confidence": "table",
+  "bonds_min": 6.0,
+  "bonds_max": 6.0,
+  "foreign_min": 6.0,
+  "foreign_max": 6.0,
+  "legal_id": "513026484",
+  "url": "https://www.fnx.co.il/sites/docs/genery/mediniut_ashkaa_tzfuia/gemelpolicychild_2020.xls",
+  "doc_file": "policy/companies/513026484/raw/513026484/1f3637f67f11_gemelpolicychild_2020.xls"
  },
  {
   "track_name": "וילאר אג7",
@@ -129196,6 +129580,42 @@
   "legal_id": "513026484",
   "url": "https://www.fnx.co.il/sites/docs/genery/mediniut_ashkaa_tzfuia/policychild_2019.xls",
   "doc_file": "policy/companies/513026484/raw/513026484/c23f9fa3358c_policychild_2019.xls"
+ },
+ {
+  "track_name": "מוסדיים 2013 9 13 שעניינו כללי השקעה החלים על גופים מוסדיים בכפוף להוראות הדין",
+  "snippet": " |  | מוסדיים 2013-9-13 שעניינו כללי השקעה החלים על גופים מוסדיים] בכפוף להוראות הדין, | 0.02 | ת\"א SME60",
+  "confidence": "table",
+  "bonds_min": 9.0,
+  "bonds_max": 13.0,
+  "foreign_min": 9.0,
+  "foreign_max": 13.0,
+  "legal_id": "513026484",
+  "url": "https://www.fnx.co.il/sites/docs/genery/mediniut_ashkaa_tzfuia/gemelpolicyghild_2020_update06.xls",
+  "doc_file": "policy/companies/513026484/raw/513026484/a921f3507ae0_gemelpolicyghild_2020_update06.xls"
+ },
+ {
+  "track_name": "מוסדיים 2013 9 13 שעניינו כללי השקעה החלים על גופים מוסדיים בכפוף להוראות הדין",
+  "snippet": " |  | מוסדיים 2013-9-13 שעניינו כללי השקעה החלים על גופים מוסדיים] בכפוף להוראות הדין, | 0.02 | BlueStar TA-BIG Tech Israel Tech",
+  "confidence": "table",
+  "bonds_min": 9.0,
+  "bonds_max": 13.0,
+  "foreign_min": 9.0,
+  "foreign_max": 13.0,
+  "legal_id": "513026484",
+  "url": "https://www.fnx.co.il/sites/docs/genery/mediniut_ashkaa_tzfuia/gemelashkaa2020.xls",
+  "doc_file": "policy/companies/513026484/raw/513026484/29fd4fe237dd_gemelashkaa2020.xls"
+ },
+ {
+  "track_name": "מוסדיים 2013 9 13 שעניינו כללי השקעה החלים על גופים מוסדיים בכפוף להוראות הדין",
+  "snippet": " |  | מוסדיים 2013-9-13 שעניינו כללי השקעה החלים על גופים מוסדיים] בכפוף להוראות הדין, | 0.02 | ת\"א SME60",
+  "confidence": "table",
+  "bonds_min": 9.0,
+  "bonds_max": 13.0,
+  "foreign_min": 9.0,
+  "foreign_max": 13.0,
+  "legal_id": "513026484",
+  "url": "https://www.fnx.co.il/sites/docs/genery/mediniut_ashkaa_tzfuia/gemelpolicychild_2020.xls",
+  "doc_file": "policy/companies/513026484/raw/513026484/1f3637f67f11_gemelpolicychild_2020.xls"
  },
  {
   "track_name": "מוצרים מובנים",
@@ -161890,6 +162310,18 @@
   "legal_id": "513026484",
   "url": "https://www.fnx.co.il/sites/docs/genery/mediniut_ashkaa_tzfuia/gemelgeneral2019.xls",
   "doc_file": "policy/companies/513026484/raw/513026484/a4e76debf7c8_gemelgeneral2019.xls"
+ },
+ {
+  "track_name": "על התנאים המנויים בסעיף 6 לחוזר גופים מוסדיים 2013 9 13 שעניינו כללי השקעה החלים על",
+  "snippet": " |  | על התנאים המנויים בסעיף 6 לחוזר גופים מוסדיים 2013-9-13 שעניינו כללי השקעה החלים על | 0.06 | MSCI EM",
+  "confidence": "table",
+  "bonds_min": 9.0,
+  "bonds_max": 13.0,
+  "foreign_min": 9.0,
+  "foreign_max": 13.0,
+  "legal_id": "513026484",
+  "url": "https://www.fnx.co.il/sites/docs/genery/mediniut_ashkaa_tzfuia/gemelashkaa2020.xls",
+  "doc_file": "policy/companies/513026484/raw/513026484/29fd4fe237dd_gemelashkaa2020.xls"
  },
  {
   "track_name": "עמידר אג1",
