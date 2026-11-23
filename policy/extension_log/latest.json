@@ -1,7 +1,7 @@
 {
  "extension_version": "2.53.0",
  "started": "2026-11-23T21:43:17.569Z",
- "updated": "2026-11-23T21:55:17.713Z",
+ "updated": "2026-11-23T21:58:17.714Z",
  "final": false,
  "stopped": false,
  "rules_from_github": true,
@@ -43,10 +43,10 @@
  "active": [
   {
    "name": "מנורה מבטחים פנסיה וגמל בע\"מ",
-   "page": "https://www.menoramivt.co.il/funds/pension-and-gemel/gemel-hishtalmut-list/menora-gemel/9795",
-   "page_no": 84,
+   "page": "https://www.menoramivt.co.il/funds/pension-and-gemel/gemel-hishtalmut-list/savings-for-children/low-risk",
+   "page_no": 94,
    "pages": 120,
-   "step": "טוען עמוד"
+   "step": "בודק אם העמוד השתנה"
   }
  ],
  "sites": [
