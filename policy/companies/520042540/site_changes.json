@@ -1,246 +1,570 @@
 [
  {
-  "kind": "new_item",
+  "kind": "page_changed",
   "page": "https://www.menoramivt.co.il/rep-list/about-insurance/participating-portfolio-info/investment-policy",
-  "text": "קרנות פנסיה",
-  "href": "https://www.menoramivt.co.il/pension/investment-routes-pension",
+  "text": "טקסט העמוד השתנה (אותם קישורים)",
+  "href": "https://www.menoramivt.co.il/rep-list/about-insurance/participating-portfolio-info/investment-policy",
   "legal_id": "520042540",
   "company": "מנורה מבטחים ביטוח בע\"מ",
-  "detected": "2026-11-24T16:00:35+00:00"
- },
- {
-  "kind": "new_item",
-  "page": "https://www.menoramivt.co.il/rep-list/about-insurance/participating-portfolio-info/investment-policy",
-  "text": "קופת גמל חיסכון והשקעה",
-  "href": "https://www.menoramivt.co.il/gemel",
-  "legal_id": "520042540",
-  "company": "מנורה מבטחים ביטוח בע\"מ",
-  "detected": "2026-11-24T16:00:35+00:00"
- },
- {
-  "kind": "new_item",
-  "page": "https://www.menoramivt.co.il/rep-list/about-insurance/participating-portfolio-info/investment-policy",
-  "text": "פנסיה",
-  "href": "https://www.menoramivt.co.il/pension/claim-list",
-  "legal_id": "520042540",
-  "company": "מנורה מבטחים ביטוח בע\"מ",
-  "detected": "2026-11-24T16:00:35+00:00"
- },
- {
-  "kind": "text_changed",
-  "page": "https://www.menoramivt.co.il/rep-list/about-insurance/participating-portfolio-info/investment-policy",
-  "text": "עדכון מוטבים -> עדכון מוטבים ביטוח",
-  "href": "https://meforms.menora.co.il/api/launch/templatelink/request-policy-changes",
-  "legal_id": "520042540",
-  "company": "מנורה מבטחים ביטוח בע\"מ",
-  "detected": "2026-11-24T16:00:35+00:00"
- },
- {
-  "kind": "removed_item",
-  "page": "https://www.menoramivt.co.il/rep-list/about-insurance/participating-portfolio-info/investment-policy",
-  "text": "קרנות פנסיה",
-  "href": "https://www.menoramivt.co.il/links/pension/investment-routes-pension",
-  "legal_id": "520042540",
-  "company": "מנורה מבטחים ביטוח בע\"מ",
-  "detected": "2026-11-24T16:00:35+00:00"
- },
- {
-  "kind": "removed_item",
-  "page": "https://www.menoramivt.co.il/rep-list/about-insurance/participating-portfolio-info/investment-policy",
-  "text": "קרן השתלמות",
-  "href": "https://www.menoramivt.co.il/product/keren-hishtalmut",
-  "legal_id": "520042540",
-  "company": "מנורה מבטחים ביטוח בע\"מ",
-  "detected": "2026-11-24T16:00:35+00:00"
- },
- {
-  "kind": "removed_item",
-  "page": "https://www.menoramivt.co.il/rep-list/about-insurance/participating-portfolio-info/investment-policy",
-  "text": "קופת גמל להשקעה",
-  "href": "https://www.menoramivt.co.il/product/gemel-invest",
-  "legal_id": "520042540",
-  "company": "מנורה מבטחים ביטוח בע\"מ",
-  "detected": "2026-11-24T16:00:35+00:00"
- },
- {
-  "kind": "removed_item",
-  "page": "https://www.menoramivt.co.il/rep-list/about-insurance/participating-portfolio-info/investment-policy",
-  "text": "קופת גמל חיסכון והשקעה",
-  "href": "https://www.menoramivt.co.il/product/gemel",
-  "legal_id": "520042540",
-  "company": "מנורה מבטחים ביטוח בע\"מ",
-  "detected": "2026-11-24T16:00:35+00:00"
- },
- {
-  "kind": "removed_item",
-  "page": "https://www.menoramivt.co.il/rep-list/about-insurance/participating-portfolio-info/investment-policy",
-  "text": "פנסיה",
-  "href": "https://www.menoramivt.co.il/product/pension-claim-list",
-  "legal_id": "520042540",
-  "company": "מנורה מבטחים ביטוח בע\"מ",
-  "detected": "2026-11-24T16:00:35+00:00"
+  "detected": "2026-11-25T15:28:29+00:00"
  },
  {
   "kind": "new_item",
   "page": "https://www.menoramivt.co.il/funds/savings/top-finance/top-finance-info",
-  "text": "קרנות פנסיה",
-  "href": "https://www.menoramivt.co.il/pension/investment-routes-pension",
+  "text": "חיסכון פנסיוני",
+  "href": "https://www.menoramivt.co.il/savings/top-finance/top-finance/info",
   "legal_id": "520042540",
   "company": "מנורה מבטחים ביטוח בע\"מ",
-  "detected": "2026-11-24T16:00:35+00:00"
+  "detected": "2026-11-25T15:28:29+00:00"
+ },
+ {
+  "kind": "removed_item",
+  "page": "https://www.menoramivt.co.il/funds/savings/top-finance/top-finance-info",
+  "text": "פברואר 2026",
+  "href": "https://cdn.menoramivt.co.il/public/docs/20260331/עלון-תשואות-פברואר-2026--מונגש.pdf",
+  "legal_id": "520042540",
+  "company": "מנורה מבטחים ביטוח בע\"מ",
+  "detected": "2026-11-25T15:28:29+00:00"
+ },
+ {
+  "kind": "removed_item",
+  "page": "https://www.menoramivt.co.il/funds/savings/top-finance/top-finance-info",
+  "text": "ספטמבר 2026",
+  "href": "https://cdn.menoramivt.co.il/public/docs/20261022/עלון-תשואות-ספטמבר-2026--מונגש.pdf",
+  "legal_id": "520042540",
+  "company": "מנורה מבטחים ביטוח בע\"מ",
+  "detected": "2026-11-25T15:28:29+00:00"
+ },
+ {
+  "kind": "removed_item",
+  "page": "https://www.menoramivt.co.il/funds/savings/top-finance/top-finance-info",
+  "text": "מרץ 2026",
+  "href": "https://cdn.menoramivt.co.il/public/docs/20260503/עלון-תשואות--מרץ-2026--אתר-שיווקי-מונגש.pdf",
+  "legal_id": "520042540",
+  "company": "מנורה מבטחים ביטוח בע\"מ",
+  "detected": "2026-11-25T15:28:29+00:00"
+ },
+ {
+  "kind": "removed_item",
+  "page": "https://www.menoramivt.co.il/funds/savings/top-finance/top-finance-info",
+  "text": "מאי 2026",
+  "href": "https://cdn.menoramivt.co.il/public/docs/20260628/עלון-תשואות-מאי-2026---מונגש.pdf",
+  "legal_id": "520042540",
+  "company": "מנורה מבטחים ביטוח בע\"מ",
+  "detected": "2026-11-25T15:28:29+00:00"
+ },
+ {
+  "kind": "removed_item",
+  "page": "https://www.menoramivt.co.il/funds/savings/top-finance/top-finance-info",
+  "text": "ינואר 2026",
+  "href": "https://cdn.menoramivt.co.il/public/docs/20260301/עלון-תשואות-ינואר-2026---מונגש.pdf",
+  "legal_id": "520042540",
+  "company": "מנורה מבטחים ביטוח בע\"מ",
+  "detected": "2026-11-25T15:28:29+00:00"
+ },
+ {
+  "kind": "removed_item",
+  "page": "https://www.menoramivt.co.il/funds/savings/top-finance/top-finance-info",
+  "text": "יוני 2026",
+  "href": "https://cdn.menoramivt.co.il/public/docs/20260721/עלון-תשואות-יוני-2026--מונגש.pdf",
+  "legal_id": "520042540",
+  "company": "מנורה מבטחים ביטוח בע\"מ",
+  "detected": "2026-11-25T15:28:29+00:00"
+ },
+ {
+  "kind": "removed_item",
+  "page": "https://www.menoramivt.co.il/funds/savings/top-finance/top-finance-info",
+  "text": "יולי 2026",
+  "href": "https://cdn.menoramivt.co.il/public/docs/20260825/עלון-תשואות-יולי-2026---מונגש.pdf",
+  "legal_id": "520042540",
+  "company": "מנורה מבטחים ביטוח בע\"מ",
+  "detected": "2026-11-25T15:28:29+00:00"
+ },
+ {
+  "kind": "removed_item",
+  "page": "https://www.menoramivt.co.il/funds/savings/top-finance/top-finance-info",
+  "text": "אפריל 2026",
+  "href": "https://cdn.menoramivt.co.il/public/docs/20260528/עלון-תשואות-אפריל-2026--אתר-שיווקי---מונגש.pdf",
+  "legal_id": "520042540",
+  "company": "מנורה מבטחים ביטוח בע\"מ",
+  "detected": "2026-11-25T15:28:29+00:00"
+ },
+ {
+  "kind": "removed_item",
+  "page": "https://www.menoramivt.co.il/funds/savings/top-finance/top-finance-info",
+  "text": "אוקטובר 2026",
+  "href": "https://cdn.menoramivt.co.il/public/docs/20261123/עלון-תשואות-אוקטובר-2026--סוכנים--מונגש.pdf",
+  "legal_id": "520042540",
+  "company": "מנורה מבטחים ביטוח בע\"מ",
+  "detected": "2026-11-25T15:28:29+00:00"
+ },
+ {
+  "kind": "removed_item",
+  "page": "https://www.menoramivt.co.il/funds/savings/top-finance/top-finance-info",
+  "text": "אוגוסט 2026",
+  "href": "https://cdn.menoramivt.co.il/public/docs/20261004/עלון-תשואות-אוגוסט-2026--סוכנים---מונגש.pdf",
+  "legal_id": "520042540",
+  "company": "מנורה מבטחים ביטוח בע\"מ",
+  "detected": "2026-11-25T15:28:29+00:00"
+ },
+ {
+  "kind": "removed_item",
+  "page": "https://www.menoramivt.co.il/funds/savings/top-finance/top-finance-info",
+  "text": "פברואר 2025",
+  "href": "https://cdn.menoramivt.co.il/public/docs/20250330/עלון-תשואות-פברואר-2025---מונגש.pdf",
+  "legal_id": "520042540",
+  "company": "מנורה מבטחים ביטוח בע\"מ",
+  "detected": "2026-11-25T15:28:29+00:00"
+ },
+ {
+  "kind": "removed_item",
+  "page": "https://www.menoramivt.co.il/funds/savings/top-finance/top-finance-info",
+  "text": "ספטמבר 2025",
+  "href": "https://cdn.menoramivt.co.il/public/docs/20251102/בקשה-להפקדת-סכום-חד-פעמי-בפוליסת-פרט-עצמאים---מונגש.pdf",
+  "legal_id": "520042540",
+  "company": "מנורה מבטחים ביטוח בע\"מ",
+  "detected": "2026-11-25T15:28:29+00:00"
+ },
+ {
+  "kind": "removed_item",
+  "page": "https://www.menoramivt.co.il/funds/savings/top-finance/top-finance-info",
+  "text": "נובמבר 2025",
+  "href": "https://cdn.menoramivt.co.il/public/docs/20251225/נגיש-עלון-תשואות-נובמבר-2025.pdf",
+  "legal_id": "520042540",
+  "company": "מנורה מבטחים ביטוח בע\"מ",
+  "detected": "2026-11-25T15:28:29+00:00"
+ },
+ {
+  "kind": "removed_item",
+  "page": "https://www.menoramivt.co.il/funds/savings/top-finance/top-finance-info",
+  "text": "מרץ 2025",
+  "href": "https://cdn.menoramivt.co.il/public/docs/20250507/עלון-תשואות-מרץ---מונגש.pdf",
+  "legal_id": "520042540",
+  "company": "מנורה מבטחים ביטוח בע\"מ",
+  "detected": "2026-11-25T15:28:29+00:00"
+ },
+ {
+  "kind": "removed_item",
+  "page": "https://www.menoramivt.co.il/funds/savings/top-finance/top-finance-info",
+  "text": "מאי 2025",
+  "href": "https://cdn.menoramivt.co.il/public/docs/20250630/עלון-תשואות-05.2025-מונגש.pdf",
+  "legal_id": "520042540",
+  "company": "מנורה מבטחים ביטוח בע\"מ",
+  "detected": "2026-11-25T15:28:29+00:00"
+ },
+ {
+  "kind": "removed_item",
+  "page": "https://www.menoramivt.co.il/funds/savings/top-finance/top-finance-info",
+  "text": "ינואר 2025",
+  "href": "https://cdn.menoramivt.co.il/public/docs/20250302/עלון-תשואות---ינואר-2025---מונגש.pdf",
+  "legal_id": "520042540",
+  "company": "מנורה מבטחים ביטוח בע\"מ",
+  "detected": "2026-11-25T15:28:29+00:00"
+ },
+ {
+  "kind": "removed_item",
+  "page": "https://www.menoramivt.co.il/funds/savings/top-finance/top-finance-info",
+  "text": "יוני 2025",
+  "href": "https://cdn.menoramivt.co.il/public/docs/20250722/עלון-תשואות---יוני-2025-מונגש.pdf",
+  "legal_id": "520042540",
+  "company": "מנורה מבטחים ביטוח בע\"מ",
+  "detected": "2026-11-25T15:28:29+00:00"
+ },
+ {
+  "kind": "removed_item",
+  "page": "https://www.menoramivt.co.il/funds/savings/top-finance/top-finance-info",
+  "text": "יולי 2025",
+  "href": "https://cdn.menoramivt.co.il/public/docs/20250826/מונגש--עלון-תשואות-יולי-2025.pdf",
+  "legal_id": "520042540",
+  "company": "מנורה מבטחים ביטוח בע\"מ",
+  "detected": "2026-11-25T15:28:29+00:00"
+ },
+ {
+  "kind": "removed_item",
+  "page": "https://www.menoramivt.co.il/funds/savings/top-finance/top-finance-info",
+  "text": "דצמבר 2025",
+  "href": "https://cdn.menoramivt.co.il/public/docs/20260217/מונגש_עלון_תשואות_דצמבר_2025.pdf",
+  "legal_id": "520042540",
+  "company": "מנורה מבטחים ביטוח בע\"מ",
+  "detected": "2026-11-25T15:28:29+00:00"
+ },
+ {
+  "kind": "removed_item",
+  "page": "https://www.menoramivt.co.il/funds/savings/top-finance/top-finance-info",
+  "text": "אפריל 2025",
+  "href": "https://cdn.menoramivt.co.il/public/docs/20250820/עלון-תשואות---04.2025-(מונגש).pdf",
+  "legal_id": "520042540",
+  "company": "מנורה מבטחים ביטוח בע\"מ",
+  "detected": "2026-11-25T15:28:29+00:00"
+ },
+ {
+  "kind": "removed_item",
+  "page": "https://www.menoramivt.co.il/funds/savings/top-finance/top-finance-info",
+  "text": "אוקטובר 2025",
+  "href": "https://cdn.menoramivt.co.il/public/docs/20251130/עלון-תשואות-אוקטובר-2025--מונגש.pdf",
+  "legal_id": "520042540",
+  "company": "מנורה מבטחים ביטוח בע\"מ",
+  "detected": "2026-11-25T15:28:29+00:00"
+ },
+ {
+  "kind": "removed_item",
+  "page": "https://www.menoramivt.co.il/funds/savings/top-finance/top-finance-info",
+  "text": "אוגוסט 2025",
+  "href": "https://cdn.menoramivt.co.il/public/docs/20251016/מונגש-עלון_תשואות_8.25.pdf",
+  "legal_id": "520042540",
+  "company": "מנורה מבטחים ביטוח בע\"מ",
+  "detected": "2026-11-25T15:28:29+00:00"
+ },
+ {
+  "kind": "removed_item",
+  "page": "https://www.menoramivt.co.il/funds/savings/top-finance/top-finance-info",
+  "text": "פברואר 2024",
+  "href": "https://cdn.menoramivt.co.il/public/docs/20240401/מונגש---עלון-תשואות-פברואר-2024.pdf",
+  "legal_id": "520042540",
+  "company": "מנורה מבטחים ביטוח בע\"מ",
+  "detected": "2026-11-25T15:28:29+00:00"
+ },
+ {
+  "kind": "removed_item",
+  "page": "https://www.menoramivt.co.il/funds/savings/top-finance/top-finance-info",
+  "text": "ספטמבר 2024",
+  "href": "https://cdn.menoramivt.co.il/public/docs/20241110/עלון-תשואות-ספטמבר-2024-מונגש.pdf",
+  "legal_id": "520042540",
+  "company": "מנורה מבטחים ביטוח בע\"מ",
+  "detected": "2026-11-25T15:28:29+00:00"
+ },
+ {
+  "kind": "removed_item",
+  "page": "https://www.menoramivt.co.il/funds/savings/top-finance/top-finance-info",
+  "text": "נובמבר 2024",
+  "href": "https://cdn-int.menora.co.il/public/docs/20241229/עלון-תשואות-נובמבר-2024-מונגש.pdf",
+  "legal_id": "520042540",
+  "company": "מנורה מבטחים ביטוח בע\"מ",
+  "detected": "2026-11-25T15:28:29+00:00"
+ },
+ {
+  "kind": "removed_item",
+  "page": "https://www.menoramivt.co.il/funds/savings/top-finance/top-finance-info",
+  "text": "מרץ 2024",
+  "href": "https://cdn.menoramivt.co.il/public/docs/20240430/מונגש---עלון-תשואות-מרץ-2024.pdf",
+  "legal_id": "520042540",
+  "company": "מנורה מבטחים ביטוח בע\"מ",
+  "detected": "2026-11-25T15:28:29+00:00"
+ },
+ {
+  "kind": "removed_item",
+  "page": "https://www.menoramivt.co.il/funds/savings/top-finance/top-finance-info",
+  "text": "מאי 2024",
+  "href": "https://cdn.menoramivt.co.il/public/docs/20240630/עלון-תשואות-מאי-2024-מונגש.pdf",
+  "legal_id": "520042540",
+  "company": "מנורה מבטחים ביטוח בע\"מ",
+  "detected": "2026-11-25T15:28:29+00:00"
+ },
+ {
+  "kind": "removed_item",
+  "page": "https://www.menoramivt.co.il/funds/savings/top-finance/top-finance-info",
+  "text": "לפירוט השינויים במסלולי השקעה – לחצו כאן",
+  "href": "https://cdn.menoramivt.co.il/public/docs/20240710/עלון-שינוי-מסלולי-השקעה-ביטוח-חיים---מונגש.pdf",
+  "legal_id": "520042540",
+  "company": "מנורה מבטחים ביטוח בע\"מ",
+  "detected": "2026-11-25T15:28:29+00:00"
+ },
+ {
+  "kind": "removed_item",
+  "page": "https://www.menoramivt.co.il/funds/savings/top-finance/top-finance-info",
+  "text": "ינואר 2024",
+  "href": "https://cdn.menoramivt.co.il/public/docs/20240228/עלון-תשואות-ינואר-2024---מונגש.pdf",
+  "legal_id": "520042540",
+  "company": "מנורה מבטחים ביטוח בע\"מ",
+  "detected": "2026-11-25T15:28:29+00:00"
+ },
+ {
+  "kind": "removed_item",
+  "page": "https://www.menoramivt.co.il/funds/savings/top-finance/top-finance-info",
+  "text": "יוני 2024",
+  "href": "https://cdn.menoramivt.co.il/public/docs/20240728/עלון-תשואות-יוני-2024---מונגש.pdf",
+  "legal_id": "520042540",
+  "company": "מנורה מבטחים ביטוח בע\"מ",
+  "detected": "2026-11-25T15:28:29+00:00"
+ },
+ {
+  "kind": "removed_item",
+  "page": "https://www.menoramivt.co.il/funds/savings/top-finance/top-finance-info",
+  "text": "יולי 2024",
+  "href": "https://cdn.menoramivt.co.il/public/docs/20240902/מונגש---עלון-תשואות-יולי-2024.pdf",
+  "legal_id": "520042540",
+  "company": "מנורה מבטחים ביטוח בע\"מ",
+  "detected": "2026-11-25T15:28:29+00:00"
+ },
+ {
+  "kind": "removed_item",
+  "page": "https://www.menoramivt.co.il/funds/savings/top-finance/top-finance-info",
+  "text": "דצמבר 2024",
+  "href": "https://cdn.menoramivt.co.il/public/docs/20250129/מונגש--עלון-תשואות-דצמבר.pdf",
+  "legal_id": "520042540",
+  "company": "מנורה מבטחים ביטוח בע\"מ",
+  "detected": "2026-11-25T15:28:29+00:00"
+ },
+ {
+  "kind": "removed_item",
+  "page": "https://www.menoramivt.co.il/funds/savings/top-finance/top-finance-info",
+  "text": "אפריל 2024",
+  "href": "https://cdn.menoramivt.co.il/public/docs/20240530/מונגש---עלון-תשואות-אפריל-2024.pdf",
+  "legal_id": "520042540",
+  "company": "מנורה מבטחים ביטוח בע\"מ",
+  "detected": "2026-11-25T15:28:29+00:00"
+ },
+ {
+  "kind": "removed_item",
+  "page": "https://www.menoramivt.co.il/funds/savings/top-finance/top-finance-info",
+  "text": "אוקטובר 2024",
+  "href": "https://cdn.menoramivt.co.il/public/docs/20241204/עלון-תשואות---אוקטובר-2024-מונגש.pdf",
+  "legal_id": "520042540",
+  "company": "מנורה מבטחים ביטוח בע\"מ",
+  "detected": "2026-11-25T15:28:29+00:00"
+ },
+ {
+  "kind": "removed_item",
+  "page": "https://www.menoramivt.co.il/funds/savings/top-finance/top-finance-info",
+  "text": "אוגוסט 2024",
+  "href": "https://cdn.menoramivt.co.il/public/docs/20241001/עלון-תשואות---אוגוסט-2024-מונגש.pdf",
+  "legal_id": "520042540",
+  "company": "מנורה מבטחים ביטוח בע\"מ",
+  "detected": "2026-11-25T15:28:29+00:00"
+ },
+ {
+  "kind": "removed_item",
+  "page": "https://www.menoramivt.co.il/funds/savings/top-finance/top-finance-info",
+  "text": "(html)",
+  "href": "https://cdn.menoramivt.co.il/public/docs/20240331/esg-report-2021-22022.pdf",
+  "legal_id": "520042540",
+  "company": "מנורה מבטחים ביטוח בע\"מ",
+  "detected": "2026-11-25T15:28:29+00:00"
+ },
+ {
+  "kind": "removed_item",
+  "page": "https://www.menoramivt.co.il/funds/savings/top-finance/top-finance-info",
+  "text": "ספטמבר 2023",
+  "href": "https://cdn.menoramivt.co.il/public/docs/20231029/עלון-תשואות-ספטמבר-2023---מונגש.pdf",
+  "legal_id": "520042540",
+  "company": "מנורה מבטחים ביטוח בע\"מ",
+  "detected": "2026-11-25T15:28:29+00:00"
+ },
+ {
+  "kind": "removed_item",
+  "page": "https://www.menoramivt.co.il/funds/savings/top-finance/top-finance-info",
+  "text": "נובמבר 2023",
+  "href": "https://cdn.menoramivt.co.il/public/docs/20240102/מונגש---עלון-תשואות-נובמבר-2023.pdf",
+  "legal_id": "520042540",
+  "company": "מנורה מבטחים ביטוח בע\"מ",
+  "detected": "2026-11-25T15:28:29+00:00"
+ },
+ {
+  "kind": "removed_item",
+  "page": "https://www.menoramivt.co.il/funds/savings/top-finance/top-finance-info",
+  "text": "ינואר 2023",
+  "href": "https://cdn.menoramivt.co.il/public/docs/20230223/עלון-תשואות-ינואר-2023---1.pdf",
+  "legal_id": "520042540",
+  "company": "מנורה מבטחים ביטוח בע\"מ",
+  "detected": "2026-11-25T15:28:29+00:00"
+ },
+ {
+  "kind": "removed_item",
+  "page": "https://www.menoramivt.co.il/funds/savings/top-finance/top-finance-info",
+  "text": "יוני 2023",
+  "href": "https://cdn.menoramivt.co.il/public/docs/20230731/עלון-תשואות---יוני-2023.pdf",
+  "legal_id": "520042540",
+  "company": "מנורה מבטחים ביטוח בע\"מ",
+  "detected": "2026-11-25T15:28:29+00:00"
+ },
+ {
+  "kind": "removed_item",
+  "page": "https://www.menoramivt.co.il/funds/savings/top-finance/top-finance-info",
+  "text": "יולי 2023",
+  "href": "https://cdn.menoramivt.co.il/public/docs/20230906/עלון-תשואות-יולי-2023.pdf",
+  "legal_id": "520042540",
+  "company": "מנורה מבטחים ביטוח בע\"מ",
+  "detected": "2026-11-25T15:28:29+00:00"
+ },
+ {
+  "kind": "removed_item",
+  "page": "https://www.menoramivt.co.il/funds/savings/top-finance/top-finance-info",
+  "text": "דצמבר 2023",
+  "href": "https://cdn.menoramivt.co.il/public/docs/20240205/עלון-תשואות-12.2023-מנורה-מבטחים-ביטוח---מונגש.pdf",
+  "legal_id": "520042540",
+  "company": "מנורה מבטחים ביטוח בע\"מ",
+  "detected": "2026-11-25T15:28:29+00:00"
+ },
+ {
+  "kind": "removed_item",
+  "page": "https://www.menoramivt.co.il/funds/savings/top-finance/top-finance-info",
+  "text": "אפריל 2023",
+  "href": "https://cdn.menoramivt.co.il/public/docs/20230529/עלון-תשואות-ביטוח-פנסיה-גמל-והשתלמות-042023.pdf",
+  "legal_id": "520042540",
+  "company": "מנורה מבטחים ביטוח בע\"מ",
+  "detected": "2026-11-25T15:28:29+00:00"
+ },
+ {
+  "kind": "removed_item",
+  "page": "https://www.menoramivt.co.il/funds/savings/top-finance/top-finance-info",
+  "text": "אוקטובר 2023",
+  "href": "https://cdn.menoramivt.co.il/public/docs/20231126/עלון-תשואות-אוקטובר-2023---מונגש.pdf",
+  "legal_id": "520042540",
+  "company": "מנורה מבטחים ביטוח בע\"מ",
+  "detected": "2026-11-25T15:28:29+00:00"
+ },
+ {
+  "kind": "removed_item",
+  "page": "https://www.menoramivt.co.il/funds/savings/top-finance/top-finance-info",
+  "text": "אוגוסט 2023",
+  "href": "https://cdn.menoramivt.co.il/public/docs/20230926/1695282214_עלון_תשואות_אוגוסט_2023.pdf",
+  "legal_id": "520042540",
+  "company": "מנורה מבטחים ביטוח בע\"מ",
+  "detected": "2026-11-25T15:28:29+00:00"
+ },
+ {
+  "kind": "removed_item",
+  "page": "https://www.menoramivt.co.il/funds/savings/top-finance/top-finance-info",
+  "text": "יולי 2022",
+  "href": "https://cdn.menoramivt.co.il/public/docs/20220830/30-30203-080822_alon-tsuot_july22_08_biz_vers1--מונגש.pdf",
+  "legal_id": "520042540",
+  "company": "מנורה מבטחים ביטוח בע\"מ",
+  "detected": "2026-11-25T15:28:29+00:00"
+ },
+ {
+  "kind": "removed_item",
+  "page": "https://www.menoramivt.co.il/funds/savings/top-finance/top-finance-info",
+  "text": "ספטמבר 2021",
+  "href": "https://cdn.menoramivt.co.il/public/docs/20220103/עלון-תשואות-top-finance-ספטמבר-מונגש.pdf",
+  "legal_id": "520042540",
+  "company": "מנורה מבטחים ביטוח בע\"מ",
+  "detected": "2026-11-25T15:28:29+00:00"
+ },
+ {
+  "kind": "removed_item",
+  "page": "https://www.menoramivt.co.il/funds/savings/top-finance/top-finance-info",
+  "text": "מרץ 2021",
+  "href": "https://cdn.menoramivt.co.il/public/docs/20210726/עלון-תשואות-מרץ-21-.pdf",
+  "legal_id": "520042540",
+  "company": "מנורה מבטחים ביטוח בע\"מ",
+  "detected": "2026-11-25T15:28:29+00:00"
+ },
+ {
+  "kind": "removed_item",
+  "page": "https://www.menoramivt.co.il/funds/savings/top-finance/top-finance-info",
+  "text": "אוקטובר 2021",
+  "href": "https://cdn.menoramivt.co.il/public/docs/20220103/עלון-תשואות-top-finance-מונגש.pdf",
+  "legal_id": "520042540",
+  "company": "מנורה מבטחים ביטוח בע\"מ",
+  "detected": "2026-11-25T15:28:29+00:00"
+ },
+ {
+  "kind": "removed_item",
+  "page": "https://www.menoramivt.co.il/funds/savings/top-finance/top-finance-info",
+  "text": "פברואר 2020",
+  "href": "https://cdn.menoramivt.co.il/public/docs/20200903/טופ-פייננס-תשואות-ונעשים-2020-פברואר.pdf",
+  "legal_id": "520042540",
+  "company": "מנורה מבטחים ביטוח בע\"מ",
+  "detected": "2026-11-25T15:28:29+00:00"
+ },
+ {
+  "kind": "removed_item",
+  "page": "https://www.menoramivt.co.il/funds/savings/top-finance/top-finance-info",
+  "text": "ספטמבר 2020",
+  "href": "https://cdn.menoramivt.co.il/public/docs/20201022/טופ-פיננס-תשואות-ונכסים-ספטמבר-2020.pdf",
+  "legal_id": "520042540",
+  "company": "מנורה מבטחים ביטוח בע\"מ",
+  "detected": "2026-11-25T15:28:29+00:00"
+ },
+ {
+  "kind": "removed_item",
+  "page": "https://www.menoramivt.co.il/funds/savings/top-finance/top-finance-info",
+  "text": "נובמבר 2020",
+  "href": "https://cdn.menoramivt.co.il/public/docs/20201220/עלון-תשואות-נובמבר-2020-סגור-להנגשה.pdf",
+  "legal_id": "520042540",
+  "company": "מנורה מבטחים ביטוח בע\"מ",
+  "detected": "2026-11-25T15:28:29+00:00"
+ },
+ {
+  "kind": "removed_item",
+  "page": "https://www.menoramivt.co.il/funds/savings/top-finance/top-finance-info",
+  "text": "מאי 2020",
+  "href": "https://cdn.menoramivt.co.il/public/docs/20200903/טופ-פייננס-תשואות-ונכסים-2020-מאי.pdf",
+  "legal_id": "520042540",
+  "company": "מנורה מבטחים ביטוח בע\"מ",
+  "detected": "2026-11-25T15:28:29+00:00"
+ },
+ {
+  "kind": "removed_item",
+  "page": "https://www.menoramivt.co.il/funds/savings/top-finance/top-finance-info",
+  "text": "ינואר 2020",
+  "href": "https://cdn.menoramivt.co.il/public/docs/20200903/טופ-פייננס-תשואות-ונכסים-2020-ינואר.pdf",
+  "legal_id": "520042540",
+  "company": "מנורה מבטחים ביטוח בע\"מ",
+  "detected": "2026-11-25T15:28:29+00:00"
+ },
+ {
+  "kind": "removed_item",
+  "page": "https://www.menoramivt.co.il/funds/savings/top-finance/top-finance-info",
+  "text": "יוני 2020",
+  "href": "https://cdn.menoramivt.co.il/public/docs/20200903/טופ-פייננס-תשואות-ונכסים-2020-יוני.pdf",
+  "legal_id": "520042540",
+  "company": "מנורה מבטחים ביטוח בע\"מ",
+  "detected": "2026-11-25T15:28:29+00:00"
+ },
+ {
+  "kind": "removed_item",
+  "page": "https://www.menoramivt.co.il/funds/savings/top-finance/top-finance-info",
+  "text": "יולי 2020",
+  "href": "https://cdn.menoramivt.co.il/public/docs/20200914/טופ-פייננס-תשואות-ונכסים-יולי-2020.pdf",
+  "legal_id": "520042540",
+  "company": "מנורה מבטחים ביטוח בע\"מ",
+  "detected": "2026-11-25T15:28:29+00:00"
+ },
+ {
+  "kind": "removed_item",
+  "page": "https://www.menoramivt.co.il/funds/savings/top-finance/top-finance-info",
+  "text": "אפריל 2020",
+  "href": "https://cdn.menoramivt.co.il/public/docs/20200903/טופ-פיננס-תשואות-ונכסים-2020-אפריל.pdf",
+  "legal_id": "520042540",
+  "company": "מנורה מבטחים ביטוח בע\"מ",
+  "detected": "2026-11-25T15:28:29+00:00"
+ },
+ {
+  "kind": "removed_item",
+  "page": "https://www.menoramivt.co.il/funds/savings/top-finance/top-finance-info",
+  "text": "אוגוסט 2020",
+  "href": "https://cdn.menoramivt.co.il/public/docs/20200916/טופ-פייננס-תשואות-ונכסים-אוגוסט-2020.pdf",
+  "legal_id": "520042540",
+  "company": "מנורה מבטחים ביטוח בע\"מ",
+  "detected": "2026-11-25T15:28:29+00:00"
+ },
+ {
+  "kind": "removed_item",
+  "page": "https://www.menoramivt.co.il/funds/savings/top-finance/top-finance-info",
+  "text": "חיסכון פנסיוני",
+  "href": "https://www.menoramivt.co.il/funds/savings/top-finance/top-finance-info",
+  "legal_id": "520042540",
+  "company": "מנורה מבטחים ביטוח בע\"מ",
+  "detected": "2026-11-25T15:28:29+00:00"
  },
  {
   "kind": "new_item",
-  "page": "https://www.menoramivt.co.il/funds/savings/top-finance/top-finance-info",
-  "text": "קופת גמל חיסכון והשקעה",
-  "href": "https://www.menoramivt.co.il/gemel",
-  "legal_id": "520042540",
-  "company": "מנורה מבטחים ביטוח בע\"מ",
-  "detected": "2026-11-24T16:00:35+00:00"
- },
- {
-  "kind": "new_item",
-  "page": "https://www.menoramivt.co.il/funds/savings/top-finance/top-finance-info",
-  "text": "פנסיה",
-  "href": "https://www.menoramivt.co.il/pension/claim-list",
-  "legal_id": "520042540",
-  "company": "מנורה מבטחים ביטוח בע\"מ",
-  "detected": "2026-11-24T16:00:35+00:00"
- },
- {
-  "kind": "text_changed",
-  "page": "https://www.menoramivt.co.il/funds/savings/top-finance/top-finance-info",
-  "text": "עדכון מוטבים -> עדכון מוטבים ביטוח",
-  "href": "https://meforms.menora.co.il/api/launch/templatelink/request-policy-changes",
-  "legal_id": "520042540",
-  "company": "מנורה מבטחים ביטוח בע\"מ",
-  "detected": "2026-11-24T16:00:35+00:00"
- },
- {
-  "kind": "removed_item",
-  "page": "https://www.menoramivt.co.il/funds/savings/top-finance/top-finance-info",
-  "text": "קרנות פנסיה",
-  "href": "https://www.menoramivt.co.il/links/pension/investment-routes-pension",
-  "legal_id": "520042540",
-  "company": "מנורה מבטחים ביטוח בע\"מ",
-  "detected": "2026-11-24T16:00:35+00:00"
- },
- {
-  "kind": "removed_item",
-  "page": "https://www.menoramivt.co.il/funds/savings/top-finance/top-finance-info",
-  "text": "קרן השתלמות",
-  "href": "https://www.menoramivt.co.il/product/keren-hishtalmut",
-  "legal_id": "520042540",
-  "company": "מנורה מבטחים ביטוח בע\"מ",
-  "detected": "2026-11-24T16:00:35+00:00"
- },
- {
-  "kind": "removed_item",
-  "page": "https://www.menoramivt.co.il/funds/savings/top-finance/top-finance-info",
-  "text": "קופת גמל להשקעה",
-  "href": "https://www.menoramivt.co.il/product/gemel-invest",
-  "legal_id": "520042540",
-  "company": "מנורה מבטחים ביטוח בע\"מ",
-  "detected": "2026-11-24T16:00:35+00:00"
- },
- {
-  "kind": "removed_item",
-  "page": "https://www.menoramivt.co.il/funds/savings/top-finance/top-finance-info",
-  "text": "קופת גמל חיסכון והשקעה",
-  "href": "https://www.menoramivt.co.il/product/gemel",
-  "legal_id": "520042540",
-  "company": "מנורה מבטחים ביטוח בע\"מ",
-  "detected": "2026-11-24T16:00:35+00:00"
- },
- {
-  "kind": "removed_item",
-  "page": "https://www.menoramivt.co.il/funds/savings/top-finance/top-finance-info",
-  "text": "פנסיה",
-  "href": "https://www.menoramivt.co.il/product/pension-claim-list",
-  "legal_id": "520042540",
-  "company": "מנורה מבטחים ביטוח בע\"מ",
-  "detected": "2026-11-24T16:00:35+00:00"
- },
- {
-  "kind": "new_item",
   "page": "https://www.menoramivt.co.il",
-  "text": "קרנות פנסיה",
-  "href": "https://www.menoramivt.co.il/pension/investment-routes-pension",
+  "text": "6 סיבות מצוינות לחסוך לילדים בקופת גמל להשקעה זמן קריאה: 4 דקות",
+  "href": "https://www.menoramivt.co.il/gemel/gemel-fund-investment-for-kids",
   "legal_id": "520042540",
   "company": "מנורה מבטחים ביטוח בע\"מ",
-  "detected": "2026-11-24T16:00:35+00:00"
- },
- {
-  "kind": "new_item",
-  "page": "https://www.menoramivt.co.il",
-  "text": "קופת גמל חיסכון והשקעה",
-  "href": "https://www.menoramivt.co.il/gemel",
-  "legal_id": "520042540",
-  "company": "מנורה מבטחים ביטוח בע\"מ",
-  "detected": "2026-11-24T16:00:35+00:00"
- },
- {
-  "kind": "new_item",
-  "page": "https://www.menoramivt.co.il",
-  "text": "פנסיה",
-  "href": "https://www.menoramivt.co.il/pension/claim-list",
-  "legal_id": "520042540",
-  "company": "מנורה מבטחים ביטוח בע\"מ",
-  "detected": "2026-11-24T16:00:35+00:00"
- },
- {
-  "kind": "text_changed",
-  "page": "https://www.menoramivt.co.il",
-  "text": "עדכון מוטבים -> עדכון מוטבים ביטוח",
-  "href": "https://meforms.menora.co.il/api/launch/templatelink/request-policy-changes",
-  "legal_id": "520042540",
-  "company": "מנורה מבטחים ביטוח בע\"מ",
-  "detected": "2026-11-24T16:00:35+00:00"
+  "detected": "2026-11-25T15:28:29+00:00"
  },
  {
   "kind": "removed_item",
   "page": "https://www.menoramivt.co.il",
-  "text": "קרנות פנסיה",
-  "href": "https://www.menoramivt.co.il/links/pension/investment-routes-pension",
+  "text": "6 סיבות מצוינות לחסוך לילדים בקופת גמל להשקעה זמן קריאה: 4 דקות",
+  "href": "https://www.menoramivt.co.il/general/articles-fellow/invest-gemel-kids",
   "legal_id": "520042540",
   "company": "מנורה מבטחים ביטוח בע\"מ",
-  "detected": "2026-11-24T16:00:35+00:00"
- },
- {
-  "kind": "removed_item",
-  "page": "https://www.menoramivt.co.il",
-  "text": "קרן השתלמות",
-  "href": "https://www.menoramivt.co.il/product/keren-hishtalmut",
-  "legal_id": "520042540",
-  "company": "מנורה מבטחים ביטוח בע\"מ",
-  "detected": "2026-11-24T16:00:35+00:00"
- },
- {
-  "kind": "removed_item",
-  "page": "https://www.menoramivt.co.il",
-  "text": "קופת גמל להשקעה",
-  "href": "https://www.menoramivt.co.il/product/gemel-invest",
-  "legal_id": "520042540",
-  "company": "מנורה מבטחים ביטוח בע\"מ",
-  "detected": "2026-11-24T16:00:35+00:00"
- },
- {
-  "kind": "removed_item",
-  "page": "https://www.menoramivt.co.il",
-  "text": "קופת גמל חיסכון והשקעה",
-  "href": "https://www.menoramivt.co.il/product/gemel",
-  "legal_id": "520042540",
-  "company": "מנורה מבטחים ביטוח בע\"מ",
-  "detected": "2026-11-24T16:00:35+00:00"
- },
- {
-  "kind": "removed_item",
-  "page": "https://www.menoramivt.co.il",
-  "text": "פנסיה",
-  "href": "https://www.menoramivt.co.il/product/pension-claim-list",
-  "legal_id": "520042540",
-  "company": "מנורה מבטחים ביטוח בע\"מ",
-  "detected": "2026-11-24T16:00:35+00:00"
+  "detected": "2026-11-25T15:28:29+00:00"
  },
  {
   "kind": "page_changed",
@@ -249,7 +573,7 @@
   "href": "https://www.menoramivt.co.il/pension",
   "legal_id": "520042540",
   "company": "מנורה מבטחים ביטוח בע\"מ",
-  "detected": "2026-11-24T16:00:35+00:00"
+  "detected": "2026-11-25T15:28:29+00:00"
  },
  {
   "kind": "page_changed",
@@ -258,7 +582,7 @@
   "href": "https://www.menoramivt.co.il/pension/menora-pension-mashlima",
   "legal_id": "520042540",
   "company": "מנורה מבטחים ביטוח בע\"מ",
-  "detected": "2026-11-24T16:00:35+00:00"
+  "detected": "2026-11-25T15:28:29+00:00"
  },
  {
   "kind": "page_changed",
@@ -267,97 +591,16 @@
   "href": "https://www.menoramivt.co.il/pension/independent-info",
   "legal_id": "520042540",
   "company": "מנורה מבטחים ביטוח בע\"מ",
-  "detected": "2026-11-24T16:00:35+00:00"
+  "detected": "2026-11-25T15:28:29+00:00"
  },
  {
-  "kind": "new_item",
-  "page": "https://ds.menoramivt.co.il/pension-joining-eligibility/",
-  "text": "קרנות פנסיה",
-  "href": "https://www.menoramivt.co.il/pension/investment-routes-pension",
-  "legal_id": "520042540",
-  "company": "מנורה מבטחים ביטוח בע\"מ",
-  "detected": "2026-11-24T16:00:35+00:00"
- },
- {
-  "kind": "new_item",
-  "page": "https://ds.menoramivt.co.il/pension-joining-eligibility/",
-  "text": "קופת גמל חיסכון והשקעה",
-  "href": "https://www.menoramivt.co.il/gemel",
-  "legal_id": "520042540",
-  "company": "מנורה מבטחים ביטוח בע\"מ",
-  "detected": "2026-11-24T16:00:35+00:00"
- },
- {
-  "kind": "new_item",
-  "page": "https://ds.menoramivt.co.il/pension-joining-eligibility/",
-  "text": "פנסיה",
-  "href": "https://www.menoramivt.co.il/pension/claim-list",
-  "legal_id": "520042540",
-  "company": "מנורה מבטחים ביטוח בע\"מ",
-  "detected": "2026-11-24T16:00:35+00:00"
- },
- {
-  "kind": "text_changed",
-  "page": "https://ds.menoramivt.co.il/pension-joining-eligibility/",
-  "text": "עדכון מוטבים -> עדכון מוטבים ביטוח",
-  "href": "https://meforms.menora.co.il/api/launch/templatelink/request-policy-changes",
-  "legal_id": "520042540",
-  "company": "מנורה מבטחים ביטוח בע\"מ",
-  "detected": "2026-11-24T16:00:35+00:00"
- },
- {
-  "kind": "removed_item",
-  "page": "https://ds.menoramivt.co.il/pension-joining-eligibility/",
-  "text": "קרנות פנסיה",
-  "href": "https://www.menoramivt.co.il/links/pension/investment-routes-pension",
-  "legal_id": "520042540",
-  "company": "מנורה מבטחים ביטוח בע\"מ",
-  "detected": "2026-11-24T16:00:35+00:00"
- },
- {
-  "kind": "removed_item",
-  "page": "https://ds.menoramivt.co.il/pension-joining-eligibility/",
-  "text": "קרן השתלמות",
-  "href": "https://www.menoramivt.co.il/product/keren-hishtalmut",
-  "legal_id": "520042540",
-  "company": "מנורה מבטחים ביטוח בע\"מ",
-  "detected": "2026-11-24T16:00:35+00:00"
- },
- {
-  "kind": "removed_item",
-  "page": "https://ds.menoramivt.co.il/pension-joining-eligibility/",
-  "text": "קופת גמל להשקעה",
-  "href": "https://www.menoramivt.co.il/product/gemel-invest",
-  "legal_id": "520042540",
-  "company": "מנורה מבטחים ביטוח בע\"מ",
-  "detected": "2026-11-24T16:00:35+00:00"
- },
- {
-  "kind": "removed_item",
-  "page": "https://ds.menoramivt.co.il/pension-joining-eligibility/",
-  "text": "קופת גמל חיסכון והשקעה",
-  "href": "https://www.menoramivt.co.il/product/gemel",
-  "legal_id": "520042540",
-  "company": "מנורה מבטחים ביטוח בע\"מ",
-  "detected": "2026-11-24T16:00:35+00:00"
- },
- {
-  "kind": "removed_item",
-  "page": "https://ds.menoramivt.co.il/pension-joining-eligibility/",
-  "text": "פנסיה",
-  "href": "https://www.menoramivt.co.il/product/pension-claim-list",
-  "legal_id": "520042540",
-  "company": "מנורה מבטחים ביטוח בע\"מ",
-  "detected": "2026-11-24T16:00:35+00:00"
- },
- {
-  "kind": "new_page",
+  "kind": "page_changed",
   "page": "https://www.menoramivt.co.il/gemel",
-  "text": "0 items",
+  "text": "טקסט העמוד השתנה (אותם קישורים)",
   "href": "https://www.menoramivt.co.il/gemel",
   "legal_id": "520042540",
   "company": "מנורה מבטחים ביטוח בע\"מ",
-  "detected": "2026-11-24T16:00:35+00:00"
+  "detected": "2026-11-25T15:28:29+00:00"
  },
  {
   "kind": "page_changed",
@@ -366,7 +609,7 @@
   "href": "https://www.menoramivt.co.il/general/gemel-payments",
   "legal_id": "520042540",
   "company": "מנורה מבטחים ביטוח בע\"מ",
-  "detected": "2026-11-24T16:00:35+00:00"
+  "detected": "2026-11-25T15:28:29+00:00"
  },
  {
   "kind": "page_changed",
@@ -375,7 +618,7 @@
   "href": "https://www.menoramivt.co.il/gemel/invest",
   "legal_id": "520042540",
   "company": "מנורה מבטחים ביטוח בע\"מ",
-  "detected": "2026-11-24T16:00:35+00:00"
+  "detected": "2026-11-25T15:28:29+00:00"
  },
  {
   "kind": "page_changed",
@@ -384,7 +627,7 @@
   "href": "https://www.menoramivt.co.il/study-fund",
   "legal_id": "520042540",
   "company": "מנורה מבטחים ביטוח בע\"מ",
-  "detected": "2026-11-24T16:00:35+00:00"
+  "detected": "2026-11-25T15:28:29+00:00"
  },
  {
   "kind": "page_changed",
@@ -393,7 +636,7 @@
   "href": "https://www.menoramivt.co.il/joining-gml/?process=eduFundEmployee&utm_source=website&utm_medium=banner&utm_campaign=product_page&utm_term=hishtalmut_shci",
   "legal_id": "520042540",
   "company": "מנורה מבטחים ביטוח בע\"מ",
-  "detected": "2026-11-24T16:00:35+00:00"
+  "detected": "2026-11-25T15:28:29+00:00"
  },
  {
   "kind": "page_changed",
@@ -402,7 +645,7 @@
   "href": "https://www.menoramivt.co.il/joining-gml/?process=eduFund&linkId=93643a881b3a02dba51ef124f3f68bd53ab735b2d97eaed348&utm_source=website&utm_medium=banner&utm_campaign=product_page&utm_term=hishtalmut",
   "legal_id": "520042540",
   "company": "מנורה מבטחים ביטוח בע\"מ",
-  "detected": "2026-11-24T16:00:35+00:00"
+  "detected": "2026-11-25T15:28:29+00:00"
  },
  {
   "kind": "page_changed",
@@ -411,7 +654,7 @@
   "href": "https://www.menoramivt.co.il/links/keren-hishtalmut/omega-fund",
   "legal_id": "520042540",
   "company": "מנורה מבטחים ביטוח בע\"מ",
-  "detected": "2026-11-24T16:00:35+00:00"
+  "detected": "2026-11-25T15:28:29+00:00"
  },
  {
   "kind": "page_changed",
@@ -420,7 +663,7 @@
   "href": "https://www.menoramivt.co.il/customer-login/?target=old-age-pension-claim",
   "legal_id": "520042540",
   "company": "מנורה מבטחים ביטוח בע\"מ",
-  "detected": "2026-11-24T16:00:35+00:00"
+  "detected": "2026-11-25T15:28:29+00:00"
  },
  {
   "kind": "page_changed",
@@ -429,7 +672,7 @@
   "href": "https://www.menoramivt.co.il/list/pension-member-info/retirement-investment-tracks",
   "legal_id": "520042540",
   "company": "מנורה מבטחים ביטוח בע\"מ",
-  "detected": "2026-11-24T16:00:35+00:00"
+  "detected": "2026-11-25T15:28:29+00:00"
  },
  {
   "kind": "page_changed",
@@ -438,16 +681,16 @@
   "href": "https://www.menoramivt.co.il/links/pension-and-gemel/gemel-hishtalmut-list/menroa-keren-hishtalmut",
   "legal_id": "520042540",
   "company": "מנורה מבטחים ביטוח בע\"מ",
-  "detected": "2026-11-24T16:00:35+00:00"
+  "detected": "2026-11-25T15:28:29+00:00"
  },
  {
-  "kind": "new_page",
+  "kind": "page_changed",
   "page": "https://www.menoramivt.co.il/pension/investment-routes-pension",
-  "text": "0 items",
+  "text": "טקסט העמוד השתנה (אותם קישורים)",
   "href": "https://www.menoramivt.co.il/pension/investment-routes-pension",
   "legal_id": "520042540",
   "company": "מנורה מבטחים ביטוח בע\"מ",
-  "detected": "2026-11-24T16:00:35+00:00"
+  "detected": "2026-11-25T15:28:29+00:00"
  },
  {
   "kind": "page_changed",
@@ -456,16 +699,16 @@
   "href": "https://www.menoramivt.co.il/links/pension-and-gemel/gemel-hishtalmut-list/list-top-savings",
   "legal_id": "520042540",
   "company": "מנורה מבטחים ביטוח בע\"מ",
-  "detected": "2026-11-24T16:00:35+00:00"
+  "detected": "2026-11-25T15:28:29+00:00"
  },
  {
-  "kind": "new_page",
+  "kind": "page_changed",
   "page": "https://www.menoramivt.co.il/pension/claim-list",
-  "text": "0 items",
+  "text": "טקסט העמוד השתנה (אותם קישורים)",
   "href": "https://www.menoramivt.co.il/pension/claim-list",
   "legal_id": "520042540",
   "company": "מנורה מבטחים ביטוח בע\"מ",
-  "detected": "2026-11-24T16:00:35+00:00"
+  "detected": "2026-11-25T15:28:29+00:00"
  },
  {
   "kind": "page_changed",
@@ -474,7 +717,7 @@
   "href": "https://www.menoramivt.co.il/wps-frame/mivtcalc",
   "legal_id": "520042540",
   "company": "מנורה מבטחים ביטוח בע\"מ",
-  "detected": "2026-11-24T16:00:35+00:00"
+  "detected": "2026-11-25T15:28:29+00:00"
  },
  {
   "kind": "page_changed",
@@ -483,7 +726,7 @@
   "href": "https://www.menoramivt.co.il/customer-login/?target=one-time-deposit-gml&originSource=marketingSite",
   "legal_id": "520042540",
   "company": "מנורה מבטחים ביטוח בע\"מ",
-  "detected": "2026-11-24T16:00:35+00:00"
+  "detected": "2026-11-25T15:28:29+00:00"
  },
  {
   "kind": "page_changed",
@@ -492,7 +735,7 @@
   "href": "https://www.menoramivt.co.il/customer-login/?target=digital-loans-pension&originSource=marketingSite",
   "legal_id": "520042540",
   "company": "מנורה מבטחים ביטוח בע\"מ",
-  "detected": "2026-11-24T16:00:35+00:00"
+  "detected": "2026-11-25T15:28:29+00:00"
  },
  {
   "kind": "page_changed",
@@ -501,7 +744,7 @@
   "href": "https://www.menoramivt.co.il/customer-login/?target=digital-loans-gemel&originSource=marketingSite",
   "legal_id": "520042540",
   "company": "מנורה מבטחים ביטוח בע\"מ",
-  "detected": "2026-11-24T16:00:35+00:00"
+  "detected": "2026-11-25T15:28:29+00:00"
  },
  {
   "kind": "page_changed",
@@ -510,7 +753,7 @@
   "href": "https://www.menoramivt.co.il/customer-login/?target=digital-loans-gemel-recycle&originSource=marketingSite",
   "legal_id": "520042540",
   "company": "מנורה מבטחים ביטוח בע\"מ",
-  "detected": "2026-11-24T16:00:35+00:00"
+  "detected": "2026-11-25T15:28:29+00:00"
  },
  {
   "kind": "page_changed",
@@ -519,7 +762,7 @@
   "href": "https://www.menoramivt.co.il/customer-login/?target=gemel-transfer-request&originSource=marketingSite",
   "legal_id": "520042540",
   "company": "מנורה מבטחים ביטוח בע\"מ",
-  "detected": "2026-11-24T16:00:35+00:00"
+  "detected": "2026-11-25T15:28:29+00:00"
  },
  {
   "kind": "page_changed",
@@ -528,7 +771,7 @@
   "href": "https://www.menoramivt.co.il/customer-login/?target=pension-investment-update&originSource=marketingSite",
   "legal_id": "520042540",
   "company": "מנורה מבטחים ביטוח בע\"מ",
-  "detected": "2026-11-24T16:00:35+00:00"
+  "detected": "2026-11-25T15:28:29+00:00"
  },
  {
   "kind": "page_changed",
@@ -537,7 +780,7 @@
   "href": "https://www.menoramivt.co.il/customer-login/?target=pension-redemption&originSource=marketingSite",
   "legal_id": "520042540",
   "company": "מנורה מבטחים ביטוח בע\"מ",
-  "detected": "2026-11-24T16:00:35+00:00"
+  "detected": "2026-11-25T15:28:29+00:00"
  },
  {
   "kind": "page_changed",
@@ -546,7 +789,7 @@
   "href": "https://www.menoramivt.co.il/customer-login/?target=fund-redemption-keren&originSource=marketingSite",
   "legal_id": "520042540",
   "company": "מנורה מבטחים ביטוח בע\"מ",
-  "detected": "2026-11-24T16:00:35+00:00"
+  "detected": "2026-11-25T15:28:29+00:00"
  },
  {
   "kind": "page_changed",
@@ -555,7 +798,7 @@
   "href": "https://www.menoramivt.co.il/customer-login/?target=fund-redemption-gemel&originSource=marketingSite",
   "legal_id": "520042540",
   "company": "מנורה מבטחים ביטוח בע\"מ",
-  "detected": "2026-11-24T16:00:35+00:00"
+  "detected": "2026-11-25T15:28:29+00:00"
  },
  {
   "kind": "page_changed",
@@ -564,7 +807,7 @@
   "href": "https://www.menoramivt.co.il/investor-relations",
   "legal_id": "520042540",
   "company": "מנורה מבטחים ביטוח בע\"מ",
-  "detected": "2026-11-24T16:00:35+00:00"
+  "detected": "2026-11-25T15:28:29+00:00"
  },
  {
   "kind": "page_changed",
@@ -573,7 +816,7 @@
   "href": "https://www.menoramivt.co.il/search-results/?q=%D7%A7%D7%A8%D7%9F%20%D7%94%D7%A9%D7%AA%D7%9C%D7%9E%D7%95%D7%AA",
   "legal_id": "520042540",
   "company": "מנורה מבטחים ביטוח בע\"מ",
-  "detected": "2026-11-24T16:00:35+00:00"
+  "detected": "2026-11-25T15:28:29+00:00"
  },
  {
   "kind": "page_changed",
@@ -582,24 +825,24 @@
   "href": "https://www.menoramivt.co.il/search-results/?q=%D7%A4%D7%A0%D7%A1%D7%99%D7%94",
   "legal_id": "520042540",
   "company": "מנורה מבטחים ביטוח בע\"מ",
-  "detected": "2026-11-24T16:00:35+00:00"
+  "detected": "2026-11-25T15:28:29+00:00"
  },
  {
-  "kind": "new_page",
+  "kind": "page_changed",
   "page": "https://www.menoramivt.co.il/customer-login/?target=fund-loan",
-  "text": "0 items",
+  "text": "טקסט העמוד השתנה (אותם קישורים)",
   "href": "https://www.menoramivt.co.il/customer-login/?target=fund-loan",
   "legal_id": "520042540",
   "company": "מנורה מבטחים ביטוח בע\"מ",
-  "detected": "2026-11-24T16:00:35+00:00"
+  "detected": "2026-11-25T15:28:29+00:00"
  },
  {
-  "kind": "new_page",
+  "kind": "page_changed",
   "page": "https://menoramivt.co.il/customer-login/?target=gemel-transfer-request",
-  "text": "0 items",
+  "text": "טקסט העמוד השתנה (אותם קישורים)",
   "href": "https://menoramivt.co.il/customer-login/?target=gemel-transfer-request",
   "legal_id": "520042540",
   "company": "מנורה מבטחים ביטוח בע\"מ",
-  "detected": "2026-11-24T16:00:35+00:00"
+  "detected": "2026-11-25T15:28:29+00:00"
  }
 ]
