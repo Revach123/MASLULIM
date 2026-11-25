@@ -3,8 +3,8 @@
   "companies": 76,
   "with_data": 64,
   "tracks": 1501,
-  "registry_tracks": 1295,
-  "registry_found": 964,
+  "registry_tracks": 1290,
+  "registry_found": 959,
   "docs": 12100
  },
  "companies": [
@@ -845,9 +845,9 @@
    "company": "קופת תגמולים של עובדי התעשיה האוירית לישראל בע\"מ",
    "tracks": 5,
    "tracks_numbered": 5,
-   "registry_tracks": 5,
-   "registry_found": 5,
-   "registry_coverage": 100.0,
+   "registry_tracks": 0,
+   "registry_found": 0,
+   "registry_coverage": null,
    "first_month": "2021-01",
    "last_month": "2026-06",
    "docs_returns": 79,
