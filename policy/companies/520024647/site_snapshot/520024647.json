@@ -1,7 +1,7 @@
 {
  "legal_id": "520024647",
  "company": "כלל חברה לביטוח בע\"מ",
- "taken": "2026-11-26T14:41:35+00:00",
+ "taken": "2026-11-27T14:35:05+00:00",
  "pages": {
   "https://www.clalbit.co.il/aboutclalinsurance/generalreports/?txtTabId=1&txtReportsYearId=2026&txtCompanyId=2&txtReportTypeId=20": {
    "product": "ביטוח",
@@ -1310,14 +1310,6 @@
      "internal": true
     },
     {
-     "text": "קופות גמל מרכזיות לפיצויים",
-     "href": "https://www.clalbit.co.il/compensationfunds/",
-     "year": null,
-     "iframe": false,
-     "doc": false,
-     "internal": true
-    },
-    {
      "text": "פנסיה מבטיחה",
      "href": "https://www.clalbit.co.il/pensionpro/",
      "year": null,
@@ -1448,22 +1440,6 @@
     {
      "text": "דיווחים מיידיים",
      "href": "https://www.clalbit.co.il/aboutclalinsurance/immediatereports/",
-     "year": null,
-     "iframe": false,
-     "doc": false,
-     "internal": true
-    },
-    {
-     "text": "דוחות ואישורי מס",
-     "href": "https://www.clalbit.co.il/portfolio/personalreports/",
-     "year": null,
-     "iframe": false,
-     "doc": false,
-     "internal": true
-    },
-    {
-     "text": "בקשת הלוואה לקרן השתלמות",
-     "href": "https://www.clalbit.co.il/login/?ReturnUrl=%2fportfolio%2fprovidentfundloans%2f",
      "year": null,
      "iframe": false,
      "doc": false,
@@ -2895,12 +2871,12 @@
    "product": "ביטוח",
    "status": 200,
    "method": "browser",
-   "text_hash": null,
-   "text_head": "",
+   "text_hash": "61ab36bcd2e64b0b5019af9938ce3dcd6f03386a",
+   "text_head": "דלג לתוכן צור קשר מפת אתר ביטוח חיסכון ופיננסים הלוואות ומשכנתאות ביטוח אשראי תביעות קריירה פורטלים לחשבון שלך דף הבית > State Street Investment כלל & State Street Investment Management כלל ו- State Street Investment Management משתפות פעולה במטרה להנגיש לציבור בישראל הזדמנויות השקעה יוצאות דופן בחו\"ל, עם אחד ממנהלי ההשקעות הגדולים בעולם. שותפות זו מנגישה לכל לקוח את האפשרות ליהנות משירותי ניהול ההשקעות של State Street שבעבר היו זמינים רק למשקיעים גדולים. הכירו את State Street Investment Management סטנדרט חדש בניהול השקעות State Street Investment Management הינה זרוע ההשקעות של בנק State Street",
    "items": [
     {
-     "text": "חברת ביטוח (17)אודות כלל ביטוחאודות קבוצת כללחברת ביטוחאודות כלל פנסיה וגמלאודות כלל ביטוח אשראיכלל ניהול פיננסיםניווט בעולם ההשקעות והפיננסיםקשרי משקיעיםInvestor Relationsדיווחים מיידייםנתונים ומידעא",
-     "href": "https://www.clalbit.co.il/media/4fzdgri0/מסמך-אמות-מידה-ממשל-תאגידי-2026-לפרסום.pdf",
+     "text": "אמות מידה לבחינת איכות ממשל תאגידי",
+     "href": "https://www.clalbit.co.il/media/4fzdgri0/%D7%9E%D7%A1%D7%9E%D7%9A-%D7%90%D7%9E%D7%95%D7%AA-%D7%9E%D7%99%D7%93%D7%94-%D7%9E%D7%9E%D7%A9%D7%9C-%D7%AA%D7%90%D7%92%D7%99%D7%93%D7%99-2026-%D7%9C%D7%A4%D7%A8%D7%A1%D7%95%D7%9D.pdf",
      "year": "2026",
      "iframe": false,
      "doc": true,
@@ -2908,7 +2884,7 @@
     },
     {
      "text": "אמות מידה לבחינת איכות ממשל תאגידי",
-     "href": "https://www.clalbit.co.il/media/4fzdgri0/%D7%9E%D7%A1%D7%9E%D7%9A-%D7%90%D7%9E%D7%95%D7%AA-%D7%9E%D7%99%D7%93%D7%94-%D7%9E%D7%9E%D7%A9%D7%9C-%D7%AA%D7%90%D7%92%D7%99%D7%93%D7%99-2026-%D7%9C%D7%A4%D7%A8%D7%A1%D7%95%D7%9D.pdf",
+     "href": "https://www.clalbit.co.il/media/4fzdgri0/מסמך-אמות-מידה-ממשל-תאגידי-2026-לפרסום.pdf",
      "year": "2026",
      "iframe": false,
      "doc": true,
@@ -3027,6 +3003,14 @@
      "internal": true
     },
     {
+     "text": "מסלול מניות - למידע נוסף",
+     "href": "https://www.clalbit.co.il/media/y1iadydy/%D7%9E%D7%A0%D7%99%D7%95%D7%AA-002.pdf",
+     "year": null,
+     "iframe": false,
+     "doc": true,
+     "internal": true
+    },
+    {
      "text": "מחשבון חשיפות בשילוב מסלולי השקעה",
      "href": "https://clal-p.easysend.app/exposure-calculator",
      "year": null,
@@ -3064,22 +3048,6 @@
      "year": null,
      "iframe": false,
      "doc": false,
-     "internal": true
-    },
-    {
-     "text": "למידע נוסף",
-     "href": "https://www.clalbit.co.il/media/nkpjarco/a4-1-002.pdf",
-     "year": null,
-     "iframe": false,
-     "doc": true,
-     "internal": true
-    },
-    {
-     "text": "למידע נוסף",
-     "href": "https://www.clalbit.co.il/media/y1iadydy/%D7%9E%D7%A0%D7%99%D7%95%D7%AA-002.pdf",
-     "year": null,
-     "iframe": false,
-     "doc": true,
      "internal": true
     },
     {
@@ -3131,6 +3099,14 @@
      "internal": true
     },
     {
+     "text": "ביטוח לנהג זמניתהליך שינויים בנח\"להגשת תביעהצפייה בפוליסת חובה צפייה בפוליסת חובה",
+     "href": "https://www.clalbit.co.il/portfolio/myPolicyDocuments/",
+     "year": null,
+     "iframe": false,
+     "doc": false,
+     "internal": true
+    },
+    {
      "text": "בדיקת קיום פוליסת רכב חובה",
      "href": "https://www.clalbit.co.il/carinsurance/obligationpolicyrequest/",
      "year": null,
@@ -3160,6 +3136,14 @@
      "year": null,
      "iframe": false,
      "doc": false,
+     "internal": true
+    },
+    {
+     "text": "- למידע נוסף",
+     "href": "https://www.clalbit.co.il/media/nkpjarco/a4-1-002.pdf",
+     "year": null,
+     "iframe": false,
+     "doc": true,
      "internal": true
     }
    ]
